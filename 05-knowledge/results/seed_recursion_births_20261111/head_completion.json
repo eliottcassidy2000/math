@@ -1,0 +1,1373 @@
+{
+  "inventory_source": "05-knowledge/results/session173_modular_clocks_20261103/counts527/inventory_375.json",
+  "inventory_sha256_lf": "2c66c872b7af50346624a367150a6fb094af916fa1397ef707f342a897a73bd3",
+  "inventory_limit": 375,
+  "scope": "global fixed-kernel decisions conditional on inherited complete strong inventory",
+  "strong_ports_checked": 8525,
+  "decisions": {
+    "seven_s1": [
+      {
+        "shift": 0,
+        "coefficients": [
+          35,
+          14
+        ],
+        "factors": [
+          1
+        ],
+        "witness": null
+      },
+      {
+        "shift": 1,
+        "coefficients": [
+          63,
+          28
+        ],
+        "factors": [
+          1
+        ],
+        "witness": null
+      },
+      {
+        "shift": 2,
+        "coefficients": [
+          119,
+          56
+        ],
+        "factors": [
+          1
+        ],
+        "witness": null
+      },
+      {
+        "shift": 3,
+        "coefficients": [
+          231,
+          112
+        ],
+        "factors": [
+          1
+        ],
+        "witness": null
+      }
+    ],
+    "three_s1": [
+      {
+        "shift": 0,
+        "coefficients": [
+          15,
+          6
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            2,
+            4,
+            33,
+            7,
+            15,
+            27
+          ],
+          "port": 3,
+          "order": 6,
+          "core": {
+            "n": 6,
+            "code": 2081,
+            "H": 15,
+            "rows": [
+              2,
+              4,
+              33,
+              7,
+              15,
+              27
+            ],
+            "port": 3,
+            "coefficients": [
+              15,
+              6
+            ]
+          }
+        }
+      },
+      {
+        "shift": 1,
+        "coefficients": [
+          27,
+          12
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            32,
+            9,
+            3,
+            5,
+            15,
+            30
+          ],
+          "port": 4,
+          "order": 6,
+          "core": {
+            "n": 6,
+            "code": 80,
+            "H": 27,
+            "rows": [
+              32,
+              9,
+              3,
+              5,
+              15,
+              30
+            ],
+            "port": 4,
+            "coefficients": [
+              27,
+              12
+            ]
+          }
+        }
+      },
+      {
+        "shift": 2,
+        "coefficients": [
+          51,
+          24
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            64,
+            9,
+            3,
+            5,
+            15,
+            31,
+            62
+          ],
+          "port": 4,
+          "order": 7,
+          "core": {
+            "n": 7,
+            "code": 160,
+            "H": 51,
+            "rows": [
+              64,
+              9,
+              3,
+              5,
+              15,
+              31,
+              62
+            ],
+            "port": 4,
+            "coefficients": [
+              51,
+              24
+            ]
+          }
+        }
+      },
+      {
+        "shift": 3,
+        "coefficients": [
+          99,
+          48
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            128,
+            9,
+            3,
+            5,
+            15,
+            31,
+            63,
+            126
+          ],
+          "port": 4,
+          "order": 8,
+          "core": {
+            "n": 8,
+            "code": 320,
+            "H": 99,
+            "rows": [
+              128,
+              9,
+              3,
+              5,
+              15,
+              31,
+              63,
+              126
+            ],
+            "port": 4,
+            "coefficients": [
+              99,
+              48
+            ]
+          }
+        }
+      },
+      {
+        "shift": 4,
+        "coefficients": [
+          195,
+          96
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            256,
+            9,
+            3,
+            5,
+            15,
+            31,
+            63,
+            127,
+            254
+          ],
+          "port": 4,
+          "order": 9,
+          "core": {
+            "n": 9,
+            "code": 640,
+            "H": 195,
+            "rows": [
+              256,
+              9,
+              3,
+              5,
+              15,
+              31,
+              63,
+              127,
+              254
+            ],
+            "port": 4,
+            "coefficients": [
+              195,
+              96
+            ]
+          }
+        }
+      }
+    ],
+    "three_s2": [
+      {
+        "shift": 0,
+        "coefficients": [
+          29,
+          12
+        ],
+        "factors": [
+          1
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            2,
+            4,
+            9,
+            67,
+            15,
+            31,
+            55
+          ],
+          "port": 4,
+          "order": 7,
+          "core": {
+            "n": 7,
+            "code": 133185,
+            "H": 29,
+            "rows": [
+              2,
+              4,
+              9,
+              67,
+              15,
+              31,
+              55
+            ],
+            "port": 4,
+            "coefficients": [
+              29,
+              12
+            ]
+          }
+        }
+      },
+      {
+        "shift": 1,
+        "coefficients": [
+          53,
+          24
+        ],
+        "factors": [
+          1
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            2,
+            4,
+            9,
+            131,
+            15,
+            31,
+            63,
+            119
+          ],
+          "port": 4,
+          "order": 8,
+          "core": {
+            "n": 8,
+            "code": 2105473,
+            "H": 53,
+            "rows": [
+              2,
+              4,
+              9,
+              131,
+              15,
+              31,
+              63,
+              119
+            ],
+            "port": 4,
+            "coefficients": [
+              53,
+              24
+            ]
+          }
+        }
+      },
+      {
+        "shift": 2,
+        "coefficients": [
+          101,
+          48
+        ],
+        "factors": [
+          1
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            2,
+            4,
+            9,
+            259,
+            15,
+            31,
+            63,
+            127,
+            247
+          ],
+          "port": 4,
+          "order": 9,
+          "core": {
+            "n": 9,
+            "code": 33587457,
+            "H": 101,
+            "rows": [
+              2,
+              4,
+              9,
+              259,
+              15,
+              31,
+              63,
+              127,
+              247
+            ],
+            "port": 4,
+            "coefficients": [
+              101,
+              48
+            ]
+          }
+        }
+      },
+      {
+        "shift": 3,
+        "coefficients": [
+          197,
+          96
+        ],
+        "factors": [
+          1
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            4,
+            129,
+            130,
+            23,
+            71,
+            31,
+            47,
+            121
+          ],
+          "port": 0,
+          "order": 8,
+          "core": {
+            "n": 8,
+            "code": 8785922,
+            "H": 197,
+            "rows": [
+              4,
+              129,
+              130,
+              23,
+              71,
+              31,
+              47,
+              121
+            ],
+            "port": 0,
+            "coefficients": [
+              197,
+              96
+            ]
+          }
+        }
+      }
+    ],
+    "three_s3": [
+      {
+        "shift": 0,
+        "coefficients": [
+          57,
+          24
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": null
+      },
+      {
+        "shift": 1,
+        "coefficients": [
+          105,
+          48
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": null
+      },
+      {
+        "shift": 2,
+        "coefficients": [
+          201,
+          96
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            2,
+            40,
+            19,
+            37,
+            139,
+            85,
+            31,
+            111
+          ],
+          "port": 0,
+          "order": 8,
+          "core": {
+            "n": 8,
+            "code": 50873601,
+            "H": 201,
+            "rows": [
+              2,
+              40,
+              19,
+              37,
+              139,
+              85,
+              31,
+              111
+            ],
+            "port": 0,
+            "coefficients": [
+              201,
+              96
+            ]
+          }
+        }
+      }
+    ],
+    "three_s4": [
+      {
+        "shift": 0,
+        "coefficients": [
+          113,
+          48
+        ],
+        "factors": [
+          1
+        ],
+        "witness": null
+      },
+      {
+        "shift": 1,
+        "coefficients": [
+          209,
+          96
+        ],
+        "factors": [
+          1
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            4,
+            129,
+            18,
+            23,
+            195,
+            31,
+            47,
+            109
+          ],
+          "port": 0,
+          "order": 8,
+          "core": {
+            "n": 8,
+            "code": 25448450,
+            "H": 209,
+            "rows": [
+              4,
+              129,
+              18,
+              23,
+              195,
+              31,
+              47,
+              109
+            ],
+            "port": 0,
+            "coefficients": [
+              209,
+              96
+            ]
+          }
+        }
+      }
+    ],
+    "twentyone_s1": [
+      {
+        "shift": 0,
+        "coefficients": [
+          87,
+          42
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            8,
+            5,
+            9,
+            194,
+            15,
+            31,
+            55,
+            119
+          ],
+          "port": 4,
+          "order": 8,
+          "core": {
+            "n": 8,
+            "code": 3154052,
+            "H": 87,
+            "rows": [
+              8,
+              5,
+              9,
+              194,
+              15,
+              31,
+              55,
+              119
+            ],
+            "port": 4,
+            "coefficients": [
+              87,
+              42
+            ]
+          }
+        }
+      },
+      {
+        "shift": 1,
+        "coefficients": [
+          171,
+          84
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            4,
+            33,
+            18,
+            39,
+            75,
+            149,
+            47,
+            95
+          ],
+          "port": 0,
+          "order": 8,
+          "core": {
+            "n": 8,
+            "code": 76039170,
+            "H": 171,
+            "rows": [
+              4,
+              33,
+              18,
+              39,
+              75,
+              149,
+              47,
+              95
+            ],
+            "port": 0,
+            "coefficients": [
+              171,
+              84
+            ]
+          }
+        }
+      },
+      {
+        "shift": 2,
+        "coefficients": [
+          339,
+          168
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            4,
+            5,
+            72,
+            35,
+            47,
+            327,
+            155,
+            63,
+            223
+          ],
+          "port": 0,
+          "order": 9,
+          "core": {
+            "n": 9,
+            "code": 14030242050,
+            "H": 339,
+            "rows": [
+              4,
+              5,
+              72,
+              35,
+              47,
+              327,
+              155,
+              63,
+              223
+            ],
+            "port": 0,
+            "coefficients": [
+              339,
+              168
+            ]
+          }
+        }
+      }
+    ],
+    "twentyone_s2": [
+      {
+        "shift": 0,
+        "coefficients": [
+          173,
+          84
+        ],
+        "factors": [
+          1
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            4,
+            5,
+            24,
+            147,
+            195,
+            31,
+            47,
+            103
+          ],
+          "port": 0,
+          "order": 8,
+          "core": {
+            "n": 8,
+            "code": 27549826,
+            "H": 173,
+            "rows": [
+              4,
+              5,
+              24,
+              147,
+              195,
+              31,
+              47,
+              103
+            ],
+            "port": 0,
+            "coefficients": [
+              173,
+              84
+            ]
+          }
+        }
+      },
+      {
+        "shift": 1,
+        "coefficients": [
+          341,
+          168
+        ],
+        "factors": [
+          1
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            4,
+            5,
+            48,
+            7,
+            299,
+            395,
+            63,
+            95,
+            207
+          ],
+          "port": 0,
+          "order": 9,
+          "core": {
+            "n": 9,
+            "code": 7046627586,
+            "H": 341,
+            "rows": [
+              4,
+              5,
+              48,
+              7,
+              299,
+              395,
+              63,
+              95,
+              207
+            ],
+            "port": 0,
+            "coefficients": [
+              341,
+              168
+            ]
+          }
+        }
+      }
+    ],
+    "mixed_s1": [
+      {
+        "shift": 0,
+        "coefficients": [
+          75,
+          54,
+          12
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": null
+      },
+      {
+        "shift": 1,
+        "coefficients": [
+          183,
+          144,
+          36
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": null
+      }
+    ],
+    "mixed11_s1": [
+      {
+        "shift": 0,
+        "coefficients": [
+          23,
+          18,
+          4
+        ],
+        "factors": [
+          1
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            8,
+            5,
+            33,
+            6,
+            15,
+            27
+          ],
+          "port": 1,
+          "order": 6,
+          "core": {
+            "n": 6,
+            "code": 2084,
+            "H": 23,
+            "rows": [
+              8,
+              5,
+              33,
+              6,
+              15,
+              27
+            ],
+            "port": 1,
+            "coefficients": [
+              23,
+              18,
+              4
+            ]
+          }
+        }
+      },
+      {
+        "shift": 1,
+        "coefficients": [
+          59,
+          48,
+          12
+        ],
+        "factors": [
+          1
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            16,
+            5,
+            65,
+            7,
+            14,
+            31,
+            59
+          ],
+          "port": 1,
+          "order": 7,
+          "core": {
+            "n": 7,
+            "code": 16456,
+            "H": 59,
+            "rows": [
+              16,
+              5,
+              65,
+              7,
+              14,
+              31,
+              59
+            ],
+            "port": 1,
+            "coefficients": [
+              59,
+              48,
+              12
+            ]
+          }
+        }
+      },
+      {
+        "shift": 2,
+        "coefficients": [
+          155,
+          132,
+          36
+        ],
+        "factors": [
+          1
+        ],
+        "witness": {
+          "exterior_H": 1,
+          "rows": [
+            32,
+            5,
+            129,
+            7,
+            15,
+            30,
+            63,
+            123
+          ],
+          "port": 1,
+          "order": 8,
+          "core": {
+            "n": 8,
+            "code": 131216,
+            "H": 155,
+            "rows": [
+              32,
+              5,
+              129,
+              7,
+              15,
+              30,
+              63,
+              123
+            ],
+            "port": 1,
+            "coefficients": [
+              155,
+              132,
+              36
+            ]
+          }
+        }
+      }
+    ],
+    "mixed11_s2": [
+      {
+        "shift": 0,
+        "coefficients": [
+          45,
+          36,
+          8
+        ],
+        "factors": [
+          1
+        ],
+        "witness": null
+      },
+      {
+        "shift": 1,
+        "coefficients": [
+          117,
+          96,
+          24
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": null
+      },
+      {
+        "shift": 2,
+        "coefficients": [
+          309,
+          264,
+          72
+        ],
+        "factors": [
+          1,
+          3
+        ],
+        "witness": null
+      }
+    ]
+  },
+  "completed_heads": {
+    "three_s1": {
+      "start": 1,
+      "kernel": [
+        15,
+        6
+      ],
+      "witness": {
+        "exterior_H": 1,
+        "rows": [
+          2,
+          4,
+          33,
+          7,
+          15,
+          27
+        ],
+        "port": 3,
+        "order": 6,
+        "core": {
+          "n": 6,
+          "code": 2081,
+          "H": 15,
+          "rows": [
+            2,
+            4,
+            33,
+            7,
+            15,
+            27
+          ],
+          "port": 3,
+          "coefficients": [
+            15,
+            6
+          ]
+        }
+      },
+      "prefix": []
+    },
+    "three_s2": {
+      "start": 1,
+      "kernel": [
+        29,
+        12
+      ],
+      "witness": {
+        "exterior_H": 1,
+        "rows": [
+          2,
+          4,
+          9,
+          67,
+          15,
+          31,
+          55
+        ],
+        "port": 4,
+        "order": 7,
+        "core": {
+          "n": 7,
+          "code": 133185,
+          "H": 29,
+          "rows": [
+            2,
+            4,
+            9,
+            67,
+            15,
+            31,
+            55
+          ],
+          "port": 4,
+          "coefficients": [
+            29,
+            12
+          ]
+        }
+      },
+      "prefix": []
+    },
+    "three_s3": {
+      "start": 3,
+      "kernel": [
+        201,
+        96
+      ],
+      "witness": {
+        "exterior_H": 1,
+        "rows": [
+          2,
+          40,
+          19,
+          37,
+          139,
+          85,
+          31,
+          111
+        ],
+        "port": 0,
+        "order": 8,
+        "core": {
+          "n": 8,
+          "code": 50873601,
+          "H": 201,
+          "rows": [
+            2,
+            40,
+            19,
+            37,
+            139,
+            85,
+            31,
+            111
+          ],
+          "port": 0,
+          "coefficients": [
+            201,
+            96
+          ]
+        }
+      },
+      "prefix": [
+        {
+          "parameter": 1,
+          "H": 57,
+          "rows": [
+            2,
+            64,
+            67,
+            39,
+            15,
+            23,
+            57
+          ]
+        },
+        {
+          "parameter": 2,
+          "H": 105,
+          "rows": [
+            6,
+            68,
+            96,
+            7,
+            15,
+            27,
+            57
+          ]
+        }
+      ]
+    },
+    "three_s4": {
+      "start": 2,
+      "kernel": [
+        209,
+        96
+      ],
+      "witness": {
+        "exterior_H": 1,
+        "rows": [
+          4,
+          129,
+          18,
+          23,
+          195,
+          31,
+          47,
+          109
+        ],
+        "port": 0,
+        "order": 8,
+        "core": {
+          "n": 8,
+          "code": 25448450,
+          "H": 209,
+          "rows": [
+            4,
+            129,
+            18,
+            23,
+            195,
+            31,
+            47,
+            109
+          ],
+          "port": 0,
+          "coefficients": [
+            209,
+            96
+          ]
+        }
+      },
+      "prefix": [
+        {
+          "parameter": 1,
+          "H": 113,
+          "rows": [
+            34,
+            48,
+            11,
+            67,
+            13,
+            28,
+            55
+          ]
+        }
+      ]
+    },
+    "twentyone_s1": {
+      "start": 1,
+      "kernel": [
+        87,
+        42
+      ],
+      "witness": {
+        "exterior_H": 1,
+        "rows": [
+          8,
+          5,
+          9,
+          194,
+          15,
+          31,
+          55,
+          119
+        ],
+        "port": 4,
+        "order": 8,
+        "core": {
+          "n": 8,
+          "code": 3154052,
+          "H": 87,
+          "rows": [
+            8,
+            5,
+            9,
+            194,
+            15,
+            31,
+            55,
+            119
+          ],
+          "port": 4,
+          "coefficients": [
+            87,
+            42
+          ]
+        }
+      },
+      "prefix": []
+    },
+    "twentyone_s2": {
+      "start": 1,
+      "kernel": [
+        173,
+        84
+      ],
+      "witness": {
+        "exterior_H": 1,
+        "rows": [
+          4,
+          5,
+          24,
+          147,
+          195,
+          31,
+          47,
+          103
+        ],
+        "port": 0,
+        "order": 8,
+        "core": {
+          "n": 8,
+          "code": 27549826,
+          "H": 173,
+          "rows": [
+            4,
+            5,
+            24,
+            147,
+            195,
+            31,
+            47,
+            103
+          ],
+          "port": 0,
+          "coefficients": [
+            173,
+            84
+          ]
+        }
+      },
+      "prefix": []
+    },
+    "mixed11_s1": {
+      "start": 1,
+      "kernel": [
+        23,
+        18,
+        4
+      ],
+      "witness": {
+        "exterior_H": 1,
+        "rows": [
+          8,
+          5,
+          33,
+          6,
+          15,
+          27
+        ],
+        "port": 1,
+        "order": 6,
+        "core": {
+          "n": 6,
+          "code": 2084,
+          "H": 23,
+          "rows": [
+            8,
+            5,
+            33,
+            6,
+            15,
+            27
+          ],
+          "port": 1,
+          "coefficients": [
+            23,
+            18,
+            4
+          ]
+        }
+      },
+      "prefix": []
+    }
+  },
+  "unresolved_heads": [
+    "seven_s1",
+    "mixed_s1",
+    "mixed11_s2"
+  ]
+}

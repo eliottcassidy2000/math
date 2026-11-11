@@ -1,0 +1,16 @@
+{
+  "independent_full_Hamilton_kernels": 7,
+  "finite_prefixes": 3,
+  "literal_line_constructions": 68,
+  "recursive_backtracks": 42,
+  "simultaneous_seeds": 60,
+  "all_size_transport_certificates": 322,
+  "independently_checked_marked_states": 321,
+  "doubling_hostile_counts": [
+    23,
+    45,
+    59,
+    129
+  ],
+  "separate_person_audit": false
+}

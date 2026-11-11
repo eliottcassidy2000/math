@@ -1,0 +1,121 @@
+{
+  "ordinary_base_counts": [
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456
+  ],
+  "ports_examined": 505,
+  "targets": {
+    "seven_s1": [
+      35,
+      14
+    ],
+    "three_s1": [
+      15,
+      6
+    ],
+    "three_s2": [
+      29,
+      12
+    ],
+    "three_s3": [
+      57,
+      24
+    ],
+    "three_s4": [
+      113,
+      48
+    ],
+    "twentyone_s1": [
+      87,
+      42
+    ],
+    "twentyone_s2": [
+      173,
+      84
+    ],
+    "mixed_s1": [
+      75,
+      54,
+      12
+    ],
+    "mixed11_s1": [
+      23,
+      18,
+      4
+    ],
+    "mixed11_s2": [
+      45,
+      36,
+      8
+    ]
+  },
+  "hits": {
+    "mixed11_s1": {
+      "n": 6,
+      "code": 260,
+      "rows": [
+        8,
+        33,
+        3,
+        6,
+        15,
+        29
+      ],
+      "port": 2,
+      "coefficients": [
+        23,
+        18,
+        4
+      ]
+    },
+    "three_s1": {
+      "n": 6,
+      "code": 2050,
+      "rows": [
+        4,
+        1,
+        34,
+        7,
+        15,
+        27
+      ],
+      "port": 3,
+      "coefficients": [
+        15,
+        6
+      ]
+    },
+    "three_s2": {
+      "n": 7,
+      "code": 133122,
+      "rows": [
+        4,
+        1,
+        10,
+        67,
+        15,
+        31,
+        55
+      ],
+      "port": 4,
+      "coefficients": [
+        29,
+        12
+      ]
+    }
+  },
+  "missing": [
+    "seven_s1",
+    "three_s3",
+    "three_s4",
+    "twentyone_s1",
+    "twentyone_s2",
+    "mixed_s1",
+    "mixed11_s2"
+  ]
+}

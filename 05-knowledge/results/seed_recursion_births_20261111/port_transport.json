@@ -1,0 +1,11247 @@
+{
+  "strong_stable_port_presentations": 95,
+  "marked_core_states": 60,
+  "stable_port_count_histogram": {
+    "1": 35,
+    "2": 18,
+    "3": 5,
+    "4": 1,
+    "5": 1
+  },
+  "old_port_transports": 322,
+  "literal_controls": 322,
+  "activated": [],
+  "cyclic_stable_sets": [],
+  "decisions": [
+    {
+      "n": 4,
+      "code": 4,
+      "selected": 9,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 4,
+      "code": 4,
+      "selected": 9,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 8,
+      "selected": 17,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 8,
+      "selected": 17,
+      "first_port": 1,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 8,
+      "selected": 17,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 8,
+      "selected": 17,
+      "first_port": 2,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 8,
+      "selected": 17,
+      "first_port": 3,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 8,
+      "selected": 17,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 258,
+      "selected": 9,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 258,
+      "selected": 9,
+      "first_port": 1,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 258,
+      "selected": 24,
+      "first_port": 1,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 258,
+      "selected": 24,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 258,
+      "selected": 3,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 258,
+      "selected": 3,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 258,
+      "selected": 18,
+      "first_port": 3,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "code": 258,
+      "selected": 18,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "selected": 33,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "selected": 33,
+      "first_port": 1,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "selected": 33,
+      "first_port": 1,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "selected": 33,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "selected": 33,
+      "first_port": 2,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "selected": 33,
+      "first_port": 2,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "selected": 33,
+      "first_port": 3,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "selected": 33,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "selected": 33,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "selected": 33,
+      "first_port": 4,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "selected": 33,
+      "first_port": 4,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "selected": 33,
+      "first_port": 4,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 321,
+      "selected": 12,
+      "first_port": 4,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 321,
+      "selected": 12,
+      "first_port": 4,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          16
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 321,
+      "selected": 12,
+      "first_port": 4,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 385,
+      "selected": 12,
+      "first_port": 0,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          23
+        ],
+        [
+          1,
+          3,
+          16
+        ],
+        [
+          2,
+          2,
+          18
+        ],
+        [
+          2,
+          3,
+          18
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 385,
+      "selected": 12,
+      "first_port": 0,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 385,
+      "selected": 12,
+      "first_port": 0,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 385,
+      "selected": 5,
+      "first_port": 3,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          23
+        ],
+        [
+          1,
+          3,
+          16
+        ],
+        [
+          2,
+          2,
+          18
+        ],
+        [
+          2,
+          3,
+          18
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 385,
+      "selected": 5,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 385,
+      "selected": 5,
+      "first_port": 3,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "selected": 3,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          7
+        ],
+        [
+          2,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "selected": 3,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "selected": 3,
+      "first_port": 3,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "selected": 3,
+      "first_port": 4,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          7
+        ],
+        [
+          2,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "selected": 3,
+      "first_port": 4,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "selected": 3,
+      "first_port": 4,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "selected": 34,
+      "first_port": 3,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "selected": 34,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          14
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "selected": 34,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "selected": 34,
+      "first_port": 4,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "selected": 34,
+      "first_port": 4,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          14
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "selected": 34,
+      "first_port": 4,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 3074,
+      "selected": 24,
+      "first_port": 1,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 3074,
+      "selected": 24,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          16
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 3074,
+      "selected": 24,
+      "first_port": 1,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "selected": 17,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "selected": 17,
+      "first_port": 1,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          14
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "selected": 17,
+      "first_port": 1,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "selected": 17,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "selected": 17,
+      "first_port": 2,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          14
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "selected": 17,
+      "first_port": 2,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "selected": 48,
+      "first_port": 1,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "selected": 48,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "selected": 48,
+      "first_port": 1,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          7
+        ],
+        [
+          2,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "selected": 48,
+      "first_port": 2,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "selected": 48,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "selected": 48,
+      "first_port": 2,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          7
+        ],
+        [
+          2,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8385,
+      "selected": 36,
+      "first_port": 0,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 2,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          13
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          2,
+          7
+        ],
+        [
+          2,
+          3,
+          8
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8385,
+      "selected": 36,
+      "first_port": 0,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          10
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 8385,
+      "selected": 36,
+      "first_port": 0,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          -2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 12356,
+      "selected": 48,
+      "first_port": 2,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 12356,
+      "selected": 48,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 12356,
+      "selected": 48,
+      "first_port": 2,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          23
+        ],
+        [
+          1,
+          3,
+          16
+        ],
+        [
+          2,
+          2,
+          18
+        ],
+        [
+          2,
+          3,
+          18
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 12356,
+      "selected": 20,
+      "first_port": 5,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 12356,
+      "selected": 20,
+      "first_port": 5,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 12356,
+      "selected": 20,
+      "first_port": 5,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          23
+        ],
+        [
+          1,
+          3,
+          16
+        ],
+        [
+          2,
+          2,
+          18
+        ],
+        [
+          2,
+          3,
+          18
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 12866,
+      "selected": 17,
+      "first_port": 5,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          -2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 12866,
+      "selected": 17,
+      "first_port": 5,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          10
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "code": 12866,
+      "selected": 17,
+      "first_port": 5,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 2,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          13
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          2,
+          7
+        ],
+        [
+          2,
+          3,
+          8
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 1,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 1,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 1,
+      "second_port": 5,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 2,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 2,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 2,
+      "second_port": 5,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 3,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 3,
+      "second_port": 5,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 4,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 4,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 4,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 4,
+      "second_port": 5,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 5,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 5,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 5,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "selected": 65,
+      "first_port": 5,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1153,
+      "selected": 12,
+      "first_port": 4,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1153,
+      "selected": 12,
+      "first_port": 4,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            16
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          32
+        ],
+        [
+          1,
+          3,
+          14
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1153,
+      "selected": 12,
+      "first_port": 4,
+      "second_port": 5,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1153,
+      "selected": 12,
+      "first_port": 4,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1153,
+      "selected": 12,
+      "first_port": 5,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1153,
+      "selected": 12,
+      "first_port": 5,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            16
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          32
+        ],
+        [
+          1,
+          3,
+          14
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1153,
+      "selected": 12,
+      "first_port": 5,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1153,
+      "selected": 12,
+      "first_port": 5,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1281,
+      "selected": 12,
+      "first_port": 0,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            12
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          42
+        ],
+        [
+          1,
+          3,
+          34
+        ],
+        [
+          2,
+          2,
+          36
+        ],
+        [
+          2,
+          3,
+          36
+        ],
+        [
+          3,
+          2,
+          12
+        ],
+        [
+          3,
+          3,
+          12
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1281,
+      "selected": 12,
+      "first_port": 0,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1281,
+      "selected": 12,
+      "first_port": 0,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1281,
+      "selected": 12,
+      "first_port": 0,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1281,
+      "selected": 5,
+      "first_port": 3,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            12
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          42
+        ],
+        [
+          1,
+          3,
+          34
+        ],
+        [
+          2,
+          2,
+          36
+        ],
+        [
+          2,
+          3,
+          36
+        ],
+        [
+          3,
+          2,
+          12
+        ],
+        [
+          3,
+          3,
+          12
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1281,
+      "selected": 5,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1281,
+      "selected": 5,
+      "first_port": 3,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1281,
+      "selected": 5,
+      "first_port": 3,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 12,
+      "first_port": 0,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 12,
+      "first_port": 0,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 12,
+      "first_port": 0,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 12,
+      "first_port": 0,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 12,
+      "first_port": 4,
+      "second_port": 0,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 12,
+      "first_port": 4,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 12,
+      "first_port": 4,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 12,
+      "first_port": 4,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 20,
+      "first_port": 0,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 20,
+      "first_port": 0,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            -6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          -11
+        ],
+        [
+          1,
+          3,
+          -12
+        ],
+        [
+          2,
+          2,
+          -6
+        ],
+        [
+          2,
+          3,
+          -6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 20,
+      "first_port": 0,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 20,
+      "first_port": 0,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 24,
+      "first_port": 0,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 24,
+      "first_port": 0,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 24,
+      "first_port": 0,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 24,
+      "first_port": 0,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 24,
+      "first_port": 2,
+      "second_port": 0,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 24,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 24,
+      "first_port": 2,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 24,
+      "first_port": 2,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 5,
+      "first_port": 3,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 5,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 5,
+      "first_port": 3,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 5,
+      "first_port": 3,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 5,
+      "first_port": 4,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 5,
+      "first_port": 4,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 5,
+      "first_port": 4,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 5,
+      "first_port": 4,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 9,
+      "first_port": 4,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 9,
+      "first_port": 4,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            -6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          -11
+        ],
+        [
+          1,
+          3,
+          -12
+        ],
+        [
+          2,
+          2,
+          -6
+        ],
+        [
+          2,
+          3,
+          -6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 9,
+      "first_port": 4,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1537,
+      "selected": 9,
+      "first_port": 4,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 5122,
+      "selected": 40,
+      "first_port": 0,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          12
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          2,
+          6
+        ],
+        [
+          2,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 5122,
+      "selected": 40,
+      "first_port": 0,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 3,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          10
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 5122,
+      "selected": 40,
+      "first_port": 0,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            -4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          -6
+        ],
+        [
+          1,
+          3,
+          -16
+        ],
+        [
+          1,
+          4,
+          -6
+        ],
+        [
+          2,
+          2,
+          -4
+        ],
+        [
+          2,
+          3,
+          -12
+        ],
+        [
+          2,
+          4,
+          -6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 5122,
+      "selected": 40,
+      "first_port": 0,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          8
+        ],
+        [
+          2,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 3,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          15
+        ],
+        [
+          2,
+          2,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 3,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 3,
+      "first_port": 3,
+      "second_port": 5,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 3,
+      "first_port": 3,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 3,
+      "first_port": 4,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          15
+        ],
+        [
+          2,
+          2,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 3,
+      "first_port": 4,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 3,
+      "first_port": 4,
+      "second_port": 5,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 3,
+      "first_port": 4,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 3,
+      "first_port": 5,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          15
+        ],
+        [
+          2,
+          2,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 3,
+      "first_port": 5,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 3,
+      "first_port": 5,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 3,
+      "first_port": 5,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 66,
+      "first_port": 3,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          8
+        ],
+        [
+          2,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 66,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            16
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          30
+        ],
+        [
+          1,
+          3,
+          14
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 66,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 66,
+      "first_port": 3,
+      "second_port": 5,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 66,
+      "first_port": 4,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          8
+        ],
+        [
+          2,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 66,
+      "first_port": 4,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            16
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          30
+        ],
+        [
+          1,
+          3,
+          14
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 66,
+      "first_port": 4,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 66,
+      "first_port": 4,
+      "second_port": 5,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 66,
+      "first_port": 5,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          8
+        ],
+        [
+          2,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 66,
+      "first_port": 5,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            16
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          30
+        ],
+        [
+          1,
+          3,
+          14
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 66,
+      "first_port": 5,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "selected": 66,
+      "first_port": 5,
+      "second_port": 4,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 20482,
+      "selected": 24,
+      "first_port": 1,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 20482,
+      "selected": 24,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            14
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          30
+        ],
+        [
+          1,
+          3,
+          18
+        ],
+        [
+          2,
+          2,
+          14
+        ],
+        [
+          2,
+          3,
+          12
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 20482,
+      "selected": 24,
+      "first_port": 1,
+      "second_port": 5,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 20482,
+      "selected": 24,
+      "first_port": 1,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 20482,
+      "selected": 24,
+      "first_port": 5,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 20482,
+      "selected": 24,
+      "first_port": 5,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 20482,
+      "selected": 24,
+      "first_port": 5,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            14
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          30
+        ],
+        [
+          1,
+          3,
+          18
+        ],
+        [
+          2,
+          2,
+          14
+        ],
+        [
+          2,
+          3,
+          12
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 20482,
+      "selected": 24,
+      "first_port": 5,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 21057,
+      "selected": 22,
+      "first_port": 0,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            5
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          10
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          5
+        ],
+        [
+          2,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 21057,
+      "selected": 22,
+      "first_port": 0,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -17
+          ],
+          [
+            2,
+            20
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          23
+        ],
+        [
+          1,
+          3,
+          12
+        ],
+        [
+          2,
+          2,
+          20
+        ],
+        [
+          2,
+          3,
+          10
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 21057,
+      "selected": 22,
+      "first_port": 0,
+      "second_port": 6,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 21057,
+      "selected": 22,
+      "first_port": 6,
+      "second_port": 0,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 21057,
+      "selected": 22,
+      "first_port": 6,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -10
+          ],
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          10
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          10
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 21057,
+      "selected": 22,
+      "first_port": 6,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -13
+          ],
+          [
+            2,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          23
+        ],
+        [
+          1,
+          3,
+          12
+        ],
+        [
+          2,
+          2,
+          18
+        ],
+        [
+          2,
+          3,
+          12
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 66689,
+      "selected": 5,
+      "first_port": 5,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          53
+        ],
+        [
+          1,
+          3,
+          40
+        ],
+        [
+          2,
+          2,
+          51
+        ],
+        [
+          2,
+          3,
+          48
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 66689,
+      "selected": 5,
+      "first_port": 5,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          9
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 66689,
+      "selected": 5,
+      "first_port": 5,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 66689,
+      "selected": 5,
+      "first_port": 5,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 82180,
+      "selected": 14,
+      "first_port": 6,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 82180,
+      "selected": 14,
+      "first_port": 6,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -16
+          ],
+          [
+            2,
+            20
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          24
+        ],
+        [
+          1,
+          3,
+          12
+        ],
+        [
+          2,
+          2,
+          20
+        ],
+        [
+          2,
+          3,
+          12
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 82180,
+      "selected": 14,
+      "first_port": 6,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -10
+          ],
+          [
+            2,
+            13
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          16
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          2,
+          13
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 84040,
+      "selected": 52,
+      "first_port": 0,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -10
+          ],
+          [
+            2,
+            13
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          16
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          2,
+          13
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 84040,
+      "selected": 52,
+      "first_port": 0,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -16
+          ],
+          [
+            2,
+            20
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          24
+        ],
+        [
+          1,
+          3,
+          12
+        ],
+        [
+          2,
+          2,
+          20
+        ],
+        [
+          2,
+          3,
+          12
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 84040,
+      "selected": 52,
+      "first_port": 0,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 131713,
+      "selected": 68,
+      "first_port": 0,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          33
+        ],
+        [
+          1,
+          3,
+          24
+        ],
+        [
+          2,
+          2,
+          20
+        ],
+        [
+          2,
+          3,
+          22
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 131713,
+      "selected": 68,
+      "first_port": 0,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            12
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          30
+        ],
+        [
+          1,
+          3,
+          16
+        ],
+        [
+          2,
+          2,
+          12
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 131713,
+      "selected": 68,
+      "first_port": 0,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            -2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          -2
+        ],
+        [
+          1,
+          3,
+          -2
+        ],
+        [
+          2,
+          2,
+          -2
+        ],
+        [
+          2,
+          3,
+          -2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 131713,
+      "selected": 68,
+      "first_port": 0,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 3,
+        "exponential_coefficients": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            -6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          3,
+          -2
+        ],
+        [
+          2,
+          2,
+          -4
+        ],
+        [
+          2,
+          3,
+          -6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 196612,
+      "selected": 48,
+      "first_port": 1,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 196612,
+      "selected": 48,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 196612,
+      "selected": 48,
+      "first_port": 1,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            16
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          32
+        ],
+        [
+          1,
+          3,
+          14
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 196612,
+      "selected": 48,
+      "first_port": 1,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 196612,
+      "selected": 48,
+      "first_port": 2,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 196612,
+      "selected": 48,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 196612,
+      "selected": 48,
+      "first_port": 2,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            16
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          32
+        ],
+        [
+          1,
+          3,
+          14
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 196612,
+      "selected": 48,
+      "first_port": 2,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 198658,
+      "selected": 96,
+      "first_port": 1,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 198658,
+      "selected": 96,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          9
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 198658,
+      "selected": 96,
+      "first_port": 1,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            9
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          29
+        ],
+        [
+          1,
+          3,
+          16
+        ],
+        [
+          2,
+          2,
+          9
+        ],
+        [
+          2,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 198658,
+      "selected": 96,
+      "first_port": 1,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 33,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 33,
+      "first_port": 1,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 33,
+      "first_port": 1,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            16
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          30
+        ],
+        [
+          1,
+          3,
+          14
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 33,
+      "first_port": 1,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          8
+        ],
+        [
+          2,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 33,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 33,
+      "first_port": 2,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 33,
+      "first_port": 2,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            16
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          30
+        ],
+        [
+          1,
+          3,
+          14
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 33,
+      "first_port": 2,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          8
+        ],
+        [
+          2,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 33,
+      "first_port": 3,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 33,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 33,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            16
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          30
+        ],
+        [
+          1,
+          3,
+          14
+        ],
+        [
+          2,
+          2,
+          16
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 33,
+      "first_port": 3,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          8
+        ],
+        [
+          2,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 96,
+      "first_port": 1,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 96,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 96,
+      "first_port": 1,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 96,
+      "first_port": 1,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          15
+        ],
+        [
+          2,
+          2,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 96,
+      "first_port": 2,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 96,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 96,
+      "first_port": 2,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 96,
+      "first_port": 2,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          15
+        ],
+        [
+          2,
+          2,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 96,
+      "first_port": 3,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 96,
+      "first_port": 3,
+      "second_port": 1,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 96,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "selected": 96,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          15
+        ],
+        [
+          2,
+          2,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524673,
+      "selected": 5,
+      "first_port": 5,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            9
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          29
+        ],
+        [
+          1,
+          3,
+          16
+        ],
+        [
+          2,
+          2,
+          9
+        ],
+        [
+          2,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524673,
+      "selected": 5,
+      "first_port": 5,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524673,
+      "selected": 5,
+      "first_port": 5,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          9
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 524673,
+      "selected": 5,
+      "first_port": 5,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 525057,
+      "selected": 72,
+      "first_port": 0,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          27
+        ],
+        [
+          1,
+          3,
+          24
+        ],
+        [
+          2,
+          2,
+          20
+        ],
+        [
+          2,
+          3,
+          22
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 525057,
+      "selected": 72,
+      "first_port": 0,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 525057,
+      "selected": 72,
+      "first_port": 0,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          18
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 525057,
+      "selected": 72,
+      "first_port": 0,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          -4
+        ],
+        [
+          2,
+          3,
+          -4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 525057,
+      "selected": 72,
+      "first_port": 2,
+      "second_port": 0,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 525057,
+      "selected": 72,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          27
+        ],
+        [
+          1,
+          3,
+          24
+        ],
+        [
+          2,
+          2,
+          20
+        ],
+        [
+          2,
+          3,
+          22
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 525057,
+      "selected": 72,
+      "first_port": 2,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          18
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 525057,
+      "selected": 72,
+      "first_port": 2,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          -4
+        ],
+        [
+          2,
+          3,
+          -4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 528386,
+      "selected": 72,
+      "first_port": 1,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 528386,
+      "selected": 72,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          9
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 528386,
+      "selected": 72,
+      "first_port": 1,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          14
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 528386,
+      "selected": 72,
+      "first_port": 1,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            -1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          -2
+        ],
+        [
+          2,
+          2,
+          -1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 528386,
+      "selected": 9,
+      "first_port": 5,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            -1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          -2
+        ],
+        [
+          2,
+          2,
+          -1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 528386,
+      "selected": 9,
+      "first_port": 5,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          14
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 528386,
+      "selected": 9,
+      "first_port": 5,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          9
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 528386,
+      "selected": 9,
+      "first_port": 5,
+      "second_port": 6,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 528400,
+      "selected": 10,
+      "first_port": 6,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          8
+        ],
+        [
+          2,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 528400,
+      "selected": 10,
+      "first_port": 6,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            -4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          -6
+        ],
+        [
+          1,
+          3,
+          -16
+        ],
+        [
+          1,
+          4,
+          -6
+        ],
+        [
+          2,
+          2,
+          -4
+        ],
+        [
+          2,
+          3,
+          -12
+        ],
+        [
+          2,
+          4,
+          -6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 528400,
+      "selected": 10,
+      "first_port": 6,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 3,
+        "exponential_coefficients": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          10
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 528400,
+      "selected": 10,
+      "first_port": 6,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          12
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          2,
+          6
+        ],
+        [
+          2,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 40,
+      "first_port": 2,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 40,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 40,
+      "first_port": 2,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 40,
+      "first_port": 2,
+      "second_port": 6,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 40,
+      "first_port": 6,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 40,
+      "first_port": 6,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 40,
+      "first_port": 6,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 40,
+      "first_port": 6,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 72,
+      "first_port": 2,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 72,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 72,
+      "first_port": 2,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 72,
+      "first_port": 2,
+      "second_port": 5,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            -6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          -11
+        ],
+        [
+          1,
+          3,
+          -12
+        ],
+        [
+          2,
+          2,
+          -6
+        ],
+        [
+          2,
+          3,
+          -6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 96,
+      "first_port": 2,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 96,
+      "first_port": 2,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 96,
+      "first_port": 2,
+      "second_port": 3,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 96,
+      "first_port": 2,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 96,
+      "first_port": 3,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 96,
+      "first_port": 3,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 96,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 96,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 12,
+      "first_port": 5,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 12,
+      "first_port": 5,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 12,
+      "first_port": 5,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 12,
+      "first_port": 5,
+      "second_port": 6,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 12,
+      "first_port": 6,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 12,
+      "first_port": 6,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 12,
+      "first_port": 6,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 12,
+      "first_port": 6,
+      "second_port": 5,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 36,
+      "first_port": 6,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 36,
+      "first_port": 6,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 36,
+      "first_port": 6,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            -6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          -11
+        ],
+        [
+          1,
+          3,
+          -12
+        ],
+        [
+          2,
+          2,
+          -6
+        ],
+        [
+          2,
+          3,
+          -6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 786696,
+      "selected": 36,
+      "first_port": 6,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          52
+        ],
+        [
+          2,
+          2,
+          54
+        ],
+        [
+          2,
+          3,
+          54
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790536,
+      "selected": 96,
+      "first_port": 3,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790536,
+      "selected": 96,
+      "first_port": 3,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790536,
+      "selected": 96,
+      "first_port": 3,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790536,
+      "selected": 96,
+      "first_port": 3,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            12
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          42
+        ],
+        [
+          1,
+          3,
+          34
+        ],
+        [
+          2,
+          2,
+          36
+        ],
+        [
+          2,
+          3,
+          36
+        ],
+        [
+          3,
+          2,
+          12
+        ],
+        [
+          3,
+          3,
+          12
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790536,
+      "selected": 40,
+      "first_port": 6,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790536,
+      "selected": 40,
+      "first_port": 6,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790536,
+      "selected": 40,
+      "first_port": 6,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790536,
+      "selected": 40,
+      "first_port": 6,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            12
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          42
+        ],
+        [
+          1,
+          3,
+          34
+        ],
+        [
+          2,
+          2,
+          36
+        ],
+        [
+          2,
+          3,
+          36
+        ],
+        [
+          3,
+          2,
+          12
+        ],
+        [
+          3,
+          3,
+          12
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790786,
+      "selected": 9,
+      "first_port": 5,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          -4
+        ],
+        [
+          2,
+          3,
+          -4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790786,
+      "selected": 9,
+      "first_port": 5,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          18
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790786,
+      "selected": 9,
+      "first_port": 5,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          27
+        ],
+        [
+          1,
+          3,
+          24
+        ],
+        [
+          2,
+          2,
+          20
+        ],
+        [
+          2,
+          3,
+          22
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790786,
+      "selected": 9,
+      "first_port": 5,
+      "second_port": 6,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790786,
+      "selected": 9,
+      "first_port": 6,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          -4
+        ],
+        [
+          2,
+          3,
+          -4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790786,
+      "selected": 9,
+      "first_port": 6,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          18
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790786,
+      "selected": 9,
+      "first_port": 6,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          27
+        ],
+        [
+          1,
+          3,
+          24
+        ],
+        [
+          2,
+          2,
+          20
+        ],
+        [
+          2,
+          3,
+          22
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 790786,
+      "selected": 9,
+      "first_port": 6,
+      "second_port": 5,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 819336,
+      "selected": 96,
+      "first_port": 1,
+      "second_port": 0,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 819336,
+      "selected": 96,
+      "first_port": 1,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 819336,
+      "selected": 96,
+      "first_port": 1,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          9
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 819336,
+      "selected": 96,
+      "first_port": 1,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          53
+        ],
+        [
+          1,
+          3,
+          40
+        ],
+        [
+          2,
+          2,
+          51
+        ],
+        [
+          2,
+          3,
+          48
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          3,
+          3,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 819460,
+      "selected": 33,
+      "first_port": 6,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 3,
+        "exponential_coefficients": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            -6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          3,
+          -2
+        ],
+        [
+          2,
+          2,
+          -4
+        ],
+        [
+          2,
+          3,
+          -6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 819460,
+      "selected": 33,
+      "first_port": 6,
+      "second_port": 2,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            -2
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          -2
+        ],
+        [
+          1,
+          3,
+          -2
+        ],
+        [
+          2,
+          2,
+          -2
+        ],
+        [
+          2,
+          3,
+          -2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 819460,
+      "selected": 33,
+      "first_port": 6,
+      "second_port": 3,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            12
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          30
+        ],
+        [
+          1,
+          3,
+          16
+        ],
+        [
+          2,
+          2,
+          12
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 819460,
+      "selected": 33,
+      "first_port": 6,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          33
+        ],
+        [
+          1,
+          3,
+          24
+        ],
+        [
+          2,
+          2,
+          20
+        ],
+        [
+          2,
+          3,
+          22
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1061378,
+      "selected": 44,
+      "first_port": 0,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -13
+          ],
+          [
+            2,
+            18
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          23
+        ],
+        [
+          1,
+          3,
+          12
+        ],
+        [
+          2,
+          2,
+          18
+        ],
+        [
+          2,
+          3,
+          12
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1061378,
+      "selected": 44,
+      "first_port": 0,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -10
+          ],
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          10
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          10
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1061378,
+      "selected": 44,
+      "first_port": 0,
+      "second_port": 6,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1061378,
+      "selected": 44,
+      "first_port": 6,
+      "second_port": 0,
+      "second_initially_stable": true,
+      "stable_sizes": "all",
+      "no_roots_from": null,
+      "certificate": null,
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1061378,
+      "selected": 44,
+      "first_port": 6,
+      "second_port": 1,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            1,
+            -17
+          ],
+          [
+            2,
+            20
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          23
+        ],
+        [
+          1,
+          3,
+          12
+        ],
+        [
+          2,
+          2,
+          20
+        ],
+        [
+          2,
+          3,
+          10
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1061378,
+      "selected": 44,
+      "first_port": 6,
+      "second_port": 4,
+      "second_initially_stable": false,
+      "stable_sizes": [],
+      "no_roots_from": 1,
+      "certificate": {
+        "column": 2,
+        "exponential_coefficients": [
+          [
+            2,
+            5
+          ]
+        ]
+      },
+      "defect_tensor": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          10
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          5
+        ],
+        [
+          2,
+          3,
+          2
+        ]
+      ]
+    }
+  ]
+}

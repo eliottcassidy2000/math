@@ -1,0 +1,110 @@
+{
+  "levels": [
+    {
+      "n": 1,
+      "marked_seed_orbits": 1,
+      "marked_deletion_atom_orbits": 1,
+      "singleton_reachable_orbits": 1,
+      "strong_marked_seed_orbits": 1,
+      "strong_stable_subsets": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 2,
+      "marked_seed_orbits": 2,
+      "marked_deletion_atom_orbits": 0,
+      "singleton_reachable_orbits": 2,
+      "strong_marked_seed_orbits": 0,
+      "strong_stable_subsets": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 3,
+      "marked_seed_orbits": 4,
+      "marked_deletion_atom_orbits": 0,
+      "singleton_reachable_orbits": 4,
+      "strong_marked_seed_orbits": 1,
+      "strong_stable_subsets": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 4,
+      "marked_seed_orbits": 9,
+      "marked_deletion_atom_orbits": 0,
+      "singleton_reachable_orbits": 9,
+      "strong_marked_seed_orbits": 3,
+      "strong_stable_subsets": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 5,
+      "marked_seed_orbits": 22,
+      "marked_deletion_atom_orbits": 4,
+      "singleton_reachable_orbits": 18,
+      "strong_marked_seed_orbits": 8,
+      "strong_stable_subsets": [
+        7,
+        3,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 6,
+      "marked_seed_orbits": 59,
+      "marked_deletion_atom_orbits": 7,
+      "singleton_reachable_orbits": 32,
+      "strong_marked_seed_orbits": 24,
+      "strong_stable_subsets": [
+        20,
+        10,
+        4,
+        1,
+        0
+      ]
+    },
+    {
+      "n": 7,
+      "marked_seed_orbits": 194,
+      "marked_deletion_atom_orbits": 43,
+      "singleton_reachable_orbits": 53,
+      "strong_marked_seed_orbits": 98,
+      "strong_stable_subsets": [
+        63,
+        35,
+        14,
+        5,
+        1
+      ]
+    }
+  ],
+  "scope": "marked isomorphism classes, not just all marks on ordinary representatives",
+  "stable_core_subset_totals": [
+    93,
+    49,
+    19,
+    6,
+    1
+  ]
+}
