@@ -1,6 +1,6 @@
-# S91 (2026-11-10): the local densities of F1, the numbers of an Euler-Sombor abstract, and qualifying path counts
+# S91 (2026-11-10/11): the local densities of F1, the numbers of an Euler-Sombor abstract, qualifying path counts and source lines
 
-Session `opus-2026-11-10-S91`. Canon: THM-5128. Hypotheses: HYP-9660. Scripts and outputs:
+Session `opus-2026-11-10-S91`. Canon: THM-5128, THM-5129. Hypotheses: HYP-9660, HYP-9661. Scripts and outputs:
 `04-computation/experiments/s91_f1_local_densities_20261110/`. The Chan-Pak conjecture (every odd number except 7
 and 21 is a Hamiltonian path count) is NOT proved here and remains OPEN; this session settles the local (residue
 class) side of the best-understood join family and says precisely why that side cannot decide the conjecture.
@@ -185,6 +185,106 @@ acts on these tournaments through `F_4 = F_2[omega]`, not through the lattice `Z
   the correction `-[s = 0]` when the two defects touch), and yesterday's over-general sentence about it was
   repaired the same way. MECHANISM; lost: additive versus bilinear.
 
+## 4. Qualifying path counts, sources, and what the domination-defect inequality asks for
+
+Second directive (2026-11-11): "keep going as you were but also draw in new ideas as they become more relevant and
+creatively ponder out of the box ways the universal domination-defect inequality allows us to reframe the
+constructive task of a chan-pak proof through uniform supply of reusable source interfaces, including their
+initial cases". Two other sessions worked the same directive and pushed first: Session262 (Codex; exchange
+interfaces, protected supply, selectors, fuelled queues) and kind-pasteur-2026-11-10-S22 (THM-5130 and
+SOURCES_AND_DOMINATION.md: domination skeleton plus defect, excess types, one-vertex sources of the 9-grid at
+levels 7-11, the abundancy index). What follows keeps to what they do not contain; their results are cited, not
+re-derived. Canon: THM-5129. Hypothesis: HYP-9661.
+
+### 4.1 Dictionary (EXACT)
+
+| the words of the directive | the object |
+| --- | --- |
+| k-vertex extension of a tournament `B` | `B => TT_(k-1) => z` with `z -> y`: a tail of `k - 1` sinks and an apex over one vertex `y` |
+| qualifying path | a directed path `R` of `B` starting at `y`, weighted by `H(B - V(R))`; total weight `U = U_B(y)` |
+| the Hamiltonian path count itself | `D + 2 U_even` for the bare apex (`k = 1`), `D + 2^(k-1) U` for `k >= 2`, `D = H(B)` |
+| reusable source interface | the pair `(D, U)`: the same base serves every tail length; in `Z_2` the values `D + 2^t U` converge to `D` |
+| initial case | the head `k = 1`, which differs from the tail formula by `E = U_odd - U_even`; and the offsets with few slopes |
+| the invoice of Session261 | `H(T) = H(T - z) + (d(G_z) - 1) + defect`; here `d(G_z) - 1 = 2^(outdeg(y) + t)`, so `U >= 2^outdeg(y)` (kind-pasteur, first) |
+
+A bare apex closes a qualifying path into an odd cycle only if the path has an even number of vertices; one sink
+of a tail removes the parity condition (THM-5129 (E)). That is the whole difference between the head and the tails.
+The rooted counts themselves have no gaps: every integer in `[0, 2791]` is a number of Hamiltonian paths from a
+fixed start and every integer in `[1, 40162]` is a cover count `U` at order `<= 10` (helper census,
+`rooted_spectrum/census10.out`, `q1.out`; FINITE-EXACT, not audited). The exceptions 7 and 21 appear only when `D`
+and `U` are read together: the difficulty is the coupling, as Session262 puts it ("the base offset is never freely
+selectable").
+
+### 4.2 What was added (THM-5129)
+
+- **Finite supply (PROVED).** For a fixed offset `D` the slopes, over bases of every order, are finitely many odd
+  numbers times powers of two, computable from the strong tournaments with at most `D` paths (product law over
+  strong components, known; finiteness and the lists, new).
+- **Complete lists at every order for `D <= 73` (FINITE-EXACT).** Offsets `3, 5, 9, 17, 33, 65` have `1, 5, 8, 11,
+  34, 66` odd parts; the exponents `0, 0, 1, 2, 5` of the 9-grid sources of Session261 are least possible;
+  `(65, 72)` is not a source at any order, so the family `(2^s + 1, 9 * 2^(s-3))` seen at `s = 3, 4, 5, 7, 8, 9` is
+  not uniform.
+- **Permanent omissions (PROVED).** `7, 11, 13, 21, 47, 67` are not `D + 2^t U` (`t >= 1`) at any order: the
+  exceptional set of HYP-9453 (1) (klein) is permanent. The four attained ones are heads at a non-sink root.
+- **Windows fail, lines succeed.** No attained `h <= 73` other than `1, 5` has `[h, 3h/2]` inside its slope set
+  (mean share `0.50` on `37..73`), but every line `D + 2U = N` with `129 <= N < 16384` carries at least `N/64`
+  sources, the share of lattice points rises from `0.30` to `0.62`, and in the decile nearest the diagonal `U = D`
+  it is `0.94` (odd `U`) and `0.84` (even `U`).
+  Four predictions were registered and pushed before the order-10 run; all four held.
+
+### 4.3 Where the local densities meet the sources
+
+F1 is a source family: a one-apex source `(x_1, y_1)` closed by a one-apex module `(x_2, y_2)` in place of the
+apex vertex, which multiplies the offset and the slope: offset `x_1 x_2`, slope `y_1 y_2`, head correction 1. Its
+two sheets are the head (`s = 0`, value `D + U - 1`) and the tails (`s >= 1`, value `D + 2^s U`). THM-5128 then
+reads:
+
+- supply is uniform at every prime, with a power saving: each residue class receives its share, and the only
+  bias is the mass of the `p`-divisible sources (`p | D` and `p | U`), where the value is forced into one class;
+- that class is `0` on the tails and `-E` on the head. The initial case is visible in the residue statistics;
+- the singular series is at least `8/pi^2` of its mean for every odd `N`, including 7 and 21.
+
+So no reframing through congruences can account for the two missing values (HYP-9661 (D)); the major-arc side of
+"uniform supply" is closed for this family, and what a proof lacks is entirely on the minor-arc (collision) side.
+
+### 4.4 Reframings (typed)
+
+1. **Count lines, not windows (FINITE-EXACT in range; conjecture beyond: HYP-9661 (A)).** The induction
+   `N = D + 2U`, `D <= N/3` needs one source among about `N/6` lattice points, and about half of them are sources.
+   klein has this form for the sole-exit sweep (HYP-9454 (1), lines `3H + 2 sigma`); what is added is the reason
+   single-base windows cannot work (finite supply) and the measured saturation near the diagonal. The statement to
+   prove is a bivariate local law for `(H(B), U_B(y))`, the rooted version of HYP-9659.
+2. **Supply follows fibre size (NUMERICAL).** The poor offsets are the numbers with two strong realisers
+   (`35, 39, 47, 63`); correlation `0.68` between coverage and the number of strong classes. Uniform supply at an
+   offset is a statement about multiplicities in the strong spectrum (THM-4810, HYP-9453 (3)).
+3. **Sources are 2-adic limit points (EXACT).** `D + 2^t U -> D` in `Z_2`, so every attained number is a limit of
+   other attained numbers and the spectrum has no 2-adically isolated point; the grid `(d, r, s)` is the 2-adic
+   polar coordinate around 1. "Reusable" means: the limit point stays after any finite use. The head is the one
+   place where the 2-adic ray does not extrapolate.
+4. **Two Euler products (EXACT, formal).** Rooted tournaments are sequences of strong components, so by
+   THM-5129 (A1), as formal power series in a variable `t` marking the order,
+
+       sum over (B, y) of t^|B| H(B)^(-a) U_B(y)^(-b)  =  (1 - P(a + b))^(-1) * R(a, b) * (1 - Q(a, b))^(-1),
+
+   the sum over isomorphism classes of rooted tournaments, with `P(c) = sum over strong C of t^|C| H(C)^(-c)`,
+   `R = sum over strong rooted (C, y) of t^|C| H^(-a) U^(-b)`, `Q = sum over strong C of t^|C| H^(-a) Pi_2^(-b)`
+   (the one-vertex tournament included in all three). Strong
+   tournaments are the primes of this product (the abundancy index of kind-pasteur is its local factor); the
+   rational primes carry the other Euler product, the singular series of THM-5128. The first governs how many
+   sources there are, the second how they fall into residue classes. No use is made of the identity here.
+5. **A local-global problem with two exceptions (ANALOGY; HYP-9661 (D)).** Orbit of a digit semigroup, bilinear
+   form, congruence gap: three of the four inputs of the thin-orbit density theorems are in THM-5128. The warning
+   that comes with the analogy is that such problems can fail globally for reasons no congruence sees.
+
+### 4.5 Salvaged census data (helper runs; FINITE-EXACT, not audited)
+
+`rooted_spectrum/`: all rooted tournaments of orders `<= 9` (and aggregated order 10, 161,870,336 rows): no
+violation of `U >= D`, `U = E (mod 2)`, `s + e <= H`, and of eight further inequalities listed in `census10.out`;
+the composition law over strong components; twelve gadget identities in eight invariants (`gadgets.out`); least
+`H` of strong tournaments `3, 5, 9, 15, 25, 45, 75, 125` for orders `3..10`. `census_k2/`: the one- and
+two-root-change censuses (HYP-9660 (A)). `g20_local/`: residue histograms of all `4^n` two-apex words, `n <= 16`
+(HYP-9660 (D)). `bridges/`: the checks behind section 3.
+
 ## 5. Where this leaves the proof
 
 1. *The local side is closed for F1 and is not where the difficulty lies.* Local densities exist, form an Euler
@@ -199,7 +299,8 @@ acts on these tournaments through `F_4 = F_2[omega]`, not through the lattice `Z
 3. *What completeness still needs is unchanged:* a collision (second-moment) bound, the minor-arc side. What this
    session adds to that program is the major-arc side for any bilinear join family (a count of divisible states)
    and, for one state, a level of distribution with a uniform power saving (THM-5128 (B4)).
-4. *The extension lane* is section 4.
+4. *The extension lane* is section 4: the supply of sources on a line is linear in `N` (THM-5129 (F)), far above
+   the `0.75 ln N` representations of F1; explicit grammars are a thin part of what exists.
 
 ## 6. Principles, named (triggers and counter-indications)
 
@@ -238,3 +339,25 @@ acts on these tournaments through `F_4 = F_2[omega]`, not through the lattice `Z
     python3 window_split.py 27 24 prereg_window_27_24.json > window_split_prereg_27_24.out   # about 90 s, 1.5 GB
 
 Every script exits nonzero on a failed check. numba is required for the last three.
+
+Sources (section 4; `rooted_spectrum/`, run from that directory):
+
+    python3 census.py                     > census.out                   # rooted census, orders <= 9 (writes rooted_le9.npz, codes9.npy)
+    python3 source_supply.py              > source_supply.out            # THM-5129 (A)-(D)
+    python3 head_parity_check.py          > head_parity_check.out        # THM-5129 (E)
+    python3 source_witnesses.py           > source_witnesses.out         # 9-grid sources, levels 2-9, literal recount
+    python3 line_density_order10.py 8     > line_density_order9.out      # in sample
+    python3 line_density_order10.py 9     > line_density_order10.out     # pre-registered run (needs codes9.npy)
+
+## 8. Next obligations
+
+1. Independent audit of THM-5128 and THM-5129 (the audit status is stated in each file).
+2. HYP-9660 (A): the first-order term for two root changes, then a pre-registered window above `2^27`.
+3. HYP-9660 (B): complete the rate scan to `m <= 1000`; the candidates able to refute it are `155, 381, 465`.
+4. HYP-9661 (A): a bivariate local law for `(H(B), U_B(y))`; first test, the saturated shares at rooted order 11
+   on `[2^13, 2^15)` by sampling, and the share with `D <= U <= 1.05 D`.
+5. The minor-arc side for F1: a Type II bound for the bilinear form using the gap of the twisted operators
+   (continues THM-4886 and the collision balance of THM-4890).
+6. Exact supply at offsets `129` and `257` (strong tournaments of orders 10, 11 with that many paths), to decide
+   the least exponents of the 9-grid at levels 7 and 8.
+7. HYP-9661 (C): heads at non-sink roots with `D <= N/3`.
