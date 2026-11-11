@@ -134,3 +134,41 @@ non-Paley doubly regular tournament of order 19, 23 or 27.
 A single doubly regular tournament outside these residues refutes the corresponding statement; R9 failing would show
 that the Paley law of this note is a statement about the quadratic character and the converse symmetry, not about
 double regularity.
+
+---
+
+# Fifth block (same session): R11
+
+Written after the sampled Run G was read (G1 on every 40th Goethals-Seidel solution: one class, not Paley,
+self-converse, `H = 1172732961771 = 3 (mod 8)`; G2: one class, not Paley, not self-converse, `H = 5 (mod 8)`; G3: 39
+classes from 40 matrices, three of them self-converse with `H = 3 (mod 4)` by folding; R9, R10 hold so far; the full
+G1 is running) and after an exploratory look at switching classes, which is in-sample:
+
+- In-sample (exploratory, not registered): let `T^+` be `T` with a new source. For `T = P_3, P_7` (all members) and
+  `P_11, CD_4, P_19` (60, 60, 30 random members) every member of the switching class of `T^+` has the same `H mod 4`
+  (3, 1, 3, 1, 3). `H mod 8` is not constant on the class of `CD_4^+` (1 and 5 occur). For general tournaments
+  `H mod 4` is not a switching invariant (random tests, orders 5-10).
+- Proved between the blocks (two lines, by counting the vertices between `a` and `psi(a)`): in a doubly regular
+  tournament of order `4t + 3` with a converse symmetry, every invariant triple is cyclic if `t` is even and none is
+  if `t` is odd; with the folding formula, `H = n(n-1)/2 (mod 4)` for every self-converse doubly regular tournament.
+
+Members of the switching class of `T^+` are exactly the tournaments `U` on `N = n + 1` vertices whose `+-1` skew
+matrix `S` satisfies `S^2 = -(N-1) I` and which are switching-equivalent to `T^+`; the class is the "skew Hadamard
+class" of `T`.
+
+## Run H: switching classes at new orders and direct counts at order 27 (`switch_class.py`, `drt27_direct.py`)
+
+- **H1 (`N = 24`).** 40 random members (seeded) of each of the classes of `P_23^+` and of `D(P_11)^+` (the class of
+  G2); `H mod 256` by the layered programme.
+- **H2 (`N = 20`).** 40 random members of the class of the non-Paley doubly regular tournament of order 19 of G1;
+  exact `H`.
+- **H3 (order 27, direct).** For the three self-converse classes of G3 and the first six classes of G3 without a
+  converse symmetry: `H mod 256` as the sum over the start vertex of 27 layered programmes on 26 vertices. Control:
+  the same method on `P_27` must return 95.
+
+- **R11.** Every member in H1 has `H = 1 (mod 4)`; every member in H2 has `H = 3 (mod 4)`.
+- **R9 (continued).** Every tournament of H3 has `H = 3 (mod 4)`; the three self-converse ones agree with the
+  folding formula. **R10 (continued).** Every tournament of H3 has `H = 7 (mod 8)`.
+
+Conjecture to be recorded if R11 and R9 hold: for every tournament `U` on `N` vertices with `S^2 = -(N-1) I`,
+`H(U) = 1 + N/2 (mod 4)`.

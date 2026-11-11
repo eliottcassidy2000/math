@@ -1,0 +1,42 @@
+G3: 246960 solutions (a, b, c, d) of the Goethals-Seidel equations with circulants of order 7; 40 skew Hadamard matrices of order 28 examined (every 2000-th solution, at most 40); 1120 descendants, all doubly regular; 39 isomorphism classes
+  class with 24 members: isomorphic to P_27: no; self-converse: no
+  class with 24 members: isomorphic to P_27: no; self-converse: no
+  class with 24 members: isomorphic to P_27: no; self-converse: no
+  class with 24 members: isomorphic to P_27: no; self-converse: no
+  class with 24 members: isomorphic to P_27: no; self-converse: no
+  class with 24 members: isomorphic to P_27: no; self-converse: no
+  class with 24 members: isomorphic to P_27: no; self-converse: no
+  class with 16 members: isomorphic to P_27: no; self-converse: no
+  class with 16 members: isomorphic to P_27: no; self-converse: no
+  class with 16 members: isomorphic to P_27: no; self-converse: yes; fold: |D_1| = 13 of 13, H = 3 (mod 4)
+  class with 16 members: isomorphic to P_27: no; self-converse: no
+  class with 16 members: isomorphic to P_27: no; self-converse: no
+  class with 16 members: isomorphic to P_27: no; self-converse: no
+  class with 16 members: isomorphic to P_27: no; self-converse: no
+  class with 20 members: isomorphic to P_27: no; self-converse: no
+  class with 20 members: isomorphic to P_27: no; self-converse: no
+  class with 20 members: isomorphic to P_27: no; self-converse: no
+  class with 20 members: isomorphic to P_27: no; self-converse: no
+  class with 20 members: isomorphic to P_27: no; self-converse: no
+  class with 20 members: isomorphic to P_27: no; self-converse: no
+  class with 20 members: isomorphic to P_27: no; self-converse: no
+  class with 57 members: isomorphic to P_27: no; self-converse: no
+  class with 19 members: isomorphic to P_27: no; self-converse: no
+  class with 57 members: isomorphic to P_27: no; self-converse: no
+  class with 19 members: isomorphic to P_27: no; self-converse: no
+  class with 57 members: isomorphic to P_27: no; self-converse: no
+  class with 57 members: isomorphic to P_27: no; self-converse: no
+  class with 19 members: isomorphic to P_27: no; self-converse: yes; fold: |D_1| = 13 of 13, H = 3 (mod 4)
+  class with 57 members: isomorphic to P_27: no; self-converse: no
+  class with 57 members: isomorphic to P_27: no; self-converse: no
+  class with 57 members: isomorphic to P_27: no; self-converse: no
+  class with 57 members: isomorphic to P_27: no; self-converse: no
+  class with 19 members: isomorphic to P_27: no; self-converse: yes; fold: |D_1| = 13 of 13, H = 3 (mod 4)
+  class with 36 members: isomorphic to P_27: no; self-converse: no
+  class with 36 members: isomorphic to P_27: no; self-converse: no
+  class with 12 members: isomorphic to P_27: no; self-converse: no
+  class with 36 members: isomorphic to P_27: no; self-converse: no
+  class with 36 members: isomorphic to P_27: no; self-converse: no
+  class with 12 members: isomorphic to P_27: no; self-converse: no
+R9 (G3: H = 3 mod 4 for the 3 classes with a converse symmetry): HOLDS
+python3 drt_zoo.py g3 40 2000  113.84s user 0.45s system 99% cpu 1:55.37 total

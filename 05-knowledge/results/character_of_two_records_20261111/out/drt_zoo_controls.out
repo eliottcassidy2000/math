@@ -1,0 +1,5 @@
+control P_7: H = 189 (ok); doubly regular: True
+control P_11: H = 95095 (ok); doubly regular: True
+control P_19: H = 1172695746915 (ok); doubly regular: True
+control CD_4: H = 198335025 (ok); doubly regular: True
+control P_23: H mod 256 = 213, mod 8 = 5 (ok)

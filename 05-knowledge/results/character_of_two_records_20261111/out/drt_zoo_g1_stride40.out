@@ -1,0 +1,3 @@
+G1: 12000 solutions (a, b, c, d) of the Goethals-Seidel equations with circulants of order 5; 300 skew Hadamard matrices of order 20 examined (every 40-th solution); 6000 descendants, 6000 distinct labelled tournaments, all doubly regular; 1 isomorphism classes
+  class with 6000 labelled members: H = 1172732961771 = 3 (mod 4) = 3 (mod 8); |Aut| = 3; isomorphic to P_19: no; self-converse: yes; fold: |D_1| = 9 of 9, paths ending in D_1 = 19359, 1 + 2*paths = 3 (mod 4)
+R9 (G1: H = 3 mod 4): HOLDS; R10 (G1: H = 3 mod 8): HOLDS

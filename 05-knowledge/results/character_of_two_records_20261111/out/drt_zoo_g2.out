@@ -1,0 +1,4 @@
+G2: the double of the Paley matrix of order 12; 24 descendants, all doubly regular; 1 isomorphism classes
+  class of descendants [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]: H = 189 (mod 256), 1 (mod 4), 5 (mod 8); |Aut| = 55; isomorphic to P_23: no; self-converse: no
+R9 (G2: H = 1 mod 4): HOLDS; R10 (G2: H = 5 mod 8): HOLDS
+python3 drt_zoo.py g2 /tmp/claude-hamlayer  1.79s user 0.05s system 98% cpu 1.867 total
