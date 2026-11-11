@@ -4,17 +4,21 @@
   "incoming_integrated": [
     "e48c52e9dc",
     "946fb3f88f",
-    "e322dd80eb"
+    "e322dd80eb",
+    "caeef0ff32",
+    "efa490ca63",
+    "332cacec74",
+    "fb923e4138"
   ],
   "first_published_checkpoint": "0a37d375cb",
   "files": {
     "README.md": {
-      "bytes": 2828,
-      "sha256": "f08498b44af08ab5655a3b91424fa54b268ae63a28ea705b47c33737d71e1915"
+      "bytes": 3001,
+      "sha256": "37b29ef38855235471a47f3a62278346454c5a8deedf8e5871426cbd86feedb7"
     },
     "SYNTHESIS.md": {
-      "bytes": 11456,
-      "sha256": "c39e646b729d6a7da13e773f793ad96a6293fbda469acc9e5c6b8259e0757921"
+      "bytes": 12744,
+      "sha256": "45076b6d4b7dc78524b7dc25eed9a7f072125e9e4439263c100a0596380b116f"
     },
     "construction/PROOF.md": {
       "bytes": 15949,
@@ -52,6 +56,10 @@
       "bytes": 10015,
       "sha256": "283e592c62acec2664c669fa0a5135976bd0a548c20f4dfd26f94286b6e4b729"
     },
+    "dynamics/INCOMING_REPAIR.md": {
+      "bytes": 3699,
+      "sha256": "c55c175c195d013733ba35e9fdd1f484feb2d20470a2ad7fb031238b2788b2d3"
+    },
     "dynamics/PORTABLE_GAPS.md": {
       "bytes": 5528,
       "sha256": "d3e9728803ebbb4b89f239e7e967f6df3867f690edcf669b7f0c46464d66d06f"
@@ -59,6 +67,14 @@
     "dynamics/PROOF.md": {
       "bytes": 7489,
       "sha256": "7f7f09eb11718231346b0543da6585e7e743f8b78370bdf124ce4131c002cbd5"
+    },
+    "dynamics/incoming_probe.py": {
+      "bytes": 1633,
+      "sha256": "bba55700d0fedc0413692b9db92b606e2ae45e403342bd303a359359f147cfe2"
+    },
+    "dynamics/incoming_receipt.json": {
+      "bytes": 1458,
+      "sha256": "23bb2ac2b2fdfbb200906d2257dc83392e854657bc9dc0cca826e1b243db0fff"
     },
     "dynamics/portable_probe.py": {
       "bytes": 2579,
@@ -117,12 +133,16 @@
       "sha256": "cce2ed6a2b5cae7e0678de41d467c923bf197ee980306c3508132f2f3f04543e"
     },
     "square_graceful/GRAMMAR.md": {
-      "bytes": 6925,
-      "sha256": "1c56aeb31e07f745add1dcdf2851c41cb7674b0dd19876eae282669e70822cc0"
+      "bytes": 7321,
+      "sha256": "2d4f169c6adc10070d479a0a5705b598185cdc6072a8eaa1f080c9f2f3ee183b"
     },
     "square_graceful/PROOF.md": {
       "bytes": 10189,
       "sha256": "44d4b8ea9bd60d8e4480580ea19e5ceaf8ecf9259585382d9854a8f5edaef52c"
+    },
+    "square_graceful/RESIDUE_PHASE.md": {
+      "bytes": 4482,
+      "sha256": "127f39c88d03d95d81b2312d5504c0b8d5257f4e07a7cff2aa0aa1680e373f99"
     },
     "square_graceful/carry_probe.py": {
       "bytes": 3010,
@@ -147,6 +167,16 @@
     "square_graceful/receipt.json": {
       "bytes": 3685,
       "sha256": "7fa6c01f6ba1465a6b9fccee11890ea5f7f4bae51290632b6a9998fbe0f30baf"
+    },
+    "square_graceful/residue_phase_probe.py": {
+      "bytes": 2725,
+      "sha256": "e8384203adc8c144e0ea30a6ef221c16b41f70558a4276a4f4a56b5566b762ae"
+    },
+    "square_graceful/residue_phase_receipt.json": {
+      "bytes": 8437,
+      "sha256": "861065d8dc9c6b50ec009c5405414a67eb5b8ab5215a1b228eadc7471b7685d6"
     }
-  }
+  },
+  "research_checkpoint": "124b7ef296",
+  "documentation_check": "agents/check_docs.py PASSED; no canon promotion"
 }

@@ -1,0 +1,544 @@
+{
+  "status": "FINITE-EXACT controls of arbitrary-quantifier proofs",
+  "signatures": {
+    "lower": [
+      3,
+      9,
+      -3,
+      3,
+      -1,
+      6,
+      -2,
+      2,
+      0
+    ],
+    "upper": [
+      3,
+      9,
+      -3,
+      6,
+      -2,
+      3,
+      -1,
+      2,
+      0
+    ]
+  },
+  "seed": {
+    "B": 1002,
+    "gB": 661,
+    "C": 3006,
+    "gC": 1531,
+    "defect": 0
+  },
+  "ternary_carry_universe": "0 <= B < 1024, all three carries, both input bits",
+  "dyadic_no_go_control": "0 <= B < 128, 0 <= t <= 6, every suffix 0 <= s < 2^t",
+  "ray_control": [
+    {
+      "j": 0,
+      "address_bitlength": 10,
+      "target_bitlength": 16
+    },
+    {
+      "j": 1,
+      "address_bitlength": 11,
+      "target_bitlength": 17
+    },
+    {
+      "j": 2,
+      "address_bitlength": 12,
+      "target_bitlength": 18
+    },
+    {
+      "j": 3,
+      "address_bitlength": 13,
+      "target_bitlength": 19
+    },
+    {
+      "j": 4,
+      "address_bitlength": 14,
+      "target_bitlength": 20
+    },
+    {
+      "j": 5,
+      "address_bitlength": 15,
+      "target_bitlength": 21
+    },
+    {
+      "j": 6,
+      "address_bitlength": 16,
+      "target_bitlength": 22
+    },
+    {
+      "j": 7,
+      "address_bitlength": 17,
+      "target_bitlength": 23
+    },
+    {
+      "j": 8,
+      "address_bitlength": 18,
+      "target_bitlength": 24
+    },
+    {
+      "j": 9,
+      "address_bitlength": 19,
+      "target_bitlength": 25
+    },
+    {
+      "j": 10,
+      "address_bitlength": 20,
+      "target_bitlength": 26
+    },
+    {
+      "j": 11,
+      "address_bitlength": 21,
+      "target_bitlength": 27
+    },
+    {
+      "j": 12,
+      "address_bitlength": 22,
+      "target_bitlength": 28
+    },
+    {
+      "j": 13,
+      "address_bitlength": 23,
+      "target_bitlength": 29
+    },
+    {
+      "j": 14,
+      "address_bitlength": 24,
+      "target_bitlength": 30
+    },
+    {
+      "j": 15,
+      "address_bitlength": 25,
+      "target_bitlength": 31
+    },
+    {
+      "j": 16,
+      "address_bitlength": 26,
+      "target_bitlength": 32
+    },
+    {
+      "j": 17,
+      "address_bitlength": 27,
+      "target_bitlength": 33
+    },
+    {
+      "j": 18,
+      "address_bitlength": 28,
+      "target_bitlength": 34
+    },
+    {
+      "j": 19,
+      "address_bitlength": 29,
+      "target_bitlength": 35
+    },
+    {
+      "j": 20,
+      "address_bitlength": 30,
+      "target_bitlength": 36
+    },
+    {
+      "j": 21,
+      "address_bitlength": 31,
+      "target_bitlength": 37
+    },
+    {
+      "j": 22,
+      "address_bitlength": 32,
+      "target_bitlength": 38
+    },
+    {
+      "j": 23,
+      "address_bitlength": 33,
+      "target_bitlength": 39
+    },
+    {
+      "j": 24,
+      "address_bitlength": 34,
+      "target_bitlength": 40
+    },
+    {
+      "j": 25,
+      "address_bitlength": 35,
+      "target_bitlength": 41
+    },
+    {
+      "j": 26,
+      "address_bitlength": 36,
+      "target_bitlength": 42
+    },
+    {
+      "j": 27,
+      "address_bitlength": 37,
+      "target_bitlength": 43
+    },
+    {
+      "j": 28,
+      "address_bitlength": 38,
+      "target_bitlength": 44
+    },
+    {
+      "j": 29,
+      "address_bitlength": 39,
+      "target_bitlength": 45
+    },
+    {
+      "j": 30,
+      "address_bitlength": 40,
+      "target_bitlength": 46
+    },
+    {
+      "j": 31,
+      "address_bitlength": 41,
+      "target_bitlength": 47
+    },
+    {
+      "j": 32,
+      "address_bitlength": 42,
+      "target_bitlength": 48
+    },
+    {
+      "j": 33,
+      "address_bitlength": 43,
+      "target_bitlength": 49
+    },
+    {
+      "j": 34,
+      "address_bitlength": 44,
+      "target_bitlength": 50
+    },
+    {
+      "j": 35,
+      "address_bitlength": 45,
+      "target_bitlength": 51
+    },
+    {
+      "j": 36,
+      "address_bitlength": 46,
+      "target_bitlength": 52
+    },
+    {
+      "j": 37,
+      "address_bitlength": 47,
+      "target_bitlength": 53
+    },
+    {
+      "j": 38,
+      "address_bitlength": 48,
+      "target_bitlength": 54
+    },
+    {
+      "j": 39,
+      "address_bitlength": 49,
+      "target_bitlength": 55
+    },
+    {
+      "j": 40,
+      "address_bitlength": 50,
+      "target_bitlength": 56
+    },
+    {
+      "j": 41,
+      "address_bitlength": 51,
+      "target_bitlength": 57
+    },
+    {
+      "j": 42,
+      "address_bitlength": 52,
+      "target_bitlength": 58
+    },
+    {
+      "j": 43,
+      "address_bitlength": 53,
+      "target_bitlength": 59
+    },
+    {
+      "j": 44,
+      "address_bitlength": 54,
+      "target_bitlength": 60
+    },
+    {
+      "j": 45,
+      "address_bitlength": 55,
+      "target_bitlength": 61
+    },
+    {
+      "j": 46,
+      "address_bitlength": 56,
+      "target_bitlength": 62
+    },
+    {
+      "j": 47,
+      "address_bitlength": 57,
+      "target_bitlength": 63
+    },
+    {
+      "j": 48,
+      "address_bitlength": 58,
+      "target_bitlength": 64
+    },
+    {
+      "j": 49,
+      "address_bitlength": 59,
+      "target_bitlength": 65
+    },
+    {
+      "j": 50,
+      "address_bitlength": 60,
+      "target_bitlength": 66
+    },
+    {
+      "j": 51,
+      "address_bitlength": 61,
+      "target_bitlength": 67
+    },
+    {
+      "j": 52,
+      "address_bitlength": 62,
+      "target_bitlength": 68
+    },
+    {
+      "j": 53,
+      "address_bitlength": 63,
+      "target_bitlength": 69
+    },
+    {
+      "j": 54,
+      "address_bitlength": 64,
+      "target_bitlength": 70
+    },
+    {
+      "j": 55,
+      "address_bitlength": 65,
+      "target_bitlength": 71
+    },
+    {
+      "j": 56,
+      "address_bitlength": 66,
+      "target_bitlength": 72
+    },
+    {
+      "j": 57,
+      "address_bitlength": 67,
+      "target_bitlength": 73
+    },
+    {
+      "j": 58,
+      "address_bitlength": 68,
+      "target_bitlength": 74
+    },
+    {
+      "j": 59,
+      "address_bitlength": 69,
+      "target_bitlength": 75
+    },
+    {
+      "j": 60,
+      "address_bitlength": 70,
+      "target_bitlength": 76
+    },
+    {
+      "j": 61,
+      "address_bitlength": 71,
+      "target_bitlength": 77
+    },
+    {
+      "j": 62,
+      "address_bitlength": 72,
+      "target_bitlength": 78
+    },
+    {
+      "j": 63,
+      "address_bitlength": 73,
+      "target_bitlength": 79
+    },
+    {
+      "j": 64,
+      "address_bitlength": 74,
+      "target_bitlength": 80
+    }
+  ],
+  "literal_witnesses": [
+    {
+      "cut": 3,
+      "right_address": 6013,
+      "order": 17,
+      "HP": 40675
+    },
+    {
+      "cut": 1,
+      "right_address": 12027,
+      "order": 18,
+      "HP": 40677
+    }
+  ],
+  "rooted_pair_controls": [
+    {
+      "C": 0,
+      "cut": 3,
+      "state": [
+        13,
+        3,
+        15,
+        3
+      ]
+    },
+    {
+      "C": 0,
+      "cut": 1,
+      "state": [
+        15,
+        3,
+        15,
+        3
+      ]
+    },
+    {
+      "C": 1,
+      "cut": 3,
+      "state": [
+        25,
+        3,
+        27,
+        3
+      ]
+    },
+    {
+      "C": 1,
+      "cut": 1,
+      "state": [
+        27,
+        3,
+        27,
+        3
+      ]
+    },
+    {
+      "C": 2,
+      "cut": 3,
+      "state": [
+        43,
+        3,
+        57,
+        3
+      ]
+    },
+    {
+      "C": 2,
+      "cut": 1,
+      "state": [
+        45,
+        3,
+        57,
+        3
+      ]
+    },
+    {
+      "C": 3,
+      "cut": 3,
+      "state": [
+        49,
+        3,
+        51,
+        3
+      ]
+    },
+    {
+      "C": 3,
+      "cut": 1,
+      "state": [
+        51,
+        3,
+        51,
+        3
+      ]
+    },
+    {
+      "C": 4,
+      "cut": 3,
+      "state": [
+        73,
+        3,
+        117,
+        3
+      ]
+    },
+    {
+      "C": 4,
+      "cut": 1,
+      "state": [
+        75,
+        3,
+        117,
+        3
+      ]
+    },
+    {
+      "C": 5,
+      "cut": 3,
+      "state": [
+        79,
+        3,
+        105,
+        3
+      ]
+    },
+    {
+      "C": 5,
+      "cut": 1,
+      "state": [
+        81,
+        3,
+        105,
+        3
+      ]
+    },
+    {
+      "C": 6,
+      "cut": 3,
+      "state": [
+        97,
+        3,
+        111,
+        3
+      ]
+    },
+    {
+      "C": 6,
+      "cut": 1,
+      "state": [
+        99,
+        3,
+        111,
+        3
+      ]
+    },
+    {
+      "C": 7,
+      "cut": 3,
+      "state": [
+        97,
+        3,
+        99,
+        3
+      ]
+    },
+    {
+      "C": 7,
+      "cut": 1,
+      "state": [
+        99,
+        3,
+        99,
+        3
+      ]
+    }
+  ],
+  "residue_phase": [
+    1,
+    0
+  ],
+  "all_address_coverage_claim": false
+}

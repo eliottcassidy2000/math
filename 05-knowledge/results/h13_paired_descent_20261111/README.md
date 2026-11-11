@@ -39,9 +39,11 @@ Working outputs:
 - [Exact order under every future O/Z/J word](dynamics/PROOF.md).
 - [Native parity switch and H13-to-H25 reset](modular_cycles/PROOF.md).
 - [Simultaneous arbitrary-prefix rebase](square_graceful/ADDITIVE_CARRY.md).
+- [The ternary-address rebase in the missing residue phase](square_graceful/RESIDUE_PHASE.md).
 - [Eight exact source-rewrite languages](square_graceful/GRAMMAR.md).
 - [Every even width, native repairs, and periodic-return equations](construction/PROOF.md).
 - [Actual rooted amalgamation](modular_cycles/ADDITIVITY.md).
+- [Count-neutral401 repair from the H13 switch](dynamics/INCOMING_REPAIR.md).
 
 Historical searches follow the user's broad pointers into older work. Each
 usable connection must specify the actual map, retained predicate, lost

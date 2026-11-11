@@ -110,6 +110,8 @@ which is positive and exceeds the debt bound \(D(B)\le8B\). A successful actuato
 
 The new positive objects are therefore (i) eight exact infinite target-preserving rewrite languages, (ii) a general recursive defect representation, and (iii) a sharply isolated missing operation: absorb an even energy debt by a rooted switch with a compatible baseline. [ADDITIVE_CARRY.md](ADDITIVE_CARRY.md) follows the defect compiler further to an all-prefix simultaneous rebase, using repeated hexadecimal 9 as an additive actuator.
 
+That all-prefix family occupies residue phases 0/2 modulo three. [RESIDUE_PHASE.md](RESIDUE_PHASE.md) supplies a second C3 unit-switch family in phases 1/0, proves that direct dyadic suffix maps cannot align it with H13, and then constructs an infinite simultaneous rebase using the ternary address map \(C=3B\). Its targets are \(45090\,2^j-4415\) and that value plus two, for every \(j\ge0\).
+
 ## Finite receipt
 
 `grammar_probe.py` checks all eight iff statements for \(0\le B<2^{16}\), exercises selected literal tournament witnesses, and checks the defect transitions. This finite universe is a control for the proofs, not a claim of exhaustive spectrum coverage.

@@ -68,8 +68,20 @@ that all the historical pentads are equivalent mathematical objects.
 containing every finite binary pattern as a prefix. Padding changes the
 original target. It does not show that the original unpadded address,
 or an arbitrary odd N, is covered. The aligned lower counts are0 modulo3
-and the upper counts are2 modulo3; the residue1 lane requires a different
-rewrite or another operation.
+and the upper counts are2 modulo3.
+
+A second C3 unit pair, starting at13/15, supplies the missing residue
+phase. Direct dyadic suffix maps cannot align it with the H13 pair, but
+the ternary map C=3B can. The exact defect identity
+`D(2B)=D(B)+4(B mod2)` and the even seed B=1002 give both targets
+
+    45090·2^j−4415,    45090·2^j−4413,   j≥0,
+
+with actual C3-source witnesses. These occupy residues1/0 modulo3.
+The proof retains the three binary carry states for multiplication by3,
+so this change of scale is an explicit operation.
+[Missing-residue theorem and carry system](square_graceful/RESIDUE_PHASE.md).
+It is an infinite ray; the arbitrary-prefix theorem remains the0/2 family.
 
 Eight additional exactly classified rewrite languages precede this
 construction. In particular the H13 upper count at B=2^k−2, k≥2, has
@@ -198,6 +210,20 @@ into the present source order without re-auditing the older result or
 silently importing its separate modular hypotheses.
 
 [Actual rows, wrapper bijection, and arbitrary contexts](construction/PROOF.md).
+
+The next incoming work gave a uniform seven-retained-vertex branch from
+the obstructed141 family and an atlas of actual common birth sources.
+Following that source-level question, the present H13 switch yields a
+second literal count-neutral repair. A specified three-birth wrapper sends
+
+    31 -> 31 -> 95 -> 401,
+    33 -> 33 -> 101 -> 401.
+
+The final root states are `(401,41,585,41)` and `(401,41,573,41)`.
+Only two original root edges differ. This is a native repair preserving
+all nine vertices, H, E and d while reducing U by12. Its ordinal contexts
+give infinite families of such repairs, with the exact response cost.
+[Incoming integration and the401 patch](dynamics/INCOMING_REPAIR.md).
 
 ## 6. What the broader historical search contributed
 

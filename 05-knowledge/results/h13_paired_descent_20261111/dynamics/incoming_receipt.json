@@ -1,0 +1,97 @@
+{
+  "status": "FINITE-EXACT named source constants; all-context consequence proved in INCOMING_REPAIR.md",
+  "universe": "two specified initial6-vertex graphs, three specified births, eight rooted states by literal subset DP",
+  "records": [
+    {
+      "root": 5,
+      "rows": [
+        498,
+        328,
+        451,
+        485,
+        494,
+        198,
+        384,
+        258,
+        32
+      ],
+      "trace": [
+        [
+          31,
+          7,
+          45,
+          13
+        ],
+        [
+          31,
+          0,
+          90,
+          13
+        ],
+        [
+          95,
+          7,
+          313,
+          41
+        ],
+        [
+          401,
+          41,
+          585,
+          41
+        ]
+      ]
+    },
+    {
+      "root": 5,
+      "rows": [
+        466,
+        328,
+        483,
+        485,
+        494,
+        195,
+        384,
+        258,
+        32
+      ],
+      "trace": [
+        [
+          33,
+          7,
+          45,
+          13
+        ],
+        [
+          33,
+          0,
+          90,
+          13
+        ],
+        [
+          101,
+          7,
+          307,
+          41
+        ],
+        [
+          401,
+          41,
+          573,
+          41
+        ]
+      ]
+    }
+  ],
+  "changed_unordered_edges": [
+    [
+      0,
+      5
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "known_boundary": "The same schedule at H13 addressB1 has middlecounts265/265, so no uniform ternary-branch claim."
+}
