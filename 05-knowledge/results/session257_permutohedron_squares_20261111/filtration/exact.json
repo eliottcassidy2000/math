@@ -1,0 +1,66 @@
+{
+  "status": "FINITE-EXACT PASS",
+  "S4_hostile_marks": [
+    {
+      "fixed_ports": 2,
+      "orbit_count": 7,
+      "fixed_section_dimension": 6
+    },
+    {
+      "fixed_ports": 0,
+      "orbit_count": 6,
+      "fixed_section_dimension": 5
+    }
+  ],
+  "Q12_paths": [
+    [
+      2,
+      7,
+      9
+    ],
+    [
+      11,
+      5,
+      4,
+      12
+    ],
+    [
+      8,
+      1,
+      3,
+      6,
+      10
+    ]
+  ],
+  "Q12_fixed_vertices": [
+    3,
+    7
+  ],
+  "Q12_fixed_endpoints": [],
+  "Q12_orbit_sizes": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "Q12_component_traversal_words": 48,
+  "small_section_projected_points": 27,
+  "small_section_vertices": 6,
+  "small_section_objectives_checked": 125,
+  "valuation_original_vertices": 720,
+  "valuation_normalized_vertices": 360,
+  "collapsed_edges": 360,
+  "cycle_characteristic_polynomials": [
+    "z**5 - 1",
+    "z**5 - z**3"
+  ],
+  "Q12_Young_hexagon_vertices": 6,
+  "Q12_distinct_projected_fine_vertices": 360,
+  "Q12_projected_nonvertices": 354,
+  "Paley_Hamilton_words": 189,
+  "Paley_signed_maps_checked": 42,
+  "Paley_unsigned_nonsquare_overlap": 0
+}

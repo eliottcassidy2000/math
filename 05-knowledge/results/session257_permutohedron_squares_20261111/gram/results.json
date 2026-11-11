@@ -1,0 +1,789 @@
+{
+  "status": "FINITE-EXACT controls; infinite statements proved in PROOF.md",
+  "square_endpoint_signatures": {
+    "12": {},
+    "15": {
+      "8,9": 1
+    },
+    "16": {
+      "8,16": 1
+    },
+    "17": {
+      "16,17": 1
+    },
+    "18": {},
+    "23": {
+      "2,18": 1,
+      "9,18": 1,
+      "18,22": 1
+    },
+    "24": {},
+    "25": {
+      "2,18": 1,
+      "3,18": 1,
+      "4,18": 1,
+      "8,18": 1,
+      "9,18": 1,
+      "10,18": 1,
+      "11,18": 1,
+      "13,18": 1,
+      "18,23": 1,
+      "18,22": 1
+    }
+  },
+  "square_gram_orders": [
+    12,
+    15,
+    16,
+    17,
+    18,
+    23,
+    24,
+    25
+  ],
+  "square_gram": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      3
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      10
+    ]
+  ],
+  "two_seam_checks": 64,
+  "four_seam_square_embeddings": [
+    [
+      1,
+      3,
+      7,
+      9
+    ],
+    [
+      1,
+      7,
+      3,
+      9
+    ],
+    [
+      1,
+      7,
+      9,
+      3
+    ]
+  ],
+  "four_seam_matrix": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "negative_test_vector": [
+    1,
+    -1,
+    0
+  ],
+  "negative_quadratic_value": -2,
+  "primitive_spinor_range": "2 <= m <= 12, 1 <= n < m, gcd=1 and opposite parity",
+  "primitive_controls": [
+    {
+      "spinor": [
+        2,
+        1
+      ],
+      "triple": [
+        3,
+        4,
+        5
+      ],
+      "vertices": 15,
+      "census": [
+        4,
+        7,
+        3
+      ],
+      "tournament_H": 3
+    },
+    {
+      "spinor": [
+        3,
+        2
+      ],
+      "triple": [
+        5,
+        12,
+        13
+      ],
+      "vertices": 143,
+      "census": [
+        12,
+        71,
+        59
+      ],
+      "tournament_H": 5
+    },
+    {
+      "spinor": [
+        4,
+        1
+      ],
+      "triple": [
+        8,
+        15,
+        17
+      ],
+      "vertices": 224,
+      "census": [
+        31,
+        112,
+        80
+      ],
+      "tournament_H": 9
+    },
+    {
+      "spinor": [
+        4,
+        3
+      ],
+      "triple": [
+        7,
+        24,
+        25
+      ],
+      "vertices": 575,
+      "census": [
+        24,
+        287,
+        263
+      ],
+      "tournament_H": 9
+    },
+    {
+      "spinor": [
+        5,
+        2
+      ],
+      "triple": [
+        20,
+        21,
+        29
+      ],
+      "vertices": 440,
+      "census": [
+        199,
+        220,
+        20
+      ],
+      "tournament_H": 23
+    },
+    {
+      "spinor": [
+        5,
+        4
+      ],
+      "triple": [
+        9,
+        40,
+        41
+      ],
+      "vertices": 1599,
+      "census": [
+        40,
+        799,
+        759
+      ],
+      "tournament_H": 17
+    },
+    {
+      "spinor": [
+        6,
+        1
+      ],
+      "triple": [
+        12,
+        35,
+        37
+      ],
+      "vertices": 1224,
+      "census": [
+        71,
+        612,
+        540
+      ],
+      "tournament_H": 33
+    },
+    {
+      "spinor": [
+        6,
+        5
+      ],
+      "triple": [
+        11,
+        60,
+        61
+      ],
+      "vertices": 3599,
+      "census": [
+        60,
+        1799,
+        1739
+      ],
+      "tournament_H": 33
+    },
+    {
+      "spinor": [
+        7,
+        2
+      ],
+      "triple": [
+        28,
+        45,
+        53
+      ],
+      "vertices": 2024,
+      "census": [
+        391,
+        1012,
+        620
+      ],
+      "tournament_H": 95
+    },
+    {
+      "spinor": [
+        7,
+        4
+      ],
+      "triple": [
+        33,
+        56,
+        65
+      ],
+      "vertices": 3135,
+      "census": [
+        544,
+        1567,
+        1023
+      ],
+      "tournament_H": 107
+    },
+    {
+      "spinor": [
+        7,
+        6
+      ],
+      "triple": [
+        13,
+        84,
+        85
+      ],
+      "vertices": 7055,
+      "census": [
+        84,
+        3527,
+        3443
+      ],
+      "tournament_H": 65
+    },
+    {
+      "spinor": [
+        8,
+        1
+      ],
+      "triple": [
+        16,
+        63,
+        65
+      ],
+      "vertices": 3968,
+      "census": [
+        127,
+        1984,
+        1856
+      ],
+      "tournament_H": 129
+    },
+    {
+      "spinor": [
+        8,
+        3
+      ],
+      "triple": [
+        48,
+        55,
+        73
+      ],
+      "vertices": 3024,
+      "census": [
+        1151,
+        1512,
+        360
+      ],
+      "tournament_H": 219
+    },
+    {
+      "spinor": [
+        8,
+        5
+      ],
+      "triple": [
+        39,
+        80,
+        89
+      ],
+      "vertices": 6399,
+      "census": [
+        760,
+        3199,
+        2439
+      ],
+      "tournament_H": 219
+    },
+    {
+      "spinor": [
+        8,
+        7
+      ],
+      "triple": [
+        15,
+        112,
+        113
+      ],
+      "vertices": 12543,
+      "census": [
+        112,
+        6271,
+        6159
+      ],
+      "tournament_H": 129
+    },
+    {
+      "spinor": [
+        9,
+        2
+      ],
+      "triple": [
+        36,
+        77,
+        85
+      ],
+      "vertices": 5928,
+      "census": [
+        647,
+        2964,
+        2316
+      ],
+      "tournament_H": 383
+    },
+    {
+      "spinor": [
+        9,
+        4
+      ],
+      "triple": [
+        65,
+        72,
+        97
+      ],
+      "vertices": 5183,
+      "census": [
+        2112,
+        2591,
+        479
+      ],
+      "tournament_H": 467
+    },
+    {
+      "spinor": [
+        9,
+        8
+      ],
+      "triple": [
+        17,
+        144,
+        145
+      ],
+      "vertices": 20735,
+      "census": [
+        144,
+        10367,
+        10223
+      ],
+      "tournament_H": 257
+    },
+    {
+      "spinor": [
+        10,
+        1
+      ],
+      "triple": [
+        20,
+        99,
+        101
+      ],
+      "vertices": 9800,
+      "census": [
+        199,
+        4900,
+        4700
+      ],
+      "tournament_H": 513
+    },
+    {
+      "spinor": [
+        10,
+        3
+      ],
+      "triple": [
+        60,
+        91,
+        109
+      ],
+      "vertices": 8280,
+      "census": [
+        1799,
+        4140,
+        2340
+      ],
+      "tournament_H": 891
+    },
+    {
+      "spinor": [
+        10,
+        7
+      ],
+      "triple": [
+        51,
+        140,
+        149
+      ],
+      "vertices": 19599,
+      "census": [
+        1300,
+        9799,
+        8499
+      ],
+      "tournament_H": 891
+    },
+    {
+      "spinor": [
+        10,
+        9
+      ],
+      "triple": [
+        19,
+        180,
+        181
+      ],
+      "vertices": 32399,
+      "census": [
+        180,
+        16199,
+        16019
+      ],
+      "tournament_H": 513
+    },
+    {
+      "spinor": [
+        11,
+        2
+      ],
+      "triple": [
+        44,
+        117,
+        125
+      ],
+      "vertices": 13688,
+      "census": [
+        967,
+        6844,
+        5876
+      ],
+      "tournament_H": 1535
+    },
+    {
+      "spinor": [
+        11,
+        4
+      ],
+      "triple": [
+        88,
+        105,
+        137
+      ],
+      "vertices": 11024,
+      "census": [
+        3871,
+        5512,
+        1640
+      ],
+      "tournament_H": 1907
+    },
+    {
+      "spinor": [
+        11,
+        6
+      ],
+      "triple": [
+        85,
+        132,
+        157
+      ],
+      "vertices": 17423,
+      "census": [
+        3612,
+        8711,
+        5099
+      ],
+      "tournament_H": 1955
+    },
+    {
+      "spinor": [
+        11,
+        8
+      ],
+      "triple": [
+        57,
+        176,
+        185
+      ],
+      "vertices": 30975,
+      "census": [
+        1624,
+        15487,
+        13863
+      ],
+      "tournament_H": 1787
+    },
+    {
+      "spinor": [
+        11,
+        10
+      ],
+      "triple": [
+        21,
+        220,
+        221
+      ],
+      "vertices": 48399,
+      "census": [
+        220,
+        24199,
+        23979
+      ],
+      "tournament_H": 1025
+    },
+    {
+      "spinor": [
+        12,
+        1
+      ],
+      "triple": [
+        24,
+        143,
+        145
+      ],
+      "vertices": 20448,
+      "census": [
+        287,
+        10224,
+        9936
+      ],
+      "tournament_H": 2049
+    },
+    {
+      "spinor": [
+        12,
+        5
+      ],
+      "triple": [
+        119,
+        120,
+        169
+      ],
+      "vertices": 14399,
+      "census": [
+        7080,
+        7199,
+        119
+      ],
+      "tournament_H": 3939
+    },
+    {
+      "spinor": [
+        12,
+        7
+      ],
+      "triple": [
+        95,
+        168,
+        193
+      ],
+      "vertices": 28223,
+      "census": [
+        4512,
+        14111,
+        9599
+      ],
+      "tournament_H": 3939
+    },
+    {
+      "spinor": [
+        12,
+        11
+      ],
+      "triple": [
+        23,
+        264,
+        265
+      ],
+      "vertices": 69695,
+      "census": [
+        264,
+        34847,
+        34583
+      ],
+      "tournament_H": 2049
+    }
+  ],
+  "census_not_itinerary_hostile": {
+    "valid_path": [
+      8,
+      1,
+      15,
+      10,
+      6,
+      3,
+      13,
+      12,
+      4,
+      5,
+      11,
+      14,
+      2,
+      7,
+      9
+    ],
+    "valid_colors": [
+      0,
+      1,
+      2,
+      1,
+      0,
+      1,
+      2,
+      1,
+      0,
+      1,
+      2,
+      1,
+      0,
+      1
+    ],
+    "invalid_equal_census": {
+      "swap_positions_zero_based": [
+        0,
+        1
+      ],
+      "colors": [
+        1,
+        0,
+        2,
+        1,
+        0,
+        1,
+        2,
+        1,
+        0,
+        1,
+        2,
+        1,
+        0,
+        1
+      ]
+    }
+  },
+  "color_scope": "Colors here mean ordered square targets, not the recovered user three-color decomposition."
+}

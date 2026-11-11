@@ -27,3 +27,16 @@ targets and primitive spinor.
 Specify source, target, map, invariant, lost information, restoring sidecar
 and cheap test in every proof note. Claims about abstract geometric carriers
 will not be promoted to graph-operation or count-preservation claims.
+
+## Results that changed the board
+
+The common geometry now has exact coordinate maps, not just a shared name.
+Square-sum Hamiltonian words are singleton graphic-fan fibers; tournament
+words are coherent sinks. Fixed path pieces give a weighted permutohedron
+but feasibility can freeze all elementary moves. Adaptive cuts restore the
+correct graph-surgery scale. Two-seam endpoint equality gives a positive
+kernel, while four-seam connectedness changes it to an indefinite pairing.
+Primitive square-target census decodes a triple and compiles it into an
+actual tournament, preserving the triple but not its Hamiltonian count.
+The Monster's actual central factor changes the valuation permutohedron by
+360 edge contractions, and subgroup marks determine the true fixed ports.

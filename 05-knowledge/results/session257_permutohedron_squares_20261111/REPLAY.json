@@ -1,0 +1,35 @@
+{
+  "scope": "Four Session257 new-claim engines; historical inputs are inherited",
+  "optimized": false,
+  "checks": "Explicit runtime checks remain active with -O",
+  "engines": [
+    {
+      "script": "chambers/check.py",
+      "receipt": "chambers/results.json",
+      "status": "PASS",
+      "source_sha256": "2019b041b9f15124b3b22a68c8dcdb4066336381833fbab7b9291a6dc1c77d10",
+      "receipt_sha256": "45aa2a8b804c73c614f3b9250560cbcd1a837bbe3c5748e17c940575478a0c36"
+    },
+    {
+      "script": "permutohedron/reproduce.py",
+      "receipt": "permutohedron/certificate.json",
+      "status": "PASS",
+      "source_sha256": "2f53ad5c354fd2c998187c57292bdce3ca79e615a3985af1cdd6044525ff38da",
+      "receipt_sha256": "3da24671303c50b7d32fd9c2794cd1c1df1ecf0cdca6e9ea80a800c43f30dadb"
+    },
+    {
+      "script": "gram/check.py",
+      "receipt": "gram/results.json",
+      "status": "PASS",
+      "source_sha256": "4b8a895f52300d13c894df86bc2f5d7d7fb78b336e442e5040669d26d1224c75",
+      "receipt_sha256": "598e97a929762627a518b751db63ae32c2d825d44374559f592367d3ce92df0f"
+    },
+    {
+      "script": "filtration/check.py",
+      "receipt": "filtration/exact.json",
+      "status": "PASS",
+      "source_sha256": "0f78f2b7e6cca2397ce12584f111944568707f3e3e9dd0e5799db778cad43f53",
+      "receipt_sha256": "c5c83459166eaae3be289b7c583fffcbd687c8a397264477174ae3f438671605"
+    }
+  ]
+}

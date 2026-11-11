@@ -23,3 +23,17 @@ The [inheritance atlas](history/README.md) resolves the original references:
 [Concept board](BOARD.md). New construction notes and exact experiments will
 be added in subsequent checkpoints. Starting main:
 `6512e16e0729401eab11508348d491992bff3cf3`.
+
+## Completed mechanisms (checkpoint 2)
+
+- [Singleton braid chambers](chambers/PROOF.md): square-sum Hamiltonian words
+  are exactly singleton fibers of the graphical-zonotope quotient.
+- [Weighted path-cover atlas](permutohedron/PROOF.md): exact block geometry,
+  cut refinement and surgery; Q25's elementary chart is completely frozen
+  even though two-edge surgery connects all ten paths.
+- [Two-seam Gram and primitive decoder](gram/PROOF.md): positive sharp probe
+  bank, four-seam negative boundary, and a triple-preserving tournament map.
+- [Fixed faces and valuation normalization](filtration/PROOF.md): prime-shell
+  port regimes and an exact360-edge permutohedron contraction.
+
+The final synthesis, open gates and whole-packet replay are being assembled.
