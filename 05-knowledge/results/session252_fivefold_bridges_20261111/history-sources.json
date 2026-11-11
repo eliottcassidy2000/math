@@ -1,0 +1,151 @@
+{
+  "root": "repository-relative",
+  "mode": "read-only historical recovery and proposed bridges",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md",
+      "present": true
+    },
+    {
+      "path": "01-canon/theorems/THM-4644-fermat-primes-rigid-circulant-tournaments-wieferich-orbit-explosion.md",
+      "present": true
+    },
+    {
+      "path": "01-canon/theorems/THM-4801-collatz-meets-the-constructible-polygons-trunk-five-initial-segment-principle-collatz-closed-family.md",
+      "present": true
+    },
+    {
+      "path": "01-canon/theorems/THM-4847-fermat-primes-barriers-to-proving-exactly-five-the-function-field-analogue-and-why-tournament-counts-are-blind-while-three-state-counts-are-pepin.md",
+      "present": true
+    },
+    {
+      "path": "01-canon/theorems/THM-871-fermat-rung-rigidity.md",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-3771-five-tilings-five-solids-apex-prime-geometry.md",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-3814-the-involution-atlas-five-faces-of-the-fold.md",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/aliquot_66_five_fifteen_20261028/ATLAS.md",
+      "present": true,
+      "recovery": "direct Git object read"
+    },
+    {
+      "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/double_five_pentagon.out",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/fivefold_boundary_20261018g.md",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/fugacity_axis_full.out",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/gilbreath_fermat_platonic_20260926.md",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/groups_of_five_primegame_merged_metagraph_20261031.md",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/ogg_triangular_chowla_20260927_audit.md",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/platonic_fermat_topology_s18o.out",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/platonic_five_s97.out",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/primegame_variant_selector_automaton_metagraph_20261031.md",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/rooted_five_core_gold_obstruction_20261019.md",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/session126_primegame_symmetry_20261031/five_families/README.md",
+      "present": true,
+      "recovery": "direct Git object read"
+    },
+    {
+      "path": "05-knowledge/results/session251_creative_completion_20261111/ternary/PROOF.md",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/sixth_platonic_s20bi.out",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/supersingular_meta_s116n.out",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/ternary_ports_golden_defect_20261018j.md",
+      "present": true
+    },
+    {
+      "path": "05-knowledge/results/three_quantities_fortyfour_five_dudeney_fermat_clock_arrows_20261026.md",
+      "present": true
+    },
+    {
+      "path": "07-reflections/five-and-ten.md",
+      "present": true
+    },
+    {
+      "path": "07-reflections/five-as-bridge.md",
+      "present": true
+    },
+    {
+      "path": "07-reflections/fugacity-axis-five-points.md",
+      "present": true
+    },
+    {
+      "path": "07-reflections/pentagonal-lyapunov-and-the-72-code-gate.md",
+      "present": true
+    },
+    {
+      "path": "07-reflections/supersingularity-triples.md",
+      "present": true
+    },
+    {
+      "path": "07-reflections/the-angle-defect-spine-five-solids-five-lattices-and-the-seventh-prime.md",
+      "present": true
+    },
+    {
+      "path": "07-reflections/the-five-faces-of-an-involution.md",
+      "present": true
+    },
+    {
+      "path": "07-reflections/the-five-platonic-tournaments.md",
+      "present": true
+    },
+    {
+      "path": "07-reflections/the-icosahedral-fifteen-s6.md",
+      "present": true
+    },
+    {
+      "path": "07-reflections/the-pentagonal-product-is-the-hub-kps3-0611.md",
+      "present": true
+    }
+  ],
+  "coverage_status": "five-core all-height OPEN; inherited finite through 262143",
+  "candidate_keyword_files": 329,
+  "source_commit": "5bddb480c6c74e8644104e9a06c9029440b81417"
+}

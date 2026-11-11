@@ -1,0 +1,158 @@
+{
+  "positive_five_basis": [
+    {
+      "core": 0,
+      "cut": 0,
+      "state": [
+        1,
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "core": 0,
+      "cut": 1,
+      "state": [
+        1,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "core": 1,
+      "cut": 0,
+      "state": [
+        3,
+        12,
+        0,
+        9,
+        0
+      ]
+    },
+    {
+      "core": 1,
+      "cut": 1,
+      "state": [
+        3,
+        12,
+        3,
+        6,
+        2
+      ]
+    },
+    {
+      "core": 2,
+      "cut": 1,
+      "state": [
+        5,
+        32,
+        6,
+        18,
+        3
+      ]
+    }
+  ],
+  "positive_five_basis_determinant": -36,
+  "response_comparisons": 17568,
+  "scope": "new identities only; no new integer-coverage claim",
+  "seven_basis": [
+    {
+      "core": 0,
+      "cut": 0,
+      "state": [
+        1,
+        2,
+        0,
+        0,
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "core": 0,
+      "cut": 1,
+      "state": [
+        1,
+        2,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "core": 1,
+      "cut": 0,
+      "state": [
+        3,
+        12,
+        0,
+        0,
+        9,
+        -3,
+        0
+      ]
+    },
+    {
+      "core": 1,
+      "cut": 1,
+      "state": [
+        3,
+        12,
+        3,
+        -1,
+        6,
+        -2,
+        2
+      ]
+    },
+    {
+      "core": 1,
+      "cut": 3,
+      "state": [
+        3,
+        12,
+        6,
+        -2,
+        3,
+        -1,
+        2
+      ]
+    },
+    {
+      "core": 2,
+      "cut": 1,
+      "state": [
+        5,
+        32,
+        6,
+        -2,
+        18,
+        -4,
+        4
+      ]
+    },
+    {
+      "core": 2,
+      "cut": 2,
+      "state": [
+        5,
+        32,
+        5,
+        -1,
+        20,
+        -4,
+        4
+      ]
+    }
+  ],
+  "seven_basis_determinant": -48,
+  "seven_state_ordinal_compositions": 676,
+  "signed_core_cuts": 1098
+}

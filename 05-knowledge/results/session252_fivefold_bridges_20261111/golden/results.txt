@@ -1,0 +1,24 @@
+K1 [(0, 1)]
+C3 [(0, 1), (1, 1), (2, 1)]
+S4 [(0, 3), (1, 1), (2, 1), (3, 3)]
+S5a [(0, 5), (1, 3), (2, 1), (3, 3), (4, 5)]
+S5b [(0, 5), (1, 1), (2, 1), (3, 5), (4, 5)]
+K1 odd cycles []
+C3 odd cycles [(0, 1, 2)]
+S4 odd cycles [(0, 1, 2), (1, 2, 3)]
+S5a odd cycles [(0, 1, 2), (1, 2, 3), (2, 3, 4), (0, 1, 2, 3, 4)]
+S5b odd cycles [(0, 1, 2), (1, 2, 3), (1, 2, 4), (0, 1, 2, 4, 3)]
+matrix composition checks 200 digit-sum checks 4096
+stem 1 1
+stem 2 1
+stem 3 3
+stem 4 5
+stem 5 9
+stem 6 17
+stem 7 31
+stem 8 57
+stem 9 105
+stem 10 193
+stem 11 355
+stem 12 653
+stem 13 1201
