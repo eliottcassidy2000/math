@@ -1,0 +1,218 @@
+{
+  "witness217": [
+    410,
+    1020,
+    1017,
+    1008,
+    992,
+    961,
+    897,
+    768,
+    512,
+    1
+  ],
+  "witness651": [
+    8186,
+    8188,
+    8185,
+    3280,
+    8160,
+    8136,
+    8064,
+    7936,
+    7688,
+    7176,
+    6144,
+    4096,
+    8
+  ],
+  "status": "PASS",
+  "crossing_formula_cases": 25,
+  "neighborhoods": [
+    {
+      "a": 2,
+      "base": 23,
+      "target": 21,
+      "edge_count": 15,
+      "target_edges": [],
+      "min_decrease": 4,
+      "attainers": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          5
+        ]
+      ]
+    },
+    {
+      "a": 3,
+      "base": 107,
+      "target": 105,
+      "edge_count": 28,
+      "target_edges": [],
+      "min_decrease": 10,
+      "attainers": [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          7
+        ]
+      ]
+    },
+    {
+      "a": 4,
+      "base": 467,
+      "target": 465,
+      "edge_count": 45,
+      "target_edges": [],
+      "min_decrease": 22,
+      "attainers": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          9
+        ]
+      ]
+    },
+    {
+      "a": 5,
+      "base": 1955,
+      "target": 1953,
+      "edge_count": 66,
+      "target_edges": [],
+      "min_decrease": 46,
+      "attainers": [
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          11
+        ]
+      ]
+    }
+  ],
+  "fans": [
+    {
+      "k": 4,
+      "order": 6,
+      "H": 15
+    },
+    {
+      "k": 5,
+      "order": 7,
+      "H": 31
+    },
+    {
+      "k": 6,
+      "order": 8,
+      "H": 63
+    },
+    {
+      "k": 7,
+      "order": 9,
+      "H": 127
+    },
+    {
+      "k": 8,
+      "order": 10,
+      "H": 255
+    },
+    {
+      "k": 9,
+      "order": 11,
+      "H": 511
+    },
+    {
+      "k": 10,
+      "order": 12,
+      "H": 1023
+    }
+  ],
+  "witness105": [
+    116,
+    45,
+    80,
+    101,
+    10,
+    84,
+    18
+  ],
+  "joined_neighbors": [
+    {
+      "a": 4,
+      "order": 13,
+      "H": 465
+    },
+    {
+      "a": 5,
+      "order": 15,
+      "H": 1953
+    }
+  ],
+  "excess_sources": [
+    {
+      "n": 20,
+      "a": 2,
+      "m": 5,
+      "half_sigma": 3,
+      "Chowla": 21
+    },
+    {
+      "n": 104,
+      "a": 3,
+      "m": 13,
+      "half_sigma": 7,
+      "Chowla": 105
+    },
+    {
+      "n": 464,
+      "a": 4,
+      "m": 29,
+      "half_sigma": 15,
+      "Chowla": 465
+    },
+    {
+      "n": 650,
+      "a": 1,
+      "m": 325,
+      "half_sigma": 217,
+      "Chowla": 651
+    },
+    {
+      "n": 1952,
+      "a": 5,
+      "m": 61,
+      "half_sigma": 31,
+      "Chowla": 1953
+    },
+    {
+      "n": 130304,
+      "a": 8,
+      "m": 509,
+      "half_sigma": 255,
+      "Chowla": 130305
+    },
+    {
+      "n": 522752,
+      "a": 9,
+      "m": 1021,
+      "half_sigma": 511,
+      "Chowla": 522753
+    }
+  ],
+  "composite_guard_hostile": {
+    "n": 8000,
+    "sigma": 19812
+  }
+}
