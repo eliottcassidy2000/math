@@ -1,0 +1,142 @@
+{
+  "status": "PASS",
+  "series_max_order": 64,
+  "ordinary_classes": 7412,
+  "attachment_orbits": 1774266,
+  "direct_child_SCC_checks": 57658,
+  "direct_child_H_checks": 3402,
+  "H_factorization_checks": 3402,
+  "ternary_target_checks": 6128,
+  "fixed_H_coefficient_checks": 15624,
+  "nonzero_strong_birth_kernels": 872,
+  "input_sha256": "93b37da5eb037ec5eddc3d9e9156404480e9a9d81badf6359f91646cd8ed41fc",
+  "seconds": 13.039,
+  "witnesses": {
+    "2": {
+      "n": 2,
+      "rep": 0,
+      "rows": [
+        2,
+        0
+      ],
+      "out": 1,
+      "source_H": 1,
+      "target_H": 3,
+      "components": [
+        1,
+        2
+      ],
+      "active": 3
+    },
+    "3": {
+      "n": 3,
+      "rep": 1,
+      "rows": [
+        6,
+        4,
+        0
+      ],
+      "out": 1,
+      "source_H": 1,
+      "target_H": 5,
+      "components": [
+        1,
+        2,
+        4
+      ],
+      "active": 7
+    },
+    "4": {
+      "n": 4,
+      "rep": 7,
+      "rows": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "out": 1,
+      "source_H": 1,
+      "target_H": 9,
+      "components": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "active": 15
+    },
+    "5": {
+      "n": 5,
+      "rep": 63,
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        0
+      ],
+      "out": 1,
+      "source_H": 1,
+      "target_H": 17,
+      "components": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "active": 31
+    },
+    "6": {
+      "n": 6,
+      "rep": 1023,
+      "rows": [
+        62,
+        60,
+        56,
+        48,
+        32,
+        0
+      ],
+      "out": 1,
+      "source_H": 1,
+      "target_H": 33,
+      "components": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "active": 63
+    },
+    "7": {
+      "n": 7,
+      "rep": 32767,
+      "rows": [
+        126,
+        124,
+        120,
+        112,
+        96,
+        64,
+        0
+      ],
+      "out": 1,
+      "source_H": 1,
+      "target_H": 65,
+      "components": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "active": 127
+    }
+  }
+}

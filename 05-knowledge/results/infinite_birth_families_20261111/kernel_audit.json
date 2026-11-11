@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "child_first_strong_class_counts": {
+    "3": 1,
+    "4": 1,
+    "5": 6,
+    "6": 35,
+    "7": 284,
+    "8": 265,
+    "9": 95
+  },
+  "strong_pointed_classes": 5086,
+  "kernel_count": 872,
+  "filter9": "191536 95",
+  "input9_sha256": "959c2276c57108d55b56d4906edfbd761fb9737e708b14114d66dd4ad618db0c",
+  "square_coefficient_rays": 32,
+  "literal_tail_checks": 64,
+  "largest_first_even_exponent": 8
+}

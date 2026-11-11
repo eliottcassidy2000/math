@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "nonzero_families": 946,
+  "degree_histogram": {
+    "1": 744,
+    "2": 161,
+    "3": 34,
+    "4": 6,
+    "5": 1
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "aliquot_target_bound": 10000,
+  "aliquot_sieved_source_bound": 1000000,
+  "original_quadratic_bound": 99980001,
+  "aliquot_OEIS_rows": 9999,
+  "independent_inverse_targets": 149,
+  "winning_families": {
+    "none": 1212,
+    "prime_square": 1229,
+    "Omega_ge_3": 1543,
+    "distinct_semiprime": 6015
+  },
+  "quadratic_input_bound": 100000,
+  "quadratic_prime_count": 6656,
+  "quadratic_OEIS_rows": 6656,
+  "A000568_OEIS_rows": 65,
+  "quadratic_inverse_bridge_checks": 99,
+  "named_numbers": {
+    "2": 0,
+    "3": 4,
+    "5": 0,
+    "7": 8,
+    "11": 21,
+    "13": 35,
+    "19": 77,
+    "27": 133,
+    "33": 247,
+    "1039": 268577
+  },
+  "primary_sources": [
+    {
+      "url": "https://oeis.org/A000568/b000568.txt",
+      "sha256": "df0af23faa1147885d52d2bb0018ae8bb83d66483cb380640b7b529e3607f897",
+      "rows": 77
+    },
+    {
+      "url": "https://oeis.org/A135244/b135244.txt",
+      "sha256": "62a118ed102bd675a1b747ee269f0d45c3f252751f98c2e183bc6c0aafd70440",
+      "rows": 9999
+    },
+    {
+      "url": "https://oeis.org/A002496/b002496.txt",
+      "sha256": "f497ef50315bf982252144b16a17c3227f646ebee598e010f78c91533819cd0b",
+      "rows": 10000
+    }
+  ],
+  "seconds": 2.147
+}
