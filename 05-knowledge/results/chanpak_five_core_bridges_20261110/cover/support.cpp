@@ -11,7 +11,7 @@
 using I = std::int64_t;
 
 int main(int argc, char** argv) {
-  if(argc != 4) throw std::runtime_error("usage: support signatures.txt bound output.json");
+  if(argc != 4 && argc != 5) throw std::runtime_error("usage: support signatures.txt bound output.json [mask.bin]");
   const I N=std::stoll(argv[2]);
   if(N<1 || N>1073741823) throw std::runtime_error("bound outside exact int range");
   std::ifstream in(argv[1]); int ns; in>>ns;
@@ -72,4 +72,9 @@ int main(int argc, char** argv) {
   out<<"}\n}\n";
   std::cout<<"bound="<<N<<" signatures="<<ns<<" pairs="<<evaluations
            <<" missing="<<counts[0]<<"\n";
+  if(argc==5) {
+    std::ofstream raw(argv[4],std::ios::binary);
+    raw.write(reinterpret_cast<const char*>(cover.data()),static_cast<std::streamsize>(cover.size()));
+    if(!raw) throw std::runtime_error("binary support write failed");
+  }
 }

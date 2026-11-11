@@ -1,0 +1,2572 @@
+[
+  {
+    "core_index": 0,
+    "core_rows": [
+      0
+    ],
+    "cut": 0,
+    "literal_context_counts": [
+      1,
+      3,
+      5,
+      5,
+      1,
+      1,
+      5
+    ],
+    "positive_observer": [
+      1,
+      1,
+      2,
+      1,
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "core_index": 0,
+    "core_rows": [
+      0
+    ],
+    "cut": 1,
+    "literal_context_counts": [
+      1,
+      1,
+      1,
+      3,
+      3,
+      5,
+      5
+    ],
+    "positive_observer": [
+      1,
+      1,
+      2,
+      0,
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "core_index": 1,
+    "core_rows": [
+      2,
+      4,
+      1
+    ],
+    "cut": 0,
+    "literal_context_counts": [
+      3,
+      15,
+      33,
+      27,
+      3,
+      3,
+      27
+    ],
+    "positive_observer": [
+      3,
+      3,
+      12,
+      9,
+      0,
+      3,
+      0
+    ]
+  },
+  {
+    "core_index": 1,
+    "core_rows": [
+      2,
+      4,
+      1
+    ],
+    "cut": 1,
+    "literal_context_counts": [
+      5,
+      13,
+      25,
+      23,
+      9,
+      15,
+      29
+    ],
+    "positive_observer": [
+      5,
+      3,
+      12,
+      6,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "core_index": 1,
+    "core_rows": [
+      2,
+      4,
+      1
+    ],
+    "cut": 2,
+    "literal_context_counts": [
+      5,
+      13,
+      25,
+      23,
+      9,
+      15,
+      29
+    ],
+    "positive_observer": [
+      5,
+      3,
+      12,
+      6,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "core_index": 1,
+    "core_rows": [
+      2,
+      4,
+      1
+    ],
+    "cut": 3,
+    "literal_context_counts": [
+      5,
+      9,
+      15,
+      17,
+      13,
+      25,
+      29
+    ],
+    "positive_observer": [
+      5,
+      3,
+      12,
+      3,
+      6,
+      1,
+      2
+    ]
+  },
+  {
+    "core_index": 1,
+    "core_rows": [
+      2,
+      4,
+      1
+    ],
+    "cut": 4,
+    "literal_context_counts": [
+      5,
+      13,
+      25,
+      23,
+      9,
+      15,
+      29
+    ],
+    "positive_observer": [
+      5,
+      3,
+      12,
+      6,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "core_index": 1,
+    "core_rows": [
+      2,
+      4,
+      1
+    ],
+    "cut": 5,
+    "literal_context_counts": [
+      5,
+      9,
+      15,
+      17,
+      13,
+      25,
+      29
+    ],
+    "positive_observer": [
+      5,
+      3,
+      12,
+      3,
+      6,
+      1,
+      2
+    ]
+  },
+  {
+    "core_index": 1,
+    "core_rows": [
+      2,
+      4,
+      1
+    ],
+    "cut": 6,
+    "literal_context_counts": [
+      5,
+      9,
+      15,
+      17,
+      13,
+      25,
+      29
+    ],
+    "positive_observer": [
+      5,
+      3,
+      12,
+      3,
+      6,
+      1,
+      2
+    ]
+  },
+  {
+    "core_index": 1,
+    "core_rows": [
+      2,
+      4,
+      1
+    ],
+    "cut": 7,
+    "literal_context_counts": [
+      3,
+      3,
+      3,
+      9,
+      15,
+      33,
+      27
+    ],
+    "positive_observer": [
+      3,
+      3,
+      12,
+      0,
+      9,
+      0,
+      3
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 0,
+    "literal_context_counts": [
+      5,
+      37,
+      91,
+      69,
+      5,
+      5,
+      69
+    ],
+    "positive_observer": [
+      5,
+      5,
+      32,
+      27,
+      0,
+      5,
+      0
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 1,
+    "literal_context_counts": [
+      9,
+      31,
+      67,
+      55,
+      17,
+      29,
+      71
+    ],
+    "positive_observer": [
+      9,
+      5,
+      32,
+      18,
+      6,
+      4,
+      2
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 2,
+    "literal_context_counts": [
+      9,
+      33,
+      73,
+      59,
+      15,
+      25,
+      71
+    ],
+    "positive_observer": [
+      9,
+      5,
+      32,
+      20,
+      5,
+      4,
+      1
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 3,
+    "literal_context_counts": [
+      9,
+      23,
+      45,
+      41,
+      23,
+      45,
+      69
+    ],
+    "positive_observer": [
+      9,
+      5,
+      32,
+      11,
+      11,
+      3,
+      3
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 4,
+    "literal_context_counts": [
+      11,
+      37,
+      81,
+      65,
+      19,
+      33,
+      77
+    ],
+    "positive_observer": [
+      11,
+      5,
+      32,
+      22,
+      7,
+      4,
+      1
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 5,
+    "literal_context_counts": [
+      13,
+      29,
+      55,
+      49,
+      29,
+      55,
+      77
+    ],
+    "positive_observer": [
+      13,
+      5,
+      32,
+      13,
+      13,
+      3,
+      3
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 6,
+    "literal_context_counts": [
+      11,
+      29,
+      59,
+      51,
+      25,
+      49,
+      75
+    ],
+    "positive_observer": [
+      11,
+      5,
+      32,
+      15,
+      12,
+      3,
+      2
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 7,
+    "literal_context_counts": [
+      9,
+      17,
+      29,
+      31,
+      31,
+      67,
+      71
+    ],
+    "positive_observer": [
+      9,
+      5,
+      32,
+      6,
+      18,
+      2,
+      4
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 8,
+    "literal_context_counts": [
+      13,
+      37,
+      79,
+      65,
+      23,
+      41,
+      79
+    ],
+    "positive_observer": [
+      13,
+      5,
+      32,
+      21,
+      9,
+      3,
+      1
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 9,
+    "literal_context_counts": [
+      11,
+      25,
+      49,
+      45,
+      29,
+      59,
+      75
+    ],
+    "positive_observer": [
+      11,
+      5,
+      32,
+      12,
+      15,
+      2,
+      3
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 10,
+    "literal_context_counts": [
+      15,
+      31,
+      59,
+      53,
+      31,
+      59,
+      79
+    ],
+    "positive_observer": [
+      15,
+      5,
+      32,
+      14,
+      14,
+      2,
+      2
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 11,
+    "literal_context_counts": [
+      9,
+      15,
+      25,
+      29,
+      33,
+      73,
+      71
+    ],
+    "positive_observer": [
+      9,
+      5,
+      32,
+      5,
+      20,
+      1,
+      4
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 12,
+    "literal_context_counts": [
+      15,
+      33,
+      65,
+      57,
+      33,
+      65,
+      83
+    ],
+    "positive_observer": [
+      15,
+      5,
+      32,
+      16,
+      16,
+      2,
+      2
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 13,
+    "literal_context_counts": [
+      11,
+      19,
+      33,
+      35,
+      37,
+      81,
+      77
+    ],
+    "positive_observer": [
+      11,
+      5,
+      32,
+      7,
+      22,
+      1,
+      4
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 14,
+    "literal_context_counts": [
+      13,
+      23,
+      41,
+      41,
+      37,
+      79,
+      79
+    ],
+    "positive_observer": [
+      13,
+      5,
+      32,
+      9,
+      21,
+      1,
+      3
+    ]
+  },
+  {
+    "core_index": 2,
+    "core_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "cut": 15,
+    "literal_context_counts": [
+      5,
+      5,
+      5,
+      15,
+      37,
+      91,
+      69
+    ],
+    "positive_observer": [
+      5,
+      5,
+      32,
+      0,
+      27,
+      0,
+      5
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 0,
+    "literal_context_counts": [
+      9,
+      93,
+      243,
+      177,
+      9,
+      9,
+      177
+    ],
+    "positive_observer": [
+      9,
+      9,
+      84,
+      75,
+      0,
+      9,
+      0
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 1,
+    "literal_context_counts": [
+      17,
+      77,
+      181,
+      139,
+      31,
+      53,
+      175
+    ],
+    "positive_observer": [
+      17,
+      9,
+      84,
+      52,
+      11,
+      8,
+      3
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 2,
+    "literal_context_counts": [
+      15,
+      77,
+      185,
+      141,
+      27,
+      45,
+      173
+    ],
+    "positive_observer": [
+      15,
+      9,
+      84,
+      54,
+      9,
+      8,
+      3
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 3,
+    "literal_context_counts": [
+      15,
+      53,
+      115,
+      95,
+      41,
+      81,
+      163
+    ],
+    "positive_observer": [
+      15,
+      9,
+      84,
+      31,
+      20,
+      7,
+      6
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 4,
+    "literal_context_counts": [
+      19,
+      91,
+      219,
+      165,
+      31,
+      53,
+      187
+    ],
+    "positive_observer": [
+      19,
+      9,
+      84,
+      64,
+      11,
+      8,
+      1
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 5,
+    "literal_context_counts": [
+      23,
+      71,
+      153,
+      123,
+      49,
+      93,
+      181
+    ],
+    "positive_observer": [
+      23,
+      9,
+      84,
+      41,
+      22,
+      7,
+      4
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 6,
+    "literal_context_counts": [
+      19,
+      69,
+      155,
+      123,
+      43,
+      83,
+      177
+    ],
+    "positive_observer": [
+      19,
+      9,
+      84,
+      43,
+      20,
+      7,
+      4
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 7,
+    "literal_context_counts": [
+      15,
+      41,
+      81,
+      73,
+      53,
+      115,
+      163
+    ],
+    "positive_observer": [
+      15,
+      9,
+      84,
+      20,
+      31,
+      6,
+      7
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 8,
+    "literal_context_counts": [
+      29,
+      101,
+      233,
+      179,
+      51,
+      93,
+      207
+    ],
+    "positive_observer": [
+      29,
+      9,
+      84,
+      66,
+      21,
+      6,
+      1
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 9,
+    "literal_context_counts": [
+      29,
+      77,
+      163,
+      133,
+      65,
+      129,
+      197
+    ],
+    "positive_observer": [
+      29,
+      9,
+      84,
+      43,
+      32,
+      5,
+      4
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 10,
+    "literal_context_counts": [
+      31,
+      81,
+      171,
+      139,
+      65,
+      125,
+      199
+    ],
+    "positive_observer": [
+      31,
+      9,
+      84,
+      45,
+      30,
+      5,
+      4
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 11,
+    "literal_context_counts": [
+      23,
+      49,
+      93,
+      85,
+      71,
+      153,
+      181
+    ],
+    "positive_observer": [
+      23,
+      9,
+      84,
+      22,
+      41,
+      4,
+      7
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 12,
+    "literal_context_counts": [
+      33,
+      93,
+      203,
+      161,
+      67,
+      131,
+      211
+    ],
+    "positive_observer": [
+      33,
+      9,
+      84,
+      55,
+      32,
+      5,
+      2
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 13,
+    "literal_context_counts": [
+      29,
+      65,
+      129,
+      111,
+      77,
+      163,
+      197
+    ],
+    "positive_observer": [
+      29,
+      9,
+      84,
+      32,
+      43,
+      4,
+      5
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 14,
+    "literal_context_counts": [
+      29,
+      67,
+      135,
+      115,
+      75,
+      157,
+      197
+    ],
+    "positive_observer": [
+      29,
+      9,
+      84,
+      34,
+      41,
+      4,
+      5
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 15,
+    "literal_context_counts": [
+      17,
+      31,
+      53,
+      57,
+      77,
+      181,
+      175
+    ],
+    "positive_observer": [
+      17,
+      9,
+      84,
+      11,
+      52,
+      3,
+      8
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 16,
+    "literal_context_counts": [
+      31,
+      101,
+      229,
+      177,
+      55,
+      101,
+      209
+    ],
+    "positive_observer": [
+      31,
+      9,
+      84,
+      64,
+      23,
+      6,
+      1
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 17,
+    "literal_context_counts": [
+      29,
+      75,
+      157,
+      129,
+      67,
+      135,
+      197
+    ],
+    "positive_observer": [
+      29,
+      9,
+      84,
+      41,
+      34,
+      5,
+      4
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 18,
+    "literal_context_counts": [
+      29,
+      77,
+      163,
+      133,
+      65,
+      129,
+      197
+    ],
+    "positive_observer": [
+      29,
+      9,
+      84,
+      43,
+      32,
+      5,
+      4
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 19,
+    "literal_context_counts": [
+      19,
+      43,
+      83,
+      77,
+      69,
+      155,
+      177
+    ],
+    "positive_observer": [
+      19,
+      9,
+      84,
+      20,
+      43,
+      4,
+      7
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 20,
+    "literal_context_counts": [
+      37,
+      95,
+      201,
+      161,
+      73,
+      141,
+      215
+    ],
+    "positive_observer": [
+      37,
+      9,
+      84,
+      53,
+      34,
+      5,
+      2
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 21,
+    "literal_context_counts": [
+      31,
+      65,
+      125,
+      109,
+      81,
+      171,
+      199
+    ],
+    "positive_observer": [
+      31,
+      9,
+      84,
+      30,
+      45,
+      4,
+      5
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 22,
+    "literal_context_counts": [
+      29,
+      65,
+      129,
+      111,
+      77,
+      163,
+      197
+    ],
+    "positive_observer": [
+      29,
+      9,
+      84,
+      32,
+      43,
+      4,
+      5
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 23,
+    "literal_context_counts": [
+      15,
+      27,
+      45,
+      51,
+      77,
+      185,
+      173
+    ],
+    "positive_observer": [
+      15,
+      9,
+      84,
+      9,
+      54,
+      3,
+      8
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 24,
+    "literal_context_counts": [
+      43,
+      101,
+      211,
+      171,
+      89,
+      177,
+      231
+    ],
+    "positive_observer": [
+      43,
+      9,
+      84,
+      55,
+      44,
+      3,
+      2
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 25,
+    "literal_context_counts": [
+      33,
+      67,
+      131,
+      115,
+      93,
+      203,
+      211
+    ],
+    "positive_observer": [
+      33,
+      9,
+      84,
+      32,
+      55,
+      2,
+      5
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 26,
+    "literal_context_counts": [
+      37,
+      73,
+      141,
+      123,
+      95,
+      201,
+      215
+    ],
+    "positive_observer": [
+      37,
+      9,
+      84,
+      34,
+      53,
+      2,
+      5
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 27,
+    "literal_context_counts": [
+      19,
+      31,
+      53,
+      59,
+      91,
+      219,
+      187
+    ],
+    "positive_observer": [
+      19,
+      9,
+      84,
+      11,
+      64,
+      1,
+      8
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 28,
+    "literal_context_counts": [
+      43,
+      89,
+      177,
+      149,
+      101,
+      211,
+      231
+    ],
+    "positive_observer": [
+      43,
+      9,
+      84,
+      44,
+      55,
+      2,
+      3
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 29,
+    "literal_context_counts": [
+      29,
+      51,
+      93,
+      89,
+      101,
+      233,
+      207
+    ],
+    "positive_observer": [
+      29,
+      9,
+      84,
+      21,
+      66,
+      1,
+      6
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 30,
+    "literal_context_counts": [
+      31,
+      55,
+      101,
+      95,
+      101,
+      229,
+      209
+    ],
+    "positive_observer": [
+      31,
+      9,
+      84,
+      23,
+      64,
+      1,
+      6
+    ]
+  },
+  {
+    "core_index": 3,
+    "core_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "cut": 31,
+    "literal_context_counts": [
+      9,
+      9,
+      9,
+      27,
+      93,
+      243,
+      177
+    ],
+    "positive_observer": [
+      9,
+      9,
+      84,
+      0,
+      75,
+      0,
+      9
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 0,
+    "literal_context_counts": [
+      9,
+      93,
+      243,
+      177,
+      9,
+      9,
+      177
+    ],
+    "positive_observer": [
+      9,
+      9,
+      84,
+      75,
+      0,
+      9,
+      0
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 1,
+    "literal_context_counts": [
+      15,
+      73,
+      173,
+      133,
+      29,
+      49,
+      171
+    ],
+    "positive_observer": [
+      15,
+      9,
+      84,
+      50,
+      10,
+      8,
+      4
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 2,
+    "literal_context_counts": [
+      17,
+      85,
+      205,
+      155,
+      27,
+      45,
+      179
+    ],
+    "positive_observer": [
+      17,
+      9,
+      84,
+      60,
+      9,
+      8,
+      1
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 3,
+    "literal_context_counts": [
+      17,
+      59,
+      129,
+      105,
+      41,
+      79,
+      167
+    ],
+    "positive_observer": [
+      17,
+      9,
+      84,
+      35,
+      19,
+      7,
+      5
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 4,
+    "literal_context_counts": [
+      23,
+      97,
+      229,
+      173,
+      39,
+      69,
+      197
+    ],
+    "positive_observer": [
+      23,
+      9,
+      84,
+      66,
+      15,
+      8,
+      1
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 5,
+    "literal_context_counts": [
+      25,
+      73,
+      155,
+      125,
+      55,
+      105,
+      187
+    ],
+    "positive_observer": [
+      25,
+      9,
+      84,
+      41,
+      25,
+      7,
+      5
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 6,
+    "literal_context_counts": [
+      23,
+      81,
+      183,
+      143,
+      49,
+      97,
+      191
+    ],
+    "positive_observer": [
+      23,
+      9,
+      84,
+      51,
+      24,
+      7,
+      2
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 7,
+    "literal_context_counts": [
+      19,
+      51,
+      103,
+      89,
+      59,
+      127,
+      175
+    ],
+    "positive_observer": [
+      19,
+      9,
+      84,
+      26,
+      34,
+      6,
+      6
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 8,
+    "literal_context_counts": [
+      23,
+      89,
+      207,
+      159,
+      41,
+      73,
+      191
+    ],
+    "positive_observer": [
+      23,
+      9,
+      84,
+      59,
+      16,
+      7,
+      2
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 9,
+    "literal_context_counts": [
+      19,
+      59,
+      127,
+      105,
+      51,
+      103,
+      175
+    ],
+    "positive_observer": [
+      19,
+      9,
+      84,
+      34,
+      26,
+      6,
+      6
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 10,
+    "literal_context_counts": [
+      27,
+      77,
+      165,
+      133,
+      55,
+      105,
+      189
+    ],
+    "positive_observer": [
+      27,
+      9,
+      84,
+      44,
+      25,
+      6,
+      3
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 11,
+    "literal_context_counts": [
+      17,
+      41,
+      79,
+      73,
+      59,
+      129,
+      167
+    ],
+    "positive_observer": [
+      17,
+      9,
+      84,
+      19,
+      35,
+      5,
+      7
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 12,
+    "literal_context_counts": [
+      33,
+      89,
+      189,
+      151,
+      67,
+      129,
+      207
+    ],
+    "positive_observer": [
+      33,
+      9,
+      84,
+      50,
+      31,
+      6,
+      3
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 13,
+    "literal_context_counts": [
+      25,
+      55,
+      105,
+      93,
+      73,
+      155,
+      187
+    ],
+    "positive_observer": [
+      25,
+      9,
+      84,
+      25,
+      41,
+      5,
+      7
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 14,
+    "literal_context_counts": [
+      29,
+      69,
+      139,
+      117,
+      73,
+      153,
+      197
+    ],
+    "positive_observer": [
+      29,
+      9,
+      84,
+      35,
+      40,
+      5,
+      4
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 15,
+    "literal_context_counts": [
+      15,
+      29,
+      49,
+      53,
+      73,
+      173,
+      171
+    ],
+    "positive_observer": [
+      15,
+      9,
+      84,
+      10,
+      50,
+      4,
+      8
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 16,
+    "literal_context_counts": [
+      33,
+      103,
+      233,
+      181,
+      59,
+      109,
+      213
+    ],
+    "positive_observer": [
+      33,
+      9,
+      84,
+      65,
+      25,
+      5,
+      1
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 17,
+    "literal_context_counts": [
+      29,
+      73,
+      153,
+      127,
+      69,
+      139,
+      197
+    ],
+    "positive_observer": [
+      29,
+      9,
+      84,
+      40,
+      35,
+      4,
+      5
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 18,
+    "literal_context_counts": [
+      37,
+      91,
+      191,
+      155,
+      73,
+      141,
+      211
+    ],
+    "positive_observer": [
+      37,
+      9,
+      84,
+      50,
+      34,
+      4,
+      2
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 19,
+    "literal_context_counts": [
+      27,
+      55,
+      105,
+      95,
+      77,
+      165,
+      189
+    ],
+    "positive_observer": [
+      27,
+      9,
+      84,
+      25,
+      44,
+      3,
+      6
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 20,
+    "literal_context_counts": [
+      41,
+      101,
+      213,
+      171,
+      83,
+      163,
+      227
+    ],
+    "positive_observer": [
+      41,
+      9,
+      84,
+      56,
+      40,
+      4,
+      2
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 21,
+    "literal_context_counts": [
+      33,
+      67,
+      129,
+      113,
+      89,
+      189,
+      207
+    ],
+    "positive_observer": [
+      33,
+      9,
+      84,
+      31,
+      50,
+      3,
+      6
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 22,
+    "literal_context_counts": [
+      37,
+      81,
+      163,
+      137,
+      89,
+      187,
+      217
+    ],
+    "positive_observer": [
+      37,
+      9,
+      84,
+      41,
+      49,
+      3,
+      3
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 23,
+    "literal_context_counts": [
+      23,
+      41,
+      73,
+      73,
+      89,
+      207,
+      191
+    ],
+    "positive_observer": [
+      23,
+      9,
+      84,
+      16,
+      59,
+      2,
+      7
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 24,
+    "literal_context_counts": [
+      37,
+      89,
+      187,
+      153,
+      81,
+      163,
+      217
+    ],
+    "positive_observer": [
+      37,
+      9,
+      84,
+      49,
+      41,
+      3,
+      3
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 25,
+    "literal_context_counts": [
+      23,
+      49,
+      97,
+      89,
+      81,
+      183,
+      191
+    ],
+    "positive_observer": [
+      23,
+      9,
+      84,
+      24,
+      51,
+      2,
+      7
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 26,
+    "literal_context_counts": [
+      37,
+      73,
+      141,
+      123,
+      91,
+      191,
+      211
+    ],
+    "positive_observer": [
+      37,
+      9,
+      84,
+      34,
+      50,
+      2,
+      4
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 27,
+    "literal_context_counts": [
+      17,
+      27,
+      45,
+      53,
+      85,
+      205,
+      179
+    ],
+    "positive_observer": [
+      17,
+      9,
+      84,
+      9,
+      60,
+      1,
+      8
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 28,
+    "literal_context_counts": [
+      41,
+      83,
+      163,
+      139,
+      101,
+      213,
+      227
+    ],
+    "positive_observer": [
+      41,
+      9,
+      84,
+      40,
+      56,
+      2,
+      4
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 29,
+    "literal_context_counts": [
+      23,
+      39,
+      69,
+      71,
+      97,
+      229,
+      197
+    ],
+    "positive_observer": [
+      23,
+      9,
+      84,
+      15,
+      66,
+      1,
+      8
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 30,
+    "literal_context_counts": [
+      33,
+      59,
+      109,
+      101,
+      103,
+      233,
+      213
+    ],
+    "positive_observer": [
+      33,
+      9,
+      84,
+      25,
+      65,
+      1,
+      5
+    ]
+  },
+  {
+    "core_index": 4,
+    "core_rows": [
+      2,
+      4,
+      25,
+      3,
+      11
+    ],
+    "cut": 31,
+    "literal_context_counts": [
+      9,
+      9,
+      9,
+      27,
+      93,
+      243,
+      177
+    ],
+    "positive_observer": [
+      9,
+      9,
+      84,
+      0,
+      75,
+      0,
+      9
+    ]
+  }
+]

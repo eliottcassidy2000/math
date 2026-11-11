@@ -38,6 +38,6 @@ def main():
     return {'status':'PASS','independent_raw_cut_bound':bound,
             'raw_python_parameter_pairs':pairs,'all_32_per_core_support_counts_match':True,
             'inherited_prefix_bound':old['bound'],
-            'scope':'Independent complete support through4095; higher runs retain C++ exact inverse and inherited prefix controls, not an independent high-range replay.'}
+            'scope':'This checker independently compares complete support through4095 and inherited higher-run prefixes. The separate verify_full_support.py supplies the full high-range replay.'}
 
 if __name__=='__main__':print(json.dumps(main(),sort_keys=True,indent=2))

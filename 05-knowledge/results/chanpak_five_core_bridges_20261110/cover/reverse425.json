@@ -1,0 +1,506 @@
+{
+  "distinct_literal_targets": 42,
+  "one_birth_hits": [
+    {
+      "A": 0,
+      "B": 72,
+      "core_index": 1,
+      "core_rows": [
+        2,
+        4,
+        1
+      ],
+      "cut": 1,
+      "deleted_target_vertex": 1,
+      "global_sink_vertices": [],
+      "global_source_vertices": [
+        1
+      ],
+      "new_outmask_in_source_labels": 1022,
+      "source_h": 141,
+      "source_is_strong": false,
+      "source_rows": [
+        508,
+        1021,
+        504,
+        496,
+        480,
+        960,
+        384,
+        256,
+        512,
+        221
+      ],
+      "source_vertex_labels_in_target": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "strong_ancestor_rows": [
+        254,
+        252,
+        248,
+        240,
+        480,
+        192,
+        128,
+        256,
+        111
+      ],
+      "strong_ancestor_vertices_in_source": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "target_rows": [
+        1018,
+        2044,
+        2041,
+        1008,
+        992,
+        960,
+        1920,
+        768,
+        512,
+        1024,
+        441
+      ],
+      "trace": [
+        141,
+        141,
+        425
+      ]
+    },
+    {
+      "A": 72,
+      "B": 0,
+      "core_index": 1,
+      "core_rows": [
+        2,
+        4,
+        1
+      ],
+      "cut": 3,
+      "deleted_target_vertex": 8,
+      "global_sink_vertices": [
+        7
+      ],
+      "global_source_vertices": [],
+      "new_outmask_in_source_labels": 256,
+      "source_h": 141,
+      "source_is_strong": false,
+      "source_rows": [
+        510,
+        1020,
+        1016,
+        496,
+        992,
+        960,
+        896,
+        0,
+        640,
+        137
+      ],
+      "source_vertex_labels_in_target": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "strong_ancestor_rows": [
+        254,
+        508,
+        504,
+        240,
+        480,
+        448,
+        384,
+        256,
+        9
+      ],
+      "strong_ancestor_vertices_in_source": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "target_rows": [
+        1022,
+        2044,
+        2040,
+        1008,
+        2016,
+        1984,
+        1920,
+        256,
+        512,
+        1152,
+        393
+      ],
+      "trace": [
+        141,
+        141,
+        425
+      ]
+    },
+    {
+      "A": 72,
+      "B": 0,
+      "core_index": 1,
+      "core_rows": [
+        2,
+        4,
+        1
+      ],
+      "cut": 5,
+      "deleted_target_vertex": 7,
+      "global_sink_vertices": [
+        8
+      ],
+      "global_source_vertices": [],
+      "new_outmask_in_source_labels": 128,
+      "source_h": 141,
+      "source_is_strong": false,
+      "source_rows": [
+        510,
+        1020,
+        1016,
+        496,
+        992,
+        960,
+        896,
+        768,
+        0,
+        265
+      ],
+      "source_vertex_labels_in_target": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10
+      ],
+      "strong_ancestor_rows": [
+        254,
+        508,
+        504,
+        240,
+        480,
+        448,
+        384,
+        256,
+        9
+      ],
+      "strong_ancestor_vertices_in_source": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "target_rows": [
+        1022,
+        2044,
+        2040,
+        1008,
+        2016,
+        1984,
+        1920,
+        256,
+        1536,
+        128,
+        649
+      ],
+      "trace": [
+        141,
+        141,
+        425
+      ]
+    },
+    {
+      "A": 72,
+      "B": 0,
+      "core_index": 1,
+      "core_rows": [
+        2,
+        4,
+        1
+      ],
+      "cut": 6,
+      "deleted_target_vertex": 9,
+      "global_sink_vertices": [
+        8
+      ],
+      "global_source_vertices": [],
+      "new_outmask_in_source_labels": 128,
+      "source_h": 141,
+      "source_is_strong": false,
+      "source_rows": [
+        510,
+        1020,
+        1016,
+        496,
+        992,
+        960,
+        896,
+        768,
+        0,
+        265
+      ],
+      "source_vertex_labels_in_target": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "strong_ancestor_rows": [
+        254,
+        508,
+        504,
+        240,
+        480,
+        448,
+        384,
+        256,
+        9
+      ],
+      "strong_ancestor_vertices_in_source": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "target_rows": [
+        1022,
+        2044,
+        2040,
+        1008,
+        2016,
+        1984,
+        1920,
+        1280,
+        512,
+        128,
+        777
+      ],
+      "trace": [
+        141,
+        141,
+        425
+      ]
+    },
+    {
+      "A": 0,
+      "B": 72,
+      "core_index": 1,
+      "core_rows": [
+        2,
+        4,
+        1
+      ],
+      "cut": 2,
+      "deleted_target_vertex": 2,
+      "global_sink_vertices": [],
+      "global_source_vertices": [
+        0
+      ],
+      "new_outmask_in_source_labels": 1021,
+      "source_h": 141,
+      "source_is_strong": false,
+      "source_rows": [
+        1022,
+        508,
+        504,
+        496,
+        480,
+        960,
+        384,
+        256,
+        512,
+        222
+      ],
+      "source_vertex_labels_in_target": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "strong_ancestor_rows": [
+        254,
+        252,
+        248,
+        240,
+        480,
+        192,
+        128,
+        256,
+        111
+      ],
+      "strong_ancestor_vertices_in_source": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "target_rows": [
+        2042,
+        1020,
+        2041,
+        1008,
+        992,
+        960,
+        1920,
+        768,
+        512,
+        1024,
+        442
+      ],
+      "trace": [
+        141,
+        141,
+        425
+      ]
+    },
+    {
+      "A": 0,
+      "B": 72,
+      "core_index": 1,
+      "core_rows": [
+        2,
+        4,
+        1
+      ],
+      "cut": 4,
+      "deleted_target_vertex": 0,
+      "global_sink_vertices": [],
+      "global_source_vertices": [
+        0
+      ],
+      "new_outmask_in_source_labels": 1021,
+      "source_h": 141,
+      "source_is_strong": false,
+      "source_rows": [
+        1022,
+        508,
+        504,
+        496,
+        480,
+        960,
+        384,
+        256,
+        512,
+        222
+      ],
+      "source_vertex_labels_in_target": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "strong_ancestor_rows": [
+        254,
+        252,
+        248,
+        240,
+        480,
+        192,
+        128,
+        256,
+        111
+      ],
+      "strong_ancestor_vertices_in_source": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "target_rows": [
+        2042,
+        2044,
+        1017,
+        1008,
+        992,
+        960,
+        1920,
+        768,
+        512,
+        1024,
+        444
+      ],
+      "trace": [
+        141,
+        141,
+        425
+      ]
+    }
+  ],
+  "raw_inverse_witnesses": 60,
+  "scope": "Only distinct literal target425 graphs produced by the inherited normalized finite inverse over90 raw cuts. Normalization is complete for values, not for every graph embedding. All six H141 parents here are weak neutral paddings; no new strong one-birth claim.",
+  "status": "PASS"
+}

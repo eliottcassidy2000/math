@@ -1,0 +1,18 @@
+{
+  "all_support_bytes_equal": true,
+  "bound": 16777215,
+  "direct_g_formula": "one plus binary-prefix/adjacent-one contributions at zero bits; no g-table recurrence",
+  "literal_observer_context_counts": 630,
+  "observer_source_sha256": "68a6014fe270e430637a31f375b60d76b07c175888ce30fc18bd9b015040513c",
+  "old_cpp_sha256": "3caa07621d8d43fbf05ba55674e284521c00f4d74fd8a5b901315725bd61efaf",
+  "old_parameter_pairs": 419808372,
+  "old_signature_count": 44,
+  "positive_cpp_sha256": "13efec87880d76f7aaf3c97d27337fe50f1f9a26ca5562a115c2896353d0b329",
+  "positive_parameter_pairs": 888728504,
+  "raw_cut_count": 90,
+  "raw_observer_sha256": "95a82380b5d02b0680e237b68d18e2faf9f5e244c7771aee6d157bae0a2a3db5",
+  "scope": "Complete value-support comparison at this bound: old signed44-row A-first inverse versus independent literal90-row positive B-first inverse. All-order coverage remains open.",
+  "status": "PASS",
+  "support_bytes_compared": 8388608,
+  "support_sha256": "cfc1065f31b4d76b69ec449df45946404821c3eb8b63590dc6f2ebaf7a68e306"
+}

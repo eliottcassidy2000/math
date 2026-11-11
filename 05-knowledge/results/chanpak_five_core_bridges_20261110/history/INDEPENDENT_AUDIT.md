@@ -88,3 +88,48 @@ python -B 05-knowledge/results/chanpak_five_core_bridges_20261110/history/audit_
 universes, counts, rank, hostile m=0 case and script hash. The separate
 [five-core census](receipt.json) concerns the new historical bridges;
 it is not part of the producer proof dependency.
+
+## Seven-persistent-vertex reset
+
+**VERIFIED independently for the literal construction; PROVED algebraic
+family boundary.** This audit covers sections1–2 of
+[RESET](../alternatives/RESET.md). The broader replacement censuses and
+neutral edge component in its sections3–4 were not independently rerun here.
+
+The audit constructs the old source from the historical rooted word
+`11^k,01,11,10`, using the history lane's constructor. It imports no producer
+constructor, attachment, isomorphism routine or path-count implementation.
+Independent subset DP checks every intermediate graph for k1..6. Every
+arc between the persistent old vertices agrees at every stage, and all
+six stages are strong. At k2, the exact count trace is
+
+    141 -> 33 -> 69 -> 141 -> 215 -> 425.
+
+The original vertices `[0,1,2,3,4,5,7]` correspond to the new source U
+vertices `[1,2,3,6,7,8,0]`, respectively. The two reset vertices correspond
+to U4,U5. This checks the full isomorphism, not just H. The receipt retains
+all adjacency rows at every stage, every attachment mask and the label map.
+
+For the all-k calculation, put D=2^k and t=2D+1. The binary word
+`1 0^k 1 0^r` is the integer2^r*t. Since g(t)=g(D)=D+1, the first doubling
+adds t+1 and all later doublings add2^j*t. Therefore, for k,r>=1,
+
+    g(2^r*t) = D+1+(2^r-1)*t+1
+              = (2^(r+1)-1)*D+2^r+1.
+
+The deletion and the two reset insertions have r2,3,4, respectively;
+their counts are7D+5,15D+9,31D+17. The last two bits remain00, so the
+converse1-ready continuation from ALTERNATE141 gives3(31D+17)+2.
+Equality with the original source count34D+5 requires D4, hence exactly
+k2. This independently confirms both the positive141 reset and its
+first failed implication as a uniform source-return construction.
+
+Reproduce with
+
+```text
+python -B 05-knowledge/results/chanpak_five_core_bridges_20261110/history/audit_reset.py
+```
+
+The receipt is [reset_audit.json](reset_audit.json). These six finite
+controls support the explicit all-k calculation; they are not an
+all-order search for other resets.

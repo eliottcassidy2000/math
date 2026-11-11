@@ -50,6 +50,12 @@ Consequently H(U)<=N implies |U|<=N. The algorithm's stated bound follows.
 Sharper Moon–Busch order bounds may improve runtime but are not necessary
 for correctness. No assumption about the conjectured spectrum was used.
 
+The strict threshold is sharp. For S=C3, n=h=3 and Q_S(2)=12. Its cyclic
+two-ear has H15=(n+2)h, but each of the two added vertices alone is a
+uniform source or sink relative to S. No strong one-vertex chain reaches
+this particular target. Replacing the strict inequality in(1) by a
+nonstrict one would therefore make the stated completeness theorem false.
+
 ## 2. The ternary implication and the nonstrong boundary
 
 For every h>=3 and n>=3, both targets 3h+2 and3h+4 satisfy(1). Therefore

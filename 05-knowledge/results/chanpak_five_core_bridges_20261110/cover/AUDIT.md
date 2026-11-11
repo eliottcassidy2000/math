@@ -101,3 +101,45 @@ control exits nonzero. [lane_checks.json](lane_checks.json) records source
 and output hashes. Classical module classification priority remains with
 the cited algebra sources; inherited tournament laws remain credited to
 their earlier packets.
+
+## General low-ratio frontier theorem
+
+[LOW_RATIO_FRONTIER.md](../algebra/LOW_RATIO_FRONTIER.md) passes the same
+audit with its full quantifiers. For a specified strong S of order n>=3
+and count h, the strict threshold h<=N<(n+2)h excludes every cyclic
+two-ear at every later strong stage. All bounded strong supertournaments
+therefore occur in the one-vertex frontier. The prescribed-start insertion
+proof gives H(U)>=|U|, hence termination after at most N-n births.
+Both ternary targets lie below this threshold because h,n>=3. This is
+not a claim that every target is reachable from the specified source.
+
+The strict inequality is sharp: S=C3 has n=3,h=3 and Q2=12. Its cyclic
+two-ear has H=15=(n+2)h, while neither new vertex alone gives a strong
+enlargement of S. Thus a non-strict threshold would invalidate the claimed
+complete one-vertex traversal. The proper-divisor hypothesis for promoting
+strong-target results to arbitrary tournaments remains essential.
+
+## Complete one-apex1-ready image
+
+The final classification in
+[ALTERNATE141.md](../history/ALTERNATE141.md) also passes independent
+written-proof audit, with its explicit H>=3 guard. Converse converts a
+1-ready root to an outdegree-one vertex in a strong one-apex graph, leaving
+exactly the last-base, penultimate-base and apex cases. The last-base gap
+is the number of deletion paths ending at the apex, hence is1 exactly for
+final cut bits00. The penultimate gap is H(V)-E_apex(V); oddness of H(V)
+and E_apex(V) in{0,1} force H(V)=1,E_apex(V)=0. Transitivity then forces
+the all-one remaining prefix. At base length3 this is word110, count5=g(4),
+and at base length2 the gap is0. The apex-root case also has gap0.
+
+For clarity the weak localization follows directly from the ordinal SCC
+law. With prefix P, root component C and suffix Q,
+
+    F(U)=Q2(P)F(C)H(Q),   H(U)=H(P)H(C)H(Q).
+
+A gap1 forces H(Q)=1. A nonempty prefix has Q2(P)>=2H(P), so its gap
+is at least H(P)H(C), ruling it out when total H>=3. Thus the root lies
+in the initial nontrivial component and later components are singletons;
+that component remains one-apex. This confirms precisely the image
+{g(4u):u>=1} for H>=3, including weak presentations. It does not assert
+the same image for arbitrary larger-core ready sources.

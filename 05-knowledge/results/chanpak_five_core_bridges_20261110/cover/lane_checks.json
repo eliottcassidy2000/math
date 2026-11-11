@@ -30,10 +30,10 @@
     },
     {
       "normal_optimized_bytes_equal": true,
-      "output_sha256": "6b1a82ab7dcc3890d5d54f4ec1a7550cb3451dd9614a1ddc7aab18fe187caeeb",
+      "output_sha256": "6c178035190051968fe24c97b2f4a153708b42b4c92d4ccb00caeaaade646018",
       "receipt_json_equal": true,
       "script": "verify_support.py",
-      "source_sha256": "2df82f04a1b29cff16f273562d59183fe9a93a49057c93c6c88890fbcdd1c6da"
+      "source_sha256": "b5ea3739d9a1d63b071cfa16cb5a7d2ab085f2e53aeac7af9ead0778cb76a14e"
     },
     {
       "normal_optimized_bytes_equal": true,
@@ -41,9 +41,16 @@
       "receipt_json_equal": true,
       "script": "audit_frontier.py",
       "source_sha256": "5306414b61e34787490b64d35d5ce929b941366accc9559c24d4f2b4b719e86c"
+    },
+    {
+      "normal_optimized_bytes_equal": true,
+      "output_sha256": "42fc684c94a824d27d12216cd51ca139f57fcc2a54c187a6a50c25668e42abbf",
+      "receipt_json_equal": true,
+      "script": "reverse425.py",
+      "source_sha256": "aa4095f9467dfb74c1f2ae79de02b3eb688b11de5d114e5d4f39079ab897cd08"
     }
   ],
   "independent_frontier_intentional_failure_exit": 1,
-  "scope": "Normal and optimized reruns of the six named exact checkers; large support runs are retained data with independent prefix controls, not rerun here.",
+  "scope": "Normal and optimized checks of the seven named exact proof/probe scripts. Complete2^24 support is independently replayed in full_support_audit.json, separate from this receipt.",
   "status": "PASS"
 }

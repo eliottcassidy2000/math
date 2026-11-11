@@ -1,6 +1,6 @@
 # Five-core Chan–Pak research: operations, old mechanisms, and coverage
 
-10 November 2026 (America/Denver). **ACTIVE research packet. Chan–Pak OPEN.**
+10 November 2026 (America/Denver). **COMPLETE research packet. Chan–Pak OPEN.**
 Baseline: `0f96e904a570`. The user's requested longer session combines extensive
 historical recovery with new constructive attempts. Five is a question about
 actual structures and operations, not an assumed shared invariant.
@@ -60,3 +60,29 @@ reserved. The results and final audit will be linked here after the lanes close.
 Method cards: search the statement before the method; type every analogy;
 retain local incidence through counting; correct the object before sharpening
 the technique; verify the consequence rather than injected assumptions.
+
+## Current results and proof routes
+
+The integrated account is [SYNTHESIS.md](SYNTHESIS.md), with a frozen
+[manifest and reproduction guide](REPRODUCTION.md). The session pushed
+coherent checkpoints throughout the constructive search.
+Concurrent Session252's interface algebra, seven-coordinate reduction and
+golden/arithmetic bridges are explicitly credited and integrated.
+
+| Result | Exact status and route |
+|---|---|
+| Why this bank has five cores | All-order H<=9 classification, using a complete small census and inherited strong-subtournament theorem; [history](history/RECOVERY.md) |
+| Seven small physical measurements | PROVED recovery of every two-flank response, with independent endpoint/permutation/graph checks; [positive compiler](algebra/POSITIVE_COMPILER.md) |
+| A native five-element algebraic family | CITED classical five-module classification, explicit proof and application to actual central unit switches; [five modules](algebra/FIVE_MODULES.md) |
+| Larger exact five-core image | FINITE-EXACT through2^24-1, omitting only7,21; [cover](cover/README.md). This is not an unrestricted coverage record. |
+| Ready-pentagon enlargement | Actual C4 edge switch, lost contextual coefficients, and explicit deletion returns; [constructors](alternatives/NOTE.md) |
+| Source obstruction at141 | All-order absence of425 above either specified source; independent finite frontier plus proof; [births](alternatives/BIRTHS.md) |
+| Reusable hostile test | PROVED complete source-preserving frontier below the sharp(n+2)h threshold; [frontier theorem](algebra/LOW_RATIO_FRONTIER.md) |
+| Positive alternate source | Explicit141->215->425 and ready one-apex count image; [alternate141](history/ALTERNATE141.md) |
+| Actual source replacement | One deletion and two insertions retain seven old vertices and restore141 at a source that reaches425; [reset](alternatives/RESET.md) |
+| Arithmetic repairs | Infinite consecutive triples, exact near-square examples, and their limits; [near-square/adjacent](history/NEAR_SQUARE_AND_ADJACENT.md) |
+| Architecture and gap boundaries | PROVED rational-selector sparsity; inherited divisibility diagnosed for an internal triangle gap; [selector](cover/SELECTOR.md), [gap](cover/GAP.md) |
+
+The remaining all-height equation is exactly the one in the cover README.
+No finite image, modular fullness, scalar switch or source-reset example
+is promoted to that universal theorem. No new theorem ID has been reserved.

@@ -3,6 +3,6 @@
   "independent_raw_cut_bound": 4095,
   "inherited_prefix_bound": 262143,
   "raw_python_parameter_pairs": 105388,
-  "scope": "Independent complete support through4095; higher runs retain C++ exact inverse and inherited prefix controls, not an independent high-range replay.",
+  "scope": "This checker independently compares complete support through4095 and inherited higher-run prefixes. The separate verify_full_support.py supplies the full high-range replay.",
   "status": "PASS"
 }

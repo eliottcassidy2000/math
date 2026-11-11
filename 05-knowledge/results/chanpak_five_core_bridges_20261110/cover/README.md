@@ -50,9 +50,13 @@ No conclusion about disjointness at all heights follows.
 [verify_support.py](verify_support.py) independently runs the original
 Python inverse over all90 raw core cuts through4095 and agrees with all32
 per-core support-mask frequencies of the C++ implementation. Both larger
-runs also agree with the inherited complete2^18 prefix. This is an
-independent small-prefix check, not a second complete2^24 implementation;
-[support_checks.json](support_checks.json) states that limitation explicitly.
+runs also agree with the inherited complete2^18 prefix. That checker remains
+scoped to the small prefix. A subsequent
+[complete independent audit](FULL_SUPPORT_AUDIT.md) additionally reconstructs
+all90 raw positive observers from630 literal graph counts, computes g by
+its direct digit sum, and uses a different B-first inverse. Its complete
+2^24 support array agrees byte for byte on all8,388,608 per-core support
+masks; [full_support_audit.json](full_support_audit.json) retains the hash.
 
 ## All-parameter results
 
@@ -91,6 +95,10 @@ global construction must retain or reconstruct the missing information.
 classification, polynomial B95 central switch, all-additions readiness
 obstruction, and all-order H141-source/425 obstruction. Its separate
 standalone frontier implementation agrees on all35,840 labelled cuts.
+[REVERSE425.md](REVERSE425.md) adds a complementary constructive probe:
+six normalized425 targets have weak H141 one-vertex deletions. Removing
+their neutral singleton exposes the precise strong141 -> weak141 ->425
+two-birth boundary, rather than a new strong one-birth claim.
 
 ## Reproduction and finite controls
 
@@ -108,8 +116,10 @@ explicit failures, so optimized Python does not disable them. In particular:
 |Independent support|All90 raw cuts through4095;all32 support-mask counts;inherited2^18 prefix comparison|
 
 `audit_frontier.py` reproduces the independent cross-lane frontier receipt.
-All six checkers have byte-identical normal and optimized outputs, with
+All seven scoped proof/probe checkers have byte-identical normal and optimized outputs, with
 source/output hashes retained in [lane_checks.json](lane_checks.json).
+The full high-range independent comparison is reproduced by
+`verify_full_support.py`; its receipt is separate from those proof checks.
 
 To reproduce the large exact image, first run `make_signatures.py`, compile
 `support.cpp` using C++17, then run the executable with arguments
