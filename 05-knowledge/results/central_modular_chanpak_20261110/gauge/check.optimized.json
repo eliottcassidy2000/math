@@ -1,0 +1,57 @@
+{
+  "branch_checks": 12288,
+  "forbidden_preimages": [
+    [
+      0,
+      3,
+      7
+    ],
+    [
+      0,
+      10,
+      21
+    ],
+    [
+      2,
+      5,
+      21
+    ],
+    [
+      4,
+      1,
+      7
+    ]
+  ],
+  "scope": "Affine gauges only; no convergence or spectrum completeness claim",
+  "script_sha256": "abc58db7316de133150f824b8cb31daaf496085f781d3acfaae93e8ff37dcd7d",
+  "source_sha256": {
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+  },
+  "status": "PASS; FINITE-EXACT arithmetic controls",
+  "walls": [
+    [
+      0,
+      6,
+      13,
+      7
+    ],
+    [
+      0,
+      20,
+      41,
+      21
+    ],
+    [
+      2,
+      10,
+      41,
+      21
+    ],
+    [
+      4,
+      2,
+      13,
+      7
+    ]
+  ]
+}

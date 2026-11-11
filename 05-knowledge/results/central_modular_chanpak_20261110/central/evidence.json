@@ -1,0 +1,74 @@
+{
+  "central_universe": {
+    "count": 250,
+    "odd_moduli_max": 501,
+    "odd_moduli_min": 3
+  },
+  "codec_universe": {
+    "count": 2000,
+    "positive_x_max": 1000,
+    "positive_x_min": 1,
+    "signs": [
+      -1,
+      1
+    ]
+  },
+  "hostile_controls": [
+    "raw even pair is not an edge",
+    "literal reversal is not an edge",
+    "final-O bit is necessary",
+    "operation counts do not determine carry"
+  ],
+  "limits": [
+    "No Collatz convergence conclusion",
+    "No tournament count-realization theorem",
+    "Prime-only moduli do not form a closed graph"
+  ],
+  "minus_modulus_cycle": [
+    3,
+    7,
+    3
+  ],
+  "plus_modulus_cycle": [
+    5,
+    17,
+    9,
+    5
+  ],
+  "source_sha256": {
+    "01-canon/theorems/THM-4528-collatz-parity-in-base-phi-golden-beta-map-and-holonomy.md": "5a29a8f7b07b41f92a9d82764250f58931c09e80d201d4f95c61d2b50db1db98",
+    "01-canon/theorems/THM-4792-two-sheets-mod-odd-m-merged-centre-reflections-unit-shift-and-alternation-classification.md": "2d5b10037dbc0644c404df67b93b2936ff528bbcf3642486b3e76fc3d64b7ad9",
+    "05-knowledge/results/central_modular_chanpak_20261110/central/check.py": "c00344e39a66e28af3dbcbea6bdfc13a543e0e4c49873454d54666f28a6b8434",
+    "05-knowledge/results/odd_eighths_uniform_families_20261030/COLLATZ.md": "1cacca58f7c7f71d3af9799f3b6f47581d134015ad3c14309619bac41de9a72b",
+    "05-knowledge/results/tiling_modular_atoms_20261003.md": "44b5247c1ed4b195dfaecbcc5827848065f8706e07a754e7318196f198d69bbf"
+  },
+  "status": "FINITE-EXACT: all checks passed",
+  "word_counts_by_length": [
+    1,
+    2,
+    3,
+    5,
+    8,
+    13,
+    21,
+    34,
+    55,
+    89,
+    144,
+    233,
+    377
+  ],
+  "word_universe": {
+    "direct_inputs": 16382,
+    "direct_steps": 180228,
+    "lengths": [
+      0,
+      12
+    ],
+    "representatives": "1 through 2^length",
+    "signs": [
+      -1,
+      1
+    ]
+  }
+}

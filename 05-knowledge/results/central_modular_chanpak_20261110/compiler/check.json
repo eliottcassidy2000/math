@@ -1,0 +1,287 @@
+{
+  "carry_lifts": {
+    "1": {
+      "dimension": 4,
+      "sample_n": 37,
+      "sample_state": [
+        15,
+        37,
+        0,
+        1
+      ]
+    },
+    "15": {
+      "dimension": 18,
+      "sample_n": 37,
+      "sample_state": [
+        97,
+        445,
+        167,
+        307,
+        27,
+        535,
+        255,
+        397,
+        115,
+        469,
+        187,
+        329,
+        45,
+        507,
+        223,
+        37,
+        0,
+        1
+      ]
+    },
+    "3": {
+      "dimension": 6,
+      "matrices": [
+        [
+          [
+            1,
+            0,
+            0,
+            3,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            3,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            3,
+            2,
+            3
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        ]
+      ],
+      "sample_n": 37,
+      "sample_state": [
+        5,
+        107,
+        51,
+        37,
+        0,
+        1
+      ]
+    },
+    "5": {
+      "dimension": 8,
+      "sample_n": 37,
+      "sample_state": [
+        73,
+        121,
+        27,
+        145,
+        51,
+        37,
+        0,
+        1
+      ]
+    },
+    "7": {
+      "dimension": 10,
+      "sample_n": 37,
+      "sample_state": [
+        65,
+        229,
+        99,
+        165,
+        33,
+        249,
+        117,
+        37,
+        0,
+        1
+      ]
+    },
+    "9": {
+      "dimension": 12,
+      "sample_n": 37,
+      "sample_state": [
+        103,
+        187,
+        19,
+        325,
+        157,
+        243,
+        73,
+        287,
+        117,
+        37,
+        0,
+        1
+      ]
+    }
+  },
+  "checks": {
+    "carry_input_addresses": 1536,
+    "core_stencils": 3712,
+    "cylinder_compositions": 784,
+    "digit_transitions": 3072,
+    "literal_graph_readouts": 12,
+    "suffix_identity": 8064,
+    "translated_g_stencils": 256
+  },
+  "graph_controls": [
+    {
+      "H": 29,
+      "address": 1,
+      "channel": 1,
+      "n": 0,
+      "rows": [
+        30,
+        20,
+        56,
+        50,
+        32,
+        3
+      ]
+    },
+    {
+      "H": 49,
+      "address": 2,
+      "channel": 2,
+      "n": 0,
+      "rows": [
+        62,
+        52,
+        120,
+        114,
+        32,
+        64,
+        19
+      ]
+    },
+    {
+      "H": 85,
+      "address": 4,
+      "channel": 1,
+      "n": 1,
+      "rows": [
+        126,
+        116,
+        248,
+        242,
+        96,
+        64,
+        128,
+        51
+      ]
+    },
+    {
+      "H": 95,
+      "address": 5,
+      "channel": 2,
+      "n": 1,
+      "rows": [
+        126,
+        116,
+        248,
+        242,
+        224,
+        64,
+        128,
+        35
+      ]
+    }
+  ],
+  "hostile": {
+    "new_H": 49,
+    "new_address": 2,
+    "old_H": 29,
+    "old_address": 1
+  },
+  "scope": "fixed suffixes<=5 bits; specified small core cuts; six odd multipliers; literal graph controls",
+  "script_sha256": "d2f228f623f2484533f7914127e0d83b36ad898c0cb42b2ed2c7eaccbec52b89",
+  "source_sha256": {
+    "05-knowledge/results/chanpak_55_105_golden_20261110/h5/PROOF.md": "043397a668b0d4b96e7515f8ea1a1ba80176f2435a9642f3bfb4d54df72f2aa6",
+    "05-knowledge/results/chanpak_55_105_golden_20261110/h5/check.py": "1f8c8dda8607c1b2a28cec0c2621a7f5f6a427a6102878d869894e36c61b5c65",
+    "05-knowledge/results/h13_paired_descent_20261111/square_graceful/RESIDUE_PHASE.md": "127f39c88d03d95d81b2312d5504c0b8d5257f4e07a7cff2aa0aa1680e373f99",
+    "05-knowledge/results/session253_cross_problem_frontiers_20261111/integral/PROOF.md": "5f6a74080d6726ec01dc877ed93c7119bf57f4db777e6e4728502fdf87fbd7cb"
+  },
+  "status": "PASS"
+}

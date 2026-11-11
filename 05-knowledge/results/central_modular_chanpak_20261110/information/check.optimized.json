@@ -1,0 +1,514 @@
+{
+  "alignment21": [
+    {
+      "target_ranks": [
+        2,
+        2
+      ],
+      "unit_word": [],
+      "visited_states": 1
+    },
+    {
+      "target_ranks": [
+        1,
+        1
+      ],
+      "unit_word": [
+        "s",
+        "q0",
+        "c",
+        "q0"
+      ],
+      "visited_states": 155
+    },
+    {
+      "target_ranks": [
+        0,
+        0
+      ],
+      "unit_word": [
+        "q0",
+        "c",
+        "s",
+        "s",
+        "s"
+      ],
+      "visited_states": 532
+    }
+  ],
+  "alignment9": [
+    {
+      "unit_word": [
+        "s",
+        "s"
+      ],
+      "visited_states": 10
+    },
+    {
+      "unit_word": [
+        "s",
+        "s"
+      ],
+      "visited_states": 10
+    }
+  ],
+  "central_moduli_checked": 50,
+  "matrix_fibre_controls": [
+    {
+      "image": 27,
+      "kernel": 1,
+      "modulus": 3,
+      "scalar": 5
+    },
+    {
+      "image": 1,
+      "kernel": 125,
+      "modulus": 5,
+      "scalar": 5
+    },
+    {
+      "image": 343,
+      "kernel": 1,
+      "modulus": 7,
+      "scalar": 5
+    },
+    {
+      "image": 729,
+      "kernel": 1,
+      "modulus": 9,
+      "scalar": 5
+    },
+    {
+      "image": 1331,
+      "kernel": 1,
+      "modulus": 11,
+      "scalar": 5
+    },
+    {
+      "image": 27,
+      "kernel": 125,
+      "modulus": 15,
+      "scalar": 5
+    },
+    {
+      "image": 1,
+      "kernel": 27,
+      "modulus": 3,
+      "scalar": 9
+    },
+    {
+      "image": 125,
+      "kernel": 1,
+      "modulus": 5,
+      "scalar": 9
+    },
+    {
+      "image": 343,
+      "kernel": 1,
+      "modulus": 7,
+      "scalar": 9
+    },
+    {
+      "image": 1,
+      "kernel": 729,
+      "modulus": 9,
+      "scalar": 9
+    },
+    {
+      "image": 1331,
+      "kernel": 1,
+      "modulus": 11,
+      "scalar": 9
+    },
+    {
+      "image": 125,
+      "kernel": 27,
+      "modulus": 15,
+      "scalar": 9
+    },
+    {
+      "image": 1,
+      "kernel": 27,
+      "modulus": 3,
+      "scalar": 21
+    },
+    {
+      "image": 125,
+      "kernel": 1,
+      "modulus": 5,
+      "scalar": 21
+    },
+    {
+      "image": 1,
+      "kernel": 343,
+      "modulus": 7,
+      "scalar": 21
+    },
+    {
+      "image": 27,
+      "kernel": 27,
+      "modulus": 9,
+      "scalar": 21
+    },
+    {
+      "image": 1331,
+      "kernel": 1,
+      "modulus": 11,
+      "scalar": 21
+    },
+    {
+      "image": 125,
+      "kernel": 27,
+      "modulus": 15,
+      "scalar": 21
+    },
+    {
+      "image": 1,
+      "kernel": 27,
+      "modulus": 3,
+      "scalar": 105
+    },
+    {
+      "image": 1,
+      "kernel": 125,
+      "modulus": 5,
+      "scalar": 105
+    },
+    {
+      "image": 1,
+      "kernel": 343,
+      "modulus": 7,
+      "scalar": 105
+    },
+    {
+      "image": 27,
+      "kernel": 27,
+      "modulus": 9,
+      "scalar": 105
+    },
+    {
+      "image": 1331,
+      "kernel": 1,
+      "modulus": 11,
+      "scalar": 105
+    },
+    {
+      "image": 1,
+      "kernel": 3375,
+      "modulus": 15,
+      "scalar": 105
+    }
+  ],
+  "nonprimitive_old_product_normalized_det": 1157625,
+  "physical_prefix_controls": [
+    {
+      "rows": [
+        48,
+        57,
+        51,
+        37,
+        8,
+        16
+      ],
+      "state": [
+        9,
+        6,
+        18
+      ],
+      "word": [
+        "q1",
+        "s",
+        "s"
+      ]
+    },
+    {
+      "rows": [
+        500,
+        505,
+        498,
+        485,
+        456,
+        16,
+        32,
+        96,
+        224
+      ],
+      "state": [
+        111,
+        14,
+        352
+      ],
+      "word": [
+        "q5",
+        "s",
+        "q0"
+      ]
+    }
+  ],
+  "primitive_words": {
+    "21": {
+      "matrix": [
+        [
+          8643759306,
+          2133974409,
+          14984227839
+        ],
+        [
+          6911718198,
+          1706367474,
+          11981680263
+        ],
+        [
+          12221861547,
+          3017337582,
+          21186980283
+        ]
+      ],
+      "normalized": [
+        [
+          411607586,
+          101617829,
+          713534659
+        ],
+        [
+          329129438,
+          81255594,
+          570556203
+        ],
+        [
+          581993407,
+          143682742,
+          1008903823
+        ]
+      ],
+      "normalized_det": 1,
+      "normalized_inverse": [
+        [
+          -285412764,
+          154094711,
+          114710841
+        ],
+        [
+          208912147,
+          -112791935,
+          -83964316
+        ],
+        [
+          134890238,
+          -72827409,
+          -54214018
+        ]
+      ],
+      "vertex_cost": 34,
+      "word": [
+        "q5",
+        "s",
+        "q0",
+        "c",
+        "q0",
+        "q5",
+        "q0",
+        "c",
+        "s",
+        "s",
+        "s",
+        "q5"
+      ]
+    },
+    "5": {
+      "matrix": [
+        [
+          802630,
+          163075,
+          1733325
+        ],
+        [
+          673210,
+          136780,
+          1453835
+        ],
+        [
+          1475815,
+          299850,
+          3187105
+        ]
+      ],
+      "normalized": [
+        [
+          160526,
+          32615,
+          346665
+        ],
+        [
+          134642,
+          27356,
+          290767
+        ],
+        [
+          295163,
+          59970,
+          637421
+        ]
+      ],
+      "normalized_det": 1,
+      "normalized_inverse": [
+        [
+          -8114,
+          14135,
+          -2035
+        ],
+        [
+          21739,
+          -37949,
+          5488
+        ],
+        [
+          1712,
+          -2975,
+          426
+        ]
+      ],
+      "vertex_cost": 22,
+      "word": [
+        "q2",
+        "c",
+        "c",
+        "q2",
+        "s",
+        "s",
+        "s",
+        "s",
+        "q2"
+      ]
+    },
+    "9": {
+      "matrix": [
+        [
+          13059,
+          3420,
+          21222
+        ],
+        [
+          11547,
+          3024,
+          18765
+        ],
+        [
+          35433,
+          9279,
+          57582
+        ]
+      ],
+      "normalized": [
+        [
+          1451,
+          380,
+          2358
+        ],
+        [
+          1283,
+          336,
+          2085
+        ],
+        [
+          3937,
+          1031,
+          6398
+        ]
+      ],
+      "normalized_det": 1,
+      "normalized_inverse": [
+        [
+          93,
+          -142,
+          12
+        ],
+        [
+          11,
+          52,
+          -21
+        ],
+        [
+          -59,
+          79,
+          -4
+        ]
+      ],
+      "vertex_cost": 16,
+      "word": [
+        "q1",
+        "s",
+        "s",
+        "q1",
+        "s",
+        "s",
+        "q1"
+      ]
+    }
+  },
+  "row_examples": {
+    "15": {
+      "fibre_sizes": [
+        1,
+        1,
+        3,
+        1,
+        5,
+        3,
+        1,
+        1,
+        3,
+        5,
+        1,
+        3,
+        1,
+        1
+      ],
+      "lossless_nonzero_rows": 8
+    },
+    "5": {
+      "fibre_sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "lossless_nonzero_rows": 4
+    },
+    "7": {
+      "fibre_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "lossless_nonzero_rows": 6
+    },
+    "9": {
+      "fibre_sizes": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "lossless_nonzero_rows": 6
+    }
+  },
+  "row_maps_checked": 1890,
+  "scope": "exact row/central fibre controls and literal golden word certificates",
+  "script_sha256": "f1515383cb485c85370d23a2ea129c9cbfc00271ec6b0b4a65c54f64a40240f4",
+  "signed_content_checks": 3375,
+  "source_sha256": {
+    "05-knowledge/results/chanpak_55_105_golden_20261110/golden/NOTE.md": "034f1da896ae608e9532dd6a84c46ba44dd22e4f5e277e16fb2632e53da6bd30",
+    "05-knowledge/results/chanpak_55_105_golden_20261110/golden/check.py": "d3122b71ff44391e460784e2a08dd1384303660880fcb15651bafb0dc72b8001",
+    "05-knowledge/results/golden_hamilton_transfer_20261103/RECURRENCE.md": "611d9a6792ec1805201f43c69313d59a3dd401539cef5dd238d481b76b506aed",
+    "05-knowledge/results/session91_packing_golden_carriers_20261029/zeckendorf/NORM_CONTROLLED_OBSERVERS.md": "df567e549cb6e41a8280b6c116e4909bf6de7d46aaa92bf2a4c210c45c06d352"
+  },
+  "status": "PASS"
+}

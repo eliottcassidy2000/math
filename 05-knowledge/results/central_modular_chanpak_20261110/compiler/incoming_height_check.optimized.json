@@ -1,0 +1,129 @@
+{
+  "carry_difference": [
+    -10,
+    2,
+    0,
+    0
+  ],
+  "graphs": [
+    {
+      "H": 611,
+      "address": 37,
+      "binary": "100101",
+      "g": 15,
+      "rows": [
+        1022,
+        1012,
+        2040,
+        2034,
+        2016,
+        960,
+        1920,
+        768,
+        512,
+        1024,
+        419
+      ],
+      "state": [
+        15,
+        37,
+        0,
+        1
+      ],
+      "vertex_count": 11
+    },
+    {
+      "H": 611,
+      "address": 39,
+      "binary": "100111",
+      "g": 5,
+      "rows": [
+        1022,
+        1012,
+        2040,
+        2034,
+        2016,
+        1984,
+        1920,
+        768,
+        512,
+        1024,
+        387
+      ],
+      "state": [
+        5,
+        39,
+        0,
+        1
+      ],
+      "vertex_count": 11
+    }
+  ],
+  "incoming_source": {
+    "commit": "bf945ba947",
+    "path": "05-knowledge/results/session255_modular_collatz_20261111/cross_frontiers/PROOF.md",
+    "sha256": "78ca0182c8d776c6200624494479808dfbb1482048b1a17c17e8fb467d72eda9"
+  },
+  "limits": [
+    "No inference of rooted O/Z/J-frame incomparability",
+    "No impossibility claim for richer signed compilers",
+    "No target coverage conclusion"
+  ],
+  "named_constructor": {
+    "apex_name": 10,
+    "core_names": [
+      1,
+      2,
+      3
+    ],
+    "core_rows": [
+      2,
+      4,
+      1
+    ],
+    "left_address": 1,
+    "left_names": [
+      0
+    ],
+    "outmask": 1,
+    "right_names": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "scope": "Two literal eleven-vertex graphs; four exact suffix readouts",
+  "script_sha256": "1aaa476e17d7f49e044e9f649a8b8032f7a333c3e6c88488675006f3c28acaeb",
+  "source_sha256": {
+    "05-knowledge/results/central_modular_chanpak_20261110/compiler/check.py": "d2f228f623f2484533f7914127e0d83b36ad898c0cb42b2ed2c7eaccbec52b89",
+    "05-knowledge/results/chanpak_55_105_golden_20261110/h5/check.py": "1f8c8dda8607c1b2a28cec0c2621a7f5f6a427a6102878d869894e36c61b5c65"
+  },
+  "status": "PASS",
+  "suffixes": [
+    {
+      "addresses": [
+        74,
+        78
+      ],
+      "counts": [
+        1279,
+        1315
+      ],
+      "digit": 0
+    },
+    {
+      "addresses": [
+        75,
+        79
+      ],
+      "counts": [
+        1181,
+        1211
+      ],
+      "digit": 1
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "literature": [
+    {
+      "checked": "2026-11-10",
+      "claim": "odd tournament path-count range except 7 and 21; credits bof/Royle2016",
+      "location": "section 6.5, Conjecture 6.2, PDF page 17",
+      "url": "https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf"
+    }
+  ],
+  "source_HEAD": "07dc31fae3",
+  "source_sha256": {
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "01-canon/theorems/THM-4528-collatz-parity-in-base-phi-golden-beta-map-and-holonomy.md": "5a29a8f7b07b41f92a9d82764250f58931c09e80d201d4f95c61d2b50db1db98",
+    "01-canon/theorems/THM-4792-two-sheets-mod-odd-m-merged-centre-reflections-unit-shift-and-alternation-classification.md": "2d5b10037dbc0644c404df67b93b2936ff528bbcf3642486b3e76fc3d64b7ad9",
+    "05-knowledge/results/chanpak_55_105_golden_20261110/golden/NOTE.md": "034f1da896ae608e9532dd6a84c46ba44dd22e4f5e277e16fb2632e53da6bd30",
+    "05-knowledge/results/chanpak_55_105_golden_20261110/golden/check.py": "d3122b71ff44391e460784e2a08dd1384303660880fcb15651bafb0dc72b8001",
+    "05-knowledge/results/chanpak_55_105_golden_20261110/h5/PROOF.md": "043397a668b0d4b96e7515f8ea1a1ba80176f2435a9642f3bfb4d54df72f2aa6",
+    "05-knowledge/results/chanpak_55_105_golden_20261110/h5/TERNARY_PADDING.md": "4bdafb29f27a2486a86fe83c6114b5382c7455dc467658027c3d0c163fd4818a",
+    "05-knowledge/results/chanpak_55_105_golden_20261110/h5/check.py": "1f8c8dda8607c1b2a28cec0c2621a7f5f6a427a6102878d869894e36c61b5c65",
+    "05-knowledge/results/golden_hamilton_transfer_20261103/RECURRENCE.md": "611d9a6792ec1805201f43c69313d59a3dd401539cef5dd238d481b76b506aed",
+    "05-knowledge/results/h13_paired_descent_20261111/square_graceful/RESIDUE_PHASE.md": "127f39c88d03d95d81b2312d5504c0b8d5257f4e07a7cff2aa0aa1680e373f99",
+    "05-knowledge/results/odd_eighths_uniform_families_20261030/COLLATZ.md": "1cacca58f7c7f71d3af9799f3b6f47581d134015ad3c14309619bac41de9a72b",
+    "05-knowledge/results/recursive_seed_switching_20261103/README.md": "73c6fcd9c9a52e3e023d204755825284672bfbc2bb1940c62615a37fb8329ee2",
+    "05-knowledge/results/session180_170807_returns_20261104/phases/candidate_phases.py": "c501fecba50e105024fc5b6ce8f1d9fd88fc6a0acb724ea8449249e83d1d0143",
+    "05-knowledge/results/session251_creative_completion_20261111/ternary/PROOF.md": "6dc67aec6a2e7bf3b8235799d81dbd8115ad9d89aad723bdb158464667ef0b4d",
+    "05-knowledge/results/session253_cross_problem_frontiers_20261111/integral/PROOF.md": "5f6a74080d6726ec01dc877ed93c7119bf57f4db777e6e4728502fdf87fbd7cb",
+    "05-knowledge/results/session255_modular_collatz_20261111/cross_frontiers/PROOF.md": "78ca0182c8d776c6200624494479808dfbb1482048b1a17c17e8fb467d72eda9",
+    "05-knowledge/results/session91_packing_golden_carriers_20261029/zeckendorf/NORM_CONTROLLED_OBSERVERS.md": "df567e549cb6e41a8280b6c116e4909bf6de7d46aaa92bf2a4c210c45c06d352",
+    "05-knowledge/results/tiling_modular_atoms_20261003.md": "44b5247c1ed4b195dfaecbcc5827848065f8706e07a754e7318196f198d69bbf",
+    "05-knowledge/results/uniform_return_metagraph_20261111/reset/ITERABLE_RETURN.md": "a1b4e8f1c08b98a5361f979406aa66eb216dc50f2013b51bae72f7a2c9ee04cb"
+  }
+}

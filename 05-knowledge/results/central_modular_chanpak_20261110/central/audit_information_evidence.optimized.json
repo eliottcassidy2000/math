@@ -1,0 +1,140 @@
+{
+  "letter_determinants": {
+    "c": 1,
+    "q0": 1,
+    "q1": 9,
+    "q2": 5,
+    "q4": 9,
+    "q5": 21,
+    "s": 1
+  },
+  "status": "FINITE-EXACT independent products passed",
+  "words": {
+    "W21": {
+      "content": 21,
+      "determinant": 9261,
+      "finite_rows_checked": 343,
+      "normalized": [
+        [
+          411607586,
+          101617829,
+          713534659
+        ],
+        [
+          329129438,
+          81255594,
+          570556203
+        ],
+        [
+          581993407,
+          143682742,
+          1008903823
+        ]
+      ],
+      "normalized_determinant": 1,
+      "product": [
+        [
+          8643759306,
+          2133974409,
+          14984227839
+        ],
+        [
+          6911718198,
+          1706367474,
+          11981680263
+        ],
+        [
+          12221861547,
+          3017337582,
+          21186980283
+        ]
+      ],
+      "vertex_cost": 34,
+      "word": "q5 s q0 c q0 q5 q0 c s s s q5"
+    },
+    "W5": {
+      "content": 5,
+      "determinant": 125,
+      "finite_rows_checked": 343,
+      "normalized": [
+        [
+          160526,
+          32615,
+          346665
+        ],
+        [
+          134642,
+          27356,
+          290767
+        ],
+        [
+          295163,
+          59970,
+          637421
+        ]
+      ],
+      "normalized_determinant": 1,
+      "product": [
+        [
+          802630,
+          163075,
+          1733325
+        ],
+        [
+          673210,
+          136780,
+          1453835
+        ],
+        [
+          1475815,
+          299850,
+          3187105
+        ]
+      ],
+      "vertex_cost": 22,
+      "word": "q2 c c q2 s s s s q2"
+    },
+    "W9": {
+      "content": 9,
+      "determinant": 729,
+      "finite_rows_checked": 343,
+      "normalized": [
+        [
+          1451,
+          380,
+          2358
+        ],
+        [
+          1283,
+          336,
+          2085
+        ],
+        [
+          3937,
+          1031,
+          6398
+        ]
+      ],
+      "normalized_determinant": 1,
+      "product": [
+        [
+          13059,
+          3420,
+          21222
+        ],
+        [
+          11547,
+          3024,
+          18765
+        ],
+        [
+          35433,
+          9279,
+          57582
+        ]
+      ],
+      "vertex_cost": 16,
+      "word": "q1 s s q1 s s q1"
+    }
+  }
+}
