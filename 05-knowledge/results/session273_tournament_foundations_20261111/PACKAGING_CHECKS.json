@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "relative_links_checked": 29,
+  "errors": [],
+  "docs_check": "PASS",
+  "checkpoint1": "c49fcd079847c0fa6ad0c68b466ae3793a82d81b",
+  "checkpoint2": "d4e837c43e82a43f0cda24f1429dcd35880a1e27",
+  "unrelated_checkout_paths": "62 files byte-identical to git HEAD; line-ending normalization artifacts, not session edits"
+}

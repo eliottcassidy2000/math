@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "script": "orbits/control.py",
+      "status": "PASS",
+      "normal_optimized_byte_equal": true,
+      "saved_json_equal": true,
+      "source_sha256": "837ea79122653aa69b40812401b03a33289713194a542d1a80465b2e7843c811"
+    },
+    {
+      "script": "microscopic/check.py",
+      "status": "PASS",
+      "normal_optimized_byte_equal": true,
+      "saved_json_equal": true,
+      "source_sha256": "4e7f13034177644ecf2d7dd918fd226e4d5e06d4f78fd15b0ece21bf3dac031a"
+    },
+    {
+      "script": "wildcard/clock_lift.py",
+      "status": "PASS",
+      "normal_optimized_byte_equal": true,
+      "saved_json_equal": true,
+      "source_sha256": "88140a5c956e8d91ad5db4035bea990fe35e0823a445bdb6fd56ad3d077fb31c"
+    },
+    {
+      "script": "interfaces/check.py",
+      "status": "PASS",
+      "normal_optimized_byte_equal": true,
+      "saved_json_equal": true,
+      "source_sha256": "11ea6a9f7b1949670d8daf61ac4679ffa979077ab6cfa48cfeee730b2fb29fa6"
+    }
+  ],
+  "scope": "structural controls, not global spectrum enumeration; optimized replay is packaging consistency, not independent proof"
+}

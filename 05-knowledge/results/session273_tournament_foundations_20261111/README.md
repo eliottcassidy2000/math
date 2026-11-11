@@ -1,20 +1,21 @@
 # Session273: tournament foundations across scales and interfaces
 
-**Research in progress, 2026-11-11. Chan–Pak remains OPEN.**
+**Complete research packet, 2026-11-11. Chan–Pak remains OPEN.**
 
-Starting point: main `26fa4d8d52e752c5a29cb181f0287ddedee3ef68`.
-The user requests creative connections between tournament structure, A000568,
-and other mathematical questions, building on old niche work as well as the
-current frontier. This packet emphasizes exact maps and operations rather than
-new numerical coverage.
+[Read the synthesis](SYNTHESIS.md) · [Open obligations](OPEN_QUESTIONS.md) ·
+[Scoped review](REVIEW.md) · [Reproduce](REPRODUCE.md)
 
-- [Orbit conditioning and infinite growth](orbits/PROOF.md): exact conditional
-  Burnside birth kernel; inconsistent finite class-uniform laws nevertheless
-  have a unique random-tournament local limit.
-- [Microscopic entropy](microscopic/PROOF.md): every nonnegative H-entropy can
-  lie above the same transitive limit; exact cubic sampling obstruction.
-- [Research board](RESEARCH_BOARD.md): inherited inputs and creative pivots.
+1. [Physical gauge transport](interfaces/PROOF.md): all-size equal-order
+   count/profile conservation with exact class multiplicities, followed by a
+   rooted seam that exposes the transported resource.
+2. [Orbit-conditioned growth](orbits/PROOF.md): exact finite-horizon Burnside
+   kernel, unique infinite local limit, finite rigidity/infinite symmetry.
+3. [Microscopic entropy](microscopic/PROOF.md): arbitrary Hamiltonian entropy
+   over one transitive limit, with a sharp cubic sampling obstruction.
+4. [Arithmetic clocks](wildcard/PROOF.md): exact triple distributions, finite
+   hidden Markov compiler, one-bit-per-scale entropy and phase reconstruction.
 
-Further interface and arithmetic-clock lanes are being developed. These
-provisional pages distinguish proved-in-note statements from inherited inputs,
-finite controls and open implications. No external novelty priority is claimed.
+Starting main was `26fa4d8d52e752c5a29cb181f0287ddedee3ef68`. Old-source
+archaeology and the connection contracts are in the individual proofs and
+[research board](RESEARCH_BOARD.md). Standard input mechanisms are credited;
+no external novelty priority or major-conjecture closure is claimed.

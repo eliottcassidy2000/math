@@ -111,8 +111,7 @@ for K in range(1,5):
     assert (a==b*3**e) if e>=0 else (a*3**(-e)==b)
 
 out={'status':'PASS','physical_subset_DP_cells':cell_tests,'whole_word_checks':'exact SCC signatures and products, not independent whole-graph DP','packet_censuses':cases,'boundary_formula':'PASS','scope':'K1..4,N1..9 controls; theorems all K>=1,N>=1; no Chan-Pak coverage claim'}
-path=Path(__file__).with_name('RESULTS.json');path.write_text(json.dumps(out,indent=2)+'\n')
-print(json.dumps(out,indent=2))
+path=Path(__file__).with_name('RESULTS.json')
 
 # Physical endpoint probe on smaller prefix controls, to verify local exposure.
 def seam(a,v):
@@ -129,4 +128,4 @@ for prefix in ([0],tri,G[0,1]):
 out['physical_endpoint_seam_controls']=probe
 out['26_vertex_packet_seam_outputs']={'before':[131565,131565],'after':[219275,131565],'method':'proved SCC product and independently tested local seam, not 26-vertex subset DP'}
 path.write_text(json.dumps(out,indent=2)+'\n')
-print('endpoint exposure: PASS')
+print(json.dumps(out,indent=2))
