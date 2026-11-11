@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "optimized": true,
+  "scope": "Nine new-session engines; inherited literature and corpus are inputs, not blanket reruns",
+  "engines": [
+    {
+      "engine": "endpoint_cut",
+      "path": "endpoints/check.py",
+      "status": "PASS",
+      "stdout_sha256": "63fd28463649645251588af213d908b8d0085f24c298e8038833c06063da496a"
+    },
+    {
+      "engine": "nine_state",
+      "path": "seed_decision/check.py",
+      "status": "PASS",
+      "stdout_sha256": "99ee109bb95cc5eb82d15bbf5027fc5accfdb28c5d6e0af1955b7426820a5f64"
+    },
+    {
+      "engine": "independent_seed",
+      "path": "seed_decision/audit_independent.py",
+      "status": "PASS",
+      "stdout_sha256": "ca9454bac1f8be002163bd243e228f862a1b456b5621b9321724218b9f2cc114"
+    },
+    {
+      "engine": "strong_core",
+      "path": "seed_decision/core_check.py",
+      "status": "PASS",
+      "stdout_sha256": "b6746097d24344fde847528165c3b2b9c807dcf57aad0d8d8ae38c427c652b69"
+    },
+    {
+      "engine": "physical_grammar",
+      "path": "grammar/compile.py",
+      "status": "PASS",
+      "stdout_sha256": "ddfa10a98ca5e826ddba72341731c9345fb5fe834332b655af09519ed88b1a3e"
+    },
+    {
+      "engine": "positive_seed_probe",
+      "path": "grammar/seed_probe_check.py",
+      "status": "PASS",
+      "stdout_sha256": "1427d26ba526bf3c039c3341775815c0d0e483e1d58e2605a92de4d2c458a34f"
+    },
+    {
+      "engine": "zeckendorf_guard",
+      "path": "grammar/history_bridge_check.py",
+      "status": "PASS",
+      "stdout_sha256": "bf843a4a51fd812c90faa37fb57a347973a6a87b11d7755052ad3695ff22d9e3"
+    },
+    {
+      "engine": "arithmetic",
+      "path": "arithmetic/check.py",
+      "status": "PASS",
+      "stdout_sha256": "331cfbc7033021daef2342965ec267ff2b71303bf401cc1a530e21125602829e"
+    },
+    {
+      "engine": "literal_constructor",
+      "path": "construct_seed.py",
+      "status": "PASS",
+      "stdout_sha256": "e14265897de8113682ceb49e6a18f5c1fe2ee8572d379a5ea0260babbf928dfc"
+    }
+  ],
+  "paired_receipts": "byte-identical"
+}

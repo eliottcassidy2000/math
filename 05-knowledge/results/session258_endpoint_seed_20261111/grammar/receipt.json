@@ -1,0 +1,612 @@
+{
+  "status": "PASS",
+  "all_word_independent_checks": 511,
+  "targets": [
+    {
+      "target": 1,
+      "states": 4,
+      "word": [],
+      "complete": true,
+      "zeckendorf_lsd": [
+        1
+      ]
+    },
+    {
+      "target": 3,
+      "states": 8,
+      "word": [
+        1,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 5,
+      "states": 13,
+      "word": [
+        1,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 7,
+      "states": 15,
+      "word": null,
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 9,
+      "states": 21,
+      "word": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 11,
+      "states": 25,
+      "word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 13,
+      "states": 27,
+      "word": null,
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 15,
+      "states": 32,
+      "word": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 17,
+      "states": 37,
+      "word": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 19,
+      "states": 42,
+      "word": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 21,
+      "states": 44,
+      "word": null,
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 23,
+      "states": 49,
+      "word": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 25,
+      "states": 53,
+      "word": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 27,
+      "states": 58,
+      "word": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 29,
+      "states": 60,
+      "word": null,
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 31,
+      "states": 64,
+      "word": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 33,
+      "states": 71,
+      "word": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 35,
+      "states": 73,
+      "word": null,
+      "complete": true,
+      "zeckendorf_lsd": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 37,
+      "states": 78,
+      "word": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 39,
+      "states": 83,
+      "word": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 41,
+      "states": 85,
+      "word": null,
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 43,
+      "states": 87,
+      "word": null,
+      "complete": true,
+      "zeckendorf_lsd": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 45,
+      "states": 93,
+      "word": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 47,
+      "states": 98,
+      "word": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 49,
+      "states": 100,
+      "word": null,
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 51,
+      "states": 106,
+      "word": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 53,
+      "states": 111,
+      "word": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 55,
+      "states": 113,
+      "word": null,
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 57,
+      "states": 115,
+      "word": null,
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 59,
+      "states": 117,
+      "word": null,
+      "complete": true,
+      "zeckendorf_lsd": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 61,
+      "states": 124,
+      "word": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "target": 63,
+      "states": 129,
+      "word": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "complete": true,
+      "zeckendorf_lsd": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "universe": "All binary words of arbitrary finite length for each target; finite saturation closure exhausted",
+  "mathematical_scope": "One-apex target decision, not arbitrary tournament coverage"
+}

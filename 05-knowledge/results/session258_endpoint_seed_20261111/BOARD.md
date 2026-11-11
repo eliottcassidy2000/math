@@ -1,6 +1,8 @@
 # Session258: from extension content to endpoint-realizable seeds
 
-**ACTIVE RESEARCH, 11 November 2026. Chan–Pak remains OPEN.**
+**COMPLETED RESEARCH, 11 November 2026. Universal odd-slope seeds and Chan–Pak remain OPEN.**
+
+Final result: the strong-core classification, exact endpoint constraints, fixed-q constructors, and historical bridges are summarized in [SYNTHESIS.md](SYNTHESIS.md).
 
 The exact inherited invariant is
 

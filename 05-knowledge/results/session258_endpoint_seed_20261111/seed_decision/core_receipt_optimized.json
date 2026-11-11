@@ -1,0 +1,232 @@
+{
+  "status": "PASS",
+  "bases": 1099,
+  "selected_sets": 33866,
+  "cross_component_pairs": 3212,
+  "positive_unit_seeds": 2885,
+  "strong_unit_core_profiles": [
+    [
+      3,
+      3,
+      6,
+      2
+    ],
+    [
+      4,
+      5,
+      11,
+      2
+    ],
+    [
+      4,
+      5,
+      12,
+      2
+    ],
+    [
+      4,
+      5,
+      16,
+      2
+    ],
+    [
+      5,
+      9,
+      20,
+      2
+    ],
+    [
+      5,
+      9,
+      24,
+      2
+    ],
+    [
+      5,
+      9,
+      32,
+      2
+    ],
+    [
+      5,
+      9,
+      44,
+      2
+    ],
+    [
+      5,
+      11,
+      29,
+      2
+    ],
+    [
+      5,
+      11,
+      37,
+      2
+    ],
+    [
+      5,
+      11,
+      47,
+      2
+    ]
+  ],
+  "q1_to_29_core_classification": [
+    {
+      "q": 1,
+      "status": "SEED"
+    },
+    {
+      "q": 2,
+      "status": "SEED"
+    },
+    {
+      "q": 3,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 4,
+      "status": "SEED"
+    },
+    {
+      "q": 5,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 6,
+      "status": "SEED"
+    },
+    {
+      "q": 7,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 8,
+      "status": "SEED"
+    },
+    {
+      "q": 9,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 10,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 11,
+      "status": "SEED"
+    },
+    {
+      "q": 12,
+      "status": "SEED"
+    },
+    {
+      "q": 13,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 14,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 15,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 16,
+      "status": "SEED"
+    },
+    {
+      "q": 17,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 18,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 19,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 20,
+      "status": "SEED"
+    },
+    {
+      "q": 21,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 22,
+      "status": "SEED"
+    },
+    {
+      "q": 23,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 24,
+      "status": "SEED"
+    },
+    {
+      "q": 25,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 26,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 27,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 28,
+      "status": "NO_SEED"
+    },
+    {
+      "q": 29,
+      "status": "SEED"
+    }
+  ],
+  "examples": [
+    {
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "selected_mask": 6,
+      "H": 9,
+      "W": 8,
+      "U": 20,
+      "slope": 5,
+      "tail_counts": [
+        41,
+        81
+      ]
+    },
+    {
+      "rows": [
+        24,
+        1,
+        3,
+        6,
+        14
+      ],
+      "selected_mask": 6,
+      "H": 11,
+      "W": 10,
+      "U": 29,
+      "slope": 29,
+      "tail_counts": [
+        59,
+        117
+      ]
+    }
+  ],
+  "scope": "all labelled bases orders1..5; all-order fixed-q1..29 via cited core floor"
+}

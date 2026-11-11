@@ -148,3 +148,5 @@ individual session routes preserve scope and remaining open obligations.
 
 
 [Session257](S257.md): COMPLETE; original square-sum colors, weighted permutohedral charts and orbit averaging, sharp seam Gram boundary, primitive-triple census compiler and Monster valuation normalization. Chan–Pak remains OPEN.
+
+[Session258](S258.md): strong-core seeds, endpoint cuts, exact-q decisions and native Zeckendorf guards; Chan–Pak OPEN.

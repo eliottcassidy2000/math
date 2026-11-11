@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "finite controls for new dual seed guards and inherited charge interface, not universal seed coverage",
+  "alphabet_transfers": 22,
+  "prefixes": 507,
+  "dual_guard_checks": 33462,
+  "three_channel_charge_checks": 11154,
+  "carry_values_seen": [
+    -2,
+    -1,
+    0,
+    1
+  ],
+  "cocycle_checks": 8000,
+  "q": 6,
+  "cap": 8
+}

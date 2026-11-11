@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "algebra_cases": 1681440,
+  "scope": "integer affine-law controls only, not a physical seed census",
+  "cancellation_control": {
+    "H": 1000,
+    "W": 999,
+    "U": 7,
+    "positive_counts": [
+      15,
+      29
+    ],
+    "cap": 30
+  }
+}

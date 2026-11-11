@@ -4,7 +4,7 @@
 
 ## Target and inheritance
 
-The tournament target is every positive odd count except **7 and 21**, not literally every odd count. This is the target recorded in `05-knowledge/hypotheses/HYP-9472-every-odd-number-at-least-23-except-67-is-the-hamiltonian-path-count-of-a-tournament-with-at-most-two-hamiltonian-cycles.md`; impossibility of 7 and 21 is inherited from THM-1370 (h-spectrum-omits-7-21-all-n). The conjectural logarithmic-order/conciseness requirement, when included in Chan–Pak, is stronger than mere support and is not discharged here.
+The tournament target is every positive odd Hamilton-path total except **7 and21**. The primary Chan–Pak statement and original2016 provenance are recovered in `05-knowledge/results/odd_c_seed_symmetry_20261110/EXTENSIONS.md`; impossibility of7 and21 is inherited from THM-1370, `01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md`. Write N for a total and c for an odd ray slope. Slopes7 and21 are allowed; the exact unit-offset slope problem is treated in §7. This note does not prove universal support or a universal logarithmic-order constructor.
 
 Closest mechanism: the quadratic one-birth polynomial in `05-knowledge/results/berggren_target_return_20261111/fibres/EXTENSION_CONTENT.md`, and the general extension-content filtration C_k. Corrected near miss: gcd one gives an integer combination, not a feasible orientation. Hostile: a four-vertex strong H=5 source has gcd-one extensions but no H=7 extension. Underused sidecar: the nonnegative odd-cycle expansion, inherited via THM-5071, `01-canon/theorems/THM-5071-weighted-cycle-formula-for-digraph-path-totals-and-one-reciprocal-pair-exclusions.md` (which credits Grinberg–Stanley and Irving–Omar).
 
@@ -27,7 +27,7 @@ For X⊆V add a new vertex v beating exactly X. Let
 
     H(T+v_X) = h + 2 q_T(X).
 
-Consequently a proposed one-birth target c is possible if and only if c≥h, c≡h mod 2, and (c−h)/2 is in the actual directed-cut spectrum {q_T(X): X⊆V}. Given such X, all orientations are explicitly prescribed, so this is a physical constructor, not an abstract state existence statement.
+Consequently a proposed one-birth target N is possible if and only if N≥h, N≡h mod 2, and (N−h)/2 is in the actual directed-cut spectrum {q_T(X): X⊆V}. Given such X, all orientations are explicitly prescribed, so this is a physical constructor, not an abstract state existence statement.
 
 **Proof.** Use the inherited tournament odd-cycle formula
 
@@ -70,7 +70,7 @@ This is a support-aware solver: heavy arcs encode forced endpoint implications, 
 
 For a strong T all proper nonempty cuts are positive. Their minimum is the minimum directed s-t cut over all ordered distinct pairs s,t in the weighted graph W. Thus a polynomial-time min-cut computation *after W is supplied* gives a proved forbidden interval
 
-    h < c < h + 2 lambda(T).
+    h < N < h + 2 lambda(T).
 
 It does not fill the interval above the threshold. Computing W itself by the supplied exact path enumeration is exponential/factorial in general; no polynomial-time Hamilton-count algorithm is implied.
 
@@ -84,7 +84,7 @@ Since h is odd, this equals gcd(h,{q_T(X)}). The gcd projection forgets all the 
 
 At subsequent births one recomputes the capacity matrix of the *actual new tournament*. One may not retain only h or q or reuse W from the parent. A finite-state or cellular-automaton analogy is lawful only with a sidecar encoding the transition-relevant endpoint/path information. This is a precise reason why unrestricted integer numeration, a prime residue wheel, or Zeckendorf digits do not by themselves construct tournament seeds.
 
-The exact remaining support obligation can now be posed without gcd language: for every allowed target c, produce a realizable predecessor T with H(T)≤c and a successor-closed union of its target-heavy SCCs whose light crossing weight is exactly (c−H(T))/2. This is equivalent to existence of a nontrivial one-birth realization when such a predecessor is furnished. It does **not** prove that predecessors with the needed property exist for all c.
+The exact remaining support obligation can now be posed without gcd language: for every allowed target N, produce a realizable predecessor T with H(T)≤N and a successor-closed union of its target-heavy SCCs whose light crossing weight is exactly (N−H(T))/2. This is equivalent to existence of a nontrivial one-birth realization when such a predecessor is furnished. It does **not** prove that predecessors with the needed property exist for all c.
 
 ## 5. Executable controls and scope
 

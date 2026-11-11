@@ -1,0 +1,208 @@
+{
+  "session": 258,
+  "date": "2026-11-11",
+  "starting_live_main": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+  "session257_commit": "ad33d7b30265856822170b4c97875710a3bdce52",
+  "incoming_preserved": [
+    "8939375fbf07570384dbd656161697168014487b",
+    "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+    "5f24689c49a94227b634f71d429341a0d77caef7",
+    "b112b5651f411c4bdeffdc5cfd627fdf433bfae9"
+  ],
+  "inherited_status": "Inputs used at their stated scope; source pins verify identity, not new reproofs",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Research and concurrent-publication contract",
+      "sha256": "c1e58986eaf9b07b01d9092328400bbcc25ed0e3db2e243ed0351906d996a5ea",
+      "git_blob_sha": "4b8fdf59ea4efb044276cb17e9348f477cccba41",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/AGENTS.md"
+    },
+    {
+      "path": "05-knowledge/results/modular_centers_collatz_pell_20261111/EXTENSION_CONTENT.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Exact C_k definition and terminal gcd theorem",
+      "sha256": "aeccfe7b9375a33a40a424b540202c6e26ed4b977b973934d68a8ef3726b148c",
+      "git_blob_sha": "6936c9ff63a12ec8a114e64bdb04eaaed177a494",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/modular_centers_collatz_pell_20261111/EXTENSION_CONTENT.md"
+    },
+    {
+      "path": "05-knowledge/results/odd_c_seed_symmetry_20261110/EXTENSIONS.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Literal extension and selected-set seed definitions",
+      "sha256": "7c901e452b8c244f1326ea33ae06930195078072d63a77c78f8609261478cf9c",
+      "git_blob_sha": "bd583bd3bb328789c03843b6d7f38602c2fc56f7",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/odd_c_seed_symmetry_20261110/EXTENSIONS.md"
+    },
+    {
+      "path": "05-knowledge/results/odd_c_seed_symmetry_20261110/README.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Mixed-mechanism bank through odd slope4097",
+      "sha256": "e2f813c6be6bf60c527cd9d3c458835d25429a538dd7f73127b0e6f6df0f215c",
+      "git_blob_sha": "5bb6411bebd6f2ff7dd48654607d2a86d5789b77",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/odd_c_seed_symmetry_20261110/README.md"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9658-unit-offset-seeds-of-the-two-adic-lines.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Universal odd-slope seed conjecture, open status and mechanism scope",
+      "sha256": "f392f2cf8904965221e82c44cd7737d661dbdf3b251f6053f7a43bcbd61daaca",
+      "git_blob_sha": "320d5987088a9ef4f295fea02a04b65e1b40d19b",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/hypotheses/HYP-9658-unit-offset-seeds-of-the-two-adic-lines.md"
+    },
+    {
+      "path": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Actual99D+23/297D+71 ready returns and full endpoint states",
+      "sha256": "269814cf38bebbedc13b56d7894eca2d36f246fccce7b81a422b00d740e342cd",
+      "git_blob_sha": "783fd6f241b473ac1866e41b8c78adf1a63b3a4a",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md"
+    },
+    {
+      "path": "05-knowledge/results/odd_tables_signed_carries_20261111/tournament/PROOF.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Concurrent simultaneous H13/C3 root resets",
+      "sha256": "dfa0493cf83c4fdcc721c25f1df6f47a7b759f649d34fa61eefa0c9a5edee763",
+      "git_blob_sha": "420e98be6513151b297eb7b7d2507792b19f8c59",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/odd_tables_signed_carries_20261111/tournament/PROOF.md"
+    },
+    {
+      "path": "05-knowledge/results/session257_permutohedron_squares_20261111/SYNTHESIS.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Joint realizability and endpoint-loss discipline",
+      "sha256": "777946f89eec4cb153b72226814e2db87ac27e5171cec8c4e00f8fa580262388",
+      "git_blob_sha": "8626b11a09ea7e8d3c0a61dae23189ef74712aff",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/session257_permutohedron_squares_20261111/SYNTHESIS.md"
+    },
+    {
+      "path": "05-knowledge/results/nonzero_preparation_20261103/surgery/ORDER_OBSTRUCTION.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Inherited cited Busch strong-order floor",
+      "sha256": "27c34815dad6203180df0ba68fdbba1018fdf08bee4a20b17482596b934bdb93",
+      "git_blob_sha": "9225bb25e6d13ff24724b234b5acd3dc9fb4fb38",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/nonzero_preparation_20261103/surgery/ORDER_OBSTRUCTION.md"
+    },
+    {
+      "path": "session200/carmichael-fibers/PROOF.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Physical twin fibre and joint descent",
+      "sha256": "40facdf95adc7b97307e53a9058c30538d8ca879be90150797e96f8b4cd85e1e",
+      "git_blob_sha": "3b6433db2273eb6b537464d00cacb6f630036c7a",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/session200/carmichael-fibers/PROOF.md"
+    },
+    {
+      "path": "session199/physical-adjoint/PROOF.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Word adjoint with transported boundary",
+      "sha256": "f9c337b3cfee1cd1134ee02276890238c30ff0e84a14c26fbcd5cd78ab82dc05",
+      "git_blob_sha": "70c7939d9a99f556f0b9d56404b4e03290b43fd9",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/session199/physical-adjoint/PROOF.md"
+    },
+    {
+      "path": "05-knowledge/results/catalan_elliptic_20260921_catalan.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Ordered carry versus power gap",
+      "sha256": "21fbd1467d45b64e4f643e05aec8ac6dc091c3f106b8720ca2d415c00991da80",
+      "git_blob_sha": "58449f1017010177ff6a0261f3fc05c976417b24",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/catalan_elliptic_20260921_catalan.md"
+    },
+    {
+      "path": "05-knowledge/results/inverse65_zeckendorf_20261103/ZECKENDORF.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Native compiler restrictions and actual matrix spectral gate",
+      "sha256": "d63d0859e2dcc5966083fb73872d8b4a06f093cdfee724ccbf733b88205fa890",
+      "git_blob_sha": "bd2bf285c3a138b0ce9cf03d37a7c1a48dd11727",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/inverse65_zeckendorf_20261103/ZECKENDORF.md"
+    },
+    {
+      "path": "05-knowledge/results/inverse65_zeckendorf_20261103/INVERSE.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Legal inverse guards and source identity",
+      "sha256": "971ec980c107b36b9f9d2078c111002214b0c6ce3f4ed82f36a6a53c292b0373",
+      "git_blob_sha": "d9b68d3501cf6c78770ac44c0577ebd27441b305",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/inverse65_zeckendorf_20261103/INVERSE.md"
+    },
+    {
+      "path": "05-knowledge/results/inverse65_zeckendorf_20261103/CHARGES.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Paired integral charge and phase",
+      "sha256": "5e9b80964eaf5a19ebf8eb97823b5797d31fb242daed474ab6c5f7b5a9b581cc",
+      "git_blob_sha": "a813ceeb0aa8887423d2f4d9d32947bb1f12cc1b",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/inverse65_zeckendorf_20261103/CHARGES.md"
+    },
+    {
+      "path": "05-knowledge/results/zeckendorf_guard_automaton_20261003.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Native two-register guarded arithmetic",
+      "sha256": "0fd4c2d145725136874d34f7044236d978e8f5b59a303f4fef1e4985adff344a",
+      "git_blob_sha": "756fd2ab1a744ae9fe8b349075a4b0e7df4d1330",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/zeckendorf_guard_automaton_20261003.md"
+    },
+    {
+      "path": "05-knowledge/results/duck_zeckendorf_20260925.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Exact charge and carry cocycle",
+      "sha256": "be61262367a8f863345578655d9be63b45815e5944c97a3dc4239a4e66bd38c7",
+      "git_blob_sha": "4401cf656ee7da66224cdd7c929c7f880bd5ff98",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/05-knowledge/results/duck_zeckendorf_20260925.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4878-graded-spine-grammars-cut-state-automaton-hankel-and-seam-ranks-cutwidth-censuses.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Positive83-state cutwidth grammar",
+      "sha256": "1d0c5cc189df6e81d52eaca63891e5a2af104939e437e072cafb796dc7f6c8f8",
+      "git_blob_sha": "9b915fad87f84149db4731713f5974eeb9e51950",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/01-canon/theorems/THM-4878-graded-spine-grammars-cut-state-automaton-hankel-and-seam-ranks-cutwidth-censuses.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4858-exact-translations-of-the-goldbach-machines-a-53-symbol-radius-one-cellular-automaton-and-a-568-fraction-fractran-program-from-lengs-25-state-turing-machine.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Exact TM-to-CA conversion with scope",
+      "sha256": "ab765e042832f449e557a4195c7c3bacc16d579eab5e50c98d6c812a5f5bb16e",
+      "git_blob_sha": "f9ae49a56137ae64442279982d1287837ac444c8",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/01-canon/theorems/THM-4858-exact-translations-of-the-goldbach-machines-a-53-symbol-radius-one-cellular-automaton-and-a-568-fraction-fractran-program-from-lengs-25-state-turing-machine.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "commit": "13268e7459bb99c54d8fb5f6c2569c1b53fac702",
+      "role": "Inherited universal exclusions and provenance",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "git_blob_sha": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "url": "https://github.com/eliottcassidy2000/math/blob/13268e7459bb99c54d8fb5f6c2569c1b53fac702/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "path": "05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md",
+      "commit": "5f24689c49a94227b634f71d429341a0d77caef7",
+      "role": "Concurrent all-prefix H13/H25 clocks and repeatable strong zero digit",
+      "sha256": "4b2e160941168aa31344472bc6cd5c4d23569311566d125178ca9a9b2de087d6",
+      "git_blob_sha": "41405e5ebc2dfd48fd316f3da5a34041c9cfc930",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5f24689c49a94227b634f71d429341a0d77caef7/05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md"
+    },
+    {
+      "path": "05-knowledge/results/odd_tables_signed_carries_20261111/history/NATIVE_ZERO.md",
+      "commit": "5f24689c49a94227b634f71d429341a0d77caef7",
+      "role": "Actual repaired2673D+645 family and universal strong zero operation",
+      "sha256": "853428b83e4cdd26bce52202be89dc88c10677046de2ceb8289d8314b86afa1c",
+      "git_blob_sha": "01f953debb64bff6c4570252a492f885c7f9a23e",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5f24689c49a94227b634f71d429341a0d77caef7/05-knowledge/results/odd_tables_signed_carries_20261111/history/NATIVE_ZERO.md"
+    },
+    {
+      "path": "05-knowledge/results/odd_tables_signed_carries_20261111/tournament/BIRTH_CLOSURE.md",
+      "commit": "5f24689c49a94227b634f71d429341a0d77caef7",
+      "role": "Concrete H5991 newborn-cut exclusion strengthened by Session258",
+      "sha256": "48ae1d9e711d723aa0006e99091f36bb78c6bd960d8163eef0cc116a0e292906",
+      "git_blob_sha": "2ac22c8d2390de8d49792e61bc35c30e71d97c72",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5f24689c49a94227b634f71d429341a0d77caef7/05-knowledge/results/odd_tables_signed_carries_20261111/tournament/BIRTH_CLOSURE.md"
+    },
+    {
+      "path": "05-knowledge/results/odd_tables_signed_carries_20261111/tournament/CONTENT.md",
+      "commit": "5f24689c49a94227b634f71d429341a0d77caef7",
+      "role": "Future response order versus integral grammar content",
+      "sha256": "cfd4b6a0cffb1ee3c867b1ecd99591caafbfb16e3fd66fa5d9087a8bab287e26",
+      "git_blob_sha": "e168bd9842519887a0148809946e0fe889e6aafb",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5f24689c49a94227b634f71d429341a0d77caef7/05-knowledge/results/odd_tables_signed_carries_20261111/tournament/CONTENT.md"
+    }
+  ],
+  "final_prepublication_main": "b112b5651f411c4bdeffdc5cfd627fdf433bfae9"
+}

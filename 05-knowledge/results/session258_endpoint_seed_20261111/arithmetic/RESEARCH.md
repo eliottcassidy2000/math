@@ -145,8 +145,8 @@ The new theorem isolates one whole already-represented target ray outside the sm
 
 ## Reproduction
 
-    python3 session258/packet/arithmetic/check.py --write
-    python3 session258/packet/arithmetic/check.py
-    python3 -O session258/packet/arithmetic/check.py
+    python3 check.py --write
+    python3 check.py
+    python3 -O check.py
 
 The script uses explicit exceptions, no assertions. Controls cover every first25 prime over four index periods; complete factorizations for k1..16; the two-run obstruction for k1..64 against every possible Mersenne divisor exponent;343 physical twin continuation cases; the443 witnesses; the ordered-carry hostile; and the inherited ready-state formula at k1..12. They are narrow controls for the new mechanisms, not blanket historical verification. The all-k conclusions rest on the proofs in this note, not these finite boxes.

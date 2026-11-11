@@ -2,6 +2,8 @@
 
 **PROVED reduction and constructor. FINITE-EXACT all-order classification for q=1,...,13.** The strong-order estimate is an inherited cited input. This does not construct seeds for every odd slope c and does not prove Chan–Pak.
 
+**Later continuation:** [the strong-core classification](CORE_CLASSIFICATION.md) sharpens the general decision below to a finite strong-core search with an O(log q) conditional witness bound. The nine-state compiler remains an independent positive-state model and supports the backward Zeckendorf guards.
+
 ## 1. Target, source, and positive size bound
 
 Use the inherited selected-set seed definition: B is a tournament, O is a selected vertex subset, H=H(B), W counts ordered pairs of nonempty spanning paths whose first endpoint and second starting point both belong to O, and U counts the same ordered covers with only the second start required in O, permitting the first path to be empty. A unit-offset seed of exact multiplier q satisfies
