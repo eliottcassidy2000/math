@@ -1,0 +1,13 @@
+{"N": 0, "gauge_seconds": 2.116100222337991e-05, "baseline_seconds": 1.0785999620566145e-05, "speedup": 0.5097111897965373, "exact_equal": true, "transitions": 0}
+{"N": 1, "gauge_seconds": 2.4646997189847752e-05, "baseline_seconds": 0.00020336299712653272, "speedup": 8.25102528961618, "exact_equal": true, "transitions": 2}
+{"N": 2, "gauge_seconds": 1.862800127128139e-05, "baseline_seconds": 1.9068000256083906e-05, "speedup": 1.0236203003421982, "exact_equal": true, "transitions": 3}
+{"N": 3, "gauge_seconds": 2.0921001123497263e-05, "baseline_seconds": 1.954900290002115e-05, "speedup": 0.9344200492425211, "exact_equal": true, "transitions": 7}
+{"N": 4, "gauge_seconds": 2.0190000213915482e-05, "baseline_seconds": 1.9097999029327184e-05, "speedup": 0.9459137606231592, "exact_equal": true, "transitions": 9}
+{"N": 5, "gauge_seconds": 2.5138000637525693e-05, "baseline_seconds": 4.868199903285131e-05, "speedup": 1.9365899354851408, "exact_equal": true, "transitions": 15}
+{"N": 10, "gauge_seconds": 7.967800047481433e-05, "baseline_seconds": 7.441100024152547e-05, "speedup": 0.9338964306094288, "exact_equal": true, "transitions": 62}
+{"N": 20, "gauge_seconds": 0.00029739200181211345, "baseline_seconds": 0.0002972719994431827, "speedup": 0.9995964842087228, "exact_equal": true, "transitions": 381}
+{"N": 30, "gauge_seconds": 0.0008621819979452994, "baseline_seconds": 0.0009108640006161295, "speedup": 1.0564637197098132, "exact_equal": true, "transitions": 1271}
+{"N": 50, "gauge_seconds": 0.0041197930004273076, "baseline_seconds": 0.0034974369991687126, "speedup": 0.8489351282469668, "exact_equal": true, "transitions": 6609}
+{"N": 100, "gauge_seconds": 0.045885163999628276, "baseline_seconds": 0.0474006360018393, "speedup": 1.0330274945126774, "exact_equal": true, "transitions": 90219}
+{"N": 150, "gauge_seconds": 0.3810051479995309, "baseline_seconds": 0.3644195029992261, "speedup": 0.9564687115452697, "exact_equal": true, "transitions": 601461}
+{"N": 200, "gauge_seconds": 2.6749131760007003, "baseline_seconds": 2.947073810002621, "speedup": 1.1017455954996012, "exact_equal": true, "transitions": 2994814}

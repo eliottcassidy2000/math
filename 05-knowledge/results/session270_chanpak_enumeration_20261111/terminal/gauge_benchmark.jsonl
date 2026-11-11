@@ -1,0 +1,3 @@
+{"N": 300, "gauged_seconds": 0.07955190500069875, "response_seconds": 0.1226167400018312, "speedup": 1.5413425989076464, "exact_equal": true, "transitions": 76509, "peak_states": 2507}
+{"N": 600, "gauged_seconds": 2.1177053979990887, "response_seconds": 4.788090032998298, "speedup": 2.260980227713599, "exact_equal": true, "transitions": 528343, "peak_states": 9908}
+{"N": 900, "gauged_seconds": 15.402728978999221, "response_seconds": 34.48797174200081, "speedup": 2.239081904837985, "exact_equal": true, "transitions": 1694066, "peak_states": 22195}

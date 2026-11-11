@@ -1,0 +1,114 @@
+{
+  "status": "FINITE-EXACT",
+  "direct_orders": [
+    {
+      "n": 4,
+      "normalized_mod8": 1
+    },
+    {
+      "n": 6,
+      "normalized_mod8": 7
+    },
+    {
+      "n": 8,
+      "normalized_mod8": 6
+    },
+    {
+      "n": 10,
+      "normalized_mod8": 6
+    },
+    {
+      "n": 12,
+      "normalized_mod8": 2
+    },
+    {
+      "n": 14,
+      "normalized_mod8": 3
+    },
+    {
+      "n": 16,
+      "normalized_mod8": 4
+    },
+    {
+      "n": 18,
+      "normalized_mod8": 3
+    },
+    {
+      "n": 20,
+      "normalized_mod8": 4
+    },
+    {
+      "n": 22,
+      "normalized_mod8": 1
+    },
+    {
+      "n": 24,
+      "normalized_mod8": 4
+    },
+    {
+      "n": 26,
+      "normalized_mod8": 2
+    },
+    {
+      "n": 28,
+      "normalized_mod8": 2
+    },
+    {
+      "n": 30,
+      "normalized_mod8": 4
+    },
+    {
+      "n": 32,
+      "normalized_mod8": 0
+    },
+    {
+      "n": 34,
+      "normalized_mod8": 0
+    },
+    {
+      "n": 36,
+      "normalized_mod8": 2
+    },
+    {
+      "n": 38,
+      "normalized_mod8": 5
+    },
+    {
+      "n": 40,
+      "normalized_mod8": 0
+    }
+  ],
+  "factorization_queries": [
+    {
+      "factors": {
+        "2": 1000
+      },
+      "n_bits": 1001,
+      "normalized_mod8": 0
+    },
+    {
+      "factors": {
+        "2": 1,
+        "3": 1000
+      },
+      "n_bits": 1586,
+      "normalized_mod8": 3
+    },
+    {
+      "factors": {
+        "2": 2,
+        "5": 1000
+      },
+      "n_bits": 2324,
+      "normalized_mod8": 4
+    },
+    {
+      "factors": {
+        "2": 1,
+        "1000000007": 2
+      },
+      "n_bits": 61,
+      "normalized_mod8": 5
+    }
+  ]
+}

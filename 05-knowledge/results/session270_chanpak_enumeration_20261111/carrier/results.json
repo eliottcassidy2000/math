@@ -1,0 +1,108 @@
+{
+  "status": "FINITE-EXACT",
+  "controls": [
+    {
+      "k": 1,
+      "m": 0,
+      "labelled_structures": 1,
+      "marked_classes": 1,
+      "path_mass": 1
+    },
+    {
+      "k": 1,
+      "m": 1,
+      "labelled_structures": 2,
+      "marked_classes": 2,
+      "path_mass": 2
+    },
+    {
+      "k": 1,
+      "m": 2,
+      "labelled_structures": 4,
+      "marked_classes": 4,
+      "path_mass": 6
+    },
+    {
+      "k": 1,
+      "m": 3,
+      "labelled_structures": 8,
+      "marked_classes": 8,
+      "path_mass": 20
+    },
+    {
+      "k": 2,
+      "m": 0,
+      "labelled_structures": 2,
+      "marked_classes": 1,
+      "path_mass": 2
+    },
+    {
+      "k": 2,
+      "m": 1,
+      "labelled_structures": 8,
+      "marked_classes": 4,
+      "path_mass": 12
+    },
+    {
+      "k": 2,
+      "m": 2,
+      "labelled_structures": 32,
+      "marked_classes": 16,
+      "path_mass": 96
+    },
+    {
+      "k": 2,
+      "m": 3,
+      "labelled_structures": 128,
+      "marked_classes": 64,
+      "path_mass": 864
+    },
+    {
+      "k": 3,
+      "m": 0,
+      "labelled_structures": 8,
+      "marked_classes": 2,
+      "path_mass": 12
+    },
+    {
+      "k": 3,
+      "m": 1,
+      "labelled_structures": 64,
+      "marked_classes": 12,
+      "path_mass": 192
+    },
+    {
+      "k": 3,
+      "m": 2,
+      "labelled_structures": 512,
+      "marked_classes": 88,
+      "path_mass": 3840
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "labelled_structures": 4096,
+      "marked_classes": 688,
+      "path_mass": 86016
+    },
+    {
+      "k": 4,
+      "m": 0,
+      "labelled_structures": 64,
+      "marked_classes": 4,
+      "path_mass": 192
+    },
+    {
+      "k": 4,
+      "m": 1,
+      "labelled_structures": 1024,
+      "marked_classes": 48,
+      "path_mass": 7680
+    }
+  ],
+  "large_queries": {
+    "B3_1000_bits": 3001,
+    "B4_1000_bits": 4002,
+    "Z2_1000_bits": 3583
+  }
+}
