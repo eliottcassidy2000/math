@@ -230,6 +230,13 @@ on actual strong sources, with its retained and lost information visible.
 The universal zero digit is proved. The desired nonzero +2 repair remains
 open, including after the narrowly specified local tests.
 
+The final incoming checkpoint supplies a sharper stopping condition:
+a one-vertex increase by2 occurs only at1→3 or3→5. Thus replacing the
+5991 source cannot make a single newborn reach5993. It also supplies a
+complete finite decision procedure for each fixed unit-offset ray
+multiplier, with the unbounded odd-slope existence question still open.
+[Incoming proofs and their precise interfaces](INCOMING.md).
+
 ## 6. The remaining proof obligation
 
 The arbitrary-prefix constructions reach a zero defect by appending

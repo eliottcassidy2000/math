@@ -1,8 +1,13 @@
 # The remaining two paths are not supplied by one unrestricted birth
 
 **FINITE-EXACT, 2026-11-11.** This controls one concrete source supplied
-by the concurrent native patch investigation. It is not an obstruction
-to other sources, more vertices, or the desired scalar count5993.
+by the concurrent native patch investigation. This computation alone
+does not exclude other sources, more vertices, or the scalar count5993.
+
+**Incoming stronger theorem:** Session258 proves that a one-vertex +2
+increase occurs only at1→3 or3→5. Thus every5991 source is excluded
+from a one-birth5993 repair. See [INCOMING.md](../INCOMING.md) for the
+proved scope and source; the finite receipt below is preserved separately.
 
 Start with parent rows
 

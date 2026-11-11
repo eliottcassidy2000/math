@@ -1,11 +1,17 @@
 {
   "baseline": "f8de0ab39d54",
   "checkpoint": "13268e7459",
+  "incoming": "c2bb960d68",
   "files": [
+    {
+      "path": "INCOMING.md",
+      "bytes": 2325,
+      "sha256": "2c7c9ed32e419957b54d0e1fcb3b0046ad61e3ac2eaf5fed02ee27c1420902bc"
+    },
     {
       "path": "LINK_CHECK.json",
       "bytes": 37,
-      "sha256": "b38151cb51024baa9424e4e302bdb7f0bc672c43aaf98181baaa8509ad6b3961"
+      "sha256": "ff2f2f1041912665423041a55bafdd202d3247ab88beccb1de98efca9a3c603c"
     },
     {
       "path": "README.md",
@@ -24,8 +30,8 @@
     },
     {
       "path": "SYNTHESIS.md",
-      "bytes": 11302,
-      "sha256": "4b2e160941168aa31344472bc6cd5c4d23569311566d125178ca9a9b2de087d6"
+      "bytes": 11716,
+      "sha256": "38561881866177f3f8784ef0a78d2e70b3cd1793426b81dbd2e1b20bd46389c2"
     },
     {
       "path": "actuators/PROOF.md",
@@ -164,8 +170,8 @@
     },
     {
       "path": "tournament/BIRTH_CLOSURE.md",
-      "bytes": 2293,
-      "sha256": "48ae1d9e711d723aa0006e99091f36bb78c6bd960d8163eef0cc116a0e292906"
+      "bytes": 2586,
+      "sha256": "0fe69f577ef3e7fa30558362fd1dd5c3796fa2a99c9c7b9b472a7b81d2afd1f9"
     },
     {
       "path": "tournament/COMPOSITE_CLOCK.md",
