@@ -16,3 +16,4 @@ with tempfile.TemporaryDirectory(prefix='tournament-aspects-') as td:
     (HERE/'screen9-seconds.txt').write_text(str(time.perf_counter()-start)+'\n')
     with (HERE/'audit9.json').open('w') as out:subprocess.run([str(exe['audit9']),str(t/'input9.txt'),str(HERE/'seed_witnesses9.tsv')],stdout=out,check=True)
     py('integrate.py')
+    py('seal.py')

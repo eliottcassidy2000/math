@@ -87,6 +87,16 @@ compiler, not the entire isomorphism type or arbitrary extension operation;
 its context quantifier differs from our complete one-new-vertex support.
 Incoming Session253 is a research board, not a new proved dependency.
 
+A subsequent freshness pull brought `787a2f04b5`, including
+`chanpak_five_core_bridges_20261110/algebra/LOW_RATIO_FRONTIER.md`: for a fixed
+strong n-vertex source of count h and target N<(n+2)h, a finite strong
+one-vertex frontier exhausts every retained-source strong supertournament of
+count<=N. This is a possible future all-height source-debt sequence. It
+does not turn our fixed-one-birth D(n,h) into an all-height obstruction; the
+incoming141->215->425 example specifically needs two births. The newer
+Session253 proofs are outside this packet's dependencies. No computation here
+was silently rerouted to new inputs during a freshness pull.
+
 Internal audit caught and repaired a converse projection loss before the
 checkpoint: doubling the number of unit subsets preserves their count but
 not their odd coefficient labels. The first draft's4,441 order-nine labels

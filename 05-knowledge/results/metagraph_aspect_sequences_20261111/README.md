@@ -106,6 +106,11 @@ and order-nine class universes are inherited from their audited complete banks;
 they are not claimed as newly generated here. No Lean proof or independent-agent
 review is claimed.
 
+`SHA256SUMS` fingerprints every payload file, normalizing text CRLF to LF and
+leaving gzip bytes unchanged. The reproduction command refreshes it after the
+new local timing is recorded. Source-bank text fingerprints use the same
+newline convention; the compressed order-nine source fingerprint is literal.
+
 Next questions are recorded in [the board](BOARD.md). Incoming seven-coordinate
 compiler work is integrated there as a different, bounded-context response
 observer; it does not establish all-order completeness of the extension-support
