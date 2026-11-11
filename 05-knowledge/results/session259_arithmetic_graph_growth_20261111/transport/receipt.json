@@ -1,0 +1,34 @@
+{
+  "examples": {
+    "birth10_products": [
+      16,
+      21,
+      24
+    ],
+    "shifted13_path": [
+      13,
+      48,
+      24,
+      12,
+      6,
+      3,
+      8,
+      4,
+      2,
+      1
+    ],
+    "shifted3_path": [
+      3,
+      8,
+      4,
+      2,
+      1
+    ]
+  },
+  "max_path_length": 37,
+  "pairs": 61752,
+  "parent_sum_bound": 500,
+  "paths": 2000,
+  "scope": "Exact controls of new transport formulas; no external conjecture or inherited-source audit.",
+  "status": "FINITE-EXACT PASS"
+}

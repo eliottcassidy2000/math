@@ -1,0 +1,7 @@
+FINITE-EXACT: joint birth strips, inverse and power/scale laws, prefixes N=1..80; pairs= 3240
+FINITE-EXACT: binary/ternary/quaternary insertion identities, both operations, N=1..8; checks= 128
+FINITE-EXACT: ternary cycle formulas, both operations, N=1..8
+FINITE-EXACT: prime-arity laws ell=2,3,5,7; S=[1,2,3,4], [2,3,5], [1,4,9]; both operations
+HOSTILE: arity 4, S={1,2}, sum target 6: ordered count 6, residue 2 mod 4, no all-equal witness
+HOSTILE: triples (1,6,6), (2,2,9): same sum=13/product=36, distinct births 6 and 9
+All finite controls passed. All-N statements depend on proofs in RESEARCH.md.
