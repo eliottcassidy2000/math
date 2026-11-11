@@ -1,0 +1,32 @@
+{
+  "fine_arc_histogram": [
+    1,
+    1,
+    4,
+    4,
+    4,
+    1,
+    1
+  ],
+  "five_bin_histogram": [
+    1,
+    5,
+    4,
+    5,
+    1
+  ],
+  "historical_status": "incoming candidate reconstruction, original referent still unconfirmed",
+  "middle_H_histogram": {
+    "1": 3,
+    "3": 1
+  },
+  "nontournament_middle_classes": 2,
+  "ordinary_isomorphism_classes": 16,
+  "script_sha256": "88399762c141e1abb00422d8ecccf8b4e1e211f92582a6dd66d736a3aef9d316",
+  "source_sha256": {
+    "05-knowledge/results/session250_sixteen_20261110/geometry/DIGRAPH_CANDIDATE_SIXTEEN.md": "509404bf37fee750ac6dbe207df78c136da9b17ced8c2ff9a45b8e015f71f095"
+  },
+  "status": "PASS",
+  "tournament_classes": 2,
+  "universe": "all64 loopless binary adjacency matrices of order3"
+}

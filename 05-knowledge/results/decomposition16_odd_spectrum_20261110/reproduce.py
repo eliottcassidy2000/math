@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate frozen evidence; --rerun also executes all seven checker pairs."""
+"""Validate frozen evidence; --rerun also executes all eight checker pairs."""
 from pathlib import Path
 from hashlib import sha256
 import argparse
@@ -11,7 +11,7 @@ import sys
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
 JOBS=('induction/check','attachment/check','history/check',
-      'history/attachment_audit','induction/audit_joint','joint_check','core_audit')
+      'history/attachment_audit','induction/audit_joint','joint_check','core_audit','sixteen_check')
 
 def require(x,msg):
     if not x:raise RuntimeError(msg)

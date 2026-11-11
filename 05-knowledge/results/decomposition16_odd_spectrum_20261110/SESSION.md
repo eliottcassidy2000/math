@@ -71,6 +71,33 @@ support theorem. The packet is marked proved-in-note with finite controls,
 not independently canon-audited, and is not a dependency of this session.
 It too explicitly leaves the original1–5–4–5–1 grading unrecovered.
 
+The first push met newer incoming42969527be andf2462ec411. Their completed
+[Session250 synthesis](../session250_sixteen_20261110/SYNTHESIS.md) supplies
+the natural candidate five-bin interpretation using the sixteen ordinary
+three-vertex digraph classes. This session independently checks all64
+matrices and the Burnside polynomial in `sixteen_check.py`; original
+historical attribution remains unresolved. This is the precise bridge
+back to the preceding square-matrix session: the middle arc-density bin
+has four classes, only two of which satisfy the tournament pair condition.
+
+The incoming [unit-offset core normal form](../session250_sixteen_20261110/constructive/PROOF.md)
+also complements our factorization. Their strong core lies in the
+**deletion base** B of a rooted ray seed; ours is the strong **child**
+component C containing the new vertex. C-v need not be strong. The
+statements are different, and neither is credited as the other's proof.
+Their positive cross-cover term shows that a unit-offset root cannot
+select vertices in two different base SCCs. Its outer transitive padding
+preserves the odd ray slope, so freely concatenating marked unit seeds
+does not generate new odd lines.
+
+There is an exact overlap with our H3 compiler: let the root beat two
+vertices of C3 and lose to both transitive flanks. Then A=0 and
+B=2^b-1. For b>=1, g(B)=1 and the mixed formula gives
+C(B,0)=1+6*2^b, precisely the inherited line13,25,49,... fromTHM-5126.
+At b=0 the actual child has H5 instead; substituting an empty tail into
+the positive-tail ray formula would falsely give7. This recovers the
+same essential empty-tail boundary in both coordinate systems.
+
 Connection contract: actual tournaments map to their switch H functions;
 the function retains H at each switch but loses graph identity and future
 birth response. The switching constraints can reject proposed seed banks;
@@ -97,7 +124,7 @@ is a further obligation, not inferred from the number16.
   publication; MISTAKE-756 preserves the witness, first failed implication,
   equality boundary, strongest survivor and missing return coordinate.
 
-All seven checker pairs were run normally and with Python optimization.
+All eight checker pairs were run normally and with Python optimization.
 Saved equality, source hashes and the manifest distinguish reproducible
 finite controls from proofs and imported complete inventories. The final
 reproduction tool defaults to evidence validation; `--rerun` executes the

@@ -110,12 +110,28 @@ and81/27 controls needed by the earlier native construction languages.
 
 ## Recovering the decomposition of sixteen
 
-The exact historical observable behind **1–5–4–5–1** has not been located
-in the bounded repository and chat recovery. It is not the ordinary
-four-bit rank row1–4–6–4–1, nor a divisor-rank row for a number with
-sixteen divisors. These distinctions do not refute a different intended
-grading. A clarification remains useful; no arbitrary regrouping is
-substituted for the original construction.
+Incoming Session250 supplies a natural, independently checked **candidate
+interpretation**. The sixteen unlabelled loopless digraphs on three
+vertices, allowing reciprocal arcs, have fine arc-count polynomial
+
+    D_3(z)=1+z+4z^2+4z^3+4z^4+z^5+z^6.
+
+Grouping arc counts as {0}, {1,2}, {3}, {4,5}, {6} gives exactly
+**1–5–4–5–1**: empty / sparse / half-full / dense / complete.
+Complement reverses these five bins. This is an exact reconstruction,
+but the original historical referent remains unconfirmed.
+[Incoming candidate, symmetry table and prior grading source](../session250_sixteen_20261110/geometry/DIGRAPH_CANDIDATE_SIXTEEN.md).
+
+The four middle classes consist of the two tournaments and two digraphs
+having a reciprocal pair and a missing pair. Their H values are1,1,1,3.
+Thus the central arc-count constraint does not characterize tournaments,
+and the five bins do not determine H. `sixteen_check.py` independently
+enumerates all64 labelled matrices, quotients by all six vertex
+permutations, and verifies the polynomial separately by Burnside.
+
+The candidate is distinct from the ordinary four-bit rank row1–4–6–4–1
+and from a divisor-rank row. No arbitrary regrouping of binary words is
+substituted for historical provenance.
 
 The actual recovered bridge is the four-bit fold
 
@@ -149,5 +165,6 @@ The independent negative-edge audit recounts263 selected strong classes
 and2,171 vertex deletions using literal directed words from a different
 audited inventory. The source compiler has1,032 all-cut controls and
 an independent implementation. Two- and three-root kernel checks use
-separate counting methods. [Session inheritance, incoming connections
+separate counting methods. All eight normal/optimized checker pairs agree.
+[Session inheritance, incoming connections
 and next obligations](SESSION.md).
