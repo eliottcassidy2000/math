@@ -856,7 +856,7 @@ Remarks on the record.
   replaced them.
 - *`H mod 8` of Paley and of doubly regular tournaments.* Needs `F mod 4` and the parity of the overlapping mirror
   pairs `I` (Session29); the expansion of section 3 modulo 4 does not close (the terms with two and three cuts no
-  longer cancel). Recorded as HYP-9667 (b8) with data.
+  longer cancel). For Paley tournaments this is HYP-9273 (B), open; for doubly regular tournaments, HYP-9667 (b8).
 - *The switching class.* Conjectured, pre-registered on symmetric classes, refuted by the audit on generic ones
   (section 5.3). The local statements tried as lemmas for it (a determinant modulo 16, one orthogonal row, score
   parities, the cycles through one vertex) are each true for small orders and false later.
@@ -864,6 +864,11 @@ Remarks on the record.
   counts that depend only on the order; from length 10 on the counts depend on the tournament and only the
   parities of the odd ones appear to be forced. The Walsh expansion of `c_odd` in even path forests reduces the
   question to the patterns without a vertex of degree 2. Not proved.
+- *A proof that `H mod 4` is quadratic on a switching class.* It is equivalent to: for any three vertices the
+  eight switchings at subsets of the triple have path counts summing to `0 (mod 4)`; in terms of cycles, the odd
+  cycles through all three vertices, counted over the eight switchings, are even in number. The vertex-cube form
+  of THM-5127 reduces it to the statement that the endpoint-parity vector `g_R` is an affine function of the
+  switching set. Not proved; left as an observation.
 - *A geometric bridge to the packing of eleven squares.* None found; the existing notes already say so
   (`chanpak_55_105_golden_20261110/targets/PROOF.md`, `session74_eleven_mechanisms_20261027/`).
 - *A ladder of folds along a Cunningham chain.* Refuted at the first step (section 8).

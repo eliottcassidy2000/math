@@ -24780,3 +24780,71 @@ order) before calling it a result: the machine's own theorems are the likeliest 
 construction produces numbers on lines already certified, compare with the certificate files before writing "new
 path counts". (4) Read the theorem statements of a cited paper, not the two numbers that were searched for; and do
 not write "not located" after one query. (5) Wait for the prior-art sweep before pushing a pre-registration.
+
+## MISTAKE-763 (2026-11-11, mac-mini-2026-11-11-atoms; THM-5136, THM-5137, HYP-9667 and `05-knowledge/results/character_of_two_records_20261111/` at the pre-audit commits 1ca9c5f83b, 054cd956e2, f2e03e2935; found by the independent audit `audit/AUDIT.md` of that packet and, for two items, by the author during the session) -- a conjecture about every switching class tested only on the symmetric classes and refuted by the audit; five results on record typed new; predictions registered although the repository decided them
+
+- **M1. The class form of HYP-9667 was false.** The draft conjectured that every tournament whose skew matrix
+  satisfies `S^2 = -(N-1) I` has `H = 1 + N/2 (mod 4)` and the cycle parities `[N = 4 mod 8] C(N/2 - 1, k)`, and two
+  pre-registered runs (R11, R12) "confirmed" it. The audit switched `(source) + D23_0` (an annealed doubly regular
+  tournament of order 23 from this machine's own lane of 2026-10-22) at one vertex: `H = 3 (mod 4)`, an odd number
+  of 23-cycles; 18 of the 23 single-vertex switchings and 45 of 60 random members of the ten generic classes
+  violate the statement. The registered tests at `N = 24` had sampled the classes of `P_23` and of the double of
+  `P_11` only, the two with large automorphism groups; the twelve generic classes were in the same data file and
+  were used as normalised members only. The statement is true for every such tournament of order at most 16
+  (audit, exhaustive) and in every test at order 20. For doubly regular tournaments themselves it survives and
+  the audit extended it to all 37 of order 23. A second tidy guess made while repairing ("the class form holds
+  iff the matrix has one class of descendants") was refuted by the author's own follow-up run (`D23_8`) before it
+  was written into canon.
+- **M2. `H(P_q) = q(q-1)/2 (mod 8)` is HYP-9273 (B)** (opus S33, 2026-10-14; seven cases, `q = 31` pre-registered
+  there). The note typed it as its own observation and "not found", listed `q = 31` as "not computed", and
+  pre-registered `q = 27` (R8) with the sentence "`H(P_27)` was not found in the repository" - the search had read
+  canon and not the hypothesis files (`H(P_27) = 3159 mod 8424` is in HYP-9273's output). The `P_27` half of R1 was
+  decidable from the same file. What is new is the proof modulo 4.
+- **M3. Section 7 (elasticity 5/2 of the monoid of path counts) was on record**
+  (`session160_ordered_programs_20261103/axioms/NOTE.md` section 4; `session266_fiber_radix_20261111/smooth/PROOF.md`
+  section 6, written the same morning; `w(h)` of THM-4749), and its headline "not half-factorial because of 63" was
+  wrong: `1225 = 35 * 35 = 5 * 5 * 49`. Only the length set, equality exactly at the even powers of 63 and the
+  smallest example 315 were additions.
+- **M4. "Every regular tournament has an even number of 5-cycles" is a corollary of THM-155 / HYP-668**
+  (kind-pasteur, March), and the Savchenko references on short cycles of doubly regular tournaments were in the
+  backlog (INV-053, with an erratum from this machine's own MISTAKE-660); the note presented the first as not
+  found and the second as "found during the session", after re-deriving the 7-cycle count. The `F_2` identities
+  used for Theorem D (2) were in two notes of October and November.
+- **M5. `CD_k` was identified with the doubling tower of THM-448 for every `k`.** THM-5133 (G), cited in the same
+  sentence, says `CD_5` is not `T_31`. Consequence: R6 was decidable from canon for `CD_4` only.
+- **M6. The reach-set reading of A001187 was typed "not found"**; it is a comment of D. Knuth in the OEIS entry
+  that the note cites by number. The OEIS lookup read the data and not the comments (MISTAKE-698 was the same
+  slip on another sequence).
+- **M7. A formula for the parity of the number `F` of invariant odd cycles was on record**
+  (`session130_blue_black_theorems_20261031/hamiltonian/PROOFS.md`, Theorem 2: a sum over the pairs of `D_1` of
+  two-path-cover weights). The same file's Theorem 1 was the subject of MISTAKE-760 M1, the previous session of
+  this machine; Theorem 2, forty lines below, was not read. New in THM-5136 (Q) are the fold `Z`, the refinement
+  by cycle length and Corollaries (b), (c).
+- **Registrations decidable or derivable from the repository.** Found by the author: R6 (for `CD_4`), R9 and R10 at
+  orders 19 and 23 (this machine's Sierpinski lane, HYP-9365 / HYP-9371, has `D_19` and fourteen classes of order
+  23 with exact path counts). Found by the audit: R8 and half of R1 (M2); R4, R5, R7 follow from recorded facts
+  without a run.
+- **Minor slips of the same draft (15 in the audit).** Hypotheses missing `N = 0 (mod 4)`; "equivalently constant"
+  for a statement that also fixes the value; "twelve" for thirteen classes without converse symmetry; evidence
+  counts that included instances of a proved theorem and converse pairs; a step of the elasticity proof
+  attributed to the wrong inequality; the score-parity form stated without "odd order"; a factor `n!` dropped
+  from the canonical lift; "known `H` for `q <= 27`" where `q = 27` is known modulo 256 and 8424 only; a falsifier
+  already settled.
+- **Not affected.** No statement typed PROVED was wrong: the folding formula (THM-5136 (Q)), the theorem on
+  doubly regular tournaments with a converse symmetry (E), the Paley residue (P), the pentagon sums and the
+  record identities (THM-5137), the re-derived count of 7-cycles and the reduction for single switchings were
+  re-derived by hand and recomputed with independent programs. R12 on doubly regular tournaments and the
+  order-27 parts of R9, R10 were out of sample and hold.
+
+Lesson: (1) fourth session in a row on this machine with MAJOR "known typed as new" findings; three surveys by
+sub-agents and the author's greps missed six sources that one auditor found. What the misses have in common: the
+searches covered `01-canon/theorems` and result notes by theme words, and skipped `05-knowledge/hypotheses`
+(HYP-9273), the files adjacent to one already cited (Session130 Theorem 2 next to Theorem 1), same-day packets of
+other agents (Session266), the investigation backlog (INV-053) and OEIS comments. Before typing "not found": grep
+the hypothesis directory and the backlog for the object, read the whole of every file already cited, and read the
+comment lines of every OEIS entry used. (2) A conjecture quantified over "every X" must be tested on the least
+symmetric X available, and the registration must say how the test objects were chosen; here generic objects were
+on disk and only the symmetric ones were sampled. (3) A pre-registration check is a search for the OBJECTS of the
+prediction (their names, orders, one typical value) in results, hypotheses and experiments, including this
+machine's own lanes; a prediction the repository decides is recorded as in-sample evidence, not registered.
+(4) When a repair suggests a new tidy criterion, run it against all the data at hand before writing it down.
