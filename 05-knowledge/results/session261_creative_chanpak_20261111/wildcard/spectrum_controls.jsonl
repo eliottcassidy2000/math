@@ -1,0 +1,4 @@
+{'k': 0, 'per_permutation_dimension': 2, 'alphabet_size': 1, 'common_triangularization': True, 'uniform_annihilator': True}
+{'k': 1, 'per_permutation_dimension': 6, 'alphabet_size': 2, 'common_triangularization': True, 'uniform_annihilator': True}
+{'k': 2, 'per_permutation_dimension': 18, 'alphabet_size': 4, 'common_triangularization': True, 'uniform_annihilator': True}
+{'k': 3, 'per_permutation_dimension': 54, 'alphabet_size': 8, 'common_triangularization': True, 'uniform_annihilator': True}

@@ -62,7 +62,7 @@ All-length capped searches in the committed program give:
 * k=1,N=29: absent,127 vectors.
 * k=1,N=43: absent,187 vectors.
 * k=2, with a_1->a_2, N=7: absent,13,579 vectors.
-* k=2,N=21: absent,108,618 vectors (run `decide` without the default100,000 experimental budget).
+* k=2,N=21: absent,108,618 vectors (the script uses a150,000-state budget and closes before it).
 * k=2,N=29: word [1,2,0,2].
 * k=2,N=43: word [3,1,2,0].
 

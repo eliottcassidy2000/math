@@ -45,6 +45,21 @@
         "05-knowledge/hypotheses/HYP-3042-lrc14-owner-strip-filtration.md",
         "05-knowledge/results/long_frontier2_sep06_boundary.md"
       ]
+    },
+    {
+      "seed": 261108,
+      "choices": [
+        "05-knowledge/hypotheses/HYP-2207-phi3-root-of-unity-carrier-guardrail.md",
+        "05-knowledge/results/presentation_counts_single_view_classes_rotation_inequality_20261020.md",
+        "05-knowledge/results/entry_20260927_audit.md",
+        "05-knowledge/results/session29_framed_profiles_20261022/session29-collatz/phase2/DENSITY_ONE_DESCENT.md",
+        "05-knowledge/results/entry_20260927_entry.md",
+        "05-knowledge/results/session137_overnight_proof_frontiers_20261102/constructors/THEORY.md",
+        "05-knowledge/hypotheses/HYP-3400-lrc14-shadow-charge-conservation-atlas.md",
+        "05-knowledge/results/session74_eleven_mechanisms_20261027/session74-root/SESSION_PLAN.md",
+        "05-knowledge/results/ternary_metagraph_20261109/PREREGISTRATION-2.md",
+        "05-knowledge/results/duality_20261019_multiplication_addition_golden_circle_gilbreath.md"
+      ]
     }
   ]
 }

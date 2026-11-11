@@ -33,4 +33,3 @@ def canon(T):
   z=tuple(sum(1<<j for j in range(n) if T[p[i]]>>p[j]&1) for i in range(n))
   if best is None or z<best:best=z
  return best
-

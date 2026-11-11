@@ -1,0 +1,31 @@
+{
+  "status": "FINITE-EXACT evidence only; conjectural outside proved classes",
+  "seed": 2611708,
+  "cases": [
+    {
+      "rooted_order": 4,
+      "trials": 100,
+      "minimum_slack": 0
+    },
+    {
+      "rooted_order": 5,
+      "trials": 100,
+      "minimum_slack": 0
+    },
+    {
+      "rooted_order": 6,
+      "trials": 100,
+      "minimum_slack": 0
+    },
+    {
+      "rooted_order": 7,
+      "trials": 100,
+      "minimum_slack": 0
+    },
+    {
+      "rooted_order": 8,
+      "trials": 100,
+      "minimum_slack": 6
+    }
+  ]
+}

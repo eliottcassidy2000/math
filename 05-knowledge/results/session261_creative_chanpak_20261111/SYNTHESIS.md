@@ -1,6 +1,6 @@
 # Session261: creative routes through physical continuation states
 
-**11 November2026. Checkpoint1; research continues. Chan–Pak remains OPEN.**
+**11 November2026. Checkpoint2; research continues. Chan–Pak remains OPEN.**
 
 The requested longer session starts from Session260 at
 `f92e070445e43c59f1252f2979db564df88d7b60`, accepts its inherited machinery,
@@ -9,7 +9,60 @@ parallel lanes and a synthesis lane repeatedly draw unrelated historical
 sources at recorded random seeds. Each proposed connection retains a source,
 map, preserved predicate, lost coordinate and decisive test.
 
-## Proved mechanisms at the first checkpoint
+## New milestone: universal quantitative domination transfer
+
+For every tournament T and marked z, let U=T−z, partition A=N⁺(z),
+B=N⁻(z), and put an edge ab in G precisely when a→b in U. Then
+
+    d(G)−1 ≤ 2 P_even(U;A,B) ≤ H(T)−H(U).
+
+Here P_even counts literal even-order directed A-to-B paths. In particular
+
+    H(T)−d(G) ≥ H(T−z)−1 ≥ 2·(number of triangles in T−z).
+
+**PROVED:** both quantitative inequalities left open in Session260 are now
+closed for every tournament. The proof does not use an unproved Hall step.
+Inclusion-exclusion groups dominating-set count into
+
+    d(G) = sum_{W: every component of G[W] even} 2^(number of components).
+
+Every nonempty admissible W supplies a canonical A-to-B path in each
+component. Cross-component edges let those paths concatenate in all c!
+orders, and 2c!≥2^c. Closing through z gives the new odd cycles. The exact
+refinement has individually nonnegative fibres, retaining H(U−W).
+[Complete proof and focused controls](bridges/EXTENSION4.md).
+
+This is the session's strongest closure so far. It controls the unavoidable
+excess of the domination adapter; it does not prescribe an arbitrary exact
+Hamilton count, so Chan–Pak remains open.
+
+## Additional advances after the first checkpoint
+
+- **Literal same-q return:** two markings of one strong five-vertex
+  tournament have the same complete marked path-cover tensor and q=32.
+  Reselection opens a different unselected port while preserving every
+  surrounding (H,W,U) module context. Sink padding transports it to every
+  q=2^(b+5). The activated mixed2/3 ladder is inherited and credited; its
+  first birth is32→74, not the needed32→66.
+  [Marked-context theorem](constructors/MARKED_RESELECTION.md).
+- **Uniform spectrum:** all fixed-k spine matrices share a triangular basis.
+  Every length-L periodic block has only eigenvalues j^L, 0≤j≤k+1, with
+  a uniform exponential-polynomial recurrence. This explains the observed
+  integer modes without fitting a finite sequence.
+  [Normal form](wildcard/SPECTRAL_NORMAL_FORM.md).
+- **Why the simplest binary returns cannot work:** no fixed two-apex
+  single-letter pair implements persistent2h±1 at any physical seed.
+  [Combinatorial obstruction](wildcard/EXTENSIONS.md). A separately computed
+  integral orbit lattice rejects all twelve pairs; four are rationally
+  feasible but fail integrally. [Integral gate](core/INTEGRAL_RETURN_GATES.md).
+- **A wider lawful carrier:** converse and core swap implement an exact
+  count-preserving word return. Retaining two full word matrices supports
+  append, prepend and return, with a finite-control rowspace certificate
+  for state-dependent digit systems. Reachable successful seeds are still
+  required. [Fourth-wave construction](wildcard/FOURTH_WAVE.md).
+
+## Mechanisms established at the first checkpoint
+
 
 - **Positive fixed-apex compiler.** Every tournament formed from a fixed
   k-vertex core and an arbitrary transitive-spine word has an explicit
@@ -50,7 +103,8 @@ separate from a proof of Chan–Pak.
 
 1. Embed a marked module trade, or use a genuine same-q reselection, to leave
    the old parity-separated L/R/G carrier.
-2. Extend the component-block injection beyond complete bicliques.
+2. Use the now-proved universal defect identity to classify equality and its
+   hereditary obstruction patterns, then test a constructive consequence.
 3. Find physically reachable binary-return states, potentially with several
    control states and longer word blocks.
 4. Intersect the packing-resource language with the positive count compiler,

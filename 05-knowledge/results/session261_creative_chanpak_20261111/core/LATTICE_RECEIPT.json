@@ -1,0 +1,155 @@
+[
+  {
+    "k": 1,
+    "lattice_rank": 6,
+    "rank_history": [
+      3,
+      6,
+      6
+    ],
+    "gcd_H_minus_constant": 2,
+    "pairs": []
+  },
+  {
+    "k": 2,
+    "lattice_rank": 28,
+    "rank_history": [
+      5,
+      16,
+      27,
+      28,
+      28
+    ],
+    "gcd_H_minus_constant": 2,
+    "pairs": [
+      {
+        "plus": 0,
+        "minus": 1,
+        "integer_affine_feasible": false,
+        "rational_H": "-tau12 - 3*tau17 - 2*tau2 - 2*tau3 - tau6 - 1",
+        "constraint_HNF_target_coordinates": [
+          "-1/2",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "plus": 0,
+        "minus": 2,
+        "integer_affine_feasible": false,
+        "rational_H": "-2*tau0 + 2*tau14 - 2*tau15 - 2*tau16 - 4*tau17 - 2*tau2 - 2*tau4 + 2*tau5 + 2*tau9 - 3",
+        "constraint_HNF_target_coordinates": [
+          "-1/2",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "plus": 0,
+        "minus": 3,
+        "integer_affine_feasible": false,
+        "rational_H": "inconsistent",
+        "constraint_HNF_target_coordinates": null
+      },
+      {
+        "plus": 1,
+        "minus": 0,
+        "integer_affine_feasible": false,
+        "rational_H": "-tau12 - 3*tau17 - 2*tau2 - 2*tau3 - tau6 + 1",
+        "constraint_HNF_target_coordinates": [
+          "-1/2",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "plus": 1,
+        "minus": 2,
+        "integer_affine_feasible": false,
+        "rational_H": "inconsistent",
+        "constraint_HNF_target_coordinates": null
+      },
+      {
+        "plus": 1,
+        "minus": 3,
+        "integer_affine_feasible": false,
+        "rational_H": "inconsistent",
+        "constraint_HNF_target_coordinates": null
+      },
+      {
+        "plus": 2,
+        "minus": 0,
+        "integer_affine_feasible": false,
+        "rational_H": "-2*tau0 + 2*tau14 - 2*tau15 - 2*tau16 - 4*tau17 - 2*tau2 - 2*tau4 + 2*tau5 + 2*tau9 - 1",
+        "constraint_HNF_target_coordinates": [
+          "-1/2",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "plus": 2,
+        "minus": 1,
+        "integer_affine_feasible": false,
+        "rational_H": "inconsistent",
+        "constraint_HNF_target_coordinates": null
+      },
+      {
+        "plus": 2,
+        "minus": 3,
+        "integer_affine_feasible": false,
+        "rational_H": "inconsistent",
+        "constraint_HNF_target_coordinates": null
+      },
+      {
+        "plus": 3,
+        "minus": 0,
+        "integer_affine_feasible": false,
+        "rational_H": "inconsistent",
+        "constraint_HNF_target_coordinates": null
+      },
+      {
+        "plus": 3,
+        "minus": 1,
+        "integer_affine_feasible": false,
+        "rational_H": "inconsistent",
+        "constraint_HNF_target_coordinates": null
+      },
+      {
+        "plus": 3,
+        "minus": 2,
+        "integer_affine_feasible": false,
+        "rational_H": "inconsistent",
+        "constraint_HNF_target_coordinates": null
+      }
+    ]
+  }
+]

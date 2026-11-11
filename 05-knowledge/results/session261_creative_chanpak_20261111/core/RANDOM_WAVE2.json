@@ -1,0 +1,13 @@
+{
+  "seed": 2026111126102,
+  "pool_size": 3735,
+  "pool": "tracked canon Markdown excluding tournament/hamilton/chanpak/chan-pak/spectrum/seed/path/packing/cycle/apex filename words",
+  "paths": [
+    "01-canon/theorems/THM-2974-discriminant-cover-integral-order-smith-and-owner-boundary.md",
+    "01-canon/theorems/THM-3253-positive-owner-mass-newton-cyclicity-and-maximal-common-heisenberg-module.md",
+    "01-canon/theorems/THM-851-node-coloured-defect-coherent-closure.md",
+    "01-canon/theorems/THM-3757-pell-chebyshev-three-charge-hyperelliptic-obstruction-tower.md",
+    "01-canon/theorems/THM-420-kclock-and-shell-partner-witnesses-reduce-LRC-to-a-small-residual.md",
+    "01-canon/theorems/THM-3944-repeated-factor-double-torus-one-place-square-conductor-collapse.md"
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "status": "PASS",
+  "rows": [
+    2,
+    4,
+    9,
+    19,
+    7
+  ],
+  "old_selected_mask": 9,
+  "new_selected_mask": 18,
+  "tensor_rows_C_S_E_K": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      9,
+      4,
+      4,
+      0
+    ],
+    [
+      66,
+      28,
+      28,
+      8
+    ],
+    [
+      186,
+      76,
+      76,
+      20
+    ],
+    [
+      240,
+      96,
+      96,
+      24
+    ],
+    [
+      120,
+      48,
+      48,
+      12
+    ]
+  ],
+  "base_H_W_U": [
+    9,
+    8,
+    32
+  ],
+  "activated_port": {
+    "name": "reselected_q32_mixed_port",
+    "rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "selected_mask": 18,
+    "vertex": 0,
+    "mark": "none",
+    "parameter": "chain length",
+    "degree_bound": 6,
+    "skeleton_coefficients": {
+      "H": [
+        5,
+        9,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "D": [
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U": [
+        15,
+        32,
+        21,
+        4,
+        0,
+        0,
+        0
+      ]
+    },
+    "samples": [
+      [
+        5,
+        -1,
+        15
+      ],
+      [
+        9,
+        1,
+        32
+      ],
+      [
+        15,
+        1,
+        74
+      ],
+      [
+        27,
+        1,
+        182
+      ],
+      [
+        51,
+        1,
+        470
+      ],
+      [
+        99,
+        1,
+        1262
+      ],
+      [
+        195,
+        1,
+        3494
+      ]
+    ]
+  },
+  "old_selected_first_controls": [
+    [
+      1,
+      9,
+      1,
+      32
+    ],
+    [
+      2,
+      15,
+      1,
+      86
+    ],
+    [
+      3,
+      27,
+      3,
+      230
+    ]
+  ],
+  "old_binary_response": {
+    "name": "balanced_old_binary_response",
+    "rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "selected_mask": 9,
+    "vertex": 4,
+    "mark": "none",
+    "parameter": "chain length",
+    "degree_bound": 6,
+    "skeleton_coefficients": {
+      "H": [
+        5,
+        9,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "D": [
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U": [
+        15,
+        32,
+        16,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "samples": [
+      [
+        5,
+        -1,
+        15
+      ],
+      [
+        9,
+        1,
+        32
+      ],
+      [
+        15,
+        1,
+        64
+      ],
+      [
+        27,
+        1,
+        128
+      ],
+      [
+        51,
+        1,
+        256
+      ],
+      [
+        99,
+        1,
+        512
+      ],
+      [
+        195,
+        1,
+        1024
+      ]
+    ]
+  },
+  "reselection_anti_automorphism": [
+    4,
+    3,
+    2,
+    1,
+    0
+  ],
+  "scope": "Full marked-tensor equality gives all-host replacement; the mixed ladder identity is inherited and certified in this vertex gauge."
+}

@@ -1,0 +1,10 @@
+{
+  "general_graph_identity_scope": "All labelled simple graphs orders 0..5",
+  "general_graph_cases": 1100,
+  "endpoint_scope": "All tournaments bases 1..4 and every A/B colouring; 35 seeded bases each of orders5,6 with every colouring; direct permutations",
+  "seed": 2611711,
+  "coloured_bases": 4458,
+  "even_subset_fibres": 93608,
+  "strict_factorial_fibres": 14,
+  "result": "PASS; finite controls support the all-order proofs"
+}

@@ -1,0 +1,7 @@
+{'seed_length': 0, 'seeds': 1, 'immediate_pairs_cumulative': 0, 'depth4_survivors': []}
+{'seed_length': 1, 'seeds': 4, 'immediate_pairs_cumulative': 0, 'depth4_survivors': []}
+{'seed_length': 2, 'seeds': 16, 'immediate_pairs_cumulative': 36, 'depth4_survivors': []}
+{'seed_length': 3, 'seeds': 64, 'immediate_pairs_cumulative': 81, 'depth4_survivors': []}
+{'seed_length': 4, 'seeds': 256, 'immediate_pairs_cumulative': 126, 'depth4_survivors': []}
+{'seed_length': 5, 'seeds': 1024, 'immediate_pairs_cumulative': 180, 'depth4_survivors': []}
+{'seed_length': 6, 'seeds': 4096, 'immediate_pairs_cumulative': 234, 'depth4_survivors': []}
