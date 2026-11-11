@@ -2,7 +2,9 @@
 
 **Session:** mac-mini-2026-11-11-race. **Canon:** THM-5131 (triangle term, square term, the race tables), THM-5132
 (the pentagon theorem). **Hypotheses:** HYP-9663.
-**Audit:** AUDITLINE
+**Audit:** [audit/AUDIT.md](audit/AUDIT.md), independent, own programs: PASS WITH CORRECTIONS. No mathematical error;
+2 MAJOR findings, both "known result typed as new" (the residue mod 8 of self-converse tournaments; the closed form
+of the triangle bias), and 22 minor ones; all applied in this version, nothing added afterwards. MISTAKE-760.
 
 **Owner directive (summary).** Spend another session on the goal "7 and 21 are the only odd numbers that are not
 Hamiltonian path counts of tournaments", merging in prior work on the square-sum problem, the Fermat primes,
@@ -16,25 +18,31 @@ strong floors) and already has an atlas of exceptional sets (kind-pasteur S15, `
 ATLAS.md`). This session adds the piece that was missing from both: the **race** between the two classes
 `H = 1` and `H = 3 (mod 4)`, treated the way the owner's 2026-10-14 prompt treats Chebyshev's race.
 
-1. **(PROVED) The triangle race has a permanent, exact bias.** For every tournament `R` on `m` vertices the
-   `2^m` one-vertex extensions satisfy `sum_X (-1)^(c_3(R + v_X)) = 2^ceil(m/2)`, the same number for every `R`.
-   Hence `E (-1)^(c_3) = 2^(-floor((n-1)/2))` over labelled tournaments of every order `n`: an even number of
-   cyclic triangles always leads, by an exactly known margin, with no oscillation (Theorem T).
+1. **(PROVED; the value of the mean was on record) The triangle race has a permanent, exact bias.** For every
+   tournament `R` on `m` vertices the `2^m` one-vertex extensions satisfy
+   `sum_X (-1)^(c_3(R + v_X)) = 2^ceil(m/2)`, the same number for every `R` (new). Hence
+   `E (-1)^(c_3) = 2^(-floor((n-1)/2))` over labelled tournaments of every order `n`: an even number of cyclic
+   triangles always leads, by an exactly known margin, with no oscillation (Theorem T). The closed form of the mean
+   was recorded in June for the tiling ensemble and verified for `n <= 10` (THM-555; Gauss-sum mechanism in
+   HYP-2707); here it is proved for every `n`.
 2. **(PROVED) The pentagon race is solved too, and with it the full race up to order 6.** Let `q_1` be the number
    of vertices of odd score and `q_2` the number of vertices with an odd number of odd-score out-neighbours. Then
    `c_3 = C(q_1, 2) + floor(n/4)` and `c_3 + c_5 = C(q_2, 2) + floor(n/4) (mod 2)`, so the parity of the number of
    5-cycles is `C(q_1, 2) + C(q_2, 2)`. Consequences (Theorem P, section 6): every tournament has at least as many
    one-vertex extensions with `c_3 + c_5` even as with `c_3 + c_5` odd, with an explicit count in terms of the kernel
    of the adjacency matrix mod 2; `E (-1)^(c_3 + c_5)` and `E (-1)^(c_5)` are known in closed form at every order
-   (for `n = 2 mod 4` they are `2^(-(n-2)/2)` and `2^(-(n-2))`; otherwise about twice and three times the triangle
-   values); and for `n <= 6`, where there are no longer odd cycles, `H mod 4` is decided by `q_2 mod 4`.
-3. **(PROVED + FINITE-EXACT) The full race has a square term.** Self-converse tournaments of even order all have
-   `H = 1 (mod 4)` (KNOWN: THM-791); they are the "prime squares" of this race. There are at most
-   `(n-1)!! 2^(n^2/4)` of them among the `2^C(n,2)` labelled tournaments (Theorem S), and exactly
-   `48, 7040, 6737920, 31596429312` at `n = 4, 6, 8, 10`. They carry `150%, 86%, 60%, 37%` of the lead
-   `D_n = P(H = 1 mod 4) - P(H = 3 mod 4)` at these orders. At `n = 4` every other tournament that is not
-   transitive-like votes the other way; at `n = 6` the lead of the classes (32 against 24) is 12 self-converse
-   classes against a deficit of 4 among the rest.
+   (for `n = 2 mod 4` they are `2^(-(n-2)/2)` and `2^(-(n-2))`, the triangle value and its square; otherwise about
+   twice the triangle value and three times its square); and for `n <= 6`, where there are no longer odd cycles,
+   `H mod 4` is decided by `q_2 mod 4`.
+3. **(KNOWN + FINITE-EXACT) The full race has a square term.** Self-converse tournaments of even order all have
+   `H = 1 (mod 4)`, more precisely `H = 1 + 4s (mod 8)` (KNOWN: THM-791; Session29 and Session130 for the reduction
+   to an involution and for the residue mod 8); they are the "prime squares" of this race. There are at most
+   `(n-1)!! 2^(n^2/4)` of them among the `2^C(n,2)` labelled tournaments (a corollary of the known count per
+   involution), and exactly `48, 7040, 6737920, 31596429312` at `n = 4, 6, 8, 10` (the last two new). New here: the
+   weighing. They carry `150%, 86%, 60%, 37%` of the lead `D_n = P(H = 1 mod 4) - P(H = 3 mod 4)` at these orders. At
+   `n = 4` the 48 labelled self-converse tournaments (transitive, `H = 1`; strong, `H = 5`) are all on the side
+   `H = 1` and the 16 others (a 3-cycle with a source or a sink) all have `H = 3`; at `n = 6` the lead of the classes
+   (32 against 24) is 12 self-converse classes against a deficit of 4 among the rest.
 4. **(FINITE-EXACT) Three strata.** At every order `4 <= n <= 10` the tournaments with a non-trivial automorphism
    that are not self-converse lean to `H = 3 (mod 4)`; the rigid, non-self-converse tournaments lean to `H = 1`
    from `n = 5` on, and in units of `4^(-n)` their lead is `240, 360, 1417.5, 1181.2, 1965.7, 1653.3` at
@@ -42,23 +50,26 @@ ATLAS.md`). This session adds the piece that was missing from both: the **race**
 5. **(FINITE-EXACT, resolves a recorded question)** HYP-9355 (opus S50) recorded the excess of `H = 1 (mod 8)` as
    present for `n <= 10` and "absent at `n = 11`" (a `10^7`-sample test). The exact values are now known: the
    relative masses of the residues `1, 3, 5, 7 (mod 8)` are `1.00330, 0.99603, 1.00155, 0.99912` at `n = 10` and
-   `1.00052, 0.99948, 1.00044, 0.99956` at `n = 11`. The pull is still there at `n = 11`; it is `5 * 10^(-4)`, the
+   `1.00051, 0.99949, 1.00044, 0.99956` at `n = 11`. The pull is still there at `n = 11`; it is `5 * 10^(-4)`, the
    size of one standard error of that test.
 6. **(Pre-registered; one FAILED, three CONFIRMED)** Order 12, by a Monte Carlo that averages exactly over the last
    vertex (14.4 million random bases of order 11): `D_12 = (5.89 +- 0.59) * 10^(-5)`, positive at ten standard
-   errors, but `D_12 4^12 = 989 +- 99`, half of the value `2 * 10^3` held for `8 <= n <= 11`. The registered
-   plateau (R1) FAILED: the lead decays faster than `4^(-n)`. The second-order predictions held: the rank law of
+   errors, but `D_12 4^12 = 989 +- 99`, half of the value `2 * 10^3` held for `8 <= n <= 11` (the audit's independent
+   estimator, 9 million bases with other seeds: `1039 +- 125`; pooled `1008 +- 77`). The registered plateau (R1)
+   FAILED; the rate of decay of the lead is OPEN. The second-order predictions held: the rank law of
    the pair form at order 11 equals the random alternating law to `3 * 10^(-4)` (R2), the deletion-pair
    correlation is `1.017` times the twin term (R3), the corank-1 bias frequency is `0.5040` (R4).
 7. **(Four pre-registered predictions about the cycle-length race: two FAILED, two CONFIRMED and then PROVED.)** The
    race resolved by cycle length is exact for `n <= 10` (section 6.3). Two regularities seen at `n = 6, 8` and
    registered for `n = 10` were false (R5, R6). The two registered next (R7: the value `2^(-(n-2)/2)` at
    `n = 14, 18`; R8: equal values at `n = 11, 12` and `15, 16`) held in the sampling run, and looking for the reason
-   behind a control of that run gave Theorem P. Triangles and pentagons keep biases of size `2^(-n/2)` for ever; the
-   construction stops at the heptagon, and the longest cycles erase the bias.
+   behind a control of that run gave Theorem P. The parities of `c_3` and of `c_3 + c_5` keep biases of size
+   `2^(-n/2)` for ever (that of `c_5` alone is of size `2^(-n)`); the direct continuation of the construction to the
+   heptagon fails, and the longest cycles erase the bias.
 8. **(Typed merge)** Section 8 places these results, and the inherited ones, in one table of small-number
    phenomena: crevasse type (Chan-Pak, square-sum), Borel-Cantelli type (Fermat primes, Sun's `2-4-6-8`), square-term
-   type (Chebyshev, Polya, and the two races here), fold type (ball volumes, `n^(1/n)`, the self-converse share).
+   type (Chebyshev, Polya, and the race here), fold type (ball volumes, `n^(1/n)`), permanent-bias type (the
+   triangle and pentagon parities).
 
 Nothing here enlarges the range of verified values or proves a new case of the conjecture. What is new and proved
 is about the second binary digit of `H`: its exact law on the two shortest cycle lengths.
@@ -67,7 +78,9 @@ is about the second binary digit of `H`: its exact law on the two shortest cycle
 
 ## 1. Inheritance pass and concurrency
 
-Read lane by lane before deriving (MISTAKE-753 and MISTAKE-755 were both "known results typed as new").
+Read lane by lane before deriving (MISTAKE-753 and MISTAKE-755 were both "known results typed as new"). The pass
+below still missed two items, found by the audit of this packet and marked **(audit)**: the same class of error a
+third time (MISTAKE-760).
 
 - **The `H mod 4` lane.**
   - `THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts`, `THM-478-digit-one-degree-law`:
@@ -77,13 +90,34 @@ Read lane by lane before deriving (MISTAKE-753 and MISTAKE-755 were both "known 
     order has `c_3` even.
   - `THM-791-H-companion-laws-to-the-transitivity-flow` (kind-pasteur, 2026-07-14): a tournament with a
     fixed-point-free involutive anti-automorphism has `c_odd` even, so `H = 1 (mod 4)`.
+  - **(audit)** `session29_framed_profiles_20261022/session29-converse-congruences/REPORT.md`, sections 1 and 3: a
+    self-converse tournament has an anti-involution, all anti-involutions are conjugate, and
+    `H = 1 + 2F + 4I (mod 8)`, at even order `H = 1 + 4I (mod 8)` with `I` the number of mirror pairs of odd cycles
+    whose supports meet. `session130_blue_black_theorems_20261031/hamiltonian/PROOFS.md`, Theorem 1: the same
+    congruence. The audit K1 of this machine's THM-4930 (2026-11-08) had pointed to the first report.
+    `session29-halfpath/REPORT.md` section 5, THM-4743 (6), THM-4930: `2^(m^2)` (`n = 2m`) and `2^(m(m+1))`
+    (`n = 2m + 1`) labelled tournaments for a fixed anti-involution; `selfk_type_ledger_opus_S312.out` prints
+    `704, 7040, 380416` and the products `960, 7680, 430080`. `session29-selfconverse-asymptotics`, THM-283: the
+    class counts (A002785).
+  - **(audit)** `THM-555-tiling-cycle-moment-hierarchy` (kind-pasteur S20, 2026-06-20):
+    `E[(-1)^c3] = 1/2^floor((n-1)/2)` in the tiling ensemble, verified for `n <= 10`;
+    `HYP-2707-tournament-clifford-magic-hierarchy` (kind-pasteur S22): the mechanism, a Gauss sum of a quadratic
+    form of rank `2 floor((n-1)/2)`, exact for `n = 4, ..., 8`. THM-559 (this machine, June): `c_3` as a 2-body form.
+    The classical formula `c_3 = C(n,3) - sum_v C(s_v, 2)` (Kendall and Babington Smith; THM-118, THM-466).
   - THM-4922 (4) (kind-pasteur S16; proof by its audit): at every odd order the self-converse classes split evenly
     between `H = 1` and `H = 3 (mod 4)`. THM-4930: which values are ever self-converse.
   - `THM-1980-the-two-adic-edge-of-the-redei-count`: `H mod 4` is a function of the characteristic polynomial for
     `n <= 6` and not for `n = 7` (exhaustive; no formula).
   - `THM-118-trace-cycle-identity` (kind-pasteur, March): `tr A^k = k c_k` for `k = 3, 4, 5`. THM-500, THM-502: the
     odd-cycle count is spectral iff `n <= 6`; `tr A^7 = 7 (c_7 + TQ)`. Theorem P starts from these.
-  - THM-1460 / THM-1470 (opus S409): the score-parity vector, uniform on its coset; its role in switching classes.
+  - The score-parity vector: uniform on its coset for every `n`
+    (`session72_even_graph_unifying_carriers_20261026/session72-even/SCORE_PARITY_QUOTIENT.md`); inside a switching
+    class for odd `n` (THM-1470, klein S338; THM-1460-babai-cameron, opus S409).
+  - On record before this note: `D_4, ..., D_7` and `E_5[{5}] = 7/32` (THM-466), the class race `32 : 24` at `n = 6`
+    (THM-1980), a partial law for `H mod 4` at `n = 5, 6` (HYP-6935 [ii]), the matrix `A` over `F_2` and de Caen's
+    rank bound (THM-4857, this machine), the integer vector `A^2 1` as the Kendall-Wei second-order score (THM-896;
+    THM-555 notes that it does not determine `c_5`), `T = 1/(1 - S)` for labelled tournaments (THM-4816, THM-4817),
+    the case `k = 4` of the subset double count (THM-1455).
   - HYP-9355 and `h_spectrum_multiplicities_20261021.md` section 3 (opus S50): residues of `H`; the "2-adic pull".
   - THM-5127 (this machine, yesterday): `H mod 4` on a vertex cube is a quadratic form; exact `D_n` for `n <= 11`;
     `1/4 <= P(H = 1 mod 4) <= 3/4`.
@@ -110,10 +144,10 @@ Read lane by lane before deriving (MISTAKE-753 and MISTAKE-755 were both "known 
 - **The micro/macro lane.** THM-4900 (gate and doubling); THM-5127 (C) (7): the gate preserves `H mod 4`.
 - **Canonical hostile example.** The owner's own "8 to 4" at `n = 5`: my note of 2026-11-04 typed its link to the ball
   volume as NUMEROLOGY. Section 8 keeps that typing for the number 5 and replaces the vague link by an exact one
-  (self-converse tournaments are the majority of labelled tournaments exactly for `n <= 5`).
+  (labelled self-converse tournaments are the majority of labelled tournaments exactly for `n <= 5`).
 - **Corrected near miss.** HYP-9355's "absent at `n = 11`": true at the resolution of its test, false exactly.
-- **Least-used sidecar.** THM-552 / THM-791: two parity laws for self-converse tournaments that had not been
-  weighed against the size of the race.
+- **Least-used sidecar.** THM-552 / THM-791 and the Session29 congruence: parity laws for self-converse
+  tournaments that had not been weighed against the size of the race.
 - **Same-day sessions** (read before writing): Session249-262, codex spectrum multiplicity, odd-tables,
   decomposition16, kind-pasteur S22 (THM-5130), opus S91. None treats the distribution of `H mod 4`.
 
@@ -162,9 +196,22 @@ scores are `0, ..., m - 1`, so `p - q - 1` is `-1` (`m` even) or `0` (`m` odd), 
 
 (3) Average (2) over `R` on `m = n - 1` vertices. QED
 
-*Typing.* Elementary. Not found in the repository (THM-478 has the quadratic form, THM-552 the self-converse case).
-A web search found the tables of tournaments by number of circular triads (Kendall and Babington Smith; Harris and
-McShane, J. Integer Sequences 27 (2024)) and not the parity statement; no claim about the literature is made.
+*Typing* (corrected by the audit, M2 and m1). (1) is the first layer of THM-5127 (4.4). The closed form (3) is
+KNOWN as a verified formula: THM-555 (kind-pasteur S20, June) records `E[(-1)^c3] = 1/2^floor((n-1)/2)` for the
+tiling ensemble (tournaments containing a fixed Hamiltonian path), verified for `n <= 10`, and HYP-2707 gives the
+mechanism (a Gauss sum of a quadratic form of rank `2 floor((n-1)/2)`, exact for `n = 4, ..., 8`). New here: the
+proof for every `n`, in the uniform ensemble, and the pointwise statement (2), which was not found in the
+repository. The two ensembles agree for `n >= 4` (the complement of a Hamiltonian path in `K_n` is connected, so the
+score-parity vector stays uniform on its coset; at `n = 3` the tiling value is 0), so Theorem T also proves THM-555's
+line for every `n >= 4`.
+
+Theorem T is an elementary corollary of the classical formula `c_3 = C(n,3) - sum_v C(s_v, 2)` (Kendall and
+Babington Smith; THM-118, THM-466): since `sum_v s_v^2 = q (mod 4)` for `q` the number of odd scores and
+`sum_v s_v = C(n,2)`, one gets `c_3 = C(q, 2) + floor(n/4) (mod 2)` (the first formula of Theorem P (1)), and (2)
+follows because `x -> (s + 1 + x, |x|)` is a bijection from the out-sets onto the admissible score-parity vectors of
+`R + v_X` (the auditor's proof, `audit/AUDIT.md` m1; the proof above by arc reversal is a second one). A web search
+found the tables of tournaments by number of circular triads (Kendall and Babington Smith; Harris and McShane,
+J. Integer Sequences 27 (2024)) and not the parity statement; no claim about the literature is made.
 
 *Consequence for the race.* For `n <= 4` there are no longer odd cycles, so `chi = (-1)^(c_3)` and
 `D_3 = D_4 = 1/2`: the two orders at which the bound `|D_n| <= 1/2` of THM-5127 (C) (6) is attained are the
@@ -174,16 +221,22 @@ triangle race.
 
 **Theorem S.**
 
-1. (KNOWN: THM-791; THM-552 for `c_3`.) If `T` has an anti-automorphism, it has one of order 2. An involutive
-   anti-automorphism fixes at most one vertex, so none when `|T|` is even; then no odd cycle is fixed by it,
-   `c_odd(T)` is even and `H(T) = 1 (mod 4)`.
-2. (Mod 8.) Let `psi` be a fixed-point-free involutive anti-automorphism of `T`. It acts on the directed odd cycles
-   without fixed points. Let `s` be the number of orbits `{C, psi(C)}` with `V(C) cap V(psi(C))` non-empty. Then
-   `H(T) = 1 + 4s (mod 8)`.
-3. (Count.) For even `n`: `2^(n^2/4) <= SC_n <= (n-1)!! 2^(n^2/4)`. For odd `n`:
-   `SC_n <= n!! 2^((n^2-1)/4)`.
-4. (Race.) For even `n`, `D_n = SC_n / 2^C(n,2) + D_n^ns`, where `D_n^ns` is the signed fraction of the
-   non-self-converse tournaments, and `0 < SC_n / 2^C(n,2) <= (n-1)!! 2^(-n(n-2)/4)`.
+1. (KNOWN: Session29 converse-congruences section 1 and THM-4930 for the involution; THM-791 for the parity;
+   THM-552 for `c_3`.) If `T` has an anti-automorphism, it has one of order 2. An involutive anti-automorphism
+   fixes at most one vertex, so none when `|T|` is even; then no odd cycle is fixed by it, `c_odd(T)` is even and
+   `H(T) = 1 (mod 4)`.
+2. (Mod 8. KNOWN: Session29 converse-congruences section 3, `H = 1 + 4I (mod 8)`; Session130 `hamiltonian/PROOFS.md`
+   Theorem 1.) Let `psi` be a fixed-point-free involutive anti-automorphism of `T`. It acts on the directed odd
+   cycles without fixed points. Let `s` be the number of orbits `{C, psi(C)}` with `V(C) cap V(psi(C))` non-empty.
+   Then `H(T) = 1 + 4s (mod 8)`.
+3. (Count; a corollary of the KNOWN count `2^(n^2/4)`, resp. `2^((n^2-1)/4)`, of labelled tournaments with a fixed
+   anti-involution: Session29 half-path section 5, THM-4743 (6), THM-4930.) For even `n`:
+   `2^(n^2/4) <= SC_n <= (n-1)!! 2^(n^2/4)`. For odd `n`: `SC_n <= n!! 2^((n^2-1)/4)`.
+4. (Race; the weighing is new.) For even `n`, `D_n = SC_n / 2^C(n,2) + D_n^ns`, where `D_n^ns` is the signed fraction
+   of the non-self-converse tournaments, and `0 < SC_n / 2^C(n,2) <= (n-1)!! 2^(-n(n-2)/4)`.
+
+The first draft of this note typed (2) and (3) as new; the audit (M1) found both in the repository, (2) with the
+same proof. The proofs are kept below for completeness.
 
 *Proof.* (1) Let `phi` be an anti-automorphism. `phi^2` is an automorphism, and automorphism groups of tournaments
 have odd order, so `phi^2` has odd order `k`; `psi = phi^k` is an anti-automorphism and `psi^2 = (phi^2)^k = 1`.
@@ -206,7 +259,9 @@ orbits is `n^2/4` (`n` even) and `(n^2 - 1)/4` (`n` odd). There are `(n-1)!!` su
 (4) (1) and (3). QED
 
 **Exact values** (`scrace2.c`, `race_tables.py`, `out/race_tables.out`; every class of orders 3-10, labelled weights
-`n!/|Aut|`; the weights sum to `2^C(n,2)` at every order).
+`n!/|Aut|`; the weights sum to `2^C(n,2)` at every order). `SC_5, SC_6, SC_7` and the bounds at `n = 5, 6, 7` were on
+file (`selfk_type_ledger_opus_S312.out`); `SC_8, SC_9, SC_10`, the shares and the splits below are new. (2) is
+checked on all self-converse classes of orders 4, 6, 8 by `check_selfconverse_mod8.py`.
 
 | `n` | `SC_n` | bound of (3) | `SC_n / 2^C(n,2)` | `D_n` | share of `D_n` carried by self-converse |
 |---|---|---|---|---|---|
@@ -221,13 +276,14 @@ signed sums are `4, 256, 37824, 20782592`, because the classes with `H = 3 (mod 
 self-converse classes of even order split `1/1, 6/6, 82/94, 4448/4336` between `H = 1` and `H = 5 (mod 8)` at
 `n = 4, 6, 8, 10`.
 
-**Self-converse tournaments are the majority exactly for `n <= 5`** (labelled fractions
-`1, 1, 1, 3/4, 11/16, 55/256, ...`; classes `2/2, 2/4, 8/12, 12/56, 88/456, ...`). This is the owner's "8 to 4" at
-`n = 5`: the last order at which the squares outnumber the rest.
+**Labelled self-converse tournaments are the majority exactly for `n <= 5`** (labelled fractions
+`1, 1, 1, 3/4, 11/16, 55/256, ...`; among classes `2/2, 2/4, 8/12, 12/56, 88/456, ...`, a tie at `n = 4`). This is
+the owner's "8 to 4" at `n = 5`: the last order at which the squares outnumber the rest.
 
 ## 5. The race, exactly
 
-All numbers are exact; sources: THM-5127 for `D_n` (`n <= 11`), `out/race_tables.out` for the splits.
+All numbers are exact; sources: THM-5127 for `D_n` (`n <= 11`; `D_4, ..., D_7` are already in THM-466),
+`out/race_tables.out` for the splits. The audit recomputed every entry of this section with its own programs.
 
 **Labelled race in three strata** (in units of `4^(-n)`; `sc` = self-converse, `sym` = non-trivial automorphism
 group and not self-converse, `rigid` = neither).
@@ -247,10 +303,12 @@ group and not self-converse, `rigid` = neither).
 **Class race.** Classes with `H = 1` minus classes with `H = 3 (mod 4)`: `0, 0, 0, 8, 36, 264, 1268, 22600` at
 `n = 3, ..., 10`. For even `n` this is (number of self-converse classes) + 2 (lead among converse pairs):
 `0 = 2 - 2`, `8 = 12 - 4`, `264 = 176 + 88`, `22600 = 8784 + 13816`. At `n = 4` and `n = 6` the classes that are not
-self-converse favour `H = 3`, and the self-converse classes reverse (`n = 6`) or cancel (`n = 4`) the result.
+self-converse favour `H = 3`, and the self-converse classes reverse (`n = 6`) or cancel (`n = 4`) the result. (The
+split `32 : 24` at `n = 6` is in THM-1980.)
 
-**Strong race** (Proposition 5.1). Every tournament is uniquely an ordered sum of strong tournaments and `H`
-multiplies over the summands, so with exponential generating functions over labelled structures
+**Strong race** (Proposition 5.1; the unsigned identity `T = 1/(1 - S)` is KNOWN, THM-4816, THM-4817, and the sign
+is multiplicative, so this is a one-line consequence). Every tournament is uniquely an ordered sum of strong
+tournaments and `H` multiplies over the summands, so with exponential generating functions over labelled structures
 `T_chi(x) = 1/(1 - S_chi(x))`, where `T_chi`, `S_chi` have coefficients `sum chi` over all and over strong
 labelled tournaments. Inverting with the exact `2^C(n,2) D_n` gives the signed counts of strong tournaments
 `-2, 24, 176, 4080, 123952, 8135680, 332488064, 75937800960, 15259291222528` at `n = 3, ..., 11`; the same numbers
@@ -266,10 +324,13 @@ come out of the census flags for `n <= 10` (`race_tables.py` asserts it). The st
 | 8 | 1.06395 | 0.97866 | 1.01912 | 0.93827 |
 | 9 | 1.01529 | 0.99192 | 0.99975 | 0.99303 |
 | 10 | 1.00330 | 0.99603 | 1.00155 | 0.99912 |
-| 11 | 1.00052 | 0.99948 | 1.00044 | 0.99956 |
+| 11 | 1.00051 | 0.99949 | 1.00044 | 0.99956 |
 
-Rows 7-9 reproduce HYP-9355's table; rows 10 and 11 are exact (first and second audit of THM-5127) where HYP-9355
-had samples (`1.0030 +- 0.0009` at `n = 10`; `0.9996` pooled at `n = 11`).
+Rows 7-9 reproduce HYP-9355's table; rows 10 and 11 are exact where HYP-9355 had samples (`1.0030 +- 0.0009` at
+`n = 10`; `0.9996` pooled at `n = 11`). Row 10: the census of this packet and the first audit of THM-5127. Row 11:
+the census of the audit of this packet over all 9,733,056 bases of order 10 (`audit/audit_cube.c`); the labelled
+counts are `9011754468980736, 9002583394936832, 9011181642270720, 9003277512775680` of `2^55`. (The first draft had
+`1.00052, 0.99948` in row 11, from five-digit fractions of the second audit of THM-5127; audit m2.)
 
 **Two deck remarks (PROVED, double counting).** Each odd cycle of length `l` lies in `n - l` vertex-deleted
 subtournaments. So for even `n` the number of vertices `v` with `H(T - v) = 3 (mod 4)` has the parity of
@@ -317,9 +378,12 @@ Then `q_1 = C(n,2)` and `q_2 = n C(n,2) (mod 2)`.
    | 3 | `2^((m+1)/2) (n_00 + n_10)` |
 
    In particular **`G(R) >= 0` for every tournament `R`**: no tournament has more one-vertex extensions with
-   `c_3 + c_5` odd than with `c_3 + c_5` even. `G(R) >= 2^ceil(m/2)` unless `m = 1 (mod 4)`, where `G(R) = 0` occurs.
+   `c_3 + c_5` odd than with `c_3 + c_5` even. More precisely `G(R) = 0` or `G(R) >= 2^ceil(m/2)`, and `G(R) = 0`
+   only for `m = 1 (mod 4)` (there, if `K_1` is empty then `A` is singular and `|K_0| >= 2`; the sharpening is the
+   auditor's). Values at `m = 5`: `0, 8, 16`; at `m = 9`: `0, 32, 64, 128`.
 4. **(Joint law.)** For a uniformly random labelled tournament on `n >= 1` vertices, `s` is uniform on
-   `{|s| = C(n,2) mod 2}` (KNOWN: THM-1470). Given `s` with support `O`, `1 <= |O| <= n - 1`, the vector `t` is
+   `{|s| = C(n,2) mod 2}` (KNOWN: Session72 `SCORE_PARITY_QUOTIENT.md`; re-proved in 6.2). Given `s` with support
+   `O`, `1 <= |O| <= n - 1`, the vector `t` is
    uniform on `{t : |t restricted to O| = C(|O|, 2), |t restricted to V \ O| = C(n - |O|, 2) (mod 2)}`; `t = 0` if `O`
    is empty and `t = 1` if `O = V`.
 5. **(Exact races.)** With `(2/n)` the Kronecker symbol (`+1` for `n = +-1`, `-1` for `n = +-3 (mod 8)`):
@@ -348,6 +412,11 @@ Then `q_1 = C(n,2)` and `q_2 = n C(n,2) (mod 2)`.
   bases of order 10).
 - **Kernel reading.** For `m = 0 (mod 4)` the triangle-plus-pentagon surplus of the extensions of `R` is
   `2^(m/2)` times the number of sets `U` such that every vertex has an even number of in-neighbours in `U`.
+- **Expected kernel size** (PROVED, elementary; checked exhaustively for `m <= 6`). For a uniformly random labelled
+  tournament on `m` vertices, `E |ker A| = 2 + 2^((1-m)/2) cos((m-1) pi/4) - 2^(1-m)` over `F_2` (a uniformly random
+  square matrix has `2 - 2^(-m)`): a non-zero `x` of weight `k` is in the kernel with probability `2^(1-m)` if
+  `k = 0, 1 (mod 4)` and `0` otherwise, because the scores inside the support must all be even. With (3) this gives
+  the row `n = 1 (mod 4)` of (5) a second time.
 
 ### 6.2 Proofs
 
@@ -390,9 +459,15 @@ term cancels against `(s . x)|c_0 + y + sigma x|`. By (2) the result is `f_2(R) 
 
     (-1)^((c_3+c_5)(R)) G(R) = (1/2) sum_{(u, tau) in K} [ Gamma(|u + u_0|) + (-1)^(tau + |u|) Gamma(|u + u_1|) ].
 
+(Poisson summation: `sum_x F(Lx) = (|ker L| / |K|) sum_{k in K} sum_z (-1)^(k . z) F(z)`, `z = (y', sigma)` running
+over `F_2^m x F_2`, and `|ker L| / |K| = 1/2` because `dim K = 1 + dim ker L`; the substitution `y = y' + sigma 1` gives
+the sign `(-1)^(sigma (tau + |u|))`.)
+
 For `(u, tau) in K`: `C(|u|, 2) = u^T A u = tau |u|`, which gives the weights mod 4 stated in (3);
 `u . As = tau pi` and `u . s = tau m`, so `u . u_1 = tau pi` and `u . u_0 = tau pi + tau m + |u|`. With
-`a = |As| mod 4`: `|u_1| = a`, `|u_0| = m - a - pi (mod 4)`, and `|u + u_sigma| = |u| + |u_sigma| + 2 u . u_sigma`.
+`a = |As| mod 4`: `|u_1| = a`, `|u_0| = m - a - pi (mod 4)` (because `|As + s| = |As| + |s| - 2 s^T A s`,
+`s^T A s = C(|s|, 2)`, and `k - 2 C(k,2) = k(2 - k)` is `0` or `1 (mod 4)` according to the parity of `k`), and
+`|u + u_sigma| = |u| + |u_sigma| + 2 u . u_sigma (mod 4)`.
 Evaluating the cosines: the element `0` contributes `Z = (1/2)(Gamma(|u_0|) + Gamma(|u_1|))`, and
 
 | `m mod 4` | `abs(Z)` | `tau = 0`, weight 0 | `tau = 0`, weight 1 | `tau = 1`, weight 0 | `tau = 1`, weight 3 |
@@ -419,20 +494,37 @@ admissible `t` has the same number `2^(C(n,2) - (2n - 3))` of tournaments. The t
 
     E_n[{3,5}] = (-1)^floor(n/4) 2^(1-n) [ B + 2^(2-n) sum_q C(n,q) (-1)^(C(q,2) C(n-q,2) + floor(q/4) + floor((n-q)/4)) 2^(floor(q/2) + floor((n-q)/2)) ],
 
-the sum over `1 <= q <= n - 1`, `q = C(n,2) (mod 2)`, and `B` the two boundary terms; `E_n[{5}]` has the extra sign
-`(-1)^C(q,2)` and no prefactor. The summand, divided by `C(n,q) 2^(n-2)`, is the conditional mean given `|O| = q`;
-this is the conditional form. For `n = 2 (mod 4)` every admissible `q` is odd, `q` and `n - q` are both `1` or both
-`3 (mod 4)`, the exponent of `-1` is even in both cases and `floor(q/2) + floor((n-q)/2) = (n-2)/2`: the conditional
+the sum over `1 <= q <= n - 1`, `q = C(n,2) (mod 2)`, and `B = [C(n,2) even] + [n = C(n,2) mod 2] (-1)^C(n,2)` the
+two boundary terms (`q = 0`, where `t = 0`, and `q = n`, where `t = 1`); `E_n[{5}]` has the extra sign `(-1)^C(q,2)`,
+boundary terms `[C(n,2) even] + [n = C(n,2) mod 2]`, and no prefactor. The summand, divided by `C(n,q) 2^(n-2)`, is
+the conditional mean given `|O| = q`; this is the conditional form. For `n = 2 (mod 4)` every admissible `q` is
+odd, `q` and `n - q` are both `1` or both
+`3 (mod 4)`, the exponent of `-1` in the summand is `(n-2)/4 (mod 2)` in both cases, which cancels the prefactor
+`(-1)^floor(n/4)`, and `floor(q/2) + floor((n-q)/2) = (n-2)/2`: the conditional
 mean is `2^(-(n-2)/2)` for every `O`, which gives the middle row of (5) directly (`(-1)^(c_5)` is `(-1)^(c_3)`, a
-function of `s`, times `(-1)^(c_3 + c_5)`). For the other rows: for `n` in a fixed class mod 8 the summand is `C(n,q)` times a function of `q mod 8`
-times a fixed power of 2, so both sides of each identity in (5) are combinations of at most five geometric
-sequences in `n` (ratios `2^(-4), 2^(-8), 2^(-12), -(2 + sqrt 2)^4 2^(-12), -(2 - sqrt 2)^4 2^(-12)` per step of 8).
-`pentagon_closed_forms.py` checks the identities in exact rational arithmetic for all `n <= 130`, sixteen members of
-each class; so they hold for every `n`. QED
+function of `s`, times `(-1)^(c_3 + c_5)`).
 
-*Typing.* (1)-(5) PROVED. KNOWN and used: THM-118 (`tr A^k = k c_k`, `k <= 5`), THM-500, the uniformity of the
-score-parity vector (THM-1470). Not found in the repository: the vector `t = As`, the weight-mod-4 formulas, the
-cube formula and its positivity, the closed forms. No claim about the literature.
+For the other rows: for `n` in a fixed class mod 8 the summand is `C(n,q)` times a function of `q mod 8` times a
+fixed power of 2 (`2^(floor(q/2) + floor((n-q)/2))` depends only on `n` once the parity of `q` is fixed), and
+`sum_q C(n,q) g(q mod 8)` is a combination of the powers `(1 + zeta^j)^n`, `zeta = e^(2 pi i/8)`. So, as functions of
+`k` in `n = 8k + r`, both sides of each identity in (5) are combinations of at most five geometric sequences, with
+ratios `2^(-4), 2^(-8), 2^(-12), -(2 + sqrt 2)^4 2^(-12), -(2 - sqrt 2)^4 2^(-12)` (from `2^(3-2n) 2^(n/2) (1 + zeta^j)^n`
+for `j = 0, +-2, +-1, +-3`, from the boundary terms and from the closed forms). Two such combinations that agree at
+five consecutive values of `k` agree for all `k`. `pentagon_closed_forms.py` checks the identities in exact rational
+arithmetic for all `n <= 130`, at least sixteen members of each class; so they hold for every `n`. (The audit
+checked that both sides satisfy the recurrence with these five roots, that only the three rational ratios occur,
+and the identities for `n <= 240`.) QED
+
+*Typing.* (1)-(5) PROVED. KNOWN and used: THM-118 (`tr A^k = k c_k`, `k <= 5`; also in the literature), THM-500,
+the uniformity of the score-parity vector for every `n` (Session72 `SCORE_PARITY_QUOTIENT.md`; for odd `n` inside a
+switching class THM-1470), the classical score formula for `c_3` (which gives the first formula of (1) directly),
+the layers of the vertex-cube form (THM-5127 (4.4)). RELATED: over the integers `A^2 1` is the Kendall-Wei
+second-order score (THM-896; THM-555 notes that it does not determine `c_5`); the matrix `A` over `F_2` and de Caen's
+rank bound are in THM-4857; HYP-6935 [ii] has a partial law for `H mod 4` at `n = 5, 6`. Not found in the repository
+(the audit searched as well): the reduction mod 2 of the second-order score and its weight mod 4, the formulas of
+(1) for `c_3 + c_5` and `c_5`, the second equality of (2), the cube formula (3) and its positivity, the joint law
+(4), the closed forms (5), the corollary for `n <= 6`. No claim about the literature (the audit found nothing on
+the parity of `c_5` or on the kernel formula; `audit/literature_notes.md`).
 
 *Machine checks* (`k35cube.c`, `k35_tables.py`, `pentagon_closed_forms.py`; `out/k35_summary.out`,
 `out/pentagon_closed_forms.out`): (1) and (4) on every labelled tournament of order at most 6; (1), (3), the trace
@@ -458,13 +550,14 @@ the full column equals `D_n`); row 11 from Theorem P and THM-5127.
 
 - **Short cycles keep the bias, the longest cycles erase it.** At `n = 9`: triangles `0.0625`, triangles and
   pentagons `0.128`, lengths up to 7 `0.034`, all lengths `0.0075`. At `n = 10`: `0.0625, 0.0625, 0.034, 0.0024`.
-  The first two columns are permanent laws of size `2^(-n/2)` (Theorems T and P); the full race is `10^(-3) 4^(-n)` at
-  `n = 12` (section 7).
+  The columns `{3}` and `{3,5}` are permanent laws of size `2^(-n/2)` (Theorems T and P; the column `{5}` is of
+  size `2^(-n)`); the full race is about `10^3 * 4^(-12)` at `n = 12` (section 7).
 - **Why the first two layers are exact.** `c_3` and `c_3 + c_5` are weights mod 4 of two vectors that depend
   `F_2`-linearly on the arcs in a controlled way (`s`, then `t` given `s`), and a weight mod 4 has a Gauss sum of
-  modulus `2^(n/2)`. **The tower stops at the pentagon** (`tower_test.py`): the next candidate,
+  modulus `2^(n/2)`. **The direct continuation fails at the heptagon** (`tower_test.py`): the next candidate,
   `tr(A^3 + A^5 + A^7) = C(|A^3 1|, 2) + floor(n/4)`, fails for 42% of random tournaments of orders 3-14, and
-  `c_7` is not a trace (THM-500, THM-502). From the heptagon on the increment of the count on a vertex cube is
+  `c_7` is not a trace (THM-500, THM-502). Whether another vector does the job is open (HYP-9663 (H) (3)). From
+  the heptagon on the increment of the count on a vertex cube is
   still a quadratic form (THM-5127), but its base sign is no longer a weight.
 - **FINITE-EXACT, not explained.** At `n = 10`: `E[{7}] = E[{3,5}] E[{3,5,7}]` and `E[{3,7}] = E[{3,5}] E[{5,7}]`
   (the sign of `c_3 + c_5` is uncorrelated with those of `c_3 + c_5 + c_7` and `c_5 + c_7`, and with no other sign
@@ -518,7 +611,18 @@ sinks.
 lead falls by a factor 8, against factors `5.5, 3.1, 5.1` before. After removing the square term (at most
 `10395 * 2^(-30)`, i.e. 162 in these units at `n = 12`) the non-self-converse lead is about `830` at `n = 12` against
 `1599` at `n = 10`. What survives of HYP-9663 (G) is the sign: `D_n > 0` at every order computed. The rate of decay
-is OPEN; the data now say only that it is faster than `4^(-n)`.
+is OPEN: one order shows that the plateau does not continue, not what replaces it (the values at `n = 7, ..., 11`
+already move by a quarter from one order to the next).
+
+**Independent estimate (audit).** The auditor wrote a separate estimator (own path DP, residues of
+`H(R + v_X) mod 8` for all `2^11` out-sets, other generator and seeds; `audit/audit_cube.c`): 9,000,000 bases of order
+11 give `D_12 4^12 = 1039 +- 125`, and the same program one order lower gives `2038.9 +- 66.8` against the exact
+`1987.8`. Pooled with Run A: `D_12 4^12 = 1008 +- 77`. R1 FAILED stands.
+
+**On R2.** By its registered rule (tolerance `0.006`) R2 is confirmed, and the agreement is to `3 * 10^(-4)`; but
+that tolerance was sixty standard errors wide, and the observed fractions differ from the reference law by about
+three standard errors (`-3.1`, `+2.8`). The rank law at order 11 is close to, and probably not equal to, the law of
+a random alternating matrix with an odd number of edges.
 
 The contrast between R1 and R2-R4 is the content: the quantities that passed are second moments and rank
 statistics, which are governed by forced coincidences (twins, sources and sinks) and by a random-matrix law; the
@@ -530,45 +634,63 @@ quantity that failed is a mean, where a few small orders had drawn a straight li
 Each row states the small-number behaviour, the large-number behaviour, what carries the small-number regime (the
 "microcosm" of the owner's 2026-10-14 prompt), where it ends, and a type. Types: **crevasse** (a structural gap
 closed by overlap), **Borel-Cantelli** (a probability whose sum converges), **square term** (a duality whose fixed
-points all fall in one class), **fold** (a unimodal sequence: slower growth over faster growth). Rows 1-7 are
-inherited; rows 8-13 are from this session or re-typed by it.
+points all fall in one class), **fold** (a unimodal sequence: slower growth over faster growth), **permanent bias**
+(an exact Gauss sum that neither decays faster nor changes sign), **threshold** (a monotone ratio that crosses
+1/2). Rows 1-7 are inherited; rows 8-13 are from this session or re-typed by it.
 
 | # | phenomenon | small numbers | large numbers | carried by | ends at | type | status and source |
 |---|---|---|---|---|---|---|---|
-| 1 | odd path counts of tournaments | 7 and 21 are missed | every other odd number (conjecture) | bands `[f(n), max H(n)]` that do not yet overlap: `f(n+1) > max H(n)` for `n <= 4`, equal at `n = 5` | value 21, order 6 | crevasse | exclusion PROVED (THM-1370, THM-4986); coverage OPEN |
+| 1 | odd path counts of tournaments | 7 and 21 are missed | every other odd number (conjecture) | 7: the bands `[f(n), max H(n)]` of strong tournaments, `[3,3], [5,5], [9,15], [15,45]` at orders 3-6, leave the gap between 5 and 9; 21: inside the band of order 6 but not a strong value there, with `f(7) = 25` and `21 = 3 * 7` (THM-1370 (4)-(5)) | value 21, orders 6-7 | crevasse | exclusion PROVED (THM-1370, THM-4986); coverage OPEN |
 | 2 | square-sum paths on `1..n` | none for `n in {2..14, 18..22, 24}` | all `n >= 25` | leaves and the degree law | 24 | crevasse, closed by a self-similar induction | PROVED (Gerbicz; THM-4505, THM-4851) |
 | 3 | Fermat numbers | prime for `k <= 4` | composite for `5 <= k <= 32`; finitely many primes expected | prime density `1/ln F_k` not yet negligible | `k = 4` | Borel-Cantelli | OPEN (THM-4847, ATLAS) |
 | 4 | Sun's `2-4-6-8` | true below `8.96 * 10^14` | false | representation count `V X^(25/24)`, critical | `896315812331399` | Borel-Cantelli, critical | REFUTED (THM-4026, THM-4028) |
-| 5 | primes mod 4 | class 3 leads until 26861 | class 3 leads with logarithmic density 0.9959 | prime squares | never ends | square term | CITED (opus S32 note) |
+| 5 | primes mod 4 | class 3 leads until 26861 | class 3 leads with logarithmic density 0.9959 (conditional: GRH and linear independence of the zeros, Rubinstein-Sarnak) | prime squares | never ends | square term | CITED (opus S32 note) |
 | 6 | Polya, `pi < li` | hold to `9.06 * 10^8`, `10^19+` | fail | squares | first failure | square term | CITED (same) |
 | 7 | Mertens | holds to `10^16` | fails | nothing (`mu` kills squares) | - | no square term | CITED (same) |
 | 8 | triangle parity of tournaments | even leads by `2^(-floor((n-1)/2))` | the same law | every base has the same surplus `2^ceil(m/2)` | never ends | permanent structural bias | PROVED (Theorem T) |
 | 8b | triangle-plus-pentagon parity | even leads: `1/2, 1/2, 13/32, 1/4, 67/256, ...` | `2^(-(n-2)/2)` for `n = 2 (mod 4)`, about `2 * 2^(-floor((n-1)/2))` otherwise | every base has a non-negative surplus, a multiple of the kernel size of its adjacency matrix mod 2 | never ends | permanent structural bias | PROVED (Theorem P) |
 | 9 | `H mod 4` of tournaments, labelled | `D_3 = D_4 = 1/2`, the extreme allowed; `D_5 = 13/32`, `D_6 = 1/4` | positive lead, `2 * 10^3 * 4^(-n)` for `8 <= n <= 11`, then `10^3 * 4^(-12)` | triangles (`n <= 4`) and pentagons (`n <= 6`), where the race is a weight mod 4; then self-converse tournaments (even `n <= 8`) | 6 for the exact law, about 10 for the square term | weight mod 4 and square term in the microcosm, generic lead after | PROVED for `n <= 6` (Theorems T, P); exact to 11, estimated at 12 (sections 5, 7); rate OPEN |
 | 10 | `H mod 4`, classes | lead `0, 0, 0, 8` at `n = 3..6`; at 4 and 6 the non-self-converse classes favour `H = 3` | lead about `2^C(n,2) D_n / n!` | self-converse classes | `n = 8` | square term | FINITE-EXACT (section 5) |
-| 11 | self-converse share | majority for `n <= 5` (8 of 12 classes at `n = 5`) | at most `(n-1)!! 2^(-n(n-2)/4)` | `(2k-1)!!` against `2^(k^2)` | 5 | fold | PROVED bound (Theorem S) |
+| 11 | labelled self-converse share | majority for `n <= 5` (`11/16` at `n = 5`; 8 of 12 classes) | at most `(n-1)!! 2^(-n(n-2)/4)` | `(2k-1)!!` against `2^(k^2)`; the share is monotone and passes 1/2 between `n = 5` and `6` | 5 | threshold | PROVED bound (Theorem S (3), a corollary of known counts) |
 | 12 | "the pentagon is invisible at even order" | true at 6 and 8 | false at 10 | at 6 it is the case `n = 2 (mod 4)` of Theorem P; at 8 unexplained | 10 | coincidence of two cases | pre-registered, FAILED (section 6.4) |
 | 12b | "`D_n 4^n` is about `2 * 10^3`" | true at 8, 9, 10, 11 | false at 12 | unknown | 12 | plateau of four cases | pre-registered, FAILED (section 7) |
 | 13 | ball volumes, `n^(1/n)` | increase to `n = 5`, to `n = 3` | decrease to 0, to 1 | `pi^(n/2)` against `Gamma(n/2 + 1)` | 5.26, `e` | fold | elementary (fold note of 2026-11-04) |
 
 **Folds and bands (typed ANALOGY with one exact ingredient).** The owner's fold has a value realised twice, once on
-each side of a peak. Three sequences in this problem have that shape for the same reason, a slower growth divided
-by a faster one:
+each side of a peak. Two sequences in this problem have that shape for the same reason, a slower growth divided by
+a faster one:
 
-- `V_2k = pi^k/k!` (ball volumes in even dimension; the weights of a Poisson law of mean `pi`; sum `e^pi`);
+- `V_2k = pi^k/k!` (ball volumes in even dimension; the weights of a Poisson law of mean `pi`; sum `e^pi`), with its
+  peak at `k = 3`; among all integer dimensions the volume peaks at 5;
 - `f(n+1)/E[H_n] = (kappa/2) lambda^n/n!` with `lambda = 2 * 5^(1/3) = 3.42`, `kappa in {1, 3/5^(2/3), 9/5^(4/3)}`,
   the ratio of the least strong count at order `n+1` (Busch, CITED in THM-1370) to the mean count `n!/2^(n-1)` at
-  order `n`: `3, 3.33, 3, 2, 1.11, 0.57, 0.24` at `n = 2, ..., 8` (with the true maxima: `3, 5/3, 9/5, 1, 5/9`);
-- the self-converse share bound `(n-1)!! 2^(-n(n-2)/4)`: `3/4, 15/64, 105/4096` at `n = 4, 6, 8`.
+  order `n`: `3, 3.33, 3, 2, 1.11, 0.57, 0.24` at `n = 2, ..., 8`, with its peak at `n = 3` (with the true maxima
+  in place of the means: `3, 5/3, 9/5, 1, 5/9`).
+
+The self-converse share bound `(n-1)!! 2^(-n(n-2)/4)` (`3/4, 15/64, 105/4096` at `n = 4, 6, 8`) is of the same
+exponential-over-factorial kind but monotone: it has no peak, it crosses 1/2 (row 11, type threshold).
 
 EXACT: a crevasse of the path spectrum can only sit where the second ratio exceeds 1, and `f(n+1) > max H(n)`
 holds exactly for `n <= 4`; this is THM-1370's reason for 7, written as a comparison of an exponential with a
-factorial. ANALOGY: the three peaks are near 5 because the bases `pi`, `3.42`, 2 are small numbers; the repository
-rule (MISTAKE-559) applies and no map between the three is claimed. The second half of the owner's sentence has an
-exact form in the path spectrum: a value `h` is realised by strong tournaments exactly at the orders of its window
-`W(h) = [n(h), e(h)]` (THM-4889 (3)); at the least order it lies in or above the bulk of that order (many cyclic
-triangles), at the largest order it lies at the Busch floor (few). The two ends are the two realisations; the
-window has 1 to 4 orders for `h < 225` and its length grows like `1.86 ln h`.
+factorial (21 needs more: row 1). ANALOGY: both peaks sit at small arguments because the bases `pi` and `3.42` are
+small numbers; the repository rule (MISTAKE-559) applies and no map between the two is claimed. The second half of
+the owner's sentence has an exact form in the path spectrum: a value `h` is realised by strong tournaments exactly
+at the orders of its window `W(h) = [n(h), e(h)]` (THM-4889 (3)); at the least order it lies in or above the bulk of
+that order (many cyclic triangles), at the largest order it lies at the Busch floor (few). The two ends are the two
+realisations; the window has 1 to 4 orders for `h < 225`.
+
+**The period-8 phase (IDENTITY) and the Gaussian integral (ANALOGY).** Every closed form of Theorems T and P is a
+real or imaginary part of a power of `1 + i`: `sum_{k even} C(n,k) (-1)^(k/2) = Re (1 + i)^n`, and for odd `n` this
+is `(2/n) 2^((n-1)/2)`. It is the identity behind the second supplement to quadratic reciprocity (reduce
+`(1 + i)^p` modulo `p`: 2 is a square mod `p` iff `p = +-1 (mod 8)`). So the sign `(2/n)` in the pentagon race is the
+character whose race among the primes has a Chebyshev bias of the same kind as the race mod 4 (prime squares are
+`1 (mod 8)`); in the pentagon race it is exact and has no fluctuation. ANALOGY: the ball volume
+`pi^(n/2)/Gamma(n/2 + 1)` is the modulus side of the `n`-th power of a one-dimensional Gaussian integral
+(`int exp(-pi x^2) dx = 1`, unfolded in polar coordinates), and the race values are the phase side of the `n`-th
+power of a one-dimensional Gauss sum (`1 + i`). The first has a fold, because the unfolding puts a factorial in the
+denominator; the second cannot have one (modulus exactly `2^(n/2)`, phase of period 8). The MRB constant is the
+alternating sum of the fold `n^(1/n) - 1` (fold note of 2026-11-04); the solvable layers of the race have no
+alternating-sum constant of that kind, because they do not fold. No map between these objects is claimed.
 
 **Micro and macro in the race (IDENTITY where stated).**
 
@@ -576,11 +698,12 @@ window has 1 to 4 orders for `h < 225` and its length grows like `1.86 ln h`.
   forever.
 - For even `n` the deck determines `chi`: `chi(T) = prod_v chi(T - v)` (section 5).
 - Ordered sums multiply `chi` (codex signed tables), which gives the strong race of Proposition 5.1.
-- A vertex cube carries a quadratic form whose triangle part `sigma . x + e_2(x)` is the same for every base
-  (Theorem T) and whose remainder is the parity of the longer even-order paths (THM-5127 (4.4)).
+- A vertex cube carries a quadratic form whose triangle part is `sigma . x + e_2(x)`: the quadratic part `e_2` and
+  the Gauss sum `2^ceil(m/2)` are the same for every base (Theorem T), the linear part `sigma` is the score-parity
+  vector of the base; the remainder is the parity of the longer even-order paths (THM-5127 (4.4)).
 - In the coordinates `y = Ax + |X| 1` the triangle-plus-pentagon part is again a triangle form,
   `C(|y|, 2) + u . y` (Theorem P (2)): the pentagon layer of a vertex cube is the triangle layer seen through the
-  adjacency matrix. The step cannot be repeated (the tower stops at the heptagon).
+  adjacency matrix. The step cannot be repeated in the same form (the direct continuation fails at the heptagon).
 - For `n <= 6` the macrocosm is the microcosm: `H mod 4` is the weight mod 4 of one vector, `t = A^2 1`.
 
 **What transfers to the conjecture, and what does not.**
@@ -662,7 +785,9 @@ Requires `gentourng` (nauty) and a C compiler. From this directory:
     for m in $(seq 11 40); do /tmp/k35cube mc $m 4000000 $((3000+m)) > out/k35mc_$m.out 2>> out/k35mc_checks.err; done
     python3 k35_tables.py > out/k35_summary.out                    # censuses and samples against the closed forms
     python3 pentagon_closed_forms.py 6 34 130 > out/pentagon_closed_forms.out   # Theorem P (1), (4), (5)
-    python3 tower_test.py > out/tower_test.out                     # the tower stops at the pentagon
+    python3 tower_test.py > out/tower_test.out                     # the direct continuation fails at the heptagon
+    python3 kernel_size_check.py 6 > out/kernel_size_check.out     # expected kernel size of A over F_2
+    python3 check_selfconverse_mod8.py > out/check_selfconverse_mod8.out   # Theorem S (2) on all classes of orders 4, 6, 8
 
 `scrace.c` and `stronghist.c` are earlier versions kept for the record (two-way split; strong histograms).
 `k35cube.c` checks, on every base it reads or draws: the trace formulas against a direct count of 5-cycles (census

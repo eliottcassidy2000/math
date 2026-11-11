@@ -1,0 +1,59 @@
+(1) Run A from the author's raw files
+Run A: m = 11, runs 6, N = 14400000, control failures [0, 0, 0, 0]
+  D_12 = 5.891710e-05 +- 5.87e-06 ; times 4^12: 988.5 +- 98.5 ; z = 10.03
+  per-run values (times 4^n): 1017, 616, 1101, 684, 1236, 1276
+  per-run standard error 241; chi^2 of the runs about the pooled mean = 6.69 on 5 d.o.f.; empirical s.e. of the mean from the run scatter = 113.9
+  rho_11 = 2^m E[b^2] = 1.01719 (per run: 1.01846, 1.01758, 1.01796, 1.01679, 1.01628, 1.01606; s.e. from the run scatter 0.00039)
+  E|b_R| = 0.014543 ; E[b_R] (unsigned vertex-deletion correlation) = 1.094703e-03 ; forced part 2^(1-m) = 9.765625e-04
+   rank  2: fraction 0.000000 +- 0.000000 ; non-zero-bias frequency 0.00000 +- 0.00000
+   rank  4: fraction 0.000001 +- 0.000000 ; non-zero-bias frequency 0.14286 +- 0.07636
+   rank  6: fraction 0.001397 +- 0.000010 ; non-zero-bias frequency 0.04553 +- 0.00147
+   rank  8: fraction 0.159917 +- 0.000097 ; non-zero-bias frequency 0.13268 +- 0.00022
+   rank 10: fraction 0.838685 +- 0.000097 ; non-zero-bias frequency 0.50399 +- 0.00014
+  R1 rule: point estimate 988.5, interval [1500, 2500], distance to the interval 5.19 s.e. -> FAILED
+  R2 rule: rank-10 fraction 0.838685, |diff from 0.83898| = 0.000295 (<= 0.006: True); rank <= 6 fraction 0.001399 in [0.0012, 0.0030]: True
+  R3 rule: rho_11 = 1.01719 in [1.015, 1.045]: True (distance to the lower end 5.6 run-scatter s.e.)
+  R4 rule: corank-1 non-zero-bias frequency 0.50399 in [0.500, 0.512]: True
+
+    order-10 control from the author's raw files
+control: m = 10, runs 4, N = 4000000, control failures [0, 0, 0, 0]
+  D_11 = 4.724219e-04 +- 1.59e-05 ; times 4^11: 1981.5 +- 66.8 ; z = 29.65
+  per-run values (times 4^n): 2009, 1947, 2050, 1920
+  per-run standard error 134; chi^2 of the runs about the pooled mean = 0.58 on 3 d.o.f.; empirical s.e. of the mean from the run scatter = 29.5
+  rho_10 = 2^m E[b^2] = 1.03991 (per run: 1.03874, 1.03976, 1.03978, 1.04134; s.e. from the run scatter 0.00054)
+  E|b_R| = 0.022552 ; E[b_R] (unsigned vertex-deletion correlation) = 2.376234e-03 ; forced part 2^(1-m) = 1.953125e-03
+   rank  2: fraction 0.000000 +- 0.000000 ; non-zero-bias frequency 0.00000 +- 0.00000
+   rank  4: fraction 0.000056 +- 0.000004 ; non-zero-bias frequency 0.19912 +- 0.02656
+   rank  6: fraction 0.021620 +- 0.000073 ; non-zero-bias frequency 0.08686 +- 0.00096
+   rank  8: fraction 0.559339 +- 0.000248 ; non-zero-bias frequency 0.26377 +- 0.00029
+   rank 10: fraction 0.418984 +- 0.000247 ; non-zero-bias frequency 1.00000 +- 0.00000
+  exact D_11 4^11 = 1987.8; deviation of the estimate -0.09 s.e.
+
+(2) Run C from the author's raw files
+  n=11: N=40000000 E[{3}]=0.031297 (z=+0.30) E[{5}]=0.0030408 (z=+0.32) E[{3,5}]=0.0611025 (z=-2.28)
+  n=12: N=40000000 E[{3}]=0.031309 (z=+0.37) E[{5}]=0.0029429 (z=-0.30) E[{3,5}]=0.0612651 (z=-1.25)
+  n=13: N=40000000 E[{3}]=0.016049 (z=+2.68) E[{5}]=0.0008192 (z=+0.50) E[{3,5}]=0.0309980 (z=-0.00)
+  n=14: N=40000000 E[{3}]=0.015728 (z=+0.65) E[{5}]=0.0003731 (z=+0.82) E[{3,5}]=0.0158031 (z=+1.13)
+  n=15: N=40000000 E[{3}]=0.007585 (z=-1.44) E[{5}]=-0.0000623 (z=-1.55) E[{3,5}]=0.0158138 (z=+0.81)
+  n=16: N=40000000 E[{3}]=0.007685 (z=-0.81) E[{5}]=0.0004017 (z=+1.39) E[{3,5}]=0.0159489 (z=+1.67)
+  n=17: N=40000000 E[{3}]=0.003854 (z=-0.33) E[{5}]=0.0000684 (z=+0.14) E[{3,5}]=0.0079747 (z=+0.93)
+  n=18: N=40000000 E[{3}]=0.003942 (z=+0.22) E[{5}]=0.0000394 (z=+0.15) E[{3,5}]=0.0038237 (z=-0.52)
+  R7: n=14: (0.015803 - 2^-6)/s.e. = +1.13 ; n=18: -0.52  (rule: within 3)
+  R8: (E_12 - E_11)/s.e.(diff) = +0.73 ; (E_16 - E_15) = +0.60  (rule: within 3)
+  control: largest |z| of the triangle column 2.68 (rule: within 3); largest |z| of the 16 pentagon comparisons 2.28
+
+(3) My own estimator (audit_cube.c mc, direct evaluation of H mod 4 on all out-sets; new seeds)
+  m = 11: N = 9000000 in 3 runs; D_12 = 6.192708e-05 +- 7.43e-06; times 4^12: 1039.0 +- 124.6; per run: 1266, 949, 902
+     rho_11 = 1.01646; E|b_R| = 0.014538; relative masses of H mod 8 (1,3,5,7): 1.00007, 0.99996, 1.00006, 0.99992
+     author's estimate 988.5 +- 98.5: difference +50.5 = +0.32 combined s.e.; pooled estimate 1007.9 +- 77.3
+  m = 10: N = 4000000 in 1 runs; D_11 = 4.861172e-04 +- 1.59e-05; times 4^11: 2038.9 +- 66.8; per run: 2039
+     rho_10 = 1.04062; E|b_R| = 0.022559; relative masses of H mod 8 (1,3,5,7): 1.00053, 0.99943, 1.00045, 0.99959
+     exact value times 4^11 = 1987.8; deviation +0.76 s.e.
+
+(4) Reference rank law of R2: random alternating n x n matrix over F_2 with an odd number of ones above the diagonal
+  n=4: formula ([1, 35, 28], [1, -5, 4]) ; brute force ([1, 35, 28], [1, -5, 4]) : OK
+  n=5: formula ([1, 155, 868], [1, -5, 4]) ; brute force ([1, 155, 868], [1, -5, 4]) : OK
+  n=6: formula ([1, 651, 18228, 13888], [1, -21, 84, -64]) ; brute force ([1, 651, 18228, 13888], [1, -21, 84, -64]) : OK
+  n=11, odd weight: P(rank 10), P(rank 8), P(rank <= 6) = 0.83898, 0.15965, 0.00137  (quoted in R2: 0.83898 / 0.15965 / 0.00137)
+  n=11, unconditional: 0.83898, 0.15965 (rank 10, rank 8)
+  Run A against the exact reference: rank 10: 0.838685 - 0.838981 = -0.000297 = -3.06 s.e.; rank 8: 0.159917 - 0.159650 = +0.000267 = +2.76 s.e.

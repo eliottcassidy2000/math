@@ -1,0 +1,28 @@
+base order m = 2: classes 1, total weight 2 (2^1 = 2)
+labelled tournaments of order 3 by H mod 8:  1: 6  3: 2  5: 0  7: 0  (even residues: 0)
+numerator of D_3 over 2^3: 4
+sum_R w |g_R| = 0000000000000000004 (decimal split 10^18), as double 4.000000000000e+00 ; sum_R w g_R^2 as double 8.000000000000e+00 ; weight of bases with g_R = 0: 0
+base order m = 3: classes 2, total weight 8 (2^3 = 8)
+labelled tournaments of order 4 by H mod 8:  1: 24  3: 16  5: 24  7: 0  (even residues: 0)
+numerator of D_4 over 2^6: 32
+sum_R w |g_R| = 0000000000000000032 (decimal split 10^18), as double 3.200000000000e+01 ; sum_R w g_R^2 as double 1.280000000000e+02 ; weight of bases with g_R = 0: 0
+base order m = 4: classes 4, total weight 64 (2^6 = 64)
+labelled tournaments of order 5 by H mod 8:  1: 360  3: 240  5: 360  7: 64  (even residues: 0)
+numerator of D_5 over 2^10: 416
+sum_R w |g_R| = 0000000000000000416 (decimal split 10^18), as double 4.160000000000e+02 ; sum_R w g_R^2 as double 2.944000000000e+03 ; weight of bases with g_R = 0: 0
+base order m = 5: classes 12, total weight 1024 (2^10 = 1024)
+labelled tournaments of order 6 by H mod 8:  1: 9920  3: 5760  5: 10560  7: 6528  (even residues: 0)
+numerator of D_6 over 2^15: 8192
+sum_R w |g_R| = 0000000000000008192 (decimal split 10^18), as double 8.192000000000e+03 ; sum_R w g_R^2 as double 8.601600000000e+04 ; weight of bases with g_R = 0: 160
+base order m = 6: classes 56, total weight 32768 (2^15 = 32768)
+labelled tournaments of order 7 by H mod 8:  1: 618240  3: 516320  5: 539520  7: 423072  (even residues: 0)
+numerator of D_7 over 2^21: 218368
+sum_R w |g_R| = 0000000000000268288 (decimal split 10^18), as double 2.682880000000e+05 ; sum_R w g_R^2 as double 3.319808000000e+06 ; weight of bases with g_R = 0: 8400
+base order m = 7: classes 456, total weight 2097152 (2^21 = 2097152)
+labelled tournaments of order 8 by H mod 8:  1: 71400448  3: 65676800  5: 68391936  7: 62966272  (even residues: 0)
+numerator of D_8 over 2^28: 11149312
+sum_R w |g_R| = 0000000000023716352 (decimal split 10^18), as double 2.371635200000e+07 ; sum_R w g_R^2 as double 4.720148480000e+08 ; weight of bases with g_R = 0: 795648
+base order m = 8: classes 6880, total weight 268435456 (2^28 = 268435456)
+labelled tournaments of order 9 by H mod 8:  1: 17442593280  3: 17041087488  5: 17175614976  7: 17060180992  (even residues: 0)
+numerator of D_9 over 2^36: 516939776
+sum_R w |g_R| = 0000000003455123456 (decimal split 10^18), as double 3.455123456000e+09 ; sum_R w g_R^2 as double 8.549544755200e+10 ; weight of bases with g_R = 0: 105735168

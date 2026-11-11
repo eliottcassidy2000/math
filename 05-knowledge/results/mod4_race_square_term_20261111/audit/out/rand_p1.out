@@ -1,0 +1,6 @@
+p1 n=7 N=5000 : failures c3 0, c3+c5 0, c5 0 ; c3 odd in 2176, c5 odd in 2450 samples
+p1 n=8 N=5000 : failures c3 0, c3+c5 0, c5 0 ; c3 odd in 2169, c5 odd in 2402 samples
+p1 n=9 N=5000 : failures c3 0, c3+c5 0, c5 0 ; c3 odd in 2373, c5 odd in 2497 samples
+p1 n=10 N=5000 : failures c3 0, c3+c5 0, c5 0 ; c3 odd in 2306, c5 odd in 2515 samples
+p1 n=11 N=5000 : failures c3 0, c3+c5 0, c5 0 ; c3 odd in 2380, c5 odd in 2515 samples
+p1 n=12 N=5000 : failures c3 0, c3+c5 0, c5 0 ; c3 odd in 2413, c5 odd in 2530 samples

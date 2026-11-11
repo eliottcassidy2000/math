@@ -1,0 +1,49 @@
+(a),(c),(d): direct double sum from (1) and (4) against the closed forms, n = 1..100
+  mismatches: 0
+  values n = 1..12 (E[{3}], E[{3,5}], E[{5}]):
+   n=1: 1  1  1
+   n=2: 1  1  1
+   n=3: 1/2  1/2  1
+   n=4: 1/2  1/2  1
+   n=5: 1/4  13/32  7/32
+   n=6: 1/4  1/4  1/16
+   n=7: 1/8  67/256  11/256
+   n=8: 1/8  67/256  11/256
+   n=9: 1/16  263/2048  23/2048
+   n=10: 1/16  1/16  1/256
+   n=11: 1/32  1007/16384  49/16384
+   n=12: 1/32  1007/16384  49/16384
+
+(b),(c): factorised sum of the note against the direct sum (n <= 100) and the closed forms (n <= 240)
+  mismatches: 0 ; members of each class mod 8 checked: [30, 30, 30, 30, 30, 30, 30, 30]
+
+(e): order-5 recurrence in k for n = 8k + r (roots 2^-4, 2^-8, 2^-12 and those of x^2 + (17/512) x + 2^-20)
+  recurrence instances tested: 800 ; failures: 0
+   class 1 mod 8: number of geometric sequences actually present (Hankel rank): E[{3,5}]: 3, E[{5}]: 2
+   class 2 mod 8: number of geometric sequences actually present (Hankel rank): E[{3,5}]: 1, E[{5}]: 1
+   class 3 mod 8: number of geometric sequences actually present (Hankel rank): E[{3,5}]: 3, E[{5}]: 2
+   class 4 mod 8: number of geometric sequences actually present (Hankel rank): E[{3,5}]: 3, E[{5}]: 2
+   class 5 mod 8: number of geometric sequences actually present (Hankel rank): E[{3,5}]: 3, E[{5}]: 2
+   class 6 mod 8: number of geometric sequences actually present (Hankel rank): E[{3,5}]: 1, E[{5}]: 1
+   class 7 mod 8: number of geometric sequences actually present (Hankel rank): E[{3,5}]: 3, E[{5}]: 2
+   class 0 mod 8: number of geometric sequences actually present (Hankel rank): E[{3,5}]: 3, E[{5}]: 2
+
+(f): exhaustive and census values
+  n=3: exhaustive 1/2 1/2 1 : OK
+  n=4: exhaustive 1/2 1/2 1 : OK
+  n=5: exhaustive 1/4 13/32 7/32 : OK
+  n=6: exhaustive 1/4 1/4 1/16 : OK
+  n=7: exhaustive 1/8 67/256 11/256 : OK
+  n=8: census 1/8 67/256 11/256 : OK
+  n=9: census 1/16 263/2048 23/2048 : OK
+  n=10: census 1/16 1/16 1/256 : OK
+  values quoted in the note / THM-5132 for n = 3..11: OK
+  limits: E[{3,5}]/E[{3}] and E[{5}]/E[{3}]^2 at n = 41, 43, 44: [(2.0000009536724974, 2.999998092651367), (1.999999523162387, 3.0000009536743164), (1.999999523162387, 3.0000009536743164)]
+  Run C exact values (n = 11..18) E[{3,5}]: ['1007/16384', '1007/16384', '4063/131072', '1/64', '16447/1048576', '16447/1048576', '65663/8388608', '1/256']
+  R7: E_14 = 1/64 = 2^-6: True ; E_18 = 1/256 = 2^-8: True
+  R8: E_12 = E_11: True ; E_16 = E_15: True
+
+(g): expected kernel size
+  closed form 2 + 2^((1-m)/2) cos((m-1)pi/4) - 2^(1-m) equals the count formula 1 + 2^(1-m) #{x != 0, |x| = 0,1 mod 4} for m = 1..40
+  count formula times 2^C(m,2) (to compare with the exhaustive sums of audit_rand kernel): {1: 2, 2: 4, 3: 14, 4: 104, 5: 1728, 6: 60416, 7: 4161536}
+  row n = 1 mod 4 of (5) equals 2^(-(n-1)/2) E|ker A| (m = n-1) for n = 5, 9, ..., 197: True

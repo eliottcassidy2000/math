@@ -1,0 +1,7 @@
+kernel m=1 : sum over all 2^0 labelled tournaments of |ker A| = 2
+kernel m=2 : sum over all 2^1 labelled tournaments of |ker A| = 4
+kernel m=3 : sum over all 2^3 labelled tournaments of |ker A| = 14
+kernel m=4 : sum over all 2^6 labelled tournaments of |ker A| = 104
+kernel m=5 : sum over all 2^10 labelled tournaments of |ker A| = 1728
+kernel m=6 : sum over all 2^15 labelled tournaments of |ker A| = 60416
+kernel m=7 : sum over all 2^21 labelled tournaments of |ker A| = 4161536

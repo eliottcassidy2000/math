@@ -1,0 +1,2 @@
+order 11 from the bases of order 10: exact labelled sums over 2^55: sum(-1)^c3 = 372881887207424 ; sum(-1)^c5 = 33860046880768 ; sum(-1)^(c3+c5) = 729588897849344
+n 10 classes 3224769 total_weight 11652558975232 (2^45 = 35184372088832) failures: OCF 0 mod4 0 P1_c3 0 P1_c3c5 0 brute 0

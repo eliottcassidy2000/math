@@ -1,0 +1,169 @@
+Checks of totals: classes and labelled weight per order
+  n=3: classes 2 (A000568: 2) OK ; weight 8 = 2^3: OK
+  n=4: classes 4 (A000568: 4) OK ; weight 64 = 2^6: OK
+  n=5: classes 12 (A000568: 12) OK ; weight 1024 = 2^10: OK
+  n=6: classes 56 (A000568: 56) OK ; weight 32768 = 2^15: OK
+  n=7: classes 456 (A000568: 456) OK ; weight 2097152 = 2^21: OK
+  n=8: classes 6880 (A000568: 6880) OK ; weight 268435456 = 2^28: OK
+  n=9: classes 191536 (A000568: 191536) OK ; weight 68719476736 = 2^36: OK
+  n=10: classes 9733056 (A000568: 9733056) OK ; weight 35184372088832 = 2^45: OK
+
+Section 4 table: SC_n, bound, SC_n/2^C(n,2), D_n, share
+  n=3: SC_n = 8 ; bound 12 ; lower bound 4 ; within bounds True ; SC_n/2^C = 1 ; signed sum over sc = 4 ; D_n = 1/2 ; D_n 4^n = 32.0 ; sc share of D_n = 100.0%
+  n=4: SC_n = 48 ; bound 48 ; lower bound 16 ; within bounds True ; SC_n/2^C = 3/4 ; signed sum over sc = 48 ; D_n = 1/2 ; D_n 4^n = 128.0 ; sc share of D_n = 150.0%
+  n=5: SC_n = 704 ; bound 960 ; lower bound 64 ; within bounds True ; SC_n/2^C = 11/16 ; signed sum over sc = 256 ; D_n = 13/32 ; D_n 4^n = 416.0 ; sc share of D_n = 61.5%
+  n=6: SC_n = 7040 ; bound 7680 ; lower bound 512 ; within bounds True ; SC_n/2^C = 55/256 ; signed sum over sc = 7040 ; D_n = 1/4 ; D_n 4^n = 1024.0 ; sc share of D_n = 85.9%
+  n=7: SC_n = 380416 ; bound 430080 ; lower bound 4096 ; within bounds True ; SC_n/2^C = 743/4096 ; signed sum over sc = 37824 ; D_n = 853/8192 ; D_n 4^n = 1706.0 ; sc share of D_n = 17.3%
+  n=8: SC_n = 6737920 ; bound 6881280 ; lower bound 65536 ; within bounds True ; SC_n/2^C = 1645/65536 ; signed sum over sc = 6737920 ; D_n = 1361/32768 ; D_n 4^n = 2722.0 ; sc share of D_n = 60.4%
+  n=9: SC_n = 958578688 ; bound 990904320 ; lower bound 1048576 ; within bounds True ; SC_n/2^C = 58507/4194304 ; signed sum over sc = 20782592 ; D_n = 63103/8388608 ; D_n 4^n = 1972.0 ; sc share of D_n = 4.0%
+  n=10: SC_n = 31596429312 ; bound 31708938240 ; lower bound 33554432 ; within bounds True ; SC_n/2^C = 1928493/2147483648 ; signed sum over sc = 31596429312 ; D_n = 650471/268435456 ; D_n 4^n = 2540.9 ; sc share of D_n = 37.1%
+
+Self-converse classes by H mod 8 (1,3,5,7), and by H mod 4
+  n=3: sc classes 2 ; mod 8: {1: 1, 3: 1, 5: 0, 7: 0} ; mod 4: =1: 1, =3: 1
+  n=4: sc classes 2 ; mod 8: {1: 1, 3: 0, 5: 1, 7: 0} ; mod 4: =1: 2, =3: 0
+  n=5: sc classes 8 ; mod 8: {1: 3, 3: 2, 5: 1, 7: 2} ; mod 4: =1: 4, =3: 4
+  n=6: sc classes 12 ; mod 8: {1: 6, 3: 0, 5: 6, 7: 0} ; mod 4: =1: 12, =3: 0
+  n=7: sc classes 88 ; mod 8: {1: 22, 3: 20, 5: 22, 7: 24} ; mod 4: =1: 44, =3: 44
+  n=8: sc classes 176 ; mod 8: {1: 82, 3: 0, 5: 94, 7: 0} ; mod 4: =1: 176, =3: 0
+  n=9: sc classes 2752 ; mod 8: {1: 700, 3: 700, 5: 676, 7: 676} ; mod 4: =1: 1376, =3: 1376
+  n=10: sc classes 8784 ; mod 8: {1: 4448, 3: 0, 5: 4336, 7: 0} ; mod 4: =1: 8784, =3: 0
+
+Section 5: three strata in units of 4^(-n)  (sc / sym non-sc / rigid non-sc)
+  n=3: D 4^n = 32.0 ; sc 32.0 ; sym 0.0 ; rigid 0.0   (exact signed sums 4, 0, 0)
+  n=4: D 4^n = 128.0 ; sc 192.0 ; sym -64.0 ; rigid 0.0   (exact signed sums 48, -16, 0)
+  n=5: D 4^n = 416.0 ; sc 256.0 ; sym -80.0 ; rigid 240.0   (exact signed sums 256, -80, 240)
+  n=6: D 4^n = 1024.0 ; sc 880.0 ; sym -216.0 ; rigid 360.0   (exact signed sums 7040, -1728, 2880)
+  n=7: D 4^n = 1706.0 ; sc 295.5 ; sym -7.0 ; rigid 1417.5   (exact signed sums 37824, -896, 181440)
+  n=8: D 4^n = 2722.0 ; sc 1645.0 ; sym -104.2 ; rigid 1181.2   (exact signed sums 6737920, -427008, 4838400)
+  n=9: D 4^n = 1972.0 ; sc 79.3 ; sym -73.0 ; rigid 1965.7   (exact signed sums 20782592, -19132416, 515289600)
+  n=10: D 4^n = 2540.9 ; sc 941.6 ; sym -54.1 ; rigid 1653.3   (exact signed sums 31596429312, -1814988800, 55477094400)
+
+Class race: classes with H = 1 minus classes with H = 3 (mod 4); decomposition for even n
+  n=3: =1: 1 =3: 1 lead 0 ; sc classes 2 ; non-sc classes =1: 0 =3: 0 (lead 0; converse pairs lead 0)
+  n=4: =1: 2 =3: 2 lead 0 ; sc classes 2 ; non-sc classes =1: 0 =3: 2 (lead -2; converse pairs lead -1)
+  n=5: =1: 6 =3: 6 lead 0 ; sc classes 8 ; non-sc classes =1: 2 =3: 2 (lead 0; converse pairs lead 0)
+  n=6: =1: 32 =3: 24 lead 8 ; sc classes 12 ; non-sc classes =1: 20 =3: 24 (lead -4; converse pairs lead -2)
+  n=7: =1: 246 =3: 210 lead 36 ; sc classes 88 ; non-sc classes =1: 202 =3: 166 (lead 36; converse pairs lead 18)
+  n=8: =1: 3572 =3: 3308 lead 264 ; sc classes 176 ; non-sc classes =1: 3396 =3: 3308 (lead 88; converse pairs lead 44)
+  n=9: =1: 96402 =3: 95134 lead 1268 ; sc classes 2752 ; non-sc classes =1: 95026 =3: 93758 (lead 1268; converse pairs lead 634)
+  n=10: =1: 4877828 =3: 4855228 lead 22600 ; sc classes 8784 ; non-sc classes =1: 4869044 =3: 4855228 (lead 13816; converse pairs lead 6908)
+
+Strong race: signed counts of strong labelled tournaments, two routes
+  [own exact D_11 = 260546929/549755813888 = 17075203538944/2^55 ; quoted 260546929/2^39: OK]
+  n=3: by inversion: signed -2, strong labelled 2, strong-only lead -1.000000 ; census flags: signed -2, strong 2 : agree ; strong classes =1: 0, =3: 1 ; decomposable share of the signed sum 1.5000
+  n=4: by inversion: signed 24, strong labelled 24, strong-only lead 1.000000 ; census flags: signed 24, strong 24 : agree ; strong classes =1: 1, =3: 0 ; decomposable share of the signed sum 0.2500
+  n=5: by inversion: signed 176, strong labelled 544, strong-only lead 0.323529 ; census flags: signed 176, strong 544 : agree ; strong classes =1: 3, =3: 3 ; decomposable share of the signed sum 0.5769
+  n=6: by inversion: signed 4080, strong labelled 22320, strong-only lead 0.182796 ; census flags: signed 4080, strong 22320 : agree ; strong classes =1: 21, =3: 14 ; decomposable share of the signed sum 0.5020
+  n=7: by inversion: signed 123952, strong labelled 1677488, strong-only lead 0.073891 ; census flags: signed 123952, strong 1677488 : agree ; strong classes =1: 187, =3: 166 ; decomposable share of the signed sum 0.4324
+  n=8: by inversion: signed 8135680, strong labelled 236522496, strong-only lead 0.034397 ; census flags: signed 8135680, strong 236522496 : agree ; strong classes =1: 3104, =3: 2904 ; decomposable share of the signed sum 0.2703
+  n=9: by inversion: signed 332488064, strong labelled 64026088576, strong-only lead 0.005193 ; census flags: signed 332488064, strong 64026088576 : agree ; strong classes =1: 89462, =3: 88671 ; decomposable share of the signed sum 0.3568
+  n=10: by inversion: signed 75937800960, strong labelled 33832910196480, strong-only lead 0.002244 ; census flags: signed 75937800960, strong 33832910196480 : agree ; strong classes =1: 4688159, =3: 4667790 ; decomposable share of the signed sum 0.1093
+  n=11: by inversion: signed 15259291222528, strong labelled 35262092417856512, strong-only lead 0.000433 ; decomposable share of the signed sum 0.1063
+
+Relative labelled masses of H = 1, 3, 5, 7 (mod 8)
+  n=3: 3.00000  1.00000  0.00000  0.00000    exact counts 6 2 0 0
+  n=4: 1.50000  1.00000  1.50000  0.00000    exact counts 24 16 24 0
+  n=5: 1.40625  0.93750  1.40625  0.25000    exact counts 360 240 360 64
+  n=6: 1.21094  0.70312  1.28906  0.79688    exact counts 9920 5760 10560 6528
+  n=7: 1.17920  0.98480  1.02905  0.80695    exact counts 618240 516320 539520 423072
+  n=8: 1.06395  0.97866  1.01912  0.93827    exact counts 71400448 65676800 68391936 62966272
+  n=9: 1.01529  0.99192  0.99975  0.99303    exact counts 17442593280 17041087488 17175614976 17060180992
+  n=10: 1.00330  0.99603  1.00155  0.99912    exact counts 8825112748032 8761199339520 8809702563840 8788357437440
+  n=11: 1.00051  0.99949  1.00044  0.99956    exact counts 9011754468980736 9002583394936832 9011181642270720 9003277512775680   (own vertex-cube census of the bases of order 10)
+        fractions: 0.2501264  0.2498719  0.2501105  0.2498911
+
+Section 6.3: E_n[K] for every set K of odd lengths (exact)
+  n=3: {3}: 1/2
+        all odd lengths = D_n: True
+  n=4: {3}: 1/2
+        all odd lengths = D_n: True
+  n=5: {3}: 1/4 ; {5}: 7/32 ; {3,5}: 13/32
+        all odd lengths = D_n: True
+  n=6: {3}: 1/4 ; {5}: 1/16 ; {3,5}: 1/4
+        all odd lengths = D_n: True
+  n=7: {3}: 1/8 ; {5}: 11/256 ; {3,5}: 67/256 ; {7}: 811/8192 ; {3,7}: 1553/8192 ; {5,7}: 461/8192 ; {3,5,7}: 853/8192
+        all odd lengths = D_n: True
+  n=8: {3}: 1/8 ; {5}: 11/256 ; {3,5}: 67/256 ; {7}: 1277/32768 ; {3,7}: 1361/32768 ; {5,7}: 437/32768 ; {3,5,7}: 1361/32768
+        all odd lengths = D_n: True
+  n=9: {3}: 1/16 ; {5}: 23/2048 ; {3,5}: 263/2048 ; {7}: 16343/2097152 ; {3,7}: -1453/2097152 ; {5,7}: 9019/262144 ; {3,5,7}: 35881/1048576 ; {9}: 190079/4194304 ; {3,9}: 178859/4194304 ; {5,9}: 70289/4194304 ; {3,5,9}: 30899/4194304 ; {7,9}: 41893/8388608 ; {3,7,9}: 69313/8388608 ; {5,7,9}: 58687/8388608 ; {3,5,7,9}: 63103/8388608
+        all odd lengths = D_n: True
+  n=10: {3}: 1/16 ; {5}: 1/256 ; {3,5}: 1/16 ; {7}: 35881/16777216 ; {3,7}: 9019/4194304 ; {5,7}: 9019/262144 ; {3,5,7}: 35881/1048576 ; {9}: 1050641/268435456 ; {3,9}: 65531/16777216 ; {5,9}: 711881/268435456 ; {3,5,9}: 171973/134217728 ; {7,9}: 354941/268435456 ; {3,7,9}: 533081/268435456 ; {5,7,9}: 380231/268435456 ; {3,5,7,9}: 650471/268435456
+        all odd lengths = D_n: True
+
+Comparison with the numbers quoted in the note
+  OK       n=4: SC_n = 48, fraction 3/4, D_n = 1/2
+  OK       n=6: SC_n = 7040, fraction 55/256, D_n = 1/4
+  OK       n=8: SC_n = 6737920, fraction 1645/65536, D_n = 1361/32768
+  OK       n=10: SC_n = 31596429312, fraction 1928493/2147483648, D_n = 650471/268435456
+  OK       n=3: SC_n = 8, signed sum 4
+  OK       n=5: SC_n = 704, signed sum 256
+  OK       n=7: SC_n = 380416, signed sum 37824
+  OK       n=9: SC_n = 958578688, signed sum 20782592
+  OK       D_3 = 1/2
+  OK       D_4 = 1/2
+  OK       D_5 = 13/32
+  OK       D_6 = 1/4
+  OK       D_7 = 853/8192
+  OK       D_8 = 1361/32768
+  OK       D_9 = 63103/8388608
+  OK       D_10 = 650471/268435456
+  OK       class race at n=3: lead 0
+  OK       class race at n=4: lead 0
+  OK       class race at n=5: lead 0
+  OK       class race at n=6: lead 8
+  OK       class race at n=7: lead 36
+  OK       class race at n=8: lead 264
+  OK       class race at n=9: lead 1268
+  OK       class race at n=10: lead 22600
+  OK       signed strong count at n=3: -2
+  OK       signed strong count at n=4: 24
+  OK       signed strong count at n=5: 176
+  OK       signed strong count at n=6: 4080
+  OK       signed strong count at n=7: 123952
+  OK       signed strong count at n=8: 8135680
+  OK       signed strong count at n=9: 332488064
+  OK       signed strong count at n=10: 75937800960
+  OK       signed strong count at n=11: 15259291222528
+  OK       E_5[{5}] = 7/32
+  OK       E_5[{3}] = 1/4
+  OK       E_5[{3,5}] = 13/32
+  OK       E_6[{5}] = 1/16
+  OK       E_6[{3}] = 1/4
+  OK       E_6[{3,5}] = 1/4
+  OK       E_7[{7}] = 811/8192
+  OK       E_7[{5}] = 11/256
+  OK       E_7[{5,7}] = 461/8192
+  OK       E_7[{3}] = 1/8
+  OK       E_7[{3,7}] = 1553/8192
+  OK       E_7[{3,5}] = 67/256
+  OK       E_7[{3,5,7}] = 853/8192
+  OK       E_8[{7}] = 1277/32768
+  OK       E_8[{5}] = 11/256
+  OK       E_8[{5,7}] = 437/32768
+  OK       E_8[{3}] = 1/8
+  OK       E_8[{3,7}] = 1361/32768
+  OK       E_8[{3,5}] = 67/256
+  OK       E_8[{3,5,7}] = 1361/32768
+  OK       E_9[{7}] = 16343/2097152
+  OK       E_9[{5}] = 23/2048
+  OK       E_9[{5,7}] = 9019/262144
+  OK       E_9[{3}] = 1/16
+  OK       E_9[{3,7}] = -1453/2097152
+  OK       E_9[{3,5}] = 263/2048
+  OK       E_9[{3,5,7}] = 35881/1048576
+  OK       E_9[{3,5,7,9}] = 63103/8388608
+  OK       E_10[{9}] = 1050641/268435456
+  OK       E_10[{7}] = 35881/16777216
+  OK       E_10[{5}] = 1/256
+  OK       E_10[{5,7}] = 9019/262144
+  OK       E_10[{3}] = 1/16
+  OK       E_10[{3,7}] = 9019/4194304
+  OK       E_10[{3,7,9}] = 533081/268435456
+  OK       E_10[{3,5}] = 1/16
+  OK       E_10[{3,5,7}] = 35881/1048576
+  OK       E_10[{3,5,7,9}] = 650471/268435456
+  OK       E_10[{7}] = E_10[{3,5}] E_10[{3,5,7}]
+  OK       E_10[{3,7}] = E_10[{3,5}] E_10[{5,7}]
+        sets K with E_10[K xor {3,5}] = E_10[{3,5}] E_10[K]: ['{3} -> {5}', '{5,7} -> {3,7}', '{3,5,7} -> {7}']
+  OK       E[{5,7}], E[{3,5,7}] equal at n = 9 and n = 10
+        n = 6 analogue (c_7 = 0): E_6[{}]=1 vs E_6[{3,5}]^2 = 1/16 ; E_6[{3}] = 1/4 vs E_6[{3,5}] E_6[{5}] = 1/64

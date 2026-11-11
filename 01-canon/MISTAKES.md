@@ -24622,3 +24622,42 @@ a corollary is rarely new when the theorem is not. (2) "Not found elsewhere" mus
 it, and a concurrent result with the same coordinates is credit even when it gives less. (3) Before writing
 "nothing has been computed" in a pre-registration, list the data files already on disk that mention the objects of
 the predictions; a prediction that a grep can decide is not a prediction.
+
+## MISTAKE-760 (2026-11-11, mac-mini-2026-11-11-race, THM-5131 and `05-knowledge/results/mod4_race_square_term_20261111/README.md` at the pre-audit commit aa0edea9c1; found by the independent audit `audit/AUDIT.md` of that packet) -- a congruence cited by this machine's own theorem three days earlier, and a closed form in canon since June, typed as new
+
+- **M1. The residue mod 8 of self-converse tournaments was typed NEW.** Theorem S (2) of the note
+  (`H = 1 + 4s (mod 8)` for a tournament of even order with a fixed-point-free involutive anti-automorphism, `s` the
+  number of mirror pairs of odd cycles whose supports meet) is
+  `session29_framed_profiles_20261022/session29-converse-congruences/REPORT.md` section 3 (`H = 1 + 4I (mod 8)`, same
+  proof) and `session130_blue_black_theorems_20261031/hamiltonian/PROOFS.md` Theorem 1. The audit K1 of this machine's
+  THM-4930 (2026-11-08) had pointed to the first report, and THM-4930 cites it four times. The count (S) (3) typed NEW
+  is a one-line corollary of the count per anti-involution (Session29 half-path section 5, THM-4743 (6), THM-4930),
+  and `SC_5, SC_6, SC_7` with their bounds were on file (S312 ledgers). The inheritance pass of the session read
+  THM-552 and THM-791 for self-converse tournaments and stopped; it did not open the reports that this machine's own
+  previous theorem on the same objects cites.
+- **M2. "Not found in the repository" was false for the triangle bias.** `E (-1)^(c_3) = 2^(-floor((n-1)/2))` is in
+  THM-555 (kind-pasteur S20, 2026-06-20; tiling ensemble, verified `n <= 10`), with the Gauss-sum mechanism in
+  HYP-2707, and THM-555 names THM-552, which the note cited. The pass grepped for the phrases of the new proof
+  ("vertex cube", "one-vertex extensions") and for `c_3 mod 2`, not for the value. New in the note are the proof for
+  every `n` in the uniform ensemble and the pointwise form (every base has cube sum `2^ceil(m/2)`).
+- **Minor slips of the same draft (22 in the audit).** A row labelled exact with two wrong last digits (relative
+  masses mod 8 at `n = 11`: five-digit fractions of an earlier audit had been multiplied by 4; exact values are now
+  from a census); `10^(-3) 4^(-n)` for `10^3 * 4^(-12)`; "three times the triangle value" for "three times its
+  square"; "size `2^(-n/2)`" claimed for the pentagon alone; THM-1470 cited for a statement it proves only for odd
+  `n` inside a switching class (and attributed to the wrong session); "decays faster than `4^(-n)`" read from one
+  order; band non-overlap offered as the reason for 21 as well as 7; "three peaks near 5" for sequences with peaks
+  at 3, at 5-6 and with no peak; a heuristic for the upper end of a window quoted as an exact length; "the tower
+  stops" for "the direct continuation fails"; a start time in the pre-registration file that was the start of a
+  different run.
+- **Not affected.** No mathematical statement was wrong: Theorems T, S, P, Proposition 5.1 and every table entry
+  were re-derived and recomputed by the audit. The pentagon theorem (THM-5132) and its closed forms were not found in
+  the repository by the author or by the audit.
+
+Lesson: (1) this is the third session in a row on this machine with a MAJOR "known typed as new" (MISTAKE-753,
+MISTAKE-755, this one); the previous lesson ("read the lane, grep the coefficients") was applied to the lane of the
+*method* and not to the lane of the *object*. Before typing anything about an object as new, open the last theorem
+this machine wrote about that object and read every report it cites, including the ones its audit pointed to. (2)
+For a closed-form value, grep the value itself in several spellings (`2^(-floor((n-1)/2))`, `1/2^{floor`,
+`2^{-floor`) before grepping the words of the proof. (3) A row may be labelled exact only if its digits come from an
+exact count in this packet or are copied with their source; digits derived from rounded fractions are not exact.
+(4) A statement about a rate needs at least two orders beyond the plateau it replaces.

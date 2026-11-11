@@ -1,6 +1,6 @@
 ---
 id: THM-5132
-title: "The pentagon theorem. For a tournament on n vertices let q_1 be the number of vertices of odd score and q_2 the number of vertices with an odd number of odd-score out-neighbours (s = A1, t = As over F_2). PROVED: (1) c_3 = C(q_1,2) + floor(n/4), c_3 + c_5 = C(q_2,2) + floor(n/4), c_5 = C(q_1,2) + C(q_2,2) (mod 2); (2) on a vertex cube the increment of c_3 + c_5 is the triangle form C(|y|,2) + u.y in the coordinates y = Ax + |X| 1; (3) the cube sum G(R) = sum_X (-1)^((c_3+c_5)(R+v_X)) has a closed form in the kernel of A^T and the solutions of A^T u = 1 over F_2 (weights mod 4), in particular G(R) >= 0 for every tournament R; (4) joint law of (s, t) for a random labelled tournament; (5) closed forms at every order: E(-1)^(c_3+c_5) = 2^(-(n-2)/2) and E(-1)^(c_5) = 2^(-(n-2)) for n = 2 mod 4, and for odd n 2^(-(n-1)/2)(2 + (2/n)2^(-(n-1)/2) - 2^(-(n-2))) and 2^(-(n-1))(3 - (2/n)2^(-(n-3)/2)), with the value of n - 1 at n = 0 mod 4. Hence H mod 4 is decided by q_2 mod 4 for n <= 6. FINITE-EXACT: the race for every set of cycle lengths, n <= 10. The construction stops at the heptagon. Chan-Pak OPEN"
+title: "The pentagon theorem. For a tournament on n vertices let q_1 be the number of vertices of odd score and q_2 the number of vertices with an odd number of odd-score out-neighbours (s = A1, t = As over F_2). PROVED: (1) c_3 = C(q_1,2) + floor(n/4), c_3 + c_5 = C(q_2,2) + floor(n/4), c_5 = C(q_1,2) + C(q_2,2) (mod 2); (2) on a vertex cube the increment of c_3 + c_5 is the triangle form C(|y|,2) + u.y in the coordinates y = Ax + |X| 1; (3) the cube sum G(R) = sum_X (-1)^((c_3+c_5)(R+v_X)) has a closed form in the kernel of A^T and the solutions of A^T u = 1 over F_2 (weights mod 4), in particular G(R) >= 0 for every tournament R; (4) joint law of (s, t) for a random labelled tournament; (5) closed forms at every order: E(-1)^(c_3+c_5) = 2^(-(n-2)/2) and E(-1)^(c_5) = 2^(-(n-2)) for n = 2 mod 4, and for odd n 2^(-(n-1)/2)(2 + (2/n)2^(-(n-1)/2) - 2^(-(n-2))) and 2^(-(n-1))(3 - (2/n)2^(-(n-3)/2)), with the value of n - 1 at n = 0 mod 4. Hence H mod 4 is decided by q_2 mod 4 for n <= 6. FINITE-EXACT: the race for every set of cycle lengths, n <= 10. The direct continuation to the heptagon fails. Chan-Pak OPEN"
 status: >
   PROVED: (1)-(5) (source note, section 6.2: an induction on the order for (1), a change of variables for (2),
   Poisson summation over the image of x -> (Ax, |x|) for (3), a count of tournaments with prescribed out-degree
@@ -9,16 +9,25 @@ status: >
   auxiliary identities on all 9,932,003 classes of orders 2-10 and on 120,000,000 random labelled bases of orders
   11-40, no failure; the exact labelled sums of the censuses equal the closed forms of (5) for n <= 11.
   KNOWN, credited: tr A^k = k c_k for k = 3, 4, 5 (THM-118); the odd-cycle count is spectral iff n <= 6 (THM-500), which
-  is the exhaustive fact d(6) = 2 of THM-1980; the score-parity vector is uniform on its coset (THM-1470);
-  H = 1 + 2 c_odd mod 4 (THM-466, THM-478); the vertex-cube quadratic form of the full count (THM-5127).
+  is the exhaustive fact d(6) = 2 of THM-1980; the score-parity vector is uniform on its coset for every n
+  (Session72 SCORE_PARITY_QUOTIENT.md; inside a switching class for odd n, THM-1470); the classical score formula
+  c_3 = C(n,3) - sum C(s_v,2), which gives the first formula of (1) directly; H = 1 + 2 c_odd mod 4 (THM-466,
+  THM-478); the vertex-cube quadratic form of the full count and its layers (THM-5127); E_5[{5}] = 7/32 (THM-466).
+  RELATED: A^2 1 over the integers is the Kendall-Wei second-order score (THM-896; THM-555: it does not determine
+  c_5); A over F_2 and de Caen's rank bound (THM-4857); a partial law for H mod 4 at n = 5, 6 (HYP-6935 [ii]).
+  NEW here (the audit searched the repository as well): the weight mod 4 of the second-order score mod 2 and the
+  formulas of (1) for c_3 + c_5 and c_5, the second equality of (2), (3), (4), (5), the corollary for n <= 6.
   FINITE-EXACT: the table of E (-1)^(sum_{k in K} c_k) for every set K of odd lengths and n <= 10 (all classes with
   labelled weights); the subset form Y_k = sum_l C(n-l, k-l) c_l = (p_k - C(n,k))/2 mod 2 is PROVED (double counting).
   Pre-registered: R5, R6 (extrapolations from n = 6, 8) FAILED at n = 10; R7, R8 (value at n = 14, 18; equal values at
   n = 11, 12 and 15, 16) CONFIRMED by plain sampling and afterwards PROVED as instances of (5).
-  NEGATIVE: the next step of the tower, tr(A^3 + A^5 + A^7) = C(|A^3 1|, 2) + floor(n/4), is false; the cube sum is not
-  the same for every base (0, 8, 16 at order 5).
+  NEGATIVE: the direct continuation, tr(A^3 + A^5 + A^7) = C(|A^3 1|, 2) + floor(n/4), is false (whether another
+  vector works is open, HYP-9663 (H) (3)); the cube sum is not the same for every base (0, 8, 16 at order 5).
   NOT CLAIMED: novelty in the literature; any law for cycle lengths >= 7 beyond the table; the Chan-Pak conjecture.
-  AUDIT: AUDITSTATUS
+  AUDIT: PASS WITH CORRECTIONS (05-knowledge/results/mod4_race_square_term_20261111/audit/AUDIT.md): every part of
+  the theorem re-derived by hand and re-checked with independent programs (all labelled tournaments of order <= 7,
+  all classes to order 10, exact census at order 11), no error; minor corrections of credit and wording applied
+  (m5-m7, m13, m16, m18). MISTAKE-760 concerns THM-5131.
 session: mac-mini-2026-11-11-race
 source: 05-knowledge/results/mod4_race_square_term_20261111/README.md
 related:
@@ -78,9 +87,11 @@ added to `R`. `E_n[K] = E (-1)^(sum_{k in K} c_k)` over uniformly random labelle
 | 2 | `2^(m/2) (n_00 + n_13)` |
 | 3 | `2^((m+1)/2) (n_00 + n_10)` |
 
-So `G(R) >= 0` for every tournament, and `G(R) >= 2^ceil(m/2)` unless `m = 1 (mod 4)`.
+So `G(R) >= 0` for every tournament; more precisely `G(R) = 0` or `G(R) >= 2^ceil(m/2)`, and `G(R) = 0` only for
+`m = 1 (mod 4)`.
 
-**(4) Joint law.** For a uniformly random labelled tournament, `s` is uniform on `{|s| = C(n,2) mod 2}` (KNOWN);
+**(4) Joint law.** For a uniformly random labelled tournament, `s` is uniform on `{|s| = C(n,2) mod 2}` (KNOWN:
+Session72 `SCORE_PARITY_QUOTIENT.md`);
 given `s` with support `O`, `1 <= |O| <= n - 1`, `t` is uniform on
 `{t : |t on O| = C(|O|, 2), |t off O| = C(n - |O|, 2) (mod 2)}`; `t = 0` if `O` is empty, `t = 1` if `O = V`.
 
@@ -119,7 +130,8 @@ E_10[{3,5,7}]`, `E_10[{3,7}] = E_10[{3,5}] E_10[{5,7}]`, and the equal values of
 ## What is not true
 
 - The cube sum of `c_3 + c_5` is not the same for every base (Theorem T's property): `0, 8, 16` at order 5.
-- `tr(A^3 + A^5 + A^7) = C(|A^3 1|, 2) + floor(n/4) (mod 2)` fails for 42% of random tournaments of orders 3-14.
+- `tr(A^3 + A^5 + A^7) = C(|A^3 1|, 2) + floor(n/4) (mod 2)` fails for 42% of random tournaments of orders 3-14
+  (only this direct continuation is refuted).
 - "The pentagon is invisible at even order" (true at `n = 6, 8`) is false at `n = 10`.
 
 ## Falsifier

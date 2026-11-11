@@ -105,3 +105,18 @@ Not registered, done afterwards:
 - R7 and R8 are now theorems (THM-5132 (5); README section 6): the values are `2^(-(n-2)/2)` for every
   `n = 2 (mod 4)`, and `E_n[{3,5}] = E_(n+1)[{3,5}]` for every `n = 3 (mod 4)`. The exact values at the sampled orders
   are in `out/c35_summary.out`; all 16 estimates of Run C are within 2.3 standard errors of them.
+
+## Erratum and audit notes (appended after the independent audit; the registered text above is unchanged)
+
+- **Erratum (audit m22).** The first block says that Run B "was started at 08:02 MST". File times show that the six
+  parts of Run B were launched at 08:06:07; the run launched at 08:02:02 was the self-converse census of order 10
+  (in-sample). Run B wrote its outputs at 08:14:35-08:16:20, after the commit of the first block (08:09:37), so the
+  statement that no output existed when the block was written stands.
+- **Integrity (audit section C).** Both blocks were committed and visible to other agents before the outputs of their
+  runs existed in the repository; the registered text is byte-identical in all later versions; `biasmc.c`,
+  `cycrace.c`, `c35mc.c` were not changed after registration; every verdict follows its registered rule. Not
+  verifiable: that no earlier unrecorded run was looked at.
+- **R1.** An independent estimator written by the auditor (9,000,000 bases of order 11, other program and seeds)
+  gives `D_12 4^12 = 1039 +- 125`; pooled with Run A, `1008 +- 77`. FAILED stands.
+- **R2 (audit m17).** CONFIRMED by its rule, but the tolerance `0.006` was sixty standard errors wide; the observed
+  fractions are `-3.1` and `+2.8` standard errors from the reference law.

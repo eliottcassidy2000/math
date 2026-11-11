@@ -1,0 +1,10 @@
+p3 random m=6 bases 3000 : failures T2 0, P3 0, kernel weights 0, through-vertex consistency 0 ; singular A: 2288 ; K_1 non-empty: 1617 ; G = 0: 0
+   values of G (count): 16(1767) 8(830) 32(392) 64(11)
+p3 random m=7 bases 2000 : failures T2 0, P3 0, kernel weights 0, through-vertex consistency 0 ; singular A: 1576 ; K_1 non-empty: 1060 ; G = 0: 0
+   values of G (count): 32(1167) 16(500) 64(310) 128(23)
+p3 random m=8 bases 1200 : failures T2 0, P3 0, kernel weights 0, through-vertex consistency 0 ; singular A: 966 ; K_1 non-empty: 598 ; G = 0: 0
+   values of G (count): 32(673) 64(265) 16(234) 128(28)
+p3 random m=9 bases 900 : failures T2 0, P3 0, kernel weights 0, through-vertex consistency 0 ; singular A: 745 ; K_1 non-empty: 429 ; G = 0: 129
+   values of G (count): 32(507) 64(247) 0(129) 128(17)
+p3 random m=10 bases 150 : failures T2 0, P3 0, kernel weights 0, through-vertex consistency 0 ; singular A: 119 ; K_1 non-empty: 73 ; G = 0: 0
+   values of G (count): 64(88) 32(42) 128(19) 256(1)

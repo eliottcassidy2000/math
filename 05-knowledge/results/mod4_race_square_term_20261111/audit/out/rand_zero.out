@@ -1,0 +1,7 @@
+zero m=5 N=400000 : K_1 non-empty 265373 (0.66343) ; criterion for G = 0 holds in 62617 (0.15654 +- 0.00057) ; direct cube sums on 2000 bases, disagreements with the criterion 0
+zero m=9 N=400000 : K_1 non-empty 238527 (0.59632) ; criterion for G = 0 holds in 91527 (0.22882 +- 0.00066) ; direct cube sums on 2000 bases, disagreements with the criterion 0
+zero m=13 N=1000000 : K_1 non-empty 613538 (0.61354) ; criterion for G = 0 holds in 217880 (0.21788 +- 0.00041) ; direct cube sums on 1000 bases, disagreements with the criterion 0
+zero m=17 N=1000000 : K_1 non-empty 609532 (0.60953) ; criterion for G = 0 holds in 221320 (0.22132 +- 0.00042) ; direct cube sums on 200 bases, disagreements with the criterion 0
+zero m=21 N=1000000 : K_1 non-empty 610369 (0.61037) ; criterion for G = 0 holds in 220259 (0.22026 +- 0.00041) ; direct cube sums on 0 bases, disagreements with the criterion 0
+zero m=25 N=1000000 : K_1 non-empty 609840 (0.60984) ; criterion for G = 0 holds in 219799 (0.21980 +- 0.00041) ; direct cube sums on 0 bases, disagreements with the criterion 0
+zero m=37 N=1000000 : K_1 non-empty 610459 (0.61046) ; criterion for G = 0 holds in 220611 (0.22061 +- 0.00041) ; direct cube sums on 0 bases, disagreements with the criterion 0

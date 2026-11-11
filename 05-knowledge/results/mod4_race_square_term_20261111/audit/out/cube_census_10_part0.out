@@ -1,0 +1,4 @@
+base order m = 10: classes 3224769, total weight 11652558975232 (2^45 = 35184372088832)
+labelled tournaments of order 11 by H mod 8:  1: 2984781375998976  3: 2981496948616192  5: 2984419536245760  7: 2981522529776640  (even residues: 0)
+numerator of D_11 over 2^55: 6181433851904
+sum_R w |g_R| = 0000269751391207424 (decimal split 10^18), as double 2.697513912074e+14 ; sum_R w g_R^2 as double 1.245765886856e+16 ; weight of bases with g_R = 0: 5020693432320

@@ -1,0 +1,5 @@
+selftest m=3: 320 (base, X) pairs compared with a direct subset-DP count of H; mismatches 0
+selftest m=5: 1280 (base, X) pairs compared with a direct subset-DP count of H; mismatches 0
+selftest m=7: 5120 (base, X) pairs compared with a direct subset-DP count of H; mismatches 0
+selftest m=9: 20480 (base, X) pairs compared with a direct subset-DP count of H; mismatches 0
+selftest m=11: 6144 (base, X) pairs compared with a direct subset-DP count of H; mismatches 0

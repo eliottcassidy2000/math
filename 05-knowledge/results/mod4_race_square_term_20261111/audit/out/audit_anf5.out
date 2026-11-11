@@ -1,0 +1,7 @@
+monomials of the normal form of (c_3 + c_5) mod 2 on 5 labelled vertices: 120
+  degree 1, degree sequence (1, 1): 3   [single arc]
+  degree 2, degree sequence (1, 1, 1, 1): 2   [two disjoint arcs]
+  degree 2, degree sequence (2, 1, 1): 25   [cherry]
+  degree 3, degree sequence (2, 1, 1, 1, 1): 10   [cherry with a disjoint arc]
+  degree 3, degree sequence (2, 2, 1, 1): 20   [path on four vertices]
+  degree 4, degree sequence (2, 2, 2, 1, 1): 60   [Hamiltonian path of K_5 (or other 4-edge graph with this degree sequence)]

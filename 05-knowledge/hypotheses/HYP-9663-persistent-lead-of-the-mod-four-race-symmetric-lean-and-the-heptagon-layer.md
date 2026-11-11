@@ -1,6 +1,6 @@
 ---
 id: HYP-9663
-title: "Open statements about the mod-4 race of Hamiltonian path counts. (G) Persistent lead: D_n = P(H = 1 mod 4) - P(H = 3 mod 4) is positive at every order n >= 3 (proved for n <= 6 by the closed forms of THM-5132, exact for n <= 11, ten standard errors at n = 12; the stronger form D_n ~ c 4^(-n) was pre-registered and FAILED at n = 12: 989 +- 99 against about 2 * 10^3). (A) Symmetric lean: at every order n >= 4 the non-self-converse tournaments with a non-trivial automorphism have more labelled members with H = 3 than with H = 1 mod 4. (H) Heptagon layer (questions): do the exact identities E[{7}] = E[{3,5}] E[{3,5,7}] and E[{3,7}] = E[{3,5}] E[{5,7}] of order 10 hold at order 14; is there a description of the parity of c_7 that extends THM-5132; the fraction of bases of order 1 mod 4 with zero triangle-pentagon cube sum has a limit near 0.2206. The triangle-pentagon law first recorded here as (K) is PROVED (THM-5132 (5))"
+title: "Open statements about the mod-4 race of Hamiltonian path counts. (G) Persistent lead: D_n = P(H = 1 mod 4) - P(H = 3 mod 4) is positive at every order n >= 3 (proved for n <= 6 by the closed forms of THM-5132, exact for n <= 11, ten standard errors at n = 12; the stronger form D_n ~ c 4^(-n) was pre-registered and FAILED at n = 12: 989 +- 99 against about 2 * 10^3). (A) Symmetric lean: at every order n >= 4 the non-self-converse tournaments with a non-trivial automorphism have more labelled members with H = 3 than with H = 1 mod 4. (H) Heptagon layer (questions): do the exact identities E[{7}] = E[{3,5}] E[{3,5,7}] and E[{3,7}] = E[{3,5}] E[{5,7}] of order 10 hold at order 14; is there a description of the parity of c_7 that extends THM-5132; the fraction of bases of order m = 1 mod 4 with zero triangle-pentagon cube sum lies in [0.2195, 0.2215] for every m >= 17. The triangle-pentagon law first recorded here as (K) is PROVED (THM-5132 (5))"
 status: >
   OPEN.
   (G): PROVED for n <= 6 (THM-5131 (T), THM-5132 (5)); the sign is FINITE-EXACT for n <= 11 and NUMERICAL at n = 12 (ten
@@ -13,7 +13,9 @@ status: >
   RESOLVED: the triangle-pentagon law (K) of the first draft of this file (E (-1)^(c_3 + c_5) = 2^(-(n-2)/2) and
   E (-1)^(c_5) = 2^(-(n-2)) for n = 2 mod 4), pre-registered as R7 and confirmed by sampling, is PROVED: THM-5132 (5).
   Two earlier forms were pre-registered and FAILED at n = 10 (R5, R6 of the packet).
-  AUDIT: AUDITSTATUS
+  AUDIT: PASS WITH CORRECTIONS (05-knowledge/results/mod4_race_square_term_20261111/audit/AUDIT.md): (G), (A),
+  (H) (1), (H) (3) well posed; (G) reworded (m8: one order does not give a rate); (H) (2) restated with a window
+  (m20). The auditor's independent order-12 estimate (1039 +- 125) agrees with Run A.
 session: mac-mini-2026-11-11-race
 source: 05-knowledge/results/mod4_race_square_term_20261111/README.md
 related:
@@ -46,9 +48,10 @@ frequent than `H = 3 (mod 4)`.
 non-self-converse tournaments for `5 <= n <= 10`.
 
 **The rate (no conjecture).** In units of `4^(-n)` the lead is `1706, 2722, 1972, 2541, 1988` at `n = 7, ..., 11` and
-`989 +- 99` at `n = 12`. The plateau was registered as a prediction for `n = 12` (R1, interval `[1500, 2500]`) and
-FAILED. The decay is faster than `4^(-n)`; nothing more is known. The second-order quantities registered with it
-held (rank law at order 11 within `3 * 10^(-4)` of the random alternating law; `rho_11 = 1.017`).
+`989 +- 99` at `n = 12` (audit: `1039 +- 125`; pooled `1008 +- 77`). The plateau was registered as a prediction for
+`n = 12` (R1, interval `[1500, 2500]`) and FAILED. One order shows that the plateau does not continue; it does not
+give a rate. The second-order quantities registered with it held (rank law at order 11 within `3 * 10^(-4)` of the
+random alternating law, which is about three standard errors; `rho_11 = 1.017`).
 
 **Why the lead is not explained.** Forced coincidences - a source or sink (`chi(T) = chi(T - v)`), a gate
 (`chi(Gamma R) = chi(R)`), twins - account for the second-order correlations of `chi` (THM-5127 (C) (5)), but they
@@ -84,9 +87,9 @@ vectors `s = A1` and `t = As`. The same construction fails for length 7 (`tr(A^3
    vector is the constant `2^(-(n-2)/2)`, so this sign is uncorrelated with every function of the score parities.
    The order-10 identities would follow from the same constancy given a finer invariant that determines
    `c_5 + c_7 (mod 2)`; none is known. At `n = 6`, where `c_7 = 0`, the analogous products are false.
-2. (Conjecture.) For bases `R` of order `m = 1 (mod 4)`, the probability that the cube sum `G(R)` of THM-5132 (3)
-   vanishes (that is: `A^T u = 1` is solvable over `F_2` and every solution has weight `0 mod 4`) tends to a limit,
-   near `0.2206`.
+2. (Conjecture.) For uniformly random labelled bases `R` of order `m = 1 (mod 4)`, `m >= 17`, the probability that
+   the cube sum `G(R)` of THM-5132 (3) vanishes (that is: `A^T u = 1` is solvable over `F_2` and every solution has
+   weight `0 mod 4`) lies in `[0.2195, 0.2215]`.
 3. (Question.) Is `c_7 (mod 2)`, or `c_3 + c_5 + c_7 (mod 2)`, a weight mod 4 of a vector built from the tournament?
    The direct continuation of THM-5132 (1) is false (`tower_test.py`).
 
@@ -95,4 +98,6 @@ vectors `s = A1` and `t = As`. The same construction fails for length 7 (`tr(A^3
 (`out/k35_summary.out`); exact class fractions at `m = 5, 9`: 2 of 12, 43993 of 191536.
 
 **Falsifier.** (1): the exact table at `n = 14` (not reachable by census; a sampler with the exact vertex-cube sum
-of THM-5127 restricted to lengths at most 7 reaches it). (2): a drift of the fraction at `m = 41, ..., 61`.
+of THM-5127 restricted to lengths at most 7 reaches it). (2): an order `m = 1 (mod 4)`, `17 <= m <= 61`, at which
+`10^7` random bases give a fraction outside the window by more than three standard errors (`k35cube.c` reaches
+`m = 61`; the audit's own samples of `10^6` bases gave `0.2213, 0.2203, 0.2198, 0.2206` at `m = 17, 21, 25, 37`).

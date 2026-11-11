@@ -1,0 +1,8 @@
+p3class (each class and its converse) m=5 bases 24 : failures T2 0, P3 0, kernel weights 0, through-vertex consistency 0 ; singular A: 16 ; K_1 non-empty: 14 ; G = 0: 4
+   values of G (count): 8(16) 16(4) 0(4)
+p3class (each class and its converse) m=6 bases 112 : failures T2 0, P3 0, kernel weights 0, through-vertex consistency 0 ; singular A: 76 ; K_1 non-empty: 72 ; G = 0: 0
+   values of G (count): 8(32) 16(64) 32(14) 64(2)
+p3class (each class and its converse) m=7 bases 912 : failures T2 0, P3 0, kernel weights 0, through-vertex consistency 0 ; singular A: 648 ; K_1 non-empty: 588 ; G = 0: 0
+   values of G (count): 16(244) 32(528) 64(128) 128(12)
+p3class (each class and its converse) m=8 bases 13760 : failures T2 0, P3 0, kernel weights 0, through-vertex consistency 0 ; singular A: 10000 ; K_1 non-empty: 8496 ; G = 0: 0
+   values of G (count): 32(7948) 16(3760) 64(1944) 128(102) 256(6)

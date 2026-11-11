@@ -1,0 +1,6 @@
+n=3: tiling ensemble E[(-1)^c3] = 0 ; uniform ensemble (Theorem T) 2^-floor((n-1)/2) = 1/2 ; score-parity vector uniform on its coset in the tiling ensemble: False (2 of 4 vectors occur)
+n=4: tiling ensemble E[(-1)^c3] = 1/2 ; uniform ensemble (Theorem T) 2^-floor((n-1)/2) = 1/2 ; score-parity vector uniform on its coset in the tiling ensemble: True (8 of 8 vectors occur)
+n=5: tiling ensemble E[(-1)^c3] = 1/4 ; uniform ensemble (Theorem T) 2^-floor((n-1)/2) = 1/4 ; score-parity vector uniform on its coset in the tiling ensemble: True (16 of 16 vectors occur)
+n=6: tiling ensemble E[(-1)^c3] = 1/4 ; uniform ensemble (Theorem T) 2^-floor((n-1)/2) = 1/4 ; score-parity vector uniform on its coset in the tiling ensemble: True (32 of 32 vectors occur)
+n=7: tiling ensemble E[(-1)^c3] = 1/8 ; uniform ensemble (Theorem T) 2^-floor((n-1)/2) = 1/8 ; score-parity vector uniform on its coset in the tiling ensemble: True (64 of 64 vectors occur)
+n=8: tiling ensemble E[(-1)^c3] = 1/8 ; uniform ensemble (Theorem T) 2^-floor((n-1)/2) = 1/8 ; score-parity vector uniform on its coset in the tiling ensemble: True (128 of 128 vectors occur)

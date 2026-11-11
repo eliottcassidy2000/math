@@ -1,0 +1,22 @@
+Theorem S (1), (2): all classes, orders 3 .. 8
+  n=3: classes 2, self-converse 2; failures of (1) 0; classes with a psi-fixed odd cycle (even n) 0; failures of H = 1 + 4s mod 8 (even n) 0; failures of H = 1 + 2F + 4I mod 8 (odd n) 0; H mod 8 of the self-converse classes {1: 1, 3: 1}
+  n=4: classes 4, self-converse 2; failures of (1) 0; classes with a psi-fixed odd cycle (even n) 0; failures of H = 1 + 4s mod 8 (even n) 0; failures of H = 1 + 2F + 4I mod 8 (odd n) 0; H mod 8 of the self-converse classes {1: 1, 5: 1}
+  n=5: classes 12, self-converse 8; failures of (1) 0; classes with a psi-fixed odd cycle (even n) 0; failures of H = 1 + 4s mod 8 (even n) 0; failures of H = 1 + 2F + 4I mod 8 (odd n) 0; H mod 8 of the self-converse classes {1: 3, 3: 2, 5: 1, 7: 2}
+  n=6: classes 56, self-converse 12; failures of (1) 0; classes with a psi-fixed odd cycle (even n) 0; failures of H = 1 + 4s mod 8 (even n) 0; failures of H = 1 + 2F + 4I mod 8 (odd n) 0; H mod 8 of the self-converse classes {1: 6, 5: 6}
+  n=7: classes 456, self-converse 88; failures of (1) 0; classes with a psi-fixed odd cycle (even n) 0; failures of H = 1 + 4s mod 8 (even n) 0; failures of H = 1 + 2F + 4I mod 8 (odd n) 0; H mod 8 of the self-converse classes {1: 22, 3: 20, 5: 22, 7: 24}
+  n=8: classes 6880, self-converse 176; failures of (1) 0; classes with a psi-fixed odd cycle (even n) 0; failures of H = 1 + 4s mod 8 (even n) 0; failures of H = 1 + 2F + 4I mod 8 (odd n) 0; H mod 8 of the self-converse classes {1: 82, 5: 94}
+Theorem S (3): number of labelled tournaments with a given involutive anti-automorphism psi (all psi with at most one fixed point)
+  n=2: involutions 1; tournaments per involution [2] (2^1 = 2); union over involutions = SC_n = 2
+  n=3: involutions 3; tournaments per involution [4] (2^2 = 4); union over involutions = SC_n = 8
+  n=4: involutions 3; tournaments per involution [16] (2^4 = 16); union over involutions = SC_n = 48
+  n=5: involutions 15; tournaments per involution [64] (2^6 = 64); union over involutions = SC_n = 704
+  n=6: involutions 15; tournaments per involution [512] (2^9 = 512); union over involutions = SC_n = 7040
+Deck remarks and subset form: all classes, orders 3 .. 7
+  n=3: classes 2; failures deck 0; Y_k formula 0; Y_k = (p_k - C(n,k))/2 mod 2 0
+  n=4: classes 4; failures deck 0; Y_k formula 0; Y_k = (p_k - C(n,k))/2 mod 2 0
+  n=5: classes 12; failures deck 0; Y_k formula 0; Y_k = (p_k - C(n,k))/2 mod 2 0
+  n=6: classes 56; failures deck 0; Y_k formula 0; Y_k = (p_k - C(n,k))/2 mod 2 0
+  n=7: classes 456; failures deck 0; Y_k formula 0; Y_k = (p_k - C(n,k))/2 mod 2 0
+Classes with G(R) = 0 by the kernel criterion (m = 1 mod 4): K_1 by elimination over F_2, whole coset enumerated
+  m=5: classes 12; K_1 non-empty in 7; G(R) = 0 in 2
+  m=9: classes 191536; K_1 non-empty in 114301; G(R) = 0 in 43993
