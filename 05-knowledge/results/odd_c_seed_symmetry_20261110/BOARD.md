@@ -11,6 +11,7 @@ Session date: 10 November 2026, America/Denver. Worktree branch:
 - Least-used sidecars here: the selected-set stabilizer, the full orientation demands of each qualifying path, and the Collatz branch valuation.
 - Incoming mainline: Session250's strong deletion-core normal form is compatible with the seed search; external transitive padding cannot create new odd slopes. The decomposition16 packet supplies the threshold95 sufficient induction and the all-order impossibility of 13->27. Session251 supplies safe intercyclic inflation and joint modular images; neither gives exact target heights or universal seeds.
 - Reserved THM-5130/HYP-9662 were inspected as concurrent exploratory work, not used as proved results.
+- Final integration: incoming `chanpak_55_105_golden_20261110` excludes a common source for the two branches at 105 and supplies an explicit mixed reset. The threshold 95 rule already allows different sources and survives. This strengthens the endpoint/source-identity warning without changing any seed certificate. Session251's H173 deletion floor changes the small-source hierarchy, not the seed equation.
 
 ## Portfolio and concept board
 

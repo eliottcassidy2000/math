@@ -102,6 +102,13 @@ This is **OPEN**. Together with the known initial values through 287 and
 ordinal-join multiplication by3, it proves the full conjecture by strong
 induction: for odd N>=289, choose delta in {0,2,4} so that
 h=(N-delta)/3 is odd; then 95<=h<N. The two source realisers may differ.
+
+The incoming [55/105 source classification](../chanpak_55_105_golden_20261110/README.md)
+makes this qualification essential: at h=105 no single source supports
+both 317 and 319 at any order. The weaker rule allowing different sources
+survives. Its concrete reset 105->19->105->9->105 changes the source while
+retaining six original vertices; it does not establish a universal reset.
+
 The missing source pair (93,281) prevents lowering this proposed uniform
 threshold below 95. The same inherited packet proves 13->27 impossible
 for a single induced vertex birth at **every order**, although both
@@ -135,6 +142,12 @@ proved solution for every odd c. Even universal seed existence would
 still leave the points below the rays.
 
 ## Checks and loss ledger
+
+The external target is Conjecture 6.2 in
+[Chan and Pak, section 6.5](https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf),
+which attributes the 2016 conjecture to bof and Gordon Royle. This primary
+statement was checked directly; none of the extension-existence claims
+is imported from that conjecture.
 
 `verify.py` compares the full cylinder polynomial to independent subset
 path counts for 2,130 extensions in 84 base families, including every
