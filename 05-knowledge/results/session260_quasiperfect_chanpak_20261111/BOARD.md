@@ -1,48 +1,51 @@
-# Session260 concept board
-
-## Portfolio and inheritance
+# Session260 concept board at close-out
 
 Anchor: construct every allowed odd tournament Hamilton-path count.
 Niche: recover excess-two and quasiperfect arithmetic without merging them.
-Wildcard: physical Frobenius/Carmichael tests and modular clone towers.
+Wildcard: physical Carmichael tests, quadratic norms, and graph domination.
 
-Inherited closest mechanisms: OCF; positive endpoint cuts; the strong-core
-normal form H−W=1,U=q; two-run shifted Mersenne products; full path-cover
-substitution rather than scalar H. Hostiles:20 has Chowla output21;
-fixed-gadget lambda243 is impossible on its stated source grammar;
-no +2 one-vertex birth above3. Corrected near miss: a nearby count or gcd-one
-image is not the desired exact fiber. Underused coordinates: selected
-endpoint pairs, module-run counts, retained ancestry and genuine arithmetic
-source labels.
+## Seven concepts and the connections actually earned
 
-## Six live concepts
+1. **Divisor-shell source.** σ(n)−2n and the odd part retain the arithmetic
+   source. The excess-two family gives real successor constructors, while
+   the quasiperfect odd-square condition opens a different norm interface.
+2. **Physical graph target.** H, ordered path covers Q₂, and actual adjacency
+   must travel together. Cyclic substitution gives bilinear norms; the cut
+   bound makes individual target classification finite. Pell alone loses Q₂.
+3. **Marked seed state.** H−W=1 and U=q survive the legal clone moves.
+   Twin coarsening exposes roots29/47 and commuting L/R/G operations.
+   Boundary parity identifies exactly why this carrier cannot rearm.
+4. **Modular substitution.** All realizable Stirling coefficients, not just
+   the first C3 test, force the prime/Carmichael criterion. Congruence is
+   useful structure but not exact target coverage.
+5. **Local geometry.** Crossing rank and apex words give exact response
+   laws and global gaps. A failed local surgery can coexist with a successful
+   replacement architecture, as the excess-two successors demonstrate.
+6. **Domination boundary.** Chain words give exact transfer; arbitrary
+   bipartite inputs give an injection with a positive defect. Rooted states
+   prove the bounded spectrum cutoff and lawful leaf/twin/hub formulas.
+7. **Endpoint flow.** Erasing the newborn turns its increment into an
+   original-arc positive cut. The discarded-looking reverse capacities form
+   a circulation, linking path insertion, arc flips, and the old OCF kernel.
 
-1. **Aliquot source:** sigma(n)−2n; keep prime guards and odd part.
-   Operations: factorization, unit-divisor deletion. Test:20 versus650.
-2. **Physical target:** H of an explicit tournament. Operations: ordinal
-   sum, cyclic blowup, marked edge reversal. Keep the actual graph.
-3. **Seed pair:** H−W=1 and U=q. Operations: transitive module inflation and
-   relocation of selected vertices. Keep both budgets, not just H or q.
-4. **Arithmetic congruence:** clone size m. Operation: substitute TT_m.
-   Keep all realizable Stirling coefficients. Test:341 versus561.
-5. **Coverage:** actual image of a grammar. Operations: target-dependent
-   changes and collective state sets. Keep quantifiers, holes and resets.
-6. **Local geometry:** rank of a changed edge in a cyclic two-block graph.
-   Operation: flip or rebuild. Keep the source graph and marked adjacency.
+## The decisive changes in direction
 
-## Connections already earned
+- The historical sequence is excess-two, not quasiperfect. Preserve both
+  lanes instead of forcing their source predicates to coincide.
+- The tempting decrement2 fails under every apex orientation. Rebuild the
+  target using fan products rather than indefinitely retrying local flips.
+- Fixed seed grammars remain sparse and cannot rearm internally. Retain a
+  physical return obligation or use a direct head replacement.
+- Bipartite domination is not the solved even-automorphism graph class.
+  Its new43 obstruction and exact zero-defect locus block naive transfers.
+- The stronger quantitative defect inequality survived finite tests but
+  lacks a global injection. Preserve the proved cut/circulation theorem and
+  state the missing exchange lemma explicitly.
 
-- Consecutive Mersenne factors give explicit realizers of n_a+1 for a≥3,
-  even when the aliquot prime guard fails. a2 is the genuine21 exception.
-- One crossing flip yields a new affine product coordinate4H−11.
-- Actual strong alternating-root tests turn universal clone congruences
-  into the full prime/Carmichael criterion, not a scalar analogy.
+## Close-out
 
-## Work under way and publication discipline
-
-The first checkpoint freezes completed arithmetic and modular-substitution
-results. Later checkpoints will integrate the seed and collective lanes and
-all-edge rigidity when finished. Inherited mathematics is not re-audited;
-new proofs receive focused hostile checks. No claimed complete proof without
-a universal existence/termination mechanism. Publish explicit paths only,
-preserve unrelated checkout changes and incoming main commits.
+All active research lanes ended with a proved mechanism, scoped finite
+certificate, exact first failure, or concrete open map. The synthesis
+integrates concurrent main contributions without claiming their discoveries
+as new here. No universal Chan–Pak proof or quasiperfect existence result is
+asserted. See OPEN_QUESTIONS.md for the next meaningful targets.

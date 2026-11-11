@@ -1,89 +1,57 @@
-# Session260: excess-two arithmetic and constructive Chan–Pak research
+# Session260: excess-two arithmetic, seed moves, and domination defects
 
-**2026-11-11. ACTIVE research session. Chan–Pak and quasiperfect existence remain OPEN.**
+**11 November 2026. Completed research packet. Chan–Pak and quasiperfect
+existence remain OPEN.** Individual claims are marked PROVED, FINITE-EXACT,
+CONDITIONAL, or OPEN in the linked notes. No external priority claim.
 
-The user requested a substantial creative session joining the old
-20,104,464,650,1952 sequence, quasiperfect numbers, and the tournament
-Hamilton-path spectrum. Existing claims are treated as inherited inputs;
-checks focus on the new operations and their actual targets.
+Start with the [synthesis](SYNTHESIS.md), [remaining questions](OPEN_QUESTIONS.md),
+and [reproduction guide](REPRODUCE.md).
 
-## Checkpoint one: recovered sources and two real operation bridges
+## Main results
 
-- [Arithmetic](arithmetic/RESEARCH.md): the five terms satisfy sigma(n)=2n+2,
-  whereas quasiperfect means sigma(n)=2n+1. Their Chowla successors are
-  21,105,465,651,1953: only21 is forbidden; the other four have explicit
-  tournament constructors. The whole formal two-prime family is decided.
-- [Modular substitutions](bridges/RESEARCH.md): transitive cloning of size m
-  preserves H modulo m for every rooted tournament exactly when m is prime
-  or Carmichael. Genuine strong test graphs recover the full arithmetic
-  criterion, rather than merely a base-two pseudoprime condition.
-- A new physical shifted-product chamber is
-  4H−11=(2^(a+1)−3)(2^(b+1)−3), a,b≥2. Its graph, marked-edge operation,
-  and proof are explicit in the arithmetic note.
+- **Exact domination bridge:** every rooted tournament satisfies
+  H(T)≥d(G_z), with equality iff T−z is transitive. A literal injection,
+  nonnegative cut-fibre formula, and iff-chain fixed-input criterion explain
+  both the transfer and its obstruction.
+- **Positive newborn cut:** the increment in H is a directed cut using
+  original-arc edge-flip capacities. Reverse endpoint capacities form a
+  nonnegative circulation. The stronger quantitative bound is still open.
+- **Recovered arithmetic:**20,104,464,650,1952 satisfy σ(n)=2n+2, not the
+  quasiperfect equation. Their successors21,105,465,651,1953 are resolved:
+  only21 is forbidden. The full formal consecutive family is constructed.
+- **Physical modular arithmetic:** universal transitive-clone congruence
+  modulo m≥2 holds exactly for prime and Carmichael m.
+- **Marked seed grammar:** six all-length seed families, exact selected-clone
+  guards, and a unified two-root L/R/G carrier with a one-use commuting gap
+  birth. Its boundary parity proves that same-q rearming is unavailable
+  inside this carrier.
+- **Local repair boundary:** all single-edge and all-apex decrement-two
+  repairs fail throughout the consecutive chamber. Bounded multi-edge
+  tests find positive repairs and an exact all-length failure boundary.
+- **Bipartite spectrum:** below225, over all orders, domination counts are
+  exactly positive odd integers other than7,13,21,43. A proved cutoff makes
+  the finite base complete. Leaf, twin, and shore-hub arithmetic is explicit.
+- **Quasiperfect norm interface:** actual cyclic substitution realizes
+  x²+2y² subject to a strong path-cover size bound. A complete finite target
+  compiler, exact norm3-switch classification, and first Pell failure retain
+  the distinction between an arithmetic representation and a graph source.
 
-Next work underway: all-length selected-set seed ladders, simultaneous module
-changes and marked-pair relocation, collective coverage, and the complete
-local rigidity of the consecutive two-run chamber.
+## Proof map
 
-## Checkpoint two: physical multiplier moves and the exact repair barrier
+- [Arithmetic and historical provenance](arithmetic/RESEARCH.md)
+- [Quasiperfect norm constructors](arithmetic/QUASIPERFECT_NORMS.md)
+- [Prime/Carmichael clone criterion](bridges/RESEARCH.md)
+- [Domination injection and equality](bridges/BIPARTITE_DEFECT.md)
+- [Positive capacities and circulation](bridges/DEFECT_QUANTITATIVE.md)
+- [Exact chain adapter](bridges/DOMINATION_TRANSFER.md)
+- [Seed families](constructors/RESEARCH.md), [marked grammar](coverage/PROOF.md),
+  and [two-root integration](coverage/INCOMING_CONNECTIONS.md)
+- [Single-edge rigidity](LOCAL_RIGIDITY.md), [crossing flips](bridges/CROSSING_FLIP.md),
+  and [apex/multi-edge repairs](constructors/TWO_EDGE_REPAIR.md)
+- [Bipartite spectrum and boundary-state constructors](constructors/BIPARTITE_COVERAGE.md)
 
-- [Selected-set constructors](constructors/RESEARCH.md): six all-length
-  strong seed ladders, including (H,U)→(2H+1,3U+2), and an exact first/second
-  clone guard. A finite two-template atlas contains627 seed presentations
-  and212 odd slopes; three literal rays retain all their below-start heads.
-- [Commuting marked grammar](coverage/PROOF.md): two selected clones give
-  genuine left/right insertions on state(q,δ), with δ∈{0,1,3}. The exact
-  selected gap is0 or1. This carrier's twelve odd-slope sequences are
-  classified and sparse; no universal digit alphabet is asserted.
-- [Sharp local rigidity](LOCAL_RIGIDITY.md): every single-edge reversal of
-  C3(TT_a,TT_(a+1),1) that lowers H lowers it by at least3·2^(a−1)−2.
-  Hence none makes the desired decrement2 at any a≥2, despite the positive
-  replacement constructors for every a≥3.
-- [Focused new-proof review](review/REVIEW.md) accepted the named interfaces
-  without re-auditing inherited classifications.
-
-The concurrent48ffb162415d stable-port and completed-grid work is preserved
-and credited. The completed third wave below follows both routes beyond the initial tests.
-
-## Checkpoint three: domination, positive defects, and quadratic norms
-
-- [General domination injection](bridges/BIPARTITE_DEFECT.md): for every
-  tournament T and marked vertex z, its bipartite cross-incidence graph G_z
-  satisfies H(T)≥d(G_z), with equality exactly when T−z is transitive.
-  The proof gives an injection and a termwise nonnegative cut-fibre defect.
-  For a fixed bipartite input, zero defect is attainable by choosing shore
-  orientations exactly for chain graphs.
-- [Exact chain adapter](bridges/DOMINATION_TRANSFER.md): a binary word
-  builds a chain graph and tournament with identical counts, together with
-  a two-register arithmetic recurrence. The all-order missing target29
-  explains why the solved even-graph spectrum does not automatically transfer.
-- [Apex and multi-edge repairs](constructors/TWO_EDGE_REPAIR.md): every
-  apex reorientation of the consecutive two-run chamber misses its desired
-  decrement2. Complete two-edge shells through a=6 have hits only at a=3.
-  A four-edge repair at a=4 is explained by an exact all-length formula;
-  the same rank pattern fails at every a≥5.
-- [Quasiperfect norm interface](arithmetic/QUASIPERFECT_NORMS.md): actual
-  cyclic substitution gives x²+2y², with x=Q2−H and y=H. The cut bound
-  x≥|A|y yields a complete finite decision procedure for this grammar.
-  Factor-three switching has exactly three physical profiles and outputs
-  3,51,99; the next Pell candidate fails its graph profile at Q2=42.
-- [Focused third-wave review](review/THIRD_WAVE.md) separates all-size
-  proofs from their justified finite certificates and bounded shell tests.
-
-Further work is isolating bipartite-spectrum obstructions and quantitative
-positive-defect operations. No full spectrum conclusion follows yet.
-
-## Status and scope
-
-New claims are proved in the linked notes, with separately scoped exact
-experiments. No numbered canon promotion, external priority claim, or
-universal spectrum closure is asserted. An arithmetic congruence is not an
-exact-count constructor, and a local obstruction is not nonrealizability.
-The [concept board](BOARD.md) retains the live objects and missing data.
-
-Run the two current controls from the repository root:
-
-    python3 -B 05-knowledge/results/session260_quasiperfect_chanpak_20261111/arithmetic/check.py
-    python3 -B 05-knowledge/results/session260_quasiperfect_chanpak_20261111/bridges/check.py
-
-The receipts record the precise finite universes and literal graphs.
+Focused reviews are in [review](review/). Existing repository results were
+used as inherited inputs rather than broadly re-audited. New controls have
+explicit universes and receipts. Incoming concurrent work is preserved and
+credited in the synthesis and source pins. The [concept board](BOARD.md)
+records the resulting connections and stopping points.

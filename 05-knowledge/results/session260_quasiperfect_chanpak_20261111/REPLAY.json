@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "scope": "Four scoped independent/new-interface controls, normal and optimized Python. Not a full census or inherited-source audit.",
+  "cases": [
+    {
+      "script": "review/third_wave_check.py",
+      "receipt": "review/third_wave_receipt.json",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_match_receipt": true
+    },
+    {
+      "script": "review/bipartite_defect_tiny.py",
+      "receipt": "review/bipartite_defect_tiny_receipt.json",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_match_receipt": true
+    },
+    {
+      "script": "arithmetic/norm_check.py",
+      "receipt": "arithmetic/norm_receipt.json",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_match_receipt": true
+    },
+    {
+      "script": "coverage/marked_module.py",
+      "receipt": "coverage/marked_module_receipt.json",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_match_receipt": true
+    }
+  ]
+}

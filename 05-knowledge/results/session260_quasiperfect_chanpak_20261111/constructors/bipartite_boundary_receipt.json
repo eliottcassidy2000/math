@@ -1,0 +1,268 @@
+{
+  "status": "PASS",
+  "tree_minima": [
+    {
+      "n": 1,
+      "rooted_boundary_states": 1,
+      "minimum": 1
+    },
+    {
+      "n": 2,
+      "rooted_boundary_states": 1,
+      "minimum": 3
+    },
+    {
+      "n": 3,
+      "rooted_boundary_states": 2,
+      "minimum": 5
+    },
+    {
+      "n": 4,
+      "rooted_boundary_states": 4,
+      "minimum": 9
+    },
+    {
+      "n": 5,
+      "rooted_boundary_states": 8,
+      "minimum": 15
+    },
+    {
+      "n": 6,
+      "rooted_boundary_states": 17,
+      "minimum": 25
+    },
+    {
+      "n": 7,
+      "rooted_boundary_states": 36,
+      "minimum": 45
+    },
+    {
+      "n": 8,
+      "rooted_boundary_states": 77,
+      "minimum": 75
+    },
+    {
+      "n": 9,
+      "rooted_boundary_states": 172,
+      "minimum": 125
+    },
+    {
+      "n": 10,
+      "rooted_boundary_states": 380,
+      "minimum": 225
+    }
+  ],
+  "global_bipartite_exceptions_below225": [
+    7,
+    13,
+    21,
+    43
+  ],
+  "scope": "Complete below225 using connected order10 lower bound225 and component products; not a global four-exception theorem",
+  "boundary_controls": 1059,
+  "sample_interfaces": [
+    {
+      "d": 5,
+      "rows": [
+        6,
+        1,
+        1
+      ],
+      "shore_state": {
+        "d": 5,
+        "FL": 5,
+        "FR": 7,
+        "P": 8,
+        "eL": 1,
+        "eR": 1
+      }
+    },
+    {
+      "d": 5,
+      "rows": [
+        6,
+        1,
+        1,
+        0
+      ],
+      "shore_state": {
+        "d": 5,
+        "FL": 5,
+        "FR": 14,
+        "P": 16,
+        "eL": 1,
+        "eR": 0
+      }
+    },
+    {
+      "d": 11,
+      "rows": [
+        12,
+        12,
+        3,
+        3
+      ],
+      "shore_state": {
+        "d": 11,
+        "FL": 13,
+        "FR": 13,
+        "P": 16,
+        "eL": 1,
+        "eR": 1
+      }
+    },
+    {
+      "d": 5,
+      "rows": [
+        6,
+        1,
+        1,
+        0,
+        0
+      ],
+      "shore_state": {
+        "d": 5,
+        "FL": 5,
+        "FR": 28,
+        "P": 32,
+        "eL": 1,
+        "eR": 0
+      }
+    },
+    {
+      "d": 11,
+      "rows": [
+        12,
+        12,
+        3,
+        3,
+        0
+      ],
+      "shore_state": {
+        "d": 11,
+        "FL": 13,
+        "FR": 26,
+        "P": 32,
+        "eL": 1,
+        "eR": 0
+      }
+    },
+    {
+      "d": 5,
+      "rows": [
+        6,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "shore_state": {
+        "d": 5,
+        "FL": 5,
+        "FR": 56,
+        "P": 64,
+        "eL": 1,
+        "eR": 0
+      }
+    },
+    {
+      "d": 11,
+      "rows": [
+        12,
+        12,
+        3,
+        3,
+        0,
+        0
+      ],
+      "shore_state": {
+        "d": 11,
+        "FL": 13,
+        "FR": 52,
+        "P": 64,
+        "eL": 1,
+        "eR": 0
+      }
+    },
+    {
+      "d": 29,
+      "rows": [
+        52,
+        12,
+        3,
+        2,
+        1,
+        1
+      ],
+      "shore_state": {
+        "d": 29,
+        "FL": 29,
+        "FR": 53,
+        "P": 64,
+        "eL": 1,
+        "eR": 1
+      }
+    },
+    {
+      "d": 5,
+      "rows": [
+        6,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shore_state": {
+        "d": 5,
+        "FL": 5,
+        "FR": 112,
+        "P": 128,
+        "eL": 1,
+        "eR": 0
+      }
+    },
+    {
+      "d": 11,
+      "rows": [
+        12,
+        12,
+        3,
+        3,
+        0,
+        0,
+        0
+      ],
+      "shore_state": {
+        "d": 11,
+        "FL": 13,
+        "FR": 104,
+        "P": 128,
+        "eL": 1,
+        "eR": 0
+      }
+    },
+    {
+      "d": 29,
+      "rows": [
+        52,
+        12,
+        3,
+        2,
+        1,
+        1,
+        0
+      ],
+      "shore_state": {
+        "d": 29,
+        "FL": 29,
+        "FR": 106,
+        "P": 128,
+        "eL": 1,
+        "eR": 0
+      }
+    }
+  ]
+}

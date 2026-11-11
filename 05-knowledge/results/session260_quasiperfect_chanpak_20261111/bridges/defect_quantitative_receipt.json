@@ -1,0 +1,40 @@
+{
+  "status": "FINITE-EXACT for conjectural inequalities; identity proved in note",
+  "exhaustive_rows": [
+    {
+      "order": 1,
+      "graphs": 1,
+      "root_cases": 1
+    },
+    {
+      "order": 2,
+      "graphs": 2,
+      "root_cases": 4
+    },
+    {
+      "order": 3,
+      "graphs": 8,
+      "root_cases": 24
+    },
+    {
+      "order": 4,
+      "graphs": 64,
+      "root_cases": 256
+    },
+    {
+      "order": 5,
+      "graphs": 1024,
+      "root_cases": 5120
+    },
+    {
+      "order": 6,
+      "graphs": 32768,
+      "root_cases": 196608
+    }
+  ],
+  "root_cases": 202013,
+  "kernel_bases": 75,
+  "all_birth_cuts_tested_on_kernel_bases": 1098,
+  "seeded_random_roots_orders_7_to_10": 6800,
+  "counterexamples": []
+}
