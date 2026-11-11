@@ -56,3 +56,23 @@ invariant odd cycles by length and the pattern of cyclic invariant triples.
 ## Refutation
 
 Any of R1-R6 outside its statement is reported as FAILED. A failure of a control refutes the program or the proof.
+
+---
+
+# Second block (same session): R7
+
+Written after Runs A-D were read (R1, R4, R5 CONFIRMED; R2, R3 FAILED as stated and replaced by a proved law; R6
+FAILED: `CD_4` has no anti-automorphism) and before Run E was started.
+
+In-sample: `H(P_q) = 1 (mod 4)` for `q = 7 (mod 8)` and `3 (mod 4)` for `q = 3 (mod 8)` is now proved (quotient
+formula); `H(CD_4) = 198335025 = 1 (mod 4)` although `CD_4` is not self-converse.
+
+## Run E: doubly regular tournaments of order 15 from one skew Hadamard matrix (`drt_descendants.py`)
+
+For each of the 16 indices `c` of the Cayley-Dickson sign matrix of order 16, normalise row and column `c` and take
+the tournament on the other 15 indices (the "descendants"; each is doubly regular).
+
+- **R7.** Every descendant has `H = 1 (mod 4)`.
+
+Conjecture to be recorded if R7 holds: every doubly regular tournament of order `n` has `H = 1 (mod 4)` if
+`n = 7 (mod 8)` and `H = 3 (mod 4)` if `n = 3 (mod 8)`.
