@@ -1,0 +1,60 @@
+{
+  "status": "FINITE-EXACT",
+  "universe": "all labelled tournaments of orders 1..5, all newborn cuts",
+  "tournaments": 1099,
+  "births": 33866,
+  "unit_parent_counts": {
+    "1": 152,
+    "3": 138
+  },
+  "controls": {
+    "triangle": {
+      "parent": [
+        2,
+        4,
+        1
+      ],
+      "half_increment_spectrum": [
+        0,
+        1
+      ]
+    },
+    "gcd_one_not_support": {
+      "parent": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "H": 5,
+      "extension_spectrum": [
+        5,
+        9,
+        11,
+        13,
+        15
+      ],
+      "minimum_positive_half_increment": 2
+    }
+  },
+  "seed_budget_checks": "all selected subsets; independently enumerated ordered two-path covers",
+  "unit_witnesses": {
+    "1": {
+      "parent": [
+        0,
+        1
+      ],
+      "cut": 2,
+      "child_count": 3
+    },
+    "3": {
+      "parent": [
+        4,
+        1,
+        2
+      ],
+      "cut": 1,
+      "child_count": 5
+    }
+  }
+}

@@ -1,0 +1,525 @@
+{
+  "factor_table": [
+    {
+      "factors": [
+        [
+          13,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "k": 1,
+      "value": 221,
+      "wheel_survivor": false
+    },
+    {
+      "factors": [
+        [
+          419,
+          1
+        ]
+      ],
+      "k": 2,
+      "value": 419,
+      "wheel_survivor": true
+    },
+    {
+      "factors": [
+        [
+          5,
+          1
+        ],
+        [
+          163,
+          1
+        ]
+      ],
+      "k": 3,
+      "value": 815,
+      "wheel_survivor": false
+    },
+    {
+      "factors": [
+        [
+          1607,
+          1
+        ]
+      ],
+      "k": 4,
+      "value": 1607,
+      "wheel_survivor": true
+    },
+    {
+      "factors": [
+        [
+          3191,
+          1
+        ]
+      ],
+      "k": 5,
+      "value": 3191,
+      "wheel_survivor": true
+    },
+    {
+      "factors": [
+        [
+          6359,
+          1
+        ]
+      ],
+      "k": 6,
+      "value": 6359,
+      "wheel_survivor": true
+    },
+    {
+      "factors": [
+        [
+          5,
+          1
+        ],
+        [
+          2539,
+          1
+        ]
+      ],
+      "k": 7,
+      "value": 12695,
+      "wheel_survivor": false
+    },
+    {
+      "factors": [
+        [
+          25367,
+          1
+        ]
+      ],
+      "k": 8,
+      "value": 25367,
+      "wheel_survivor": true
+    },
+    {
+      "factors": [
+        [
+          17,
+          1
+        ],
+        [
+          19,
+          1
+        ],
+        [
+          157,
+          1
+        ]
+      ],
+      "k": 9,
+      "value": 50711,
+      "wheel_survivor": false
+    },
+    {
+      "factors": [
+        [
+          101399,
+          1
+        ]
+      ],
+      "k": 10,
+      "value": 101399,
+      "wheel_survivor": true
+    },
+    {
+      "factors": [
+        [
+          5,
+          2
+        ],
+        [
+          8111,
+          1
+        ]
+      ],
+      "k": 11,
+      "value": 202775,
+      "wheel_survivor": false
+    },
+    {
+      "factors": [
+        [
+          405527,
+          1
+        ]
+      ],
+      "k": 12,
+      "value": 405527,
+      "wheel_survivor": true
+    },
+    {
+      "factors": [
+        [
+          13,
+          2
+        ],
+        [
+          4799,
+          1
+        ]
+      ],
+      "k": 13,
+      "value": 811031,
+      "wheel_survivor": false
+    },
+    {
+      "factors": [
+        [
+          1622039,
+          1
+        ]
+      ],
+      "k": 14,
+      "value": 1622039,
+      "wheel_survivor": true
+    },
+    {
+      "factors": [
+        [
+          5,
+          1
+        ],
+        [
+          83,
+          1
+        ],
+        [
+          7817,
+          1
+        ]
+      ],
+      "k": 15,
+      "value": 3244055,
+      "wheel_survivor": false
+    },
+    {
+      "factors": [
+        [
+          1301,
+          1
+        ],
+        [
+          4987,
+          1
+        ]
+      ],
+      "k": 16,
+      "value": 6488087,
+      "wheel_survivor": true
+    }
+  ],
+  "first25_primes": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71,
+    73,
+    79,
+    83,
+    89,
+    97
+  ],
+  "hostile": {
+    "factors": [
+      1301,
+      4987
+    ],
+    "k": 16,
+    "n": 6488087
+  },
+  "inherited_ready_states": [
+    {
+      "E": 3,
+      "H": 221,
+      "K": 1704,
+      "S": 56,
+      "U": 1641,
+      "V": 222,
+      "d": 57,
+      "k": 1
+    },
+    {
+      "E": 3,
+      "H": 419,
+      "K": 4884,
+      "S": 110,
+      "U": 4749,
+      "V": 420,
+      "d": 111,
+      "k": 2
+    },
+    {
+      "E": 3,
+      "H": 815,
+      "K": 13944,
+      "S": 218,
+      "U": 13665,
+      "V": 816,
+      "d": 219,
+      "k": 3
+    },
+    {
+      "E": 3,
+      "H": 1607,
+      "K": 40164,
+      "S": 434,
+      "U": 39597,
+      "V": 1608,
+      "d": 435,
+      "k": 4
+    },
+    {
+      "E": 3,
+      "H": 3191,
+      "K": 116904,
+      "S": 866,
+      "U": 115761,
+      "V": 3192,
+      "d": 867,
+      "k": 5
+    },
+    {
+      "E": 3,
+      "H": 6359,
+      "K": 343284,
+      "S": 1730,
+      "U": 340989,
+      "V": 6360,
+      "d": 1731,
+      "k": 6
+    },
+    {
+      "E": 3,
+      "H": 12695,
+      "K": 1014744,
+      "S": 3458,
+      "U": 1010145,
+      "V": 12696,
+      "d": 3459,
+      "k": 7
+    },
+    {
+      "E": 3,
+      "H": 25367,
+      "K": 3013764,
+      "S": 6914,
+      "U": 3004557,
+      "V": 25368,
+      "d": 6915,
+      "k": 8
+    },
+    {
+      "E": 3,
+      "H": 50711,
+      "K": 8980104,
+      "S": 13826,
+      "U": 8961681,
+      "V": 50712,
+      "d": 13827,
+      "k": 9
+    },
+    {
+      "E": 3,
+      "H": 101399,
+      "K": 26817684,
+      "S": 27650,
+      "U": 26780829,
+      "V": 101400,
+      "d": 27651,
+      "k": 10
+    },
+    {
+      "E": 3,
+      "H": 202775,
+      "K": 80207544,
+      "S": 55298,
+      "U": 80133825,
+      "V": 202776,
+      "d": 55299,
+      "k": 11
+    },
+    {
+      "E": 3,
+      "H": 405527,
+      "K": 240131364,
+      "S": 110594,
+      "U": 239983917,
+      "V": 405528,
+      "d": 110595,
+      "k": 12
+    }
+  ],
+  "phase_rows": [
+    {
+      "forbidden": [],
+      "order": 2,
+      "prime": 3
+    },
+    {
+      "forbidden": [
+        3
+      ],
+      "order": 4,
+      "prime": 5
+    },
+    {
+      "forbidden": [],
+      "order": 3,
+      "prime": 7
+    },
+    {
+      "forbidden": [],
+      "order": 10,
+      "prime": 11
+    },
+    {
+      "forbidden": [
+        1
+      ],
+      "order": 12,
+      "prime": 13
+    },
+    {
+      "forbidden": [
+        1
+      ],
+      "order": 8,
+      "prime": 17
+    },
+    {
+      "forbidden": [
+        9
+      ],
+      "order": 18,
+      "prime": 19
+    },
+    {
+      "forbidden": [],
+      "order": 11,
+      "prime": 23
+    },
+    {
+      "forbidden": [
+        27
+      ],
+      "order": 28,
+      "prime": 29
+    },
+    {
+      "forbidden": [],
+      "order": 5,
+      "prime": 31
+    },
+    {
+      "forbidden": [
+        23
+      ],
+      "order": 36,
+      "prime": 37
+    },
+    {
+      "forbidden": [],
+      "order": 20,
+      "prime": 41
+    },
+    {
+      "forbidden": [],
+      "order": 14,
+      "prime": 43
+    },
+    {
+      "forbidden": [],
+      "order": 23,
+      "prime": 47
+    },
+    {
+      "forbidden": [
+        25
+      ],
+      "order": 52,
+      "prime": 53
+    },
+    {
+      "forbidden": [
+        35
+      ],
+      "order": 58,
+      "prime": 59
+    },
+    {
+      "forbidden": [
+        0
+      ],
+      "order": 60,
+      "prime": 61
+    },
+    {
+      "forbidden": [
+        56
+      ],
+      "order": 66,
+      "prime": 67
+    },
+    {
+      "forbidden": [],
+      "order": 35,
+      "prime": 71
+    },
+    {
+      "forbidden": [],
+      "order": 9,
+      "prime": 73
+    },
+    {
+      "forbidden": [],
+      "order": 39,
+      "prime": 79
+    },
+    {
+      "forbidden": [
+        15
+      ],
+      "order": 82,
+      "prime": 83
+    },
+    {
+      "forbidden": [],
+      "order": 11,
+      "prime": 89
+    },
+    {
+      "forbidden": [],
+      "order": 48,
+      "prime": 97
+    }
+  ],
+  "status": "FINITE-EXACT controls accompanying all-k proofs; no spectrum-completeness claim",
+  "twin_controls": 343,
+  "two_run_controls": 2464,
+  "valid_common_index_period": 428468040
+}

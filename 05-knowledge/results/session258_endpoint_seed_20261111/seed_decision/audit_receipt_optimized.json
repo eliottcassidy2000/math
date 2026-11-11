@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "independent_literal_transfer_checks": 146,
+  "results": [
+    {
+      "q": 1,
+      "status": "SEED",
+      "full_closure_states": 8,
+      "accepting_states": 4
+    },
+    {
+      "q": 2,
+      "status": "SEED",
+      "full_closure_states": 12,
+      "accepting_states": 3
+    },
+    {
+      "q": 3,
+      "status": "NO_SEED",
+      "full_closure_states": 20,
+      "accepting_states": 0
+    },
+    {
+      "q": 4,
+      "status": "SEED",
+      "full_closure_states": 26,
+      "accepting_states": 4
+    },
+    {
+      "q": 5,
+      "status": "NO_SEED",
+      "full_closure_states": 37,
+      "accepting_states": 0
+    },
+    {
+      "q": 6,
+      "status": "SEED",
+      "full_closure_states": 48,
+      "accepting_states": 3
+    },
+    {
+      "q": 7,
+      "status": "NO_SEED",
+      "full_closure_states": 58,
+      "accepting_states": 0
+    },
+    {
+      "q": 8,
+      "status": "SEED",
+      "full_closure_states": 65,
+      "accepting_states": 5
+    },
+    {
+      "q": 9,
+      "status": "NO_SEED",
+      "full_closure_states": 83,
+      "accepting_states": 0
+    },
+    {
+      "q": 10,
+      "status": "NO_SEED",
+      "full_closure_states": 93,
+      "accepting_states": 0
+    },
+    {
+      "q": 11,
+      "status": "SEED",
+      "full_closure_states": 105,
+      "accepting_states": 2
+    },
+    {
+      "q": 12,
+      "status": "SEED",
+      "full_closure_states": 125,
+      "accepting_states": 5
+    },
+    {
+      "q": 13,
+      "status": "NO_SEED",
+      "full_closure_states": 139,
+      "accepting_states": 0
+    }
+  ],
+  "scope": "Fixed U=q in the selected-set transitive-tail constructor; not general ray mechanisms or eventual odd-part seeds."
+}

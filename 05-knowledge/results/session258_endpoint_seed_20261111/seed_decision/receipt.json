@@ -1,0 +1,249 @@
+{
+  "status": "PASS",
+  "scope": "Complete all-tournament fixed-q searches q1..13 using cited Busch bound; same code supplies general finite algorithm, not executed at unbounded q",
+  "strong_floor_input": "Busch EJC13(2006)N3 via repository ORDER_OBSTRUCTION section5; inherited not reproved",
+  "composition_checks": 148,
+  "saturation_checks": 896,
+  "bank": {
+    "raw_marked_presentations": 15762,
+    "distinct_transfers": 146,
+    "labelled_strong_counts": {
+      "1": 1,
+      "3": 2,
+      "4": 24,
+      "5": 480
+    },
+    "maximum_order": 5
+  },
+  "results": [
+    {
+      "q": 1,
+      "status": "SEED",
+      "states_seen": 5,
+      "states_expanded": 3,
+      "alphabet_size": 2,
+      "strong_order_bound": 1,
+      "rows": [
+        0
+      ],
+      "selected_mask": 1,
+      "H": 1,
+      "W": 0,
+      "U": 1,
+      "block_word": [
+        1
+      ],
+      "block_count": 1,
+      "tail_counts": [
+        3,
+        5
+      ]
+    },
+    {
+      "q": 2,
+      "status": "SEED",
+      "states_seen": 10,
+      "states_expanded": 7,
+      "alphabet_size": 6,
+      "strong_order_bound": 3,
+      "rows": [
+        2,
+        0
+      ],
+      "selected_mask": 1,
+      "H": 1,
+      "W": 0,
+      "U": 2,
+      "block_word": [
+        1,
+        0
+      ],
+      "block_count": 2,
+      "tail_counts": [
+        5,
+        9
+      ]
+    },
+    {
+      "q": 3,
+      "status": "NO_SEED",
+      "states_seen": 20,
+      "states_expanded": 20,
+      "alphabet_size": 6,
+      "strong_order_bound": 3
+    },
+    {
+      "q": 4,
+      "status": "SEED",
+      "states_seen": 22,
+      "states_expanded": 18,
+      "alphabet_size": 22,
+      "strong_order_bound": 4,
+      "rows": [
+        6,
+        4,
+        0
+      ],
+      "selected_mask": 1,
+      "H": 1,
+      "W": 0,
+      "U": 4,
+      "block_word": [
+        1,
+        0,
+        0
+      ],
+      "block_count": 3,
+      "tail_counts": [
+        9,
+        17
+      ]
+    },
+    {
+      "q": 5,
+      "status": "NO_SEED",
+      "states_seen": 37,
+      "states_expanded": 37,
+      "alphabet_size": 22,
+      "strong_order_bound": 4
+    },
+    {
+      "q": 6,
+      "status": "SEED",
+      "states_seen": 20,
+      "states_expanded": 6,
+      "alphabet_size": 22,
+      "strong_order_bound": 4,
+      "rows": [
+        4,
+        1,
+        2
+      ],
+      "selected_mask": 3,
+      "H": 3,
+      "W": 2,
+      "U": 6,
+      "block_word": [
+        4
+      ],
+      "block_count": 1,
+      "tail_counts": [
+        13,
+        25
+      ]
+    },
+    {
+      "q": 7,
+      "status": "NO_SEED",
+      "states_seen": 58,
+      "states_expanded": 58,
+      "alphabet_size": 22,
+      "strong_order_bound": 4
+    },
+    {
+      "q": 8,
+      "status": "SEED",
+      "states_seen": 55,
+      "states_expanded": 47,
+      "alphabet_size": 82,
+      "strong_order_bound": 5,
+      "rows": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "selected_mask": 1,
+      "H": 1,
+      "W": 0,
+      "U": 8,
+      "block_word": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "block_count": 4,
+      "tail_counts": [
+        17,
+        33
+      ]
+    },
+    {
+      "q": 9,
+      "status": "NO_SEED",
+      "states_seen": 83,
+      "states_expanded": 83,
+      "alphabet_size": 82,
+      "strong_order_bound": 5
+    },
+    {
+      "q": 10,
+      "status": "NO_SEED",
+      "states_seen": 93,
+      "states_expanded": 93,
+      "alphabet_size": 114,
+      "strong_order_bound": 5
+    },
+    {
+      "q": 11,
+      "status": "SEED",
+      "states_seen": 43,
+      "states_expanded": 11,
+      "alphabet_size": 114,
+      "strong_order_bound": 5,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "selected_mask": 3,
+      "H": 5,
+      "W": 4,
+      "U": 11,
+      "block_word": [
+        9
+      ],
+      "block_count": 1,
+      "tail_counts": [
+        23,
+        45
+      ]
+    },
+    {
+      "q": 12,
+      "status": "SEED",
+      "states_seen": 51,
+      "states_expanded": 14,
+      "alphabet_size": 146,
+      "strong_order_bound": 5,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "selected_mask": 9,
+      "H": 5,
+      "W": 4,
+      "U": 12,
+      "block_word": [
+        15
+      ],
+      "block_count": 1,
+      "tail_counts": [
+        25,
+        49
+      ]
+    },
+    {
+      "q": 13,
+      "status": "NO_SEED",
+      "states_seen": 139,
+      "states_expanded": 139,
+      "alphabet_size": 146,
+      "strong_order_bound": 5
+    }
+  ]
+}
