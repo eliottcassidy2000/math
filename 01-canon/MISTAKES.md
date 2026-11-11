@@ -4,6 +4,16 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-10: Fortunate/Landau comparison, prepublication wording audit
+
+- Coordinate difference is not Euclidean distance: the Gaussian coordinates
+  123 and -122 have magnitudes differing by 1, but distance to the relevant
+  diagonal is 1/sqrt(2). The final note uses the coordinate statement.
+- The fixed-congruence composite construction controls the input n modulo W;
+  it does not put the output n^2+1 in that same residue class. The final
+  quantifier names input classes explicitly. Both corrections preceded publication.
+- [Scoped proof, inherited sources, and exact controls](../05-knowledge/results/fortunate_landau_bridge_20261110/README.md).
+
 ## 2026-11-10: Session246 reset scope, interaction signs and mixed-letter memory
 
 - **Scope corrected before publication:** the first reset interpretation said prime coverage must avoid the whole rank-one ideal. The proof certifies only the displayed reset sublanguage and its OJ/JZ rewrites. No full ideal classification is claimed. A canonical phrase suggesting a decision theorem was likewise narrowed to exact symbolic recurrences. The final summary now says the controller approximates every ratio to arbitrary precision; it does not exactly attain irrational ratios.
