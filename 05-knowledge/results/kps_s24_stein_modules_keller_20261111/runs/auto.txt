@@ -1,0 +1,9 @@
+automorphism (x + y^2, y + (x + y^2)^2), centre (2, 3): c(10) = 1, c(16) = 1
+   h = x, n = 0: N N N N
+   h = x, n = 1: N N N 0
+   h = x, n = 2: N 0 0 ?
+   h = x, n = 3: 0 0 0 ?
+   h = x y, n = 0: N N N N
+   h = x y, n = 1: N N N N
+   h = x y, n = 2: N N N ?
+   h = x y, n = 3: N 0 0 ?

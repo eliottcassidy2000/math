@@ -1,0 +1,23 @@
+slice, centre (2, 3), N' = 40: c(30) = 11  (16 s)
+Hermite classes [h H_(n,m)(U, V)] for h = w (rows n = 0.., columns m = 0..; N = nonzero, 0 = zero, ? = weight above 30):
+   n = 0: N N N N N
+   n = 1: N N N N N
+   n = 2: N N N N ?
+   n = 3: N N N N ?
+   n = 4: N N N N ?
+Hermite classes [h H_(n,m)(U, V)] for h = x (rows n = 0.., columns m = 0..; N = nonzero, 0 = zero, ? = weight above 30):
+   n = 0: N N N N N
+   n = 1: N N N N N
+   n = 2: N N N N ?
+   n = 3: N N N N ?
+   n = 4: N N N N ?
+Hermite classes [h H_(n,m)(U, V)] for h = 1 (rows n = 0.., columns m = 0..; N = nonzero, 0 = zero, ? = weight above 30):
+   n = 0: N 0 0 0 0
+   n = 1: 0 0 0 0 0
+   n = 2: 0 0 0 0 ?
+   n = 3: 0 0 0 0 ?
+   n = 4: 0 0 0 0 ?
+
+real	0m16.446s
+user	0m0.031s
+sys	0m0.015s

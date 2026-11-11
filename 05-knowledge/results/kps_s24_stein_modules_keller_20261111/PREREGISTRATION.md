@@ -99,3 +99,26 @@ two sheets missing over a generic point; `dim = b_1(fibre) - 1 + 1` as in S3, `b
 
 Reading: confirmed, the count is right for a second family of potentials with different intersection numbers;
 refuted, the agreement in S3 was partly accidental and W2 needs re-derivation.
+
+---
+
+## Outcomes (added after the runs; nothing above was changed)
+
+| prediction | outcome |
+|---|---|
+| S2 (toy on `C^* x C`: dimension 2; `x^(-2) V^m` nonzero for `m <= 6`) | **CONFIRMED** (`runs/s2_toy.txt`): `c = 2` at `N' = 18, 24, 30`; six classes nonzero |
+| S3 (slice of THM-1300, centre (2, 3): dimension 11) | **CONFIRMED** (`runs/s3_s5_slice.txt`): `c(N) = 11` for `N <= 36` at `N' = 40, 46` |
+| S4 (`w V^m`, `w U^m` nonzero for `m <= 5`) | **CONFIRMED** at `N' = 46` (all elements of weight at most 34, where the truncation is exact) |
+| S5 (`U^k V^l = k! [k = l]`, `[1] != 0`) | **CONFIRMED**: 15 of 15 on the toy and on the slice; `[1]` nonzero on both |
+| S6 (linear potentials on the slice: 2, 4, 6) | **CONFIRMED** (`runs/s6_linear.txt`) |
+
+Notes.
+
+1. S2 and S5 were derivable by hand (W5 and W1); they test the implementation on the rings `C[x, 1/x, y]` and
+   `C[x, y, w]/(w(1+xy) - 1)`. The genuine predictions are S3, S4 and S6.
+2. A first slice run at `N' = 22` printed "NONZERO" for elements of weight 28 and 34, which a truncation at 22
+   cannot decide; the stored run uses `N' = 40, 46`, where `c(34) = c(36) = 11` shows that the kernel is complete in
+   those weights.
+3. Not predicted, found in the runs: the centre (0, 0) gives dimension 9 on the slice (an excluded centre of W2:
+   `v = 0` is a horizontal asymptote of the non-properness curve); every Hermite class of `w` and of `x` computed
+   on the slice is nonzero.
