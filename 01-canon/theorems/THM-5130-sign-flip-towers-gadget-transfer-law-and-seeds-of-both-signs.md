@@ -6,8 +6,13 @@ status: >
   THM-4960, THM-5122 (1), THM-5126 (A)); row h of the matrix, H(B => X => v) = r H(X) + M Pi_2(X), is Session216
   star/PROOF.md Theorem 3 (a special case of the substitution law THM-3121 (4); linearity in the bin polynomial of a
   module is Session197 UNIVERSAL_CONTEXTS section 1); the four coordinates are those of the Session216 interface
-  (h, alpha = M, tau = h - r, e = E). New here, as far as a canon search shows: the whole state is transported
-  linearly through a new closer, with the matrix (rows r, M, E).
+  (h, alpha = M, tau = h - r, e = E). CONCURRENT (found by the audit): ONE_EXIT.md Theorem 1 of
+  spectrum_multiplicity_signed_tables_20261111 (2026-11-10 23:33), H = hH + FU - sE - dW for any one-exit attachment
+  in the same four base coordinates (this is row h, and it implies that a transport matrix exists, without its
+  entries); Session261 MARKED_RESELECTION.md and MODULE_REBASE.md (2026-11-11): the (H, W, U) of a host depend on a
+  marked module only through its cover tensor (C_r, S_r, E_r, K_r), of which the nine gadget constants are the
+  entries with r <= 3. Specific to this theorem: the explicit transport matrix (rows r, M, E), stated in the
+  pre-registration of this session (2026-11-10 16:20, before both).
   (B) PROVED. For a transitive base the offsets 1 - 2^(delta-1) and the two lines 3 2^j - 1, 5 2^j - 1 are the
   shared-endpoint case of THM-4748 (1), (2). New: the coefficient of M for an arbitrary base and the criterion
   2^delta - 3^(delta-1) = 1 (stated in the pre-registration of this session, pushed 2026-11-10 16:20). CONCURRENT:
@@ -25,16 +30,29 @@ status: >
   THM-5126, and unit-offset roots of order eleven for the 33 exceptional values of HYP-9658 (B) were published first
   by the session of 05-knowledge/results/odd_c_seed_symmetry_20261110/ (2026-11-10), which settled HYP-9658 (B); the
   33 tower seeds here are a second, independent set of witnesses (rooted orders 11 to 15). New in (E), as far as a
-  canon search shows: the anti-seeds (offset -1) for every odd c <= 4097.
-  (F) PROVED, elementary. KNOWN (pushed first by other sessions while this one was running): the strong-core
-  structure F2 (c) (Session250, 2026-11-10 16:53; Session258 CORE_CLASSIFICATION), M >= |O| H(B) (Session258), the
-  twin identity F3 (Session260). F1 in the exact form, F2 (a), (b) and F4 were not found elsewhere.
-  (H) H1, H2 PROVED (H2 uses the domination inequality of Session261, EXTENSION4.md); H3 FINITE-EXACT; H4 PROVED
-  (lower bound KNOWN, Session197).
+  canon search shows: the anti-seeds (offset -1) as a certified list for every odd c <= 4097. Single anti-lines were
+  known: c = 1, 3, 5 (THM-4748), c = 9 (Session261 MODULE_REBASE.md section 2), c = 15 (the carrier 21 of
+  multiplicand_saturation_chanpak_20261111).
+  (F) PROVED, elementary. KNOWN (pushed first by other sessions while this one was running): F2 (a) (Session258
+  seed_decision/CORE_CLASSIFICATION.md eq. (1), with the same bounds), F2 (b) (its offset part is in that proof and
+  in Session250 constructive/PROOF.md Theorem 5; both are instances of the join law (1) of Session216
+  three-core/PROOF.md), the strong-core structure F2 (c) (Session250, 2026-11-10 16:53; Session258),
+  M >= |O| H(B) (Session250 Lemma 4, then Session258), the twin identity F3 (Session260). Only F1 as an identity and
+  F4 were not found elsewhere.
+  (H) H1 PROVED (over a one-vertex base it is Session261 NINE_OFFSET_EXTENSION.md section 3 (1)); H2 PROVED (uses
+  the domination inequality of Session261, EXTENSION4.md); H3 (i) PROVED in one direction and FINITE-EXACT in the
+  other; H3 (ii), (iii) PROVED from FINITE-EXACT states; H4 PROVED (KNOWN parts: the lower bound and Pi_2 >= 2^n are
+  Session197, the multiplicativity of Pi_2 is Session216 three-core (1); the merge inequality and the upper bound
+  were not found in canon). Related, concurrent: THM-5129 (opus-2026-11-10-S91, pre-audit draft of 2026-11-11)
+  classifies the one-vertex sources of every offset D <= 73.
   (G) (classification of neutral gadgets) FINITE-EXACT, orders <= 7.
-  Pre-registered runs (PREREGISTRATION.md, pushed before each run): R2, R4, R5, R6c CONFIRMED; R1, R3, R6a, R6b
-  FAILED (the towers reach more than predicted: a power of two as slope at depth 3, and c = 5 at depth 6).
-  Independent audit: PENDING at this commit.
+  Pre-registered runs (PREREGISTRATION.md, pushed before each run): R2, R4, R5, R6c, G2, G4 CONFIRMED; R1, R3,
+  R6a, R6b FAILED (the towers reach more than predicted: a power of two as slope at depth 3, and c = 5 at depth 6).
+  G1 (failed) and G3 (confirmed) do not count as blind: the audit found that both were decidable from data files
+  already on disk when they were written (MISTAKE-759).
+  Independent audit: PASS WITH CORRECTIONS (audit/AUDIT.md of the packet). Every proof was checked; the gadget law,
+  all 4,098 certificates, the runs E1-E3, the neutral gadgets of order <= 7 and the grids were recomputed with
+  independent code. 3 majors (two on credit, one on the E4 pre-registration) and 26 minors, all applied (MISTAKE-759).
   The Chan-Pak conjecture and HYP-9658 (A) (a seed for every odd c) remain OPEN. Nothing here gives a positive
   density of path counts.
 session: kind-pasteur-2026-11-10-S22
@@ -173,7 +191,8 @@ to either: `2^(delta-1)`. So `w = 2` for `delta = 1` and `2^(delta-1)` for `delt
 
     r+ = r_X r + 2^(a-delta) (2^delta - 1 - 3^(delta-1)) M.
 
-Since `M > 0` whenever `O` is nonempty, `r+ = -r` holds for every base if and only if `2^delta - 3^(delta-1) = 1`,
+Since `M > 0` whenever `O` is nonempty, and a sink added to a base doubles `M` without changing `r`, `r+ = -r` holds
+for every base if and only if `2^delta - 3^(delta-1) = 1`,
 that is `delta = 1` or `delta = 2` (for `delta >= 3`, `3^(delta-1) > 2^delta - 1`). For these two distances the level
 map is, with `alpha = 2^delta + 1`, `gamma = 3^delta + 2^delta` (so `(alpha, gamma) = (3, 5)` or `(5, 13)`):
 
@@ -246,11 +265,12 @@ with `r = -1` and slope `c 2^v'`. Hence there are `s_+(c)`, `s_-(c)` with `1 + c
 and `c 2^s - 1` in `S` for all `s >= s_-(c)`.
 
 Certificates: `certs_plus.txt`, `certs_minus.txt` (2,049 lines each; `v <= 7`, `v' <= 10`; pairs of order at most
-14). 1,969 seeds and 1,959 anti-seeds are pairs of order at most 9; the others are towers of one or two levels over
-such pairs. Every certificate is rebuilt as an explicit tournament and its state recounted (certs_verify.py with
+14). 1,969 seeds and 1,959 anti-seeds are pairs of order at most 9 taken from the census; the other 80 and 90 are
+towers of one or two levels over such pairs. In all, 2,016 seed and 2,013 anti-seed certificates have order at most
+9, and the other 33 and 36 have order 10 to 14. Every certificate is rebuilt as an explicit tournament and its state recounted (certs_verify.py with
 pairstate.c: 0 mismatches). Among them are tower seeds for the 33 odd `c <= 4097` of HYP-9658 (B), with rooted orders
 11 to 15; these 33 lines already have roots of order eleven (odd_c_seed_symmetry_20261110, first), so the seed half of
-this theorem is a second proof by another construction. The anti-seed half is the new part.
+this theorem is a second proof by another construction. The anti-seed half, as a certified list, is the new part.
 
 ## (F) Structure of unit sets
 
@@ -313,10 +333,11 @@ for all `t >= 1`; in particular `M >= delta_dom`, and `U_B(o) >= 2^(outdeg o)`.
 free). Those with a proper nonempty tail part: `(2^t - 2)(D_1 - 1)`, since `S_O` must be nonempty. Those with empty
 tail part do not depend on `t`. So `delta_dom = D_1 - 1`. ∎
 
-**H3 (FINITE-EXACT).** (i) `M = delta_dom` exactly when `B` is transitive (all pairs of order at most 6).
-(ii) Pairs with offset `1 + 2^s` and slope `9 * 2^v`, `v <= s`, exist for every `2 <= s <= 11` among selected sets
+**H3.** (i) For transitive `B`, `M = delta_dom` (PROVED: the sets `S` with least element `o` contribute `2^(n-o)` in
+total). FINITE-EXACT: no pair with a non-transitive base of order at most 6 has `M = delta_dom`.
+(ii) (PROVED from FINITE-EXACT states.) Pairs with offset `1 + 2^s` and slope `9 * 2^v`, `v <= s`, exist for every `2 <= s <= 11` among selected sets
 over tournaments of order at most 9; so `1 + 2^s + 9 * 2^(r+s)` is a path count for all `r >= 1`, `s <= 11`
-(`s <= 6`: Session261). (iii) The unit root of order 9 with code 45174751748 and root 2 has a port (vertex 8,
+(`s <= 6`: Session261). (iii) (PROVED from FINITE-EXACT states.) The unit root of order 9 with code 45174751748 and root 2 has a port (vertex 8,
 in-degree 1, not selected) with slope family `16 + 172 * 2^a`; with pairs of offsets 3, 5, 9, 17 and slopes 172, 172,
 86, 86 and the count 175 of an order-7 tournament this gives: `1 + 2^s + 43 * 2^(r+s)` is a path count for all
 `r, s >= 1`. (A module at an unselected port of in-degree 1 is visited at most twice by the paths counted in `H`,
@@ -324,7 +345,9 @@ in-degree 1, not selected) with slope family `16 + 172 * 2^a`; with pairs of off
 
 **H4 (abundancy).** `H(X) >= H(X[S]) H(X - S)` for every vertex set `S` (two disjoint paths merge, keeping both
 orders, into one path, injectively). Hence `a(X) = Pi_2(X)/H(X) = sum over S of H(X[S]) H(X - S)/H(X) <= 2^n`, with
-equality iff `X` is transitive; `a(X) >= n + 1` (Session197); `a(X => Y) = a(X) a(Y)`; and the closing law reads
+equality iff `X` is transitive (if `X` is not transitive, a vertex `x` of a 3-cycle has `H(X - x) < H(X)`, the
+difference being a sum over the odd-cycle packings through `x`, so the term of `S = {x}` is less than 1);
+`a(X) >= n + 1` (Session197); `a(X => Y) = a(X) a(Y)` (KNOWN, Session216); and the closing law reads
 `H(C(B, O; X)) = H(X) (r + M a(X))`.
 
 ## Controls
@@ -336,9 +359,9 @@ equality iff `X` is transitive; `a(X) >= n + 1` (Session197); `a(X => Y) = a(X) 
 - F1-F4 on all 1,099 labelled tournaments of order at most 5 (2,166 unit sets) and random twins (V5).
 - No pair `(B, O)` of order at most 7 (62,422 pairs, all offsets) has a ray `r + 2^t M` through 7 or 21, as
   THM-1370 demands; 13, 19, 27 and 1039 have 15, 17, 110 and 156 such rays (rays_through.py, runs/rays_through.out).
-- The subset programme pairstate.c was checked on transitive tournaments of orders 12 to 27: it is correct to
-  order 25 and wrong at 27 (allocation size); certs_verify.py refuses orders above 24. The certificates have order
-  at most 14.
+- The subset programme pairstate.c was checked on transitive tournaments of orders 12 to 27: it is valid to
+  order 24 (its arrays hold 24 vertices) and wrong at 27; it now refuses larger orders, as certs_verify.py does. The
+  certificates have order at most 14.
 
 ## What is not proved
 
@@ -346,9 +369,13 @@ equality iff `X` is transitive; `a(X) >= n + 1` (Session197); `a(X => Y) = a(X) 
 - Whether towers reach every odd `c`. At a fixed depth the reachable `c` form a thin set (sums of a bounded number
   of terms `2^x 3^y` with coefficients from 3, 5, 13).
 - Rays of offset `+1` or `-1` do not exhaust the spectrum. Example (PROVED): `15 = 1 + 7 * 2 = 2^4 - 1` is a path
-  count on no such ray. A seed has slope `2^j` (`|O| <= 1`), `6 * 2^j` (core `C_3`) or at least 10 (by F1 and F2 a
-  core with `H >= 5` gives `M >= 10`), never 7. An anti-seed has `M >= 2 H(B)` by F1, so `M <= 8` forces
-  `H(B) = 1` or `3`; by F2 its slope is then `3 * 2^j`, `5 * 2^j` (transitive `B`) or `9 * 2^j`, `15 * 2^j`
-  (`B = TT => C_3 => TT`, one vertex of `O` in the 3-cycle and the other next to it), never 8, 4, 2 or 1.
+  count on no such ray. A seed has slope `2^j` (`|O| <= 1`), `6 * 2^j` (core `C_3`) or at least 10: a strong
+  tournament of order at least 4 has at least 5 paths (Moon; THM-4744), so by F1 and F2 any other core gives
+  `M >= 2 * 5`. So no seed has slope 7. An anti-seed has `|O| >= 2` and `M >= 2 H(B)` by F1, so `M <= 8` forces
+  `H(B) = 1` or `3`. If `B` is transitive, `W = 2` means one pair at distance 1 or 2, and the slope is `3 * 2^j` or
+  `5 * 2^j`. If `H(B) = 3`, then `B = TT => C_3 => TT` and `W = 4`: two selected vertices in the 3-cycle give
+  `r = 1`; two outside it give `W >= 6`; one in the 3-cycle and one outside give `W = 3 * 2^k + [k = 0]`, `k` the
+  number of vertices between them, so `k = 0` and the slope is `9 * 2^j` or `15 * 2^j`. So no anti-seed has slope
+  8, 4, 2 or 1.
   At least 3,722 of the 4,095 odd numbers in `[3, 8191]` lie on a certified ray (ray_cover.py).
 - The Chan-Pak conjecture.

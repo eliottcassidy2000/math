@@ -8,7 +8,9 @@ S4  a carrier for the 43-grid: slope family 16 + 172 * 2^a at one port of an ord
 S5  domination ray: d(G_t) = rho + 2^t delta_dom, delta_dom = sum over nonempty S in O of 2^|N+(S) - O|,
     M >= delta_dom with equality iff B transitive (all labelled tournaments of order <= 5, every O)
 S6  merge inequality H(X) >= H(X[S]) H(X - S); abundancy a(X) = Pi_2(X)/H(X) in [n + 1, 2^n]; a(X => Y) = a(X) a(Y)
-S7  transitive interfaces: s(TT_n, O) = (1 - w(O), sum 2^(n-o), 1, [n in O]) with w = sum over pairs of max(2, 2^(dist-1))"""
+S7  transitive interfaces: s(TT_n, O) = (1 - w(O), sum 2^(n-o), 1, [n in O]) with w = sum over pairs of max(2, 2^(dist-1))
+S8  the 43-grid (carrier, four low sources, one head)
+S9  a carrier for d = 145 (added after the audit)"""
 import itertools, random
 from fractions import Fraction
 from towers import tables, H, state, gadget, apply, level_up, TT, rand_t
@@ -230,4 +232,25 @@ for s, (mm, code, Om, r0, M0) in low.items():
         ok &= (H(level_up(A, O, TT(rr + s - v))) == 1 + 2 ** s + 43 * 2 ** (rr + s))
 ok &= (H(adj(7, 17976)) == 175 == 1 + 2 + 43 * 4)
 report("S8 43-grid: carrier (s >= 5), sources at s = 1 (r >= 2), 2, 3, 4, and the head N(43, 1, 1) = 175 (order 7)", ok)
+# S9 (added after the audit, not audited): a carrier for d = 145 at root order 10.
+#   base of order 9, code 36524296449, selected set {1, 2, 3}; port 8 (in-degree 1 in the base, not selected).
+#   unit offset with the port replaced by TT_a for a = 1, 2 (hence for every a) and slope 128 + 1160 * 2^a.
+B9 = adj(9, 36524296449)
+O9 = [1, 2, 3]
+port9 = 8
+ok = (sum(B9[x][port9] for x in range(9)) == 1 and port9 not in O9)
+for a in (1, 2):
+    orig = []
+    for x in range(9):
+        orig += [(x, i) for i in range(a if x == port9 else 1)]
+    nn = len(orig)
+    TB = [[0] * nn for _ in range(nn)]
+    for i, (x, xi) in enumerate(orig):
+        for j, (y, yj) in enumerate(orig):
+            if i != j:
+                TB[i][j] = (1 if xi < yj else 0) if x == y else B9[x][y]
+    OO = [k for k, (x, _) in enumerate(orig) if x in O9]
+    r, M, h, E = state(TB, OO)
+    ok &= (r == 1 and M == 128 + 1160 * 2 ** a)
+report("S9 carrier for d = 145 (base of order 9): unit offset at a = 1, 2 and slope 128 + 1160 * 2^a", ok)
 print("ALL PASS" if allok else "SOME FAILED")

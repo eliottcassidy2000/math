@@ -24585,3 +24585,40 @@ not only the number of objects being quotiented.
 - **Lesson.** Before typing a residue-class statement about a join family as new, search for the family under every
   coordinate system in use (`psi / h`, `g / u`, `(D, E, U, d)`, O/Z/J, "root change", "confinement", "local factor",
   "census"), and hand the auditor that list of names, not only the session's own.
+
+## MISTAKE-759 (2026-11-11, kind-pasteur-2026-11-10-S22, THM-5130, HYP-9662 and `05-knowledge/results/kps_s22_sign_flip_towers_20261110/` at the pre-audit commit b5912dbd67; found by the independent audit `audit/AUDIT.md` of that packet) -- two identities typed "not found elsewhere" that three earlier packets contain, incomplete credit for a transport law, and a pre-registration that called itself blind while half of it was decidable from files in the same commit
+
+- **M1. "Not found elsewhere" was false for F2 (a), (b).** The status of THM-5130 said that the cross-component bound
+  `W_ef >= H(B)` and the product law for a selected set inside one strong component were not found elsewhere. Both are
+  in Session258 `seed_decision/CORE_CLASSIFICATION.md` (eq. (1), same bounds) and Session250 `constructive/PROOF.md`
+  (Theorem 5, Lemma 4), and both are instances of the join law (1) of Session216 `three-core/PROOF.md`. The sweep I
+  had ordered reported the strong-core theorem of those sessions; I credited the theorem and kept its two lemmas.
+- **M2. Incomplete credit for the gadget law.** The status of (A) credited Session216 for the row `H` only. Two
+  concurrent packets go further: `spectrum_multiplicity_signed_tables_20261111/returns/ONE_EXIT.md` (Theorem 1,
+  `H = hH + FU - sE - dW` for every one-exit attachment, in the same four base coordinates, which implies that a
+  transport matrix exists) and Session261 `MARKED_RESELECTION.md` / `MODULE_REBASE.md` (the host statistics depend
+  on a marked module only through its cover tensor, of which the gadget constants are entries). The one-vertex
+  gadget over a one-vertex base is Session261 `NINE_OFFSET_EXTENSION.md` section 3 (1). What is specific to
+  THM-5130 is the explicit matrix (rows for offset, slope and end count), stated in the pre-registration of
+  2026-11-10 16:20, before those packets.
+- **M3. A pre-registration that was not blind.** The E4 block said "Nothing below has been computed". But
+  `runs/e2_states_order_le7.txt`, committed with it, contains the state `1 16 64 6` that decides G1, and the unit
+  states of orders 8 and 9 on disk decide G3. G1 and G3 are therefore not predictions; only G2 and G4 were. One
+  outcome sentence also dropped the hypothesis `r = 1` and was false as written (a pair with offset 15 has
+  `H(B) = 31` and slope 128).
+- **Minors (26).** Scope and wording: "the only universal operation" for a scan of order at most 7; "exactly when"
+  for a statement proved in one direction and finite-exact in the other; counts of certificates of order at most 9
+  that ignored towers of small order; a programme (`src10.c`) that did not produce the committed output; a
+  counter described as valid to order 25 with arrays for 24; a list of non-occurring values with one missing. All
+  applied.
+- **Repair and strongest survivor.** All statuses retyped (KNOWN / CONCURRENT with file and time); audit notes and
+  errata appended to the pre-registration without touching the original text; scripts added for the two numbers
+  that had none. The audit checked every proof and recomputed the gadget law (5,876 cases), all 4,098 certificates,
+  the runs E1-E3, the neutral gadgets of order at most 7 and the grids with independent code: no mathematical
+  statement changed.
+
+Lesson: (1) when a sweep reports that another packet proves a theorem, open that proof and credit its lemmas too:
+a corollary is rarely new when the theorem is not. (2) "Not found elsewhere" must name the search that supports
+it, and a concurrent result with the same coordinates is credit even when it gives less. (3) Before writing
+"nothing has been computed" in a pre-registration, list the data files already on disk that mention the objects of
+the predictions; a prediction that a grep can decide is not a prediction.

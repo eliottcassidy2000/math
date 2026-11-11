@@ -152,3 +152,20 @@ Scripts and data: `scripts/sources_check.py` (+ `.out`), `scripts/singles.c`, `s
 
 Not pre-registered (found while running E4, reported as exploratory in SOURCES_AND_DOMINATION.md): a port with slope
 family `16 + 172 * 2^a` (the 43-grid), and the sources that complete that grid.
+
+## Audit notes and errata (2026-11-11, after audit/AUDIT.md; nothing above this line was changed)
+
+- (m9) In "What was already seen": the coefficient of `r` is `-1` for `delta = 1` and `1 - 2^(delta-1)` for
+  `delta >= 2`; the displayed formula is right only for `delta >= 2`. The conclusion (reversal iff `delta` is 1 or 2)
+  is unaffected.
+- (m8) Outcome of R3: "`2^N - 1` paths on `N >= 24` vertices" holds for the states with slope `2^23` and `2^24`; the
+  three states with slope `2^25` give `2^(N+1) - 1` paths on `N >= 25` vertices.
+- (M3) E4: the sentence "Nothing below has been computed" was wrong for G1 and G3. The file
+  `runs/e2_states_order_le7.txt`, committed with that pre-registration, contains the state `1 16 64 6`
+  (`(r, g, M, E)` of the pairs with `H(B) = 15` and slope 64), and the unit states of orders 8 and 9 already on disk
+  show no `H(B) = 31` among the seeds whose slope is a power of two. G1 and G3 therefore do not count as blind
+  predictions. G2 and G4 were blind. (MISTAKE-759.)
+- (m25) The label G3 is used twice: for the decision rule of E1/E2 and for a prediction of E4. The message of commit
+  b5912dbd67 says "outcomes of E3 and E4"; the outcome of E3 was already in the previous commit.
+- (m10, m11) `scripts/domination_ray.py` (added after the audit) reproduces the 3,978 pairs of G4; `scripts/src10.c`
+  now prints offsets from 3 on, and `runs/src9grid.txt`, `runs/src43grid.txt` were regenerated with it.

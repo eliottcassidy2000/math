@@ -11,4 +11,5 @@ PASS  S5 M >= delta_dom for every pair; equality iff B transitive; d(G_2) - d(G_
 PASS  S6 H(X) >= H(X[S]) H(X - S); n + 1 <= Pi_2(X)/H(X) <= 2^n with equality on the right iff X transitive; multiplicative
 PASS  S7 s(TT_n, O) = (1 - w(O), sum_{o in O} 2^(n-o), 1, [n in O]), w = sum over pairs of max(2, 2^(distance-1)), n <= 7
 PASS  S8 43-grid: carrier (s >= 5), sources at s = 1 (r >= 2), 2, 3, 4, and the head N(43, 1, 1) = 175 (order 7)
+PASS  S9 carrier for d = 145 (base of order 9): unit offset at a = 1, 2 and slope 128 + 1160 * 2^a
 ALL PASS

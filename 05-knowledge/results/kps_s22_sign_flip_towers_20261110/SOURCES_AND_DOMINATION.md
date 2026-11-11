@@ -13,11 +13,11 @@ Checks: `scripts/sources_check.py` (S1-S8, all pass, no input files). Canon: THM
 | statement | status |
 |---|---|
 | Every interface (pair `(B, O)`) splits as a domination skeleton plus a defect: `d(G_t) = rho_dom + 2^t delta_dom`, `delta_dom = sum over nonempty S in O of 2^(number of out-neighbours of S outside O)`, and `(r - h - rho_dom + 1) + 2^t (M - delta_dom) >= 0` | PROVED (lemma here + the inequality of Session261) |
-| `M = delta_dom` exactly when `B` is transitive | FINITE-EXACT (3,978 pairs of order <= 6; 32,767 labelled pairs of order <= 5) |
+| `M = delta_dom` for transitive `B` (PROVED) and for no other base of order at most 6 | FINITE-EXACT for the second part (3,978 pairs over classes of order <= 6, `scripts/domination_ray.py`; all labelled pairs of order <= 6 in the audit) |
 | The zero-defect interfaces are the one-apex ones: `s(TT_n, O) = (1 - w(O), sum 2^(n-o), 1, [n in O])` | PROVED (S7) |
 | One-vertex gadget on a seed of slope `2^k`: source `(D, U) = (1 + 2^(a+k), 2^(a-p)(1+h) + 2^(p+k) 3^(a-p) - [p=1]E)`; three of the five 9-grid sources of Session261 are of this form | PROVED (corollary of THM-5130 (A)) |
 | A one-vertex source of the `d`-grid at level `s` has slope `d 2^v` with `s - floor(log2 d) <= v`; its excess `U - H` is one of `floor(log2 d) + 1` numbers `(d - 2^i) 2^(s-i) - 1` | PROVED (from `U_B(o) >= H(B)`) |
-| 9-grid: sources at levels 7, 8, 9, 10, 11, so `1 + 2^s + 9 * 2^(r+s)` is a path count for all `r >= 1`, `s <= 11` | FINITE-EXACT (levels <= 6: Session261) |
+| 9-grid: sources at levels 7, 8, 9, 10, 11, so `1 + 2^s + 9 * 2^(r+s)` is a path count for all `r >= 1`, `s <= 11` | PROVED from FINITE-EXACT states (levels <= 6: Session261) |
 | 43-grid complete: `1 + 2^s + 43 * 2^(r+s)` is a path count for all `r, s >= 1` | PROVED from one carrier + four sources + one head (after the grids 3, 21, 35 of other sessions) |
 | Abundancy index `a(X) = Pi_2(X)/H(X)`: multiplicative over ordered joins, a subset sum with all terms at most 1, `n + 1 <= a(X) <= 2^n` with equality on the right only for transitive `X`; the closing law is `N = H(X) (r + M a(X))` | PROVED (lower bound KNOWN, Session197) |
 | A uniform source family for the 9-grid; a seed for every odd `c`; Chan-Pak | OPEN |
@@ -32,7 +32,9 @@ retain the output's Q2 as well as H."
 
 Already there when this note was written (first or concurrent; not claimed here):
 
-- unit sets lie in one strong core with transitive padding (Session250, Session258); `U >= |O| H` (Session258);
+- unit sets lie in one strong core with transitive padding (Session250, Session258); `U >= |O| H` (Session250
+  Lemma 4, Session258); the cross-component bound and the product law for padded pairs (Session258, Session250,
+  both instances of the join law of Session216);
   `|Aut(B, O)|` divides the offset (odd_c_seed_symmetry);
 - the twin identity `W = 2 H(T/xy)`, the bracket `3^c - 2^(c+1) + 1` for a selected pair inside a transitive module
   of one five-vertex carrier, unit iff `c` is 0 or 1, and the slopes `15, 25, 39, 65` times `3^b` (Session260
@@ -44,10 +46,19 @@ Already there when this note was written (first or concurrent; not claimed here)
   `d(G) - 1 <= 2 P_even <= H(T) - H(T - z)` with nonnegative fibres (Session261 EXTENSION4.md) and a second proof
   (multiplicand exchange/PROOF.md).
 
-Specific to this session (not found elsewhere by the sweep of 2026-11-11): the transport law for the whole state
-through a new closer with re-selection inside the inserted tournament (THM-5130 (A)); the sign flip for an arbitrary
-base and the equation `2^delta - 3^(delta-1) = 1` (pre-registration pushed 2026-11-10, before Session260's carrier
-instance); the tower recurrence; the anti-seeds; and the items of this note.
+Concurrent with THM-5130 (A) (found by the audit): ONE_EXIT.md Theorem 1 of
+spectrum_multiplicity_signed_tables_20261111 (`H = hH + FU - sE - dW` for a one-exit attachment, the row for `H`),
+and the marked cover tensor of Session261 (MARKED_RESELECTION.md, MODULE_REBASE.md), of which the gadget constants
+are the entries with at most three paths. Proposition 3 over a one-vertex base is Session261
+NINE_OFFSET_EXTENSION.md section 3 (1). THM-5129 (opus-2026-11-10-S91, pre-audit draft of 2026-11-11) classifies
+the one-vertex sources of every offset `D <= 73`.
+
+Specific to this session (not found elsewhere by the sweep and the audit of 2026-11-11): the explicit transport
+matrix through a new closer with re-selection inside the inserted tournament (THM-5130 (A): rows for offset, slope
+and end count); the sign flip for an arbitrary base and the equation `2^delta - 3^(delta-1) = 1` (pre-registration
+pushed 2026-11-10, before Session260's carrier instance); the tower recurrence; the certified list of anti-seeds;
+and in this note Lemma 1 and Corollary 2 (domination ray), Proposition 4 (excess types), the 9-grid sources at
+levels 7 to 11, the 43-grid, and the merge inequality with the upper bound for the abundancy index.
 
 ## 2. An interface is a domination skeleton plus a defect
 
@@ -87,8 +98,7 @@ The zero-defect interfaces are the one-apex ones. In state form (S7), for `O` in
 
 So the initial supply is indexed by the positive integers `m` (binary digits = `O`): slope `m 2^j`, offset
 `1 - w(m)`, and the one-apex spectrum is `{1 - w(m) + 2^t m}`. Their offsets are 1 (at most one selected vertex),
--1 (one pair at distance 1 or 2), -3, -5, -7, -11, -13, ... (`w` = 10 does not occur for at most four selected
-vertices); the sign flip of THM-5130 (B) sends each to its negative with an explicit slope. This is the precise sense in which seeds have initial cases: the equality cases of the domination
+-1 (one pair at distance 1 or 2), -3, -5, -7, -11, -13, ... (`w` = 10 never occurs: audit); the sign flip of THM-5130 (B) sends each to its negative with an explicit slope. This is the precise sense in which seeds have initial cases: the equality cases of the domination
 inequality are the start states of the towers, and every other interface pays a defect of at least `H(B) - 1`.
 
 ## 4. Sources from seeds, and two grids
@@ -107,9 +117,9 @@ level `s`), then `d 2^v >= 2^s + 1`, so `v >= s - floor(log2 d)`, and the excess
 (From THM-5130 (F1).) For `d = 9` the excess is `2^(s-3) - 1`, `5 * 2^(s-2) - 1`, `7 * 2^(s-1) - 1` or `2^(s+3) - 1`.
 
 So a uniform supply of sources for the 9-grid is a family, one for each `s`, of tournaments with `2^s + 1` paths and
-a vertex with one of four prescribed excess counts. The least-order one-vertex sources have the first type at
-`s` = 3, 4, 5, 8, 9, 11 (excess 0, 1, 3, 31, 63, 255), the second at `s` = 2, 7 (excess 4, 159) and the third at
-`s` = 6 (excess 223).
+a vertex with one of four prescribed excess counts. Among the one-vertex sources of least order, the first type
+occurs at `s` = 3, 4, 5, 8, 9, 11 (excess 0, 1, 3, 31, 63, 255), the second at `s` = 2, 5, 7 (excess 4, 39, 159; at
+`s` = 5 both types occur at order 6) and the third at `s` = 6 (excess 223).
 
 **9-grid (FINITE-EXACT).** Census of every selected set over every tournament of order at most 9 (`src10.c`,
 `runs/src9grid.txt`): sources exist at every level `2 <= s <= 11`. New levels (S3):
@@ -123,15 +133,29 @@ a vertex with one of four prescribed excess counts. The least-order one-vertex s
 | 11 | 9, 194216770 | {0} | 2049 | 2304 | 2049 |
 
 So `1 + 2^s + 9 * 2^(r+s)` is a path count for all `r >= 1` and `s <= 11`. Level 10 has no one-vertex source of
-order at most 9; it needs a two-vertex selected set. No uniform family: among the unit roots of order at most 9 no
-port has a slope family `2^i + 9 * 2^j * 2^a` (the constants found are `d` = 3, 21, 35 and 43), and the gadget route
-through seeds with `H(B) = 2^e - 1` stops at `e = 4` at these orders (pre-registered G1 failed, G3 confirmed).
+order at most 9; it needs a two-vertex selected set. No uniform family was found: among the unit roots of order at
+most 9 no port has a slope family `2^i + 9 * 2^j * 2^a` (the constants found are `d` = 3, 21, 35 and 43), and the
+gadget route through seeds with `H(B) = 2^e - 1` stops at `e = 4` at these orders (G1 failed, G3 confirmed; neither
+was blind, see section 8). After the audit (not audited; S9 of `sources_check.py`, `scripts/carriers10.c`,
+`runs/carr_10.txt`): among the unit roots of order 10 the ports of in-degree 1 give `d` = 3, 21, 35, 43 and 145
+(slope family `128 + 1160 * 2^a`, base of order 9 with code 36524296449, selected set {1, 2, 3}, port 8), still
+not 9.
 
 **43-grid (complete).** The unit root of order 9 with code 45174751748, root 2, has a port (vertex 8, in-degree 1,
 not selected) with slope family `16 + 172 * 2^a`; a module at such a port is visited at most twice, so `H`, `W`, `U`
 are affine in `2^a` and the unit offset at `a = 1, 2` holds for every `a`. This gives all `s >= 5`, `r >= 1`. Sources
 at levels 2, 3, 4 give all `r >= 1`, a source at level 1 gives `r >= 2`, and `N(43, 1, 1) = 175` is a path count of
-order 7 (S8). Hence `1 + 2^s + 43 * 2^(r+s)` is a path count for all `r, s >= 1`.
+order 7 (S8). Hence `1 + 2^s + 43 * 2^(r+s)` is a path count for all `r, s >= 1`. The low sources, as
+(order, code, selected set) -> state `(r, M, h, E)`:
+
+| level | pair | state | grid points |
+|---|---|---|---|
+| 1 | (7, 532488, {1, 3}) | (3, 172, 51, 26) | `r >= 2` |
+| 2 | (7, 313346, {1, 3}) | (5, 172, 49, 22) | `r >= 1` |
+| 3 | (6, 16392, {0, 5}) | (9, 86, 17, 2) | `r >= 1` |
+| 4 | (6, 17034, {0, 3}) | (17, 86, 33, 14) | `r >= 1` |
+
+and the head `N(43, 1, 1) = 175` is the path count of the tournament of order 7 with code 17976.
 
 `runs/grid_levels_singletons.txt` lists, for every odd `d <= 129`, the levels with a one-vertex source of order at
 most 9.
@@ -142,7 +166,8 @@ most 9.
    for one triple `(d, r, s)`. Chan-Pak says: every grid point is a path count except `(1, 1, 1)` and `(1, 2, 2)`.
 2. **What one grid needs.** One carrier (a unit pair with a port of in-degree 1 whose slope family is
    `2^i + d 2^j 2^a`) gives all `s > i`; then `i` sources (one per level, each all `r`), finitely many seeds or heads
-   for small `r`. The grids 3, 21, 35 (other sessions) and 43 (here) are finished exactly this way. So the supply
+   for small `r`. The grid 43 (here) is finished this way, and the grids 3, 21, 35 (other sessions) in the same pattern
+with their own mechanisms. So the supply
    problem is: *for every odd `d`, one carrier and finitely many sources.*
 3. **Where the domination inequality bites.**
    - It grades interfaces. Grade 0 (zero defect) is one-apex, and its slopes are sums of powers of two,
@@ -193,8 +218,8 @@ criterion is its analogue for `sigma(n)/n`. Typed bridges to the repo:
 - **[STRUCTURE]** The threshold `p_120569#` plays the role of our ray thresholds: a uniform statement beyond it,
   finitely many initial cases checked apart. Chan-Pak has the same architecture, with two initial cases that fail.
 - **[NUMEROLOGY]** T234: `prod over p <= 19 of (p+1)/(p-1) = 21`, which is `(n/phi(n)) (sigma(n)/n)` at `n = 19#`:
-  the product of the Nicolas and Robin ratios at that primorial; the partial products are integers only at 2, 3, 5,
-  7 and 19. No mechanism.
+  the product of the Nicolas and Robin ratios at that primorial; among the primes up to 30,000 the partial products
+  are integers only at 2, 3, 5, 7 and 19 (audit). No mechanism.
 - **[ANALOGY]** Session260: a seed of odd slope has `H = 2M + 1` (quasiperfect shape), an anti-seed `2M - 1`
   (almost perfect shape).
 
@@ -220,4 +245,9 @@ criterion is its analogue for `sigma(n)/n`. Typed bridges to the repo:
 
 G1 FAILED (the pairs with `(h, M) = (15, 64)` have `E = 6`, slope 138; no level-7 source from the gadget on these
 seeds); G2 CONFIRMED (levels 7 and 8, and also 9 and 11, by one-vertex sources of order at most 9); G3 CONFIRMED
-(no pair of order at most 9 with `H(B) = 31` and slope 64 or 128); G4 CONFIRMED.
+(no pair of order at most 9 with `r = 1`, `H(B) = 31` and slope 64 or 128); G4 CONFIRMED.
+
+Audit (M3): G1 and G3 were not blind. When the pre-registration was written, `runs/e2_states_order_le7.txt` already
+contained the state `1 16 64 6` of the pairs with `(h, M) = (15, 64)` (so `E = 6` was on disk), and the unit states
+of orders 8 and 9 already showed no `H(B) = 31` among the seeds with a power of two as slope. Only G2 and G4 were
+blind predictions. Recorded as MISTAKE-759.

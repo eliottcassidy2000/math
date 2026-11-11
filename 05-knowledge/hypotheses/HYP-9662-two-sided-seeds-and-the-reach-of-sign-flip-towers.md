@@ -9,7 +9,7 @@ status: >
   (with the two extra transitive starts: 1,649) of the 2,049 odd c <= 4097 with offset +1; at a fixed depth the
   reachable set is thin. (D): FINITE-EXACT for orders <= 7 (THM-5130 (G)); OPEN in general.
   None of these implies the Chan-Pak conjecture: rays of offset +1 or -1 do not exhaust the spectrum (15 lies on
-  none, THM-5130).
+  none, THM-5130). Independent audit of the packet: PASS WITH CORRECTIONS (MISTAKE-759).
 session: kind-pasteur-2026-11-10-S22
 source: 05-knowledge/results/kps_s22_sign_flip_towers_20261110/README.md
 related:
@@ -32,13 +32,14 @@ Notation of THM-5130: a pair `(B, O)` has offset `r = H(B) - W_B(O)` and slope `
 anti-seed). Then `Sigma_+` and `Sigma_-` have positive lower density.
 
 Consequence if true: `1 + 2M` is a path count for `M` in `Sigma_+` and `2M - 1` for `M` in `Sigma_-`, so the
-spectrum would have positive lower density. (The best proved lower bound is of order `X^(2/3)`, THM-4887.) The
+spectrum would have positive lower density. (The best proved lower bound is `X^(2/3) / (13 ln X + 102)`, THM-4887.) The
 conjectured spectrum, in the Mahler form of Session249, needs `Sigma_+` to contain every odd number except 3 and 5
 whenever the point `1 + 2c` is to come from a ray; that is not required for Chan-Pak, because a point may be realised
 off the rays.
 
 **(C) Reach of pure towers.** For each sign, all but finitely many odd `c` occur as the odd part of the slope of a
-tower over a transitive pair (THM-5130 (C)), at some depth.
+tower over a transitive base (a transitive tournament with at most one selected vertex, or two at distance 1 or 2;
+THM-5130 (C)), at some depth.
 
 **(D) Neutral gadgets.** If `kappa_X(P) = Pi_2(X) - 2 W_X(P) - 2 W3_X(P) = 0` then `|P| = 2` and
 `W_X(P) = 2 H(X)`. If moreover `H(X) = 1`, then `P` is a pair at distance 1 or 2 of a transitive tournament.
@@ -51,8 +52,8 @@ tower over a transitive pair (THM-5130 (C)), at some depth.
   certificates were chosen for least order, so these are lower bounds.
 - (C): pre-registered run E1 (depth <= 4, `x <= 10`, `m <= 4`): `N_2 = 805`, `N_4 = 1612` of 2,049. Without a seed in
   that run: 5, 11, 23, 29, 73, 85, 91, 95, 127, ... (29 is reached from the transitive pair start that E1 omitted).
-  Run E3 (depth <= 6, `x <= 5`, `m <= 2`): 1,592 of 2,049; 5, 73 and 85 appear at depth 6 (5 with slope `5 * 2^32`),
-  11, 23, 91, 95, 125, 127 do not.
+  Run E3 (depth <= 6, `x <= 5`, `m <= 2`): 1,592 of 2,049; 5, 73 and 85 appear at depth 6 (5 with slope `5 * 2^32`);
+  up to 129 the values 11, 23, 29, 91, 95, 125, 127 do not (29 needs the transitive pair start).
   Heuristic against a quick proof: at depth `k` the slope is a sum of boundedly many terms `2^x 3^y` with
   coefficients that are products of 3, 5 and 13, so each fixed depth gives a set of density zero; (C) can only hold
   through unbounded depth.

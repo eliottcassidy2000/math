@@ -14,7 +14,7 @@ and [HYP-9658](../../hypotheses/HYP-9658-unit-offset-seeds-of-the-two-adic-lines
 
 | statement | status |
 |---|---|
-| A pair `(B, O)` has a state `(r, M, h, E)`; putting any gadget `(X, P)` at its tail and adding a closer acts on the state by an explicit 4x4 integer matrix | PROVED (row `h` KNOWN: Session216) |
+| A pair `(B, O)` has a state `(r, M, h, E)`; putting any gadget `(X, P)` at its tail and adding a closer acts on the state by an explicit 4x4 integer matrix | PROVED (row `h` KNOWN: Session216; concurrent: ONE_EXIT.md and the marked tensor of Session261, which give row `h` and the existence of a transport, not the matrix) |
 | For a transitive gadget and two vertices at distance `delta`, the offset is reversed for every base iff `2^delta - 3^(delta-1) = 1`, i.e. `delta` = 1 or 2 | PROVED |
 | Towers: slopes obey `M_(k+1) = alpha 2^(m+a_k) M_(k-1) + 2 gamma 2^(i-1) 3^m M_k - [i=1] E_k`, `(alpha, gamma)` = (3, 5) or (5, 13) | PROVED |
 | `1 + q 3^j 2^s` (`s >= 3`) and `1 + (2 q 3^j - 1) 2^s` (`s >= 1`) are path counts, `q` in {15, 25, 39, 65}; so are `2^s (3 2^m + 5 2^K 3^m) - 1` and `2^s (5 2^m + 13 2^K 3^m) - 1` | PROVED |
@@ -31,12 +31,13 @@ Credit, after the sweep of 2026-11-11: while this session ran, other sessions pu
 unit sets (Session250, Session258), the twin identity, the pair bracket in one carrier and the slopes 15, 25, 39, 65
 times `3^b` (Session260), the lines `b 3^a - 1` (endpoint_coverage_compiler) and order-eleven roots for the 33 lines
 (odd_c_seed_symmetry). Rows of the table above that are also theirs: "a unit set lies in one strong component"
-(KNOWN, theirs first) and the families with `q` (CONCURRENT). Not found elsewhere: the transport law for the whole
-state, the sign flip for an arbitrary base (pre-registered 2026-11-10), the tower recurrence, the anti-seeds.
+(KNOWN, theirs first) and the families with `q` (CONCURRENT). Not found elsewhere: the explicit transport matrix
+(rows for offset, slope and end count), the sign flip for an arbitrary base (pre-registered 2026-11-10), the tower
+recurrence, the certified list of anti-seeds.
 
 What changed in understanding: a seed is not an isolated object found by census. Seeds and anti-seeds beget each
-other through one universal operation, and the only universal operation of this kind (up to order 7) is governed by
-the two solutions of `2^delta - 3^(delta-1) = 1`.
+other through one operation that works over every base, and the only tail gadgets of order at most 7 that keep
+`|r| = 1` for every base are governed by the two solutions of `2^delta - 3^(delta-1) = 1`.
 
 ## 1. Setting
 
@@ -80,8 +81,8 @@ The bracket counts, with signs, the ways of distributing the `delta - 1` vertice
 
 So a transitive pair at distance 1 or 2 turns every seed into an anti-seed and every anti-seed into a seed. The
 exhaustive scan of all gadgets of order at most 7 (`neutral.py`) finds `kappa = 0` only for `|P| = 2`, always with
-`r_X = -H(X)`: there is no gadget of order at most 7 that keeps the sign, and the transitive pairs at distance 1, 2
-are the only ones that keep `|r| = 1` for every base.
+`r_X = -H(X)`: no gadget of order at most 7 keeps the sign for every base, and the transitive pairs at distance
+1, 2 are the only ones that keep `|r| = 1` for every base.
 
 For these two distances, with `alpha = 2^delta + 1` and `gamma = 3^delta + 2^delta` (the pairs (3, 5) and (5, 13)):
 
@@ -136,16 +137,20 @@ recounted (`certs_verify.py` + `pairstate.c`, 0 mismatches of 4,098).
 | seeds (`r = +1`) | 1,969 | 63 | 17 | 1,225 | 14 |
 | anti-seeds (`r = -1`) | 1,959 | 88 | 2 | 1,187 | 14 |
 
+In all, 2,016 seed and 2,013 anti-seed certificates have order at most 9 (47 and 54 of the towers do as well); the
+other 33 and 36 have order 10 to 14.
+
 The 33 exceptional values of HYP-9658 (B) (no seed among unit-offset roots of order at most 10) all have tower
 seeds; `B+` has order 10 (2023, 3001), 11 (245, 2037, 3033, 3985), 12 (16 values), 13 (9), 14 (2). Credit: the
 session of `../odd_c_seed_symmetry_20261110/` found unit-offset roots of order eleven for all 33 by a direct search
 and pushed first; HYP-9658 (B) is settled there. The towers give the same lines by a different mechanism, at rooted
-orders 11 to 15, and the anti-seed column of the table is what is new here.
+orders 11 to 15, and the anti-seed row of the table, as a certified list, is what is new here (single anti-lines
+were known: `c` = 1, 3, 5 in THM-4748, 9 and 15 in the packets of 2026-11-11).
 
 ## 7. Structure of unit sets (THM-5130 (F))
 
-- `U_B(o) = H(B) + sum over out-neighbours x of o of Q_B(x, o)`, so `M >= |O| H(B)`: the first tournament of a ray has
-  at least `4 H(B)` paths.
+- `U_B(o) = H(B) + sum over out-neighbours x of o of Q_B(x, o)`, so `M >= |O| H(B)`: for `|O| >= 2` the first
+  tournament of a ray has at least `4 H(B) - 1` paths.
 - Two vertices in different strong components have `W_ef >= H(B)`. So a unit set (`|O| >= 2`) lies in one strong
   component `Q`, every other component is a single vertex, and `M_B = 2^(vertices after Q) M_Q`. Seeds are
   *strong unit cores* with a transitive prefix and suffix. Anti-seeds are not: the pair of a transitive tournament
@@ -192,7 +197,18 @@ E2 (towers over pairs of order <= 7, two levels): seeds for 1,872 of 2,049, amon
 | R6b | 5 does not occur | FAILED (slope `5 * 2^32` at depth 6) |
 | R6c | `N_6' >= 1500` | CONFIRMED (1,592; `N_2' = 614`, `N_4' = 1357`) |
 
-Decision rule: `300 <= N_4 < 1900`, so the towers are reported as one mechanism among several.
+Decision rule: `300 <= N_4 < 1900`, so the towers are reported as one mechanism among several. E4 (G1-G4, sources
+and the domination ray): SOURCES_AND_DOMINATION.md section 8; G1 and G3 were not blind (audit).
+
+## 9a. Audit
+
+Independent audit: PASS WITH CORRECTIONS ([audit/AUDIT.md](audit/AUDIT.md), programmes and outputs in `audit/`).
+All proofs of THM-5130 were checked; the gadget law (5,876 cases), all 4,098 certificates, the runs E1-E3, the neutral
+gadgets of order at most 7, the grid sources and the 43-grid argument were recomputed with independent code. Majors:
+(M1) F2 (a), (b) were typed "not found elsewhere" although Sessions 250, 258 and 216 have them; (M2) the credit for
+the gadget law omitted ONE_EXIT.md and the marked tensor of Session261; (M3) the E4 pre-registration said that
+nothing had been computed while two of its four predictions were decidable from data files of the same commit.
+All majors and the 26 minors are applied; see MISTAKE-759 in `01-canon/MISTAKES.md`.
 
 ## 10. Connections (typed)
 
@@ -218,13 +234,14 @@ Decision rule: `300 <= N_4 < 1900`, so the towers are reported as one mechanism 
 3. Twins of a transitive module: unit exactly when the module ray has offset `-1` -> twin lemma -> gadget law.
 4. One-vertex operations that preserve a unit pair for every base (`unitops.py`, order <= 5): only sink and source.
 5. Gadgets with a non-zero `kappa` and a Bezout condition `r_X r + kappa_X M = +-1`: none found with transitive `X`.
-6. Tool failure caught by a control: `pairstate.c` is wrong at order 27 (allocation size); a known transitive case
-   exposed it. Certificates are limited to order 24 and have order at most 14.
+6. Tool failure caught by a control: `pairstate.c` is wrong at order 27 and valid only to order 24 (array size);
+   a known transitive case exposed it. Certificates are limited to order 24 and have order at most 14.
 
 ## 12. Reproduction
 
     cd scripts
-    python verify_s22.py                       # 18 blocks, about two minutes, no input files
+    python verify_s22.py                       # 18 blocks, under a minute, no input files
+    python sources_check.py                    # S1-S9, no input files
     python mersenne_towers.py                  # depth-3 towers with slope a power of two
     gcc -O2 -o pairstate pairstate.c && python certs_verify.py ../certs_plus.txt && python certs_verify.py ../certs_minus.txt
     python ray_cover.py

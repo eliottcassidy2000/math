@@ -1,4 +1,4 @@
-/* src10.c - selected sets of any size with a Fermat-type offset: prints "m code Omask r h M" when r - 1 is a power of two, r >= 5,
+/* src10.c - selected sets of any size with a Fermat-type offset: prints "m code Omask r h M" when r - 1 is a power of two, r >= 3,
  * and the odd part of M equals D (argv[2]).   usage: src10 m D < cls_m.txt */
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,5 +18,5 @@ int main(int argc,char**argv){ int m=atoi(argv[1]); i64 DD=atoll(argv[2]); char 
     for(int a=0;a<m;a++) for(int c=0;c<m;c++) Q[a][c]=0;
     for(int X=1;X<full;X++){ int Y=full^X; for(int a=0;a<m;a++) if((X>>a&1)&&en[X][a]) for(int c=0;c<m;c++) if((Y>>c&1)&&st[Y][c]) Q[a][c]+=(i64)en[X][a]*(i64)st[Y][c]; }
     for(int O=1;O<=full;O++){ i64 w=0, M=0; for(int a=0;a<m;a++) if(O>>a&1){ M+=U[a]; for(int c=0;c<m;c++) if(c!=a&&(O>>c&1)) w+=Q[a][c]; }
-      i64 r=H-w; if(r<5) continue; i64 x=r-1; if(x&(x-1)) continue; i64 c=M; while(c%2==0) c/=2; if(c==DD) printf("%d %llu %d %lld %lld %lld\n",m,code,O,r,H,M); } }
+      i64 r=H-w; if(r<3) continue; i64 x=r-1; if(x&(x-1)) continue; i64 c=M; while(c%2==0) c/=2; if(c==DD) printf("%d %llu %d %lld %lld %lld\n",m,code,O,r,H,M); } }
   return 0; }

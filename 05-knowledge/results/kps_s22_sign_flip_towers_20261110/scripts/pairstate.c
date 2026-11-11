@@ -1,4 +1,4 @@
-/* pairstate.c - literal state (r, M, h, E) of a pair (B, O) by subset dynamic programming (orders up to 20).
+/* pairstate.c - literal state (r, M, h, E) of a pair (B, O) by subset dynamic programming (orders up to 24; larger orders are refused).
  * input (stdin), repeated:  n  out_0 ... out_{n-1}  Omask      (out_i = bit mask of the out-neighbours of vertex i)
  * output per pair:          n r M h E
  *   h = H(B); W = sum over ordered pairs e != f in O of #(P1 ending at e, P2 starting at f, both nonempty, covering B);
@@ -8,7 +8,7 @@
 typedef unsigned long long u64; typedef __int128 i128;
 static void pr(i128 x){ if(x<0){putchar('-');x=-x;} char b[64]; int k=0; if(x==0)b[k++]='0'; while(x>0){b[k++]='0'+(int)(x%10);x/=10;} while(k--)putchar(b[k]); }
 int main(void){ int n;
-  while(scanf("%d",&n)==1){ unsigned out[24],inn[24]; for(int i=0;i<n;i++){ scanf("%u",&out[i]); inn[i]=0; }
+  while(scanf("%d",&n)==1){ unsigned out[24],inn[24]; if(n>24){ fprintf(stderr,"order above 24 is not supported\n"); return 2; } for(int i=0;i<n;i++){ scanf("%u",&out[i]); inn[i]=0; }
     unsigned O; scanf("%u",&O); for(int i=0;i<n;i++) for(int j=0;j<n;j++) if(out[i]>>j&1) inn[j]|=1u<<i;
     size_t full=((size_t)1<<n)-1; u64 *en=calloc((full+1)*n,sizeof(u64)), *st=calloc((full+1)*n,sizeof(u64)), *hs=calloc(full+1,sizeof(u64));
     if(!en||!st||!hs){ fprintf(stderr,"memory\n"); return 1; }

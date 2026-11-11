@@ -1,0 +1,4 @@
+pairs (B, O) over classes of order <= 6, O nonempty: 3978
+slope below the domination slope: 0
+ray form d(G_t) = rho + 2^t delta_dom fails (orders <= 4, t <= 3): 0 | inequality H(T_t) - d(G_t) >= H(B) - 1 fails: 0
+pairs by (M == delta_dom, B transitive): {(True, True): 120, (False, False): 3858}
