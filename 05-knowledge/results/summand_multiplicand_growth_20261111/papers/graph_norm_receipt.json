@@ -1,0 +1,135 @@
+{
+  "status": "FINITE-EXACT controls for all-order proofs in PROOF.md",
+  "finite_universe": {
+    "cycle_factors_a_b": [
+      1,
+      6
+    ],
+    "permutation_cycle_types": [
+      {},
+      {
+        "1": 1
+      },
+      {
+        "2": 1
+      },
+      {
+        "3": 1
+      },
+      {
+        "4": 1
+      },
+      {
+        "1": 2
+      },
+      {
+        "1": 1,
+        "2": 1
+      },
+      {
+        "2": 2
+      }
+    ],
+    "r_values": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "ghost_m_values": [
+      1,
+      18
+    ],
+    "carry_primes": [
+      2,
+      3
+    ],
+    "integer_birth_n": [
+      0,
+      12
+    ],
+    "joint_chart_max_label": 40,
+    "output_bounds": [
+      2,
+      30
+    ]
+  },
+  "controls": {
+    "cycle_products": 36,
+    "operator_identities": 320,
+    "ghost_norm": 576,
+    "positive_norm_carries": 42,
+    "one_integer_births": 13,
+    "joint_chart": 820,
+    "stabilization": 58
+  },
+  "hostiles": {
+    "VF_on_one_point": {
+      "2": 1
+    },
+    "two_fixed_points": {
+      "1": 2
+    },
+    "norm2_of_C2": {
+      "4": 1
+    },
+    "hidden_C2_initial_g1": 0,
+    "hidden_C2_after_F2_g1": 2,
+    "nonnegative_ghosts_2_0_require_c2": -1
+  },
+  "composite_norm_example": {
+    "N6_two_fixed_points": {
+      "1": 2,
+      "2": 1,
+      "3": 2,
+      "6": 9
+    }
+  },
+  "joint_birth_example_n5": [
+    {
+      "pair": [
+        1,
+        5
+      ],
+      "sum": 6,
+      "product": 5,
+      "fixed": false
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "sum": 7,
+      "product": 10,
+      "fixed": false
+    },
+    {
+      "pair": [
+        3,
+        5
+      ],
+      "sum": 8,
+      "product": 15,
+      "fixed": false
+    },
+    {
+      "pair": [
+        4,
+        5
+      ],
+      "sum": 9,
+      "product": 20,
+      "fixed": false
+    },
+    {
+      "pair": [
+        5,
+        5
+      ],
+      "sum": 10,
+      "product": 25,
+      "fixed": true
+    }
+  ]
+}
