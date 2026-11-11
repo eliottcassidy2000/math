@@ -1,0 +1,8 @@
+telescoping identities: True
+Li2(-1/2) = -0.448414206924   Li2(-1/4) = -0.235900297686
+g_bar = pi^2/6 + 2 Li2(-1/2) = 0.7481056530   (mean of r over odd N is g_bar ln N + O(1))
+sheet s = 0 : 0.3230778345   share w_0 = 0.43186124
+sheet s >= 1: 0.4250278185   share w_1 = 0.56813876
+word pairs (weight s + 1): total pi^2/6 = 1.6449340668; sheet s = 0 share = 0.19640777, sheet s >= 1 share = 0.80359223   (letter-count model of THM-4916: 1/4, 3/4)
+measured slope of mean r against mean ln N between consecutive windows: [0.7482, 0.7481]  (g_bar = 0.7481)
+ALL CHECKS PASSED

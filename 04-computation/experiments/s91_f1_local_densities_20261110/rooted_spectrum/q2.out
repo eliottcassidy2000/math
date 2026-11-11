@@ -1,0 +1,69 @@
+ok   rows (h, e, Yminus, strong) with multiplicities = klein's triples_n.txt, orders 4..8 (54375 rows)
+ok   distinct (h, e, Yminus, strong) rows over orders 4..9 = 1,728,779 (klein's receipt coverage_9) : 1728779
+ok   least H of a strong tournament of order 3..10 = 3, 5, 9, 15, 25, 45, 75, 125 : [3, 5, 9, 15, 25, 45, 75, 125]
+ok   composition law: for T = A => C => Z (C the strong component of the root), (x, s, Y) = (H(A) x_C H(Z), [A empty] s_C H(Z), pi(A) Y_C H(Z)), pi = 2H + P2; generates exactly the rooted triples of every order 1..9
+ok   pi(C3) = 12 and pi(strong 4-tournament) = 32 : [(1, 8), (1, 16), (3, 12), (3, 24), (5, 32)]
+strong rooted pairs (complete for x <= 123); D = Yplus - s (pendant increment); x: #pairs, s-range, Y-range, D-set
+  x= 1:   1 pairs, s in [1, 1], Y in [1, 1], D = [0]
+  x= 3:   1 pairs, s in [1, 1], Y in [3, 3], D = [2]
+  x= 5:   4 pairs, s in [1, 2], Y in [5, 9], D = [4, 6, 8]
+  x= 9:  10 pairs, s in [1, 4], Y in [9, 25], D = [6, 8, 10, 14, 20, 22, 24]
+  x=11:   5 pairs, s in [1, 4], Y in [12, 27], D = [8, 12, 14, 18, 26]
+  x=13:   4 pairs, s in [2, 4], Y in [14, 26], D = [10, 12, 16, 24]
+  x=15:  14 pairs, s in [1, 6], Y in [15, 63], D = [10, 12, 14, 16, 18, 22, 26, 38, 44, 56, 58, 62]
+  x=17:  12 pairs, s in [1, 8], Y in [17, 69], D = [10, 12, 14, 16, 18, 24, 30, 32, 42, 54, 60, 68]
+  x=19:  11 pairs, s in [1, 8], Y in [19, 73], D = [12, 14, 16, 20, 24, 26, 32, 40, 50, 58, 72]
+  x=23:  23 pairs, s in [1, 10], Y in [23, 87], D = [14, 16, 18, 22, 24, 26, 28, 30, 36, 46, 48, 50, ... 18 values, max 86]
+  x=25:  19 pairs, s in [1, 10], Y in [25, 159], D = [18, 20, 24, 30, 36, 38, 40, 44, 48, 50, 56, 78, ... 16 values, max 158]
+  x=27:  23 pairs, s in [1, 12], Y in [27, 171], D = [18, 24, 26, 28, 30, 34, 42, 46, 50, 64, 68, 72, ... 20 values, max 170]
+  x=29:  33 pairs, s in [1, 12], Y in [29, 169], D = [20, 22, 24, 26, 30, 36, 38, 40, 42, 44, 46, 48, ... 24 values, max 168]
+  x=31:  23 pairs, s in [1, 12], Y in [31, 183], D = [22, 24, 26, 28, 34, 36, 38, 40, 42, 48, 50, 56, ... 20 values, max 182]
+  x=33:  40 pairs, s in [1, 16], Y in [33, 197], D = [18, 20, 24, 26, 28, 32, 34, 36, 38, 40, 42, 44, ... 29 values, max 196]
+  x=35:  14 pairs, s in [1, 14], Y in [35, 191], D = [24, 30, 36, 38, 46, 56, 80, 90, 110, 134, 172, 182, 190]
+  x=37:  38 pairs, s in [1, 14], Y in [37, 209], D = [24, 26, 28, 32, 34, 36, 38, 40, 42, 44, 46, 50, ... 28 values, max 208]
+  x=39:  14 pairs, s in [1, 18], Y in [39, 229], D = [22, 30, 32, 40, 50, 58, 76, 84, 100, 104, 154, 158, 220, 228]
+  x=41:  41 pairs, s in [2, 18], Y in [41, 214], D = [28, 32, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, ... 33 values, max 212]
+  x=43:  24 pairs, s in [2, 15], Y in [43, 218], D = [30, 34, 38, 40, 46, 48, 54, 58, 62, 64, 66, 68, ... 19 values, max 216]
+  x=45:  65 pairs, s in [1, 20], Y in [45, 427], D = [28, 30, 32, 34, 36, 40, 42, 44, 48, 50, 52, 54, ... 53 values, max 426]
+  x=47:  14 pairs, s in [1, 22], Y in [48, 267], D = [26, 32, 48, 50, 60, 72, 102, 116, 158, 174, 178, 206, 266]
+  x=49:  54 pairs, s in [1, 22], Y in [49, 437], D = [30, 34, 36, 38, 40, 42, 44, 48, 58, 60, 62, 66, ... 43 values, max 436]
+  x=51:  70 pairs, s in [1, 24], Y in [51, 471], D = [30, 32, 34, 36, 38, 40, 42, 46, 48, 50, 52, 54, ... 58 values, max 470]
+  x=53:  70 pairs, s in [1, 24], Y in [53, 487], D = [34, 36, 38, 40, 42, 44, 46, 48, 50, 54, 56, 58, ... 56 values, max 486]
+  x=55:  27 pairs, s in [2, 24], Y in [55, 270], D = [36, 38, 40, 46, 50, 52, 72, 76, 78, 82, 86, 96, ... 23 values, max 268]
+  x=57:  44 pairs, s in [1, 24], Y in [57, 495], D = [36, 38, 40, 42, 48, 52, 56, 58, 60, 62, 66, 68, ... 41 values, max 494]
+  x=59:  83 pairs, s in [1, 26], Y in [59, 503], D = [36, 38, 40, 42, 44, 46, 48, 50, 52, 56, 58, 60, ... 65 values, max 502]
+  x=61:  38 pairs, s in [1, 28], Y in [61, 543], D = [36, 38, 42, 46, 48, 52, 56, 58, 68, 72, 82, 84, ... 34 values, max 542]
+ok   strong rows, 3 <= x <= 123: 1 <= s <= (x-1)/2, Y >= x, Y = s mod 2, Y - s >= (x+1)/2 (>= (x+3)/2 for x >= 5)
+ok   the floor Y - s = (x+3)/2 is attained exactly at x = 2^k + 1 (5, 9, 17, 33, 65), x <= 123 : [5, 9, 17, 33, 65]
+ok   s = (x-1)/2 is attained exactly at x = 2^k + 1 (3, 5, 9, 17, 33, 65), x <= 123 : [3, 5, 9, 17, 33, 65]
+strong x <= 123 with no pair s = 1: [13, 41, 43, 55, 67, 77, 83]
+largest Y/x among strong pairs with x <= 123: 14.20 at (x, s, Y) = (75, 1, 1065)
+number of strong pairs with x <= 123: 4694; with x <= 61: 819
+
+pendant extension: H(T + w) = x - s + Y.  Triples that would give 7: (1,0,6), (3,s,s+4), (5,s,s+2);
+21: (1,0,20), (3,s,s+18), (5,s,s+16), (9,s,s+12), (11,s,s+10), (13,s,s+8), (15,s,s+6), (17,s,s+4), (19,s,s+2).
+   strong x =  3: D = [2]; 7 needs 4, 21 needs 18
+   strong x =  5: D = [4, 6, 8]; 7 needs 2, 21 needs 16
+   strong x =  9: D = [6, 8, 10, 14, 20, 22, 24]; 7 needs -, 21 needs 12
+   strong x = 11: D = [8, 12, 14, 18, 26]; 7 needs -, 21 needs 10
+   strong x = 13: D = [10, 12, 16, 24]; 7 needs -, 21 needs 8
+   strong x = 15: D = [10, 12, 14, 16, 18, 22, 26, 38, 44, 56, 58, 62]; 7 needs -, 21 needs 6
+   strong x = 17: D = [10, 12, 14, 16, 18, 24, 30, 32, 42, 54, 60, 68]; 7 needs -, 21 needs 4
+   strong x = 19: D = [12, 14, 16, 20, 24, 26, 32, 40, 50, 58, 72]; 7 needs -, 21 needs 2
+ok   no strong rooted tournament has x - s + Y in {7, 21} (finite list, x <= 19)
+ok   Yplus on the 3-cycle is {3}; on the strong 4-tournament {5, 6, 7, 9}
+ok   7 and 21 are not pendant values of any rooted tournament of order <= 10
+pendant spectrum {x - s + Y} = {H(T') : T' has a vertex of in-degree one}, bases of order <= n:
+   n <=  5: every odd number of [23, 33] occurs; missing below 23: [7, 21]
+   n <=  6: every odd number of [23, 61] occurs; missing below 23: [7, 21]
+   n <=  7: every odd number of [23, 393] occurs; missing below 23: [7, 21]
+   n <=  8: every odd number of [23, 1949] occurs; missing below 23: [7, 21]
+   n <=  9: every odd number of [23, 9151] occurs; missing below 23: [7, 21]
+   n <= 10: every odd number of [23, 48173] occurs; missing below 23: [7, 21]
+ok   pendant spectrum: [1, 393] at order <= 7, [1, 1949] at <= 8, [1, 9151] at <= 9, [1, 48173] at <= 10, minus {7, 21}
+   strong rooted tournaments of order <= 9 only: every odd number of [23, 9151]; missing below 23: [3, 7, 21]
+doubling gadget H + 2Y: 7 needs (x, Y) in {(1,3)}; 21 needs (1,10), (3,9), (5,8) (Y >= x).
+   Y-values (orders <= 9): x = 1: [1, 2, 4, 8, 16, 32, 64, 128, 256]; x = 3: [3, 6, 12, 24, 48, 96, 192, 384]; x = 5: [5, 6, 7, 9, 10, 12, 14, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72, 80, 96, 112, 128, 144, 160, 192, 224, 256, 288, 512]
+ok   none of (1,3), (1,10), (3,9), (5,8) is a pair (x, Y)
+ok   two-step values x + 2Y, orders <= 9: every odd number of [69, 15449]; below 69 the misses are 1, 7, 11, 13, 21, 47, 67 (klein's receipt) : 15449 [1, 7, 11, 13, 21, 47, 67]
+ALL CHECKS PASSED

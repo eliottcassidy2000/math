@@ -1,0 +1,92 @@
+PASS  0  q table: q(2h) = q(h), q(2h+1) = q(h) + ceil(h/2); spot values x(10) = x(13) = 19, x(17) = x(23) = 27, x(256) = y(256) = 513
+A. N: r = r0 + r1 (sheet s = 0, sheet s >= 1); one-apex words h with x(h) = N
+      N =    2: r = 0 = 0 + 0; words []
+      N =    3: r = 1 = 0 + 1; words [1]
+      N =    5: r = 3 = 2 + 1; words [2, 3]
+      N =    7: r = 0 = 0 + 0; words []
+      N =   13: r = 0 = 0 + 0; words []
+      N =   19: r = 4 = 2 + 2; words [10, 13]
+      N =   21: r = 0 = 0 + 0; words []
+      N =   27: r = 5 = 0 + 5; words [17, 23]
+      N =   43: r = 0 = 0 + 0; words []
+      N =   67: r = 0 = 0 + 0; words []
+      N =  163: r = 0 = 0 + 0; words []
+      N = 1039: r = 0 = 0 + 0; words []
+PASS  A1 r = 0 at 2 (even), 7, 13, 21, 43, 67, 163, 1039; r(3) = 1, r(5) = 3, r(19) = 4, r(27) = 5
+PASS  A2 every F1 value is odd (r(N) = 0 for all even N <= 4096): the 2-adic factor is the parity alone
+B. modulus: first divisible state h (x, y), count below 2^26, count * m^2 / 2^26, ord_m(2), least j with m | 2^j + 1
+      m =    3: h =       1 (x, y) = (3, 3); count  7721185; ratio 1.0355; ord = 2; m | 2^j + 1 first at j = 1
+      m =    5: h =       2 (x, y) = (5, 5); count  2684360; ratio 1.0000; ord = 4; m | 2^j + 1 first at j = 2
+      m =    7: h =      38 (x, y) = (63, 77); count  1063568; ratio 0.7766; ord = 3; m | 2^j + 1 first at j = never
+      m =   13: h =      32 (x, y) = (65, 65); count   396958; ratio 0.9997; ord = 12; m | 2^j + 1 first at j = 6
+      m =   19: h =     218 (x, y) = (361, 437); count   188141; ratio 1.0121; ord = 18; m | 2^j + 1 first at j = 9
+      m =   27: h =     256 (x, y) = (513, 513); count    96720; ratio 1.0507; ord = 18; m | 2^j + 1 first at j = 9
+      m = 1039: h =  405729 (x, y) = (597425, 811459); count       58; ratio 0.9330; ord = 519; m | 2^j + 1 first at j = never
+PASS  B1 first divisible states: 3: h = 1, 5: 2, 7: 38, 13: 32, 19: 218 (as in ../divisible_states.out)
+PASS  B2 x = y at h = 2^j (x = y = 2^(j+1) + 1) for j < 26, and h = 256 gives x = y = 513 = 27 * 19
+PASS  B3 ord_7(2) = 3 and ord_1039(2) = 519 are odd (no m with p | 2^m + 1: no diagonal divisible state); ord_3, ord_5, ord_13, ord_19, ord_27 = 2, 4, 12, 18, 18 are even
+PASS  B4 density of 1039-divisible states below 2^26 is 1/p^2 within 4 Poisson standard deviations   [count 58, expected 62.2]
+PASS  C1 own twisted operator at m = 1039 reproduces the exponential sums S_16(k, l) (5 pairs)
+C. rates max_k rho(T_k)/2 (own dense eigenvalues; table = ../twisted_spectrum.out)
+      m =  3: own 0.866025 (at k = +-1), table 0.866025 (k = 1)
+      m =  5: own 0.741760 (at k = +-4), table 0.741760 (k = 1)
+      m =  7: own 0.932039 (at k = +-5), table 0.932039 (k = 5)
+      m = 13: own 0.827243 (at k = +-7), table 0.827243 (k = 7)
+      m = 19: own 0.805253 (at k = +-15), table 0.805253 (k = 4)
+      m = 27: own 0.866025 (at k = +-18), table 0.866025 (k = 18)
+PASS  C2 own rates agree with ../twisted_spectrum.out at m = 3, 5, 7, 13, 19, 27 (0.866025, 0.741760, 0.932039, 0.827243, 0.805253, 0.866025)
+PASS  C3 validation at m = 127: norm bound within [-0.001, +0.012] of the dense rate for all 63 classes, same maximiser, max 0.875417   [max deviation 0.00100, min -0.00002]
+      m = 1039: 519 classes +-j (k = 2j); largest norm bounds: [(32, 0.76515), (132, 0.75855), (152, 0.75728), (48, 0.75653), (17, 0.75366), (105, 0.75346), (100, 0.75232), (65, 0.75211)]
+      m = 1039: dense rates of the 16 largest: [(32, 0.763636), (132, 0.757191), (152, 0.756125), (48, 0.754558), (17, 0.751938), (105, 0.751684), (100, 0.751204), (65, 0.75058)]
+      m = 1039: max_k rho(T_k)/2 = 0.763636 at k = +-64 (j = 32); largest bound among the other 503 classes: 0.74769; median bound 0.72990
+PASS  C4 m = 1039: the dense maximum exceeds the norm bound of every class not computed densely   [0.763636 > 0.747694]
+PASS  C5 m = 1039: rate < 1 (strict cancellation) and all dense values below their norm bounds + 0.001
+D. window odd N in [2^24, 2^27): predicted triples per odd N: 6.2819 (s = 0), 7.8598 (s >= 1)
+      p =    3: E_pred = +0.51461 (s = 0), +0.53172 (s >= 1);  f = 1.288e-01, 1.308e-01
+      p =    5: E_pred = +0.31201 (s = 0), +0.32835 (s >= 1);  f = 4.937e-02, 5.081e-02
+      p =    7: E_pred = +0.17360 (s = 0), +0.17549 (s >= 1);  f = 2.230e-02, 2.243e-02
+      p =   13: E_pred = +0.04594 (s = 0), +0.04479 (s >= 1);  f = 4.719e-03, 4.675e-03
+      p =   19: E_pred = +0.05112 (s = 0), +0.04967 (s >= 1);  f = 2.727e-03, 2.689e-03
+      p = 1039: E_pred = -0.00025 (s = 0), -0.00031 (s >= 1);  f = 3.408e-07, 3.142e-07
+PASS  D1 own E_pred and f agree with ../prereg_window_27_24.json at p = 3, 5, 7, 13, 19 (both sheets)
+PASS  D2 1039 is not among the 46 primes of the pre-registration (its prediction is new here)
+PASS  D3 prediction for 1039: |E_pred| < 0.01 on both sheets (no early divisible state: a control prime)
+E. measured triples per odd N: 6.2379 (s = 0), 7.9026 (s >= 1), total 14.1405
+PASS  E1 total mass within 0.2 % of the prediction, each sheet within 2 %
+      p =    3: E measured = +0.53916 (s = 0), +0.54448 (s >= 1)   predicted +0.51461, +0.53172
+      p =    5: E measured = +0.31299 (s = 0), +0.32799 (s >= 1)   predicted +0.31201, +0.32835
+      p =    7: E measured = +0.23273 (s = 0), +0.22966 (s >= 1)   predicted +0.17360, +0.17549
+      p =   13: E measured = +0.04408 (s = 0), +0.04458 (s >= 1)   predicted +0.04594, +0.04479
+      p =   19: E measured = +0.05103 (s = 0), +0.04946 (s >= 1)   predicted +0.05112, +0.04967
+      p =   27: E measured = +0.49121 (s = 0), +0.48898 (s >= 1)
+      p = 1039: E measured = -0.00121 (s = 0), +0.00189 (s >= 1)   predicted -0.00025, -0.00031
+PASS  E2 class counts sum to the totals for every modulus
+PASS  E3 own measured excess equals the session's window_split_prereg_27_24.out at p = 3, 5, 7, 13, 19 (5 decimals)   [{(3, 0): 0.53916, (3, 1): 0.54448, (5, 0): 0.31299, (5, 1): 0.32799, (7, 0): 0.23273, (7, 1): 0.22966, (13, 0): 0.04408, (13, 1): 0.04458, (19, 0): 0.05103, (19, 1): 0.04946}]
+PASS  E4 p = 1039: |E - E_pred| <= 0.008 + 4 se = 0.0226 on both sheets (control behaviour, as predicted)   [E = -0.00121, +0.00189; E_pred = -0.00025, -0.00031; se = 0.00364]
+PASS  E5 slow prime 7: measured excess exceeds the first-order prediction by more than 0.04 on both sheets (second-order term)
+F. limiting singular series: N, S_1(N) [sheet s >= 1], S_0(N) = S_1(N + 1) [sheet s = 0], S = w_0 S_0 + w_1 S_1, r(N)
+      N =    2: even, the 2-adic factor is 0 (every F1 value is odd)
+      N =    3: S_1 = 1.11453  S_0 = 0.81057  S = 0.98326   r = 1
+      N =    5: S_1 = 0.97944  S_0 = 1.11453  S = 1.03778   r = 3
+      N =    7: S_1 = 0.92878  S_0 = 0.81057  S = 0.87773   r = 0
+      N =   13: S_1 = 0.87329  S_0 = 0.92878  S = 0.89725   r = 0
+      N =   19: S_1 = 0.85335  S_0 = 0.97944  S = 0.90780   r = 4
+      N =   27: S_1 = 1.11453  S_0 = 0.92878  S = 1.03431   r = 5
+      N = 1039: S_1 = 0.81135  S_0 = 1.05523  S = 0.91667   r = 0
+      N =   21: S_1 = 1.27707  S_0 = 0.88487  S = 1.10769   r = 0
+      N =   43: S_1 = 0.82943  S_0 = 0.88487  S = 0.85337   r = 0
+      N =   67: S_1 = 0.82267  S_0 = 0.85842  S = 0.83811   r = 0
+      N =  163: S_1 = 0.81554  S_0 = 0.83035  S = 0.82194   r = 0
+PASS  F1 prod over odd p of (1 - 1/p^2) = 8/pi^2 = 0.810569 (partial product to 2*10^5)   [0.810570]
+PASS  F2 the table of S_1, S_0 (hand values to 5 decimals)
+PASS  F3 no local obstruction at the F1 misses 7, 13, 21, 43, 67, 163, 1039: S_0, S_1 >= 8/pi^2 > 0.81 always
+      odd N in [1025, 4096): 1536 values, 168 misses (10.9 %); mean r = 6.483; mean S over all = 1.0000, over the misses = 0.9523
+      mean r on the quarter with the smallest S: 5.023; on the quarter with the largest S: 7.599; exp(-mean r) = 0.0015
+PASS  F4 misses have smaller limiting singular series on average, and r increases with S (direction of HYP-9657 (B))
+PASS  F5 the miss rate is far above the Poisson value exp(-mean r): misses at this height are not a local-density effect
+ALL CHECKS PASSED (25 checks)
+
+real	8m0.655s
+user	0m0.030s
+sys	0m0.015s
+exit: 0

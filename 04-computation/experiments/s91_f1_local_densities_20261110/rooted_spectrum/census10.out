@@ -1,0 +1,24 @@
+bases 316153, rows 161870336, strong rows 156571944, max Y+ 50004, max pendant value 53361, least H of a strong tournament of order 10: 125  (84.7 s)
+ok   row count = bases * 512
+ok   least H of a strong tournament of order 10 is 125 : 125
+ok   order 10, no violation of: parity Y+ = s mod 2 : violations 0
+ok   order 10, no violation of: Y+ >= x : violations 0
+ok   order 10, no violation of: non-source: 2s <= x - 1 : violations 0
+ok   order 10, no violation of: non-source: 2(Y+ - s) >= x + 1 : violations 0
+ok   order 10, no violation of: non-source, x >= 5: 2(Y+ - s) >= x + 3 : violations 0
+ok   order 10, no violation of: s = 0: Y+ >= 2x : violations 0
+ok   order 10, no violation of: parity Y- = e mod 2 : violations 0
+ok   order 10, no violation of: Y- >= x : violations 0
+ok   order 10, no violation of: non-sink: 2e <= x - 1 : violations 0
+ok   order 10, no violation of: non-sink: 2(Y- - e) >= x + 1 : violations 0
+ok   order 10, no violation of: Y+ - x >= indeg (indeg - 1) : violations 0
+ok   order 10, no violation of: overflow Y : violations 0
+ok   order 10, no violation of: overflow pend : violations 0
+ok   order 10, no violation of: s + e <= x : violations 0
+ok   order 10, no violation of: strong: s >= 1 and e >= 1 : violations 0
+ok   order 10, no violation of: Y+ >= d + e : violations 0
+ok   converse symmetry: start set = end set, Y+ set = Y- set, Z = Zd
+ok   H-values of order 10: 7663 values, equal to the support of out/hist_10.txt
+saved agg10.npz (85.0 s)
+ALL CHECKS PASSED
+exit=0

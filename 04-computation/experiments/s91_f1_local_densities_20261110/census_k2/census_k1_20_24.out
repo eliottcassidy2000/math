@@ -1,0 +1,56 @@
+dilogarithm constants (mpmath, 30 digits; closed forms checked against quadrature of the defining integrals):
+  Li2(-1/2) = -0.448414206924   Li2(-1/4) = -0.235900297686
+  triples: g_bar = pi^2/6 + 2 Li2(-1/2) = 0.7481056530;  g_0 = pi^2/6 + 4 Li2(-1/2) - 2 Li2(-1/4) = 0.3230778345;  g_1 = 2 (Li2(-1/4) - Li2(-1/2)) = 0.4250278185
+  triple shares  w_0 = 0.4318612394  w_1 = 0.5681387606
+  pairs (weight s + 1): total pi^2/6 = 1.6449340668;  w_0 = 1 + (12/pi^2)(2 Li2(-1/2) - Li2(-1/4)) = 0.1964077716   w_1 = 0.8035922284      (letter-count: 1/4, 3/4)
+
+K = 1 word census on odd N in [2^20, 2^24): 210078506 counted words, mean M_1 = 26.7129, max M_1 = 178, 1021 tasks, 4.6 s
+  confinement lemma (value = -[c = 0] E mod p for every word with S or T): violations 0
+  dictionary on the whole window: M_1(N) = sum over triples of (s + 1) for every odd N: True   (98310770 triples; sheet s = 0: 43488400, s >= 1: 54822370)
+  sheets (pair normalisation): measured s = 0: 43488400 (0.20701), s >= 1: 166590106 (0.79299);  J-free words 10902268 (0.05190; (B - A) ln 2 = 10902262)
+     predicted finite-size (W):  s = 0: 43834299 (0.20974), s >= 1: 165156296 (0.79026);  total 208990595 against 210078506 (ratio 0.99482);  limit shares 0.19641, 0.80359
+     triples (unweighted): measured share s = 0: 0.44236, predicted 0.44583, limit 0.43186
+
+  p-divisible shares by sheet (pair weights): measured first-state share = measured second-state share exactly (h1 <-> h2 symmetry), against f predicted from W
+    p  sheet    f first   f second     f pred     1/p^2       both        f^2
+    3    s=0   0.130585   0.130585   0.130393  0.111111   0.015632   0.017052
+    3   s>=1   0.134387   0.134387   0.134631  0.111111   0.017363   0.018060
+    5    s=0   0.050644   0.050644   0.050557  0.040000   0.002449   0.002565
+    5   s>=1   0.052671   0.052671   0.052780  0.040000   0.002598   0.002774
+    7    s=0   0.023134   0.023134   0.023135  0.020408   0.000591   0.000535
+    7   s>=1   0.022984   0.022984   0.023000  0.020408   0.000430   0.000528
+   11    s=0   0.012213   0.012213   0.012184  0.008264   0.000125   0.000149
+   11   s>=1   0.012530   0.012530   0.012573  0.008264   0.000139   0.000157
+   13    s=0   0.004544   0.004544   0.004559  0.005917   0.000021   0.000021
+   13   s>=1   0.004485   0.004485   0.004472  0.005917   0.000019   0.000020
+   17    s=0   0.008363   0.008363   0.008321  0.003460   0.000042   0.000070
+   17   s>=1   0.009206   0.009206   0.009256  0.003460   0.000049   0.000085
+
+  class factors L(c) = (mean of M_1 over N = c mod p) / (overall mean);  'other' = mean over the classes != 0, -1
+    p  class  measured (a) letter  (b) value (c) finite (c) - meas
+    3      0    1.2062     1.1389     1.1568     1.2186    +0.0124
+    3     -1    0.9553     0.9722     0.9544     0.9378    -0.0174
+    3  other    0.8385     0.8889     0.8889     0.8436    +0.0051
+      ripple of the other classes (max |L - mean|): 0.0000;  measured excess of 0 over other +0.4384, of -1 over other +0.1392
+    5      0    1.1945     1.1100     1.1207     1.1944    -0.0000
+    5     -1    0.9995     1.0100     0.9993     0.9995    -0.0000
+    5  other    0.9354     0.9600     0.9600     0.9354    +0.0000
+      ripple of the other classes (max |L - mean|): 0.0002;  measured excess of 0 over other +0.2770, of -1 over other +0.0685
+    7      0    1.1437     1.0867     1.0944     1.1159    -0.0278
+    7     -1    1.0202     1.0153     1.0077     1.0123    -0.0079
+    7  other    0.9672     0.9796     0.9796     0.9744    +0.0071
+      ripple of the other classes (max |L - mean|): 0.0304;  measured excess of 0 over other +0.1825, of -1 over other +0.0547
+   11      0    1.1265     1.0599     1.0648     1.1300    +0.0036
+   11     -1    1.0190     1.0145     1.0096     1.0204    +0.0015
+   11  other    0.9838     0.9917     0.9917     0.9833    -0.0006
+      ripple of the other classes (max |L - mean|): 0.0038;  measured excess of 0 over other +0.1450, of -1 over other +0.0357
+   13      0    1.0258     1.0518     1.0559     1.0280    +0.0023
+   13     -1    1.0009     1.0133     1.0092     1.0057    +0.0048
+   13  other    0.9976     0.9941     0.9941     0.9969    -0.0006
+      ripple of the other classes (max |L - mean|): 0.0055;  measured excess of 0 over other +0.0282, of -1 over other +0.0033
+   17      0    1.1917     1.0407     1.0438     1.1875    -0.0041
+   17     -1    1.0313     1.0112     1.0081     1.0323    +0.0010
+   17  other    0.9851     0.9965     0.9965     0.9853    +0.0002
+      ripple of the other classes (max |L - mean|): 0.0036;  measured excess of 0 over other +0.2097, of -1 over other +0.0469
+  worst |(c) - measured| over p = 5, 11, 13, 17 (fast primes): 0.0048   (3 and 7 are the slow primes of twisted_spectrum.py: rates 0.866, 0.932)
+ALL CHECKS PASSED

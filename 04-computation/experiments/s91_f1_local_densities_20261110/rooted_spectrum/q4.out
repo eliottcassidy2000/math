@@ -1,0 +1,39 @@
+ok   pendant pairs with bases of order <= 10 = the mac-mini bitset pZ_le10 (out-degree-one extensions), bit for bit (667007 pairs)
+ok   all-out-set pairs with bases of order <= 9 are contained in the mac-mini bitset pA_le10 (1510108 of 1912759 pairs)
+ok   pendant pairs are all-out-set pairs
+ok   every odd h < 1024 except 7, 21 is realised
+reproduction of the packet's line: out-degree-one extensions (h >= 237): density in [3h,5h): 0.7993   in [2h,3h): 0.8641
+ok   these are 0.7993 and 0.8641
+pendant-only windows [3h, 5h) that are complete, h <= 400: bases <= 8: 1 values of h (largest 1); <= 9: 1 (largest 1); <= 10: 1 (largest 1)
+   complete at order <= 10: [1]
+all-out-set windows [3h, 5h) complete with bases <= 10, h <= 400: 150 of 198 values of h
+
+mean coverage (covered odd n / odd n in the window, pooled over h in the band)
+band of h      window        pendant<=8  pendant<=9  pendant<=10   all<=8   all<=9   all<=10
+[   3,   99]   [1.5h, 2h)    0.5291      0.5615      0.5615       0.6036   0.6408   0.6408
+[   3,   99]   [2h, 3h)      0.5388      0.5743      0.5784       0.8350   0.8630   0.8639
+[   3,   99]   [3h, 5h)      0.4484      0.5463      0.5633       0.9243   0.9401   0.9401
+[ 101,  235]   [1.5h, 2h)    0.4111      0.5851      0.6201       0.4370   0.6607   0.7013
+[ 101,  235]   [2h, 3h)      0.5120      0.6331      0.6659       0.8441   0.9361   0.9505
+[ 101,  235]   [3h, 5h)      0.2783      0.5706      0.6530       0.9769   0.9948   0.9968
+[ 237,  399]   [1.5h, 2h)    0.2585      0.5708      0.6746       0.2591   0.6144   0.7421
+[ 237,  399]   [2h, 3h)      0.5365      0.7358      0.7970       0.7808   0.9576   0.9826
+[ 237,  399]   [3h, 5h)      0.1723      0.5909      0.7413       0.9872   0.9998   1.0000
+[ 401, 1023]   [1.5h, 2h)    0.0151      0.4772      0.7044       0.0151   0.4846   0.7449
+[ 401, 1023]   [2h, 3h)      0.0855      0.7489      0.8720       0.1132   0.9376   0.9901
+[ 401, 1023]   [3h, 5h)      0.0096      0.4253      0.8061       0.2223   0.9999   1.0000
+
+ok   no pendant value in (h, (3h + 3)/2) for 5 <= h < 1024 (bases of order <= 10)
+odd n in [1025, 3069] (1023 values): n is a pendant extension of a realiser of the largest odd h <= n/3 for 895 of them (0.875); of some odd h in (n/5, n/3] for 1023; an all-out-set extension of some such h for 1023
+ok   every odd n in [1025, 3069] is a pendant extension of a realiser of some odd h in (n/5, n/3]
+
+ok   h <= 123: the census pendant values below 5h (bases of order <= 10) lie in the all-order set given by the composition law; equal for 57 of the 60 values of h
+exact coverage of [3h, 5h) by pendant extensions of ALL orders, 3 <= h <= 123: mean 0.559, largest 0.824 (h = 91), least 0.159 (h = 63); no window is complete: True
+ok   the pendant-only window law fails for every 3 <= h <= 123 (all orders)
+   h =  13: pendant values in [3h, 5h) at all orders: 4 of 13
+   h =  25: pendant values in [3h, 5h) at all orders: 11 of 25
+   h =  45: pendant values in [3h, 5h) at all orders: 33 of 45
+   h =  75: pendant values in [3h, 5h) at all orders: 38 of 75
+   h = 105: pendant values in [3h, 5h) at all orders: 62 of 105
+   h = 123: pendant values in [3h, 5h) at all orders: 92 of 123
+ALL CHECKS PASSED

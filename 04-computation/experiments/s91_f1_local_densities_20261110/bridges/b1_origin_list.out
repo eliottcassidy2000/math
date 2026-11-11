@@ -1,0 +1,38 @@
+PASS  A1 norms at (1,1),(1,2),(1,3),(2,3),(3,3) are 3,7,13,19,27   [[3, 7, 13, 19, 27]]
+PASS  A2 radicands for degrees <= 3 are {3,7,12,13,19,27}; the list omits only 12 = N(2,2)   [[3, 7, 12, 13, 19, 27]]
+PASS  A3 (a^3 - b^3) = (a - b) N(a, b) for 1 <= b < a <= 30
+PASS  A4 7 | 2^3 - 1, 13 | 3^3 - 1, 19 = 3^3 - 2^3, 1039 = N(15, 22) = 26^2 + 3*11^2, 1039 prime
+PASS  A5 1039 has exactly one representation a^2 + ab + b^2 with 0 <= a <= b   [[(15, 22)]]
+PASS  A6 none of 7, 13, 19, 1039 is x^2 + 27 y^2 (2 is not a cubic residue)
+PASS  A7 cube test: 2^((p-1)/3) != 1 mod p for p = 7, 13, 19, 1039
+PASS  B1 4*19 = 76 = 75 + 1 = 3*5^2 + 1, so eps = 2 sqrt 19 - 5 sqrt 3 = sqrt 76 - sqrt 75 = 1/(sqrt 76 + sqrt 75)
+PASS  B2 eps > 0 (certified)   [eps in [0.057543849237, 0.057543849237]]
+PASS  B3 delta - eps = sqrt 13 + 7 sqrt 3 - sqrt 7 - 3 sqrt 19 > 0 (certified)   [delta = 0.065002635996, delta - eps = 0.007458786760]
+PASS  B4 the same inequality by integer squaring (400689 > 387828)
+PASS  B5 reduced forms of discriminant -75: primitive (1,1,19), (3,3,7); and the imprimitive 5*(1,1,1) (the digest's list omits the qualifier 'primitive')   [[(1, 1, 19), (3, 3, 7), (5, 5, 5)]]
+PASS  C1 every integer of the owner's list is printed in the abstract
+      abstract numerals NOT in the owner's list: [0, 4, 10, 11, 18, 204990]  (so 'exactly the integers of the abstract' is an overstatement)
+PASS  C2 the list = integers of delta, eps and sqrt 27, together with the census size 1039
+PASS  C3 regex reading of the extracted abstract agrees with the hard-coded set   [found [0, 2, 3, 4, 5, 7, 10, 11, 13, 18, 19, 27, 1039, 204990]]
+PASS  D1 generation with canonical forms: unicyclic counts for n = 3..10   [[1, 2, 5, 13, 33, 89, 240, 657]]
+PASS  D2 rooted trees r_1..r_10 = 1,1,2,4,9,20,48,115,286,719   [[1, 1, 2, 4, 9, 20, 48, 115, 286, 719]]
+PASS  D3 Polya (dihedral cycle index of rooted trees): the same counts   [[1, 2, 5, 13, 33, 89, 240, 657]]
+PASS  D4 mass formula sum n!/|Aut| = labelled connected unicyclic graphs (n = 3..10)   [[1, 15, 222, 3660, 68295, 1436568, 33779340, 880107840]]
+PASS  D5 labelled counts agree with (n-1)!/2 * sum_{k<=n-3} n^k/k!
+PASS  D6 brute force over all n-edge graphs, n = 3..7: classes 1,2,5,13,33 and labelled counts   [[1, 2, 5, 13, 33] [1, 15, 222, 3660, 68295]]
+PASS  D7 networkx graph atlas: connected graphs with n vertices and n edges, n = 3..7   [[1, 2, 5, 13, 33]]
+PASS  D8 the 89 representatives at n = 8 are pairwise non-isomorphic (networkx VF2)
+PASS  D9 2 + 5 + 13 + 33 + 89 + 240 + 657 = 1039 (unicyclic graphs with 4 <= n <= 10)   [sum = 1039; with n = 3: 1040]
+      n=7: 11 trees, 11 values, min gap 6.500e-02
+      n=8: 23 trees, 21 values, min gap 2.572e-02
+      n=9: 47 trees, 40 values, min gap 7.459e-03
+      n=10: 106 trees, 79 values, min gap 2.252e-03
+      n=11: 235 trees, 152 values, min gap 1.196e-04
+      n=12: 551 trees, 294 values, min gap 7.441e-04
+      n=13: 1301 trees, 570 values, min gap 2.325e-04
+      n=14: 3159 trees, 1100 values, min gap 7.342e-05
+PASS  E1 numbers of trees for n = 7..14 are 11, 23, 47, 106, 235, 551, 1301, 3159   [[11, 23, 47, 106, 235, 551, 1301, 3159]]
+PASS  E2 ranks 1-4 (n = 7..14) and rank 5 (n = 10..14) are the values of Theorem 1
+PASS  E3 the value 4 sqrt7 + 4 sqrt19 - 18 sqrt3 + 2 sqrt3 n is attained by no tree with 7 <= n <= 14
+PASS  E4 ranks 5-13 for n = 11..14 are base + r delta + c eps in the order (0,0),(0,1),(1,0),(1,1),(2,0),(2,1),(3,0),(3,1),(4,1)
+ALL CHECKS PASSED (28 checks)

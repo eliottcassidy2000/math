@@ -1,0 +1,17 @@
+n = 0: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n0.json
+n = 1: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n1.json
+n = 2: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n2.json
+n = 3: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n3.json
+n = 4: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n4.json
+n = 5: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n5.json
+n = 6: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n6.json
+n = 7: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n7.json
+n = 8: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n8.json
+n = 9: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n9.json
+n = 10: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n10.json
+n = 11: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n11.json
+n = 12: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n12.json
+n = 13: loaded C:\tmp\wt-s91\04-computation\experiments\s91_f1_local_densities_20261110\g20_local\full_hist_n13.json
+n = 14: 268435456 words, max H = 7545389, 11.7 s, reduced, checks ok
+n = 15: 1073741824 words, max H = 23554623, 46.7 s, reduced, checks ok
+n = 16: 4294967296 words, max H = 73529109, 206.5 s, reduced, checks ok

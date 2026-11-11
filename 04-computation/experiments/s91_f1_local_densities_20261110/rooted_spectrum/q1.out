@@ -1,0 +1,96 @@
+== start counts s(T, v) by order of T ==
+order  1:     1 values, max     1, every integer of [1, 1] occurs,    1 missing below the max, first: [0]
+ok   order 1: largest start count = max H at order 0
+order  2:     2 values, max     1, every integer of [0, 1] occurs,    0 missing below the max, first: []
+ok   order 2: largest start count = max H at order 1
+order  3:     2 values, max     1, every integer of [0, 1] occurs,    0 missing below the max, first: []
+ok   order 3: largest start count = max H at order 2
+order  4:     4 values, max     3, every integer of [0, 3] occurs,    0 missing below the max, first: []
+ok   order 4: largest start count = max H at order 3
+order  5:     6 values, max     5, every integer of [0, 5] occurs,    0 missing below the max, first: []
+ok   order 5: largest start count = max H at order 4
+order  6:    15 values, max    15, every integer of [0, 13] occurs,    1 missing below the max, first: [14]
+ok   order 6: largest start count = max H at order 5
+order  7:    43 values, max    45, every integer of [0, 39] occurs,    3 missing below the max, first: [40, 42, 44]
+ok   order 7: largest start count = max H at order 6
+order  8:   156 values, max   189, every integer of [0, 139] occurs,   34 missing below the max, first: [140, 144, 148, 149, 152, 154, 156, 158, 160, 161, 163, 164, 165, 166]
+ok   order 8: largest start count = max H at order 7
+order  9:   619 values, max   661, every integer of [0, 593] occurs,   43 missing below the max, first: [594, 596, 598, 600, 602, 604, 606, 608, 610, 611, 612, 614, 615, 616]
+ok   order 9: largest start count = max H at order 8
+order 10:  2965 values, max  3357, every integer of [0, 2791] occurs,  393 missing below the max, first: [2792, 2800, 2802, 2810, 2812, 2814, 2816, 2818, 2824, 2826, 2828, 2830, 2832, 2834]
+ok   order 10: largest start count = max H at order 9
+ratio (complete interval) / (max H at order n - 1), n = 6..10: 0.867, 0.867, 0.735, 0.897, 0.831
+binary single-base bound 2^(n-3) + 1 at order n (THM-5001 family): 5:5, 6:9, 7:17, 8:33, 9:65, 10:129
+
+== Yplus(T, v) by order of T ==
+order  1:      1 values, max      1, every integer of [1, 1] occurs,     0 missing below the max, first: []
+ok   order 1: Yplus is never 0 and [1, 2^(n-1)] occurs (one-apex roots)
+order  2:      2 values, max      2, every integer of [1, 2] occurs,     0 missing below the max, first: []
+ok   order 2: Yplus is never 0 and [1, 2^(n-1)] occurs (one-apex roots)
+order  3:      4 values, max      4, every integer of [1, 4] occurs,     0 missing below the max, first: []
+ok   order 3: Yplus is never 0 and [1, 2^(n-1)] occurs (one-apex roots)
+order  4:     10 values, max     12, every integer of [1, 9] occurs,     2 missing below the max, first: [10, 11]
+ok   order 4: Yplus is never 0 and [1, 2^(n-1)] occurs (one-apex roots)
+order  5:     27 values, max     32, every integer of [1, 21] occurs,     5 missing below the max, first: [22, 28, 29, 30, 31]
+ok   order 5: Yplus is never 0 and [1, 2^(n-1)] occurs (one-apex roots)
+order  6:     89 values, max    120, every integer of [1, 65] occurs,    31 missing below the max, first: [66, 76, 77, 79, 81, 82, 85, 91, 92, 94, 95, 96, 97, 98]
+ok   order 6: Yplus is never 0 and [1, 2^(n-1)] occurs (one-apex roots)
+order  7:    352 values, max    432, every integer of [1, 297] occurs,    80 missing below the max, first: [298, 311, 322, 325, 331, 334, 335, 339, 340, 342, 343, 344, 345, 347]
+ok   order 7: Yplus is never 0 and [1, 2^(n-1)] occurs (one-apex roots)
+order  8:   1582 values, max   2016, every integer of [1, 1313] occurs,   434 missing below the max, first: [1314, 1431, 1443, 1451, 1458, 1474, 1481, 1482, 1483, 1485, 1498, 1502, 1503, 1504]
+ok   order 8: Yplus is never 0 and [1, 2^(n-1)] occurs (one-apex roots)
+order  9:   7832 values, max   8848, every integer of [1, 7353] occurs,  1016 missing below the max, first: [7354, 7367, 7369, 7394, 7396, 7403, 7404, 7414, 7417, 7418, 7419, 7420, 7421, 7423]
+ok   order 9: Yplus is never 0 and [1, 2^(n-1)] occurs (one-apex roots)
+order 10:  42645 values, max  50004, every integer of [1, 40162] occurs,  7359 missing below the max, first: [40163, 40306, 40346, 40397, 40405, 40406, 40419, 40422, 40451, 40475, 40478, 40481, 40494, 40505]
+ok   order 10: Yplus is never 0 and [1, 2^(n-1)] occurs (one-apex roots)
+
+ok   every m in [0, 200] is a start count and every m in [1, 200] a Yplus value at order <= 9
+least order of T with a vertex starting exactly m Hamiltonian paths (m:order, runs), m = 0..200:
+   0:2  1:1  2-3:4  4-5:5  6-13:6  14:7  15:6  16-39:7  40:8  41:7  42:8  43:7  44:8  45:7  46-139:8  140:9  141-143:8  144:9  145-147:8  148-149:9  150-151:8  152:9  153:8  154:9  155:8  156:9  157:8  158:9  159:8  160-161:9  162:8  163-170:9  171:8  172-174:9  175:8  176-188:9  189:8  190-200:9
+least order of T with Yplus(T, v) = m, m = 1..200:
+   1:1  2:2  3-4:3  5-9:4  10-11:5  12:4  13-21:5  22:6  23-27:5  28-31:6  32:5  33-65:6  66:7  67-75:6  76-77:7  78:6  79:7  80:6  81-82:7  83-84:6  85:7  86-90:6  91-92:7  93:6  94-98:7  99-100:6  101-103:7  104:6  105-107:7  108:6  109-119:7  120:6  121-200:7
+ok   least order of a start count m is at least the least n with max H(n - 1) >= m; equality for 162 of the 200 values m = 1..200
+
+== single-base constructions ==
+ok   near-transitive base of order 4: H = 2^(n-2) + 1 = 5, end vector (1, 1, 2, ..., 2^(n-3), 1), subset sums of the start vector = [0, 5]
+ok   near-transitive base of order 5: H = 2^(n-2) + 1 = 9, end vector (1, 1, 2, ..., 2^(n-3), 1), subset sums of the start vector = [0, 9]
+ok   near-transitive base of order 6: H = 2^(n-2) + 1 = 17, end vector (1, 1, 2, ..., 2^(n-3), 1), subset sums of the start vector = [0, 17]
+ok   near-transitive base of order 7: H = 2^(n-2) + 1 = 33, end vector (1, 1, 2, ..., 2^(n-3), 1), subset sums of the start vector = [0, 33]
+ok   near-transitive base of order 8: H = 2^(n-2) + 1 = 65, end vector (1, 1, 2, ..., 2^(n-3), 1), subset sums of the start vector = [0, 65]
+ok   near-transitive base of order 9: H = 2^(n-2) + 1 = 129, end vector (1, 1, 2, ..., 2^(n-3), 1), subset sums of the start vector = [0, 129]
+ok   near-transitive base of order 10: H = 2^(n-2) + 1 = 257, end vector (1, 1, 2, ..., 2^(n-3), 1), subset sums of the start vector = [0, 257]
+ok   near-transitive base of order 11: H = 2^(n-2) + 1 = 513, end vector (1, 1, 2, ..., 2^(n-3), 1), subset sums of the start vector = [0, 513]
+ok   near-transitive base of order 12: H = 2^(n-2) + 1 = 1025, end vector (1, 1, 2, ..., 2^(n-3), 1), subset sums of the start vector = [0, 1025]
+ok   transitive base of order 1: Yplus(TT, v_i) = 2^i, so Yplus(TT + w, w) runs over [1, 2^1]
+ok   transitive base of order 2: Yplus(TT, v_i) = 2^i, so Yplus(TT + w, w) runs over [1, 2^2]
+ok   transitive base of order 3: Yplus(TT, v_i) = 2^i, so Yplus(TT + w, w) runs over [1, 2^3]
+ok   transitive base of order 4: Yplus(TT, v_i) = 2^i, so Yplus(TT + w, w) runs over [1, 2^4]
+ok   transitive base of order 5: Yplus(TT, v_i) = 2^i, so Yplus(TT + w, w) runs over [1, 2^5]
+ok   transitive base of order 6: Yplus(TT, v_i) = 2^i, so Yplus(TT + w, w) runs over [1, 2^6]
+ok   transitive base of order 7: Yplus(TT, v_i) = 2^i, so Yplus(TT + w, w) runs over [1, 2^7]
+ok   transitive base of order 8: Yplus(TT, v_i) = 2^i, so Yplus(TT + w, w) runs over [1, 2^8]
+ok   transitive base of order 9: Yplus(TT, v_i) = 2^i, so Yplus(TT + w, w) runs over [1, 2^9]
+ok   transitive base of order 10: Yplus(TT, v_i) = 2^i, so Yplus(TT + w, w) runs over [1, 2^10]
+largest H(B) over bases B of order m whose start vector has subset sums [0, H(B)] (single-base optimum),
+against the near-transitive value 2^(m-2) + 1 and the trivial bound 2^m - 1:
+   order 1:    1   (2^(m-2)+1 =   1, 2^m - 1 =   1; most distinct subset sums of one base: 2)
+   order 2:    1   (2^(m-2)+1 =   2, 2^m - 1 =   3; most distinct subset sums of one base: 2)
+   order 3:    3   (2^(m-2)+1 =   3, 2^m - 1 =   7; most distinct subset sums of one base: 4)
+   order 4:    5   (2^(m-2)+1 =   5, 2^m - 1 =  15; most distinct subset sums of one base: 6)
+   order 5:   11   (2^(m-2)+1 =   9, 2^m - 1 =  31; most distinct subset sums of one base: 12)
+   order 6:   23   (2^(m-2)+1 =  17, 2^m - 1 =  63; most distinct subset sums of one base: 32)
+   order 7:   51   (2^(m-2)+1 =  33, 2^m - 1 = 127; most distinct subset sums of one base: 94)
+   order 8:  107   (2^(m-2)+1 =  65, 2^m - 1 = 255; most distinct subset sums of one base: 236)
+   order 9:  227   (2^(m-2)+1 = 129, 2^m - 1 = 511; most distinct subset sums of one base: 512)
+ok   single-base optimum never exceeds 2^m - 1
+
+== host defect: delta(m) = min { H(T - v) - m : s(T, v) = m } ==
+delta(m) for m = 0..122: 0 for odd m, 1 for even m, except
+   delta(6) = 3, delta(7) = 2, delta(12) = 3, delta(20) = 3, delta(21) = 2, delta(40) = 3, delta(42) = 3, delta(54) = 3, delta(66) = 3, delta(76) = 3, delta(82) = 3
+ok   delta(m) <= 3 for every m <= 122
+ok   odd m <= 122: delta = 0 except delta(7) = delta(21) = 2
+ok   even m <= 122: delta = 1 except delta = 3 at [6, 12, 20, 40, 42, 54, 66, 76, 82]
+odd x <= 123 that are not H of a strong tournament (order <= 9; orders >= 10 have H >= 125): [7, 21]
+H-values x <= 123 of strong tournaments none of which has a vertex starting exactly one path: [13, 41, 43, 55, 67, 77, 83]
+ok   even exceptions = {x - 1 : x odd <= 123, no strong realiser of x has a vertex with s = 1}
+ALL CHECKS PASSED

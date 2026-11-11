@@ -71,6 +71,16 @@ def main():
               f"max over all k != 0 = {max(rates.values()):.6f}, brute-force error {maxerr:.1e}")
     # joint law of (q mod 8, h mod 8) over h < 2^nb
     h = np.arange(1 << nb, dtype=np.int64)
+    # q mod 2 is the quadratic form sum_i h_i (h_(i+1) + h_(i+2)) in the binary digits (Rudin-Shapiro type);
+    # so x = 2h + 1 - 2q satisfies (x - 1)/2 = h_0 + sum_i h_i (h_(i+1) + h_(i+2)) mod 2  (THM-5127 (C) on a chain)
+    form = np.zeros(1 << nb, dtype=np.int64)
+    for i in range(nb):
+        form += ((h >> i) & 1) * (((h >> (i + 1)) & 1) + ((h >> (i + 2)) & 1))
+    quad_ok = bool(((form - q) % 2 == 0).all())
+    s_n = int(np.where(q % 2 == 0, 1, -1).sum())
+    print(f"q mod 2 = sum_i h_i (h_(i+1) + h_(i+2)) for all h < 2^{nb}: {quad_ok};  "
+          f"sum of (-1)^q over h < 2^{nb} = {s_n}  (bound 2^((n + 2)/2) = {2 ** ((nb + 2) / 2):.0f})")
+    ok &= quad_ok and abs(s_n) <= 2 ** ((nb + 2) / 2)
     joint = np.zeros((8, 8))
     np.add.at(joint, (q % 8, h % 8), 1.0)
     joint /= (1 << nb)

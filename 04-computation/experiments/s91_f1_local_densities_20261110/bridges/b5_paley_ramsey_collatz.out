@@ -1,0 +1,32 @@
+PASS  1a ord_27(2) = ord_19(2) = 18; 2 generates both unit groups (phi(27) = phi(19) = 18)
+PASS  1b 2^9 + 1 = 513 = 27 * 19, 2^18 - 1 = 27 * 7 * 19 * 73, 2^6 - 1 = 9 * 7, 19 = 3^3 - 2^3
+PASS  1c the primes p with ord_p(2) | 18 are exactly 3, 7, 19, 73
+PASS  1d 2^a mod 27 -> 2^a mod 19 is a well defined group isomorphism (Z/27)^* -> (Z/19)^*
+PASS  1e primitive cube roots of unity: 2 mod 7, 3 mod 13, 3/2 = 11 mod 19, 22/15 = 140 mod 1039
+PASS  2a Syracuse orbit of 7: 7, 11, 17, 13, 5, 1; so U^3(7) = 13
+PASS  2b THM-4556: U^a(2^a - 1) = odd part of (3^a - 1)/2 for a = 1..40
+PASS  2c Syracuse orbit of 1039 = 1039, 1559, 2339, 3509, 329, 247, 371, 557, 209, 157, 59, 89, 67, 101, 19, 29, 11, 17, 13, 5, 1
+PASS  2d it passes through 67, 19, 13, 5 and merges with the orbit of 7 at 11 (it contains 11, 17, 13, 5, 1 but not 7)
+PASS  2e the 3x+1 orbits of 27 (111 steps, maximum 9232) and of 1039 first meet at 40; the Syracuse orbit of 27 avoids 7, 13, 19 and enters 5 from 53   [first common value 40]
+      fraction of n <= 200000 whose 3x+1 orbit passes through t: {5: 0.9371, 7: 0.1911, 11: 0.4438, 13: 0.4758, 17: 0.46, 19: 0.1775, 27: 0.0001, 67: 0.0974, 1039: 0.0031}
+PASS  2f base rates: 17.7 %% of n <= 200000 pass through 19 (helper's figure); 93-95 %% through 5; about half through 13
+PASS  3a t^3 - t - 1 is irreducible over F_3 (no root), so the 27 triples form the field F_27
+PASS  3b F_27^* has 13 nonzero squares and -1 is not a square (27 = 3 mod 4); ord(t) = 13 divides 26
+PASS  3c P_3, P_7, P_11, P_19, P_27 are tournaments
+PASS  3d S S^T = q I - J and S 1 = 0 for q = 3, 7, 11, 19, 27: skew eigenvalue moduli sqrt 3, sqrt 7, sqrt 11, sqrt 19, sqrt 27
+PASS  3e class numbers h(D) = 1 for D = -3, -7, -12, -19, -27 (and -4, -8, -28); h(-52) = 2, h(-75) = 2   [{-3: 1, -7: 1, -12: 1, -19: 1, -27: 1, -52: 2, -75: 2, -28: 1, -8: 1, -4: 1}]
+PASS  3f (q + 1)/4 = 1, 2, 5, 7 for q = 3, 7, 19, 27; 13 = 1 mod 4 has no Paley tournament
+PASS  4a ST_13 = circulant {1,2,3,5,6,9} is a tournament
+PASS  4b largest transitive subtournaments of C_3, P_7, ST_13, P_27 have 2, 3, 4, 5 vertices: R(k) - 1 >= 3, 7, 13, 27 for k = 3..6   [[2, 3, 4, 5]]
+PASS  4c P_19 and P_11 contain transitive subtournaments of size 5 and 4 (19 is not in the sequence 3, 7, 13, 27)
+PASS  4d R(3) = 4: a TT_3-free tournament on 3 vertices exists (C_3), none on 4 vertices (exhaustive)
+PASS  4e R(4) = 8: no TT_4-free tournament on 8 vertices (all 2^21 completions of a Hamiltonian path)
+PASS  4f the TT_4-free tournaments on 7 vertices containing 0 -> ... -> 6 number 9 = H(P_7) * (7!/21) / 7!, and all are copies of P_7 (uniqueness)   [9 found]
+PASS  5a H(P_3) = 3, H(P_7) = 189 = 7 * 27, H(P_11) = 95095 = 5 * 7 * 11 * 13 * 19, H(P_11)/55 = 1729 = 7 * 13 * 19
+PASS  5b THM-258: all 21 five-vertex subtournaments of P_7 have H = 13; the six-vertex ones have H = 45; four-vertex ones 3 or 5   [[45] [13] [3, 5]]
+PASS  5c THM-128: H(ST_13) = 3703011 and H(Z_13{1,3,5,7,9,11}) = 3711175   [3703011 3711175]
+PASS  5d H(P_19) = 1172695746915 = 171 * 5 * 7 * 11 * 23 * 774463 (171 = 9 * 19 = |Aut P_19|): the factor 13 of H(P_11) does not persist   [{3: 2, 5: 1, 7: 1, 11: 1, 19: 1, 23: 1, 774463: 1}]
+PASS  5e THM-053: regular 7-tournaments have H in {171, 175, 189} = {9 * 19, 25 * 7, 27 * 7}
+PASS  6a reciprocity: for distinct primes = 3 mod 4 exactly one of p -> q, q -> p holds
+PASS  6b the Legendre tournament on {3, 7, 19, 1039} is transitive with order 7 -> 19 -> 1039 -> 3
+ALL CHECKS PASSED (30 checks)

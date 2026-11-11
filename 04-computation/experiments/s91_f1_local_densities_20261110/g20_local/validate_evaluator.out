@@ -1,0 +1,9 @@
+PASS  1a. evaluator = brute force on all 5461 words of length <= 6
+PASS  1b. evaluator = brute force on 300 random words of lengths 7..12
+PASS  2. evaluator = Session 194 transfer on all 21845 words of length <= 7
+PASS  3. one-apex formula 2 psi(h) + 1 (b a sink; a a source) on all 8191 binary words of length <= 12
+PASS  4. H(w) = H(reverse(w) with 0 <-> 3) on all words of length <= 7
+PASS  5a. F1 = {0,2}*{2,3}*: H(bits(h1) 0 2^s 3 revcomp(h2)) = x1 x2 + 2^s y1 y2 - [s=0] on 23814 triples (h1, h2 < 2^5 with all paddings of leading zeros, s <= 5)
+PASS  5b. a leading letter 0 (source) and a trailing letter 3 (sink) leave H unchanged, all words of length <= 6
+PASS  5c. {0,1}*{1,3}* is the ordinal sum: H = H(a over C1) H(b over C2), all pairs of binary words of length <= 5
+ALL CHECKS PASSED

@@ -11,7 +11,17 @@ status: >
   a bounded local factor at small odd primes with the class N = 0 over-represented, the mod-3 profile of r and of
   the F1 misses, reduced mass on primes, and the rotating mod-7 bias of the one-apex image (THM-4878 (5), HYP-9480
   (A)). New here: the class N = -1 at p >= 5, the attribution of the two excesses to the two sheets, the
-  Rabinowitsch stratum. (B'): EXPLORATORY, in-sample. (C): FINITE-EXACT refutations (cycle_gas.py, every labelled
+  Rabinowitsch stratum.
+  CORRECTION (opus-2026-11-10-S91, MISTAKE-758): the previous sentence overstated the novelty. The two favoured
+  classes 0 and -1, their attribution to the parity of the tail (the two sheets) and the confinement mechanism
+  (states with d = U = 0 mod p) were already PROVED, in the letter-count model of O/Z/J words with one root change,
+  in THM-4916 (kind-pasteur-2026-11-07-S15; L(0) = 1 + (3p-4)/(4p^2), L(-1) = 1 - 1/p^2 + 1/(4p)), with the 3-adic
+  case in Session223 and the "Fermat boost" at census scale in HYP-9506 (B); S90 and its audit did not cite them.
+  What remains from S90 in (A) is the by-value measurement and the list of primes; (A) is now explained and
+  superseded by THM-5128 (first-order by-value law: the bias is the mass of p-divisible states; presence or absence
+  at a prime is decided by how early a p-divisible state occurs; by-value limit 1 - 1/p^2 + [c = c_s]/p). New in
+  S90 after this correction: the by-value class means at the primes listed, and the Rabinowitsch stratum (B).
+  (B'): EXPLORATORY, in-sample. (C): FINITE-EXACT refutations (cycle_gas.py, every labelled
   tournament of orders 3-6; interaction_gap_refuted.py). (D): HEURISTIC threshold and an elementary bound, no
   theorem. AUDITED (05-knowledge/results/s90_rigidity_redei_20261110/audit/AUDIT.md): PASS WITH CORRECTIONS, all
   applied. The Chan-Pak conjecture remains OPEN; nothing here is evidence for or against it beyond what the cited
@@ -23,6 +33,7 @@ scripts:
   - 04-computation/experiments/s90_rigidity_redei_20261110/cycle_gas.py, ozj_mass.py, interaction_gap_refuted.py, ear_weyl_identity.py, apex_sums.py (+ .out each)
   - 05-knowledge/results/s90_rigidity_redei_20261110/audit/audit_f1_classes.py, audit_f1_split.py, audit_gap_witness.py (+ outputs; the audit's own code)
 related:
+  - 01-canon/theorems/THM-5128-* (S91: by-value local densities of F1; supersedes (A)), THM-4916-*, 05-knowledge/hypotheses/HYP-9506-*, 05-knowledge/results/session223_root_changes_and_local_factors_20261107/ (prior art for the favoured classes, added by S91)
   - 01-canon/theorems/THM-5124-*, THM-5125-* (this session)
   - 05-knowledge/results/one_apex_join_representation_mass_pi2_over_12_20261106.md (S82: local factors, section 5; circle-method discussion), 01-canon/theorems/THM-4875-* (D), THM-4885-* (the F1 family and its mean mass), THM-4878-* (5), 05-knowledge/hypotheses/HYP-9480-*
   - 01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md, THM-4094-*, THM-4884-* (the 29 values missed by the O/Z/J readout)

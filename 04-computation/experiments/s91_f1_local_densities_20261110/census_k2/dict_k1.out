@@ -1,0 +1,13 @@
+D1 J-free states (x(g), [a=0, g>=1], 2^a y(g), 1), bijection A -> (g, a): True   (131071 words of length <= 16)
+D2 tail m <-> (c, h2) and value = D x(h2) + 2^c U y(h2) - [c = 0] E (three ways): True
+D3 value = x1 x2 + 2^s y1 y2 - [s = 0], (h1, h2, s) = (g, h2, a + c): True
+   one-J words of value < 2^14 by (tail parity, sheet, A ends in Z):
+      tail even  sheet s = 0   A ends in Z: 21745
+      tail even  sheet s >= 1  A ends in O (or A empty): 32367
+      tail odd   sheet s >= 1  A ends in O (or A empty): 31855
+      tail odd   sheet s >= 1  A ends in Z: 25721
+D4 every triple of value < 2^14 carries exactly s + 1 - [h1 = 0] one-J words: True   (58826 triples, 111688 one-J words; the plain rule s + 1 would give 123048, i.e. 11360 too many)
+   boundary: triples (0, h2, 0) are carried by [0, 0, 0, 0] words (s + 1 = 1 would predict 1); e.g. (h1, h2, s) = (0, 0, 1), value 3: words 1 (s + 1 = 2)
+D5 M_1(N) = #J-free + sum of (s + 1 - [h1 = 0]) over triples, every odd N in [3, 2^14): True   (123047 counted words; J-free 11359, one-J 111688)
+D6 M_1(N) = sum over ALL triples of (s + 1), every odd N in [3, 2^14) (J-free word A Z <-> triple (0, g, a); the empty word <-> (0, 0, 0)): True
+ALL CHECKS PASSED

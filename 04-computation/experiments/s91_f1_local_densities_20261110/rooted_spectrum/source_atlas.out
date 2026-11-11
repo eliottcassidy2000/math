@@ -1,0 +1,50 @@
+pairs (D, U) from Yminus and from Yplus agree as sets (converse): True  #pairs: 1273591
+the five sources of Session261 are in the census: True
+Yminus - e >= 2^outdeg(y) for every rooted tournament of order <= 9 (0 at a sink): violations 0; equality in 43 of 1754545 rows; values of D at equality: [1, 3] ...
+
+level s, D = 2^s + 1: #slopes U > 0 | odd parts delta < 200 supplied for all r (j <= s): count, least missing | least delta missing with any j
+  s = 1, D =    3:      8 slopes |   1 of 100, least missing    1 |    1
+  s = 2, D =    5:     29 slopes |   4 of 100, least missing    1 |   11
+  s = 3, D =    9:     43 slopes |   7 of 100, least missing    1 |    3
+  s = 4, D =   17:     46 slopes |  11 of 100, least missing    1 |    1
+  s = 5, D =   33:    127 slopes |  33 of 100, least missing    1 |    7
+  s = 6, D =   65:    193 slopes |  55 of 100, least missing    1 |    1
+  s = 7, D =  129:    405 slopes |  78 of 100, least missing    1 |    1
+  s = 8, D =  257:    519 slopes |  76 of 100, least missing    1 |    1
+  s = 9, D =  513:    862 slopes |  70 of 100, least missing    1 |    5
+
+least j with (2^s + 1, delta 2^j) a source of order <= 9 ('.' = none; '*' = j > s, finite head only):
+  delta | s=1 s=2 s=3 s=4 s=5 s=6 s=7 s=8 s=9
+      1 |   .  5*  4*   .  6*   .   .   . 10*
+      3 |   0   1   .   .   4   5   6   7   8
+      5 |   .   0   1   2   3   4   5   6   .
+      7 |   .   0   .   2   .   6   5   .   7
+      9 |   .   0   0   1   2   5   4   5   6
+     11 |   .   .   0   2   .   3   4   5   .
+     13 |   .   .   .   .   2   3   4   5   6
+     15 |   .   .   0   .   2   5   4   5   6
+     17 |   .   .   .   0   1   2   4   4   .
+     19 |   .   .   .   .   1   2   3   5   5
+     21 |   .   .   0   0   1   2   3   4   6
+     23 |   .   .   0   .   1   2   .   5   5
+     25 |   .   .   0   .   .   2   4   4   5
+     27 |   .   .   .   .   .   2   3   4   .
+     29 |   .   .   .   .   .   2   3   4   5
+     31 |   .   .   .   0   2   .   .   5   .
+     33 |   .   .   .   0   0   1   2   3   4
+     35 |   .   .   .   .   .   1   2   3   4
+     37 |   .   .   .   .   0   1   2   .   4
+     39 |   .   .   .   .   0   1   2   4   4
+     41 |   .   .   .   .   0   2   2   .   .
+     43 |   .   .   .   .   .   .   2   3   4
+     45 |   .   .   .   .   0   1   2   .   4
+     63 |   .   .   .   .   0   .   .   3   .
+     65 |   .   .   .   .   .   0   1   2   3
+     67 |   .   .   .   .   0   0   1   2   3
+     85 |   .   .   .   .   .   .   3   2   3
+    127 |   .   .   .   .   .   0   1   .   5
+    129 |   .   .   .   .   .   0   0   2   2
+    163 |   .   .   .   .   .   0   .   1   2
+
+9-grid: least j by level: {1: None, 2: 0, 3: 0, 4: 1, 5: 2, 6: 5, 7: 4, 8: 5, 9: 6}
+ALL CHECKS PASSED

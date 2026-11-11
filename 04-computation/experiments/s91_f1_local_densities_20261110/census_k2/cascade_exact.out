@@ -1,0 +1,11 @@
+X1 value = x3 D2 + 2^c y3 U2 - [c = 0] E2: True   (61504 words A J B J C, |A|, |B| <= 4, m < 64)
+X2 E2 in (0, D1, D1 - E1) by the last letter of B, d2 = D1: True
+X3 cascade for p | gcd(D1, U1): confined at J2 iff k1 = 1 (else (D2, U2) = (-1, 0)): True   (64071 triples (A, B, p))
+   letter-count share of k1 = 1 among them (B not empty): {3: 0.7857, 5: 0.7835, 7: 0.6458, 11: 0.7674, 13: 0.875, 17: 0.7812}
+X4 closed forms of D2 and U2: True
+   |B'| =  6: max |U2 mu / (2^b D2) - 1| over 4000 random (A, B', b) = 5.100e-02   (4 L'/2^L' = 3.750e-01)
+   |B'| = 10: max |U2 mu / (2^b D2) - 1| over 4000 random (A, B', b) = 4.924e-03   (4 L'/2^L' = 3.906e-02)
+   |B'| = 14: max |U2 mu / (2^b D2) - 1| over 4000 random (A, B', b) = 3.991e-04   (4 L'/2^L' = 3.418e-03)
+   |B'| = 18: max |U2 mu / (2^b D2) - 1| over 4000 random (A, B', b) = 3.094e-05   (4 L'/2^L' = 2.747e-04)
+X4 asymptotic ratio tau2 = (2^b / mu)(1 + O(L'/2^L')): True
+ALL CHECKS PASSED

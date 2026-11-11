@@ -1,0 +1,32 @@
+PASS  1a x(h) = 2 psi(h) + 1 = H(R(h)) for all h < 256 (explicit tournaments, DP)
+PASS  1b y(h) = 2h + 1 = number of ordered covers (A1 possibly empty, A2 starting at the apex), h < 256
+PASS  2  H(J(h1, h2, s)) = x1 x2 + 2^s y1 y2 - [s = 0] on 576 explicit joins (h1, h2 < 12, s <= 3)
+PASS  3a 2 psi(h) >= h and psi(h) <= h for all h < 2^20
+PASS  3b the vectorised table agrees with the recursion for h < 4096
+PASS  3c psi never equals 3, 6 or 519 (search h in [t, 2t], sufficient by 3a): 7, 13, 1039 are not one-apex counts   [{3: [], 6: [], 519: []}]
+PASS  3d one-apex words with x(h) = N: 3: {1}, 5: {2,3}, 19: {10,13}, 27: {17,23}; none for 7, 13, 21, 1039   [{1: [0], 3: [1], 5: [2, 3], 7: [], 13: [], 19: [10, 13], 21: [], 27: [17, 23], 1039: []}]
+PASS  4a r(N) at 3, 5, 7, 11, 13, 19, 21, 27, 1039 equals 1, 3, 0, 2, 0, 4, 0, 5, 0   [{3: 1, 5: 3, 7: 0, 11: 2, 13: 0, 19: 4, 21: 0, 27: 5, 1039: 0}]
+      witnesses (h1, h2, s) of N = 3: [(0, 0, 1)]
+      witnesses (h1, h2, s) of N = 5: [(0, 0, 2), (0, 1, 0), (1, 0, 0)]
+      witnesses (h1, h2, s) of N = 19: [(0, 3, 1), (0, 5, 0), (3, 0, 1), (5, 0, 0)]
+      witnesses (h1, h2, s) of N = 27: [(0, 1, 3), (0, 4, 1), (1, 0, 3), (1, 1, 1), (4, 0, 1)]
+PASS  4b independent per-N search gives the same r at the nine values and r(1039) = 0
+PASS  4c HYP-9657 (B): 30 integers N = 4q - 1 < 3000 with N, q prime; r = 0 exactly at 7, 43, 67, 163, 211, 547, 1171, 1723   [30, [7, 43, 67, 163, 211, 547, 1171, 1723]]
+PASS  4d misses among the 512 odd N in [1025, 2049): 65 (so r(1039) = 0 is not exceptional)   [65 misses, mean r = 6.160, 1039 in misses: True]
+      r near 1039: [(1029, 0), (1031, 4), (1033, 4), (1035, 6), (1037, 12), (1039, 0), (1041, 4), (1043, 2), (1045, 2), (1047, 4), (1049, 7)]
+      is (1039 + 1)/4 = 260 prime? no: 1039 is not of the form 4q - 1 with q prime (260 = 2^2 * 5 * 13)
+PASS  5a 1039 is prime, 1040 = 2^4 * 5 * 13 = 2^4 (2^6 + 1)
+PASS  5b residues: 1039 = 1 mod 3, -1 mod 5, -1 mod 13, 3 mod 7, 13 mod 19, 13 mod 27, 7 mod 8, 7 mod 12
+PASS  5c ord_1039(2) = 519 = (1039 - 1)/2, so <2> is the group of squares (as at p = 7)
+PASS  5d 3 is a primitive root modulo 1039; 519 = 3 * 173
+      primes q < 1100 with q = 7 mod 8 and <2> = squares: [7, 23, 47, 71, 79, 103, 167, 191, 199, 239, 263, 271, 311, 359, 367, 383, 463, 479, 487, 503, 599, 607, 647, 719, 743, 751, 823, 839, 863, 887, 967, 983, 991, 1031, 1039, 1063, 1087]
+PASS  5e 1039 is one of 37 primes below 1100 with <2> = squares and q = 7 mod 8 (not a rare property)
+PASS  6a maximum of H over all tournaments on n = 2..8 vertices: 1, 3, 5, 15, 45, 189, 661 (exhaustive)   [{2: 1, 3: 3, 4: 5, 5: 15, 6: 45, 7: 189, 8: 661}]
+PASS  6b hence no tournament on <= 8 vertices has H = 1039 (661 < 1039): the least order is >= 9
+PASS  6c sanity: every H value at n <= 8 is odd, and 7, 21 never occur (THM-1370 at these orders)
+      number of distinct H values at n = 8: 320; odd values <= 661 missing at n = 8: 11
+PASS  7a the masks define a tournament on 9 vertices (bit j of masks[i] set iff i -> j)
+PASS  7b the realiser has exactly 1039 Hamiltonian paths (DP and all 9! permutations)   [DP 1039, permutations 1039]
+      score sequence of the realiser: [1, 3, 3, 3, 4, 5, 5, 6, 6]
+PASS  7c least order of a tournament with H = 1039 is exactly 9
+ALL CHECKS PASSED (22 checks)

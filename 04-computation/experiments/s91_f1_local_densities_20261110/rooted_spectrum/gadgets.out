@@ -1,0 +1,51 @@
+universe: 8933 rooted tournaments (labelled orders 1-5, classes of orders 6, 7)
+ok   the eight invariants are linearly independent on the universe (rank 8)
+gadgets: 28 labelled (4 with one vertex, 8 + 8 + 8 with two)
+O  g0->v                  H(T+G) = H
+O  v->g0                  H(T+G) = H - s + Y+
+I  g0->v                  H(T+G) = H - e + Y-
+I  v->g0                  H(T+G) = H
+OO g0->v g1->v g1->g0     H(T+G) = H
+OO g0->v g1->v g0->g1     H(T+G) = H
+OO g0->v v->g1 g1->g0     H(T+G) = H + 2 Y+
+OO g0->v v->g1 g0->g1     H(T+G) = H - s + Y+
+OO v->g0 g1->v g1->g0     H(T+G) = H - s + Y+
+OO v->g0 g1->v g0->g1     H(T+G) = H + 2 Y+
+OO v->g0 v->g1 g1->g0     H(T+G) = H - s + 3 Y+ - 2 d
+OO v->g0 v->g1 g0->g1     H(T+G) = H - s + 3 Y+ - 2 d
+OI g0->v g1->v g1->g0     H(T+G) = 3 H - s - e - Y+ + Y- + P2(T)
+OI g0->v g1->v g0->g1     H(T+G) = H - e + Y-
+OI g0->v v->g1 g1->g0     H(T+G) = 3 H + P2(T)
+OI g0->v v->g1 g0->g1     H(T+G) = H
+OI v->g0 g1->v g1->g0     H(T+G) = 3 H - 2 s - 2 e + 2 d + P2(T) + P2(T-v)
+OI v->g0 g1->v g0->g1     H(T+G) = H - s - e + Y+ + Y- + 2 d + P2(T-v)
+OI v->g0 v->g1 g1->g0     H(T+G) = 3 H - s - e + Y+ - Y- + P2(T)
+OI v->g0 v->g1 g0->g1     H(T+G) = H - s + Y+
+II g0->v g1->v g1->g0     H(T+G) = H - e + 3 Y- - 2 d
+II g0->v g1->v g0->g1     H(T+G) = H - e + 3 Y- - 2 d
+II g0->v v->g1 g1->g0     H(T+G) = H + 2 Y-
+II g0->v v->g1 g0->g1     H(T+G) = H - e + Y-
+II v->g0 g1->v g1->g0     H(T+G) = H - e + Y-
+II v->g0 g1->v g0->g1     H(T+G) = H + 2 Y-
+II v->g0 v->g1 g1->g0     H(T+G) = H
+II v->g0 v->g1 g0->g1     H(T+G) = H
+ok   all 28 gadget identities fitted with integer coefficients and verified on 8933 rooted tournaments each
+distinct identities: 12
+    H - s - e + Y+ + Y- + 2 d + P2(T-v)
+    H - s + Y+
+    H - s + 3 Y+ - 2 d
+    H - e + Y-
+    H - e + 3 Y- - 2 d
+    H
+    H + 2 Y-
+    H + 2 Y+
+    3 H - 2 s - 2 e + 2 d + P2(T) + P2(T-v)
+    3 H - s - e - Y+ + Y- + P2(T)
+    3 H - s - e + Y+ - Y- + P2(T)
+    3 H + P2(T)
+ok   the coefficient vectors span a space of rank 8 (every one of the eight invariants is needed) : rank 8
+ok   coefficient of H is at least 1 in every identity : min 1
+ok   no gadget identity is free of H
+coefficients of (interior paths, paths starting at v, paths ending at v):  [(1, 0, 0), (1, 0, 1), (1, 1, 0), (1, 1, 1), (3, 1, 1), (3, 2, 2), (3, 3, 3)]
+ok   coefficients of the three one-path classes are non-negative, interior >= 1
+ALL CHECKS PASSED
