@@ -123,6 +123,15 @@ squares. Thus Aut(P_q,{a,b}) is nontrivial, contradicting the unit-offset
 restriction. Complements of pairs are excluded as well. `verify.py`
 constructs F27 as F3[z]/(z^3-z-1), verifies the 1053 distinct subgroup
 elements, and checks this order-three stabilizer for all 351 pairs.
+
+**11 November strengthening:** the same pair fixers act freely on each
+individual endpoint-labelled two-path-cover coefficient before subsets
+are summed. Consequently the field degree f divides every coefficient
+W_ab and H(P_q), so **every selected set**, not just a pair or its
+complement, fails the unit-offset equation for f>1. Every one-vertex
+extension also has H divisible by f. The complete proof and asymmetric
+child control are in
+[endpoint-symmetry P11](../modular_centers_collatz_pell_20261111/TOURNAMENTS.md).
 This is where the numbers3,13,27 meet in a concrete obstruction.
 
 ## Collatz branches act by a quadratic character
