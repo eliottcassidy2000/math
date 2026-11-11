@@ -24728,3 +24728,55 @@ No stated theorem was found false. 7 verdicts PASS WITH CORRECTIONS; about twent
   lists every member of the range. (d) A constant chosen for a tolerance is not a measurement. (e) Before writing
   "the reason X cannot work", check that the bound excludes X at the sizes computed. (f) Read the table under a
   summary sentence before keeping the sentence.
+
+## MISTAKE-762 (2026-11-11, kind-pasteur-2026-11-11-S23, THM-5133, HYP-9664 and `05-knowledge/results/kps_s23_flip_spin_kernels_20261111/` at the pre-audit commit bdb2f8edd8; found by the independent audit `audit/AUDIT.md` of that packet and, for the hypothesis, by the author an hour after pushing it) -- a hypothesis filed without running the test it proposed, and three results of this machine's own canon typed as specific or new
+
+- **M1. A false hypothesis, filed with its own refuting test unrun.** HYP-9664 (C) said that for every `n >= 4` the
+  Cayley-Dickson sign tournament minimises the number of even zero-sum 4-sets among tournaments on `PG(n-1, 2)` with
+  all lines cyclic, and that at most `[n choose 3]_2 - 7 [n-1 choose 3]_2` planes are odd at once. It proposed as a
+  "first test" a linear-algebra check at `n = 5`. That check takes a fraction of a second and refutes it: the
+  pullback of the octonions along a projection `Z_2^n -> Z_2^3` has `8^(n-3)` odd planes (64 and 512 against 50 and
+  310 at `n = 5, 6`), and on `PG(4, 2)` there are 71 odd planes with all lines cyclic and 504 even 4-sets against
+  630. The statement had been proved only for `n = 4`, where the two constructions tie.
+- **M2. My own June theorems typed as specific.** The note and THM-5133 (G) listed `H(CD_4) = 198,335,025`, its 21
+  automorphisms and the double regularity of the sedenion sign tournament as results of the session. `CD_4` is
+  `T_15` of THM-448 (kind-pasteur-2026-06-09-S1; isomorphism found by the audit), with exactly these values;
+  THM-450 (5) already reads that tower as a Cayley-Dickson tower on `2^k - 1` vertices; THM-585 uses the constant.
+  A grep for `198,335,025` finds all of it.
+- **M3. Yesterday's certificates presented as new path counts.** The minus grid of `d = 31` was announced as "new
+  path counts with proof". THM-5130 (E), audited the day before, certifies an anti-seed for every odd `c <= 4097`:
+  the lines `c = 61, 123, 247, 495, 991, 1983, 3967` and the rows `c = 27, 29, 15` were path counts already, from
+  levels not higher than in the new formula. New are the uniform kernel and the lines `c = 31 2^r - 1`, `r >= 8`.
+- **M4. Three missing credits for the Cayley-Dickson statements.** Wilmot (arXiv:2505.11747), cited for 84 and 1,260
+  only, has the numbers of octonion and quasi-octonion subalgebras and of zero-divisor pairs for every `n`
+  (Table 5, Theorems 8, 9, 11), so the pattern `42 [n-1 choose 3]_2` was not a finite observation. The block
+  recursion of the sign table is eq. (1) of Session168 `cayley_dickson/NOTE.md`. The Hadamard property is in
+  Kivunge's abstract of 2013; the note said a web search "did not locate" it, after one query that pointed to a
+  different author.
+- **M5. A boundary case.** "The kernel is elliptic iff the offset is positive" fails when the selected set is empty
+  (`M = 0`, `det G = 0`, a join); THM-5130 allows `O` empty.
+- **A pre-registration pushed before the prior-art sweep returned.** Three of its four working claims (the closing
+  operator on cover polynomials: Session193 Theorem 1; the `C_3` bilinear law: Session260 eq. (1); the 16 octonion
+  orientations: the note of 2026-09-22) and half of prediction C2 were already in canon; K1, K2 and C1 were
+  derivable from canon. Only F1 and F2 were open, and both failed.
+- **A data slip, caught before publication.** `classgen 9 cls9` writes `cls9_1.txt ... cls9_9.txt` for the orders
+  1..9; I read them as nine pieces of order 9 (7,412 duplicate rows, class count 206,360 for 198,948; no table
+  changed), and launched the order-9 kernel census on the same misreading before noticing.
+- **Minors (22).** A title sentence that stated the zero-divisor criterion without the pairing; "the octonions are
+  the tournaments with all line complements odd" (there are 1,024; the octonion tables are the 16 with cyclic
+  lines); a proof that said two arcs are reversed where three are; "one class" for four; a table column named
+  parabolic that excluded the join-like kernels; a length bound in F2 that was vacuous; a wrong part label of
+  THM-5130; two concurrent sessions not named. All applied.
+- **Repair and strongest survivor.** All statuses retyped (KNOWN / CITED with source), HYP-9664 (C) marked REFUTED
+  and restated as an open question with the bounds 71 and 82, the pullback bound and the certificate added as
+  THM-5133 (F6), (F7), audit notes appended to the pre-registration. The audit recomputed every number with its own
+  programs (including the kernel census to order 9 from class lists generated from scratch) and proved the
+  minimum 21 on `PG(3, 2)` a second way, by enumerating 4.6 x 10^11 violation patterns: no proved or finite-exact
+  statement changed.
+
+Lesson: (1) before filing a hypothesis about all `n`, run it at the next `n`; if the hypothesis itself names a
+cheap test, the test comes first. (2) Grep canon for every constant a computation returns (a path count, a group
+order) before calling it a result: the machine's own theorems are the likeliest place to find it. (3) When a new
+construction produces numbers on lines already certified, compare with the certificate files before writing "new
+path counts". (4) Read the theorem statements of a cited paper, not the two numbers that were searched for; and do
+not write "not located" after one query. (5) Wait for the prior-art sweep before pushing a pre-registration.
