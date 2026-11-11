@@ -1,0 +1,854 @@
+{
+  "literal_graphs": [
+    {
+      "sign": -1,
+      "word": "",
+      "order": 2,
+      "state_r_M_q_E": [
+        -1,
+        3,
+        0,
+        1
+      ],
+      "one_tail_count": 5
+    },
+    {
+      "sign": -1,
+      "word": "A",
+      "order": 6,
+      "state_r_M_q_E": [
+        1,
+        60,
+        24,
+        16
+      ],
+      "one_tail_count": 121
+    },
+    {
+      "sign": -1,
+      "word": "D",
+      "order": 3,
+      "state_r_M_q_E": [
+        -1,
+        6,
+        0,
+        0
+      ],
+      "one_tail_count": 11
+    },
+    {
+      "sign": -1,
+      "word": "AA",
+      "order": 10,
+      "state_r_M_q_E": [
+        -1,
+        1272,
+        480,
+        338
+      ],
+      "one_tail_count": 2543
+    },
+    {
+      "sign": -1,
+      "word": "AD",
+      "order": 7,
+      "state_r_M_q_E": [
+        1,
+        120,
+        24,
+        0
+      ],
+      "one_tail_count": 241
+    },
+    {
+      "sign": -1,
+      "word": "DA",
+      "order": 7,
+      "state_r_M_q_E": [
+        1,
+        120,
+        48,
+        34
+      ],
+      "one_tail_count": 241
+    },
+    {
+      "sign": -1,
+      "word": "DD",
+      "order": 4,
+      "state_r_M_q_E": [
+        -1,
+        12,
+        0,
+        0
+      ],
+      "one_tail_count": 23
+    },
+    {
+      "sign": -1,
+      "word": "ADD",
+      "order": 8,
+      "state_r_M_q_E": [
+        1,
+        240,
+        24,
+        0
+      ],
+      "one_tail_count": 481
+    },
+    {
+      "sign": -1,
+      "word": "DAD",
+      "order": 8,
+      "state_r_M_q_E": [
+        1,
+        240,
+        48,
+        0
+      ],
+      "one_tail_count": 481
+    },
+    {
+      "sign": -1,
+      "word": "DDA",
+      "order": 8,
+      "state_r_M_q_E": [
+        1,
+        240,
+        96,
+        70
+      ],
+      "one_tail_count": 481
+    },
+    {
+      "sign": -1,
+      "word": "ADA",
+      "order": 11,
+      "state_r_M_q_E": [
+        -1,
+        2472,
+        960,
+        698
+      ],
+      "one_tail_count": 4943
+    },
+    {
+      "sign": -1,
+      "word": "DAA",
+      "order": 11,
+      "state_r_M_q_E": [
+        -1,
+        2544,
+        960,
+        674
+      ],
+      "one_tail_count": 5087
+    },
+    {
+      "sign": -1,
+      "word": "3",
+      "order": 5,
+      "state_r_M_q_E": [
+        1,
+        29,
+        12,
+        7
+      ],
+      "one_tail_count": 59
+    },
+    {
+      "sign": -1,
+      "word": "5",
+      "order": 6,
+      "state_r_M_q_E": [
+        1,
+        77,
+        24,
+        13
+      ],
+      "one_tail_count": 155
+    },
+    {
+      "sign": -1,
+      "word": "33",
+      "order": 8,
+      "state_r_M_q_E": [
+        -1,
+        319,
+        116,
+        77
+      ],
+      "one_tail_count": 637
+    },
+    {
+      "sign": -1,
+      "word": "35",
+      "order": 9,
+      "state_r_M_q_E": [
+        -1,
+        807,
+        232,
+        135
+      ],
+      "one_tail_count": 1613
+    },
+    {
+      "sign": -1,
+      "word": "53",
+      "order": 9,
+      "state_r_M_q_E": [
+        -1,
+        829,
+        308,
+        209
+      ],
+      "one_tail_count": 1657
+    },
+    {
+      "sign": -1,
+      "word": "55",
+      "order": 10,
+      "state_r_M_q_E": [
+        -1,
+        2109,
+        616,
+        363
+      ],
+      "one_tail_count": 4217
+    },
+    {
+      "sign": 1,
+      "word": "",
+      "order": 1,
+      "state_r_M_q_E": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "one_tail_count": 3
+    },
+    {
+      "sign": 1,
+      "word": "A",
+      "order": 5,
+      "state_r_M_q_E": [
+        -1,
+        26,
+        8,
+        6
+      ],
+      "one_tail_count": 51
+    },
+    {
+      "sign": 1,
+      "word": "D",
+      "order": 2,
+      "state_r_M_q_E": [
+        1,
+        2,
+        2,
+        0
+      ],
+      "one_tail_count": 5
+    },
+    {
+      "sign": 1,
+      "word": "AA",
+      "order": 9,
+      "state_r_M_q_E": [
+        1,
+        544,
+        208,
+        146
+      ],
+      "one_tail_count": 1089
+    },
+    {
+      "sign": 1,
+      "word": "AD",
+      "order": 6,
+      "state_r_M_q_E": [
+        -1,
+        52,
+        8,
+        0
+      ],
+      "one_tail_count": 103
+    },
+    {
+      "sign": 1,
+      "word": "DA",
+      "order": 6,
+      "state_r_M_q_E": [
+        -1,
+        46,
+        16,
+        12
+      ],
+      "one_tail_count": 91
+    },
+    {
+      "sign": 1,
+      "word": "DD",
+      "order": 3,
+      "state_r_M_q_E": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "one_tail_count": 9
+    },
+    {
+      "sign": 1,
+      "word": "ADD",
+      "order": 7,
+      "state_r_M_q_E": [
+        -1,
+        104,
+        8,
+        0
+      ],
+      "one_tail_count": 207
+    },
+    {
+      "sign": 1,
+      "word": "DAD",
+      "order": 7,
+      "state_r_M_q_E": [
+        -1,
+        92,
+        16,
+        0
+      ],
+      "one_tail_count": 183
+    },
+    {
+      "sign": 1,
+      "word": "DDA",
+      "order": 7,
+      "state_r_M_q_E": [
+        -1,
+        86,
+        32,
+        24
+      ],
+      "one_tail_count": 171
+    },
+    {
+      "sign": 1,
+      "word": "ADA",
+      "order": 10,
+      "state_r_M_q_E": [
+        1,
+        1064,
+        416,
+        302
+      ],
+      "one_tail_count": 2129
+    },
+    {
+      "sign": 1,
+      "word": "DAA",
+      "order": 10,
+      "state_r_M_q_E": [
+        1,
+        968,
+        368,
+        258
+      ],
+      "one_tail_count": 1937
+    },
+    {
+      "sign": 1,
+      "word": "3",
+      "order": 4,
+      "state_r_M_q_E": [
+        -1,
+        15,
+        4,
+        3
+      ],
+      "one_tail_count": 29
+    },
+    {
+      "sign": 1,
+      "word": "5",
+      "order": 5,
+      "state_r_M_q_E": [
+        -1,
+        35,
+        8,
+        5
+      ],
+      "one_tail_count": 69
+    },
+    {
+      "sign": 1,
+      "word": "33",
+      "order": 7,
+      "state_r_M_q_E": [
+        1,
+        159,
+        60,
+        39
+      ],
+      "one_tail_count": 319
+    },
+    {
+      "sign": 1,
+      "word": "35",
+      "order": 8,
+      "state_r_M_q_E": [
+        1,
+        407,
+        120,
+        69
+      ],
+      "one_tail_count": 815
+    },
+    {
+      "sign": 1,
+      "word": "53",
+      "order": 8,
+      "state_r_M_q_E": [
+        1,
+        369,
+        140,
+        95
+      ],
+      "one_tail_count": 739
+    },
+    {
+      "sign": 1,
+      "word": "55",
+      "order": 9,
+      "state_r_M_q_E": [
+        1,
+        945,
+        280,
+        165
+      ],
+      "one_tail_count": 1891
+    }
+  ],
+  "literal_modular_constructor": [
+    {
+      "modulus": 7,
+      "target_slope": 1,
+      "word": "ADA",
+      "order": 11,
+      "state": [
+        -1,
+        2472,
+        960,
+        698
+      ]
+    },
+    {
+      "modulus": 7,
+      "target_slope": 3,
+      "word": "DAA",
+      "order": 11,
+      "state": [
+        -1,
+        2544,
+        960,
+        674
+      ]
+    }
+  ],
+  "quotient_orbits": [
+    {
+      "modulus": 7,
+      "sign": -1,
+      "orbit_size": 96,
+      "largest_target_distance": 6
+    },
+    {
+      "modulus": 7,
+      "sign": 1,
+      "orbit_size": 96,
+      "largest_target_distance": 8
+    },
+    {
+      "modulus": 11,
+      "sign": -1,
+      "orbit_size": 240,
+      "largest_target_distance": 9
+    },
+    {
+      "modulus": 11,
+      "sign": 1,
+      "orbit_size": 240,
+      "largest_target_distance": 9
+    },
+    {
+      "modulus": 13,
+      "sign": -1,
+      "orbit_size": 336,
+      "largest_target_distance": 9
+    },
+    {
+      "modulus": 13,
+      "sign": 1,
+      "orbit_size": 336,
+      "largest_target_distance": 9
+    },
+    {
+      "modulus": 17,
+      "sign": -1,
+      "orbit_size": 576,
+      "largest_target_distance": 9
+    },
+    {
+      "modulus": 17,
+      "sign": 1,
+      "orbit_size": 576,
+      "largest_target_distance": 11
+    },
+    {
+      "modulus": 19,
+      "sign": -1,
+      "orbit_size": 720,
+      "largest_target_distance": 10
+    },
+    {
+      "modulus": 19,
+      "sign": 1,
+      "orbit_size": 720,
+      "largest_target_distance": 12
+    },
+    {
+      "modulus": 23,
+      "sign": -1,
+      "orbit_size": 1056,
+      "largest_target_distance": 12
+    },
+    {
+      "modulus": 23,
+      "sign": 1,
+      "orbit_size": 1056,
+      "largest_target_distance": 12
+    },
+    {
+      "modulus": 29,
+      "sign": -1,
+      "orbit_size": 1680,
+      "largest_target_distance": 13
+    },
+    {
+      "modulus": 29,
+      "sign": 1,
+      "orbit_size": 1680,
+      "largest_target_distance": 12
+    },
+    {
+      "modulus": 31,
+      "sign": -1,
+      "orbit_size": 1920,
+      "largest_target_distance": 12
+    },
+    {
+      "modulus": 31,
+      "sign": 1,
+      "orbit_size": 1920,
+      "largest_target_distance": 12
+    },
+    {
+      "modulus": 49,
+      "sign": -1,
+      "orbit_size": 4704,
+      "largest_target_distance": 14
+    },
+    {
+      "modulus": 49,
+      "sign": 1,
+      "orbit_size": 4704,
+      "largest_target_distance": 14
+    },
+    {
+      "modulus": 77,
+      "sign": -1,
+      "orbit_size": 11520,
+      "largest_target_distance": 15
+    },
+    {
+      "modulus": 77,
+      "sign": 1,
+      "orbit_size": 11520,
+      "largest_target_distance": 16
+    },
+    {
+      "modulus": 91,
+      "sign": -1,
+      "orbit_size": 16128,
+      "largest_target_distance": 16
+    },
+    {
+      "modulus": 91,
+      "sign": 1,
+      "orbit_size": 16128,
+      "largest_target_distance": 16
+    },
+    {
+      "modulus": 121,
+      "sign": -1,
+      "orbit_size": 29040,
+      "largest_target_distance": 17
+    },
+    {
+      "modulus": 121,
+      "sign": 1,
+      "orbit_size": 29040,
+      "largest_target_distance": 17
+    }
+  ],
+  "clock_states": 255,
+  "pure_translation_primes": [
+    3,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    43,
+    79,
+    101,
+    127,
+    257,
+    769
+  ],
+  "semisimple_formula_exceptions": [
+    {
+      "prime": 5,
+      "full_power_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          3,
+          2
+        ],
+        [
+          4,
+          2,
+          2,
+          3
+        ]
+      ],
+      "pure_translation": false
+    },
+    {
+      "prime": 761,
+      "full_power_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          609,
+          210,
+          541,
+          210
+        ],
+        [
+          112,
+          603,
+          688,
+          209
+        ],
+        [
+          602,
+          681,
+          685,
+          627
+        ]
+      ],
+      "pure_translation": false
+    }
+  ],
+  "translation_span_minors": [
+    344,
+    632
+  ],
+  "full_state_orbits": [
+    {
+      "modulus": 3,
+      "states": 54,
+      "largest_distance": 10,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 5,
+      "states": 250,
+      "largest_distance": 11,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 7,
+      "states": 686,
+      "largest_distance": 13,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 9,
+      "states": 1458,
+      "largest_distance": 13,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 11,
+      "states": 2662,
+      "largest_distance": 14,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 13,
+      "states": 4394,
+      "largest_distance": 15,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 15,
+      "states": 6750,
+      "largest_distance": 16,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 17,
+      "states": 9826,
+      "largest_distance": 16,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 19,
+      "states": 13718,
+      "largest_distance": 17,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 21,
+      "states": 18522,
+      "largest_distance": 18,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 23,
+      "states": 24334,
+      "largest_distance": 18,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 25,
+      "states": 31250,
+      "largest_distance": 18,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 27,
+      "states": 39366,
+      "largest_distance": 19,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 29,
+      "states": 48778,
+      "largest_distance": 20,
+      "scope": "finite exact; composite cases not extrapolated"
+    },
+    {
+      "modulus": 31,
+      "states": 59582,
+      "largest_distance": 19,
+      "scope": "finite exact; composite cases not extrapolated"
+    }
+  ],
+  "full_constructor_samples": [
+    {
+      "prime": 3,
+      "target": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "word": "353",
+      "actual_state": [
+        1,
+        8631,
+        3228,
+        2187
+      ],
+      "order": 12
+    },
+    {
+      "prime": 5,
+      "target": [
+        -1,
+        0,
+        0,
+        0
+      ],
+      "word": "5355",
+      "actual_state": [
+        -1,
+        624335,
+        183080,
+        107795
+      ],
+      "order": 17
+    },
+    {
+      "prime": 7,
+      "target": [
+        -1,
+        6,
+        2,
+        3
+      ],
+      "word": "5355555333",
+      "actual_state": [
+        -1,
+        16044432013427,
+        5908192374996,
+        3887510138389
+      ],
+      "order": 38
+    },
+    {
+      "prime": 11,
+      "target": [
+        1,
+        0,
+        1,
+        10
+      ],
+      "word": "333533553",
+      "actual_state": [
+        1,
+        89569127197,
+        33461684356,
+        22643196905
+      ],
+      "order": 32
+    }
+  ]
+}
