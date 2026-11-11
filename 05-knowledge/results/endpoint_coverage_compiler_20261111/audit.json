@@ -2,6 +2,8 @@
   "scope": "same-agent review, independent counting implementation",
   "python": "3.13.14",
   "inherited_commit": "e753f4be7660",
+  "integrated_core_commit": "63b86513f8",
+  "integrated_core_proof_sha256": "f8bc04ac1da803a5504bc3b4e7006d2f6e06f35f3488b1f1f12849ed24b809a5",
   "borrowed_source_sha256": {
     "05-knowledge/results/modular_centers_collatz_pell_20261111/content_checks.py": "bf894b45e3d3f29a5e953b72bc12fec6ba3a07db7868a768758624917eacc63d",
     "05-knowledge/results/modular_centers_collatz_pell_20261111/tournament_checks.py": "25a193fe1d66a6c6780451f5de6c393398c1b7788e743744317c258f41aa6a7a"
@@ -39,6 +41,12 @@
     },
     {
       "command": "python3 endpoint_checks.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "byte_match": true
+    },
+    {
+      "command": "python3 core_compression.py",
       "normal": "PASS",
       "optimized": "PASS",
       "byte_match": true

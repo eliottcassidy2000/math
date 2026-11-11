@@ -14,6 +14,7 @@ STEPS = [
     (['composition_probe.py'],'composition_probe.json'),
     (['joint_ports.py'],'joint_ports.json'),
     (['endpoint_checks.py'],'endpoint_checks.json'),
+    (['core_compression.py'],'core_compression.json'),
     (['wheel.py'],'wheel.json'),
     (['verify.py'],'verification.json'),
 ]
@@ -45,6 +46,8 @@ def main():
             raise RuntimeError(f'Borrowed source changed: {name}')
     report = dict(scope='same-agent review, independent counting implementation',
                   python=sys.version.split()[0],inherited_commit='e753f4be7660',
+                  integrated_core_commit='63b86513f8',
+                  integrated_core_proof_sha256=sha(HERE.parent/'session258_endpoint_seed_20261111/seed_decision/CORE_CLASSIFICATION.md'),
                   borrowed_source_sha256=pins,checks=checks)
     (HERE/'audit.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
     manifest = {p.name:sha(p) for p in sorted(HERE.iterdir())

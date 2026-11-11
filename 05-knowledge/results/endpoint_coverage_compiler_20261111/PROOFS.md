@@ -178,8 +178,10 @@ Combining them with (0) proves actual Hamiltonian-count coverage:
 
 For the r-families use a=r+1. The factors of two in U are respectively
 2,16,4,1,1,2,4 in the table's row order; the odd factors are as displayed.
-The four ternary families and binary29 therefore give complete lines,
-including s=1. Other rows give tails; their unbounded below-tail problems
+The listed ternary families and binary29 therefore give complete lines,
+including s=1. The b=90 row repeats part of b=30, as checked in E9 of
+CONNECTIONS.md; there are three nonredundant ternary orbits. Other rows
+give tails; their unbounded below-tail problems
 are not silently declared solved. These finitely many exponential
 coefficient families have only O(log X) members c<=X and do not exhaust
 odd coefficients.
@@ -188,6 +190,15 @@ Example: ternary30 with a=3 has base order 8, U=809 and delta=1.
 Its t=1 closure has order 10 and H=1619. With a=20 it gives the exact
 coefficient c=30*3^20-1 and the whole corresponding line, without a large
 graph search. Each base adds a-1 vertices; a tail of length t adds t+1.
+
+All ten named bases are strong. Substitution of any nonempty module for a
+vertex in a nontrivial strong tournament preserves strongness: a directed
+cycle through that vertex supplies an external route between any two
+module vertices, and old connecting paths lift through a module vertex.
+Thus these are actual strong-core growth moves in the classification E10.
+They also give concise realizations: U(a)>=2^a because u_1>=2 and u_2>=1.
+Hence the constructed order n+a+t is at most
+7+floor(log_2(N-1)) for N=1+2^t U(a). No global minimum-order claim follows.
 
 ## E4 What the complete small census classifies
 
@@ -284,6 +295,20 @@ claim that a numerical subset sum automatically has a graph realization.
 For H=1 the nonempty solutions are the singletons. Empty O has zero slope
 and is excluded from a positive-c seed.
 
+The incoming [Session258 endpoint theorem, Sections 6–7](../session258_endpoint_seed_20261111/endpoints/PROOF.md)
+gives a complementary all-order classification, **CITED** here. If A_ab
+is the sum of H(B minus P) over even-vertex directed paths P from a to b,
+then W_ab=2(A_ab+A_ba) and U_a=E_a+2 sum_b A_ab. Thus (6) is exactly the
+pair of positive budgets
+
+    sum_{a,b in O} A_ab=(H(B)-1)/2,
+    sum_{a in O}(E_a+2 sum_b A_ab)=c*2^j.
+
+The same incoming theorem proves that a single vertex birth can increase
+H by 2 only in the cases 1->3 and 3->5. Consequently a proposed recursion
+that adds one vertex for every next odd count cannot continue past 5.
+This is specific to vertex births, not edge reversals or multi-vertex moves.
+
 There are four separate obligations: the extension support must contain
 the target; an actual selected endpoint set must satisfy (6); any further
 operation must retain its required port/cover state; and the points below
@@ -299,3 +324,78 @@ termination into seeds. Chan–Pak additionally needs all points below
 their ray starts, except 7 and 21, or a construction whose starts are
 already 1. The named complete-line families satisfy this additional
 obligation individually. The universal rules remain OPEN.
+
+## E10 Exact padding transforms and the primitive seed census
+
+During this session the shared branch acquired the proved
+[Session258 strong-core classification](../session258_endpoint_seed_20261111/seed_decision/CORE_CLASSIFICATION.md)
+at commit `63b86513f8`. Its structural theorem is an imported proved input
+here: every positive selected-set unit seed has the unique form
+
+    TT_a -> (S,O) -> TT_b,       a,b>=0,
+
+where S is one selected strong component, possibly a singleton, every
+exterior vertex is unselected, delta(S,O)=1, and U=2^b U(S,O).
+The proof uses the strict cost of a selected pair crossing components and
+ordinal factorization. The exterior cannot change the odd part of U.
+Our finite controls independently verify the normal form and its U law
+for all 321 selected-set unit seeds on ordinary bases of order at most 7.
+
+This permits an exact enumeration improvement. Let K_m count all unit
+selections O on ordinary strong cores of order m, including the singleton.
+Let P*_m and Q*_m count respectively a stable unselected port and an
+unordered pair of such ports on these marked cores. As in E4 the marks
+are not quotiented by automorphisms. Let A_n count all unit selections on
+ordinary bases, with P_n and Q_n as in E4. Set d=n-m. Then, for every n,
+
+    A_n = sum_m (d+1) K_m,
+    P_n = sum_m (d+1) [P*_m + d K_m],
+    Q_n = sum_m (d+1) [Q*_m + d P*_m + binom(d,2) K_m].       (8)
+
+**Proof.** Each core has exactly d+1 choices for its preceding/following
+padding lengths. Every exterior vertex is stable: inflating it just
+changes a or b. A core vertex is stable in the padded source exactly when
+it was stable in the core, since padding preserves delta. Choose zero,
+one or two marked ports among the existing core ports and the d exterior
+ones. Summation gives (8). The normal form ensures no distinct padding
+length/core choices describe the same ordinary base with its selected
+component. Automorphisms of the core cause no issue because we count all
+vertex selections and marks on each ordinary representative. QED.
+
+For formal series with coefficients indexed by order, (8) is
+
+    A(z)=K(z)/(1-z)^2,
+    P(z)=P*(z)/(1-z)^2 + 2z K(z)/(1-z)^3,
+    Q(z)=Q*(z)/(1-z)^2 + 2z P*(z)/(1-z)^3 + 3z^2 K(z)/(1-z)^4.
+
+More generally, if R*_i counts a core seed with i unordered stable ports,
+then the all-base r-port series is
+
+    R_r(z)=sum_{i=0}^r (r-i+1) z^(r-i) R*_i(z)/(1-z)^(r-i+2). (9)
+
+The same transform holds if the marked ports are required to be jointly
+stable. Exterior padding commutes with their inflation; the condition is
+equivalent to the joint condition on the selected core ports, recovered
+by setting every exterior inflation size to one. For r>=3 this does not
+make the unknown core joint-stability property automatic.
+
+**FINITE-EXACT primitive sequences, n=1,...,7:**
+
+    K_n : 1,0,3,3,8,24,98,
+    P*_n: 0,0,3,2,7,20,63,
+    Q*_n: 0,0,0,1,3,10,35,
+    A_n : 1,2,6,13,28,67,204.
+
+Equations (8) independently recover all P_n and Q_n in E4. The 763
+all-base pairs reduce to 49 genuinely internal strong-core pair
+presentations through order seven; the rest are generated by padding.
+Likewise only 95 of the 634 port presentations belong to strong cores.
+This is an all-order transform and a finite exact primitive census, not
+a closed formula for the unknown strong-core sequences or for A000568.
+
+The same incoming work provides a complete finite decision for an exact
+multiplier q, and classifies q<=29: the positives are
+{1,2,4,6,8,11,12,16,20,22,24,29}. Those all-order negative decisions are
+**CITED** here, not rerun. A fixed odd slope c still permits q=c*2^j with
+unbounded j. The new inflation families solve this existential problem
+for their specified c, but do not bound a successful j for arbitrary c.

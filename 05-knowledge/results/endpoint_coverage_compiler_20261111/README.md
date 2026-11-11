@@ -13,10 +13,12 @@ Seeds for every odd c and a proof of Chan–Pak remain open.
 
 ## Results and exact limits
 
-- [E1–E6 proofs and census](PROOFS.md): D_(n-1)=2 for the extension
+- [E1–E6 and E10 proofs and census](PROOFS.md): D_(n-1)=2 for the extension
   difference lattice (n>=2); the complete one-port endpoint criterion;
   ten explicit inflation presentations; finite-base classification through
   order seven; the remaining source, endpoint and below-ray obligations.
+  E10 integrates the incoming strong-core normal form and derives exact
+  generating-function transforms that remove all exterior padding.
 - [E7–E9 connections](CONNECTIONS.md): the 99 ray and its exact 25-prime
   wheel; source-valid arithmetic recursions; an inflation-only Zeckendorf
   obstruction; concrete controls for the Carmichael fibre analogy; the
@@ -46,6 +48,11 @@ marked-presentation sequences are
 
     P_n: 0,2,9,26,64,152,381,
     Q_n: 0,0,3,19,66,186,489,       n=1,...,7.
+
+Only 95 of those 634 ports and 49 of those 763 pairs lie inside strong
+cores. The others follow from three exact padding transforms in E10.
+All named infinite constructions grow strong cores and have order at
+most 7+floor(log_2(N-1)) for their realized counts N.
 
 Two seven-vertex examples instead preserve the unit seed only at sizes
 {1,2} and {1,3}. The second is governed exactly by
@@ -85,6 +92,7 @@ python3 inflation_bank.py --max-n 7
 python3 composition_probe.py
 python3 joint_ports.py
 python3 endpoint_checks.py
+python3 core_compression.py
 python3 wheel.py
 python3 verify.py
 ```

@@ -20,6 +20,9 @@ inside `audit.json`. Run `python3 audit.py` to reproduce the entire replay.
 - All 4,054 one-vertex children of ordinary bases through six vertices
   independently check the response polynomial. The content-pair census
   through seven uses exact endpoint coefficients and all Boolean cuts.
+- All 321 ordinary-base unit selections through order seven verify the
+  imported strong-core normal form. Three padding transforms independently
+  recover the full marked counts from the smaller strong-core census.
 - 60 actual constructed tails, 30 direct path-backtracking controls,
   ten nontransitive C_3 substitutions, and six requested 99-ray points.
 - 5,000 direct prime-wheel exponent controls, 96 binary-language controls,
@@ -62,6 +65,8 @@ realizing those counts are still constructed by the same tail rule.
 - No new universal seed theorem, Chan–Pak proof, primality criterion,
   improved A000568 formula, or global optimal graph-order bound is claimed.
 
-The bounded navigation check is rerun after integrating incoming commits;
-the initial run reported an existing tight startup-byte budget plus the
-proposed frontier insertion. The insertion was removed pending integration.
+The bounded navigation check passed after integrating incoming commits.
+The initial proposed frontier insertion exceeded its strict size budget;
+the results index supplies the new route without enlarging that surface.
+Incoming Session258's strong-core theorem is credited and pinned. Its
+fixed-q all-order exclusions are cited, not newly executed here.

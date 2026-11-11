@@ -54,3 +54,10 @@ predicate, loss and hostile test in CONNECTIONS.md. The present stopping
 boundary is mathematical: no uniform legal descent for arbitrary odd c,
 and no global below-ray theorem for the new families whose starts exceed 1.
 The three nonredundant ternary families do have complete lines.
+
+Incoming integration at 63b86513f8 adds the exact single-strong-core normal
+form and fixed-q decision. E10 turns that classification into all-order
+padding transforms, leaving only 95 primitive port and 49 primitive pair
+presentations through seven vertices. This changes the live enumeration
+lane: search strong marked cores once and generate exterior padding
+symbolically. The universal odd-part image of those cores remains open.
