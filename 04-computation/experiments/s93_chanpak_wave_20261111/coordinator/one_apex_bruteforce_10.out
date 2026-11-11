@@ -1,0 +1,12 @@
+g(v) = v + 1 - 2 q(v) - (v mod 2) for v < 4096: True
+n = 1: multiset of H over the 2^n words = multiset of g(v), v < 2^n: True; set of values = {x(h) : h < 2^(n-1)}: True (1 values, max 1)
+n = 2: multiset of H over the 2^n words = multiset of g(v), v < 2^n: True; set of values = {x(h) : h < 2^(n-1)}: True (2 values, max 3)
+n = 3: multiset of H over the 2^n words = multiset of g(v), v < 2^n: True; set of values = {x(h) : h < 2^(n-1)}: True (3 values, max 5)
+n = 4: multiset of H over the 2^n words = multiset of g(v), v < 2^n: True; set of values = {x(h) : h < 2^(n-1)}: True (5 values, max 11)
+n = 5: multiset of H over the 2^n words = multiset of g(v), v < 2^n: True; set of values = {x(h) : h < 2^(n-1)}: True (9 values, max 23)
+n = 6: multiset of H over the 2^n words = multiset of g(v), v < 2^n: True; set of values = {x(h) : h < 2^(n-1)}: True (18 values, max 51)
+n = 7: multiset of H over the 2^n words = multiset of g(v), v < 2^n: True; set of values = {x(h) : h < 2^(n-1)}: True (30 values, max 107)
+n = 8: multiset of H over the 2^n words = multiset of g(v), v < 2^n: True; set of values = {x(h) : h < 2^(n-1)}: True (58 values, max 227)
+n = 9: multiset of H over the 2^n words = multiset of g(v), v < 2^n: True; set of values = {x(h) : h < 2^(n-1)}: True (110 values, max 467)
+n = 10: multiset of H over the 2^n words = multiset of g(v), v < 2^n: True; set of values = {x(h) : h < 2^(n-1)}: True (216 values, max 963)
+ALL CHECKS PASSED

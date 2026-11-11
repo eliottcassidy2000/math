@@ -1,0 +1,8 @@
+s = 6: 486 difference vectors with b odd; weights sum 15552 (6^s / 2 = 23328)
+  K = 2^ 0: max Deg =       4, r^2-weighted mean =      4.00 = 4.000 K; (D1) 4K^2 = 4, (D2) = 576; max/K = 4.00
+  K = 2^ 1: max Deg =       4, r^2-weighted mean =      4.00 = 2.000 K; (D1) 4K^2 = 16, (D2) = 842; max/K = 2.00
+  K = 2^ 2: max Deg =      10, r^2-weighted mean =      5.96 = 1.491 K; (D1) 4K^2 = 64, (D2) = 1108; max/K = 2.50
+  K = 2^ 3: max Deg =      27, r^2-weighted mean =     11.26 = 1.407 K; (D1) 4K^2 = 256, (D2) = 1375; max/K = 3.38
+  K = 2^ 4: max Deg =      57, r^2-weighted mean =     21.97 = 1.373 K; (D1) 4K^2 = 1024, (D2) = 1641; max/K = 3.56
+  K = 2^ 5: max Deg =     132, r^2-weighted mean =     45.94 = 1.435 K; (D1) 4K^2 = 4096, (D2) = 1907; max/K = 4.12
+  K = 2^ 6: max Deg =     276, r^2-weighted mean =     91.85 = 1.435 K; (D1) 4K^2 = 16384, (D2) = 2173; max/K = 4.31
