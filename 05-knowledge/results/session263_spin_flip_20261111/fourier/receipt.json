@@ -1,0 +1,214 @@
+{
+  "status": "PASS",
+  "blocks": {
+    "triangle": {
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "all_induced_subsets": 8,
+      "independent_counts_equal": true,
+      "H": 3,
+      "K": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "K_at_1": 12,
+      "residues_mod8": [
+        3,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "parity_jet": [
+        1,
+        6
+      ],
+      "odd_cycles": 1
+    },
+    "eight_filter": {
+      "rows": [
+        234,
+        236,
+        161,
+        228,
+        111,
+        192,
+        132,
+        16
+      ],
+      "all_induced_subsets": 256,
+      "independent_counts_equal": true,
+      "H": 231,
+      "K": [
+        231,
+        462,
+        462,
+        462,
+        462,
+        462,
+        462,
+        462,
+        231
+      ],
+      "K_at_1": 3696,
+      "residues_mod8": [
+        462,
+        462,
+        462,
+        462,
+        462,
+        462,
+        462,
+        462
+      ],
+      "parity_jet": [
+        2,
+        924
+      ],
+      "odd_cycles": 77
+    },
+    "highest_channel_only": {
+      "rows": [
+        42,
+        120,
+        99,
+        68,
+        13,
+        216,
+        17,
+        95
+      ],
+      "all_induced_subsets": 256,
+      "independent_counts_equal": true,
+      "H": 345,
+      "K": [
+        345,
+        684,
+        678,
+        684,
+        690,
+        684,
+        678,
+        684,
+        345
+      ],
+      "K_at_1": 5472,
+      "residues_mod8": [
+        690,
+        684,
+        678,
+        684,
+        690,
+        684,
+        678,
+        684
+      ],
+      "parity_jet": [
+        2,
+        1392
+      ],
+      "odd_cycles": 108
+    }
+  },
+  "rooted_controls": [
+    {
+      "base": [
+        0
+      ],
+      "root": 0,
+      "block": "C3",
+      "channels": 4,
+      "each_count": 3
+    },
+    {
+      "base": [
+        0
+      ],
+      "root": 0,
+      "block": "F8",
+      "channels": 8,
+      "each_count": 462
+    },
+    {
+      "base": [
+        2,
+        4,
+        1
+      ],
+      "root": 0,
+      "block": "C3",
+      "channels": 4,
+      "each_count": 9
+    },
+    {
+      "base": [
+        2,
+        4,
+        1
+      ],
+      "root": 0,
+      "block": "F8",
+      "channels": 8,
+      "each_count": 1386
+    },
+    {
+      "base": [
+        6,
+        4,
+        0
+      ],
+      "root": 1,
+      "block": "C3",
+      "channels": 4,
+      "each_count": 6
+    },
+    {
+      "base": [
+        6,
+        4,
+        0
+      ],
+      "root": 1,
+      "block": "F8",
+      "channels": 8,
+      "each_count": 924
+    },
+    {
+      "base": [
+        2,
+        12,
+        9,
+        1
+      ],
+      "root": 2,
+      "block": "C3",
+      "channels": 4,
+      "each_count": 27
+    },
+    {
+      "base": [
+        2,
+        12,
+        9,
+        1
+      ],
+      "root": 2,
+      "block": "F8",
+      "channels": 8,
+      "each_count": 4158
+    }
+  ],
+  "singleton_F8_heads": [
+    3927,
+    7623
+  ],
+  "scope": "Explicit new filters and new composition/jet controls; no inherited census audit or asymptotic extrapolation."
+}

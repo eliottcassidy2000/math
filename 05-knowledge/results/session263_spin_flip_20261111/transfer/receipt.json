@@ -1,0 +1,174 @@
+{
+  "status": "PASS",
+  "new_word_depth": 10,
+  "new_word_states": 2047,
+  "distinct_query_counts_by_depth": {
+    "0": 3,
+    "1": 6,
+    "2": 12,
+    "3": 24,
+    "4": 48,
+    "5": 96,
+    "6": 192,
+    "7": 384,
+    "8": 768,
+    "9": 1536,
+    "10": 3072
+  },
+  "physical_composites": [
+    {
+      "word": [],
+      "order": 2,
+      "state": [
+        -1,
+        3,
+        1,
+        1
+      ],
+      "queries": [
+        5,
+        59,
+        155
+      ]
+    },
+    {
+      "word": [
+        3
+      ],
+      "order": 5,
+      "state": [
+        1,
+        29,
+        11,
+        7
+      ],
+      "queries": [
+        59,
+        637,
+        1613
+      ]
+    },
+    {
+      "word": [
+        5
+      ],
+      "order": 6,
+      "state": [
+        1,
+        77,
+        23,
+        13
+      ],
+      "queries": [
+        155,
+        1657,
+        4217
+      ]
+    },
+    {
+      "word": [
+        3,
+        3
+      ],
+      "order": 8,
+      "state": [
+        -1,
+        319,
+        117,
+        77
+      ],
+      "queries": [
+        637,
+        6923,
+        17595
+      ]
+    },
+    {
+      "word": [
+        3,
+        5
+      ],
+      "order": 9,
+      "state": [
+        -1,
+        807,
+        233,
+        135
+      ],
+      "queries": [
+        1613,
+        17263,
+        44015
+      ]
+    },
+    {
+      "word": [
+        5,
+        3
+      ],
+      "order": 9,
+      "state": [
+        -1,
+        829,
+        309,
+        209
+      ],
+      "queries": [
+        1657,
+        18011,
+        45771
+      ]
+    },
+    {
+      "word": [
+        5,
+        5
+      ],
+      "order": 10,
+      "state": [
+        -1,
+        2109,
+        617,
+        363
+      ],
+      "queries": [
+        4217,
+        45151,
+        115103
+      ]
+    },
+    {
+      "word": [
+        3,
+        3,
+        3
+      ],
+      "order": 11,
+      "state": [
+        1,
+        3461,
+        1275,
+        839
+      ],
+      "queries": []
+    },
+    {
+      "word": [
+        5,
+        3,
+        5
+      ],
+      "order": 13,
+      "state": [
+        1,
+        22885,
+        6631,
+        3835
+      ],
+      "queries": []
+    }
+  ],
+  "hostile_rejections": 4,
+  "four_query_determinant": 16,
+  "scope": "New compiler/decoder/tomography controls only; not an inherited theorem or census re-audit."
+}
