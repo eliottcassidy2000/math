@@ -1,0 +1,142 @@
+{
+  "balanced_probe": {
+    "first_m": 14,
+    "offset_bound": 4096,
+    "profile_controls": 327720,
+    "rows": [
+      {
+        "eligible_raw_charts": 2,
+        "hits": [],
+        "j": 0,
+        "leading_coefficient": 102,
+        "ordered_factor_pairs": 8,
+        "zero_linear_drift": 8
+      },
+      {
+        "eligible_raw_charts": 10,
+        "hits": [],
+        "j": 1,
+        "leading_coefficient": 204,
+        "ordered_factor_pairs": 32,
+        "zero_linear_drift": 20
+      },
+      {
+        "eligible_raw_charts": 10,
+        "hits": [],
+        "j": 2,
+        "leading_coefficient": 408,
+        "ordered_factor_pairs": 56,
+        "zero_linear_drift": 32
+      },
+      {
+        "eligible_raw_charts": 10,
+        "hits": [],
+        "j": 3,
+        "leading_coefficient": 816,
+        "ordered_factor_pairs": 80,
+        "zero_linear_drift": 44
+      },
+      {
+        "eligible_raw_charts": 26,
+        "hits": [],
+        "j": 4,
+        "leading_coefficient": 1632,
+        "ordered_factor_pairs": 168,
+        "zero_linear_drift": 64
+      },
+      {
+        "eligible_raw_charts": 26,
+        "hits": [],
+        "j": 5,
+        "leading_coefficient": 3264,
+        "ordered_factor_pairs": 256,
+        "zero_linear_drift": 84
+      },
+      {
+        "eligible_raw_charts": 26,
+        "hits": [],
+        "j": 6,
+        "leading_coefficient": 6528,
+        "ordered_factor_pairs": 344,
+        "zero_linear_drift": 104
+      },
+      {
+        "eligible_raw_charts": 26,
+        "hits": [],
+        "j": 7,
+        "leading_coefficient": 13056,
+        "ordered_factor_pairs": 432,
+        "zero_linear_drift": 124
+      },
+      {
+        "eligible_raw_charts": 26,
+        "hits": [],
+        "j": 8,
+        "leading_coefficient": 26112,
+        "ordered_factor_pairs": 520,
+        "zero_linear_drift": 144
+      },
+      {
+        "eligible_raw_charts": 26,
+        "hits": [],
+        "j": 9,
+        "leading_coefficient": 52224,
+        "ordered_factor_pairs": 608,
+        "zero_linear_drift": 164
+      }
+    ],
+    "scope": "All90 raw cuts; alpha,beta positive with L*alpha*beta=102*2^j; j0..9; offsets t,u in[-4096,4096]; eventual identity for every m>=14."
+  },
+  "coefficient102_odd_factor_pairs": [
+    {
+      "alpha": 1,
+      "beta": 51,
+      "constant": 37
+    },
+    {
+      "alpha": 3,
+      "beta": 17,
+      "constant": 15
+    },
+    {
+      "alpha": 17,
+      "beta": 3,
+      "constant": -5
+    },
+    {
+      "alpha": 51,
+      "beta": 1,
+      "constant": -39
+    }
+  ],
+  "independent_signed_product_checks": 4500,
+  "status": "PROVED independent-product family; FINITE-EXACT balanced-offset probe",
+  "stopping_reason": "No +19 balanced fixed-offset identity in this explicit finite box. A growing offset, larger shift, different core grammar or source-changing operation remains possible.",
+  "uniform_core_coefficients": [
+    {
+      "L": 2,
+      "core": 0,
+      "d": 1
+    },
+    {
+      "L": 12,
+      "core": 1,
+      "d": 3
+    },
+    {
+      "L": 32,
+      "core": 2,
+      "d": 5
+    },
+    {
+      "L": 84,
+      "core": 3,
+      "d": 9
+    },
+    {
+      "L": 84,
+      "core": 4,
+      "d": 9
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "status": "PASS",
+  "word_experiments": [
+    {
+      "inports": "TT3",
+      "d": 3,
+      "budget": 6,
+      "queries": 4681,
+      "strong_sources": 3840,
+      "equalities": 4,
+      "by_length": [
+        {
+          "length": 0,
+          "equality_sources": []
+        },
+        {
+          "length": 1,
+          "equality_sources": [
+            {
+              "word": [
+                7
+              ],
+              "H": 9
+            }
+          ]
+        },
+        {
+          "length": 2,
+          "equality_sources": [
+            {
+              "word": [
+                7,
+                7
+              ],
+              "H": 23
+            }
+          ]
+        },
+        {
+          "length": 3,
+          "equality_sources": [
+            {
+              "word": [
+                7,
+                7,
+                7
+              ],
+              "H": 51
+            }
+          ]
+        },
+        {
+          "length": 4,
+          "equality_sources": [
+            {
+              "word": [
+                7,
+                7,
+                7,
+                7
+              ],
+              "H": 107
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inports": "C3",
+      "d": 3,
+      "budget": 6,
+      "queries": 4681,
+      "strong_sources": 4095,
+      "equalities": 4,
+      "by_length": [
+        {
+          "length": 0,
+          "equality_sources": []
+        },
+        {
+          "length": 1,
+          "equality_sources": [
+            {
+              "word": [
+                7
+              ],
+              "H": 15
+            }
+          ]
+        },
+        {
+          "length": 2,
+          "equality_sources": [
+            {
+              "word": [
+                7,
+                7
+              ],
+              "H": 33
+            }
+          ]
+        },
+        {
+          "length": 3,
+          "equality_sources": [
+            {
+              "word": [
+                7,
+                7,
+                7
+              ],
+              "H": 69
+            }
+          ]
+        },
+        {
+          "length": 4,
+          "equality_sources": [
+            {
+              "word": [
+                7,
+                7,
+                7,
+                7
+              ],
+              "H": 141
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inports": "TT4",
+      "d": 4,
+      "budget": 14,
+      "queries": 4369,
+      "strong_sources": 3584,
+      "equalities": 3,
+      "by_length": [
+        {
+          "length": 0,
+          "equality_sources": []
+        },
+        {
+          "length": 1,
+          "equality_sources": [
+            {
+              "word": [
+                15
+              ],
+              "H": 17
+            }
+          ]
+        },
+        {
+          "length": 2,
+          "equality_sources": [
+            {
+              "word": [
+                15,
+                15
+              ],
+              "H": 47
+            }
+          ]
+        },
+        {
+          "length": 3,
+          "equality_sources": [
+            {
+              "word": [
+                15,
+                15,
+                15
+              ],
+              "H": 107
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inports": "TT5",
+      "d": 5,
+      "budget": 30,
+      "queries": 1057,
+      "strong_sources": 768,
+      "equalities": 2,
+      "by_length": [
+        {
+          "length": 0,
+          "equality_sources": []
+        },
+        {
+          "length": 1,
+          "equality_sources": [
+            {
+              "word": [
+                31
+              ],
+              "H": 33
+            }
+          ]
+        },
+        {
+          "length": 2,
+          "equality_sources": [
+            {
+              "word": [
+                31,
+                31
+              ],
+              "H": 95
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "labelled_order4_inport_queries": 1024,
+  "collar_formula_controls": [
+    {
+      "d": 2,
+      "I_H": 1,
+      "k": 1,
+      "H": 5,
+      "defect": 2
+    },
+    {
+      "d": 2,
+      "I_H": 1,
+      "k": 2,
+      "H": 11,
+      "defect": 2
+    },
+    {
+      "d": 2,
+      "I_H": 1,
+      "k": 3,
+      "H": 23,
+      "defect": 2
+    },
+    {
+      "d": 2,
+      "I_H": 1,
+      "k": 4,
+      "H": 47,
+      "defect": 2
+    },
+    {
+      "d": 3,
+      "I_H": 1,
+      "k": 1,
+      "H": 9,
+      "defect": 6
+    },
+    {
+      "d": 3,
+      "I_H": 1,
+      "k": 2,
+      "H": 23,
+      "defect": 6
+    },
+    {
+      "d": 3,
+      "I_H": 1,
+      "k": 3,
+      "H": 51,
+      "defect": 6
+    },
+    {
+      "d": 3,
+      "I_H": 1,
+      "k": 4,
+      "H": 107,
+      "defect": 6
+    },
+    {
+      "d": 3,
+      "I_H": 3,
+      "k": 1,
+      "H": 15,
+      "defect": 6
+    },
+    {
+      "d": 3,
+      "I_H": 3,
+      "k": 2,
+      "H": 33,
+      "defect": 6
+    },
+    {
+      "d": 3,
+      "I_H": 3,
+      "k": 3,
+      "H": 69,
+      "defect": 6
+    },
+    {
+      "d": 3,
+      "I_H": 3,
+      "k": 4,
+      "H": 141,
+      "defect": 6
+    },
+    {
+      "d": 4,
+      "I_H": 1,
+      "k": 1,
+      "H": 17,
+      "defect": 14
+    },
+    {
+      "d": 4,
+      "I_H": 1,
+      "k": 2,
+      "H": 47,
+      "defect": 14
+    },
+    {
+      "d": 4,
+      "I_H": 1,
+      "k": 3,
+      "H": 107,
+      "defect": 14
+    },
+    {
+      "d": 4,
+      "I_H": 1,
+      "k": 4,
+      "H": 227,
+      "defect": 14
+    },
+    {
+      "d": 5,
+      "I_H": 1,
+      "k": 1,
+      "H": 33,
+      "defect": 30
+    },
+    {
+      "d": 5,
+      "I_H": 1,
+      "k": 2,
+      "H": 95,
+      "defect": 30
+    },
+    {
+      "d": 5,
+      "I_H": 1,
+      "k": 3,
+      "H": 219,
+      "defect": 30
+    },
+    {
+      "d": 5,
+      "I_H": 1,
+      "k": 4,
+      "H": 467,
+      "defect": 30
+    },
+    {
+      "d": 6,
+      "I_H": 1,
+      "k": 1,
+      "H": 65,
+      "defect": 62
+    },
+    {
+      "d": 6,
+      "I_H": 1,
+      "k": 2,
+      "H": 191,
+      "defect": 62
+    },
+    {
+      "d": 6,
+      "I_H": 1,
+      "k": 3,
+      "H": 443,
+      "defect": 62
+    },
+    {
+      "d": 6,
+      "I_H": 1,
+      "k": 4,
+      "H": 947,
+      "defect": 62
+    }
+  ],
+  "H141_source": [
+    240,
+    5,
+    9,
+    3,
+    238,
+    206,
+    142,
+    14
+  ],
+  "H141_one_birth_targets": {
+    "425": [],
+    "427": []
+  },
+  "scope": "Finite literal controls; all-order equality follows from positive tagged five-cycle proof in MINIMAL_DEFECT.md."
+}

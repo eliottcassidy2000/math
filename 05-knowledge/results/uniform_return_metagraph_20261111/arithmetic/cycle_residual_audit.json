@@ -1,0 +1,19 @@
+{
+  "C3_contact_orbits": 24,
+  "additional_random_presentations_orders9_through11": 24,
+  "b6_strong_rooted_classes_by_order": {
+    "6": 1,
+    "7": 4,
+    "8": 9
+  },
+  "complete_literal_presentations_through_order8": 1368,
+  "exact_productive_regex_paths": 10,
+  "proof_review": "q-s=0 fixes an initial residual SCC: first left contact11 or empty-left C3 contacts all11. Such prefixes keep q-s=0. Tagged capacity is induced-extension monotone; a disjoint C3 packing multiplies prefix capacity by3. Thus left bound2 and post-core bound6 are necessary. Last nonzero contact is exact strongness under the fixed initial SCC. The C3 rotation quotient is intrinsic after removing root and its ordered inports.",
+  "reviewed_sha256": {
+    "cycle_residual.json": "36d15fe258b78a94238600c25e79958682f855a3a849de5773daedeba7fd90b3",
+    "cycle_residual.py": "0cf64472ceba8ed00264e8bfd49d28cf5dab3cd795b888e535c879e8f8c84603"
+  },
+  "scope": "Own graph labels, first-vertex/reverse DP, reachability strongness and complete small orbit census; literal controls are independent, productive DFA discovery is inherited.",
+  "series": "x^6(1+2x+2x^2)/(1-x)^2",
+  "status": "PASS; scoped independent audit"
+}

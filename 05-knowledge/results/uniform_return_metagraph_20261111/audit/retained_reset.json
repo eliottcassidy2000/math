@@ -1,0 +1,247 @@
+{
+  "graph_cases": 18,
+  "method": "Fresh named graph construction, endpoint subset recurrence, literal permutations",
+  "no_construction_lane_imports": true,
+  "records": [
+    {
+      "k": 1,
+      "profile": {
+        "H": 31,
+        "defect": 2,
+        "literal_permutation_H": 31,
+        "order": 6,
+        "q": 5,
+        "residual_H": 1,
+        "s": 5,
+        "strong": true
+      },
+      "t": 0
+    },
+    {
+      "k": 1,
+      "profile": {
+        "H": 221,
+        "defect": 24,
+        "literal_permutation_H": 221,
+        "order": 9,
+        "q": 41,
+        "residual_H": 9,
+        "s": 41,
+        "strong": true
+      },
+      "t": 1
+    },
+    {
+      "k": 1,
+      "profile": {
+        "H": 2153,
+        "defect": 268,
+        "order": 12,
+        "q": 417,
+        "residual_H": 89,
+        "s": 417,
+        "strong": true
+      },
+      "t": 2
+    },
+    {
+      "k": 1,
+      "profile": {
+        "H": 24105,
+        "defect": 3120,
+        "order": 15,
+        "q": 4725,
+        "residual_H": 993,
+        "s": 4725,
+        "strong": true
+      },
+      "t": 3
+    },
+    {
+      "k": 2,
+      "profile": {
+        "H": 59,
+        "defect": 2,
+        "literal_permutation_H": 59,
+        "order": 7,
+        "q": 5,
+        "residual_H": 1,
+        "s": 5,
+        "strong": true
+      },
+      "t": 0
+    },
+    {
+      "k": 2,
+      "profile": {
+        "H": 425,
+        "defect": 24,
+        "order": 10,
+        "q": 41,
+        "residual_H": 9,
+        "s": 41,
+        "strong": true
+      },
+      "t": 1
+    },
+    {
+      "k": 2,
+      "profile": {
+        "H": 4157,
+        "defect": 268,
+        "order": 13,
+        "q": 417,
+        "residual_H": 89,
+        "s": 417,
+        "strong": true
+      },
+      "t": 2
+    },
+    {
+      "k": 3,
+      "profile": {
+        "H": 115,
+        "defect": 2,
+        "order": 8,
+        "q": 5,
+        "residual_H": 1,
+        "s": 5,
+        "strong": true
+      },
+      "t": 0
+    },
+    {
+      "k": 3,
+      "profile": {
+        "H": 833,
+        "defect": 24,
+        "order": 11,
+        "q": 41,
+        "residual_H": 9,
+        "s": 41,
+        "strong": true
+      },
+      "t": 1
+    },
+    {
+      "k": 3,
+      "profile": {
+        "H": 8165,
+        "defect": 268,
+        "order": 14,
+        "q": 417,
+        "residual_H": 89,
+        "s": 417,
+        "strong": true
+      },
+      "t": 2
+    },
+    {
+      "k": 4,
+      "profile": {
+        "H": 227,
+        "defect": 2,
+        "order": 9,
+        "q": 5,
+        "residual_H": 1,
+        "s": 5,
+        "strong": true
+      },
+      "t": 0
+    },
+    {
+      "k": 4,
+      "profile": {
+        "H": 1649,
+        "defect": 24,
+        "order": 12,
+        "q": 41,
+        "residual_H": 9,
+        "s": 41,
+        "strong": true
+      },
+      "t": 1
+    },
+    {
+      "k": 5,
+      "profile": {
+        "H": 451,
+        "defect": 2,
+        "order": 10,
+        "q": 5,
+        "residual_H": 1,
+        "s": 5,
+        "strong": true
+      },
+      "t": 0
+    },
+    {
+      "k": 5,
+      "profile": {
+        "H": 3281,
+        "defect": 24,
+        "order": 13,
+        "q": 41,
+        "residual_H": 9,
+        "s": 41,
+        "strong": true
+      },
+      "t": 1
+    },
+    {
+      "k": 6,
+      "profile": {
+        "H": 899,
+        "defect": 2,
+        "order": 11,
+        "q": 5,
+        "residual_H": 1,
+        "s": 5,
+        "strong": true
+      },
+      "t": 0
+    },
+    {
+      "k": 6,
+      "profile": {
+        "H": 6545,
+        "defect": 24,
+        "order": 14,
+        "q": 41,
+        "residual_H": 9,
+        "s": 41,
+        "strong": true
+      },
+      "t": 1
+    },
+    {
+      "k": 7,
+      "profile": {
+        "H": 1795,
+        "defect": 2,
+        "order": 12,
+        "q": 5,
+        "residual_H": 1,
+        "s": 5,
+        "strong": true
+      },
+      "t": 0
+    },
+    {
+      "k": 7,
+      "profile": {
+        "H": 13073,
+        "defect": 24,
+        "order": 15,
+        "q": 41,
+        "residual_H": 9,
+        "s": 41,
+        "strong": true
+      },
+      "t": 1
+    }
+  ],
+  "scalar_controls": 1500,
+  "source_scales": 7,
+  "status": "PASS"
+}

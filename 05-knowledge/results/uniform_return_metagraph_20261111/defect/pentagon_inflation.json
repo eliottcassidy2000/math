@@ -1,0 +1,79 @@
+{
+  "formula": "H=E*Q_P(2)+B*H(P); q=s=q_W*H(P); defect=2*H(P)",
+  "scope": "Five uniform-prefix tail responses and50 literal triangle-gap instances",
+  "status": "PASS",
+  "tails": [
+    {
+      "B": -1,
+      "C": 2,
+      "E": 3,
+      "W_rows": [
+        2,
+        0
+      ],
+      "q": 1,
+      "tail": []
+    },
+    {
+      "B": 1,
+      "C": 2,
+      "E": 6,
+      "W_rows": [
+        2,
+        4,
+        1
+      ],
+      "q": 3,
+      "tail": [
+        1
+      ]
+    },
+    {
+      "B": -1,
+      "C": 2,
+      "E": 5,
+      "W_rows": [
+        6,
+        0,
+        2
+      ],
+      "q": 1,
+      "tail": [
+        2
+      ]
+    },
+    {
+      "B": 3,
+      "C": 2,
+      "E": 13,
+      "W_rows": [
+        10,
+        4,
+        9,
+        2
+      ],
+      "q": 5,
+      "tail": [
+        1,
+        2
+      ]
+    },
+    {
+      "B": 3,
+      "C": 2,
+      "E": 14,
+      "W_rows": [
+        6,
+        8,
+        10,
+        1
+      ],
+      "q": 5,
+      "tail": [
+        2,
+        1
+      ]
+    }
+  ],
+  "tests": 50
+}

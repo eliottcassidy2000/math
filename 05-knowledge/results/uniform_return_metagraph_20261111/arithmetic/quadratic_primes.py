@@ -107,7 +107,8 @@ def main():
     # Cross-sequence extremal equivalence, over the actual computed A135244 range.
     maximum,_,_=maxima.enumerate_maxima(1_000_000)
     bridge=[]
-    for r in range(1,isqrt(999_998)+1):
+    bridge_limit=min(N,isqrt(999_998))
+    for r in range(1,bridge_limit+1):
         p=r*r+1
         is_quadratic_prime=p in values
         need((maximum[p+1]==p*p)==is_quadratic_prime,'aliquot extremal equivalence')
@@ -127,7 +128,7 @@ def main():
         'last10':values[-10:],
         'trial_division_root_bound':trial_limit,
         'trial_division_prime_count':len(trial),
-        'aliquot_bridge_root_bound':isqrt(999_998),
+        'aliquot_bridge_root_bound':bridge_limit,
         'aliquot_bridge_prime_count':len(bridge),
         'aliquot_bridge_first10':bridge[:10],
     }

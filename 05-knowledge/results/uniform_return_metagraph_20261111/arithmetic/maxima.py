@@ -166,9 +166,12 @@ def audit_prefix(answer, limit=500):
         if omega[m]==3 and cubic_cap(n)==m:
             equality.append((m,n))
     require(list(answer[2:limit+1])==truth[2:], 'full source-sieve audit')
-    require(answer[5]==0 and answer[7]==8 and answer[15]==33, 'small residual controls')
-    require(s[9]==4 and 1+3+3!=s[9], 'repeated-prime hostile')
-    require(answer[12]==121 and 121>2*12, 'even-target linear-bound hostile')
+    if limit>=15:
+        require(answer[5]==0 and answer[7]==8 and answer[15]==33, 'small residual controls')
+    if bound>=9:
+        require(s[9]==4 and 1+3+3!=s[9], 'repeated-prime hostile')
+    if limit>=12:
+        require(answer[12]==121 and 121>2*12, 'even-target linear-bound hostile')
     return {'targets':[2,limit], 'complete_source_bound':bound,
             'Omega3_sources_checked':layer_checks,'integer_cap_equalities_first20':equality[:20]}
 
@@ -191,7 +194,7 @@ def main():
     receipt['status']='FINITE-EXACT certified prefix; no global Goldbach or maximum-shape claim'
     receipt['table_sha256']=normalized_hash(values)
     receipt['first59']=[int(v) for v in values[2:61]]
-    receipt['last10']=[(n,int(values[n])) for n in range(args.limit-9,args.limit+1)]
+    receipt['last10']=[(n,int(values[n])) for n in range(max(2,args.limit-9),args.limit+1)]
     receipt['type_key']={'0':'empty','1':'prime square','2':'closest distinct semiprimes',
                          '3':'even source','4':'composite odd square','5':'residual exhaustive'}
     if args.table:

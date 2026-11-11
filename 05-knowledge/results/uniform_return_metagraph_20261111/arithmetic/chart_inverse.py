@@ -54,7 +54,7 @@ def chart_inverse(target,coeff,max_short=None,stats=None):
     If supplied, all solutions with min(A,B)<=max_short are returned.
     """
     h,d,L,i,o,s,e=coeff
-    require(d>0 and L>0 and h>=d and min(i,o,s,e)>=0 and max(s,e)<=d,'actual positive coefficient domain')
+    require(d>0 and L>d and h>=d and min(i,o,s,e)>=0 and max(s,e)<=d,'actual positive coefficient domain')
     if target<h:return []
     K=isqrt((target-h)//L)
     if max_short is not None:

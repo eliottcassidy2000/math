@@ -1,0 +1,8 @@
+{
+  "branching_roots": 2008,
+  "clones": 3208,
+  "graphs": 570,
+  "method": "Independent endpoint subset recurrence, mutual reachability SCCs, literal new clone arcs",
+  "status": "PASS",
+  "universe": "Every labelled strong tournament through five vertices, every branching root and every out-neighbour clone"
+}

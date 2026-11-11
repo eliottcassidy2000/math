@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "method": "Previously generated normal receipts compared byte-for-byte after LF normalization with fresh python -O -B runs. Controls use explicit runtime checks.",
+  "checks": [
+    {
+      "script": "chart_inverse.py",
+      "receipt": "chart_inverse.json",
+      "normal_optimized_identical": true,
+      "normalized_receipt_sha256": "76974e29026a450c084417a66dea9de45c16344b57e80d5382f06e2d0eb413bf"
+    },
+    {
+      "script": "ray_inverse.py",
+      "receipt": "ternary_plus_four.json",
+      "normal_optimized_identical": true,
+      "normalized_receipt_sha256": "c0e253f7d6e13df91805366771e70882b1eb764e030a477a2dfe19dd774b5f12"
+    },
+    {
+      "script": "biflank.py",
+      "receipt": "biflank.json",
+      "normal_optimized_identical": true,
+      "normalized_receipt_sha256": "165239704812a315f7025a0312ae6858f66d011c544665dd1fc18dd261f838b0"
+    },
+    {
+      "script": "minimum_squares.py",
+      "receipt": "minimum_squares.json",
+      "normal_optimized_identical": true,
+      "normalized_receipt_sha256": "759fb003bb8bd2de421df0f5e7847d35140d9c40d5d986182a76fecd544f75b7"
+    },
+    {
+      "script": "audit_cycle_residual.py",
+      "receipt": "cycle_residual_audit.json",
+      "normal_optimized_identical": true,
+      "normalized_receipt_sha256": "1ba9cb282066c8c44b1ef908c8373178c80c3747f9dfe7d963e07bcd4d9024a7"
+    },
+    {
+      "script": "tail_squares.py",
+      "receipt": "tail_squares.json",
+      "normal_optimized_identical": true,
+      "normalized_receipt_sha256": "5ad581321353660b01b8937d046e94b58e381c549d5e792cd379f90b9dd77fb6"
+    }
+  ],
+  "complete_A002496_table": {
+    "rows": 54110,
+    "last_row": "54110 999920001601",
+    "normalized_sha256": "7e0cab43bcacbbd320d05e82e250aa5b05ad794ef53990465008b3997debd971"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "source": [
+    30,
+    20,
+    8,
+    50,
+    36,
+    7
+  ],
+  "levels": [
+    {
+      "depth": 1,
+      "order": 7,
+      "parents": 1,
+      "cuts": 64,
+      "states": 32,
+      "hits": 0
+    },
+    {
+      "depth": 2,
+      "order": 8,
+      "parents": 32,
+      "cuts": 4096,
+      "states": 209,
+      "hits": 0
+    },
+    {
+      "depth": 3,
+      "order": 9,
+      "parents": 209,
+      "cuts": 53504,
+      "states": 41,
+      "hits": 0
+    },
+    {
+      "depth": 4,
+      "order": 10,
+      "parents": 41,
+      "cuts": 20992,
+      "states": 0,
+      "hits": 0
+    }
+  ],
+  "hits": []
+}

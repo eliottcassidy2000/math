@@ -6,8 +6,10 @@ DP. Imports only the literal family/dictionary data and canonical SCC word.
 import importlib.util
 import itertools as it
 import json
+import hashlib
 from collections import Counter
 from functools import lru_cache
+from math import comb
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -131,6 +133,43 @@ def main():
     need(all(a==b or {a,b}=={"C","D"} for a,b in edges),
          "unexpected neutral kernel edge")
     need(("C","D") in edges or ("D","C") in edges,"missing C-D connection")
+    # Literal mask and named-tuple orbit sets, independent of cycle-index evaluation.
+    orbit_rows=[]
+    for n in range(1,8):
+        subsets=two_named=three_named=0
+        for word in m.family_words(n):
+            graph=m.from_word(word)
+            group=m.word_aut(word)
+            brute=tuple(p for p in it.permutations(range(n))
+                        if all(((graph[u]>>v)&1)==((graph[p[u]]>>p[v])&1)
+                               for u in range(n) for v in range(n)))
+            need(set(group)==set(brute),"SCC product misses automorphism")
+            sets=set()
+            for mask in range(1<<n):
+                sets.add(min(sum(1<<p[v] for v in range(n) if mask>>v&1)
+                             for p in group))
+            subsets+=len(sets)
+            for r in (2,3):
+                seen={min(tuple(p[v] for v in names) for p in group)
+                      for names in it.permutations(range(n),r)}
+                if r==2:two_named+=len(seen)
+                else:three_named+=len(seen)
+        orbit_rows.append(dict(n=n,attachment_orbits=subsets,two_named=two_named,
+                               three_named=three_named))
+    own=json.loads((HERE/"cap9.json").read_text(encoding="utf-8"))["series_rows"]
+    for r in orbit_rows:
+        expected=own[r["n"]]
+        need(r["attachment_orbits"]==expected["attachment_orbits"],"mask orbit formula")
+        need([r["two_named"],r["three_named"]]==expected["ordered_named_markings_0_to_3"][2:],
+             "named tuple orbit formula")
+    incoming=HERE.parents[1]/"infinite_birth_families_20261111/all_size_birth_families_below125.json"
+    raw=incoming.read_bytes().replace(b"\r\n",b"\n")
+    families=json.loads(raw)["families"]
+    for n in range(50):
+        found=sum(c*comb(n-shift+pole-1,pole-1)
+                  for key,f in families.items() if max(map(int,key.split(',')))<=9
+                  for shift,pole,c in f["terms"] if n>=shift)
+        need(found==own[n+1]["rooted"],"concurrent fixed-H birth family comparison")
     result=dict(status="PASS",birth_queries=birth_checks,births_under_cap=valid_births,
                 arc_queries=arc_checks,arcs_under_cap=valid_arcs,
                 native_lines=Counter((str(x["n"])+"_"+x["color"]) for x in m.native_lines()),
@@ -139,6 +178,10 @@ def main():
                                      retained_names=[0,3,4,5],
                                      step1=step1,step2=step2,births=lower,counts=[9,3,3,9]),
                 neutral_kernel_edges=sorted(edges),
+                literal_orbit_checks=orbit_rows,
+                incoming_birth_family_comparison=dict(rows=50,
+                    source="infinite_birth_families_20261111/all_size_birth_families_below125.json",
+                    sha256=hashlib.sha256(raw).hexdigest()),
                 scope="Finite independent operation audit; all-order completeness and height17 lower bound are written proofs.")
     (HERE/"operation_audit.json").write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({k:result[k] for k in ("status","birth_queries","births_under_cap","arc_queries","arcs_under_cap")}))

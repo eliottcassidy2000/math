@@ -137,5 +137,54 @@
       "D"
     ]
   ],
+  "literal_orbit_checks": [
+    {
+      "n": 1,
+      "attachment_orbits": 2,
+      "two_named": 0,
+      "three_named": 0
+    },
+    {
+      "n": 2,
+      "attachment_orbits": 4,
+      "two_named": 2,
+      "three_named": 0
+    },
+    {
+      "n": 3,
+      "attachment_orbits": 12,
+      "two_named": 8,
+      "three_named": 8
+    },
+    {
+      "n": 4,
+      "attachment_orbits": 48,
+      "two_named": 32,
+      "three_named": 64
+    },
+    {
+      "n": 5,
+      "attachment_orbits": 208,
+      "two_named": 124,
+      "three_named": 360
+    },
+    {
+      "n": 6,
+      "attachment_orbits": 656,
+      "two_named": 302,
+      "three_named": 1152
+    },
+    {
+      "n": 7,
+      "attachment_orbits": 1824,
+      "two_named": 602,
+      "three_named": 2842
+    }
+  ],
+  "incoming_birth_family_comparison": {
+    "rows": 50,
+    "source": "infinite_birth_families_20261111/all_size_birth_families_below125.json",
+    "sha256": "3f9a8ed62e46675ec1fedf2b59be70b265e68e1b3b8a271d543e341e956941b5"
+  },
   "scope": "Finite independent operation audit; all-order completeness and height17 lower bound are written proofs."
 }

@@ -171,8 +171,13 @@ Rooted isomorphisms fix the ordered two inports and the unique residual
 chain, so different words are different rooted classes and all are rigid.
 
 At b6 the transitive-residual d2 chart has four additional isolated words
-and the inherited31 neutral tails. It is NOT the complete branching b6
-stratum: d3 and a C3 residual first become possible at that budget.
+and the inherited31 neutral tails. Its series is
+
+    2x^5+2x^6+(x^6+12x^7+18x^8)/(1-x).
+
+The isolated words, in integer notation, are `11`,`13`,`221`,`231`.
+Here `11` means two consecutive letters of value1, not one letter11.
+This chart is one of three disjoint sectors in the complete b6 result below.
 
 ## 5. Complete three-inport minimum-defect families
 
@@ -200,8 +205,104 @@ H=(Q_I(2)-H(I))2^k+3H(I)-Q_I(2); use(H,Q(2))=(1,8),(3,12).
 The rooted automorphism groups are respectively trivial and C3, so the
 two families must not be counted as rigid labelled presentations.
 
-The d2/C3-residual sector remains a separate required part of a full
-b6 classification. No completeness claim for that sector is made here.
+There is now an elementary proof for this sector and its all-degree
+generalization in [MINIMAL_DEFECT](../metagraph/MINIMAL_DEFECT.md):
+for every d>=3 the minimum b=2^d-2 consists exactly of
+r->TT_k->I->r, with I=TT3 or C3 for d3 and I=TT_d for d>=4.
+A mixed-contact residual vertex, or a zero-before-one pair in its chain,
+creates a new positive tagged five-cycle and contradicts equality in(6).
+This proof has been independently reviewed; the automaton is an additional
+finite certificate of the d3 case.
+
+## 6. The residual triangle and the complete defect-six classification
+
+The only remaining possibility at b6 is d2,H(R)=3. The residual is
+uniquely TT_a->C3->TT_b, a,b>=0. The two ordered inports are fixed, and
+the contacts of C3 have24 orbits under its cyclic automorphism group.
+An exact transition for this residual block sums its12 assignments to
+two ordered path bins, respecting each bin's actual path order. This
+extends the same positive run compiler without treating the triangle
+as a transitive word.
+
+Equality b6 forces q-s=0. If the first residual gap is nonempty, its
+first vertex must beat both inports; if it is empty, all three vertices
+of the first residual SCC must beat both. In either case the source SCC
+of U avoids I, which preserves q-s=0 for every later residual prefix.
+Before the triangle, tagged-capacity positivity and its independent
+odd-cycle packing force delta_final>=3 delta_prefix. After it, deletion
+monotonicity forces delta_final>=delta_prefix. Therefore the prefix
+budgets2 and6 used by `cycle_residual.py` are necessary. The empty
+starting state is treated separately: its value includes q-s and is
+not pruned as though it were delta.
+
+The complete capped automaton has34 reachable states and7 productive
+states. Its language is exactly
+
+    11^a C3_11 11^b w,       a,b>=0,
+    w in {empty,10,01,(10,01),(01,10)}.                      (7)
+
+The triangle's three contact letters are all11. The five terminal
+tails are precisely the old ready pentagon. Thus the residual triangle
+inflates that pentagon to FIVE two-parameter families. The root fixes
+the two ordered inports, and the intrinsic SCC order fixes both gaps;
+the remaining rooted automorphism group is C3. Each presentation in(7)
+is one rooted isomorphism class. Their series is
+
+    x^6(1+2x+2x^2)/(1-x)^2.                                 (8)
+
+The universe of all strong rooted tournaments with branching defect6
+is now exhausted: equation(6) permits only d2 with H(R)=1 or3, or d3
+with H(R)=1. Summing the three sectors gives
+
+    B_6(x)=(4x^5-2x^6+11x^7+10x^8-18x^9)/(1-x)^2.           (9)
+
+Its counts from orders5 onward are4,6,19,42,47,52,..., and exactly
+5n+2 for every n>=8. This is42 disjoint described families: four
+isolated objects,31 transitive-residual rays, two three-inport rays,
+and five triangle-residual surfaces. This number is an output of the
+classification, not an assumed structural correspondence.
+
+The mechanism is informative beyond the count: the first extra SCC
+opens a second independent gap, changing eventual constant rooted
+counts into linear growth. At higher fixed defects the same finite
+kernel/gap grammar applies, but neither this particular polynomial nor
+this list of cores is asserted to persist.
+
+### Exact Hamilton values and the information lost by gap collapse
+
+For a ready tail w, let W consist of its two inports and its tail vertices.
+Write E for the ordered two-bin cover count of W whose first path ends
+at an inport, q=H(W), and C for the sum of the two opposed endpoint covers.
+The inherited variable-prefix decomposition in
+[Session181](../../session181_multiport_defect_20261104/synthesis/NOTE.md)
+gives, for any nonempty prefix tournament P with uniform contacts,
+
+    H=E Q_P(2)+(q-C)H(P),   s_r=q_r=q H(P),   defect=C H(P).
+
+The five tails have exact(E,q,C,q-C) data
+
+|tail|E|q|C|q-C|
+|---|---:|---:|---:|---:|
+|empty|3|1|2|-1|
+|10|6|3|2|1|
+|01|5|1|2|-1|
+|10,01|13|5|2|3|
+|01,10|14|5|2|3|
+
+For P=TT_a->C3->TT_b, let D=2^(a+b). Then H(P)=3 and Q_P(2)=12D.
+The five triangle-inflated Hamilton values are respectively
+
+    36D-3, 72D+3, 60D-3, 156D+9, 168D+9.                    (10)
+
+This identifies every size and scalar value in these families. For a fixed
+tail and m=a+b, there are exactly m+1 different rooted classes with the
+same full displayed response. The scalar data forget the triangle's
+position; the two ordered gaps restore it. These values are all divisible
+by3, so NONE equals n^2+1, since a square is0 or1 modulo3. This excludes
+the whole sector from A002496 without assuming anything about primes.
+`pentagon_inflation.py` computes the finite interface coefficients directly
+and independently checks50 literal triangle-gap instances. The general
+formula follows from the path-bin decomposition, not from interpolation.
 
 ## Reproduction and scope
 
@@ -215,5 +316,11 @@ general rationality theorem rests on the construction in section3.
 Independent implementations in [the metagraph audit](../metagraph/audit_defect.py)
 and [the arithmetic audit](../arithmetic/audit_defect.py) review sections1–4
 and check literal path words, positive terms and the exact accepted-language
-series independently. Section5 has its own1170 literal DP controls and
-exact weighted-bisimulation/capped-DFA receipt, not yet a separate-agent audit.
+series independently. Section5 has1170 literal DP controls, an exact
+weighted-bisimulation/capped-DFA receipt, and the independently reviewed
+all-degree proof in MINIMAL_DEFECT. Run `python -B defect/cycle_residual.py`
+for section6. Its1368 literal controls are separately repeated with a
+different graph gauge and first-vertex DP in
+[audit_cycle_residual.py](../arithmetic/audit_cycle_residual.py), with24
+additional larger random controls and independent generating-series checks.
+Both the metagraph and arithmetic reviewers audited the pruning argument.

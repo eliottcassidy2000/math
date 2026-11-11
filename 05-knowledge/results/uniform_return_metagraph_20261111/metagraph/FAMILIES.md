@@ -16,6 +16,15 @@ already gives unrestricted Burnside enumeration and aggregate prime-index
 recovery; those are not new here. The older [82-sequence census](../../metagraph_aspect_sequences_20261111/README.md)
 already distinguishes scalar target unions from compatible sources.
 
+Concurrent incoming work in [infinite birth families](../../infinite_birth_families_20261111/README.md)
+independently supplies the consecutive-SCC birth classification and compiles946
+fixed-H birth families below125. That birth mechanism receives concurrent
+credit here. The present operation package additionally retains arc reversals,
+the finite capped native part, marked padding reachability, neutral components,
+and the sharp excursion height. Its capped-birth series agrees with all50
+tested rows of the incoming compiler; this is a cross-check, not a rerun of
+the incoming primitive census.
+
 Hostile: different H9 sources can have different operations despite equal H.
 Corrected near miss: finite grammar saturation is not an all-height proof.
 Underused sidecar: the ordered SCC word, including every singleton position,
@@ -102,10 +111,14 @@ self-converse, because it reverses the gap positions.
 Each birth/deletion/arc rule is a replacement of a bounded contiguous word
 inside an unchanged left/right context. The cap is a finite multiplicative
 state. Consequently a finite transducer recognizes the exact support relation
-for each operation. A prescribed finite composition is obtained by composing
+for each of these operations; finite native relations can be included. A
+prescribed finite composition is obtained by composing
 these transducers and projecting intermediate words. This supplies effective
 tests for regular source families and fixed finite programs. Arbitrary-length
-reachability is not inferred from closure under finite composition.
+reachability is not inferred from closure under finite composition. Converse
+is handled separately by reversal of the queried regular language and the
+converse covariance of the local rules. A one-way transducer for arbitrary
+word reversal is not being claimed.
 
 There is also an exact finite quotient when free singleton padding is allowed.
 Fix r distinct persistent names and a fixed induced tournament on those names.
@@ -352,7 +365,10 @@ frame, converse, arbitrary-attachment and two/three-named refinements through50.
 to check3,607 forward attachments and4,592 arc reversals, including502 and1,644
 operations remaining under the cap. It verifies localization, both literal
 9-return paths, and the neutral-kernel quotient. Its normal and optimized runs
-agree. `audit_defect.py` separately audits the root's fixed-defect grammar by
+agree. Direct graph automorphism enumeration and literal subset/named-tuple
+orbit sets through order7 audit the cycle-index consequences. The incoming
+fixed-H birth compiler comparison pins its source hash in the receipt.
+`audit_defect.py` separately audits the root's fixed-defect grammar by
 341 literal permutation/cut counts and independent strongness searches.
 
 Connection contract: actual tournament -> ordered strong letters and singleton

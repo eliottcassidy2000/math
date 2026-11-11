@@ -1,0 +1,226 @@
+{
+  "Fermat_prime_examples": [
+    {
+      "Fermat_index": 2,
+      "H": 17,
+      "Lucas_base": 3,
+      "complete_prime_divisors_of_H_minus_1": [
+        2
+      ],
+      "d": 4,
+      "defect": 14,
+      "root": 5,
+      "source_rows": [
+        30,
+        60,
+        56,
+        48,
+        32,
+        1
+      ],
+      "square_root": 4
+    },
+    {
+      "Fermat_index": 3,
+      "H": 257,
+      "Lucas_base": 3,
+      "complete_prime_divisors_of_H_minus_1": [
+        2
+      ],
+      "d": 8,
+      "defect": 254,
+      "root": 9,
+      "source_rows": [
+        510,
+        1020,
+        1016,
+        1008,
+        992,
+        960,
+        896,
+        768,
+        512,
+        1
+      ],
+      "square_root": 16
+    },
+    {
+      "Fermat_index": 4,
+      "H": 65537,
+      "Lucas_base": 3,
+      "complete_prime_divisors_of_H_minus_1": [
+        2
+      ],
+      "d": 16,
+      "defect": 65534,
+      "root": 17,
+      "source_rows": [
+        131070,
+        262140,
+        262136,
+        262128,
+        262112,
+        262080,
+        262016,
+        261888,
+        261632,
+        261120,
+        260096,
+        258048,
+        253952,
+        245760,
+        229376,
+        196608,
+        131072,
+        1
+      ],
+      "square_root": 256
+    }
+  ],
+  "arithmetic_transitive_collar_cases": 16128,
+  "literal_controls": [
+    {
+      "H": 9,
+      "d": 3,
+      "k": 1,
+      "order": 5
+    },
+    {
+      "H": 23,
+      "d": 3,
+      "k": 2,
+      "order": 6
+    },
+    {
+      "H": 51,
+      "d": 3,
+      "k": 3,
+      "order": 7
+    },
+    {
+      "H": 17,
+      "d": 4,
+      "k": 1,
+      "order": 6
+    },
+    {
+      "H": 47,
+      "d": 4,
+      "k": 2,
+      "order": 7
+    },
+    {
+      "H": 107,
+      "d": 4,
+      "k": 3,
+      "order": 8
+    },
+    {
+      "H": 33,
+      "d": 5,
+      "k": 1,
+      "order": 7
+    },
+    {
+      "H": 95,
+      "d": 5,
+      "k": 2,
+      "order": 8
+    },
+    {
+      "H": 219,
+      "d": 5,
+      "k": 3,
+      "order": 9
+    },
+    {
+      "H": 65,
+      "d": 6,
+      "k": 1,
+      "order": 8
+    },
+    {
+      "H": 191,
+      "d": 6,
+      "k": 2,
+      "order": 9
+    },
+    {
+      "H": 443,
+      "d": 6,
+      "k": 3,
+      "order": 10
+    },
+    {
+      "H": 129,
+      "d": 7,
+      "k": 1,
+      "order": 9
+    },
+    {
+      "H": 383,
+      "d": 7,
+      "k": 2,
+      "order": 10
+    },
+    {
+      "H": 891,
+      "d": 7,
+      "k": 3,
+      "order": 11
+    },
+    {
+      "H": 257,
+      "d": 8,
+      "k": 1,
+      "order": 10
+    },
+    {
+      "H": 767,
+      "d": 8,
+      "k": 2,
+      "order": 11
+    },
+    {
+      "H": 1787,
+      "d": 8,
+      "k": 3,
+      "order": 12
+    }
+  ],
+  "residual_C3_excluded_rays": [
+    {
+      "B": -1,
+      "E": 3,
+      "constant": -3,
+      "leading": 36
+    },
+    {
+      "B": 1,
+      "E": 6,
+      "constant": 3,
+      "leading": 72
+    },
+    {
+      "B": -1,
+      "E": 5,
+      "constant": -3,
+      "leading": 60
+    },
+    {
+      "B": 3,
+      "E": 13,
+      "constant": 9,
+      "leading": 156
+    },
+    {
+      "B": 3,
+      "E": 14,
+      "constant": 9,
+      "leading": 168
+    }
+  ],
+  "scope": "All-degree classification is inherited; congruence proof gives iff. Prime members are exactly Fermat primes of index>=2, without asserting their infinitude or that the examples exhaust them.",
+  "status": "PROVED classified-stratum iff; FINITE-EXACT controls",
+  "triangle_cases": 128
+}
