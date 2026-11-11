@@ -1,0 +1,82 @@
+{
+  "H55_twins": [
+    {
+      "literal_state": [
+        34,
+        21,
+        61
+      ],
+      "phase_mod7": [
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "literal_state": [
+        32,
+        23,
+        63
+      ],
+      "phase_mod7": [
+        2,
+        3,
+        5
+      ]
+    }
+  ],
+  "graphs": {
+    "3": {
+      "dimension_histogram": [
+        1,
+        13,
+        13,
+        1
+      ],
+      "shortest_zero_length": 2,
+      "states": 28
+    },
+    "5": {
+      "dimension_histogram": [
+        1,
+        31,
+        31,
+        1
+      ],
+      "shortest_zero_length": 7,
+      "states": 64
+    },
+    "7": {
+      "dimension_histogram": [
+        1,
+        57,
+        57,
+        1
+      ],
+      "shortest_zero_length": 6,
+      "states": 116
+    },
+    "11": {
+      "dimension_histogram": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "shortest_zero_length": null,
+      "states": 1
+    }
+  },
+  "independent_methods": [
+    "explicit finite-field vector-set BFS, no RREF",
+    "integer product and 2x2-minor Smith arithmetic",
+    "literal permutation-and-subset cover counts for H55 twins"
+  ],
+  "script_sha256": "b104af37d419905b487a15965640a2be6a06ba50122d23798701614a7e7ab2e3",
+  "source_sha256": {
+    "golden/CHECK.json": "53da6134daf20fd9762e6340419dd27df2c456ef1493b24ca2a1c8bef316c2e4",
+    "golden/NOTE.md": "034f1da896ae608e9532dd6a84c46ba44dd22e4f5e277e16fb2632e53da6bd30",
+    "golden/check.py": "d3122b71ff44391e460784e2a08dd1384303660880fcb15651bafb0dc72b8001"
+  },
+  "status": "PASS"
+}

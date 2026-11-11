@@ -1,0 +1,331 @@
+{
+  "branch_cuts": {
+    "317": [
+      186
+    ],
+    "319": [
+      26,
+      31
+    ]
+  },
+  "count_sequence": [
+    105,
+    19,
+    105,
+    9,
+    105
+  ],
+  "fixed_order_controls": [
+    {
+      "classes": 19,
+      "maximum_minimum_card_H": 9,
+      "order": 8
+    },
+    {
+      "classes": 37,
+      "maximum_minimum_card_H": 9,
+      "order": 9
+    }
+  ],
+  "input_sha256": {
+    "04-computation/experiments/h_spectrum_multiplicities_20261021/audit_S50/inventory_375.json": "2c66c872b7af50346624a367150a6fb094af916fa1397ef707f342a897a73bd3",
+    "05-knowledge/results/chanpak_55_105_golden_20261110/targets/receipt.json": "2131e13b7b0887db6390d7187abe2ad67fa629e6f12ef925706f1711bf31a722"
+  },
+  "named_pair_joint_deletion_controls": [
+    {
+      "deletion_cube": [
+        105,
+        31,
+        33,
+        9
+      ],
+      "mod343": [
+        105,
+        31,
+        33,
+        9
+      ],
+      "mod49": [
+        7,
+        31,
+        33,
+        9
+      ],
+      "ports": [
+        1,
+        2
+      ]
+    },
+    {
+      "deletion_cube": [
+        105,
+        25,
+        9,
+        1
+      ],
+      "mod343": [
+        105,
+        25,
+        9,
+        1
+      ],
+      "mod49": [
+        7,
+        25,
+        9,
+        1
+      ],
+      "ports": [
+        0,
+        5
+      ]
+    },
+    {
+      "deletion_cube": [
+        105,
+        55,
+        33,
+        19
+      ],
+      "mod343": [
+        105,
+        55,
+        33,
+        19
+      ],
+      "mod49": [
+        7,
+        6,
+        33,
+        19
+      ],
+      "ports": [
+        0,
+        7
+      ]
+    }
+  ],
+  "original_to_final_survivors": [
+    [
+      0,
+      6
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      7,
+      2
+    ]
+  ],
+  "replacements": [
+    {
+      "card_H": 19,
+      "card_rows": [
+        126,
+        108,
+        72,
+        16,
+        6,
+        92,
+        24
+      ],
+      "delete_left": 5,
+      "left_rows": [
+        254,
+        204,
+        168,
+        16,
+        38,
+        74,
+        156,
+        56
+      ],
+      "new_right": 6,
+      "new_vertex_cut_in_card_order": 123,
+      "right_rows": [
+        46,
+        60,
+        24,
+        16,
+        33,
+        76,
+        159,
+        63
+      ],
+      "survivor_map": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          2
+        ]
+      ]
+    },
+    {
+      "card_H": 9,
+      "card_rows": [
+        30,
+        28,
+        8,
+        0,
+        44,
+        79,
+        31
+      ],
+      "delete_left": 4,
+      "left_rows": [
+        46,
+        60,
+        24,
+        16,
+        33,
+        76,
+        159,
+        63
+      ],
+      "new_right": 4,
+      "new_vertex_cut_in_card_order": 34,
+      "right_rows": [
+        158,
+        140,
+        24,
+        16,
+        34,
+        79,
+        159,
+        60
+      ],
+      "survivor_map": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          6
+        ]
+      ]
+    }
+  ],
+  "retained_named_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "script_sha256": "b8cf20d5dbce8093ba75c07ff3bae6389ee8ebb995eb371a8c9cb79c8d7422c8",
+  "status": "PASS; explicit reset and finite exact fixed-order bottlenecks",
+  "strong_H105_sources": 18
+}

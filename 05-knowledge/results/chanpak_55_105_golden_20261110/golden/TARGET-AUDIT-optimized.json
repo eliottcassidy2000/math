@@ -1,0 +1,26 @@
+{
+  "bank_sha256": "2c66c872b7af50346624a367150a6fb094af916fa1397ef707f342a897a73bd3",
+  "branch_core_counts": {
+    "105->317": 3,
+    "105->319": 1,
+    "35->107": 0,
+    "35->109": 0,
+    "55->111": 2,
+    "55->167": 2,
+    "55->169": 2
+  },
+  "canonicalization": "minimum over all within-degree permutations; no producer imports",
+  "common105": 0,
+  "common55": 2,
+  "internal_singleton_control": "PASS",
+  "literal_branch_controls": [
+    167,
+    169,
+    167,
+    169
+  ],
+  "relevant_deletions": 16,
+  "selected_children": 300,
+  "status": "PASS; independent source-kernel and padding audit",
+  "vertex_deletions": 2584
+}

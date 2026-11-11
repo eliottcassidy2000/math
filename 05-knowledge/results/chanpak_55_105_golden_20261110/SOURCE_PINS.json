@@ -1,0 +1,15 @@
+{
+  "git_object_sha256": {
+    "8e097d715769dd942ab21807a5a5ece39b66bec2:session197/path-polynomials/ONE_CORE_BINARY_INVERSE.md": "701d44aeb13e4f8c26ff44c3d25c3166350371232e7e00e3019e70b5aeab0321"
+  },
+  "source_HEAD": "8e097d715769dd942ab21807a5a5ece39b66bec2",
+  "source_sha256": {
+    "01-canon/theorems/THM-1900-the-insertion-response-calculus.md": "18f85768d767365dd28e69d2f5faa43bb9f292efa505f01828056c81f8690bb4",
+    "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+    "05-knowledge/results/golden_hamilton_transfer_20261103/CONNECTIONS.md": "47fbaf98eccb88b5c1d35c1132585727a628cec02079a79e109b2a00d9542692",
+    "05-knowledge/results/golden_hamilton_transfer_20261103/RECURRENCE.md": "611d9a6792ec1805201f43c69313d59a3dd401539cef5dd238d481b76b506aed",
+    "05-knowledge/results/session91_packing_golden_carriers_20261029/operators/GUARDED_FLIP_LEAKAGE.md": "852c4c7500ec804eb7c7488f11d765e4a320a42138b6b42a52c022b82e843183",
+    "05-knowledge/results/session91_packing_golden_carriers_20261029/packing/GOLDEN_METRIC_AND_PALEY_TORI.md": "0d23d29c12a92df143fe909d16318956f8037709b6f9afad0b0a1bc90baaba2a",
+    "05-knowledge/results/session91_packing_golden_carriers_20261029/zeckendorf/NORM_CONTROLLED_OBSERVERS.md": "df567e549cb6e41a8280b6c116e4909bf6de7d46aaa92bf2a4c210c45c06d352"
+  }
+}

@@ -1,0 +1,1090 @@
+{
+  "bank": "04-computation/experiments/h_spectrum_multiplicities_20261021/audit_S50/inventory_375.json",
+  "bank_sha256": "2c66c872b7af50346624a367150a6fb094af916fa1397ef707f342a897a73bd3",
+  "checked_child_classes": 300,
+  "checked_vertex_deletions": 2584,
+  "controls": {
+    "35_to_107": "absent",
+    "35_to_109": "absent",
+    "55_to_111_kernel_count": 2,
+    "55_to_111_kernels": [
+      [
+        7,
+        1345763
+      ],
+      [
+        7,
+        1346663
+      ]
+    ]
+  },
+  "families": {
+    "105": {
+      "branch_kernel_counts": [
+        3,
+        1
+      ],
+      "common_kernel_count": 0,
+      "kernels": [
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "all_unpadded_cuts": [
+                68
+              ],
+              "minimal_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "witness": {
+                "child_bank": [
+                  8,
+                  "68724995",
+                  0
+                ],
+                "cut": 68,
+                "padding": [
+                  0,
+                  0
+                ]
+              }
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            7,
+            1346793
+          ],
+          "rows": [
+            82,
+            76,
+            9,
+            17,
+            38,
+            79,
+            28
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "all_unpadded_cuts": [
+                93
+              ],
+              "minimal_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "witness": {
+                "child_bank": [
+                  8,
+                  "76448132",
+                  6
+                ],
+                "cut": 93,
+                "padding": [
+                  0,
+                  0
+                ]
+              }
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            7,
+            1346931
+          ],
+          "rows": [
+            102,
+            84,
+            8,
+            19,
+            37,
+            78,
+            28
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            7,
+            1347273
+          ],
+          "rows": [
+            18,
+            108,
+            9,
+            17,
+            38,
+            77,
+            29
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            7,
+            1350131
+          ],
+          "rows": [
+            102,
+            28,
+            24,
+            17,
+            33,
+            78,
+            30
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            8,
+            172237031
+          ],
+          "rows": [
+            206,
+            4,
+            8,
+            18,
+            39,
+            79,
+            158,
+            62
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            8,
+            172237193
+          ],
+          "rows": [
+            18,
+            12,
+            9,
+            17,
+            38,
+            79,
+            159,
+            63
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "all_unpadded_cuts": [
+                15,
+                60
+              ],
+              "minimal_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "witness": {
+                "child_bank": [
+                  9,
+                  "18339627522",
+                  4
+                ],
+                "cut": 15,
+                "padding": [
+                  0,
+                  0
+                ]
+              }
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            8,
+            172237487
+          ],
+          "rows": [
+            94,
+            20,
+            8,
+            18,
+            36,
+            79,
+            158,
+            63
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            8,
+            172238231
+          ],
+          "rows": [
+            46,
+            44,
+            8,
+            16,
+            39,
+            76,
+            159,
+            63
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            8,
+            172243919
+          ],
+          "rows": [
+            158,
+            220,
+            8,
+            16,
+            36,
+            79,
+            157,
+            60
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            8,
+            172253831
+          ],
+          "rows": [
+            14,
+            20,
+            24,
+            18,
+            33,
+            79,
+            159,
+            63
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            8,
+            172255127
+          ],
+          "rows": [
+            46,
+            60,
+            24,
+            16,
+            33,
+            76,
+            159,
+            63
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "all_unpadded_cuts": [
+                26,
+                31
+              ],
+              "minimal_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "witness": {
+                "child_bank": [
+                  9,
+                  "36576470017",
+                  3
+                ],
+                "cut": 26,
+                "padding": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "key": [
+            8,
+            172257743
+          ],
+          "rows": [
+            158,
+            140,
+            24,
+            16,
+            34,
+            79,
+            159,
+            60
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            8,
+            172261367
+          ],
+          "rows": [
+            238,
+            252,
+            24,
+            16,
+            33,
+            76,
+            156,
+            60
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            8,
+            172319647
+          ],
+          "rows": [
+            62,
+            28,
+            88,
+            16,
+            32,
+            78,
+            155,
+            63
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            8,
+            172325871
+          ],
+          "rows": [
+            222,
+            220,
+            88,
+            16,
+            32,
+            79,
+            152,
+            60
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            9,
+            44092653825
+          ],
+          "rows": [
+            2,
+            4,
+            9,
+            19,
+            39,
+            79,
+            159,
+            319,
+            127
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            9,
+            44092655519
+          ],
+          "rows": [
+            318,
+            28,
+            8,
+            16,
+            36,
+            78,
+            159,
+            319,
+            126
+          ]
+        },
+        {
+          "SCC_counts": [
+            105
+          ],
+          "branches": {
+            "317": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "319": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "key": [
+            9,
+            44092719903
+          ],
+          "rows": [
+            62,
+            12,
+            24,
+            16,
+            34,
+            78,
+            159,
+            319,
+            127
+          ]
+        }
+      ],
+      "targets": [
+        317,
+        319
+      ]
+    },
+    "55": {
+      "branch_kernel_counts": [
+        2,
+        2
+      ],
+      "common_kernel_count": 2,
+      "kernels": [
+        {
+          "SCC_counts": [
+            55
+          ],
+          "branches": {
+            "167": {
+              "all_core_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "all_unpadded_cuts": [
+                119
+              ],
+              "minimal_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "witness": {
+                "child_bank": [
+                  8,
+                  "40386820",
+                  7
+                ],
+                "cut": 119,
+                "padding": [
+                  0,
+                  0
+                ]
+              }
+            },
+            "169": {
+              "all_core_padding_pairs": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "all_unpadded_cuts": [
+                5,
+                110
+              ],
+              "minimal_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "witness": {
+                "child_bank": [
+                  8,
+                  "176701704",
+                  1
+                ],
+                "cut": 5,
+                "padding": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "common_witness": {
+            "cuts": [
+              119,
+              5
+            ],
+            "original_witnesses": [
+              {
+                "child_bank": [
+                  8,
+                  "40386820",
+                  7
+                ],
+                "cut": 119,
+                "padding": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "child_bank": [
+                  8,
+                  "176701704",
+                  1
+                ],
+                "cut": 5,
+                "padding": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "padding": [
+              0,
+              0
+            ],
+            "source_rows": [
+              70,
+              12,
+              8,
+              17,
+              39,
+              79,
+              30
+            ]
+          },
+          "cuts_to_111": [
+            6
+          ],
+          "key": [
+            7,
+            1345763
+          ],
+          "rows": [
+            70,
+            12,
+            8,
+            17,
+            39,
+            79,
+            30
+          ]
+        },
+        {
+          "SCC_counts": [
+            55
+          ],
+          "branches": {
+            "167": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "169": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "cuts_to_111": [],
+          "key": [
+            7,
+            1345995
+          ],
+          "rows": [
+            22,
+            28,
+            8,
+            17,
+            36,
+            79,
+            31
+          ]
+        },
+        {
+          "SCC_counts": [
+            55
+          ],
+          "branches": {
+            "167": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            },
+            "169": {
+              "all_core_padding_pairs": [],
+              "all_unpadded_cuts": [],
+              "minimal_padding_pairs": []
+            }
+          },
+          "cuts_to_111": [],
+          "key": [
+            7,
+            1346247
+          ],
+          "rows": [
+            14,
+            44,
+            8,
+            16,
+            39,
+            77,
+            31
+          ]
+        },
+        {
+          "SCC_counts": [
+            55
+          ],
+          "branches": {
+            "167": {
+              "all_core_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "all_unpadded_cuts": [
+                16
+              ],
+              "minimal_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "witness": {
+                "child_bank": [
+                  8,
+                  "105398544",
+                  0
+                ],
+                "cut": 16,
+                "padding": [
+                  0,
+                  0
+                ]
+              }
+            },
+            "169": {
+              "all_core_padding_pairs": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "all_unpadded_cuts": [
+                31,
+                72
+              ],
+              "minimal_padding_pairs": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "witness": {
+                "child_bank": [
+                  8,
+                  "79987202",
+                  6
+                ],
+                "cut": 31,
+                "padding": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "common_witness": {
+            "cuts": [
+              16,
+              31
+            ],
+            "original_witnesses": [
+              {
+                "child_bank": [
+                  8,
+                  "105398544",
+                  0
+                ],
+                "cut": 16,
+                "padding": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "child_bank": [
+                  8,
+                  "79987202",
+                  6
+                ],
+                "cut": 31,
+                "padding": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "padding": [
+              0,
+              0
+            ],
+            "source_rows": [
+              78,
+              68,
+              8,
+              18,
+              39,
+              79,
+              28
+            ]
+          },
+          "cuts_to_111": [
+            94
+          ],
+          "key": [
+            7,
+            1346663
+          ],
+          "rows": [
+            78,
+            68,
+            8,
+            18,
+            39,
+            79,
+            28
+          ]
+        }
+      ],
+      "targets": [
+        167,
+        169
+      ]
+    }
+  },
+  "golden_source_controls": [
+    {
+      "key": [
+        7,
+        1345995
+      ],
+      "no_children": [
+        111,
+        167,
+        169
+      ],
+      "padding": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": [
+        7,
+        1346247
+      ],
+      "no_children": [
+        111,
+        167,
+        169
+      ],
+      "padding": [
+        0,
+        0
+      ]
+    }
+  ],
+  "golden_source_file_sha256": "31a16e7a363bef182f0c87badbf188d0191e2c6a59ccfc226b89932f2521d037",
+  "independent_full_cut_profiles": {
+    "cuts": 5376,
+    "strong_sources": 22
+  },
+  "independent_path_checks": 343,
+  "padding_controls": 12,
+  "status": "FINITE-EXACT relative to inherited audited complete strong H<375 inventory; all-order consequence uses coprime-core and padding lemmas",
+  "strong_source_counts_by_order": {
+    "105": {
+      "7": 4,
+      "8": 11,
+      "9": 3
+    },
+    "11": {
+      "5": 1
+    },
+    "3": {
+      "3": 1
+    },
+    "35": {
+      "7": 2
+    },
+    "5": {
+      "4": 1
+    },
+    "55": {
+      "7": 4
+    }
+  }
+}

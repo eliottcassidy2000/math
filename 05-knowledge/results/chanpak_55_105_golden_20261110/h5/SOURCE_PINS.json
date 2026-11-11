@@ -1,0 +1,13 @@
+{
+  "source_HEAD": "8e097d715769",
+  "source_sha256": {
+    "01-canon/MISTAKES.md": "6cc63d0b3f56df0309ebafcd47ffd4d16aec4219ac8c081e37c9abc291e71b57",
+    "01-canon/theorems/THM-002-ocf.md": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "01-canon/theorems/THM-4875-old-mark-digit-lower-bound-lorentzian-gadget-adjoint-and-one-apex-joins-realise-every-odd-number-to-2-32-except-7-and-21.md": "e089d29927c4ca71d2d8adb6ff78ae318aca3e8356efd4bc6783f8deb6abc8fc",
+    "05-knowledge/results/decomposition16_odd_spectrum_20261110/attachment/PROOF.md": "95801e7f0b8d96ef3b678a6895dc14b687d93cc36d82ba9404565bef6fb138c0",
+    "05-knowledge/results/decomposition16_odd_spectrum_20261110/attachment/check.py": "03a17412c58cfa8204bc6fe0b3ddd5411655f72f5c1a83f9cf13c0d2e02f5b3a",
+    "05-knowledge/results/session216_overnight_constructions_20261107/carriers/reciprocity/UNIVERSAL_PAIR_RECIPROCITY.md": "317bb3b087bb4d8c1ffddb54221ed79f2c2d27d9f5c1c5364dc8a3e52532c252",
+    "05-knowledge/results/session250_sixteen_20261110/constructive/PROOF.md": "062b3ba37148adb956fbc1b80ccb3804cfab988ac8bec82496011b62ce5dba23"
+  }
+}
