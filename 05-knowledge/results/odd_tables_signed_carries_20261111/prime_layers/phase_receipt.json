@@ -1,0 +1,351 @@
+{
+  "status": "PROVED phase criteria and named families; finite catalog is not exhaustive prime classification",
+  "catalog_universe": "all odd primes3..43",
+  "catalog": [
+    {
+      "prime": 3,
+      "period": 2,
+      "integral_coefficients": true,
+      "coefficient_denominator": 1,
+      "a1": "1",
+      "drift_values": [
+        2
+      ]
+    },
+    {
+      "prime": 5,
+      "period": 4,
+      "integral_coefficients": true,
+      "coefficient_denominator": 1,
+      "a1": "1",
+      "drift_values": [
+        2
+      ]
+    },
+    {
+      "prime": 7,
+      "period": 3,
+      "integral_coefficients": true,
+      "coefficient_denominator": 1,
+      "a1": "3",
+      "drift_values": [
+        4
+      ]
+    },
+    {
+      "prime": 11,
+      "period": 10,
+      "integral_coefficients": true,
+      "coefficient_denominator": 1,
+      "a1": "3",
+      "drift_values": [
+        18
+      ]
+    },
+    {
+      "prime": 13,
+      "period": 12,
+      "integral_coefficients": false,
+      "coefficient_denominator": 5,
+      "a1": "9/5",
+      "drift_values": [
+        18
+      ]
+    },
+    {
+      "prime": 17,
+      "period": 8,
+      "integral_coefficients": true,
+      "coefficient_denominator": 1,
+      "a1": "1",
+      "drift_values": [
+        2,
+        30
+      ]
+    },
+    {
+      "prime": 19,
+      "period": 18,
+      "integral_coefficients": false,
+      "coefficient_denominator": 9,
+      "a1": "59/9",
+      "drift_values": [
+        50
+      ]
+    },
+    {
+      "prime": 23,
+      "period": 11,
+      "integral_coefficients": false,
+      "coefficient_denominator": 89,
+      "a1": "815/89",
+      "drift_values": [
+        36
+      ]
+    },
+    {
+      "prime": 29,
+      "period": 28,
+      "integral_coefficients": false,
+      "coefficient_denominator": 565,
+      "a1": "2833/565",
+      "drift_values": [
+        98
+      ]
+    },
+    {
+      "prime": 31,
+      "period": 5,
+      "integral_coefficients": true,
+      "coefficient_denominator": 1,
+      "a1": "15",
+      "drift_values": [
+        10,
+        16,
+        38
+      ]
+    },
+    {
+      "prime": 37,
+      "period": 36,
+      "integral_coefficients": false,
+      "coefficient_denominator": 7085,
+      "a1": "55137/7085",
+      "drift_values": [
+        162
+      ]
+    },
+    {
+      "prime": 41,
+      "period": 20,
+      "integral_coefficients": false,
+      "coefficient_denominator": 25,
+      "a1": "97/25",
+      "drift_values": [
+        30,
+        170
+      ]
+    },
+    {
+      "prime": 43,
+      "period": 14,
+      "integral_coefficients": true,
+      "coefficient_denominator": 1,
+      "a1": "11",
+      "drift_values": [
+        54,
+        66,
+        122
+      ]
+    }
+  ],
+  "family_controls": "Fermat-shaped2^m+1,m1..8; Mersenne-shaped2^k\u22121,k2..8; all eleven phases; actuator n0..127; actual infinite-family members k7,8,9; four literal charts at n0,1",
+  "eleven_phases": [
+    {
+      "i": 1,
+      "word": "0001011101",
+      "a": 3,
+      "d": 1,
+      "drift": 18
+    },
+    {
+      "i": 2,
+      "word": "0010111010",
+      "a": 7,
+      "d": 1,
+      "drift": 18
+    },
+    {
+      "i": 3,
+      "word": "0100010111",
+      "a": 1,
+      "d": 1,
+      "drift": 18
+    },
+    {
+      "i": 4,
+      "word": "0101110100",
+      "a": 9,
+      "d": 1,
+      "drift": 18
+    },
+    {
+      "i": 5,
+      "word": "0111010001",
+      "a": 5,
+      "d": 1,
+      "drift": 18
+    },
+    {
+      "i": 6,
+      "word": "1000101110",
+      "a": 6,
+      "d": 0,
+      "drift": 18
+    },
+    {
+      "i": 7,
+      "word": "1010001011",
+      "a": 2,
+      "d": 0,
+      "drift": 18
+    },
+    {
+      "i": 8,
+      "word": "1011101000",
+      "a": 10,
+      "d": 0,
+      "drift": 18
+    },
+    {
+      "i": 9,
+      "word": "1101000101",
+      "a": 4,
+      "d": 0,
+      "drift": 18
+    },
+    {
+      "i": 10,
+      "word": "1110100010",
+      "a": 8,
+      "d": 0,
+      "drift": 18
+    }
+  ],
+  "H25_H3_family": [
+    {
+      "k": 7,
+      "q": 6393,
+      "loops": 37,
+      "n_bits": 383,
+      "H_bits": 396
+    },
+    {
+      "k": 8,
+      "q": 12793,
+      "loops": 162,
+      "n_bits": 1634,
+      "H_bits": 1647
+    },
+    {
+      "k": 9,
+      "q": 25593,
+      "loops": 412,
+      "n_bits": 4135,
+      "H_bits": 4148
+    }
+  ],
+  "literal_controls": [
+    {
+      "n": 0,
+      "charts": [
+        {
+          "core": [
+            50,
+            8,
+            3,
+            5,
+            46,
+            14
+          ],
+          "cut": 38,
+          "address": 31,
+          "vertices": 12,
+          "H": 3871
+        },
+        {
+          "core": [
+            50,
+            40,
+            35,
+            5,
+            46,
+            8
+          ],
+          "cut": 35,
+          "address": 31,
+          "vertices": 12,
+          "H": 3873
+        },
+        {
+          "core": [
+            2,
+            4,
+            1
+          ],
+          "cut": 3,
+          "address": 93,
+          "vertices": 11,
+          "H": 643
+        },
+        {
+          "core": [
+            2,
+            4,
+            1
+          ],
+          "cut": 1,
+          "address": 187,
+          "vertices": 12,
+          "H": 645
+        }
+      ]
+    },
+    {
+      "n": 1,
+      "charts": [
+        {
+          "core": [
+            50,
+            8,
+            3,
+            5,
+            46,
+            14
+          ],
+          "cut": 38,
+          "address": 95,
+          "vertices": 14,
+          "H": 11729
+        },
+        {
+          "core": [
+            50,
+            40,
+            35,
+            5,
+            46,
+            8
+          ],
+          "cut": 35,
+          "address": 95,
+          "vertices": 14,
+          "H": 11731
+        },
+        {
+          "core": [
+            2,
+            4,
+            1
+          ],
+          "cut": 3,
+          "address": 1245,
+          "vertices": 15,
+          "H": 8485
+        },
+        {
+          "core": [
+            2,
+            4,
+            1
+          ],
+          "cut": 1,
+          "address": 2491,
+          "vertices": 16,
+          "H": 8487
+        }
+      ]
+    }
+  ],
+  "inherited_compiler_sha256": "56c231002bb23fe56ced0455b0ffa4167fd4905f2aa38f313073d172d77cbc62"
+}

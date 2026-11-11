@@ -1,0 +1,114 @@
+{
+  "status": "FINITE-EXACT controls for all-length proofs",
+  "compiler_sha256": "56c231002bb23fe56ced0455b0ffa4167fd4905f2aa38f313073d172d77cbc62",
+  "literal_four_corners": [
+    {
+      "A": 1,
+      "B": 208,
+      "branch": 0,
+      "order": 16,
+      "state_HEUdK": [
+        93803,
+        25,
+        115181,
+        25,
+        155648
+      ]
+    },
+    {
+      "A": 1,
+      "B": 208,
+      "branch": 1,
+      "order": 16,
+      "state_HEUdK": [
+        93799,
+        25,
+        115181,
+        25,
+        155648
+      ]
+    },
+    {
+      "A": 189,
+      "B": 1,
+      "branch": 0,
+      "order": 16,
+      "state_HEUdK": [
+        79155,
+        25,
+        115181,
+        25,
+        155648
+      ]
+    },
+    {
+      "A": 189,
+      "B": 1,
+      "branch": 1,
+      "order": 16,
+      "state_HEUdK": [
+        78589,
+        25,
+        115181,
+        25,
+        155648
+      ]
+    }
+  ],
+  "block_universe": "All solutions of the port equation with 1<=t<=16; A in {1,2,5}; C in {1,2,7}; both branch choices",
+  "block_count": 431,
+  "first_blocks": [
+    {
+      "t": 7,
+      "c": 61,
+      "x": 80,
+      "P": -9906,
+      "S": -4768
+    },
+    {
+      "t": 8,
+      "c": 115,
+      "x": 166,
+      "P": -21954,
+      "S": -9932
+    },
+    {
+      "t": 9,
+      "c": 223,
+      "x": 329,
+      "P": -45114,
+      "S": -19728
+    },
+    {
+      "t": 10,
+      "c": 414,
+      "x": 687,
+      "P": -85962,
+      "S": -34832
+    },
+    {
+      "t": 10,
+      "c": 439,
+      "x": 661,
+      "P": -89658,
+      "S": -38520
+    }
+  ],
+  "formula_checks": 3879,
+  "port_fibre_universe": "Every A,B>=1 with 2<=bitlength(A)+bitlength(B)<=12; both core branches",
+  "fibre_groups": 20406,
+  "nontrivial_fibre_groups": 75,
+  "restoration_example": {
+    "entry_gap": 115156,
+    "old_targets": [
+      93799,
+      93803
+    ],
+    "new_counts": [
+      78589,
+      79155
+    ],
+    "all_four_restorations_excluded_by_entry_gap": true
+  },
+  "all_target_coverage_claim": false
+}

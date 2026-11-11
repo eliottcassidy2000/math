@@ -203,10 +203,12 @@ a pure-H difference. Thus a root change within already realized graphs
 transfers that difference to the singleton direction while preserving
 both current targets.
 
-**Theorem2 (uniform beneficial simultaneous reset).** At every B>=1
-with D(B)=0, replacing each H13 witness by its corresponding C3 graph
-rooted as in (8), with C=3B, strictly reduces the last three coordinates
-of `q=(H,U,U-d,H+U-E)` and preserves the first coordinate H.
+**Theorem2 (uniform beneficial simultaneous reset).** For any B>=1 and
+C>=2 with `L(B)=N(C)`, replacing each H13 witness by its corresponding
+C3 graph rooted as in (8) strictly reduces the last three coordinates
+of `q=(H,U,U-d,H+U-E)` and preserves the first coordinate H. In particular
+this applies to every zero of D with C=3B. No ratio between B and C
+is required by the comparison.
 
 Proof. The old apex-root states have E=d=13. Write U_old=h+delta for
 the lower or upper target h. The inherited O/Z recurrence implies
@@ -241,6 +243,47 @@ every completed prefix in Theorem1 has a beneficial source/root reset,
 regardless of the leading bits of p. The new root deletion count d' can
 be large; the claim is an improvement in the exact future-response order,
 not a simultaneous decrease of every complexity statistic.
+
+### The inherited repeated-9 family benefits from the same root change
+
+The earlier residue0/2 C3 pair has
+
+    M3(C)=3g(C)+36C+30,       M3(C)+2,
+
+using cut0/right16C+12 and cut1/right8C+6, respectively. For C>=2,
+the identical last-flank-root argument gives states
+
+    (M3(C),   M3(C0)-3epsilon,   M3(C)+3epsilon,   M3(C0)),
+    (M3(C)+2, M3(C0)+2-3epsilon, M3(C)+2+3epsilon, M3(C0)+2),
+
+with C0 and epsilon defined as above. The deletion-count lower bounds
+are now33 and35. Therefore, at **any** equality `L(B)=M3(C)`, the old
+H13 q savings are at least `(0,5,25,22)` and `(0,3,25,22)`.
+
+In particular the inherited arbitrary-prefix repeated-9 actuator also
+supplies beneficial source/root replacements. Its proved unfavorable
+comparison retained the old apex; changing the retained root resolves
+that particular cost issue without contradicting the earlier theorem.
+This combines the residue0/2 and1/0 constructions, while retaining
+their separate exact zero-defect conditions. It does not cover every
+address or preserve an unpadded target.
+
+The small literal controls are C2, giving
+`(111,33,111,33)/(113,35,113,35)`, and C3, giving
+`(141,66,144,69)/(143,68,146,71)`.
+
+### Divisibility remains a separate resource
+
+Let `content=gcd(H,E,U,d)=gcd(q)`. Every common O/Z/J or fixed
+right-amalgamation response is an integer linear map of q, so the
+source content divides every future H in that grammar. Lower future
+cost therefore need not mean larger attainable residue support.
+For example the old upper135 source has content1, whereas its
+rerooted state `(135,27,135,27)` has content27. The current target is
+preserved, but arbitrary future counts from that source remain divisible
+by27. The source is strong, so this is not a removable ordinalC3 factor.
+The count order, content, and shared-port conditions must all be retained
+when using this reset in a target-selection argument.
 
 ## 5. A small reset and a stable paired continuation
 
@@ -282,6 +325,53 @@ leaving (13) unchanged. Thus the construction retains a coupled
 paired descent along an infinite continuation language, rather than
 two unrelated source replacements.
 
+### A native asymmetric birth restores common ports at width54
+
+The following is **FINITE-EXACT**, with both a complete small-cut search
+and an independent Python literal-state recount in `birth_search.py`.
+From the two C3 graphs in (11), keep their new roots7 and8. Append one
+vertex with outgoing mask252 on the133 side and640 on the135 side.
+The resulting literal graphs are
+
+    (762,764,505,496,480,192,128,256,611,252), root7;
+    (1530,2044,2041,2032,2016,1984,1408,256,1536,193,640), root8.
+
+Their states are respectively
+
+    (453,81,453,81),
+    (399,81,453,81).                               (13a)
+
+Thus a physical asymmetric birth restores identical E,U,d while
+reversing and amplifying the previous width2 to a pure-H width54.
+The alternative lower mask254 has the same response. The lower453
+graph also has the simpler description: core `(10,12,1,4)`, cut11,
+right address19. For arbitrary C this H5 chart has count
+`5g(C)+44C+32` at right address2C+1, suggesting a scalable source for
+the lower half of this restoration. No uniform paired extension of
+the upper half is asserted here.
+
+Both states in (13a) have content3. The two graphs are strong, as
+confirmed by their single strongly connected components of orders10
+and11. Hence their common factor3 cannot be removed as an ordinalC3
+side factor avoiding the root. A numerical common divisor alone does
+not authorize a physical deflation of the paired sources.
+
+The complete tested universe is all512/1024 one-vertex cuts with the
+respective last-flank roots retained. The two stated lower alternatives
+and the one upper alternative are the only shared-port match, and
+there is no pure-H width2 match. This is a useful positive restoration
+at a changed width and baseline, not a repair preserving the original
+133/135 totals.
+
+The same small control resolves the still narrower count-preserving
+proposal. Among every root of the original two witnesses, only their
+old apex roots have matching E,U,d, namely `(3,213,3)`. Among all
+one-vertex cuts preserving their133/135 totals, only global-source and
+global-sink additions occur. Allowing every root afterward leaves only
+shared ports `(3,213,3)` or `(0,426,3)`. Neither improves old U141.
+These finite exclusions concern only the two named sources and one
+birth; they do not exclude a different source or a longer repair.
+
 ## 6. A closed infinite family and the alternative apex comparison
 
 For each integer k>=7 set
@@ -322,6 +412,13 @@ address B. It does not preserve L(p). Theorem2 preserves the exact two
 targets once D(B)=0, and (13) controls what later continuations cost.
 These are different quantifiers.
 
+The new pair has unequal deletion counts d' and d'+2. It is therefore
+not a pure-H switch for arbitrary common addresses. Its gap after a
+general common O/Z address A is `2g(A)`, and equals2 on the all-Z
+addresses `A=2^k-1`. The improvement in Theorem2 is a separate comparison
+of each old/new witness. Equation(13) gives the more restricted common
+language on which the two improved witnesses retain a unit gap.
+
 A full target proof still needs, for a prescribed target n, a legal
 decomposition or inverse rule placing n in one of these synchronized
 charts; alternatively it needs a target-preserving transport from an
@@ -343,6 +440,7 @@ next repair.
 ## 8. Reproduction and scope
 
     python3 -B 05-knowledge/results/odd_tables_signed_carries_20261111/tournament/probe.py
+    python3 -B 05-knowledge/results/odd_tables_signed_carries_20261111/tournament/birth_search.py
 
 `receipt.json` records128 bounded actuator/preparation controls,32
 completed arbitrary prefixes with exact q dominance, four literal C3
@@ -352,3 +450,9 @@ by their named cores, cuts and addresses; their counts use the inherited
 exact compiler, not a claimed direct enumeration of all their paths.
 The arbitrary quantifiers follow from the proofs above. No finite
 coverage range or outside source was broadly re-audited.
+
+`birth_search.py` compiles the small `birth_probe.cpp` into a temporary
+directory and retains no binary. The C++ pass enumerates the512/1024
+retained-root birth cuts; Python independently recounts the resulting
+453/399 certificates. `birth_receipt.json` also records every root state
+and the exhaustive count-preserving cuts used in Section5.

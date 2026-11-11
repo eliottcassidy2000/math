@@ -107,6 +107,17 @@ def main():
             actual.append(state(rows,len(rows)-2))
         assert actual==expected
         literal.append({'C':C,'rerooted_states':actual})
+    repeated9=[]
+    def M3(C):return 3*g(C)+36*C+30
+    for C in (2,3):
+        c=C.bit_length();C0=C-(1<<(c-1));eps=(C>>(c-2))&1
+        expected=[(M3(C)+j,M3(C0)+j-3*eps,M3(C)+j+3*eps,M3(C0)+j) for j in (0,2)]
+        actual=[]
+        for cut,address in ((0,16*C+12),(1,8*C+6)):
+            rows=construct((2,4,1),cut,address)
+            actual.append(state(rows,len(rows)-2))
+        assert actual==expected
+        repeated9.append({'C':C,'rerooted_states':actual})
     B=3
     old_actual=[state(rows,len(rows)-1) for rows in (construct((18,8,3,5,14),cut,B) for cut in (6,3))]
     assert old_actual==old_pair(B)
@@ -120,7 +131,7 @@ def main():
         assert g(q)==(1<<(k-3))+1
         assert g(3*q)==33*(1<<(k-5))+7
         assert F(q)==-4*m
-    result={'scope':'Bounded controls for proved actuator and reroot formulas, not a coverage scan.','actuator_and_preparation_inputs':128,'completed_prefixes':prefixes,'literal_C3_controls':literal,'literal_H13_at_B3':old_actual,'explicit_completed_sources':explicit,'beneficial_family_exponents':[7,14]}
+    result={'scope':'Bounded controls for proved actuator and reroot formulas, not a coverage scan.','actuator_and_preparation_inputs':128,'completed_prefixes':prefixes,'literal_C3_controls':literal,'repeated9_family_reroot_controls':repeated9,'literal_H13_at_B3':old_actual,'explicit_completed_sources':explicit,'beneficial_family_exponents':[7,14]}
     (HERE/'receipt.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({'status':'pass','prefixes':len(prefixes),'literal_C3_controls':len(literal),'explicit_completed_sources':explicit},indent=2))
 

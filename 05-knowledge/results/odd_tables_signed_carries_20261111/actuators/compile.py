@@ -83,15 +83,33 @@ def main():
             second = [values[i]-2*values[i+1]+values[i+2] for i in (0,1)]
             assert any(second)
             samples[f'{j},{k}'] = dict(values=values, second_differences=second)
+    phase_checks = 0
+    for m in range(1, 102, 2):
+        if m % 5 == 0:
+            continue
+        for i in range(1, 5):
+            ip = m*i % 5
+            j = m*i // 5
+            ai, ap = pow(i, -1, 5), pow(ip, -1, 5)
+            for a, b in ((13,3), (25,5), (3,13), (-2,8)):
+                assert (b*m*ap-a*ai) % 5 == 0
+                u = (b*m*ap-a*ai)//5
+                v = a*(i<=2)-b*(ip<=2)*(-1)**j
+                def f(n):
+                    return a*g(n)-b*g(m*n+j)+u*n+v*(n%2)
+                for n in range(64):
+                    assert f(16*n+3*i)-f(n) == 2*(a-b)//5
+                    phase_checks += 1
     result = dict(status='FINITE COMPLETE RETURN GRAPH; algebraic proof in PROOF.md',
                   transition_controls=checks, graphs=graphs,
+                  universal_phase_controls=phase_checks,
                   phase_independence=samples,
                   scope='All additive return loops of the specified ternary defect; not all target witnesses')
     path = Path(__file__).with_name('receipt.json')
     path.write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps(dict(states=[len(c['states']) for c in graphs],
                           cycles=[c['cycles'] for c in graphs],
-                          transition_controls=checks)))
+                          transition_controls=checks, universal_phase_controls=phase_checks)))
 
 
 if __name__ == '__main__':

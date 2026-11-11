@@ -194,17 +194,16 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
-[S243](S243.md), [S244](S244.md), [S245](S245.md), [S249](S249.md), [S251](S251.md), [S252](S252.md), [S253](S253.md), [S256](S256.md), [S257](S257.md): Chan–Pak OPEN.
+[S257](S257.md): Chan–Pak OPEN; [earlier routes](S111-plus.md).
+- [Clocks](../05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md): H13/H25 rebases, strong H→3H; target gate OPEN.
 - [Exact U5-free capacity](../05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md).
 - [67](S67.md);[68](S68.md);[69](S69.md);[70](S70.md);[71](S71.md);[72](S72.md);[73](S73.md);[74](S74.md);[HN](HN.md);[Twists](../05-knowledge/results/twist_conductor_reverse_20261025/README.md);[Unnamed](../05-knowledge/results/unnamed_carrier_dissection_20261026/README.md).
 - [Six/seven routes](START-HERE.md); [Divisor/F1](../05-knowledge/results/reflection_bridge_20261025/README.md); [Arithmetic/F1](../05-knowledge/results/normseven_arithmetic_f1_20261026/README.md): Gale twists, THM-4773 repaired to 0/8/infinite, conic norms, prime3 inertia. Integer squares OPEN.
 - [Classification/closure](../05-knowledge/results/moving_selector_atoms_20261028/README.md): cursor separates9-pair; joint run order obstructs composition. Exact order fibers; folded64->16. Prior singleton/4p/count routes retained there.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md): `d_iso=l1` on fixed order-join patches by uncrossing; ambient triangles persist.
-- [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.
-  THM-3121/3134 give the `C3` profile/jet; THM-3166 diagonalizes order join.
-  THM-3181 proves `Q(-t)=(-1)^nQ(t)`, half-grid profile recovery, and exact fixed-tail polynomial--exponential recurrences of minimal triangular order.
-  THM-3202 gives an exact quadratic-time moving-jet `C3` evaluator and a
+- [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md): scalar iff-transitive; THM-2242/2249/2256: response, envelope, scale limit.
+  THM-3121/3134: `C3` profile/jet; THM-3166: order-join diagonalization. THM-3181: `Q(-t)=(-1)^nQ(t)`, half-grid recovery, exact fixed-tail polynomial--exponential recurrences of minimal triangular order. THM-3202: exact quadratic-time moving-jet `C3` evaluator;
   factorial-cube C-finite obstruction. THM-3213 closes balanced fixed-depth
   non-P-recursiveness; THM-3226 gives every fixed strong quotient on `q>=3`
   one saddle. THM-3235 gives blowup scaling/decimation; THM-3248 factors Q4's walk resolvent and gives all-depth finite differences plus a fixed-depth Stirling compiler. Observer twins block generic scalar compression; Q4 radius/non-P stay OPEN.

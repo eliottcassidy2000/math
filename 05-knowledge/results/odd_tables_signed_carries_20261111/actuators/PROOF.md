@@ -124,7 +124,65 @@ candidate for the H25/H5 charts, requiring a separate actual-chart match.
 It does not assert that any two sources with those deletion counts can
 be exchanged.
 
-More generally let R=2^k and choose an odd m and a block r∈[0,R−1].
+There is a more symmetric description that covers **every odd multiplier
+coprime to five**. For i=1,2,3,4 let a_i be the least positive inverse of i
+modulo5, and let d_i=[i≤2]. Define four integer potentials
+
+    P_i(n)=5g(n)−a_i n+5d_i(n mod2).
+
+Their complete data are
+
+| i | Repeated block3i | a_i | d_i |
+|---|---|---|---|
+| 1 | 0011 | 1 | 1 |
+| 2 | 0110 | 3 | 1 |
+| 3 | 1001 | 2 | 0 |
+| 4 | 1100 | 4 | 0 |
+
+**Theorem.** For every i and n≥0,
+
+    P_i(16n+3i)=P_i(n)+2.                         (5)
+
+For any positive odd m with5∤m, set i'=mi mod5 in{1,2,3,4} and
+j=(mi−i')/5. For integer weights a≡b mod5, the integral defect
+
+    F(n)=a g(n)−b g(mn+j)+un+v(n mod2)+w,
+    u=(bm a_(i')−a a_i)/5,
+    v=a d_i−b d_(i') (−1)^j
+
+obeys the exact identity
+
+    F(16n+3i)=F(n)+2(a−b)/5                       (6)
+
+for every integer w.
+
+**Proof.** In the four rows, the binary reversal coefficients c_(3i)
+are3a_i, the parity coefficients are d_i, and the constants g(3i)−1
+are0,4,4,10. Substitution in the concatenation law proves (5) in all
+four cases. Also
+
+    m(16n+3i)+j=16(mn+j)+3i'.
+
+Consequently aP_i(n)/5−bP_(i')(mn+j)/5 changes by2(a−b)/5.
+Its expansion is the displayed F plus a constant. Finally
+m a_(i')≡a_i modulo5, so a≡b makes u an integer. This proves (6). ∎
+
+For the actual13/3 weights, every such multiplier and every one of the
+four phases gives drift4. Multiplier3 at i1 recovers the first reset;
+multiplier7 at i3 gives j4,u−1,v−3, the newly realized second reset.
+The four nonzero residues form a common phase bank, and multiplication
+permutes it. Multipliers divisible by5 instead collapse these phases to
+zero, so this theorem does not apply to them. The separate complete
+multiplier5 return graph has only zero-drift cycles.
+
+This is the exact operation-bearing connection between the central
+multiplication-table pointer and the tournament construction: a modular
+phase permutation lifts to an integer defect actuator when its translation
+and the reciprocal coefficients a_i are retained. Matching the resulting
+u,v,w to actual core/cut formulas is still necessary. The seven-multiplier
+construction provides such a match, not merely a formal potential.
+
+More generally let R=2^k, k≥1, and choose an odd m and a block r∈[0,R−1].
 Fix a carry phase j such that s=mr−(R−1)j also lies in[0,R−1]. The two
 addresses n and mn+j then follow synchronized repeated blocks r and s:
 

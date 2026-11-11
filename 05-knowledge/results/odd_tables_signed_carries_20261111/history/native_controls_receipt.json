@@ -1,0 +1,48 @@
+{
+  "status": "FINITE-EXACT independent controls of the proved universal operation",
+  "small_universe": "Every labelled tournament of orders1..3 and every marked root, followed by two births and the native zero operation",
+  "rooted_cases": 29,
+  "strong_input_cases": 15,
+  "literal_inflation_controls": [
+    {
+      "k": 1,
+      "order": 15,
+      "HESUVdK": [
+        5991,
+        1,
+        1997,
+        692577,
+        7323,
+        3329,
+        973208
+      ]
+    },
+    {
+      "k": 2,
+      "order": 16,
+      "HESUVdK": [
+        11337,
+        1,
+        3779,
+        1898997,
+        13857,
+        6299,
+        2667988
+      ]
+    },
+    {
+      "k": 3,
+      "order": 17,
+      "HESUVdK": [
+        22029,
+        1,
+        7343,
+        5326617,
+        26925,
+        12239,
+        7482728
+      ]
+    }
+  ],
+  "desired_plus_two_target_claim": false
+}

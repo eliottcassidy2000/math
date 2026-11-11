@@ -1,0 +1,28 @@
+{
+  "source_H": 5991,
+  "target": 5993,
+  "cuts": 32768,
+  "hits": [],
+  "nearest_H": 5991,
+  "nearest_cut": 0,
+  "nearest_distance": 2,
+  "source_rows": [
+    2210,
+    1020,
+    1017,
+    1009,
+    993,
+    960,
+    897,
+    768,
+    513,
+    1,
+    3071,
+    5118,
+    10239,
+    20479,
+    8191
+  ],
+  "root": 14,
+  "scope": "Every one-newborn cut on the named15-vertex H5991 source; root-indegree retention is recorded, not imposed on the search."
+}

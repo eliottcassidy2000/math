@@ -1,11 +1,12 @@
 # Odd multiplication tables and simultaneous tournament source resets
 
-**11 November 2026. Research in progress. Chan–Pak remains OPEN.**
-The current construction extends the H13/C3 ternary rebase to every binary
-prefix, and a change of root makes every completed rebase improve both
-future response states. The modular-table work supplies exact recursive
-descriptions of prime-power information, synchronized phases, and signed
-Collatz trajectory splices.
+**11 November 2026. Completed research packet. Chan–Pak remains OPEN.**
+Read the [synthesis](SYNTHESIS.md) for the resulting proofs and exact
+remaining gate. Actual H13/C3 and H25/C3 rebases now extend every binary
+prefix; a change of root improves both future response states, with their
+arithmetic content retained separately. The packet also proves a native
+repeatable strong H→3H operation, general modular phase-clock identities,
+and signed trajectory splices preserving selected table factors.
 
 Baseline: `f8de0ab39d54`. The preceding
 [paired descent packet](../h13_paired_descent_20261111/SYNTHESIS.md) is an
@@ -19,6 +20,13 @@ Hamiltonian-path count other than7 and21.
 | Anchor | Complete finite graph of ternary additive actuators | [Actuator proof](actuators/PROOF.md) |
 | Niche | Signed trajectory splices preserving selected table factors and the exact tail | [History proof](history/PROOF.md) |
 | Wildcard | Prime-power digit constraints and synchronized2/3 exponent lattices | [Prime layers](prime_layers/PROOF.md) |
+
+Further positive constructions: [composite341 clock](tournament/COMPOSITE_CLOCK.md),
+[general phase clocks and the11 family](prime_layers/PHASE_CLOCKS.md),
+[native strong zero digit](history/NATIVE_ZERO.md).
+The [response-content theorem](tournament/CONTENT.md) distinguishes count
+size from attainable residues. See [REPRODUCTION.md](REPRODUCTION.md) for
+the declared computation universes and replay commands.
 
 ## Inheritance and concept board
 
