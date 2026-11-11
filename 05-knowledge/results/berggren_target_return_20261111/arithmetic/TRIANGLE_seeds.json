@@ -1,0 +1,216 @@
+{
+  "status": "PROVED family specialization; FINITE-EXACT independent permutation/split controls",
+  "universe": "Every ordinary K1/C3 SCC word of orders1..8, every literal selected subset, including empty subsets",
+  "sources": 39,
+  "selected_subsets": 5062,
+  "positive_literal_selected_presentations": 99,
+  "ordinary_and_labelled": [
+    {
+      "n": 1,
+      "ordinary_marked": 1,
+      "labelled_marked": 1,
+      "EGF_coefficient": 1
+    },
+    {
+      "n": 2,
+      "ordinary_marked": 2,
+      "labelled_marked": 4,
+      "EGF_coefficient": 2
+    },
+    {
+      "n": 3,
+      "ordinary_marked": 4,
+      "labelled_marked": 24,
+      "EGF_coefficient": 4
+    },
+    {
+      "n": 4,
+      "ordinary_marked": 6,
+      "labelled_marked": 144,
+      "EGF_coefficient": 6
+    },
+    {
+      "n": 5,
+      "ordinary_marked": 8,
+      "labelled_marked": 960,
+      "EGF_coefficient": 8
+    },
+    {
+      "n": 6,
+      "ordinary_marked": 10,
+      "labelled_marked": 7200,
+      "EGF_coefficient": 10
+    },
+    {
+      "n": 7,
+      "ordinary_marked": 12,
+      "labelled_marked": 60480,
+      "EGF_coefficient": 12
+    },
+    {
+      "n": 8,
+      "ordinary_marked": 14,
+      "labelled_marked": 564480,
+      "EGF_coefficient": 14
+    }
+  ],
+  "small_profiles": [
+    {
+      "word": [
+        1
+      ],
+      "selected_mask": 1,
+      "H": 1,
+      "W": 0,
+      "U": 1
+    },
+    {
+      "word": [
+        1,
+        1
+      ],
+      "selected_mask": 1,
+      "H": 1,
+      "W": 0,
+      "U": 2
+    },
+    {
+      "word": [
+        1,
+        1
+      ],
+      "selected_mask": 2,
+      "H": 1,
+      "W": 0,
+      "U": 1
+    },
+    {
+      "word": [
+        1,
+        1,
+        1
+      ],
+      "selected_mask": 1,
+      "H": 1,
+      "W": 0,
+      "U": 4
+    },
+    {
+      "word": [
+        1,
+        1,
+        1
+      ],
+      "selected_mask": 2,
+      "H": 1,
+      "W": 0,
+      "U": 2
+    },
+    {
+      "word": [
+        1,
+        1,
+        1
+      ],
+      "selected_mask": 4,
+      "H": 1,
+      "W": 0,
+      "U": 1
+    },
+    {
+      "word": [
+        3
+      ],
+      "selected_mask": 3,
+      "H": 3,
+      "W": 2,
+      "U": 6
+    },
+    {
+      "word": [
+        3
+      ],
+      "selected_mask": 5,
+      "H": 3,
+      "W": 2,
+      "U": 6
+    },
+    {
+      "word": [
+        3
+      ],
+      "selected_mask": 6,
+      "H": 3,
+      "W": 2,
+      "U": 6
+    }
+  ],
+  "tail_controls": [
+    {
+      "word": [
+        1
+      ],
+      "selected_mask": 1,
+      "t": 1,
+      "U": 1,
+      "H": 3
+    },
+    {
+      "word": [
+        1
+      ],
+      "selected_mask": 1,
+      "t": 2,
+      "U": 1,
+      "H": 5
+    },
+    {
+      "word": [
+        3
+      ],
+      "selected_mask": 3,
+      "t": 1,
+      "U": 6,
+      "H": 13
+    },
+    {
+      "word": [
+        3
+      ],
+      "selected_mask": 3,
+      "t": 2,
+      "U": 6,
+      "H": 25
+    },
+    {
+      "word": [
+        1,
+        3,
+        1
+      ],
+      "selected_mask": 6,
+      "t": 1,
+      "U": 12,
+      "H": 25
+    },
+    {
+      "word": [
+        1,
+        3,
+        1
+      ],
+      "selected_mask": 6,
+      "t": 2,
+      "U": 12,
+      "H": 49
+    }
+  ],
+  "positive_exact_multipliers": "2^b or6*2^b, b>=0",
+  "odd_slopes": [
+    1,
+    3
+  ],
+  "ordinary_GF": "(z+z^3)/(1-z)^2",
+  "labelled_EGF": "(z+z^3)/(1-z)^2",
+  "inherited_core_classification_sha256": "f8bc04ac1da803a5504bc3b4e7006d2f6e06f35f3488b1f1f12849ed24b809a5"
+}

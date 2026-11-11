@@ -31,12 +31,18 @@ JOBS=[
  ('berggren/audit_all_k.py',[]),
  ('berggren/audit_defect_escape.py',[]),
  ('berggren/audit_H15.py',[]),
+ ('berggren/incoming_machine.py',[]),
+ ('arithmetic/TRIANGLE_seeds.py',[]),
 ]
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--optimized',action='store_true')
+    parser.add_argument('--only',action='append',help='Run only this engine; repeat for additional engines.')
     args=parser.parse_args();records=[];failed=False
+    selected=set(args.only or [])
+    if selected-set(name for name,_ in JOBS):raise RuntimeError('Unknown selected engine')
     for name,extra in JOBS:
+        if selected and name not in selected:continue
         path=HERE/name;command=[sys.executable]+(['-O'] if args.optimized else [])+['-B',str(path)]+extra
         start=time.monotonic()
         try:
@@ -52,8 +58,10 @@ def main():
         if not ok:print(json.dumps(record),flush=True)
     report={'status':'PASS' if not failed else 'FAIL','optimized':args.optimized,
             'engine_count':len(records),'records':records,
-            'scope':'New packet claims and inherited dependencies invoked by their declared engines; discovery-only probe_ready.py excluded.'}
+            'scope':'New packet claims and inherited dependencies invoked by their declared engines; discovery-only probe_ready.py excluded.',
+            'selected_engines':sorted(selected) if selected else 'all'}
     filename='REPLAY_OPTIMIZED.json' if args.optimized else 'REPLAY_NORMAL.json'
+    if selected:filename=filename.replace('REPLAY_','REPLAY_ADDITIONAL_')
     (HERE/filename).write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     if failed:raise SystemExit(1)
 

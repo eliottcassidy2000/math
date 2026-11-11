@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "optimized": true,
+  "engine_count": 2,
+  "records": [
+    {
+      "engine": "berggren/incoming_machine.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "PASS: restricted two-link N/Z recurrence, invariant ready exclusion, actual Q1/Q2 controls, and s=1 hostile boundary\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "arithmetic/TRIANGLE_seeds.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "{\"result\": \"PASS\", \"sources\": 39, \"subsets\": 5062, \"positive_presentations\": 99, \"census\": [{\"n\": 1, \"ordinary_marked\": 1, \"labelled_marked\": 1, \"EGF_coefficient\": 1}, {\"n\": 2, \"ordinary_marked\": 2, \"labelled_marked\": 4, \"EGF_coefficient\": 2}, {\"n\": 3, \"ordinary_marked\": 4, \"labelled_marked\": 24, \"EGF_coefficient\": 4}, {\"n\": 4, \"ordinary_marked\": 6, \"labelled_marked\": 144, \"EGF_coefficient\": 6}, {\"n\": 5, \"ordinary_marked\": 8, \"labelled_marked\": 960, \"EGF_coefficient\": 8}, {\"n\": 6, \"ordinary_marked\": 10, \"labelled_marked\": 7200, \"EGF_coefficient\": 10}, {\"n\": 7, \"ordinary_marked\": 12, \"labelled_marked\": 60480, \"EGF_coefficient\": 12}, {\"n\": 8, \"ordinary_marked\": 14, \"labelled_marked\": 564480, \"EGF_coefficient\": 14}]}\n",
+      "stderr_tail": ""
+    }
+  ],
+  "scope": "New packet claims and inherited dependencies invoked by their declared engines; discovery-only probe_ready.py excluded.",
+  "selected_engines": [
+    "arithmetic/TRIANGLE_seeds.py",
+    "berggren/incoming_machine.py"
+  ]
+}

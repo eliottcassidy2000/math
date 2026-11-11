@@ -213,6 +213,12 @@ A-image values differ by30000 at any order. This is an actual all-height
 statement about the user's source family, rather than a comparison of
 three isolated integers. See [H9_FIBRES](fibres/H9_FIBRES.md).
 
+There is also the exact coincidence107=73+2·17, with prime indices
+28=21+7;107 is outside the first25 primes. It is not preserved by neutral
+source padding: the next three A outputs are401,243,51, with discrepancy56.
+After translation by30000 the identity becomes
+`30107=30073+2·30017−60000`, rather than the same homogeneous relation.
+
 Arithmetically, translation by30000 preserves precisely the prime residue
 channels2,3,5, because30000=2^4·3·5^4. The requested examples are
 
@@ -259,3 +265,26 @@ the H9 branch collisions show why scalar count, a matching cardinality
 of five, or the fixed-root observer alone cannot select the next witness.
 All finite universes, scripts, actual maps, failed lifts and independent
 audit scopes are preserved for the next attempt.
+
+## 7. Final incoming connection: two further complete classifications
+
+Concurrent work supplies a strong repeatable zero-digit operation and
+the positive strong-core normal form for selected-set unit-offset seeds.
+The [integration note](INCOMING.md) derives two additional scoped results.
+
+First, the ordinary and zero-digit two-birth maps form an exact arithmetic
+machine on the two-link indegree-one interface. Starting at Q_1's original
+two-birth endpoint of count1997, every nonempty word leaves marked defect at least3. Unlimited
+zero digits therefore do not restore the defect1/2 nonzero interfaces.
+This language-level obstruction permits the root/core replacements used
+by the successful finite paths.
+
+Second, the triangle/singleton family has a complete positive seed
+classification: select one vertex in a transitive source, or two vertices
+of its sole triangle, with all exterior vertices unselected. Its exact
+multiplier has odd part1 or3. A source with two or more triangles cannot
+be such a seed even if its extension gcd is1. The ordinary marked seed
+enumerator and labelled exponential enumerator are both
+`(z+z^3)/(1−z)^2`, since every accepted marked source has trivial
+automorphism group. These strengthen the family's classification without
+claiming a universal seed theorem.

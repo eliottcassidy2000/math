@@ -71,3 +71,10 @@ The niche overtook the anchor in theorem completeness: the triangle family
 is fully classified for the declared operations, while uniform arbitrary
 target returns remain the anchor's precise unfinished obligation. Every
 new positive mechanism and failed lift is routed in SYNTHESIS.md.
+
+Final incoming pull: the strong zero-digit operation gives an exact N/Z
+machine, but the marked defect1/2 region is unreachable after a nonempty
+word from the actual1997 source. The seed-core theorem closes the positive
+selected-set seed predicate for our whole triangle family, yielding only
+odd slopes1/3. These refine the growing-defect and metagraph lanes without
+supplying the missing source-return closure; see INCOMING.md.

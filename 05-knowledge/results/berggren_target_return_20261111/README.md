@@ -6,6 +6,7 @@ Chan–Pak remains OPEN.** Started at `6512e16e0729`; first checkpoint
 not a literature-priority claim or an external referee certification.
 
 [Synthesis](SYNTHESIS.md) · [Inheritance and connection ledger](INHERITANCE.md) ·
+[Concurrent endpoint integration](INCOMING.md) ·
 [Concept board](BOARD.md)
 
 The inherited (+4,+2) path now has two successive **uniform, absolute-count
@@ -29,6 +30,8 @@ seven-coordinate observer.
 | Berggren decoration and actual wide-prefix returns | [Compiler](berggren/PROOF.md), [WIDE_RETURN](berggren/WIDE_RETURN.md), [size boundary](fibres/WIDE_REWRITE_SIZE.md) |
 | All-k extension content for every triangle chain | [Half-contact proof](arithmetic/TRIANGLE_ALL_K_PROOF.md), [independent audit](berggren/ALL_K_AUDIT.md) |
 | Complete internal family metagraph and enumeration | [TRIANGLE_METAGRAPH](fibres/TRIANGLE_METAGRAPH.md), [gap transport](fibres/GAP_TRANSPORT.md) |
+| Exactly which triangle-family sources are unit-offset seeds | [TRIANGLE_SEEDS](arithmetic/TRIANGLE_SEEDS.md) |
+| Repeatable zero digits and the marked-defect barrier | [INCOMING_MACHINE](berggren/INCOMING_MACHINE.md) |
 | Same rooted observations, different extension obstructions | [ROOT_OBSERVER_LOSS](fibres/ROOT_OBSERVER_LOSS.md) |
 | Complete decorated H9 fibres and branch counts | [H9_FIBRES](fibres/H9_FIBRES.md), [extension content](fibres/EXTENSION_CONTENT.md) |
 | First25 primes,30000 translation, and square-prime pairs | [Arithmetic proof](arithmetic/PROOF.md), [compensation boundary](arithmetic/COMPENSATION.md) |
@@ -44,6 +47,10 @@ python -B 05-knowledge/results/berggren_target_return_20261111/seal_packet.py --
 Python and a C++ compiler (`g++`) are required. The replay receipts state the
 finite universes; infinite claims use the linked proofs. Source pins, link
 checks and a normalized-text publication manifest accompany the packet.
+The stored main normal/optimized replays contain27 engines; the additional
+normal/optimized receipts contain the two final incoming-integration engines.
+The current full runner executes all29. The earlier27 passed before these
+two independent additions and their mathematical inputs remain unchanged.
 Discovery-only `reset/probe_ready.py` is retained as provenance, outside the
 proved-claim replay. A mistaken contiguous-triangle argument in the first
 checkpoint was repaired and logged in [MISTAKES](../../../01-canon/MISTAKES.md).

@@ -1,5 +1,5 @@
 {
-  "checked": 117,
+  "checked": 130,
   "links": [
     {
       "source": "arithmetic/PROOF.md",
@@ -42,6 +42,10 @@
       "target": "05-knowledge/results/berggren_target_return_20261111/fibres/TRIANGLE_FILTRATION.md"
     },
     {
+      "source": "arithmetic/TRIANGLE_SEEDS.md",
+      "target": "05-knowledge/results/session258_endpoint_seed_20261111/seed_decision/CORE_CLASSIFICATION.md"
+    },
+    {
       "source": "berggren/ALL_K_AUDIT.md",
       "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_ALL_K_PROOF.md"
     },
@@ -60,6 +64,14 @@
     {
       "source": "berggren/H15_AUDIT.md",
       "target": "05-knowledge/results/berggren_target_return_20261111/reset/H15_MENU.md"
+    },
+    {
+      "source": "berggren/INCOMING_MACHINE.md",
+      "target": "05-knowledge/results/odd_tables_signed_carries_20261111/history/NATIVE_ZERO.md"
+    },
+    {
+      "source": "berggren/INCOMING_MACHINE.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md"
     },
     {
       "source": "berggren/PROOF.md",
@@ -174,6 +186,30 @@
       "target": "05-knowledge/results/berggren_target_return_20261111/berggren/PROOF.md"
     },
     {
+      "source": "INCOMING.md",
+      "target": "05-knowledge/results/odd_tables_signed_carries_20261111/history/NATIVE_ZERO.md"
+    },
+    {
+      "source": "INCOMING.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/INCOMING_MACHINE.md"
+    },
+    {
+      "source": "INCOMING.md",
+      "target": "05-knowledge/results/session258_endpoint_seed_20261111/endpoints/PROOF.md"
+    },
+    {
+      "source": "INCOMING.md",
+      "target": "05-knowledge/results/session258_endpoint_seed_20261111/seed_decision/CORE_CLASSIFICATION.md"
+    },
+    {
+      "source": "INCOMING.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_SEEDS.md"
+    },
+    {
+      "source": "INCOMING.md",
+      "target": "05-knowledge/results/endpoint_coverage_compiler_20261111/CONNECTIONS.md"
+    },
+    {
       "source": "INHERITANCE.md",
       "target": "05-knowledge/results/berggren_target_return_20261111/SYNTHESIS.md"
     },
@@ -271,6 +307,10 @@
     },
     {
       "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/INCOMING.md"
+    },
+    {
+      "source": "README.md",
       "target": "05-knowledge/results/berggren_target_return_20261111/BOARD.md"
     },
     {
@@ -328,6 +368,14 @@
     {
       "source": "README.md",
       "target": "05-knowledge/results/berggren_target_return_20261111/fibres/GAP_TRANSPORT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_SEEDS.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/INCOMING_MACHINE.md"
     },
     {
       "source": "README.md",
@@ -468,6 +516,10 @@
     {
       "source": "SYNTHESIS.md",
       "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/PROOF.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/INCOMING.md"
     }
   ],
   "scope": "Every relative Markdown file link in this packet; anchors and external URL availability are not checked.",

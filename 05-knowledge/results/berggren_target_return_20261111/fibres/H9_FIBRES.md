@@ -144,3 +144,25 @@ coordinates. Sidecar: `(v,a,b)` or full word. Cheap hostile:107/73/17.
 The30000 no-difference theorem says this *specific* branch fibre cannot
 supply the requested translation; it does not block the separate pure-H
 rooted constructor in the arithmetic lane or a growing-defect return.
+
+## 6. The numerical relation107=73+2·17 and its first hostile
+
+The three values also satisfy107=73+2·17, and their prime indices are
+28,21,7 with28=21+7. Thus107 is outside the first25 primes. These finite
+identities are exact but do not define a preserved graph operation.
+
+Append the same b>=0 extra O letters to OIOIO, OOOI and OIII before
+applying branch A. All three source counts remain9. The formulas above
+give the first response minus the second minus twice the third as
+
+    [172(4^b−1)−12b]/9.
+
+It is zero at b0 and positive at every b>=1, since4^b−1>=3b. At the
+first padding the responses are401,243,51, giving discrepancy56.
+So even neutral padding of the actual sources destroys the numerical
+relation; the cut word remains necessary.
+
+For arithmetic translation put y_p=M+p. The correct affine identity is
+`y_107=y_73+2y_17−2M`. At M30000 the correction is60000. Differences
+are preserved by translation, while a linear relation whose coefficients
+sum to−2 acquires that nonzero constant.
