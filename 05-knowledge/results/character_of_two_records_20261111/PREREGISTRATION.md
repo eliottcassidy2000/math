@@ -76,3 +76,23 @@ the tournament on the other 15 indices (the "descendants"; each is doubly regula
 
 Conjecture to be recorded if R7 holds: every doubly regular tournament of order `n` has `H = 1 (mod 4)` if
 `n = 7 (mod 8)` and `H = 3 (mod 4)` if `n = 3 (mod 8)`.
+
+---
+
+# Third block (same session): R8
+
+Written after Run E was read (R7 holds but is uninformative: all 16 descendants are isomorphic to `CD_4`) and before
+Run F was started. `H(P_27)` was not found in the repository (grep of canon and hypotheses for the value).
+
+In-sample: `H(P_q) mod 8 = 3, 5, 7, 3, 5` for `q = 3, 7, 11, 19, 23`, which equals `q(q-1)/2 mod 8` in all five
+cases (so the number of `Aut`-orbits of Hamiltonian paths is `1 (mod 8)` for these primes). Mod 4 this is now a
+theorem; mod 8 it is an observation.
+
+## Run F: the Paley tournament on `GF(27)` (`paley27.c`)
+
+Number of Hamiltonian paths starting `0 -> 1 -> ...` by a layered subset dynamic programme modulo 256;
+`H(P_27) = 27 * 13 * (that number)`.
+
+- **R8.** `H(P_27) = 27 * 13 = 351 = 7 (mod 8)`.
+
+Conjecture to be recorded if R8 holds: `H(P_q) = q(q-1)/2 (mod 8)` for every prime power `q = 3 (mod 4)`.
