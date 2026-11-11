@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "commands": [
+    "python3 replay.py",
+    "python3 -O replay.py",
+    "python3 equality.py",
+    "python3 -O equality.py"
+  ],
+  "normal_optimized_receipts_byte_identical": true,
+  "normal_optimized_stdout_byte_identical": true,
+  "correctness_assert_statements": 0,
+  "receipt_sha256": {
+    "receipt.json": "6807e9c16a0b8fd8f8853e35a826956e6443fa5c006199e29ade9f8fd0467fec",
+    "equality_receipt.json": "36e31fbfa0d0b090679495c64a64a77daa29783effdc5a24451fc156c7f11839"
+  }
+}

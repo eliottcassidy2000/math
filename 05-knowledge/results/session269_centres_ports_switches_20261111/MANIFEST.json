@@ -1,0 +1,145 @@
+{
+  "session": 269,
+  "files": [
+    {
+      "path": "BOARD.md",
+      "bytes": 3484,
+      "sha256": "ea1125c63cf726fe2f7c61310464852c945993654dfb9bf74dd14e71e7436fa1"
+    },
+    {
+      "path": "FINAL_CHECKS.json",
+      "bytes": 1331,
+      "sha256": "3730f2d477a59e7be7ba9c739e0a44b947367a7b56938d8a9b4a2a29fa63b6ee"
+    },
+    {
+      "path": "PUBLICATION.md",
+      "bytes": 2241,
+      "sha256": "a5db2e5e286255ae7916348ac9cf603cc05393725df2f5398c54bc54fe6d11c7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1115,
+      "sha256": "301a7e132346b1bf7aa3a83d39e58d345b26ada221c0d862b77201c64a45865c"
+    },
+    {
+      "path": "REPRODUCE.md",
+      "bytes": 1937,
+      "sha256": "605fee2d582673a3561a7cc5797c517d3e75eb3d252beadfcb0750c9a9a4f1c5"
+    },
+    {
+      "path": "SCOPED_DOC_CHECKS.json",
+      "bytes": 227,
+      "sha256": "46ab2e780e1233b5b9530877dbf2323e4928805832cd4b13f3327b991ad7c3ec"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 5731,
+      "sha256": "3ae9a680f21fb0f8dd9f32b97024a8ca4060a29daf97c5389374638c6443920b"
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "bytes": 11504,
+      "sha256": "3322ebd04d5f3594a66a2683fb73c324dd8c50c4f7455f370a0b225eff8a9110"
+    },
+    {
+      "path": "bridges/FILTERED_TRANSFER.md",
+      "bytes": 7576,
+      "sha256": "0461403deb3e15120294d68ae8d51b59668ce9ccf2c07393c07b921ad96b9311"
+    },
+    {
+      "path": "bridges/check.py",
+      "bytes": 1737,
+      "sha256": "e281d01d54f81e3fc57c899b20864f7a049b314d5b15c797d62fb0dfc4f56656"
+    },
+    {
+      "path": "bridges/output.json",
+      "bytes": 376,
+      "sha256": "bb42f55ef0cff4a914b07d3303503baa65eef0229d36035cf8fde701fcfc3fdb"
+    },
+    {
+      "path": "bridges/output.optimized.json",
+      "bytes": 376,
+      "sha256": "bb42f55ef0cff4a914b07d3303503baa65eef0229d36035cf8fde701fcfc3fdb"
+    },
+    {
+      "path": "chanpak/PROOF.md",
+      "bytes": 10848,
+      "sha256": "1f0f0f1c890174d9f95ff902a433bd7c5cea529bf2a0ffbed1378b3763443aee"
+    },
+    {
+      "path": "chanpak/README.md",
+      "bytes": 1813,
+      "sha256": "1562aa213204ce6c741cc03f38234cb8ef90dae9c947b1a3be5c61097d5d758b"
+    },
+    {
+      "path": "chanpak/reproduce.py",
+      "bytes": 4872,
+      "sha256": "f79d47588f8a2543628ea4c5a0fce3779e33e2dee1a2b1dbe7d0c2251bae2a5b"
+    },
+    {
+      "path": "chanpak/results-optimized.json",
+      "bytes": 12674,
+      "sha256": "a762e0c9c2a20e63222b8dbbe094d1243d1c857ff28491f3c50289c1e0d88c3d"
+    },
+    {
+      "path": "chanpak/results.json",
+      "bytes": 12674,
+      "sha256": "a762e0c9c2a20e63222b8dbbe094d1243d1c857ff28491f3c50289c1e0d88c3d"
+    },
+    {
+      "path": "hadwiger/OPTIMIZATION_CHECKS.json",
+      "bytes": 504,
+      "sha256": "64f04c0418cf259ee08db269d32d23dc75b52569dbdaa60155277d744e73c81f"
+    },
+    {
+      "path": "hadwiger/PROOF.md",
+      "bytes": 13701,
+      "sha256": "eb219d68249b96d8f5f8c41752481a31d607877ac6326b09d287c75cd5bb72da"
+    },
+    {
+      "path": "hadwiger/README.md",
+      "bytes": 699,
+      "sha256": "741c2ecea38eb6ee0fa73c61289846fe54952781dc1373475321641b24148ecd"
+    },
+    {
+      "path": "hadwiger/equality.py",
+      "bytes": 1888,
+      "sha256": "4c910213e64de22c0b7e2d2e363a372a0ff9f95831afc52b5308b53bb881902a"
+    },
+    {
+      "path": "hadwiger/equality_receipt.json",
+      "bytes": 304,
+      "sha256": "36e31fbfa0d0b090679495c64a64a77daa29783effdc5a24451fc156c7f11839"
+    },
+    {
+      "path": "hadwiger/receipt.json",
+      "bytes": 951,
+      "sha256": "6807e9c16a0b8fd8f8853e35a826956e6443fa5c006199e29ade9f8fd0467fec"
+    },
+    {
+      "path": "hadwiger/replay.py",
+      "bytes": 3492,
+      "sha256": "28179a10435cac5858eadb0c4367bd3348b1c114ccf10d0be510a6e94881d93a"
+    },
+    {
+      "path": "jacobian/proof.md",
+      "bytes": 17035,
+      "sha256": "b32b88aed146ae00c3013349b2dee247a5cc88c67f42d6c993a85996d6c0168b"
+    },
+    {
+      "path": "jacobian/verification.txt",
+      "bytes": 493,
+      "sha256": "74ab15bccb8243c3ea3fc5e849734f37ad05b6fa87746ab966616b45fb9da056"
+    },
+    {
+      "path": "jacobian/verify.py",
+      "bytes": 2995,
+      "sha256": "e23c7be8a519cece42f5252d435f75149b261876eee0067afb455a09b0eaf64d"
+    },
+    {
+      "path": "reproduce.py",
+      "bytes": 1207,
+      "sha256": "2364acb6fcb3c1260299ab805efba9d84a7b71ffc40d5b71874fc4e94f9867cb"
+    }
+  ]
+}

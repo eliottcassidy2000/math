@@ -1,6 +1,6 @@
 # Dyadic target control at the minimum-triangle boundary
 
-Status: PROVED elementary synthesis conditional only on the explicitly inherited Moon interval-chain product law, with a full proof of every new assertion below. FINITE-EXACT computational controls are separately specified. Chan–Pak remains OPEN. No literature-priority claim.
+Status: PROVED elementary synthesis conditional only on the explicitly inherited Moon interval-chain product law, with a full proof of every new assertion below. FINITE-EXACT computational controls are separately specified. Chan–Pak remains OPEN: the exact conjectural spectrum is all positive odd integers except 7 and 21. These two exclusions are known universal holes, not merely holes of this constructor; see `01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md`. No literature-priority claim.
 
 ## 1. Inheritance, object and scope
 
@@ -68,7 +68,7 @@ The theorem is intentionally stated k>=3. Precision 1 is realized by C3, and pre
 
 **Theorem 2.** Suppose Moon interval chains on a common order n=N+1 have H values representing every odd residue modulo 2^k. Then
 
-    N >= [3(log 2)^2/(2*pi^2)](k-1)^2.
+    N >= (3(log 2)^2/(2*pi^2)) (k-1)^2.
 
 Here log is natural. Theorem 1 therefore has asymptotically optimal quadratic order within the entire Moon interval-chain architecture, up to an absolute multiplicative constant. It is not an optimality theorem for arbitrary tournaments.
 
@@ -105,14 +105,23 @@ Fair independent bits push forward to the uniform (Haar) probability measure on 
 
 The infinite object here is a LIMIT OF COUNTS, not a finite tournament with a 2-adic number of Hamilton paths. The source is a physical chain word, the map is its count modulo increasing powers of 2, the preserved predicate is the first differing digit, and the lost information is the actual integer target and full graph. Precision k and the full composition supply the finite-construction sidecar.
 
-**Integral hostile, proved.** Every Moon chain count is coprime to 7. Indeed 2^a modulo 7 lies in {1,2,4}; none is -1. No factor 1+2^a is divisible by 7. In particular our construction approximates both 7 and 21 to arbitrarily high 2-adic precision but never realizes them, or ANY multiple of 7, exactly. This is a particularly concrete local-to-global warning: a sparse family can have full 2-adic closure. It does not imply a new obstruction for arbitrary tournaments, which can have counts divisible by 7.
+**Integral hostile, proved.** Every Moon chain count is coprime to 7. Indeed 2^a modulo 7 lies in {1,2,4}; none is -1. No factor 1+2^a is divisible by 7. In particular our construction approximates both 7 and 21 to arbitrarily high 2-adic precision but never realizes them, or ANY multiple of 7, exactly. The stronger architecture-specific hostile is 63: it IS attained by general tournaments at order 8 (inherited THM-1370, Corollaries; also `01-canon/theorems/THM-344-n8-h63-complete-omega.md`), but no Moon chain realizes it. Thus this constructor misses a genuine Chan–Pak target, not only the universal holes.
+
+For example, at k=8 the inverse for target 63 gives the composition
+
+    (2,3,7,6,4,4,5,5,12,14),
+    n=63, H=12644053665875775 = 63 (mod 256).
+
+The equality n=63 in this example is incidental; its Hamilton count is the displayed much larger integer. This is a particularly concrete local-to-global warning: a sparse family can have full 2-adic closure. It does not imply a new obstruction for arbitrary tournaments, which can have counts divisible by 7.
 
 ## 6. Reproduction and actual computational scope
 
-Run `python3 reproduce.py > results.json`. The standard-library program checks every odd target for k=3,...,15, exact switch valuations, literal subset-DP counts for both banks through j=7, 40 seeded small chain samples, and all four full-family k=3 witnesses. It independently checks strongness, scores and triangle counts on these literal graphs. Eighty target inversions at k=32,64,128,256 check exact arithmetic at larger precision; those are NOT raw graph DP checks. No enumeration of all tournaments, independent rigidity search, or audit of inherited Moon results is claimed.
+Run `python3 reproduce.py > results.json`. All checks use explicit `require`/`raise`, not optimization-disabled assertions. `python3 -O reproduce.py > results-optimized.json` was also run, and `cmp results.json results-optimized.json` confirms byte-identical output. The standard-library program checks every odd target for k=3,...,15, exact switch valuations, literal subset-DP counts for both banks through j=7, 40 seeded small chain samples, and all four full-family k=3 witnesses. It independently checks strongness, scores and triangle counts on these literal graphs. Eighty target inversions at k=32,64,128,256 check exact arithmetic at larger precision; those are NOT raw graph DP checks. No enumeration of all tournaments, independent rigidity search, or audit of inherited Moon results is claimed.
 
 For an actual adjacency witness use, for example,
 
     python3 reproduce.py --target 7 --bits 8 --graph
+
+Replacing `--target 7` by `--target 63` gives the attained-spectrum hostile above. `results.json` includes target-63 examples at precisions 6,8,12,32,64.
 
 It emits the composition and exact outneighbor-bit rows of a strong tournament whose H is 7 modulo 256, not H=7. The output explicitly records the exact integer H so that this distinction can be verified.

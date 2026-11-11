@@ -1,0 +1,19 @@
+{
+  "status": "FINITE-EXACT",
+  "vertices": 7,
+  "edges": 10,
+  "all_pairs_exact": 21,
+  "squared_port_distance": "1/18",
+  "port_response_fixed_equal_unequal": {
+    "3": [
+      4,
+      0
+    ],
+    "4": [
+      48,
+      32
+    ]
+  },
+  "rotation_cos": "107/108",
+  "rotation_sin": "sqrt(215)/108"
+}

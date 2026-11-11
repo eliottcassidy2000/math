@@ -1,17 +1,20 @@
-# Session269: moving centres, geometric ports, and arithmetic switches
+# Session269: centres, ports, and switches
 
-**Research in progress. 11 November 2026.**
+**11 November 2026. Research complete; all three conjectures remain open.**
 
-The first checkpoint contains the three native proof notes and a proved local
-transfer certificate for the all-row source budget. Reproduction programs,
-source consolidation and the final synthesis are in preparation.
+[Read the synthesis](SYNTHESIS.md).
 
-- [Moving-centre Stein propagation](jacobian/proof.md)
-- [Geometric two-ear suspension and connector forcing](hadwiger/PROOF.md)
-- [Dyadic target control and its sharp architecture cost](chanpak/PROOF.md)
-- [Concept board and inherited scope](BOARD.md)
-- [All-row state-budget theorem](bridges/FILTERED_TRANSFER.md)
-- [Exact controls](bridges/output.json), reproduced with `python3 bridges/check.py`
+- [Planar Jacobian](jacobian/proof.md): moving-centre first hits compile into
+  mixed finite chaos; a very-general single centre suffices. The JC consequence
+  explicitly retains the inherited PRE-AUDIT comparison theorem.
+- [Hadwiger–Nelson](hadwiger/PROOF.md): induced interacting core suspension,
+  exact support and Gram criteria, and a variable-distance three-colour equality
+  family. No new plane chromatic bound.
+- [Chan–Pak](chanpak/PROOF.md): every odd dyadic residue in a rigid strong
+  fixed-score family, with architecture-optimal quadratic order and a physical
+  decoder. Exact integer landing remains separate.
+- [Local transfer certificate](bridges/FILTERED_TRANSFER.md): state budgets
+  proving an infinite source-row bound, with the precise cancellation boundary.
 
-Complex planar Jacobian, Hadwiger–Nelson and Chan–Pak remain open. A result is
-not promoted merely because a transcript or a historical source calls it proved.
+[Reproduce](REPRODUCE.md) · [Open targets](SYNTHESIS.md#5-best-next-attacks) ·
+[Concept board](BOARD.md) · [Sources](SOURCE_PINS.json) · [Checks](FINAL_CHECKS.json).

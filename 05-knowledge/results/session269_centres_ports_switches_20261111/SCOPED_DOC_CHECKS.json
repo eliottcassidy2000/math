@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "local_links_checked": 18,
+  "python_scripts_parsed": 6,
+  "assert_free": true,
+  "issues": [],
+  "global_documentation_check": "FAIL: inherited startup surface180146>180000 bytes; see PUBLICATION.md"
+}

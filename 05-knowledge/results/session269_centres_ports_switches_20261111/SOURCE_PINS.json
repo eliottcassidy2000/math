@@ -34,5 +34,53 @@
     "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
     "sha256": "c1e58986eaf9b07b01d9092328400bbcc25ed0e3db2e243ed0351906d996a5ea",
     "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/AGENTS.md"
+  },
+  {
+    "path": "01-canon/theorems/THM-4744-interval-chains-attain-busch-and-are-the-extremal-strong-tournaments-through-order-twelve.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "c5c781024535ca3c82002a55579cf07a699dba7406ba484fc4fb18ced3ee404f",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/01-canon/theorems/THM-4744-interval-chains-attain-busch-and-are-the-extremal-strong-tournaments-through-order-twelve.md"
+  },
+  {
+    "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+  },
+  {
+    "path": "01-canon/theorems/THM-4620-keller-dual-field-module-kernel-ladder-and-de-rham-cokernel.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "f86e59d51280e93ec7a766e5788c10d2f9878205590b16d87cd3871f37703464",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/01-canon/theorems/THM-4620-keller-dual-field-module-kernel-ladder-and-de-rham-cokernel.md"
+  },
+  {
+    "path": "05-knowledge/results/session254_four_frontiers_20261111/hadwiger_nelson/PROOF.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "2692448c13f03fac17d1cf6a01a8a5325a6827bad33f8851830763c15cc80602",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/05-knowledge/results/session254_four_frontiers_20261111/hadwiger_nelson/PROOF.md"
+  },
+  {
+    "path": "05-knowledge/results/session267_gaussian_planar_20261111/planar/EXTENSION.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "d8c19fab7b1ec13226657e9011a6a371025f04e6db3f39e517285fb562af5894",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/05-knowledge/results/session267_gaussian_planar_20261111/planar/EXTENSION.md"
+  },
+  {
+    "path": "05-knowledge/results/session268_composable_tournaments_20261111/automata/PROOF.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "f2afeecc89628c1a4a161bcd834ba6f8c497956ee91bdede582497683af75d37",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/05-knowledge/results/session268_composable_tournaments_20261111/automata/PROOF.md"
+  },
+  {
+    "path": "04-computation/hadwiger_dehn_niven_spindle_s685.py",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "8a8502d8d9d0f59bce7fab0345f325b659fb635c98c6064537d741601cf1ea51",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/04-computation/hadwiger_dehn_niven_spindle_s685.py"
+  },
+  {
+    "path": "05-knowledge/hypotheses/HYP-9668-gaussian-ladder-for-keller-pairs-between-gmc2-and-jc2.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "ce9a42a1d2862bb2f8e7512759b77cd443d4ed099b97ed67743d419a317b4708",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/05-knowledge/hypotheses/HYP-9668-gaussian-ladder-for-keller-pairs-between-gmc2-and-jc2.md"
   }
 ]

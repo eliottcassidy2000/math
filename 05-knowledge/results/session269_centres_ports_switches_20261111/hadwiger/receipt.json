@@ -1,0 +1,60 @@
+{
+  "status": "FINITE-EXACT",
+  "vertices": 14,
+  "unit_edges": 20,
+  "injective": true,
+  "all_pairs_exact": 91,
+  "core": "unit square C4",
+  "port_coordinates": [
+    [
+      "1/3",
+      "2/5"
+    ],
+    [
+      "7/5",
+      "4/3"
+    ]
+  ],
+  "response": {
+    "2": {
+      "equal": 0,
+      "unequal": 0,
+      "core_colourings": 2
+    },
+    "3": {
+      "equal": 162,
+      "unequal": 128,
+      "core_colourings": 18
+    },
+    "4": {
+      "equal": 55584,
+      "unequal": 50720,
+      "core_colourings": 84
+    },
+    "5": {
+      "equal": 2894292,
+      "unequal": 2772306,
+      "core_colourings": 260
+    },
+    "6": {
+      "equal": 57807360,
+      "unequal": 56451584,
+      "core_colourings": 630
+    }
+  },
+  "single_core_vertex_q6": [
+    105,
+    104
+  ],
+  "balanced_triangle_gram_control": {
+    "q": 3,
+    "equal": 24,
+    "unequal": 24,
+    "core_colourings": 6,
+    "all_class_sizes": [
+      1,
+      1,
+      1
+    ]
+  }
+}

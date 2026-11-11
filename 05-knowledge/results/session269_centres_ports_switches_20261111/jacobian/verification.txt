@@ -1,0 +1,6 @@
+PASS nonlinear Keller pair and all six flatness/commutation identities on 5 probes
+PASS both certificate compiler identities with rational parameter coefficients
+PASS 2-step mixed compiler and preserved denominator location a=b
+PASS automorphism control: polynomial inverse gives actual finite mixed derivative tails
+PASS punctured-surface hostile: residue derivatives remain nonzero for m=0,...,8
+Scope: finite exact algebraic controls only; the all-order statements have proofs in proof.md.

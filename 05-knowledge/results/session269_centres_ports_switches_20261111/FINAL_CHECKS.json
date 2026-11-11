@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "scope": "new session mechanisms only; no inherited-claim audit",
+  "cases": [
+    {
+      "script": "jacobian/verify.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "identical_stdout": true,
+      "stdout_sha256": "74ab15bccb8243c3ea3fc5e849734f37ad05b6fa87746ab966616b45fb9da056"
+    },
+    {
+      "script": "hadwiger/replay.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "identical_stdout": true,
+      "stdout_sha256": "6807e9c16a0b8fd8f8853e35a826956e6443fa5c006199e29ade9f8fd0467fec"
+    },
+    {
+      "script": "hadwiger/equality.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "identical_stdout": true,
+      "stdout_sha256": "36e31fbfa0d0b090679495c64a64a77daa29783effdc5a24451fc156c7f11839"
+    },
+    {
+      "script": "chanpak/reproduce.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "identical_stdout": true,
+      "stdout_sha256": "a762e0c9c2a20e63222b8dbbe094d1243d1c857ff28491f3c50289c1e0d88c3d"
+    },
+    {
+      "script": "bridges/check.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "identical_stdout": true,
+      "stdout_sha256": "bb42f55ef0cff4a914b07d3303503baa65eef0229d36035cf8fde701fcfc3fdb"
+    }
+  ],
+  "research_status": {
+    "JC2": "OPEN",
+    "Hadwiger_Nelson": "OPEN",
+    "Chan_Pak": "OPEN"
+  }
+}

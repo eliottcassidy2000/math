@@ -14,7 +14,8 @@ centre and collapses its universally quantified K-GMC/CV/SN ladder to JC(2).
 THM-5138 is explicitly **PRE-AUDIT DRAFT** at the source pin below; its analytic
 comparison is not re-proved here. The new propagation theorem does not depend
 on that comparison, GMC, a classification of Keller maps, or D-module machinery.
-No statement here proves one-centre SN detection or proves JC(2).
+A refinement handles one centre algebraically independent over the coefficient
+field, but arbitrary prescribed-centre SN detection and JC(2) remain open.
 
 ## 1. Inheritance, niche, and concept board
 
@@ -187,6 +188,48 @@ construct that generator from arbitrary forward Keller data. The theorem
 is directly usable whenever a generating set is supplied. This is NOT a
 claim that the algebra generators `x,y` are Weyl-module generators.
 
+## 3a. A single centre that is generic over the coefficient field
+
+There is a stronger precise single-centre version. Let `k` be the subfield of
+`C` generated over `Q` by the finitely many coefficients of `f,g`. It is
+countable. A pair `(a_0,b_0)` algebraically independent over `k` lies outside
+every proper algebraic subset defined over `k`.
+
+**Theorem 2a (PROVED; very-general-centre first-hit detection).** Suppose
+`a_0,b_0` are algebraically independent over `k`. If for every monomial `h`
+there are positive integers `r,s` such that
+
+    D^r h, E^s h belong to M_(a_0,b_0),
+
+then `F` has mixed finite chaos at that SAME centre.
+
+Proof: fix a first hit and a finite witness degree `L`. Now regard the centre
+variables as indeterminates `A,B`. The matrix `A_L(A,B)` and augmented vector
+in (1) have coefficients in `k`. Evaluation at `(a_0,b_0)` embeds `k(A,B)`
+into `C`; every nonzero polynomial minor stays nonzero. Consequently the
+matrix and augmented matrix have exactly their generic ranks at this centre.
+Solvability over `C` therefore implies solvability over `k(A,B)`. This gives
+one rational certificate for each first hit, with coefficients in `k(A,B)`.
+Apply the compiler (5)-(6). Every denominator is a nonzero polynomial in
+`k[A,B]`, so none vanishes at `(a_0,b_0)`, even for the countably many monomial
+certificates. The resulting rectangles establish finite chaos at the original
+centre. QED.
+
+This argument does not require the original membership witnesses to have
+coefficients in `k(a_0,b_0)`: solvability of a finite linear system descends
+from the extension field `C` by the rank criterion.
+
+The word **very general** is essential: this excludes a countable union of
+proper algebraic subsets depending on the coefficient field, not merely the
+finite exceptional set/curves excluded by the inherited topological count.
+Thus it is stronger than the open-centre theorem in its input requirement,
+but it does not prove detection at an arbitrary prescribed centre. Under the
+inherited THM-5138 finite-chaos criterion, it gives automorphism whenever this
+same very-general centre is also eligible for that criterion. One can always
+choose centres satisfying both conditions. This is a precise single-centre
+version of HYP-9668(D), rather than a proof for every centre called generic
+in a weaker geometric sense.
+
 ## 4. Consequences for the actual complex planar Jacobian question
 
 **Conditional Corollary 3.** Assume THM-5138(B,C), with its stated comparison
@@ -219,7 +262,8 @@ zero-centre kernel is exactly `M_(a,b)` for the original pair.
 
 The last observation is a quantifier distinction. It does NOT say SN at
 one centre for one fixed pair implies invertibility. That remains unproved
-here. The new result removes the need for a separate one-centre detection
+here for arbitrary prescribed centres; Theorem 2a covers a precisely specified
+very-general centre. The new result removes the need for a separate one-centre detection
 theorem in the UNIVERSAL K-GMC/CV/SN programme.
 
 A useful contrapositive is explicit: subject to the inherited criterion,
