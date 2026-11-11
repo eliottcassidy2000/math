@@ -1,0 +1,38 @@
+[
+  {
+    "path": "05-knowledge/results/session254_four_frontiers_20261111/SYNTHESIS.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "368dd3d7d98959df2c3ef072478a535503f68d69b04f1be6ab9cbf2ef15fa41e",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/05-knowledge/results/session254_four_frontiers_20261111/SYNTHESIS.md"
+  },
+  {
+    "path": "05-knowledge/results/session267_gaussian_planar_20261111/SYNTHESIS.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "4a751e06cfe57bd79eb95449f11116e6c11a470b5561117fc6547a291925c4e5",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/05-knowledge/results/session267_gaussian_planar_20261111/SYNTHESIS.md"
+  },
+  {
+    "path": "05-knowledge/results/session268_composable_tournaments_20261111/SYNTHESIS.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "2118fb8fc4cc85d5608102a5772991e608e358f5b4222641f27e3f1994097726",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/05-knowledge/results/session268_composable_tournaments_20261111/SYNTHESIS.md"
+  },
+  {
+    "path": "01-canon/theorems/THM-5138-stein-modules-of-keller-pairs-dimension-count-and-finite-chaos-criterion.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "3d3779ce47b826bc5c87b941156762dbda37fa2458d1a137659676a6381dabd6",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/01-canon/theorems/THM-5138-stein-modules-of-keller-pairs-dimension-count-and-finite-chaos-criterion.md"
+  },
+  {
+    "path": "00-navigation/META-PATTERNS.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/00-navigation/META-PATTERNS.md"
+  },
+  {
+    "path": "AGENTS.md",
+    "commit": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "sha256": "c1e58986eaf9b07b01d9092328400bbcc25ed0e3db2e243ed0351906d996a5ea",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7/AGENTS.md"
+  }
+]

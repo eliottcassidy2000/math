@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "universe": "specified two-state recurrences through 60 transitions",
+  "positive_control_max_weight": 0,
+  "offset_state_max_weight": 1,
+  "hostile_first_B5_violation": [
+    6,
+    6,
+    6
+  ],
+  "hostile_max_weight": 60,
+  "signed_cancellation_checked_terms": 61,
+  "scope": "controls only; all-row statements are proved in FILTERED_TRANSFER.md"
+}
