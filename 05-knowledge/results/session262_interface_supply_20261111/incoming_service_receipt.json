@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "input_status": "Derived from incoming33114ad gadget law; incoming independent audit pending",
+  "scope": "Four new composite initial cases and first positive tails; no inherited tower census",
+  "controls": [
+    {
+      "word": [
+        3,
+        3
+      ],
+      "rows": [
+        118,
+        60,
+        56,
+        113,
+        96,
+        64,
+        6
+      ],
+      "marks": 48,
+      "state": [
+        1,
+        159,
+        59,
+        39
+      ],
+      "order": 7,
+      "first_tail_H": 319
+    },
+    {
+      "word": [
+        3,
+        5
+      ],
+      "rows": [
+        246,
+        124,
+        120,
+        241,
+        224,
+        192,
+        128,
+        6
+      ],
+      "marks": 80,
+      "state": [
+        1,
+        407,
+        119,
+        69
+      ],
+      "order": 8,
+      "first_tail_H": 815
+    },
+    {
+      "word": [
+        5,
+        3
+      ],
+      "rows": [
+        238,
+        124,
+        248,
+        112,
+        225,
+        192,
+        128,
+        10
+      ],
+      "marks": 96,
+      "state": [
+        1,
+        369,
+        139,
+        95
+      ],
+      "order": 8,
+      "first_tail_H": 739
+    },
+    {
+      "word": [
+        5,
+        5
+      ],
+      "rows": [
+        494,
+        252,
+        504,
+        240,
+        481,
+        448,
+        384,
+        256,
+        10
+      ],
+      "marks": 160,
+      "state": [
+        1,
+        945,
+        279,
+        165
+      ],
+      "order": 9,
+      "first_tail_H": 1891
+    }
+  ]
+}

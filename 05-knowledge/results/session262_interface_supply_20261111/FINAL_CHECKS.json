@@ -1,0 +1,52 @@
+{
+  "scope": "New operation controls and publication integrity only; inherited inputs accepted",
+  "scripts": [
+    {
+      "script": "core/response_kernel.py",
+      "status": "PASS"
+    },
+    {
+      "script": "core/same_source_defect.py",
+      "status": "PASS"
+    },
+    {
+      "script": "constructor/ordinal_interfaces.py",
+      "status": "PASS"
+    },
+    {
+      "script": "constructor/fuelled_controller.py",
+      "status": "PASS"
+    },
+    {
+      "script": "defect/probe.py",
+      "status": "PASS"
+    },
+    {
+      "script": "defect/selector_probe.py",
+      "status": "PASS"
+    },
+    {
+      "script": "grammar/certificate.py",
+      "status": "PASS"
+    },
+    {
+      "script": "grammar/response_filtration.py",
+      "status": "PASS"
+    },
+    {
+      "script": "incoming_service.py",
+      "status": "PASS"
+    }
+  ],
+  "JSON_files_parsed": 14,
+  "Python_files_parsed": 10,
+  "relative_links_checked": 32,
+  "relative_links": "PASS",
+  "documentation_guard": "PASS before final freeze",
+  "not_done": [
+    "General Chan-Pak proof",
+    "Re-audit of inherited claims",
+    "General Groebner engine implementation",
+    "Independent giant queue output recount"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "initial_main": "f01a7113774301573ebdacc6a49918b3ae54d242",
+  "inherited_session261": "05-knowledge/results/session261_creative_chanpak_20261111/",
+  "inherited_offset_transports": "05-knowledge/results/multiplicand_saturation_chanpak_20261111/chanpak/OFFSET_TRANSPORT.md",
+  "concurrent_preserved_commit": "33114ad5765cf5b670de132b9fd04dc6c89974bc",
+  "concurrent_status": "Gadget law claimed proved; independent audit pending in incoming checkpoint; accepted without re-audit",
+  "verified_checkpoint1": "359afd24a469abf7deb635e7588208b34e3dc368",
+  "verified_checkpoint2": "7d3a057f86e1a206267da6a276226fc96d0119d9"
+}
