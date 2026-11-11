@@ -1,0 +1,26 @@
+{
+  "status": "PASS independent mathematical proof review; not formal verification",
+  "reviews": [
+    {
+      "source": "../defect/BOUNDED_TEMPLATES.md",
+      "normalized_sha256": "271da388084f71a477d55facb6988ee946dc8df9658993b72800b2469732110b"
+    },
+    {
+      "source": "../metagraph/MINIMAL_DEFECT.md",
+      "normalized_sha256": "8aecb304f9a1d6d9a77e8407453129e3a5ddfbd038a83148c6a9d5d900436ea8"
+    },
+    {
+      "source": "../metagraph/RESPONSE_FAMILIES.md",
+      "normalized_sha256": "ebabe679f29437f81e7c328d85e0cb64602b08a22049f2ea215ae66d6c6e4a4e"
+    }
+  ],
+  "minimum_defect_review": "Termwise equality plus a transitive residual makes each new tagged five-cycle genuinely additional. Mixed contacts and a zero-before-one residual transition each supply such a cycle. Strongness excludes terminal zero contacts. Proper-subset equality and the collar run count give exactly the stated d3/TT_d boundary and formulas.",
+  "bounded_template_review": "Distinct exceptional contacts give injectively tagged positive atoms. The smallest-clone path insertion preserves all inport start/end constraints and is invertible by deletion. Strongness is fixed on positive inflations. Uniform bounded DFA preperiod plus monotone actual defect forces constant eventual membership, independently of prefix and suffix, validating coordinate clamping to finite Cartesian boxes. Intrinsic SCC order fixes slots, so no length-dependent orbit permutation remains; automorphism type is constant.",
+  "critical_boundaries": [
+    "d1 excluded",
+    "empty/nonempty slot split retained",
+    "fixed b only, no universal budget",
+    "ordinary rooted counts eventually polynomial; labelled counts have factorial weights"
+  ],
+  "response_families_review": "PASS: uniform external incidence makes occupancy counts exact surjections into named runs. Reserved inport endpoints yield j<=d, and ordinary Hamilton paths j<=d+1. Nonnegative integer coefficients force the uniform logarithmic grid threshold, including simultaneous downward extension. Weak SCC factorization preserves ordered path bins. Bounded finite programs retain all touched vertices, leaving one persistent transitive order and finitely many homogeneous stage cuts. Intrinsic slot order prevents length-dependent permutations. The all-intermediate defect bound and finite-operation-word scope are essential; path complements are correctly excluded."
+}

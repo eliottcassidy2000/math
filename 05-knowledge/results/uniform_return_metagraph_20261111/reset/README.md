@@ -24,6 +24,19 @@
 * [The shorter141 reset](FINITE_RESETS.md):141→73→425 is optimal
   for the specified initial one-deletion universe; positive3^k modes
   explain why its simplest prefix lifts do not replace the uniform map.
+* [An indefinitely repeatable ready chart](ITERABLE_RETURN.md): the actual
+  family H=210·2^k+11 returns from its ternary branch to the next chart
+  Q_(k+2), losing one old vertex and retaining every other old arc. Its
+  final count is4H−33; its full root response and arbitrarily many
+  iterations are known. The absolute ternary target changes on return.
+* [The complete neutral4 reset dictionary](ATLAS_RETURNS.md):9216
+  literal cuts give exactly six uniform instructions across five source
+  families. The new strong+4 family30·2^k+5→90·2^k+19 retains the old
+  root and both ports, and has residual TT_(k+1)→C3 and defect14.
+* [Two arbitrary births and an internal C4 return](ATLAS_TWO_BIRTH.md):
+  the complete270336-cut universe has30 uniform instructions. One gives
+  the actual common-state path11·2^k+1→33·2^k+7→99·2^k+23,
+  using first+4 and then+2 while retaining the original root and ports.
 
 Inheritance: the exact seven-retained reset and all-order141 source
 obstruction from the preceding packet; the canonical hostile is H35 with
@@ -42,5 +55,6 @@ inside the old141 source.
 
 Main receipts: `module_classification.json`, `uniform_return.json`, `composition.json`,
 `direct_branch.json`, `two_clock.json`, `scan9.json`, `ready_rebase.json`,
-`ready425_inverse.json`, `finite_cards.json`. Additional `*_probe`
+`ready425_inverse.json`, `finite_cards.json`, `iterable_return.json`,
+`atlas_returns.json`, `atlas_two_birth.json`. Additional `*_probe`
 files preserve exploratory witnesses and are not used as universal proofs.

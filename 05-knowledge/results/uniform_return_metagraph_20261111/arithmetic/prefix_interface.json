@@ -1,0 +1,300 @@
+{
+  "coordinate_order": [
+    "H",
+    "S",
+    "E",
+    "d",
+    "U",
+    "V",
+    "K"
+  ],
+  "inherited_named_core_flip": {
+    "common_H": 9,
+    "common_Q2": 84,
+    "old_arc": [
+      2,
+      0
+    ],
+    "source": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "target": [
+      6,
+      4,
+      8,
+      19,
+      7
+    ],
+    "target_to_S5b_relabellings": [
+      [
+        1,
+        2,
+        3,
+        0,
+        4
+      ]
+    ]
+  },
+  "literal_amalgam_context_pairs": [
+    {
+      "common_seven": {
+        "E": 9,
+        "H": 765,
+        "K": 1344,
+        "S": 9,
+        "U": 981,
+        "V": 1035,
+        "d": 9
+      },
+      "context_rows": [
+        2,
+        4,
+        1
+      ],
+      "context_side": "left"
+    },
+    {
+      "common_seven": {
+        "E": 9,
+        "H": 861,
+        "K": 1344,
+        "S": 9,
+        "U": 1227,
+        "V": 933,
+        "d": 9
+      },
+      "context_rows": [
+        2,
+        4,
+        1
+      ],
+      "context_side": "right"
+    }
+  ],
+  "physical_context_flip_pairs": [
+    {
+      "common_seven": {
+        "E": 9,
+        "H": 243,
+        "K": 336,
+        "S": 9,
+        "U": 309,
+        "V": 261,
+        "d": 9
+      },
+      "left": 0,
+      "right": 0,
+      "tail": []
+    },
+    {
+      "common_seven": {
+        "E": 18,
+        "H": 513,
+        "K": 1008,
+        "S": 27,
+        "U": 954,
+        "V": 531,
+        "d": 27
+      },
+      "left": 0,
+      "right": 0,
+      "tail": [
+        1
+      ]
+    },
+    {
+      "common_seven": {
+        "E": 9,
+        "H": 495,
+        "K": 672,
+        "S": 9,
+        "U": 645,
+        "V": 513,
+        "d": 9
+      },
+      "left": 1,
+      "right": 0,
+      "tail": []
+    },
+    {
+      "common_seven": {
+        "E": 18,
+        "H": 1017,
+        "K": 2016,
+        "S": 27,
+        "U": 1962,
+        "V": 1035,
+        "d": 27
+      },
+      "left": 1,
+      "right": 0,
+      "tail": [
+        1
+      ]
+    },
+    {
+      "common_seven": {
+        "E": 9,
+        "H": 495,
+        "K": 672,
+        "S": 9,
+        "U": 645,
+        "V": 513,
+        "d": 9
+      },
+      "left": 0,
+      "right": 1,
+      "tail": []
+    },
+    {
+      "common_seven": {
+        "E": 18,
+        "H": 1017,
+        "K": 2016,
+        "S": 27,
+        "U": 1962,
+        "V": 1035,
+        "d": 27
+      },
+      "left": 0,
+      "right": 1,
+      "tail": [
+        1
+      ]
+    },
+    {
+      "common_seven": {
+        "E": 9,
+        "H": 999,
+        "K": 1344,
+        "S": 9,
+        "U": 1317,
+        "V": 1017,
+        "d": 9
+      },
+      "left": 1,
+      "right": 1,
+      "tail": []
+    },
+    {
+      "common_seven": {
+        "E": 18,
+        "H": 2025,
+        "K": 4032,
+        "S": 27,
+        "U": 3978,
+        "V": 2043,
+        "d": 27
+      },
+      "left": 1,
+      "right": 1,
+      "tail": [
+        1
+      ]
+    }
+  ],
+  "same_interface_rearrangements": [
+    {
+      "core_orders": [
+        3,
+        4
+      ],
+      "gap": 0,
+      "seven": {
+        "E": 15,
+        "H": 2289,
+        "K": 3072,
+        "S": 15,
+        "U": 3027,
+        "V": 2319,
+        "d": 15
+      }
+    },
+    {
+      "core_orders": [
+        3,
+        4
+      ],
+      "gap": 1,
+      "seven": {
+        "E": 15,
+        "H": 2289,
+        "K": 3072,
+        "S": 15,
+        "U": 3027,
+        "V": 2319,
+        "d": 15
+      }
+    },
+    {
+      "core_orders": [
+        3,
+        4
+      ],
+      "gap": 2,
+      "seven": {
+        "E": 15,
+        "H": 2289,
+        "K": 3072,
+        "S": 15,
+        "U": 3027,
+        "V": 2319,
+        "d": 15
+      }
+    },
+    {
+      "core_orders": [
+        4,
+        3
+      ],
+      "gap": 0,
+      "seven": {
+        "E": 15,
+        "H": 2289,
+        "K": 3072,
+        "S": 15,
+        "U": 3027,
+        "V": 2319,
+        "d": 15
+      }
+    },
+    {
+      "core_orders": [
+        4,
+        3
+      ],
+      "gap": 1,
+      "seven": {
+        "E": 15,
+        "H": 2289,
+        "K": 3072,
+        "S": 15,
+        "U": 3027,
+        "V": 2319,
+        "d": 15
+      }
+    },
+    {
+      "core_orders": [
+        4,
+        3
+      ],
+      "gap": 2,
+      "seven": {
+        "E": 15,
+        "H": 2289,
+        "K": 3072,
+        "S": 15,
+        "U": 3027,
+        "V": 2319,
+        "d": 15
+      }
+    }
+  ],
+  "scope": "A one-arc replacement inside an ordinary prefix preserves all seven original-root coordinates. Prefix core permutation is observer-equivalent, but no neutral physical permutation path is claimed.",
+  "status": "PASS literal full-seven controls; all-order preservation proved in DYADIC_DEFECT section6"
+}

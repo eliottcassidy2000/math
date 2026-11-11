@@ -1,0 +1,232 @@
+{
+  "no_construction_lane_imports": true,
+  "scope": "Six literal source scales; eight-retained425 return; exactseven-coordinate comparison",
+  "status": "PASS",
+  "traces": [
+    {
+      "before_frame": [
+        221,
+        4,
+        41,
+        1118,
+        245,
+        41,
+        1424
+      ],
+      "k": 1,
+      "next_counts": [
+        321,
+        527
+      ],
+      "parent_H": 31,
+      "ready_frame": [
+        175,
+        9,
+        30,
+        565,
+        176,
+        31,
+        596
+      ],
+      "retained_names": [
+        "r",
+        "a",
+        "p0",
+        "B",
+        "A",
+        "1y",
+        "1z"
+      ]
+    },
+    {
+      "before_frame": [
+        425,
+        4,
+        41,
+        2542,
+        449,
+        41,
+        2848
+      ],
+      "k": 2,
+      "next_counts": [
+        799,
+        1277
+      ],
+      "parent_H": 53,
+      "ready_frame": [
+        425,
+        15,
+        52,
+        1491,
+        426,
+        53,
+        1544
+      ],
+      "retained_names": [
+        "r",
+        "a",
+        "p0",
+        "p1",
+        "B",
+        "A",
+        "1y",
+        "1z"
+      ]
+    },
+    {
+      "before_frame": [
+        833,
+        4,
+        41,
+        5390,
+        857,
+        41,
+        5696
+      ],
+      "k": 3,
+      "next_counts": [
+        2043,
+        3209
+      ],
+      "parent_H": 97,
+      "ready_frame": [
+        1069,
+        27,
+        96,
+        3955,
+        1070,
+        97,
+        4052
+      ],
+      "retained_names": [
+        "r",
+        "a",
+        "p0",
+        "p1",
+        "p2",
+        "B",
+        "A",
+        "1y",
+        "1z"
+      ]
+    },
+    {
+      "before_frame": [
+        1649,
+        4,
+        41,
+        11086,
+        1673,
+        41,
+        11392
+      ],
+      "k": 4,
+      "next_counts": [
+        5395,
+        8369
+      ],
+      "parent_H": 185,
+      "ready_frame": [
+        2789,
+        51,
+        184,
+        10719,
+        2790,
+        185,
+        10904
+      ],
+      "retained_names": [
+        "r",
+        "a",
+        "p0",
+        "p1",
+        "p2",
+        "p3",
+        "B",
+        "A",
+        "1y",
+        "1z"
+      ]
+    },
+    {
+      "before_frame": [
+        3281,
+        4,
+        41,
+        22478,
+        3305,
+        41,
+        22784
+      ],
+      "k": 5,
+      "next_counts": [
+        14691,
+        22577
+      ],
+      "parent_H": 361,
+      "ready_frame": [
+        7525,
+        99,
+        360,
+        29755,
+        7526,
+        361,
+        30116
+      ],
+      "retained_names": [
+        "r",
+        "a",
+        "p0",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "B",
+        "A",
+        "1y",
+        "1z"
+      ]
+    },
+    {
+      "before_frame": [
+        6545,
+        4,
+        41,
+        45262,
+        6569,
+        41,
+        45568
+      ],
+      "k": 6,
+      "next_counts": [
+        41059,
+        62657
+      ],
+      "parent_H": 713,
+      "ready_frame": [
+        20885,
+        195,
+        712,
+        84351,
+        20886,
+        713,
+        85064
+      ],
+      "retained_names": [
+        "r",
+        "a",
+        "p0",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "B",
+        "A",
+        "1y",
+        "1z"
+      ]
+    }
+  ]
+}

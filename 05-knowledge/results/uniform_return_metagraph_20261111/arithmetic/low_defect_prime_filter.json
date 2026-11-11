@@ -1,0 +1,247 @@
+{
+  "admitted_odd_prime_count": 8,
+  "certified_prime_terms": 54110,
+  "exceptional_even_prime": 2,
+  "excluded_odd_prime_count": 54101,
+  "explicit_admitted_sources": [
+    {
+      "H": 5,
+      "contact_word": [
+        3
+      ],
+      "defect": 2,
+      "index": 2,
+      "inports": 2,
+      "order": 4,
+      "root": 3,
+      "source_rows": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "square_root": 2
+    },
+    {
+      "H": 17,
+      "contact_word": [
+        3,
+        0,
+        2
+      ],
+      "defect": 4,
+      "index": 3,
+      "inports": 2,
+      "order": 6,
+      "root": 5,
+      "source_rows": [
+        30,
+        4,
+        16,
+        54,
+        34,
+        7
+      ],
+      "square_root": 4
+    },
+    {
+      "H": 37,
+      "contact_word": [
+        2,
+        2,
+        1
+      ],
+      "defect": 6,
+      "index": 4,
+      "inports": 2,
+      "order": 6,
+      "root": 5,
+      "source_rows": [
+        22,
+        20,
+        8,
+        51,
+        36,
+        7
+      ],
+      "square_root": 6
+    },
+    {
+      "H": 101,
+      "contact_word": [
+        3,
+        2,
+        0,
+        0,
+        1
+      ],
+      "defect": 6,
+      "index": 5,
+      "inports": 2,
+      "order": 8,
+      "root": 7,
+      "source_rows": [
+        126,
+        92,
+        24,
+        16,
+        32,
+        206,
+        156,
+        31
+      ],
+      "square_root": 10
+    },
+    {
+      "H": 257,
+      "contact_word": [
+        3,
+        3,
+        3,
+        3,
+        1,
+        3
+      ],
+      "defect": 4,
+      "index": 7,
+      "inports": 2,
+      "order": 9,
+      "root": 8,
+      "source_rows": [
+        254,
+        252,
+        248,
+        240,
+        96,
+        192,
+        384,
+        272,
+        63
+      ],
+      "square_root": 16
+    },
+    {
+      "H": 4357,
+      "contact_word": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        1
+      ],
+      "defect": 4,
+      "index": 15,
+      "inports": 2,
+      "order": 13,
+      "root": 12,
+      "source_rows": [
+        4094,
+        4092,
+        4088,
+        4080,
+        4064,
+        4032,
+        3968,
+        2816,
+        2560,
+        1024,
+        6528,
+        4608,
+        1023
+      ],
+      "square_root": 66
+    },
+    {
+      "H": 15877,
+      "contact_word": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        3,
+        2
+      ],
+      "defect": 4,
+      "index": 24,
+      "inports": 2,
+      "order": 15,
+      "root": 14,
+      "source_rows": [
+        16382,
+        16380,
+        16376,
+        16368,
+        16352,
+        16320,
+        16256,
+        16128,
+        15872,
+        7168,
+        14336,
+        8192,
+        26624,
+        16896,
+        4095
+      ],
+      "square_root": 126
+    },
+    {
+      "H": 65537,
+      "contact_word": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        3
+      ],
+      "defect": 4,
+      "index": 43,
+      "inports": 2,
+      "order": 17,
+      "root": 16,
+      "source_rows": [
+        65534,
+        65532,
+        65528,
+        65520,
+        65504,
+        65472,
+        65408,
+        65280,
+        65024,
+        64512,
+        63488,
+        61440,
+        24576,
+        49152,
+        98304,
+        69632,
+        16383
+      ],
+      "square_root": 256
+    }
+  ],
+  "meaning_of_excluded": "Every rooted tournament with this H and at least two inports has branching defect>=7, including weak sources by the audited SCC-factorization corollary. This excludes all source orders, not only a search box. It does not assert an optimal defect or restrict d1 roots.",
+  "root_bound": 1000000,
+  "status": "FINITE-EXACT application of an all-order source exclusion theorem"
+}

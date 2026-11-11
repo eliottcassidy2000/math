@@ -22,10 +22,19 @@
   transitive-inflation-box proof passes its positivity, threshold and quotient
   checks. Rooted automorphism-group strata and fixed numbers of additional
   names also have eventual polynomial enumerators.
+- [Positive response and program families](RESPONSE_FAMILIES.md): exact
+  nonnegative run signatures, a logarithmic finite grid, the weak SCC-root
+  composition law, complete weak branching series through defect6, and finite
+  families of bounded-defect birth/deletion/arc programs. Independent root-lane
+  proof review and literal controls pass. Weak padding also obeys the dyadic
+  scalar sparsity obstruction. The cumulative budget-B strong enumeration has
+  exact eventual degree floor(log_3(B/2)), and the weak count has one more degree.
+  At defect2p the linear slope is5 times the number of strong H=p cores.
 
 Receipts: [cap dictionary](cap9.json), [independent operation audit](operation_audit.json),
 [minimum-defect controls](minimal_defect.json), and
-[independent two-inport defect audit](defect_audit.json).
+[independent two-inport defect audit](defect_audit.json), plus
+[positive-response and weak-class controls](response_families.json).
 
 Reproduce from this directory:
 
@@ -33,6 +42,7 @@ Reproduce from this directory:
     python -B audit_operations.py
     python -B minimal_defect.py
     python -B audit_defect.py
+    python -B response_families.py
 
 The operation audit also reads the pinned concurrent birth-family coefficient
 file named in its receipt. No large external census is regenerated. The

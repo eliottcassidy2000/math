@@ -1,0 +1,661 @@
+{
+  "all_branching_roots": 2008,
+  "all_labelled_strong_graphs_orders1_through5": 571,
+  "defect_histogram": {
+    "2": 384,
+    "4": 144,
+    "5": 240,
+    "6": 400,
+    "7": 120,
+    "9": 120,
+    "12": 120,
+    "13": 120,
+    "14": 120,
+    "16": 240
+  },
+  "neutral_roots": 544,
+  "nontransitive_prefix_controls": [
+    {
+      "C": 2,
+      "E": 3,
+      "H": 33,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 3,
+      "prefix_vertices": 3,
+      "q0": 1,
+      "right": 0,
+      "tail": []
+    },
+    {
+      "C": 2,
+      "E": 6,
+      "H": 75,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 3,
+      "prefix_vertices": 3,
+      "q0": 3,
+      "right": 0,
+      "tail": [
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 5,
+      "H": 57,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 3,
+      "prefix_vertices": 3,
+      "q0": 1,
+      "right": 0,
+      "tail": [
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 13,
+      "H": 165,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 3,
+      "prefix_vertices": 3,
+      "q0": 5,
+      "right": 0,
+      "tail": [
+        1,
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 14,
+      "H": 177,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 3,
+      "prefix_vertices": 3,
+      "q0": 5,
+      "right": 0,
+      "tail": [
+        2,
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 3,
+      "H": 69,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 3,
+      "prefix_vertices": 4,
+      "q0": 1,
+      "right": 0,
+      "tail": []
+    },
+    {
+      "C": 2,
+      "E": 6,
+      "H": 147,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 3,
+      "prefix_vertices": 4,
+      "q0": 3,
+      "right": 0,
+      "tail": [
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 5,
+      "H": 117,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 3,
+      "prefix_vertices": 4,
+      "q0": 1,
+      "right": 0,
+      "tail": [
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 13,
+      "H": 321,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 3,
+      "prefix_vertices": 4,
+      "q0": 5,
+      "right": 0,
+      "tail": [
+        1,
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 14,
+      "H": 345,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 3,
+      "prefix_vertices": 4,
+      "q0": 5,
+      "right": 0,
+      "tail": [
+        2,
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 3,
+      "H": 69,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 3,
+      "prefix_vertices": 4,
+      "q0": 1,
+      "right": 1,
+      "tail": []
+    },
+    {
+      "C": 2,
+      "E": 6,
+      "H": 147,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 3,
+      "prefix_vertices": 4,
+      "q0": 3,
+      "right": 1,
+      "tail": [
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 5,
+      "H": 117,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 3,
+      "prefix_vertices": 4,
+      "q0": 1,
+      "right": 1,
+      "tail": [
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 13,
+      "H": 321,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 3,
+      "prefix_vertices": 4,
+      "q0": 5,
+      "right": 1,
+      "tail": [
+        1,
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 14,
+      "H": 345,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 3,
+      "prefix_vertices": 4,
+      "q0": 5,
+      "right": 1,
+      "tail": [
+        2,
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 3,
+      "H": 141,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 3,
+      "prefix_vertices": 5,
+      "q0": 1,
+      "right": 1,
+      "tail": []
+    },
+    {
+      "C": 2,
+      "E": 6,
+      "H": 291,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 3,
+      "prefix_vertices": 5,
+      "q0": 3,
+      "right": 1,
+      "tail": [
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 5,
+      "H": 237,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 3,
+      "prefix_vertices": 5,
+      "q0": 1,
+      "right": 1,
+      "tail": [
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 13,
+      "H": 633,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 3,
+      "prefix_vertices": 5,
+      "q0": 5,
+      "right": 1,
+      "tail": [
+        1,
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 14,
+      "H": 681,
+      "b": 6,
+      "core_H": 3,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 3,
+      "prefix_vertices": 5,
+      "q0": 5,
+      "right": 1,
+      "tail": [
+        2,
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 3,
+      "H": 91,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 5,
+      "prefix_vertices": 4,
+      "q0": 1,
+      "right": 0,
+      "tail": []
+    },
+    {
+      "C": 2,
+      "E": 6,
+      "H": 197,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 5,
+      "prefix_vertices": 4,
+      "q0": 3,
+      "right": 0,
+      "tail": [
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 5,
+      "H": 155,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 5,
+      "prefix_vertices": 4,
+      "q0": 1,
+      "right": 0,
+      "tail": [
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 13,
+      "H": 431,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 5,
+      "prefix_vertices": 4,
+      "q0": 5,
+      "right": 0,
+      "tail": [
+        1,
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 14,
+      "H": 463,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 5,
+      "prefix_vertices": 4,
+      "q0": 5,
+      "right": 0,
+      "tail": [
+        2,
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 3,
+      "H": 187,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 5,
+      "prefix_vertices": 5,
+      "q0": 1,
+      "right": 0,
+      "tail": []
+    },
+    {
+      "C": 2,
+      "E": 6,
+      "H": 389,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 5,
+      "prefix_vertices": 5,
+      "q0": 3,
+      "right": 0,
+      "tail": [
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 5,
+      "H": 315,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 5,
+      "prefix_vertices": 5,
+      "q0": 1,
+      "right": 0,
+      "tail": [
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 13,
+      "H": 847,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 5,
+      "prefix_vertices": 5,
+      "q0": 5,
+      "right": 0,
+      "tail": [
+        1,
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 14,
+      "H": 911,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 5,
+      "prefix_vertices": 5,
+      "q0": 5,
+      "right": 0,
+      "tail": [
+        2,
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 3,
+      "H": 187,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 5,
+      "prefix_vertices": 5,
+      "q0": 1,
+      "right": 1,
+      "tail": []
+    },
+    {
+      "C": 2,
+      "E": 6,
+      "H": 389,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 5,
+      "prefix_vertices": 5,
+      "q0": 3,
+      "right": 1,
+      "tail": [
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 5,
+      "H": 315,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 5,
+      "prefix_vertices": 5,
+      "q0": 1,
+      "right": 1,
+      "tail": [
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 13,
+      "H": 847,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 5,
+      "prefix_vertices": 5,
+      "q0": 5,
+      "right": 1,
+      "tail": [
+        1,
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 14,
+      "H": 911,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 0,
+      "prefix_H": 5,
+      "prefix_vertices": 5,
+      "q0": 5,
+      "right": 1,
+      "tail": [
+        2,
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 3,
+      "H": 379,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 5,
+      "prefix_vertices": 6,
+      "q0": 1,
+      "right": 1,
+      "tail": []
+    },
+    {
+      "C": 2,
+      "E": 6,
+      "H": 773,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 5,
+      "prefix_vertices": 6,
+      "q0": 3,
+      "right": 1,
+      "tail": [
+        1
+      ]
+    },
+    {
+      "C": 2,
+      "E": 5,
+      "H": 635,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 5,
+      "prefix_vertices": 6,
+      "q0": 1,
+      "right": 1,
+      "tail": [
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 13,
+      "H": 1679,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 5,
+      "prefix_vertices": 6,
+      "q0": 5,
+      "right": 1,
+      "tail": [
+        1,
+        2
+      ]
+    },
+    {
+      "C": 2,
+      "E": 14,
+      "H": 1807,
+      "b": 10,
+      "core_H": 5,
+      "d": 2,
+      "left": 1,
+      "prefix_H": 5,
+      "prefix_vertices": 6,
+      "q0": 5,
+      "right": 1,
+      "tail": [
+        2,
+        1
+      ]
+    }
+  ],
+  "scope": "All strong labelled tournaments through order5 and every root with indegree>=2;40 additional C3/S4-prefix graphs with specified root. Universal classification follows from the proof, not finite extrapolation.",
+  "status": "PASS independent literal controls for the proved canonical decomposition"
+}

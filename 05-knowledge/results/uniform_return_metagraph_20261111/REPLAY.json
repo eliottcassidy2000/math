@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "audit/retained_reset.json",
+      "script": "audit/retained_reset.py",
+      "sha256": "88421ea1da5a0b9a721a83f3fabdb8884fc9f2c4e0dc7bd8f419d1b90582cb0b"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "audit/template_controls.json",
+      "script": "audit/template_controls.py",
+      "sha256": "edaec65ba5e21578213dd555d6d69c7f1e3e3f42fb8c3f936e9c13099acc0f49"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "audit/weak_factor.json",
+      "script": "audit/weak_factor.py",
+      "sha256": "e3c29fe868c6faa39fad34c72aafcebf24ddc2d673aee4ea812d5f25a78c8ad9"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "audit/ready_rebase.json",
+      "script": "audit/ready_rebase.py",
+      "sha256": "571f337bd5d44e2e79c1c72e09a491035681a40e96e4e5d5a2121354a84a13f7"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "audit/atlas_instructions.json",
+      "script": "audit/atlas_instructions.py",
+      "sha256": "62d0bfc4dbcdf68f0800ebc0d5db9910e94d3df354f65ecd43eff1c4219d957e"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "defect/cycle_residual.json",
+      "script": "defect/cycle_residual.py",
+      "sha256": "36d15fe258b78a94238600c25e79958682f855a3a849de5773daedeba7fd90b3"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "defect/pentagon_inflation.json",
+      "script": "defect/pentagon_inflation.py",
+      "sha256": "c82d60b9efdfd8b329ab72c5f1eec6af3343877be12e0894a18b026428deb16d"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "arithmetic/dyadic_defect.json",
+      "script": "arithmetic/dyadic_defect.py",
+      "sha256": "50999b708eb39e5a40c58a5f3f185e6f9352ac3c3be9a83ad1903dc2bd62b40c"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "arithmetic/prefix_interface.json",
+      "script": "arithmetic/prefix_interface.py",
+      "sha256": "0e8a6159734371ddb9f9bd4168b5955f3a2aaa99f226768e338a6aaf51135386"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "arithmetic/tail_squares.json",
+      "script": "arithmetic/tail_squares.py",
+      "sha256": "5ad581321353660b01b8937d046e94b58e381c549d5e792cd379f90b9dd77fb6"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "arithmetic/chart_inverse.json",
+      "script": "arithmetic/chart_inverse.py",
+      "sha256": "76974e29026a450c084417a66dea9de45c16344b57e80d5382f06e2d0eb413bf"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "arithmetic/minimum_squares.json",
+      "script": "arithmetic/minimum_squares.py",
+      "sha256": "759fb003bb8bd2de421df0f5e7847d35140d9c40d5d986182a76fecd544f75b7"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "metagraph/minimal_defect.json",
+      "script": "metagraph/minimal_defect.py",
+      "sha256": "5318068ac8343e934cf1c6759e89a7ad7b615a3702dd3892d1c4cfa2ef7e4c5a"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "metagraph/response_families.json",
+      "script": "metagraph/response_families.py",
+      "sha256": "691b2daaf27d95be932f7c1d53fb3c133303617bad57b3feeb5503a58616904f"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "reset/uniform_return.json",
+      "script": "reset/uniform_return.py",
+      "sha256": "646703d608461b8c26b070a0098c2a4edb3d4b7cd7ccadf2cf37262579fa7ea7"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "reset/composition.json",
+      "script": "reset/composition.py",
+      "sha256": "d77222a2ee399bad91af4553ea4f0a9d2a3872b13a89e4afd49cfad63754e6bc"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "reset/ready_rebase.json",
+      "script": "reset/ready_rebase.py",
+      "sha256": "28488ea9428dc11970b96b79809f8da8924c88dd281a2aabc7b6ad180ddae0da"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "reset/iterable_return.json",
+      "script": "reset/iterable_return.py",
+      "sha256": "20feca412de765b67a6cc7133ebbd9da0835e2b84f3ed38154f654a9d4ffdadc"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "reset/atlas_returns.json",
+      "script": "reset/atlas_returns.py",
+      "sha256": "c6ad569f3f68c5903d6b0fb3298673ba56ccef8806d02b45bd10dca106a512c9"
+    },
+    {
+      "normal_optimized": "MATCH",
+      "receipt": "reset/atlas_two_birth.json",
+      "script": "reset/atlas_two_birth.py",
+      "sha256": "16cf786b3c3441e50b97c57e3eae1e9495c76535645ec2f95320dc10b8ab5e75"
+    }
+  ],
+  "method": "Normal and optimized subprocess replay, matching existing normalized receipts",
+  "status": "PASS"
+}

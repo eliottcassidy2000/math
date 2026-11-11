@@ -1,0 +1,343 @@
+[
+  {
+    "tail": "00 01",
+    "A": 9,
+    "B": -1,
+    "candidate_basehits": 9,
+    "hits": [
+      {
+        "delete_tail_index": 1,
+        "outmask": 8,
+        "offset": 2,
+        "strong": true,
+        "target_rows": [
+          238,
+          224,
+          250,
+          114,
+          227,
+          192,
+          128,
+          8
+        ],
+        "runs": [
+          17,
+          53,
+          27,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oldroot_profile": {
+          "root": 4,
+          "h": 53,
+          "s": 9,
+          "q": 9,
+          "F": 63,
+          "gap": 10,
+          "delta": 10
+        }
+      }
+    ]
+  },
+  {
+    "tail": "00 10",
+    "A": 11,
+    "B": 1,
+    "candidate_basehits": 6,
+    "hits": [
+      {
+        "delete_tail_index": 0,
+        "outmask": 76,
+        "offset": 2,
+        "strong": false,
+        "target_rows": [
+          238,
+          228,
+          120,
+          114,
+          227,
+          192,
+          0,
+          76
+        ],
+        "runs": [
+          33,
+          71,
+          33,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oldroot_profile": {
+          "root": 4,
+          "h": 71,
+          "s": 13,
+          "q": 13,
+          "F": 79,
+          "gap": 8,
+          "delta": 8
+        }
+      }
+    ]
+  },
+  {
+    "tail": "01 01",
+    "A": 9,
+    "B": -3,
+    "candidate_basehits": 2,
+    "hits": []
+  },
+  {
+    "tail": "01 11",
+    "A": 15,
+    "B": -1,
+    "candidate_basehits": 8,
+    "hits": []
+  },
+  {
+    "tail": "10 10",
+    "A": 12,
+    "B": 1,
+    "candidate_basehits": 4,
+    "hits": []
+  },
+  {
+    "tail": "10 11",
+    "A": 16,
+    "B": 1,
+    "candidate_basehits": 6,
+    "hits": []
+  },
+  {
+    "tail": "01 00 10",
+    "A": 25,
+    "B": 5,
+    "candidate_basehits": 1,
+    "hits": []
+  },
+  {
+    "tail": "01 01 10",
+    "A": 34,
+    "B": 5,
+    "candidate_basehits": 3,
+    "hits": [
+      {
+        "delete_tail_index": 0,
+        "outmask": 66,
+        "offset": 2,
+        "strong": true,
+        "target_rows": [
+          478,
+          212,
+          456,
+          498,
+          484,
+          455,
+          128,
+          256,
+          66
+        ],
+        "runs": [
+          99,
+          221,
+          102,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oldroot_profile": {
+          "root": 5,
+          "h": 221,
+          "s": 41,
+          "q": 41,
+          "F": 245,
+          "gap": 24,
+          "delta": 24
+        }
+      },
+      {
+        "delete_tail_index": 1,
+        "outmask": 66,
+        "offset": 2,
+        "strong": true,
+        "target_rows": [
+          478,
+          212,
+          456,
+          498,
+          484,
+          455,
+          128,
+          256,
+          66
+        ],
+        "runs": [
+          99,
+          221,
+          102,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oldroot_profile": {
+          "root": 5,
+          "h": 221,
+          "s": 41,
+          "q": 41,
+          "F": 245,
+          "gap": 24,
+          "delta": 24
+        }
+      }
+    ]
+  },
+  {
+    "tail": "01 10 01",
+    "A": 30,
+    "B": 5,
+    "candidate_basehits": 3,
+    "hits": [
+      {
+        "delete_tail_index": 0,
+        "outmask": 156,
+        "offset": 4,
+        "strong": false,
+        "target_rows": [
+          478,
+          460,
+          208,
+          244,
+          226,
+          455,
+          384,
+          0,
+          156
+        ],
+        "runs": [
+          97,
+          199,
+          90,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oldroot_profile": {
+          "root": 5,
+          "h": 199,
+          "s": 33,
+          "q": 33,
+          "F": 213,
+          "gap": 14,
+          "delta": 14
+        }
+      }
+    ]
+  },
+  {
+    "tail": "01 10 10",
+    "A": 30,
+    "B": 7,
+    "candidate_basehits": 7,
+    "hits": []
+  },
+  {
+    "tail": "01 11 10",
+    "A": 34,
+    "B": 5,
+    "candidate_basehits": 2,
+    "hits": [
+      {
+        "delete_tail_index": 1,
+        "outmask": 66,
+        "offset": 2,
+        "strong": true,
+        "target_rows": [
+          478,
+          212,
+          456,
+          498,
+          484,
+          455,
+          128,
+          256,
+          66
+        ],
+        "runs": [
+          99,
+          221,
+          102,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oldroot_profile": {
+          "root": 5,
+          "h": 221,
+          "s": 41,
+          "q": 41,
+          "F": 245,
+          "gap": 24,
+          "delta": 24
+        }
+      }
+    ]
+  },
+  {
+    "tail": "10 00 01",
+    "A": 22,
+    "B": 5,
+    "candidate_basehits": 7,
+    "hits": []
+  },
+  {
+    "tail": "10 01 01",
+    "A": 25,
+    "B": 5,
+    "candidate_basehits": 5,
+    "hits": []
+  },
+  {
+    "tail": "10 01 10",
+    "A": 33,
+    "B": 9,
+    "candidate_basehits": 7,
+    "hits": []
+  },
+  {
+    "tail": "10 10 01",
+    "A": 33,
+    "B": 7,
+    "candidate_basehits": 2,
+    "hits": []
+  },
+  {
+    "tail": "10 11 01",
+    "A": 31,
+    "B": 5,
+    "candidate_basehits": 5,
+    "hits": []
+  }
+]

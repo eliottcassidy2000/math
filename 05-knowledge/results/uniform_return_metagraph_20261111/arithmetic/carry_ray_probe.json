@@ -1,0 +1,714 @@
+{
+  "families": [
+    {
+      "family": "H13_width2",
+      "left_address": 0,
+      "linear_inverse_parameters": {
+        "c": 32,
+        "d": 13,
+        "e": 6,
+        "rhs": "102*2^k-1"
+      },
+      "required_B_parity": null,
+      "rows": [
+        {
+          "all_qualifying_B": [],
+          "k": 1,
+          "target": 223
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 2,
+          "target": 427
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 3,
+          "target": 835
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 4,
+          "target": 1651
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 5,
+          "target": 3283
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 6,
+          "target": 6547
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 7,
+          "target": 13075
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 8,
+          "target": 26131
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 9,
+          "target": 52243
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 10,
+          "target": 104467
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 11,
+          "target": 208915
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 12,
+          "target": 417811
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 13,
+          "target": 835603
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 14,
+          "target": 1671187
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 15,
+          "target": 3342355
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 16,
+          "target": 6684691
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 17,
+          "target": 13369363
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 18,
+          "target": 26738707
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 19,
+          "target": 53477395
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 20,
+          "target": 106954771
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 21,
+          "target": 213909523
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 22,
+          "target": 427819027
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 23,
+          "target": 855638035
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 24,
+          "target": 1711276051
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 25,
+          "target": 3422552083
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 26,
+          "target": 6845104147
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 27,
+          "target": 13690208275
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 28,
+          "target": 27380416531
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 29,
+          "target": 54760833043
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 30,
+          "target": 109521666067
+        }
+      ]
+    },
+    {
+      "family": "H13_width4",
+      "left_address": 1,
+      "linear_inverse_parameters": {
+        "c": 136,
+        "d": 13,
+        "e": 6,
+        "rhs": "102*2^k-59"
+      },
+      "required_B_parity": null,
+      "rows": [
+        {
+          "all_qualifying_B": [],
+          "k": 1,
+          "target": 223
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 2,
+          "target": 427
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 3,
+          "target": 835
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 4,
+          "target": 1651
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 5,
+          "target": 3283
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 6,
+          "target": 6547
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 7,
+          "target": 13075
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 8,
+          "target": 26131
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 9,
+          "target": 52243
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 10,
+          "target": 104467
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 11,
+          "target": 208915
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 12,
+          "target": 417811
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 13,
+          "target": 835603
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 14,
+          "target": 1671187
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 15,
+          "target": 3342355
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 16,
+          "target": 6684691
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 17,
+          "target": 13369363
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 18,
+          "target": 26738707
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 19,
+          "target": 53477395
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 20,
+          "target": 106954771
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 21,
+          "target": 213909523
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 22,
+          "target": 427819027
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 23,
+          "target": 855638035
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 24,
+          "target": 1711276051
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 25,
+          "target": 3422552083
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 26,
+          "target": 6845104147
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 27,
+          "target": 13690208275
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 28,
+          "target": 27380416531
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 29,
+          "target": 54760833043
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 30,
+          "target": 109521666067
+        }
+      ]
+    },
+    {
+      "family": "H25_width2",
+      "left_address": 0,
+      "linear_inverse_parameters": {
+        "c": 122,
+        "d": 25,
+        "e": 16,
+        "rhs": "102*2^k-31"
+      },
+      "required_B_parity": 1,
+      "rows": [
+        {
+          "all_qualifying_B": [],
+          "k": 1,
+          "target": 223
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 2,
+          "target": 427
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 3,
+          "target": 835
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 4,
+          "target": 1651
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 5,
+          "target": 3283
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 6,
+          "target": 6547
+        },
+        {
+          "all_qualifying_B": [
+            97
+          ],
+          "k": 7,
+          "target": 13075
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 8,
+          "target": 26131
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 9,
+          "target": 52243
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 10,
+          "target": 104467
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 11,
+          "target": 208915
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 12,
+          "target": 417811
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 13,
+          "target": 835603
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 14,
+          "target": 1671187
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 15,
+          "target": 3342355
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 16,
+          "target": 6684691
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 17,
+          "target": 13369363
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 18,
+          "target": 26738707
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 19,
+          "target": 53477395
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 20,
+          "target": 106954771
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 21,
+          "target": 213909523
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 22,
+          "target": 427819027
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 23,
+          "target": 855638035
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 24,
+          "target": 1711276051
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 25,
+          "target": 3422552083
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 26,
+          "target": 6845104147
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 27,
+          "target": 13690208275
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 28,
+          "target": 27380416531
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 29,
+          "target": 54760833043
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 30,
+          "target": 109521666067
+        }
+      ]
+    },
+    {
+      "family": "H25_width2or4",
+      "left_address": 1,
+      "linear_inverse_parameters": {
+        "c": 426,
+        "d": 25,
+        "e": 16,
+        "rhs": "102*2^k-151"
+      },
+      "required_B_parity": null,
+      "rows": [
+        {
+          "all_qualifying_B": [],
+          "k": 1,
+          "target": 223
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 2,
+          "target": 427
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 3,
+          "target": 835
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 4,
+          "target": 1651
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 5,
+          "target": 3283
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 6,
+          "target": 6547
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 7,
+          "target": 13075
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 8,
+          "target": 26131
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 9,
+          "target": 52243
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 10,
+          "target": 104467
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 11,
+          "target": 208915
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 12,
+          "target": 417811
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 13,
+          "target": 835603
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 14,
+          "target": 1671187
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 15,
+          "target": 3342355
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 16,
+          "target": 6684691
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 17,
+          "target": 13369363
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 18,
+          "target": 26738707
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 19,
+          "target": 53477395
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 20,
+          "target": 106954771
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 21,
+          "target": 213909523
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 22,
+          "target": 427819027
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 23,
+          "target": 855638035
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 24,
+          "target": 1711276051
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 25,
+          "target": 3422552083
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 26,
+          "target": 6845104147
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 27,
+          "target": 13690208275
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 28,
+          "target": 27380416531
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 29,
+          "target": 54760833043
+        },
+        {
+          "all_qualifying_B": [],
+          "k": 30,
+          "target": 109521666067
+        }
+      ]
+    }
+  ],
+  "literal_pair_controls": [
+    {
+      "A": 0,
+      "B": 97,
+      "family": "H25_width2",
+      "k": 7,
+      "lower_rows": [
+        16370,
+        8136,
+        8131,
+        16325,
+        16366,
+        8142,
+        16256,
+        7936,
+        7680,
+        7168,
+        6144,
+        12288,
+        8192,
+        1958
+      ],
+      "lower_state": [
+        13073,
+        25,
+        17141,
+        25
+      ],
+      "retained_root": 13,
+      "upper_rows": [
+        8178,
+        8168,
+        16355,
+        16325,
+        16366,
+        8136,
+        16256,
+        7936,
+        7680,
+        7168,
+        6144,
+        12288,
+        8192,
+        1955
+      ],
+      "upper_state": [
+        13075,
+        25,
+        17141,
+        25
+      ]
+    }
+  ],
+  "missing_operation": "An actual compatible replacement from the uniform-reset source of H13073 to the H25 lower witness; equal scalar H alone does not provide it.",
+  "scope": "Four inherited H13/H25 pure-gap families; no address or graph-order cutoff, using the proved exact linear-g inverse.",
+  "status": "FINITE-EXACT complete address intersections, k1..30; no same-H source operation or uniform return established"
+}

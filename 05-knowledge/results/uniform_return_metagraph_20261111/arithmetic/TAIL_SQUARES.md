@@ -172,3 +172,36 @@ kernel path counts, exact modular arithmetic, exhaustive factor pairs and
 primality certificates. `tail_squares.json` is the complete certificate.
 The source-language proof and the elementary arithmetic proof play distinct
 roles; a finite list of square hits by itself would not prove this result.
+
+## 6. Weak sources and the complete certified prime table
+
+The independently reviewed weak SCC factorization in
+[RESPONSE_FAMILIES](../metagraph/RESPONSE_FAMILIES.md#4-weak-graphs-have-a-canonical-composition-law)
+extends the SAME prime intersection(2) to all rooted tournaments with
+at least two inports and defect at most6, whether strong or weak.
+Indeed an upstream component before the root's SCC forces H<=b; the
+complete small contributions have values1,3,5. A root in the first SCC
+has a strong branching source followed by a suffix of Hamilton count t
+dividing b. The only new nontrivial suffix case through6 is t3 after a
+strong defect2 source, which makes H divisible by3. Transitive suffixes
+leave H unchanged. Thus no new square-plus-one value with positive square
+root occurs. If the square root0 is allowed, weak H1 is an additional
+value; it is not prime. This is a scoped corollary of the audited weak
+classification, not a general extension of every strong-source theorem.
+
+Applying(2) to the certified A002496 table through square root1,000,000
+admits exactly eight prime values:
+
+    5,17,37,101,257,4357,15877,65537.
+
+The table contains54,110 primes including2. Every one of the other54,101
+odd prime values is excluded from ALL source orders at branching defect
+at most6. Equivalently, every rooted tournament representing one of those
+values and having at least two inports has defect at least7. This is an
+all-order exclusion applied to a finite prime table, not an assertion
+that7 is attainable or optimal.
+
+`prime_source_filter.py` saves the exact eight admitted source graphs and
+the counts in `low_defect_prime_filter.json`. The graphs are selected from
+the already certified source families; no new global minimum-order claim
+is made.

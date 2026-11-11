@@ -27,6 +27,24 @@
     ],
     "root": 8
   },
+  "all_rooted_1_ready425_classes": [
+    {
+      "parent_order": 8,
+      "parent_rank": 87,
+      "root": 8,
+      "rows": [
+        258,
+        132,
+        137,
+        147,
+        231,
+        207,
+        143,
+        1,
+        254
+      ]
+    }
+  ],
   "all_size_parent_bound": 10,
   "lane_values": {
     "1": [

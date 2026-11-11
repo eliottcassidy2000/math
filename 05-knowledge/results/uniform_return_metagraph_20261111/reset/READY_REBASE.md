@@ -85,11 +85,61 @@ counts, by orders3..10,
     two-start: 0,1,5,18,60,191,589,1775.
 
 The inverse finds425 in the1-ready image and excludes it from the
-2-ready image. Consequently the usual2-ready+4 recipe cannot begin
+2-ready image. Enumerating all one-start parents, rather than stopping
+at the first value witness, finds exactly ONE rooted strong1-ready425
+class. It is the nine-vertex returned source above. None of the ten
+nine-vertex deletion cards of V(2,1) is isomorphic to that graph or its
+converse. Thus the exhibited eight-retained return is retention-optimal
+among replacements of this V(2,1) into any strong1-/2-ready425 source,
+including readiness after reversing all arcs, with every retained arc
+unchanged. This optimum permits any number of auxiliary insertions and
+deletions: the final strong ready graph is necessarily the specified
+nine-vertex graph. Weak padded targets are outside this optimum's scope.
+
+Consequently the usual2-ready+4 recipe cannot begin
 from any strongH425 source, at any order. This is an interface
 obstruction, not a claim that1279 is unattainable or that other+4
 operations are impossible. The explicit1-ready witness above is
 verified independently of that inverse.
+
+## 4. The actual source return improves every future cost
+
+The incoming [exact source-order theorem]
+(../../h13_paired_descent_20261111/dynamics/PROOF.md) uses
+(H,E,U,d), where E counts paths ending at the root, U is the ordered
+two-path-cover sum with the first path starting there, and d is the
+root-deletion count. The actual old root and new root above have states
+
+    old V425: (425,4,2542,41),
+    new R425: (425,15,1491,53).
+
+Their positive-frame difference in q=(H,U,U−d,H+U−E) is
+
+    q_old−q_new=(0,1051,1063,1062).
+
+Consequently every common future O/Z/J program has old count at least
+new count. Pure O preserves425; the first Z or J after any O-prefix
+creates a strict decrease, and subsequent operations preserve it. The
+theorem also permits arbitrary fixed right-root amalgams. This is a
+cost comparison for matched future programs, not a target-surjectivity
+claim: a cheaper continuation may have a different desired target.
+
+There is a stronger fixed-context statement. In the seven-coordinate
+order(H,E,S,U,V,d,K) of incoming [ADDITIVITY section5]
+(../../h13_paired_descent_20261111/modular_cycles/ADDITIVITY.md), the
+old and new states are
+
+    (425,4,41,2542,449,41,2848),
+    (425,15,52,1491,426,53,1544).
+
+Their H,U,V,K differences are nonnegative and their E,S,d differences
+are nonpositive, exactly that theorem's sufficient cone. Hence inserting
+the rebase into any common fixed rooted-amalgamation context on either
+or both sides also weakly reduces the count, with the stated sidecar
+inequalities preserved. A subsequent common O/Z/J program preserves
+the resulting q comparison. No necessity of the seven-coordinate cone
+or arbitrary intervening left contexts after each root operation is
+claimed.
 
 Reproduce all construction checks with `python -B ready_rebase.py`;
 add `--inverse` to rerun the complete ready-value inversion through425.

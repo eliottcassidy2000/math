@@ -6,6 +6,17 @@
 the complete consecutive-prime maximum family, the exact A002496/A135244
 extremal equivalence, and the composition boundary.
 
+[The canonical prefix-tail theorem](DYADIC_DEFECT.md) gives a complete
+finite family description at EVERY fixed branching defect: all unbounded
+strong sources are neutral prefix inflations, their Hamilton counts lie in finitely
+many dyadic rays, and nonneutral strong sources have bounded order. All odd-defect
+strong strata are finite. Hence any fixed branching-defect budget realizes only
+O(log X) distinct Hamilton counts up to X. The d1 boundary remains outside
+this theorem. [Independent literal controls](dyadic_defect.json).
+Its full seven-coordinate prefix response also proves that the inherited
+S5a/S5b one-arc switch preserves every retained rooted coordinate inside
+an ordinary prefix. [Literal context controls](prefix_interface.json).
+
 - A135244: complete maximum-source prefix2..1,000,000, all999,999 entries
   independently compared. [Producer receipt](maxima_receipt.json),
   [independent audit](maxima_audit.json).
@@ -36,6 +47,9 @@ extremal equivalence, and the composition boundary.
   every4^m+1,m>=1, and exactly nine additional values. Its prime intersection
   is the Fermat primes of index>=1 and37,101,4357,15877, with the prime
   guard on the infinite family explicit. [Exact certificate](tail_squares.json).
+- [Incoming paired-carry integration](CARRY_CONNECTION.md):120 complete
+  address inverses and one actual13073/13075 paired meeting; the missing
+  source operation is retained explicitly. [Receipt](carry_ray_probe.json).
 
 Run from this directory (Python standard library; the chart search also
 requires a C++17 compiler named g++):
@@ -52,11 +66,16 @@ requires a C++17 compiler named g++):
     python -B audit_defect.py
     python -B audit_cycle_residual.py
     python -B tail_squares.py
+    python -B carry_ray_probe.py
+    python -B prime_source_filter.py
+    python -B dyadic_defect.py
+    python -B prefix_interface.py
 
 To export the complete computed numeric tables, add `--table output.txt`
 to `maxima.py` or `quadratic_primes.py`. The stored receipts hash those
-complete normalized streams; bulky generated tables and executables are
-not committed. The offline source comparison uses the two attributed
+complete normalized streams. The optional full A135244 table and generated
+executables are not committed; the complete54,110-term quadratic-prime
+table is included. The offline source comparison uses the two attributed
 numeric b-files saved here; `--refresh` explicitly downloads new versions.
 
 The cited sources and inherited code are listed in the proof and receipts.

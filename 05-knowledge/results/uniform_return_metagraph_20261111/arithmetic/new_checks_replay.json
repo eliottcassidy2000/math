@@ -37,6 +37,30 @@
       "receipt": "tail_squares.json",
       "normal_optimized_identical": true,
       "normalized_receipt_sha256": "5ad581321353660b01b8937d046e94b58e381c549d5e792cd379f90b9dd77fb6"
+    },
+    {
+      "script": "carry_ray_probe.py",
+      "receipt": "carry_ray_probe.json",
+      "normal_optimized_identical": true,
+      "normalized_receipt_sha256": "6dbe803fc52f2eb8ceb965c4153bbd995b7f61c7914961beb583569a40a061fb"
+    },
+    {
+      "script": "prime_source_filter.py",
+      "receipt": "low_defect_prime_filter.json",
+      "normal_optimized_identical": true,
+      "normalized_receipt_sha256": "b0e939c4677cdca5ac7ed2947da1f733dd86821e2f49083b7e65c72e48fb31cd"
+    },
+    {
+      "script": "dyadic_defect.py",
+      "receipt": "dyadic_defect.json",
+      "normal_optimized_identical": true,
+      "normalized_receipt_sha256": "50999b708eb39e5a40c58a5f3f185e6f9352ac3c3be9a83ad1903dc2bd62b40c"
+    },
+    {
+      "script": "prefix_interface.py",
+      "receipt": "prefix_interface.json",
+      "normal_optimized_identical": true,
+      "normalized_receipt_sha256": "0e8a6159734371ddb9f9bd4168b5955f3a2aaa99f226768e338a6aaf51135386"
     }
   ],
   "complete_A002496_table": {

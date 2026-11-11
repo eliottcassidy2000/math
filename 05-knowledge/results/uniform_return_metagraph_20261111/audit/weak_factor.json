@@ -1,0 +1,9 @@
+{
+  "branching_cases": 3654,
+  "graphs": 1099,
+  "leading_prefix_bound_cases": 1406,
+  "method": "Independent literal SCC reachability and endpoint-subset tables",
+  "rooted_factorizations": 5405,
+  "status": "PASS",
+  "universe": "All labelled tournaments of orders1..5 and every root"
+}
