@@ -1,6 +1,6 @@
 # Session252: five-core interfaces and fivefold mathematics
 
-**2026-11-11. ACTIVE creative research checkpoint.** The inherited five-core
+**2026-11-11. COMPLETE research deliverable.** The inherited five-core
 construction is a sufficient proposed route to Chan–Pak, not a completed proof.
 Its recorded finite coverage is through 262143. All-height coverage remains OPEN.
 
@@ -29,14 +29,13 @@ The concept board is: actual core / coloured path matrix / binary word transfer 
 triangle overlap / finite prime clocks / global target lift. For every bridge we
 retain its map, preserved predicate, lost information, and next decisive step.
 
-## Planned deliverables
+## Deliverables
 
-1. Historical atlas with precise older source paths.
-2. Exact path-interface algebra and constructive gluing identities.
-3. Golden/Platonic/ADE bridge through native triangle overlap and associativity.
-4. Fermat and Monster arithmetic block compilers, with integer-height limits.
-5. Synthesis separating proved-in-note mechanisms, finite experiments, and the
-   remaining all-height covering problem.
+1. [Synthesis](SYNTHESIS.md) and [historical atlas](HISTORICAL_ATLAS.md).
+2. [Five-dimensional algebra and minimal seven-coordinate response](algebra/PROOF.md).
+3. [Golden/Platonic/ADE bridge](golden/PROOF.md), including the H17 golden stem.
+4. [Fermat/Monster arithmetic](arithmetic/PROOF.md) and explicit one-core modular surjectivity.
+5. `python3 reproduce.py` runs the three compact engines in ordinary and optimized mode.
 
 The known Fermat primes are not claimed exhaustive. The full Ogg set has fifteen
 primes; any five-prime subfamily is named with its defining predicate.

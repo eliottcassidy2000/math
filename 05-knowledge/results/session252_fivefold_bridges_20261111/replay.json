@@ -1,0 +1,23 @@
+{
+  "scope": "new compact identities, not an all-height coverage test",
+  "engines": [
+    {
+      "script": "algebra/probe.py",
+      "ordinary": "PASS",
+      "optimized": "PASS",
+      "artifact_sha256": "25e62c89fbc0668b319aeefd04c0c277c98571cee45dcdde70e2d3b829f8b8aa"
+    },
+    {
+      "script": "golden/probe.py",
+      "ordinary": "PASS",
+      "optimized": "PASS",
+      "artifact_sha256": "87d35c7d2f1d36a33b0f1f98b6734793ed0242b8bf49b73b22368194adfd799c"
+    },
+    {
+      "script": "arithmetic/derive.py",
+      "ordinary": "PASS",
+      "optimized": "PASS",
+      "artifact_sha256": "fe08d05f27831a6abbc663b0fbeb7bac4e74db4242578b169cb536074fb30a97"
+    }
+  ]
+}

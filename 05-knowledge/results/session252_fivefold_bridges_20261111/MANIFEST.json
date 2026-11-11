@@ -1,0 +1,100 @@
+{
+  "session": 252,
+  "date": "2026-11-11",
+  "status": "Complete research packet; all-height five-core coverage and Chan-Pak remain open",
+  "verified_prior_checkpoints": [
+    "688e150cb0146188e0d50796144a412d1f9e039f",
+    "cb7a17db9710eaddc2fe374e0e37876f5ef9f4e3"
+  ],
+  "results": "New elementary derivations and inherited mechanisms, no independent canon promotion or priority claim",
+  "source_paths": 47,
+  "historical_manifest_entries": 35,
+  "replay": "Three engines in ordinary and optimized Python, explicit checks retained",
+  "files": [
+    {
+      "path": "HISTORICAL_ATLAS.md",
+      "bytes": 25017,
+      "sha256": "8d682af8c048c75b56bfa1cc8ef17f8556e431db32f1a9261fffa26bc50eaeb2"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2430,
+      "sha256": "f4e113f8985ba4b2390531eb50f8cffb20a14ca4b86bd970ada11dc626935ad3"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 10329,
+      "sha256": "1ef51b744e3acc82c766735e254d60d77359592970074d0719cb4bb53d90173c"
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "bytes": 11094,
+      "sha256": "67811342623c10afdfd9450653163bc6021cbbd813e84dd50eb2adf67ef0f525"
+    },
+    {
+      "path": "algebra/PROOF.md",
+      "bytes": 7949,
+      "sha256": "faa092dd428722bc1b86b12bc16804115a282db2ca0ea6cb84d1ea061a028d12"
+    },
+    {
+      "path": "algebra/probe.py",
+      "bytes": 3445,
+      "sha256": "feb930e0dc5cb069db34ca4a3b655bff64be65613babd67930dc68deb68b9282"
+    },
+    {
+      "path": "algebra/results.json",
+      "bytes": 1978,
+      "sha256": "25e62c89fbc0668b319aeefd04c0c277c98571cee45dcdde70e2d3b829f8b8aa"
+    },
+    {
+      "path": "arithmetic/PROOF.md",
+      "bytes": 19262,
+      "sha256": "860e6243585a0554eb9a3235597b3be111e605283e82f503593d325df794ae21"
+    },
+    {
+      "path": "arithmetic/derive.py",
+      "bytes": 3563,
+      "sha256": "b7c18b400765be8f44ad339b6ba4cc0c28640b90c470ff9abaaecb48719ba70f"
+    },
+    {
+      "path": "arithmetic/results.json",
+      "bytes": 7799,
+      "sha256": "fe08d05f27831a6abbc663b0fbeb7bac4e74db4242578b169cb536074fb30a97"
+    },
+    {
+      "path": "doc_check.out",
+      "bytes": 143,
+      "sha256": "bbb7224c9c12db914cb21fff872f709dd506b092a4a4f18427885c46bd02c38a"
+    },
+    {
+      "path": "golden/PROOF.md",
+      "bytes": 16541,
+      "sha256": "3e5762dfd73b564f62b801a2953cd57f84d15838791de494efd03647879ad73c"
+    },
+    {
+      "path": "golden/probe.py",
+      "bytes": 1842,
+      "sha256": "ccdef5687a6a5cef8fe7372f4cdfebde971623db6e0c20dcc1df21dc2a89a239"
+    },
+    {
+      "path": "golden/results.txt",
+      "bytes": 565,
+      "sha256": "87d35c7d2f1d36a33b0f1f98b6734793ed0242b8bf49b73b22368194adfd799c"
+    },
+    {
+      "path": "history-sources.json",
+      "bytes": 4550,
+      "sha256": "c06ac03bc2fe311c23688837331c4df1a67bd746692537e3acdc6e9aa51cf427"
+    },
+    {
+      "path": "replay.json",
+      "bytes": 677,
+      "sha256": "b02542fe80dbaaf9fbe47b9b5972d29451eb2a5749feb5a8fd90a423f0045787"
+    },
+    {
+      "path": "reproduce.py",
+      "bytes": 1045,
+      "sha256": "55156f4974f671a47e040b80d3fc0d67d3b97cb7040cb87621fdaa97db57fcbf"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "source_commit": "cb7a17db9710eaddc2fe374e0e37876f5ef9f4e3",
+  "meaning": "Explicit cited repository paths, not a claim to have newly read every line of each source. Historical status is retained.",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase.md",
+      "present": true,
+      "sha256": "4d8e97c83d54a878c3f628d1944be0d5d391e1c0a2e96a5cf877f5edef875cbe"
+    },
+    {
+      "path": "01-canon/theorems/THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md",
+      "present": true,
+      "sha256": "ec9961776558de0e30d6349821961979a3dd2e77bb2496a593a528659c5a057f"
+    },
+    {
+      "path": "01-canon/theorems/THM-4644-fermat-primes-rigid-circulant-tournaments-wieferich-orbit-explosion.md",
+      "present": true,
+      "sha256": "499f703c003504d31c1bc393b1788677ddbc505d64c6f37d95af70879998a552"
+    },
+    {
+      "path": "01-canon/theorems/THM-4656-wall-sun-sun-golden-orbit-explosion.md",
+      "present": true,
+      "sha256": "711fa1367a6192bf435ad8d4380f42e588462a0d65c283008c8f32988c6fee61"
+    },
+    {
+      "path": "01-canon/theorems/THM-4801-collatz-meets-the-constructible-polygons-trunk-five-initial-segment-principle-collatz-closed-family.md",
+      "present": true,
+      "sha256": "0b971f70f4dd06767c60b12a02ef6a92d9c707413ec95dbd41550c107ce45716"
+    },
+    {
+      "path": "01-canon/theorems/THM-4838-von-staudt-clausen-as-reciprocal-sum-thresholds-orbifold-euler-characteristics-triangle-groups-2-3-p-and-the-twelve-behind-the-owners-sets.md",
+      "present": true,
+      "sha256": "f6d59c36836ef3b1a77dde7bab0c8a5cc81ef67537eb3b569fda3dec8d91025f"
+    },
+    {
+      "path": "01-canon/theorems/THM-4847-fermat-primes-barriers-to-proving-exactly-five-the-function-field-analogue-and-why-tournament-counts-are-blind-while-three-state-counts-are-pepin.md",
+      "present": true,
+      "sha256": "c8ba3ae4d68d45b01eb7da71e55d91e6a750fd3fbd86a3bdf7ff3574b55f78d0"
+    },
+    {
+      "path": "01-canon/theorems/THM-4861-the-five-fermat-primes-are-hamiltonian-path-counts-of-tournaments-with-least-orders-3-4-6-8-11-a-vertex-transitive-tournament-has-a-prime-count-only-for-c3-and-fermat-primes-are-free-vertices-of-the-prime-square-sum-graph.md",
+      "present": true,
+      "sha256": "2a671ed57d72b1824efa7946a6400a1284e2443f6e7c1141469ea4b88a0f447a"
+    },
+    {
+      "path": "01-canon/theorems/THM-4865-the-sole-exit-tower-is-tribonacci-h-k-equals-h-k-1-plus-h-k-2-plus-h-k-3-for-every-rooted-base-the-lineage-c2-law-at-any-vertex-and-the-three-root-response-numerations-attain-every-odd-number-in-69-702189.md",
+      "present": true,
+      "sha256": "4b31da15f88a730cf461e73ba114293b768b96fed7f18ded5e0f6e10c13a3791"
+    },
+    {
+      "path": "01-canon/theorems/THM-4952-ribbon-odd-cycle-packing-polynomial-is-finite-state-base-2-is-the-unique-positive-rank-drop-x-bonacci-tower-base-3-ribbon-words-miss-exactly-10-and-31-and-64-has-no-strong-realiser.md",
+      "present": true,
+      "sha256": "c9d7e3095a2813baf321a346a7b100988fc7e2c8368071fe21276f6a0b76d54a"
+    },
+    {
+      "path": "01-canon/theorems/THM-871-fermat-rung-rigidity.md",
+      "present": true,
+      "sha256": "b6a3c15950ff30dfc7e1d40b8ffbd921c0bf1d748337d7becdef3e1dde99143c"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-3771-five-tilings-five-solids-apex-prime-geometry.md",
+      "present": true,
+      "sha256": "2ed25f28120b48302a697dc6b1856c79bd29d2f6ec4b45724b4f36b5f42e9f36"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-3814-the-involution-atlas-five-faces-of-the-fold.md",
+      "present": true,
+      "sha256": "501b6a61a244fe65d923ee4e7443f7862d64cd8bc19d83c58b44a984e9524e02"
+    },
+    {
+      "path": "05-knowledge/results/aliquot_66_five_fifteen_20261028/ATLAS.md",
+      "present": true,
+      "sha256": "60d672f425b42718e2a3a4e1c7bef0d4c7f8f1ae7580169dbbb9a55ee9804b5a"
+    },
+    {
+      "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "present": true,
+      "sha256": "0bdb02e403ec498dccd654459dc311667441dc14888a30ec430bbb9efd3c7a81"
+    },
+    {
+      "path": "05-knowledge/results/double_five_pentagon.out",
+      "present": true,
+      "sha256": "27180321caecc4b68893a73c56df95ead642f914064d02e3c0bb5a75ed73640e"
+    },
+    {
+      "path": "05-knowledge/results/fivefold_boundary_20261018g.md",
+      "present": true,
+      "sha256": "c56aa493928e053fc7fe2002a5c6900aab7018ac74f0934fdd3aad0854c6fd14"
+    },
+    {
+      "path": "05-knowledge/results/fugacity_axis_full.out",
+      "present": true,
+      "sha256": "5896ef44032034fcff0214607774ddc7b4ed34469a15e6453818643095715d78"
+    },
+    {
+      "path": "05-knowledge/results/gilbreath_fermat_platonic_20260926.md",
+      "present": true,
+      "sha256": "4534109ce9ab42e9ef3370970187d16fad4e9adc8e5c03bbdb044220ab77919d"
+    },
+    {
+      "path": "05-knowledge/results/groups_of_five_primegame_merged_metagraph_20261031.md",
+      "present": true,
+      "sha256": "70ad0f50758bd68e1d1664302d2879276dd9a7b4cd5a2b18e645aeb1f4f218d5"
+    },
+    {
+      "path": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+      "present": true,
+      "sha256": "966974dd168eb974e8c05fbdbe9c235d8b2e6cb93f768af32b82a61712605c48"
+    },
+    {
+      "path": "05-knowledge/results/ogg_triangular_chowla_20260927_audit.md",
+      "present": true,
+      "sha256": "36558906a05c41bf6ed91b7e11f3b3bde04a10b1bed106e47a48b2b635a1e069"
+    },
+    {
+      "path": "05-knowledge/results/platonic_fermat_topology_s18o.out",
+      "present": true,
+      "sha256": "86c91e7180b2ea89f736bfa55b27f6b340fe07cd1a83ddd7441c49d65f1c6274"
+    },
+    {
+      "path": "05-knowledge/results/platonic_five_s97.out",
+      "present": true,
+      "sha256": "3e3db308ec0ee2fd0cf75a5472334e601c5605eeeaf22677e9efd2fc32974825"
+    },
+    {
+      "path": "05-knowledge/results/platonic_interchange_s204.out",
+      "present": true,
+      "sha256": "9a9dcd13708751827c9d4c80a4503509c5ee6b48b4ecb146774b805e60e0cdb3"
+    },
+    {
+      "path": "05-knowledge/results/primegame_variant_selector_automaton_metagraph_20261031.md",
+      "present": true,
+      "sha256": "31fd7743d3ec99be84775c8e0179fe548296964e3f480cfda6b9e3268992d575"
+    },
+    {
+      "path": "05-knowledge/results/rooted_five_core_gold_obstruction_20261019.md",
+      "present": true,
+      "sha256": "99972a86f87a0190f9c631140dd4b6ac5f6bc6f8f6448e115840a50cb25aa42d"
+    },
+    {
+      "path": "05-knowledge/results/session126_primegame_symmetry_20261031/five_families/README.md",
+      "present": true,
+      "sha256": "1331ef9837de0db7186634e9ac5affeb72555028150fa15ba4155a9d10e3e03b"
+    },
+    {
+      "path": "05-knowledge/results/session251_creative_completion_20261111/ternary/PROOF.md",
+      "present": true,
+      "sha256": "6dc67aec6a2e7bf3b8235799d81dbd8115ad9d89aad723bdb158464667ef0b4d"
+    },
+    {
+      "path": "05-knowledge/results/sixth_platonic_s20bi.out",
+      "present": true,
+      "sha256": "767d022be9aba96e12b0b24d2962810c7e995b659fa2f344d31401c109535b10"
+    },
+    {
+      "path": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "present": true,
+      "sha256": "94e4627a69dc04b19400ded47c6be730b9d2f9df3e5229116e7c768015bed079"
+    },
+    {
+      "path": "05-knowledge/results/supersingular_meta_s116n.out",
+      "present": true,
+      "sha256": "e8e4eb96a146ded092810698556bc540a68427bb3b844023c6f22ad88ede8d85"
+    },
+    {
+      "path": "05-knowledge/results/ternary_ports_golden_defect_20261018j.md",
+      "present": true,
+      "sha256": "43b7fdbacbff151f8ec2f511e8ebfde8229cfc2428d757ef31e040b6863c3ea8"
+    },
+    {
+      "path": "05-knowledge/results/three_quantities_fortyfour_five_dudeney_fermat_clock_arrows_20261026.md",
+      "present": true,
+      "sha256": "684ad99c91c218caa1262f045a22e82be1519aa481476e7176d579d78c805ff8"
+    },
+    {
+      "path": "05-knowledge/results/three_sixties_mechanism_boxeph_S156.out",
+      "present": true,
+      "sha256": "5df76f76830b4a69d94fd83b82e0a9a831b9c06c7e532484ae0b27cc3ad96b21"
+    },
+    {
+      "path": "05-knowledge/results/zeckendorf_guard_automaton_20261003.md",
+      "present": true,
+      "sha256": "0fd4c2d145725136874d34f7044236d978e8f5b59a303f4fef1e4985adff344a"
+    },
+    {
+      "path": "07-reflections/five-and-ten.md",
+      "present": true,
+      "sha256": "1b1663c4318dfe4b35188e59596daca821c243ed70699e9dca862fe62d1534f9"
+    },
+    {
+      "path": "07-reflections/five-as-bridge.md",
+      "present": true,
+      "sha256": "bfc9a50c2c6185b8008156c8804754e9bc94dfda556259ed7ff5939035dc04a8"
+    },
+    {
+      "path": "07-reflections/fugacity-axis-five-points.md",
+      "present": true,
+      "sha256": "ac543eab91b81186da154fc70d15439c70b382eea83289acf905d79eecdb823e"
+    },
+    {
+      "path": "07-reflections/pentagonal-lyapunov-and-the-72-code-gate.md",
+      "present": true,
+      "sha256": "b5b59ff6be7aee0488ee383476cbefda882065ecc2f159ebdf760635b8ae9a53"
+    },
+    {
+      "path": "07-reflections/supersingularity-triples.md",
+      "present": true,
+      "sha256": "5f91926de4ab2bf575fa99a1b3be271e8df9f03d8a409022293cd39f40e4133f"
+    },
+    {
+      "path": "07-reflections/the-angle-defect-spine-five-solids-five-lattices-and-the-seventh-prime.md",
+      "present": true,
+      "sha256": "0a9180bcff8a0c066c08d88979edfe0528a5a404e358bf37310b83cd9e2f745d"
+    },
+    {
+      "path": "07-reflections/the-five-faces-of-an-involution.md",
+      "present": true,
+      "sha256": "238f4136299330e8f296ae3ba281955be980dee4132d3cf8e41e1769c10074c1"
+    },
+    {
+      "path": "07-reflections/the-five-platonic-tournaments.md",
+      "present": true,
+      "sha256": "dd453c944a4413be944f28e9b01ce2541462f1a47d88df0677974d24034b21be"
+    },
+    {
+      "path": "07-reflections/the-icosahedral-fifteen-s6.md",
+      "present": true,
+      "sha256": "aaa887c353c1bbb4ba1182c0cc48af8c0c688f50cb4503d827560831268e1565"
+    },
+    {
+      "path": "07-reflections/the-pentagonal-product-is-the-hub-kps3-0611.md",
+      "present": true,
+      "sha256": "70a2ac8d0fa7dd6661dc1c500be30d83af4b7a4018b6af07363b5d27c59a242b"
+    },
+    {
+      "path": "07-reflections/zeckendorf-non-consecutivity-pairing.md",
+      "present": true,
+      "sha256": "227b618db13d61072ff832a8ebda0778dd8019c49c201ac585814dd5ebb65280"
+    }
+  ]
+}
