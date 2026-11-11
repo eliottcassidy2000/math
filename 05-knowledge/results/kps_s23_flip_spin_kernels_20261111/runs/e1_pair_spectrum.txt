@@ -1,0 +1,48 @@
+classes: 198948 | distinct H: 1520 | distinct pairs (H, odd part of Pi_2): 50173
+Pi_2 = (-1)^n H (mod 3) [THM-4756, step 2]: violations 0
+
+F1. levels s with a class of order <= 9, H = 2^s + 1 and odd part of Pi_2 dividing 9:
+  s =  1, H =    3:   1 odd parts; least odd part 3; dividing 9: ['odd part 3, order 3, Pi_2 = 3 * 2^2, code 5']
+  s =  2, H =    5:   1 odd parts; least odd part 1; dividing 9: ['odd part 1, order 4, Pi_2 = 1 * 2^5, code 34']
+  s =  3, H =    9:   2 odd parts; least odd part 9; dividing 9: ['odd part 9, order 6, Pi_2 = 9 * 2^4, code 20513']
+  s =  4, H =   17:   1 odd parts; least odd part 7; dividing 9: []
+  s =  5, H =   33:   5 odd parts; least odd part 21; dividing 9: []
+  s =  6, H =   65:   5 odd parts; least odd part 13; dividing 9: []
+  s =  7, H =  129:  14 odd parts; least odd part 3; dividing 9: ['odd part 3, order 7, Pi_2 = 3 * 2^9, code 308230']
+  s =  8, H =  257:  17 odd parts; least odd part 65; dividing 9: []
+  s =  9, H =  513:  36 odd parts; least odd part 51; dividing 9: []
+  s = 10, H = 1025:  50 odd parts; least odd part 41; dividing 9: []
+  s = 11, H = 2049:  37 odd parts; least odd part 135; dividing 9: []
+  levels 3..11 with such a class: 2 of 9  (prediction F1: at least 7)
+
+classes with Pi_2 a power of two (odd part 1), least witness per H:
+  H = 1: order 1, Pi_2 = 2^1, code 0
+  H = 5: order 4, Pi_2 = 2^5, code 34
+  H = 19: order 6, Pi_2 = 2^8, code 17057
+  H = 25: order 8, Pi_2 = 2^10, code 142614530
+  H = 217: order 8, Pi_2 = 2^12, code 144179468
+  H = 223: order 8, Pi_2 = 2^12, code 147063080
+  H = 259: order 9, Pi_2 = 2^13, code 25912444161
+  H = 599: order 8, Pi_2 = 2^13, code 72166211
+  H = 695: order 9, Pi_2 = 2^14, code 26919436810
+  H = 707: order 9, Pi_2 = 2^14, code 34769305862
+  H = 713: order 9, Pi_2 = 2^14, code 11857330961
+  H = 761: order 9, Pi_2 = 2^14, code 19336071174
+  H = 773: order 9, Pi_2 = 2^14, code 11820730625
+  H = 803: order 9, Pi_2 = 2^14, code 35572064266
+  H = 815: order 9, Pi_2 = 2^14, code 44025782800
+  H = 1945: order 9, Pi_2 = 2^15, code 27261929996
+  H = 1957: order 9, Pi_2 = 2^15, code 44699257898
+  H = 1969: order 9, Pi_2 = 2^15, code 35905899913
+
+odd parts of Pi_2 for H <= 33: {1: [1], 3: [3], 5: [1], 9: [9, 21], 11: [25], 13: [13], 15: [3, 15, 27], 17: [7], 19: [1], 23: [17, 37], 25: [1, 19, 137], 27: [9, 27, 63, 141], 29: [5, 145], 31: [41, 149, 161], 33: [21, 45, 75, 153, 165]}
+
+order 1: least Pi_2 / H = 2.0000 (H = 1, Pi_2 = 2), greatest = 2 (transitive)
+order 2: least Pi_2 / H = 4.0000 (H = 1, Pi_2 = 4), greatest = 4 (transitive)
+order 3: least Pi_2 / H = 4.0000 (H = 3, Pi_2 = 12), greatest = 8 (transitive)
+order 4: least Pi_2 / H = 6.4000 (H = 5, Pi_2 = 32), greatest = 16 (transitive)
+order 5: least Pi_2 / H = 7.2000 (H = 15, Pi_2 = 108), greatest = 32 (transitive)
+order 6: least Pi_2 / H = 9.5135 (H = 37, Pi_2 = 352), greatest = 64 (transitive)
+order 7: least Pi_2 / H = 10.6667 (H = 189, Pi_2 = 2016), greatest = 128 (transitive)
+order 8: least Pi_2 / H = 12.9811 (H = 477, Pi_2 = 6192), greatest = 256 (transitive)
+order 9: least Pi_2 / H = 14.5143 (H = 2205, Pi_2 = 32004), greatest = 512 (transitive)

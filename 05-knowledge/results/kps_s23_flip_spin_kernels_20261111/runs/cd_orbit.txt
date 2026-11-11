@@ -1,0 +1,2 @@
+n = 3: unknowns 21, rank of the parity equations 11, nullity 10; moves span dimension 10 (expected 10); every move preserves every equation: True
+n = 4: unknowns 105, rank of the parity equations 80, nullity 25; moves span dimension 25 (expected 25); every move preserves every equation: True

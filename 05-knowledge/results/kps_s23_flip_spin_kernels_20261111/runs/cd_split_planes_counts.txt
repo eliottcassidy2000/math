@@ -1,0 +1,30 @@
+quaternions (-1,-1): squares -1 on 3 units, +1 on 0; anticommuting True; lines 1, cyclic 1; line rule holds: True; scores [1]
+   zero-sum 4-sets by number of cyclic triangles inside: []  even: 0
+   H = 3
+split quaternions (-1,+1): squares -1 on 1 units, +1 on 2; anticommuting True; lines 1, cyclic 0; line rule holds: True; scores [0, 1, 2]
+   zero-sum 4-sets by number of cyclic triangles inside: []  even: 0
+   H = 1
+split quaternions (+1,+1): squares -1 on 1 units, +1 on 2; anticommuting True; lines 1, cyclic 0; line rule holds: True; scores [0, 1, 2]
+   zero-sum 4-sets by number of cyclic triangles inside: []  even: 0
+   H = 1
+octonions: squares -1 on 7 units, +1 on 0; anticommuting True; lines 7, cyclic 7; line rule holds: True; scores [3]
+   zero-sum 4-sets by number of cyclic triangles inside: [(1, 7)]  even: 0
+   H = 189
+split octonions (-1,-1,+1): squares -1 on 3 units, +1 on 4; anticommuting True; lines 7, cyclic 1; line rule holds: True; scores [0, 3, 4]
+   zero-sum 4-sets by number of cyclic triangles inside: [(0, 3), (1, 1), (2, 3)]  even: 6
+   H = 45
+split octonions (-1,+1,+1): squares -1 on 3 units, +1 on 4; anticommuting True; lines 7, cyclic 1; line rule holds: True; scores [0, 3, 4]
+   zero-sum 4-sets by number of cyclic triangles inside: [(0, 3), (1, 1), (2, 3)]  even: 6
+   H = 45
+sedenions: squares -1 on 15 units, +1 on 0; anticommuting True; lines 35, cyclic 35; line rule holds: True; scores [7]
+   zero-sum 4-sets by number of cyclic triangles inside: [(0, 21), (1, 63), (2, 21)]  even: 42
+   H = 198335025
+split sedenions (-1,-1,-1,+1): squares -1 on 7 units, +1 on 8; anticommuting True; lines 35, cyclic 7; line rule holds: True; scores [0, 7, 8]
+   zero-sum 4-sets by number of cyclic triangles inside: [(0, 21), (1, 63), (2, 21)]  even: 42
+   H = 24453597
+sedenion planes (even 4-sets, H, cyclic triangles): [(0, 189, 14), (0, 189, 14), (0, 189, 14), (0, 189, 14), (0, 189, 14), (0, 189, 14), (0, 189, 14), (0, 189, 14), (6, 171, 14), (6, 171, 14), (6, 171, 14), (6, 171, 14), (6, 171, 14), (6, 171, 14), (6, 171, 14)]
+PG(3,2): sets of planes whose 4-sets can all be odd at once, by size: [(1, 15), (2, 105), (3, 455), (4, 1365), (5, 2835), (6, 3325), (7, 1395), (8, 135)]  largest: 8
+sedenions: planes with all 4-sets odd: 8
+n = 5: zero-sum 4-sets 1085, even 630 (zero-divisor pairings 1260)
+   planes of PG(4,2) by number of even 4-sets: [(0, 50), (6, 105)]
+n = 6: zero-sum 4-sets 9765, even 6510 (zero-divisor pairings 13020)

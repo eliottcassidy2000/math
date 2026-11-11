@@ -1,0 +1,24 @@
+Fano plane, number of even 4-sets -> number of tournaments: [(0, 1024), (2, 21504), (3, 143360), (4, 322560), (5, 688128), (6, 637952), (7, 282624)]
+maximal odd plane sets of type [A: the 8 planes off a point]: 15 sets; solution dimension 44; with all lines cyclic: consistent True, dimension 17
+   a solution (free variables 0): cyclic lines 4/35, even 4-sets 45, per plane [0, 0, 0, 0, 0, 0, 0, 0, 3, 7, 7, 7, 7, 7, 7], scores [4, 5, 6, 7, 12, 13, 14], common-out counts [0, 1, 2, 3, 4, 5, 6, 7, 12, 13], H = 411513
+   a solution with all lines cyclic: cyclic lines 35/35, even 4-sets 42, per plane [0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 6, 6, 6, 6], scores [7], common-out counts [2, 3, 4, 6], H = 197492019
+maximal odd plane sets of type [B: a plane and the 7 planes through a point off it]: 120 sets; solution dimension 25; with all lines cyclic: consistent True, dimension 11
+   a solution (free variables 0): cyclic lines 7/35, even 4-sets 42, per plane [0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 6, 6, 6, 6], scores [6, 7, 14], common-out counts [2, 3, 6, 7], H = 24793755
+   a solution with all lines cyclic: cyclic lines 35/35, even 4-sets 42, per plane [0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 6, 6, 6, 6], scores [7], common-out counts [3], H = 198335025
+annealing, least number of even 4-sets found per run: [(21, 30)]  overall 21
+   parameters (-1, -1, -1, -1): units of square -1: 15, even 4-sets 42 (pairings 84)
+   parameters (-1, -1, -1, 1): units of square -1: 7, even 4-sets 42 (pairings 84)
+   parameters (-1, -1, 1, -1): units of square -1: 7, even 4-sets 78 (pairings 156)
+   parameters (-1, -1, 1, 1): units of square -1: 7, even 4-sets 90 (pairings 180)
+   parameters (-1, 1, -1, -1): units of square -1: 7, even 4-sets 78 (pairings 156)
+   parameters (-1, 1, -1, 1): units of square -1: 7, even 4-sets 90 (pairings 180)
+   parameters (-1, 1, 1, -1): units of square -1: 7, even 4-sets 78 (pairings 156)
+   parameters (-1, 1, 1, 1): units of square -1: 7, even 4-sets 90 (pairings 180)
+   parameters (1, -1, -1, -1): units of square -1: 7, even 4-sets 78 (pairings 156)
+   parameters (1, -1, -1, 1): units of square -1: 7, even 4-sets 90 (pairings 180)
+   parameters (1, -1, 1, -1): units of square -1: 7, even 4-sets 78 (pairings 156)
+   parameters (1, -1, 1, 1): units of square -1: 7, even 4-sets 90 (pairings 180)
+   parameters (1, 1, -1, -1): units of square -1: 7, even 4-sets 78 (pairings 156)
+   parameters (1, 1, -1, 1): units of square -1: 7, even 4-sets 90 (pairings 180)
+   parameters (1, 1, 1, -1): units of square -1: 7, even 4-sets 78 (pairings 156)
+   parameters (1, 1, 1, 1): units of square -1: 7, even 4-sets 90 (pairings 180)

@@ -1,0 +1,9 @@
+dimension 4: (line rule holds, number of cyclic lines) -> number of parameter choices: [((True, 0), 3), ((True, 1), 1)]
+dimension 8: (line rule holds, number of cyclic lines) -> number of parameter choices: [((True, 1), 7), ((True, 7), 1)]
+dimension 16: (line rule holds, number of cyclic lines) -> number of parameter choices: [((True, 7), 15), ((True, 35), 1)]
+dimension 32: (line rule holds, number of cyclic lines) -> number of parameter choices: [((True, 35), 31), ((True, 155), 1)]
+block recursion for the sign table, n = 2 -> 3: True
+block recursion for the sign table, n = 3 -> 4: True
+block recursion for the sign table, n = 4 -> 5: True
+CD_3: automorphisms 21; same vertex invariants as its converse: True
+CD_4: automorphisms 21; same vertex invariants as its converse: True

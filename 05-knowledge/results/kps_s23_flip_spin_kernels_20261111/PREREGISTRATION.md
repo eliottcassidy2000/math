@@ -82,3 +82,36 @@ moves to words. K1 confirmed: the kernels come in both signatures and the split 
 forms is a structural invariant worth classifying; K1 refuted: every two-port kernel is definite or degenerate, a
 positivity statement to prove. C1 refuted: the doubling leaves the doubly regular class at dimension 16, in line
 with the appearance of zero divisors.
+
+---
+
+## Outcomes (added after the runs; nothing above this line was changed)
+
+Runs: `runs/e1_pair_spectrum.txt`, `runs/e1_words_f2.txt`, `runs/e2_kernel_signatures.txt`,
+`runs/e2_kernel_identities.txt`, `runs/e3_cd_signs.txt` and the follow-up files listed in `README.md`.
+
+| prediction | outcome |
+|---|---|
+| F1 (at least 7 of the levels 3..11 have a class of order at most 9 with `H = 2^s + 1` and odd part of `Pi_2` dividing 9) | **FAILED**: 2 of 9 (levels 3 and 7) |
+| F2 (at least half of the levels 3..16 have such a one-apex word of chain length at most 22) | **FAILED**: none of the levels 3..21 |
+| K1 (some two-port kernel of order at most 6 has `det G < 0`) | **CONFIRMED**: none at orders 3, 4; 4 at order 5; 62 at order 6 |
+| K2 (among symmetric kernels the discriminant -4 occurs) | **CONFIRMED**: the strong 4-tournament, `G = [[5, 2], [2, 1]]` |
+| C1 (the sign tournament of the sedenions is doubly regular) | **CONFIRMED**, and proved for every `n` (README section 3.5) |
+| C2 (of the 128 cyclic orientations of the Fano plane exactly 16 have 189 paths, and exactly these have no even zero-sum quadrangle) | **CONFIRMED**: 16 with (0 even 4-sets, `H = 189`), 112 with (6, `H = 171`) |
+
+Caveats, in the direction of less credit:
+
+1. **The prior-art sweep returned after this file was pushed.** Three of the four "working claims" were already in
+   canon: claim 1 (closing operator on cover polynomials) is Theorem 1 of Session193 `profile_substitution/PROOF.md`,
+   with the 3-cycle operator and the sequence 1, 3, 15, 123, ... in Sessions 159 and 197 and THM-4900; the bilinear
+   law of claim 2 is eq. (1) of Session260 `QUASIPERFECT_NORMS.md` (I had credited only its diagonal); the count 16
+   in claim 4 and in C2, with the values 189 and 171, is S14-S16 of
+   `collatz_mod6_20260922_paley_fano_octonion_design.md`. So the first half of C2 was not a prediction, and the
+   sentence "Nothing about Cayley-Dickson sign tournaments has been computed" was true of this session only.
+   What was open in C2 is the second half (the 16 are exactly the orientations without an even quadrangle).
+2. C1 is a consequence of a short induction (the sign table is a Hadamard matrix); I do not claim it is new.
+3. E2 was declared not blind in the strict sense; K1 was moreover derivable by hand from THM-5130 (the anti-seed
+   `(TT_2, both)` with its two ports joined is the hyperbolic kernel of order 5), which I saw only after the run.
+4. The first run of E1 read the files `cls9_1.txt ... cls9_9.txt` (orders 1..9 of one generator run) as nine pieces
+   of order 9: 7,412 duplicate rows, a wrong class count (206,360 for 198,948). No table changed; the stored run is
+   the corrected one.

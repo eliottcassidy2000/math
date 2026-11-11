@@ -1,0 +1,7 @@
+V1. visit-matrix formula: cases 220, failures 0
+V2/V3. Gaussian kernel (H = Pi Pi' + H H') and first hyperbolic kernel (H = 3 Pi Pi' - H H'): cases 120, failures 0
+    kernel 34 arcs: [(0, 2), (1, 0), (2, 1), (2, 3), (3, 0), (3, 1)]  kernel 209 arcs: [(0, 1), (1, 2), (1, 4), (2, 0), (2, 3), (3, 0), (3, 1), (4, 0), (4, 2), (4, 3)]
+V4. anti-carrier (order 8, code 17082497, ports 0, 7): H = -1 - 2^(a+4) + 31 * 2^(a+b+1): cases 16, failures 0; values [215, 463, 959, 1951, 431, 927, 1919, 3903]
+    known carrier d = 3 (code 172278145) form (1, 16, 0, 24): [(0, 7, True, False), (7, 0, False, True)]
+    known carrier d = 21 (code 71647617) form (1, 4, 0, 42): [(0, 7, False, True), (7, 0, True, False)]
+V5. N22 H = L_A L'_B + det H(A) H(B): cases 160, failures 0

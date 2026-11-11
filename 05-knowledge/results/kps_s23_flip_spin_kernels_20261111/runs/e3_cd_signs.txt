@@ -1,0 +1,19 @@
+CD_2: 3 vertices, 1 lines, cyclic lines 1, scores [1]
+   common out-neighbour counts over pairs: [(0, 3)] ; full sign table Hadamard: True
+   zero-sum quadrangle pairings: 0, even ones: 0 (algebra check passed on 0), distinct 4-sets 0, pairs {a,b} involved 0
+   H = 3
+CD_3: 7 vertices, 7 lines, cyclic lines 7, scores [3]
+   common out-neighbour counts over pairs: [(1, 21)] ; full sign table Hadamard: True
+   zero-sum quadrangle pairings: 21, even ones: 0 (algebra check passed on 0), distinct 4-sets 0, pairs {a,b} involved 0
+   H = 189
+CD_4: 15 vertices, 35 lines, cyclic lines 35, scores [7]
+   common out-neighbour counts over pairs: [(3, 105)] ; full sign table Hadamard: True
+   zero-sum quadrangle pairings: 315, even ones: 84 (algebra check passed on 84), distinct 4-sets 42, pairs {a,b} involved 42
+   H = 198335025
+CD_5: 31 vertices, 155 lines, cyclic lines 155, scores [15]
+   common out-neighbour counts over pairs: [(7, 465)] ; full sign table Hadamard: True
+   zero-sum quadrangle pairings: 3255, even ones: 1260 (algebra check passed on 1260), distinct 4-sets 630, pairs {a,b} involved 294
+affine system on PG(2,2), quadrangles only: consistent True, solution dimension 10 (unknowns 21, equations 21, rank 11)
+affine system on PG(2,2), with all lines cyclic: consistent True, solution dimension 4 (unknowns 21, equations 35, rank 17)
+affine system on PG(3,2), quadrangles only: consistent False, solution dimension 25 (unknowns 105, equations 315, rank 80)
+affine system on PG(3,2), with all lines cyclic: consistent False, solution dimension 11 (unknowns 105, equations 385, rank 94)

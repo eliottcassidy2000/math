@@ -1,0 +1,10 @@
+F1. one plane: realizable violation vectors 2048, by defect: [(0, 1), (2, 21), (3, 140), (4, 315), (5, 672), (6, 623), (7, 276)]
+F2. sets of at least 8 planes that can be odd at once: 135, sizes [8]
+    type A (the planes off a point): 15 ; type B: 120
+F3. type B: violation patterns of the other 7 planes: 2^0, total defect distribution [(42, 1)]
+    patterns with total defect 21, by the defects of the other planes: [((3, 3, 3, 3, 3, 3, 3), 64)]
+F4. type A: violation patterns of the other 7 planes: 2^19, total defect distribution [(21, 64), (27, 896), (32, 5376), (33, 448), (36, 17920), (37, 5376), (39, 35840), (40, 26880), (41, 44352), (42, 104448), (43, 163968), (44, 107520), (45, 11200)]
+F5 (preliminary; the search next to five odd planes is cd_f5_orbits.py). consistent choices of k planes of defect exactly 2, with the pair of lines, searched to depth 2: [(1, 315), (2, 46305)]
+all-cyclic orientations of the Fano plane by (defect, H): [((0, 189), 16), ((6, 171), 112)]
+a minimiser: even 4-sets 21, per plane [0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3], cyclic lines 6/35, scores [5, 5, 5, 5, 5, 6, 6, 7, 8, 8, 8, 8, 8, 8, 13], H = 46700719
+   arcs u->v as a 105-bit word (pairs u<v in lexicographic order, bit 1 iff v -> u): 2211813282662872962504903186636
