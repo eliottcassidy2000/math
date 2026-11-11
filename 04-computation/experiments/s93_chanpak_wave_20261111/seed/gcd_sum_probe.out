@@ -1,0 +1,9 @@
+tau =  4: pairs       128; sum g/|alpha| =    3.473 * 2^tau; sum g/|beta| =    5.998 * 2^tau; sum g/max =   3.064 * 2^tau; max g = 15; pairs with g >= 2^(tau/2): 34
+tau =  5: pairs       512; sum g/|alpha| =    5.025 * 2^tau; sum g/|beta| =    9.286 * 2^tau; sum g/max =   4.424 * 2^tau; max g = 31; pairs with g >= 2^(tau/2): 126
+tau =  6: pairs      2048; sum g/|alpha| =    6.067 * 2^tau; sum g/|beta| =   12.841 * 2^tau; sum g/max =   5.391 * 2^tau; max g = 63; pairs with g >= 2^(tau/2): 374
+tau =  7: pairs      8192; sum g/|alpha| =    8.143 * 2^tau; sum g/|beta| =   17.950 * 2^tau; sum g/max =   7.237 * 2^tau; max g = 127; pairs with g >= 2^(tau/2): 1086
+tau =  8: pairs     32768; sum g/|alpha| =    9.535 * 2^tau; sum g/|beta| =   23.414 * 2^tau; sum g/max =   8.482 * 2^tau; max g = 255; pairs with g >= 2^(tau/2): 3186
+tau =  9: pairs    131072; sum g/|alpha| =   12.368 * 2^tau; sum g/|beta| =   31.015 * 2^tau; sum g/max =  11.077 * 2^tau; max g = 511; pairs with g >= 2^(tau/2): 9366
+tau = 10: pairs    524288; sum g/|alpha| =   14.211 * 2^tau; sum g/|beta| =   39.041 * 2^tau; sum g/max =  12.731 * 2^tau; max g = 1023; pairs with g >= 2^(tau/2): 26306
+tau = 11: pairs   2097152; sum g/|alpha| =   18.212 * 2^tau; sum g/|beta| =   50.148 * 2^tau; sum g/max =  16.479 * 2^tau; max g = 2047; pairs with g >= 2^(tau/2): 74386
+tau = 12: pairs   8388608; sum g/|alpha| =   20.479 * 2^tau; sum g/|beta| =   61.521 * 2^tau; sum g/max =  18.634 * 2^tau; max g = 4095; pairs with g >= 2^(tau/2): 212318

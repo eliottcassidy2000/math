@@ -1,0 +1,6 @@
+n = 16: colliding pairs per word with common prefix >= t: t=1: 0.9493; t=2: 0.5283; t=4: 0.1391; t=6: 0.0299; t=8: 0.0078; distinct (prefix, value) classes at t = n/4: 28634 of 32768 words (0.8738)
+n = 18: colliding pairs per word with common prefix >= t: t=1: 0.9620; t=3: 0.2838; t=5: 0.0719; t=6: 0.0340; t=9: 0.0039; distinct (prefix, value) classes at t = n/4: 122264 of 131072 words (0.9328)
+n = 20: colliding pairs per word with common prefix >= t: t=1: 0.9709; t=3: 0.2882; t=5: 0.0746; t=7: 0.0172; t=10: 0.0019; distinct (prefix, value) classes at t = n/4: 487385 of 524288 words (0.9296)
+n = 22: colliding pairs per word with common prefix >= t: t=1: 0.9664; t=3: 0.2873; t=6: 0.0374; t=8: 0.0086; t=11: 0.0010; distinct (prefix, value) classes at t = n/4: 2021755 of 2097152 words (0.9640)
+n = 24: colliding pairs per word with common prefix >= t: t=1: 0.9652; t=3: 0.2868; t=6: 0.0378; t=8: 0.0091; t=12: 0.0005; distinct (prefix, value) classes at t = n/4: 8081075 of 8388608 words (0.9633)
+n = 26: colliding pairs per word with common prefix >= t: t=1: 0.9634; t=4: 0.1477; t=7: 0.0190; t=9: 0.0046; t=13: 0.0002; distinct (prefix, value) classes at t = n/4: 32929978 of 33554432 words (0.9814)

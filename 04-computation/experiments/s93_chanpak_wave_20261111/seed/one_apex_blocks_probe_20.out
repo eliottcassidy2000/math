@@ -1,0 +1,6 @@
+block identity x(A 2^m + B) = A c(B) + f(B) - 2 q(A) - B_(m-1) (A mod 2): True
+c is a bijection onto (2^m, 2^(m+1)] for m = 10: True
+n = 20: 524288 words, 210192 distinct values (0.4009), 509020 colliding pairs (0.9709 per word), max multiplicity 12
+colliding pairs by common prefix length: [(1, 223390), (2, 134545), (3, 73712), (4, 38275), (5, 19923), (6, 10167), (7, 4979), (8, 2356), (9, 651), (10, 1022)]
+prefix minus suffix: [(-6, 4), (-5, 28), (-4, 188), (-3, 793), (-2, 3249), (-1, 12538), (0, 49136), (1, 377148), (2, 49136), (3, 12538), (4, 3249), (5, 793), (6, 188), (7, 28), (8, 4)]
+pairs with common prefix >= n/4: 39098 (0.0768 of all)

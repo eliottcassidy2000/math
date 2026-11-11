@@ -1,0 +1,32 @@
+transfer count = brute force for n <= 5: True
+n =  1: 4 words, 0 with H >= 2^21, max H below bound 3, distinct odd values 2
+n =  2: 16 words, 0 with H >= 2^21, max H below bound 5, distinct odd values 3
+n =  3: 64 words, 0 with H >= 2^21, max H below bound 15, distinct odd values 7
+n =  4: 256 words, 0 with H >= 2^21, max H below bound 45, distinct odd values 19
+n =  5: 1024 words, 0 with H >= 2^21, max H below bound 151, distinct odd values 59
+n =  6: 4096 words, 0 with H >= 2^21, max H below bound 509, distinct odd values 202
+n =  7: 16384 words, 0 with H >= 2^21, max H below bound 1743, distinct odd values 617
+n =  8: 65536 words, 0 with H >= 2^21, max H below bound 6069, distinct odd values 1967
+n =  9: 262144 words, 0 with H >= 2^21, max H below bound 20479, distinct odd values 6245
+n = 10: 1048576 words, 0 with H >= 2^21, max H below bound 69485, distinct odd values 19876
+n = 11: 4194304 words, 0 with H >= 2^21, max H below bound 227295, distinct odd values 63113
+n = 12: 16777216 words, 0 with H >= 2^21, max H below bound 744405, distinct odd values 200235
+odd N < 2^17 not attained by words of length <= 12: [7, 21] (2 in all)
+  odd N in [2^3, 2^4): min multiplicity 330, median 1207, mean 1167.5, zeros 0
+  odd N in [2^4, 2^5): min multiplicity 0, median 1075, mean 1041.8, zeros 1
+  odd N in [2^5, 2^6): min multiplicity 288, median 854, mean 1152.5, zeros 0
+  odd N in [2^6, 2^7): min multiplicity 396, median 1162, mean 1278.7, zeros 0
+  odd N in [2^7, 2^8): min multiplicity 396, median 1329, mean 1379.6, zeros 0
+  odd N in [2^8, 2^9): min multiplicity 674, median 1353, mean 1374.0, zeros 0
+  odd N in [2^9, 2^10): min multiplicity 500, median 1343, mean 1367.6, zeros 0
+  odd N in [2^10, 2^11): min multiplicity 746, median 1291, mean 1291.2, zeros 0
+  odd N in [2^11, 2^12): min multiplicity 720, median 1121, mean 1128.9, zeros 0
+  odd N in [2^12, 2^13): min multiplicity 580, median 922, mean 935.1, zeros 0
+  odd N in [2^13, 2^14): min multiplicity 428, median 700, mean 706.9, zeros 0
+  odd N in [2^14, 2^15): min multiplicity 260, median 465, mean 473.2, zeros 0
+  odd N in [2^15, 2^16): min multiplicity 118, median 270, mean 276.3, zeros 0
+  odd N in [2^16, 2^17): min multiplicity 40, median 117, mean 123.4, zeros 0
+  odd N in [2^17, 2^18): min multiplicity 0, median 30, mean 34.6, zeros 18
+  odd N in [2^18, 2^19): min multiplicity 0, median 2, mean 2.5, zeros 63557
+  odd N in [2^19, 2^20): min multiplicity 0, median 0, mean 0.0, zeros 260476
+  odd N in [2^20, 2^21): min multiplicity 0, median 0, mean 0.0, zeros 524288

@@ -1,0 +1,11 @@
+S93 seed folder (opus-2026-11-11-S93). Scratch probes written by the coordinator before the wave; NOT canon.
+Everything here is to be re-derived and re-verified by the lanes.
+
+two_apex_probe.py N        two-apex family G(2,0): 36-state transfer count (checked against brute force for n <= 5),
+                           multiplicity of every odd value below 2^21 over the words of length <= N.
+                           Scratch result (N = 14, not stored here): every odd N < 2^21 except 7 and 21 is attained.
+one_apex_blocks_probe.py n block identity x(A 2^m + B) = A c(B) + f(B) - 2 q(A) - B_(m-1) (A mod 2); collisions of
+                           n-bit one-apex words by common prefix / suffix length.
+prefix_collisions_probe.py colliding pairs per word with common prefix >= t, n = 16..26.
+gcd_sum_probe.py           sum over pairs (T, T') with different last bits of gcd(alpha, beta)/|alpha|, /|beta|, /max,
+                           alpha = rev(T) - rev(T'), beta = T - T'; grows like 6^(tau/2), not like 2^tau.
