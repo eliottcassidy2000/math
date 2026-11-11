@@ -21,6 +21,11 @@ paired-parent graph:
    maximum through an exact shrinking deficit-window compiler. The proof
    gives a finite computable transition bound, not its minimum onset.
 
+[TOP_SUFFIX.md](TOP_SUFFIX.md) resolves the remaining lower-hole boundary:
+eventually `S_t=C(S) intersection [1,M_t]` at every later generation. It
+also gives exact eventual cardinality and target-arrival formulas. The
+sharp minimum onset remains open; its controls and hashes are separate.
+
 [INVERSE.md](INVERSE.md) retains the full labelled shadow-incidence
 observer rather than only its birth degree. Its inverse follows binary
 ancestors, has every coefficient in `{−1,0,1}`, and has an exact logarithmic

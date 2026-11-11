@@ -7,6 +7,13 @@ an exact finite compiler. **FINITE-EXACT:** small hostile and positive
 controls in `check.py`. No claim about shortest addition circuits or the
 minimum stabilization time is made.
 
+**Forward result:** [TOP_SUFFIX.md](TOP_SUFFIX.md) resolves the remaining
+lower-hole boundary below: every finite seed set with at least two values
+eventually satisfies `S_t=C(S) intersection [1,M_t]`. That stronger theorem
+retains permanent holes while filling every attainable value below the
+maximum. Its sharp minimum onset remains open. The intermediate compiler
+and its stated information losses below remain valid.
+
 ## Inheritance and the unused coordinate
 
 The oldest recovered definition is the May3

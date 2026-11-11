@@ -15,6 +15,14 @@ were inputs, not the subject of a new audit. Finite receipts support only their
 explicit ranges. No literature-priority claim or numbered canon promotion is
 made here.
 
+**Subsequent closure, 2026-11-11:** the
+[arithmetic-growth continuation](../summand_multiplicand_growth_20261111/README.md)
+settles arbitrary finite-seed strict closure, eventual top-three stabilization,
+and eventual filling of every attainable value below the moving maximum.
+Its proofs retain the long transient described here. For multiplicatively
+independent two-seed products, it instead proves a persistent missing-value
+boundary. The original results below remain the inherited starting point.
+
 ## 1. What actually changes when integer n is added?
 
 Use distinct positive summands and distinct nonunit factors. At birth n:
@@ -279,9 +287,10 @@ Finished here:
 
 Most useful next questions:
 
-1. Does every coprime pair of seeds eventually acquire three consecutive top
-   values in synchronous distinct-sum growth? Find its exact stabilization law,
-   then separate that from filling the whole moving interval.
+1. **Resolved subsequently for every finite seed set with at least two values:**
+   [top-three stabilization](../summand_multiplicand_growth_20261111/summand/CLOSURE.md)
+   and [eventual full attainable-prefix saturation](../summand_multiplicand_growth_20261111/summand/TOP_SUFFIX.md).
+   Sharp minimum onset times remain open in general.
 2. What is the birth schedule and eventual size of the large weak component
    in each finite causal transport graph? Classify directed descendants of5
    without mistaking weak connectivity for constructibility.

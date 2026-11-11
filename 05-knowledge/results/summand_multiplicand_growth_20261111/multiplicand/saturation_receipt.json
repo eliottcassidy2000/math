@@ -1,0 +1,419 @@
+{
+  "status": "PASS; tiny initial-state controls only",
+  "independent_cases": [
+    {
+      "seeds": [
+        2,
+        3
+      ],
+      "rounds": [
+        {
+          "t": 0,
+          "live": [
+            2,
+            3
+          ],
+          "maximum": 3,
+          "first_missing": 6,
+          "saturated_to_max": true
+        },
+        {
+          "t": 1,
+          "live": [
+            2,
+            3,
+            6
+          ],
+          "maximum": 6,
+          "first_missing": 12,
+          "saturated_to_max": true
+        },
+        {
+          "t": 2,
+          "live": [
+            2,
+            3,
+            6,
+            12,
+            18
+          ],
+          "maximum": 18,
+          "first_missing": 24,
+          "saturated_to_max": true
+        },
+        {
+          "t": 3,
+          "live": [
+            2,
+            3,
+            6,
+            12,
+            18,
+            24,
+            36,
+            54,
+            72,
+            108,
+            216
+          ],
+          "maximum": 216,
+          "first_missing": 48,
+          "saturated_to_max": false
+        },
+        {
+          "t": 4,
+          "live": [
+            2,
+            3,
+            6,
+            12,
+            18,
+            24,
+            36,
+            48,
+            54,
+            72,
+            108,
+            144,
+            162,
+            216,
+            288,
+            324,
+            432,
+            648,
+            864,
+            972,
+            1296,
+            1728,
+            1944,
+            2592,
+            3888,
+            5184,
+            5832,
+            7776,
+            11664,
+            15552,
+            23328
+          ],
+          "maximum": 23328,
+          "first_missing": 96,
+          "saturated_to_max": false
+        }
+      ]
+    },
+    {
+      "seeds": [
+        2,
+        5
+      ],
+      "rounds": [
+        {
+          "t": 0,
+          "live": [
+            2,
+            5
+          ],
+          "maximum": 5,
+          "first_missing": 10,
+          "saturated_to_max": true
+        },
+        {
+          "t": 1,
+          "live": [
+            2,
+            5,
+            10
+          ],
+          "maximum": 10,
+          "first_missing": 20,
+          "saturated_to_max": true
+        },
+        {
+          "t": 2,
+          "live": [
+            2,
+            5,
+            10,
+            20,
+            50
+          ],
+          "maximum": 50,
+          "first_missing": 40,
+          "saturated_to_max": false
+        },
+        {
+          "t": 3,
+          "live": [
+            2,
+            5,
+            10,
+            20,
+            40,
+            50,
+            100,
+            200,
+            250,
+            500,
+            1000
+          ],
+          "maximum": 1000,
+          "first_missing": 80,
+          "saturated_to_max": false
+        },
+        {
+          "t": 4,
+          "live": [
+            2,
+            5,
+            10,
+            20,
+            40,
+            50,
+            80,
+            100,
+            200,
+            250,
+            400,
+            500,
+            800,
+            1000,
+            1250,
+            2000,
+            2500,
+            4000,
+            5000,
+            8000,
+            10000,
+            12500,
+            20000,
+            25000,
+            40000,
+            50000,
+            100000,
+            125000,
+            200000,
+            250000,
+            500000
+          ],
+          "maximum": 500000,
+          "first_missing": 160,
+          "saturated_to_max": false
+        }
+      ]
+    },
+    {
+      "seeds": [
+        3,
+        4
+      ],
+      "rounds": [
+        {
+          "t": 0,
+          "live": [
+            3,
+            4
+          ],
+          "maximum": 4,
+          "first_missing": 12,
+          "saturated_to_max": true
+        },
+        {
+          "t": 1,
+          "live": [
+            3,
+            4,
+            12
+          ],
+          "maximum": 12,
+          "first_missing": 36,
+          "saturated_to_max": true
+        },
+        {
+          "t": 2,
+          "live": [
+            3,
+            4,
+            12,
+            36,
+            48
+          ],
+          "maximum": 48,
+          "first_missing": 108,
+          "saturated_to_max": true
+        },
+        {
+          "t": 3,
+          "live": [
+            3,
+            4,
+            12,
+            36,
+            48,
+            108,
+            144,
+            192,
+            432,
+            576,
+            1728
+          ],
+          "maximum": 1728,
+          "first_missing": 324,
+          "saturated_to_max": false
+        },
+        {
+          "t": 4,
+          "live": [
+            3,
+            4,
+            12,
+            36,
+            48,
+            108,
+            144,
+            192,
+            324,
+            432,
+            576,
+            768,
+            1296,
+            1728,
+            2304,
+            3888,
+            5184,
+            6912,
+            9216,
+            15552,
+            20736,
+            27648,
+            46656,
+            62208,
+            82944,
+            110592,
+            186624,
+            248832,
+            331776,
+            746496,
+            995328
+          ],
+          "maximum": 995328,
+          "first_missing": 972,
+          "saturated_to_max": false
+        }
+      ]
+    },
+    {
+      "seeds": [
+        4,
+        9
+      ],
+      "rounds": [
+        {
+          "t": 0,
+          "live": [
+            4,
+            9
+          ],
+          "maximum": 9,
+          "first_missing": 36,
+          "saturated_to_max": true
+        },
+        {
+          "t": 1,
+          "live": [
+            4,
+            9,
+            36
+          ],
+          "maximum": 36,
+          "first_missing": 144,
+          "saturated_to_max": true
+        },
+        {
+          "t": 2,
+          "live": [
+            4,
+            9,
+            36,
+            144,
+            324
+          ],
+          "maximum": 324,
+          "first_missing": 576,
+          "saturated_to_max": true
+        },
+        {
+          "t": 3,
+          "live": [
+            4,
+            9,
+            36,
+            144,
+            324,
+            576,
+            1296,
+            2916,
+            5184,
+            11664,
+            46656
+          ],
+          "maximum": 46656,
+          "first_missing": 2304,
+          "saturated_to_max": false
+        },
+        {
+          "t": 4,
+          "live": [
+            4,
+            9,
+            36,
+            144,
+            324,
+            576,
+            1296,
+            2304,
+            2916,
+            5184,
+            11664,
+            20736,
+            26244,
+            46656,
+            82944,
+            104976,
+            186624,
+            419904,
+            746496,
+            944784,
+            1679616,
+            2985984,
+            3779136,
+            6718464,
+            15116544,
+            26873856,
+            34012224,
+            60466176,
+            136048896,
+            241864704,
+            544195584
+          ],
+          "maximum": 544195584,
+          "first_missing": 9216,
+          "saturated_to_max": false
+        }
+      ]
+    }
+  ],
+  "dependent_hostile": {
+    "seeds": [
+      2,
+      4
+    ],
+    "round2": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "collision": "2^3*4 = 2*4^2 = 32"
+  }
+}

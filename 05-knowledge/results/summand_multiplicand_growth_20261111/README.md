@@ -1,4 +1,4 @@
-# Arithmetic graph growth: finite seed memory and a shrinking frontier
+# Arithmetic graph growth: eventual additive saturation and persistent product holes
 
 Date: 2026-11-11. Parent work: S259 at commit `2f91d2f83728`.
 **PROVED IN PACKET:** the claims explicitly identified below, with proofs
@@ -35,6 +35,29 @@ and the shrinking-window algorithm are in
 [summand/CLOSURE.md](summand/CLOSURE.md). These settle the finite-seed
 closure and eventual-frontier existence questions, not all transient
 generation times or the distribution of lower holes.
+
+**Stronger completion:** [summand/TOP_SUFFIX.md](summand/TOP_SUFFIX.md)
+proves that eventually `S_t=Cl(S) intersection [1,M_t]` at every later
+generation. Top three force top four; balanced sums of the top-four
+interval produce an indexed family of overlapping or adjacent intervals
+that fills a suffix with a fixed lower threshold. The remaining attainable
+values below that threshold enter in finite time. Hence only permanent
+closure holes remain. If h is their number after gcd normalization, then
+eventually `|S_(t+1)|=2|S_t|+h-1`, and sufficiently large attainable
+targets have an exact rounded-logarithm arrival time.
+
+This does **not** transfer to arbitrary product seeds. For multiplicatively
+independent integers 2<=a<b, the least attainable product still missing
+at generation t is exactly `a^(t+1)b`. Its unique b factor forces a single
+mixed construction branch, adding one a per generation. From generation
+3 onward this hole is below the current maximum, so numerical-prefix
+saturation fails forever. In contrast, prime-power product seeds inherit
+the additive saturation theorem exactly. More generally, two distinct
+product seeds eventually saturate **if and only if they are multiplicatively
+dependent**: the dependent case is addition of exponents on powers of a
+common integer base. The independent first-hole law also extends to any
+finite jointly independent seed set, using its two smallest seeds. See
+[multiplicand/SATURATION_OBSTRUCTION.md](multiplicand/SATURATION_OBSTRUCTION.md).
 
 ## Three different meanings of one new integer
 
@@ -133,19 +156,35 @@ and multiplicand notes. Exact paths and transferred predicates are
 recorded in the lane notes. Historical reflections supply provenance;
 the new statements stand on the displayed proofs.
 
+Incoming work was read at the first clean rebase. The
+[concurrent arithmetic birth note](../seed_recursion_births_20261111/ARITHMETIC.md)
+at `48ffb16241` independently recovers the two-seed product formula and
+classifies square-product components by prime-exponent parity. Its
+radical/parity/squaring-root distinction is now integrated into the
+valuation chart. The [Session260 marked constructor work](../session260_quasiperfect_chanpak_20261111/README.md)
+at `4315a74fe0` keeps actual marked graph interfaces in its recursive
+grammar. Our paired-parent and shared-scale results explain analogous
+information losses, but supply no automatic transfer from numerical
+closure to a compatible tournament interface.
+
 ## Reproduction and remaining boundaries
 
 From this packet directory:
 
 ```sh
 python3 -B summand/check.py
+python3 -B summand/top_suffix_check.py
 python3 -B multiplicand/check.py
+python3 -B multiplicand/saturation_check.py
 python3 -B papers/graph_norm_check.py
 ```
 
 All checks use explicit exceptions and remain effective under `python3 -O`.
 Receipts identify the finite universes and hostile controls. The checks
 support implementation and small examples; the unbounded claims are
-proved in the notes. The maximum-stabilization proof does not give a
+proved in the notes. The additive saturation proof does not give a
 sharp onset formula. Raw strict-clique persistence, directed causal
 transport ancestry, and the full tournament spectrum remain open here.
+The [focused proof review](REVIEW.md) records the independent checks and
+small wording repairs. `SHA256SUMS` pins this packet's proofs, code, and
+receipts; the supplied PDF bytes remain outside the repository.

@@ -81,6 +81,18 @@ squarefree. The square 36 has vector (2,2), and its two-prime interaction
 cannot be seen on either single coordinate axis alone. The number 16
 lies on an axis but is not a primitive strict source.
 
+The concurrent [birth-fibre note](../seed_recursion_births_20261111/ARITHMETIC.md)
+(commit `48ffb16241`, sections A2/A4/A6) separates three further quotients:
+the radical retains exponent support, the squarefree kernel retains
+exponent parity, and the squaring-forest root divides all nonzero
+exponents by their largest common power of two. At 12 these give 6, 3,
+and 12 respectively. The square-product graph uses the parity quotient:
+its components through N are the cliques
+`{d a^2<=N}`, one for each squarefree d. This inherited classification
+is compatible with the present vector chart, but neither that quotient
+nor the radical preserves the exact square-deletion incidence inverse.
+That inverse needs the full exponents and their shared correction scale.
+
 ## 3. Exact generation consequences
 
 The joint seed theorem in [summand/CLOSURE.md](summand/CLOSURE.md)
@@ -96,6 +108,22 @@ closure of `{p^a,p^b}` contains every p^m with m>ab but misses p^(ab).
 This is a statement inside one prime-power ray, not an interval of all
 integers. Starting with 4 and 8, the power 64 remains absent, while
 every power of 2 from 128 onward is present.
+
+The stronger [eventual saturation theorem](summand/TOP_SUFFIX.md) also
+transfers to every finite prime-power seed set with at least two elements.
+After some finite generation, every attainable power up to the current
+largest power X_t is present. If d is the gcd of the original exponents,
+then `X_(t+1)=X_t^2/p^d` thereafter. The number of present powers and their
+exact large-target arrival times follow the additive theorem on exponents.
+
+With independent primes, a different phenomenon survives. Starting with
+2 and 3, the product `2^k*3` first appears at generation k: its unique
+factor 3 forces one mixed branch, and the only available pure 2-power
+is the original seed 2. The [product obstruction](multiplicand/SATURATION_OBSTRUCTION.md)
+proves that the least missing attainable value is `2^(t+1)*3` at every
+generation t, and it stays below the maximum for every t>=3. Thus a
+single exponent axis preserves the additive saturation theorem, while
+an independent prime can retain a slow boundary of unfilled values.
 
 There is an exact universal seed distinction as well:
 
