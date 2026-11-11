@@ -1,0 +1,53 @@
+slice, W = (u-2)(v-3), filtration (1,2,1) [= the author's], prime 2147483647; predicted 11
+     N' =  40 : c(4)=11  c(8)=11  c(12)=11  c(16)=11  c(20)=11  c(24)=11  c(28)=11  c(34)=11  c(36)=11   (2999 pivots)
+     N' =  46 : c(4)=11  c(8)=11  c(12)=11  c(16)=11  c(20)=11  c(24)=11  c(28)=11  c(34)=11  c(36)=11   (3866 pivots)
+slice, W = (u-2)(v-3), filtration (1,2,1) [= the author's], prime 1000000007; predicted 11
+     N' =  40 : c(4)=11  c(8)=11  c(12)=11  c(16)=11  c(20)=11  c(24)=11  c(28)=11  c(34)=11  c(36)=11   (2999 pivots)
+     N' =  46 : c(4)=11  c(8)=11  c(12)=11  c(16)=11  c(20)=11  c(24)=11  c(28)=11  c(34)=11  c(36)=11   (3866 pivots)
+     non-pivot basis elements m(e, n) of weight <= 20: [(-3, 0), (-2, 0), (-1, -1), (-1, 0), (0, -2), (0, -1), (0, 0), (0, 1), (1, -1), (1, 0), (2, 0)]
+slice, W = (u-2)(v-3), filtration (1, 2, 2), prime 2147483647; predicted 11
+     N' =  46 : c(4)=11  c(8)=11  c(12)=11  c(16)=11  c(20)=11  c(24)=11   (2649 pivots)
+     N' =  52 : c(4)=11  c(8)=11  c(12)=11  c(16)=11  c(20)=11  c(24)=11   (3309 pivots)
+slice, W = (u-2)(v-3), filtration (2, 3, 1), prime 2147483647; predicted 11
+     N' =  54 : c(6)=11  c(12)=11  c(18)=11  c(24)=11  c(30)=11   (2492 pivots)
+     N' =  60 : c(6)=11  c(12)=11  c(18)=11  c(24)=11  c(30)=11   (3012 pivots)
+slice, centre (5, -7); predicted 11
+     N' =  40 : c(4)=11  c(8)=11  c(12)=11  c(16)=11   (2999 pivots)
+slice, centre (1, 1); predicted 11
+     N' =  40 : c(4)=11  c(8)=11  c(12)=11  c(16)=11   (2999 pivots)
+slice, centre (-3, 4); predicted 11
+     N' =  40 : c(4)=11  c(8)=11  c(12)=11  c(16)=11   (2999 pivots)
+slice, centre (7, 2); predicted 11
+     N' =  40 : c(4)=11  c(8)=11  c(12)=11  c(16)=11   (2999 pivots)
+slice, centre (-1, -2); predicted 11
+     N' =  40 : c(4)=11  c(8)=11  c(12)=11  c(16)=11   (2999 pivots)
+slice, centre (0, 0); predicted 9
+     N' =  40 : c(4)=9  c(8)=9  c(12)=9  c(16)=9   (2963 pivots)
+slice, centre (2, 0); predicted 9
+     N' =  40 : c(4)=9  c(8)=9  c(12)=9  c(16)=9   (2963 pivots)
+slice, centre (0, 3); predicted 11
+     N' =  40 : c(4)=11  c(8)=11  c(12)=11  c(16)=11   (2999 pivots)
+slice, W = u, prime 2147483647; predicted 2
+     N' =  40 : c(4)=2  c(8)=2  c(12)=2  c(16)=2   (2699 pivots)
+slice, W = u, prime 1000000007; predicted 2
+     N' =  40 : c(4)=2  c(8)=2  c(12)=2  c(16)=2   (2699 pivots)
+slice, W = v, prime 2147483647; predicted 4
+     N' =  40 : c(4)=4  c(8)=4  c(12)=4  c(16)=4   (2852 pivots)
+slice, W = v, prime 1000000007; predicted 4
+     N' =  40 : c(4)=4  c(8)=4  c(12)=4  c(16)=4   (2852 pivots)
+slice, W = u + v, prime 2147483647; predicted 6
+     N' =  40 : c(4)=6  c(8)=6  c(12)=6  c(16)=6   (2889 pivots)
+slice, W = u + v, prime 1000000007; predicted 6
+     N' =  40 : c(4)=6  c(8)=6  c(12)=6  c(16)=6   (2889 pivots)
+slice, W = u - 2v, prime 2147483647; predicted 6
+     N' =  40 : c(4)=6  c(8)=6  c(12)=6  c(16)=6   (2889 pivots)
+slice, W = u - 2v, prime 1000000007; predicted 6
+     N' =  40 : c(4)=6  c(8)=6  c(12)=6  c(16)=6   (2889 pivots)
+slice, W = 2u + 3, prime 2147483647; predicted 2
+     N' =  40 : c(4)=2  c(8)=2  c(12)=2  c(16)=2   (2699 pivots)
+slice, W = 2u + 3, prime 1000000007; predicted 2
+     N' =  40 : c(4)=2  c(8)=2  c(12)=2  c(16)=2   (2699 pivots)
+
+real	0m31.322s
+user	0m0.000s
+sys	0m0.031s

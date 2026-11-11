@@ -1,0 +1,26 @@
+A. generating function of H_(n,m), n, m <= 6 (49 cases)                        OK
+A'. H_(0,m) = V^m and H_(n,0) = U^n                                            OK
+B. [d/ds, s + d/dt] = 1                                                        OK
+B. [d/dt, t + d/ds] = 1                                                        OK
+B. [d/ds, t + d/ds] = 0                                                        OK
+B. [d/dt, s + d/dt] = 0                                                        OK
+B. [s + d/dt, t + d/ds] = 0                                                    OK
+B. [d/ds, d/dt] = 0                                                            OK
+B. (s + d/dt)^i (t + d/ds)^j 1 = s^i t^j + lower degree (i, j <= 4)            OK
+   map: automorphism (x + y^2, y + (x + y^2)^2) ;  Jacobian = 1
+C. d_u u = 1, d_u v = 0, d_v v = 1, d_v u = 0                                  OK
+C. [d_u, d_v] = 0 and the two Leibniz identities, m, n <= 2, 2 test functions  OK
+D. twisted differential in the frame du ^ dv (Proposition 2.1)                 OK
+E. Weyl relations of (u - d_v, v - d_u, d_u, d_v)  [family module G = B]       OK
+   map: toy (x^2, y/x) on C^* x C ;  Jacobian = 2
+C. d_u u = 1, d_u v = 0, d_v v = 1, d_v u = 0                                  OK
+C. [d_u, d_v] = 0 and the two Leibniz identities, m, n <= 2, 3 test functions  OK
+D. twisted differential in the frame du ^ dv (Proposition 2.1)                 OK
+E. Weyl relations of (u - d_v, v - d_u, d_u, d_v)  [family module G = B]       OK
+   map: slice of THM-1300 (c = 1) ;  Jacobian = -2/(x*y + 1)**3
+C. d_u u = 1, d_u v = 0, d_v v = 1, d_v u = 0                                  OK
+C. [d_u, d_v] = 0 and the two Leibniz identities, m, n <= 2, 3 test functions  OK
+D. twisted differential in the frame du ^ dv (Proposition 2.1)                 OK
+E. Weyl relations of (u - d_v, v - d_u, d_u, d_v)  [family module G = B]       OK
+F. U^i V^j -> i! [i = j] kills T_u, T_v (i, j <= 8)                            OK
+ALL OK

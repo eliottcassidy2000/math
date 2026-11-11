@@ -1,0 +1,10 @@
+centre (2, 3): c(24) = 11; w V^m: N N N; w U^m: N N N; x V^m: N N N; x U^m: N N N   (N = nonzero class, 0 = zero, ? = weight above 24)
+centre (5, -7): c(24) = 11; w V^m: N N N; w U^m: N N N; x V^m: N N N; x U^m: N N N   (N = nonzero class, 0 = zero, ? = weight above 24)
+centre (1, 1): c(24) = 11; w V^m: N N N; w U^m: N N N; x V^m: N N N; x U^m: N N N   (N = nonzero class, 0 = zero, ? = weight above 24)
+centre (-3, 4): c(24) = 11; w V^m: N N N; w U^m: N N N; x V^m: N N N; x U^m: N N N   (N = nonzero class, 0 = zero, ? = weight above 24)
+centre (7, 2): c(24) = 11; w V^m: N N N; w U^m: N N N; x V^m: N N N; x U^m: N N N   (N = nonzero class, 0 = zero, ? = weight above 24)
+centre (-1, -2): c(24) = 11; w V^m: N N N; w U^m: N N N; x V^m: N N N; x U^m: N N N   (N = nonzero class, 0 = zero, ? = weight above 24)
+
+real	0m25.831s
+user	0m0.046s
+sys	0m0.015s

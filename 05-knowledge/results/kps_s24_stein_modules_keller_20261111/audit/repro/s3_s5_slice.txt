@@ -1,0 +1,9 @@
+S3-S5. slice F_1 = 1 of THM-1300: X = C^2 minus {xy = -1}, W = (u - 2)(v - 3); predicted dimension 11
+   N' = 40: c(4)=11 c(12)=11 c(20)=11 c(28)=11 c(34)=11 c(36)=11   (10.0 s, 2999 pivots)
+   N' = 46: c(4)=11 c(12)=11 c(20)=11 c(28)=11 c(34)=11 c(36)=11   (20.7 s, 3866 pivots)
+   U^k V^l - k! [k = l] in the Stein kernel for k + l <= 4: 15 of 15 (at N' = 46)
+   class of 1: NONZERO
+   classes of w (v - 3)^m: m=1:NONZERO(wt 10) m=2:NONZERO(wt 16) m=3:NONZERO(wt 22) m=4:NONZERO(wt 28) m=5:NONZERO(wt 34)
+   classes of w (u - 2)^m: m=1:NONZERO(wt 6) m=2:NONZERO(wt 8) m=3:NONZERO(wt 10) m=4:NONZERO(wt 12) m=5:NONZERO(wt 14)
+   classes of x (v - 3)^m: m=1:NONZERO(wt 10) m=2:NONZERO(wt 16) m=3:NONZERO(wt 22) m=4:NONZERO(wt 28)
+   classes of x (u - 2)^m: m=1:NONZERO(wt 6) m=2:NONZERO(wt 8) m=3:NONZERO(wt 10) m=4:NONZERO(wt 12)

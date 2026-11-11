@@ -1,0 +1,34 @@
+1. det JF = -2                                                                           OK (det = -2)
+1. F1 = c has the unique solution z = (c - y^2 q (4+3xy))/q^3                            OK 
+1. u = y + 3 c x w                                                                       OK 
+1. v = x w + x w^2 - c x^3 w^3                                                           OK 
+1. Jacobian of (u, v) in (x, y) = -2 w^3                                                 OK 
+2. L(c,u,v) x^3 + (4 - 3uv) x - 2v = 0 on the slice                                      OK 
+      discriminant in x of the cubic (c = 1): -4*(9*u*v - 27*v**2 - 8)**2*(u**3*v - u**2 - 18*u*v + 27*v**2 + 16)
+2. deg_u L = 3, deg_v L = 2, total degree 4                                              OK 
+2. L(1,u,v) irreducible over Q                                                           OK 
+2. disc_v L(1,u,v) = (u^2 - 12)^3 (not a square: L is absolutely irreducible)            OK ((u**2 - 12)**3)
+      on u = infinity (U0 = 0): U1**3*V0*V1    on v = infinity (V0 = 0): 27*U0**3*V1**2
+2. closure of S_1 meets the boundary only at (inf, 0) and (inf, inf): excluded centres are b = 0 OK 
+      fibre sizes off S_1: (1, 1) -> 3 (L = 25), (2, 3) -> 3 (L = 171), (-3, 4) -> 3 (L = 547), (5, -7) -> 3 (L = 1069), (7, 2) -> 3 (L = 509), (1/2, -1/3) -> 3 (L = 521/24), (0, 0) -> 3 (L = 16), (-1, -2) -> 3 (L = 89)
+3. three preimages at 8 rational points off S_1                                          OK 
+      fibre sizes on S_1: (-13/2, -35/216) -> 1, (-13/2, 6) -> 1, (-7/2, -3/8) -> 1, (-7/2, -10/27) -> 1, (7/2, 10/27) -> 1, (7/2, 3/8) -> 1, (37/10, 55/216) -> 1, (37/10, 42/125) -> 1, (157/42, 78/343) -> 1, (157/42, 1925/5832) -> 1, (4, 0) -> 1, (4, 8/27) -> 1, (13/2, -6) -> 1, (13/2, 35/216) -> 1, (49/4, -60) -> 1, (49/4, 143/1728) -> 1
+3. one preimage at 16 rational points of S_1 (two sheets missing)                        OK 
+      fibre sizes on the conic 27v^2 - 9uv + 8 = 0: (35/9, 1) -> 3 (L = 12167/729), (-58/9, -2) -> 3 (L = 281216/729), (11/3, 1/3) -> 3 (L = -1/81), (707/90, 5/2) -> 3 (L = 286191179/291600)
+3b. three preimages on the conic 27v^2 - 9uv + 8 = 0 (double root of the x-cubic, not a missing sheet) OK 
+      points of S_1 with 3uv = 4: 2 ; first: {u: -2*sqrt(3), v: -2*sqrt(3)/9}
+      numeric, off S_1: |x| of the preimages: [['0.305', '0.442', '0.488'], ['0.166', '0.404', '0.41'], ['0.371', '0.439', '0.534'], ['0.22', '0.939', '1'], ['0.0728', '0.449', '0.463'], ['0.209', '0.261', '0.401']]
+      numeric, at distance 1e-12 from S_1:     [['0.43', '2.11e+05', '2.11e+05'], ['0.409', '1.47e+05', '1.47e+05'], ['0.428', '2.45e+05', '2.45e+05'], ['0.233', '5.88e+05', '5.88e+05'], ['0.495', '1.4e+05', '1.4e+05'], ['0.389', '8.95e+04', '8.95e+04']]
+4. numeric: 3 preimages off S_1 at 6 random complex points                               OK 
+4. numeric: approaching S_1 one preimage stays bounded and two escape (|x| > 1e4)        OK 
+5. S_1 meets (u-2)(v-3) = t                     in 5 affine points (generic t; squarefree at t = 5/3) OK (degree 5)
+5. S_1 meets (u-5)(v+7) = t                     in 5 affine points (generic t; squarefree at t = 5/3) OK (degree 5)
+5. S_1 meets u v = t  [centre (0,0), excluded]  in 4 affine points (generic t; squarefree at t = 5/3) OK (degree 4)
+5. S_1 meets u = t                              in 2 affine points (generic t; squarefree at t = 5/3) OK (degree 2)
+5. S_1 meets v = t                              in 3 affine points (generic t; squarefree at t = 5/3) OK (degree 3)
+5. S_1 meets u + v = t                          in 4 affine points (generic t; squarefree at t = 5/3) OK (degree 4)
+6. dw ^ dW != 0 on X_1 (so [dq/q] restricts to a nonzero class on every generic fibre)   OK 
+7. centre (2,3): cubic in x irreducible over Q(tau), discriminant not a square, t = 5/3, -2, 7/11 OK 
+7. centre (0,0): cubic in x irreducible over Q(tau), discriminant not a square, t = 5/3, -2, 7/11 OK 
+7. centre (5,-7): cubic in x irreducible over Q(tau), discriminant not a square, t = 5/3, -2, 7/11 OK 
+ALL OK

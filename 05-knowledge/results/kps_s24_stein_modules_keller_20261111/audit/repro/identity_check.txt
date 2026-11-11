@@ -1,0 +1,1 @@
+slice: [d_u^m d_v^n h] = [h H_(n,m)(U, V)] for h = w, x, y and 1 <= m + n <= 3 (weight <= 24): 21 checked, 0 failures

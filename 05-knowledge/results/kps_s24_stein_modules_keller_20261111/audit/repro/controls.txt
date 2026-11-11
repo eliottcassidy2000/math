@@ -1,0 +1,22 @@
+W = x y  (Morse; expected 1)
+   N' =  6: c(2)=1 c(4)=1 c(6)=1
+   N' = 10: c(2)=1 c(4)=1 c(6)=1
+   N' = 14: c(2)=1 c(4)=1 c(6)=1
+W = x^3 + y^3  (expected (3-1)^2 = 4)
+   N' =  8: c(3)=4 c(5)=4 c(7)=4
+   N' = 12: c(3)=4 c(5)=4 c(7)=4
+   N' = 16: c(3)=4 c(5)=4 c(7)=4
+W = x + x^2 y  (Broughton: no critical point, fibre C^*; expected 1)
+   N' =  8: c(2)=1 c(4)=1 c(6)=1
+   N' = 12: c(2)=1 c(4)=1 c(6)=1
+   N' = 16: c(2)=1 c(4)=1 c(6)=1
+   N' = 20: c(2)=1 c(4)=1 c(6)=1
+W = x^2 y  (non-isolated critical line, fibre C^*; expected 1)
+   N' =  8: c(2)=1 c(4)=1 c(6)=1
+   N' = 12: c(2)=1 c(4)=1 c(6)=1
+   N' = 16: c(2)=1 c(4)=1 c(6)=1
+W = f g, (f, g) = (x + y^2, y + (x + y^2)^3)  (automorphism; expected 1)
+   N' = 10: c(2)=1 c(4)=1 c(6)=2
+   N' = 14: c(2)=1 c(4)=1 c(6)=1
+   N' = 18: c(2)=1 c(4)=1 c(6)=1
+   N' = 22: c(2)=1 c(4)=1 c(6)=1

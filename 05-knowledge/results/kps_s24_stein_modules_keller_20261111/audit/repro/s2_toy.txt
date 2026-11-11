@@ -1,0 +1,11 @@
+S2. toy: C^* x C, (u, v) = (x^2, y/x), W = (u - 2)(v - 3); predicted dimension 2
+   N' = 12: c(4)=2 c(8)=2 c(12)=3   (0.0 s, 217 pivots)
+   N' = 18: c(4)=2 c(8)=2 c(12)=2   (0.1 s, 433 pivots)
+   N' = 24: c(4)=2 c(8)=2 c(12)=2   (0.1 s, 721 pivots)
+   N' = 30: c(4)=2 c(8)=2 c(12)=2   (0.3 s, 1081 pivots)
+   U^k V^l - k! [k = l] in the Stein kernel for k + l <= 4: 15 of 15 (at N' = 30)
+   class of 1: NONZERO
+   classes of x^(-2) (v - 3)^m: m=1:NONZERO(wt 4) m=2:NONZERO(wt 6) m=3:NONZERO(wt 8) m=4:NONZERO(wt 10) m=5:NONZERO(wt 12) m=6:NONZERO(wt 14)
+   classes of x^(-1) (v - 3)^m: m=1:NONZERO(wt 3) m=2:NONZERO(wt 5) m=3:NONZERO(wt 7) m=4:NONZERO(wt 9) m=5:NONZERO(wt 11) m=6:NONZERO(wt 13)
+   classes of x (u - 2)^m: m=1:zero(wt 3) m=2:zero(wt 5) m=3:zero(wt 7) m=4:zero(wt 9) m=5:zero(wt 11) m=6:zero(wt 13)
+   classes of x^(-2) (u - 2)^m: m=1:zero(wt 2) m=2:zero(wt 2) m=3:zero(wt 4) m=4:zero(wt 6) m=5:zero(wt 8) m=6:zero(wt 10)

@@ -122,3 +122,17 @@ Notes.
 3. Not predicted, found in the runs: the centre (0, 0) gives dimension 9 on the slice (an excluded centre of W2:
    `v = 0` is a horizontal asymptote of the non-properness curve); every Hermite class of `w` and of `x` computed
    on the slice is nonzero.
+
+## Audit notes (added after the first audit, `audit/AUDIT.md`; nothing above was changed)
+
+1. In the outcome of S4 and in Note 2, "exact" and "complete in those weights" claim too much. `c(N, N')` is an
+   upper bound for the rank of the weight-`N` part in the Stein space, and a nonzero normal form certifies
+   non-membership relative to the truncation `N'` only. Read: S4 CONFIRMED relative to the truncation, which is
+   stable (the audit found the plateau 11 for `4 <= N <= 60` and identical normal forms at `N' = 46, 58, 70`).
+2. The working claims called K-GMC, CV and SN "conjectures between GMC(2) and JC(2)". K-GMC is the instance
+   `q = (f - a)(g - b)` of Zhao's Image Conjecture, and all three, asked of every Keller pair, are equivalent to
+   JC(2) (README section 5; first pushed in a two-direction conditional form by Session269).
+3. The runs S4 do not show that SN fails on the slice at the centre (2, 3); they show no vanishing for `m <= 5`.
+   The failure is proved only at centres algebraically independent over `Q` (README section 6.2).
+4. The audit could not read from git that the registration preceded the runs, only that both registration commits
+   were on `origin/main` before the outcome commit.

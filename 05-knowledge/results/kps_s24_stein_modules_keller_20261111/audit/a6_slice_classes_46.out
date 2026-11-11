@@ -1,0 +1,18 @@
+prime 2147483647, N' = 46: 3866 pivots (3 s); c(N) for N = 4, 12, 20, ..., 36: 11 11 11 11 11
+   class of 1: NONZERO (normal form supported on [(-3, 0), (-2, 0), (-1, -1), (-1, 0), (0, -2), (0, -1), (0, 0), (0, 1), (1, -1), (1, 0), (2, 0)])
+   [U^i V^j] - i! [i = j] [1] = 0 for i + j <= 4: 15 of 15
+   classes of w V^m: m=1:NONZERO(wt 10) m=2:NONZERO(wt 16) m=3:NONZERO(wt 22) m=4:NONZERO(wt 28) m=5:NONZERO(wt 34)
+   classes of w U^m: m=1:NONZERO(wt 6) m=2:NONZERO(wt 8) m=3:NONZERO(wt 10) m=4:NONZERO(wt 12) m=5:NONZERO(wt 14)
+   classes of x V^m: m=1:NONZERO(wt 10) m=2:NONZERO(wt 16) m=3:NONZERO(wt 22) m=4:NONZERO(wt 28)
+   classes of x U^m: m=1:NONZERO(wt 6) m=2:NONZERO(wt 8) m=3:NONZERO(wt 10) m=4:NONZERO(wt 12)
+prime 1000000007, N' = 46: 3866 pivots (2 s); c(N) for N = 4, 12, 20, ..., 36: 11 11 11 11 11
+   class of 1: NONZERO (normal form supported on [(-3, 0), (-2, 0), (-1, -1), (-1, 0), (0, -2), (0, -1), (0, 0), (0, 1), (1, -1), (1, 0), (2, 0)])
+   [U^i V^j] - i! [i = j] [1] = 0 for i + j <= 4: 15 of 15
+   classes of w V^m: m=1:NONZERO(wt 10) m=2:NONZERO(wt 16) m=3:NONZERO(wt 22) m=4:NONZERO(wt 28) m=5:NONZERO(wt 34)
+   classes of w U^m: m=1:NONZERO(wt 6) m=2:NONZERO(wt 8) m=3:NONZERO(wt 10) m=4:NONZERO(wt 12) m=5:NONZERO(wt 14)
+   classes of x V^m: m=1:NONZERO(wt 10) m=2:NONZERO(wt 16) m=3:NONZERO(wt 22) m=4:NONZERO(wt 28)
+   classes of x U^m: m=1:NONZERO(wt 6) m=2:NONZERO(wt 8) m=3:NONZERO(wt 10) m=4:NONZERO(wt 12)
+
+real	0m4.846s
+user	0m0.000s
+sys	0m0.046s

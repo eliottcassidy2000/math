@@ -1,0 +1,70 @@
+=== prime 2147483647
+W = x y                                   expected 1
+     N' =   8 : c(2)=1  c(4)=1  c(6)=1   (54 pivots)
+     N' =  12 : c(2)=1  c(4)=1  c(6)=1   (104 pivots)
+W = x^3 + y^3                             expected 4
+     N' =  10 : c(3)=4  c(5)=4  c(7)=4   (87 pivots)
+     N' =  14 : c(3)=4  c(5)=4  c(7)=4   (149 pivots)
+W = x + x^2 y  (no critical point)        expected 1
+     N' =  12 : c(2)=1  c(4)=1  c(6)=1   (116 pivots)
+     N' =  18 : c(2)=1  c(4)=1  c(6)=1   (227 pivots)
+W = x^2 y      (critical line)            expected 1
+     N' =  12 : c(2)=1  c(4)=1  c(6)=1   (116 pivots)
+     N' =  16 : c(2)=1  c(4)=1  c(6)=1   (186 pivots)
+W = f g, (f,g) = (x+y^2, y+(x+y^2)^3)     expected 1
+     N' =  16 : c(2)=1  c(4)=1  c(6)=1   (251 pivots)
+     N' =  22 : c(2)=1  c(4)=1  c(6)=1   (416 pivots)
+W = (f-2)(g-3), (f,g) = (x+y^2, y+(x+y^2)^2)  expected 1
+     N' =  16 : c(2)=1  c(4)=1  c(6)=1  c(10)=1   (228 pivots)
+     N' =  22 : c(2)=1  c(4)=1  c(6)=1  c(10)=1   (381 pivots)
+W = x^2 y^2  (gcd 2: two components C^*)  expected 2  [HYP-9668 (E) says 1 for x^p y^q]
+     N' =  12 : c(2)=2  c(4)=2  c(6)=2   (126 pivots)
+     N' =  16 : c(2)=2  c(4)=2  c(6)=2   (200 pivots)
+W = x^3 y^3  (gcd 3)                      expected 3
+     N' =  14 : c(2)=2  c(4)=3  c(6)=3   (183 pivots)
+     N' =  18 : c(2)=2  c(4)=3  c(6)=3   (273 pivots)
+W = x^3 y^2  (coprime)                    expected 1
+     N' =  14 : c(2)=0  c(4)=1  c(6)=1   (174 pivots)
+     N' =  18 : c(2)=0  c(4)=1  c(6)=1   (260 pivots)
+=== prime 1000000007
+W = x y                                   expected 1
+     N' =   8 : c(2)=1  c(4)=1  c(6)=1   (54 pivots)
+     N' =  12 : c(2)=1  c(4)=1  c(6)=1   (104 pivots)
+W = x^3 + y^3                             expected 4
+     N' =  10 : c(3)=4  c(5)=4  c(7)=4   (87 pivots)
+     N' =  14 : c(3)=4  c(5)=4  c(7)=4   (149 pivots)
+W = x + x^2 y  (no critical point)        expected 1
+     N' =  12 : c(2)=1  c(4)=1  c(6)=1   (116 pivots)
+     N' =  18 : c(2)=1  c(4)=1  c(6)=1   (227 pivots)
+W = x^2 y      (critical line)            expected 1
+     N' =  12 : c(2)=1  c(4)=1  c(6)=1   (116 pivots)
+     N' =  16 : c(2)=1  c(4)=1  c(6)=1   (186 pivots)
+W = f g, (f,g) = (x+y^2, y+(x+y^2)^3)     expected 1
+     N' =  16 : c(2)=1  c(4)=1  c(6)=1   (251 pivots)
+     N' =  22 : c(2)=1  c(4)=1  c(6)=1   (416 pivots)
+W = (f-2)(g-3), (f,g) = (x+y^2, y+(x+y^2)^2)  expected 1
+     N' =  16 : c(2)=1  c(4)=1  c(6)=1  c(10)=1   (228 pivots)
+     N' =  22 : c(2)=1  c(4)=1  c(6)=1  c(10)=1   (381 pivots)
+W = x^2 y^2  (gcd 2: two components C^*)  expected 2  [HYP-9668 (E) says 1 for x^p y^q]
+     N' =  12 : c(2)=2  c(4)=2  c(6)=2   (126 pivots)
+     N' =  16 : c(2)=2  c(4)=2  c(6)=2   (200 pivots)
+W = x^3 y^3  (gcd 3)                      expected 3
+     N' =  14 : c(2)=2  c(4)=3  c(6)=3   (183 pivots)
+     N' =  18 : c(2)=2  c(4)=3  c(6)=3   (273 pivots)
+W = x^3 y^2  (coprime)                    expected 1
+     N' =  14 : c(2)=0  c(4)=1  c(6)=1   (174 pivots)
+     N' =  18 : c(2)=0  c(4)=1  c(6)=1   (260 pivots)
+=== prime 2147483647  weights (2, 3)
+W = x + x^2 y  (no critical point)        expected 1
+     N' =  36 : c(6)=1  c(12)=1  c(18)=1   (158 pivots)
+     N' =  48 : c(6)=1  c(12)=1  c(18)=1   (258 pivots)
+W = x^2 y      (critical line)            expected 1
+     N' =  36 : c(6)=1  c(12)=1  c(18)=1   (158 pivots)
+     N' =  48 : c(6)=1  c(12)=1  c(18)=1   (258 pivots)
+W = x^2 y^2  (gcd 2: two components C^*)  expected 2  [HYP-9668 (E) says 1 for x^p y^q]
+     N' =  36 : c(6)=2  c(12)=2  c(18)=2   (173 pivots)
+     N' =  48 : c(6)=2  c(12)=2  c(18)=2   (279 pivots)
+
+real	0m0.298s
+user	0m0.015s
+sys	0m0.015s

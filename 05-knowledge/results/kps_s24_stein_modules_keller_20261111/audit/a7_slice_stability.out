@@ -1,0 +1,14 @@
+N' = 46: 3866 pivots (3 s); values of c(N, N') for 4 <= N <= 36: [11]
+N' = 58: 5924 pivots (7 s); values of c(N, N') for 4 <= N <= 48: [11]
+N' = 70: 8414 pivots (13 s); values of c(N, N') for 4 <= N <= 60: [11]
+1. normal forms identical at N' = [46, 58, 70] for 35 elements (weights up to 34): YES
+   support of all normal forms: 11 monomials [(-3, 0), (-2, 0), (-1, -1), (-1, 0), (0, -2), (0, -1), (0, 0), (0, 1), (1, -1), (1, 0), (2, 0)]
+3. w V^m at N' = 70: m=1:N m=2:N m=3:N m=4:N m=5:N m=6:N m=7:N m=8:N m=9:N ; rank of the span: 6
+3. w U^m at N' = 70: m=1:N m=2:N m=3:N m=4:N m=5:N m=6:N m=7:N m=8:N m=9:N m=10:N m=11:N m=12:N ; rank of the span: 5
+3. x V^m at N' = 70: m=1:N m=2:N m=3:N m=4:N m=5:N m=6:N m=7:N m=8:N m=9:N ; rank of the span: 5
+3. x U^m at N' = 70: m=1:N m=2:N m=3:N m=4:N m=5:N m=6:N m=7:N m=8:N m=9:N m=10:N m=11:N m=12:N ; rank of the span: 5
+   rank of the span of all tested classes together with [1]: 6
+
+real	0m22.359s
+user	0m0.031s
+sys	0m0.015s

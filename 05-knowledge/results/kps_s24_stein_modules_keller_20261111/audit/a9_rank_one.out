@@ -1,0 +1,12 @@
+identity 1 = 2 D_y(y) - D_x(x) for W = x^2 y: True
+functional x^k y^l -> l! [k = 2l+1] kills D_x, D_y of all monomials with k < 12, l < 8: True ; value on x: 1 ; value on 1: 0
+W = x^2 y                    prime 2147483647: dim = 1; class of 1: ZERO    non-pivot monomials of degree <= 8: [(1, 0)]
+W = x^2 y                    prime 1000000007: dim = 1; class of 1: ZERO    non-pivot monomials of degree <= 8: [(1, 0)]
+W = x^3 y^2                  prime 2147483647: dim = 1; class of 1: ZERO    non-pivot monomials of degree <= 8: [(2, 1)]
+W = x^3 y^2                  prime 1000000007: dim = 1; class of 1: ZERO    non-pivot monomials of degree <= 8: [(2, 1)]
+W = x y^2                    prime 2147483647: dim = 1; class of 1: ZERO    non-pivot monomials of degree <= 8: [(0, 1)]
+W = x y^2                    prime 1000000007: dim = 1; class of 1: ZERO    non-pivot monomials of degree <= 8: [(0, 1)]
+W = x y  (Gaussian)          prime 2147483647: dim = 1; class of 1: nonzero non-pivot monomials of degree <= 8: [(0, 0)]
+W = x y  (Gaussian)          prime 1000000007: dim = 1; class of 1: nonzero non-pivot monomials of degree <= 8: [(0, 0)]
+W = x + x^2 y  (Broughton)   prime 2147483647: dim = 1; class of 1: nonzero non-pivot monomials of degree <= 8: [(0, 0)]
+W = x + x^2 y  (Broughton)   prime 1000000007: dim = 1; class of 1: nonzero non-pivot monomials of degree <= 8: [(0, 0)]

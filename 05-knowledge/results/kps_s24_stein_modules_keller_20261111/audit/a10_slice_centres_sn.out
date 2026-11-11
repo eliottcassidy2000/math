@@ -1,0 +1,14 @@
+centre ( 2,  3): c(4..36) = [11]; [1] nonzero; w V^m: N N N N; w U^m: N N N N; x V^m: N N N N; x U^m: N N N N
+centre ( 5, -7): c(4..36) = [11]; [1] nonzero; w V^m: N N N N; w U^m: N N N N; x V^m: N N N N; x U^m: N N N N
+centre ( 1,  1): c(4..36) = [11]; [1] nonzero; w V^m: N N N N; w U^m: N N N N; x V^m: N N N N; x U^m: N N N N
+centre (-3,  4): c(4..36) = [11]; [1] nonzero; w V^m: N N N N; w U^m: N N N N; x V^m: N N N N; x U^m: N N N N
+centre ( 7,  2): c(4..36) = [11]; [1] nonzero; w V^m: N N N N; w U^m: N N N N; x V^m: N N N N; x U^m: N N N N
+centre (-1, -2): c(4..36) = [11]; [1] nonzero; w V^m: N N N N; w U^m: N N N N; x V^m: N N N N; x U^m: N N N N
+centre ( 0,  3): c(4..36) = [11]; [1] nonzero; w V^m: N N N N; w U^m: N N N N; x V^m: N N N N; x U^m: N N N N
+centre ( 2,  0): c(4..36) = [9]; [1] nonzero; w V^m: N N N N; w U^m: N N N N; x V^m: N N N N; x U^m: N N N N
+centre ( 0,  0): c(4..36) = [9]; [1] nonzero; w V^m: N N N 0; w U^m: N N N N; x V^m: 0 N 0 N; x U^m: N N N N
+centre ( 4,  0): c(4..36) = [9]; [1] nonzero; w V^m: N N N N; w U^m: N N N N; x V^m: N N N N; x U^m: N N N N
+
+real	0m30.107s
+user	0m0.000s
+sys	0m0.046s

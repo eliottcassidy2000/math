@@ -1,0 +1,58 @@
+toy, centre (2, 3), weights (|i| -> 1, j -> 1), prime 2147483647
+     N' =  20 : c(4)=2  c(8)=2  c(12)=2   (521 pivots)
+     N' =  30 : c(4)=2  c(8)=2  c(12)=2   (1081 pivots)
+     N' =  40 : c(4)=2  c(8)=2  c(12)=2   (1841 pivots)
+toy, centre (2, 3), weights (|i| -> 1, j -> 1), prime 1000000007
+     N' =  20 : c(4)=2  c(8)=2  c(12)=2   (521 pivots)
+     N' =  30 : c(4)=2  c(8)=2  c(12)=2   (1081 pivots)
+     N' =  40 : c(4)=2  c(8)=2  c(12)=2   (1841 pivots)
+     non-pivot monomials of weight <= 12: [(-1, 0), (0, 0)]
+toy, centre (2, 3), weights (|i| -> 1, j -> 2), prime 2147483647
+     N' =  20 : c(4)=2  c(8)=2  c(12)=2   (291 pivots)
+     N' =  30 : c(4)=2  c(8)=2  c(12)=2   (586 pivots)
+     N' =  40 : c(4)=2  c(8)=2  c(12)=2   (981 pivots)
+toy, centre (2, 3), weights (|i| -> 1, j -> 2), prime 1000000007
+     N' =  20 : c(4)=2  c(8)=2  c(12)=2   (291 pivots)
+     N' =  30 : c(4)=2  c(8)=2  c(12)=2   (586 pivots)
+     N' =  40 : c(4)=2  c(8)=2  c(12)=2   (981 pivots)
+     non-pivot monomials of weight <= 12: [(-1, 0), (0, 0)]
+toy, centre (2, 3), weights (|i| -> 2, j -> 1), prime 2147483647
+     N' =  20 : c(4)=2  c(8)=2  c(12)=2   (289 pivots)
+     N' =  30 : c(4)=2  c(8)=2  c(12)=2   (584 pivots)
+     N' =  40 : c(4)=2  c(8)=2  c(12)=2   (979 pivots)
+toy, centre (2, 3), weights (|i| -> 2, j -> 1), prime 1000000007
+     N' =  20 : c(4)=2  c(8)=2  c(12)=2   (289 pivots)
+     N' =  30 : c(4)=2  c(8)=2  c(12)=2   (584 pivots)
+     N' =  40 : c(4)=2  c(8)=2  c(12)=2   (979 pivots)
+     non-pivot monomials of weight <= 12: [(0, 0), (0, 1)]
+toy, centre (2, 3), weights (|i| -> 1, j -> 1), prime 2147483647
+     N' =  60 : c(4)=2  c(8)=2  c(12)=2  c(20)=2   (3961 pivots)
+     normal forms: 1 -> {(0, 0): 2}   x -> {(-1, 0): 4}
+  3. [x^-2 V^m] = ((-1)^m m!/2^(m+1)) [1] + 0 [x]  (prediction of the residue formula), m <= 8: m=0:match m=1:match m=2:match m=3:match m=4:match m=5:match m=6:match m=7:match m=8:match -> OK
+  2. classes for m = 1..6 (N nonzero, 0 zero): x^-1 V^m: N N N N N N;  x U^m: 0 0 0 0 0 0;  x^-2 U^m: 0 0 0 0 0 0
+  4. [U^i V^j] = i! [i = j] [1], i + j <= 5: 0 failures of 21
+toy, centre (2, 3), weights (|i| -> 1, j -> 1), prime 1000000007
+     N' =  60 : c(4)=2  c(8)=2  c(12)=2  c(20)=2   (3961 pivots)
+     normal forms: 1 -> {(0, 0): 2}   x -> {(-1, 0): 4}
+  3. [x^-2 V^m] = ((-1)^m m!/2^(m+1)) [1] + 0 [x]  (prediction of the residue formula), m <= 8: m=0:match m=1:match m=2:match m=3:match m=4:match m=5:match m=6:match m=7:match m=8:match -> OK
+  2. classes for m = 1..6 (N nonzero, 0 zero): x^-1 V^m: N N N N N N;  x U^m: 0 0 0 0 0 0;  x^-2 U^m: 0 0 0 0 0 0
+  4. [U^i V^j] = i! [i = j] [1], i + j <= 5: 0 failures of 21
+toy, centre (5, -7), weights (|i| -> 1, j -> 1), prime 2147483647
+     N' =  30 : c(4)=2  c(8)=2  c(12)=2   (1081 pivots)
+     N' =  40 : c(4)=2  c(8)=2  c(12)=2   (1841 pivots)
+toy, centre (0, 3), weights (|i| -> 1, j -> 1), prime 2147483647
+     N' =  30 : c(4)=0  c(8)=0  c(12)=0   (1022 pivots)
+     N' =  40 : c(4)=0  c(8)=0  c(12)=0   (1762 pivots)
+toy, centre (0, 3), weights (|i| -> 1, j -> 1), prime 1000000007
+     N' =  30 : c(4)=0  c(8)=0  c(12)=0   (1022 pivots)
+     N' =  40 : c(4)=0  c(8)=0  c(12)=0   (1762 pivots)
+open immersion (x, y) on C^* x C, centre (2, 3): expected 1
+     N' =  30 : c(4)=1  c(8)=1  c(12)=1   (1022 pivots)
+     N' =  40 : c(4)=1  c(8)=1  c(12)=1   (1762 pivots)
+open immersion (x, y) on C^* x C, centre (0, 3): expected 0
+     N' =  30 : c(4)=0  c(8)=0  c(12)=0   (1022 pivots)
+     N' =  40 : c(4)=0  c(8)=0  c(12)=0   (1762 pivots)
+
+real	0m3.286s
+user	0m0.015s
+sys	0m0.031s

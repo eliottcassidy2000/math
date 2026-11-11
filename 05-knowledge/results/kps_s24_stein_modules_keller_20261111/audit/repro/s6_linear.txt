@@ -1,0 +1,9 @@
+W = u     N' = 16: c(4)=2 c(8)=2 c(12)=2 c(16)=4   predicted 2
+W = u     N' = 22: c(4)=2 c(8)=2 c(12)=2 c(16)=2   predicted 2
+W = u     N' = 28: c(4)=2 c(8)=2 c(12)=2 c(16)=2   predicted 2
+W = v     N' = 16: c(4)=4 c(8)=4 c(12)=4 c(16)=23   predicted 4
+W = v     N' = 22: c(4)=4 c(8)=4 c(12)=4 c(16)=4   predicted 4
+W = v     N' = 28: c(4)=4 c(8)=4 c(12)=4 c(16)=4   predicted 4
+W = u + v N' = 16: c(4)=6 c(8)=6 c(12)=6 c(16)=10   predicted 6
+W = u + v N' = 22: c(4)=6 c(8)=6 c(12)=6 c(16)=6   predicted 6
+W = u + v N' = 28: c(4)=6 c(8)=6 c(12)=6 c(16)=6   predicted 6
