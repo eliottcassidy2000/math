@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "chain_cores": 31,
+  "all_apex_cuts_literal_permutations": 32,
+  "rank_interfaces": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "rank_count_controls": [
+    [
+      3,
+      9
+    ],
+    [
+      4,
+      465
+    ],
+    [
+      5,
+      3639
+    ]
+  ],
+  "core_values": [
+    3,
+    5,
+    9,
+    11,
+    15,
+    17,
+    19,
+    23,
+    25,
+    27,
+    31,
+    33,
+    37,
+    39,
+    45,
+    47,
+    51
+  ]
+}

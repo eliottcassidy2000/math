@@ -43,8 +43,35 @@ local rigidity of the consecutive two-run chamber.
   without re-auditing inherited classifications.
 
 The concurrent48ffb162415d stable-port and completed-grid work is preserved
-and credited. Further creative work is examining two-edge repairs and graph-domination
-adapters. These are separate from the completed results above.
+and credited. The completed third wave below follows both routes beyond the initial tests.
+
+## Checkpoint three: domination, positive defects, and quadratic norms
+
+- [General domination injection](bridges/BIPARTITE_DEFECT.md): for every
+  tournament T and marked vertex z, its bipartite cross-incidence graph G_z
+  satisfies H(T)≥d(G_z), with equality exactly when T−z is transitive.
+  The proof gives an injection and a termwise nonnegative cut-fibre defect.
+  For a fixed bipartite input, zero defect is attainable by choosing shore
+  orientations exactly for chain graphs.
+- [Exact chain adapter](bridges/DOMINATION_TRANSFER.md): a binary word
+  builds a chain graph and tournament with identical counts, together with
+  a two-register arithmetic recurrence. The all-order missing target29
+  explains why the solved even-graph spectrum does not automatically transfer.
+- [Apex and multi-edge repairs](constructors/TWO_EDGE_REPAIR.md): every
+  apex reorientation of the consecutive two-run chamber misses its desired
+  decrement2. Complete two-edge shells through a=6 have hits only at a=3.
+  A four-edge repair at a=4 is explained by an exact all-length formula;
+  the same rank pattern fails at every a≥5.
+- [Quasiperfect norm interface](arithmetic/QUASIPERFECT_NORMS.md): actual
+  cyclic substitution gives x²+2y², with x=Q2−H and y=H. The cut bound
+  x≥|A|y yields a complete finite decision procedure for this grammar.
+  Factor-three switching has exactly three physical profiles and outputs
+  3,51,99; the next Pell candidate fails its graph profile at Q2=42.
+- [Focused third-wave review](review/THIRD_WAVE.md) separates all-size
+  proofs from their justified finite certificates and bounded shell tests.
+
+Further work is isolating bipartite-spectrum obstructions and quantitative
+positive-defect operations. No full spectrum conclusion follows yet.
 
 ## Status and scope
 

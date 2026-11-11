@@ -1,0 +1,41 @@
+{
+  "status": "FINITE-EXACT",
+  "all_labelled_tournaments_orders_1_to_5": 1099,
+  "all_root_cases": 5405,
+  "equality_cases": 2141,
+  "additional_seeded_order6_root_cases": 600,
+  "two_K2_all_shore_orientations": [
+    {
+      "shore_bits": [
+        0,
+        0
+      ],
+      "H": 13,
+      "d": 9
+    },
+    {
+      "shore_bits": [
+        0,
+        1
+      ],
+      "H": 15,
+      "d": 9
+    },
+    {
+      "shore_bits": [
+        1,
+        0
+      ],
+      "H": 15,
+      "d": 9
+    },
+    {
+      "shore_bits": [
+        1,
+        1
+      ],
+      "H": 13,
+      "d": 9
+    }
+  ]
+}

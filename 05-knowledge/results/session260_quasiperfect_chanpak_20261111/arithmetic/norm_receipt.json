@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "all_pair_checks": 121,
+  "factor3_universe": "all labelled tournaments on1..5 vertices",
+  "factor3_universe_count": 1099,
+  "finite_factor3_profiles": [
+    {
+      "n": 1,
+      "H": 1,
+      "Q2": 2,
+      "labelled_count": 1
+    },
+    {
+      "n": 3,
+      "H": 1,
+      "Q2": 8,
+      "labelled_count": 6
+    },
+    {
+      "n": 3,
+      "H": 3,
+      "Q2": 12,
+      "labelled_count": 2
+    }
+  ],
+  "transitive_diagonal": [
+    {
+      "order": 1,
+      "x": 1,
+      "y": 1,
+      "N": 3,
+      "distinguished_m": 1
+    },
+    {
+      "order": 2,
+      "x": 3,
+      "y": 1,
+      "N": 11,
+      "distinguished_m": null
+    },
+    {
+      "order": 3,
+      "x": 7,
+      "y": 1,
+      "N": 51,
+      "distinguished_m": 5
+    },
+    {
+      "order": 4,
+      "x": 15,
+      "y": 1,
+      "N": 227,
+      "distinguished_m": null
+    },
+    {
+      "order": 5,
+      "x": 31,
+      "y": 1,
+      "N": 963,
+      "distinguished_m": null
+    },
+    {
+      "order": 6,
+      "x": 63,
+      "y": 1,
+      "N": 3971,
+      "distinguished_m": null
+    },
+    {
+      "order": 7,
+      "x": 127,
+      "y": 1,
+      "N": 16131,
+      "distinguished_m": null
+    },
+    {
+      "order": 8,
+      "x": 255,
+      "y": 1,
+      "N": 65027,
+      "distinguished_m": null
+    },
+    {
+      "order": 9,
+      "x": 511,
+      "y": 1,
+      "N": 261123,
+      "distinguished_m": null
+    },
+    {
+      "order": 10,
+      "x": 1023,
+      "y": 1,
+      "N": 1046531,
+      "distinguished_m": null
+    },
+    {
+      "order": 11,
+      "x": 2047,
+      "y": 1,
+      "N": 4190211,
+      "distinguished_m": null
+    },
+    {
+      "order": 12,
+      "x": 4095,
+      "y": 1,
+      "N": 16769027,
+      "distinguished_m": null
+    }
+  ],
+  "C3": {
+    "H": 3,
+    "Q2": 12,
+    "N": 99
+  },
+  "factor3_odd_y_checks": 500
+}

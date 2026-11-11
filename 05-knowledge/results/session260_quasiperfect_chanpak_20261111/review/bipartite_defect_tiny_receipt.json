@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "four_vertex_root_checks": 256,
+  "four_vertex_cut_checks": 2048,
+  "twoK2_H_values": [
+    13,
+    15,
+    15,
+    13
+  ],
+  "twoK2_domination": 9
+}

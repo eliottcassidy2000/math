@@ -1,0 +1,54 @@
+{
+  "status": "FINITE-EXACT",
+  "all_binary_words_length_at_most_8": 511,
+  "core_values_length_at_most_6": [
+    3,
+    5,
+    9,
+    11,
+    15,
+    17,
+    19,
+    23,
+    25,
+    27,
+    31,
+    33,
+    37,
+    39,
+    45,
+    47,
+    51
+  ],
+  "even_tree29_adjacency": [
+    14,
+    1,
+    1,
+    17,
+    40,
+    16
+  ],
+  "exploratory_bipartite_inequality": [
+    {
+      "a": 2,
+      "b": 2,
+      "graphs": 16,
+      "H_less_d": [],
+      "equality_cases": 6
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "graphs": 64,
+      "H_less_d": [],
+      "equality_cases": 10
+    },
+    {
+      "a": 3,
+      "b": 3,
+      "graphs": 512,
+      "H_less_d": [],
+      "equality_cases": 20
+    }
+  ]
+}
