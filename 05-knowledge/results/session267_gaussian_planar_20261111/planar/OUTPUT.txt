@@ -1,0 +1,1 @@
+PASS: 334 exact Gaussian/rotation/convolution/flag controls.
