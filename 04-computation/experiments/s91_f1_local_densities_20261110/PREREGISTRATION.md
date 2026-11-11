@@ -59,3 +59,32 @@ that prime). The tolerances of E and the constant 0.75 were chosen on those wind
 
 A test is CONFIRMED only if every item is inside its interval. Any REFUTED test is reported with the failing items
 and recorded in HYP-9660; the tolerances are not adjusted after the run.
+
+---
+
+# Second registration (2026-11-11): line density of one-vertex sources at rooted order 10
+
+Registered and pushed before `rooted_spectrum/line_density_order10.py 9` is run (the run at rooted order `<= 9`,
+`rooted_spectrum/line_density_order9.out`, is the in-sample calibration and is committed with this text).
+
+**Object.** For odd `N`, `r_m(N)` = number of odd `D <= N/3` such that `(D, (N - D)/2)` is `(H(B), U_B(y) 2^j)` for
+a rooted tournament `(B, y)` of order `<= m`, `j >= 0`. A line `D + 2U = N` has about `N/6` lattice points; the
+*share* of a block is the mean of `r_m(N) / (N/6)` over its odd `N`. The values `N = D + 2U` are the two-step values
+of THM-4865 / near-join values of HYP-9453 (klein), whose exceptional set `1, 7, 11, 13, 21, 47, 67` is KNOWN.
+
+**In sample (rooted order `<= 9`).** Shares on `[2^k, 2^(k+1))`, `k = 6..14`: `0.271, 0.296, 0.333, 0.364, 0.414,
+0.417, 0.373, 0.165, 0.039`; 758 odd `N` in `[129, 2^14)` have `r_9(N) < N/64`, all above 14,000; top decile of
+`3D/N` for `N` in `[4096, 8192)`: `0.19` (odd `U`), `0.18` (even `U`).
+
+**Predictions for rooted order `<= 10`** (each is a test; a failure is reported as a failure):
+
+- **L1.** `r_10(N) >= N/64` for every odd `N` in `[129, 2^14)`: no violation.
+- **L2.** The share on `[2^12, 2^13)` is at least `0.45`, and the share on `[2^11, 2^12)` at least `0.43`.
+- **L3.** The shares are increasing in `k` for `k = 6, ..., 11` (blocks `[2^6, 2^7)` to `[2^11, 2^12)`).
+- **L4.** For `N` in `[4096, 8192)` the share in the top decile of `3D/N` is at least `0.45` for odd `U` and at
+  least `0.40` for even `U`.
+
+Not a test (monotone in the order): the odd `N < 2^15` with `r = 0` remain `1, 7, 11, 13, 21, 47, 67`.
+What the predictions express: the number of sources on a line grows linearly in `N` with a share that does not
+decay, so the induction `N = D + 2U`, `D <= N/3`, has many bases for every target (HYP-9661 (A)); what they do not
+express: any proof of this, or any statement beyond the tested range.
