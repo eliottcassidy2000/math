@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "six_profile": [
+    17,
+    190,
+    828,
+    1752,
+    1800,
+    720
+  ],
+  "six_content": 1,
+  "root_certificates": [
+    {
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        39,
+        15
+      ],
+      "port": 1,
+      "run_coefficients": [
+        5,
+        17,
+        9,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "rows": [
+        2,
+        4,
+        57,
+        3,
+        11,
+        27
+      ],
+      "port": 0,
+      "run_coefficients": [
+        9,
+        17,
+        8,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "five_hostile_profile": [
+    9,
+    66,
+    186,
+    240,
+    120
+  ],
+  "five_hostile_content": 3,
+  "scope": "All-host theorem is proved in MODULE_REBASE.md; finite skeleton coefficients certify the two all-length clone identities."
+}

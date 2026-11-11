@@ -1,0 +1,287 @@
+{
+  "scope": "All labelled tournaments orders 1..5, every root; actual clone sizes 1..3",
+  "rooted_cases": 5405,
+  "complete_biclique_cases": 494,
+  "sharp_biclique_cases": 414,
+  "scalar_continuation_collision": {
+    "key_n_H_Hdelete_d": [
+      5,
+      9,
+      1,
+      9
+    ],
+    "first": {
+      "rows": [
+        16,
+        1,
+        3,
+        7,
+        14
+      ],
+      "root": 0,
+      "clone2": 23,
+      "clone3": 51
+    },
+    "second": {
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "root": 0,
+      "clone2": 29,
+      "clone3": 81
+    }
+  },
+  "alternating_certificate": {
+    "identity": "f(M-I)^2(M-4I)^2(M-9I)=0, exact 27-coordinate integer check",
+    "family": [
+      {
+        "k": 0,
+        "a2": 0,
+        "H_two_apex": 1
+      },
+      {
+        "k": 1,
+        "a2": 1,
+        "H_two_apex": 5
+      },
+      {
+        "k": 2,
+        "a2": 10,
+        "H_two_apex": 29
+      },
+      {
+        "k": 3,
+        "a2": 83,
+        "H_two_apex": 197
+      },
+      {
+        "k": 4,
+        "a2": 684,
+        "H_two_apex": 1485
+      },
+      {
+        "k": 5,
+        "a2": 5781,
+        "H_two_apex": 12021
+      },
+      {
+        "k": 6,
+        "a2": 50062,
+        "H_two_apex": 101949
+      },
+      {
+        "k": 7,
+        "a2": 440855,
+        "H_two_apex": 888997
+      },
+      {
+        "k": 8,
+        "a2": 3921584,
+        "H_two_apex": 7872301
+      },
+      {
+        "k": 9,
+        "a2": 35080665,
+        "H_two_apex": 70277845
+      },
+      {
+        "k": 10,
+        "a2": 314755090,
+        "H_two_apex": 629976221
+      },
+      {
+        "k": 11,
+        "a2": 2828446171,
+        "H_two_apex": 5658756485
+      },
+      {
+        "k": 12,
+        "a2": 25436752820,
+        "H_two_apex": 50880962189
+      }
+    ]
+  },
+  "component_controls": {
+    "seed": 2611705,
+    "trials_per_shape": 8,
+    "cases": [
+      {
+        "component_sizes": [
+          [
+            1,
+            1
+          ]
+        ],
+        "factorial_lower_bound": 2,
+        "sample_deltas": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "component_sizes": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "factorial_lower_bound": 8,
+        "sample_deltas": [
+          10,
+          8,
+          8,
+          10,
+          8,
+          10,
+          10,
+          10
+        ]
+      },
+      {
+        "component_sizes": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "factorial_lower_bound": 30,
+        "sample_deltas": [
+          80,
+          80,
+          78,
+          68,
+          62,
+          80,
+          68,
+          78
+        ]
+      },
+      {
+        "component_sizes": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "factorial_lower_bound": 128,
+        "sample_deltas": [
+          1080,
+          978,
+          1002,
+          946,
+          884,
+          794,
+          996,
+          1096
+        ]
+      },
+      {
+        "component_sizes": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "factorial_lower_bound": 24,
+        "sample_deltas": [
+          84,
+          84,
+          64,
+          72,
+          84,
+          68,
+          68,
+          48
+        ]
+      },
+      {
+        "component_sizes": [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "factorial_lower_bound": 32,
+        "sample_deltas": [
+          98,
+          98,
+          106,
+          110,
+          114,
+          102,
+          110,
+          90
+        ]
+      },
+      {
+        "component_sizes": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "factorial_lower_bound": 52,
+        "sample_deltas": [
+          186,
+          248,
+          246,
+          278,
+          300,
+          224,
+          306,
+          300
+        ]
+      }
+    ]
+  }
+}

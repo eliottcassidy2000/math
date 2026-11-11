@@ -1,0 +1,50 @@
+{
+  "source_commit": "f92e070445e43c59f1252f2979db564df88d7b60",
+  "pool_rule": "05-knowledge/**/*.md, excluding case-insensitive filename substrings chanpak,tournament,session260,session259,session258",
+  "pool_count": 11638,
+  "waves": [
+    {
+      "seed": 261104,
+      "choices": [
+        "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-audit/sources/01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md",
+        "05-knowledge/results/session51_structural_errors_relational_packets_20261024/audit-parent-growth/producer/VALIDATION.md",
+        "05-knowledge/results/runner_area_clock_20261020j/boundary_and_colouring.md",
+        "05-knowledge/results/session192_surprising_approaches_20261105/dyadic/PROOF.md",
+        "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-synthesis/REPORT.md",
+        "05-knowledge/results/session252_fivefold_bridges_20261111/algebra/PROOF.md",
+        "05-knowledge/results/session137_overnight_proof_frontiers_20261102/cycle_carriers/sources/09-THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md",
+        "05-knowledge/hypotheses/HYP-9361-camion-function-open-laws-split-inert-equidistribution-tower-heights-uniformity-k-speed.md",
+        "05-knowledge/results/session151_spectrum_metagraph_20261103/bridges/OVERLAP_AND_PATH_WALK.md",
+        "05-knowledge/results/crossroads223_20260926_geometry_growth_audit.md",
+        "05-knowledge/hypotheses/HYP-9348-endpoint-layers-black-core-connectivity-and-the-next-zero-heavy-layers.md",
+        "05-knowledge/results/planar_jc48_sep06_odd_cusp_audit.md"
+      ]
+    },
+    {
+      "seed": 261105,
+      "choices": [
+        "05-knowledge/results/planar_jc48_sep08_five_one_one_one_audit.md",
+        "05-knowledge/results/planar_autonomous_lie_jets_20261019/planar_autonomous_polynomiality_beyond_fixed_line.md",
+        "05-knowledge/results/root27_machine_bridges_20261026/atlas/README.md",
+        "05-knowledge/hypotheses/HYP-2708-lrc14-twofar-live-depth-kernel.md",
+        "05-knowledge/reference/CORE-PAPERS.md",
+        "05-knowledge/results/planar_jc48_sep08_all_m_constant_d_audit.md",
+        "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/CONCEPT_BOARD.md",
+        "05-knowledge/results/square_birth_windows_20261103/GROWTH.md"
+      ]
+    },
+    {
+      "seed": 261106,
+      "choices": [
+        "05-knowledge/results/collatz_odd_adjacent_return_20261019.md",
+        "05-knowledge/results/thirtysix_bridge_20260925.md",
+        "05-knowledge/results/overnight11_20260906_lrc_unit_component_audit.md",
+        "05-knowledge/results/session189_response_frontier_20261104/size29_audit/REVIEW.md",
+        "05-knowledge/results/long_frontier_sep06_board.md",
+        "05-knowledge/results/word_law_markov_20261109/PREREGISTRATION.md",
+        "05-knowledge/hypotheses/HYP-3042-lrc14-owner-strip-filtration.md",
+        "05-knowledge/results/long_frontier2_sep06_boundary.md"
+      ]
+    }
+  ]
+}

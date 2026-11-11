@@ -1,0 +1,15 @@
+{"independent_subset_dp_checks": 5336}
+{"k": 1, "target": 1, "status": "witness", "word": [], "states": 1}
+{"k": 1, "target": 3, "status": "witness", "word": [1, 0], "states": 8}
+{"k": 1, "target": 5, "status": "witness", "word": [1, 0, 0], "states": 16}
+{"k": 1, "target": 7, "status": "absent_all_lengths", "states": 39}
+{"k": 1, "target": 9, "status": "witness", "word": [1, 0, 0, 0], "states": 32}
+{"k": 1, "target": 13, "status": "absent_all_lengths", "states": 62}
+{"k": 1, "target": 21, "status": "absent_all_lengths", "states": 98}
+{"k": 1, "target": 29, "status": "absent_all_lengths", "states": 127}
+{"k": 1, "target": 31, "status": "witness", "word": [1, 0, 1, 0, 1, 0], "states": 128}
+{"k": 1, "target": 43, "status": "absent_all_lengths", "states": 187}
+{"k": 2, "target": 7, "status": "absent_all_lengths", "states": 13579}
+{"k": 2, "target": 21, "status": "absent_all_lengths", "states": 108618}
+{"k": 2, "target": 29, "status": "witness", "word": [1, 2, 0, 2], "states": 648}
+{"k": 2, "target": 43, "status": "witness", "word": [3, 1, 2, 0], "states": 1120}

@@ -1,0 +1,5 @@
+PROVED via dimension36 recurrence: H(1,2,0,2^m)=15*2^m-1 for m>=1
+PROVED via dimension36 recurrence: H(3,1,2,0^m)=12*3^m+8*2^m-9 for m>=1
+PROVED periodic-block recurrence [1, 2] [0, 2] initial [5, 29, 187, 1361, 10823]
+PROVED periodic-block recurrence [1, 2, 0, 2] [1, 0] initial [29, 231, 1825, 15179, 131061]
+PROVED periodic-block recurrence [1] [2, 0] initial [1, 13, 91, 673, 5383]

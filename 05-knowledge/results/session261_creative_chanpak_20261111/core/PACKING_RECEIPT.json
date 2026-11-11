@@ -1,0 +1,47 @@
+{
+  "tensor": {
+    "safe_subalphabets": 471,
+    "maximal_squares": 45,
+    "maximal_edges": [
+      [
+        8,
+        40
+      ],
+      [
+        16,
+        24
+      ],
+      [
+        32,
+        48
+      ],
+      [
+        57,
+        61
+      ],
+      [
+        58,
+        59
+      ],
+      [
+        60,
+        62
+      ]
+    ]
+  },
+  "status": "PASS",
+  "core_alphabet_pairs": 2123,
+  "complete": "all core orientations k<=3 and nonempty alphabets; every word length<=3; explicit maximizing word for every pair",
+  "random": "50 k4 pairs, seed261112",
+  "distribution": {
+    "(1, 0)": 2,
+    "(1, 1)": 1,
+    "(2, 0)": 6,
+    "(2, 1)": 10,
+    "(2, 2)": 14,
+    "(3, 0)": 24,
+    "(3, 1)": 112,
+    "(3, 2)": 360,
+    "(3, 3)": 1544
+  }
+}
