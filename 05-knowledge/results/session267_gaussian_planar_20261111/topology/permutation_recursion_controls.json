@@ -1,0 +1,68 @@
+{
+  "adjacent_transposition_paths": [
+    {
+      "degree": 3,
+      "fixed_per_edge": 1,
+      "group_order": 6,
+      "path_edges": 2
+    },
+    {
+      "degree": 4,
+      "fixed_per_edge": 2,
+      "group_order": 24,
+      "path_edges": 3
+    },
+    {
+      "degree": 5,
+      "fixed_per_edge": 3,
+      "group_order": 120,
+      "path_edges": 4
+    },
+    {
+      "degree": 6,
+      "fixed_per_edge": 4,
+      "group_order": 720,
+      "path_edges": 5
+    },
+    {
+      "degree": 7,
+      "fixed_per_edge": 5,
+      "group_order": 5040,
+      "path_edges": 6
+    }
+  ],
+  "mark_control": {
+    "inertia_fixed": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "marked_survivors": [
+      2
+    ],
+    "status": "formal marks only, not claimed geometrically realizable"
+  },
+  "nilpotent_control": {
+    "fixed_generated_order": 4,
+    "group": "D8 on square vertices",
+    "order": 8
+  },
+  "scope": "FINITE-EXACT abstract permutation controls; no polynomial realization",
+  "wreath_controls": [
+    {
+      "degree": 6,
+      "fixed_generated_order": 48,
+      "fixed_generated_outer_order": 6,
+      "group": "C2 wr S3",
+      "order": 48
+    },
+    {
+      "degree": 6,
+      "fixed_generated_order": 36,
+      "fixed_generated_outer_order": 1,
+      "group": "S3 wr C2",
+      "order": 72
+    }
+  ]
+}
