@@ -10,10 +10,14 @@ status: >
   linearly through a new closer, with the matrix (rows r, M, E).
   (B) PROVED. For a transitive base the offsets 1 - 2^(delta-1) and the two lines 3 2^j - 1, 5 2^j - 1 are the
   shared-endpoint case of THM-4748 (1), (2). New: the coefficient of M for an arbitrary base and the criterion
-  2^delta - 3^(delta-1) = 1.
+  2^delta - 3^(delta-1) = 1 (stated in the pre-registration of this session, pushed 2026-11-10 16:20). CONCURRENT:
+  Session260 (coverage/PROOF.md, 2026-11-11) proves the same bracket, in the form 3^c - 2^(c+1) + 1 with
+  c = delta - 1, for a selected pair inside a transitive module of one five-vertex carrier (unit iff c = 0 or 1).
   (C) PROVED from (A), (B).
   (D) PROVED from (C); every family is also recounted on a grid by a transfer-matrix count that shares no code with
-  the subset count. The one-closer lines are KNOWN (THM-4748 (2)). That 2^k - 1 is a path count for every k >= 4 is
+  the subset count. The one-closer lines are KNOWN (THM-4748 (2)). CONCURRENT / KNOWN for D3: the unit slopes
+  15, 25, 39, 65 times 3^b are in Session260 coverage/PROOF.md, and the lines 1 + (b 3^a - 1) 2^s for b = 30, 50, 78
+  in endpoint_coverage_compiler_20261111; here they are corollaries of the tower recursion (b = 130 is added). That 2^k - 1 is a path count for every k >= 4 is
   KNOWN (THM-4748 (4), the Fibonacci fan, a one-apex tournament); new is only that a single pair has offset -1 and a
   power of two as slope, so that one closing family gives 2^s - 1 for all s >= 11.
   (E) FINITE-EXACT + the KNOWN closing law: 2,049 + 2,049 certificates (certs_plus.txt, certs_minus.txt), each state
@@ -22,7 +26,11 @@ status: >
   by the session of 05-knowledge/results/odd_c_seed_symmetry_20261110/ (2026-11-10), which settled HYP-9658 (B); the
   33 tower seeds here are a second, independent set of witnesses (rooted orders 11 to 15). New in (E), as far as a
   canon search shows: the anti-seeds (offset -1) for every odd c <= 4097.
-  (F) PROVED, elementary.
+  (F) PROVED, elementary. KNOWN (pushed first by other sessions while this one was running): the strong-core
+  structure F2 (c) (Session250, 2026-11-10 16:53; Session258 CORE_CLASSIFICATION), M >= |O| H(B) (Session258), the
+  twin identity F3 (Session260). F1 in the exact form, F2 (a), (b) and F4 were not found elsewhere.
+  (H) H1, H2 PROVED (H2 uses the domination inequality of Session261, EXTENSION4.md); H3 FINITE-EXACT; H4 PROVED
+  (lower bound KNOWN, Session197).
   (G) (classification of neutral gadgets) FINITE-EXACT, orders <= 7.
   Pre-registered runs (PREREGISTRATION.md, pushed before each run): R2, R4, R5, R6c CONFIRMED; R1, R3, R6a, R6b
   FAILED (the towers reach more than predicted: a power of two as slope at depth 3, and c = 5 at depth 6).
@@ -36,6 +44,8 @@ scripts:
   - 05-knowledge/results/kps_s22_sign_flip_towers_20261110/scripts/towers.py, tower_build.py, mersenne_towers.py, neutral.py
   - 05-knowledge/results/kps_s22_sign_flip_towers_20261110/scripts/pairstate.c, certs_verify.py, make_certs.py, portrait.c, tower_reach.c, ray_cover.py
   - 05-knowledge/results/kps_s22_sign_flip_towers_20261110/certs_plus.txt, certs_minus.txt, runs/
+  - 05-knowledge/results/kps_s22_sign_flip_towers_20261110/scripts/sources_check.py (+ .out), singles.c, src10.c
+  - 05-knowledge/results/kps_s22_sign_flip_towers_20261110/SOURCES_AND_DOMINATION.md
 related:
   - 01-canon/theorems/THM-5126-unit-offset-rays-two-adic-lines-isolation-of-7-and-21-extension-mean-law.md (setting, lines, seeds)
   - 05-knowledge/hypotheses/HYP-9658-unit-offset-seeds-of-the-two-adic-lines.md (a seed for every odd c)
@@ -45,6 +55,12 @@ related:
   - 05-knowledge/results/session216_overnight_constructions_20261107/ (star/PROOF.md Theorem 3; three-core/PROOF.md (3)-(4))
   - session197/path-polynomials/UNIVERSAL_CONTEXTS.md, UNIT_OFFSET_RIGIDITY.md; session196/spectral-moves/PROOF.md (9)
   - 01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md (the exclusions)
+  - 05-knowledge/results/odd_c_seed_symmetry_20261110/ (order-eleven roots for the 33 lines; settled HYP-9658 (B) first)
+  - 05-knowledge/results/session250_sixteen_20261110/, session258_endpoint_seed_20261111/ (strong cores of unit sets)
+  - 05-knowledge/results/session260_quasiperfect_chanpak_20261111/ (coverage/PROOF.md; bridges/BIPARTITE_DEFECT.md)
+  - 05-knowledge/results/session261_creative_chanpak_20261111/ (bridges/EXTENSION4.md; constructors/NINE_OFFSET_EXTENSION.md)
+  - 05-knowledge/results/multiplicand_saturation_chanpak_20261111/ (chanpak/OFFSET_TRANSPORT.md; exchange/PROOF.md)
+  - 05-knowledge/results/endpoint_coverage_compiler_20261111/ (lines b 3^a - 1)
 ---
 
 # THM-5130 - sign-flip towers: gadget law, the equation 2^delta - 3^(delta-1) = 1, seeds of both signs
@@ -274,6 +290,42 @@ Among all gadgets `(X, P)` with `X` of order at most 7 (one representative per i
 transitive pairs at distance 1 or 2 (`2a - 3` of them at order `a`). So, up to order 7, these are the only gadgets
 that transport a unit offset to a unit offset for every base (neutral.py, neutral.out; orders at most 5 over all
 labelled tournaments in verify_s22.py V9).
+
+## (H) Sources, the domination skeleton, and an abundancy index
+
+Details, credit and discussion: SOURCES_AND_DOMINATION.md of the packet; checks: sources_check.py (S1-S8).
+
+**H1 (one-vertex gadget).** For a pair with state `(r, M, h, E)` and the gadget `(TT_a, {p})`:
+`r+ = h+ = r + 2^a M`, `M+ = 2^(a-p)(r + h) + 2^p 3^(a-p) M - [p = 1] E`, `E+ = [p = a](r - h) + 2^(p-1) M`.
+(Theorem A with `w = w3 = 0`, `u = 2^(a-p)`, `u3 = 2^(p-1) 3^(a-p) - 2^(a-p+1) + [p = 1]`.) For a seed of slope
+`2^k` this is a pair with offset `1 + 2^(a+k)`; the pairs (offset, slope) = (5, 9), (17, 18), (33, 36) used by
+Session261 for `1 + 2^s + 9 * 2^(r+s)` arise this way.
+
+**H2 (domination ray).** For a pair `(B, O)`, `O` nonempty, let `G_t` be the bipartite graph of the closed tournament
+`T_t(B, O)` at its closer (left side `O`, right side the other vertices of `B` and the tail, `o ~ x` iff `o -> x`).
+Its number of dominating sets is `d(G_t) = rho_dom + 2^t delta_dom`, `t >= 1`, with
+`delta_dom = sum over nonempty S in O of 2^(number of vertices outside O beaten by some vertex of S)`.
+With the inequality `H(T) - H(T - z) >= d(G_z) - 1` of Session261: `(r - h - rho_dom + 1) + 2^t (M - delta_dom) >= 0`
+for all `t >= 1`; in particular `M >= delta_dom`, and `U_B(o) >= 2^(outdeg o)`.
+
+*Proof.* A tail vertex is adjacent to all of `O`. Dominating sets containing the whole tail:
+`D_1 = sum over all S_O in O of 2^|N(S_O)|` (the vertices outside `O` not beaten by `S_O` are forced, the others
+free). Those with a proper nonempty tail part: `(2^t - 2)(D_1 - 1)`, since `S_O` must be nonempty. Those with empty
+tail part do not depend on `t`. So `delta_dom = D_1 - 1`. ∎
+
+**H3 (FINITE-EXACT).** (i) `M = delta_dom` exactly when `B` is transitive (all pairs of order at most 6).
+(ii) Pairs with offset `1 + 2^s` and slope `9 * 2^v`, `v <= s`, exist for every `2 <= s <= 11` among selected sets
+over tournaments of order at most 9; so `1 + 2^s + 9 * 2^(r+s)` is a path count for all `r >= 1`, `s <= 11`
+(`s <= 6`: Session261). (iii) The unit root of order 9 with code 45174751748 and root 2 has a port (vertex 8,
+in-degree 1, not selected) with slope family `16 + 172 * 2^a`; with pairs of offsets 3, 5, 9, 17 and slopes 172, 172,
+86, 86 and the count 175 of an order-7 tournament this gives: `1 + 2^s + 43 * 2^(r+s)` is a path count for all
+`r, s >= 1`. (A module at an unselected port of in-degree 1 is visited at most twice by the paths counted in `H`,
+`W` and `U`, so these are affine in `2^a` and a unit offset at `a = 1, 2` persists.)
+
+**H4 (abundancy).** `H(X) >= H(X[S]) H(X - S)` for every vertex set `S` (two disjoint paths merge, keeping both
+orders, into one path, injectively). Hence `a(X) = Pi_2(X)/H(X) = sum over S of H(X[S]) H(X - S)/H(X) <= 2^n`, with
+equality iff `X` is transitive; `a(X) >= n + 1` (Session197); `a(X => Y) = a(X) a(Y)`; and the closing law reads
+`H(C(B, O; X)) = H(X) (r + M a(X))`.
 
 ## Controls
 

@@ -133,3 +133,22 @@ of order 8 or 9, no pair with `H(B) = 31` and a power of two as slope.
   2^(number of out-neighbours of S outside O)`, with equality for transitive `B` and one-vertex `O`. (If my
   computation of the dominating-set count of the closed tournament is right this is a consequence of the
   inequality of Session261; the run checks the computation.)
+
+## Outcome of E4 (written after the runs)
+
+Scripts and data: `scripts/sources_check.py` (+ `.out`), `scripts/singles.c`, `scripts/src10.c`,
+`runs/grid_levels_singletons.txt`, `runs/src9grid.txt`, `runs/src43grid.txt`.
+
+- G1: **FAILED**. The pairs of order at most 9 with `(r, h, M) = (1, 15, 64)` have `E = 6`, so the gadget
+  `(TT_1, {1})` gives slope `144 - 6 = 138`; no gadget `(TT_a, {p})`, `a <= 6`, on a seed of slope `2^k` gives a
+  9-grid source at level 7. The gadget law does produce the sources of levels 2, 4 and 5.
+- G2: **CONFIRMED**. One-vertex sources of order at most 9 exist at levels 7 and 8 (and at 9 and 11; not at 10,
+  where a two-vertex selected set of order 9 works).
+- G3: **CONFIRMED**. No pair of order at most 9 has `r = 1`, `H(B) = 31` and a power of two as slope; the base
+  counts of seeds with a power of two as slope are 1, 5, 9, 15, 19, 27, 51, 99, 351, 709, 1297, 1467, 1779, 1903.
+- G4: **CONFIRMED**. `M >= delta_dom` for all 3,978 pairs of order at most 6 (and 32,767 labelled pairs of order at
+  most 5), with equality exactly for transitive `B`; the ray form of the dominating-set count and the inequality of
+  Session261 hold on every tested case.
+
+Not pre-registered (found while running E4, reported as exploratory in SOURCES_AND_DOMINATION.md): a port with slope
+family `16 + 172 * 2^a` (the 43-grid), and the sources that complete that grid.

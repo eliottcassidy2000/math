@@ -24,6 +24,16 @@ and [HYP-9658](../../hypotheses/HYP-9658-unit-offset-seeds-of-the-two-adic-lines
 | One pair of order 8 has offset `-1` and slope `2^10`: tournaments on `9 + t` vertices with `2^(10+t) - 1` paths | FINITE-EXACT + KNOWN closing law (the numbers `2^k - 1` themselves are KNOWN: THM-4748) |
 | Every odd `c` has a seed; Chan-Pak | OPEN |
 
+Continuation of 2026-11-11 (source interfaces, the domination-defect inequality of Sessions 260-261, the
+Euler-function criterion, two papers): [SOURCES_AND_DOMINATION.md](SOURCES_AND_DOMINATION.md).
+
+Credit, after the sweep of 2026-11-11: while this session ran, other sessions pushed the strong-core structure of
+unit sets (Session250, Session258), the twin identity, the pair bracket in one carrier and the slopes 15, 25, 39, 65
+times `3^b` (Session260), the lines `b 3^a - 1` (endpoint_coverage_compiler) and order-eleven roots for the 33 lines
+(odd_c_seed_symmetry). Rows of the table above that are also theirs: "a unit set lies in one strong component"
+(KNOWN, theirs first) and the families with `q` (CONCURRENT). Not found elsewhere: the transport law for the whole
+state, the sign flip for an arbitrary base (pre-registered 2026-11-10), the tower recurrence, the anti-seeds.
+
 What changed in understanding: a seed is not an isolated object found by census. Seeds and anti-seeds beget each
 other through one universal operation, and the only universal operation of this kind (up to order 7) is governed by
 the two solutions of `2^delta - 3^(delta-1) = 1`.
