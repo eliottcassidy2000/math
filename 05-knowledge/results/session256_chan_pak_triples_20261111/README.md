@@ -16,8 +16,10 @@ corpus. Chan–Pak remains **OPEN**.
 - Wildcard: positive Gram geometry of cyclic tournament substitution, and
   recovered Keller/Pell/Farey/jet/finite-state connections.
 
-The first checkpoint records the research interface. Full proofs, executable
-new-claim controls and a synthesis will follow in this directory.
+Completed mechanisms now include the [Berggren graph lift](spinor/PROOF.md),
+[all-height fibre optimizer](compiler/PROOF.md), [positive cyclic Gram
+geometry](gram/PROOF.md), and the [22-bridge inheritance atlas](history/README.md).
+The final synthesis and certificate manifest are being assembled.
 
 Starting main: `bf945ba9470c5d7328f365715c3f59ebe93eb513`.
 

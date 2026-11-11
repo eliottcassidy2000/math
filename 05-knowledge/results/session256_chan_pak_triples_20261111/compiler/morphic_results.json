@@ -1,0 +1,864 @@
+{
+  "direct_graph_controls": {
+    "": 3,
+    "CA": 73,
+    "A": 5,
+    "B": 9,
+    "BB": 1615,
+    "AAA": 17,
+    "BA": 107
+  },
+  "experiments": [
+    {
+      "statistics": {
+        "modulus": 2,
+        "labels": 6,
+        "retained": 8,
+        "accepted": 8,
+        "additions": 8,
+        "max_reverse_address_length": 2
+      },
+      "minimum_by_residue": [
+        {
+          "chronological_address": "",
+          "cut_word": "OI",
+          "parameters": [
+            2,
+            1
+          ],
+          "triple": [
+            3,
+            4,
+            5
+          ],
+          "H": 3,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "residue": 1,
+          "reverse_address": ""
+        }
+      ]
+    },
+    {
+      "statistics": {
+        "modulus": 3,
+        "labels": 147,
+        "retained": 244,
+        "accepted": 244,
+        "additions": 265,
+        "max_reverse_address_length": 10
+      },
+      "minimum_by_residue": [
+        {
+          "chronological_address": "",
+          "cut_word": "OI",
+          "parameters": [
+            2,
+            1
+          ],
+          "triple": [
+            3,
+            4,
+            5
+          ],
+          "H": 3,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "residue": 0,
+          "reverse_address": ""
+        },
+        {
+          "chronological_address": "CA",
+          "cut_word": "OIOIOII",
+          "parameters": [
+            7,
+            4
+          ],
+          "triple": [
+            33,
+            56,
+            65
+          ],
+          "H": 73,
+          "rows": [
+            126,
+            252,
+            120,
+            240,
+            96,
+            192,
+            128,
+            21
+          ],
+          "residue": 1,
+          "reverse_address": "AC"
+        },
+        {
+          "chronological_address": "A",
+          "cut_word": "OII",
+          "parameters": [
+            3,
+            2
+          ],
+          "triple": [
+            5,
+            12,
+            13
+          ],
+          "H": 5,
+          "rows": [
+            6,
+            12,
+            8,
+            1
+          ],
+          "residue": 2,
+          "reverse_address": "A"
+        }
+      ]
+    },
+    {
+      "statistics": {
+        "modulus": 4,
+        "labels": 19,
+        "retained": 20,
+        "accepted": 20,
+        "additions": 20,
+        "max_reverse_address_length": 4
+      },
+      "minimum_by_residue": [
+        {
+          "chronological_address": "A",
+          "cut_word": "OII",
+          "parameters": [
+            3,
+            2
+          ],
+          "triple": [
+            5,
+            12,
+            13
+          ],
+          "H": 5,
+          "rows": [
+            6,
+            12,
+            8,
+            1
+          ],
+          "residue": 1,
+          "reverse_address": "A"
+        },
+        {
+          "chronological_address": "",
+          "cut_word": "OI",
+          "parameters": [
+            2,
+            1
+          ],
+          "triple": [
+            3,
+            4,
+            5
+          ],
+          "H": 3,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "residue": 3,
+          "reverse_address": ""
+        }
+      ]
+    },
+    {
+      "statistics": {
+        "modulus": 8,
+        "labels": 81,
+        "retained": 105,
+        "accepted": 105,
+        "additions": 113,
+        "max_reverse_address_length": 8
+      },
+      "minimum_by_residue": [
+        {
+          "chronological_address": "B",
+          "cut_word": "OIOIO",
+          "parameters": [
+            5,
+            2
+          ],
+          "triple": [
+            21,
+            20,
+            29
+          ],
+          "H": 9,
+          "rows": [
+            30,
+            60,
+            24,
+            48,
+            0,
+            21
+          ],
+          "residue": 1,
+          "reverse_address": "B"
+        },
+        {
+          "chronological_address": "",
+          "cut_word": "OI",
+          "parameters": [
+            2,
+            1
+          ],
+          "triple": [
+            3,
+            4,
+            5
+          ],
+          "H": 3,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "residue": 3,
+          "reverse_address": ""
+        },
+        {
+          "chronological_address": "A",
+          "cut_word": "OII",
+          "parameters": [
+            3,
+            2
+          ],
+          "triple": [
+            5,
+            12,
+            13
+          ],
+          "H": 5,
+          "rows": [
+            6,
+            12,
+            8,
+            1
+          ],
+          "residue": 5,
+          "reverse_address": "A"
+        },
+        {
+          "chronological_address": "BB",
+          "cut_word": "OIOIOOIOIOOI",
+          "parameters": [
+            12,
+            5
+          ],
+          "triple": [
+            119,
+            120,
+            169
+          ],
+          "H": 1615,
+          "rows": [
+            4094,
+            8188,
+            4088,
+            8176,
+            4064,
+            4032,
+            8064,
+            3840,
+            7680,
+            3072,
+            2048,
+            4096,
+            1717
+          ],
+          "residue": 7,
+          "reverse_address": "BB"
+        }
+      ]
+    },
+    {
+      "statistics": {
+        "modulus": 16,
+        "labels": 377,
+        "retained": 633,
+        "accepted": 633,
+        "additions": 763,
+        "max_reverse_address_length": 14
+      },
+      "minimum_by_residue": [
+        {
+          "chronological_address": "AAA",
+          "cut_word": "OIIII",
+          "parameters": [
+            5,
+            4
+          ],
+          "triple": [
+            9,
+            40,
+            41
+          ],
+          "H": 17,
+          "rows": [
+            30,
+            60,
+            56,
+            48,
+            32,
+            1
+          ],
+          "residue": 1,
+          "reverse_address": "AAA"
+        },
+        {
+          "chronological_address": "",
+          "cut_word": "OI",
+          "parameters": [
+            2,
+            1
+          ],
+          "triple": [
+            3,
+            4,
+            5
+          ],
+          "H": 3,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "residue": 3,
+          "reverse_address": ""
+        },
+        {
+          "chronological_address": "A",
+          "cut_word": "OII",
+          "parameters": [
+            3,
+            2
+          ],
+          "triple": [
+            5,
+            12,
+            13
+          ],
+          "H": 5,
+          "rows": [
+            6,
+            12,
+            8,
+            1
+          ],
+          "residue": 5,
+          "reverse_address": "A"
+        },
+        {
+          "chronological_address": "BCB",
+          "cut_word": "OIOIOIOIOOIOIOIOIOOI",
+          "parameters": [
+            20,
+            9
+          ],
+          "triple": [
+            319,
+            360,
+            481
+          ],
+          "H": 408071,
+          "rows": [
+            1048574,
+            2097148,
+            1048568,
+            2097136,
+            1048544,
+            2097088,
+            1048448,
+            2096896,
+            1048064,
+            1047552,
+            2095104,
+            1044480,
+            2088960,
+            1032192,
+            2064384,
+            983040,
+            1966080,
+            786432,
+            524288,
+            1048576,
+            437077
+          ],
+          "residue": 7,
+          "reverse_address": "BCB"
+        },
+        {
+          "chronological_address": "B",
+          "cut_word": "OIOIO",
+          "parameters": [
+            5,
+            2
+          ],
+          "triple": [
+            21,
+            20,
+            29
+          ],
+          "H": 9,
+          "rows": [
+            30,
+            60,
+            24,
+            48,
+            0,
+            21
+          ],
+          "residue": 9,
+          "reverse_address": "B"
+        },
+        {
+          "chronological_address": "BA",
+          "cut_word": "OIIOIIOI",
+          "parameters": [
+            8,
+            5
+          ],
+          "triple": [
+            39,
+            80,
+            89
+          ],
+          "H": 107,
+          "rows": [
+            254,
+            508,
+            504,
+            240,
+            480,
+            448,
+            128,
+            256,
+            73
+          ],
+          "residue": 11,
+          "reverse_address": "AB"
+        },
+        {
+          "chronological_address": "AAAB",
+          "cut_word": "OIOIOOIOOIOOIO",
+          "parameters": [
+            14,
+            5
+          ],
+          "triple": [
+            171,
+            140,
+            221
+          ],
+          "H": 3181,
+          "rows": [
+            16382,
+            32764,
+            16376,
+            32752,
+            16352,
+            16320,
+            32640,
+            16128,
+            15872,
+            31744,
+            14336,
+            12288,
+            24576,
+            0,
+            11701
+          ],
+          "residue": 13,
+          "reverse_address": "BAAA"
+        },
+        {
+          "chronological_address": "BB",
+          "cut_word": "OIOIOOIOIOOI",
+          "parameters": [
+            12,
+            5
+          ],
+          "triple": [
+            119,
+            120,
+            169
+          ],
+          "H": 1615,
+          "rows": [
+            4094,
+            8188,
+            4088,
+            8176,
+            4064,
+            4032,
+            8064,
+            3840,
+            7680,
+            3072,
+            2048,
+            4096,
+            1717
+          ],
+          "residue": 15,
+          "reverse_address": "BB"
+        }
+      ]
+    }
+  ],
+  "contains_B": {
+    "statistics": {
+      "modulus": 4,
+      "labels": 24,
+      "retained": 26,
+      "accepted": 17,
+      "additions": 26,
+      "max_reverse_address_length": 5
+    },
+    "minimum_by_residue": [
+      {
+        "chronological_address": "B",
+        "cut_word": "OIOIO",
+        "parameters": [
+          5,
+          2
+        ],
+        "triple": [
+          21,
+          20,
+          29
+        ],
+        "H": 9,
+        "rows": [
+          30,
+          60,
+          24,
+          48,
+          0,
+          21
+        ],
+        "residue": 1,
+        "reverse_address": "B"
+      },
+      {
+        "chronological_address": "BA",
+        "cut_word": "OIIOIIOI",
+        "parameters": [
+          8,
+          5
+        ],
+        "triple": [
+          39,
+          80,
+          89
+        ],
+        "H": 107,
+        "rows": [
+          254,
+          508,
+          504,
+          240,
+          480,
+          448,
+          128,
+          256,
+          73
+        ],
+        "residue": 3,
+        "reverse_address": "AB"
+      }
+    ]
+  },
+  "exact_inverse": [
+    {
+      "target": 1,
+      "statistics": {
+        "modulus": 2,
+        "labels": 6,
+        "retained": 8,
+        "accepted": 8,
+        "additions": 8,
+        "max_reverse_address_length": 2
+      },
+      "exact_member": false,
+      "fibre_minimum": 3,
+      "minimizer": {
+        "chronological_address": "",
+        "cut_word": "OI",
+        "parameters": [
+          2,
+          1
+        ],
+        "triple": [
+          3,
+          4,
+          5
+        ],
+        "H": 3,
+        "rows": [
+          2,
+          4,
+          1
+        ]
+      }
+    },
+    {
+      "target": 2,
+      "statistics": {
+        "modulus": 4,
+        "labels": 19,
+        "retained": 20,
+        "accepted": 20,
+        "additions": 20,
+        "max_reverse_address_length": 4
+      },
+      "exact_member": false,
+      "fibre_minimum": null,
+      "minimizer": null
+    },
+    {
+      "target": 3,
+      "statistics": {
+        "modulus": 4,
+        "labels": 19,
+        "retained": 20,
+        "accepted": 20,
+        "additions": 20,
+        "max_reverse_address_length": 4
+      },
+      "exact_member": true,
+      "fibre_minimum": 3,
+      "minimizer": {
+        "chronological_address": "",
+        "cut_word": "OI",
+        "parameters": [
+          2,
+          1
+        ],
+        "triple": [
+          3,
+          4,
+          5
+        ],
+        "H": 3,
+        "rows": [
+          2,
+          4,
+          1
+        ]
+      }
+    },
+    {
+      "target": 5,
+      "statistics": {
+        "modulus": 8,
+        "labels": 81,
+        "retained": 105,
+        "accepted": 105,
+        "additions": 113,
+        "max_reverse_address_length": 8
+      },
+      "exact_member": true,
+      "fibre_minimum": 5,
+      "minimizer": {
+        "chronological_address": "A",
+        "cut_word": "OII",
+        "parameters": [
+          3,
+          2
+        ],
+        "triple": [
+          5,
+          12,
+          13
+        ],
+        "H": 5,
+        "rows": [
+          6,
+          12,
+          8,
+          1
+        ]
+      }
+    },
+    {
+      "target": 7,
+      "statistics": {
+        "modulus": 8,
+        "labels": 81,
+        "retained": 105,
+        "accepted": 105,
+        "additions": 113,
+        "max_reverse_address_length": 8
+      },
+      "exact_member": false,
+      "fibre_minimum": 1615,
+      "minimizer": {
+        "chronological_address": "BB",
+        "cut_word": "OIOIOOIOIOOI",
+        "parameters": [
+          12,
+          5
+        ],
+        "triple": [
+          119,
+          120,
+          169
+        ],
+        "H": 1615,
+        "rows": [
+          4094,
+          8188,
+          4088,
+          8176,
+          4064,
+          4032,
+          8064,
+          3840,
+          7680,
+          3072,
+          2048,
+          4096,
+          1717
+        ]
+      }
+    },
+    {
+      "target": 9,
+      "statistics": {
+        "modulus": 16,
+        "labels": 377,
+        "retained": 633,
+        "accepted": 633,
+        "additions": 763,
+        "max_reverse_address_length": 14
+      },
+      "exact_member": true,
+      "fibre_minimum": 9,
+      "minimizer": {
+        "chronological_address": "B",
+        "cut_word": "OIOIO",
+        "parameters": [
+          5,
+          2
+        ],
+        "triple": [
+          21,
+          20,
+          29
+        ],
+        "H": 9,
+        "rows": [
+          30,
+          60,
+          24,
+          48,
+          0,
+          21
+        ]
+      }
+    },
+    {
+      "target": 13,
+      "statistics": {
+        "modulus": 16,
+        "labels": 377,
+        "retained": 633,
+        "accepted": 633,
+        "additions": 763,
+        "max_reverse_address_length": 14
+      },
+      "exact_member": false,
+      "fibre_minimum": 3181,
+      "minimizer": {
+        "chronological_address": "AAAB",
+        "cut_word": "OIOIOOIOOIOOIO",
+        "parameters": [
+          14,
+          5
+        ],
+        "triple": [
+          171,
+          140,
+          221
+        ],
+        "H": 3181,
+        "rows": [
+          16382,
+          32764,
+          16376,
+          32752,
+          16352,
+          16320,
+          32640,
+          16128,
+          15872,
+          31744,
+          14336,
+          12288,
+          24576,
+          0,
+          11701
+        ]
+      }
+    },
+    {
+      "target": 15,
+      "statistics": {
+        "modulus": 16,
+        "labels": 377,
+        "retained": 633,
+        "accepted": 633,
+        "additions": 763,
+        "max_reverse_address_length": 14
+      },
+      "exact_member": false,
+      "fibre_minimum": 1615,
+      "minimizer": {
+        "chronological_address": "BB",
+        "cut_word": "OIOIOOIOIOOI",
+        "parameters": [
+          12,
+          5
+        ],
+        "triple": [
+          119,
+          120,
+          169
+        ],
+        "H": 1615,
+        "rows": [
+          4094,
+          8188,
+          4088,
+          8176,
+          4064,
+          4032,
+          8064,
+          3840,
+          7680,
+          3072,
+          2048,
+          4096,
+          1717
+        ]
+      }
+    }
+  ]
+}

@@ -192,3 +192,74 @@ The committed results.json records:
 
 These are tests of this new construction, not a verification campaign of
 older corpus claims. Proofs above establish the infinite statements.
+
+## 8. Sorting the cut gives a smaller polynomial lift and a permanent obstruction
+
+There is a complementary graph carrier with just two arithmetic registers.
+For a spinor set x=m−n (odd), y=n, and SORT its cut to O^x I^y. The
+resulting graph is the literal cyclic blowup C3[TT_x,TT_y,K1]: apex→O
+block→I block→apex. Its Hamiltonian count, by §2, is
+
+ H_sort=2+(2^x−1)(2^y−1).
+
+Write p=2^x−1,q=2^y−1. The positive spinor matrices give polynomial maps
+
+ A: (p,q)→(p,p+q+pq),
+ B: (p,q)→(p+2q+q²+2pq+pq²,p+q+pq),
+ C: (p,q)→(p+2q+q²+2pq+pq²,q),
+
+starting at (1,1). Indeed multiplication of 2^x and 2^y becomes
+(p+1)(q+1), and 2^(x+2y)=(p+1)(q+1)². Every displayed coefficient is
+nonnegative. Thus this is a smaller monotone polynomial graph lift.
+Its graph construction resets the cut order after each branch, rather
+than retaining the morphic order of §§1–3. It is not the same operation
+on tournaments, even though it carries exactly the same spinor.
+
+There is a complete terminating inverse for this sorted IMAGE, independent
+of any Chan–Pak conjecture. For a target N≥3, enumerate positive ordered
+factor pairs p q=N−2. Retain exactly the pairs for which p+1=2^x,
+q+1=2^y with x,y≥1, gcd(x,y)=1, and x odd. Each retained pair outputs
+a primitive triple with (m,n)=(x+y,y), and the displayed cyclic tournament
+of count N. Conversely every sorted-spinor graph supplies such a pair.
+This characterizes the image over all primitive spinors directly. Identifying
+it with the image of all Berggren addresses additionally uses the inherited
+completeness of that spinor tree; no completeness claim is needed for the
+factorization test or explicit graph witnesses.
+
+A permanent congruence obstruction shows why keeping cut order matters.
+Since x is odd, p=2^x−1≡1 (mod3). If y is even then q≡0, and if y is
+odd then q≡1. Consequently H_sort≡2 or0 (mod3), NEVER 1. In contrast,
+the morphic address CA gives H=73≡1 (mod3). For this same address,
+(m,n)=(7,4), (x,y)=(3,4), the sorted graph has H=2+7·15=107.
+Thus ordering changes the attainable congruence classes even within a
+fixed-spinor graph construction. This is a theorem-level distinction,
+not evidence for unrestricted count coverage.
+
+The sorted family is a transparent connection to safe cyclic inflation:
+its two transitive blocks and singleton are retained as actual modules.
+It is the singleton-third-block case of any three-block cyclic/Gram
+count framework. No additional Gram identity is needed here; the direct
+Hamilton-path partition proof already establishes the formula.
+
+`test_sorted.py` and `sorted_results.json` give separate receipts, leaving
+the original experiment receipt unchanged: all 1,093 addresses through
+depth6 check the polynomial registers, graph formula and mod3 exclusion;
+small sorted graphs are independently counted; a factor inverse is checked
+against direct exponent enumeration through target511.
+
+## 9. Integration with the Pareto compiler
+
+The companion [compiler proof, §9](../compiler/PROOF.md) applies its
+componentwise-monotone polynomial/Dickson optimization to the pair (X,Y)
+of §3. All matrix-word updates and the output H=(YX)[0,0]+(YX)[0,3]
+have nonnegative coefficients, so its hypotheses hold without a signed
+coordinate workaround. Consequently this morphic graph image also has a
+terminating all-height exact inverse, now by finite-residue Pareto search
+rather than the sorted family's elementary factorization inverse.
+
+For example, its modulo16 minimum for residue13 is3181 and for residue15
+is1615. Therefore targets13 and15 are absent from this morphic family at
+EVERY depth. These obstructions are specific to this graph lift, not to
+tournament Hamiltonian counts in general. See the companion script and
+receipt for the exact finite certificates; the spinor experiments above
+do not independently claim these minima from a bounded-depth census.

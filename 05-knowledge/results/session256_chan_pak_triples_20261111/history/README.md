@@ -4,9 +4,17 @@ Session256, 11 November 2026. Historical research atlas and new transfer proposa
 
 ## Status and purpose
 
-This packet imports historical repository results **at their stated, scoped status**, without a new broad audit. The local reference checkout was supplied as a historical source; Session251 and Session255 are the supplied current Chan–Pak interfaces. Every theorem below is identified by its full path, avoiding theorem-ID collisions. `PROVED (inherited)` means the source claims a proof, not that this session reran its audit. The Keller reflection is explicitly a corollary of its named packet theorems. The new nine-probe lemma below is proved here, conditional only on the inherited Session251 response formula. Remaining construction proposals are **OPEN**, not spectrum-coverage claims.
+This packet imports historical repository results **at their stated, scoped status**, without a new broad audit. The local reference checkout was supplied as a historical source; Session251 and Session255 are the supplied current Chan–Pak interfaces. Every theorem below is identified by its full path, avoiding theorem-ID collisions. `PROVED (inherited)` means the source claims a proof, not that this session reran its audit. The Keller reflection is explicitly a corollary of its named packet theorems. The new eight-probe reconstruction lemma, with a ninth consistency probe, is proved here, conditional only on the inherited Session251 response formula. The integration map below separates completed companion mechanisms from remaining **OPEN** proposals.
 
-Chan–Pak remains OPEN. No assignment of tournament counts to arbitrary Berggren words, no theorem that every arithmetic signature is graph-realizable, and no proof of the all-height five-core cover is asserted.
+Chan–Pak remains OPEN. The completed [spinor lift](../spinor/PROOF.md) assigns explicit decorated tournaments and their exact Hamiltonian-path counts to every Berggren word. It does not prove coverage of the Hamiltonian-path spectrum, injectivity on unmarked tournament isomorphism classes, or realization of every formal arithmetic signature. The all-height five-core cover is still open.
+
+### Integration with the completed Session256 companions
+
+- **Transfer A, completed here:** [eight independent response probes plus one consistency probe](#2-new-transfer-a-a-nine-probe-response-complete-atlas-for-five-core-constructions) determine the eight-dimensional one-apex context signature. The historical nine-coordinate core signature has one direction invisible to this consumer.
+- **Transfer B, proved compiler lemma:** the future-context row-space quotient below is proved for a lawful finite linear action. Its proposed O/Z/J row-space calculation remains unperformed here. The completed [scalar-fibre compiler and optimizer](../compiler/PROOF.md) independently supplies an actual positive nine-coordinate digit action, all-height terminating Pareto optimization, and a synchronized primitive-triple driver. These are realized mechanisms, not the still-proposed O/Z/J calculation.
+- **Transfer C, still OPEN as a general repair programme:** source-labelled repair groupoids and orbit-bank completion remain proposals. Synchronization itself is already realized concretely in the [compiler companion](../compiler/PROOF.md); this does not establish a universal count-preserving repair bank or modular controllability for every source.
+- **Transfer D, still OPEN as chartwise descent:** a finite normalized-cone atlas with graph-realizable chart switches and a decreasing target height is not proved. The completed [Berggren substitution lift](../spinor/PROOF.md) does realize all three primitive-triple branch operations on decorated apex tournaments. The [compiler optimizer](../compiler/PROOF.md) solves fixed modular/regular-fibre minimization without proving the stronger target descent or five-core coverage.
+- **Completed additional count-native bridge:** the [positive Gram kernel](../gram/PROOF.md) proves the cyclic-substitution factorization, rank and equality law summarized in Section7. Searching its realizable profile norm fibres for a new general spectrum construction remains a proposal.
 
 ### Inheritance board
 
@@ -356,10 +364,10 @@ The atlas deliberately retains distant subjects because they contribute differen
 
 ## 7. Parent-session addition: a positive Gram carrier and the right Pell form
 
-The parent session independently develops a stronger, genuinely count-native
+The completed [Gram companion](../gram/PROOF.md) independently develops a stronger, genuinely count-native
 bridge from the inherited THM-3121 cyclic-substitution walk kernel. This is a
 new parent-session result, not an additional historical claim established by
-this mining packet; consult the parent's companion proof for its derivation.
+this mining packet; consult that companion proof for its derivation.
 
 For fixed nonempty U of size c, write `u_r=r! pc_U(r)` and similarly `s_r,t_r`
 for S,T, where pc counts the parent's specified path-cover objects; retain its

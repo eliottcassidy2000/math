@@ -1,0 +1,27 @@
+{
+  "addresses_through_depth_6": 1093,
+  "independent_sorted_graph_counts": 32,
+  "odd_inverse_targets_3_through_511": 255,
+  "CA": {
+    "m": 7,
+    "n": 4,
+    "morphic_H": 73,
+    "sorted_H": 107
+  },
+  "sorted_image_through_511": [
+    3,
+    5,
+    9,
+    17,
+    23,
+    33,
+    65,
+    95,
+    107,
+    129,
+    219,
+    257,
+    383,
+    467
+  ]
+}
