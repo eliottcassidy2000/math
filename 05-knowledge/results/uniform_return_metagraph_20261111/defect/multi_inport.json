@@ -1,0 +1,120 @@
+[
+  {
+    "status": "COMPLETE capped DFA",
+    "budget": 6,
+    "reachable_states": 98,
+    "productive_states": 2,
+    "counts_by_backbone_length": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "productive_edges": [
+      [
+        0,
+        7,
+        1
+      ],
+      [
+        1,
+        7,
+        1
+      ]
+    ],
+    "accepting": [
+      1
+    ],
+    "initial": 0,
+    "ports": "TT3",
+    "raw_states": 486,
+    "lumped_states": 174,
+    "controls": 585
+  },
+  {
+    "status": "COMPLETE capped DFA",
+    "budget": 6,
+    "reachable_states": 98,
+    "productive_states": 2,
+    "counts_by_backbone_length": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "productive_edges": [
+      [
+        0,
+        7,
+        1
+      ],
+      [
+        1,
+        7,
+        1
+      ]
+    ],
+    "accepting": [
+      1
+    ],
+    "initial": 0,
+    "ports": "C3",
+    "raw_states": 486,
+    "lumped_states": 174,
+    "controls": 585
+  }
+]

@@ -1,0 +1,681 @@
+{
+  "status": "FINITE-EXACT target witnesses; no common source-return or uniform binary law claimed",
+  "short_flank_cap": 16,
+  "rows": [
+    {
+      "k": 1,
+      "target": 223,
+      "witnesses": [
+        {
+          "core": 0,
+          "cut": 0,
+          "A": 0,
+          "B": 284,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "100011100"
+        }
+      ],
+      "work": {
+        "calls": 46,
+        "candidate_checks": 111
+      }
+    },
+    {
+      "k": 2,
+      "target": 427,
+      "witnesses": [
+        {
+          "core": 0,
+          "cut": 0,
+          "A": 0,
+          "B": 524,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "1000001100"
+        }
+      ],
+      "work": {
+        "calls": 70,
+        "candidate_checks": 153
+      }
+    },
+    {
+      "k": 3,
+      "target": 835,
+      "witnesses": [
+        {
+          "core": 1,
+          "cut": 1,
+          "A": 113,
+          "B": 0,
+          "coeff": [
+            5,
+            3,
+            12,
+            6,
+            3,
+            2,
+            1
+          ],
+          "A_bits": "1110001",
+          "B_bits": "0"
+        }
+      ],
+      "work": {
+        "calls": 270,
+        "candidate_checks": 569
+      }
+    },
+    {
+      "k": 4,
+      "target": 1651,
+      "witnesses": [
+        {
+          "core": 0,
+          "cut": 0,
+          "A": 0,
+          "B": 2474,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "100110101010"
+        }
+      ],
+      "work": {
+        "calls": 132,
+        "candidate_checks": 356
+      }
+    },
+    {
+      "k": 5,
+      "target": 3283,
+      "witnesses": [
+        {
+          "core": 1,
+          "cut": 1,
+          "A": 107,
+          "B": 2,
+          "coeff": [
+            5,
+            3,
+            12,
+            6,
+            3,
+            2,
+            1
+          ],
+          "A_bits": "1101011",
+          "B_bits": "10"
+        }
+      ],
+      "work": {
+        "calls": 542,
+        "candidate_checks": 1314
+      }
+    },
+    {
+      "k": 6,
+      "target": 6547,
+      "witnesses": [
+        {
+          "core": 1,
+          "cut": 1,
+          "A": 43,
+          "B": 12,
+          "coeff": [
+            5,
+            3,
+            12,
+            6,
+            3,
+            2,
+            1
+          ],
+          "A_bits": "101011",
+          "B_bits": "1100"
+        }
+      ],
+      "work": {
+        "calls": 774,
+        "candidate_checks": 1983
+      }
+    },
+    {
+      "k": 7,
+      "target": 13075,
+      "witnesses": [
+        {
+          "core": 1,
+          "cut": 1,
+          "A": 3,
+          "B": 316,
+          "coeff": [
+            5,
+            3,
+            12,
+            6,
+            3,
+            2,
+            1
+          ],
+          "A_bits": "11",
+          "B_bits": "100111100"
+        }
+      ],
+      "work": {
+        "calls": 1102,
+        "candidate_checks": 2830
+      }
+    },
+    {
+      "k": 8,
+      "target": 26131,
+      "witnesses": [
+        {
+          "core": 0,
+          "cut": 0,
+          "A": 0,
+          "B": 39658,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "1001101011101010"
+        }
+      ],
+      "work": {
+        "calls": 598,
+        "candidate_checks": 1523
+      }
+    },
+    {
+      "k": 9,
+      "target": 52243,
+      "witnesses": [
+        {
+          "core": 1,
+          "cut": 1,
+          "A": 11,
+          "B": 380,
+          "coeff": [
+            5,
+            3,
+            12,
+            6,
+            3,
+            2,
+            1
+          ],
+          "A_bits": "1011",
+          "B_bits": "101111100"
+        }
+      ],
+      "work": {
+        "calls": 2294,
+        "candidate_checks": 5775
+      }
+    },
+    {
+      "k": 10,
+      "target": 104467,
+      "witnesses": [
+        {
+          "core": 2,
+          "cut": 0,
+          "A": 234,
+          "B": 13,
+          "coeff": [
+            5,
+            5,
+            32,
+            27,
+            0,
+            5,
+            0
+          ],
+          "A_bits": "11101010",
+          "B_bits": "1101"
+        }
+      ],
+      "work": {
+        "calls": 5842,
+        "candidate_checks": 14841
+      }
+    },
+    {
+      "k": 11,
+      "target": 208915,
+      "witnesses": [
+        {
+          "core": 2,
+          "cut": 0,
+          "A": 0,
+          "B": 49060,
+          "coeff": [
+            5,
+            5,
+            32,
+            27,
+            0,
+            5,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "1011111110100100"
+        }
+      ],
+      "work": {
+        "calls": 8542,
+        "candidate_checks": 20735
+      }
+    },
+    {
+      "k": 12,
+      "target": 417811,
+      "witnesses": [
+        {
+          "core": 1,
+          "cut": 1,
+          "A": 57833,
+          "B": 0,
+          "coeff": [
+            5,
+            3,
+            12,
+            6,
+            3,
+            2,
+            1
+          ],
+          "A_bits": "1110000111101001",
+          "B_bits": "0"
+        }
+      ],
+      "work": {
+        "calls": 6620,
+        "candidate_checks": 16284
+      }
+    },
+    {
+      "k": 13,
+      "target": 835603,
+      "witnesses": [
+        {
+          "core": 1,
+          "cut": 1,
+          "A": 127627,
+          "B": 0,
+          "coeff": [
+            5,
+            3,
+            12,
+            6,
+            3,
+            2,
+            1
+          ],
+          "A_bits": "11111001010001011",
+          "B_bits": "0"
+        }
+      ],
+      "work": {
+        "calls": 9544,
+        "candidate_checks": 22897
+      }
+    },
+    {
+      "k": 14,
+      "target": 1671187,
+      "witnesses": [
+        {
+          "core": 0,
+          "cut": 0,
+          "A": 0,
+          "B": 2183228,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "1000010101000000111100"
+        }
+      ],
+      "work": {
+        "calls": 5070,
+        "candidate_checks": 12136
+      }
+    },
+    {
+      "k": 15,
+      "target": 3342355,
+      "witnesses": [
+        {
+          "core": 1,
+          "cut": 1,
+          "A": 32547,
+          "B": 8,
+          "coeff": [
+            5,
+            3,
+            12,
+            6,
+            3,
+            2,
+            1
+          ],
+          "A_bits": "111111100100011",
+          "B_bits": "1000"
+        }
+      ],
+      "work": {
+        "calls": 19182,
+        "candidate_checks": 45605
+      }
+    },
+    {
+      "k": 16,
+      "target": 6684691,
+      "witnesses": [
+        {
+          "core": 0,
+          "cut": 0,
+          "A": 0,
+          "B": 6883040,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "11010010000011011100000"
+        }
+      ],
+      "work": {
+        "calls": 10234,
+        "candidate_checks": 24114
+      }
+    },
+    {
+      "k": 17,
+      "target": 13369363,
+      "witnesses": [
+        {
+          "core": 0,
+          "cut": 0,
+          "A": 0,
+          "B": 14426952,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "110111000010001101001000"
+        }
+      ],
+      "work": {
+        "calls": 14502,
+        "candidate_checks": 34091
+      }
+    },
+    {
+      "k": 18,
+      "target": 26738707,
+      "witnesses": [
+        {
+          "core": 1,
+          "cut": 1,
+          "A": 3618449,
+          "B": 0,
+          "coeff": [
+            5,
+            3,
+            12,
+            6,
+            3,
+            2,
+            1
+          ],
+          "A_bits": "1101110011011010010001",
+          "B_bits": "0"
+        }
+      ],
+      "work": {
+        "calls": 54386,
+        "candidate_checks": 129803
+      }
+    },
+    {
+      "k": 19,
+      "target": 53477395,
+      "witnesses": [
+        {
+          "core": 0,
+          "cut": 0,
+          "A": 0,
+          "B": 59222808,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "11100001111010101100011000"
+        }
+      ],
+      "work": {
+        "calls": 28954,
+        "candidate_checks": 68518
+      }
+    },
+    {
+      "k": 20,
+      "target": 106954771,
+      "witnesses": [
+        {
+          "core": 0,
+          "cut": 0,
+          "A": 0,
+          "B": 108321984,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "110011101001101110011000000"
+        }
+      ],
+      "work": {
+        "calls": 40798,
+        "candidate_checks": 97179
+      }
+    },
+    {
+      "k": 21,
+      "target": 213909523,
+      "witnesses": [
+        {
+          "core": 0,
+          "cut": 0,
+          "A": 0,
+          "B": 329042330,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "10011100111001100100110011010"
+        }
+      ],
+      "work": {
+        "calls": 57786,
+        "candidate_checks": 136467
+      }
+    },
+    {
+      "k": 22,
+      "target": 427819027,
+      "witnesses": [
+        {
+          "core": 0,
+          "cut": 0,
+          "A": 0,
+          "B": 442799376,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "11010011001001001010100010000"
+        }
+      ],
+      "work": {
+        "calls": 81450,
+        "candidate_checks": 194612
+      }
+    },
+    {
+      "k": 23,
+      "target": 855638035,
+      "witnesses": [
+        {
+          "core": 2,
+          "cut": 0,
+          "A": 0,
+          "B": 211387148,
+          "coeff": [
+            5,
+            5,
+            32,
+            27,
+            0,
+            5,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "1100100110011000001100001100"
+        }
+      ],
+      "work": {
+        "calls": 568262,
+        "candidate_checks": 1340524
+      }
+    },
+    {
+      "k": 24,
+      "target": 1711276051,
+      "witnesses": [
+        {
+          "core": 0,
+          "cut": 0,
+          "A": 0,
+          "B": 2552661546,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "A_bits": "0",
+          "B_bits": "10011000001001101000011000101010"
+        }
+      ],
+      "work": {
+        "calls": 163306,
+        "candidate_checks": 387704
+      }
+    },
+    {
+      "k": 25,
+      "target": 3422552083,
+      "witnesses": [
+        {
+          "core": 2,
+          "cut": 2,
+          "A": 1,
+          "B": 89224797,
+          "coeff": [
+            9,
+            5,
+            32,
+            20,
+            5,
+            4,
+            1
+          ],
+          "A_bits": "1",
+          "B_bits": "101010100010111011001011101"
+        }
+      ],
+      "work": {
+        "calls": 1223816,
+        "candidate_checks": 2886580
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "additional_direct_words_lengths5_through9": 50,
+  "complete_literal_words_lengths_0_through4": 341,
+  "grammar": {
+    "2": {
+      "first10_coefficients": [
+        0,
+        1,
+        3,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "regex_paths": 5,
+      "star_paths": 5
+    },
+    "3": {
+      "first10_coefficients": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "regex_paths": 0,
+      "star_paths": 0
+    },
+    "4": {
+      "first10_coefficients": [
+        0,
+        1,
+        1,
+        6,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "regex_paths": 18,
+      "star_paths": 16
+    },
+    "5": {
+      "first10_coefficients": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "regex_paths": 2,
+      "star_paths": 0
+    },
+    "6": {
+      "first10_coefficients": [
+        0,
+        0,
+        2,
+        3,
+        13,
+        31,
+        31,
+        31,
+        31,
+        31
+      ],
+      "regex_paths": 35,
+      "star_paths": 31
+    }
+  },
+  "reviewed_sha256": {
+    "PROOF.md": "57ed5e49105debd4edef00de8b8b8d1ddd90f0888358e4d50b5f471127881cfd",
+    "two_inport.json": "8848a3a54a806afe0b63b13ea408361ba9d4de9f182707eefe6a8bfbd6be5a8d",
+    "two_inport.py": "3bf75be55844efca898b26aabed87b88e339e6429097c46fc60489e51b95b5ec"
+  },
+  "scope": "Independent literal graphs, first-vertex DP and direct run assignments; proof review covers regularity/Burnside and all-length regex interpretation, not a second full DFA discovery.",
+  "status": "PASS"
+}

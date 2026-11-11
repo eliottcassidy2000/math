@@ -1,0 +1,52 @@
+{
+  "source": [
+    30,
+    12,
+    24,
+    16,
+    34,
+    15
+  ],
+  "source_h": 19,
+  "bound": 221,
+  "module": 0,
+  "levels": [
+    {
+      "order": 7,
+      "parents": 1,
+      "cuts": 64,
+      "children": 34,
+      "targets": 0
+    },
+    {
+      "order": 8,
+      "parents": 34,
+      "cuts": 4352,
+      "children": 572,
+      "targets": 0
+    },
+    {
+      "order": 9,
+      "parents": 572,
+      "cuts": 146432,
+      "children": 906,
+      "targets": 0
+    },
+    {
+      "order": 10,
+      "parents": 906,
+      "cuts": 463872,
+      "children": 219,
+      "targets": 0
+    },
+    {
+      "order": 11,
+      "parents": 219,
+      "cuts": 224256,
+      "children": 0,
+      "targets": 0
+    }
+  ],
+  "witnesses": [],
+  "seconds": 28.852954699999827
+}

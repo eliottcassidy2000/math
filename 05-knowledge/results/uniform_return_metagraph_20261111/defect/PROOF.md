@@ -1,6 +1,6 @@
 # Fixed defect: a finite grammar for every branching stratum
 
-**Proof candidate under independent review; small automata FINITE-EXACT.**
+**PROVED IN NOTE, independently reviewed; small automata FINITE-EXACT.**
 No all-height source-return or Chan–Pak theorem is claimed.
 The new scope is all fixed positive ready defects with at least two inports,
 including nontransitive residuals; the older atlas treats two inports with
@@ -50,9 +50,35 @@ can replace this deliberately crude bound. Arbitrarily many singleton
 components remain in each gap of the ordered kernel list.
 
 This is the same finite-kernel/variable-gap decomposition used in the
-[capped metagraph lane](../metagraph/README.md); the important new map is
+[capped metagraph lane](../metagraph/FAMILIES.md); the important new map is
 from a bounded ROOT DEFECT to a bounded PATH COUNT after deleting r and
 all its inports. The original h itself can grow without bound.
+
+### A sharper exponential bound from the older capacity atoms
+
+[THM-4167, positive exposure capacities](../../../../01-canon/theorems/THM-4167-tournament-exposure-capacity-deletion-support-moment-and-parity-holonomy.md)
+expresses c_ac(U)=W_ac(U)+W_ca(U) as a positive TAGGED odd-cycle-packing
+sum. Take one tagged packing on I plus its probing ear and an independent
+ordinary packing on R. Their disjoint union is a valid tagged packing
+on U plus that ear, and the weights multiply. The map is injective since
+restriction recovers both factors. Cross-edges do not affect these cycles.
+Hence c_ac(U)>=H(R)c_ac(I), and
+
+    b >= delta >= H(R) [Q_I(2)-2H(I)]
+                 >= H(R)(2^d-2).                              (6)
+
+Here Q_I(2) is the two-ordered-bin cover count. The bracket sums
+H(I[S])H(I\S) over every nonempty proper subset S, so it is at least
+2^d-2. Thus d<=floor(log_2(b+2)) and the residual bound improves to
+H(R)<=floor(b/(2^d-2)). The older quadratic bound remains valid.
+
+This degree bound is sharp for every d>=2: take the cyclic composition
+r->TT_k->TT_d->r, k>=1, with I=TT_d. The backbone is forced into the
+first path of every ordered endpoint-cover pair; q-s=0 and b=2^d-2.
+For d>=4 equality in the bracket forces I transitive, since every
+three-element subset is proper and a directed triangle has H3 rather
+than1. At d3 both TT3 and C3 attain the bracket6. This is a new root
+corollary of the inherited tagged-capacity theorem, not a new OCF formula.
 
 ## 3. Effective regular languages, with exact isomorphism quotient
 
@@ -148,6 +174,35 @@ At b6 the transitive-residual d2 chart has four additional isolated words
 and the inherited31 neutral tails. It is NOT the complete branching b6
 stratum: d3 and a C3 residual first become possible at that budget.
 
+## 5. Complete three-inport minimum-defect families
+
+For d3,b6, (3) forces H(R)=1 and q-s=0. Since each of the three pair
+bounds is at least2, equality forces H(R+v)=1 for each inport v. Each
+such one-port extension of the transitive residual is transitive, so
+every coordinate of the contact word is of the form1*0*. Moreover
+q-s=0 forces the first SCC of U to avoid I. It is the first residual
+singleton, so the word starts111. Strongness requires a nonzero last
+letter. These are proved necessary restrictions, not empirical filters.
+
+The generic positive run compiler in `multi_inport.py` exhausts this
+restricted language for both inport tournaments TT3 and C3. For each,
+its complete capped DFA has98 reachable states and two productive states;
+the latter are exactly the initial state and the accepting111 self-loop.
+Thus the only words are111^k, k>=1. This certifies a complete infinite
+classification from a finite exact automaton, rather than extrapolating
+the tested word lengths. The two rooted-class families have series
+
+    2x^5/(1-x),
+
+and their counts are7*2^k-5 (TT3 inports) and9*2^k-3 (C3 inports).
+Indeed for an inport tournament I, uniform111^k gives
+H=(Q_I(2)-H(I))2^k+3H(I)-Q_I(2); use(H,Q(2))=(1,8),(3,12).
+The rooted automorphism groups are respectively trivial and C3, so the
+two families must not be counted as rigid labelled presentations.
+
+The d2/C3-residual sector remains a separate required part of a full
+b6 classification. No completeness claim for that sector is made here.
+
 ## Reproduction and scope
 
 Run `python -B defect/two_inport.py` from the packet directory.
@@ -157,3 +212,8 @@ The full capped state spaces at budgets2,3,4,5,6 have respectively
 736,1217,1972,2765,3681 reachable states. These are not claimed minimal.
 The computed finite automata certify their infinite languages; the
 general rationality theorem rests on the construction in section3.
+Independent implementations in [the metagraph audit](../metagraph/audit_defect.py)
+and [the arithmetic audit](../arithmetic/audit_defect.py) review sections1–4
+and check literal path words, positive terms and the exact accepted-language
+series independently. Section5 has its own1170 literal DP controls and
+exact weighted-bisimulation/capped-DFA receipt, not yet a separate-agent audit.

@@ -1,0 +1,35 @@
+{
+  "retrieved_utc_date": "2026-11-11",
+  "scope": "Primary numerical prefixes agree; no new OEIS term or record claim.",
+  "sources": {
+    "A002496": {
+      "bytes": 158512,
+      "first": [
+        1,
+        2
+      ],
+      "last": [
+        10000,
+        25186959617
+      ],
+      "rows": 10000,
+      "sha256": "f497ef50315bf982252144b16a17c3227f646ebee598e010f78c91533819cd0b",
+      "url": "https://oeis.org/A002496/b002496.txt"
+    },
+    "A135244": {
+      "bytes": 115376,
+      "first": [
+        2,
+        0
+      ],
+      "last": [
+        10000,
+        13324
+      ],
+      "rows": 9999,
+      "sha256": "62a118ed102bd675a1b747ee269f0d45c3f252751f98c2e183bc6c0aafd70440",
+      "url": "https://oeis.org/A135244/b135244.txt"
+    }
+  },
+  "status": "PASS"
+}

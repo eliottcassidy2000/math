@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "birth_queries": 3607,
+  "births_under_cap": 502,
+  "arc_queries": 4592,
+  "arcs_under_cap": 1644,
+  "native_lines": {
+    "3_blue": 1,
+    "4_blue": 2,
+    "4_black": 2,
+    "5_blue": 1,
+    "5_black": 8
+  },
+  "upward_return": {
+    "rows": [
+      [
+        58,
+        60,
+        57,
+        16,
+        32,
+        8
+      ],
+      [
+        50,
+        60,
+        57,
+        17,
+        32,
+        8
+      ],
+      [
+        26,
+        28,
+        9,
+        16,
+        4
+      ]
+    ],
+    "counts": [
+      9,
+      17,
+      9
+    ],
+    "deleted_name": 2
+  },
+  "downward_return": {
+    "old_rows": [
+      58,
+      60,
+      57,
+      16,
+      32,
+      8
+    ],
+    "deleted_names": [
+      1,
+      2
+    ],
+    "retained_names": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "step1": [
+      30,
+      28,
+      8,
+      16,
+      4
+    ],
+    "step2": [
+      14,
+      4,
+      8,
+      2
+    ],
+    "births": [
+      {
+        "mask": 7,
+        "rows": [
+          14,
+          4,
+          8,
+          18,
+          7
+        ]
+      },
+      {
+        "mask": 11,
+        "rows": [
+          14,
+          4,
+          24,
+          2,
+          11
+        ]
+      },
+      {
+        "mask": 13,
+        "rows": [
+          14,
+          20,
+          8,
+          2,
+          13
+        ]
+      }
+    ],
+    "counts": [
+      9,
+      3,
+      3,
+      9
+    ]
+  },
+  "neutral_kernel_edges": [
+    [
+      "",
+      ""
+    ],
+    [
+      "B",
+      "B"
+    ],
+    [
+      "C",
+      "D"
+    ],
+    [
+      "D",
+      "C"
+    ],
+    [
+      "D",
+      "D"
+    ]
+  ],
+  "scope": "Finite independent operation audit; all-order completeness and height17 lower bound are written proofs."
+}

@@ -1,0 +1,17 @@
+{
+  "complete_additive_divisor_sieve_bound": 2000000,
+  "entry_comparisons": 999999,
+  "global_bound_fallback_targets": [
+    5,
+    7,
+    15
+  ],
+  "scope": "Independent arithmetic implementations; shared written source-type proof, not independent discovery.",
+  "status": "PASS",
+  "table_sha256": "c784facbd3430155430704b3882109b36f4dd55ee2010b4546c60cba2e54a033",
+  "targets": [
+    2,
+    1000000
+  ],
+  "trial_factored_composite_odd_roots": 3771
+}

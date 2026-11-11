@@ -1,0 +1,631 @@
+{
+  "universe": "All22 port-b-deletion/two-birth141 hits at original k2",
+  "probes": [
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        432,
+        160,
+        452,
+        159,
+        0,
+        208
+      ],
+      "strong": false,
+      "outmasks": [
+        0,
+        208
+      ],
+      "even_exponential": {
+        "1": 5,
+        "4": 34
+      },
+      "odd_exponential": {
+        "1": 5,
+        "4": 68
+      },
+      "even_return": true,
+      "odd_return": true
+    },
+    {
+      "rows": [
+        190,
+        188,
+        408,
+        176,
+        160,
+        196,
+        159,
+        0,
+        251
+      ],
+      "strong": false,
+      "outmasks": [
+        0,
+        251
+      ],
+      "even_exponential": {
+        "1": 1,
+        "4": 17,
+        "9": 8
+      },
+      "odd_exponential": {
+        "1": 1,
+        "4": 34,
+        "9": 24
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        48,
+        416,
+        452,
+        415,
+        264,
+        8
+      ],
+      "strong": true,
+      "outmasks": [
+        8,
+        8
+      ],
+      "even_exponential": {
+        "1": 25,
+        "4": 29
+      },
+      "odd_exponential": {
+        "1": 25,
+        "4": 58
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        48,
+        416,
+        452,
+        415,
+        8,
+        136
+      ],
+      "strong": true,
+      "outmasks": [
+        8,
+        136
+      ],
+      "even_exponential": {
+        "1": 25,
+        "4": 29
+      },
+      "odd_exponential": {
+        "1": 25,
+        "4": 58
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        432,
+        416,
+        68,
+        415,
+        288,
+        32
+      ],
+      "strong": true,
+      "outmasks": [
+        32,
+        32
+      ],
+      "even_exponential": {
+        "1": 17,
+        "4": 31
+      },
+      "odd_exponential": {
+        "1": 17,
+        "4": 62
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        432,
+        416,
+        68,
+        415,
+        32,
+        160
+      ],
+      "strong": true,
+      "outmasks": [
+        32,
+        160
+      ],
+      "even_exponential": {
+        "1": 17,
+        "4": 31
+      },
+      "odd_exponential": {
+        "1": 17,
+        "4": 62
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        432,
+        160,
+        68,
+        415,
+        32,
+        176
+      ],
+      "strong": true,
+      "outmasks": [
+        32,
+        176
+      ],
+      "even_exponential": {
+        "1": 17,
+        "4": 31
+      },
+      "odd_exponential": {
+        "1": 17,
+        "4": 62
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        176,
+        160,
+        68,
+        415,
+        32,
+        184
+      ],
+      "strong": true,
+      "outmasks": [
+        32,
+        184
+      ],
+      "even_exponential": {
+        "1": 17,
+        "4": 31
+      },
+      "odd_exponential": {
+        "1": 17,
+        "4": 62
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        432,
+        288,
+        68,
+        415,
+        304,
+        32
+      ],
+      "strong": true,
+      "outmasks": [
+        48,
+        32
+      ],
+      "even_exponential": {
+        "1": 17,
+        "4": 31
+      },
+      "odd_exponential": {
+        "1": 17,
+        "4": 62
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        432,
+        32,
+        68,
+        415,
+        304,
+        48
+      ],
+      "strong": true,
+      "outmasks": [
+        48,
+        48
+      ],
+      "even_exponential": {
+        "1": 17,
+        "4": 31
+      },
+      "odd_exponential": {
+        "1": 17,
+        "4": 62
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        432,
+        32,
+        68,
+        415,
+        48,
+        176
+      ],
+      "strong": true,
+      "outmasks": [
+        48,
+        176
+      ],
+      "even_exponential": {
+        "1": 17,
+        "4": 31
+      },
+      "odd_exponential": {
+        "1": 17,
+        "4": 62
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        176,
+        32,
+        68,
+        415,
+        48,
+        184
+      ],
+      "strong": true,
+      "outmasks": [
+        48,
+        184
+      ],
+      "even_exponential": {
+        "1": 17,
+        "4": 31
+      },
+      "odd_exponential": {
+        "1": 17,
+        "4": 62
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        304,
+        288,
+        68,
+        415,
+        312,
+        32
+      ],
+      "strong": true,
+      "outmasks": [
+        56,
+        32
+      ],
+      "even_exponential": {
+        "1": 17,
+        "4": 31
+      },
+      "odd_exponential": {
+        "1": 17,
+        "4": 62
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        304,
+        32,
+        68,
+        415,
+        312,
+        48
+      ],
+      "strong": true,
+      "outmasks": [
+        56,
+        48
+      ],
+      "even_exponential": {
+        "1": 17,
+        "4": 31
+      },
+      "odd_exponential": {
+        "1": 17,
+        "4": 62
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        48,
+        32,
+        68,
+        415,
+        312,
+        56
+      ],
+      "strong": true,
+      "outmasks": [
+        56,
+        56
+      ],
+      "even_exponential": {
+        "1": 17,
+        "4": 31
+      },
+      "odd_exponential": {
+        "1": 17,
+        "4": 62
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        48,
+        32,
+        68,
+        415,
+        56,
+        184
+      ],
+      "strong": true,
+      "outmasks": [
+        56,
+        184
+      ],
+      "even_exponential": {
+        "1": 17,
+        "4": 31
+      },
+      "odd_exponential": {
+        "1": 17,
+        "4": 62
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        446,
+        444,
+        408,
+        432,
+        288,
+        452,
+        287,
+        336,
+        0
+      ],
+      "strong": false,
+      "outmasks": [
+        80,
+        0
+      ],
+      "even_exponential": {
+        "1": 5,
+        "4": 34
+      },
+      "odd_exponential": {
+        "1": 5,
+        "4": 68
+      },
+      "even_return": true,
+      "odd_return": true
+    },
+    {
+      "rows": [
+        190,
+        188,
+        152,
+        176,
+        32,
+        196,
+        31,
+        80,
+        255
+      ],
+      "strong": false,
+      "outmasks": [
+        80,
+        255
+      ],
+      "even_exponential": {
+        "1": 5,
+        "4": 34
+      },
+      "odd_exponential": {
+        "1": 5,
+        "4": 68
+      },
+      "even_return": true,
+      "odd_return": true
+    },
+    {
+      "rows": [
+        318,
+        316,
+        408,
+        304,
+        288,
+        324,
+        287,
+        379,
+        0
+      ],
+      "strong": false,
+      "outmasks": [
+        123,
+        0
+      ],
+      "even_exponential": {
+        "1": 1,
+        "4": 17,
+        "9": 8
+      },
+      "odd_exponential": {
+        "1": 1,
+        "4": 34,
+        "9": 24
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        62,
+        60,
+        152,
+        48,
+        32,
+        68,
+        31,
+        123,
+        255
+      ],
+      "strong": false,
+      "outmasks": [
+        123,
+        255
+      ],
+      "even_exponential": {
+        "1": 1,
+        "4": 17,
+        "9": 8
+      },
+      "odd_exponential": {
+        "1": 1,
+        "4": 34,
+        "9": 24
+      },
+      "even_return": false,
+      "odd_return": false
+    },
+    {
+      "rows": [
+        318,
+        316,
+        280,
+        304,
+        32,
+        324,
+        31,
+        383,
+        80
+      ],
+      "strong": false,
+      "outmasks": [
+        127,
+        80
+      ],
+      "even_exponential": {
+        "1": 5,
+        "4": 34
+      },
+      "odd_exponential": {
+        "1": 5,
+        "4": 68
+      },
+      "even_return": true,
+      "odd_return": true
+    },
+    {
+      "rows": [
+        62,
+        60,
+        280,
+        48,
+        32,
+        68,
+        31,
+        383,
+        123
+      ],
+      "strong": false,
+      "outmasks": [
+        127,
+        123
+      ],
+      "even_exponential": {
+        "1": 1,
+        "4": 17,
+        "9": 8
+      },
+      "odd_exponential": {
+        "1": 1,
+        "4": 34,
+        "9": 24
+      },
+      "even_return": false,
+      "odd_return": false
+    }
+  ],
+  "strong_even_returns": 0,
+  "strong_odd_returns": 0
+}

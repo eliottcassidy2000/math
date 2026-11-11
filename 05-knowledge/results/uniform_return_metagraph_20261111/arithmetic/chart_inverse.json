@@ -1,0 +1,133 @@
+{
+  "complete_chart_target_cases": 11520,
+  "large_short_flank_probes": [
+    {
+      "short_flank_probe": 16,
+      "target": 425,
+      "witness": [
+        {
+          "A": 0,
+          "B": 594,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "core": 0,
+          "cut": 0
+        }
+      ],
+      "work": {
+        "calls": 70,
+        "candidate_checks": 170
+      }
+    },
+    {
+      "short_flank_probe": 16,
+      "target": 33857,
+      "witness": [
+        {
+          "A": 375,
+          "B": 7,
+          "coeff": [
+            5,
+            3,
+            12,
+            6,
+            3,
+            2,
+            1
+          ],
+          "core": 1,
+          "cut": 1
+        }
+      ],
+      "work": {
+        "calls": 1794,
+        "candidate_checks": 4753
+      }
+    },
+    {
+      "short_flank_probe": 16,
+      "target": 8820901,
+      "witness": [
+        {
+          "A": 0,
+          "B": 218096,
+          "coeff": [
+            33,
+            9,
+            84,
+            55,
+            32,
+            5,
+            2
+          ],
+          "core": 3,
+          "cut": 12
+        }
+      ],
+      "work": {
+        "calls": 99794,
+        "candidate_checks": 245524
+      }
+    },
+    {
+      "short_flank_probe": 16,
+      "target": 106954771,
+      "witness": [
+        {
+          "A": 0,
+          "B": 108321984,
+          "coeff": [
+            1,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "core": 0,
+          "cut": 0
+        }
+      ],
+      "work": {
+        "calls": 40798,
+        "candidate_checks": 97179
+      }
+    },
+    {
+      "short_flank_probe": 16,
+      "target": 3422552083,
+      "witness": [
+        {
+          "A": 1,
+          "B": 89224797,
+          "coeff": [
+            9,
+            5,
+            32,
+            20,
+            5,
+            4,
+            1
+          ],
+          "core": 2,
+          "cut": 2
+        }
+      ],
+      "work": {
+        "calls": 1223816,
+        "candidate_checks": 2886580
+      }
+    }
+  ],
+  "linear_brute_cases": 42240,
+  "matched_normalized_pairs": 4402,
+  "status": "PASS; exact inverse, no universal coverage claim"
+}

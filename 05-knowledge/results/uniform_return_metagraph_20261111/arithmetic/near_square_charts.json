@@ -1,0 +1,142 @@
+{
+  "first_nonaxis": [
+    {
+      "A": 1,
+      "B": 157,
+      "core": 1,
+      "core_mask": 2,
+      "cut": 1,
+      "min_flank": 1,
+      "order": 13,
+      "root": 50,
+      "value": 2501
+    },
+    {
+      "A": 1,
+      "B": 214,
+      "core": 1,
+      "core_mask": 6,
+      "cut": 1,
+      "min_flank": 1,
+      "order": 13,
+      "root": 60,
+      "value": 3601
+    },
+    {
+      "A": 1,
+      "B": 740,
+      "core": 1,
+      "core_mask": 6,
+      "cut": 1,
+      "min_flank": 1,
+      "order": 15,
+      "root": 114,
+      "value": 12997
+    },
+    {
+      "A": 382,
+      "B": 2,
+      "core": 2,
+      "core_mask": 6,
+      "cut": 4,
+      "min_flank": 2,
+      "order": 16,
+      "root": 184,
+      "value": 33857
+    },
+    {
+      "A": 418,
+      "B": 2,
+      "core": 2,
+      "core_mask": 4,
+      "cut": 6,
+      "min_flank": 2,
+      "order": 16,
+      "root": 186,
+      "value": 34597
+    },
+    {
+      "A": 1982,
+      "B": 2,
+      "core": 1,
+      "core_mask": 6,
+      "cut": 1,
+      "min_flank": 2,
+      "order": 17,
+      "root": 250,
+      "value": 62501
+    },
+    {
+      "A": 1,
+      "B": 2304,
+      "core": 2,
+      "core_mask": 6,
+      "cut": 0,
+      "min_flank": 1,
+      "order": 18,
+      "root": 292,
+      "value": 85265
+    },
+    {
+      "A": 1,
+      "B": 2638,
+      "core": 2,
+      "core_mask": 6,
+      "cut": 1,
+      "min_flank": 1,
+      "order": 18,
+      "root": 328,
+      "value": 107585
+    },
+    {
+      "A": 2,
+      "B": 1848,
+      "core": 2,
+      "core_mask": 6,
+      "cut": 5,
+      "min_flank": 2,
+      "order": 18,
+      "root": 388,
+      "value": 150545
+    },
+    {
+      "A": 3942,
+      "B": 1,
+      "core": 2,
+      "core_mask": 6,
+      "cut": 4,
+      "min_flank": 1,
+      "order": 18,
+      "root": 474,
+      "value": 224677
+    }
+  ],
+  "inherited_sources": {
+    "chanpak_five_core_bridges_20261110\\cover\\positive_raw_signatures.json": "56c4a4756e2d48f47ed2d7566f2c02a55d6836daf536e54c9d1fb804a255519f",
+    "chanpak_five_core_bridges_20261110\\cover\\support_24.json": "f598342c414a4f19e61db5f2f478b755d774d38bcd82c8135b13df9f61cadc87",
+    "session251_creative_completion_20261111\\ternary\\compiler.py": "56c231002bb23fe56ced0455b0ffa4167fd4905f2aa38f313073d172d77cbc62"
+  },
+  "literal_DP_checks_order_at_most13": 32,
+  "max_min_flank": 29,
+  "min_flank_distribution": {
+    "0": 1974,
+    "1": 42,
+    "2": 16,
+    "3": 4,
+    "4": 3,
+    "5": 1,
+    "7": 2,
+    "9": 1,
+    "10": 1,
+    "17": 1,
+    "18": 1,
+    "29": 1
+  },
+  "root_domain": "positive even roots2..4094",
+  "search": "pairs=672392310 targets=2047",
+  "signed_formula_checks": 2047,
+  "status": "FINITE-EXACT; all-height near-square coverage OPEN",
+  "table_sha256": "de352ed82492903170d91c88f1b45321578ca0145fc6bbe390787e9e8fcd30a6",
+  "target_bound": 16777215,
+  "target_count": 2047
+}
