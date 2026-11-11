@@ -87,3 +87,10 @@ head,” “Retain local incidence through counting,” “Correct the object
 before sharpening the technique,” and “Type every analogy and every
 implication.” This packet does not edit the global method catalogue or
 claim a new universal research rule on a single session's evidence.
+
+
+Final freshness integration: b5912dbd arrived after our third publication
+0aa27b2c. Its completed E4 work advances the incoming9-grid frontier through
+level11 and supplies the43-grid. The final source map and open questions
+were updated without rerunning that work, and a fourth small checkpoint
+preserves the concurrent history and these changed scope statements.

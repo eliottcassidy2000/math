@@ -48,5 +48,6 @@
     "Re-audit of inherited claims",
     "General Groebner engine implementation",
     "Independent giant queue output recount"
-  ]
+  ],
+  "publication_freshness": "Final incomingb5912dbd integrated; open9-grid scope updated to s>=12"
 }

@@ -175,6 +175,13 @@ protected/rooted interface and exact target-cover certificate. Infinite
 supply alone is still not arbitrary target control.
 [Incoming comparison and exact initial states](INCOMING_CONNECTIONS.md).
 
+A final incoming checkpoint, b5912dbd, then completed its E4 continuation:
+9-grid levels7–11 and the full43-grid, at its stated pre-audit status.
+Those advances are preserved and credited to that work. Our open9-grid
+question now starts at level12; the finite new levels do not imply a
+uniform level family. Its general domination-ray formula also includes
+our singleton-star invoice as a special case.
+
 ## Initial cases that really are supplied
 
 - Protected recharge: marked C₃, including the empty-cut hostile.

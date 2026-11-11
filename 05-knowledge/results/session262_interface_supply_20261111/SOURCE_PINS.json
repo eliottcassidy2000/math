@@ -5,5 +5,8 @@
   "concurrent_preserved_commit": "33114ad5765cf5b670de132b9fd04dc6c89974bc",
   "concurrent_status": "Gadget law claimed proved; independent audit pending in incoming checkpoint; accepted without re-audit",
   "verified_checkpoint1": "359afd24a469abf7deb635e7588208b34e3dc368",
-  "verified_checkpoint2": "7d3a057f86e1a206267da6a276226fc96d0119d9"
+  "verified_checkpoint2": "7d3a057f86e1a206267da6a276226fc96d0119d9",
+  "final_incoming_preserved_commit": "b5912dbd67345d3c5b5cddeba43b383b1e57f3ca",
+  "verified_checkpoint3": "0aa27b2c301910f50367f7906cbaa21e647b1135",
+  "final_incoming_scope": "Pre-audit source certificates extend9-grid throughs11 and complete43-grid; not re-audited here"
 }

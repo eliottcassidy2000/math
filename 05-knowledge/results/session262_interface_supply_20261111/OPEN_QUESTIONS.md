@@ -36,11 +36,12 @@ Chan–Pak is not closed by this packet.
    code, rather than the explicitly growing gaps currently supplied?
    The domination lower bound alone does not answer this.
 
-6. **Uniform9-grid sources beyond the inherited six levels.** This
-   session gives alternate balanced sources and a diamond connection, not
-   a new all-s≥7 family. The concurrent sign-flip packet had only
-   pre-registered its relevant E4 run at the input checkpoint. Do not
-   treat that plan or finite coefficient banks as the missing theorem.
+6. **Uniform9-grid sources beyond the now-completed eleven levels.** This
+   session gives alternate balanced sources and a diamond connection.
+   Final incoming b5912dbd supplies finite source certificates for levels
+   7–11 and transports each through all r, at its stated pre-audit status.
+   The remaining uniform question begins at s≥12. Additional finite levels
+   and coefficient banks still do not establish the missing all-s theorem.
 
 7. **Keep the response order closed under the chosen operations.**
    General triangle wrappers consume one cover order per iteration;

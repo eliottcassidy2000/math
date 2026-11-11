@@ -100,3 +100,28 @@ and their first tails, using this packet's direct ordinal profile counter.
 It does not repeat the incoming tower census or verify its4097-coefficient
 claim. The incoming checkpoint is preserved before our second publication;
 its theorem and discovery credit remain with that checkpoint.
+
+
+## Final incoming update: the9-grid frontier moves to level12
+
+While the final checkpoint was being verified, concurrent
+`b5912dbd67345d3c5b5cddeba43b383b1e57f3ca` arrived and is preserved too.
+Its [source-interface continuation](../kps_s22_sign_flip_towers_20261110/SOURCES_AND_DOMINATION.md)
+completes its previously pre-registered E4 work. At its stated pre-audit
+status it supplies finite source certificates for9-grid levels7–11,
+then the exact tail law gives every r at each of those levels. It also
+supplies the complete43-grid and the general domination-ray formula
+
+    d(G_t)=rho_dom+2^t delta_dom,
+    delta_dom=sum_(nonempty S subset O) 2^|N(S)|.
+
+The universal inequality then implies U>=delta_dom. Our singleton-star
+invoice in core/SAME_SOURCE_DEFECT.md is the singleton special case,
+with delta_dom=2^(b+3); the incoming general formula is credited there,
+not claimed as our own extension.
+
+These incoming results are accepted at their stated scope and pending-audit
+status, without rerunning their source census. Consequently the remaining
+uniform9-grid question now begins at s>=12, not s>=7. A finite set of
+additional completed levels is still not a uniform level-supply theorem.
+The moving-mark rearm and target-control distinction above is unchanged.
