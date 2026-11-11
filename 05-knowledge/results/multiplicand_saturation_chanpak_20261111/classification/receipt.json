@@ -8,7 +8,7 @@
     "filters": "none; all strict births retained"
   },
   "hashes": {
-    "05-knowledge/results/multiplicand_saturation_chanpak_20261111/classification/PROOF.md": "e9efcc44608224ec36f401f463fabbaec22229edaa3aeafdf5d80f55ceb1bf94",
+    "05-knowledge/results/multiplicand_saturation_chanpak_20261111/classification/PROOF.md": "d7476ae80c2f4d112f88a6cd35cff3542b52d5a296485e7eda7ab3dd52048afd",
     "05-knowledge/results/multiplicand_saturation_chanpak_20261111/classification/classify.py": "370082af9ffd732fa4b442429dd8dfc9ba9141fb0296dac675dbd65ec5e5f87f",
     "05-knowledge/results/summand_multiplicand_growth_20261111/summand/TOP_SUFFIX.md": "433ee49248dfaf7e77d7d1269adf112c3c7de1d267b0dfd5c3eddce86eb67f2b",
     "05-knowledge/results/summand_multiplicand_growth_20261111/summand/CLOSURE.md": "ff683ed1bd9826d712bcbdedf5bb94fd5d7f2ac9bdce54c2639c3019c4d7d624"

@@ -3,6 +3,13 @@
 **11 November 2026. PROVED / FINITE-EXACT / CONDITIONAL / OPEN as individually
 labelled below. Chan–Pak and quasiperfect existence remain OPEN.**
 
+**Subsequent closure, 11 November 2026:** the quantitative domination
+inequality and its triangle-count consequence are now proved by the
+[closed-tree exchange theorem](../multiplicand_saturation_chanpak_20261111/exchange/STARS.md).
+The former R10 d=35 exponent2–5 gap is closed by the
+[all-r,s constructor](../multiplicand_saturation_chanpak_20261111/chanpak/PROOF.md).
+These forward repairs preserve the historical developments below.
+
 This session joined the requested historical sequence with the strongest
 current tournament constructions, then pursued the operations that the
 connection actually permits. It moved through divisor sums, modular
@@ -62,10 +69,11 @@ the old nonarc terms redistribute without changing any newborn count.
 On a transitive host the weights are2 at adjacent vertices and2^(d−1)
 at distance d≥2, recovering the chain and apex laws directly.
 
-The stronger conjecture H(T)−d(G_z)≥H(U)−1 remains **OPEN**. The positive
-law turns it into a precise injection problem for marked path covers; its
-finite survival is not promoted to proof. A selected-fibre lower bound
-and spectator-product transport are proved independently.
+The stronger inequality H(T)−d(G_z)≥H(U)−1 is now **PROVED** by the linked
+closed-tree exchange theorem, which supplies the formerly missing
+simultaneous reservation of old paths and dominating cuts. OCF then gives
+the second proved bound H(T)−d(G_z)≥2t_3(U). The selected-fibre bound and
+spectator-product transport remain independent earlier results.
 See [DEFECT_QUANTITATIVE.md](bridges/DEFECT_QUANTITATIVE.md).
 
 ## 2. What20,104,464,650,1952 actually mean
@@ -280,9 +288,13 @@ signal:
  solves the arithmetic closure question once its operations exist; it
  does not install our missing tournament rearming operation.
 - d0383cbc2486 added the d=35 residual family at exponent1 and exponents≥6,
- leaving its four uniform heads open, and interpreted our selected-clone
+ then leaving its four uniform heads open, and interpreted our selected-clone
  moves as activation of two seed birth roots. The source/mark information
  remains essential; scalar coefficient agreement alone is insufficient.
+
+The subsequent d=35 constructor linked above closes those four heads:
+every `1+2^s+35·2^(r+s)` is realized for all r,s≥1. This settles that cited
+R10 residual grid, while the general exact multiplier return remains open.
 
 The later incoming e4173071bc62 strengthens the arithmetic continuation to
 eventual additive saturation and a two-seed product saturation classification.

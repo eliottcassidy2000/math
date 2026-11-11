@@ -1,9 +1,10 @@
-# Complete product saturation classification and a completed Chan–Pak grid
+# Product saturation classification, a completed grid, and a simultaneous injection
 
 2026-11-11. **PROVED IN NOTES:** the finite-seed saturation classification,
-fixed-grade compilers, and the complete d=35 tournament construction below.
+fixed-grade compilers, the complete d=35 tournament construction, physical
+offset transport, and the all-order quantitative domination inequality.
 **FINITE-EXACT:** the explicitly scoped controls. **OPEN:** the full
-Chan–Pak conjecture and the remaining exchange-component lemma. Existing
+Chan–Pak conjecture and uniform coverage by the constructed interfaces. Existing
 repository theorems are inherited inputs; no literature-priority claim or
 numbered canon promotion is made.
 
@@ -91,9 +92,25 @@ example; its default controls directly count all 21 instances with
 r=1,2,3 and s=1,...,7 through order17. This is a complete infinite grid,
 not a claim that arbitrary odd d or every odd Hamilton count is covered.
 
-## 4. A new exact reduction for the quantitative domination gap
+The continuation [OFFSET_TRANSPORT.md](chanpak/OFFSET_TRANSPORT.md) supplies
+three reusable carriers on which adding a transitive twin implements
+`(D,U) -> (2D-1,2U)`. Internal cloning and external tail growth commute as
+actual graph operations. Their complete run coefficients also permit an
+arbitrary nonempty tournament M at the port, constructing
 
-The remaining Session260 inequality is
+    H(M)+(a+b*2^t)*Q_2(M),  t>=1,
+
+for `(a,b)=(16,24),(4,42),(32,35)`, where Q_2 counts ordered two-path
+covers allowing an empty slot. Only H and Q_2 are needed for replacement
+in these carriers. This uses the incoming Session261 module-replacement
+mechanism, with a smaller interface than the full cover profile. It gives
+new ways to continue a construction, not independent choices of its two
+statistics or a universal source bank.
+
+## 4. The quantitative domination gap is closed
+
+For every tournament U and every newborn vertex z, the formerly open
+Session260 inequality is now proved:
 
     H(U+z) >= H(U)+d(G_z)-1.
 
@@ -103,15 +120,36 @@ exact defect is
 
     unused_paths + 1 - closed_tree_components + nonnegative_surplus.
 
-At most one closed tree component would give a literal simultaneous
-injection and prove the inequality. New local lemmas force branching cuts
-to lie below or above the distinguished cut B; closed stars are unique.
-Thus it is enough to prove that every closed tree is a star. That final
-step is **OPEN**, with exact small controls and explicit hostile examples
-against two stronger proposed shortcuts. The
-[branching analysis](classification/EXCHANGE_IDEAS.md) and
-[two-sided endpoint lemma](history/ENDPOINT_LEMMA.md) isolate the remaining
-geometry. These partial theorems do not claim Chan–Pak completeness.
+Here G_z is the bipartite graph on A=N^+(z), B=N^-(z), retaining old arcs
+a->b, and d counts dominating sets. The [star theorem](exchange/STARS.md)
+proves that every closed tree component is a star and at most one exists.
+A branching upper cut would force a strictly smaller lower branching cut,
+then a strictly larger upper branching cut. A maximal cut rules this out.
+The argument retains actual paths, domination, and deletion seams at every
+step; those data are lost by scalar fibre counts.
+
+Matching each component to its edges and stubs now assigns distinct newborn
+Hamilton paths to **all old Hamilton paths and all but at most one dominating
+cut**. Consequently `H(U+z)-d(G_z)>=H(U)-1>=2*t_3(U)`, where t_3 counts
+directed triangles and the second inequality is the inherited odd-cycle
+formula. Both bounds are sharp on the inherited 2K2 example with
+`H(U+z)=13, H(U)=5, d(G_z)=9, t_3(U)=2`.
+
+The [endpoint lemma](history/ENDPOINT_LEMMA.md), independent review, and
+explicit failed stronger shortcuts are retained. This is a universal
+lower bound and simultaneous injection, not an arbitrary selectable
+Hamilton-count increment. Full odd-spectrum existence remains open.
+
+**Concurrent independent proof integrated:** Session261 commits40eba89fd5
+and d42d89d3f9 prove the same inequality by grouping inclusion-exclusion
+into even induced components, with a stronger single-cycle bound. Our
+[two-decomposition bridge](exchange/DUAL_DEFECT.md) identifies the exact
+common slack. Their expansion gives local obstruction certificates; our
+star theorem gives a literal simultaneous injection. The resulting
+equality class also inherits their effective finite forbidden-basis
+theorem, whose complete list has not been computed. Their two-port
+bilinear kernel retains the same H,Q2 module data used by our carriers;
+it does not supply a freely selectable pair of statistics.
 
 ## Reproduction and scope
 
@@ -121,6 +159,7 @@ From the repository root:
 python3 -B 05-knowledge/results/multiplicand_saturation_chanpak_20261111/classification/classify.py
 python3 -B 05-knowledge/results/multiplicand_saturation_chanpak_20261111/history/check.py
 python3 -B 05-knowledge/results/multiplicand_saturation_chanpak_20261111/chanpak/realize35.py
+python3 -B 05-knowledge/results/multiplicand_saturation_chanpak_20261111/chanpak/offset_ladders.py
 python3 -B 05-knowledge/results/multiplicand_saturation_chanpak_20261111/exchange/probe.py
 ```
 

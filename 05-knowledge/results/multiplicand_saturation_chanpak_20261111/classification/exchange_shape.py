@@ -106,7 +106,7 @@ def main():
                 shapes[shape] += 1
                 if min(shape) > 1 and hostile is None:
                     hostile = dict(n=n, trial=trial, rows=rows, A=A, component=component)
-    receipt = dict(status='FINITE-EXACT scout; star theorem OPEN',
+    receipt = dict(status='FINITE-EXACT scout; separate all-order proof in ../exchange/STARS.md',
                    universe=dict(seed=125, orders=list(range(3, 8)), cases_per_order=500,
                                  checked=checked, filters='none'),
                    nonstar_closed_tree=hostile,

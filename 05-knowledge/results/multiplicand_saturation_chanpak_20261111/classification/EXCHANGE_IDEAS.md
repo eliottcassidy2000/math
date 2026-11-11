@@ -1,8 +1,12 @@
 # Closed-tree exchange components: branching restrictions and a unique-star reduction
 
 Date: 2026-11-11. **PROVED:** the local branching restrictions and uniqueness
-of closed star components below. **OPEN:** every closed tree is a star.
-Consequently this note does not prove the full quantitative inequality.
+of closed star components below. The formerly open all-star lemma is now
+**PROVED** in [exchange/STARS.md](../exchange/STARS.md). Combining that
+theorem with Section4 below gives at most one closed tree and the all-order
+inequality `H(U+z)>=H(U)+d(G)-1`. The incidence matching is supplied by
+[exchange/PROOF.md](../exchange/PROOF.md). This note preserves the failed
+shortcuts and intermediate reduction that led to the completed proof.
 
 Use the incidence graph defined by the sibling `exchange/probe.py`.
 Its left vertices are Hamilton paths P of U, its right vertices are
@@ -122,10 +126,13 @@ cut-B case. We conclude:
     If every closed tree is a star, then there is at most one
     closed tree in the entire exchange graph.                 (3)
 
-The finite evidence so far supports the antecedent, but (1) does not
-prove it: a hypothetical nonstar tree could alternate branching cuts
-below and above B. Excluding that configuration, or producing a
-counterexample, is the exact remaining structural task.
+The antecedent is now proved by [the strict-progress argument](../exchange/STARS.md).
+At this intermediate stage, (1) alone did not exclude a hypothetical
+nonstar tree alternating branching cuts below and above B. The completed
+proof uses canonical lower/upper cut maps and a maximal-index backward-arc
+splice to force strictly increasing upper branching cuts. Finiteness then
+excludes the configuration. Thus conclusion(3) is now unconditional; no
+finite scout is used to supply its all-order quantifier.
 
 ## Finite scout, not a theorem
 

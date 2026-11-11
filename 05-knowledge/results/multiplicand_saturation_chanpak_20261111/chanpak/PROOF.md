@@ -196,3 +196,14 @@ ask for a single newborn taking it to twice its count minus one. For r=1,...,7
 there are no such cuts. This is only a finite observation about those exact
 physical sources. The positive replacement above explains why that local
 failure need not obstruct the target family.
+
+## 7. An actual operation transporting the offset
+
+The subsequent [offset-transport theorem](OFFSET_TRANSPORT.md) supplies
+marked carriers for3,21,35 whose unselected transitive-module growth realizes
+`(D,U)→(2D−1,2U)` at every positive length. Together with tail growth these
+are two commuting physical graph operations. Their all-module extension
+constructs `H(M)+(a+b·2^t)Q_2(M)` for three explicit pairs(a,b), preserving
+the path-cover sidecar rather than claiming independent scalar addition.
+This adds a reusable construction interface; the complete35-grid coverage
+proved above remains unchanged.

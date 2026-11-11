@@ -1,8 +1,12 @@
 # Two-sided endpoint rigidity and canonical neighbours of branching cuts
 
 Date: 2026-11-11. **PROVED:** the endpoint rigidity lemma and canonical
-closed-tree neighbours below. **OPEN:** eliminating the remaining fixed
-canonical pair; no all-order closed-tree or Chan–Pak inequality is claimed.
+closed-tree neighbours below. **Subsequent closure:**
+[exchange/STARS.md](../exchange/STARS.md) resolves the intermediate
+fixed-pair boundary, proves every closed tree is a star, and obtains the
+all-order quantitative domination inequality. Section 3 below preserves
+the earlier reduction and identifies the coordinate used by that proof.
+The full Chan–Pak spectrum conjecture remains open.
 
 ## Independent audit of the exchange carrier
 
@@ -14,7 +18,8 @@ on that cycle; for an open component, a stub plus a rooted spanning tree.
 These give distinct path assignments as stated. The cut-leaf proof correctly
 uses its domination condition to rule out a last strong component with
 only one B vertex. Empty sides are compatible with the endpoint counts.
-This audit does not establish the still-open bound on closed tree components.
+This preliminary audit does not itself establish the component bound;
+the subsequent all-order proof is in exchange/STARS.md.
 
 ## 1. A two-sided endpoint lemma
 
@@ -135,7 +140,7 @@ upper neighbour obtained by deleting the A vertices which have no
 outgoing neighbour in the remaining B part; the corresponding two
 induced pieces are transitive in a closed tree.
 
-## 3. A monotone alternating reduction and its remaining boundary
+## 3. The intermediate monotone reduction, now completed by STARS.md
 
 Starting from a proper upper L, first form B0 by (2), then define its
 dual upper neighbour
@@ -150,8 +155,10 @@ Consequently
 
 Thus canonical alternation expands upper cuts; it does not make an
 arbitrary walk through the incidence graph. Strict expansions can occur
-only finitely often. This is a real finite reduction, but it leaves the
-fixed-pair case L′=L.
+only finitely often. This reduction by itself leaves the fixed-pair case
+L′=L; the subsequent star proof replaces canonical alternation alone
+with a maximal-backward-arc splice that forces a strictly smaller lower
+branching cut and then a strictly larger upper branching cut.
 
 At a fixed pair, writing V=B0⊔W⊔R, the preceding results make each block
 transitive. B0 beats every A in W, and every B in W beats every vertex
@@ -163,9 +170,10 @@ canonical cut sides have the forms
 Those are same-colour arcs. Cross-block arcs R→B0 may also remain; they
 already occur in path-stars and do not by themselves create multiplicity
 inside either canonical cut side. The same-colour arcs are not excluded
-by domination or by scalar endpoint counts. A cycle-or-stub construction using them is
-still needed to prove every closed tree is a star. No such construction
-is asserted here.
+by domination or by scalar endpoint counts. They were the precise missing
+construction at this intermediate stage. STARS.md now uses such an arc
+to produce a new path and an explicit directed triangle certifying the
+next branching cut, which completes the finite strict-progress argument.
 
 Source→target: labelled domination fibres→canonical cut neighbours.
 Preserved: actual simultaneous old-path witnesses, deletion validity,

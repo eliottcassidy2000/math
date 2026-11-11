@@ -59,6 +59,14 @@ common integer base. The independent first-hole law also extends to any
 finite jointly independent seed set, using its two smallest seeds. See
 [multiplicand/SATURATION_OBSTRUCTION.md](multiplicand/SATURATION_OBSTRUCTION.md).
 
+**Subsequent full classification:** the
+[arbitrary finite-seed theorem](../multiplicand_saturation_chanpak_20261111/classification/PROOF.md)
+proves eventual product saturation exactly when the nonunit seed valuation
+vectors have rank at most one. In every higher-rank case, attainable holes
+remain at every sufficiently late generation and their ratio to the current
+maximum tends to zero. This includes dependent relations among three or more
+seeds, beyond the independent-seed argument above.
+
 ## Three different meanings of one new integer
 
 The same objects support different growth questions. Keeping their clocks

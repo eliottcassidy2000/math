@@ -1,7 +1,14 @@
 # Concrete remaining questions after Session260
 
-**All items here are OPEN or CONDITIONAL. No universal theorem is implied
-by the packet's bounded computations.**
+**Historical questions with subsequent closures marked below. The remaining
+items are OPEN or CONDITIONAL; bounded computations alone imply no universal
+theorem.**
+
+**Forward status repair, 11 November 2026:** the quantitative inequality
+(Q) and its triangle bound are now **PROVED** by the
+[closed-tree exchange theorem](../multiplicand_saturation_chanpak_20261111/exchange/STARS.md).
+The cited R10 d=35 gap is also **CLOSED** for all r,s≥1 by the
+[full d=35 constructor](../multiplicand_saturation_chanpak_20261111/chanpak/PROOF.md).
 
 ## 1. Repair the missing state, or replace the head directly
 
@@ -16,7 +23,9 @@ retaining the exact multiplier and unit-seed condition. It should emit the
 new graph and selected set, not merely an equality between scalar formulas.
 Alternatively, once even multipliers are covered, direct constructors for
 the missing1+2p heads can replace seed deflation. Incoming R10 does this on
-one specified residual family; its uniform exponents2–5 are still open.
+one specified residual family. Its former uniform exponent2–5 gap is now
+closed: every `1+2^s+35·2^(r+s)`, r,s≥1, has a literal tournament constructor
+in the linked d=35 proof. The broader missing-return question remains open.
 
 Decisive test: produce a repeatable physical return after L, or a direct
 head kernel whose target family escapes the classified eight slope
@@ -39,11 +48,12 @@ The sharpened inequality
 
     d(G_z)−1 ≤ H(T)−H(T−z)
 
-has no counterexample in the stated finite tests but remains conjectural.
-Its precise missing step is an injection from all but one dominating set
-into the marked AB paths and reverse-seam repair paths. A reservation of
-one newborn insertion per old path needs a global exchange/Hall argument;
-cutwise positivity does not prove that argument.
+is now **PROVED**, together with `H(T)−d(G_z)≥2t_3(T−z)`.
+The former missing global exchange is supplied by the linked star theorem:
+all old paths and all but at most one dominating cut inject simultaneously
+into newborn paths. Cutwise positivity alone did not supply this step.
+Prescribed-defect constructors and unchanged-target replacements remain
+separate open obligations.
 
 ## 3. Complete a genuinely bipartite arithmetic grammar
 

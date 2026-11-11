@@ -1,10 +1,11 @@
-# A graph of path and domination fibres isolates the missing exchange lemma
+# A graph of path and domination fibres proves simultaneous reservation
 
 2026-11-11. **PROVED:** an exact defect decomposition, a constructive
-matching criterion, and the transitive cut-leaf lemma. **FINITE-EXACT:**
-the candidate component bound on all old tournaments through order five.
-**OPEN:** that bound in general, and the resulting quantitative domination
-inequality. No finite survival is promoted to a theorem.
+matching criterion, and the transitive cut-leaf lemma. The all-order
+component bound and quantitative domination inequality are now **PROVED**
+in [STARS.md](STARS.md), which uses the carrier defined here.
+**FINITE-EXACT:** the independent component controls through order five.
+The finite controls are not the proof; full Chan–Pak remains open.
 
 ## The inherited target and the new carrier
 
@@ -13,7 +14,7 @@ Use Session260's
 and [domination injection](../../session260_quasiperfect_chanpak_20261111/bridges/BIPARTITE_DEFECT.md).
 For U and a newborn z with z->A and B->z, let G be the bipartite graph
 whose cross edges are the old arcs a->b, a in A and b in B. The remaining
-quantitative question is
+quantitative inequality, proved by this note and STARS.md, is
 
     H(U+z) >= H(U)+d(G)-1.                              (1)
 
@@ -69,9 +70,17 @@ vertex has positive degree. These assignments use distinct newborn paths.
 They inject all old paths and all but at most one dominating cut into
 newborn paths, exactly the desired simultaneous reservation.
 
-The all-order statement tau<=1 is still **OPEN**. Equation (2) also
-shows it is sufficient, not logically necessary for (1): unused paths
-and surplus in other components could compensate for multiple trees.
+The all-order statement tau<=1 is proved in STARS.md: every closed tree
+is a star, and two closed stars cannot coexist. Equation (2) then proves
+(1). Equality holds exactly when there is one closed star, no unused
+newborn path, and every other component is either a closed unicyclic
+component or an open tree with exactly one stub. These conditions are
+necessary and sufficient because every summand of u+(1-tau)+E is
+nonnegative. They concern the literal graph, including every stub.
+
+Combining (1) with the inherited original-arc cut law yields the universal
+capacity bound `d(G)-1 <= sum_(a->b, a in A, b in B) K_ab`. Combining it
+with the inherited odd-cycle formula gives `H(U+z)-d(G)>=2*t_3(U)`.
 
 ## A rigid leaf lemma
 
@@ -98,9 +107,8 @@ sides cause no exception.
 
 For a cut leaf adjacent to P, this says all backward arcs relative to
 the order P must cross that cut. This gives a concrete place to seek an
-exchange: a second legal insertion slot not crossed by such an arc must
-produce additional fibre structure. Turning this observation into a
-cycle-or-stub lemma remains open.
+exchange. STARS.md completes it using canonical upper/lower cut maps,
+a maximal-backward-arc splice, and strict progress in cut inclusion.
 
 ## Hostile probes and recovery from older work
 
@@ -111,7 +119,7 @@ Even the weaker candidate restricting this phenomenon to transitive U
 is false. With rows `[6,12,8,1]`, A mask10 and B mask5, H(U)=5; a closed
 tree consists of path `(0,1,2,3)` and cuts1 and7, excluding cut B.
 Both are local failures of proposed matching arguments, not refutations
-of (1) or the tau<=1 conjecture.
+of (1) or the now-proved tau<=1 bound.
 
 The route was suggested by two older side branches: the July cut/cycle
 reflection

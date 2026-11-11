@@ -1,14 +1,21 @@
-# Quantitative defect: a positive original-arc cut and a remaining injection
+# Quantitative defect: a positive original-arc cut and the completed injection
 
-**Status: PROVED marked-cover decomposition, original-arc cut law, reverse-capacity circulation, selective fibre bound, and spectator transport. The two requested global quantitative bounds remain OPEN; finite evidence is explicitly separated.**
+**Status: PROVED marked-cover decomposition, original-arc cut law, reverse-capacity circulation, selective fibre bound, and spectator transport. The two formerly open global quantitative bounds are now PROVED by the subsequent exchange theorem linked below; the original finite evidence remains separately labelled.**
 
-## 1. The sharper target
+**Forward status repair, 11 November 2026:**
+[the closed-tree exchange theorem](../../multiplicand_saturation_chanpak_20261111/exchange/STARS.md)
+proves (Q) for every tournament and cut by a simultaneous injection of
+all old Hamilton paths and all but at most one dominating cut. Consequently
+`D≥H(U)−1≥2t_3(U)`. The historical calculations and former missing step
+below are retained as provenance; neither bound remains conjectural.
+
+## 1. The sharper target, now proved
 
 Use BIPARTITE_DEFECT.md's notation: U=T-z, A=N_T^+(z), B=N_T^-(z), and G_z has cross edge ab iff a in A, b in B and a->b in U. Write
 
     D=H(T)-d(G_z),  Delta=H(T)-H(U).
 
-The proposed stronger inequality is
+The stronger inequality, now proved by the linked exchange theorem, is
 
     D >= H(U)-1,
 
@@ -16,9 +23,9 @@ or equivalently
 
     d(G_z)-1 <= Delta.                                    (Q)
 
-The second proposed bound is D>=2t_3(U). It follows from (Q), because OCF gives H(U)-1>=2t_3(U). Neither follows merely from the already proved nonnegative cut fibres: those fibres prove D>=0, not (Q).
+The second proved bound is D>=2t_3(U). It follows from (Q), because OCF gives H(U)-1>=2t_3(U). Neither follows merely from the earlier nonnegative cut fibres: those fibres prove D>=0, not (Q).
 
-No counterexample was found. The receipt records exhaustive rooted tournaments through order6 and seeded random rooted tournaments of orders7 through10. This is evidence, not a proof. Both bounds are sharp already on a cyclic example: the2K2 input with compatible choices of its two shore orders has H(T)=13, d(G_z)=9, H(U)=5, and t_3(U)=2, so both bounds are equalities.
+The original receipt records exhaustive rooted tournaments through order6 and seeded random rooted tournaments of orders7 through10, without a counterexample. That receipt is finite evidence; the subsequent exchange argument supplies the all-order proof. Both bounds are sharp already on a cyclic example: the2K2 input with compatible choices of its two shore orders has H(T)=13, d(G_z)=9, H(U)=5, and t_3(U)=2, so both bounds are equalities.
 
 ## 2. An exact subtraction-free formula for Delta
 
@@ -127,7 +134,7 @@ In particular the proposed slack Q=Delta-(d-1) transforms as
 
 Thus (Q) is stable under these spectator products whenever it holds initially. This is a real graph operation with a measured change, but it moves the defect in the wrong direction for target realization. Transitive spectators have k=1 and change nothing.
 
-## 6. Exact remaining injection problem and stopping point
+## 6. The former injection problem, now closed
 
 The marked-cover proof turns (Q) into the concrete question
 
@@ -138,8 +145,14 @@ Equivalently, seek a simultaneous injection of all old Hamilton paths and all bu
 
 The obstruction to simply asserting this is precise: different dominating cuts can use insertions of different old paths, and a naive canonical choice does not rule out consuming all legal slots of more than one old path. The nonnegative fibre proof does not supply the requisite global matching or exchange lemma. Neither a dominating-set injection into (9), nor a Hall condition controlling the reserved paths, was obtained in this focused pass.
 
-Therefore (Q) and its triangle-count consequence remain OPEN here. The result of the pass is the exact positive original-arc formula, its circulation explanation, the selected-fibre lower bound, and the lawful transport law, rather than a claim promoted from finite survival.
+This was the stopping point of the original pass. The subsequent exchange
+proof now closes it: the literal path/cut incidence graph has at most one
+closed tree component, every such tree is a star, and componentwise matching
+gives exactly the simultaneous injection required by (9). Thus (Q) and
+its triangle-count consequence are **PROVED**. The positive original-arc
+formula, circulation explanation, selected-fibre bound, and transport law
+remain valid independently; the original finite receipt is unchanged.
 
 ## 7. Reproduction
 
-Run `python3 05-knowledge/results/session260_quasiperfect_chanpak_20261111/bridges/defect_quantitative_check.py`. The default exhaustive range is orders1 through6. `--max-order 5` shortens it. The script checks both conjectural inequalities, separately checks every old-arc weight and every newborn cut on bases through order4, and adds200 seeded random tournaments at each order7 through10. The receipt names these scopes and labels the inequalities as conjectural.
+Run `python3 05-knowledge/results/session260_quasiperfect_chanpak_20261111/bridges/defect_quantitative_check.py`. The default exhaustive range is orders1 through6. `--max-order 5` shortens it. The script checks both inequalities, separately checks every old-arc weight and every newborn cut on bases through order4, and adds200 seeded random tournaments at each order7 through10. The unchanged historical receipt labels the inequalities as conjectural; the forward proof status above supersedes that label.

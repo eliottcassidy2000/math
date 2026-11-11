@@ -68,3 +68,33 @@ Cards used: **Expose the obstruction first, choose the scale second**;
 **Keep observer, recurrence class, and finite head**; **Correct the object
 before sharpening the technique**. Any proposed new card needs evidence
 from distinct threads and a clear failure boundary.
+
+## Resolved board and the next boundaries
+
+* Exponent cones now give a complete criterion: rank at most one is exactly
+  eventual attainable-prefix saturation. This closes the anchor, including
+  related seeds, unit seeds, and multiple populated extreme rays.
+* The first positive layer supplies an exact serial clock; competing
+  populated rays supply unequal dyadic clocks. Both force holes negligible
+  relative to the full maximum. Bulk growth cannot repair an exposed face.
+* Fixed grades admit a finite coset/interval compiler even with aliases.
+  The equal-parent penalty survives in its recursion; this explains why
+  arithmetic strictness must not be imported into unrestricted graph joins.
+* Product factorization and nonunit offsets complete all four missing35
+  levels. Actual graph interfaces replace the unavailable scalar addition
+  transfer; the original strict additive grammar is not claimed to embed.
+* Offset transport now exists on three repeatable carriers. Incoming
+  Session261 module replacement reduces here to the two coordinates H,Q2,
+  because every higher run coefficient vanishes. Uniform source coverage,
+  including the finite heads below each carrier threshold, remains open.
+* The positive-cut lane changed representation to the full incidence of
+  paths and dominating cuts. Component excess led to a strict inclusion
+  argument, proving the all-order simultaneous injection and both formerly
+  open quantitative bounds. These lower bounds alone do not prescribe an
+  exact target increment.
+
+The history loop was productive at the point where scalar growth failed:
+protected faces supplied missing arithmetic coordinates, while cut/cycle
+and component-excess ideas supplied the missing combinatorial incidence.
+The surviving shared lesson is to retain the object on which growth acts;
+no asserted equivalence between the two grammars follows from that method.

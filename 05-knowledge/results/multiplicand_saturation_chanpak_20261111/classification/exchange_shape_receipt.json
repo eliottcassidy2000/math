@@ -1,5 +1,5 @@
 {
-  "status": "FINITE-EXACT scout; star theorem OPEN",
+  "status": "FINITE-EXACT scout; separate all-order proof in ../exchange/STARS.md",
   "universe": {
     "seed": 125,
     "orders": [
@@ -219,5 +219,5 @@
       }
     ]
   },
-  "source_sha256": "122f24f88486c4c788076601fdbe1fd952abb2e609d51e0cadbe826401b40b7b"
+  "source_sha256": "1109203c47e0ad353ee3e2d49db82d477f712e52600d310761b36a6568d6bfab"
 }
