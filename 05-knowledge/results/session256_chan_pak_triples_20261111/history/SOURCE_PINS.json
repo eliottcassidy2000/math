@@ -1,0 +1,106 @@
+{
+  "reference_checkout_head": "1b91742ce55a202b73c80d56561ba56d00b503a6",
+  "scope": "historical local read-only sources; no freshness claim for current main",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-2596-modular-free-factor-farey-gram-owner-cocycle.md",
+      "sha256": "6adabe6c52dcd15bd0b73d4349470e6a923b1776d0741b7ecda0dbc407873114"
+    },
+    {
+      "path": "01-canon/theorems/THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+      "sha256": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391"
+    },
+    {
+      "path": "01-canon/theorems/THM-3334-berggren-parabolic-spine-gaussian-collision-torsor.md",
+      "sha256": "c4326fc09841f79adf685c321d32410354d9cd43b1810a197ade3c1e2d832e70"
+    },
+    {
+      "path": "01-canon/theorems/THM-3335-square-triangular-pell-markov-pythagorean-selector.md",
+      "sha256": "8b051336ae39ee499e5e81347006c6570a5b0fbfadb27edbd748cb0b90e10d5d"
+    },
+    {
+      "path": "01-canon/theorems/THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md",
+      "sha256": "b9f8d421b4347dc58aed70604c47d4c310f0aecc5620f01ec2729ad980ba5f84"
+    },
+    {
+      "path": "01-canon/theorems/THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction.md",
+      "sha256": "1e4aa8cd9d6cc9bf342328a4af0e5db8cd7eefb51eea08460d03f2c6410cee51"
+    },
+    {
+      "path": "01-canon/theorems/THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors.md",
+      "sha256": "260872d26c97dc4b2a8bab446dc98aedaa0c945c49c90a7d72dddfb5491c65af"
+    },
+    {
+      "path": "01-canon/theorems/THM-3345-prime-xor-ancestry-path-groupoid-and-source-dependent-berggren-cost.md",
+      "sha256": "878ef43c34f8a69f2f02abfb6df67aa4a5bf948d8e25bd293b4884eeb62b250b"
+    },
+    {
+      "path": "01-canon/theorems/THM-3353-split-prime-parabolic-branch-transplant-and-unary-transducer-compiler.md",
+      "sha256": "efd309bc760e3192fa65511256f760a450d564ac52c54bfe31da7170e5faec62"
+    },
+    {
+      "path": "01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md",
+      "sha256": "ba24accf81d123d76ceee2ea7332d394d9ff23d6c9a0d47c7c76ab5b3ad9d446"
+    },
+    {
+      "path": "01-canon/theorems/THM-3358-admissible-composite-parabolic-compiler-and-hensel-normal-offset-atlas.md",
+      "sha256": "4ea8a64c2b435ca738e4b5f0ef54ac34d9160b01d0c5ddc1cc4c52830955a1e3"
+    },
+    {
+      "path": "01-canon/theorems/THM-3362-odd-berggren-determinant-ray-factorial-closure.md",
+      "sha256": "88f03ca5942f7d2eac9a6392714425099de06b982fd887dd63ea6873caf792f3"
+    },
+    {
+      "path": "01-canon/theorems/THM-3375-berggren-positive-two-cube-pell-ray.md",
+      "sha256": "e0dbfd5ec258a63a20215e64dc34b78cfa042a5560d7072745e2c27d1370b5b2"
+    },
+    {
+      "path": "01-canon/theorems/THM-3382-fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses.md",
+      "sha256": "bae74f2b5503a36c59996db3ad310c819c8597e0550c6cd9ef53719dcaa5926f"
+    },
+    {
+      "path": "01-canon/theorems/THM-3439-near-identity-grassmannian-hensel-orbit-law.md",
+      "sha256": "dbde615e4e98e7ef9190078371814aec4d7876583bfd9fd23247838cd2e96b1b"
+    },
+    {
+      "path": "01-canon/theorems/THM-3459-rule30-ternary-intersection-factorial-truth-lift-and-keller-boundaries.md",
+      "sha256": "01ebac06408bd706a47a0739790364e7e7581267fe43ea2d9b2f814773f4bcb2"
+    },
+    {
+      "path": "01-canon/theorems/THM-3471-rule30-motzkin-strip-circuit-and-innovation-carry-spectrum.md",
+      "sha256": "4bf76743f1b6c098d41ce909a94511f2cb8192dba64f3651b9769fd48895666b"
+    },
+    {
+      "path": "01-canon/theorems/THM-3497-berggren-t4-calibration-languages-and-harmonic-splitting.md",
+      "sha256": "3e10d9fff191a6e7c54528c94bca341457a2bccf5acdf5b1ba9a8d3d1fac87af"
+    },
+    {
+      "path": "01-canon/theorems/THM-3536-berggren-angle-languages-signed-c4-and-harmonic-density.md",
+      "sha256": "b9583abc50a59748ab962b804133180ae0c9f1589414cfa6c249d04026377965"
+    },
+    {
+      "path": "01-canon/theorems/THM-3646-berggren-fixed107-mordell-rank-exactly-three.md",
+      "sha256": "75dbdc3cc78081b1564e16012f4f2577adea27b8965a496fa3aa1fc1fea67673"
+    },
+    {
+      "path": "01-canon/theorems/THM-3656-berggren-two-cube-frobenian-three-halves-sieve-bound.md",
+      "sha256": "890c25d4b6c4485ba1fe0563a7d21271a10daba4efe67504b251feb5fe57a1d2"
+    },
+    {
+      "path": "01-canon/theorems/THM-3756-odd-square-ordinal-berggren-affine-descent.md",
+      "sha256": "eb4982e2971ae46d54102724aacc208bce7682f48ae941b15588a22f69029ea9"
+    },
+    {
+      "path": "01-canon/theorems/THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge.md",
+      "sha256": "5ddfc01ae446f3d20e5d8a9ce362c76c072da07745c1c405fe882173efcda4f5"
+    },
+    {
+      "path": "01-canon/theorems/THM-4059-stern-brocot-depth-packet-character-and-divisor-star-convolution.md",
+      "sha256": "dd969ba771e1311ed7b0eb883f8145500729655e4d8c74fb3bc802ff827d9ee6"
+    },
+    {
+      "path": "07-reflections/keller-renewal-pell57-spinor-pythagorean-plane-codex-20260816.md",
+      "sha256": "845384ce97a8dfe3972752c8501bf1833710eb92b1c28d0bbfa4658018714609"
+    }
+  ]
+}

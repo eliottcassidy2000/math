@@ -1,0 +1,98 @@
+{
+  "addresses_through_depth_6": 1093,
+  "direct_morphic_graphs": 32,
+  "all_cuts_through_length_8": 511,
+  "examples": [
+    {
+      "address": "",
+      "m": 2,
+      "n": 1,
+      "word": "OI",
+      "H": 3
+    },
+    {
+      "address": "A",
+      "m": 3,
+      "n": 2,
+      "word": "OII",
+      "H": 5
+    },
+    {
+      "address": "B",
+      "m": 5,
+      "n": 2,
+      "word": "OIOIO",
+      "H": 9
+    },
+    {
+      "address": "C",
+      "m": 4,
+      "n": 1,
+      "word": "OOOI",
+      "H": 9
+    },
+    {
+      "address": "AA",
+      "m": 4,
+      "n": 3,
+      "word": "OIII",
+      "H": 9
+    },
+    {
+      "address": "AB",
+      "m": 8,
+      "n": 3,
+      "word": "OIOIOOIO",
+      "H": 53
+    },
+    {
+      "address": "AC",
+      "m": 7,
+      "n": 2,
+      "word": "OOOIOOI",
+      "H": 69
+    },
+    {
+      "address": "BA",
+      "m": 8,
+      "n": 5,
+      "word": "OIIOIIOI",
+      "H": 107
+    },
+    {
+      "address": "BB",
+      "m": 12,
+      "n": 5,
+      "word": "OIOIOOIOIOOI",
+      "H": 1615
+    },
+    {
+      "address": "BC",
+      "m": 9,
+      "n": 2,
+      "word": "OOOIOOOIO",
+      "H": 129
+    },
+    {
+      "address": "CA",
+      "m": 7,
+      "n": 4,
+      "word": "OIOIOII",
+      "H": 73
+    },
+    {
+      "address": "CB",
+      "m": 9,
+      "n": 4,
+      "word": "OIOIOIOIO",
+      "H": 117
+    },
+    {
+      "address": "CC",
+      "m": 6,
+      "n": 1,
+      "word": "OOOOOI",
+      "H": 33
+    }
+  ]
+}

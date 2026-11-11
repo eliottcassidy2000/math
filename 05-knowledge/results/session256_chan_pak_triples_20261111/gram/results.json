@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "scope": "new claims only; proofs carry the unbounded statements",
+  "counts": {
+    "independent_actual_graph_counts": 125,
+    "exact_rank_controls": 6,
+    "packing_two_formula_controls": 196,
+    "recurrence_families": 42
+  },
+  "rank_controls": [
+    {
+      "observer_order": 1,
+      "rank": 2,
+      "positive_gram_determinant": 8
+    },
+    {
+      "observer_order": 2,
+      "rank": 3,
+      "positive_gram_determinant": 4608
+    },
+    {
+      "observer_order": 3,
+      "rank": 4,
+      "positive_gram_determinant": 931627008
+    },
+    {
+      "observer_order": 4,
+      "rank": 5,
+      "positive_gram_determinant": 175327960419532800
+    },
+    {
+      "observer_order": 5,
+      "rank": 6,
+      "positive_gram_determinant": 63887269228565653094400000000
+    },
+    {
+      "observer_order": 6,
+      "rank": 7,
+      "positive_gram_determinant": 83611476904821053832715160172625920000000000
+    }
+  ],
+  "recurrences": [
+    {
+      "c": 1,
+      "coefficients_low_to_high": [
+        2,
+        -3,
+        1
+      ]
+    },
+    {
+      "c": 2,
+      "coefficients_low_to_high": [
+        -6,
+        11,
+        -6,
+        1
+      ]
+    },
+    {
+      "c": 3,
+      "coefficients_low_to_high": [
+        24,
+        -50,
+        35,
+        -10,
+        1
+      ]
+    },
+    {
+      "c": 4,
+      "coefficients_low_to_high": [
+        -120,
+        274,
+        -225,
+        85,
+        -15,
+        1
+      ]
+    },
+    {
+      "c": 5,
+      "coefficients_low_to_high": [
+        720,
+        -1764,
+        1624,
+        -735,
+        175,
+        -21,
+        1
+      ]
+    },
+    {
+      "c": 6,
+      "coefficients_low_to_high": [
+        -5040,
+        13068,
+        -13132,
+        6769,
+        -1960,
+        322,
+        -28,
+        1
+      ]
+    }
+  ],
+  "hostile_control": {
+    "graph": "C3[TT2,TT2,TT2]",
+    "actual_H": 45,
+    "illegal_intercyclic_value": 29
+  },
+  "boundaries": [
+    "Gram vectors must be realized by tournaments.",
+    "Fixed observer rank does not bound moving-observer rank.",
+    "Singleton observer norm has discriminant 2, not a Pythagorean norm."
+  ]
+}

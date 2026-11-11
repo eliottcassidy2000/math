@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "formal_signature_dimension": 8,
+  "independent_probe_count": 8,
+  "consistency_probe_count": 1,
+  "basis_grid_equalities": 2048,
+  "invisible_j_difference": true,
+  "scope": "formal response formula; no new graph coverage claim"
+}
