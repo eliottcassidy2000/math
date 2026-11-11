@@ -1,0 +1,3 @@
+# tournament on the nonzero vectors 1..31 of Z_2^5; pairs u < v in lexicographic order; bit k of x is 1 iff v -> u
+# all 155 lines cyclic; the 64 planes disjoint from the line {1, 2, 3} and the 7 planes containing it are odd
+x = 41679977862773983506071973134976237750772691395025669723353651249671609973751926261724621776698018699897531491720928109879227262236277516970

@@ -1,0 +1,6 @@
+n = 4: triple out-intersection spectrum of CD_n: [(0, 28), (1, 336), (2, 84), (3, 7)]
+n = 4: triple out-intersection spectrum of the THM-448 tower: [(0, 28), (1, 336), (2, 84), (3, 7)]
+        (THM-448 (c) records for T_31: {0:28, 1:84, 2:252, 3:3192, 4:812, 5:84, 6:28, 7:15})
+n = 5: triple out-intersection spectrum of CD_n: [(0, 28), (1, 84), (2, 252), (3, 3192), (4, 812), (5, 84), (6, 28), (7, 15)]
+n = 5: triple out-intersection spectrum of the THM-448 tower: [(0, 28), (1, 84), (2, 252), (3, 3192), (4, 812), (5, 84), (6, 28), (7, 15)]
+        (THM-448 (c) records for T_31: {0:28, 1:84, 2:252, 3:3192, 4:812, 5:84, 6:28, 7:15})

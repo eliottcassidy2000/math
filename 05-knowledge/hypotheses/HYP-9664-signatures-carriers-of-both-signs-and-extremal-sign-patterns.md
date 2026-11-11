@@ -1,22 +1,28 @@
 ---
 id: HYP-9664
-title: "Signatures, carriers of both signs and extremal sign patterns. (A) Carriers of both signs: for every odd d >= 3 there are two-port kernels with at most two visits of the forms (1, 2^u, 0, d 2^w) and (-1, -2^u, 0, d 2^w), so that the plus grid 1 + 2^s + d 2^(r+s) and the minus grid d 2^(r+s) - 2^s - 1 are path counts for all large r, s. (B) The share of hyperbolic kernels among the two-port kernels with at most two visits tends to a positive limit. (C) For every n >= 4 the Cayley-Dickson sign tournament minimises the number of even zero-sum 4-sets among the tournaments on PG(n-1, 2) with all lines cyclic, the minimum being 42 [n-1 choose 3]_2, and at most [n choose 3]_2 - 7 [n-1 choose 3]_2 planes are odd at once. (D) Module-side sources for a fixed grid exist at finitely many levels only: for fixed odd d there are finitely many s with a tournament X, H(X) = 2^s + 1 and odd part of Pi_2(X) dividing d."
+title: "Signatures, carriers of both signs and extremal sign patterns. (A) Carriers of both signs: for every odd d >= 3 there are two-port kernels with at most two visits of the forms (1, 2^u, 0, d 2^w) and (-1, -2^u, 0, d 2^w), so that the plus grid 1 + 2^s + d 2^(r+s) and the minus grid d 2^(r+s) - 2^s - 1 are path counts for all large r, s. (B) The share of hyperbolic kernels among the two-port kernels with at most two visits tends to a positive limit. (C) [first form REFUTED: the Cayley-Dickson sign tournament is not extremal for n >= 5.] Open question: the largest number of odd planes of a tournament on PG(n-1, 2); it is 8 for n = 4 and between 71 and 82 for n = 5. (D) Module-side sources for a fixed grid exist at finitely many levels only: for fixed odd d there are finitely many s with a tournament X, H(X) = 2^s + 1 and odd part of Pi_2(X) dividing d."
 status: >
-  OPEN (all four parts). PRE-AUDIT DRAFT.
-  (A) FINITE-EXACT evidence: plus carriers d = 3, 21 (order 8; KNOWN, OFFSET_TRANSPORT.md), d = 35 (KNOWN, same
-  source), d = 43 (THM-5130 (F), a port of a unit root of order 9), d = 145 (unaudited, S22); minus carrier d = 31
-  (THM-5133 (C), order 8); the census of all two-port kernels of order 9 adds none on either side beyond the known
-  d = 35. No carrier for d = 9 among kernels of order at most 9 nor among unit roots of order at most 10 (S22). The hypothesis does not imply
-  Chan-Pak: a carrier covers its grid only from some level and some r on. For d = 1 the ranges must avoid
-  N+(1,1,1) = 7, N+(1,2,2) = 21 and N-(1,1,3) = 7.
+  (A), (B), (D) OPEN. (C) REFUTED in its first form; restated as an open question. Audited with THM-5133 (PASS WITH
+  CORRECTIONS, MISTAKE-762).
+  (A) FINITE-EXACT evidence: plus carriers d = 3, 21, 35 (orders 8, 8, 9; KNOWN, OFFSET_TRANSPORT.md), d = 43
+  (THM-5130 (H3)(iii), a port of a unit root of order 9), d = 145 (unaudited, S22); minus carrier d = 31
+  (THM-5133 (C), order 8). The census of all two-port kernels of order at most 9 has no other value of d on either
+  side, and none for d = 9 (nor among unit roots of order at most 10, S22). The hypothesis does not imply Chan-Pak:
+  a carrier covers its grid only from some level and some r on. The ranges must avoid N+(1,1,1) = 7,
+  N+(1,2,2) = 21, N-(1,1,3) = 7 and N-(3,2,1) = 21.
   (B) FINITE-EXACT: the share is 0, 0, 2.5, 9.8, 18.7, 27.2, 34.8 per cent at orders 3..9 (THM-5133 (C)). No model.
-  (C) FINITE-EXACT for n = 4 (THM-5133 (F), exhaustive linear algebra): the minimum is 42 and the bound on odd planes
-  is 8 = 15 - 7. For n = 5, 6 only the values of CD_n are known (630 and 6510 even 4-sets; 50 odd planes of 155 at
-  n = 5). Without the condition on lines the minimum at n = 4 is 21, not 42.
+  (C) The first form, pushed with the pre-audit checkpoint bdb2f8edd8, said: for every n >= 4 the Cayley-Dickson
+  sign tournament minimises the number of even zero-sum 4-sets among the tournaments on PG(n-1, 2) with all lines
+  cyclic, and at most [n choose 3]_2 - 7 [n-1 choose 3]_2 planes are odd at once. It holds for n = 4
+  (THM-5133 (F2), (F5): 8 planes, 42 even 4-sets, tied with the pullback) and is FALSE for n = 5, 6: the pullback of
+  the octonions has 64 and 512 odd planes against 50 and 310, and on PG(4, 2) there are 71 odd planes with all
+  lines cyclic and 504 even 4-sets against 630 (THM-5133 (F6), (F7); certificates recounted by the author and by
+  the audit). Upper bound 82 at n = 5 (audit: 31 solids, at most 8 odd planes each, every plane in 3 solids).
   (D) FINITE-EXACT evidence for d = 9: among all classes of order at most 9 only the levels s = 1, 2, 3, 7; among
-  one-apex words of chain length at most 22 only s = 1, 2 (pre-registered predictions F1, F2 of the opposite sign
-  FAILED). For closings with a transitive module the statement is an S-unit equation in 2 and 3 (finitely many
-  solutions for each pair, CITED, not effective). Orders 10 and more are unexplored for s >= 7.
+  one-apex words only s = 1, 2 (all levels up to 21; pre-registered predictions F1, F2 of the opposite sign
+  FAILED). For closings with a transitive module and a nonempty selected set the statement is an S-unit equation in
+  2 and 3 (finitely many solutions for each pair, CITED, not effective). Orders 10 and more are unexplored for
+  s >= 7.
 session: kind-pasteur-2026-11-11-S23
 source: 05-knowledge/results/kps_s23_flip_spin_kernels_20261111/README.md
 related:
@@ -36,19 +42,21 @@ for every odd `c`, one line at a time. A carrier is a uniform family of them: on
 modules, a whole grid. The hypothesis is that the supply of carriers is complete on both sides. What would refute
 it: a proof that some `d` has no carrier (for instance through the finiteness of the admissible visit matrices).
 What would make it useful: carriers whose ranges start at level 2, since every odd `N` has one address of level at
-least 2.
+least 2. The evidence is thin: four values of `d` through order 9, against a certified seed and anti-seed for every
+odd `c <= 4097` (THM-5130 (E)).
 
 ## (B) Signature statistics
 
 The sign of `det G` separates kernels whose path count is a sum of two products from those where it is a
 difference. The data do not yet distinguish a limit below 1/2 from 1/2.
 
-## (C) Extremal sign patterns
+## (C) The largest number of odd planes
 
-On `PG(3, 2)` the sedenions are one of two extremal families (THM-5133 (F2): 120 sets of type "a plane and the
-planes through a point off it", 15 of type "the planes off a point"). The hypothesis says that the doubling stays
-extremal in every dimension. A first test is `n = 5`: decide by linear algebra over `F_2` whether more than 50 of
-the 155 planes of `PG(4, 2)` can be odd at once.
+On `PG(3, 2)` the answer is 8, in exactly 135 ways of two types: the sedenion type and the pullback type. From
+`n = 5` on the pullback wins, and it can be improved inside its free part (71 at `n = 5`). Open: the exact maximum
+on `PG(4, 2)` (between 71 and 82), its growth with `n`, and the least number of even 4-sets with all lines cyclic
+(at most 504 at `n = 5`, at most 5,298 at `n = 6`). Lesson recorded in MISTAKE-762: the first form of this part
+was filed without running the test it proposed, which takes a fraction of a second.
 
 ## (D) Fermat modules
 

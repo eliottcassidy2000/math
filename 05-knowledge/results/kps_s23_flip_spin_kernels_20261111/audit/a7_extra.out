@@ -1,0 +1,8 @@
+feasible 8-sets recomputed by direct enumeration of all C(15,8) = 6435 subsets: 135
+a. type B (120 sets): per-plane defects (sorted) -> number of sets: [((0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 6, 6, 6, 6), 120)]
+   example: odd planes [0, 1, 2, 3, 4, 5, 6, 7]; other planes [8, 9, 10, 11, 12, 13, 14]; per other plane the number of odd 4-sets: [1, 1, 1, 1, 1, 1, 1]
+b. type A (one set, 2^19 patterns): patterns with 21 even 4-sets: 64; per-plane defects: [((0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3), 64)]
+   explicit tournament with 21 even 4-sets (direct recount of cyclic triangles: 21 even 4-sets); cyclic lines 4/35; scores [6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 14]; H = 24632285
+   arc word of this audit witness (bit i = pair i in lexicographic order of (u < v), 1 iff u -> v): 1514065058981995063873372412469
+c. sedenion sign tournament: per-plane defects [0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 6, 6, 6, 6]; odd planes 8; type B: plane with normal 8 (points (1, 2, 3, 4, 5, 6, 7)) and the seven planes through the point 8; even 4-sets (direct) 42; cyclic lines 35; H = 198335025
+d. the minimiser of runs/cd_minimum.txt: even 4-sets by direct recount 21; per-plane defects [0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3]; cyclic lines 6/35; scores [5, 5, 5, 5, 5, 6, 6, 7, 8, 8, 8, 8, 8, 8, 13]; H = 46700719

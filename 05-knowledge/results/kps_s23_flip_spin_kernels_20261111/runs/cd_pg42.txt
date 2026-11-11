@@ -1,0 +1,6 @@
+planes disjoint from the line {1,2,3}: 64; containing it: 7; all odd with all lines cyclic: True (rank 420 of 465)
+further planes that can be made odd as well: 0
+lines 155, cyclic 155; zero-sum 4-sets 1085, even 504; planes 155, by number of even 4-sets [(0, 71), (6, 84)]; scores [15]
+odd planes by number of points on the line {1, 2, 3}: [(0, 64), (3, 7)]
+CD_5: 50 odd planes of 155; further planes that could be made odd as well: 0
+greedy sets of odd planes (all lines cyclic) over 2000 random orders, by size: [(48, 4), (49, 6), (50, 28), (51, 86), (52, 158), (53, 235), (54, 323), (55, 364), (56, 287), (57, 244), (58, 143), (59, 82), (60, 23), (61, 13), (62, 3), (63, 1)]

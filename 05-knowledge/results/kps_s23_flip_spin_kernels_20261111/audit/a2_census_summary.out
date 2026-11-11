@@ -1,0 +1,23 @@
+order | all | <= 2 visits | join-like | elliptic | parabolic (not join-like) | hyperbolic | det = 0 in all (parabolic by the DEFINITION) | max visits seen (bound m - 1)
+3 | 12 | 12 | 6 | 6 | 0 | 0 | 6 | 2
+    share of hyperbolic among at-most-two-visit kernels: 0.00 per cent
+4 | 48 | 46 | 12 | 22 | 12 | 0 | 24 | 3
+    share of hyperbolic among at-most-two-visit kernels: 0.00 per cent
+5 | 240 | 160 | 26 | 76 | 54 | 4 | 80 | 4
+    share of hyperbolic among at-most-two-visit kernels: 2.50 per cent
+6 | 1680 | 630 | 60 | 290 | 218 | 62 | 278 | 5
+    share of hyperbolic among at-most-two-visit kernels: 9.84 per cent
+7 | 19152 | 2892 | 162 | 1242 | 946 | 542 | 1108 | 6
+    share of hyperbolic among at-most-two-visit kernels: 18.74 per cent
+hyperbolic kernels of order 5: [(209, 0, 3, 11, 6, 6, 3), (209, 2, 4, 11, 6, 6, 3), (209, 3, 0, 11, 6, 6, 3), (209, 4, 2, 11, 6, 6, 3)]
+discriminants 4 (N12^2 - N11 N22) of symmetric two-visit kernels (N12 = N21, N22 > 0), orders <= 6:
+   negative: [-4, -8, -12, -16, -20, -24, -32, -36, -44, -72]
+   zero: 24 kernels
+   positive: [8, 12, 20, 24, 88, 108, 140, 148]
+carriers (1, 2^u, 0, d 2^w) at orders <= 7 (either port order): {}
+anti-carriers (-1, -2^u, 0, d 2^w) at orders <= 7: {}
+order 3: my rows 12, author's rows 12, rows that differ (maxi, maxj, N11, N12, N21, N22, det, two): 0
+order 4: my rows 48, author's rows 48, rows that differ (maxi, maxj, N11, N12, N21, N22, det, two): 0
+order 5: my rows 240, author's rows 240, rows that differ (maxi, maxj, N11, N12, N21, N22, det, two): 0
+order 6: my rows 1680, author's rows 1680, rows that differ (maxi, maxj, N11, N12, N21, N22, det, two): 0
+author file ker_7.txt not present

@@ -1,0 +1,30 @@
+order 3: DP vs plain walk enumeration on 6 kernels (x < y): 0 differences
+order 4: DP vs plain walk enumeration on 24 kernels (x < y): 0 differences
+order 5: DP vs plain walk enumeration on 120 kernels (x < y): 0 differences
+order 6: DP vs plain walk enumeration on 840 kernels (x < y): 0 differences
+order 7: DP vs plain walk enumeration on 9576 kernels (x < y): 0 differences
+order 6 (own classes, own DP; 0 s): all 1680 | <= 2 visits 630 | join-like 60 | elliptic 290 | parabolic 218 | hyperbolic 62 ; equal to the README row: True
+   share of hyperbolic: 9.8 per cent
+   distinct d among plus carriers: [] ; among minus carriers: []
+order 7 (own classes, own DP; 0 s): all 19152 | <= 2 visits 2892 | join-like 162 | elliptic 1242 | parabolic 946 | hyperbolic 542 ; equal to the README row: True
+   share of hyperbolic: 18.7 per cent
+   distinct d among plus carriers: [] ; among minus carriers: []
+order 8 (own classes, own DP; 11 s): all 385280 | <= 2 visits 16962 | join-like 602 | elliptic 6732 | parabolic 5008 | hyperbolic 4620 ; equal to the README row: True
+   share of hyperbolic: 27.2 per cent
+   MINUS carrier d = 31 (u = 4, w = 1): 2 (class, ordered ports) occurrences; first: code 71600385 ports (0, 7)
+   plus carrier d = 3 (u = 4, w = 3): 2 (class, ordered ports) occurrences; first: code 71598849 ports (0, 6)
+   plus carrier d = 21 (u = 2, w = 1): 2 (class, ordered ports) occurrences; first: code 172294913 ports (7, 0)
+   distinct d among plus carriers: [3, 21] ; among minus carriers: [31]
+order 9 (own classes, own DP; 170 s): all 13790592 | <= 2 visits 148596 | join-like 3804 | elliptic 53804 | parabolic 39306 | hyperbolic 51682 ; equal to the README row: True
+   share of hyperbolic: 34.8 per cent
+   MINUS carrier d = 31 (u = 4, w = 1): 4 (class, ordered ports) occurrences; first: code 2216825345 ports (0, 7)
+   MINUS carrier d = 31 (u = 4, w = 2): 4 (class, ordered ports) occurrences; first: code 6511792641 ports (0, 7)
+   MINUS carrier d = 31 (u = 5, w = 2): 4 (class, ordered ports) occurrences; first: code 36576567300 ports (6, 0)
+   plus carrier d = 3 (u = 4, w = 3): 4 (class, ordered ports) occurrences; first: code 9739370753 ports (7, 0)
+   plus carrier d = 3 (u = 4, w = 4): 4 (class, ordered ports) occurrences; first: code 44304433665 ports (8, 0)
+   plus carrier d = 3 (u = 5, w = 4): 4 (class, ordered ports) occurrences; first: code 36591304961 ports (6, 0)
+   plus carrier d = 21 (u = 2, w = 1): 4 (class, ordered ports) occurrences; first: code 9739241474 ports (0, 7)
+   plus carrier d = 21 (u = 2, w = 2): 4 (class, ordered ports) occurrences; first: code 36591175682 ports (0, 6)
+   plus carrier d = 21 (u = 3, w = 2): 4 (class, ordered ports) occurrences; first: code 36780146946 ports (0, 8)
+   plus carrier d = 35 (u = 5, w = 0): 2 (class, ordered ports) occurrences; first: code 43100733697 ports (8, 0)
+   distinct d among plus carriers: [3, 21, 35] ; among minus carriers: [31]

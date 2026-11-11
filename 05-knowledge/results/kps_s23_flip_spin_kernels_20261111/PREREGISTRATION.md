@@ -115,3 +115,17 @@ Caveats, in the direction of less credit:
 4. The first run of E1 read the files `cls9_1.txt ... cls9_9.txt` (orders 1..9 of one generator run) as nine pieces
    of order 9: 7,412 duplicate rows, a wrong class count (206,360 for 198,948). No table changed; the stored run is
    the corrected one.
+
+## Audit notes (added 2026-11-11 after the independent audit, `audit/AUDIT.md`; nothing above was changed)
+
+The audit confirms that the first 84 lines are byte-identical to the version of commit b91157e81d and that the six
+outcome labels are right. Further caveats it requires:
+
+5. K2 was derivable by hand exactly like K1: working claims 1 and 2 of this file give
+   `H(C_3[1, A => B, 1]) = H H' + Pi_2 Pi_2'`, the form of discriminant -4.
+6. C1 was already in canon: the sign tournament of the sedenions is `T_15` of THM-448 (2026-06-09), doubly regular
+   there, and the Hadamard property of the Cayley-Dickson sign table is in the literature (Kivunge 2013). C1 was a
+   prediction only in the sense that I had not recognised the tournament.
+7. F2 as worded ("chain length at most 22") covers every one-apex word at the levels 3..21, since `H = 2^s + 1`
+   forces length at most `s + 1`. The failure is therefore complete at those levels, not an artefact of the bound.
+8. Of the six predictions only F1 and F2 were genuinely open when registered, and both failed.

@@ -1,0 +1,4 @@
+n = 2 (3 vertices): THM-448 block recursion == its closed form: True; skew-Hadamard: True; H(CD_n) = 3, H(T) = 3; CD_n isomorphic to T: True; to the converse of T: True
+n = 3 (7 vertices): THM-448 block recursion == its closed form: True; skew-Hadamard: True; H(CD_n) = 189, H(T) = 189; CD_n isomorphic to T: True; to the converse of T: True
+n = 4 (15 vertices): THM-448 block recursion == its closed form: True; skew-Hadamard: True; H(CD_n) = 198335025, H(T) = 198335025; CD_n isomorphic to T: True; to the converse of T: False
+n = 5 (31 vertices): THM-448 block recursion == its closed form: True; skew-Hadamard: True; H(CD_n) = -, H(T) = -; CD_n isomorphic to T: False; to the converse of T: False

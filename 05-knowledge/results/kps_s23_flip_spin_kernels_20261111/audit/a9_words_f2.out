@@ -1,0 +1,24 @@
+   level 1: word of length 2 (bits, letter 1 first): 10 H = 3 Pi_2 = 12
+   level 2: word of length 3 (bits, letter 1 first): 100 H = 5 Pi_2 = 32
+   level 2: word of length 3 (bits, letter 1 first): 110 H = 5 Pi_2 = 32
+s =  1: 1 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 3, words with odd part dividing 9: 1
+s =  2: 2 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 1, words with odd part dividing 9: 2
+s =  3: 3 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 21, words with odd part dividing 9: 0
+s =  4: 2 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 7, words with odd part dividing 9: 0
+s =  5: 4 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 153, words with odd part dividing 9: 0
+s =  6: 2 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 107, words with odd part dividing 9: 0
+s =  7: 4 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 1221, words with odd part dividing 9: 0
+s =  8: 4 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 221, words with odd part dividing 9: 0
+s =  9: 5 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 10353, words with odd part dividing 9: 0
+s = 10: 4 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 7637, words with odd part dividing 9: 0
+s = 11: 4 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 90621, words with odd part dividing 9: 0
+s = 12: 6 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 33727, words with odd part dividing 9: 0
+s = 13: 4 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 805353, words with odd part dividing 9: 0
+s = 14: 2 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 601967, words with odd part dividing 9: 0
+s = 15: 6 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 7207221, words with odd part dividing 9: 0
+s = 16: 6 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 674653, words with odd part dividing 9: 0
+s = 17: 6 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 64701153, words with odd part dividing 9: 0
+s = 18: 2 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 48493097, words with odd part dividing 9: 0
+s = 19: 4 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 581655021, words with odd part dividing 9: 0
+s = 20: 4 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 218055097, words with odd part dividing 9: 0
+s = 21: 4 irreducible words with H = 2^s + 1, least odd part of Pi_2 = 5232273753, words with odd part dividing 9: 0

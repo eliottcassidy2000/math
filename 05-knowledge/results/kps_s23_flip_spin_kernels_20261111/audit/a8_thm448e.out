@@ -1,0 +1,3 @@
+n = 3: VF2: CD_n ~ tower: True ; CD_n ~ converse of tower: True ; tower self-converse: True ; CD_n self-converse: True
+n = 4: VF2: CD_n ~ tower: True ; CD_n ~ converse of tower: False ; tower self-converse: False ; CD_n self-converse: False
+n = 5: VF2: CD_n ~ tower: False ; CD_n ~ converse of tower: False ; tower self-converse: False ; CD_n self-converse: False

@@ -1,0 +1,4 @@
+all lines cyclic: 21760 random greedy maximal sets of simultaneously odd planes; sizes -> count [(46, 2), (47, 4), (48, 40), (49, 151), (50, 367), (51, 901), (52, 1740), (53, 2621), (54, 3463), (55, 3738), (56, 3414), (57, 2528), (58, 1533), (59, 815), (60, 315), (61, 95), (62, 22), (63, 10), (64, 1)]; largest 64
+   explicit tournament for the largest set (free variables 0), direct recount: odd planes 64, even 4-sets 546, cyclic lines 155/155
+arbitrary tournaments: 21282 random greedy maximal sets of simultaneously odd planes; sizes -> count [(47, 6), (48, 39), (49, 114), (50, 417), (51, 889), (52, 1659), (53, 2555), (54, 3370), (55, 3715), (56, 3228), (57, 2480), (58, 1591), (59, 755), (60, 303), (61, 123), (62, 29), (63, 8), (64, 1)]; largest 64
+   explicit tournament for the largest set (free variables 0), direct recount: odd planes 64, even 4-sets 546, cyclic lines 35/155

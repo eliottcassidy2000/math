@@ -1,0 +1,21 @@
+0. linear model vs direct counts of cyclic triangles: 300 random tournaments x 105 zero-sum 4-sets, mismatches 0; cyclic triangles per 4-set: [(0, 11893), (1, 7812), (2, 11795)]
+1. 'all 105 zero-sum 4-sets odd': 210 equations in 105 unknowns, rank 80, consistent: False  (kernel of the parity map: dimension 25)
+   the two equations of each 4-set are independent: True
+   15 switchings + 15 line coboundaries: all in the kernel of the linear part: True; rank of the 30 moves: 25 (kernel dimension 25)
+   rescaling e_u -> -e_u (switching + coboundary at u) reverses exactly the three arcs of each of the 7 lines through u: True (21 arcs)
+2. subsets of the 15 planes that can be odd at once, by size: [(0, 1), (1, 15), (2, 105), (3, 455), (4, 1365), (5, 2835), (6, 3325), (7, 1395), (8, 135)] ; largest 8
+   sets of 8: 135 = 15 of type A (all planes off a point) + 120 of type B (a plane and the 7 planes through a point off it) + 0 other
+   ranks (solution dimension = 105 - rank): type A [61], type B [80]
+   cross-check of the subset search on 400 random subsets with a fresh elimination: disagreements 0
+3. type A: 15 sets, dimension of the pattern space [19]; type B: 120 sets, dimension [0]
+4. type A + all 35 lines cyclic: (consistent, solution dimension) -> number of sets: [((True, 17), 15)]
+4. type B + all 35 lines cyclic: (consistent, solution dimension) -> number of sets: [((True, 11), 120)]
+   all 35 lines cyclic alone: consistent True, solution dimension 35 (= 2^35 orientations: True)
+   20000 random tournaments with all lines cyclic: every plane has defect 0 or 6; number of odd planes -> count: [(0, 2746), (1, 5588), (2, 5997), (3, 3487), (4, 1493), (5, 525), (6, 147), (7, 16), (8, 1)]
+5. |GL(4,2)| enumerated: 20160
+   distinct permutations of the 15 planes induced: 20160
+   feasible sets of 5 planes: 2835, in 3 orbits under GL(4,2): (representative mask, size, rank) [(31, 315, 55), (143, 1680, 53), (158, 840, 52)]
+   feasible sets of 6 planes: 3325, orbits (size, rank): [(105, 66), (2520, 62), (420, 58), (280, 62)]
+   feasible sets of 7 planes: 1395, orbits (size, rank): [(15, 77), (840, 71), (420, 68), (120, 61)]
+   feasible sets of 8 planes: 135, orbits (size, rank): [(120, 80), (15, 61)]
+   problems written for all 2835 feasible 5-sets; (orbit, dimension of the pattern space) -> count: [((0, 25), 315), ((1, 27), 1680), ((2, 28), 840)]

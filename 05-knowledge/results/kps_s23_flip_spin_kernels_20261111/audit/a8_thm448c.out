@@ -1,0 +1,8 @@
+n = 4: classes of vertices by triple-intersection profile: CD_n [1, 14] ; tower [1, 14]
+        multisets of vertex profiles equal: True
+        |Aut(CD_n)| = 21, |Aut(tower)| = 21
+        CD_n isomorphic to the tower: True ; to its converse: False
+n = 5: classes of vertices by triple-intersection profile: CD_n [1, 2, 14, 14] ; tower [1, 2, 14, 14]
+        multisets of vertex profiles equal: False
+        |Aut(CD_n)| = 21, |Aut(tower)| = 21
+        CD_n isomorphic to the tower: False ; to its converse: False

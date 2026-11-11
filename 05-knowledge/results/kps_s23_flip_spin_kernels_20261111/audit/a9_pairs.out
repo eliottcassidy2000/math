@@ -1,0 +1,36 @@
+classes of order <= 9 (own generation): 198948 ; by order [(1, 1), (2, 1), (3, 2), (4, 4), (5, 12), (6, 56), (7, 456), (8, 6880), (9, 191536)]
+   recount of (H, Pi_2) on 400 random classes with the Python DP: mismatches 0
+1. Pi_2 = (-1)^n H (mod 3): violations 0 of 198948
+2. F1: classes with H = 2^s + 1 and odd part of Pi_2 dividing 9:
+   s =  1, H =    3:    28 classes,   1 distinct odd parts, least odd part 3; with odd part dividing 9: 28 classes ['order 3, Pi_2 = 3 * 2^2', 'order 4, Pi_2 = 3 * 2^3', 'order 4, Pi_2 = 3 * 2^3', 'order 5, Pi_2 = 3 * 2^4', 'order 5, Pi_2 = 3 * 2^4', 'order 5, Pi_2 = 3 * 2^4']
+   s =  2, H =    5:    21 classes,   1 distinct odd parts, least odd part 1; with odd part dividing 9: 21 classes ['order 4, Pi_2 = 1 * 2^5', 'order 5, Pi_2 = 1 * 2^6', 'order 5, Pi_2 = 1 * 2^6', 'order 6, Pi_2 = 1 * 2^7', 'order 6, Pi_2 = 1 * 2^7', 'order 6, Pi_2 = 1 * 2^7']
+   s =  3, H =    9:    50 classes,   2 distinct odd parts, least odd part 9; with odd part dividing 9: 20 classes ['order 6, Pi_2 = 9 * 2^4', 'order 7, Pi_2 = 9 * 2^5', 'order 7, Pi_2 = 9 * 2^5', 'order 7, Pi_2 = 9 * 2^5', 'order 8, Pi_2 = 9 * 2^6', 'order 8, Pi_2 = 9 * 2^6']
+   s =  4, H =   17:    20 classes,   1 distinct odd parts, least odd part 7; with odd part dividing 9: 0 classes []
+   s =  5, H =   33:    76 classes,   5 distinct odd parts, least odd part 21; with odd part dividing 9: 0 classes []
+   s =  6, H =   65:    77 classes,   5 distinct odd parts, least odd part 13; with odd part dividing 9: 0 classes []
+   s =  7, H =  129:   131 classes,  14 distinct odd parts, least odd part 3; with odd part dividing 9: 24 classes ['order 7, Pi_2 = 3 * 2^9', 'order 7, Pi_2 = 3 * 2^9', 'order 7, Pi_2 = 3 * 2^9', 'order 7, Pi_2 = 3 * 2^9', 'order 8, Pi_2 = 3 * 2^10', 'order 8, Pi_2 = 3 * 2^10']
+   s =  8, H =  257:   120 classes,  17 distinct odd parts, least odd part 65; with odd part dividing 9: 0 classes []
+   s =  9, H =  513:   190 classes,  36 distinct odd parts, least odd part 51; with odd part dividing 9: 0 classes []
+   s = 10, H = 1025:   168 classes,  50 distinct odd parts, least odd part 41; with odd part dividing 9: 0 classes []
+   s = 11, H = 2049:   174 classes,  37 distinct odd parts, least odd part 135; with odd part dividing 9: 0 classes []
+   levels 3..11 with such a class: 2 of 9
+3. classes with Pi_2 a power of two: H values [1, 5, 19, 25, 217, 223, 259, 599, 695, 707, 713, 761, 773, 803, 815, 1945, 1957, 1969]
+   claimed list: [1, 5, 19, 25, 217, 223, 259, 599, 695, 707, 713, 761, 773, 803, 815, 1945, 1957, 1969]: True
+   (number of such classes: 124; H = 1 at every order: transitive)
+   order 1: least Pi_2 / H = 2.0000 (H = 1, Pi_2 = 2); n + 1 = 2
+   order 2: least Pi_2 / H = 4.0000 (H = 1, Pi_2 = 4); n + 1 = 3
+   order 3: least Pi_2 / H = 4.0000 (H = 3, Pi_2 = 12); n + 1 = 4
+   order 4: least Pi_2 / H = 6.4000 (H = 5, Pi_2 = 32); n + 1 = 5
+   order 5: least Pi_2 / H = 7.2000 (H = 15, Pi_2 = 108); n + 1 = 6
+   order 6: least Pi_2 / H = 9.5135 (H = 37, Pi_2 = 352); n + 1 = 7
+   order 7: least Pi_2 / H = 10.6667 (H = 189, Pi_2 = 2016); n + 1 = 8
+   order 8: least Pi_2 / H = 12.9811 (H = 477, Pi_2 = 6192); n + 1 = 9
+   order 9: least Pi_2 / H = 14.5143 (H = 2205, Pi_2 = 32004); n + 1 = 10
+   distinct H: 1520 ; distinct (H, odd part of Pi_2): 50173  [author: 1520, 50173]
+   odd parts of Pi_2 for H = 9, 17, 33: {9: [9, 21], 17: [7], 33: [21, 45, 75, 153, 165]}
+4. one-apex words, all words of length <= 8 (510 words), direct counts on the explicit tournaments:
+   words 510: mismatches of the audit's formulas 0; mismatches of the packet's inversion-pair formulas 0
+   40 random words of length 9..13: H formula mismatches 0; Pi_2 formula mismatches 0 (of 18 words of length <= 10)
+5. H = 129 at order 7 with Pi_2 = 3 * 2^9: [(7, 68385, 129, 1536), (7, 573958, 129, 1536), (7, 1315362, 129, 1536), (7, 1382752, 129, 1536)]
+   all classes with H = 129 and odd part of Pi_2 dividing 9 (orders <= 9): [(7, 68385, 1536), (7, 573958, 1536), (7, 1315362, 1536), (7, 1382752, 1536), (8, 534049, 3072), (8, 8717318, 3072), (8, 8753280, 3072), (8, 37766178, 3072), (8, 38298272, 3072), (8, 73466624, 3072), (8, 168366336, 3072), (8, 176992256, 3072), (9, 4230177, 6144), (9, 136579078, 6144), (9, 136716544, 6144), (9, 1140918306, 6144), (9, 1145144608, 6144), (9, 2231633408, 6144), (9, 2240839680, 6144), (9, 9668141568, 6144), (9, 9804357632, 6144), (9, 18807455744, 6144), (9, 43101782016, 6144), (9, 45310017536, 6144)]
+   the packet's witness code 308230 (order 7): H = 129, Pi_2 = 1536 = 3 * 2^9

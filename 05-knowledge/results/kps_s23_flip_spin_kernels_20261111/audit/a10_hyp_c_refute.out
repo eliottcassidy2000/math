@@ -1,0 +1,9 @@
+n = 4: planes 15, planes skew to a fixed subspace of dimension 1: 8 = 2^3; system [all lines cyclic + these planes odd] consistent: True (rank 88 of 105 unknowns; lines alone 70)
+   explicit tournament, DIRECT recount: cyclic lines 35/35; planes by number of even 4-sets [(0, 8), (6, 7)]; odd planes 8 (Cayley-Dickson: 8); even 4-sets 42 (Cayley-Dickson: 42); scores [7]
+   => HYP-9664 (C) at n = 4: not refuted by this construction
+n = 5: planes 155, planes skew to a fixed subspace of dimension 2: 64 = 2^6; system [all lines cyclic + these planes odd] consistent: True (rank 399 of 465 unknowns; lines alone 310)
+   explicit tournament, DIRECT recount: cyclic lines 155/155; planes by number of even 4-sets [(0, 64), (6, 91)]; odd planes 64 (Cayley-Dickson: 50); even 4-sets 546 (Cayley-Dickson: 630); scores [15]
+   => HYP-9664 (C) at n = 5: REFUTED (fewer even 4-sets than the Cayley-Dickson tournament, with all lines cyclic)
+n = 6: planes 1395, planes skew to a fixed subspace of dimension 3: 512 = 2^9; system [all lines cyclic + these planes odd] consistent: True (rank 1700 of 1953 unknowns; lines alone 1302)
+   explicit tournament, DIRECT recount: cyclic lines 651/651; planes by number of even 4-sets [(0, 512), (6, 883)]; odd planes 512 (Cayley-Dickson: 310); even 4-sets 5298 (Cayley-Dickson: 6510); scores [31]
+   => HYP-9664 (C) at n = 6: REFUTED (fewer even 4-sets than the Cayley-Dickson tournament, with all lines cyclic)

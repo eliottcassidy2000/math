@@ -1,0 +1,2 @@
+(a) Pi_2(C(B,O;TT_t))/2 = u 3^t + r2 2^t + s (integers, fitted on t <= 3, tested on t = 4, 5, 6): pairs 25, failures 0; u = 0 in 8 cases = the 8 cases with O empty
+(b) fans: H(C(B,O; X => TT_t)) = r H(X) + M 2^t Pi_2(X): cases 60, failures 0

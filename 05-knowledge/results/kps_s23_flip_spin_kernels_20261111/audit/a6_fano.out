@@ -1,0 +1,7 @@
+number of even line complements -> number of tournaments: 0:1024 1:0 2:21504 3:143360 4:322560 5:688128 6:637952 7:282624
+defect 0: 1024 tournaments; by number of cyclic lines: 0:0 1:560 2:336 3:0 4:112 5:0 6:0 7:16
+defect 0 with all 7 lines cyclic: 16
+defect 2: pairs of lines whose complements are the two even ones: 21 of 21 occur, tournaments per pair between 1024 and 1024
+orbit of an all-cyclic defect-0 tournament (H = 189) under 7 switchings + 7 line coboundaries: size 1024, inside the defect-0 set: 1024 (defect-0 set has 1024)
+rank of the 14 moves over F_2: 10
+the 128 orientations with all 7 lines cyclic, (defect, H) -> count: (6, 171):112 (0, 189):16

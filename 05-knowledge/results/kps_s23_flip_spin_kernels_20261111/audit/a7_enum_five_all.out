@@ -1,0 +1,4 @@
+feasible 5-sets enumerated completely: 2835; violation patterns visited: 461541212160; wall time 259 s
+(orbit label, dimension of the pattern space, least number of even 4-sets) -> number of 5-sets: [(('F0', 25, 38), 315), (('F1', 27, 36), 1680), (('F2', 28, 21), 840)]
+least number of even 4-sets over all tournaments with at least five odd planes: 21
+values of E below 30 occurring next to five odd planes (with multiplicity over 5-sets): [(21, 53760), (25, 241920), (26, 241920), (27, 806400), (28, 282240), (29, 967680)]

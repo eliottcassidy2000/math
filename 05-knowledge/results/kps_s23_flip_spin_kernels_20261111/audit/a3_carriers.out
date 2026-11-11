@@ -1,0 +1,26 @@
+minus d = 31: order 8, code 17082497, ports (0, 7): scores [1, 2, 3, 3, 4, 4, 5, 6], H(K) = 215
+   walk enumeration: max visits (2, 2), G = [[215, 124], [108, 62]], det -62, (al, be, ga, de) = (-1, -16, 0, 62); claimed G [[215, 124], [108, 62]]: True
+   direct counts of H(K[TT_a, TT_b]), 1 <= a, b <= 5 (25 tournaments of order up to 16): mismatches with the closed formula 0, with the visit-matrix form 0
+      row a = 1: [215, 463, 959, 1951, 3935]
+   random (non-transitive) modules, form in (H, Pi_2): mismatches 0 of 12
+plus d = 3: order 8, code 172278145, ports (0, 7): scores [1, 2, 3, 3, 3, 4, 6, 6], H(K) = 129
+   walk enumeration: max visits (2, 2), G = [[129, 48], [64, 24]], det 24, (al, be, ga, de) = (1, 16, 0, 24)
+   direct counts of H(K[TT_a, TT_b]), 1 <= a, b <= 5 (25 tournaments of order up to 16): mismatches with the closed formula 0, with the visit-matrix form 0
+      row a = 1: [129, 225, 417, 801, 1569]
+   random (non-transitive) modules, form in (H, Pi_2): mismatches 0 of 12
+plus d = 21: order 8, code 71647617, ports (7, 0): scores [1, 2, 3, 3, 3, 5, 5, 6], H(K) = 177
+   walk enumeration: max visits (2, 2), G = [[177, 84], [88, 42]], det 42, (al, be, ga, de) = (1, 4, 0, 42)
+   direct counts of H(K[TT_a, TT_b]), 1 <= a, b <= 5 (25 tournaments of order up to 16): mismatches with the closed formula 0, with the visit-matrix form 0
+      row a = 1: [177, 345, 681, 1353, 2697]
+   random (non-transitive) modules, form in (H, Pi_2): mismatches 0 of 12
+plus d = 35: order 9, code 17332994050, ports (8, 1): scores [1, 1, 2, 4, 4, 5, 6, 6, 7], H(K) = 205
+   walk enumeration: max visits (2, 2), G = [[205, 70], [102, 35]], det 35, (al, be, ga, de) = (1, 32, 0, 35)
+   direct counts of H(K[TT_a, TT_b]), 1 <= a, b <= 5 (25 tournaments of order up to 17): mismatches with the closed formula 0, with the visit-matrix form 0
+      row a = 1: [205, 345, 625, 1185, 2305]
+   random (non-transitive) modules, form in (H, Pi_2): mismatches 0 of 12
+grid arithmetic:
+   every odd N <= 200001: minus address exists, plus address exists unless N = 2^s + 1 (or N = 1); level rule mod 4: True; uniqueness of (d, r, s) (d < 400, r, s < 12): True
+   minus carrier: N-(31, r, s) covered for all s >= 5, r >= 1 (checked s < 30, r < 10): True; levels s <= 4 covered: []
+   rows b = 1, 2, 3 are the lines c 2^s - 1 with (c, first s, is a line): {1: (27, 3, True), 2: (29, 4, True), 3: (15, 6, True)}  [claimed (27, 3), (29, 4), (15, 6)]
+   c = 31 2^r - 1 for r = 1..4: [61, 123, 247, 495]  [claimed 61, 123, 247, 495]
+   smallest members: N-(31,1,5) = 1951, 27*8-1 = 215, 29*16-1 = 463, 15*64-1 = 959

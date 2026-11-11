@@ -1,0 +1,13 @@
+self-test: P_k DP == brute force over permutations (k <= 4, n <= 6, 40 random tournaments); H DP == brute force
+1. visit matrix (walks enumerated by DFS): kernels (class, ordered ports) checked 450 (all of orders 3, 4, 5; 150 sampled at order 6);
+   kernels with a port visited >= 3 times: 180; module cases 900 (of which 360 on kernels with >= 3 visits), failures 0
+2. bound i, j <= m - 1: violations 0; kernels where some port is visited exactly m - 1 times, by order: [(3, 6), (4, 2), (5, 4)]
+   remark: for C_3 (code 5), ports (0, 1), the walk counts with i = 0 or j = 0 are [((0, 0), 1), ((0, 1), 1), ((1, 0), 1)] (not zero; they are simply not used)
+3. two-visit kernels: N22 H = L(A) L'(B) + det G H(A) H(B): cases 282, failures 0; form al hh' + be pi h' + ga h pi' + de pi pi': failures 0
+4. Proposition 2.3 (state from the definitions of THM-5130): pairs 140, failures of [two visits, (al,be,ga,de) = (r,0,0,M), det = rM, r odd]: 0;
+   H(K[A,B]) = r H H' + M Pi Pi' on random modules: failures 0 of 140
+   pairs with O EMPTY: 28 (all have M = 0, det G = 0, r = H(B0) > 0: parabolic although r > 0);
+   the statement 'elliptic iff r > 0, hyperbolic iff r < 0' fails on 28 of the 140 pairs (exactly the pairs with O empty: True)
+5. Gaussian kernel: state (r, M) = (1, 1), G = [[5, 2], [2, 1]], det 1, scores [1, 1, 2, 2] (strong 4-tournament has scores [1,1,2,2]), max visits 2
+   first hyperbolic kernel: state (r, M) = (-1, 3), G = [[11, 6], [6, 3]], det -3, H(K) = 11
+   H = Pi Pi' + H H' (order 4) and H = 3 Pi Pi' - H H' (order 5) on 150 random module pairs each (orders up to 5): failures 0

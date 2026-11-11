@@ -1,0 +1,7 @@
+one plane: 2048 realizable violation vectors; by defect [(0, 1), (2, 21), (3, 140), (4, 315), (5, 672), (6, 623), (7, 276)]
+every plane has exactly 21 defect-2 vectors: True; they realise each of the 21 pairs of 4-sets (= pairs of lines) exactly once: True
+orbit of 315 sets (representative mask 31, rank 55): consistent additions of k planes of defect exactly 2: [(1, 98), (2, 1405), (3, 1816)]; largest k = 3
+orbit of 1680 sets (representative mask 143, rank 53): consistent additions of k planes of defect exactly 2: [(1, 84), (2, 1038), (3, 3456)]; largest k = 3
+orbit of 840 sets (representative mask 158, rank 52): consistent additions of k planes of defect exactly 2: [(1, 66), (2, 819), (3, 1759)]; largest k = 3
+largest number of planes of defect exactly 2 next to five odd planes: 3
+author (runs/cd_f5_orbits.txt): 315: [(1, 98), (2, 1405), (3, 1816), (4, 0)]; 1680: [(1, 84), (2, 1038), (3, 3456), (4, 0)]; 840: [(1, 66), (2, 819), (3, 1759), (4, 0)]

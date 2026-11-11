@@ -1,0 +1,3 @@
+restarts 300, steps 200000: least number of even 4-sets per restart -> count: 21:300
+overall least: 21
+best tournament recounted: 21 even 4-sets; out-masks (points 1..15): 15212 8841 5690 4528 9571 15554 30606 15893 3750 27704 22539 8286 11026 1292 14783

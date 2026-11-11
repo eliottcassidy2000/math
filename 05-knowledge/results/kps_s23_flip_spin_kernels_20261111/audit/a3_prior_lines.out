@@ -1,0 +1,12 @@
+line c 2^s - 1 | first level s in Proposition 2.5 (S23) | first level by THM-5130 (E) [slope c 2^v', s >= v' + 1] | certificate | direct check
+c =   61 | s >= 5 | s >= 5 | order 9, levels 2,3,2 | tower certificate (not rebuilt here)
+c =  123 | s >= 5 | s >= 3 | order 8, levels - | H(T_t) for t = 1, 2, 3 = [983, 1967, 3935] = c 2^(v'+t) - 1: True
+c =  247 | s >= 5 | s >= 2 | order 8, levels - | H(T_t) for t = 1, 2, 3 = [987, 1975, 3951] = c 2^(v'+t) - 1: True
+c =  495 | s >= 5 | s >= 1 | order 8, levels - | H(T_t) for t = 1, 2, 3 = [989, 1979, 3959] = c 2^(v'+t) - 1: True
+c =  991 | s >= 5 | s >= 1 | order 8, levels - | H(T_t) for t = 1, 2, 3 = [1981, 3963, 7927] = c 2^(v'+t) - 1: True
+c = 1983 | s >= 5 | s >= 1 | order 9, levels - | H(T_t) for t = 1, 2 = [3965, 7931] = c 2^(v'+t) - 1: True
+c = 3967 | s >= 5 | s >= 1 | order 9, levels - | H(T_t) for t = 1, 2 = [7933, 15867] = c 2^(v'+t) - 1: True
+c =   27 | s >= 3 | s >= 1 | order 6, levels - | H(T_t) for t = 1, 2, 3 = [53, 107, 215] = c 2^(v'+t) - 1: True
+c =   29 | s >= 4 | s >= 4 | order 7, levels - | H(T_t) for t = 1, 2, 3 = [463, 927, 1855] = c 2^(v'+t) - 1: True
+c =   15 | s >= 6 | s >= 1 | order 4, levels 1,1,0 | tower certificate (not rebuilt here)
+31 2^r - 1 <= 4097 exactly for r <= 7; so the lines of the minus grid of d = 31 with r <= 7 and the three rows b = 1, 2, 3 are in THM-5130 (E), from levels not higher than here.
