@@ -1,0 +1,122 @@
+{
+  "repository": "yang-mills-group/OpenAI-YM-20261028",
+  "commit": "3456e5e75cf8d4cd558955a5c7638fba2d68f464",
+  "method": "Read exact files through GitHub connector; no build, audit, or reverification performed.",
+  "files": [
+    {
+      "path": "ChallengeSpec.lean",
+      "blob_sha": "b161625f436a8c5c9f5a8241df916ab7612d6276",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/ChallengeSpec.lean"
+    },
+    {
+      "path": "PublicWilson.lean",
+      "blob_sha": "ccf44de9da2ff0010c02be77deff03e447a720bc",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/PublicWilson.lean"
+    },
+    {
+      "path": "PublicTheory.lean",
+      "blob_sha": "c5d26f8e84f4d324dcd214dff93162d9487cd29a",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/PublicTheory.lean"
+    },
+    {
+      "path": "Construction.lean",
+      "blob_sha": "bc1efd87404a5157687cf1a639ef436071c93fdd",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/Construction.lean"
+    },
+    {
+      "path": "YM/Nonperturbative/Headlines.lean",
+      "blob_sha": "f1cd37061125779a1d5d01d5e6bef2185c528d76",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/Nonperturbative/Headlines.lean"
+    },
+    {
+      "path": "YM/Nonperturbative/HeadlineSpec.lean",
+      "blob_sha": "21d692f3dbdbe053ad6da4593381400689484e7c",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/Nonperturbative/HeadlineSpec.lean"
+    },
+    {
+      "path": "ContactSpec.lean",
+      "blob_sha": "32e9796ca1c8e4f153af64493c44b0f321c673c7",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/ContactSpec.lean"
+    },
+    {
+      "path": "HierarchyBridge.lean",
+      "blob_sha": "5c3f29983a2d8f5376f3df2c9e34ea96cadf45dd",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/HierarchyBridge.lean"
+    },
+    {
+      "path": "WilsonBridge.lean",
+      "blob_sha": "e5452589dc52378ccb2e92d0f8e8b537651e4144",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/WilsonBridge.lean"
+    },
+    {
+      "path": "YM/Independent/Core.lean",
+      "blob_sha": "8e1114db3c2bf7a83ef675f7fc6e4fb0fd34183a",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/Independent/Core.lean"
+    },
+    {
+      "path": "YM/Extraction/Orders.lean",
+      "blob_sha": "528565c6d415c44e776d7b8643aafc4d90ce9c5c",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/Extraction/Orders.lean"
+    },
+    {
+      "path": "README.md",
+      "blob_sha": "5a28085a2c3ec28df4f0b3e91d478c607ad2c747",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/README.md"
+    },
+    {
+      "path": "YM/EveryPhase/Extension.lean",
+      "blob_sha": "13558465d7f6f460c4345ece640a4a1a431be0e5",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/EveryPhase/Extension.lean"
+    },
+    {
+      "path": "YM/Contacts/Solstice/Result.lean",
+      "blob_sha": "77411481ece89f9320aa0ecc709578d09de6963b",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/Contacts/Solstice/Result.lean"
+    },
+    {
+      "path": "YM/FullVolume/Profiles.lean",
+      "blob_sha": "f1e895811f0d420b0076b53df5648b620f3f6f9a",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/FullVolume/Profiles.lean"
+    },
+    {
+      "path": "ContactBridge.lean",
+      "blob_sha": "6b07fd5400dfa74c035076cad8f36eb2af10b627",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/ContactBridge.lean"
+    },
+    {
+      "path": "YM/Phase/Mixture.lean",
+      "blob_sha": "8902c2d9c06f2d1509c9be4cf6e75742cbebe561",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/Phase/Mixture.lean"
+    },
+    {
+      "path": "YM/Phase/Unique.lean",
+      "blob_sha": "7ef728412c4adda66107bf90f99e19d07d8801fd",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/Phase/Unique.lean"
+    },
+    {
+      "path": "YM/EveryPhase/Irreducible.lean",
+      "blob_sha": "9ef427a47c2af926f2f2ccaf70ab6ac6139b2700",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/EveryPhase/Irreducible.lean"
+    },
+    {
+      "path": "YM/EveryPhase/Vacuum.lean",
+      "blob_sha": "389ffb8306de90675b05ce0632d27e8917722779",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/EveryPhase/Vacuum.lean"
+    },
+    {
+      "path": "YM/EveryPhase/Decay.lean",
+      "blob_sha": "777e82419b45d309700109dce01bc3cb790d29c8",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/EveryPhase/Decay.lean"
+    },
+    {
+      "path": "YM/EveryPhase/Light.lean",
+      "blob_sha": "a2a725f5a4680a26e6a452c905e7881e0771beed",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/EveryPhase/Light.lean"
+    },
+    {
+      "path": "YM/EveryPhase/Projection.lean",
+      "blob_sha": "3ecf8333c1a7906647c6ace19a6a83b3c2fbd4e9",
+      "url": "https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/YM/EveryPhase/Projection.lean"
+    }
+  ]
+}

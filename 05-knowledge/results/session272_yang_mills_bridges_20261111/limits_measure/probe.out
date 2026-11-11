@@ -1,0 +1,5 @@
+LM2: 100 fixed-volume tail controls zero; 100 diagonal controls one.
+LM4: reflection invariant; ordinary square 1; OS square -1.
+LM5: identical mean 0; second moments 1/2 and 2/3.
+Gaussian: E[U^2]=E[V^2]=0; E[(H^2+G^2)^2]=8.
+PASS: all declared exact finite controls.
