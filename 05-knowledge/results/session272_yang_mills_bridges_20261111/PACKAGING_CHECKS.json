@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "python_syntax_files": 5,
+  "local_markdown_links": 26,
+  "pinned_source_files": 23,
+  "source_rebuilt": false,
+  "global_documentation_check": "PASS after upstream 0e63417e46a2 restored startup budget; check rerun before final publication",
+  "scope": "packaging only; see REPRODUCE.md for mathematical controls"
+}

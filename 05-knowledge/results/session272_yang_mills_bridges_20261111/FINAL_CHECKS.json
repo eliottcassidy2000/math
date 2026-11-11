@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "new finite controls and optional UV diagnostic, not source proof verification",
+  "checks": [
+    {
+      "script": "limits_measure/probe.py",
+      "status": "PASS",
+      "matches_committed_output": true
+    },
+    {
+      "script": "spectral_loops/check.py",
+      "status": "PASS",
+      "matches_committed_output": true
+    },
+    {
+      "script": "uv_ir/check_uv_ir.py",
+      "status": "PASS_NUMERICAL_NOT_INTERVAL",
+      "matches_committed_output": true
+    }
+  ],
+  "independent_new_math_reviews": [
+    "limits_measure/AUDIT.md",
+    "uv_ir/AUDIT.md"
+  ],
+  "source_reverification": "not performed, user-trusted source read carefully",
+  "unrelated_worktree_changes_preserved": 162,
+  "global_documentation_check": "PASS after upstream 0e63417e46a2 restored startup budget; 179987 bytes",
+  "published_checkpoints_before_final": [
+    "e0b6f233892bf06819e6da49ca01f74941cbf797",
+    "1e03c2311ec7aba912ff17e201c38620d6429317"
+  ],
+  "incoming_work_retained": [
+    "c68e7bd93e9f gauge reservations (UNPROVED)",
+    "c440c4a4b791 Stein audit/corrections",
+    "0e63417e46a2 startup-budget repair",
+    "182fd0297962 MISTAKE-764"
+  ]
+}

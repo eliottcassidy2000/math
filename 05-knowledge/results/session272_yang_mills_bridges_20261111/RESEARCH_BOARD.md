@@ -39,3 +39,14 @@ quantifiers. Prove new bridge lemmas and use hostile controls to locate their
 boundaries. Preserve source attribution and distinguish PROVED, FINITE-EXACT,
 CONDITIONAL, and OPEN. Every claimed transfer specifies the map, preserved
 predicate, loss, extra coordinate, and cheapest decisive test.
+
+## Incoming work at close-out
+
+The c68e7bd9 gauge/cycle-gas reservations were retained and remain UNPROVED.
+The c440c4a4 / 182fd029 Stein audit corrects an allegedly intermediate ladder
+that is equivalent to JC(2), and credits its Image Conjecture origin. This
+session uses neither the rejected claim nor the pending replacement proof.
+It reinforces a guardrail here: a sufficient bridge can be as hard as the
+original target; no claimed criterion below is advertised as automatically
+easier. Upstream 0e63417e repaired the startup documentation budget, and the
+full check now passes.

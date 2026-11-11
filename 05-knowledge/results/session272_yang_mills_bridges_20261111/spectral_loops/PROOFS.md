@@ -46,7 +46,7 @@ uniformly in n, and `C_(P,n)(t)<=c_P² ε_n²e^(−tε_n)<=4c_P²e^(−2)t^−2`
 
 **Lemma S2 (PROVED, common-rate dense test criterion).** For a total set D in (ker H)^perp, suppose a common m>0 satisfies C_x(t)<=K_x e^(−mt) for all x∈D and all sufficiently large t (K_x and starting time may depend on x). Then spec(H)∩(0,m)=empty. For a<m, `e^(−at)ν_x((0,a])<=C_x(t)` implies ν_x((0,a])=0 by t→infinity. The bounded projection 1_(0,a](H) annihilates a total set, hence vanishes. Union over a<m proves the assertion. Uniformity of K_x is unnecessary; uniformity of m is essential.
 
-**Lemma S3 (PROVED, low-energy observability upgrade).** Let x_1,...,x_k be fixed probes with ν_j((0,u])<=M_j u² for 0<u<=1. Suppose the additional scale-uniform visibility estimate
+**Lemma S3 (PROVED, low-energy observability upgrade).** Let x_1,...,x_k be fixed probes with ν_j((0,u])<=M_j u² for 0<u<=1. Suppose K>0 and the additional scale-uniform visibility estimate
 
 `||1_(0,u](H)|| <= K Σ_j ν_j((0,u])`  for 0<u<=1
 
@@ -66,7 +66,7 @@ On a torus with F faces, the image of link-to-plaquette map has precisely the co
 
 Proof: insert indicator `(1+product_all B)/2` into numerator and denominator. The two terms are the two complementary spanning sheets. The formula is invariant under a↔F−a, unlike q^a. For fixed a and F→infinity it tends to q^a; uniform relative error requires control of F−2a, since ratio to q^a is `(1+q^(F−2a))/(1+q^F)`. Macroscopic/complementary sheets cannot be silently ignored.
 
-A noncontractible fundamental Wilson loop averages to zero: multiply all links crossing an appropriate dual cut by −1. This leaves all plaquettes and the action invariant and reverses that loop. Thus plaquette curvature plus contractible loops does not determine noncontractible holonomy. Retain the cohomology class in H¹(T²;Z₂), or equivalently two torons. A fixed toron sector need not have this zero expectation.
+A noncontractible fundamental Wilson loop averages to zero: multiply all links crossing an appropriate dual cut by −1. This leaves all plaquettes and the action invariant and reverses that loop. Thus plaquette curvature plus contractible loops does not determine noncontractible holonomy. Retain two marked fundamental holonomies. At fixed plaquette curvature, differences of configurations are flat and their gauge classes form a relative H¹(T²;Z₂) torsor after choosing a reference configuration; a nonflat configuration does not itself define a canonical cohomology class. A fixed toron sector need not have this zero expectation.
 
 The exact transfer operator on flux parity is
 

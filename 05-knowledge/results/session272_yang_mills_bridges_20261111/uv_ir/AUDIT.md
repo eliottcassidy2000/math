@@ -26,3 +26,9 @@ Pinned declarations:
 - https://github.com/yang-mills-group/OpenAI-YM-20261028/blob/3456e5e75cf8d4cd558955a5c7638fba2d68f464/TraceBridge.lean#L36-L45
 
 The example is not claimed to reproduce the source's physical stress tensor, Wilson origin, complete hierarchy, or Ward identities. Its valid conclusion is exactly that this one ultraviolet coefficient does not determine infrared spectral support.
+
+## Final synthesis and open-question review
+
+Reviewed SYNTHESIS.md and OPEN_QUESTIONS.md for interpretation, not the trusted source proof. Corrected the synthesis's hostile-array sentence: 1_(N≤p) has mesh-first iterated limit zero, reverse iterated limit one, and diagonal value one. Thus only the claimed mesh-first/diagonal discrepancy is relevant. Made the source infrared estimate's ranges and full zero-energy subtraction explicit, and retained its finite-support condition. Clarified that U1 supplies positive Minkowski spectral models and separated Euclidean continuations, not automatically a full-contact positive Euclidean covariance or probability measure.
+
+The phase-rigidity passage correctly labels vanishing generator variances as an extra hypothesis; it does not infer phase collapse from within-phase irreducibility. Q2 correctly separates ordinary moment positivity from OS positivity. The synthesis explicitly identifies lowE as energy, and Q5 correctly separates invariant-mass atoms, isolated shells, energy eigenvalues, and scattering assumptions. No further source-interpretation corrections were needed in OPEN_QUESTIONS.md. The visibility-constant and cohomological-torsor corrections were being handled separately by the coordinator and were not duplicated here.

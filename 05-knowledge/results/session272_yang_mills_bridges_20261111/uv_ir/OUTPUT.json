@@ -10,29 +10,29 @@
       "L": 10,
       "ratio": "0.723019537919765310303732",
       "precision_difference": "2.76813e-37",
-      "omitted_lower_bound": "4.0614683e-15",
-      "omitted_upper_numerical_bound": "1.288816e-35"
+      "omitted_low_interval_upper_bound": "4.0614683e-15",
+      "omitted_high_interval_numerical_upper_bound": "1.288816e-35"
     },
     {
       "L": 20,
       "ratio": "0.843941241134860483248546",
       "precision_difference": "1.0051e-37",
-      "omitted_lower_bound": "1.5202276e-27",
-      "omitted_upper_numerical_bound": "1.288816e-35"
+      "omitted_low_interval_upper_bound": "1.5202276e-27",
+      "omitted_high_interval_numerical_upper_bound": "1.288816e-35"
     },
     {
       "L": 40,
       "ratio": "0.916761751712978120899694",
       "precision_difference": "2.3288e-38",
-      "omitted_lower_bound": "5.3247556e-53",
-      "omitted_upper_numerical_bound": "1.288816e-35"
+      "omitted_low_interval_upper_bound": "5.3247556e-53",
+      "omitted_high_interval_numerical_upper_bound": "1.288816e-35"
     },
     {
       "L": 80,
       "ratio": "0.956954564027963399886188",
       "precision_difference": "1.83861e-37",
-      "omitted_lower_bound": "1.6331341e-104",
-      "omitted_upper_numerical_bound": "1.288816e-35"
+      "omitted_low_interval_upper_bound": "1.6331341e-104",
+      "omitted_high_interval_numerical_upper_bound": "1.288816e-35"
     }
   ],
   "infrared_controls": {

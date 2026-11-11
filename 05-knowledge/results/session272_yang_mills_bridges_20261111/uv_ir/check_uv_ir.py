@@ -25,7 +25,7 @@ def main():
         b,_,_=ratio(L,50)
         assert 0<a<1 and abs(a-b)<mp.mpf('1e-25')
         rows.append({'L':L,'ratio':mp.nstr(b,24),'precision_difference':mp.nstr(abs(a-b),6),
-            'omitted_lower_bound':mp.nstr(low,8),'omitted_upper_numerical_bound':mp.nstr(upper,8)})
+            'omitted_low_interval_upper_bound':mp.nstr(low,8),'omitted_high_interval_numerical_upper_bound':mp.nstr(upper,8)})
     assert all(mp.mpf(rows[i]['ratio'])<mp.mpf(rows[i+1]['ratio']) for i in range(len(rows)-1))
     result={'status':'PASS_NUMERICAL_DIAGNOSTIC_NOT_INTERVAL_CERTIFICATE',
         'analytic_bessel_moment':384,'dps_comparison':[35,50],'rows':rows,
