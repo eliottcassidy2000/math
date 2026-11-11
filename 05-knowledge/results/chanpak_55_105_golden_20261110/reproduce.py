@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate frozen session evidence; --rerun freshly executes six checker pairs."""
+"""Validate frozen session evidence; --rerun freshly executes seven checker pairs."""
 from hashlib import sha256
 from pathlib import Path
 import argparse
@@ -18,6 +18,7 @@ JOBS = (
     ('golden/audit_targets.py', 'golden/TARGET-AUDIT.json', 'golden/TARGET-AUDIT-optimized.json', True),
     ('h5/audit_golden.py', 'h5/audit_golden.json', 'h5/audit_golden.optimized.json', False),
     ('resets/check.py', 'resets/check.json', 'resets/check.optimized.json', False),
+    ('h5/ternary_padding_check.py', 'h5/ternary_padding_check.json', 'h5/ternary_padding_check.optimized.json', False),
 )
 
 def require(q, message):
@@ -60,6 +61,10 @@ def main():
         require(str(data['status']).startswith(('PASS', 'FINITE-EXACT')), ('failed receipt', script_name))
         if 'script_sha256' in data:
             require(data['script_sha256'] == digest(script), ('changed script', script_name))
+        for name, expected in data.get('dependencies_sha256', {}).items():
+            path = script.parent/name
+            require(digest(path) == expected, ('changed dependency', script_name, name))
+            pins.add(str(path.relative_to(ROOT)))
         for key in ('source_sha256', 'input_sha256'):
             for name, expected in data.get(key, {}).items():
                 candidates = {p.resolve() for p in (ROOT/name, HERE/name) if p.is_file()}

@@ -1,0 +1,187 @@
+{
+  "checks": {
+    "branch_support_comparisons": 8,
+    "formula_triples": 5632,
+    "long_flank_bounds": 480,
+    "padded_graph_witnesses": 18,
+    "singleton_exception_identities": 34,
+    "small_box_branch_solutions": 30
+  },
+  "cores": {
+    "C3": {
+      "branches": {
+        "11": {
+          "candidate_count": 0,
+          "exists": false
+        },
+        "13": {
+          "candidate_count": 6,
+          "exists": true,
+          "witness": {
+            "A": 1,
+            "B": 0,
+            "outmask": 1,
+            "rows": [
+              14,
+              4,
+              24,
+              18,
+              3
+            ]
+          }
+        }
+      },
+      "core": [
+        2,
+        4,
+        1
+      ],
+      "h": 3
+    },
+    "H9a": {
+      "branches": {
+        "29": {
+          "candidate_count": 8,
+          "exists": true,
+          "witness": {
+            "A": 0,
+            "B": 0,
+            "outmask": 8,
+            "rows": [
+              34,
+              36,
+              41,
+              19,
+              39,
+              8
+            ]
+          }
+        },
+        "31": {
+          "candidate_count": 8,
+          "exists": true,
+          "witness": {
+            "A": 0,
+            "B": 1,
+            "outmask": 1,
+            "rows": [
+              34,
+              100,
+              105,
+              115,
+              103,
+              64,
+              1
+            ]
+          }
+        }
+      },
+      "core": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "h": 9
+    },
+    "H9b": {
+      "branches": {
+        "29": {
+          "candidate_count": 4,
+          "exists": true,
+          "witness": {
+            "A": 0,
+            "B": 1,
+            "outmask": 1,
+            "rows": [
+              34,
+              100,
+              121,
+              99,
+              107,
+              64,
+              1
+            ]
+          }
+        },
+        "31": {
+          "candidate_count": 0,
+          "exists": false
+        }
+      },
+      "core": [
+        2,
+        4,
+        25,
+        3,
+        11
+      ],
+      "h": 9
+    },
+    "Q4": {
+      "branches": {
+        "17": {
+          "candidate_count": 2,
+          "exists": true,
+          "witness": {
+            "A": 0,
+            "B": 1,
+            "outmask": 2,
+            "rows": [
+              52,
+              17,
+              58,
+              51,
+              32,
+              2
+            ]
+          }
+        },
+        "19": {
+          "candidate_count": 2,
+          "exists": true,
+          "witness": {
+            "A": 0,
+            "B": 1,
+            "outmask": 4,
+            "rows": [
+              52,
+              49,
+              26,
+              51,
+              32,
+              4
+            ]
+          }
+        }
+      },
+      "core": [
+        4,
+        1,
+        10,
+        3
+      ],
+      "h": 5
+    }
+  },
+  "dependencies_sha256": {
+    "check.py": "1f8c8dda8607c1b2a28cec0c2621a7f5f6a427a6102878d869894e36c61b5c65"
+  },
+  "scope": "four named cores; finite controls of a proved all-order reduction",
+  "script_sha256": "6dceaab74b591b8b0bb3211a9b5954eb99ac6894ce02da97cdab379ab036da51",
+  "sharp_boundary": {
+    "H": 15,
+    "active_singletons": 2,
+    "h": 3,
+    "rows": [
+      30,
+      28,
+      8,
+      16,
+      36,
+      15
+    ]
+  },
+  "status": "PASS"
+}

@@ -79,10 +79,10 @@ The strongest survivor is the separate-source rule. A demonstrated reset
 replaces that implication at105; a universal source-selection rule is the
 new question. No external novelty claim or new META-PATTERNS card is made.
 
-All six checker pairs were freshly executed normally and with Python
+All seven checker pairs were freshly executed normally and with Python
 optimization after integrating incoming work. Their outputs match the
-saved receipts. The reproduction validator covers31 artifacts,22 distinct
-pinned inputs and33 local links; the mutable mistakes-ledger reference is
+saved receipts. The reproduction validator covers35 artifacts,25 distinct
+pinned inputs and36 local links; the mutable mistakes-ledger reference is
 verified against its recorded source commit. Current routing is added to
 HN and the results index, already reachable from CURRENT-FRONTIER, keeping
 the bounded startup surface unchanged.
@@ -104,6 +104,16 @@ to return to the unit-offset grammar: it must account for the selected
 symmetry, rather than only reach a scalar residue. The base itself need
 not be asymmetric. This incoming result is not used as a dependency of
 our105 or173 proofs.
+
+Before the final push, incoming4098631a54 completed all33 seed gaps in
+that bounded bank. Its stated consequence is now2049 entire odd-part
+lines c<=4097, with the below-ray points supplied by the inherited audited
+finite range. This supersedes the earlier18-witness checkpoint as the
+current finite-bank frontier; it still leaves unbounded c open. The
+construction, thresholds and status boundaries were read, not independently
+rerun here. Incomingcaad1e2c31 then connected those seeds back to our105
+source-identity obstruction; the two results concern different extension
+grammars and coexist without implying the global branch rule.
 
 Incomingcbc4fa7860 contains two useful Session251 mechanisms. The
 [safe inflation criterion](../session251_creative_completion_20261111/cycles/README.md)
@@ -137,11 +147,40 @@ errors in the maintained mistakes ledger. They do not alter MISTAKE-756.
 The H5 ledger pin is retained at its explicitly recorded source commit,
 rather than treating an unrelated later addition as a changed proof.
 
+The later incoming5bddb480c6 independently obtains the fixed-core compiler
+and sharp173 floor in [Session251's ternary note](../session251_creative_completion_20261111/ternary/PROOF.md).
+Its nine signed coordinates reduce to our seven coefficients by rooted
+reciprocity: k_-=-h, i_-=-u, o_-=-v, and j_++j_-=t-h.
+We record this as concurrent overlap, not exclusive session priority.
+Its finite five-core bank, using both H9 cores, covers every allowed odd
+through262143; each H9 type repairs a hole missed by the other. This is
+incoming finite evidence, not a fresh recount here or an all-height proof.
+The next task is the complement-cover theorem for those charts, rather
+than another claim that the H9 extension has not yet been attempted.
+
+The same incoming packet proves that a3h+2/+4 cut is monotone on all
+singleton SCCs, and hence has at most one active flank around a single
+strong core. Combining this with the positive coefficients of our compiler
+gives the sharper one-active-singleton reduction recorded in the final
+padding addendum. This is a synthesis using the incoming theorem, not a
+rediscovery of its singleton-inversion argument.
+
+The final refinement strengthens the ratio boundary to every N<5h whose
+new-vertex SCC contains the strong old core. For a cut with one old
+in-neighbor, recovered stationary sewing gives t+u=h+e; with two or more,
+the path-splitting injection gives e>=2h. Either excludes two active left
+singletons below5h; converse handles the right. C3 with two active left
+vertices attains5h, so strictness is necessary. This yields the three
+explicit return readings t,t+e+u,t+s+v and saturation of neutral padding
+after one vertex on each side, with actual names retained. Prime/7p
+source factorization makes this a direct reduction for the assigned lanes.
+
 ## Next exact obligations
 
-1. Generalize the fixed-core inverse procedurally, beginning with the two
-   H9 cores that witness173. Determine whether growing parent complexity
-   admits a descending constructor rather than assuming a bounded bank.
+1. Turn the incoming five-core bank into an all-height construction, or
+   find its first genuine obstruction with the terminating inverse. Keep
+   both nonredundant H9 charts. Determine whether parent complexity must
+   grow, rather than assuming either boundedness or unboundedness.
 2. Search for local replacement templates with a retained two-port
    interface. The105 macro preserves15 possible original pairs, not every
    named pair, and its joint cube changes explicitly.

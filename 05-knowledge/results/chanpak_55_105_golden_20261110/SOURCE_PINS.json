@@ -1,5 +1,7 @@
 {
   "git_object_sha256": {
+    "5bddb480c6c74e8644104e9a06c9029440b81417:05-knowledge/results/session251_creative_completion_20261111/geometry/PADDING_CUT_NORMAL_FORM.md": "c67be09b080b316105cf7603ebb69e0565dc96c4d7c4d2444411ba771db69402",
+    "5bddb480c6c74e8644104e9a06c9029440b81417:05-knowledge/results/session251_creative_completion_20261111/ternary/PROOF.md": "6dc67aec6a2e7bf3b8235799d81dbd8115ad9d89aad723bdb158464667ef0b4d",
     "8e097d715769dd942ab21807a5a5ece39b66bec2:session197/path-polynomials/ONE_CORE_BINARY_INVERSE.md": "701d44aeb13e4f8c26ff44c3d25c3166350371232e7e00e3019e70b5aeab0321"
   },
   "source_HEAD": "8e097d715769dd942ab21807a5a5ece39b66bec2",

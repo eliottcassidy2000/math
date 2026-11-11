@@ -105,6 +105,41 @@ ordered covers by two nonempty paths. It is6 for C3 and22 for Q4.
 This generalizes the prior MISTAKE-756 correction and retains module
 reentry rather than assuming a contiguous path visit.
 
+Incoming [Session251](../session251_creative_completion_20261111/ternary/PROOF.md)
+independently reaches the same compiler and173 boundary. Its five-core
+bank includes both H9 types and covers every allowed odd through262143
+in its declared finite experiment. The unbounded cover remains OPEN.
+The signed-coordinate and positive-coordinate formulas agree by the
+rooted reciprocity identities; this is concurrent corroboration, not
+an exclusive priority claim for this session.
+
+## A finite return test for the prime and7p lanes
+
+Combining incoming singleton-padding rigidity with the positive compiler
+gives an [all-order sharpening](h5/TERNARY_PADDING.md). Around a strong
+core C with h=H(C)>=3, a child of count less than5h whose new-vertex SCC
+contains C has **at most one active old singleton**. All other exterior
+padding remains outside that SCC. The strict5h boundary is sharp.
+
+Consequently, for each proper named core cut O, the only possible ternary
+branch values, after ignoring inactive exterior padding, are
+
+    t,                 t+e+u,                 t+s+v.
+    no active flank    one left singleton    one right singleton
+
+For a fixed source TT_a -> C -> TT_b, the second and third choices are
+available exactly when a>0 and b>0, respectively. Adding one neutral
+singleton on each side enables every possible branch from that core;
+arbitrarily longer padding adds none. Existing names can be retained.
+
+Every realization of an odd prime p or7p has just one nonsingleton SCC,
+because counts multiply over SCCs and7 is forbidden. Thus this test
+applies to precisely those parent lanes, including49 and excluding7,21.
+It is an exact finite test on an actual strong core and its named cuts,
+not a proof that a suitable core exists for every target. At105 the two
+branch core families remain incompatible; neutral preparation cannot
+change the core itself.
+
 ## A structural role for105 in the golden model
 
 The [golden operator theorem G105](golden/NOTE.md) concerns the inherited
@@ -158,7 +193,7 @@ unlimited ternary returns, or provide a new complete A000568 recurrence.
     python3 -B 05-knowledge/results/chanpak_55_105_golden_20261110/reproduce.py
 
 The default verifies the manifest, source pins, local links and saved
-normal/optimized receipts. `--rerun` freshly executes the six checker
+normal/optimized receipts. `--rerun` freshly executes the seven checker
 pairs. Proof reviews use independent algorithms: separate core
 canonicalizations, finite-field vector sets versus row-reduced subspaces,
 and literal Hamilton counts versus subset recurrences. The strong inventory
