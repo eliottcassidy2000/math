@@ -4,6 +4,30 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-11: Untouched triangle rotations do not require contiguous visits
+
+- **Affected source:** [triangle filtration, section2](../05-knowledge/results/berggren_target_return_20261111/fibres/TRIANGLE_FILTRATION.md),
+  first checkpoint `8939375fbf`. The proof incorrectly asserted that an old
+  triangle with no vertex adjacent to a newborn in a Hamilton path must
+  occupy consecutive positions.
+- **Minimal witness / failed implication:** in old `TT1 -> C3 -> TT1`
+  on0..4, with triangle1->2->3->1, add5 beating only0. The Hamilton path
+  `1,4,5,0,2,3` splits that untouched triangle. A detour through other
+  old SCCs and the newborn can return to it without touching it directly.
+- **Repair / strongest survivor:** cyclically relabel an untouched
+  triangle at its existing path positions. Every used incident edge has
+  two old endpoints, and the relabelling is an automorphism of the old
+  source; new incident edges are unused. The touched set stays fixed and
+  the commuting action is free. Thus the proved divisor
+  `3^max(r-2k,0)` and the exact consecutive-triangle filtration survive.
+- **Missing coordinate / next question:** retain positions and distinguish
+  used edges from all graph edges. This is not generally an automorphism
+  of the full extension. The arithmetic lane found the error during
+  independent review; the literal hostile and its three rotations are
+  now reproduction controls. General gap-filtration equality was open at
+  that checkpoint and is now closed by the independently reviewed
+  [half-contact theorem](../05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_ALL_K_PROOF.md).
+
 ## 2026-11-10: Fermat Paley graph family excludes the first Fermat prime
 
 - **Affected source:** [FIVE_LADDER, section3](../05-knowledge/results/fermat_five_pepin_collatz_20261025/FIVE_LADDER.md).

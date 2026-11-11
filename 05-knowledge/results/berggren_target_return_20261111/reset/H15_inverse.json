@@ -1,0 +1,5699 @@
+{
+  "status": "PASS",
+  "scope": "All128cuts ofeach H15core and16S4cuts withunbounded exact flanks;84complete module expansions",
+  "cores": [
+    {
+      "name": "S4_C3",
+      "core": [
+        114,
+        116,
+        121,
+        115,
+        32,
+        64,
+        16
+      ],
+      "cut_universe": 128,
+      "inverse": [
+        {
+          "cut": 0,
+          "coefficients": [
+            15,
+            15,
+            384,
+            369,
+            0,
+            15,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 1,
+          "coefficients": [
+            87,
+            15,
+            384,
+            342,
+            72,
+            12,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 2,
+          "coefficients": [
+            75,
+            15,
+            384,
+            348,
+            60,
+            12,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 3,
+          "coefficients": [
+            135,
+            15,
+            384,
+            321,
+            132,
+            9,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 4,
+          "coefficients": [
+            99,
+            15,
+            384,
+            354,
+            84,
+            12,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 5,
+          "coefficients": [
+            165,
+            15,
+            384,
+            327,
+            156,
+            9,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 6,
+          "coefficients": [
+            147,
+            15,
+            384,
+            333,
+            144,
+            9,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 7,
+          "coefficients": [
+            201,
+            15,
+            384,
+            306,
+            216,
+            6,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 8,
+          "coefficients": [
+            123,
+            15,
+            384,
+            351,
+            108,
+            9,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 9,
+          "coefficients": [
+            177,
+            15,
+            384,
+            324,
+            180,
+            6,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 10,
+          "coefficients": [
+            177,
+            15,
+            384,
+            330,
+            168,
+            6,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 11,
+          "coefficients": [
+            219,
+            15,
+            384,
+            303,
+            240,
+            3,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 12,
+          "coefficients": [
+            195,
+            15,
+            384,
+            336,
+            192,
+            6,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 13,
+          "coefficients": [
+            243,
+            15,
+            384,
+            309,
+            264,
+            3,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 14,
+          "coefficients": [
+            237,
+            15,
+            384,
+            315,
+            252,
+            3,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 15,
+          "coefficients": [
+            273,
+            15,
+            384,
+            288,
+            324,
+            0,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 16,
+          "coefficients": [
+            25,
+            15,
+            384,
+            273,
+            15,
+            15,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 17,
+          "coefficients": [
+            77,
+            15,
+            384,
+            246,
+            87,
+            12,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 18,
+          "coefficients": [
+            69,
+            15,
+            384,
+            252,
+            75,
+            12,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 19,
+          "coefficients": [
+            109,
+            15,
+            384,
+            225,
+            147,
+            9,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 20,
+          "coefficients": [
+            87,
+            15,
+            384,
+            258,
+            99,
+            12,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 21,
+          "coefficients": [
+            133,
+            15,
+            384,
+            231,
+            171,
+            9,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 22,
+          "coefficients": [
+            119,
+            15,
+            384,
+            237,
+            159,
+            9,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 23,
+          "coefficients": [
+            153,
+            15,
+            384,
+            210,
+            231,
+            6,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 24,
+          "coefficients": [
+            105,
+            15,
+            384,
+            255,
+            123,
+            9,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 25,
+          "coefficients": [
+            139,
+            15,
+            384,
+            228,
+            195,
+            6,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 26,
+          "coefficients": [
+            143,
+            15,
+            384,
+            234,
+            183,
+            6,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 27,
+          "coefficients": [
+            165,
+            15,
+            384,
+            207,
+            255,
+            3,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 28,
+          "coefficients": [
+            155,
+            15,
+            384,
+            240,
+            207,
+            6,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 29,
+          "coefficients": [
+            183,
+            15,
+            384,
+            213,
+            279,
+            3,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 30,
+          "coefficients": [
+            181,
+            15,
+            384,
+            219,
+            267,
+            3,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 31,
+          "coefficients": [
+            197,
+            15,
+            384,
+            192,
+            339,
+            0,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 32,
+          "coefficients": [
+            25,
+            15,
+            384,
+            273,
+            15,
+            15,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 33,
+          "coefficients": [
+            77,
+            15,
+            384,
+            246,
+            87,
+            12,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 34,
+          "coefficients": [
+            69,
+            15,
+            384,
+            252,
+            75,
+            12,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 35,
+          "coefficients": [
+            109,
+            15,
+            384,
+            225,
+            147,
+            9,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 36,
+          "coefficients": [
+            87,
+            15,
+            384,
+            258,
+            99,
+            12,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 37,
+          "coefficients": [
+            133,
+            15,
+            384,
+            231,
+            171,
+            9,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 38,
+          "coefficients": [
+            119,
+            15,
+            384,
+            237,
+            159,
+            9,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 39,
+          "coefficients": [
+            153,
+            15,
+            384,
+            210,
+            231,
+            6,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 40,
+          "coefficients": [
+            105,
+            15,
+            384,
+            255,
+            123,
+            9,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 41,
+          "coefficients": [
+            139,
+            15,
+            384,
+            228,
+            195,
+            6,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 42,
+          "coefficients": [
+            143,
+            15,
+            384,
+            234,
+            183,
+            6,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 43,
+          "coefficients": [
+            165,
+            15,
+            384,
+            207,
+            255,
+            3,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 44,
+          "coefficients": [
+            155,
+            15,
+            384,
+            240,
+            207,
+            6,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 45,
+          "coefficients": [
+            183,
+            15,
+            384,
+            213,
+            279,
+            3,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 46,
+          "coefficients": [
+            181,
+            15,
+            384,
+            219,
+            267,
+            3,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 47,
+          "coefficients": [
+            197,
+            15,
+            384,
+            192,
+            339,
+            0,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 48,
+          "coefficients": [
+            25,
+            15,
+            384,
+            177,
+            30,
+            15,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 49,
+          "coefficients": [
+            57,
+            15,
+            384,
+            150,
+            102,
+            12,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 50,
+          "coefficients": [
+            53,
+            15,
+            384,
+            156,
+            90,
+            12,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 51,
+          "coefficients": [
+            73,
+            15,
+            384,
+            129,
+            162,
+            9,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 52,
+          "coefficients": [
+            65,
+            15,
+            384,
+            162,
+            114,
+            12,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 53,
+          "coefficients": [
+            91,
+            15,
+            384,
+            135,
+            186,
+            9,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 54,
+          "coefficients": [
+            81,
+            15,
+            384,
+            141,
+            174,
+            9,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 55,
+          "coefficients": [
+            95,
+            15,
+            384,
+            114,
+            246,
+            6,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 56,
+          "coefficients": [
+            77,
+            15,
+            384,
+            159,
+            138,
+            9,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 57,
+          "coefficients": [
+            91,
+            15,
+            384,
+            132,
+            210,
+            6,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 58,
+          "coefficients": [
+            99,
+            15,
+            384,
+            138,
+            198,
+            6,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 59,
+          "coefficients": [
+            101,
+            15,
+            384,
+            111,
+            270,
+            3,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 60,
+          "coefficients": [
+            105,
+            15,
+            384,
+            144,
+            222,
+            6,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 61,
+          "coefficients": [
+            113,
+            15,
+            384,
+            117,
+            294,
+            3,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 62,
+          "coefficients": [
+            115,
+            15,
+            384,
+            123,
+            282,
+            3,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 63,
+          "coefficients": [
+            111,
+            15,
+            384,
+            96,
+            354,
+            0,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 64,
+          "coefficients": [
+            25,
+            15,
+            384,
+            273,
+            15,
+            15,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 65,
+          "coefficients": [
+            77,
+            15,
+            384,
+            246,
+            87,
+            12,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 66,
+          "coefficients": [
+            69,
+            15,
+            384,
+            252,
+            75,
+            12,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 67,
+          "coefficients": [
+            109,
+            15,
+            384,
+            225,
+            147,
+            9,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 68,
+          "coefficients": [
+            87,
+            15,
+            384,
+            258,
+            99,
+            12,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 69,
+          "coefficients": [
+            133,
+            15,
+            384,
+            231,
+            171,
+            9,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 70,
+          "coefficients": [
+            119,
+            15,
+            384,
+            237,
+            159,
+            9,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 71,
+          "coefficients": [
+            153,
+            15,
+            384,
+            210,
+            231,
+            6,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 72,
+          "coefficients": [
+            105,
+            15,
+            384,
+            255,
+            123,
+            9,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 73,
+          "coefficients": [
+            139,
+            15,
+            384,
+            228,
+            195,
+            6,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 74,
+          "coefficients": [
+            143,
+            15,
+            384,
+            234,
+            183,
+            6,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 75,
+          "coefficients": [
+            165,
+            15,
+            384,
+            207,
+            255,
+            3,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 76,
+          "coefficients": [
+            155,
+            15,
+            384,
+            240,
+            207,
+            6,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 77,
+          "coefficients": [
+            183,
+            15,
+            384,
+            213,
+            279,
+            3,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 78,
+          "coefficients": [
+            181,
+            15,
+            384,
+            219,
+            267,
+            3,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 79,
+          "coefficients": [
+            197,
+            15,
+            384,
+            192,
+            339,
+            0,
+            5
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 80,
+          "coefficients": [
+            25,
+            15,
+            384,
+            177,
+            30,
+            15,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 81,
+          "coefficients": [
+            57,
+            15,
+            384,
+            150,
+            102,
+            12,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 82,
+          "coefficients": [
+            53,
+            15,
+            384,
+            156,
+            90,
+            12,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 83,
+          "coefficients": [
+            73,
+            15,
+            384,
+            129,
+            162,
+            9,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 84,
+          "coefficients": [
+            65,
+            15,
+            384,
+            162,
+            114,
+            12,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 85,
+          "coefficients": [
+            91,
+            15,
+            384,
+            135,
+            186,
+            9,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 86,
+          "coefficients": [
+            81,
+            15,
+            384,
+            141,
+            174,
+            9,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 87,
+          "coefficients": [
+            95,
+            15,
+            384,
+            114,
+            246,
+            6,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 88,
+          "coefficients": [
+            77,
+            15,
+            384,
+            159,
+            138,
+            9,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 89,
+          "coefficients": [
+            91,
+            15,
+            384,
+            132,
+            210,
+            6,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 90,
+          "coefficients": [
+            99,
+            15,
+            384,
+            138,
+            198,
+            6,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 91,
+          "coefficients": [
+            101,
+            15,
+            384,
+            111,
+            270,
+            3,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 92,
+          "coefficients": [
+            105,
+            15,
+            384,
+            144,
+            222,
+            6,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 93,
+          "coefficients": [
+            113,
+            15,
+            384,
+            117,
+            294,
+            3,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 94,
+          "coefficients": [
+            115,
+            15,
+            384,
+            123,
+            282,
+            3,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 95,
+          "coefficients": [
+            111,
+            15,
+            384,
+            96,
+            354,
+            0,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 96,
+          "coefficients": [
+            25,
+            15,
+            384,
+            177,
+            30,
+            15,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 97,
+          "coefficients": [
+            57,
+            15,
+            384,
+            150,
+            102,
+            12,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 98,
+          "coefficients": [
+            53,
+            15,
+            384,
+            156,
+            90,
+            12,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 99,
+          "coefficients": [
+            73,
+            15,
+            384,
+            129,
+            162,
+            9,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 100,
+          "coefficients": [
+            65,
+            15,
+            384,
+            162,
+            114,
+            12,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 101,
+          "coefficients": [
+            91,
+            15,
+            384,
+            135,
+            186,
+            9,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 102,
+          "coefficients": [
+            81,
+            15,
+            384,
+            141,
+            174,
+            9,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 103,
+          "coefficients": [
+            95,
+            15,
+            384,
+            114,
+            246,
+            6,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 104,
+          "coefficients": [
+            77,
+            15,
+            384,
+            159,
+            138,
+            9,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 105,
+          "coefficients": [
+            91,
+            15,
+            384,
+            132,
+            210,
+            6,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 106,
+          "coefficients": [
+            99,
+            15,
+            384,
+            138,
+            198,
+            6,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 107,
+          "coefficients": [
+            101,
+            15,
+            384,
+            111,
+            270,
+            3,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 108,
+          "coefficients": [
+            105,
+            15,
+            384,
+            144,
+            222,
+            6,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 109,
+          "coefficients": [
+            113,
+            15,
+            384,
+            117,
+            294,
+            3,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 110,
+          "coefficients": [
+            115,
+            15,
+            384,
+            123,
+            282,
+            3,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 111,
+          "coefficients": [
+            111,
+            15,
+            384,
+            96,
+            354,
+            0,
+            10
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 112,
+          "coefficients": [
+            15,
+            15,
+            384,
+            81,
+            45,
+            15,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 113,
+          "coefficients": [
+            27,
+            15,
+            384,
+            54,
+            117,
+            12,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 114,
+          "coefficients": [
+            27,
+            15,
+            384,
+            60,
+            105,
+            12,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 115,
+          "coefficients": [
+            27,
+            15,
+            384,
+            33,
+            177,
+            9,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 116,
+          "coefficients": [
+            33,
+            15,
+            384,
+            66,
+            129,
+            12,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 117,
+          "coefficients": [
+            39,
+            15,
+            384,
+            39,
+            201,
+            9,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 118,
+          "coefficients": [
+            33,
+            15,
+            384,
+            45,
+            189,
+            9,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 119,
+          "coefficients": [
+            27,
+            15,
+            384,
+            18,
+            261,
+            6,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 120,
+          "coefficients": [
+            39,
+            15,
+            384,
+            63,
+            153,
+            9,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 121,
+          "coefficients": [
+            33,
+            15,
+            384,
+            36,
+            225,
+            6,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 122,
+          "coefficients": [
+            45,
+            15,
+            384,
+            42,
+            213,
+            6,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 123,
+          "coefficients": [
+            27,
+            15,
+            384,
+            15,
+            285,
+            3,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 124,
+          "coefficients": [
+            45,
+            15,
+            384,
+            48,
+            237,
+            6,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 125,
+          "coefficients": [
+            33,
+            15,
+            384,
+            21,
+            309,
+            3,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 126,
+          "coefficients": [
+            39,
+            15,
+            384,
+            27,
+            297,
+            3,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 127,
+          "coefficients": [
+            15,
+            15,
+            384,
+            0,
+            369,
+            0,
+            15
+          ],
+          "solutions": []
+        }
+      ],
+      "hits": []
+    },
+    {
+      "name": "C3_S4",
+      "core": [
+        122,
+        124,
+        121,
+        16,
+        32,
+        72,
+        24
+      ],
+      "cut_universe": 128,
+      "inverse": [
+        {
+          "cut": 0,
+          "coefficients": [
+            15,
+            15,
+            384,
+            369,
+            0,
+            15,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 1,
+          "coefficients": [
+            111,
+            15,
+            384,
+            354,
+            96,
+            10,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 2,
+          "coefficients": [
+            111,
+            15,
+            384,
+            354,
+            96,
+            10,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 3,
+          "coefficients": [
+            197,
+            15,
+            384,
+            339,
+            192,
+            5,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 4,
+          "coefficients": [
+            111,
+            15,
+            384,
+            354,
+            96,
+            10,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 5,
+          "coefficients": [
+            197,
+            15,
+            384,
+            339,
+            192,
+            5,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 6,
+          "coefficients": [
+            197,
+            15,
+            384,
+            339,
+            192,
+            5,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 7,
+          "coefficients": [
+            273,
+            15,
+            384,
+            324,
+            288,
+            0,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 8,
+          "coefficients": [
+            27,
+            15,
+            384,
+            261,
+            18,
+            15,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 9,
+          "coefficients": [
+            95,
+            15,
+            384,
+            246,
+            114,
+            10,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 10,
+          "coefficients": [
+            95,
+            15,
+            384,
+            246,
+            114,
+            10,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 11,
+          "coefficients": [
+            153,
+            15,
+            384,
+            231,
+            210,
+            5,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 12,
+          "coefficients": [
+            95,
+            15,
+            384,
+            246,
+            114,
+            10,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 13,
+          "coefficients": [
+            153,
+            15,
+            384,
+            231,
+            210,
+            5,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 14,
+          "coefficients": [
+            153,
+            15,
+            384,
+            231,
+            210,
+            5,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 15,
+          "coefficients": [
+            201,
+            15,
+            384,
+            216,
+            306,
+            0,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 16,
+          "coefficients": [
+            27,
+            15,
+            384,
+            285,
+            15,
+            15,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 17,
+          "coefficients": [
+            101,
+            15,
+            384,
+            270,
+            111,
+            10,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 18,
+          "coefficients": [
+            101,
+            15,
+            384,
+            270,
+            111,
+            10,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 19,
+          "coefficients": [
+            165,
+            15,
+            384,
+            255,
+            207,
+            5,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 20,
+          "coefficients": [
+            101,
+            15,
+            384,
+            270,
+            111,
+            10,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 21,
+          "coefficients": [
+            165,
+            15,
+            384,
+            255,
+            207,
+            5,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 22,
+          "coefficients": [
+            165,
+            15,
+            384,
+            255,
+            207,
+            5,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 23,
+          "coefficients": [
+            219,
+            15,
+            384,
+            240,
+            303,
+            0,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 24,
+          "coefficients": [
+            27,
+            15,
+            384,
+            177,
+            33,
+            15,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 25,
+          "coefficients": [
+            73,
+            15,
+            384,
+            162,
+            129,
+            10,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 26,
+          "coefficients": [
+            73,
+            15,
+            384,
+            162,
+            129,
+            10,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 27,
+          "coefficients": [
+            109,
+            15,
+            384,
+            147,
+            225,
+            5,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 28,
+          "coefficients": [
+            73,
+            15,
+            384,
+            162,
+            129,
+            10,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 29,
+          "coefficients": [
+            109,
+            15,
+            384,
+            147,
+            225,
+            5,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 30,
+          "coefficients": [
+            109,
+            15,
+            384,
+            147,
+            225,
+            5,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 31,
+          "coefficients": [
+            135,
+            15,
+            384,
+            132,
+            321,
+            0,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 32,
+          "coefficients": [
+            33,
+            15,
+            384,
+            309,
+            21,
+            15,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 33,
+          "coefficients": [
+            113,
+            15,
+            384,
+            294,
+            117,
+            10,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 34,
+          "coefficients": [
+            113,
+            15,
+            384,
+            294,
+            117,
+            10,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 35,
+          "coefficients": [
+            183,
+            15,
+            384,
+            279,
+            213,
+            5,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 36,
+          "coefficients": [
+            113,
+            15,
+            384,
+            294,
+            117,
+            10,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 37,
+          "coefficients": [
+            183,
+            15,
+            384,
+            279,
+            213,
+            5,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 38,
+          "coefficients": [
+            183,
+            15,
+            384,
+            279,
+            213,
+            5,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 39,
+          "coefficients": [
+            243,
+            15,
+            384,
+            264,
+            309,
+            0,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 40,
+          "coefficients": [
+            39,
+            15,
+            384,
+            201,
+            39,
+            15,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 41,
+          "coefficients": [
+            91,
+            15,
+            384,
+            186,
+            135,
+            10,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 42,
+          "coefficients": [
+            91,
+            15,
+            384,
+            186,
+            135,
+            10,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 43,
+          "coefficients": [
+            133,
+            15,
+            384,
+            171,
+            231,
+            5,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 44,
+          "coefficients": [
+            91,
+            15,
+            384,
+            186,
+            135,
+            10,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 45,
+          "coefficients": [
+            133,
+            15,
+            384,
+            171,
+            231,
+            5,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 46,
+          "coefficients": [
+            133,
+            15,
+            384,
+            171,
+            231,
+            5,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 47,
+          "coefficients": [
+            165,
+            15,
+            384,
+            156,
+            327,
+            0,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 48,
+          "coefficients": [
+            33,
+            15,
+            384,
+            225,
+            36,
+            15,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 49,
+          "coefficients": [
+            91,
+            15,
+            384,
+            210,
+            132,
+            10,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 50,
+          "coefficients": [
+            91,
+            15,
+            384,
+            210,
+            132,
+            10,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 51,
+          "coefficients": [
+            139,
+            15,
+            384,
+            195,
+            228,
+            5,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 52,
+          "coefficients": [
+            91,
+            15,
+            384,
+            210,
+            132,
+            10,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 53,
+          "coefficients": [
+            139,
+            15,
+            384,
+            195,
+            228,
+            5,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 54,
+          "coefficients": [
+            139,
+            15,
+            384,
+            195,
+            228,
+            5,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 55,
+          "coefficients": [
+            177,
+            15,
+            384,
+            180,
+            324,
+            0,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 56,
+          "coefficients": [
+            27,
+            15,
+            384,
+            117,
+            54,
+            15,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 57,
+          "coefficients": [
+            57,
+            15,
+            384,
+            102,
+            150,
+            10,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 58,
+          "coefficients": [
+            57,
+            15,
+            384,
+            102,
+            150,
+            10,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 59,
+          "coefficients": [
+            77,
+            15,
+            384,
+            87,
+            246,
+            5,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 60,
+          "coefficients": [
+            57,
+            15,
+            384,
+            102,
+            150,
+            10,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 61,
+          "coefficients": [
+            77,
+            15,
+            384,
+            87,
+            246,
+            5,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 62,
+          "coefficients": [
+            77,
+            15,
+            384,
+            87,
+            246,
+            5,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 63,
+          "coefficients": [
+            87,
+            15,
+            384,
+            72,
+            342,
+            0,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 64,
+          "coefficients": [
+            39,
+            15,
+            384,
+            297,
+            27,
+            15,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 65,
+          "coefficients": [
+            115,
+            15,
+            384,
+            282,
+            123,
+            10,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 66,
+          "coefficients": [
+            115,
+            15,
+            384,
+            282,
+            123,
+            10,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 67,
+          "coefficients": [
+            181,
+            15,
+            384,
+            267,
+            219,
+            5,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 68,
+          "coefficients": [
+            115,
+            15,
+            384,
+            282,
+            123,
+            10,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 69,
+          "coefficients": [
+            181,
+            15,
+            384,
+            267,
+            219,
+            5,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 70,
+          "coefficients": [
+            181,
+            15,
+            384,
+            267,
+            219,
+            5,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 71,
+          "coefficients": [
+            237,
+            15,
+            384,
+            252,
+            315,
+            0,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 72,
+          "coefficients": [
+            33,
+            15,
+            384,
+            189,
+            45,
+            15,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 73,
+          "coefficients": [
+            81,
+            15,
+            384,
+            174,
+            141,
+            10,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 74,
+          "coefficients": [
+            81,
+            15,
+            384,
+            174,
+            141,
+            10,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 75,
+          "coefficients": [
+            119,
+            15,
+            384,
+            159,
+            237,
+            5,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 76,
+          "coefficients": [
+            81,
+            15,
+            384,
+            174,
+            141,
+            10,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 77,
+          "coefficients": [
+            119,
+            15,
+            384,
+            159,
+            237,
+            5,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 78,
+          "coefficients": [
+            119,
+            15,
+            384,
+            159,
+            237,
+            5,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 79,
+          "coefficients": [
+            147,
+            15,
+            384,
+            144,
+            333,
+            0,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 80,
+          "coefficients": [
+            45,
+            15,
+            384,
+            213,
+            42,
+            15,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 81,
+          "coefficients": [
+            99,
+            15,
+            384,
+            198,
+            138,
+            10,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 82,
+          "coefficients": [
+            99,
+            15,
+            384,
+            198,
+            138,
+            10,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 83,
+          "coefficients": [
+            143,
+            15,
+            384,
+            183,
+            234,
+            5,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 84,
+          "coefficients": [
+            99,
+            15,
+            384,
+            198,
+            138,
+            10,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 85,
+          "coefficients": [
+            143,
+            15,
+            384,
+            183,
+            234,
+            5,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 86,
+          "coefficients": [
+            143,
+            15,
+            384,
+            183,
+            234,
+            5,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 87,
+          "coefficients": [
+            177,
+            15,
+            384,
+            168,
+            330,
+            0,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 88,
+          "coefficients": [
+            27,
+            15,
+            384,
+            105,
+            60,
+            15,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 89,
+          "coefficients": [
+            53,
+            15,
+            384,
+            90,
+            156,
+            10,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 90,
+          "coefficients": [
+            53,
+            15,
+            384,
+            90,
+            156,
+            10,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 91,
+          "coefficients": [
+            69,
+            15,
+            384,
+            75,
+            252,
+            5,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 92,
+          "coefficients": [
+            53,
+            15,
+            384,
+            90,
+            156,
+            10,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 93,
+          "coefficients": [
+            69,
+            15,
+            384,
+            75,
+            252,
+            5,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 94,
+          "coefficients": [
+            69,
+            15,
+            384,
+            75,
+            252,
+            5,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 95,
+          "coefficients": [
+            75,
+            15,
+            384,
+            60,
+            348,
+            0,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 96,
+          "coefficients": [
+            45,
+            15,
+            384,
+            237,
+            48,
+            15,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 97,
+          "coefficients": [
+            105,
+            15,
+            384,
+            222,
+            144,
+            10,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 98,
+          "coefficients": [
+            105,
+            15,
+            384,
+            222,
+            144,
+            10,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 99,
+          "coefficients": [
+            155,
+            15,
+            384,
+            207,
+            240,
+            5,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 100,
+          "coefficients": [
+            105,
+            15,
+            384,
+            222,
+            144,
+            10,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 101,
+          "coefficients": [
+            155,
+            15,
+            384,
+            207,
+            240,
+            5,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 102,
+          "coefficients": [
+            155,
+            15,
+            384,
+            207,
+            240,
+            5,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 103,
+          "coefficients": [
+            195,
+            15,
+            384,
+            192,
+            336,
+            0,
+            6
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 104,
+          "coefficients": [
+            33,
+            15,
+            384,
+            129,
+            66,
+            15,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 105,
+          "coefficients": [
+            65,
+            15,
+            384,
+            114,
+            162,
+            10,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 106,
+          "coefficients": [
+            65,
+            15,
+            384,
+            114,
+            162,
+            10,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 107,
+          "coefficients": [
+            87,
+            15,
+            384,
+            99,
+            258,
+            5,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 108,
+          "coefficients": [
+            65,
+            15,
+            384,
+            114,
+            162,
+            10,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 109,
+          "coefficients": [
+            87,
+            15,
+            384,
+            99,
+            258,
+            5,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 110,
+          "coefficients": [
+            87,
+            15,
+            384,
+            99,
+            258,
+            5,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 111,
+          "coefficients": [
+            99,
+            15,
+            384,
+            84,
+            354,
+            0,
+            12
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 112,
+          "coefficients": [
+            39,
+            15,
+            384,
+            153,
+            63,
+            15,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 113,
+          "coefficients": [
+            77,
+            15,
+            384,
+            138,
+            159,
+            10,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 114,
+          "coefficients": [
+            77,
+            15,
+            384,
+            138,
+            159,
+            10,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 115,
+          "coefficients": [
+            105,
+            15,
+            384,
+            123,
+            255,
+            5,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 116,
+          "coefficients": [
+            77,
+            15,
+            384,
+            138,
+            159,
+            10,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 117,
+          "coefficients": [
+            105,
+            15,
+            384,
+            123,
+            255,
+            5,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 118,
+          "coefficients": [
+            105,
+            15,
+            384,
+            123,
+            255,
+            5,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 119,
+          "coefficients": [
+            123,
+            15,
+            384,
+            108,
+            351,
+            0,
+            9
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 120,
+          "coefficients": [
+            15,
+            15,
+            384,
+            45,
+            81,
+            15,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 121,
+          "coefficients": [
+            25,
+            15,
+            384,
+            30,
+            177,
+            10,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 122,
+          "coefficients": [
+            25,
+            15,
+            384,
+            30,
+            177,
+            10,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 123,
+          "coefficients": [
+            25,
+            15,
+            384,
+            15,
+            273,
+            5,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 124,
+          "coefficients": [
+            25,
+            15,
+            384,
+            30,
+            177,
+            10,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 125,
+          "coefficients": [
+            25,
+            15,
+            384,
+            15,
+            273,
+            5,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 126,
+          "coefficients": [
+            25,
+            15,
+            384,
+            15,
+            273,
+            5,
+            15
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 127,
+          "coefficients": [
+            15,
+            15,
+            384,
+            0,
+            369,
+            0,
+            15
+          ],
+          "solutions": []
+        }
+      ],
+      "hits": []
+    },
+    {
+      "name": "S4",
+      "core": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "cut_universe": 16,
+      "inverse": [
+        {
+          "cut": 0,
+          "coefficients": [
+            5,
+            5,
+            32,
+            27,
+            0,
+            5,
+            0
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 1,
+          "coefficients": [
+            9,
+            5,
+            32,
+            18,
+            6,
+            4,
+            2
+          ],
+          "solutions": [
+            [
+              3,
+              57
+            ]
+          ]
+        },
+        {
+          "cut": 2,
+          "coefficients": [
+            9,
+            5,
+            32,
+            20,
+            5,
+            4,
+            1
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 3,
+          "coefficients": [
+            9,
+            5,
+            32,
+            11,
+            11,
+            3,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 4,
+          "coefficients": [
+            11,
+            5,
+            32,
+            22,
+            7,
+            4,
+            1
+          ],
+          "solutions": [
+            [
+              0,
+              693
+            ]
+          ]
+        },
+        {
+          "cut": 5,
+          "coefficients": [
+            13,
+            5,
+            32,
+            13,
+            13,
+            3,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 6,
+          "coefficients": [
+            11,
+            5,
+            32,
+            15,
+            12,
+            3,
+            2
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 7,
+          "coefficients": [
+            9,
+            5,
+            32,
+            6,
+            18,
+            2,
+            4
+          ],
+          "solutions": [
+            [
+              57,
+              3
+            ]
+          ]
+        },
+        {
+          "cut": 8,
+          "coefficients": [
+            13,
+            5,
+            32,
+            21,
+            9,
+            3,
+            1
+          ],
+          "solutions": [
+            [
+              0,
+              460
+            ]
+          ]
+        },
+        {
+          "cut": 9,
+          "coefficients": [
+            11,
+            5,
+            32,
+            12,
+            15,
+            2,
+            3
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 10,
+          "coefficients": [
+            15,
+            5,
+            32,
+            14,
+            14,
+            2,
+            2
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 11,
+          "coefficients": [
+            9,
+            5,
+            32,
+            5,
+            20,
+            1,
+            4
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 12,
+          "coefficients": [
+            15,
+            5,
+            32,
+            16,
+            16,
+            2,
+            2
+          ],
+          "solutions": []
+        },
+        {
+          "cut": 13,
+          "coefficients": [
+            11,
+            5,
+            32,
+            7,
+            22,
+            1,
+            4
+          ],
+          "solutions": [
+            [
+              693,
+              0
+            ]
+          ]
+        },
+        {
+          "cut": 14,
+          "coefficients": [
+            13,
+            5,
+            32,
+            9,
+            21,
+            1,
+            3
+          ],
+          "solutions": [
+            [
+              460,
+              0
+            ]
+          ]
+        },
+        {
+          "cut": 15,
+          "coefficients": [
+            5,
+            5,
+            32,
+            0,
+            27,
+            0,
+            5
+          ],
+          "solutions": []
+        }
+      ],
+      "hits": [
+        {
+          "cut": 1,
+          "A": 3,
+          "B": 57,
+          "rows": [
+            4094,
+            4092,
+            4040,
+            8144,
+            8164,
+            8140,
+            8064,
+            3840,
+            3584,
+            7168,
+            6144,
+            4096,
+            391
+          ]
+        },
+        {
+          "cut": 4,
+          "A": 0,
+          "B": 693,
+          "rows": [
+            32754,
+            32756,
+            16377,
+            32755,
+            32736,
+            16320,
+            32640,
+            16128,
+            32256,
+            31744,
+            14336,
+            28672,
+            8192,
+            16384,
+            5284
+          ]
+        },
+        {
+          "cut": 7,
+          "A": 57,
+          "B": 3,
+          "rows": [
+            4094,
+            4092,
+            4088,
+            8176,
+            8160,
+            4032,
+            3200,
+            3328,
+            3648,
+            7360,
+            6144,
+            4096,
+            487
+          ]
+        },
+        {
+          "cut": 8,
+          "A": 0,
+          "B": 460,
+          "rows": [
+            16370,
+            16372,
+            16377,
+            8179,
+            8160,
+            8128,
+            16256,
+            16128,
+            7680,
+            7168,
+            14336,
+            12288,
+            8192,
+            824
+          ]
+        },
+        {
+          "cut": 13,
+          "A": 693,
+          "B": 0,
+          "rows": [
+            16382,
+            32764,
+            16376,
+            32752,
+            16352,
+            16320,
+            32640,
+            16128,
+            32256,
+            15360,
+            2048,
+            20480,
+            9216,
+            3072,
+            14005
+          ]
+        },
+        {
+          "cut": 14,
+          "A": 460,
+          "B": 0,
+          "rows": [
+            8190,
+            8188,
+            8184,
+            16368,
+            16352,
+            8128,
+            8064,
+            16128,
+            15872,
+            9216,
+            2048,
+            4608,
+            1536,
+            7271
+          ]
+        }
+      ]
+    }
+  ],
+  "module_checks": [
+    {
+      "cut": 1,
+      "A": 3,
+      "B": 57,
+      "vertices": [
+        {
+          "vertex": 0,
+          "runs": [
+            2309,
+            5993,
+            3684,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 1,
+          "runs": [
+            2309,
+            5993,
+            3684,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 2,
+          "runs": [
+            2151,
+            5993,
+            5092,
+            1254,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 3,
+          "runs": [
+            1459,
+            5993,
+            6372,
+            1856,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 4,
+          "runs": [
+            1523,
+            5993,
+            6126,
+            1734,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 5,
+          "runs": [
+            2315,
+            5993,
+            4658,
+            1038,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 6,
+          "runs": [
+            3033,
+            5993,
+            2958,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 7,
+          "runs": [
+            3067,
+            5993,
+            2926,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 8,
+          "runs": [
+            3067,
+            5993,
+            2926,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 9,
+          "runs": [
+            2669,
+            5993,
+            3324,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 10,
+          "runs": [
+            2669,
+            5993,
+            3324,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 11,
+          "runs": [
+            2669,
+            5993,
+            3324,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 12,
+          "runs": [
+            5,
+            5993,
+            198436,
+            1107130,
+            1857972,
+            1070640,
+            174240,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "cut": 4,
+      "A": 0,
+      "B": 693,
+      "vertices": [
+        {
+          "vertex": 0,
+          "runs": [
+            2763,
+            5993,
+            3230,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 1,
+          "runs": [
+            3003,
+            5993,
+            2763,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 2,
+          "runs": [
+            227,
+            5993,
+            14556,
+            6934,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 3,
+          "runs": [
+            2763,
+            5993,
+            3230,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 4,
+          "runs": [
+            3563,
+            5993,
+            2429,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 5,
+          "runs": [
+            2701,
+            5993,
+            3287,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 6,
+          "runs": [
+            3117,
+            5993,
+            2871,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 7,
+          "runs": [
+            2935,
+            5993,
+            3053,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 8,
+          "runs": [
+            2979,
+            5993,
+            3014,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 9,
+          "runs": [
+            2979,
+            5993,
+            3014,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 10,
+          "runs": [
+            3223,
+            5993,
+            2765,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 11,
+          "runs": [
+            2685,
+            5993,
+            3303,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 12,
+          "runs": [
+            3781,
+            5993,
+            2207,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 13,
+          "runs": [
+            1579,
+            5993,
+            4409,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 14,
+          "runs": [
+            5,
+            5993,
+            119543,
+            440684,
+            506004,
+            193368,
+            17640,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "cut": 7,
+      "A": 57,
+      "B": 3,
+      "vertices": [
+        {
+          "vertex": 0,
+          "runs": [
+            2669,
+            5993,
+            3324,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 1,
+          "runs": [
+            2669,
+            5993,
+            3324,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 2,
+          "runs": [
+            2669,
+            5993,
+            3324,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 3,
+          "runs": [
+            3067,
+            5993,
+            2926,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 4,
+          "runs": [
+            3067,
+            5993,
+            2926,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 5,
+          "runs": [
+            3033,
+            5993,
+            2958,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 6,
+          "runs": [
+            2315,
+            5993,
+            4658,
+            1038,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 7,
+          "runs": [
+            1523,
+            5993,
+            6126,
+            1734,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 8,
+          "runs": [
+            1459,
+            5993,
+            6372,
+            1856,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 9,
+          "runs": [
+            2151,
+            5993,
+            5092,
+            1254,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 10,
+          "runs": [
+            2309,
+            5993,
+            3684,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 11,
+          "runs": [
+            2309,
+            5993,
+            3684,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 12,
+          "runs": [
+            5,
+            5993,
+            198436,
+            1107130,
+            1857972,
+            1070640,
+            174240,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "cut": 8,
+      "A": 0,
+      "B": 460,
+      "vertices": [
+        {
+          "vertex": 0,
+          "runs": [
+            2489,
+            5993,
+            4426,
+            922,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 1,
+          "runs": [
+            1291,
+            5993,
+            5256,
+            922,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 2,
+          "runs": [
+            2213,
+            5993,
+            2950,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 3,
+          "runs": [
+            1107,
+            5993,
+            8108,
+            2762,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 4,
+          "runs": [
+            2773,
+            5993,
+            3220,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 5,
+          "runs": [
+            2773,
+            5993,
+            3220,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 6,
+          "runs": [
+            3035,
+            5993,
+            2958,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 7,
+          "runs": [
+            3035,
+            5993,
+            2958,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 8,
+          "runs": [
+            3067,
+            5993,
+            2926,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 9,
+          "runs": [
+            3067,
+            5993,
+            2926,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 10,
+          "runs": [
+            2669,
+            5993,
+            3324,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 11,
+          "runs": [
+            2669,
+            5993,
+            3324,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 12,
+          "runs": [
+            2669,
+            5993,
+            3324,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 13,
+          "runs": [
+            5,
+            5993,
+            175024,
+            894346,
+            1375884,
+            711792,
+            99360,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "cut": 13,
+      "A": 693,
+      "B": 0,
+      "vertices": [
+        {
+          "vertex": 0,
+          "runs": [
+            1579,
+            5993,
+            4409,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 1,
+          "runs": [
+            3781,
+            5993,
+            2207,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 2,
+          "runs": [
+            2685,
+            5993,
+            3303,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 3,
+          "runs": [
+            3223,
+            5993,
+            2765,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 4,
+          "runs": [
+            2979,
+            5993,
+            3014,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 5,
+          "runs": [
+            2979,
+            5993,
+            3014,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 6,
+          "runs": [
+            2935,
+            5993,
+            3053,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 7,
+          "runs": [
+            3117,
+            5993,
+            2871,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 8,
+          "runs": [
+            2701,
+            5993,
+            3287,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 9,
+          "runs": [
+            3563,
+            5993,
+            2429,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 10,
+          "runs": [
+            2763,
+            5993,
+            3230,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 11,
+          "runs": [
+            227,
+            5993,
+            14556,
+            6934,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 12,
+          "runs": [
+            3003,
+            5993,
+            2763,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 13,
+          "runs": [
+            2763,
+            5993,
+            3230,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 14,
+          "runs": [
+            5,
+            5993,
+            119543,
+            440684,
+            506004,
+            193368,
+            17640,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "cut": 14,
+      "A": 460,
+      "B": 0,
+      "vertices": [
+        {
+          "vertex": 0,
+          "runs": [
+            2669,
+            5993,
+            3324,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 1,
+          "runs": [
+            2669,
+            5993,
+            3324,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 2,
+          "runs": [
+            2669,
+            5993,
+            3324,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 3,
+          "runs": [
+            3067,
+            5993,
+            2926,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 4,
+          "runs": [
+            3067,
+            5993,
+            2926,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 5,
+          "runs": [
+            3035,
+            5993,
+            2958,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 6,
+          "runs": [
+            3035,
+            5993,
+            2958,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 7,
+          "runs": [
+            2773,
+            5993,
+            3220,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 8,
+          "runs": [
+            2773,
+            5993,
+            3220,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 9,
+          "runs": [
+            1107,
+            5993,
+            8108,
+            2762,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 10,
+          "runs": [
+            2213,
+            5993,
+            2950,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 11,
+          "runs": [
+            1291,
+            5993,
+            5256,
+            922,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 12,
+          "runs": [
+            2489,
+            5993,
+            4426,
+            922,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "vertex": 13,
+          "runs": [
+            5,
+            5993,
+            175024,
+            894346,
+            1375884,
+            711792,
+            99360,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "module_universe": 84,
+  "actual_direct_plus2": {
+    "kept": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11
+    ],
+    "map": [
+      0,
+      1,
+      2,
+      5,
+      3,
+      6,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source_names": [
+      "old0",
+      "old1",
+      "old2",
+      "old3",
+      "old4",
+      "old5",
+      "old6",
+      "old7",
+      "old8",
+      "old9",
+      "old10",
+      "old11"
+    ],
+    "target_names": [
+      "old0",
+      "old1",
+      "old2",
+      "old5",
+      "new4",
+      "old4",
+      "old6",
+      "new7",
+      "new8",
+      "old7",
+      "old8",
+      "old10",
+      "old11"
+    ],
+    "insertion_target_labels": [
+      4,
+      7,
+      8
+    ],
+    "trace": [
+      1997,
+      409,
+      1599,
+      3067,
+      5993
+    ]
+  },
+  "root0_target_profile": {
+    "root": 0,
+    "h": 5993,
+    "s": 2304,
+    "q": 2309,
+    "F": 5998,
+    "gap": 5,
+    "delta": 0
+  },
+  "uniform_target_runs": [
+    2309,
+    5993,
+    3684,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "uniform_controls": [
+    {
+      "m": 1,
+      "source_H": 1997,
+      "target_H": 5993,
+      "surplus": 0,
+      "kept": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11
+      ],
+      "map": [
+        0,
+        1,
+        2,
+        5,
+        3,
+        6,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "m": 2,
+      "source_H": 4265,
+      "target_H": 13361,
+      "surplus": 564,
+      "kept": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12
+      ],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        4,
+        7,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "m": 3,
+      "source_H": 8801,
+      "target_H": 28097,
+      "surplus": 1692,
+      "kept": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13
+      ],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        5,
+        8,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "m": 4,
+      "source_H": 17873,
+      "target_H": 57569,
+      "surplus": 3948,
+      "kept": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14
+      ],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        6,
+        9,
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  ]
+}

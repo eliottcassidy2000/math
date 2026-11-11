@@ -1,0 +1,152 @@
+{
+  "four_event_walks": [
+    {
+      "end": 1,
+      "event_available": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "word": "ESES",
+      "zero_intervals": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "end": 1,
+      "event_available": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "word": "ESSE",
+      "zero_intervals": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "end": 1,
+      "event_available": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "word": "SEES",
+      "zero_intervals": [
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "end": 1,
+      "event_available": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "word": "SESE",
+      "zero_intervals": []
+    },
+    {
+      "end": 1,
+      "event_available": [
+        2,
+        3,
+        3,
+        2
+      ],
+      "word": "SSEE",
+      "zero_intervals": []
+    }
+  ],
+  "local_counts": {
+    "1": {
+      "fixed_end": 1,
+      "fixed_start": 1,
+      "unmarked": 3
+    },
+    "2": {
+      "fixed_end": 3,
+      "fixed_start": 3,
+      "unmarked": 12
+    },
+    "3": {
+      "fixed_end": 7,
+      "fixed_start": 7,
+      "unmarked": 33
+    }
+  },
+  "scope": "Independent exact local-cover enumeration and complete event walks, supplementing analytic factorization audit; not a full all-graph polynomial rerun.",
+  "source_sha256": "c25d47b7c4d8306ce7b1f8b05478d2f32b843e97711214ca344dc626b35b52bc",
+  "status": "PASS",
+  "three_event_end": [
+    {
+      "end": 0,
+      "event_available": [
+        1,
+        1,
+        1
+      ],
+      "word": "ESE",
+      "zero_intervals": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "end": 0,
+      "event_available": [
+        2,
+        2,
+        1
+      ],
+      "word": "SEE",
+      "zero_intervals": []
+    }
+  ],
+  "three_event_start": [
+    {
+      "end": 1,
+      "event_available": [
+        1,
+        1,
+        1
+      ],
+      "word": "SES",
+      "zero_intervals": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "end": 1,
+      "event_available": [
+        1,
+        2,
+        2
+      ],
+      "word": "SSE",
+      "zero_intervals": []
+    }
+  ]
+}

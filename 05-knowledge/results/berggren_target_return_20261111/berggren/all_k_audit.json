@@ -1,0 +1,85 @@
+{
+  "exhaustive_patterns": 7916,
+  "high_availability_hostile": {
+    "contact_singleton_paid_halves": 0,
+    "free_singleton_paid_halves": 6,
+    "k": 4,
+    "loss_minus_free": 3,
+    "nu": 0,
+    "requests": 6,
+    "terminal_paid_halves": 0,
+    "unpaid_halves": 0
+  },
+  "local_controls": [
+    {
+      "fixed_endpoint": 1,
+      "q": 1,
+      "unmarked": 3
+    },
+    {
+      "fixed_endpoint": 3,
+      "q": 2,
+      "unmarked": 12
+    },
+    {
+      "fixed_endpoint": 7,
+      "q": 3,
+      "unmarked": 33
+    },
+    {
+      "fixed_endpoint": 13,
+      "q": 4,
+      "unmarked": 72
+    },
+    {
+      "fixed_endpoint": 21,
+      "q": 5,
+      "unmarked": 135
+    },
+    {
+      "fixed_endpoint": 31,
+      "q": 6,
+      "unmarked": 228
+    },
+    {
+      "fixed_endpoint": 43,
+      "q": 7,
+      "unmarked": 357
+    },
+    {
+      "fixed_endpoint": 57,
+      "q": 8,
+      "unmarked": 528
+    },
+    {
+      "fixed_endpoint": 73,
+      "q": 9,
+      "unmarked": 747
+    },
+    {
+      "fixed_endpoint": 91,
+      "q": 10,
+      "unmarked": 1020
+    },
+    {
+      "fixed_endpoint": 111,
+      "q": 11,
+      "unmarked": 1353
+    },
+    {
+      "fixed_endpoint": 133,
+      "q": 12,
+      "unmarked": 1752
+    }
+  ],
+  "payment_totals": {
+    "contact_singleton_paid_halves": 1640,
+    "free_singleton_paid_halves": 724,
+    "terminal_paid_halves": 3234,
+    "unpaid_halves": 1840
+  },
+  "scope": "Exhaustive relaxed patterns through5 contacts, arbitrary contact-block grouping and singleton boundary blocks, binary free-singleton gaps, both terminal states; seeded larger patterns with free triangles and singleton gaps. Not a proof by finite checking.",
+  "seeded_larger_patterns": 1562,
+  "source_sha256": "eddbc905f54022c21c9ac9aad3145a3a8b50c15a23ac52697ad742d7e4b8a66e",
+  "status": "PASS"
+}

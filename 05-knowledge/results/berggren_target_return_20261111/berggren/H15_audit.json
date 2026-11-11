@@ -1,0 +1,5073 @@
+{
+  "charts": [
+    {
+      "hits": [],
+      "name": "S4_C3",
+      "rows": [
+        {
+          "coefficients": [
+            15,
+            15,
+            384,
+            369,
+            0,
+            15,
+            0
+          ],
+          "cut": 0,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            87,
+            15,
+            384,
+            342,
+            72,
+            12,
+            0
+          ],
+          "cut": 1,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            75,
+            15,
+            384,
+            348,
+            60,
+            12,
+            0
+          ],
+          "cut": 2,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            135,
+            15,
+            384,
+            321,
+            132,
+            9,
+            0
+          ],
+          "cut": 3,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            99,
+            15,
+            384,
+            354,
+            84,
+            12,
+            0
+          ],
+          "cut": 4,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            165,
+            15,
+            384,
+            327,
+            156,
+            9,
+            0
+          ],
+          "cut": 5,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            147,
+            15,
+            384,
+            333,
+            144,
+            9,
+            0
+          ],
+          "cut": 6,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            201,
+            15,
+            384,
+            306,
+            216,
+            6,
+            0
+          ],
+          "cut": 7,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            123,
+            15,
+            384,
+            351,
+            108,
+            9,
+            0
+          ],
+          "cut": 8,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            177,
+            15,
+            384,
+            324,
+            180,
+            6,
+            0
+          ],
+          "cut": 9,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            177,
+            15,
+            384,
+            330,
+            168,
+            6,
+            0
+          ],
+          "cut": 10,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            219,
+            15,
+            384,
+            303,
+            240,
+            3,
+            0
+          ],
+          "cut": 11,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            195,
+            15,
+            384,
+            336,
+            192,
+            6,
+            0
+          ],
+          "cut": 12,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            243,
+            15,
+            384,
+            309,
+            264,
+            3,
+            0
+          ],
+          "cut": 13,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            237,
+            15,
+            384,
+            315,
+            252,
+            3,
+            0
+          ],
+          "cut": 14,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            273,
+            15,
+            384,
+            288,
+            324,
+            0,
+            0
+          ],
+          "cut": 15,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            25,
+            15,
+            384,
+            273,
+            15,
+            15,
+            5
+          ],
+          "cut": 16,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            77,
+            15,
+            384,
+            246,
+            87,
+            12,
+            5
+          ],
+          "cut": 17,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            69,
+            15,
+            384,
+            252,
+            75,
+            12,
+            5
+          ],
+          "cut": 18,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            109,
+            15,
+            384,
+            225,
+            147,
+            9,
+            5
+          ],
+          "cut": 19,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            87,
+            15,
+            384,
+            258,
+            99,
+            12,
+            5
+          ],
+          "cut": 20,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            133,
+            15,
+            384,
+            231,
+            171,
+            9,
+            5
+          ],
+          "cut": 21,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            119,
+            15,
+            384,
+            237,
+            159,
+            9,
+            5
+          ],
+          "cut": 22,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            153,
+            15,
+            384,
+            210,
+            231,
+            6,
+            5
+          ],
+          "cut": 23,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            105,
+            15,
+            384,
+            255,
+            123,
+            9,
+            5
+          ],
+          "cut": 24,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            139,
+            15,
+            384,
+            228,
+            195,
+            6,
+            5
+          ],
+          "cut": 25,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            143,
+            15,
+            384,
+            234,
+            183,
+            6,
+            5
+          ],
+          "cut": 26,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            165,
+            15,
+            384,
+            207,
+            255,
+            3,
+            5
+          ],
+          "cut": 27,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            155,
+            15,
+            384,
+            240,
+            207,
+            6,
+            5
+          ],
+          "cut": 28,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            183,
+            15,
+            384,
+            213,
+            279,
+            3,
+            5
+          ],
+          "cut": 29,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            181,
+            15,
+            384,
+            219,
+            267,
+            3,
+            5
+          ],
+          "cut": 30,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            197,
+            15,
+            384,
+            192,
+            339,
+            0,
+            5
+          ],
+          "cut": 31,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            25,
+            15,
+            384,
+            273,
+            15,
+            15,
+            5
+          ],
+          "cut": 32,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            77,
+            15,
+            384,
+            246,
+            87,
+            12,
+            5
+          ],
+          "cut": 33,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            69,
+            15,
+            384,
+            252,
+            75,
+            12,
+            5
+          ],
+          "cut": 34,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            109,
+            15,
+            384,
+            225,
+            147,
+            9,
+            5
+          ],
+          "cut": 35,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            87,
+            15,
+            384,
+            258,
+            99,
+            12,
+            5
+          ],
+          "cut": 36,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            133,
+            15,
+            384,
+            231,
+            171,
+            9,
+            5
+          ],
+          "cut": 37,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            119,
+            15,
+            384,
+            237,
+            159,
+            9,
+            5
+          ],
+          "cut": 38,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            153,
+            15,
+            384,
+            210,
+            231,
+            6,
+            5
+          ],
+          "cut": 39,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            105,
+            15,
+            384,
+            255,
+            123,
+            9,
+            5
+          ],
+          "cut": 40,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            139,
+            15,
+            384,
+            228,
+            195,
+            6,
+            5
+          ],
+          "cut": 41,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            143,
+            15,
+            384,
+            234,
+            183,
+            6,
+            5
+          ],
+          "cut": 42,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            165,
+            15,
+            384,
+            207,
+            255,
+            3,
+            5
+          ],
+          "cut": 43,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            155,
+            15,
+            384,
+            240,
+            207,
+            6,
+            5
+          ],
+          "cut": 44,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            183,
+            15,
+            384,
+            213,
+            279,
+            3,
+            5
+          ],
+          "cut": 45,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            181,
+            15,
+            384,
+            219,
+            267,
+            3,
+            5
+          ],
+          "cut": 46,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            197,
+            15,
+            384,
+            192,
+            339,
+            0,
+            5
+          ],
+          "cut": 47,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            25,
+            15,
+            384,
+            177,
+            30,
+            15,
+            10
+          ],
+          "cut": 48,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            57,
+            15,
+            384,
+            150,
+            102,
+            12,
+            10
+          ],
+          "cut": 49,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            53,
+            15,
+            384,
+            156,
+            90,
+            12,
+            10
+          ],
+          "cut": 50,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            73,
+            15,
+            384,
+            129,
+            162,
+            9,
+            10
+          ],
+          "cut": 51,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            65,
+            15,
+            384,
+            162,
+            114,
+            12,
+            10
+          ],
+          "cut": 52,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            91,
+            15,
+            384,
+            135,
+            186,
+            9,
+            10
+          ],
+          "cut": 53,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            81,
+            15,
+            384,
+            141,
+            174,
+            9,
+            10
+          ],
+          "cut": 54,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            95,
+            15,
+            384,
+            114,
+            246,
+            6,
+            10
+          ],
+          "cut": 55,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            77,
+            15,
+            384,
+            159,
+            138,
+            9,
+            10
+          ],
+          "cut": 56,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            91,
+            15,
+            384,
+            132,
+            210,
+            6,
+            10
+          ],
+          "cut": 57,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            99,
+            15,
+            384,
+            138,
+            198,
+            6,
+            10
+          ],
+          "cut": 58,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            101,
+            15,
+            384,
+            111,
+            270,
+            3,
+            10
+          ],
+          "cut": 59,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            105,
+            15,
+            384,
+            144,
+            222,
+            6,
+            10
+          ],
+          "cut": 60,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            113,
+            15,
+            384,
+            117,
+            294,
+            3,
+            10
+          ],
+          "cut": 61,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            115,
+            15,
+            384,
+            123,
+            282,
+            3,
+            10
+          ],
+          "cut": 62,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            111,
+            15,
+            384,
+            96,
+            354,
+            0,
+            10
+          ],
+          "cut": 63,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            25,
+            15,
+            384,
+            273,
+            15,
+            15,
+            5
+          ],
+          "cut": 64,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            77,
+            15,
+            384,
+            246,
+            87,
+            12,
+            5
+          ],
+          "cut": 65,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            69,
+            15,
+            384,
+            252,
+            75,
+            12,
+            5
+          ],
+          "cut": 66,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            109,
+            15,
+            384,
+            225,
+            147,
+            9,
+            5
+          ],
+          "cut": 67,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            87,
+            15,
+            384,
+            258,
+            99,
+            12,
+            5
+          ],
+          "cut": 68,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            133,
+            15,
+            384,
+            231,
+            171,
+            9,
+            5
+          ],
+          "cut": 69,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            119,
+            15,
+            384,
+            237,
+            159,
+            9,
+            5
+          ],
+          "cut": 70,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            153,
+            15,
+            384,
+            210,
+            231,
+            6,
+            5
+          ],
+          "cut": 71,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            105,
+            15,
+            384,
+            255,
+            123,
+            9,
+            5
+          ],
+          "cut": 72,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            139,
+            15,
+            384,
+            228,
+            195,
+            6,
+            5
+          ],
+          "cut": 73,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            143,
+            15,
+            384,
+            234,
+            183,
+            6,
+            5
+          ],
+          "cut": 74,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            165,
+            15,
+            384,
+            207,
+            255,
+            3,
+            5
+          ],
+          "cut": 75,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            155,
+            15,
+            384,
+            240,
+            207,
+            6,
+            5
+          ],
+          "cut": 76,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            183,
+            15,
+            384,
+            213,
+            279,
+            3,
+            5
+          ],
+          "cut": 77,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            181,
+            15,
+            384,
+            219,
+            267,
+            3,
+            5
+          ],
+          "cut": 78,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            197,
+            15,
+            384,
+            192,
+            339,
+            0,
+            5
+          ],
+          "cut": 79,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            25,
+            15,
+            384,
+            177,
+            30,
+            15,
+            10
+          ],
+          "cut": 80,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            57,
+            15,
+            384,
+            150,
+            102,
+            12,
+            10
+          ],
+          "cut": 81,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            53,
+            15,
+            384,
+            156,
+            90,
+            12,
+            10
+          ],
+          "cut": 82,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            73,
+            15,
+            384,
+            129,
+            162,
+            9,
+            10
+          ],
+          "cut": 83,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            65,
+            15,
+            384,
+            162,
+            114,
+            12,
+            10
+          ],
+          "cut": 84,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            91,
+            15,
+            384,
+            135,
+            186,
+            9,
+            10
+          ],
+          "cut": 85,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            81,
+            15,
+            384,
+            141,
+            174,
+            9,
+            10
+          ],
+          "cut": 86,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            95,
+            15,
+            384,
+            114,
+            246,
+            6,
+            10
+          ],
+          "cut": 87,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            77,
+            15,
+            384,
+            159,
+            138,
+            9,
+            10
+          ],
+          "cut": 88,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            91,
+            15,
+            384,
+            132,
+            210,
+            6,
+            10
+          ],
+          "cut": 89,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            99,
+            15,
+            384,
+            138,
+            198,
+            6,
+            10
+          ],
+          "cut": 90,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            101,
+            15,
+            384,
+            111,
+            270,
+            3,
+            10
+          ],
+          "cut": 91,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            105,
+            15,
+            384,
+            144,
+            222,
+            6,
+            10
+          ],
+          "cut": 92,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            113,
+            15,
+            384,
+            117,
+            294,
+            3,
+            10
+          ],
+          "cut": 93,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            115,
+            15,
+            384,
+            123,
+            282,
+            3,
+            10
+          ],
+          "cut": 94,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            111,
+            15,
+            384,
+            96,
+            354,
+            0,
+            10
+          ],
+          "cut": 95,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            25,
+            15,
+            384,
+            177,
+            30,
+            15,
+            10
+          ],
+          "cut": 96,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            57,
+            15,
+            384,
+            150,
+            102,
+            12,
+            10
+          ],
+          "cut": 97,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            53,
+            15,
+            384,
+            156,
+            90,
+            12,
+            10
+          ],
+          "cut": 98,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            73,
+            15,
+            384,
+            129,
+            162,
+            9,
+            10
+          ],
+          "cut": 99,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            65,
+            15,
+            384,
+            162,
+            114,
+            12,
+            10
+          ],
+          "cut": 100,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            91,
+            15,
+            384,
+            135,
+            186,
+            9,
+            10
+          ],
+          "cut": 101,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            81,
+            15,
+            384,
+            141,
+            174,
+            9,
+            10
+          ],
+          "cut": 102,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            95,
+            15,
+            384,
+            114,
+            246,
+            6,
+            10
+          ],
+          "cut": 103,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            77,
+            15,
+            384,
+            159,
+            138,
+            9,
+            10
+          ],
+          "cut": 104,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            91,
+            15,
+            384,
+            132,
+            210,
+            6,
+            10
+          ],
+          "cut": 105,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            99,
+            15,
+            384,
+            138,
+            198,
+            6,
+            10
+          ],
+          "cut": 106,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            101,
+            15,
+            384,
+            111,
+            270,
+            3,
+            10
+          ],
+          "cut": 107,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            105,
+            15,
+            384,
+            144,
+            222,
+            6,
+            10
+          ],
+          "cut": 108,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            113,
+            15,
+            384,
+            117,
+            294,
+            3,
+            10
+          ],
+          "cut": 109,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            115,
+            15,
+            384,
+            123,
+            282,
+            3,
+            10
+          ],
+          "cut": 110,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            111,
+            15,
+            384,
+            96,
+            354,
+            0,
+            10
+          ],
+          "cut": 111,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            15,
+            15,
+            384,
+            81,
+            45,
+            15,
+            15
+          ],
+          "cut": 112,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            27,
+            15,
+            384,
+            54,
+            117,
+            12,
+            15
+          ],
+          "cut": 113,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            27,
+            15,
+            384,
+            60,
+            105,
+            12,
+            15
+          ],
+          "cut": 114,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            27,
+            15,
+            384,
+            33,
+            177,
+            9,
+            15
+          ],
+          "cut": 115,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            33,
+            15,
+            384,
+            66,
+            129,
+            12,
+            15
+          ],
+          "cut": 116,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            39,
+            15,
+            384,
+            39,
+            201,
+            9,
+            15
+          ],
+          "cut": 117,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            33,
+            15,
+            384,
+            45,
+            189,
+            9,
+            15
+          ],
+          "cut": 118,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            27,
+            15,
+            384,
+            18,
+            261,
+            6,
+            15
+          ],
+          "cut": 119,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            39,
+            15,
+            384,
+            63,
+            153,
+            9,
+            15
+          ],
+          "cut": 120,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            33,
+            15,
+            384,
+            36,
+            225,
+            6,
+            15
+          ],
+          "cut": 121,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            45,
+            15,
+            384,
+            42,
+            213,
+            6,
+            15
+          ],
+          "cut": 122,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            27,
+            15,
+            384,
+            15,
+            285,
+            3,
+            15
+          ],
+          "cut": 123,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            45,
+            15,
+            384,
+            48,
+            237,
+            6,
+            15
+          ],
+          "cut": 124,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            33,
+            15,
+            384,
+            21,
+            309,
+            3,
+            15
+          ],
+          "cut": 125,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            39,
+            15,
+            384,
+            27,
+            297,
+            3,
+            15
+          ],
+          "cut": 126,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            15,
+            15,
+            384,
+            0,
+            369,
+            0,
+            15
+          ],
+          "cut": 127,
+          "solutions": []
+        }
+      ]
+    },
+    {
+      "hits": [],
+      "name": "C3_S4",
+      "rows": [
+        {
+          "coefficients": [
+            15,
+            15,
+            384,
+            369,
+            0,
+            15,
+            0
+          ],
+          "cut": 0,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            111,
+            15,
+            384,
+            354,
+            96,
+            10,
+            0
+          ],
+          "cut": 1,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            111,
+            15,
+            384,
+            354,
+            96,
+            10,
+            0
+          ],
+          "cut": 2,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            197,
+            15,
+            384,
+            339,
+            192,
+            5,
+            0
+          ],
+          "cut": 3,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            111,
+            15,
+            384,
+            354,
+            96,
+            10,
+            0
+          ],
+          "cut": 4,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            197,
+            15,
+            384,
+            339,
+            192,
+            5,
+            0
+          ],
+          "cut": 5,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            197,
+            15,
+            384,
+            339,
+            192,
+            5,
+            0
+          ],
+          "cut": 6,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            273,
+            15,
+            384,
+            324,
+            288,
+            0,
+            0
+          ],
+          "cut": 7,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            27,
+            15,
+            384,
+            261,
+            18,
+            15,
+            6
+          ],
+          "cut": 8,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            95,
+            15,
+            384,
+            246,
+            114,
+            10,
+            6
+          ],
+          "cut": 9,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            95,
+            15,
+            384,
+            246,
+            114,
+            10,
+            6
+          ],
+          "cut": 10,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            153,
+            15,
+            384,
+            231,
+            210,
+            5,
+            6
+          ],
+          "cut": 11,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            95,
+            15,
+            384,
+            246,
+            114,
+            10,
+            6
+          ],
+          "cut": 12,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            153,
+            15,
+            384,
+            231,
+            210,
+            5,
+            6
+          ],
+          "cut": 13,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            153,
+            15,
+            384,
+            231,
+            210,
+            5,
+            6
+          ],
+          "cut": 14,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            201,
+            15,
+            384,
+            216,
+            306,
+            0,
+            6
+          ],
+          "cut": 15,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            27,
+            15,
+            384,
+            285,
+            15,
+            15,
+            3
+          ],
+          "cut": 16,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            101,
+            15,
+            384,
+            270,
+            111,
+            10,
+            3
+          ],
+          "cut": 17,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            101,
+            15,
+            384,
+            270,
+            111,
+            10,
+            3
+          ],
+          "cut": 18,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            165,
+            15,
+            384,
+            255,
+            207,
+            5,
+            3
+          ],
+          "cut": 19,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            101,
+            15,
+            384,
+            270,
+            111,
+            10,
+            3
+          ],
+          "cut": 20,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            165,
+            15,
+            384,
+            255,
+            207,
+            5,
+            3
+          ],
+          "cut": 21,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            165,
+            15,
+            384,
+            255,
+            207,
+            5,
+            3
+          ],
+          "cut": 22,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            219,
+            15,
+            384,
+            240,
+            303,
+            0,
+            3
+          ],
+          "cut": 23,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            27,
+            15,
+            384,
+            177,
+            33,
+            15,
+            9
+          ],
+          "cut": 24,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            73,
+            15,
+            384,
+            162,
+            129,
+            10,
+            9
+          ],
+          "cut": 25,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            73,
+            15,
+            384,
+            162,
+            129,
+            10,
+            9
+          ],
+          "cut": 26,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            109,
+            15,
+            384,
+            147,
+            225,
+            5,
+            9
+          ],
+          "cut": 27,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            73,
+            15,
+            384,
+            162,
+            129,
+            10,
+            9
+          ],
+          "cut": 28,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            109,
+            15,
+            384,
+            147,
+            225,
+            5,
+            9
+          ],
+          "cut": 29,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            109,
+            15,
+            384,
+            147,
+            225,
+            5,
+            9
+          ],
+          "cut": 30,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            135,
+            15,
+            384,
+            132,
+            321,
+            0,
+            9
+          ],
+          "cut": 31,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            33,
+            15,
+            384,
+            309,
+            21,
+            15,
+            3
+          ],
+          "cut": 32,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            113,
+            15,
+            384,
+            294,
+            117,
+            10,
+            3
+          ],
+          "cut": 33,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            113,
+            15,
+            384,
+            294,
+            117,
+            10,
+            3
+          ],
+          "cut": 34,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            183,
+            15,
+            384,
+            279,
+            213,
+            5,
+            3
+          ],
+          "cut": 35,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            113,
+            15,
+            384,
+            294,
+            117,
+            10,
+            3
+          ],
+          "cut": 36,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            183,
+            15,
+            384,
+            279,
+            213,
+            5,
+            3
+          ],
+          "cut": 37,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            183,
+            15,
+            384,
+            279,
+            213,
+            5,
+            3
+          ],
+          "cut": 38,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            243,
+            15,
+            384,
+            264,
+            309,
+            0,
+            3
+          ],
+          "cut": 39,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            39,
+            15,
+            384,
+            201,
+            39,
+            15,
+            9
+          ],
+          "cut": 40,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            91,
+            15,
+            384,
+            186,
+            135,
+            10,
+            9
+          ],
+          "cut": 41,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            91,
+            15,
+            384,
+            186,
+            135,
+            10,
+            9
+          ],
+          "cut": 42,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            133,
+            15,
+            384,
+            171,
+            231,
+            5,
+            9
+          ],
+          "cut": 43,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            91,
+            15,
+            384,
+            186,
+            135,
+            10,
+            9
+          ],
+          "cut": 44,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            133,
+            15,
+            384,
+            171,
+            231,
+            5,
+            9
+          ],
+          "cut": 45,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            133,
+            15,
+            384,
+            171,
+            231,
+            5,
+            9
+          ],
+          "cut": 46,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            165,
+            15,
+            384,
+            156,
+            327,
+            0,
+            9
+          ],
+          "cut": 47,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            33,
+            15,
+            384,
+            225,
+            36,
+            15,
+            6
+          ],
+          "cut": 48,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            91,
+            15,
+            384,
+            210,
+            132,
+            10,
+            6
+          ],
+          "cut": 49,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            91,
+            15,
+            384,
+            210,
+            132,
+            10,
+            6
+          ],
+          "cut": 50,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            139,
+            15,
+            384,
+            195,
+            228,
+            5,
+            6
+          ],
+          "cut": 51,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            91,
+            15,
+            384,
+            210,
+            132,
+            10,
+            6
+          ],
+          "cut": 52,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            139,
+            15,
+            384,
+            195,
+            228,
+            5,
+            6
+          ],
+          "cut": 53,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            139,
+            15,
+            384,
+            195,
+            228,
+            5,
+            6
+          ],
+          "cut": 54,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            177,
+            15,
+            384,
+            180,
+            324,
+            0,
+            6
+          ],
+          "cut": 55,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            27,
+            15,
+            384,
+            117,
+            54,
+            15,
+            12
+          ],
+          "cut": 56,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            57,
+            15,
+            384,
+            102,
+            150,
+            10,
+            12
+          ],
+          "cut": 57,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            57,
+            15,
+            384,
+            102,
+            150,
+            10,
+            12
+          ],
+          "cut": 58,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            77,
+            15,
+            384,
+            87,
+            246,
+            5,
+            12
+          ],
+          "cut": 59,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            57,
+            15,
+            384,
+            102,
+            150,
+            10,
+            12
+          ],
+          "cut": 60,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            77,
+            15,
+            384,
+            87,
+            246,
+            5,
+            12
+          ],
+          "cut": 61,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            77,
+            15,
+            384,
+            87,
+            246,
+            5,
+            12
+          ],
+          "cut": 62,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            87,
+            15,
+            384,
+            72,
+            342,
+            0,
+            12
+          ],
+          "cut": 63,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            39,
+            15,
+            384,
+            297,
+            27,
+            15,
+            3
+          ],
+          "cut": 64,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            115,
+            15,
+            384,
+            282,
+            123,
+            10,
+            3
+          ],
+          "cut": 65,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            115,
+            15,
+            384,
+            282,
+            123,
+            10,
+            3
+          ],
+          "cut": 66,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            181,
+            15,
+            384,
+            267,
+            219,
+            5,
+            3
+          ],
+          "cut": 67,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            115,
+            15,
+            384,
+            282,
+            123,
+            10,
+            3
+          ],
+          "cut": 68,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            181,
+            15,
+            384,
+            267,
+            219,
+            5,
+            3
+          ],
+          "cut": 69,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            181,
+            15,
+            384,
+            267,
+            219,
+            5,
+            3
+          ],
+          "cut": 70,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            237,
+            15,
+            384,
+            252,
+            315,
+            0,
+            3
+          ],
+          "cut": 71,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            33,
+            15,
+            384,
+            189,
+            45,
+            15,
+            9
+          ],
+          "cut": 72,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            81,
+            15,
+            384,
+            174,
+            141,
+            10,
+            9
+          ],
+          "cut": 73,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            81,
+            15,
+            384,
+            174,
+            141,
+            10,
+            9
+          ],
+          "cut": 74,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            119,
+            15,
+            384,
+            159,
+            237,
+            5,
+            9
+          ],
+          "cut": 75,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            81,
+            15,
+            384,
+            174,
+            141,
+            10,
+            9
+          ],
+          "cut": 76,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            119,
+            15,
+            384,
+            159,
+            237,
+            5,
+            9
+          ],
+          "cut": 77,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            119,
+            15,
+            384,
+            159,
+            237,
+            5,
+            9
+          ],
+          "cut": 78,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            147,
+            15,
+            384,
+            144,
+            333,
+            0,
+            9
+          ],
+          "cut": 79,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            45,
+            15,
+            384,
+            213,
+            42,
+            15,
+            6
+          ],
+          "cut": 80,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            99,
+            15,
+            384,
+            198,
+            138,
+            10,
+            6
+          ],
+          "cut": 81,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            99,
+            15,
+            384,
+            198,
+            138,
+            10,
+            6
+          ],
+          "cut": 82,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            143,
+            15,
+            384,
+            183,
+            234,
+            5,
+            6
+          ],
+          "cut": 83,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            99,
+            15,
+            384,
+            198,
+            138,
+            10,
+            6
+          ],
+          "cut": 84,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            143,
+            15,
+            384,
+            183,
+            234,
+            5,
+            6
+          ],
+          "cut": 85,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            143,
+            15,
+            384,
+            183,
+            234,
+            5,
+            6
+          ],
+          "cut": 86,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            177,
+            15,
+            384,
+            168,
+            330,
+            0,
+            6
+          ],
+          "cut": 87,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            27,
+            15,
+            384,
+            105,
+            60,
+            15,
+            12
+          ],
+          "cut": 88,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            53,
+            15,
+            384,
+            90,
+            156,
+            10,
+            12
+          ],
+          "cut": 89,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            53,
+            15,
+            384,
+            90,
+            156,
+            10,
+            12
+          ],
+          "cut": 90,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            69,
+            15,
+            384,
+            75,
+            252,
+            5,
+            12
+          ],
+          "cut": 91,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            53,
+            15,
+            384,
+            90,
+            156,
+            10,
+            12
+          ],
+          "cut": 92,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            69,
+            15,
+            384,
+            75,
+            252,
+            5,
+            12
+          ],
+          "cut": 93,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            69,
+            15,
+            384,
+            75,
+            252,
+            5,
+            12
+          ],
+          "cut": 94,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            75,
+            15,
+            384,
+            60,
+            348,
+            0,
+            12
+          ],
+          "cut": 95,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            45,
+            15,
+            384,
+            237,
+            48,
+            15,
+            6
+          ],
+          "cut": 96,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            105,
+            15,
+            384,
+            222,
+            144,
+            10,
+            6
+          ],
+          "cut": 97,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            105,
+            15,
+            384,
+            222,
+            144,
+            10,
+            6
+          ],
+          "cut": 98,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            155,
+            15,
+            384,
+            207,
+            240,
+            5,
+            6
+          ],
+          "cut": 99,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            105,
+            15,
+            384,
+            222,
+            144,
+            10,
+            6
+          ],
+          "cut": 100,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            155,
+            15,
+            384,
+            207,
+            240,
+            5,
+            6
+          ],
+          "cut": 101,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            155,
+            15,
+            384,
+            207,
+            240,
+            5,
+            6
+          ],
+          "cut": 102,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            195,
+            15,
+            384,
+            192,
+            336,
+            0,
+            6
+          ],
+          "cut": 103,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            33,
+            15,
+            384,
+            129,
+            66,
+            15,
+            12
+          ],
+          "cut": 104,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            65,
+            15,
+            384,
+            114,
+            162,
+            10,
+            12
+          ],
+          "cut": 105,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            65,
+            15,
+            384,
+            114,
+            162,
+            10,
+            12
+          ],
+          "cut": 106,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            87,
+            15,
+            384,
+            99,
+            258,
+            5,
+            12
+          ],
+          "cut": 107,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            65,
+            15,
+            384,
+            114,
+            162,
+            10,
+            12
+          ],
+          "cut": 108,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            87,
+            15,
+            384,
+            99,
+            258,
+            5,
+            12
+          ],
+          "cut": 109,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            87,
+            15,
+            384,
+            99,
+            258,
+            5,
+            12
+          ],
+          "cut": 110,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            99,
+            15,
+            384,
+            84,
+            354,
+            0,
+            12
+          ],
+          "cut": 111,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            39,
+            15,
+            384,
+            153,
+            63,
+            15,
+            9
+          ],
+          "cut": 112,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            77,
+            15,
+            384,
+            138,
+            159,
+            10,
+            9
+          ],
+          "cut": 113,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            77,
+            15,
+            384,
+            138,
+            159,
+            10,
+            9
+          ],
+          "cut": 114,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            105,
+            15,
+            384,
+            123,
+            255,
+            5,
+            9
+          ],
+          "cut": 115,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            77,
+            15,
+            384,
+            138,
+            159,
+            10,
+            9
+          ],
+          "cut": 116,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            105,
+            15,
+            384,
+            123,
+            255,
+            5,
+            9
+          ],
+          "cut": 117,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            105,
+            15,
+            384,
+            123,
+            255,
+            5,
+            9
+          ],
+          "cut": 118,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            123,
+            15,
+            384,
+            108,
+            351,
+            0,
+            9
+          ],
+          "cut": 119,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            15,
+            15,
+            384,
+            45,
+            81,
+            15,
+            15
+          ],
+          "cut": 120,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            25,
+            15,
+            384,
+            30,
+            177,
+            10,
+            15
+          ],
+          "cut": 121,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            25,
+            15,
+            384,
+            30,
+            177,
+            10,
+            15
+          ],
+          "cut": 122,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            25,
+            15,
+            384,
+            15,
+            273,
+            5,
+            15
+          ],
+          "cut": 123,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            25,
+            15,
+            384,
+            30,
+            177,
+            10,
+            15
+          ],
+          "cut": 124,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            25,
+            15,
+            384,
+            15,
+            273,
+            5,
+            15
+          ],
+          "cut": 125,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            25,
+            15,
+            384,
+            15,
+            273,
+            5,
+            15
+          ],
+          "cut": 126,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            15,
+            15,
+            384,
+            0,
+            369,
+            0,
+            15
+          ],
+          "cut": 127,
+          "solutions": []
+        }
+      ]
+    },
+    {
+      "hits": [
+        [
+          1,
+          3,
+          57
+        ],
+        [
+          4,
+          0,
+          693
+        ],
+        [
+          7,
+          57,
+          3
+        ],
+        [
+          8,
+          0,
+          460
+        ],
+        [
+          13,
+          693,
+          0
+        ],
+        [
+          14,
+          460,
+          0
+        ]
+      ],
+      "name": "S4",
+      "rows": [
+        {
+          "coefficients": [
+            5,
+            5,
+            32,
+            27,
+            0,
+            5,
+            0
+          ],
+          "cut": 0,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            9,
+            5,
+            32,
+            18,
+            6,
+            4,
+            2
+          ],
+          "cut": 1,
+          "solutions": [
+            [
+              3,
+              57
+            ]
+          ]
+        },
+        {
+          "coefficients": [
+            9,
+            5,
+            32,
+            20,
+            5,
+            4,
+            1
+          ],
+          "cut": 2,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            9,
+            5,
+            32,
+            11,
+            11,
+            3,
+            3
+          ],
+          "cut": 3,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            11,
+            5,
+            32,
+            22,
+            7,
+            4,
+            1
+          ],
+          "cut": 4,
+          "solutions": [
+            [
+              0,
+              693
+            ]
+          ]
+        },
+        {
+          "coefficients": [
+            13,
+            5,
+            32,
+            13,
+            13,
+            3,
+            3
+          ],
+          "cut": 5,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            11,
+            5,
+            32,
+            15,
+            12,
+            3,
+            2
+          ],
+          "cut": 6,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            9,
+            5,
+            32,
+            6,
+            18,
+            2,
+            4
+          ],
+          "cut": 7,
+          "solutions": [
+            [
+              57,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficients": [
+            13,
+            5,
+            32,
+            21,
+            9,
+            3,
+            1
+          ],
+          "cut": 8,
+          "solutions": [
+            [
+              0,
+              460
+            ]
+          ]
+        },
+        {
+          "coefficients": [
+            11,
+            5,
+            32,
+            12,
+            15,
+            2,
+            3
+          ],
+          "cut": 9,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            15,
+            5,
+            32,
+            14,
+            14,
+            2,
+            2
+          ],
+          "cut": 10,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            9,
+            5,
+            32,
+            5,
+            20,
+            1,
+            4
+          ],
+          "cut": 11,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            15,
+            5,
+            32,
+            16,
+            16,
+            2,
+            2
+          ],
+          "cut": 12,
+          "solutions": []
+        },
+        {
+          "coefficients": [
+            11,
+            5,
+            32,
+            7,
+            22,
+            1,
+            4
+          ],
+          "cut": 13,
+          "solutions": [
+            [
+              693,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficients": [
+            13,
+            5,
+            32,
+            9,
+            21,
+            1,
+            3
+          ],
+          "cut": 14,
+          "solutions": [
+            [
+              460,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficients": [
+            5,
+            5,
+            32,
+            0,
+            27,
+            0,
+            5
+          ],
+          "cut": 15,
+          "solutions": []
+        }
+      ]
+    }
+  ],
+  "direct_trace": [
+    1997,
+    409,
+    1599,
+    3067,
+    5993
+  ],
+  "module_checks": [
+    {
+      "A": 3,
+      "B": 57,
+      "cut": 1,
+      "polynomials": [
+        [
+          5993,
+          3684,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3684,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          5092,
+          1254,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          6372,
+          1856,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          6126,
+          1734,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          4658,
+          1038,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2958,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2926,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2926,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3324,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3324,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3324,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          198436,
+          1107130,
+          1857972,
+          1070640,
+          174240,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "A": 0,
+      "B": 693,
+      "cut": 4,
+      "polynomials": [
+        [
+          5993,
+          3230,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2763,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          14556,
+          6934,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3230,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2429,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3287,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2871,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3053,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3014,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3014,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2765,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3303,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2207,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          4409,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          119543,
+          440684,
+          506004,
+          193368,
+          17640,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "A": 57,
+      "B": 3,
+      "cut": 7,
+      "polynomials": [
+        [
+          5993,
+          3324,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3324,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3324,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2926,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2926,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2958,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          4658,
+          1038,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          6126,
+          1734,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          6372,
+          1856,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          5092,
+          1254,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3684,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3684,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          198436,
+          1107130,
+          1857972,
+          1070640,
+          174240,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "A": 0,
+      "B": 460,
+      "cut": 8,
+      "polynomials": [
+        [
+          5993,
+          4426,
+          922,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          5256,
+          922,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2950,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          8108,
+          2762,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3220,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3220,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2958,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2958,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2926,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2926,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3324,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3324,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3324,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          175024,
+          894346,
+          1375884,
+          711792,
+          99360,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "A": 693,
+      "B": 0,
+      "cut": 13,
+      "polynomials": [
+        [
+          5993,
+          4409,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2207,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3303,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2765,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3014,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3014,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3053,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2871,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3287,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2429,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3230,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          14556,
+          6934,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2763,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3230,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          119543,
+          440684,
+          506004,
+          193368,
+          17640,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "A": 460,
+      "B": 0,
+      "cut": 14,
+      "polynomials": [
+        [
+          5993,
+          3324,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3324,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3324,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2926,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2926,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2958,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2958,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3220,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          3220,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          8108,
+          2762,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          2950,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          5256,
+          922,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          4426,
+          922,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5993,
+          175024,
+          894346,
+          1375884,
+          711792,
+          99360,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "ready_controls": [
+    {
+      "next_H": 17983,
+      "retained": 10,
+      "trace": [
+        5993,
+        395,
+        1027,
+        2483,
+        5993
+      ]
+    },
+    {
+      "next_H": 17983,
+      "retained": 9,
+      "trace": [
+        5993,
+        115,
+        359,
+        2153,
+        5993
+      ]
+    },
+    {
+      "next_H": 17983,
+      "retained": 8,
+      "trace": [
+        5993,
+        65,
+        65,
+        1889,
+        5993
+      ]
+    },
+    {
+      "next_H": 17983,
+      "retained": 8,
+      "trace": [
+        5993,
+        65,
+        149,
+        2125,
+        5993
+      ]
+    }
+  ],
+  "scope": "Independent2448literal signature probes; complete product-region andaxis inverses; all84 full placeholder polynomials; literal retained maps and ready positives. Ready census completeness and retention optimality not recomputed.",
+  "source_sha256": {
+    "H15_MENU.md": "31cd179c2467a9cb0483376b7cde37ce08e145513cd3b74b521c833ade1c6348",
+    "H15_inverse.json": "ad41bec5fea3fb64aef43fe5175c4a525b0ae52e488056fb95941fb4d87b8a07",
+    "H15_inverse.py": "4c85a49166c5e06c076a60a5a812f7af52b8fbd6010f3ec6664223576127b619",
+    "H15_ready.json": "e06ca488fcc952716c9f7a99f6f4e7706e07ed0970cf55094c45b63325a0cb88",
+    "H15_ready.py": "08f8699c356e5dc408f4e58dfaef7a48054541014886301c62b9b152106c5788"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,229 @@
+{
+  "status": "PASS",
+  "optimized": false,
+  "engine_count": 27,
+  "records": [
+    {
+      "engine": "arithmetic/check.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "{\n  \"status\": \"PASS\",\n  \"translation\": 30000,\n  \"square_prime_intersection\": [\n    547601\n  ],\n  \"prime_first25_offsets\": [\n    11,\n    13,\n    29,\n    47,\n    59,\n    71,\n    89,\n    97\n  ],\n  \"literal_twins\": [\n    [\n      518511,\n      21,\n      1040031,\n      39\n    ],\n    [\n      548511,\n      21,\n      1040031,\n      39\n    ]\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "arithmetic/TRIANGLE_local.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "{\"result\": \"PASS\", \"q_range\": [1, 12], \"hostile\": 1}\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "arithmetic/TRIANGLE_check.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "oefficients\": 8399,\n      \"C2\": 3,\n      \"matching_prediction\": 3,\n      \"agrees\": true\n    },\n    {\n      \"r\": 4,\n      \"gaps\": [\n        0,\n        0,\n        0,\n        0,\n        0\n      ],\n      \"nonzero_coefficients\": 6322,\n      \"C2\": 1,\n      \"matching_prediction\": 1,\n      \"agrees\": true\n    },\n    {\n      \"r\": 4,\n      \"gaps\": [\n        0,\n        0,\n        0,\n        1,\n        0\n      ],\n      \"nonzero_coefficients\": 8559,\n      \"C2\": 3,\n      \"matching_prediction\": 3,\n      \"agrees\": true\n    },\n    {\n      \"r\": 4,\n      \"gaps\": [\n        0,\n        0,\n        1,\n        0,\n        0\n      ],\n      \"nonzero_coefficients\": 8559,\n      \"C2\": 1,\n      \"matching_prediction\": 1,\n      \"agrees\": true\n    },\n    {\n      \"r\": 4,\n      \"gaps\": [\n        0,\n        0,\n        1,\n        1,\n        0\n      ],\n      \"nonzero_coefficients\": 11346,\n      \"C2\": 3,\n      \"matching_prediction\": 3,\n      \"agrees\": true\n    },\n    {\n      \"r\": 4,\n      \"gaps\": [\n        0,\n        1,\n        0,\n        0,\n        0\n      ],\n      \"nonzero_coefficients\": 8559,\n      \"C2\": 3,\n      \"matching_prediction\": 3,\n      \"agrees\": true\n    },\n    {\n      \"r\": 4,\n      \"gaps\": [\n        0,\n        1,\n        0,\n        1,\n        0\n      ],\n      \"nonzero_coefficients\": 11346,\n      \"C2\": 3,\n      \"matching_prediction\": 3,\n      \"agrees\": true\n    },\n    {\n      \"r\": 4,\n      \"gaps\": [\n        0,\n        1,\n        1,\n        0,\n        0\n      ],\n      \"nonzero_coefficients\": 11346,\n      \"C2\": 3,\n      \"matching_prediction\": 3,\n      \"agrees\": true\n    },\n    {\n      \"r\": 4,\n      \"gaps\": [\n        0,\n        1,\n        1,\n        1,\n        0\n      ],\n      \"nonzero_coefficients\": 14767,\n      \"C2\": 9,\n      \"matching_prediction\": 9,\n      \"agrees\": true\n    }\n  ],\n  \"k3\": [\n    {\n      \"r\": 4,\n      \"k\": 3,\n      \"all_internal_gaps\": 1,\n      \"trials\": 64,\n      \"sample_gcd\": 3,\n      \"matching_prediction\": 3,\n      \"refuted\": false,\n      \"first_refutation\": null\n    },\n    {\n      \"r\": 5,\n      \"k\": 3,\n      \"all_internal_gaps\": 1,\n      \"trials\": 12,\n      \"sample_gcd\": 9,\n      \"matching_prediction\": 9,\n      \"refuted\": false,\n      \"first_refutation\": null\n    }\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "fibres/h9_fibres.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "{\"result\": \"PASS\", \"branch_controls\": 729, \"literal_controls\": 587, \"output\": \"C:\\\\Users\\\\Eliott\\\\Documents\\\\GitHub\\\\ephrepos\\\\math-wt-berggren-return-20261111\\\\05-knowledge\\\\results\\\\berggren_target_return_20261111\\\\fibres\\\\h9_fibres.json\"}\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "fibres/extension_content.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "{\"result\": \"PASS\", \"families\": 156, \"literal_checks\": 584}\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "fibres/triangle_filtration.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "{\"result\": \"PASS\", \"probe_summary\": [{\"r\": 3, \"gaps\": [0, 1, 1, 0], \"sample_gcd_with_source\": 3, \"min_v3\": 1}, {\"r\": 3, \"gaps\": [0, 2, 1, 0], \"sample_gcd_with_source\": 3, \"min_v3\": 1}, {\"r\": 4, \"gaps\": [0, 1, 1, 1, 0], \"sample_gcd_with_source\": 9, \"min_v3\": 2}]}\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "fibres/gap_transport.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "{\"result\": \"PASS\", \"family_controls\": 56, \"minimal_peak\": 15, \"source_content\": 3, \"target_content\": 1}\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "fibres/triangle_enumeration.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "{\"result\": \"PASS\", \"orders\": 24, \"birth_masks\": 14791, \"arc_flips\": 1392}\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "reset/funnel_six_state.py",
+      "arguments": [
+        "--order",
+        "15",
+        "--controls",
+        "9"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "order 3 classes 1 hits {'221': 0, '665': 0, '1997': 0, '5993': 0, '5995': 0, '667': 0, '1999': 0, '2003': 0, '2005': 0, '6013': 0} elapsed 0.0\norder 4 classes 3 hits {'221': 0, '665': 0, '1997': 0, '5993': 0, '5995': 0, '667': 0, '1999': 0, '2003': 0, '2005': 0, '6013': 0} elapsed 0.0\norder 5 classes 8 hits {'221': 0, '665': 0, '1997': 0, '5993': 0, '5995': 0, '667': 0, '1999': 0, '2003': 0, '2005': 0, '6013': 0} elapsed 0.0\norder 6 classes 21 hits {'221': 0, '665': 0, '1997': 0, '5993': 0, '5995': 0, '667': 0, '1999': 0, '2003': 0, '2005': 0, '6013': 0} elapsed 0.02\norder 7 classes 55 hits {'221': 0, '665': 0, '1997': 0, '5993': 0, '5995': 0, '667': 0, '1999': 0, '2003': 0, '2005': 0, '6013': 0} elapsed 0.1\norder 8 classes 144 hits {'221': 1, '665': 2, '1997': 0, '5993': 0, '5995': 0, '667': 0, '1999': 0, '2003': 0, '2005': 0, '6013': 0} elapsed 0.72\norder 9 classes 377 hits {'221': 1, '665': 2, '1997': 0, '5993': 0, '5995': 0, '667': 0, '1999': 0, '2003': 1, '2005': 0, '6013': 0} elapsed 5.55\norder 10 classes 987 hits {'221': 1, '665': 4, '1997': 0, '5993': 0, '5995': 0, '667': 0, '1999': 0, '2003': 1, '2005': 1, '6013': 0} elapsed 5.55\norder 11 classes 2584 hits {'221': 1, '665': 4, '1997': 0, '5993': 0, '5995': 0, '667': 0, '1999': 0, '2003': 1, '2005': 3, '6013': 0} elapsed 5.57\norder 12 classes 6765 hits {'221': 1, '665': 4, '1997': 0, '5993': 0, '5995': 0, '667': 0, '1999': 1, '2003': 1, '2005': 5, '6013': 0} elapsed 5.6\norder 13 classes 17711 hits {'221': 1, '665': 4, '1997': 0, '5993': 0, '5995': 2, '667': 0, '1999': 1, '2003': 1, '2005': 5, '6013': 0} elapsed 5.68\norder 14 classes 46368 hits {'221': 1, '665': 4, '1997': 0, '5993': 0, '5995': 2, '667': 0, '1999': 1, '2003': 1, '2005': 5, '6013': 0} elapsed 5.86\norder 15 classes 121393 hits {'221': 1, '665': 4, '1997': 0, '5993': 0, '5995': 2, '667': 0, '1999': 1, '2003': 1, '2005': 5, '6013': 0} elapsed 6.26\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "reset/ready_two_inverse.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "bank {'n': 3, 'pairs': 1, 'two': 0, 'cycles': 1}\nbank {'n': 4, 'pairs': 3, 'two': 1, 'cycles': 1}\nbank {'n': 5, 'pairs': 7, 'two': 5, 'cycles': 3}\nbank {'n': 6, 'pairs': 18, 'two': 18, 'cycles': 8}\nbank {'n': 7, 'pairs': 47, 'two': 60, 'cycles': 21}\nbank {'n': 8, 'pairs': 123, 'two': 191, 'cycles': 55}\nbank {'n': 9, 'pairs': 322, 'two': 589, 'cycles': 144}\nbank {'n': 10, 'pairs': 843, 'two': 1775, 'cycles': 377}\nbank {'n': 11, 'pairs': 2207, 'two': 5257, 'cycles': 987}\nbank {'n': 12, 'pairs': 5778, 'two': 15360, 'cycles': 2584}\ncounter {\"rows\":32605,\"gates\":569325}\nHITS {'221': 3, '419': 2, '665': 4, '667': 1, '1997': 0, '1999': 1, '2003': 2, '2005': 0, '5993': 4, '5995': 1, '6013': 1}\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "reset/target_ready_return.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "PASS: target-preserving all-k returns99D+23 and297D+71; exact retained maps and full states\nMARKED_RUNS [{'parent': [57, 27, 0, 0, 0, 0, 0, 0], 'child': [221, 99, 0, 0, 0, 0, 0, 0, 0], 'two_covers': [1704, 1590, 450, 0, 0, 0, 0, 0, 0], 'start_covers': [63, 36, 0, 0, 0, 0, 0, 0, 0], 'end_paths': [3, 0, 0, 0, 0, 0, 0, 0], 'start_paths': [1, 0, 0, 0, 0, 0, 0, 0]}, {'parent': [235, 105, 0, 0, 0, 0, 0, 0, 0, 0], 'child': [665, 297, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'two_covers': [14368, 12650, 3550, 0, 0, 0, 0, 0, 0, 0, 0], 'start_covers': [277, 140, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'end_paths': [1, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'start_paths': [1, 0, 0, 0, 0, 0, 0, 0, 0, 0]}]\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "reset/finite_bridge.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "PASS: actual23->73->221->667->2003; same originalrootr andporta survive all returns\nREWRITE_TRACES [[221, 23, 99, 221], [667, 51, 197, 667], [667, 33, 321, 997, 2003]]\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "reset/cap_cover_state.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "PASS: endpoint cap needs growingcover state; exact growingdefect birth orbit\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "reset/low_defect_escape.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "PASS:1997minimumpositive defect3;10/13retainedreturn;no branchingdefect<=6at1997/5993/6013\nREBASE_TRACE [1997, 241, 619, 1997]\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "reset/gap_return_probe.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "HIT right1 3285 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nHIT right1 5333 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nHIT right1 7380 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nDIRECTION right1 hits 3\nHIT right2 3277 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nHIT right2 5325 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nHIT right2 7372 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nDIRECTION right2 hits 3\nHIT right3 3285 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nHIT right3 5333 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nHIT right3 7380 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nDIRECTION right3 hits 3\nHIT right4 3289 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nHIT right4 5337 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nHIT right4 7384 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nDIRECTION right4 hits 3\nHIT right5 3289 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nHIT right5 5337 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nHIT right5 7384 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nDIRECTION right5 hits 3\nHIT right6 3277 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nHIT right6 5325 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nHIT right6 7372 5995 uniform False runs [2387, 5995, 4544, 936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nDIRECTION right6 hits 3\nDIRECTION right7 hits 0\nDIRECTION left1 hits 0\nDIRECTION left2 hits 0\nDIRECTION left3 hits 0\nDIRECTION left4 hits 0\nDIRECTION left5 hits 0\nDIRECTION left6 hits 0\nDIRECTION left7 hits 0\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "reset/two_triangle_inverse.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "PASS: all-height5993two-triangleexclusion;18normalized5995charts;namedzero-loss+4repair\nMACRO_TRACES [[5997, 7727, 10001, 9421], [9421, 12215, 12083, 8901], [8901, 11163, 11437, 8047], [8047, 10477, 10333, 7671], [7671, 9873, 9997, 7237]]\nSTAR_TRACE [7237, 5995]\nOLD_ROOT_PROFILE {'root': 0, 'h': 5995, 's': 339, 'q': 1897, 'F': 19759, 'gap': 13764, 'delta': 12206}\nREADY_RETURN_TRACE [5995, 107, 253, 545, 1085, 2165, 5995]\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "reset/H15_inverse.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "CORE S4_C3 cuts 128 hits 0\nCORE C3_S4 cuts 128 hits 0\nCORE S4 cuts 16 hits 6\nMODULE 1 3 57 order 13\nMODULE 4 0 693 order 15\nMODULE 7 57 3 order 13\nMODULE 8 0 460 order 14\nMODULE 13 693 0 order 15\nMODULE 14 460 0 order 14\nPASS: H15menuexcluded; actual1997->5993same-rootdefect3->5; uniformsurplus282(2^m-2)\nTRACE [1997, 409, 1599, 3067, 5993]\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "reset/H15_ready.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "CLASS 0 ORDER 13 RETAIN 10 TRACE [5993, 395, 1027, 2483, 5993]\nCLASS 1 ORDER 12 RETAIN 9 TRACE [5993, 115, 359, 2153, 5993]\nCLASS 2 ORDER 11 RETAIN 8 TRACE [5993, 65, 65, 1889, 5993]\nCLASS 3 ORDER 11 RETAIN 8 TRACE [5993, 65, 149, 2125, 5993]\nPASS: exact four-class rooted retention optima\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "reset/audit_berggren.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "PASS: independent Berggrenrank/interface/suffix audit; converseescape explicitly retained\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "berggren/check.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "{\n  \"status\": \"PASS\",\n  \"census\": [\n    {\n      \"n\": 1,\n      \"universe\": 1,\n      \"labeled_one_apex\": 1,\n      \"ordinary\": 1,\n      \"strong_ordinary\": 1,\n      \"automorphism_distribution\": {\n        \"1\": 1\n      }\n    },\n    {\n      \"n\": 2,\n      \"universe\": 2,\n      \"labeled_one_apex\": 2,\n      \"ordinary\": 1,\n      \"strong_ordinary\": 0,\n      \"automorphism_distribution\": {\n        \"1\": 1\n      }\n    },\n    {\n      \"n\": 3,\n      \"universe\": 8,\n      \"labeled_one_apex\": 8,\n      \"ordinary\": 2,\n      \"strong_ordinary\": 1,\n      \"automorphism_distribution\": {\n        \"1\": 1,\n        \"3\": 1\n      }\n    },\n    {\n      \"n\": 4,\n      \"universe\": 64,\n      \"labeled_one_apex\": 64,\n      \"ordinary\": 4,\n      \"strong_ordinary\": 1,\n      \"automorphism_distribution\": {\n        \"1\": 2,\n        \"3\": 2\n      }\n    },\n    {\n      \"n\": 5,\n      \"universe\": 1024,\n      \"labeled_one_apex\": 840,\n      \"ordinary\": 9,\n      \"strong_ordinary\": 3,\n      \"automorphism_distribution\": {\n        \"1\": 6,\n        \"3\": 3\n      }\n    },\n    {\n      \"n\": 6,\n      \"universe\": 32768,\n      \"labeled_one_apex\": 13200,\n      \"ordinary\": 21,\n      \"strong_ordinary\": 7,\n      \"automorphism_distribution\": {\n        \"1\": 17,\n        \"3\": 4\n      }\n    }\n  ],\n  \"controls\": {\n    \"all_cuts\": 511,\n    \"strong_cuts\": 127,\n    \"ready_exits\": 15\n  }\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "berggren/wide_return.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "{\n  \"status\": \"PASS\",\n  \"ready1817_bridge\": {\n    \"retained\": 9,\n    \"target_index\": 0,\n    \"gauge\": \"forward\",\n    \"target_kept\": [\n      0,\n      2,\n      3,\n      4,\n      5,\n      6,\n      7,\n      8,\n      9\n    ],\n    \"source_kept\": [\n      11,\n      0,\n      9,\n      8,\n      1,\n      2,\n      3,\n      5,\n      12\n    ],\n    \"source_rows\": [\n      7934,\n      7420,\n      7416,\n      6384,\n      6624,\n      6336,\n      6528,\n      4352,\n      6191,\n      7678,\n      6648,\n      128,\n      2048\n    ],\n    \"target_rows\": [\n      1026,\n      900,\n      1001,\n      1011,\n      999,\n      963,\n      899,\n      769,\n      513,\n      1,\n      1022\n    ],\n    \"old_apex\": 8,\n    \"old_apex_retained\": true,\n    \"following_rows\": [\n      1026,\n      900,\n      1001,\n      1011,\n      999,\n      963,\n      899,\n      769,\n      513,\n      1,\n      3070,\n      5119,\n      2047\n    ],\n    \"following_H\": 5453\n  },\n  \"larger_retention_exhausted\": [\n    {\n      \"retained\": 11,\n      \"target_subsets_exhausted\": 4\n    },\n    {\n      \"retained\": 10,\n      \"target_subsets_exhausted\": 44\n    }\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "berggren/audit_reset.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "PASS: independent complete run polynomials, six literal ready graphs, both target-preserving map gauges, and order-tail arithmetic\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "berggren/audit_triangle.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "PASS: local counts1,3,7; unmarked counts3,12,33; all four/three-event availability walks\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "berggren/audit_gap.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "PASS: independent named gap macros, sharp floor barrier, full-seven-state equality, and complete star gcd3 versus1\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "berggren/audit_all_k.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "{\"status\": \"PASS\", \"exhaustive_patterns\": 7916, \"seeded_larger_patterns\": 1562, \"high_q\": {\"k\": 4, \"nu\": 0, \"requests\": 6, \"free_singleton_paid_halves\": 6, \"contact_singleton_paid_halves\": 0, \"terminal_paid_halves\": 0, \"unpaid_halves\": 0, \"loss_minus_free\": 3}}\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "berggren/audit_defect_escape.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "PASS: complete independent5993/5995 rectangle+axis inverse; literal1997/5995/17987 constructions and same-root return\n",
+      "stderr_tail": ""
+    },
+    {
+      "engine": "berggren/audit_H15.py",
+      "arguments": [],
+      "passed": true,
+      "returncode": 0,
+      "stdout_tail": "PASS: complete H15/S4 inverse;84 independent module polynomials;1997->5993->ready5993->17983 literal persistent-root maps\n",
+      "stderr_tail": ""
+    }
+  ],
+  "scope": "New packet claims and inherited dependencies invoked by their declared engines; discovery-only probe_ready.py excluded."
+}

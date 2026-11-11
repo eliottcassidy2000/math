@@ -8,9 +8,8 @@
 ## LRC(14)
 
 ### Headline
-**Repository proof OPEN.** THM-2923 closes all `3,432` seven-window roots; the remainder has
-at most six speeds. THM-2051/2052 leave a sparse code of rank `>=11`; failed
-gates are not danger.
+**Repository proof OPEN.** THM-2923 closes `3,432` seven-window roots; <=6 speeds remain.
+THM-2051/2052: sparse code rank `>=11`; failed gates are not danger.
 
 ### Proved reductions and terminals
 

@@ -49,7 +49,7 @@ def direct_state(T):
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--order',type=int,default=15)
     parser.add_argument('--controls',type=int,default=7);args=parser.parse_args()
-    targets={221:99,665:297,1997:891,5993:2673,667:297,1999:891,2003:891,2005:891}
+    targets={221:99,665:297,1997:891,5993:2673,5995:2673,667:297,1999:891,2003:891,2005:891,6013:2673}
     banks={1:[SINGLE]};hits={str(h):[] for h in targets};total=0;checks=0;t0=time.time()
     for n in range(3,args.order+1):
         states=[]

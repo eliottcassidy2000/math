@@ -1,0 +1,475 @@
+{
+  "checked": 117,
+  "links": [
+    {
+      "source": "arithmetic/PROOF.md",
+      "target": "05-knowledge/results/session51_structural_errors_relational_packets_20261024/prime-offsets/THEOREM.md"
+    },
+    {
+      "source": "arithmetic/PROOF.md",
+      "target": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/fortunate-square-pattern/THEOREM.md"
+    },
+    {
+      "source": "arithmetic/PROOF.md",
+      "target": "05-knowledge/results/h13_paired_descent_20261111/dynamics/PORTABLE_GAPS.md"
+    },
+    {
+      "source": "arithmetic/PROOF.md",
+      "target": "05-knowledge/results/session256_chan_pak_triples_20261111/spinor/PROOF.md"
+    },
+    {
+      "source": "arithmetic/PROOF.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/COMPENSATION.md"
+    },
+    {
+      "source": "arithmetic/TRIANGLE_ALL_K_PROOF.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/ALL_K_AUDIT.md"
+    },
+    {
+      "source": "arithmetic/TRIANGLE_ALL_K_PROOF.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/TRIANGLE_FILTRATION.md"
+    },
+    {
+      "source": "arithmetic/TRIANGLE_ALL_K_PROOF.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_C2_PROOF.md"
+    },
+    {
+      "source": "arithmetic/TRIANGLE_C2_PROOF.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_ALL_K_PROOF.md"
+    },
+    {
+      "source": "arithmetic/TRIANGLE_C2_PROOF.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/TRIANGLE_FILTRATION.md"
+    },
+    {
+      "source": "berggren/ALL_K_AUDIT.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_ALL_K_PROOF.md"
+    },
+    {
+      "source": "berggren/DEFECT_ESCAPE_AUDIT.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/DEFECT_THREE_ESCAPE.md"
+    },
+    {
+      "source": "berggren/GAP_AUDIT.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/GAP_TRANSPORT.md"
+    },
+    {
+      "source": "berggren/GAP_AUDIT.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/ROOT_OBSERVER_LOSS.md"
+    },
+    {
+      "source": "berggren/H15_AUDIT.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/H15_MENU.md"
+    },
+    {
+      "source": "berggren/PROOF.md",
+      "target": "05-knowledge/results/session256_chan_pak_triples_20261111/spinor/PROOF.md"
+    },
+    {
+      "source": "berggren/PROOF.md",
+      "target": "05-knowledge/results/session26_random_bridges_20261022/session26-tournament/APEX_CLASSIFICATION_AND_SPECTRAL_LAW.md"
+    },
+    {
+      "source": "berggren/PROOF.md",
+      "target": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/path_counter/THEORY.md"
+    },
+    {
+      "source": "berggren/PROOF.md",
+      "target": "05-knowledge/results/spine_grammars_cutwidth_apexes_hankel_seams_20261104.md"
+    },
+    {
+      "source": "berggren/PROOF.md",
+      "target": "05-knowledge/results/session176_tournament_information_20261104/gates/NOTE.md"
+    },
+    {
+      "source": "berggren/PROOF.md",
+      "target": "05-knowledge/results/two_entry_funnels_20261103/READY.md"
+    },
+    {
+      "source": "berggren/PROOF.md",
+      "target": "05-knowledge/results/h13_paired_descent_20261111/dynamics/PROOF.md"
+    },
+    {
+      "source": "berggren/PROOF.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/WIDE_RETURN.md"
+    },
+    {
+      "source": "berggren/RESET_AUDIT.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md"
+    },
+    {
+      "source": "berggren/RESET_AUDIT.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/WIDE_REWRITE_SIZE.md"
+    },
+    {
+      "source": "berggren/TRIANGLE_AUDIT.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_C2_PROOF.md"
+    },
+    {
+      "source": "berggren/WIDE_RETURN.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/PROOF.md"
+    },
+    {
+      "source": "berggren/WIDE_RETURN.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/WIDE_REWRITE_SIZE.md"
+    },
+    {
+      "source": "fibres/EXTENSION_CONTENT.md",
+      "target": "05-knowledge/results/uniform_return_metagraph_20261111/metagraph/FAMILIES.md"
+    },
+    {
+      "source": "fibres/EXTENSION_CONTENT.md",
+      "target": "05-knowledge/results/modular_centers_collatz_pell_20261111/EXTENSION_CONTENT.md"
+    },
+    {
+      "source": "fibres/H9_FIBRES.md",
+      "target": "05-knowledge/results/session256_chan_pak_triples_20261111/spinor/PROOF.md"
+    },
+    {
+      "source": "fibres/ROOT_OBSERVER_LOSS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/TRIANGLE_FILTRATION.md"
+    },
+    {
+      "source": "fibres/ROOT_OBSERVER_LOSS.md",
+      "target": "05-knowledge/results/h13_paired_descent_20261111/dynamics/PROOF.md"
+    },
+    {
+      "source": "fibres/ROOT_OBSERVER_LOSS.md",
+      "target": "05-knowledge/results/h13_paired_descent_20261111/modular_cycles/ADDITIVITY.md"
+    },
+    {
+      "source": "fibres/TRIANGLE_FILTRATION.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_ALL_K_PROOF.md"
+    },
+    {
+      "source": "fibres/TRIANGLE_FILTRATION.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/EXTENSION_CONTENT.md"
+    },
+    {
+      "source": "fibres/TRIANGLE_FILTRATION.md",
+      "target": "05-knowledge/results/compensation_returns_20261103/CAP_WIDTH.md"
+    },
+    {
+      "source": "fibres/TRIANGLE_FILTRATION.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_ALL_K_PROOF.md"
+    },
+    {
+      "source": "fibres/TRIANGLE_FILTRATION.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/TRIANGLE_METAGRAPH.md"
+    },
+    {
+      "source": "fibres/TRIANGLE_METAGRAPH.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_ALL_K_PROOF.md"
+    },
+    {
+      "source": "fibres/TRIANGLE_METAGRAPH.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/ALL_K_AUDIT.md"
+    },
+    {
+      "source": "fibres/TRIANGLE_METAGRAPH.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/GAP_TRANSPORT.md"
+    },
+    {
+      "source": "fibres/WIDE_REWRITE_SIZE.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/PROOF.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/SYNTHESIS.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/uniform_return_metagraph_20261111/SYNTHESIS.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/two_entry_funnels_20261103/READY.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/ready_return_pentagon_20261103/OBSTRUCTION.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/compensation_returns_20261103/CAP_WIDTH.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/session256_chan_pak_triples_20261111/spinor/PROOF.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/session26_random_bridges_20261022/session26-tournament/APEX_CLASSIFICATION_AND_SPECTRAL_LAW.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/spine_grammars_cutwidth_apexes_hankel_seams_20261104.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/path_counter/THEORY.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/h13_paired_descent_20261111/dynamics/PORTABLE_GAPS.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/h13_paired_descent_20261111/modular_cycles/ADDITIVITY.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/session51_structural_errors_relational_packets_20261024/prime-offsets/THEOREM.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/fortunate-square-pattern/THEOREM.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/modular_centers_collatz_pell_20261111/EXTENSION_CONTENT.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/session257_permutohedron_squares_20261111/README.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "01-canon/theorems/THM-3620-berggren-fixed-107-mordell-rank-two-and-local-collision.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "01-canon/theorems/THM-3646-berggren-fixed107-mordell-rank-exactly-three.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/session251_creative_completion_20261111/SYNTHESIS.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/uniform_return_metagraph_20261111/metagraph/FAMILIES.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/five_core_web_20261111/SYNTHESIS.md"
+    },
+    {
+      "source": "INHERITANCE.md",
+      "target": "05-knowledge/results/session252_fivefold_bridges_20261111/SYNTHESIS.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/SYNTHESIS.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/INHERITANCE.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/BOARD.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/RESET_AUDIT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/DEFECT_THREE_ESCAPE.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/DEFECT_ESCAPE_AUDIT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/H15_MENU.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/H15_AUDIT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/ALTERNATING_AND_CAP.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/PROOF.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/WIDE_RETURN.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/WIDE_REWRITE_SIZE.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_ALL_K_PROOF.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/ALL_K_AUDIT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/TRIANGLE_METAGRAPH.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/GAP_TRANSPORT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/ROOT_OBSERVER_LOSS.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/H9_FIBRES.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/EXTENSION_CONTENT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/PROOF.md"
+    },
+    {
+      "source": "README.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/COMPENSATION.md"
+    },
+    {
+      "source": "README.md",
+      "target": "01-canon/MISTAKES.md"
+    },
+    {
+      "source": "reset/ALTERNATING_AND_CAP.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md"
+    },
+    {
+      "source": "reset/ALTERNATING_AND_CAP.md",
+      "target": "05-knowledge/results/compensation_returns_20261103/CAP_WIDTH.md"
+    },
+    {
+      "source": "reset/ALTERNATING_AND_CAP.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md"
+    },
+    {
+      "source": "reset/DEFECT_THREE_ESCAPE.md",
+      "target": "05-knowledge/results/uniform_return_metagraph_20261111/defect/PROOF.md"
+    },
+    {
+      "source": "reset/DEFECT_THREE_ESCAPE.md",
+      "target": "05-knowledge/results/ready_return_pentagon_20261103/OBSTRUCTION.md"
+    },
+    {
+      "source": "reset/DEFECT_THREE_ESCAPE.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/GAP_TRANSPORT.md"
+    },
+    {
+      "source": "reset/FIBRE_REVIEW.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/WIDE_REWRITE_SIZE.md"
+    },
+    {
+      "source": "reset/FIBRE_REVIEW.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/TRIANGLE_FILTRATION.md"
+    },
+    {
+      "source": "reset/FIBRE_REVIEW.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_ALL_K_PROOF.md"
+    },
+    {
+      "source": "reset/FIBRE_REVIEW.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/TRIANGLE_METAGRAPH.md"
+    },
+    {
+      "source": "reset/H15_MENU.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/DEFECT_THREE_ESCAPE.md"
+    },
+    {
+      "source": "reset/TARGET_RETURN.md",
+      "target": "05-knowledge/results/uniform_return_metagraph_20261111/reset/ATLAS_TWO_BIRTH.md"
+    },
+    {
+      "source": "reset/TARGET_RETURN.md",
+      "target": "05-knowledge/results/uniform_return_metagraph_20261111/reset/READY_REBASE.md"
+    },
+    {
+      "source": "reset/TARGET_RETURN.md",
+      "target": "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md"
+    },
+    {
+      "source": "reset/TARGET_RETURN.md",
+      "target": "05-knowledge/results/two_entry_funnels_20261103/READY.md"
+    },
+    {
+      "source": "reset/TARGET_RETURN.md",
+      "target": "05-knowledge/results/nonzero_preparation_20261103/surgery/ORDER_OBSTRUCTION.md"
+    },
+    {
+      "source": "reset/TARGET_RETURN.md",
+      "target": "05-knowledge/results/ready_return_pentagon_20261103/OBSTRUCTION.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/RESET_AUDIT.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/DEFECT_THREE_ESCAPE.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/H15_MENU.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/berggren/WIDE_RETURN.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/WIDE_REWRITE_SIZE.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/reset/ALTERNATING_AND_CAP.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_ALL_K_PROOF.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/TRIANGLE_METAGRAPH.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/GAP_TRANSPORT.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/fibres/H9_FIBRES.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "05-knowledge/results/berggren_target_return_20261111/arithmetic/PROOF.md"
+    }
+  ],
+  "scope": "Every relative Markdown file link in this packet; anchors and external URL availability are not checked.",
+  "status": "PASS"
+}

@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "hankel": [
+    [
+      1,
+      1,
+      1,
+      3
+    ],
+    [
+      1,
+      3,
+      5,
+      5
+    ],
+    [
+      3,
+      5,
+      9,
+      9
+    ],
+    [
+      1,
+      5,
+      11,
+      9
+    ]
+  ],
+  "determinant": 16,
+  "full_old_apex_controls": 31,
+  "arbitrary_suffix_coefficients": [
+    -2,
+    0,
+    -2,
+    14
+  ],
+  "dual_continuations": [
+    {
+      "t": 1,
+      "root": 9,
+      "H": 605,
+      "target_H": 1817
+    },
+    {
+      "t": 2,
+      "root": 10,
+      "H": 1235,
+      "target_H": 3707
+    },
+    {
+      "t": 3,
+      "root": 11,
+      "H": 2495,
+      "target_H": 7487
+    }
+  ],
+  "logical_scope": {
+    "rank": "homogeneous linear append-word series only; nonlinear two-register carrier remains possible",
+    "future_order": "common O/Z/J continuations at retained oldapex only; no unproved seven-state context order",
+    "readiness": "forward no-ready claim is orientation-specific; OII has converse-ready exit"
+  }
+}

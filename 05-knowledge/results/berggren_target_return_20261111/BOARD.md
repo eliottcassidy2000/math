@@ -1,6 +1,6 @@
 # Target-preserving returns and decorated arithmetic
 
-**Status: ACTIVE research packet; Chan–Pak OPEN.** Started from
+**Status: COMPLETED research packet; Chan–Pak OPEN.** Started from
 `6512e16e0729` on 2026-11-11. This packet inherits the previous uniform-return
 and Session256 constructions at their stated scopes; it does not promote
 an experimental family into an unrestricted spectrum theorem.
@@ -45,3 +45,29 @@ Methods used: current META-PATTERNS cards “Turn certificate failure into an
 address, then change sidecars”, “Retain the product and shared labels before
 taking scalar totals”, and “Treat pulls and collisions as synthesis
 opportunities”. No new method card is claimed merely from this session.
+
+## Final concept-board comparison
+
+- **Exact target and source return:** two uniform ready returns succeeded.
+  The later1997 defect3→5993 defect5 return preserves its interface at every
+  module size but has a proved nonzero target drift beyond the first size.
+- **Growing defect:** the unrestricted two-birth recurrence and the cap's
+  missing eigenmode explain two failures. A finite defect3 source now has
+  both desired exits, with named subsequent returns; arbitrary closure is open.
+- **Berggren decoration:** complete H9 fibres and actual wide-prefix returns
+  succeed. The family remains sparse and needs a higher-core return at1817.
+- **Five cores:** C3/S4 become persistent defect3/5 interfaces; the two H9
+  charts remain distinct as positive constructors. Collections of five at
+  other quotient levels are kept separate in INHERITANCE.md.
+- **Metagraph classification:** the full triangle/singleton family now has an
+  exact all-k extension filtration, ordinary/labelled enumerators, lifetime
+  layers and complete internal birth/arc-flip grammar. Its matching invariant
+  is invisible to the fixed-root seven-coordinate response.
+- **30000 translation:** the exact wheel, unique quadratic-prime pair and
+  actual pure-H source pair succeed. Neither primality nor an arbitrary
+  prescribed source is transported by a scalar difference alone.
+
+The niche overtook the anchor in theorem completeness: the triangle family
+is fully classified for the declared operations, while uniform arbitrary
+target returns remain the anchor's precise unfinished obligation. Every
+new positive mechanism and failed lift is routed in SYNTHESIS.md.

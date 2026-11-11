@@ -1,4 +1,4 @@
-"""Complete two-ready inverse through5993, reusing proved order-tail minima."""
+"""Complete queried two-ready inverse through6013, using proved order-tail minima."""
 from pathlib import Path
 from itertools import combinations,product
 from collections import Counter
@@ -44,7 +44,7 @@ def bank_through(bound):
     return bank,records
 
 def main():
-    targets=(221,419,665,667,1997,1999,2003,2005,5993)
+    targets=(221,419,665,667,1997,1999,2003,2005,5993,5995,6013)
     hits={str(h):[] for h in targets};hist={n:Counter() for n in range(4,15)}
     bank,records=bank_through(12)
     with tempfile.TemporaryDirectory(prefix='two-ready-inverse-') as td:

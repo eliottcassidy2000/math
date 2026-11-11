@@ -296,6 +296,7 @@ by positivity of the inherited matrices. The current H is equal. This is
 not a comparison under arbitrary root-amalgam contexts: the full seven
 coordinates include endpoint and deletion changes that must be retained.
 
+The following readiness assertions concern the displayed forward orientation.
 The returned graph has first base vertex of defect zero. Its second base
 vertex, the retained x, has indegree one, but its defect is
 
@@ -313,8 +314,17 @@ at that first vertex after deleting the second: this equals
 All other base vertices have indegree at least three, as does the old apex.
 The inherited lower bound on branching defect excludes their being 1- or
 2-ready. Equation (11) excludes x, and the first base vertex has defect
-zero. **The returned graph has no 1- or 2-ready root.** It cannot repeat the
-standard small-defect ternary exit by changing the root.
+zero. **The returned graph has no forward 1- or 2-ready root.** It cannot repeat
+the forward small-defect ternary exit by changing only the root.
+
+There is an important positive converse boundary. For z=OII the returned
+word ends II. Its reverse-complement starts OO, so the last base vertex is
+1-ready in the converse gauge. Mirrored two births preserve every old arc
+and give `315*2^t-25 -> 945*2^t-73`, beginning605->1817. Reverse the arrows
+of the operation instructions; no global reversal of the actual old graph
+is required. The first target1817 is outside the entire one-apex spectrum
+(the inherited finite bound gives m<=12), but it has higher-core ready
+representatives. See [the variable-width extension](WIDE_RETURN.md).
 
 The most direct fixed-suffix scalar repair also fails at the next step.
 Multiplying the cut prefix P by three gives 15->45->135, but the prefix

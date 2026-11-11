@@ -1,0 +1,358 @@
+{
+  "status": "PASS",
+  "scope": "Fixed recursive cap graph identity, exact inherited compiler and independent bounded literal counts",
+  "cap_transfer": [
+    [
+      4,
+      -2,
+      6
+    ],
+    [
+      2,
+      -1,
+      0
+    ],
+    [
+      2,
+      0,
+      3
+    ]
+  ],
+  "cap_characteristic": [
+    1,
+    -6,
+    -3,
+    -12
+  ],
+  "cap_rows": [
+    {
+      "depth": 0,
+      "state": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "ready_H": 1,
+      "feedback_parent": 0
+    },
+    {
+      "depth": 1,
+      "state": [
+        3,
+        1,
+        3,
+        12,
+        3,
+        7
+      ],
+      "ready_H": 5,
+      "feedback_parent": 1
+    },
+    {
+      "depth": 2,
+      "state": [
+        9,
+        3,
+        9,
+        84,
+        21,
+        45
+      ],
+      "ready_H": 29,
+      "feedback_parent": 1
+    },
+    {
+      "depth": 3,
+      "state": [
+        27,
+        9,
+        27,
+        564,
+        147,
+        303
+      ],
+      "ready_H": 173,
+      "feedback_parent": 2
+    },
+    {
+      "depth": 4,
+      "state": [
+        81,
+        27,
+        81,
+        3780,
+        981,
+        2037
+      ],
+      "ready_H": 1061,
+      "feedback_parent": 2
+    },
+    {
+      "depth": 5,
+      "state": [
+        243,
+        81,
+        243,
+        25380,
+        6579,
+        13671
+      ],
+      "ready_H": 6821,
+      "feedback_parent": 3
+    },
+    {
+      "depth": 6,
+      "state": [
+        729,
+        243,
+        729,
+        170388,
+        44181,
+        91773
+      ],
+      "ready_H": 44909,
+      "feedback_parent": 3
+    },
+    {
+      "depth": 7,
+      "state": [
+        2187,
+        729,
+        2187,
+        1143828,
+        296595,
+        616095
+      ],
+      "ready_H": 298781,
+      "feedback_parent": 4
+    },
+    {
+      "depth": 8,
+      "state": [
+        6561,
+        2187,
+        6561,
+        7678692,
+        1991061,
+        4135941
+      ],
+      "ready_H": 1997621,
+      "feedback_parent": 4
+    },
+    {
+      "depth": 9,
+      "state": [
+        19683,
+        6561,
+        19683,
+        51548292,
+        13366323,
+        27765207
+      ],
+      "ready_H": 13386005,
+      "feedback_parent": 5
+    },
+    {
+      "depth": 10,
+      "state": [
+        59049,
+        19683,
+        59049,
+        346051764,
+        89730261,
+        186392205
+      ],
+      "ready_H": 89789309,
+      "feedback_parent": 5
+    },
+    {
+      "depth": 11,
+      "state": [
+        177147,
+        59049,
+        177147,
+        2323099764,
+        602373267,
+        1251280143
+      ],
+      "ready_H": 602550413,
+      "feedback_parent": 6
+    },
+    {
+      "depth": 12,
+      "state": [
+        531441,
+        177147,
+        531441,
+        15595333380,
+        4043826261,
+        8400039957
+      ],
+      "ready_H": 4044357701,
+      "feedback_parent": 6
+    }
+  ],
+  "birth2_transfer": [
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      2,
+      -1
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "birth2_characteristic": [
+    1,
+    -3,
+    -1,
+    -1
+  ],
+  "growing_defect_controls": [
+    {
+      "k": 1,
+      "step": 0,
+      "source_state": [
+        665,
+        666,
+        234
+      ],
+      "target_state": [
+        1997,
+        2428,
+        666
+      ],
+      "required_compensation": 0
+    },
+    {
+      "k": 1,
+      "step": 1,
+      "source_state": [
+        1997,
+        2428,
+        666
+      ],
+      "target_state": [
+        6853,
+        8184,
+        2428
+      ],
+      "required_compensation": 860
+    },
+    {
+      "k": 1,
+      "step": 2,
+      "source_state": [
+        6853,
+        8184,
+        2428
+      ],
+      "target_state": [
+        23221,
+        27646,
+        8184
+      ],
+      "required_compensation": 2660
+    },
+    {
+      "k": 2,
+      "step": 0,
+      "source_state": [
+        1259,
+        1260,
+        444
+      ],
+      "target_state": [
+        3779,
+        4594,
+        1260
+      ],
+      "required_compensation": 0
+    },
+    {
+      "k": 2,
+      "step": 1,
+      "source_state": [
+        3779,
+        4594,
+        1260
+      ],
+      "target_state": [
+        12967,
+        15486,
+        4594
+      ],
+      "required_compensation": 1628
+    },
+    {
+      "k": 2,
+      "step": 2,
+      "source_state": [
+        12967,
+        15486,
+        4594
+      ],
+      "target_state": [
+        43939,
+        52312,
+        15486
+      ],
+      "required_compensation": 5036
+    },
+    {
+      "k": 3,
+      "step": 0,
+      "source_state": [
+        2447,
+        2448,
+        864
+      ],
+      "target_state": [
+        7343,
+        8926,
+        2448
+      ],
+      "required_compensation": 0
+    },
+    {
+      "k": 3,
+      "step": 1,
+      "source_state": [
+        7343,
+        8926,
+        2448
+      ],
+      "target_state": [
+        25195,
+        30090,
+        8926
+      ],
+      "required_compensation": 3164
+    },
+    {
+      "k": 3,
+      "step": 2,
+      "source_state": [
+        25195,
+        30090,
+        8926
+      ],
+      "target_state": [
+        85375,
+        101644,
+        30090
+      ],
+      "required_compensation": 9788
+    }
+  ]
+}

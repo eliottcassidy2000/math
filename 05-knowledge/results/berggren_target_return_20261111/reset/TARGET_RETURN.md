@@ -202,10 +202,10 @@ For a b-ready newborn of value N the strong parent has
 
 The cited Busch exact strong-order lower bound is recovered in
 [ORDER_OBSTRUCTION §5](../../nonzero_preparation_20261103/surgery/ORDER_OBSTRUCTION.md).
-For N<=5993, (5) bounds parent order by15, hence target order by16.
+For N<=6013, (5) bounds parent order by15, hence target order by16.
 The already proved sharp2-ready minima at target orders15,16 are9545,
 18905. Thus no unexamined order can contribute to the queried2-ready
-values below5994. The one-start compiler directly covers all parent
+values below6014. The one-start compiler directly covers all parent
 orders allowed by(5).
 
 |Value|Strong1-ready rooted classes|Strong2-ready rooted classes|
@@ -218,10 +218,18 @@ orders allowed by(5).
 |2003|1|2|
 |2005|5|0|
 |5993|0|4|
+|5995|2|1|
+|6013|0|1|
 
 These are all-order class counts at the displayed values, not merely a
 search below a chosen order. Converse poses no loophole: every conversed
 strong source is itself included in the same complete rooted universe.
+Moreover [OBSTRUCTION O1](../../ready_return_pentagon_20261103/OBSTRUCTION.md)
+proves that, for H>=3, every weak1-/2-ready source is a strong ready core
+followed by a transitive tail, preserving H. All displayed ready-value
+exclusions therefore apply to weak tournaments as well. The finite numbers
+in the table count strong rooted classes; weak trailing padding would make
+class counts infinite, without changing membership in the value image.
 
 Therefore(3) cannot continue through a same-count strong1-/2-ready return
 at k1 after1997. The requested alternating next digits have a different

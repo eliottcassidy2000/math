@@ -1,0 +1,425 @@
+{
+  "status": "PASS",
+  "scope": "Four strong two-ready 5993 rooted classes, fixed source S4 chart(1,3,57), fixed root0 and port12; exhaustive failed source subsets and exact injective adjacency maps at every higher retention level",
+  "source_rows": [
+    4094,
+    4092,
+    4040,
+    8144,
+    8164,
+    8140,
+    8064,
+    3840,
+    3584,
+    7168,
+    6144,
+    4096,
+    391
+  ],
+  "targets": [
+    {
+      "class_index": 0,
+      "order": 13,
+      "root": 12,
+      "port": 11,
+      "rows": [
+        1926,
+        3972,
+        3976,
+        3987,
+        4071,
+        4047,
+        3983,
+        3840,
+        1536,
+        1024,
+        2048,
+        4865,
+        2047
+      ],
+      "retained": 10,
+      "source_loss": 3,
+      "failed_higher_retention_levels": [
+        {
+          "loss": 0,
+          "all_source_subsets": 1
+        },
+        {
+          "loss": 1,
+          "all_source_subsets": 11
+        },
+        {
+          "loss": 2,
+          "all_source_subsets": 55
+        }
+      ],
+      "witness": {
+        "kept": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          11,
+          12
+        ],
+        "map": [
+          12,
+          0,
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "source_names": [
+          "old0",
+          "old1",
+          "old2",
+          "old3",
+          "old4",
+          "old5",
+          "old6",
+          "old7",
+          "old8",
+          "old9",
+          "old10",
+          "old11",
+          "old12"
+        ],
+        "target_names": [
+          "old2",
+          "new1",
+          "old3",
+          "old4",
+          "old5",
+          "new5",
+          "new6",
+          "old6",
+          "old7",
+          "old8",
+          "old11",
+          "old12",
+          "old0"
+        ],
+        "insertion_target_labels": [
+          1,
+          5,
+          6
+        ],
+        "trace": [
+          5993,
+          395,
+          1027,
+          2483,
+          5993
+        ]
+      },
+      "next_target": 17983
+    },
+    {
+      "class_index": 1,
+      "order": 12,
+      "root": 11,
+      "port": 10,
+      "rows": [
+        902,
+        2020,
+        2024,
+        2035,
+        2023,
+        1985,
+        1921,
+        768,
+        1536,
+        1024,
+        2177,
+        1023
+      ],
+      "retained": 9,
+      "source_loss": 4,
+      "failed_higher_retention_levels": [
+        {
+          "loss": 1,
+          "all_source_subsets": 11
+        },
+        {
+          "loss": 2,
+          "all_source_subsets": 55
+        },
+        {
+          "loss": 3,
+          "all_source_subsets": 165
+        }
+      ],
+      "witness": {
+        "kept": [
+          0,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12
+        ],
+        "map": [
+          11,
+          3,
+          4,
+          5,
+          0,
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_names": [
+          "old0",
+          "old1",
+          "old2",
+          "old3",
+          "old4",
+          "old5",
+          "old6",
+          "old7",
+          "old8",
+          "old9",
+          "old10",
+          "old11",
+          "old12"
+        ],
+        "target_names": [
+          "old7",
+          "new1",
+          "new2",
+          "old4",
+          "old5",
+          "old6",
+          "new6",
+          "old8",
+          "old10",
+          "old11",
+          "old12",
+          "old0"
+        ],
+        "insertion_target_labels": [
+          1,
+          2,
+          6
+        ],
+        "trace": [
+          5993,
+          115,
+          359,
+          2153,
+          5993
+        ]
+      },
+      "next_target": 17983
+    },
+    {
+      "class_index": 2,
+      "order": 11,
+      "root": 10,
+      "port": 9,
+      "rows": [
+        2,
+        156,
+        1017,
+        1009,
+        993,
+        963,
+        899,
+        769,
+        515,
+        1027,
+        511
+      ],
+      "retained": 8,
+      "source_loss": 5,
+      "failed_higher_retention_levels": [
+        {
+          "loss": 2,
+          "all_source_subsets": 55
+        },
+        {
+          "loss": 3,
+          "all_source_subsets": 165
+        },
+        {
+          "loss": 4,
+          "all_source_subsets": 330
+        }
+      ],
+      "witness": {
+        "kept": [
+          0,
+          4,
+          5,
+          6,
+          9,
+          10,
+          11,
+          12
+        ],
+        "map": [
+          10,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        "source_names": [
+          "old0",
+          "old1",
+          "old2",
+          "old3",
+          "old4",
+          "old5",
+          "old6",
+          "old7",
+          "old8",
+          "old9",
+          "old10",
+          "old11",
+          "old12"
+        ],
+        "target_names": [
+          "new0",
+          "new1",
+          "old4",
+          "old5",
+          "old6",
+          "old9",
+          "old10",
+          "old11",
+          "new8",
+          "old12",
+          "old0"
+        ],
+        "insertion_target_labels": [
+          0,
+          1,
+          8
+        ],
+        "trace": [
+          5993,
+          65,
+          65,
+          1889,
+          5993
+        ]
+      },
+      "next_target": 17983
+    },
+    {
+      "class_index": 3,
+      "order": 11,
+      "root": 10,
+      "port": 9,
+      "rows": [
+        2,
+        524,
+        521,
+        561,
+        999,
+        967,
+        911,
+        783,
+        527,
+        1025,
+        511
+      ],
+      "retained": 8,
+      "source_loss": 5,
+      "failed_higher_retention_levels": [
+        {
+          "loss": 2,
+          "all_source_subsets": 55
+        },
+        {
+          "loss": 3,
+          "all_source_subsets": 165
+        },
+        {
+          "loss": 4,
+          "all_source_subsets": 330
+        }
+      ],
+      "witness": {
+        "kept": [
+          0,
+          4,
+          5,
+          6,
+          9,
+          10,
+          11,
+          12
+        ],
+        "map": [
+          10,
+          4,
+          5,
+          6,
+          7,
+          1,
+          2,
+          9
+        ],
+        "source_names": [
+          "old0",
+          "old1",
+          "old2",
+          "old3",
+          "old4",
+          "old5",
+          "old6",
+          "old7",
+          "old8",
+          "old9",
+          "old10",
+          "old11",
+          "old12"
+        ],
+        "target_names": [
+          "new0",
+          "old10",
+          "old11",
+          "new3",
+          "old4",
+          "old5",
+          "old6",
+          "old9",
+          "new8",
+          "old12",
+          "old0"
+        ],
+        "insertion_target_labels": [
+          0,
+          3,
+          8
+        ],
+        "trace": [
+          5993,
+          65,
+          149,
+          2125,
+          5993
+        ]
+      },
+      "next_target": 17983
+    }
+  ]
+}

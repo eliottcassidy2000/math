@@ -1,0 +1,192 @@
+{
+  "complete_polynomials": [
+    {
+      "child": [
+        221,
+        99,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "end_paths": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "parent": [
+        57,
+        27,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "start_covers": [
+        63,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "start_paths": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "two_covers": [
+        1704,
+        1590,
+        450,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "child": [
+        665,
+        297,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "end_paths": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "parent": [
+        235,
+        105,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "start_covers": [
+        277,
+        140,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "start_paths": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "two_covers": [
+        14368,
+        12650,
+        3550,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "literal_controls": [
+    {
+      "H": 221,
+      "k": 1,
+      "order": 9,
+      "stage": 0
+    },
+    {
+      "H": 665,
+      "k": 1,
+      "order": 11,
+      "stage": 1
+    },
+    {
+      "H": 419,
+      "k": 2,
+      "order": 10,
+      "stage": 0
+    },
+    {
+      "H": 1259,
+      "k": 2,
+      "order": 12,
+      "stage": 1
+    },
+    {
+      "H": 815,
+      "k": 3,
+      "order": 11,
+      "stage": 0
+    },
+    {
+      "H": 2447,
+      "k": 3,
+      "order": 13,
+      "stage": 1
+    }
+  ],
+  "scope": "Independent complete placeholder coefficient polynomials; literal k1..3 graph/profile/map audit; analytic all-order tail arithmetic. The full 32605-row inverse census is inherited, not independently replayed here.",
+  "source_sha256": {
+    "ready_two_inverse.json": "b4e6ffcae9540a5dc1dee0bbc97727feb695f9ccc5386136342cec38dc53557c",
+    "ready_two_inverse.py": "a4a6ba5d7c4947b27c6369b635a9ba688c2cf599c72eda10425adc91e076d4a3",
+    "target_ready_return.json": "c24cc721aa78cf61b6b1d3e8fafb3e8d8c3bf2f5a0e0d36c42d4485c81cd2a32",
+    "target_ready_return.py": "43046937f5adb0edab2fad5611c55a10f69bec528b29b42f8cf881d266f7c2a2"
+  },
+  "status": "PASS"
+}

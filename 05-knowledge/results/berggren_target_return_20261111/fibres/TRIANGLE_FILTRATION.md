@@ -4,8 +4,10 @@
 of directed triangles and singleton gaps; the full extension filtration
 when the internal gaps vanish; general upper and lower lifetime bounds.
 **FINITE-EXACT:** literal small controls and the explicitly seeded probes.
-**OPEN:** the full filtration for arbitrary internal gaps and any prescribed
-target realization. This is a family classification, not Chan–Pak.
+The full arbitrary-gap filtration is now **PROVED** by the independently
+reviewed [half-contact theorem](../arithmetic/TRIANGLE_ALL_K_PROOF.md).
+Prescribed target realization remains **OPEN**. This is a family
+classification, not Chan–Pak.
 
 ## 1. Source family and exact first step
 
@@ -68,15 +70,27 @@ and hence divides C_k(T(g)).                             (3)
 This direct path action proves (3), independently of the coefficient
 compiler. In a Hamilton path of U, call an old triangle touched if some
 vertex of it is adjacent in the path to a new vertex. At most2k triangles
-are touched. Every untouched triangle appears as a consecutive block:
-without a new vertex a path cannot leave an old SCC and return to it.
-Its three cyclic rotations are valid directed paths and preserve both
-external adjacencies, because all other old SCCs see it uniformly.
-They also preserve the touched set. Rotations of distinct untouched
-triangles commute and act freely. Partition paths by the touched set;
+are touched. Cyclically relabel the three vertices of any untouched
+triangle in the Hamilton path, leaving all positions fixed. Every used
+edge incident to that triangle joins old vertices. The cyclic permutation
+is an automorphism of the entire old source, because all other old SCCs
+see the triangle uniformly. It therefore preserves every used edge;
+unused old-new edges need not be preserved. The positions adjacent to
+new vertices are unchanged, so the touched set is preserved. Rotations
+of distinct untouched triangles commute and act freely. Partition paths
+by the touched set;
 each orbit has cardinality `3^(number of untouched triangles)`, divisible
 by the factor in (3). Sum the orbits. Ends of the full path and empty
 exterior gaps introduce no exception.
+
+**Correction lineage:** the first checkpoint incorrectly said untouched
+triangles must occupy consecutive positions. They may be split across
+old-path segments by a new-vertex detour whose neighbours lie in other
+SCCs. The automorphism-on-used-edges argument above is the repaired proof.
+For example TT1->C3->TT1, with triangle1->2->3->1, extends by vertex5
+beating only0; the path1,4,5,0,2,3 splits the untouched triangle.
+The theorem and quantitative bound are unchanged. The independent
+arithmetic-lane review found this error before final synthesis.
 
 This gives the lifetime bound `L(T)>=ceil(r/2)`. It is stronger than
 testing a few random extensions: every old-new and new-new orientation
@@ -111,7 +125,7 @@ for the older endpoint-one caps with H=3^j and fvs=ceil(j/2), recovered in
 are different graphs; their full extension filtration is not identified
 with (4) by matching the number3^j.
 
-## 4. General gap bounds and the remaining matching question
+## 4. General gap bounds and the completed matching law
 
 Let nu be the maximum matching size in the path on the r triangles whose
 edge i is available exactly when g_i=0. Extend nu disjoint available
@@ -132,12 +146,20 @@ For the upper divisibility bound, use min(k,nu) disjoint pair births and
 as many additional singleton births as available, then sink-pad unused
 births. Take the gcd with the original count supplied by all-sink births.
 
-The tempting conjecture that the right side of (6) is always equality is
-**OPEN here**. It agrees with (1), (4), and the complete r2 classification.
-The supplied 120 seeded two-birth probes also agree for separated chains
-of three and four triangles, but they do not prove the lower bound for
-those larger cases. A separate exact coefficient or cancellation proof is
-needed; large sample gcds cannot substitute for that proof.
+The right side of (6) is now known to be equality for every gap vector
+and every k, by the new [half-contact proof](../arithmetic/TRIANGLE_ALL_K_PROOF.md):
+
+```
+C_k(T(g))=3^max(r-k-min(k,nu),0),    L(T(g))=r-nu.        (7)
+```
+
+The proof groups coefficients by actual endpoint constraints and charges
+triangle losses to old-new contacts, available singleton assignments,
+terminal endpoints and zero-gap matchings. Independent analytic reviews
+and local-cover/budget controls passed. The former conjecture and its
+120 seeded probes were discovery evidence; they are not substituted for
+that proof. The [joint enumerator](TRIANGLE_METAGRAPH.md) now classifies
+the family by graph size, triangle count, matching size and exact lifetime.
 
 ## Controls
 

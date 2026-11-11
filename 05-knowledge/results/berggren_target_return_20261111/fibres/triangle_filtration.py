@@ -21,6 +21,15 @@ def valuation(n):
     return v
 
 def main():
+    hostile=extend(join((tt(1),C3,tt(1))),1)
+    path=(1,4,5,0,2,3)
+    orbit=[]
+    for shift in range(3):
+        rotated=tuple(1+(v-1+shift)%3 if 1<=v<=3 else v for v in path)
+        need(all(hostile[a]>>b&1 for a,b in zip(rotated,rotated[1:])),
+             'untouched split triangle rotation')
+        orbit.append(rotated)
+    need(len(set(orbit))==3,'free triangle action')
     pair=extend(join((C3,C3)),9)
     need(h(pair)==41,'one birth on two adjacent triangles')
     explicit=[]
@@ -66,6 +75,7 @@ def main():
                         'min_v3':min(c['v3'] for c in selected),
                         'first_min_witness':min(selected,key=lambda c:c['v3'])})
     out={'status':'PROVED family controls plus seeded finite two-birth probes',
+         'noncontiguous_untouched_triangle_hostile':{'rows':hostile,'orbit':orbit},
          'pair_rows':pair,'pair_H':41,'explicit_filtration_witnesses':explicit,
          'probe_summary':summary,'probe_count':len(cases),'probe_seed':20261111,
          'all_probe_counts':[c['H'] for c in cases]}
