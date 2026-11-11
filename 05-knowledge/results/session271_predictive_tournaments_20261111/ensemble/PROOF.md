@@ -146,8 +146,7 @@ state intervals or use a positive endpoint-state realization.
 ## Sources and boundary
 
 Inherited sources, accepted in their stated scope:
-`../session270_chanpak_enumeration_20261111/carrier/PROOF.md` (relative to
-this session's parent results directory) for (4) and the marked carrier;
+[Session270 carrier](../../session270_chanpak_enumeration_20261111/carrier/PROOF.md) for (4) and the marked carrier;
 Session268 `modular/PROOF.md` for response contraction and weighted orbit
 counting; its `spectrum/PROOF.md` for contextual completeness of q. Burnside
 and orbit-stabilizer are classical. This note's bounds are derivations, not

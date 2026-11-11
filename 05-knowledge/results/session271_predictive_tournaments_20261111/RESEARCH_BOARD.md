@@ -1,6 +1,6 @@
 # Session271: predict the size, classify the recursion, retain the interaction
 
-**11 November 2026. ACTIVE research packet. Chan–Pak remains OPEN.**
+**11 November 2026. Complete research packet. Chan–Pak remains OPEN.**
 
 The requested change of emphasis is deliberate: no extension or rechecking of
 exact A000568 caches, no repeat audit of inherited results, and no exhaustive
@@ -8,7 +8,7 @@ larger Chan–Pak atlas. We predict far larger scales, derive usable error bars,
 and classify recursive representations and their interactions.
 
 Starting source: main `da9983caf0836a8eaa4c9ef1b137ade1dcfc387c`.
-The final synthesis will replace this active status when the packet is complete.
+The completed results and remaining boundaries are in [SYNTHESIS.md](SYNTHESIS.md).
 
 ## Inheritance and portfolio
 

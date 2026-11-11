@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "scope": "new deliverable controls; no complete inherited audits or exact A000568 cache checks",
+  "full_prediction_regeneration": false,
+  "commands": [
+    {
+      "script": "forecast/validate.py",
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"pair_orbit_and_deficit_checks\": 159, \"defect_levels\": 6, \"numerical_controls\": [{\"n\": \"30\", \"adaptive_cutoff\": 24, \"achieved\": false}, {\"n\": \"100\", \"adaptive_cutoff\": 2, \"achieved\": true}, {\"n\": \"300\", \"adaptive_cutoff\": 2, \"achieved\": true}, {\"n\": \"1000\", \"adaptive_cutoff\": 2, \"achieved\": true}, {\"n\": \"1000000\", \"adaptive_cutoff\": 2, \"achieved\": true}, {\"n\": \"10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\", \"adaptive_cutoff\": 2, \"achieved\": true}], \"scope\": \"structural identities and precision controls; no exact sequence checking; not interval certification\"}\n",
+      "stderr": ""
+    },
+    {
+      "script": "structures/atlas.py",
+      "returncode": 0,
+      "stdout": ": \"010\"\n          },\n          {\n            \"children\": [\n              {\n                \"kind\": \"leaf\"\n              },\n              {\n                \"kind\": \"leaf\"\n              },\n              {\n                \"kind\": \"leaf\"\n              }\n            ],\n            \"kind\": \"prime\",\n            \"quotient_bits\": \"010\"\n          },\n          {\n            \"children\": [\n              {\n                \"kind\": \"leaf\"\n              },\n              {\n                \"kind\": \"leaf\"\n              },\n              {\n                \"kind\": \"leaf\"\n              }\n            ],\n            \"kind\": \"prime\",\n            \"quotient_bits\": \"010\"\n          }\n        ],\n        \"kind\": \"prime\",\n        \"quotient_bits\": \"010\"\n      },\n      \"chi\": \"z**9 - 30*z**6 - 81*z**5 - 162*z**4 - 186*z**3 - 162*z**2 - 81*z - 28\",\n      \"automorphism_order\": 81\n    },\n    \"unequal_cyclic4\": {\n      \"tree\": {\n        \"children\": [\n          {\n            \"children\": [\n              {\n                \"kind\": \"leaf\"\n              },\n              {\n                \"kind\": \"leaf\"\n              }\n            ],\n            \"kind\": \"linear\",\n            \"quotient_bits\": \"1\"\n          },\n          {\n            \"kind\": \"leaf\"\n          },\n          {\n            \"kind\": \"leaf\"\n          }\n        ],\n        \"kind\": \"prime\",\n        \"quotient_bits\": \"010\"\n      },\n      \"chi\": \"z**4 - 2*z - 1\",\n      \"automorphism_order\": 1\n    }\n  },\n  \"prime_union_bound\": {\n    \"16\": \"19/2048\",\n    \"32\": \"17/33554432\",\n    \"64\": \"131/288230376151711744\",\n    \"128\": \"517/5316911983139663491615228241121378304\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "chanpak/controls.py",
+      "returncode": 0,
+      "stdout": "{'scope': 'new support-rank sandwich; not inherited transfer re-audit', 'cores': 3, 'nonempty_support_cases': 525, 'sandwich_checks': 1575}\n",
+      "stderr": ""
+    },
+    {
+      "script": "ensemble/predict.py",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

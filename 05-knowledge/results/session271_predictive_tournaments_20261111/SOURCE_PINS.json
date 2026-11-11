@@ -1,0 +1,62 @@
+{
+  "inherited_source_commit": "da9983caf0836a8eaa4c9ef1b137ade1dcfc387c",
+  "source_treatment": "accepted in stated scope, not independently re-audited",
+  "inputs": [
+    {
+      "path": "05-knowledge/results/session268_composable_tournaments_20261111/SYNTHESIS.md",
+      "sha256": "2118fb8fc4cc85d5608102a5772991e608e358f5b4222641f27e3f1994097726",
+      "git_blob": "abb4ade9205cc71ecf9538b5b8304aefd2b859bf"
+    },
+    {
+      "path": "05-knowledge/results/session268_composable_tournaments_20261111/modular/PROOF.md",
+      "sha256": "779f1abfd505052f0e01199c0088e3815e80f38b1779fd8a825ab7a5b54868bd",
+      "git_blob": "ad450dbe6d5742e8ef7dcc2976ac7eb6fe6ef21b"
+    },
+    {
+      "path": "05-knowledge/results/session268_composable_tournaments_20261111/spectrum/PROOF.md",
+      "sha256": "022313aea690cb6dddea9249b014583ca05555f2019a42c978fe55625014b294",
+      "git_blob": "3adb184d65779ba4102c3d2ab528911330cee6c8"
+    },
+    {
+      "path": "05-knowledge/results/session270_chanpak_enumeration_20261111/SYNTHESIS.md",
+      "sha256": "ce1aa6db2df59e6b3f267e401a91706e378fe3670161228b26fc33c81407c76e",
+      "git_blob": "19dd1d2271655b0ec6489df567c237c8403a9963"
+    },
+    {
+      "path": "05-knowledge/results/session270_chanpak_enumeration_20261111/chanpak/spine.py",
+      "sha256": "2544c0ba365c6ecc9286ca81aebb73dfafe1e2e08a6c2787c24eb44f66eb4e78",
+      "git_blob": "95f7eee0c033a29612fb1eae85f37e3af7a978e4"
+    },
+    {
+      "path": "05-knowledge/results/session270_chanpak_enumeration_20261111/chanpak/PROOF.md",
+      "sha256": "53db35183cae89dc0b1171ad505ef3b636b1ffdcbea2679933f8c6465a96214b",
+      "git_blob": "6860acf2631db0d4174ed2a759d9d574fcec227a"
+    },
+    {
+      "path": "05-knowledge/results/session270_chanpak_enumeration_20261111/carrier/PROOF.md",
+      "sha256": "ecf3eb6d8533101996523fc9c42d86ff86f1136f24282735470928f238bb503f",
+      "git_blob": "b117477111f0525a9f21d03d5df7385321261e01"
+    },
+    {
+      "path": "01-canon/theorems/THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md",
+      "sha256": "845c71699708b993a6802188119c716b669f999c9891952f49e4aca4e9aca106",
+      "git_blob": "e0cab9a112bd0ab4dd304c6a8eb24fe9a2ab81e3"
+    },
+    {
+      "path": "01-canon/theorems/THM-3315-tournament-cut-switching-centered-coronal-walk-compiler.md",
+      "sha256": "ce12459a6f572b6eff4f0e95a2e6e98b341aea87013e20944843412bd1b09f11",
+      "git_blob": "57d77c1a55ab50e1e49059d9c6e029120f6d3301"
+    },
+    {
+      "path": "01-canon/theorems/THM-3369-skew-deletion-response-and-ordered-join-orientation-current.md",
+      "sha256": "6b9652542a93cc2225a576eb3a78ac8b7d6fe07362b522f1b145f09c195c7869",
+      "git_blob": "f6a1299572313a59bc7df582025b49b37ff90b2e"
+    },
+    {
+      "path": "01-canon/theorems/THM-4845-a000568-as-a-gaussian-average-gcd-covariance-cycle-index-exponential-and-the-meromorphic-normalized-series-with-poles-at-powers-of-four.md",
+      "sha256": "efd475b3b4ec7c28a7d3be6ad100e9b17984449961314b3312bd7a417a8f71b3",
+      "git_blob": "df615cc15a69c0e7b9c788453bdc96798fdfa99a"
+    }
+  ],
+  "concurrent_remote_signal": "7baeafc9a33f9d72d554da009b2bf9fa76ab1e65: switching-class version of HYP-9667 refuted; no dependence on refuted form"
+}

@@ -1,0 +1,50 @@
+{
+  "status": "DESIGN: informal implementable data contract, with a small reference implementation in atlas.py",
+  "object_universe": "nonempty finite ordinary tournaments; converse not identified",
+  "adjacency_convention": "A[i,j]=1 iff i points to j; diagonal zero",
+  "canonical_tree": {
+    "leaf": {"kind": "leaf"},
+    "linear": {
+      "kind": "linear",
+      "quotient_bits": "lexicographic pair bits in the canonical transitive order; all 1",
+      "children": "at least two strong children in source-to-sink order; no linear child"
+    },
+    "prime": {
+      "kind": "prime",
+      "quotient_bits": "lexicographic unordered-pair bits; 1 means earlier port points to later port",
+      "children": "at least three recursively canonical children; normalize quotient and children jointly under all port permutations"
+    },
+    "prime_semantics": "quotient must be indecomposable; storing a nonprime here is invalid",
+    "reference_canonicalization": "lexicographically minimize sorted-key compact JSON of quotient bits plus ordered canonical children over permitted port permutations",
+    "complexity_warning": "atlas.py uses all subsets and all quotient permutations, not a polynomial-time implementation"
+  },
+  "named_boundary": {
+    "ports": "ordered distinct vertex addresses, each a leaf path in the current materialized tree",
+    "rooted_equivalence": "isomorphism maps port j to port j",
+    "seam": "explicit list of cross-child arc reversals with two endpoint addresses each",
+    "post_edit": "recompute canonical decomposition before unmarked class counting; translate port addresses through the chosen materialization map"
+  },
+  "observer_states": {
+    "isomorphism": "whole canonical tree",
+    "symmetry": "child automorphism groups plus exact child-isotype-colored quotient stabilizer; order alone if only order is requested",
+    "hamiltonian_uniform": "integer vector q[r] of ordered nonempty r-path covers, r=1..n",
+    "hamiltonian_rooted": "q refined by ordered start/end port-or-star labels for every path; retain singleton endpoint coincidences",
+    "spectrum_uniform": "adjacency characteristic polynomial f(z); derive g=(-1)^n f(-z-1)-f(z)",
+    "spectrum_rooted": "f plus U^t(zI-A)^-1 U where columns of U are all-ones and selected port vectors",
+    "parity_full_dynamics": "invariant factors of tI-A over F2[t], not just characteristic polynomial",
+    "chirality": "recursive comparison with converse-normalized tree",
+    "inventory": "per-observer class multiplicity and reciprocal-automorphism mass, with actual symmetry sidecars if finer census requested"
+  },
+  "operation_contracts": {
+    "uniform_substitution": {"closed": ["isomorphism", "symmetry", "hamiltonian_uniform", "spectrum_uniform"], "required": "actual quotient orientation and typed child states"},
+    "rooted_seam": {"closed": ["hamiltonian_rooted", "spectrum_rooted"], "not_closed": ["hamiltonian_uniform", "spectrum_uniform", "old_module_tree"], "required": "materialized endpoint identities and valid tournament arc changes"},
+    "converse": {"preserved": ["q", "chi", "automorphism_order"], "changed": ["ordered_tree", "rooted_orientation_data"]},
+    "mod_p": {"preserved": "polynomial composition identities", "lost": "integer precision and potentially distinctions between characteristic polynomials"}
+  },
+  "classification_frontiers": {
+    "all_finite_tournaments": "complete normal form with infinite prime alphabet",
+    "finite_prime_alphabet": "complete scoped family; at most exponential number of ordinary classes",
+    "arbitrary_infinite_behavior": "not a finite catalogue; specify update rule and equivalence",
+    "chan_pak": "OPEN; constructor grammars and finite coverage are not all-target proof"
+  }
+}

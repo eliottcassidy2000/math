@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "python_syntax_files": 10,
+  "local_markdown_links": 38,
+  "gaussian_core_exponent_checks": 5,
+  "global_documentation_check": "pre-existing failure: startup180146>180000; existing startup files unchanged",
+  "scope": "packaging and new identities, not independent audit of inherited mathematics"
+}

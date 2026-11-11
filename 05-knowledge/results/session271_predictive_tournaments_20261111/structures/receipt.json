@@ -1,0 +1,148 @@
+{
+  "status": "FINITE-EXACT controls for new reference implementation, not a full census",
+  "checks": {
+    "canonical_roundtrips": 24,
+    "automorphism_orders": 24,
+    "coronal_identities": 24,
+    "substitution_polynomials": 9
+  },
+  "seam_hostile": [
+    {
+      "root": 0,
+      "polynomial": "z**3 - 1"
+    },
+    {
+      "root": 1,
+      "polynomial": "z**3"
+    }
+  ],
+  "examples": {
+    "linear3": {
+      "tree": {
+        "children": [
+          {
+            "kind": "leaf"
+          },
+          {
+            "kind": "leaf"
+          },
+          {
+            "kind": "leaf"
+          }
+        ],
+        "kind": "linear",
+        "quotient_bits": "111"
+      },
+      "chi": "z**3",
+      "automorphism_order": 1
+    },
+    "cyclic3": {
+      "tree": {
+        "children": [
+          {
+            "kind": "leaf"
+          },
+          {
+            "kind": "leaf"
+          },
+          {
+            "kind": "leaf"
+          }
+        ],
+        "kind": "prime",
+        "quotient_bits": "010"
+      },
+      "chi": "z**3 - 1",
+      "automorphism_order": 3
+    },
+    "cyclic_tower9": {
+      "tree": {
+        "children": [
+          {
+            "children": [
+              {
+                "kind": "leaf"
+              },
+              {
+                "kind": "leaf"
+              },
+              {
+                "kind": "leaf"
+              }
+            ],
+            "kind": "prime",
+            "quotient_bits": "010"
+          },
+          {
+            "children": [
+              {
+                "kind": "leaf"
+              },
+              {
+                "kind": "leaf"
+              },
+              {
+                "kind": "leaf"
+              }
+            ],
+            "kind": "prime",
+            "quotient_bits": "010"
+          },
+          {
+            "children": [
+              {
+                "kind": "leaf"
+              },
+              {
+                "kind": "leaf"
+              },
+              {
+                "kind": "leaf"
+              }
+            ],
+            "kind": "prime",
+            "quotient_bits": "010"
+          }
+        ],
+        "kind": "prime",
+        "quotient_bits": "010"
+      },
+      "chi": "z**9 - 30*z**6 - 81*z**5 - 162*z**4 - 186*z**3 - 162*z**2 - 81*z - 28",
+      "automorphism_order": 81
+    },
+    "unequal_cyclic4": {
+      "tree": {
+        "children": [
+          {
+            "children": [
+              {
+                "kind": "leaf"
+              },
+              {
+                "kind": "leaf"
+              }
+            ],
+            "kind": "linear",
+            "quotient_bits": "1"
+          },
+          {
+            "kind": "leaf"
+          },
+          {
+            "kind": "leaf"
+          }
+        ],
+        "kind": "prime",
+        "quotient_bits": "010"
+      },
+      "chi": "z**4 - 2*z - 1",
+      "automorphism_order": 1
+    }
+  },
+  "prime_union_bound": {
+    "16": "19/2048",
+    "32": "17/33554432",
+    "64": "131/288230376151711744",
+    "128": "517/5316911983139663491615228241121378304"
+  }
+}
