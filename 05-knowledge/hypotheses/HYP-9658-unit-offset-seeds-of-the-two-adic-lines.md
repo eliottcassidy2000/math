@@ -2,7 +2,11 @@
 id: HYP-9658
 title: "Unit-offset seeds of the 2-adic lines of the Hamiltonian-path spectrum: (A) every odd c has a rooted tournament with offset c0 = 1 and multiplier c 2^j - equivalently a tournament B and a vertex set O with W(O) = H(B) - 1 and U_B(O) = c 2^j - so that every line {1 + c 2^s} is eventually in the spectrum by one explicit ray; (B) the 33 odd c <= 4097 without a seed among the unit-offset roots of order <= 10 and the doubling vertices of order <= 9 (least 245) acquire one by order 12; (C) every odd number of binary weight three other than 7 and 21 is a path count; (D) the number of unit-offset roots grows geometrically with the order (2, 5, 7, 16, 31, 68, 207, 1333 class-vertex pairs for orders 2..9)."
 status: >
-  OPEN (conjectures (A)-(D)). FINITE-EXACT support: every rooted class of order <= 9 (seeds.c) and every vertex set of
+  OPEN ((A), (C), (D)); (B) PROVED by 33 explicit order-eleven roots in
+  05-knowledge/results/odd_c_seed_symmetry_20261110/README.md, with independent literal DP/DFS recounts
+  under same-agent review. Together with the inherited bank and THM-4875 (D)'s audited finite head,
+  every line with odd c <= 4097 is complete except 7 and 21. Historical FINITE-EXACT support:
+  every rooted class of order <= 9 (seeds.c) and every vertex set of
   size 2-4 over every class of order 9 (unitsets.c); the audit tested every size and found no unit set of size >= 4
   over a base of order <= 9, so the list of unit-offset roots of order <= 10 is complete. Doubling vertices were
   searched to order 8 (packet) and 9 (audit), not at order 10. 5,529 odd c have a seed, among them all 65 odd
@@ -28,6 +32,14 @@ related:
 
 # HYP-9658 - unit-offset seeds of the 2-adic lines
 
+**2026-11-10 continuation:** (B) is settled by explicit roots of order eleven,
+stronger than its order-twelve prediction. [Certificates, proof and scope](../results/odd_c_seed_symmetry_20261110/README.md).
+All 2,049 lines with odd c <= 4097 are now complete except 7 and 21, using
+the inherited independently audited finite coverage for the points below
+the rays (largest needed value 63,857). This does not settle (A), the general
+weight-three claim (C), growth (D), or Chan-Pak. The original search and its
+negative statements below retain their historical bounded universes.
+
 Notation of THM-5126: for a rooted tournament `(L, v)` with `B = L - v` and `O = N+(v)`,
 `H(L o 0^t) = c0 + M 2^t` for `t >= 1`, with `c0 = H(B) - W(O)` (`W(O)` the sum of the two-path-cover couplings
 `W_ef` over the pairs of `O`) and `M = U_B(O)` (the sum of the responses). A *seed* of the line
@@ -39,9 +51,10 @@ with `H - 1 = c 2^s0`.
 - **(A) Seeds exist.** Every odd `c >= 1` has a seed: there are a tournament `B` and a vertex set `O` with
   `W(O) = H(B) - 1` and `U_B(O) = c 2^j`. Equivalently, for every odd `c` the line `L_c` is in the spectrum from
   some point on, by one explicit ray.
-- **(B) The thirty-three.** Each of the 33 odd `c <= 4097` without a seed among the unit-offset roots of order
+- **(B) The thirty-three — PROVED, order eleven suffices.** Each of the 33 odd `c <= 4097` without a seed among the unit-offset roots of order
   `<= 10` and the doubling vertices of order `<= 9` (list in README section 2) has a seed of order at most twelve.
-  (Doubling vertices of order ten have not been searched and could already settle some of them.)
+  [The continuation](../results/odd_c_seed_symmetry_20261110/README.md) supplies all 33 at order eleven.
+  No minimum-order claim is made; the historical doubling-vertex order-ten search remains separate.
 - **(C) Weight three.** Every number `1 + 2^a + 2^b` (`a > b >= 1`) other than `7` and `21` is a Hamiltonian-path
   count. (Rows `a - b <= 7` are THM-5126 (B4). This is a consequence of Chan-Pak.)
 - **(D) Growth.** The number `u(n)` of unit-offset roots of order `n` (class-vertex pairs) satisfies
@@ -81,7 +94,8 @@ The 19,002 unit sets count pairs (base class, `O`), not class-vertex pairs, and 
 - Q4 (at least 450 of the 513 odd `c <= 1025` have a seed): **CONFIRMED**, 510.
 - G2: holds.
 
-## Next tests (not run)
+## Original next tests and their continuation
 
-- Order eleven through the cut matrix (9,733,056 bases of order ten): (B); the count of unit sets of size four.
+- A complete order-eleven cut-matrix census (9,733,056 bases of order ten) remains unrun here; (B) no longer
+  requires it because explicit order-eleven witnesses settle all 33 cases. The complete count of unit sets of size four remains separate.
 - A structural source of seeds: a grammar for the pairs and triples `O` with `W(O) = H(B) - 1`.

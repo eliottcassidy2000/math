@@ -1,0 +1,1 @@
+mode=exhaustive graphs=689664 unit_sets=41501 targets_found=32 seed=20261110 inherited_bases=1347
