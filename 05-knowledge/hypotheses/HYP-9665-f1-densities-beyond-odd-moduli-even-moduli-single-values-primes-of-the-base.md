@@ -2,7 +2,7 @@
 id: HYP-9665
 title: "F1 local densities beyond THM-5134: (A) even moduli 2^j m, j >= 2, carry the product of the flat 2-adic law and L_m (every ingredient is available; the proof is not written out); (B) question: does the multiplicity of a single odd N follow 2 kappa_sigma (8/pi^2) sigma_1(n)/n ln N on average over short ranges; (C) in every even base b > 2 the second base-b digit of N_b is equidistributed by value (b = 2 is THM-5128 (E), odd b is THM-5134 (G)); (D) question: are the first-order constants A_(m,d) computable from the phase clocks of the one-apex count"
 status: >
-  OPEN (all four parts); audited 2026-11-11 with THM-5134 / THM-5135 (PASS WITH CORRECTIONS, MISTAKE-763;
+  OPEN (all four parts); audited 2026-11-11 with THM-5134 / THM-5135 (PASS WITH CORRECTIONS, MISTAKE-765;
   independent audit by eight auditors, report
   05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/AUDIT_REPORT.md).
   (A): OPEN (not written out); every ingredient is available (audit). The sketch of the audit is not a written or

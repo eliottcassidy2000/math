@@ -5,7 +5,7 @@ status: >
   OPEN ((A), (B): questions with a stated prediction; (A) says what would settle it negatively; (B) concerns, for
   module states, only the primes p >= 5 not dividing det N. (C) is no longer open: PROVED by the audit, elementary,
   now THM-5135 (4)(b). (D): a PROVED consequence of THM-4756, recorded as a constraint and extended by the audit
-  to every module kernel); audited 2026-11-11 with THM-5134 / THM-5135 (PASS WITH CORRECTIONS, MISTAKE-763).
+  to every module kernel); audited 2026-11-11 with THM-5134 / THM-5135 (PASS WITH CORRECTIONS, MISTAKE-765).
   Report: 05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/AUDIT_REPORT.md.
   The session ran no computation for (A), (B), (D). Apart from the datum of HYP-9660 (D) quoted in (A), every
   check in this file is the audit's (receipts under scripts; the last one is the verification of the corrections,

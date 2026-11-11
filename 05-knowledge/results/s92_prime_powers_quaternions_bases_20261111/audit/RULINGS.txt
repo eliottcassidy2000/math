@@ -95,3 +95,6 @@ R10 Credits to add (majors): Session266 collatz/PROOF.md sections 2, 3, 4, 8 (si
     the note, sections 6, 7, 9, 10; Session224 birth ledger and THM-4922 (2) and A002785 for the six strong classes
     of order 5 and the 8 self-converse classes of 12 in the note, section 8 and its head table; THM-5085 (2) in
     THM-5134; THM-5128 (A), (F) and its sections where the auditors say so.
+
+NOTE AT CLOSE-OUT: the ledger number written above (MISTAKE-763) was provisional; another session filed 763 and
+764 first, and the entry of this session is MISTAKE-765. The documents were renumbered before the push.

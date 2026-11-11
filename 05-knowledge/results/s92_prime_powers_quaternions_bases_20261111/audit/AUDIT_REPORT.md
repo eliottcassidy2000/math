@@ -40,7 +40,7 @@ statement on line labels; the generating function named as a truncation); new re
 What the audit added to canon: the second base-`b` digit for odd `b` (THM-5134 (G)), the Smith-form law of a
 kernel at the primes of `det G` (THM-5135 (4)(b)), the E8 form modulo every `2^k` by lifting (THM-5135 (3)(b)),
 the ingredient and the conditional-flatness data for even moduli (HYP-9665 (A)), the constants `A_(m,d)` by
-partial sums and a census at `2^30` (THM-5134, Numerical support). Ledger: MISTAKE-763.
+partial sums and a census at `2^30` (THM-5134, Numerical support). Ledger: MISTAKE-765.
 
 ## 1. Verdicts
 

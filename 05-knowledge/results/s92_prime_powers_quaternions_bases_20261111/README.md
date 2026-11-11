@@ -417,7 +417,7 @@ and split-sedenion values 45 and 24,453,597 also occur in THM-450 (7) (cross-ref
 
 Independent audit, 2026-11-11, by eight auditors (proof-5134-AE, proof-5134-FH, proof-5135, citations,
 numerics-prereg, bridges-note, prior-art, hypotheses), each with its own code: every verdict PASS WITH
-CORRECTIONS; 111 findings (6 MAJOR, 64 MINOR, 41 NOTE), all applied; MISTAKE-763. Report:
+CORRECTIONS; 111 findings (6 MAJOR, 64 MINOR, 41 NOTE), all applied; MISTAKE-765. Report:
 `05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/AUDIT_REPORT.md`. The majors:
 
 - the base-`b` census of sheet 0 (bridges_exact.py S10) covered 27 to 36 % of the triples and was described as

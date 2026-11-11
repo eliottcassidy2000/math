@@ -24904,3 +24904,103 @@ machine's own lanes; a prediction the repository decides is recorded as in-sampl
   "Fails" needs a proof; finitely many nonzero values are "no vanishing observed". (5) Report a grep as it came
   out. (6) When a cited canon theorem has several statements, use all of them. (7) Fetch before the audit returns:
   a concurrent session can build on a checkpoint within minutes.
+
+## MISTAKE-765 (2026-11-11, opus-2026-11-11-S92; THM-5134, THM-5135, HYP-9665, HYP-9666 and `05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/README.md` at the pre-audit checkpoint ff37a34648; found by the independent audit of eight auditors, record `05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/AUDIT_REPORT.md`) -- two censuses that did not enumerate the set they named, a same-day answer to the same directive not credited, a known census given as the session's answer, a pre-registration less blind than stated, and a falsifier that the proved law itself would fail
+
+No stated theorem was found false. 8 verdicts PASS WITH CORRECTIONS; 6 MAJOR findings (5 distinct), 64 MINOR, 41 NOTE.
+
+- **MAJOR (numbers; two findings).** `bridges_exact.py` S10, headed "`N_beta <= 2^22`", built its table of states
+  for `h < 2^12` only: it enumerated 27 to 36 % of the triples, and every statistic printed belonged to that box
+  (class `-1` modulo 3 at `beta = 2`: factor `1.107`; complete census `1.290`; "remainder at most `0.16`" where it is
+  `0.167`). `every_base.py` (4) cut the table at `2^21` and skipped a smaller word when its DIAGONAL value exceeded
+  the bound, which is not a lower bound because `psi` is not monotone (`N(16, 16) = 3267 > N(16, 17) = 3201`): 3.33 %
+  of the triples were missing at `b = 2`. In both programs the row `b = 2` is F1 itself and contradicted the
+  session's own `cum_22.out` and `cum_24.out` (10,532,579 and 57,818,155 triples), printed in the same folder and
+  never compared. The proved statement (THM-5134 (G)) does not depend on these numbers.
+- **MAJOR (credit).** The note presented the signed coordinate `n = (chi_4(m) m - 1)/4` of a table label, the
+  reading of the path counts `1, 3, 5` of the 4-vertex tournaments, their converse types and "three cycles against
+  one" as its own restatement. Session266's Collatz lane (`collatz/PROOF.md`, sections 2, 3, 4, 8; committed 11:33
+  the same day, in the packet the note cites for Tao's puzzle) has the signed-edge coordinate `h = 4x + s`, the code
+  product and dynamics, the cut at 7, the denominators `2^L - 3^r = 1, -1, -1, -139` and the table of the four
+  classes. What remains this session's: `H = 1` as the arc `0 -> 0`, the label sets at orders 5 and 6, the count of
+  29 arcs with one missing label.
+- **MAJOR (credit).** "All six strong classes of order 5 are self-converse" was given as the session's answer to
+  the owner's question. It is in Session224's birth ledger and THM-4922 (3); 8 self-converse classes of 12 is
+  A002785.
+- **MAJOR (pre-registration).** PREREGISTRATION.md said that the session "has not seen class-level numbers" of the
+  window. Commit order and immutability are clean, but the S91 audit had enumerated the same window at the primes
+  3, 5, 7 and THM-5128 (C) prints the prime-level remainders at `2^26` and `2^28`: these fix 12 of the 68 registered
+  group values of P1 and the mean over the favoured classes, and predict the direction of 9 of the 12 pairs of P4.
+  The blind content was the split by valuation, the flatness inside the groups and the composite moduli. Also not
+  said: P1 has no power at 49 (the tolerance equals the predicted excess), the comparison of P3 fails at 49 (0 of
+  4, in and out of sample), and the count of P4 depends on the pair of sizes (4, 5, 6, 10 of 12 for other pairs).
+- **MAJOR (hypothesis).** HYP-9665 (A) proposed as falsifier "a remainder of the product law that does not
+  decrease from `2^24` to `2^28` at 12". Exact data already met it on sheet 0 (`0.028 -> 0.034`), and the same
+  criterion would "refute" the PROVED odd law at 9, 27, 81. The quantity that tests the statement is the flatness
+  of `N` modulo `2^j` inside each class modulo `m`, which is at the noise level (`0.0002` at `2^28`).
+- **MINOR, by kind.** *Statements:* "along any sequence of `m` whose prime factors exhaust the odd primes" (false
+  as written: `m_j = p_j^k`); "a share `d` of the classes" for `1/d`; the base-`b` series with the constant `8/pi^2`
+  when `b` has an odd prime factor; THM-5135 (1) without the class 0; (3)(b) at the prime 2 resting on an unnamed
+  citation (now PROVED by lifting from the count modulo 2); (3)(d) with a missing step; (4) asserting a non-uniform
+  law for the fusion corner (none was computed) and comparing THM-4916's one-word statistic with two independent
+  states; "bicomplex integers" counted on the maximal order `Z[i]^2`, not on the span of the units; "the line label
+  of `3N` is the Syracuse image of the line label" (true only for `N = 3 (mod 4)`); the generating function of the
+  pasted note written as a truncated rational function. *Status:* "NEW: the power saving and the sum over the
+  smaller state" (both are THM-5128's; new is the written proof at non-squarefree moduli); HYP-9665 (C) typed OPEN
+  although it is a corollary of THM-5128 (B4)(iv) for odd bases; HYP-9666 (C) typed a conjecture although it is a
+  three-line theorem; HYP-9665 (B) "would follow" from uniformity in the modulus (a second moment is needed);
+  HYP-9666 (A) with a vacuous falsifier. *Stale:* THM-5133 called PRE-AUDIT 21 minutes after its audit was
+  committed, with "probably the June doubling tower" although the audited theorem says `CD_5` is not `T_31`.
+  *Citations:* THM-4849 for a statement of collatz_five_mirrors; kind-pasteur's sign-flip equation called "the same
+  equations" as the cycle equations (one is common); owners of THM-448, THM-450, THM-480; missing credits to
+  THM-5128 (A), (F), THM-5085 (2), THM-1862, THM-4816, THM-050, Session199, paired_prime_collatz_20261003.
+  *Scripts:* a check that compared an expression with itself; two "checks" that were identities; labels of a
+  statement (G) that no longer existed.
+- **What the audit added.** The second base-`b` digit is equidistributed by value for every odd `b` (PROVED, now
+  THM-5134 (G)); the class law of a kernel at the primes of `det G` is given by its Smith form (PROVED, now
+  THM-5135 (4)); the E8 form has the law of the rank-4 seam modulo every `2^k` (PROVED by lifting); for even
+  moduli the missing ingredient (`T T^* = 2I` for characters of even order) and conditional-flatness data to
+  `2^28`; the constants `A_(m,d)` by partial sums; a census at `2^30`; the complete base-`b` counts.
+- **Found by the verification of the corrections** (in the corrected drafts, before they were pushed): an
+  off-by-one in the counts of balanced states in base 3; a sentence saying that the registration preceded "any
+  enumeration at prime-power moduli" (the in-sample censuses are in the registration commit; what it precedes is
+  the commit of the outputs of the registered window); the label THM-4922 (2) copied from a finding (the
+  statement is item (3)); "the remainder of the product law is twice the remainder at `m` plus the flatness
+  defect", false as a bound on 69 of 130 census rows (the true two-sided bound is proved in HYP-9665 (A)); and
+  the fusion corner called unimodular "on the lattice of its states" (it has determinant `-4` in the path-mass
+  coordinates). The provisional ledger number written into the drafts (763) had been taken by another session
+  before the entry was filed, as on 2026-11-10; the references were renumbered before the push.
+- **Caught by the session before the audit** (not in pushed canon): a numba typing error and an unsound loop exit
+  in the first version of odd_modulus_census.py; two check thresholds stronger than the mathematics; the
+  independent recomputation that `CD_5` is not `T_31` (run while the audit was in progress).
+
+**Root causes.** (1) A census was trusted because it passed its own checks; its total was never compared with the
+established count of the same family, and nothing asserted that the table of states covered every word that can
+occur. (2) The prior-work sweep ran from 11:20 to 11:57; a concurrent lane pushed the relevant section at 11:33
+and the audit of THM-5133 landed at 11:52; the drafts were typed from the sweep's digests, not from the files as
+they stood at drafting time (the lesson of MISTAKE-644 and MISTAKE-677 again). (3) Falsifiers and typings were
+written without testing them on the data in hand: the falsifier of HYP-9665 (A), and two statements typed OPEN
+that the session's own tools prove.
+
+**LESSONS.** (a) Every by-value census prints the count of the base family beside the known count and aborts if
+its table of states can be exceeded (guards added to every_base.py and bridges_exact.py). (b) Before the pre-audit
+checkpoint, run `git log --since` on the packets cited and re-open every theorem whose status is quoted. (c) Test
+a falsifier against the data already computed and against the proved cases before writing it. (d) A
+pre-registration states what was already visible at coarser resolution. (e) Before typing a statement OPEN, try
+the proof with the lemmas of the same session for ten minutes.
+
+**Repaired.** All 111 findings were applied under written rulings (five editors, five adversarial verifiers and a
+cross-document check; dispositions in section 0 of the audit report; the first run of the editors was cut by a
+usage limit and left three documents half-edited, the second run finished them). THM-5134: status and credits
+restated (new is the written proof at moduli that are not squarefree; the power saving and the summation are
+THM-5128's; Session206, THM-5085 (2) credited); (E) with the correct limit along the moduli and the correct
+dependence for single values; (G), the former (H), with the product over the primes not dividing `2b`, the
+definitions of the tournaments, the written proof details, the complete censuses and the second-digit law for
+odd bases; the numerical support with the blindness paragraph, the power of P1, P3 at 49 and the instability of
+P4. THM-5135: (1) with the class 0 and every modulus; (3)(b) proved by lifting; (3)(d) completed; (4) split into
+kernels, the Smith-form law and the two rank-4 forms (exact scope of THM-4916, parity structure of the fusion
+corner); (5) with the two orders of `C + C`. HYP-9665 and HYP-9666 retyped part by part ((C) of each is now a
+theorem elsewhere, for odd bases and for every kernel). The note: credits to Session266's Collatz lane,
+Session224 and THM-4922 (3), THM-5128 (F), paired_prime_collatz_20261003 and others; sections 6 to 9 retyped.
+Scripts: complete censuses with guards against a truncated table, corrected labels and messages, outputs
+regenerated; THM-5128 now points to THM-5134. The registered files were not edited.
