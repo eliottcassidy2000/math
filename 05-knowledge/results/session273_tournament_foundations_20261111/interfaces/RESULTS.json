@@ -1,0 +1,256 @@
+{
+  "status": "PASS",
+  "physical_subset_DP_cells": 8,
+  "whole_word_checks": "exact SCC signatures and products, not independent whole-graph DP",
+  "packet_censuses": [
+    {
+      "K": 1,
+      "N": 1,
+      "classes": 2,
+      "values": 2
+    },
+    {
+      "K": 1,
+      "N": 2,
+      "classes": 6,
+      "values": 3
+    },
+    {
+      "K": 1,
+      "N": 3,
+      "classes": 14,
+      "values": 4
+    },
+    {
+      "K": 1,
+      "N": 4,
+      "classes": 30,
+      "values": 6
+    },
+    {
+      "K": 1,
+      "N": 5,
+      "classes": 62,
+      "values": 8
+    },
+    {
+      "K": 1,
+      "N": 6,
+      "classes": 126,
+      "values": 11
+    },
+    {
+      "K": 1,
+      "N": 7,
+      "classes": 254,
+      "values": 14
+    },
+    {
+      "K": 1,
+      "N": 8,
+      "classes": 510,
+      "values": 18
+    },
+    {
+      "K": 1,
+      "N": 9,
+      "classes": 1022,
+      "values": 22
+    },
+    {
+      "K": 2,
+      "N": 1,
+      "classes": 2,
+      "values": 2
+    },
+    {
+      "K": 2,
+      "N": 2,
+      "classes": 8,
+      "values": 3
+    },
+    {
+      "K": 2,
+      "N": 3,
+      "classes": 20,
+      "values": 4
+    },
+    {
+      "K": 2,
+      "N": 4,
+      "classes": 44,
+      "values": 6
+    },
+    {
+      "K": 2,
+      "N": 5,
+      "classes": 92,
+      "values": 8
+    },
+    {
+      "K": 2,
+      "N": 6,
+      "classes": 188,
+      "values": 11
+    },
+    {
+      "K": 2,
+      "N": 7,
+      "classes": 380,
+      "values": 14
+    },
+    {
+      "K": 2,
+      "N": 8,
+      "classes": 764,
+      "values": 18
+    },
+    {
+      "K": 2,
+      "N": 9,
+      "classes": 1532,
+      "values": 22
+    },
+    {
+      "K": 3,
+      "N": 1,
+      "classes": 2,
+      "values": 2
+    },
+    {
+      "K": 3,
+      "N": 2,
+      "classes": 10,
+      "values": 3
+    },
+    {
+      "K": 3,
+      "N": 3,
+      "classes": 26,
+      "values": 4
+    },
+    {
+      "K": 3,
+      "N": 4,
+      "classes": 58,
+      "values": 6
+    },
+    {
+      "K": 3,
+      "N": 5,
+      "classes": 122,
+      "values": 8
+    },
+    {
+      "K": 3,
+      "N": 6,
+      "classes": 250,
+      "values": 11
+    },
+    {
+      "K": 3,
+      "N": 7,
+      "classes": 506,
+      "values": 14
+    },
+    {
+      "K": 3,
+      "N": 8,
+      "classes": 1018,
+      "values": 18
+    },
+    {
+      "K": 3,
+      "N": 9,
+      "classes": 2042,
+      "values": 22
+    },
+    {
+      "K": 4,
+      "N": 1,
+      "classes": 2,
+      "values": 2
+    },
+    {
+      "K": 4,
+      "N": 2,
+      "classes": 12,
+      "values": 3
+    },
+    {
+      "K": 4,
+      "N": 3,
+      "classes": 32,
+      "values": 4
+    },
+    {
+      "K": 4,
+      "N": 4,
+      "classes": 72,
+      "values": 6
+    },
+    {
+      "K": 4,
+      "N": 5,
+      "classes": 152,
+      "values": 8
+    },
+    {
+      "K": 4,
+      "N": 6,
+      "classes": 312,
+      "values": 11
+    },
+    {
+      "K": 4,
+      "N": 7,
+      "classes": 632,
+      "values": 14
+    },
+    {
+      "K": 4,
+      "N": 8,
+      "classes": 1272,
+      "values": 18
+    },
+    {
+      "K": 4,
+      "N": 9,
+      "classes": 2552,
+      "values": 22
+    }
+  ],
+  "boundary_formula": "PASS",
+  "scope": "K1..4,N1..9 controls; theorems all K>=1,N>=1; no Chan-Pak coverage claim",
+  "physical_endpoint_seam_controls": [
+    {
+      "prefix_order": 1,
+      "prefix_H": 1,
+      "triangle_output": 5,
+      "transitive_output": 1
+    },
+    {
+      "prefix_order": 3,
+      "prefix_H": 3,
+      "triangle_output": 15,
+      "transitive_output": 3
+    },
+    {
+      "prefix_order": 10,
+      "prefix_H": 179,
+      "triangle_output": 895,
+      "transitive_output": 179
+    }
+  ],
+  "26_vertex_packet_seam_outputs": {
+    "before": [
+      131565,
+      131565
+    ],
+    "after": [
+      219275,
+      131565
+    ],
+    "method": "proved SCC product and independently tested local seam, not 26-vertex subset DP"
+  }
+}

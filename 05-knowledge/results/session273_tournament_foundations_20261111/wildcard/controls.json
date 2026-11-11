@@ -1,0 +1,306 @@
+{
+  "status": "PASS",
+  "scalar_hostile": [
+    {
+      "cell": [
+        "1/14",
+        "1/12"
+      ],
+      "H": 5,
+      "next_H": 1
+    },
+    {
+      "cell": [
+        "1/12",
+        "1/8"
+      ],
+      "H": 5,
+      "next_H": 5
+    }
+  ],
+  "triple_gap_pairs": 900,
+  "minimum_cycle_probability": "1/6",
+  "maximum_cycle_probability": "1/2",
+  "minimum_equality_pairs": 30,
+  "maximum_equality_pairs": 30,
+  "language_controls": [
+    {
+      "speeds": [
+        0,
+        1,
+        2
+      ],
+      "K": 1,
+      "cells": 4,
+      "words": 4,
+      "base_cells": 2
+    },
+    {
+      "speeds": [
+        0,
+        1,
+        2
+      ],
+      "K": 2,
+      "cells": 8,
+      "words": 8,
+      "base_cells": 2
+    },
+    {
+      "speeds": [
+        0,
+        1,
+        2
+      ],
+      "K": 3,
+      "cells": 16,
+      "words": 16,
+      "base_cells": 2
+    },
+    {
+      "speeds": [
+        0,
+        1,
+        2
+      ],
+      "K": 4,
+      "cells": 32,
+      "words": 32,
+      "base_cells": 2
+    },
+    {
+      "speeds": [
+        0,
+        1,
+        2
+      ],
+      "K": 5,
+      "cells": 64,
+      "words": 64,
+      "base_cells": 2
+    },
+    {
+      "speeds": [
+        0,
+        1,
+        2
+      ],
+      "K": 6,
+      "cells": 128,
+      "words": 128,
+      "base_cells": 2
+    },
+    {
+      "speeds": [
+        0,
+        1,
+        3,
+        7
+      ],
+      "K": 1,
+      "cells": 28,
+      "words": 28,
+      "base_cells": 14
+    },
+    {
+      "speeds": [
+        0,
+        1,
+        3,
+        7
+      ],
+      "K": 2,
+      "cells": 56,
+      "words": 56,
+      "base_cells": 14
+    },
+    {
+      "speeds": [
+        0,
+        1,
+        3,
+        7
+      ],
+      "K": 3,
+      "cells": 112,
+      "words": 112,
+      "base_cells": 14
+    },
+    {
+      "speeds": [
+        0,
+        1,
+        3,
+        7
+      ],
+      "K": 4,
+      "cells": 224,
+      "words": 224,
+      "base_cells": 14
+    },
+    {
+      "speeds": [
+        0,
+        1,
+        3,
+        7
+      ],
+      "K": 5,
+      "cells": 448,
+      "words": 448,
+      "base_cells": 14
+    },
+    {
+      "speeds": [
+        0,
+        1,
+        3,
+        7
+      ],
+      "K": 6,
+      "cells": 896,
+      "words": 896,
+      "base_cells": 14
+    },
+    {
+      "speeds": [
+        0,
+        2,
+        5,
+        11
+      ],
+      "K": 1,
+      "cells": 52,
+      "words": 44,
+      "base_cells": 26
+    },
+    {
+      "speeds": [
+        0,
+        2,
+        5,
+        11
+      ],
+      "K": 2,
+      "cells": 104,
+      "words": 104,
+      "base_cells": 26
+    },
+    {
+      "speeds": [
+        0,
+        2,
+        5,
+        11
+      ],
+      "K": 3,
+      "cells": 208,
+      "words": 208,
+      "base_cells": 26
+    },
+    {
+      "speeds": [
+        0,
+        2,
+        5,
+        11
+      ],
+      "K": 4,
+      "cells": 416,
+      "words": 416,
+      "base_cells": 26
+    },
+    {
+      "speeds": [
+        0,
+        2,
+        5,
+        11
+      ],
+      "K": 5,
+      "cells": 832,
+      "words": 832,
+      "base_cells": 26
+    },
+    {
+      "speeds": [
+        0,
+        2,
+        5,
+        11
+      ],
+      "K": 6,
+      "cells": 1664,
+      "words": 1664,
+      "base_cells": 26
+    },
+    {
+      "speeds": [
+        0,
+        6,
+        10
+      ],
+      "K": 1,
+      "cells": 32,
+      "words": 8,
+      "base_cells": 16
+    },
+    {
+      "speeds": [
+        0,
+        6,
+        10
+      ],
+      "K": 2,
+      "cells": 64,
+      "words": 32,
+      "base_cells": 16
+    },
+    {
+      "speeds": [
+        0,
+        6,
+        10
+      ],
+      "K": 3,
+      "cells": 128,
+      "words": 64,
+      "base_cells": 16
+    },
+    {
+      "speeds": [
+        0,
+        6,
+        10
+      ],
+      "K": 4,
+      "cells": 256,
+      "words": 128,
+      "base_cells": 16
+    },
+    {
+      "speeds": [
+        0,
+        6,
+        10
+      ],
+      "K": 5,
+      "cells": 512,
+      "words": 256,
+      "base_cells": 16
+    },
+    {
+      "speeds": [
+        0,
+        6,
+        10
+      ],
+      "K": 6,
+      "cells": 1024,
+      "words": 512,
+      "base_cells": 16
+    }
+  ],
+  "margin_controls": 2400,
+  "scope": "Exact finite controls; all-order proofs in PROOF.md. No LRC or Chan-Pak closure."
+}
