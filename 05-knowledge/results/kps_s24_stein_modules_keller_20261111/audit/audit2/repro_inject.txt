@@ -1,0 +1,20 @@
+E. standard pair, centre (954388143, 1898087135): monomials of degree <= 5 with zero class: 0 of 21 
+E. standard pair, centre (2079996152, 575254238): monomials of degree <= 5 with zero class: 0 of 21 
+E. standard pair, centre (741752226, 336184021): monomials of degree <= 5 with zero class: 0 of 21 
+E. standard pair, centre (2, 3): monomials of degree <= 5 with zero class: 0 of 21 
+E. standard pair, centre (0, 0): monomials of degree <= 5 with zero class: 18 of 21 ['x^0 y^1', 'x^0 y^2', 'x^0 y^3', 'x^0 y^4', 'x^0 y^5', 'x^1 y^0', 'x^1 y^2', 'x^1 y^3', 'x^1 y^4', 'x^2 y^0', 'x^2 y^1', 'x^2 y^3', 'x^3 y^0', 'x^3 y^1', 'x^3 y^2', 'x^4 y^0', 'x^4 y^1', 'x^5 y^0']
+D. toy, centre (984136090, 674138760): monomials x^k y^l (|k| <= 4, l <= 3) with zero class: 0 of 36 
+D. toy, centre (1720540579, 1398105206): monomials x^k y^l (|k| <= 4, l <= 3) with zero class: 0 of 36 
+D. toy, centre (1892679200, 1251438695): monomials x^k y^l (|k| <= 4, l <= 3) with zero class: 0 of 36 
+D. toy, centre (2, 3): monomials x^k y^l (|k| <= 4, l <= 3) with zero class: 0 of 36 
+D. toy, centre (0, 3): monomials x^k y^l (|k| <= 4, l <= 3) with zero class: 36 of 36 (all)
+A. slice: (u - d_v)(v - d_u) h = (v - d_u)(u - d_v) h on 7 test elements: 0 failures
+B. slice: d_u w != 0, d_v w != 0 (a locally nilpotent derivation of a domain kills the units)
+   d_u^m x, m = 1..4: N N N N;   d_v^m x: N N N N   (N = nonzero polynomial)
+   d_u^m y, m = 1..4: N N N N;   d_v^m y: N N N N   (N = nonzero polynomial)
+   d_u^m w, m = 1..4: N N N N;   d_v^m w: N N N N   (N = nonzero polynomial)
+C. slice, centre (237376590, 389854818): monomials of weight <= 4 with zero class: 0 of 31 ; first dual derivatives of x, y, w with zero class: 0 of 6 
+C. slice, centre (1617710563, 158544847): monomials of weight <= 4 with zero class: 0 of 31 ; first dual derivatives of x, y, w with zero class: 0 of 6 
+C. slice, centre (92039415, 1018599090): monomials of weight <= 4 with zero class: 0 of 31 ; first dual derivatives of x, y, w with zero class: 0 of 6 
+C. slice, centre (2, 3): monomials of weight <= 4 with zero class: 0 of 31 ; first dual derivatives of x, y, w with zero class: 0 of 6 
+C. slice, centre (0, 0): monomials of weight <= 4 with zero class: 0 of 31 ; first dual derivatives of x, y, w with zero class: 1 of 6 ['d_u x']

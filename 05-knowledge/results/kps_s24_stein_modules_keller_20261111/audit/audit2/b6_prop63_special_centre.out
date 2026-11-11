@@ -1,0 +1,32 @@
+A. proof formulas (k >= 1: two; charge 0: two; k <= -1: two), differences: [0, 0, 0, 0, 0, 0]
+B. g_n = (d/dt - 1)(t q^n) = -q^(n+1) + (n+2) q^n - n q^(n-1), |n| <= 6: 0 symbolic failures (identity, lam_res, lam_G for n >= 0); lam_G(g_n), n < 0, numerically (30 digits): 0 nonzero
+   lam_G(1) = 1, lam_res(1) = 0, lam_res(1/q) = E, lam_G(1/q) = 0.596347362323194 (= e E_1(1))
+   window |n| <= 40: 81 generators, rank 81, columns 83 (q^-41 .. q^41); rank with 1 and 1/q added: 83  => codimension 2, complement <1, w>, and 1 not in M_z
+C. centre (0, 0), generators of weight <= 28 (919 pivots): c(N) = 2:2 4:2 8:2 12:2 16:2 20:2
+C. centre (0, 0), generators of weight <= 36 (1471 pivots): c(N) = 2:2 4:2 8:2 12:2 16:2 20:2
+   class of 1: N, of w: N, of w^2: N, of x: 0, of x y: N
+   h = w            d_u^m: 0 0 0 0 0 0 0;  d_v^m: 0 0 0 0 0 0 0
+   h = w^2          d_u^m: 0 0 0 0 0 0 0;  d_v^m: 0 0 0 0 0 0 0
+   h = x w          d_u^m: N 0 0 0 0 0 0;  d_v^m: 0 0 0 0 0 0 0
+   h = y w          d_u^m: 0 0 0 0 0 0 0;  d_v^m: N 0 0 0 0 0 0
+   h = x^2 w        d_u^m: 0 N 0 0 0 0 0;  d_v^m: 0 0 0 0 0 0 0
+   h = y^3 w^2      d_u^m: 0 0 0 0 0 0 0;  d_v^m: 0 0 N 0 0 0 0
+   h = x w + y^2 w  d_u^m: N 0 0 0 0 0 0;  d_v^m: 0 N 0 0 0 0 0
+   (d_u d_v)^m w, m = 1..4: N N N N
+   cone, h = w      [h U^k V^(m+k)][h U^(m+k) V^k], k = 0..3:  m=0: NN NN NN NN | m=1: 00 00 00 00 | m=2: 00 00 00 00 | m=3: 00 00 00 00 | m=4: 00 00 00 00
+   cone, h = x w    [h U^k V^(m+k)][h U^(m+k) V^k], k = 0..3:  m=0: 00 00 00 00 | m=1: N0 N0 N0 N0 | m=2: 00 00 00 00 | m=3: 00 00 00 00 | m=4: 00 00 00 00
+   cone, h = y^2 w  [h U^k V^(m+k)][h U^(m+k) V^k], k = 0..3:  m=0: 00 00 00 00 | m=1: 00 00 00 00 | m=2: 0N 0N 0N 0N | m=3: 00 00 00 00 | m=4: 00 00 00 00
+C. centre (2, 3), generators of weight <= 28 (920 pivots): c(N) = 2:2 4:3 8:3 12:3 16:3 20:3
+C. centre (2, 3), generators of weight <= 36 (1472 pivots): c(N) = 2:2 4:3 8:3 12:3 16:3 20:3
+   class of 1: N, of w: N, of w^2: N, of x: N, of x y: N
+   h = w            d_u^m: N N N N N N N;  d_v^m: N N N N N N N
+   h = w^2          d_u^m: N N N N N N N;  d_v^m: N N N N N N N
+   h = x w          d_u^m: N N N N N N N;  d_v^m: N N N N N N N
+   h = y w          d_u^m: N N N N N N N;  d_v^m: N N N N N N N
+   h = x^2 w        d_u^m: N N N N N N N;  d_v^m: N N N N N N N
+   h = y^3 w^2      d_u^m: N N N N N N N;  d_v^m: N N N N N N N
+   h = x w + y^2 w  d_u^m: N N N N N N N;  d_v^m: N N N N N N N
+   (d_u d_v)^m w, m = 1..4: N N N N
+   cone, h = w      [h U^k V^(m+k)][h U^(m+k) V^k], k = 0..3:  m=0: NN NN NN NN | m=1: NN NN NN NN | m=2: NN NN NN NN | m=3: NN NN NN NN | m=4: NN NN NN NN
+   cone, h = x w    [h U^k V^(m+k)][h U^(m+k) V^k], k = 0..3:  m=0: NN NN NN NN | m=1: NN NN NN NN | m=2: NN NN NN NN | m=3: NN NN NN NN | m=4: NN NN NN NN
+   cone, h = y^2 w  [h U^k V^(m+k)][h U^(m+k) V^k], k = 0..3:  m=0: NN NN NN NN | m=1: NN NN NN NN | m=2: NN NN NN NN | m=3: NN NN NN NN | m=4: NN NN NN NN

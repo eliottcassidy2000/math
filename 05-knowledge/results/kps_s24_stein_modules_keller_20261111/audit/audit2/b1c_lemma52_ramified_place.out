@@ -1,0 +1,4 @@
+place with e = 2, f = 2, c = 1/s on zeta^2 = u eta^2 + 1 over (u, eta^2):
+   238 inequalities tested: 0 violations, 202 equalities, 0 undecided at this precision; half-integer valuations occur: True
+   formulas of the proof (d_v = tau D~_2, d_u = -tau D~_1 - s tau D~_2 with the term (j/e)(c'/c)): 0 mismatches of 238
+   cancellation example: w(zeta^2 - u eta^2) = 0 although w(zeta^2) = w(u eta^2) = -2 (the valuation is not monomial here)

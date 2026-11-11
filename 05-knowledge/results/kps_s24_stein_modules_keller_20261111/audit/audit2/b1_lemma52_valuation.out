@@ -1,0 +1,4 @@
+(i)  double cover (x^2, y/x), w(x) = -1/2, w(y) = -3/2: 230 inequalities tested, 0 violations; equality in 110 (d_u), 104 (d_v) cases
+(i') double cover (U, eta^2), w(U) = -1, w(eta) = -1/2 (pi^2 = tau/s): 230 inequalities tested, 0 violations
+     proof formula d_v = tau D~_2 on eta = 1/pi with c = 1/s: difference = 0
+(ii) automorphism (x + y^2, y + (x + y^2)^3): w = -deg in (u, v); 80 inequalities tested, 0 violations

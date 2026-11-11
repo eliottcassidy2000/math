@@ -1,0 +1,16 @@
+(1) double cover: closed form of lambda_+- against the residue, |k| <= 4, l <= 3: 0 mismatches of 72
+    lambda_+- kill the generators (d/dx - W_x) m, (d/dy - W_y) m, |k| <= 6, l <= 5, symbolic (alpha, b): 0 failures of 312
+    lambda_+(x^k y^l), |k| <= 8, l <= 6: identically zero for 0 monomials; leading term (largest power of b) = b^l alpha^(k+l)/2 in all 119 cases, pairwise distinct: True
+    => lambda_+ is injective on C[x, 1/x, y] (triangular in the order (l, k)); so (lambda_+(h), lambda_-(h)) is never identically zero for h != 0.
+    h = y          lambda_+ = (2*alpha**2*b + 1)/(4*alpha) ;  lambda_- = -(2*alpha**2*b + 1)/(4*alpha)
+    h = x y - 1    lambda_+ = alpha**2*b/2 ;  lambda_- = alpha**2*b/2
+    h = x^2 - y^2  lambda_+ = -(alpha**2*b**2 - alpha**2 + 2*b)/2 ;  lambda_- = -(alpha**2*b**2 - alpha**2 + 2*b)/2
+    h = x^-2 - 1/a lambda_+ = 0 ;  lambda_- = 0
+    zero loci (a != 0): [y]_z = 0 iff 2ab + 1 = 0;  [xy - 1]_z = 0 iff ab = 0, i.e. b = 0;  [x^2 - y^2]_z = 0 iff a - a b^2 - 2b = 0.
+    engine (generators of weight <= 22): y in M at (1, -1/2): True, at (1, 1): False;  xy - 1 in M at (3, 0): True, at (3, 1): False;  x^2 - y^2 in M at (4, 1/2) [4 - 1 - 1 = 2 != 0]: False, at (4, 2): False
+    engine: x^2 - y^2 in M at (4/3, 1/2) (on the curve a - a b^2 - 2b = 0): True
+(2) standard pair: h = (e^(d_x d_y) h)(E_a, E_b) 1 for 25 random polynomials: 0 failures  (so [h]_z = (e^(d_x d_y) h)(a, b) [1]_z)
+(3) open immersion C^* x C: L(h) = (e^(d_x d_y) h)(a, b) kills T_u m, T_v m for |k| <= 5, l <= 4: 0 failures of 110;  L(1/x) = 1/a, L(y/x^2) = (a*b - 2)/a**3
+    at a = 0: (d/dy - x)(x^k y^j) = j x^k y^(j-1) - x^(k+1) y^j for all k in Z gives x^k = 0 and then everything = 0 modulo M_z: S_z = 0 exactly on the line a = 0.
+(4) double cover: h = x^-2 - 1/a: lambda_+ = 0, lambda_- = 0  => [h]_z = 0 at EVERY centre with a != 0, although h != 0 and d_u h != 0.
+    So 'if d_u^m h != 0 for all m then [d_u^m h]_z != 0 for all m' (Corollary 5.6) needs h defined over k_0 (m = 0 fails for this h).

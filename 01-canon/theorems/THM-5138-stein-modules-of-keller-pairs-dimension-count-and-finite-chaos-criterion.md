@@ -1,10 +1,13 @@
 ---
 id: THM-5138
-title: "Stein modules of Keller pairs. For a Keller pair (f, g) on C^2 with dual fields d_u, d_v, a centre z = (a, b), U = f - a, V = g - b: the Stein kernel M_z = Im(d_u - V) + Im(d_v - U) is the image of d - d(UV) ^ on 1-forms, and the Stein space S_z = C[x,y]/M_z is the fibre at z of C[x,y] as a module over the polynomial ring C[E_a, E_b], E_a = f - d_v, E_b = g - d_u. (A) Identities: [U^i V^j] = i! [i = j] [1]; [h V^m] = [d_u^m h]; [d_u^m d_v^n h] = [h H_(n,m)(U, V)]; for an automorphism S_z is one-dimensional and GMC(2) says that M_z is a Mathieu-Zhao subspace. (B) Dimension count: dim S_z = b_1 of the generic fibre of (f - a)(g - b) = c + sum_i delta_i (deg_u S_i + deg_v S_i) = c + ((deg f + deg g)/gcd) sum_i delta_i rho_i >= 2d - 1 over the components S_i of the non-properness curve; it is 1 iff the pair is an automorphism. (C) Finite chaos at one centre (all classes [d_u^m d_v^n h] vanish for m + n large) holds iff S_z = 0 or the map is an isomorphism; for a Keller pair, iff it is an automorphism. (D) The module is torsion-free: a nonzero polynomial with coefficients in k_0 does not lie in M_z when a, b are algebraically independent over k_0 (injectivity of the Stein transform). (E) Detection: at such a centre a Keller pair is an automorphism iff some iterates d_u^r x and d_u^s y lie in M_z, iff SN, iff CV, iff M_z is Mathieu-Zhao; hence JC(2) holds iff the Stein kernel of every Keller pair is a Mathieu-Zhao subspace (the Image Conjecture of Zhao for the potentials fg), and GMC(2) is the pair (x, y). (F) At every centre: isomorphism => K-GMC => CV => SN => first hits. (G) Exact examples on two non-proper planar etale maps: Stein spaces of dimension 2 (double cover on C^* x C) and 11 (slice of the C^3 Keller map of THM-1300), linear potentials 2, 4, 6; finite chaos fails, and SN fails at every centre in general position."
+title: "Stein modules of Keller pairs. For a Keller pair (f, g) on C^2 with dual fields d_u, d_v, a centre z = (a, b), U = f - a, V = g - b: the Stein kernel M_z = Im(d_u - V) + Im(d_v - U) is the image of d - d(UV) ^ on 1-forms, and the Stein space S_z = C[x,y]/M_z is the fibre at z of C[x,y] as a module over the polynomial ring C[E_a, E_b], E_a = f - d_v, E_b = g - d_u. (A) Identities: [U^i V^j] = i! [i = j] [1]; [h V^m] = [d_u^m h]; [d_u^m d_v^n h] = [h H_(n,m)(U, V)]; for an automorphism S_z is one-dimensional and GMC(2) says that M_z is a Mathieu-Zhao subspace. (B) Dimension count: dim S_z = b_1 of the generic fibre of (f - a)(g - b) = c + sum_i delta_i (deg_u S_i + deg_v S_i) = c + ((deg f + deg g)/gcd) sum_i delta_i rho_i >= 2d - 1 over the components S_i of the non-properness curve; it is 1 iff the pair is an automorphism. (C) Finite chaos at one centre (all classes [d_u^m d_v^n h] vanish for m + n large) holds iff S_z = 0 or the map is an isomorphism; for a Keller pair, iff it is an automorphism. (D) The module is torsion-free: a nonzero polynomial with coefficients in k_0 does not lie in M_z when a, b are algebraically independent over k_0 (injectivity of the Stein transform). (E) Detection: at such a centre a Keller pair is an automorphism iff some iterates d_u^r x and d_u^s y lie in M_z, iff SN, iff CV, iff M_z is Mathieu-Zhao; hence JC(2) holds iff the Stein kernel of every Keller pair is a Mathieu-Zhao subspace (the instance q = fg of the statement of the Image Conjecture of Zhao, which is false in general), and GMC(2) is the pair (x, y). (F) At every centre: isomorphism => K-GMC => CV => SN => first hits. (G) Exact examples on three non-proper planar etale maps: Stein spaces of dimension 2 (double cover on C^* x C), 11 (slice of the C^3 Keller map of THM-1300; linear potentials 2, 4, 6) and 3 (inclusion of C^2 minus a hyperbola); finite chaos fails wherever S_z != 0, SN fails at every centre in general position, and at special centres of the third map SN and CV hold without an isomorphism."
 status: >
   First audit (audit/AUDIT.md in the source packet): PASS WITH CORRECTIONS, every number reproduced by an
-  independent engine; corrections applied (MISTAKE-764). Parts (D), (E), item (A4) and the special-centre example
-  were written after the first audit: SECOND AUDIT PENDING at this commit, these parts are unaudited.
+  independent engine. Parts (D), (E), item (A4), the present form of (C) and the special-centre example were written
+  after it; second audit (audit/AUDIT-2.md, of the commit c440c4a4b7): PASS WITH CORRECTIONS, no mathematical error
+  found in them (the valuation lemma tested on exact series on five maps; no torsion found by brute force on five
+  maps), one major correction (the Image Conjecture was already refuted in canon, THM-2801), sixteen minor, five
+  strengthenings. All corrections of both audits are applied (MISTAKE-764).
   (A) PROVED (elementary). The dual fields, their Weyl-algebra module and the untwisted statements are KNOWN
   (THM-4620, THM-4626; Bavula). The automorphism case is a transport of THM-2022 (GMC(2), PROVED in canon). GMC as
   a statement about images of first-order operators is Zhao's; "S_z is finite dimensional" is Zhao 2010,
@@ -17,7 +20,9 @@ status: >
   author's. For Keller pairs "S_z != 0" comes from (B) (CITED) at an arbitrary centre and from (D) at a centre in
   general position.
   (D) PROVED (a valuation at infinity of the target plane; elementary). The reduction of membership at a centre in
-  general position to a rational certificate is Session269's.
+  general position to a rational certificate is Session269's; the reduction of one-direction detection to
+  torsion-freeness was sketched by the first audit, which left torsion-freeness unproved in general. With the CITED
+  holonomicity of the twisted module the exceptional set of each h is a proper algebraic subset (second audit).
   (E) PROVED from (D), (F), THM-2022 and the classical criterion THM-4620 (5) (a Keller pair with a locally nilpotent
   dual field is an automorphism: KNOWN). It does not use (B). CONCURRENT: Session269
   (05-knowledge/results/session269_centres_ports_switches_20261111/jacobian/proof.md, pushed 2026-11-11
@@ -25,17 +30,23 @@ status: >
   hits in both pure directions on an open set of centres give mixed finite chaos at very general centres, and
   derived the collapse of the ladder conditionally on (B) and (C); first-pusher credit for moving-centre detection
   in two directions and for the collapse is theirs. What is added here: one direction, two test polynomials, no
-  use of (B), and the surface case. K-GMC is the instance q = (f - a)(g - b) of the Image Conjecture of Zhao
-  (J. Algebra 324 (2010), Conjecture 1.3); the nearest published equivalence is van den Essen-Wright-Zhao 2011,
-  Theorem 4.3; in the repo the vacuum-Mathieu programme HYP-8350. One literature sweep (first audit) did not find
-  the product potential, the count, or these equivalences; no priority is claimed.
+  use of (B), and the surface case; testing at one centre algebraically independent over the coefficients is the
+  formulation of Theorem 2a of Session269. K-GMC is the instance q = (f - a)(g - b) of the statement of the Image
+  Conjecture of Zhao (J. Algebra 324 (2010), Conjecture 1.3); that conjecture is REFUTED in general in
+  characteristic zero (THM-2801: SIC(n) false for n >= 2), so the instance inherits no support from it. The nearest
+  published equivalence is van den Essen-Wright-Zhao 2011, Theorem 4.3; in the repo the vacuum-Mathieu programme
+  HYP-8350. Two literature sweeps (the audits) did not find the product potential, the count, torsion-freeness of
+  this module, or these equivalences; no priority is claimed (torsion-freeness may be folklore).
   (F) PROVED.
   (G) FINITE-EXACT (exact linear algebra modulo the prime 2147483629; dimensions stable in the truncation and
   reproduced by the audit with other primes and filtrations; a nonzero normal form certifies non-membership
   relative to the truncation only). PROVED by hand: the two-dimensional space and the failure of K-GMC and SN on
-  C^* x C for centres with a != 0, and S_z = 0 at a = 0. PROVED from (C), (D): on the slice finite chaos fails
-  where S_z != 0, and SN, CV, K-GMC fail at every centre algebraically independent over Q. NOT proved: failure of
-  SN, CV, K-GMC at the rational centre (2, 3) of the slice (no vanishing observed).
+  C^* x C for centres with a != 0, and S_z = 0 at a = 0; for the inclusion of C^2 minus {1 + xy = 0}: dimension 2,
+  class of 1 nonzero, SN and CV at the centre (0, 0), one-sided SN on the lines ab = 0 (second audit). PROVED from
+  (C), (D): on the slice finite chaos fails where S_z != 0, and SN, CV, K-GMC fail at every centre algebraically
+  independent over Q (all classes of the iterates of x, y, w nonzero: second audit). NOT proved: failure of SN, CV,
+  K-GMC at the rational centre (2, 3) of the slice (no vanishing observed); K-GMC at the special centre (0, 0) of
+  the inclusion (not decided).
   Pre-registered predictions S2-S6 (commits d701fad1cd, 90e0a6855d): all CONFIRMED.
   JC(2) remains OPEN. Nothing here excludes a Keller pair; (E) is a reformulation, and at centres in general
   position the Gaussian conditions are equivalent to the classical criterion. Detection at a prescribed centre is
@@ -99,7 +110,7 @@ automorphism.
    module over `C[E_a, E_b]`.
 3. If `X`, `F` and `h != 0` are defined over a subfield `k_0` of `C` and `a, b` are algebraically independent over
    `k_0`, then `h` is not in `M_(a,b)`. For every `h != 0` the set of centres with `[h]_z = 0` lies in a countable
-   union of proper algebraic subsets.
+   union of proper algebraic subsets (in a proper algebraic subset, by the CITED holonomicity of the module).
 
 ## (E) Detection
 
@@ -107,11 +118,13 @@ For a Keller pair with coefficients in `k_0` and a centre `z` with coordinates a
 `k_0`, the following are equivalent: (1) automorphism; (2) `M_z` is a Mathieu-Zhao subspace; (3) CV at `z`;
 (4) `d_u^m x` and `d_u^m y` lie in `M_z` for `m` large; (5) some `d_u^r x` and some `d_u^s y`, `r, s >= 1`, lie in
 `M_z`; (6) `d_u` is locally nilpotent. The same with `d_v`, and with "at `z`" replaced by "at every centre of a set
-not contained in a countable union of proper algebraic subsets".
+not contained in a countable union of proper algebraic subsets". At such a centre a polynomial `h` over `k_0` has
+some iterate `d_u^r h` in `M_z` iff `h` lies in `k_0[f, g]` (THM-4620 (1)): item (5) says that `x` and `y` are
+polynomials in `f` and `g`.
 
-For an etale map of a connected smooth affine surface defined over `k_0` and such a centre: `d_u^m h` lies in
-`M_z` for `m` large iff `d_u^m h = 0` for `m` large; SN in both directions, or K-GMC, holds at `z` iff `F` is an
-isomorphism onto `C^2`.
+For an etale map of a connected smooth affine surface defined over `k_0`, such a centre and `h` defined over `k_0`:
+`d_u^m h` lies in `M_z` iff `d_u^m h = 0`; SN in both directions, or K-GMC, holds at `z` iff `F` is an isomorphism
+onto `C^2`.
 
 Hence the following are equivalent: JC(2); for every Keller pair `(f, g)`,
 `Im(d/dx - (fg)_x) + Im(d/dy - (fg)_y)` is a Mathieu-Zhao subspace of `C[x, y]`; CV, or SN, or SN in the direction
@@ -135,6 +148,12 @@ Isomorphism => (K-GMC) `M_z` is a Mathieu-Zhao subspace => (CV) for every `h`,
   `27 v^2 - 18 uv + 16 + u^3 v - u^2 = 0` of bidegree (3, 2) with two sheets missing. `dim S_z = 11` at the centres
   (2, 3), (5, -7), (1, 1), (-3, 4), (7, 2), (-1, -2) and 9 at (0, 0) (centre on an excluded line); for the linear
   potentials `u`, `v`, `u + v`: 2, 4, 6. At (2, 3) the normal forms of `w V^m`, `w U^m` (`m <= 5`; audit `m <= 9`,
-  `m <= 12`), `x V^m`, `x U^m` (`m <= 4`) and of all computed Hermite classes of `w` and `x` are nonzero. The dual
-  fields do not kill the unit `w`, so they are not locally nilpotent, and by (E) SN fails in both directions at
-  every centre algebraically independent over `Q`.
+  `m <= 12`), `x V^m`, `x U^m` (`m <= 4`) and of all computed Hermite classes of `w` and `x` are nonzero. With
+  `r = xw` the slice map is the restriction of the finite cubic map `(r, u) -> (u, 2r^3 - u r^2 + 2r)` to the
+  complement of its critical curve `w = 1 - ru + 3r^2 = 0`; the dual fields raise the order of pole along that curve
+  by exactly 2, so no iterate of `x`, `y`, `w` vanishes, and by (E) all their classes are nonzero at every centre
+  algebraically independent over `Q`: SN fails there in both directions.
+- Inclusion of `C^2 \ {1 + xy = 0}` in `C^2`, centre (0, 0): the Stein kernel is graded by the charge
+  `deg x - deg y`, contains every element of nonzero charge and has codimension 2 in charge 0; `[1] != 0`; SN and CV
+  hold, finite chaos fails, the map is not an isomorphism. On the lines `ab = 0` one-sided SN holds. At (2, 3) the
+  dimension is 3 and nothing vanishes.

@@ -1,0 +1,19 @@
+coordinates: r = x w gives u = y + 3 x w, v = x w + x w^2 - x^3 w^3 = 2 r^3 - u r^2 + 2 r, w = 1 - r u + 3 r^2   [checked]
+discriminant in r of 2 r^3 - u r^2 + 2 r - V: -4*(27*V**2 + V*u**3 - 18*V*u - u**2 + 16)   (the quartic of README 6.2 up to the factor -4)
+place w_1: r = 1*rho^1 + (1 + 1*rho^2) tau + (1/2*rho^-1 + 3*rho^1 + 5/2*rho^3) tau^2 + ...,  rho^2 = -s
+place w_2: r = (1/2)/tau + (-2 + 2*s^1) tau + (-8 + 24*s^1 + -16*s^2) tau^3 + ...
+w_1: 212 inequalities on 108 elements: 0 violations, 175 equalities, 0 undecided at this precision; formulas of the proof on the series: 0 mismatches of 212
+     valuations  x: 1 -> d_u 2, d_v 3;  y: -1 -> d_u 0, d_v 1;  w: -1 -> d_u 0, d_v 0;  1/w: 1 -> d_u 2, d_v 2;  r: 0 -> d_u 1, d_v 1
+w_2: 212 inequalities on 108 elements: 0 violations, 97 equalities, 0 undecided at this precision; formulas of the proof on the series: 0 mismatches of 212
+     valuations  x: 1 -> d_u 2, d_v 4;  y: -1 -> d_u 0, d_v 2;  w: -2 -> d_u -1, d_v 1;  1/w: 2 -> d_u 3, d_v 5;  r: -1 -> d_u 0, d_v 2
+numerical rays (u, v) = t (1, 0.7 + 0.3 i), t = 1e8 -> 1e12, sheets 0, 1 (r bounded: place w_1), 2 (r ~ u/2: place w_2):
+   x          growth exponents (phi, d_u phi, d_v phi) on the sheets: (-1.000, -2.000, -3.000) | (-1.000, -2.000, -3.000) | (-1.000, -2.000, -4.000)
+   y          growth exponents (phi, d_u phi, d_v phi) on the sheets: (1.000, 0.000, -1.000) | (1.000, -0.000, -1.000) | (1.000, 0.000, -2.000)
+   w          growth exponents (phi, d_u phi, d_v phi) on the sheets: (1.000, 0.000, -0.000) | (1.000, -0.000, 0.000) | (2.000, 1.000, -1.000)
+   x y        growth exponents (phi, d_u phi, d_v phi) on the sheets: (0.000, -2.000, -2.000) | (-0.000, -2.000, -2.000) | (0.000, -3.000, -5.000)
+   x w^2      growth exponents (phi, d_u phi, d_v phi) on the sheets: (1.000, -1.000, -0.000) | (1.000, -1.000, 0.000) | (3.000, 2.000, 0.000)
+   y^2 w      growth exponents (phi, d_u phi, d_v phi) on the sheets: (3.000, 2.000, 2.000) | (3.000, 2.000, 2.000) | (4.000, 3.000, 1.000)
+   x^2 y - w  growth exponents (phi, d_u phi, d_v phi) on the sheets: (1.000, 0.000, -0.000) | (1.000, -0.000, 0.000) | (2.000, 1.000, -1.000)
+   1/w        growth exponents (phi, d_u phi, d_v phi) on the sheets: (-1.000, -2.000, -2.000) | (-1.000, -2.000, -2.000) | (-2.000, -3.000, -5.000)
+   x y w + y  growth exponents (phi, d_u phi, d_v phi) on the sheets: (1.000, 0.000, 0.000) | (1.000, 0.000, 0.000) | (2.000, 1.000, -1.000)
+   smallest drop of the growth exponent under d_u or d_v: 1.0000 (Lemma 5.2: >= 1); violations: 0

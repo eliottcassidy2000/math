@@ -1,0 +1,6 @@
+W = x + x^2 y: codimension in degree <= 10: 1
+   normal forms: x^0 y^0 -> 1*x^0 y^0;  x^1 y^0 -> -1*x^0 y^0;  x^0 y^1 -> 1/6*x^0 y^0;  x^1 y^1 -> -1/2*x^0 y^0;  x^2 y^0 -> 0;  x^2 y^1 -> 1*x^0 y^0;  x^0 y^2 -> 1/60*x^0 y^0;  x^3 y^1 -> -1*x^0 y^0;  x^1 y^2 -> -1/12*x^0 y^0
+W = x^2 y: codimension in degree <= 10: 1
+   normal forms: x^0 y^0 -> 0;  x^1 y^0 -> 1*x^1 y^0;  x^0 y^1 -> 0;  x^1 y^1 -> 0;  x^2 y^0 -> 0;  x^2 y^1 -> 0;  x^0 y^2 -> 0;  x^3 y^1 -> 1*x^1 y^0;  x^1 y^2 -> 0
+W = x y: codimension in degree <= 10: 1
+   normal forms: x^0 y^0 -> 1*x^0 y^0;  x^1 y^0 -> 0;  x^0 y^1 -> 0;  x^1 y^1 -> 1*x^0 y^0;  x^2 y^0 -> 0;  x^2 y^1 -> 0;  x^0 y^2 -> 0;  x^3 y^1 -> 0;  x^1 y^2 -> 0

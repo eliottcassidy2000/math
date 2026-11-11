@@ -1,0 +1,11 @@
+A. W = x^2 y: 2 (d/dy - W_y)(y) - (d/dx - W_x)(x) = 1;  [d/dx - W_x, d/dy - W_y] on x^3 y^2: 0
+   functional x^k y^l -> l! [k = 2l + 1] on the generators, k < 12, l < 8: 0 failures; value on x: 1; value on 1: 0
+B. (d/dx - W_x)(alpha x) + (d/dy - W_y)(beta y) - [alpha + beta - (p alpha + q beta) W] = 0
+   (1,1): codim 1, 1 in M: no;  (1,2): codim 1, 1 in M: yes;  (1,3): codim 1, 1 in M: yes;  (1,4): codim 1, 1 in M: yes
+   (2,1): codim 1, 1 in M: yes;  (2,2): codim 2, 1 in M: no;  (2,3): codim 1, 1 in M: yes;  (2,4): codim 2, 1 in M: yes
+   (3,1): codim 1, 1 in M: yes;  (3,2): codim 1, 1 in M: yes;  (3,3): codim 3, 1 in M: no;  (3,4): codim 1, 1 in M: yes
+   (4,1): codim 1, 1 in M: yes;  (4,2): codim 2, 1 in M: yes;  (4,3): codim 1, 1 in M: yes;  (4,4): codim 4, 1 in M: no
+   expected: codim = gcd(p, q); 1 in M iff p != q.
+C. W = z^(2, 1, 1): sum D_i(w_i z_i) for two weights: -z1**2*z2*z3 + 1/2 and -z1**2*z2*z3 + 1; difference (in M): -1/2
+C. W = z^(1, 1, 1): sum D_i(w_i z_i) for two weights: -z1*z2*z3 + 1 and -z1*z2*z3 + 1; difference (in M): 0
+C. W = z^(3, 2, 1): sum D_i(w_i z_i) for two weights: -z1**3*z2**2*z3 + 1/3 and -z1**3*z2**2*z3 + 1/2; difference (in M): -1/6

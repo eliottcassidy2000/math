@@ -1,16 +1,18 @@
-# Stein modules of Keller pairs: Gaussian integration by parts between GMC(2) and JC(2) (kind-pasteur-2026-11-11-S24)
+# Stein modules of Keller pairs: Gaussian integration by parts in the coordinates of a Keller pair; GMC(2) and JC(2) in one ring (kind-pasteur-2026-11-11-S24)
 
 Owner directive (2026-11-11): merge prior work on the planar Jacobian conjecture with the proof of the
 two-dimensional Gaussian moments conjecture, and define conjectures between GMC(2) and JC(2) that could form a
 chain excluding high-degree counterexamples that rest on an undiscovered topological anomaly.
 
 Canon: THM-5138, HYP-9668. Pre-registration: `PREREGISTRATION.md` (commits d701fad1cd and 90e0a6855d; predictions
-S2-S6 all CONFIRMED). **JC(2) remains OPEN.**
+S2-S6 all CONFIRMED, S4 relative to the truncation). **JC(2) remains OPEN.**
 
 Audits. First audit (`audit/AUDIT.md`, of the checkpoint 86ab0707d6 and of a draft addendum): PASS WITH CORRECTIONS,
-no number wrong, six major corrections; all are applied in this version and logged in MISTAKE-764. Sections 5.2-5.4
-and 6.3 were written after the first audit. **Second audit pending at this commit** (it will be
-`audit/AUDIT-2.md`): until then Proposition 2.4, Lemma 5.2 to Corollary 5.7 and Proposition 6.3 are unaudited.
+no number wrong, six major corrections. Sections 2.4, 4 (present form), 5.2-5.4, 6.3 and 8 were written after it and
+went to a second audit (`audit/AUDIT-2.md`, of the commit c440c4a4b7): PASS WITH CORRECTIONS, no mathematical error
+found in the new statements, one major correction (the Image Conjecture was already refuted in canon, THM-2801, and
+section 8 did not say so), sixteen minor ones, five strengthenings. All corrections of both audits are applied in
+this version and logged in MISTAKE-764.
 
 ## 0. What comes out
 
@@ -31,25 +33,28 @@ the coordinates `(f, g)`. The **Stein kernel** `M_z` is the sum of their images 
    functionals that all satisfy the Gaussian integration by parts rules in `(f, g)`.
 3. **Finite chaos (Theorem 4.1; sharp form due to the first audit).** If every polynomial has a finite Hermite
    expansion in `(f, g)` modulo the Stein kernel at one centre, then `S_z = 0` or the map is an isomorphism. For a
-   Keller pair `S_z != 0`, so finite chaos at any single centre forces an automorphism.
+   Keller pair `S_z != 0` at every centre (CITED count; without citation at centres in general position,
+   Theorem 5.4), so finite chaos at any single centre forces an automorphism.
 4. **The Stein transform is injective (Theorem 5.4; PROVED, elementary).** The spaces `S_z` are the fibres of the
    single module `C[x, y]` over the polynomial ring `C[f - d_v, g - d_u]`, and this module is torsion-free. Hence a
    nonzero polynomial lies in `M_z` only for centres in a countable union of curves. Consequences:
    - **detection (Corollary 5.5):** at one centre that is algebraically independent over the field of coefficients,
      a Keller pair is an automorphism as soon as some iterate `d_u^r x` and some iterate `d_u^s y` lie in `M_z`
      (one direction, two test polynomials, first hits). So K-GMC, CV and SN each detect at such a centre;
-   - **JC(2) <=> the Stein kernel of every Keller pair is a Mathieu-Zhao subspace (Corollary 5.7).** This is
-     Zhao's Image Conjecture for the potentials `(f - a)(g - b)`; GMC(2) is the pair `(x, y)`.
+   - **JC(2) <=> the Stein kernel of every Keller pair is a Mathieu-Zhao subspace (Corollary 5.7).** This is the
+     instance `q = (f - a)(g - b)` of the statement of Zhao's Image Conjecture; that conjecture is false in general
+     (THM-2801; section 8), so the instance inherits no support from it. GMC(2) is the pair `(x, y)`.
 5. **The ladder is not intermediate.** `automorphism => K-GMC => CV => SN => first hits` holds at every centre, and
    at a centre in general position every rung is equivalent to the automorphism property, because by item 4 it is
    then equivalent to the classical criterion "the dual field is locally nilpotent". Required of all Keller pairs,
    each rung is JC(2) again. What the Gaussian side adds to the classical criterion is confined to special centres.
    A two-direction version of detection with a moving centre, conditional on item 2, was pushed first by Session269
    (CONCURRENT, section 1).
-6. **Examples (FINITE-EXACT, sections 6-7).** On the two planar non-proper etale maps available (a double cover on
-   `C^* x C`, a slice of the `C^3` Keller map of THM-1300 on `C^2` minus a hyperbola) the count is confirmed
-   (dimensions 2 and 11; linear potentials 2, 4, 6), finite chaos fails, and SN fails at every centre in general
-   position.
+6. **Examples (section 6).** On three planar non-proper etale maps (a double cover on `C^* x C`; a slice of the
+   `C^3` Keller map of THM-1300 on `C^2` minus a hyperbola; the inclusion of `C^2` minus a hyperbola) the count is
+   confirmed (dimensions 2 and 3: PROVED by hand and by machine; 11 and the linear potentials 2, 4, 6:
+   FINITE-EXACT), finite chaos fails wherever `S_z != 0` (PROVED), and SN fails at every centre in general position
+   (PROVED); at special centres SN and CV can hold without an isomorphism (6.3).
 7. **Open (HYP-9668).** Detection at a prescribed centre (it is false on surfaces); the Mathieu property for
    rank-one potentials with nonzero class of 1. One part of the hypothesis as first filed was false (section 8).
 
@@ -61,8 +66,9 @@ the coordinates `(f, g)`. The **Stein kernel** `M_z` is the sum of their images 
   THM-2801: GMC(2) reaches the special image conjecture in dimension one only).
 - **Images of first-order operators (the home of the conjectures used here).** W. Zhao, *Images of commuting
   differential operators of order one with constant leading coefficients*, J. Algebra 324 (2010) 231-247
-  (arXiv:0902.0210): Conjecture 1.3 (Image Conjecture: the image of a commuting family is a Mathieu subspace),
-  Theorem 2.5 (reduction to `{d_i - d_i(q)}`), Corollary 2.11 (the quotient is finite dimensional). With
+  (arXiv:0902.0210): Conjecture 1.3 (Image Conjecture: the image of a commuting family is a Mathieu subspace;
+  REFUTED in general in characteristic zero: its special case `SIC(n)` is false for every `n >= 2`, THM-2801,
+  guardrail 58), Theorem 2.5 (reduction to `{d_i - d_i(q)}`), Corollary 2.11 (the quotient is finite dimensional). With
   `{f, g} = 1`, `M_z = Im(d/dx - W_x) + Im(d/dy - W_y)` for `W = (f - a)(g - b)`, so **K-GMC of section 5 is the
   instance `q = (f - a)(g - b)` of the Image Conjecture** for two variables over `C`, and "`S_z` is finite
   dimensional" is Zhao's Corollary 2.11. GMC as a statement about such images: Zhao (J. Pure Appl. Algebra 214
@@ -147,7 +153,7 @@ Classes in `S_z` are written `[h]_z`, or `[h]` when the centre is fixed.
 `e^(sV + tU - st)` is the generating function of the `H_(n,m)`. (e): `[U d_u h] = [d_v d_u h] = [d_u d_v h] = [V d_v h]`. QED
 
 Check: (b) for `i + j <= 4` and (d) for `m + n <= 3` on the slice of section 6 (15 and 21 cases, 0 failures; the
-audit: 21 and 27).
+first audit: 15 and 27, and 21 of 21 for (b) on the double cover).
 
 **Proposition 2.3 (automorphisms; PROVED from THM-2022).** If `F` is an isomorphism onto `C^2`, then at every centre
 `S_z = C [1]`, the Stein functional is `U^i V^j -> i! [i = j]`, i.e. `h -> L(h o F^(-1))` centred at `z`, and `M_z`
@@ -270,7 +276,9 @@ dimension 1 at (2, 3) and 0 at (0, 3).
 For an etale `F` and a centre `z`:
 
 - **(K-GMC)** `M_z` is a Mathieu-Zhao subspace of `B`: if `[P^m] = 0` for all `m >= 1` then for every `h`,
-  `[h P^m] = 0` for `m` large. This is the instance `q = (u - a)(v - b)` of Zhao's Image Conjecture (section 1).
+  `[h P^m] = 0` for `m` large. For a Keller pair (`B = C[x, y]`) this is the instance `q = (f - a)(g - b)` of the
+  statement of Zhao's Image Conjecture (section 1); on other surfaces it is a generalisation, which fails
+  (Proposition 6.1; Zhao notes himself that his conjecture fails for Laurent polynomials).
 - **(CV), cone vanishing**: for every `h` there is `N` with `[h U^k V^(m+k)] = 0` and `[h U^(m+k) V^k] = 0` for
   all `m >= N`, `0 <= k <= m`.
 - **(SN), one-sided Stein nilpotence**: for every `h`, `d_u^m h` and `d_v^m h` lie in `M_z` for `m` large
@@ -316,10 +324,15 @@ field of residue characteristic zero containing `C(s)((tau))`; its residue field
     D~_1 (sum c_j pi^j) = sum (j/e) c_j pi^j,      D~_2 (sum c_j pi^j) = sum (c_j' + (j/e)(c'/c) c_j) pi^j,
 
 where `'` is the extension of `d/ds` to `k'`. These are derivations, they do not lower the valuation, and they
-restrict to `D_1, D_2` on `C(s)((tau))` (`D~_1 tau = tau`, `D~_2 tau = 0`, by `tau = pi^e / c`). A derivation of a
-field extends uniquely to a finite separable extension, so `D~_1, D~_2` are the extensions of `D_1, D_2`, and on `K`
-the extensions of `d/du, d/dv` are `d_u = -tau D~_1 - s tau D~_2`, `d_v = tau D~_2`. As `w(tau) = 1`, `w(s) = 0`,
-both raise `w` by at least one. QED
+restrict to `D_1, D_2` on `C(s)((tau))` (`D~_1 tau = tau`, `D~_2 tau = 0`, by `tau = pi^e / c`). So
+`-tau D~_1 - s tau D~_2` and `tau D~_2`, restricted to `K`, are derivations of `K` with values in the completion
+that agree with `d_u`, `d_v` on `C(u, v)`; two such derivations are equal, `K` being finite and separable over
+`C(u, v)`. As `w(tau) = 1`, `w(s) = 0`, both raise `w` by at least one. QED
+
+No hidden assumption (second audit): the residue extension need not be trivial, `K/k` need not be Galois, `w` need
+not be unique, `c` need not be constant. Tested on exact series on five maps, 1202 inequalities, no violation,
+equality frequent (so the bound 1 is sharp); on the slice of section 6.2 the places over the line at infinity are
+one with `e = 1`, residue degree 2 and one with `e = 1`, residue degree 1 (`audit/audit2/b1*.py`).
 
 **Lemma 5.3 (torsion-freeness; PROVED).** For a nonzero polynomial `P(a, b)` of degree `n` and `phi != 0` in `K`:
 `w(P(E_a, E_b) phi) = w(phi) - n`. In particular `P(E_a, E_b) h != 0` for `h != 0` in `B`: the module `B` over
@@ -352,15 +365,25 @@ Apply the linear map `Phi : C[a, b] (x) B -> B`, `a^i b^j (x) k -> E_a^i E_b^j k
 field of definition of `X`, `F`, `h`: the centres that are not algebraically independent over `k_0` form the union
 of the countably many curves `{P = 0}`, `P` in `k_0[a, b]`. QED
 
-Checks (`runs/inject.txt`; residues modulo the prime play the role of a centre in general position): for the
-standard pair, the double cover and the slice, every monomial tested (21, 36, 31) has a nonzero class at three
-pseudo-random centres and at (2, 3); at the special centres the classes do vanish: 18 of 21 at (0, 0) for the
-standard pair (`x^i y^j`, `i != j`), all at (0, 3) for the double cover (`S_z = 0`), `[d_u x] = 0` at (0, 0) on the
-slice.
+Sharper (second audit; PROVED from the CITED holonomicity of `B` over the Weyl algebra generated by
+`E_a, E_b, d_u, d_v`): there is `delta != 0` in `C[a, b]`, depending on `F` only, such that `B[1/delta]` is a vector
+bundle on `{delta != 0}`; a nonzero `h` is a nonzero section of it, so for each `h` the centres with `[h]_z = 0` lie
+in a proper algebraic subset of `C^2`. The countable union is still needed in Corollary 5.5, where all iterates
+occur.
+
+Checks. `runs/inject.txt` (residues modulo the prime play the role of a centre in general position; on the slice
+relative to the truncation): for the standard pair, the double cover and the slice, every monomial tested (21, 36,
+31) has a nonzero class at three pseudo-random centres and at (2, 3); at the special centres the classes do vanish:
+18 of 21 at (0, 0) for the standard pair (`x^i y^j`, `i != j`), all at (0, 3) for the double cover (`S_z = 0`),
+`[d_u x] = 0` at (0, 0) on the slice. Second audit (`audit/audit2/`): the map `h -> P(E_a, E_b) h` has full rank
+for 18 polynomials `P` on boxes of 507 to 961 monomials on five maps (a certificate over `Q`: no torsion); on the
+double cover `lambda_+` alone is injective, which proves the theorem there independently; the zero loci are curves
+over `Q`, for example `[y]_z = 0` iff `2ab + 1 = 0` and `[xy - 1]_z = 0` iff `b = 0`.
 
 ### 5.3 Detection
 
-**Corollary 5.5 (detection from first hits in one direction; PROVED).** Let `(f, g)` be a Keller pair with
+**Corollary 5.5 (detection from first hits in one direction; PROVED from THM-2022 and the KNOWN criterion
+THM-4620 (5)).** Let `(f, g)` be a Keller pair with
 coefficients in `k_0`, and let `z` be a centre whose coordinates are algebraically independent over `k_0`. The
 following are equivalent:
 
@@ -379,26 +402,41 @@ is locally nilpotent. 6 => 1 is THM-4620 (5) (KNOWN: the kernel of `d_u` is `C[g
 `C[x, y] = C[g][f]`). For the last sentence: such a set contains a centre that is algebraically independent over a
 countable field of coefficients. QED
 
-**Corollary 5.6 (surfaces; PROVED).** Let `F : X -> C^2` be etale, defined over `k_0`, and `z` algebraically
-independent over `k_0`. Then `SN_u` holds at `z` iff `d_u` is locally nilpotent on `B`, and SN holds at `z` in both
-directions iff `F` is an isomorphism onto `C^2`; so K-GMC at `z` holds iff `F` is an isomorphism. More precisely,
-if `d_u^m h != 0` for all `m` then `[d_u^m h]_z != 0` for all `m`.
+Credits. The route (a first hit in one direction lies in the torsion of `B`, so torsion-freeness gives local
+nilpotence) was sketched by the first audit (`audit/AUDIT.md`, section 7 (iii)), which checked torsion-freeness on
+the double cover and for open immersions and left it unproved in general; Lemmas 5.2-5.3 supply it. Testing at one
+centre algebraically independent over the field of coefficients is the formulation of Session269's Theorem 2a
+(two directions, every monomial, conditional on the count).
+
+Plainest form (second audit; PROVED from THM-4620 (1)): for a Keller pair the union of the kernels of the powers of
+`d_u` is `C[f, g]`. So at such a centre a polynomial `h` over `k_0` has a first hit in the direction `d_u` iff `h`
+lies in `k_0[f, g]`, and item 5 says that `x` and `y` are polynomials in `f` and `g`.
+
+**Corollary 5.6 (surfaces; PROVED, the converse for K-GMC from THM-2022).** Let `F : X -> C^2` be etale, defined
+over `k_0`, and `z` algebraically independent over `k_0`. Then `SN_u` holds at `z` iff `d_u` is locally nilpotent on
+`B`, and SN holds at `z` in both directions iff `F` is an isomorphism onto `C^2`; so K-GMC at `z` holds iff `F` is
+an isomorphism. More precisely, for `h` in `B_0` (defined over `k_0`): if `d_u^m h != 0` for all `m`, then
+`[d_u^m h]_z != 0` for all `m`. (The restriction to `B_0` is needed: on the double cover `h = x^(-2) - 1/a` has
+`[h]_z = 0`.)
 
 *Proof.* The first and the last statement are Theorem 5.4 applied to the elements `d_u^m h`, `h` in `B_0`. If
 `d_u` and `d_v` are both locally nilpotent, the slice theorem gives `B = Ker(d_u)[u]`, then
 `Ker(d_u) = (Ker d_u cap Ker d_v)[v]`, and `Ker d_u cap Ker d_v = C` on a connected surface; so `B = C[u, v]`. QED
 
-**Corollary 5.7 (JC(2) as an image conjecture; PROVED).** The following are equivalent:
+**Corollary 5.7 (JC(2) as an image statement; PROVED from THM-2022 and THM-4620 (5); item 4 from CITED facts).**
+The following are equivalent:
 
 1. JC(2);
 2. for every Keller pair `(f, g)`, `Im(d/dx - (fg)_x) + Im(d/dy - (fg)_y)` is a Mathieu-Zhao subspace of `C[x, y]`
    (K-GMC at the centre 0 for all Keller pairs; equivalently at all centres, since `(f - a, g - b)` is a Keller pair);
 3. CV, or SN, or `SN_u`, for all Keller pairs and all centres;
 4. for every Keller pair, `C[x, y]` has rank one over `C[f - d_v, g - d_u]` (this item: PROVED from the CITED
-   count and the CITED fact that a holonomic module is a vector bundle over a dense open set).
+   count, the CITED holonomicity of the twisted module (Bavula; THM-4620 (6)) and the CITED fact that a holonomic
+   module is a vector bundle over a dense open set).
 
-GMC(2) is statement 2 for the pair `(x, y)`. Statement 2 is the Image Conjecture of Zhao for the potentials `fg`;
-the Image Conjecture itself fails for some other potentials (section 8). The equivalence of 1 with 2-3 uses GMC(2)
+GMC(2) is statement 2 for the pair `(x, y)`. Statement 2 is the instance `q = fg` of the statement of Zhao's Image
+Conjecture, which is false in general in characteristic zero (THM-2801: `SIC(n)`, `n >= 2`; section 8: `x^2 y`), so
+statement 2 inherits no support from it. The equivalence of 1 with 2-3 uses GMC(2)
 (THM-2022), Proposition 5.1, Theorem 5.4 and the classical criterion; it does not use the comparison theorem.
 Session269's Conditional Corollary 4 is the two-direction form of this collapse, conditional on Theorem 3.1.
 
@@ -410,7 +448,7 @@ Orevkov and Domrina and carries no further information.
 |---|---|
 | finite chaos | at every `z` (Corollary 4.2) |
 | K-GMC, CV, SN, `SN_u`, first hits of `x` and `y` in one direction | at every `z` algebraically independent over the coefficients (Corollary 5.5) |
-| the same | at a prescribed `z`: OPEN on `C^2`; false on surfaces (section 6.3: SN and CV hold at a special centre with `[1]_z != 0`; double cover at `a = 0`: `S_z = 0`) |
+| the same | at a prescribed `z`: OPEN on `C^2`; false on surfaces for SN and CV (section 6.3: both hold at a special centre with `[1]_z != 0`, and one-sided SN holds on whole lines of centres; K-GMC there is not decided), and trivially for every rung where `S_z = 0` (double cover at `a = 0`) |
 
 ### 5.4 Periods (a second route; the draft audited as "Theorem 5.2")
 
@@ -425,7 +463,7 @@ What it adds is the reading of the Stein functionals as flat sections: on the do
 `d/da lambda_+-(x^k y^l) = ((k + l)/2) lambda_+-(x^(k-2) y^l) = lambda_+-(d_u x^k y^l)` and
 `lambda_+-(x^(-2)) = 1/(2a)` is not a polynomial in `a`.
 
-## 6. The planar non-proper etale maps in canon (FINITE-EXACT)
+## 6. Planar non-proper etale maps (6.1, 6.3: PROVED by hand; 6.2: FINITE-EXACT unless marked)
 
 `scripts/stein.py` computes `O(X) / M` by exact linear algebra modulo the prime 2147483629, in the frame `dx ^ dy`
 (`M' = Im(d/dx - W_x) + Im(d/dy - W_y)`; the class of `h` in `S_z` is the class of `h J`, `J` the Jacobian of
@@ -503,8 +541,14 @@ normal forms of `w V^m`, `w U^m`, `x V^m`, `x U^m` (`m <= 3`) are not zero (`run
 What is proved on the slice. (i) Finite chaos fails at every centre where `S_z != 0` (Theorem 4.1), in particular
 where the cited count gives 11. (ii) `d_u` and `d_v` are not locally nilpotent (they do not kill the unit `w`), so
 by Corollary 5.6, at every centre algebraically independent over `Q`, SN fails in both directions, and so do CV and
-K-GMC: for at least one of the generators `h = x, y, w` all the classes `[d_u^m h]_z` are nonzero, and likewise for
-`d_v`. (iii) At the rational centre (2, 3) the failure of SN, CV, K-GMC is not proved; no vanishing is observed.
+K-GMC. In fact (second audit, S1) for each of the generators `h = x, y, w` and every `m >= 1` the classes
+`[d_u^m h]_z` and `[d_v^m h]_z` are nonzero at such a centre: with `r = xw` the surface is the `(r, u)`-plane minus
+the curve `Omega = {om = 0}`, `om = 1 - ru + 3r^2 = w`, and `v = 2r^3 - u r^2 + 2r`, so the slice map is the
+restriction of the finite cubic map `(r, u) -> (u, v)` to the complement of its critical curve (`v_r = 2 om`), whose
+image is the quartic above; `d_v = (1/(2 om)) d/dr`, `d_u = d/du + (r^2/(2 om)) d/dr`, and both raise the order of
+pole along `Omega` by exactly 2, so `d_u^m h`, `d_v^m h` have poles of order `2m + 1` (`h = x = r/om`) and `2m - 1`
+(`h = y = u - 3r`, `h = w`) and never vanish. (iii) At the rational centre (2, 3) the failure of SN, CV, K-GMC is
+not proved; no vanishing is observed.
 
 Reading (HEURISTIC). `11 = 3 + 8`, where 3 is the number of preimages of the centre (the critical points of `W`):
 three local Gaussians, and eight functionals attached to the missing sheets. The computations do not identify the
@@ -538,9 +582,19 @@ Theorem 4.1. QED
 Machine: `c(N) = 2`; the classes of `d_u^m h`, `d_v^m h` (`h = w, w^2, xw, yw, x^2 w`, `m <= 6`) are zero exactly
 when the charge is not zero; the classes of `(d_u d_v)^m w` (`m <= 3`) are not zero. At the centre (2, 3) of the
 same map the dimension is 3 (as Remark 3.3 predicts: `1 + 2 - 1 + 1`) and none of these classes vanishes. The
-centre (0, 0) is special because the missed curve `uv = -1` is itself a member of the pencil of hyperbolas
-`uv = t`: no hyperbola of the pencil meets it. For a Keller pair on `C^2` this cannot happen (every component of
-the non-properness curve leaves the plane at `(infinity, infinity)` only, section 3).
+second audit reproduced all of this with its own engine and identified the two functionals: the Gaussian
+expectation `phi -> int_0^infinity phi e^(-t) dt` and `phi -> Res_(t = -1) phi e^(-t) dt`.
+
+The centre (0, 0) is special: `W = xy` and the missed curve `uv = -1` are invariant under the torus
+`(x, y) -> (lambda x, y / lambda)`, which grades `M_z`, and the missed curve is a member of the pencil `uv = t`, so
+the count drops. All centres on the lines `ab = 0` are special for this map (second audit, S2; PROVED by hand,
+dimension by machine): at `(a, 0)`, `a != 0`, the kernel contains every element of negative charge, the dimension
+is 2, and `SN_u` holds although `d_u = d/dx` is not locally nilpotent; symmetrically `SN_v` on `a = 0`. So on
+surfaces the exceptional set of Corollary 5.6 can be a whole curve. Whether the Mathieu property (K-GMC) holds at
+the centre (0, 0) is not decided (second audit, section 4 J: the only null elements of charge 0 are trivial; the
+remaining case is an analogue of NC2 for a ring with a pole). For a Keller pair on `C^2` the count has no special
+centre (Theorem 3.1; THM-4122 (4): no component of the non-properness curve is a member of such a pencil);
+whether SN or CV can hold at some centre of a Keller pair that is not an automorphism is OPEN.
 
 ## 7. Where the extra functionals sit (HEURISTIC; not used in any proof)
 
@@ -574,13 +628,21 @@ prescribed centres.
   `x^k y^l -> l! [k = 2l + 1]` (value 1 on `x`); a Mathieu-Zhao subspace that contains 1 is the whole ring. The same
   happens for every `x^p y^q` with `p, q >= 1`, `p != q`: for weights `(alpha, beta)` with `p alpha + q beta = 1`,
   `(d/dx - W_x)(alpha x) + (d/dy - W_y)(beta y) = alpha + beta - W`, so `W = alpha + beta` modulo `M` along a whole
-  line of weights, and `M` is proper because `H^2` has dimension `gcd(p, q)`. The two operators commute and have
-  order one with constant leading coefficients, so this is also an instance where the statement of Zhao's
-  Conjecture 1.3, read for an arbitrary potential, fails in characteristic zero. I do not claim this is new: the
-  one search made (first audit) found no record of it, and van den Essen's survey (arXiv:1006.5801) reports that no
-  counterexample in characteristic zero was known in 2010; it needs its own sourced note before anyone relies on
-  it. The repaired question (HYP-9668 (E')) asks for the Mathieu property when `H^2` is one-dimensional **and the
-  class of 1 is not zero** (`x + x^2 y`: the functional takes the value -1 on 1).
+  line of weights; and `M` is proper, of codimension `gcd(p, q)` (elementary, second audit: a linear form on
+  monomials kills `M` iff it is supported on `q (i + 1) = p (j + 1)` and satisfies `m_(n+g) = (n/g) m_n` along that
+  line, `g = gcd(p, q)`). The two operators commute and have order one with constant leading coefficients, so the
+  statement of Zhao's Conjecture 1.3 fails for this potential (`A = C`, `f = 1`, `g = x`). **That the conjecture
+  fails in characteristic zero is KNOWN**: its special case `SIC(n)` is false for every `n >= 2` (THM-2801;
+  guardrail 58), and public sources of 2026 record the failure (MathWorld, "Image Conjecture", citing Zhang 2026;
+  Dvorsky, arXiv:2608.07338, refutes the Generalized Vanishing Conjecture, which the Image Conjecture implies;
+  found by the second audit, summaries only, not re-checked here); van den Essen's survey of 2010
+  (arXiv:1006.5801) still had no counterexample. What `x^2 y` adds is a failure over a field with two operators in
+  two variables and a quotient of finite dimension, by the 1-property (the mechanism of Zhao's Example 2.7 in
+  characteristic `p`); there the critical set of `W` is a line, while for `W = (f - a)(g - b)` it is finite. No
+  record of this instance was found in the five papers read by the second audit (Zhao 2010, both papers; van den
+  Essen 2010; van den Essen-Wright-Zhao 2011, both papers); that search is not exhaustive. The repaired question
+  (HYP-9668 (E')) asks for the Mathieu property when `H^2` is one-dimensional **and the class of 1 is not zero**
+  (`x + x^2 y`: `[1] != 0` and `[x] = -[1]`).
 - **Other dimensions.** The definitions make sense for Keller maps of `C^n` with a nondegenerate quadratic form
   `Q`: `M = sum_i Im(d_(u_i) - Q_i(F))`, `dim S` is the reduced Betti number `b_(n-1)` of `F^(-1)(Q = t)`. But GMC(n)
   is false for `n >= 3`: the bottom rung exists only in the plane. For the map of THM-1300 the full

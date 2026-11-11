@@ -1,0 +1,14 @@
+torus, centre (2038055541133385055, 617674536786358769): c(10) = 2; Laurent monomials (weight <= 5) with zero class: 0 of 57
+torus, centre (360974844317956933, 723850983759770420): c(10) = 2; Laurent monomials (weight <= 5) with zero class: 0 of 57
+torus, centre (1501204035327933254, 1343722067557612608): c(10) = 2; Laurent monomials (weight <= 5) with zero class: 0 of 57
+torus, centre (2, 3): c(10) = 2; Laurent monomials (weight <= 5) with zero class: 0 of 57
+torus, centre (0, 3): c(10) = 1; Laurent monomials (weight <= 5) with zero class: 51 of 57
+torus, centre (2, 0): c(10) = 1; Laurent monomials (weight <= 5) with zero class: 51 of 57
+torus, centre (0, 0): c(10) = 1; Laurent monomials (weight <= 5) with zero class: 55 of 57
+hyp,   centre (2038055541133385055, 617674536786358769): c(14) = 3; basis monomials x^c q^n / y^c q^n with zero class: 0 of 61
+hyp,   centre (360974844317956933, 723850983759770420): c(14) = 3; basis monomials x^c q^n / y^c q^n with zero class: 0 of 61
+hyp,   centre (1501204035327933254, 1343722067557612608): c(14) = 3; basis monomials x^c q^n / y^c q^n with zero class: 0 of 61
+hyp,   centre (2, 3): c(14) = 3; basis monomials x^c q^n / y^c q^n with zero class: 0 of 61
+hyp,   centre (0, 3): c(14) = 2; basis monomials x^c q^n / y^c q^n with zero class: 27 of 61
+hyp,   centre (2, 0): c(14) = 2; basis monomials x^c q^n / y^c q^n with zero class: 27 of 61
+hyp,   centre (0, 0): c(14) = 2; basis monomials x^c q^n / y^c q^n with zero class: 54 of 61
