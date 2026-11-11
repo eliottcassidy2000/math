@@ -60,6 +60,21 @@
         "05-knowledge/results/ternary_metagraph_20261109/PREREGISTRATION-2.md",
         "05-knowledge/results/duality_20261019_multiplication_addition_golden_circle_gilbreath.md"
       ]
+    },
+    {
+      "seed": 261110,
+      "choices": [
+        "05-knowledge/results/session74_eleven_mechanisms_20261027/session74-inheritance/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md",
+        "05-knowledge/hypotheses/HYP-2121-lrc-observer-coupled-perspective-gap.md",
+        "05-knowledge/results/session51_structural_errors_relational_packets_20261024/audit-order-ten/AUDIT.md",
+        "05-knowledge/results/session54_reframed_numerology_20261025/audit-paley-endpoint/inputs/session54-paley-endpoint-observer/sources/3-PALEY_MONSTER_BRIDGE.md",
+        "05-knowledge/hypotheses/HYP-9276-k6-minus-p6-terminal-is-the-adjoint-of-a-weight-3-level-32-newform.md",
+        "05-knowledge/results/trinomial_width15_audit_empty_core_certificate_sep06.md",
+        "05-knowledge/results/planar_jc48_sep08_h4_mixed42_audit.md",
+        "05-knowledge/results/session254_four_frontiers_20261111/jacobian/PROOF.md",
+        "05-knowledge/hypotheses/HYP-2654-lrc14-near-collar-tail-template.md",
+        "05-knowledge/results/weighted_tail_20261022/extension/AUDIT.md"
+      ]
     }
   ]
 }

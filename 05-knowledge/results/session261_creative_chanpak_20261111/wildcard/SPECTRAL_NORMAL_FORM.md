@@ -69,3 +69,33 @@ The proof uses the tensor partial order, not the assertion that every strictly t
 * The parent's cycle-packing bound independently limits the number of root-module visits in a single clone ray. The two bounds agree in spirit but concern different operations; a length-L block may have base j^L rather than j.
 
 No target-coverage conclusion follows from the allowed spectrum alone.
+
+## 5. Sharper Jordan bounds from the tensor partial order
+
+The parent's partial-order observation sharpens the preceding safe annihilator. Use the equivalent reversed local basis(empty,legal,legal-illegal), with grades0,1,2 and diagonal labels0,1,0; the last factor has grades0,1 and labels0,1. Matrix entries move only upward in the product partial order.
+
+Let a tensor basis position have diagonal label j, the number of grade1 factors, and total grade g. Then g-j is even. For j=0 its possible grades lie between0 and2k. For j>=1 they lie between j and2k-j+2. Therefore a strictly increasing chain of distinct positions with the same label has length at most
+
+    e_0=k+1,
+    e_j=k-j+2,       1<=j<=k+1.
+
+To turn this positional fact into a Jordan bound, let P_j be the spectral projector of a fixed block matrix M onto its generalized j^L eigenspace. It is a polynomial in M, hence belongs to the same incidence algebra of the tensor partial order. For each original basis vector e_s of diagonal label j, replace it by P_j e_s. These columns form a unit-diagonal triangular change of basis S in that incidence algebra; S inverse belongs to it as well. In the new basis M connects only positions of the same eigenvalue and only comparable positions. Consequently each nilpotent Jordan chain has at most e_j steps, by the grade bound above. Direct sums over core permutations do not increase the bound.
+
+Thus the improved universal annihilating polynomial is
+
+    t^(k+1) * product_(j=1)^(k+1)(t-j^L)^(k-j+2).
+
+Its degree is (k+1)(k+4)/2. In particular, after a transient of at most k+1 terms,
+
+    H(T_A(p u^m q)) = sum_(j=1)^(k+1) P_j(m) j^(L m),
+    deg P_j <= k-j+1.
+
+The largest exponential base has a constant coefficient, the next has at most a linear coefficient, and so on. For k=2 every periodic word has the exact eventual shape
+
+    c*3^(Lm) + (a*m+b)*2^(Lm) + d*m^2+e*m+f,
+
+with rational constants, after at most3 initial terms. A universal degree9 annihilator is
+
+    t^3(t-1)^3(t-2^L)^2(t-3^L).
+
+`check_spectrum.py` checks both the earlier safe annihilator and this sharper one on all letters and the selected one-/two-letter blocks for k=0,1,2,3. These controls corroborate the argument; the all-k proof is the incidence-algebra change of basis above.

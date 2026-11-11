@@ -1,6 +1,6 @@
 # Session261: creative routes through physical continuation states
 
-**11 November2026. Checkpoint2; research continues. Chan–Pak remains OPEN.**
+**11 November2026. Checkpoint3; final integration in progress. Chan–Pak remains OPEN.**
 
 The requested longer session starts from Session260 at
 `f92e070445e43c59f1252f2979db564df88d7b60`, accepts its inherited machinery,
@@ -35,6 +35,48 @@ refinement has individually nonnegative fibres, retaining H(U−W).
 This is the session's strongest closure so far. It controls the unavoidable
 excess of the domination adapter; it does not prescribe an arbitrary exact
 Hamilton count, so Chan–Pak remains open.
+
+## Further extensions: equality is finite-basis, and failed rearming yields a constructor
+
+**PROVED:** quantitative slack is monotone under rooted induced extension.
+Consequently its equality class has a finite forbidden rooted-pattern basis,
+and an exact synthesis algorithm is proved to terminate. A positive example
+either contains a six-vertex edge-plus-triangle witness or is a fixed rooted
+triangle with a transitive spine. Higman's subsequence argument then gives
+finiteness, and a signed605-state count representation makes the basis
+computable by exact linear algebra. The full basis has **not** been computed.
+[Effective finite-basis theorem](bridges/FINITE_EQUALITY_BASIS.md).
+
+The necessary equality skeleton is concrete: at most two nontrivial chain
+graph components, each internally transitive, and every cross-edge meets
+every old triangle. These conditions alone are not sufficient; the packet
+includes a counterexample. [Structural theorem](bridges/EQUALITY_SKELETON.md).
+
+A failed unit-seed rearm was not discarded. Coarsening its actual twin
+modules gives an explicit eight-vertex quotient Q with, for arbitrary
+nonempty tournament modules A,B,
+
+    H(Q[A,B]) = 149hg +72(cg+hd)+37cd,
+
+where h=H(A), g=H(B), c=C₂(A), d=C₂(B), and C₂ uses nonempty slots.
+This is an all-tournament physical constructor and exact module-exchange
+return. In the chain slice it gives
+
+    37·2^(a+b)−2^(a+1)−2^(b+1)+9.
+
+It produces the direct family7(21·2^k−1), k≥2, without requiring a
+count7 tournament. Its diagonal obeys37N=x²+329h² with actual path-cover
+coordinates. The cut bound gives a complete finite target procedure for
+this grammar and proves that TT₂ is its only unit-offset row.
+[Kernel, norm and exact boundary](constructors/BILINEAR_KERNEL.md).
+
+Finally, the sharp periodic spectral form proves a global controller
+restriction: every recurrent append-only binary-control cycle must insert
+exactly one vertex per digit. Multiletter appends can be transient but cannot
+supply the missing recurrent return. Genuine two-ended/converse controllers
+have a different exact resonance condition, and a physical alternating
+plus-only controller is constructed. A complete two-digit controller remains
+missing. [Fifth-wave theorem](wildcard/FIFTH_WAVE.md).
 
 ## Additional advances after the first checkpoint
 
@@ -112,3 +154,14 @@ separate from a proof of Chan–Pak.
 
 The packet will receive further coherent checkpoints and a final synthesis.
 No numbered canon claim, external priority claim or Lean proof is asserted.
+
+## Incoming work and scope preserved
+
+Concurrent checkpoint `b42131e609ec` was preserved between our first and
+second publications. It classifies strict finite multiplicand saturation
+and completes every level of the d=35 grid. These are incoming results,
+not credited to this session. Its s=2 product construction is not asserted
+strong. Our universal scalar/odd-cycle inequality does not establish its
+stronger fibre-respecting closed-tree exchange bound, which remains open.
+The shared useful move is retaining nonunit offset data instead of throwing
+away a failed unit-seed family. See [incoming integration](INCOMING_CONNECTIONS.md).

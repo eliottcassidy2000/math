@@ -1,0 +1,15 @@
+{
+  "scope": "Every eight-letter word of lengths0..3, plus100 seeded words of lengths4..7; all three automata compared to literal subset Hamilton DP and direct domination enumeration",
+  "seed": 2611712,
+  "word_cases": 685,
+  "state_bounds": {
+    "H_triangle": 486,
+    "H_deleted_root": 54,
+    "domination": 64,
+    "constant": 1,
+    "signed_slack_total": 605
+  },
+  "skeleton_counterexample_slack": 2,
+  "basis_synthesis": "NOT RUN",
+  "result": "PASS"
+}

@@ -1,0 +1,263 @@
+{
+  "status": "PASS",
+  "seed_H_W_U": [
+    25,
+    24,
+    146
+  ],
+  "family": {
+    "name": "q146_binary_debt",
+    "rows": [
+      6,
+      4,
+      8,
+      19,
+      103,
+      79,
+      15
+    ],
+    "selected_mask": 20,
+    "vertex": 5,
+    "mark": "none",
+    "parameter": "chain length",
+    "degree_bound": 8,
+    "skeleton_coefficients": {
+      "H": [
+        15,
+        25,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "D": [
+        5,
+        1,
+        -4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U": [
+        72,
+        146,
+        74,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "samples": [
+      [
+        15,
+        5,
+        72
+      ],
+      [
+        25,
+        1,
+        146
+      ],
+      [
+        45,
+        -7,
+        294
+      ],
+      [
+        85,
+        -23,
+        590
+      ],
+      [
+        165,
+        -55,
+        1182
+      ],
+      [
+        325,
+        -119,
+        2366
+      ],
+      [
+        645,
+        -247,
+        4734
+      ],
+      [
+        1285,
+        -503,
+        9470
+      ],
+      [
+        2565,
+        -1015,
+        18942
+      ]
+    ]
+  },
+  "opposite_endpoint_family": {
+    "name": "q146_opposite_endpoint",
+    "rows": [
+      120,
+      121,
+      115,
+      100,
+      8,
+      16,
+      48
+    ],
+    "selected_mask": 20,
+    "vertex": 5,
+    "mark": "none",
+    "parameter": "chain length",
+    "degree_bound": 8,
+    "skeleton_coefficients": {
+      "H": [
+        15,
+        25,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "D": [
+        5,
+        1,
+        -4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U": [
+        60,
+        146,
+        110,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "samples": [
+      [
+        15,
+        5,
+        60
+      ],
+      [
+        25,
+        1,
+        146
+      ],
+      [
+        45,
+        -7,
+        366
+      ],
+      [
+        85,
+        -23,
+        950
+      ],
+      [
+        165,
+        -55,
+        2550
+      ],
+      [
+        325,
+        -119,
+        7046
+      ],
+      [
+        645,
+        -247,
+        19926
+      ],
+      [
+        1285,
+        -503,
+        57350
+      ],
+      [
+        2565,
+        -1015,
+        167190
+      ]
+    ]
+  },
+  "literal_tail_controls": [
+    {
+      "m": 0,
+      "t": 1,
+      "order": 8,
+      "H": 149
+    },
+    {
+      "m": 0,
+      "t": 2,
+      "order": 9,
+      "H": 293
+    },
+    {
+      "m": 0,
+      "t": 3,
+      "order": 10,
+      "H": 581
+    },
+    {
+      "m": 1,
+      "t": 1,
+      "order": 9,
+      "H": 293
+    },
+    {
+      "m": 1,
+      "t": 2,
+      "order": 10,
+      "H": 585
+    },
+    {
+      "m": 1,
+      "t": 3,
+      "order": 11,
+      "H": 1169
+    },
+    {
+      "m": 2,
+      "t": 1,
+      "order": 10,
+      "H": 581
+    },
+    {
+      "m": 2,
+      "t": 2,
+      "order": 11,
+      "H": 1169
+    },
+    {
+      "m": 2,
+      "t": 3,
+      "order": 12,
+      "H": 2345
+    }
+  ],
+  "scope": "Physical binary +2 response with nonunit defect after first clone, converted by a literal tail to the stated two-parameter Hamilton family; not a legal unit rearm."
+}

@@ -1,0 +1,7 @@
+{'length': 0, 'surviving_seeds_by_adaptive_depth': {1: 0, 2: 0, 3: 0, 4: 0}}
+{'length': 1, 'surviving_seeds_by_adaptive_depth': {1: 0, 2: 0, 3: 0, 4: 0}}
+{'length': 2, 'surviving_seeds_by_adaptive_depth': {1: 6, 2: 0, 3: 0, 4: 0}}
+{'length': 3, 'surviving_seeds_by_adaptive_depth': {1: 12, 2: 0, 3: 0, 4: 0}}
+{'length': 4, 'surviving_seeds_by_adaptive_depth': {1: 10, 2: 0, 3: 0, 4: 0}}
+{'length': 5, 'surviving_seeds_by_adaptive_depth': {1: 12, 2: 0, 3: 0, 4: 0}}
+{'length': 6, 'surviving_seeds_by_adaptive_depth': {1: 10, 2: 0, 3: 0, 4: 0}}

@@ -95,7 +95,7 @@ replacement interface.
 
 ## 3. First hostile and wider positive evidence
 
-The first non-reversal cover collision at order5 is
+The first collision found by the differing-port-menu test at order5 is
 
     (2,4,25,3,11) and (2,4,9,19,7),
     C=(9,66,186,240,120).

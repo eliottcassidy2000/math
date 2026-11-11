@@ -27,4 +27,7 @@ for k in range(4):
   p=S.eye(d)
   for j in range(k+2):p=p*(B-j**L*S.eye(d))
   assert p**(2*k+2)==S.zeros(d)
+  sharp=B**(k+1)
+  for j in range(1,k+2):sharp=sharp*(B-j**L*S.eye(d))**(k-j+2)
+  assert sharp==S.zeros(d)
  print({'k':k,'per_permutation_dimension':d,'alphabet_size':1<<k,'common_triangularization':True,'uniform_annihilator':True})

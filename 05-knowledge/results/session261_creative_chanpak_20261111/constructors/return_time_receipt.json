@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "rows": [
+    2,
+    4,
+    9,
+    19,
+    7
+  ],
+  "selected_mask": 18,
+  "port": 0,
+  "run_coefficients_H_D_U_V": [
+    [
+      5,
+      -1,
+      15,
+      15
+    ],
+    [
+      9,
+      1,
+      32,
+      32
+    ],
+    [
+      3,
+      0,
+      21,
+      16
+    ],
+    [
+      0,
+      0,
+      4,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "U_minus_V_power_coefficients": {
+    "1": 2,
+    "2": -7,
+    "3": 4
+  },
+  "exact_return_classification": {
+    "all_positive_integers": false,
+    "dominant_base": 3,
+    "first_uniform_nonzero_index": 3,
+    "all_positive_zeros": [
+      1
+    ]
+  },
+  "scope": "Effective complete zero classification for each fixed finite integer positive-base exponential polynomial, not arbitrary changing-core return programs."
+}

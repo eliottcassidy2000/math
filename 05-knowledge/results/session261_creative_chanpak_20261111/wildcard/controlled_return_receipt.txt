@@ -1,0 +1,2 @@
+{'controlled_converse_plus_digits': 12, 'passed': True}
+{'good_cycle_nine_residuals': [0, 0, 0, 0, 0, 0, 0, 0, 0], 'false_scalar_return_first_carry': 45, 'false_cycle_residuals': [0, 72, 288, 936, 2880, 8712, 26208, 78696, 236160]}

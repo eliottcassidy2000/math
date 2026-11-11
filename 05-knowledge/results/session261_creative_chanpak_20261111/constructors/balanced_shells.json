@@ -1,0 +1,35 @@
+[
+  {
+    "core": [
+      0
+    ],
+    "selected_pair_mask": 1,
+    "apex_selected": 0,
+    "H": 3,
+    "U": 6,
+    "rows": [
+      2,
+      4,
+      1
+    ],
+    "O": 3
+  },
+  {
+    "core": [
+      0,
+      1
+    ],
+    "selected_pair_mask": 1,
+    "apex_selected": 0,
+    "H": 11,
+    "U": 37,
+    "rows": [
+      12,
+      13,
+      24,
+      16,
+      3
+    ],
+    "O": 5
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "source_rows": [
+    6,
+    4,
+    8,
+    19,
+    103,
+    79,
+    15
+  ],
+  "extensions_tested": 128,
+  "selected_subsets": "all pairs",
+  "target_q": 294,
+  "hits": []
+}
