@@ -1,0 +1,14 @@
+{
+  "costed_fiber_moduli": 118,
+  "all_pass": true,
+  "restricted_hostile": {
+    "ranks": [
+      4,
+      6
+    ],
+    "modulus": 4,
+    "target": 3,
+    "cost": 7
+  },
+  "sun_modular_images_full": true
+}

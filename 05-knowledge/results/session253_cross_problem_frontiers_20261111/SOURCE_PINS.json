@@ -1,0 +1,257 @@
+{
+  "scope": "inherited inputs and selected historical routes; not a comprehensive audit",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "blob_sha": "955d7bdf1c8a115b55f11cc60c719ff3ba6410cd",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-002-ocf.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-016-claim-b-alternating-sum.md",
+      "blob_sha": "17e61f9e69ae0cf5555f5430f0f34df882eb7cb9",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-016-claim-b-alternating-sum.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md",
+      "blob_sha": "1bddd68972bcf30765ca18699be85357b7706d4b",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md",
+      "blob_sha": "b55555c1ddcb9ec21818a8111588821a6a944fa4",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "blob_sha": "21c54c68fac2c18efcacd26331006824fe891cda",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-3166-falling-factorial-order-join-path-colour-transform.md",
+      "blob_sha": "39d7d2e857bb6a158fe7717c0c14bf6360dfcbdb",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-3166-falling-factorial-order-join-path-colour-transform.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md",
+      "blob_sha": "caf5a0022a407f7ea32175e7fbba5b439783fce0",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-3226-unbalanced-q4-unequal-saddle-and-transcendence-wall.md",
+      "blob_sha": "3c105fcf9d27c80cc598dcd7ed764141f6565cb4",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-3226-unbalanced-q4-unequal-saddle-and-transcendence-wall.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-3248-q4-paired-owner-stirling-compiler.md",
+      "blob_sha": "375527740002826733b633b33b22d11b7b93baa8",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-3248-q4-paired-owner-stirling-compiler.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-3793-inert-prime-sum-all-scale-two-cube-singleton.md",
+      "blob_sha": "2ac5ffa7e16f5a8226210bdb86e16984bfd79fc9",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-3793-inert-prime-sum-all-scale-two-cube-singleton.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md",
+      "blob_sha": "9befcd6f9940fc5330ca20eb64ea299d81bc462e",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-3848-rational-base-prefix-atom-tree-and-lonely-runner-separation.md",
+      "blob_sha": "dc1ad80f1d5589e1b0df35a08a62c2b6c182a927",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-3848-rational-base-prefix-atom-tree-and-lonely-runner-separation.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4010-confluent-consecutive-hasse-observer-kernel-index-and-smith-firewall.md",
+      "blob_sha": "abf47cd00afdec2d0197f31a8f8c39a7d3317249",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-4010-confluent-consecutive-hasse-observer-kernel-index-and-smith-firewall.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4018-ramified-three-two-cube-singleton-extension.md",
+      "blob_sha": "99fae89a2a833d9ed7aceb97c4c957b42ce6de78",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-4018-ramified-three-two-cube-singleton-extension.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4027-sun-two-four-six-eight-universal-modular-solubility.md",
+      "blob_sha": "e10b8cf7eb87d8a343c545f6cf049c7494e9e30e",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-4027-sun-two-four-six-eight-universal-modular-solubility.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4036-sun-2468-energy-and-support-exponent.md",
+      "blob_sha": "7e0ed7a05a7c9e18a5c59373ff23d715e22ea1aa",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-4036-sun-2468-energy-and-support-exponent.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4246-sun-reflection-orbit-two-adic-tower-and-odd-cycle-firewall.md",
+      "blob_sha": "6a35642281395e43b1f640c119cdd1df06e24e13",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-4246-sun-reflection-orbit-two-adic-tower-and-odd-cycle-firewall.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4415-source-normal-row-fourteen-same-row-response-rank-obstruction.md",
+      "blob_sha": "f341220997a7f4ec48bd1c670d6d8724e213d8fb",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-4415-source-normal-row-fourteen-same-row-response-rank-obstruction.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4426-source-normal-row-fourteen-weight-eighteen-memory-repair.md",
+      "blob_sha": "e223bd6acfa6aa2cef8f9a78748306daa1201e07",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-4426-source-normal-row-fourteen-weight-eighteen-memory-repair.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md",
+      "blob_sha": "6d6939b8278c258cde25fec8f5d01fe960d2d029",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4438-jc2-row-fifteen-relative-response-on-boundary-gm.md",
+      "blob_sha": "50ca7b850d64eb72e0e660fe39ea3b0a700c1a4b",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-4438-jc2-row-fifteen-relative-response-on-boundary-gm.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4440-signed-duplication-sos-and-real-rooted-laurent-return.md",
+      "blob_sha": "c5c4059d741c90aa801bd9563e41db6b9c87c836",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-4440-signed-duplication-sos-and-real-rooted-laurent-return.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md",
+      "blob_sha": "63cefc1ce16d566d54adadfc512786ac5f8f2fcd",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-4443-arbitrary-jet-precision-and-dyadic-unit-boundary.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-463-two-cube-representations-are-a-divisor-property-on-the-split-axis.md",
+      "blob_sha": "109ca44c8e4e8619f57cfe6e2b0a9ef04b3d9fe5",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-463-two-cube-representations-are-a-divisor-property-on-the-split-axis.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4654-safe-mahler-codes-contract-collatz-logarithmic-memory-and-complexity-approximation.md",
+      "blob_sha": "c72a419ac022e2e719f8a1a1ef0edff3c355e940",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/01-canon/theorems/THM-4654-safe-mahler-codes-contract-collatz-logarithmic-memory-and-complexity-approximation.md"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/algebra/POSITIVE_COMPILER.md",
+      "blob_sha": "046602ec77abd09a709299f0b01710f367434f9e",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/chanpak_five_core_bridges_20261110/algebra/POSITIVE_COMPILER.md"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/cover/SELECTOR.md",
+      "blob_sha": "c3cd8c6228183b53eca2b2cae246e19586bb0c39",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/chanpak_five_core_bridges_20261110/cover/SELECTOR.md"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/cover/SWITCH.md",
+      "blob_sha": "083a660cc2ffcaa9dceeff1984bd42787cf78b4b",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/chanpak_five_core_bridges_20261110/cover/SWITCH.md"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/cover/support_24.json",
+      "blob_sha": "076478e1e9e88f3c107fd0363eb292ad2dfc33c3",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/chanpak_five_core_bridges_20261110/cover/support_24.json"
+    },
+    {
+      "path": "05-knowledge/results/continuing1_20260906_jets_projective.md",
+      "blob_sha": "9646d65ac392e0ab0d318bd8e9e22fd2ae2cf781",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/continuing1_20260906_jets_projective.md"
+    },
+    {
+      "path": "05-knowledge/results/overnight11_20260906_no3line_rowfreeze.md",
+      "blob_sha": "c28909e7a881a18276db38dff6e7c33d1b338562",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/overnight11_20260906_no3line_rowfreeze.md"
+    },
+    {
+      "path": "05-knowledge/results/overnight13_20260906_jets_p31_intermediate.md",
+      "blob_sha": "e3b3083f1831f274b3d3b7f6314ac1f843ba784b",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/overnight13_20260906_jets_p31_intermediate.md"
+    },
+    {
+      "path": "05-knowledge/results/overnight9_20260906_jets_deuring.md",
+      "blob_sha": "5ae56b6c471078dc5c6d33b8ad28d8fddef391bc",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/overnight9_20260906_jets_deuring.md"
+    },
+    {
+      "path": "05-knowledge/results/session220_binary_envelopes_and_selectors_20261107/README.md",
+      "blob_sha": "1552d3bf4f4fd7418bfc7eb9dfbfd934fc301d15",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/session220_binary_envelopes_and_selectors_20261107/README.md"
+    },
+    {
+      "path": "05-knowledge/results/session220_binary_envelopes_and_selectors_20261107/extrema/PROOF.md",
+      "blob_sha": "15109a4712d27b9e77232606ec5cd73684f0b574",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/session220_binary_envelopes_and_selectors_20261107/extrema/PROOF.md"
+    },
+    {
+      "path": "05-knowledge/results/session220_binary_envelopes_and_selectors_20261107/selectors/PROOF.md",
+      "blob_sha": "c26244428e4c45e3edd3de195904c6e27b1d2650",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/session220_binary_envelopes_and_selectors_20261107/selectors/PROOF.md"
+    },
+    {
+      "path": "05-knowledge/results/session220_binary_envelopes_and_selectors_20261107/selectors/README.md",
+      "blob_sha": "d73303a5bdb9d0cec524aedf84e07410688b117a",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/session220_binary_envelopes_and_selectors_20261107/selectors/README.md"
+    },
+    {
+      "path": "05-knowledge/results/session251_creative_completion_20261111/gems/README.md",
+      "blob_sha": "678d671b3812a8600b32c7909189dc60d6404ccf",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/session251_creative_completion_20261111/gems/README.md"
+    },
+    {
+      "path": "05-knowledge/results/session251_creative_completion_20261111/ternary/compiler.py",
+      "blob_sha": "bfbe45b038a7c2e5d78525aa823dc6a7c574381f",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/session251_creative_completion_20261111/ternary/compiler.py"
+    },
+    {
+      "path": "05-knowledge/results/session252_fivefold_bridges_20261111/algebra/PROOF.md",
+      "blob_sha": "d50efd6619dc4e44662247a70e5e3c76cbf020ae",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/session252_fivefold_bridges_20261111/algebra/PROOF.md"
+    },
+    {
+      "path": "05-knowledge/results/session252_fivefold_bridges_20261111/arithmetic/PROOF.md",
+      "blob_sha": "45307ab883dcb4b9b98bcaec2361e7aebccf3448",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/session252_fivefold_bridges_20261111/arithmetic/PROOF.md"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_laurent.md",
+      "blob_sha": "e5eeac5938b80131d370994b890804cd8510b21b",
+      "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/third_20260906_laurent.md"
+    }
+  ]
+}

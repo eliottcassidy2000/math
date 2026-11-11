@@ -1,0 +1,131 @@
+{
+  "mod3_direct_substitution_checks": 870,
+  "prime5_absorption_hostile": {
+    "n": 4,
+    "mask": 4,
+    "rows": [
+      [
+        0,
+        false,
+        false,
+        true
+      ],
+      [
+        true,
+        0,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        0,
+        false
+      ],
+      [
+        false,
+        true,
+        true,
+        0
+      ]
+    ],
+    "ordered_profile": [
+      0,
+      5,
+      22,
+      36,
+      24
+    ],
+    "context_H": 37
+  },
+  "join_jet_period_checks": 162
+}
+{
+  "C3_parity_germs": {
+    "111": 0,
+    "112": 2,
+    "121": 2,
+    "122": 2,
+    "211": 2,
+    "212": 2,
+    "221": 2,
+    "222": 0
+  },
+  "Q4_parity_germs": {
+    "1111": 2,
+    "1112": 0,
+    "1121": 2,
+    "1122": 2,
+    "1211": 2,
+    "1212": 2,
+    "1221": 0,
+    "1222": 2,
+    "2111": 0,
+    "2112": 2,
+    "2121": 2,
+    "2122": 2,
+    "2211": 2,
+    "2212": 2,
+    "2221": 2,
+    "2222": 0
+  },
+  "Q4_ordered_profile": [
+    0,
+    5,
+    22,
+    36,
+    24
+  ],
+  "two_seed_modular_cover": [
+    {
+      "a": 1,
+      "period": 2,
+      "first": 2,
+      "second": 2,
+      "union": 3
+    },
+    {
+      "a": 2,
+      "period": 6,
+      "first": 6,
+      "second": 6,
+      "union": 9
+    },
+    {
+      "a": 3,
+      "period": 18,
+      "first": 18,
+      "second": 18,
+      "union": 27
+    },
+    {
+      "a": 4,
+      "period": 54,
+      "first": 54,
+      "second": 54,
+      "union": 81
+    },
+    {
+      "a": 5,
+      "period": 162,
+      "first": 162,
+      "second": 162,
+      "union": 243
+    },
+    {
+      "a": 6,
+      "period": 486,
+      "first": 486,
+      "second": 486,
+      "union": 729
+    },
+    {
+      "a": 7,
+      "period": 1458,
+      "first": 1458,
+      "second": 1458,
+      "union": 2187
+    }
+  ],
+  "padding_checks": 12
+}

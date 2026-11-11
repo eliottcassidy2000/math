@@ -1,0 +1,84 @@
+{
+  "target": 52477,
+  "canonical_certificates": 4,
+  "minimum_order": 16,
+  "independent_smallest_graph_count": 52477,
+  "certificates": [
+    {
+      "core": "S5a",
+      "cut": 6,
+      "A": 11,
+      "B": 55,
+      "A_word": "1011",
+      "B_word": "110111",
+      "A_failure": {
+        "substring": "11",
+        "start": 2,
+        "sum": "10/9"
+      },
+      "B_failure": {
+        "substring": "11",
+        "start": 0,
+        "sum": "10/9"
+      },
+      "order": 16
+    },
+    {
+      "core": "S5a",
+      "cut": 19,
+      "A": 55,
+      "B": 11,
+      "A_word": "110111",
+      "B_word": "1011",
+      "A_failure": {
+        "substring": "11",
+        "start": 0,
+        "sum": "10/9"
+      },
+      "B_failure": {
+        "substring": "11",
+        "start": 2,
+        "sum": "10/9"
+      },
+      "order": 16
+    },
+    {
+      "core": "S4",
+      "cut": 10,
+      "A": 38,
+      "B": 42,
+      "A_word": "100110",
+      "B_word": "101010",
+      "A_failure": {
+        "substring": "11",
+        "start": 3,
+        "sum": "10/9"
+      },
+      "B_failure": {
+        "substring": "10101",
+        "start": 0,
+        "sum": "266/243"
+      },
+      "order": 17
+    },
+    {
+      "core": "S4",
+      "cut": 10,
+      "A": 42,
+      "B": 38,
+      "A_word": "101010",
+      "B_word": "100110",
+      "A_failure": {
+        "substring": "10101",
+        "start": 0,
+        "sum": "266/243"
+      },
+      "B_failure": {
+        "substring": "11",
+        "start": 3,
+        "sum": "10/9"
+      },
+      "order": 17
+    }
+  ]
+}

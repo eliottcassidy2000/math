@@ -1,0 +1,59 @@
+{
+  "engines": [
+    {
+      "normal_and_optimized_match": true,
+      "saved_output": "integral/results.json",
+      "script": "integral/probe.py",
+      "sha256": "e2de2a4b7fd1034f5ebc8285437f5a09e97da7f9305e01d04d28dacbe4895fa0"
+    },
+    {
+      "normal_and_optimized_match": true,
+      "saved_output": "moments/probe.out",
+      "script": "moments/probe.py",
+      "sha256": "086ee2f420fdf5ef613e2bbfdc0215f698274afb49e13fb21acb3ec9501eacd1"
+    },
+    {
+      "normal_and_optimized_match": true,
+      "saved_output": "niche/results.json",
+      "script": "niche/probe.py",
+      "sha256": "1b433e99e8b3e66e9f623be0e1af0bf33fcda8811b1eaf010405a1c2aa6d314d"
+    },
+    {
+      "normal_and_optimized_match": true,
+      "saved_output": "niche/cost_results.json",
+      "script": "niche/cost_probe.py",
+      "sha256": "3ab849fe7e7866cd3ba799e29240b829d3716afca75687a829eb081cf69a1d02"
+    },
+    {
+      "normal_and_optimized_match": true,
+      "saved_output": "niche/cube_results.json",
+      "script": "niche/cube_probe.py",
+      "sha256": "4df7fe9120773aba02576af1ecb981d1b26ed3a601ef98d26ab3a48c37e55862"
+    },
+    {
+      "normal_and_optimized_match": true,
+      "saved_output": "tournaments/probe.out",
+      "script": "tournaments/probe.py",
+      "sha256": "10b1938abb321dc3265858684eba4059bf9049293d903f1d54bff5a90b04d89e"
+    },
+    {
+      "normal_and_optimized_match": true,
+      "saved_output": "lrc/results.json",
+      "script": "lrc/probe.py",
+      "sha256": "03ec0503cadbb229fc7a5b53c09e55f5bf443ac74780f99e767dd93dc48c1b8f"
+    },
+    {
+      "normal_and_optimized_match": true,
+      "saved_output": "lrc/asymmetric.json",
+      "script": "lrc/asymmetric.py",
+      "sha256": "3ed860e99a75402ec88dcd03ce4d99f1c400e1b925713e887d1e12a6af2bf630"
+    },
+    {
+      "normal_and_optimized_match": true,
+      "saved_output": "lrc/hostile.json",
+      "script": "lrc/hostile.py",
+      "sha256": "a5de1d81c14725c47119cf597835a6bcabca3c8519bdbad86f6b47f4ab516466"
+    }
+  ],
+  "scope": "new claims only; inherited large scans not repeated"
+}

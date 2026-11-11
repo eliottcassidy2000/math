@@ -1,0 +1,174 @@
+{
+  "bounds": {
+    "255": {
+      "both_no11": {
+        "count": 124,
+        "first_missing": [
+          7,
+          21,
+          47,
+          63
+        ]
+      },
+      "both_safe": {
+        "count": 124,
+        "first_missing": [
+          7,
+          21,
+          47,
+          63
+        ]
+      },
+      "full": {
+        "count": 126,
+        "first_missing": [
+          7,
+          21
+        ]
+      },
+      "one_no11": {
+        "count": 126,
+        "first_missing": [
+          7,
+          21
+        ]
+      },
+      "one_safe": {
+        "count": 126,
+        "first_missing": [
+          7,
+          21
+        ]
+      }
+    },
+    "1023": {
+      "both_no11": {
+        "count": 499,
+        "first_missing": [
+          7,
+          21,
+          47,
+          63,
+          371,
+          475,
+          547,
+          619,
+          637,
+          647,
+          877,
+          903,
+          937
+        ]
+      },
+      "both_safe": {
+        "count": 493,
+        "first_missing": [
+          7,
+          21,
+          47,
+          63,
+          371,
+          475,
+          547,
+          595,
+          607,
+          619,
+          631,
+          637,
+          647,
+          841,
+          849,
+          877
+        ]
+      },
+      "full": {
+        "count": 510,
+        "first_missing": [
+          7,
+          21
+        ]
+      },
+      "one_no11": {
+        "count": 510,
+        "first_missing": [
+          7,
+          21
+        ]
+      },
+      "one_safe": {
+        "count": 510,
+        "first_missing": [
+          7,
+          21
+        ]
+      }
+    },
+    "4095": {
+      "both_no11": {
+        "count": 1957,
+        "first_missing": [
+          7,
+          21,
+          47,
+          63,
+          371,
+          475,
+          547,
+          619,
+          637,
+          647,
+          877,
+          903,
+          937,
+          1339,
+          1387,
+          1393
+        ]
+      },
+      "both_safe": {
+        "count": 1871,
+        "first_missing": [
+          7,
+          21,
+          47,
+          63,
+          371,
+          475,
+          547,
+          595,
+          607,
+          619,
+          631,
+          637,
+          647,
+          841,
+          849,
+          877
+        ]
+      },
+      "full": {
+        "count": 2046,
+        "first_missing": [
+          7,
+          21
+        ]
+      },
+      "one_no11": {
+        "count": 2046,
+        "first_missing": [
+          7,
+          21
+        ]
+      },
+      "one_safe": {
+        "count": 2046,
+        "first_missing": [
+          7,
+          21
+        ]
+      }
+    }
+  },
+  "coercivity_universe": 65535,
+  "signature_count": 82
+}
