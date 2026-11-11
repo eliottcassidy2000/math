@@ -86,3 +86,16 @@ S3 confirmed: the dimension count of W2 survives on a surface with nontrivial to
 before anything else is used. S4 confirmed: in the only planar non-proper etale map in canon, Gaussian moments see
 the missing sheets (evidence for the detection half of the ladder). S4 refuted (classes vanish from some m on): the
 one-sided rung does not detect non-properness, and only the two-sided statement W3 can.
+
+## Addendum (written after S2-S5 were run and before the run S6; pushed first)
+
+Outcomes of S2-S5 are in the outcomes section below (all four confirmed). A further test of the dimension count
+W2 on the slice, with LINEAR potentials (fibres are preimages of lines; `S_1` has bidegree (3, 2), total degree 4,
+two sheets missing over a generic point; `dim = b_1(fibre) - 1 + 1` as in S3, `b_1 = 1 - chi`,
+`chi = 3 (1 - n) + n = 3 - 2n` for a line meeting `S_1` in `n` points):
+
+- **S6.** `dim H^2(X_1, d - dW ^)` is 2 for `W = u` (`n = 2`), 4 for `W = v` (`n = 3`), and 6 for `W = u + v`
+  (`n = 4`).
+
+Reading: confirmed, the count is right for a second family of potentials with different intersection numbers;
+refuted, the agreement in S3 was partly accidental and W2 needs re-derivation.
