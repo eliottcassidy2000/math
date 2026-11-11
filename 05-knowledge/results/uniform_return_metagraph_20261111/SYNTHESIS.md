@@ -313,6 +313,12 @@ padding and carries additional curvature/jet coordinates. Its unit-H
 normalization does not apply to141, which is divisible by3, and modular
 agreement is not an exact integer source-return theorem.
 
+The final pull adds a second H13/C3 residue phase and an actual401 source
+repair, together with Session255's shared-driver finite machines. The new
+paired ray is provably disjoint from both current +4 target rays at every
+scale. The source-compatibility and shared-branch lessons are integrated in
+[the closing incoming note](INCOMING.md), with no imported coverage claim.
+
 The remaining Chan–Pak gate is still a uniform construction at the original
 target with a compatible next source. Finite family classification does not
 make every required transition positive; a ready return at a changed count

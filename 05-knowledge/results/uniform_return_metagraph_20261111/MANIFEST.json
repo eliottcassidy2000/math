@@ -1,9 +1,10 @@
 {
   "artifacts": {
+    "INCOMING.md": "92abb143acff45a1cf7b4c749b5fbdd800fe87b5f18d4ae65dbbc0c8aa185f2b",
     "README.md": "896bbe0a0ece12149a2d1357e4447b73c068cafc4364bf86ad226a84eb98bb0c",
     "REPLAY.json": "85ba057bd3a327c546760ffc9b9c463c9a7a9bbde15644db7ef5106485f0d078",
     "REPRODUCTION.md": "31cc5176b24fb14ae867e5eb2894e63eec1822448a4505c874c6ac5f0956b17d",
-    "SYNTHESIS.md": "da9c3222861901063d541234f9b87acf3af6abbf4a3c811695ebcda04539d45e",
+    "SYNTHESIS.md": "fc0c14c34ebd8dc3d58df3f4d13cb4cab3516a61314f87511a7ec271468b5341",
     "arithmetic/A002496_roots_through_1000000.txt": "7e0cab43bcacbbd320d05e82e250aa5b05ad794ef53990465008b3997debd971",
     "arithmetic/BIFLANK.md": "8846c94bd31f901d69e291db739620fa31f2b36629f3c0d0ab093b0ca6a59742",
     "arithmetic/CARRY_CONNECTION.md": "928e9ab2bb9fcb823264802ceb24ae26aec9545c49cc91a9f3e701c6e755c5a7",
@@ -140,15 +141,17 @@
     "reset/uniform_branch_order_probe.json": "ddccd957b6378011eae63a845461ac954ff58e46c94b813e130e565f07f77d82",
     "reset/uniform_return.json": "646703d608461b8c26b070a0098c2a4edb3d4b7cd7ccadf2cf37262579fa7ea7",
     "reset/uniform_return.py": "2e6ac3b0d1d87b9c7d6b8cb73bdeea3035f9a6813d1bba121545309d624fff19",
-    "seal.py": "5421f3472841144cccd3a03f74f18236b489c52b0df8fd75bc16f3ff93804c61"
+    "seal.py": "a2e8429d1a0c325ce68ec10c508f957085d7595e3454721448e20a3fafb32490"
   },
   "hash_basis": "LF-normalized bytes",
   "inherited_source_pins": {
     "01-canon/theorems/THM-4167-tournament-exposure-capacity-deletion-support-moment-and-parity-holonomy.md": "cd9ff803bc0af7bda0429bd86c1cb739efc3d9b54c0dd943a183ab6d1e71b539",
     "05-knowledge/results/chanpak_five_core_bridges_20261110/algebra/LOW_RATIO_FRONTIER.md": "61b54d1357fa20548b2a9048e34ec4f6c7b32f19850a258a79800cdb5a3003fb",
     "05-knowledge/results/chanpak_five_core_bridges_20261110/cover/positive_raw_signatures.json": "56c4a4756e2d48f47ed2d7566f2c02a55d6836daf536e54c9d1fb804a255519f",
+    "05-knowledge/results/h13_paired_descent_20261111/dynamics/INCOMING_REPAIR.md": "c55c175c195d013733ba35e9fdd1f484feb2d20470a2ad7fb031238b2788b2d3",
     "05-knowledge/results/h13_paired_descent_20261111/dynamics/PROOF.md": "7f7f09eb11718231346b0543da6585e7e743f8b78370bdf124ce4131c002cbd5",
     "05-knowledge/results/h13_paired_descent_20261111/modular_cycles/ADDITIVITY.md": "0d36811558ccc28e39bdccfb1d147cdc9fa6b7fee27b34a22477cd2e5402f067",
+    "05-knowledge/results/h13_paired_descent_20261111/square_graceful/RESIDUE_PHASE.md": "127f39c88d03d95d81b2312d5504c0b8d5257f4e07a7cff2aa0aa1680e373f99",
     "05-knowledge/results/infinite_birth_families_20261111/BIRTH_THEOREMS.md": "b735a643f05ab3b494fb1142ac7225a16223f8451bff112c910a65b223689165",
     "05-knowledge/results/ready_return_pentagon_20261103/ATLAS.md": "455588b2733871e3f80ac826c1bfa0bd65a62d9af2d516c6a444e3927a0e3a40",
     "05-knowledge/results/ready_return_pentagon_20261103/OBSTRUCTION.md": "5890c526288797d4bd80ffaa5eefaa9aa148ee928163f104dea76fc5c4fc39ef",
@@ -157,6 +160,7 @@
     "05-knowledge/results/session251_creative_completion_20261111/ternary/compiler.py": "56c231002bb23fe56ced0455b0ffa4167fd4905f2aa38f313073d172d77cbc62",
     "05-knowledge/results/session252_fivefold_bridges_20261111/algebra/PROOF.md": "faa092dd428722bc1b86b12bc16804115a282db2ca0ea6cb84d1ea061a028d12",
     "05-knowledge/results/session254_four_frontiers_20261111/chan_pak/PROOF.md": "fcb273ed02985553a2281e51614c0e74be7dafa0d12aaa486204c18aad2a17e0",
+    "05-knowledge/results/session255_modular_collatz_20261111/finite_infinite/PROOF.md": "98c022cba7ee3791ce9914db318472498cb0e0450714902b6a68627210ba9e54",
     "05-knowledge/results/two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c"
   }
 }

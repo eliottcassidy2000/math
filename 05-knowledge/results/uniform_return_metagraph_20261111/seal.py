@@ -19,6 +19,9 @@ PINS=[
  '05-knowledge/results/h13_paired_descent_20261111/dynamics/PROOF.md',
  '05-knowledge/results/h13_paired_descent_20261111/modular_cycles/ADDITIVITY.md',
  '05-knowledge/results/session254_four_frontiers_20261111/chan_pak/PROOF.md',
+ '05-knowledge/results/h13_paired_descent_20261111/square_graceful/RESIDUE_PHASE.md',
+ '05-knowledge/results/h13_paired_descent_20261111/dynamics/INCOMING_REPAIR.md',
+ '05-knowledge/results/session255_modular_collatz_20261111/finite_infinite/PROOF.md',
 ]
 
 
