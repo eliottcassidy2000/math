@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "new_constructions_only": true,
+  "checks": [
+    {
+      "program": "shadows/replay.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_identical": true,
+      "receipt": "shadows/RESULTS.json",
+      "receipt_sha256": "d791d4d918c5215d93f7eb6d525297a413a1e22d38fc7fb97af548289facc7b0"
+    },
+    {
+      "program": "doubling/construct.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_identical": true,
+      "receipt": "doubling/receipt.json",
+      "receipt_sha256": "450450eed094d72bd744eb1d8fdc71b92880346cc92a7a85358ecc417c67124a"
+    },
+    {
+      "program": "collatz/controls.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_identical": true,
+      "receipt": "collatz/RESULTS.json",
+      "receipt_sha256": "076d123463ddef674d618286a059bb255a7a225188ea68c8a40fce517eb15e4d"
+    },
+    {
+      "program": "geometry/replay.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_identical": true,
+      "receipt": "geometry/receipt.json",
+      "receipt_sha256": "dbd3b8244bc1ad8da3500f41d5f2e8b280773490f9bcd138bf17f510c2751c83"
+    },
+    {
+      "program": "bridge.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_identical": true,
+      "receipt": "BRIDGE_RECEIPT.json",
+      "receipt_sha256": "7bf6482c00a2b159d562f5d5aec59c63458376d4337d884fd28ee09dbd8ccdc6"
+    }
+  ],
+  "navigation_check": "PASS",
+  "navigation_initial_byte_budget_fixed": true,
+  "inherited_claims_not_reaudited": true
+}

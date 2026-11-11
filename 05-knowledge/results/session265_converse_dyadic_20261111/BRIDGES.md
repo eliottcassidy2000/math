@@ -51,6 +51,48 @@ channel as an unconditioned scalar tournament count.
 gate-position dynamic program on all eight resulting tournaments. The
 all-m statement is the bijection and inherited wrapper law above.
 
+## A two-sided physical reader extracts a step of2
+
+There is a sharper cross-lane consequence than the primitive difference gcd.
+Let L be the two-vertex transitive tournament whose root is its source, and
+let R be a rooted triangle. Form X=L⋆A⋆R and Y=L⋆B⋆R, using the SAME labelled
+contexts on both sides. The Fano data have
+
+    delta(H,h,Q,k,U,V,d,e)=(0,0,0,0,3,-3,-1,1).
+
+The fusion matrix law therefore gives, for arbitrary pointed L,R,
+
+    H(L⋆A⋆R)-H(L⋆B⋆R)
+      = h_L(3V_R-e_R)-h_R(3U_L-d_L).                    (B3)
+
+For this L, (h,U,d)=(1,2,0); for R, (h,V,e)=(1,3,1).
+Thus the difference is (9-1)-(6-0)=2, with the actual counts
+
+    H(X)=1771,    H(Y)=1769,    |X|=|Y|=10.
+
+Both outputs are strong. The root-sharing A/R portion is strong. The extra
+nonroot vertex of L receives an arc from the root and sends arcs to all
+nonroot A vertices, so it lies in that same strong component. The argument
+applies equally to B. The executable provides both literal adjacency lists,
+subset-DP counts and independent Hamiltonian-path enumeration.
+
+This is not a formal subtraction construction: X and Y are two explicitly
+built positive tournaments. The subtraction compares their counts. It shows
+that the converse-hidden response can produce the smallest possible nonzero
+scalar difference after a fixed ordinary context. It does NOT supply such a
+step at an arbitrary starting count, a reusable +2 operation, or an interval
+of attainable counts. The values1769 and1771 themselves were already within
+the inherited covered range; the new information is this context and its
+information-loss explanation.
+
+One-sided fusion cannot make the same extraction. With only a right context
+R, write a_e,a_o for its nontrivial root-ending even/odd weighted path masses.
+The difference is4a_e+2a_o. If a_o>0, a nontrivial odd root-ending path has an
+incoming final edge, and the two-vertex root-ending path contributes at least1
+to a_e. Thus a nonzero one-sided response is at least4. The two-sided reader
+is genuinely using a cancellation between two physical response channels,
+not a hidden one-sided selector.
+
 ## The exact arithmetic distinction at63
 
 Accept the inherited all-order exclusions of7 and21 from

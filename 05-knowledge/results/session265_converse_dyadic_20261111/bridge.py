@@ -65,7 +65,28 @@ def run():
         rows.append(dict(m=m, order=len(TX), H=hx, start_A=sum(px),
                          start_B=sum(py), start_gap=sum(px)-sum(py),
                          gate_histogram_difference=[x-y for x,y in zip(px,py)]))
-    return dict(status="PASS", composites=8, rows=rows)
+    # A two-sided physical context cancels the even packet and reads a gap2.
+    left, right = (2, 0), (2, 4, 1)
+    X = c.fuse(c.fuse(left, A), right)
+    Y = c.fuse(c.fuse(left, B), right)
+    unit = dict(order=len(X), A=list(X), B=list(Y), H_A=c.hp(X)[-1], H_B=c.hp(Y)[-1])
+    assert (unit['H_A'], unit['H_B']) == (1771, 1769)
+    for T in (X,Y):
+        for v in range(len(T)):
+            seen = 1 << v
+            while True:
+                nxt = seen
+                for i in range(len(T)):
+                    if seen >> i & 1: nxt |= T[i]
+                if nxt == seen: break
+                seen = nxt
+            assert seen == (1 << len(T))-1
+    other_spec = importlib.util.spec_from_file_location("s265_paths", ROOT / "geometry/replay.py")
+    other = importlib.util.module_from_spec(other_spec); other_spec.loader.exec_module(other)
+    assert len(other.paths(X)) == 1771 and len(other.paths(Y)) == 1769
+    unit['independent_path_enumeration'] = True
+    unit['both_strong'] = True
+    return dict(status="PASS", composites=10, rows=rows, unit_step=unit)
 
 
 if __name__ == "__main__":

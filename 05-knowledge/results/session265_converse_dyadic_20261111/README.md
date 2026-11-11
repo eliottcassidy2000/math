@@ -1,6 +1,10 @@
 # Session265: converse shadows, dyadic lifts, and Fano switches
 
-**11 November 2026. Research in progress. Chan–Pak remains OPEN.**
+**11 November2026. Complete. Chan–Pak and Collatz remain OPEN.**
+
+[Final synthesis](SYNTHESIS.md), [cross-lane constructions](BRIDGES.md),
+[open questions](OPEN_QUESTIONS.md), [sources](SOURCES.md),
+[reproduction](REPRODUCE.md).
 
 Starting main: `9fb167b45db1`. The session accepts inherited proved mechanisms
 as inputs and concentrates on new constructions, as requested.

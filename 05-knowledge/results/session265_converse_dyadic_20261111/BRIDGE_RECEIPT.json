@@ -1,5 +1,5 @@
 {
-  "composites": 8,
+  "composites": 10,
   "rows": [
     {
       "H": 2151,
@@ -88,5 +88,36 @@
       "start_gap": 24
     }
   ],
-  "status": "PASS"
+  "status": "PASS",
+  "unit_step": {
+    "A": [
+      310,
+      1020,
+      856,
+      817,
+      992,
+      964,
+      905,
+      781,
+      512,
+      1
+    ],
+    "B": [
+      458,
+      1020,
+      929,
+      964,
+      781,
+      793,
+      820,
+      880,
+      512,
+      1
+    ],
+    "H_A": 1771,
+    "H_B": 1769,
+    "both_strong": true,
+    "independent_path_enumeration": true,
+    "order": 10
+  }
 }
