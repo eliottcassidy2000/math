@@ -38,14 +38,14 @@ python3 agents/start_session.py --topic "<target statement or object>"
    THM-4449--4453 and the inert-profile envelope sharpen dyadic mass/width gates;
    body entry and `2+12` remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
-3. **Good-period existence is a maximum statement.** The tight resonant AP
-   defeats average/count arguments; see MISTAKE-127/129/130.
+3. **Good periods require a maximum bound.** The tight resonant AP defeats
+   average/count arguments (MISTAKE-127/129/130).
 4. **The tight/sporadic locus is finite but unclassified.** THM-763 bounds
    height; THM-1171/1284 close AP and first-gap single-far strata.
 5. **Exact LRC(14) computation is sound through height 55.** THM-1290, rerun
    after MISTAKE-194, also empties `(1/14,3/41)` through height 64.
-6. **The 13-speed floor is isolated from above.** THM-1289 imports the
-   ineffective one-sided gap; it does not make the first window finite.
+6. **The 13-speed floor is isolated above.** THM-1289's ineffective one-sided
+   gap does not make the first window finite.
 7. **NC2 and GMC(2) are proved.** THM-2022 combines torus descent, a lowest
    balanced face, THM-2111's seed, and whole-face good-prime amplification.
    Root theorem `GMC2Main.gmc2` is unconditional through
