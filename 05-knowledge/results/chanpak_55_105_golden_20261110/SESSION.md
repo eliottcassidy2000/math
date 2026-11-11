@@ -79,6 +79,14 @@ The strongest survivor is the separate-source rule. A demonstrated reset
 replaces that implication at105; a universal source-selection rule is the
 new question. No external novelty claim or new META-PATTERNS card is made.
 
+All six checker pairs were freshly executed normally and with Python
+optimization after integrating incoming work. Their outputs match the
+saved receipts. The reproduction validator covers31 artifacts,22 distinct
+pinned inputs and33 local links; the mutable mistakes-ledger reference is
+verified against its recorded source commit. Current routing is added to
+HN and the results index, already reachable from CURRENT-FRONTIER, keeping
+the bounded startup surface unchanged.
+
 Chan–Pak section6.5 was freshly checked at the primary author-hosted PDF
 linked in README. It states the odd-spectrum conjecture and its2016
 attribution. Physical square-packing claims were not imported; only the
