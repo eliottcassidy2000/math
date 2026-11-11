@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "inverse_entries": 9999,
+  "quadratic_prime_entries": 6656,
+  "source_packet": "uniform_return_metagraph_20261111/arithmetic",
+  "source_hashes": {
+    "maxima.py": "8e48749e3b5beaa9cba3c289fcd0c68e1383a056763a07c2bd1b23f095cbe448",
+    "quadratic_primes.py": "af498ac643ae7e2613421161f16b95011fa5bd696b421a17fd4b665443bcd25c"
+  }
+}

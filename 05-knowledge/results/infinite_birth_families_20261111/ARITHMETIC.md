@@ -176,3 +176,35 @@ The arithmetic sieve, the inverse-fibre equivalence, the seed ray map,
 and the tournament class census therefore have explicit but different
 interfaces. None proves Landau infinitude, Chan-Pak, Collatz convergence,
 or a relation between those open problems.
+
+## 7. Concurrent stronger enumeration, integrated before close-out
+
+The incoming [uniform-return arithmetic packet](../uniform_return_metagraph_20261111/arithmetic/PROOF.md)
+independently derives the same extremal quadratic equivalence and strengthens
+the factor-layer bound to
+
+    s(m)>=sum_(j=0)^(r-1) m^(j/r), when Omega(m)>=r.
+
+It retains the chain of products of the largest prime factors, whereas A1
+retains only its last term. Its explicit third-layer bound is
+
+    B3(n)=(isqrt(n^2*(4n-3))-3n+2)//2.
+
+Its adaptive maximum-only enumerator additionally separates even sources
+and odd squares and certifies most odd targets by the closest prime pair.
+It reports the complete inverse prefix through one million and quadratic
+inputs through one million (54,110 prime values). Those larger ranges are
+**INHERITED receipts**, not rerun ranges of this packet.
+
+We independently replayed both incoming engines at our own full ranges:
+all 9,999 inverse entries and 6,656 quadratic prime entries agree exactly.
+The quadratic comparison also imports a distinct Lucas-certificate path.
+The source versions are pinned in incoming_comparison.json.
+
+The same incoming proof establishes the unconditional infinite family
+A135244(p+q+1)=pq for consecutive odd primes p<q, using Bertrand's bound
+q<2p and the sharper third-factor exclusion. This explains the entries
+at 13 and 19 as members of an infinite certified family. Our earlier
+three-stratum sieve remains a separate transparent control, not the
+repository's fastest or largest current prefix engine. No priority is
+claimed for the concurrently derived extremal bridge.

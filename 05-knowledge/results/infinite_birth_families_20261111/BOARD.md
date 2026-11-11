@@ -64,6 +64,22 @@ source-padding criteria were already proved. They are credited explicitly;
 this packet's contribution there is the complete orbit multiplicity bank,
 its rational-family compiler, and the independent child-first replay.
 
+The final pull through efa490ca63 adds the concurrent
+[fixed-cap operation grammar](../uniform_return_metagraph_20261111/metagraph/FAMILIES.md):
+birth/deletion and arc reversal have finite local SCC rules at each cap;
+literal native complement lines under the cap have bounded total order.
+This independently recovers our interval mechanism and extends the
+operation menu. Our 946-family census instantiates its birth layer at
+cap124, with exact multiplicities and source compatibility. We do not
+claim its full operation dictionary was enumerated at that cap here.
+
+Its [arithmetic engine](../uniform_return_metagraph_20261111/arithmetic/README.md)
+also improves the factor-layer bound and reaches million-size prefixes.
+Both incoming engines were replayed at our complete ranges and agree.
+The extremal quadratic bridge is concurrent; no priority claim is made.
+The H13 paired-descent packet retains actual source changes, reinforcing
+the need to compose the marked graph rather than a count-only transition.
+
 Method cards used: Search the statement before the method; Retain local
 incidence through counting; Type every analogy and every implication;
 Classify the target over the exceptional stratum before closing by density.

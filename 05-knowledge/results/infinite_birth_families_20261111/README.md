@@ -124,3 +124,11 @@ Full metagraph wiring, arbitrary primitive H kernels, all odd seeds, and
 the required uniform Chan-Pak construction remain open. Source identities
 must survive when composing the counted operations; scalar positivity
 alone is insufficient.
+
+The final integration also checks the concurrent
+[stronger arithmetic engines](../uniform_return_metagraph_20261111/arithmetic/README.md)
+against our complete ranges and connects the
+[fixed-cap operation grammar](../uniform_return_metagraph_20261111/metagraph/FAMILIES.md).
+Its larger million-size arithmetic receipts are inherited, not claimed as
+our rerun ranges. Its full operation menu complements our enumerated birth
+layer; neither supplies an unbounded-cap classification or Chan-Pak proof.
