@@ -1,0 +1,37 @@
+(T1) block law, exhaustive A < 64, m <= 6 and 20000 random cases: True
+(T4) w = 9 (s1, s2) = (5, 4): 49770 random odd pairs, failures of the split identities: 0
+(T4) w = 10 (s1, s2) = (5, 5): 50207 random odd pairs, failures of the split identities: 0
+(T4) w = 11 (s1, s2) = (6, 5): 49699 random odd pairs, failures of the split identities: 0
+(T4) w = 12 (s1, s2) = (6, 6): 50111 random odd pairs, failures of the split identities: 0
+(T4) w = 13 (s1, s2) = (7, 6): 50122 random odd pairs, failures of the split identities: 0
+(T5) s =  2: sum r^2 |a|^(-1/2) = 0.934 * 6^s 2^(-s/2) (bound 42); shares of |D| < 2^(s-j), j = 0..3: 1.0000 0.7222 0.4444 (bounds 1.6667 1.1111 0.7407 0.4938): True
+(T5) s =  3: sum r^2 |a|^(-1/2) = 1.377 * 6^s 2^(-s/2) (bound 42); shares of |D| < 2^(s-j), j = 0..3: 1.0000 0.7593 0.4907 0.2963 (bounds 1.6667 1.1111 0.7407 0.4938): True
+(T5) s =  4: sum r^2 |a|^(-1/2) = 1.797 * 6^s 2^(-s/2) (bound 42); shares of |D| < 2^(s-j), j = 0..3: 1.0000 0.7840 0.5216 0.3287 (bounds 1.6667 1.1111 0.7407 0.4938): True
+(T5) s =  5: sum r^2 |a|^(-1/2) = 2.194 * 6^s 2^(-s/2) (bound 42); shares of |D| < 2^(s-j), j = 0..3: 1.0000 0.8004 0.5422 0.3503 (bounds 1.6667 1.1111 0.7407 0.4938): True
+(T5) s =  6: sum r^2 |a|^(-1/2) = 2.569 * 6^s 2^(-s/2) (bound 42); shares of |D| < 2^(s-j), j = 0..3: 1.0000 0.8114 0.5559 0.3647 (bounds 1.6667 1.1111 0.7407 0.4938): True
+(T5) s =  7: sum r^2 |a|^(-1/2) = 2.922 * 6^s 2^(-s/2) (bound 42); shares of |D| < 2^(s-j), j = 0..3: 1.0000 0.8187 0.5650 0.3743 (bounds 1.6667 1.1111 0.7407 0.4938): True
+(T5) s =  8: sum r^2 |a|^(-1/2) = 3.255 * 6^s 2^(-s/2) (bound 42); shares of |D| < 2^(s-j), j = 0..3: 1.0000 0.8236 0.5711 0.3807 (bounds 1.6667 1.1111 0.7407 0.4938): True
+(T5) s =  9: sum r^2 |a|^(-1/2) = 3.569 * 6^s 2^(-s/2) (bound 42); shares of |D| < 2^(s-j), j = 0..3: 1.0000 0.8268 0.5752 0.3850 (bounds 1.6667 1.1111 0.7407 0.4938): True
+(T5) s = 10: sum r^2 |a|^(-1/2) = 3.865 * 6^s 2^(-s/2) (bound 42); shares of |D| < 2^(s-j), j = 0..3: 1.0000 0.8290 0.5779 0.3878 (bounds 1.6667 1.1111 0.7407 0.4938): True
+(T5) s = 11: sum r^2 |a|^(-1/2) = 4.144 * 6^s 2^(-s/2) (bound 42); shares of |D| < 2^(s-j), j = 0..3: 1.0000 0.8304 0.5797 0.3897 (bounds 1.6667 1.1111 0.7407 0.4938): True
+(T5) s = 12: sum r^2 |a|^(-1/2) = 4.407 * 6^s 2^(-s/2) (bound 42); shares of |D| < 2^(s-j), j = 0..3: 1.0000 0.8314 0.5809 0.3910 (bounds 1.6667 1.1111 0.7407 0.4938): True
+(T2) n = 8: 92 unordered colliding pairs; equation failures 0, parity failures 0; max |s - t'| among pairs with runs <= R, R = 1..8: [0, 1, 2, 2, 2, 2, 2, 2] (bound R + 3): True
+(T2) n = 10: 456 unordered colliding pairs; equation failures 0, parity failures 0; max |s - t'| among pairs with runs <= R, R = 1..8: [0, 2, 3, 3, 3, 3, 3, 3] (bound R + 3): True
+(T2) n = 12: 1820 unordered colliding pairs; equation failures 0, parity failures 0; max |s - t'| among pairs with runs <= R, R = 1..8: [0, 2, 4, 4, 4, 4, 4, 4] (bound R + 3): True
+(T2) n = 14: 7736 unordered colliding pairs; equation failures 0, parity failures 0; max |s - t'| among pairs with runs <= R, R = 1..8: [0, 2, 4, 5, 5, 5, 5, 5] (bound R + 3): True
+(T2) n = 16: 31108 unordered colliding pairs; equation failures 0, parity failures 0; max |s - t'| among pairs with runs <= R, R = 1..8: [0, 3, 4, 5, 6, 6, 6, 6] (bound R + 3): True
+(T2) n = 18: 126088 unordered colliding pairs; equation failures 0, parity failures 0; max |s - t'| among pairs with runs <= R, R = 1..8: [0, 2, 4, 5, 6, 7, 7, 7] (bound R + 3): True
+(T2) n = 20: 509020 unordered colliding pairs; equation failures 0, parity failures 0; max |s - t'| among pairs with runs <= R, R = 1..8: [0, 3, 4, 5, 6, 7, 8, 8] (bound R + 3): True
+(T2) n = 22: 2026664 unordered colliding pairs; equation failures 0, parity failures 0; max |s - t'| among pairs with runs <= R, R = 1..8: [0, 3, 4, 6, 6, 7, 8, 9] (bound R + 3): True
+(T3) w =  4: S_odd = 29.8 = 0.8284 * 6^(w/2) = 0.46599 * 8^(w/2); max over i of N(M in [2^i, 2^(i+1)))/2^i = 0.6667 * 6^(w/2) at i = 0
+(T3) w =  5: S_odd = 89.5 = 1.0151 * 6^(w/2) = 0.49449 * 8^(w/2); max over i of N(M in [2^i, 2^(i+1)))/2^i = 0.8165 * 6^(w/2) at i = 0
+(T3) w =  6: S_odd = 194.6 = 0.9011 * 6^(w/2) = 0.38013 * 8^(w/2); max over i of N(M in [2^i, 2^(i+1)))/2^i = 0.6667 * 6^(w/2) at i = 0
+(T3) w =  7: S_odd = 559.0 = 1.0565 * 6^(w/2) = 0.38601 * 8^(w/2); max over i of N(M in [2^i, 2^(i+1)))/2^i = 0.8165 * 6^(w/2) at i = 0
+(T3) w =  8: S_odd = 1189.2 = 0.9176 * 6^(w/2) = 0.29033 * 8^(w/2); max over i of N(M in [2^i, 2^(i+1)))/2^i = 0.6667 * 6^(w/2) at i = 0
+(T3) w =  9: S_odd = 3363.0 = 1.0594 * 6^(w/2) = 0.29028 * 8^(w/2); max over i of N(M in [2^i, 2^(i+1)))/2^i = 0.8165 * 6^(w/2) at i = 0
+(T3) w = 10: S_odd = 7040.7 = 0.9054 * 6^(w/2) = 0.21486 * 8^(w/2); max over i of N(M in [2^i, 2^(i+1)))/2^i = 0.6667 * 6^(w/2) at i = 0
+(T3) w = 11: S_odd = 19946.8 = 1.0472 * 6^(w/2) = 0.21522 * 8^(w/2); max over i of N(M in [2^i, 2^(i+1)))/2^i = 0.8165 * 6^(w/2) at i = 0
+(T3) w = 12: S_odd = 40794.9 = 0.8744 * 6^(w/2) = 0.15562 * 8^(w/2); max over i of N(M in [2^i, 2^(i+1)))/2^i = 0.6667 * 6^(w/2) at i = 0
+(T3) w = 13: S_odd = 115402.9 = 1.0098 * 6^(w/2) = 0.15564 * 8^(w/2); max over i of N(M in [2^i, 2^(i+1)))/2^i = 0.8165 * 6^(w/2) at i = 0
+     N(M ~ 2^i)/2^i / 6^(w/2) for i = 0..w: 0.816 0.013 0.029 0.023 0.035 0.026 0.028 0.024 0.022 0.021 0.028 0.014 0.016 0.000
+ALL CHECKS PASSED

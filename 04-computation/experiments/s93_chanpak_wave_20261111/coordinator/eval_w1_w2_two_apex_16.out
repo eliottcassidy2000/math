@@ -1,0 +1,39 @@
+transfer count = brute force for n <= 4: True
+n =  2: 16 words, 0 with H >= 2^23, distinct odd values below 2^23: 3
+n =  3: 64 words, 0 with H >= 2^23, distinct odd values below 2^23: 7
+n =  4: 256 words, 0 with H >= 2^23, distinct odd values below 2^23: 19
+n =  5: 1024 words, 0 with H >= 2^23, distinct odd values below 2^23: 59
+n =  6: 4096 words, 0 with H >= 2^23, distinct odd values below 2^23: 202
+n =  7: 16384 words, 0 with H >= 2^23, distinct odd values below 2^23: 617
+n =  8: 65536 words, 0 with H >= 2^23, distinct odd values below 2^23: 1967
+n =  9: 262144 words, 0 with H >= 2^23, distinct odd values below 2^23: 6245
+n = 10: 1048576 words, 0 with H >= 2^23, distinct odd values below 2^23: 19876
+n = 11: 4194304 words, 0 with H >= 2^23, distinct odd values below 2^23: 63113
+n = 12: 16777216 words, 0 with H >= 2^23, distinct odd values below 2^23: 200235
+n = 13: 67108864 words, 0 with H >= 2^23, distinct odd values below 2^23: 632718
+n = 14: 268435456 words, 0 with H >= 2^23, distinct odd values below 2^23: 1993151
+n = 15: 1073741824 words, 10804051 with H >= 2^23, distinct odd values below 2^23: 4194089
+n = 16: 4294967296 words, 950481345 with H >= 2^23, distinct odd values below 2^23: 4194302
+odd N < 2^23 not attained by words of length <= 16: [7, 21] (2 in all)
+W1: odd N in [2^21, 2^23) not attained: 0 -> CONFIRMED
+  odd N in [2^3, 2^4): min multiplicity 630, median 3020, mean 2831.5, zeros 0
+  odd N in [2^4, 2^5): min multiplicity 0, median 2684, mean 2580.5, zeros 1
+  odd N in [2^5, 2^6): min multiplicity 624, median 2236, mean 3023.8, zeros 0
+  odd N in [2^6, 2^7): min multiplicity 858, median 3027, mean 3462.7, zeros 0
+  odd N in [2^7, 2^8): min multiplicity 1016, median 3493, mean 4011.8, zeros 0
+  odd N in [2^8, 2^9): min multiplicity 1994, median 4256, mean 4330.8, zeros 0
+  odd N in [2^9, 2^10): min multiplicity 1432, median 4643, mean 4786.6, zeros 0
+  odd N in [2^10, 2^11): min multiplicity 2654, median 5126, mean 5175.1, zeros 0
+  odd N in [2^11, 2^12): min multiplicity 3204, median 5377, mean 5413.3, zeros 0
+  odd N in [2^12, 2^13): min multiplicity 3482, median 5600, mean 5609.4, zeros 0
+  odd N in [2^13, 2^14): min multiplicity 4012, median 5638, mean 5658.1, zeros 0
+  odd N in [2^14, 2^15): min multiplicity 3812, median 5488, mean 5498.7, zeros 0
+  odd N in [2^15, 2^16): min multiplicity 3206, median 5175, mean 5190.6, zeros 0
+  odd N in [2^16, 2^17): min multiplicity 3474, median 4682, mean 4692.2, zeros 0
+  odd N in [2^17, 2^18): min multiplicity 2952, median 4016, mean 4034.4, zeros 0
+  odd N in [2^18, 2^19): min multiplicity 2278, median 3284, mean 3300.7, zeros 0
+  odd N in [2^19, 2^20): min multiplicity 1670, median 2480, mean 2501.6, zeros 0
+  odd N in [2^20, 2^21): min multiplicity 1042, median 1702, mean 1728.4, zeros 0
+  odd N in [2^21, 2^22): min multiplicity 566, median 1032, mean 1051.0, zeros 0
+  odd N in [2^22, 2^23): min multiplicity 218, median 490, mean 512.8, zeros 0
+W2: minimum multiplicity over the odd N of [2^21, 2^22): 566 (registered: at least 100) -> CONFIRMED

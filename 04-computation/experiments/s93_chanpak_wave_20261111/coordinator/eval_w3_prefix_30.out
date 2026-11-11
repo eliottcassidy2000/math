@@ -1,0 +1,12 @@
+n = 30: 536870912 words; colliding pairs per word: 0.9593
+  common prefix >= 1: 0.95935 pairs per word
+  common prefix >= 3: 0.28474 pairs per word
+  common prefix >= 4: 0.14668 pairs per word  registered [0.118, 0.185]: inside
+  common prefix >= 5: 0.07458 pairs per word
+  common prefix >= 6: 0.03771 pairs per word
+  common prefix >= 7: 0.01902 pairs per word  registered [0.015, 0.024]: inside
+  common prefix >= 8: 0.00956 pairs per word
+  common prefix >= 9: 0.00478 pairs per word  registered [0.0037, 0.0058]: inside
+  common prefix >= 8: 0.00956 pairs per word
+  distinct (prefix of length 8, value) classes: 531798136 of 536870912 (0.9906; registered at least 0.95 for n = 28, 30)
+W3 at n = 30: CONFIRMED

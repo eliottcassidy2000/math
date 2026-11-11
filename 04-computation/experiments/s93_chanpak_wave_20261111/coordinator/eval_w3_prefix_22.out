@@ -1,0 +1,11 @@
+n = 22: 2097152 words; colliding pairs per word: 0.9664
+  common prefix >= 1: 0.96639 pairs per word
+  common prefix >= 3: 0.28734 pairs per word
+  common prefix >= 4: 0.14788 pairs per word
+  common prefix >= 5: 0.07488 pairs per word
+  common prefix >= 6: 0.03739 pairs per word
+  common prefix >= 7: 0.01829 pairs per word
+  common prefix >= 8: 0.00859 pairs per word
+  common prefix >= 9: 0.00383 pairs per word
+  common prefix >= 6: 0.03739 pairs per word
+  distinct (prefix of length 6, value) classes: 2021755 of 2097152 (0.9640; registered at least 0.95 for n = 28, 30)

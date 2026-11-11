@@ -1,0 +1,26 @@
+(L1) injectivity of eps -> (D(eps), D(rev eps)) on {-1,0,1}^w
+  w =  1: True
+  w =  2: True
+  w =  3: True
+  w =  4: True
+  w =  5: True
+  w =  6: True
+  w =  7: True
+  w =  8: True
+  w =  9: True
+  w = 10: True
+  w = 11: True
+  w = 12: True
+  w = 13: True
+  w = 14: True
+(L2)-(L5)
+  w =  2: energy = 36 (6^w = 36, equal: True); S_all/6^(w/2) = 1.3333, S_odd/6^(w/2) = 0.6667; max Q = 4 at (1,2) = 0.667 * 6^(w/2), odd dirs: 0.333; max over odd d >= 2^(w/2+1) of N_d/6^(w/2) = 0.0000 (d = 0)
+  w =  3: energy = 216 (6^w = 216, equal: True); S_all/6^(w/2) = 2.2318, S_odd/6^(w/2) = 0.8709; max Q = 16 at (1,1) = 1.089 * 6^(w/2), odd dirs: 0.544; max over odd d >= 2^(w/2+1) of N_d/6^(w/2) = 0.2722 (d = 5)
+  w =  4: energy = 1296 (6^w = 1296, equal: True); S_all/6^(w/2) = 2.7840, S_odd/6^(w/2) = 0.8284; max Q = 32 at (1,2) = 0.889 * 6^(w/2), odd dirs: 0.333; max over odd d >= 2^(w/2+1) of N_d/6^(w/2) = 0.2778 (d = 9)
+  w =  5: energy = 7776 (6^w = 7776, equal: True); S_all/6^(w/2) = 3.6837, S_odd/6^(w/2) = 1.0151; max Q = 112 at (1,1) = 1.270 * 6^(w/2), odd dirs: 0.544; max over odd d >= 2^(w/2+1) of N_d/6^(w/2) = 0.1814 (d = 9)
+  w =  6: energy = 46656 (6^w = 46656, equal: True); S_all/6^(w/2) = 4.1498, S_odd/6^(w/2) = 0.9011; max Q = 224 at (1,2) = 1.037 * 6^(w/2), odd dirs: 0.333; max over odd d >= 2^(w/2+1) of N_d/6^(w/2) = 0.1481 (d = 31)
+  w =  7: energy = 279936 (6^w = 279936, equal: True); S_all/6^(w/2) = 4.9011, S_odd/6^(w/2) = 1.0565; max Q = 736 at (1,1) = 1.391 * 6^(w/2), odd dirs: 0.544; max over odd d >= 2^(w/2+1) of N_d/6^(w/2) = 0.1966 (d = 21)
+  w =  8: energy = 1679616 (6^w = 1679616, equal: True); S_all/6^(w/2) = 5.1998, S_odd/6^(w/2) = 0.9176; max Q = 1472 at (1,2) = 1.136 * 6^(w/2), odd dirs: 0.333; max over odd d >= 2^(w/2+1) of N_d/6^(w/2) = 0.0988 (d = 43)
+  w =  9: energy = 10077696 (6^w = 10077696, equal: True); S_all/6^(w/2) = 5.7810, S_odd/6^(w/2) = 1.0594; max Q = 4672 at (1,1) = 1.472 * 6^(w/2), odd dirs: 0.544; max over odd d >= 2^(w/2+1) of N_d/6^(w/2) = 0.1210 (d = 45)
+  w = 10: energy = 60466176 (6^w = 60466176, equal: True); S_all/6^(w/2) = 5.9142, S_odd/6^(w/2) = 0.9054; max Q = 9344 at (1,2) = 1.202 * 6^(w/2), odd dirs: 0.333; max over odd d >= 2^(w/2+1) of N_d/6^(w/2) = 0.1029 (d = 73)
+  w = 11: energy = 362797056 (6^w = 362797056, equal: True); S_all/6^(w/2) = 6.3504, S_odd/6^(w/2) = 1.0472; max Q = 29056 at (1,1) = 1.525 * 6^(w/2), odd dirs: 0.544; max over odd d >= 2^(w/2+1) of N_d/6^(w/2) = 0.1289 (d = 93)
