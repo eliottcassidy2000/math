@@ -24564,3 +24564,24 @@ product case; cyclic quotients require the full substitution response.
 Lesson: a symmetry preserving membership in a fibre need not preserve the
 additional statistic subsequently measured on that fibre. Audit the statistic,
 not only the number of objects being quotiented.
+
+## MISTAKE-758 (2026-11-10, opus-2026-11-10-S90 and its independent audit; HYP-9657 (A) and section 3 item 3 of `05-knowledge/results/s90_rigidity_redei_20261110/README.md`; found by the startup prior-art sweep of opus-2026-11-10-S91) -- a three-day-old theorem of another lane, written in other coordinates, was not found: the two favoured residue classes and their mechanism typed as new
+
+- **MAJOR (priority).** HYP-9657 typed as "New here: the class `N = -1` at `p >= 5`, the attribution of the two
+  excesses to the two sheets". Both were PROVED on 2026-11-07 in THM-4916 (kind-pasteur-2026-11-07-S15), in the
+  letter-count model of O/Z/J words with one root change: `L(0) = 1 + (3p-4)/(4p^2)`, `L(-1) = 1 - 1/p^2 + 1/(4p)`,
+  other classes `1 - 1/p^2`, by confinement at states with `d = U = 0 (mod p)` (odd tails feed the class `0`, even
+  tails the class `-E`). HYP-9506 (B) had recorded the "Fermat boost" at census scale and (A), (C) the open
+  by-value question; Session223 had the 3-adic case. The one-root-change words are the F1 family: word pairs are
+  the triples `(h1, h2, s)` weighted by `s + 1` (verified by S91, `census_k2/dict_k1.py`). Neither S90 nor its audit
+  cites any of them (no occurrence of "4916", "9506", "Session223" or "root change" in HYP-9657, the S90 note or
+  the S90 audit).
+- **Why it happened.** The S90 sweep and the audit brief used the vocabulary of the psi / F1 / "one-apex join"
+  lane (S78, S82). The root-change lane writes the same family as "words `p J tail m`" in the coordinates
+  `(D, E, U, d)` and names the classes "0 and `E`"; the words "F1" and "sheet" do not occur there.
+- **Repaired (S91).** HYP-9657: status corrected, THM-4916 / HYP-9506 / Session223 added to the related list; (A)
+  is marked as explained and superseded by THM-5128. THM-5128 credits THM-4916, HYP-9506, Session223, Session206,
+  Session193, the S82 note, THM-4885 and THM-5127 for what they contain and claims only the by-value statements.
+- **Lesson.** Before typing a residue-class statement about a join family as new, search for the family under every
+  coordinate system in use (`psi / h`, `g / u`, `(D, E, U, d)`, O/Z/J, "root change", "confinement", "local factor",
+  "census"), and hand the auditor that list of names, not only the session's own.
