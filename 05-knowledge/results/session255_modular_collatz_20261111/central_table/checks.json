@@ -1,0 +1,116 @@
+{
+  "status": "FINITE-EXACT",
+  "universe": "All odd n from 3 through 101; every a,b,x in Z/n for indicated tests",
+  "counts": {
+    "decoder_cases": 176850,
+    "monoid_pairs": 176850,
+    "odd_moduli": 50,
+    "affine_minimal_automata": 33
+  },
+  "examples": [
+    {
+      "n": 5,
+      "central_block": [
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "first_bad_radius_or_boundary": 2,
+      "unit_core_width": 4,
+      "nonzero_defect_types": 1
+    },
+    {
+      "n": 9,
+      "central_block": [
+        [
+          7,
+          2
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "first_bad_radius_or_boundary": 1,
+      "unit_core_width": 2,
+      "nonzero_defect_types": 2
+    },
+    {
+      "n": 11,
+      "central_block": [
+        [
+          3,
+          8
+        ],
+        [
+          8,
+          3
+        ]
+      ],
+      "first_bad_radius_or_boundary": 5,
+      "unit_core_width": 10,
+      "nonzero_defect_types": 1
+    },
+    {
+      "n": 15,
+      "central_block": [
+        [
+          4,
+          11
+        ],
+        [
+          11,
+          4
+        ]
+      ],
+      "first_bad_radius_or_boundary": 1,
+      "unit_core_width": 2,
+      "nonzero_defect_types": 3
+    },
+    {
+      "n": 25,
+      "central_block": [
+        [
+          19,
+          6
+        ],
+        [
+          6,
+          19
+        ]
+      ],
+      "first_bad_radius_or_boundary": 2,
+      "unit_core_width": 4,
+      "nonzero_defect_types": 2
+    },
+    {
+      "n": 45,
+      "central_block": [
+        [
+          34,
+          11
+        ],
+        [
+          11,
+          34
+        ]
+      ],
+      "first_bad_radius_or_boundary": 1,
+      "unit_core_width": 2,
+      "nonzero_defect_types": 5
+    }
+  ],
+  "positive_controls": [
+    "prime n=5,11 have complete reversible central interval"
+  ],
+  "hostile_controls": [
+    "n=9,a=3: low-digit sidecar cannot recover input",
+    "n=5: valuation quotient does not process 3x+1"
+  ],
+  "all_assertions_passed": true
+}

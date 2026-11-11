@@ -9,8 +9,8 @@ inherited results or of external conjecture claims.
 
 ## Working lanes
 
-- `central_table/`: central residues, reversible windows, and exact information.
-- `collatz_dictionary/`: the four mod-eight classes and signed edge dictionaries.
+- [Central table](central_table/README.md): five proved laws for reversible windows, exact information loss, and minimal finite compilers.
+- [Signed edge dictionary](collatz_dictionary/README.md): exact four-class edge atlas and finite inverse-ladder compiler.
 - `finite_infinite/`: finite transducers and coherent infinite objects.
 - `cross_frontiers/`: operation-sensitive connections to recent native frontiers.
 
