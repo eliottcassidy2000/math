@@ -1,0 +1,7 @@
+{
+  "base_commit": "9fb167b45db1",
+  "inherited_proved_operation": "05-knowledge/results/session264_constructive_20261111/fusion/PROOF.md",
+  "historical_inspiration": "05-knowledge/results/collatz_mod6_20260922_paley_fano_octonion_design.md",
+  "pending_inspiration_not_dependency": "01-canon/theorems/THM-5133-flip-and-spin-kernel-signature-sign-tournaments-of-twisted-algebras-and-the-pg32-extremal-theorems.md",
+  "new_input_data": "Explicit seven-vertex masks and subset/permutation certificates, construct.py and receipt.json"
+}
