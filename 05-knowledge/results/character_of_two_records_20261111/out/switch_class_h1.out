@@ -1,0 +1,4 @@
+class of P_23^+ (N = 24): 40 members; H mod 4: [(1, 40)]; H mod 8: [(5, 40)] (H known mod 256)
+class of D(P_11)^+ (N = 24): 40 members; H mod 4: [(1, 40)]; H mod 8: [(5, 40)] (H known mod 256)
+R11 (H1: H = 1 mod 4): HOLDS
+python3 switch_class.py h1 /tmp/claude-hamlayer 40  210.74s user 12.87s system 91% cpu 4:03.24 total

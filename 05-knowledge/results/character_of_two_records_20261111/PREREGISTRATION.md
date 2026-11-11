@@ -172,3 +172,40 @@ class" of `T`.
 
 Conjecture to be recorded if R11 and R9 hold: for every tournament `U` on `N` vertices with `S^2 = -(N-1) I`,
 `H(U) = 1 + N/2 (mod 4)`.
+
+---
+
+# Outcomes (appended after the runs; the blocks above are unchanged)
+
+Outputs: `out/`. Program names changed after registration: `paley_sym.c` is `halfpaths.c`, `selfconv_census.py` is
+`antiinv_census.c`, `paley27.c` is `hampaths_layered.c`.
+
+| | verdict | what happened |
+|---|---|---|
+| R1 | CONFIRMED | `F(P_27)`, `F(P_43)` odd. Now a corollary of the folding formula. |
+| R2 | FAILED | `F_k(P_q)` is odd for `k = 4, 5` already at `q = 11`; the parities are `C((q-1)/2, k) mod 2`. |
+| R3 | FAILED | With all invariant triples cyclic, `F` is odd at every order tried (`n = 3, 5, 7, 9, 11`), not `(n-1)/2 mod 2`. Replaced by `F_k = C(m, k) (mod 2)`, proved. |
+| R4 | CONFIRMED | Kernel formula, elimination and (orders <= 11) direct count agree. Now a theorem for all doubly regular tournaments. |
+| R5 | CONFIRMED | `k = 3, 4, 5` (also `6, 7`). Same theorem. |
+| R6 | FAILED | `CD_4`, `CD_5` have no anti-automorphism. **This part was decidable from canon** (THM-448, THM-451: the tower is not self-converse beyond order 7) and should not have been registered. `H(CD_5) mod 4` was not computed. |
+| R7 | CONFIRMED, uninformative | All 16 descendants are isomorphic to `CD_4`. |
+| R8 | CONFIRMED | Paths starting `0 -> 1` in `P_27`: `1 (mod 256)`; `H(P_27) = 95 (mod 256)`. |
+| R9 | CONFIRMED | G1: all 12,000 Goethals-Seidel matrices give one class, `D_19`, `H = 1172732961771 = 3 (mod 4)`. G2: one class, `H = 189 (mod 256)`. G3: 39 classes from 40 matrices, three with a converse symmetry, `H = 3 (mod 4)` by folding. H3: H3-PENDING-R9. |
+| R10 | CONFIRMED | G1: `3 (mod 8)`; G2: `5 (mod 8)`; H3: H3-PENDING-R10. |
+| R11 | CONFIRMED | 40 random members of each class: `H = 1 (mod 4)` for both classes at `N = 24`, `3 (mod 4)` at `N = 20`. |
+
+**Registration errors.** (1) R6, as above. (2) R9 and R10 at orders 19 and 23: the repository already had the exact
+path counts of `D_19` (HYP-9365) and of the doubled Paley class of order 23 (HYP-9371,
+`04-computation/experiments/sierpinski_ocf_20261022/drt23_doubled_check.out`), written by this machine on
+2026-10-22; the check before registering looked at four theorem files and for the words of the predicted
+property, not for the objects. So G1 and G2 were not out-of-sample. The same lane holds the exact counts of twelve
+further classes of order 23 (all `5 mod 8`), used in the note as in-sample evidence. Out-of-sample in the strict
+sense: G3, H1, H2, H3.
+
+**Deviations.** G1 was first run on every 40th solution (`out/drt_zoo_g1_stride40.out`), then on all
+(`out/drt_zoo_g1.out`). G3 used every 2000th of the 246,960 solutions, 40 matrices, all 28 descendants of each. An
+exploratory look at switching classes (`out/switch_class_insample.out`) preceded the fifth block and is declared
+there as in-sample.
+
+**Controls.** All held: `F(P_q)` even at `q = 7, 23, 31, 47` and odd at `3, 11, 19`; exact `H` of `P_7, P_11, P_19, CD_4`;
+`H(P_23) = 213 (mod 256)`; `H(P_27) = 95 (mod 256)` by the 27-start method.

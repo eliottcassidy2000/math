@@ -1,0 +1,5 @@
+class of P_3^+ (N = 4): 8 members; H mod 4: [(3, 8)]; H mod 8: [(3, 8)]
+class of P_7^+ (N = 8): 128 members; H mod 4: [(1, 128)]; H mod 8: [(5, 128)]
+class of P_11^+ (N = 12): 60 members; H mod 4: [(3, 60)]; H mod 8: [(7, 60)]
+class of CD_4^+ (N = 16): 60 members; H mod 4: [(1, 60)]; H mod 8: [(1, 41), (5, 19)]
+class of P_19^+ (N = 20): 30 members; H mod 4: [(3, 30)]; H mod 8: [(3, 30)]

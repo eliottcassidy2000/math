@@ -1,0 +1,31 @@
+(1) det S = 4H - 3 (mod 16) for tournaments of even order
+   order 2, all labelled tournaments: 0 violations
+   order 4, all labelled tournaments: 0 violations
+   order 6, 300 random tournaments: 127 violations
+   order 8, 300 random tournaments: 141 violations
+   order 10, 80 random tournaments: 34 violations
+(2a) one orthogonal row (row 0 of S orthogonal to all other rows): switching at 0
+   order 4: 999 tournaments with such a row (0 of them not skew Hadamard); H mod 4 unchanged in 999, changed in 0
+   order 8: 793 tournaments with such a row (724 of them not skew Hadamard); H mod 4 unchanged in 793, changed in 0
+(2b) U = ((source) + regular T') switched at a random set; U against U switched at the source
+   regular T' of order 3 (N = 4): H mod 4 equal in 160 pairs, different in 0
+   regular T' of order 5 (N = 6): H mod 4 equal in 160 pairs, different in 0
+   regular T' of order 7 (N = 8): H mod 4 equal in 160 pairs, different in 0
+   regular T' of order 9 (N = 10): H mod 4 equal in 96 pairs, different in 64
+   regular T' of order 11 (N = 12): H mod 4 equal in 80 pairs, different in 80
+   regular T' of order 13 (N = 14): H mod 4 equal in 23 pairs, different in 25
+   regular T' of order 15 (N = 16): H mod 4 equal in 27 pairs, different in 21
+(3) score parities only: <s, g> for tournaments R of odd order
+   order 3, all 8 labelled tournaments: <s, g> = 1 in 0
+   order 5, all 1024 labelled tournaments: <s, g> = 1 in 0
+   order 7, 400 random tournaments: <s, g> = 1 in 178
+   order 9, 80 random tournaments: <s, g> = 1 in 40
+(4) the proved reduction
+   |R| = 3, 300 random (R, N^+(v)): reduction formula fails in 0; near-Hamiltonian form of g fails in 0
+   |R| = 4, 300 random (R, N^+(v)): reduction formula fails in 0; near-Hamiltonian form of g fails in n/a (|R| even)
+   |R| = 5, 300 random (R, N^+(v)): reduction formula fails in 0; near-Hamiltonian form of g fails in 0
+   |R| = 6, 300 random (R, N^+(v)): reduction formula fails in 0; near-Hamiltonian form of g fails in n/a (|R| even)
+   |R| = 7, 300 random (R, N^+(v)): reduction formula fails in 0; near-Hamiltonian form of g fails in 0
+   |R| = 8, 100 random (R, N^+(v)): reduction formula fails in 0; near-Hamiltonian form of g fails in n/a (|R| even)
+   |R| = 9, 100 random (R, N^+(v)): reduction formula fails in 0; near-Hamiltonian form of g fails in 0
+python3 local_forms.py /tmp/claude-hamexact  11.32s user 0.09s system 98% cpu 11.529 total
