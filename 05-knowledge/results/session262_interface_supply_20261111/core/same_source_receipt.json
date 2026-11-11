@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "Four new two-branch literal controls; all-n proof is algebraic profile formula",
+  "controls": [
+    {
+      "n": 3,
+      "t": 0,
+      "base_H": 3507,
+      "domination_count": 65,
+      "H_AB": 20691,
+      "H_BA": 24627,
+      "gap": 3936
+    },
+    {
+      "n": 3,
+      "t": 1,
+      "base_H": 3507,
+      "domination_count": 129,
+      "H_AB": 38211,
+      "H_BA": 45915,
+      "gap": 7704
+    },
+    {
+      "n": 4,
+      "t": 0,
+      "base_H": 14091,
+      "domination_count": 129,
+      "H_AB": 115743,
+      "H_BA": 138303,
+      "gap": 22560
+    },
+    {
+      "n": 4,
+      "t": 1,
+      "base_H": 14091,
+      "domination_count": 257,
+      "H_AB": 218067,
+      "H_BA": 262851,
+      "gap": 44784
+    }
+  ]
+}

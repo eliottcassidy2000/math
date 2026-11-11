@@ -1,0 +1,58 @@
+{
+  "status": "FINITE-EXACT",
+  "universe": "all labelled rooted tournaments of orders 1..4; k=0,1,2; every shell Boolean subset",
+  "operation_checks": 855,
+  "initials": [
+    {
+      "n": 3,
+      "z": 0,
+      "k": 0,
+      "H": 3,
+      "deletion_H": 1,
+      "d": 3,
+      "slack": 0
+    },
+    {
+      "n": 3,
+      "z": 0,
+      "k": 1,
+      "H": 9,
+      "deletion_H": 3,
+      "d": 3,
+      "slack": 4
+    },
+    {
+      "n": 3,
+      "z": 0,
+      "k": 2,
+      "H": 27,
+      "deletion_H": 9,
+      "d": 3,
+      "slack": 16
+    }
+  ],
+  "hostile_empty_cut": {
+    "n": 1,
+    "z": 0,
+    "k": 2,
+    "H": 9,
+    "deletion_H": 9,
+    "d": 1,
+    "slack": 0
+  },
+  "source_sampling": {
+    "seed": 26211031,
+    "head": "f01a7113774301573ebdacc6a49918b3ae54d242",
+    "pool_size": 14983,
+    "paths": [
+      "05-knowledge/results/session17_prime_shapes_20261020/F5_PATH_PAIR_ICOSAHEDRON.md",
+      "05-knowledge/results/session40_marked_ports_square_sum_20261023/audit-third/THIRD_AUDIT.md",
+      "01-canon/theorems/THM-5107-physical-graft-content-excludes-cofactor-seven.md"
+    ]
+  },
+  "claims_not_tested": [
+    "Chan-Pak coverage",
+    "arbitrary target correction",
+    "strong tournament preservation"
+  ]
+}

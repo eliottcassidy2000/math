@@ -12,6 +12,21 @@ with a positive third-cover response kernel, an exact projective balance
 criterion, and a literal three-parameter constructor with its initial cases.
 The two finite count293 continuations now belong to an all-size theorem.
 
-Parallel work is developing protected defect resources, ordinal source
-composition and nonlinear finite certificates for reusable guards. Final
-synthesis and precise remaining obligations will be linked here on completion.
+Second checkpoint adds:
+
+- [Protected defect recharge](defect/PROOF.md), with literal source addresses
+  and complete initial objects.
+- [Ordinal source composition](constructor/PROOF.md), paid balanced returns,
+  and the exact unit-defect catalyst boundary.
+- [Finite-fuel queue rearming](constructor/FUELLED_EXTENSION.md), supplying
+  any prescribed number of actual return/birth/rearm steps.
+- [Nonlinear guard certificates](grammar/PROOF.md), including a terminating
+  Noetherian theorem and a finite mixed-radix initial-source compiler.
+- [Sharp observer-order filtration](grammar/RESPONSE_FILTRATION.md), separating
+  response-consuming wrappers from indefinitely reusable ordinal contexts.
+- [Two exact branches at one source](core/SAME_SOURCE_DEFECT.md), retaining
+  the same labelled domination graph AND the same base Hamilton count.
+
+A final selector extension, synthesis and precise remaining obligations
+will complete this packet. None of the stated families is claimed to
+provide arbitrary-target coverage.

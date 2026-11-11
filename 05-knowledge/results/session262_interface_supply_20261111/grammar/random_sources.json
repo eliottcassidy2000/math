@@ -1,0 +1,11 @@
+{
+  "seed": 262310,
+  "pool_size": 6175,
+  "pool_definition": "sorted .md paths under 01-canon and 05-knowledge/results, excluding session262",
+  "draws": [
+    "01-canon/theorems/THM-3897-f-zero-residual-all-degree-global-emptiness.md",
+    "01-canon/theorems/THM-1570-one-sided-elimination-and-laplace-layer.md",
+    "05-knowledge/results/inverse_ray_ternary_addresses_20261004.md"
+  ],
+  "all_read": true
+}

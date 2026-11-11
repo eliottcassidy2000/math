@@ -1,0 +1,103 @@
+{
+  "status": "FINITE-EXACT new controls; all-size proofs in PROOF.md",
+  "ideal_identity": "g(F_e)=2^e*(h+1+15x)*g/15",
+  "physical_ray_values": [
+    [
+      1,
+      29
+    ],
+    [
+      2,
+      59
+    ],
+    [
+      3,
+      119
+    ],
+    [
+      4,
+      239
+    ],
+    [
+      5,
+      479
+    ],
+    [
+      6,
+      959
+    ],
+    [
+      7,
+      1919
+    ],
+    [
+      8,
+      3839
+    ],
+    [
+      9,
+      7679
+    ]
+  ],
+  "square_context_cases": 85,
+  "independent_literal_path_counts": 6,
+  "binary_index_codes": 1000,
+  "two_digit_arithmetic_certificate": {
+    "B": 23,
+    "M": 2,
+    "C": 47,
+    "L": 4,
+    "required_initial_values": {
+      "q": [
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45
+      ]
+    },
+    "uncovered_residues": [],
+    "arithmetic_cover": true
+  },
+  "plus_only_hostile": {
+    "B": 23,
+    "M": 2,
+    "C": 47,
+    "L": 4,
+    "required_initial_values": {
+      "q": [
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45
+      ]
+    },
+    "uncovered_residues": [
+      [
+        "q",
+        1
+      ]
+    ],
+    "arithmetic_cover": false
+  },
+  "phantom_zero_module": {
+    "formal_x": 1,
+    "formal_h": 14,
+    "actual_empty_block_count": 13
+  }
+}

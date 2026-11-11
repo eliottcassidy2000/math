@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "scope": "Four local literal moment profiles and the inherited quotient initial profile; general Q formula is inherited, not recounted at large order",
+  "local_atoms": [
+    {
+      "name": "A",
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        39,
+        15
+      ],
+      "moments": [
+        17,
+        224,
+        1449
+      ]
+    },
+    {
+      "name": "B",
+      "rows": [
+        2,
+        4,
+        57,
+        3,
+        11,
+        27
+      ],
+      "moments": [
+        17,
+        224,
+        1449
+      ]
+    },
+    {
+      "name": "A_twin",
+      "rows": [
+        96,
+        5,
+        105,
+        115,
+        103,
+        66,
+        2
+      ],
+      "moments": [
+        35,
+        676,
+        5649
+      ]
+    },
+    {
+      "name": "B_twin",
+      "rows": [
+        2,
+        124,
+        97,
+        101,
+        109,
+        65,
+        1
+      ],
+      "moments": [
+        33,
+        612,
+        5163
+      ]
+    }
+  ],
+  "quotient": {
+    "H": 149,
+    "Q": 3008,
+    "S": 22,
+    "E": 14,
+    "U": 430,
+    "V": 296,
+    "W": 0
+  },
+  "one_slot_states": [
+    {
+      "h": 17,
+      "q": 224,
+      "r": 1449,
+      "K": 1843881,
+      "U": 20596980,
+      "E": 26656,
+      "bare_apex": 22414205,
+      "tail1": 43037841
+    },
+    {
+      "h": 35,
+      "q": 676,
+      "r": 5649,
+      "K": 16824497,
+      "U": 240979528,
+      "E": 165620,
+      "bare_apex": 257638405,
+      "tail1": 498783553
+    },
+    {
+      "h": 33,
+      "q": 612,
+      "r": 5163,
+      "K": 13787145,
+      "U": 199343808,
+      "E": 141372,
+      "bare_apex": 212989581,
+      "tail1": 412474761
+    }
+  ]
+}
