@@ -1,0 +1,73 @@
+[
+  {
+    "script": "switches/replay.py",
+    "returncode": 0,
+    "optimized_returncode": 0,
+    "same_output": true,
+    "seconds": 0.81,
+    "source_sha256": "a19cfc0667fe307a97401d43b23131a1d062c6c070dd175877981b2bbb70e21d",
+    "stderr": ""
+  },
+  {
+    "script": "switches/expand.py",
+    "returncode": 0,
+    "optimized_returncode": 0,
+    "same_output": true,
+    "seconds": 2.42,
+    "source_sha256": "d6b149eb3eb9f75fe757dc8b3b4af500d91a3076426264779bbe62dadb16b628",
+    "stderr": ""
+  },
+  {
+    "script": "descent/check.py",
+    "returncode": 0,
+    "optimized_returncode": 0,
+    "same_output": true,
+    "seconds": 1.08,
+    "source_sha256": "843ebbb250b8a3af0e6e5f4e77f0f07527c933c5bf082ce3ae823cd3a42fe702",
+    "stderr": ""
+  },
+  {
+    "script": "descent/escape.py",
+    "returncode": 0,
+    "optimized_returncode": 0,
+    "same_output": true,
+    "seconds": 1.34,
+    "source_sha256": "243b535dc82f40d8a3a4340bb468804421ed9f04e4f58d97ec7a001d4ab51cd5",
+    "stderr": ""
+  },
+  {
+    "script": "landscape/check_portal.py",
+    "returncode": 0,
+    "optimized_returncode": 0,
+    "same_output": true,
+    "seconds": 0.54,
+    "source_sha256": "7f4635a595d2118ce8f7a72e91462ce99a0027d5db9a04f08f04040ebe9f2b52",
+    "stderr": ""
+  },
+  {
+    "script": "seams/check.py",
+    "returncode": 0,
+    "optimized_returncode": 0,
+    "same_output": true,
+    "seconds": 3.24,
+    "source_sha256": "73f0b977cfd84595da1cfb204a2f7d1d95878a728bb39d4d3c3b7682d9cfc531",
+    "stderr": ""
+  },
+  {
+    "script": "review/verify.py",
+    "returncode": 0,
+    "optimized_returncode": 0,
+    "same_output": true,
+    "seconds": 4.45,
+    "source_sha256": "a3b6d2636fb6b9264c103885cbae6df9c93660aef0c0d601e9df3ce4bf92cedc",
+    "stderr": ""
+  },
+  {
+    "script": "landscape/experiment.py",
+    "returncode": 0,
+    "optimized_returncode": 0,
+    "same_output": true,
+    "source_sha256": "e2207c443adaeac9e3f4130378c58d7f22b6d74a845bac825d08d8348d508ed0",
+    "scope": "Full n3..7 producer output matches optimized replay byte for byte; independent review narrower as stated."
+  }
+]

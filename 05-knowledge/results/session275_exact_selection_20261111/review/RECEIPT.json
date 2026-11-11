@@ -1,0 +1,170 @@
+{
+  "status": "PASS",
+  "checks": 177,
+  "landscape_independent_orders": [
+    {
+      "n": 3,
+      "classes": 2,
+      "components": 1,
+      "intervals": [
+        [
+          1,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 4,
+      "classes": 4,
+      "components": 1,
+      "intervals": [
+        [
+          1,
+          5,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "classes": 12,
+      "components": 2,
+      "intervals": [
+        [
+          1,
+          5,
+          14
+        ],
+        [
+          9,
+          15,
+          50
+        ]
+      ]
+    }
+  ],
+  "landscape_higher_order_scope": "Inspected producer algorithm and compared reported maximal intervals; no independent full n6/n7 replay here",
+  "letters": {
+    "A": {
+      "H": 9,
+      "h": 5,
+      "Q": 64,
+      "U": 16,
+      "V": 32,
+      "d": 2,
+      "e": 0
+    },
+    "B": {
+      "H": 5,
+      "h": 5,
+      "Q": 64,
+      "U": 10,
+      "V": 32,
+      "d": 0,
+      "e": 0
+    },
+    "X": {
+      "H": 9,
+      "h": 3,
+      "Q": 48,
+      "U": 36,
+      "V": 9,
+      "d": 0,
+      "e": 3
+    },
+    "Y": {
+      "H": 9,
+      "h": 3,
+      "Q": 48,
+      "U": 42,
+      "V": 9,
+      "d": 0,
+      "e": 3
+    }
+  },
+  "cofactor": {
+    "H": 29,
+    "Q": 580,
+    "graftH": 609
+  },
+  "portal63": [
+    {
+      "counts": [
+        63,
+        61
+      ],
+      "common_path": [
+        0,
+        4,
+        6,
+        7,
+        5,
+        3,
+        1,
+        2
+      ],
+      "canonical_map": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "counts": [
+        61,
+        59
+      ],
+      "common_path": [
+        7,
+        0,
+        3,
+        6,
+        5,
+        4,
+        1,
+        2
+      ],
+      "canonical_map": [
+        0,
+        2,
+        3,
+        1,
+        5,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "counts": [
+        63,
+        65
+      ],
+      "common_path": [
+        6,
+        7,
+        5,
+        0,
+        4,
+        3,
+        1,
+        2
+      ],
+      "source": 6
+    }
+  ],
+  "producer_hashes": {
+    "landscape/experiment.py": "e2207c443adaeac9e3f4130378c58d7f22b6d74a845bac825d08d8348d508ed0",
+    "switches/PROOF.md": "e38c5c308ddc62256d3f27e7b813a56563a4bf175f7ae758bd6e085aa0a544e9",
+    "descent/PROOF.md": "5ece83da64e123410a9995773384a98d116ecf5567202860bf09f0729874f1b8",
+    "descent/ESCAPE.md": "67517e32740b85860a27ffadda366603017386c31ac2e65368efdb1a8853f467",
+    "switches/EXPANSION.md": "975183289c7d8f45fab0a050b47e4f828df6dd8c57d5b1ebb90c7be8c0db5518",
+    "seams/PROOF.md": "fa9c3b375c94add14354dcdc064e0fe9f29d3d9aa440d5fa6336d6bef4e92d56"
+  }
+}

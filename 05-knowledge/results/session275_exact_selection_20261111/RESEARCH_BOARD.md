@@ -32,3 +32,12 @@ anchoring; full geometric grammar need not have a prescribed-count scheduler.
 This first checkpoint records the controlled landscape experiment. Other lanes
 are in progress, and no new theorem is canonized until its explicit proof and
 focused controls are assembled.
+
+## Close-out
+
+All four lanes completed and expanded after their first obstructions. The final
+synthesis records the resulting additive/quadratic controllers, bifan transport,
+normalized21 classification and physical escape, and count-corridor portal.
+Focused independent review passes with two minor clarifications applied.
+No continuing searches or unfulfilled proof claims are hidden behind this packet.
+The exact all-target and unbounded-corridor obligations remain OPEN.

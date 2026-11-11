@@ -1,0 +1,172 @@
+{
+  "root_menu": [
+    {
+      "root": 0,
+      "packet": [
+        609,
+        29,
+        609,
+        29
+      ],
+      "singleton_output": 1189,
+      "mod29": 0
+    },
+    {
+      "root": 1,
+      "packet": [
+        609,
+        29,
+        1131,
+        29
+      ],
+      "singleton_output": 1711,
+      "mod29": 0
+    },
+    {
+      "root": 2,
+      "packet": [
+        609,
+        35,
+        1627,
+        133
+      ],
+      "singleton_output": 2201,
+      "mod29": 26
+    },
+    {
+      "root": 3,
+      "packet": [
+        609,
+        57,
+        1019,
+        99
+      ],
+      "singleton_output": 1571,
+      "mod29": 5
+    },
+    {
+      "root": 4,
+      "packet": [
+        609,
+        119,
+        655,
+        133
+      ],
+      "singleton_output": 1145,
+      "mod29": 14
+    },
+    {
+      "root": 5,
+      "packet": [
+        609,
+        169,
+        757,
+        241
+      ],
+      "singleton_output": 1197,
+      "mod29": 8
+    },
+    {
+      "root": 6,
+      "packet": [
+        609,
+        34,
+        2532,
+        231
+      ],
+      "singleton_output": 3107,
+      "mod29": 4
+    },
+    {
+      "root": 7,
+      "packet": [
+        609,
+        108,
+        1066,
+        241
+      ],
+      "singleton_output": 1567,
+      "mod29": 1
+    },
+    {
+      "root": 8,
+      "packet": [
+        609,
+        29,
+        2367,
+        177
+      ],
+      "singleton_output": 2947,
+      "mod29": 18
+    }
+  ],
+  "fan_controls": [
+    {
+      "k": 1,
+      "packet": [
+        1567,
+        241,
+        1891,
+        241
+      ]
+    },
+    {
+      "k": 2,
+      "packet": [
+        3217,
+        241,
+        3541,
+        241
+      ]
+    },
+    {
+      "k": 3,
+      "packet": [
+        6517,
+        241,
+        6841,
+        241
+      ]
+    },
+    {
+      "k": 4,
+      "packet": [
+        13117,
+        241,
+        13441,
+        241
+      ]
+    },
+    {
+      "k": 5,
+      "packet": [
+        26317,
+        241,
+        26641,
+        241
+      ]
+    }
+  ],
+  "bad_exponent_classes": [
+    {
+      "r": 1,
+      "residue": 26,
+      "period": 28
+    },
+    {
+      "r": 2,
+      "residue": 586,
+      "period": 812
+    },
+    {
+      "r": 3,
+      "residue": 11954,
+      "period": 23548
+    },
+    {
+      "r": 4,
+      "residue": 624202,
+      "period": 682892
+    }
+  ]
+}

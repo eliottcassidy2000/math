@@ -82,3 +82,42 @@ Reproduce from repo root:
 The output must equal RESULTS.json. The use of an assertion to check interval
 connectivity is only a consistency check, not part of computing components;
 an independent path-based review is requested before final publication.
+
+## A proved first corridor-stabilization step: pass through63
+
+The first growth obligation above can actually be met. Let
+
+    T=(16,5,17,7,74,31,175,63), H(T)=63.
+
+This is one of the inherited eight-vertex63 birth classes from Session224's
+census source. Here it is used as a portal, not counted as a new value witness.
+Reverse arc{3,4}; the result has H61 and is isomorphic, by the exact
+canonicalization, to
+
+    R=(8,5,9,66,15,31,183,63).
+
+Reverse both pairs{1,5},{6,7} in R; the resulting tournament has H59 and
+vertex7 is a source. Delete it to get a seven-vertex H59 tournament. In the
+other direction, reverse{0,7},{4,6} in T to obtain
+
+    S=(144,5,17,7,10,31,191,62), H(S)=65,
+
+where vertex6 is a source. Its deletion lies in the seven-vertex H65 corridor.
+Every reversal has a common Hamilton path before and after, supplied explicitly
+in PORTAL_CHECK.json. Hence each is a genuine one/two-FREE-tile move in a
+suitable frame, not an arbitrary move that violates the model's compulsory path.
+
+Independent permutation counting in `check_portal.py` checks H59,61,63,65,
+checks the relabelling, checks the two neutral source deletions, and supplies the
+common paths. Combining these explicit moves with the finite order7 component
+certificate proves that the infinite-order component containing23 contains
+ALL the order7 components spanning23..61 and65..105, joined through63.
+No new scalar coverage range is claimed: the contribution is physically
+compatible connectivity across the first birth hole, including an explicit
+entry and exit. It is a real initial case for the corridor-continuation strategy.
+It does not show that the next hole, or every later hole, admits such a portal.
+
+This corrects the tempting overrestriction to direct birth from a previous
+first-creator value: the new63 structure needs a short reconfiguration before
+neutral deletion. A value birth obstruction can disappear under a bounded
+sequence that remembers the actual frame and keeps the count steps small.

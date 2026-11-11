@@ -1,0 +1,88 @@
+{
+  "vertex_transitive_cube": [
+    [
+      3,
+      27
+    ],
+    [
+      5,
+      29
+    ],
+    [
+      5,
+      29
+    ],
+    [
+      5,
+      29
+    ],
+    [
+      5,
+      29
+    ],
+    [
+      5,
+      29
+    ],
+    [
+      5,
+      29
+    ],
+    [
+      3,
+      27
+    ]
+  ],
+  "portal_common_frame": [
+    0,
+    4,
+    6,
+    7,
+    5,
+    3,
+    1,
+    2
+  ],
+  "portal_lifts": [
+    [
+      367,
+      369
+    ],
+    [
+      1747,
+      1749
+    ],
+    [
+      7579,
+      7581
+    ]
+  ],
+  "small_bifan_checks": 1140,
+  "finite_floor_rooted_inputs": 5405,
+  "renewable_pairs": [
+    [
+      297,
+      299
+    ],
+    [
+      1831,
+      1833
+    ],
+    [
+      8931,
+      8933
+    ]
+  ],
+  "hidden_single_fan": [
+    37,
+    73,
+    141,
+    277
+  ],
+  "opposite_seam_outputs": [
+    215,
+    211
+  ],
+  "false_floor_curvature": "122/7",
+  "inverse_targets_checked": 499
+}
