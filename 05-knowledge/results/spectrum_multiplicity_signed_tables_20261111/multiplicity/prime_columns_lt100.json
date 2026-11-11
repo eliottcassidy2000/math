@@ -1,0 +1,256 @@
+{
+  "status": "FINITE-EXACT globally complete prime columns below100 from THM-4744 inventory",
+  "source": "05-knowledge/results/session173_modular_clocks_20261103/counts527/inventory_375.json",
+  "sha256": "2c66c872b7af50346624a367150a6fb094af916fa1397ef707f342a897a73bd3",
+  "prime_count": 25,
+  "attained_prime_count": 23,
+  "all_attained_by_order": 7,
+  "exact_formula": "N_n(p)=sum_k classes[k]*max(0,n-k+1); L_n(p)/n!=sum_k automorphism_mass[k]*max(0,n-k+1)",
+  "terms": {
+    "2": [],
+    "3": [
+      {
+        "order": 3,
+        "classes": 1,
+        "automorphism_mass": "1/3"
+      }
+    ],
+    "5": [
+      {
+        "order": 4,
+        "classes": 1,
+        "automorphism_mass": "1"
+      }
+    ],
+    "7": [],
+    "11": [
+      {
+        "order": 5,
+        "classes": 1,
+        "automorphism_mass": "1"
+      }
+    ],
+    "13": [
+      {
+        "order": 5,
+        "classes": 1,
+        "automorphism_mass": "1"
+      }
+    ],
+    "17": [
+      {
+        "order": 6,
+        "classes": 2,
+        "automorphism_mass": "2"
+      }
+    ],
+    "19": [
+      {
+        "order": 6,
+        "classes": 2,
+        "automorphism_mass": "2"
+      }
+    ],
+    "23": [
+      {
+        "order": 6,
+        "classes": 4,
+        "automorphism_mass": "4"
+      }
+    ],
+    "29": [
+      {
+        "order": 6,
+        "classes": 4,
+        "automorphism_mass": "4"
+      },
+      {
+        "order": 7,
+        "classes": 2,
+        "automorphism_mass": "2"
+      }
+    ],
+    "31": [
+      {
+        "order": 6,
+        "classes": 2,
+        "automorphism_mass": "2"
+      },
+      {
+        "order": 7,
+        "classes": 2,
+        "automorphism_mass": "2"
+      }
+    ],
+    "37": [
+      {
+        "order": 6,
+        "classes": 5,
+        "automorphism_mass": "5"
+      },
+      {
+        "order": 7,
+        "classes": 2,
+        "automorphism_mass": "2"
+      }
+    ],
+    "41": [
+      {
+        "order": 6,
+        "classes": 1,
+        "automorphism_mass": "1"
+      },
+      {
+        "order": 7,
+        "classes": 5,
+        "automorphism_mass": "5"
+      }
+    ],
+    "43": [
+      {
+        "order": 6,
+        "classes": 2,
+        "automorphism_mass": "2"
+      },
+      {
+        "order": 7,
+        "classes": 2,
+        "automorphism_mass": "2"
+      }
+    ],
+    "47": [
+      {
+        "order": 7,
+        "classes": 2,
+        "automorphism_mass": "2"
+      }
+    ],
+    "53": [
+      {
+        "order": 7,
+        "classes": 4,
+        "automorphism_mass": "4"
+      },
+      {
+        "order": 8,
+        "classes": 6,
+        "automorphism_mass": "6"
+      }
+    ],
+    "59": [
+      {
+        "order": 7,
+        "classes": 8,
+        "automorphism_mass": "8"
+      },
+      {
+        "order": 8,
+        "classes": 4,
+        "automorphism_mass": "4"
+      }
+    ],
+    "61": [
+      {
+        "order": 7,
+        "classes": 1,
+        "automorphism_mass": "1"
+      },
+      {
+        "order": 8,
+        "classes": 4,
+        "automorphism_mass": "4"
+      }
+    ],
+    "67": [
+      {
+        "order": 7,
+        "classes": 6,
+        "automorphism_mass": "6"
+      }
+    ],
+    "71": [
+      {
+        "order": 7,
+        "classes": 7,
+        "automorphism_mass": "7"
+      },
+      {
+        "order": 8,
+        "classes": 4,
+        "automorphism_mass": "4"
+      }
+    ],
+    "73": [
+      {
+        "order": 7,
+        "classes": 8,
+        "automorphism_mass": "8"
+      },
+      {
+        "order": 8,
+        "classes": 11,
+        "automorphism_mass": "11"
+      }
+    ],
+    "79": [
+      {
+        "order": 7,
+        "classes": 5,
+        "automorphism_mass": "5"
+      },
+      {
+        "order": 8,
+        "classes": 6,
+        "automorphism_mass": "6"
+      }
+    ],
+    "83": [
+      {
+        "order": 7,
+        "classes": 7,
+        "automorphism_mass": "7"
+      },
+      {
+        "order": 8,
+        "classes": 4,
+        "automorphism_mass": "4"
+      }
+    ],
+    "89": [
+      {
+        "order": 7,
+        "classes": 14,
+        "automorphism_mass": "14"
+      },
+      {
+        "order": 8,
+        "classes": 7,
+        "automorphism_mass": "7"
+      },
+      {
+        "order": 9,
+        "classes": 2,
+        "automorphism_mass": "2"
+      }
+    ],
+    "97": [
+      {
+        "order": 7,
+        "classes": 6,
+        "automorphism_mass": "6"
+      },
+      {
+        "order": 8,
+        "classes": 10,
+        "automorphism_mass": "10"
+      },
+      {
+        "order": 9,
+        "classes": 7,
+        "automorphism_mass": "7"
+      }
+    ]
+  },
+  "ordinary_sum_slope": 172,
+  "ordinary_sum_intercept": -1073
+}

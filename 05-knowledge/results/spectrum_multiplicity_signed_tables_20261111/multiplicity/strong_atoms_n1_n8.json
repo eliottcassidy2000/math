@@ -1,0 +1,2762 @@
+[
+  {
+    "n": 1,
+    "H": 1,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 3,
+    "H": 3,
+    "automorphism_order": 3,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 4,
+    "H": 5,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 5,
+    "H": 9,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 5,
+    "H": 11,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 5,
+    "H": 13,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 5,
+    "H": 15,
+    "automorphism_order": 3,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 5,
+    "H": 15,
+    "automorphism_order": 5,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 6,
+    "H": 15,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 6,
+    "H": 17,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 6,
+    "H": 19,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 6,
+    "H": 23,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 6,
+    "H": 25,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 6,
+    "H": 27,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 6,
+    "H": 29,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 6,
+    "H": 31,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 6,
+    "H": 33,
+    "automorphism_order": 1,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 6,
+    "H": 33,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 6,
+    "H": 37,
+    "automorphism_order": 1,
+    "ordinary_classes": 5
+  },
+  {
+    "n": 6,
+    "H": 41,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 6,
+    "H": 43,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 6,
+    "H": 45,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 25,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 27,
+    "automorphism_order": 1,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 7,
+    "H": 29,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 31,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 33,
+    "automorphism_order": 1,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 7,
+    "H": 35,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 37,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 39,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 41,
+    "automorphism_order": 1,
+    "ordinary_classes": 5
+  },
+  {
+    "n": 7,
+    "H": 43,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 45,
+    "automorphism_order": 1,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 7,
+    "H": 45,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 47,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 49,
+    "automorphism_order": 1,
+    "ordinary_classes": 7
+  },
+  {
+    "n": 7,
+    "H": 51,
+    "automorphism_order": 1,
+    "ordinary_classes": 5
+  },
+  {
+    "n": 7,
+    "H": 51,
+    "automorphism_order": 3,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 7,
+    "H": 53,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 7,
+    "H": 55,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 7,
+    "H": 57,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 57,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 59,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 7,
+    "H": 61,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 65,
+    "automorphism_order": 1,
+    "ordinary_classes": 11
+  },
+  {
+    "n": 7,
+    "H": 67,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 7,
+    "H": 69,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 7,
+    "H": 69,
+    "automorphism_order": 3,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 7,
+    "H": 71,
+    "automorphism_order": 1,
+    "ordinary_classes": 7
+  },
+  {
+    "n": 7,
+    "H": 73,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 7,
+    "H": 75,
+    "automorphism_order": 1,
+    "ordinary_classes": 5
+  },
+  {
+    "n": 7,
+    "H": 75,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 77,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 7,
+    "H": 79,
+    "automorphism_order": 1,
+    "ordinary_classes": 5
+  },
+  {
+    "n": 7,
+    "H": 81,
+    "automorphism_order": 1,
+    "ordinary_classes": 11
+  },
+  {
+    "n": 7,
+    "H": 83,
+    "automorphism_order": 1,
+    "ordinary_classes": 7
+  },
+  {
+    "n": 7,
+    "H": 85,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 87,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 89,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 7,
+    "H": 91,
+    "automorphism_order": 1,
+    "ordinary_classes": 15
+  },
+  {
+    "n": 7,
+    "H": 93,
+    "automorphism_order": 1,
+    "ordinary_classes": 7
+  },
+  {
+    "n": 7,
+    "H": 95,
+    "automorphism_order": 1,
+    "ordinary_classes": 5
+  },
+  {
+    "n": 7,
+    "H": 97,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 7,
+    "H": 99,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 99,
+    "automorphism_order": 3,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 99,
+    "automorphism_order": 9,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 101,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 7,
+    "H": 103,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 7,
+    "H": 105,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 7,
+    "H": 109,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 7,
+    "H": 111,
+    "automorphism_order": 1,
+    "ordinary_classes": 9
+  },
+  {
+    "n": 7,
+    "H": 111,
+    "automorphism_order": 3,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 113,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 7,
+    "H": 115,
+    "automorphism_order": 1,
+    "ordinary_classes": 7
+  },
+  {
+    "n": 7,
+    "H": 117,
+    "automorphism_order": 1,
+    "ordinary_classes": 7
+  },
+  {
+    "n": 7,
+    "H": 121,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 7,
+    "H": 123,
+    "automorphism_order": 1,
+    "ordinary_classes": 7
+  },
+  {
+    "n": 7,
+    "H": 123,
+    "automorphism_order": 3,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 7,
+    "H": 125,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 127,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 129,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 7,
+    "H": 129,
+    "automorphism_order": 3,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 131,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 7,
+    "H": 133,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 7,
+    "H": 135,
+    "automorphism_order": 1,
+    "ordinary_classes": 5
+  },
+  {
+    "n": 7,
+    "H": 135,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 135,
+    "automorphism_order": 5,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 137,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 7,
+    "H": 139,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 7,
+    "H": 141,
+    "automorphism_order": 1,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 7,
+    "H": 143,
+    "automorphism_order": 1,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 7,
+    "H": 145,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 7,
+    "H": 147,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 151,
+    "automorphism_order": 1,
+    "ordinary_classes": 5
+  },
+  {
+    "n": 7,
+    "H": 153,
+    "automorphism_order": 1,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 7,
+    "H": 155,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 157,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 159,
+    "automorphism_order": 1,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 7,
+    "H": 159,
+    "automorphism_order": 3,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 171,
+    "automorphism_order": 3,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 175,
+    "automorphism_order": 7,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 7,
+    "H": 189,
+    "automorphism_order": 21,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 8,
+    "H": 45,
+    "automorphism_order": 1,
+    "ordinary_classes": 5
+  },
+  {
+    "n": 8,
+    "H": 49,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 8,
+    "H": 51,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 53,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 57,
+    "automorphism_order": 1,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 8,
+    "H": 59,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 61,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 63,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 65,
+    "automorphism_order": 1,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 8,
+    "H": 69,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 71,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 73,
+    "automorphism_order": 1,
+    "ordinary_classes": 11
+  },
+  {
+    "n": 8,
+    "H": 75,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 77,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 79,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 81,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 81,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 83,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 85,
+    "automorphism_order": 1,
+    "ordinary_classes": 5
+  },
+  {
+    "n": 8,
+    "H": 87,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 87,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 89,
+    "automorphism_order": 1,
+    "ordinary_classes": 7
+  },
+  {
+    "n": 8,
+    "H": 91,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 93,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 95,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 97,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 99,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 99,
+    "automorphism_order": 3,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 101,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 103,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 105,
+    "automorphism_order": 1,
+    "ordinary_classes": 9
+  },
+  {
+    "n": 8,
+    "H": 105,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 107,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 109,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 111,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 111,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 113,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 115,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 117,
+    "automorphism_order": 1,
+    "ordinary_classes": 11
+  },
+  {
+    "n": 8,
+    "H": 117,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 119,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 121,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 123,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 123,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 125,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 127,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 129,
+    "automorphism_order": 1,
+    "ordinary_classes": 26
+  },
+  {
+    "n": 8,
+    "H": 131,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 133,
+    "automorphism_order": 1,
+    "ordinary_classes": 17
+  },
+  {
+    "n": 8,
+    "H": 135,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 135,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 137,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 139,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 141,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 141,
+    "automorphism_order": 3,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 143,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 145,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 147,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 147,
+    "automorphism_order": 3,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 149,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 151,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 153,
+    "automorphism_order": 1,
+    "ordinary_classes": 16
+  },
+  {
+    "n": 8,
+    "H": 153,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 153,
+    "automorphism_order": 9,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 8,
+    "H": 155,
+    "automorphism_order": 1,
+    "ordinary_classes": 26
+  },
+  {
+    "n": 8,
+    "H": 157,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 159,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 159,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 161,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 163,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 165,
+    "automorphism_order": 1,
+    "ordinary_classes": 15
+  },
+  {
+    "n": 8,
+    "H": 165,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 167,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 169,
+    "automorphism_order": 1,
+    "ordinary_classes": 19
+  },
+  {
+    "n": 8,
+    "H": 171,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 173,
+    "automorphism_order": 1,
+    "ordinary_classes": 30
+  },
+  {
+    "n": 8,
+    "H": 175,
+    "automorphism_order": 1,
+    "ordinary_classes": 16
+  },
+  {
+    "n": 8,
+    "H": 177,
+    "automorphism_order": 1,
+    "ordinary_classes": 27
+  },
+  {
+    "n": 8,
+    "H": 177,
+    "automorphism_order": 3,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 179,
+    "automorphism_order": 1,
+    "ordinary_classes": 26
+  },
+  {
+    "n": 8,
+    "H": 181,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 183,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 185,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 187,
+    "automorphism_order": 1,
+    "ordinary_classes": 24
+  },
+  {
+    "n": 8,
+    "H": 189,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 191,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 193,
+    "automorphism_order": 1,
+    "ordinary_classes": 21
+  },
+  {
+    "n": 8,
+    "H": 195,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 195,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 197,
+    "automorphism_order": 1,
+    "ordinary_classes": 40
+  },
+  {
+    "n": 8,
+    "H": 199,
+    "automorphism_order": 1,
+    "ordinary_classes": 24
+  },
+  {
+    "n": 8,
+    "H": 201,
+    "automorphism_order": 1,
+    "ordinary_classes": 11
+  },
+  {
+    "n": 8,
+    "H": 201,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 203,
+    "automorphism_order": 1,
+    "ordinary_classes": 26
+  },
+  {
+    "n": 8,
+    "H": 205,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 207,
+    "automorphism_order": 1,
+    "ordinary_classes": 24
+  },
+  {
+    "n": 8,
+    "H": 207,
+    "automorphism_order": 9,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 209,
+    "automorphism_order": 1,
+    "ordinary_classes": 16
+  },
+  {
+    "n": 8,
+    "H": 211,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 213,
+    "automorphism_order": 1,
+    "ordinary_classes": 26
+  },
+  {
+    "n": 8,
+    "H": 213,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 215,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 217,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 219,
+    "automorphism_order": 1,
+    "ordinary_classes": 38
+  },
+  {
+    "n": 8,
+    "H": 219,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 221,
+    "automorphism_order": 1,
+    "ordinary_classes": 29
+  },
+  {
+    "n": 8,
+    "H": 223,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 225,
+    "automorphism_order": 1,
+    "ordinary_classes": 15
+  },
+  {
+    "n": 8,
+    "H": 227,
+    "automorphism_order": 1,
+    "ordinary_classes": 16
+  },
+  {
+    "n": 8,
+    "H": 229,
+    "automorphism_order": 1,
+    "ordinary_classes": 38
+  },
+  {
+    "n": 8,
+    "H": 231,
+    "automorphism_order": 1,
+    "ordinary_classes": 38
+  },
+  {
+    "n": 8,
+    "H": 231,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 233,
+    "automorphism_order": 1,
+    "ordinary_classes": 34
+  },
+  {
+    "n": 8,
+    "H": 235,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 237,
+    "automorphism_order": 1,
+    "ordinary_classes": 32
+  },
+  {
+    "n": 8,
+    "H": 237,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 239,
+    "automorphism_order": 1,
+    "ordinary_classes": 42
+  },
+  {
+    "n": 8,
+    "H": 241,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 243,
+    "automorphism_order": 1,
+    "ordinary_classes": 24
+  },
+  {
+    "n": 8,
+    "H": 243,
+    "automorphism_order": 3,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 245,
+    "automorphism_order": 1,
+    "ordinary_classes": 25
+  },
+  {
+    "n": 8,
+    "H": 247,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 249,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 249,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 251,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 253,
+    "automorphism_order": 1,
+    "ordinary_classes": 27
+  },
+  {
+    "n": 8,
+    "H": 255,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 255,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 255,
+    "automorphism_order": 5,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 257,
+    "automorphism_order": 1,
+    "ordinary_classes": 30
+  },
+  {
+    "n": 8,
+    "H": 259,
+    "automorphism_order": 1,
+    "ordinary_classes": 34
+  },
+  {
+    "n": 8,
+    "H": 261,
+    "automorphism_order": 1,
+    "ordinary_classes": 24
+  },
+  {
+    "n": 8,
+    "H": 263,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 265,
+    "automorphism_order": 1,
+    "ordinary_classes": 26
+  },
+  {
+    "n": 8,
+    "H": 267,
+    "automorphism_order": 1,
+    "ordinary_classes": 44
+  },
+  {
+    "n": 8,
+    "H": 269,
+    "automorphism_order": 1,
+    "ordinary_classes": 29
+  },
+  {
+    "n": 8,
+    "H": 271,
+    "automorphism_order": 1,
+    "ordinary_classes": 32
+  },
+  {
+    "n": 8,
+    "H": 273,
+    "automorphism_order": 1,
+    "ordinary_classes": 24
+  },
+  {
+    "n": 8,
+    "H": 273,
+    "automorphism_order": 3,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 275,
+    "automorphism_order": 1,
+    "ordinary_classes": 38
+  },
+  {
+    "n": 8,
+    "H": 277,
+    "automorphism_order": 1,
+    "ordinary_classes": 27
+  },
+  {
+    "n": 8,
+    "H": 279,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 279,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 281,
+    "automorphism_order": 1,
+    "ordinary_classes": 48
+  },
+  {
+    "n": 8,
+    "H": 283,
+    "automorphism_order": 1,
+    "ordinary_classes": 32
+  },
+  {
+    "n": 8,
+    "H": 285,
+    "automorphism_order": 1,
+    "ordinary_classes": 34
+  },
+  {
+    "n": 8,
+    "H": 287,
+    "automorphism_order": 1,
+    "ordinary_classes": 34
+  },
+  {
+    "n": 8,
+    "H": 289,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 291,
+    "automorphism_order": 1,
+    "ordinary_classes": 34
+  },
+  {
+    "n": 8,
+    "H": 291,
+    "automorphism_order": 3,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 293,
+    "automorphism_order": 1,
+    "ordinary_classes": 42
+  },
+  {
+    "n": 8,
+    "H": 295,
+    "automorphism_order": 1,
+    "ordinary_classes": 34
+  },
+  {
+    "n": 8,
+    "H": 297,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 299,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 301,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 303,
+    "automorphism_order": 1,
+    "ordinary_classes": 30
+  },
+  {
+    "n": 8,
+    "H": 305,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 307,
+    "automorphism_order": 1,
+    "ordinary_classes": 36
+  },
+  {
+    "n": 8,
+    "H": 309,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 309,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 311,
+    "automorphism_order": 1,
+    "ordinary_classes": 26
+  },
+  {
+    "n": 8,
+    "H": 313,
+    "automorphism_order": 1,
+    "ordinary_classes": 24
+  },
+  {
+    "n": 8,
+    "H": 315,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 315,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 317,
+    "automorphism_order": 1,
+    "ordinary_classes": 42
+  },
+  {
+    "n": 8,
+    "H": 319,
+    "automorphism_order": 1,
+    "ordinary_classes": 26
+  },
+  {
+    "n": 8,
+    "H": 321,
+    "automorphism_order": 1,
+    "ordinary_classes": 38
+  },
+  {
+    "n": 8,
+    "H": 321,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 323,
+    "automorphism_order": 1,
+    "ordinary_classes": 32
+  },
+  {
+    "n": 8,
+    "H": 325,
+    "automorphism_order": 1,
+    "ordinary_classes": 27
+  },
+  {
+    "n": 8,
+    "H": 327,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 327,
+    "automorphism_order": 3,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 329,
+    "automorphism_order": 1,
+    "ordinary_classes": 35
+  },
+  {
+    "n": 8,
+    "H": 331,
+    "automorphism_order": 1,
+    "ordinary_classes": 16
+  },
+  {
+    "n": 8,
+    "H": 333,
+    "automorphism_order": 1,
+    "ordinary_classes": 35
+  },
+  {
+    "n": 8,
+    "H": 333,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 335,
+    "automorphism_order": 1,
+    "ordinary_classes": 38
+  },
+  {
+    "n": 8,
+    "H": 337,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 339,
+    "automorphism_order": 1,
+    "ordinary_classes": 34
+  },
+  {
+    "n": 8,
+    "H": 339,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 341,
+    "automorphism_order": 1,
+    "ordinary_classes": 26
+  },
+  {
+    "n": 8,
+    "H": 343,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 345,
+    "automorphism_order": 1,
+    "ordinary_classes": 47
+  },
+  {
+    "n": 8,
+    "H": 345,
+    "automorphism_order": 5,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 347,
+    "automorphism_order": 1,
+    "ordinary_classes": 38
+  },
+  {
+    "n": 8,
+    "H": 349,
+    "automorphism_order": 1,
+    "ordinary_classes": 38
+  },
+  {
+    "n": 8,
+    "H": 351,
+    "automorphism_order": 1,
+    "ordinary_classes": 42
+  },
+  {
+    "n": 8,
+    "H": 351,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 353,
+    "automorphism_order": 1,
+    "ordinary_classes": 33
+  },
+  {
+    "n": 8,
+    "H": 355,
+    "automorphism_order": 1,
+    "ordinary_classes": 24
+  },
+  {
+    "n": 8,
+    "H": 357,
+    "automorphism_order": 1,
+    "ordinary_classes": 29
+  },
+  {
+    "n": 8,
+    "H": 357,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 359,
+    "automorphism_order": 1,
+    "ordinary_classes": 34
+  },
+  {
+    "n": 8,
+    "H": 361,
+    "automorphism_order": 1,
+    "ordinary_classes": 31
+  },
+  {
+    "n": 8,
+    "H": 363,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 365,
+    "automorphism_order": 1,
+    "ordinary_classes": 34
+  },
+  {
+    "n": 8,
+    "H": 367,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 369,
+    "automorphism_order": 1,
+    "ordinary_classes": 37
+  },
+  {
+    "n": 8,
+    "H": 369,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 371,
+    "automorphism_order": 1,
+    "ordinary_classes": 32
+  },
+  {
+    "n": 8,
+    "H": 373,
+    "automorphism_order": 1,
+    "ordinary_classes": 35
+  },
+  {
+    "n": 8,
+    "H": 375,
+    "automorphism_order": 1,
+    "ordinary_classes": 38
+  },
+  {
+    "n": 8,
+    "H": 375,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 377,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 379,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 381,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 381,
+    "automorphism_order": 3,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 8,
+    "H": 383,
+    "automorphism_order": 1,
+    "ordinary_classes": 36
+  },
+  {
+    "n": 8,
+    "H": 385,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 387,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 387,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 389,
+    "automorphism_order": 1,
+    "ordinary_classes": 29
+  },
+  {
+    "n": 8,
+    "H": 391,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 393,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 393,
+    "automorphism_order": 3,
+    "ordinary_classes": 5
+  },
+  {
+    "n": 8,
+    "H": 395,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 397,
+    "automorphism_order": 1,
+    "ordinary_classes": 25
+  },
+  {
+    "n": 8,
+    "H": 399,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 399,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 401,
+    "automorphism_order": 1,
+    "ordinary_classes": 43
+  },
+  {
+    "n": 8,
+    "H": 403,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 405,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 405,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 407,
+    "automorphism_order": 1,
+    "ordinary_classes": 46
+  },
+  {
+    "n": 8,
+    "H": 409,
+    "automorphism_order": 1,
+    "ordinary_classes": 36
+  },
+  {
+    "n": 8,
+    "H": 411,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 411,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 413,
+    "automorphism_order": 1,
+    "ordinary_classes": 29
+  },
+  {
+    "n": 8,
+    "H": 415,
+    "automorphism_order": 1,
+    "ordinary_classes": 26
+  },
+  {
+    "n": 8,
+    "H": 417,
+    "automorphism_order": 1,
+    "ordinary_classes": 39
+  },
+  {
+    "n": 8,
+    "H": 419,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 421,
+    "automorphism_order": 1,
+    "ordinary_classes": 34
+  },
+  {
+    "n": 8,
+    "H": 423,
+    "automorphism_order": 1,
+    "ordinary_classes": 30
+  },
+  {
+    "n": 8,
+    "H": 423,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 425,
+    "automorphism_order": 1,
+    "ordinary_classes": 42
+  },
+  {
+    "n": 8,
+    "H": 427,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 429,
+    "automorphism_order": 1,
+    "ordinary_classes": 21
+  },
+  {
+    "n": 8,
+    "H": 429,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 431,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 433,
+    "automorphism_order": 1,
+    "ordinary_classes": 19
+  },
+  {
+    "n": 8,
+    "H": 435,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 435,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 437,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 439,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 441,
+    "automorphism_order": 1,
+    "ordinary_classes": 31
+  },
+  {
+    "n": 8,
+    "H": 443,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 445,
+    "automorphism_order": 1,
+    "ordinary_classes": 27
+  },
+  {
+    "n": 8,
+    "H": 447,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 449,
+    "automorphism_order": 1,
+    "ordinary_classes": 36
+  },
+  {
+    "n": 8,
+    "H": 451,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 453,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 455,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 457,
+    "automorphism_order": 1,
+    "ordinary_classes": 17
+  },
+  {
+    "n": 8,
+    "H": 459,
+    "automorphism_order": 1,
+    "ordinary_classes": 30
+  },
+  {
+    "n": 8,
+    "H": 461,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 463,
+    "automorphism_order": 1,
+    "ordinary_classes": 32
+  },
+  {
+    "n": 8,
+    "H": 465,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 465,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 467,
+    "automorphism_order": 1,
+    "ordinary_classes": 34
+  },
+  {
+    "n": 8,
+    "H": 469,
+    "automorphism_order": 1,
+    "ordinary_classes": 33
+  },
+  {
+    "n": 8,
+    "H": 471,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 471,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 473,
+    "automorphism_order": 1,
+    "ordinary_classes": 26
+  },
+  {
+    "n": 8,
+    "H": 475,
+    "automorphism_order": 1,
+    "ordinary_classes": 24
+  },
+  {
+    "n": 8,
+    "H": 477,
+    "automorphism_order": 1,
+    "ordinary_classes": 23
+  },
+  {
+    "n": 8,
+    "H": 477,
+    "automorphism_order": 3,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 479,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 481,
+    "automorphism_order": 1,
+    "ordinary_classes": 21
+  },
+  {
+    "n": 8,
+    "H": 483,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 483,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 485,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 487,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 489,
+    "automorphism_order": 1,
+    "ordinary_classes": 16
+  },
+  {
+    "n": 8,
+    "H": 489,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 491,
+    "automorphism_order": 1,
+    "ordinary_classes": 24
+  },
+  {
+    "n": 8,
+    "H": 493,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 495,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 497,
+    "automorphism_order": 1,
+    "ordinary_classes": 33
+  },
+  {
+    "n": 8,
+    "H": 499,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 501,
+    "automorphism_order": 1,
+    "ordinary_classes": 15
+  },
+  {
+    "n": 8,
+    "H": 503,
+    "automorphism_order": 1,
+    "ordinary_classes": 28
+  },
+  {
+    "n": 8,
+    "H": 505,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 507,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 509,
+    "automorphism_order": 1,
+    "ordinary_classes": 35
+  },
+  {
+    "n": 8,
+    "H": 511,
+    "automorphism_order": 1,
+    "ordinary_classes": 32
+  },
+  {
+    "n": 8,
+    "H": 513,
+    "automorphism_order": 1,
+    "ordinary_classes": 33
+  },
+  {
+    "n": 8,
+    "H": 513,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 515,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 517,
+    "automorphism_order": 1,
+    "ordinary_classes": 21
+  },
+  {
+    "n": 8,
+    "H": 519,
+    "automorphism_order": 1,
+    "ordinary_classes": 24
+  },
+  {
+    "n": 8,
+    "H": 521,
+    "automorphism_order": 1,
+    "ordinary_classes": 17
+  },
+  {
+    "n": 8,
+    "H": 523,
+    "automorphism_order": 1,
+    "ordinary_classes": 38
+  },
+  {
+    "n": 8,
+    "H": 525,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 527,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 529,
+    "automorphism_order": 1,
+    "ordinary_classes": 19
+  },
+  {
+    "n": 8,
+    "H": 531,
+    "automorphism_order": 1,
+    "ordinary_classes": 16
+  },
+  {
+    "n": 8,
+    "H": 533,
+    "automorphism_order": 1,
+    "ordinary_classes": 24
+  },
+  {
+    "n": 8,
+    "H": 535,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 537,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 539,
+    "automorphism_order": 1,
+    "ordinary_classes": 16
+  },
+  {
+    "n": 8,
+    "H": 541,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 543,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 543,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 545,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 547,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 549,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 549,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 551,
+    "automorphism_order": 1,
+    "ordinary_classes": 16
+  },
+  {
+    "n": 8,
+    "H": 553,
+    "automorphism_order": 1,
+    "ordinary_classes": 11
+  },
+  {
+    "n": 8,
+    "H": 555,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 555,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 557,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 559,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 561,
+    "automorphism_order": 1,
+    "ordinary_classes": 13
+  },
+  {
+    "n": 8,
+    "H": 561,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 563,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 565,
+    "automorphism_order": 1,
+    "ordinary_classes": 7
+  },
+  {
+    "n": 8,
+    "H": 567,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 569,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 571,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 573,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 575,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 577,
+    "automorphism_order": 1,
+    "ordinary_classes": 7
+  },
+  {
+    "n": 8,
+    "H": 579,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 581,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 583,
+    "automorphism_order": 1,
+    "ordinary_classes": 20
+  },
+  {
+    "n": 8,
+    "H": 585,
+    "automorphism_order": 1,
+    "ordinary_classes": 18
+  },
+  {
+    "n": 8,
+    "H": 587,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 589,
+    "automorphism_order": 1,
+    "ordinary_classes": 16
+  },
+  {
+    "n": 8,
+    "H": 591,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 593,
+    "automorphism_order": 1,
+    "ordinary_classes": 22
+  },
+  {
+    "n": 8,
+    "H": 595,
+    "automorphism_order": 1,
+    "ordinary_classes": 14
+  },
+  {
+    "n": 8,
+    "H": 597,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 599,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 601,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 603,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 605,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 607,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 609,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 613,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 621,
+    "automorphism_order": 3,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 8,
+    "H": 621,
+    "automorphism_order": 9,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 8,
+    "H": 627,
+    "automorphism_order": 1,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 629,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 8,
+    "H": 631,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 633,
+    "automorphism_order": 3,
+    "ordinary_classes": 2
+  },
+  {
+    "n": 8,
+    "H": 637,
+    "automorphism_order": 1,
+    "ordinary_classes": 1
+  },
+  {
+    "n": 8,
+    "H": 639,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 641,
+    "automorphism_order": 1,
+    "ordinary_classes": 8
+  },
+  {
+    "n": 8,
+    "H": 643,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  },
+  {
+    "n": 8,
+    "H": 645,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 649,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 651,
+    "automorphism_order": 1,
+    "ordinary_classes": 10
+  },
+  {
+    "n": 8,
+    "H": 653,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 657,
+    "automorphism_order": 1,
+    "ordinary_classes": 12
+  },
+  {
+    "n": 8,
+    "H": 657,
+    "automorphism_order": 3,
+    "ordinary_classes": 3
+  },
+  {
+    "n": 8,
+    "H": 659,
+    "automorphism_order": 1,
+    "ordinary_classes": 4
+  },
+  {
+    "n": 8,
+    "H": 661,
+    "automorphism_order": 1,
+    "ordinary_classes": 6
+  }
+]

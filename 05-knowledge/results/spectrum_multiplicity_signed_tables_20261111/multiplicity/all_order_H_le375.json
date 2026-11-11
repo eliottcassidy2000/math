@@ -1,0 +1,7640 @@
+{
+  "1": {
+    "core_words": [
+      {
+        "strong_components": 0,
+        "total_size": 0,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "1"
+    ],
+    "exact_polynomial_from": 0,
+    "degree": 0
+  },
+  "3": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 3,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-2",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-2/3",
+      "1/3"
+    ],
+    "exact_polynomial_from": 2,
+    "degree": 1
+  },
+  "5": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 4,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-3",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-3",
+      "1"
+    ],
+    "exact_polynomial_from": 3,
+    "degree": 1
+  },
+  "7": {
+    "core_words": [],
+    "ordinary_polynomial_ascending": [
+      "0"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "0"
+    ],
+    "exact_polynomial_from": 0,
+    "degree": null
+  },
+  "9": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 5,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 6,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1/9"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "2",
+      "-5/2",
+      "1/2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-62/9",
+      "3/2",
+      "1/18"
+    ],
+    "exact_polynomial_from": 4,
+    "degree": 2
+  },
+  "11": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 5,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-4",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-4",
+      "1"
+    ],
+    "exact_polynomial_from": 4,
+    "degree": 1
+  },
+  "13": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 5,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-4",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-4",
+      "1"
+    ],
+    "exact_polynomial_from": 4,
+    "degree": 1
+  },
+  "15": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 5,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "8/15"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 7,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "12",
+      "-7",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-32/15",
+      "-17/15",
+      "1/3"
+    ],
+    "exact_polynomial_from": 5,
+    "degree": 2
+  },
+  "17": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-10",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-10",
+      "2"
+    ],
+    "exact_polynomial_from": 5,
+    "degree": 1
+  },
+  "19": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-10",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-10",
+      "2"
+    ],
+    "exact_polynomial_from": 5,
+    "degree": 1
+  },
+  "21": {
+    "core_words": [],
+    "ordinary_polynomial_ascending": [
+      "0"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "0"
+    ],
+    "exact_polynomial_from": 0,
+    "degree": null
+  },
+  "23": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-20",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-20",
+      "4"
+    ],
+    "exact_polynomial_from": 5,
+    "degree": 1
+  },
+  "25": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 8,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "5",
+      "-7/2",
+      "1/2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "5",
+      "-7/2",
+      "1/2"
+    ],
+    "exact_polynomial_from": 6,
+    "degree": 2
+  },
+  "27": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 8,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 9,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1/27"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "0",
+      "10/3",
+      "-3/2",
+      "1/6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "124/27",
+      "-332/81",
+      "29/54",
+      "1/162"
+    ],
+    "exact_polynomial_from": 6,
+    "degree": 3
+  },
+  "29": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-32",
+      "6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-32",
+      "6"
+    ],
+    "exact_polynomial_from": 6,
+    "degree": 1
+  },
+  "31": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-22",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-22",
+      "4"
+    ],
+    "exact_polynomial_from": 6,
+    "degree": 1
+  },
+  "33": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "11/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 8,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-1",
+      "-5",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-67/3",
+      "7/3",
+      "1/3"
+    ],
+    "exact_polynomial_from": 6,
+    "degree": 2
+  },
+  "35": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-12",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-12",
+      "2"
+    ],
+    "exact_polynomial_from": 6,
+    "degree": 1
+  },
+  "37": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "5"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-37",
+      "7"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-37",
+      "7"
+    ],
+    "exact_polynomial_from": 6,
+    "degree": 1
+  },
+  "39": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 8,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "30",
+      "-11",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "2",
+      "-7/3",
+      "1/3"
+    ],
+    "exact_polynomial_from": 6,
+    "degree": 2
+  },
+  "41": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "5"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-35",
+      "6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-35",
+      "6"
+    ],
+    "exact_polynomial_from": 6,
+    "degree": 1
+  },
+  "43": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-22",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-22",
+      "4"
+    ],
+    "exact_polynomial_from": 6,
+    "degree": 1
+  },
+  "45": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 6,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "11/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "5"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 8,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "16/45"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "16/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 10,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "1/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-19",
+      "43/2",
+      "-6",
+      "1/2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "1027/15",
+      "-671/30",
+      "68/45",
+      "1/18"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 3
+  },
+  "47": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-12",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-12",
+      "2"
+    ],
+    "exact_polynomial_from": 6,
+    "degree": 1
+  },
+  "49": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-49",
+      "8"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-49",
+      "8"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 1
+  },
+  "51": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "36",
+      "-18",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-80/3",
+      "0",
+      "2/3"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 2
+  },
+  "53": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-66",
+      "10"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-66",
+      "10"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 1
+  },
+  "55": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "32",
+      "-11",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "32",
+      "-11",
+      "1"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 2
+  },
+  "57": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "8/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "67",
+      "-23",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "1/3",
+      "-13/3",
+      "2/3"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 2
+  },
+  "59": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-76",
+      "12"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-76",
+      "12"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 1
+  },
+  "61": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-34",
+      "5"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-34",
+      "5"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 1
+  },
+  "63": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-14",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-14",
+      "2"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 1
+  },
+  "65": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "11",
+        "automorphism_mass": "11"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-31",
+      "-1",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-31",
+      "-1",
+      "1"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 2
+  },
+  "67": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-36",
+      "6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-36",
+      "6"
+    ],
+    "exact_polynomial_from": 6,
+    "degree": 1
+  },
+  "69": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "110",
+      "-42",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-46/3",
+      "-6",
+      "4/3"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 2
+  },
+  "71": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-70",
+      "11"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-70",
+      "11"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 1
+  },
+  "73": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "11",
+        "automorphism_mass": "11"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-125",
+      "19"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-125",
+      "19"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 1
+  },
+  "75": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "17/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "12/5"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "14/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 11,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "0",
+      "22",
+      "-13/2",
+      "1/2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "788/15",
+      "-8",
+      "-29/30",
+      "1/6"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 3
+  },
+  "77": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-102",
+      "16"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-102",
+      "16"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 1
+  },
+  "79": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "5"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-72",
+      "11"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-72",
+      "11"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 1
+  },
+  "81": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "11",
+        "automorphism_mass": "11"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "22/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "5"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 11,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "2/3"
+      },
+      {
+        "strong_components": 4,
+        "total_size": 12,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1/81"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-94",
+      "145/12",
+      "59/24",
+      "-7/12",
+      "1/24"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-130/27",
+      "-5687/972",
+      "971/1944",
+      "89/972",
+      "1/1944"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 4
+  },
+  "83": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-70",
+      "11"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-70",
+      "11"
+    ],
+    "exact_polynomial_from": 7,
+    "degree": 1
+  },
+  "85": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "5"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "71",
+      "-24",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "71",
+      "-24",
+      "2"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 2
+  },
+  "87": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "14/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "288",
+      "-83",
+      "6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "52",
+      "-65/3",
+      "2"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 2
+  },
+  "89": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-149",
+      "23"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-149",
+      "23"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "91": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "15",
+        "automorphism_mass": "15"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-190",
+      "29"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-190",
+      "29"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "93": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "154",
+      "-49",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-50/3",
+      "-19/3",
+      "4/3"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 2
+  },
+  "95": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "5"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "28",
+      "-17",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "28",
+      "-17",
+      "2"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 2
+  },
+  "97": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-162",
+      "23"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-162",
+      "23"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "99": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "22/9"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "26/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "22/9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 11,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "1/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "110",
+      "-15",
+      "-7/2",
+      "1/2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "1090/9",
+      "-349/9",
+      "49/18",
+      "1/18"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 3
+  },
+  "101": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-120",
+      "18"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-120",
+      "18"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "103": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-104",
+      "16"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-104",
+      "16"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "105": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "11",
+        "automorphism_mass": "29/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "19",
+      "-16",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-203/3",
+      "16/3",
+      "2/3"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 2
+  },
+  "107": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-102",
+      "14"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-102",
+      "14"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "109": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-172",
+      "26"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-172",
+      "26"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "111": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "28/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "28/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "5"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "240",
+      "-82",
+      "7"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-20",
+      "-38/3",
+      "7/3"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 2
+  },
+  "113": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-96",
+      "14"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-96",
+      "14"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "115": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "116",
+      "-43",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "116",
+      "-43",
+      "4"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 2
+  },
+  "117": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "15",
+        "automorphism_mass": "37/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "5"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "16/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 11,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "1/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-259",
+      "80",
+      "-19/2",
+      "1/2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-49/3",
+      "-68/9",
+      "7/6",
+      "1/18"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 3
+  },
+  "119": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-148",
+      "20"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-148",
+      "20"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "121": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-48",
+      "7/2",
+      "1/2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-48",
+      "7/2",
+      "1/2"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 2
+  },
+  "123": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "38/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "11",
+        "automorphism_mass": "11"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "170",
+      "-65",
+      "6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-86",
+      "-5/3",
+      "2"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 2
+  },
+  "125": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-32",
+      "65/6",
+      "-2",
+      "1/6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-32",
+      "65/6",
+      "-2",
+      "1/6"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 3
+  },
+  "127": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-86",
+      "12"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-86",
+      "12"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "129": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "19/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-24",
+      "-24",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-572/3",
+      "18",
+      "4/3"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 2
+  },
+  "131": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-168",
+      "24"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-168",
+      "24"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "133": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "17",
+        "automorphism_mass": "17"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-219",
+      "31"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-219",
+      "31"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "135": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "88/15"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "34/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 9,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "266/45"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "52/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 11,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "8/45"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "14/3"
+      },
+      {
+        "strong_components": 4,
+        "total_size": 13,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/27"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-74",
+      "-23",
+      "107/6",
+      "-3",
+      "1/6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "842/45",
+      "1279/45",
+      "-6659/810",
+      "74/135",
+      "1/162"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 4
+  },
+  "137": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-214",
+      "30"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-214",
+      "30"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "139": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-210",
+      "30"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-210",
+      "30"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "141": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "38/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-56",
+      "-6",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-344/3",
+      "34/3",
+      "2/3"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 2
+  },
+  "143": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-140",
+      "12",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-140",
+      "12",
+      "1"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 2
+  },
+  "145": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "316",
+      "-86",
+      "6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "316",
+      "-86",
+      "6"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "147": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "26/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "420",
+      "-115",
+      "8"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "188/3",
+      "-85/3",
+      "8/3"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "149": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-194",
+      "26"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-194",
+      "26"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "151": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "5"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-136",
+      "19"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-136",
+      "19"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "153": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "21",
+        "automorphism_mass": "157/9"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "32/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "2/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-109",
+      "65",
+      "-14",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "1403/9",
+      "-167/3",
+      "4",
+      "1/9"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 3
+  },
+  "155": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "4",
+      "-29",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "4",
+      "-29",
+      "4"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "157": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-216",
+      "29"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-216",
+      "29"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "159": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "10/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "56/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "50/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "380",
+      "-124",
+      "10"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-116",
+      "-10",
+      "10/3"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "161": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-141",
+      "19"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-141",
+      "19"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "163": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-204",
+      "28"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-204",
+      "28"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "165": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "17",
+        "automorphism_mass": "47/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "9",
+        "automorphism_mass": "9"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "166/15"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-2",
+      "50",
+      "-14",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "4106/15",
+      "-866/15",
+      "8/15",
+      "1/3"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 3
+  },
+  "167": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-156",
+      "20"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-156",
+      "20"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "169": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "19",
+        "automorphism_mass": "19"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "5",
+        "automorphism_mass": "5"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-254",
+      "59/2",
+      "1/2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-254",
+      "59/2",
+      "1/2"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "171": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "50/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "16/9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "2/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-430",
+      "145",
+      "-19",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "182/3",
+      "-287/9",
+      "23/9",
+      "1/9"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 3
+  },
+  "173": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "30"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-274",
+      "38"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-274",
+      "38"
+    ],
+    "exact_polynomial_from": 8,
+    "degree": 1
+  },
+  "175": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1/7"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-36",
+      "-9",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-216/7",
+      "-69/7",
+      "2"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "177": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "35",
+        "automorphism_mass": "89/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "34/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "471",
+      "-151",
+      "12"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-283/3",
+      "-53/3",
+      "4"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "179": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "9",
+        "automorphism_mass": "9"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-290",
+      "39"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-290",
+      "39"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "181": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-240",
+      "32"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-240",
+      "32"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "183": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "44/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "120",
+      "-53",
+      "5"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-376/3",
+      "11/3",
+      "5/3"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "185": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "260",
+      "-87",
+      "7"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "260",
+      "-87",
+      "7"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "187": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "24"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "17",
+        "automorphism_mass": "17"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-196",
+      "11",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-196",
+      "11",
+      "2"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "189": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 7,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1/21"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "17",
+        "automorphism_mass": "13"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-138",
+      "4",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-1542/7",
+      "512/21",
+      "2/3"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "191": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-268",
+      "36"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-268",
+      "36"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "193": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "21",
+        "automorphism_mass": "21"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "25",
+        "automorphism_mass": "25"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-374",
+      "49"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-374",
+      "49"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "195": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "34/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "64/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "42/5"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "216",
+      "-9",
+      "-10",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "592/5",
+      "-421/15",
+      "-4/5",
+      "1/3"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 3
+  },
+  "197": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "40",
+        "automorphism_mass": "40"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-394",
+      "54"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-394",
+      "54"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "199": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "24"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-300",
+      "39"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-300",
+      "39"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "201": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "15",
+        "automorphism_mass": "37/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "13",
+        "automorphism_mass": "13"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "214",
+      "-73",
+      "6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-166/3",
+      "-23/3",
+      "2"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "203": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-368",
+      "48"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-368",
+      "48"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "205": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "28"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "100",
+      "-58",
+      "6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "100",
+      "-58",
+      "6"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "207": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "220/9"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "32/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "16/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-270",
+      "182",
+      "-34",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "4730/9",
+      "-1114/9",
+      "6",
+      "2/9"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 3
+  },
+  "209": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-94",
+      "-2",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-94",
+      "-2",
+      "2"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "211": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "25",
+        "automorphism_mass": "25"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-376",
+      "49"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-376",
+      "49"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "213": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "80/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "37",
+        "automorphism_mass": "95/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "336",
+      "-126",
+      "11"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-188",
+      "-8/3",
+      "11/3"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "215": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-96",
+      "-18",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-96",
+      "-18",
+      "4"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "217": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "19",
+        "automorphism_mass": "19"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-342",
+      "45"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-342",
+      "45"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "219": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "42",
+        "automorphism_mass": "118/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "62/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "834",
+      "-251",
+      "19"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-350/3",
+      "-33",
+      "19/3"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "221": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "29",
+        "automorphism_mass": "29"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-262",
+      "20",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-262",
+      "20",
+      "2"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "223": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "11",
+        "automorphism_mass": "11"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-268",
+      "35"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-268",
+      "35"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "225": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "15",
+        "automorphism_mass": "15"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "27",
+        "automorphism_mass": "235/9"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "9",
+        "automorphism_mass": "9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "1214/225"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "806/45"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "26/15"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "21",
+        "automorphism_mass": "31/3"
+      },
+      {
+        "strong_components": 4,
+        "total_size": 14,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "2/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-375",
+      "-3/2",
+      "121/4",
+      "-5",
+      "1/4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-107171/225",
+      "26479/150",
+      "-19687/900",
+      "11/15",
+      "1/36"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 4
+  },
+  "227": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "24"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-358",
+      "46"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-358",
+      "46"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "229": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "38",
+        "automorphism_mass": "38"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "25",
+        "automorphism_mass": "25"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-538",
+      "71"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-538",
+      "71"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "231": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "40",
+        "automorphism_mass": "116/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "10/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "860",
+      "-230",
+      "16"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "152/3",
+      "-134/3",
+      "16/3"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "233": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "34"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "45",
+        "automorphism_mass": "45"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-634",
+      "83"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-634",
+      "83"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "235": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-68",
+      "-6",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-68",
+      "-6",
+      "2"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "237": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "36",
+        "automorphism_mass": "100/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "250",
+      "-115",
+      "11"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-802/3",
+      "7",
+      "11/3"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "239": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "42",
+        "automorphism_mass": "42"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-564",
+      "74"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-564",
+      "74"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "241": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-428",
+      "54"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-428",
+      "54"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "243": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "74/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "64/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "68/9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "46/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "2/9"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "21",
+        "automorphism_mass": "5"
+      },
+      {
+        "strong_components": 4,
+        "total_size": 14,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/27"
+      },
+      {
+        "strong_components": 5,
+        "total_size": 15,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1/243"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "588",
+      "-5539/30",
+      "35/3",
+      "9/8",
+      "-1/6",
+      "1/120"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-33304/243",
+      "194761/7290",
+      "-350/81",
+      "2051/5832",
+      "5/486",
+      "1/29160"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 5
+  },
+  "245": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "25",
+        "automorphism_mass": "25"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "25",
+        "automorphism_mass": "25"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "201",
+      "-86",
+      "8"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "201",
+      "-86",
+      "8"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "247": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "28"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "23",
+        "automorphism_mass": "23"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-218",
+      "15",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-218",
+      "15",
+      "2"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "249": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "68/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "62/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "17",
+        "automorphism_mass": "17"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "367",
+      "-132",
+      "11"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-189",
+      "-14/3",
+      "11/3"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "251": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-366",
+      "48"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-366",
+      "48"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "253": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "27",
+        "automorphism_mass": "27"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-36",
+      "-24",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-36",
+      "-24",
+      "4"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "255": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "356/15"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "35",
+        "automorphism_mass": "97/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "32",
+        "automorphism_mass": "76/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "262/15"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "56/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-602",
+      "239",
+      "-36",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "2758/15",
+      "-493/15",
+      "-18/5",
+      "2/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 3
+  },
+  "257": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "30"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "30"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "13",
+        "automorphism_mass": "13"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-567",
+      "73"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-567",
+      "73"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "259": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "34"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "13",
+        "automorphism_mass": "13"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-450",
+      "59"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-450",
+      "59"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "261": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "24"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "86/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "34/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "172/9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "32/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "4/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "2/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-1754",
+      "591",
+      "-70",
+      "3"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "1514/3",
+      "-1067/9",
+      "44/9",
+      "1/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 3
+  },
+  "263": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "37",
+        "automorphism_mass": "37"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-540",
+      "69"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-540",
+      "69"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "265": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "25",
+        "automorphism_mass": "25"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "428",
+      "-129",
+      "10"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "428",
+      "-129",
+      "10"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "267": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "44",
+        "automorphism_mass": "44"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "76/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "28/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "1070",
+      "-313",
+      "23"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-334/3",
+      "-133/3",
+      "23/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "269": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "29",
+        "automorphism_mass": "29"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-483",
+      "63"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-483",
+      "63"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "271": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "32",
+        "automorphism_mass": "32"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "28"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-538",
+      "70"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-538",
+      "70"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "273": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "27",
+        "automorphism_mass": "73/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "70/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "1680",
+      "-438",
+      "29"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "500/3",
+      "-292/3",
+      "29/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "275": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "38",
+        "automorphism_mass": "38"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-512",
+      "112",
+      "-19/2",
+      "1/2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-512",
+      "112",
+      "-19/2",
+      "1/2"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 3
+  },
+  "277": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "27",
+        "automorphism_mass": "27"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "27",
+        "automorphism_mass": "27"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-603",
+      "76"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-603",
+      "76"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "279": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "64/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "38",
+        "automorphism_mass": "106/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "32/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "32/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "2/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "2/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-904",
+      "308",
+      "-40",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "320",
+      "-890/9",
+      "6",
+      "2/9"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 3
+  },
+  "281": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "48",
+        "automorphism_mass": "48"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "29",
+        "automorphism_mass": "29"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-704",
+      "92"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-704",
+      "92"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "283": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "32",
+        "automorphism_mass": "32"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "31",
+        "automorphism_mass": "31"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-652",
+      "83"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-652",
+      "83"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "285": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "34"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "38",
+        "automorphism_mass": "30"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "21",
+        "automorphism_mass": "55/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "36",
+        "automorphism_mass": "212/15"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "46/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-481",
+      "209",
+      "-34",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-11/3",
+      "121/15",
+      "-28/5",
+      "2/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 3
+  },
+  "287": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "34"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "27",
+        "automorphism_mass": "27"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-652",
+      "83"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-652",
+      "83"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "289": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "28"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "21",
+        "automorphism_mass": "21"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-382",
+      "33",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-382",
+      "33",
+      "2"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "291": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "40",
+        "automorphism_mass": "36"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "38",
+        "automorphism_mass": "74/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "64/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "1126",
+      "-319",
+      "23"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-242/3",
+      "-151/3",
+      "23/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "293": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "42",
+        "automorphism_mass": "42"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "48",
+        "automorphism_mass": "48"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-804",
+      "104"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-804",
+      "104"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "295": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "34"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "590",
+      "-164",
+      "12"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "590",
+      "-164",
+      "12"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "297": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "47",
+        "automorphism_mass": "371/9"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "74/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "13",
+        "automorphism_mass": "13"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "44/27"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "52",
+        "automorphism_mass": "196/9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "15",
+        "automorphism_mass": "11/9"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "21",
+        "automorphism_mass": "5"
+      },
+      {
+        "strong_components": 4,
+        "total_size": 14,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/27"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-909",
+      "1483/6",
+      "-41/3",
+      "-5/3",
+      "1/6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "6241/27",
+      "-4451/162",
+      "-488/81",
+      "61/81",
+      "1/162"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 4
+  },
+  "299": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "48",
+        "automorphism_mass": "48"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-340",
+      "12",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-340",
+      "12",
+      "4"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 2
+  },
+  "301": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "40",
+        "automorphism_mass": "40"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-648",
+      "80"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-648",
+      "80"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "303": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "30"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "32",
+        "automorphism_mass": "92/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "56/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "718",
+      "-232",
+      "18"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-710/3",
+      "-56/3",
+      "6"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "305": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "28"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "36",
+        "automorphism_mass": "36"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "13",
+        "automorphism_mass": "13"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "11",
+        "automorphism_mass": "11"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-181",
+      "-15",
+      "5"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-181",
+      "-15",
+      "5"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "307": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "36",
+        "automorphism_mass": "36"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-612",
+      "78"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-612",
+      "78"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "309": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "86/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "62",
+        "automorphism_mass": "170/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "21",
+        "automorphism_mass": "55/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "305",
+      "-165",
+      "16"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-1457/3",
+      "53/3",
+      "16/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "311": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "34"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-598",
+      "76"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-598",
+      "76"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "313": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "24"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "34"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "1",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-558",
+      "71"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-558",
+      "71"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "315": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "86/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "37",
+        "automorphism_mass": "97/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "62/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "9",
+        "automorphism_mass": "9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "58/9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "2/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "154",
+      "-6",
+      "-9",
+      "1"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "274",
+      "-100",
+      "71/9",
+      "1/9"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 3
+  },
+  "317": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "42",
+        "automorphism_mass": "42"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "30"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-696",
+      "90"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-696",
+      "90"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "319": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "35",
+        "automorphism_mass": "35"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-104",
+      "-33",
+      "6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-104",
+      "-33",
+      "6"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "321": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "40",
+        "automorphism_mass": "116/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "48",
+        "automorphism_mass": "104/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "82/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "290",
+      "-144",
+      "14"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-1282/3",
+      "52/3",
+      "14/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "323": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "32",
+        "automorphism_mass": "32"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "38",
+        "automorphism_mass": "38"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-312",
+      "10",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-312",
+      "10",
+      "4"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "325": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "27",
+        "automorphism_mass": "27"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "41",
+        "automorphism_mass": "41"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "209",
+      "-58",
+      "1/2",
+      "1/2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "209",
+      "-58",
+      "1/2",
+      "1/2"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 3
+  },
+  "327": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "24"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "38",
+        "automorphism_mass": "106/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "74/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "28/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "1354",
+      "-374",
+      "26"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-30",
+      "-66",
+      "26/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "329": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "35",
+        "automorphism_mass": "35"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "48",
+        "automorphism_mass": "48"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "6"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-815",
+      "103"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-815",
+      "103"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "331": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "28"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-444",
+      "56"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-444",
+      "56"
+    ],
+    "exact_polynomial_from": 9,
+    "degree": 1
+  },
+  "333": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "39",
+        "automorphism_mass": "109/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "36",
+        "automorphism_mass": "296/9"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "43",
+        "automorphism_mass": "113/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "56/9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "44",
+        "automorphism_mass": "236/9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "34/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "15",
+        "automorphism_mass": "5/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "6",
+        "automorphism_mass": "2/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-1133",
+      "917/2",
+      "-67",
+      "7/2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "6023/9",
+      "-1097/6",
+      "89/9",
+      "7/18"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 3
+  },
+  "335": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "38",
+        "automorphism_mass": "38"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "36",
+        "automorphism_mass": "36"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-196",
+      "-20",
+      "6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-196",
+      "-20",
+      "6"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "337": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "28"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "48",
+        "automorphism_mass": "48"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-822",
+      "102"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-822",
+      "102"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "339": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "36",
+        "automorphism_mass": "104/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "47",
+        "automorphism_mass": "43"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "56/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "300",
+      "-147",
+      "14"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-1396/3",
+      "21",
+      "14/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "341": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "26",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "51",
+        "automorphism_mass": "51"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-450",
+      "25",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-450",
+      "25",
+      "4"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "343": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "67",
+        "automorphism_mass": "67"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-844",
+      "103"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-844",
+      "103"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "345": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "49",
+        "automorphism_mass": "237/5"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "62",
+        "automorphism_mass": "170/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "56",
+        "automorphism_mass": "148/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "68",
+        "automorphism_mass": "148/5"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "36",
+        "automorphism_mass": "92/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-1199",
+      "484",
+      "-73",
+      "4"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "1163/15",
+      "26/5",
+      "-173/15",
+      "4/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 3
+  },
+  "347": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "38",
+        "automorphism_mass": "38"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "46",
+        "automorphism_mass": "46"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-782",
+      "100"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-782",
+      "100"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "349": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "38",
+        "automorphism_mass": "38"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "25",
+        "automorphism_mass": "25"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "24"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-702",
+      "89"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-702",
+      "89"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "351": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "46",
+        "automorphism_mass": "130/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "45",
+        "automorphism_mass": "127/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "48",
+        "automorphism_mass": "40"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "86/9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "52/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "14/3"
+      },
+      {
+        "strong_components": 4,
+        "total_size": 14,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/27"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "1020",
+      "-1384/3",
+      "413/6",
+      "-14/3",
+      "1/6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-13268/27",
+      "5636/81",
+      "-811/162",
+      "40/81",
+      "1/162"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 4
+  },
+  "353": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "33",
+        "automorphism_mass": "33"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "43",
+        "automorphism_mass": "43"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "25",
+        "automorphism_mass": "25"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-870",
+      "108"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-870",
+      "108"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "355": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "24"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "42",
+        "automorphism_mass": "42"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "20"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "14"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "316",
+      "-124",
+      "11"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "316",
+      "-124",
+      "11"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "357": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "33",
+        "automorphism_mass": "91/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "82",
+        "automorphism_mass": "214/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "40",
+        "automorphism_mass": "88/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "12"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "593",
+      "-229",
+      "20"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-1541/3",
+      "11",
+      "20/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "359": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "34"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "38",
+        "automorphism_mass": "38"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "24"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-798",
+      "100"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-798",
+      "100"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "361": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "31",
+        "automorphism_mass": "31"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "43",
+        "automorphism_mass": "43"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "32",
+        "automorphism_mass": "32"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "11",
+        "automorphism_mass": "11"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-739",
+      "75",
+      "2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-739",
+      "75",
+      "2"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "363": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "27",
+        "automorphism_mass": "25"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "30",
+        "automorphism_mass": "26"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "8",
+        "automorphism_mass": "8/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "10"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "14",
+        "automorphism_mass": "26/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "1"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "552",
+      "-128",
+      "7/2",
+      "1/2"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "596/3",
+      "-232/3",
+      "31/6",
+      "1/6"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 3
+  },
+  "365": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "34",
+        "automorphism_mass": "34"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "42",
+        "automorphism_mass": "42"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "24",
+        "automorphism_mass": "24"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "17",
+        "automorphism_mass": "17"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "16",
+        "automorphism_mass": "16"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "970",
+      "-266",
+      "19"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "970",
+      "-266",
+      "19"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 2
+  },
+  "367": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "22",
+        "automorphism_mass": "22"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "39",
+        "automorphism_mass": "39"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "28"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "10",
+        "automorphism_mass": "10"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-818",
+      "99"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-818",
+      "99"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "369": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "39",
+        "automorphism_mass": "113/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "53",
+        "automorphism_mass": "155/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "58",
+        "automorphism_mass": "146/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "23",
+        "automorphism_mass": "23"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "16/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "32",
+        "automorphism_mass": "112/9"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "42",
+        "automorphism_mass": "82/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 12,
+        "ordinary_coefficient": "3",
+        "automorphism_mass": "1/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "15",
+        "automorphism_mass": "5/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-774",
+      "625/2",
+      "-101/2",
+      "3"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "1466/3",
+      "-3103/18",
+      "211/18",
+      "1/3"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 3
+  },
+  "371": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "32",
+        "automorphism_mass": "32"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "54",
+        "automorphism_mass": "54"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "18"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "7",
+        "automorphism_mass": "7"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-888",
+      "111"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-888",
+      "111"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "373": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "35",
+        "automorphism_mass": "35"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "70",
+        "automorphism_mass": "70"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "28",
+        "automorphism_mass": "28"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-1077",
+      "135"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-1077",
+      "135"
+    ],
+    "exact_polynomial_from": 10,
+    "degree": 1
+  },
+  "375": {
+    "core_words": [
+      {
+        "strong_components": 1,
+        "total_size": 8,
+        "ordinary_coefficient": "40",
+        "automorphism_mass": "116/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 9,
+        "ordinary_coefficient": "54",
+        "automorphism_mass": "50"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 10,
+        "ordinary_coefficient": "36",
+        "automorphism_mass": "100/3"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 11,
+        "ordinary_coefficient": "11",
+        "automorphism_mass": "9"
+      },
+      {
+        "strong_components": 1,
+        "total_size": 12,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 10,
+        "ordinary_coefficient": "2",
+        "automorphism_mass": "2/3"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 11,
+        "ordinary_coefficient": "42",
+        "automorphism_mass": "302/15"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 12,
+        "ordinary_coefficient": "20",
+        "automorphism_mass": "176/15"
+      },
+      {
+        "strong_components": 2,
+        "total_size": 13,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "32/3"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 13,
+        "ordinary_coefficient": "18",
+        "automorphism_mass": "28/5"
+      },
+      {
+        "strong_components": 3,
+        "total_size": 14,
+        "ordinary_coefficient": "12",
+        "automorphism_mass": "8"
+      },
+      {
+        "strong_components": 4,
+        "total_size": 15,
+        "ordinary_coefficient": "4",
+        "automorphism_mass": "4/3"
+      }
+    ],
+    "ordinary_polynomial_ascending": [
+      "-724",
+      "112/3",
+      "137/6",
+      "-10/3",
+      "1/6"
+    ],
+    "labelled_over_factorial_polynomial_ascending": [
+      "-3032/3",
+      "7838/45",
+      "-473/90",
+      "-23/45",
+      "1/18"
+    ],
+    "exact_polynomial_from": 11,
+    "degree": 4
+  }
+}

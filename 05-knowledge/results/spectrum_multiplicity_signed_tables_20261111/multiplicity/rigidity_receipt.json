@@ -1,0 +1,377 @@
+{
+  "status": "PASS structural controls; all-order proofs in RIGIDITY.md",
+  "no_tournament_enumeration": true,
+  "no_path_count_or_automorphism_search": true,
+  "source_sha256": {
+    "05-knowledge/results/berggren_target_return_20261111/reset/target_ready_return.json": "b6c6733749ed598fbf57197ad523c0e9bc9fd8d8f08989d0992e4cb6851d1420",
+    "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md": "269814cf38bebbedc13b56d7894eca2d36f246fccce7b81a422b00d740e342cd",
+    "05-knowledge/results/two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c",
+    "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md": "d4415fe860bdcc737c05614d97f3909168dd73a783f892505e42103add064a8e"
+  },
+  "controls": [
+    {
+      "k": 1,
+      "source_order": 8,
+      "ready_order": 9,
+      "source_indegrees": [
+        1,
+        4,
+        6,
+        3,
+        3,
+        2,
+        5,
+        4
+      ],
+      "two_parent_paths": [
+        [
+          5,
+          1,
+          2,
+          4,
+          6,
+          7,
+          3
+        ],
+        [
+          5,
+          1,
+          2,
+          4,
+          7,
+          3,
+          6
+        ]
+      ],
+      "rigid_degree_parts": [
+        [
+          1,
+          7
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6
+        ]
+      ]
+    },
+    {
+      "k": 2,
+      "source_order": 9,
+      "ready_order": 10,
+      "source_indegrees": [
+        1,
+        2,
+        5,
+        7,
+        4,
+        4,
+        2,
+        6,
+        5
+      ],
+      "two_parent_paths": [
+        [
+          6,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8,
+          4
+        ],
+        [
+          6,
+          1,
+          2,
+          3,
+          5,
+          8,
+          4,
+          7
+        ]
+      ],
+      "rigid_degree_parts": [
+        [
+          1
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          7
+        ]
+      ]
+    },
+    {
+      "k": 7,
+      "source_order": 14,
+      "ready_order": 15,
+      "source_indegrees": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        12,
+        9,
+        9,
+        2,
+        11,
+        10
+      ],
+      "two_parent_paths": [
+        [
+          11,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          12,
+          13,
+          9
+        ],
+        [
+          11,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          13,
+          9,
+          12
+        ]
+      ],
+      "rigid_degree_parts": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7,
+          13
+        ],
+        [
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          12
+        ]
+      ]
+    },
+    {
+      "k": 16,
+      "source_order": 23,
+      "ready_order": 24,
+      "source_indegrees": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        21,
+        18,
+        18,
+        2,
+        20,
+        19
+      ],
+      "two_parent_paths": [
+        [
+          20,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          19,
+          21,
+          22,
+          18
+        ],
+        [
+          20,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          19,
+          22,
+          18,
+          21
+        ]
+      ],
+      "rigid_degree_parts": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14
+        ],
+        [
+          15
+        ],
+        [
+          16,
+          22
+        ],
+        [
+          17
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          21
+        ]
+      ]
+    }
+  ],
+  "H221_core_words": [
+    {
+      "strong_components": 1,
+      "total_size": 8,
+      "ordinary_coefficient": "29",
+      "automorphism_mass": "29"
+    },
+    {
+      "strong_components": 1,
+      "total_size": 9,
+      "ordinary_coefficient": "22",
+      "automorphism_mass": "22"
+    },
+    {
+      "strong_components": 1,
+      "total_size": 10,
+      "ordinary_coefficient": "7",
+      "automorphism_mass": "7"
+    },
+    {
+      "strong_components": 2,
+      "total_size": 11,
+      "ordinary_coefficient": "4",
+      "automorphism_mass": "4"
+    }
+  ],
+  "inherited_ready_H221": "Exactly one strong ready class, R1 of order9, from TARGET_RETURN section4",
+  "inherited_ready_H1997": "No strong1-ready class at any order, from TARGET_RETURN section4"
+}

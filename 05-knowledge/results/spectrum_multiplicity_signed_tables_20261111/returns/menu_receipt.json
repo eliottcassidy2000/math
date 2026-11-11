@@ -1,0 +1,462 @@
+{
+  "scope": "For each named source, all two-newborn extensions whose specified marked newborn has indegree one. Its predecessor may be any old vertex or the other newborn. No constraint on the other newborn. Large intermediate H is pruned only by monotonicity.",
+  "cases": [
+    {
+      "source_rows": [
+        1186,
+        1020,
+        1017,
+        1009,
+        993,
+        960,
+        897,
+        768,
+        513,
+        1,
+        3070,
+        5119,
+        2047
+      ],
+      "source_H": 1997,
+      "targets": [
+        5993,
+        5995
+      ],
+      "legal_extensions": 114688,
+      "menus": [
+        {
+          "predecessor": "other_newborn",
+          "result": {
+            "source_H": 1997,
+            "hits": [],
+            "monotonicity_pruned": false
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 0,
+          "result": {
+            "source_H": 7165,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 1,
+          "result": {
+            "source_H": 7623,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 2,
+          "result": {
+            "source_H": 9453,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 3,
+          "result": {
+            "source_H": 13507,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 4,
+          "result": {
+            "source_H": 19737,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 5,
+          "result": {
+            "source_H": 30405,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 6,
+          "result": {
+            "source_H": 41681,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 7,
+          "result": {
+            "source_H": 70123,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 8,
+          "result": {
+            "source_H": 83611,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 9,
+          "result": {
+            "source_H": 111147,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 10,
+          "result": {
+            "source_H": 4191,
+            "hits": [],
+            "monotonicity_pruned": false
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 11,
+          "result": {
+            "source_H": 3329,
+            "hits": [
+              {
+                "cut": 2047,
+                "H": 5993,
+                "retains_indegree_one": true
+              },
+              {
+                "cut": 6143,
+                "H": 5993,
+                "retains_indegree_one": true
+              },
+              {
+                "cut": 14335,
+                "H": 5993,
+                "retains_indegree_one": false
+              }
+            ],
+            "monotonicity_pruned": false
+          },
+          "valid_hits": [
+            {
+              "cut": 2047,
+              "H": 5993,
+              "retains_indegree_one": true
+            },
+            {
+              "cut": 6143,
+              "H": 5993,
+              "retains_indegree_one": true
+            }
+          ]
+        },
+        {
+          "predecessor": 12,
+          "result": {
+            "source_H": 3759,
+            "hits": [
+              {
+                "cut": 512,
+                "H": 5995,
+                "retains_indegree_one": true
+              }
+            ],
+            "monotonicity_pruned": false
+          },
+          "valid_hits": [
+            {
+              "cut": 512,
+              "H": 5995,
+              "retains_indegree_one": true
+            }
+          ]
+        }
+      ],
+      "positive_literal_controls": [
+        {
+          "predecessor": 11,
+          "cut": 2047,
+          "rows": [
+            1186,
+            1020,
+            1017,
+            1009,
+            993,
+            960,
+            897,
+            768,
+            513,
+            1,
+            3070,
+            29695,
+            18431,
+            22527,
+            2047
+          ],
+          "root": 13,
+          "HESUVdK": [
+            5993,
+            1,
+            2664,
+            752851,
+            6658,
+            3329,
+            973208
+          ]
+        },
+        {
+          "predecessor": 11,
+          "cut": 6143,
+          "rows": [
+            1186,
+            1020,
+            1017,
+            1009,
+            993,
+            960,
+            897,
+            768,
+            513,
+            1,
+            3070,
+            29695,
+            2047,
+            22527,
+            6143
+          ],
+          "root": 13,
+          "HESUVdK": [
+            5993,
+            1,
+            2664,
+            752851,
+            6658,
+            3329,
+            973208
+          ]
+        },
+        {
+          "predecessor": 12,
+          "cut": 512,
+          "rows": [
+            17570,
+            17404,
+            17401,
+            17393,
+            17377,
+            17344,
+            17281,
+            17152,
+            16897,
+            1,
+            19454,
+            21503,
+            26623,
+            20479,
+            512
+          ],
+          "root": 13,
+          "HESUVdK": [
+            5995,
+            1,
+            2123,
+            684115,
+            7057,
+            3185,
+            937184
+          ]
+        }
+      ]
+    },
+    {
+      "source_rows": [
+        1186,
+        1020,
+        1017,
+        1009,
+        993,
+        960,
+        897,
+        768,
+        513,
+        1,
+        3070,
+        29695,
+        2047,
+        6143,
+        14335
+      ],
+      "source_H": 5993,
+      "targets": [
+        17981,
+        17983
+      ],
+      "legal_extensions": 524288,
+      "menus": [
+        {
+          "predecessor": "other_newborn",
+          "result": {
+            "source_H": 5993,
+            "hits": [],
+            "monotonicity_pruned": false
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 0,
+          "result": {
+            "source_H": 42181,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 1,
+          "result": {
+            "source_H": 44079,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 2,
+          "result": {
+            "source_H": 54969,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 3,
+          "result": {
+            "source_H": 81103,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 4,
+          "result": {
+            "source_H": 121689,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 5,
+          "result": {
+            "source_H": 191517,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 6,
+          "result": {
+            "source_H": 264785,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 7,
+          "result": {
+            "source_H": 450643,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 8,
+          "result": {
+            "source_H": 539047,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 9,
+          "result": {
+            "source_H": 719787,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 10,
+          "result": {
+            "source_H": 16179,
+            "hits": [],
+            "monotonicity_pruned": false
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 11,
+          "result": {
+            "source_H": 11321,
+            "hits": [],
+            "monotonicity_pruned": false
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 12,
+          "result": {
+            "source_H": 22401,
+            "hits": [],
+            "monotonicity_pruned": true
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 13,
+          "result": {
+            "source_H": 15313,
+            "hits": [],
+            "monotonicity_pruned": false
+          },
+          "valid_hits": []
+        },
+        {
+          "predecessor": 14,
+          "result": {
+            "source_H": 9987,
+            "hits": [],
+            "monotonicity_pruned": false
+          },
+          "valid_hits": []
+        }
+      ],
+      "positive_literal_controls": []
+    }
+  ]
+}
