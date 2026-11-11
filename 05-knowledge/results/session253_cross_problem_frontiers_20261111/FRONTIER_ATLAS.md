@@ -83,3 +83,22 @@ supply a physical constructor or a small integer representative. The
 ternary liftability obstruction and the two H9 equal affine hulls make this
 limitation explicit. This session records the research move locally rather
 than modifying the global meta-pattern index without a separate review.
+
+## Incoming work that changed the final comparison
+
+Commit787a2f04 was integrated before closure. Its
+`chanpak_five_core_bridges_20261110/algebra/FIVE_MODULES.md` identifies the
+natural carrier as the classical length-three indecomposable and interprets
+the inherited B95 central switch. Combining this with the Laurent model
+shows that the central defect direction E13 DOES lift as T^2; the two
+missing deformation directions are elsewhere. This prevents a wrong
+blanket claim that singular-only directions obstruct every useful switch.
+
+Its `algebra/LOW_RATIO_FRONTIER.md` gives a finite exact strong-extension
+test below the two-ear threshold and distinguishes actual H141 sources
+with different ternary futures. Its `cover/GAP.md` gives the inherited
+mod3 obstruction for a nonempty separator between two triangle blocks.
+These are additional received native constructions/obstructions, not new
+Session253 theorems. They reinforce the same priority: preserve the actual
+source and operation, rather than treating an equal count, affine lattice,
+or residue germ as a lawful replacement.

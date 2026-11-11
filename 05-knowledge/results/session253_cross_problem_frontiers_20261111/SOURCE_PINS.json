@@ -252,6 +252,30 @@
       "blob_sha": "e5eeac5938b80131d370994b890804cd8510b21b",
       "commit": "b02c593ac08481ee34cb0837a2d508be7921c360",
       "url": "https://github.com/eliottcassidy2000/math/blob/b02c593ac08481ee34cb0837a2d508be7921c360/05-knowledge/results/third_20260906_laurent.md"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/algebra/FIVE_MODULES.md",
+      "blob_sha": "4c0f3a577b96a1ebbe579a6e0d3ef1a753637ba2",
+      "commit": "787a2f04b521f7ae818d248c42106bf22814070b",
+      "url": "https://github.com/eliottcassidy2000/math/blob/787a2f04b521f7ae818d248c42106bf22814070b/05-knowledge/results/chanpak_five_core_bridges_20261110/algebra/FIVE_MODULES.md"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/algebra/LOW_RATIO_FRONTIER.md",
+      "blob_sha": "5410e28172460c62f7c606451369b4955412d3e2",
+      "commit": "787a2f04b521f7ae818d248c42106bf22814070b",
+      "url": "https://github.com/eliottcassidy2000/math/blob/787a2f04b521f7ae818d248c42106bf22814070b/05-knowledge/results/chanpak_five_core_bridges_20261110/algebra/LOW_RATIO_FRONTIER.md"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/cover/GAP.md",
+      "blob_sha": "0ac39c124ff3bfb55941cbb02d497e4d684dce56",
+      "commit": "787a2f04b521f7ae818d248c42106bf22814070b",
+      "url": "https://github.com/eliottcassidy2000/math/blob/787a2f04b521f7ae818d248c42106bf22814070b/05-knowledge/results/chanpak_five_core_bridges_20261110/cover/GAP.md"
+    },
+    {
+      "path": "05-knowledge/results/metagraph_aspect_sequences_20261111/README.md",
+      "blob_sha": "21da00f44d5a8b16da7569b233d89ea929ec62b9",
+      "commit": "51367eeff48e8ae50c52e6673dcf90ae9004213f",
+      "url": "https://github.com/eliottcassidy2000/math/blob/51367eeff48e8ae50c52e6673dcf90ae9004213f/05-knowledge/results/metagraph_aspect_sequences_20261111/README.md"
     }
   ]
 }

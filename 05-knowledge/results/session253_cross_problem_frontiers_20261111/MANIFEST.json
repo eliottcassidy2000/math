@@ -1,0 +1,160 @@
+{
+  "session": 253,
+  "date": "2026-11-11",
+  "status": "COMPLETE research deliverable; flagship conjectures remain OPEN",
+  "scope": "new proved-in-note mechanisms and bounded exact controls; no inherited source audit or canon promotion",
+  "inherited_base": "b02c593ac08481ee34cb0837a2d508be7921c360",
+  "preserved_concurrent": [
+    "fe7ee3c8af8f9996721ce8a3bc8222f27ee5977e",
+    "787a2f04b521f7ae818d248c42106bf22814070b",
+    "cee08216b99d42a10ff96aec376c008bdc0001db",
+    "51367eeff48e8ae50c52e6673dcf90ae9004213f"
+  ],
+  "published_checkpoints_before_final": [
+    "687d21ab118391fff14c2be2a0c7ac49aa8b0a0a",
+    "a3e5ec04042f40e0e3e33e9c220352fc47adb206"
+  ],
+  "new_engines": 9,
+  "normal_and_optimized_pairs_pass": true,
+  "source_pins": 46,
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "files": [
+    {
+      "path": "BOARD.md",
+      "sha256": "144e447abd0fc9897f7f6907ede7e50845502f59e80a1608572fb0d138e02bfd"
+    },
+    {
+      "path": "FRONTIER_ATLAS.md",
+      "sha256": "ef710367ab38b663219be7b596fb4ddb404e69ace0784373143a1d971c0e19d7"
+    },
+    {
+      "path": "README.md",
+      "sha256": "fe3e42374d357314fbf42f7c9f89aa5219108253b9ae1170d241d0c584499475"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "sha256": "4ac76ee520b6a3715e179c3123524e409430eb0487406c93cd60fcc717119e38"
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "sha256": "b88f0b803870842feacce8d580b02e85f324072818188ec582b1801cba10c99a"
+    },
+    {
+      "path": "doc_check.out",
+      "sha256": "d5a577e9ccc46c7daa78ce173dc6843b170a2b80e5f38c8b2a1dd1084e13f3f6"
+    },
+    {
+      "path": "integral/PROOF.md",
+      "sha256": "5f6a74080d6726ec01dc877ed93c7119bf57f4db777e6e4728502fdf87fbd7cb"
+    },
+    {
+      "path": "integral/probe.py",
+      "sha256": "b9b0badfa6a0e672814c6584e234b8c6f68d7a2fd7d41780b04af7149e08a292"
+    },
+    {
+      "path": "integral/results.json",
+      "sha256": "e2de2a4b7fd1034f5ebc8285437f5a09e97da7f9305e01d04d28dacbe4895fa0"
+    },
+    {
+      "path": "lrc/PROOF.md",
+      "sha256": "8929b98353d73c3222b0eae22b3ec0871ff295082ade9e79667539b86be76c4f"
+    },
+    {
+      "path": "lrc/README.md",
+      "sha256": "0e31b9167282541b64860d8a5ed5be8a77f9fb1ea5118223c5f3e90db3285629"
+    },
+    {
+      "path": "lrc/asymmetric.json",
+      "sha256": "3ed860e99a75402ec88dcd03ce4d99f1c400e1b925713e887d1e12a6af2bf630"
+    },
+    {
+      "path": "lrc/asymmetric.py",
+      "sha256": "03a198011c034effde7e1b580d5ac7c460ae9e73622c77c9f2a49e1dfc9e6659"
+    },
+    {
+      "path": "lrc/hostile.json",
+      "sha256": "a5de1d81c14725c47119cf597835a6bcabca3c8519bdbad86f6b47f4ab516466"
+    },
+    {
+      "path": "lrc/hostile.py",
+      "sha256": "e37e52e9b969da2e293a44319d865b4946bd4df565101c781bd5150f2426552c"
+    },
+    {
+      "path": "lrc/probe.py",
+      "sha256": "3bc6a5cbbd3e7cbd4c8e62a7bbac18ee98872e15f52615aec84f1390d84e4239"
+    },
+    {
+      "path": "lrc/results.json",
+      "sha256": "03ec0503cadbb229fc7a5b53c09e55f5bf443ac74780f99e767dd93dc48c1b8f"
+    },
+    {
+      "path": "moments/PROOF.md",
+      "sha256": "1224281a18263d8ac9d7b7ccb0b9d91e6d42fca9dc369533b222e701d1fb19a1"
+    },
+    {
+      "path": "moments/probe.out",
+      "sha256": "086ee2f420fdf5ef613e2bbfdc0215f698274afb49e13fb21acb3ec9501eacd1"
+    },
+    {
+      "path": "moments/probe.py",
+      "sha256": "2e7a7f22fc085ef260810cc7bd02208768d3be4a4801953593b016d92b6d482e"
+    },
+    {
+      "path": "niche/PROOF.md",
+      "sha256": "522cde36671f11793ce96f17f7fadf334d0cc29fafd94cc787854fe155a32d85"
+    },
+    {
+      "path": "niche/cost_probe.py",
+      "sha256": "6c2fb475b659a04b62fb9905991e147a4673bc7b73034cc35d40164cb333dff4"
+    },
+    {
+      "path": "niche/cost_results.json",
+      "sha256": "3ab849fe7e7866cd3ba799e29240b829d3716afca75687a829eb081cf69a1d02"
+    },
+    {
+      "path": "niche/cube_probe.py",
+      "sha256": "4ca20ea1d0a07a943fe9ce0ce73dbb7476e08d653818f5f506a2d62acda49499"
+    },
+    {
+      "path": "niche/cube_results.json",
+      "sha256": "4df7fe9120773aba02576af1ecb981d1b26ed3a601ef98d26ab3a48c37e55862"
+    },
+    {
+      "path": "niche/probe.py",
+      "sha256": "e6be308169168bd6977c550b1d3853f36b4d3b5622a5dd69a4aab7a169f70bcd"
+    },
+    {
+      "path": "niche/results.json",
+      "sha256": "1b433e99e8b3e66e9f623be0e1af0bf33fcda8811b1eaf010405a1c2aa6d314d"
+    },
+    {
+      "path": "replay.json",
+      "sha256": "2c28a23aa6b2588cc5808114688d4974d256c442cc8bdee064d3d826d05a8232"
+    },
+    {
+      "path": "reproduce.py",
+      "sha256": "f4a6a935a18726faa41d3ccb05c223a6290a486858e014bb27a39567cf675044"
+    },
+    {
+      "path": "tournaments/PROOF.md",
+      "sha256": "60ac1b5fb2cb296b8b4d9eac54d5a85c8eb24626d85ae3fcaaf78bed5ae8c0bc"
+    },
+    {
+      "path": "tournaments/README.md",
+      "sha256": "8ab9248c7df97f7268b41670f027944aadf3993efa764895ff4adea288f59e74"
+    },
+    {
+      "path": "tournaments/probe.optimized.out",
+      "sha256": "10b1938abb321dc3265858684eba4059bf9049293d903f1d54bff5a90b04d89e"
+    },
+    {
+      "path": "tournaments/probe.out",
+      "sha256": "10b1938abb321dc3265858684eba4059bf9049293d903f1d54bff5a90b04d89e"
+    },
+    {
+      "path": "tournaments/probe.py",
+      "sha256": "d85099cdfabab0ead0b890bf8eeb9a33aab9820029a1f2cf020fd226f4cbaef9"
+    }
+  ]
+}

@@ -254,7 +254,13 @@ make the actual inheritance and changes of direction explicit.
 Concurrent b02c593ac08 supplies five-core coverage through16,777,215 and
 rational-selector/switch results. Those are preserved and credited, not
 rerun or claimed as Session253 discoveries. A later concurrent research
-board at fe7ee3c8af8 is likewise preserved.
+board at fe7ee3c8af8 and the interface/source-frontier packet at787a2f04
+are likewise preserved. The latter classifies the five indecomposable
+modules of the classical interface algebra and retains an actual central
+unit switch. Our Laurent deformation DOES lift this central direction
+(T^2 specializes to E13); the two nonliftable directions are different.
+It also shows that H141 source replacement is a concrete obligation for
+ternary continuation. Those incoming results are credited, not re-proved.
 
 The deliverable has nine new-claim engines, with exact proof certificates,
 small controls and a complete restricted-language inverse. Reproduction
@@ -262,3 +268,10 @@ uses the inherited Session251 compiler only where stated, plus SymPy for
 symbolic/Smith computations. No inherited large census or outside paper
 was re-audited. All general statements rest on proofs, not extrapolated
 finite scans. No new theorem ID was promoted into canon.
+
+The final preservation boundary also includes the concurrent metagraph-aspect
+packet at51367eeff48: extension-support signatures separate converse classes
+through order9, while selected-set seed roots have a sharp order11 boundary.
+Those are received scoped results, not Session253 computations. Our seven
+contexts remain complete only for the fixed two-flank response family; no
+all-tournament reconstruction claim is imported.

@@ -182,3 +182,22 @@ A separate near-term native target is the row-sixteen continuation of THM-4438's
   R_16=sum_(b=0)^8 s_b p^(16-2b)y^b.
 
 Completeness follows from the same distinct-leading-monomial argument as THM-4415: ord_t(p^a y^b)=a+2b and its leading polynomial is x^b. The missing computation is precise: form the row-sixteen bracket matrix and its full left nullspace on that inherited family; map these nine source coefficients to that quotient; then test the projected-depth remainder after solving the paid classes. One must retain any new unpaid class and the dependence on the G_m parameter instead of extrapolating the row-fifteen rank-one result. If an unpaid class survives, restore lower-valuation source memory before declaring a geometric obstruction, as THM-4426 demonstrated. This is a realistic finite-row proof target with a known input and an exact stopping criterion. No row-sixteen closure is claimed here.
+
+## 9. Incoming module/switch connection, preserving the deformation boundary
+
+Concurrent commit787a2f04 supplies
+`chanpak_five_core_bridges_20261110/algebra/FIVE_MODULES.md`: the complete
+five indecomposable modules of this classical algebra, and the inherited
+B95 central unit switch. These are incoming results, not this lane's
+discoveries. The natural three-dimensional carrier is its length-three
+indecomposable; the smaller four modules kill the central E13 direction.
+
+This sharpens our liftability statement: the central-switch direction IS
+one of the liftable directions, because E13=T(0)^2 and T^2 commutes with
+the entire carried response in the explicit model. The two nonliftable
+directions are the independent diagonal split and independent off-diagonal
+split, not the central defect itself. This is an algebraic lift of the
+direction. It does not lift an arbitrary pair of actual tournament
+operators with that difference, preserve their signs, or select an absolute
+Hamilton target. The incoming source-sensitive H141 frontiers make that
+physical-source obligation concrete.

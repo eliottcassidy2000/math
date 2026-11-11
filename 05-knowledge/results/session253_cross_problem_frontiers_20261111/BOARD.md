@@ -45,3 +45,13 @@ mechanism; do not force every useful result through Chan–Pak.
 Each final bridge must list source, target, map, preserved statement, loss,
 necessary sidecar, and cheapest next test. New proof controls only; no large
 inherited census replay. No priority claim or canon promotion without audit.
+
+## Closing state
+
+The original questions above are retained as the opening checkpoint, not
+as unresolved status for the final packet. The synthesis closes the
+Laurent small block and four full strips, the uniform-jet first band,
+the integral/affine response lattices, and the modular substitution germ.
+The safety proposal was sharpened to a theorem and an explicit52477
+hostile. The frontier atlas records the actual exchanges and surviving
+questions. All flagship conjectures remain open.
