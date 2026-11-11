@@ -1,0 +1,322 @@
+[
+  {
+    "defect": 2,
+    "k": 1,
+    "falling_factorial_coefficients": {
+      "3": "16/3"
+    },
+    "cycle_inventory": [
+      {
+        "cycles": [
+          3
+        ],
+        "falling_degree": 3,
+        "coefficient": "16/3"
+      }
+    ]
+  },
+  {
+    "defect": 4,
+    "k": 2,
+    "falling_factorial_coefficients": {
+      "5": "4096/5",
+      "6": "8192/9"
+    },
+    "cycle_inventory": [
+      {
+        "cycles": [
+          5
+        ],
+        "falling_degree": 5,
+        "coefficient": "4096/5"
+      },
+      {
+        "cycles": [
+          3,
+          3
+        ],
+        "falling_degree": 6,
+        "coefficient": "8192/9"
+      }
+    ]
+  },
+  {
+    "defect": 6,
+    "k": 3,
+    "falling_factorial_coefficients": {
+      "7": "16777216/7",
+      "8": "16777216/15",
+      "9": "536870912/81"
+    },
+    "cycle_inventory": [
+      {
+        "cycles": [
+          7
+        ],
+        "falling_degree": 7,
+        "coefficient": "16777216/7"
+      },
+      {
+        "cycles": [
+          3,
+          5
+        ],
+        "falling_degree": 8,
+        "coefficient": "16777216/15"
+      },
+      {
+        "cycles": [
+          3,
+          3,
+          3
+        ],
+        "falling_degree": 9,
+        "coefficient": "536870912/81"
+      }
+    ]
+  },
+  {
+    "defect": 8,
+    "k": 4,
+    "falling_factorial_coefficients": {
+      "9": "1099511627776/9",
+      "10": "212205744160768/525",
+      "11": "2199023255552/45",
+      "12": "562949953421312/243"
+    },
+    "cycle_inventory": [
+      {
+        "cycles": [
+          9
+        ],
+        "falling_degree": 9,
+        "coefficient": "1099511627776/9"
+      },
+      {
+        "cycles": [
+          3,
+          7
+        ],
+        "falling_degree": 10,
+        "coefficient": "1099511627776/21"
+      },
+      {
+        "cycles": [
+          5,
+          5
+        ],
+        "falling_degree": 10,
+        "coefficient": "8796093022208/25"
+      },
+      {
+        "cycles": [
+          3,
+          3,
+          5
+        ],
+        "falling_degree": 11,
+        "coefficient": "2199023255552/45"
+      },
+      {
+        "cycles": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "falling_degree": 12,
+        "coefficient": "562949953421312/243"
+      }
+    ]
+  },
+  {
+    "defect": 10,
+    "k": 5,
+    "falling_factorial_coefficients": {
+      "11": "1152921504606846976/11",
+      "12": "192537891269343444992/945",
+      "13": "251336888004292640768/1575",
+      "14": "36893488147419103232/405",
+      "15": "151115727451828646838272/3645"
+    },
+    "cycle_inventory": [
+      {
+        "cycles": [
+          11
+        ],
+        "falling_degree": 11,
+        "coefficient": "1152921504606846976/11"
+      },
+      {
+        "cycles": [
+          3,
+          9
+        ],
+        "falling_degree": 12,
+        "coefficient": "4611686018427387904/27"
+      },
+      {
+        "cycles": [
+          5,
+          7
+        ],
+        "falling_degree": 12,
+        "coefficient": "1152921504606846976/35"
+      },
+      {
+        "cycles": [
+          3,
+          3,
+          7
+        ],
+        "falling_degree": 13,
+        "coefficient": "2305843009213693952/63"
+      },
+      {
+        "cycles": [
+          3,
+          5,
+          5
+        ],
+        "falling_degree": 13,
+        "coefficient": "9223372036854775808/75"
+      },
+      {
+        "cycles": [
+          3,
+          3,
+          3,
+          5
+        ],
+        "falling_degree": 14,
+        "coefficient": "36893488147419103232/405"
+      },
+      {
+        "cycles": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "falling_degree": 15,
+        "coefficient": "151115727451828646838272/3645"
+      }
+    ]
+  },
+  {
+    "defect": 12,
+    "k": 6,
+    "falling_factorial_coefficients": {
+      "13": "19342813113834066795298816/13",
+      "14": "331032903630156219134743937024/24255",
+      "15": "8041716523637171767945096855552/70875",
+      "16": "34971806109811992765900259328/14175",
+      "17": "9903520314283042199192993792/1215",
+      "18": "1298074214633706907132624082305024/32805"
+    },
+    "cycle_inventory": [
+      {
+        "cycles": [
+          13
+        ],
+        "falling_degree": 13,
+        "coefficient": "19342813113834066795298816/13"
+      },
+      {
+        "cycles": [
+          3,
+          11
+        ],
+        "falling_degree": 14,
+        "coefficient": "19342813113834066795298816/33"
+      },
+      {
+        "cycles": [
+          5,
+          9
+        ],
+        "falling_degree": 14,
+        "coefficient": "19342813113834066795298816/45"
+      },
+      {
+        "cycles": [
+          7,
+          7
+        ],
+        "falling_degree": 14,
+        "coefficient": "618970019642690137449562112/49"
+      },
+      {
+        "cycles": [
+          3,
+          3,
+          9
+        ],
+        "falling_degree": 15,
+        "coefficient": "618970019642690137449562112/81"
+      },
+      {
+        "cycles": [
+          3,
+          5,
+          7
+        ],
+        "falling_degree": 15,
+        "coefficient": "19342813113834066795298816/105"
+      },
+      {
+        "cycles": [
+          5,
+          5,
+          5
+        ],
+        "falling_degree": 15,
+        "coefficient": "39614081257132168796771975168/375"
+      },
+      {
+        "cycles": [
+          3,
+          3,
+          3,
+          7
+        ],
+        "falling_degree": 16,
+        "coefficient": "618970019642690137449562112/567"
+      },
+      {
+        "cycles": [
+          3,
+          3,
+          5,
+          5
+        ],
+        "falling_degree": 16,
+        "coefficient": "309485009821345068724781056/225"
+      },
+      {
+        "cycles": [
+          3,
+          3,
+          3,
+          3,
+          5
+        ],
+        "falling_degree": 17,
+        "coefficient": "9903520314283042199192993792/1215"
+      },
+      {
+        "cycles": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "falling_degree": 18,
+        "coefficient": "1298074214633706907132624082305024/32805"
+      }
+    ]
+  }
+]

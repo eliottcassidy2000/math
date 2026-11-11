@@ -1,0 +1,320 @@
+[
+  {
+    "n": "300",
+    "identity_log10_model_relative_bound": "-169.50829738749754980203219510867966794553792155101",
+    "three_cycle_only_log10_model_relative_bound": "-283.16279772268413249267669888725991142621979599198",
+    "three_cycle_relative_to_correction_error_log10_bound": "-110.69880775935202502683370233900841553360872807112",
+    "support12_log10_model_relative_bound": "-729.75353352362140584392685364794676453484728995594",
+    "stirling4_log10count_absolute_error_bound": "1.8572765620576534864262231406368597245054526954402e-26",
+    "poisson_two3_enhancement": "62.092828443805975174519090480572826648111153509461",
+    "adaptive": [
+      {
+        "relative_digits": 50,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 200,
+        "cutoff_and_success": [
+          3,
+          true
+        ]
+      },
+      {
+        "relative_digits": 500,
+        "cutoff_and_success": [
+          8,
+          true
+        ]
+      },
+      {
+        "relative_digits": 1000,
+        "cutoff_and_success": [
+          17,
+          true
+        ]
+      },
+      {
+        "relative_digits": 2000,
+        "cutoff_and_success": [
+          24,
+          false
+        ]
+      },
+      {
+        "relative_digits": 10000,
+        "cutoff_and_success": [
+          24,
+          false
+        ]
+      }
+    ]
+  },
+  {
+    "n": "1000",
+    "identity_log10_model_relative_bound": "-588.85674080401909453724318993933019993522254462714",
+    "three_cycle_only_log10_model_relative_bound": "-982.42475958487380669543699408966712968321289310721",
+    "three_cycle_relative_to_correction_error_log10_bound": "-390.09046301436103202959231064638628981437357889862",
+    "support12_log10_model_relative_bound": "-2548.6693857396345378882666115758387445647248815742",
+    "stirling4_log10count_absolute_error_bound": "3.6556774570980793573327350077155309957440825404349e-31",
+    "poisson_two3_enhancement": "63.425152767998459381224912287036535533529521505473",
+    "adaptive": [
+      {
+        "relative_digits": 50,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 200,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 500,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 1000,
+        "cutoff_and_success": [
+          5,
+          true
+        ]
+      },
+      {
+        "relative_digits": 2000,
+        "cutoff_and_success": [
+          10,
+          true
+        ]
+      },
+      {
+        "relative_digits": 10000,
+        "cutoff_and_success": [
+          24,
+          false
+        ]
+      }
+    ]
+  },
+  {
+    "n": "10000",
+    "identity_log10_model_relative_bound": "-6003.3958801645514080747175066027206182587709811299",
+    "three_cycle_only_log10_model_relative_bound": "-10007.323062595278949421471993764971584558936262457",
+    "three_cycle_relative_to_correction_error_log10_bound": "-3999.4500177443880713990749032149720437642914017375",
+    "support12_log10_model_relative_bound": "-26015.004325941076082529789989783997393043125913692",
+    "stirling4_log10count_absolute_error_bound": "3.6556774570980793573327350077155309957440825404349e-40",
+    "poisson_two3_enhancement": "63.942411520767999984635390924569552374321248888241",
+    "adaptive": [
+      {
+        "relative_digits": 50,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 200,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 500,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 1000,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 2000,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 10000,
+        "cutoff_and_success": [
+          4,
+          true
+        ]
+      }
+    ]
+  },
+  {
+    "n": "1000000",
+    "identity_log10_model_relative_bound": "-602034.78720884832433509356007556865808300646514677",
+    "three_cycle_only_log10_model_relative_bound": "-1003394.3085817178589691556392060575196730007421923",
+    "three_cycle_relative_to_correction_error_log10_bound": "-401353.04425118052027257414655837268893892668027972",
+    "support12_log10_model_relative_bound": "-2608824.3666066449753788526622915852313838601257391",
+    "stirling4_log10count_absolute_error_bound": "3.6556774570980793573327350077155309957440825404349e-58",
+    "poisson_two3_enhancement": "63.99942400115200076799999999846399539198924797696",
+    "adaptive": [
+      {
+        "relative_digits": 50,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 200,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 500,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 1000,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 2000,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 10000,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      }
+    ]
+  },
+  {
+    "n": "1000000000000",
+    "identity_log10_model_relative_bound": "-602059991278.75827044482273325709490532972605688264",
+    "three_cycle_only_log10_model_relative_bound": "-1003433318804.9270174224915743074336500950544676903",
+    "three_cycle_relative_to_correction_error_log10_bound": "-401373327513.69162572294874431856181339309840341777",
+    "support12_log10_model_relative_bound": "-2608926628901.574538782127439969755609335494239879",
+    "stirling4_log10count_absolute_error_bound": "3.6556774570980793573327350077155309957440825404349e-112",
+    "poisson_two3_enhancement": "63.999999999424000000001152000000000768",
+    "adaptive": [
+      {
+        "relative_digits": 50,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 200,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 500,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 1000,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 2000,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 10000,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      }
+    ]
+  },
+  {
+    "n": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "identity_log10_model_relative_bound": "-6.0205999132796239042747778944898605353637976292422e+99",
+    "three_cycle_only_log10_model_relative_bound": "-1.003433318879937317379129649081643422560632938207e+100",
+    "three_cycle_relative_to_correction_error_log10_bound": "-4.0137332755197492695165185963265736902425317528281e+99",
+    "support12_log10_model_relative_bound": "-2.6089266290878370251857370876122728986576456393383e+100",
+    "stirling4_log10count_absolute_error_bound": "3.6556774570980793573327350077155309957440825404349e-904",
+    "poisson_two3_enhancement": "64.0",
+    "adaptive": [
+      {
+        "relative_digits": 50,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 200,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 500,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 1000,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 2000,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      },
+      {
+        "relative_digits": 10000,
+        "cutoff_and_success": [
+          2,
+          true
+        ]
+      }
+    ]
+  }
+]

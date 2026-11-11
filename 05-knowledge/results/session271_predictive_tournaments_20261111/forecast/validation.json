@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "pair_orbit_and_deficit_checks": 159,
+  "defect_levels": 6,
+  "numerical_controls": [
+    {
+      "n": "30",
+      "adaptive_cutoff": 24,
+      "achieved": false
+    },
+    {
+      "n": "100",
+      "adaptive_cutoff": 2,
+      "achieved": true
+    },
+    {
+      "n": "300",
+      "adaptive_cutoff": 2,
+      "achieved": true
+    },
+    {
+      "n": "1000",
+      "adaptive_cutoff": 2,
+      "achieved": true
+    },
+    {
+      "n": "1000000",
+      "adaptive_cutoff": 2,
+      "achieved": true
+    },
+    {
+      "n": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "adaptive_cutoff": 2,
+      "achieved": true
+    }
+  ],
+  "scope": "structural identities and precision controls; no exact sequence checking; not interval certification"
+}
