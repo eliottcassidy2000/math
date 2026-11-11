@@ -1,0 +1,51 @@
+{
+  "status": "FINITE-EXACT controls; all-word theorem proved in PROOF.md; Chan-Pak OPEN",
+  "linear_controls": 243,
+  "tail_controls": 20480,
+  "all_three_letter_words_through_length_8": 9841,
+  "necessity_hostiles": [
+    {
+      "q_difference": [
+        -1,
+        1,
+        1,
+        1
+      ],
+      "word": "",
+      "output_difference": -1
+    },
+    {
+      "q_difference": [
+        1,
+        -1,
+        1,
+        1
+      ],
+      "word": "OZ",
+      "output_difference": -1
+    },
+    {
+      "q_difference": [
+        1,
+        1,
+        -1,
+        1
+      ],
+      "word": "ZZ",
+      "output_difference": -1
+    },
+    {
+      "q_difference": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "word": "Z",
+      "output_difference": -1
+    }
+  ],
+  "universes": "81 signed linear states x3 letters; 5 specified states x4096 addresses; all9841 O/Z/J words length<=8",
+  "positive_controls": "actual211 reset state pair and H13-to-H5 ray difference",
+  "negative_control_scope": "signed response differences only, not claimed physical tournaments"
+}
