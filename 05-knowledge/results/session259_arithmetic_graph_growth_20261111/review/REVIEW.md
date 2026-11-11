@@ -40,3 +40,22 @@ Section 8 subsequently supplied the complete strict-reachability barcode. Its ne
 The map replacing every prime square p² by p is indeed order preserving in both posets. Prime-square vertices are pairwise incomparable; their strict upper links are copies of the *weak* divisibility order on 2,...,floor(N/p²), because no deleted relation x<x² with x prime can occur among two multiples of p². Thus the relative chain complex is the direct sum of the asserted cone/base complexes. The natural retraction splits the reduced homology exact sequence and consequently the persistence module. Empty links give degree-zero bars [p²,2p²); nonempty links give the suspension of reduced homology, not ordinary H_0. This distinction correctly avoids spurious eternal bars.
 
 The weak equivalence to the common base is natural; the strict retraction is not asserted to be an equivalence. Allowing p to divide m is necessary and correct, including [27,54) for p=m=3. The first higher hostile [12,24) correctly refutes the simpler H_0-only correction. No additional mathematical fix is needed.
+
+## Final synthesis and event-word review
+
+The condensed table, new arc-shadow weld (W), Section 9 strict Euler identity, and event-uniqueness/silence consequences are mathematically sound. No scripts were rerun during this final review; the parent is performing the bounded replays.
+
+For (W), a strict positive additive arc x→z exists exactly when x<z and z≠2x. Among the excluded doubling arcs, strict nonunit multiplicative witnesses exist precisely for x>=3. This proves the disjoint decomposition under the stated conventions, without importing a statement about paired-parent closure.
+
+For Section 9, a correction birth p²m uniquely identifies p as its only repeated prime, with exponent 2 or 3. Weak births are squarefree, so cannot collide with these. Birth 2-adic valuations are 0 or 2 and death valuations are 1 or 3; this proves all event separation and the v_2>=4 silence claim. The empty-link Euler contribution at floor(N/p²)=1 is correctly included as M(1)=1. “Silent” is explicitly homological, not a homotopy-equivalence claim.
+
+One synthesis wording repair was requested: “full symmetric packet or explicit collision data” in Section 6 should read “full elementary-symmetric coordinates or the parent tuple.” Collision partition data do not reconstruct a higher-arity tuple: the synthesis's own (1,6,6) and (2,2,9) share partition 2+1 as well as sum and product. The lane proof itself already uses the correct stronger data.
+
+Optional precision: the radical map retracts to the squarefree subposet, whose order complex is the barycentric subdivision of the prime-product complex; the synthesis can say “naturally homotopy equivalent” instead of describing a literal retraction directly onto that latter complex.
+
+Final disposition: all four clarifications are applied in the delivered copy:
+the transport variant explicitly admits vertex4; powers explicitly require
+k>=1; the inferior-parity bound is stated in the induction; and the synthesis
+uses full elementary-symmetric coordinates/parent tuple and describes the
+radical/subdivision map precisely. Six normal/optimized/stored-output replays
+passed, as recorded in FINAL_REPLAY.json.

@@ -63,7 +63,7 @@ def main():
     allrows=list(rows(128))
     p=Path(__file__).with_name('BIRTH_ATLAS.csv')
     with p.open('w',newline='') as out:
-        writer=csv.DictWriter(out,fieldnames=allrows[0])
+        writer=csv.DictWriter(out,fieldnames=allrows[0],lineterminator="\n")
         writer.writeheader();writer.writerows(allrows)
     for n in range(1,20001):
         events=[weak_birth(n),extra_birth(n)]

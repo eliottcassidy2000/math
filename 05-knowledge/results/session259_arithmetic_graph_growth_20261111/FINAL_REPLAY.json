@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "Six focused new-result engines, normal versus optimized versus stored receipts; not a re-audit of inherited claims.",
+  "engines": [
+    {
+      "script": "summand/experiment.py",
+      "receipt": "summand/receipt.json",
+      "normal_optimized_stored": "PASS",
+      "output_sha256": "4292238871fd31d908fb0c05766aa4cb5bc3daa1da73e395bbea65ae73c710d6"
+    },
+    {
+      "script": "multiplicand/experiment.py",
+      "receipt": "multiplicand/receipt.json",
+      "normal_optimized_stored": "PASS",
+      "output_sha256": "894f281af40adc4c7dc581e840df04c3164d36f6ddb23e6c963b554bb29a8d6a"
+    },
+    {
+      "script": "multiplicand/strict_experiment.py",
+      "receipt": "multiplicand/strict_receipt.json",
+      "normal_optimized_stored": "PASS",
+      "output_sha256": "d2436d2f5707004a4e731b4aee4d413ef26b3887630d12550995be150695ffc5"
+    },
+    {
+      "script": "dichotomies/scout.py",
+      "receipt": "dichotomies/receipt.txt",
+      "normal_optimized_stored": "PASS",
+      "output_sha256": "ea37f03dcffce2c8fcc01a05cc63bc4d206bc0e8a1ebceedb1dd886168444a94"
+    },
+    {
+      "script": "transport/check.py",
+      "receipt": "transport/receipt.json",
+      "normal_optimized_stored": "PASS",
+      "output_sha256": "45bc2b3c0f39f2b59fa7e5f4aef6eee1e59d453337d82d7cbddeed895bdd0318"
+    },
+    {
+      "script": "birth_atlas.py",
+      "receipt": "BIRTH_ATLAS_RECEIPT.txt",
+      "normal_optimized_stored": "PASS",
+      "output_sha256": "81c4628907c8010cb35903afb0fd44247445a5af66ae75a961bf25a1ccf14e3c"
+    }
+  ]
+}

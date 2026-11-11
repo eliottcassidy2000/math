@@ -1,6 +1,8 @@
 # Session259: growing the two arithmetic graphs
 
-**2026-11-11. Status: research in progress.** This session follows the owner's
+**2026-11-11. Status: COMPLETE.**
+
+Start with the [complete synthesis](SYNTHESIS.md) and [one-node birth atlas](BIRTH_ATLAS.csv). This session follows the owner's
 summand/multiplicand question, prioritizing new constructions and connections
 rather than repeating audits of inherited work. New statements carry proofs;
 finite experiments remain separate. No external novelty claim is made.
@@ -62,5 +64,8 @@ completeness claim.
 ## Files
 
 - [Transport](transport/RESEARCH.md): a causal joint graph and growth laws.
-- Summand, multiplicand and dichotomy lane packets will be integrated here.
-- A final synthesis will state the complete conclusions and remaining questions.
+- [Summand](summand/RESEARCH.md): exact seed closure, holes and delayed parity frontier.
+- [Multiplicand](multiplicand/RESEARCH.md): full weak and strict reachability barcodes.
+- [Dichotomies](dichotomies/RESEARCH.md): joint charts, higher arity and insertion laws.
+- [Focused review](review/REVIEW.md), [final replay](FINAL_REPLAY.json), and SHA256SUMS.
+- [Synthesis](SYNTHESIS.md): integrated conclusions, boundaries and next questions.
