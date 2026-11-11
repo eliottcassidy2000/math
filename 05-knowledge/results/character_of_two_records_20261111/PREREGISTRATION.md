@@ -227,10 +227,10 @@ Outputs: `out/`. Program names changed after registration: `paley_sym.c` is `hal
 | R6 | FAILED | `CD_4`, `CD_5` have no anti-automorphism. **This part was decidable from canon** (THM-448, THM-451: the tower is not self-converse beyond order 7) and should not have been registered. `H(CD_5) mod 4` was not computed. |
 | R7 | CONFIRMED, uninformative | All 16 descendants are isomorphic to `CD_4`. |
 | R8 | CONFIRMED | Paths starting `0 -> 1` in `P_27`: `1 (mod 256)`; `H(P_27) = 95 (mod 256)`. |
-| R9 | CONFIRMED | G1: all 12,000 Goethals-Seidel matrices give one class, `D_19`, `H = 1172732961771 = 3 (mod 4)`. G2: one class, `H = 189 (mod 256)`. G3: 39 classes from 40 matrices, three with a converse symmetry, `H = 3 (mod 4)` by folding. H3: H3-PENDING-R9. |
-| R10 | CONFIRMED | G1: `3 (mod 8)`; G2: `5 (mod 8)`; H3: H3-PENDING-R10. |
+| R9 | CONFIRMED | G1: all 12,000 Goethals-Seidel matrices give one class, `D_19`, `H = 1172732961771 = 3 (mod 4)`. G2: one class, `H = 189 (mod 256)`. G3: 39 classes from 40 matrices, three with a converse symmetry, `H = 3 (mod 4)` by folding. H3: nine classes of order 27 (three with, six without converse symmetry), `H = 127, 191, 111, 151, 55, 23, 247, 127, 23 (mod 256)`, all `3 (mod 4)`; the folding formula agrees on the first three. |
+| R10 | CONFIRMED | G1: `3 (mod 8)`; G2: `5 (mod 8)`; H3: `7 (mod 8)` for all nine. |
 | R11 | CONFIRMED | 40 random members of each class: `H = 1 (mod 4)` for both classes at `N = 24`, `3 (mod 4)` at `N = 20`. |
-| R12 | CONFIRMED | I1: 14 of 14 classes of order 23 have every odd cycle count even. I2: 20 of 20. I3: 42 of 42 with the vector `100000011`. I4: 10 of 10 with the vector `1001100110011` (six classes without converse symmetry). The vertex-local form (cycles through one vertex) fails, so the law is global. |
+| R12 | CONFIRMED | I1: 14 of 14 classes of order 23 have every odd cycle count even. I2: 20 of 20. I3: 42 of 42 with the vector `100000011`. I4: 10 of 10 with the vector `1001100110011` (six classes without converse symmetry). Extension after R12 was read, same criterion, not separately registered: all 39 classes met at order 27 (`out/cycle_parities_i4_all.out`), 39 of 39. The vertex-local form (cycles through one vertex) fails, so the law is global. |
 
 **Registration errors.** (1) R6, as above. (2) R9 and R10 at orders 19 and 23: the repository already had the exact
 path counts of `D_19` (HYP-9365) and of the doubled Paley class of order 23 (HYP-9371,

@@ -1,0 +1,11 @@
+classes of drt_zoo.py g3 40 2000: 39
+  class  9 (16 members): self-converse: yes; H = 127 (mod 256), 3 (mod 4), 7 (mod 8); folding formula: 3 (mod 4) (agrees)
+  class 27 (19 members): self-converse: yes; H = 191 (mod 256), 3 (mod 4), 7 (mod 8); folding formula: 3 (mod 4) (agrees)
+  class 32 (19 members): self-converse: yes; H = 111 (mod 256), 3 (mod 4), 7 (mod 8); folding formula: 3 (mod 4) (agrees)
+  class  0 (24 members): self-converse: no; H = 151 (mod 256), 3 (mod 4), 7 (mod 8)
+  class  1 (24 members): self-converse: no; H = 55 (mod 256), 3 (mod 4), 7 (mod 8)
+  class  2 (24 members): self-converse: no; H = 23 (mod 256), 3 (mod 4), 7 (mod 8)
+  class  3 (24 members): self-converse: no; H = 247 (mod 256), 3 (mod 4), 7 (mod 8)
+  class  4 (24 members): self-converse: no; H = 127 (mod 256), 3 (mod 4), 7 (mod 8)
+  class  5 (24 members): self-converse: no; H = 23 (mod 256), 3 (mod 4), 7 (mod 8)
+R9 (H3: H = 3 mod 4): HOLDS; R10 (H3: H = 7 mod 8): HOLDS

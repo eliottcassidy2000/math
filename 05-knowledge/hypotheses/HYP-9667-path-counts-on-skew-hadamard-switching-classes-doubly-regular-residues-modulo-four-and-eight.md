@@ -8,11 +8,15 @@ status: >
   (b4), (b8) FINITE-EXACT on every doubly regular tournament whose path count is on record: orders 3, 7, 11 (Paley);
   15 (CD_4 and its converse, THM-448); 19 (P_19 and D_19); 23 (P_23, twelve annealed classes and the doubled Paley
   class: exact counts of HYP-9371, all = 5 mod 8); 27 (P_27 and nine Goethals-Seidel classes, six of them without
-  converse symmetry: direct counts modulo 256, H3-PENDING-ROW (run in progress at this checkpoint)).
+  converse symmetry: direct counts modulo 256, all = 7 mod 8; (b4) also for the other 30 classes met at order 27,
+  through their cycle counts).
   (bS) FINITE-EXACT: all members of the classes at N = 4, 8; random members at N = 12, 16, 20 (two classes), 24 (two
   classes). Its analogue modulo 8 is FALSE (N = 16, 20).
-  (bK) PROVED for k = 1, 2 (every tournament of order N = 0 mod 4 whose scores have one parity, THM-5132) and for
-  every k on doubly regular tournaments with a converse symmetry (THM-5136 (E)). FINITE-EXACT for every odd length:
+  (bK) PROVED for k = 1, 2 (every tournament of order N = 0 mod 4 whose scores have one parity, THM-5132), for k = 3
+  on every doubly regular tournament (c_7 = n(n+1)(n-1)(n-3)(n-5)(n^2-6n+1)/896 is divisible by 8; the count is due
+  to Savchenko 2017 and is re-derived in the source note, section 5.4) and for every k on doubly regular
+  tournaments with a converse symmetry (THM-5136 (E)). So for doubly regular tournaments (b4) is equivalent to: the
+  number of odd cycles of length at least 9 is even. FINITE-EXACT for every odd length:
   all members at N = 4, 8; 41 and 13 members at N = 12, 16; pre-registered R12: 42 tournaments at N = 20, the
   fourteen doubly regular classes of order 23 (twelve without converse symmetry) and 20 members at N = 24, ten
   tournaments of order 27 (six without converse symmetry), 86 of 86. The vertex-local form (cycles through one vertex) is FALSE.
@@ -62,8 +66,9 @@ by a diagonal sign matrix. The tournaments with `S^2 = -(N-1) I` form classes cl
   the transitive tournament modulo 4), and `p_j = C(n, j) + 2 [j odd, j >= 3] C(m, (j-1)/2) (mod 4)` if `n = 3 (mod 8)`.
 - **(bS)** `S^2 = -(N-1) I` implies `H(U) = 1 + N/2 (mod 4)`.
 - **(b4)** Every doubly regular tournament of order `n` has `H = n(n-1)/2 (mod 4)`: `3` if `n = 3 (mod 8)`, `1` if
-  `n = 7 (mod 8)`. Since `c_3 = (n+1)/4` and `c_5 = 0 (mod 2)` for every doubly regular tournament (THM-5132), this is
-  equivalent to: the number of odd cycles of length at least 7 is even. (bS) implies (b4).
+  `n = 7 (mod 8)`. Since `c_3 = (n+1)/4`, `c_5 = 0` and `c_7 = 0 (mod 2)` for every doubly regular tournament (THM-5132;
+  the known count of 7-cycles), this is equivalent to: the number of odd cycles of length at least 9 is even.
+  (bS) implies (b4).
 - **(b8)** Every doubly regular tournament of order `n` has `H = n(n-1)/2 (mod 8)`.
 - **(c)** For `P_q`: `F = 0 (mod 4)` if `q = 7 (mod 8)`, `F = (q+1)/4 (mod 4)` if `q = 3 (mod 8)` (with
   `H = 1 + 2F + 4I (mod 8)` of Session29, (b8) for Paley is then a statement about the parity of `I`).
@@ -86,7 +91,7 @@ from 5 to 10.
 | 15 | `CD_4` (not sc) and its converse | 1 | 1 |
 | 19 | `P_19` (sc), `D_19` (sc) | 3, 3 | 3 |
 | 23 | `P_23` (sc); twelve annealed classes (not sc; two converse pairs); the double of `P_11` (not sc) | 5 (all fourteen) | 5 |
-| 27 | `P_27` (sc); three sc and six non-sc Goethals-Seidel classes | H3-PENDING-ROW (run in progress at this checkpoint) | 7 |
+| 27 | `P_27` (sc); three sc and six non-sc Goethals-Seidel classes | 7 (all ten) | 7 |
 
 | `N` | switching class of `(source) +` | members | `H mod 4` | `H mod 8` |
 |---|---|---|---|---|
@@ -110,6 +115,7 @@ Cycle counts by length (parity vectors `(c_3, c_5, ...)`; `cycle_lengths.c`, `cy
 | 24 | fourteen doubly regular classes of order 23 | zero (14 of 14) | zero |
 | 24 | 10 random members of each of the classes of `P_23^+`, `D(P_11)^+` | zero (20 of 20) | zero |
 | 28 | `P_27`, three self-converse and six other classes of order 27 | `1001100110011` (10 of 10) | `1001100110011` |
+| 28 | all 39 classes met at order 27, 36 without converse symmetry (extension, same criterion) | `1001100110011` (39 of 39) | `1001100110011` |
 
 The even cycle counts have no such law (their parities differ among the classes of order 23). Nor is (b8) a
 term-by-term law: among the fourteen classes of order 23 the odd cycle counts modulo 4 differ at lengths 19 and 23
@@ -140,6 +146,12 @@ So a proof of (bS) must use the orthogonality of all rows at once.
 - A prime power `q = 3 (mod 4)` violating (c).
 
 ## Routes
+
+0. The length 9 on doubly regular tournaments. In the literature the number of `m`-cycles of a doubly regular
+   tournament depends only on the order for `m <= 8` (Savchenko 2016, 2017, arXiv:2403.07629) and conjecturally for
+   `m = 9`; here `c_3, ..., c_9` coincide modulo 256 for the fourteen classes of order 23 and the two of order 19 and
+   differ from length 10 on (`out/cycle_parities_short.out` of the source packet). A formula for `c_9(n)` would
+   settle (bK) for `k = 4` on the normalised members: the prediction is `c_9` odd exactly for `n = 11 (mod 16)`.
 
 1. A converse symmetry up to switching (a signed permutation carrying `S` to `-S`). When its permutation part fixes
    no vertex, no normalised member need be self-converse; whether the folding argument of THM-5136 extends to this

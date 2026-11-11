@@ -17,7 +17,9 @@ status: >
   Mitrovic-Stojadinovic); T = 1/(1 - S) for tournaments and strong tournaments (THM-1862, THM-1936, THM-4817) and
   the relation of T with connected graphs (THM-4746); the question answered by (R) 2 (kind-pasteur S22,
   SOURCES_AND_DOMINATION.md section 7).
-  NEW here (the audit searched the repository as well): (D) 1-3; the symmetric-function form of the mean and its
+  KNOWN in the literature (CITED): (D) 1 is an immediate consequence of the classical identity c_5 + 2 c_4 =
+  n(n^2-1)(n^2-9)/160 for regular tournaments (Rowlinson 1986; Savchenko 2016).
+  NEW here (the audit searched the repository as well): (D) 1 as a statement in this repository, (D) 2-3; the symmetric-function form of the mean and its
   identification with q_n and the hook Schur functions; the record interpretation of the lift; the reach-set
   reading l_n = A001187(n) and the equidistribution by max-ordered type.
   NOT CLAIMED: novelty in the literature (the mean of U_T is a short computation; connected graphs and tournaments

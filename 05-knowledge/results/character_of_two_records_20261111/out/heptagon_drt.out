@@ -1,0 +1,11 @@
+integral for t = 0..40: True ; even for t = 0..40: True
+c_7 for n = 3, 7, 11, 15, 19, 23, 27, 31: [0, 24, 3960, 61200, 424080, 1912680, 6579144, 18763680]
+P_3                                  n =  3: 7-cycles (mod 256) counted   0, formula 0 =   0 (mod 256): ok
+P_7                                  n =  7: 7-cycles (mod 256) counted  24, formula 24 =  24 (mod 256): ok
+P_11                                 n = 11: 7-cycles (mod 256) counted 120, formula 3960 = 120 (mod 256): ok
+CD_4                                 n = 15: 7-cycles (mod 256) counted  16, formula 61200 =  16 (mod 256): ok
+P_19                                 n = 19: 7-cycles (mod 256) counted 144, formula 424080 = 144 (mod 256): ok
+D_19                                 n = 19: 7-cycles (mod 256) counted 144, formula 424080 = 144 (mod 256): ok
+P_23                                 n = 23: 7-cycles (mod 256) counted 104, formula 1912680 = 104 (mod 256): ok
+P_27                                 n = 27: 7-cycles (mod 256) counted 200, formula 6579144 = 200 (mod 256): ok
+a Goethals-Seidel class of order 27  n = 27: 7-cycles (mod 256) counted 200, formula 6579144 = 200 (mod 256): ok

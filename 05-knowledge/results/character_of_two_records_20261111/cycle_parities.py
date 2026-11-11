@@ -8,6 +8,7 @@ Conjecture (HYP-9667 (bK)): if S^2 = -(N-1) I then c_(2k+1) = [N = 4 mod 8] C(N/
   cycle_parities.py CYC i1 JSON           order 23: the 13 classes of JSON (drt23_classes.json of the Sierpinski lane)
                                           and the double of P_11
   cycle_parities.py CYC i1mod4 JSON       the same classes: odd cycle counts modulo 4 (exploratory)
+  cycle_parities.py CYC short JSON        cycle counts of lengths 3..12 modulo 256, orders 19 and 23 (exploratory)
   cycle_parities.py CYC i2 [members]      N = 24: random members of the classes of P_23^+ and D(P_11)^+
   cycle_parities.py CYC i3 [members]      N = 20: D_19, P_19 (with a source) and random members of their classes
   cycle_parities.py CYC i4 MAXMAT STRIDE K  order 27: P_27 and the classes of drt27_direct.py (same order)
@@ -102,6 +103,17 @@ if __name__ == "__main__":
             c = cycles(exe, out); odd = [c[l] for l in range(3, 24, 2)]; a1 = sum(odd)
             print("%-7s c_l mod 4 (l = 3, 5, ..., 23): %s   c_odd mod 8 = %d   H mod 8 = %d, mod 16 = %d   parity of the number of disjoint pairs of odd cycles = %d" % (
                 name, ''.join(str(x % 4) for x in odd), a1 % 8, H % 8, H % 16, ((H - 1 - 2 * a1) // 4) % 2))
+    elif mode == "short":
+        # the cycle counts of small length are the same for all doubly regular tournaments of one order
+        d = json.load(open(sys.argv[3]))
+        rows = [(rec['label'], code_to_out(rec['code'], 23)) for rec in d] + [("double", descendant(double(paley_matrix(11)), 0))]
+        print("order 23: cycle counts modulo 256 for the lengths 3, 4, ..., 12")
+        for name, out in rows:
+            c = cycles(exe, out); print("  %-7s %s" % (name, ' '.join("%3d" % c[l] for l in range(3, 13))))
+        a, b, c0, d0 = next(gs_solutions(5)); G = descendant(goethals_seidel(a, b, c0, d0), 0)
+        print("order 19: the same")
+        for name, out in [("P_19", paley_out(19)), ("D_19", G)]:
+            c = cycles(exe, out); print("  %-7s %s" % (name, ' '.join("%3d" % c[l] for l in range(3, 13))))
     elif mode == "i2":
         k = int(sys.argv[3]) if len(sys.argv) > 3 else 10; random.seed(2412)
         print("I2: N = 24: predicted " + predicted(24))

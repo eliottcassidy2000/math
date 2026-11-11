@@ -45,9 +45,13 @@ mathematics where the lanes were empty, and it types the rest.
    constant on the whole switching class of a skew Hadamard matrix in every case examined (`N = 4, 8` completely;
    `N = 12, 16, 20, 24` on random members), although `H mod 4` is not a switching invariant in general. Sharpest:
    on these classes the number of cycles of **each** odd length `2k + 1` has the parity `[N = 4 mod 8] C(N/2 - 1, k)`
-   of Theorem E, converse symmetry or not (pre-registered R12: 76 tournaments at `N = 20, 24`, ten of order 27).
-   The natural local lemma is true up to order 8 and false from order 10 on, and the law fails vertex by vertex:
-   it is global (HYP-9667, section 5.3).
+   of Theorem E, converse symmetry or not (pre-registered R12: 76 tournaments at `N = 20, 24`, ten of order 27;
+   afterwards all 39 classes met at order 27).
+   For doubly regular tournaments the lengths 3, 5 and 7 are proved (the 7-cycle count is known from the
+   literature and is divisible by 8), so the open part starts at length 9. In terms of paths: modulo 4 a doubly
+   regular tournament of order 7 (mod 8) would have the path counts of the transitive tournament at every order
+   of path. The natural local lemma is true up to order 8 and false from order 10 on, and the law fails vertex by
+   vertex: it is global (HYP-9667, sections 5.3, 5.4).
 5. **(PROVED) Pentagon sums of doubly regular tournaments.** By the kernel formula of THM-5132, every doubly regular
    tournament of order `n = 7 (mod 8)` (the Paley tournaments with `q = 7 mod 8` and all Cayley-Dickson sign
    tournaments on `2^k - 1 >= 7` units) has **all** `2^n` one-vertex extensions with `c_3 + c_5` even; for
@@ -146,6 +150,11 @@ packing / tilings) were run before anything was typed, because the last three se
   20261029/`, `chanpak_55_105_golden_20261110/`, Session252 (five cores), THM-150 (`prod (1 + Q_k) = F_p`),
   THM-4741 / THM-1370 (Busch floors `5^((n-1)/3)`), `session74_eleven_mechanisms_20261027/` ("repeated appearances
   of 11 are not treated as a common mathematical object").
+- **Literature on cycles in doubly regular tournaments** (found during the session, CITED): Reid and Brown 1972
+  (doubly regular tournaments and skew Hadamard matrices); Rowlinson 1986 (4- and 5-cycles in regular tournaments);
+  Savchenko 2016, 2017 and arXiv:2403.07629 (the numbers of 5-, 6-, 7-, 8-cycles of a doubly regular tournament
+  depend only on the order; conjectured for 9). No statement on parities, on path counts modulo 4 or on switching
+  classes was seen there (the papers were not read in full).
 - **Not found by the surveys** (and not found by targeted greps of this session): the parity of `F`; `H(P_q) mod 4`
   or `mod 8`; any statement on residues of path counts of doubly regular tournaments or on `H mod 4` under
   switching; the pentagon sums of special families; the mean Redei-Berge function as a symmetric function, Schur
@@ -353,8 +362,10 @@ zero, the solution of `A^T u = 1` is `u = A 1 = 1` of weight `3 (mod 4)`, and th
 `2^k - 1 = 7 (mod 8)` for `k >= 3`. QED
 
 *Typing.* PROVED, as a corollary of THM-5132 and the classical identities of doubly regular tournaments. KNOWN:
-the rank `(n+1)/2` at `n = 7 (mod 8)` and the code-theoretic facts for Paley (THM-481, THM-4857), double regularity
-of the tower. Not found in the repository: (1), the evaluation of `G_35`.
+(1) is also an immediate consequence of the classical identity `c_5 + 2 c_4 = n(n^2-1)(n^2-9)/160` for regular
+tournaments (Rowlinson 1986; Savchenko 2016; CITED), whose right side is even; the rank `(n+1)/2` at `n = 7 (mod 8)`
+and the code-theoretic facts for Paley (THM-481, THM-4857); double regularity of the tower. Not found in the
+repository: (1) as a statement, and the evaluation of `G_35`.
 
 *Machine checks* (`family_cubes.py`, `out/family_cubes.out`): `P_q` for `q = 3, 7, 11, 19, 23, 27, 31, 43, 47` and
 `CD_k` for `k = 2, ..., 7`, by the kernel formula, by elimination of the quadratic form, and for `m <= 11` by
@@ -392,9 +403,9 @@ named by the character of 2. (ii) Machine checks: the non-Paley doubly regular t
 ### 5.3 Without a converse symmetry: a conjecture and its evidence (HYP-9667)
 
 Most doubly regular tournaments have no converse symmetry (`CD_4`; 36 of the 39 classes of order 27 met in Run G).
-Theorem Q does not apply to them. Since `c_3 = t + 1` and `c_5 = 0 (mod 2)` for every doubly regular tournament
-(THM-5132), the statement `H = n(n-1)/2 (mod 4)` is equivalent to: *the number of odd cycles of length at least 7
-is even.*
+Theorem Q does not apply to them. Since `c_3 = t + 1`, `c_5 = 0` and `c_7 = 0 (mod 2)` for every doubly regular
+tournament (THM-5132; section 5.4), the statement `H = n(n-1)/2 (mod 4)` is equivalent to: *the number of odd
+cycles of length at least 9 is even.*
 
 **Conjecture (HYP-9667 (b)).** (b4) Every doubly regular tournament of order `n` has `H = n(n-1)/2 (mod 4)`.
 (b8) Every doubly regular tournament of order `n` has `H = n(n-1)/2 (mod 8)`.
@@ -419,8 +430,9 @@ tournament, for paths of every order.* Checked directly for `P_3, P_7, P_11, CD_
 (`out/path_orders.out`).
 
 PROVED cases of (bK): `k = 1, 2` for every tournament of order `N = 0 (mod 4)` whose scores have one parity
-(THM-5132 (1): then `c_3 = N/4` and `c_5 = 0 (mod 2)`); every `k` for the doubly regular tournaments with a converse
-symmetry (Theorem E).
+(THM-5132 (1): then `c_3 = N/4` and `c_5 = 0 (mod 2)`); `k = 3` for every doubly regular tournament (section 5.4,
+from the known count of 7-cycles); every `k` for the doubly regular tournaments with a converse symmetry
+(Theorem E).
 
 The class of tournaments in (bS) is closed under switching (reversing all arcs between a vertex set and its
 complement), and the tournaments `(source) + T` with `T` doubly regular are its normalised members. `H mod 4` is
@@ -435,7 +447,7 @@ complement), and the tournaments `(source) + T` with `T` doubly regular are its 
 | 15 | `CD_4`, not sc (and its converse) | THM-448 | 1 | 1 |
 | 19 | `P_19` (sc); `D_19` (sc), the only class given by the 12,000 Goethals-Seidel matrices with circulants of order 5 | inherited; HYP-9365 and Run G1 | 3; 3 | 3 |
 | 23 | `P_23` (sc); twelve classes found by annealing in the Sierpinski lane (HYP-9371), none sc, two converse pairs among them; the double of `P_11`, not sc | exact counts of HYP-9371 (`drt_results.out`, `drt23_classes.out`, `drt23_doubled_check.out`); Run G2 mod 256 | 5 in all fourteen | 5 |
-| 27 | `P_27` (sc); three sc classes from Goethals-Seidel matrices with circulants of order 7; six classes without converse symmetry | Run F; Run H3 (direct counts mod 256) | H3-PENDING-ROW (run in progress at this checkpoint) | 7 |
+| 27 | `P_27` (sc); three sc classes from Goethals-Seidel matrices with circulants of order 7; six classes without converse symmetry | Run F; Run H3 (direct counts mod 256) | 7 in all ten | 7 |
 
 **Switching classes** (`switch_class.py`): `H mod 4` over members of the class of `(source) + T`.
 
@@ -466,11 +478,20 @@ members only.
 | 24 | the fourteen doubly regular classes of order 23, twelve of them without converse symmetry (I1) | zero in all 14 | zero |
 | 24 | 10 random members of each of the classes of `P_23^+`, `D(P_11)^+` (I2) | zero in all 20 | zero |
 | 28 | `P_27`, three self-converse and six other Goethals-Seidel classes (I4) | `1001100110011` in all 10 | `1001100110011` |
+| 28 | the same test on all 39 classes met in Run G, 36 of them without converse symmetry (extension of I4, run after R12 was read; same criterion) | `1001100110011` in all 39 | `1001100110011` |
 
 The parities of the even cycle counts are not constant on a class (they differ among the classes of order 23 from
 length 16 on). The vertex-local form is false: the numbers of odd cycles through a single vertex do not have these
 parities (`CD_4`: the 13-cycles through 8 of the 15 vertices are odd in number; `D_19`: lengths 13 and 15 at 6 of
 the 19 vertices; `out/cycle_parities_local.out`). The law is global.
+
+**Short cycles are determined by the order** (KNOWN for lengths up to 8, CITED; `out/cycle_parities_short.out`).
+In the literature (S. V. Savchenko, J. Graph Theory 83 (2016) for lengths 5 and 6; Discrete Math. 340 (2017) for
+length 7; arXiv:2403.07629 for length 8, with the conjecture that length 9 behaves the same and the remark that
+this stops after 9) the number of `m`-cycles of a doubly regular tournament depends only on its order for `m <= 8`.
+The counts here agree: for the fourteen classes of order 23 and the two of order 19 the numbers of cycles of length
+3, ..., 9 coincide modulo 256 (the 8-cycle numbers equal Savchenko's formula modulo 256), and they differ from
+length 10 on. For length 9 this is finite evidence for his conjecture. Section 5.4 uses the case of length 7.
 
 **No member of such a class is self-converse** (PROVED, two lines). Let `S^2 = -(N-1) I` and suppose `psi` is an
 anti-involution of `U`; `N` is even, so `psi` has no fixed vertex. For a vertex `a` the sets `{x : a -> x -> psi(a)}` and
@@ -511,6 +532,42 @@ turns a doubly regular `T` into the tournament on `V_1 + {oo} + V_2` with `T` on
 Its order is `7 (mod 8)`, so (b4) predicts `H = 1 (mod 4)` for every double (true for `CD_4` and for the double of
 `P_11`). The same construction on an arbitrary base tournament gives both residues from base order 5 on, so double
 regularity of the base has to enter a proof.
+
+### 5.4 The heptagon: (bK) for `k = 3` on doubly regular tournaments
+
+**Proposition H** (the count is KNOWN: Savchenko 2017; re-derived here; the parity is what is used). A doubly regular
+tournament of order `n = 4t + 3` has
+
+    c_7 = n (n+1)(n-1)(n-3)(n-5)(n^2 - 6n + 1)/896 = 4 t (t+1)(2t-1)(2t+1)(4t+3)(2t^2 - 1)/7
+
+directed 7-cycles; in particular `c_7 = 0 (mod 8)`. So (bK) holds for `k = 1, 2, 3` on every doubly regular
+tournament, and (b4) is equivalent to: *the number of odd cycles of length at least 9 is even.*
+
+*Derivation.* For every tournament, `tr(A^7) = 7 c_7 + 7 (N_1 + N_2 + N_3)`, where `N_j` is the number of rotation
+classes of closed 7-walks with exactly `j` repeated vertices: a vertex is visited at most twice (a closed walk has
+length at least 3), two repeated vertices alternate (a closed walk of length at most 4 is a cycle), so the repeated
+vertices `r_1, ..., r_j` are met in the order `r_1 ... r_j r_1 ... r_j` and `j <= 3`. Splitting at a repeated vertex
+`u` gives a 3-cycle and a 4-cycle through `u`, hence `sum_u t_u f_u = N_1 + 2 N_2 + 3 N_3` (`t_u`, `f_u` the numbers of
+3- and 4-cycles through `u`) and
+
+    c_7 = tr(A^7)/7 - sum_u t_u f_u + N_2 + 2 N_3.
+
+`N_3` counts a 3-cycle, one of its arcs `z -> u` and a vertex `y` with `z -> y -> u`. `N_2` counts, for an arc `u -> w`,
+either a 3-cycle and a 4-cycle through that arc with no other common vertex (segment lengths 1, 2, 1, 3), or a
+vertex `b` with `u -> b -> w` and an ordered pair of distinct vertices `a, c` with `w -> a -> u`, `w -> c -> u` (segment
+lengths 1, 2, 2, 2). In a doubly regular tournament `A^2 = (t+1) J - A - (t+1) I`, an arc `u -> w` has `t` vertices
+`x` with `u -> x -> w` and `t + 1` with `w -> x -> u`, `(A^3)_wu = 2t(t+1)`, `t_u = (t+1)(2t+1)`, `f_u = 2t(t+1)(2t+1)`. So
+`N_3 = 3 t c_3`, `N_2 = (3/2) n (n-1) t^2 (t+1)`, `sum_u t_u f_u = 2 n t (t+1)^2 (2t+1)^2`, and
+`tr(A^7) = (2t+1)((2t+1)^6 + 7q^3 - 14q^2 + 7q - 1)` with `q = t + 1` (eigenvalues `2t + 1` once and the two roots of
+`x^2 + x + q`, each `2t + 1` times). QED
+
+*Checks* (`heptagon_drt.py`): the formula gives `0, 24, 3960, 61200, 424080, 1912680, 6579144` for
+`n = 3, 7, ..., 27`; direct counts: `P_7` (24), `CD_4` (61200, exact), `P_11`, `P_19`, `D_19`, `P_23`, `P_27` and a
+Goethals-Seidel class of order 27 (modulo 256).
+
+*Typing.* The determination of `c_7` for doubly regular tournaments is due to Savchenko (2017); his formula was not
+available for comparison, and nothing is claimed beyond the parity statement and its use. The first odd length
+not covered is 9, where even the dependence on the order alone is a conjecture of the literature.
 
 ## 6. Records: the attached paper applied to tournaments
 
@@ -624,9 +681,9 @@ the type of the link. "No bridge" is a result.
 | powers of 2 | fugacity 2 is the integer point of the Fibonacci root; Mersenne and Jacobsthal values (THM-1425, THM-4748, THM-5104) | `H(P_q) mod 4` is the quadratic character of 2; `P_7` folds to the triangle on the powers of 2 mod 7 | PROVED (Theorem Q, section 4) |
 | Cayley-Dickson | doubling tower, `H(CD_4)`, chirality (THM-448, THM-451, THM-5133) | all one-vertex extensions of every `CD_k`, `k >= 3`, have `c_3 + c_5` even; the kernel of the adjacency matrix mod 2 is doubly even of dimension `2^(k-1) - 1` | PROVED (Theorem D) |
 | | | `H(CD_k) mod 4` for `k >= 5` | OPEN (HYP-9667 (b4) predicts 1); Theorems Q, E do not apply (no converse symmetry) |
-| Hadamard matrices | skew Hadamard doubling (THM-447, THM-448), signature simplex (THM-4911), loop expansion on doubly regular tournaments (HYP-9365, HYP-9371) | `H = n(n-1)/2 (mod 4)` for every doubly regular tournament with a converse symmetry; constant `H mod 4` on skew Hadamard switching classes in all cases examined | PROVED (Theorem E); CONJECTURE (HYP-9667) |
+| Hadamard matrices | skew Hadamard doubling (THM-447, THM-448), signature simplex (THM-4911), loop expansion on doubly regular tournaments (HYP-9365, HYP-9371); in the literature the cycle counts up to length 8 depend only on the order (Savchenko) | `H = n(n-1)/2 (mod 4)` for every doubly regular tournament with a converse symmetry; on skew Hadamard switching classes every odd cycle count has a forced parity in all cases examined (path form: the path counts of the transitive tournament modulo 4) | PROVED (Theorem E); CONJECTURE (HYP-9667 (bK)), proved for the lengths 3, 5, 7 on doubly regular tournaments |
 | Collatz | `(x, sigma) -> (3x + sigma, -sigma)`; 7 and 21 as the missing arrows `2 -> 1`, `5 -> 16` (Codex, today); `2^k = 3 J_k + (-1)^k` (THM-4754) | nothing | no new bridge |
-| 5 | Busch floors `5^((n-1)/3)`; five cores (Session252); `S_4` with `H = 5` | every regular tournament has an even number of 5-cycles; the six strong classes of order 5 are all self-converse (KNOWN, recomputed) | PROVED (Theorem D (1)) |
+| 5 | Busch floors `5^((n-1)/3)`; five cores (Session252); `S_4` with `H = 5` | every regular tournament has an even number of 5-cycles (also a corollary of a classical identity); the six strong classes of order 5 are all self-converse (KNOWN, recomputed) | PROVED (Theorem D (1)); KNOWN in the literature |
 | golden ratio | `prod (1 + Q_k) = F_p` (THM-150); golden eleven (2026-10-14); Fibonacci torus (THM-4592) | the fold of `P_11` is the regular 5-tournament on the gold cells `{1, 3, 4, 5, 9}`, whose non-principal eigenvalues have moduli `phi` and `1/phi` | IDENTITY for the fold; the eigenvalue fact is classical |
 | 7 against 11 | Session240, Session74 | `(2/7) = 1`, `(5/7) = -1`; `(2/11) = -1`, `(5/11) = 1`: 2 is a square at 7 and 5 at 11; Theorem Q reads the first character (`H(P_7) = 1`, `H(P_11) = 3 mod 4`) | IDENTITY for `(2/q)`; no statement found for `(5/q)` |
 | eleven squares | Trump's packing and its octic; waste exponents; contact tori (four notes) | nothing geometric; strong components as squares on the diagonal of the adjacency matrix are THM-341 / THM-354 / THM-1925 and waste nothing in the limit (almost all tournaments are strong) | no bridge found |
@@ -669,8 +726,8 @@ the type of the link. "No bridge" is a result.
 | R6 | `CD_4`, `CD_5` self-converse; `H(CD_5) = 1 (mod 4)` | no anti-automorphism exists; second part undecided | **FAILED**; the first part was in canon (THM-448, THM-451) and should not have been registered |
 | R7 | every doubly regular descendant of the order-16 sign matrix has `H = 1 (mod 4)` | true, but all 16 are isomorphic to `CD_4` | CONFIRMED, uninformative |
 | R8 | `H(P_27) = 7 (mod 8)` | `H(P_27) = 27 * 13 * h`, `h = 1 (mod 256)`; `H = 95 (mod 256)` | **CONFIRMED** |
-| R9 | non-Paley doubly regular tournaments: `H = 3 (mod 4)` at orders 19 and 27, `1 (mod 4)` at order 23 | G1: one class (`D_19`), 3; G2: one class, 1; G3 and H3: H3-PENDING-R9 | **CONFIRMED**; G1 and G2 were decidable from the repository (below); for the classes with a converse symmetry now Theorem E |
-| R10 | the same modulo 8 (`3, 5, 7`) | G1: 3; G2: 5; H3: H3-PENDING-R10 | **CONFIRMED**, with the same caveat |
+| R9 | non-Paley doubly regular tournaments: `H = 3 (mod 4)` at orders 19 and 27, `1 (mod 4)` at order 23 | G1: one class (`D_19`), 3; G2: one class, 1; G3: three classes with a converse symmetry, 3 by folding; H3: nine classes of order 27, six of them without converse symmetry, 3 by direct count | **CONFIRMED**; G1 and G2 were decidable from the repository (below); for the classes with a converse symmetry now Theorem E |
+| R10 | the same modulo 8 (`3, 5, 7`) | G1: 3; G2: 5; H3: 7 for all nine classes | **CONFIRMED**, with the same caveat |
 | R11 | `H mod 4` is constant on the switching classes of `P_23^+`, `D(P_11)^+` (`N = 24`) and `D_19^+` (`N = 20`) | 40 random members each: 1, 1, 3 | **CONFIRMED** |
 | R12 | every odd cycle count has the parity `[N = 4 mod 8] C(N/2 - 1, k)`: fourteen classes of order 23, members of the classes at `N = 20, 24`, ten tournaments of order 27 | I1: 14 of 14; I2: 20 of 20; I3: 42 of 42; I4: 10 of 10 | **CONFIRMED** |
 | controls | `F(P_q)` even at `q = 7, 23, 31, 47`, odd at `3, 11, 19`; exact `H` of `P_7, P_11, P_19, CD_4`; `H(P_23) mod 256`; `H(P_27) = 95 (mod 256)` by the 27-start method | hold | |
@@ -739,10 +796,13 @@ Requires a C compiler, Python 3 and `gentourng` (nauty). From this directory:
     python3 local_forms.py /tmp/hamexact > out/local_forms.out                                  # section 5.3, section 10
     python3 path_orders.py > out/path_orders.out                                                # paths of every order mod 4
     cc -O2 -o /tmp/cyclen cycle_lengths.c                                                       # Run I
+    python3 heptagon_drt.py /tmp/cyclen > out/heptagon_drt.out                                  # section 5.4
     for m in controls insample local; do python3 cycle_parities.py /tmp/cyclen $m > out/cycle_parities_$m.out; done
+    for m in short i1mod4; do python3 cycle_parities.py /tmp/cyclen $m ../../../04-computation/experiments/sierpinski_ocf_20261022/drt23_classes.json > out/cycle_parities_$m.out; done
     python3 cycle_parities.py /tmp/cyclen i1 ../../../04-computation/experiments/sierpinski_ocf_20261022/drt23_classes.json > out/cycle_parities_i1.out
     python3 cycle_parities.py /tmp/cyclen i2 10 > out/cycle_parities_i2.out; python3 cycle_parities.py /tmp/cyclen i3 20 > out/cycle_parities_i3.out
     python3 cycle_parities.py /tmp/cyclen i4 40 2000 6 > out/cycle_parities_i4.out               # 10 min, 800 MB
+    python3 cycle_parities.py /tmp/cyclen i4 40 2000 36 > out/cycle_parities_i4_all.out          # all 39 classes, 40 min
     python3 records_check.py 5 > out/records_check.out                             # section 6
     python3 hmonoid_elasticity.py 300000 > out/hmonoid_elasticity.out              # section 7
     python3 atoms_small.py > out/atoms_small.out; python3 paley_orbits.py > out/paley_orbits.out
