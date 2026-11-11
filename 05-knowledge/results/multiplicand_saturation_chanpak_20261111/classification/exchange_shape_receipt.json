@@ -1,0 +1,223 @@
+{
+  "status": "FINITE-EXACT scout; star theorem OPEN",
+  "universe": {
+    "seed": 125,
+    "orders": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "cases_per_order": 500,
+    "checked": 2500,
+    "filters": "none"
+  },
+  "nonstar_closed_tree": null,
+  "closed_tree_shapes": [
+    {
+      "old_paths": 1,
+      "cuts": 1,
+      "occurrences": 788
+    },
+    {
+      "old_paths": 1,
+      "cuts": 2,
+      "occurrences": 380
+    },
+    {
+      "old_paths": 1,
+      "cuts": 3,
+      "occurrences": 18
+    },
+    {
+      "old_paths": 3,
+      "cuts": 1,
+      "occurrences": 145
+    },
+    {
+      "old_paths": 5,
+      "cuts": 1,
+      "occurrences": 63
+    },
+    {
+      "old_paths": 9,
+      "cuts": 1,
+      "occurrences": 13
+    },
+    {
+      "old_paths": 11,
+      "cuts": 1,
+      "occurrences": 6
+    },
+    {
+      "old_paths": 13,
+      "cuts": 1,
+      "occurrences": 4
+    },
+    {
+      "old_paths": 15,
+      "cuts": 1,
+      "occurrences": 5
+    },
+    {
+      "old_paths": 17,
+      "cuts": 1,
+      "occurrences": 2
+    },
+    {
+      "old_paths": 19,
+      "cuts": 1,
+      "occurrences": 1
+    },
+    {
+      "old_paths": 29,
+      "cuts": 1,
+      "occurrences": 3
+    },
+    {
+      "old_paths": 31,
+      "cuts": 1,
+      "occurrences": 1
+    },
+    {
+      "old_paths": 33,
+      "cuts": 1,
+      "occurrences": 1
+    },
+    {
+      "old_paths": 37,
+      "cuts": 1,
+      "occurrences": 3
+    },
+    {
+      "old_paths": 45,
+      "cuts": 1,
+      "occurrences": 1
+    },
+    {
+      "old_paths": 53,
+      "cuts": 1,
+      "occurrences": 1
+    },
+    {
+      "old_paths": 67,
+      "cuts": 1,
+      "occurrences": 1
+    },
+    {
+      "old_paths": 101,
+      "cuts": 1,
+      "occurrences": 1
+    },
+    {
+      "old_paths": 109,
+      "cuts": 1,
+      "occurrences": 1
+    },
+    {
+      "old_paths": 133,
+      "cuts": 1,
+      "occurrences": 1
+    },
+    {
+      "old_paths": 159,
+      "cuts": 1,
+      "occurrences": 1
+    }
+  ],
+  "hostile_to_canonical_cut": {
+    "rows": [
+      6,
+      12,
+      8,
+      1
+    ],
+    "A": 10,
+    "old_H": 5,
+    "new_H": 15,
+    "domination": 9,
+    "unused_paths": 0,
+    "components": [
+      {
+        "nodes": 3,
+        "edges": 2,
+        "stubs": 0,
+        "old_paths": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "cuts": [
+          1,
+          7
+        ],
+        "closed_tree": true
+      },
+      {
+        "nodes": 7,
+        "edges": 8,
+        "stubs": 0,
+        "old_paths": [
+          [
+            1,
+            2,
+            3,
+            0
+          ],
+          [
+            1,
+            3,
+            0,
+            2
+          ],
+          [
+            3,
+            0,
+            1,
+            2
+          ]
+        ],
+        "cuts": [
+          0,
+          6,
+          9,
+          15
+        ],
+        "closed_tree": false
+      },
+      {
+        "nodes": 3,
+        "edges": 2,
+        "stubs": 2,
+        "old_paths": [
+          [
+            2,
+            3,
+            0,
+            1
+          ]
+        ],
+        "cuts": [
+          4,
+          13
+        ],
+        "closed_tree": false
+      },
+      {
+        "nodes": 1,
+        "edges": 0,
+        "stubs": 1,
+        "old_paths": [],
+        "cuts": [
+          5
+        ],
+        "closed_tree": false
+      }
+    ]
+  },
+  "source_sha256": "122f24f88486c4c788076601fdbe1fd952abb2e609d51e0cadbe826401b40b7b"
+}

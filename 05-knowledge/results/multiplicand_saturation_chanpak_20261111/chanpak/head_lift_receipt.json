@@ -1,0 +1,44 @@
+[
+  {
+    "r": 1,
+    "source_H": 143,
+    "target": 285,
+    "hits": {}
+  },
+  {
+    "r": 2,
+    "source_H": 283,
+    "target": 565,
+    "hits": {}
+  },
+  {
+    "r": 3,
+    "source_H": 563,
+    "target": 1125,
+    "hits": {}
+  },
+  {
+    "r": 4,
+    "source_H": 1123,
+    "target": 2245,
+    "hits": {}
+  },
+  {
+    "r": 5,
+    "source_H": 2243,
+    "target": 4485,
+    "hits": {}
+  },
+  {
+    "r": 6,
+    "source_H": 4483,
+    "target": 8965,
+    "hits": {}
+  },
+  {
+    "r": 7,
+    "source_H": 8963,
+    "target": 17925,
+    "hits": {}
+  }
+]

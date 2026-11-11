@@ -1,0 +1,69 @@
+{
+  "status": "FINITE-EXACT; all-order component bound remains OPEN",
+  "universe": "Every labelled old tournament of orders 1..5 and every newborn cut",
+  "checked": 33866,
+  "stages": [
+    {
+      "finished_order": 1,
+      "checked": 2,
+      "maximum_closed_tree_components": 1
+    },
+    {
+      "finished_order": 2,
+      "checked": 10,
+      "maximum_closed_tree_components": 1
+    },
+    {
+      "finished_order": 3,
+      "checked": 74,
+      "maximum_closed_tree_components": 1
+    },
+    {
+      "finished_order": 4,
+      "checked": 1098,
+      "maximum_closed_tree_components": 1
+    },
+    {
+      "finished_order": 5,
+      "checked": 33866,
+      "maximum_closed_tree_components": 1
+    }
+  ],
+  "nontransitive_tree_without_cut_B": {
+    "rows": [
+      6,
+      12,
+      8,
+      1
+    ],
+    "A": 10,
+    "old_H": 5,
+    "new_H": 15,
+    "domination": 9,
+    "slack": 2,
+    "closed_tree_components": 1,
+    "unused_paths": 0,
+    "components": [
+      {
+        "nodes": 3,
+        "edges": 2,
+        "stubs": 0
+      },
+      {
+        "nodes": 7,
+        "edges": 8,
+        "stubs": 0
+      },
+      {
+        "nodes": 3,
+        "edges": 2,
+        "stubs": 2
+      },
+      {
+        "nodes": 1,
+        "edges": 0,
+        "stubs": 1
+      }
+    ]
+  }
+}
