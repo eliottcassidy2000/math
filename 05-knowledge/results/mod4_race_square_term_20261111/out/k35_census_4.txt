@@ -1,0 +1,3 @@
+census m 4 K {3} classes 4 weight 64 signedsum 256 neg 0 zero 0 pos 4 rank r4 4
+census m 4 K {5} classes 4 weight 64 signedsum 224 neg 1 zero 0 pos 3 rank r2 3 r4 1
+census m 4 K {3,5} classes 4 weight 64 signedsum 416 neg 0 zero 0 pos 4 rank r2 3 r4 1

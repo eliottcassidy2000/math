@@ -1,0 +1,3 @@
+census m 6 K {3} classes 56 weight 32768 signedsum 262144 neg 0 zero 0 pos 56 rank r6 56
+census m 6 K {5} classes 56 weight 32768 signedsum 90112 neg 18 zero 0 pos 38 rank r2 8 r4 18 r6 30
+census m 6 K {3,5} classes 56 weight 32768 signedsum 548864 neg 0 zero 0 pos 56 rank r0 1 r2 7 r4 32 r6 16

@@ -75,3 +75,33 @@ not change.
 - **Control.** `E_n[{3}] = 2^(-floor((n-1)/2))` within 3 standard errors at every order (Theorem T).
 
 Exploratory, not registered: the values at `n = 13` and `n = 17`, and `E_n[{5}]`.
+
+---
+
+# Outcomes (appended after the runs; the text above is unchanged)
+
+| | prediction | outcome | verdict |
+|---|---|---|---|
+| R1 | `D_12 > 0`, `D_12 4^12` in `[1500, 2500]` | `D_12 = (5.892 +- 0.59) * 10^(-5)`, ten standard errors above 0; `D_12 4^12 = 988.5 +- 98.5`, 5.2 standard errors below the interval | **FAILED** (the sign holds, the plateau does not) |
+| R2 | rank 10 within `0.006` of `0.83898`; rank at most 6 in `[0.0012, 0.0030]` | `0.838685 +- 0.000097`; `0.001398` | **CONFIRMED** |
+| R3 | `rho_11` in `[1.015, 1.045]` | `1.0172` | **CONFIRMED** |
+| R4 | corank-1 bias frequency in `[0.500, 0.512]` | `0.50399 +- 0.00014` | **CONFIRMED** |
+| Run A control | no failure | none in 14,400,000 samples | holds |
+| R5 | `E_10[{3,7,9}] = D_10 = 650471/2^28` | `533081/2^28` | **FAILED** |
+| R6 | `E_10[{5}] = 23/2048`, `E_10[{3,5}] = 263/2048` | `1/256`, `1/16` | **FAILED** |
+| Run B control | triangle column, score formula, full race | all hold | holds |
+| R7 | `E_14[{3,5}] = 2^(-6)`, `E_18[{3,5}] = 2^(-8)` within 3 s.e. | `0.015803` (`+1.13` s.e.), `0.003824` (`-0.52` s.e.) | **CONFIRMED** |
+| R8 | `E_12 = E_11`, `E_16 = E_15` for `{3,5}` within 3 s.e. | differences `+0.73`, `+0.60` s.e. | **CONFIRMED** |
+| Run C control | `E_n[{3}]` within 3 s.e. of Theorem T at every order | largest deviation `+2.7` s.e. (`n = 13`) | holds |
+
+Files: `out/mc11_summary.out` (Run A), `out/cycle_tables.out` (Run B), `out/c35_summary.out` (Run C).
+
+Not registered, done afterwards:
+
+- An estimator check for Run A (the same program at order 10, where the answer is known exactly):
+  `D_11 4^11 = 1981.5 +- 66.8` against `1987.8` (`out/mc10_control_summary.out`).
+- A sharper test of R7 and R8 with the exact vertex-cube sum of `c_3 + c_5` (`k35cube.c`, 4,000,000 bases per order
+  `m = 11, ..., 40`; relative precision `3 * 10^(-4)`): agreement at every order (`out/k35_summary.out`).
+- R7 and R8 are now theorems (THM-5132 (5); README section 6): the values are `2^(-(n-2)/2)` for every
+  `n = 2 (mod 4)`, and `E_n[{3,5}] = E_(n+1)[{3,5}]` for every `n = 3 (mod 4)`. The exact values at the sampled orders
+  are in `out/c35_summary.out`; all 16 estimates of Run C are within 2.3 standard errors of them.

@@ -1,0 +1,53 @@
+1. Class-level race (isomorphism classes)
+ n | classes  =1 mod 4  =3 mod 4  lead | self-converse (=1, =3)  others (=1, =3) | strong (=1, =3) lead
+ 3 |        2        1        1      0 |      1      1          0        0 |        0        1     -1
+ 4 |        4        2        2      0 |      2      0          0        2 |        1        0      1
+ 5 |       12        6        6      0 |      4      4          2        2 |        3        3      0
+ 6 |       56       32       24      8 |     12      0         20       24 |       21       14      7
+ 7 |      456      246      210     36 |     44     44        202      166 |      187      166     21
+ 8 |     6880     3572     3308    264 |    176      0       3396     3308 |     3104     2904    200
+ 9 |   191536    96402    95134   1268 |   1376   1376      95026    93758 |    89462    88671    791
+10 |  9733056  4877828  4855228  22600 |   8784      0    4869044  4855228 |  4688159  4667790  20369
+
+2. Labelled race: D_n = (self-converse) + (non-self-converse with |Aut| > 1) + (rigid, non-self-converse)
+ n | D_n           self-converse   symmetric       rigid         | times 4^n: D      sc      sym      rigid | sc share
+ 3 | 0.500000000  +0.500000000  +0.000000000  +0.000000000 |     32.0     32.0      0.0      0.0 |  100.0%   exact: D = 1/2, sc = 1/2
+ 4 | 0.500000000  +0.750000000  -0.250000000  +0.000000000 |    128.0    192.0    -64.0      0.0 |  150.0%   exact: D = 1/2, sc = 3/4
+ 5 | 0.406250000  +0.250000000  -0.078125000  +0.234375000 |    416.0    256.0    -80.0    240.0 |   61.5%   exact: D = 13/32, sc = 1/4
+ 6 | 0.250000000  +0.214843750  -0.052734375  +0.087890625 |   1024.0    880.0   -216.0    360.0 |   85.9%   exact: D = 1/4, sc = 55/256
+ 7 | 0.104125977  +0.018035889  -0.000427246  +0.086517334 |   1706.0    295.5     -7.0   1417.5 |   17.3%   exact: D = 853/8192, sc = 591/32768
+ 8 | 0.041534424  +0.025100708  -0.001590729  +0.018024445 |   2722.0   1645.0   -104.2   1181.2 |   60.4%   exact: D = 1361/32768, sc = 1645/65536
+ 9 | 0.007522464  +0.000302427  -0.000278413  +0.007498451 |   1972.0     79.3    -73.0   1965.7 |    4.0%   exact: D = 63103/8388608, sc = 40591/134217728
+10 | 0.002423193  +0.000898025  -0.000051585  +0.001576754 |   2540.9    941.6    -54.1   1653.3 |   37.1%   exact: D = 650471/268435456, sc = 1928493/2147483648
+
+3. Labelled self-converse tournaments SC_n against the involution bound B_n = (n-1)!! 2^(n^2/4) (n even), n!! 2^((n^2-1)/4) (n odd)
+ 3 | SC_n = 8            B_n = 12           SC_n/B_n = 0.666667 ; fraction of all tournaments 1.000000000 ; signed sum over them 4
+ 4 | SC_n = 48           B_n = 48           SC_n/B_n = 1.000000 ; fraction of all tournaments 0.750000000 ; signed sum over them 48
+ 5 | SC_n = 704          B_n = 960          SC_n/B_n = 0.733333 ; fraction of all tournaments 0.687500000 ; signed sum over them 256
+ 6 | SC_n = 7040         B_n = 7680         SC_n/B_n = 0.916667 ; fraction of all tournaments 0.214843750 ; signed sum over them 7040
+ 7 | SC_n = 380416       B_n = 430080       SC_n/B_n = 0.884524 ; fraction of all tournaments 0.181396484 ; signed sum over them 37824
+ 8 | SC_n = 6737920      B_n = 6881280      SC_n/B_n = 0.979167 ; fraction of all tournaments 0.025100708 ; signed sum over them 6737920
+ 9 | SC_n = 958578688    B_n = 990904320    SC_n/B_n = 0.967378 ; fraction of all tournaments 0.013949156 ; signed sum over them 20782592
+10 | SC_n = 31596429312  B_n = 31708938240  SC_n/B_n = 0.996452 ; fraction of all tournaments 0.000898025 ; signed sum over them 31596429312
+
+4. Strong-only race: s_chi(n) from the census flags, and from the inversion T_chi = 1/(1 - S_chi) of the signed counts
+ 3 | strong labelled 2                    signed -2                 D_n^str = -1.000000000  (D_n = 0.500000000) ; decomposable share of the signed sum 1.5000  [census flags agree]
+ 4 | strong labelled 24                   signed 24                 D_n^str = 1.000000000  (D_n = 0.500000000) ; decomposable share of the signed sum 0.2500  [census flags agree]
+ 5 | strong labelled 544                  signed 176                D_n^str = 0.323529412  (D_n = 0.406250000) ; decomposable share of the signed sum 0.5769  [census flags agree]
+ 6 | strong labelled 22320                signed 4080               D_n^str = 0.182795699  (D_n = 0.250000000) ; decomposable share of the signed sum 0.5020  [census flags agree]
+ 7 | strong labelled 1677488              signed 123952             D_n^str = 0.073891438  (D_n = 0.104125977) ; decomposable share of the signed sum 0.4324  [census flags agree]
+ 8 | strong labelled 236522496            signed 8135680            D_n^str = 0.034397066  (D_n = 0.041534424) ; decomposable share of the signed sum 0.2703  [census flags agree]
+ 9 | strong labelled 64026088576          signed 332488064          D_n^str = 0.005193009  (D_n = 0.007522464) ; decomposable share of the signed sum 0.3568  [census flags agree]
+10 | strong labelled 33832910196480       signed 75937800960        D_n^str = 0.002244495  (D_n = 0.002423193) ; decomposable share of the signed sum 0.1093  [census flags agree]
+11 | strong labelled 35262092417856512    signed 15259291222528     D_n^str = 0.000432739  (D_n = 0.000473932) ; decomposable share of the signed sum 0.1063
+
+5. Labelled relative masses of H mod 8 (residues 1, 3, 5, 7) and self-converse classes by H mod 8
+ 3 | 3.00000  1.00000  0.00000  0.00000 | self-converse classes [1, 1, 0, 0]
+ 4 | 1.50000  1.00000  1.50000  0.00000 | self-converse classes [1, 0, 1, 0]
+ 5 | 1.40625  0.93750  1.40625  0.25000 | self-converse classes [3, 2, 1, 2]
+ 6 | 1.21094  0.70312  1.28906  0.79688 | self-converse classes [6, 0, 6, 0]
+ 7 | 1.17920  0.98480  1.02905  0.80695 | self-converse classes [22, 20, 22, 24]
+ 8 | 1.06395  0.97866  1.01912  0.93827 | self-converse classes [82, 0, 94, 0]
+ 9 | 1.01529  0.99192  0.99975  0.99303 | self-converse classes [700, 700, 676, 676]
+10 | 1.00330  0.99603  1.00155  0.99912 | self-converse classes [4448, 0, 4336, 0]
+11 | 1.00052  0.99948  1.00044  0.99956   (THM-5127 audit 2: 0.25013, 0.24987, 0.25011, 0.24989)

@@ -1,0 +1,3 @@
+census m 7 K {3} classes 456 weight 2097152 signedsum 33554432 neg 0 zero 0 pos 456 rank r6 456
+census m 7 K {5} classes 456 weight 2097152 signedsum 11534336 neg 136 zero 0 pos 320 rank r2 48 r4 136 r6 272
+census m 7 K {3,5} classes 456 weight 2097152 signedsum 70254592 neg 0 zero 0 pos 456 rank r0 6 r2 64 r4 264 r6 122

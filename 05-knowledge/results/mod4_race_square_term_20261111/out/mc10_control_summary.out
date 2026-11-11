@@ -1,0 +1,9 @@
+m = 10, N = 4000000 samples in 4 runs; control failures (mu odd, a odd, Theorem C (3), even number of edges) = [0, 0, 0, 0]
+D_11 = 4.724219e-04 +- 1.59e-05 (standard error);  D_11 * 4^11 = 1981.5 +- 66.8;  z = 29.7
+per-run estimates of D_11 * 4^11: 2009, 1947, 2050, 1920
+rho_10 = 2^m E[b^2] = 1.03991 ;  E|b_R| = 0.022552 ;  E[b_R] = 2.376234e-03 (forced part 2^(1-m) = 1.953125e-03)
+  rank  2 (corank 8): fraction 0.000000 +- 0.000000 ; non-zero-bias frequency 0.00000 +- 0.00000 (uniform-linear-part model 0.00391)
+  rank  4 (corank 6): fraction 0.000056 +- 0.000004 ; non-zero-bias frequency 0.19912 +- 0.02656 (uniform-linear-part model 0.01562)
+  rank  6 (corank 4): fraction 0.021620 +- 0.000073 ; non-zero-bias frequency 0.08686 +- 0.00096 (uniform-linear-part model 0.06250)
+  rank  8 (corank 2): fraction 0.559339 +- 0.000248 ; non-zero-bias frequency 0.26377 +- 0.00029 (uniform-linear-part model 0.25000)
+  rank 10 (corank 0): fraction 0.418984 +- 0.000247 ; non-zero-bias frequency 1.00000 +- 0.00000 (uniform-linear-part model 1.00000)

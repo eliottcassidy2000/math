@@ -1,0 +1,3 @@
+census m 8 K {3} classes 6880 weight 268435456 signedsum 4294967296 neg 0 zero 0 pos 6880 rank r8 6880
+census m 8 K {5} classes 6880 weight 268435456 signedsum 771751936 neg 2333 zero 0 pos 4547 rank r0 1 r2 11 r4 506 r6 2322 r8 4040
+census m 8 K {3,5} classes 6880 weight 268435456 signedsum 8824815616 neg 0 zero 0 pos 6880 rank r0 3 r2 51 r4 972 r6 3974 r8 1880

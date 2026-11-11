@@ -1,0 +1,3 @@
+census m 2 K {3} classes 1 weight 2 signedsum 4 neg 0 zero 0 pos 1 rank r2 1
+census m 2 K {5} classes 1 weight 2 signedsum 8 neg 0 zero 0 pos 1 rank r0 1
+census m 2 K {3,5} classes 1 weight 2 signedsum 4 neg 0 zero 0 pos 1 rank r2 1

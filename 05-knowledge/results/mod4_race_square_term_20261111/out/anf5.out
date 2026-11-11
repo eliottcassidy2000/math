@@ -1,0 +1,7 @@
+k = 5: ANF of c_odd mod 2 has 120 monomials; by (degree, vertices spanned): {(1, 2): 3, (2, 3): 25, (2, 4): 2, (3, 4): 20, (3, 5): 10, (4, 5): 60}
+   degree 1, spans 2 vertices, type ((0, 1),) : 3 monomials
+   degree 2, spans 3 vertices, type ((0, 1), (0, 2)) : 25 monomials
+   degree 2, spans 4 vertices, type ((0, 1), (2, 3)) : 2 monomials
+   degree 3, spans 4 vertices, type ((0, 1), (0, 2), (1, 3)) : 20 monomials
+   degree 3, spans 5 vertices, type ((0, 1), (0, 2), (3, 4)) : 10 monomials
+   degree 4, spans 5 vertices, type ((0, 1), (0, 2), (1, 3), (2, 4)) : 60 monomials
