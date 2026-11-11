@@ -1,0 +1,194 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "r": 1,
+      "padding": 0,
+      "n": 3,
+      "k": 3,
+      "H": 3,
+      "nontransitive_samples": 1,
+      "total": 1
+    },
+    {
+      "r": 1,
+      "padding": 7,
+      "n": 10,
+      "k": 3,
+      "H": 3,
+      "nontransitive_samples": 1,
+      "total": 120
+    },
+    {
+      "r": 1,
+      "padding": 7,
+      "n": 10,
+      "k": 4,
+      "H": 3,
+      "nontransitive_samples": 7,
+      "total": 210
+    },
+    {
+      "r": 1,
+      "padding": 7,
+      "n": 10,
+      "k": 5,
+      "H": 3,
+      "nontransitive_samples": 21,
+      "total": 252
+    },
+    {
+      "r": 1,
+      "padding": 7,
+      "n": 10,
+      "k": 6,
+      "H": 3,
+      "nontransitive_samples": 35,
+      "total": 210
+    },
+    {
+      "r": 2,
+      "padding": 0,
+      "n": 6,
+      "k": 3,
+      "H": 9,
+      "nontransitive_samples": 2,
+      "total": 20
+    },
+    {
+      "r": 2,
+      "padding": 0,
+      "n": 6,
+      "k": 4,
+      "H": 9,
+      "nontransitive_samples": 6,
+      "total": 15
+    },
+    {
+      "r": 2,
+      "padding": 0,
+      "n": 6,
+      "k": 5,
+      "H": 9,
+      "nontransitive_samples": 6,
+      "total": 6
+    },
+    {
+      "r": 2,
+      "padding": 0,
+      "n": 6,
+      "k": 6,
+      "H": 9,
+      "nontransitive_samples": 1,
+      "total": 1
+    },
+    {
+      "r": 2,
+      "padding": 4,
+      "n": 10,
+      "k": 3,
+      "H": 9,
+      "nontransitive_samples": 2,
+      "total": 120
+    },
+    {
+      "r": 2,
+      "padding": 4,
+      "n": 10,
+      "k": 4,
+      "H": 9,
+      "nontransitive_samples": 14,
+      "total": 210
+    },
+    {
+      "r": 2,
+      "padding": 4,
+      "n": 10,
+      "k": 5,
+      "H": 9,
+      "nontransitive_samples": 42,
+      "total": 252
+    },
+    {
+      "r": 2,
+      "padding": 4,
+      "n": 10,
+      "k": 6,
+      "H": 9,
+      "nontransitive_samples": 69,
+      "total": 210
+    },
+    {
+      "r": 3,
+      "padding": 0,
+      "n": 9,
+      "k": 3,
+      "H": 27,
+      "nontransitive_samples": 3,
+      "total": 84
+    },
+    {
+      "r": 3,
+      "padding": 0,
+      "n": 9,
+      "k": 4,
+      "H": 27,
+      "nontransitive_samples": 18,
+      "total": 126
+    },
+    {
+      "r": 3,
+      "padding": 0,
+      "n": 9,
+      "k": 5,
+      "H": 27,
+      "nontransitive_samples": 45,
+      "total": 126
+    },
+    {
+      "r": 3,
+      "padding": 0,
+      "n": 9,
+      "k": 6,
+      "H": 27,
+      "nontransitive_samples": 57,
+      "total": 84
+    },
+    {
+      "r": 3,
+      "padding": 3,
+      "n": 12,
+      "k": 3,
+      "H": 27,
+      "nontransitive_samples": 3,
+      "total": 220
+    },
+    {
+      "r": 3,
+      "padding": 3,
+      "n": 12,
+      "k": 4,
+      "H": 27,
+      "nontransitive_samples": 27,
+      "total": 495
+    },
+    {
+      "r": 3,
+      "padding": 3,
+      "n": 12,
+      "k": 5,
+      "H": 27,
+      "nontransitive_samples": 108,
+      "total": 792
+    },
+    {
+      "r": 3,
+      "padding": 3,
+      "n": 12,
+      "k": 6,
+      "H": 27,
+      "nontransitive_samples": 249,
+      "total": 924
+    }
+  ]
+}

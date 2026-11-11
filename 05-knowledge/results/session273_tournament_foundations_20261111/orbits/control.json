@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "all labelled tournaments n<=5; conditional horizons through5",
+  "results": [
+    {
+      "n": 1,
+      "a": 1,
+      "delta": "0",
+      "TV_class_lift_vs_fair": "0"
+    },
+    {
+      "n": 2,
+      "a": 1,
+      "delta": "0",
+      "TV_class_lift_vs_fair": "0"
+    },
+    {
+      "n": 3,
+      "a": 2,
+      "delta": "1/2",
+      "TV_class_lift_vs_fair": "1/4"
+    },
+    {
+      "n": 4,
+      "a": 4,
+      "delta": "1/2",
+      "TV_class_lift_vs_fair": "1/4",
+      "deleted_cyclic_probability": "1/4",
+      "uniform_three_class_cyclic_probability": "1/2"
+    },
+    {
+      "n": 5,
+      "a": 12,
+      "delta": "13/32",
+      "TV_class_lift_vs_fair": "91/384"
+    }
+  ]
+}
