@@ -193,7 +193,6 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
-[S268](S268.md): response inventories, optimal tomography, interacting CA families and target constructors; Chan–Pak OPEN.
 [S266](S266.md): frequencies/radix. [S265](S265.md): shadows. [S264](S264.md); [products](PRODUCT.md). Chan–Pak OPEN.
 - [Clocks](../05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md); [more](S111-plus.md).
 - [Exact U5-free capacity](../05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md).

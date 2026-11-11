@@ -154,3 +154,9 @@ individual session routes preserve scope and remaining open obligations.
 [Session259](S259.md): COMPLETE; exact two-seed closure and delayed parity growth,
 full weak/strict divisor persistence, causal sum–product transport and prime-arity
 diagonals. Arithmetic graph growth is the focus; Chan–Pak remains OPEN.
+
+[Session267](S267.md): COMPLETE; Gaussian bridges and planar boundary recursion. JC(2) remains OPEN.
+
+[Session268](S268.md): response inventories, optimal tomography, interacting CA families and target constructors; Chan–Pak OPEN.
+
+(2026-11-11, kind-pasteur-2026-11-11-S24: the two links above were moved here from START-HERE.md and CURRENT-FRONTIER.md, unchanged, because the startup surface had exceeded its 180000-byte budget by 146 bytes and `agents/check_docs.py` was failing on `origin/main`.)
