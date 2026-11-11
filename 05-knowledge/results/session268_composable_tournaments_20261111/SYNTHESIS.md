@@ -1,6 +1,6 @@
 # Classify what composes, then let the hidden states interact
 
-**Session268, 11 November2026. Chan–Pak remains OPEN.**
+**Session 268, 11 November 2026. Chan–Pak remains OPEN.**
 
 This session produces two exact infinite-family enumeration methods, a sharp
 physical observation theorem, and a literal interacting cellular-automaton
@@ -27,15 +27,15 @@ counts parent classes exactly. Multiplying the second weight by n! gives the
 labelled count. A response bucket is never mistaken for a single graph type.
 
 The executable infinite family allows every canonical prime quotient to be C3,
-and allows arbitrary ordered strong-component sums. At order16 it contains:
+and allows arbitrary ordered strong-component sums. At order 16 it contains:
 
 - **1,343,039 ordinary classes**;
-- **83,073 full response states**, a16.17-fold reduction;
+- **83,073 full response states**, a 16.17-fold reduction;
 - **74,149 distinct H values**;
 - **10,997,137,501,622,272,000 labelled tournaments**.
 
-The largest response bucket contains252 classes. The whole inventory through16
-ran in9.728 seconds in the recorded environment before JSON serialization,
+The largest response bucket contains 252 classes. The whole inventory through 16
+ran in 9.728 seconds in the recorded environment before JSON serialization,
 using69,883 distinct cyclic response contractions and103,793 ordinal-sum
 contractions. This is a measured scoped workload, not a speed comparison with
 nauty or a claim that all tournament enumeration is polynomial-time.
@@ -49,21 +49,21 @@ gain without sacrificing multiplicity.
 The canonical decomposition, old prime cycle-index census, and original
 path-cover substitution machinery are inherited inputs. The new step is their
 response-refined class and labelled-mass pushforward. Its implementation and
-all H histograms through16 are in [the modular packet](modular/README.md).
+all H histograms through 16 are in [the modular packet](modular/README.md).
 
 ## 2. The exact state has a sharp physical observation cost
 
 Equal H alone is not safe for composition. For example
 C3[TT3,1,1] followed by one sink, and C3 followed by C3, both have H=9.
 Their ordered cover vectors begin (9,150,...) and (9,126,...). Applying the
-same cyclic context C3[child,1,1] gives177 and153.
+same cyclic context C3[child,1,1] gives 177 and153.
 
 The new tomography theorem supplies an explicit converse to the composition
 law. The scalar experiment
 
     P_d(T)=H(C3[TT_d,TT_d,T])
 
-is triangular in q_1,...,q_(d+1), with diagonal coefficient(d!)^2. Thus H(T)
+is triangular in q_1,...,q_(d+1), with diagonal coefficient (d!)^2. Thus H(T)
 and these physical probes recover the entire response exactly. In particular:
 
 **Two nonempty tournaments have the same full path-cover response if and only
@@ -78,7 +78,7 @@ That is the mechanism behind the lower bound.
 
 For known order n, the top two coordinates q_n=n! and
 q_(n−1)=(n−1)! binom(n,2) are universal. Consequently, for n≥4, H and the
-probes d=1,...,n−3 suffice; the largest has3n−6 vertices. This is an exact
+probes d=1,...,n−3 suffice; the largest has 3n−6 vertices. This is an exact
 information and construction theorem, not a polynomial-time algorithm for
 counting paths in an arbitrary raw graph. Nor does it say q is a minimal
 nonlinear encoding of graph isomorphism.
@@ -110,7 +110,7 @@ two unary bit weights. This is a physical interaction through actual arcs.
 For a binary word x on an indexed N-cycle, take the ordered strong-component
 sum of the N cells G_(x_i,x_(i+1)). The SCC order is intrinsic, so the word is
 recoverable from the unmarked tournament. Rotations are not silently identified.
-This gives exactly **2^N ordinary classes on10N vertices**, all rigid.
+This gives exactly **2^N ordinary classes on 10N vertices**, all rigid.
 The exact labelled count is therefore **(10N)!2^N**.
 
 Nevertheless, only **floor(N^2/4)+2 H values** occur. For a nonconstant word
@@ -120,9 +120,9 @@ with n0 zeroes and k zero-runs, its count and multiplicity are
     multiplicity=(N/k) binom(n0−1,k−1) binom(N−n0−1,k−1).
 
 Prime valuations recover n0 and k, so these bins really are distinct.
-At N=100,2^100 classes compress to exactly2502 bins; the committed program
+At N=100,2^100 classes compress to exactly 2502 bins; the committed program
 computes every multiplicity and checks their sum without enumerating2^100
-words. At N=1000 the theorem gives250002 bins for2^1000 classes on10000
+words. At N=1000 the theorem gives 250002 bins for2^1000 classes on 10000
 vertices. The full explicit list of classes still has exponential output size.
 
 [Interaction law, exact class spectrum, rigidity and labelled counts](automata/PROOF.md).
@@ -135,7 +135,7 @@ Changing one bit changes exactly two actual arcs in the pinned graph. A
 radius-r rule has its usual finite light cone in ordered-component geometry;
 the H update for a single defect depends on just its two adjacent pair factors.
 
-H is a global readout, not a complete dynamical state. Under Rule110,
+H is a global readout, not a complete dynamical state. Under Rule 110,
 101000 and100100 have the same present H88902740880625, but their next counts
 are76567725723825 and77701668671025. Longer initial block statistics predict
 a longer future horizon: length2rt+2 blocks suffice at time t. There is no
@@ -144,7 +144,7 @@ claim that a fixed pair histogram closes every rule for all time.
 This implements interacting computation, rather than attaching a computer
 analogy to a static tournament. Finite rings remain finite systems. No
 undecidability or computational-universality theorem is inferred from the
-sample Rule110 trace, and no automatic local rule is extracted from an
+sample Rule 110 trace, and no automatic local rule is extracted from an
 undirected arc-flip graph.
 
 There is also a literal statistical-mechanics transfer. Summing H over all
@@ -166,7 +166,7 @@ C3 and Paley7 using O(word-length) integer operations.
 
 All those automata have only fixed points and eventual three-cycles, with
 explicit multiplicities. Yet composition order is visible: C3[Paley7] and
-Paley7[C3] both have21 vertices but binary ranks11 and17, and respective
+Paley7[C3] both have 21 vertices but binary ranks11 and17, and respective
 Hamiltonian counts122621733302733 and123156134945235.
 
 The same physical substitution used in Session267's wreath-action example
@@ -188,12 +188,22 @@ transitive probe and seam gives additional explicit two-parameter affine
 families. These are genuine constructions, but their integer ranges are
 specified rather than assumed to be complete.
 
+The target-directed compiler memoizes only divisors of the requested integer,
+with O(τ(N) log² N) candidate divisibility tests. It minimizes vertex count
+within its explicit atom/seam/lift product language and emits literal graphs.
+Adding the hidden-state lifts improves H=153 from 10 to 8 vertices, H=177
+from 11 to 8, H=495 from 14 to 9, and H=27081 from 20 to 16. Those four
+searches visit 6, 4, 12, and 16 divisor states. The previous figures refer to
+the relevant narrower constructor languages, not previously best known or
+globally optimal tournaments. Seven adjacency witnesses are saved and
+independently recounted. [Compiler, exact scope, and witnesses](spectrum/README.md).
+
 The basic singleton-transitive atom h(b,c)=2+(2^b−1)(2^c−1) has a unique
 unordered parameter decoder, exact chirality and automorphism multiplicities,
 and logarithmic vertex cost. Even closing **all** these atoms under arbitrary
 products covers only exp(O((log X)^(2/3))) integers below X. A partition
 generating-function bound proves this sparsity. The complete finite product
-inventories have95,368,1308,4264 values through10^3,10^4,10^5,10^6.
+inventories have 95,368,1308,4264 values through 10^3,10^4,10^5,10^6.
 
 This explains a real obstruction: huge class families and clean multiplicative
 composition need not approach the desired scalar spectrum. The missing step

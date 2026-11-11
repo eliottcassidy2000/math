@@ -8,7 +8,7 @@ No new universality, full tournament census, or Chan–Pak proof is asserted.
 The modular compiler proves that equal full ordered path-cover profiles remain
 equal under every uniform substitution context. The spectrum lane proves the
 converse: H(T) and the contexts C3[TT_d,TT_d,T], d=1,...,n−1, recover every
-coefficient by triangular inversion, with diagonal(d!)².
+coefficient by triangular inversion, with diagonal (d!)².
 
 So this is not merely a convenient feature vector. It is exactly the
 behavioral equivalence relation for integer Hamiltonian counts under the
@@ -32,7 +32,7 @@ Thus a sufficiently long block inventory predicts the horizon-t H exactly.
 The needed window grows with the horizon, unless a specific rule has extra
 closure. This is not a claim that a fixed pair histogram closes all rules.
 
-The Rule110 words101000 and100100 have the same H88902740880625,
+The Rule 110 words101000 and100100 have the same H88902740880625,
 but their next H values are76567725723825 and77701668671025. This is an
 explicit failure of scalar-state dynamics inside a fully classified infinite
 family, not a conjectural chaos argument.
@@ -47,7 +47,7 @@ The interacting-family weights form
 
     W = [215 179; 245 201].
 
-For N>=1 the sum of H over all2^N ordinary classes on10N vertices is
+For N>=1 the sum of H over all 2^N ordinary classes on 10N vertices is
 
     Z_N = trace(W^N).
 
@@ -71,7 +71,7 @@ class inventory are three representations of the same object.
 
 The negative determinant supplies a signed alternating finite-size spectral
 correction. The appearance of sqrt(14) is the discriminant of this specific
-physical2×2 interaction, not a claim that the repository's other14-themed
+physical 2×2 interaction, not a claim that the repository's other14-themed
 problems share its dynamics.
 
 Crucially this is a recurrence in **spatial size N after summing all classes**.

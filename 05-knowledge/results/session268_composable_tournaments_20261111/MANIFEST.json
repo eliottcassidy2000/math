@@ -1,0 +1,180 @@
+{
+  "files": [
+    {
+      "path": "BRIDGES.md",
+      "bytes": 5781,
+      "sha256": "833d4e8016a90d240adb3e5fa10772563fa169612eb82b5c8e4af0970ed34fac"
+    },
+    {
+      "path": "CHECKPOINT1.md",
+      "bytes": 1079,
+      "sha256": "3863f3f5a7739ebb0be355ebc562bb208d2b85e3ff5b6641b10f92ca4b1e5d1d"
+    },
+    {
+      "path": "FINAL_CHECKS.json",
+      "bytes": 1535,
+      "sha256": "2dca3a9c83b67d66ce6e19fd8bc5a5c82a434ee8cfdd666ceacd2912f9e28b93"
+    },
+    {
+      "path": "OPEN_QUESTIONS.md",
+      "bytes": 1943,
+      "sha256": "811bf3e71eb7339020d29f07a4b400e88d6ec440a2595df253b258992be2ac9b"
+    },
+    {
+      "path": "PUBLICATION.md",
+      "bytes": 2044,
+      "sha256": "95f089c6c12bf171f0b2e0b878af4344d3b67ccee582296f8b3336124b12285c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1420,
+      "sha256": "8db93cad3b9868840e5a45aff0f0409447ea4ad9f9d5c571e9e4aa0ea2af8829"
+    },
+    {
+      "path": "REPRODUCE.md",
+      "bytes": 1816,
+      "sha256": "5d56aad12c3ff17a1c703e4fa110f3d2fa285c90c6aa96fe91807aec33e04463"
+    },
+    {
+      "path": "SCOPED_DOC_CHECKS.json",
+      "bytes": 1466,
+      "sha256": "b6f4d17072a2a519280860fd9ecbee0733678ce2c9bf2f265b9917ed51a7ca08"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 2013,
+      "sha256": "de825cf4140fd291d954b517bf307694406aa6b7de1fbf0c3a6ab38c8ccedef0"
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "bytes": 12061,
+      "sha256": "2118fb8fc4cc85d5608102a5772991e608e358f5b4222641f27e3f1994097726"
+    },
+    {
+      "path": "automata/.gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "path": "automata/PROOF.md",
+      "bytes": 16762,
+      "sha256": "f2afeecc89628c1a4a161bcd834ba6f8c497956ee91bdede582497683af75d37"
+    },
+    {
+      "path": "automata/ca_receipt.json",
+      "bytes": 8862,
+      "sha256": "b4574e92f72afd01a553f6d2cb0999f1ebe12854a8ea8ed1c76755f0df0cda02"
+    },
+    {
+      "path": "automata/interacting_ca.py",
+      "bytes": 5987,
+      "sha256": "5254026fc1bfbfdcca10efbafe1a76b9869268464ea3b91631872cb847b72fcf"
+    },
+    {
+      "path": "automata/probe.py",
+      "bytes": 1137,
+      "sha256": "501f3033460c24e7994172b2ba007a78a9a44e5b0fe88b3ad56dad7173907964"
+    },
+    {
+      "path": "automata/receipt.json",
+      "bytes": 3821,
+      "sha256": "039a96960c8a6bcf1fa207f0d1da9bbfe5fb7b38569714783fcb14af12e2b8b4"
+    },
+    {
+      "path": "dynamics/PROOF.md",
+      "bytes": 7228,
+      "sha256": "2c113f813d94b34570accbcc5c074798af5a14c0a52f1c6657a3e919f19ce45a"
+    },
+    {
+      "path": "dynamics/receipt.json",
+      "bytes": 2301,
+      "sha256": "a9e4078435ea1baa5c31065fb7e7de7254d5384c9fc6592ad6d6a9d2013deb4b"
+    },
+    {
+      "path": "dynamics/replay.py",
+      "bytes": 4367,
+      "sha256": "994a389f3cd442f9f4e686fb395f8b1336e33a676d2cff45e05a0fbd4e37f5f3"
+    },
+    {
+      "path": "modular/.gitignore",
+      "bytes": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "path": "modular/PROOF.md",
+      "bytes": 12707,
+      "sha256": "779f1abfd505052f0e01199c0088e3815e80f38b1779fd8a825ab7a5b54868bd"
+    },
+    {
+      "path": "modular/README.md",
+      "bytes": 3402,
+      "sha256": "76197763f86a124f99ec5c5d40a616d2fae38bd67858c84097be6d2d686927f8"
+    },
+    {
+      "path": "modular/census.py",
+      "bytes": 8338,
+      "sha256": "ccf2e1532ce0d0e828592a9a5f50e03a4d423543eb27d0efa9ebbbffde4f1055"
+    },
+    {
+      "path": "modular/controls.json",
+      "bytes": 1052,
+      "sha256": "46cd3f229f8ea75dd8e2193acf0f081800d8de9167d1fb569d1d776895e60faf"
+    },
+    {
+      "path": "modular/full_receipt.json.gz.b64",
+      "bytes": 870364,
+      "sha256": "deaefa6db480e6c3c0f4a1c4ebaaf711f19a00d1c1219544fcb4dbd1d02d49e4"
+    },
+    {
+      "path": "modular/independent_controls.py",
+      "bytes": 2808,
+      "sha256": "3cc05a4540fc0251dc96ae23a2c082ecc2015221871015be18d218f2c5eaa1aa"
+    },
+    {
+      "path": "modular/receipt.json",
+      "bytes": 5976,
+      "sha256": "0f0b52c7e4948baa1db348fb83d63b728eef15cf61d62710cc6a8c9e5732ebfb"
+    },
+    {
+      "path": "reproduce.py",
+      "bytes": 3364,
+      "sha256": "b9535f2d40a04bd7193bf0b2e4d58e7204969e7d43a56b26b04ef1662ab811f2"
+    },
+    {
+      "path": "spectrum/PROOF.md",
+      "bytes": 18825,
+      "sha256": "022313aea690cb6dddea9249b014583ca05555f2019a42c978fe55625014b294"
+    },
+    {
+      "path": "spectrum/README.md",
+      "bytes": 3376,
+      "sha256": "0ea9262c41148d0f1a17e9adc829414d8dc076d6ea2d99289105e2f76c1ba079"
+    },
+    {
+      "path": "spectrum/compile_target.py",
+      "bytes": 4348,
+      "sha256": "80af0f8c5be34fabddb166651920a01c9a4a01c34fb9f86de84bb5715413575c"
+    },
+    {
+      "path": "spectrum/compiler_results.json",
+      "bytes": 2007,
+      "sha256": "012ad5780e63f7379ba8111f8ee39dddf416b07ac1cf4a9497db4f727d685c18"
+    },
+    {
+      "path": "spectrum/replay.py",
+      "bytes": 6025,
+      "sha256": "23a47a2c41295e275df55016a1c9dd63f1dbc94ed266af7860462e0b08dc3462"
+    },
+    {
+      "path": "spectrum/results.json",
+      "bytes": 3060,
+      "sha256": "fb4714394504bdd52d3ddad55048503d3f36902ef8df2a7468dc77e9509f5fd9"
+    },
+    {
+      "path": "spectrum/witnesses.json",
+      "bytes": 3976,
+      "sha256": "6eef355074f639727a2c4f74d24a3e9539e4ed253228359e2fad98f72b82c966"
+    }
+  ],
+  "scope": "all source/results excluding manifest and checksum ledgers themselves"
+}

@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "scope": "Seven new programs normal and optimized; no inherited Lean or repository-wide audit",
+  "full_census_sha256": "eef55022c968e82dba7b279c99ae3b03de8524350c4326132a513cbab3f8987a",
+  "programs": [
+    {
+      "program": "automata/probe.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "recorded_result": "MATCH"
+    },
+    {
+      "program": "automata/interacting_ca.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "recorded_result": "MATCH"
+    },
+    {
+      "program": "dynamics/replay.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "recorded_result": "MATCH"
+    },
+    {
+      "program": "modular/independent_controls.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "recorded_result": "MATCH"
+    },
+    {
+      "program": "modular/census.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "recorded_result": "MATCH"
+    },
+    {
+      "program": "spectrum/replay.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "recorded_result": "MATCH"
+    },
+    {
+      "program": "spectrum/compile_target.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "recorded_result": "MATCH"
+    }
+  ],
+  "assert_free_sources": [
+    "automata/interacting_ca.py",
+    "automata/probe.py",
+    "dynamics/replay.py",
+    "modular/census.py",
+    "modular/independent_controls.py",
+    "reproduce.py",
+    "spectrum/compile_target.py",
+    "spectrum/replay.py"
+  ],
+  "partition_recurrence_controls": 20,
+  "spatial_Z2": 174336
+}

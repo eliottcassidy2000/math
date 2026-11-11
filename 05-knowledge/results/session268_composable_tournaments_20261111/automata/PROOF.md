@@ -191,9 +191,9 @@ O(N) pair-counting operations followed by three exponentiations; a complete
 explicit list of all classes still necessarily has exponential output size.
 
 * N=100: 1000 vertices, `2^100=1267650600228229401496703205376` classes,
-  exactly2502 H values. The receipt computes all multiplicities and checks their
+  exactly 2502 H values. The receipt computes all multiplicities and checks their
   sum against2^100 without enumerating those classes.
-* N=1000: 10000 vertices, 2^1000 classes, exactly250002 H values. This is a
+* N=1000: 10000 vertices, 2^1000 classes, exactly 250002 H values. This is a
   theorem consequence, not a claim that the receipt enumerated that output.
 
 The 2×2 weighted transfer matrix `W=(w_ab)` gives the further exact identity
@@ -221,7 +221,7 @@ For general r the analogous pair update has radius r in that alphabet.
 **Theorem 5 (arc cost, light cone, exact response).**
 
 1. If x and y differ at d positions, the pinned tournaments T_N(x),T_N(y)
-   differ in exactly2d arcs. A differing bit changes its two stored copies,
+   differ in exactly 2d arcs. A differing bit changes its two stored copies,
    one in each neighboring G block (for N=1 these are the two halves of the
    same block). Thus one CA step has a literal path of2d single-arc reversals.
    Intermediate pinned tournaments are allowed to violate the pair-overlap
@@ -257,7 +257,7 @@ longer tape simulations, not a universality proof.
 ## 6. The scalar spectrum is not a closed dynamical state
 
 The quadratic spectrum compression is exact for the *static* census, but does
-not make H a sufficient state for subsequent CA evolution. Under Rule110,
+not make H a sufficient state for subsequent CA evolution. Under Rule 110,
 width6 words `101000` and `100100` both have
 `H=88902740880625`, but after one step their H values are respectively
 `76567725723825` and `77701668671025`. They have the same pair statistics;
@@ -287,10 +287,10 @@ Run from this directory:
     python3 probe.py
     python3 interacting_ca.py
 
-`probe.py` computes all25 one-seam choices on the two invisible bits.
+`probe.py` computes all 25 one-seam choices on the two invisible bits.
 `interacting_ca.py` checks both seed profiles, strong connectivity and seam
-formula for the chosen four states, all2^N words for1≤N≤12 against the closed
-census, a24-cell Rule110 trace, finite cones for five rules/all128 inputs on a
+formula for the chosen four states, all 2^N words for1≤N≤12 against the closed
+census, a24-cell Rule 110 trace, finite cones for five rules/all 128 inputs on a
 7-cycle, and the polynomial100-cell inventory. These are targeted checks of
 new objects, not a wholesale audit of inherited research.
 

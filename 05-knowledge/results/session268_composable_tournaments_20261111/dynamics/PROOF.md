@@ -1,7 +1,7 @@
 # Exact dynamics of interacting regular tournament modules
 
 **PROVED:** the module splitting and the all-word similarity classification below.
-**FINITE-EXACT:** the recorded matrix controls and the two order21 Hamiltonian counts.
+**FINITE-EXACT:** the recorded matrix controls and the two order 21 Hamiltonian counts.
 **OPEN:** Chan–Pak, full tournament classification, and the proposed all-word decoder.
 
 ## 1. Inheritance and the new object
@@ -9,7 +9,7 @@
 The inherited `THM-4857-the-gf2-automaton-of-a-tournament-classifies-the-merged-metagraph-exactly-through-order-five-circulants-are-additive-cellular-automata-and-paley-tournaments-give-quadratic-residue-codes.md`
 uses the actual adjacency matrix over F2: a vertex updates to the parity of the
 bits at vertices it beats. It proves that similarity loses tournament classes
-from order6, and recalls the Paley7 idempotent of rank4. We use those scoped
+from order 6, and recalls the Paley7 idempotent of rank4. We use those scoped
 inputs without re-auditing the old census or making a new literature claim.
 
 Session267's `topology/boundary_recursion_bridge.md` supplies an explicit
@@ -95,7 +95,7 @@ cycles of length3. Each periodic point has exactly 2^m0−1 additional immediate
 preimages in the transient layer. In particular every matrix obeys A^4=A.
 The theorem includes the empty word (one vertex, A=0).
 
-**Order matters.** C[P] on21 vertices has (m0,m1,a)=(10,9,1), while P[C]
+**Order matters.** C[P] on 21 vertices has (m0,m1,a)=(10,9,1), while P[C]
 has (4,3,7). Their adjacency ranks are11 and17. Thus the ordinary size and
 the multiset of module types are insufficient, even though all eventual
 periods divide3. The same concrete graphs have, by the exact run-word
@@ -105,7 +105,7 @@ contraction implemented in `replay.py`,
     H(P[C]) = 123156134945235.
 
 The small-seed profiles are computed by subset dynamic programming; the
-order21 calculation uses512 and16384 quotient occurrence boxes respectively,
+order 21 calculation uses512 and16384 quotient occurrence boxes respectively,
 not the2^21 subset table of either finished graph. This is an exact
 constructive example, not a claim that H is determined by (2).
 
@@ -116,7 +116,7 @@ For w=3^d, N=3^d and a=(N−1)/2, b=0. Hence
     A^3=I          when d is odd,
     A^3=I+J        when d is even.
 
-For odd d the automaton is reversible, has2 fixed points, and
+For odd d the automaton is reversible, has 2 fixed points, and
 (2^N−2)/3 three-cycles. For even d it kills exactly the global bit, has only
 the zero fixed point, and has (2^(N−1)−1)/3 periodic three-cycles. There is
 one transient preimage attached to every periodic point.
@@ -137,7 +137,7 @@ recurrence for free.
   and the full rooted or path-cover response used in the other lanes.
 - Sidecar: the canonical module word and the appropriate response profile.
 - Decisive controls: actual matrices through C3 depth5 (243 vertices), nine
-  mixed words through63 vertices, and two exactly evaluated order21 graphs.
+  mixed words through 63 vertices, and two exactly evaluated order 21 graphs.
 
 An inexpensive question survives: within the two-letter grammar, do N and
 (a,b,epsilon) recover the factor word? Exhaustion through word length14

@@ -1,0 +1,39 @@
+{
+  "starting_main": "ff37a34648c16c726e07ac1e36fdd7d9be1da350",
+  "checkpoint1_base": "90e0a6855d38967d1a2fdcecafb10b6480c862fd",
+  "checkpoint1": "e1a5a4841a23a95be60fcc94bd79f91054909298",
+  "inherited_sources": [
+    {
+      "path": "05-knowledge/results/session266_fiber_radix_20261111/SYNTHESIS.md",
+      "commit": "710a1e29ca67bfd9ff2ba94b649db06a9cfa8086",
+      "role": "fixed-H strong-core frequencies and smooth multiplicative asymptotics"
+    },
+    {
+      "path": "05-knowledge/results/session265_converse_dyadic_20261111/SYNTHESIS.md",
+      "commit": "ff37a34648c16c726e07ac1e36fdd7d9be1da350",
+      "role": "unmarked information loss, rooted response and physical amplifiers"
+    },
+    {
+      "path": "05-knowledge/results/session168_computational_structures_20261103/turing/NOTE.md",
+      "commit": "ff37a34648c16c726e07ac1e36fdd7d9be1da350",
+      "role": "two equal-profile five-vertex computational bits"
+    },
+    {
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/CLASSIFICATION.md",
+      "commit": "ff37a34648c16c726e07ac1e36fdd7d9be1da350",
+      "role": "canonical modular decomposition"
+    },
+    {
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/FAMILIES.md",
+      "commit": "ff37a34648c16c726e07ac1e36fdd7d9be1da350",
+      "role": "inherited species and prime cycle-index class laws"
+    },
+    {
+      "path": "05-knowledge/results/session267_gaussian_planar_20261111/topology/boundary_recursion_bridge.md",
+      "commit": "97a4cf2e7a66e8ca2595a02401558cf31a0e70ab",
+      "role": "Paley7/C3 physical wreath-action carrier"
+    }
+  ],
+  "scope": "Inherited results accepted in declared scope; new proofs and finite controls recorded separately. No literature priority or inherited Lean rebuild claimed.",
+  "concurrent_work": "Preserved odd bilinear seam work, non-Paley tournament pre-registrations, and Stein-module pre-registration updates on live main. None is promoted to a dependency of this packet."
+}

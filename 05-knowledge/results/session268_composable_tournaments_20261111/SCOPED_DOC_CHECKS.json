@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "scope": "new packet links, JSON and Python syntax; not repository-wide docs",
+  "internal_links": [
+    {
+      "source": "README.md",
+      "target": "SYNTHESIS.md"
+    },
+    {
+      "source": "README.md",
+      "target": "modular/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "spectrum/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "automata/PROOF.md"
+    },
+    {
+      "source": "README.md",
+      "target": "dynamics/PROOF.md"
+    },
+    {
+      "source": "README.md",
+      "target": "BRIDGES.md"
+    },
+    {
+      "source": "README.md",
+      "target": "REPRODUCE.md"
+    },
+    {
+      "source": "README.md",
+      "target": "FINAL_CHECKS.json"
+    },
+    {
+      "source": "README.md",
+      "target": "OPEN_QUESTIONS.md"
+    },
+    {
+      "source": "README.md",
+      "target": "SOURCE_PINS.json"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "modular/README.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "spectrum/PROOF.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "automata/PROOF.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "BRIDGES.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "dynamics/PROOF.md"
+    },
+    {
+      "source": "SYNTHESIS.md",
+      "target": "spectrum/README.md"
+    }
+  ],
+  "global_docs": "NOT PASSED: sparse worktree omitted unrelated mandatory historical files"
+}

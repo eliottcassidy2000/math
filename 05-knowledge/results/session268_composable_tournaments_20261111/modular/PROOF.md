@@ -111,7 +111,7 @@ From repository root:
 
     python3 -B 05-knowledge/results/session268_composable_tournaments_20261111/modular/census.py --max-n 16 --out /tmp/modular-receipt.json
 
-`receipt.json` stores the measured run, all H distributions through the run bound, and full q buckets through n=12. Timing is environment dependent. Runtime checks use explicit exceptions, not assertions, so Python -O keeps them active. `independent_controls.py` additionally compares the actual labelled universe at n<=5 with the inventory buckets, and records a scalar-H loss witness. No historical theorem is wholesale re-audited.
+`receipt.json` stores the readable summary and hash. Decode base64 then gzip from `full_receipt.json.gz.b64` to recover the complete measured run, all H distributions through the run bound, and full q buckets through n=12. Timing is environment dependent. Runtime checks use explicit exceptions, not assertions, so Python -O keeps them active. `independent_controls.py` additionally compares the actual labelled universe at n<=5 with the inventory buckets, and records a scalar-H loss witness. No historical theorem is wholesale re-audited.
 
 ## 5. Exact contextual equivalence (joint session corollary)
 

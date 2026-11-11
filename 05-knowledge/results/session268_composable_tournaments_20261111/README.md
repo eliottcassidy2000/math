@@ -1,26 +1,25 @@
-# Session268: composable tournament families and interacting machines
+# Session 268: composable tournament families and interacting machines
 
-**11 November2026. Research session in progress. Chan–Pak remains OPEN.**
+**11 November 2026. Complete research packet. Chan–Pak remains OPEN.**
 
-This packet develops exact, scoped alternatives to enumerating tournaments one
-labelled graph at a time. It connects canonical substitution, Hamiltonian
-path-cover response, rooted seams, and literal cellular dynamics. Existing
-proved machinery is inherited rather than wholesale re-audited.
+[Read the synthesis](SYNTHESIS.md) for the proofs, examples, scope and next steps.
 
-- [Modular inventories](modular/PROOF.md): carry ordinary class counts and
-  reciprocal-automorphism mass through full-response buckets. Response equality
-  respects uniform substitution, but is not graph isomorphism.
-- [Interacting cellular families](automata/PROOF.md): break an invisible
-  five-vertex bit's module boundary with one reversed arc. The four genuine
-  pair interactions give2^N ordinary classes on10N vertices and exactly
-  floor(N²/4)+2 Hamilton-value bins, with closed class multiplicities.
-- [Parity dynamics](dynamics/PROOF.md): classify every lexicographic word of
-  C3 and Paley7 as a linear F2 automaton by an explicit O(word-length) formula.
-- Spectrum tomography and constructive arithmetic are being integrated in the
-  next checkpoint. No global spectrum-completeness claim is made.
+- [Response-weighted enumeration](modular/README.md): 1,343,039 ordinary
+  classes at order 16 represented by 83,073 exact compositional states.
+- [Optimal physical tomography and target construction](spectrum/README.md):
+  sharp hidden-state detection cost, an exact scoped minimum-vertex compiler,
+  and a measured 14→9 vertex gain for H=495 in its declared language.
+- [Interacting cellular automata](automata/PROOF.md): exactly 2^N rigid classes
+  on 10N vertices, only floor(N²/4)+2 H bins, exact multiplicities and updates.
+- [Recursive parity dynamics](dynamics/PROOF.md): complete F2-automaton
+  classification of every C3/Paley7 factor word.
+- [Joint bridges](BRIDGES.md): contextual equivalence, statistical-mechanics
+  transfer, the distinction between spatial and temporal recursion, and the
+  remaining arithmetic obstruction.
 
-Each lane includes executable exact controls and its own loss ledger. The
-modular family is restricted to canonical C3 prime quotients. The interacting
-CA family has uniquely ordered strong cells; it is not a globally strong
-family beyond one cell. The finite-field dynamics is a different observable
-from integer Hamiltonian counts.
+[Reproduce](REPRODUCE.md) · [Exact checks](FINAL_CHECKS.json) ·
+[Open questions](OPEN_QUESTIONS.md) · [Sources](SOURCE_PINS.json).
+
+All infinite families are specified explicitly. No complete tournament-class
+census, all-odd-spectrum result, unrestricted finite-state compression,
+universality theorem, or global minimum-vertex claim is made.
