@@ -1,0 +1,56 @@
+{
+  "discovery_tree": "8aec2264f598",
+  "method": "git ls-tree and git show; sparse settings unchanged",
+  "sources": [
+    {
+      "path": "00-navigation/LRC14-CONTINUED-FRACTION-FRONTIER-2026-07-14.md",
+      "last_file_commit_at_discovery": "881a9903995884c02a03ffb45c68e9174f8b6c58",
+      "blob": "56815933aff6848f1b3b8e657a2b1f7bf29f598d"
+    },
+    {
+      "path": "01-canon/theorems/THM-3754-affine-variable-euclidean-descent-classification.md",
+      "last_file_commit_at_discovery": "881a9903995884c02a03ffb45c68e9174f8b6c58",
+      "blob": "44498f804f204b6d54fe630afc792d04d26c7821"
+    },
+    {
+      "path": "01-canon/theorems/THM-4519-frequency-one-coefficient-carries-the-renewal-series.md",
+      "last_file_commit_at_discovery": "de77c39fe547cd5f27b2a42972c9d9013c7ad417",
+      "blob": "20ac65d67b7a6a032328b0171300d6884e55019c"
+    },
+    {
+      "path": "01-canon/theorems/THM-3742-square-triangular-pell-mod13-central-sign-projective-cycle.md",
+      "last_file_commit_at_discovery": "881a9903995884c02a03ffb45c68e9174f8b6c58",
+      "blob": "0bd6d30d73bae215e4aa89ec9c14cfa8466f32ba"
+    },
+    {
+      "path": "01-canon/theorems/THM-4379-lrc14-sixteen-step-labeled-binder-observability-and-phase-decoder.md",
+      "last_file_commit_at_discovery": "881a9903995884c02a03ffb45c68e9174f8b6c58",
+      "blob": "77db18bdae8b3e26d54aa3cd76b4af0be786db72"
+    },
+    {
+      "path": "session199/profinite-source-escape/PROOF.md",
+      "last_file_commit_at_discovery": "5c5d35b4e56e4decdbc02859bdc816cdf132900c",
+      "blob": "38cfebfbedfa7bf3e2860808d0ef4f2a75be6c0a"
+    },
+    {
+      "path": "session202/append-binary/D_INTERFACE.md",
+      "last_file_commit_at_discovery": "caf5054686d11d9f973ecd79a5cb19b119900f10",
+      "blob": "67846db72f3cfff0f6e833256ba78f811f0194b6"
+    },
+    {
+      "path": "01-canon/theorems/THM-5130-sign-flip-towers-gadget-transfer-law-and-seeds-of-both-signs.md",
+      "last_file_commit_at_discovery": "7c14d6741eab74550c9337f6143751399d36053e",
+      "blob": "b2369dfc41f7097b90cb5c88196bb475ddf60ccd"
+    },
+    {
+      "path": "05-knowledge/results/session263_spin_flip_20261111/transfer/PROOF.md",
+      "last_file_commit_at_discovery": "8aec2264f5987ed18cfc72d35b11838bf1d91f7c",
+      "blob": "ceb3eda8886ae83864fd321e52385bff56151206"
+    },
+    {
+      "path": "05-knowledge/results/session263_spin_flip_20261111/transfer/ONE_QUERY_EXTENSION.md",
+      "last_file_commit_at_discovery": "8aec2264f5987ed18cfc72d35b11838bf1d91f7c",
+      "blob": "2221c65a6836f7b020985ae7592e4c81968348ed"
+    }
+  ]
+}

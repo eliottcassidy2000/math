@@ -1,0 +1,17 @@
+{
+  "sampled_commit": "610bf9cf090f0a0e8572309644ae731fea962522",
+  "method": "git ls-tree plus git show; direct predecessor files read from the worktree; no sparse-setting changes",
+  "sources": {
+    "05-knowledge/results/session263_spin_flip_20261111/SYNTHESIS.md": "9d2eab401acc12b7ccf1fbadf4ff1d3ab767a75d",
+    "05-knowledge/results/session263_spin_flip_20261111/selectors/RETURN_JOIN_SELECTORS.md": "fb105f99565ef62878443a46cb8ae0905213758f",
+    "05-knowledge/results/session263_spin_flip_20261111/selectors/selector_probe.py": "ffa022e0d32b32601fd58adcfc18fdcc27b4817d",
+    "01-canon/theorems/THM-209-independence-polynomial.md": "af0e72ee7df4120a288b224a2441825df696e396",
+    "03-artifacts/drafts/hard-core-statistical-physics-connections.md": "e53fdaddfb13601d677a263f7972552144657c31",
+    "01-canon/theorems/THM-1770-the-localisation-lemma-as-first-return-renewal-and-the-pair-only-closure.md": "ac34890a4116648be5deb58908b1c827100eadd1",
+    "01-canon/theorems/THM-4652-paley-pattern-sums-vanishing-and-series-parallel-polynomiality.md": "1c8c7adf74cd3ca83987bb79e2cc26fa26ac8eed",
+    "01-canon/theorems/THM-4878-graded-spine-grammars-cut-state-automaton-hankel-and-seam-ranks-cutwidth-censuses.md": "9b915fad87f84149db4731713f5974eeb9e51950",
+    "01-canon/theorems/THM-027-transfer-matrix-trace.md": "e958985a49029e2bf2dda4bdffbd6c4fef92ea10",
+    "05-knowledge/results/guarded_native_routing_20261023/ELECTRICAL.md": "039dea70fd83c555715d7c5cb5a90256f880e630",
+    "05-knowledge/results/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.md": "b4e72a4d4a3adc25e186b5c6fbd15f464398f765"
+  }
+}

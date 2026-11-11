@@ -1,0 +1,222 @@
+{
+  "scope": "New constructor and documentation checks only; no inherited audit or Lean claim",
+  "results": {
+    "control": {
+      "command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/session264_constructive_20261111/control/controls.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.417,
+      "stdout_sha256": "695daf2e162ccd8adf3bd22e88b24e59aec5ff73125b43613258bd92776db317",
+      "summary": {
+        "literal_graphs": 38,
+        "clock_states": 255,
+        "quotient_orbits": 24,
+        "full_state_moduli": 15,
+        "full_state_vertices": 261630,
+        "translation_primes": [
+          3,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          43,
+          79,
+          101,
+          127,
+          257,
+          769
+        ],
+        "span_minors": [
+          344,
+          632
+        ],
+        "status": "PASS"
+      }
+    },
+    "returns": {
+      "command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/session264_constructive_20261111/returns/multi_return_probe.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.019,
+      "stdout_sha256": "e9fdb5365169a2f1bc6c99992ab42613194f9eee70e5d89be0d77cdca5acb3f1",
+      "summary": {
+        "1": 121,
+        "2": 200,
+        "3": 384,
+        "random_7_8": 24
+      }
+    },
+    "fusion": {
+      "command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/session264_constructive_20261111/fusion/construct.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.063,
+      "stdout_sha256": "3465542e2f3158b6ebebcd597fcf0cadb4a3db1eaacd6a170b190534b0a480ca",
+      "summary": {
+        "status": "FINITE-EXACT controls for new fusion law, not a tournament census",
+        "pair_controls": 121,
+        "largest_pair_order": 5,
+        "associativity_controls": 64,
+        "parity_hostile": null,
+        "order_switch": {
+          "A": [
+            0,
+            1
+          ],
+          "B": [
+            2,
+            0
+          ],
+          "H_AB": 1,
+          "H_BA": 3
+        }
+      }
+    },
+    "filters": {
+      "command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/session264_constructive_20261111/filters/controls.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.171,
+      "stdout_sha256": "94bec0170b776e4c20c4af10dd94fadb31f10341344a84b3cdb80bf291fdbf0e",
+      "matches_stored_output": true,
+      "summary": {
+        "status": "PASS",
+        "new_operator_gates": 190,
+        "word_sources": 31,
+        "arbitrary_sources": 20,
+        "consumer_rows": [
+          1514,
+          1516,
+          1441,
+          1508,
+          1391,
+          1472,
+          1412,
+          1296,
+          1024,
+          511,
+          512
+        ],
+        "consumer_H": 7623,
+        "old_y_endpoint_count": 3696,
+        "suffix_length_counts": [
+          0,
+          231,
+          462,
+          462,
+          462,
+          462,
+          462,
+          462,
+          462,
+          231,
+          0,
+          0
+        ],
+        "suffix_mod8": [
+          462,
+          462,
+          462,
+          462,
+          462,
+          462,
+          462,
+          462
+        ],
+        "wrapped_F8_K": [
+          3927,
+          7548,
+          7545,
+          7752,
+          7584,
+          7512,
+          7584,
+          7752,
+          7545,
+          7548,
+          3927
+        ],
+        "cross_lane_dipoles": [
+          {
+            "module_rows": [
+              50,
+              44,
+              57,
+              17,
+              34,
+              8
+            ],
+            "wrapped_H": 349,
+            "start": 52,
+            "end": 41,
+            "wrapped_K": [
+              349,
+              604,
+              564,
+              624,
+              630,
+              624,
+              564,
+              604,
+              349
+            ]
+          },
+          {
+            "module_rows": [
+              42,
+              52,
+              57,
+              18,
+              33,
+              8
+            ],
+            "wrapped_H": 349,
+            "start": 50,
+            "end": 43,
+            "wrapped_K": [
+              349,
+              616,
+              572,
+              612,
+              614,
+              612,
+              572,
+              616,
+              349
+            ]
+          }
+        ]
+      }
+    },
+    "navigation": {
+      "command": [
+        "python3",
+        "agents/check_docs.py"
+      ],
+      "returncode": 0,
+      "seconds": 5.527,
+      "stdout_sha256": "bbb7224c9c12db914cb21fff872f709dd506b092a4a4f18427885c46bd02c38a",
+      "summary": "Agent-facing documentation check PASSED: bounded startup surface, frontmatter-derived frontier status, correction sentinels, and router smoke."
+    },
+    "relative_links": {
+      "checked": 23,
+      "missing": []
+    }
+  }
+}
