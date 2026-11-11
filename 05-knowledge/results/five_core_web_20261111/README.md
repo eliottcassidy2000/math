@@ -1,9 +1,15 @@
 # Five-core web: historical operations and constructive coverage
 
-Research started 10 November 2026, America/Denver. **ACTIVE / OPEN:**
-Chan–Pak completeness and the five-core all-height covering conjecture.
+Research started 10 November 2026, America/Denver. **Research deliverable
+complete; Chan–Pak and five-core all-height coverage OPEN.**
 This session starts at `b02c593ac084`, including the inherited exact five-core
 support through `2^24-1`; it does not claim that finite result as new.
+
+[Read the synthesis](SYNTHESIS.md) for results, the web of fives and the exact
+remaining proof obligation. New all-length results include triangle–arc
+incidence reconstruction, a golden H13 unit-switch family with deletion
+floor13, binary shell/internal-bit transport, a five-module classification
+of the compiler algebra, and an exact banded form of the binary energy.
 
 The user requested a long creative search across old, indirect work. The
 portfolio is: **Anchor** actual odd Hamiltonian path counts; **Niche** old
@@ -36,11 +42,12 @@ materialized files. An inherited CRLF file was byte-identical to HEAD but
 reported dirty by text normalization; it is preserved byte for byte and
 excluded locally from unrelated research staging.
 
-## Working lanes
+## Research lanes
 
 - `history/`: old and indirect source archaeology and transfers.
 - `fivefold/`: structure-bearing five-element comparisons and new operations.
 - `construction/`: actual construction and coverage experiments.
 - `root/`: digital arithmetic, target occupancy and integrated deductions.
 
-No theorem ID is reserved, and no new canon result is claimed at this stage.
+No theorem ID is reserved. New elementary proofs are filed in these research
+notes; no independent canon audit or completed spectrum proof is claimed.

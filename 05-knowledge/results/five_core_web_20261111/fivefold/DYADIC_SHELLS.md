@@ -6,6 +6,12 @@ its complete jump multiplicities, and a joint dyadic rectangle law.
 controls in `shell_checks.json`. **OPEN:** the target-occupancy conclusion
 needed for Chan–Pak. No new all-height coverage is claimed.
 
+The [continued target-selection investigation](continuation/PROOF.md)
+derives the full internal-bit derivative and centered doubling inequality,
+then studies3560 actual witnesses to the322 inherited small-parent holes.
+It records the useful one-step joint signal, two failed completion ideas,
+and the exact source-preservation gate still needed.
+
 The historical search found a more useful additional five than another
 five-object symmetry: the June Pollock **five tetrahedral summands** work.
 It changes a coverage problem into an obstruction to simultaneous failure

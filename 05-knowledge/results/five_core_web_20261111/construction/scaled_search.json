@@ -1,0 +1,18 @@
+{
+  "scope": "All labelled cuts of one representative of each tournament isomorphism class through order7, both source and target; no source-order restriction. F_target(A,B)=3F_source(A,B)+delta for the same binary addresses. Exact seven-coefficient comparison.",
+  "class_counts": {
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 4,
+    "5": 12,
+    "6": 56,
+    "7": 456
+  },
+  "core_cut_records": 62422,
+  "scaled_response_matches": 518,
+  "delta_histogram": {
+    "0": 518
+  },
+  "nonzero_unit_ternary_lifts": []
+}
