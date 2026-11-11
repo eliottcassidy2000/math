@@ -1,0 +1,47 @@
+{
+  "scope": "new Session254 controls only",
+  "results": [
+    {
+      "lane": "chan_pak",
+      "result": "PASS",
+      "seconds": 0.91,
+      "matching_artifact": "output.json"
+    },
+    {
+      "lane": "chan_pak",
+      "result": "PASS",
+      "seconds": 0.07,
+      "matching_artifact": "output81.json"
+    },
+    {
+      "lane": "hadwiger_nelson",
+      "result": "PASS",
+      "seconds": 0.28,
+      "matching_artifact": "output.json"
+    },
+    {
+      "lane": "jacobian",
+      "result": "PASS",
+      "seconds": 1.9,
+      "matching_artifact": "probe.out"
+    },
+    {
+      "lane": "jacobian",
+      "result": "PASS",
+      "seconds": 0.77,
+      "matching_artifact": "depth_semigroup.out"
+    },
+    {
+      "lane": "lonely_runner",
+      "result": "PASS",
+      "seconds": 0.45,
+      "matching_artifact": "output.json"
+    },
+    {
+      "lane": "niche",
+      "result": "PASS",
+      "seconds": 119.67,
+      "matching_artifact": "probe.out"
+    }
+  ]
+}

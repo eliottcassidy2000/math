@@ -1,0 +1,136 @@
+{
+  "source_commit": "1afe556196c741d5da96891f88c22c85288ff9ef",
+  "sources": [
+    {
+      "path": "00-navigation/CURRENT-FRONTIER.md",
+      "sha256": "8414dd079b2136c01e3be5c9f63320ddcb7aeb1dd0fada76089942205c4d2ad1",
+      "git_blob": "e8a756b7f1eb0fdc270f7c4d226551260bf5158e"
+    },
+    {
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f",
+      "git_blob": "21c54c68fac2c18efcacd26331006824fe891cda"
+    },
+    {
+      "path": "01-canon/theorems/THM-3166-falling-factorial-order-join-path-colour-transform.md",
+      "sha256": "01abd5e2a0bb1fc617d3f2649534acfb7b05f00cc4fe7573deb18302997c9198",
+      "git_blob": "39d7d2e857bb6a158fe7717c0c14bf6360dfcbdb"
+    },
+    {
+      "path": "01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md",
+      "sha256": "485f34b2186f3d7827c6c9ffc8305015b8f0fff66b0bd2ca76dceab08cdb3318",
+      "git_blob": "caf5a0022a407f7ea32175e7fbba5b439783fce0"
+    },
+    {
+      "path": "01-canon/theorems/THM-357-lonely-runner-endpoint-protection-trichotomy.md",
+      "sha256": "50a780c5ed6f7cf7f20ea7fb1711da1549dc40d8830c95fa94d8146d913b505c",
+      "git_blob": "c8492d817ee3ae5eee9151eba8d3eb877d80cefc"
+    },
+    {
+      "path": "01-canon/theorems/THM-4066-lrc14-diagonal-intercept-pullback-and-exact-affine-ray-closure.md",
+      "sha256": "96d88b64476f0e233047160209e0ce1bddd9cd2310733c06f4acc4e5243c7f98",
+      "git_blob": "3485eb8b75ea07b36cb61537b98a4d5b82d3fab9"
+    },
+    {
+      "path": "01-canon/theorems/THM-4112-antipodal-component-ancestry-chain-and-scale-separated-lrc-families.md",
+      "sha256": "d5544db9804fa705255e542a439a055ecacbc234e152bfbb18d4aa84c170025d",
+      "git_blob": "a725d887898e44a3c1b857adaed8262fc63fe086"
+    },
+    {
+      "path": "01-canon/theorems/THM-4415-source-normal-row-fourteen-same-row-response-rank-obstruction.md",
+      "sha256": "edb34841c7e048a46ef442019a61c1d2c49f42c96cc0ca981c047839c88aa190",
+      "git_blob": "f341220997a7f4ec48bd1c670d6d8724e213d8fb"
+    },
+    {
+      "path": "01-canon/theorems/THM-4426-source-normal-row-fourteen-weight-eighteen-memory-repair.md",
+      "sha256": "618fe2c6d4e384377c348cc5ec7b6019ece544a013f8c93db85e6c4b48297a19",
+      "git_blob": "e223bd6acfa6aa2cef8f9a78748306daa1201e07"
+    },
+    {
+      "path": "01-canon/theorems/THM-4438-jc2-row-fifteen-relative-response-on-boundary-gm.md",
+      "sha256": "5035415e2fb5a5d5c3bd998909d5711e751835cd708cc03bcc765b793a91fc83",
+      "git_blob": "50ca7b850d64eb72e0e660fe39ea3b0a700c1a4b"
+    },
+    {
+      "path": "01-canon/theorems/THM-4448-lrc14-general-shore-attachment-and-decoder-pair-cones.md",
+      "sha256": "932c50a8dc779bbaa5ab0048a81c66d941eb5ae831c3b62fcdd15a3822ff1428",
+      "git_blob": "542f3c537c3c6c0bfc18496aa5ce56f08b0211b9"
+    },
+    {
+      "path": "01-canon/theorems/THM-594-pair-overlap-law-mirsky-newman-floor.md",
+      "sha256": "77947dbc15f614b133cc136f95186f08e3439d127b2b577c635195ca366d96f7",
+      "git_blob": "aa8d26e69158787c04458ff07a5650103c82a495"
+    },
+    {
+      "path": "04-computation/jc2_source_normal_bracket_hasse_rows8_thm4308.py",
+      "sha256": "3703758f87a628583cf0f2f9e8fb1973f8ee65c875ab679acc20a9867c27e7f1",
+      "git_blob": "e93b5678e8a7dc10e33d95f02d6232af53ab1ab2"
+    },
+    {
+      "path": "04-computation/jc2_source_normal_student_stein_row9_thm4315.py",
+      "sha256": "c9625d0b974c4c579388ec14bcafaacfac5bf4a525d3d02c649d1bbf510b29fa",
+      "git_blob": "2b31b5d3813e8a6994638ab8adbfe36852b1d3c4"
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS.md",
+      "sha256": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+      "git_blob": "db844f9499998d2b2623b3ca6e536ca9a8f39cbc"
+    },
+    {
+      "path": "05-knowledge/results/boundary_context_weights_20261011d.md",
+      "sha256": "d79d9135432acf2d39d3c0f0ab4c482fdb4de1e0fd01fcf52e414962f81a565d",
+      "git_blob": "d7711c9535e477a03c8a10f68550168db4dbe558"
+    },
+    {
+      "path": "05-knowledge/results/boundary_palette_compression_20261011.md",
+      "sha256": "c7318387c1c27acc2b7c17962405210bdc8cf0cd01b70982518d1268e2c2b7f7",
+      "git_blob": "30a8019a6bc37556f01cbc8200590a52a16a3fd5"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/algebra/LOW_RATIO_FRONTIER.md",
+      "sha256": "61b54d1357fa20548b2a9048e34ec4f6c7b32f19850a258a79800cdb5a3003fb",
+      "git_blob": "480c8ad4d3d866dedf6a4f33de6aae3d157a0260"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/alternatives/RESET.md",
+      "sha256": "97ed86dc83981ea8c4bc27d1db9269551fef9831d525098a9ec1a5b7b92cb0b6",
+      "git_blob": "3d9c3d215f519c524780308e27d97dfd0404932a"
+    },
+    {
+      "path": "05-knowledge/results/existence_count_amplifiers_20261011e.md",
+      "sha256": "5c15df934a2d9764e277375b033e5a51e62b1db6a6488742af974423faf95b12",
+      "git_blob": "1c734a7eb1cc8d322feaa9c71477174e1b5dac44"
+    },
+    {
+      "path": "05-knowledge/results/session252_fivefold_bridges_20261111/algebra/PROOF.md",
+      "sha256": "faa092dd428722bc1b86b12bc16804115a282db2ca0ea6cb84d1ea061a028d12",
+      "git_blob": "d50efd6619dc4e44662247a70e5e3c76cbf020ae"
+    },
+    {
+      "path": "05-knowledge/results/session253_cross_problem_frontiers_20261111/moments/PROOF.md",
+      "sha256": "1224281a18263d8ac9d7b7ccb0b9d91e6d42fca9dc369533b222e701d1fb19a1",
+      "git_blob": "08914af476a97e03ab2bd043b24ea1749945d76f"
+    },
+    {
+      "path": "05-knowledge/results/session253_cross_problem_frontiers_20261111/tournaments/PROOF.md",
+      "sha256": "60ac1b5fb2cb296b8b4d9eac54d5a85c8eb24626d85ae3fcaaf78bed5ae8c0bc",
+      "git_blob": "6ccefcaa2be3da2da68d646a09225bb870d0288d"
+    },
+    {
+      "path": "05-knowledge/results/third_20260906_laurent.md",
+      "sha256": "9339611ca9be32167df956f3cd9e5b5e214db00dd4b3d36e5ae4444a4ca12a27",
+      "git_blob": "e5eeac5938b80131d370994b890804cd8510b21b"
+    },
+    {
+      "path": "05-knowledge/results/unit_equality_quantized_guards_20261011e.md",
+      "sha256": "9c6e62a530e0136959ffd439dd10c41a4517665f01fc566b91102f066b3e363f",
+      "git_blob": "bf4dbe6f65f36bcb97d27b21d8e2f57333cb50f6"
+    },
+    {
+      "path": "05-knowledge/results/unit_triangle_product_boundary_20261013c.md",
+      "sha256": "6b1c2c1f34d7eb25b028c9ae3dd05b4e813290e049b5270359c95cf4a07779a9",
+      "git_blob": "700daff9b19cbe5a9b7e2c0949357288f720aef2"
+    }
+  ],
+  "scope": "Inherited inputs and provenance, not a new independent audit."
+}

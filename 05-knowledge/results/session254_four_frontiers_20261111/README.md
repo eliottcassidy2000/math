@@ -1,6 +1,6 @@
 # Four mathematical frontiers, with their actual operation carriers
 
-**Session254 · 11 November 2026 · ACTIVE RESEARCH CHECKPOINT.**
+**Session254 · 11 November 2026 · COMPLETE RESEARCH PACKET.**
 Chan–Pak, planar JC, the general Lonely Runner problem and the targeted Hadwiger–Nelson chromatic improvements remain open. This session uses inherited results at their explicitly stated scopes and emphasizes new derivations and constructions, not historical proof audits.
 
 The portfolio follows four native problems in parallel, then asks which operations actually transport between them. A fifth, Laurent collision lane pursues a concrete next theorem from Session253.
@@ -11,7 +11,7 @@ The portfolio follows four native problems in parallel, then asks which operatio
 - **Lonely Runner:** phase-sensitive endpoint/component information rather than a scalar density or a fixed clock bank.
 - **Niche:** complementary factorial-row resultants at Laurent collisions.
 
-See [the live board](BOARD.md). New statements will be supplied with hypotheses, source pins, proof or explicit finite scope, and reproductions. No theorem ID is reserved or promoted by this checkpoint.
+See [the synthesis](SYNTHESIS.md), [the mechanism board](BOARD.md), and [source pins](SOURCE_PINS.json). All seven new-claim engines are run by `python3 reproduce.py`. No theorem ID is reserved or promoted.
 
 ## Inheritance boundary
 
