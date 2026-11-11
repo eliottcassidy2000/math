@@ -205,6 +205,9 @@ def run():
             require(predicted[1:]==actual[1:], 'fixed H transfer identity '+str((h,g)))
             transition_checks += 8
     exported = {str(h)+','+str(g):c for (h,g),c in sorted(kernels.items())}
+    transitions.setdefault((1,1),[0]*9)[0]=1
+    (HERE/'observed_birth_coefficients_below125.json').write_text(json.dumps(
+        {str(h)+','+str(g):c for (h,g),c in sorted(transitions.items())},indent=2)+'\n',encoding='utf-8')
     with (HERE/'primitive_births.tsv').open('w',newline='',encoding='utf-8') as f:
         w=csv.writer(f,delimiter='\t')
         w.writerow(['source_n','source_rep','new_vertex_out_mask','source_H','target_H','source_rows'])
@@ -221,7 +224,7 @@ def run():
         H_factorization_checks=factor_checks,ternary_target_checks=ternary_checks,
         fixed_H_coefficient_checks=transition_checks,nonzero_strong_birth_kernels=len(kernels),
         input_sha256=hashlib.sha256((PREV/'records.jsonl.gz').read_bytes()).hexdigest(),
-        seconds=round(time.perf_counter()-start,3),witnesses=witnesses)
+        witnesses=witnesses)
     (HERE/'birth_checks.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({k:v for k,v in result.items() if k!='witnesses'}))
 

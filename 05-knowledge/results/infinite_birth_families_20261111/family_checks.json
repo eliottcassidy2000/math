@@ -1,6 +1,7 @@
 {
   "status": "PASS",
   "nonzero_families": 946,
+  "independently_observed_coefficient_checks": 17577,
   "degree_histogram": {
     "1": 744,
     "2": 161,

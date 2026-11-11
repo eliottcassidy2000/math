@@ -33,7 +33,8 @@ def primary(seq):
         if line and not line.startswith('#'):
             i,v = line.split()[:2]
             pairs.append((int(i),int(v)))
-    return dict(pairs), dict(url=url,sha256=hashlib.sha256(p.read_bytes()).hexdigest(),rows=len(pairs))
+    canonical=p.read_bytes().replace(b'\r\n',b'\n')
+    return dict(pairs), dict(url=url,sha256_canonical_lf=hashlib.sha256(canonical).hexdigest(),rows=len(pairs))
 
 def trial_sum(n):
     if n == 1:
@@ -191,7 +192,7 @@ def run():
         quadratic_prime_count=len(values),quadratic_OEIS_rows=checked2,A000568_OEIS_rows=checkedA,
         quadratic_inverse_bridge_checks=bridge,
         named_numbers={str(n):max_inverse[n] for n in [2,3,5,7,11,13,19,27,33,1039]},
-        primary_sources=[src0,src1,src2],seconds=round(time.perf_counter()-start,3))
+        primary_sources=[src0,src1,src2])
     (HERE/'arithmetic_checks.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result))
 

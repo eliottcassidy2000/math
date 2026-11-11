@@ -1,0 +1,664 @@
+{
+  "3": {
+    "targets": [
+      11,
+      13
+    ],
+    "common_cores": [],
+    "source_class_GF_numerator": {},
+    "denominator": "(1-x)^2",
+    "eventual_slope": 0
+  },
+  "5": {
+    "targets": [
+      17,
+      19
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          4,
+          8
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "5": 2,
+      "6": -1
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 1
+  },
+  "7": {
+    "targets": [
+      23,
+      25
+    ],
+    "common_cores": [],
+    "source_class_GF_numerator": {},
+    "denominator": "(1-x)^2",
+    "eventual_slope": 0
+  },
+  "9": {
+    "targets": [
+      29,
+      31
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          5,
+          258
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "5": 1
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 1
+  },
+  "11": {
+    "targets": [
+      35,
+      37
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          5,
+          145
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "6": 2,
+      "7": -1
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 1
+  },
+  "13": {
+    "targets": [
+      41,
+      43
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          5,
+          136
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "6": 2,
+      "7": -1
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 1
+  },
+  "15": {
+    "targets": [
+      47,
+      49
+    ],
+    "common_cores": [],
+    "source_class_GF_numerator": {},
+    "denominator": "(1-x)^2",
+    "eventual_slope": 0
+  },
+  "17": {
+    "targets": [
+      53,
+      55
+    ],
+    "common_cores": [],
+    "source_class_GF_numerator": {},
+    "denominator": "(1-x)^2",
+    "eventual_slope": 0
+  },
+  "19": {
+    "targets": [
+      59,
+      61
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          6,
+          2065
+        ],
+        "minimal_padding_pairs": [
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          4354
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "7": 2
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 2
+  },
+  "21": {
+    "targets": [
+      65,
+      67
+    ],
+    "common_cores": [],
+    "source_class_GF_numerator": {},
+    "denominator": "(1-x)^2",
+    "eventual_slope": 0
+  },
+  "23": {
+    "targets": [
+      71,
+      73
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          6,
+          2056
+        ],
+        "minimal_padding_pairs": [
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          2177
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          4160
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          8728
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "7": 6,
+      "8": -2
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 4
+  },
+  "25": {
+    "targets": [
+      77,
+      79
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          6,
+          8337
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          8754
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "6": 2
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 2
+  },
+  "27": {
+    "targets": [
+      83,
+      85
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          7,
+          131074
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          7,
+          524352
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "7": 2
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 2
+  },
+  "29": {
+    "targets": [
+      89,
+      91
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          6,
+          2309
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          8328
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          8354
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          8357
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "6": 3,
+      "7": 2,
+      "8": -1
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 4
+  },
+  "31": {
+    "targets": [
+      95,
+      97
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          6,
+          2306
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          8272
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          7,
+          131330
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "6": 2,
+      "7": 1
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 3
+  },
+  "33": {
+    "targets": [
+      101,
+      103
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          6,
+          2112
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          7,
+          65553
+        ],
+        "minimal_padding_pairs": [
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          7,
+          270344
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "7": 2,
+      "8": 1
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 3
+  },
+  "35": {
+    "targets": [
+      107,
+      109
+    ],
+    "common_cores": [],
+    "source_class_GF_numerator": {},
+    "denominator": "(1-x)^2",
+    "eventual_slope": 0
+  },
+  "37": {
+    "targets": [
+      113,
+      115
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          6,
+          1152
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          1160
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          1169
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          5248
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          6,
+          5380
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          7,
+          135170
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          7,
+          262680
+        ],
+        "minimal_padding_pairs": [
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "6": 5,
+      "8": 2
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 7
+  },
+  "39": {
+    "targets": [
+      119,
+      121
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          7,
+          65665
+        ],
+        "minimal_padding_pairs": [
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          7,
+          540992
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "8": 2
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 2
+  }
+}

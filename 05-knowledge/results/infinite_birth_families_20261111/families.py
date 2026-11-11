@@ -63,13 +63,25 @@ def main():
     parser.add_argument('--target-h',type=int)
     parser.add_argument('--order',type=int)
     args=parser.parse_args()
-    families=compile_families()
     if args.source_h is None:
+        families=compile_families()
+        observed=json.loads((HERE/'observed_birth_coefficients_below125.json').read_text(encoding='utf-8'))
+        tests=0
+        for h in range(1,125,2):
+            for g in range(h,125,2):
+                key=str(h)+','+str(g)
+                actual=observed.get(key,[0]*9)
+                predicted=[evaluate(families[key],n) if key in families else 0 for n in range(9)]
+                if actual!=predicted:
+                    raise RuntimeError('family coefficient mismatch '+key)
+                tests+=9
         out=dict(status='PASS',nonzero_families=len(families),
+                 independently_observed_coefficient_checks=tests,
                  degree_histogram=dict(Counter(f['eventual_degree'] for f in families.values())))
         (HERE/'family_checks.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')
         print(json.dumps(out))
         return
+    families=json.loads((HERE/'all_size_birth_families_below125.json').read_text(encoding='utf-8'))['families']
     h,g,n=args.source_h,args.target_h,args.order
     if g is None or n is None or not (1<=h<=g<125 and h%2 and g%2 and n>=0):
         parser.error('need odd 1<=source-h<=target-h<125 and order>=0')

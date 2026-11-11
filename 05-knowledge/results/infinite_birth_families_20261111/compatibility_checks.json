@@ -1,0 +1,283 @@
+{
+  "status": "PASS",
+  "nontrivial_source_counts": 36,
+  "source_core_types": 200,
+  "literal_normalized_or_common_witness_checks": 1930,
+  "by_source_H": {
+    "3": {
+      "cores": 1,
+      "targets": 28,
+      "maximal_facets": 1,
+      "incompatible_pairs": 0
+    },
+    "5": {
+      "cores": 1,
+      "targets": 40,
+      "maximal_facets": 1,
+      "incompatible_pairs": 0
+    },
+    "9": {
+      "cores": 3,
+      "targets": 34,
+      "maximal_facets": 3,
+      "incompatible_pairs": 54
+    },
+    "11": {
+      "cores": 1,
+      "targets": 34,
+      "maximal_facets": 1,
+      "incompatible_pairs": 0
+    },
+    "13": {
+      "cores": 1,
+      "targets": 33,
+      "maximal_facets": 1,
+      "incompatible_pairs": 0
+    },
+    "15": {
+      "cores": 8,
+      "targets": 24,
+      "maximal_facets": 2,
+      "incompatible_pairs": 16
+    },
+    "17": {
+      "cores": 2,
+      "targets": 36,
+      "maximal_facets": 2,
+      "incompatible_pairs": 72
+    },
+    "19": {
+      "cores": 2,
+      "targets": 36,
+      "maximal_facets": 1,
+      "incompatible_pairs": 0
+    },
+    "23": {
+      "cores": 4,
+      "targets": 40,
+      "maximal_facets": 2,
+      "incompatible_pairs": 72
+    },
+    "25": {
+      "cores": 4,
+      "targets": 26,
+      "maximal_facets": 2,
+      "incompatible_pairs": 36
+    },
+    "27": {
+      "cores": 9,
+      "targets": 22,
+      "maximal_facets": 3,
+      "incompatible_pairs": 41
+    },
+    "29": {
+      "cores": 6,
+      "targets": 35,
+      "maximal_facets": 4,
+      "incompatible_pairs": 83
+    },
+    "31": {
+      "cores": 4,
+      "targets": 33,
+      "maximal_facets": 3,
+      "incompatible_pairs": 89
+    },
+    "33": {
+      "cores": 10,
+      "targets": 21,
+      "maximal_facets": 5,
+      "incompatible_pairs": 51
+    },
+    "35": {
+      "cores": 2,
+      "targets": 12,
+      "maximal_facets": 1,
+      "incompatible_pairs": 0
+    },
+    "37": {
+      "cores": 7,
+      "targets": 29,
+      "maximal_facets": 4,
+      "incompatible_pairs": 116
+    },
+    "39": {
+      "cores": 2,
+      "targets": 12,
+      "maximal_facets": 1,
+      "incompatible_pairs": 0
+    },
+    "41": {
+      "cores": 6,
+      "targets": 23,
+      "maximal_facets": 4,
+      "incompatible_pairs": 63
+    },
+    "43": {
+      "cores": 4,
+      "targets": 18,
+      "maximal_facets": 2,
+      "incompatible_pairs": 45
+    },
+    "45": {
+      "cores": 9,
+      "targets": 14,
+      "maximal_facets": 5,
+      "incompatible_pairs": 58
+    },
+    "47": {
+      "cores": 2,
+      "targets": 7,
+      "maximal_facets": 1,
+      "incompatible_pairs": 0
+    },
+    "49": {
+      "cores": 8,
+      "targets": 18,
+      "maximal_facets": 5,
+      "incompatible_pairs": 82
+    },
+    "51": {
+      "cores": 11,
+      "targets": 10,
+      "maximal_facets": 5,
+      "incompatible_pairs": 27
+    },
+    "53": {
+      "cores": 10,
+      "targets": 20,
+      "maximal_facets": 5,
+      "incompatible_pairs": 65
+    },
+    "55": {
+      "cores": 4,
+      "targets": 6,
+      "maximal_facets": 2,
+      "incompatible_pairs": 8
+    },
+    "57": {
+      "cores": 7,
+      "targets": 7,
+      "maximal_facets": 3,
+      "incompatible_pairs": 16
+    },
+    "59": {
+      "cores": 12,
+      "targets": 16,
+      "maximal_facets": 6,
+      "incompatible_pairs": 62
+    },
+    "61": {
+      "cores": 5,
+      "targets": 11,
+      "maximal_facets": 3,
+      "incompatible_pairs": 28
+    },
+    "63": {
+      "cores": 2,
+      "targets": 2,
+      "maximal_facets": 1,
+      "incompatible_pairs": 0
+    },
+    "65": {
+      "cores": 12,
+      "targets": 6,
+      "maximal_facets": 4,
+      "incompatible_pairs": 10
+    },
+    "67": {
+      "cores": 6,
+      "targets": 2,
+      "maximal_facets": 1,
+      "incompatible_pairs": 0
+    },
+    "69": {
+      "cores": 4,
+      "targets": 3,
+      "maximal_facets": 3,
+      "incompatible_pairs": 3
+    },
+    "71": {
+      "cores": 10,
+      "targets": 5,
+      "maximal_facets": 3,
+      "incompatible_pairs": 6
+    },
+    "73": {
+      "cores": 15,
+      "targets": 3,
+      "maximal_facets": 2,
+      "incompatible_pairs": 2
+    },
+    "77": {
+      "cores": 4,
+      "targets": 1,
+      "maximal_facets": 1,
+      "incompatible_pairs": 0
+    },
+    "79": {
+      "cores": 2,
+      "targets": 1,
+      "maximal_facets": 1,
+      "incompatible_pairs": 0
+    }
+  },
+  "independent_source_availability_checks": 1454,
+  "H33_small_common_counts": {
+    "7": 2,
+    "8": 5
+  },
+  "h33_common": {
+    "targets": [
+      101,
+      103
+    ],
+    "common_cores": [
+      {
+        "core_key": [
+          6,
+          2112
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          7,
+          65553
+        ],
+        "minimal_padding_pairs": [
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "core_key": [
+          7,
+          270344
+        ],
+        "minimal_padding_pairs": [
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    ],
+    "source_class_GF_numerator": {
+      "7": 2,
+      "8": 1
+    },
+    "denominator": "(1-x)^2",
+    "eventual_slope": 3
+  }
+}

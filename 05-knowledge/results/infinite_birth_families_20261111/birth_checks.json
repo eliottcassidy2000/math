@@ -10,7 +10,6 @@
   "fixed_H_coefficient_checks": 15624,
   "nonzero_strong_birth_kernels": 872,
   "input_sha256": "93b37da5eb037ec5eddc3d9e9156404480e9a9d81badf6359f91646cd8ed41fc",
-  "seconds": 13.039,
   "witnesses": {
     "2": {
       "n": 2,
