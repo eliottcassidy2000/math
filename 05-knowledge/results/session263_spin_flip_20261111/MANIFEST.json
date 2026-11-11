@@ -1,0 +1,140 @@
+{
+  "packet": "session263_spin_flip_20261111",
+  "files": [
+    {
+      "path": "CONCEPT_BOARD.md",
+      "bytes": 2090,
+      "sha256": "6485d8fb4248dcf04b5cc3c278667d0ffbc02476da2a96cbca8c207a0f0a00df"
+    },
+    {
+      "path": "CONNECTIONS.md",
+      "bytes": 5544,
+      "sha256": "3a9078e8378228793873a5b20301bcab6778952a6369be26c046274059d0ad3e"
+    },
+    {
+      "path": "FINAL_CHECKS.json",
+      "bytes": 1441,
+      "sha256": "e94d48a364d64b29d6b2e7839bc5804675b0eb2926cea32f994baf0067ea7551"
+    },
+    {
+      "path": "INCOMING_CONNECTIONS.md",
+      "bytes": 1464,
+      "sha256": "5b91e1f9f33b42c0790e4fb0ec38a40f3d8a7ef33b32531ad6c72df1081c3c95"
+    },
+    {
+      "path": "OPEN_QUESTIONS.md",
+      "bytes": 2789,
+      "sha256": "7c1ef6c638456a8150b7ab6f8ebda80681fdb0cee06d568f70a96e8cf9d5840f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1510,
+      "sha256": "6ba8a1e10509dfed98ca8968706a2e36df2f284133ea2529c50b72a618936c29"
+    },
+    {
+      "path": "REPRODUCE.md",
+      "bytes": 2331,
+      "sha256": "802c4c8e438a91760db5620b1268129e1a5c4e9d8cab3a3b3f51a06231330a20"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 2289,
+      "sha256": "c23ab86a3f1f78a5c9695754b30258b27c9904a257adbeb1b76d42b1e485a993"
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "bytes": 9054,
+      "sha256": "0497574524f35c20967bec68915be988e71f1385610278e9d6a606240e9175a1"
+    },
+    {
+      "path": "converse/FILTERED_CODES.md",
+      "bytes": 6086,
+      "sha256": "e7a103ed2759912e15554941a6f0cbabe0092f19234a39645049df2f8266f16d"
+    },
+    {
+      "path": "converse/PROOF.md",
+      "bytes": 12694,
+      "sha256": "97b7d0e4ad5f77a4a4265da0f7dffb5d50fad59add9652bd42118123ba151bbe"
+    },
+    {
+      "path": "converse/construct.py",
+      "bytes": 5715,
+      "sha256": "d989bfb74344c631b5bb509e0bf7054f95470275b166ed2650e3fd37bf5bac95"
+    },
+    {
+      "path": "converse/receipt.json",
+      "bytes": 9408,
+      "sha256": "107416b02f3e4bf5e6ac3ffade44af1062f43d13d6e49fc7b8a9e38567b700e6"
+    },
+    {
+      "path": "fourier/PROOF.md",
+      "bytes": 11379,
+      "sha256": "72f8c69e174599ae954b0fd024146b921c28aa49336adb29061f3824f46ba594"
+    },
+    {
+      "path": "fourier/discovery.py",
+      "bytes": 584,
+      "sha256": "4429ba0e4a350a39ba3d2d8518b6b11ecf73be796575b84478aef99ba8d4f5ad"
+    },
+    {
+      "path": "fourier/filters.py",
+      "bytes": 5425,
+      "sha256": "886bbb10ee2992430ed6f590afc5c81417d5d872a450d33c3cb89fea6cc5799f"
+    },
+    {
+      "path": "fourier/receipt.json",
+      "bytes": 3561,
+      "sha256": "c6d0af369fc5059346d89664f75f6290948bc542180a343059b8a9c7eaafabc1"
+    },
+    {
+      "path": "review/NEW_RESULTS.md",
+      "bytes": 8191,
+      "sha256": "7ef89230c724752dfe4b8730057722adc10556d7a24d1877ad84ba1bd080bf3c"
+    },
+    {
+      "path": "selectors/RETURN_JOIN_SELECTORS.md",
+      "bytes": 16106,
+      "sha256": "3924f4a3ab0feb2d459a12807a25614538af6c023c63b4985a0bff8dff209d27"
+    },
+    {
+      "path": "selectors/selector_probe.py",
+      "bytes": 5502,
+      "sha256": "aca92f786b9165e8dd9616dc463734f4d761fbffe5c8ba167da4b587bba8dec8"
+    },
+    {
+      "path": "selectors/selector_receipt.json",
+      "bytes": 2314,
+      "sha256": "c41c28060668888a2fa6081ef8cd04085900941f5b01f60a73f1091ed14562c4"
+    },
+    {
+      "path": "transfer/ONE_QUERY_EXTENSION.md",
+      "bytes": 6734,
+      "sha256": "fe9f585a513623343df55f0b12fc1433442d703e8b11f0d8dc4baf62f1ddfb0d"
+    },
+    {
+      "path": "transfer/PROOF.md",
+      "bytes": 11246,
+      "sha256": "a211c932d67956ab35b244d368cc1ee46f1056ced3d8e6454baadec903aa225d"
+    },
+    {
+      "path": "transfer/controls.py",
+      "bytes": 5196,
+      "sha256": "f201dcd50351b91c14a9d3af865ec6848e5eb5cb702168e9c69231ddcd5e5088"
+    },
+    {
+      "path": "transfer/one_query_controls.py",
+      "bytes": 2414,
+      "sha256": "3db8a2c3cb1f2b8f64535cd3e0fca465a0317aa825b62dd668514ba4a091928e"
+    },
+    {
+      "path": "transfer/one_query_receipt.json",
+      "bytes": 2539,
+      "sha256": "981fd08e5b7677db10915f05ec592e6a5ec954bc906cb112c568f1c8ec5b713d"
+    },
+    {
+      "path": "transfer/receipt.json",
+      "bytes": 2315,
+      "sha256": "91e8efa325b49d0adb7b3fd7950113a48966491ccd1fc4ef2910ba536874797a"
+    }
+  ]
+}

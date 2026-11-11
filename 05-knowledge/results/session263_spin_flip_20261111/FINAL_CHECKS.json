@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "scope": "New constructions only; inherited inputs not re-audited.",
+  "commands": [
+    {
+      "command": "python3 -B 05-knowledge/results/session263_spin_flip_20261111/transfer/controls.py",
+      "returncode": 0,
+      "seconds": 0.866
+    },
+    {
+      "command": "python3 -B 05-knowledge/results/session263_spin_flip_20261111/transfer/one_query_controls.py",
+      "returncode": 0,
+      "seconds": 0.061
+    },
+    {
+      "command": "python3 -B 05-knowledge/results/session263_spin_flip_20261111/selectors/selector_probe.py",
+      "returncode": 0,
+      "seconds": 0.63
+    },
+    {
+      "command": "python3 -B 05-knowledge/results/session263_spin_flip_20261111/converse/construct.py",
+      "returncode": 0,
+      "seconds": 0.269
+    },
+    {
+      "command": "python3 -B 05-knowledge/results/session263_spin_flip_20261111/fourier/filters.py",
+      "returncode": 0,
+      "seconds": 0.289
+    },
+    {
+      "command": "python3 agents/check_docs.py",
+      "returncode": 0,
+      "output": "Agent-facing documentation check PASSED: bounded startup surface, frontmatter-derived frontier status, correction sentinels, and router smoke.\n"
+    },
+    {
+      "command": "git diff --check",
+      "returncode": 0,
+      "output": ""
+    }
+  ],
+  "local_markdown_links": "PASS",
+  "core_review": "No substantive gap found; 924 leading quotient, quadruple wording, and nonempty wrapper hypothesis applied."
+}

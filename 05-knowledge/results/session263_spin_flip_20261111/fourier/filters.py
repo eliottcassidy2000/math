@@ -95,8 +95,33 @@ def close(a,y,t):
  b=list(x|(1<<z) for x in b);b[y]^=1<<z;b.append(1<<y)
  return tuple(b)
 
+def apex_word(word):
+ n=len(word);a=[0]*(n+1)
+ for i in range(n):
+  if word[i]=='1':a[0]|=1<<(i+1)
+  else:a[i+1]|=1
+  for j in range(i+1,n):a[i+1]|=1<<(j+1)
+ return tuple(a)
+def wrap(a):
+ n=len(a);b=[x|(1<<(n+1)) for x in a];b += [(1<<n)-1,1<<n]
+ return tuple(b)
+def induced(a,s):
+ vs=[i for i in range(len(a)) if s>>i&1]
+ return tuple(sum(1<<j for j,v in enumerate(vs) if a[u]>>v&1) for u in vs)
+def wrap_polynomial(a):
+ n=len(a);full=(1<<n)-1;h=hp_all(a);out=conv([1,2,1],split(a))
+ for subset in range(1,full+1):
+  if not subset.bit_count()%2:continue
+  k=subset.bit_count()+2;p=split(induced(a,full^subset))
+  for j,x in enumerate(p):out[j]+=2*h[subset]*x;out[j+k]+=2*h[subset]*x
+ return out
+
 def main():
  report={'status':'PASS','blocks':{},'rooted_controls':[]}
+ a=apex_word('10010');b=wrap(a);perm=(2,0,1,3,5,6,4,7)
+ relabelled=tuple(sum(1<<j for j,v in enumerate(perm) if F8[u]>>v&1) for u in perm)
+ assert b==relabelled and wrap_polynomial(a)==split(F8)
+ report['apex_wrap_certificate']={'word':'10010','core_rows':a,'core_H':hp_all(a)[-1],'core_K':split(a),'old_label_order':perm,'same_literal_tournament':True,'residual_polynomial_equal':True}
  for name,a in [('triangle',C3),('eight_filter',F8),('highest_channel_only',PARTIAL8)]:
   assert valid(a)
   h=hp_all(a);ind=hp_all_permutations(a);assert h==ind

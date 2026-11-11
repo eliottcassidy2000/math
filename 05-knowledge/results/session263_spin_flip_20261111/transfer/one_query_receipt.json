@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "states": 2047,
+  "depths": [
+    {
+      "depth": 0,
+      "m": 3,
+      "distinct_counts": 1,
+      "max_count": 1619,
+      "order_upper_bound": 10
+    },
+    {
+      "depth": 1,
+      "m": 12,
+      "distinct_counts": 2,
+      "max_count": 819008937,
+      "order_upper_bound": 23
+    },
+    {
+      "depth": 2,
+      "m": 20,
+      "distinct_counts": 4,
+      "max_count": 147076441570351,
+      "order_upper_bound": 35
+    },
+    {
+      "depth": 3,
+      "m": 28,
+      "distinct_counts": 8,
+      "max_count": 26331672825767272157,
+      "order_upper_bound": 47
+    },
+    {
+      "depth": 4,
+      "m": 36,
+      "distinct_counts": 16,
+      "max_count": 4715250174723561915924739,
+      "order_upper_bound": 59
+    },
+    {
+      "depth": 5,
+      "m": 45,
+      "distinct_counts": 32,
+      "max_count": 2533080244929383404697975133193,
+      "order_upper_bound": 72
+    },
+    {
+      "depth": 6,
+      "m": 53,
+      "distinct_counts": 64,
+      "max_count": 453598996337493080780956030856920815,
+      "order_upper_bound": 84
+    },
+    {
+      "depth": 7,
+      "m": 61,
+      "distinct_counts": 128,
+      "max_count": 81226027748027601494813055081603387154221,
+      "order_upper_bound": 96
+    },
+    {
+      "depth": 8,
+      "m": 70,
+      "distinct_counts": 256,
+      "max_count": 43635464199843791121997902321834905866385813019,
+      "order_upper_bound": 109
+    },
+    {
+      "depth": 9,
+      "m": 78,
+      "distinct_counts": 512,
+      "max_count": 7813807916308499508650783300147628063955069806407033,
+      "order_upper_bound": 121
+    },
+    {
+      "depth": 10,
+      "m": 86,
+      "distinct_counts": 1024,
+      "max_count": 1399219540175275710168949367254356183688827322550972313791,
+      "order_upper_bound": 133
+    }
+  ],
+  "physical_controls": [
+    {
+      "initial_state": [
+        -1,
+        3,
+        1,
+        1
+      ],
+      "m": 0,
+      "order": 7,
+      "count": 59
+    },
+    {
+      "initial_state": [
+        -1,
+        3,
+        1,
+        1
+      ],
+      "m": 3,
+      "order": 10,
+      "count": 1619
+    },
+    {
+      "initial_state": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "m": 2,
+      "order": 8,
+      "count": 225
+    },
+    {
+      "initial_state": [
+        -1,
+        6,
+        1,
+        0
+      ],
+      "m": 1,
+      "order": 9,
+      "count": 361
+    }
+  ],
+  "hostile_floor_division": "fails as predicted at q=0,E=1; nearest rounding passes",
+  "scope": "Only new one-query encoding, no inherited census audit"
+}

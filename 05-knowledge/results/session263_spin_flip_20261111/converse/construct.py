@@ -30,6 +30,14 @@ def allocation_source(counts,left):
  for B,OB,pb in seq[1:]:
   T,O=m.ordinal(T,O,B,OB);p=m.combine(p,pb)
  return T,O,p
+F8=(234,236,161,228,111,192,132,16)
+def bilateral_filter(T,O,p,k):
+ if not isinstance(k,int) or k<0:raise ValueError('nonnegative repetition count required')
+ f=dict(H=231,Q=3696,S=0,E=0,U=0,V=0,W=0)
+ for _ in range(k):
+  T,O=m.ordinal(op(F8),0,T,O);p=m.combine(f,p)
+  T,O=m.ordinal(T,O,F8,0);p=m.combine(p,f)
+ return T,O,p
 def main():
  bank=[((0,),1),((2,0),1),((2,4,1),1),((10,12,9,0),8),((2,4,9,19,7),9)]
  controls=[]
@@ -76,6 +84,24 @@ def main():
  expected=[[-1 if i==j else (1 if i==1 and j==2 else 0) for j in range(6)] for i in range(6)]
  assert matrix==expected
  certificate=dict(module_lengths=ms,prime_rows=primes,H_Q=values,valuation_matrix=matrix,determinant=1)
- receipt=dict(valuation_certificate=certificate,status='FINITE-EXACT new operations only',converse_controls=controls,binary_word_controls=words,allocation_controls=alloc)
+ # Composition controls: inherited F8 K, directly counted tiny rooted seed.
+ fs=importlib.util.spec_from_file_location('filters',P.parent/'fourier/filters.py')
+ fm=importlib.util.module_from_spec(fs);fs.loader.exec_module(fm)
+ T,O,p=allocation_source([0]*6,[0]*6);root=1
+ plus=fm.rooted(T,root);minus=fm.rooted(op(T),root)
+ K=[231]+[462]*7+[231]
+ filtered=[]
+ for k in range(4):
+  B,BO,bp=bilateral_filter(T,O,p,k)
+  assert len(B)==3+16*k and bp['H']==231**(2*k)
+  assert bp['U']==bp['V']==2*(231*3696)**k and bp['W']==bp['S']==bp['E']==0
+  pp,pm=plus,minus
+  for _ in range(k):
+   pp=[231*x for x in fm.conv(pp,K)];pm=[231*x for x in fm.conv(pm,K)]
+  rp,rm=fm.residues(pp,8),fm.residues(pm,8)
+  assert sum(rp)==bp['U'] and sum(rm)==bp['V']
+  if k:assert rp==[bp['U']//8]*8 and rm==[bp['V']//8]*8
+  filtered.append(dict(k=k,order=len(B),profile=bp,outgoing_residues=rp,incoming_residues=rm,method='component convolution, not full-graph subset enumeration'))
+ receipt=dict(bilateral_component_controls=filtered,valuation_certificate=certificate,status='FINITE-EXACT new operations only',converse_controls=controls,binary_word_controls=words,allocation_controls=alloc)
  (P/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt,indent=2))
 if __name__=='__main__':main()

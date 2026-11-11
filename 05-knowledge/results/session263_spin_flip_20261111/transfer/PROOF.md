@@ -42,7 +42,7 @@ For either letter, 19M/2 <= M' <= 57M/2. For a=3 specifically the multiplier lie
 
 *Proof.* From 0<=q<=M/2 and 0<=E<=M/2, (1) bounds M'/M between a²+1/2 and a²+1+a/2. Dividing q'/M=(2a-2) by these bounds gives (4). Both intervals lie in [0,1/2], and 16/51<8/23 (368<408), so they are disjoint. Literal construction preserves |O|=2; (1) flips unit offset and (2) remains valid by the counting meanings. This proves invariance and all inequalities. No E=0 reset is used. ∎
 
-**Theorem 2 (unique decoder).** Fix ANY initial literal state in K. Different words in the two letters give different full states. They even give different triples (r,M,q,E), which are just coordinates for the same state. There is an exact linear-time-in-word-length decoder once the initial state is supplied.
+**Theorem 2 (unique decoder).** Fix ANY initial literal state in K. Different words in the two letters give different full states. They even give different quadruples (r,M,q,E), which are just coordinates for the same state. There is an exact linear-time-in-word-length decoder once the initial state is supplied.
 
 *Proof and algorithm.* Given terminal (r',M',q',E'), the ratio in (4) uniquely determines the last letter, unless the state is the initial state and decoding stops. With c=2a-2 recover
 
@@ -116,3 +116,7 @@ The genuine next target is a physical grammar with an all-target scalar cover: a
 ## Reproduction
 
 Run `python3 -B 05-knowledge/results/session263_spin_flip_20261111/transfer/controls.py` from repository root. The receipt records exhaustive new-word checks, exact integer interval checks, reverse-word uniqueness, physical subset-DP counts for new composites, tomography, and hostile forged-state rejection. The all-length conclusions rest on proofs above, not finite enumeration.
+
+## Subsequent new extension in this packet
+
+`ONE_QUERY_EXTENSION.md` proves a size-dependent SINGLE physical continuation that encodes the full bounded-depth state. It gives 2^k distinct counts and odd slopes from the 2^k depth-k states, with explicit linear order overhead. This does not change the warning about projecting the ORIGINAL short-letter states onto their slopes, and its increased numerical count scale is stated explicitly.
