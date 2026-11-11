@@ -1,0 +1,347 @@
+{
+  "local_image_checks": 256,
+  "diameters": [
+    {
+      "M": 2,
+      "states": 2,
+      "max_shortest_bits": 1
+    },
+    {
+      "M": 4,
+      "states": 8,
+      "max_shortest_bits": 4
+    },
+    {
+      "M": 6,
+      "states": 18,
+      "max_shortest_bits": 8
+    },
+    {
+      "M": 8,
+      "states": 32,
+      "max_shortest_bits": 8
+    },
+    {
+      "M": 10,
+      "states": 50,
+      "max_shortest_bits": 9
+    },
+    {
+      "M": 12,
+      "states": 72,
+      "max_shortest_bits": 10
+    },
+    {
+      "M": 14,
+      "states": 98,
+      "max_shortest_bits": 12
+    },
+    {
+      "M": 16,
+      "states": 128,
+      "max_shortest_bits": 10
+    },
+    {
+      "M": 18,
+      "states": 162,
+      "max_shortest_bits": 12
+    },
+    {
+      "M": 20,
+      "states": 200,
+      "max_shortest_bits": 10
+    },
+    {
+      "M": 22,
+      "states": 242,
+      "max_shortest_bits": 11
+    },
+    {
+      "M": 24,
+      "states": 288,
+      "max_shortest_bits": 13
+    },
+    {
+      "M": 26,
+      "states": 338,
+      "max_shortest_bits": 12
+    },
+    {
+      "M": 28,
+      "states": 392,
+      "max_shortest_bits": 14
+    },
+    {
+      "M": 30,
+      "states": 450,
+      "max_shortest_bits": 14
+    },
+    {
+      "M": 32,
+      "states": 512,
+      "max_shortest_bits": 12
+    },
+    {
+      "M": 34,
+      "states": 578,
+      "max_shortest_bits": 13
+    },
+    {
+      "M": 36,
+      "states": 648,
+      "max_shortest_bits": 14
+    },
+    {
+      "M": 38,
+      "states": 722,
+      "max_shortest_bits": 13
+    },
+    {
+      "M": 40,
+      "states": 800,
+      "max_shortest_bits": 14
+    },
+    {
+      "M": 42,
+      "states": 882,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 44,
+      "states": 968,
+      "max_shortest_bits": 14
+    },
+    {
+      "M": 46,
+      "states": 1058,
+      "max_shortest_bits": 14
+    },
+    {
+      "M": 48,
+      "states": 1152,
+      "max_shortest_bits": 14
+    },
+    {
+      "M": 50,
+      "states": 1250,
+      "max_shortest_bits": 15
+    },
+    {
+      "M": 52,
+      "states": 1352,
+      "max_shortest_bits": 14
+    },
+    {
+      "M": 54,
+      "states": 1458,
+      "max_shortest_bits": 15
+    },
+    {
+      "M": 56,
+      "states": 1568,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 58,
+      "states": 1682,
+      "max_shortest_bits": 14
+    },
+    {
+      "M": 60,
+      "states": 1800,
+      "max_shortest_bits": 15
+    },
+    {
+      "M": 62,
+      "states": 1922,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 64,
+      "states": 2048,
+      "max_shortest_bits": 15
+    },
+    {
+      "M": 66,
+      "states": 2178,
+      "max_shortest_bits": 15
+    },
+    {
+      "M": 68,
+      "states": 2312,
+      "max_shortest_bits": 15
+    },
+    {
+      "M": 70,
+      "states": 2450,
+      "max_shortest_bits": 17
+    },
+    {
+      "M": 72,
+      "states": 2592,
+      "max_shortest_bits": 17
+    },
+    {
+      "M": 74,
+      "states": 2738,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 76,
+      "states": 2888,
+      "max_shortest_bits": 15
+    },
+    {
+      "M": 78,
+      "states": 3042,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 80,
+      "states": 3200,
+      "max_shortest_bits": 15
+    },
+    {
+      "M": 82,
+      "states": 3362,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 84,
+      "states": 3528,
+      "max_shortest_bits": 18
+    },
+    {
+      "M": 86,
+      "states": 3698,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 88,
+      "states": 3872,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 90,
+      "states": 4050,
+      "max_shortest_bits": 17
+    },
+    {
+      "M": 92,
+      "states": 4232,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 94,
+      "states": 4418,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 96,
+      "states": 4608,
+      "max_shortest_bits": 17
+    },
+    {
+      "M": 98,
+      "states": 4802,
+      "max_shortest_bits": 18
+    },
+    {
+      "M": 100,
+      "states": 5000,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 102,
+      "states": 5202,
+      "max_shortest_bits": 17
+    },
+    {
+      "M": 104,
+      "states": 5408,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 106,
+      "states": 5618,
+      "max_shortest_bits": 16
+    },
+    {
+      "M": 108,
+      "states": 5832,
+      "max_shortest_bits": 17
+    },
+    {
+      "M": 110,
+      "states": 6050,
+      "max_shortest_bits": 17
+    },
+    {
+      "M": 112,
+      "states": 6272,
+      "max_shortest_bits": 18
+    },
+    {
+      "M": 114,
+      "states": 6498,
+      "max_shortest_bits": 18
+    },
+    {
+      "M": 116,
+      "states": 6728,
+      "max_shortest_bits": 17
+    },
+    {
+      "M": 118,
+      "states": 6962,
+      "max_shortest_bits": 17
+    },
+    {
+      "M": 120,
+      "states": 7200,
+      "max_shortest_bits": 18
+    },
+    {
+      "M": 122,
+      "states": 7442,
+      "max_shortest_bits": 17
+    },
+    {
+      "M": 124,
+      "states": 7688,
+      "max_shortest_bits": 18
+    },
+    {
+      "M": 126,
+      "states": 7938,
+      "max_shortest_bits": 19
+    },
+    {
+      "M": 128,
+      "states": 8192,
+      "max_shortest_bits": 18
+    }
+  ],
+  "singleton_gaps_through_101": [
+    7,
+    13,
+    21,
+    29,
+    35,
+    41,
+    43,
+    49,
+    55,
+    57,
+    59,
+    67,
+    71,
+    75,
+    77,
+    83,
+    89,
+    93,
+    101
+  ],
+  "scope": "FINITE-EXACT shortest-word diameters through modulus 128; local-image identity proved in README"
+}
