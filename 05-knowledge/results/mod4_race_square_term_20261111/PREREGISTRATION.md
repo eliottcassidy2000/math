@@ -49,3 +49,29 @@ prints only when it ends, and no output existed when this text was written (the 
 
 Any of R1-R6 outside its statement is reported as FAILED (R1 by its verdict rule). A failure of a control refutes
 the program or the theorem it checks.
+
+---
+
+# Second pre-registration (same session): R7, R8
+
+Written and committed after the outcome of Run B was read (R5 and R6 FAILED: the pentagon is visible at `n = 10`,
+and `E[{5}]`, `E[{3,5}]` change from `n = 9` to `n = 10`) and before Run C produced any output. Run A was still
+running when this was written.
+
+In-sample (exact, `out/cycle_tables.out`): `E[{3,5}] = E (-1)^(c_3 + c_5)` equals `13/32, 1/4, 67/256, 67/256,
+263/2048, 1/16` at `n = 5, ..., 10`. Two patterns survive the failure of R5-R6: at `n = 6` and `n = 10`
+(`n = 2 mod 4`) the value is `2^(-(n-2)/2)`, the triangle value; and from `n = 7` to `n = 8` (`3 -> 0 mod 4`) it does
+not change.
+
+## Run C: plain Monte Carlo for the triangle and pentagon parities (`c35mc.c`)
+
+`N = 40,000,000` uniformly random labelled tournaments at each order `n = 11, ..., 18` (seed `1000 + n`).
+
+- **R7 (orders `2 mod 4`).** `E_14[{3,5}] = 2^(-6)` and `E_18[{3,5}] = 2^(-8)`, each within 3 standard errors of
+  the estimate (`s.e. = 1.6 * 10^(-4)`). The alternative suggested by the neighbouring orders is about twice as
+  large.
+- **R8 (pair law `3 -> 0 mod 4`).** `E_12[{3,5}] = E_11[{3,5}]` and `E_16[{3,5}] = E_15[{3,5}]`, each difference within
+  3 standard errors (`2.2 * 10^(-4)`).
+- **Control.** `E_n[{3}] = 2^(-floor((n-1)/2))` within 3 standard errors at every order (Theorem T).
+
+Exploratory, not registered: the values at `n = 13` and `n = 17`, and `E_n[{5}]`.
