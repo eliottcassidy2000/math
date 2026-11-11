@@ -1,0 +1,8 @@
+m =  441  N =  7  sheet 0  (n =  1, g0 =   1): class count 1585744  measured factor 0.8185 (noise 0.0007)  first-order 0.8408  limit L_m = product of (E) = 0.8707  [full series S = 0.8106]
+m =  441  N =  7  sheet 1  (n =  7, g0 =   7): class count 2481698  measured factor 1.0103 (noise 0.0006)  first-order 0.9413  limit L_m = product of (E) = 0.9951  [full series S = 0.9264]
+m =  441  N = 21  sheet 0  (n = 11, g0 =   1): class count 1628184  measured factor 0.8404 (noise 0.0007)  first-order 0.8408  limit L_m = product of (E) = 0.8707  [full series S = 0.8843]
+m =  441  N = 21  sheet 1  (n = 21, g0 =  21): class count 3541562  measured factor 1.4418 (noise 0.0006)  first-order 1.3122  limit L_m = product of (E) = 1.3269  [full series S = 1.2352]
+m = 2205  N =  7  sheet 0  (n =  1, g0 =   1): class count  297612  measured factor 0.7681 (noise 0.0016)  first-order 0.7834  limit L_m = product of (E) = 0.8359  [full series S = 0.8106]
+m = 2205  N =  7  sheet 1  (n =  7, g0 =   7): class count  465226  measured factor 0.9470 (noise 0.0014)  first-order 0.8797  limit L_m = product of (E) = 0.9553  [full series S = 0.9264]
+m = 2205  N = 21  sheet 0  (n = 11, g0 =   1): class count  306275  measured factor 0.7904 (noise 0.0016)  first-order 0.7834  limit L_m = product of (E) = 0.8359  [full series S = 0.8843]
+m = 2205  N = 21  sheet 1  (n = 21, g0 =  21): class count  677096  measured factor 1.3782 (noise 0.0014)  first-order 1.2487  limit L_m = product of (E) = 1.2738  [full series S = 1.2352]

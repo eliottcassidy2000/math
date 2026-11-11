@@ -1,0 +1,94 @@
+Auditor 'citations' (S92 audit, 2026-11-11) - external sources consulted, and what each one confirmed.
+Web queries carried no project or personal information.  Paraphrases only.
+
+1. Jacobi, four squares.
+   https://en.wikipedia.org/wiki/Jacobi%27s_four-square_theorem
+   r_4(n) = 8 * (sum of the divisors of n not divisible by 4) (Jacobi, 1834); odd n: 8 sigma(n); even n: 24 * (sum of odd
+   divisors).  Recomputed: c1_classical_counts.out C1 (n <= 3000).
+
+2. Eight squares.
+   https://en.wikipedia.org/wiki/Sum_of_squares_function
+   r_8(n) = 16 * sum_{d | n} (-1)^(n+d) d^3 (Jacobi; the page cites H. Cohen, Number Theory I, sec. 5.4).  Odd n: 16 sigma_3(n).
+   Recomputed: c1 C2 (n <= 1500); r_8(2) = 112; no even n <= 1500 has r_8(n) = 16 sigma_3(n).
+
+3. Hurwitz quaternions.
+   https://en.wikipedia.org/wiki/Hurwitz_quaternion
+   number of Hurwitz quaternions of norm n = 24 * (sum of odd divisors of n) (Hurwitz, Vorlesungen ueber die Zahlentheorie
+   der Quaternionen, 1919); Lipschitz order of index 2; 24 units.  Recomputed: c1 C3 (n <= 700).
+
+4. Ingham 1927 and Estermann 1930.
+   https://arxiv.org/abs/2502.08305 (Misra, Saha, Sharma, 'On additive convolution sum of arithmetic functions and related
+   questions'; HTML version v2 read).  Its eq. (2), attributed to Ingham:
+       sum_{n < N} d(n) d(N - n) = (6/pi^2) sigma(N) log^2 N + O(sigma(N) log N log log N);
+   its eq. (1), also Ingham: sum_{n <= N} d(n) d(n + h) = (6/pi^2) sigma_{-1}(h) N log^2 N + O(N log N).
+   Bibliography there: A. E. Ingham, 'Some asymptotic formulae in the theory of numbers', J. London Math. Soc. 2 (1927),
+   no. 3, 202-208;  T. Estermann, 'On the representations of a number as a sum of two products', Proc. London Math. Soc.
+   (2) 31 (1930), no. 2, 123-133 (secondary main terms of the same sum).
+   The same Ingham reference appears in a 2022 Math. Proc. Cambridge Philos. Soc. paper ('Asymptotic identities for
+   additive convolutions of sums of divisors').
+   The original 1927 paper was NOT read.  Recomputed: c3_ingham_gronwall_constants.out I1, I2.
+
+5. E8 theta series; integral octonions.
+   https://oeis.org/A004009  ('Expansion of Eisenstein series E_4(q) ...; theta series of E_8 lattice';
+   1, 240, 2160, 6720, 17520, 30240, 60480, 82560; a(n) = 240 sigma_3(n); Theta = 1 + 240 sum sigma_3(m) q^(2m);
+   reference H. S. M. Coxeter, Integral Cayley numbers, Duke Math. J. 13 (1946), 561-578).
+   https://en.wikipedia.org/wiki/E8_lattice  (theta function with q^(2n), i.e. vectors of norm 2n; the integral octonions
+   are a rescaled E8 lattice with minimum norm 1; seven maximal orders, all isomorphic; even unimodular lattices occur
+   only in dimensions divisible by 8).
+   arXiv:2502.14554 (search result): number of integral octonions of norm n is 240 sigma_3(n), with <x, x> = 2 n(x).
+   Recomputed: c1 C4 (two models, n <= 180), C5 (Cartan matrix, n <= 3).
+
+6. Gronwall.
+   https://en.wikipedia.org/wiki/Divisor_function  (limsup sigma(n)/(n log log n) = e^gamma, Gronwall 1913, via Mertens'
+   third theorem; Robin 1984).  Reference from memory, not re-read: T. H. Gronwall, 'Some asymptotic expressions in the
+   theory of numbers', Trans. Amer. Math. Soc. 14 (1913), 113-122.
+   Odd n: https://arxiv.org/abs/2008.04787 (Washington, Yang, 'Analogues of the Robin-Lagarias criteria for the Riemann
+   hypothesis', to appear in IJNT): RH is equivalent to sigma(n) < (e^gamma/2) n log log n for all odd
+   n >= 3^4 5^3 7^2 11 ... 67.  A search result (arXiv:0912.1866) states the limsup over odd integers is e^gamma/2.
+   Derived and checked numerically: c3 G1.
+
+7. Moree.
+   Bibliographic record (IMPAN / EuDML): P. Moree, 'On the divisors of a^k + b^k', Acta Arith. 80 (1997), no. 3, 197-212,
+   DOI 10.4064/aa-80-3-197-212.  The paper's text was NOT read; THM-4792 (c) (audited 2026-10-26) reproduces the proof.
+   The characterisation used here (p | 2^t + 1 for some t iff ord_p(2) even) is elementary: c5_misc_classical.out M9.
+
+8. Hamilton's quaternion algebra.
+   https://en.wikipedia.org/wiki/Quaternion_algebra  (the rational Hamilton quaternions ramify at 2 and at infinity and
+   split at every odd prime; the number of ramified places is even; the ramified set determines the algebra).
+   Checked: c5 M8.
+
+9. Bicomplex numbers.
+   https://en.wikipedia.org/wiki/Bicomplex_number  (Segre 1892: two commuting units of square -1, their product of square
+   +1; isomorphic to Cockle's tessarines (1848) and to the direct sum C + C, idempotents (1 +- hi)/2).
+
+10. Hurwitz's theorem.
+   https://en.wikipedia.org/wiki/Hurwitz%27s_theorem_(composition_algebras)  (R, C, H, O; dimensions 1, 2, 4, 8; Hurwitz
+   1898 for sums of squares, posthumous 1923 paper; generalised to arbitrary fields and quadratic forms).
+   https://en.wikipedia.org/wiki/Composition_algebra  (dimensions 1, 2, 4, 8 over any field; split algebras in dimensions
+   2, 4, 8: split-complex numbers, split-quaternions, split-octonions; Zorn 1931, Albert 1942, Jacobson 1958).
+
+11. Central extensions of V4 by Z2.
+   https://groupprops.subwiki.org/wiki/Second_cohomology_group_for_trivial_group_action_of_V4_on_Z2
+   H^2(V4; Z2) = (Z/2)^3, 8 classes: elementary abelian group of order 8 (1), Z4 x Z2 (3), dihedral group of order 8 (3),
+   quaternion group (1).  Recomputed: c4_extensions_census.out.
+
+12. Unimodular forms over Z_p (books, cited from memory at chapter level, not re-read):
+   O'Meara, Introduction to Quadratic Forms, sec. 92 (non-dyadic: unimodular lattices are <1, ..., 1, d>) and sec. 93
+   (dyadic); Cassels, Rational Quadratic Forms, ch. 8; Conway-Sloane, Sphere Packings, Lattices and Groups, ch. 15 sec. 7.
+   Even unimodular definite lattices have rank divisible by 8: Serre, A Course in Arithmetic, ch. V; Milnor-Husemoller,
+   Symmetric Bilinear Forms, ch. II.
+   Finite checks: c7_unimodular_classification.out (odd p: class counts depend only on rank and discriminant class; at 2
+   they do not); c8_hensel_recursion_2adic.out (class counts modulo every p^k are determined by those modulo p).
+
+13. The Guardian puzzle (note, section 5).
+   The newspaper's own pages could not be fetched from this environment (www.theguardian.com and the content API are
+   blocked), as the note says.  Syndicated copies were read:
+   https://www.aol.co.uk/articles/solve-magical-melody-mozart-math-071024000.html
+       'Can you solve it? A magical melody from the Mozart of math', Alex Bellos, The Guardian, Monday 26 October 2026.
+       Puzzle set by Terence Tao (linked to his book 'Six Maths Essentials').  Heading 'The magic money plant'.
+       A regular plant gives one coin a day; a mother plant gives one coin and two seeds a day; a seed is a regular plant
+       the next day.  Day 1 starts with a mother plants, b regular plants, c coins, not more than nine of each.
+       Questions: coins at the end of days 2 and 3; at the end of day X; a, b, c if there are 427 coins at the end of day 10.
+   https://www.aol.co.uk/articles/did-solve-magical-melody-mozart-170047000.html
+       'Did you solve it? ...': 4a + 2b + c, 9a + 3b + c, a X^2 + b X + c; (a, b, c) = (4, 2, 7).
+   Recursion re-derived: c5 M3.

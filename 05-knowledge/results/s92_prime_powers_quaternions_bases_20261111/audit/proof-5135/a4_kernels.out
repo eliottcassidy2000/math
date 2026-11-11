@@ -1,0 +1,35 @@
+[K] two-port kernels
+  G = [[5,2],[2,1]], det = 1: 3:law(1)  5:law(1)  7:law(1)  9:law(1)  25:law(1)  27:law(1)  49:law(1)
+  G = [[11,6],[6,3]], det = -3: 3:DIFFERENT  5:law(1)  7:law(1)  9:DIFFERENT  25:law(1)  27:DIFFERENT  49:law(1)
+  G = diag(1,2), det = 2: 3:law(1)  5:law(1)  7:law(1)  9:law(1)  25:law(1)  27:law(1)  49:law(1)
+  [[11,6],[6,3]] modulo 3: counts by valuation [18, 45]; convolution of the tables a1 b1 and 3 a2 b2: True; rank-2 law: [24, 33]
+  [[11,6],[6,3]] modulo 9: counts by valuation [486, 1134, 1377]; convolution of the tables a1 b1 and 3 a2 b2: True; rank-2 law: [648, 864, 945]
+  [[11,6],[6,3]] modulo 27: counts by valuation [13122, 30618, 36450, 38637]; convolution of the tables a1 b1 and 3 a2 b2: True; rank-2 law: [17496, 23328, 25272, 26001]
+  Session261 kernel [[149,72],[72,37]]: det = 329 = 7 * 47 = 329
+    modulo 7: equals the rank-1 law (p^2 times the multiplication table): True; equals the rank-2 law: False; G mod p nonzero: True; G mod p = [[2, 2], [2, 2]]
+    modulo 47: equals the rank-1 law (p^2 times the multiplication table): True; equals the rank-2 law: False; G mod p nonzero: True; G mod p = [[8, 25], [25, 37]]
+    modulo 49: equals rank-1 law: False; rank-2 law: False; convolution of a1 b1 and 7 a2 b2 (Smith form diag(1,7)): True
+    modulo 49, p^k * share by valuation v = 0, 1, 2: ['6/7', '90/49', '97/49'] (rank-1 law: ['6/7', '12/7', '19/7']; rank-2 law: ['48/49', '384/343', '391/343'])
+    modulo 3 (p prime to 329): rank-2 law: True
+    modulo 5 (p prime to 329): rank-2 law: True
+    modulo 11 (p prime to 329): rank-2 law: True
+    modulo 13 (p prime to 329): rank-2 law: True
+
+[D] the two rank-4 Gram matrices
+  K-form, coordinates (U,E,d,a): det = -1; in state coordinates (D,E,U,d): matrix [[0, 0, 0, 1], [0, 1, 0, -1], [0, 0, 1, -1], [1, -1, -1, 1]], det = -1
+  fusion corner, shifted coordinates: det = -1; in raw coordinates (h,H,U,d) x (h',H',V',e'): matrix [[1, 1, -1, -1], [1, 0, 0, 0], [-1, 0, 1, 0], [-1, 0, 0, 1]], det = -1
+  Session264 eq. (3) = the form displayed in THM-5135 (4) = u^T G v with the raw matrix, 2000 random integer points: True
+  THM-4916 (1d) K-form = u^T G v with the state matrix, 2000 random integer points: True
+  K-form, uniform states, direct enumeration: 2:law(1)  3:law(1)  4:law(1)  5:law(1)  9:law(1)
+  fusion corner, uniform states, direct enumeration: 2:law(1)  3:law(1)  4:law(1)  5:law(1)  9:law(1)
+  K-form modulo 3: p * share of the class 0 = 83/81; 1 + p^-3 - p^-4 = 83/81
+  K-form modulo 5: p * share of the class 0 = 629/625; 1 + p^-3 - p^-4 = 629/625
+
+[F] THM-4916 against the uniform values at the class 0 modulo p
+   p | THM-4916 K=2: 1+(3p-2)(p-1)/(2p^3) | rank 4 uniform pair: 1+p^-3-p^-4 | rank 2: 1+1/p-1/p^2 | rank 1: 2-1/p | one uniform state, linear functional: 1
+   3 | 34/27      = 1.25926 | 83/81        = 1.02469 | 11/9     = 1.22222 | 5/3    = 1.66667 | 1
+   5 | 151/125    = 1.20800 | 629/625      = 1.00640 | 29/25    = 1.16000 | 9/5    = 1.80000 | 1
+   7 | 400/343    = 1.16618 | 2407/2401    = 1.00250 | 55/49    = 1.12245 | 13/7   = 1.85714 | 1
+  11 | 1486/1331  = 1.11645 | 14651/14641  = 1.00068 | 131/121  = 1.08264 | 21/11  = 1.90909 | 1
+  13 | 2419/2197  = 1.10105 | 28573/28561  = 1.00042 | 181/169  = 1.07101 | 25/13  = 1.92308 | 1
+  THM-4916's quoted examples: p = 3: 34/27 (34/27), p = 5: 151/125 (151/125)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""S92 (README sections 5, 6): small tournaments, their arc-usage profiles, and the Collatz maps on the lines of the
+"""S92 (README sections 6, 7, 8): small tournaments, their arc-usage profiles, and the Collatz maps on the lines of the
 path spectrum.  Everything here is exact and elementary; nothing is a theorem about Chan-Pak or Collatz.
 
 Part 1 (tournaments of order <= 5).  For every isomorphism class: H, number of 3-cycles, number of directed cycles,
@@ -148,7 +148,8 @@ def main():
     B = [1] + [0] * 5
     for n in range(1, 6):
         B[n] = sum(A[k] * B[n - k] for k in range(1, n + 1))
-    print(f"classes by strong components: 1/(1 - (x + x^3 + x^4 + 6x^5)) = {B} (orders 0..5); counted: "
+    print(f"classes by strong components: B(x) = 1/(1 - S(x)), S = x + x^3 + x^4 + 6x^5 + 35x^6 + ... the series of strong "
+          f"classes; truncated after x^5 it gives {B} (orders 0..5, exact to that order); counted: "
           f"{[1] + [len(table[n]) for n in range(1, 6)]}")
     ok &= B == [1] + [len(table[n]) for n in range(1, 6)]
     s5 = [r for r in table[5] if r["strong"]]
@@ -161,8 +162,13 @@ def main():
 
     def tp(n):
         return odd_part(3 * n + 1)
-    good = all(odd_part(3 * n - 1) == tm(n) and odd_part(3 * n + 1) == tp(n) for n in range(1, 10 ** 6, 2))
-    print(f"c_minus(3n) = T_minus(n) and c_plus(3n) = T_plus(n) for odd n < 10^6: {good}")
+    # c_minus(3N) = T_minus(N) and c_plus(3N) = T_plus(N) hold by definition (odd part of 3N - 1, of 3N + 1).
+    # The non-trivial statement (audit): this is NOT a map on line labels; c_minus(3N) = T_plus(c_minus(N)) exactly
+    # when N = 3 (mod 4), and c_plus(3N) = T_minus(c_plus(N)) exactly when N = 1 (mod 4).
+    good = all((odd_part(3 * N - 1) == tp(odd_part(N - 1))) == (N % 4 == 3) for N in range(3, 10 ** 5, 2))
+    good &= all((odd_part(3 * N + 1) == tm(odd_part(N + 1))) == (N % 4 == 1) for N in range(3, 10 ** 5, 2))
+    print(f"c_minus(3N) = T_minus(N), c_plus(3N) = T_plus(N) (definitions); on line labels: c_minus(3N) = T_plus(c_minus(N)) "
+          f"iff N = 3 (mod 4), c_plus(3N) = T_minus(c_plus(N)) iff N = 1 (mod 4), odd 3 <= N < 10^5: {good}")
     ok &= good
     for start in (1, 5, 17):
         cyc = [start]

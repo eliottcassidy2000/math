@@ -1,0 +1,29 @@
+C1   PASS  Q = 2q and x(m) = 1 + 2m - Q(m) for m < 2^16
+C2   PASS  words ending in Z, length <= 11: 2047 words <-> h1 in [1, 2048); state = (x(h1), 1, y(h1), 1); missing 0, repeated 0
+       word Z      -> state (3, 1, 3, 1), h1 = 1, (x, y) = (3, 3)
+       word ZZ     -> state (5, 1, 5, 1), h1 = 2, (x, y) = (5, 5)
+       word OZ     -> state (5, 1, 7, 1), h1 = 3, (x, y) = (5, 7)
+       word ZOZ    -> state (9, 1, 11, 1), h1 = 5, (x, y) = (9, 11)
+       word OOZ    -> state (9, 1, 15, 1), h1 = 7, (x, y) = (9, 15)
+C3   PASS  state of W O^s J O = (x1 + 2^s y1 - [s=0], 0, 2(x1 + 2^s y1), x1), R > d > 0; 640 (h1, s) cases
+C4   PASS  H_s(m) = N(h1, m, s) for m < 2^9, formula and grammar run
+C5   PASS  gcd(R, d, p) = gcd(x1, y1, p), h = -[s=0] mod gcd, 15 odd moduli
+C6   PASS  capacity ln(R/(R-d))/d = (1/x1) ln((x1 + 2^s y1)/(x1/2 + 2^s y1))
+C7   illustration (X = 2^22): classes of H_s(m) <= X; max relative deviation from g/p on the coset, mass off the coset
+       h1 =   1 s = 1 (x1, y1) = (   3,    3) g(x1,y1) =   3   p =  9  g =  3  #m =  254907  off-coset 0  max rel dev 0.0821
+       h1 =   1 s = 1 (x1, y1) = (   3,    3) g(x1,y1) =   3   p = 15  g =  3  #m =  254907  off-coset 0  max rel dev 0.0024
+       h1 =   1 s = 1 (x1, y1) = (   3,    3) g(x1,y1) =   3   p = 45  g =  3  #m =  254907  off-coset 0  max rel dev 0.1720
+       h1 =   1 s = 1 (x1, y1) = (   3,    3) g(x1,y1) =   3   p = 49  g =  1  #m =  254907  off-coset 0  max rel dev 0.2607
+       h1 =   4 s = 0 (x1, y1) = (   9,    9) g(x1,y1) =   9   p =  9  g =  9  #m =  134066  off-coset 0  max rel dev 0.0000
+       h1 =   4 s = 0 (x1, y1) = (   9,    9) g(x1,y1) =   9   p = 15  g =  3  #m =  134066  off-coset 0  max rel dev 0.0038
+       h1 =   4 s = 0 (x1, y1) = (   9,    9) g(x1,y1) =   9   p = 45  g =  9  #m =  134066  off-coset 0  max rel dev 0.0038
+       h1 =   4 s = 0 (x1, y1) = (   9,    9) g(x1,y1) =   9   p = 49  g =  1  #m =  134066  off-coset 0  max rel dev 0.3494
+       h1 =   2 s = 2 (x1, y1) = (   5,    5) g(x1,y1) =   5   p =  9  g =  1  #m =   88378  off-coset 0  max rel dev 0.1105
+       h1 =   2 s = 2 (x1, y1) = (   5,    5) g(x1,y1) =   5   p = 15  g =  5  #m =   88378  off-coset 0  max rel dev 0.0806
+       h1 =   2 s = 2 (x1, y1) = (   5,    5) g(x1,y1) =   5   p = 45  g =  5  #m =   88378  off-coset 0  max rel dev 0.1105
+       h1 =   2 s = 2 (x1, y1) = (   5,    5) g(x1,y1) =   5   p = 49  g =  1  #m =   88378  off-coset 0  max rel dev 0.2192
+       h1 =  38 s = 1 (x1, y1) = (  63,   77) g(x1,y1) =   7   p =  9  g =  1  #m =   10446  off-coset 0  max rel dev 0.0023
+       h1 =  38 s = 1 (x1, y1) = (  63,   77) g(x1,y1) =   7   p = 15  g =  1  #m =   10446  off-coset 0  max rel dev 0.0971
+       h1 =  38 s = 1 (x1, y1) = (  63,   77) g(x1,y1) =   7   p = 45  g =  1  #m =   10446  off-coset 0  max rel dev 0.1760
+       h1 =  38 s = 1 (x1, y1) = (  63,   77) g(x1,y1) =   7   p = 49  g =  7  #m =   10446  off-coset 0  max rel dev 0.2227
+ALL PASS

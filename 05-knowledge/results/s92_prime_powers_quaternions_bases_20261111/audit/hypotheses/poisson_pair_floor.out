@@ -1,0 +1,7 @@
+# poisson_pair_floor.py (auditor hypotheses). Inputs copied from series_counts_trend.out and series_counts_25.out
+window            mean r (s0/s1)    measured L1/mean with S (s0/s1)   with a constant predictor (s0/s1)   Poisson-pair floor (s0/s1)
+[2^16, 2^17)   4.128 / 5.126      0.6051 / 0.5700                   0.6359 / 0.6303                     0.5408 / 0.5063
+[2^18, 2^19)   4.575 / 5.714      0.5705 / 0.5389                   0.6134 / 0.5820                     0.5312 / 0.4689
+[2^20, 2^21)   5.022 / 6.303      0.5396 / 0.5079                   0.5894 / 0.5467                     0.5119 / 0.4464
+[2^22, 2^23)   5.470 / 6.893      0.5152 / 0.4803                   0.5625 / 0.5271                     0.4854 / 0.4347
+[2^24, 2^25)   5.918 / 7.482      0.4967 / 0.4556                   0.5317 / 0.5046                     0.4542 / 0.4142

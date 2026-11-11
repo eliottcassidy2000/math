@@ -1,0 +1,452 @@
+[
+ {
+  "severity": "MINOR",
+  "where": "THM-5134, 'Numerical support', paragraph '(H), exploratory', sheet-1 sentence; source every_base.py (4) (lines 135-138 and 220) and every_base.out",
+  "claim": "\"sheet s >= 1, N_b <= 2^24, b = 2, 3, 4, 5, 6, 10, primes 3..13 not dividing b: remainder of the first-order law at most 0.13 (largest at 7, as for b = 2)\"; every_base.out prints 55892593 / 35516685 / 24945520 / 18836356 / 14916908 / 7632149 triples.",
+  "problem": "This census is also incomplete, for two reasons. (i) The q table is cut at h < 2^21 (q32 = q[: 1 << 21]), but words up to 3,354,623 (b = 2) and 2,236,415 (b = 3) occur. (ii) A smaller word h1 is skipped ('continue') when its own diagonal value N_b(h1, h1, s) exceeds X, although N_b(h1, h2, s) <= X is possible for h2 > h1 because psi is not monotone (b = 2, s = 1: N(16,16) = 3267 > N(16,17) = 3201). Complete counts: 57,818,155 / 35,564,915 / 24,947,862 / 18,838,778 / 14,919,260 / 7,634,213, so 3.33 % of the triples are missing at b = 2, 0.14 % at b = 3, 0.01-0.03 % elsewhere; the b = 2 total contradicts cum_24.out (57,818,155). The quoted conclusions survive: on the complete census the largest remainder per base is 0.1326, 0.0666, 0.1246, 0.0423, 0.1049, 0.0599, always at p = 7, and the second-digit statistics of HYP-9665 (C) are unchanged (0.040, 0.052). The docstring of every_base.py also names THM-5135 instead of THM-5134 (H).",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-FH/h3b_session_census_truncation.out (section A: all six printed totals reproduced exactly by 'cap 2^21 + diagonal skip'); h3_census_24_sheet1.out and h3c_second_digit_complete.out in the same folder.",
+  "fix": "In every_base.py pass the full table (q, not q[: 1 << 21]) and delete the 'continue' branch, keeping only the monotone lower-bound break (psi(h) >= (h+1)//2); re-run; the theorem sentence can stay (\"at most 0.13\"), with the corrected triple counts in the output. Correct the docstring to THM-5134 (H).",
+  "id": "F002",
+  "auditor": "proof-5134-FH"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134, status line for (F) and proof of (F)",
+  "claim": "\"(F): the identification is PROVED (two unimodular quaternary forms of the same discriminant over Z_p, p odd); Jacobi's and Ingham's theorems are CITED.\"",
+  "problem": "The proof also rests on the classification of unimodular quadratic forms over Z_p (p odd) by rank and discriminant, a classical theorem that is typed CITED in THM-5135 and in the README but not in THM-5134's status. Separately, the session's comparison of class counts (seam_rank_exact.out) uses the unit u = 2 only, while (F) is stated for every unit u.",
+  "evidence": "THM-5134 lines 8-9, 213-219; THM-5135 status lines 9-12; seam_rank_exact.out section (F). My enumeration covers every unit for m <= 49: C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-FH/f1_local_counts.out.",
+  "fix": "Add to the status: \"CITED: the classification of unimodular quadratic forms over Z_p, p odd (rank and discriminant modulo squares; Cassels, Rational Quadratic Forms, ch. 8; O'Meara, section 92)\".",
+  "id": "F007",
+  "auditor": "proof-5134-FH"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 (3)(b) (line 72-74), Proofs (3) (line 150-152), status CITED list (line 9-12); echoed in README section 4 and section 9 row 'rank-4 law over all primes = E8'",
+  "claim": "\"The form x^T C x / 2 of the lattice E8 ... has the class counts of the rank-4 seam modulo 2, 4, 8 (FINITE-EXACT) and at every odd prime (by (2): unimodular of discriminant 1); CITED: the same holds modulo every 2^k.\"",
+  "problem": "The statement is true, but no source is named for the prime 2, and the only classification the theorem states (proof of (2): 'Over Z_p, p odd, a unimodular quadratic form is determined by its rank and its discriminant modulo squares') does not cover p = 2, where it is false as stated: Z^8 and E8 have the same rank and discriminant and different class counts already modulo 2 (128 against 136 zeros; this is the theorem's own (3)(c)). The proof paragraph gives only the enumerations modulo 2, 4, 8, so for k >= 4 the statement rests on an unnamed citation. It can in fact be PROVED in three lines.",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/citations/c2_local_class_counts.out and c2_local_class_counts_mod16.out (E8 = rank-4 seam modulo 2, 4, 8 and modulo 16 by full enumeration of 2^32 vectors; also modulo 3, 9, 5, 7); c6_followups.out F2 (zeros modulo 2: H^4 136, H^3 + A 120, E8 136, Z^8 128); c7_unimodular_classification.out (odd p: class counts depend only on rank and discriminant class, all unimodular symmetric matrices of rank 2-4 modulo 3, 5, 7, 9, 25; at 2 several count vectors per rank and determinant); c8_hensel_recursion_2adic.out (recursion from the counts modulo 2 reproduces the enumerated E8 counts modulo 2, 4, 8 and the law (1 - 2^-4) sigma_3(2^v)/2^(3v) modulo 2^k for k <= 14).",
+  "fix": "Replace the clause by: \"... and modulo every 2^k (PROVED: for an integer-valued quadratic form Q in n variables whose polar form is unimodular at p, the class counts modulo p^k are determined by those modulo p - a solution x of Q = c (mod p^k) with x not divisible by p has exactly p^(n-1) lifts in each class above c, and Q(p x) = p^2 Q(x); modulo 2 the E8 form and the rank-4 seam both have 136 zeros among the 256 vectors (Arf invariant 0; enumerated). Equivalently, CITED (O'Meara, Introduction to Quadratic Forms, sec. 93; Conway-Sloane, SPLAG, ch. 15 sec. 7): an even unimodular Z_2-lattice is a sum of planes xy and x^2 + xy + y^2, two of the second kind being equivalent to two of the first, so E8 tensor Z_2 is the sum of four hyperbolic planes. FINITE-EXACT: modulo 2, 4, 8, and 16 by the audit).\" In the status list write \"the classification of unimodular forms over Z_p, p odd (rank and discriminant); for p = 2 the even unimodular case (rank and Arf invariant)\".",
+  "id": "F009",
+  "auditor": "citations"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 status (line 15-17) and related (line 33); HYP-9666 related (line 16); README section 3 (line 75), section 10 (line 277 and the closing paragraph, lines 290-292), section 12 item (5) (line 308-309)",
+  "claim": "THM-5133 is cited as \"PRE-AUDIT\" (\"cited at that status\"), and README section 10 ends: \"An observation for kind-pasteur's audit, not tested here: H(CD_4) = 198,335,025 with 21 automorphisms (THM-5133 (G)) equals H(T_15) with |Aut| = 21 of THM-448 ...; the Cayley-Dickson sign tournaments are probably the June doubling tower.\" Section 12: \"(5) the cross-reference between THM-5133 (G) and THM-448 once THM-5133 is audited.\"",
+  "problem": "Stale, and contradicted by the cited theorem as it stands in this worktree. THM-5133 was independently audited and corrected in commit 3413be3b0a (11:52:18), 21 minutes before the S92 checkpoint ff37a34648 (12:13:50). Its status now reads 'Independent audit: PASS WITH CORRECTIONS (5 majors, 22 minors, all applied; MISTAKE-762)', and its (G) already states 'CD_4 is T_15 of THM-448 (isomorphism found by the audit)' and 'CD_5 is not T_31 of THM-448'. So the 'observation' is already canon (credit: the kind-pasteur audit), and the extrapolation 'probably the June doubling tower' is refuted at order 31 by the theorem it cites.",
+  "evidence": "C:/tmp/wt-s92/01-canon/theorems/THM-5133-flip-and-spin-kernel-signature-sign-tournaments-of-twisted-algebras-and-the-pg32-extremal-theorems.md lines 5-6 (status), 31-33 and 161-163 ((G)); git log (read-only): 3413be3b0a 11-11 11:52:18, ff37a34648 11-11 12:13:50.",
+  "fix": "Replace 'PRE-AUDIT' by 'audited the same day, PASS WITH CORRECTIONS' in the five places. Replace the closing paragraph of README section 10 by: \"THM-5133 (G), as audited, records that CD_4 is T_15 of THM-448 (isomorphism found by its audit) and that CD_5 is not T_31 of THM-448: the Cayley-Dickson sign tournaments leave the June doubling tower at order 31. Not in THM-5133 and not tested here: the split-octonion value 45 and the split-sedenion value 24,453,597 also occur in THM-450 (7).\" Delete item (5) of section 12 or reduce it to the split values against THM-450 (7).",
+  "id": "F010",
+  "auditor": "citations"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 Proofs (2), last sentence (line 148)",
+  "claim": "\"(Checked for r <= 4 modulo 3, 5, 7, 11, 13, and modulo 9, 25.)\"",
+  "problem": "Modulo 25 the session ran r = 1, 2 only (bridges_exact.py line 136: 'if q > 13 and r > 2: continue'; bridges_exact.out lines 38-39 show q = 25 for r = 1, 2). The parenthesis overstates the check. The statement itself holds.",
+  "evidence": "C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/bridges_exact.py line 132-142 and bridges_exact.out lines 14-39; my run c2_local_class_counts.out L4: 'equal iff r even or p = 1 (mod 4)' holds for r <= 4 modulo 3, 5, 7, 11, 13, 17, 19, 9, 27, 81, 25, 49 and for r <= 2 modulo 121, 125, 169; zero-count formula p^(2r-1) + eta (p^r - p^(r-1)) for r <= 4, p <= 19.",
+  "fix": "\"(Checked for r <= 4 modulo 3, 5, 7, 11, 13 and 9, and for r <= 2 modulo 25; the audit: r <= 4 modulo 17, 19, 27, 81, 25, 49 and r <= 2 modulo 121, 125, 169.)\"",
+  "id": "F012",
+  "auditor": "citations"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 status, FINITE-EXACT line (line 7-8), and (3)(c) (line 80)",
+  "claim": "\"FINITE-EXACT: (3) (... r_4, r_8, Hurwitz counts on the stated ranges)\" and \"r_8(n) = 16 sigma_3(n) for odd n only, r_8(2) = 112\"",
+  "problem": "No ranges are stated anywhere in THM-5135; they exist only in bridges_exact.out S4 (r_4: odd n <= 400; Hurwitz: odd n < 60; r_8: odd n <= 39). The word 'only' (no even n has r_8(n) = 16 sigma_3(n)) is checked by the session at n = 2 alone; it is true and follows from the general formula, which the theorem does not quote.",
+  "evidence": "bridges_exact.out lines 50-54; c1_classical_counts.out C1-C4: r_4(n) = 8 sum_{d | n, 4 not | d} d for n <= 3000; r_8(n) = 16 sum_{d | n} (-1)^(n+d) d^3 for n <= 1500 and no even n <= 1500 with r_8(n) = 16 sigma_3(n); Hurwitz count = 24 * (sum of odd divisors) for n <= 700; E8 shells = 240 sigma_3(n) for n <= 180 (D8+ model) and n <= 3 (Cartan matrix).",
+  "fix": "State the ranges in (3)/(5): \"r_4(n) = 8 sigma(n), odd n <= 400; Hurwitz 24 sigma(n), odd n < 60; r_8(n) = 16 sigma_3(n), odd n <= 39 (audit: the general formulas for n <= 3000, 1500, 700)\", and justify 'only' by Jacobi's general formula: \"r_8(n) = 16 sum_{d | n} (-1)^(n+d) d^3 (CITED), which for even n equals 16 sigma_3(n) - 32 sum_{d | n, d odd} d^3 < 16 sigma_3(n)\".",
+  "id": "F013",
+  "auditor": "citations"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 (5), paragraph 'Norms' (lines 115-124) and title clause 'bicomplex norms multiplicatively'; README section 3 table (rows 'group of signed units' / 'norm') and section 9 row 'quaternion norm additive, bicomplex norm multiplicative in r_2'",
+  "claim": "\"On the orders Z[i, j, k] and Z[i]^2: #{quaternions of norm n} = sum_{a + b = n} r_2(a) r_2(b) = 8 sigma(n) (n odd), #{bicomplex integers of norm n} = sum_{a b = n} r_2(a) r_2(b)\"",
+  "problem": "True as written, but the two orders are not built the same way and the text does not say so. Z[i, j, k] is the Z-span of the units of the table (Q_8). Z[i]^2 is the maximal order of C + C; it is NOT the Z-span Z[i, j] of the units 1, i, j, ij of the same table (C_4 x C_2), which is the suborder {(z1, z2) : z1 = z2 (mod 2)} of index 4. Z[i]^2 has 16 units (C_4 x C_4, the value 16 at n = 1), the span has 8. On the span the count is half of the stated one at every odd n and 0 at n = 2 (mod 4) (norms 1..8: 8, 0, 0, 16, 32, 0, 0, 0 against 16, 32, 0, 48, 64, 0, 0, 64). A reader of the README table ('group of signed units C_4 x C_2' next to the norm) will take 'bicomplex integers' to mean integer coordinates in the basis of the table.",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/citations/c6_followups.out F3 and c1_classical_counts.out C6.",
+  "fix": "\"On the orders Z[i, j, k] (the Z-span of the units) and Z[i] x Z[i] (the maximal order of C + C; the Z-span Z[i, j] of the units is its suborder z1 = z2 (mod 2), of index 4): ... #{elements of Z[i] x Z[i] of norm n} = sum_{ab = n} r_2(a) r_2(b), 0 for n = 3 (mod 4); on Z[i, j] the count is half of this at odd n (8 units) and 0 at n = 2 (mod 4).\"",
+  "id": "F014",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "bridges_exact.py S4, lines 255-259 (bridges_exact.out lines 56-57), supporting THM-5134 (F), THM-5135 (3) and README section 9",
+  "claim": "\"ok 240 sigma_3(n) = real density (8 pi^4/3) n^3 times the rank-4 series sigma_3(n)/(zeta(4) n^3) at ALL primes\" and \"ok r_4(n) = real density pi^2 n times (8/pi^2) sigma(n)/n (odd primes), 2-adic density 1, for odd n\"",
+  "problem": "Both checks cannot fail: the first tests the identity (8 pi^4/3)/(pi^4/90) = 240, the second re-tests r_4 = 8 sigma. Neither computes a real density or a 2-adic density; those are asserted in the message strings. The assertions are correct (computed here).",
+  "evidence": "c1_classical_counts.out C7 (d/dn of ball volumes: pi^2 n; (8 pi^4/3) n^3 for E8 with Q = x.x/2 and covolume 1; (pi^4/6) n^3 for Z^8; zeta(4) = pi^4/90); c2_local_class_counts.out L5 (four-square factor at every odd class modulo 2, 4, 8, 16, 32 is exactly 1; by valuation modulo 64: 1, 3/2, 3/4, 3/8, ...); c6_followups.out F5 (Hurwitz order: 2-adic density 3/2 at odd classes, so 2 pi^2 n * 3/2 * (8/pi^2) sigma(n)/n = 24 sigma(n)).",
+  "fix": "Relabel the two lines as 'identity' or replace them by the computations (2-adic class counts of the four-square form at odd classes; numerical derivative of the ball volumes).",
+  "id": "F015",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 (3)(a) (line 69) and title clause (3)",
+  "claim": "\"Modulo 4 and 8 the four-square form and a1 a2 + b1 b2 have different class counts.\"",
+  "problem": "Correct but understated: they differ already modulo 2 (8, 8 against 10, 6), and modulo 16, 32.",
+  "evidence": "c2_local_class_counts.out L5.",
+  "fix": "\"Modulo 2, 4 and 8 (already modulo 2: 8, 8 against 10, 6) ...\"",
+  "id": "F016",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 (F) (lines 124-128) and status; THM-5135 status and (3)(d); README section 2 item 2 and section 10",
+  "claim": "\"Ingham's (1927; CITED): the number of solutions of a1 a2 + b1 b2 = n in positive integers is sum_{m < n} d(m) d(n - m) ~ (6/pi^2) sigma(n) ln^2 n, with singular series sigma(n)/(zeta(2) n)\"; README: \"A. E. Ingham, J. London Math. Soc. 2 (1927), on sum d(m) d(n - m)\"",
+  "problem": "The credit and the constant are right (Ingham, not Estermann, for the leading asymptotic). The reference is incomplete, and the 'singular series' reading is not Ingham's (his proof is elementary); the expansion with secondary terms is Estermann's. The convergence is slow (relative error of order ln ln n / ln n): at n = 720720 the ratio to the main term is 0.70, at n = 999983 it is 1.17.",
+  "evidence": "sources.txt item 4 (arXiv:2502.08305, eq. (2) and bibliography); c3_ingham_gronwall_constants.out I1 (D(n) = number of positive solutions for n <= 60; ratios to 10^6), I2 (correlation 0.9788 on [20000, 20400), as the note says).",
+  "fix": "Cite in full: \"A. E. Ingham, Some asymptotic formulae in the theory of numbers, J. London Math. Soc. 2 (1927), 202-208: sum_{m < n} d(m) d(n - m) = (6/pi^2) sigma(n) ln^2 n + O(sigma(n) ln n ln ln n). The secondary terms are due to T. Estermann, On the representations of a number as the sum of two products, Proc. London Math. Soc. (2) 31 (1930), 123-133. The Euler-product reading sigma(n)/(zeta(2) n) = prod_p (1 - p^-2) sigma(p^v)/p^v is THM-5135 (1) with r = 2 at every prime.\"",
+  "id": "F017",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 Remark 2 (lines 176-177) and status ('Hurwitz (... the dimensions 1, 2, 4, 8)'); README section 4 ('Ranks 1, 2, 4 are the split composition algebras (Hurwitz)')",
+  "claim": "\"The hyperbolic form of rank r is the norm form of a composition algebra exactly for r = 1, 2, 4 (split complex numbers, split quaternions, split octonions; Hurwitz, CITED).\"",
+  "problem": "Correct (the form has 2r variables, and 2r must be 2, 4 or 8; the one-dimensional algebra has the non-hyperbolic norm x^2). Hurwitz's 1898 theorem is about sums of squares; for the indefinite form one uses it over C, where the two forms are equivalent, or the version for arbitrary non-degenerate forms and fields (Albert 1942, Jacobson 1958).",
+  "evidence": "sources.txt item 10.",
+  "fix": "\"... exactly for r = 1, 2, 4, i.e. in dimensions 2, 4, 8 (Hurwitz 1898 for sums of squares; for arbitrary non-degenerate forms Albert 1942 and Jacobson 1958; CITED).\"",
+  "id": "F020",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 (5), first paragraph (lines 99-101)",
+  "claim": "\"8 classes modulo the one non-trivial coboundary, which changes the sign of the three products e_a e_b, a != b non-zero. The class is determined by the set S ..., and every subset of the three points occurs\"",
+  "problem": "The coboundary changes the sign of the six ordered products (three unordered pairs, both orders). The classical statement behind 'determined by S, every subset occurs' is not named: H^2(F_2^2; F_2) is the space of quadratic forms on F_2^2 (squaring map q(a) = e_a^2, commutator = polar form), S is the support of q, and every function on the three non-zero points is a quadratic form; non-commutative iff the polar form is non-zero iff #S is odd; Arf invariant 0 / 1 = D_4 / Q_8. This is also the language of THM-2887 (credited), so naming it ties the commutative half to the known half.",
+  "evidence": "c4_extensions_census.out (16 cocycles, 2 coboundaries, 8 classes of size 2; the six ordered pairs listed; S, groups, commutativity, sign tables, zero divisors, middle vertex, converse: the table of (5) reproduced; idempotent counts 16 and 4 identify R^4 and C + C); sources.txt item 11 (1 + 3 + 3 + 1).",
+  "fix": "\"... which changes the sign of the six products e_a e_b, a != b non-zero. The squaring map a -> e_a^2 is a quadratic form on F_2^2 whose polar form is the commutator, and H^2(F_2^2; F_2) is the space of these forms (classical): the class is the support S of the form, and every subset of the three points occurs.\"",
+  "id": "F021",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 (1) and title (\"for odd m the additive square of the table is m^3 L_m\")",
+  "claim": "\"for odd m, (N_m * N_m)(c) = m^3 L_m(c)\"",
+  "problem": "The restriction to odd m is unnecessary: with L_m defined by the same formula, the identity holds for every m (consistent with (1) being stated for any prime). At 2^k it gives the factor 3/4 at odd classes, the factor that THM-5134 (F) removes from Ingham's series.",
+  "evidence": "c6_followups.out F1 (every 1 <= m <= 150); c2_local_class_counts.out L3 (all odd m <= 201; all units for 12 moduli; m = 2, 4, 8, 6, 12 displayed).",
+  "fix": "\"for every m (L_m as in THM-5134, by the same formula), (N_m * N_m)(c) = m^3 L_m(c)\"; THM-5134 needs odd m only because the states are odd at 2.",
+  "id": "F022",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 (F) and THM-5135 (3) (\"real density, times the rank-2 factors at the odd primes, times a 2-adic density 1\"; \"Hence over ALL primes ...\"); README section 4 (the ladder)",
+  "claim": "The representation numbers are written as real density times the product of the local densities (8 sigma(n) for Z^4 at odd n; 240 sigma_3(n) for E8).",
+  "problem": "The theorem that makes this a statement and not an observed factorisation is not named: Siegel's formula for a genus with one class (Z^4, E8). With it, the 'Hence' of (3)(b) is a derivation from the local laws. It also completes the ladder: real density (2 pi)^r n^(r-1)/(r-1)! of an even unimodular form in 2r variables times sigma_(r-1)(n)/(zeta(r) n^(r-1)) is (2r/|B_r|) sigma_(r-1)(n), the Eisenstein coefficient: 240 sigma_3(n) at r = 4 and 24 sigma(n) at r = 2, which is Hurwitz's count at odd n (the Hurwitz order has half that real density and 2-adic density 3/2 instead of 3/4).",
+  "evidence": "c6_followups.out F5, F6; c2_local_class_counts.out L5, L6.",
+  "fix": "Add \"(Siegel's formula for a genus of one class; CITED)\" in THM-5134 (F) and THM-5135 (3)(a)-(b); optionally the remark on 24 sigma(n) in README section 4.",
+  "id": "F023",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "README section 10, 'External (CITED)' (lines 286-288); THM-5135 status CITED list",
+  "claim": "\"Jacobi (four and eight squares); Hurwitz (integral quaternions; 1, 2, 4, 8); A. E. Ingham, J. London Math. Soc. 2 (1927) ...; Coxeter's integral octonions and the theta series of E8 (OEIS A004009); Gronwall; the classification of unimodular forms over Z_p.\"",
+  "problem": "All correct, but without titles or pages, and four sources used in the theorems are missing from the list: Moree (used through THM-4792 (c)), the rank-divisible-by-8 theorem (THM-5135 (3)(d)), the 2-adic classification ((3)(b)), Estermann. 'Coxeter's order' is one of seven isomorphic maximal orders.",
+  "evidence": "sources.txt (items 1-12).",
+  "fix": "List: Jacobi (1829/1834; general forms r_4(n) = 8 sum_{d | n, 4 not | d} d, r_8(n) = 16 sum_{d | n} (-1)^(n+d) d^3); Hurwitz, Vorlesungen ueber die Zahlentheorie der Quaternionen (1919) (24 * sum of odd divisors) and Nachr. Goettingen 1898 (1, 2, 4, 8); Ingham 1927 and Estermann 1930 as in the finding above; Coxeter, Integral Cayley numbers, Duke Math. J. 13 (1946), 561-578; OEIS A004009 (Theta_E8 = 1 + 240 sum sigma_3(n) q^(2n), vectors of norm 2n); Gronwall, Trans. AMS 14 (1913), 113-122; Moree, Acta Arith. 80 (1997), 197-212; O'Meara sec. 92-93 or Conway-Sloane ch. 15 (forms over Z_p, p odd and p = 2); Serre, A Course in Arithmetic, ch. V (even unimodular definite lattices have rank divisible by 8).",
+  "id": "F025",
+  "auditor": "citations"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135, title item (4) (line 3); statement (4), second paragraph (lines 90-95); status block (line 6)",
+  "claim": "Title: 'two unimodular rank-4 forms of the join calculus do not have it, their states being confined.'",
+  "problem": "Overreach, and inconsistent with the body, the README and HYP-9666. For the second form (corner of Session264's fusion law) the body computes no class law and shows no confinement at odd primes; whether fusion states can be equidistributed modulo odd p is HYP-9666 (A), typed OPEN by the same session, and README section 4 says only 'the one with a proved law (THM-4916)'. At 2 the sentence is true for both forms, but trivially (h and H are odd, every path count is odd). The second part of (4) also has no status at all: the status block types only '(4) first part'.",
+  "evidence": "THM-5135 lines 3, 6, 90-95; HYP-9666 lines 27-34; README lines 130-133. audit/proof-5135/a4_kernels.out [D]: both Gram matrices have determinant -1 (also in raw state coordinates (D,E,U,d) and (h,H,U,d) x (h',H',V',e')) and for uniform states both have the rank-4 law modulo 2, 3, 4, 5, 9 by direct enumeration; so any failure is a property of the state family, which is not examined for the fusion corner.",
+  "fix": "Title (4): '... whatever its signature; two unimodular rank-4 forms occur in the join calculus; the one with a proved law (the K-form on the root-change words of THM-4916) does not follow the uniform law, its states being confined; for the fusion corner the law at odd primes is open (HYP-9666 (A)).' Status block: add '(4) second part: the two determinants are computed here (elementary); the factor of the K-form is KNOWN (THM-4916); nothing is claimed for the fusion corner.'",
+  "id": "F026",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 (4), sentence 'For the first, THM-4916 proves the factor 1 + (3p - 2)(p - 1)/(2 p^3) at the class 0 (two root changes), not the uniform rank-4 value 1 + p^-3 - p^-4: its states are confined'; same wording in README section 4 and section 9 ('THM-4916 is a negative instance') and in the status of HYP-9666",
+  "claim": "THM-4916's factor is compared with the uniform rank-4 value 1 + p^-3 - p^-4 as if both were class laws of the same rank-4 seam.",
+  "problem": "Not the same objects. THM-4916's statistic is the class modulo p of the value F(t.w) of ONE word w (n letters O/Z, at most two J, weights of M_2, n -> infinity). By its (1d), F(t.w) = K(t.alpha, t.beta) for every splitting w = beta alpha^dagger, in particular K(t, t.w) with the first state fixed; its PROOF.md section 3 item 2 says so: 'K(t,s) = F(s), so F_<=2 \\ {1} is the image of a single free state with at most two J'. No pair of independently drawn states is involved. The uniform reference value is therefore ambiguous: 1 for one uniform state under a non-zero linear functional, 1 + p^-3 - p^-4 for two independent uniform states. THM-4916's value differs from both (p = 3: 34/27 against 1 and 83/81), so the conclusion 'the states are confined' stands; the comparison as written misdescribes THM-4916 as a law of a rank-4 seam. The quoted factor itself and the determinant -1 are correct.",
+  "evidence": "01-canon/theorems/THM-4916 lines 50-56, 68-69; 05-knowledge/results/root_change_local_factors_20261107/PROOF.md lines 59-66, 137-170, 198-199. audit/proof-5135/a4_kernels.out [F] (table of the values at p = 3..13: THM-4916 34/27, 151/125, 400/343, ...; rank 4 uniform 83/81, 629/625, ...; rank 2 11/9, ...; rank 1 5/3, ...).",
+  "fix": "Replace by: 'For the first, THM-4916 computes the class law of the values K(t.alpha, t.beta) = F(t.beta alpha^dagger) over words with at most two root changes (letter-count model, M_2 weights; one word, hence one free state, per value): factor 1 + (3p - 2)(p - 1)/(2 p^3) at the class 0. This is neither the value 1 + p^-3 - p^-4 of two independent uniform states nor the value 1 of one uniform state under a linear functional: the states reached with few root changes are confined (THM-4916, cascade). So a unimodular Gram matrix of rank 4 does not by itself give the law of (3)(b); see HYP-9666.' Adjust README section 4 / section 9 and the HYP-9666 status line in the same sense.",
+  "id": "F027",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 (5), 'Norms ... On the orders Z[i, j, k] and Z[i]^2: ... #{bicomplex integers of norm n} = sum_{a b = n} r_2(a) r_2(b)'; title item (5); README section 3 and section 9 row 'quaternion norm additive, bicomplex norm multiplicative in r_2'",
+  "claim": "'#{bicomplex integers of norm n} = sum_{a b = n} r_2(a) r_2(b), which is 0 for n = 3 (mod 4). So the quaternion norm is the additive convolution of two Gaussian norms and the bicomplex norm their multiplicative convolution.'",
+  "problem": "True as stated for the order Z[i]^2 (and the vanishing at n = 3 mod 4 is correct), but the definition is not parallel to the quaternion side and 'bicomplex integers' is misleading. (i) Z[i,j,k] is the order spanned by the units e_a (Lipschitz; 8 units = the extension group Q_8). The order of C + C spanned by its units, Z[1, i, j, ij] = {(z1, z2) in Z[i]^2 : z1 = z2 (mod 2)}, has index 4 in Z[i]^2 and 8 units (the extension group C_4 x C_2 of the table); Z[i]^2 is the maximal order, with 16 units (C_4 x C_4). On Z[1,i,j,ij] the count is B(n) = (1/2) sum_{ab=n} r_2(a) r_2(b) for odd n (multiplication by i exchanges the two odd classes modulo 2 on every odd shell) and is not a convolution of r_2 for even n (B(2) = 0 against 32, B(4) = 16 against 48). In the coordinates in which both algebras are pairs (z, w) = z + w j of Gaussian integers, the quaternion norm is N(z) + N(w) and the bicomplex norm is N(z + i w) N(z - i w). (ii) The bicomplex norm used is the full algebra norm (degree 4); the quaternion norm is the reduced norm (degree 2). (iii) Likewise 'M_2: the determinant, which is the seam of F1' is the norm on M_2(Z); on the order spanned by the units the norm form is x0^2 + x1^2 - x2^2 - x3^2, which has the seam law at odd primes but not at 2. So (5) silently uses three kinds of order (unit-spanned for Hamilton, maximal for M_2 and for C + C).",
+  "evidence": "audit/proof-5135/a2_squares.out [B]: M(1..20) = 16, 32, 0, 48, 64, ...; B(1..20) = 8, 0, 0, 16, 32, ...; B(n) = M(n)/2 for every odd n <= 120; table of even n; no non-zero value at n = 3 (mod 4) for n <= 600. audit/proof-5135/a7_lemmas.out [O]: units 8 against 16, index 4; x0^2+x1^2-x2^2-x3^2 against the seam: equal modulo 3, 9, 5, 7, different modulo 2, 4, 8, 16 (modulo 4: [96, 64, 32, 64] against [88, 48, 72, 48]).",
+  "fix": "In (5): 'On the Lipschitz order Z[i, j, k] and on the maximal order Z[i]^2 of C + C (idempotent coordinates; the order Z[1, i, j, ij] spanned by the units is {z1 = z2 mod 2}, of index 4): #{quaternions of norm n} = ...; #{elements of Z[i]^2 of norm n} = sum_{ab=n} r_2(a) r_2(b); on Z[1, i, j, ij] the count is half of this for odd n (8 units against 16) and is not a convolution for even n (0 at n = 2); all these vanish for n = 3 (mod 4). The norm of C + C is the algebra norm of degree 4, that of the quaternions the reduced norm; the determinant is the norm on M_2(Z) (on the order spanned by the units it is x0^2 + x1^2 - x2^2 - x3^2, with the seam law at odd primes only).' Replace 'bicomplex integers' by 'elements of Z[i]^2' in the title and in the README.",
+  "id": "F028",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 (3)(d), last sentence (lines 82-83)",
+  "claim": "'No positive definite even unimodular lattice of rank 4 exists (CITED), so a definite quaternary model must differ from the seam at some prime; Hamilton's does so at 2 only.'",
+  "problem": "The conclusion is true, but the inference as written has an unstated step: it needs 'a quaternary integral form with the class counts of the seam at every prime is an even unimodular lattice'. Equal class counts do not obviously imply local equivalence, and the text gives no argument. The step is elementary (zero counts modulo p) and I checked it. 'Hamilton's does so at 2 only' is correct ((2) with r = 2 and (3)(a)).",
+  "evidence": "audit/proof-5135/a2_squares.out [Q]: of the 1024 quaternary quadratic forms over F_2 exactly 280 have the seam's number of zeros (10), all with non-degenerate polar form (280 = |GL_4(2)|/|O+_4(2)|); of the 59049 forms over F_3 exactly 21060, all non-degenerate of square discriminant. audit/proof-5135/a7_lemmas.out [L]: for p = 3, 5, 7, 11, 13 the diagonal forms diag(a1..a4) (zeros allowed) with p^3 + p^2 - p zeros are exactly the non-degenerate ones of square discriminant. General argument: modulo an odd p a form of rank s has p^4, p^3, 2p^3 - p^2 or p^2, p^3 zeros for s = 0, 1, 2, 3 and p^3 + eta (p^2 - p) for s = 4.",
+  "fix": "Insert before 'No positive definite ...': 'A quaternary integral form with the seam's number of zeros modulo every prime is an even unimodular lattice: modulo an odd p a degenerate form has p^4, p^3, 2p^3 - p^2 or p^2 zeros and a non-degenerate one p^3 + eta (p^2 - p), so p^3 + p^2 - p forces a non-degenerate form of square discriminant; modulo 2 the forms with 10 zeros are the 280 non-degenerate hyperbolic ones.' Then the sentence follows from the cited fact that an even unimodular lattice has signature divisible by 8.",
+  "id": "F029",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 (1) statement and proof (lines 52-61, 136-142)",
+  "claim": "'for odd m, (N_m * N_m)(c) = m^3 L_m(c)' with proof 'the identity with L_m is the case r = 2 and the Chinese remainder theorem'",
+  "problem": "Statement (1) and the displayed sum in its proof cover only classes with v_p(c) < k. The identity with L_m also concerns the classes with v_p(c) >= k at some p^k || m (the class 0 modulo p^k), where the term u = 0 (probability p^(-rk)) must be added; the proof as written does not give that value, so it does not prove the identity at those classes (the enumeration at eleven moduli does). The identity is true; the missing value is one line. Also the restriction to odd m is unnecessary.",
+  "evidence": "audit/proof-5135/a1_rank_law.out [R]: for v >= k, p^k P(0) = (1 - p^-r) sigma_(r-1)(p^(k-1))/p^((r-1)(k-1)) + p^(-(r-1)k), exact for 17 prime powers (2..32, 3..81, 5..125, 7, 49, 11, 121, 13) and r = 1..6; for r = 2 this is 1 + 1/p - p^(-k-1) = L_(p^k)(0). [L]: (N_m * N_m)(c) = m^3 L_m(c) for all 105 odd m <= 209 and, with the same formula for L_m, for all 105 even m <= 210; unit twists 2..7; [C]: CRT product for r <= 4 at 11 composite moduli.",
+  "fix": "Add to (1): 'For the class 0 (v >= k): p^k P = (1 - p^-r) sigma_(r-1)(p^(k-1))/p^((r-1)(k-1)) + p^(-(r-1)k).' and to the proof: 'the vector u = 0, of probability p^(-rk), contributes to the class 0 only.' Replace 'for odd m' by 'for every m (L_m defined by the same formula)' or keep 'odd' with the remark that it is only the range in which THM-5134 uses it.",
+  "id": "F030",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135, proof of (2), last sentence (lines 147-148); bridges_exact.py line 136; bridges_exact.out lines 38-39",
+  "claim": "'(Checked for r <= 4 modulo 3, 5, 7, 11, 13, and modulo 9, 25.)'",
+  "problem": "The session's script skips r > 2 at 25 ('if q > 13 and r > 2: continue'); the output has only r = 1, 2 at q = 25. As written the sentence reads as r <= 4 at 25 too. (The statement itself is correct.)",
+  "evidence": "04-computation/experiments/s92_prime_powers_20261111/bridges_exact.py lines 132-142 and bridges_exact.out lines 14-39 (rerun here: identical, rerun_bridges_exact.out). My own check audit/proof-5135/a2_squares.out [S]: 162 cases (p = 3..41, k <= 3 with p^k <= 1400, r = 1..6), no violation; zero counts modulo p equal p^(2r-1) + eta (p^r - p^(r-1)); direct enumeration without convolution at 9, 25, 27, 49 (four squares), 5, 25, 13, 169, 3, 9, 7, 49 (two squares), 3, 5, 7, 9 (six squares).",
+  "fix": "'(Checked for r <= 4 modulo 3, 5, 7, 11, 13 and 9, and for r <= 2 modulo 25; the audit checked r <= 6 for all odd p <= 41 and p^k <= 1400.)' or remove the skip in the script.",
+  "id": "F031",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 status block (lines 15-17) and 'related' (line 33); README lines 75, 277, 290-292, 309; HYP-9666 line 16",
+  "claim": "'THM-5133 (D1), kind-pasteur S23, PRE-AUDIT, same day'",
+  "problem": "Stale status. THM-5133 was audited (PASS WITH CORRECTIONS, 5 majors, 22 minors applied, MISTAKE-762) in commit 3413be3b0a at 11:52:18, 21 minutes before the S92 checkpoint ff37a34648 (12:13:50) that writes 'PRE-AUDIT'; the THM-5133 file in the S92 worktree itself carries the audited status. The README's 'observation for kind-pasteur's audit, not tested here' (H(CD_4) = H(T_15) of THM-448) and next obligation (5) are superseded: the audited THM-5133 states 'CD_4 is T_15 of THM-448 (isomorphism found by the audit)'. The cited statements (A), (B), (D1) are unchanged by that audit, so nothing mathematical is affected.",
+  "evidence": "git log (read-only) on 01-canon/theorems/THM-5133-*: bdb2f8edd8 10:42:21 (pre-audit), 3413be3b0a 11:52:18 (audit applied); THM-5133 lines 4-6, 31-33 in the worktree; comparison of (A), (B), (D1) between the two versions.",
+  "fix": "Replace 'PRE-AUDIT' by 'audited the same day (PASS WITH CORRECTIONS, MISTAKE-762; (A), (B), (D1) unchanged)' in THM-5135, HYP-9666 and the README; delete the README's 'observation for kind-pasteur's audit' and next obligation (5), or replace them by a credit to the audit of THM-5133.",
+  "id": "F032",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 status block, KNOWN / NEW lists (lines 13-14, 21-23); statement (4) first part",
+  "claim": "KNOWN: 'the factor of (1) ... for every r modulo a prime (HYP-9660 (D))'; NEW: '(4)'.",
+  "problem": "The source of the rank-r law modulo a prime is THM-5128 (A) (S91), which is stated for ANY non-degenerate bilinear form B on (Z/p)^r: 'If both states are uniform the law is 1/p + p^(-r) ([c = 0] - 1/p)'. HYP-9660 (D) only quotes it. Hence the first part of (4) modulo p (every kernel with p not dividing det G, whatever its signature) is already THM-5128 (A); new are the prime-power case (a corollary of (1)) and the checks on named kernels. Two smaller credits are missing in the text of (4): the K-form is Session199's (THM-4916 (1d) says so), and diag(1, 2) is Session260's kernel x x' + 2 y y' (QUASIPERFECT_NORMS.md eq. (1)), not a kernel of THM-5133 (B).",
+  "evidence": "01-canon/theorems/THM-5128 lines 104-124; HYP-9660 lines 205-207; THM-4916 line 20; session260 QUASIPERFECT_NORMS.md eq. (1); bridges_exact.py line 284 ('Session260 diag(1, 2)').",
+  "fix": "KNOWN: '... and for every r modulo a prime, for any non-degenerate bilinear form, hence for every kernel with p not dividing det G and every signature (THM-5128 (A); quoted in HYP-9660 (D))'. NEW: '(4) at prime powers and its checks on the kernels of THM-5133 (B), Session260 and Session261'. In (4): 'the K-form (Session199; THM-4916 (1d))' and 'diag(1, 2) (Session260)'.",
+  "id": "F033",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 (5), last sentence (lines 122-124)",
+  "claim": "'In the join calculus the ordered join multiplies path counts (rank 1; commutative) and the one-arc join adds two products (rank 2): the first has the divisor-function law of (1), the second the law sigma(n)/n.'",
+  "problem": "Read literally this asserts a class law for path counts of ordered joins. No equidistribution of the factors is proved (path counts are odd, 7 and 21 do not occur); the README says so in section 8 ('a comparison, not a theorem'), and Remark 3 covers only (1)-(4). Only the second half is a theorem, for F1 at odd moduli (THM-5134).",
+  "evidence": "README lines 236-238; THM-5135 Remark 3 (line 180).",
+  "fix": "'... : for uniform factors the first has the divisor-function law of (1) (a comparison; no equidistribution of path counts of ordered joins is claimed), the second the law sigma(n)/n, which F1 has at every odd modulus (THM-5134).'",
+  "id": "F034",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 (6), last sentence",
+  "claim": "'The join value is the real part of z_A conj(z_B), z = x + sqrt(-2^s) y, and the cross-determinant of the two states its imaginary part.'",
+  "problem": "z_A conj(z_B) = M_s(A, B) + sqrt(-2^s) (x_B y_A - x_A y_B): the cross-determinant x_A y_B - x_B y_A is minus the coefficient of sqrt(-2^s); the imaginary part proper is 2^(s/2) times that. The identity itself is correct.",
+  "evidence": "audit/proof-5135/a6_identity_rank3.out [B]: 375,200 triples (h_A < 400, h_B < 400 step 3, s <= 6), no failure; bookkeeping of real part and coefficient.",
+  "fix": "'... and minus the cross-determinant is the coefficient of sqrt(-2^s) (the imaginary part divided by 2^(s/2)).'",
+  "id": "F035",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 status block, FINITE-EXACT line and CITED line (lines 7-10)",
+  "claim": "'r_4, r_8, Hurwitz counts on the stated ranges'; CITED 'Hurwitz (24 sigma(n); ...)'",
+  "problem": "The ranges are not stated anywhere in THM-5135 (they are in bridges_exact.out: r_4 odd n <= 400, r_8 odd n <= 39, Hurwitz odd n < 60), and Hurwitz's count 24 sigma(n) does not occur in any statement of the theorem (only in the README).",
+  "evidence": "bridges_exact.out lines 50-54. Recomputed on larger ranges: audit/proof-5135/a2_squares.out [J] (r_4 = 8 sigma for odd n <= 3000 and the general Jacobi formula; r_8 = 16 sigma_3 for odd n <= 3000, r_8(2) = 112, r_8 differs from 16 sigma_3 at every even n <= 3000; Hurwitz order 24 * (sum of odd divisors) for n <= 400).",
+  "fix": "State the ranges in the status line, and either add the Hurwitz count to (3)(d) ('Hamilton's and Hurwitz's forms differ from the seam at 2 only: 8 sigma(n) and 24 sigma(n) at odd n') or drop it from the status.",
+  "id": "F036",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 (5), table and proof ('groups by their numbers of elements of order 4', 'zero divisors searched with coordinates in {-1, 0, 1}'); status 'FINITE-EXACT ... zero divisors'",
+  "claim": "Groups identified by the number of elements of order 4; 'zero divisors: no' for Hamilton by a search.",
+  "problem": "(i) The number of elements of order 4 does not separate D_4 from C_8 (both 2); the identification is right because the extension has exponent dividing 4 (and the script also uses commutativity). (ii) A search in a box cannot give 'no zero divisors'; this is the classical fact that the norm is multiplicative and definite. (iii) The identifications of the four algebras are asserted in the proof and are not machine-checked by bridges_exact.py (it checks commutativity and zero divisors only). All entries of the table are correct.",
+  "evidence": "audit/proof-5135/a5_extensions.out: 16 cocycles, 2 coboundaries, 8 classes, S takes each of the 8 subsets once; groups by (abelian, orders): C_2^3 (1,7,0,0), D_4 (1,5,2,0), C_4 x C_2 (1,3,4,0), Q_8 (1,1,6,0); trace-form signatures (4,0), (3,1), (2,2), (1,3) and centre dimensions 4, 1, 4, 1; explicit models (four idempotents; 2 x 2 real matrices spanning M_2(R); idempotents (1 +- e_c)/2 with a square root of -1 in each factor; Hamilton relations); det L_x = (x0^2+x1^2+x2^2+x3^2)^2 on a 7^4 grid for #S = 3; explicit zero divisors for the 7 other classes; tournaments (cyclic for #S = 3; transitive with middle vertex in S for #S = 1) and their converses under the coboundary; signed triangles for #S even; s_a s_b s_c = eps for all 16 cocycles.",
+  "fix": "Proof (5): 'groups by commutativity and the number of elements of order 4 (the exponent divides 4)'; 'Hamilton has no zero divisors because the sum of four squares is multiplicative (CITED); the others have explicit ones'. Optionally add the trace-form check to the script.",
+  "id": "F037",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "NOTE",
+  "where": "seam_rank_exact.py docstring and seam_rank_exact.out line 1 ('(G) ...'), cited in the scripts list of THM-5135 and THM-5134",
+  "claim": "The output labels the rank-r law '(G)' and the script says 'S92 (THM-5134 (F), (G))'.",
+  "problem": "THM-5134 has no statement (G) (its letters are (A)-(F), (H)); the law is THM-5135 (1). A reader of the output cannot match the label.",
+  "evidence": "04-computation/experiments/s92_prime_powers_20261111/seam_rank_exact.py lines 2-5, seam_rank_exact.out line 1; THM-5134 title. Rerun of the script: byte-identical output (audit/proof-5135/rerun_seam_rank_exact.out).",
+  "fix": "Relabel '(G)' as 'THM-5135 (1)' in the script and regenerate the output, or add a line to the scripts entry of THM-5135: 'seam_rank_exact.out, section (G) = statement (1) here'.",
+  "id": "F038",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 (4), parenthesis on degenerate primes; HYP-9666 (C)",
+  "claim": "'(... the second differs at 9, where 3 | det G; Session261's kernel ... has the rank-1 law modulo 7 and 47)'; HYP-9666 (C) states as a conjecture 'not written out' that the law depends only on the Smith form.",
+  "problem": "This is a two-line theorem and could be part of (4): with G = P D Q, P, Q in GL_r(Z_p), D = diag(p^(e_i)), u^T G v = (P^T u)^T D (Q v) and u -> P^T u, v -> Q v are bijections of (Z/p^k)^r, so the law is the additive convolution of the scaled tables p^(e_i) a_i b_i. Then the two examples are instances, and 'rank-1 law modulo 7 and 47' is the case of elementary divisors (1, p) modulo p.",
+  "evidence": "audit/proof-5135/a4_kernels.out [K]: [[11,6],[6,3]] modulo 3, 9, 27 equals the convolution of the tables a1 b1 and 3 a2 b2 (counts by valuation modulo 9: 486, 1134, 1377 against the rank-2 law 648, 864, 945); Session261's kernel equals p^2 times the multiplication table modulo 7 (G = 2 [[1,1],[1,1]]) and 47, has the rank-2 law modulo 3, 5, 11, 13, and modulo 49 equals the convolution of a1 b1 and 7 a2 b2 (factors 6/7, 90/49, 97/49).",
+  "fix": "Add to (4): 'For every prime, the law of B modulo p^k is the additive convolution of the laws of p^(e_i) a_i b_i, p^(e_i) the elementary divisors of G over Z_p (Smith form)', typed PROVED, and retype HYP-9666 (C) accordingly.",
+  "id": "F039",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 (3)(a) and (3)(b)",
+  "claim": "(a) 'Modulo 4 and 8 the four-square form and a1 a2 + b1 b2 have different class counts'; (b) 'CITED: the same holds modulo every 2^k'.",
+  "problem": "No error. (a) They differ already modulo 2 ([8, 8] against [10, 6]) and in every class modulo 2^k for k <= 6. (b) The cited statement is a correct classical fact (E8 tensor Z_2 is a sum of four hyperbolic planes) and can be typed PROVED from the enumeration modulo 2: the E8 form and the rank-4 seam are non-degenerate modulo 2 with 136 zeros (Arf invariant 0), whereas H^3 + A has 120; a quadratic form over Z_2 with non-degenerate reduction is determined by the Arf invariant of the reduction.",
+  "evidence": "audit/proof-5135/a2_squares.out [2]; audit/proof-5135/a3_e8.out [M]: E8 = rank-4 seam modulo 2, 4, 8 (enumeration, same counts as bridges_exact.out), modulo 16 (numba enumeration of all 16^8 vectors), modulo 32, 64, 128 (exact dynamic programme on the Dynkin tree, validated against the enumerations), and modulo 3, 9, 27, 5, 25, 7, 49, 11, 13, 6, 12, 15, 36; contrast: H^3 + A, D8 and Z^8 differ at 2, 4, 8 (zeros modulo 2: 136, 120, 144, 128).",
+  "fix": "Optional: add 'and modulo 2' in (a); in (b) replace 'CITED' by 'PROVED from the count modulo 2 (136 zeros, Arf invariant 0) and the classification of even unimodular forms over Z_2 (CITED); enumerated up to 2^7 by the audit'.",
+  "id": "F040",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 status block (NEW list) and Remark 2; README line 98-99",
+  "claim": "NEW: '(1) ... with its table form', 'the commutative half of (5)'; Remark 2: 'rank 3 occurs in the join calculus (kernels with three visits, THM-5133 (A))'; README: 'the dihedral class sits one step below the quaternion class'.",
+  "problem": "No blocking prior art found, three small remarks. (i) The box version of the 'additive square of the product table' is in overnight_research_20261029/TWO_PORTS.md P5 (D_L(t) = sum_k f_L(k) f_L(k - t) counts the 2 x 2 matrices of determinant t in a box); worth a credit next to the modular-centres packet. (ii) The rule of squares s_a s_b s_c = eps is the polarization identity q(x+y) + q(x) + q(y) = commutator of THM-2887 eq. (4), stated there for the determinant commutator; the commutative classes are implied there only by 16 - 8. (iii) Remark 2 is right but THM-5133 (A) does not exhibit a kernel of rank 3 and HYP-9666 (B) says none was examined: I found them (see new evidence). README wording: by the number of units of square -1 the dihedral class (1) is two steps below the quaternion class (3), one step below is the bicomplex class; also in (1) the letter v denotes both the second state vector and the valuation.",
+  "evidence": "git grep on tracked files: 'tessarine' occurs only in the S92 README; 'bicomplex' in 29 other tracked files always means a double complex (THM-2551 file name, Mathlib HomologicalBicomplex, proof-carrier notes); 'additive convolution' / 'multiplicative convolution' hits (THM-2642, THM-4653, THM-414, context_prime_root_20261011, ...) are unrelated; no hit in canon or hypotheses for 'sigma_(r-1)', '240 sigma_3', 'six squares', 'eight squares', 'Ingham', 'integral octonion'. 05-knowledge/results/overnight_research_20261029/TWO_PORTS.md lines 159-169; THM-2887 lines 91-105, 150-170. audit/proof-5135/a6_identity_rank3.out [V].",
+  "fix": "Add the two credits (TWO_PORTS.md P5; THM-2887 (4) for the rule of squares); in Remark 2 cite an explicit kernel of rank 3; README: 'the dihedral class is the other non-commutative class, with one imaginary unit'.",
+  "id": "F041",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "README.md section 3 line 75; section 10 line 277 and its closing paragraph (lines 290-292); section 12 item (5); THM-5135 status line 17 and related line 33; HYP-9666 related line 16",
+  "claim": "'THM-5133 (D1) (kind-pasteur S23, same day, PRE-AUDIT)'; 'An observation for kind-pasteur's audit, not tested here: H(CD_4) = 198,335,025 with 21 automorphisms (THM-5133 (G)) equals H(T_15) with |Aut| = 21 of THM-448 ... the Cayley-Dickson sign tournaments are probably the June doubling tower'; next obligation '(5) the cross-reference between THM-5133 (G) and THM-448 once THM-5133 is audited'.",
+  "problem": "THM-5133 in this worktree is the audited version (PASS WITH CORRECTIONS, commit 3413be3b0a at 11:52, before the S92 checkpoints of 12:04 and 12:13). Its status and (G) already say 'CD_4 is T_15 of THM-448 (isomorphism found by the audit)' and 'CD_5 is not T_31 of THM-448', and credit THM-447, THM-448, THM-450 (5), THM-585. So the status label is stale, the observation is not new, obligation (5) is already done, and 'probably the June doubling tower' is false at n = 5.",
+  "evidence": "C:/tmp/wt-s92/01-canon/theorems/THM-5133-...md lines 5-6, 31-33, 161-163; git log (read only). Own check: .../audit/bridges-note/a5_cayley_dickson_vs_tower.out and a6_cd_tower_isomorphism.out: CD_3 = T_7 (H = 189); CD_4 isomorphic to T_15 (H = 198,335,025, 21 isomorphisms, explicit map printed; none to the converse); CD_5 is isomorphic neither to T_31 nor to its converse (complete backtracking, |Aut| = 21 on both sides), although its out-link / in-link path-count multisets are those of T_31 exchanged and the triple-intersection spectra agree.",
+  "fix": "Replace 'PRE-AUDIT' by 'audited the same day, PASS WITH CORRECTIONS' in the five places. Replace the closing paragraph of section 10 by: 'THM-5133 (G), as audited, identifies CD_3 with P_7 and CD_4 with T_15 of THM-448 and records that CD_5 is not T_31; the audit of this note confirms it (CD_5 is neither T_31 nor its converse). The reading of the doubling tower as a Cayley-Dickson tower is THM-450 (5).' Delete next obligation (5).",
+  "id": "F055",
+  "auditor": "bridges-note"
+ },
+ {
+  "severity": "MINOR",
+  "where": "README.md section 4 (lines 117-119), summary row (line 14), section 9 row 'octonion sign tournaments against norm forms' (line 253)",
+  "claim": "'All of it is about signs, i.e. the prime 2. THM-5128 (E) shows that F1 has no factor at 2. So the octonion material and the series (8/pi^2) sigma(n)/n do not meet on the tournament side.'; 'octonion sign tournaments against norm forms | MECHANISM (orientation at 2 and infinity, rank at odd primes) | THM-5135 Remark 1'.",
+  "problem": "(i) 'signs, i.e. the prime 2' identifies F_2-valued sign cocycles with the 2-adic place; the flat 2-adic law of F1 says nothing about sign patterns, so 'So ...' is not a deduction, only the absence of a known link. (ii) A norm form sees only which units have square -1. All 128 cyclic orientations of the Fano lines (16 alternative with H = 189, 112 others with H = 171) have the same eight-square form, which is multiplicative only for the 16; their orientation is invisible to the form at every place, not 'at 2 and infinity'. And with Coxeter's order the definite form (E8) agrees with the rank-4 seam at 2 as well (row 5 of the same table), so only the real place separates definite from split there. THM-5135 Remark 1 proves the statement for one line (where orientation and squares determine each other). MECHANISM is over-typed for the octonion row.",
+  "evidence": ".../audit/bridges-note/a3_algebras_fano_e8.out, parts d (128 orientations: (H, alternative, norm multiplicative, doubly regular) = (189, yes, yes, yes) x 16 and (171, no, no, no) x 112) and f (E8 form = rank-4 hyperbolic form modulo 2, 4, 8); a4_misc_checks.out part 1.",
+  "fix": "Section 4: 'All of it concerns sign patterns (F_2-valued cocycles and parities). The series concerns residues of path counts at odd primes, and at 2 F1 has the flat law (THM-5128 (E)). No link between the two is known on the tournament side.' Row: 'sign tables against norm forms | EXACT for the forms (classical): the norm form sees only the units of square -1; on one line this is the orientation (THM-5135 Remark 1), on the Fano plane it is not (128 orientations, one form); definite and split forms agree at odd primes, for E8 also at 2 | no statement about path counts'.",
+  "id": "F059",
+  "auditor": "bridges-note"
+ },
+ {
+  "severity": "MINOR",
+  "where": "README.md section 3 (lines 102-103), section 9 row 'quaternion norm additive, bicomplex norm multiplicative in r_2' (line 256); bridges_exact.py S4 lines 207-209",
+  "claim": "'the bicomplex norm count is the multiplicative convolution of r_2 with itself and vanishes for n = 3 (mod 4)'; '... | EXACT | n <= 400'.",
+  "problem": "The note does not say on which order. On Z[i]^2 the statement is the definition (the script computes the Dirichlet convolution and names it the bicomplex count; 'n <= 400' tests only the vanishing). The lattice spanned by the sign table 1, i, j, ij, which is the analogue of Z[i, j, k] used for Hamilton and the one whose signed units are the C_4 x C_2 of the table, is Z[i] tensor Z[i], of index 4 in Z[i]^2. Its counts are 8, 0, 16, 32 at n = 1, 2, 4, 5 against 16, 32, 48, 64: half the convolution at every odd n <= 400 and zero at n = 2 (mod 4). THM-5135 (5) names the orders; the note and the table row do not.",
+  "evidence": ".../audit/bridges-note/a3_algebras_fano_e8.out part b (direct count over (a, b, c, d) in Z^4 with norm ((a-d)^2 + (b+c)^2)((a+d)^2 + (b-c)^2)).",
+  "fix": "'On the maximal order Z[i]^2 the bicomplex norm count is by definition the multiplicative convolution of r_2 with itself; on the sign-table lattice Z<1, i, j, ij> (index 4, signed units C_4 x C_2) it is half of that at odd n. Both vanish for n = 3 (mod 4).' Row: 'EXACT (definitions on Z[i, j, k] and Z[i]^2; 8 sigma(n) is Jacobi, CITED, checked for odd n <= 400)'.",
+  "id": "F060",
+  "auditor": "bridges-note"
+ },
+ {
+  "severity": "NOTE",
+  "where": "README.md section 3 (lines 103-105); THM-5135 (5), last sentence",
+  "claim": "'In the join calculus the ordered join multiplies counts (rank 1, divisor-function law) and the one-arc join adds two products (rank 2, the law sigma(n)/n).'",
+  "problem": "The rank-2 law is proved for F1 (THM-5134). The rank-1 law is the law of a product of two uniform independent factors; nothing of the kind is proved for path counts of ordered joins, as section 8 itself says ('a comparison, not a theorem'). THM-5135 (5) says 'the first has the divisor-function law of (1)' without the qualifier.",
+  "evidence": "README.md lines 236-238; THM-5135 lines 121-124.",
+  "fix": "Add 'for uniform factors (a comparison, see section 8)' in both places.",
+  "id": "F066",
+  "auditor": "bridges-note"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 status line 17 and related line 33; HYP-9666 related line 16; note section 3 line 75, section 10 line 277",
+  "claim": "THM-5133 is cited as 'PRE-AUDIT' / 'PRE-AUDIT, same day' / 'S23, PRE-AUDIT; cited at that status'.",
+  "problem": "Stale. THM-5133 was audited before the S92 checkpoints: its status in this worktree reads 'Independent audit: PASS WITH CORRECTIONS (5 majors, 22 minors, all applied; MISTAKE-762)'. The audit also refuted HYP-9664 (C) for n >= 5. The statements S92 uses ((D1), the matrix [[11,6],[6,3]] of (B), (G), (H)) are unchanged by the audit; [[5,2],[2,1]] is not printed in (B) but follows from (r, M) = (1, 1).",
+  "evidence": "01-canon/theorems/THM-5133-*.md lines 5-6; git log: bdb2f8edd8 (10:42:21, pre-audit), 3413be3b0a (11:52:18, audit applied), an ancestor of S92's 48b8a90146 (12:04:26) and ff37a34648 (12:13). git diff bdb2f8edd8 3413be3b0a on the file shows (D1) and the order-5 kernel untouched.",
+  "fix": "Replace 'PRE-AUDIT' at all five places by 'audited 2026-11-11, PASS WITH CORRECTIONS, MISTAKE-762'; in note section 10 write 'THM-5133 (audited) and HYP-9664 ((C) REFUTED for n >= 5 by that audit)'.",
+  "id": "F074",
+  "auditor": "prior-art"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 status lines 13-20 (KNOWN) and 21-23 (NEW); statement (6)",
+  "claim": "'KNOWN ... the factor of (1) ... for every r modulo a prime (HYP-9660 (D))'; 'the unimodular K-form of THM-4916 (1d)'; (6) Brahmagupta identity is typed PROVED and appears neither under KNOWN nor under NEW.",
+  "problem": "Three credit imprecisions. (i) The rank-r law modulo a prime for uniform states is proved in THM-5128 (A); HYP-9660 (D) only quotes it. (ii) THM-4916 itself says '(1d) is Session199's'. (iii) (6) is untyped; the norm reading of self-substitutions is in Session260 eq. (2) (x^2 + 2y^2), Session261 eq. (4) (37 H = x^2 + 329 H^2) and THM-5133 (A); the identity is the classical two-square identity. No earlier statement of (6) for F1 states was found.",
+  "evidence": "THM-5128 line 121 ('If both states are uniform the law is 1/p + p^(-r) ([c = 0] - 1/p)'); HYP-9660 lines 205-207 ('By THM-5128 (A) a seam of rank r ...'); THM-4916 line 22; session199/physical-adjoint/PROOF.md lines 60-62; session260 QUASIPERFECT_NORMS.md eq. (1)-(2); session261 BILINEAR_KERNEL.md lines 72-76.",
+  "fix": "'... for every r modulo a prime (THM-5128 (A); quoted in HYP-9660 (D)) ...; the unimodular K-form (Session199 physical-adjoint, recorded in THM-4916 (1d)) and the local factors proved in THM-4916 ...; (6) is the classical two-square identity; the norm reading of self-substitutions is in Session260 eq. (2) and Session261 eq. (4); the statement for F1 states was not found in the repository.'",
+  "id": "F083",
+  "auditor": "prior-art"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135, proof of (2), lines 147-148",
+  "claim": "'(Checked for r <= 4 modulo 3, 5, 7, 11, 13, and modulo 9, 25.)'",
+  "problem": "bridges_exact.py S2 skips r > 2 when q > 13 (line 136), so modulo 25 only r = 1, 2 were checked; bridges_exact.out has two lines for q = 25. The statement itself holds: I checked r = 1..4 modulo 25, 27, 49, 121, 125, 169 with my own code.",
+  "evidence": "C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/bridges_exact.py lines 132-137; bridges_exact.out block S2; C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/numerics-prereg/my_seams.out part (iii).",
+  "fix": "'(Checked for r <= 4 modulo 3, 5, 7, 11, 13 and 9, and for r <= 2 modulo 25.)', or remove the line 'if q > 13 and r > 2: continue' (the full check at 25 takes seconds) and keep the sentence.",
+  "id": "F093",
+  "auditor": "numerics-prereg"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9666 (C) and status line (\"(C) a conjecture that is elementary and not written out\")",
+  "claim": "\"Conjecture: for B(u, v) = u^T G v with uniform states modulo p^k, the class law depends only on the Smith normal form of G over Z_p ..., and is the additive convolution of the laws of the scaled tables p^(e_i) a_i b_i.\"",
+  "problem": "It is a three-line theorem and should be typed PROVED. Over the principal ideal domain Z_p, G = P D Q with P, Q in GL_r(Z_p) and D = diag(p^(e_1), ..., p^(e_r)) (p^infinity = 0). Modulo p^k the maps u -> P^T u and v -> Q v are bijections of (Z/p^k)^r, so (P^T u, Q v) is again uniform and independent and u^T G v = sum_i p^(e_i) a_i b_i: only min(e_i, k) matters; p = 2 included. Also the session's own check of [[11,6],[6,3]] at 3 (bridges_exact.out S5) only shows that the law is not the rank-2 law; the status line says \"Nothing here is tested numerically\" while (C) lists checked instances.",
+  "evidence": "smith_r2.out: full brute force over (u, v) for all 6561 matrices modulo 9, the 6561 matrices with entries in [-4, 4] modulo 27, entries in [-3, 3] modulo 25, all 4096 matrices modulo 8: in every Smith class (6, 7, 4, 10 classes) one law, equal to the convolution of the scaled tables; [[11,6],[6,3]] modulo 9 and 27 and Session261's [[149,72],[72,37]] modulo 7, 49, 47 have the law of a1 b1 + p a2 b2.",
+  "fix": "\"(C) Degenerate primes (PROVED, elementary). Over Z_p, G = P D Q with P, Q invertible and D = diag(p^(e_1), ..., p^(e_r)); modulo p^k, u -> P^T u and v -> Q v preserve the uniform law, so u^T G v has the law of sum p^(e_i) a_i b_i: the class law depends only on the Smith form (on min(e_i, k)) and is the additive convolution of the laws of the scaled tables, at p = 2 as well. FINITE-EXACT (audit, smith_r2.out): all 2 x 2 matrices modulo 9 and 8, entries in [-4, 4] modulo 27, [-3, 3] modulo 25.\" Status line: \"(C) PROVED (elementary)\"; move it to THM-5135 (4) if wished.",
+  "id": "F103",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9666 (A), last sentence; HYP-9666 introduction and THM-5135 (4) (\"two unimodular rank-4 forms\")",
+  "claim": "\"... and in every family the states are odd in their first two coordinates sums (H, h odd), so the law cannot hold at 2.\"",
+  "problem": "The sentence is ungrammatical and does not say what holds. For every pointed tournament (checked for all labelled ones of order <= 7): h = H(A - z) and H are odd, so in the state (h, H - h, U - h, d - h) the first coordinate is odd and the second even; moreover U = d and V = e (mod 2), so the third and fourth coordinates have the same parity. The states therefore fill an index-2 sublattice in the last two coordinates: in the path-mass coordinates a_o = (U + d)/2 - h, a_e = (U - d)/2 the corner is 2 (a_o b_o + a_e b_e), with Gram determinant -4. The Gram matrix [[1,1,0,0],[1,0,0,0],[0,0,1,0],[0,0,0,1]] of THM-5135 (4) is unimodular only in coordinates that the states do not fill, i.e. over Z[1/2]. The direct reason the law fails at 2 is simpler: H(A * B) is odd (Redei), while the uniform rank-4 law gives the class 0 modulo 2 the share 17/32.",
+  "evidence": "fusion_states.out: law (3) of Session264 verified on 5625 pairs of pointed tournaments of orders <= 4; for all labelled pointed tournaments of order <= 7: H, h odd, U = d and V = e (mod 2), and ((U-h) mod 4, (d-h) mod 4) takes exactly the 8 pairs of equal parity; rank_laws.out (17/32).",
+  "fix": "\"At the prime 2 the law fails in every family: H(A * B) is odd (Redei), while the uniform rank-4 law gives the class 0 modulo 2 the share 17/32. In the states: h = H(A - z) and H are path counts, hence odd, so the first coordinate is odd and the second even; and U = d (mod 2), so the last two coordinates have the same parity (in the path-mass coordinates a_o = (U + d)/2 - h, a_e = (U - d)/2 the corner is 2 (a_o b_o + a_e b_e)).\" In the introduction and in THM-5135 (4): \"the corner of Session264's fusion law (unimodular in the coordinates (U - h, d - h); the states satisfy U = d (mod 2) and on their lattice the corner has determinant -4, so it is unimodular at the odd primes only)\".",
+  "id": "F104",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9666 status line and (A): scope of THM-4916, the falsifier, the states",
+  "claim": "\"The only proved local law of a rank-4 form in the repository (THM-4916, two root changes) is NOT the uniform one.\"; \"for the root-change states of THM-4916 the factor at 0 is 1 + (3p - 2)(p - 1)/(2 p^3)\"; \"Falsifier: a family with proved equidistribution and a different factor.\"; \"whose fusion states (h, H - h, U - h, d - h) ... are equidistributed\".",
+  "problem": "(i) THM-4916 proves its factor in the letter-count model only; it lists the census (by-value) limit as NOT CLAIMED / OPEN, and HYP-9660 (A) conjectures a different by-value limit (sigma = 2 w_1 = 1.607 in place of 3/2). The hypothesis asks for equidistribution on cells, the by-value setting, so the scope must be stated. (ii) The falsifier is vacuous: for independent uniform states the factor is THM-5135 (1), a theorem, so a family with proved equidistribution cannot have a different factor. What would settle (A) negatively is a congruence confining the fusion states of every pointed tournament modulo an odd prime (as (D) does at 3 for module states). (iii) The law (3) pairs the LEFT state (h, H - h, U - h, d - h) of A with the RIGHT state (h', H' - h', V' - h', e' - h') of B; the prediction needs both equidistributed (by THM-5128 (A), with one side uniform the bias is the mass of the other side at the zero state).",
+  "evidence": "THM-4916 status (\"in the letter-count model\"; \"NOT CLAIMED: the limit of the census (height-weighted) factors, which is OPEN\"); HYP-9660 (A). fusion_states.out: over all labelled pointed tournaments of order <= 7 the states satisfy no affine relation modulo 3, 5 or 7 (all 81 residue vectors modulo 3 occur at order 7; 591 of 625 modulo 5). The numbers of (A) are correct: 83/81 = 1 + 2/81, 629/625 = 1 + 4/625, 34/27 and 151/125 for THM-4916 (rank_laws.out).",
+  "fix": "Status: \"The only proved local law of a rank-4 form in the repository (THM-4916, two root changes, letter-count model; its by-value limit is OPEN, HYP-9506 (A), HYP-9660 (A)) is NOT the uniform one.\" (A): \"... whose left states (h, H - h, U - h, d - h) and right states (h, H - h, V - h, e - h) are equidistributed modulo every odd p on the cells of the family ...\"; \"Known obstruction (letter-count model): ...\"; replace the falsifier by \"What would settle it negatively: a congruence satisfied modulo an odd prime by the fusion states of every pointed tournament, as (D) at 3 for module states. None exists among affine relations modulo 3, 5, 7 at orders <= 7 (audit, fusion_states.out).\"",
+  "id": "F105",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9666 (B) (and the scope of (D))",
+  "claim": "\"Kernels with three visits (THM-5133 (A)) give forms of rank 3. Prediction for uniform states: factor (1 - p^-3) sigma_2(p^v)/p^(2v) ...\"",
+  "problem": "For module states the prediction cannot hold at 3 or at 2, and the constraint of (D) is not special to the Gaussian kernel. P_2 = 2 u_2 and P_3 = 6 u_3, and modulo 3, P_2 = ((-1)^n + 1) H and P_m = 0 for m >= 3 (THM-4756, steps 2-3). So every kernel of THM-5133 (A), with any number of visits, satisfies H(K[A, B]) = c(|A| mod 2, |B| mod 2) H(A) H(B) (mod 3): at 3 every module kernel collapses to rank 1. The prediction also needs p not dividing det N (THM-5135 (4)).",
+  "evidence": "kernel_mod3.out: all labelled kernels of orders 3, 4, 5 with every ordered port pair (48 + 768 + 20,480), A and B over the 8 isomorphism classes of orders 1..4: 0 violations of H(K[A, B]) = c(parities) H(A) H(B) (mod 3). pi2_mod3.out. The formula of (B) and the six-squares criterion are correct (rank_laws.out: modulo 3, 9, 27, 5, 25, 7, 49, 13).",
+  "fix": "Add to (B): \"For module states (P_1, P_2, P_3) the prediction can concern only primes p >= 5 not dividing det N: P_2 = 2 u_2, P_3 = 6 u_3, and modulo 3 every kernel of THM-5133 (A), whatever its number of visits, is c(|A| mod 2, |B| mod 2) H(A) H(B) (THM-4756; audit: all kernels of order <= 5).\" In (D): \"Hence the Gaussian kernel ... (and, by the same congruences, every module kernel is a multiple of H(A) H(B) modulo 3)\".",
+  "id": "F106",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 status and related; HYP-9666 related; note sections 3, 10 (two places), 12 item (5)",
+  "claim": "\"THM-5133 ... PRE-AUDIT\" (four places); \"An observation for kind-pasteur's audit, not tested here: H(CD_4) = 198,335,025 with 21 automorphisms (THM-5133 (G)) equals H(T_15) ... the Cayley-Dickson sign tournaments are probably the June doubling tower.\"; \"Next: ... (5) the cross-reference between THM-5133 (G) and THM-448 once THM-5133 is audited.\"",
+  "problem": "THM-5133 was audited (PASS WITH CORRECTIONS, 5 majors, 22 minors, MISTAKE-762) in commit 3413be3b0a at 11:52:18, 21 minutes before the S92 draft commit ff37a34648 (12:13:50); the worktree holds the audited file. Its (G) now reads \"CD_4 is T_15 of THM-448 (isomorphism found by the audit)\" and \"CD_5 is not T_31 of THM-448\". So the observation is already in canon, and its extension to the whole tower is contradicted at n = 5. (The value 24,453,597 does occur in THM-450.)",
+  "evidence": "git log (read-only) for 01-canon/theorems/THM-5133-*.md and for the branch; THM-5133 status lines 5-6 and section (G); kps_s23 README section 8.",
+  "fix": "Replace \"PRE-AUDIT\" by \"audited the same day, PASS WITH CORRECTIONS\" in the four places. Replace the closing paragraph of section 10 by: \"THM-5133 (G), as audited, identifies CD_4 with T_15 of THM-448 and records that CD_5 is not T_31; the split-octonion and split-sedenion values 45 and 24,453,597 occur in THM-450 (7) (cross-reference only).\" Delete item (5) of 'Next'.",
+  "id": "F107",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 statement labels; seam_rank_exact.py / .out; every_base.py docstring",
+  "claim": "THM-5134 statements are labelled (A)-(F), (H); seam_rank_exact.py: \"S92 (THM-5134 (F), (G))\" and prints \"(G) p^k * P(u . v = c) ...\"; every_base.py: \"S92 (THM-5135): the join family F1 in every base b\".",
+  "problem": "THM-5134 has no statement (G) (the rank-r law is now THM-5135 (1)); a receipt cited by both theorems refers to a label that does not exist; every_base.py is the receipt of THM-5134 (H), not of THM-5135.",
+  "evidence": "grep of '(G)' in the four files and the scripts; THM-5134 Statements.",
+  "fix": "Either relabel (H) as (G) throughout (title, status, proofs, note sections 5 and 9, HYP-9665) or keep (H) and state \"(G) is not used\"; in seam_rank_exact.py replace \"THM-5134 (F), (G)\" and the printed \"(G)\" by \"THM-5134 (F), THM-5135 (1)\"; in every_base.py replace \"THM-5135\" by \"THM-5134 (H)\".",
+  "id": "F109",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "NOTE",
+  "where": "Scope of this audit (what was not checked)",
+  "claim": "-",
+  "problem": "Not checked: a complete written proof of the by-value law at 2^j m (only the sketch in proof_sketches_and_tables.txt; the missing ingredient was proved and tested, the summation was not re-derived line by line); HYP-9665 (B) on short intervals K < X (no data); the PHASE_CLOCKS question of HYP-9665 (D) beyond reading the definitions; the statement \"CD_5 is not T_31\" (taken from the audited THM-5133 (G)); parity or congruence confinement of the K-form coordinates of THM-4916; the proofs of THM-5134 and THM-5135 (other auditors), of which only the numbers overlapping this part were recomputed. The Session193 theorems were read, not re-proved.",
+  "evidence": "-",
+  "fix": "-",
+  "id": "F111",
+  "auditor": "hypotheses"
+ }
+]

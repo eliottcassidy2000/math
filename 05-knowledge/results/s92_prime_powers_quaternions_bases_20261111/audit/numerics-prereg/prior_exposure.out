@@ -1,0 +1,27 @@
+(1) measured excess E of the distinguished class on [2^27, 2^28), from the S91 audit output (before registration): {3: (0.5233, 0.5426), 5: (0.3071, 0.3206), 7: (0.2076, 0.2133)}
+    m    sheet | g0 = 1 mean: from the S91 audit number p/(p+E) | measured in the registered run | registered prediction || mean over the classes with g0 > 1: from the audit p(1+E)/(p+E) | measured | from the registered predictions
+     9    0   |  0.8515 | 0.8515 | 0.8577  ||  1.2971 | 1.2970 | 1.2845
+     9    1   |  0.8468 | 0.8468 | 0.8552  ||  1.3063 | 1.3063 | 1.2896
+    27    0   |  0.8515 | 0.8515 | 0.8577  ||  1.2971 | 1.2970 | 1.2845
+    27    1   |  0.8468 | 0.8468 | 0.8552  ||  1.3063 | 1.3063 | 1.2896
+    81    0   |  0.8515 | 0.8515 | 0.8577  ||  1.2971 | 1.2970 | 1.2845
+    81    1   |  0.8468 | 0.8468 | 0.8552  ||  1.3063 | 1.3063 | 1.2896
+    25    0   |  0.9421 | 0.9421 | 0.9418  ||  1.2315 | 1.2315 | 1.2328
+    25    1   |  0.9397 | 0.9397 | 0.9393  ||  1.2410 | 1.2410 | 1.2428
+   125    0   |  0.9421 | 0.9421 | 0.9418  ||  1.2315 | 1.2315 | 1.2328
+   125    1   |  0.9397 | 0.9397 | 0.9393  ||  1.2410 | 1.2410 | 1.2428
+    49    0   |  0.9712 | 0.9712 | 0.9815  ||  1.1728 | 1.1728 | 1.1111
+    49    1   |  0.9704 | 0.9704 | 0.9837  ||  1.1774 | 1.1775 | 1.0979
+    -> the g0 = 1 group means of the registered window at 9, 27, 81, 25, 125, 49 (12 of the 68 registered group values) and the
+       class-weighted mean of the other groups were fixed by numbers published before the registration.
+
+(2) prime-level remainder p max|R_small| at 2^26 -> 2^28 (S91 first_order_exact_28.out, before registration) against the
+    registered P4 pairs (remainder of (B) at the prime powers, my census)
+    p = 3 sheet 0: 0.01753 -> 0.01711 (smaller)   |  m = 9: 0.02356 -> 0.02383 (not smaller) [direction differs from the prime];  m = 27: 0.02934 -> 0.02921 (smaller);  m = 81: 0.03395 -> 0.03138 (smaller)
+    p = 3 sheet 1: 0.01097 -> 0.01477 (not smaller)   |  m = 9: 0.02029 -> 0.01854 (smaller) [direction differs from the prime];  m = 27: 0.02216 -> 0.02708 (not smaller);  m = 81: 0.02309 -> 0.03081 (not smaller)
+    p = 5 sheet 0: 0.00192 -> 0.00139 (smaller)   |  m = 25: 0.00367 -> 0.00354 (smaller);  m = 125: 0.00470 -> 0.00477 (not smaller) [direction differs from the prime]
+    p = 5 sheet 1: 0.00211 -> 0.00185 (smaller)   |  m = 25: 0.00495 -> 0.00374 (smaller);  m = 125: 0.00657 -> 0.00483 (smaller)
+    p = 7 sheet 0: 0.11704 -> 0.07911 (smaller)   |  m = 49: 0.13044 -> 0.09316 (smaller)
+    p = 7 sheet 1: 0.11630 -> 0.09258 (smaller)   |  m = 49: 0.12524 -> 0.10282 (smaller)
+    the direction known at the prime before the registration equals the direction at the prime power in 9 of the 12 registered pairs;
+    copying the prime-level directions would have predicted 'smaller' for 9 of the 12 pairs (registered threshold: 8; outcome: 8).

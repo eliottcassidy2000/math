@@ -1,0 +1,56 @@
+A1 the weights
+  ok   int_0^1 Z(v) dv = (X - k) w_s^b(h), Z = (X - k)/(2 (a (1 - v/2) + b'))  (180 cases) : largest relative difference 1.0e-14
+  ok   w_0^b = (2/(b x_b)) ln(2 (x_b + y)/(x_b + 2y)) : 0.0e+00
+  ok   sum_{s >= 1} w_s^b = (2/(b x_b)) ln(1 + x_b/(2y)) : 4.6e-15
+  ok   product of the ratios over 1 <= s <= S is 2^S (x_b + 2y)/(x_b + 2^(S+1) y) -> 1 + x_b/(2y)
+  ok   b = 2: these are the weights of THM-5128 (D2): w^0 = (1/x) ln(2 (x + y)/(x + 2y)), w^1 = (1/x) ln(1 + x/(2y))
+A2 the additive constant
+  ok   s >= 1: |k| w_s^b < (1 - 2/b) ln 2  (b <= 12, h < 2^13, s <= 6) : largest ratio 0.678050
+  ok   s = 0: |k| w_0^b = (1 - 2/b + 1/x_b) ln(2 (x_b + y)/(x_b + 2y))
+  ok   s = 0, h = 0: below 2 ln(4/3) = 0.5754 : max 0.5274
+  ok   s = 0, h >= 1: below ln 2 = 0.6931 : max 0.4745
+  ok   2 ln(4/3) < ln 2, so |k| w_s^b <= ln 2 in every case
+A3 regularity
+  ok   w_s^b = F(r)/y, r = x_b/y = (b/2) rho + (1 - b/2)/y
+  ok   F(r) <= 2^(-s)/b
+  ok   for h >= 1: (b + 4)/12 < r <= b/2  (b <= 12, h < 2^14) : b=2: [0.5000, 1.0000] in (0.5000, 1.0]; b=3: [0.7501, 1.5000] in (0.5833, 1.5]; b=10: [2.5001, 4.9998] in (1.1667, 5.0]
+  ok   |F'(r)| <= (2/b) 2^(-s)/r_min on the range (derivative O_b(2^-s))
+A4 the integral and the mass constants
+  ok   int_{1/2}^{1} F((b/2) rho) d rho = (4/b^2)[Li_2(-b rho/2^(s+2)) - Li_2(-b rho/2^(s+1))] = (4/b^2)(l_(s+1) - 2 l_(s+2) + l_(s+3)) : largest difference 6.16e-32
+  ok   the sum over s >= 1 telescopes to (4/b^2)(l_2 - l_3)
+       kappa_0(b), kappa_1(b): b = 2: 0.1615389173, 0.2125139092; b = 3: 0.0918049917, 0.1324702934; b = 4: 0.0600566267, 0.0935132066; b = 5: 0.0426250592, 0.0707904354; b = 10: 0.0136614577, 0.0283538736
+  ok   b = 2: 0.1615389173, 0.2125139092 (THM-5128 (D1))
+  ok   b = 3: 0.091805, 0.132470;  b = 10: 0.013661, 0.028354 (the values in (G)) : 0.091805 0.132470 | 0.013661 0.028354
+  ok   b = 2: kappa_0 = pi^2/12 + 2 Li_2(-1/2) - Li_2(-1/4), kappa_1 = Li_2(-1/4) - Li_2(-1/2)
+A5 block sums
+  ok   b = 3, s = 0: sum over B_n of w_s^b -> ln 2 * integral = 0.063634 : n=10: 0.063566; n=12: 0.063614; n=14: 0.063628; n=16: 0.063633; n=18: 0.063634
+  ok   b = 3, s = 1: sum over B_n of w_s^b -> ln 2 * integral = 0.040889 : n=10: 0.040861; n=12: 0.040881; n=14: 0.040887; n=16: 0.040889; n=18: 0.040889
+  ok   b = 10, s = 0: sum over B_n of w_s^b -> ln 2 * integral = 0.009469 : n=10: 0.009456; n=12: 0.009465; n=14: 0.009468; n=16: 0.009469; n=18: 0.009469
+  ok   b = 10, s = 1: sum over B_n of w_s^b -> ln 2 * integral = 0.007386 : n=10: 0.007378; n=12: 0.007384; n=14: 0.007386; n=16: 0.007386; n=18: 0.007386
+A6 constants
+  ok   8/pi^2 = 0.8106
+  ok   prod_{p odd} (1 - p^-2) = 8/pi^2 (partial product over p < 200000: 0.8105698)
+  ok   (8/pi^2)/(1 - 1/9) = 9/pi^2 and (8/pi^2)/(1 - 1/25) = 25/(3 pi^2)
+  ok   (6/pi^2)/(1 - 1/4) = 8/pi^2
+  ok   e^gamma/2 = 0.8905 and 4 e^gamma/pi^2 = 0.7218
+  ok   w_0 S_0 + w_1 S_1 = 0.876 at N = 7 and 1.084 at N = 21 (w_0 = 0.43186, w_1 = 0.56814) : 0.87636 1.08362
+  ok   mean of S_0 and of S_1 over the odd N < 200000 is 1 : 0.99998 1.00000
+  ok   S_1(N) > 8/pi^2 for odd 3 <= N < 20000; S_0(N) = 8/pi^2 exactly when N + 1 is a power of 2
+  ok   limits at 9: 8/9, 32/27, 35/27 = 0.889 / 1.185 / 1.296
+A7 numbers derived from outputs
+       sup of theta_m/2: 9, 27, 81: 0.0733; 25, 125: 0.0927; multiples of 7: 0.0422; 45, 75: 0.0619
+  ok   suprema 0.0733, 0.0927, 0.0422, 0.0619; hence below 0.074, 0.093, 0.043, 0.062 (and NOT below 0.073, 0.042)
+       noise sqrt(m/#T) at 2^28, sheet 0 / sheet 1: 9: 0.00010 / 0.00009; 27: 0.00018 / 0.00016; 81: 0.00031 / 0.00027; 25: 0.00017 / 0.00015; 125: 0.00038 / 0.00034; 49: 0.00024 / 0.00021; 45: 0.00023 / 0.00020; 75: 0.00030 / 0.00026
+       ratio of the sheet-0 noise to the sheet-1 noise: 1.1260 (12.6 % larger)
+  ok   the two noise values round to the same 4-decimal entry except at 125 (0.0004 against 0.0003)
+  ok   the sheet-0 noise is 12.6 % larger (the file must not say 12 %): 12.6
+  ok   slopes of #T^b/X against ln X between 2^24 and 2^26 agree with kappa_sigma(b) to within 0.00001 (b = 2, 3, 4, 5, 10, both sheets) : largest difference 0.0000099
+  ok   P(at least 8 of 12) under fair coin flips = 0.19 : 0.1938
+  ok   fixed state h1 = 0, s = 0 modulo 49: factor per binary digit 0.93 (0.2980 -> 0.1689 over 8 digits) : 0.9315
+  ok   second digit, b = 3: factor 0.867 per binary digit on both sheets (2^16 -> 2^28); sqrt(3)/2 = 0.8660 : 0.8674 0.8667
+  ok   correlations 0.4016, 0.4275: r^2 = 16 %% and 18 %%
+  ok   quintile ratios: 8.550/4.301 = 1.99, 10.766/5.438 = 1.98, 1.6094/1.0006 = 1.61
+       P1 at 9, 27, 81, 45: (deviation of the alternative law)/(tolerance) from numerics-prereg/eval_prereg.out: min 3.49, max 15.74
+  ok   these ratios run from 3.5 to 15.7
+
+ALL ANALYTIC CHECKS PASSED

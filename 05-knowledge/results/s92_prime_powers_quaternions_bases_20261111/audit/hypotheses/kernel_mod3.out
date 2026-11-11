@@ -1,0 +1,5 @@
+# kernel_mod3.py (auditor hypotheses; own code)
+modules: [(1, 1), (2, 1), (3, 1), (3, 3), (4, 1), (4, 3), (4, 5), (4, 3)]
+order 3: 48 (labelled kernel, ordered ports); violations of 'H(K[A,B]) = c(parities) H(A) H(B) mod 3': 0; distinct constant tables: 2
+order 4: 768 (labelled kernel, ordered ports); violations of 'H(K[A,B]) = c(parities) H(A) H(B) mod 3': 0; distinct constant tables: 8
+order 5: 20480 (labelled kernel, ordered ports); violations of 'H(K[A,B]) = c(parities) H(A) H(B) mod 3': 0; distinct constant tables: 25

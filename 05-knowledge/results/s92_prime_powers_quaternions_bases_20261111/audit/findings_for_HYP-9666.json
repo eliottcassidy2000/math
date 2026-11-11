@@ -1,0 +1,142 @@
+[
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 status (line 15-17) and related (line 33); HYP-9666 related (line 16); README section 3 (line 75), section 10 (line 277 and the closing paragraph, lines 290-292), section 12 item (5) (line 308-309)",
+  "claim": "THM-5133 is cited as \"PRE-AUDIT\" (\"cited at that status\"), and README section 10 ends: \"An observation for kind-pasteur's audit, not tested here: H(CD_4) = 198,335,025 with 21 automorphisms (THM-5133 (G)) equals H(T_15) with |Aut| = 21 of THM-448 ...; the Cayley-Dickson sign tournaments are probably the June doubling tower.\" Section 12: \"(5) the cross-reference between THM-5133 (G) and THM-448 once THM-5133 is audited.\"",
+  "problem": "Stale, and contradicted by the cited theorem as it stands in this worktree. THM-5133 was independently audited and corrected in commit 3413be3b0a (11:52:18), 21 minutes before the S92 checkpoint ff37a34648 (12:13:50). Its status now reads 'Independent audit: PASS WITH CORRECTIONS (5 majors, 22 minors, all applied; MISTAKE-762)', and its (G) already states 'CD_4 is T_15 of THM-448 (isomorphism found by the audit)' and 'CD_5 is not T_31 of THM-448'. So the 'observation' is already canon (credit: the kind-pasteur audit), and the extrapolation 'probably the June doubling tower' is refuted at order 31 by the theorem it cites.",
+  "evidence": "C:/tmp/wt-s92/01-canon/theorems/THM-5133-flip-and-spin-kernel-signature-sign-tournaments-of-twisted-algebras-and-the-pg32-extremal-theorems.md lines 5-6 (status), 31-33 and 161-163 ((G)); git log (read-only): 3413be3b0a 11-11 11:52:18, ff37a34648 11-11 12:13:50.",
+  "fix": "Replace 'PRE-AUDIT' by 'audited the same day, PASS WITH CORRECTIONS' in the five places. Replace the closing paragraph of README section 10 by: \"THM-5133 (G), as audited, records that CD_4 is T_15 of THM-448 (isomorphism found by its audit) and that CD_5 is not T_31 of THM-448: the Cayley-Dickson sign tournaments leave the June doubling tower at order 31. Not in THM-5133 and not tested here: the split-octonion value 45 and the split-sedenion value 24,453,597 also occur in THM-450 (7).\" Delete item (5) of section 12 or reduce it to the split values against THM-450 (7).",
+  "id": "F010",
+  "auditor": "citations"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135, title item (4) (line 3); statement (4), second paragraph (lines 90-95); status block (line 6)",
+  "claim": "Title: 'two unimodular rank-4 forms of the join calculus do not have it, their states being confined.'",
+  "problem": "Overreach, and inconsistent with the body, the README and HYP-9666. For the second form (corner of Session264's fusion law) the body computes no class law and shows no confinement at odd primes; whether fusion states can be equidistributed modulo odd p is HYP-9666 (A), typed OPEN by the same session, and README section 4 says only 'the one with a proved law (THM-4916)'. At 2 the sentence is true for both forms, but trivially (h and H are odd, every path count is odd). The second part of (4) also has no status at all: the status block types only '(4) first part'.",
+  "evidence": "THM-5135 lines 3, 6, 90-95; HYP-9666 lines 27-34; README lines 130-133. audit/proof-5135/a4_kernels.out [D]: both Gram matrices have determinant -1 (also in raw state coordinates (D,E,U,d) and (h,H,U,d) x (h',H',V',e')) and for uniform states both have the rank-4 law modulo 2, 3, 4, 5, 9 by direct enumeration; so any failure is a property of the state family, which is not examined for the fusion corner.",
+  "fix": "Title (4): '... whatever its signature; two unimodular rank-4 forms occur in the join calculus; the one with a proved law (the K-form on the root-change words of THM-4916) does not follow the uniform law, its states being confined; for the fusion corner the law at odd primes is open (HYP-9666 (A)).' Status block: add '(4) second part: the two determinants are computed here (elementary); the factor of the K-form is KNOWN (THM-4916); nothing is claimed for the fusion corner.'",
+  "id": "F026",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 (4), sentence 'For the first, THM-4916 proves the factor 1 + (3p - 2)(p - 1)/(2 p^3) at the class 0 (two root changes), not the uniform rank-4 value 1 + p^-3 - p^-4: its states are confined'; same wording in README section 4 and section 9 ('THM-4916 is a negative instance') and in the status of HYP-9666",
+  "claim": "THM-4916's factor is compared with the uniform rank-4 value 1 + p^-3 - p^-4 as if both were class laws of the same rank-4 seam.",
+  "problem": "Not the same objects. THM-4916's statistic is the class modulo p of the value F(t.w) of ONE word w (n letters O/Z, at most two J, weights of M_2, n -> infinity). By its (1d), F(t.w) = K(t.alpha, t.beta) for every splitting w = beta alpha^dagger, in particular K(t, t.w) with the first state fixed; its PROOF.md section 3 item 2 says so: 'K(t,s) = F(s), so F_<=2 \\ {1} is the image of a single free state with at most two J'. No pair of independently drawn states is involved. The uniform reference value is therefore ambiguous: 1 for one uniform state under a non-zero linear functional, 1 + p^-3 - p^-4 for two independent uniform states. THM-4916's value differs from both (p = 3: 34/27 against 1 and 83/81), so the conclusion 'the states are confined' stands; the comparison as written misdescribes THM-4916 as a law of a rank-4 seam. The quoted factor itself and the determinant -1 are correct.",
+  "evidence": "01-canon/theorems/THM-4916 lines 50-56, 68-69; 05-knowledge/results/root_change_local_factors_20261107/PROOF.md lines 59-66, 137-170, 198-199. audit/proof-5135/a4_kernels.out [F] (table of the values at p = 3..13: THM-4916 34/27, 151/125, 400/343, ...; rank 4 uniform 83/81, 629/625, ...; rank 2 11/9, ...; rank 1 5/3, ...).",
+  "fix": "Replace by: 'For the first, THM-4916 computes the class law of the values K(t.alpha, t.beta) = F(t.beta alpha^dagger) over words with at most two root changes (letter-count model, M_2 weights; one word, hence one free state, per value): factor 1 + (3p - 2)(p - 1)/(2 p^3) at the class 0. This is neither the value 1 + p^-3 - p^-4 of two independent uniform states nor the value 1 of one uniform state under a linear functional: the states reached with few root changes are confined (THM-4916, cascade). So a unimodular Gram matrix of rank 4 does not by itself give the law of (3)(b); see HYP-9666.' Adjust README section 4 / section 9 and the HYP-9666 status line in the same sense.",
+  "id": "F027",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 status block (lines 15-17) and 'related' (line 33); README lines 75, 277, 290-292, 309; HYP-9666 line 16",
+  "claim": "'THM-5133 (D1), kind-pasteur S23, PRE-AUDIT, same day'",
+  "problem": "Stale status. THM-5133 was audited (PASS WITH CORRECTIONS, 5 majors, 22 minors applied, MISTAKE-762) in commit 3413be3b0a at 11:52:18, 21 minutes before the S92 checkpoint ff37a34648 (12:13:50) that writes 'PRE-AUDIT'; the THM-5133 file in the S92 worktree itself carries the audited status. The README's 'observation for kind-pasteur's audit, not tested here' (H(CD_4) = H(T_15) of THM-448) and next obligation (5) are superseded: the audited THM-5133 states 'CD_4 is T_15 of THM-448 (isomorphism found by the audit)'. The cited statements (A), (B), (D1) are unchanged by that audit, so nothing mathematical is affected.",
+  "evidence": "git log (read-only) on 01-canon/theorems/THM-5133-*: bdb2f8edd8 10:42:21 (pre-audit), 3413be3b0a 11:52:18 (audit applied); THM-5133 lines 4-6, 31-33 in the worktree; comparison of (A), (B), (D1) between the two versions.",
+  "fix": "Replace 'PRE-AUDIT' by 'audited the same day (PASS WITH CORRECTIONS, MISTAKE-762; (A), (B), (D1) unchanged)' in THM-5135, HYP-9666 and the README; delete the README's 'observation for kind-pasteur's audit' and next obligation (5), or replace them by a credit to the audit of THM-5133.",
+  "id": "F032",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 (4), parenthesis on degenerate primes; HYP-9666 (C)",
+  "claim": "'(... the second differs at 9, where 3 | det G; Session261's kernel ... has the rank-1 law modulo 7 and 47)'; HYP-9666 (C) states as a conjecture 'not written out' that the law depends only on the Smith form.",
+  "problem": "This is a two-line theorem and could be part of (4): with G = P D Q, P, Q in GL_r(Z_p), D = diag(p^(e_i)), u^T G v = (P^T u)^T D (Q v) and u -> P^T u, v -> Q v are bijections of (Z/p^k)^r, so the law is the additive convolution of the scaled tables p^(e_i) a_i b_i. Then the two examples are instances, and 'rank-1 law modulo 7 and 47' is the case of elementary divisors (1, p) modulo p.",
+  "evidence": "audit/proof-5135/a4_kernels.out [K]: [[11,6],[6,3]] modulo 3, 9, 27 equals the convolution of the tables a1 b1 and 3 a2 b2 (counts by valuation modulo 9: 486, 1134, 1377 against the rank-2 law 648, 864, 945); Session261's kernel equals p^2 times the multiplication table modulo 7 (G = 2 [[1,1],[1,1]]) and 47, has the rank-2 law modulo 3, 5, 11, 13, and modulo 49 equals the convolution of a1 b1 and 7 a2 b2 (factors 6/7, 90/49, 97/49).",
+  "fix": "Add to (4): 'For every prime, the law of B modulo p^k is the additive convolution of the laws of p^(e_i) a_i b_i, p^(e_i) the elementary divisors of G over Z_p (Smith form)', typed PROVED, and retype HYP-9666 (C) accordingly.",
+  "id": "F039",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 status block (NEW list) and Remark 2; README line 98-99",
+  "claim": "NEW: '(1) ... with its table form', 'the commutative half of (5)'; Remark 2: 'rank 3 occurs in the join calculus (kernels with three visits, THM-5133 (A))'; README: 'the dihedral class sits one step below the quaternion class'.",
+  "problem": "No blocking prior art found, three small remarks. (i) The box version of the 'additive square of the product table' is in overnight_research_20261029/TWO_PORTS.md P5 (D_L(t) = sum_k f_L(k) f_L(k - t) counts the 2 x 2 matrices of determinant t in a box); worth a credit next to the modular-centres packet. (ii) The rule of squares s_a s_b s_c = eps is the polarization identity q(x+y) + q(x) + q(y) = commutator of THM-2887 eq. (4), stated there for the determinant commutator; the commutative classes are implied there only by 16 - 8. (iii) Remark 2 is right but THM-5133 (A) does not exhibit a kernel of rank 3 and HYP-9666 (B) says none was examined: I found them (see new evidence). README wording: by the number of units of square -1 the dihedral class (1) is two steps below the quaternion class (3), one step below is the bicomplex class; also in (1) the letter v denotes both the second state vector and the valuation.",
+  "evidence": "git grep on tracked files: 'tessarine' occurs only in the S92 README; 'bicomplex' in 29 other tracked files always means a double complex (THM-2551 file name, Mathlib HomologicalBicomplex, proof-carrier notes); 'additive convolution' / 'multiplicative convolution' hits (THM-2642, THM-4653, THM-414, context_prime_root_20261011, ...) are unrelated; no hit in canon or hypotheses for 'sigma_(r-1)', '240 sigma_3', 'six squares', 'eight squares', 'Ingham', 'integral octonion'. 05-knowledge/results/overnight_research_20261029/TWO_PORTS.md lines 159-169; THM-2887 lines 91-105, 150-170. audit/proof-5135/a6_identity_rank3.out [V].",
+  "fix": "Add the two credits (TWO_PORTS.md P5; THM-2887 (4) for the rule of squares); in Remark 2 cite an explicit kernel of rank 3; README: 'the dihedral class is the other non-commutative class, with one imaginary unit'.",
+  "id": "F041",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "README.md section 3 line 75; section 10 line 277 and its closing paragraph (lines 290-292); section 12 item (5); THM-5135 status line 17 and related line 33; HYP-9666 related line 16",
+  "claim": "'THM-5133 (D1) (kind-pasteur S23, same day, PRE-AUDIT)'; 'An observation for kind-pasteur's audit, not tested here: H(CD_4) = 198,335,025 with 21 automorphisms (THM-5133 (G)) equals H(T_15) with |Aut| = 21 of THM-448 ... the Cayley-Dickson sign tournaments are probably the June doubling tower'; next obligation '(5) the cross-reference between THM-5133 (G) and THM-448 once THM-5133 is audited'.",
+  "problem": "THM-5133 in this worktree is the audited version (PASS WITH CORRECTIONS, commit 3413be3b0a at 11:52, before the S92 checkpoints of 12:04 and 12:13). Its status and (G) already say 'CD_4 is T_15 of THM-448 (isomorphism found by the audit)' and 'CD_5 is not T_31 of THM-448', and credit THM-447, THM-448, THM-450 (5), THM-585. So the status label is stale, the observation is not new, obligation (5) is already done, and 'probably the June doubling tower' is false at n = 5.",
+  "evidence": "C:/tmp/wt-s92/01-canon/theorems/THM-5133-...md lines 5-6, 31-33, 161-163; git log (read only). Own check: .../audit/bridges-note/a5_cayley_dickson_vs_tower.out and a6_cd_tower_isomorphism.out: CD_3 = T_7 (H = 189); CD_4 isomorphic to T_15 (H = 198,335,025, 21 isomorphisms, explicit map printed; none to the converse); CD_5 is isomorphic neither to T_31 nor to its converse (complete backtracking, |Aut| = 21 on both sides), although its out-link / in-link path-count multisets are those of T_31 exchanged and the triple-intersection spectra agree.",
+  "fix": "Replace 'PRE-AUDIT' by 'audited the same day, PASS WITH CORRECTIONS' in the five places. Replace the closing paragraph of section 10 by: 'THM-5133 (G), as audited, identifies CD_3 with P_7 and CD_4 with T_15 of THM-448 and records that CD_5 is not T_31; the audit of this note confirms it (CD_5 is neither T_31 nor its converse). The reading of the doubling tower as a Cayley-Dickson tower is THM-450 (5).' Delete next obligation (5).",
+  "id": "F055",
+  "auditor": "bridges-note"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 status line 17 and related line 33; HYP-9666 related line 16; note section 3 line 75, section 10 line 277",
+  "claim": "THM-5133 is cited as 'PRE-AUDIT' / 'PRE-AUDIT, same day' / 'S23, PRE-AUDIT; cited at that status'.",
+  "problem": "Stale. THM-5133 was audited before the S92 checkpoints: its status in this worktree reads 'Independent audit: PASS WITH CORRECTIONS (5 majors, 22 minors, all applied; MISTAKE-762)'. The audit also refuted HYP-9664 (C) for n >= 5. The statements S92 uses ((D1), the matrix [[11,6],[6,3]] of (B), (G), (H)) are unchanged by the audit; [[5,2],[2,1]] is not printed in (B) but follows from (r, M) = (1, 1).",
+  "evidence": "01-canon/theorems/THM-5133-*.md lines 5-6; git log: bdb2f8edd8 (10:42:21, pre-audit), 3413be3b0a (11:52:18, audit applied), an ancestor of S92's 48b8a90146 (12:04:26) and ff37a34648 (12:13). git diff bdb2f8edd8 3413be3b0a on the file shows (D1) and the order-5 kernel untouched.",
+  "fix": "Replace 'PRE-AUDIT' at all five places by 'audited 2026-11-11, PASS WITH CORRECTIONS, MISTAKE-762'; in note section 10 write 'THM-5133 (audited) and HYP-9664 ((C) REFUTED for n >= 5 by that audit)'.",
+  "id": "F074",
+  "auditor": "prior-art"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9666 (C) and status line (\"(C) a conjecture that is elementary and not written out\")",
+  "claim": "\"Conjecture: for B(u, v) = u^T G v with uniform states modulo p^k, the class law depends only on the Smith normal form of G over Z_p ..., and is the additive convolution of the laws of the scaled tables p^(e_i) a_i b_i.\"",
+  "problem": "It is a three-line theorem and should be typed PROVED. Over the principal ideal domain Z_p, G = P D Q with P, Q in GL_r(Z_p) and D = diag(p^(e_1), ..., p^(e_r)) (p^infinity = 0). Modulo p^k the maps u -> P^T u and v -> Q v are bijections of (Z/p^k)^r, so (P^T u, Q v) is again uniform and independent and u^T G v = sum_i p^(e_i) a_i b_i: only min(e_i, k) matters; p = 2 included. Also the session's own check of [[11,6],[6,3]] at 3 (bridges_exact.out S5) only shows that the law is not the rank-2 law; the status line says \"Nothing here is tested numerically\" while (C) lists checked instances.",
+  "evidence": "smith_r2.out: full brute force over (u, v) for all 6561 matrices modulo 9, the 6561 matrices with entries in [-4, 4] modulo 27, entries in [-3, 3] modulo 25, all 4096 matrices modulo 8: in every Smith class (6, 7, 4, 10 classes) one law, equal to the convolution of the scaled tables; [[11,6],[6,3]] modulo 9 and 27 and Session261's [[149,72],[72,37]] modulo 7, 49, 47 have the law of a1 b1 + p a2 b2.",
+  "fix": "\"(C) Degenerate primes (PROVED, elementary). Over Z_p, G = P D Q with P, Q invertible and D = diag(p^(e_1), ..., p^(e_r)); modulo p^k, u -> P^T u and v -> Q v preserve the uniform law, so u^T G v has the law of sum p^(e_i) a_i b_i: the class law depends only on the Smith form (on min(e_i, k)) and is the additive convolution of the laws of the scaled tables, at p = 2 as well. FINITE-EXACT (audit, smith_r2.out): all 2 x 2 matrices modulo 9 and 8, entries in [-4, 4] modulo 27, [-3, 3] modulo 25.\" Status line: \"(C) PROVED (elementary)\"; move it to THM-5135 (4) if wished.",
+  "id": "F103",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9666 (A), last sentence; HYP-9666 introduction and THM-5135 (4) (\"two unimodular rank-4 forms\")",
+  "claim": "\"... and in every family the states are odd in their first two coordinates sums (H, h odd), so the law cannot hold at 2.\"",
+  "problem": "The sentence is ungrammatical and does not say what holds. For every pointed tournament (checked for all labelled ones of order <= 7): h = H(A - z) and H are odd, so in the state (h, H - h, U - h, d - h) the first coordinate is odd and the second even; moreover U = d and V = e (mod 2), so the third and fourth coordinates have the same parity. The states therefore fill an index-2 sublattice in the last two coordinates: in the path-mass coordinates a_o = (U + d)/2 - h, a_e = (U - d)/2 the corner is 2 (a_o b_o + a_e b_e), with Gram determinant -4. The Gram matrix [[1,1,0,0],[1,0,0,0],[0,0,1,0],[0,0,0,1]] of THM-5135 (4) is unimodular only in coordinates that the states do not fill, i.e. over Z[1/2]. The direct reason the law fails at 2 is simpler: H(A * B) is odd (Redei), while the uniform rank-4 law gives the class 0 modulo 2 the share 17/32.",
+  "evidence": "fusion_states.out: law (3) of Session264 verified on 5625 pairs of pointed tournaments of orders <= 4; for all labelled pointed tournaments of order <= 7: H, h odd, U = d and V = e (mod 2), and ((U-h) mod 4, (d-h) mod 4) takes exactly the 8 pairs of equal parity; rank_laws.out (17/32).",
+  "fix": "\"At the prime 2 the law fails in every family: H(A * B) is odd (Redei), while the uniform rank-4 law gives the class 0 modulo 2 the share 17/32. In the states: h = H(A - z) and H are path counts, hence odd, so the first coordinate is odd and the second even; and U = d (mod 2), so the last two coordinates have the same parity (in the path-mass coordinates a_o = (U + d)/2 - h, a_e = (U - d)/2 the corner is 2 (a_o b_o + a_e b_e)).\" In the introduction and in THM-5135 (4): \"the corner of Session264's fusion law (unimodular in the coordinates (U - h, d - h); the states satisfy U = d (mod 2) and on their lattice the corner has determinant -4, so it is unimodular at the odd primes only)\".",
+  "id": "F104",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9666 status line and (A): scope of THM-4916, the falsifier, the states",
+  "claim": "\"The only proved local law of a rank-4 form in the repository (THM-4916, two root changes) is NOT the uniform one.\"; \"for the root-change states of THM-4916 the factor at 0 is 1 + (3p - 2)(p - 1)/(2 p^3)\"; \"Falsifier: a family with proved equidistribution and a different factor.\"; \"whose fusion states (h, H - h, U - h, d - h) ... are equidistributed\".",
+  "problem": "(i) THM-4916 proves its factor in the letter-count model only; it lists the census (by-value) limit as NOT CLAIMED / OPEN, and HYP-9660 (A) conjectures a different by-value limit (sigma = 2 w_1 = 1.607 in place of 3/2). The hypothesis asks for equidistribution on cells, the by-value setting, so the scope must be stated. (ii) The falsifier is vacuous: for independent uniform states the factor is THM-5135 (1), a theorem, so a family with proved equidistribution cannot have a different factor. What would settle (A) negatively is a congruence confining the fusion states of every pointed tournament modulo an odd prime (as (D) does at 3 for module states). (iii) The law (3) pairs the LEFT state (h, H - h, U - h, d - h) of A with the RIGHT state (h', H' - h', V' - h', e' - h') of B; the prediction needs both equidistributed (by THM-5128 (A), with one side uniform the bias is the mass of the other side at the zero state).",
+  "evidence": "THM-4916 status (\"in the letter-count model\"; \"NOT CLAIMED: the limit of the census (height-weighted) factors, which is OPEN\"); HYP-9660 (A). fusion_states.out: over all labelled pointed tournaments of order <= 7 the states satisfy no affine relation modulo 3, 5 or 7 (all 81 residue vectors modulo 3 occur at order 7; 591 of 625 modulo 5). The numbers of (A) are correct: 83/81 = 1 + 2/81, 629/625 = 1 + 4/625, 34/27 and 151/125 for THM-4916 (rank_laws.out).",
+  "fix": "Status: \"The only proved local law of a rank-4 form in the repository (THM-4916, two root changes, letter-count model; its by-value limit is OPEN, HYP-9506 (A), HYP-9660 (A)) is NOT the uniform one.\" (A): \"... whose left states (h, H - h, U - h, d - h) and right states (h, H - h, V - h, e - h) are equidistributed modulo every odd p on the cells of the family ...\"; \"Known obstruction (letter-count model): ...\"; replace the falsifier by \"What would settle it negatively: a congruence satisfied modulo an odd prime by the fusion states of every pointed tournament, as (D) at 3 for module states. None exists among affine relations modulo 3, 5, 7 at orders <= 7 (audit, fusion_states.out).\"",
+  "id": "F105",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9666 (B) (and the scope of (D))",
+  "claim": "\"Kernels with three visits (THM-5133 (A)) give forms of rank 3. Prediction for uniform states: factor (1 - p^-3) sigma_2(p^v)/p^(2v) ...\"",
+  "problem": "For module states the prediction cannot hold at 3 or at 2, and the constraint of (D) is not special to the Gaussian kernel. P_2 = 2 u_2 and P_3 = 6 u_3, and modulo 3, P_2 = ((-1)^n + 1) H and P_m = 0 for m >= 3 (THM-4756, steps 2-3). So every kernel of THM-5133 (A), with any number of visits, satisfies H(K[A, B]) = c(|A| mod 2, |B| mod 2) H(A) H(B) (mod 3): at 3 every module kernel collapses to rank 1. The prediction also needs p not dividing det N (THM-5135 (4)).",
+  "evidence": "kernel_mod3.out: all labelled kernels of orders 3, 4, 5 with every ordered port pair (48 + 768 + 20,480), A and B over the 8 isomorphism classes of orders 1..4: 0 violations of H(K[A, B]) = c(parities) H(A) H(B) (mod 3). pi2_mod3.out. The formula of (B) and the six-squares criterion are correct (rank_laws.out: modulo 3, 9, 27, 5, 25, 7, 49, 13).",
+  "fix": "Add to (B): \"For module states (P_1, P_2, P_3) the prediction can concern only primes p >= 5 not dividing det N: P_2 = 2 u_2, P_3 = 6 u_3, and modulo 3 every kernel of THM-5133 (A), whatever its number of visits, is c(|A| mod 2, |B| mod 2) H(A) H(B) (THM-4756; audit: all kernels of order <= 5).\" In (D): \"Hence the Gaussian kernel ... (and, by the same congruences, every module kernel is a multiple of H(A) H(B) modulo 3)\".",
+  "id": "F106",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 status and related; HYP-9666 related; note sections 3, 10 (two places), 12 item (5)",
+  "claim": "\"THM-5133 ... PRE-AUDIT\" (four places); \"An observation for kind-pasteur's audit, not tested here: H(CD_4) = 198,335,025 with 21 automorphisms (THM-5133 (G)) equals H(T_15) ... the Cayley-Dickson sign tournaments are probably the June doubling tower.\"; \"Next: ... (5) the cross-reference between THM-5133 (G) and THM-448 once THM-5133 is audited.\"",
+  "problem": "THM-5133 was audited (PASS WITH CORRECTIONS, 5 majors, 22 minors, MISTAKE-762) in commit 3413be3b0a at 11:52:18, 21 minutes before the S92 draft commit ff37a34648 (12:13:50); the worktree holds the audited file. Its (G) now reads \"CD_4 is T_15 of THM-448 (isomorphism found by the audit)\" and \"CD_5 is not T_31 of THM-448\". So the observation is already in canon, and its extension to the whole tower is contradicted at n = 5. (The value 24,453,597 does occur in THM-450.)",
+  "evidence": "git log (read-only) for 01-canon/theorems/THM-5133-*.md and for the branch; THM-5133 status lines 5-6 and section (G); kps_s23 README section 8.",
+  "fix": "Replace \"PRE-AUDIT\" by \"audited the same day, PASS WITH CORRECTIONS\" in the four places. Replace the closing paragraph of section 10 by: \"THM-5133 (G), as audited, identifies CD_4 with T_15 of THM-448 and records that CD_5 is not T_31; the split-octonion and split-sedenion values 45 and 24,453,597 occur in THM-450 (7) (cross-reference only).\" Delete item (5) of 'Next'.",
+  "id": "F107",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "NOTE",
+  "where": "HYP-9665, HYP-9666, THM-5134: smaller points",
+  "claim": "(a) \"sigma\" denotes the sheet (c_sigma, kappa_sigma, S_sigma) and the divisor sum (sigma(n)/n) in the same formulas of THM-5134 and HYP-9665 (B). (b) HYP-9665 (C): \"at most 0.003 for b = 2, 4, 5, 10\". (c) HYP-9666 (A) does not mention HYP-9660 (D). (d) 05-knowledge/hypotheses/INDEX.md has no entry for HYP-9665, HYP-9666.",
+  "problem": "(a) THM-5128 reserved sigma for the sheet and wrote sigma_1 for the divisor sum; the new files drop that convention. (b) The complete census gives 0.0034 at b = 10. (c) HYP-9660 (D) holds the closest existing data on a higher-rank family (two-apex grammar G(2,0): factors within 0.0004 of 1 at 5, 7, 11, 13, which is below the rank-4 bias 4/625 at 5). (d) To be added at close-out.",
+  "evidence": "THM-5128 Setting, last line; second_digit_other_bases.out; HYP-9660 (D).",
+  "fix": "(a) Write sigma_1(n) for the divisor sum in THM-5134 and HYP-9665. (b) \"at most 0.0034\". (c) Add \"see HYP-9660 (D) for the two-apex grammar\". (d) Add the index lines.",
+  "id": "F110",
+  "auditor": "hypotheses"
+ }
+]

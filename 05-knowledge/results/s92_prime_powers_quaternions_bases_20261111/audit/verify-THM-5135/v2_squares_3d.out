@@ -1,0 +1,42 @@
+[1] (2): 2r squares against the hyperbolic form of rank r at odd p
+  ok   equal class counts iff r even or p = 1 (mod 4): moduli 3, 5, 7, 11, 13, 9, 25 (r <= 4), 27, 49 (r <= 3)
+  ok   zeros modulo p: p^(2r-1) + eta (p^r - p^(r-1)), eta = +1 for the hyperbolic form, -1 for the other class (p <= 13, r <= 4)
+  ok   discriminant of the hyperbolic form of rank r: (-1/4)^r, in the class of (-1)^r
+[2] (3)(a), (3)(c): the prime 2
+  ok   modulo  2: four squares differ from the rank-2 seam in 2 of 2 classes, eight squares from the rank-4 seam in 2; four-square factor at the odd classes: [Fraction(1, 1)]
+  ok   modulo 2: four squares [8, 8] against [10, 6]; zeros of eight squares 128 against 136
+  ok   modulo  4: four squares differ from the rank-2 seam in 4 of 4 classes, eight squares from the rank-4 seam in 4; four-square factor at the odd classes: [Fraction(1, 1)]
+  ok   modulo 4: [32, 64, 96, 64] against [88, 48, 72, 48]
+  ok   modulo  8: four squares differ from the rank-2 seam in 8 of 8 classes, eight squares from the rank-4 seam in 8; four-square factor at the odd classes: [Fraction(1, 1)]
+  ok   modulo 8: [128, 512, 768, 512, 384, 512, 768, 512] against [736, 384, 576, 384, 672, 384, 576, 384]
+  ok   modulo 16: four squares differ from the rank-2 seam in 16 of 16 classes, eight squares from the rank-4 seam in 16; four-square factor at the odd classes: [Fraction(1, 1)]
+  ok   modulo 32: four squares differ from the rank-2 seam in 32 of 32 classes, eight squares from the rank-4 seam in 32; four-square factor at the odd classes: [Fraction(1, 1)]
+  ok   modulo 64: four squares differ from the rank-2 seam in 64 of 64 classes, eight squares from the rank-4 seam in 64; four-square factor at the odd classes: [Fraction(1, 1)]
+[3] Jacobi, Hurwitz, eight squares (direct counts)
+  ok   r_4(n) = sum_(a+b=n) r_2(a) r_2(b) = 8 sigma_1(n), odd n <= 600
+  ok   r_4(n) = 8 sum_(d | n, 4 not | d) d, n <= 600
+  ok   r_8(n) = 16 sum_(d | n) (-1)^(n+d) d^3, n <= 300
+  ok   r_8(n) = 16 sigma_3(n) for odd n <= 300; r_8(2) = 112, 16 sigma_3(2) = 144
+  ok   even n <= 300: r_8(n) = 16 sigma_3(n) - 32 sum_(d | n, d odd) d^3 < 16 sigma_3(n)
+  ok   Hurwitz order: 24 * (sum of the odd divisors) for n <= 150; = 24 sigma_1(n) at odd n
+[4] (3)(d): 2-adic densities at the odd classes, Bernoulli ladder
+  ok   modulo 16, odd classes: Lipschitz [Fraction(1, 1)], Hurwitz order [Fraction(3, 2)], seam [Fraction(3, 4)]
+  ok   norm form of the Hurwitz order in the basis 1, i, j, (1 + i + j + k)/2: a^2 + b^2 + c^2 + d^2 + ad + bd + cd
+  ok   the same form counted directly, n <= 12: [24, 24, 96, 24, 144, 96, 192, 24, 312, 144, 288, 96]
+  ok   (2 pi)^r/((r-1)! zeta(r)) = 2r/|B_r| = [24, 240, 504, 480] for r = 2, 4, 6, 8
+  ok   (2 pi)^4/3! = 8 pi^4/3 and (8 pi^4/3)/zeta(4) = 240
+  ok   Hurwitz order: 2 pi^2 n * (3/2) * (8/pi^2) sigma_1(n)/n = 24 sigma_1(n) = 4 pi^2 n * sigma_1(n)/(zeta(2) n)
+[5] step of (3)(d): zero counts of quaternary quadratic forms by rank
+  ok   p = 3: all 59049 forms; zero counts by rank {0: [81], 1: [27], 2: [9, 45], 3: [27], 4: [21, 33]}
+  ok   p = 3: forms with the seam's number of zeros (33): 21060, all non-degenerate with polar determinant a square
+  ok   p = 5: 4200 sampled forms (all ranks): zero counts by rank {0: [625], 1: [125], 2: [25, 225], 3: [125], 4: [105, 145]}; p^3 + p^2 - p only at rank 4 with square polar determinant
+  ok   p = 7: 4200 sampled forms (all ranks): zero counts by rank {0: [2401], 1: [343], 2: [49, 637], 3: [343], 4: [301, 385]}; p^3 + p^2 - p only at rank 4 with square polar determinant
+  ok   2 p^3 - p^2 - (p^3 + p^2 - p) = p (p - 1)^2
+  ok   F_2: 1024 forms; with 10 zeros: 280, of which with non-degenerate polar form: 280
+       F_2 histogram (zeros, polar form non-degenerate) -> forms: {(4, False): 35, (6, True): 168, (8, False): 435, (10, True): 280, (12, False): 105, (16, False): 1}
+  ok   280 = |GL_4(2)| / |O+_4(2)| = 20160 / 72
+[6] Ingham: sum_(m < n) d(m) d(n - m) against (6/pi^2) sigma_1(n) ln^2 n
+  ok   n = 720720: count 251387860, ratio to the main term 0.6994 (quoted 0.7)
+  ok   n = 999983: count 136248872, ratio to the main term 1.1742 (quoted 1.17)
+  ok   the sum is the number of solutions of a1 a2 + b1 b2 = n in positive integers (n <= 40)
+ALL CHECKS PASSED

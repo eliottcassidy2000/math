@@ -1,0 +1,11 @@
+1. c_d m^2 = J_2(m/d) = #{gcd(alpha, beta, m) = d} and sum_d c_d = 1: exact for the 68 odd moduli 3..135 and 225
+2. fibres of w -> a w1 + b w2 mod m: every multiple of d = gcd(a, b, m) on exactly m d vectors, nothing else: exact, 34770 forms (all (a, b); odd m <= 45 and 49, 63, 75, 81)
+3. #{a1 a2 + u b1 b2 = c mod m} = m^3 L_m(c) for every class c: exact, 204 (m, u) pairs (odd m <= 135 and 225; u = 1, 2, 4)
+4. L_m = product of the prime-power formulas (v < k: (1+1/p)(1-p^(-v-1)) = (1-p^-2) sigma(p^v)/p^v; v >= k: 1+1/p-p^(-k-1)); mean over classes = 1; mean of L_(p^k) over p | e is 1-1/p^2+1/p: exact
+   values:  L_9 = ['8/9', '32/27', '35/27']   L_27 = ['8/9', '32/27', '104/81', '107/81']   L_25 = ['24/25', '144/125', '149/125']
+   floats:  L_9 = ['0.8889', '1.1852', '1.2963']   L_27 = ['0.8889', '1.1852', '1.2840', '1.3210']   L_25 = ['0.9600', '1.1520', '1.1920']   L_49 = ['0.9796', '1.1195', '1.1399']   L_45(g0=1,3,5,9,15,45) = ['0.8533', '1.1378', '1.0311', '1.2444', '1.3748', '1.5037']
+5. control, even m = 2, form a1 a2 + b1 b2 with ALL residues: classes where count != m^3 L_m: [] (the formula is a statement about uniform states; it holds for even m too: True)
+5. control, even m = 4, form a1 a2 + b1 b2 with ALL residues: classes where count != m^3 L_m: [] (the formula is a statement about uniform states; it holds for even m too: True)
+5. control, even m = 6, form a1 a2 + b1 b2 with ALL residues: classes where count != m^3 L_m: [] (the formula is a statement about uniform states; it holds for even m too: True)
+5. control, even m = 8, form a1 a2 + b1 b2 with ALL residues: classes where count != m^3 L_m: [] (the formula is a statement about uniform states; it holds for even m too: True)
+5. control, even m = 12, form a1 a2 + b1 b2 with ALL residues: classes where count != m^3 L_m: [] (the formula is a statement about uniform states; it holds for even m too: True)

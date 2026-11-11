@@ -1,0 +1,11 @@
+  ok   2^30: triples sheet 0 / sheet 1 = 3658114303 / 4649378323
+  ok   2^30: every triple of type d has d | N - c_sigma (0 violations)
+    remainder of the first-order law (times m), sheet 0 / sheet 1, 2^30: 9: 0.01196 / 0.02082;  27: 0.01637 / 0.02344;  81: 0.01740 / 0.02625;  25: 0.00318 / 0.00341;  125: 0.00341 / 0.00414;  49: 0.05765 / 0.07922;  45: 0.02050 / 0.02881;  75: 0.01578 / 0.02061
+  ok   2^30: the sixteen remainders of the audit's summary_tables.out are reproduced to five decimals
+  ok   note: 0.012 / 0.021 at 9 and 0.058 / 0.079 at 49
+    49, sheet 0: g0 = 7 measured 1.1557, first-order 1.1147, limit 1.1195; g0 = 49 measured 1.1818, first-order 1.1242, limit 1.1399; closer to the first-order value: [False, False]
+  ok   2^30, sheet 0: at 49 both groups with g0 > 1 are closer to the limit than to the first-order value
+    49, sheet 1: g0 = 7 measured 1.1686, first-order 1.1028, limit 1.1195; g0 = 49 measured 1.1904, first-order 1.1112, limit 1.1399; closer to the first-order value: [False, False]
+  ok   2^30, sheet 1: at 49 both groups with g0 > 1 are closer to the limit than to the first-order value
+(50 s)
+ALL CHECKS PASSED

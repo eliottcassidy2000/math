@@ -1,0 +1,62 @@
+registered moduli: [9, 27, 81, 25, 125, 49, 45, 75]
+registered tol: {9: 0.04, 27: 0.04, 81: 0.045, 25: 0.008, 125: 0.009, 49: 0.115, 45: 0.045, 75: 0.035}
+registered flat: {9: 0.025, 27: 0.027, 81: 0.03, 25: 0.005, 125: 0.008, 49: 0.075, 45: 0.045, 75: 0.04}
+
+=== (a) from my own census of the window [2^27, 2^28): triples [442236323, 561401507]
+  m =   9 sheet 0: max |group mean - registered prediction| = 0.0234 (tol 0.040, ok, used 58% of tol);  max class deviation from group mean = 0.0120 (flat 0.025, ok, used 48%)
+  m =   9 sheet 1: max |group mean - registered prediction| = 0.0268 (tol 0.040, ok, used 67% of tol);  max class deviation from group mean = 0.0129 (flat 0.025, ok, used 51%)
+  m =  27 sheet 0: max |group mean - registered prediction| = 0.0276 (tol 0.040, ok, used 69% of tol);  max class deviation from group mean = 0.0127 (flat 0.027, ok, used 47%)
+  m =  27 sheet 1: max |group mean - registered prediction| = 0.0279 (tol 0.040, ok, used 70% of tol);  max class deviation from group mean = 0.0145 (flat 0.027, ok, used 54%)
+  m =  81 sheet 0: max |group mean - registered prediction| = 0.0316 (tol 0.045, ok, used 70% of tol);  max class deviation from group mean = 0.0140 (flat 0.030, ok, used 47%)
+  m =  81 sheet 1: max |group mean - registered prediction| = 0.0279 (tol 0.045, ok, used 62% of tol);  max class deviation from group mean = 0.0152 (flat 0.030, ok, used 51%)
+  m =  25 sheet 0: max |group mean - registered prediction| = 0.0028 (tol 0.008, ok, used 35% of tol);  max class deviation from group mean = 0.0014 (flat 0.005, ok, used 29%)
+  m =  25 sheet 1: max |group mean - registered prediction| = 0.0036 (tol 0.008, ok, used 44% of tol);  max class deviation from group mean = 0.0018 (flat 0.005, ok, used 36%)
+  m = 125 sheet 0: max |group mean - registered prediction| = 0.0035 (tol 0.009, ok, used 39% of tol);  max class deviation from group mean = 0.0028 (flat 0.008, ok, used 34%)
+  m = 125 sheet 1: max |group mean - registered prediction| = 0.0039 (tol 0.009, ok, used 44% of tol);  max class deviation from group mean = 0.0033 (flat 0.008, ok, used 42%)
+  m =  49 sheet 0: max |group mean - registered prediction| = 0.0761 (tol 0.115, ok, used 66% of tol);  max class deviation from group mean = 0.0585 (flat 0.075, ok, used 78%)
+  m =  49 sheet 1: max |group mean - registered prediction| = 0.0908 (tol 0.115, ok, used 79% of tol);  max class deviation from group mean = 0.0606 (flat 0.075, ok, used 81%)
+  m =  45 sheet 0: max |group mean - registered prediction| = 0.0254 (tol 0.045, ok, used 57% of tol);  max class deviation from group mean = 0.0206 (flat 0.045, ok, used 46%)
+  m =  45 sheet 1: max |group mean - registered prediction| = 0.0304 (tol 0.045, ok, used 68% of tol);  max class deviation from group mean = 0.0240 (flat 0.045, ok, used 53%)
+  m =  75 sheet 0: max |group mean - registered prediction| = 0.0144 (tol 0.035, ok, used 41% of tol);  max class deviation from group mean = 0.0225 (flat 0.040, ok, used 56%)
+  m =  75 sheet 1: max |group mean - registered prediction| = 0.0205 (tol 0.035, ok, used 59% of tol);  max class deviation from group mean = 0.0212 (flat 0.040, ok, used 53%)
+P1 (16 cases): CONFIRMED;  P2 (16 cases): CONFIRMED;  P3: 14 of 14 -> CONFIRMED
+P4 (remainder of (B) at 2^28 against 2^26), from my census; noise = sqrt(m/#T) of the same sheet:
+  m =   9 sheet 0: 2^26 0.02356 -> 2^28 0.02383  change +0.00027  (NOT smaller)   noise 2^26 0.00021, 2^28 0.00010; change / combined noise = +1.1
+  m =   9 sheet 1: 2^26 0.02029 -> 2^28 0.01854  change -0.00175  (smaller)   noise 2^26 0.00019, 2^28 0.00009; change / combined noise = -8.3
+  m =  27 sheet 0: 2^26 0.02934 -> 2^28 0.02921  change -0.00013  (smaller)   noise 2^26 0.00037, 2^28 0.00018; change / combined noise = -0.3
+  m =  27 sheet 1: 2^26 0.02216 -> 2^28 0.02708  change +0.00492  (NOT smaller)   noise 2^26 0.00033, 2^28 0.00016; change / combined noise = +13.5
+  m =  81 sheet 0: 2^26 0.03395 -> 2^28 0.03138  change -0.00257  (smaller)   noise 2^26 0.00064, 2^28 0.00031; change / combined noise = -3.6
+  m =  81 sheet 1: 2^26 0.02309 -> 2^28 0.03081  change +0.00772  (NOT smaller)   noise 2^26 0.00057, 2^28 0.00027; change / combined noise = +12.2
+  m =  25 sheet 0: 2^26 0.00367 -> 2^28 0.00354  change -0.00013  (smaller)   noise 2^26 0.00035, 2^28 0.00017; change / combined noise = -0.3
+  m =  25 sheet 1: 2^26 0.00495 -> 2^28 0.00374  change -0.00121  (smaller)   noise 2^26 0.00032, 2^28 0.00015; change / combined noise = -3.5
+  m = 125 sheet 0: 2^26 0.00470 -> 2^28 0.00477  change +0.00007  (NOT smaller)   noise 2^26 0.00079, 2^28 0.00038; change / combined noise = +0.1
+  m = 125 sheet 1: 2^26 0.00657 -> 2^28 0.00483  change -0.00175  (smaller)   noise 2^26 0.00071, 2^28 0.00034; change / combined noise = -2.2
+  m =  49 sheet 0: 2^26 0.13044 -> 2^28 0.09316  change -0.03728  (smaller)   noise 2^26 0.00050, 2^28 0.00024; change / combined noise = -67.6
+  m =  49 sheet 1: 2^26 0.12524 -> 2^28 0.10282  change -0.02242  (smaller)   noise 2^26 0.00044, 2^28 0.00021; change / combined noise = -45.7
+P4: smaller in 8 of 12 pairs (registered threshold: at least 8) -> CONFIRMED
+   (for reference: P(at least 8 of 12) under independent fair coin flips = 0.1938)
+
+=== (b) from the stored session outputs as printed
+P1: CONFIRMED; P2: CONFIRMED; P3: 14 of 14
+P4 from cum_26.out / cum_28.out: smaller in 8 of 12; not smaller at: 9 sheet 0, 27 sheet 1, 81 sheet 1, 125 sheet 0
+
+=== discriminating power of the registered P1 tolerances (would other laws pass P1 on this window?)
+    alternatives evaluated against the MEASURED group means of the window:
+    FLAT = every class factor 1;  LIMIT = L_m(g0) of THM-5134 (D);  PRIME-LEVEL = factor depends only on the
+    primes dividing g0 (the measured mean over all classes sharing the same radical of g0, i.e. the law of THM-5128 (C)).
+  m =   9 sheet 0: tol 0.040 | max |measured - 1| = 0.4483 (flat rejected) | max |measured - limit| = 0.1520 (limit rejected) | max |measured - prime-level mean| = 0.1512 (prime-level rejected) | max |registered prediction - 1| = 0.4249 (ok)
+  m =   9 sheet 1: tol 0.040 | max |measured - 1| = 0.4645 (flat rejected) | max |measured - limit| = 0.1682 (limit rejected) | max |measured - prime-level mean| = 0.1582 (prime-level rejected) | max |registered prediction - 1| = 0.4377 (ok)
+  m =  27 sheet 0: tol 0.040 | max |measured - 1| = 0.4627 (flat rejected) | max |measured - limit| = 0.1571 (limit rejected) | max |measured - prime-level mean| = 0.1656 (prime-level rejected) | max |registered prediction - 1| = 0.4350 (ok)
+  m =  27 sheet 1: tol 0.040 | max |measured - 1| = 0.4708 (flat rejected) | max |measured - limit| = 0.1774 (limit rejected) | max |measured - prime-level mean| = 0.1645 (prime-level rejected) | max |registered prediction - 1| = 0.4461 (ok)
+  m =  81 sheet 0: tol 0.045 | max |measured - 1| = 0.4698 (flat rejected) | max |measured - limit| = 0.1571 (limit rejected) | max |measured - prime-level mean| = 0.1728 (prime-level rejected) | max |registered prediction - 1| = 0.4382 (ok)
+  m =  81 sheet 1: tol 0.045 | max |measured - 1| = 0.4752 (flat rejected) | max |measured - limit| = 0.1774 (limit rejected) | max |measured - prime-level mean| = 0.1688 (prime-level rejected) | max |registered prediction - 1| = 0.4482 (ok)
+  m =  25 sheet 0: tol 0.008 | max |measured - 1| = 0.2381 (flat rejected) | max |measured - limit| = 0.0779 (limit rejected) | max |measured - prime-level mean| = 0.0066 (PRIME-LEVEL would pass) | max |registered prediction - 1| = 0.2409 (ok)
+  m =  25 sheet 1: tol 0.008 | max |measured - 1| = 0.2460 (flat rejected) | max |measured - limit| = 0.0878 (limit rejected) | max |measured - prime-level mean| = 0.0050 (PRIME-LEVEL would pass) | max |registered prediction - 1| = 0.2496 (ok)
+  m = 125 sheet 0: tol 0.009 | max |measured - 1| = 0.2386 (flat rejected) | max |measured - limit| = 0.0779 (limit rejected) | max |measured - prime-level mean| = 0.0071 (PRIME-LEVEL would pass) | max |registered prediction - 1| = 0.2421 (ok)
+  m = 125 sheet 1: tol 0.009 | max |measured - 1| = 0.2475 (flat rejected) | max |measured - limit| = 0.0878 (limit rejected) | max |measured - prime-level mean| = 0.0065 (PRIME-LEVEL would pass) | max |registered prediction - 1| = 0.2496 (ok)
+  m =  49 sheet 0: tol 0.115 | max |measured - 1| = 0.1949 (flat rejected) | max |measured - limit| = 0.0550 (LIMIT would pass) | max |measured - prime-level mean| = 0.0221 (PRIME-LEVEL would pass) | max |registered prediction - 1| = 0.1188 (ok)
+  m =  49 sheet 1: tol 0.115 | max |measured - 1| = 0.1959 (flat rejected) | max |measured - limit| = 0.0559 (LIMIT would pass) | max |measured - prime-level mean| = 0.0184 (PRIME-LEVEL would pass) | max |registered prediction - 1| = 0.1051 (prediction within tol of FLAT everywhere: P1 cannot reject flat data)
+  m =  45 sheet 0: tol 0.045 | max |measured - 1| = 0.6915 (flat rejected) | max |measured - limit| = 0.1878 (limit rejected) | max |measured - prime-level mean| = 0.1595 (prime-level rejected) | max |registered prediction - 1| = 0.6763 (ok)
+  m =  45 sheet 1: tol 0.045 | max |measured - 1| = 0.7081 (flat rejected) | max |measured - limit| = 0.2044 (limit rejected) | max |measured - prime-level mean| = 0.1668 (prime-level rejected) | max |registered prediction - 1| = 0.6956 (ok)
+  m =  75 sheet 0: tol 0.035 | max |measured - 1| = 0.5338 (flat rejected) | max |measured - limit| = 0.1258 (limit rejected) | max |measured - prime-level mean| = 0.0135 (PRIME-LEVEL would pass) | max |registered prediction - 1| = 0.5350 (ok)
+  m =  75 sheet 1: tol 0.035 | max |measured - 1| = 0.5424 (flat rejected) | max |measured - limit| = 0.1344 (limit rejected) | max |measured - prime-level mean| = 0.0097 (PRIME-LEVEL would pass) | max |registered prediction - 1| = 0.5467 (ok)

@@ -1,0 +1,36 @@
+(G) p^k * P(u . v = c) by valuation of c, uniform states, seam of rank r: exact = formula ?
+  p^k =   9, r = 1: v=0: 2/3, v=1: 4/3, v=2: 7/3   ok
+  p^k =   9, r = 2: v=0: 8/9, v=1: 32/27, v=2: 35/27   ok
+  p^k =   9, r = 3: v=0: 26/27, v=1: 260/243, v=2: 263/243   ok
+  p^k =   9, r = 4: v=0: 80/81, v=1: 2240/2187, v=2: 2243/2187   ok
+  p^k =  27, r = 1: v=0: 2/3, v=1: 4/3, v=2: 2, v=3: 3   ok
+  p^k =  27, r = 2: v=0: 8/9, v=1: 32/27, v=2: 104/81, v=3: 107/81   ok
+  p^k =  27, r = 3: v=0: 26/27, v=1: 260/243, v=2: 2366/2187, v=3: 2369/2187   ok
+  p^k =  27, r = 4: v=0: 80/81, v=1: 2240/2187, v=2: 60560/59049, v=3: 60563/59049   ok
+  p^k =  25, r = 1: v=0: 4/5, v=1: 8/5, v=2: 13/5   ok
+  p^k =  25, r = 2: v=0: 24/25, v=1: 144/125, v=2: 149/125   ok
+  p^k =  25, r = 3: v=0: 124/125, v=1: 3224/3125, v=2: 3229/3125   ok
+  p^k =  25, r = 4: v=0: 624/625, v=1: 78624/78125, v=2: 78629/78125   ok
+  p^k =  49, r = 1: v=0: 6/7, v=1: 12/7, v=2: 19/7   ok
+  p^k =  49, r = 2: v=0: 48/49, v=1: 384/343, v=2: 391/343   ok
+  p^k =  49, r = 3: v=0: 342/343, v=1: 17100/16807, v=2: 17107/16807   ok
+  p^k =  49, r = 4: v=0: 2400/2401, v=1: 825600/823543, v=2: 825607/823543   ok
+  p^k =   8, r = 1: v=0: 1/2, v=1: 1, v=2: 3/2, v=3: 5/2   ok
+  p^k =   8, r = 2: v=0: 3/4, v=1: 9/8, v=2: 21/16, v=3: 23/16   ok
+  p^k =   8, r = 3: v=0: 7/8, v=1: 35/32, v=2: 147/128, v=3: 149/128   ok
+  p^k =  16, r = 1: v=0: 1/2, v=1: 1, v=2: 3/2, v=3: 2, v=4: 3   ok
+  p^k =  16, r = 2: v=0: 3/4, v=1: 9/8, v=2: 21/16, v=3: 45/32, v=4: 47/32   ok
+  p^k =  16, r = 3: v=0: 7/8, v=1: 35/32, v=2: 147/128, v=3: 595/512, v=4: 597/512   ok
+kernel [[1, 2], [3, 5]] (det -1) modulo 27: the law of rank 2: True
+(F) class counts of a1 a2 + 2 b1 b2 and of a^2 + b^2 + c^2 + d^2 modulo p^k:
+  modulo   9: equal for every class: True
+  modulo  27: equal for every class: True
+  modulo  25: equal for every class: True
+  modulo  49: equal for every class: True
+  modulo 121: equal for every class: True
+kernel K = [[149, 72], [72, 37]] (det 329 = 7 * 47): p * P(K(u, v) = c) for uniform u, v modulo p
+  p =  5: class 0: 29/25, class 1: 24/25  -> rank 2 law
+  p =  7: class 0: 13/7, class 1: 6/7  -> rank 1 law
+  p = 47: class 0: 93/47, class 1: 46/47  -> rank 1 law
+  K(h, c; g, d) = 2 (h + c)(g + d) modulo 7: True
+ALL CHECKS PASSED

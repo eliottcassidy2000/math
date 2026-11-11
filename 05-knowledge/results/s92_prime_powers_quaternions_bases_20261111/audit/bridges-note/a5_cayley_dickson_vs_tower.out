@@ -1,0 +1,39 @@
+CD_3 (7 vertices)
+    regular: True
+    doubly regular: True
+    H: 189
+    triple out-intersections: [(0, 28), (1, 7)]
+T_7 of the THM-448 tower
+    regular: True
+    doubly regular: True
+    H: 189
+    triple out-intersections: [(0, 28), (1, 7)]
+CD_4 (15 vertices)
+    regular: True
+    doubly regular: True
+    H: 198335025
+    out-link H: [(171, 7), (189, 8)]
+    in-link H: [(171, 7), (189, 8)]
+    triple out-intersections: [(0, 28), (1, 336), (2, 84), (3, 7)]
+T_15 of the THM-448 tower
+    regular: True
+    doubly regular: True
+    H: 198335025
+    out-link H: [(171, 7), (189, 8)]
+    in-link H: [(171, 7), (189, 8)]
+    triple out-intersections: [(0, 28), (1, 336), (2, 84), (3, 7)]
+CD_5 (31 vertices)
+    regular: True
+    doubly regular: True
+    out-link H: [(195884241, 1), (196503411, 7), (197147697, 7), (197403849, 7), (198335025, 9)]
+    in-link H: [(196179375, 7), (196908495, 1), (197147697, 7), (197568027, 7), (198335025, 9)]
+    triple out-intersections: [(0, 28), (1, 84), (2, 252), (3, 3192), (4, 812), (5, 84), (6, 28), (7, 15)]
+T_31 of the THM-448 tower
+    regular: True
+    doubly regular: True
+    out-link H: [(196179375, 7), (196908495, 1), (197147697, 7), (197568027, 7), (198335025, 9)]
+    in-link H: [(195884241, 1), (196503411, 7), (197147697, 7), (197403849, 7), (198335025, 9)]
+    triple out-intersections: [(0, 28), (1, 84), (2, 252), (3, 3192), (4, 812), (5, 84), (6, 28), (7, 15)]
+n = 3: invariants of CD_3 and T_7 agree (up to converse): True
+n = 4: invariants of CD_4 and T_15 agree (up to converse): True
+n = 5: invariants of CD_5 and T_31 agree (up to converse): True

@@ -1,0 +1,126 @@
+independent census (auditor proof-5134-AE), X = 2^13
+
+====================================================================================================
+modulus 9   divisors [1, 3, 9]   c_d = ['0.88889', '0.09877', '0.01235']
+  sheet 0: fast census == brute-force ordered enumeration (every (type, class) cell)
+  sheet 0: #T = 12312  diagonal = 34  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.11582   (D without diagonal, as defined)   0.11810 (diagonal counted in D)   worst class M = 1 (N = 0 mod 9)
+     sampling noise sqrt(m/#T) = 0.02704
+     type shares F_d = D^(d)/#T :  d=1: 0.78541 (c_d 0.88889, ratio 0.8836)  d=3: 0.16992 (c_d 0.09877, ratio 1.7204)  d=9: 0.04191 (c_d 0.01235, ratio 3.3947)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.07776  d=3: +0.05347  d=9: +0.02222
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.7985  Phi(g0) 0.7854  limit L_m 0.8889  max|class - Phi| 0.1158
+        g0=3: factor 1.3099  Phi(g0) 1.2952  limit L_m 1.1852  max|class - Phi| 0.0879
+        g0=9: factor 1.5892  Phi(g0) 1.6724  limit L_m 1.2963  max|class - Phi| 0.0832
+  sheet 1: fast census == brute-force ordered enumeration (every (type, class) cell)
+  sheet 1: #T = 14973  diagonal = 101  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.21138   (D without diagonal, as defined)   0.22347 (diagonal counted in D)   worst class M = 0 (N = 0 mod 9)
+     sampling noise sqrt(m/#T) = 0.02452
+     type shares F_d = D^(d)/#T :  d=1: 0.77339 (c_d 0.88889, ratio 0.8701)  d=3: 0.17552 (c_d 0.09877, ratio 1.7771)  d=9: 0.04435 (c_d 0.01235, ratio 3.5921)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.10555  d=3: +0.07014  d=9: +0.02924
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.8245  Phi(g0) 0.7734  limit L_m 0.8889  max|class - Phi| 0.1829
+        g0=3: factor 1.2827  Phi(g0) 1.2999  limit L_m 1.1852  max|class - Phi| 0.0737
+        g0=9: factor 1.4877  Phi(g0) 1.6991  limit L_m 1.2963  max|class - Phi| 0.2114
+
+====================================================================================================
+modulus 15   divisors [1, 3, 5, 15]   c_d = ['0.85333', '0.10667', '0.03556', '0.00444']
+  sheet 0: fast census == brute-force ordered enumeration (every (type, class) cell)
+  sheet 0: #T = 12312  diagonal = 34  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.18153   (D without diagonal, as defined)   0.18372 (diagonal counted in D)   worst class M = 1 (N = 0 mod 15)
+     sampling noise sqrt(m/#T) = 0.03490
+     type shares F_d = D^(d)/#T :  d=1: 0.70906 (c_d 0.85333, ratio 0.8309)  d=3: 0.21183 (c_d 0.10667, ratio 1.9859)  d=5: 0.07635 (c_d 0.03556, ratio 2.1473)  d=15: 0.00000 (c_d 0.00444, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.10841  d=3: +0.07902  d=5: +0.03065  d=15: -0.00334
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.6954  Phi(g0) 0.7091  limit L_m 0.8533  max|class - Phi| 0.1815
+        g0=3: factor 1.3642  Phi(g0) 1.3445  limit L_m 1.1733  max|class - Phi| 0.0787
+        g0=5: factor 1.2110  Phi(g0) 1.0908  limit L_m 1.0311  max|class - Phi| 0.1263
+        g0=15: factor 1.5582  Phi(g0) 1.7263  limit L_m 1.4178  max|class - Phi| 0.1680
+  sheet 1: fast census == brute-force ordered enumeration (every (type, class) cell)
+  sheet 1: #T = 14973  diagonal = 101  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.20470   (D without diagonal, as defined)   0.19729 (diagonal counted in D)   worst class M = 5 (N = 5 mod 15)
+     sampling noise sqrt(m/#T) = 0.03165
+     type shares F_d = D^(d)/#T :  d=1: 0.68857 (c_d 0.85333, ratio 0.8069)  d=3: 0.21986 (c_d 0.10667, ratio 2.0612)  d=5: 0.08482 (c_d 0.03556, ratio 2.3855)  d=15: 0.00000 (c_d 0.00444, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.15057  d=3: +0.10345  d=5: +0.04502  d=15: -0.00406
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.7239  Phi(g0) 0.6886  limit L_m 0.8533  max|class - Phi| 0.1800
+        g0=3: factor 1.2918  Phi(g0) 1.3482  limit L_m 1.1733  max|class - Phi| 0.1410
+        g0=5: factor 1.2267  Phi(g0) 1.1127  limit L_m 1.0311  max|class - Phi| 0.2047
+        g0=15: factor 1.5879  Phi(g0) 1.7723  limit L_m 1.4178  max|class - Phi| 0.1844
+
+====================================================================================================
+modulus 25   divisors [1, 5, 25]   c_d = ['0.96000', '0.03840', '0.00160']
+  sheet 0: fast census == brute-force ordered enumeration (every (type, class) cell)
+  sheet 0: #T = 12312  diagonal = 34  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.19185   (D without diagonal, as defined)   0.18917 (diagonal counted in D)   worst class M = 17 (N = 16 mod 25)
+     sampling noise sqrt(m/#T) = 0.04506
+     type shares F_d = D^(d)/#T :  d=1: 0.92089 (c_d 0.96000, ratio 0.9593)  d=5: 0.07635 (c_d 0.03840, ratio 1.9882)  d=25: 0.00000 (c_d 0.00160, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.02939  d=5: +0.02852  d=25: -0.00120
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.9183  Phi(g0) 0.9209  limit L_m 0.9600  max|class - Phi| 0.1918
+        g0=5: factor 1.3757  Phi(g0) 1.3026  limit L_m 1.1520  max|class - Phi| 0.1634
+        g0=25: factor 1.1310  Phi(g0) 1.3026  limit L_m 1.1920  max|class - Phi| 0.1716
+  sheet 1: fast census == brute-force ordered enumeration (every (type, class) cell)
+  sheet 1: #T = 14973  diagonal = 101  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.14346   (D without diagonal, as defined)   0.13725 (diagonal counted in D)   worst class M = 1 (N = 1 mod 25)
+     sampling noise sqrt(m/#T) = 0.04086
+     type shares F_d = D^(d)/#T :  d=1: 0.90844 (c_d 0.96000, ratio 0.9463)  d=5: 0.08482 (c_d 0.03840, ratio 2.2088)  d=25: 0.00000 (c_d 0.00160, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.04712  d=5: +0.04242  d=25: -0.00146
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.9132  Phi(g0) 0.9084  limit L_m 0.9600  max|class - Phi| 0.1435
+        g0=5: factor 1.3416  Phi(g0) 1.3325  limit L_m 1.1520  max|class - Phi| 0.0383
+        g0=25: factor 1.3691  Phi(g0) 1.3325  limit L_m 1.1920  max|class - Phi| 0.0366
+
+====================================================================================================
+modulus 27   divisors [1, 3, 9, 27]   c_d = ['0.88889', '0.09877', '0.01097', '0.00137']
+  sheet 0: fast census == brute-force ordered enumeration (every (type, class) cell)
+  sheet 0: #T = 12312  diagonal = 34  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.31051   (D without diagonal, as defined)   0.31473 (diagonal counted in D)   worst class M = 0 (N = 26 mod 27)
+     sampling noise sqrt(m/#T) = 0.04683
+     type shares F_d = D^(d)/#T :  d=1: 0.78541 (c_d 0.88889, ratio 0.8836)  d=3: 0.16992 (c_d 0.09877, ratio 1.7204)  d=9: 0.04191 (c_d 0.01097, ratio 3.8191)  d=27: 0.00000 (c_d 0.00137, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.07776  d=3: +0.05347  d=9: +0.02325  d=27: -0.00103
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.7985  Phi(g0) 0.7854  limit L_m 0.8889  max|class - Phi| 0.1626
+        g0=3: factor 1.3099  Phi(g0) 1.2952  limit L_m 1.1852  max|class - Phi| 0.1855
+        g0=9: factor 1.7029  Phi(g0) 1.6724  limit L_m 1.2840  max|class - Phi| 0.1412
+        g0=27: factor 1.3618  Phi(g0) 1.6724  limit L_m 1.3210  max|class - Phi| 0.3105
+  sheet 1: fast census == brute-force ordered enumeration (every (type, class) cell)
+  sheet 1: #T = 14973  diagonal = 101  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.31958   (D without diagonal, as defined)   0.33166 (diagonal counted in D)   worst class M = 18 (N = 18 mod 27)
+     sampling noise sqrt(m/#T) = 0.04246
+     type shares F_d = D^(d)/#T :  d=1: 0.77339 (c_d 0.88889, ratio 0.8701)  d=3: 0.17552 (c_d 0.09877, ratio 1.7771)  d=9: 0.04435 (c_d 0.01097, ratio 4.0411)  d=27: 0.00000 (c_d 0.00137, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.10555  d=3: +0.07014  d=9: +0.03050  d=27: -0.00125
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.8245  Phi(g0) 0.7734  limit L_m 0.8889  max|class - Phi| 0.2472
+        g0=3: factor 1.2827  Phi(g0) 1.2999  limit L_m 1.1852  max|class - Phi| 0.2000
+        g0=9: factor 1.5057  Phi(g0) 1.6991  limit L_m 1.2840  max|class - Phi| 0.3196
+        g0=27: factor 1.4516  Phi(g0) 1.6991  limit L_m 1.3210  max|class - Phi| 0.2474
+
+====================================================================================================
+modulus 45   divisors [1, 3, 5, 9, 15, 45]   c_d = ['0.85333', '0.09481', '0.03556', '0.01185', '0.00395', '0.00049']
+  sheet 0: fast census == brute-force ordered enumeration (every (type, class) cell)
+  sheet 0: #T = 12312  diagonal = 34  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.39514   (D without diagonal, as defined)   0.39969 (diagonal counted in D)   worst class M = 0 (N = 44 mod 45)
+     sampling noise sqrt(m/#T) = 0.06046
+     type shares F_d = D^(d)/#T :  d=1: 0.70906 (c_d 0.85333, ratio 0.8309)  d=3: 0.16992 (c_d 0.09481, ratio 1.7921)  d=5: 0.07635 (c_d 0.03556, ratio 2.1473)  d=9: 0.04191 (c_d 0.01185, ratio 3.5362)  d=15: 0.00000 (c_d 0.00395, ratio 0.0000)  d=45: 0.00000 (c_d 0.00049, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.10841  d=3: +0.05644  d=5: +0.03065  d=9: +0.02259  d=15: -0.00297  d=45: -0.00037
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.6954  Phi(g0) 0.7091  limit L_m 0.8533  max|class - Phi| 0.3363
+        g0=3: factor 1.2509  Phi(g0) 1.2188  limit L_m 1.1378  max|class - Phi| 0.2724
+        g0=5: factor 1.2110  Phi(g0) 1.0908  limit L_m 1.0311  max|class - Phi| 0.2104
+        g0=9: factor 1.5908  Phi(g0) 1.5960  limit L_m 1.2444  max|class - Phi| 0.2498
+        g0=15: factor 1.5461  Phi(g0) 1.6006  limit L_m 1.3748  max|class - Phi| 0.0947
+        g0=45: factor 1.5826  Phi(g0) 1.9777  limit L_m 1.5037  max|class - Phi| 0.3951
+  sheet 1: fast census == brute-force ordered enumeration (every (type, class) cell)
+  sheet 1: #T = 14973  diagonal = 101  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.43345   (D without diagonal, as defined)   0.44767 (diagonal counted in D)   worst class M = 0 (N = 0 mod 45)
+     sampling noise sqrt(m/#T) = 0.05482
+     type shares F_d = D^(d)/#T :  d=1: 0.68857 (c_d 0.85333, ratio 0.8069)  d=3: 0.17552 (c_d 0.09481, ratio 1.8511)  d=5: 0.08482 (c_d 0.03556, ratio 2.3855)  d=9: 0.04435 (c_d 0.01185, ratio 3.7417)  d=15: 0.00000 (c_d 0.00395, ratio 0.0000)  d=45: 0.00000 (c_d 0.00049, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.15057  d=3: +0.07375  d=5: +0.04502  d=9: +0.02970  d=15: -0.00361  d=45: -0.00045
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.7239  Phi(g0) 0.6886  limit L_m 0.8533  max|class - Phi| 0.2762
+        g0=3: factor 1.2086  Phi(g0) 1.2151  limit L_m 1.1378  max|class - Phi| 0.2665
+        g0=5: factor 1.2267  Phi(g0) 1.1127  limit L_m 1.0311  max|class - Phi| 0.3690
+        g0=9: factor 1.4584  Phi(g0) 1.6142  limit L_m 1.2444  max|class - Phi| 0.4151
+        g0=15: factor 1.5793  Phi(g0) 1.6392  limit L_m 1.3748  max|class - Phi| 0.2056
+        g0=45: factor 1.6049  Phi(g0) 2.0383  limit L_m 1.5037  max|class - Phi| 0.4334

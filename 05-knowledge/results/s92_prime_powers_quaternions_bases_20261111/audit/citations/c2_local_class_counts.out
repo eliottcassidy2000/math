@@ -1,0 +1,51 @@
+L1 N_m(t) = sum_{d | gcd(t, m)} d phi(m/d), all m <= 200, all classes: failures 0
+L2 rank-r law at prime powers (r-fold additive power of the table), exact:
+   primes 2, 3, 5, 7, 11, 13, ranks r = 1..5, 17 (p, k) cases: failures 0
+   p^k = 8, r = 2: (valuation, p^k P) = [(0, '3/4'), (1, '9/8'), (2, '21/16'), (3, '23/16')]
+   p^k = 8, r = 4: (valuation, p^k P) = [(0, '15/16'), (1, '135/128'), (2, '1095/1024'), (3, '1097/1024')]
+   p^k = 9, r = 2: (valuation, p^k P) = [(0, '8/9'), (1, '32/27'), (2, '35/27')]
+   p^k = 9, r = 4: (valuation, p^k P) = [(0, '80/81'), (1, '2240/2187'), (2, '2243/2187')]
+L3 (N_m * N_m)(c) = m^3 L_m(c), every odd 3 <= m <= 201 (100 moduli): failures 0
+   with one table multiplied by any unit u (12 odd moduli, all units): failures 0
+   m =  2 (even, outside the statement): (N*N)(c)/m^3 = ['5/4', '3/4'] ; L_m(c) = ['5/4', '3/4']
+   m =  4 (even, outside the statement): (N*N)(c)/m^3 = ['11/8', '3/4', '9/8', '3/4'] ; L_m(c) = ['11/8', '3/4', '9/8', '3/4']
+   m =  8 (even, outside the statement): (N*N)(c)/m^3 = ['23/16', '3/4', '9/8', '3/4', '21/16', '3/4', '9/8', '3/4'] ; L_m(c) = ['23/16', '3/4', '9/8', '3/4', '21/16', '3/4', '9/8', '3/4']
+   m =  6 (even, outside the statement): (N*N)(c)/m^3 = ['55/36', '2/3', '10/9', '11/12', '10/9', '2/3'] ; L_m(c) = ['55/36', '2/3', '10/9', '11/12', '10/9', '2/3']
+   m = 12 (even, outside the statement): (N*N)(c)/m^3 = ['121/72', '2/3', '1', '11/12', '11/9', '2/3', '11/8', '2/3', '11/9', '11/12', '1', '2/3'] ; L_m(c) = ['121/72', '2/3', '1', '11/12', '11/9', '2/3', '11/8', '2/3', '11/9', '11/12', '1', '2/3']
+L4 sum of 2r squares against the hyperbolic form of rank r:
+   modulo p in {3,5,7,11,13,17,19}, r = 1..4: 'equal iff r even or p = 1 (4)' failures 0; zero-count formula failures 0
+   modulo 9, 27, 81, 25, 125, 49, 121, 169 (r <= 4, r <= 2 above 81): failures 0
+   four squares = a1 a2 + u b1 b2 for every unit u, modulo 9, 27, 25, 49, 121: failures 0
+   four squares modulo 81, 125, 49, 121: m * share = (1 - p^-2) sigma(p^v)/p^v (v < k): failures 0
+L5 the prime 2:
+   modulo  2: four squares differ from a1 a2 + b1 b2: True ; four-square factor at every odd class = 1: True
+      four squares, m * share by class: ['1', '1']
+      a1a2 + b1b2 , m * share by class: ['5/4', '3/4']
+   modulo  4: four squares differ from a1 a2 + b1 b2: True ; four-square factor at every odd class = 1: True
+      four squares, m * share by class: ['1/2', '1', '3/2', '1']
+      a1a2 + b1b2 , m * share by class: ['11/8', '3/4', '9/8', '3/4']
+   modulo  8: four squares differ from a1 a2 + b1 b2: True ; four-square factor at every odd class = 1: True
+      four squares, m * share by class: ['1/4', '1', '3/2', '1', '3/4', '1', '3/2', '1']
+      a1a2 + b1b2 , m * share by class: ['23/16', '3/4', '9/8', '3/4', '21/16', '3/4', '9/8', '3/4']
+   modulo 16: four squares differ from a1 a2 + b1 b2: True ; four-square factor at every odd class = 1: True
+   modulo 32: four squares differ from a1 a2 + b1 b2: True ; four-square factor at every odd class = 1: True
+   four squares modulo 64, m * share by 2-adic valuation of the class: {0: ['1'], 1: ['3/2'], 2: ['3/4'], 3: ['3/8'], 4: ['3/16'], 5: ['3/32']}
+   modulo  2: eight squares differ from the rank-4 seam: True ; eight-square factor at odd classes = 1: True
+   modulo  4: eight squares differ from the rank-4 seam: True ; eight-square factor at odd classes = 1: True
+   modulo  8: eight squares differ from the rank-4 seam: True ; eight-square factor at odd classes = 1: True
+   modulo 16: eight squares differ from the rank-4 seam: True ; eight-square factor at odd classes = 1: True
+L6 E8 form x^T C x / 2 against the rank-4 seam:
+   modulo  2: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [2.5s]
+      counts: [136, 120]
+   modulo  4: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [0.0s]
+      counts: [17536, 15360, 17280, 15360]
+   modulo  8: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [0.0s]
+      counts: [2246656, 1966080, 2211840, 1966080, 2242560, 1966080, 2211840, 1966080]
+   modulo  3: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [0.0s]
+   modulo  9: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [0.0s]
+   modulo  5: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [0.0s]
+   modulo  7: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [0.0s]
+   modulo 2: Z^8 (eight squares) counts: [128, 128]
+   modulo 4: Z^8 (eight squares) counts: [18432, 16384, 14336, 16384]
+   modulo 8: Z^8 (eight squares) counts: [2392064, 2097152, 1835008, 2097152, 2326528, 2097152, 1835008, 2097152]
+ALL CHECKS PASSED

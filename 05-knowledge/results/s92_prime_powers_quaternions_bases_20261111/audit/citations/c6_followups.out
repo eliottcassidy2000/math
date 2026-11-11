@@ -1,0 +1,18 @@
+F1 (N_m * N_m)(c) = m^3 L_m(c) for every 1 <= m <= 150 (even m included): failures 0
+F2 zeros modulo 2 among the 256 vectors: H^4 136, H^3 + A 120, E8 (x^T C x / 2) 136, Z^8 128
+   determinants: H^4: (-1)^4 = 1; H^3 + A: (-1)^3 * 3 = -3 (not a 2-adic square class of 1); E8: 1; Z^8: 1
+F3 Z[i]^2: count = sum_{ab=n} r_2(a) r_2(b) for n <= 60: True
+   Z-span of {1, i, j, ij} = {(z1, z2) : z1 = z2 (mod 2)}: half of the Z[i]^2 count at every odd n: True; zero at every n = 2 (mod 4): True
+   n = 1..16: Z[i]^2 [16, 32, 0, 48, 64, 0, 0, 64, 32, 128, 0, 0, 64, 0, 0, 80]
+              span   [8, 0, 0, 16, 32, 0, 0, 0, 16, 0, 0, 0, 32, 0, 0, 16]
+   units: Z[i]^2 has 16 (C_4 x C_4), the span has 8 (C_4 x C_2)
+F4 base  5, p = 13: first p-divisible state (h, X, y) = (6, 26, 13)  not balanced
+F4 base  3, p =  7: first p-divisible state (h, X, y) = (3, 7, 7)  balanced
+F4 base 10, p =  7: first p-divisible state (h, X, y) = (3, 21, 7)  not balanced
+F4 base  2, p =  7: first p-divisible state (h, X, y) = (38, 63, 77)  not balanced
+F5 2-adic densities at odd classes modulo 16: Z^4 (Lipschitz) ['1'] ; Hurwitz order ['3/2']
+   Siegel: Lipschitz pi^2 n * 1 * (8/pi^2) sigma(n)/n = 8 sigma(n); Hurwitz (covolume 1/2) 2 pi^2 n * (3/2) * (8/pi^2) sigma(n)/n = 24 sigma(n)
+F6 r = 2: (2 pi)^r / ((r-1)! zeta(r)) = 24.000000 ; 2r/|B_r| = 24
+F6 r = 4: (2 pi)^r / ((r-1)! zeta(r)) = 240.000000 ; 2r/|B_r| = 240
+F6 r = 6: (2 pi)^r / ((r-1)! zeta(r)) = 504.000000 ; 2r/|B_r| = 504
+F6 r = 8: (2 pi)^r / ((r-1)! zeta(r)) = 480.000000 ; 2r/|B_r| = 480

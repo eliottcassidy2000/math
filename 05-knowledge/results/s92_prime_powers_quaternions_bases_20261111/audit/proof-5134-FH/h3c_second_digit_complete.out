@@ -1,0 +1,7 @@
+complete census, sheet s >= 1, N_b <= 2^24: max_c |b * share((N_b - 1)/b = c mod b) - 1|   (every_base.out printed value)
+  b =  2: #T = 57818155; flat to 0.0000   (printed 0.000);  factors [1.0, 1.0]
+  b =  3: #T = 35564915; flat to 0.0405   (printed 0.040);  factors [0.9891, 0.9705, 1.0405]
+  b =  4: #T = 24947862; flat to 0.0009   (printed 0.001);  factors [1.0009, 0.9993, 0.9996, 1.0001]
+  b =  5: #T = 18838778; flat to 0.0016   (printed 0.002);  factors [1.0011, 0.9996, 0.9984, 0.9996, 1.0013]
+  b =  6: #T = 14919260; flat to 0.0522   (printed 0.052);  factors [1.0182, 0.9491, 1.0317, 1.019, 0.9478, 1.0341]
+  b = 10: #T = 7634213; flat to 0.0034   (printed 0.003);  factors [1.0003, 1.0031, 0.9973, 0.9987, 0.9996, 1.0034, 0.9988, 1.0012, 0.9986, 0.9989]

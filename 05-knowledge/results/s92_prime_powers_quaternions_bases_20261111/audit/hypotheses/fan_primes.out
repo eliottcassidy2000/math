@@ -1,0 +1,85 @@
+# fan_primes.py (auditor hypotheses; own code); states h < 2^26
+balanced states (x = y) below 2^26: [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432]
+p   ord_p(2)  t   fan h=2^(t-1)   first state of type p   fan is first?   fan < p^2 ?
+  3     2     1  2^0   1   True   True
+  5     4     2  2^1   2   True   True
+  7     3   odd order: no t with p | 2^t + 1; first state of type p: 38
+ 11    10     5  2^4   16   True   True
+ 13    12     6  2^5   32   True   True
+ 17     8     4  2^3   8   True   True
+ 19    18     9  2^8   218   False   True
+ 23    11   odd order: no t with p | 2^t + 1; first state of type p: 103
+ 29    28    14  2^13   1435   False   False
+ 31     5   odd order: no t with p | 2^t + 1; first state of type p: 8664
+ 37    36    18  2^17   1350   False   False
+ 41    20    10  2^9   266   False   True
+ 43    14     7  2^6   64   True   True
+ 47    23   odd order: no t with p | 2^t + 1; first state of type p: 399
+ 53    52    26  2^25   609   False   False
+ 59    58    29  2^28   1091   False   False
+ 61    60    30  2^29   5886   False   False
+ 67    66    33  2^32   2914   False   False
+ 71    35   odd order: no t with p | 2^t + 1; first state of type p: 1881
+ 73     9   odd order: no t with p | 2^t + 1; first state of type p: 13030
+ 79    39   odd order: no t with p | 2^t + 1; first state of type p: 6438
+ 83    82    41  2^40   15645   False   False
+ 89    11   odd order: no t with p | 2^t + 1; first state of type p: 1379
+ 97    48    24  2^23   21679   False   False
+101   100    50  2^49   13180   False   False
+103    51   odd order: no t with p | 2^t + 1; first state of type p: 16531
+107   106    53  2^52   695   False   False
+109    36    18  2^17   17712   False   False
+113    28    14  2^13   8192   True   True
+127     7   odd order: no t with p | 2^t + 1; first state of type p: 109283
+131   130    65  2^64   16702   False   False
+137    68    34  2^33   4589   False   False
+139   138    69  2^68   2710   False   False
+149   148    74  2^73   6630   False   False
+151    15   odd order: no t with p | 2^t + 1; first state of type p: 46432
+157    52    26  2^25   41369   False   False
+163   162    81  2^80   68867   False   False
+167    83   odd order: no t with p | 2^t + 1; first state of type p: 35821
+173   172    86  2^85   36416   False   False
+179   178    89  2^88   12977   False   False
+181   180    90  2^89   20362   False   False
+191    95   odd order: no t with p | 2^t + 1; first state of type p: 6207
+193    96    48  2^47   75173   False   False
+197   196    98  2^97   4038   False   False
+199    99   odd order: no t with p | 2^t + 1; first state of type p: 28556
+211   210   105  2^104   3270   False   False
+223    37   odd order: no t with p | 2^t + 1; first state of type p: 63666
+227   226   113  2^112   2156   False   False
+229    76    38  2^37   76142   False   False
+233    29   odd order: no t with p | 2^t + 1; first state of type p: 18057
+239   119   odd order: no t with p | 2^t + 1; first state of type p: 51743
+241    24    12  2^11   2048   True   True
+251    50    25  2^24   23970   False   False
+257    16     8  2^7   128   True   True
+263   131   odd order: no t with p | 2^t + 1; first state of type p: 79294
+269   268   134  2^133   109079   False   False
+271   135   odd order: no t with p | 2^t + 1; first state of type p: 123982
+277    92    46  2^45   38087   False   False
+281    70    35  2^34   24025   False   False
+283    94    47  2^46   57307   False   False
+293   292   146  2^145   29446   False   False
+307   102    51  2^50   148741   False   False
+311   155   odd order: no t with p | 2^t + 1; first state of type p: 29700
+313   156    78  2^77   11111   False   False
+317   316   158  2^157   52146   False   False
+331    30    15  2^14   16384   True   True
+337    21   odd order: no t with p | 2^t + 1; first state of type p: 23084
+347   346   173  2^172   194840   False   False
+349   348   174  2^173   45544   False   False
+353    88    44  2^43   22415   False   False
+359   179   odd order: no t with p | 2^t + 1; first state of type p: 14180
+367   183   odd order: no t with p | 2^t + 1; first state of type p: 61105
+373   372   186  2^185   70683   False   False
+379   378   189  2^188   462569   False   False
+383   191   odd order: no t with p | 2^t + 1; first state of type p: 24703
+389   388   194  2^193   413312   False   False
+397    44    22  2^21   21239   False   False
+
+primes p < 200 with even order whose fan is the first state of type p: [3, 5, 11, 13, 17, 43, 113]
+primes 200 < p < 400 with the same property: [241, 257, 331]
+primes p < 200 with even order whose fan is NOT the first state of type p: [19, 29, 37, 41, 53, 59, 61, 67, 83, 97, 101, 107, 109, 131, 137, 139, 149, 157, 163, 173, 179, 181, 193, 197]
+primes p < 200 with odd order (no fan): [7, 23, 31, 47, 71, 73, 79, 89, 103, 127, 151, 167, 191, 199]

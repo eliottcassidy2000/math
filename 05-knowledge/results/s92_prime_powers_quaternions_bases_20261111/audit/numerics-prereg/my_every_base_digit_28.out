@@ -1,0 +1,4 @@
+sheet s >= 1, N_b <= 2^28
+    b =  3:  667632240 triples (diagonal 14884); N = 1 (mod b) fails 0 times; second digit: max_c |b share(alpha_1 = c) - 1| = 0.023; largest rem 0.054; p=3: N = 1 (mod p); p=5: class 0 factor 1.096 [0.976, 0.976] F p^2=0.61 rem=0.002 viol=0; p=7: class 0 factor 1.314 [0.894, 0.991] F p^2=3.01 rem=0.054 viol=0; p=11: class 0 factor 1.044 [0.992, 0.997] F p^2=0.52 rem=0.004 viol=0; p=13: class 0 factor 1.032 [0.996, 0.999] F p^2=0.51 rem=0.004 viol=0  (8 s)
+    b =  6:  280437250 triples (diagonal 9906); N = 1 (mod b) fails 0 times; second digit: max_c |b share(alpha_1 = c) - 1| = 0.029; largest rem 0.073; p=3: N = 1 (mod p); p=5: class 0 factor 1.106 [0.973, 0.974] F p^2=0.66 rem=0.000 viol=0; p=7: class 0 factor 0.935 [0.965, 1.060] F p^2=0.07 rem=0.073 viol=0; p=11: class 0 factor 1.042 [0.992, 0.999] F p^2=0.57 rem=0.005 viol=0; p=13: class 0 factor 1.022 [0.996, 1.001] F p^2=0.28 rem=0.003 viol=0  (3 s)
+sheet s = 0, N_b <= 2^0

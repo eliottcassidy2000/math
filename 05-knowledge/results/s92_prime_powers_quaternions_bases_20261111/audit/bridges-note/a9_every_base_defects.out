@@ -1,0 +1,6 @@
+b =  2: complete 57818155 ; table 2^21 55894783 ; table 2^21 + skip 55892593 ; every_base.out 55892593 ; reproduced: True ; missing 1925562 (3.330 %)
+b =  3: complete 35564915 ; table 2^21 35519317 ; table 2^21 + skip 35516685 ; every_base.out 35516685 ; reproduced: True ; missing 48230 (0.136 %)
+b =  4: complete 24947862 ; table 2^21 24947862 ; table 2^21 + skip 24945520 ; every_base.out 24945520 ; reproduced: True ; missing 2342 (0.009 %)
+b =  5: complete 18838778 ; table 2^21 18838778 ; table 2^21 + skip 18836356 ; every_base.out 18836356 ; reproduced: True ; missing 2422 (0.013 %)
+b =  6: complete 14919260 ; table 2^21 14919260 ; table 2^21 + skip 14916908 ; every_base.out 14916908 ; reproduced: True ; missing 2352 (0.016 %)
+b = 10: complete 7634213 ; table 2^21 7634213 ; table 2^21 + skip 7632149 ; every_base.out 7632149 ; reproduced: True ; missing 2064 (0.027 %)

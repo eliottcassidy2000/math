@@ -1,0 +1,476 @@
+files scanned: 551 of 562
+====================================================================================================
+PATTERN: four-square / Jacobi r_4    regex: four[- ]square|r_4\b|8 ?sigma\(n\)|8σ
+  01-canon/MISTAKES.md  (1 lines)
+     21178: - Notation: `R_5` versus `R_4`.
+  05-knowledge/results/INDEX.md  (2 lines)
+       899: - [Gilbreath's sea as the Frobenius tower of the Fermat numbers; the five Fermat primes and the five Platonic solids; THM-4511, the wall theorem for size-4 defects](gilbreath_fermat_platonic_20260926.md): **PROVED small statements
+     16196: | `smith_diagram_of_the_metagraph_opus_S307.py` | [STORED] | The Smith diagram of G_n: transitivity resistance (R_4 = 3/7 exact; R_5, R_6 exact; R_7 float), harmonic potentials with the PERFECT potential-axis concordance through n
+  -> files: 2
+====================================================================================================
+PATTERN: Ingham    regex: Ingham
+  05-knowledge/results/character_of_two_records_20261111/README.md  (1 lines)
+       507: - *A ladder of folds along a Cunningham chain.* Refuted at the first step (section 8).
+  -> files: 1
+====================================================================================================
+PATTERN: quaternion    regex: quaternion
+  01-canon/MISTAKES.md  (4 lines)
+      6513: ## MISTAKE-506 (2026-08-25, Bernoulli--Hurwitz reflection) -- denominator primes were promoted to quaternion ramification and a finite p-adic value was called a pole
+      6516: Hamilton quaternion algebra ramifies at the finite primes `2,3,7`, that its
+      6527: divisor-set proof survive. The corrected reflection withdraws the quaternion
+     22116: - the note over-corrected the Hurwitz quaternion remark, since (2,3,7) is the unit group of the Hurwitz order over
+  01-canon/theorems/THM-5133-flip-and-spin-kernel-signature-sign-tournaments-of-twisted-algebras-and-the-pg32-extremal-theorems.md  (2 lines)
+         3: title: "Flip and spin for Hamiltonian path counts. (A) Visit matrix: for a tournament K with two ports, H(K[A, B]) = sum N_ij P_i(A) P_j(B) with N_ij the number of walks of K visiting the ports i and j times and every other vertex
+       164: (`42 [n-1 choose 3]_2`, Wilmot's count for every `n`). Split forms: the split quaternions give the transitive
+  05-knowledge/hypotheses/INDEX.md  (1 lines)
+        83: - **THM-4700 (2026-10-18, mac-mini-2026-10-18-unitpath; audited by G1, MISTAKE-637; MISTAKE-635):** [THM-4700](../../01-canon/theorems/THM-4700-the-unit-path-ring-of-the-six-colour-field-short-reciprocal-walks-and-the-heron-census
+  05-knowledge/results/INDEX.md  (4 lines)
+         3: - [Flip and spin for path counts: the signature of two-port kernels, sign tournaments of twisted group algebras, and extremal theorems on PG(3,2) and PG(4,2)](kps_s23_flip_spin_kernels_20261111/README.md) (2026-11-11, kind-pasteur
+     17067: | `lrc14_quaternionic_arf_semantic_v4_carry_no_go_thm2887.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2887] | The THM-2884 nonzero-support parity is the Arf-one determinant refinement on `V4`; its unique a
+     17074: | `lrc14_dicyclic_reverse_action_joint_carrier_thm2889.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2889] | Selector provenance and carry-edge reversal are the independent characters `det(QB,-)` and `det(QA
+     17076: | `LRCResidualSemilatticeNoGo.lean` | [PROVED + LEAN-VERIFIED; THM-2894] | Literal danger deletion factors through finite label support, hence is commutative, idempotent, and remains order-blind after every unmarked continuation. 
+  05-knowledge/results/kps_s23_flip_spin_kernels_20261111/PREREGISTRATION.md  (1 lines)
+        40: spans a quaternion algebra iff it is a cyclic triangle; on a transitive line two of the three left
+  05-knowledge/results/kps_s23_flip_spin_kernels_20261111/README.md  (9 lines)
+         5: (split-complex, zero divisors, reflections) versus "spinny" ones (complex, quaternions, octonions), a table
+        22: reading is THM-450 (5)). A line `{a, b, a+b}` is a cyclic triangle iff it spans Hamilton's quaternions, and a
+        23: transitive triangle iff it spans the split quaternions, with the one unit of square `-1` as its middle vertex
+        32: tournaments with quaternionic lines it is 42, the value of the sedenions. On `PG(4, 2)` the doubling is beaten:
+  05-knowledge/results/kps_s23_flip_spin_kernels_20261111/audit/AUDIT.md  (2 lines)
+        25: extremal among sign patterns with quaternionic lines") and THM-5133 (F5) are statements about `n = 4` and are
+        53: among sign patterns with quaternionic lines" to `n = 4` everywhere. If a replacement hypothesis is wanted it must
+  05-knowledge/results/kps_s23_flip_spin_kernels_20261111/runs/cd_split_planes_counts.txt  (3 lines)
+         1: quaternions (-1,-1): squares -1 on 3 units, +1 on 0; anticommuting True; lines 1, cyclic 1; line rule holds: True; scores [1]
+         4: split quaternions (-1,+1): squares -1 on 1 units, +1 on 2; anticommuting True; lines 1, cyclic 0; line rule holds: True; scores [0, 1, 2]
+         7: split quaternions (+1,+1): squares -1 on 1 units, +1 on 2; anticommuting True; lines 1, cyclic 0; line rule holds: True; scores [0, 1, 2]
+  05-knowledge/results/session265_converse_dyadic_20261111/doubling/PROOF.md  (1 lines)
+        26: provides additional inspiration: quaternion lines, zero-divisor parity and
+  -> files: 9
+====================================================================================================
+PATTERN: E8 / octonion order    regex: \bE8\b|E_8|integral octonion
+  00-navigation/PROBLEM-LEDGER.md  (2 lines)
+       229: - **Sphere packing dims 8 & 24 (E8/Leech via {7,21})** [MODERATE, cross-problem] —
+       230: Fano→octonion→[8,4,4]→E8 and T₂₃→Golay→Leech chains; Cohn–Elkies magic function =
+  01-canon/MISTAKES.md  (19 lines)
+      2500: - **Finite-frame loss and repair.** Three-bit plus parity is nonlinear: q(1) XOR q(2)=7 differs from q(3)=3. Retaining the polar carry transports the Fano addition and exchanges E8 glue classes over D8. The [current synthesis](../
+      4733: - "Every fact here is a face of three": `ord_7(2) = 3` and `χ_(−7)(2) = 1` are equivalent, and the Chudnovsky, E8/744 and `C_7` sections are not faces at all;
+      4898: - **Correct framing:** `|bP_{4k}| = 2^{2k-2}(2^{2k-1}-1) num(4B_k/k)`; `|Theta_7| = 28`, `|Theta_11| = 992`, `|Theta_15| = 16256 = 2 * 8128`; the Euclid factor `2^{p-1}(2^p-1)` is perfect exactly when `2^p - 1` is a Mersenne prime
+      6039: `tau(E_8(50))=14` repair-hypergraph theorem, its complete bounded
+  05-knowledge/hypotheses/INDEX.md  (2 lines)
+        49: - **THM-4825, THM-4826, HYP-9429 (2026-10-27, opus-2026-10-27-S66; PROVED / CITED / PRIOR ART credited / FINITE-EXACT / OPEN; independently audited, SOUND WITH CORRECTIONS, [AUDIT](../../04-computation/experiments/two_grids_class_
+        58: - **THM-4758, THM-4759, THM-4760, HYP-9368 (2026-10-22, opus-2026-10-22-S53; independently audited, MISTAKE-662, [audit](../../04-computation/experiments/deep_holes_theta_20261022/audit_S53/REPORT.md); HYP-9369, HYP-9370 released 
+  05-knowledge/results/INDEX.md  (18 lines)
+       129: - [Six roots, hidden bits, and exact port memory](six_roots_hidden_bits_20261103/README.md) (2026-11-03): **PROVED scoped / FINITE-EXACT / universal reentry OPEN.** An all-size rooted-ear formula distinguishes every port of E_n fo
+       131: - [Six roots, hidden bits, and exact port memory](six_roots_hidden_bits_20261103/README.md) (2026-11-03): **PROVED scoped / FINITE-EXACT / universal reentry OPEN.** An all-size rooted-ear formula distinguishes every port of E_n fo
+       381: - [The Eisenstein grid as a half-shifted copy of the first grid; 13 and 37; sums of four fourth powers](eisenstein_two_grids_13_37_fourth_powers_20261027.md): **(mac-mini-2026-10-27-slab) PROVED / FINITE-EXACT / typed numerology, 
+       382: - [The Eisenstein grid as a half-shifted copy of the first grid; 13 and 37; sums of four fourth powers](eisenstein_two_grids_13_37_fourth_powers_20261027.md): **(mac-mini-2026-10-27-slab) PROVED / FINITE-EXACT / typed numerology, 
+  05-knowledge/results/endpoint_coverage_compiler_20261111/AUDIT.md  (1 lines)
+        61: - E8 excludes only the stated inflation-only additive-counter compiler.
+  05-knowledge/results/endpoint_coverage_compiler_20261111/CONNECTIONS.md  (2 lines)
+        83: ## E8 A natural register and a precise Zeckendorf obstruction
+       170: |Zeckendorf|Guarded two-register numeral update to a requested graph compiler|Digit value and shift when both are retained|E8's integer-root obstruction excludes the stated inflation-only model. Carry legality and graph legality m
+  05-knowledge/results/kps_s22_sign_flip_towers_20261110/audit/AUDIT.md  (1 lines)
+        58: | (e) H3 | `aud_defg.py` E1-E8 | five 9-grid pairs as tabulated, `N(9, r, s)` for `r = 1, 2`; carrier: port in-degree 1 (in-neighbour 7), not beaten by the root, states `(1, 360, 135, 92)`, `(1, 704, 263, 178)`, `(1, 1392, 519, 35
+  05-knowledge/results/session257_permutohedron_squares_20261111/history/sources/05-knowledge__results__session40_marked_ports_square_sum_20261023__square-sum__README.md  (2 lines)
+       168: |17|`E_8=1`|0|1|
+       174: |28|`E_8+E_21=1+4`|`F_(8,21)=47`|52|
+  -> files: 8
+====================================================================================================
+PATTERN: prime-power factor    regex: sigma\(p\^|prime[- ]power (law|factor|modul)|odd prime powers
+  01-canon/MISTAKES.md  (8 lines)
+      2026: - **What was written.** In `collatz_sticky_20260927_size_coupled_persistence.md`, Theorem 1(b)'s proof: "`1 + p^2 + ... + p^(e-1)`, the second factor a sum of `(e + 1)/2` odd terms, so `v_2(sigma(p^e)) = v_2(p + 1) + v_2((e + 1)/2
+      9970: prime-power factorial stub at `THM-3141`.  The reservation command actually
+      9985: prime-power factorial stub moved from `THM-3141` to `THM-3142`, leaving the
+     15400: prime-power factors `<= 25` <=> `q | L`) are height-independent, but witnesses at FREE
+  01-canon/theorems/THM-5128-f1-by-value-local-densities-first-order-class-law.md  (5 lines)
+         3: title: "By-value local densities of the one-arc join family F1. (A) Exact class law of a bilinear gluing: for independent states u ~ D1, v ~ D2 in (Z/p)^r and a nondegenerate bilinear form B, P(B(u,v) = c) = 1/p + (pi1 + pi2 - p^-
+        14: included). NUMERICAL only: the by-value law modulo odd prime powers in (D3) (the factor for independent
+        22: HYP-9660 (B), OPEN; odd prime-power moduli are numerical only.
+       188: has `gcd(g, m) = d`. Odd prime-power moduli are not covered by (C): see (D3).
+  05-knowledge/hypotheses/HYP-9660-local-densities-beyond-one-root-change-two-changes-uniform-gap-sign-of-ap-two-apex-bias-at-three.md  (1 lines)
+       168: uniform in the modulus. For prime-power moduli the by-value class law is numerical only (THM-5128 (D3)). A
+  05-knowledge/hypotheses/HYP-9661-every-line-d-plus-2u-carries-a-positive-share-of-one-vertex-sources.md  (1 lines)
+       181: prime-power moduli
+  05-knowledge/hypotheses/INDEX.md  (1 lines)
+        62: - **THM-4750 / HYP-9361 (AUDITED 2026-10-21, mac-mini-2026-10-21-fanopsp; MISTAKE-654; [THM-4750](../../01-canon/theorems/THM-4750-the-camion-function-half-speed-interpolation-and-the-camion-lift.md), [audit](../results/camion_fun
+  05-knowledge/results/s91_f1_local_densities_20261110/README.md  (6 lines)
+         8: odd prime-power moduli are numerical only, and uniformity in the modulus is OPEN (it needs at least HYP-9660 (B)).
+        81: `p^k` the value of the form has the factor `(1 - p^-2) sigma(p^v)/p^v = (1 + 1/p)(1 - p^(-v-1))` at a class of
+       429: OPEN, and odd prime-power moduli are numerical only. Beyond that, what a density-one statement for this family lacks
+       502: positive in every odd class; odd prime-power moduli are numerical only, and nothing is uniform in the modulus
+  05-knowledge/results/s91_f1_local_densities_20261110/audit/AUDIT_REPORT.md  (5 lines)
+       163: - **Problem:** A level of distribution is uniformity over the moduli up to a power of X, and the major arcs of a circle-method argument need that uniformity and prime-power moduli. THM-5128 (B4) is uniform in the region (a, b, X, 
+       248: - The by-value law of F1 modulo odd prime powers: the determinant-form density is exact for independent uniform states and the F1 data to 2^22 show the non-uniformity modulo 9, but I did not prove the by-value limit; the measured 
+       383: - The p-adic factor (1 + 1/p)(1 - p^(-v-1)): exact for uniform states (enumeration at 9, 27, 25) and consistent at first order with the census at 9, 25, 27, but the by-value proof for prime-power moduli is not written anywhere.
+       850: - **Problem:** (D3) is proved for classes modulo a prime or a squarefree modulus. The p-adic local factor at an integer depends on the valuation v = v_p(N): for independent equidistributed states modulo p^k it is (1 - 1/p^2) sigma
+  05-knowledge/results/session260_quasiperfect_chanpak_20261111/arithmetic/QUASIPERFECT_NORMS.md  (3 lines)
+        70: Equation(2) is the same quadratic form, but with a different and graph-constrained representation. The map between the two subjects preserves the integer norm, not its coordinates, prime-power factors, or existence predicate.
+        80: For each inert prime l≡5,7(mod8), the sum of v_l(sigma(p_i^(2e_i))) is even. Individual divisor-sum factors need not have even valuation: cancellations of parity can occur across distinct prime-power factors. The retained sidecar 
+        88: **This does not obstruct a genuine quasiperfect source.** An odd prime power is deficient, since sigma(p^k)/p^k<p/(p−1)≤3/2. A quasiperfect integer therefore cannot be a prime power, and sigma(n) is already composite by multiplica
+  -> files: 8
+====================================================================================================
+PATTERN: chi_4 / signed label    regex: chi_4|\(m ?- ?s\)/4|\|4n ?\+ ?1\||signed (integer|edge|source)
+  01-canon/MISTAKES.md  (2 lines)
+      1692: - **Strongest survivor / repair:** the unsigned edge product counts every tournament, while the Vandermonde permanent counts only transitive tournaments. The signed Vandermonde tournament identity and normalized Gaussian identitie
+      3501: The missing triple ratio and signed integer lift give an exact cyclic
+  05-knowledge/results/INDEX.md  (2 lines)
+       831: - [Golden lattices, ordered carries, and certificates over integers](collatz_golden_carriers_20261004.md): **PROVED elementary identities/carrier soundness + FINITE-EXACT denominator gate; universal construction OPEN.** Signed upp
+       834: - [Atoms, signed lifts, and tournaments carrying certified routes](collatz_atom_route_memory_20261003.md): **PROVED constructions + FINITE-EXACT controls; universal Collatz coverage OPEN.** Atom complement `z-y` stores the signed 
+  05-knowledge/results/modular_centers_collatz_pell_20261111/PROOFS.md  (1 lines)
+        95: positive dynamics. Negation *is* a conjugacy on the signed integer
+  05-knowledge/results/session254_four_frontiers_20261111/chan_pak/NEXT81.md  (1 lines)
+       105: Consider the signed integer polynomial
+  05-knowledge/results/session255_modular_collatz_20261111/BOARD.md  (2 lines)
+         3: **COMPLETE SESSION.** Anchor: central table / signed edge atlas. Niche:
+        19: turns the same seed into all signed edges only after decoding. Division has
+  05-knowledge/results/session255_modular_collatz_20261111/README.md  (2 lines)
+         1: # Central tables, signed edges, and finite carriers
+         9: - [Signed edge atlas](collatz_dictionary/README.md): all four mod-eight classes,
+  05-knowledge/results/session255_modular_collatz_20261111/collatz_dictionary/README.md  (1 lines)
+        22: Concept board: table center / integer lift / orientation / signed sibling ladder / finite residue compiler. Anchor is the table dictionary; niche is signed edge coding; wildcard is the all-scale clock compression. The compiler lin
+  05-knowledge/results/session266_fiber_radix_20261111/SYNTHESIS.md  (2 lines)
+       113: Every odd h>=3 has one such signed source code. We can therefore attach the
+       114: frequency A_n(h) to that signed edge, retaining h=1 as the transitive boundary
+  05-knowledge/results/session266_fiber_radix_20261111/collatz/PROOF.md  (3 lines)
+        61: The explicit known examples for the plus map on signed integers are:
+       190: Choose s=+1 when h≡1 mod4, and s=−1 when h≡3 mod4. Send a tournament T with H(T)=h≥3 to the raw signed edge encoded by h: for s=+1 use x→C_+(x), and for s=−1 use −x→−C_-(x). H=1 is retained as a separate boundary symbol (formally 
+       198: Using the inherited nonattainment of7 and21, the two requested edges have zero weight at **every size**. The claim that every other nonzero signed edge eventually has positive weight is exactly the assertion that every odd h other
+  05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/WEIGHTED_ATLAS.md  (1 lines)
+        11: Use the signed source coordinates of
+  05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/signed_arcs/PUNCTURED_ATLAS.md  (2 lines)
+        27: itself**. Live board: support/multiplicity, signed edge sources, first-hit
+       166: Source→target: attainable odd total→one labelled signed edge. Preserved:
+  -> files: 11
+====================================================================================================
+PATTERN: self-converse strong    regex: self-converse
+  00-navigation/HN.md  (4 lines)
+        45: [Beyond ten and the seven-private-point barrier](../05-knowledge/results/two_port_seven_core_20261103/README.md): all279968 self-converse order11 classes pass full H,S,E,C/symmetry reconstruction; the global arbitrary-order11 prob
+        67: [Ordered source responses and neutral binary carries](../05-knowledge/results/ordered_response_ten_20261103/README.md): complete carry classification gives H-neutral two-native-move resets with homogeneous path-cover dominance; th
+        91: [Parity, joint spectrum and toothpick symmetry](../05-knowledge/results/tournament_joint_parity_20261102/README.md): explicit class pairing from odd presentation fibres; no free H-preserving pairing; exact self-converse parity tai
+        95: The same [research packet](../05-knowledge/results/paired_budget_selectors_matrix_20261028/README.md) proves the one-step ROOT budget `D_pair<=min(S/2+3,S/3+4)` and endpoint norm13, with explicit two-depth hostiles. It extends the
+  00-navigation/PROBLEM-LEDGER.md  (5 lines)
+       797: paths and the self-converse score multisets of self-line endpoints; the symmetric-core depth closed form and the blue-core lift; the tribonacci partner of the transitive node
+       798: (H = A000213(n) is kind-pasteur-2026-03-05-S11's March theorem, MISTAKE-645; new: blue multiplicity = A000213(floor(n/2)+1), rigid, self-converse). REFUTED: THM-793's odd-n law black
+       820: converse pairs of non-palindromic {K1, C3}-stacks plus the self-converse classes with tc - bm = 2 (1, 3, 3, 6, 7 at n = 5..9; corrects HYP-9347 (4),
+       867: - **First creators of odd Hamiltonian-path counts: converse fibers, value colours, genealogy (kind-pasteur, 2026-11-07-S16; [note](../05-knowledge/results/first_creators_genealogy_20261107/README.md); THM-4922, HYP-9512; audit PAS
+  01-canon/MISTAKES.md  (43 lines)
+       552: - **Scope:** historical `00-navigation/TANGENTS.md`, T1544. Its displayed cumulative recurrence omitted `-1`, and its assertion of a proved self-converse parity lemma cited the unrelated legacy ID THM-893 (the current file is the 
+       561: - **Strongest survivor / missing coordinate:** the disjoint three-block tiling remains impossible. Count divisibility supplies an abstract free binary action, not native matching flips. Its compatibility with converse needs the se
+       609: - **Decay correction:** the inherited reversing-involution mechanism gives2^floor(n^2/4) compatible labelled tournaments for a fixed involution. Elementary class bounds yield log(S_n/T_n)=-(log2)n^2/4+O(n log n), incompatible with
+       623: - **Repair / strongest survivor:** the five-vertex counts 12 ordinary, 8 self-converse and 10 merged classes are independently exact. `ARITHMETIC_AND_SOURCE_AUDIT.md` retains the genus formula, primary sources and the distinction 
+  01-canon/theorems/THM-5131-the-mod-four-race-of-the-hamiltonian-path-count-triangle-term-and-square-term.md  (12 lines)
+         3: title: "The mod-4 race of the Hamiltonian-path count: triangle term and square term. (T) For every tournament R on m vertices the sum of (-1)^(c_3) over its 2^m one-vertex extensions is 2^ceil(m/2) (new); hence E (-1)^(c_3) = 2^(-
+        10: - (S) (1): a self-converse tournament has an anti-involution (Session29 converse-congruences section 1, THM-4930);
+        16: - the odd-order balance of self-converse classes (THM-4922 (4)); the self-converse values (THM-4930);
+        27: proves THM-555's verified line for n >= 4); the reading of self-converse tournaments as the square term of the
+  05-knowledge/hypotheses/HYP-9663-persistent-lead-of-the-mod-four-race-symmetric-lean-and-the-heptagon-layer.md  (5 lines)
+         3: title: "Open statements about the mod-4 race of Hamiltonian path counts. (G) Persistent lead: D_n = P(H = 1 mod 4) - P(H = 3 mod 4) is positive at every order n >= 3 (proved for n <= 6 by the closed forms of THM-5132, exact for n 
+        41: `D_6 = 1/4` (THM-5132 (5)); for even `n` the self-converse tournaments contribute exactly
+        48: non-self-converse tournaments for `5 <= n <= 10`.
+        59: `D_n`. The self-converse tournaments are the only family found on which `chi` is forced, and they die like
+  05-knowledge/hypotheses/INDEX.md  (8 lines)
+         4: - **THM-5131, THM-5132, HYP-9663 (2026-11-11, mac-mini-2026-11-11-race; PROVED / KNOWN (credited) / FINITE-EXACT / NUMERICAL with pre-registered R1, R5, R6 FAILED and R2-R4, R7, R8 CONFIRMED (R7, R8 then PROVED) / OPEN; audit PASS
+        13: - **THM-4985, THM-4986, HYP-9565 (2026-11-09, mac-mini-2026-11-09-genesis; FINITE-EXACT / PROVED / PROVED-CONDITIONAL / ANALOGY / pre-registered Q1-Q3 REFUTED / OPEN; audit G1 PASS WITH CORRECTIONS (3 MAJOR: unsourced max H(12), T
+        15: - **Ribbon lane: THM-4880/HYP-9473 (2026-11-04), THM-4881/HYP-9474 (2026-11-04), THM-4952/THM-4953/HYP-9541 (2026-11-08, mac-mini; PROVED / FINITE-EXACT / NEGATIVE / OPEN; [notes](../results/ribbon_tournaments_bounded_span_transfe
+        16: - **THM-5109, HYP-9656 (2026-11-09, kind-pasteur-2026-11-09-S20; PROVED (window bound, (D), (E)) / KNOWN (A)-(B) = THM-4879 and the cone mechanism = Session236, THM-5085 (3) / FINITE-EXACT / pre-registered P1-P6 CONFIRMED / OPEN; 
+  05-knowledge/results/INDEX.md  (40 lines)
+         4: - [The mod-4 race of Hamiltonian path counts: triangle term, pentagon term, square term, and where small numbers stop being special](mod4_race_square_term_20261111/README.md) (2026-11-11, mac-mini-2026-11-11-race): **THM-5131, THM
+        43: - [Ternary Chan-Pak on ribbon words (finite-state packing polynomial; base 3 misses exactly 10 and 31; 64 has no strong realiser) and the metagraph lines between component, value-colour, first-creator and self-converse classes](te
+        47: - [First creators of odd Hamiltonian-path counts: converse fibers, the value colours, and genealogy](first_creators_genealogy_20261107/README.md) (2026-11-07, kind-pasteur-2026-11-07-S16): **PROVED (THM-4922: first creators - the 
+        95: - [Beyond ten: two-port arithmetic and seven-private-point geometry](two_port_seven_core_20261103/README.md) (2026-11-03): **PROVED scoped / FINITE-EXACT; independent audits.** Complete self-converse order11 family279968 has faith
+  05-knowledge/results/character_of_two_records_20261111/PREREGISTRATION.md  (4 lines)
+        21: - Nothing has been computed for `q = 27, 31, 43, 47`, for the self-converse census of Run B, for the kernels of
+        38: All self-converse classes of orders 5, 7, 9 (one anti-involution each, they are conjugate), with the numbers of
+        54: - **R6.** `CD_4` and `CD_5` are self-converse, and `H(CD_5) = 1 (mod 4)` (through `F` even).
+        68: formula); `H(CD_4) = 198335025 = 1 (mod 4)` although `CD_4` is not self-converse.
+  05-knowledge/results/character_of_two_records_20261111/README.md  (6 lines)
+        85: self-converse past order 7), THM-4557 (doubling keeps the automorphism group; Hanaki 2020), THM-5133 (kind-pasteur
+       105: strong tournaments; `H` is multiplicative), THM-4816 / THM-4817 (`T = 1/(1 - S)`, `S = A/(1 + A)`, self-converse
+       146: order 2. KNOWN (Session29): a self-converse tournament has one, all are conjugate, it fixes at most one vertex
+       231: self-converse tournament `T` of odd order. For even order an anti-involution has no fixed vertex, there is no
+  05-knowledge/results/kps_s23_flip_spin_kernels_20261111/README.md  (1 lines)
+       448: | "self-converse ratio peaks at 5" | false as stated: the ratio is 1 for `n <= 3` and decreases after; `n = 5` is an interior local maximum (canon: `two_edge_transport_20261102/ARITHMETIC_AND_SOURCE_AUDIT.md`) |
+  05-knowledge/results/mod4_race_square_term_20261111/PREREGISTRATION.md  (3 lines)
+         9: - `D_n 4^n = 1706, 2722, 1972, 2541, 1988` at `n = 7, ..., 11`; after removing the self-converse tournaments
+        10: (all `= 1 mod 4` at even order, THM-791) and the non-self-converse tournaments with a non-trivial automorphism,
+       112: parts of Run B were launched at 08:06:07; the run launched at 08:02:02 was the self-converse census of order 10
+  05-knowledge/results/mod4_race_square_term_20261111/README.md  (29 lines)
+         6: 2 MAJOR findings, both "known result typed as new" (the residue mod 8 of self-converse tournaments; the closed form
+        37: 3. **(KNOWN + FINITE-EXACT) The full race has a square term.** Self-converse tournaments of even order all have
+        43: `n = 4` the 48 labelled self-converse tournaments (transitive, `H = 1`; strong, `H = 5`) are all on the side
+        45: (32 against 24) is 12 self-converse classes against a deficit of 4 among the rest.
+  05-knowledge/results/mod4_race_square_term_20261111/audit/AUDIT.md  (11 lines)
+        40: `25a4f6ba21`, 2026-10-22), section 3 "The reflection-overlap congruence": "For every self-converse tournament,
+        53: a mod-8 refinement `H ≡ 1 + 4I (mod 8)` at even order. The THM-4922 audit observed it on all 8,784 self-converse
+        58: self-converse class T contributes exactly 2^m m!/|C_G(sigma)| distinct labelled tournaments in the fixed-sigma
+        64: involution, lists all directed odd cycles and verifies `H = 1 + 4s (mod 8)` on all 2 + 12 + 176 self-converse classes
+  05-knowledge/results/mod4_race_square_term_20261111/audit/literature_notes.md  (6 lines)
+        94: | 1, 1, 2, 2, 8, 12, 88, 176, 2752, 8784 | **A002785**, "Number of self-complementary oriented graphs with n nodes"; a comment (McKay, 2020) identifies it with self-converse tournaments. Confirmed. |
+        95: | labelled self-converse: 8,48,704,7040; 704,7040,380416; 380416,6737920; 1,2,8,48,704(,7040); 2,8,48,704,7040; 48,704,7040,380416; 7040,...,958578688; single terms 6737920, 958578688, 31596429312 | no match (11 queries) |
+        98: | odd-order self-converse signed sums 4, 256, 37824, 20782592 | no match |
+       103: | text: "self-converse tournaments" | only A002785 |
+  05-knowledge/results/mod4_race_square_term_20261111/audit/prior_art_repo_notes.md  (11 lines)
+        16: - l.60-62: "For every self-converse tournament, H(T) ≡ 1+2F+4I (mod 8)."
+        32: order. The THM-4922 audit observed it on all 8,784 self-converse classes of order 10."
+        39: self-converse classes, n = 4, 6, 8, 10). (Session130 has the split over blue tilings, a different count:
+        60: form, THM-552 the self-converse case)."; THM-5131 "NEW here: (T)".
+  05-knowledge/results/session259_arithmetic_graph_growth_20261111/SYNTHESIS.md  (1 lines)
+       269: The earlier blue/black and self-converse involution stories share the
+  05-knowledge/results/session262_interface_supply_20261111/constructor/PROOF.md  (1 lines)
+       202: 3. THM-4930 `eternal-colours-which-odd-path-counts-are-ever-self-converse.md`:
+  05-knowledge/results/session265_converse_dyadic_20261111/SOURCES.md  (1 lines)
+        21: A symmetry nuance is retained: a self-converse tournament can be rigid as a
+  05-knowledge/results/session266_fiber_radix_20261111/OPEN_QUESTIONS.md  (1 lines)
+         7: automorphism and self-converse data. Design canonical augmentation that
+  05-knowledge/results/session266_fiber_radix_20261111/README.md  (1 lines)
+         9: ordinary, self-converse, converse-merged, labeled and cumulative channels.
+  05-knowledge/results/session266_fiber_radix_20261111/SYNTHESIS.md  (2 lines)
+        15: are retained: ordinary isomorphism classes A_n(h), self-converse classes,
+        22: cumulative table with all ordinary, self-converse, merged and labeled
+  05-knowledge/results/session266_fiber_radix_20261111/collatz/PROOF.md  (1 lines)
+        95: A quick classification: if there is no directed triangle the tournament is transitive. Otherwise fix a triangle; the fourth vertex either beats all three, loses to all three, or has mixed adjacency. The two mixed cases are isomorp
+  05-knowledge/results/session266_fiber_radix_20261111/fibers/FINITE_SCOPE.md  (1 lines)
+        10: Columns distinguish ordinary isomorphism classes, self-converse ordinary
+  05-knowledge/results/session266_fiber_radix_20261111/fibers/PROOF.md  (6 lines)
+        13: These already give eventual polynomials, self-converse quasipolynomials,
+        33: Let A_n(h) count ordinary isomorphism classes, S_n(h) self-converse ordinary
+        49: Q_h(z)=sum_[C strong,self-converse,H(C)=h] z^|C|,
+       110: this convexity because the self-converse correction oscillates with parity:
+  05-knowledge/results/session266_fiber_radix_20261111/radix/PROOF.md  (1 lines)
+        89: For a self-converse core word W (reverse order and converse of each component returns W), converse reverses the k+1 singleton gap coordinates. If k=2r, a fixed gap vector has r paired gaps and one central gap. Its generating funct
+  05-knowledge/results/session266_fiber_radix_20261111/smooth/PROOF.md  (1 lines)
+       132: leading coefficient for h>1, because the inherited self-converse sector has
+  05-knowledge/results/uniform_return_metagraph_20261111/metagraph/FAMILIES.md  (3 lines)
+       107: self-converse, because it reverses the gap positions.
+       156: self-converse. The complete ordered nontrivial kernels are precisely
+       287: The self-converse class series is
+  -> files: 27
+====================================================================================================
+PATTERN: strong components as primes    regex: as primes|strong components? (are|as) (the )?(primes|irreducible)
+  01-canon/MISTAKES.md  (1 lines)
+      7019: THM-3951 types its vertices as primes in a completion boundary `X minus A2`,
+  05-knowledge/results/character_of_two_records_20261111/README.md  (2 lines)
+       104: - **Strong components as primes.** THM-1862 and THM-1936 (the monoid of tournaments under ordered sum is free on the
+       459: | strong components as primes | free monoid, `T = 1/(1 - S)`, atoms (THM-1862, THM-1936, THM-4817, THM-4094) | `NSym` dictionary: strong = elementary, rooted at the largest vertex = power sums = connected graphs; elasticity `5/2` 
+  -> files: 2
+====================================================================================================
+PATTERN: arc usage    regex: arc[- ]usage|edge[- ]usage|using the pair consecutively|consecutive(ly)? in
+  00-navigation/PROBLEM-LEDGER.md  (1 lines)
+       780: THM-4716 (PROVED; HYP-9334 promoted): the q rotations of the Christoffel necklace are the mechanical words with intercepts t/q, consecutive intercepts differ by one adjacent swap 01 -> 10, so consecutive carries differ by exactly 
+  01-canon/MISTAKES.md  (7 lines)
+      5000: - (1) `odd_zeta_parallels_petersen_20261001.md` called the Hamiltonian cycles of complement(C_N) (dinner-table rearrangements, 1, 3, 23, 177, 1553; classes 1, 1, 5, 19, 112) "Brown's convergent configurations", citing OEIS A002493
+     11953: - **Rule:** a consecutive integer block is not automatically a consecutive
+     15617: 3. **The tight-small corner (near-consecutive integers, w1 <~ 1000) is at the Hunter BOUNDARY** -- full all-pair Hunter min ledger ~ -0.0002 (slightly negative) even at w1=1500. Reason (verified): over a window of width L~0.0065, 
+     16668: ### Bug 2: Skipping consecutive indices (`backtrack(w+1, ...)` should be `backtrack(w, ...)`)
+  05-knowledge/results/INDEX.md  (2 lines)
+       419: - [The Fermat five, Pépin reworked for Collatz, and the Fermat line](fermat_five_pepin_collatz_20261025/README.md): **PROVED / FINITE-EXACT / inherited; completeness of the Fermat five OPEN; no audit.** THM-4793: the Syracuse orbi
+       524: - [Farey fractions, the mediant and the Mandelbrot set across five conjectures](farey_mandelbrot_20261019_collatz_angles_and_cross_conjecture_dictionary.md) (2026-10-19, mac-mini-2026-10-19-farey; PRE-AUDIT): **PROVED THM-4714 (Co
+  05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_C2_PROOF.md  (1 lines)
+        75: triangle's vertices to occur consecutively in a full Hamilton path.
+  05-knowledge/results/session254_four_frontiers_20261111/jacobian/ALL_ROW_DEPTH.md  (1 lines)
+        83: All these intervals are nonempty because n>=d>=b. Consecutive intervals
+  05-knowledge/results/session257_permutohedron_squares_20261111/filtration/PROOF.md  (1 lines)
+       264: 5-t and4 are consecutive in the sorted list
+  05-knowledge/results/session257_permutohedron_squares_20261111/history/sources/05-knowledge__results__session40_marked_ports_square_sum_20261023__square-sum__README.md  (1 lines)
+        48: ## 3. Exact edge usage is nonmonotone
+  05-knowledge/results/session265_converse_dyadic_20261111/shadows/PROOF.md  (3 lines)
+        11: using the pair consecutively. A zero-weight edge is retained as zero; omitting
+        16: edge-usage identity. A less-used sidecar is the split-strong-component Hamilton
+        60: nonadjacent components cannot be consecutive in a Hamiltonian path, whereas
+  05-knowledge/results/uniform_return_metagraph_20261111/metagraph/FAMILIES.md  (1 lines)
+        78: consecutive interval of old SCCs. Removing the newborn gives exactly (2), of
+  05-knowledge/results/uniform_return_metagraph_20261111/metagraph/RESPONSE_FAMILIES.md  (1 lines)
+       362: root dominates them all. Taking maximal consecutive intervals on which all
+  -> files: 10
+====================================================================================================
+PATTERN: abundancy / sigma(n)/n    regex: abundanc|sigma\(n\)/n
+  01-canon/MISTAKES.md  (4 lines)
+      1768: - **2026-10-20, black-core descent — cycle averages and black-cut abundance do not select a descending black cut.** At order five, merged canonical code 10 has blue closed-path current +2 and black current -2, although descending 
+     18243: **The correct framing:** the tight locus is at least {AP, GW}, both non-covering and small-speed — so the S37 REDUCTION and the 14-grid REPULSION stand (they only need tight ⇒ non-covering, which both satisfy); only the uniqueness
+     24674: `1.222` for both divisible patterns). The series proper would be `(8/pi^2) sigma(n)/n`, `n` the odd part.
+     24715: the series `(8/pi^2) sigma(n)/n` conditional); (E) restated with the audit's by-value proof and the period-12
+  01-canon/theorems/THM-5128-f1-by-value-local-densities-first-order-class-law.md  (1 lines)
+       258: `n` the odd part of `N + [sigma = 0]` (mean 1, minimum `8/pi^2`): `8/pi^2` times the abundancy index of the odd
+  01-canon/theorems/THM-5129-one-vertex-sources-finite-supply-complete-lists-permanent-exceptions-line-counts.md  (1 lines)
+        69: - 05-knowledge/results/kps_s22_sign_flip_towers_20261110/SOURCES_AND_DOMINATION.md (concurrent: grids, excess types, abundancy index)
+  01-canon/theorems/THM-5130-sign-flip-towers-gadget-transfer-law-and-seeds-of-both-signs.md  (2 lines)
+       314: ## (H) Sources, the domination skeleton, and an abundancy index
+       346: **H4 (abundancy).** `H(X) >= H(X[S]) H(X - S)` for every vertex set `S` (two disjoint paths merge, keeping both
+  05-knowledge/hypotheses/INDEX.md  (2 lines)
+         3: - **THM-5128, THM-5129, HYP-9660, HYP-9661 (2026-11-10/11, opus-2026-11-10-S91; PROVED / FINITE-EXACT / NUMERICAL / KNOWN (credited) / OPEN; two pre-registrations (eight window tests on [2^24, 2^27); line tests L1-L4 at rooted ord
+         5: - **THM-5130, HYP-9662 (2026-11-10/11, kind-pasteur-2026-11-10-S22; PROVED (state transport law, sign flip iff 2^d - 3^(d-1) = 1, tower recurrence, domination ray, abundancy) / FINITE-EXACT (seed and anti-seed for every odd c <= 4
+  05-knowledge/results/INDEX.md  (5 lines)
+         5: - [Sign-flip towers: a transport law for offsets and slopes, the equation 2^d - 3^(d-1) = 1, anti-seeds, and source interfaces](kps_s22_sign_flip_towers_20261110/README.md) (2026-11-10/11, kind-pasteur-2026-11-10-S22): **THM-5130,
+     15170: - `lrc14_n4_einheit_minimality_tournament_scout_codex_20260627.py` -> `lrc14_n4_einheit_minimality_tournament_scout_codex_20260627.out` [STORED].  HYP-3199 n=4 tournament chart scout for the user's two modeling schemes and the Erd
+     15280: | `lrc14_perfect_number_packet_merge_codex_s174.py` | [STORED] | HYP-3013 perfect-number packet merge for the LRC14 automaton stack.  Verifies the `n=2` Euclid-Euler controls through Mersenne exponent `17`, then compares LRC14 pow
+     15379: | `farey_perfect_product_obstruction_codex_s143.py` | [STORED] | HYP-2945 Farey perfect-product obstruction guardrail.  Interprets reduced Farey `a/b` as `K_{a,b}` with `ab=|E(K_{a,b})|`, then connects HYP-2220/HYP-2221 perfect-nu
+  05-knowledge/results/kps_s22_sign_flip_towers_20261110/SOURCES_AND_DOMINATION.md  (7 lines)
+        22: | Abundancy index `a(X) = Pi_2(X)/H(X)`: multiplicative over ordered joins, a subset sum with all terms at most 1, `n + 1 <= a(X) <= 2^n` with equality on the right only for transitive `X`; the closing law is `N = H(X) (r + M a(X)
+        61: levels 7 to 11, the 43-grid, and the merge inequality with the upper bound for the abundancy index.
+       194: criterion is its analogue for `sigma(n)/n`. Typed bridges to the repo:
+       196: - **[PROVED] An abundancy index for tournaments.** Put `a(X) = Pi_2(X)/H(X)`. Then `a(X => Y) = a(X) a(Y)`;
+  05-knowledge/results/kps_s22_sign_flip_towers_20261110/audit/AUDIT.md  (2 lines)
+        14: the 9-grid and 43-grid data, the domination ray, the abundancy bounds, the neutral-gadget classification on all
+       158: abundancy index).
+  05-knowledge/results/s91_f1_local_densities_20261110/README.md  (6 lines)
+        90: be `(8/pi^2) sigma(n)/n`, `n` the odd part of `N + [s = 0]` (mean 1, minimum `8/pi^2`): `8/pi^2` times the
+        91: abundancy index of the odd part. Over both sheets the density is `w_0 S_0 + w_1 S_1` (`w_0`, `w_1` the shares
+       346: (one-vertex at 7, 8, 9, 11; a two-vertex selected set at 10), the abundancy index). What follows keeps to what
+       422: would be the singular series proper, `(8/pi^2) sigma(n)/n`, which is numerical only).
+  05-knowledge/results/s91_f1_local_densities_20261110/audit/AUDIT_REPORT.md  (8 lines)
+       129: Four MAJOR corrections: (1) README section 3 attributes "the finite values are all positive integers except 2" to Allikvere's multiset paper; the paper quotes it as background from Simanjuntak-Siagian-Vetrik and Khemmani-Isariyapa
+       157: - **Proposed fix:** THM-5128 (D3), replace the sentence by: "The by-value local factors are `p mu_c = 1 - 1/p^2 + [c = c_sigma]/p`, and for squarefree odd `m` the limiting density of a class is the product of these (an Euler produ
+       483: - **Claim:** 'the product law (A1) is KNOWN (Session216 star theorem; THM-5130 (F2), ..., where the slope of a padded seed is the core slope times the product of the abundancy indices of the later components)'
+       484: - **Problem:** Imprecise description of the source. THM-5130 (F2)(b) is (A1) verbatim for O = {y}, with factors Pi_2(C_i) after the root; 'abundancy indices' Pi_2/H is right only for padded seeds, whose other components have H = 1
+  05-knowledge/results/session254_four_frontiers_20261111/jacobian/PROOF.md  (1 lines)
+       327: same-row source abundance and fixed-weight scalar payments must retain
+  05-knowledge/results/session260_quasiperfect_chanpak_20261111/arithmetic/QUASIPERFECT_NORMS.md  (1 lines)
+        88: **This does not obstruct a genuine quasiperfect source.** An odd prime power is deficient, since sigma(p^k)/p^k<p/(p−1)≤3/2. A quasiperfect integer therefore cannot be a prime power, and sigma(n) is already composite by multiplica
+  05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/EXTENSION_LIFETIME.md  (1 lines)
+       176: An abundance of sources at a fixed count is compatible with increasing
+  -> files: 13
+====================================================================================================
+PATTERN: additive square / convolution of table    regex: additive (square|convolution)|N_m \* N_m|sum of two (table )?entries|two products
+  01-canon/MISTAKES.md  (1 lines)
+       716: - **Witness:** a triangular prism and a four-cycle, joined through two port pairs, have three global Hamiltonian cycles but only two products from port-containing local Hamiltonian cycles. The extra cycle restores to two triangles
+  05-knowledge/hypotheses/HYP-9657-f1-mass-profile-rabinowitsch-roughness-and-tested-bridges.md  (1 lines)
+        81: generic count of solutions of a sum of two products would give 0.375, 0.208, 0.146, 0.092, 0.077, 0.059, ...).
+  05-knowledge/hypotheses/HYP-9664-signatures-carriers-of-both-signs-and-extremal-sign-patterns.md  (1 lines)
+        50: The sign of `det G` separates kernels whose path count is a sum of two products from those where it is a
+  05-knowledge/results/kps_s23_flip_spin_kernels_20261111/README.md  (2 lines)
+        36: most twice, `N` is 2 x 2, and the sign of `det N` splits the kernels into elliptic (sum of two products),
+        37: parabolic (one product; joins are the degenerate case) and hyperbolic (difference of two products). For a
+  05-knowledge/results/kps_s23_flip_spin_kernels_20261111/audit/AUDIT.md  (1 lines)
+       240: and checked on 282 cases. The reading "sum / difference of two products" needs `N_22 > 0`; no kernel of order at
+  -> files: 5
+====================================================================================================
+PATTERN: bicomplex / C4xC2    regex: bicomplex|tessarine|C_?4 ?x ?C_?2|Z_?4 ?x ?Z_?2|split[- ]complex
+  05-knowledge/results/kps_s23_flip_spin_kernels_20261111/PREREGISTRATION.md  (1 lines)
+         3: Owner directive: another session on Chan-Pak, with pasted texts on "flippy" and "spinny" algebras (split-complex
+  05-knowledge/results/kps_s23_flip_spin_kernels_20261111/README.md  (1 lines)
+         5: (split-complex, zero divisors, reflections) versus "spinny" ones (complex, quaternions, octonions), a table
+  -> files: 2
+====================================================================================================
+PATTERN: fan primes / alternation    regex: alternation prime|fan prime|2\^t ?\+ ?1
+  01-canon/MISTAKES.md  (2 lines)
+      2938: closure at depth t is `[1,2^t+1]`, giving `d(n)=ceil(log2(n-1))` for n>=2.
+     23231: S_1 ∪ {3·2^t + 1} ∪ {9·2^t - 3}, via Bang-Jensen-Bessy.
+  05-knowledge/hypotheses/INDEX.md  (1 lines)
+        51: - **THM-4790, THM-4792, HYP-9400 (2026-10-26, opus-2026-10-26-S57; PROVED / KNOWN (THM-4792 (c) = Moree 1997) / VERIFIED numerical / FINITE-EXACT; independently audited, [AUDIT](../results/s57_untouchables_root27_20261026/AUDIT.md
+  05-knowledge/results/INDEX.md  (1 lines)
+       414: - [Untouchables against the Pollack–Pomerance model, odd untouchables, tc fibres to 11 vertices, merged sheet tables, root-27 drawdown](s57_untouchables_root27_20261026/README.md): **PROVED (THM-4790; THM-4792 with (c) KNOWN = Mor
+  05-knowledge/results/berggren_target_return_20261111/berggren/WIDE_RETURN.md  (2 lines)
+        45: Hsource=(2^r-1)(Q(z)+1)2^t+1-5*2^(r-3),
+        62: (2^r-1)(2^(r-1)-3)2^t+1-5*2^(r-3).
+  05-knowledge/results/berggren_target_return_20261111/fibres/WIDE_REWRITE_SIZE.md  (2 lines)
+        51: H(w)=(2^(j+1)-1)(Q(z)+1)2^t+1-5*2^(j-2).                (2)
+        61: is `2^j[(2^(j-1)-11/4)2^t-5/4]+2^t+1`, strictly positive on this domain.
+  05-knowledge/results/berggren_target_return_20261111/reset/FIBRE_REVIEW.md  (1 lines)
+         8: (2^(j+1)−1)(Q(z)+1)2^t+1−5·2^(j−2). The bounds
+  05-knowledge/results/multiplicand_saturation_chanpak_20261111/classification/PROOF.md  (2 lines)
+       192: seeds are `{1,2}` and `m(t)=2^t+1`. Thus the slow missing value is
+       193: `2^(2^t+2)`, whereas the 3-ray maximum is `3^(2^t+1)`. Already at t=0
+  -> files: 7
+====================================================================================================
+PATTERN: 29 arcs / five cycles    regex: 29 arcs|five (known )?cycles|18 (arcs|labels)
+  05-knowledge/results/INDEX.md  (1 lines)
+      8711: 3-cycle child products around each parent orbit; depth-five cycles are
+  -> files: 1
+====================================================================================================
+PATTERN: generating function strong    regex: 1/\(1 ?- ?\(x|6 ?x\^5|sequences of strong|free monoid
+  05-knowledge/results/character_of_two_records_20261111/README.md  (1 lines)
+       459: | strong components as primes | free monoid, `T = 1/(1 - S)`, atoms (THM-1862, THM-1936, THM-4817, THM-4094) | `NSym` dictionary: strong = elementary, rooted at the largest vertex = power sums = connected graphs; elasticity `5/2` 
+  05-knowledge/results/s91_f1_local_densities_20261110/README.md  (1 lines)
+       460: 4. **A sequence factorisation and an Euler product (EXACT, formal).** Rooted tournaments are sequences of strong
+  05-knowledge/results/s91_f1_local_densities_20261110/audit/AUDIT_REPORT.md  (2 lines)
+       938: - **Problem:** (3) The reading of the offset as the 2-adic limit of the ray is THM-5126 (A), listed there as its new content; the corollary is immediate (N (2^m + 1) -> N). (4) The identity is correct, but (1 - P)^(-1) R (1 - Q)^(
+       940: - **Proposed fix:** (3): add '(the 2-adic reading of the offset is THM-5126 (A); the consequence is immediate)'. (4): title 'A sequence factorisation and an Euler product (EXACT, formal)'; 'Strong tournaments are the irreducibles 
+  -> files: 3
+====================================================================================================
+PATTERN: digit bound / numeral    regex: numeral|digit bound|no carry|carry-free
+  00-navigation/PROBLEM-LEDGER.md  (1 lines)
+       783: HYP-9336 (OPEN, NUMERICAL): the Gilbreath depth (first row that is 1 followed by 0/2 only) is `(0.8-1.05) x` the maximal prime gap: `35, 65, 97, 147, 175, 239` against `34, 72, 114, 154, 222, 248` for `N = 10^3 ... 1.1e7` primes (
+  00-navigation/S111-plus.md  (3 lines)
+        47: [Session131](S131.md): reflection modules, nonconsecutive numeral carries, square-sum seams and moonshine prime partitions.
+        49: [Session131](S131.md): reflection modules, nonconsecutive numeral carries, square-sum seams and moonshine prime partitions.
+        51: [Session131](S131.md): reflection modules, nonconsecutive numeral carries, square-sum seams and moonshine prime partitions.
+  01-canon/MISTAKES.md  (7 lines)
+      4899: - **Lesson:** a numerical table copied into a script is a claim; print the reference values beside the computed ones and `check` them, and never log a numeral coincidence as CONFIRMED without the map.
+      5783: ## MISTAKE-529 (2026-08-29, historical HYP-1556/HYP-1557 tournament-topos synthesis) -- a repeated numeral and a carrier-category switch were treated as a Lawvere bridge
+      5796: component.  Equality of that numeral with `|Omega_Set|` supplies no map.
+      5819: point-surjective arrow and type every input/output.  Equal numerals do not
+  05-knowledge/hypotheses/INDEX-HISTORICAL-2026-07-22-23-UNBOUNDED.md  (1 lines)
+        36: ### HYP-9075 (mac-mini-2026-07-27-S149; also reserving THM-2589 for the residual cone — fresh scan: 2588 = my renumbered cascade, 2589 free, nothing ≥ 2589 in files/INDEX/history) — THE RESIDUAL CONE + TRIANGULAR STAIRCASE + THE X
+  05-knowledge/hypotheses/INDEX.md  (1 lines)
+        17: - **THM-4940, HYP-9530 (2026-11-08, opus-2026-11-08-S86; PROVED / FINITE-EXACT (complete at all orders) / pre-registered P1-P5 CONFIRMED, P6-P8 REFUTED / OPEN; audit PASS WITH CORRECTIONS + follow-up, MISTAKE-739; THM-4941 release
+  05-knowledge/results/INDEX.md  (8 lines)
+        46: - [Repunits in all bases, the Carmichael conjecture, first creators, and the objects behind 7 and 21](packing_bases_repunits_20261108/README.md): **(opus, 2026-11-08-S86) PROVED / FINITE-EXACT / pre-registered P1-P5 CONFIRMED, P6-
+       129: - [Six roots, hidden bits, and exact port memory](six_roots_hidden_bits_20261103/README.md) (2026-11-03): **PROVED scoped / FINITE-EXACT / universal reentry OPEN.** An all-size rooted-ear formula distinguishes every port of E_n fo
+       131: - [Six roots, hidden bits, and exact port memory](six_roots_hidden_bits_20261103/README.md) (2026-11-03): **PROVED scoped / FINITE-EXACT / universal reentry OPEN.** An all-size rooted-ear formula distinguishes every port of E_n fo
+       422: - [Analogy and reduction atlas: typed analogies, the Legendre tournament, and problem classification](analogy_reduction_atlas_20261025/README.md): **EXACT / FINITE-EXACT / CITED; HYP-9375 OPEN; no audit.** Cauchy–Schwarz ⟺ triangl
+  05-knowledge/results/endpoint_coverage_compiler_20261111/BOARD.md  (3 lines)
+        19: word multiplicity versus value support; guarded numeral registers;
+        44: - **Numeral registers:** the P_j recurrence implements actual clone growth;
+        46: Zeckendorf compiler. Both numeral carry state and graph endpoints remain
+  05-knowledge/results/endpoint_coverage_compiler_20261111/CONNECTIONS.md  (2 lines)
+         5: totients, numeral words and tournament counts is assumed.
+       170: |Zeckendorf|Guarded two-register numeral update to a requested graph compiler|Digit value and shift when both are retained|E8's integer-root obstruction excludes the stated inflation-only model. Carry legality and graph legality m
+  05-knowledge/results/modular_centers_collatz_pell_20261111/PROOFS.md  (2 lines)
+        85: object from vertex 24 in a square-sum graph; their matching numeral does
+       398: path-count operation. None is replaced by a matching numeral or a finite
+  05-knowledge/results/odd_tables_signed_carries_20261111/tournament/PROOF.md  (1 lines)
+       100: There is no carry between the repeated blocks. The two period-four
+  05-knowledge/results/s91_f1_local_densities_20261110/README.md  (1 lines)
+       198: the list with numerals of the Euler-Sombor abstract, the row 27, and the reading of the split through the
+  05-knowledge/results/s91_f1_local_densities_20261110/audit/AUDIT_REPORT.md  (3 lines)
+       780: - **Proposed fix:** Add at the head of section 3: 'Two sessions treated the same eight numbers first: odd_c_seed_symmetry_20261110/PRIMES_AND_PAPERS.md (the table of ord_p(2) for 3, 5, 7, 13, 19, 1039, the even / odd split with <2
+       866: - **Problem:** The session's own output says this is an overstatement: the abstract has further numerals; what the output supports is C2. A tree on at least three vertices has no (1,1) edge, so the 3 of the abstract is the squaref
+       867: - **Evidence:** b1_origin_list.out: 'abstract numerals NOT in the owner's list: [0, 4, 10, 11, 18, 204990] (so exactly the integers of the abstract is an overstatement)'; 'PASS C2 the list = integers of delta, eps and sqrt 27, tog
+  05-knowledge/results/session260_quasiperfect_chanpak_20261111/constructors/RESEARCH.md  (1 lines)
+       260: module graph**, rather than a fixed-root numeral machine. A concrete
+  05-knowledge/results/session266_fiber_radix_20261111/SYNTHESIS.md  (1 lines)
+       110: not a matching numeral found after the fact. Odd-source and oriented even-source
+  05-knowledge/results/session266_fiber_radix_20261111/radix/PROOF.md  (3 lines)
+        14: Consequently R_t=b+2at and C_t=at²+bt+c, by summing the arithmetic progression of daily earnings. End Day2 gives 4a+2b+c; end Day3 gives 9a+3b+c. The decimal inverse problem is 100a+10b+c=427 with digits a,b,c, so (a,b,c)=(4,2,7).
+        24: - If the final numeral is **427 in base B**, it is valid for B≥8; at Day B the initial counts are still 4,2,7, while the integer final count changes to 4B²+2B+7.
+        54: On integer coefficient lists, evaluation at B is the homomorphism Z[x]→Z, p↦p(B), with kernel (x−B). A local carry replaces coefficient c_j by c_j−B and c_(j+1) by c_(j+1)+1; this changes p by x^j(x−B), so preserves p(B). Converse
+  05-knowledge/results/session266_fiber_radix_20261111/smooth/PROOF.md  (1 lines)
+       171: are quotient maps with an explicit kernel mechanism, not a shared numeral.
+  -> files: 16
+====================================================================================================
+PATTERN: balanced state base 3    regex: X ?= ?y|balanced state
+  00-navigation/HN.md  (1 lines)
+        65: [Native resets, cyclic gluing and construction machines](../05-knowledge/results/coverage_machine_induction_20261103/README.md): a named five-vertex reset followed by singular root choices gives primitive balanced states (48*2^k+1
+  00-navigation/PROBLEM-LEDGER.md  (1 lines)
+       727: 3^n mu_n(y mod 3^n) = sum_(S^n x = y) 3^n 2^(-A_n(x)), the harmonic mass of the depth-n layer of the Syracuse tree of y
+  01-canon/MISTAKES.md  (1 lines)
+     24688: - **MAJOR (credit).** THM-5128 (F) (`x = y` exactly at the fans) is THM-5126 (A) and THM-4748; the first-order
+  01-canon/theorems/THM-5128-f1-by-value-local-densities-first-order-class-law.md  (5 lines)
+         3: title: "By-value local densities of the one-arc join family F1. (A) Exact class law of a bilinear gluing: for independent states u ~ D1, v ~ D2 in (Z/p)^r and a nondegenerate bilinear form B, P(B(u,v) = c) = 1/p + (pi1 + pi2 - p^-
+        38: through the multiplier tails (HYP-9506 (B); THM-4916 (1c)); x = y exactly at h = 0 and h = 2^j (THM-5126 (A),
+       339: **(F) Divisible states.** `x(h) = y(h)` if and only if `h = 0` (`x = y = 1`) or `h = 2^j` (`x = y = 2^(j+1) + 1`).
+       513: governed by the unitary matrix above and the sum is `O(2^(n/2))`. Hence, over `h < 2^n`, `x = y - 2q` and
+  04-computation/experiments/s91_f1_local_densities_20261110/PREREGISTRATION.md  (1 lines)
+        25: 3. *New primes.* The Fermat prime 65537 (`h = 2^15` has `x = y = 65537`) shows an excess of about `+0.18` (s = 0)
+  04-computation/experiments/s91_f1_local_densities_20261110/blind_proof/BLIND_DERIVATION.md  (2 lines)
+        20: (a) q(h) = sum over one-bits i of ceil(H_i/2), H_i = floor(h/2^(i+1)); 0 <= q <= h/2. So y/2 < x <= y, with x = y iff h = 0 or 2^j.
+       142: 6. Conventions: h = 0 is a state (x = y = 1); excluding it changes A_p by w(0)/p^2 but not the limit. On sheet 0, c = c' - 1 and X becomes X + 1.
+  05-knowledge/hypotheses/HYP-9660-local-densities-beyond-one-root-change-two-changes-uniform-gap-sign-of-ap-two-apex-bias-at-three.md  (3 lines)
+        77: (`0.36, 0.32, 0.23, 0.44`), the primes with a balanced divisible state at `h <= 16` (`x = y = 3, 5, 33, 17`;
+        78: THM-5128 (F)), and smallest at `7, 13, 23, 31` (`0.02, 0.05, 0.06, 0.05`; 13 has its balanced state only at
+       190: one is `h = 32`, `x = y = 65`, the next is `h = 721`, and `A_13 < 0`.) Does `sum_p A_p` converge?
+  05-knowledge/results/central_modular_chanpak_20261110/information/PROOF.md  (1 lines)
+        51: Proof. Write a=da', m=dm', with gcd(a',m')=1. The equation ax=y mod m
+  05-knowledge/results/mod4_race_square_term_20261111/README.md  (1 lines)
+       433: `h(1 + x) = 1 + x + s + Ax = y + x + s + (1 + sigma) 1`. Expanding and using (ii) and (v):
+  05-knowledge/results/s91_f1_local_densities_20261110/README.md  (7 lines)
+        48: | `x = y` exactly at `h = 0` (the transitive tournament rooted at its sink) and at the fans, the only unit-offset one-apex roots; the count `2^m + 1` of one back arc; the boost of the primes dividing `2^i + 1` through the multipli
+        95: - `x = y` exactly at `h = 0` and `h = 2^j`, where `x = y = 2^(j+1) + 1` (KNOWN: these are the transitive
+       106: `13` the balanced state `h = 32` is followed by sparse ones (32, then 721, 877); at `19` the divisible states
+       233: only words with `x = y` (KNOWN: THM-5126 (A)). So a prime factor of `2^m + 1` has a balanced p-divisible state:
+  05-knowledge/results/s91_f1_local_densities_20261110/audit/AUDIT_REPORT.md  (17 lines)
+        99: - Setting: q(2h) = q(h), q(2h+1) = q(h) + ceil(h/2), x = y - 2q, and x(h) = 2 psi(h) + 1 = g(2h) for the canon recursion g(0) = 1, g(2v+1) = g(v), g(2v) = g(v) + v + (v mod 2) of THM-4875 (D) and THM-4885; exhaustive for h < 2^20.
+       284: - **Where:** THM-5128 (E): statement sentence "Consequently N is asymptotically equidistributed ... F1 has no local factor at 2"; proof sentence "Then x = y - 2q and y = 2h + 1 are independent uniform odd residues in the limit ...
+       304: - **Proposed fix:** Title: "(F) x = y exactly at h = 0 and h = 2^j (x = y = 2^(j+1) + 1), so every prime factor p of 2^m + 1 has the p-divisible state h = 2^(m-1), which is below the generic scale p^2 only for small m (3, 5, 11, 1
+       375: - (F): x = y iff h = 0 or h = 2^j for all h < 2^24, with x = y = 2^(j+1) + 1; q(h) = sum over one-bits of ceil(H_i/2) for all h < 2^24. The states quoted for 3, 5, 17, 11, 13, 43, 257, 65537 are p-divisible and are in fact the fir
+  -> files: 11

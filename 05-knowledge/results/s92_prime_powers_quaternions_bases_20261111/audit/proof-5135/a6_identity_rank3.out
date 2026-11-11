@@ -1,0 +1,15 @@
+[B] Brahmagupta identity on one-apex states
+  recursion check q(2h) = q(h), q(2h+1) = q(h) + ceil(h/2), h < 3000: True; first states (x,y): [(1, 1), (3, 3), (5, 5), (5, 7), (9, 9), (9, 11), (11, 13), (9, 15)]
+  M_s(A,A) M_s(B,B) = M_s(A,B)^2 + 2^s (x_A y_B - x_B y_A)^2: 375200 cases, failures 0
+  z_A conj(z_B) = M_s(A,B) + w (x_B y_A - x_A y_B), w = sqrt(-2^s): the coefficient of w is MINUS the cross-determinant
+  x_A y_B - x_B y_A, and the imaginary part proper is 2^(s/2) times it (failures of this bookkeeping: 0)
+
+[V] visit matrices (THM-5133 (A)) and rank 3
+  H(K[A,B]) = sum N_ij P_i(A) P_j(B): 144 random (K, ports, A, B) with |K| in {4,5}, |A|,|B| <= 4: all equal: True
+  a kernel of order 4 with visit matrix [[5,2],[2,1]] exists: True; of order 5 with [[11,6],[6,3]]: True
+  order 4 (labelled tournaments x ordered port pairs): 768 kernels; at most two visits 720; at most three visits (and some port three times) 48,
+     of which both ports three times 48; 3 x 3 visit matrix of non-zero determinant: 48; |det| values (count): [(32, 48)]
+     example (least |det|): tournament bits 4, ports (0, 3), visit matrix [[5, 3, 0], [3, 7, 2], [0, 2, 2]], det 32
+  order 5 (labelled tournaments x ordered port pairs): 20480 kernels; at most two visits 14400; at most three visits (and some port three times) 5760,
+     of which both ports three times 3840; 3 x 3 visit matrix of non-zero determinant: 3840; |det| values (count): [(6, 240), (14, 480), (32, 720), (128, 480), (192, 960), (228, 480), (242, 240), (248, 240)]
+     example (least |det|): tournament bits 76, ports (0, 1), visit matrix [[15, 13, 2], [13, 14, 4], [2, 4, 2]], det -6

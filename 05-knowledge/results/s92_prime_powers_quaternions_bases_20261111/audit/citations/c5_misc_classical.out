@@ -1,0 +1,26 @@
+M1 Jordan totient counts and sum_d J_2(m/d) = m^2, m < 80: failures 0
+M2 sublattices of index n in Z^2: HNF count = sigma(n) (n < 200): failures 0; brute subgroup count n <= 8: failures 0
+M3 money-plant recursion: coins at the end of day t = a t^2 + b t + c for all digits a, b, c, t <= 10: failures 0; 427 at day 10 -> [(4, 2, 7)]
+M4 psi(1..8) = [1, 2, 2, 4, 4, 5, 4, 8] ; q(h) < h/2 for 1 <= h < 2^24: True
+   b = 2: 25 balanced states below 2^24, all 0 or powers of 2: True
+   b =  3: balanced states X = y below 2^24: 12 : [0, 3, 45, 117, 309, 9045, 62805, 111957, 382293, 2839893, 4412757, 13456725]
+   b =  4: balanced states X = y below 2^24: 1 : [0]
+   b =  5: balanced states X = y below 2^24: 1 : [0]
+   b =  6: balanced states X = y below 2^24: 1 : [0]
+   b = 10: balanced states X = y below 2^24: 1 : [0]
+M5 Brahmagupta identity on 2000 random integer points: failures 0
+M6 |4n+1| bijection: True ; cycle lengths [1, 3, 2, 5, 18], arcs 29, distinct labels 29, labels 7 and 21 among them: True False
+M7 (classes, strong classes, self-converse classes) by order: {1: (1, 1, 1), 2: (1, 0, 1), 3: (2, 1, 2), 4: (4, 1, 2), 5: (12, 6, 8)}
+   strong classes of order 5: (H, |Aut|, self-converse): [(9, 1, True), (9, 1, True), (11, 1, True), (13, 1, True), (15, 3, True), (15, 5, True)]
+   coefficients of 1/(1 - (x + x^3 + x^4 + 6x^5)), orders 1..5: [1, 1, 2, 4, 12]
+M8 Hilbert symbols of (-1, -1): at odd p: +1 (units); at 2: -1; at infinity: -1; product = 1
+   primitive zero of the four-square form modulo 8: False (anisotropic at 2)
+   p =  3: a^2 + b^2 + 1 = 0 solvable modulo p: True (isotropic, split)
+   p =  5: a^2 + b^2 + 1 = 0 solvable modulo p: True (isotropic, split)
+   p =  7: a^2 + b^2 + 1 = 0 solvable modulo p: True (isotropic, split)
+   p = 11: a^2 + b^2 + 1 = 0 solvable modulo p: True (isotropic, split)
+   p = 13: a^2 + b^2 + 1 = 0 solvable modulo p: True (isotropic, split)
+M9 odd primes < 5000: p | 2^t + 1 for some t iff ord_p(2) even, least t = ord/2: failures 0; share with even order 471/668 = 0.7051 (Hasse: 17/24 = 0.7083)
+M10 p = 3: (1 + p^-3 - p^-4) - 1 = 2/81
+M10 p = 5: (1 + p^-3 - p^-4) - 1 = 4/625
+ALL CHECKS PASSED

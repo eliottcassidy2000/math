@@ -1,0 +1,106 @@
+Auditor numerics-prereg: my independent census (my_census.py) against the stored session outputs, to the printed precision.
+brute force (bf_census.py) against my census at small sizes:
+   bf_cum_18.json my_cum_18.json IDENTICAL (triples, class counts of 12 moduli, type counts, diagonal) [540939, 671731]
+   bf_cum_16.json my_cum_16.json IDENTICAL (triples, class counts of 12 moduli, type counts, diagonal) [120564, 148622]
+   bf_win_18_17.json my_win_18_17.json IDENTICAL (triples, class counts of 12 moduli, type counts, diagonal) [285116, 355136]
+brute force at 2^18 against the session script (rerun_cum_18.out):
+my file bf_cum_18.json  vs  session file rerun_cum_18.out
+triple counts: mine [540939, 671731]  session [540939, 671731]  EQUAL
+remainder table, diagonal EXCLUDED from the type counts: 0 of 24 entries disagree with the stored 5-decimal values (largest difference 4.81e-06)
+remainder table, diagonal INCLUDED in the type counts: 24 of 24 entries disagree with the stored 5-decimal values (largest difference 1.19e-03)
+my remainders (diagonal excluded as in the statement of THM-5134 (B) / included), and noise sqrt(m/#T) per sheet:
+group lines (mean, min, max, first-order value, limit), diagonal excluded: 0 of 570 printed numbers disagree (largest difference 4.94e-05)
+group lines (mean, min, max, first-order value, limit), diagonal included: 114 of 570 printed numbers disagree (largest difference 1.34e-03)
+my file my_cum_22.json  vs  session file C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/cum_22.out
+triple counts: mine [10532579, 13218857]  session [10532579, 13218857]  EQUAL
+remainder table, diagonal EXCLUDED from the type counts: 0 of 24 entries disagree with the stored 5-decimal values (largest difference 4.83e-06)
+remainder table, diagonal INCLUDED in the type counts: 24 of 24 entries disagree with the stored 5-decimal values (largest difference 2.28e-04)
+my remainders (diagonal excluded as in the statement of THM-5134 (B) / included), and noise sqrt(m/#T) per sheet:
+    27  excl 0.04610 / 0.04429   incl 0.04619 / 0.04451   stored 0.04610 / 0.04429   noise sheet0 0.00160 sheet1 0.00143 stored 0.00143 
+    81  excl 0.06173 / 0.05537   incl 0.06182 / 0.05559   stored 0.06173 / 0.05537   noise sheet0 0.00277 sheet1 0.00248 stored 0.00248 
+    25  excl 0.00417 / 0.00779   incl 0.00409 / 0.00758   stored 0.00417 / 0.00779   noise sheet0 0.00154 sheet1 0.00138 stored 0.00138 
+   125  excl 0.01101 / 0.01481   incl 0.01108 / 0.01462   stored 0.01101 / 0.01481   noise sheet0 0.00344 sheet1 0.00308 stored 0.00308 
+    49  excl 0.18157 / 0.13989   incl 0.18148 / 0.13969   stored 0.18157 / 0.13989   noise sheet0 0.00216 sheet1 0.00193 stored 0.00193 
+    45  excl 0.08259 / 0.05715   incl 0.08251 / 0.05734   stored 0.08259 / 0.05715   noise sheet0 0.00207 sheet1 0.00185 stored 0.00185 
+    75  excl 0.09749 / 0.06517   incl 0.09741 / 0.06498   stored 0.09749 / 0.06517   noise sheet0 0.00267 sheet1 0.00238 stored 0.00238 
+    63  excl 0.21379 / 0.15668   incl 0.21369 / 0.15646   stored 0.21379 / 0.15668   noise sheet0 0.00245 sheet1 0.00218 stored 0.00218 
+   225  excl 0.13335 / 0.08454   incl 0.13327 / 0.08435   stored 0.13335 / 0.08454   noise sheet0 0.00462 sheet1 0.00413 stored 0.00413 
+    15  excl 0.06534 / 0.04319   incl 0.06525 / 0.04300   stored 0.06534 / 0.04319   noise sheet0 0.00119 sheet1 0.00107 stored 0.00107 
+    21  excl 0.19192 / 0.13718   incl 0.19182 / 0.13695   stored 0.19192 / 0.13718   noise sheet0 0.00141 sheet1 0.00126 stored 0.00126 
+group lines (mean, min, max, first-order value, limit), diagonal excluded: 0 of 570 printed numbers disagree (largest difference 4.99e-05)
+group lines (mean, min, max, first-order value, limit), diagonal included: 110 of 570 printed numbers disagree (largest difference 2.75e-04)
+my file my_cum_24.json  vs  session file C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/cum_24.out
+triple counts: mine [45886662, 57818155]  session [45886662, 57818155]  EQUAL
+remainder table, diagonal EXCLUDED from the type counts: 0 of 24 entries disagree with the stored 5-decimal values (largest difference 4.93e-06)
+remainder table, diagonal INCLUDED in the type counts: 24 of 24 entries disagree with the stored 5-decimal values (largest difference 1.20e-04)
+my remainders (diagonal excluded as in the statement of THM-5134 (B) / included), and noise sqrt(m/#T) per sheet:
+    27  excl 0.02229 / 0.02904   incl 0.02233 / 0.02914   stored 0.02229 / 0.02904   noise sheet0 0.00077 sheet1 0.00068 stored 0.00068 
+    81  excl 0.02410 / 0.04160   incl 0.02413 / 0.04170   stored 0.02410 / 0.04160   noise sheet0 0.00133 sheet1 0.00118 stored 0.00118 
+    25  excl 0.00373 / 0.00478   incl 0.00369 / 0.00488   stored 0.00373 / 0.00478   noise sheet0 0.00074 sheet1 0.00066 stored 0.00066 
+   125  excl 0.00761 / 0.00840   incl 0.00765 / 0.00850   stored 0.00761 / 0.00840   noise sheet0 0.00165 sheet1 0.00147 stored 0.00147 
+    49  excl 0.16339 / 0.14140   incl 0.16335 / 0.14131   stored 0.16339 / 0.14140   noise sheet0 0.00103 sheet1 0.00092 stored 0.00092 
+    45  excl 0.03974 / 0.05634   incl 0.03980 / 0.05646   stored 0.03974 / 0.05634   noise sheet0 0.00099 sheet1 0.00088 stored 0.00088 
+    75  excl 0.05046 / 0.05598   incl 0.05051 / 0.05609   stored 0.05046 / 0.05598   noise sheet0 0.00128 sheet1 0.00114 stored 0.00114 
+    63  excl 0.22404 / 0.17097   incl 0.22398 / 0.17087   stored 0.22404 / 0.17097   noise sheet0 0.00117 sheet1 0.00104 stored 0.00104 
+   225  excl 0.06371 / 0.06957   incl 0.06376 / 0.06969   stored 0.06371 / 0.06957   noise sheet0 0.00221 sheet1 0.00197 stored 0.00197 
+    15  excl 0.03086 / 0.03946   incl 0.03089 / 0.03937   stored 0.03086 / 0.03946   noise sheet0 0.00057 sheet1 0.00051 stored 0.00051 
+    21  excl 0.19589 / 0.15644   incl 0.19583 / 0.15634   stored 0.19589 / 0.15644   noise sheet0 0.00068 sheet1 0.00060 stored 0.00060 
+group lines (mean, min, max, first-order value, limit), diagonal excluded: 0 of 570 printed numbers disagree (largest difference 4.98e-05)
+group lines (mean, min, max, first-order value, limit), diagonal included: 78 of 570 printed numbers disagree (largest difference 1.59e-04)
+my file my_cum_26.json  vs  session file C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/cum_26.out
+triple counts: mine [198575546, 251044267]  session [198575546, 251044267]  EQUAL
+remainder table, diagonal EXCLUDED from the type counts: 0 of 24 entries disagree with the stored 5-decimal values (largest difference 4.82e-06)
+remainder table, diagonal INCLUDED in the type counts: 24 of 24 entries disagree with the stored 5-decimal values (largest difference 5.45e-05)
+my remainders (diagonal excluded as in the statement of THM-5134 (B) / included), and noise sqrt(m/#T) per sheet:
+    27  excl 0.02934 / 0.02216   incl 0.02932 / 0.02211   stored 0.02934 / 0.02216   noise sheet0 0.00037 sheet1 0.00033 stored 0.00033 
+    81  excl 0.03395 / 0.02309   incl 0.03393 / 0.02305   stored 0.03395 / 0.02309   noise sheet0 0.00064 sheet1 0.00057 stored 0.00057 
+    25  excl 0.00367 / 0.00495   incl 0.00369 / 0.00499   stored 0.00367 / 0.00495   noise sheet0 0.00035 sheet1 0.00032 stored 0.00032 
+   125  excl 0.00470 / 0.00657   incl 0.00468 / 0.00662   stored 0.00470 / 0.00657   noise sheet0 0.00079 sheet1 0.00071 stored 0.00071 
+    49  excl 0.13044 / 0.12524   incl 0.13042 / 0.12519   stored 0.13044 / 0.12524   noise sheet0 0.00050 sheet1 0.00044 stored 0.00044 
+    45  excl 0.03930 / 0.04336   incl 0.03928 / 0.04332   stored 0.03930 / 0.04336   noise sheet0 0.00048 sheet1 0.00042 stored 0.00042 
+    75  excl 0.03429 / 0.03086   incl 0.03427 / 0.03091   stored 0.03429 / 0.03086   noise sheet0 0.00061 sheet1 0.00055 stored 0.00055 
+    63  excl 0.20382 / 0.16566   incl 0.20379 / 0.16561   stored 0.20382 / 0.16566   noise sheet0 0.00056 sheet1 0.00050 stored 0.00050 
+   225  excl 0.04235 / 0.04724   incl 0.04233 / 0.04720   stored 0.04235 / 0.04724   noise sheet0 0.00106 sheet1 0.00095 stored 0.00095 
+    15  excl 0.03254 / 0.02531   incl 0.03252 / 0.02534   stored 0.03254 / 0.02531   noise sheet0 0.00027 sheet1 0.00024 stored 0.00024 
+    21  excl 0.16967 / 0.16101   incl 0.16964 / 0.16096   stored 0.16967 / 0.16101   noise sheet0 0.00033 sheet1 0.00029 stored 0.00029 
+group lines (mean, min, max, first-order value, limit), diagonal excluded: 0 of 570 printed numbers disagree (largest difference 5.00e-05)
+group lines (mean, min, max, first-order value, limit), diagonal included: 37 of 570 printed numbers disagree (largest difference 1.01e-04)
+my file my_cum_28.json  vs  session file C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/cum_28.out
+triple counts: mine [854415478, 1083261684]  session [854415478, 1083261684]  EQUAL
+remainder table, diagonal EXCLUDED from the type counts: 0 of 24 entries disagree with the stored 5-decimal values (largest difference 4.99e-06)
+remainder table, diagonal INCLUDED in the type counts: 23 of 24 entries disagree with the stored 5-decimal values (largest difference 2.66e-05)
+my remainders (diagonal excluded as in the statement of THM-5134 (B) / included), and noise sqrt(m/#T) per sheet:
+    27  excl 0.02921 / 0.02708   incl 0.02920 / 0.02706   stored 0.02921 / 0.02708   noise sheet0 0.00018 sheet1 0.00016 stored 0.00016 
+    81  excl 0.03138 / 0.03081   incl 0.03137 / 0.03079   stored 0.03138 / 0.03081   noise sheet0 0.00031 sheet1 0.00027 stored 0.00027 
+    25  excl 0.00354 / 0.00374   incl 0.00355 / 0.00376   stored 0.00354 / 0.00374   noise sheet0 0.00017 sheet1 0.00015 stored 0.00015 
+   125  excl 0.00477 / 0.00483   incl 0.00478 / 0.00485   stored 0.00477 / 0.00483   noise sheet0 0.00038 sheet1 0.00034 stored 0.00034 
+    49  excl 0.09316 / 0.10282   incl 0.09315 / 0.10280   stored 0.09316 / 0.10282   noise sheet0 0.00024 sheet1 0.00021 stored 0.00021 
+    45  excl 0.03779 / 0.03549   incl 0.03778 / 0.03547   stored 0.03779 / 0.03549   noise sheet0 0.00023 sheet1 0.00020 stored 0.00020 
+    75  excl 0.02744 / 0.02939   incl 0.02745 / 0.02937   stored 0.02744 / 0.02939   noise sheet0 0.00030 sheet1 0.00026 stored 0.00026 
+    63  excl 0.15045 / 0.16105   incl 0.15044 / 0.16103   stored 0.15045 / 0.16105   noise sheet0 0.00027 sheet1 0.00024 stored 0.00024 
+   225  excl 0.04070 / 0.03869   incl 0.04069 / 0.03867   stored 0.04070 / 0.03869   noise sheet0 0.00051 sheet1 0.00046 stored 0.00046 
+    15  excl 0.02393 / 0.02760   incl 0.02393 / 0.02758   stored 0.02393 / 0.02760   noise sheet0 0.00013 sheet1 0.00012 stored 0.00012 
+    21  excl 0.11979 / 0.14064   incl 0.11977 / 0.14061   stored 0.11979 / 0.14064   noise sheet0 0.00016 sheet1 0.00014 stored 0.00014 
+group lines (mean, min, max, first-order value, limit), diagonal excluded: 0 of 570 printed numbers disagree (largest difference 4.98e-05)
+group lines (mean, min, max, first-order value, limit), diagonal included: 12 of 570 printed numbers disagree (largest difference 6.73e-05)
+my file my_win_28_27.json  vs  session file C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/window_prereg_28_27.out
+triple counts: mine [442236323, 561401507]  session [442236323, 561401507]  EQUAL
+group lines (mean, min, max, first-order value, limit), diagonal excluded: 0 of 340 printed numbers disagree (largest difference 4.96e-05)
+group lines (mean, min, max, first-order value, limit), diagonal included: 1 of 340 printed numbers disagree (largest difference 5.97e-05)
+a-priori column of the stored output vs registered json: 0 of 68 disagree
+my file my_win_24_23.json  vs  session file C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/window_insample_24_23.out
+triple counts: mine [23882588, 30144668]  session [23882588, 30144668]  EQUAL
+group lines (mean, min, max, first-order value, limit), diagonal excluded: 0 of 340 printed numbers disagree (largest difference 4.95e-05)
+group lines (mean, min, max, first-order value, limit), diagonal included: 25 of 340 printed numbers disagree (largest difference 1.08e-04)
+my file my_win_25_24.json  vs  session file C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/window_insample_25_24.out
+triple counts: mine [49644073, 62761167]  session [49644073, 62761167]  EQUAL
+group lines (mean, min, max, first-order value, limit), diagonal excluded: 0 of 340 printed numbers disagree (largest difference 4.98e-05)
+group lines (mean, min, max, first-order value, limit), diagonal included: 25 of 340 printed numbers disagree (largest difference 8.98e-05)
+my file my_win_26_25.json  vs  session file C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/window_insample_26_25.out
+triple counts: mine [103044811, 130464945]  session [103044811, 130464945]  EQUAL
+group lines (mean, min, max, first-order value, limit), diagonal excluded: 0 of 340 printed numbers disagree (largest difference 5.00e-05)
+group lines (mean, min, max, first-order value, limit), diagonal included: 18 of 340 printed numbers disagree (largest difference 7.36e-05)
+my file my_win_27_26.json  vs  session file C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/window_insample_27_26.out
+triple counts: mine [213603609, 270815910]  session [213603609, 270815910]  EQUAL
+group lines (mean, min, max, first-order value, limit), diagonal excluded: 0 of 340 printed numbers disagree (largest difference 5.00e-05)
+group lines (mean, min, max, first-order value, limit), diagonal included: 5 of 340 printed numbers disagree (largest difference 6.74e-05)

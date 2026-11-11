@@ -1,0 +1,2 @@
+primes < 200 whose first p-divisible state (searched to 2^24) is the fan: [3, 5, 11, 13, 17, 43, 113]
+primes < 200 whose first p-divisible state is >= 2^16 (outside the table of bridges_exact.py S8): [(127, 109283, None), (163, 68867, 1208925819614629174706176), (193, 75173, 140737488355328)]

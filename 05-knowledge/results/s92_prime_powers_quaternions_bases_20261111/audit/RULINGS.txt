@@ -1,0 +1,97 @@
+RULINGS OF THE SESSION (opus-2026-11-11-S92) ON THE AUDIT FINDINGS F001-F111 - binding for the editors.
+
+R0  Apply every finding (MAJOR, MINOR, NOTE) that concerns your file, with the auditor's replacement text adapted to
+    the surrounding sentences, unless a ruling below says otherwise. If you judge a proposed fix to be
+    mathematically wrong or to contradict another finding, do not apply it blindly: resolve it by checking (compute
+    if needed) and report what you did and why. Optional suggestions (worded "optional", "suggestion only") are
+    applied when they cost a sentence; the 2^30 column of F-note n28 is added as one sentence, not as a table column.
+    Never edit PREREGISTRATION.md, prereg_window_28_27.json, any script, any output, or any file other than yours.
+    Keep the house style: plain ASCII mathematics inside backticks, the status vocabulary (PROVED, CITED,
+    FINITE-EXACT, NUMERICAL, KNOWN, NEW, OPEN, CONDITIONAL), no claim about Chan-Pak or Collatz (both OPEN).
+
+R1  Labels. Statement (H) of THM-5134 is renamed (G) everywhere (its title, status, statement, numerical paragraph,
+    proof, remarks). In every other file "THM-5134 (H)" becomes "THM-5134 (G)". References to (H) of OTHER theorems
+    (THM-5133 (H), THM-5130 (H4)) are not touched.
+
+R2  Notation. (a) The sum of divisors is written sigma_1(n) (as in THM-5128) in THM-5134, THM-5135, HYP-9665,
+    HYP-9666 and the note; sigma_(r-1) is unchanged; sigma alone remains the sheet index (c_sigma, T_sigma, S_sigma).
+    (b) In the note, section 6 and 7, the sign of a table label is written eps (m = 4x + eps), not sigma; the note
+    gets one notation line where the symbols first occur. (c) The base-b state is written x_b(h) = 1 + b psi(h)
+    (so x_2 = x), and x_b(h1) x_b(h2) in formulas, instead of X, X1, X2; X remains the bound N <= X.
+    (d) "sheet" alone means the F1 sheet (s = 0: head sheet, sheet 0; s >= 1: tail sheet, sheet 1); the sign of a
+    table label is called the "Collatz side" (positive side eps = +1, negative side eps = -1).
+    (e) Dihedral groups are named by their order in words on first use: "the dihedral group of order 8 (D_4; written
+    D8 in THM-2887)", "the dihedral group of order 2p (written D_{2p} in THM-127, THM-131, THM-586)".
+
+R3  THM-5134 (G) (every base) receives, beyond the listed fixes:
+    (i) (E) in base b with the product over the primes not dividing 2b (finding on (H) overreach);
+    (ii) a new clause "second digit": for odd b the second base-b digit alpha_1 (mod b) of N_b is equidistributed
+    by value on each sheet, with a power saving (PROVED; corollary of THM-5128 (B4)(iv): modulo b, alpha_1 is an
+    affine form in the residue vector (x2, y2) of the larger state with a unit coefficient at x2, so it takes each
+    class on exactly b residue vectors); for b = 2 it is THM-5128 (E) with j = 2; for even b > 2 it is HYP-9665 (C).
+    Credit: found by the audit (auditor "hypotheses"). NUMERICAL (audit, complete censuses, sheet 0 / sheet 1):
+    b = 3: deviation 0.131/0.127, 0.071/0.073, 0.041/0.040, 0.024/0.023 at 2^16, 2^20, 2^24, 2^28 (ratio 0.867 per
+    binary digit, the rate sqrt(3)/2 of the digit chain at 3).
+    (iii) the definitions of R(h) and J(h1, h2, s) and the dictionary with THM-5070 (2) and THM-5085 (2);
+    (iv) the written details of the proof (weights, constants), as proposed by the auditor.
+
+R4  THM-5135 receives: in (1) the value at the class 0 and "for every m"; in (3)(b) the status PROVED modulo every
+    2^k with the lifting argument proposed by the audit (state it in the Proofs section); in (3)(d) the missing
+    step; in (4) the Smith-form statement as a PROVED part (credited to the audit; it was HYP-9666 (C)), the exact
+    scope of THM-4916 (letter-count model, one free state), and the parity structure of the fusion corner; in (5)
+    the two orders of C + C; the rule that every status line names its ranges.
+
+R5  HYP-9665. (A): for j >= 2; status "OPEN (not written out); every ingredient is available (audit)", with the
+    audit's ingredient statement and the conditional-flatness test and data (finding M on the falsifier); (B): the
+    corrected dependence (uniformity is necessary, not sufficient; second moment needed) and the audit's L1 data;
+    (C): reduced to even bases b > 2 (b = 2 is THM-5128 (E); odd b is now THM-5134 (G), PROVED), with the audit's
+    data for b = 6 (0.184/0.163, 0.090/0.098, 0.048/0.052, 0.028/0.029 at 2^16, 2^20, 2^24, 2^28) and the corrected
+    0.0034 at b = 10; (D): the corrected statement of the constants and of the question. Title and status follow.
+    HYP-9666. (A): corrected scope of THM-4916, corrected parity sentence, the falsifier replaced by what would
+    settle it negatively; add the G(2,0) datum of HYP-9660 (D); (B): the restriction to p >= 5 not dividing det N
+    for module states; (C): one line "PROVED by the audit, now THM-5135 (4)" (title and status follow); (D): the
+    extension to every module kernel.
+
+R6  THM-5133 and HYP-9664 are AUDITED (kind-pasteur, 2026-11-11, PASS WITH CORRECTIONS, MISTAKE-762; HYP-9664 (C)
+    REFUTED for n >= 5 by that audit). Replace every "PRE-AUDIT" said of them. The paragraph of the note about CD_4
+    becomes: "THM-5133 (G), as audited, identifies CD_4 with T_15 of THM-448 (isomorphism found by its audit) and
+    records that CD_5 is not T_31. Recomputed here independently (cd_tower_iso.py: explicit isomorphisms for
+    n = 2, 3, 4; at n = 5 neither T_31 nor its converse, both with 21 automorphisms and the same census of
+    4-subsets). The split-octonion and split-sedenion values 45 and 24,453,597 also occur in THM-450 (7)
+    (cross-reference only, not tested)." Next obligation (5) of the note is deleted.
+
+R7  Corrected numbers (the two base-b censuses were incomplete; scripts fixed and outputs regenerated after the
+    audit; they now agree with the auditors' complete counts):
+    sheet s >= 1, N_b <= 2^24, b = 2, 3, 4, 5, 6, 10: 57,818,155 / 35,564,915 / 24,947,862 / 18,838,778 / 14,919,260 /
+    7,634,213 triples; remainder of the first-order law at most 0.133 (at 7: 0.133, 0.067, 0.125, 0.042, 0.105, 0.060
+    in these bases; at most 0.051 at the other primes); second digit flat to 0.000, 0.040, 0.001, 0.002, 0.052, 0.003.
+    sheet s = 0, N_b <= 2^22, b = 2, 3, 5, 10: 10,532,579 / 6,030,660 / 2,896,626 / 1,042,874 triples; every triple
+    whose smaller state is p-divisible has 2 N_b + b = 0 (mod p) (0 violations); remainder at 7: 0.167, 0.101,
+    0.078, 0.118; at most 0.057 at the other primes.
+    Early boosts: the state h = 3 (psi = 2, y = 7) is 7-divisible for every b = 3 (mod 7): x_b = y = 7 in base 3,
+    x_b = 21 in base 10 (F p^2 = 3.37 and 3.28 on sheet 1 at 2^24); h = 6 (x_b = 26 = 2y, y = 13; not balanced)
+    boosts 13 in base 5 (F p^2 = 3.38).
+    Receipts: every_base.out (4) and bridges_exact.out S10 are now complete censuses; bridges_exact.out S2 covers
+    r <= 4 modulo 25; seam_rank_exact.out prints "THM-5135 (1)" and "THM-5134 (F)"; every_base.py is the receipt of
+    THM-5134 (G); small_tournaments_collatz_lines.out prints the statement "c_-(3N) = T_+(c_-(N)) iff N = 3 (mod 4)";
+    new receipt cd_tower_iso.py / cd_tower_iso.out.
+
+R8  Pre-registration. Add the "Blindness" paragraph of the audit to THM-5134 (Numerical support) and to the note,
+    section 1; in the status write "the registration commit 73c8437aac precedes the commit of the outputs"; add the
+    audit's remarks on the power of P1, on P3 at 49 (it fails there) and on the instability of P4.
+
+R9  Status of the two theorems after your edit: replace "PRE-AUDIT DRAFT (...)" by
+    "AUDITED 2026-11-11: independent audit by eight auditors, PASS WITH CORRECTIONS (6 MAJOR, 64 MINOR, 41 NOTE; all
+    applied; MISTAKE-763); report: 05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/AUDIT_REPORT.md."
+    and for the two hypotheses "OPEN ...; audited 2026-11-11 with THM-5134 / THM-5135 (PASS WITH CORRECTIONS,
+    MISTAKE-763)". The note's section 11 "Audit" is rewritten: verdicts, the six majors in one line each (truncated
+    base-b censuses; missing credit to Session266's Collatz lane; the strong 5-classes KNOWN from Session224;
+    partial blindness of the pre-registration; the falsifier of HYP-9665 (A)), what the audit added (the second
+    digit for odd bases PROVED, the Smith-form law PROVED, E8 at 2 PROVED by lifting, conditional flatness data for
+    even moduli, the constants A, the 2^30 census), and the path of the report.
+
+R10 Credits to add (majors): Session266 collatz/PROOF.md sections 2, 3, 4, 8 (signed-edge coordinate h = 4x + s,
+    code product and dynamics, the cut at 7, D = 2^L - 3^r for the four known cycles, the four 4-vertex classes) in
+    the note, sections 6, 7, 9, 10; Session224 birth ledger and THM-4922 (2) and A002785 for the six strong classes
+    of order 5 and the 8 self-converse classes of 12 in the note, section 8 and its head table; THM-5085 (2) in
+    THM-5134; THM-5128 (A), (F) and its sections where the auditors say so.

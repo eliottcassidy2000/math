@@ -1,0 +1,43 @@
+A. every_base.py census_b, sheet s >= 1, N_b <= 2^K: number of ordered triples
+   K   b   python brute force   my census   session census_b (table 2^21, as in the script)   session census_b (full table 2^24)
+  14   2          32367          32367          32367          32367   equal
+  14   3          19681          19681          19681          19681   equal
+  14   5          10353          10353          10349          10349   session census misses 4 triples (defect (ii))
+  14  10           4228           4228           4226           4226   session census misses 2 triples (defect (ii))
+  16   2         148622         148622         148614         148614   session census misses 8 triples (defect (ii))
+  16   3          90768          90768          90762          90762   session census misses 6 triples (defect (ii))
+  16   5          47854          47854          47840          47840   session census misses 14 triples (defect (ii))
+  16  10          19515          19515          19507          19507   session census misses 8 triples (defect (ii))
+  20   2              -        2995785        2995663        2995663   missing with the script's table: 122 (0.004 %); with the full table: 122
+  20   3              -        1837677        1837539        1837539   missing with the script's table: 138 (0.008 %); with the full table: 138
+  20   4              -        1287464        1287334        1287334   missing with the script's table: 130 (0.010 %); with the full table: 130
+  20   5              -         971677         971525         971525   missing with the script's table: 152 (0.016 %); with the full table: 152
+  20   6              -         769428         769252         769252   missing with the script's table: 176 (0.023 %); with the full table: 176
+  20  10              -         394717         394609         394609   missing with the script's table: 108 (0.027 %); with the full table: 108
+  24   2              -       57818155       55892593       57815965   missing with the script's table: 1925562 (3.330 %); with the full table: 2190
+  24   3              -       35564915       35516685       35562283   missing with the script's table: 48230 (0.136 %); with the full table: 2632
+  24   4              -       24947862       24945520       24945520   missing with the script's table: 2342 (0.009 %); with the full table: 2342
+  24   5              -       18838778       18836356       18836356   missing with the script's table: 2422 (0.013 %); with the full table: 2422
+  24   6              -       14919260       14916908       14916908   missing with the script's table: 2352 (0.016 %); with the full table: 2352
+  24  10              -        7634213        7632149        7632149   missing with the script's table: 2064 (0.027 %); with the full table: 2064
+
+B. bridges_exact.py S10 base_head_census, sheet s = 0, N_beta <= 2^22: number of ordered triples
+   beta   my census (all triples)   session function, table 2^12 (as in the script)   session function, table 2^22
+    2     10532579      2845759 (27.0 % of the triples)     10532579
+        table 2^12 (stored output): p=3: class 2 factor 1.107, F p^2 = 0.58, rem 0.036; p=5: class 4 factor 1.177, F p^2 = 1.10, rem 0.002; p=7: class 6 factor 1.329, F p^2 = 1.40, rem 0.158; p=11: class 10 factor 1.217, F p^2 = 2.40, rem 0.019; p=13: class 12 factor 1.010, F p^2 = 0.51, rem 0.027
+        table 2^22 (all triples):   p=3: class 2 factor 1.290, F p^2 = 1.36, rem 0.028; p=5: class 4 factor 1.255, F p^2 = 1.59, rem 0.000; p=7: class 6 factor 1.228, F p^2 = 0.50, rem 0.167; p=11: class 10 factor 1.176, F p^2 = 2.09, rem 0.004; p=13: class 12 factor 1.034, F p^2 = 0.60, rem 0.009   [exactness violations 0]
+    3      6030660      1832488 (30.4 % of the triples)      6030660
+        table 2^12 (stored output): p=5: class 1 factor 1.141, F p^2 = 0.97, rem 0.015; p=7: class 2 factor 1.293, F p^2 = 2.43, rem 0.069; p=11: class 4 factor 1.092, F p^2 = 1.06, rem 0.007; p=13: class 5 factor 1.031, F p^2 = 0.95, rem 0.036
+        table 2^22 (all triples):   p=5: class 1 factor 1.085, F p^2 = 0.57, rem 0.006; p=7: class 2 factor 1.321, F p^2 = 3.44, rem 0.101; p=11: class 4 factor 1.038, F p^2 = 0.40, rem 0.009; p=13: class 5 factor 1.022, F p^2 = 0.55, rem 0.017   [exactness violations 0]
+    5      2896626       985666 (34.0 % of the triples)      2896626
+        table 2^12 (stored output): p=3: class 2 factor 1.113, F p^2 = 0.69, rem 0.039; p=7: class 1 factor 0.986, F p^2 = 0.24, rem 0.103; p=11: class 3 factor 0.973, F p^2 = 0.11, rem 0.036; p=13: class 4 factor 1.117, F p^2 = 1.93, rem 0.020
+        table 2^22 (all triples):   p=3: class 2 factor 1.266, F p^2 = 1.30, rem 0.024; p=7: class 1 factor 1.016, F p^2 = 0.08, rem 0.078; p=11: class 3 factor 0.994, F p^2 = 0.04, rem 0.009; p=13: class 4 factor 1.213, F p^2 = 3.23, rem 0.017   [exactness violations 0]
+   10      1042874       379472 (36.4 % of the triples)      1042874
+        table 2^12 (stored output): p=3: class 1 factor 1.178, F p^2 = 0.42, rem 0.084; p=7: class 2 factor 1.451, F p^2 = 4.05, rem 0.082; p=11: class 6 factor 1.064, F p^2 = 0.24, rem 0.045; p=13: class 8 factor 1.053, F p^2 = 0.80, rem 0.027
+        table 2^22 (all triples):   p=3: class 1 factor 1.055, F p^2 = 0.15, rem 0.057; p=7: class 2 factor 1.282, F p^2 = 2.92, rem 0.118; p=11: class 6 factor 1.025, F p^2 = 0.09, rem 0.018; p=13: class 8 factor 1.027, F p^2 = 0.29, rem 0.011   [exactness violations 0]
+
+C. brute-force check of my sheet-0 census at small size: beta, python brute force, my census
+    2      26459      26459   equal
+    3      15222      15222   equal
+    5       7438       7438   equal
+   10       2829       2829   equal

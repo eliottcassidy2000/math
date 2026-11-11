@@ -1,0 +1,30 @@
+own census, auditor proof-5134-FH: N_b <= 2^24, sheet s = 0
+class e(N) = N (sheet 1), 2N + b (sheet 0); remainder = m max_c |#{N = c} - sum_{d | gcd(m, e(c))} (d/m) D^(d)| / #T
+columns per modulus: factor of the distinguished class [min, max of the other classes]; F m^2 = (share of triples whose smaller state has gcd = m) * m^2; rem; noise = sqrt(m/#T)
+
+b = 3: #T = 26257636 ordered triples (1236 diagonal); N_b = 1 (mod b) for all: True; largest word used 3727359; 8.8 s
+  m =   5 (prime): class  1: 1.0901 [0.9772, 0.9780]  F m^2 = 0.589  rem = 0.0041  noise = 0.0004  type violations = 0  types 1: 25637672, 5: 618728  diagonal of type > 1: 40 (all in a class with type | e(N): True)
+  m =   7 (prime): class  2: 1.3012 [0.8564, 1.0035]  F m^2 = 3.248  rem = 0.0965  noise = 0.0005  type violations = 0  types 1: 24515796, 7: 1740604  diagonal of type > 1: 30 (all in a class with type | e(N): True)
+  m =  11 (prime): class  4: 1.0404 [0.9923, 1.0001]  F m^2 = 0.488  rem = 0.0042  noise = 0.0006  type violations = 0  types 1: 26150472, 11: 105928  diagonal of type > 1: 14 (all in a class with type | e(N): True)
+  m =  13 (prime): class  5: 1.0244 [0.9909, 1.0060]  F m^2 = 0.531  rem = 0.0133  noise = 0.0007  type violations = 0  types 1: 26173936, 13: 82464  diagonal of type > 1: 4 (all in a class with type | e(N): True)
+  m =  25 (composite): class 11: 1.0956 [0.9732, 1.0901]  F m^2 = 0.133  rem = 0.0069  noise = 0.0010  type violations = 0  types 1: 25637672, 5: 613142, 25: 5586  diagonal of type > 1: 40 (all in a class with type | e(N): True)
+  m =  35 (composite): class 16: 1.3997 [0.8345, 1.2779]  F m^2 = 0.000  rem = 0.1036  noise = 0.0012  type violations = 0  types 1: 23897068, 5: 618728, 7: 1740604, 35: 0  diagonal of type > 1: 70 (all in a class with type | e(N): True)
+  m =  49 (composite): class 23: 1.2638 [0.8539, 1.3548]  F m^2 = 0.000  rem = 0.1445  noise = 0.0014  type violations = 0  types 1: 24515796, 7: 1740604, 49: 0  diagonal of type > 1: 30 (all in a class with type | e(N): True)
+  m =  55 (composite): class 26: 1.1375 [0.9674, 1.0913]  F m^2 = 0.000  rem = 0.0124  noise = 0.0014  type violations = 0  types 1: 25531744, 5: 618728, 11: 105928, 55: 0  diagonal of type > 1: 54 (all in a class with type | e(N): True)
+  m =  77 (composite): class 37: 1.3310 [0.8459, 1.3022]  F m^2 = 0.000  rem = 0.1070  noise = 0.0017  type violations = 0  types 1: 24409868, 7: 1740604, 11: 105928, 77: 0  diagonal of type > 1: 44 (all in a class with type | e(N): True)
+  m =  91 (composite): class 44: 1.5169 [0.8489, 1.2915]  F m^2 = 22.271  rem = 0.1121  noise = 0.0019  type violations = 0  types 1: 24503948, 7: 1669988, 13: 11848, 91: 70616  diagonal of type > 1: 33 (all in a class with type | e(N): True)
+
+b = 10: #T = 4489156 ordered triples (474 diagonal); N_b = 1 (mod b) for all: True; largest word used 1118207; 1.7 s
+  m =   3 (prime): class  1: 1.0850 [0.9230, 0.9920]  F m^2 = 0.230  rem = 0.0513  noise = 0.0008  type violations = 0  types 1: 4374104, 3: 114578  diagonal of type > 1: 61 (all in a class with type | e(N): True)
+  m =   7 (prime): class  2: 1.2286 [0.8202, 1.0477]  F m^2 = 2.842  rem = 0.1217  noise = 0.0012  type violations = 0  types 1: 4228282, 7: 260400  diagonal of type > 1: 20 (all in a class with type | e(N): True)
+  m =   9 (composite): class  4: 1.0886 [0.9047, 1.0842]  F m^2 = 0.075  rem = 0.0697  noise = 0.0014  type violations = 0  types 1: 4374104, 3: 110396, 9: 4182  diagonal of type > 1: 61 (all in a class with type | e(N): True)
+  m =  11 (prime): class  6: 1.0343 [0.9893, 1.0003]  F m^2 = 0.195  rem = 0.0183  noise = 0.0016  type violations = 0  types 1: 4481430, 11: 7252  diagonal of type > 1: 4 (all in a class with type | e(N): True)
+  m =  13 (prime): class  8: 1.0278 [0.9886, 1.0078]  F m^2 = 0.334  rem = 0.0099  noise = 0.0017  type violations = 0  types 1: 4479800, 13: 8882  diagonal of type > 1: 2 (all in a class with type | e(N): True)
+  m =  49 (composite): class 44: 1.1887 [0.8087, 1.2723]  F m^2 = 0.446  rem = 0.1670  noise = 0.0033  type violations = 0  types 1: 4228282, 7: 259566, 49: 834  diagonal of type > 1: 20 (all in a class with type | e(N): True)
+  m =  77 (composite): class 72: 1.2873 [0.8070, 1.2332]  F m^2 = 1.704  rem = 0.1351  noise = 0.0041  type violations = 0  types 1: 4222320, 7: 259110, 11: 5962, 77: 1290  diagonal of type > 1: 23 (all in a class with type | e(N): True)
+  m =  91 (composite): class 86: 1.2711 [0.8095, 1.2483]  F m^2 = 0.000  rem = 0.1373  noise = 0.0045  type violations = 0  types 1: 4219400, 7: 260400, 13: 8882, 91: 0  diagonal of type > 1: 22 (all in a class with type | e(N): True)
+
+largest remainder over the primes 3..13 not dividing b, per base:
+  b = 3: 0.0965 at p = 7
+  b = 10: 0.1217 at p = 7
+overall: 0.1217

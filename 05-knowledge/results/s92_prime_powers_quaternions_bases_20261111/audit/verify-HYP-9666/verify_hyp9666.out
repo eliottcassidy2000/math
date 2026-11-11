@@ -1,0 +1,99 @@
+# verify_hyp9666.py (verifier of HYP-9666; own code)
+
+[Y] front matter and text of the document
+  YAML front matter parses: OK; keys: ['id', 'title', 'status', 'session', 'date', 'source', 'scripts', 'related']
+  required keys present: OK; id = HYP-9666; title and status are strings: True; scripts 8 items, related 11 items
+  path tokens of source / scripts / related resolving to existing files: 28 of 28 OK 
+  receipts named audit/... in the body: 7 distinct, missing: [] OK
+  non-ASCII characters: [] OK
+  occurrences of stale tokens: {'PRE-AUDIT': 0, 'sigma(': 0, 'THM-5134 (H)': 0, 'falsifier': 0, 'Falsifier': 0, '(4)(d)': 0, 'X1': 0, 'X2': 0} OK
+  mentions of Chan-Pak: 0, of Collatz: 0
+  labels of THM-5135 cited: ['THM-5135 (1)', 'THM-5135 (2)', 'THM-5135 (4)(b)', 'THM-5135 (4)(c)']
+  labels of THM-5134 cited: []
+  body lines longer than 120 characters: []
+  findings line: F010, F026, F027, F032, F039, F041, F055, F074, F103 to F107, F110
+
+[N] fractions quoted in the document
+  p = 3: 1 + p^-3 - p^-4 = 83/81 (expected 83/81), bias 2/81 (expected 2/81) OK
+  p = 5: 1 + p^-3 - p^-4 = 629/625 (expected 629/625), bias 4/625 (expected 4/625) OK
+  uniform values at 3, 5, 7: 1.0247 1.0064 1.0025 (document: 1.0247, 1.0064, 1.0025) OK
+  THM-4916, two root changes, p = 3: 1 + (3p - 2)(p - 1)/(2 p^3) = 34/27 (expected 34/27) OK; p (L(0) - 1) = 7/9
+  THM-4916, two root changes, p = 5: 1 + (3p - 2)(p - 1)/(2 p^3) = 151/125 (expected 151/125) OK; p (L(0) - 1) = 26/25
+  p (L(0) - 1) at p = 10007: 1.49975 (tends to 3/2)
+  rank 4 modulo 2: share of the class 0 = 17/32 (expected 17/32) OK
+  0.0004 against the rank-4 biases p^-3 - p^-4 at 5, 7, 11, 13: 0.00640, 0.00250, 0.00068, 0.00042
+
+[L] class laws for uniform states
+  fusion corner in (h, H-h, U-h, d-h): det = -1; in the path-mass coordinates (h, H-h, a_o, a_e): det = -4 OK
+  corner, uniform states, enumeration of all pairs, equal to the rank-4 law (1): 2:True  3:True  4:True  5:True  9:True
+  the same form in path-mass coordinates (determinant -4): 2:False  3:True  4:False  5:True  9:True (unimodular at the odd primes only)
+  K-form in (U, E, d, a): det = -1 OK; uniform states, equal to the rank-4 law (1): 2:True  3:True  4:True  5:True  9:True
+  rank 3 modulo  3: factor (1 - p^-3) sigma_2(p^v)/p^(2v), with the class 0: True; six squares have the same law: False (expected False) OK
+  rank 3 modulo  9: factor (1 - p^-3) sigma_2(p^v)/p^(2v), with the class 0: True; six squares have the same law: False (expected False) OK
+  rank 3 modulo 27: factor (1 - p^-3) sigma_2(p^v)/p^(2v), with the class 0: True; six squares have the same law: False (expected False) OK
+  rank 3 modulo  5: factor (1 - p^-3) sigma_2(p^v)/p^(2v), with the class 0: True; six squares have the same law: True (expected True) OK
+  rank 3 modulo 25: factor (1 - p^-3) sigma_2(p^v)/p^(2v), with the class 0: True; six squares have the same law: True (expected True) OK
+  rank 3 modulo  7: factor (1 - p^-3) sigma_2(p^v)/p^(2v), with the class 0: True; six squares have the same law: False (expected False) OK
+  rank 3 modulo 49: factor (1 - p^-3) sigma_2(p^v)/p^(2v), with the class 0: True; six squares have the same law: False (expected False) OK
+  rank 3 modulo 13: factor (1 - p^-3) sigma_2(p^v)/p^(2v), with the class 0: True; six squares have the same law: True (expected True) OK
+
+[F] fusion states of the labelled pointed tournaments (root = vertex 0), orders 1 to 7
+  numbers of tournaments: [1, 2, 8, 64, 1024, 32768, 2097152]
+  (H, h, U, V, d, e, a_o, a_e, b_o, b_e) against explicit enumeration of rooted paths, orders <= 5: 1099 tournaments, 0 differences OK
+  order 3, (H, h, U, V, d, e): [(1, 1, 1, 4, 1, 0), (1, 1, 2, 2, 0, 0), (1, 1, 4, 1, 0, 1), (3, 1, 3, 3, 1, 1)] (Session264: cyclic triangle (3, 1, 3, 3, 1, 1))
+  a_o = (U + d)/2 - h, a_e = (U - d)/2, b_o = (V + e)/2 - h, b_e = (V - e)/2 with the path masses computed directly, orders <= 7: 0 violations OK
+  fusion law (3) by direct path counts of A * B, all pairs of orders <= 4: 5625 pairs, 0 violations; with the last two terms written 2 (a_o b_o + a_e b_e): 0 violations OK
+  n = 1: H, h odd and U = d, V = e (mod 2): OK; (a_o, a_e) mod 2 takes 1 classes, (b_o, b_e) mod 2 1; ((U-h) mod 4, (d-h) mod 4): 1 pairs
+  n = 2: H, h odd and U = d, V = e (mod 2): OK; (a_o, a_e) mod 2 takes 2 classes, (b_o, b_e) mod 2 2; ((U-h) mod 4, (d-h) mod 4): 2 pairs
+  n = 3: H, h odd and U = d, V = e (mod 2): OK; (a_o, a_e) mod 2 takes 4 classes, (b_o, b_e) mod 2 4; ((U-h) mod 4, (d-h) mod 4): 4 pairs
+  n = 4: H, h odd and U = d, V = e (mod 2): OK; (a_o, a_e) mod 2 takes 4 classes, (b_o, b_e) mod 2 4; ((U-h) mod 4, (d-h) mod 4): 6 pairs
+  n = 5: H, h odd and U = d, V = e (mod 2): OK; (a_o, a_e) mod 2 takes 4 classes, (b_o, b_e) mod 2 4; ((U-h) mod 4, (d-h) mod 4): 8 pairs
+  n = 6: H, h odd and U = d, V = e (mod 2): OK; (a_o, a_e) mod 2 takes 4 classes, (b_o, b_e) mod 2 4; ((U-h) mod 4, (d-h) mod 4): 8 pairs
+  n = 7: H, h odd and U = d, V = e (mod 2): OK; (a_o, a_e) mod 2 takes 4 classes, (b_o, b_e) mod 2 4; ((U-h) mod 4, (d-h) mod 4): 8 pairs
+  distinct left states (orders <= 7): 2831; distinct right states: 2831; equal sets: True
+  Z-span of the pairs (U - h, d - h): index 2 in Z^2 (expected 2); Z-span of the pairs (a_o, a_e): index 1 (expected 1) OK
+  Z-span of the left states: index 4 in Z^4 (the conditions H - h even and U = d mod 2); Z-span of their differences: index 8 (h odd fixes a coset)
+  arc 0 -> 1 rooted at its tail: (U - h, d - h) = (1, -1), (a_o, a_e) = (0, 1); cyclic triangle: (U - h, d - h) = (2, 0), (a_o, a_e) = (1, 1); index of the lattice they span: 2 OK
+  p = 3, n = 4: left: 10 of 81 residue vectors, affine rank 4; right: 10 of 81 residue vectors, affine rank 4 (rank 4 = no affine relation)
+  p = 3, n = 5: left: 29 of 81 residue vectors, affine rank 4; right: 29 of 81 residue vectors, affine rank 4 (rank 4 = no affine relation)
+  p = 3, n = 6: left: 73 of 81 residue vectors, affine rank 4; right: 73 of 81 residue vectors, affine rank 4 (rank 4 = no affine relation)
+  p = 3, n = 7: left: 81 of 81 residue vectors, affine rank 4; right: 81 of 81 residue vectors, affine rank 4 (rank 4 = no affine relation)
+  p = 5, n = 4: left: 12 of 625 residue vectors, affine rank 4; right: 12 of 625 residue vectors, affine rank 4 (rank 4 = no affine relation)
+  p = 5, n = 5: left: 46 of 625 residue vectors, affine rank 4; right: 46 of 625 residue vectors, affine rank 4 (rank 4 = no affine relation)
+  p = 5, n = 6: left: 195 of 625 residue vectors, affine rank 4; right: 195 of 625 residue vectors, affine rank 4 (rank 4 = no affine relation)
+  p = 5, n = 7: left: 591 of 625 residue vectors, affine rank 4; right: 591 of 625 residue vectors, affine rank 4 (rank 4 = no affine relation)
+  p = 7, n = 4: left: 12 of 2401 residue vectors, affine rank 4; right: 12 of 2401 residue vectors, affine rank 4 (rank 4 = no affine relation)
+  p = 7, n = 5: left: 45 of 2401 residue vectors, affine rank 4; right: 45 of 2401 residue vectors, affine rank 4 (rank 4 = no affine relation)
+  p = 7, n = 6: left: 250 of 2401 residue vectors, affine rank 4; right: 250 of 2401 residue vectors, affine rank 4 (rank 4 = no affine relation)
+  p = 7, n = 7: left: 1384 of 2401 residue vectors, affine rank 4; right: 1384 of 2401 residue vectors, affine rank 4 (rank 4 = no affine relation)
+  class-0 factor of H(A * B) modulo 3, A and B uniform of order n = 4, 5, 6, 7 (from the state histograms and the law): 1.3125 1.3026 1.2737 1.1621; rounded ['1.31', '1.30', '1.27', '1.16']; document ['1.31', '1.30', '1.27', '1.16'] OK
+  class-0 factor of H(A * B) modulo 5, A and B uniform of order n = 4, 5, 6, 7 (from the state histograms and the law): 1.2598 1.1847 1.1342 1.0490; rounded ['1.26', '1.18', '1.13', '1.05']; document ['1.26', '1.18', '1.13', '1.05'] OK
+  class-0 factor of H(A * B) modulo 7, A and B uniform of order n = 4, 5, 6, 7 (from the state histograms and the law): 0.2461 0.7101 0.9208 0.9926; rounded ['0.25', '0.71', '0.92', '0.993']; document ['0.25', '0.71', '0.92', '0.993'] OK
+  the same factors by direct path counts of all 4096 fused pairs of order 4 (no use of the law): 3: 1.3125, 5: 1.2598, 7: 0.2461
+  the same factors by direct path counts of all 1048576 fused pairs of order 5 (no use of the law): 3: 1.3026, 5: 1.1847, 7: 0.7101
+
+[K] two-port kernels
+  n = 1:        1 labelled tournaments; violations of Pi_2 = (-1)^n H (mod 3): 0; of P_2 = ((-1)^n + 1) H (mod 3): 0; P_2 odd: 0; H even: 0; P_3 not divisible by 6: 0 OK
+  n = 2:        2 labelled tournaments; violations of Pi_2 = (-1)^n H (mod 3): 0; of P_2 = ((-1)^n + 1) H (mod 3): 0; P_2 odd: 0; H even: 0; P_3 not divisible by 6: 0 OK
+  n = 3:        8 labelled tournaments; violations of Pi_2 = (-1)^n H (mod 3): 0; of P_2 = ((-1)^n + 1) H (mod 3): 0; P_2 odd: 0; H even: 0; P_3 not divisible by 6: 0 OK
+  n = 4:       64 labelled tournaments; violations of Pi_2 = (-1)^n H (mod 3): 0; of P_2 = ((-1)^n + 1) H (mod 3): 0; P_2 odd: 0; H even: 0; P_3 not divisible by 6: 0 OK
+  n = 5:     1024 labelled tournaments; violations of Pi_2 = (-1)^n H (mod 3): 0; of P_2 = ((-1)^n + 1) H (mod 3): 0; P_2 odd: 0; H even: 0; P_3 not divisible by 6: 0 OK
+  n = 6:    32768 labelled tournaments; violations of Pi_2 = (-1)^n H (mod 3): 0; of P_2 = ((-1)^n + 1) H (mod 3): 0; P_2 odd: 0; H even: 0; P_3 not divisible by 6: 0 OK
+  n = 7:  2097152 labelled tournaments; violations of Pi_2 = (-1)^n H (mod 3): 0; of P_2 = ((-1)^n + 1) H (mod 3): 0; P_2 odd: 0; H even: 0; P_3 not divisible by 6: not computed OK
+  kernels (labelled tournament, ordered port pair): [48, 768, 20480]; largest number of visits of a port: [2, 3, 4] (bound m - 1)
+  order 4: 768 kernels; at most two visits 720; some port three times and none four 48, of which both ports three times 48, with det N != 0: 48; a port four times: 0
+     |det N| over the kernels with both ports visited three times (count): [(32, 48)]
+  order 5: 20480 kernels; at most two visits 14400; some port three times and none four 5760, of which both ports three times 3840, with det N != 0: 3840; a port four times: 320
+     |det N| over the kernels with both ports visited three times (count): [(6, 240), (14, 480), (32, 720), (128, 480), (192, 960), (228, 480), (242, 240), (248, 240)]
+  example: arcs [(0, 3), (1, 0), (2, 0), (2, 1), (3, 1), (3, 2)] form a tournament: True; ports (0, 3): N = [[5, 3, 0], [3, 7, 2], [0, 2, 2]], det = 32 OK
+  the same tournament with the ports (1, 2): at most 2 visits, N = [[5, 2], [2, 1]], det = 1 (the Gaussian kernel [[5, 2], [2, 1]]) OK
+  H(K[A, B]) = sum N_ij P_i(A) P_j(B): all 768 kernels of order 4, A and B over all labelled tournaments of orders 1 to 3: 92928 cases, 0 violations OK
+  isomorphism classes of orders 1 to 4: 8, with (order, H) = [(1, 1), (2, 1), (3, 1), (3, 3), (4, 1), (4, 3), (4, 5), (4, 3)]
+  the same with the 3 x 3 matrix only, for the 3840 kernels of order 5 with both ports visited three times, A and B over the classes of orders 1 to 3: 61440 cases, 0 violations OK
+  order 3: 48 kernels; H(K[A, B]) = c H(A) H(B) (mod 3) with c = N_11 + N_12 s_B + N_21 s_A + N_22 s_A s_B, s_X = (-1)^|X| + 1, A and B over the 8 classes of orders 1 to 4, |K[A, B]| <= 10: 3072 cases (1200 with 3 not dividing H(A) H(B)), 0 violations OK
+  order 4: 768 kernels; H(K[A, B]) = c H(A) H(B) (mod 3) with c = N_11 + N_12 s_B + N_21 s_A + N_22 s_A s_B, s_X = (-1)^|X| + 1, A and B over the 8 classes of orders 1 to 4, |K[A, B]| <= 10: 49152 cases (19200 with 3 not dividing H(A) H(B)), 0 violations OK
+  order 5: 20480 kernels; H(K[A, B]) = c H(A) H(B) (mod 3) with c = N_11 + N_12 s_B + N_21 s_A + N_22 s_A s_B, s_X = (-1)^|X| + 1, A and B over the 8 classes of orders 1 to 4, |K[A, B]| <= 10: 983040 cases (430080 with 3 not dividing H(A) H(B)), 0 violations OK
+  Gaussian kernel (ports (1, 2)): H(K[A, B]) = Pi_2(A) Pi_2(B) + H(A) H(B) on ALL 5625 pairs of labelled tournaments of orders <= 4: 0 violations; reduction modulo 3: 0 violations; |A| + |B| odd: 1188 pairs, 3 | H(K[A, B]) in 1188 OK
+  the audit's sample: 5625 - 4096 + 600 = 2129 pairs, of which 1188 with |A| + |B| odd (none of them in the sampled block)
+
+FAILED CHECKS: none

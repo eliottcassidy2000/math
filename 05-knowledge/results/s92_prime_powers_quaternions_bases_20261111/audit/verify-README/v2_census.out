@@ -1,0 +1,106 @@
+table of q(h) for h < 134217730  (0.7 s)
+1. F1 (b = 2) at odd moduli, section 1 of the note (stored outputs cum_22.out, cum_24.out of the session)
+  ok   2^22: triples sheet 0 / sheet 1 = 10532579 / 13218857
+  ok   2^22: every triple of type d has d | N - c_sigma (0 violations)
+    remainder of the first-order law (times m), sheet 0 / sheet 1, 2^22: 9: 0.03476 / 0.02777;  27: 0.04610 / 0.04429;  81: 0.06173 / 0.05537;  25: 0.00417 / 0.00779;  125: 0.01101 / 0.01481;  49: 0.18157 / 0.13989;  45: 0.08259 / 0.05715;  75: 0.09749 / 0.06517
+  ok   2^24: triples sheet 0 / sheet 1 = 45886662 / 57818155
+  ok   2^24: every triple of type d has d | N - c_sigma (0 violations)
+    remainder of the first-order law (times m), sheet 0 / sheet 1, 2^24: 9: 0.02075 / 0.02420;  27: 0.02229 / 0.02904;  81: 0.02410 / 0.04160;  25: 0.00373 / 0.00478;  125: 0.00761 / 0.00840;  49: 0.16339 / 0.14140;  45: 0.03974 / 0.05634;  75: 0.05046 / 0.05598
+  ok   2^24: the sixteen remainders of cum_24.out are reproduced to five decimals
+  ok   note: sheet 0 at 2^24: 0.021, 0.022, 0.024 at 9, 27, 81; 49: 0.163 / 0.141
+    factor of the distinguished class modulo 9 at 2^24: sheet 0 1.4532, sheet 1 1.4561 (cum_24.out: 1.4532, 1.4561)
+  ok   the distinguished class modulo 9 at 2^24 as in cum_24.out
+  ok   2^28: triples sheet 0 / sheet 1 = 854415478 / 1083261684
+  ok   2^28: every triple of type d has d | N - c_sigma (0 violations)
+    remainder of the first-order law (times m), sheet 0 / sheet 1, 2^28: 9: 0.02383 / 0.01854;  27: 0.02921 / 0.02708;  81: 0.03138 / 0.03081;  25: 0.00354 / 0.00374;  125: 0.00477 / 0.00483;  49: 0.09316 / 0.10282;  45: 0.03779 / 0.03549;  75: 0.02744 / 0.02939
+  ok   2^28: the sixteen remainders of cum_28.out are reproduced to five decimals
+  ok   2^28: factor of the distinguished class modulo 9: 1.4511 (sheet 0), 1.4619 (sheet 1); limit 35/27 = 1.2963
+  ok   2^28: factor of the distinguished class modulo 25: 1.2392, 1.248 (cum_28.out: 1.2392, 1.2480)
+  ok   2^28: every remainder is more than ten times the sampling scale sqrt(m/#T)
+1a. the octaves 2^24 .. 2^28 (section 1: oscillation at the powers of 3, the count of P4)
+    2^24: 9: 0.02075 / 0.02420;  27: 0.02229 / 0.02904;  81: 0.02410 / 0.04160;  25: 0.00373 / 0.00478;  125: 0.00761 / 0.00840;  49: 0.16339 / 0.14140
+    2^25: 9: 0.02158 / 0.01774;  27: 0.02444 / 0.02046;  81: 0.02761 / 0.02523;  25: 0.00388 / 0.00633;  125: 0.00659 / 0.00893;  49: 0.14419 / 0.13277
+    2^26: 9: 0.02356 / 0.02029;  27: 0.02934 / 0.02216;  81: 0.03395 / 0.02309;  25: 0.00367 / 0.00495;  125: 0.00470 / 0.00657;  49: 0.13044 / 0.12524
+    2^27: 9: 0.02429 / 0.02262;  27: 0.03109 / 0.02702;  81: 0.03668 / 0.02818;  25: 0.00434 / 0.00395;  125: 0.00585 / 0.00583;  49: 0.11144 / 0.11574
+    2^28: 9: 0.02383 / 0.01854;  27: 0.02921 / 0.02708;  81: 0.03138 / 0.03081;  25: 0.00354 / 0.00374;  125: 0.00477 / 0.00483;  49: 0.09316 / 0.10282
+  ok   at 9, 27, 81 the remainder stays between 0.01774 and 0.04160 over the octaves 2^24 .. 2^28 (note: 0.018 and 0.042)
+  ok   from 2^24 to 2^28 it grows at 9, 27, 81 on sheet 0 (no net decrease) and decreases on sheet 1
+  ok   it decreases at 25, 125, 49 from 2^24 to 2^28 on both sheets
+  ok   P4-type counts: 8 of 12 from 2^26 to 2^28, 4 of 12 from 2^26 to 2^27, 10 of 12 from 2^27 to 2^28
+  ok   from 2^26 to 2^28 the remainder grew at (modulus, sheet) = [(9, 0), (27, 1), (81, 1), (125, 0)]
+  ok   the two smallest of the eight decreases are 0.00013 and 0.00013 (noise scale sqrt(m/#T) = 0.00015 to 0.00018 there)
+1a'. the registered window [2^27, 2^28) by difference of two cumulative censuses (window_prereg_28_27.out)
+  ok   window: 442236323 triples on sheet 0
+  ok   window: 561401507 triples on sheet 1
+  ok   window: the twelve group means at 9, 25, 49 (g0 > 1) of window_prereg_28_27.out are reproduced to four decimals
+  ok   window: at 9 and 25 every group with g0 > 1 is closer to the registered prediction than to the limit
+  ok   window: at 49 none of the four groups with g0 > 1 is (the comparison of P3 fails there)
+1b. conditional flatness at 12 (section 11: 'flat to 0.0002 at 12 at 2^28'; numbers of the audit, HYP-9665 (A))
+    2^22: R_flat at 12 = 0.0021 / 0.0014
+  ok   2^22: 0.0021 / 0.0014
+    2^24: R_flat at 12 = 0.0009 / 0.0005
+  ok   2^24: 0.0009 / 0.0005
+    2^26: R_flat at 12 = 0.0005 / 0.0001
+  ok   2^26: 0.0005 / 0.0001
+    2^28: R_flat at 12 = 0.0002 / 0.0002
+  ok   2^28: 0.0002 / 0.0002
+2. base b, sheet 1, N_b <= 2^24 (every_base.out (4))
+    b =  2: 57818155 triples; second digit flat to 0.0000; p=3: class 0 1.300, F p^2 = 1.38, rem 0.020; p=5: class 0 1.259, F p^2 = 1.62, rem 0.001; p=7: class 0 1.194, F p^2 = 0.50, rem 0.133; p=11: class 0 1.163, F p^2 = 2.05, rem 0.006; p=13: class 0 1.034, F p^2 = 0.63, rem 0.011
+  ok   b = 2: 57818155 triples, N_b = 1 (mod b), every p-divisible smaller state in the class 0
+  ok   b = 2: remainder at 7 is 0.133 (0.13252; 0.13260 with the other treatment of the diagonal)
+  ok   b = 2: second digit flat to 0.000
+    b =  3: 35564915 triples; second digit flat to 0.0405; p=5: class 0 1.085, F p^2 = 0.57, rem 0.007; p=7: class 0 1.346, F p^2 = 3.37, rem 0.067; p=11: class 0 1.039, F p^2 = 0.41, rem 0.006; p=13: class 0 1.023, F p^2 = 0.53, rem 0.015
+  ok   b = 3: 35564915 triples, N_b = 1 (mod b), every p-divisible smaller state in the class 0
+  ok   b = 3: remainder at 7 is 0.067 (0.06672; 0.06661 with the other treatment of the diagonal)
+  ok   b = 3: second digit flat to 0.040
+    b =  4: 24947862 triples; second digit flat to 0.0009; p=3: class 0 1.089, F p^2 = 0.31, rem 0.031; p=5: class 0 1.123, F p^2 = 0.73, rem 0.007; p=7: class 0 0.879, F p^2 = 0.03, rem 0.125; p=11: class 0 1.010, F p^2 = 0.04, rem 0.006; p=13: class 0 1.015, F p^2 = 0.09, rem 0.009
+  ok   b = 4: 24947862 triples, N_b = 1 (mod b), every p-divisible smaller state in the class 0
+  ok   b = 4: remainder at 7 is 0.125 (0.12470; 0.12457 with the other treatment of the diagonal)
+  ok   b = 4: second digit flat to 0.001
+    b =  5: 18838778 triples; second digit flat to 0.0016; p=3: class 0 1.290, F p^2 = 1.38, rem 0.022; p=7: class 0 0.969, F p^2 = 0.09, rem 0.042; p=11: class 0 0.994, F p^2 = 0.05, rem 0.010; p=13: class 0 1.234, F p^2 = 3.38, rem 0.009
+  ok   b = 5: 18838778 triples, N_b = 1 (mod b), every p-divisible smaller state in the class 0
+  ok   b = 5: remainder at 7 is 0.042 (0.04246; 0.04232 with the other treatment of the diagonal)
+  ok   b = 5: second digit flat to 0.002
+    b =  6: 14919260 triples; second digit flat to 0.0522; p=5: class 0 1.095, F p^2 = 0.63, rem 0.005; p=7: class 0 0.899, F p^2 = 0.03, rem 0.105; p=11: class 0 1.030, F p^2 = 0.63, rem 0.022; p=13: class 0 1.006, F p^2 = 0.16, rem 0.008
+  ok   b = 6: 14919260 triples, N_b = 1 (mod b), every p-divisible smaller state in the class 0
+  ok   b = 6: remainder at 7 is 0.105 (0.10510; 0.10493 with the other treatment of the diagonal)
+  ok   b = 6: second digit flat to 0.052
+    b = 10: 7634213 triples; second digit flat to 0.0034; p=3: class 0 1.073, F p^2 = 0.21, rem 0.051; p=7: class 0 1.351, F p^2 = 3.28, rem 0.060; p=11: class 0 1.040, F p^2 = 0.17, rem 0.026; p=13: class 0 1.030, F p^2 = 0.37, rem 0.009
+  ok   b = 10: 7634213 triples, N_b = 1 (mod b), every p-divisible smaller state in the class 0
+  ok   b = 10: remainder at 7 is 0.060 (0.05970; 0.05993 with the other treatment of the diagonal)
+  ok   b = 10: second digit flat to 0.003
+  ok   sheet 1: remainder at most 0.133 (at 7), at most 0.051 at the other primes
+  ok   early boosts: F p^2 = 3.37 (b = 3, p = 7), 3.28 (b = 10, p = 7), 3.38 (b = 5, p = 13)
+  ok   b = 10: second digit flat to 0.0034 (the corrected 0.0034 of HYP-9665 (C))
+3. base b, sheet 0, N_b <= 2^22 (bridges_exact.out S10)
+    b =  2: 10532579 triples; p=3: class 2 factor 1.290, F p^2 = 1.36, rem 0.028; p=5: class 4 factor 1.255, F p^2 = 1.59, rem 0.001; p=7: class 6 factor 1.228, F p^2 = 0.50, rem 0.167; p=11: class 10 factor 1.176, F p^2 = 2.09, rem 0.004; p=13: class 12 factor 1.034, F p^2 = 0.60, rem 0.009
+  ok   b = 2: 10532579 triples; p-divisible smaller states give 2 N_b + b = 0 (mod p): 0 violations
+  ok   b = 2: remainder at 7 is 0.167 in the convention of the session (0.16653; 0.16660 when the diagonal triples are not put in the type 1; 819 diagonal triples)
+    b =  3: 6030660 triples; p=5: class 1 factor 1.085, F p^2 = 0.57, rem 0.006; p=7: class 2 factor 1.321, F p^2 = 3.44, rem 0.101; p=11: class 4 factor 1.038, F p^2 = 0.40, rem 0.009; p=13: class 5 factor 1.022, F p^2 = 0.55, rem 0.017
+  ok   b = 3: 6030660 triples; p-divisible smaller states give 2 N_b + b = 0 (mod p): 0 violations
+  ok   b = 3: remainder at 7 is 0.101 in the convention of the session (0.10071; 0.10061 when the diagonal triples are not put in the type 1; 618 diagonal triples)
+    b =  5: 2896626 triples; p=3: class 2 factor 1.266, F p^2 = 1.30, rem 0.023; p=7: class 1 factor 1.016, F p^2 = 0.08, rem 0.078; p=11: class 3 factor 0.994, F p^2 = 0.04, rem 0.008; p=13: class 4 factor 1.213, F p^2 = 3.23, rem 0.017
+  ok   b = 5: 2896626 triples; p-divisible smaller states give 2 N_b + b = 0 (mod p): 0 violations
+  ok   b = 5: remainder at 7 is 0.078 in the convention of the session (0.07760; 0.07775 when the diagonal triples are not put in the type 1; 420 diagonal triples)
+    b = 10: 1042874 triples; p=3: class 1 factor 1.055, F p^2 = 0.15, rem 0.057; p=7: class 2 factor 1.282, F p^2 = 2.92, rem 0.119; p=11: class 6 factor 1.025, F p^2 = 0.09, rem 0.019; p=13: class 8 factor 1.027, F p^2 = 0.29, rem 0.011
+  ok   b = 10: 1042874 triples; p-divisible smaller states give 2 N_b + b = 0 (mod p): 0 violations
+  ok   b = 10: remainder at 7 is 0.118 in the convention of the session (0.11846; 0.11868 when the diagonal triples are not put in the type 1; 236 diagonal triples)
+  ok   sheet 0: remainder at most 0.167 (at 7), at most 0.057 at the other primes
+4. second base-3 digit by value (section 5; numbers of the audit, hypotheses/second_digit_b3.out)
+    2^16: max_c |3 share - 1| = 0.1309 / 0.1269
+  ok   2^16: 0.131 / 0.127
+    2^18: max_c |3 share - 1| = 0.0962 / 0.0972
+    2^20: max_c |3 share - 1| = 0.0711 / 0.0732
+  ok   2^20: 0.071 / 0.073
+    2^22: max_c |3 share - 1| = 0.0539 / 0.0542
+    2^24: max_c |3 share - 1| = 0.0413 / 0.0405
+  ok   2^24: 0.041 / 0.040
+    2^26: max_c |3 share - 1| = 0.0314 / 0.0303
+  ok   2^26: 0.031 / 0.030
+    2^28: max_c |3 share - 1| = 0.0237 / 0.0228
+  ok   2^28: 0.024 / 0.023
+    decay per binary digit from 2^16 to 2^28: 0.8674 / 0.8667; sqrt(3)/2 = 0.8660
+  ok   the deviation decays at about sqrt(3)/2 per binary digit
+  ok   modulo an odd b, alpha_1 is an affine form in (x2, y2) with the unit coefficient 1/2 at x2 (20,000 random joins, b = 3, 5, 7, 9, 15)
+(56 s)
+ALL CHECKS PASSED

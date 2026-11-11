@@ -1,0 +1,59 @@
+=== A4.1 four squares against the seam a1 a2 + u b1 b2 ===
+  q =   9: four squares = seam for u in [(1, True), (2, True), (4, True), (5, True)]
+  q =  27: four squares = seam for u in [(1, True), (2, True), (4, True), (5, True)]
+  q =  81: four squares = seam for u in [(1, True), (2, True), (4, True), (5, True)]
+  q =  25: four squares = seam for u in [(1, True), (2, True), (4, True), (3, True)]
+  q = 125: four squares = seam for u in [(1, True), (2, True), (4, True), (3, True)]
+  q =  49: four squares = seam for u in [(1, True), (2, True), (4, True), (3, True), (5, True)]
+  q = 121: four squares = seam for u in [(1, True), (2, True), (4, True), (3, True), (5, True)]
+  q =   4: four squares = seam for u in [(1, False), (2, False), (4, False), (3, False), (5, False)]
+  q =   8: four squares = seam for u in [(1, False), (2, False), (4, False), (3, False), (5, False)]
+  q =  16: four squares = seam for u in [(1, False), (2, False), (4, False), (3, False), (5, False)]
+
+=== A4.2 additive square of the multiplication table = m^3 L_m ===
+  m =   3: True
+  m =   5: True
+  m =   9: True
+  m =  15: True
+  m =  21: True
+  m =  25: True
+  m =  27: True
+  m =  35: True
+  m =  45: True
+  m =  49: True
+  m =  63: True
+  m =  75: True
+  m =  81: True
+  m = 105: True
+
+=== A4.3 base-b balanced and early divisible states ===
+  b =  2: balanced states below 2^22: [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
+  b =  3: balanced states below 2^22: [0, 3, 45, 117, 309, 9045, 62805, 111957, 382293, 2839893]
+  b =  4: balanced states below 2^22: [0]
+  b =  5: balanced states below 2^22: [0]
+  b =  6: balanced states below 2^22: [0]
+  b = 10: balanced states below 2^22: [0]
+  psi(h) > h/2 for 1 <= h < 2^22: True
+  base  3, p =  7: first p-divisible state h = 3 (X = 7, y = 7, balanced: True); next: [10, 24, 31]
+  base 10, p =  7: first p-divisible state h = 3 (X = 21, y = 7, balanced: False); next: [10, 24, 31]
+  base  5, p = 13: first p-divisible state h = 6 (X = 26, y = 13, balanced: False); next: [123, 747, 1280]
+  base  2, p =  7: first p-divisible state h = 38 (X = 63, y = 77, balanced: False); next: [157, 171, 185]
+  base  4, p =  7: first p-divisible state h = 178 (X = 609, y = 357, balanced: False); next: [717, 1074, 1186]
+  base  5, p =  7: first p-divisible state h = 73 (X = 266, y = 147, balanced: False); next: [521, 577, 584]
+  base  6, p =  7: first p-divisible state h = 150 (X = 721, y = 301, balanced: False); next: [605, 745, 1046]
+
+=== A4.4 Pi_2(C_3)/H(C_3) ===
+  Pi_2(C_3) = 12, H(C_3) = 3, a = 4.0 ; sigma(3)/3 = 4/3
+
+=== A4.5 self-converse 8-tournaments (anti-involution (01)(23)(45)(67)) ===
+  orbits of non-fixed pairs: 12
+  labelled tournaments with this anti-involution: 65536 ; all H = 1 mod 4: True ; residues mod 8: {1: 30208, 5: 35328}
+  distinct H values: 104, min 1, max 661
+
+=== A4.6 head and tail series at 7 and 21 ===
+  N =  7: S_0 = 0.8106 (n = 1), S_1 = 0.9264 (n = 7), w0 S0 + w1 S1 = 0.8753 (triple shares at 2^28: 0.4409, 0.5591)
+  N = 21: S_0 = 0.8843 (n = 11), S_1 = 1.2352 (n = 21), w0 S0 + w1 S1 = 1.0804 (triple shares at 2^28: 0.4409, 0.5591)
+  N = 15: S_0 = 0.8106 (n = 1), S_1 = 1.2969 (n = 15), w0 S0 + w1 S1 = 1.0825 (triple shares at 2^28: 0.4409, 0.5591)
+  N = 31: S_0 = 0.8106 (n = 1), S_1 = 0.8367 (n = 31), w0 S0 + w1 S1 = 0.8252 (triple shares at 2^28: 0.4409, 0.5591)
+  N = 63: S_0 = 0.8106 (n = 1), S_1 = 1.3381 (n = 63), w0 S0 + w1 S1 = 1.1055 (triple shares at 2^28: 0.4409, 0.5591)
+  8/pi^2 = 0.8106 : S_0 is minimal exactly when N + 1 is a power of 2 (N = 1, 3, 7, 15, 31, ...)

@@ -1,0 +1,44 @@
+# mixed_gap.py (auditor hypotheses; own code)
+# rate(M) = max over k != 0 mod M of rho(T_k)/2;  listed with the worst k, and split by the 2-part of the order of the character
+M =   3  rate 0.866025 at k = 2   | ord 2^0*3: 0.8660
+M =   6  rate 0.866025 at k = 2   | ord 2^0*3: 0.8660  ord 2^1*1: 0.7071  ord 2^1*3: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+M =  12  rate 0.866025 at k = 8   | ord 2^0*3: 0.8660  ord 2^1*1: 0.7071  ord 2^1*3: 0.7071  ord 2^2*1: 0.7071  ord 2^2*3: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+M =  24  rate 0.866025 at k = 8   | ord 2^0*3: 0.8660  ord 2^1*1: 0.7071  ord 2^1*3: 0.7071  ord 2^2*1: 0.7071  ord 2^2*3: 0.7071  ord 2^3*1: 0.7071  ord 2^3*3: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+M =   5  rate 0.741760 at k = 4   | ord 2^0*5: 0.7418
+M =  10  rate 0.741760 at k = 2   | ord 2^0*5: 0.7418  ord 2^1*1: 0.7071  ord 2^1*5: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+M =  20  rate 0.741760 at k = 16   | ord 2^0*5: 0.7418  ord 2^1*1: 0.7071  ord 2^1*5: 0.7071  ord 2^2*1: 0.7071  ord 2^2*5: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+M =  40  rate 0.741760 at k = 32   | ord 2^0*5: 0.7418  ord 2^1*1: 0.7071  ord 2^1*5: 0.7071  ord 2^2*1: 0.7071  ord 2^2*5: 0.7071  ord 2^3*1: 0.7071  ord 2^3*5: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+M =   9  rate 0.866025 at k = 3   | ord 2^0*3: 0.8660  ord 2^0*9: 0.8660
+M =  18  rate 0.866025 at k = 12   | ord 2^0*3: 0.8660  ord 2^0*9: 0.8660  ord 2^1*1: 0.7071  ord 2^1*3: 0.7071  ord 2^1*9: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+M =  36  rate 0.866025 at k = 24   | ord 2^0*3: 0.8660  ord 2^0*9: 0.8660  ord 2^1*1: 0.7071  ord 2^1*3: 0.7071  ord 2^1*9: 0.7071  ord 2^2*1: 0.7071  ord 2^2*3: 0.7071  ord 2^2*9: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+M =   7  rate 0.932039 at k = 5   | ord 2^0*7: 0.9320
+M =  14  rate 0.932039 at k = 10   | ord 2^0*7: 0.9320  ord 2^1*1: 0.7071  ord 2^1*7: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+M =  28  rate 0.932039 at k = 20   | ord 2^0*7: 0.9320  ord 2^1*1: 0.7071  ord 2^1*7: 0.7071  ord 2^2*1: 0.7071  ord 2^2*7: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+M =  15  rate 0.892191 at k = 2   | ord 2^0*3: 0.8660  ord 2^0*5: 0.7945  ord 2^0*15: 0.8922
+M =  30  rate 0.892191 at k = 4   | ord 2^0*3: 0.8660  ord 2^0*5: 0.7945  ord 2^0*15: 0.8922  ord 2^1*1: 0.7071  ord 2^1*3: 0.7071  ord 2^1*5: 0.7071  ord 2^1*15: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+M =  60  rate 0.892191 at k = 8   | ord 2^0*3: 0.8660  ord 2^0*5: 0.7945  ord 2^0*15: 0.8922  ord 2^1*1: 0.7071  ord 2^1*3: 0.7071  ord 2^1*5: 0.7071  ord 2^1*15: 0.7071  ord 2^2*1: 0.7071  ord 2^2*3: 0.7071  ord 2^2*5: 0.7071  ord 2^2*15: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+M =  45  rate 0.892191 at k = 39   | ord 2^0*3: 0.8660  ord 2^0*5: 0.7945  ord 2^0*9: 0.8660  ord 2^0*15: 0.8922  ord 2^0*45: 0.8225
+M =  90  rate 0.892191 at k = 78   | ord 2^0*3: 0.8660  ord 2^0*5: 0.7945  ord 2^0*9: 0.8660  ord 2^0*15: 0.8922  ord 2^0*45: 0.8225  ord 2^1*1: 0.7071  ord 2^1*3: 0.7071  ord 2^1*5: 0.7071  ord 2^1*9: 0.7071  ord 2^1*15: 0.7071  ord 2^1*45: 0.7071
+         k odd: phase(w + M) = -phase(w) for every w: True
+
+# direct sums  max_{k != 0 mod M, l} |sum_{h < 2^n} e(k q/M + l h/M)| / 2^n   at n = 16, 20  (should decay like rate^n)
+M =   6   n=16: 0.05017   n=20: 0.02945   ratio^(1/4) = 0.8753
+M =  12   n=16: 0.05017   n=20: 0.02945   ratio^(1/4) = 0.8753
+M =  10   n=16: 0.01055   n=20: 0.00275   ratio^(1/4) = 0.7147
+M =  20   n=16: 0.01055   n=20: 0.00275   ratio^(1/4) = 0.7147
+M =  18   n=16: 0.05017   n=20: 0.02945   ratio^(1/4) = 0.8753
+M =  36   n=16: 0.05017   n=20: 0.02945   ratio^(1/4) = 0.8753
+M =  14   n=16: 0.16570   n=20: 0.12413   ratio^(1/4) = 0.9303
+M =  28   n=16: 0.16570   n=20: 0.12413   ratio^(1/4) = 0.9303

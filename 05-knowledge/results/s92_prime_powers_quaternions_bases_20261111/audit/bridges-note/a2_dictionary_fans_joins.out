@@ -1,0 +1,92 @@
+=== A2.1 dictionary (section 6) ===
+n -> |4n+1| injective on [-3000,3000]: True ; inverse (chi_4(m) m - 1)/4: True
+odd step m* -> 3 m* + 2: True ; even step m* -> (m* + 1)/2: True
+product of counts <-> n*k = 4nk+n+k: True
+tripling a count <-> n -> -3n-1: True
+sign of n = chi_4(m) (n >= 0 iff m = 1 mod 4): True
+-3n-1 == -(3n+1) (odd step then negation), for all n: True by algebra
+p | N iff n = -1/4 mod p: True ; N = -1 iff n = -1/2 (n>=0): True ; N = -1 iff n = 0 (n<0): True
+odd part of N+1 = 2n+1 (n>=0), odd part of n (n<0): True
+fixed point of n -> 3n+1 is n = -1/2 on both sides; the class n = 0 (negative side) is not that fixed point
+
+=== A2.2 fan primes (section 6) ===
+balanced states psi(h) = h below 2^22: [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152]
+  all are 0 or powers of 2: True
+p, ord_p(2), t = ord/2, fan h = 2^(t-1), first p-divisible state h, fan is first?
+   (3, 2, 1, 1, 1, True)
+   (5, 4, 2, 2, 2, True)
+   (7, 3, None, None, 38, None)
+   (11, 10, 5, 16, 16, True)
+   (13, 12, 6, 32, 32, True)
+   (17, 8, 4, 8, 8, True)
+   (19, 18, 9, 256, 218, False)
+   (23, 11, None, None, 103, None)
+   (29, 28, 14, 8192, 1435, False)
+   (31, 5, None, None, 8664, None)
+   (37, 36, 18, 131072, 1350, False)
+   (41, 20, 10, 512, 266, False)
+   (43, 14, 7, 64, 64, True)
+   (47, 23, None, None, 399, None)
+   (53, 52, 26, 33554432, 609, False)
+   (59, 58, 29, 268435456, 1091, False)
+   (61, 60, 30, 536870912, 5886, False)
+   (67, 66, 33, 4294967296, 2914, False)
+   (71, 35, None, None, 1881, None)
+   (73, 9, None, None, 13030, None)
+   (79, 39, None, None, 6438, None)
+   (83, 82, 41, '2^40', 15645, False)
+   (89, 11, None, None, 1379, None)
+   (97, 48, 24, 8388608, 21679, False)
+   (101, 100, 50, '2^49', 13180, False)
+   (103, 51, None, None, 16531, None)
+   (107, 106, 53, '2^52', 695, False)
+   (109, 36, 18, 131072, 17712, False)
+   (113, 28, 14, 8192, 8192, True)
+   (127, 7, None, None, 109283, None)
+   (131, 130, 65, '2^64', 16702, False)
+   (137, 68, 34, 8589934592, 4589, False)
+   (139, 138, 69, '2^68', 2710, False)
+   (149, 148, 74, '2^73', 6630, False)
+   (151, 15, None, None, 46432, None)
+   (157, 52, 26, 33554432, 41369, False)
+   (163, 162, 81, '2^80', 68867, False)
+   (167, 83, None, None, 35821, None)
+   (173, 172, 86, '2^85', 36416, False)
+   (179, 178, 89, '2^88', 12977, False)
+   (181, 180, 90, '2^89', 20362, False)
+   (191, 95, None, None, 6207, None)
+   (193, 96, 48, '2^47', 75173, False)
+   (197, 196, 98, '2^97', 4038, False)
+   (199, 99, None, None, 28556, None)
+primes p < 200 with ord_p(2) even: [3, 5, 11, 13, 17, 19, 29, 37, 41, 43, 53, 59, 61, 67, 83, 97, 101, 107, 109, 113, 131, 137, 139, 149, 157, 163, 173, 179, 181, 193, 197]
+primes p < 200 with ord_p(2) odd (no balanced p-divisible state): [7, 23, 31, 47, 71, 73, 79, 89, 103, 127, 151, 167, 191, 199]
+primes p < 200 whose first p-divisible state is the fan: [3, 5, 11, 13, 17, 43, 113]
+first p-divisible state not found below 2^22 for: []
+
+=== A2.3 lines (section 6) ===
+c_-(3n) = odd part of 3n-1 = T_-(n), c_+(3n) = odd part of 3n+1 = T_+(n): identities by definition
+odd N in [3,20000]: c_-(3N) = T_+(c_-(N)) for 5000 of 9999; = T_-(c_-(N)) for 1
+                    c_+(3N) = T_+(c_+(N)) for 0 of 9999; = T_-(c_+(N)) for 4999
+examples (N, c_-(N), c_-(3N), T_+(c_-(N))): [(3, 1, 1, 1), (5, 1, 7, 1), (7, 3, 5, 5), (9, 1, 13, 1), (11, 5, 1, 1), (13, 3, 19, 5), (15, 7, 11, 11), (17, 1, 25, 1), (19, 9, 7, 7), (23, 11, 17, 17)]
+
+=== A2.4 packing polynomial of the F1 joins by brute force (section 5 / THM-5134 (H)) ===
+one-apex R(h) = T(W = 2h), h < 64: packing polynomial 1 + psi(h) z and H = 2 psi(h) + 1: True
+joins J(h1,h2,s) with W = 2 h1, W' = 2^s (2 h2 + 1) - 1, order <= 13: 1408 checked (max order 13), mismatches: 0
+joins with trailing ones on both sides (s = a + b): 192 checked, mismatches: 0
+
+=== A2.5 digit claims (section 5) ===
+N = 17: packing vectors (alpha_1, alpha_2) of F1 joins (h1 <= h2 < 64, s < 8): 2 vectors
+    (6, 1)  from [(1, 1, 0)]
+    (8, 0)  from [(0, 0, 4), (0, 4, 0)]
+N = 45: packing vectors (alpha_1, alpha_2) of F1 joins (h1 <= h2 < 64, s < 8): 3 vectors
+    (18, 2)  from [(1, 2, 1)]
+    (20, 1)  from [(1, 1, 2)]
+    (22, 0)  from [(0, 2, 3), (0, 4, 2), (0, 13, 0)]
+N = 7: packing vectors (alpha_1, alpha_2) of F1 joins (h1 <= h2 < 64, s < 8): 0 vectors
+N = 21: packing vectors (alpha_1, alpha_2) of F1 joins (h1 <= h2 < 64, s < 8): 0 vectors
+N = 9: packing vectors (alpha_1, alpha_2) of F1 joins (h1 <= h2 < 64, s < 8): 1 vectors
+    (4, 0)  from [(0, 0, 3), (0, 1, 1), (0, 2, 0)]
+N = 13: packing vectors (alpha_1, alpha_2) of F1 joins (h1 <= h2 < 64, s < 8): 0 vectors
+N = 15: packing vectors (alpha_1, alpha_2) of F1 joins (h1 <= h2 < 64, s < 8): 1 vectors
+    (7, 0)  from [(0, 1, 2), (0, 2, 1)]
+for b > max(alpha_1, alpha_2) the base-b numeral of N_b is (alpha_2)(alpha_1)(1): True

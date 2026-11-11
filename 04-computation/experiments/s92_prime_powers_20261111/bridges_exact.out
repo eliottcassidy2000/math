@@ -37,6 +37,8 @@ S2 sums of 2r squares against the hyperbolic form of rank r, class counts modulo
   ok   q =  9, r = 4: equal = True (expected True: r even or p = 1 mod 4)
   ok   q = 25, r = 1: equal = True (expected True: r even or p = 1 mod 4)
   ok   q = 25, r = 2: equal = True (expected True: r even or p = 1 mod 4)
+  ok   q = 25, r = 3: equal = True (expected True: r even or p = 1 mod 4)
+  ok   q = 25, r = 4: equal = True (expected True: r even or p = 1 mod 4)
 S3 the prime 2
   ok   modulo 4: four squares [32, 64, 96, 64] differ from a1 a2 + b1 b2 [88, 48, 72, 48]
   ok   modulo 8: four squares [128, 512, 768, 512, 384, 512, 768, 512] differ from a1 a2 + b1 b2 [736, 384, 576, 384, 672, 384, 576, 384]
@@ -53,8 +55,8 @@ S4 global counts
   ok   r_8(n) = 16 sigma_3(n) for odd n <= 39
   ok   r_8(2) = 112 is not 16 sigma_3(2) = 144 (the prime 2 is special for Z^8)
   ok   E8 shells of norm 2n, n = 1, 2, 3: [240, 2160, 6720] = 240 sigma_3(n)
-  ok   240 sigma_3(n) = real density (8 pi^4/3) n^3 times the rank-4 series sigma_3(n)/(zeta(4) n^3) at ALL primes
-  ok   r_4(n) = real density pi^2 n times (8/pi^2) sigma(n)/n (odd primes), 2-adic density 1, for odd n
+  ok   identity (not a test): (8 pi^4/3) / zeta(4) = 240, so 240 sigma_3(n) = (8 pi^4/3) n^3 times sigma_3(n)/(zeta(4) n^3)
+  ok   identity (not a test): pi^2 n times (8/pi^2) sigma(n)/n = 8 sigma(n) = r_4(n) for odd n (the densities are asserted, not computed here)
   NUMERICAL Ingham: n in [20000, 20400): D(n) / ((6/pi^2) sigma(n) ln^2 n) has mean 1.061, min 0.696, max 1.236 (lower-order terms in ln n); correlation of D(n)/n with sigma(n)/n: 0.9788
   ok   NUMERICAL illustration of Ingham's theorem (CITED): D(n)/n follows sigma(n)/n (correlation above 0.9 on the window; the lower-order terms in ln n depend on n through other divisor sums)
 S5 two-port kernels u^T G v with uniform states
@@ -117,7 +119,7 @@ S7 signed-integer dictionary
     cycle [-1, -2]: labels [3, 7]
     cycle [-5, -14, -7, -20, -10]: labels [19, 55, 27, 79, 39]
     cycle [-17, -50, -25, -74, -37, -110, -55, -164, -82, -41, -122, -61, -182, -91, -272, -136, -68, -34]: labels [67, 199, 99, 295, 147, 439, 219, 655, 327, 163, 487, 243, 727, 363, 1087, 543, 271, 135]
-  ok   the 29 arcs of the five known cycles of 3n + 1 on Z have 29 distinct labels; exactly one of them (7, the arc -2 -> -1) is one of the two missing path counts
+  ok   the 29 arcs of the five known cycles of 3n + 1 on Z have 29 distinct labels; exactly one of them (7, the arc -2 -> -1) is one of the two known non-values 7, 21 (THM-1370)
   ok   21 is the label of the arc 5 -> 16 and 7 of the arc -2 -> -1
   ok   trunk: the arcs (4^k - 1)/3 -> 4^k have labels (4^(k+1) - 1)/3: [1, 5, 21, 85, 341, 1365]
     order 3: H in [1, 3]
@@ -139,10 +141,10 @@ S8 primes with balanced divisible states
 S9 Brahmagupta identity
   ok   M_s(A, A) M_s(B, B) = M_s(A, B)^2 + 2^s (x_A y_B - x_B y_A)^2 on one-apex states
 S10 F1 in base beta, sheet s = 0 (N_beta <= 2^22)
-  ok   beta =  2: 2845759 triples; p-divisible smaller states give 2N + beta = 0 (mod p) exactly; p=3: class 2 factor 1.107, F p^2 = 0.58, rem 0.036; p=5: class 4 factor 1.177, F p^2 = 1.10, rem 0.002; p=7: class 6 factor 1.329, F p^2 = 1.40, rem 0.158; p=11: class 10 factor 1.217, F p^2 = 2.40, rem 0.019; p=13: class 12 factor 1.010, F p^2 = 0.51, rem 0.027
-  ok   beta =  3: 1832488 triples; p-divisible smaller states give 2N + beta = 0 (mod p) exactly; p=5: class 1 factor 1.141, F p^2 = 0.97, rem 0.015; p=7: class 2 factor 1.293, F p^2 = 2.43, rem 0.069; p=11: class 4 factor 1.092, F p^2 = 1.06, rem 0.007; p=13: class 5 factor 1.031, F p^2 = 0.95, rem 0.036
-  ok   beta =  5: 985666 triples; p-divisible smaller states give 2N + beta = 0 (mod p) exactly; p=3: class 2 factor 1.113, F p^2 = 0.69, rem 0.039; p=7: class 1 factor 0.986, F p^2 = 0.24, rem 0.103; p=11: class 3 factor 0.973, F p^2 = 0.11, rem 0.036; p=13: class 4 factor 1.117, F p^2 = 1.93, rem 0.020
-  ok   beta = 10: 379472 triples; p-divisible smaller states give 2N + beta = 0 (mod p) exactly; p=3: class 1 factor 1.178, F p^2 = 0.42, rem 0.084; p=7: class 2 factor 1.451, F p^2 = 4.05, rem 0.082; p=11: class 6 factor 1.064, F p^2 = 0.24, rem 0.045; p=13: class 8 factor 1.053, F p^2 = 0.80, rem 0.027
+  ok   beta =  2: 10532579 triples; p-divisible smaller states give 2N + beta = 0 (mod p) exactly; p=3: class 2 factor 1.290, F p^2 = 1.36, rem 0.028; p=5: class 4 factor 1.255, F p^2 = 1.59, rem 0.000; p=7: class 6 factor 1.228, F p^2 = 0.50, rem 0.167; p=11: class 10 factor 1.176, F p^2 = 2.09, rem 0.004; p=13: class 12 factor 1.034, F p^2 = 0.60, rem 0.009
+  ok   beta =  3: 6030660 triples; p-divisible smaller states give 2N + beta = 0 (mod p) exactly; p=5: class 1 factor 1.085, F p^2 = 0.57, rem 0.006; p=7: class 2 factor 1.321, F p^2 = 3.44, rem 0.101; p=11: class 4 factor 1.038, F p^2 = 0.40, rem 0.009; p=13: class 5 factor 1.022, F p^2 = 0.55, rem 0.017
+  ok   beta =  5: 2896626 triples; p-divisible smaller states give 2N + beta = 0 (mod p) exactly; p=3: class 2 factor 1.266, F p^2 = 1.30, rem 0.024; p=7: class 1 factor 1.016, F p^2 = 0.08, rem 0.078; p=11: class 3 factor 0.994, F p^2 = 0.04, rem 0.009; p=13: class 4 factor 1.213, F p^2 = 3.23, rem 0.017
+  ok   beta = 10: 1042874 triples; p-divisible smaller states give 2N + beta = 0 (mod p) exactly; p=3: class 1 factor 1.055, F p^2 = 0.15, rem 0.057; p=7: class 2 factor 1.282, F p^2 = 2.92, rem 0.118; p=11: class 6 factor 1.025, F p^2 = 0.09, rem 0.018; p=13: class 8 factor 1.027, F p^2 = 0.29, rem 0.011
 S11 Tao's digit condition for the joins
   ok   for every base b >= 2 with b > max(alpha_1, alpha_2) the base-b numeral of N_b is (alpha_2)(alpha_1)(1): the count displays the packing numbers
     base 2 (carries): least path counts with two packing vectors (alpha_1, alpha_2) in the family: [(17, [(6, 1), (8, 0)]), (27, [(11, 1), (13, 0)]), (45, [(18, 2), (20, 1), (22, 0)]), (53, [(18, 4), (26, 0)])]

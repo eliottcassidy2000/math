@@ -1,0 +1,16 @@
+b=2: 25 balanced states below 2^24: [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]
+b=3: 12 balanced states below 2^24: [0, 3, 45, 117, 309, 9045, 62805, 111957, 382293, 2839893, 4412757, 13456725]
+b=4: 1 balanced states below 2^24: [0]
+b=5: 1 balanced states below 2^24: [0]
+b=6: 1 balanced states below 2^24: [0]
+b=7: 1 balanced states below 2^24: [0]
+b=10: 1 balanced states below 2^24: [0]
+psi(h) > h/2 for 1 <= h < 2^24: True
+0 <= q(h) <= h/2: True  max 2q/h over h>=1: 1.000000
+share of h < 2^24 with g = 1: 0.81176 (8/pi^2 = 0.81057)
+  density of h < 2^24 with 9 | g(h): 1.195e-02  (d^-2 = 1.235e-02)
+  density of h < 2^24 with 27 | g(h): 1.324e-03  (d^-2 = 1.372e-03)
+  density of h < 2^24 with 81 | g(h): 1.481e-04  (d^-2 = 1.524e-04)
+  density of h < 2^24 with 25 | g(h): 1.574e-03  (d^-2 = 1.600e-03)
+  density of h < 2^24 with 125 | g(h): 6.568e-05  (d^-2 = 6.400e-05)
+  density of h < 2^24 with 49 | g(h): 3.633e-04  (d^-2 = 4.165e-04)

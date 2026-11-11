@@ -1,0 +1,75 @@
+[Z] normalized cochains: 512; cocycles: 16
+    normalized 1-cochains: 8; distinct coboundaries: 2: [(0, 0, 0, 0, 0, 0, 0, 0, 0), (0, 1, 1, 1, 0, 1, 1, 1, 0)]
+    the non-trivial coboundary is 1 exactly on the ordered pairs [(1, 2), (1, 3), (2, 1), (2, 3), (3, 1), (3, 2)] (six ordered pairs a != b, i.e. the three unordered products, both orders)
+    classes modulo coboundaries: 8 (each of size 2)
+    the set S (units of square -1) by class: [(), (1,), (1, 2), (1, 2, 3), (1, 3), (2,), (2, 3), (3,)]
+    every subset of the three points occurs exactly once: True
+
+[G][A][T] by class
+  S = [] (#S = 0):
+    cocycle 1: group C_2^3 (orders 1,2,4,8: (1, 7, 0, 0), abelian True); algebra associative True, commutative True, trace-form signature (4, 0), centre dimension 4
+               sign table: signed triangle {(1, 2): 1, (1, 3): 1, (2, 3): 1}
+    cocycle 2: group C_2^3 (orders 1,2,4,8: (1, 7, 0, 0), abelian True); algebra associative True, commutative True, trace-form signature (4, 0), centre dimension 4
+               sign table: signed triangle {(1, 2): -1, (1, 3): -1, (2, 3): -1}
+  S = [1] (#S = 1):
+    cocycle 1: group D_4 (orders 1,2,4,8: (1, 5, 2, 0), abelian False); algebra associative True, commutative False, trace-form signature (3, 1), centre dimension 1
+               sign table: transitive tournament [(1, 2), (3, 1), (3, 2)], middle vertex 1 (in S: True)
+    cocycle 2: group D_4 (orders 1,2,4,8: (1, 5, 2, 0), abelian False); algebra associative True, commutative False, trace-form signature (3, 1), centre dimension 1
+               sign table: transitive tournament [(1, 3), (2, 1), (2, 3)], middle vertex 1 (in S: True)
+  S = [2] (#S = 1):
+    cocycle 1: group D_4 (orders 1,2,4,8: (1, 5, 2, 0), abelian False); algebra associative True, commutative False, trace-form signature (3, 1), centre dimension 1
+               sign table: transitive tournament [(1, 2), (1, 3), (2, 3)], middle vertex 2 (in S: True)
+    cocycle 2: group D_4 (orders 1,2,4,8: (1, 5, 2, 0), abelian False); algebra associative True, commutative False, trace-form signature (3, 1), centre dimension 1
+               sign table: transitive tournament [(2, 1), (3, 1), (3, 2)], middle vertex 2 (in S: True)
+  S = [3] (#S = 1):
+    cocycle 1: group D_4 (orders 1,2,4,8: (1, 5, 2, 0), abelian False); algebra associative True, commutative False, trace-form signature (3, 1), centre dimension 1
+               sign table: transitive tournament [(1, 2), (1, 3), (3, 2)], middle vertex 3 (in S: True)
+    cocycle 2: group D_4 (orders 1,2,4,8: (1, 5, 2, 0), abelian False); algebra associative True, commutative False, trace-form signature (3, 1), centre dimension 1
+               sign table: transitive tournament [(2, 1), (2, 3), (3, 1)], middle vertex 3 (in S: True)
+  S = [1, 2] (#S = 2):
+    cocycle 1: group C_4 x C_2 (orders 1,2,4,8: (1, 3, 4, 0), abelian True); algebra associative True, commutative True, trace-form signature (2, 2), centre dimension 4
+               sign table: signed triangle {(1, 2): 1, (1, 3): -1, (2, 3): -1}
+    cocycle 2: group C_4 x C_2 (orders 1,2,4,8: (1, 3, 4, 0), abelian True); algebra associative True, commutative True, trace-form signature (2, 2), centre dimension 4
+               sign table: signed triangle {(1, 2): -1, (1, 3): 1, (2, 3): 1}
+  S = [1, 3] (#S = 2):
+    cocycle 1: group C_4 x C_2 (orders 1,2,4,8: (1, 3, 4, 0), abelian True); algebra associative True, commutative True, trace-form signature (2, 2), centre dimension 4
+               sign table: signed triangle {(1, 2): 1, (1, 3): -1, (2, 3): 1}
+    cocycle 2: group C_4 x C_2 (orders 1,2,4,8: (1, 3, 4, 0), abelian True); algebra associative True, commutative True, trace-form signature (2, 2), centre dimension 4
+               sign table: signed triangle {(1, 2): -1, (1, 3): 1, (2, 3): -1}
+  S = [2, 3] (#S = 2):
+    cocycle 1: group C_4 x C_2 (orders 1,2,4,8: (1, 3, 4, 0), abelian True); algebra associative True, commutative True, trace-form signature (2, 2), centre dimension 4
+               sign table: signed triangle {(1, 2): 1, (1, 3): 1, (2, 3): -1}
+    cocycle 2: group C_4 x C_2 (orders 1,2,4,8: (1, 3, 4, 0), abelian True); algebra associative True, commutative True, trace-form signature (2, 2), centre dimension 4
+               sign table: signed triangle {(1, 2): -1, (1, 3): -1, (2, 3): 1}
+  S = [1, 2, 3] (#S = 3):
+    cocycle 1: group Q_8 (orders 1,2,4,8: (1, 1, 6, 0), abelian False); algebra associative True, commutative False, trace-form signature (1, 3), centre dimension 1
+               sign table: cyclic tournament [(1, 2), (2, 3), (3, 1)]
+    cocycle 2: group Q_8 (orders 1,2,4,8: (1, 1, 6, 0), abelian False); algebra associative True, commutative False, trace-form signature (1, 3), centre dimension 1
+               sign table: cyclic tournament [(1, 3), (2, 1), (3, 2)]
+  rule s_a s_b s_c = eps (the same eps for the three pairs), all 16 cocycles: True
+  summary by #S: {0: (1, [('C_2^3', True, (4, 0), np.int64(4))]), 1: (3, [('D_4', False, (3, 1), np.int64(1))]), 2: (3, [('C_4 x C_2', True, (2, 2), np.int64(4))]), 3: (1, [('Q_8', False, (1, 3), np.int64(1))])}
+  identification: commutative + trace form (4,0) -> R^4; commutative + (2,2) -> C + C; central simple with trace form
+  (3,1) -> M_2(R); with (1,3) -> Hamilton (the trace form of the regular representation of M_2(R) is 2 tr(xy), signature (3,1);
+  of H it is 4 Re(xy), signature (1,3); of R^r x C^s it has signature (r+s, s)).
+
+[A'] explicit models
+  #S = 0: primitive idempotents (1 +- e_1 +- e_2 +- e_3)/4: 4 of the 8 sign choices are idempotent (R^4 needs 4)
+  S = [1]: matrices e_1 -> [[0,-1],[1,0]], e_2 -> diag(1,-1): all 16 products correct: True; the four matrices span M_2(R): rank 4
+  S = [2]: matrices e_2 -> [[0,-1],[1,0]], e_1 -> diag(1,-1): all 16 products correct: True; the four matrices span M_2(R): rank 4
+  S = [3]: matrices e_3 -> [[0,-1],[1,0]], e_1 -> diag(1,-1): all 16 products correct: True; the four matrices span M_2(R): rank 4
+  S = [1, 2]: e+- = (1 +- e_3)/2 orthogonal idempotents: True; (e+ e_1)^2 = -e+: True  => e+ A = C, e- A = C, A = C + C
+  S = [1, 3]: e+- = (1 +- e_2)/2 orthogonal idempotents: True; (e+ e_1)^2 = -e+: True  => e+ A = C, e- A = C, A = C + C
+  S = [2, 3]: e+- = (1 +- e_1)/2 orthogonal idempotents: True; (e+ e_2)^2 = -e+: True  => e+ A = C, e- A = C, A = C + C
+  #S = 3: i^2 = j^2 = (ij)^2 = -1 and ij = -ji: True; (ij)(ij) computed ['-1', '0', '0', '0']
+
+[0] zero divisors
+  S = []: zero divisor x = (-3, -3, -3, -3), y = (-2, -2, 2, 2) with x y = 0
+  S = [1]: zero divisor x = (-3, -3, -3, -3), y = (-2, -2, 2, -2) with x y = 0
+  S = [2]: zero divisor x = (-3, -3, -3, -3), y = (-2, -2, -2, 2) with x y = 0
+  S = [3]: zero divisor x = (-3, -3, -3, -3), y = (-2, -2, 2, -2) with x y = 0
+  S = [1, 2]: zero divisor x = (-3, -3, -3, 3), y = (-2, -2, 2, -2) with x y = 0
+  S = [1, 3]: zero divisor x = (-3, -3, -3, -3), y = (-2, -2, 2, 2) with x y = 0
+  S = [2, 3]: zero divisor x = (-3, -3, -3, -3), y = (-2, 2, -2, 2) with x y = 0
+  S = [1, 2, 3]: det L_x > 0 on all 7^4 - 1 nonzero grid points: True; det L_x = (x_0^2+x_1^2+x_2^2+x_3^2)^2 on the grid (a degree-4 identity, 7 > 4 nodes per variable, hence a polynomial identity): True
+
+[P] GL_2(F_2) = S_3 permutes the three points; classes with the same #S form one orbit: sizes {0: 1, 1: 3, 2: 3, 3: 1}

@@ -1,0 +1,89 @@
+[1] statement (1): rank-r law modulo p^k, both displayed values (classes of valuation v < k and the class 0)
+  ok   p^k =   2, r = 1: both formulas hold at every class (class 0 factor 3/2)
+  ok   p^k =   2, r = 2: both formulas hold at every class (class 0 factor 5/4)
+  ok   p^k =   2, r = 3: both formulas hold at every class (class 0 factor 9/8)
+  ok   p^k =   2, r = 4: both formulas hold at every class (class 0 factor 17/16)
+  ok   p^k =   2, r = 5: both formulas hold at every class (class 0 factor 33/32)
+  ok   p^k =   4, r = 1: both formulas hold at every class (class 0 factor 2)
+  ok   p^k =   4, r = 2: both formulas hold at every class (class 0 factor 11/8)
+  ok   p^k =   4, r = 3: both formulas hold at every class (class 0 factor 37/32)
+  ok   p^k =   4, r = 4: both formulas hold at every class (class 0 factor 137/128)
+  ok   p^k =   4, r = 5: both formulas hold at every class (class 0 factor 529/512)
+  ok   p^k =   8, r = 1: both formulas hold at every class (class 0 factor 5/2)
+  ok   p^k =   8, r = 2: both formulas hold at every class (class 0 factor 23/16)
+  ok   p^k =   8, r = 3: both formulas hold at every class (class 0 factor 149/128)
+  ok   p^k =   8, r = 4: both formulas hold at every class (class 0 factor 1097/1024)
+  ok   p^k =   8, r = 5: both formulas hold at every class (class 0 factor 8465/8192)
+  ok   p^k =  16, r = 1: both formulas hold at every class (class 0 factor 3)
+  ok   p^k =  16, r = 2: both formulas hold at every class (class 0 factor 47/32)
+  ok   p^k =  16, r = 3: both formulas hold at every class (class 0 factor 597/512)
+  ok   p^k =  16, r = 4: both formulas hold at every class (class 0 factor 8777/8192)
+  ok   p^k =  16, r = 5: both formulas hold at every class (class 0 factor 135441/131072)
+  ok   p^k =   3, r = 1: both formulas hold at every class (class 0 factor 5/3)
+  ok   p^k =   3, r = 2: both formulas hold at every class (class 0 factor 11/9)
+  ok   p^k =   3, r = 3: both formulas hold at every class (class 0 factor 29/27)
+  ok   p^k =   3, r = 4: both formulas hold at every class (class 0 factor 83/81)
+  ok   p^k =   3, r = 5: both formulas hold at every class (class 0 factor 245/243)
+  ok   p^k =   9, r = 1: both formulas hold at every class (class 0 factor 7/3)
+  ok   p^k =   9, r = 2: both formulas hold at every class (class 0 factor 35/27)
+  ok   p^k =   9, r = 3: both formulas hold at every class (class 0 factor 263/243)
+  ok   p^k =   9, r = 4: both formulas hold at every class (class 0 factor 2243/2187)
+  ok   p^k =   9, r = 5: both formulas hold at every class (class 0 factor 19847/19683)
+  ok   p^k =  27, r = 1: both formulas hold at every class (class 0 factor 3)
+  ok   p^k =  27, r = 2: both formulas hold at every class (class 0 factor 107/81)
+  ok   p^k =  27, r = 3: both formulas hold at every class (class 0 factor 2369/2187)
+  ok   p^k =  27, r = 4: both formulas hold at every class (class 0 factor 60563/59049)
+  ok   p^k =  27, r = 5: both formulas hold at every class (class 0 factor 1607609/1594323)
+  ok   p^k =   5, r = 1: both formulas hold at every class (class 0 factor 9/5)
+  ok   p^k =   5, r = 2: both formulas hold at every class (class 0 factor 29/25)
+  ok   p^k =   5, r = 3: both formulas hold at every class (class 0 factor 129/125)
+  ok   p^k =   5, r = 4: both formulas hold at every class (class 0 factor 629/625)
+  ok   p^k =   5, r = 5: both formulas hold at every class (class 0 factor 3129/3125)
+  ok   p^k =  25, r = 1: both formulas hold at every class (class 0 factor 13/5)
+  ok   p^k =  25, r = 2: both formulas hold at every class (class 0 factor 149/125)
+  ok   p^k =  25, r = 3: both formulas hold at every class (class 0 factor 3229/3125)
+  ok   p^k =  25, r = 4: both formulas hold at every class (class 0 factor 78629/78125)
+  ok   p^k =  25, r = 5: both formulas hold at every class (class 0 factor 1955629/1953125)
+  ok   p^k =   7, r = 1: both formulas hold at every class (class 0 factor 13/7)
+  ok   p^k =   7, r = 2: both formulas hold at every class (class 0 factor 55/49)
+  ok   p^k =   7, r = 3: both formulas hold at every class (class 0 factor 349/343)
+  ok   p^k =   7, r = 4: both formulas hold at every class (class 0 factor 2407/2401)
+  ok   p^k =   7, r = 5: both formulas hold at every class (class 0 factor 16813/16807)
+  ok   p^k =  49, r = 1: both formulas hold at every class (class 0 factor 19/7)
+  ok   p^k =  49, r = 2: both formulas hold at every class (class 0 factor 391/343)
+  ok   p^k =  49, r = 3: both formulas hold at every class (class 0 factor 17107/16807)
+  ok   p^k =  49, r = 4: both formulas hold at every class (class 0 factor 825607/823543)
+  ok   p^k =  11, r = 1: both formulas hold at every class (class 0 factor 21/11)
+  ok   p^k =  11, r = 2: both formulas hold at every class (class 0 factor 131/121)
+  ok   p^k =  11, r = 3: both formulas hold at every class (class 0 factor 1341/1331)
+  ok   p^k =  11, r = 4: both formulas hold at every class (class 0 factor 14651/14641)
+  ok   p^k =  11, r = 5: both formulas hold at every class (class 0 factor 161061/161051)
+  ok   r = 1: factor (1 - 1/p)(v + 1) at a class of valuation v < k
+  ok   class 0 modulo 9, r = 2: factor 35/27
+  ok   class 0 modulo 2, r = 4: factor 17/16 = 15/16 + 1/8, share 17/32 (136 of 256)
+  ok   class 0 modulo 3, r = 4: factor 83/81 = 1 + 3^-3 - 3^-4
+[2] N_m(t) = sum_{d | gcd(t, m)} d phi(m/d); (N_m * N_m)(c) = m^3 L_m(c) for every m; unit twists; L_(p^k) closed forms
+  ok   N_m(t) formula, every m <= 96: mismatches 0
+  ok   (N_m * N_m)(c) = m^3 L_m(c), every m <= 96 (even m included): mismatches 0
+  ok   same with one table multiplied by a unit (2, 3, 5, 7 when prime to m): mismatches 0
+  ok   L_(p^k)(e) = (1 - p^-2) sigma_1(p^v)/p^v (v < k), = 1 + 1/p - p^(-k-1) (v >= k)
+  ok   at 2^k the factor at the odd classes is 3/4 (k <= 6)
+  ok   Euler product of the factors = sigma_(r-1)(n)/(zeta(r) n^(r-1)) for r = 2, 3, 4 (primes < 20000, tolerance 2e-4)
+[3] lifting lemma: N_k(c) = p^((n-1)(k-1)) (N_1(c mod p) - [p | c]) + [p^2 | c] p^n N_(k-2)(c/p^2), k >= 2
+  ok   random integer-valued forms with polar determinant prime to p (p = 2, 3, 5, 7; n = 2, 3, 4): 186 (form, k) cases, violations 0
+       (control: forms with p | polar determinant: the recursion fails for 40 of 40; it is not claimed there)
+  ok   seam of rank 2 at p = 2: the recursion from the counts modulo p gives the r-fold table power modulo p^k, k <= 5
+  ok   seam of rank 3 at p = 2: the recursion from the counts modulo p gives the r-fold table power modulo p^k, k <= 3
+  ok   seam of rank 2 at p = 3: the recursion from the counts modulo p gives the r-fold table power modulo p^k, k <= 3
+  ok   seam of rank 2 at p = 5: the recursion from the counts modulo p gives the r-fold table power modulo p^k, k <= 2
+[4] E8: x^T C x / 2 against the rank-4 seam
+  ok   Cartan matrix of E8: determinant 1
+  ok   modulo 2: E8 [136, 120] = seam [136, 120]
+  ok   modulo 4: E8 [17536, 15360, 17280, 15360] = seam
+  ok   modulo 8: E8 [2246656, 1966080, 2211840, 1966080, 2242560, 1966080, 2211840, 1966080] = seam
+  ok   the recursion started from 136, 120 reproduces the enumerated counts modulo 4 and 8
+  ok   the recursion from 136, 120 gives the law (1) with r = 4 modulo 2^k for k <= 12, the class 0 included
+  ok   modulo 16 by valuation 0..4: 251658240, 283115520, 287047680, 287539200, 287604736 (as in the audit's a3_e8.out)
+  ok   zeros modulo 2: three hyperbolic planes and x^2 + xy + y^2: 120; Z^8: 128
+  ok   polar determinants: E8 form 1, rank-4 seam 1
+ALL CHECKS PASSED

@@ -1,0 +1,151 @@
+Auditor "hypotheses" (audit of opus-2026-11-11-S92): proof sketches and tables behind the findings.
+All numbers are from the auditor's own programs in this folder (written before the session's scripts were read).
+
+=====================================================================================================================
+1. HYP-9665 (A): the ingredient called "missing" is available
+=====================================================================================================================
+Lemma M (mixed characters). Let M >= 2 be even, k odd, c(w) = ceil(w/2), and on the states w in Z/2M let
+T_k[w -> 2w] = 1, T_k[w -> 2w+1] = e(k c(w)/M).  Then T_k T_k^* = 2 I.
+Proof. The rows w and w + M have the same two non-zero columns (2w, 2w+1 modulo 2M), with entries (1, om) and
+(1, om'), om = e(k c(w)/M), om' = e(k c(w+M)/M).  M is even, so w and w + M have the same parity and
+c(w + M) = c(w) + M/2; hence om' = om e(k/2) = -om (k odd) and the two rows are orthogonal.  Rows w, w' with
+w' != w (mod M) have disjoint supports; every row has norm sqrt 2.  QED.
+(This is the computation of THM-5128 (E), proof, first paragraph, with 2^j replaced by an even M.
+ Numerical check: mixed_gap.out - "phase(w + M) = -phase(w): True" for M = 6, 12, 24, 10, 20, 40, 18, 36, 14, 28,
+ 30, 60, 90, and rho(T_k)/2 = 0.7071 for EVERY character of even order of these Z/M.)
+
+Corollary (all non-trivial characters of Z/(2^(j-1) m)).  Let M' = 2^(j-1) m, k != 0 (mod M').
+ - If 2^(j-1) does not divide k: k/M' = k'/M'' with k' odd and M'' = M'/2^a even; by Lemma M the cell sums of
+   e(k q(h)/M') e(l h/m) are at most 2^(r/2) (2M'')^(1/2) (r free digits), for every l.
+ - If 2^(j-1) | k: e(k q/M') is a character of q modulo m and THM-5128 (B1), (B2) apply.
+ - k = 0, l != 0: geometric sum, as in THM-5128 (B2).
+So on every cell with at least j - 1 prescribed bottom digits, (q mod 2^(j-1) m, h mod m) is equidistributed up to
+O_(j,m)((2 rho)^r), rho = max(rho_m, 2^(-1/2)); the rate of the modulus 2^(j-1) m is the rate of m
+(mixed_gap.out: 0.8660 at 6, 12, 24, 18, 36; 0.7418 at 10, 20, 40; 0.9320 at 14, 28; 0.8922 at 30, 60, 90).
+Direct check on cells: mixed_cells.out (relative deviation of the cell counts decays by 0.74-0.84 per free digit).
+KNOWN in the repository, for the count alone and with a weaker rate: Session193 modular_sync/PROOF.md, Theorems 1,
+3, 4 (an equal-length bank for EVERY modulus M = 2^k m whose counts run once over the admissible residues for every
+pair of exterior words, A(v_t) = C(v_t) = 0 mod M; exponential mixing; size/residue independence), and the S82 scan
+of all a/q, q <= 120 (even q included).
+
+By-value law at 2^j m (sketch; j >= 2).  Fix the smaller state (h1, s) of type d = gcd(g(h1), m) and a cell of the
+larger word with >= j - 1 bottom digits prescribed.  y2 mod 2^j is constant on the cell and x2 = y2 - 2 q2, so
+   N = x1 y2 + 2^s y1 y2 - [s = 0] - 2 x1 q2 (mod 2^j):   q2 -> -2 x1 q2 is a bijection of Z/2^(j-1) onto 2Z/2^j
+(x1 is odd), so N mod 2^j is uniform on the odd classes;  modulo m, N + [s = 0] is the linear form of content d in
+(x2, y2), uniform on the multiples of d (THM-5134 (A)).  By the corollary and the Chinese remainder theorem the two
+are independent on the cell, up to O((2 rho)^r).  The cut-cell count of THM-5128 (B4) and the summation of (C2)
+then give, for every odd c,
+   #{t in T_sigma(X) : N = c mod 2^j m} = 2^(1-j) sum_{d | gcd(m, c - c_sigma)} (d/m) D^(d)(X) + O_(j,m)(X^(1 - theta')).
+The case j = 1 is THM-5134 (D) itself (N is odd, so classes modulo 2m are classes modulo m).
+
+Census (even_moduli_census_E.out).  R_prod = (2^j m) max_c |#{N = c} - 2^(1-j) sum (d/m) D^(d)| / #T;
+R_m = the THM-5134 remainder at m; R_flat = max |2^(j-1) #{N = a mod 2^j, N = e mod m}/#{N = e mod m} - 1|;
+sheet 0 / sheet 1:
+   modulus   X      R_prod            R_m (odd part)     R_flat            noise sqrt(2^(j-1) m/#T)
+   12        2^22   0.0599 / 0.0347   0.0281 / 0.0167    0.0021 / 0.0014   0.0008 / 0.0007
+   12        2^24   0.0281 / 0.0413   0.0140 / 0.0202    0.0009 / 0.0005   0.0004 / 0.0003
+   12        2^26   0.0362 / 0.0219   0.0175 / 0.0110    0.0005 / 0.0001   0.0002 / 0.0002
+   12        2^28   0.0342 / 0.0297   0.0171 / 0.0148    0.0002 / 0.0002   0.0001 / 0.0001
+   20        2^22   0.0054 / 0.0068   0.0005 / 0.0011    0.0028 / 0.0018   0.0010 / 0.0009
+   20        2^28   0.0029 / 0.0042   0.0014 / 0.0019    0.0001 / 0.0002   0.0001 / 0.0001
+   36        2^22   0.0764 / 0.0603   0.0347 / 0.0280    0.0040 / 0.0024   0.0013 / 0.0012
+   36        2^28   0.0482 / 0.0375   0.0238 / 0.0185    0.0005 / 0.0005   0.0001 / 0.0001
+   72        2^28   0.0482 / 0.0376   0.0238 / 0.0185    0.0006 / 0.0006   0.0002 / 0.0002
+   360       2^28   0.0757 / 0.0719   0.0378 / 0.0355    0.0020 / 0.0017   0.0005 / 0.0004
+   2520      2^28   0.3347 / 0.3520   0.1645 / 0.1749    0.0062 / 0.0052   0.0012 / 0.0011
+R_prod = 2 R_m up to R_flat: the whole remainder of the product law is the remainder of the odd law; inside every
+class modulo m the odd classes modulo 2^j are equally likely at the level of the sampling noise.
+The falsifier of the file ("a remainder that does not decrease from 2^24 to 2^28 at 12 would refute it") is MET on
+sheet 0 (0.0281 -> 0.0342) because the remainder at 3 oscillates (0.0140 -> 0.0171); the same criterion applied to
+the PROVED law at 9 fails on sheet 0 in THM-5134's own table (0.021 -> 0.024).
+R_flat in units of the sampling scale sqrt(2^(j-1) m/#T) stays between 0.6 and 4.3 at 12, 20, 24, 36, 40, 72 for
+X = 2^20 .. 2^28 and does not grow (rflat_detail.out); cell by cell, with the dispersion index 3 of r, the signed
+defects have |z| <= 3.0 (rflat_cells_36.out).  From 2^24 to 2^28 R_flat falls by the factors 6.3 / 2.3 (12),
+12.6 / 4.1 (20), 4.0 / 2.1 (36), 5.5 / 2.9 (72); a pure sampling term would fall by about 4.3.
+
+=====================================================================================================================
+2. HYP-9665 (C): the second digit
+=====================================================================================================================
+Odd b (corollary of THM-5128 (B4)(iv)).  alpha_1 = psi1 + psi2 + (2^s y1 y2 - [s = 0])/2 and psi2 = (x2 - 1)/2, so
+modulo an odd b
+   alpha_1 = 2^(-1) x2 + (2^(s-1) y1) y2 + const        (s >= 1),      alpha_1 = 2^(-1) x2 + (2^(-1) y1) y2 + const   (s = 0):
+an affine form in the residue vector (x2, y2) modulo b whose coefficient at x2 is a unit; it takes every class on
+exactly b residue vectors.  The region {h2 : N_b <= X} is {a x2 + b' y2 <= X'} with a = b X1/2 > 0, b' > 0 (proof of
+THM-5134 (H)).  THM-5128 (B4)(ii) in the form (iv), with the modulus b, gives for a fixed smaller state
+   #{h2 > h1 : N_b <= X, alpha_1 = c mod b} = G/b + O_b((Y/y1)^(1 - theta_b)),
+and the summation of THM-5128 (C2) gives #{alpha_1 = c} = #T/b + O_b(X^(1 - theta_b/2)) on each sheet.
+b = 2^a: on a cell with a bottom digits prescribed h2 and y2 are constant modulo 2^a and psi2 = h2 - q2, q2 uniform
+modulo 2^a by the unitarity of THM-5128 (E): the by-value proof of (E) applies (b = 2 IS THM-5128 (E), j = 2).
+b = 2^a m: the corollary of section 1.
+
+Census (second_digit_b3.out, second_digit_b6.out, second_digit_other_bases.out, second_digit_more.out):
+max_c |b share(c) - 1|, sheet 0 / sheet 1, complete census N_b <= X:
+   b    2^16            2^20            2^24            2^28            decay per binary digit (2^16 -> 2^28)
+   3    0.131 / 0.127   0.071 / 0.073   0.041 / 0.040   0.024 / 0.023   0.867 / 0.867     (rho_3 = sqrt(3)/2 = 0.8660)
+   6    0.184 / 0.163   0.090 / 0.098   0.048 / 0.052   0.028 / 0.029   0.855 / 0.865
+   9    0.308 / 0.261   0.150 / 0.126   0.071 / 0.073   0.034 / 0.039
+   7    0.196 / 0.117   0.100 / 0.055   0.066 / 0.033   0.040 / 0.022
+   2    -               0.0015/0.0011   0.0005/0.00002
+   4    -               0.0033/0.0042   0.0007/0.0009   0.0001/0.0003
+   5    -               0.0055/0.0069   0.0015/0.0016   0.0005/0.0003
+   10   -               0.019 / 0.011   0.0051/0.0034   0.0015/0.0007
+In base 6 the digit modulo 2 is flat at the noise level (0.00007 / 0.00004 at 2^28) and the digit modulo 3 carries
+the whole deviation.
+
+=====================================================================================================================
+3. HYP-9665 (B): single values
+=====================================================================================================================
+series_counts_25.out reproduces every figure of series_vs_counts_25_24.out (means 5.9180 / 7.4817; correlations
+0.4016 / 0.4275 and 0.3929 / 0.4181; quintiles 4.301 .. 8.550 and 5.438 .. 10.766; v_3: 1.455, 1.722 and 1.448, 1.717).
+L1 remainder of (B), mean |r - 2 kappa S ln N| / mean r (sheet 0 / sheet 1), poisson_pair_floor.out:
+   window          with S            constant predictor   Poisson-pair floor (r = 2 Poisson(mean/2))
+   [2^16, 2^17)    0.605 / 0.570     0.636 / 0.630        0.541 / 0.506
+   [2^20, 2^21)    0.540 / 0.508     0.589 / 0.547        0.512 / 0.446
+   [2^24, 2^25)    0.497 / 0.456     0.532 / 0.505        0.454 / 0.414
+The remainder is within 10 % of the counting-noise floor; S removes 7-10 % of the L1 deviation.  The data are
+compatible with (B) and do not test it.  Index of dispersion Var(r)/mean(r) = 2.79 / 3.06 (2 of it is the ordered
+counting).  Class laws give class means of r only; (B) needs in addition a second-moment (collision) bound.
+
+=====================================================================================================================
+4. HYP-9666
+=====================================================================================================================
+(C) Smith form: PROOF.  Over the principal ideal domain Z_p write G = P D Q with P, Q in GL_r(Z_p) and
+D = diag(p^(e_1), ..., p^(e_r)) (p^infinity = 0).  Modulo p^k, u -> P^T u and v -> Q v are bijections of (Z/p^k)^r,
+so (P^T u, Q v) is again uniform and independent, and u^T G v = (P^T u)^T D (Q v) = sum_i p^(e_i) a_i b_i with
+independent uniform a_i, b_i: the additive convolution of the laws of the scaled tables (only min(e_i, k) matters).
+The argument does not use p odd.  Enumeration (smith_r2.out): all 6561 matrices modulo 9, the 6561 matrices with
+entries in [-4, 4] modulo 27, entries in [-3, 3] modulo 25, all 4096 matrices modulo 8: one law per Smith class,
+equal to the convolution, in every class; [[11,6],[6,3]] modulo 9 and 27 and Session261's kernel modulo 7, 49, 47
+have the law of a1 b1 + p a2 b2.
+
+(D) pi2_mod3.out: Pi_2 = (-1)^n H (mod 3) for every labelled tournament of order <= 7 (2,097,152 at order 7);
+48 (labelled kernel, ordered ports) of order 4 carry the Gaussian law; 3 | H(K[A, B]) for all 1188 tested pairs
+with |A| + |B| odd.  kernel_mod3.out: for EVERY two-port kernel of order 3, 4, 5 (all port pairs, any number of
+visits) H(K[A, B]) = c(|A| mod 2, |B| mod 2) H(A) H(B) (mod 3): 0 violations in 48 + 768 + 20480 kernels.
+Reason: P_2 = ((-1)^n + 1) H and P_m = m! u_m = 0 (mod 3) for m >= 3 (THM-4756) in the expansion of THM-5133 (A).
+So (B) (three visits) is subject to the same constraint at 3, and P_2 = 2 u_2, P_3 = 6 u_3 exclude 2 as well.
+
+(A) fusion_states.out: the law (3) of Session264 holds on 5625 pairs; for every pointed tournament of order <= 7:
+H and h are odd and U = d, V = e (mod 2).  So the left state (h, H - h, U - h, d - h) has first coordinate odd,
+second even, third = fourth (mod 2): in the path-mass coordinates a_o = (U + d)/2 - h, a_e = (U - d)/2 the corner
+is 2 (a_o b_o + a_e b_e) (Gram determinant -4 on the lattice of states).  No affine relation modulo 3, 5, 7 among
+the four coordinates (orders <= 7; all 81 residue vectors modulo 3 occur at order 7).
+fusion_law_small.out (exploratory): for A, B uniform among the labelled pointed tournaments of order n the class-0
+factor of H(A * B) is 1.31, 1.30, 1.27, 1.16 modulo 3 (n = 4..7; uniform value 1.0247), 1.26, 1.18, 1.13, 1.05
+modulo 5 (1.0064), 0.25, 0.71, 0.92, 0.993 modulo 7 (1.0025).
+
+=====================================================================================================================
+5. The base-b censuses of the session are not the sets they are labelled with
+=====================================================================================================================
+base_census_check.out, replicate_every_base_count.out.
+bridges_exact.py s10() builds psi for h < 2^12 only.  Its "sheet s = 0 (N_beta <= 2^22)" census has
+   beta = 2: 2,845,759 of 10,532,579 triples;  3: 1,832,488 of 6,030,660;  5: 985,666 of 2,896,626;
+   10: 379,472 of 1,042,874   (27 %, 30 %, 34 %, 36 %).
+With all triples (beta = 2, sheet 0, 2^22): p = 3: factor 1.290, F p^2 = 1.36, rem 0.028 (file: 1.107, 0.58, 0.036);
+p = 7: rem 0.167 (file 0.158).  Largest remainder on sheet 0 over the four bases: 0.167 (not "at most 0.16").
+every_base.py census_b gets q[: 2^21] and skips h1 when X1^2 + coef y1^2 > X ("continue"), which is not a valid
+exit.  Its counts 55,892,593 / 35,516,685 / 24,945,520 / 18,836,356 / 14,916,908 / 7,632,149 are reproduced exactly
+by a replica with both defects; the complete counts are 57,818,155 / 35,564,915 / 24,947,862 / 18,838,778 /
+14,919,260 / 7,634,213 (b = 2: 3.3 % of the triples missing; the b = 2 row is not the F1 census at 2^24).
+The second-digit figures and the remainders quoted from every_base.out are unchanged at the printed precision
+(largest remainder on sheet 1: 0.133).

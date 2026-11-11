@@ -1,0 +1,18 @@
+[L] zero counts of diagonal quaternary forms modulo odd p against the seam's p^3 + p^2 - p
+  p =  3: 81 diagonal forms; non-degenerate with square discriminant: 8; with exactly p^3 + p^2 - p zeros: 8, all of them non-degenerate with square discriminant: True
+  p =  5: 625 diagonal forms; non-degenerate with square discriminant: 128; with exactly p^3 + p^2 - p zeros: 128, all of them non-degenerate with square discriminant: True
+  p =  7: 2401 diagonal forms; non-degenerate with square discriminant: 648; with exactly p^3 + p^2 - p zeros: 648, all of them non-degenerate with square discriminant: True
+  p = 11: 14641 diagonal forms; non-degenerate with square discriminant: 5000; with exactly p^3 + p^2 - p zeros: 5000, all of them non-degenerate with square discriminant: True
+  p = 13: 28561 diagonal forms; non-degenerate with square discriminant: 10368; with exactly p^3 + p^2 - p zeros: 10368, all of them non-degenerate with square discriminant: True
+
+[O] norm forms on the orders spanned by the units
+  modulo  2: x0^2+x1^2-x2^2-x3^2 equals the seam a1a2+b1b2: False; equals four squares: True; counts [8, 8] vs seam [10, 6]
+  modulo  4: x0^2+x1^2-x2^2-x3^2 equals the seam a1a2+b1b2: False; equals four squares: False; counts [96, 64, 32, 64] vs seam [88, 48, 72, 48]
+  modulo  8: x0^2+x1^2-x2^2-x3^2 equals the seam a1a2+b1b2: False; equals four squares: False
+  modulo 16: x0^2+x1^2-x2^2-x3^2 equals the seam a1a2+b1b2: False; equals four squares: False
+  modulo  3: x0^2+x1^2-x2^2-x3^2 equals the seam a1a2+b1b2: True; equals four squares: True
+  modulo  9: x0^2+x1^2-x2^2-x3^2 equals the seam a1a2+b1b2: True; equals four squares: True
+  modulo  5: x0^2+x1^2-x2^2-x3^2 equals the seam a1a2+b1b2: True; equals four squares: True
+  modulo  7: x0^2+x1^2-x2^2-x3^2 equals the seam a1a2+b1b2: True; equals four squares: True
+  bicomplex units: order Z[1,i,j,ij]: 8 (the extension group C_4 x C_2); maximal order Z[i]^2: 16 (C_4 x C_4)
+  index of Z[1,i,j,ij] in Z[i]^2: |det [[1,0,0,1],[0,1,-1,0],[1,0,0,-1],[0,1,1,0]]| = 4

@@ -1,0 +1,8 @@
+# replicate_every_base_count.py (auditor hypotheses)
+# sheet s >= 1, N_b <= 2^24: session's counts (every_base.out): b=2 55892593, b=3 35516685, b=4 24945520, b=5 18836356, b=6 14916908, b=10 7632149
+b =  2: complete 57818155 | words < 2^21, valid exits 55894783 | words < 2^21 with the session's 'continue' 55892593 | all words with the 'continue' 57815965
+b =  3: complete 35564915 | words < 2^21, valid exits 35519317 | words < 2^21 with the session's 'continue' 35516685 | all words with the 'continue' 35562283
+b =  4: complete 24947862 | words < 2^21, valid exits 24947862 | words < 2^21 with the session's 'continue' 24945520 | all words with the 'continue' 24945520
+b =  5: complete 18838778 | words < 2^21, valid exits 18838778 | words < 2^21 with the session's 'continue' 18836356 | all words with the 'continue' 18836356
+b =  6: complete 14919260 | words < 2^21, valid exits 14919260 | words < 2^21 with the session's 'continue' 14916908 | all words with the 'continue' 14916908
+b = 10: complete 7634213 | words < 2^21, valid exits 7634213 | words < 2^21 with the session's 'continue' 7632149 | all words with the 'continue' 7632149

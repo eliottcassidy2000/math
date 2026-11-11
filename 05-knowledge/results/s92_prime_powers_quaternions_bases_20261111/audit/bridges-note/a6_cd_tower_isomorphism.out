@@ -1,0 +1,6 @@
+n = 3 (7 vertices): |Aut(CD_n)| = 21, |Aut(T)| = 21; isomorphisms CD_n -> T: 21 (search nodes 154); CD_n -> converse of T: 21 (search nodes 154); T -> converse of T (anti-automorphisms): 21
+    explicit isomorphism CD_3 -> T_7 (vertex i -> f(i), 0-based): [0, 2, 5, 6, 1, 3, 4]
+    explicit isomorphism CD_3 -> converse of T_7: [0, 1, 2, 3, 6, 4, 5]
+n = 4 (15 vertices): |Aut(CD_n)| = 21, |Aut(T)| = 21; isomorphisms CD_n -> T: 21 (search nodes 322); CD_n -> converse of T: 0 (search nodes 154); T -> converse of T (anti-automorphisms): 0
+    explicit isomorphism CD_4 -> T_15 (vertex i -> f(i), 0-based): [8, 9, 10, 11, 14, 12, 13, 7, 0, 1, 2, 3, 6, 4, 5]
+n = 5 (31 vertices): |Aut(CD_n)| = 21, |Aut(T)| = 21; isomorphisms CD_n -> T: 0 (search nodes 0); CD_n -> converse of T: 0 (search nodes 302); T -> converse of T (anti-automorphisms): 0

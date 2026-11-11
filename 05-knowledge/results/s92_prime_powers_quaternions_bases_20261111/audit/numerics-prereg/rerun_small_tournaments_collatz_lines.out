@@ -1,0 +1,35 @@
+order 1: 1 classes, 1 strong, 1 self-converse
+   H =  1  3-cycles 0  directed cycles  0  Pi_2 =   2  |Aut| = 1  strong  self-converse  arc usage []
+order 2: 1 classes, 0 strong, 1 self-converse
+   H =  1  3-cycles 0  directed cycles  0  Pi_2 =   4  |Aut| = 1  not strong  self-converse  arc usage [1]
+order 3: 2 classes, 1 strong, 2 self-converse
+   H =  1  3-cycles 0  directed cycles  0  Pi_2 =   8  |Aut| = 1  not strong  self-converse  arc usage [1, 1]
+   H =  3  3-cycles 1  directed cycles  1  Pi_2 =  12  |Aut| = 3  strong  self-converse  arc usage [2, 2, 2]
+order 4: 4 classes, 1 strong, 2 self-converse
+   H =  1  3-cycles 0  directed cycles  0  Pi_2 =  16  |Aut| = 1  not strong  self-converse  arc usage [1, 1, 1]
+   H =  3  3-cycles 1  directed cycles  1  Pi_2 =  24  |Aut| = 3  not strong  converse pair  arc usage [2, 2, 2, 1, 1, 1]
+   H =  3  3-cycles 1  directed cycles  1  Pi_2 =  24  |Aut| = 3  not strong  converse pair  arc usage [2, 2, 2, 1, 1, 1]
+   H =  5  3-cycles 2  directed cycles  3  Pi_2 =  32  |Aut| = 1  strong  self-converse  arc usage [4, 3, 3, 3, 1, 1]
+order 5: 12 classes, 6 strong, 8 self-converse
+   H =  1  3-cycles 0  directed cycles  0  Pi_2 =  32  |Aut| = 1  not strong  self-converse  arc usage [1, 1, 1, 1]
+   H =  3  3-cycles 1  directed cycles  1  Pi_2 =  48  |Aut| = 3  not strong  self-converse  arc usage [2, 2, 2, 1, 1, 1, 1, 1, 1]
+   H =  3  3-cycles 1  directed cycles  1  Pi_2 =  48  |Aut| = 3  not strong  converse pair  arc usage [3, 2, 2, 2, 1, 1, 1]
+   H =  3  3-cycles 1  directed cycles  1  Pi_2 =  48  |Aut| = 3  not strong  converse pair  arc usage [3, 2, 2, 2, 1, 1, 1]
+   H =  5  3-cycles 2  directed cycles  3  Pi_2 =  64  |Aut| = 1  not strong  converse pair  arc usage [4, 3, 3, 3, 2, 1, 1, 1, 1, 1]
+   H =  5  3-cycles 2  directed cycles  3  Pi_2 =  64  |Aut| = 1  not strong  converse pair  arc usage [4, 3, 3, 3, 2, 1, 1, 1, 1, 1]
+   H =  9  3-cycles 3  directed cycles  6  Pi_2 =  84  |Aut| = 1  strong  self-converse  arc usage [6, 6, 6, 6, 4, 2, 2, 2, 2]
+   H =  9  3-cycles 3  directed cycles  7  Pi_2 =  84  |Aut| = 1  strong  self-converse  arc usage [8, 5, 5, 5, 5, 2, 2, 2, 1, 1]
+   H = 11  3-cycles 4  directed cycles  9  Pi_2 = 100  |Aut| = 1  strong  self-converse  arc usage [7, 7, 6, 5, 5, 3, 3, 3, 3, 2]
+   H = 13  3-cycles 4  directed cycles  9  Pi_2 = 104  |Aut| = 1  strong  self-converse  arc usage [9, 9, 6, 6, 5, 5, 4, 4, 2, 2]
+   H = 15  3-cycles 4  directed cycles 10  Pi_2 = 108  |Aut| = 3  strong  self-converse  arc usage [12, 8, 8, 8, 4, 4, 4, 4, 4, 4]
+   H = 15  3-cycles 5  directed cycles 12  Pi_2 = 120  |Aut| = 5  strong  self-converse  arc usage [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+classes by strong components: 1/(1 - (x + x^3 + x^4 + 6x^5)) = [1, 1, 1, 2, 4, 12] (orders 0..5); counted: [1, 1, 1, 2, 4, 12]
+the six strong classes of order 5: H = [9, 9, 11, 13, 15, 15], self-converse: [True, True, True, True, True, True], |Aut| = [1, 1, 1, 1, 3, 5]
+c_minus(3n) = T_minus(n) and c_plus(3n) = T_plus(n) for odd n < 10^6: True
+cycle of 3n - 1 through 1: lines L_c, c = [1]; transfers: 3*1 = 3 = 1 + 1*2^1
+cycle of 3n - 1 through 5: lines L_c, c = [5, 7]; transfers: 3*5 = 15 = 1 + 7*2^1; 3*7 = 21 = 1 + 5*2^2
+cycle of 3n - 1 through 17: lines L_c, c = [17, 25, 37, 55, 41, 61, 91]; transfers: 3*17 = 51 = 1 + 25*2^1; 3*25 = 75 = 1 + 37*2^1; 3*37 = 111 = 1 + 55*2^1; 3*55 = 165 = 1 + 41*2^2; 3*41 = 123 = 1 + 61*2^1; 3*61 = 183 = 1 + 91*2^1; 3*91 = 273 = 1 + 17*2^4
+non-values: 7 = 1 + 3*2 (line L_3, whose label has no preimage under T_minus: no point of L_3 is a multiple of 3) = 1*2^3 - 1 (anti-line of the fixed point 1 of T_plus);
+            21 = 3*7 = 1 + 5*2^2 (line L_5, 5 = T_minus(7): the transfer point of the 2-cycle {5, 7}) = 11*2 - 1 (anti-line L'_11, 11 = T_plus(7))
+basins of the cycles of 3n - 1 among the odd n < 200000 (NUMERICAL): {1: 0.3288, 5: 0.3217, 17: 0.3495}
+ALL CHECKS PASSED

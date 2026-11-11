@@ -1,0 +1,38 @@
+C1 F1 (base 2): remainder of (B)
+  ok   X = 2^22: triples 10532579 / 13218857 (file and cum_22.out: 10532579 / 13218857), tables long enough
+  ok   X = 2^22: every triple of type d has d | N - c_sigma (0 violations on both sheets, modulus 496125)
+  ok   X = 2^22: remainder of (B) equals the table to 3 decimals at the eight moduli : 9: 0.03476 / 0.02777; 27: 0.04610 / 0.04429; 81: 0.06173 / 0.05537; 25: 0.00417 / 0.00779; 125: 0.01101 / 0.01481; 49: 0.18157 / 0.13989; 45: 0.08259 / 0.05715; 75: 0.09749 / 0.06517
+  ok   X = 2^24: triples 45886662 / 57818155 (file and cum_24.out: 45886662 / 57818155), tables long enough
+  ok   X = 2^24: every triple of type d has d | N - c_sigma (0 violations on both sheets, modulus 496125)
+  ok   X = 2^24: remainder of (B) equals the table to 3 decimals at the eight moduli : 9: 0.02075 / 0.02420; 27: 0.02229 / 0.02904; 81: 0.02410 / 0.04160; 25: 0.00373 / 0.00478; 125: 0.00761 / 0.00840; 49: 0.16339 / 0.14140; 45: 0.03974 / 0.05634; 75: 0.05046 / 0.05598
+       class factors at 9, X = 2^24: sheet 0: g0=1: 0.8506 g0=3: 1.2216 g0=9: 1.4532 | sheet 1: g0=1: 0.8498 g0=3: 1.2227 g0=9: 1.4561
+       class factors at 25, X = 2^24: sheet 0: g0=1: 0.9384 g0=5: 1.2457 g0=25: 1.2499 | sheet 1: g0=1: 0.9353 g0=5: 1.2589 g0=25: 1.2577
+C2 base b, sheet s >= 1, N_b <= 2^24
+       b =  2:  57818155 triples; second digit flat to 0.0000; p=3: rem 0.020, F p^2 1.38; p=5: rem 0.001, F p^2 1.62; p=7: rem 0.133, F p^2 0.50; p=11: rem 0.006, F p^2 2.05; p=13: rem 0.011, F p^2 0.63
+       b =  3:  35564915 triples; second digit flat to 0.0405; p=5: rem 0.007, F p^2 0.57; p=7: rem 0.067, F p^2 3.37; p=11: rem 0.006, F p^2 0.41; p=13: rem 0.015, F p^2 0.53
+       b =  4:  24947862 triples; second digit flat to 0.0009; p=3: rem 0.032, F p^2 0.31; p=5: rem 0.006, F p^2 0.73; p=7: rem 0.125, F p^2 0.03; p=11: rem 0.006, F p^2 0.04; p=13: rem 0.009, F p^2 0.09
+       b =  5:  18838778 triples; second digit flat to 0.0016; p=3: rem 0.022, F p^2 1.38; p=7: rem 0.042, F p^2 0.09; p=11: rem 0.010, F p^2 0.05; p=13: rem 0.008, F p^2 3.38
+       b =  6:  14919260 triples; second digit flat to 0.0522; p=5: rem 0.005, F p^2 0.63; p=7: rem 0.105, F p^2 0.03; p=11: rem 0.022, F p^2 0.63; p=13: rem 0.008, F p^2 0.16
+       b = 10:   7634213 triples; second digit flat to 0.0034; p=3: rem 0.051, F p^2 0.21; p=7: rem 0.060, F p^2 3.28; p=11: rem 0.026, F p^2 0.17; p=13: rem 0.009, F p^2 0.37
+  ok   triple counts 57,818,155 / 35,564,915 / 24,947,862 / 18,838,778 / 14,919,260 / 7,634,213
+  ok   remainder at 7: 0.133, 0.067, 0.125, 0.042, 0.105, 0.060
+  ok   remainder at the other primes at most 0.051 : 0.0513
+  ok   second digit flat to 0.000, 0.040, 0.001, 0.002, 0.052, 0.003
+  ok   F p^2 = 3.37 (b = 3, p = 7), 3.28 (b = 10, p = 7), 3.38 (b = 5, p = 13)
+C3 base b, sheet s = 0, N_b <= 2^22
+       b =  2:  10532579 triples; violations 0; p=3: rem 0.028; p=5: rem 0.000; p=7: rem 0.167; p=11: rem 0.004; p=13: rem 0.009
+       b =  3:   6030660 triples; violations 0; p=5: rem 0.006; p=7: rem 0.101; p=11: rem 0.009; p=13: rem 0.017
+       b =  5:   2896626 triples; violations 0; p=3: rem 0.024; p=7: rem 0.078; p=11: rem 0.009; p=13: rem 0.017
+       b = 10:   1042874 triples; violations 0; p=3: rem 0.057; p=7: rem 0.118; p=11: rem 0.018; p=13: rem 0.011
+  ok   triple counts 10,532,579 / 6,030,660 / 2,896,626 / 1,042,874
+  ok   0 violations: a p-divisible smaller state gives 2 N_b + b = 0 (mod p)  (x_b = 1 mod b, so g_b is prime to b and the test with gcd(g_b, 15015) covers exactly the primes not dividing b)
+  ok   remainder at 7: 0.167, 0.101, 0.078, 0.118
+  ok   remainder at the other primes at most 0.057 : 0.0575
+C4 second digit, b = 3
+       X = 2^16: #T = 69184 / 90768; max_c |b share - 1| = 0.13093 / 0.12685
+       X = 2^20: #T = 1374205 / 1837677; max_c |b share - 1| = 0.07114 / 0.07321
+       X = 2^24: #T = 26257636 / 35564915; max_c |b share - 1| = 0.04127 / 0.04047
+  ok   b = 3: 0.131 / 0.127, 0.071 / 0.073, 0.041 / 0.040 at 2^16, 2^20, 2^24, with the triple counts of the audit (69184 / 90768, 1374205 / 1837677, 26257636 / 35564915)
+(4 s)
+
+ALL CENSUS CHECKS PASSED

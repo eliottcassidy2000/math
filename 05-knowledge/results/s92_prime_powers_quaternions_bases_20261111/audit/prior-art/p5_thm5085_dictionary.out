@@ -1,0 +1,3 @@
+cases: 134400
+closed form of THM-5085 (2) = N_b of THM-5134 (H): PASS
+letter recursion of THM-5085 (1) on the digits of m = N_b: PASS

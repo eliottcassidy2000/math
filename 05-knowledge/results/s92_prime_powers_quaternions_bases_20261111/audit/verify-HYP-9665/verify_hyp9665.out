@@ -1,0 +1,93 @@
+V1 even moduli: the audit histograms (exact rational arithmetic)
+  ok   2 R_m <= R_prod at the 13 moduli, X = 2^20..2^28, both sheets (130 cases); least slack 0.000004 at 180, 2^28, sheet 0
+  ok   R_prod <= 2 R_m + 2 F R_flat in the same 130 cases; least slack 0.00e+00 at 28, 2^20, sheet 0
+    the looser bound R_prod <= 2 R_m + R_flat fails in 69 of the 130 cases, e.g. 12 at 2^20 sheet 0: 0.0410 > 0.0387; 24 at 2^20 sheet 0: 0.0490 > 0.0434; 36 at 2^20 sheet 0: 0.0802 > 0.0794; 20 at 2^20 sheet 0: 0.0123 > 0.0102
+  ok   it fails at 20, 2^22, sheet 0 (the case quoted by the editor)
+  ok   R_flat at 12, X = 2^22..2^28: 0.0021 / 0.0014, 0.0009 / 0.0005, 0.0005 / 0.0001, 0.0002 / 0.0002
+  ok   R_flat at 20, X = 2^22..2^28: 0.0028 / 0.0018, 0.0009 / 0.0007, 0.0006 / 0.0003, 0.0001 / 0.0002
+  ok   R_flat at 36, X = 2^22..2^28: 0.0040 / 0.0024, 0.0020 / 0.0011, 0.0005 / 0.0004, 0.0005 / 0.0005
+  ok   R_flat at 72, X = 2^22..2^28: 0.0053 / 0.0048, 0.0036 / 0.0019, 0.0013 / 0.0009, 0.0006 / 0.0006
+    R_flat in sampling scales sqrt(2^(j-1) m/#T), moduli 12, 20, 36, 72, X = 2^22..2^28: min 0.62 (12, 2^26, sheet 1), max 4.03 (72, 2^24, sheet 0)
+  ok   between 0.6 and 4.0 sampling scales at these sizes
+  ok   4.3 sampling scales at 72 at 2^20 (sheet 0): 4.33
+    fall of R_flat from 2^24 to 2^28: 12 sheet 0: 6.18 (0.00095 -> 0.00015); 12 sheet 1: 2.30 (0.00052 -> 0.00023); 20 sheet 0: 12.24 (0.00088 -> 0.00007); 20 sheet 1: 4.03 (0.00073 -> 0.00018); 36 sheet 0: 3.96 (0.00199 -> 0.00050); 36 sheet 1: 2.11 (0.00108 -> 0.00051); 72 sheet 0: 5.50 (0.00357 -> 0.00065); 72 sheet 1: 2.87 (0.00186 -> 0.00065)
+  ok   least fall 2.1 at 36, sheet 1 (0.00108 -> 0.00051)
+  ok   largest fall about 12 at 20, sheet 0 (0.00088 -> 0.00007; exact ratio 12.24)
+  ok   the factor 2 is reached at 12, 20, 36, 72 on both sheets
+  ok   at 36 R_flat is stationary from 2^26 to 2^28: 0.00052 / 0.00045 -> 0.00050 / 0.00051, that is 1.7 / 1.7 -> 3.5 / 4.0 sampling scales
+  ok   a pure sampling term falls by sqrt(#T(2^28)/#T(2^24)) = 4.32 / 4.33
+  ok   R_prod at 12, sheet 0: 0.060, 0.028, 0.036, 0.034
+    R_m at 3, sheet 0, four decimals: 0.0281, 0.0140, 0.0175, 0.0171; three decimals: 0.028, 0.014, 0.018, 0.017
+  ok   remainder at 3, sheet 0, to three decimals: 0.028, 0.014, 0.018, 0.017
+  ok   class factors at 12, 2^28, four classes with 3 not dividing N - c_sigma: 1.6996 / 1.6936
+  ok   the two other classes: 2.6008 / 2.6128
+  ok   limits 2 L_3 = 1.7778 and 2.4444
+  ok   remainder of THM-5134 (B) at 9, sheet 0: 0.0208 at 2^24 -> 0.0238 at 2^28 (does not decrease)
+  ok   remainder of the product law at 12, sheet 0: 0.0281 at 2^24 -> 0.0342 at 2^28 (the old falsifier was met)
+V2 Lemma M: an even modulus M2 and an odd character k1
+  ok   T T^* = 2 I for M2 in {2, ..., 36} even and every odd k1; e_0^T T^10 1 = sum_{h < 2^10} e(k1 q(h)/M2)
+  ok   rho(T)/2 = 2^(-1/2) = 0.7071 in every case (80 operators)
+  ok   a character k of Z/(2^(j-1) m) has even order iff 2^(j-1) does not divide k; then k/(2^(j-1) m) = k1/M2 with k1 odd, M2 even; otherwise it is a character of Z/m
+  ok   M = 6, ..., 90 (13 even moduli): every character of even order has rho(T_k)/2 = 0.7071; the rate of M is the rate of its odd part: 6: 0.8660, 12: 0.8660, 24: 0.8660, 10: 0.7418, 20: 0.7418, 40: 0.7418, 18: 0.8660, 36: 0.8660, 14: 0.9320, 28: 0.9320, 30: 0.8922, 60: 0.8922, 90: 0.8922
+  ok   the rates of the odd parts 3, 5, 9, 7, 15, 45 (0.8660, 0.7418, 0.8660, 0.9320, 0.8922, 0.8922) are above 2^(-1/2)
+V3 the 2-adic algebra of (A)
+  ok   x2 = y2 - 2 q2; on a cell with j - 1 bottom digits prescribed y2 mod 2^j is constant and N = const - 2 x1 q2 (mod 2^j), N odd (4000 random cells, j = 2..5)
+  ok   q2 -> -2 x1 q2 is a bijection of Z/2^(j-1) onto 2Z/2^j for odd x1
+  ok   (q mod 6, h mod 3) on the cells of B_n with 1 bottom digit(s) prescribed: relative deviation 0.3716 (n = 14), 0.1813 (n = 18), 0.1310 (n = 20); decay 0.841 per digit
+  ok   (q mod 12, h mod 3) on the cells of B_n with 2 bottom digit(s) prescribed: relative deviation 0.6699 (n = 14), 0.2733 (n = 18), 0.1801 (n = 20); decay 0.803 per digit
+  ok   (q mod 10, h mod 5) on the cells of B_n with 1 bottom digit(s) prescribed: relative deviation 0.3916 (n = 14), 0.0750 (n = 18), 0.0345 (n = 20); decay 0.667 per digit
+  ok   cells with 3 top and 3 bottom digits prescribed, r = 8 to 14 free digits: decay of the relative deviation per free digit 0.801 (modulus 12), 0.772 (modulus 24), 0.722 (modulus 20), 0.770 (modulus 36), 0.826 (modulus 28), 0.784 (modulus 60) (mixed_cells.out, r = 8 to 16: 0.74 to 0.84)
+V4 the algebra of (C)
+  ok   N_b = x_b(h1) x_b(h2) + b (2^s y1 y2 - [s = 0])/2 = 1 + alpha_1 b + alpha_2 b^2, second digit alpha_1 mod b, psi2 = h2 - q2 (4000 random triples, eleven bases)
+  ok   odd b: alpha_1 = 2^(-1) x2 + (2^(s-1) y1) y2 + psi1 - 2^(-1) (s >= 1), 2^(-1) x2 + (2^(-1) y1) y2 + psi1 - 1 (s = 0) modulo b
+  ok   b = 2^a: on a cell with a bottom digits prescribed alpha_1 = const - q2 (mod 2^a) (3000 random cells, a = 1..4, s = 0..5)
+  ok   every b: alpha_1 = -q2 + (1 + 2^s y1) h2 + const (mod b) (s = 0: coefficient 1 + y1), so for b = 2^a m it is uniform as soon as (q2 mod 2^a m, h2 mod m) is equidistributed on cells with a bottom digits prescribed
+V5 (D): states of type p, fans, constants
+  ok   g(h) = gcd(x, y) = gcd(2h + 1, q(h)) for h < 2^20
+  ok   p | g(h) iff 2h + 1 = 0 and q(h) = 0 (mod p); the automaton on (q mod p, h mod 2p) (at most 2 p^2 states, digits from the top) accepts exactly these h, h < 2^16, p = 3, 5, 7, 11, 13
+  ok   x = y exactly at h = 0 and at the powers of 2 below 2^20
+  ok   every prime below 400 has a state of type p below 2^20 (largest first state 462569, at p = 379)
+  ok   primes below 200 whose fan is the first state of type p: [3, 5, 11, 13, 17, 43, 113]
+  ok   then, below 400: [241, 257, 331]
+  ok   not the first for 19, 29, 37, 41: first states 218, 1435, 1350, 266
+  ok   odd order (no balanced state of type p): 7, 23, 31 with first states 38, 103, 8664
+  ok   the fan is the first state of type p also for 257 (h = 128) and 65537 (h = 2^15), the two cases beyond 200 recorded by the S91 audit
+    primes below 200 whose first state of type p is beyond 2^16: [(127, 109283), (163, 68867), (193, 75173)]
+  ok   these are 127, 163, 193 (so a search below 2^16 does not see them; none of them is a fan)
+  ok   kappa_0, kappa_1 = 0.1615389173, 0.2125139092
+  ok   p = 3: sum over the states of type p below H of w^sigma grows like c_p kappa_sigma ln H: slope between 2^12 and 2^20 0.01906 / 0.02510 against 0.01795 / 0.02361
+  ok   p = 3: centred partial sums over h < 2^20: 0.0554 / 0.0786 (THM-5128 (D4): 0.0556 / 0.0789 at 2^26): A_(p,p) is A_p
+  ok   p = 5: sum over the states of type p below H of w^sigma grows like c_p kappa_sigma ln H: slope between 2^12 and 2^20 0.00640 / 0.00842 against 0.00646 / 0.00850
+  ok   p = 5: centred partial sums over h < 2^20: 0.0295 / 0.0425 (THM-5128 (D4): 0.02943 / 0.0425 at 2^26): A_(p,p) is A_p
+V6 (B): class means of the series, and the quoted arithmetic
+  ok   mean of S_sigma over the odd N < 2^22: 1.00000 / 1.00000
+  ok   mean of S_sigma(N) over the odd N < 2^22 of a class c modulo m equals L_m(c - c_sigma), m = 3, 9, 15, 45, 25, both sheets: largest difference 0.00005
+  ok   quintile ratios 8.550/4.301 = 1.988, 10.766/5.438 = 1.980
+  ok   abundancy ratio 1.609/1.001 = 1.607 (1.6094/1.0006 = 1.608)
+  ok   squared correlations 0.1613, 0.1828
+  ok   L1 remainder over the Poisson-pair floor on [2^24, 2^25), from poisson_pair_floor.out: 1.0936 / 1.1000, that is 9 % / 10 % above the floor (verify_census.out, full precision: 1.0936 / 1.1001, so not within 10 % on sheet 1)
+    the same ratio on [2^16, 2^17): 1.1189 / 1.1258; on [2^20, 2^21): 1.0541 / 1.1378
+  ok   second digit, b = 6, decay per binary digit 2^16 -> 2^28: 0.8551 / 0.8648
+  ok   b = 3: 0.8674 / 0.8667; sqrt(3)/2 = 0.8660
+  ok   triples missed by the pre-audit census of every_base.py: 3.330 %, 0.136 %, 0.009 %, 0.013 %, 0.016 %, 0.027 %
+V7 the file
+  ok   pure ASCII
+  ok   backticks balanced on every line
+  ok   front matter delimited
+  ok   front matter parses as YAML with id, title, status, session, date, source, scripts, related
+  ok   id, date, session
+  ok   50 paths of source / scripts / related exist
+    scripts entries: 12, related entries: 10
+  ok   every file named in the body is listed in the front matter
+  ok   no (H), no PRE-AUDIT
+  ok   the divisor sum is written sigma_1(n)
+  ok   no X1, X2, X_b (X is the bound only)
+  ok   labels cited: THM-5134 ['A', 'B', 'C', 'D', 'E', 'F', 'G'] (statements (A)-(G) exist), THM-5128 ['B', 'B1', 'B4', 'D2', 'D3', 'D4', 'E', 'F']
+  ok   THM-5135 is not cited by part in this file
+  ok   the L1 remainder is quoted as 9 % / 10 % above the floor (not as within 10 %)
+  ok   the repaired sentences are in place
+  ok   THM-5128 Remark 3 exists
+  ok   prose lines of the body at most 120 characters (longest 117; displayed formulas are longer, as in THM-5134)
+  ok   no duplicated line
+  ok   no sentence about Chan-Pak or Collatz in the file
+ALL CHECKS PASSED

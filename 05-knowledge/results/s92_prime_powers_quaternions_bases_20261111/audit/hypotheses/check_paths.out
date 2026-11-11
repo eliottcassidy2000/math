@@ -1,0 +1,68 @@
+# check_paths.py (auditor hypotheses)
+== THM-5134-f1-local-densities-at-every-odd  [frontmatter (session .. related)]: 24 path-like tokens
+   ok 01-canon/theorems/THM-4826-which-grid-carries-a-norm-shell-one-to-two-split-cubic-character-of-two-centred-units-complete-the-quartic-designs-four-eisenstein-fourth-powers-miss-five-mod-eight.md
+   ok 01-canon/theorems/THM-5070-port-chain-transfer-for-odd-cycle-packing-counts-and-ternary-coverage-to-a-million.md
+   ok 01-canon/theorems/THM-5128-f1-by-value-local-densities-first-order-class-law.md
+   ok (glob, 1 match) 01-canon/theorems/THM-5135-*
+   ok 04-computation/experiments/s92_prime_powers_20261111/every_base.py
+   ok 04-computation/experiments/s92_prime_powers_20261111/odd_modulus_census.py
+   ok 04-computation/experiments/s92_prime_powers_20261111/seam_rank_exact.py
+   ok (glob, 1 match) 05-knowledge/hypotheses/HYP-9660-*
+   ok 05-knowledge/results/s91_f1_local_densities_20261110/audit/AUDIT_REPORT.md
+   ok 05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/README.md
+   ok 05-knowledge/results/session223_root_changes_and_local_factors_20261107/README.md
+   ok PREREGISTRATION.md
+   ok THM-4940-odd-cycle-packing-counts-in-every-base.md
+   ok bridges_exact.py
+   ok cum_22.out
+   ok cum_24.out
+   ok cum_26.out
+   ok cum_28.out
+   ok prereg_window_28_27.json
+   ok series_vs_counts.py
+   ok series_vs_counts_25_24.out
+   ok session206/weighted-parameter-capacity/WEIGHTED_CAPACITY.md
+   ok (glob, 4 match) window_insample_*.out
+   ok window_prereg_28_27.out
+== THM-5135-class-laws-of-bilinear-seams-ta  [frontmatter (session .. related)]: 15 path-like tokens
+   ok 01-canon/theorems/THM-2887-quaternionic-arf-lift-of-the-semantic-v4-and-global-carry-no-go.md
+   ok 01-canon/theorems/THM-4826-which-grid-carries-a-norm-shell-one-to-two-split-cubic-character-of-two-centred-units-complete-the-quartic-designs-four-eisenstein-fourth-powers-miss-five-mod-eight.md
+   ok 01-canon/theorems/THM-4916-root-change-local-factor-identities-confinement-multipliers-product-family.md
+   ok 01-canon/theorems/THM-5133-flip-and-spin-kernel-signature-sign-tournaments-of-twisted-algebras-and-the-pg32-extremal-theorems.md
+   ok (glob, 1 match) 01-canon/theorems/THM-5134-*
+   ok 04-computation/experiments/s92_prime_powers_20261111/bridges_exact.py
+   ok 04-computation/experiments/s92_prime_powers_20261111/seam_rank_exact.py
+   ok (glob, 1 match) 05-knowledge/hypotheses/HYP-9666-*
+   ok 05-knowledge/results/modular_centers_collatz_pell_20261111/PROOFS.md
+   ok 05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/README.md
+   ok 05-knowledge/results/session112_counting_interfaces_20261030/norms/NORM_SIGNS.md
+   ok 05-knowledge/results/session260_quasiperfect_chanpak_20261111/arithmetic/QUASIPERFECT_NORMS.md
+   ok 05-knowledge/results/session261_creative_chanpak_20261111/constructors/BILINEAR_KERNEL.md
+   ok 05-knowledge/results/session264_constructive_20261111/fusion/PROOF.md
+   ok bridges_exact.out
+== HYP-9665-f1-densities-beyond-odd-moduli-  [frontmatter (session .. related)]: 5 path-like tokens
+   ok 01-canon/theorems/THM-5128-f1-by-value-local-densities-first-order-class-law.md
+   ok (glob, 1 match) 01-canon/theorems/THM-5134-*
+   ok (glob, 1 match) 05-knowledge/hypotheses/HYP-9660-*
+   ok 05-knowledge/results/odd_tables_signed_carries_20261111/prime_layers/PHASE_CLOCKS.md
+   ok 05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/README.md
+== HYP-9666-seams-of-rank-four-and-the-octo  [frontmatter (session .. related)]: 6 path-like tokens
+   ok 01-canon/theorems/THM-4756-forward-step-polynomial-mod-3-is-h-times-eulerian.md
+   ok 01-canon/theorems/THM-4916-root-change-local-factor-identities-confinement-multipliers-product-family.md
+   ok 01-canon/theorems/THM-5133-flip-and-spin-kernel-signature-sign-tournaments-of-twisted-algebras-and-the-pg32-extremal-theorems.md
+   ok (glob, 1 match) 01-canon/theorems/THM-5135-*
+   ok 05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/README.md
+   ok 05-knowledge/results/session264_constructive_20261111/fusion/PROOF.md
+== README.md  [whole note]: 12 path-like tokens
+   ok 04-computation/experiments/s92_prime_powers_20261111
+   ok 04-computation/experiments/s92_prime_powers_20261111/
+   ok bridges_exact.out
+   ok bridges_exact.py
+   ok every_base.py
+   ok odd_modulus_census.py
+   ok prereg_window_28_27.json
+   ok seam_rank_exact.py
+   ok series_vs_counts.py
+   ok session266_fiber_radix_20261111/radix/PROOF.md
+   ok small_tournaments_collatz_lines.out
+   ok small_tournaments_collatz_lines.py

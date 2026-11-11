@@ -1,0 +1,13 @@
+odd N in [2^20, 2^21): 524288 values; triples sheet 0: 2633057, sheet 1: 3304801; mean r_0 = 5.0222, mean r_1 = 6.3034  (7 s)
+sheet 0: mean of sigma(n)/n over the window 1.2337 (pi^2/8 = 1.2337); correlation of r with sigma(n)/n: 0.3616; with the squarefree-level product: 0.3541
+    mean of r by v_3(n), relative to v = 0: v=0: 1.000 (limit 1.000, 349525 N); v=1: 1.416 (limit 1.333, 116509 N); v=2: 1.643 (limit 1.444, 38836 N); v=3: 1.683 (limit 1.481, 12945 N); v=4: 1.698 (limit 1.494, 4315 N)
+    mean of r by v_5(n), relative to v = 0: v=0: 1.000 (limit 1.000, 419430 N); v=1: 1.340 (limit 1.200, 83886 N); v=2: 1.338 (limit 1.240, 16778 N); v=3: 1.352 (limit 1.248, 3355 N); v=4: 1.360 (limit 1.250, 671 N)
+    quintiles of sigma(n)/n: mean abundancy -> mean r: 1.001 -> 3.653; 1.037 -> 3.809; 1.171 -> 4.833; 1.350 -> 5.667; 1.609 -> 7.149
+    ratio highest / lowest quintile of mean r: 1.957
+    HYP-9665 (B) model 2 kappa (8/pi^2) sigma(n)/n ln N: mean model 4.6036 against mean r 5.0222; mean |r - model| = 2.7098; mean |r - mean r| = 2.9600
+sheet 1: mean of sigma(n)/n over the window 1.2337 (pi^2/8 = 1.2337); correlation of r with sigma(n)/n: 0.3976; with the squarefree-level product: 0.3870
+    mean of r by v_3(n), relative to v = 0: v=0: 1.000 (limit 1.000, 349526 N); v=1: 1.434 (limit 1.333, 116508 N); v=2: 1.708 (limit 1.444, 38836 N); v=3: 1.782 (limit 1.481, 12946 N); v=4: 1.792 (limit 1.494, 4315 N)
+    mean of r by v_5(n), relative to v = 0: v=0: 1.000 (limit 1.000, 419431 N); v=1: 1.360 (limit 1.200, 83886 N); v=2: 1.344 (limit 1.240, 16776 N); v=3: 1.336 (limit 1.248, 3356 N); v=4: 1.354 (limit 1.250, 671 N)
+    quintiles of sigma(n)/n: mean abundancy -> mean r: 1.001 -> 4.558; 1.037 -> 4.767; 1.171 -> 5.971; 1.350 -> 7.106; 1.609 -> 9.114
+    ratio highest / lowest quintile of mean r: 1.999
+    HYP-9665 (B) model 2 kappa (8/pi^2) sigma(n)/n ln N: mean model 6.0563 against mean r 6.3034; mean |r - model| = 3.2013; mean |r - mean r| = 3.4461

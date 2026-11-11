@@ -1,0 +1,35 @@
+C1 four squares, 1 <= n <= 3000 (exact convolution):
+   r_4(n) = 8 * sum_{d | n, 4 not | d} d      failures: 0
+   odd n : r_4(n) = 8 sigma(n)                failures: 0
+   even n: r_4(n) = 24 sigma(odd part of n)   failures: 0
+   r_4(1..12) = [8, 24, 32, 24, 48, 96, 64, 24, 104, 144, 96, 96]
+C2 eight squares, 1 <= n <= 1500:
+   r_8(n) = 16 * sum_{d | n} (-1)^(n+d) d^3   failures: 0
+   odd n : r_8(n) = 16 sigma_3(n)             failures: 0
+   even n with r_8(n) = 16 sigma_3(n): 0 (none expected)
+   r_8(1..8) = [16, 112, 448, 1136, 2016, 3136, 5504, 9328]    r_8(2) = 112  16 sigma_3(2) = 144
+C3 Hurwitz quaternions of norm n, 1 <= n <= 700:
+   count = 24 * (sum of odd divisors of n)    failures: 0
+   odd n : count = 24 sigma(n)                failures: 0
+   counts n = 1..8: [24, 24, 96, 24, 144, 96, 192, 24]
+C4 E8 = D8 u (D8 + half), vectors of norm 2n, 1 <= n <= 180:
+   count = 240 sigma_3(n)                     failures: 0
+   shells n = 1..6: [240, 2160, 6720, 17520, 30240, 60480]   (240 sigma_3: [240, 2160, 6720, 17520, 30240, 60480])
+C5 Cartan matrix of E8: det = 1, symmetric = True
+   vectors with x^T C x = 2n (exact search):  {1: 240, 2: 2160, 3: 6720}
+   odd values of x^T C x found: 0 (lattice is even)
+C6 r_2 convolutions, 1 <= n <= 2000:
+   sum_{a+b=n} r_2(a) r_2(b) = r_4(n) (= 8 sigma(n), n odd)   failures: 0
+   sum_{ab=n} r_2(a) r_2(b) = 0 for n = 3 (mod 4)             failures: 0
+   multiplicative convolution n = 1..13: [16, 32, 0, 48, 64, 0, 0, 64, 32, 128, 0, 0, 64]
+   Z-span of the units {1, i, j, ij} (index 4 in Z[i]^2), elements of norm n = 1..13 (box +-9):
+     [8, 0, 0, 16, 32, 0, 0, 0, 16, 0, 0, 0, 32]
+C7 real densities (d/dn of the volume of {Q <= n}):
+   four squares: d/dn Vol{x in R^4 : |x|^2 <= n} at n = 7: 69.087230800 ; pi^2 n = 69.087230808
+   E8 (covolume 1, Q = x.x/2): d/dn Vol{x in R^8 : |x|^2 <= 2n} at n = 7: 89096.848592 ; (8 pi^4/3) n^3 = 89096.848599
+   Z^8 (Q = x.x): d/dn Vol{|x|^2 <= n} at n = 7: 5568.553037 ; (pi^4/6) n^3 = 5568.553037
+   zeta(4) = 1.082323233711 ; pi^4/90 = 1.082323233711
+   (8 pi^4/3) / zeta(4) = 240.000000000 (240 expected)
+   pi^2 * (8/pi^2) = 8 ; (pi^4/6) * (96/pi^4) = 16.000000000 (16 expected: Z^8 at odd n, 2-adic density 1)
+   prod_{p odd} (1 - p^-2) = (6/pi^2)/(3/4) = 0.810569469 ; 8/pi^2 = 0.810569469
+ALL CHECKS PASSED

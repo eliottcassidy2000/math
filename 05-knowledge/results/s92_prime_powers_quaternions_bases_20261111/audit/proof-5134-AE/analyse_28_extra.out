@@ -1,0 +1,251 @@
+independent census (auditor proof-5134-AE), X = 2^28
+
+====================================================================================================
+modulus 33   divisors [1, 3, 11, 33]   c_d = ['0.88154', '0.11019', '0.00735', '0.00092']
+  sheet 0: #T = 854415478  diagonal = 6554  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.02396   (D without diagonal, as defined)   0.02396 (diagonal counted in D)   worst class M = 11 (N = 10 mod 33)
+     sampling noise sqrt(m/#T) = 0.00020
+     type shares F_d = D^(d)/#T :  d=1: 0.84744 (c_d 0.88154, ratio 0.9613)  d=3: 0.13690 (c_d 0.11019, ratio 1.2423)  d=11: 0.00991 (c_d 0.00735, ratio 1.3492)  d=33: 0.00574 (c_d 0.00092, ratio 6.2551)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.05427  d=3: +0.04250  d=11: +0.00408  d=33: +0.00768
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.8406  Phi(g0) 0.8474  limit L_m 0.8815  max|class - Phi| 0.0186
+        g0=3: factor 1.2734  Phi(g0) 1.2581  limit L_m 1.2121  max|class - Phi| 0.0176
+        g0=11: factor 0.9416  Phi(g0) 0.9565  limit L_m 0.9624  max|class - Phi| 0.0240
+        g0=33: factor 1.5705  Phi(g0) 1.5567  limit L_m 1.3232  max|class - Phi| 0.0137
+  sheet 1: #T = 1083261684  diagonal = 18676  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.02068   (D without diagonal, as defined)   0.02070 (diagonal counted in D)   worst class M = 11 (N = 11 mod 33)
+     sampling noise sqrt(m/#T) = 0.00017
+     type shares F_d = D^(d)/#T :  d=1: 0.84448 (c_d 0.88154, ratio 0.9580)  d=3: 0.13954 (c_d 0.11019, ratio 1.2664)  d=11: 0.00969 (c_d 0.00735, ratio 1.3193)  d=33: 0.00627 (c_d 0.00092, ratio 6.8268)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.07479  d=3: +0.05922  d=11: +0.00473  d=33: +0.01080
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.8378  Phi(g0) 0.8445  limit L_m 0.8815  max|class - Phi| 0.0146
+        g0=3: factor 1.2783  Phi(g0) 1.2631  limit L_m 1.2121  max|class - Phi| 0.0177
+        g0=11: factor 0.9366  Phi(g0) 0.9511  limit L_m 0.9624  max|class - Phi| 0.0207
+        g0=33: factor 1.5873  Phi(g0) 1.5766  limit L_m 1.3232  max|class - Phi| 0.0107
+
+====================================================================================================
+modulus 35   divisors [1, 5, 7, 35]   c_d = ['0.94041', '0.03918', '0.01959', '0.00082']
+  sheet 0: #T = 854415478  diagonal = 6554  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.10588   (D without diagonal, as defined)   0.10587 (diagonal counted in D)   worst class M = 0 (N = 34 mod 35)
+     sampling noise sqrt(m/#T) = 0.00020
+     type shares F_d = D^(d)/#T :  d=1: 0.92396 (c_d 0.94041, ratio 0.9825)  d=5: 0.05849 (c_d 0.03918, ratio 1.4926)  d=7: 0.01716 (c_d 0.01959, ratio 0.8761)  d=35: 0.00038 (c_d 0.00082, ratio 0.4672)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.02617  d=5: +0.03072  d=7: -0.00386  d=35: -0.00069
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.9123  Phi(g0) 0.9240  limit L_m 0.9404  max|class - Phi| 0.0509
+        g0=5: factor 1.1971  Phi(g0) 1.2164  limit L_m 1.1363  max|class - Phi| 0.0762
+        g0=7: factor 1.1165  Phi(g0) 1.0441  limit L_m 1.0776  max|class - Phi| 0.0740
+        g0=35: factor 1.4558  Phi(g0) 1.3499  limit L_m 1.3020  max|class - Phi| 0.1059
+  sheet 1: #T = 1083261684  diagonal = 18676  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.11963   (D without diagonal, as defined)   0.11960 (diagonal counted in D)   worst class M = 0 (N = 0 mod 35)
+     sampling noise sqrt(m/#T) = 0.00018
+     type shares F_d = D^(d)/#T :  d=1: 0.92350 (c_d 0.94041, ratio 0.9820)  d=5: 0.06125 (c_d 0.03918, ratio 1.5632)  d=7: 0.01497 (c_d 0.01959, ratio 0.7641)  d=35: 0.00026 (c_d 0.00082, ratio 0.3214)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.03412  d=5: +0.04453  d=7: -0.00933  d=35: -0.00112
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.9098  Phi(g0) 0.9235  limit L_m 0.9404  max|class - Phi| 0.0405
+        g0=5: factor 1.2077  Phi(g0) 1.2298  limit L_m 1.1363  max|class - Phi| 0.0606
+        g0=7: factor 1.1141  Phi(g0) 1.0283  limit L_m 1.0776  max|class - Phi| 0.0862
+        g0=35: factor 1.4634  Phi(g0) 1.3437  limit L_m 1.3020  max|class - Phi| 0.1196
+
+====================================================================================================
+modulus 55   divisors [1, 5, 11, 55]   c_d = ['0.95207', '0.03967', '0.00793', '0.00033']
+  sheet 0: #T = 854415478  diagonal = 6554  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.00800   (D without diagonal, as defined)   0.00801 (diagonal counted in D)   worst class M = 0 (N = 54 mod 55)
+     sampling noise sqrt(m/#T) = 0.00025
+     type shares F_d = D^(d)/#T :  d=1: 0.92550 (c_d 0.95207, ratio 0.9721)  d=5: 0.05884 (c_d 0.03967, ratio 1.4833)  d=11: 0.01563 (c_d 0.00793, ratio 1.9699)  d=55: 0.00003 (c_d 0.00033, ratio 0.0808)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.04228  d=5: +0.03051  d=11: +0.01225  d=55: -0.00048
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.9264  Phi(g0) 0.9255  limit L_m 0.9521  max|class - Phi| 0.0034
+        g0=5: factor 1.2190  Phi(g0) 1.2197  limit L_m 1.1504  max|class - Phi| 0.0020
+        g0=11: factor 1.0927  Phi(g0) 1.0974  limit L_m 1.0393  max|class - Phi| 0.0055
+        g0=55: factor 1.3851  Phi(g0) 1.3931  limit L_m 1.2559  max|class - Phi| 0.0080
+  sheet 1: #T = 1083261684  diagonal = 18676  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.01169   (D without diagonal, as defined)   0.01171 (diagonal counted in D)   worst class M = 0 (N = 0 mod 55)
+     sampling noise sqrt(m/#T) = 0.00023
+     type shares F_d = D^(d)/#T :  d=1: 0.92252 (c_d 0.95207, ratio 0.9690)  d=5: 0.06151 (c_d 0.03967, ratio 1.5505)  d=11: 0.01595 (c_d 0.00793, ratio 2.0108)  d=55: 0.00001 (c_d 0.00033, ratio 0.0225)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.05962  d=5: +0.04406  d=11: +0.01618  d=55: -0.00065
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.9235  Phi(g0) 0.9225  limit L_m 0.9521  max|class - Phi| 0.0033
+        g0=5: factor 1.2292  Phi(g0) 1.2300  limit L_m 1.1504  max|class - Phi| 0.0033
+        g0=11: factor 1.0933  Phi(g0) 1.0980  limit L_m 1.0393  max|class - Phi| 0.0054
+        g0=55: factor 1.3942  Phi(g0) 1.4059  limit L_m 1.2559  max|class - Phi| 0.0117
+
+====================================================================================================
+modulus 99   divisors [1, 3, 9, 11, 33, 99]   c_d = ['0.88154', '0.09795', '0.01224', '0.00735', '0.00082', '0.00010']
+  sheet 0: #T = 854415478  diagonal = 6554  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.02813   (D without diagonal, as defined)   0.02812 (diagonal counted in D)   worst class M = 45 (N = 44 mod 99)
+     sampling noise sqrt(m/#T) = 0.00034
+     type shares F_d = D^(d)/#T :  d=1: 0.84744 (c_d 0.88154, ratio 0.9613)  d=3: 0.11328 (c_d 0.09795, ratio 1.1565)  d=9: 0.02362 (c_d 0.01224, ratio 1.9288)  d=11: 0.00991 (c_d 0.00735, ratio 1.3492)  d=33: 0.00570 (c_d 0.00082, ratio 6.9836)  d=99: 0.00004 (c_d 0.00010, ratio 0.4273)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.05427  d=3: +0.02440  d=9: +0.01810  d=11: +0.00408  d=33: +0.00777  d=99: -0.00009
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.8406  Phi(g0) 0.8474  limit L_m 0.8815  max|class - Phi| 0.0207
+        g0=3: factor 1.1980  Phi(g0) 1.1873  limit L_m 1.1754  max|class - Phi| 0.0147
+        g0=9: factor 1.4242  Phi(g0) 1.3998  limit L_m 1.2856  max|class - Phi| 0.0281
+        g0=11: factor 0.9416  Phi(g0) 0.9565  limit L_m 0.9624  max|class - Phi| 0.0254
+        g0=33: factor 1.4958  Phi(g0) 1.4844  limit L_m 1.2831  max|class - Phi| 0.0149
+        g0=99: factor 1.7198  Phi(g0) 1.7013  limit L_m 1.4034  max|class - Phi| 0.0185
+  sheet 1: #T = 1083261684  diagonal = 18676  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.02302   (D without diagonal, as defined)   0.02304 (diagonal counted in D)   worst class M = 44 (N = 44 mod 99)
+     sampling noise sqrt(m/#T) = 0.00030
+     type shares F_d = D^(d)/#T :  d=1: 0.84448 (c_d 0.88154, ratio 0.9580)  d=3: 0.11428 (c_d 0.09795, ratio 1.1667)  d=9: 0.02527 (c_d 0.01224, ratio 2.0637)  d=11: 0.00969 (c_d 0.00735, ratio 1.3193)  d=33: 0.00624 (c_d 0.00082, ratio 7.6441)  d=99: 0.00003 (c_d 0.00010, ratio 0.2889)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.07479  d=3: +0.03294  d=9: +0.02628  d=11: +0.00473  d=33: +0.01094  d=99: -0.00015
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.8378  Phi(g0) 0.8445  limit L_m 0.8815  max|class - Phi| 0.0170
+        g0=3: factor 1.2002  Phi(g0) 1.1873  limit L_m 1.1754  max|class - Phi| 0.0219
+        g0=9: factor 1.4345  Phi(g0) 1.4147  limit L_m 1.2856  max|class - Phi| 0.0226
+        g0=11: factor 0.9366  Phi(g0) 0.9511  limit L_m 0.9624  max|class - Phi| 0.0230
+        g0=33: factor 1.5130  Phi(g0) 1.4998  limit L_m 1.2831  max|class - Phi| 0.0200
+        g0=99: factor 1.7360  Phi(g0) 1.7301  limit L_m 1.4034  max|class - Phi| 0.0059
+
+====================================================================================================
+modulus 117   divisors [1, 3, 9, 13, 39, 117]   c_d = ['0.88363', '0.09818', '0.01227', '0.00526', '0.00058', '0.00007']
+  sheet 0: #T = 854415478  diagonal = 6554  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.02976   (D without diagonal, as defined)   0.02975 (diagonal counted in D)   worst class M = 72 (N = 71 mod 117)
+     sampling noise sqrt(m/#T) = 0.00037
+     type shares F_d = D^(d)/#T :  d=1: 0.85418 (c_d 0.88363, ratio 0.9667)  d=3: 0.11846 (c_d 0.09818, ratio 1.2065)  d=9: 0.02366 (c_d 0.01227, ratio 1.9278)  d=13: 0.00317 (c_d 0.00526, ratio 0.6035)  d=39: 0.00052 (c_d 0.00058, ratio 0.8961)  d=117: 0.00000 (c_d 0.00007, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.04687  d=3: +0.03227  d=9: +0.01812  d=13: -0.00332  d=39: -0.00010  d=117: -0.00012
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.8468  Phi(g0) 0.8542  limit L_m 0.8836  max|class - Phi| 0.0201
+        g0=3: factor 1.2206  Phi(g0) 1.2095  limit L_m 1.1782  max|class - Phi| 0.0157
+        g0=9: factor 1.4466  Phi(g0) 1.4225  limit L_m 1.2886  max|class - Phi| 0.0298
+        g0=13: factor 0.8856  Phi(g0) 0.8954  limit L_m 0.9520  max|class - Phi| 0.0214
+        g0=39: factor 1.2785  Phi(g0) 1.2712  limit L_m 1.2693  max|class - Phi| 0.0080
+        g0=117: factor 1.5050  Phi(g0) 1.4842  limit L_m 1.3883  max|class - Phi| 0.0208
+  sheet 1: #T = 1083261684  diagonal = 18676  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.02283   (D without diagonal, as defined)   0.02281 (diagonal counted in D)   worst class M = 96 (N = 96 mod 117)
+     sampling noise sqrt(m/#T) = 0.00033
+     type shares F_d = D^(d)/#T :  d=1: 0.85090 (c_d 0.88363, ratio 0.9630)  d=3: 0.12006 (c_d 0.09818, ratio 1.2229)  d=9: 0.02530 (c_d 0.01227, ratio 2.0612)  d=13: 0.00327 (c_d 0.00526, ratio 0.6214)  d=39: 0.00045 (c_d 0.00058, ratio 0.7735)  d=117: 0.00000 (c_d 0.00007, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.06604  d=3: +0.04415  d=9: +0.02628  d=13: -0.00402  d=39: -0.00027  d=117: -0.00015
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.8438  Phi(g0) 0.8509  limit L_m 0.8836  max|class - Phi| 0.0176
+        g0=3: factor 1.2241  Phi(g0) 1.2111  limit L_m 1.1782  max|class - Phi| 0.0228
+        g0=9: factor 1.4575  Phi(g0) 1.4388  limit L_m 1.2886  max|class - Phi| 0.0219
+        g0=13: factor 0.8828  Phi(g0) 0.8934  limit L_m 0.9520  max|class - Phi| 0.0186
+        g0=39: factor 1.2835  Phi(g0) 1.2712  limit L_m 1.2693  max|class - Phi| 0.0147
+        g0=117: factor 1.5146  Phi(g0) 1.4989  limit L_m 1.3883  max|class - Phi| 0.0157
+
+====================================================================================================
+modulus 121   divisors [1, 11, 121]   c_d = ['0.99174', '0.00820', '0.00007']
+  sheet 0: #T = 854415478  diagonal = 6554  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.00671   (D without diagonal, as defined)   0.00672 (diagonal counted in D)   worst class M = 33 (N = 32 mod 121)
+     sampling noise sqrt(m/#T) = 0.00038
+     type shares F_d = D^(d)/#T :  d=1: 0.98434 (c_d 0.99174, ratio 0.9925)  d=11: 0.01561 (c_d 0.00820, ratio 1.9050)  d=121: 0.00004 (c_d 0.00007, ratio 0.6158)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.01177  d=11: +0.01180  d=121: -0.00004
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.9849  Phi(g0) 0.9843  limit L_m 0.9917  max|class - Phi| 0.0029
+        g0=11: factor 1.1506  Phi(g0) 1.1561  limit L_m 1.0819  max|class - Phi| 0.0067
+        g0=121: factor 1.1578  Phi(g0) 1.1612  limit L_m 1.0902  max|class - Phi| 0.0034
+  sheet 1: #T = 1083261684  diagonal = 18676  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.00769   (D without diagonal, as defined)   0.00771 (diagonal counted in D)   worst class M = 55 (N = 55 mod 121)
+     sampling noise sqrt(m/#T) = 0.00033
+     type shares F_d = D^(d)/#T :  d=1: 0.98402 (c_d 0.99174, ratio 0.9922)  d=11: 0.01593 (c_d 0.00820, ratio 1.9441)  d=121: 0.00003 (c_d 0.00007, ratio 0.3949)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.01556  d=11: +0.01561  d=121: -0.00008
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.9846  Phi(g0) 0.9840  limit L_m 0.9917  max|class - Phi| 0.0042
+        g0=11: factor 1.1531  Phi(g0) 1.1593  limit L_m 1.0819  max|class - Phi| 0.0077
+        g0=121: factor 1.1581  Phi(g0) 1.1626  limit L_m 1.0902  max|class - Phi| 0.0044
+
+====================================================================================================
+modulus 135   divisors [1, 3, 5, 9, 15, 27, 45, 135]   c_d = ['0.85333', '0.09481', '0.03556', '0.01053', '0.00395', '0.00132', '0.00044', '0.00005']
+  sheet 0: #T = 854415478  diagonal = 6554  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.04006   (D without diagonal, as defined)   0.04005 (diagonal counted in D)   worst class M = 54 (N = 53 mod 135)
+     sampling noise sqrt(m/#T) = 0.00040
+     type shares F_d = D^(d)/#T :  d=1: 0.79956 (c_d 0.85333, ratio 0.9370)  d=3: 0.11826 (c_d 0.09481, ratio 1.2472)  d=5: 0.05779 (c_d 0.03556, ratio 1.6254)  d=9: 0.02282 (c_d 0.01053, ratio 2.1661)  d=15: 0.00072 (c_d 0.00395, ratio 0.1834)  d=27: 0.00049 (c_d 0.00132, ratio 0.3729)  d=45: 0.00033 (c_d 0.00044, ratio 0.7591)  d=135: 0.00002 (c_d 0.00005, ratio 0.2886)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.08558  d=3: +0.03731  d=5: +0.03539  d=9: +0.01955  d=15: -0.00513  d=27: -0.00131  d=45: -0.00017  d=135: -0.00006
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.7914  Phi(g0) 0.7996  limit L_m 0.8533  max|class - Phi| 0.0252
+        g0=3: factor 1.1663  Phi(g0) 1.1543  limit L_m 1.1378  max|class - Phi| 0.0277
+        g0=5: factor 1.0832  Phi(g0) 1.0885  limit L_m 1.0311  max|class - Phi| 0.0192
+        g0=9: factor 1.3853  Phi(g0) 1.3597  limit L_m 1.2326  max|class - Phi| 0.0384
+        g0=15: factor 1.4602  Phi(g0) 1.4542  limit L_m 1.3748  max|class - Phi| 0.0109
+        g0=27: factor 1.4055  Phi(g0) 1.3730  limit L_m 1.2681  max|class - Phi| 0.0401
+        g0=45: factor 1.6851  Phi(g0) 1.6745  limit L_m 1.4894  max|class - Phi| 0.0195
+        g0=135: factor 1.6918  Phi(g0) 1.6899  limit L_m 1.5323  max|class - Phi| 0.0019
+  sheet 1: #T = 1083261684  diagonal = 18676  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.05257   (D without diagonal, as defined)   0.05255 (diagonal counted in D)   worst class M = 18 (N = 18 mod 135)
+     sampling noise sqrt(m/#T) = 0.00035
+     type shares F_d = D^(d)/#T :  d=1: 0.79355 (c_d 0.85333, ratio 0.9299)  d=3: 0.11994 (c_d 0.09481, ratio 1.2650)  d=5: 0.06062 (c_d 0.03556, ratio 1.7050)  d=9: 0.02454 (c_d 0.01053, ratio 2.3290)  d=15: 0.00058 (c_d 0.00395, ratio 0.1457)  d=27: 0.00045 (c_d 0.00132, ratio 0.3383)  d=45: 0.00031 (c_d 0.00044, ratio 0.7095)  d=135: 0.00000 (c_d 0.00005, ratio 0.0808)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.12063  d=3: +0.05070  d=5: +0.05058  d=9: +0.02825  d=15: -0.00681  d=27: -0.00176  d=45: -0.00026  d=135: -0.00010
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.7848  Phi(g0) 0.7935  limit L_m 0.8533  max|class - Phi| 0.0246
+        g0=3: factor 1.1701  Phi(g0) 1.1534  limit L_m 1.1378  max|class - Phi| 0.0332
+        g0=5: factor 1.0947  Phi(g0) 1.0967  limit L_m 1.0311  max|class - Phi| 0.0161
+        g0=9: factor 1.3990  Phi(g0) 1.3742  limit L_m 1.2326  max|class - Phi| 0.0526
+        g0=15: factor 1.4628  Phi(g0) 1.4651  limit L_m 1.3748  max|class - Phi| 0.0098
+        g0=27: factor 1.4062  Phi(g0) 1.3862  limit L_m 1.2681  max|class - Phi| 0.0274
+        g0=45: factor 1.7021  Phi(g0) 1.6999  limit L_m 1.4894  max|class - Phi| 0.0073
+        g0=135: factor 1.7080  Phi(g0) 1.7126  limit L_m 1.5323  max|class - Phi| 0.0046
+
+====================================================================================================
+modulus 169   divisors [1, 13, 169]   c_d = ['0.99408', '0.00588', '0.00004']
+  sheet 0: #T = 854415478  diagonal = 6554  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.00447   (D without diagonal, as defined)   0.00448 (diagonal counted in D)   worst class M = 91 (N = 90 mod 169)
+     sampling noise sqrt(m/#T) = 0.00044
+     type shares F_d = D^(d)/#T :  d=1: 0.99629 (c_d 0.99408, ratio 1.0022)  d=13: 0.00370 (c_d 0.00588, ratio 0.6287)  d=169: 0.00000 (c_d 0.00004, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: +0.00352  d=13: -0.00348  d=169: -0.00006
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.9965  Phi(g0) 0.9963  limit L_m 0.9941  max|class - Phi| 0.0040
+        g0=13: factor 1.0418  Phi(g0) 1.0444  limit L_m 1.0706  max|class - Phi| 0.0045
+        g0=169: factor 1.0412  Phi(g0) 1.0444  limit L_m 1.0765  max|class - Phi| 0.0032
+  sheet 1: #T = 1083261684  diagonal = 18676  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.00479   (D without diagonal, as defined)   0.00480 (diagonal counted in D)   worst class M = 0 (N = 0 mod 169)
+     sampling noise sqrt(m/#T) = 0.00039
+     type shares F_d = D^(d)/#T :  d=1: 0.99626 (c_d 0.99408, ratio 1.0022)  d=13: 0.00372 (c_d 0.00588, ratio 0.6325)  d=169: 0.00000 (c_d 0.00004, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: +0.00440  d=13: -0.00436  d=169: -0.00007
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.9965  Phi(g0) 0.9963  limit L_m 0.9941  max|class - Phi| 0.0042
+        g0=13: factor 1.0422  Phi(g0) 1.0446  limit L_m 1.0706  max|class - Phi| 0.0042
+        g0=169: factor 1.0398  Phi(g0) 1.0446  limit L_m 1.0765  max|class - Phi| 0.0048
+
+====================================================================================================
+modulus 175   divisors [1, 5, 7, 25, 35, 175]   c_d = ['0.94041', '0.03762', '0.01959', '0.00157', '0.00078', '0.00003']
+  sheet 0: #T = 854415478  diagonal = 6554  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.10744   (D without diagonal, as defined)   0.10743 (diagonal counted in D)   worst class M = 140 (N = 139 mod 175)
+     sampling noise sqrt(m/#T) = 0.00045
+     type shares F_d = D^(d)/#T :  d=1: 0.92396 (c_d 0.94041, ratio 0.9825)  d=5: 0.05813 (c_d 0.03762, ratio 1.5453)  d=7: 0.01716 (c_d 0.01959, ratio 0.8761)  d=25: 0.00036 (c_d 0.00157, ratio 0.2269)  d=35: 0.00037 (c_d 0.00078, ratio 0.4785)  d=175: 0.00001 (c_d 0.00003, ratio 0.1965)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.02617  d=5: +0.03265  d=7: -0.00386  d=25: -0.00193  d=35: -0.00065  d=175: -0.00004
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.9123  Phi(g0) 0.9240  limit L_m 0.9404  max|class - Phi| 0.0514
+        g0=5: factor 1.1960  Phi(g0) 1.2146  limit L_m 1.1285  max|class - Phi| 0.0766
+        g0=7: factor 1.1165  Phi(g0) 1.0441  limit L_m 1.0776  max|class - Phi| 0.0748
+        g0=25: factor 1.2018  Phi(g0) 1.2235  limit L_m 1.1677  max|class - Phi| 0.0770
+        g0=35: factor 1.4539  Phi(g0) 1.3479  limit L_m 1.2931  max|class - Phi| 0.1074
+        g0=175: factor 1.4633  Phi(g0) 1.3579  limit L_m 1.3380  max|class - Phi| 0.1054
+  sheet 1: #T = 1083261684  diagonal = 18676  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.12021   (D without diagonal, as defined)   0.12018 (diagonal counted in D)   worst class M = 140 (N = 140 mod 175)
+     sampling noise sqrt(m/#T) = 0.00040
+     type shares F_d = D^(d)/#T :  d=1: 0.92350 (c_d 0.94041, ratio 0.9820)  d=5: 0.06096 (c_d 0.03762, ratio 1.6207)  d=7: 0.01497 (c_d 0.01959, ratio 0.7641)  d=25: 0.00029 (c_d 0.00157, ratio 0.1828)  d=35: 0.00026 (c_d 0.00078, ratio 0.3348)  d=175: 0.00000 (c_d 0.00003, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.03412  d=5: +0.04711  d=7: -0.00933  d=25: -0.00258  d=35: -0.00105  d=175: -0.00007
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.9098  Phi(g0) 0.9235  limit L_m 0.9404  max|class - Phi| 0.0415
+        g0=5: factor 1.2068  Phi(g0) 1.2283  limit L_m 1.1285  max|class - Phi| 0.0619
+        g0=7: factor 1.1141  Phi(g0) 1.0283  limit L_m 1.0776  max|class - Phi| 0.0877
+        g0=25: factor 1.2112  Phi(g0) 1.2355  limit L_m 1.1677  max|class - Phi| 0.0636
+        g0=35: factor 1.4619  Phi(g0) 1.3423  limit L_m 1.2931  max|class - Phi| 0.1202
+        g0=175: factor 1.4692  Phi(g0) 1.3495  limit L_m 1.3380  max|class - Phi| 0.1197
+
+====================================================================================================
+modulus 243   divisors [1, 3, 9, 27, 81, 243]   c_d = ['0.88889', '0.09877', '0.01097', '0.00122', '0.00014', '0.00002']
+  sheet 0: #T = 854415478  diagonal = 6554  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.03179   (D without diagonal, as defined)   0.03178 (diagonal counted in D)   worst class M = 72 (N = 71 mod 243)
+     sampling noise sqrt(m/#T) = 0.00053
+     type shares F_d = D^(d)/#T :  d=1: 0.85735 (c_d 0.88889, ratio 0.9645)  d=3: 0.11898 (c_d 0.09877, ratio 1.2047)  d=9: 0.02315 (c_d 0.01097, ratio 2.1098)  d=27: 0.00046 (c_d 0.00122, ratio 0.3750)  d=81: 0.00005 (c_d 0.00014, ratio 0.3662)  d=243: 0.00000 (c_d 0.00002, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.05019  d=3: +0.03217  d=9: +0.01938  d=27: -0.00121  d=81: -0.00014  d=243: -0.00003
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.8498  Phi(g0) 0.8574  limit L_m 0.8889  max|class - Phi| 0.0216
+        g0=3: factor 1.2251  Phi(g0) 1.2143  limit L_m 1.1852  max|class - Phi| 0.0155
+        g0=9: factor 1.4452  Phi(g0) 1.4227  limit L_m 1.2840  max|class - Phi| 0.0318
+        g0=27: factor 1.4602  Phi(g0) 1.4350  limit L_m 1.3169  max|class - Phi| 0.0285
+        g0=81: factor 1.4665  Phi(g0) 1.4390  limit L_m 1.3278  max|class - Phi| 0.0288
+        g0=243: factor 1.4707  Phi(g0) 1.4390  limit L_m 1.3320  max|class - Phi| 0.0317
+  sheet 1: #T = 1083261684  diagonal = 18676  type-violations (d does not divide N - c_sigma) = 0
+     remainder of (B)  m max_c |#{N=c} - sum (d/m) D^(d)| / #T :  0.03274   (D without diagonal, as defined)   0.03272 (diagonal counted in D)   worst class M = 207 (N = 207 mod 243)
+     sampling noise sqrt(m/#T) = 0.00047
+     type shares F_d = D^(d)/#T :  d=1: 0.85417 (c_d 0.88889, ratio 0.9609)  d=3: 0.12052 (c_d 0.09877, ratio 1.2202)  d=9: 0.02485 (c_d 0.01097, ratio 2.2642)  d=27: 0.00042 (c_d 0.00122, ratio 0.3448)  d=81: 0.00003 (c_d 0.00014, ratio 0.2176)  d=243: 0.00000 (c_d 0.00002, ratio 0.0000)
+     (F_d - c_d) #T/(2X)        :  d=1: -0.07005  d=3: +0.04389  d=9: +0.02799  d=27: -0.00161  d=81: -0.00021  d=243: -0.00003
+     class groups by g0 = gcd(m, N - c_sigma):
+        g0=1: factor 0.8468  Phi(g0) 0.8542  limit L_m 0.8889  max|class - Phi| 0.0172
+        g0=3: factor 1.2286  Phi(g0) 1.2157  limit L_m 1.1852  max|class - Phi| 0.0228
+        g0=9: factor 1.4596  Phi(g0) 1.4393  limit L_m 1.2840  max|class - Phi| 0.0327
+        g0=27: factor 1.4652  Phi(g0) 1.4507  limit L_m 1.3169  max|class - Phi| 0.0159
+        g0=81: factor 1.4690  Phi(g0) 1.4531  limit L_m 1.3278  max|class - Phi| 0.0167
+        g0=243: factor 1.4698  Phi(g0) 1.4531  limit L_m 1.3320  max|class - Phi| 0.0167

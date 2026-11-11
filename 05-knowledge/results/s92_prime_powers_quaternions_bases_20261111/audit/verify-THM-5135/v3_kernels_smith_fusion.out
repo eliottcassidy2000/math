@@ -1,0 +1,37 @@
+[1] (4)(b): Smith-form law, all 2 x 2 matrices modulo 9 and modulo 8 (direct enumeration of (u, w))
+  ok   modulo 9: 6561 matrices, 6 Smith classes {(0, 0): 3888, (0, 1): 1728, (0, 2): 864, (1, 1): 48, (1, 2): 32, (2, 2): 1}, mismatches 0
+  ok   modulo 8: 4096 matrices, 10 Smith classes {(0, 0): 1536, (0, 1): 1152, (0, 2): 576, (0, 3): 576, (1, 1): 96, (1, 2): 72, (1, 3): 72, (2, 2): 6, (2, 3): 9, (3, 3): 1}, mismatches 0
+[1b] (4)(b): random 3 x 3 matrices (singular ones included) and non-symmetric ones, moduli 4, 8, 9, 27 (r = 2), 25 (r = 2)
+  ok   235 matrices, 38 distinct (modulus, rank, Smith class) cases, mismatches 0
+       Smith classes met: [(2, 2, 3, (0, 0, 0)), (2, 2, 3, (0, 0, 1)), (2, 2, 3, (0, 0, 2)), (2, 2, 3, (0, 1, 1)), (2, 2, 3, (0, 1, 2)), (2, 2, 3, (0, 2, 2)), (2, 2, 3, (1, 1, 1)), (2, 2, 3, (1, 1, 2)), (2, 3, 3, (0, 0, 0)), (2, 3, 3, (0, 0, 1)), (2, 3, 3, (0, 0, 2)), (2, 3, 3, (0, 0, 3)), (2, 3, 3, (0, 1, 2)), (2, 3, 3, (0, 1, 3)), (2, 3, 3, (0, 2, 3)), (2, 3, 3, (1, 1, 1)), (2, 3, 3, (1, 1, 3)), (2, 3, 3, (1, 2, 3)), (3, 2, 3, (0, 0, 0)), (3, 2, 3, (0, 0, 1)), (3, 2, 3, (0, 0, 2)), (3, 2, 3, (0, 1, 1)), (3, 2, 3, (0, 1, 2)), (3, 2, 3, (1, 1, 1)), (3, 2, 3, (1, 1, 2)), (3, 2, 3, (1, 2, 2)), (3, 3, 2, (0, 0)), (3, 3, 2, (0, 1)), (3, 3, 2, (0, 2)), (3, 3, 2, (0, 3)), (3, 3, 2, (1, 1)), (3, 3, 2, (1, 2)), (3, 3, 2, (1, 3)), (5, 2, 2, (0, 0)), (5, 2, 2, (0, 1)), (5, 2, 2, (0, 2)), (5, 2, 2, (1, 1)), (5, 2, 2, (1, 2))]
+[2] (4): the quoted kernels
+  ok   determinants 1, -3, 329 = 7 * 47, -1
+  ok   [[5,2],[2,1]]: rank-2 law modulo 9, 25, 49: [True, True, True]
+  ok   [[11,6],[6,3]]: rank-2 law modulo 9, 25, 49: [False, True, True]
+  ok   diag(1,2): rank-2 law modulo 9, 25, 49: [True, True, True]
+  ok   [[11,6],[6,3]] modulo 9: counts by valuation [486, 1134, 1377] (law of a1 b1 + 3 a2 b2), rank-2 law [648, 864, 945]
+  ok   Session261 kernel modulo 49: factors ['6/7', '90/49', '97/49'] at the valuations 0, 1, 2; law of a1 b1 + 7 a2 b2
+  ok   Session261 kernel modulo 7: p^2 times the multiplication table (elementary divisors 1, p); class 0 factor 13/7
+  ok   Session261 kernel modulo 47: p^2 times the multiplication table (elementary divisors 1, p); class 0 factor 93/47
+  ok   Session261 kernel modulo 7 is 2 [[1,1],[1,1]]
+  ok   Session261 kernel: rank-2 law modulo 3, 5, 11, 13
+  ok   [[1,2],[3,5]] (det -1): rank-2 law modulo 27
+[3] (4)(c): Gram matrices of rank 4
+  ok   determinants: K-form -1, fusion corner -1, path-mass coordinates -4
+  ok   K-form U U' + E E' - d d' + a d' + a' d = u^T G w with the displayed matrix (2000 random integer points)
+  ok   Session264 eq. (3) = the form displayed in (4)(c) = u^T G w with [[1,1,0,0],[1,0,0,0],[0,0,1,0],[0,0,0,1]] (2000 points)
+  ok   (a_o + a_e)(b_o + b_e) + (a_o - a_e)(b_o - b_e) = 2 (a_o b_o + a_e b_e)
+  ok   K-form, uniform states: law (1) with r = 4 modulo 2, 3, 4, 5: [True, True, True, True]
+  ok   fusion corner, uniform states: law (1) with r = 4 modulo 2, 3, 4, 5: [True, True, True, True]
+  ok   path-mass Gram matrix (determinant -4): law (1) with r = 4 modulo 2, 4, 3, 5: [False, False, True, True] (unimodular at the odd primes only; Smith exponents at 2: [0, 0, 1, 1])
+  ok   path-mass Gram matrix at 2: its law modulo 2 and 4 is the convolution of the tables a b, a b, 2 a b, 2 a b (Smith-form law, rank 4)
+  ok   34/27 = 1 + (3p-2)(p-1)/(2p^3) at p = 3; 83/81 = 1 + p^-3 - p^-4; 17/16 = 15/16 + 1/8
+[4] (4)(c): Session264's fusion law (3) and the parities of the fusion states (pointed tournaments, root 0)
+  ok   order 1: every labelled pointed tournament has H, h odd, U = d and V = e (mod 2); U - h = a_o + a_e, d - h = a_o - a_e; pairs ((U - h) mod 4, (d - h) mod 4): [(0, 0)]
+  ok   order 2: every labelled pointed tournament has H, h odd, U = d and V = e (mod 2); U - h = a_o + a_e, d - h = a_o - a_e; pairs ((U - h) mod 4, (d - h) mod 4): [(0, 0), (1, 3)]
+  ok   order 3: every labelled pointed tournament has H, h odd, U = d and V = e (mod 2); U - h = a_o + a_e, d - h = a_o - a_e; pairs ((U - h) mod 4, (d - h) mod 4): [(0, 0), (1, 3), (2, 0), (3, 3)]
+  ok   order 4: every labelled pointed tournament has H, h odd, U = d and V = e (mod 2); U - h = a_o + a_e, d - h = a_o - a_e; pairs ((U - h) mod 4, (d - h) mod 4): [(0, 0), (1, 1), (1, 3), (2, 0), (2, 2), (3, 3)]
+  ok   order 5: every labelled pointed tournament has H, h odd, U = d and V = e (mod 2); U - h = a_o + a_e, d - h = a_o - a_e; pairs ((U - h) mod 4, (d - h) mod 4): [(0, 0), (0, 2), (1, 1), (1, 3), (2, 0), (2, 2), (3, 1), (3, 3)]
+  ok   order 6: every labelled pointed tournament has H, h odd, U = d and V = e (mod 2); U - h = a_o + a_e, d - h = a_o - a_e; pairs ((U - h) mod 4, (d - h) mod 4): [(0, 0), (0, 2), (1, 1), (1, 3), (2, 0), (2, 2), (3, 1), (3, 3)]
+  ok   fusion law on 5625 ordered pairs of labelled pointed tournaments of orders 1..4: violations 0; H(A * B) odd in every case
+ALL CHECKS PASSED

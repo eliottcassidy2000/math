@@ -1,0 +1,16 @@
+# series_counts.py E = 25 (auditor hypotheses; own code)  8.2 s
+triples with N < 2^25: sheet 0 95530735, sheet 1 120579322;  in the window: 49644073, 62761167
+sheet 0: mean r = 5.9180; mean of sigma(n)/n = 1.2337 (pi^2/8 = 1.2337); misses (r = 0): 676798 (8.0681 %)
+    corr(r, sigma(n)/n) = 0.4016 ; corr(r, squarefree-level product) = 0.3929
+    mean r by v_3(n) relative to v=0: v=0: 1.000 (lim 1.000, 5592405 N); v=1: 1.455 (lim 1.333, 1864135 N); v=2: 1.722 (lim 1.444, 621379 N); v=3: 1.725 (lim 1.481, 207126 N); v=4: 1.713 (lim 1.494, 69042 N); v>=2: 1.722
+    mean r by v_5(n) relative to v=0: v=0: 1.000 (lim 1.000, 6710886 N); v=1: 1.318 (lim 1.200, 1342178 N); v=2: 1.323 (lim 1.240, 268435 N); v=3: 1.325 (lim 1.248, 53687 N); v=4: 1.320 (lim 1.250, 10738 N); v>=2: 1.323
+    quintiles of sigma(n)/n: 1.001 -> 4.301; 1.037 -> 4.492; 1.171 -> 5.569; 1.350 -> 6.679; 1.609 -> 8.550
+    (B): mean|r - 2 kappa S ln N| = 2.9394 ; mean|r - rbar S/Sbar| = 2.9668 ; mean|r - rbar| = 3.1467 ; mean(2 kappa ln N) = 5.4994 ; rbar = 5.9180
+         ratios to rbar: 0.4967, 0.5013, 0.5317 ;  Var(r)/mean(r) = 2.788 ; Var(r)/mean^2 = 0.4711 ; Poisson E|r-mean|/mean at this mean = 0.3255
+sheet 1: mean r = 7.4817; mean of sigma(n)/n = 1.2337 (pi^2/8 = 1.2337); misses (r = 0): 407273 (4.8551 %)
+    corr(r, sigma(n)/n) = 0.4275 ; corr(r, squarefree-level product) = 0.4181
+    mean r by v_3(n) relative to v=0: v=0: 1.000 (lim 1.000, 5592406 N); v=1: 1.448 (lim 1.333, 1864135 N); v=2: 1.717 (lim 1.444, 621378 N); v=3: 1.715 (lim 1.481, 207126 N); v=4: 1.700 (lim 1.494, 69042 N); v>=2: 1.715
+    mean r by v_5(n) relative to v=0: v=0: 1.000 (lim 1.000, 6710887 N); v=1: 1.334 (lim 1.200, 1342176 N); v=2: 1.333 (lim 1.240, 268436 N); v=3: 1.331 (lim 1.248, 53687 N); v=4: 1.339 (lim 1.250, 10737 N); v>=2: 1.333
+    quintiles of sigma(n)/n: 1.001 -> 5.438; 1.037 -> 5.690; 1.171 -> 7.058; 1.350 -> 8.457; 1.609 -> 10.766
+    (B): mean|r - 2 kappa S ln N| = 3.4087 ; mean|r - rbar S/Sbar| = 3.4254 ; mean|r - rbar| = 3.7753 ; mean(2 kappa ln N) = 7.2347 ; rbar = 7.4817
+         ratios to rbar: 0.4556, 0.4578, 0.5046 ;  Var(r)/mean(r) = 3.064 ; Var(r)/mean^2 = 0.4096 ; Poisson E|r-mean|/mean at this mean = 0.2933

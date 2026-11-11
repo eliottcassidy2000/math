@@ -1,0 +1,41 @@
+THM-5134 (H)(iv): balanced states (auditor proof-5134-FH)
+psi = h - q satisfies psi(2h) = psi(h) + h, psi(2h+1) = psi(h) + floor(h/2) + 1 for h < 2^23: True
+closed sum for q agrees with the recursion (20000 random h < 2^24): True
+q(h) < h/2, i.e. 2 psi(h) > h, for every 1 <= h < 2^24: True;  min of 2 psi(h) - h over 1 <= h < 2^24: 1
+sup of q(h)/h over 1 <= h < 2^24: 0.499999970 at h = 16777215 = 0b111111111111111111111111  (below 1/2; the bound h/2 is not attained)
+
+balanced states below 2^24 (table):
+  b =  2: 25 states: [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]  all 0 or powers of two: True
+  b =  3: 12 states: [0, 3, 45, 117, 309, 9045, 62805, 111957, 382293, 2839893, 4412757, 13456725]
+  b =  4:  1 states: [0]
+  b =  5:  1 states: [0]
+  b =  6:  1 states: [0]
+  b =  7:  1 states: [0]
+  b =  8:  1 states: [0]
+  b =  9:  1 states: [0]
+  b = 10:  1 states: [0]
+  b = 11:  1 states: [0]
+  b = 12:  1 states: [0]
+  b = 3 in detail: h, binary, psi, X = y:
+    h =         0 =                        0  psi =         0  X = y = 1  = 1
+    h =         3 =                       11  psi =         2  X = y = 7  = 7 (prime)
+    h =        45 =                   101101  psi =        30  X = y = 91  = 7 * 13
+    h =       117 =                  1110101  psi =        78  X = y = 235  = 5 * 47
+    h =       309 =                100110101  psi =       206  X = y = 619  = 619 (prime)
+    h =      9045 =           10001101010101  psi =      6030  X = y = 18091  = 79 * 229
+    h =     62805 =         1111010101010101  psi =     41870  X = y = 125611  = 59 * 2129
+    h =    111957 =        11011010101010101  psi =     74638  X = y = 223915  = 5 * 19 * 2357
+    h =    382293 =      1011101010101010101  psi =    254862  X = y = 764587  = 764587 (prime)
+    h =   2839893 =   1010110101010101010101  psi =   1893262  X = y = 5679787  = 71 * 79997
+    h =   4412757 =  10000110101010101010101  psi =   2941838  X = y = 8825515  = 5 * 59 * 29917
+    h =  13456725 = 110011010101010101010101  psi =   8971150  X = y = 26913451  = 937 * 28723
+
+extension by the closed sum (independent of the table), blocks up to 2^30:
+  b = 3: 13 balanced states below 2^30: [0, 3, 45, 117, 309, 9045, 62805, 111957, 382293, 2839893, 4412757, 13456725, 659903829]
+      below 2^24: 12
+      below 2^26: 12
+      below 2^28: 12
+      below 2^30: 13
+  b = 4: 1 balanced states below 2^30: [0]
+  b = 5: 1 balanced states below 2^30: [0]
+  min of 2 psi(h) - h over 1 <= h < 2^30: 1   (psi(h) > h/2 for every 1 <= h < 2^30: True)

@@ -23,8 +23,9 @@ S7  Signed-integer dictionary: odd m >= 1 <-> n = (chi_4(m) m - 1)/4 in Z; Colla
 S8  Primes with a balanced divisible state (p | 2^t + 1) = primes of even order of 2; first fan and first
     p-divisible state.
 S9  Brahmagupta identity for self-joins and cross-joins.
-S10 F1 in base beta, sheet s = 0 (NUMERICAL census, exact structure): triples whose smaller state is p-divisible
-    lie in the class 2N + beta = 0 (mod p); remainder of the first-order law.
+S10 F1 in base beta, sheet s = 0 (NUMERICAL census of ALL triples with N_beta <= 2^22, exact structure): triples
+    whose smaller state is p-divisible lie in the class 2N + beta = 0 (mod p); remainder of the first-order law.
+    (Until the audit of 2026-11-11 this section enumerated only the box h1, h2 < 2^12.)
 S11 Tao's digit condition for the packing polynomial 1 + alpha_1 z + alpha_2 z^2 of the joins.
 """
 import itertools
@@ -133,8 +134,6 @@ def s2():
         p = primes_of(q)[0]
         sq, hy = dist_sq(q), dist_prod(q)
         for r in (1, 2, 3, 4):
-            if q > 13 and r > 2:
-                continue
             a = power_conv(sq, 2 * r)
             b = power_conv(hy, r)
             same = all(int(a[c]) == int(b[c]) for c in range(q))
@@ -254,9 +253,9 @@ def s4():
     check(shells == [240 * sig3[n] for n in (1, 2, 3)], f"E8 shells of norm 2n, n = 1, 2, 3: {shells} = 240 sigma_3(n)")
     zeta4 = math.pi ** 4 / 90
     check(all(abs((8 * math.pi ** 4 / 3) * n ** 3 * sig3[n] / (zeta4 * n ** 3) - 240 * sig3[n]) < 1e-6 for n in (1, 2, 3, 6, 9)),
-          "240 sigma_3(n) = real density (8 pi^4/3) n^3 times the rank-4 series sigma_3(n)/(zeta(4) n^3) at ALL primes")
+          "identity (not a test): (8 pi^4/3) / zeta(4) = 240, so 240 sigma_3(n) = (8 pi^4/3) n^3 times sigma_3(n)/(zeta(4) n^3)")
     check(all(abs(math.pi ** 2 * n * (8 / math.pi ** 2) * sig[n] / n - r4[n]) < 1e-6 for n in range(1, 100, 2)),
-          "r_4(n) = real density pi^2 n times (8/pi^2) sigma(n)/n (odd primes), 2-adic density 1, for odd n")
+          "identity (not a test): pi^2 n times (8/pi^2) sigma(n)/n = 8 sigma(n) = r_4(n) for odd n (the densities are asserted, not computed here)")
     # Ingham (NUMERICAL)
     N0, W = 20000, 400
     top = N0 + W
@@ -422,7 +421,7 @@ def s7():
         print(f"    cycle {c}: labels {l}")
     alll = [x for l in labels for x in l]
     check(len(alll) == 29 and len(set(alll)) == 29 and [x for x in alll if x in (7, 21)] == [7],
-          "the 29 arcs of the five known cycles of 3n + 1 on Z have 29 distinct labels; exactly one of them (7, the arc -2 -> -1) is one of the two missing path counts")
+          "the 29 arcs of the five known cycles of 3n + 1 on Z have 29 distinct labels; exactly one of them (7, the arc -2 -> -1) is one of the two known non-values 7, 21 (THM-1370)")
     check(lab(5) == 21 and col(5) == 16 and lab(-2) == 7 and col(-2) == -1, "21 is the label of the arc 5 -> 16 and 7 of the arc -2 -> -1")
     tr = [(4 ** k - 1) // 3 for k in range(1, 7)]
     check(all(lab(tr[i]) == tr[i + 1] and col(tr[i]) == 4 ** (i + 1) for i in range(5)),
@@ -526,9 +525,11 @@ def base_head_census(psi, beta, X, primes, cnt, exact):
             if beta * (y1 * y1 - 1) // 2 > X:
                 break
             continue
+        closed = False
         for h2 in range(h1, H):
             y2 = 2 * h2 + 1
             if beta * (y1 * y2 - 1) // 2 + X1 > X:
+                closed = True
                 break
             N = X1 * (1 + beta * psi[h2]) + beta * (y1 * y2 - 1) // 2
             if N > X:
@@ -541,13 +542,15 @@ def base_head_census(psi, beta, X, primes, cnt, exact):
                 cnt[j, t, N % p] += w
                 if t == 1 and (2 * N + beta) % p != 0:
                     exact[j] += 1
+        if not closed:
+            return -1                 # the table of states is too short: the census would be truncated
     return tot
 
 
 def s10():
     print("S10 F1 in base beta, sheet s = 0 (N_beta <= 2^22)")
     X = 1 << 22
-    size = 1 << 12
+    size = X // 2 + 4                 # every word that can occur: beta (y1 y2 - 1)/2 <= X gives h2 <= X/beta
     psi = np.zeros(size, np.int64)
     for h in range(1, size):
         hh = h >> 1
@@ -557,6 +560,9 @@ def s10():
         cnt = np.zeros((len(primes), 2, 16), np.int64)
         exact = np.zeros(len(primes), np.int64)
         tot = base_head_census(psi, beta, X, primes, cnt, exact)
+        if tot < 0:
+            check(False, f"beta = {beta}: the table of states is too short (truncated census)")
+            continue
         cells = []
         good = True
         for j, p in enumerate(primes):

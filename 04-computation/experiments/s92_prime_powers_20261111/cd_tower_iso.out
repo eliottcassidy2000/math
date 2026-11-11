@@ -1,0 +1,8 @@
+n = 2: 3 vertices; regular: True; CD_n isomorphic to the tower core: True; to its converse: True; automorphisms of CD_n: 3; H(CD_n) = 3, H(tower core) = 3
+    isomorphism (unit a of CD_n -> row of the core, 1-based): [1, 3, 2]
+n = 3: 7 vertices; regular: True; CD_n isomorphic to the tower core: True; to its converse: True; automorphisms of CD_n: 21; H(CD_n) = 189, H(tower core) = 189
+    isomorphism (unit a of CD_n -> row of the core, 1-based): [1, 3, 6, 7, 2, 4, 5]
+n = 4: 15 vertices; regular: True; CD_n isomorphic to the tower core: True; to its converse: False; automorphisms of CD_n: 21; H(CD_n) = 198335025, H(tower core) = 198335025
+    isomorphism (unit a of CD_n -> row of the core, 1-based): [9, 10, 11, 12, 15, 13, 14, 8, 1, 2, 3, 4, 7, 5, 6]
+n = 5: 31 vertices; controls (each against a relabelling of itself): True, True; CD_5 isomorphic to T_31: False; to its converse: False; automorphisms: CD_5 21, T_31 21; 4-subsets by number of 3-cycles: CD_5 [(0, 9765), (1, 8680), (2, 13020)], T_31 [(0, 9765), (1, 8680), (2, 13020)]
+ALL CHECKS PASSED

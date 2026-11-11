@@ -1,0 +1,73 @@
+[S] sum of 2r squares vs hyperbolic form of rank r modulo p^k, p odd
+    criterion claimed: equal class counts iff r even or p = 1 (mod 4)
+    cases (p in 3..41, k <= 3 with p^k <= 1400, r = 1..6): 162, violations of the criterion: 0
+    zero counts modulo p vs p^(2r-1) + eta (p^r - p^(r-1)): mismatches 0
+    p^k = 3, r = 1: 3 of 3 classes differ (e.g. class 0: squares 1, hyperbolic 5; class 1: 4, 2)
+    p^k = 3, r = 3: 3 of 3 classes differ (e.g. class 0: squares 225, hyperbolic 261; class 1: 252, 234)
+    p^k = 9, r = 1: 9 of 9 classes differ (e.g. class 0: squares 9, hyperbolic 21; class 1: 12, 6)
+    p^k = 9, r = 3: 9 of 9 classes differ (e.g. class 0: squares 55161, hyperbolic 63909; class 1: 61236, 56862)
+    p^k = 27, r = 1: 27 of 27 classes differ (e.g. class 0: squares 9, hyperbolic 81; class 1: 36, 18)
+    p^k = 27, r = 3: 27 of 27 classes differ (e.g. class 0: squares 13391001, hyperbolic 15543009; class 1: 14880348, 13817466)
+    p^k = 7, r = 1: 7 of 7 classes differ (e.g. class 0: squares 1, hyperbolic 13; class 1: 8, 6)
+    p^k = 7, r = 3: 7 of 7 classes differ (e.g. class 0: squares 16513, hyperbolic 17101; class 1: 16856, 16758)
+    p^k = 49, r = 1: 49 of 49 classes differ (e.g. class 0: squares 49, hyperbolic 133; class 1: 56, 42)
+    p^k = 49, r = 3: 49 of 49 classes differ (e.g. class 0: squares 277634833, hyperbolic 287517349; class 1: 283298792, 281651706)
+    p^k = 11, r = 1: 11 of 11 classes differ (e.g. class 0: squares 1, hyperbolic 21; class 1: 12, 10)
+    p^k = 11, r = 3: 11 of 11 classes differ (e.g. class 0: squares 159841, hyperbolic 162261; class 1: 161172, 160930)
+    direct enumeration (no convolution):
+      four squares vs a1a2+b1b2 modulo 9: EQUAL
+      four squares vs a1a2+b1b2 modulo 25: EQUAL
+      four squares vs a1a2+b1b2 modulo 27: EQUAL
+      four squares vs a1a2+b1b2 modulo 49: EQUAL
+      two squares vs a b modulo 5: EQUAL
+      two squares vs a b modulo 25: EQUAL
+      two squares vs a b modulo 13: EQUAL
+      two squares vs a b modulo 169: EQUAL
+      two squares vs a b modulo 3: DIFFERENT
+      two squares vs a b modulo 9: DIFFERENT
+      two squares vs a b modulo 7: DIFFERENT
+      two squares vs a b modulo 49: DIFFERENT
+      six squares vs rank-3 hyperbolic modulo 3: DIFFERENT
+      six squares vs rank-3 hyperbolic modulo 5: EQUAL
+      six squares vs rank-3 hyperbolic modulo 7: DIFFERENT
+      six squares vs rank-3 hyperbolic modulo 9: DIFFERENT
+
+[2] the prime 2
+  modulo 2: four squares vs rank 2: 2 of 2 classes differ; eight squares vs rank 4: 2 of 2 differ
+     four squares counts [8, 8]
+     a1a2+b1b2 counts   [10, 6]
+     2-adic density of four squares on odd classes: [Fraction(1, 1)]; of eight squares on odd classes: [Fraction(1, 1)]
+  modulo 4: four squares vs rank 2: 4 of 4 classes differ; eight squares vs rank 4: 4 of 4 differ
+     four squares counts [32, 64, 96, 64]
+     a1a2+b1b2 counts   [88, 48, 72, 48]
+     2-adic density of four squares on odd classes: [Fraction(1, 1)]; of eight squares on odd classes: [Fraction(1, 1)]
+  modulo 8: four squares vs rank 2: 8 of 8 classes differ; eight squares vs rank 4: 8 of 8 differ
+     four squares counts [128, 512, 768, 512, 384, 512, 768, 512]
+     a1a2+b1b2 counts   [736, 384, 576, 384, 672, 384, 576, 384]
+     2-adic density of four squares on odd classes: [Fraction(1, 1)]; of eight squares on odd classes: [Fraction(1, 1)]
+  modulo 16: four squares vs rank 2: 16 of 16 classes differ; eight squares vs rank 4: 16 of 16 differ
+     2-adic density of four squares on odd classes: [Fraction(1, 1)]; of eight squares on odd classes: [Fraction(1, 1)]
+  modulo 32: four squares vs rank 2: 32 of 32 classes differ; eight squares vs rank 4: 32 of 32 differ
+     2-adic density of four squares on odd classes: [Fraction(1, 1)]; of eight squares on odd classes: [Fraction(1, 1)]
+  modulo 64: four squares vs rank 2: 64 of 64 classes differ; eight squares vs rank 4: 64 of 64 differ
+     2-adic density of four squares on odd classes: [Fraction(1, 1)]; of eight squares on odd classes: [Fraction(1, 1)]
+
+[J] Jacobi, Hurwitz, eight squares
+  r_4(n) = sum_{a+b=n} r_2(a) r_2(b) (a, b >= 0, r_2(0) = 1) = 8 sigma(n), odd n <= 3000: mismatches 0
+  r_4(n) = 8 sum_{d | n, 4 !| d} d, all n <= 3000: mismatches 0
+  r_8(n) = 16 sigma_3(n), odd n <= 3000: mismatches 0; r_8(2) = 112, 16 sigma_3(2) = 144
+  r_8(n) = 16 sum_{d|n} (-1)^(n+d) d^3, all n <= 3000: mismatches 0; even n with r_8 = 16 sigma_3: []
+  Hurwitz order: #{norm n} = 24 * (sum of odd divisors of n), n <= 400: mismatches 0 (= 24 sigma(n) for odd n)
+
+[B] bicomplex counts
+  M(n) = sum_{ab=n} r_2(a) r_2(b), n <= 600: nonzero values at n = 3 (mod 4): []
+  first values M(1..20) = [16, 32, 0, 48, 64, 0, 0, 64, 32, 128, 0, 0, 64, 0, 0, 80, 64, 64, 0, 192]
+  order Z[1,i,j,ij] (integer coordinates in the four units; index 4 in Z[i]^2): B(n) = #{norm n}
+    B(1..20) = [8, 0, 0, 16, 32, 0, 0, 0, 16, 0, 0, 0, 32, 0, 0, 16, 32, 0, 0, 64]
+    for odd n <= 120: B(n) = M(n)/2: True; B(1) = 8 (the 8 units +-1, +-i, +-j, +-ij), M(1) = 16 (the 16 units of Z[i]^2)
+    even n: (n, B(n), M(n)) = [(2, 0, 32), (4, 16, 48), (6, 0, 0), (8, 0, 64), (10, 0, 128), (12, 0, 0), (14, 0, 0), (16, 16, 80), (18, 0, 64), (20, 64, 192), (22, 0, 0), (24, 0, 0), (26, 0, 128), (28, 0, 0), (30, 0, 0), (32, 32, 96)]
+
+[Q] quaternary quadratic forms over F_p with the class counts of a1 a2 + b1 b2 (p = 2, 3)
+  p = 2: 1024 forms; same number of zeros as the seam: 280; same class counts: 280, of which with non-degenerate polar form: 280
+  p = 3: 59049 forms; same number of zeros as the seam: 21060; same class counts: 21060, of which with non-degenerate polar form: 21060
+  (so over F_2 and F_3 the seam counts force a non-degenerate polar form, i.e. an even unimodular form at p)

@@ -1,0 +1,5 @@
+X = 2^22: triple counts equal: True; 24 remainders and 570 class-factor entries compared, largest difference 5.0e-05  -> ALL AGREE
+X = 2^24: triple counts equal: True; 24 remainders and 570 class-factor entries compared, largest difference 5.0e-05  -> ALL AGREE
+X = 2^26: triple counts equal: True; 24 remainders and 570 class-factor entries compared, largest difference 5.0e-05  -> ALL AGREE
+X = 2^28: triple counts equal: True; 24 remainders and 570 class-factor entries compared, largest difference 5.0e-05  -> ALL AGREE
+OVERALL: session outputs cum_22/24/26/28.out reproduced

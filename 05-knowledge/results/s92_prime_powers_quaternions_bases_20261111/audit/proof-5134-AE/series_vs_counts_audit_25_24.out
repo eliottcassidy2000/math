@@ -1,0 +1,32 @@
+window odd N in [2^24, 2^25): 8388608 odd N; triples sheet 0: 49644073, sheet 1: 62761167  (7 s)
+sheet 0: mean multiplicity 5.9180  variance 16.498  misses (r = 0): 676798 (8.068 %)
+   Pearson correlation of r with sigma(n)/n: 0.4016
+   mean multiplicity by quintile of sigma(n)/n: 4.301  4.492  5.569  6.679  8.550   highest/lowest = 1.988
+   mean sigma(n)/n by quintile:                 1.0006  1.0371  1.1712  1.3502  1.6094   highest/lowest = 1.608
+   mean of r / (mean r * S(N)) by quintile:     0.8960  0.9027  0.9899  1.0310  1.1063   (1.000 everywhere would mean: density = series at this size)
+   least-squares slope of r/mean(r) against S(N): 1.4412  (1 if the series were the conditional mean)   mean of S on the window: 1.00000
+      sheet 0, odd part of N + 1 equal to    1:   1 values, mean r 4.000, r/mean 0.676, S = 0.8106
+      sheet 0, odd part of N + 1 equal to    3:   1 values, mean r 16.000, r/mean 2.704, S = 1.0808
+      sheet 0, odd part of N + 1 equal to    5:   1 values, mean r 6.000, r/mean 1.014, S = 0.9727
+      sheet 0, odd part of N + 1 equal to    7:   1 values, mean r 2.000, r/mean 0.338, S = 0.9264
+      sheet 0, odd part of N + 1 equal to    9:   1 values, mean r 16.000, r/mean 2.704, S = 1.1708
+      sheet 0, odd part of N + 1 equal to   15:   1 values, mean r 16.000, r/mean 2.704, S = 1.2969
+      sheet 0, odd part of N + 1 equal to   45:   1 values, mean r 12.000, r/mean 2.028, S = 1.4050
+      sheet 0, odd part of N + 1 equal to  105:   1 values, mean r 12.000, r/mean 2.028, S = 1.4822
+      sheet 0, odd part of N + 1 equal to  315:   1 values, mean r 14.000, r/mean 2.366, S = 1.6057
+sheet 1: mean multiplicity 7.4817  variance 22.928  misses (r = 0): 407273 (4.855 %)
+   Pearson correlation of r with sigma(n)/n: 0.4275
+   mean multiplicity by quintile of sigma(n)/n: 5.438  5.690  7.058  8.457  10.766   highest/lowest = 1.980
+   mean sigma(n)/n by quintile:                 1.0005  1.0372  1.1712  1.3502  1.6094   highest/lowest = 1.609
+   mean of r / (mean r * S(N)) by quintile:     0.8963  0.9044  0.9921  1.0326  1.1020   (1.000 everywhere would mean: density = series at this size)
+   least-squares slope of r/mean(r) against S(N): 1.4303  (1 if the series were the conditional mean)   mean of S on the window: 1.00000
+      sheet 1,    3 | N: mean r/mean 1.3037   mean S on these N: 1.2222
+      sheet 1,    9 | N: mean r/mean 1.4543   mean S on these N: 1.2963
+      sheet 1,   27 | N: mean r/mean 1.4503   mean S on these N: 1.3210
+      sheet 1,    5 | N: mean r/mean 1.2504   mean S on these N: 1.1600
+      sheet 1,   25 | N: mean r/mean 1.2493   mean S on these N: 1.1920
+      sheet 1,   15 | N: mean r/mean 1.5342   mean S on these N: 1.4178
+      sheet 1,   45 | N: mean r/mean 1.6831   mean S on these N: 1.5037
+      sheet 1,  105 | N: mean r/mean 1.8035   mean S on these N: 1.5914
+      sheet 1,  315 | N: mean r/mean 1.9619   mean S on these N: 1.6878
+      sheet 1,  945 | N: mean r/mean 1.9557   mean S on these N: 1.7200

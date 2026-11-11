@@ -1,0 +1,10 @@
+closed sum q(h) = h - psi(h) (recursion) on 5003 values: True
+balanced states of base 3 below 2^30: 13: [0, 3, 45, 117, 309, 9045, 62805, 111957, 382293, 2839893, 4412757, 13456725, 659903829]
+   below 2^24: 12
+   below 2^26: 12
+   below 2^28: 12
+   below 2^30: 13
+h = 659,903,829: psi = 439935886, 1 + 3 psi = 1319807659, 2h + 1 = 1319807659
+min of 2 psi(h) - h over 1 <= h < 2^30: 1 (so psi(h) > h/2, and no balanced state h >= 1 in any base b >= 4 below 2^30)
+12 below 2^24, 12 below 2^28, 13 below 2^30, the thirteenth is 659,903,829: True
+ALL CHECKS PASSED

@@ -1,0 +1,52 @@
+E1 recursions
+  ok   q(2h) = q(h), q(2h+1) = q(h) + ceil(h/2), h < 2^14
+  ok   q(h) < h/2 (strict) for 1 <= h < 2^16
+  ok   y/2 < x <= y for h < 2^16
+  ok   psi(h) >= 1 for h >= 1 (so x_b >= 1 + b)
+E2 tournaments of (G)
+  ok   R(h): #Hamiltonian paths = x(h) and I(Omega, z) = 1 + psi(h) z  (orders <= 9)
+  ok   J(h1, h2, s) (228 joins, order <= 10): #Hamiltonian paths = x1 x2 + 2^s y1 y2 - [s = 0]
+  ok   J(h1, h2, s): I(Omega, b) = x_b(h1) x_b(h2) + b (2^s y1 y2 - [s = 0])/2, alpha_1, alpha_2 as stated, N_b = 1 (mod b), second digit = alpha_1 (mod b)
+E3 THM-5070 (2) dictionary
+  ok   a(2h) = psi(h), h < 2^12
+  ok   a(4h) = a(2h) + h and a(4h+2) = a(2h+1) + h + 1 = a(2h) + floor(h/2) + 1, h < 2^12
+  ok   a(2^s1 y1 - 1) = psi(h1) (trailing ones do not change a), h1 < 64, s1 < 5
+  ok   ceil(W/2), 1 + floor(W/2) = (h1, h1 + 1) for s1 = 0 and both 2^(s1-1) y1 for s1 >= 1
+  ok   bracket of THM-5070 (2) = (2^s y1 y2 - [s = 0])/2 for every split s1 + s2 = s (h1, h2 < 40, s < 5)
+  ok   J(h1, h2, s) and T(W) (.) B(W') agree (order, score invariant, path count, packing polynomial) for every split, 172 comparisons
+E4 THM-5085 (2) and Session206 dictionaries
+  ok   N_b = h0 + (b/2)[R0 h2 - h_u Q(h2)], (h0, R0, h_u) as in the status and in (G), Q = 2q
+  ok   (A): N = h_S + R_S h2 - d_S Q(h2) with (h_S, R_S, d_S) = (x1 + 2^s y1 - [s=0], 2(x1 + 2^s y1), x1)
+  ok   (A): gcd(R_S, d_S, m) = gcd(x1, y1, m) for 12 odd moduli
+E5 c_d, fibres, L_m
+  ok   c_d = share of the residue vectors with gcd(alpha, beta, m) = d, and sum c_d = 1 (11 odd moduli)
+  ok   (A): w -> a w1 + b w2 takes each multiple of d = gcd(a, b, m) on m d residue vectors and no other value
+  ok   L_(p^k)(e): both displayed cases (v < k and v >= k), p^k in 3..81, 5..125, 7, 49, 11, 121, 2..32
+  ok   mean of L_(p^k) over the classes = 1
+  ok   L_m multiplicative over prime powers and of mean 1 (15, 21, 45, 63, 75, 105, 225, 12, 36, 60)
+  ok   m^3 L_m(c) = #{(a1, a2, b1, b2) mod m : a1 a2 + b1 b2 = c} for EVERY 1 <= m <= 60 (even m included)
+  ok   same counts for a1 a2 + u b1 b2, every unit u (9, 15, 25, 27, 49)
+  ok   (F): a^2 + b^2 + c^2 + d^2 and a1 a2 + b1 b2 have the same class counts modulo 14 odd moduli
+  ok   (F): they differ modulo 4 and 8 (the prime 2)
+  ok   (F): four squares have 2-adic density 1 at every odd class modulo 16
+  ok   Jacobi: r_4(n) = 8 sigma_1(n) for odd n < 200
+  ok   Remark 1: factor at v = 1 is the squarefree factor minus p^-3, larger from v = 2 on; the mean of L_(p^k) over the classes divisible by p is 1 - p^-2 + 1/p for k = 1, 2, 3
+E6 base b: region, value, content, second digit
+  ok   N_b = a x2 + b' y2 + k with a = b x_b(h1)/2, b' = b 2^(s-1) y1 (b y1/2 at s = 0), k = x_b(h1)(1 - b/2) - (b/2)[s = 0] <= 0
+  ok   V = N_b (s >= 1), 2 N_b + b (s = 0) is the stated linear form in (x_b(h2), y2); N_b >= b 2^(s-1) y1 y2 - b/2
+  ok   content of the form modulo odd m prime to b is gcd(g_b(h1), m), and type d => d | V (exact)
+  ok   (q, h) -> (1 + b (h - q), 2h + 1) is a bijection of (Z/m)^2 for odd m prime to b
+  ok   second digit: the two displayed congruences for alpha_1 modulo odd b (b = 3, 5, 7, 9, 11, 15)
+  ok   second digit: an affine form with the unit coefficient 2^(-1) at x2 takes each class on exactly b of the b^2 residue vectors
+  ok   N_b = 1 (mod b) and 2 N_b + b = 2 (mod b) on 9600 triples (b = 2, 3, 5, 6, 7, 10)
+  ok   the odd part n of the value (N_b on sheet 1, 2 N_b + b on sheet 0) is prime to 2b
+E7 balanced states, early boosts
+  ok   balanced states of base 3 below 2^20: 0, 3, 45, 117, 309, 9045, 62805, 111957, 382293 : [0, 3, 45, 117, 309, 9045, 62805, 111957, 382293]
+  ok   base b >= 4: only h = 0 is balanced below 2^20 (b = 4..12)
+  ok   base 2: h = 0 and the powers of 2
+  ok   psi(3) = 2, y(3) = 7; x_b(3) = 1 + 2b is divisible by 7 iff b = 3 (mod 7) (b <= 60)
+  ok   base 3: x_b(3) = y(3) = 7; base 10: x_b(3) = 21 = 3 y(3); base 5: h = 6 has x_b = 26 = 2 y, y = 13
+  ok   first p-divisible states: base 3, p = 7: h = 3; base 10, p = 7: h = 3; base 5, p = 13: h = 6 : {(3, 7): 3, (10, 7): 3, (5, 13): 6}
+  ok   Remark 2: the first state with 25 | g is h = 512, x = y = 1025; h = 2 has x = y = 5 : 512
+
+ALL EXACT CHECKS PASSED

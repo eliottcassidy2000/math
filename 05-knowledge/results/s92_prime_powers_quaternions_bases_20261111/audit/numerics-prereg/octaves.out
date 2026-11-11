@@ -1,0 +1,60 @@
+(1) additivity of my censuses
+    cum 2^24 + [2^24,2^25) + [2^25,2^26) == cum 2^26: True
+    cum 2^26 + [2^26,2^27) + [2^27,2^28) == cum 2^28: True
+    cumulative 2^23 by additivity: triples [22004074, 27673487]
+    cumulative 2^25 by additivity: triples [95530735, 120579322]
+    cumulative 2^27 by additivity: triples [412179155, 521860177]
+
+(2) exact remainder of THM-5134 (B), m max_c |#{N=c} - sum_{d | gcd(m, c - c_s)} (d/m) D^(d)| / #T, sheet 0 / sheet 1, every octave
+      m  2^22                2^23                2^24                2^25                2^26                2^27                2^28              
+      9  0.03476 / 0.02777  0.02548 / 0.02843  0.02075 / 0.02420  0.02158 / 0.01774  0.02356 / 0.02029  0.02429 / 0.02262  0.02383 / 0.01854
+     27  0.04610 / 0.04429  0.02741 / 0.04011  0.02229 / 0.02904  0.02444 / 0.02046  0.02934 / 0.02216  0.03109 / 0.02702  0.02921 / 0.02708
+     81  0.06173 / 0.05537  0.03388 / 0.04491  0.02410 / 0.04160  0.02761 / 0.02523  0.03395 / 0.02309  0.03668 / 0.02818  0.03138 / 0.03081
+     25  0.00417 / 0.00779  0.00409 / 0.00480  0.00373 / 0.00478  0.00388 / 0.00633  0.00367 / 0.00495  0.00434 / 0.00395  0.00354 / 0.00374
+    125  0.01101 / 0.01481  0.01033 / 0.00991  0.00761 / 0.00840  0.00659 / 0.00893  0.00470 / 0.00657  0.00585 / 0.00583  0.00477 / 0.00483
+     49  0.18157 / 0.13989  0.17685 / 0.14147  0.16339 / 0.14140  0.14419 / 0.13277  0.13044 / 0.12524  0.11144 / 0.11574  0.09316 / 0.10282
+     45  0.08259 / 0.05715  0.07187 / 0.05925  0.03974 / 0.05634  0.03883 / 0.04828  0.03930 / 0.04336  0.03799 / 0.03543  0.03779 / 0.03549
+     75  0.09749 / 0.06517  0.06416 / 0.05491  0.05046 / 0.05598  0.03089 / 0.04264  0.03429 / 0.03086  0.02999 / 0.02385  0.02744 / 0.02939
+     63  0.21379 / 0.15668  0.21942 / 0.17603  0.22404 / 0.17097  0.21805 / 0.15850  0.20382 / 0.16566  0.17612 / 0.16558  0.15045 / 0.16105
+    225  0.13335 / 0.08454  0.10216 / 0.07602  0.06371 / 0.06957  0.04457 / 0.05852  0.04235 / 0.04724  0.04006 / 0.03742  0.04070 / 0.03869
+     15  0.06534 / 0.04319  0.04223 / 0.03735  0.03086 / 0.03946  0.02839 / 0.02833  0.03254 / 0.02531  0.02829 / 0.02305  0.02393 / 0.02760
+     21  0.19192 / 0.13718  0.19945 / 0.14829  0.19589 / 0.15644  0.18463 / 0.15731  0.16967 / 0.16101  0.14531 / 0.15331  0.11979 / 0.14064
+
+    number of the 12 pairs (m in 9, 27, 81, 25, 125, 49; sheet) whose remainder is smaller at the later size:
+      2^22 -> 2^24: 11 of 12 smaller   not smaller: 49/s1
+      2^24 -> 2^26:  8 of 12 smaller   not smaller: 9/s0, 27/s0, 81/s0, 25/s1
+      2^26 -> 2^28:  8 of 12 smaller   <== the registered P4 comparison   not smaller: 9/s0, 27/s1, 81/s1, 125/s0
+      2^23 -> 2^25: 11 of 12 smaller   not smaller: 25/s1
+      2^25 -> 2^27:  5 of 12 smaller   not smaller: 9/s0, 9/s1, 27/s0, 27/s1, 81/s0, 81/s1, 25/s0
+      2^22 -> 2^23: 10 of 12 smaller   not smaller: 9/s1, 49/s1
+      2^23 -> 2^24: 12 of 12 smaller   not smaller: 
+      2^24 -> 2^25:  6 of 12 smaller   not smaller: 9/s0, 27/s0, 81/s0, 25/s0, 25/s1, 125/s1
+      2^25 -> 2^26:  7 of 12 smaller   not smaller: 9/s0, 9/s1, 27/s0, 27/s1, 81/s0
+      2^26 -> 2^27:  4 of 12 smaller   not smaller: 9/s0, 9/s1, 27/s0, 27/s1, 81/s0, 81/s1, 25/s0, 125/s0
+      2^27 -> 2^28: 10 of 12 smaller   not smaller: 27/s1, 81/s1
+      2^24 -> 2^28:  9 of 12 smaller   not smaller: 9/s0, 27/s0, 81/s0
+      2^22 -> 2^28: 12 of 12 smaller   not smaller: 
+
+(3) table 'Numerical support' of THM-5134 against my census (3 decimals; noise 4 decimals, sqrt(m/#T))
+    m =   9: 8 remainders checked; noise in theorem 0.0001, sqrt(m/#T) sheet 0 0.00010, sheet 1 0.00009 
+    m =  27: 8 remainders checked; noise in theorem 0.0002, sqrt(m/#T) sheet 0 0.00018, sheet 1 0.00016 
+    m =  81: 8 remainders checked; noise in theorem 0.0003, sqrt(m/#T) sheet 0 0.00031, sheet 1 0.00027 
+    m =  25: 8 remainders checked; noise in theorem 0.0002, sqrt(m/#T) sheet 0 0.00017, sheet 1 0.00015 
+    m = 125: 8 remainders checked; noise in theorem 0.0003, sqrt(m/#T) sheet 0 0.00038, sheet 1 0.00034 
+    m =  49: 8 remainders checked; noise in theorem 0.0002, sqrt(m/#T) sheet 0 0.00024, sheet 1 0.00021 
+    m =  45: 8 remainders checked; noise in theorem 0.0002, sqrt(m/#T) sheet 0 0.00023, sheet 1 0.00020 
+    m =  75: 8 remainders checked; noise in theorem 0.0003, sqrt(m/#T) sheet 0 0.00030, sheet 1 0.00026 
+    table entries checked: 72, mismatches: 0
+    class factors at 9, X = 2^28, valuation 0 / 1 / >=2: sheet 0 0.8498 / 1.2251 / 1.4511, sheet 1 0.8468 / 1.2286 / 1.4619 (theorem: 0.850 / 1.225 / 1.451 and 0.847 / 1.229 / 1.462)
+    class factors at 25, X = 2^28, valuation 1 / >=2: sheet 0 1.2328 / 1.2392, sheet 1 1.2432 / 1.2480 (Remark 2 of the theorem: 'nearly the same factor (1.25)')
+
+(4) first states h of each type (gcd(g(h), m) = d), h < 2^22
+    d =   3: first h with d | g(h): (1, 3, 3)
+    d =   9: first h with d | g(h): (4, 9, 9)
+    d =  27: first h with d | g(h): (256, 513, 513)
+    d =  81: first h with d | g(h): (2227, 2673, 4455)
+    d =   5: first h with d | g(h): (2, 5, 5)
+    d =  25: first h with d | g(h): (512, 1025, 1025)
+    d = 125: first h with d | g(h): (5687, 6125, 11375)
+    d =   7: first h with d | g(h): (38, 63, 77)
+    d =  49: first h with d | g(h): (1102, 1715, 2205)

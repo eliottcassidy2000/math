@@ -1,0 +1,41 @@
+# even_moduli_census.py  X = 2^22  (auditor hypotheses; own code)
+# triples: sheet0 10532579  sheet1 13218857   (0.6 s)
+# triples of type d with d not dividing N - c_sigma (must be 0): 0
+
+ODD moduli (THM-5134 (B) remainder, for reference):  m * max_c |#{N=c} - sum_d (d/m) D^(d)| / #T
+  m =   3   0.0281 / 0.0167
+  m =   9   0.0347 / 0.0280
+  m =   5   0.0005 / 0.0011
+  m =   7   0.1665 / 0.1288
+  m =  15   0.0653 / 0.0430
+  m =  45   0.0825 / 0.0573
+  m =  21   0.1918 / 0.1370
+  m =  35   0.2298 / 0.1625
+  m =  63   0.2137 / 0.1565
+  m = 105   0.2783 / 0.1882
+  m = 315   0.3139 / 0.2054
+
+EVEN moduli 2^j m. Columns (sheet 0 / sheet 1):
+  R_prod  = (2^j m) max_{c odd} |#{N=c} - 2^(1-j) sum_{d | gcd(m,c-c_s)} (d/m) D^(d)| / #T   (first-order product law)
+  R_m     = the same remainder at the odd modulus m alone
+  R_flat  = max over classes e mod m and odd a mod 2^j of |2^(j-1) #{N=a mod 2^j, N=e mod m}/#{N=e mod m} - 1|
+  R_lim   = max_{c odd} |(2^j m) share(c) - 2 L_m(c - c_s)|   (distance to the LIMIT law)
+  noise   = sqrt(2^(j-1) m / #T) (Poisson scale of one class share times the number of odd classes)
+  2^2 *   3 =   12   R_prod 0.0599 / 0.0347   R_m 0.0281 / 0.0167   R_flat 0.0021 / 0.0014   R_lim 0.1409 / 0.1709   noise 0.0008 / 0.0007
+  2^3 *   3 =   24   R_prod 0.0605 / 0.0366   R_m 0.0281 / 0.0167   R_flat 0.0031 / 0.0019   R_lim 0.1425 / 0.1723   noise 0.0011 / 0.0010
+  2^2 *   9 =   36   R_prod 0.0764 / 0.0603   R_m 0.0347 / 0.0280   R_flat 0.0040 / 0.0024   R_lim 0.2989 / 0.3668   noise 0.0013 / 0.0012
+  2^3 *   9 =   72   R_prod 0.0787 / 0.0661   R_m 0.0347 / 0.0280   R_flat 0.0053 / 0.0048   R_lim 0.3062 / 0.3691   noise 0.0018 / 0.0017
+  2^2 *   5 =   20   R_prod 0.0054 / 0.0068   R_m 0.0005 / 0.0011   R_flat 0.0028 / 0.0018   R_lim 0.1936 / 0.2220   noise 0.0010 / 0.0009
+  2^3 *   5 =   40   R_prod 0.0104 / 0.0093   R_m 0.0005 / 0.0011   R_flat 0.0056 / 0.0028   R_lim 0.1963 / 0.2246   noise 0.0014 / 0.0012
+  2^2 *   7 =   28   R_prod 0.3379 / 0.2595   R_m 0.1665 / 0.1288   R_flat 0.0032 / 0.0030   R_lim 0.2164 / 0.1102   noise 0.0012 / 0.0010
+  2^3 *   7 =   56   R_prod 0.3410 / 0.2613   R_m 0.1665 / 0.1288   R_flat 0.0056 / 0.0042   R_lim 0.2196 / 0.1119   noise 0.0016 / 0.0015
+  2^2 *  15 =   60   R_prod 0.1376 / 0.0895   R_m 0.0653 / 0.0430   R_flat 0.0046 / 0.0030   R_lim 0.2763 / 0.2824   noise 0.0017 / 0.0015
+  2^3 *  15 =  120   R_prod 0.1393 / 0.0966   R_m 0.0653 / 0.0430   R_flat 0.0074 / 0.0059   R_lim 0.2779 / 0.2855   noise 0.0024 / 0.0021
+  2^2 *  45 =  180   R_prod 0.1800 / 0.1169   R_m 0.0825 / 0.0573   R_flat 0.0081 / 0.0078   R_lim 0.3323 / 0.4697   noise 0.0029 / 0.0026
+  2^3 *  45 =  360   R_prod 0.1843 / 0.1205   R_m 0.0825 / 0.0573   R_flat 0.0176 / 0.0137   R_lim 0.3464 / 0.4766   noise 0.0041 / 0.0037
+  2^3 * 315 = 2520   R_prod 0.6692 / 0.4507   R_m 0.3139 / 0.2054   R_flat 0.0505 / 0.0483   R_lim 0.7716 / 0.6167   noise 0.0109 / 0.0098
+
+Class factors (2^j m) * share at 12 (odd classes), measured against 2 L_3(c - c_s):
+  sheet 0: c=1: 1.7571 (lim 1.7778)  c=3: 1.6650 (lim 1.7778)  c=5: 2.5853 (lim 2.4444)  c=7: 1.7499 (lim 1.7778)  c=9: 1.6662 (lim 1.7778)  c=11: 2.5765 (lim 2.4444)
+  sheet 1: c=1: 1.6706 (lim 1.7778)  c=3: 2.6153 (lim 2.4444)  c=5: 1.7110 (lim 1.7778)  c=7: 1.6753 (lim 1.7778)  c=9: 2.6142 (lim 2.4444)  c=11: 1.7137 (lim 1.7778)
+# total time 1.3 s

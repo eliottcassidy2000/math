@@ -1,0 +1,57 @@
+I1 Ingham: D(n) = sum_{m<n} d(m) d(n-m) against (6/pi^2) sigma(n) ln^2 n
+   D(n) = number of positive solutions of a1 a2 + b1 b2 = n, 2 <= n <= 60: failures 0
+   n, D(n), D(n) / ((6/pi^2) sigma(n) ln^2 n):
+         1000           59032  0.8697
+         1001           40324  1.0340
+        10007          645932  1.2513
+        10080         1391504  0.6852
+       100003         9717628  1.2059
+       100800        23451004  0.7098
+       720720       251387860  0.6994
+       999983       136248872  1.1742
+      1000000       257901354  0.8961
+   window [1000, 1200): mean ratio 1.0799, min 0.7099, max 1.3209
+   window [10000, 10200): mean ratio 1.0650, min 0.6852, max 1.2514
+   window [100000, 100200): mean ratio 1.0532, min 0.7938, max 1.2059
+   window [999800, 1000000): mean ratio 1.0447, min 0.8020, max 1.1742
+I2 correlation of D(n)/n with sigma(n)/n on [20000, 20400): 0.9788
+   (with sigma(n_odd)/n_odd instead: 0.4613)
+G1 Gronwall for odd n: limsup sigma(n)/(n ln ln n) = e^gamma/2 = 0.890536 ; all n: e^gamma = 1.781072
+   (4 e^gamma / pi^2) = 0.721841 = (8/pi^2) * (e^gamma/2)
+   x =     100: prod_{2 < p <= x} (1 - 1/p)^-1 / ln x = 0.902394
+   x =    1000: prod_{2 < p <= x} (1 - 1/p)^-1 / ln x = 0.893993
+   x =   10000: prod_{2 < p <= x} (1 - 1/p)^-1 / ln x = 0.891633
+   x =  100000: prod_{2 < p <= x} (1 - 1/p)^-1 / ln x = 0.890807
+   x = 1000000: prod_{2 < p <= x} (1 - 1/p)^-1 / ln x = 0.890571
+   x = 2000000: prod_{2 < p <= x} (1 - 1/p)^-1 / ln x = 0.890580
+   odd primorial-type numbers n = prod_{2 < p <= y} p^a (a -> infinity gives prod p/(p-1)):
+     y =      101: ln n = 94.5, sigma(n)/n = 4.01596, ratio to ln ln n = 0.88290, S/(ln ln n) = 0.71565
+     y =     1009: ln n = 997.4, sigma(n)/n = 6.12636, ratio to ln ln n = 0.88722, S/(ln ln n) = 0.71915
+     y =    10007: ln n = 10013.6, sigma(n)/n = 8.19378, ratio to ln ln n = 0.88950, S/(ln ln n) = 0.72100
+     y =   100003: ln n = 100052.0, sigma(n)/n = 10.25026, ratio to ln ln n = 0.89029, S/(ln ln n) = 0.72164
+     y =  1000003: ln n = 999587.2, sigma(n)/n = 12.30195, ratio to ln ln n = 0.89047, S/(ln ln n) = 0.72179
+   odd n in [1000, 10000): max sigma(n)/(n ln ln n) = 1.03001 at n = 3465
+   odd n in [10000, 100000): max sigma(n)/(n ln ln n) = 0.99637 at n = 10395
+   odd n in [100000, 1000000): max sigma(n)/(n ln ln n) = 0.96665 at n = 135135
+   odd n in [1000000, 3000000): max sigma(n)/(n ln ln n) = 0.94155 at n = 2297295
+   (the maxima decrease towards e^gamma/2 = 0.89054 from above, as for Gronwall's theorem)
+G2 X =    10000: mean of (8/pi^2) sigma(n)/n over odd N <= X: sheet 1 0.999987 ; sheet 0 (n = odd part of N+1) 0.999638
+G2 X =   100000: mean of (8/pi^2) sigma(n)/n over odd N <= X: sheet 1 0.999999 ; sheet 0 (n = odd part of N+1) 0.999953
+G2 X =  1000000: mean of (8/pi^2) sigma(n)/n over odd N <= X: sheet 1 1.000000 ; sheet 0 (n = odd part of N+1) 0.999994
+G2 X =  3000000: mean of (8/pi^2) sigma(n)/n over odd N <= X: sheet 1 1.000000 ; sheet 0 (n = odd part of N+1) 0.999998
+K1 8/pi^2 = 0.810569
+   N =   7: S_1 = 0.9264 (n = 7), S_0 = 0.8106 (n = 1), w_0 S_0 + w_1 S_1 = 0.8764
+   N =  21: S_1 = 1.2352 (n = 21), S_0 = 0.8843 (n = 11), w_0 S_0 + w_1 S_1 = 1.0836
+   N =   1: S_1 = 0.8106 (n = 1), S_0 = 0.8106 (n = 1), w_0 S_0 + w_1 S_1 = 0.8106
+   N =   3: S_1 = 1.0808 (n = 3), S_0 = 0.8106 (n = 1), w_0 S_0 + w_1 S_1 = 0.9641
+   N =  15: S_1 = 1.2969 (n = 15), S_0 = 0.8106 (n = 1), w_0 S_0 + w_1 S_1 = 1.0869
+   N =  63: S_1 = 1.3381 (n = 63), S_0 = 0.8106 (n = 1), w_0 S_0 + w_1 S_1 = 1.1103
+   N = 105: S_1 = 1.4822 (n = 105), S_0 = 0.8259 (n = 53), w_0 S_0 + w_1 S_1 = 1.1987
+   N = 127: S_1 = 0.8170 (n = 127), S_0 = 0.8106 (n = 1), w_0 S_0 + w_1 S_1 = 0.8142
+   kappa_0 = 0.1615389173, kappa_1 = 0.2125139092, w_0 = 0.43186124, w_1 = 0.56813876
+K2 Remark 1: factor at v = 1 minus squarefree-level factor = -p^-3; at v = 2: +p^-2 - p^-3 - p^-4
+   p =  3: f(v=1) - sf = -1/27 (-p^-3 = -1/27); f(v=2) - sf = 5/81; mean over v >= 1 = 1.222222222222, sf = 1.222222222222
+   p =  5: f(v=1) - sf = -1/125 (-p^-3 = -1/125); f(v=2) - sf = 19/625; mean over v >= 1 = 1.160000000000, sf = 1.160000000000
+   p =  7: f(v=1) - sf = -1/343 (-p^-3 = -1/343); f(v=2) - sf = 41/2401; mean over v >= 1 = 1.122448979592, sf = 1.122448979592
+   p = 11: f(v=1) - sf = -1/1331 (-p^-3 = -1/1331); f(v=2) - sf = 109/14641; mean over v >= 1 = 1.082644628099, sf = 1.082644628099
+   limits at 9: v = 0: 8/9, v = 1: 32/27, v >= 2: 35/27  = 0.889 / 1.185 / 1.296

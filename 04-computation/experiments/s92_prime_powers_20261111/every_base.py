@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""S92 (THM-5135): the join family F1 in every base b.
+"""S92 (THM-5134 (G)): the join family F1 in every base b.
 
 For a tournament T let Omega(T) be the conflict graph of its directed odd cycles (two cycles conflict when they share
 a vertex) and I(Omega, z) = sum_k alpha_k z^k its independence polynomial (alpha_k = number of sets of k pairwise
@@ -14,7 +14,8 @@ Claims checked here on explicit tournaments (exhaustive enumeration of the odd c
           N_b(h1, h2, s) = (1 + b psi1)(1 + b psi2) + b c3,        N_2 = x1 x2 + 2^s y1 y2 - [s = 0].
   (3) balanced states 1 + b psi(h) = 2h + 1 (X_b = y): the powers of two for b = 2; h = 3, 45, 117, 309, ... for
       b = 3; none but h = 0 for b >= 4 (psi(h) > h/2 for h >= 1).
-  (4) by value, N_b <= 2^24, sheet s >= 1, for b = 2, 3, 4, 5, 6, 10 and the primes p = 3, 5, 7, 11, 13: N_b = 1
+  (4) by value, ALL triples with N_b <= 2^24 on the sheet s >= 1 (until the audit of 2026-11-11 the census was
+      truncated at h < 2^21 and used an unsound skip), for b = 2, 3, 4, 5, 6, 10 and the primes p = 3, 5, 7, 11, 13: N_b = 1
       modulo b always; for p not dividing b every triple with a p-divisible smaller state (p | X_b and p | y) lies
       in the class 0 (exact), and the class factors follow the first-order law (class 0: 1 + (p - 1) F, the others:
       1 - F, F the share of those triples) with a remainder below 0.2 (largest at the slow prime 7); the second
@@ -127,18 +128,26 @@ def census_b(q, b, X, K, primes, cnt, div, digit2):
     the class 0; digit2[c]: classes of (N_b - 1)/b modulo b (the second digit)."""
     H = q.shape[0]
     bad = 0
+    open_loops = 0
     for s in range(1, K + 1):
         coef = b << (s - 1)
+        if coef > X:
+            break
         for h1 in range(H):
             y1 = 2 * h1 + 1
             X1 = 1 + b * (h1 - q[h1])
-            if X1 * X1 + coef * y1 * y1 > X:
+            # sound bounds only (audit, MISTAKE of 2026-11-11): psi(h) >= h // 2, so for h2 >= h1
+            # N >= X1 (1 + b (h2 // 2)) + coef y1 y2 >= X1 (1 + b (h1 // 2)) + coef y1^2; the diagonal value
+            # N(h1, h1) is NOT a lower bound (psi is not monotone).
+            if X1 * (1 + b * (h1 // 2)) + coef * y1 * y1 > X:
                 if (1 + b * (h1 // 2)) * (1 + b * (h1 // 2)) + coef * y1 * y1 > X:
                     break
                 continue
+            closed = False
             for h2 in range(h1, H):
                 y2 = 2 * h2 + 1
                 if (1 + b * (h2 // 2)) * X1 + coef * y1 * y2 > X:
+                    closed = True
                     break
                 X2 = 1 + b * (h2 - q[h2])
                 N = X1 * X2 + coef * y1 * y2
@@ -155,6 +164,10 @@ def census_b(q, b, X, K, primes, cnt, div, digit2):
                         div[j, 0] += w
                         if N % p == 0:
                             div[j, 1] += w
+            if not closed:
+                open_loops += 1          # the table of states is too short: the census would be truncated
+    if open_loops > 0:
+        return -1
     return bad
 
 
@@ -217,7 +230,7 @@ def main():
     K = 24
     X = 1 << K
     primes = np.array([3, 5, 7, 11, 13], dtype=np.int64)
-    q32 = q[: (1 << 21)].astype(np.int64)
+    q32 = q[: (1 << 22) + 2].astype(np.int64)          # every word that can occur: coef y1 y2 <= X gives h2 < X/4
     print(f"(4) sheet s >= 1, N_b <= 2^{K}: class factors p * share at the class 0 and [min, max] over the others; "
           f"F p^2 = share of p-divisible smaller states times p^2; rem = remainder of the first-order law")
     for b in (2, 3, 4, 5, 6, 10):
@@ -225,6 +238,10 @@ def main():
         div = np.zeros((len(primes), 2), np.int64)
         digit2 = np.zeros(b, np.int64)
         bad = census_b(q32, b, X, K, primes, cnt, div, digit2)
+        if bad < 0:
+            print(f"    b = {b}: the table of states is too short (truncated census)")
+            ok = False
+            continue
         tot = cnt[0].sum()
         cells = []
         for j, p in enumerate(primes.tolist()):

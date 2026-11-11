@@ -1,0 +1,12 @@
+      counts: [17536, 15360, 17280, 15360]
+   modulo  8: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [0.0s]
+      counts: [2246656, 1966080, 2211840, 1966080, 2242560, 1966080, 2211840, 1966080]
+   modulo  3: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [0.0s]
+   modulo  9: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [0.0s]
+   modulo  5: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [0.0s]
+   modulo  7: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [0.0s]
+   modulo 16: E8 class counts = rank-4 seam counts: True ; = formula (1 - p^-4) sigma_3(p^v)/p^(3v): True  [2.4s]
+   modulo 2: Z^8 (eight squares) counts: [128, 128]
+   modulo 4: Z^8 (eight squares) counts: [18432, 16384, 14336, 16384]
+   modulo 8: Z^8 (eight squares) counts: [2392064, 2097152, 1835008, 2097152, 2326528, 2097152, 1835008, 2097152]
+ALL CHECKS PASSED

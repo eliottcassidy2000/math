@@ -1,0 +1,38 @@
+# smith_r2.py (auditor hypotheses; own code)
+modulo 9 = 3^2, entries in [0, 8]: 6561 matrices, 6 Smith classes (e1, e2 truncated at 2)   1.3 s
+   Smith (p^0, p^0):  3888 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.8889; v=1: 1.1852; v=2: 1.2963
+   Smith (p^0, p^1):  1728 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.6667; v=1: 1.5556; v=2: 1.8889
+   Smith (p^0, p^2) [p^2 = 0]:   864 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.6667; v=1: 1.3333; v=2: 2.3333
+   Smith (p^1, p^1):    48 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 2.6667; v=2: 3.6667
+   Smith (p^1, p^2) [p^2 = 0]:    32 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 2.0000; v=2: 5.0000
+   Smith (p^2, p^2) [p^2 = 0]:     1 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 0.0000; v=2: 9.0000
+modulo 27 = 3^3, entries in [-4, 4]: 6561 matrices, 7 Smith classes (e1, e2 truncated at 3)   1.2 s
+   Smith (p^0, p^0):  3888 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.8889; v=1: 1.1852; v=2: 1.2840; v=3: 1.3210
+   Smith (p^0, p^1):  1728 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.6667; v=1: 1.5556; v=2: 1.8519; v=3: 1.9630
+   Smith (p^0, p^2):   352 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.6667; v=1: 1.3333; v=2: 2.2222; v=3: 2.5556
+   Smith (p^0, p^3) [p^3 = 0]:   512 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.6667; v=1: 1.3333; v=2: 2.0000; v=3: 3.0000
+   Smith (p^1, p^1):    48 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 2.6667; v=2: 3.5556; v=3: 3.8889
+   Smith (p^1, p^3) [p^3 = 0]:    32 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 2.0000; v=2: 4.0000; v=3: 7.0000
+   Smith (p^3, p^3) [p^3 = 0]:     1 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 0.0000; v=2: 0.0000; v=3: 27.0000
+modulo 25 = 5^2, entries in [-3, 3]: 2401 matrices, 4 Smith classes (e1, e2 truncated at 2)   0.3 s
+   Smith (p^0, p^0):  1904 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.9600; v=1: 1.1520; v=2: 1.1920
+   Smith (p^0, p^1):   208 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.8000; v=1: 1.7600; v=2: 1.9600
+   Smith (p^0, p^2) [p^2 = 0]:   288 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.8000; v=1: 1.6000; v=2: 2.6000
+   Smith (p^2, p^2) [p^2 = 0]:     1 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 0.0000; v=2: 25.0000
+modulo 8 = 2^3, entries in [0, 7]: 4096 matrices, 10 Smith classes (e1, e2 truncated at 3)   0.0 s
+   Smith (p^0, p^0):  1536 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.7500; v=1: 1.1250; v=2: 1.3125; v=3: 1.4375
+   Smith (p^0, p^1):  1152 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.5000; v=1: 1.2500; v=2: 1.6250; v=3: 1.8750
+   Smith (p^0, p^2):   576 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.5000; v=1: 1.0000; v=2: 1.7500; v=3: 2.2500
+   Smith (p^0, p^3) [p^3 = 0]:   576 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.5000; v=1: 1.0000; v=2: 1.5000; v=3: 2.5000
+   Smith (p^1, p^1):    96 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 1.5000; v=2: 2.2500; v=3: 2.7500
+   Smith (p^1, p^2):    72 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 1.0000; v=2: 2.5000; v=3: 3.5000
+   Smith (p^1, p^3) [p^3 = 0]:    72 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 1.0000; v=2: 2.0000; v=3: 4.0000
+   Smith (p^2, p^2):     6 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 0.0000; v=2: 3.0000; v=3: 5.0000
+   Smith (p^2, p^3) [p^3 = 0]:     9 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 0.0000; v=2: 2.0000; v=3: 6.0000
+   Smith (p^3, p^3) [p^3 = 0]:     1 matrices; one law for all: True; equals the convolution of the scaled tables: True;  q*P by valuation: v=0: 0.0000; v=1: 0.0000; v=2: 0.0000; v=3: 8.0000
+[[11,6],[6,3]] (det -3) modulo 9: law = law of a1 b1 + 3 a2 b2: True
+[[11,6],[6,3]] (det -3) modulo 27: law = law of a1 b1 + 3 a2 b2: True
+Session261 [[149,72],[72,37]] (det 329) modulo 7: law = law of a1 b1 + 7 a2 b2: True
+Session261 [[149,72],[72,37]] (det 329) modulo 49: law = law of a1 b1 + 7 a2 b2: True
+Session261 [[149,72],[72,37]] (det 329) modulo 47: law = law of a1 b1 + 47 a2 b2: True
+ALL AGREE

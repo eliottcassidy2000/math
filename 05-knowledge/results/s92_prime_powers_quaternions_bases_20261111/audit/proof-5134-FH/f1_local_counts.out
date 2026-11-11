@@ -1,0 +1,71 @@
+THM-5134 (F): class counts of a1 a2 + u b1 b2 and of a^2+b^2+c^2+d^2 modulo m
+==============================================================================
+m =    3: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 2) = m^3 L_m: True; mean L = 1
+m =    5: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 4) = m^3 L_m: True; mean L = 1
+m =    7: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 6) = m^3 L_m: True; mean L = 1
+m =    9: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 6) = m^3 L_m: True; mean L = 1
+m =   11: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 10) = m^3 L_m: True; mean L = 1
+m =   13: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 12) = m^3 L_m: True; mean L = 1
+m =   15: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 8) = m^3 L_m: True; mean L = 1
+m =   21: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 12) = m^3 L_m: True; mean L = 1
+m =   25: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 20) = m^3 L_m: True; mean L = 1
+m =   27: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 18) = m^3 L_m: True; mean L = 1
+m =   33: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 20) = m^3 L_m: True; mean L = 1
+m =   35: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 24) = m^3 L_m: True; mean L = 1
+m =   45: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 24) = m^3 L_m: True; mean L = 1
+m =   49: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 42) = m^3 L_m: True; mean L = 1
+m =   63: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 4) = m^3 L_m: True; mean L = 1
+m =   75: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 4) = m^3 L_m: True; mean L = 1
+m =   81: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 4) = m^3 L_m: True; mean L = 1
+m =  105: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 4) = m^3 L_m: True; mean L = 1
+m =  121: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 4) = m^3 L_m: True; mean L = 1
+m =  125: closed form = definition: True; m^3 L integer: True; four squares = m^3 L_m: True; det form (units tested: 4) = m^3 L_m: True; mean L = 1
+
+Direct enumeration of all m^4 tuples (numpy), independent of the convolution code:
+  m = 9: four squares direct = convolution: True; det form direct = convolution (u = 1, 2, -1): True
+  m = 25: four squares direct = convolution: True; det form direct = convolution (u = 1, 2, -1): True
+  m = 27: four squares direct = convolution: True; det form direct = convolution (u = 1, 2, -1): True
+  m = 49: four squares direct = convolution: True; det form direct = convolution (u = 1, 2, -1): True
+
+Tables (class counts by valuation; count / m^3 = L_m):
+  m = 9 = 3^2
+    v = 0 :   6 classes; four squares [648]; det form [648]; m^3 L = 648; L = 8/9 = 0.888889
+    v = 1 :   2 classes; four squares [864]; det form [864]; m^3 L = 864; L = 32/27 = 1.185185
+    v = 2+:   1 classes; four squares [945]; det form [945]; m^3 L = 945; L = 35/27 = 1.296296
+  m = 25 = 5^2
+    v = 0 :  20 classes; four squares [15000]; det form [15000]; m^3 L = 15000; L = 24/25 = 0.960000
+    v = 1 :   4 classes; four squares [18000]; det form [18000]; m^3 L = 18000; L = 144/125 = 1.152000
+    v = 2+:   1 classes; four squares [18625]; det form [18625]; m^3 L = 18625; L = 149/125 = 1.192000
+  m = 27 = 3^3
+    v = 0 :  18 classes; four squares [17496]; det form [17496]; m^3 L = 17496; L = 8/9 = 0.888889
+    v = 1 :   6 classes; four squares [23328]; det form [23328]; m^3 L = 23328; L = 32/27 = 1.185185
+    v = 2 :   2 classes; four squares [25272]; det form [25272]; m^3 L = 25272; L = 104/81 = 1.283951
+    v = 3+:   1 classes; four squares [26001]; det form [26001]; m^3 L = 26001; L = 107/81 = 1.320988
+  m = 49 = 7^2
+    v = 0 :  42 classes; four squares [115248]; det form [115248]; m^3 L = 115248; L = 48/49 = 0.979592
+    v = 1 :   6 classes; four squares [131712]; det form [131712]; m^3 L = 131712; L = 384/343 = 1.119534
+    v = 2+:   1 classes; four squares [134113]; det form [134113]; m^3 L = 134113; L = 391/343 = 1.139942
+
+The prime 2: number of solutions modulo 2^k divided by 2^(3k)
+  2^1: four squares, odd classes: ['1']; det form a1a2+b1b2, odd classes: ['3/4']; four squares even classes: {0: '1'}
+  2^2: four squares, odd classes: ['1']; det form a1a2+b1b2, odd classes: ['3/4']; four squares even classes: {0: '1/2', 2: '3/2'}
+  2^3: four squares, odd classes: ['1']; det form a1a2+b1b2, odd classes: ['3/4']; four squares even classes: {0: '1/4', 2: '3/2', 4: '3/4', 6: '3/2'}
+  2^4: four squares, odd classes: ['1']; det form a1a2+b1b2, odd classes: ['3/4']; four squares even classes: ...
+  2^5: four squares, odd classes: ['1']; det form a1a2+b1b2, odd classes: ['3/4']; four squares even classes: ...
+  2^6: four squares, odd classes: ['1']; det form a1a2+b1b2, odd classes: ['3/4']; four squares even classes: ...
+  (four squares: density 1 at every odd class; determinant form: 3/4 = 1 - 1/4 at every odd class)
+
+Jacobi: r_4(n) by direct count against 8 sigma(n) (n odd) and 24 sigma(odd part) (n even), n <= 2000
+  r_4(n) = 8 sigma(n) for all odd n <= 2000 and 24 sigma(odd part) for even n: True
+
+Real density: sum_{n <= N} r_4(n) against pi^2 N^2 / 2 (volume of the 4-ball of radius sqrt N)
+  N = 500: sum = 1236185 ; pi^2 N^2/2 = 1233700.6; ratio = 1.00201
+  N = 1000: sum = 4937225 ; pi^2 N^2/2 = 4934802.2; ratio = 1.00049
+  N = 2000: sum = 19739833 ; pi^2 N^2/2 = 19739208.8; ratio = 1.00003
+
+Singular series check: r_4(n) = (pi^2 n) * 1 * prod_{p odd} (1 - p^-2) sigma(p^v)/p^v  = 8 sigma(n) for odd n
+  prod_{p odd}(1 - p^-2) = (6/pi^2)/(1 - 1/4) = 8/pi^2 ;  numerically:
+  6/pi^2 = 0.6079271019;  (6/pi^2)/(3/4) = 0.8105694691;  8/pi^2 = 0.8105694691
+  prod_{3 <= p <= 2000000} (1 - p^-2) = 0.8105694954
+
+ALL EXACT CHECKS PASS

@@ -11,8 +11,10 @@ status: >
   the by-value statement and its proof, and the period-12 law of the mod-4 sums, were supplied by the independent
   audit (auditor proof-5128-CF); the session had proved the statement on boxes only.
   VERIFIED / NUMERICAL (floating point): the rates rho_m; the constants A_p (A_7 is not determined, sign
-  included). NUMERICAL only: the by-value law modulo odd prime powers in (D3) (the factor for independent
-  equidistributed states is an exact elementary count; the by-value limit is census data).
+  included). NUMERICAL only in this file: the by-value law modulo odd prime powers in (D3) (the factor for independent
+  equidistributed states is an exact elementary count; the by-value limit is census data). ADDENDUM 2026-11-11
+  (opus-2026-11-11-S92): the by-value law at every odd modulus, prime powers included, is now PROVED in THM-5134
+  (the argument announced in (D3), written out); the series (8/pi^2) sigma_1(n)/n is THM-5134 (E).
   (G): NUMERICAL, with eight PRE-REGISTERED tests (279 intervals) on the unseen window [2^24, 2^27), all CONFIRMED
   (pre-registration commit 1f97e27805 precedes the output); the constant 0.75 of the registered tolerance was a
   conservative bound, so the registered "4 se" bands were about 5.2 to 5.5 measured standard errors wide, and the
@@ -251,7 +253,8 @@ regions_check.py.)
    states with `3 || g`, `9 | g`, predicts `0.852, 1.216, 1.457` (proof-5128-CF/a4_moduli_26.out, also for 25 and
    27). It would follow from the argument of (C), (D2) carried out with (B4)(iv) for the modulus `p^k` (a smaller
    state with `p^i || g` spreads its mass uniformly over the classes with `p^i | c - c_sigma`), which is not written
-   out. The singular series proper would then be
+   out here. (Addendum 2026-11-11: it is written out in THM-5134 (A)-(E), for every odd modulus; the statement
+   below is THM-5134 (E).) The singular series proper would then be
 
        S_sigma(N) = prod_{p odd} (1 + 1/p)(1 - p^(-v_p(n)-1)) = (8/pi^2) sigma_1(n)/n,
 

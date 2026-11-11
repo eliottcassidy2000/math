@@ -1,0 +1,66 @@
+=== A3.a central extensions of F_2^2 by F_2 ===
+normalized 2-cocycles: 16
+distinct normalized coboundaries: 2
+non-trivial coboundary (rows a = 0..3): ((0, 0, 0, 0), (0, 0, 1, 1), (0, 1, 0, 1), (0, 1, 1, 0))
+classes: 8 ; sizes: [2, 2, 2, 2, 2, 2, 2, 2]
+  S = ()         #S = 0  group C2^3          orders [1, 2, 2, 2, 2, 2, 2, 2]  commutative True   sign tables ['signed triangle(0 negative)', 'signed triangle(3 negative)']  converse pair None  zero divisors True  product of squares +1
+  S = (1, 2)     #S = 2  group C4 x C2       orders [1, 2, 2, 2, 4, 4, 4, 4]  commutative True   sign tables ['signed triangle(2 negative)', 'signed triangle(1 negative)']  converse pair None  zero divisors True  product of squares +1
+  S = (1,)       #S = 1  group D4 (order 8)  orders [1, 2, 2, 2, 2, 2, 4, 4]  commutative False  sign tables ['transitive(middle 1)', 'transitive(middle 1)']  converse pair True  zero divisors True  product of squares -1
+  S = (2,)       #S = 1  group D4 (order 8)  orders [1, 2, 2, 2, 2, 2, 4, 4]  commutative False  sign tables ['transitive(middle 2)', 'transitive(middle 2)']  converse pair True  zero divisors True  product of squares -1
+  S = (1, 3)     #S = 2  group C4 x C2       orders [1, 2, 2, 2, 4, 4, 4, 4]  commutative True   sign tables ['signed triangle(1 negative)', 'signed triangle(2 negative)']  converse pair None  zero divisors True  product of squares +1
+  S = (2, 3)     #S = 2  group C4 x C2       orders [1, 2, 2, 2, 4, 4, 4, 4]  commutative True   sign tables ['signed triangle(1 negative)', 'signed triangle(2 negative)']  converse pair None  zero divisors True  product of squares +1
+  S = (3,)       #S = 1  group D4 (order 8)  orders [1, 2, 2, 2, 2, 2, 4, 4]  commutative False  sign tables ['transitive(middle 3)', 'transitive(middle 3)']  converse pair True  zero divisors True  product of squares -1
+  S = (1, 2, 3)  #S = 3  group Q8            orders [1, 2, 4, 4, 4, 4, 4, 4]  commutative False  sign tables ['cyclic', 'cyclic']  converse pair True  zero divisors False  product of squares -1
+classes by (#S, group): [((0, 'C2^3'), 1), ((1, 'D4 (order 8)'), 3), ((2, 'C4 x C2'), 3), ((3, 'Q8'), 1)]
+
+=== A3.b norm counts ===
+r_4(n) = 8 sigma(n) for all odd n <= 400 (direct count on Z^4): True
+r_4(n) = 24 sigma(odd part) for even n <= 400: True
+Dirichlet convolution (r_2 * r_2)(n) [= norm count on the maximal order Z[i]^2] at 1, 2, 4, 5, 9, 13, 25: [16, 32, 48, 64, 32, 64, 160]
+   it vanishes for every n = 3 mod 4, n <= 400: True
+   other n <= 60 with (r_2 * r_2)(n) = 0: [6, 12, 14, 21, 22, 24, 28, 30, 33, 38, 42, 44, 46, 48, 54, 56, 57, 60]
+sign-table lattice Z<1,i,j,ij> (index 4 in Z[i]^2): norm counts at 1, 2, 4, 5, 9, 13, 25: [8, 0, 16, 32, 16, 32, 80]
+   = (r_2 * r_2)(n) / 2 for every odd n <= 400: True
+   norm-1 elements (the signed units): 8  (the group C_4 x C_2 has order 8; Z[i]^2 has 16 units)
+   even n: (n, sign-table lattice count, Dirichlet convolution): [(2, 0, 32), (4, 16, 48), (8, 0, 64), (10, 0, 128), (16, 16, 80), (20, 64, 192)]
+
+=== A3.c Out(Q_8) on the three axes ===
+|Aut(Q_8)| = 24
+induced permutations of the axes (i, j, k) -> multiplicity (kernel = Inn): [((1, 2, 3), 4), ((1, 3, 2), 4), ((2, 1, 3), 4), ((2, 3, 1), 4), ((3, 1, 2), 4), ((3, 2, 1), 4)]
+action on the cyclic sign triangle 1 -> 2 -> 3 -> 1: [((1, 2, 3), 'automorphism'), ((1, 3, 2), 'anti-automorphism'), ((2, 1, 3), 'anti-automorphism'), ((2, 3, 1), 'automorphism'), ((3, 1, 2), 'automorphism'), ((3, 2, 1), 'anti-automorphism')]
+so Aut(Q_8)/Inn = S_3 acts on the axes as Aut+-(C_3): 3 automorphisms, 3 anti-automorphisms: True
+
+=== A3.d the 128 cyclic orientations of the Fano lines ===
+(H, alternative, norm multiplicative, doubly regular) -> number of orientations: [((171, False, False, False), 112), ((189, True, True, True), 16)]
+
+=== A3.e 240 labelled Paley tournaments ===
+labelled tournaments on 7 vertices with H = 189: 240  (7!/21 = 240)
+max H at order 7: 189 ; labelled tournaments with H = 171: 1680
+labelled Fano planes on 7 points: 30
+(Fano plane, orientation of its lines) pairs giving a Paley tournament: 480 = 30 x 16
+distinct labelled Paley tournaments reached: 240 ; each reached [2] times
+so 240 = 30 * 16 / 2 = 16 * 15 on the Paley side (15 = pairs of Fano planes sharing the 14 cyclic triangles)
+P_7 (QR = 1, 2, 4): cyclic triangles: 14 ; they split into the two Fano planes {0,1,3}+i and {0,2,3}+i: True
+|Aut(P_7)| = 21
+
+=== A3.f E8 ===
+E8 = D8+ shells of norm 2n, n = 1, 2, 3: (integer vectors, half-integer vectors, total, 240 sigma_3(n)): [(112, 128, 240, 240), (1136, 1024, 2160, 2160), (3136, 3584, 6720, 6720)]
+   (coordinates bounded by 2 resp. 3/2: sufficient for norm <= 6 since 3^2 = 9 > 6 and (5/2)^2 + 7/4 = 8 > 6)
+det of the E8 Cartan matrix: 1
+modulo 2: E8 form class counts [136, 120] ; rank-4 hyperbolic [136, 120] ; equal: True
+          factor formula q^7 (1 - 2^-4) sigma_3(2^v)/2^(3v) at classes of valuation v < k: [None, 120]
+modulo 4: E8 form class counts [17536, 15360, 17280, 15360] ; rank-4 hyperbolic [17536, 15360, 17280, 15360] ; equal: True
+          factor formula q^7 (1 - 2^-4) sigma_3(2^v)/2^(3v) at classes of valuation v < k: [None, 15360, 17280, 15360]
+modulo 8: E8 form class counts [2246656, 1966080, 2211840, 1966080, 2242560, 1966080, 2211840, 1966080] ; rank-4 hyperbolic [2246656, 1966080, 2211840, 1966080, 2242560, 1966080, 2211840, 1966080] ; equal: True
+          factor formula q^7 (1 - 2^-4) sigma_3(2^v)/2^(3v) at classes of valuation v < k: [None, 1966080, 2211840, 1966080, 2242560, 1966080, 2211840, 1966080]
+(8 pi^4/3)/zeta(4) = 240.00000000000003
+
+=== A3.g section 5 shares on the family h1 <= h2 < 64, s <= 4 ===
+joins in the family: 10400
+  b =   2:    2 joins with max(alpha_1, alpha_2) <= b - 1: share 0.00019  (rounded 0.0002)
+        [(0, 0, 0, 0, 0), (0, 0, 1, 1, 0)] (h1, h2, s, alpha_1, alpha_2)
+  b =   3:    4 joins with max(alpha_1, alpha_2) <= b - 1: share 0.00038  (rounded 0.0004)
+        [(0, 0, 0, 0, 0), (0, 0, 1, 1, 0), (0, 0, 2, 2, 0), (0, 1, 0, 2, 0)] (h1, h2, s, alpha_1, alpha_2)
+  b =  10:   15 joins with max(alpha_1, alpha_2) <= b - 1: share 0.00144  (rounded 0.0014)
+  b = 100:  231 joins with max(alpha_1, alpha_2) <= b - 1: share 0.02221  (rounded 0.0222)
+least path counts with more than one packing vector in the family: [(17, [(6, 1), (8, 0)]), (27, [(11, 1), (13, 0)]), (45, [(18, 2), (20, 1), (22, 0)]), (53, [(18, 4), (26, 0)]), (71, [(25, 5), (27, 4)])]

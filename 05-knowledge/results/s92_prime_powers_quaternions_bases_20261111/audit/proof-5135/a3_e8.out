@@ -1,0 +1,46 @@
+[C] Gram matrix of the Bourbaki simple roots (model D8+):
+     2  0 -1  0  0  0  0  0
+     0  2  0 -1  0  0  0  0
+    -1  0  2 -1  0  0  0  0
+     0 -1 -1  2 -1  0  0  0
+     0  0  0 -1  2 -1  0  0
+     0  0  0  0 -1  2 -1  0
+     0  0  0  0  0 -1  2 -1
+     0  0  0  0  0  0 -1  2
+    det = 1; diagonal all 2: True; off-diagonal in {0,-1}: True
+    Dynkin edges (0-based): [(0, 2), (1, 3), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7)] (a tree with 7 edges; branch node of degree 3: [3])
+    exact determinant: 1
+
+[M] class counts of Q = x^T C x / 2 against the rank-4 seam
+  modulo 2: direct enumeration of all 2^8 vectors: [136, 120]
+            tree DP agrees with enumeration: True; equals rank-4 seam counts: True
+  modulo 4: direct enumeration of all 4^8 vectors: [17536, 15360, 17280, 15360]
+            tree DP agrees with enumeration: True; equals rank-4 seam counts: True
+  modulo 8: direct enumeration of all 8^8 vectors: [2246656, 1966080, 2211840, 1966080, 2242560, 1966080, 2211840, 1966080]
+            tree DP agrees with enumeration: True; equals rank-4 seam counts: True
+  modulo 16: numba enumeration of all 16^8 = 4294967296 vectors; total 4294967296
+            tree DP agrees: True; equals rank-4 seam counts: True
+            counts by valuation v = 0..4: [251658240, 283115520, 287047680, 287539200, 287604736]
+  modulo 32 (tree DP, exact): equals rank-4 seam counts: True
+  modulo 64 (tree DP, exact): equals rank-4 seam counts: True
+  modulo 128 (tree DP, exact): equals rank-4 seam counts: True
+  odd prime powers and composite moduli (tree DP): [(3, True), (9, True), (27, True), (5, True), (25, True), (7, True), (49, True), (11, True), (13, True), (6, True), (12, True), (15, True), (36, True)]
+  contrast at 2 (tree DP / convolution):
+    modulo 2: H^3 + A equals seam: False; D8 equals seam: False; Z^8 (eight squares) equals seam: False
+      zeros modulo 2: E8/seam 136, H^3 + A 120, D8 144, Z^8 128
+    modulo 4: H^3 + A equals seam: False; D8 equals seam: False; Z^8 (eight squares) equals seam: False
+    modulo 8: H^3 + A equals seam: False; D8 equals seam: False; Z^8 (eight squares) equals seam: False
+
+[T] shells of E8
+  #{v in D8+ : v.v = 2n} = 240 sigma_3(n) for n = 1..60: mismatches []
+  n = 1, 2, 3: [240, 2160, 6720] (240 sigma_3 = [240, 2160, 6720])
+  explicit vectors of norm 2, 4, 6 in D8+: 9120; root coordinates integral: True; reconstruct exactly: True
+  integer solutions of x^T C x / 2 = n, n = 1, 2, 3: {1: 240, 2: 2160, 3: 6720}; max |x_i| used: 12
+
+[I] the identity and the real density
+  unit 8-ball volume pi^4/24 = 4.058712126; vol{Q <= n} = (2 pi^4/3) n^4 -> coefficient 64.939394023 vs 64.939394023
+  real density coefficient: 4 * (2 pi^4/3) = 259.757576091 = 8 pi^4/3 = 259.757576091
+  (8 pi^4/3) / zeta(4) = 240.000000000000 (exactly 8 * 90 / 3 = 240)
+  zeta(4) by summation 1.082323233711, pi^4/90 = 1.082323233711
+  Z^8, n odd: (pi^4/6) * (90/pi^4) * (16/15) = 16.000000000000 (= 16, so the 2-adic density is 1 at odd n)
+  four squares, n odd: pi^2 * (6/pi^2) * (4/3) = 8.000000000000 (= 8)

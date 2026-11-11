@@ -1,0 +1,27 @@
+a-priori prediction for the window [2^27, 2^28): predicted ordered triples sheet 0: 442185678, sheet 1: 561390920 (smaller states used: 6689, 18797)
+registered json: 68 values of Phi(g0); largest |mine - registered| = 3.905e-05 at 0,81,81 (mine 1.4381665889, registered 1.4382056375)
+registered json: largest |mine - registered| over the type shares F_d = 5.790e-06
+stored output C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/window_prereg_28_27.out: a-priori column, 1 of 68 values differ from mine at 4 decimals (largest difference 5.32e-05)
+  m = 9: sheet 0: g0=1: 0.8577, g0=3: 1.2143, g0=9: 1.4249  sheet 1: g0=1: 0.8552, g0=3: 1.2156, g0=9: 1.4377
+  m = 25: sheet 0: g0=1: 0.9418, g0=5: 1.2308, g0=25: 1.2409  sheet 1: g0=1: 0.9393, g0=5: 1.2412, g0=25: 1.2496
+  m = 49: sheet 0: g0=1: 0.9815, g0=7: 1.1098, g0=49: 1.1188  sheet 1: g0=1: 0.9837, g0=7: 1.0967, g0=49: 1.1051
+a-priori prediction for the window [2^23, 2^24): predicted ordered triples sheet 0: 23879925, sheet 1: 30144546 (smaller states used: 1672, 4696)
+stored output C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/window_insample_24_23.out: a-priori column, 5 of 68 values differ from mine at 4 decimals (largest difference 9.42e-05)
+  m = 9: sheet 0: g0=1: 0.8557, g0=3: 1.2130, g0=9: 1.4397  sheet 1: g0=1: 0.8504, g0=3: 1.2161, g0=9: 1.4654
+  m = 25: sheet 0: g0=1: 0.9386, g0=5: 1.2445, g0=25: 1.2494  sheet 1: g0=1: 0.9360, g0=5: 1.2552, g0=25: 1.2598
+  m = 49: sheet 0: g0=1: 0.9862, g0=7: 1.0821, g0=49: 1.0871  sheet 1: g0=1: 0.9887, g0=7: 1.0675, g0=49: 1.0687
+a-priori prediction for the window [2^24, 2^25): predicted ordered triples sheet 0: 49638099, sheet 1: 62760180 (smaller states used: 2365, 6644)
+stored output C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/window_insample_25_24.out: a-priori column, 7 of 68 values differ from mine at 4 decimals (largest difference 1.06e-04)
+  m = 9: sheet 0: g0=1: 0.8568, g0=3: 1.2133, g0=9: 1.4328  sheet 1: g0=1: 0.8521, g0=3: 1.2155, g0=9: 1.4562
+  m = 25: sheet 0: g0=1: 0.9393, g0=5: 1.2418, g0=25: 1.2468  sheet 1: g0=1: 0.9367, g0=5: 1.2523, g0=25: 1.2571
+  m = 49: sheet 0: g0=1: 0.9844, g0=7: 1.0925, g0=49: 1.1000  sheet 1: g0=1: 0.9874, g0=7: 1.0753, g0=49: 1.0788
+a-priori prediction for the window [2^25, 2^26): predicted ordered triples sheet 0: 103032821, sheet 1: 130462822 (smaller states used: 3344, 9396)
+stored output C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/window_insample_26_25.out: a-priori column, 8 of 68 values differ from mine at 4 decimals (largest difference 8.26e-05)
+  m = 9: sheet 0: g0=1: 0.8570, g0=3: 1.2142, g0=9: 1.4297  sheet 1: g0=1: 0.8536, g0=3: 1.2151, g0=9: 1.4482
+  m = 25: sheet 0: g0=1: 0.9404, g0=5: 1.2368, g0=25: 1.2441  sheet 1: g0=1: 0.9375, g0=5: 1.2490, g0=25: 1.2542
+  m = 49: sheet 0: g0=1: 0.9836, g0=7: 1.0972, g0=49: 1.1064  sheet 1: g0=1: 0.9859, g0=7: 1.0837, g0=49: 1.0895
+a-priori prediction for the window [2^26, 2^27): predicted ordered triples sheet 0: 213579283, sheet 1: 270810420 (smaller states used: 4730, 13291)
+stored output C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/window_insample_27_26.out: a-priori column, 7 of 68 values differ from mine at 4 decimals (largest difference 5.87e-05)
+  m = 9: sheet 0: g0=1: 0.8576, g0=3: 1.2146, g0=9: 1.4250  sheet 1: g0=1: 0.8544, g0=3: 1.2155, g0=9: 1.4427
+  m = 25: sheet 0: g0=1: 0.9412, g0=5: 1.2332, g0=25: 1.2429  sheet 1: g0=1: 0.9384, g0=5: 1.2448, g0=25: 1.2517
+  m = 49: sheet 0: g0=1: 0.9824, g0=7: 1.1041, g0=49: 1.1134  sheet 1: g0=1: 0.9848, g0=7: 1.0901, g0=49: 1.0976

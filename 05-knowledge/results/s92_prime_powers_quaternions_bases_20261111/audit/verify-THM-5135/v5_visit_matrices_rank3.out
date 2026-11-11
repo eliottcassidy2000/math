@@ -1,0 +1,17 @@
+modules (order, P_1 = H, P_2, P_3, P_4): [(1, 1, 0, 0, 0), (2, 1, 2, 0, 0), (3, 1, 6, 6, 0), (3, 3, 6, 6, 0), (4, 1, 14, 36, 24), (4, 5, 22, 36, 24), (4, 5, 22, 36, 24)]
+  ok   P_m is divisible by m! (m = 2, 3, 4) on these modules
+  ok   P_2 = ((-1)^n + 1) H (mod 3) on these modules
+[1] Remark 2: the two kernels with three visits (encoding of the audit: order 4 bits 4 ports (0, 3); order 5 bits 76 ports (0, 1))
+  ok   order 4: visit matrix [[5, 3, 0], [3, 7, 2], [0, 2, 2]], determinant 32; no walk with more visits: True; H(K[A, B]) = sum N_ij P_i(A) P_j(B) on the modules: True
+  ok      modulo 3: H(K[A, B]) = c H(A) H(B) with c depending only on the parities of |A|, |B|: constants {(0, 0): 0, (0, 1): 2, (1, 0): 2, (1, 1): 2}
+  ok   order 5: visit matrix [[15, 13, 2], [13, 14, 4], [2, 4, 2]], determinant -6; no walk with more visits: True; H(K[A, B]) = sum N_ij P_i(A) P_j(B) on the modules: True
+  ok      modulo 3: H(K[A, B]) = c H(A) H(B) with c depending only on the parities of |A|, |B|: constants {(0, 0): 0, (0, 1): 2, (1, 0): 2, (1, 1): 0}
+[2] (4): kernels of orders 4 and 5 with the 2 x 2 visit matrices [[5, 2], [2, 1]] and [[11, 6], [6, 3]] (searched here)
+  ok   found (bits, x, y): {4: (4, 1, 2), 5: (12, 1, 2)}
+  ok   order 4, bits 4, ports (1, 2): visit matrix [[5, 2], [2, 1]], determinant 1; no walk with more visits: True; H(K[A, B]) = sum N_ij P_i(A) P_j(B) on the modules: True
+  ok      modulo 3: H(K[A, B]) = c H(A) H(B) with c depending only on the parities of |A|, |B|: constants {(0, 0): 2, (0, 1): 0, (1, 0): 0, (1, 1): 2}
+  ok   order 5, bits 12, ports (1, 2): visit matrix [[11, 6], [6, 3]], determinant -3; no walk with more visits: True; H(K[A, B]) = sum N_ij P_i(A) P_j(B) on the modules: True
+  ok      modulo 3: H(K[A, B]) = c H(A) H(B) with c depending only on the parities of |A|, |B|: constants {(0, 0): 2, (0, 1): 2, (1, 0): 2, (1, 1): 2}
+[3] Remark 3: random kernels of orders 3, 4, 5 with every number of visits up to 4
+  ok   32 random (kernel, ports): substitution formula exact and the collapse modulo 3 holds
+ALL CHECKS PASSED

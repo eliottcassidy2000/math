@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""S92 (THM-5134 (F), (G)): exact class laws of bilinear seams with uniform states modulo a prime power.
+"""S92 (THM-5134 (F), THM-5135 (1), (4)): exact class laws of bilinear seams with uniform states modulo a prime power.
 
-(G)  For u, v independent and uniform in (Z/p^k)^r and a bilinear form of unit determinant, a class c with
+(1)  [THM-5135 (1)] For u, v independent and uniform in (Z/p^k)^r and a bilinear form of unit determinant, a class c with
      v = v_p(c) < k has   p^k P(u . v = c) = (1 - p^-r) sigma_(r-1)(p^v) / p^((r-1) v).
-(F)  For odd p the quaternary forms a1 a2 + u b1 b2 (u a unit) and a^2 + b^2 + c^2 + d^2 take every class modulo
+(F)  [THM-5134 (F)] For odd p the quaternary forms a1 a2 + u b1 b2 (u a unit) and a^2 + b^2 + c^2 + d^2 take every class modulo
      p^k equally often (they are equivalent over Z_p): the F1 seam has the local densities of the four-square form.
 
 Exact rational arithmetic (class counts by convolution of the distributions of the summands).  Checked:
-  * (G) for r = 1, 2, 3, 4 at p^k = 9, 27, 25, 49 and for r = 1, 2, 3 at 2^k = 8, 16 (the statement holds at p = 2
+  * THM-5135 (1) for r = 1, 2, 3, 4 at p^k = 9, 27, 25, 49 and for r = 1, 2, 3 at 2^k = 8, 16 (the statement holds at p = 2
     for a seam with unit determinant; the F1 seam is not of that kind at 2);
   * a non-standard kernel of unit determinant ([[1, 2], [3, 5]], det = -1) gives the same law;
   * (F): class counts of a1 a2 + 2 b1 b2 and of the sum of four squares agree modulo 9, 27, 25, 49, 121;
@@ -63,7 +63,7 @@ def predicted(p, k, r, v):
 
 def main():
     ok = True
-    print("(G) p^k * P(u . v = c) by valuation of c, uniform states, seam of rank r: exact = formula ?")
+    print("THM-5135 (1): p^k * P(u . v = c) by valuation of c, uniform states, seam of rank r: exact = formula ?")
     for p, k in ((3, 2), (3, 3), (5, 2), (7, 2), (2, 3), (2, 4)):
         q = p ** k
         one = dist_product(q)
@@ -100,7 +100,7 @@ def main():
     ok &= good
     print(f"kernel [[1, 2], [3, 5]] (det -1) modulo 27: the law of rank 2: {good}")
     # (F): the F1 seam against the sum of four squares
-    print("(F) class counts of a1 a2 + 2 b1 b2 and of a^2 + b^2 + c^2 + d^2 modulo p^k:")
+    print("THM-5134 (F): class counts of a1 a2 + 2 b1 b2 and of a^2 + b^2 + c^2 + d^2 modulo p^k:")
     for q in (9, 27, 25, 49, 121):
         f1 = conv(dist_product(q), dist_product(q, 2), q)
         sq = dist_square(q)

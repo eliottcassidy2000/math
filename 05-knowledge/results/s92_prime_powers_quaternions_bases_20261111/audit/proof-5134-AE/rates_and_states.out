@@ -1,0 +1,65 @@
+(1) rates max_k rho(T_k)/2 (own matrices), and theta_m/2 at rho_m = rate (supremum of the admissible exponents)
+    m =   9: rate 0.866025 at k =   6 (gcd(k, m) = 3)   theta_m < 0.1467   theta_m/2 < 0.0733   X^(-theta/2) at X = 2^28: 0.241
+    m =  15: rate 0.892191 at k =   2 (gcd(k, m) = 1)   theta_m < 0.1238   theta_m/2 < 0.0619   X^(-theta/2) at X = 2^28: 0.301
+    m =  21: rate 0.932039 at k =   6 (gcd(k, m) = 3)   theta_m < 0.0844   theta_m/2 < 0.0422   X^(-theta/2) at X = 2^28: 0.441
+    m =  25: rate 0.815263 at k =   6 (gcd(k, m) = 1)   theta_m < 0.1854   theta_m/2 < 0.0927   X^(-theta/2) at X = 2^28: 0.165
+    m =  27: rate 0.866025 at k =  18 (gcd(k, m) = 9)   theta_m < 0.1467   theta_m/2 < 0.0733   X^(-theta/2) at X = 2^28: 0.241
+    m =  45: rate 0.892191 at k =   6 (gcd(k, m) = 3)   theta_m < 0.1238   theta_m/2 < 0.0619   X^(-theta/2) at X = 2^28: 0.301
+    m =  49: rate 0.932039 at k =  35 (gcd(k, m) = 7)   theta_m < 0.0844   theta_m/2 < 0.0422   X^(-theta/2) at X = 2^28: 0.441
+    m =  63: rate 0.932039 at k =  45 (gcd(k, m) = 9)   theta_m < 0.0844   theta_m/2 < 0.0422   X^(-theta/2) at X = 2^28: 0.441
+    m =  75: rate 0.892191 at k =  65 (gcd(k, m) = 5)   theta_m < 0.1238   theta_m/2 < 0.0619   X^(-theta/2) at X = 2^28: 0.301
+    m =  81: rate 0.866025 at k =  54 (gcd(k, m) = 27)   theta_m < 0.1467   theta_m/2 < 0.0733   X^(-theta/2) at X = 2^28: 0.241
+    m = 125: rate 0.815263 at k =  30 (gcd(k, m) = 5)   theta_m < 0.1854   theta_m/2 < 0.0927   X^(-theta/2) at X = 2^28: 0.165
+    m = 225: rate 0.892191 at k = 195 (gcd(k, m) = 15)   theta_m < 0.1238   theta_m/2 < 0.0619   X^(-theta/2) at X = 2^28: 0.301
+
+(2) blocks B_n: max over residue vectors of |#{(x, y) = w mod m} - 2^(n-1)/m^2| / (2^(n-1)/m^2), and the type shares
+  m = 9   c_d = ['0.888889', '0.098765', '0.012346']   rate 0.8660
+    n = 10: rel. max dev 1.84766   type shares d=1: 0.929688  d=3: 0.070312  d=9: 0.000000
+    n = 12: rel. max dev 1.49170  (decay per digit since n-2: 0.8985)   type shares d=1: 0.876953  d=3: 0.115723  d=9: 0.007324
+    n = 14: rel. max dev 0.86877  (decay per digit since n-2: 0.7632)   type shares d=1: 0.862793  d=3: 0.118530  d=9: 0.018677
+    n = 16: rel. max dev 0.56989  (decay per digit since n-2: 0.8099)   type shares d=1: 0.879150  d=3: 0.109344  d=9: 0.011505
+    n = 18: rel. max dev 0.35606  (decay per digit since n-2: 0.7904)   type shares d=1: 0.897690  d=3: 0.090691  d=9: 0.011620
+    n = 20: rel. max dev 0.33258  (decay per digit since n-2: 0.9665)   type shares d=1: 0.901508  d=3: 0.086794  d=9: 0.011698
+    n = 22: rel. max dev 0.21713  (decay per digit since n-2: 0.8080)   type shares d=1: 0.893561  d=3: 0.096774  d=9: 0.009665
+    n = 24: rel. max dev 0.15705  (decay per digit since n-2: 0.8504)   type shares d=1: 0.885315  d=3: 0.101676  d=9: 0.013008
+    n = 26: rel. max dev 0.11574  (decay per digit since n-2: 0.8585)   type shares d=1: 0.883558  d=3: 0.103484  d=9: 0.012958
+  m = 27   c_d = ['0.888889', '0.098765', '0.010974', '0.001372']   rate 0.8660
+    n = 10: rel. max dev 7.54297   type shares d=1: 0.929688  d=3: 0.070312  d=9: 0.000000  d=27: 0.000000
+    n = 12: rel. max dev 3.98340  (decay per digit since n-2: 0.7267)   type shares d=1: 0.876953  d=3: 0.115723  d=9: 0.006348  d=27: 0.000977
+    n = 14: rel. max dev 2.11462  (decay per digit since n-2: 0.7286)   type shares d=1: 0.862793  d=3: 0.118530  d=9: 0.017090  d=27: 0.001587
+    n = 16: rel. max dev 1.09125  (decay per digit since n-2: 0.7184)   type shares d=1: 0.879150  d=3: 0.109344  d=9: 0.010681  d=27: 0.000824
+    n = 18: rel. max dev 0.62405  (decay per digit since n-2: 0.7562)   type shares d=1: 0.897690  d=3: 0.090691  d=9: 0.010437  d=27: 0.001183
+    n = 20: rel. max dev 0.42244  (decay per digit since n-2: 0.8228)   type shares d=1: 0.901508  d=3: 0.086794  d=9: 0.010313  d=27: 0.001385
+    n = 22: rel. max dev 0.29556  (decay per digit since n-2: 0.8365)   type shares d=1: 0.893561  d=3: 0.096774  d=9: 0.008592  d=27: 0.001073
+    n = 24: rel. max dev 0.24907  (decay per digit since n-2: 0.9180)   type shares d=1: 0.885315  d=3: 0.101676  d=9: 0.011575  d=27: 0.001433
+    n = 26: rel. max dev 0.14661  (decay per digit since n-2: 0.7672)   type shares d=1: 0.883558  d=3: 0.103484  d=9: 0.011505  d=27: 0.001453
+  m = 25   c_d = ['0.960000', '0.038400', '0.001600']   rate 0.8153
+    n = 10: rel. max dev 5.10352   type shares d=1: 0.958984  d=5: 0.039062  d=25: 0.001953
+    n = 12: rel. max dev 2.66211  (decay per digit since n-2: 0.7222)   type shares d=1: 0.967285  d=5: 0.029785  d=25: 0.002930
+    n = 14: rel. max dev 1.05994  (decay per digit since n-2: 0.6310)   type shares d=1: 0.961304  d=5: 0.037720  d=25: 0.000977
+    n = 16: rel. max dev 0.46866  (decay per digit since n-2: 0.6649)   type shares d=1: 0.961090  d=5: 0.037323  d=25: 0.001587
+    n = 18: rel. max dev 0.33038  (decay per digit since n-2: 0.8396)   type shares d=1: 0.959930  d=5: 0.038612  d=25: 0.001457
+    n = 20: rel. max dev 0.19686  (decay per digit since n-2: 0.7719)   type shares d=1: 0.959995  d=5: 0.038469  d=25: 0.001535
+    n = 22: rel. max dev 0.09524  (decay per digit since n-2: 0.6955)   type shares d=1: 0.959854  d=5: 0.038582  d=25: 0.001565
+    n = 24: rel. max dev 0.06163  (decay per digit since n-2: 0.8045)   type shares d=1: 0.959981  d=5: 0.038452  d=25: 0.001567
+    n = 26: rel. max dev 0.04258  (decay per digit since n-2: 0.8312)   type shares d=1: 0.959971  d=5: 0.038403  d=25: 0.001626
+  m = 45   c_d = ['0.853333', '0.094815', '0.035556', '0.011852', '0.003951', '0.000494']   rate 0.8922
+    n = 10: rel. max dev 14.82031   type shares d=1: 0.888672  d=3: 0.070312  d=5: 0.041016  d=9: 0.000000  d=15: 0.000000  d=45: 0.000000
+    n = 12: rel. max dev 7.89893  (decay per digit since n-2: 0.7301)   type shares d=1: 0.844727  d=3: 0.115234  d=5: 0.032227  d=9: 0.007324  d=15: 0.000488  d=45: 0.000000
+    n = 14: rel. max dev 5.67419  (decay per digit since n-2: 0.8476)   type shares d=1: 0.827515  d=3: 0.115601  d=5: 0.035278  d=9: 0.018188  d=15: 0.002930  d=45: 0.000488
+    n = 16: rel. max dev 3.57306  (decay per digit since n-2: 0.7935)   type shares d=1: 0.842529  d=3: 0.107086  d=5: 0.036621  d=9: 0.011475  d=15: 0.002258  d=45: 0.000031
+    n = 18: rel. max dev 1.81181  (decay per digit since n-2: 0.7121)   type shares d=1: 0.861000  d=3: 0.087601  d=5: 0.036690  d=9: 0.011330  d=15: 0.003090  d=45: 0.000290
+    n = 20: rel. max dev 1.44489  (decay per digit since n-2: 0.8930)   type shares d=1: 0.864208  d=3: 0.084459  d=5: 0.037300  d=9: 0.011328  d=15: 0.002335  d=45: 0.000370
+    n = 22: rel. max dev 0.86456  (decay per digit since n-2: 0.7735)   type shares d=1: 0.857133  d=3: 0.093357  d=5: 0.036428  d=9: 0.009364  d=15: 0.003417  d=45: 0.000301
+    n = 24: rel. max dev 0.64489  (decay per digit since n-2: 0.8637)   type shares d=1: 0.849021  d=3: 0.098382  d=5: 0.036294  d=9: 0.012578  d=15: 0.003295  d=45: 0.000430
+    n = 26: rel. max dev 0.45437  (decay per digit since n-2: 0.8394)   type shares d=1: 0.847735  d=3: 0.099743  d=5: 0.035823  d=9: 0.012492  d=15: 0.003740  d=45: 0.000465
+  m = 49   c_d = ['0.979592', '0.019992', '0.000416']   rate 0.9320
+    n = 10: rel. max dev 17.75781   type shares d=1: 0.970703  d=7: 0.029297  d=49: 0.000000
+    n = 12: rel. max dev 10.72363  (decay per digit since n-2: 0.7771)   type shares d=1: 0.953613  d=7: 0.045898  d=49: 0.000488
+    n = 14: rel. max dev 5.15491  (decay per digit since n-2: 0.6933)   type shares d=1: 0.952026  d=7: 0.046631  d=49: 0.001343
+    n = 16: rel. max dev 3.03000  (decay per digit since n-2: 0.7667)   type shares d=1: 0.960510  d=7: 0.038940  d=49: 0.000549
+    n = 18: rel. max dev 1.87595  (decay per digit since n-2: 0.7868)   type shares d=1: 0.970856  d=7: 0.028519  d=49: 0.000626
+    n = 20: rel. max dev 1.24856  (decay per digit since n-2: 0.8158)   type shares d=1: 0.978783  d=7: 0.020758  d=49: 0.000460
+    n = 22: rel. max dev 0.81693  (decay per digit since n-2: 0.8089)   type shares d=1: 0.981201  d=7: 0.018423  d=49: 0.000376
+    n = 24: rel. max dev 0.68127  (decay per digit since n-2: 0.9132)   type shares d=1: 0.982805  d=7: 0.016854  d=49: 0.000341
+    n = 26: rel. max dev 0.46610  (decay per digit since n-2: 0.8271)   type shares d=1: 0.984802  d=7: 0.014892  d=49: 0.000306

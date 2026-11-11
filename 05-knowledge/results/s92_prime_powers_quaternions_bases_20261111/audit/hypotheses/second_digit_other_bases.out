@@ -1,0 +1,234 @@
+# second_digit.py  b = 2  X = 2^20  (auditor hypotheses; own code)   1.1 s
+sheet 0  #T = 2398262  b*share by digit: 1.0015 0.9985   max|b*share - 1| = 0.00154   (Poisson scale sqrt(b/#T) = 0.00091)
+     smaller state h = 0: #T =    603321  max|b*share - 1| = 0.00158   b*share: 1.0016 0.9984
+     smaller state h = 1: #T =    201115  max|b*share - 1| = 0.00168   b*share: 0.9983 1.0017
+     smaller state h = 2: #T =    120653  max|b*share - 1| = 0.00089   b*share: 0.9991 1.0009
+     smaller state h = 3: #T =     97981  max|b*share - 1| = 0.00299   b*share: 1.0030 0.9970
+     smaller state h = 4: #T =     67025  max|b*share - 1| = 0.00058   b*share: 0.9994 1.0006
+     smaller state h = 5: #T =     59387  max|b*share - 1| = 0.00136   b*share: 0.9986 1.0014
+sheet 1  #T = 2995785  b*share by digit: 1.0011 0.9989   max|b*share - 1| = 0.00111   (Poisson scale sqrt(b/#T) = 0.00082)
+     smaller state h = 0: #T =    850343  max|b*share - 1| = 0.00041   b*share: 0.9996 1.0004
+     smaller state h = 1: #T =    283394  max|b*share - 1| = 0.00486   b*share: 1.0049 0.9951
+     smaller state h = 2: #T =    169965  max|b*share - 1| = 0.00196   b*share: 0.9980 1.0020
+     smaller state h = 3: #T =    127980  max|b*share - 1| = 0.00005   b*share: 1.0000 1.0000
+     smaller state h = 4: #T =     94345  max|b*share - 1| = 0.00039   b*share: 0.9996 1.0004
+     smaller state h = 5: #T =     79759  max|b*share - 1| = 0.00099   b*share: 0.9990 1.0010
+# second_digit.py  b = 2  X = 2^24  (auditor hypotheses; own code)   2.9 s
+sheet 0  #T = 45886662  b*share by digit: 1.0005 0.9995   max|b*share - 1| = 0.00051   (Poisson scale sqrt(b/#T) = 0.00021)
+     smaller state h = 0: #T =   9653035  max|b*share - 1| = 0.00090   b*share: 1.0009 0.9991
+     smaller state h = 1: #T =   3217657  max|b*share - 1| = 0.00097   b*share: 1.0010 0.9990
+     smaller state h = 2: #T =   1930589  max|b*share - 1| = 0.00036   b*share: 1.0004 0.9996
+     smaller state h = 3: #T =   1567759  max|b*share - 1| = 0.00051   b*share: 0.9995 1.0005
+     smaller state h = 4: #T =   1072535  max|b*share - 1| = 0.00182   b*share: 1.0018 0.9982
+     smaller state h = 5: #T =    950293  max|b*share - 1| = 0.00148   b*share: 0.9985 1.0015
+sheet 1  #T = 57818155  b*share by digit: 1.0000 1.0000   max|b*share - 1| = 0.00002   (Poisson scale sqrt(b/#T) = 0.00019)
+     smaller state h = 0: #T =  13605161  max|b*share - 1| = 0.00003   b*share: 1.0000 1.0000
+     smaller state h = 1: #T =   4534970  max|b*share - 1| = 0.00094   b*share: 1.0009 0.9991
+     smaller state h = 2: #T =   2720913  max|b*share - 1| = 0.00106   b*share: 0.9989 1.0011
+     smaller state h = 3: #T =   2049238  max|b*share - 1| = 0.00101   b*share: 0.9990 1.0010
+     smaller state h = 4: #T =   1511521  max|b*share - 1| = 0.00062   b*share: 0.9994 1.0006
+     smaller state h = 5: #T =   1278375  max|b*share - 1| = 0.00025   b*share: 0.9998 1.0002
+# second_digit.py  b = 4  X = 2^20  (auditor hypotheses; own code)   1.1 s
+sheet 0  #T = 913948  b*share by digit: 1.0016 0.9967 1.0017 1.0000   max|b*share - 1| = 0.00332   (Poisson scale sqrt(b/#T) = 0.00209)
+     smaller state h = 0: #T =    301667  max|b*share - 1| = 0.00171   b*share: 1.0009 1.0017 0.9992 0.9983
+     smaller state h = 1: #T =     78567  max|b*share - 1| = 0.01478   b*share: 1.0010 0.9900 0.9942 1.0148
+     smaller state h = 2: #T =     45175  max|b*share - 1| = 0.01175   b*share: 0.9882 1.0092 1.0034 0.9991
+     smaller state h = 3: #T =     38459  max|b*share - 1| = 0.02842   b*share: 0.9873 0.9793 1.0284 1.0049
+     smaller state h = 4: #T =     24403  max|b*share - 1| = 0.02700   b*share: 0.9977 1.0114 0.9730 1.0179
+     smaller state h = 5: #T =     22309  max|b*share - 1| = 0.03599   b*share: 0.9939 0.9650 1.0360 1.0052
+sheet 1  #T = 1287464  b*share by digit: 1.0006 0.9986 0.9966 1.0042   max|b*share - 1| = 0.00415   (Poisson scale sqrt(b/#T) = 0.00176)
+     smaller state h = 0: #T =    425174  max|b*share - 1| = 0.00642   b*share: 0.9995 0.9989 0.9952 1.0064
+     smaller state h = 1: #T =    127079  max|b*share - 1| = 0.00248   b*share: 0.9975 1.0024 1.0021 0.9980
+     smaller state h = 2: #T =     74702  max|b*share - 1| = 0.00651   b*share: 0.9935 1.0004 1.0033 1.0028
+     smaller state h = 3: #T =     57739  max|b*share - 1| = 0.00303   b*share: 0.9970 0.9996 1.0011 1.0023
+     smaller state h = 4: #T =     40882  max|b*share - 1| = 0.02441   b*share: 1.0058 1.0016 0.9756 1.0170
+     smaller state h = 5: #T =     35152  max|b*share - 1| = 0.01343   b*share: 0.9891 1.0076 0.9899 1.0134
+# second_digit.py  b = 4  X = 2^24  (auditor hypotheses; own code)   1.6 s
+sheet 0  #T = 17415766  b*share by digit: 1.0003 0.9994 1.0007 0.9996   max|b*share - 1| = 0.00067   (Poisson scale sqrt(b/#T) = 0.00048)
+     smaller state h = 0: #T =   4826525  max|b*share - 1| = 0.00238   b*share: 1.0012 1.0004 1.0007 0.9976
+     smaller state h = 1: #T =   1257275  max|b*share - 1| = 0.00652   b*share: 1.0027 0.9935 1.0003 1.0035
+     smaller state h = 2: #T =    722847  max|b*share - 1| = 0.00252   b*share: 0.9998 0.9987 1.0025 0.9990
+     smaller state h = 3: #T =    615589  max|b*share - 1| = 0.00651   b*share: 0.9935 0.9981 1.0041 1.0043
+     smaller state h = 4: #T =    390701  max|b*share - 1| = 0.00171   b*share: 1.0015 0.9983 0.9995 1.0007
+     smaller state h = 5: #T =    357027  max|b*share - 1| = 0.00611   b*share: 0.9939 0.9969 1.0040 1.0052
+sheet 1  #T = 24947862  b*share by digit: 1.0009 0.9993 0.9996 1.0001   max|b*share - 1| = 0.00094   (Poisson scale sqrt(b/#T) = 0.00040)
+     smaller state h = 0: #T =   6802608  max|b*share - 1| = 0.00129   b*share: 1.0006 0.9995 0.9987 1.0012
+     smaller state h = 1: #T =   2033795  max|b*share - 1| = 0.00230   b*share: 1.0003 0.9999 1.0021 0.9977
+     smaller state h = 2: #T =   1196406  max|b*share - 1| = 0.00069   b*share: 1.0003 1.0007 0.9993 0.9996
+     smaller state h = 3: #T =    925311  max|b*share - 1| = 0.00470   b*share: 0.9953 0.9999 1.0039 1.0009
+     smaller state h = 4: #T =    656100  max|b*share - 1| = 0.00582   b*share: 1.0021 0.9977 0.9944 1.0058
+     smaller state h = 5: #T =    564868  max|b*share - 1| = 0.00772   b*share: 1.0035 1.0022 0.9923 1.0020
+# second_digit.py  b = 5  X = 2^20  (auditor hypotheses; own code)   1.1 s
+sheet 0  #T = 662258  b*share by digit: 1.0054 1.0001 0.9958 0.9963 1.0024   max|b*share - 1| = 0.00545   (Poisson scale sqrt(b/#T) = 0.00275)
+     smaller state h = 0: #T =    241309  max|b*share - 1| = 0.00389   b*share: 1.0026 1.0029 0.9999 0.9961 0.9985
+     smaller state h = 1: #T =     56697  max|b*share - 1| = 0.01212   b*share: 1.0083 0.9933 0.9879 0.9986 1.0119
+     smaller state h = 2: #T =     32123  max|b*share - 1| = 0.02668   b*share: 1.0267 0.9948 0.9759 0.9881 1.0145
+     smaller state h = 3: #T =     27793  max|b*share - 1| = 0.01608   b*share: 0.9970 1.0049 1.0161 0.9922 0.9898
+     smaller state h = 4: #T =     17197  max|b*share - 1| = 0.03448   b*share: 1.0211 1.0345 1.0077 0.9662 0.9705
+     smaller state h = 5: #T =     15873  max|b*share - 1| = 0.02564   b*share: 1.0256 1.0030 0.9904 0.9882 0.9929
+sheet 1  #T = 971677  b*share by digit: 1.0069 1.0007 0.9946 0.9960 1.0019   max|b*share - 1| = 0.00689   (Poisson scale sqrt(b/#T) = 0.00227)
+     smaller state h = 0: #T =    340092  max|b*share - 1| = 0.01299   b*share: 1.0130 1.0056 0.9919 0.9879 1.0017
+     smaller state h = 1: #T =     96873  max|b*share - 1| = 0.00813   b*share: 0.9995 1.0068 1.0072 0.9947 0.9919
+     smaller state h = 2: #T =     56504  max|b*share - 1| = 0.01497   b*share: 0.9925 0.9920 0.9955 1.0150 1.0051
+     smaller state h = 3: #T =     44111  max|b*share - 1| = 0.01925   b*share: 0.9838 0.9915 1.0030 1.0192 1.0025
+     smaller state h = 4: #T =     30760  max|b*share - 1| = 0.02812   b*share: 1.0281 1.0190 0.9862 0.9785 0.9881
+     smaller state h = 5: #T =     26641  max|b*share - 1| = 0.02868   b*share: 1.0287 0.9932 0.9720 0.9838 1.0223
+# second_digit.py  b = 5  X = 2^24  (auditor hypotheses; own code)   2.1 s
+sheet 0  #T = 12578286  b*share by digit: 1.0011 0.9991 0.9985 1.0001 1.0012   max|b*share - 1| = 0.00154   (Poisson scale sqrt(b/#T) = 0.00063)
+     smaller state h = 0: #T =   3861157  max|b*share - 1| = 0.00076   b*share: 1.0008 1.0004 0.9994 0.9994 1.0001
+     smaller state h = 1: #T =    906977  max|b*share - 1| = 0.00128   b*share: 0.9991 0.9992 0.9995 1.0013 1.0010
+     smaller state h = 2: #T =    513933  max|b*share - 1| = 0.00874   b*share: 1.0062 0.9953 0.9913 0.9990 1.0082
+     smaller state h = 3: #T =    444927  max|b*share - 1| = 0.00233   b*share: 1.0013 1.0004 0.9977 0.9984 1.0022
+     smaller state h = 4: #T =    275307  max|b*share - 1| = 0.01192   b*share: 1.0119 1.0038 0.9924 0.9901 1.0018
+     smaller state h = 5: #T =    254163  max|b*share - 1| = 0.00420   b*share: 1.0042 0.9985 0.9964 0.9982 1.0027
+sheet 1  #T = 18838778  b*share by digit: 1.0011 0.9996 0.9984 0.9996 1.0013   max|b*share - 1| = 0.00158   (Poisson scale sqrt(b/#T) = 0.00052)
+     smaller state h = 0: #T =   5442022  max|b*share - 1| = 0.00364   b*share: 1.0034 1.0000 0.9964 0.9982 1.0021
+     smaller state h = 1: #T =   1550463  max|b*share - 1| = 0.00308   b*share: 1.0015 1.0031 0.9994 0.9975 0.9985
+     smaller state h = 2: #T =    905176  max|b*share - 1| = 0.00477   b*share: 0.9952 0.9981 1.0035 1.0042 0.9990
+     smaller state h = 3: #T =    707333  max|b*share - 1| = 0.00304   b*share: 0.9984 1.0015 1.0025 1.0006 0.9970
+     smaller state h = 4: #T =    494020  max|b*share - 1| = 0.00466   b*share: 1.0047 1.0005 0.9969 0.9955 1.0023
+     smaller state h = 5: #T =    428129  max|b*share - 1| = 0.01184   b*share: 1.0058 0.9911 0.9891 1.0022 1.0118
+# second_digit.py  b = 10  X = 2^20  (auditor hypotheses; own code)   1.5 s
+sheet 0  #T = 240801  b*share by digit: 1.0089 0.9930 0.9811 0.9954 1.0112 1.0047 1.0013 1.0040 0.9975 1.0028   max|b*share - 1| = 0.01894   (Poisson scale sqrt(b/#T) = 0.00644)
+     smaller state h = 0: #T =    120665  max|b*share - 1| = 0.01488   b*share: 0.9851 0.9857 0.9960 0.9986 1.0054 1.0132 0.9990 1.0049 1.0099 1.0021
+     smaller state h = 1: #T =     19015  max|b*share - 1| = 0.07547   b*share: 1.0213 0.9961 0.9245 0.9666 1.0076 1.0423 0.9871 1.0045 0.9982 1.0518
+     smaller state h = 2: #T =     10325  max|b*share - 1| = 0.07022   b*share: 1.0034 1.0692 0.9298 0.9976 0.9937 1.0092 0.9850 1.0479 0.9840 0.9801
+     smaller state h = 3: #T =      9385  max|b*share - 1| = 0.07192   b*share: 1.0719 0.9952 1.0016 0.9611 0.9845 0.9355 0.9888 0.9931 1.0389 1.0293
+     smaller state h = 4: #T =      5385  max|b*share - 1| = 0.18292   b*share: 0.9619 1.1439 1.0362 1.0251 0.9768 1.0288 1.0139 1.1253 0.8709 0.8171
+     smaller state h = 5: #T =      5115  max|b*share - 1| = 0.08895   b*share: 1.0674 0.9775 1.0362 1.0362 1.0088 0.9110 1.0205 0.9423 1.0068 0.9932
+sheet 1  #T = 394717  b*share by digit: 1.0004 1.0086 0.9941 0.9895 1.0014 1.0088 1.0066 1.0061 0.9948 0.9896   max|b*share - 1| = 0.01051   (Poisson scale sqrt(b/#T) = 0.00503)
+     smaller state h = 0: #T =    170029  max|b*share - 1| = 0.01636   b*share: 1.0049 1.0164 0.9938 0.9883 0.9962 1.0102 1.0005 1.0054 0.9948 0.9896
+     smaller state h = 1: #T =     39668  max|b*share - 1| = 0.02944   b*share: 1.0290 1.0152 1.0013 0.9786 0.9864 0.9721 1.0137 1.0290 1.0041 0.9706
+     smaller state h = 2: #T =     22527  max|b*share - 1| = 0.03964   b*share: 0.9668 0.9979 0.9810 1.0228 1.0352 1.0396 1.0059 0.9793 0.9757 0.9957
+     smaller state h = 3: #T =     18204  max|b*share - 1| = 0.05021   b*share: 0.9498 0.9998 1.0201 1.0366 1.0020 0.9657 0.9718 1.0470 1.0316 0.9756
+     smaller state h = 4: #T =     12027  max|b*share - 1| = 0.07758   b*share: 0.9720 1.0044 1.0368 0.9495 0.9795 1.0776 1.0277 0.9811 0.9928 0.9786
+     smaller state h = 5: #T =     10636  max|b*share - 1| = 0.09440   b*share: 0.9900 0.9703 1.0173 0.9853 0.9872 1.0944 1.0568 0.9289 0.9402 1.0295
+sheet 0  digit mod 2: max|2*share - 1| = 0.00000
+sheet 0  digit mod 5: max|5*share - 1| = 0.00748
+sheet 1  digit mod 2: max|2*share - 1| = 0.00051
+sheet 1  digit mod 5: max|5*share - 1| = 0.00783
+# second_digit.py  b = 10  X = 2^24  (auditor hypotheses; own code)   1.5 s
+sheet 0  #T = 4489156  b*share by digit: 1.0035 0.9949 0.9953 0.9992 1.0022 0.9993 1.0007 0.9992 1.0017 1.0040   max|b*share - 1| = 0.00514   (Poisson scale sqrt(b/#T) = 0.00149)
+     smaller state h = 0: #T =   1930593  max|b*share - 1| = 0.00609   b*share: 0.9967 0.9939 0.9979 1.0019 1.0034 1.0006 1.0014 1.0002 1.0025 1.0016
+     smaller state h = 1: #T =    304411  max|b*share - 1| = 0.01468   b*share: 1.0031 0.9919 0.9929 0.9925 0.9996 1.0025 0.9968 0.9959 1.0101 1.0147
+     smaller state h = 2: #T =    165271  max|b*share - 1| = 0.01603   b*share: 1.0160 1.0025 0.9900 1.0055 0.9978 0.9927 0.9968 1.0050 0.9934 1.0003
+     smaller state h = 3: #T =    150199  max|b*share - 1| = 0.02063   b*share: 1.0156 1.0067 1.0055 0.9947 0.9960 1.0003 0.9906 0.9794 0.9933 1.0181
+     smaller state h = 4: #T =     86343  max|b*share - 1| = 0.05069   b*share: 1.0296 1.0507 1.0027 0.9882 0.9884 1.0041 1.0016 1.0007 0.9595 0.9745
+     smaller state h = 5: #T =     82021  max|b*share - 1| = 0.01376   b*share: 0.9956 0.9990 1.0012 0.9995 1.0056 0.9968 0.9936 1.0051 1.0138 0.9897
+sheet 1  #T = 7634213  b*share by digit: 1.0003 1.0031 0.9973 0.9987 0.9996 1.0034 0.9988 1.0012 0.9986 0.9989   max|b*share - 1| = 0.00340   (Poisson scale sqrt(b/#T) = 0.00114)
+     smaller state h = 0: #T =   2720993  max|b*share - 1| = 0.00548   b*share: 1.0003 1.0033 0.9945 0.9960 1.0004 1.0036 0.9993 1.0031 1.0002 0.9993
+     smaller state h = 1: #T =    635280  max|b*share - 1| = 0.00954   b*share: 1.0075 1.0070 0.9984 0.9916 0.9996 0.9991 1.0064 1.0037 0.9962 0.9905
+     smaller state h = 2: #T =    361463  max|b*share - 1| = 0.01864   b*share: 0.9935 0.9939 0.9960 1.0186 1.0024 1.0003 0.9940 1.0051 0.9952 1.0010
+     smaller state h = 3: #T =    292708  max|b*share - 1| = 0.02053   b*share: 0.9882 1.0160 1.0145 1.0032 0.9795 0.9953 0.9938 1.0084 1.0038 0.9973
+     smaller state h = 4: #T =    194177  max|b*share - 1| = 0.01171   b*share: 1.0067 1.0003 0.9927 0.9950 0.9906 1.0052 1.0042 1.0011 0.9925 1.0117
+     smaller state h = 5: #T =    172034  max|b*share - 1| = 0.02154   b*share: 0.9992 0.9982 0.9929 0.9953 1.0027 1.0215 0.9959 0.9856 0.9935 1.0152
+sheet 0  digit mod 2: max|2*share - 1| = 0.00068
+sheet 0  digit mod 5: max|5*share - 1| = 0.00315
+sheet 1  digit mod 2: max|2*share - 1| = 0.00108
+sheet 1  digit mod 5: max|5*share - 1| = 0.00184
+# second_digit.py  b = 9  X = 2^20  (auditor hypotheses; own code)   0.9 s
+sheet 0  #T = 280734  b*share by digit: 0.9649 1.0955 0.9822 0.8917 1.0672 1.0731 0.8496 1.0802 0.9955   max|b*share - 1| = 0.15038   (Poisson scale sqrt(b/#T) = 0.00566)
+     smaller state h = 0: #T =    134061  max|b*share - 1| = 0.19520   b*share: 0.9530 1.0645 0.9932 0.9305 1.0223 1.1148 0.8048 1.0857 1.0313
+     smaller state h = 1: #T =     22613  max|b*share - 1| = 0.15544   b*share: 0.9146 1.1255 1.0467 0.8446 1.0786 0.9791 1.0050 1.1423 0.8637
+     smaller state h = 2: #T =     12345  max|b*share - 1| = 0.19125   b*share: 0.9303 1.1913 0.8588 0.9098 1.1329 1.0250 0.8661 1.0068 1.0790
+     smaller state h = 3: #T =     11155  max|b*share - 1| = 0.25773   b*share: 0.9214 1.2401 0.9069 0.8827 1.0957 1.1086 0.7423 1.0472 1.0553
+     smaller state h = 4: #T =      6467  max|b*share - 1| = 0.34730   b*share: 0.9018 1.1412 1.1189 0.6527 1.1718 1.0438 0.9603 0.9129 1.0966
+     smaller state h = 5: #T =      6119  max|b*share - 1| = 0.18810   b*share: 1.1502 1.1472 0.8354 1.0149 1.0384 0.9663 1.0355 1.0002 0.8119
+sheet 1  #T = 453670  b*share by digit: 1.0401 1.0539 0.9040 1.0245 1.0941 0.8744 1.0257 1.0730 0.9103   max|b*share - 1| = 0.12563   (Poisson scale sqrt(b/#T) = 0.00445)
+     smaller state h = 0: #T =    188929  max|b*share - 1| = 0.10457   b*share: 1.0096 1.0755 0.8954 1.0130 1.0921 0.9381 0.9514 1.0789 0.9460
+     smaller state h = 1: #T =     45664  max|b*share - 1| = 0.22425   b*share: 1.1254 0.9748 0.9914 1.0414 1.0686 0.7758 1.0604 1.1293 0.8329
+     smaller state h = 2: #T =     26043  max|b*share - 1| = 0.20931   b*share: 1.0298 1.0188 0.8774 1.0492 1.1812 0.7907 1.0596 1.0837 0.9096
+     smaller state h = 3: #T =     20928  max|b*share - 1| = 0.19151   b*share: 1.0063 1.0820 0.8085 1.0459 1.1611 0.8842 1.0244 1.0734 0.9143
+     smaller state h = 4: #T =     13953  max|b*share - 1| = 0.28359   b*share: 0.9727 1.1352 1.0553 0.7740 1.2836 0.7624 1.0862 1.1494 0.7811
+     smaller state h = 5: #T =     12302  max|b*share - 1| = 0.33881   b*share: 1.0996 0.8347 1.0037 1.0389 1.0725 0.8457 1.3388 0.7389 1.0272
+# second_digit.py  b = 9  X = 2^24  (auditor hypotheses; own code)   1.5 s
+sheet 0  #T = 5252092  b*share by digit: 1.0494 0.9798 0.9577 1.0519 1.0195 0.9289 1.0413 1.0160 0.9556   max|b*share - 1| = 0.07112   (Poisson scale sqrt(b/#T) = 0.00131)
+     smaller state h = 0: #T =   2145119  max|b*share - 1| = 0.06986   b*share: 1.0431 0.9910 0.9665 1.0363 1.0204 0.9327 1.0249 1.0549 0.9301
+     smaller state h = 1: #T =    362009  max|b*share - 1| = 0.07670   b*share: 1.0676 0.9970 0.9233 1.0696 0.9984 0.9700 1.0630 0.9261 0.9850
+     smaller state h = 2: #T =    197725  max|b*share - 1| = 0.13079   b*share: 1.0453 0.9619 0.9625 1.0932 1.0111 0.8692 1.0870 1.0119 0.9579
+     smaller state h = 3: #T =    178463  max|b*share - 1| = 0.12059   b*share: 1.0206 1.0068 0.9201 1.0719 1.0333 0.8794 1.0848 1.0188 0.9643
+     smaller state h = 4: #T =    103671  max|b*share - 1| = 0.15826   b*share: 1.0070 1.0458 0.8924 1.0313 1.1147 0.8417 1.0899 0.9690 1.0082
+     smaller state h = 5: #T =     98087  max|b*share - 1| = 0.15934   b*share: 1.0967 0.8407 1.0568 1.0412 0.9577 1.0446 0.9820 0.9214 1.0589
+sheet 1  #T = 8781227  b*share by digit: 1.0412 0.9445 1.0200 1.0447 0.9270 1.0237 1.0344 0.9563 1.0083   max|b*share - 1| = 0.07303   (Poisson scale sqrt(b/#T) = 0.00101)
+     smaller state h = 0: #T =   3023353  max|b*share - 1| = 0.06454   b*share: 1.0575 0.9465 0.9965 1.0645 0.9367 1.0035 1.0218 0.9991 0.9739
+     smaller state h = 1: #T =    731306  max|b*share - 1| = 0.07901   b*share: 1.0372 0.9576 1.0680 0.9797 0.9236 1.0458 1.0493 0.9210 1.0178
+     smaller state h = 2: #T =    417737  max|b*share - 1| = 0.12481   b*share: 1.0296 0.9480 1.0182 1.0812 0.8752 1.0423 1.0660 0.9301 1.0096
+     smaller state h = 3: #T =    336386  max|b*share - 1| = 0.11858   b*share: 1.0778 0.8814 1.0422 1.0691 0.9067 1.0293 1.0366 0.9617 0.9952
+     smaller state h = 4: #T =    224961  max|b*share - 1| = 0.13964   b*share: 1.1048 0.9241 0.9847 1.0081 1.0232 0.9652 1.1396 0.8666 0.9836
+     smaller state h = 5: #T =    198648  max|b*share - 1| = 0.14933   b*share: 0.8688 0.9575 1.0967 0.9578 0.9957 1.0388 0.9642 0.9711 1.1493
+# second_digit.py  b = 7  X = 2^20  (auditor hypotheses; own code)   1.1 s
+sheet 0  #T = 405303  b*share by digit: 0.9952 0.9119 1.0753 1.0529 0.8996 1.0275 1.0376   max|b*share - 1| = 0.10040   (Poisson scale sqrt(b/#T) = 0.00416)
+     smaller state h = 0: #T =    172379  max|b*share - 1| = 0.33354   b*share: 0.9123 0.7426 1.2464 1.1450 0.6665 1.0878 1.1995
+     smaller state h = 1: #T =     33831  max|b*share - 1| = 0.38941   b*share: 1.2588 1.2278 0.7097 0.8835 1.2572 1.0523 0.6106
+     smaller state h = 2: #T =     18773  max|b*share - 1| = 0.26171   b*share: 0.7987 1.2104 1.1436 0.7383 1.1253 1.1216 0.8621
+     smaller state h = 3: #T =     16637  max|b*share - 1| = 0.38571   b*share: 1.1996 0.9610 0.6833 1.2850 1.2118 0.6143 1.0451
+     smaller state h = 4: #T =      9917  max|b*share - 1| = 0.38590   b*share: 0.6889 1.0418 1.2240 0.9868 0.6141 1.3002 1.1442
+     smaller state h = 5: #T =      9285  max|b*share - 1| = 0.24836   b*share: 1.1399 0.8745 0.9997 1.1082 1.0404 0.7516 1.0856
+sheet 1  #T = 630253  b*share by digit: 0.9958 0.9540 1.0450 1.0095 0.9452 1.0116 1.0389   max|b*share - 1| = 0.05478   (Poisson scale sqrt(b/#T) = 0.00333)
+     smaller state h = 0: #T =    242946  max|b*share - 1| = 0.19237   b*share: 0.9547 0.8273 1.1554 1.0973 0.8076 0.9821 1.1756
+     smaller state h = 1: #T =     63377  max|b*share - 1| = 0.36281   b*share: 1.1041 1.1997 0.9508 0.6591 1.2723 1.1770 0.6372
+     smaller state h = 2: #T =     36513  max|b*share - 1| = 0.41988   b*share: 0.5801 1.1236 1.2243 0.8907 0.6706 1.3209 1.1898
+     smaller state h = 3: #T =     28992  max|b*share - 1| = 0.44854   b*share: 1.2893 1.1681 0.5515 1.1908 1.2265 0.8393 0.7345
+     smaller state h = 4: #T =     19717  max|b*share - 1| = 0.18507   b*share: 1.1155 0.8187 1.0083 1.1236 0.9025 0.8464 1.1851
+     smaller state h = 5: #T =     17231  max|b*share - 1| = 0.36057   b*share: 1.1537 0.6394 1.1322 1.1643 0.7946 0.8572 1.2585
+# second_digit.py  b = 7  X = 2^24  (auditor hypotheses; own code)   1.2 s
+sheet 0  #T = 7641132  b*share by digit: 1.0287 0.9344 1.0272 1.0305 0.9785 0.9599 1.0409   max|b*share - 1| = 0.06563   (Poisson scale sqrt(b/#T) = 0.00096)
+     smaller state h = 0: #T =   2758027  max|b*share - 1| = 0.25220   b*share: 1.0750 0.7478 1.0935 1.1642 0.8729 0.8609 1.1858
+     smaller state h = 1: #T =    541653  max|b*share - 1| = 0.27893   b*share: 0.9939 1.2014 0.9965 0.7211 1.1955 1.1586 0.7329
+     smaller state h = 2: #T =    300391  max|b*share - 1| = 0.20350   b*share: 0.7965 1.0903 1.1408 0.8877 0.8846 1.1472 1.0530
+     smaller state h = 3: #T =    266441  max|b*share - 1| = 0.30331   b*share: 1.2100 1.1175 0.6967 1.0903 1.1765 0.9205 0.7885
+     smaller state h = 4: #T =    158869  max|b*share - 1| = 0.27598   b*share: 0.8931 0.7934 1.2158 1.0958 0.7240 1.0814 1.1964
+     smaller state h = 5: #T =    148819  max|b*share - 1| = 0.15738   b*share: 1.1349 1.0047 0.8426 1.0667 1.0985 0.8710 0.9816
+sheet 1  #T = 12217729  b*share by digit: 1.0072 0.9668 1.0136 1.0147 0.9917 0.9838 1.0222   max|b*share - 1| = 0.03318   (Poisson scale sqrt(b/#T) = 0.00076)
+     smaller state h = 0: #T =   3887154  max|b*share - 1| = 0.15452   b*share: 1.0652 0.8455 1.0262 1.1167 0.9349 0.9081 1.1034
+     smaller state h = 1: #T =   1015357  max|b*share - 1| = 0.27337   b*share: 0.8108 1.2091 1.0978 0.7266 1.0936 1.1749 0.8872
+     smaller state h = 2: #T =    585539  max|b*share - 1| = 0.32080   b*share: 0.8404 0.8389 1.2224 1.0958 0.6792 1.1343 1.1890
+     smaller state h = 3: #T =    465304  max|b*share - 1| = 0.31860   b*share: 1.1606 1.1824 0.8173 0.8690 1.2143 1.0751 0.6814
+     smaller state h = 4: #T =    317155  max|b*share - 1| = 0.15059   b*share: 1.1267 0.9020 0.9177 1.1062 1.0653 0.8494 1.0326
+     smaller state h = 5: #T =    277759  max|b*share - 1| = 0.25794   b*share: 1.1361 0.8218 0.9154 1.1952 1.0271 0.7421 1.1623
+# second_digit.py  b = 12  X = 2^20  (auditor hypotheses; own code)   1.0 s
+sheet 0  #T = 185118  b*share by digit: 0.8850 1.0678 1.0483 0.9088 1.0877 1.0474 0.8834 1.0495 1.0236 0.8902 1.0615 1.0469   max|b*share - 1| = 0.11659   (Poisson scale sqrt(b/#T) = 0.00805)
+     smaller state h = 0: #T =    100559  max|b*share - 1| = 0.10226   b*share: 0.8977 1.0525 1.0544 0.9193 1.0573 1.0585 0.9048 1.0186 1.0308 0.9227 1.0370 1.0463
+     smaller state h = 1: #T =     14017  max|b*share - 1| = 0.17286   b*share: 0.8869 1.1078 0.9314 0.8989 1.1215 1.0530 0.8552 1.1729 0.9897 0.8356 1.0992 1.0479
+     smaller state h = 2: #T =      7525  max|b*share - 1| = 0.20585   b*share: 0.7942 1.1195 1.0684 0.9632 1.1338 0.9887 0.7973 1.1067 1.0684 0.8579 1.0429 1.0589
+     smaller state h = 3: #T =      6913  max|b*share - 1| = 0.19109   b*share: 0.8089 1.0693 1.1179 0.8089 1.0919 1.0207 0.8297 1.0693 1.0971 0.8193 1.1804 1.0866
+     smaller state h = 4: #T =      3907  max|b*share - 1| = 0.33043   b*share: 0.8324 1.1610 1.1856 0.9583 0.9583 1.2408 0.7310 0.9091 1.1549 0.6696 1.0074 1.1917
+     smaller state h = 5: #T =      3727  max|b*share - 1| = 0.25302   b*share: 0.9595 1.1655 0.9273 0.9788 1.1849 0.7856 1.1140 1.1655 0.9369 1.0174 1.0174 0.7470
+sheet 1  #T = 309884  b*share by digit: 0.9987 1.1045 0.9016 0.9891 1.1067 0.8979 0.9940 1.0974 0.9027 1.0001 1.1046 0.9026   max|b*share - 1| = 0.10666   (Poisson scale sqrt(b/#T) = 0.00622)
+     smaller state h = 0: #T =    141687  max|b*share - 1| = 0.10864   b*share: 0.9597 1.1080 0.9324 0.9631 1.1086 0.9260 0.9476 1.1017 0.9373 0.9701 1.1015 0.9438
+     smaller state h = 1: #T =     30940  max|b*share - 1| = 0.18048   b*share: 1.0875 1.0945 0.8789 1.0208 1.1054 0.8672 1.0464 1.1123 0.8195 1.0402 1.1007 0.8265
+     smaller state h = 2: #T =     17442  max|b*share - 1| = 0.18335   b*share: 0.9983 1.1434 0.8834 1.0127 1.1159 0.8786 1.0189 1.0898 0.8166 1.0045 1.1448 0.8930
+     smaller state h = 3: #T =     14229  max|b*share - 1| = 0.17900   b*share: 0.9142 1.1250 0.9108 0.9749 1.1048 0.8391 1.0500 1.1790 0.8965 0.9766 1.1385 0.8906
+     smaller state h = 4: #T =      9273  max|b*share - 1| = 0.28632   b*share: 0.8826 1.1957 0.8942 0.8981 1.2863 0.9382 0.8619 1.1854 0.9279 0.8877 1.2113 0.8308
+     smaller state h = 5: #T =      8234  max|b*share - 1| = 0.21982   b*share: 1.1980 0.8861 0.8132 1.1222 0.9881 0.9123 1.1630 0.8773 0.9560 1.2198 0.9429 0.9211
+sheet 0  digit mod 2: max|2*share - 1| = 0.00176
+sheet 0  digit mod 3: max|3*share - 1| = 0.10816
+sheet 0  digit mod 4: max|4*share - 1| = 0.00226
+sheet 0  digit mod 6: max|6*share - 1| = 0.11581
+sheet 1  digit mod 2: max|2*share - 1| = 0.00137
+sheet 1  digit mod 3: max|3*share - 1| = 0.10330
+sheet 1  digit mod 4: max|4*share - 1| = 0.00361
+sheet 1  digit mod 6: max|6*share - 1| = 0.10563
+# second_digit.py  b = 12  X = 2^24  (auditor hypotheses; own code)   1.3 s
+sheet 0  #T = 3425633  b*share by digit: 1.0400 1.0205 0.9484 1.0376 1.0198 0.9358 1.0410 1.0149 0.9426 1.0397 1.0151 0.9446   max|b*share - 1| = 0.06422   (Poisson scale sqrt(b/#T) = 0.00187)
+     smaller state h = 0: #T =   1608849  max|b*share - 1| = 0.05175   b*share: 1.0226 1.0205 0.9559 1.0231 1.0252 0.9482 1.0288 1.0194 0.9508 1.0274 1.0219 0.9560
+     smaller state h = 1: #T =    224241  max|b*share - 1| = 0.07937   b*share: 1.0682 1.0008 0.9312 1.0794 0.9976 0.9378 1.0749 0.9943 0.9383 1.0523 0.9814 0.9437
+     smaller state h = 2: #T =    120561  max|b*share - 1| = 0.12549   b*share: 1.0608 1.0547 0.9111 1.0670 1.0130 0.8745 1.0800 1.0346 0.9076 1.0831 1.0125 0.9012
+     smaller state h = 3: #T =    110783  max|b*share - 1| = 0.11914   b*share: 1.0247 1.0399 0.9337 1.0438 1.0549 0.8809 1.0566 1.0462 0.9038 1.0587 1.0440 0.9129
+     smaller state h = 4: #T =     62629  max|b*share - 1| = 0.11862   b*share: 1.0092 1.1025 0.9186 1.0167 1.0829 0.9074 1.0201 1.0669 0.8814 1.0155 1.0967 0.8821
+     smaller state h = 5: #T =     59887  max|b*share - 1| = 0.13838   b*share: 1.0804 0.9157 1.0644 1.0668 0.8909 0.9935 1.1005 0.8777 1.0013 1.0756 0.8616 1.0716
+sheet 1  #T = 5981091  b*share by digit: 1.0563 0.9454 0.9949 1.0609 0.9457 0.9966 1.0570 0.9447 0.9953 1.0616 0.9469 0.9947   max|b*share - 1| = 0.06158   (Poisson scale sqrt(b/#T) = 0.00142)
+     smaller state h = 0: #T =   2267525  max|b*share - 1| = 0.06792   b*share: 1.0580 0.9676 0.9707 1.0679 0.9636 0.9738 1.0589 0.9636 0.9744 1.0610 0.9662 0.9743
+     smaller state h = 1: #T =    495762  max|b*share - 1| = 0.08078   b*share: 1.0512 0.9286 1.0291 1.0296 0.9292 1.0320 1.0555 0.9192 1.0267 1.0518 0.9227 1.0244
+     smaller state h = 2: #T =    280178  max|b*share - 1| = 0.08659   b*share: 1.0673 0.9305 0.9926 1.0764 0.9160 1.0108 1.0820 0.9244 0.9940 1.0866 0.9214 0.9979
+     smaller state h = 3: #T =    229049  max|b*share - 1| = 0.09329   b*share: 1.0720 0.9215 0.9904 1.0933 0.9220 0.9998 1.0927 0.9328 0.9790 1.0852 0.9227 0.9886
+     smaller state h = 4: #T =    149853  max|b*share - 1| = 0.10765   b*share: 1.0841 0.9529 0.9392 1.1076 0.9816 0.9516 1.0844 0.9616 0.9477 1.1020 0.9534 0.9337
+     smaller state h = 5: #T =    133550  max|b*share - 1| = 0.10646   b*share: 0.9548 0.9418 1.1009 0.9393 0.9429 1.1039 0.9424 0.9631 1.1065 0.9588 0.9479 1.0977
+sheet 0  digit mod 2: max|2*share - 1| = 0.00115
+sheet 0  digit mod 3: max|3*share - 1| = 0.05715
+sheet 0  digit mod 4: max|4*share - 1| = 0.00148
+sheet 0  digit mod 6: max|6*share - 1| = 0.05980
+sheet 1  digit mod 2: max|2*share - 1| = 0.00065
+sheet 1  digit mod 3: max|3*share - 1| = 0.05895
+sheet 1  digit mod 4: max|4*share - 1| = 0.00121
+sheet 1  digit mod 6: max|6*share - 1| = 0.06126

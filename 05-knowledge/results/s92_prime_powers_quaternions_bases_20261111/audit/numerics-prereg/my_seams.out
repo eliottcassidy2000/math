@@ -1,0 +1,66 @@
+(i) additive square of the multiplication table modulo odd m equals m^3 L_m(c) (THM-5134 (D), THM-5135 (1)); also with the unit 2
+    m =   9: True
+    m =  15: True
+    m =  21: True
+    m =  25: True
+    m =  27: True
+    m =  33: True
+    m =  35: True
+    m =  45: True
+    m =  49: True
+    m =  63: True
+    m =  75: True
+    m =  81: True
+    m = 105: True
+    m = 121: True
+    m = 125: True
+    m = 135: True
+    m = 147: True
+    m = 175: True
+    m = 225: True
+(ii) class counts of a1 a2 + 2 b1 b2 and of four squares modulo q (THM-5134 (F))
+    q =   9: equal for every class: True
+    q =  27: equal for every class: True
+    q =  81: equal for every class: True
+    q =  25: equal for every class: True
+    q = 125: equal for every class: True
+    q =  49: equal for every class: True
+    q = 121: equal for every class: True
+    q = 169: equal for every class: True
+(iii) THM-5135 (2): sum of 2r squares against the hyperbolic form of rank r, class counts modulo q; expected equal iff r even or p = 1 (mod 4)
+    q =  25: r=1: equal=True (expected True); r=2: equal=True (expected True); r=3: equal=True (expected True); r=4: equal=True (expected True)
+    q =  27: r=1: equal=False (expected False); r=2: equal=True (expected True); r=3: equal=False (expected False); r=4: equal=True (expected True)
+    q =  49: r=1: equal=False (expected False); r=2: equal=True (expected True); r=3: equal=False (expected False); r=4: equal=True (expected True)
+    q = 125: r=1: equal=True (expected True); r=2: equal=True (expected True); r=3: equal=True (expected True); r=4: equal=True (expected True)
+    q = 121: r=1: equal=False (expected False); r=2: equal=True (expected True); r=3: equal=False (expected False); r=4: equal=True (expected True)
+    q = 169: r=1: equal=True (expected True); r=2: equal=True (expected True); r=3: equal=True (expected True); r=4: equal=True (expected True)
+(iv) THM-5135 (1): p^k P(u.v = c) for the rank-r seam, uniform states, against (1 - p^-r) sum_{i<=v} p^(-(r-1) i), v < k
+    p^k =  9, r = 1: True
+    p^k =  9, r = 2: True
+    p^k =  9, r = 3: True
+    p^k =  9, r = 4: True
+    p^k = 27, r = 1: True
+    p^k = 27, r = 2: True
+    p^k = 27, r = 3: True
+    p^k = 27, r = 4: True
+    p^k = 25, r = 1: True
+    p^k = 25, r = 2: True
+    p^k = 25, r = 3: True
+    p^k = 25, r = 4: True
+    p^k = 49, r = 1: True
+    p^k = 49, r = 2: True
+    p^k = 49, r = 3: True
+    p^k = 49, r = 4: True
+    p^k =  8, r = 1: True
+    p^k =  8, r = 2: True
+    p^k =  8, r = 3: True
+    p^k =  8, r = 4: True
+    p^k = 16, r = 1: True
+    p^k = 16, r = 2: True
+    p^k = 16, r = 3: True
+    p^k = 16, r = 4: True
+    p^k = 32, r = 1: True
+    p^k = 32, r = 2: True
+    p^k = 32, r = 3: True
+    p^k = 32, r = 4: True
+ALL MY CHECKS PASSED

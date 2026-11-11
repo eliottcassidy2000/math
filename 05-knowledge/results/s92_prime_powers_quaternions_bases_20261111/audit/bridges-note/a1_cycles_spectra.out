@@ -1,0 +1,115 @@
+=== A1.1 the five known cycles of 3n+1 on Z ===
+cycle of    0: length  1: [0]
+      labels |4n+1|: [1]
+      arcs: 0->0
+cycle of    1: length  3: [1, 4, 2]
+      labels |4n+1|: [5, 17, 9]
+      arcs: 1->4, 4->2, 2->1
+cycle of   -1: length  2: [-1, -2]
+      labels |4n+1|: [3, 7]
+      arcs: -1->-2, -2->-1
+cycle of   -5: length  5: [-5, -14, -7, -20, -10]
+      labels |4n+1|: [19, 55, 27, 79, 39]
+      arcs: -5->-14, -14->-7, -7->-20, -20->-10, -10->-5
+cycle of  -17: length 18: [-17, -50, -25, -74, -37, -110, -55, -164, -82, -41, -122, -61, -182, -91, -272, -136, -68, -34]
+      labels |4n+1|: [67, 199, 99, 295, 147, 439, 219, 655, 327, 163, 487, 243, 727, 363, 1087, 543, 271, 135]
+      arcs: -17->-50, -50->-25, -25->-74, -74->-37, -37->-110, -110->-55, -55->-164, -164->-82, -82->-41, -41->-122, -122->-61, -61->-182, -182->-91, -91->-272, -272->-136, -136->-68, -68->-34, -34->-17
+total arcs: 29  distinct labels: 29
+sorted labels: [1, 3, 5, 7, 9, 17, 19, 27, 39, 55, 67, 79, 99, 135, 147, 163, 199, 219, 243, 271, 295, 327, 363, 439, 487, 543, 655, 727, 1087]
+7 in labels: True  21 in labels: False
+bijection check n = (chi_4(m) m - 1)/4 for odd m < 20001: True ; distinct n: True
+
+=== A1.2 H-spectra of all labelled tournaments, orders 3..7 ===
+order 3: 8 labelled tournaments; spectrum (2 values): [1, 3]
+         as integers n: range [-1, 0], missing []
+         missing odd counts below max: []
+order 4: 64 labelled tournaments; spectrum (3 values): [1, 3, 5]
+         as integers n: range [-1, 1], missing []
+         missing odd counts below max: []
+order 5: 1024 labelled tournaments; spectrum (7 values): [1, 3, 5, 9, 11, 13, 15]
+         as integers n: range [-4, 3], missing [-2]
+         missing odd counts below max: [7]
+order 6: 32768 labelled tournaments; spectrum (19 values): [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+         as integers n: range [-11, 11], missing [-10, -9, -2, 5]
+         missing odd counts below max: [7, 21, 35, 39]
+order 7: 2097152 labelled tournaments; spectrum (77 values): [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 109, 111, 113, 115, 117, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 151, 153, 155, 157, 159, 171, 175, 189]
+         as integers n: range [-44, 47], missing [-42, -41, -30, -27, -16, -2, 5, 37, 40, 41, 42, 43, 44, 45, 46]
+         missing odd counts below max: [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+
+=== A1.3 classes at orders 1..6 ===
+order 1: 1 class, strong 1, self-converse 1
+order 2: 1 classes, strong 0, self-converse 1
+order 3: 2 classes, strong 1, self-converse 2
+  order 3 (odd): self-converse classes with H = 3 mod 4: 1  e.g. [(2, 3)]
+order 4: 4 classes, strong 1, self-converse 2
+    rep     0  H=  1 |Aut|=1 strong=False self-converse=True  converse-rep=    0 scores=(0, 1, 2, 3) c3=0
+    rep     2  H=  3 |Aut|=3 strong=False self-converse=False converse-rep=    5 scores=(1, 1, 1, 3) c3=1
+    rep     5  H=  3 |Aut|=3 strong=False self-converse=False converse-rep=    2 scores=(0, 2, 2, 2) c3=1
+    rep     4  H=  5 |Aut|=1 strong=True  self-converse=True  converse-rep=    4 scores=(1, 1, 2, 2) c3=2
+  order 4 arc-usage profiles (nonzero usages; number of unused arcs):
+    rep   0 H=1 profile [1, 1, 1] unused arcs 3
+    rep   2 H=3 profile [2, 2, 2, 1, 1, 1] unused arcs 0
+    rep   5 H=3 profile [2, 2, 2, 1, 1, 1] unused arcs 0
+    rep   4 H=5 profile [4, 3, 3, 3, 1, 1] unused arcs 0
+  labelled 4-tournaments by (self-converse, H): [((False, 3), 16), ((True, 1), 24), ((True, 5), 24)]
+  order 4: self-converse iff H=1 mod 4 iff n>=0 iff c3 even: True
+  order 4: self-converse classes with H != 1 mod 4: 0 ; non-self-converse classes with H = 1 mod 4: 0
+order 5: 12 classes, strong 6, self-converse 8
+    rep     0  H=  1 |Aut|=1 strong=False self-converse=True  converse-rep=    0 scores=(0, 1, 2, 3, 4) c3=0
+    rep     2  H=  3 |Aut|=3 strong=False self-converse=False converse-rep=   11 scores=(1, 1, 1, 3, 4) c3=1
+    rep     5  H=  3 |Aut|=3 strong=False self-converse=True  converse-rep=    5 scores=(0, 2, 2, 2, 4) c3=1
+    rep    11  H=  3 |Aut|=3 strong=False self-converse=False converse-rep=    2 scores=(0, 1, 3, 3, 3) c3=1
+    rep     4  H=  5 |Aut|=1 strong=False self-converse=False converse-rep=    9 scores=(1, 1, 2, 2, 4) c3=2
+    rep     9  H=  5 |Aut|=1 strong=False self-converse=False converse-rep=    4 scores=(0, 2, 2, 3, 3) c3=2
+    rep     8  H=  9 |Aut|=1 strong=True  self-converse=True  converse-rep=    8 scores=(1, 1, 2, 3, 3) c3=3
+    rep    10  H=  9 |Aut|=1 strong=True  self-converse=True  converse-rep=   10 scores=(1, 1, 2, 3, 3) c3=3
+    rep    12  H= 11 |Aut|=1 strong=True  self-converse=True  converse-rep=   12 scores=(1, 2, 2, 2, 3) c3=4
+    rep    41  H= 13 |Aut|=1 strong=True  self-converse=True  converse-rep=   41 scores=(1, 2, 2, 2, 3) c3=4
+    rep    40  H= 15 |Aut|=3 strong=True  self-converse=True  converse-rep=   40 scores=(1, 2, 2, 2, 3) c3=4
+    rep    76  H= 15 |Aut|=5 strong=True  self-converse=True  converse-rep=   76 scores=(2, 2, 2, 2, 2) c3=5
+  order 5 strong classes: H list [9, 9, 11, 13, 15, 15]  |Aut| list (same order) [1, 1, 1, 1, 3, 5]
+  order 5 strong classes all self-converse: True
+  order 5 non-self-converse classes:  [(2, 3, False, 11), (4, 5, False, 9), (9, 5, False, 4), (11, 3, False, 2)] (rep, H, strong, converse rep)
+  order 5 (odd): self-converse classes with H = 3 mod 4: 4  e.g. [(5, 3), (12, 11), (40, 15), (76, 15)]
+order 6: 56 classes, strong 35, self-converse 12
+  order 6: self-converse classes with H != 1 mod 4: 0 ; non-self-converse classes with H = 1 mod 4: 20
+    examples (rep, H, |Aut|, strong): [(4, 5, 1, False), (8, 9, 1, False), (10, 9, 1, False), (17, 9, 1, False), (19, 5, 1, False), (21, 9, 1, False)]
+
+=== A1.4 generating function 1/(1 - S(x)) ===
+strong classes by order 1..6: [1, 0, 1, 1, 6, 35]
+all classes by order 1..6:    [1, 1, 2, 4, 12, 56]
+1/(1 - S), S truncated at x^5: coefficients orders 1..7: [1, 1, 2, 4, 12, 21, 33]
+1/(1 - S), S truncated at x^6: coefficients orders 1..7: [1, 1, 2, 4, 12, 56, 103]
+
+=== A1.5 witnesses: every label of the five cycles except 7 is a path count ===
+labels needing a direct witness of order >= 8: [7, 163, 199, 271, 439, 487, 543, 727, 1087]
+  label     1 (n =     0): in the exhaustive spectrum of order 1
+  label     3 (n =    -1): in the exhaustive spectrum of order 3
+  label     5 (n =     1): in the exhaustive spectrum of order 4
+  label     7 (n =    -2): not in any spectrum of order <= 7 (THM-1370: never)
+  label     9 (n =     2): in the exhaustive spectrum of order 5
+  label    17 (n =     4): in the exhaustive spectrum of order 6
+  label    19 (n =    -5): in the exhaustive spectrum of order 6
+  label    27 (n =    -7): in the exhaustive spectrum of order 6
+  label    39 (n =   -10): in the exhaustive spectrum of order 7
+  label    55 (n =   -14): in the exhaustive spectrum of order 7
+  label    67 (n =   -17): in the exhaustive spectrum of order 7
+  label    79 (n =   -20): in the exhaustive spectrum of order 7
+  label    99 (n =   -25): in the exhaustive spectrum of order 7
+  label   135 (n =   -34): in the exhaustive spectrum of order 7
+  label   147 (n =   -37): in the exhaustive spectrum of order 7
+  label   163 (n =   -41): explicit tournament of order 8, code 45679171 (bits over pairs i<j lexicographic, bit=1: i->j), H recomputed = 163
+  label   199 (n =   -50): explicit tournament of order 8, code 35762240 (bits over pairs i<j lexicographic, bit=1: i->j), H recomputed = 199
+  label   219 (n =   -55): product 3 * 73 of exhaustive-spectrum values (ordered join)
+  label   243 (n =   -61): product 3 * 81 of exhaustive-spectrum values (ordered join)
+  label   271 (n =   -68): explicit tournament of order 8, code 200115965 (bits over pairs i<j lexicographic, bit=1: i->j), H recomputed = 271
+  label   295 (n =   -74): product 5 * 59 of exhaustive-spectrum values (ordered join)
+  label   327 (n =   -82): product 3 * 109 of exhaustive-spectrum values (ordered join)
+  label   363 (n =   -91): product 3 * 121 of exhaustive-spectrum values (ordered join)
+  label   439 (n =  -110): explicit tournament of order 8, code 75311527 (bits over pairs i<j lexicographic, bit=1: i->j), H recomputed = 439
+  label   487 (n =  -122): explicit tournament of order 8, code 57850153 (bits over pairs i<j lexicographic, bit=1: i->j), H recomputed = 487
+  label   543 (n =  -136): explicit tournament of order 8, code 178474396 (bits over pairs i<j lexicographic, bit=1: i->j), H recomputed = 543
+  label   655 (n =  -164): product 5 * 131 of exhaustive-spectrum values (ordered join)
+  label   727 (n =  -182): explicit tournament of order 9, code 47959728321 (bits over pairs i<j lexicographic, bit=1: i->j), H recomputed = 727
+  label  1087 (n =  -272): explicit tournament of order 9, code 68321211322 (bits over pairs i<j lexicographic, bit=1: i->j), H recomputed = 1087
+ordered join multiplies H (200 random pairs): True

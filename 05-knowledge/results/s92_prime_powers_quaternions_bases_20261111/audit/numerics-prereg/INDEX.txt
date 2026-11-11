@@ -1,0 +1,29 @@
+Auditor numerics-prereg (S92 audit, 2026-11-11): manifest of this folder. Scripts were written before reading the
+session script for the same quantity. Run with: python3 -B <script> (numba cache redirected outside the repository).
+
+OWN CODE
+  aud_common.py            psi table, divisors, L_m, folding of the lcm histogram, remainder of THM-5134 (B), groups
+  bf_census.py             brute-force census of F1 (ordered triples, trivial bounds only)   -> bf_cum_16.json, bf_cum_18.json, bf_win_18_17.json
+  my_census.py             fast census (pairs h1 <= h2, histogram of N mod 3^4 5^3 7^2)       -> my_cum_{16,18,22,24,26,28}.json, my_win_*.json
+  analyze.py               compares a census json with a stored session output (to the printed precision)
+  my_predictor.py          a-priori window prediction re-derived from the text of PREREGISTRATION.md (closed form)
+  eval_prereg.py/.out      P1-P4 re-evaluated from my census and from the stored outputs; power of the tolerances
+  octaves.py/.out          additivity; remainder of (B) at every octave 2^22..2^28; the P4 count for neighbouring sizes;
+                           the table "Numerical support" of THM-5134 (72 entries); first states of each type
+  prior_exposure.py/.out   what the repository already contained about the window and about 2^28 before the registration
+  window_exactness.py/.out exactness flags and class-level remainders on windows (session functions; not printed by the session)
+  fixed_state.py/.out      THM-5134 (A) for fixed small states at 9, 27, 81, 25, 125, 49, X = 2^22..2^28
+  my_series.py, my_series_25_24.out, my_series_21_20.out    multiplicities against sigma(n)/n (HYP-9665 (B), THM-5134 (E))
+  my_every_base.py, my_every_base_24_22.out, my_every_base_digit_{20,22,26,28}.out   base-b census (THM-5134 (H), HYP-9665 (C))
+  check_base_bugs.py/.out  the two enumeration defects of every_base.py (4) and of bridges_exact.py S10, shown with the
+                           session's own functions
+  corrected_every_base.py/.out   every_base (4) repaired (two edits), rows in the session's format next to the stored rows
+  my_seams.py/.out         exact uniform-state identities (THM-5134 (D), (F); THM-5135 (1), (2)), more moduli than the session
+  balanced_states.out      balanced states 1 + b psi = 2h + 1, psi > h/2, densities of the types by index (h < 2^24)
+  fan_primes.out           primes < 200 whose first p-divisible state is the fan (search to 2^24)
+
+RE-RUNS OF THE SESSION SCRIPTS (byte-identical copies in session_copies/)
+  rerun_cum_{18,22,24,26,28}.out, rerun_window_prereg_28_27.out, rerun_window_insample_*.out, rerun_pred_28_27.{json,out},
+  rerun_series_vs_counts_{25_24,21_20}.out, rerun_seam_rank_exact.out, rerun_bridges_exact.out, rerun_every_base.out,
+  rerun_small_tournaments_collatz_lines.out
+  rerun_compare.out        the fourteen stored outputs against the re-runs (identical up to line endings and the timing field)

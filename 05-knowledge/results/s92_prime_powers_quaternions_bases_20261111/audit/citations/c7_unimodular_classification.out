@@ -1,0 +1,18 @@
+q =  3, rank 2:      18 unimodular symmetric matrices; count vectors per discriminant class: {-1: 1, 1: 1}; two classes with different counts: True
+q =  3, rank 3:     468 unimodular symmetric matrices; count vectors per discriminant class: {-1: 1, 1: 1}; two classes with different counts: True
+q =  3, rank 4:   37908 unimodular symmetric matrices; count vectors per discriminant class: {1: 1, -1: 1}; two classes with different counts: True
+q =  5, rank 2:     100 unimodular symmetric matrices; count vectors per discriminant class: {1: 1, -1: 1}; two classes with different counts: True
+q =  5, rank 3:   12400 unimodular symmetric matrices; count vectors per discriminant class: {1: 1, -1: 1}; two classes with different counts: True
+q =  7, rank 2:     294 unimodular symmetric matrices; count vectors per discriminant class: {-1: 1, 1: 1}; two classes with different counts: True
+q =  7, rank 3:  100548 unimodular symmetric matrices; count vectors per discriminant class: {-1: 1, 1: 1}; two classes with different counts: True
+q =  9, rank 2:     486 unimodular symmetric matrices; count vectors per discriminant class: {-1: 1, 1: 1}; two classes with different counts: True
+q = 25, rank 2:   12500 unimodular symmetric matrices; count vectors per discriminant class: {1: 1, -1: 1}; two classes with different counts: True
+q =  9, rank 3:  341172 unimodular symmetric matrices; count vectors per discriminant class: {-1: 1, 1: 1}; two classes with different counts: True
+odd p: class counts depend only on (rank, discriminant class): True
+q = 2, rank 2 (prime 2, forms x^T A x):      4 matrices of odd determinant; distinct count vectors per determinant residue: {1: 2}
+q = 4, rank 2 (prime 2, forms x^T A x):     32 matrices of odd determinant; distinct count vectors per determinant residue: {3: 3, 1: 2}
+q = 8, rank 2 (prime 2, forms x^T A x):    256 matrices of odd determinant; distinct count vectors per determinant residue: {7: 2, 1: 2, 3: 2, 5: 2}
+q = 2, rank 3 (prime 2, forms x^T A x):     28 matrices of odd determinant; distinct count vectors per determinant residue: {1: 1}
+q = 4, rank 3 (prime 2, forms x^T A x):   1792 matrices of odd determinant; distinct count vectors per determinant residue: {3: 2, 1: 2}
+q = 2, rank 4 (prime 2, forms x^T A x):    448 matrices of odd determinant; distinct count vectors per determinant residue: {1: 2}
+ALL CHECKS PASSED

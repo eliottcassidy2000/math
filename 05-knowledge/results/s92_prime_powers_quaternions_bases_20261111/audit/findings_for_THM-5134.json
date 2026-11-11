@@ -1,0 +1,572 @@
+[
+ {
+  "severity": "MAJOR",
+  "where": "THM-5134, 'Numerical support', paragraph '(H), exploratory', sheet-0 sentence; source bridges_exact.py S10 (line 550: size = 1 << 12) and bridges_exact.out lines 141-145",
+  "claim": "\"sheet s = 0, N_b <= 2^22, b = 2, 3, 5, 10: every triple whose smaller state is p-divisible has 2 N_b + b = 0 (mod p) (exact), remainder at most 0.16 (every_base.out, bridges_exact.out S10)\"; the output is headed \"S10 F1 in base beta, sheet s = 0 (N_beta <= 2^22)\" with 2845759 / 1832488 / 985666 / 379472 triples.",
+  "problem": "The S10 census is not the census of N_b <= 2^22. Its psi table has 4096 entries, so only words h1, h2 < 2^12 are enumerated, whereas words up to 1,397,247 occur (b = 2). It contains 27.0 %, 30.4 %, 34.0 %, 36.4 % of the triples with N_b <= 2^22 (complete counts 10,532,579 / 6,030,660 / 2,896,626 / 1,042,874; the first equals the session's own cum_22.out, so the two outputs of the session contradict each other at b = 2). It is a box census, not a by-value one. On the complete census the remainder is 0.167 at b = 2, p = 7, so \"at most 0.16\" is false, and every printed factor belongs to the truncated family (b = 2, p = 3: printed factor 1.107 and F p^2 = 0.58; complete 1.290 and 1.36. p = 7 remainders printed 0.158, 0.069, 0.103, 0.082 for b = 2, 3, 5, 10; complete 0.167, 0.101, 0.078, 0.119). The proved statement (H) is not affected: the exact structure has 0 violations on the complete census and the remainders are of the same order.",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-FH/h3b_session_census_truncation.out (section B: the four printed totals are reproduced exactly by capping the words at 2^12); h3_census_22_sheet0.out in the same folder (complete census; my b = 2 remainders at m = 9, 25, 49 agree with cum_22.out to all printed digits: 0.0348, 0.0042, 0.1816); C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/bridges_exact.py lines 518-570.",
+  "fix": "In bridges_exact.py S10 build psi for every word that can occur (h <= X/(1.5 b); size = 1 << 21 suffices at X = 2^22) and assert that the largest word used is below the table size; re-run. Replace the sentence by: \"sheet s = 0, N_b <= 2^22, b = 2, 3, 5, 10 (10,532,579 / 6,030,660 / 2,896,626 / 1,042,874 triples): every triple whose smaller state is p-divisible has 2 N_b + b = 0 (mod p) (exact), remainder at most 0.17 (at p = 7: 0.167, 0.101, 0.078, 0.119; at most 0.057 at the other primes)\". Record the truncation in the MISTAKES ledger.",
+  "id": "F001",
+  "auditor": "proof-5134-FH"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134, 'Numerical support', paragraph '(H), exploratory', sheet-1 sentence; source every_base.py (4) (lines 135-138 and 220) and every_base.out",
+  "claim": "\"sheet s >= 1, N_b <= 2^24, b = 2, 3, 4, 5, 6, 10, primes 3..13 not dividing b: remainder of the first-order law at most 0.13 (largest at 7, as for b = 2)\"; every_base.out prints 55892593 / 35516685 / 24945520 / 18836356 / 14916908 / 7632149 triples.",
+  "problem": "This census is also incomplete, for two reasons. (i) The q table is cut at h < 2^21 (q32 = q[: 1 << 21]), but words up to 3,354,623 (b = 2) and 2,236,415 (b = 3) occur. (ii) A smaller word h1 is skipped ('continue') when its own diagonal value N_b(h1, h1, s) exceeds X, although N_b(h1, h2, s) <= X is possible for h2 > h1 because psi is not monotone (b = 2, s = 1: N(16,16) = 3267 > N(16,17) = 3201). Complete counts: 57,818,155 / 35,564,915 / 24,947,862 / 18,838,778 / 14,919,260 / 7,634,213, so 3.33 % of the triples are missing at b = 2, 0.14 % at b = 3, 0.01-0.03 % elsewhere; the b = 2 total contradicts cum_24.out (57,818,155). The quoted conclusions survive: on the complete census the largest remainder per base is 0.1326, 0.0666, 0.1246, 0.0423, 0.1049, 0.0599, always at p = 7, and the second-digit statistics of HYP-9665 (C) are unchanged (0.040, 0.052). The docstring of every_base.py also names THM-5135 instead of THM-5134 (H).",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-FH/h3b_session_census_truncation.out (section A: all six printed totals reproduced exactly by 'cap 2^21 + diagonal skip'); h3_census_24_sheet1.out and h3c_second_digit_complete.out in the same folder.",
+  "fix": "In every_base.py pass the full table (q, not q[: 1 << 21]) and delete the 'continue' branch, keeping only the monotone lower-bound break (psi(h) >= (h+1)//2); re-run; the theorem sentence can stay (\"at most 0.13\"), with the corrected triple counts in the output. Correct the docstring to THM-5134 (H).",
+  "id": "F002",
+  "auditor": "proof-5134-FH"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 (H), statement: \"For every odd m prime to b, (A)-(E) hold for N_b with x replaced by X ...\"",
+  "claim": "(E) is asserted for N_b in every base.",
+  "problem": "Overreach for (E). Its second sentence (\"along any sequence of such m whose prime factors exhaust the odd primes it tends to (8/pi^2) sigma(n)/n\") cannot hold when b has an odd prime factor, since m must be prime to b: the product runs over the primes not dividing 2b and the constant changes. The numerical statements of (E) (minimum at 2^k - 1, the values 0.876 at 7 and 1.084 at 21, the sheet weights) are base-2 statements. Also 'x replaced by X' is loose: the role of M is played by X1 X2 + b 2^(s-1) y1 y2 (s >= 1) and 2 X1 X2 + b y1 y2 (s = 0).",
+  "evidence": "THM-5134 lines 96-106 against 137-139. Arithmetic: N_b = 1 (mod b) and 2 N_b + b = 2 (mod b), so the odd parts of N_b and of 2 N_b + b are prime to b.",
+  "fix": "Replace by: \"For every odd m prime to b, (A)-(D) hold for N_b with the value N_b (sheet s >= 1) or 2 N_b + b (sheet 0) in place of M, types by gcd(X(h), y(h), m), the same c_d and L_m. (E) holds with the product over the primes not dividing 2b: with n the odd part of N_b, resp. of 2 N_b + b (it is prime to b), the series is prod_{p not dividing 2b} (1 - p^-2) * sigma(n)/n = (8/pi^2) prod_{p | b, p odd} (1 - p^-2)^-1 * sigma(n)/n, i.e. 9/pi^2 for b = 3, 6 and 25/(3 pi^2) for b = 5, 10.\"",
+  "id": "F003",
+  "auditor": "proof-5134-FH"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134, proof of (H): \"The proofs of (A)-(E) then apply; the weights of (C) are again smooth functions of y and rho\"",
+  "claim": "(H) is typed PROVED; the transfer of (C)-(E) is one sentence.",
+  "problem": "I found no error: every ingredient checks (see 'verified'). But the part for (C)-(E) is a sketch: the base-b weights, the mass constant, the treatment of the additive constant and the dependence of all constants on b are not written, so the reader cannot check 'smooth' or compute kappa and A.",
+  "evidence": "Own derivation, confirmed numerically: C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-FH/h5_kappa_base_b.out (slopes of #T/X against ln X match kappa_sigma(b) to 4 digits for b = 2, 3, 4, 5, 10, both sheets) and h6_first_order_constants.out (census values (D^(p) - #T/p^2)/(2X) at 2^26 against the partial sums of the series with the weights below: b = 3, p = 5: -0.01328 vs -0.0134, -0.01889 vs -0.0195; b = 3, p = 7: +0.0355 vs 0.0352; b = 10, p = 7: +0.00508 vs 0.00496; control b = 2 reproduces the A_p table of THM-5128 (D4)).",
+  "fix": "Add to the proof: \"For the fixed smaller state the region is a x2 + b' y2 <= X - const, a = b X1/2, b' = b 2^(s-1) y1 (b y1/2 for s = 0), const = X1 (1 - b/2) (less b/2 for s = 0); (B4) is uniform in the threshold and holds for all a > 0, b' >= 0, and |const| w <= ln 2 per state. The weight is w_s^b(h) = (2/(b X)) ln((X + 2^s y)/(X/2 + 2^s y)), so w^0_b = (2/(b X)) ln(2 (X + y)/(X + 2y)), w^1_b = (2/(b X)) ln(1 + X/(2y)); since X/y = b rho/2 + (1 - b/2)/y, on a cell with j top and bottom digits the weight varies by O_b(W_0 2^-j), W_0 = O_b(2^(-s-n)), which is the hypothesis of (B4)(iii). #T^b_sigma(X) = kappa_sigma(b) X ln X + O_b(X) with kappa_0(b) = (4/b^2)(l_1 - 2 l_2 + l_3), kappa_1(b) = (4/b^2)(l_2 - l_3), l_j = -Li_2(-b/2^j) (0.09180, 0.13247 for b = 3; 0.01366, 0.02835 for b = 10). All constants depend on b and m.\"",
+  "id": "F004",
+  "auditor": "proof-5134-FH"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 (H), statement and proof: \"the join J(h1, h2, s)\", \"R(h)\", \"it is THM-5070 (2) in the coordinates a(2h) = psi(h)\"",
+  "claim": "The packing polynomial of J(h1, h2, s) is THM-5070 (2) in the present coordinates.",
+  "problem": "True, but neither R(h) nor J(h1, h2, s) is defined in THM-5134 or in the Setting of THM-5128 (only in the docstring of every_base.py), and the stated dictionary a(2h) = psi(h) omits how the padding s enters: it is s trailing ones shared between the two words. A reader of the canon file cannot reconstruct the tournament.",
+  "evidence": "C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/every_base.py lines 11, 40-75; THM-5070 Setting and (2). Dictionary checked by hand and by brute force: C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-FH/h1_packing_bruteforce.out and h1b_session_construction.out (isomorphism by canonical forms, 212 comparisons, orders <= 8).",
+  "fix": "Add: \"R(h): the transitive tournament c_1, ..., c_k (c_i -> c_j for i < j; k the bit length of 2h) with an apex u, u -> c_i iff the i-th binary digit of 2h, most significant first, is 1. J(h1, h2, s): R(h1), then a transitive tournament on s vertices, then the converse of R(h2), every earlier vertex beating every later one except that the second apex beats the first. In THM-5070 (2) this is T(W) (.) B(W') with W = 2^s1 (2 h1 + 1) - 1, W' = 2^s2 (2 h2 + 1) - 1, s1 + s2 = s: a(W) = psi(h1), a(W') = psi(h2), and the bracket equals (2^s y1 y2 - [s = 0])/2.\"",
+  "id": "F005",
+  "auditor": "proof-5134-FH"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134, 'Numerical support', last sentence of the (H) paragraph",
+  "claim": "\"In base 3 the prime 7 is boosted early by the balanced state h = 3 (X = y = 7), in base 5 the prime 13.\"",
+  "problem": "The base-5 state is not balanced: it is h = 6 with X = 26 = 2y, y = 13. The same state h = 3 (y = 7, X = 1 + 2b) is 7-divisible whenever b = 3 (mod 7), so base 10 has the same early boost at 7 (X = 21; F p^2 = 3.28 on sheet 1 at 2^24), which the sentence does not mention.",
+  "evidence": "psi(6) = 5, psi(3) = 2; C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-FH/h3_census_24_sheet1.out (b = 5, p = 13: F p^2 = 3.375; b = 10, p = 7: 3.282; b = 3, p = 7: 3.373).",
+  "fix": "\"In base 3 the prime 7 is boosted early by the balanced state h = 3 (X = y = 7); the same state boosts 7 in base 10 (X = 21 = 3y), and h = 6 (X = 26 = 2y, y = 13) boosts 13 in base 5.\"",
+  "id": "F006",
+  "auditor": "proof-5134-FH"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134, status line for (F) and proof of (F)",
+  "claim": "\"(F): the identification is PROVED (two unimodular quaternary forms of the same discriminant over Z_p, p odd); Jacobi's and Ingham's theorems are CITED.\"",
+  "problem": "The proof also rests on the classification of unimodular quadratic forms over Z_p (p odd) by rank and discriminant, a classical theorem that is typed CITED in THM-5135 and in the README but not in THM-5134's status. Separately, the session's comparison of class counts (seam_rank_exact.out) uses the unit u = 2 only, while (F) is stated for every unit u.",
+  "evidence": "THM-5134 lines 8-9, 213-219; THM-5135 status lines 9-12; seam_rank_exact.out section (F). My enumeration covers every unit for m <= 49: C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-FH/f1_local_counts.out.",
+  "fix": "Add to the status: \"CITED: the classification of unimodular quadratic forms over Z_p, p odd (rank and discriminant modulo squares; Cassels, Rational Quadratic Forms, ch. 8; O'Meara, section 92)\".",
+  "id": "F007",
+  "auditor": "proof-5134-FH"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 (H): \"for b = 3 they are h = 0, 3, 45, 117, 309, 9045, ... (12 below 2^24; FINITE-EXACT)\"; notation X",
+  "claim": "12 balanced states of base 3 below 2^24.",
+  "problem": "Correct. Two additions. (i) The count does not grow to 2^28 and one more state appears below 2^30 (h = 659,903,829); whether the list is infinite is not addressed and should be marked OPEN. (ii) The letter X denotes both the bound (N <= X, T_sigma(X)) and the base-b state X(h) = 1 + b psi(h) in the same statement and proof (\"the ratio X/y\").",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-FH/h4_balanced_states.out.",
+  "fix": "Add \"(12 below 2^28, 13 below 2^30; finiteness OPEN)\" and rename the base-b state, e.g. x_b(h) = 1 + b psi(h).",
+  "id": "F008",
+  "auditor": "proof-5134-FH"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 Remark 3 (line 244-245) and README section 2, last paragraph (line 66-67)",
+  "claim": "\"the divisor d is the type of the smaller state, present with density d^-2 and concentrated on a share d of the classes.\"",
+  "problem": "A share cannot be d >= 1. A type-d triple lies in the classes with d | N - c_sigma, which are a share 1/d of the classes; its density there is multiplied by d. The arithmetic meant is d^-2 * d = 1/d, the term of sigma(n)/n = sum_{d | n} 1/d.",
+  "evidence": "THM-5134 (A)-(B) themselves (image d Z/m of order m/d); c2_local_class_counts.out L3 (m^3 L_m = table square, all odd m <= 201).",
+  "fix": "\"... present with density d^-2 (times prod_{p | m/d} (1 - p^-2)) and concentrated on the share 1/d of the classes with d | N - c_sigma, where its density is therefore multiplied by d: d^-2 * d = 1/d.\" Same sentence in README section 2.",
+  "id": "F011",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "bridges_exact.py S4, lines 255-259 (bridges_exact.out lines 56-57), supporting THM-5134 (F), THM-5135 (3) and README section 9",
+  "claim": "\"ok 240 sigma_3(n) = real density (8 pi^4/3) n^3 times the rank-4 series sigma_3(n)/(zeta(4) n^3) at ALL primes\" and \"ok r_4(n) = real density pi^2 n times (8/pi^2) sigma(n)/n (odd primes), 2-adic density 1, for odd n\"",
+  "problem": "Both checks cannot fail: the first tests the identity (8 pi^4/3)/(pi^4/90) = 240, the second re-tests r_4 = 8 sigma. Neither computes a real density or a 2-adic density; those are asserted in the message strings. The assertions are correct (computed here).",
+  "evidence": "c1_classical_counts.out C7 (d/dn of ball volumes: pi^2 n; (8 pi^4/3) n^3 for E8 with Q = x.x/2 and covolume 1; (pi^4/6) n^3 for Z^8; zeta(4) = pi^4/90); c2_local_class_counts.out L5 (four-square factor at every odd class modulo 2, 4, 8, 16, 32 is exactly 1; by valuation modulo 64: 1, 3/2, 3/4, 3/8, ...); c6_followups.out F5 (Hurwitz order: 2-adic density 3/2 at odd classes, so 2 pi^2 n * 3/2 * (8/pi^2) sigma(n)/n = 24 sigma(n)).",
+  "fix": "Relabel the two lines as 'identity' or replace them by the computations (2-adic class counts of the four-square form at odd classes; numerical derivative of the ball volumes).",
+  "id": "F015",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 (F) (lines 124-128) and status; THM-5135 status and (3)(d); README section 2 item 2 and section 10",
+  "claim": "\"Ingham's (1927; CITED): the number of solutions of a1 a2 + b1 b2 = n in positive integers is sum_{m < n} d(m) d(n - m) ~ (6/pi^2) sigma(n) ln^2 n, with singular series sigma(n)/(zeta(2) n)\"; README: \"A. E. Ingham, J. London Math. Soc. 2 (1927), on sum d(m) d(n - m)\"",
+  "problem": "The credit and the constant are right (Ingham, not Estermann, for the leading asymptotic). The reference is incomplete, and the 'singular series' reading is not Ingham's (his proof is elementary); the expansion with secondary terms is Estermann's. The convergence is slow (relative error of order ln ln n / ln n): at n = 720720 the ratio to the main term is 0.70, at n = 999983 it is 1.17.",
+  "evidence": "sources.txt item 4 (arXiv:2502.08305, eq. (2) and bibliography); c3_ingham_gronwall_constants.out I1 (D(n) = number of positive solutions for n <= 60; ratios to 10^6), I2 (correlation 0.9788 on [20000, 20400), as the note says).",
+  "fix": "Cite in full: \"A. E. Ingham, Some asymptotic formulae in the theory of numbers, J. London Math. Soc. 2 (1927), 202-208: sum_{m < n} d(m) d(n - m) = (6/pi^2) sigma(n) ln^2 n + O(sigma(n) ln n ln ln n). The secondary terms are due to T. Estermann, On the representations of a number as the sum of two products, Proc. London Math. Soc. (2) 31 (1930), 123-133. The Euler-product reading sigma(n)/(zeta(2) n) = prod_p (1 - p^-2) sigma(p^v)/p^v is THM-5135 (1) with r = 2 at every prime.\"",
+  "id": "F017",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 (E) (lines 103-105)",
+  "claim": "\"S has ... minimum 8/pi^2 = 0.8106 (at n = 1: on sheet 1 only N = 1; ...); it is unbounded, of maximal order (4 e^gamma/pi^2) ln ln N (Gronwall's theorem for odd n; CITED).\"",
+  "problem": "The constant is right. Two wording points. (i) Gronwall's theorem (1913) is limsup sigma(n)/(n ln ln n) = e^gamma over all n; for odd n the limsup is e^gamma/2, by the same proof with the Mertens product without the prime 2, and that is what gives (8/pi^2)(e^gamma/2) = 4 e^gamma/pi^2 = 0.7218. (ii) Sheet 1 has no triple with N = 1 (N >= 3 there), so over the values of that sheet 8/pi^2 is an infimum (approached along primes), not a minimum.",
+  "evidence": "c3_ingham_gronwall_constants.out G1 (prod_{2 < p <= x} (1 - 1/p)^-1 / ln x -> 0.8906 = e^gamma/2; odd primorial-type n: S/ln ln n = 0.7156, 0.7192, 0.7210, 0.7216, 0.7218; record ratios over odd n <= 3*10^6 decreasing 1.030, 0.996, 0.967, 0.942), G2 (mean of S over odd N -> 1 on both sheets); sources.txt item 6.",
+  "fix": "\"... of maximal order (4 e^gamma/pi^2) ln ln N: over odd n, limsup sigma(n)/(n ln ln n) = e^gamma/2 (Gronwall's theorem, Trans. Amer. Math. Soc. 14 (1913), 113-122, with the prime 2 removed from the Mertens product). As a function of odd N, S_1 >= 8/pi^2 with equality only at N = 1, which is not a value of sheet 1 (infimum); S_0 = 8/pi^2 exactly when N + 1 is a power of 2.\"",
+  "id": "F018",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "README section 5, first paragraph (lines 139-143); THM-5134 (H) 'Tao's digit condition'",
+  "claim": "\"It is the money-plant puzzle (The Guardian, 26 October 2026), as recorded by Session266 (...; the newspaper page could not be fetched from here): C_t = a t^2 + b t + c, and 100 a + 10 b + c = 427 with digits gives (4, 2, 7).\"",
+  "problem": "No error. Confirmed independently (the Guardian's own pages are blocked here too; two syndicated copies were read). The note gives neither the title nor the setter, and the identification with 'Tao's toy example' is an inference that the attribution makes safe: the puzzle was set by Terence Tao.",
+  "evidence": "sources.txt item 13: 'Can you solve it? A magical melody from the Mozart of math' and 'Did you solve it? ...', Alex Bellos, The Guardian, Monday 26 October 2026; set by Terence Tao (linked to his book Six Maths Essentials); heading 'The magic money plant'; regular plant 1 coin a day, mother plant 1 coin and 2 seeds a day, a seed is a regular plant the next day; a, b, c 'not more than nine'; 427 coins at the end of day 10; published answer 4a + 2b + c, 9a + 3b + c, a X^2 + b X + c, (4, 2, 7). Recursion re-derived for all digit triples: c5_misc_classical.out M3. Session266 radix/PROOF.md sections 1-2 agree.",
+  "fix": "\"It is the puzzle set by Terence Tao for Alex Bellos's column ('Can you solve it? A magical melody from the Mozart of math', The Guardian, 26 October 2026; section 'The magic money plant'; confirmed on syndicated copies), as recorded by Session266 ...\"",
+  "id": "F019",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5135 (1) and title (\"for odd m the additive square of the table is m^3 L_m\")",
+  "claim": "\"for odd m, (N_m * N_m)(c) = m^3 L_m(c)\"",
+  "problem": "The restriction to odd m is unnecessary: with L_m defined by the same formula, the identity holds for every m (consistent with (1) being stated for any prime). At 2^k it gives the factor 3/4 at odd classes, the factor that THM-5134 (F) removes from Ingham's series.",
+  "evidence": "c6_followups.out F1 (every 1 <= m <= 150); c2_local_class_counts.out L3 (all odd m <= 201; all units for 12 moduli; m = 2, 4, 8, 6, 12 displayed).",
+  "fix": "\"for every m (L_m as in THM-5134, by the same formula), (N_m * N_m)(c) = m^3 L_m(c)\"; THM-5134 needs odd m only because the states are odd at 2.",
+  "id": "F022",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 (F) and THM-5135 (3) (\"real density, times the rank-2 factors at the odd primes, times a 2-adic density 1\"; \"Hence over ALL primes ...\"); README section 4 (the ladder)",
+  "claim": "The representation numbers are written as real density times the product of the local densities (8 sigma(n) for Z^4 at odd n; 240 sigma_3(n) for E8).",
+  "problem": "The theorem that makes this a statement and not an observed factorisation is not named: Siegel's formula for a genus with one class (Z^4, E8). With it, the 'Hence' of (3)(b) is a derivation from the local laws. It also completes the ladder: real density (2 pi)^r n^(r-1)/(r-1)! of an even unimodular form in 2r variables times sigma_(r-1)(n)/(zeta(r) n^(r-1)) is (2r/|B_r|) sigma_(r-1)(n), the Eisenstein coefficient: 240 sigma_3(n) at r = 4 and 24 sigma(n) at r = 2, which is Hurwitz's count at odd n (the Hurwitz order has half that real density and 2-adic density 3/2 instead of 3/4).",
+  "evidence": "c6_followups.out F5, F6; c2_local_class_counts.out L5, L6.",
+  "fix": "Add \"(Siegel's formula for a genus of one class; CITED)\" in THM-5134 (F) and THM-5135 (3)(a)-(b); optionally the remark on 24 sigma(n) in README section 4.",
+  "id": "F023",
+  "auditor": "citations"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 (H), last sentence of 'Numerical support' (lines 177-178)",
+  "claim": "\"In base 3 the prime 7 is boosted early by the balanced state h = 3 (X = y = 7), in base 5 the prime 13.\"",
+  "problem": "Reads as if a balanced state boosted 13 in base 5; the same statement says balanced states do not exist for b >= 4 beyond h = 0. The state is h = 6 with (X, y) = (26, 13): 13-divisible, not balanced.",
+  "evidence": "c6_followups.out F4 (first p-divisible states: base 5, p = 13: (6, 26, 13); base 3, p = 7: (3, 7, 7) balanced; base 10, p = 7: (3, 21, 7)); c5_misc_classical.out M4 (balanced states: b = 3 exactly the 12 listed below 2^24; b >= 4 none; q(h) < h/2 for 1 <= h < 2^24).",
+  "fix": "\"... in base 5 the prime 13 by the small 13-divisible state h = 6 (X = 26, y = 13; not balanced).\"",
+  "id": "F024",
+  "auditor": "citations"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 (1) statement and proof (lines 52-61, 136-142)",
+  "claim": "'for odd m, (N_m * N_m)(c) = m^3 L_m(c)' with proof 'the identity with L_m is the case r = 2 and the Chinese remainder theorem'",
+  "problem": "Statement (1) and the displayed sum in its proof cover only classes with v_p(c) < k. The identity with L_m also concerns the classes with v_p(c) >= k at some p^k || m (the class 0 modulo p^k), where the term u = 0 (probability p^(-rk)) must be added; the proof as written does not give that value, so it does not prove the identity at those classes (the enumeration at eleven moduli does). The identity is true; the missing value is one line. Also the restriction to odd m is unnecessary.",
+  "evidence": "audit/proof-5135/a1_rank_law.out [R]: for v >= k, p^k P(0) = (1 - p^-r) sigma_(r-1)(p^(k-1))/p^((r-1)(k-1)) + p^(-(r-1)k), exact for 17 prime powers (2..32, 3..81, 5..125, 7, 49, 11, 121, 13) and r = 1..6; for r = 2 this is 1 + 1/p - p^(-k-1) = L_(p^k)(0). [L]: (N_m * N_m)(c) = m^3 L_m(c) for all 105 odd m <= 209 and, with the same formula for L_m, for all 105 even m <= 210; unit twists 2..7; [C]: CRT product for r <= 4 at 11 composite moduli.",
+  "fix": "Add to (1): 'For the class 0 (v >= k): p^k P = (1 - p^-r) sigma_(r-1)(p^(k-1))/p^((r-1)(k-1)) + p^(-(r-1)k).' and to the proof: 'the vector u = 0, of probability p^(-rk), contributes to the class 0 only.' Replace 'for odd m' by 'for every m (L_m defined by the same formula)' or keep 'odd' with the remark that it is only the range in which THM-5134 uses it.",
+  "id": "F030",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5135 (5), last sentence (lines 122-124)",
+  "claim": "'In the join calculus the ordered join multiplies path counts (rank 1; commutative) and the one-arc join adds two products (rank 2): the first has the divisor-function law of (1), the second the law sigma(n)/n.'",
+  "problem": "Read literally this asserts a class law for path counts of ordered joins. No equidistribution of the factors is proved (path counts are odd, 7 and 21 do not occur); the README says so in section 8 ('a comparison, not a theorem'), and Remark 3 covers only (1)-(4). Only the second half is a theorem, for F1 at odd moduli (THM-5134).",
+  "evidence": "README lines 236-238; THM-5135 Remark 3 (line 180).",
+  "fix": "'... : for uniform factors the first has the divisor-function law of (1) (a comparison; no equidistribution of path counts of ordered joins is claimed), the second the law sigma(n)/n, which F1 has at every odd modulus (THM-5134).'",
+  "id": "F034",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "NOTE",
+  "where": "seam_rank_exact.py docstring and seam_rank_exact.out line 1 ('(G) ...'), cited in the scripts list of THM-5135 and THM-5134",
+  "claim": "The output labels the rank-r law '(G)' and the script says 'S92 (THM-5134 (F), (G))'.",
+  "problem": "THM-5134 has no statement (G) (its letters are (A)-(F), (H)); the law is THM-5135 (1). A reader of the output cannot match the label.",
+  "evidence": "04-computation/experiments/s92_prime_powers_20261111/seam_rank_exact.py lines 2-5, seam_rank_exact.out line 1; THM-5134 title. Rerun of the script: byte-identical output (audit/proof-5135/rerun_seam_rank_exact.out).",
+  "fix": "Relabel '(G)' as 'THM-5135 (1)' in the script and regenerate the output, or add a line to the scripts entry of THM-5135: 'seam_rank_exact.out, section (G) = statement (1) here'.",
+  "id": "F038",
+  "auditor": "proof-5135"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 status block, sentence 'NEW here' (file lines 17-19); README.md section 1 (lines 38-39)",
+  "claim": "'NEW here: the power saving in (A) and the sum over the smaller state, i.e. the by-value law (B)-(E) at every odd modulus'. README: 'New: the power saving, the sum over the smaller state, hence the by-value law.'",
+  "problem": "Both named ingredients are THM-5128's and are typed NEW there. THM-5128 (B4)(iv) already states the power saving for residue vectors modulo every odd m; the summation over the smaller state is THM-5128 (C2), (D2); the proof of THM-5128 (C2) already contains the fibre count ('each value that is 0 modulo d on m d residue vectors modulo m') and the first-order law for squarefree composite m; and THM-5128 (D3) already states the prime-power mechanism, the limits and the first-order prediction at 9, 25, 27 as a consequence 'not written out'. So (A)-(D) at prime and squarefree m are KNOWN, and at non-squarefree m what is new is the written proof and the bookkeeping (content d with image of order m/d, c_d = J_2(m/d)/m^2, L_m, both prime-power cases, the limit along m). The PROVED line of the same status block says this correctly; the NEW line contradicts it. The mathematics is not affected.",
+  "evidence": "C:/tmp/wt-s92/01-canon/theorems/THM-5128-f1-by-value-local-densities-first-order-class-law.md: status lines 49-52 ('the power-saving rate in the regions lemma (B4)'; 'the summation over the smaller state with a power-saving error'), (B4)(iv) lines 153-155, (C) lines 185-188, (D3) lines 248-254, proof (C2) lines 466-470.",
+  "fix": "Status: 'NEW here: the written proof of the by-value law (A)-(E) at odd moduli that are not squarefree, which THM-5128 (D3) announced as not written out: the fibre count for a smaller state of content d (image of order m/d), the type densities c_d = J_2(m/d)/m^2, the function L_m with its multiplicativity and its two prime-power cases, the limit along m in (E), and the censuses. The power saving (THM-5128 (B4)(iv)) and the summation over the smaller state (THM-5128 (C2), (D2)) are THM-5128's, as are the cases of prime and squarefree m.' README section 1: 'New: the written proof at non-squarefree odd moduli (fibre count for content d, the function L_m); the power saving and the sum over the smaller state are THM-5128 (B4)(iv), (C2), (D2).'",
+  "id": "F042",
+  "auditor": "proof-5134-AE"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 (E), sentence 'Along any sequence of such m whose prime factors exhaust the odd primes it tends to S_sigma(N)' (lines 99-101)",
+  "claim": "The limiting class factor tends to S_sigma(N) along ANY sequence of admissible m whose prime factors exhaust the odd primes.",
+  "problem": "Under the literal reading (the union of the prime factors of the terms is the set of odd primes) the statement is false: m_j = p_j^k (j-th odd prime, k > v_p(n)) is such a sequence and its class factor is (1 - p_j^-2) sigma(p_j^v)/p_j^v, which tends to 1, not to (8/pi^2) sigma(n)/n. The convergence needs every odd prime to divide all but finitely many terms.",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-AE/series_E.out (last two lines); L_(p^2)(unit) = 1 - p^-2 (local_algebra.out item 4).",
+  "fix": "'Along any sequence of such m in which every odd prime divides all but finitely many terms (for instance a chain m_1 | m_2 | ... whose prime factors exhaust the odd primes) it tends to'.",
+  "id": "F043",
+  "auditor": "proof-5134-AE"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 (E), parenthesis '(which would need uniformity in the modulus, HYP-9660 (B), OPEN)' (line 108); README.md section 12 item (2) (lines 306-307); HYP-9665 status (line 6)",
+  "claim": "THM-5134: an asymptotic for a single N 'would need uniformity in the modulus, HYP-9660 (B)'. README: uniformity in the modulus 'is what a statement about single values needs'. HYP-9665 status: '(B) would follow from a version of THM-5134 uniform in the modulus, which is HYP-9660 (B), OPEN.'",
+  "problem": "(i) HYP-9660 (B) is the uniform spectral gap only; THM-5128 Remark 3 says correctly that uniformity 'needs at least the uniform gap of HYP-9660 (B), with a norm bound polynomial in the modulus'. (ii) Uniformity in the modulus is necessary, not sufficient: it controls the residue-class (major-arc) side only. A statement about single N, or the L1 statement over short ranges of HYP-9665 (B), needs in addition a second-moment (minor-arc) input, as THM-5128 Remark 3 already says. HYP-9665's 'would follow' is an unproved implication stated as a fact (a count taking the values 0 and twice its mean at random has the same class statistics). The data show how far single values are from the series at this size: on the odd N of [2^24, 2^25) the series explains r^2 = 0.16 (sheet 0) and 0.18 (sheet 1) of the variance of r, the relative variance is 0.47 / 0.41 (index of dispersion 2.79 / 3.06, as in THM-5128 Remark 3), and 8.07 % / 4.86 % of the odd N have r_sigma = 0 while S_sigma >= 0.81.",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-AE/series_vs_counts_audit_25_24.out; THM-5128 Remark 3 (lines 576-590); HYP-9660 title and status (B).",
+  "fix": "THM-5134 (E): '(which would need at least a version of (B) uniform in the modulus - the uniform gap of HYP-9660 (B) with a norm bound polynomial in the modulus, OPEN - and, beyond it, a second-moment (minor-arc) input: a law uniform in the modulus gives at most statements on average over N; F1 has misses at every scale tested, THM-5128 Remark 3)'. README section 12: '(2) uniformity in the modulus (it needs at least HYP-9660 (B)), which is necessary, not sufficient, for a statement about single values'. HYP-9665 status: '(B) needs at least a version of THM-5134 uniform in the modulus (HYP-9660 (B) with a polynomial norm bound, OPEN) and a second-moment estimate for r; it does not follow from the first alone.'",
+  "id": "F044",
+  "auditor": "proof-5134-AE"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 Remark 3 (lines 244-246); README.md section 2, last paragraph (lines 66-67)",
+  "claim": "'the divisor d is the type of the smaller state, present with density d^-2 and concentrated on a share d of the classes'",
+  "problem": "'a share d of the classes' should be 'a share 1/d' (the classes with d | N - c_sigma; there the type is d times as dense). Also 'type d ... density d^-2' is the density of the states with d | g (proved, THM-5128 (B2)); the density of the exact type at fixed m is c_d = d^-2 prod_{p | m/d}(1 - p^-2), and its formal limit over all m, (8/pi^2) d^-2, is not proved (THM-5128 (F): the density of g = 1 is not proved to be 8/pi^2).",
+  "evidence": "local_algebra.out items 1, 2 (exact: c_d m^2 = J_2(m/d); a form of content d takes each multiple of d on m d vectors, i.e. is uniform on m/d of the m classes); THM-5128 (F) lines 350-352.",
+  "fix": "'the divisor d is the content of the smaller state: the states with d | g have density d^-2 and put their triples on the share 1/d of the classes (those with d | N - c_sigma), d times as densely.'",
+  "id": "F045",
+  "auditor": "proof-5134-AE"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 'Numerical support', pre-registration paragraph (P3, lines 170-171) and the sentence on the slow rate at 7 (lines 160-162); PREREGISTRATION.md 'In-sample calibration'",
+  "claim": "'P3 the measured factor is closer to the a-priori prediction than to the limit for every group with g0 > 1 at 9, 27, 25 (14 of 14) - CONFIRMED'",
+  "problem": "The restriction of P3 to 9, 27, 25 is registered, but neither the theorem nor PREREGISTRATION.md says that the same comparison FAILS at 49, in sample and out of sample: in all four in-sample windows, on the registered window [2^27, 2^28) and in the cumulative censuses 2^22 ... 2^30 the measured factor of every group with g0 > 1 at 49 is closer to the limit than to the first-order value (0 of 4 each time; e.g. window, sheet 0: 1.1691 measured, 1.1098 predicted, 1.1195 limit). At 63 it holds in 6 of 10 groups and at 21 in 4 of 6 (X = 2^28). So at the multiples of 7 the first-order law is not yet the better description at any computed size, and the paragraph offered as support of (B) should say so. Not a refutation: the deviation decays at the proved rate (fixed state h1 = 0 modulo 49: relative deviation 0.298, 0.222, 0.169 at X = 2^20, 2^24, 2^28, i.e. 0.934 per binary digit against the spectral rate 0.932).",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-AE/summary_tables.out (table T3), window_check.out, fixed_state_A.out; session files window_insample_*.out (rows m = 49) in C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/.",
+  "fix": "Add after P3: 'P3 was registered for 9, 27, 25 only. At 49 the comparison fails in every group with g0 > 1, in the four in-sample windows, on the registered window and cumulatively up to 2^28 (0 of 4; e.g. 1.169 measured, 1.110 first-order, 1.120 limit): at the multiples of 7 the remainder of (B) is still larger than the first-order correction.'",
+  "id": "F046",
+  "auditor": "proof-5134-AE"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 'Numerical support', sentence 'as (D) predicts with its 1/ln X term' (line 165); README.md section 1 (line 44-45)",
+  "claim": "The factors at 9 (0.850 / 1.225 / 1.451 and 0.847 / 1.229 / 1.462 at X = 2^28) are 'as (D) predicts with its 1/ln X term'.",
+  "problem": "No session script or output evaluates the constants A_(m,d) of (C), so the sentence has no receipt in the session. I computed them (partial sums to H = 2^27): the sentence is correct at 9, 27, 25, 45, 15. At 49 the constants are not determined (the partial sums of A_(49,7)^0 run -0.0151, +0.0017, +0.0080, +0.0054 at H = 2^8, 2^14, 2^20, 2^27), as for A_7 in THM-5128.",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/proof-5134-AE/a_constants.out: limit + (2/kappa)(sum d A)/ln X at X = 2^28 gives 0.853 / 1.220 / 1.441 (sheet 0) and 0.850 / 1.222 / 1.454 (sheet 1) at 9, against the measured values above; at 25: 0.9412 / 1.2339 / 1.2399 against 0.9415 / 1.2328 / 1.2392 (sheet 0) and 0.9394 / 1.2414 / 1.2467 against 0.9389 / 1.2432 / 1.2480 (sheet 1). A_(25,d)^0 = (-0.02942, +0.03155, -0.00213), A_(25,d)^1 = (-0.04249, +0.04535, -0.00286) for d = 1, 5, 25; A_(9,d)^0 = (-0.056, +0.037, +0.019) with swings of 0.003 (A_(9,1) = -A_3 of THM-5128, reproduced: 0.0597, 0.0539, 0.0556 at 2^16, 2^22, 2^26).",
+  "fix": "Append: '(NUMERICAL, audit receipt a_constants.out: with the partial sums of A_(9,d) to 2^27, (D) gives 0.853 / 1.220 / 1.441 and 0.850 / 1.222 / 1.454 at X = 2^28; at 25 it gives 0.9412 / 1.2339 / 1.2399 against the measured 0.9415 / 1.2328 / 1.2392 on sheet 0; at 49 the constants are not determined, as A_7 in THM-5128.)'",
+  "id": "F047",
+  "auditor": "proof-5134-AE"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 (A) statement (lines 63-69) and proof (B) (lines 189-193)",
+  "claim": "(A): 'Let h1, s be fixed ... + O_m((Y/y1)^(1 - theta_m))'. Proof (B): 'As for THM-5128 (C2)'.",
+  "problem": "(B) needs the constant of (A) to be uniform in h1, s, X and c'; this is true (THM-5128 (B4) is uniform in a, b, X, I, and b = 2^s y1 >= a = x1 > 0) but is carried only by the subscript of O_m. The proof of (B) does not restate that on sheet 0 the condition N <= X is M <= X + 1 (it is in THM-5128 (C2)). No gap, only two unstated lines.",
+  "evidence": "THM-5128 (B4) lines 146-159 and proof (C2) lines 461-464; fixed_state_A.out and regions_iv.out (uniform behaviour over the tested (h1, s)).",
+  "fix": "(A): add 'uniformly in h1, s, X and c'' after the display. Proof (B): add 'On sheet 0, N <= X is M <= X + 1, and (A) is applied with X + 1.'",
+  "id": "F048",
+  "auditor": "proof-5134-AE"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 (E), '(Gronwall's theorem for odd n; CITED)' (lines 104-105)",
+  "claim": "Maximal order (4 e^gamma/pi^2) ln ln N by 'Gronwall's theorem for odd n'.",
+  "problem": "The constant is right (limsup over odd n of sigma(n)/(n ln ln n) = e^gamma/2), but Gronwall's theorem is the statement for all n with the constant e^gamma; the odd-n value is a variant with the same proof (Mertens' product without the prime 2; it is the form used for Robin's inequality on odd integers by Choie, Lichiardopol, Moree, Sole, J. Theor. Nombres Bordeaux 19 (2007)). I did not open that paper; the value is confirmed numerically.",
+  "evidence": "series_E.out: along n built from the odd primes up to 2 * 10^6 the ratio is 0.8906 against e^gamma/2 = 0.8905 (with prime powers), and S/ln ln n tends to 0.7219 against 4 e^gamma/pi^2 = 0.72184.",
+  "fix": "'(Gronwall's theorem with the prime 2 removed: for odd n the maximal order of sigma(n)/n is (e^gamma/2) ln ln n, by the same proof; CITED)'.",
+  "id": "F049",
+  "auditor": "proof-5134-AE"
+ },
+ {
+  "severity": "NOTE",
+  "where": "README.md section 1 line 44 and section 12 line 301; THM-5134 table column 'noise at 2^28' and odd_modulus_census.py line 220",
+  "claim": "README: '(class 0 modulo 9: 1.45 against 35/27 = 1.296)'; 'python3 odd_modulus_census.py cum 24 ... (2^28: about 25 minutes)'. Table: one noise column for both sheets.",
+  "problem": "(i) 1.451 is the distinguished class N = -1 (mod 9) of sheet 0; the class N = 0 (mod 9), on sheet 1, has 1.462. (ii) cum_28.out records '(35 s)' for the whole run; my own census of 2^28 for the same twelve moduli takes 22 s, so 'about 25 minutes' does not match the output. (iii) The noise column is sqrt(m/#T) with the count of sheet 1 for both sheets; for sheet 0 at 125 it is 0.0004, not 0.0003. Immaterial (the remainders are 10 to 500 times larger).",
+  "evidence": "analyse_28.out (modulus 9: 1.4511 sheet 0, 1.4619 sheet 1); C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/cum_28.out line 1; census_f1.py run log (22.1 s).",
+  "fix": "README: '(the distinguished class modulo 9: 1.45 on sheet 0 and 1.46 on sheet 1, against 35/27 = 1.296)'; '(2^28: about 35 s on 8 threads)'. Table caption: 'noise = sqrt(m/#T) with #T of sheet 1'.",
+  "id": "F050",
+  "auditor": "proof-5134-AE"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5128 status block and (D3) (parent file, not edited by this session)",
+  "claim": "THM-5128 still reads 'odd prime-power moduli are numerical only' and 'NUMERICAL only: the by-value law modulo odd prime powers in (D3)', with no reference to THM-5134.",
+  "problem": "Once THM-5134 is accepted the two canon files contradict each other on the status of the prime-power law (THM-5128 contains 0 occurrences of 'THM-5134').",
+  "evidence": "grep of C:/tmp/wt-s92/01-canon/theorems/THM-5128-f1-by-value-local-densities-first-order-class-law.md; its last commit is 49e15115c6 (10:53, before this session).",
+  "fix": "At close-out add to THM-5128 status and to (D3): 'The by-value law at every odd modulus, prime powers included, is PROVED in THM-5134 (2026-11-11).'",
+  "id": "F051",
+  "auditor": "proof-5134-AE"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 (E), NUMERICAL sentence (lines 108-111); README.md section 1 (lines 50-51)",
+  "claim": "'the correlation of the multiplicity with sigma(n)/n is 0.40 (sheet 0) and 0.43 (sheet 1), and the mean multiplicity doubles from the lowest to the highest quintile of sigma(n)/n'",
+  "problem": "Both numbers are right (0.4016, 0.4275; quintile means 4.301 to 8.550 and 5.438 to 10.766). Missing context: over the same quintiles the series itself varies by the factor 1.61 only, the least-squares slope of r/mean(r) against S(N) is 1.44 (sheet 0) and 1.43 (sheet 1) instead of 1, and the series explains 16 % and 18 % of the variance of r. So at this size the dependence on sigma(n)/n is steeper than the limit series (the 1/ln X term of (D)) and single values are dominated by non-local fluctuation.",
+  "evidence": "series_vs_counts_audit_25_24.out (own enumeration, written before reading the session output; the session's series_vs_counts_25_24.out agrees to four digits).",
+  "fix": "Append: 'The series varies by 1.61 over the same quintiles and the slope of r/mean against S is 1.44: the dependence is steeper than the limit, as the 1/ln X term requires, and the series explains 16 to 18 % of the variance of r.'",
+  "id": "F052",
+  "auditor": "proof-5134-AE"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 'Numerical support' table (lines 149-158) and Setting (line 51)",
+  "claim": "The table stops at 2^28; theta_m is not evaluated.",
+  "problem": "Suggestion only. The proved exponents are very small, which is why the remainder decreases slowly: theta_m/2 < 0.0733 (9, 27, 81), 0.0927 (25, 125), 0.0422 (49, 63, 21), 0.0619 (15, 45, 75, 225), from the rates 0.866025, 0.815263, 0.932039, 0.892191 (own matrices; equal to rates_by_modulus.txt). An independent census at 2^30 is available and shows the decrease more clearly than 2^26 to 2^28 did.",
+  "evidence": "rates_and_states.out; summary_tables.out (T1, T2): remainder at 2^30, sheet 0 / sheet 1: 9: 0.012 / 0.021; 27: 0.016 / 0.023; 81: 0.017 / 0.026; 25: 0.003 / 0.003; 125: 0.003 / 0.004; 49: 0.058 / 0.079; 45: 0.021 / 0.029; 75: 0.016 / 0.021.",
+  "fix": "Add the column '2^30 (audit)' with these values and the sentence 'theta_m/2 is below 0.073 at 9, 27, 81, 0.093 at 25, 125, 0.042 at the multiples of 7 and 0.062 at 45, 75'.",
+  "id": "F053",
+  "auditor": "proof-5134-AE"
+ },
+ {
+  "severity": "MINOR",
+  "where": "README.md section 5 and section 9 row 'base-b law' (line 262); THM-5134 'Numerical support', paragraph '(H), exploratory'; bridges_exact.py S10 (lines 549-552) with bridges_exact.out lines 141-145; every_base.py part (4) (lines 135-138, 220) with every_base.out",
+  "claim": "'S10 F1 in base beta, sheet s = 0 (N_beta <= 2^22) ... beta = 2: 2845759 triples'; '(4) sheet s >= 1, N_b <= 2^24 ... b = 2: 55892593 triples'; THM-5134: 'sheet s >= 1, N_b <= 2^24 ...: remainder of the first-order law at most 0.13 ...; sheet s = 0, N_b <= 2^22 ...: remainder at most 0.16'; section 9: 'base-b law | EXACT (THM-5134 (H)) | censuses, six bases'.",
+  "problem": "Both base-b censuses are incomplete and are described as complete. (a) S10 builds psi only for h < 2^12, so it enumerates the box h1, h2 < 4096: 2,845,759 of the 10,532,579 sheet-0 triples with N <= 2^22 at beta = 2 (27 %), 1,832,488 of 6,030,660 at beta = 3, 985,666 of 2,896,626 at beta = 5, 379,472 of 1,042,874 at beta = 10. (b) every_base.py (4) cuts the state table at h < 2^21 and skips a smaller state h1 whenever X1^2 + coef*y1^2 > X, which is unsound because psi is not monotone: it prints 55,892,593 triples at b = 2 where the complete count is 57,818,155 (the count of the session's own cum_24.out, sheet 1), 35,516,685 instead of 35,564,915 at b = 3, and 2,342 / 2,422 / 2,352 / 2,064 triples too few at b = 4, 5, 6, 10. On the complete sets: sheet 0 remainder is at most 0.167 (beta = 2, p = 7), not 0.16, and the S10 class factors change (beta = 2, p = 3: 1.290 not 1.107; beta = 10, p = 7: 1.282 not 1.451; beta = 5, p = 13: 1.213 not 1.117); sheet 1 remainder is at most 0.133 and the b = 2 factors move by up to 0.01 (p = 3: 1.300 not 1.310). The exact statements survive (no type-p triple off its class in the complete censuses; N_b = 1 mod b), so the conclusions stand, but the evidence is mis-described and row 16 is over-typed: the named evidence is numerical with remainders up to 0.17 and the law is a limit theorem whose proof is still pre-audit.",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/bridges-note/a8_base_b_sheet0_census.out (box h < 2^12 reproduces every S10 number exactly; complete census next to it); .../audit/bridges-note/a7_base_b_census.out (complete sheet-1 census, six bases); .../audit/bridges-note/a9_every_base_defects.out (table 2^21 plus the skip rule reproduces all six printed triple counts exactly); C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/cum_22.out and cum_24.out line 1 (10,532,579 and 57,818,155).",
+  "fix": "bridges_exact.py S10: size = 1 << 22. every_base.py: use the full table (2^23) and replace the test on line 135 by the sound bound X1 + coef*y1*y1 > X; rerun both. THM-5134: 'sheet s >= 1, N_b <= 2^24 (57,818,155 triples at b = 2): remainder at most 0.13; sheet s = 0, N_b <= 2^22 (10,532,579 triples at b = 2): every triple of type p has 2 N_b + b = 0 (mod p) (exact), remainder at most 0.17'. Section 9 row: 'base-b law | PROVED limit law (THM-5134 (H)); EXACT parts: the formula for N_b (brute force) and type d => d | class; NUMERICAL: complete censuses, remainders up to 0.17'.",
+  "id": "F054",
+  "auditor": "bridges-note"
+ },
+ {
+  "severity": "NOTE",
+  "where": "README.md section 3 (lines 103-105); THM-5135 (5), last sentence",
+  "claim": "'In the join calculus the ordered join multiplies counts (rank 1, divisor-function law) and the one-arc join adds two products (rank 2, the law sigma(n)/n).'",
+  "problem": "The rank-2 law is proved for F1 (THM-5134). The rank-1 law is the law of a product of two uniform independent factors; nothing of the kind is proved for path counts of ordered joins, as section 8 itself says ('a comparison, not a theorem'). THM-5135 (5) says 'the first has the divisor-function law of (1)' without the qualifier.",
+  "evidence": "README.md lines 236-238; THM-5135 lines 121-124.",
+  "fix": "Add 'for uniform factors (a comparison, see section 8)' in both places.",
+  "id": "F066",
+  "auditor": "bridges-note"
+ },
+ {
+  "severity": "NOTE",
+  "where": "README.md section 5 (lines 159-160); THM-5134 (H) numerical paragraph",
+  "claim": "'X = y = 7 at h = 3, which is why 7 is boosted early in base 3'.",
+  "problem": "The boost needs only a small 7-divisible state, not a balanced one: h = 3 (psi = 2, y = 7) is 7-divisible whenever b = 3 (mod 7). In base 10 the same state has X = 21, y = 7 and 7 is boosted as much (class-0 factor 1.351, F p^2 = 3.28 on the complete sheet-1 census), with no balanced state at all.",
+  "evidence": ".../audit/bridges-note/a4_misc_checks.out part 3; a7_base_b_census.out (b = 3 and b = 10, p = 7).",
+  "fix": "'the state h = 3 is 7-divisible for every b = 3 (mod 7) (X = y = 7 in base 3, X = 21 in base 10), which is why 7 is boosted early in bases 3 and 10.'",
+  "id": "F067",
+  "auditor": "bridges-note"
+ },
+ {
+  "severity": "NOTE",
+  "where": "small_tournaments_collatz_lines.py line 164 and docstring; every_base.py docstring; bridges_exact.py S4 line 207-209",
+  "claim": "'c_minus(3n) = T_minus(n) and c_plus(3n) = T_plus(n) for odd n < 10^6: True'; 'S92 (README sections 5, 6)'; 'S92 (THM-5135): the join family F1 in every base b'.",
+  "problem": "The line-164 check compares an expression with itself. The docstrings carry stale references: the material is in README sections 6 to 8, and every_base.py supports THM-5134 (H). The bicomplex check in S4 is a definition followed by the vanishing test.",
+  "evidence": "The quoted script lines.",
+  "fix": "Drop the vacuous check or replace it by the non-trivial statement c_-(3N) = T_+(c_-(N)) iff N = 3 (mod 4); correct the docstrings.",
+  "id": "F070",
+  "auditor": "bridges-note"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 status lines 17-19 ('NEW here'); note section 1 line 39",
+  "claim": "'NEW here: the power saving in (A) and the sum over the smaller state, i.e. the by-value law (B)-(E) at every odd modulus'; note: 'New: the power saving, the sum over the smaller state, hence the by-value law.'",
+  "problem": "Too wide relative to THM-5128 (S91). For primes and squarefree odd moduli (A)-(D) are already proved there, with the power saving: (C1), (C2), the squarefree product law (identical to THM-5134 (B) when m is squarefree), (D2), (D3), and (B4)(iv) is the regions lemma for every odd modulus. The mechanism at p^k is also stated in THM-5128 (D3), from its audit. New is the written-out proof for moduli that are not squarefree, with the types d, the shares c_d, the closed form and multiplicativity of L_m and the value at v >= k; hence (E) as a statement about limits.",
+  "evidence": "THM-5128 lines 153-155 ((B4)(iv)), 175-177 ((C1)), 185-188 (squarefree law with exponent theta_m/2 and F^(d)), 252-254 ('a smaller state with p^i || g spreads its mass uniformly over the classes with p^i | c - c_sigma ... not written out'); S91 AUDIT_REPORT.md finding proof-5128-CF#0 proposed fix ('same proof with (B2), (B4) for the modulus p^k, not written out here').",
+  "fix": "'NEW here: (A)-(D) at odd moduli that are not squarefree (at primes and squarefree moduli they are THM-5128 (C1), (C2) with its product law, (D2), (D3); the regions lemma with a power saving at every odd modulus is THM-5128 (B4)(iv); the mechanism at p^k is stated in THM-5128 (D3), from its audit, finding proof-5128-CF#0): the proof written out, the types d | m with shares c_d, the closed form and multiplicativity of L_m, the value at v >= k; hence (E); the identification (F) ...; in (H) the class law in base b.' Note section 1: 'New: the argument written out at prime powers and composite odd moduli, with the closed form L_m.'",
+  "id": "F076",
+  "auditor": "prior-art"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 status lines 15-16 and related list, statement (H) lines 130-140, proof of (H) lines 221-232",
+  "claim": "KNOWN for (H): 'the base-b packing polynomial of the joins (THM-5070 (2), kind-pasteur S18) and N_b = 1 (mod b) (THM-4940)'; (H) is typed NEW. THM-5085 is not cited in THM-5134 (only in the note, as 'visible in THM-5085').",
+  "problem": "Missing credit. For a fixed smaller state the base-b count of (H) is exactly the base-x fixed-port tail formula of THM-5085 (2) (kind-pasteur S19), the base-x version of the Session206 source law that (A) uses at b = 2. New in (H) is the class law, not the tail formula.",
+  "evidence": "THM-5085 statement (2): h = h0 + (x/2)[R0 N(I) + Delta0 [1 in I] - h_u Q(I)], 'KNOWN at x = 2; new for general x'. Own check, audit/prior-art/p5_thm5085_dictionary.out: N_b(h1, m, s) equals that formula with (h0, R0, Delta0, h_u) = (X1 + (b/2)(2^s y1 - [s = 0]), 2(X1 + 2^s y1), 0, X1), and equals the letter recursion of THM-5085 (1) run on the digits of m; 134,400 cases, b = 2, 3, 4, 5, 6, 7, 10. THM-5070 (2) in the coordinates a(2h) = psi(h), s = j1 + j2 was also verified (p3_small_claims.out S7a).",
+  "fix": "Status: 'KNOWN, not claimed: ... the base-b packing polynomial of the joins (THM-5070 (2)); its form for a fixed smaller state, the base-x tail law h = h0 + (x/2)[R0 N(I) - h_u Q(I)] with (h0, R0, h_u) = (X1 + (b/2)(2^s y1 - [s = 0]), 2(X1 + 2^s y1), X1) (THM-5085 (2), kind-pasteur S19); N_b = 1 (mod b) (THM-4940). NEW in (H): the class law at odd moduli prime to b, the classes 0 and -b/2, the balanced states in bases 3 and >= 4.' Add THM-5085 to 'related'.",
+  "id": "F077",
+  "auditor": "prior-art"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 statement (A) line 68-69 and status lines 10-12",
+  "claim": "'(Without the power saving, with error o(X), this is Session206's weighted-capacity theorem; KNOWN.)'",
+  "problem": "Correct, but the dictionary is not written, and Session206's theorem is stated for physical sources (h, R, e, d) of the O/Z/J grammar, not for one-apex states. I checked that the F1 family with (h1, s) fixed is exactly such a source family.",
+  "evidence": "audit/prior-art/p2_session206_dictionary.out (all PASS): Q = 2q; the root O/Z words ending in Z are in bijection with h1 >= 1, with state (D, E, U, d) = (x(h1), 1, y(h1), 1) (2,047 words of length <= 11); the word W O^s J O has (h, e, R, d) = (x1 + 2^s y1 - [s = 0], 0, 2(x1 + 2^s y1), x1), R > d > 0; H_s(m) = N(h1, m, s) for m < 512 in 640 cases, by formula and by running the grammar; gcd(R, d, p) = gcd(x1, y1, p) and h = -[s = 0] modulo it for 15 odd moduli; capacity ln(R/(R-d))/d equals the F1 second-state mass. Session206 WEIGHTED_CAPACITY.md section 2 states 'for every odd p, including composite moduli', error o_{s,p}(X); grammar rules from THM-4888 Setting.",
+  "fix": "Add to (A): 'Dictionary: with Q = 2q, M - [s = 0] = h + R m - d Q(m) for the physical source W O^s J O, (h, R, e, d) = (x1 + 2^s y1 - [s = 0], 2(x1 + 2^s y1), 0, x1), m = h2; gcd(R, d, m) = gcd(x1, y1, m).'",
+  "id": "F085",
+  "auditor": "prior-art"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 status lines 13-14 and 18-19; note section 5 line 161-162; note section 10 lines 283-285; note section 9 line 259",
+  "claim": "'called the law \"the classical determinant-form density\"'; 'Jacobi's r_4 was cited in THM-4826 and Session116, never for path counts'; 'Two radices ... (also noted by Session266 and visible in THM-5085)'; the list of older canon; 'Out(Q_8) = S_3 = Aut+-(C_3) | EXACT (classical; from the sweep, not recomputed)'.",
+  "problem": "Small precision points. (i) The quoted phrase is in the auditor's script docstring, not in AUDIT_REPORT.md, which says 'the determinant-form density' and 'the classical series would be (8/pi^2) sigma(n)/n'. (ii) r_4(n) = 8 sigma_1(n) for odd n also appears in theta_lattice_tournament.out line 192 and r_8 in MISTAKE-484; neither is about path counts, so the claim stands but the list is not complete. (iii) Session266 radix section 2 separates the evaluation base from the digit bound; it does not mention the binary radix of the address h; THM-5085 (2) does show both. (iv) THM-4474, THM-4521, HYP-8205 are used in sections 3 and 7 but missing from the section 10 list; THM-480 is listed and not used. (v) Out(Q8) = S3 is in THM-2887 (status).",
+  "evidence": "s91 audit/citations/check_singular_series_prime_powers.py line 9; AUDIT_REPORT.md lines 129, 248; 05-knowledge/results/theta_lattice_tournament.out line 192; session266 radix/PROOF.md lines 22-26; THM-2887 status ('Aut(Q8)=S4, Inn(Q8)=V4 and Out(Q8)=S3').",
+  "fix": "(i) cite 'audit/citations/check_singular_series_prime_powers.py'; (ii) 'cited in THM-4826, Session116 (and in an old theta-series script); never for path counts'; (iii) '(visible in THM-5085 (2); Session266 separates the evaluation base from the digit bound)'; (iv) add THM-4474, THM-4521, HYP-8205 to the list; (v) evidence column: 'THM-2887'.",
+  "id": "F086",
+  "auditor": "prior-art"
+ },
+ {
+  "severity": "MAJOR",
+  "where": "04-computation/experiments/s92_prime_powers_20261111/bridges_exact.py section S10 (line 550: size = 1 << 12) and the S10 block of bridges_exact.out; quoted in THM-5134, 'Numerical support', sentence on (H), sheet s = 0 (lines 175-177)",
+  "claim": "Output header: 'S10 F1 in base beta, sheet s = 0 (N_beta <= 2^22)', e.g. 'beta = 2: 2845759 triples; ... p=3: class 2 factor 1.107, F p^2 = 0.58, rem 0.036; ... p=7: class 6 factor 1.329, F p^2 = 1.40, rem 0.158'. THM-5134: 'sheet s = 0, N_b <= 2^22, b = 2, 3, 5, 10: every triple whose smaller state is p-divisible has 2 N_b + b = 0 (mod p) (exact), remainder at most 0.16 (every_base.out, bridges_exact.out S10)'.",
+  "problem": "The psi table of S10 has 2^12 entries, so the census is the box h1 <= h2 < 4096 and not the stated range: it contains 27.0 %, 30.4 %, 34.0 %, 36.4 % of the triples with N_beta <= 2^22 (2,845,759 of 10,532,579 at beta = 2; 10,532,579 is the sheet-0 count of the session's own cum_22.out). Every statistic of the block belongs to the truncated family. At beta = 2, where N_beta is F1 itself, the block contradicts THM-5128's audited first_order_exact.out at X = 2^22, sheet 0 (F_small p^2 = 1.362, 1.593, 0.504, 2.089, 0.602 and p max|R_small| = 0.028, 0.0005, 0.1665, 0.004, 0.009 at p = 3, 5, 7, 11, 13) and cum_22.out (factor of the class -1 mod 3 is 1.290, not 1.107). On the stated range the largest remainder is 0.167 (beta = 2, p = 7), not 0.16; at p = 7 the values are 0.101, 0.078, 0.118 for beta = 3, 5, 10 (stored: 0.069, 0.103, 0.082). The exact part (2N + beta = 0 mod p for a p-divisible smaller state) is unaffected: 0 violations on the full range. (H) is typed PROVED on other grounds and does not depend on these numbers; the defect is in its only numerical support on sheet 0.",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/numerics-prereg/check_base_bugs.out section B: the session's own base_head_census called with a table of 2^12 reproduces the stored block; called with a table of 2^22 it returns 10532579, 6030660, 2896626, 1042874 triples, equal to my independent census (my_every_base_24_22.out, validated by a pure-python brute force, section C). THM-5128 values: C:/tmp/wt-s92/04-computation/experiments/s91_f1_local_densities_20261110/first_order_exact.out, block X = 2^22.",
+  "fix": "In s10() use size = (1 << 21) + 2 (h2 <= X/beta) and regenerate bridges_exact.out. Replacement for THM-5134: 'sheet s = 0, N_b <= 2^22, b = 2, 3, 5, 10: every triple whose smaller state is p-divisible has 2 N_b + b = 0 (mod p) (exact), remainder at most 0.17 (0.167 at 7 in base 2, the value of THM-5128; at 7 in bases 3, 5, 10: 0.101, 0.078, 0.118)'. The corrected rows are printed in check_base_bugs.out (lines 'table 2^22').",
+  "id": "F087",
+  "auditor": "numerics-prereg"
+ },
+ {
+  "severity": "MAJOR",
+  "where": "PREREGISTRATION.md lines 3-6 (blindness statement); THM-5134 status lines 20-22 and 'Numerical support' lines 166-173; README section 1 lines 45-48",
+  "claim": "PREREGISTRATION.md: 'Nothing of the window [2^27, 2^28) has been enumerated by this session for any odd prime-power or composite modulus (the audit of S91 enumerated it for prime moduli only, and this session has not seen class-level numbers from it).' THM-5134: 'four PRE-REGISTERED tests (window [2^27, 2^28) and the remainder at 2^28; registration commit 73c8437aac precedes the runs), all CONFIRMED'.",
+  "problem": "Commit order, immutability and evaluation are clean (see 'verified'), but the tests were only partly blind and neither the registration nor the theorem says so. (a) Class-level numbers of the SAME window at the primes 3, 5, 7 were in the repository before the registration: S91 audit output recompute-5128/a6_window_27_28.out (commit 49e15115c6, 10:53:11), and the audit report that THM-5134 cites by finding number prints the excess at 5 on this window (AUDIT_REPORT.md line 1135: '+0.3071 / +0.3206'). With f_other = p/(p + E) these numbers give exactly the g0 = 1 group means that P1 registers at 9, 27, 81, 25, 125, 49 (0.8515 / 0.8468, 0.9421 / 0.9397, 0.9712 / 0.9704: 12 of the 68 registered group values) and the class-weighted mean of the favoured groups (1.2971 / 1.3063 at 3, 1.2315 / 1.2410 at 5, 1.1728 / 1.1774 at 7), so P3 at 25 and the size of the P1 deviation at 49 were fixed in advance up to the split by valuation. (b) For P4 the prime-level remainders at 2^26 and 2^28 were printed in the parent theorem THM-5128 (C) (first_order_exact_28.out, commit 6cf358fd9c, 07:59:52): their direction equals the direction at the prime power in 9 of the 12 registered pairs, and copying them predicts 9 'smaller' (registered threshold 8, outcome 8). The registration does not mention (b), and its clause 'has not seen class-level numbers' needs a qualification against the cited report. What was blind: the split of the favoured class by valuation (the new content, decisive only at 3), the flatness inside the groups, the moduli 45 and 75. The verdicts as registered stand.",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/numerics-prereg/prior_exposure.out (derivation of the 12 group means and of the favoured means from the S91 audit numbers; prime-level against prime-power directions for P4); git log of the three S91 files; C:/tmp/wt-s92/05-knowledge/results/s91_f1_local_densities_20261110/audit/AUDIT_REPORT.md line 1135; THM-5128 (C), lines 193-196.",
+  "fix": "Do not edit the registered files. Add to THM-5134 ('Numerical support') and to README section 1: 'Blindness. The registration was pushed (11:29:21) before any enumeration at prime-power or composite moduli was committed (11:44:01). It was not blind at the prime level: the S91 audit had enumerated the same window at prime moduli (a6_window_27_28.out; its report prints the excess at 5) and THM-5128 (C) gives the remainders at 2^26 and 2^28 for 3, 5, 7. These numbers fix the g0 = 1 group means of P1 at 9, 27, 81, 25, 125, 49 and the mean over the favoured classes, and the prime-level direction agrees with the prime-power one in 9 of the 12 pairs of P4. The blind content is the split of the favoured class by valuation, the flatness inside the groups, and the composite moduli.' In the status line replace 'precedes the runs' by 'precedes the commit of the outputs'.",
+  "id": "F088",
+  "auditor": "numerics-prereg"
+ },
+ {
+  "severity": "MINOR",
+  "where": "04-computation/experiments/s92_prime_powers_20261111/every_base.py lines 220 and 135-138; every_base.out item (4); THM-5134 'Numerical support', sentence on (H), sheet s >= 1; HYP-9665 (C)",
+  "claim": "every_base.out: '(4) sheet s >= 1, N_b <= 2^24 ... b = 2: 55892593 triples; ... p=3: 1.310 [0.828, 0.862] F p^2=1.42 rem=0.020; p=5: 1.267 ... F p^2=1.68; ... p=11: 1.169 ... F p^2=2.12 ...'. THM-5134: 'remainder of the first-order law at most 0.13'.",
+  "problem": "Two enumeration defects. (i) q32 = q[: (1 << 21)]: pairs with h2 >= 2^21 are lost, 1,925,562 triples (3.33 %) at b = 2 and 48,230 at b = 3. The row b = 2 (F1 itself) contradicts the session's own cum_24.out (57,818,155 triples on sheet 1) and THM-5128's first_order_exact.out at 2^24 (F_small p^2 = 1.376, 1.623, 0.503, 2.046, 0.632). (ii) the test 'if X1 * X1 + coef * y1 * y1 > X: ... continue' skips h1 when N(h1, h1) > X, but X(h) = 1 + b psi(h) is not monotone, so N(h1, h2) < N(h1, h1) occurs for h2 > h1: 2,064 to 2,632 further triples are lost in every base at 2^24 (already 4 of 10,353 at 2^14, b = 5). The quoted conclusions survive at the printed precision (largest remainder 0.1325 at b = 2, p = 7; second-digit deviations 0.000, 0.040, 0.001, 0.002, 0.052, 0.003), but the output is not the stated census and the row b = 2 changes in the third decimal (1.300 [0.832, 0.867], F p^2 = 1.38; 1.259, 1.62; 0.50; 1.163, 2.05; 1.034, 0.63).",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/numerics-prereg/check_base_bugs.out section A (python brute force = my census; the session's census_b with its own table and with a full table); corrected_every_base.out (the session's function with the two edits gives 57818155, 35564915, 24947862, 18838778, 14919260, 7634213 triples, equal to my independent census, and the replacement rows in the session's format).",
+  "fix": "Pass the full table (2^22 entries suffice) and replace lines 135-138 by the monotone bound 'if (1 + b * (h1 // 2)) ** 2 + coef * y1 * y1 > X: break' (psi(h) >= h // 2); regenerate every_base.out. THM-5134: 'remainder of the first-order law at most 0.133 (at 7 in base 2, the value 0.1325 of THM-5128; 0.125 in base 4, 0.105 in base 6)'.",
+  "id": "F089",
+  "auditor": "numerics-prereg"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 'Numerical support' (P1, lines 166-169); README section 1; PREREGISTRATION.md P1 tolerances",
+  "claim": "'P1 group means within the registered tolerances (largest deviations 0.027 at 9, 0.028 at 27, 0.032 at 81, 0.004 at 25, 0.004 at 125, 0.091 at 49, 0.030 at 45, 0.021 at 75) - CONFIRMED'",
+  "problem": "Correct as registered, and the eight numbers are right. P1 is not vacuous as a whole, but its power is uneven and the text does not say so. (1) Every tolerance was calibrated on the in-sample maxima of the same statistic (0.6 to 1.3 times the largest in-sample deviation), so P1 tests persistence, not an error model. (2) At 49 the tolerance 0.115 is the size of the predicted excess of the favoured classes (0.097 to 0.119): on sheet 1 perfectly flat data (all factors 1) lie within the tolerance of every registered value, on sheet 0 they would fail by 0.004 at one class; the limit law would also pass (0.055 / 0.056). The measured deviation 0.076 / 0.091 is 64 % / 86 % of the predicted excess itself. P1 at 49 has no power. (3) At 25, 125, 75 a law without the valuation refinement (one factor for all classes with 5 | c - c_s) would pass (0.0066 / 0.0050, 0.0071 / 0.0065, 0.0135 / 0.0097 against tolerances 0.008, 0.009, 0.035): the prime-power content is not tested there. (4) The top layers carry almost no mass at this size (predicted shares of the types 81 and 125: 6e-5 and 1e-5, 0 on sheet 1 at 125; first states of type 81 and 125 are h = 2227 and 5687), so the registered values for g0 = 81, 125 are those of g0 = 27, 25 within 0.005 and 0.0015. The valuation-resolved factor is therefore tested at the prime 3 only, between v = 0, 1 and >= 2, where the flat law, the limit and the prime-level law fail by factors 3.5 to 15.",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/numerics-prereg/eval_prereg.out (last block: alternatives against the measured group means; registered predictions against 1); octaves.out part (4) (first states of each type); in-sample maxima read from window_insample_*.out.",
+  "fix": "Append to the P1 sentence: 'The tolerances were set from the in-sample maxima. At 9, 27, 81, 45 they separate the first-order values from the flat law, the limit and a law without the valuation split by factors 3.5 to 15. At 25, 125, 75 a law without the valuation split would also have passed (the factors at v = 1 and v >= 2 differ by 0.008), and at 49 the tolerance 0.115 equals the predicted excess (0.097 to 0.119), so the test has no power there. The valuation-resolved factor is tested at 3 only.'",
+  "id": "F090",
+  "auditor": "numerics-prereg"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 'Numerical support' lines 160-162 and 170-172; README section 1 line 43 ('it decreases slowly'); PREREGISTRATION.md P4",
+  "claim": "'The remainder is far above the sampling noise and decreases slowly, with the oscillation at 3 and the slow rate at 7 ...; at m = 9, 27, 81 it does not decrease from 2^26 to 2^28 on one sheet each.' and 'P4 the remainder of (B) is smaller at 2^28 than at 2^26 for at least 8 of 12 pairs - CONFIRMED with exactly 8 (it grew at 9 sheet 0, 27 sheet 1, 81 sheet 1, 125 sheet 0).'",
+  "problem": "The P4 verdict is correct as registered (8 of 12, same four exceptions, from the stored outputs and from my census). But (1) two of the eight decreases are of 0.00013 (27 sheet 0: 0.02934 -> 0.02921; 25 sheet 0: 0.00367 -> 0.00354), below the session's own noise scale (0.0002 to 0.0004), and the increase at 125 sheet 0 is 0.00007; (2) the count depends on the pair of sizes: 4 of 12 from 2^26 to 2^27, 5 of 12 from 2^25 to 2^27, 6 of 12 from 2^24 to 2^25, 10 of 12 from 2^27 to 2^28; under independent coin flips 8 of 12 or more has probability 0.19; (3) at 9, 27, 81 the remainder has not decreased since 2^24: on sheet 0 it is 0.021, 0.022, 0.024 at 2^24 and 0.024, 0.029, 0.031 at 2^28, and over the octaves 2^24..2^28 it stays between 0.018 and 0.042 on both sheets. The decrease is at 5 and 7. 'Decreases slowly' is not supported at the powers of 3, and the sentence 'on one sheet each' omits 125 sheet 0.",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/numerics-prereg/octaves.out part (2) (remainder at every octave 2^22..2^28 from my census, verified additive; P4 count for thirteen pairs of sizes) and eval_prereg.out (changes against the noise scale).",
+  "fix": "Replace by: 'The remainder is far above the sampling noise. It decreases at 5 and 7 (49: 0.163 / 0.141 at 2^24, 0.093 / 0.103 at 2^28); at 9, 27, 81 it oscillates between 0.018 and 0.042 from 2^24 to 2^28 without a net decrease (sheet 0: 0.021, 0.022, 0.024 at 2^24 against 0.024, 0.029, 0.031 at 2^28).' and 'P4 ... CONFIRMED with exactly 8 (it grew at 9 sheet 0, 27 sheet 1, 81 sheet 1, 125 sheet 0; the decreases at 27 sheet 0 and 25 sheet 0 are of 0.00013, below the noise scale). The count is not stable under the choice of sizes: 4 of 12 from 2^26 to 2^27, 10 of 12 from 2^27 to 2^28.' README: 'it decreases at 5 and 7 and oscillates without a net decrease at the powers of 3'.",
+  "id": "F091",
+  "auditor": "numerics-prereg"
+ },
+ {
+  "severity": "NOTE",
+  "where": "PREREGISTRATION.md line 57; P3 (14 comparisons) and P1 (16 cases) as counted in THM-5134 and the note",
+  "claim": "'The tolerance at 49 (0.115) is below two of the four in-sample values'; 'P3 ... (14 of 14)'",
+  "problem": "The four in-sample values at 49 are 0.151, 0.129, 0.118, 0.107: the tolerance is below three of them. Of the 14 comparisons of P3, the two at (27, g0 = 3) are the same sets of N, hence the same numbers, as the two at (9, g0 = 3) (1.2214 | 1.2143 | 1.1852 and 1.2272 | 1.2156 | 1.1852), and (27, g0 = 9), (27, g0 = 27) refine (9, g0 = 9): there are 12 distinct comparisons. Likewise the g0 = 1 and g0 = 3 values of P1 are identical at 9, 27, 81 and those of 25 recur at 125.",
+  "evidence": "window_insample_*.out summary lines; C:/tmp/wt-s92/04-computation/experiments/s92_prime_powers_20261111/window_prereg_28_27.out lines for m = 9 and m = 27.",
+  "fix": "Leave the registered file unchanged; record in the audit notes of the theorem or the note: 'the registration says two of the four in-sample values, it is three; the 14 comparisons of P3 contain two exact duplicates (12 distinct)'.",
+  "id": "F094",
+  "auditor": "numerics-prereg"
+ },
+ {
+  "severity": "NOTE",
+  "where": "odd_modulus_census.py (cum, win, eval modes); series_vs_counts.py; THM-5134 'Every triple of type d lies in a class with d | c - c_sigma (exact, all runs)'",
+  "claim": "'ALL CHECKS PASSED' in cum_*.out and series_vs_counts_25_24.out; P4 'CONFIRMED'; 'exact, all runs'",
+  "problem": "The pass criteria of the scripts are weak: cum mode passes when every remainder is below 0.25 (it fails only at 2^18, m = 63, 0.307; the remainders 0.09 to 0.22 at 49, 63, 21 pass although they are of the size of the effect at 7), series_vs_counts passes when the correlation exceeds 0.1 and the top quintile exceeds the bottom one. P4 is evaluated by hand from two tables; no committed program prints its verdict. The window and eval modes compute the exactness flag but do not print it, and they do not print the class-level remainder of (B); P1 is a statement on group means only, and P1 with P2 allows a class to deviate by tol + flat (0.065 at 9, 0.09 at 45, 0.19 at 49). On the registered window the class-level remainder is 0.0234 / 0.0268 (9), 0.0276 / 0.0369 (27), 0.0316 / 0.0431 (81), 0.0028 / 0.0035 (25), 0.0038 / 0.0041 (125), 0.0761 / 0.0908 (49), 0.0376 / 0.0459 (45), 0.0283 / 0.0347 (75), and the exactness flag is True.",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/numerics-prereg/window_exactness.out (session functions run_census and table on the registered window); rerun_cum_18.out; eval_prereg.out.",
+  "fix": "Optional: print the exactness flag and the class-level remainder in win/eval mode, add a 'p4' mode that reads two cumulative runs, and state in the outputs that the 0.25 bound is not a test of the law.",
+  "id": "F095",
+  "auditor": "numerics-prereg"
+ },
+ {
+  "severity": "NOTE",
+  "where": "THM-5134 table 'Numerical support' (column 'noise at 2^28'); THM-5134 (E) numerical sentence; bridges_exact.py S8",
+  "claim": "'noise = sqrt(m/#T)'; 'the mean multiplicity doubles from the lowest to the highest quintile of sigma(n)/n'; 'primes < 200 whose first p-divisible state is the fan: [3, 5, 11, 13, 17, 43, 113]'",
+  "problem": "(1) The noise column of cum_*.out uses the triple count of sheet 1 for both sheets (odd_modulus_census.py line 220); the sheet-0 value is 12 % larger (0.00010, 0.00018, 0.00031, 0.00017, 0.00038, 0.00024, 0.00023, 0.00030 at 2^28). The rounded table entries are unaffected. (2) The quintile means of sigma(n)/n are 1.001 and 1.609 (ratio 1.61) while the multiplicity ratio is 1.99 / 1.98: the multiplicity varies more steeply than the series at this size (as HYP-9665 (B) says for v_3, v_5), and the model 2 kappa (8/pi^2) sigma(n)/n ln N has mean 5.50 / 7.23 against the measured 5.92 / 7.48; quoting only 'doubles' reads as agreement. (3) S8 searches first p-divisible states below 2^16 only; for 127, 163, 193 the first state is beyond (109283, 68867, 75173). The list is nevertheless correct (my search to 2^24).",
+  "evidence": "C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/numerics-prereg/octaves.out part (3); my_series_25_24.out; fan_primes.out.",
+  "fix": "(1) Say 'noise (sheet 1)' or print both. (2) 'the mean multiplicity doubles (ratio 1.99 / 1.98) from the lowest to the highest quintile of sigma(n)/n, whose own means are 1.001 and 1.609: steeper than the series at this size'. (3) Search to 2^18 in S8 or state the bound.",
+  "id": "F096",
+  "auditor": "numerics-prereg"
+ },
+ {
+  "severity": "MAJOR",
+  "where": "HYP-9665 (A), last sentence (the test and its falsifier)",
+  "claim": "\"Test: exact census modulo 12, 36, 20, 72 with the remainder of the product law; a remainder that does not decrease from 2^24 to 2^28 at 12 would refute it.\"",
+  "problem": "In the packet's own vocabulary (remainder against the first-order product formula, as in THM-5128 (C) / THM-5134 (B)) the criterion is already met by exact data on sheet 0, although the product structure holds to sampling accuracy. The remainder (2^j m) max_c |#{N = c} - 2^(1-j) sum_{d | gcd(m, c - c_sigma)} (d/m) D^(d)| / #T at 12 is 0.0599, 0.0281, 0.0362, 0.0342 at X = 2^22, 2^24, 2^26, 2^28 on sheet 0 (sheet 1: 0.0347, 0.0413, 0.0219, 0.0297): it RISES from 2^24 to 2^28 on sheet 0. It equals twice the THM-5134 (B) remainder at m = 3 (0.0140 -> 0.0171 on sheet 0) up to the flatness defect, so it inherits the oscillation at 3 that THM-5134's own table records (9, sheet 0: 0.021 -> 0.024 from 2^24 to 2^28; 27: 0.022 -> 0.029; 81: 0.024 -> 0.031; P4 confirmed with 8 of 12 only). Applied to the PROVED odd law the same criterion would 'refute' THM-5134 at 9, 27, 81. The quantity that tests (A) is the flatness of N mod 2^j inside each class mod m, and that is at the noise level: at 12 it is 0.0021/0.0014, 0.0009/0.0005, 0.0005/0.0001, 0.0002/0.0002 at 2^22..2^28, between 0.6 and 3.1 sampling scales at every size.",
+  "evidence": "Own census (ordered triples, joint histogram of sheet, type w.r.t. 315, N mod 2520; triple counts 854,415,478 / 1,083,261,684 at 2^28 equal the note's): C:/tmp/wt-s92/05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/hypotheses/even_moduli_census_22.out ... _28.out, recheck_12.out (second code path, same numbers), rflat_detail.out, rflat_cells_36.out. THM-5134 table rows 9, 27, 81 and its P4 paragraph.",
+  "fix": "Replace the sentence by: \"Test: conditional flatness. For 2^j m in {12, 20, 36, 72} let R_flat(X) = max over classes e modulo m and odd classes a modulo 2^j of |2^(j-1) #{N = a (mod 2^j), N = e (mod m)} / #{N = e (mod m)} - 1|. (A) is refuted if R_flat fails to fall by a factor 2 from X = 2^24 to X = 2^28 at one of these moduli. The remainder of the first-order product law is twice the remainder of THM-5134 (B) at m plus R_flat; it oscillates with the odd part (12, sheet 0: 0.060, 0.028, 0.036, 0.034 at 2^22..2^28) and is not a test of (A). NUMERICAL (audit, exact census, sheet 0 / sheet 1): R_flat at 12: 0.0021/0.0014, 0.0009/0.0005, 0.0005/0.0001, 0.0002/0.0002 at 2^22, 2^24, 2^26, 2^28; at 20: 0.0028/0.0018, 0.0009/0.0007, 0.0006/0.0003, 0.0001/0.0002; at 36: 0.0040/0.0024, 0.0020/0.0011, 0.0005/0.0005, 0.0005/0.0005; at 72 (2^28): 0.0007/0.0007; always below 4.3 sampling scales sqrt(2^(j-1) m/#T).\"",
+  "id": "F097",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9665 (A) second sentence; THM-5134 Remark 4 (\"which is not proved here\"); note section 12, item (1)",
+  "claim": "\"What is missing is the joint equidistribution on cells of q modulo 2^(j-1) and of the state modulo m, i.e. rho(T_k) < 2 for the non-trivial characters of Z/(2^(j-1) m).\"",
+  "problem": "The ingredient is not missing. (i) For a character of even order write k/(2^(j-1) m) = k'/M'' with k' odd and M'' even; on the states w mod 2M'' the rows w and w + M'' of the twisted matrix have the same two columns with entries (1, om) and (1, -om), because c(w + M'') = c(w) + M''/2: T T^* = 2I. This is the computation of THM-5128 (E) with 2^j replaced by an even modulus; the rate is exactly 2^(-1/2). A character of odd order is a character of Z/m, covered by THM-5128 (B1), (B2). So the rate at 2^(j-1) m is the rate at m. (ii) For the count alone, equidistribution on cells (arbitrary exterior words) at EVERY modulus M = 2^k m with an exponential rate is KNOWN: Session193 modular_sync/PROOF.md Theorems 1, 3, 4 (bank v_t with A(v_t) = C(v_t) = 0 mod M, counts running once over the admissible residues); THM-5128's status cites Theorem 3 for 2^j only; the S82 scan of a/q, q <= 120, includes even q. With this ingredient the by-value proof of THM-5128 (E) and the proof of THM-5134 (A)-(D) combine: on a cell with at least j - 1 bottom digits prescribed, N mod 2^j is uniform on the odd classes (x1 is odd, x2 = y2 - 2 q2), N mod m is as in THM-5134 (A), and the two are independent by the Chinese remainder theorem. (A) is provable with the tools of the packet; it is open only in the sense of not being written out.",
+  "evidence": "mixed_gap.out (rho(T_k)/2 = 0.7071 for every character of even order of Z/M, M = 6, 12, 24, 10, 20, 40, 18, 36, 14, 28, 30, 60, 90; rate(M) = rate of the odd part: 0.8660, 0.7418, 0.9320, 0.8922; phase(w + M) = -phase(w) checked for every w and odd k); mixed_cells.out (cell counts of (q mod 2^(j-1) m, h mod m): relative deviation decays by 0.74-0.84 per free digit); C:/tmp/wt-s92/05-knowledge/results/session193_triangulated_proof_20261105/modular_sync/PROOF.md sections 3, 5, 6; proof sketch in audit/hypotheses/proof_sketches_and_tables.txt section 1 (a sketch: not a written or audited proof).",
+  "fix": "Replace the sentence by: \"Ingredients (all available). A character of Z/(2^(j-1) m) of even order has a twisted operator with T T^* = 2I (the row computation of THM-5128 (E) with an even modulus M'': c(w + M'') = c(w) + M''/2); a character of odd order is a character of Z/m (THM-5128 (B1), (B2)); for the count alone, equidistribution on cells at every modulus is Session193 modular_sync Theorems 1, 3, 4 (KNOWN). So (q mod 2^(j-1) m, h mod m) is equidistributed on cells at the rate of m, and the by-value proofs of THM-5128 (E) and THM-5134 (A)-(D) combine. Status: PROVABLE (sketch: audit/hypotheses/proof_sketches_and_tables.txt), not written out.\" In THM-5134 Remark 4 replace \"which is not proved here (HYP-9665)\" by \"which follows from THM-5128 (B1) and the unitarity computation of THM-5128 (E); the by-value statement is not written out (HYP-9665 (A))\".",
+  "id": "F098",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9665 (A), first sentence (range of j)",
+  "claim": "\"For j >= 1 and odd m >= 3, the limiting class factor of an odd class c modulo 2^j m is 2 L_m(c - c_sigma)\" typed OPEN.",
+  "problem": "For j = 1 the statement is THM-5134 (D) itself: every N is odd, so the odd classes modulo 2m are the classes modulo m. THM-5134 Remark 4 says j >= 2. The normalisation is otherwise correct: class factor = (2^j m) * share, odd classes carry 2 L_m, mean over all classes 1 (census at 12, 2^28: 1.6996/1.6936 on the classes with 3 not dividing N - c_sigma against 2 L = 1.7778, 2.6008/2.6128 against 2.4444; these are twice the factors at 3).",
+  "evidence": "class_factors_from_hist.out; THM-5134 Remark 4.",
+  "fix": "\"For j >= 2 and odd m >= 3 ... (for j = 1 this is THM-5134 (D), N being odd).\"",
+  "id": "F099",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9665 (C), statement, status and falsifier; note section 12 item (4)",
+  "claim": "\"Conjecture: it is equidistributed modulo b by value on each sheet, for every b >= 2. ... A deviation at 3 and 6 that does not decrease at 2^28 would refute it.\" (status OPEN)",
+  "problem": "(i) b = 2 is already PROVED in canon: the second binary digit of N is N mod 4, THM-5128 (E) with j = 2. (ii) For every odd b it is a corollary of THM-5128 (B4)(iv) by the argument the packet uses for THM-5134 (A), (H): modulo an odd b, alpha_1 = 2^(-1) x2 + (2^(s-1) y1) y2 + const on sheet 1 and 2^(-1) x2 + (2^(-1) y1) y2 + const on sheet 0, an affine form in the residue vector (x2, y2) of the larger state with a unit coefficient at x2, so it takes each class on exactly b residue vectors; the region N_b <= X is {a x2 + b' y2 <= X'} with a > 0, b' > 0. Hence #{alpha_1 = c} = #T/b + O_b(X^(1 - theta_b/2)). (iii) b = 2^a: the by-value proof of THM-5128 (E) applies (psi2 = h2 - q2, h2 and y2 fixed by the bottom digits); mixed b: as in (A). So for odd b the falsifier can fire only through finite-size oscillation. (iv) The deviation does decrease, at the rate of the digit chain at 3.",
+  "evidence": "Own complete census by value (second_digit.py; second_digit_b3.out, second_digit_b6.out, second_digit_other_bases.out, second_digit_more.out), max_c |b share - 1|, sheet 0 / sheet 1: b = 3: 0.131/0.127 (2^16), 0.096/0.097 (2^18), 0.071/0.073 (2^20), 0.054/0.054 (2^22), 0.041/0.040 (2^24), 0.031/0.030 (2^26), 0.024/0.023 (2^28): factor 0.867 per binary digit, rho_3 = sqrt(3)/2 = 0.8660. b = 6: 0.184/0.163, 0.127/0.122, 0.090/0.098, 0.064/0.071, 0.048/0.052, 0.037/0.039, 0.028/0.029; the digit mod 2 is flat at the noise level (0.00007/0.00004 at 2^28), the digit mod 3 carries the deviation. The session's 0.040 and 0.052 are reproduced (0.0405, 0.0522). b = 9: 0.071/0.073 -> 0.034/0.039 (2^24 -> 2^28); b = 7: 0.066/0.033 -> 0.040/0.022; b = 4, 5, 10 at 2^28: 0.0001/0.0003, 0.0005/0.0003, 0.0015/0.0007.",
+  "fix": "Retype (C): \"PROVED for odd b (corollary of THM-5128 (B4)(iv): modulo b, alpha_1 is an affine form in (x2, y2) with a unit coefficient at x2); b = 2 is THM-5128 (E), j = 2; b = 2^a and mixed b are provable as (A), not written out. NUMERICAL (audit, complete census, sheet 0 / sheet 1): b = 3: 0.131/0.127, 0.071/0.073, 0.041/0.040, 0.024/0.023 at 2^16, 2^20, 2^24, 2^28; b = 6: 0.184/0.163, 0.090/0.098, 0.048/0.052, 0.028/0.029; the deviation decays by 0.867 per binary digit, the rate sqrt(3)/2 of the digit chain at 3.\" Delete the falsifier sentence and item (4) of the note's 'Next'.",
+  "id": "F100",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9665 status line and (B), last sentence",
+  "claim": "\"(B) would follow from a version of THM-5134 uniform in the modulus, which is HYP-9660 (B), OPEN.\" and \"it is false if the remainder of THM-5134 (B) is not o(1) uniformly for m up to a power of ln X.\"",
+  "problem": "Neither implication is supported. Class laws, even with a level of distribution, give the class means of r; (B) is an L1 statement about single values and needs in addition that r(N)/ln N concentrates around its class mean, i.e. a second-moment (collision) bound for sum r(N)^2, which is not in the repository (THM-5128 Remark 3 only records the dispersion index 2.8 / 3.1; HYP-9660 (B) is the spectral gap, and says itself that a uniform remainder needs a norm bound as well). Conversely (B) with an unquantified o() gives back the class law at each fixed m only, so non-uniformity up to (ln X)^A does not refute it. The quoted data do not test (B) either: the L1 remainder is within 10 % of the counting-noise floor.",
+  "evidence": "series_counts_25.out, series_counts_trend.out, poisson_pair_floor.out: mean |r - 2 kappa S ln N| / mean r (sheet 0 / sheet 1) = 0.605/0.570 on [2^16, 2^17), 0.540/0.508 on [2^20, 2^21), 0.497/0.456 on [2^24, 2^25); with a constant predictor 0.636/0.630, 0.589/0.547, 0.532/0.505; floor for an ordered-pair count r = 2 Poisson(mean/2): 0.541/0.506, 0.512/0.446, 0.454/0.414. Var(r)/mean(r) = 2.79 / 3.06.",
+  "fix": "Status: \"(B) needs, beyond class laws uniform in the modulus (HYP-9660 (B) with its norm bound), a second-moment bound for r (the collision count sum r(N)^2); neither is available.\" Last sentence of (B): \"Summed over a class modulo a fixed m, (B) with K = X gives back THM-5134 (D); it does not follow from class laws. NUMERICAL (audit): mean |r - 2 kappa S ln N| / mean r = 0.605/0.570, 0.540/0.508, 0.497/0.456 on [2^16, 2^17), [2^20, 2^21), [2^24, 2^25), against 0.532/0.505 for a constant predictor and 0.454/0.414 for the Poisson floor of an ordered-pair count on the last window: compatible with (B), not a test of it.\" Also \"as the 1/ln X term of THM-5134 (D) requires\" -> \"as the positive 1/ln X terms of THM-5134 (D) at 3 and 5 predict\".",
+  "id": "F101",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "HYP-9665 (D) and the title clause (D)",
+  "claim": "\"The constants A_(m,d)^sigma of THM-5134 (C) are convergent sums over the states of type d.\"; the list \"p = 3, 5, 11, 13, 17, 43, 113\" without a range; \"Question: are the positions of the states of type p, hence A_(p,p), determined by the phase data (i, a_i) ...?\"; title: \"(D) the first-order constants A_(m,d) are computable from the phase clocks\".",
+  "problem": "(i) A_(m,d) = lim_H sum_{h < H} chi_d(h) w(h) is a conditionally convergent sum over ALL states of the centred indicator chi_d = [type d] - c_d (THM-5134 (C); THM-5128 (D2): not absolutely convergent); the sum over the states of type d alone diverges like c_d kappa ln H. (ii) The list is complete only for p < 200 (as the note and bridges_exact.out S8 say); the next primes with the property are 241, 257, 331. (iii) As posed the question has a trivial positive answer: p | g(h) iff 2h + 1 = 0 and q(h) = 0 (mod p), a condition on the digit-chain state (q mod p, h mod 2p), so the states of type p form a 2-automatic set (at most 2p^2 states; THM-5128 (B)). What is open is a closed form or an effective evaluation of A_(p,p). (iv) The title states as a fact what the body calls an untested question.",
+  "evidence": "fan_primes.out (h < 2^26, p < 400: fan first exactly for 3, 5, 11, 13, 17, 43, 113, 241, 257, 331; first states of type p 7: 38, 19: 218, 23: 103, 29: 1435, 31: 8664, 37: 1350, 41: 266, 127: 109283, as in THM-5128 (F)); THM-5134 (C); THM-5128 (D2).",
+  "fix": "\"The constants A_(m,d) of THM-5134 (C) are conditionally convergent sums over all states of chi_d(h) w(h), chi_d the indicator of the type-d states minus its density c_d. ... it is the first state of type p for p = 3, 5, 11, 13, 17, 43, 113 among the primes below 200 (then 241, 257, 331) ... The states of type p are the h with 2h + 1 = 0 and q(h) = 0 (mod p), a 2-automatic set (digit chain of THM-5128 (B)). Question (not tested): do the phase data (i, a_i) of the odd-tables packet give a closed form for A_(p,p)?\" Title: \"(D) question: are the first-order constants A_(m,d) computable from the phase clocks\".",
+  "id": "F102",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 \"Numerical support\", paragraph (H); every_base.py census_b and every_base.out (4); bridges_exact.py s10() and bridges_exact.out S10; HYP-9665 (C) cites every_base.out",
+  "claim": "\"(H), exploratory: sheet s >= 1, N_b <= 2^24 ...; sheet s = 0, N_b <= 2^22, b = 2, 3, 5, 10: ... remainder at most 0.16 (every_base.out, bridges_exact.out S10).\"",
+  "problem": "Neither program enumerates the set it names. s10() builds the states for h < 2^12 only: its 'N_beta <= 2^22' census has 2,845,759 of 10,532,579 triples at beta = 2 (27 %), 1,832,488 of 6,030,660 at 3, 985,666 of 2,896,626 at 5, 379,472 of 1,042,874 at 10, and its statistics are those of the truncated set (beta = 2, p = 3: factor 1.107, F p^2 = 0.58, against 1.290, 1.36 on the complete census). census_b receives q[: 2^21] and skips h1 whenever X1^2 + coef y1^2 > X, which is not a valid exit (X2 is not monotone in h2): 55,892,593 of 57,818,155 triples at b = 2 (3.3 % missing; this row is not the F1 census at 2^24), 35,516,685 of 35,564,915 at b = 3, and 2,064 to 2,422 triples missing at b = 4, 5, 6, 10. On the complete censuses the exactness statements hold; the largest remainder is 0.133 on sheet 1 and 0.167 on sheet 0 (b = 2, p = 7), not 0.16; the second-digit figures are unchanged at the printed precision (b = 10: 0.0034, printed 0.003).",
+  "evidence": "base_census_check.out (complete census and census with capped words; the capped one reproduces S10 digit for digit); replicate_every_base_count.out (the session's six counts reproduced exactly by a replica with the cap and the 'continue'; complete counts 57,818,155 / 35,564,915 / 24,947,862 / 18,838,778 / 14,919,260 / 7,634,213). The main census odd_modulus_census.py is complete (counts and remainders reproduced).",
+  "fix": "In s10() build psi for h <= 2 X/(3 beta) + 4; in census_b pass the full q and delete the 'continue' branch (keep the 'break'); rerun both and replace the outputs. In THM-5134: \"remainder at most 0.17 (0.167 at b = 2, p = 7)\".",
+  "id": "F108",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "MINOR",
+  "where": "THM-5134 statement labels; seam_rank_exact.py / .out; every_base.py docstring",
+  "claim": "THM-5134 statements are labelled (A)-(F), (H); seam_rank_exact.py: \"S92 (THM-5134 (F), (G))\" and prints \"(G) p^k * P(u . v = c) ...\"; every_base.py: \"S92 (THM-5135): the join family F1 in every base b\".",
+  "problem": "THM-5134 has no statement (G) (the rank-r law is now THM-5135 (1)); a receipt cited by both theorems refers to a label that does not exist; every_base.py is the receipt of THM-5134 (H), not of THM-5135.",
+  "evidence": "grep of '(G)' in the four files and the scripts; THM-5134 Statements.",
+  "fix": "Either relabel (H) as (G) throughout (title, status, proofs, note sections 5 and 9, HYP-9665) or keep (H) and state \"(G) is not used\"; in seam_rank_exact.py replace \"THM-5134 (F), (G)\" and the printed \"(G)\" by \"THM-5134 (F), THM-5135 (1)\"; in every_base.py replace \"THM-5135\" by \"THM-5134 (H)\".",
+  "id": "F109",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "NOTE",
+  "where": "HYP-9665, HYP-9666, THM-5134: smaller points",
+  "claim": "(a) \"sigma\" denotes the sheet (c_sigma, kappa_sigma, S_sigma) and the divisor sum (sigma(n)/n) in the same formulas of THM-5134 and HYP-9665 (B). (b) HYP-9665 (C): \"at most 0.003 for b = 2, 4, 5, 10\". (c) HYP-9666 (A) does not mention HYP-9660 (D). (d) 05-knowledge/hypotheses/INDEX.md has no entry for HYP-9665, HYP-9666.",
+  "problem": "(a) THM-5128 reserved sigma for the sheet and wrote sigma_1 for the divisor sum; the new files drop that convention. (b) The complete census gives 0.0034 at b = 10. (c) HYP-9660 (D) holds the closest existing data on a higher-rank family (two-apex grammar G(2,0): factors within 0.0004 of 1 at 5, 7, 11, 13, which is below the rank-4 bias 4/625 at 5). (d) To be added at close-out.",
+  "evidence": "THM-5128 Setting, last line; second_digit_other_bases.out; HYP-9660 (D).",
+  "fix": "(a) Write sigma_1(n) for the divisor sum in THM-5134 and HYP-9665. (b) \"at most 0.0034\". (c) Add \"see HYP-9660 (D) for the two-apex grammar\". (d) Add the index lines.",
+  "id": "F110",
+  "auditor": "hypotheses"
+ },
+ {
+  "severity": "NOTE",
+  "where": "Scope of this audit (what was not checked)",
+  "claim": "-",
+  "problem": "Not checked: a complete written proof of the by-value law at 2^j m (only the sketch in proof_sketches_and_tables.txt; the missing ingredient was proved and tested, the summation was not re-derived line by line); HYP-9665 (B) on short intervals K < X (no data); the PHASE_CLOCKS question of HYP-9665 (D) beyond reading the definitions; the statement \"CD_5 is not T_31\" (taken from the audited THM-5133 (G)); parity or congruence confinement of the K-form coordinates of THM-4916; the proofs of THM-5134 and THM-5135 (other auditors), of which only the numbers overlapping this part were recomputed. The Session193 theorems were read, not re-proved.",
+  "evidence": "-",
+  "fix": "-",
+  "id": "F111",
+  "auditor": "hypotheses"
+ }
+]

@@ -1,0 +1,18 @@
+Auditor numerics-prereg: re-runs of the session scripts from byte-identical copies (session_copies/), against the stored outputs.
+Normalisation before comparison: CRLF -> LF (the stored files are LF, a redirected Windows run writes CRLF) and the timing field (NN s) -> (T s).
+  cum_22.out                               IDENTICAL  sha256 stored 6a551ab1a26a rerun 6a551ab1a26a  (identical including timing field: False)
+  cum_24.out                               IDENTICAL  sha256 stored fd247036164e rerun fd247036164e  (identical including timing field: False)
+  cum_26.out                               IDENTICAL  sha256 stored 444859643c06 rerun 444859643c06  (identical including timing field: False)
+  cum_28.out                               IDENTICAL  sha256 stored 45203bfc1654 rerun 45203bfc1654  (identical including timing field: False)
+  window_prereg_28_27.out                  IDENTICAL  sha256 stored f01ddc1e3bab rerun f01ddc1e3bab  (identical including timing field: False)
+  window_insample_24_23.out                IDENTICAL  sha256 stored 51467dacf615 rerun 51467dacf615  (identical including timing field: False)
+  window_insample_25_24.out                IDENTICAL  sha256 stored 425172bb9051 rerun 425172bb9051  (identical including timing field: False)
+  window_insample_26_25.out                IDENTICAL  sha256 stored bc176617aa11 rerun bc176617aa11  (identical including timing field: False)
+  window_insample_27_26.out                IDENTICAL  sha256 stored c72b12799b50 rerun c72b12799b50  (identical including timing field: False)
+  series_vs_counts_25_24.out               IDENTICAL  sha256 stored b942ca951be7 rerun b942ca951be7  (identical including timing field: True)
+  seam_rank_exact.out                      IDENTICAL  sha256 stored ace7e3f73d7f rerun ace7e3f73d7f  (identical including timing field: True)
+  small_tournaments_collatz_lines.out      IDENTICAL  sha256 stored cae814078624 rerun cae814078624  (identical including timing field: True)
+  every_base.out                           IDENTICAL  sha256 stored d5ec0bfc1ea0 rerun d5ec0bfc1ea0  (identical including timing field: True)
+  bridges_exact.out                        IDENTICAL  sha256 stored 47c13092fc0d rerun 47c13092fc0d  (identical including timing field: True)
+all fourteen outputs reproduced: True
+exit codes of the re-runs: 0 for every script above (ALL CHECKS PASSED printed by each); odd_modulus_census.py cum 18 (not a stored output) exits 1 only because its ad hoc bound "every remainder below 0.25" fails at m = 63, sheet 0 (0.307); its counts equal my brute force.

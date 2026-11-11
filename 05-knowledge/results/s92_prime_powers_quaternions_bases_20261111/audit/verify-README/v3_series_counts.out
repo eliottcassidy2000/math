@@ -1,0 +1,20 @@
+  ok   the table of states is long enough
+odd N in [2^24, 2^25): 8388608 values  (6 s)
+  ok   sheet 0: every value of the sheet in the window is odd
+sheet 0: 49644073 triples, mean r 5.9180, r = 0 for 8.068 %, correlation with sigma_1(n)/n 0.4016 (r^2 = 16.1 %), slope of r/mean(r) against S 1.4412, mean of S 1.00000
+    quintiles of sigma_1(n)/n: abundancy 1.0006, 1.0371, 1.1712, 1.3502, 1.6094 (ratio 1.608); mean r 4.301, 4.492, 5.569, 6.679, 8.550 (ratio 1.988); min S 0.8106
+  ok   sheet 0: 49644073 triples, mean multiplicity 5.918
+  ok   sheet 0: correlation 0.4, 16 % of the variance
+  ok   sheet 0: slope 1.44
+  ok   sheet 0: 8.07 % of the odd N have r = 0
+  ok   sheet 0: mean r doubles across the quintiles (1.988) while the series varies by 1.61
+  ok   sheet 1: every value of the sheet in the window is odd
+sheet 1: 62761167 triples, mean r 7.4817, r = 0 for 4.855 %, correlation with sigma_1(n)/n 0.4275 (r^2 = 18.3 %), slope of r/mean(r) against S 1.4303, mean of S 1.00000
+    quintiles of sigma_1(n)/n: abundancy 1.0005, 1.0372, 1.1712, 1.3502, 1.6094 (ratio 1.609); mean r 5.438, 5.690, 7.058, 8.457, 10.766 (ratio 1.980); min S 0.8106
+  ok   sheet 1: 62761167 triples, mean multiplicity 7.4817
+  ok   sheet 1: correlation 0.43, 18 % of the variance
+  ok   sheet 1: slope 1.43
+  ok   sheet 1: 4.86 % of the odd N have r = 0
+  ok   sheet 1: mean r doubles across the quintiles (1.980) while the series varies by 1.61
+(11 s)
+ALL CHECKS PASSED

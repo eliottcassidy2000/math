@@ -1,0 +1,12 @@
+(a) recursion from Z = 136, modulo 2: equals the enumerated E8 class counts: True
+(a) recursion from Z = 136, modulo 4: equals the enumerated E8 class counts: True
+(a) recursion from Z = 136, modulo 8: equals the enumerated E8 class counts: True
+    recursion = (1 - 2^-4) sigma_3(2^v)/2^(3v) law of THM-5135 (1), r = 4, modulo 2^k for k = 1..14: failures 0
+    modulo 16 from the recursion: [287604736, 251658240, 283115520, 251658240, 287047680, 251658240, 283115520, 251658240, 287539200, 251658240, 283115520, 251658240, 287047680, 251658240, 283115520, 251658240]
+    contrast, Z = 120 (H^3 + A): modulo 8: [1980416, 2228224, 1949696, 2228224, 1984512, 2228224, 1949696, 2228224]
+(b) rank-2 seam at 2 (Z = 10): recursion = (1 - 2^-2) sigma(2^v)/2^v law modulo 2^k, k = 1..10: failures 0
+(c) four squares modulo 3^k, k = 1..8: recursion from the counts modulo p = rank-2 law: failures 0
+(c) four squares modulo 5^k, k = 1..6: recursion from the counts modulo p = rank-2 law: failures 0
+(c) four squares modulo 7^k, k = 1..5: recursion from the counts modulo p = rank-2 law: failures 0
+(c) four squares modulo 11^k, k = 1..4: recursion from the counts modulo p = rank-2 law: failures 0
+ALL CHECKS PASSED

@@ -1,0 +1,26 @@
+8/pi^2 = 0.810569   prod_{p odd}(1 - p^-2) = (6/pi^2)/(1 - 1/4) = 0.810569
+   partial product over odd p < 2e6: 0.8105695
+kappa_0 = 0.1615389173  kappa_1 = 0.2125139092  (THM-5128 (D1): 0.1615389173, 0.2125139092)   w_0 = 0.43186124  w_1 = 0.56813876
+N =    7:  sheet 0: n =    1  S_0 = 0.81057    sheet 1: n =    7  S_1 = 0.92637    w_0 S_0 + w_1 S_1 = 0.87636
+N =   21:  sheet 0: n =   11  S_0 = 0.88426    sheet 1: n =   21  S_1 = 1.23515    w_0 S_0 + w_1 S_1 = 1.08362
+N =    1:  sheet 0: n =    1  S_0 = 0.81057    sheet 1: n =    1  S_1 = 0.81057    w_0 S_0 + w_1 S_1 = 0.81057
+N =    3:  sheet 0: n =    1  S_0 = 0.81057    sheet 1: n =    3  S_1 = 1.08076    w_0 S_0 + w_1 S_1 = 0.96407
+N =   15:  sheet 0: n =    1  S_0 = 0.81057    sheet 1: n =   15  S_1 = 1.29691    w_0 S_0 + w_1 S_1 = 1.08688
+N =   31:  sheet 0: n =    1  S_0 = 0.81057    sheet 1: n =   31  S_1 = 0.83672    w_0 S_0 + w_1 S_1 = 0.82542
+N =   63:  sheet 0: n =    1  S_0 = 0.81057    sheet 1: n =   63  S_1 = 1.33808    w_0 S_0 + w_1 S_1 = 1.11027
+N =  105:  sheet 0: n =   53  S_0 = 0.82586    sheet 1: n =  105  S_1 = 1.48218    w_0 S_0 + w_1 S_1 = 1.19874
+N =  119:  sheet 0: n =   15  S_0 = 1.29691    sheet 1: n =  119  S_1 = 0.98086    w_0 S_0 + w_1 S_1 = 1.11735
+N =  945:  sheet 0: n =  473  S_0 = 0.90482    sheet 1: n =  945  S_1 = 1.64687    w_0 S_0 + w_1 S_1 = 1.32641
+odd N < 2^16: mean of S_0 = 0.999926  mean of S_1 = 1.000004  (pi^2/8 * 8/pi^2 = 1);  #{S_0 minimal} = 16 (N + 1 a power of 2: 16 values)  #{S_1 minimal} = 1
+odd N < 2^20: mean of S_0 = 0.999995  mean of S_1 = 1.000000  (pi^2/8 * 8/pi^2 = 1);  #{S_0 minimal} = 20 (N + 1 a power of 2: 20 values)  #{S_1 minimal} = 1
+odd N < 2^24: mean of S_0 = 1.000000  mean of S_1 = 1.000000  (pi^2/8 * 8/pi^2 = 1);  #{S_0 minimal} = 24 (N + 1 a power of 2: 24 values)  #{S_1 minimal} = 1
+maximal order: sigma(n)/(n ln ln n) at the odd primorials n = 3*5*...*p  against e^gamma/2 = 0.89054 ; S/(ln ln n) against 4 e^gamma/pi^2 = 0.72184
+        5 odd primes (p <=      13): ln n = 9.6   sigma(n)/n = 2.1483   ratio to ln ln n = 0.94908   [squarefree n; prime powers add the factor zeta-like prod 1/(1-p^-2) -> pi^2/8: 1.17088]
+       10 odd primes (p <=      31): ln n = 25.3   sigma(n)/n = 2.6680   ratio to ln ln n = 0.82547   [squarefree n; prime powers add the factor zeta-like prod 1/(1-p^-2) -> pi^2/8: 1.01839]
+      100 odd primes (p <=     547): ln n = 511.4   sigma(n)/n = 4.5761   ratio to ln ln n = 0.73368   [squarefree n; prime powers add the factor zeta-like prod 1/(1-p^-2) -> pi^2/8: 0.90514]
+     1000 odd primes (p <=    7927): ln n = 7820.6   sigma(n)/n = 6.4889   ratio to ln ln n = 0.72385   [squarefree n; prime powers add the factor zeta-like prod 1/(1-p^-2) -> pi^2/8: 0.89301]
+    10000 odd primes (p <=  104743): ln n = 104403.1   sigma(n)/n = 8.3463   ratio to ln ln n = 0.72225   [squarefree n; prime powers add the factor zeta-like prod 1/(1-p^-2) -> pi^2/8: 0.89104]
+   100000 odd primes (p <= 1299721): ln n = 1298487.8   sigma(n)/n = 10.1624   ratio to ln ln n = 0.72193   [squarefree n; prime powers add the factor zeta-like prod 1/(1-p^-2) -> pi^2/8: 0.89065]
+   148932 odd primes (p <= 1999993): ln n = 1998587.0   sigma(n)/n = 10.4735   ratio to ln ln n = 0.72191   [squarefree n; prime powers add the factor zeta-like prod 1/(1-p^-2) -> pi^2/8: 0.89062]
+limit along m_j = p_j^2 (single primes; union of prime factors = all odd primes) for n = 1: L_(p^2)(unit) = 1 - p^-2 -> 1, not 8/pi^2 = 0.8106
+limit along m_j = (3*5*...*p_j)^2 for n = 1: prod (1 - p^-2) -> 0.8106

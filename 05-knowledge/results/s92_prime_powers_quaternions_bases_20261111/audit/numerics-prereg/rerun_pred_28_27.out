@@ -1,0 +1,5 @@
+a-priori predictions for odd N in [2^27, 2^28) written to ../rerun_pred_28_27.json  (1 s)
+  m = 9: predicted class factors by g0 (sheet 0 / sheet 1): 1: 0.8577 / 0.8552, 3: 1.2143 / 1.2156, 9: 1.4249 / 1.4377
+  m = 27: predicted class factors by g0 (sheet 0 / sheet 1): 1: 0.8577 / 0.8552, 3: 1.2143 / 1.2156, 9: 1.4198 / 1.4335, 27: 1.4350 / 1.4461
+  m = 25: predicted class factors by g0 (sheet 0 / sheet 1): 1: 0.9418 / 0.9393, 5: 1.2308 / 1.2412, 25: 1.2409 / 1.2496
+  m = 49: predicted class factors by g0 (sheet 0 / sheet 1): 1: 0.9815 / 0.9837, 7: 1.1098 / 1.0967, 49: 1.1188 / 1.1051

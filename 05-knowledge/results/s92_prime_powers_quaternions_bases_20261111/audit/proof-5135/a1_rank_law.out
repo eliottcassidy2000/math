@@ -1,0 +1,76 @@
+[T] N_m(t) = sum_{d | gcd(t,m)} d phi(m/d): brute force for all m in 1..200: mismatches = 0
+
+[R] rank-r law modulo p^k as the r-fold additive convolution of the table (exact)
+  p^k = 4, r = 1: law OK | v=0: count 2, factor 1/2; v=1: count 4, factor 1; v=2: count 8, factor 2
+  p^k = 4, r = 2: law OK | v=0: count 48, factor 3/4; v=1: count 72, factor 9/8; v=2: count 88, factor 11/8
+  p^k = 4, r = 3: law OK | v=0: count 896, factor 7/8; v=1: count 1120, factor 35/32; v=2: count 1184, factor 37/32
+  p^k = 4, r = 4: law OK | v=0: count 15360, factor 15/16; v=1: count 17280, factor 135/128; v=2: count 17536, factor 137/128
+  p^k = 8, r = 1: law OK | v=0: count 4, factor 1/2; v=1: count 8, factor 1; v=2: count 12, factor 3/2; v=3: count 20, factor 5/2
+  p^k = 8, r = 2: law OK | v=0: count 384, factor 3/4; v=1: count 576, factor 9/8; v=2: count 672, factor 21/16; v=3: count 736, factor 23/16
+  p^k = 8, r = 3: law OK | v=0: count 28672, factor 7/8; v=1: count 35840, factor 35/32; v=2: count 37632, factor 147/128; v=3: count 38144, factor 149/128
+  p^k = 8, r = 4: law OK | v=0: count 1966080, factor 15/16; v=1: count 2211840, factor 135/128; v=2: count 2242560, factor 1095/1024; v=3: count 2246656, factor 1097/1024
+  p^k = 9, r = 1: law OK | v=0: count 6, factor 2/3; v=1: count 12, factor 4/3; v=2: count 21, factor 7/3
+  p^k = 9, r = 2: law OK | v=0: count 648, factor 8/9; v=1: count 864, factor 32/27; v=2: count 945, factor 35/27
+  p^k = 9, r = 3: law OK | v=0: count 56862, factor 26/27; v=1: count 63180, factor 260/243; v=2: count 63909, factor 263/243
+  p^k = 9, r = 4: law OK | v=0: count 4723920, factor 80/81; v=1: count 4898880, factor 2240/2187; v=2: count 4905441, factor 2243/2187
+  p^k = 27, r = 1: law OK | v=0: count 18, factor 2/3; v=1: count 36, factor 4/3; v=2: count 54, factor 2; v=3: count 81, factor 3
+  p^k = 27, r = 2: law OK | v=0: count 17496, factor 8/9; v=1: count 23328, factor 32/27; v=2: count 25272, factor 104/81; v=3: count 26001, factor 107/81
+  p^k = 27, r = 3: law OK | v=0: count 13817466, factor 26/27; v=1: count 15352740, factor 260/243; v=2: count 15523326, factor 2366/2187; v=3: count 15543009, factor 2369/2187
+  p^k = 27, r = 4: law OK | v=0: count 10331213040, factor 80/81; v=1: count 10713850560, factor 2240/2187; v=2: count 10728022320, factor 60560/59049; v=3: count 10728553761, factor 60563/59049
+  p^k = 25, r = 1: law OK | v=0: count 20, factor 4/5; v=1: count 40, factor 8/5; v=2: count 65, factor 13/5
+  p^k = 25, r = 2: law OK | v=0: count 15000, factor 24/25; v=1: count 18000, factor 144/125; v=2: count 18625, factor 149/125
+  p^k = 25, r = 3: law OK | v=0: count 9687500, factor 124/125; v=1: count 10075000, factor 3224/3125; v=2: count 10090625, factor 3229/3125
+  p^k = 25, r = 4: law OK | v=0: count 6093750000, factor 624/625; v=1: count 6142500000, factor 78624/78125; v=2: count 6142890625, factor 78629/78125
+  all (p^k, r) pairs, r = 1..6, p^k in [2, 4, 8, 16, 32, 3, 9, 27, 81, 5, 25, 125, 7, 49, 11, 121, 13]: ALL OK
+  (class 0, v >= k, compared with my formula (1-p^-r) sigma_{r-1}(p^(k-1))/p^((r-1)(k-1)) + p^-(r-1)k)
+
+[G] brute force of u^T G v over all (u, v), G random integer matrices
+  p^k = 4, r = 2: unit determinant: 6/6 matrices have the law of (1); p | det: 6/6 differ from it
+  p^k = 8, r = 2: unit determinant: 6/6 matrices have the law of (1); p | det: 6/6 differ from it
+  p^k = 9, r = 2: unit determinant: 6/6 matrices have the law of (1); p | det: 6/6 differ from it
+  p^k = 27, r = 2: unit determinant: 6/6 matrices have the law of (1); p | det: 6/6 differ from it
+  p^k = 25, r = 2: unit determinant: 6/6 matrices have the law of (1); p | det: 6/6 differ from it
+  p^k = 4, r = 3: unit determinant: 6/6 matrices have the law of (1); p | det: 6/6 differ from it
+  p^k = 8, r = 3: unit determinant: 6/6 matrices have the law of (1); p | det: 6/6 differ from it
+  p^k = 9, r = 3: unit determinant: 6/6 matrices have the law of (1); p | det: 6/6 differ from it
+  p^k = 4, r = 4: unit determinant: 6/6 matrices have the law of (1); p | det: 6/6 differ from it
+  p^k = 8, r = 4: unit determinant: 6/6 matrices have the law of (1); p | det: 6/6 differ from it
+  p^k = 3, r = 4: unit determinant: 6/6 matrices have the law of (1); p | det: 6/6 differ from it
+  explicit: G = diag(1, p) modulo p^2, classes by valuation (counts) vs the unimodular rank-2 law
+    p = 2: diag(1,p): [32, 80, 112] ; law (1): [48, 72, 88]
+    p = 3: diag(1,p): [486, 1134, 1377] ; law (1): [648, 864, 945]
+    p = 5: diag(1,p): [12500, 27500, 30625] ; law (1): [15000, 18000, 18625]
+
+[L] (N_m * N_m)(c) = m^3 L_m(c), L_m(e) = sum_{d | gcd(m,e)} d^-1 prod_{p | m/d} (1 - p^-2)
+  odd m in 1..209: 105 moduli, mismatches 0; even m in 2..210: 105 moduli, mismatches 0
+  with one table multiplied by a unit u (u = 2..7 prime to m): mismatches 0
+  L_(p^k)(e) = (1-p^-2) sigma(p^v)/p^v (v<k), 1 + 1/p - p^-(k+1) (v>=k): mismatches 0
+
+[C] composite moduli: r-fold power of the table is the product of the prime-power laws (CRT)
+  m in (6, 12, 15, 18, 20, 36, 45, 60, 63, 75, 105), r = 1..4: mismatches 0
+
+[E] Euler product prod_p (1 - p^-r) sigma_{r-1}(p^v)/p^((r-1)v) vs sigma_{r-1}(n)/(zeta(r) n^(r-1))
+  r = 2, n =    1: partial product (p < 200000) 0.607927333, closed form 0.607927102, diff 2.31e-07
+  r = 2, n =    2: partial product (p < 200000) 0.911890999, closed form 0.911890653, diff 3.47e-07
+  r = 2, n =   12: partial product (p < 200000) 1.418497110, closed form 1.418496571, diff 5.39e-07
+  r = 2, n =   45: partial product (p < 200000) 1.053740710, closed form 1.053740310, diff 4.01e-07
+  r = 2, n =  360: partial product (p < 200000) 1.975763832, closed form 1.975763081, diff 7.51e-07
+  r = 2, n = 1001: partial product (p < 200000) 0.816238097, closed form 0.816237787, diff 3.10e-07
+  r = 3, n =    1: partial product (p < 200000) 0.831907373, closed form 0.831907373, diff 8.53e-13
+  r = 3, n =    2: partial product (p < 200000) 1.039884216, closed form 1.039884216, diff 7.13e-13
+  r = 3, n =   12: partial product (p < 200000) 1.213198252, closed form 1.213198252, diff 1.24e-12
+  r = 3, n =   45: partial product (p < 200000) 0.971996466, closed form 0.971996466, diff 8.59e-13
+  r = 3, n =  360: partial product (p < 200000) 1.290932806, closed form 1.290932806, diff 1.23e-12
+  r = 3, n = 1001: partial product (p < 200000) 0.860965154, closed form 0.860965154, diff 7.89e-13
+  r = 4, n =    1: partial product (p < 200000) 0.923938403, closed form 0.923938403, diff 7.11e-15
+  r = 4, n =    2: partial product (p < 200000) 1.039430703, closed form 1.039430703, diff -2.31e-14
+  r = 4, n =   12: partial product (p < 200000) 1.092899361, closed form 1.092899361, diff -9.33e-15
+  r = 4, n =   45: partial product (p < 200000) 0.967101155, closed form 0.967101155, diff 6.55e-15
+  r = 4, n =  360: partial product (p < 200000) 1.104988624, closed form 1.104988624, diff -9.99e-15
+  r = 4, n = 1001: partial product (p < 200000) 0.927750382, closed form 0.927750382, diff 7.66e-15
+  r = 1, n = 1: product over p <= 100 = 0.120317 (tends to 0 like d(n) e^-gamma / ln x)
+  r = 1, n = 1: product over p <= 10000 = 0.060885 (tends to 0 like d(n) e^-gamma / ln x)
+  r = 1, n = 1: product over p <= 200000 = 0.045990 (tends to 0 like d(n) e^-gamma / ln x)
+  r = 1, n = 12: product over p <= 100 = 0.721904 (tends to 0 like d(n) e^-gamma / ln x)
+  r = 1, n = 12: product over p <= 10000 = 0.365308 (tends to 0 like d(n) e^-gamma / ln x)
+  r = 1, n = 12: product over p <= 200000 = 0.275940 (tends to 0 like d(n) e^-gamma / ln x)

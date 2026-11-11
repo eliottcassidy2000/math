@@ -1,0 +1,16 @@
+# pi2_mod3.py (auditor hypotheses; own code)
+(1) Pi_2 = (-1)^n H (mod 3), every labelled tournament:
+    n = 1:        1 tournaments, violations 0;  joint counts of (H mod 3, Pi_2 mod 3): {(1, 2): 1}
+    n = 2:        2 tournaments, violations 0;  joint counts of (H mod 3, Pi_2 mod 3): {(1, 1): 2}
+    n = 3:        8 tournaments, violations 0;  joint counts of (H mod 3, Pi_2 mod 3): {(0, 0): 2, (1, 2): 6}
+    n = 4:       64 tournaments, violations 0;  joint counts of (H mod 3, Pi_2 mod 3): {(0, 0): 16, (1, 1): 24, (2, 2): 24}
+    n = 5:     1024 tournaments, violations 0;  joint counts of (H mod 3, Pi_2 mod 3): {(0, 0): 424, (1, 2): 240, (2, 1): 360}
+    n = 6:    32768 tournaments, violations 0;  joint counts of (H mod 3, Pi_2 mod 3): {(0, 0): 9728, (1, 1): 11520, (2, 2): 11520}
+    n = 7:  2097152 tournaments, violations 0;  joint counts of (H mod 3, Pi_2 mod 3): {(0, 0): 660032, (1, 2): 736560, (2, 1): 700560}
+(2) order-4 kernels with H(K[A, B]) = Pi_2(A) Pi_2(B) + H(A) H(B) for all |A|, |B| <= 3:
+    number of (labelled K, ordered ports) with the Gaussian law on |A| + |B| <= 5: 48
+    example: K arcs [(0, 3), (1, 0), (2, 0), (2, 1), (3, 1), (3, 2)], ports (x, y) = (1, 2), H(K) = 5
+    checked 2129 pairs (A, B) with |A|, |B| <= 4: law violated 0 times; congruence mod 3 violated 0 times
+    |A| + |B| odd: 1188 pairs, 3 | H(K[A, B]) in 1188 of them;  |A| + |B| even: 941 pairs, H != 0 mod 3 in 590
+(3) order-5 kernels with H(K[A, B]) = 3 Pi_2(A) Pi_2(B) - H(A) H(B) for all |A| + |B| <= 4:
+    number of (labelled K, ordered ports): 480

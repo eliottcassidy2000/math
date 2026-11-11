@@ -1,0 +1,121 @@
+A. one-apex tournaments and joins (section 5): H(R(h)) = 2 psi(h) + 1, H(J(h1, h2, s)) = x1 x2 + 2^s y1 y2 - [s = 0]
+  ok   H(R(h)) = 2 psi(h) + 1 for h < 64
+  ok   H(J(h1, h2, s)) = x1 x2 + 2^s y1 y2 - [s = 0] on 208 joins with at most 11 vertices (Hamiltonian paths by DP)
+  ok   the family h1 <= h2 < 64, s <= 4 has 10400 joins (README: 10,400)
+    joins with digits at most b - 1: {2: (2, 0.0002), 3: (4, 0.0004), 10: (15, 0.0014), 100: (231, 0.0222)}
+  ok   shares 0.0002, 0.0004, 0.0014, 0.022 for b = 2, 3, 10, 100
+  ok   17 is the count of joins with (alpha_1, alpha_2) in [(6, 1), (8, 0)]
+  ok   for b > max(alpha_1, alpha_2) the base-b numeral of N_b = x_b(h1) x_b(h2) + b (2^s y1 y2 - [s = 0])/2 is (alpha_2)(alpha_1)(1)
+  ok   vectorised psi = recursive psi
+  ok   b = 2: balanced states x = y are h = 0 and the powers of 2 (below 2^20)
+  ok   b = 3: balanced states below 2^20: [0, 3, 45, 117, 309, 9045, 62805, 111957, 382293]
+  ok   b >= 4: only h = 0 (psi(h) > h/2 for 1 <= h < 2^20)
+  ok   h = 3: psi = 2, y = 7, x_3 = 7, x_10 = 21
+  ok   h = 6: y = 13, x_5 = 26 = 2y
+B. the signed coordinate (section 6)
+  ok   n -> |4n + 1| maps [-5000, 5000] bijectively onto the odd numbers 1..20001
+  ok   every odd m >= 1 is |4n + 1| for n = (chi_4(m) m - 1)/4 (m < 20000)
+  ok   odd step m* -> 3 m* + 2, even step m* -> (m* + 1)/2 for m* = 4n + 1
+  ok   product of signed labels: n * k = 4nk + n + k
+  ok   tripling a count is n -> -3n - 1
+  ok   the Collatz side (sign of n, 0 positive) is chi_4 of the count
+  ok   with h = 4x + eps (Session266): n = eps x gives |4n + 1| = h
+  ok   tripling: J(x, eps) = (3x + eps, -eps)
+  ok   central-modular packet: m -> 3m + 2 eps (x odd), m -> (m + eps)/2 (x even)
+    cycles: [(0, 1), (1, 3), (-1, 2), (-5, 5), (-17, 18)]
+    labels: [[1], [5, 17, 9], [3, 7], [19, 55, 27, 79, 39]] and 18 labels of the cycle of -17
+  ok   five known cycles: 29 arcs, 29 distinct labels
+  ok   labels {5, 17, 9}, {3, 7}, {19, 55, 27, 79, 39}
+  ok   among the 29 labels the only one of the two known non-values 7, 21 is 7 (largest label 1087 < 2^32: THM-4875 covers the others)
+  ok   7 = arc -2 -> -1, 21 = arc 5 -> 16
+  ok   trunk arcs (4^k - 1)/3 -> 4^k have labels (4^(k+1) - 1)/3 = 5, 21, 85, ...
+  ok   1, 3, 5 are the labels of the arcs 0 -> 0, -1 -> -2, 1 -> 4
+  ok   p | N iff n = -1/4; N = -1 (mod p) iff n = -1/2 (n >= 0) or n = 0 (n < 0)   (p <= 23, |n| <= 600)
+  ok   argument of the series of sheet 0 (odd part of N + 1): 2n + 1 for n >= 0, the odd part of n for n < 0
+  ok   fixed points: -1/2 of 3n + 1, 1/2 of 3n - 1
+C. lines (section 6, last bullet)
+  ok   c_-(3N) = T_-(N), c_+(3N) = T_+(N) (definitions), odd 3 <= N < 10^5
+  ok   c_-(3N) = T_+(c_-(N)) iff N = 3 (mod 4)
+  ok   c_+(3N) = T_-(c_+(N)) iff N = 1 (mod 4)
+  ok   star law a * b = a + b + 2ab on (H - 1)/2, 1 * a = 3a + 1 and 3N - 1 = 2 (3a + 1) for N = 2a + 1
+D. fan primes (section 6)
+    (p, ord_p(2), fan, first p-divisible state) for p < 60: [(3, 2, 1, 1), (5, 4, 2, 2), (7, 3, None, 38), (11, 10, 16, 16), (13, 12, 32, 32), (17, 8, 8, 8), (19, 18, 256, 218), (23, 11, None, 103), (29, 28, 8192, 1435), (31, 5, None, 8664), (37, 36, 131072, 1350), (41, 20, 512, 266), (43, 14, 64, 64), (47, 23, None, 399), (53, 52, 33554432, 609), (59, 58, 268435456, 1091)]
+  ok   p < 200 with the fan as first p-divisible state: [3, 5, 11, 13, 17, 43, 113]
+  ok   200 < p < 400: [241, 257, 331] (README: the next are 241, 257, 331)
+  ok   p | 2^t + 1 for some t iff ord_p(2) is even (p < 400)
+E. tournaments of order at most 6 (sections 7, 8)
+    classes: {1: 1, 2: 1, 3: 2, 4: 4, 5: 12, 6: 56}  strong: {1: 1, 2: 0, 3: 1, 4: 1, 5: 6, 6: 35}  self-converse: {1: 1, 2: 1, 3: 2, 4: 2, 5: 8, 6: 12}
+  ok   classes 1, 1, 2, 4, 12, 56 at orders 1 to 6
+  ok   strong classes 1, 0, 1, 1, 6, 35
+  ok   self-converse classes 2, 2, 8, 12 at orders 3 to 6 (HYP-8205); 8 of 12 at order 5
+  ok   B(x) = 1/(1 - S(x)) with S = x + x^3 + x^4 + 6x^5 + 35x^6 gives 1, 1, 2, 4, 12, 56
+  ok   S truncated at 6x^5 gives 21 at order 6
+    order 4 (H, 3-cycles, self-converse, strong, labelled copies): [(1, 0, True, False, 24), (3, 1, False, False, 8), (3, 1, False, False, 8), (5, 2, True, True, 24)]
+  ok   order 4: H = 1 + 2 c_3; the two classes with H = 3 are a converse pair, the others self-converse; 48 labelled self-converse (H = 1, 5), 16 others (H = 3)
+  ok   order 4: self-converse iff H = 1 (mod 4) iff n >= 0 iff the number of 3-cycles is even
+  ok   order 4 arc-usage profiles: [[1, 1, 1], [2, 2, 2, 1, 1, 1], [2, 2, 2, 1, 1, 1], [4, 3, 3, 3, 1, 1]]
+    strong classes of order 5 (H, |Aut|, self-converse): [(9, 1, True), (9, 1, True), (11, 1, True), (13, 1, True), (15, 3, True), (15, 5, True)]
+  ok   the six strong classes of order 5: H = 9, 9, 11, 13, 15, 15, |Aut| = 1, 1, 1, 1, 3, 5, all self-converse
+  ok   the automorphism orders 3 and 5 belong to the two classes with H = 15
+  ok   the six non-strong classes of order 5: [(1, True), (3, False), (3, False), (3, True), (5, False), (5, False)] (two converse pairs)
+  ok   even order 4, 6: self-converse implies H = 1 (mod 4)
+  ok   order 6: the converse fails (a class with H = 1 (mod 4) that is not self-converse)
+    H at order 5: [1, 3, 5, 9, 11, 13, 15]
+    H at order 6: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  ok   order 4: integers n = -1, 0, 1
+  ok   order 5: [-4, 3] without -2
+  ok   order 6: [-11, 11] without -10, -9, -2, 5
+  ok   Pi_2(C_3) = 12, Pi_2/H = 4; sigma_1(3)/3 = 4/3
+  ok   7!/21 = 240 = 16 x 15
+F. the eight extensions of F_2^2 by F_2 (section 3 table)
+  ok   normalized 2-cocycles: 16
+    (#units of square -1, group, commutative) -> number of classes (subsets): [((0, 'C2^3', True), 1), ((1, 'D4', False), 3), ((2, 'C4 x C2', True), 3), ((3, 'Q8', False), 1)]
+  ok   0: C_2^3 (1 class), 1: D_4 (3), 2: C_4 x C_2 (3), 3: Q_8 (1); commutative iff the number of units of square -1 is even
+  ok   8 cocycles with non-trivial commutator, 8 with trivial (four commutative classes)
+  ok   every subset of the three units is the square set of exactly two cocycles (8 classes)
+G. norm counts on the orders (section 3, 'Norms, and on which orders')
+  ok   Lipschitz order: r_2 additively convolved with itself is 8 sigma_1(n) for odd n <= 400
+  ok   Z[i] x Z[i]: multiplicative convolution at n = 1..8: [16, 32, 0, 48, 64, 0, 0, 64]
+  ok   direct count of |z1|^2 |z2|^2 = n on Z[i] x Z[i] equals the multiplicative convolution (n <= 120)
+  ok   lattice z1 = z2 (mod 2), n = 1..8: [8, 0, 0, 16, 32, 0, 0, 0]
+  ok   sign-table lattice: half of the count at every odd n <= 120
+  ok   sign-table lattice: 0 at n = 2 (mod 4)
+  ok   both counts vanish at n = 3 (mod 4)
+  ok   16 units in Z[i] x Z[i], 8 in the span of the sign table
+  ok   Hurwitz order: 24 sigma_1(n) elements of norm n for odd n < 60
+    x0^2 + x1^2 - x2^2 - x3^2 has the class counts of the seam: {2: False, 3: True, 4: False, 5: True, 7: True, 9: True}
+  ok   the span form has the seam law at the odd primes tested (3, 9, 5, 7) and not at 2, 4
+  ok   four squares = seam modulo 3, 5, 7, 9; different modulo 2 (8, 8 against 10, 6)
+H. local algebra (sections 1, 2)
+  ok   N_m(t) = sum_{d | gcd(t, m)} d phi(m/d) for twelve odd m <= 135
+  ok   (N_m * N_m)(c) = m^3 L_m(c), also with one table multiplied by the unit 2 (twelve odd m <= 135)
+  ok   L_(p^k) = (1 - p^-2) sigma_1(p^v)/p^v at v < k, 1 + 1/p - p^(-k-1) at the class 0
+  ok   L_9(0) = 35/27 = 1.296
+  ok   L_m is multiplicative
+  ok   c_d = d^-2 prod_{p | m/d} (1 - p^-2) is the share of the residue vectors with gcd(a, b, m) = d, sum c_d = 1, L_m(e) = sum_{d | gcd(m, e)} d c_d
+  ok   prod over odd p of (1 - p^-2) sigma_1(p^v)/p^v = (8/pi^2) sigma_1(n)/n (primes < 200000), and sigma_1(n)/n = sum_{d | n} 1/d
+  ok   (6/pi^2)/(3/4) = 8/pi^2 (Ingham's coefficient without the prime 2); (8/pi^2)/(1 - 1/9) = 9/pi^2 (bases 3, 6)
+  ok   r_4(n) = 8 sigma_1(n) = pi^2 n * S for odd n
+I. E8 and the rank-4 law (section 4)
+  ok   the E8 Cartan matrix has determinant 1
+  ok   modulo 2: E8 form [136, 120], rank-4 seam [136, 120] (136 zeros among 256 vectors)
+  ok   modulo 3: E8 form = rank-4 seam
+  ok   the lifting recursion started from 136, 120 gives the rank-4 law (1 - 2^-4) sigma_3(2^v)/2^(3v) (and the class 0) modulo 2^k, k <= 8
+  ok   the recursion reproduces the enumerated rank-4 seam counts modulo 4 and 8
+  ok   modulo 4: 17536, 15360, 17280, 15360 (the E8 counts printed in bridges_exact.out S3)
+  ok   the same recursion at p = 3 from the counts modulo 3 gives the seam counts modulo 9
+  ok   r = 2: (2 pi)^r/((r-1)! zeta(r)) = 24.0000 = 2r/|B_r| = 24
+  ok   r = 4: (2 pi)^r/((r-1)! zeta(r)) = 240.0000 = 2r/|B_r| = 240
+  ok   (8 pi^4/3)/zeta(4) = 240
+  ok   THM-4916 factor at 3 is 34/27; uniform rank-4 value 83/81 at 3 and 1.0064 at 5
+  ok   rank-4 seam, class 0 modulo p: factor 1 + p^-3 - p^-4 (p = 3, 5, 7)
+J. Ingham's sum (section 2, item 2)
+    correlation of D(n)/n with sigma_1(n)/n on [20000, 20400): 0.9788; D(n)/main term: mean 1.061
+  ok   correlation 0.979
+  ok   D(n) = sum_{k < n} d(k) d(n - k) is the number of solutions of a1 a2 + b1 b2 = n in positive integers (n <= 40)
+K. unit equations (section 7, last paragraph)
+  ok   2^delta - 3^(delta-1) = 1 exactly for delta in [1, 2] (delta < 60): 2 - 1, 4 - 3
+  ok   D = 2^L - 3^r = 1, -1, -1, -139 for (L, r) = (2, 1), (1, 1), (3, 2), (11, 7)
+  ok   (L, r) of the shortcut cycles of 1, -1, -5, -17
+  ok   only 4 - 3 is common to the cycle units {4 - 3, 2 - 3, 8 - 9} and the criterion {2 - 1, 4 - 3}
+ALL CHECKS PASSED

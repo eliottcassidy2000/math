@@ -1,0 +1,77 @@
+============================== S2/S3: orders 3..6
+S3a   PASS  classes at orders 1..5: [1, 1, 2, 4, 12]
+S3b   PASS  strong classes at orders 1..5: [1, 0, 1, 1, 6]
+S3c   PASS  1/(1 - (x + x^3 + x^4 + 6x^5)) = 1 + [1, 1, 2, 4, 12] (orders 1..5)
+order 4 classes: H, c3, |Aut|, self-converse, strong, signed label n, arc-usage profile (non-zero)
+     H = 1  c3 = 0  |Aut| = 1  self-converse = True  strong = False  n = +0  profile = [1, 1, 1]
+     H = 3  c3 = 1  |Aut| = 3  self-converse = False  strong = False  n = -1  profile = [2, 2, 2, 1, 1, 1]
+     H = 3  c3 = 1  |Aut| = 3  self-converse = False  strong = False  n = -1  profile = [2, 2, 2, 1, 1, 1]
+     H = 5  c3 = 2  |Aut| = 1  self-converse = True  strong = True  n = +1  profile = [4, 3, 3, 3, 1, 1]
+S3d   PASS  arc-usage profiles at order 4
+S2a   PASS  order 4: self-converse iff H = 1 mod 4 iff n >= 0 iff c3 even
+S2b   PASS  order 4 labels n: [-1, -1, 0, 1]
+order 5 classes:
+     strong = False H =  1  |Aut| = 1  self-converse = True
+     strong = False H =  3  |Aut| = 3  self-converse = False
+     strong = False H =  3  |Aut| = 3  self-converse = False
+     strong = False H =  3  |Aut| = 3  self-converse = True
+     strong = False H =  5  |Aut| = 1  self-converse = False
+     strong = False H =  5  |Aut| = 1  self-converse = False
+     strong = True  H =  9  |Aut| = 1  self-converse = True
+     strong = True  H =  9  |Aut| = 1  self-converse = True
+     strong = True  H = 11  |Aut| = 1  self-converse = True
+     strong = True  H = 13  |Aut| = 1  self-converse = True
+     strong = True  H = 15  |Aut| = 3  self-converse = True
+     strong = True  H = 15  |Aut| = 5  self-converse = True
+S2c   PASS  strong order-5 H values: [9, 9, 11, 13, 15, 15]
+S2d   PASS  strong order-5 |Aut|: [1, 1, 1, 1, 3, 5]
+S2e   PASS  all six strong classes of order 5 are self-converse
+S2f   PASS  order 5: 8 self-converse classes of 12; the 4 others are not strong
+S2g   PASS  order 5: H values [1, 3, 5, 9, 11, 13, 15], labels [-4, -3, -1, 0, 1, 2, 3] = [-4, 3] without -2
+S2h   PASS  order 6: H values [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]; labels = [-11, 11] without [-10, -9, -2, 5]
+============================== S1: five known cycles of 3n+1 on Z
+     cycle lengths: [1, 3, 2, 5, 18]  arcs: 29
+     cycle of    0: labels [1]
+     cycle of    1: labels [5, 17, 9]
+     cycle of   -1: labels [3, 7]
+     cycle of   -5: labels [19, 55, 27, 79, 39]
+     cycle of  -17: labels [67, 199, 99, 295, 147, 439, 219, 655, 327, 163, 487, 243, 727, 363, 1087, 543, 271, 135]
+S1a   PASS  29 arcs, 29 distinct labels
+     odd values <= 1200 not reached by one-apex counts, F1 joins and their products: 52 values, first [7, 13, 21, 41, 43, 67, 77, 83, 109, 131, 133, 163]
+     (F1 alone is not the whole spectrum; THM-4875 (D) uses F1 and the bank family.)
+     odd values <= 1200 not reached by O/Z/J grammar states (words of length <= 15, U <= 9600) and products: [7, 13, 21, 41, 43, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 637, 821]
+     labels of the 29 arcs not in the union of these two families: [7, 67, 163]
+     (these two families are not the whole spectrum; explicit tournaments for every label except 7 are in
+      p4_order7_spectrum.out: order-7 exhaustive spectrum, witnesses of orders 8 and 9 for the others)
+S1b   PASS  7 is a label (arc -2 -> -1); the other labels are path counts by p4_order7_spectrum.out
+S1c   PASS  21 = label of the arc 5 -> 16, not on a known cycle
+S1d   PASS  trunk arcs (4^k - 1)/3 -> 4^k have labels 5, 21, 85
+============================== S4: fan primes
+     primes < 200 with ord_p(2) even (fan primes = alternation primes): [3, 5, 11, 13, 17, 19, 29, 37, 41, 43, 53, 59, 61, 67, 83, 97, 101, 107, 109, 113, 131, 137, 139, 149, 157, 163, 173, 179, 181, 193, 197]
+     first p-divisible state (h < 2^20): {3: 1, 5: 2, 7: 38, 11: 16, 13: 32, 17: 8, 19: 218, 23: 103, 29: 1435, 31: 8664, 37: 1350, 41: 266, 43: 64, 47: 399, 53: 609, 59: 1091, 61: 5886, 67: 2914, 71: 1881, 73: 13030, 79: 6438, 83: 15645, 89: 1379, 97: 21679, 101: 13180}
+S4a   PASS  the fan 2^(t-1) is the first p-divisible state exactly for [3, 5, 11, 13, 17, 43, 113] (p < 200)
+S4b   PASS  x = y exactly at h = 0 and h = 2^j (h < 2^20)
+============================== S5: central extensions of F_2^2 by F_2
+S5a   PASS  normalized 2-cocycles: 16
+S5b   PASS  distinct normalized coboundaries: 2
+S5c   PASS  classes: 8, each of 2 cocycles
+     S = ()         group C2^3   commutative True  table: signed triangle
+     S = (1,)       group D4     commutative False table: transitive, middle vertex 1
+     S = (2,)       group D4     commutative False table: transitive, middle vertex 2
+     S = (3,)       group D4     commutative False table: transitive, middle vertex 3
+     S = (1, 2)     group C4xC2  commutative True  table: signed triangle
+     S = (1, 3)     group C4xC2  commutative True  table: signed triangle
+     S = (2, 3)     group C4xC2  commutative True  table: signed triangle
+     S = (1, 2, 3)  group Q8     commutative False table: cyclic
+S5d   PASS  the class is determined by S and every subset of the three points occurs
+S5e   PASS  commutative iff #S even
+S5f   PASS  groups C2^3, D4, C4xC2, Q8 for #S = 0, 1, 2, 3
+S5g   PASS  non-commutative: cyclic iff #S = 3; transitive with the unit of square -1 in the middle iff #S = 1
+============================== S6: r_2 convolutions
+S6a   PASS  sum_{a+b=n} r_2(a) r_2(b) = 8 sigma(n) for odd n <= 400
+S6b   PASS  sum_{ab=n} r_2(a) r_2(b) = 0 for n = 3 mod 4, n <= 400; non-zero n < 60: [1, 2, 4, 5, 8, 9, 10, 13, 16, 17, 18, 20, 25, 26, 29, 32, 34, 36, 37, 40, 41, 45, 49, 50, 52, 53, 58]
+============================== S7: base b
+S7a   PASS  THM-5070 (2) with W = 2h 2^j + 2^j - 1 equals (1 + b psi1)(1 + b psi2) + b (2^s y1 y2 - [s=0])/2, s = j1 + j2
+S7b   PASS  base 3 balanced states X = y below 2^24: [0, 3, 45, 117, 309, 9045, 62805, 111957, 382293, 2839893, 4412757, 13456725]
+S7c   PASS  base 4: only h = 0; psi(h) > h/2 for 1 <= h < 2^24
+ALL PASS
