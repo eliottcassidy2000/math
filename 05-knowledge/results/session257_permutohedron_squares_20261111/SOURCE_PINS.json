@@ -1,0 +1,42 @@
+{
+  "starting_main": "6512e16e0729401eab11508348d491992bff3cf3",
+  "historical_snapshot": "bf945ba9470c5d7328f365715c3f59ebe93eb513",
+  "recovered_source_atlas": "history/SOURCE_PINS.json",
+  "session256": [
+    {
+      "path": "05-knowledge/results/session256_chan_pak_triples_20261111/SYNTHESIS.md",
+      "commit": "6512e16e0729401eab11508348d491992bff3cf3",
+      "sha256": "816198af7255e1d25992e30e7036ae2e42a137e00ceba20d1b7c18ce0c29a797",
+      "git_blob_sha": "1c386bdf809771fca4b72a6f8fa9261d66374c64",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6512e16e0729401eab11508348d491992bff3cf3/05-knowledge/results/session256_chan_pak_triples_20261111/SYNTHESIS.md"
+    },
+    {
+      "path": "05-knowledge/results/session256_chan_pak_triples_20261111/spinor/PROOF.md",
+      "commit": "6512e16e0729401eab11508348d491992bff3cf3",
+      "sha256": "400999b47295010036683a10d6808b6376b00e8a9e25509728b4f96b787fd672",
+      "git_blob_sha": "08801312fbf4a9736a1c25052b51de5a90b84f74",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6512e16e0729401eab11508348d491992bff3cf3/05-knowledge/results/session256_chan_pak_triples_20261111/spinor/PROOF.md"
+    },
+    {
+      "path": "05-knowledge/results/session256_chan_pak_triples_20261111/gram/PROOF.md",
+      "commit": "6512e16e0729401eab11508348d491992bff3cf3",
+      "sha256": "413257db11f50da148a24573cfd7092ecf0ea575847084b97135964f2046ed0a",
+      "git_blob_sha": "222569ce9ba7415529da46e1bb95f95fe9440c8d",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6512e16e0729401eab11508348d491992bff3cf3/05-knowledge/results/session256_chan_pak_triples_20261111/gram/PROOF.md"
+    },
+    {
+      "path": "05-knowledge/results/session256_chan_pak_triples_20261111/compiler/PROOF.md",
+      "commit": "6512e16e0729401eab11508348d491992bff3cf3",
+      "sha256": "200703f27ed9bb7fc953479be8cc0a030dceb28b91219d4c1044e2ea8bab3c7c",
+      "git_blob_sha": "6f57e7b413e6e228cba017ced6a9d3b22c1383b9",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6512e16e0729401eab11508348d491992bff3cf3/05-knowledge/results/session256_chan_pak_triples_20261111/compiler/PROOF.md"
+    }
+  ],
+  "incoming": [
+    {
+      "commit": "f322658908c42e677cfc19826b51805fbf34dbf9",
+      "path": "05-knowledge/results/modular_centers_collatz_pell_20261111/EXTENSION_CONTENT.md",
+      "role": "Inherited universal terminal extension content, not reaudited"
+    }
+  ]
+}

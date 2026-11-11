@@ -120,11 +120,57 @@ for p in permutations(range(5)):
 p15=(8,1,15,10,6,3,13,12,4,5,11,14,2,7,9)
 check(all(square(a,b) for a,b in zip(p15,p15[1:])),'Q15 positive')
 check(not square(8,15),'orientation-loss hostile')
+# Exact color-respecting strong lumpability, for lazy uniform candidate surgery.
+# Choose one of the other nine enumerated paths uniformly; reject if distance>d.
+initial_cells=[]
+for profile in dict.fromkeys(profiles):
+    initial_cells.append([i for i,x in enumerate(profiles) if x==profile])
+initial_cells.sort(key=min)
+kernels={}
+for d in (1,2):
+    A=[[0]*len(paths) for _ in paths]
+    for i,j in exchange[d]['edges']: A[i][j]=A[j][i]=1
+    for i in range(len(paths)): A[i][i]=len(paths)-1-sum(A[i])
+    kernels[d]=A
+
+def refine(matrices):
+    cells=[c[:] for c in initial_cells];history=[cells]
+    while True:
+        new=[]
+        for C in cells:
+            groups={}
+            for i in C:
+                signature=tuple(sum(A[i][j] for j in D) for A in matrices for D in cells)
+                groups.setdefault(signature,[]).append(i)
+            new.extend(groups.values())
+        new.sort(key=min)
+        if new==cells: return cells,history
+        cells=new;history.append(cells)
+
+markov={}
+for d,A in kernels.items():
+    cells,history=refine([A])
+    Q=[[sum(A[C[0]][j] for j in D) for D in cells] for C in cells]
+    for C in cells:
+        check(all([sum(A[i][j] for j in D) for D in cells]==Q[cells.index(C)] for i in C),'strong lumpability')
+    check(all(sum(row)==9 for row in Q),'stochastic quotient')
+    # Symmetry gives stationary masses |C|/10 and exact detailed balance.
+    check(all(len(C)*Q[a][b]==len(D)*Q[b][a] for a,C in enumerate(cells) for b,D in enumerate(cells)),'quotient reversibility')
+    check(len(cells)==9,'coarsest state count')
+    expected=[3,4] if d==1 else [3,6]
+    check([C for C in cells if len(C)>1]==[expected],'merged fiber')
+    markov[d]={'denominator':9,'initial_cells':initial_cells,'refinement_history':history,
+      'coarsest_cells':cells,'quotient_numerator':Q,'stationary_mass_numerators':[len(C) for C in cells],
+      'initial_color_transition_numerators':[[sum(A[i][j] for j in D) for D in initial_cells] for i in range(10)]}
+common_cells,common_history=refine([kernels[1],kernels[2]])
+check(len(common_cells)==10,'joint driver must retain all paths')
+markov['joint']={'coarsest_cells':common_cells,'refinement_history':common_history}
+
 receipt={'status':'FINITE-EXACT','n':N,'path_count':len(paths),'paths':paths,'common_edges':sorted(common),
  'blocks':blocks,'signed_codes':codes,'birth_color_profiles':profiles,
  'birth_color_polynomial':[{'exponents':k,'coefficient':v} for k,v in sorted(poly.items())],
- 'adjacent_block_swaps':swaps,'single_block_flips':flips,'exchange':exchange,
+ 'markov_color_refinement':markov,'adjacent_block_swaps':swaps,'single_block_flips':flips,'exchange':exchange,
  'refinement_orders_checked':refined_checked,'positive_control':'Q15 concatenation; same projected order with first block reversed fails',
  'universes':'All Q25 paths by leaf-rooted DFS; all endpoint-compatible oriented orders of 11 common-forest blocks; all 120 fine orders for weights(1,2,4,2,3).'}
 Path(__file__).with_name('certificate.json').write_text(json.dumps(receipt,indent=2)+'\n')
-print('PASS: 10 Q25 paths; independent contracted search agrees; 11-block weighted permutohedral atlas frozen under adjacent swaps and individual flips; E1 components 6+4, E2 connected; color polynomial 7*x^7*y^11*z^6+2*x^7*y^10*z^7+x^6*y^12*z^6; refinement controls',refined_checked)
+print('PASS: 10 Q25 paths; independent contracted search agrees; 11-block weighted permutohedral atlas frozen under adjacent swaps and individual flips; E1 components 6+4, E2 connected; color polynomial 7*x^7*y^11*z^6+2*x^7*y^10*z^7+x^6*y^12*z^6; refinement controls',refined_checked, '; Markov minimal color-respecting quotients: 9 states each, joint10')

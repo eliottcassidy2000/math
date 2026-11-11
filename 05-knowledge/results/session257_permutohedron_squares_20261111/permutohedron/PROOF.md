@@ -154,6 +154,53 @@ The polynomial is a specialization of the inherited edge-marked polynomial. It d
 
 For the square-label coloring, each seam carries q=r_i+l_j, and THM-4510's inherited reflection law R_q(v)=q-v reconstructs vertices along an oriented word. These arithmetic labels coexist with the birth colors; neither is interchangeable with the port pairing. The experiment independently reconstructs every path using its square-label reflection word.
 
+### The minimal positive color-response quotient for finite surgery
+
+The color histogram does not determine its own next-step law. Here is an exact positive repair, not just a negative witness. Number the ten paths0,...,9 in the certificate's DFS order. All are rooted at18. Fix d=1 or2 and use this **explicit finite random kernel**: choose one of the other nine enumerated paths uniformly; move to it if at most d old edges need replacement, otherwise stay. Thus the kernel numerator is
+
+    A_d(i,j)=1 when i!=j and {i,j} is an E_d edge,
+    A_d(i,i)=9-degree_(E_d)(i), and K_d=A_d/9.
+
+This is a chain on the already enumerated path bank, not an efficient procedure for generating unknown paths. Its rejection rule makes it symmetric and gives uniform stationary measure on the ten paths. For d=1 the chain is disconnected; for d=2 it is irreducible and lazy.
+
+Start with the three owner-profile classes, in the order
+
+    U=(7,11,6): {0,1,2,3,4,6,9};
+    V=(6,12,6): {5};
+    W=(7,10,7): {7,8}.
+
+Under K_1, paths0 and6 both have profile U, but their probabilities of next profiles(U,V,W) are(9,0,0)/9 and(8,1,0)/9. Under K_2, paths0 and3 have profile U but their corresponding probabilities are(9,0,0)/9 and(7,1,1)/9. Consequently the raw three-state profile process is not strongly lumpable for either kernel.
+
+**FINITE-EXACT positive result.** The unique coarsest strongly lumpable partition refining the profile classes has9 cells for each individual kernel:
+
+- K_1 merges only paths3 and4, whose other endpoints are8 and10; all other paths are singleton cells.
+- K_2 merges only paths3 and6, whose other endpoints are8 and3; all other paths are singleton cells.
+- Requiring one partition to work for **both** selectable kernels K_1,K_2 forces all10 singleton cells.
+
+This is minimality among deterministic partitions of this finite path bank that retain the color profile and satisfy strong lumpability. It is not a lower bound for arbitrary hidden-state realizations or all graph families. It also does not retain exact endpoint identity: doing so would already separate every Q25 path, by the inherited endpoint uniqueness.
+
+The refinement algorithm is elementary: repeatedly split each cell according to the vector of total transition numerators into the current cells. For the two-kernel version concatenate the two response vectors. Stop when no cell splits. Any stable refinement of the initial partition refines every stage by induction: transition totals into a current cell are sums over its finer stable cells. Therefore the final stable partition is the unique coarsest one, proving the minimum-cell statement rather than merely producing an example. The certificate records every stage and both positive quotient matrices.
+
+For the connected two-edge kernel, order the cells as
+
+    {0},{1},{2},{3,6},{4},{5},{7},{8},{9}.
+
+Its exact9-state quotient is one ninth of the nonnegative integer matrix
+
+    7 1 1 0 0 0 0 0 0
+    1 5 1 0 0 0 0 1 1
+    1 1 6 0 0 0 0 0 1
+    0 0 0 5 1 1 0 1 1
+    0 0 0 2 6 1 0 0 0
+    0 0 0 2 1 6 0 0 0
+    0 0 0 0 0 0 7 1 1
+    0 1 0 2 0 0 1 4 1
+    0 1 1 2 0 0 1 1 3.
+
+Each row sums to9. Its stationary masses are(1,1,1,2,1,1,1,1,1)/10; exact detailed balance is checked. The merged paths have identical transition totals into these cells, so every projected trajectory distribution, and hence every future color observation, is computed correctly from this quotient for **any** initial path. The asymmetric entries2 versus1 are the retained multiplicities of the two-path cell, not signed cancellation.
+
+Thus the needed response sidecar depends on the allowed operation. One-edge and two-edge navigation each permit one genuine compression, but their compressed pairs differ. Allowing the controller to choose either operation removes that compression entirely. This is a concrete finite version of the Session256 principle that an invariant sufficient for one observer need not serve a second observer.
+
 ## 6. Source / map / invariant / loss / sidecar
 
 - **Source:** actual labelled graph G, a fixed spanning linear forest F, and Hamiltonian superpaths of F.
@@ -172,6 +219,6 @@ Session256's positive-state/observer lesson transfers here as a design rule: pre
 
 **OPEN:** characterize when a fixed forest's feasible induced permutohedral subgraphs are connected, or find useful sufficient conditions compatible with square-sum endpoint arithmetic. Q25 prohibits a blanket assertion even for the forest of all forced edges.
 
-Run `python3 -B reproduce.py` and `python3 -O reproduce.py` in this directory. Both enumerate the same complete finite universes and regenerate `certificate.json`. The code uses explicit checks, not removable assertions. It independently compares vertex DFS with contracted-block seam search, checks all signed adjacent swaps and single-block flips on the ten feasible states, all45 path pairs for edge surgery, the owner-color polynomial, square-reflection decoding, zonotope support controls for3-4-5, and every contiguous fine order among120 refinements of weights(1,2,4,2,3). The unbounded claims rest on the proofs, not the finite support tests.
+Run `python3 -B reproduce.py` and `python3 -O reproduce.py` in this directory. Both enumerate the same complete finite universes and regenerate `certificate.json`. The code uses explicit checks, not removable assertions. It independently compares vertex DFS with contracted-block seam search, checks all signed adjacent swaps and single-block flips on the ten feasible states, all45 path pairs for edge surgery, the owner-color polynomial, coarsest color-respecting Markov quotients for each surgery kernel and their joint controller, square-reflection decoding, zonotope support controls for3-4-5, and every contiguous fine order among120 refinements of weights(1,2,4,2,3). The unbounded claims rest on the proofs, not the finite support tests.
 
 Read-only source inheritance: THM-207 and THM-4510 by full filenames; `graceful_square_exchange_20261019.md`; `monster_levels_square_sum_7_21_20261022.md`; Session32 ports; Session40 square-sum birth/marking note; Sessions210/211 geometry; Session256 SYNTHESIS. No theorem ID reserved and no Git mutation by this worker. The separate parent controls publication.

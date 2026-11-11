@@ -1,6 +1,6 @@
 # Square-sum ports, permutohedra and filtered arithmetic
 
-**Session257, 11 November 2026. ACTIVE research packet.**
+**Session257, 11 November 2026. COMPLETE research packet.**
 
 This session recovers the user's original square-sum coloring, valuation cycle
 and Monster prime shells, then develops actual geometric and operation maps.
@@ -20,8 +20,7 @@ The [inheritance atlas](history/README.md) resolves the original references:
   Hamiltonian paths are sinks. Earlier transitive-tournament geometry alone
   does not capture its full role.
 
-[Concept board](BOARD.md). New construction notes and exact experiments will
-be added in subsequent checkpoints. Starting main:
+[Concept board](BOARD.md). The completed construction notes and exact experiments are below. Starting main:
 `6512e16e0729401eab11508348d491992bff3cf3`.
 
 ## Completed mechanisms (checkpoint 2)
@@ -36,4 +35,8 @@ be added in subsequent checkpoints. Starting main:
 - [Fixed faces and valuation normalization](filtration/PROOF.md): prime-shell
   port regimes and an exact360-edge permutohedron contraction.
 
-The final synthesis, open gates and whole-packet replay are being assembled.
+[Read the synthesis](SYNTHESIS.md) and [next questions](OPEN_QUESTIONS.md).
+Run `python3 -B reproduce_all.py` and
+`python3 -B reproduce_all.py --optimized` for the four exact engines.
+Source provenance and publication hashes are recorded in
+[SOURCE_PINS.json](SOURCE_PINS.json) and [MANIFEST.json](MANIFEST.json).

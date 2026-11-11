@@ -76,3 +76,20 @@ Source: Session256 spinor/PROOF.md, compiler/PROOF.md, gram/PROOF.md. Source: pr
 ## 4. Provenance and reproducibility scope
 
 Source documents are pinned in SOURCE_PINS.json with commit URLs; this atlas does not rerun their extensive historical censuses. Explicit current user history identifies October23 original graph/valuation prompt, October23 birth-color list, and November7 micro/macro permutohedron/gate request. History confirms intended objects; historical mathematical status comes from the repaired source documents, not from the prompts. No private attachment-derived Session32 lane is imported or published here.
+
+## 5. Later recovered operation and incoming extension refinement
+
+The frozen `session211/recursion-bridge/PROOF.md` proves the apex-arc flip
+preserves all old padded Hamilton words and adds exactly P_T(2) ordered
+possibly-empty two-path covers. Its reflected skew-double is an affine
+permutohedron section, not all doubled sinks. The companion
+`session211/square-sum-port-bridge/PROOF.md` rules out H=2h(Q_n)+1 via
+Q23/Q25 and their inherited3/10 counts. These two additional sources are
+pinned here and used in the final synthesis.
+
+Concurrent `f322658908c42e677cfc19826b51805fbf34dbf9`,
+`05-knowledge/results/modular_centers_collatz_pell_20261111/EXTENSION_CONTENT.md`,
+proves C_(n−1)(T)=1 for unrestricted extensions, using an alternating-path
+top coefficient±2 and tournament oddness. This refines fixed-budget
+endpoint-symmetry obstructions without supplying an exact target or a
+return inside a restricted grammar. It was preserved before publication.

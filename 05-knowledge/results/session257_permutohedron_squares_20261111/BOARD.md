@@ -1,6 +1,6 @@
 # Session257 concept board
 
-**ACTIVE.** Creative native transfers; historical claims inherited at scope.
+**COMPLETE SESSION.** Creative native transfers; historical claims inherited at scope.
 
 | Object | Representation and operation | Retained predicate | Missing coordinate or next test |
 |---|---|---|---|
@@ -40,3 +40,8 @@ Primitive square-target census decodes a triple and compiles it into an
 actual tournament, preserving the triple but not its Hamiltonian count.
 The Monster's actual central factor changes the valuation permutohedron by
 360 edge contractions, and subgroup marks determine the true fixed ports.
+
+Concurrent main f322658 adds a finite lifetime for unrestricted extension
+gcd obstructions: C_(n−1)=1. Fixed-budget mark/port obstructions remain useful,
+but not as permanent divisors under all additions. Exact target and return
+remain separate requirements.

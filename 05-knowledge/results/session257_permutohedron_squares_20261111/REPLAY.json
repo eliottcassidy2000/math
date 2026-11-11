@@ -14,8 +14,8 @@
       "script": "permutohedron/reproduce.py",
       "receipt": "permutohedron/certificate.json",
       "status": "PASS",
-      "source_sha256": "2f53ad5c354fd2c998187c57292bdce3ca79e615a3985af1cdd6044525ff38da",
-      "receipt_sha256": "3da24671303c50b7d32fd9c2794cd1c1df1ecf0cdca6e9ea80a800c43f30dadb"
+      "source_sha256": "8c392e9fb8fb635dc8fae03012123bc75f4760660a5d8367cfe8238a9ed50840",
+      "receipt_sha256": "14232cf526ceeb9a8bbb534153d15a36bc7be50d4d891c8c73cb91bd7daa8084"
     },
     {
       "script": "gram/check.py",

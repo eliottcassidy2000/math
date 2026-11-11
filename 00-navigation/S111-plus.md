@@ -145,3 +145,6 @@ individual session routes preserve scope and remaining open obligations.
 [Session247](S247.md): COMPLETE; charge-free marked metagraph cubes, fixed-divisor and observation-degree interface laws, conserved-charge interval selectors, and three-rail conditional window gluing. Chan–Pak remains OPEN.
 
 [Session256](S256.md): COMPLETE; actual Berggren tournament lift, positive-semigroup exact inverse, all-depth image-gap certificate, finite contextual probes and22 historical triple/tree bridges. Chan–Pak remains OPEN.
+
+
+[Session257](S257.md): COMPLETE; original square-sum colors, weighted permutohedral charts and orbit averaging, sharp seam Gram boundary, primitive-triple census compiler and Monster valuation normalization. Chan–Pak remains OPEN.
