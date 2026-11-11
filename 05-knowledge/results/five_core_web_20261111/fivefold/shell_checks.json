@@ -1,0 +1,48 @@
+{
+  "g_pair_formula_universe": "0<=n<32768",
+  "inherited_signature_count": 44,
+  "literal_H_checks": 1408,
+  "literal_universe": "44 rows; k1,2,3; distinct n in{0,2^k-1,2^(k-1)}; B0,1; old/new",
+  "missing_top_bit_hostile": {
+    "actual": 0,
+    "k": 1,
+    "n": 1,
+    "without_top_bit": 1
+  },
+  "rectangle_cells_checked": 16397,
+  "rectangle_universe": "all1<=k<=9, a,b>=0, a+b<=k, all cells",
+  "shell_identity_checks": 32766,
+  "shell_universe": "all1<=k<=14 and all0<=n<2^k",
+  "signature_shell_checks": 179520,
+  "signature_shell_universe": "all44 inherited rows; B0..7; k1..8; all low words",
+  "small_jump_histograms": {
+    "1": {
+      "0": 1,
+      "2": 1
+    },
+    "2": {
+      "0": 1,
+      "2": 2,
+      "4": 1
+    },
+    "3": {
+      "0": 1,
+      "2": 2,
+      "4": 2,
+      "6": 2,
+      "8": 1
+    },
+    "4": {
+      "0": 1,
+      "2": 2,
+      "4": 2,
+      "6": 2,
+      "8": 2,
+      "10": 2,
+      "12": 2,
+      "14": 2,
+      "16": 1
+    }
+  },
+  "status": "FINITE-EXACT controls for proofs in DYADIC_SHELLS.md; target cover OPEN"
+}

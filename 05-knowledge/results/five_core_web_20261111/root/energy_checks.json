@@ -1,0 +1,169 @@
+{
+  "status": "FINITE-EXACT controls of proved identities; no coverage claim",
+  "matrix_universe": "all digit lengths 1..37",
+  "word_universe": "all padded binary words of lengths 1..12",
+  "words": 8190,
+  "matrices": [
+    {
+      "digits": 1,
+      "determinant": 0
+    },
+    {
+      "digits": 2,
+      "determinant": -4
+    },
+    {
+      "digits": 3,
+      "determinant": 16
+    },
+    {
+      "digits": 4,
+      "determinant": -64
+    },
+    {
+      "digits": 5,
+      "determinant": 192
+    },
+    {
+      "digits": 6,
+      "determinant": -320
+    },
+    {
+      "digits": 7,
+      "determinant": 0
+    },
+    {
+      "digits": 8,
+      "determinant": 1280
+    },
+    {
+      "digits": 9,
+      "determinant": -2048
+    },
+    {
+      "digits": 10,
+      "determinant": -4096
+    },
+    {
+      "digits": 11,
+      "determinant": 24576
+    },
+    {
+      "digits": 12,
+      "determinant": -45056
+    },
+    {
+      "digits": 13,
+      "determinant": 0
+    },
+    {
+      "digits": 14,
+      "determinant": 180224
+    },
+    {
+      "digits": 15,
+      "determinant": -327680
+    },
+    {
+      "digits": 16,
+      "determinant": -262144
+    },
+    {
+      "digits": 17,
+      "determinant": 2359296
+    },
+    {
+      "digits": 18,
+      "determinant": -4456448
+    },
+    {
+      "digits": 19,
+      "determinant": 0
+    },
+    {
+      "digits": 20,
+      "determinant": 17825792
+    },
+    {
+      "digits": 21,
+      "determinant": -33554432
+    },
+    {
+      "digits": 22,
+      "determinant": -16777216
+    },
+    {
+      "digits": 23,
+      "determinant": 201326592
+    },
+    {
+      "digits": 24,
+      "determinant": -385875968
+    },
+    {
+      "digits": 25,
+      "determinant": 0
+    },
+    {
+      "digits": 26,
+      "determinant": 1543503872
+    },
+    {
+      "digits": 27,
+      "determinant": -2952790016
+    },
+    {
+      "digits": 28,
+      "determinant": -1073741824
+    },
+    {
+      "digits": 29,
+      "determinant": 16106127360
+    },
+    {
+      "digits": 30,
+      "determinant": -31138512896
+    },
+    {
+      "digits": 31,
+      "determinant": 0
+    },
+    {
+      "digits": 32,
+      "determinant": 124554051584
+    },
+    {
+      "digits": 33,
+      "determinant": -240518168576
+    },
+    {
+      "digits": 34,
+      "determinant": -68719476736
+    },
+    {
+      "digits": 35,
+      "determinant": 1236950581248
+    },
+    {
+      "digits": 36,
+      "determinant": -2405181685760
+    },
+    {
+      "digits": 37,
+      "determinant": 0
+    }
+  ],
+  "hostile": {
+    "seven_digit_radical": [
+      1,
+      0,
+      -2,
+      -3,
+      -2,
+      0,
+      1
+    ],
+    "encoded_value": 1,
+    "not_a_binary_difference": true
+  }
+}
