@@ -1,0 +1,157 @@
+{
+  "scope": "Complete inherited ordinary-isomorphism bank of orders 1..7, every selected subset. Bank completeness inherited; endpoint and two-cover moments computed exactly. Not an all-order gadget exclusion for lambda243.",
+  "bank_commit": "63b86513f8be",
+  "bank_path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/extended_census.json",
+  "bank_sha256": "891d9e40df4bc0438a204c393926767a0f3c2c776325dc3295bbe91df906bfa9",
+  "ordinary_counts_by_order": {
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 4,
+    "5": 12,
+    "6": 56,
+    "7": 456
+  },
+  "all_selected_cuts": 62422,
+  "positive_t_uniform_gadgets": [
+    {
+      "lambda": 377,
+      "t": 1,
+      "G": [
+        86,
+        124,
+        40,
+        113,
+        100,
+        65,
+        4
+      ],
+      "A": 13,
+      "HUEW": [
+        65,
+        347,
+        19,
+        80
+      ]
+    },
+    {
+      "lambda": 375,
+      "t": 1,
+      "G": [
+        86,
+        124,
+        24,
+        113,
+        96,
+        69,
+        4
+      ],
+      "A": 37,
+      "HUEW": [
+        67,
+        343,
+        21,
+        78
+      ]
+    }
+  ],
+  "lambda243_hits": 0,
+  "small_literal_formula_controls": 198,
+  "singleton_hostile": {
+    "HUEW": [
+      1,
+      6,
+      0,
+      2
+    ],
+    "actual_H": 5,
+    "incorrect_omitted_penalty_value": 7
+  },
+  "literal_Q1_extensions": [
+    {
+      "lambda": 377,
+      "H": 251081,
+      "strong": true,
+      "compressed_root_H_E_U": [
+        313,
+        46,
+        412
+      ],
+      "rows": [
+        1186,
+        1020,
+        1017,
+        1009,
+        993,
+        960,
+        897,
+        768,
+        513,
+        1,
+        27646,
+        177151,
+        255999,
+        82943,
+        232447,
+        206847,
+        135167,
+        10239
+      ],
+      "indegree_one_root_defects": [
+        {
+          "root": 12,
+          "predecessor": 11,
+          "V_minus_H": 16960
+        }
+      ]
+    },
+    {
+      "lambda": 375,
+      "H": 249749,
+      "strong": true,
+      "compressed_root_H_E_U": [
+        311,
+        46,
+        410
+      ],
+      "rows": [
+        1186,
+        1020,
+        1017,
+        1009,
+        993,
+        960,
+        897,
+        768,
+        513,
+        1,
+        76798,
+        177151,
+        255999,
+        50175,
+        233471,
+        198655,
+        142335,
+        10239
+      ],
+      "indegree_one_root_defects": [
+        {
+          "root": 12,
+          "predecessor": 11,
+          "V_minus_H": 12573
+        }
+      ]
+    }
+  ],
+  "naive_lambda27_tt5": {
+    "A": 11,
+    "HUEW": [
+      1,
+      26,
+      0,
+      8
+    ],
+    "actual_H": 16101,
+    "desired_H": 17981
+  }
+}

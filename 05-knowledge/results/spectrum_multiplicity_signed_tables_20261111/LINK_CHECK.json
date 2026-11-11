@@ -1,0 +1,307 @@
+{
+  "scope": "Local Markdown destinations; anchors not validated.",
+  "checked": 50,
+  "failures": [],
+  "links": [
+    {
+      "source": "README.md",
+      "destination": "returns/PROOF.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/returns/PROOF.md",
+      "present": true
+    },
+    {
+      "source": "README.md",
+      "destination": "returns/ONE_EXIT.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/returns/ONE_EXIT.md",
+      "present": true
+    },
+    {
+      "source": "README.md",
+      "destination": "signed_arcs/KERNEL_SWITCH.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/signed_arcs/KERNEL_SWITCH.md",
+      "present": true
+    },
+    {
+      "source": "README.md",
+      "destination": "signed_arcs/KERNEL_SWITCH.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/signed_arcs/KERNEL_SWITCH.md",
+      "present": true
+    },
+    {
+      "source": "README.md",
+      "destination": "multiplicity/PROOF.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/PROOF.md",
+      "present": true
+    },
+    {
+      "source": "README.md",
+      "destination": "multiplicity/build.py",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/build.py",
+      "present": true
+    },
+    {
+      "source": "README.md",
+      "destination": "multiplicity/RIGIDITY.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/RIGIDITY.md",
+      "present": true
+    },
+    {
+      "source": "README.md",
+      "destination": "multiplicity/EXTENSION_LIFETIME.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/EXTENSION_LIFETIME.md",
+      "present": true
+    },
+    {
+      "source": "README.md",
+      "destination": "WEIGHTED_ATLAS.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/WEIGHTED_ATLAS.md",
+      "present": true
+    },
+    {
+      "source": "README.md",
+      "destination": "signed_arcs/PUNCTURED_ATLAS.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/signed_arcs/PUNCTURED_ATLAS.md",
+      "present": true
+    },
+    {
+      "source": "README.md",
+      "destination": "multiplicity/prime_columns_lt100.csv",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/prime_columns_lt100.csv",
+      "present": true
+    },
+    {
+      "source": "WEIGHTED_ATLAS.md",
+      "destination": "signed_arcs/PUNCTURED_ATLAS.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/signed_arcs/PUNCTURED_ATLAS.md",
+      "present": true
+    },
+    {
+      "source": "WEIGHTED_ATLAS.md",
+      "destination": "multiplicity/PROOF.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/PROOF.md",
+      "present": true
+    },
+    {
+      "source": "WEIGHTED_ATLAS.md",
+      "destination": "../../../01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "repo_path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/EXTENSION_LIFETIME.md",
+      "destination": "PROOF.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/PROOF.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/EXTENSION_LIFETIME.md",
+      "destination": "../../berggren_target_return_20261111/arithmetic/TRIANGLE_ALL_K_PROOF.md",
+      "repo_path": "05-knowledge/results/berggren_target_return_20261111/arithmetic/TRIANGLE_ALL_K_PROOF.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/EXTENSION_LIFETIME.md",
+      "destination": "../../berggren_target_return_20261111/fibres/TRIANGLE_FILTRATION.md",
+      "repo_path": "05-knowledge/results/berggren_target_return_20261111/fibres/TRIANGLE_FILTRATION.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/EXTENSION_LIFETIME.md",
+      "destination": "../signed_arcs/KERNEL_SWITCH.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/signed_arcs/KERNEL_SWITCH.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/EXTENSION_LIFETIME.md",
+      "destination": "RIGIDITY.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/RIGIDITY.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/PROOF.md",
+      "destination": "../../actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md",
+      "repo_path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/PROOF.md",
+      "destination": "spectrum_n1_n8.csv",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/spectrum_n1_n8.csv",
+      "present": true
+    },
+    {
+      "source": "multiplicity/PROOF.md",
+      "destination": "all_order_H_le73.json",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/all_order_H_le73.json",
+      "present": true
+    },
+    {
+      "source": "multiplicity/PROOF.md",
+      "destination": "all_order_H_le375.json",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/all_order_H_le375.json",
+      "present": true
+    },
+    {
+      "source": "multiplicity/PROOF.md",
+      "destination": "../../session173_modular_clocks_20261103/counts527/inventory_375.json",
+      "repo_path": "05-knowledge/results/session173_modular_clocks_20261103/counts527/inventory_375.json",
+      "present": true
+    },
+    {
+      "source": "multiplicity/PROOF.md",
+      "destination": "prime_columns_lt100.csv",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/prime_columns_lt100.csv",
+      "present": true
+    },
+    {
+      "source": "multiplicity/PROOF.md",
+      "destination": "prime_columns_lt100.json",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/prime_columns_lt100.json",
+      "present": true
+    },
+    {
+      "source": "multiplicity/PROOF.md",
+      "destination": "receipt.json",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/receipt.json",
+      "present": true
+    },
+    {
+      "source": "multiplicity/PROOF.md",
+      "destination": "RIGIDITY.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/RIGIDITY.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/RIGIDITY.md",
+      "destination": "../../two_entry_funnels_20261103/READY.md",
+      "repo_path": "05-knowledge/results/two_entry_funnels_20261103/READY.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/RIGIDITY.md",
+      "destination": "../../polarized_path_calculus_20261103/FUNNELS.md",
+      "repo_path": "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/RIGIDITY.md",
+      "destination": "../../berggren_target_return_20261111/reset/TARGET_RETURN.md",
+      "repo_path": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/RIGIDITY.md",
+      "destination": "../../session258_endpoint_seed_20261111/arithmetic/RESEARCH.md",
+      "repo_path": "05-knowledge/results/session258_endpoint_seed_20261111/arithmetic/RESEARCH.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/RIGIDITY.md",
+      "destination": "PROOF.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/multiplicity/PROOF.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/RIGIDITY.md",
+      "destination": "../../berggren_target_return_20261111/SYNTHESIS.md",
+      "repo_path": "05-knowledge/results/berggren_target_return_20261111/SYNTHESIS.md",
+      "present": true
+    },
+    {
+      "source": "multiplicity/RIGIDITY.md",
+      "destination": "../../berggren_target_return_20261111/reset/DEFECT_THREE_ESCAPE.md",
+      "repo_path": "05-knowledge/results/berggren_target_return_20261111/reset/DEFECT_THREE_ESCAPE.md",
+      "present": true
+    },
+    {
+      "source": "returns/ONE_EXIT.md",
+      "destination": "PROOF.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/returns/PROOF.md",
+      "present": true
+    },
+    {
+      "source": "returns/ONE_EXIT.md",
+      "destination": "../../session258_endpoint_seed_20261111/endpoints/PROOF.md",
+      "repo_path": "05-knowledge/results/session258_endpoint_seed_20261111/endpoints/PROOF.md",
+      "present": true
+    },
+    {
+      "source": "returns/ONE_EXIT.md",
+      "destination": "../../berggren_target_return_20261111/reset/TARGET_RETURN.md",
+      "repo_path": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md",
+      "present": true
+    },
+    {
+      "source": "returns/ONE_EXIT.md",
+      "destination": "one_exit_probe.py",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/returns/one_exit_probe.py",
+      "present": true
+    },
+    {
+      "source": "returns/ONE_EXIT.md",
+      "destination": "one_exit_receipt.json",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/returns/one_exit_receipt.json",
+      "present": true
+    },
+    {
+      "source": "returns/ONE_EXIT.md",
+      "destination": "../../../../01-canon/theorems/THM-4744-interval-chains-attain-busch-and-are-the-extremal-strong-tournaments-through-order-twelve.md",
+      "repo_path": "01-canon/theorems/THM-4744-interval-chains-attain-busch-and-are-the-extremal-strong-tournaments-through-order-twelve.md",
+      "present": true
+    },
+    {
+      "source": "returns/ONE_EXIT.md",
+      "destination": "rooted179_probe.py",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/returns/rooted179_probe.py",
+      "present": true
+    },
+    {
+      "source": "returns/ONE_EXIT.md",
+      "destination": "rooted179_receipt.json",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/returns/rooted179_receipt.json",
+      "present": true
+    },
+    {
+      "source": "returns/PROOF.md",
+      "destination": "../../berggren_target_return_20261111/reset/TARGET_RETURN.md",
+      "repo_path": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md",
+      "present": true
+    },
+    {
+      "source": "returns/PROOF.md",
+      "destination": "../../odd_tables_signed_carries_20261111/history/NATIVE_ZERO.md",
+      "repo_path": "05-knowledge/results/odd_tables_signed_carries_20261111/history/NATIVE_ZERO.md",
+      "present": true
+    },
+    {
+      "source": "returns/PROOF.md",
+      "destination": "../../session258_endpoint_seed_20261111/endpoints/PROOF.md",
+      "repo_path": "05-knowledge/results/session258_endpoint_seed_20261111/endpoints/PROOF.md",
+      "present": true
+    },
+    {
+      "source": "signed_arcs/KERNEL_SWITCH.md",
+      "destination": "PRIME_KERNEL.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/signed_arcs/PRIME_KERNEL.md",
+      "present": true
+    },
+    {
+      "source": "signed_arcs/README.md",
+      "destination": "KERNEL_SWITCH.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/signed_arcs/KERNEL_SWITCH.md",
+      "present": true
+    },
+    {
+      "source": "signed_arcs/README.md",
+      "destination": "PUNCTURED_ATLAS.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/signed_arcs/PUNCTURED_ATLAS.md",
+      "present": true
+    },
+    {
+      "source": "signed_arcs/README.md",
+      "destination": "PRIME_KERNEL.md",
+      "repo_path": "05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/signed_arcs/PRIME_KERNEL.md",
+      "present": true
+    }
+  ]
+}

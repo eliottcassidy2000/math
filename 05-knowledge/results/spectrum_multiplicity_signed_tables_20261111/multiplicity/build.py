@@ -128,7 +128,7 @@ def prime_columns(bins):
                          linear_from_order=max((k-1 for k in count),default=1)))
         all_terms[p]=[dict(order=k,classes=count[k],automorphism_mass=str(mass[k])) for k in sorted(count)]
     with (HERE/'prime_columns_lt100.csv').open('w',newline='') as f:
-        writer=csv.DictWriter(f,fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)
+        writer=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n');writer.writeheader();writer.writerows(rows)
     result=dict(status='FINITE-EXACT globally complete prime columns below100 from THM-4744 inventory',
                 source=source,sha256=hashlib.sha256(raw).hexdigest(),prime_count=len(primes),
                 attained_prime_count=sum(r['attainable'] for r in rows),all_attained_by_order=max(r['minimum_order'] for r in rows if r['attainable']),
@@ -186,7 +186,7 @@ def main():
                               strong_ordinary_classes=b[2],strong_labelled_tournaments=b[3],
                               up_to_n_ordinary_classes=cumulative[h][0],up_to_n_labelled_tournaments=cumulative[h][1]))
     with (HERE/'spectrum_n1_n8.csv').open('w',newline='') as f:
-        writer=csv.DictWriter(f,fieldnames=list(table[0]));writer.writeheader();writer.writerows(table)
+        writer=csv.DictWriter(f,fieldnames=list(table[0]),lineterminator='\n');writer.writeheader();writer.writerows(table)
     saved_atoms=[dict(n=n,H=h,automorphism_order=aut,ordinary_classes=count)
                  for (n,h,aut),count in sorted(atoms.items())]
     (HERE/'strong_atoms_n1_n8.json').write_text(json.dumps(saved_atoms,indent=2)+'\n')

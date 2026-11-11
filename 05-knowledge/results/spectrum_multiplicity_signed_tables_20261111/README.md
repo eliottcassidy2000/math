@@ -11,10 +11,12 @@ user's connections through 99·2^k+23, the first 25 primes, and 2,5,16.
 | Object | Exact result | Proof / data |
 |---|---|---|
 | Actual native return | `891·2^k+215 -> 2673·2^k+647`, k>=1; k1 is 1997->5993. Add two siblings; retain every old arc. | [Return proof](returns/PROOF.md) |
+| Fixed nontransitive attachments | Exact multipliers 375 and 377 on h+1, for every Q_k; a necessary and sufficient rooted three-coordinate gate. | [One-exit construction](returns/ONE_EXIT.md) |
 | Old prime square-sum kernel | Its five paths produce the two H9 cores and a one-arc 23/25 switch with identical E,U,d. | [Kernel switch](signed_arcs/KERNEL_SWITCH.md) |
 | Paired binary-shell return | An infinite simultaneous H9/C3 rebase starts at 823/825; an exact two-coordinate recurrence proves closure. | [Kernel switch](signed_arcs/KERNEL_SWITCH.md) |
 | Multiplicities | Complete spectra through order 8; exact ordinary, labelled, and cumulative counts for every H<=375 at every order. | [Compiler proof](multiplicity/PROOF.md), [query program](multiplicity/build.py) |
 | Actual ready fibres | Every H>1 1-ready class is rigid, uniquely rooted, and a strong ready core followed by a transitive tail. Ready multiplicity stabilizes. | [Rigidity and constructors](multiplicity/RIGIDITY.md) |
+| Growth and extension cost | At fixed H=3^a, the proportion with extension-gcd lifetime a tends to 1; exact first corrections differ for ordinary and labelled counting. | [Lifetime theorem](multiplicity/EXTENSION_LIFETIME.md) |
 | Signed odd tables | The modulus product gives J(x,sigma)=(3x+sigma,-sigma); 7->21->63 becomes (2,-)->(5,+)->(16,-). | [Weighted atlas](WEIGHTED_ATLAS.md) |
 | The two missing arrows | Missing moduli 7 and 21 mean the minus 2->1 and plus 5->16 edges are absent. A finite mixed-sign controller bypasses both on the candidate support. | [Punctured atlas](signed_arcs/PUNCTURED_ATLAS.md) |
 | First 25 primes | Exactly 23 positive prime columns; all appear by order 7. Their ordinary sum is 172n-1073 for n>=8. | [Prime columns](multiplicity/prime_columns_lt100.csv) |
@@ -34,6 +36,9 @@ python3 -B 05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/mul
 python3 -B 05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/signed_arcs/check.py
 python3 -B 05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/signed_arcs/switch_check.py
 python3 -B 05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/returns/native_return.py
+python3 -B 05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/returns/one_exit_probe.py
+python3 -B 05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/returns/rooted179_probe.py
+python3 -B 05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/seal_packet.py
 ```
 
 The compiler reuses the pinned inherited ordinary and strong inventories;
@@ -70,3 +75,34 @@ cube, then to the two same-count cores, a native switch, and finally a
 simultaneous binary-shell return. The multiplicity loop separates size
 growth from usable marked sources and then recovers an injective constructor
 from the correct ready subfibre. Both loops yield actual graph operations.
+
+## What the multiplicities now decide
+
+For H=221 and n>=9, the exact ordinary count is `2n^2+20n-262`, but
+exactly one class has a 1-ready root. Its ready fraction therefore tends
+to zero. For H=63, the ordinary count is exactly `2(n-7)` and the cumulative
+count is `(n-7)(n-6)`, for n>=7; both strong cores are rigid. For an
+attained product-primitive count, the second backward difference of N_n
+recovers the exact number of new strong classes at order n.
+
+Combining the incoming triangle filtration with the two H9 switches gives
+a further all-size law. At fixed H=3^a, almost every large-order source
+needs a new vertices before any induced extension can remove divisibility
+by 3. For a>=2, its exact-lifetime-a proportion is
+
+    ordinary: 1 - 3a(a-1)/n + O_a(n^-2),
+    labelled: 1 - 19a(a-1)/n + O_a(n^-2).
+
+The coefficients come from ordered gaps and the automorphism weight of
+the two rigid H9 cores. This identifies which growing part of a count
+fibre is hard to use for extensions, rather than treating every witness
+as interchangeable.
+
+The fixed one-exit multiplier-243 problem reduces to the rooted target
+`(H,E,U)=(179,46,278)`. Prime factorization and the exact strong inventory
+reduce every possible order to 39 strong classes. None has that response:
+the only E=46 roots have U=232 or U=276. Thus this entire specified
+uniform attachment route is closed, while the 375/377 routes are positive.
+The next construction must change that interface, use another source,
+or leave the fixed one-exit grammar. This is not an exclusion of the
+requested Hamiltonian totals themselves.

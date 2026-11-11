@@ -85,7 +85,8 @@ growth identity
     N_n(h)-N_(n-1)(h)
       = sum_(q|h,q>1) sum_(r>=3) a_r(q) N_(n-r)(h/q).       (5)
 
-Set N_0(1)=1 and all negative-order counts to zero. The removed part on
+Equation (5) holds for n>=1. Set N_0(1)=P_0(1)=1, both order-zero
+counts at h!=1 to zero, and all negative-order counts to zero. The removed part on
 the left consists exactly of tournaments ending in a singleton. A final
 nontrivial component gives each term on the right uniquely. Replacing
 a_r(q) by the sum of reciprocal automorphism orders gives the same
