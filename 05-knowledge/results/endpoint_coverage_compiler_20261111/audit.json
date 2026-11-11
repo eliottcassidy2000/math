@@ -1,0 +1,59 @@
+{
+  "scope": "same-agent review, independent counting implementation",
+  "python": "3.13.14",
+  "inherited_commit": "e753f4be7660",
+  "borrowed_source_sha256": {
+    "05-knowledge/results/modular_centers_collatz_pell_20261111/content_checks.py": "bf894b45e3d3f29a5e953b72bc12fec6ba3a07db7868a768758624917eacc63d",
+    "05-knowledge/results/modular_centers_collatz_pell_20261111/tournament_checks.py": "25a193fe1d66a6c6780451f5de6c393398c1b7788e743744317c258f41aa6a7a"
+  },
+  "checks": [
+    {
+      "command": "python3 ray_probe.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "byte_match": true
+    },
+    {
+      "command": "python3 inflation_bank.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "byte_match": true
+    },
+    {
+      "command": "python3 inflation_bank.py --max-n 7",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "byte_match": true
+    },
+    {
+      "command": "python3 composition_probe.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "byte_match": true
+    },
+    {
+      "command": "python3 joint_ports.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "byte_match": true
+    },
+    {
+      "command": "python3 endpoint_checks.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "byte_match": true
+    },
+    {
+      "command": "python3 wheel.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "byte_match": true
+    },
+    {
+      "command": "python3 verify.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "byte_match": true
+    }
+  ]
+}

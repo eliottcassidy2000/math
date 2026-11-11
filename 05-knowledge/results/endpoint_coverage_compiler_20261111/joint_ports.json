@@ -1,0 +1,15 @@
+{
+  "separately_stable_pairs": 763,
+  "jointly_unstable": 0,
+  "pairs_by_order": [
+    0,
+    0,
+    3,
+    19,
+    66,
+    186,
+    489
+  ],
+  "mixed_size_literal_controls": 127,
+  "failures": []
+}

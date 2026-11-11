@@ -1,0 +1,110 @@
+{
+  "primes_below_100": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71,
+    73,
+    79,
+    83,
+    89,
+    97
+  ],
+  "active": [
+    {
+      "p": 5,
+      "period": 4,
+      "residue": 3
+    },
+    {
+      "p": 13,
+      "period": 12,
+      "residue": 1
+    },
+    {
+      "p": 17,
+      "period": 8,
+      "residue": 1
+    },
+    {
+      "p": 19,
+      "period": 18,
+      "residue": 9
+    },
+    {
+      "p": 29,
+      "period": 28,
+      "residue": 27
+    },
+    {
+      "p": 37,
+      "period": 36,
+      "residue": 23
+    },
+    {
+      "p": 53,
+      "period": 52,
+      "residue": 25
+    },
+    {
+      "p": 59,
+      "period": 58,
+      "residue": 35
+    },
+    {
+      "p": 61,
+      "period": 60,
+      "residue": 0
+    },
+    {
+      "p": 67,
+      "period": 66,
+      "residue": 56
+    },
+    {
+      "p": 83,
+      "period": 82,
+      "residue": 15
+    }
+  ],
+  "inactive": [
+    2,
+    3,
+    7,
+    11,
+    23,
+    31,
+    41,
+    43,
+    47,
+    71,
+    73,
+    79,
+    89,
+    97
+  ],
+  "wheel_period": 428468040,
+  "survivor_residues": 226472946,
+  "density_numerator": 5392213,
+  "density_denominator": 10201620,
+  "order2_mod419": 418,
+  "composite_survivor_exponents": "2+8140892760*t, t>=1",
+  "direct_wheel_controls": 5000,
+  "binary_language_controls": 96
+}

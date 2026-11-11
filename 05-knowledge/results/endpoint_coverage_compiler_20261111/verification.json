@@ -1,0 +1,340 @@
+{
+  "named_families": [
+    {
+      "family": "seven",
+      "base": [
+        5,
+        258,
+        3,
+        3
+      ],
+      "defect_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slope_coefficients": [
+        20,
+        7,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "family": "three",
+      "base": [
+        6,
+        321,
+        12,
+        4
+      ],
+      "defect_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slope_coefficients": [
+        64,
+        24,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "family": "twentyone",
+      "base": [
+        6,
+        12866,
+        17,
+        5
+      ],
+      "defect_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slope_coefficients": [
+        88,
+        42,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "family": "binary29",
+      "base": [
+        7,
+        524673,
+        5,
+        5
+      ],
+      "defect_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slope_coefficients": [
+        93,
+        32,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "family": "ternary30",
+      "base": [
+        6,
+        385,
+        12,
+        0
+      ],
+      "defect_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slope_coefficients": [
+        89,
+        90,
+        30,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "family": "ternary50",
+      "base": [
+        7,
+        1281,
+        12,
+        0
+      ],
+      "defect_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slope_coefficients": [
+        149,
+        150,
+        50,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "family": "ternary78",
+      "base": [
+        7,
+        1537,
+        20,
+        0
+      ],
+      "defect_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slope_coefficients": [
+        233,
+        234,
+        78,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "family": "ternary90",
+      "base": [
+        7,
+        1537,
+        24,
+        0
+      ],
+      "defect_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slope_coefficients": [
+        269,
+        270,
+        90,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "family": "mixed",
+      "base": [
+        5,
+        258,
+        9,
+        1
+      ],
+      "defect_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slope_coefficients": [
+        32,
+        21,
+        4,
+        0,
+        0
+      ]
+    },
+    {
+      "family": "mixed11",
+      "base": [
+        5,
+        258,
+        24,
+        1
+      ],
+      "defect_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "slope_coefficients": [
+        44,
+        36,
+        8,
+        0,
+        0
+      ]
+    }
+  ],
+  "actual_tail_controls": 60,
+  "backtracking_controls": 30,
+  "C3_substitution_controls": 10,
+  "ray99": [
+    {
+      "k": 1,
+      "n": 8,
+      "H": 221
+    },
+    {
+      "k": 2,
+      "n": 9,
+      "H": 419
+    },
+    {
+      "k": 3,
+      "n": 10,
+      "H": 815
+    },
+    {
+      "k": 4,
+      "n": 11,
+      "H": 1607
+    },
+    {
+      "k": 5,
+      "n": 12,
+      "H": 3191
+    },
+    {
+      "k": 6,
+      "n": 13,
+      "H": 6359
+    }
+  ],
+  "converse_states": [
+    [
+      37,
+      14,
+      99
+    ],
+    [
+      37,
+      14,
+      117
+    ]
+  ],
+  "ternary_duplicate_isomorphism": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    1,
+    6
+  ],
+  "sporadic": [
+    {
+      "code": 9281,
+      "selected": 17,
+      "marked": 2,
+      "defects_sizes_1_to_6": [
+        1,
+        1,
+        -23,
+        -143,
+        -599,
+        -2159
+      ]
+    },
+    {
+      "code": 131713,
+      "selected": 68,
+      "marked": 5,
+      "defects_sizes_1_to_6": [
+        1,
+        5,
+        1,
+        -43,
+        -239,
+        -955
+      ]
+    }
+  ]
+}

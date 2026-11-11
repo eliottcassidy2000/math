@@ -1,0 +1,29 @@
+{
+  "ordinary_base_counts": [
+    1,
+    1,
+    2,
+    4,
+    12,
+    56
+  ],
+  "hits": [
+    {
+      "n": 6,
+      "code": 148,
+      "rows": [
+        40,
+        17,
+        3,
+        6,
+        13,
+        30
+      ],
+      "selected": 9,
+      "H": 37,
+      "offset": 23,
+      "U": 99,
+      "first_exponent": 1
+    }
+  ]
+}

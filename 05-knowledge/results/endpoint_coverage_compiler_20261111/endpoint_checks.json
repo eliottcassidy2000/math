@@ -1,0 +1,98 @@
+{
+  "levels": [
+    {
+      "n": 1,
+      "ordinary": 1,
+      "content_pairs": [
+        [
+          1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 2,
+      "ordinary": 1,
+      "content_pairs": [
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 3,
+      "ordinary": 2,
+      "content_pairs": [
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 4,
+      "ordinary": 4,
+      "content_pairs": [
+        [
+          1,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 5,
+      "ordinary": 12,
+      "content_pairs": [
+        [
+          1,
+          2,
+          12
+        ]
+      ]
+    },
+    {
+      "n": 6,
+      "ordinary": 56,
+      "content_pairs": [
+        [
+          1,
+          2,
+          55
+        ],
+        [
+          3,
+          6,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "ordinary": 456,
+      "content_pairs": [
+        [
+          1,
+          2,
+          452
+        ],
+        [
+          3,
+          6,
+          3
+        ],
+        [
+          3,
+          78,
+          1
+        ]
+      ]
+    }
+  ],
+  "literal_child_controls": 4054,
+  "gcd_one_with_nonprimitive_difference": []
+}
