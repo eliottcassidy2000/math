@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "local_links_checked": 172,
+  "startup_byte_delta": -5,
+  "startup_line_delta": 0,
+  "scope": "Owned Markdown links and single modified startup line; repository-wide check_docs not run."
+}

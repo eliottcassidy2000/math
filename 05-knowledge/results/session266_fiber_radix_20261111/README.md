@@ -1,35 +1,25 @@
 # Session266: tournament frequencies, punctured orbits, and radix growth
 
-**11 November2026. Research in progress. Chan–Pak and Collatz remain OPEN.**
+**11 November2026. COMPLETE. Chan–Pak and Collatz remain OPEN.**
 
-This session responds to the request to classify how often each odd Hamiltonian
-path total appears among tournament isomorphism classes as order grows, and to
-connect the answer with signed Collatz arcs and Tao's money-plant/base puzzle.
-It accepts inherited proved results and finite inventories rather than rerunning
-old audits. New constructors receive bounded exact controls.
+[Final synthesis](SYNTHESIS.md) · [Next questions](OPEN_QUESTIONS.md) ·
+[Sources](SOURCES.md) · [Reproduction](REPRODUCE.md).
 
-## First checkpoint
+- [Frequency compiler](fibers/PROOF.md): arbitrary order for odd H<=73;
+  ordinary, self-converse, converse-merged, labeled and cumulative channels.
+- [Complete finite census](fibers/FINITE_SCOPE.md): every H through order8,
+  totaling7412 ordinary classes across sizes1..8. Inherited data, newly compiled.
+- [Infinite smooth family](smooth/PROOF.md): degree and leading coefficient
+  for every3,5,7-smooth H; six-atom factorization elasticity5/2.
+- [Signed Collatz atlas](collatz/PROOF.md): the requested holes have exact
+  codes21 and7; path completions, punctured profiles and binary carry parity.
+- [Radix algebra](radix/PROOF.md): Tao's puzzle, all bases, unipotent recurrences,
+  carries and the SCC padding bridge.
+- [Electrical core defect](geometry/PROOF.md): exact padding-invariant resistance
+  statistic and its frequency-resolved generating series.
 
-- [Exact frequency compiler](fibers/PROOF.md): ordinary, self-converse,
-  converse-merged, labeled and cumulative counts; executable for every odd
-  H<=73 at any requested order; finite reduction for an arbitrary H.
-- [Radix and recursive algebra](radix/PROOF.md): full money-plant solution,
-  arbitrary bases, finite differences, carries and SCC gap dynamics.
-
-The strong-core classification and eventual polynomial law are inherited from
-Session24 and opus S50, whose stronger complete inventories extend below625.
-The frozen executable input here is deliberately H<=73; this is not a new
-large census or a claim that the broader classification is exhausted.
-
-The next checkpoint adds literal Collatz edge deletion, tournament path
-completion fibers, and electrical core-padding geometry, followed by synthesis.
-Starting main was22834e5136c0900cdd78ce490ae630d88cbf278d; concurrent S92
-reservations are preserved. No external priority claim or canon promotion.
-
-## Second checkpoint
-
-[Exact punctures and infinite smooth-family classification](CHECKPOINT2.md).
-New lanes: [Collatz](collatz/PROOF.md), [smooth counts](smooth/PROOF.md),
-[electrical core defect](geometry/PROOF.md). The [complete finite census](fibers/FINITE_SCOPE.md)
-now covers every Hamiltonian total through order8, separately from the
-arbitrary-order H<=73 compiler.
+The strong-core classification and eventual polynomial method are inherited
+from Session24 and opus S50; their stronger complete inventories extend below625.
+The new compiler's frozen H<=73 input does not redefine that frontier.
+The general effective finite reduction is distinct from a closed solution of
+all strong-inventory coefficients or the full odd-spectrum support question.

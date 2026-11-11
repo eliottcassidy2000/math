@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "programs": [
+    {
+      "program": "fibers/build.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_identical": true,
+      "stdout_sha256": "2e88e3e4ecc0f170686952960fbb079ceaa58a4e6be3e3258c1ad99ddf7a51cb"
+    },
+    {
+      "program": "fibers/finite_census.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_identical": true,
+      "stdout_sha256": "e62e380dfd96f4164a3bb52a66b727f428cd17775352c332a1b898731ead7cf7"
+    },
+    {
+      "program": "radix/replay.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_identical": true,
+      "stdout_sha256": "065aad629f55effc6be32ba28254f7761cf4e1bb0815d96cf37ac171c8b5585c"
+    },
+    {
+      "program": "collatz/probe.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_identical": true,
+      "stdout_sha256": "8f8d849dabe1137bb14249f4f2fc21d2a9a3c56001b382eff5d6c6c24cc3d8bc"
+    },
+    {
+      "program": "smooth/replay.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_identical": true,
+      "stdout_sha256": "8d4dca2307c0bb9abaaea99860716043a4c9b92b071c39388a23eae6a5dfc964"
+    },
+    {
+      "program": "geometry/replay.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "outputs_identical": true,
+      "stdout_sha256": "b3eece2a76f30a27b36765a1174019b1652ed7f0b7bd5bc8c6c47e8f3fe5f4a9"
+    }
+  ],
+  "inherited_claims_not_reaudited": true,
+  "repository_wide_checks": "NOT RUN; scoped packet links and startup delta checked separately"
+}
