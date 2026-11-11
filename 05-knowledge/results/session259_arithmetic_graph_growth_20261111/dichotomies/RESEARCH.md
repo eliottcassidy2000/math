@@ -147,6 +147,8 @@ More generally, define `L_0=2, L_1=s`, and
 
 Induction gives `L_k=a^k+b^k`. Parent kth powers act exactly by
 
+For every integer k>=1,
+
     Q_k(s,p)=(L_k(s,p),p^k),
     Δ(Q_k j)=Δ(j) [sum_(i=0)^(k−1) b^(k−1−i)a^i]²,
     B(Q_k j)=B(j)^k,       Q_k D_c=D_(c^k) Q_k.

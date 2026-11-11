@@ -1,0 +1,32 @@
+{
+  "event_uniqueness_and_Euler_cutoff": 300,
+  "checks": [
+    {
+      "cutoff": 30,
+      "weak_bars": 12,
+      "strict_bars": 19,
+      "correction_bars": 7,
+      "status": "FINITE-EXACT PASS"
+    },
+    {
+      "cutoff": 100,
+      "weak_bars": 41,
+      "strict_bars": 60,
+      "correction_bars": 19,
+      "status": "FINITE-EXACT PASS"
+    },
+    {
+      "cutoff": 300,
+      "weak_bars": 122,
+      "strict_bars": 178,
+      "correction_bars": 56,
+      "status": "FINITE-EXACT PASS"
+    }
+  ],
+  "first_higher_correction": [
+    1,
+    12,
+    24
+  ],
+  "claim": "weak bars plus prime-square-scaled suspended weak bars and prime-square H0 bars"
+}
