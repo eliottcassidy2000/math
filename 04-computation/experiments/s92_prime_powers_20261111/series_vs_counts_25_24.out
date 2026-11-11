@@ -1,0 +1,10 @@
+odd N in [2^24, 2^25): 8388608 values; mean r_0 = 5.9180, mean r_1 = 7.4817; mean of sigma(n)/n over the window: sheet 0 1.2337, sheet 1 1.2337 (pi^2/8 = 1.2337)
+sheet 0: correlation of r with sigma(n)/n: 0.4016; with the squarefree-level product: 0.3929
+    mean of r by v_3(n), relative to v = 0: v=0: 1.000 (limit 1.000, 5592405 N); v=1: 1.455 (limit 1.333, 1864135 N); v=2: 1.722 (limit 1.444, 621379 N); v=3: 1.725 (limit 1.481, 207126 N); v=4: 1.713 (limit 1.494, 69042 N)
+    mean of r by v_5(n), relative to v = 0: v=0: 1.000 (limit 1.000, 6710886 N); v=1: 1.318 (limit 1.200, 1342178 N); v=2: 1.323 (limit 1.240, 268435 N); v=3: 1.325 (limit 1.248, 53687 N); v=4: 1.320 (limit 1.250, 10738 N)
+    quintiles of sigma(n)/n: mean abundancy -> mean r: 1.001 -> 4.301; 1.037 -> 4.492; 1.171 -> 5.569; 1.350 -> 6.679; 1.609 -> 8.550
+sheet 1: correlation of r with sigma(n)/n: 0.4275; with the squarefree-level product: 0.4181
+    mean of r by v_3(n), relative to v = 0: v=0: 1.000 (limit 1.000, 5592406 N); v=1: 1.448 (limit 1.333, 1864135 N); v=2: 1.717 (limit 1.444, 621378 N); v=3: 1.715 (limit 1.481, 207126 N); v=4: 1.700 (limit 1.494, 69042 N)
+    mean of r by v_5(n), relative to v = 0: v=0: 1.000 (limit 1.000, 6710887 N); v=1: 1.334 (limit 1.200, 1342176 N); v=2: 1.333 (limit 1.240, 268436 N); v=3: 1.331 (limit 1.248, 53687 N); v=4: 1.339 (limit 1.250, 10737 N)
+    quintiles of sigma(n)/n: mean abundancy -> mean r: 1.001 -> 5.438; 1.037 -> 5.690; 1.171 -> 7.058; 1.350 -> 8.457; 1.609 -> 10.766
+ALL CHECKS PASSED
