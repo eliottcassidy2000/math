@@ -1,0 +1,331 @@
+{
+  "status": "FINITE-EXACT controls for proved all-word classification",
+  "decorated_counts": [
+    {
+      "vertices": 1,
+      "decorated_H9": 0
+    },
+    {
+      "vertices": 2,
+      "decorated_H9": 0
+    },
+    {
+      "vertices": 3,
+      "decorated_H9": 0
+    },
+    {
+      "vertices": 4,
+      "decorated_H9": 0
+    },
+    {
+      "vertices": 5,
+      "decorated_H9": 3
+    },
+    {
+      "vertices": 6,
+      "decorated_H9": 6
+    },
+    {
+      "vertices": 7,
+      "decorated_H9": 9
+    },
+    {
+      "vertices": 8,
+      "decorated_H9": 12
+    },
+    {
+      "vertices": 9,
+      "decorated_H9": 15
+    },
+    {
+      "vertices": 10,
+      "decorated_H9": 18
+    },
+    {
+      "vertices": 11,
+      "decorated_H9": 21
+    }
+  ],
+  "branch_signatures": [
+    {
+      "core": "OIII",
+      "rows": [
+        14,
+        28,
+        24,
+        16,
+        1
+      ],
+      "branches": {
+        "A": {
+          "word": "OIIII",
+          "state": [
+            17,
+            16,
+            0
+          ],
+          "response": [
+            30,
+            0,
+            16
+          ]
+        },
+        "B": {
+          "word": "OIOIOOIOOIO",
+          "state": [
+            401,
+            1389,
+            1
+          ],
+          "response": [
+            586,
+            0,
+            400
+          ]
+        },
+        "C": {
+          "word": "OOOIOOIOOI",
+          "state": [
+            545,
+            950,
+            0
+          ],
+          "response": [
+            584,
+            0,
+            544
+          ]
+        }
+      }
+    },
+    {
+      "core": "OIOI",
+      "rows": [
+        14,
+        28,
+        8,
+        16,
+        5
+      ],
+      "branches": {
+        "A": {
+          "word": "OIIOII",
+          "state": [
+            33,
+            36,
+            0
+          ],
+          "response": [
+            54,
+            0,
+            32
+          ]
+        },
+        "B": {
+          "word": "OIOIOOIOIO",
+          "state": [
+            227,
+            693,
+            1
+          ],
+          "response": [
+            330,
+            0,
+            226
+          ]
+        },
+        "C": {
+          "word": "OOOIOOOI",
+          "state": [
+            129,
+            238,
+            0
+          ],
+          "response": [
+            136,
+            0,
+            128
+          ]
+        }
+      }
+    },
+    {
+      "core": "OOOI",
+      "rows": [
+        14,
+        12,
+        8,
+        16,
+        7
+      ],
+      "branches": {
+        "A": {
+          "word": "OIOIOII",
+          "state": [
+            73,
+            84,
+            0
+          ],
+          "response": [
+            106,
+            0,
+            72
+          ]
+        },
+        "B": {
+          "word": "OIOIOIOIO",
+          "state": [
+            117,
+            341,
+            1
+          ],
+          "response": [
+            170,
+            0,
+            116
+          ]
+        },
+        "C": {
+          "word": "OOOOOI",
+          "state": [
+            33,
+            62,
+            0
+          ],
+          "response": [
+            32,
+            0,
+            32
+          ]
+        }
+      }
+    }
+  ],
+  "branch_formula_controls": 729,
+  "independent_graph_DP_checks": 587,
+  "same_graph_chart_switch_OIII_to_OOOI": [
+    4,
+    0,
+    1,
+    2,
+    3
+  ],
+  "collision_A_outputs": [
+    107,
+    73,
+    17
+  ],
+  "A_image_no30000_difference": {
+    "max_index_to_check": 6,
+    "finite_values": [
+      {
+        "core": "OIII",
+        "padding": 0,
+        "H": 17
+      },
+      {
+        "core": "OIII",
+        "padding": 1,
+        "H": 51
+      },
+      {
+        "core": "OIII",
+        "padding": 2,
+        "H": 185
+      },
+      {
+        "core": "OIII",
+        "padding": 3,
+        "H": 719
+      },
+      {
+        "core": "OIII",
+        "padding": 4,
+        "H": 2853
+      },
+      {
+        "core": "OIII",
+        "padding": 5,
+        "H": 11387
+      },
+      {
+        "core": "OIII",
+        "padding": 6,
+        "H": 45521
+      },
+      {
+        "core": "OIOI",
+        "padding": 0,
+        "H": 33
+      },
+      {
+        "core": "OIOI",
+        "padding": 1,
+        "H": 107
+      },
+      {
+        "core": "OIOI",
+        "padding": 2,
+        "H": 401
+      },
+      {
+        "core": "OIOI",
+        "padding": 3,
+        "H": 1575
+      },
+      {
+        "core": "OIOI",
+        "padding": 4,
+        "H": 6269
+      },
+      {
+        "core": "OIOI",
+        "padding": 5,
+        "H": 25043
+      },
+      {
+        "core": "OIOI",
+        "padding": 6,
+        "H": 100137
+      },
+      {
+        "core": "OOOI",
+        "padding": 0,
+        "H": 73
+      },
+      {
+        "core": "OOOI",
+        "padding": 1,
+        "H": 243
+      },
+      {
+        "core": "OOOI",
+        "padding": 2,
+        "H": 921
+      },
+      {
+        "core": "OOOI",
+        "padding": 3,
+        "H": 3631
+      },
+      {
+        "core": "OOOI",
+        "padding": 4,
+        "H": 14469
+      },
+      {
+        "core": "OOOI",
+        "padding": 5,
+        "H": 57819
+      },
+      {
+        "core": "OOOI",
+        "padding": 6,
+        "H": 231217
+      }
+    ],
+    "pairs": []
+  },
+  "ordinary_H9_family_generating_function": "2*z^5/(1-z)^2",
+  "decorated_H9_family_generating_function": "3*z^5/(1-z)^2"
+}
