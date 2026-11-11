@@ -1,0 +1,75 @@
+e1_d2.txt     +1:  805 odd c ; -1:   80 odd c ; all c odd and <= 4097: True ; other lines: 0
+       sign +1 cumulative by least depth: d<=0:1 d<=2:805
+       sign -1 cumulative by least depth: d<=1:80
+e1_d4.txt     +1: 1612 odd c ; -1: 1330 odd c ; all c odd and <= 4097: True ; other lines: 0
+       sign +1 cumulative by least depth: d<=0:1 d<=2:805 d<=4:1612
+       sign -1 cumulative by least depth: d<=1:80 d<=3:1330
+e1x_d3.txt    +1:  620 odd c ; -1:  310 odd c ; all c odd and <= 4097: True ; other lines: 0
+       sign +1 cumulative by least depth: d<=1:37 d<=3:620
+       sign -1 cumulative by least depth: d<=0:2 d<=2:310
+e2_d2.txt     +1: 1872 odd c ; -1: 1782 odd c ; all c odd and <= 4097: True ; other lines: 0
+       sign +1 cumulative by least depth: d<=0:89 d<=1:1028 d<=2:1872
+       sign -1 cumulative by least depth: d<=0:70 d<=1:1124 d<=2:1782
+e2_d3.txt     +1: 1997 odd c ; -1: 1992 odd c ; all c odd and <= 4097: True ; other lines: 0
+       sign +1 cumulative by least depth: d<=0:89 d<=1:1028 d<=2:1872 d<=3:1997
+       sign -1 cumulative by least depth: d<=0:70 d<=1:1124 d<=2:1782 d<=3:1992
+e2o8_d2.txt   +1: 2023 odd c ; -1: 2006 odd c ; all c odd and <= 4097: True ; other lines: 0
+       sign +1 cumulative by least depth: d<=0:636 d<=1:1742 d<=2:2023
+       sign -1 cumulative by least depth: d<=0:614 d<=1:1716 d<=2:2006
+e3_d6.txt     +1: 1592 odd c ; -1: 1554 odd c ; all c odd and <= 4097: True ; other lines: 0
+       sign +1 cumulative by least depth: d<=0:1 d<=2:614 d<=4:1357 d<=6:1592
+       sign -1 cumulative by least depth: d<=1:54 d<=3:1128 d<=5:1554
+E1: N_2 = 805  N_4 = 1612  (quoted 805, 1612); offset -1 at depth <= 3: 1330 (quoted 1,330)
+E1: odd c in [3,129] without a +1 state of depth <= 4: [5, 11, 23, 29, 73, 85, 91, 95, 127]  (quoted 5, 11, 23, 29, 73, 85, 91, 95, 127)
+E1: least uncovered c >= 3: 5 (quoted 5)
+E1: -1 states with c = 1 (slope a power of two): [(1, [(23, 3)])] (quoted: 2^23, 2^24 or 2^25 at depth 3)
+E1: c = 19 with +1: [(6, 2)] (quoted: slope 19 * 2^6 at depth 2)
+E1 + extra transitive pair starts: union of +1 values: 1649 (quoted in HYP-9662: 1,649); 29 in extra run: [(0, 1)]
+E2: +1: 1872  -1: 1782 (quoted 1,872 and 1,782); exceptional values with a seed: 32 of 33 ; missing: [3773]
+E2 with order-8 starts: +1: 2023  -1: 2006 ; 3773: [(6, 1)] ; missing of the 33: []
+E2 three levels: +1: 1997  -1: 1992 ; missing of the 33: [3773]
+E3: N_2' = 614  N_4' = 1357  N_6' = 1592 (quoted 614, 1357, 1592); -1 at depth <= 5: 1554 (quoted 1,554)
+     E3 c = 5: [(32, 6)]
+     E3 c = 11: None
+     E3 c = 23: None
+     E3 c = 73: [(31, 6)]
+     E3 c = 85: [(30, 6)]
+     E3 c = 91: None
+     E3 c = 95: None
+     E3 c = 127: None
+     E3 c = 29: None
+     E3 c = 125: None
+E3: odd c <= 129 not occurring with +1: [11, 23, 29, 91, 95, 125, 127]
+E3: depth six adds 235 values to the 1357 of depth four (quoted 235 and 1,357)
+e2_states_order_le7.txt : 339 states (r g M E); signs: Counter({1: 191, -1: 148})
+     states with (r, h, M) = (1, 15, 64): [(1, 16, 64, 6)]
+     H(B) of seeds (r = 1) with a power of two as slope: [1, 5, 9, 15, 19, 27]
+     (H(B), M) of anti-seeds with a power of two as slope: []
+e2_states_order8.txt : 2418 states (r g M E); signs: Counter({1: 1294, -1: 1124})
+     states with (r, h, M) = (1, 15, 64): [(1, 16, 64, 6)]
+     H(B) of seeds (r = 1) with a power of two as slope: [1, 5, 9, 15, 19, 27, 51, 351]
+     (H(B), M) of anti-seeds with a power of two as slope: [(217, 1024)]
+src9grid.txt : 564 lines (m code Omask offset H(B) slope); malformed for the 9-grid: 0
+     level  2:  82 lines,  30 with v <= s,  21 of them one-vertex; least order with v <= s: (4, 34, 8, 5, 5, 9, 0) ; least one-vertex: ((4, 34, 8, 5, 5, 9, 0), 'excess U-H = 4')
+     level  3: 276 lines, 203 with v <= s, 203 of them one-vertex; least order with v <= s: (5, 516, 1, 9, 9, 9, 0) ; least one-vertex: ((5, 516, 1, 9, 9, 9, 0), 'excess U-H = 0')
+     level  4:  53 lines,  18 with v <= s,  18 of them one-vertex; least order with v <= s: (6, 16392, 2, 17, 17, 18, 1) ; least one-vertex: ((6, 16392, 2, 17, 17, 18, 1), 'excess U-H = 1')
+     level  5:  76 lines,  53 with v <= s,  38 of them one-vertex; least order with v <= s: (6, 568, 16, 33, 33, 72, 3) ; least one-vertex: ((6, 568, 16, 33, 33, 72, 3), 'excess U-H = 39')
+     level  6:  25 lines,  16 with v <= s,   7 of them one-vertex; least order with v <= s: (7, 1050961, 64, 65, 65, 288, 5) ; least one-vertex: ((7, 1050961, 64, 65, 65, 288, 5), 'excess U-H = 223')
+     level  7:  17 lines,   7 with v <= s,   4 of them one-vertex; least order with v <= s: (8, 11026436, 4, 129, 129, 288, 5) ; least one-vertex: ((8, 11026436, 4, 129, 129, 288, 5), 'excess U-H = 159')
+     level  8:  20 lines,  19 with v <= s,   3 of them one-vertex; least order with v <= s: (8, 6562209, 4, 257, 257, 288, 5) ; least one-vertex: ((8, 6562209, 4, 257, 257, 288, 5), 'excess U-H = 31')
+     level  9:  11 lines,  11 with v <= s,   2 of them one-vertex; least order with v <= s: (9, 442533377, 1, 513, 513, 576, 6) ; least one-vertex: ((9, 442533377, 1, 513, 513, 576, 6), 'excess U-H = 63')
+     level 10:   3 lines,   3 with v <= s,   0 of them one-vertex; least order with v <= s: (9, 39059589704, 40, 1025, 1577, 4608, 9) ; least one-vertex: None
+     level 11:   1 lines,   1 with v <= s,   1 of them one-vertex; least order with v <= s: (9, 194216770, 1, 2049, 2049, 2304, 8) ; least one-vertex: ((9, 194216770, 1, 2049, 2049, 2304, 8), 'excess U-H = 255')
+src43grid.txt : 190 lines (m code Omask offset H(B) slope); malformed for the 43-grid: 0
+     level  1:  15 lines,   0 with v <= s,   0 of them one-vertex; least order with v <= s: None ; least one-vertex: None
+     level  2:  16 lines,   6 with v <= s,   0 of them one-vertex; least order with v <= s: (7, 313346, 10, 5, 49, 172, 2) ; least one-vertex: None
+     level  3:  43 lines,  35 with v <= s,   0 of them one-vertex; least order with v <= s: (6, 16392, 33, 9, 17, 86, 1) ; least one-vertex: None
+     level  4:  52 lines,  47 with v <= s,   0 of them one-vertex; least order with v <= s: (6, 20612, 12, 17, 31, 86, 1) ; least one-vertex: None
+     level  5:   7 lines,   3 with v <= s,   0 of them one-vertex; least order with v <= s: (8, 176947460, 5, 33, 121, 344, 3) ; least one-vertex: None
+     level  6:   9 lines,   7 with v <= s,   0 of them one-vertex; least order with v <= s: (8, 176424193, 40, 65, 135, 688, 4) ; least one-vertex: None
+     level  7:  16 lines,  16 with v <= s,  11 of them one-vertex; least order with v <= s: (7, 1488966, 4, 129, 129, 172, 2) ; least one-vertex: ((7, 1488966, 4, 129, 129, 172, 2), 'excess U-H = 43')
+     level  8:  15 lines,  15 with v <= s,  10 of them one-vertex; least order with v <= s: (8, 12845384, 8, 257, 257, 344, 3) ; least one-vertex: ((8, 12845384, 8, 257, 257, 344, 3), 'excess U-H = 87')
+     level  9:  13 lines,  13 with v <= s,   9 of them one-vertex; least order with v <= s: (8, 54875395, 2, 513, 513, 688, 4) ; least one-vertex: ((8, 54875395, 2, 513, 513, 688, 4), 'excess U-H = 175')
+     level 10:   3 lines,   3 with v <= s,   2 of them one-vertex; least order with v <= s: (9, 3295708945, 16, 1025, 1025, 1376, 5) ; least one-vertex: ((9, 3295708945, 16, 1025, 1025, 1376, 5), 'excess U-H = 351')
+     level 11:   1 lines,   1 with v <= s,   1 of them one-vertex; least order with v <= s: (9, 65905758985, 2, 2049, 2049, 2752, 6) ; least one-vertex: ((9, 65905758985, 2, 2049, 2049, 2752, 6), 'excess U-H = 703')
+twin_le8.txt lines: 596

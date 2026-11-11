@@ -1,0 +1,41 @@
+PASS  D0 out-lists of D4 in THM-5130 = code 14705281
+PASS  D1 state of the order-8 pair = (-1, 1024, 217, 64) (permutations, Python recursion, C recursion + literal)  (-1, 1024, 217, 64)
+PASS  D2 closed tournaments on 9 + t vertices have 2^(10+t) - 1 paths, t = 1, 2, 3 (t = 1 also by 10! permutations)  [2047, 4095, 8191]
+PASS  D3 D4 towers over (TT_n, {1}), n = 1..7, levels (1,8-n,0),(1,4,0),(2,2,1): offset -1, slope 2^23, base order 22, M_1 = 646 (level map)
+PASS  D4 first two levels of the D4 towers recounted literally (orders 10 and 16; n = 1, 4, 7)
+PASS  D5 family D2 (two closers over a fan), literal H  60 tournaments
+PASS  D6 family D3 (two closers over a transitive pair), literal H  60 tournaments
+PASS  D7 family D1 (one closer), literal H
+--- 9-grid sources (levels 7..11)
+   s=7: order 8 code 11026436 O=[2] state (r,M,h,E)=(129, 288, 129, 14)  v=5  closed (r, t, order, H)=[(1, 3, 12, 2433), (2, 4, 13, 4737)]  ok
+   s=8: order 8 code 6562209 O=[2] state (r,M,h,E)=(257, 288, 257, 64)  v=5  closed (r, t, order, H)=[(1, 4, 13, 4865), (2, 5, 14, 9473)]  ok
+   s=9: order 9 code 442533377 O=[0] state (r,M,h,E)=(513, 576, 513, 212)  v=6  closed (r, t, order, H)=[(1, 4, 14, 9729), (2, 5, 15, 18945)]  ok
+   s=10: order 9 code 6793626886 O=[1, 2] state (r,M,h,E)=(1025, 4608, 1565, 406)  v=9  closed (r, t, order, H)=[(1, 2, 12, 19457), (2, 3, 13, 37889)]  ok
+   s=11: order 9 code 194216770 O=[0] state (r,M,h,E)=(2049, 2304, 2049, 350)  v=8  closed (r, t, order, H)=[(1, 4, 14, 38913), (2, 5, 15, 75777)]  ok
+PASS  E1 five 9-grid pairs: offset 1 + 2^s, slope 9 * 2^v (v <= s), H(B) as tabulated; N(9, r, s) for r = 1, 2
+--- H1 examples
+   (point; a=2,p=1) -> (5, 9, 5, 1)  (point; a=4,p=4) -> (17, 18, 17, 8)  seed (4, code 34, O={2,3}) = (1, 16, 5, 2) ; a=p=1 -> (33, 36, 33, 12)
+PASS  E2 H1: the pairs (5, 9), (17, 18), (33, 36) are one-vertex gadgets on seeds of slope 2^k
+PASS  E3 H1 formula (one-vertex gadget (TT_a, {p})) on random bases, all four coordinates
+--- 43-grid
+   port in-degree in the rooted tournament: 1 (in-neighbour [7]); root beats port: 0; out-set of the root: [0, 1]
+PASS  E4 the port (vertex 8) has in-degree 1 and is not beaten by the root (vertex 2)
+   a=3: closed tournament (t=1) on 12 vertices has H = 2785 = N(43, 1, 5)
+   a=4: closed tournament (t=1) on 13 vertices has H = 5537 = N(43, 2, 5)
+   states (r, M, h, E) for a = 1, 2, 3, 4: [(1, 360, 135, 92), (1, 704, 263, 178), (1, 1392, 519, 350), (1, 2768, 1031, 694)]
+PASS  E5 carrier: offset 1 and slope 16 + 172 * 2^a for a = 1, 2, 3 (and 4)
+   level 1: order 7 code 532488 O=[1, 3] state=(3, 172, 51, 26) v=2 (v <= s: False) closed (r,t,H)=[(2, 1, 347), (3, 2, 691)]
+   level 2: order 7 code 313346 O=[1, 3] state=(5, 172, 49, 22) v=2 (v <= s: True) closed (r,t,H)=[(1, 1, 349), (2, 2, 693)]
+   level 3: order 6 code 16392 O=[0, 5] state=(9, 86, 17, 2) v=1 (v <= s: True) closed (r,t,H)=[(1, 3, 697), (2, 4, 1385)]
+   level 4: order 6 code 17034 O=[0, 3] state=(17, 86, 33, 14) v=1 (v <= s: True) closed (r,t,H)=[(1, 4, 1393), (2, 5, 2769)]
+PASS  E6 the four low sources of the 43-grid: offsets 3, 5, 9, 17, slopes 172, 172, 86, 86
+PASS  E7 H(order 7, code 17976) = 175 = N(43, 1, 1)  175
+PASS  E8 43-grid bookkeeping: carrier (s >= 5, r = a - 2 >= 1), sources (s = 2, 3, 4 all r; s = 1, r >= 2), head (1, 1): nothing left out for r, s <= 40  []
+--- domination ray
+PASS  F1 d(G_t) = rho_dom + 2^t delta_dom (t = 1, 2, 3), rho_dom = d(G_0) - iota - delta_dom + 1; M >= delta_dom; equality iff B transitive; U_B(o) >= 2^outdeg(o); Session261 inequality on the closed tournaments; all labelled pairs of order <= 4  1023 pairs, 1s
+PASS  F2 M >= delta_dom, equality iff B transitive: all labelled pairs of order 5  31744 pairs, 0s
+PASS  F3 cited inequality H(T) - H(T - z) >= d(G_z) - 1 and H(T) >= d(G_z) with equality iff T - z transitive, all (T, z) of order <= 5  5405 rooted tournaments, 0s
+--- merge inequality / abundancy
+PASS  G1 H(X) >= H(X[S]) H(X - S) for every S; the merge keeps both orders, lands on a Hamiltonian path and is injective; (n + 1) H <= Pi_2 <= 2^n H with equality on the right iff transitive; all labelled tournaments of order <= 5  1099 tournaments, 1s
+PASS  G2 a(X => Y) = a(X) a(Y) (Pi_2 and H both multiplicative), random X, Y of order <= 4
+ALL PASS

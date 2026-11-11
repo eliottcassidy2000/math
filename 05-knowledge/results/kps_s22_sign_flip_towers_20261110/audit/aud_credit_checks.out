@@ -1,0 +1,7 @@
+PASS  C1a Session260's carrier (24,1,3,6,14) = C(TT_2, {1,2}; TT_2) (explicit isomorphism)
+PASS  C1b Session260 (4)-(5) on its eight-start family, and for v = 1, 2 identity with the towers over (TT_2, {1,2}) (gap c = delta - 1; Theorem B with delta <= 3)  108 marked modules
+PASS  C2a ONE_EXIT Theorem 1: H(T(X,x;G,A)) = hH + FU - sE - dW (random checks by permutation enumeration)  150 cases
+PASS  C2b for X = X' => v, x = v: (h, F, s, d) = (H(X'), Pi_2(X'), 0, H(X')), so ONE_EXIT (1) is row h of Theorem A
+PASS  C3 gadget constants of Theorem A = entries of Session261's marked cover tensor (C_r, S_r, E_r, K_r), r <= 3
+PASS  C4 Session261 NINE_OFFSET_EXTENSION (1) = H1 of THM-5130 at the point base
+ALL PASS

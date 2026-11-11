@@ -1,0 +1,2 @@
+PASS  C counter (recursion and literal generation) = permutation enumeration on 435 random pairs of orders 1..8
+PASS  C counter on transitive pairs of orders 12..20 (40 cases)

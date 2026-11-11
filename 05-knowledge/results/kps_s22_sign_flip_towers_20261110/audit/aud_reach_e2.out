@@ -1,0 +1,6 @@
+distinct unit states of order <= 7: auditor 339, packet 339, identical sets: True
+depth <= 0: offset +1: 89 odd c <= 4097 ; offset -1: 70
+depth <= 1: offset +1: 1028 odd c <= 4097 ; offset -1: 1124
+depth <= 2: offset +1: 1872 odd c <= 4097 ; offset -1: 1782
+packet (runs/e2_d2.err): depth <= 0: 89 / 70 ; depth <= 1: 1028 / 1124 ; depth <= 2: 1872 / 1782
+exceptional values of HYP-9658 (B) with a seed: 32 of 33 ; missing: [3773]

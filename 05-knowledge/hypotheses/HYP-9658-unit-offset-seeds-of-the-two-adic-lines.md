@@ -34,6 +34,11 @@ related:
 
 **2026-11-10 continuation:** (B) is settled by explicit roots of order eleven,
 stronger than its order-twelve prediction. [Certificates, proof and scope](../results/odd_c_seed_symmetry_20261110/README.md).
+
+**2026-11-11 (kind-pasteur-2026-11-10-S22):** [THM-5130](../../01-canon/theorems/THM-5130-sign-flip-towers-gadget-transfer-law-and-seeds-of-both-signs.md)
+gives a second, independent set of seeds for these 33 lines by sign-flip towers (rooted orders 11 to 15, not
+smaller than the order-eleven roots above) and an anti-seed (offset `-1`, ray `c 2^s - 1`) for every odd `c <= 4097`.
+The two-sided form of (A) is [HYP-9662](HYP-9662-two-sided-seeds-and-the-reach-of-sign-flip-towers.md).
 All 2,049 lines with odd c <= 4097 are now complete except 7 and 21, using
 the inherited independently audited finite coverage for the points below
 the rays (largest needed value 63,857). This does not settle (A), the general

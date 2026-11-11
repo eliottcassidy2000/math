@@ -1,0 +1,3 @@
+n = 1: order 24, H (literal generation) = 16777215 ; 2^24 - 1 = 16777215 ; PASS  (20s)
+n = 7: order 24, H (literal generation) = 16777215 ; 2^24 - 1 = 16777215 ; PASS  (19s)
+done

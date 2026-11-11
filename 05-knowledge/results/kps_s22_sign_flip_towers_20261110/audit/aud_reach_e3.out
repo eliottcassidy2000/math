@@ -1,0 +1,25 @@
+=== E3 box (x <= 5, m <= 2), depth 6
+box: delta in {1,2}, 0 <= x <= 5, 0 <= m <= 2, start k <= 10 (+ empty out-set), depth <= 6, odd c <= 4097
+depth <= 0: offset +1: 1 odd c ; offset -1: 0
+depth <= 1: offset +1: 1 odd c ; offset -1: 54
+depth <= 2: offset +1: 614 odd c ; offset -1: 54
+depth <= 3: offset +1: 614 odd c ; offset -1: 1128
+depth <= 4: offset +1: 1357 odd c ; offset -1: 1128
+depth <= 5: offset +1: 1357 odd c ; offset -1: 1554
+depth <= 6: offset +1: 1592 odd c ; offset -1: 1554
+states visited: 26867713404 ; offset -1 states with M a power of two: 16
+odd c in [3,129] never reached with offset +1: 11 23 29 91 95 125 127
+least odd c >= 3 not reached with offset +1: 11
+  c = 1: +1 at depth 0 (v2 0) ; -1 at depth 3 (v2 23)   [255 = never]
+  c = 5: +1 at depth 6 (v2 32) ; -1 at depth 1 (v2 1)   [255 = never]
+  c = 11: +1 at depth 255 (v2 255) ; -1 at depth 1 (v2 4)   [255 = never]
+  c = 19: +1 at depth 2 (v2 6) ; -1 at depth 255 (v2 255)   [255 = never]
+  c = 23: +1 at depth 255 (v2 255) ; -1 at depth 1 (v2 1)   [255 = never]
+  c = 29: +1 at depth 255 (v2 255) ; -1 at depth 255 (v2 255)   [255 = never]
+  c = 73: +1 at depth 6 (v2 31) ; -1 at depth 5 (v2 19)   [255 = never]
+  c = 85: +1 at depth 6 (v2 30) ; -1 at depth 3 (v2 6)   [255 = never]
+  c = 91: +1 at depth 255 (v2 255) ; -1 at depth 3 (v2 15)   [255 = never]
+  c = 95: +1 at depth 255 (v2 255) ; -1 at depth 3 (v2 10)   [255 = never]
+  c = 125: +1 at depth 255 (v2 255) ; -1 at depth 3 (v2 7)   [255 = never]
+  c = 127: +1 at depth 255 (v2 255) ; -1 at depth 1 (v2 2)   [255 = never]
+exit status: 0

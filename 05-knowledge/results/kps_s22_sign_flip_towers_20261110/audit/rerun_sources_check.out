@@ -1,0 +1,14 @@
+PASS  S1 one-vertex gadget on a seed of slope 2^k: D = 1 + 2^(a+k), U = 2^(a-p)(1+h) + 2^(p+k) 3^(a-p) - [p=1]E  36 literal states
+PASS  S2 (5, 9), (17, 18), (33, 36) are one-vertex gadgets on seeds of slope a power of two
+PASS  S3 9-grid sources at levels 7..11 (offset 1 + 2^s, slope 9 * 2^v, v <= s); N(9, r, s) recounted for r = 1, 2
+        s=7: order 8, code 11026436, O=[2], (offset, slope, H(B)) = (129, 288, 129)
+        s=8: order 8, code 6562209, O=[2], (offset, slope, H(B)) = (257, 288, 257)
+        s=9: order 9, code 442533377, O=[0], (offset, slope, H(B)) = (513, 576, 513)
+        s=10: order 9, code 6793626886, O=[1, 2], (offset, slope, H(B)) = (1025, 4608, 1565)
+        s=11: order 9, code 194216770, O=[0], (offset, slope, H(B)) = (2049, 2304, 2049)
+PASS  S4 carrier for d = 43: unit offset for module sizes a = 1, 2, 3 at the port, slope 16 + 172 * 2^a  [360, 704, 1392]
+PASS  S5 M >= delta_dom for every pair; equality iff B transitive; d(G_2) - d(G_1) = 2 delta_dom; H(T_t) - d(G_t) >= H(B) - 1  32767 pairs
+PASS  S6 H(X) >= H(X[S]) H(X - S); n + 1 <= Pi_2(X)/H(X) <= 2^n with equality on the right iff X transitive; multiplicative
+PASS  S7 s(TT_n, O) = (1 - w(O), sum_{o in O} 2^(n-o), 1, [n in O]), w = sum over pairs of max(2, 2^(distance-1)), n <= 7
+PASS  S8 43-grid: carrier (s >= 5), sources at s = 1 (r >= 2), 2, 3, 4, and the head N(43, 1, 1) = 175 (order 7)
+ALL PASS

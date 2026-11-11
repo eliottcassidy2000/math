@@ -1,0 +1,27 @@
+certs_plus.txt {'lines': 2049, 'c_ok': True, 'signs_ok': True, 'no_level': 1969, 'one_level': 63, 'two_level': 17, 'more': 0, 'max_order': 14, 'max_v2': 7, 'v2_zero': 1225, 'max_m': 9, 'min_order': 1, 'levels_delta_ok': True, 'start_order_le9': True, 'nolevel_order_le9': True}
+   order histogram: [(1, 1), (3, 1), (4, 1), (5, 4), (6, 17), (7, 65), (8, 547), (9, 1380), (10, 2), (11, 4), (12, 16), (13, 9), (14, 2)]
+   order histogram of tower lines: [(5, 1), (6, 4), (7, 9), (8, 14), (9, 19), (10, 2), (11, 4), (12, 16), (13, 9), (14, 2)]
+PASS  certs_plus.txt: all 2049 lines recounted by the auditor's subset recursion, 0 mismatches (0s)
+PASS  certs_plus.txt: 157 sampled lines (150 random + 7 named) recounted by literal path generation, 0 mismatches (0s)
+PASS  certs_plus.txt: closed tournaments T_1, T_2 of the 157 sampled lines have sign + 2^t c 2^v2 Hamiltonian paths, 0 mismatches (0s)
+   named lines:
+     c=245 v2=6 order=11 start(m=8, code=864641, Omask=98) levels=[(1, 1, 0)] -> state (n, r, M, h, E) = (11, 1, 15680, 6007, 4266)
+     c=853 v2=6 order=12 start(m=9, code=47580252200, Omask=41) levels=[(1, 1, 0)] -> state (n, r, M, h, E) = (12, 1, 54592, 20591, 14264)
+     c=2023 v2=0 order=10 start(m=6, code=20994, Omask=18) levels=[(2, 1, 0)] -> state (n, r, M, h, E) = (10, 1, 2023, 599, 357)
+     c=3001 v2=0 order=10 start(m=1, code=0, Omask=1) levels=[(2, 1, 1), (1, 1, 1)] -> state (n, r, M, h, E) = (10, 1, 3001, 775, 291)
+     c=3427 v2=6 order=13 start(m=9, code=45508345864, Omask=146) levels=[(1, 1, 1)] -> state (n, r, M, h, E) = (13, 1, 219328, 56399, 21150)
+     c=3773 v2=3 order=12 start(m=9, code=35435882769, Omask=22) levels=[(1, 1, 0)] -> state (n, r, M, h, E) = (12, 1, 30184, 11351, 7836)
+     c=3985 v2=0 order=11 start(m=4, code=34, Omask=3) levels=[(1, 1, 0), (1, 1, 1)] -> state (n, r, M, h, E) = (11, 1, 3985, 999, 375)
+certs_minus.txt {'lines': 2049, 'c_ok': True, 'signs_ok': True, 'no_level': 1959, 'one_level': 88, 'two_level': 2, 'more': 0, 'max_order': 14, 'max_v2': 10, 'v2_zero': 1187, 'max_m': 9, 'min_order': 2, 'levels_delta_ok': True, 'start_order_le9': True, 'nolevel_order_le9': True}
+   order histogram: [(2, 1), (3, 1), (4, 2), (5, 5), (6, 13), (7, 48), (8, 544), (9, 1399), (10, 1), (11, 10), (12, 16), (13, 6), (14, 3)]
+   order histogram of tower lines: [(4, 1), (5, 3), (6, 4), (7, 7), (8, 18), (9, 21), (10, 1), (11, 10), (12, 16), (13, 6), (14, 3)]
+PASS  certs_minus.txt: all 2049 lines recounted by the auditor's subset recursion, 0 mismatches (0s)
+PASS  certs_minus.txt: 155 sampled lines (150 random + 5 named) recounted by literal path generation, 0 mismatches (0s)
+PASS  certs_minus.txt: closed tournaments T_1, T_2 of the 155 sampled lines have sign + 2^t c 2^v2 Hamiltonian paths, 0 mismatches (0s)
+   named lines:
+     c=1 v2=10 order=8 start(m=8, code=14705281, Omask=26) levels=- -> state (n, r, M, h, E) = (8, -1, 1024, 217, 64)
+     c=7 v2=5 order=8 start(m=5, code=642, Omask=3) levels=[(1, 1, 0)] -> state (n, r, M, h, E) = (8, -1, 224, 81, 52)
+     c=13 v2=1 order=5 start(m=1, code=0, Omask=1) levels=[(1, 2, 0)] -> state (n, r, M, h, E) = (5, -1, 26, 9, 6)
+     c=65 v2=1 order=7 start(m=7, code=790536, Omask=6) levels=- -> state (n, r, M, h, E) = (7, -1, 130, 39, 22)
+     c=1039 v2=1 order=8 start(m=8, code=93128196, Omask=104) levels=- -> state (n, r, M, h, E) = (8, -1, 2078, 407, 124)
+ALL PASS

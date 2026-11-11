@@ -1,0 +1,10 @@
+PASS  T0 subset recursion = permutation enumeration  1230 pairs, 0s
+PASS  T1 gadget law on random (B, O, X, P), orders <= 4 each  400 cases (377 literal by permutations, 12 at order 9 by both), offsets seen: [-17, -15, -13, -7, -5, -3, -1, 1, 3, 5], 3s
+PASS  T1e gadget law, exhaustive: all labelled B, X of order <= 3, every O and P (empty and full included)  5476 cases, 1s
+PASS  T2 Theorem B constants (delta <= 5, i <= 4, m <= 3, a <= 11), also w, w3, u3 of the proof  79 gadgets, 2s
+PASS  T2b level map (1) and Corollary B on literal states (delta = 1..4, random bases)  235 cases
+PASS  T3a Remark (1): G(X,P)(1,0,1,0) = state of (X => pt, P), all labelled X of order <= 4, every P
+PASS  T3b Remark (2): sink -> (r, 2M, h, 0); source -> unchanged
+PASS  T3c closing law H(T_t(B,O)) = r + 2^t M by permutation enumeration (|B| <= 4, t <= 3)  240 cases
+PASS  T3d row h: H(C(B,O;X)) = H(X) r + Pi_2(X) M by permutation enumeration
+ALL PASS

@@ -1,0 +1,28 @@
+n=1 labelled tournaments=1 gadgets (nonempty P)=1
+  neutral (kappa=0): 0 ; with |P| != 2: 0 ; with W != 2H (r_X != -H): 0
+  neutral with H(X)=1: 0 (distance 1: 0, distance 2: 0, other distance: 0) ; transitive pairs at distance <= 2 that are not neutral: 0
+  H(X) values among neutral gadgets:
+n=2 labelled tournaments=2 gadgets (nonempty P)=6
+  neutral (kappa=0): 2 ; with |P| != 2: 0 ; with W != 2H (r_X != -H): 0
+  neutral with H(X)=1: 2 (distance 1: 2, distance 2: 0, other distance: 0) ; transitive pairs at distance <= 2 that are not neutral: 0
+  H(X) values among neutral gadgets: 1:2
+n=3 labelled tournaments=8 gadgets (nonempty P)=56
+  neutral (kappa=0): 18 ; with |P| != 2: 0 ; with W != 2H (r_X != -H): 0
+  neutral with H(X)=1: 18 (distance 1: 12, distance 2: 6, other distance: 0) ; transitive pairs at distance <= 2 that are not neutral: 0
+  H(X) values among neutral gadgets: 1:18
+n=4 labelled tournaments=64 gadgets (nonempty P)=960
+  neutral (kappa=0): 120 ; with |P| != 2: 0 ; with W != 2H (r_X != -H): 0
+  neutral with H(X)=1: 120 (distance 1: 72, distance 2: 48, other distance: 0) ; transitive pairs at distance <= 2 that are not neutral: 0
+  H(X) values among neutral gadgets: 1:120
+n=5 labelled tournaments=1024 gadgets (nonempty P)=31744
+  neutral (kappa=0): 1400 ; with |P| != 2: 0 ; with W != 2H (r_X != -H): 0
+  neutral with H(X)=1: 840 (distance 1: 480, distance 2: 360, other distance: 0) ; transitive pairs at distance <= 2 that are not neutral: 0
+  H(X) values among neutral gadgets: 1:840 3:320 5:240
+n=6 labelled tournaments=32768 gadgets (nonempty P)=2064384
+  neutral (kappa=0): 17040 ; with |P| != 2: 0 ; with W != 2H (r_X != -H): 0
+  neutral with H(X)=1: 6480 (distance 1: 3600, distance 2: 2880, other distance: 0) ; transitive pairs at distance <= 2 that are not neutral: 0
+  H(X) values among neutral gadgets: 1:6480 3:4800 5:4320 9:1440
+n=7 labelled tournaments=2097152 gadgets (nonempty P)=266338304
+  neutral (kappa=0): 272496 ; with |P| != 2: 0 ; with W != 2H (r_X != -H): 0
+  neutral with H(X)=1: 55440 (distance 1: 30240, distance 2: 25200, other distance: 0) ; transitive pairs at distance <= 2 that are not neutral: 0
+  H(X) values among neutral gadgets: 1:55440 3:60480 5:70560 9:40320 11:10080 13:10080 15:5376 17:10080 37:10080

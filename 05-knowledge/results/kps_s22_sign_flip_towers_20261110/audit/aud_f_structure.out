@@ -1,0 +1,25 @@
+PASS  F1 U_B(o) = H(B) + sum_{o -> x} Q_B(x, o)
+PASS  F2a Q_B(f, e) product formula and >= H(B); r <= 0 when O meets two components
+PASS  F2a' (companion) Q_B(e, f) = [adjacent components] prod H * End * Start
+PASS  F2b r and U factor over the components when O lies in one component
+PASS  F2c unit sets with |O| >= 2  2166 unit sets
+PASS  F4 W_ef does not depend on the orientation of the arc ef  0s
+PASS  F3 twin lemma: Q(e,f) = Q(f,e) = H(K), r = H(K_2) - 2 H(K)
+   seed slopes <= 40 (order <= 6): [1, 2, 4, 6, 8, 11, 12, 16, 20, 22, 24, 29, 32, 34, 37, 40]
+   anti-seed slopes <= 40 (order <= 6): [3, 5, 6, 9, 10, 12, 15, 18, 20, 24, 26, 27, 30, 34, 35, 36, 39, 40]
+   sizes of unit sets (order <= 6): [1, 2]
+PASS  S1 no seed of slope 7 (nor 3, 5, 10), no anti-seed of slope 1, 2, 4, 8 (nor 11) among all labelled pairs of order <= 6
+PASS  S2 seed slopes below 10 are 1, 2, 4, 6, 8 (powers of two and 6); anti-seed slopes below 9 are 3, 5, 6
+PASS  S3 H3 (i) at order 6: M >= delta_dom for every labelled pair, equality iff B transitive  2064384 pairs, 25s
+   (order 6, code 20612, mask 34): state (r, M, h, E) = (15, 128, 31, 8) 
+   (order 3, code 5, mask 3): state (r, M, h, E) = (1, 6, 3, 2) 
+   (order 3, code 0, mask 5): state (r, M, h, E) = (-1, 5, 1, 1) 
+   (order 5, code 642, mask 3): state (r, M, h, E) = (1, 20, 9, 6) 
+   (order 7, code 790536, mask 6): state (r, M, h, E) = (-1, 130, 39, 22) 
+   (order 6, code 4608, mask 38): state (r, M, h, E) = (-17, 66, 3, 0) 
+   (order 6, code 17410, mask 18): state (r, M, h, E) = (1, 64, 15, 6) 
+   (order 4, code 34, mask 12): state (r, M, h, E) = (1, 16, 5, 2) 
+   (order 5, code 642, mask 10): state (r, M, h, E) = (1, 32, 9, 4) 
+PASS  X explicit states quoted in the write-up (first three coordinates)
+   note: (6, 20612, mask 34) has H(B) = 31 and slope 128 with offset 15: 'no pair of order <= 9 with H(B) = 31 and slope 64 or 128' is false without the condition r = 1
+ALL PASS
