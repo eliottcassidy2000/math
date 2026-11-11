@@ -1,0 +1,20 @@
+[
+  {
+    "path": "04-computation/experiments/h_spectrum_multiplicities_20261021/strong_ears_375.out",
+    "commit": "ba8d0d22ef3f443a451ec01114738f244407d7fd",
+    "sha256": "60fafb8a161719f2ef148906ed269872e4eabe375123867df872e7274e514875",
+    "url": "https://github.com/eliottcassidy2000/math/blob/ba8d0d22ef3f443a451ec01114738f244407d7fd/04-computation/experiments/h_spectrum_multiplicities_20261021/strong_ears_375.out"
+  },
+  {
+    "path": "05-knowledge/results/h_spectrum_multiplicities_20261021.md",
+    "commit": "ba8d0d22ef3f443a451ec01114738f244407d7fd",
+    "sha256": "a5822e062aabcb3e12e2e98259330833ea685a1151c59ae51f00ca3568cdf103",
+    "url": "https://github.com/eliottcassidy2000/math/blob/ba8d0d22ef3f443a451ec01114738f244407d7fd/05-knowledge/results/h_spectrum_multiplicities_20261021.md"
+  },
+  {
+    "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md",
+    "commit": "ba8d0d22ef3f443a451ec01114738f244407d7fd",
+    "sha256": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe",
+    "url": "https://github.com/eliottcassidy2000/math/blob/ba8d0d22ef3f443a451ec01114738f244407d7fd/05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md"
+  }
+]

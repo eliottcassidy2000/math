@@ -25,3 +25,11 @@ The next checkpoint adds literal Collatz edge deletion, tournament path
 completion fibers, and electrical core-padding geometry, followed by synthesis.
 Starting main was22834e5136c0900cdd78ce490ae630d88cbf278d; concurrent S92
 reservations are preserved. No external priority claim or canon promotion.
+
+## Second checkpoint
+
+[Exact punctures and infinite smooth-family classification](CHECKPOINT2.md).
+New lanes: [Collatz](collatz/PROOF.md), [smooth counts](smooth/PROOF.md),
+[electrical core defect](geometry/PROOF.md). The [complete finite census](fibers/FINITE_SCOPE.md)
+now covers every Hamiltonian total through order8, separately from the
+arbitrary-order H<=73 compiler.

@@ -1,0 +1,78 @@
+{
+  "scope": "Every Hamiltonian-path count, every tournament isomorphism class, sizes1..8. Even H and odd H above max_h are uniformly zero in this size range. No census was rerun.",
+  "max_h": 661,
+  "active_checks": 5312,
+  "totals": [
+    {
+      "ordinary": 1,
+      "self_converse": 1,
+      "merged": 1,
+      "labeled": 1,
+      "n": 1,
+      "cumulative_ordinary": 1
+    },
+    {
+      "ordinary": 1,
+      "self_converse": 1,
+      "merged": 1,
+      "labeled": 2,
+      "n": 2,
+      "cumulative_ordinary": 2
+    },
+    {
+      "ordinary": 2,
+      "self_converse": 2,
+      "merged": 2,
+      "labeled": 8,
+      "n": 3,
+      "cumulative_ordinary": 4
+    },
+    {
+      "ordinary": 4,
+      "self_converse": 2,
+      "merged": 3,
+      "labeled": 64,
+      "n": 4,
+      "cumulative_ordinary": 8
+    },
+    {
+      "ordinary": 12,
+      "self_converse": 8,
+      "merged": 10,
+      "labeled": 1024,
+      "n": 5,
+      "cumulative_ordinary": 20
+    },
+    {
+      "ordinary": 56,
+      "self_converse": 12,
+      "merged": 34,
+      "labeled": 32768,
+      "n": 6,
+      "cumulative_ordinary": 76
+    },
+    {
+      "ordinary": 456,
+      "self_converse": 88,
+      "merged": 272,
+      "labeled": 2097152,
+      "n": 7,
+      "cumulative_ordinary": 532
+    },
+    {
+      "ordinary": 6880,
+      "self_converse": 176,
+      "merged": 3528,
+      "labeled": 268435456,
+      "n": 8,
+      "cumulative_ordinary": 7412
+    }
+  ],
+  "source": {
+    "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/extended_census.json",
+    "commit": "ba8d0d22ef3f443a451ec01114738f244407d7fd",
+    "sha256": "891d9e40df4bc0438a204c393926767a0f3c2c776325dc3295bbe91df906bfa9",
+    "url": "https://github.com/eliottcassidy2000/math/blob/ba8d0d22ef3f443a451ec01114738f244407d7fd/05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/extended_census.json"
+  },
+  "csv_sha256": "7984b680044a09ee7cb492a7d79cdb441ed763bf54099ca1b48164e9ef043c9d"
+}
