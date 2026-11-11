@@ -110,8 +110,10 @@ the two simple spaces, one arrow in each direction, and the length-three
 chain `U→V→U`. Their dimension pairs are `(1,0),(0,1),(1,1),(1,1),(2,1)`.
 
 This is an exact classification, with multiplicities recovered from the two
-dimensions and the ranks of a,b,ab. It is a genuine new connection for the
-fivefold comparison. The natural three-coordinate compiler module is the
+dimensions and the ranks of a,b,ab. Incoming commit `787a2f04b5` independently
+published the same bridge during this session; its
+[classification and classical source](../chanpak_five_core_bridges_20261110/algebra/FIVE_MODULES.md)
+are credited. No priority claim is made. The natural three-coordinate compiler module is the
 last indecomposable, rather than a direct sum of five scalar core states.
 
 A concrete related geometry appears in the regular C5 core: pentagon-edge
@@ -201,10 +203,24 @@ than arbitrary labels; old history yields the portable H13 source; richer
 constructors form a strict source hierarchy. The unresolved common issue
 is prescribed-target occupancy with compatible source data.
 
+The final incoming work sharpens that direction. Session253 proves that the
+first three cores already span the universal integer **linear** response
+lattice, and either H9 core makes the same affine factor-five repair. Thus
+the distinct H9 hole repairs survive after all those linear coordinates
+agree. Its Laurent degeneration also has literally the same centralizer
+algebra, but only the subalgebra `e=d, i=o` lifts through the deformation;
+the central E13 direction does lift. These are received scoped results from
+the [concurrent synthesis](../session253_cross_problem_frontiers_20261111/SYNTHESIS.md),
+not recomputed here. They strengthen the choice to work on positive integer
+fibres, legal address rewrites and the central interaction, rather than
+another linear congruence or a bare shared dimension. The incoming
+[alternative H141 source](../chanpak_five_core_bridges_20261110/history/ALTERNATE141.md)
+provides an actual source change followed by a425 branch; it is a concrete
+companion to our strict source-nesting result, not a uniform reset theorem.
+
 The lane notes give reproduction commands and explicit universes. New small
 graph, signature and arithmetic controls accompany the proofs; inherited
 large censuses and external claims were not re-audited. No Lean statement,
 new global spectrum record, literature priority or completed Chan–Pak proof
-is claimed. Concurrent Session253's incoming board was read as mathematical
-signal; its Laurent and integral-observer programme is complementary and
-is not a dependency of these results.
+is claimed. Concurrent results were read and integrated after the final
+fetch; they are complementary and are not dependencies of the new proofs.

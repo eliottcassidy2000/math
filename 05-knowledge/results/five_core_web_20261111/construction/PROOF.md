@@ -4,6 +4,14 @@
 application to the inherited path compiler is exact. The five modules are not
 identified with the five selected tournament templates. Chan–Pak remains OPEN.
 
+**Concurrent provenance.** During close-out, incoming commit `787a2f04b5`
+supplied the same five-module classification and rank formulas in
+[FIVE_MODULES.md](../../chanpak_five_core_bridges_20261110/algebra/FIVE_MODULES.md),
+including a primary-source reference for the classical classification.
+That concurrent publication is credited; the present derivation is not a
+priority claim. The natural-flag presentation and explicit C5
+pentagon/pentagram polynomial are the present note's additional viewpoint.
+
 ## 1. The actual algebra, and where its five objects come from
 
 Session252's [algebra proof](../../session252_fivefold_bridges_20261111/algebra/PROOF.md)
