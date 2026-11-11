@@ -56,7 +56,7 @@ source families for the one-vertex Chan-Pak induction.
 | Table reversibility | gcd plus unit phase, with sampling model | full row classification and exact collision counts; center alone is all-unit |
 | Square-birth plateau | Pell type and actual parent ports | 25 extends to two families; degree equality is not state equality |
 | Prime trace | Pell index and factor certificate | power-of-two index necessary; infinitely many factors, not proved prime terms |
-| Tournament endpoint symmetry | pointwise local fixer for each demand set | coefficient divisibility survives asymmetric extension; stronger than selected-set rigidity |
+| Tournament endpoint symmetry | pointwise local fixer and ordinary polynomial content | divisibility survives asymmetric extension, but C_(n-1)=1 universally; exact lifetime sequence |
 
 Revisit after center checks: primality dropped out of the Collatz decoder,
 so it was retained as a separate row-map invariant. After Pell checks:
@@ -65,6 +65,14 @@ A002496/A135244. After tournament checks: ring and field27 have different
 local intersection counts, but both supply useful endpoint-fixer groups
 by different mechanisms. These comparisons update every lane without
 claiming that their numerical summaries determine the other objects.
+
+After the full ordinary census through seven: the smallest C_1=3 base
+is the six-vertex deletion of Paley7, but its positive cylinder counts
+have gcd1. This distinguishes a sufficient local-group certificate from
+the exact gcd of ordinary multilinear coefficients. The repaired complete
+invariant C_k uses finite differences, and its alternating-path coefficient
+proves universal termination by n-1 additions. No inherited assertion was
+retracted: the new census identifies the boundary of the sufficient rule.
 
 ## Typed connection contracts
 
@@ -97,6 +105,35 @@ and full automorphism backtracking for one ten-vertex hostile. P11's
 q=p^f and all-depth assertions are elementary group-action proofs; no
 exhaustive path count on27 vertices is asserted.
 
+`content_checks.py` adds a complete ordinary census through seven with
+independent labelled orbit masses, every one-vertex gcd, C_2 certificates
+for every nonunit C_1 class, and direct traversal of the eleven-vertex
+escape. The terminal coefficient is checked by actual finite differences
+through four vertices. P13's all-n proof depends on THM-002 / `ocf.md`
+only for parity and on the already proved extension polynomial degree.
+
+## Incoming mainline integrated
+
+The first checkpoint was rebased onto main through `3fdeb5dab2` and pushed
+as `0f674ffece`. Incoming Session255 independently supplies the same
+central radius, entropy averages, signed decoder and parity guards in
+[its packet](../session255_modular_collatz_20261111/README.md). Its central
+radius r starts at0, whereas our R starts at1, so R=r+1; the first defect
+formulas agree. Its parity numerator includes the sign, while our B
+factors it out. Its optimal high-digit reconstruction and synchronized
+CRT clarify the same retained information. These overlaps are credited,
+not counted as separate discoveries or reused as untested novel claims.
+
+The incoming [central-modular grammar](../central_modular_chanpak_20261110/README.md)
+classifies universal exact content multipliers5^b9^k21^c in a specified
+bridge grammar. Our C_k permits **all** k-vertex orientations. Therefore
+its eventual gcd1 does not say the restricted grammar can divide out
+its forced factors. Conversely a restricted multiplier obstruction does
+not contradict the explicit unrestricted two-vertex escape above.
+The [uniform-return packet](../uniform_return_metagraph_20261111/README.md)
+retains actual reset source identities; the shared warning remains that
+scalar arithmetic and gcd1 do not provide an exact target realization.
+
 ## Honest remaining frontier
 
 - **OPEN:** every odd-c seed and Chan-Pak. An excluded source family is
@@ -110,9 +147,10 @@ exhaustive path count on27 vertices is asserted.
   The present exact classification is restricted to row maps, Pell ports,
   guarded words, Jacobi graphs and recursive tournament families.
 - Next decisive seed question: compute the integer content of the
-  endpoint-demand coefficients for candidate bases before solving the
-  offset equation. Content greater than1 excludes a target without a
-  Boolean attachment census; content1 remains only a necessary condition.
+  ordinary multilinear coefficients for candidate bases before solving
+  the offset equation. Positive endpoint-demand groups can certify a
+  divisor but need not find the whole gcd. Content greater than1 excludes
+  a target without a full attachment census; content1 is only necessary.
 
 No new method card is needed: this is a concrete application of the
 existing retain-incidence/typed-map methods. The distinct evidence is

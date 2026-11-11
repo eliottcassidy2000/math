@@ -264,6 +264,308 @@
     "odd_modulus_max": 10001,
     "raw_inputs_per_sign": 100000
   },
+  "extension_content": {
+    "alternating_coefficient_checks": [
+      {
+        "code": 0,
+        "coefficient": -2,
+        "n": 2
+      },
+      {
+        "code": 0,
+        "coefficient": 2,
+        "n": 3
+      },
+      {
+        "code": 2,
+        "coefficient": 2,
+        "n": 3
+      },
+      {
+        "code": 0,
+        "coefficient": -2,
+        "n": 4
+      },
+      {
+        "code": 2,
+        "coefficient": -2,
+        "n": 4
+      },
+      {
+        "code": 4,
+        "coefficient": -2,
+        "n": 4
+      },
+      {
+        "code": 16,
+        "coefficient": -2,
+        "n": 4
+      }
+    ],
+    "complete_ordinary_census": [
+      {
+        "C1_distribution": {
+          "1": 1
+        },
+        "labelled_mass": 1,
+        "lifetime_distribution": {
+          "0": 1
+        },
+        "n": 1,
+        "nonunit_classes": [],
+        "ordinary_classes": 1
+      },
+      {
+        "C1_distribution": {
+          "1": 1
+        },
+        "labelled_mass": 2,
+        "lifetime_distribution": {
+          "0": 1
+        },
+        "n": 2,
+        "nonunit_classes": [],
+        "ordinary_classes": 1
+      },
+      {
+        "C1_distribution": {
+          "1": 2
+        },
+        "labelled_mass": 8,
+        "lifetime_distribution": {
+          "0": 1,
+          "1": 1
+        },
+        "n": 3,
+        "nonunit_classes": [],
+        "ordinary_classes": 2
+      },
+      {
+        "C1_distribution": {
+          "1": 4
+        },
+        "labelled_mass": 64,
+        "lifetime_distribution": {
+          "0": 1,
+          "1": 3
+        },
+        "n": 4,
+        "nonunit_classes": [],
+        "ordinary_classes": 4
+      },
+      {
+        "C1_distribution": {
+          "1": 12
+        },
+        "labelled_mass": 1024,
+        "lifetime_distribution": {
+          "0": 1,
+          "1": 11
+        },
+        "n": 5,
+        "nonunit_classes": [],
+        "ordinary_classes": 12
+      },
+      {
+        "C1_distribution": {
+          "1": 55,
+          "3": 1
+        },
+        "labelled_mass": 32768,
+        "lifetime_distribution": {
+          "0": 1,
+          "1": 54,
+          "2": 1
+        },
+        "n": 6,
+        "nonunit_classes": [
+          {
+            "C2": 1,
+            "C2_certificate": [
+              {
+                "child_C1": 3,
+                "child_H": 45,
+                "mask": 0
+              },
+              {
+                "child_C1": 1,
+                "child_H": 93,
+                "mask": 1
+              }
+            ],
+            "H": 45,
+            "code": 8850,
+            "content": 3,
+            "cylinder_content": 1,
+            "rows": [
+              36,
+              17,
+              10,
+              35,
+              13,
+              22
+            ]
+          }
+        ],
+        "ordinary_classes": 56
+      },
+      {
+        "C1_distribution": {
+          "1": 452,
+          "3": 4
+        },
+        "labelled_mass": 2097152,
+        "lifetime_distribution": {
+          "0": 1,
+          "1": 451,
+          "2": 4
+        },
+        "n": 7,
+        "nonunit_classes": [
+          {
+            "C2": 1,
+            "C2_certificate": [
+              {
+                "child_C1": 3,
+                "child_H": 45,
+                "mask": 0
+              },
+              {
+                "child_C1": 1,
+                "child_H": 93,
+                "mask": 1
+              }
+            ],
+            "H": 45,
+            "code": 67858,
+            "content": 3,
+            "cylinder_content": 1,
+            "rows": [
+              36,
+              17,
+              10,
+              35,
+              13,
+              22,
+              63
+            ]
+          },
+          {
+            "C2": 1,
+            "C2_certificate": [
+              {
+                "child_C1": 3,
+                "child_H": 189,
+                "mask": 0
+              },
+              {
+                "child_C1": 1,
+                "child_H": 423,
+                "mask": 1
+              }
+            ],
+            "H": 189,
+            "code": 85298,
+            "content": 3,
+            "cylinder_content": 3,
+            "rows": [
+              100,
+              81,
+              74,
+              35,
+              13,
+              22,
+              56
+            ]
+          },
+          {
+            "C2": 1,
+            "C2_certificate": [
+              {
+                "child_C1": 3,
+                "child_H": 9,
+                "mask": 0
+              },
+              {
+                "child_C1": 1,
+                "child_H": 15,
+                "mask": 1
+              }
+            ],
+            "H": 9,
+            "code": 524290,
+            "content": 3,
+            "cylinder_content": 3,
+            "rows": [
+              4,
+              1,
+              2,
+              7,
+              79,
+              31,
+              47
+            ]
+          },
+          {
+            "C2": 1,
+            "C2_certificate": [
+              {
+                "child_C1": 3,
+                "child_H": 45,
+                "mask": 0
+              },
+              {
+                "child_C1": 3,
+                "child_H": 45,
+                "mask": 1
+              },
+              {
+                "child_C1": 1,
+                "child_H": 159,
+                "mask": 2
+              }
+            ],
+            "H": 45,
+            "code": 566400,
+            "content": 3,
+            "cylinder_content": 1,
+            "rows": [
+              0,
+              73,
+              35,
+              21,
+              71,
+              27,
+              45
+            ]
+          }
+        ],
+        "ordinary_classes": 456
+      }
+    ],
+    "escape_witness": {
+      "C0_base": 3159,
+      "C1_asymmetric_child": 1,
+      "C1_base": 3,
+      "C2_base": 1,
+      "H": 51085,
+      "first_mask": 15,
+      "rows": [
+        154,
+        308,
+        1129,
+        1234,
+        1956,
+        1865,
+        1683,
+        1830,
+        1613,
+        1039,
+        3
+      ],
+      "second_mask": 3
+    }
+  },
   "multiplication_tables": {
     "CRT_pairs": [
       [

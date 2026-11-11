@@ -192,6 +192,11 @@ The test compares subset-DP counts with literal enumeration of all
 attachment masks, and directly recounts nine actual ten-vertex children.
 Backtracking checks the full automorphism group of the displayed child.
 
+The boundary is concrete: add a second new vertex pointing to old
+vertices0,1 only. Its path count is51085, no longer divisible by3.
+The extension-divisibility filtration and its universal terminal bound
+are proved in [P13](EXTENSION_CONTENT.md).
+
 ## P12. An exact infinite sequence of symmetry-breaking subsets
 
 For R_(3,e), retain the explicit iterated wreath subgroup W_e generated

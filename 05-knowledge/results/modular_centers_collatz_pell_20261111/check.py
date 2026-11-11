@@ -11,6 +11,7 @@ from pathlib import Path
 import hashlib
 import json
 import tournament_checks
+import content_checks
 
 HERE = Path(__file__).resolve().parent
 
@@ -282,11 +283,11 @@ def main():
     results = {"status": "FINITE-EXACT; universal claims use PROOFS.md",
                "centers_and_edges": check_centers_and_edges(), "parity_words": check_words(),
                "multiplication_tables": check_tables(), "Pell": check_pell(),
-               "tournaments": tournament_checks.run()}
+               "tournaments": tournament_checks.run(), "extension_content": content_checks.run()}
     output = HERE / "verification.json"
     output.write_text(json.dumps(results, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
     manifest = {p.name: hashlib.sha256(p.read_text(encoding="utf-8").replace("\r\n", "\n").encode()).hexdigest()
-                for p in (HERE / "check.py", HERE / "tournament_checks.py", output)}
+                for p in (HERE / "check.py", HERE / "tournament_checks.py", HERE / "content_checks.py", output)}
     (HERE / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({"status": "PASS", "signed_guards": results["parity_words"]["signed_word_guards_checked"],
                       "literal_table_cells": results["multiplication_tables"]["literal_cells"],

@@ -25,6 +25,21 @@ Consequences proved in [TOURNAMENTS.md, P11](TOURNAMENTS.md):
   yet inherits this divisibility from its nine-vertex base. The relevant
   symmetries act on endpoint-labelled coefficients, not on the child.
 
+There is also a universally terminating aspect to track. Define C_k(T)
+as the gcd of all Hamiltonian counts of k-vertex extensions of T. Then
+C_(k+1) divides C_k, and for every n-vertex T, **C_(n-1)=1**. For fixed k,
+this gcd requires only polynomially many attachment samples, using the
+degree<=2k compiler. The proof identifies a top coefficient of exactly
+plus or minus2. This removes common divisibility obstructions, without
+claiming a particular target is attained.
+
+The complete census through seven vertices gives C_1>1 in zero classes
+through order5, one class at order6, and four classes at order7; all have
+C_1=3 and C_2=1. The first is Paley7 with one vertex deleted. For the
+recursive nine-vertex base the filtration is3159,3,1, with an explicit
+two-vertex escape count51085. See
+[EXTENSION_CONTENT.md, P13](EXTENSION_CONTENT.md).
+
 ## The user's modular-table construction is exact
 
 For m=4x+sigma, sigma=+1 or-1, the central entries are two copies each
@@ -110,7 +125,11 @@ field27 pair fixers; and ten recursive tournament family samples.
 Hamiltonian and ordered-cover counts on three and nine vertices are
 independently checked by literal permutation enumeration. Universal
 claims rest on the proofs, not these finite controls.
+The additional ordinary-class census covers every tournament through
+seven vertices, verifies labelled masses and the small-support gcd rule,
+and checks the universal proof's alternating coefficient through order4.
 
 [Inheritance and connection contracts](BOARD.md) ·
 [Arithmetic proofs P1–P8](PROOFS.md) ·
-[Tournament proofs P9–P12](TOURNAMENTS.md)
+[Tournament proofs P9–P12](TOURNAMENTS.md) ·
+[Extension-divisibility P13 and new size sequences](EXTENSION_CONTENT.md)
