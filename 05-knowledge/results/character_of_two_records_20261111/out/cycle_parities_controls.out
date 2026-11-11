@@ -1,0 +1,4 @@
+control P_7: c_3 = 14 (mod 256) against 14: ok; Hamiltonian cycles 24 (mod 256) against 24: ok; 1 + 2 c_odd = 1 (mod 4) against H: 1: ok
+control P_11: c_3 = 55 (mod 256) against 55: ok; Hamiltonian cycles 129 (mod 256) against 129: ok; 1 + 2 c_odd = 3 (mod 4) against H: 3: ok
+control P_19: c_3 = 29 (mod 256) against 29: ok; Hamiltonian cycles 157 (mod 256) against 157: ok; 1 + 2 c_odd = 3 (mod 4) against H: 3: ok
+control P_23: c_3 = 250 (mod 256) against 250: ok; Hamiltonian cycles 84 (mod 256) against 84: ok; 1 + 2 c_odd = 1 (mod 4) against H: 1: ok

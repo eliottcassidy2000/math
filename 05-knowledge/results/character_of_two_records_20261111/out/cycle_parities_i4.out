@@ -1,0 +1,12 @@
+I4: order 27 (N = 28): predicted 1001100110011
+  P_27                         odd lengths 3,5,...: 1001100110011  predicted 1001100110011  ok   (even lengths 4,6,...: 111111111111)
+  class 9 (self-converse)      odd lengths 3,5,...: 1001100110011  predicted 1001100110011  ok   (even lengths 4,6,...: 111111111111)
+  class 27 (self-converse)     odd lengths 3,5,...: 1001100110011  predicted 1001100110011  ok   (even lengths 4,6,...: 111111001100)
+  class 32 (self-converse)     odd lengths 3,5,...: 1001100110011  predicted 1001100110011  ok   (even lengths 4,6,...: 111111001100)
+  class 0 (no converse symmetry) odd lengths 3,5,...: 1001100110011  predicted 1001100110011  ok   (even lengths 4,6,...: 111111110110)
+  class 1 (no converse symmetry) odd lengths 3,5,...: 1001100110011  predicted 1001100110011  ok   (even lengths 4,6,...: 111111110101)
+  class 2 (no converse symmetry) odd lengths 3,5,...: 1001100110011  predicted 1001100110011  ok   (even lengths 4,6,...: 111111111100)
+  class 3 (no converse symmetry) odd lengths 3,5,...: 1001100110011  predicted 1001100110011  ok   (even lengths 4,6,...: 111111110110)
+  class 4 (no converse symmetry) odd lengths 3,5,...: 1001100110011  predicted 1001100110011  ok   (even lengths 4,6,...: 111111111100)
+  class 5 (no converse symmetry) odd lengths 3,5,...: 1001100110011  predicted 1001100110011  ok   (even lengths 4,6,...: 111111111100)
+R12 (I4): HOLDS (10 of 10)

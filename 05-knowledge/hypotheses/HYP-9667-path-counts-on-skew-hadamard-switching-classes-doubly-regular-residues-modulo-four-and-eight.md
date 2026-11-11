@@ -1,6 +1,6 @@
 ---
 id: HYP-9667
-title: "Path counts on skew Hadamard switching classes. (bS) If the +-1 skew matrix S of a tournament U on N vertices satisfies S^2 = -(N-1) I (I + S is a skew Hadamard matrix), then H(U) = 1 + N/2 (mod 4); equivalently H mod 4 is constant on the switching class of every skew Hadamard matrix. (b4) Every doubly regular tournament of order n has H = n(n-1)/2 (mod 4), i.e. its number of odd cycles of length at least 7 is even (PROVED when it has a converse symmetry: THM-5136 (E)). (b8) Every doubly regular tournament of order n has H = n(n-1)/2 (mod 8). (c) For the Paley tournaments the number F of invariant odd cycles is 0 (mod 4) if q = 7 (mod 8) and (q+1)/4 (mod 4) if q = 3 (mod 8)."
+title: "Path counts and cycle counts on skew Hadamard switching classes. (bK) If the +-1 skew matrix S of a tournament U on N vertices satisfies S^2 = -(N-1) I (I + S is a skew Hadamard matrix), then for every k the number of directed cycles of length 2k+1 has the parity of [N = 4 mod 8] C(N/2 - 1, k). (bS) Under the same hypothesis H(U) = 1 + N/2 (mod 4); equivalently H mod 4 is constant on the switching class of every skew Hadamard matrix. (b4) Every doubly regular tournament of order n has H = n(n-1)/2 (mod 4), i.e. its number of odd cycles of length at least 7 is even (PROVED when it has a converse symmetry: THM-5136 (E)). (b8) Every doubly regular tournament of order n has H = n(n-1)/2 (mod 8). (c) For the Paley tournaments the number F of invariant odd cycles is 0 (mod 4) if q = 7 (mod 8) and (q+1)/4 (mod 4) if q = 3 (mod 8)."
 status: >
   OPEN (CONJECTURE with FINITE-EXACT evidence).
   PROVED special case of (b4): doubly regular tournaments with a converse symmetry, in particular all Paley
@@ -11,9 +11,14 @@ status: >
   converse symmetry: direct counts modulo 256, H3-PENDING-ROW (run in progress at this checkpoint)).
   (bS) FINITE-EXACT: all members of the classes at N = 4, 8; random members at N = 12, 16, 20 (two classes), 24 (two
   classes). Its analogue modulo 8 is FALSE (N = 16, 20).
+  (bK) PROVED for k = 1, 2 (every tournament of order N = 0 mod 4 whose scores have one parity, THM-5132) and for
+  every k on doubly regular tournaments with a converse symmetry (THM-5136 (E)). FINITE-EXACT for every odd length:
+  all members at N = 4, 8; 41 and 13 members at N = 12, 16; pre-registered R12: 42 tournaments at N = 20, the
+  fourteen doubly regular classes of order 23 (twelve without converse symmetry) and 20 members at N = 24, ten
+  tournaments of order 27 (six without converse symmetry), 86 of 86. The vertex-local form (cycles through one vertex) is FALSE.
   (c) FINITE-EXACT for q = 3, 7, 11, 19, 23, 27, 31, 43, 47.
   Pre-registered: R9, R10 (non-Paley doubly regular tournaments of orders 19, 23, 27), R11 (switching classes at
-  N = 20, 24) CONFIRMED; the order-19 and order-23 parts of R9, R10 were decidable from the repository (MISTAKE-PENDING (entry filed at close-out)).
+  N = 20, 24), R12 (cycle counts by length) CONFIRMED; the order-19 and order-23 parts of R9, R10 were decidable from the repository (MISTAKE-PENDING (entry filed at close-out)).
   REFUTED local forms (each a theorem for small orders only): det S = 4H - 3 (mod 16) (true for N <= 4); "one row of
   S orthogonal to the others keeps H mod 4 under switching at that vertex" (true for N <= 8 on every tournament
   tried, false from N = 10); "equal score parities keep it" (true for N <= 6, false at N = 8).
@@ -48,6 +53,13 @@ diagonal). *Switching* `U` at a vertex set reverses the arcs between the set and
 by a diagonal sign matrix. The tournaments with `S^2 = -(N-1) I` form classes closed under switching; a tournament
 `T` on `n = N - 1` vertices is doubly regular iff `(source) + T` is in such a class.
 
+- **(bK)** `S^2 = -(N-1) I` implies `c_(2k+1)(U) = [N = 4 (mod 8)] C(N/2 - 1, k) (mod 2)` for every `k >= 1`: all odd
+  cycle counts are even if `N = 0 (mod 8)`, and the parity vector is that of the binomial coefficients of
+  `m = N/2 - 1` if `N = 4 (mod 8)`. This is THM-5136 (E) 2 without the converse symmetry and on the whole switching
+  class. (bK) implies (bS), because `H = 1 + 2 c_odd (mod 4)` and `sum_k C(m, k) = 2^m - 1` is odd.
+  Equivalent form for a doubly regular `T` of order `n = 2m + 1` (by the subset identity of THM-5132), with `p_j` the
+  number of directed paths on `j` vertices: `p_j = C(n, j) (mod 4)` for every `j` if `n = 7 (mod 8)` (the path counts of
+  the transitive tournament modulo 4), and `p_j = C(n, j) + 2 [j odd, j >= 3] C(m, (j-1)/2) (mod 4)` if `n = 3 (mod 8)`.
 - **(bS)** `S^2 = -(N-1) I` implies `H(U) = 1 + N/2 (mod 4)`.
 - **(b4)** Every doubly regular tournament of order `n` has `H = n(n-1)/2 (mod 4)`: `3` if `n = 3 (mod 8)`, `1` if
   `n = 7 (mod 8)`. Since `c_3 = (n+1)/4` and `c_5 = 0 (mod 2)` for every doubly regular tournament (THM-5132), this is
@@ -87,6 +99,24 @@ from 5 to 10.
 | 24 | `P_23` | 40 random | 1 | 5 |
 | 24 | double of `P_11` | 40 random | 1 | 5 |
 
+Cycle counts by length (parity vectors `(c_3, c_5, ...)`; `cycle_lengths.c`, `cycle_parities.py`):
+
+| `N` | tournaments | found | (bK) |
+|---|---|---|---|
+| 4, 8 | all members of the classes of `P_3^+`, `P_7^+` | `1`; `000` | `1`; `000` |
+| 12 | 41 members of the class of `P_11^+` | `10011` | `10011` |
+| 16 | `CD_4` and 12 members of its class | `0000000` | `0000000` |
+| 20 | `D_19`, `P_19`, 20 random members of each class | `100000011` (42 of 42) | `100000011` |
+| 24 | fourteen doubly regular classes of order 23 | zero (14 of 14) | zero |
+| 24 | 10 random members of each of the classes of `P_23^+`, `D(P_11)^+` | zero (20 of 20) | zero |
+| 28 | `P_27`, three self-converse and six other classes of order 27 | `1001100110011` (10 of 10) | `1001100110011` |
+
+The even cycle counts have no such law (their parities differ among the classes of order 23). Nor is (b8) a
+term-by-term law: among the fourteen classes of order 23 the odd cycle counts modulo 4 differ at lengths 19 and 23
+(`c_odd = 0, 2, 4 (mod 8)` occur) and the parity of the number of disjoint pairs of odd cycles differs, while
+`H = 5 (mod 8)` for all (`out/cycle_parities_i1mod4.out` of the source packet). The numbers of odd
+cycles through a single vertex do not have the parities of (bK) (`CD_4`, `D_19`): the statement is global.
+
 Exact path counts at order 23: `04-computation/experiments/sierpinski_ocf_20261022/drt_results.out`,
 `drt23_classes.out`, `drt23_doubled_check.out` (HYP-9371). Everything else: `out/` of the source packet.
 
@@ -105,7 +135,8 @@ So a proof of (bS) must use the orthogonality of all rows at once.
 - A doubly regular tournament with `H != n(n-1)/2 (mod 4)` refutes (b4) and (bS); with `H != n(n-1)/2 (mod 8)`, (b8).
   The smallest untested objects: the remaining classes of order 23 (the literature counts 37) and of order 27;
   `CD_5` of order 31 (predicted `H = 1 mod 8`; a direct count needs about 10 GB).
-- A member of a skew Hadamard switching class with the other residue modulo 4 refutes (bS).
+- A member of a skew Hadamard switching class with the other residue modulo 4 refutes (bS); one with a single odd
+  length of the wrong parity refutes (bK).
 - A prime power `q = 3 (mod 4)` violating (c).
 
 ## Routes

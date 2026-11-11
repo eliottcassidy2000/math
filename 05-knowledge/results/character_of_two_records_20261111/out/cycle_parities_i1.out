@@ -1,0 +1,17 @@
+I1: order 23 (N = 24): predicted 00000000000
+  D23_0 (converse class None)  odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100110011)
+  D23_1 (converse class None)  odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100110011)
+  D23_2 (converse class None)  odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100110011)
+  D23_3 (converse class None)  odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100110011)
+  D23_4 (converse class None)  odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100111100)
+  D23_5 (converse class None)  odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100110000)
+  D23_6 (converse class 10)    odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100111100)
+  D23_7 (converse class 11)    odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100110011)
+  D23_8 (converse class None)  odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100110000)
+  D23_9 (converse class None)  odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100110011)
+  D23_10 (converse class 6)    odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100111100)
+  D23_11 (converse class 7)    odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100110011)
+  P_23 (converse class 12)     odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100110011)
+  double of P_11               odd lengths 3,5,...: 00000000000  predicted 00000000000  ok   (even lengths 4,6,...: 1100110011)
+R12 (I1): HOLDS (14 of 14)
+python3 cycle_parities.py /tmp/claude-cyclen i1   15.68s user 0.58s system 94% cpu 17.189 total

@@ -230,6 +230,7 @@ Outputs: `out/`. Program names changed after registration: `paley_sym.c` is `hal
 | R9 | CONFIRMED | G1: all 12,000 Goethals-Seidel matrices give one class, `D_19`, `H = 1172732961771 = 3 (mod 4)`. G2: one class, `H = 189 (mod 256)`. G3: 39 classes from 40 matrices, three with a converse symmetry, `H = 3 (mod 4)` by folding. H3: H3-PENDING-R9. |
 | R10 | CONFIRMED | G1: `3 (mod 8)`; G2: `5 (mod 8)`; H3: H3-PENDING-R10. |
 | R11 | CONFIRMED | 40 random members of each class: `H = 1 (mod 4)` for both classes at `N = 24`, `3 (mod 4)` at `N = 20`. |
+| R12 | CONFIRMED | I1: 14 of 14 classes of order 23 have every odd cycle count even. I2: 20 of 20. I3: 42 of 42 with the vector `100000011`. I4: 10 of 10 with the vector `1001100110011` (six classes without converse symmetry). The vertex-local form (cycles through one vertex) fails, so the law is global. |
 
 **Registration errors.** (1) R6, as above. (2) R9 and R10 at orders 19 and 23: the repository already had the exact
 path counts of `D_19` (HYP-9365) and of the doubled Paley class of order 23 (HYP-9371,

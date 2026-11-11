@@ -1,0 +1,4 @@
+P_7: parity vectors of the numbers of odd cycles through a vertex, by vertex: [('000', 7)]; global prediction 000
+P_11: parity vectors of the numbers of odd cycles through a vertex, by vertex: [('10011', 11)]; global prediction 10011
+CD_4: parity vectors of the numbers of odd cycles through a vertex, by vertex: [('0000000', 7), ('0000010', 8)]; global prediction 0000000
+D_19: parity vectors of the numbers of odd cycles through a vertex, by vertex: [('100000011', 13), ('100001111', 6)]; global prediction 100000011

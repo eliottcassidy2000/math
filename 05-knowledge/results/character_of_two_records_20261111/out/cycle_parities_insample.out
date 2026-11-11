@@ -1,0 +1,4 @@
+class of P_3^+ (N = 4): 8 members; parity vectors of the odd cycle counts: [('1', 8)]; predicted 1
+class of P_7^+ (N = 8): 128 members; parity vectors of the odd cycle counts: [('000', 128)]; predicted 000
+class of P_11^+ (N = 12): 41 members; parity vectors of the odd cycle counts: [('10011', 41)]; predicted 10011
+class of CD_4^+ (N = 16): 13 members; parity vectors of the odd cycle counts: [('0000000', 13)]; predicted 0000000

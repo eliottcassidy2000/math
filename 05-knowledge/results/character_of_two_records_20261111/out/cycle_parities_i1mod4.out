@@ -1,0 +1,14 @@
+D23_0   c_l mod 4 (l = 3, 5, ..., 23): 22000022220   c_odd mod 8 = 4   H mod 8 = 5, mod 16 = 13   parity of the number of disjoint pairs of odd cycles = 1
+D23_1   c_l mod 4 (l = 3, 5, ..., 23): 22000022220   c_odd mod 8 = 0   H mod 8 = 5, mod 16 = 13   parity of the number of disjoint pairs of odd cycles = 1
+D23_2   c_l mod 4 (l = 3, 5, ..., 23): 22000022220   c_odd mod 8 = 0   H mod 8 = 5, mod 16 = 5   parity of the number of disjoint pairs of odd cycles = 1
+D23_3   c_l mod 4 (l = 3, 5, ..., 23): 22000022220   c_odd mod 8 = 0   H mod 8 = 5, mod 16 = 13   parity of the number of disjoint pairs of odd cycles = 1
+D23_4   c_l mod 4 (l = 3, 5, ..., 23): 22000022022   c_odd mod 8 = 0   H mod 8 = 5, mod 16 = 13   parity of the number of disjoint pairs of odd cycles = 1
+D23_5   c_l mod 4 (l = 3, 5, ..., 23): 22000022222   c_odd mod 8 = 2   H mod 8 = 5, mod 16 = 13   parity of the number of disjoint pairs of odd cycles = 0
+D23_6   c_l mod 4 (l = 3, 5, ..., 23): 22000022022   c_odd mod 8 = 0   H mod 8 = 5, mod 16 = 13   parity of the number of disjoint pairs of odd cycles = 1
+D23_7   c_l mod 4 (l = 3, 5, ..., 23): 22000022220   c_odd mod 8 = 4   H mod 8 = 5, mod 16 = 5   parity of the number of disjoint pairs of odd cycles = 1
+D23_8   c_l mod 4 (l = 3, 5, ..., 23): 22000022222   c_odd mod 8 = 2   H mod 8 = 5, mod 16 = 5   parity of the number of disjoint pairs of odd cycles = 0
+D23_9   c_l mod 4 (l = 3, 5, ..., 23): 22000022220   c_odd mod 8 = 4   H mod 8 = 5, mod 16 = 5   parity of the number of disjoint pairs of odd cycles = 1
+D23_10  c_l mod 4 (l = 3, 5, ..., 23): 22000022022   c_odd mod 8 = 0   H mod 8 = 5, mod 16 = 13   parity of the number of disjoint pairs of odd cycles = 1
+D23_11  c_l mod 4 (l = 3, 5, ..., 23): 22000022220   c_odd mod 8 = 4   H mod 8 = 5, mod 16 = 5   parity of the number of disjoint pairs of odd cycles = 1
+P_23    c_l mod 4 (l = 3, 5, ..., 23): 22000022220   c_odd mod 8 = 4   H mod 8 = 5, mod 16 = 5   parity of the number of disjoint pairs of odd cycles = 1
+double  c_l mod 4 (l = 3, 5, ..., 23): 22000022220   c_odd mod 8 = 4   H mod 8 = 5, mod 16 = 13   parity of the number of disjoint pairs of odd cycles = 1
