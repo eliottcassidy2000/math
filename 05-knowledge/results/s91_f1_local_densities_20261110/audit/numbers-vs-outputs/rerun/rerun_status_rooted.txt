@@ -1,0 +1,6 @@
+source_supply exit=0 seconds=6
+head_parity_check exit=0 seconds=2
+source_witnesses exit=0 seconds=3
+line_density_order9 exit=0 seconds=3
+line_density_order10 exit=0 seconds=12
+DONE

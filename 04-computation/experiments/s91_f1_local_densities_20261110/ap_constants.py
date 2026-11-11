@@ -72,13 +72,14 @@ def main():
                 rows[(K, sheet, p)] = (fs - 1.0 / (p * p)) * tot[sheet] / (2.0 * (1 << K))
     if rows:
         ks = sorted({k for (k, _, _) in rows})
-        print("measured (F_small - 1/p^2) #T / (2X), which tends to A_p:")
+        print("measured (F_small - 1/p^2) #T / (2X), which tends to A_p (computed from the three-decimal column\n"
+              "F_small p^2 of first_order_exact*.out: about three significant digits):")
         print(f"{'p':>3} {'sheet':>5} | " + " ".join(f"2^{k:<6d}" for k in ks) + " |   A_p")
         for p in PRIMES:
             for sheet in (0, 1):
                 if (ks[-1], sheet, p) not in rows:
                     continue
-                print(f"{p:3d} {sheet:5d} | " + " ".join(f"{rows[(k, sheet, p)]:+8.5f}" for k in ks) + f" | {A[p][sheet]:+.5f}")
+                print(f"{p:3d} {sheet:5d} | " + " ".join(f"{rows[(k, sheet, p)]:+8.4f}" for k in ks) + f" | {A[p][sheet]:+.5f}")
                 if p in (5, 11, 17):
                     ok &= abs(rows[(ks[-1], sheet, p)] - A[p][sheet]) <= 0.12 * abs(A[p][sheet])
     print("ALL CHECKS PASSED" if ok else "CHECK FAILED")

@@ -1,0 +1,11 @@
+|Z| = 1: 8 cores, 6 distinct quadratic parts; forms equivalent to a multiple of x^2 + xy + y^2: {}
+|Z| = 2: 64 cores, 20 distinct quadratic parts; forms equivalent to a multiple of x^2 + xy + y^2: {}
+|Z| = 3: 1024 cores, 93 distinct quadratic parts; forms equivalent to a multiple of x^2 + xy + y^2: {(3, 9, 7): '24 cores, 24 with a cyclic triangle in Z, content 1'}
+|Z| = 4: 32768 cores, 628 distinct quadratic parts; forms equivalent to a multiple of x^2 + xy + y^2: {(5, 25, 35): '48 cores, 48 with a cyclic triangle in Z, content 5'}
+PASS  A  numbers of distinct diagonal forms at |Z| = 1, 2, 3, 4 are 6, 20, 93, 628 (as in b7_selfjoin_eisenstein.out)   [[6, 20, 93, 628]]
+PASS  B  no form equivalent to a multiple of the Eisenstein form at |Z| <= 2
+PASS  C  |Z| = 3: only (3, 9, 7), 24 cores, all with Z a cyclic triangle   [{(3, 9, 7): (24, 24, 1)}]
+PASS  D  |Z| = 4: only the form (5, 25, 35) = 5 (x^2 + 5xy + 7y^2)   [{(5, 25, 35): (48, 48, 5)}]
+     |Z| = 4, form (5, 25, 35): 48 cores, of which 48 have a cyclic triangle inside Z
+PASS  E  |Z| = 4: every core with that form has a cyclic triangle inside Z   [(48, 48)]
+ALL CHECKS PASSED (5 checks)

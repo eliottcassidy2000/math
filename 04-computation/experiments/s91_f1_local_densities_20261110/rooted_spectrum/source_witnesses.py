@@ -29,7 +29,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 
 @njit(cache=True)
-def scan(n, reps, targets, found):
+def scan(n, reps, targets, found, counts):
     """targets[k] = (D, U); found[k] = (code, cut) of the first rooted tournament of order n + 1 hitting it."""
     full = (1 << n) - 1
     f = np.zeros((1 << n, n), np.int64)
@@ -103,10 +103,12 @@ def scan(n, reps, targets, found):
                         if (cut >> c) & 1:
                             H += Q[b, c]
             for k in range(targets.shape[0]):
-                if found[k, 0] < 0 and targets[k, 0] == H and targets[k, 1] == U:
-                    found[k, 0] = code
-                    found[k, 1] = cut
-                    nhit += 1
+                if targets[k, 0] == H and targets[k, 1] == U:
+                    counts[k] += 1
+                    if found[k, 0] < 0:
+                        found[k, 0] = code
+                        found[k, 1] = cut
+                        nhit += 1
     return nhit
 
 
@@ -212,9 +214,14 @@ def main():
     T = np.array([[d, u] for d, u, _, _ in targets], dtype=np.int64)
     found = -np.ones((len(targets), 2), dtype=np.int64)
     order = [0] * len(targets)
+    hits = {}
     for n in range(1, 9):
         before = found[:, 0].copy()
-        scan(n, reps[n], T, found)
+        counts = np.zeros(len(targets), dtype=np.int64)
+        scan(n, reps[n], T, found, counts)
+        for k in range(len(targets)):
+            if counts[k]:
+                hits.setdefault(k, {})[n + 1] = int(counts[k])
         for k in range(len(targets)):
             if before[k] < 0 <= found[k, 0]:
                 order[k] = n + 1
@@ -237,6 +244,7 @@ def main():
         y = n
         rows = "(" + ",".join(str(x) for x in out) + ")"
         print(f"  s = {s}: D = {d}, U = {u} = 9 * 2^{j}, order {m}, root y = {y}, out-masks B = {rows}")
+        print(f"      rooted tournaments (class of the base, cut) with this pair, by order: {hits.get(k, {})}")
         hb = ham_dp(out, list(range(m)))
         hp = ham_perm(out, m)
         ub = slope_by_definition(out, m, y)

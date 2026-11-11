@@ -1,0 +1,10 @@
+N = 545: exact r = 35, r_10 = 34, r_9 = 33 ; sources whose least base order (any number of sinks removed) exceeds 10: [(165, 190, 11)]
+N = 663: exact r = 34, r_10 = 33, r_9 = 32 ; sources whose least base order (any number of sinks removed) exceeds 10: [(153, 255, 11)]
+N = 665: exact r = 38, r_10 = 37, r_9 = 34 ; sources whose least base order (any number of sinks removed) exceeds 10: [(209, 228, 11)]
+N = 671: exact r = 46, r_10 = 45, r_9 = 43 ; sources whose least base order (any number of sinks removed) exceeds 10: [(165, 253, 11)]
+N = 695: exact r = 34, r_10 = 33, r_9 = 27 ; sources whose least base order (any number of sinks removed) exceeds 10: [(185, 255, 11)]
+N = 705: exact r = 48, r_10 = 47, r_9 = 44 ; sources whose least base order (any number of sinks removed) exceeds 10: [(205, 250, 11)]
+N = 715: exact r = 43, r_10 = 42, r_9 = 39 ; sources whose least base order (any number of sinks removed) exceeds 10: [(165, 275, 11)]
+N = 741: exact r = 53, r_10 = 52, r_9 = 51 ; sources whose least base order (any number of sinks removed) exceeds 10: [(171, 285, 11)]
+N = 755: exact r = 40, r_10 = 39, r_9 = 36 ; sources whose least base order (any number of sinks removed) exceeds 10: [(225, 265, 11)]
+exact r = r_10 for every odd N <= 543: True

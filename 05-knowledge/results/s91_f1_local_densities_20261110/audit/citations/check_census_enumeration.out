@@ -1,0 +1,3 @@
+X = 512: fast enumeration equals the plain triple loop: True  (totals 544, 632)
+X = 2048: fast enumeration equals the plain triple loop: True  (totals 2629, 3148)
+X = 2^22: leading terms kappa_s X ln X = 1.033e+07, 1.359e+07 (THM-5128 (D1); the census gave 10532579 and 13218857, difference O(X) = 4194304)

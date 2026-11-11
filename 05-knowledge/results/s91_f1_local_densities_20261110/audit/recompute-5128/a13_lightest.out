@@ -1,0 +1,17 @@
+[2^18, 2^21): mean r = 11.0291; word-pair weighted mean = 23.4771; miss rate 1.381 %
+    N coprime to 255255           : share of odd N 0.3611; mean r / overall = 0.8958; weighted (s+1) mean / overall = 0.8016; miss rate 1.998 % (52.3 % of all misses)
+    N + 1 coprime to 255255       : share of odd N 0.3611; mean r / overall = 0.9370; weighted (s+1) mean / overall = 1.0282; miss rate 1.851 % (48.4 % of all misses)
+    N (N + 1) coprime to 255255   : share of odd N 0.0873; mean r / overall = 0.7273; weighted (s+1) mean / overall = 0.7232; miss rate 3.516 % (22.2 % of all misses)
+[2^21, 2^23): mean r = 12.1898; word-pair weighted mean = 26.0287; miss rate 0.823 %
+    N coprime to 255255           : share of odd N 0.3611; mean r / overall = 0.8995; weighted (s+1) mean / overall = 0.8097; miss rate 1.235 % (54.2 % of all misses)
+    N + 1 coprime to 255255       : share of odd N 0.3611; mean r / overall = 0.9327; weighted (s+1) mean / overall = 1.0192; miss rate 1.170 % (51.3 % of all misses)
+    N (N + 1) coprime to 255255   : share of odd N 0.0873; mean r / overall = 0.7244; weighted (s+1) mean / overall = 0.7201; miss rate 2.373 % (25.2 % of all misses)
+[2^24, 2^27): mean r = 14.1405; word-pair weighted mean = 30.3181; miss rate 0.347 %
+    N coprime to 255255           : share of odd N 0.3611; mean r / overall = 0.8940; weighted (s+1) mean / overall = 0.8087; miss rate 0.557 % (57.9 % of all misses)
+    N + 1 coprime to 255255       : share of odd N 0.3611; mean r / overall = 0.9443; weighted (s+1) mean / overall = 1.0278; miss rate 0.503 % (52.4 % of all misses)
+    N (N + 1) coprime to 255255   : share of odd N 0.0873; mean r / overall = 0.7319; weighted (s+1) mean / overall = 0.7305; miss rate 1.114 % (28.0 % of all misses)
+limit values: prod over p in 3..17 of (1 - 1/p^2) = 0.8213; 8/pi^2 = 0.8106
+
+real	0m29.987s
+user	0m0.015s
+sys	0m0.000s

@@ -1,0 +1,33 @@
+PASS  norms i^2+ij+j^2 at (1,1),(1,2),(1,3),(2,3),(3,3) = 3,7,13,19,27; (2,2) gives 12
+PASS  eps = 2 sqrt19 - 5 sqrt3 = sqrt76 - sqrt75 > 0 and eps < delta (paper: 0 < eps < delta)   [eps=0.057543849 delta=0.065002636]
+PASS  paper's penalties: a = sqrt7+sqrt19-4sqrt3 = 0.076447, b = sqrt13-2sqrt3 = 0.141450, delta = b - a
+PASS  1039 = 2+5+13+33+89+240+657 (unicyclic graphs on 4..10 vertices, OEIS A001429)
+PASS  204990 = 11+23+47+106+235+551+1301+3159+7741+19320+48629+123867 (trees on 7..18 vertices, OEIS A000055)
+PASS  ord_p(2) = 2, 4, 3, 12, 18, 18, 519 for p = 3, 5, 7, 13, 19, 27, 1039   [[2, 4, 3, 12, 18, 18, 519]]
+PASS  1039 is prime; 1039 = 7 mod 8; 1039 + 1 = 2^4 * 5 * 13
+PASS  -1 is a power of 2 modulo 3, 5, 13, 19, 27 and not modulo 7, 1039
+PASS  5*13 = 2^6+1, 27*19 = 2^9+1, 7 = 2^3-1, 21 = (2^6-1)/3 = 111 in base 4
+PASS  x^2 + 2^s y^2 - [s=0] with x, y odd is 1,3,5,1,1,.. mod 8 (never 7)
+PASS  3x^2+9xy+7y^2 = X^2+XY+Y^2 at (X,Y) = (x+y, x+2y); discriminants -3; x^2+xy+2y^2 has discriminant -7
+      discriminants of x^2 + 2^s y^2, s = 0..5: [-4, -8, -16, -32, -64, -128]  (only s = 0, 1 give the fundamental discriminants -4, -8; s >= 2 are non-maximal orders of conductor 2^floor(s/2))
+PASS  Busch/Moon formula gives f(3..10) = 3, 5, 9, 15, 25, 45, 75, 125 (the values used in THM-5129 and README 4.5)   [[3, 5, 9, 15, 25, 45, 75, 125]]
+      formula at n = 2 (no strong tournament of order 2): 9 * 5^(-1) = 1.8  -> the range n >= 3 (or n = 1) must be stated
+PASS  the formula is strictly increasing for n >= 3 and f(n) >= f(n-1) + 2 there
+PASS  exhaustive: least H over strong tournaments of order 3..6 is 3, 5, 9, 15   [{3: 3, 4: 5, 5: 9, 6: 15}]
+PASS  transitive tournament with the arc v_1 v_n reversed has 2^(n-2) + 1 Hamiltonian paths, n = 3..12
+PASS  Li_2(-1) = -pi^2/12, so l_0 = pi^2/12
+PASS  kappa_0 = pi^2/12 + 2 Li2(-1/2) - Li2(-1/4) = 0.1615389173   [0.161538917263]
+PASS  kappa_1 = Li2(-1/4) - Li2(-1/2) = 0.2125139092   [0.212513909237]
+PASS  g_bar = pi^2/6 + 2 Li2(-1/2) = 0.7481056530   [0.748105653001]
+PASS  triple shares w_0 = 0.43186124, w_1 = 0.56813876   [('0.4318612394', '0.5681387606')]
+PASS  sum_{s>=0} (s+1)(l_s - 2 l_{s+1} + l_{s+2}) = pi^2/12   [0.822467033424113]
+PASS  word-pair shares w_0 = kappa_0/(pi^2/12) = 0.19640777, w_1 = 0.80359223   [0.1964077716]
+PASS  integral identity int_{1/2}^1 (1/r) ln((r+2^s)/(r/2+2^s)) dr = l_s - 2 l_{s+1} + l_{s+2}, s = 0..3
+PASS  prod over odd p of (1 - 1/p^2) = 8/pi^2 = 0.810569...   [0.810569469139]
+PASS  (1 - 1/p^2 + 1/p)/(1 - 1/p^2) = 1 + p/(p^2-1) and orthogonality probability 1/(p+1), p = 3..97
+PASS  (1+z)^2 (1+z+z^2) = 1 + z + z^3 + z^4 over F_2 (= z^2 (z + z^2 + z^-1 + z^-2)) and divides z^6 - 1
+PASS  binary radical inverse on B_n takes each value (2i+1)/2^n exactly once, n = 1..14
+PASS  q(h) = sum_i h_i (h_{i+1} + h_{i+2}) mod 2 for h < 2^14; 0 <= q(h) <= h/2
+PASS  x(h) = y(h) iff h = 0 or h = 2^j, and then x = y = 2^(j+1) + 1 (h < 2^14)
+PASS  first p-divisible states: 3:1, 5:2, 7:38, 11:16, 13:32, 17:8, 19:218, 23:103, 29:1435, 37:1350, 41:266, 43:64   [{3: 1, 5: 2, 7: 38, 11: 16, 13: 32, 17: 8, 19: 218, 23: 103, 29: 1435, 37: 1350, 41: 266, 43: 64}]
+ALL CHECKS PASSED

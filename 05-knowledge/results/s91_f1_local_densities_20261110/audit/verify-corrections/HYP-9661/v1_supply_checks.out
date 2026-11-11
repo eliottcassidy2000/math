@@ -1,0 +1,45 @@
+PASS 35 attained offsets <= 73 : 35
+PASS 1066 odd parts in all
+PASS full windows only at 1 and 5 : [1, 5]
+PASS (A3) bound excludes a full window exactly at 3, 13, 35, 39, 43, 47, 63, 67 : [3, 13, 35, 39, 43, 47, 63, 67]
+PASS odd parts at 33, 65 are 34, 66 against 17, 33 integers
+PASS mean covered share on 37..73 is 0.500 (min 0.156, max 0.743) : 0.4999 0.1562 0.7429
+PASS single-offset shares at h = 17 : 0.667 0.412 0.294
+PASS single-offset shares at h = 33 : 0.800 0.667 0.439
+PASS single-offset shares at h = 65 : 0.778 0.569 0.377
+PASS r(N) = 0 on [3, 225) exactly at 7, 11, 13, 21, 47, 67 : [7, 11, 13, 21, 47, 67]
+PASS r(N) >= 5 on [129, 225)
+PASS r(N) >= N/64 on [129, 225)
+PASS head 11 = 5 + 2 * 3, (D, U) = (5, 7) a source, D > N/3
+PASS head 13 = 5 + 2 * 4, (D, U) = (5, 9) a source, D > N/3
+PASS head 47 = 17 + 2 * 15, (D, U) = (17, 31) a source, D > N/3
+PASS head 67 = 33 + 2 * 17, (D, U) = (33, 41) a source, D > N/3
+PASS offset 3: only odd part 3
+PASS offset 5: dyadic slopes 2^i iff i >= 5
+PASS cone 5 + 2^m (value D + 2U, U = 2^(m-1)) supplied exactly from m = 6 : [6, 7, 8, 9, 10, 11]
+PASS grid: 7 = N(1,1,1), 21 = N(1,2,2); head of level 2 is 13, 21, 37
+PASS section (5) of source_supply.out = windows recomputed from the slope lists
+PASS section (6) lists m(h) for 1 and the 34 attained 3 <= h <= 73 : 35
+PASS Pearson 23 <= h <= 73: 26 offsets, 0.68 : 26 offsets, 0.6784
+PASS Pearson 15 <= h <= 73: 29 offsets, 0.66 : 29 offsets, 0.6601
+PASS Pearson 3 <= h <= 73: 34 offsets, 0.41 : 34 offsets, 0.4105
+PASS m(h) = 2 exactly at 9, 17, 19, 35, 39, 47, 63 (h <= 73) : [9, 17, 19, 35, 39, 47, 63]
+PASS m(h) >= 6 for 63 < h <= 73, m(67) = 6
+PASS five poorest of [23, 73]: 63, 47, 67, 35, 39 : [63, 47, 67, 35, 39]
+PASS the sixth share is strictly larger (27 and 55 at 0.357) : (Fraction(5, 14), 27)
+PASS shares 35, 39, 47, 63 = 0.278, 0.350, 0.208, 0.156; 67 = 9/34 = 0.265; 9, 17, 19 = 0.60, 0.44, 0.50 : {35: 0.278, 39: 0.35, 47: 0.208, 63: 0.156, 67: 0.265, 9: 0.6, 17: 0.444, 19: 0.5}
+PASS 3 | N: 0.578 against 0.557, ratio 1.038 : (0.5784, 0.5574, 0.5573, 0.5574, 1.038, 0.357)
+PASS ratios at 5, 7, 11, 13 are 1.004, 1.001, 0.999, 1.001
+PASS share with p | D: 0.357, 0.201, 0.143, 0.092, 0.078
+PASS Poisson reading: -ln(1 - share) in the ratio 1.06 : 1.0596
+PASS F1 ratio of class factors at 3 is 1.375
+PASS shares k = 7..13
+PASS block minima k = 7..13
+PASS share of the block k = 6 is 0.271 (bound 0.27 of (A) 2)
+PASS shares increasing k = 6..13; k = 14 (unsaturated) is 0.602
+PASS no violation of r >= N/64 on [129, 2^14)
+PASS top decile on [4096, 8192): 0.94 (odd U), 0.84 (even U)
+PASS heads at a non-sink root miss [1, 7, 21] below 9153
+PASS heads with D <= N/3 miss [1, 7, 11, 13, 21, 47, 67]
+
+ALL VERIFIER CHECKS PASSED

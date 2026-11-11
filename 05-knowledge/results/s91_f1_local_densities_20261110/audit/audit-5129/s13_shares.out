@@ -1,0 +1,9 @@
+[2^6,2^7): share r_9 0.27093  share r_10 0.27093  mean r_9 4.34 mean r_10 4.34
+[2^7,2^8): share r_9 0.29585  share r_10 0.29585  mean r_9 9.44 mean r_10 9.44
+[2^8,2^9): share r_9 0.33251  share r_10 0.33450  mean r_9 21.43 mean r_10 21.57
+[2^9,2^10): share r_9 0.36372  share r_10 0.38128  mean r_9 46.79 mean r_10 49.21
+[2^10,2^11): share r_9 0.41422  share r_10 0.46358  mean r_9 106.38 mean r_10 119.53
+[2^11,2^12): share r_9 0.41665  share r_10 0.51814  mean r_9 213.32 mean r_10 267.12
+[2^12,2^13): share r_9 0.37282  share r_10 0.58752  mean r_9 375.29 mean r_10 604.57
+[2^13,2^14): share r_9 0.16471  share r_10 0.61645  mean r_9 310.84 mean r_10 1264.49
+[2^14,2^15): share r_9 0.03887  share r_10 0.60169  mean r_9 146.35 mean r_10 2449.62

@@ -1,0 +1,14 @@
+(1) uniform-state model modulo p^2 (exact rationals)
+    p = 3, c = 1: factor at units 0.88889, at v = 1 1.18519, at 0 mod p^2 1.29630; mean over the class 0 mod p = 1.22222 (1 - 1/p^2 + 1/p = 1.22222);  closed form agrees: True
+    p = 3, c = 2: factor at units 0.88889, at v = 1 1.18519, at 0 mod p^2 1.29630; mean over the class 0 mod p = 1.22222 (1 - 1/p^2 + 1/p = 1.22222);  closed form agrees: True
+    p = 5, c = 1: factor at units 0.96000, at v = 1 1.15200, at 0 mod p^2 1.19200; mean over the class 0 mod p = 1.16000 (1 - 1/p^2 + 1/p = 1.16000);  closed form agrees: True
+    p = 5, c = 2: factor at units 0.96000, at v = 1 1.15200, at 0 mod p^2 1.19200; mean over the class 0 mod p = 1.16000 (1 - 1/p^2 + 1/p = 1.16000);  closed form agrees: True
+    p = 5, c = 4: factor at units 0.96000, at v = 1 1.15200, at 0 mod p^2 1.19200; mean over the class 0 mod p = 1.16000 (1 - 1/p^2 + 1/p = 1.16000);  closed form agrees: True
+(2) F1, odd N in [2^22, 2^24): 6291456 integers; triples per odd N: sheet 0 5.6194, sheet 1 7.0889, total 12.7082; misses 0.662 %
+    p = 5, sheet 1 (class of N): factor at p-units 0.9361; p | . exactly 1.2553; p^2 | . 1.2568; (all of the class 0 mod p: 1.2556);  ratio (p^2 | .)/(p || .) = 1.0011; limit model 1.0347
+    p = 5, sheet 0 (class of N + 1): factor at p-units 0.9390; p | . exactly 1.2432; p^2 | . 1.2480; (all of the class 0 mod p: 1.2441);  ratio (p^2 | .)/(p || .) = 1.0039; limit model 1.0347
+    p = 3, sheet 1 (class of N): factor at p-units 0.8508; p | . exactly 1.2228; p^2 | . 1.4497; (all of the class 0 mod p: 1.2984);  ratio (p^2 | .)/(p || .) = 1.1855; limit model 1.0938
+    p = 3, sheet 0 (class of N + 1): factor at p-units 0.8494; p | . exactly 1.2241; p^2 | . 1.4556; (all of the class 0 mod p: 1.3013);  ratio (p^2 | .)/(p || .) = 1.1891; limit model 1.0938
+    p = 7, sheet 1 (class of N): factor at p-units 0.9668; p | . exactly 1.1981; p^2 | . 1.2059; (all of the class 0 mod p: 1.1992);  ratio (p^2 | .)/(p || .) = 1.0065; limit model 1.0182
+    p = 7, sheet 0 (class of N + 1): factor at p-units 0.9623; p | . exactly 1.2235; p^2 | . 1.2409; (all of the class 0 mod p: 1.2259);  ratio (p^2 | .)/(p || .) = 1.0142; limit model 1.0182
+ALL CHECKS PASSED

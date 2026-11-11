@@ -1,0 +1,47 @@
+rows: 262
+PASS 262 moduli
+PASS moduli = every odd m <= 521 plus 1023, 1143
+PASS 1039 not in the table (cited from bridges/b3_f1_data.out)
+PASS named rate m=3: table 0.866025 quoted 0.8660
+PASS named rate m=5: table 0.741760 quoted 0.7418
+PASS named rate m=7: table 0.932039 quoted 0.9320
+PASS named rate m=11: table 0.858710 quoted 0.8587
+PASS named rate m=13: table 0.827243 quoted 0.8272
+PASS named rate m=17: table 0.828856 quoted 0.8289
+PASS named rate m=19: table 0.805253 quoted 0.8053
+PASS named rate m=23: table 0.793054 quoted 0.7931
+PASS named rate m=31: table 0.900219 quoted 0.9002
+PASS named rate m=43: table 0.834248 quoted 0.8342
+PASS named rate m=73: table 0.851574 quoted 0.8516
+PASS named rate m=127: table 0.875417 quoted 0.8754
+other primes up to 89: [29, 37, 41, 47, 53, 59, 61, 67, 71, 79, 83, 89]
+least 0.769084 at 79, largest 0.805970 at 37
+PASS least 0.7691 at 79
+PASS largest 0.8060 at 37
+PASS band [0.769, 0.806] holds for the other primes
+PASS 71, 79, 83 present in the table
+PASS maximum 0.932039
+PASS attained exactly at the multiples of 7 in the table
+largest rate at a modulus prime to 7: 0.913738 at [93, 279, 465, 1023]
+PASS no rate exceeds 0.932039 over the whole table
+p=3: theta/2 at the rate 0.073326 (quoted 0.0733); theta at rate+0.005 = 0.1425
+PASS theta_3/2 supremum
+PASS theta_3 < 1/3
+p=5: theta/2 at the rate 0.115732 (quoted 0.1157); theta at rate+0.005 = 0.2286
+PASS theta_5/2 supremum
+PASS theta_5 < 1/3
+p=7: theta/2 at the rate 0.042199 (quoted 0.0422); theta at rate+0.005 = 0.0790
+PASS theta_7/2 supremum
+PASS theta_7 < 1/3
+PASS theta_3 at rate + 0.005 = 0.1425 (quoted 0.1425)
+PASS theta_5 at rate + 0.005 = 0.2286 (quoted 0.2286)
+PASS theta_7 at rate + 0.005 = 0.0790 (quoted 0.0790)
+PASS recomputed rate m=3: 0.866025 (table 0.866025)
+PASS recomputed rate m=5: 0.741760 (table 0.741760)
+PASS recomputed rate m=7: 0.932039 (table 0.932039)
+PASS recomputed rate m=37: 0.805970 (table 0.805970)
+PASS recomputed rate m=71: 0.785277 (table 0.785277)
+PASS recomputed rate m=79: 0.769084 (table 0.769084)
+PASS recomputed rate m=83: 0.786546 (table 0.786546)
+PASS recomputed rate m=89: 0.776578 (table 0.776578)
+ALL PASS

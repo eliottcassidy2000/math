@@ -1,0 +1,6 @@
+s = 7: tournament True; order 9; H(B) = 129 (claimed 129); U = 144 (claimed 144); U_even = 51, U_odd = 93, E = 42 (U_odd - U_even = 42); outdeg(y) = 1
+       closed counts t = 0..3: [231, 417, 705, 1281];  D - E + U = 231, D + 2 U_even = 231, D + 2^t U = [417, 705, 1281]
+s = 8: tournament True; order 8; H(B) = 257 (claimed 257); U = 288 (claimed 288); U_even = 112, U_odd = 176, E = 64 (U_odd - U_even = 64); outdeg(y) = 2
+       closed counts t = 0..3: [481, 833, 1409, 2561];  D - E + U = 481, D + 2 U_even = 481, D + 2^t U = [833, 1409, 2561]
+s = 9: tournament True; order 9; H(B) = 513 (claimed 513); U = 576 (claimed 576); U_even = 182, U_odd = 394, E = 212 (U_odd - U_even = 212); outdeg(y) = 1
+       closed counts t = 0..3: [877, 1665, 2817, 5121];  D - E + U = 877, D + 2 U_even = 877, D + 2^t U = [1665, 2817, 5121]

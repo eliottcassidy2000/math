@@ -1,0 +1,23 @@
+classes / strong classes by order: {1: (1, 0), 2: (1, 0), 3: (2, 1), 4: (4, 1), 5: (12, 6), 6: (56, 35), 7: (456, 353), 8: (6880, 6008)}
+least H of a strong tournament, orders 3..8: [3, 5, 9, 15, 25, 45]
+odd numbers <= 73 that are not attained: [7, 21]
+offset 3: 1 odd parts (THM-5129: 1); 3:0 ...
+offset 5: 5 odd parts (THM-5129: 5); 1:5 3:1 5:0 7:0 9:0 ...
+offset 9: 8 odd parts (THM-5129: 8); 1:4 5:1 9:0 11:0 15:0 21:0 23:0 25:0 ...
+offset 17: 11 odd parts (THM-5129: 11); 5:2 7:2 9:1 11:2 17:0 21:0 31:0 33:0 55:0 61:0 69:0 ...
+offset 33: 34 odd parts (THM-5129: 34); 1:6 3:4 5:3 9:2 13:2 15:2 17:1 19:1 21:1 23:1 31:2 33:0 37:0 39:0 ...
+offset 65: 66 odd parts (THM-5129: 66); 3:5 5:4 7:6 9:5 11:3 13:3 15:5 17:2 19:2 21:2 23:2 25:2 27:2 29:2 ...
+least exponent of d = 9 at offsets 5, 9, 17, 33, 65: [0, 0, 1, 2, 5]   bound from U >= D alone (least j with 9 * 2^j >= D): [0, 0, 1, 2, 3]
+odd N in [3, 225) with no representation D + 2U: [7, 11, 13, 21, 47, 67]
+slopes in [h, 3h/2]: 1:1/1 3:1/2 5:3/3 9:3/5 11:3/6 13:4/7 15:4/8 17:4/9 19:5/10 23:8/12 25:7/13 27:5/14 29:9/15 31:9/16 33:13/17 35:5/18 37:12/19 39:7/20 41:14/21 43:9/22 45:12/23 47:5/24 49:15/25 51:14/26 53:15/27 55:10/28 57:11/29 59:19/30 61:12/31 63:5/32 65:24/33 67:9/34 69:26/35 71:23/36 73:27/37
+number of strong classes with H = h, 23 <= h <= 73: 23:4 25:3 27:5 29:6 31:4 33:8 35:2 37:7 39:2 41:6 43:4 45:12 47:2 49:8 51:12 53:10 55:4 57:7 59:12 61:5 63:2 65:14 67:6 69:18 71:11 73:19
+Pearson correlation of the covered share with the number of strong classes, 23 <= h <= 73: 0.678
+(correlation with log of the number of strong classes: 0.735)
+offsets 15 <= h <= 73 with exactly two strong classes: [17, 19, 35, 39, 47, 63]
+the eight poorest offsets (share, strong classes): [(63, 0.156, 2), (47, 0.208, 2), (67, 0.265, 6), (35, 0.278, 2), (39, 0.35, 2), (27, 0.357, 5), (55, 0.357, 4), (57, 0.379, 7)]
+mean share on 37 <= h <= 73: 0.500 (min 0.156, max 0.743)
+ALL REPLICATION CHECKS PASSED
+
+real	0m2.264s
+user	0m0.015s
+sys	0m0.031s

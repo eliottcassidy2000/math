@@ -1,0 +1,5 @@
+PASS  (B3): |rho(h) - (1 - phi(h)/2)| < n/(2h+1) for 1 <= h < 2^16   [largest ratio to the bound 0.7500]
+PASS  (B3): y/2 < x <= y, i.e. 1/2 < rho <= 1, for 1 <= h < 2^16   [(0.500011444179109, 1.0)]
+PASS  the set {(h/2^n, phi_n(h))} is a (0, n, 2)-net in base 2 (Hammersley / van der Corput), n = 1..12
+PASS  rho is close to uniform on [1/2, 1] on B_16 (largest deviation of the distribution function < 0.01)   [0.00008]
+ALL CHECKS PASSED

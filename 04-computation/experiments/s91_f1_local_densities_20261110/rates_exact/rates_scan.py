@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """S91 rates_exact: spectral radii of the twisted transfer operators T_k modulo every odd m in a range.
 
-Reduction (PROVED in the report; checked numerically in complement_symmetry.py): T_k commutes with the complement
+Reduction (derivation in HYP-9660 (B); checked numerically by the audit's verification script
+05-knowledge/results/s91_f1_local_densities_20261110/audit/verify-corrections/HYP-9660/verify_hyp9660.py, item 2):
+T_k commutes with the complement
 operator (C u)(eta, beta) = w^(-(eta - beta)) u(-1 - eta, 1 - beta), w = zeta^(k/2), C^2 = zeta^k, so the spectrum of
 the 2m x 2m matrix T_k is the union of the spectra of the two m x m matrices
 

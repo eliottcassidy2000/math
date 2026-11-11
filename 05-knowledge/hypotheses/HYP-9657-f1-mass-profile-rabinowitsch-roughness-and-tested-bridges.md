@@ -14,12 +14,18 @@ status: >
   Rabinowitsch stratum.
   CORRECTION (opus-2026-11-10-S91, MISTAKE-758): the previous sentence overstated the novelty. The two favoured
   classes 0 and -1, their attribution to the parity of the tail (the two sheets) and the confinement mechanism
-  (states with d = U = 0 mod p) were already PROVED, in the letter-count model of O/Z/J words with one root change,
-  in THM-4916 (kind-pasteur-2026-11-07-S15; L(0) = 1 + (3p-4)/(4p^2), L(-1) = 1 - 1/p^2 + 1/(4p)), with the 3-adic
-  case in Session223 and the "Fermat boost" at census scale in HYP-9506 (B); S90 and its audit did not cite them.
-  What remains from S90 in (A) is the by-value measurement and the list of primes; (A) is now explained and
-  superseded by THM-5128 (first-order by-value law: the bias is the mass of p-divisible states; presence or absence
-  at a prime is decided by how early a p-divisible state occurs; by-value limit 1 - 1/p^2 + [c = c_s]/p). New in
+  (states with d = U = 0 mod p) were already PROVED by value for a fixed seed in Session206
+  (weighted-parameter-capacity; THM-4888 (C); HYP-9480 (A)), predicted a priori for the bank family F2 at p = 3
+  and compared with the census in the S82 note, section 5 (local_factor_mod3_prediction.py), and PROVED in the
+  letter-count model of O/Z/J words with one root change in THM-4916 (kind-pasteur-2026-11-07-S15;
+  L(0) = 1 + (3p-4)/(4p^2), L(-1) = 1 - 1/p^2 + 1/(4p)), with the 3-adic case in Session223 and the "Fermat boost"
+  at census scale in HYP-9506 (B); S90 and its audit did not cite them (the S91 audit added the first three items
+  of this list: MISTAKE-761).
+  What remains from S90 in (A) is the by-value measurement and the list of primes; its first-order part is
+  explained by THM-5128 (audited 2026-11-11: the bias of the distinguished class is the mass of p-divisible
+  states, and its size at a prime is decided by how early and how dense those states are; by-value class factor
+  1 - 1/p^2 + [c = c_s]/p modulo p). The second-order term, visible at 3, 7 and 31, is not analysed there, and at
+  7 it cannot be told apart from a quadratic character, the squares modulo 7 being the powers of 2 (S90). New in
   S90 after this correction: the by-value class means at the primes listed, and the Rabinowitsch stratum (B).
   (B'): EXPLORATORY, in-sample. (C): FINITE-EXACT refutations (cycle_gas.py, every labelled
   tournament of orders 3-6; interaction_gap_refuted.py). (D): HEURISTIC threshold and an elementary bound, no

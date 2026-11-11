@@ -1,0 +1,65 @@
+validation of the cut formulas against the direct computation, bases of order 3: failures 0
+validation of the cut formulas against the direct computation, bases of order 5: failures 0
+validation of the cut formulas against the direct computation, bases of order 7: failures 0
+validation of the cut formulas against the direct computation, bases of order 8: failures 0
+validation, bases of order 9 (codes9): 0
+codes9.npy: 316153 codes, 316153 distinct; (class rep of order 8, cut) with the new vertex of least out-degree: 316153; equal as sets: True; codes9 subset of mine: True; mine subset of codes9: True
+rooted order <= 9: number of pairs (D, U) with D <= 73: 3239  (largest U among them: 2232)  [4 s]
+rooted order <= 9: odd N < 32768 with r(N) = 0: [1, 7, 11, 13, 21, 47, 67]
+  [2^6, 2^7): min 0 at N = [67], median 4.0, mean 4.34, share (mean of r/(N/6)) 0.2709; pooled share of the exact lattice points 0.2689; min of r/(N/64) 0.000
+  [2^7, 2^8): min 5 at N = [131, 145, 151, 163, 167, 173], median 9.0, mean 9.44, share (mean of r/(N/6)) 0.2958; pooled share of the exact lattice points 0.2933; min of r/(N/64) 1.662
+  [2^8, 2^9): min 7 at N = [259], median 22.0, mean 21.43, share (mean of r/(N/6)) 0.3325; pooled share of the exact lattice points 0.3340; min of r/(N/64) 1.730
+  [2^9, 2^10): min 23 at N = [521], median 46.0, mean 46.79, share (mean of r/(N/6)) 0.3637; pooled share of the exact lattice points 0.3651; min of r/(N/64) 2.486
+  [2^10, 2^11): min 54 at N = [1027], median 108.0, mean 106.38, share (mean of r/(N/6)) 0.4142; pooled share of the exact lattice points 0.4153; min of r/(N/64) 3.365
+  [2^11, 2^12): min 120 at N = [2101], median 212.0, mean 213.32, share (mean of r/(N/6)) 0.4166; pooled share of the exact lattice points 0.4165; min of r/(N/64) 3.655
+  [2^12, 2^13): min 267 at N = [4117], median 385.0, mean 375.29, share (mean of r/(N/6)) 0.3728; pooled share of the exact lattice points 0.3664; min of r/(N/64) 2.955
+  [2^13, 2^14): min 192 at N = [15427], median 303.5, mean 310.84, share (mean of r/(N/6)) 0.1647; pooled share of the exact lattice points 0.1518; min of r/(N/64) 0.758
+  [2^14, 2^15): min 82 at N = [32615], median 138.0, mean 146.35, share (mean of r/(N/6)) 0.0389; pooled share of the exact lattice points 0.0357; min of r/(N/64) 0.161
+  r(N) >= N/64 on [129, 2^14): violations 758, first [14239, 14257, 14291, 14321, 14337, 14501, 14513, 14567], least 14239
+  least value of r(N) / (N/64) on [129, 2^14): 0.7580 at N = 16379
+  r(N) >= N/64 on [129, 2^15): violations 8949, least 14239
+  shares increasing over k = 6..11: True [0.2709, 0.2958, 0.3325, 0.3637, 0.4142, 0.4166, 0.3728, 0.1647, 0.0389]
+  N in [1024, 2048): share of lattice points that are sources by decile of 3D/N
+     U odd : 0.0000 0.0144 0.0718 0.1231 0.2128 0.3727 0.4566 0.6312 0.7278 0.7769  overall 0.3393
+     U even: 0.0754 0.2425 0.4185 0.5091 0.6529 0.8054 0.4349 0.5802 0.5796 0.6176  overall 0.4913
+     both  : 0.0377 0.1286 0.2450 0.3161 0.4329 0.5882 0.4457 0.6057 0.6537 0.6978  overall 0.4153
+  N in [4096, 8192): share of lattice points that are sources by decile of 3D/N
+     U odd : 0.0000 0.0237 0.0459 0.1376 0.2513 0.3708 0.4891 0.5978 0.5230 0.1941  overall 0.2633
+     U even: 0.0980 0.3167 0.4966 0.5899 0.7007 0.7374 0.4940 0.5734 0.5048 0.1849  overall 0.4696
+     both  : 0.0490 0.1702 0.2712 0.3638 0.4760 0.5539 0.4915 0.5856 0.5139 0.1896  overall 0.3664
+rooted order <= 10: number of pairs (D, U) with D <= 73, U < 2^18: 4331  [15 s]
+rooted order <= 10: odd N < 32768 with r(N) = 0: [1, 7, 11, 13, 21, 47, 67]
+  [2^6, 2^7): min 0 at N = [67], median 4.0, mean 4.34, share (mean of r/(N/6)) 0.2709; pooled share of the exact lattice points 0.2689; min of r/(N/64) 0.000
+  [2^7, 2^8): min 5 at N = [131, 145, 151, 163, 167, 173], median 9.0, mean 9.44, share (mean of r/(N/6)) 0.2958; pooled share of the exact lattice points 0.2933; min of r/(N/64) 1.662
+  [2^8, 2^9): min 7 at N = [259], median 22.0, mean 21.57, share (mean of r/(N/6)) 0.3345; pooled share of the exact lattice points 0.3362; min of r/(N/64) 1.730
+  [2^9, 2^10): min 24 at N = [521], median 49.0, mean 49.21, share (mean of r/(N/6)) 0.3813; pooled share of the exact lattice points 0.3839; min of r/(N/64) 2.771
+  [2^10, 2^11): min 63 at N = [1027, 1073], median 120.0, mean 119.53, share (mean of r/(N/6)) 0.4636; pooled share of the exact lattice points 0.4666; min of r/(N/64) 3.758
+  [2^11, 2^12): min 146 at N = [2101], median 263.0, mean 267.12, share (mean of r/(N/6)) 0.5181; pooled share of the exact lattice points 0.5215; min of r/(N/64) 4.447
+  [2^12, 2^13): min 352 at N = [4109], median 606.0, mean 604.57, share (mean of r/(N/6)) 0.5875; pooled share of the exact lattice points 0.5903; min of r/(N/64) 5.483
+  [2^13, 2^14): min 794 at N = [8203], median 1259.0, mean 1264.49, share (mean of r/(N/6)) 0.6165; pooled share of the exact lattice points 0.6174; min of r/(N/64) 6.123
+  [2^14, 2^15): min 1660 at N = [16447], median 2480.0, mean 2449.62, share (mean of r/(N/6)) 0.6017; pooled share of the exact lattice points 0.5980; min of r/(N/64) 5.794
+  r(N) >= N/64 on [129, 2^14): violations 0
+  least value of r(N) / (N/64) on [129, 2^14): 1.6623 at N = 231
+  r(N) >= N/64 on [129, 2^15): violations 0
+  shares increasing over k = 6..11: True [0.2709, 0.2958, 0.3345, 0.3813, 0.4636, 0.5181, 0.5875, 0.6165, 0.6017]
+  N in [1024, 2048): share of lattice points that are sources by decile of 3D/N
+     U odd : 0.0000 0.0144 0.0814 0.1474 0.2537 0.4138 0.5375 0.7269 0.8482 0.8754  overall 0.3905
+     U even: 0.0754 0.2478 0.4324 0.5436 0.6976 0.8542 0.5014 0.6385 0.6801 0.7600  overall 0.5428
+     both  : 0.0377 0.1312 0.2567 0.3455 0.4757 0.6331 0.5193 0.6827 0.7642 0.8181  overall 0.4666
+  N in [4096, 8192): share of lattice points that are sources by decile of 3D/N
+     U odd : 0.0031 0.0373 0.1005 0.2458 0.4229 0.5931 0.7401 0.8802 0.9247 0.9355  overall 0.4884
+     U even: 0.1070 0.3788 0.6166 0.7477 0.8729 0.9508 0.7361 0.8314 0.8370 0.8440  overall 0.6922
+     both  : 0.0550 0.2081 0.3584 0.4968 0.6479 0.7718 0.7381 0.8558 0.8809 0.8898  overall 0.5903
+r_10 >= r_9 everywhere: True
+  N = 131: r_9 = 5, r_10 = 5, N/64 = 2.05
+  N = 259: r_9 = 7, r_10 = 7, N/64 = 4.05
+  N = 521: r_9 = 23, r_10 = 24, N/64 = 8.14
+  N = 1027: r_9 = 54, r_10 = 63, N/64 = 16.05
+  N = 2101: r_9 = 120, r_10 = 146, N/64 = 32.83
+  N = 4109: r_9 = 276, r_10 = 352, N/64 = 64.20
+  N = 8203: r_9 = 405, r_10 = 794, N/64 = 128.17
+  N = 16447: r_9 = 215, r_10 = 1660, N/64 = 256.98
+  N = 129: r_9 = 12, r_10 = 12, N/64 = 2.02
+  N = 4117: r_9 = 267, r_10 = 358, N/64 = 64.33
+  N = 15427: r_9 = 192, r_10 = 1594, N/64 = 241.05
+  N = 32615: r_9 = 82, r_10 = 3023, N/64 = 509.61

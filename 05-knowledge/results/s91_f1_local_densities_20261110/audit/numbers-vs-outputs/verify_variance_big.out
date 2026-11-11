@@ -1,0 +1,4 @@
+[2^24, 2^27): triples per odd N: sheet 0 6.2379, sheet 1 7.9026, total 14.1405; triples 830334515
+   sheet 0: mean 6.2379, variance 17.3522, var/mean^2 0.4459, var/mean 2.782
+   sheet 1: mean 7.9026, variance 24.3541, var/mean^2 0.3900, var/mean 3.082
+   both   : mean 14.1405, variance 41.6873, var/mean^2 0.2085, var/mean 2.948; misses 203869 (0.3472 %)

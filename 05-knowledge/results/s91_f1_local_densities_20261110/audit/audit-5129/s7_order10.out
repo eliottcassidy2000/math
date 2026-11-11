@@ -1,0 +1,3 @@
+parents: 191536 ; candidates: 98066432 ; kept (new vertex of least key): 10146179 [6.6s]
+chunk 0 of 1: parents 0..191536, 10146179 tournaments counted [207.3s]
+saved chunk 0 [207.6s]

@@ -1,0 +1,105 @@
+== (1) definitions, (B3), (F) ==
+PASS q(2h) = q(h), q(2h+1) = q(h) + ceil(h/2), h < 2^19
+PASS 0 <= q <= h/2, so y/2 < x <= y
+PASS x = y exactly at h = 0 and h = 2^j (h < 2^20), with x = y = 2^(j+1) + 1
+PASS (B3) one-signed: 0 < rho - (1 - phi/2) for 1 <= h < 2^14
+PASS (B3) <= 3n/(4(2h+1)) with equality only at h = 1 (max ratio 3/4)
+   first p-divisible states: {3: 1, 5: 2, 7: 38, 11: 16, 13: 32, 17: 8, 19: 218, 23: 103, 29: 1435, 31: 8664, 37: 1350, 41: 266, 43: 64, 61: 5886, 127: 109283, 257: 128, 65537: 32768}
+PASS first p-divisible states quoted in (F)
+PASS 13: divisible states 32, then 721
+PASS primes < 300 with 2^(m-1) < p^2 (least m): [3, 5, 11, 13, 17, 19, 41, 43, 113, 241, 257]
+PASS 29, 61: first divisible state beyond p^2
+== (2) (D3) uniform states modulo p^k ==
+PASS p^k = 9, u = 1: p^k P(c) = (1 - p^-2) sigma_1(p^v)/p^v = (1 + 1/p)(1 - p^(-v-1)) for v < k
+PASS    class 0 (mod p) has factor 1 - 1/p^2 + 1/p = 11/9
+PASS p^k = 9, u = 2: p^k P(c) = (1 - p^-2) sigma_1(p^v)/p^v = (1 + 1/p)(1 - p^(-v-1)) for v < k
+PASS    class 0 (mod p) has factor 1 - 1/p^2 + 1/p = 11/9
+PASS p^k = 25, u = 3: p^k P(c) = (1 - p^-2) sigma_1(p^v)/p^v = (1 + 1/p)(1 - p^(-v-1)) for v < k
+PASS    class 0 (mod p) has factor 1 - 1/p^2 + 1/p = 29/25
+PASS p^k = 27, u = 2: p^k P(c) = (1 - p^-2) sigma_1(p^v)/p^v = (1 + 1/p)(1 - p^(-v-1)) for v < k
+PASS    class 0 (mod p) has factor 1 - 1/p^2 + 1/p = 11/9
+PASS p^k = 49, u = 3: p^k P(c) = (1 - p^-2) sigma_1(p^v)/p^v = (1 + 1/p)(1 - p^(-v-1)) for v < k
+PASS    class 0 (mod p) has factor 1 - 1/p^2 + 1/p = 55/49
+PASS p = 3: factor at v = 0 is 1 - 1/p^2; class factor - factor(v = 1) = p^-3; factor(v >= 2) > class factor
+PASS p = 3: mean over v >= 1 = class factor, mean over v >= 0 = 1
+PASS p = 5: factor at v = 0 is 1 - 1/p^2; class factor - factor(v = 1) = p^-3; factor(v >= 2) > class factor
+PASS p = 5: mean over v >= 1 = class factor, mean over v >= 0 = 1
+PASS p = 7: factor at v = 0 is 1 - 1/p^2; class factor - factor(v = 1) = p^-3; factor(v >= 2) > class factor
+PASS p = 7: mean over v >= 1 = class factor, mean over v >= 0 = 1
+PASS p = 11: factor at v = 0 is 1 - 1/p^2; class factor - factor(v = 1) = p^-3; factor(v >= 2) > class factor
+PASS p = 11: mean over v >= 1 = class factor, mean over v >= 0 = 1
+   limits at 9: v = 0, 1, c = 0 (mod 9): 0.8889 1.1852 1.2963
+PASS (8/pi^2) sigma_1(n)/n: mean over odd N < 2^20 = 1.00000 (sheet 1), 0.99999 (sheet 0); minimum 8/pi^2
+== (3) (E) unitarity, bound, cell sums ==
+PASS T_k T_k^* = 2I for every odd k, j = 1..6
+PASS T_k T_k^* != 2I for every even k != 0, j = 1..6
+PASS |sum_{h < 2^n} e(k q(h)/2^j)| <= 2^((n+j+1)/2), odd k, j <= 5, n <= 16
+PASS q(h) = sum_i h_i (h_(i+1) + h_(i+2)) (mod 2), h < 2^16
+PASS ceil(H/2) = H_0 + H_1 (mod 2), H < 2^12
+PASS cell sums of the by-value proof: |sum| <= 2^(r/2) 2^((j'+1)/2) on 400 random cells (worst ratio 1.000)
+== (4) (E) mod 4: M, period 12, corank ==
+PASS M M^T = 2I
+PASS M^6 = 8J with J^2 = -I
+PASS M^12 = -64 I
+PASS characteristic polynomial lam^4 - 2 lam^3 + 2 lam^2 - 4 lam + 4: [1, -2, 2, -4, 4]
+PASS eigenvalues sqrt2 e(+-1/24), sqrt2 e(+-7/24)
+PASS factorisation (lam^2 - (1+sqrt3) lam + 2)(lam^2 + (sqrt3-1) lam + 2)
+PASS S_n, D_n by transfer = brute force for n <= 18
+PASS (D_0..D_11) = (1, 0, 2, 4, 0, 0, 8, 0, -16, 0, 0, -64)
+PASS (S_0..S_11) = (1, 2, 2, 0, 0, 0, -8, -16, -16, -32, -64, -64)
+PASS S_(n+12) = -64 S_n, D_(n+12) = -64 D_n for n <= 36
+PASS D_n = 0 exactly for n = 1, 4, 5, 7, 9, 10 (mod 12); S_n = 0 exactly for n = 3, 4, 5 (mod 12) (n <= 48)
+PASS D_18 = -512, D_20 = 1024, D_27 = 16384
+PASS corank of Q_n = 1, 0, 1, 2, 1, 0 for n = 1, 2, 3, 4, 5, 0 (mod 6), n <= 60
+PASS S_n, D_n are 0 or +-2^(n - rank/2), n <= 48
+== (5) census by value (X = 2^18 and 2^20) ==
+PASS X = 2^18: #T_0, #T_1 = (540939, 671731) (session and audit: (540939, 671731))
+PASS X = 2^20: #T_0, #T_1 = (2398262, 2995785) (session and audit: (2398262, 2995785))
+PASS    every N odd (sheet 0)
+   X = 2^18 sheet 0: max rel. dev. of the odd classes mod 4, 8, 16, 32: 0.00231 0.00248 0.00699 0.02705; larger word odd: 0.53516
+PASS    every N odd (sheet 1)
+   X = 2^18 sheet 1: max rel. dev. of the odd classes mod 4, 8, 16, 32: 0.00352 0.00364 0.00759 0.01201; larger word odd: 0.51520
+PASS    every N odd (sheet 0)
+   X = 2^20 sheet 0: max rel. dev. of the odd classes mod 4, 8, 16, 32: 0.00154 0.00341 0.00379 0.01178; larger word odd: 0.53458
+PASS    by value the larger state is not equidistributed mod 8 (shares of y = 1, 3, 5, 7: 0.2252 0.2574 0.2402 0.2772)
+PASS    every N odd (sheet 1)
+   X = 2^20 sheet 1: max rel. dev. of the odd classes mod 4, 8, 16, 32: 0.00111 0.00204 0.00259 0.00638; larger word odd: 0.51484
+PASS    by value the larger state is not equidistributed mod 8 (shares of y = 1, 3, 5, 7: 0.2391 0.2534 0.2460 0.2614)
+PASS    larger word odd at 2^18 (triples with h1 != h2): 0.53516, 0.51522 (audit a6: 0.53516, 0.51522)
+PASS    larger word odd at 2^20 (triples with h1 != h2): 0.53458, 0.51485 (audit a6: 0.53458, 0.51485)
+PASS kappa_0 = 0.1615389173, kappa_1 = 0.2125139092
+PASS kappa_0 = pi^2/12 + 2 Li2(-1/2) - Li2(-1/4), kappa_1 = Li2(-1/4) - Li2(-1/2)
+PASS g_bar = 0.7481056530; shares 0.43186124, 0.56813876; word pairs 0.19640777, 0.80359223
+PASS    s = 0: int F_s^odd = closed form (0.0855442509); int F_s = l_s - 2 l_(s+1) + l_(s+2)
+PASS    s = 1: int F_s^odd = closed form (0.0507251198); int F_s = l_s - 2 l_(s+1) + l_(s+2)
+PASS    s = 2: int F_s^odd = closed form (0.0279876072); int F_s = l_s - 2 l_(s+1) + l_(s+2)
+PASS    s = 3: int F_s^odd = closed form (0.0147624411); int F_s = l_s - 2 l_(s+1) + l_(s+2)
+PASS limits of 'larger word odd': 0.529558 (sheet 0), 0.511980 (sheet 1); quoted 0.5296 (0.52956 kappa_0), 0.5120 (0.51198 kappa_1)
+PASS boxes: |count - 2^(2n+1-j)| <= C 2^(3n/2), n = 6, 8, 10, j = 2, 3, 4 (worst ratio 0.168)
+== (6) (E) by-value proof: cut cells, block bound ==
+PASS cut cells (i = ceil(n/4) top and bottom digits) hold at most 6 * 2^(n-i) points on 300 random regions (worst 0.208 of the bound)
+PASS block bound: |#{N = c mod 2^j} - 2^(1-j) total| <= C 2^(3n/4), j = 2, 3, 4 (worst ratio 0.148)
+== (7) (A): identity, bounds, equality ==
+PASS (1), sum Rhat = 0, bound (2), 'excess over the mean of the others = pi1 + pi2 - p^-r + (p/(p-1)) Rhat(0)'
+PASS c != 0: |Rhat(c)| <= p^((r-1)/2) |D1 - U| |D2 - U| (largest ratio seen 1.000)
+   p = 2: constant of (2) divided by p^((r-1)/2) = (p-1)/sqrt(p) = 0.7071  (NOT an improvement: (2) is already smaller)
+   p = 3: constant of (2) divided by p^((r-1)/2) = (p-1)/sqrt(p) = 1.1547  (the c != 0 constant is an improvement)
+   p = 5: constant of (2) divided by p^((r-1)/2) = (p-1)/sqrt(p) = 1.7889  (the c != 0 constant is an improvement)
+   p = 7: constant of (2) divided by p^((r-1)/2) = (p-1)/sqrt(p) = 2.2678  (the c != 0 constant is an improvement)
+PASS equality in (2) at c = 0, r = 2 (F1 forms, p = 3, 5, 7): Rhat(0) = 2 t^2 (p-1)^2 = (p-1)|D1-U||D2-U|
+== (8) (C)/(D3) on the census ==
+PASS X = 2^18 sheet 0: a divisible smaller state forces the distinguished class (p, 15, 9): 0 violations
+PASS    (C2) p = 3: p max|R_small| = 0.02854 with h1 != h2 (audit a3: 0.02854), 0.02852 with the diagonal (session: 0.02852)
+PASS    (C2) p = 5: p max|R_small| = 0.00507 with h1 != h2 (audit a3: 0.00507), 0.00501 with the diagonal (session: 0.00501)
+PASS    (C2) p = 7: p max|R_small| = 0.15991 with h1 != h2 (audit a3: 0.15991), 0.15987 with the diagonal (session: 0.15987)
+   modulo 9: 9 * share for v = 0, 1, >= 2: measured 0.8279 1.2365 1.5596; first-order law 0.8285 1.2455 1.5380
+PASS    modulo 9 at 2^18: agrees with the audit's a4_moduli_26.out row k = 18
+PASS X = 2^18 sheet 1: a divisible smaller state forces the distinguished class (p, 15, 9): 0 violations
+PASS    (C2) p = 3: p max|R_small| = 0.04839 with h1 != h2 (audit a3: 0.04839), 0.04830 with the diagonal (session: 0.04830)
+PASS    (C2) p = 5: p max|R_small| = 0.00572 with h1 != h2 (audit a3: 0.00572), 0.00553 with the diagonal (session: 0.00553)
+PASS    (C2) p = 7: p max|R_small| = 0.10715 with h1 != h2 (audit a3: 0.10715), 0.10714 with the diagonal (session: 0.10714)
+   modulo 9: 9 * share for v = 0, 1, >= 2: measured 0.8104 1.2568 1.6238; first-order law 0.8149 1.2625 1.5854
+PASS    modulo 9 at 2^18: agrees with the audit's a4_moduli_26.out row k = 18
+PASS X = 2^20 sheet 0: a divisible smaller state forces the distinguished class (p, 15, 9): 0 violations
+PASS X = 2^20 sheet 1: a divisible smaller state forces the distinguished class (p, 15, 9): 0 violations
+ALL PASS

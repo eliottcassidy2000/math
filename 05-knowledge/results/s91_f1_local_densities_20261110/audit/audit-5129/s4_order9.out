@@ -1,0 +1,16 @@
+order-9 extension run finished [54.2s]
+labelled extensions: 1761280 ; isomorphism classes: 191536 (known 191536)
+strong classes: 178133 (known 178133)
+f(9) = min H over strong tournaments of order 9 = 75 ; classes attaining it: 3
+least H over ALL strong labelled extensions (no canonical form used): 75
+strong classes of order 9 with H <= 73: 0 ; with H <= 123: 95 ; max H at order 9: 3357
+ten least H of strong classes of order 9: [75, 75, 75, 81, 81, 81, 81, 81, 85, 85]
+distinct pairs (D, U) at order 9: 1273591 ; with D <= 73: 3239
+saved strong9_small.npy (816 strong classes of order 9 with H <= 225)
+order 9, pair (129, 144): 17 labelled hits, 1 rooted isomorphism classes
+order 9, pair (513, 576): 9 labelled hits, 1 rooted isomorphism classes
+order 9, pair (129, 288): 9 labelled hits, 1 rooted isomorphism classes
+order 9, pair (257, 288): 9 labelled hits, 1 rooted isomorphism classes
+order 9, pair (65, 72): 0 labelled hits, 0 rooted isomorphism classes
+order 9, pair (2049, 2304): 9 labelled hits, 1 rooted isomorphism classes
+elapsed 56.7s

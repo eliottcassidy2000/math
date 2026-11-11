@@ -129,6 +129,7 @@ def main():
     ok = True
     z = np.load(os.path.join(HERE, "reps_le8.npz"))
     root = defaultdict(set)      # h -> {U_C(y)}
+    ncls = defaultdict(int)      # h -> number of strong classes with H = h
     pi2 = defaultdict(set)       # h -> {Pi_2(C)}
     least = {}
     print("(1) strong tournaments: order, classes, strong classes, least H, distinct (H, Pi_2), distinct (H, U)")
@@ -142,6 +143,7 @@ def main():
         pairs_u = set()
         for row in st:
             h = int(row[0])
+            ncls[h] += 1
             pi2[h].add(int(row[1]))
             pairs_pi.add((h, int(row[1])))
             for y in range(n):
@@ -229,6 +231,8 @@ def main():
             diff = sorted(dl for dl in prim[D] if dl not in cm or cm[dl] > prim[D][dl])
             if diff:
                 missing[D] = len(diff)
+                print(f"    offset {D}: odd parts (with least exponent) not reached by a base of order <= 9: "
+                      f"{[(dl, prim[D][dl]) for dl in diff]}")
         print(f"(2) census of order <= 9: {sum(len(v) for v in cen.values())} pairs with D <= {DMAX}; "
               f"not in the product-law set: {len(bad)}; offsets where the product law has odd parts (or smaller "
               f"exponents) beyond order 9: {missing}")
@@ -254,6 +258,15 @@ def main():
     ok &= prim[3] == {3: 0}
     ok &= prim[5] == {1: 5, 3: 1, 5: 0, 7: 0, 9: 0}
     ok &= prim[17] == {5: 2, 7: 2, 9: 1, 11: 2, 17: 0, 21: 0, 31: 0, 33: 0, 55: 0, 61: 0, 69: 0}
+    # the complete lists, written to slope_lists_le73.txt
+    with open(os.path.join(HERE, "slope_lists_le73.txt"), "w", newline="\n") as fh:
+        fh.write("# one-vertex sources: for every attained offset D <= 73, the odd parts d of the slopes with the least\n"
+                 "# 2-exponent j (d:j means: d * 2^i is a slope of offset D, at some order of the base, iff i >= j).\n"
+                 "# Complete at every order (THM-5129 (A), (B)); written by source_supply.py.\n")
+        for D in sorted(prim):
+            fh.write(f"{D}: " + " ".join(f"{dl}:{j}" for dl, j in sorted(prim[D].items())) + "\n")
+    print(f"    complete lists for the {len(prim)} attained offsets <= {DMAX}: slope_lists_le73.txt "
+          f"({sum(len(v) for v in prim.values())} odd parts in all)")
     # (4) two-step / near-join values below 3 * 75 = 225
     NMAX = 3 * (DMAX + 2)
     r = {}
@@ -293,6 +306,31 @@ def main():
     ratio = [sum(1 for u in range(h, (3 * h) // 2 + 1) if is_slope(h, u)) / ((3 * h) // 2 - h + 1)
              for h in sorted(prim) if h >= 37]
     print(f"    mean covered fraction for 37 <= h <= 73: {np.mean(ratio):.3f} (min {min(ratio):.3f}, max {max(ratio):.3f})")
+    # (6) strong classes per offset and their correlation with the covered share
+    share = {}
+    for h in sorted(prim):
+        hi = (3 * h) // 2
+        share[h] = sum(1 for u in range(h, hi + 1) if is_slope(h, u)) / (hi - h + 1)
+    print("(6) h: number of strong isomorphism classes with H = h (orders 3..8; complete for h <= 73)")
+    line = "    "
+    for h in sorted(prim):
+        c = f"{h}:{ncls.get(h, 0)} "
+        if len(line) + len(c) > 118:
+            print(line)
+            line = "    "
+        line += c
+    print(line)
+    for lo in (23, 15, 3):          # h = 1 (transitive, no strong class) is left out
+        hs = [h for h in sorted(prim) if h >= lo]
+        cc = np.corrcoef([ncls.get(h, 0) for h in hs], [share[h] for h in hs])[0, 1]
+        print(f"    Pearson correlation of the covered share of [h, 3h/2] with the number of strong classes, "
+              f"{lo} <= h <= 73 ({len(hs)} attained offsets): {cc:.2f}")
+    poorest = sorted((share[h], h) for h in prim if h >= 23)[:6]
+    print("    poorest offsets of [23, 73] (share, h, strong classes): "
+          + ", ".join(f"({sh:.3f}, {h}, {ncls.get(h, 0)})" for sh, h in poorest))
+    two = [h for h in sorted(prim) if ncls.get(h, 0) == 2]
+    print(f"    offsets <= 73 with exactly two strong classes: {two}")
+    ok &= two == [9, 17, 19, 35, 39, 47, 63]
     print("ALL CHECKS PASSED" if ok else "CHECK FAILED")
     sys.exit(0 if ok else 1)
 

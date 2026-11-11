@@ -1,0 +1,3 @@
+sheet 0 limit share of odd larger word: 0.5295581545687221648811866
+sheet 1 limit share of odd larger word: 0.5119797164802475339033676
+fit sheet 0: a,b = [0.52972043 0.06738756]  sheet 1: [0.51180876 0.04250747]

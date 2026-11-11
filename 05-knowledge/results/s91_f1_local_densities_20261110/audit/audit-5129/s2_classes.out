@@ -1,0 +1,18 @@
+order 2: 2 candidates -> 1 classes (known 1)  [1.4s]
+order 3: 4 candidates -> 2 classes (known 2)  [1.4s]
+order 4: 16 candidates -> 4 classes (known 4)  [1.4s]
+order 5: 64 candidates -> 12 classes (known 12)  [1.4s]
+order 6: 384 candidates -> 56 classes (known 56)  [1.4s]
+order 7: 3584 candidates -> 456 classes (known 456)  [1.4s]
+order 8: 58368 candidates -> 6880 classes (known 6880)  [1.4s]
+order 1: classes 1, strong 1 (known 1), f(n) = 1, #strong with H = f: 1, distinct (H,U) 1, distinct (H,Pi_2) 1, max H 1
+order 2: classes 1, strong 0 (known 0), f(n) = None, #strong with H = f: 0, distinct (H,U) 0, distinct (H,Pi_2) 0, max H 1
+order 3: classes 2, strong 1 (known 1), f(n) = 3, #strong with H = f: 1, distinct (H,U) 1, distinct (H,Pi_2) 1, max H 3
+order 4: classes 4, strong 1 (known 1), f(n) = 5, #strong with H = f: 1, distinct (H,U) 4, distinct (H,Pi_2) 1, max H 5
+order 5: classes 12, strong 6 (known 6), f(n) = 9, #strong with H = f: 2, distinct (H,U) 20, distinct (H,Pi_2) 5, max H 15
+order 6: classes 56, strong 35 (known 35), f(n) = 15, #strong with H = f: 2, distinct (H,U) 156, distinct (H,Pi_2) 16, max H 45
+order 7: classes 456, strong 353 (known 353), f(n) = 25, #strong with H = f: 1, distinct (H,U) 1984, distinct (H,Pi_2) 131, max H 189
+order 8: classes 6880, strong 6008 (known 6008), f(n) = 45, #strong with H = f: 5, distinct (H,U) 38935, distinct (H,Pi_2) 1567, max H 661
+rooted (class, vertex) pairs of orders 1..8: 58653
+violations of E = U_odd - U_even or U >= D over these roots: 0
+saved classes_le8.npz  [2.2s]

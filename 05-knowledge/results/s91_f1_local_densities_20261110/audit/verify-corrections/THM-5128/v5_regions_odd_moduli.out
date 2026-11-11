@@ -1,0 +1,7 @@
+PASS m =  9 (rate 0.8660, theta_m = 0.1425): max |dev| / 2^(n(1 - theta_m)) for n = 12, 14, 16, 18, 20: 0.024 0.011 0.012 0.007 0.010
+PASS m = 15 (rate 0.8922, theta_m = 0.1192): max |dev| / 2^(n(1 - theta_m)) for n = 12, 14, 16, 18, 20: 0.011 0.008 0.007 0.006 0.007
+PASS m = 21 (rate 0.9320, theta_m = 0.0790): max |dev| / 2^(n(1 - theta_m)) for n = 12, 14, 16, 18, 20: 0.006 0.004 0.003 0.003 0.002
+PASS m = 27 (rate 0.8660, theta_m = 0.1425): max |dev| / 2^(n(1 - theta_m)) for n = 12, 14, 16, 18, 20: 0.008 0.005 0.002 0.002 0.001
+PASS m = 15: max over d | m and n = 10..20 of |sum over B_n of chi_d w_0| 2^(theta_m n) = 0.0110
+PASS m =  9: max over d | m and n = 10..20 of |sum over B_n of chi_d w_0| 2^(theta_m n) = 0.0143
+ALL PASS

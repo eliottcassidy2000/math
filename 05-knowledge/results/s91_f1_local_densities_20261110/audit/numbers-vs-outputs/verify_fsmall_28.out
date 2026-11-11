@@ -1,0 +1,16 @@
+X = 2^26: triples sheet 0: 198575546, sheet 1: 251044267
+   p =  3: sheet 0: F_small p^2 = 1.29409, (F_small - 1/p^2) #T/(2X) = +0.048346;  sheet 1: F_small p^2 = 1.33425, (F_small - 1/p^2) #T/(2X) = +0.069466
+   p =  5: sheet 0: F_small p^2 = 1.51056, (F_small - 1/p^2) #T/(2X) = +0.030215;  sheet 1: F_small p^2 = 1.58158, (F_small - 1/p^2) #T/(2X) = +0.043512
+   p =  7: sheet 0: F_small p^2 = 0.75167, (F_small - 1/p^2) #T/(2X) = -0.007498;  sheet 1: F_small p^2 = 0.62939, (F_small - 1/p^2) #T/(2X) = -0.014147
+   p = 11: sheet 0: F_small p^2 = 1.96287, (F_small - 1/p^2) #T/(2X) = +0.011773;  sheet 1: F_small p^2 = 1.99037, (F_small - 1/p^2) #T/(2X) = +0.015309
+   p = 13: sheet 0: F_small p^2 = 0.60192, (F_small - 1/p^2) #T/(2X) = -0.003485;  sheet 1: F_small p^2 = 0.62053, (F_small - 1/p^2) #T/(2X) = -0.004200
+   p = 17: sheet 0: F_small p^2 = 3.70393, (F_small - 1/p^2) #T/(2X) = +0.013842;  sheet 1: F_small p^2 = 4.05744, (F_small - 1/p^2) #T/(2X) = +0.019788
+   p = 31: sheet 0: F_small p^2 = 0.00000, (F_small - 1/p^2) #T/(2X) = -0.001540;  sheet 1: F_small p^2 = 0.00000, (F_small - 1/p^2) #T/(2X) = -0.001946
+X = 2^28: triples sheet 0: 854415478, sheet 1: 1083261684
+   p =  3: sheet 0: F_small p^2 = 1.28377, (F_small - 1/p^2) #T/(2X) = +0.050179;  sheet 1: F_small p^2 = 1.31233, (F_small - 1/p^2) #T/(2X) = +0.070023
+   p =  5: sheet 0: F_small p^2 = 1.47167, (F_small - 1/p^2) #T/(2X) = +0.030026;  sheet 1: F_small p^2 = 1.53785, (F_small - 1/p^2) #T/(2X) = +0.043409
+   p =  7: sheet 0: F_small p^2 = 0.85976, (F_small - 1/p^2) #T/(2X) = -0.004555;  sheet 1: F_small p^2 = 0.74642, (F_small - 1/p^2) #T/(2X) = -0.010442
+   p = 11: sheet 0: F_small p^2 = 1.89432, (F_small - 1/p^2) #T/(2X) = +0.011763;  sheet 1: F_small p^2 = 1.93128, (F_small - 1/p^2) #T/(2X) = +0.015529
+   p = 13: sheet 0: F_small p^2 = 0.62495, (F_small - 1/p^2) #T/(2X) = -0.003532;  sheet 1: F_small p^2 = 0.62879, (F_small - 1/p^2) #T/(2X) = -0.004432
+   p = 17: sheet 0: F_small p^2 = 3.50942, (F_small - 1/p^2) #T/(2X) = +0.013819;  sheet 1: F_small p^2 = 3.82267, (F_small - 1/p^2) #T/(2X) = +0.019707
+   p = 31: sheet 0: F_small p^2 = 0.00000, (F_small - 1/p^2) #T/(2X) = -0.001656;  sheet 1: F_small p^2 = 0.00000, (F_small - 1/p^2) #T/(2X) = -0.002100

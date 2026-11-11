@@ -1,0 +1,38 @@
+# representation counts for odd N < 2^27; saturated increments: 0; total triples 934039332 (sheet 0 412179155, sheet 1 521860177)
+== small values (README section 3 table: r_F1 = 1, 3, 0, 0, 4, 5, 0 for N = 3, 5, 7, 13, 19, 27, 1039) ==
+   N =     1: r = 1 (sheet 0: 1, sheet 1: 0)
+   N =     3: r = 1 (sheet 0: 0, sheet 1: 1)
+   N =     5: r = 3 (sheet 0: 2, sheet 1: 1)
+   N =     7: r = 0 (sheet 0: 0, sheet 1: 0)
+   N =     9: r = 5 (sheet 0: 2, sheet 1: 3)
+   N =    11: r = 2 (sheet 0: 2, sheet 1: 0)
+   N =    13: r = 0 (sheet 0: 0, sheet 1: 0)
+   N =    19: r = 4 (sheet 0: 2, sheet 1: 2)
+   N =    21: r = 0 (sheet 0: 0, sheet 1: 0)
+   N =    27: r = 5 (sheet 0: 0, sheet 1: 5)
+   N =  1039: r = 0 (sheet 0: 0, sheet 1: 0)
+   odd N in [1025, 2049): 512 numbers, F1 misses: 65   (README: 65 of 512)
+   least odd N missed by F1: [7, 13, 21, 41, 43, 55, 67, 77, 83, 105, 109, 131]
+
+== miss rates and moments on windows [2^a, 2^b) ==
+ [2^18, 2^21): odd N 917504, misses 12668 = 1.381 %; mean r = 11.0291 (g_bar * mean ln N = 10.3636, difference +0.6655); Var/mean^2: all 0.2749, sheet 0 0.5639, sheet 1 0.5066; Var/mean: all 3.031, sheet 0 2.760, sheet 1 3.108
+      misses by N mod 3 (0, 1, 2): [2601, 7057, 3010]; rates 0.850 %, 2.307 %, 0.984 %; rate(1) / mean rate(0, 2) = 2.52
+      mean r by N mod 3 (0, 1, 2): 12.1176, 9.4846, 11.4852
+ [2^21, 2^23): odd N 3145728, misses 25878 = 0.823 %; mean r = 12.1898 (g_bar * mean ln N = 11.5242, difference +0.6656); Var/mean^2: all 0.2449, sheet 0 0.5139, sheet 1 0.4497; Var/mean: all 2.985, sheet 0 2.773, sheet 1 3.056
+      misses by N mod 3 (0, 1, 2): [4949, 15642, 5287]; rates 0.472 %, 1.492 %, 0.504 %; rate(1) / mean rate(0, 2) = 3.06
+      mean r by N mod 3 (0, 1, 2): 13.3099, 10.3343, 12.9251
+ [2^23, 2^24): odd N 4194304, misses 25815 = 0.615 %; mean r = 12.8811 (g_bar * mean ln N = 12.2156, difference +0.6655); Var/mean^2: all 0.2313, sheet 0 0.4895, sheet 1 0.4259; Var/mean: all 2.980, sheet 0 2.787, sheet 1 3.061
+      misses by N mod 3 (0, 1, 2): [4538, 16268, 5009]; rates 0.325 %, 1.164 %, 0.358 %; rate(1) / mean rate(0, 2) = 3.41
+      mean r by N mod 3 (0, 1, 2): 14.1511, 10.8291, 13.6631
+ [2^24, 2^27): odd N 58720256, misses 203869 = 0.347 %; mean r = 14.1405 (g_bar * mean ln N = 13.4749, difference +0.6656); Var/mean^2: all 0.2085, sheet 0 0.4459, sheet 1 0.3900; Var/mean: all 2.948, sheet 0 2.782, sheet 1 3.082
+      misses by N mod 3 (0, 1, 2): [31504, 132201, 40164]; rates 0.161 %, 0.675 %, 0.205 %; rate(1) / mean rate(0, 2) = 3.69
+      mean r by N mod 3 (0, 1, 2): 15.6882, 11.9232, 14.8101
+ [2^24, 2^25): odd N 8388608, misses 40446 = 0.482 %; mean r = 13.3997 (g_bar * mean ln N = 12.7341, difference +0.6656); Var/mean^2: all 0.2209, sheet 0 0.4711, sheet 1 0.4096; Var/mean: all 2.960, sheet 0 2.788, sheet 1 3.064
+      misses by N mod 3 (0, 1, 2): [6694, 25823, 7929]; rates 0.239 %, 0.924 %, 0.284 %; rate(1) / mean rate(0, 2) = 3.53
+      mean r by N mod 3 (0, 1, 2): 14.7960, 11.2499, 14.1533
+ [2^25, 2^26): odd N 16777216, misses 63546 = 0.379 %; mean r = 13.9183 (g_bar * mean ln N = 13.2527, difference +0.6656); Var/mean^2: all 0.2119, sheet 0 0.4533, sheet 1 0.3957; Var/mean: all 2.949, sheet 0 2.784, sheet 1 3.077
+      misses by N mod 3 (0, 1, 2): [9833, 41429, 12284]; rates 0.176 %, 0.741 %, 0.220 %; rate(1) / mean rate(0, 2) = 3.75
+      mean r by N mod 3 (0, 1, 2): 15.4356, 11.7051, 14.6141
+ [2^26, 2^27): odd N 33554432, misses 99877 = 0.298 %; mean r = 14.4368 (g_bar * mean ln N = 13.7712, difference +0.6656); Var/mean^2: all 0.2028, sheet 0 0.4354, sheet 1 0.3814; Var/mean: all 2.927, sheet 0 2.772, sheet 1 3.078
+      misses by N mod 3 (0, 1, 2): [14977, 64949, 19951]; rates 0.134 %, 0.581 %, 0.178 %; rate(1) / mean rate(0, 2) = 3.72
+      mean r by N mod 3 (0, 1, 2): 16.0376, 12.2005, 15.0723

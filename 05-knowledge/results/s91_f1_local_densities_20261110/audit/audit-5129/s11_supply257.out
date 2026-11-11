@@ -1,0 +1,26 @@
+odd numbers <= 257 that are not path counts: [7, 21]
+
+== (B') ==
+offset 129: 177 odd parts; with j <= s: 177; least exponent of d = 9: 4; dyadic slope: None; slopes in [h, 3h/2]: 49 of 65 (0.754)
+offset 257: 359 odd parts; with j <= s: 359; least exponent of d = 9: 5; dyadic slope: None; slopes in [h, 3h/2]: 93 of 129 (0.721)
+numbers of odd parts at 3, 5, 9, 17, 33, 65, 129, 257: [1, 5, 8, 11, 34, 66, 177, 359]
+least exponents of d = 9 at levels 2..8: [0, 0, 1, 2, 5, 4, 5]
+(129, 144) slope: True ; (129, 72): False ; (257, 288): True ; (257, 144): False
+least order of (129,144): 9 ; (129,288): 8 ; (257,288): 8
+
+== HYP-9661 (A) shares at h = 17, 33, 65, 129, 257 ==
+h = 17: [h, 9h/8]: 0.67 ; [h, 2h): 0.41 ; [2h, 4h): 0.29
+h = 33: [h, 9h/8]: 0.80 ; [h, 2h): 0.67 ; [2h, 4h): 0.44
+h = 65: [h, 9h/8]: 0.78 ; [h, 2h): 0.57 ; [2h, 4h): 0.38
+h = 129: [h, 9h/8]: 0.82 ; [h, 2h): 0.66 ; [2h, 4h): 0.50
+h = 257: [h, 9h/8]: 0.85 ; [h, 2h): 0.65 ; [2h, 4h): 0.48
+
+== exact r(N), odd N in [3, 773] (offsets D <= N/3 <= 257) ==
+r(N) = 0 exactly at: [7, 11, 13, 21, 47, 67]
+r_10 > exact r anywhere: False ; r_10 < exact r at 9 values (least [545]) ; r_9 < exact r at 104 values (least [319])
+[129, 225): exact r: min 5 (N = 131), mean 8.52, median 8.5, mean share r/(N/6) 0.2931 ; r_10: min 5, mean 8.52 ; min of 64 r/N: 1.722
+[128, 256): exact r: min 5 (N = 131), mean 9.44, median 9.0, mean share r/(N/6) 0.2958 ; r_10: min 5, mean 9.44 ; min of 64 r/N: 1.662
+[256, 512): exact r: min 7 (N = 259), mean 21.57, median 22.0, mean share r/(N/6) 0.3345 ; r_10: min 7, mean 21.57 ; min of 64 r/N: 1.730
+[512, 774): exact r: min 24 (N = 521), mean 39.63, median 40.0, mean share r/(N/6) 0.3688 ; r_10: min 24, mean 39.56 ; min of 64 r/N: 2.771
+total number of (offset, odd part) pairs, D <= 257: 20775
+offsets <= 257 with a dyadic slope: 76 of 127 attained ; <= 73: 16

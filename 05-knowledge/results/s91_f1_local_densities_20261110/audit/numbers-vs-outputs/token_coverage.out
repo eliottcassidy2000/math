@@ -1,0 +1,15 @@
+== THM-5129.md: 55 decimal tokens, 0 not matched; 60 integer tokens (>= 3 digits), 13 not matched
+   decimals not matched (line, token): []
+   integers not matched (line, token): [(5, '2026'), (13, '382687'), (25, '2026'), (97, '2006'), (97, '1972'), (136, '382687'), (190, '32767'), (190, '382,687'), (209, '444,273,258'), (209, '6,268,286,319,382'), (210, '36,129,135,142,157,190'), (211, '402,360'), (211, '3,261,270,285,317,382')]
+== HYP-9660.md: 73 decimal tokens, 7 not matched; 25 integer tokens (>= 3 digits), 2 not matched
+   decimals not matched (line, token): [(3, '1.60718'), (36, '1.60718'), (58, '0.91374'), (62, '0.8690'), (62, '0.8482'), (62, '0.8503'), (62, '0.9137')]
+   integers not matched (line, token): [(5, '2026'), (14, '2026')]
+== HYP-9661.md: 12 decimal tokens, 0 not matched; 17 integer tokens (>= 3 digits), 3 not matched
+   decimals not matched (line, token): []
+   integers not matched (line, token): [(5, '2026'), (14, '2026'), (42, '382,688')]
+== THM-5128.md: 134 decimal tokens, 4 not matched; 36 integer tokens (>= 3 digits), 2 not matched
+   decimals not matched (line, token): [(129, '0.1615389173'), (130, '0.2125139092'), (186, '+0.3284'), (186, '+0.1705')]
+   integers not matched (line, token): [(5, '2026'), (28, '2026')]
+== README.md: 103 decimal tokens, 4 not matched; 54 integer tokens (>= 3 digits), 3 not matched
+   decimals not matched (line, token): [(69, '+0.3284'), (71, '+0.1705'), (166, '2607.28813'), (178, '2608.09983')]
+   integers not matched (line, token): [(102, '2026'), (190, '2026'), (298, '255255')]

@@ -1,0 +1,25 @@
+README table p = 3: ok
+README table p = 5: ok
+README table p = 7: ok
+README table p = 11: ok
+README table p = 13: ok
+README table p = 17: ok
+README table p = 19: ok
+README table p = 29: generic limit 0.034 vs p/(p^2-1) = 0.034524
+README table p = 31: ok
+README table p = 43: ok
+README table p = 257: ok
+README table p = 65537: ok
+rows: 12 mismatches: 1
+THM-5128 (G) p = 5: ok
+THM-5128 (G) p = 11: ok
+THM-5128 (G) p = 17: ok
+THM-5128 (G) p = 19: ok
+THM-5128 (G) p = 29: ok
+THM-5128 (G) p = 43: ok
+THM-5128 (G) p = 257: ok
+THM-5128 (G) p = 2731: ok
+THM-5128 (G) p = 65537: ok
+THM-5128 (G) p = 3: ok
+THM-5128 (G) p = 7: ok
+items: 11 mismatches: 0

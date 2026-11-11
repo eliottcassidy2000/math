@@ -1,0 +1,18 @@
+== (B3), h < 2^24 ==
+   violations of 0 <= q <= h/2: 0;  max over h of |rho - (1 - phi/2)| (2h+1)/n = 0.7500  (claim: < 1)
+== (E), h < 2^n, n <= 27 ==
+   q(h) = sum_i h_i (h_(i+1) + h_(i+2)) (mod 2): mismatches for 1 <= h < 2^27: 0
+   n:         1       2       3       4       5       6       7       8       9      10      11      12      13      14      15      16      17      18      19      20      21      22      23      24      25      26      27
+   D_n:       0       2       4       0       0       8       0     -16       0       0     -64     -64       0    -128    -256       0       0    -512       0    1024       0       0    4096    4096       0    8192   16384
+   S_n:       2       2       0       0       0      -8     -16     -16     -32     -64     -64     -64    -128    -128       0       0       0     512    1024    1024    2048    4096    4096    4096    8192    8192       0
+   D_n = 0 exactly for n in [1, 4, 5, 7, 9, 10, 13, 16, 17, 19, 21, 22, 25];  n mod 12: [1, 4, 5, 7, 9, 10]   (claim: n = 1, 4, 5, 7, 9, 10 mod 12)
+   residues mod 12 with D_n != 0: [0, 2, 3, 6, 8, 11]
+   D_18 = -512  (claimed -512)
+   D_20 = 1024  (claimed 1024)
+   D_27 = 16384  (claimed 16384)
+   corank of the band matrix B_n over F_2, n = 1..48: 1 0 1 2 1 0 1 0 1 2 1 0 1 0 1 2 1 0 1 0 1 2 1 0 1 0 1 2 1 0 1 0 1 2 1 0 1 0 1 2 1 0 1 0 1 2 1 0
+   pattern 1, 0, 1, 2, 1, 0 for n = 1, 2, 3, 4, 5, 0 (mod 6): True
+   S_n is 0 or +-2^(n - rank/2) for n <= 27: True
+   D_n is 0 or +-2^(n - rank/2) for n <= 27: True
+   max |T_k T_k^* - 2I| over j <= 6, odd k: 4.61e-14
+   max over j <= 6, odd k, n <= 27 of |sum_(h < 2^n) e(k q(h)/2^j)| / 2^((n+j+1)/2) = 1.0000  (claim: <= 1)

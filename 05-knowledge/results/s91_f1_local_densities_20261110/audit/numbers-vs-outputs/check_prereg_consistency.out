@@ -1,0 +1,16 @@
+json keys: ['first_divisible_state', 'predicted_triples_per_odd_N', 'predictions', 'rules', 'script', 'tests', 'window']
+window: odd N in [2^24, 2^27) | predicted triples per odd N: {'sheet0': 6.281897804739247, 'sheet1': 7.859772915881954}
+primes in json: 46  in predictions.out: 46  in the run output: 46
+predictions: run output vs json vs predictions.out, mismatches: 0
+tests in the json: {'A_total_mass': 3, 'B_weights': 18, 'C_divisible_fraction': 68, 'D_excess_first_order': 64, 'E_excess_slow_primes': 10, 'F_controls': 18, 'G_nondivisible_deficiency': 52, 'H_signs': 46}
+items per test (total, re-checked here from the printed measured columns): {'A_total_mass': (3, 0), 'B_weights': (18, 0), 'C_divisible_fraction': (68, 68), 'D_excess_first_order': (64, 64), 'E_excess_slow_primes': (10, 10), 'F_controls': (18, 18), 'G_nondivisible_deficiency': (52, 52), 'H_signs': (46, 46)}
+total items: 279  failures among the re-checked items: []
+tightest items (|value - centre| / half-width):
+   0.658  H_signs  class:37:1:E  value 0.00803 in [-0.05000, 0.02000]
+   0.630  H_signs  class:37:0:E  value 0.00706 in [-0.05000, 0.02000]
+   0.573  H_signs  class:29:0:E  value 0.00507 in [-0.05000, 0.02000]
+   0.569  H_signs  class:67:0:E  value 0.00491 in [-0.05000, 0.02000]
+   0.546  H_signs  class:31:0:E  value 0.00411 in [-0.05000, 0.02000]
+   0.514  H_signs  class:67:1:E  value 0.00299 in [-0.05000, 0.02000]
+   0.496  H_signs  class:71:1:E  value 0.00235 in [-0.05000, 0.02000]
+   0.494  H_signs  class:71:0:E  value 0.00229 in [-0.05000, 0.02000]

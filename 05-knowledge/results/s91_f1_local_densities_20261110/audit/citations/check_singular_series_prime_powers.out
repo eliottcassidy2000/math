@@ -1,0 +1,29 @@
+Part 1: exact law of a1 a2 + u b1 b2 modulo p^k for uniform states
+  p^k = 3^2, u = 1: m * P(c) by v_p(c): {'0': ['35/27'], 0: ['8/9'], 1: ['32/27']}
+     (i) uniform inside the class mod p: False   (ii) determinant-form density for c != 0: True
+     mass of the class 0 mod p, times p: 11/9  (= 1 - 1/p^2 + 1/p = 11/9)
+  p^k = 3^2, u = 2: m * P(c) by v_p(c): {'0': ['35/27'], 0: ['8/9'], 1: ['32/27']}
+     (i) uniform inside the class mod p: False   (ii) determinant-form density for c != 0: True
+     mass of the class 0 mod p, times p: 11/9  (= 1 - 1/p^2 + 1/p = 11/9)
+  p^k = 3^3, u = 1: m * P(c) by v_p(c): {'0': ['107/81'], 0: ['8/9'], 1: ['32/27'], 2: ['104/81']}
+     (i) uniform inside the class mod p: False   (ii) determinant-form density for c != 0: True
+     mass of the class 0 mod p, times p: 11/9  (= 1 - 1/p^2 + 1/p = 11/9)
+  p^k = 5^2, u = 1: m * P(c) by v_p(c): {'0': ['149/125'], 0: ['24/25'], 1: ['144/125']}
+     (i) uniform inside the class mod p: False   (ii) determinant-form density for c != 0: True
+     mass of the class 0 mod p, times p: 29/25  (= 1 - 1/p^2 + 1/p = 29/25)
+  p^k = 5^2, u = 2: m * P(c) by v_p(c): {'0': ['149/125'], 0: ['24/25'], 1: ['144/125']}
+     (i) uniform inside the class mod p: False   (ii) determinant-form density for c != 0: True
+     mass of the class 0 mod p, times p: 29/25  (= 1 - 1/p^2 + 1/p = 29/25)
+  p^k = 7^2, u = 3: m * P(c) by v_p(c): {'0': ['391/343'], 0: ['48/49'], 1: ['384/343']}
+     (i) uniform inside the class mod p: False   (ii) determinant-form density for c != 0: True
+     mass of the class 0 mod p, times p: 55/49  (= 1 - 1/p^2 + 1/p = 55/49)
+
+Part 2: F1 triples with N <= 2^22 (ordered triples; M = N + [s = 0])
+  sheet 0: 10532579 triples; share of 3 | M: 0.43016 (generic limit (1 - 1/9 + 1/3)/3 = 0.40741)
+     inside the class 3 | M: shares of M = 0, 3, 6 (mod 9): 0.37330 0.31333 0.31337   (uniform: 0.33333; binomial s.e. 0.00022)
+     determinant-form generic limit: 0.35354 0.32323 0.32323
+     classes prime to 3 (mod 9), shares: 0.09284 0.09814 0.09115 0.09739 0.09361 0.09671
+  sheet 1: 13218857 triples; share of 3 | M: 0.43579 (generic limit (1 - 1/9 + 1/3)/3 = 0.40741)
+     inside the class 3 | M: shares of M = 0, 3, 6 (mod 9): 0.37673 0.31478 0.30850   (uniform: 0.33333; binomial s.e. 0.00020)
+     determinant-form generic limit: 0.35354 0.32323 0.32323
+     classes prime to 3 (mod 9), shares: 0.09322 0.09563 0.09199 0.09546 0.09361 0.09430

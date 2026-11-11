@@ -1,0 +1,129 @@
+== rates max_{k != 0} rho(T_k)/2 (operator built from the definition) ==
+m  rate(mine)   claimed   diff      argmax k   second modulus/2 at argmax   rate at k=0 (control, =1)   theta_m/2
+   3 0.866025   0.8660   +0.00003      1   0.731195   1.000000   0.0733
+   5 0.741760   0.7418   -0.00004      4   0.741760   1.000000   0.1157
+   7 0.932039   0.9320   +0.00004      5   0.802181   1.000000   0.0422
+  11 0.858710   0.8587   +0.00001      4   0.770402   1.000000   0.0763
+  13 0.827243   0.8272   +0.00004      7   0.778877   1.000000   0.0884
+  17 0.828856   0.8289   -0.00004      2   0.804436   1.000000   0.0878
+  19 0.805253   0.8053   -0.00005      4   0.775378   1.000000   0.0962
+  23 0.793054   0.7931   -0.00005     13   0.723484   1.000000   0.1002
+  29 0.789449   0.7894   +0.00005      6   0.765147   1.000000   0.1014
+  31 0.900219   0.9002   +0.00002     29   0.850482   1.000000   0.0582
+  43 0.834248   0.8342   +0.00005     23   0.790573   1.000000   0.0858
+  73 0.851574   0.8516   -0.00003     16   0.788023   1.000000   0.0792
+ 127 0.875417   0.8754   +0.00002      2   0.849512   1.000000   0.0694
+
+== all primes up to 89 (claim: the primes not listed are between 0.776 and 0.806) ==
+  m =   3  rate = 0.866025  (listed)
+  m =   5  rate = 0.741760  (listed)
+  m =   7  rate = 0.932039  (listed)
+  m =  11  rate = 0.858710  (listed)
+  m =  13  rate = 0.827243  (listed)
+  m =  17  rate = 0.828856  (listed)
+  m =  19  rate = 0.805253  (listed)
+  m =  23  rate = 0.793054  (listed)
+  m =  29  rate = 0.789449  (other)
+  m =  31  rate = 0.900219  (listed)
+  m =  37  rate = 0.805970  (other)
+  m =  41  rate = 0.796193  (other)
+  m =  43  rate = 0.834248  (listed)
+  m =  47  rate = 0.791018  (other)
+  m =  53  rate = 0.796044  (other)
+  m =  59  rate = 0.791717  (other)
+  m =  61  rate = 0.780858  (other)
+  m =  67  rate = 0.790669  (other)
+  m =  71  rate = 0.785277  (other)
+  m =  73  rate = 0.851574  (listed)
+  m =  79  rate = 0.769084  (other)
+  m =  83  rate = 0.786546  (other)
+  m =  89  rate = 0.776578  (other)
+  other primes up to 89: min = 0.769084 (m = 79), max = 0.805970 (m = 37)
+
+== extra: odd composite moduli mentioned in README section 3 ==
+  m =   9  rate = 0.866025  argmax k = 6
+  m =  15  rate = 0.892191  argmax k = 2
+  m =  21  rate = 0.932039  argmax k = 6
+  m =  27  rate = 0.866025  argmax k = 18
+  m =  63  rate = 0.932039  argmax k = 18
+
+== brute force, h < 2^n, n <= 24 ==
+m = 3: identity sum = e^T T_k^n v_l, max relative error over all k, l, n <= 24: 3.58e-09
+   spectral rate max_k = 0.866025 (k = 1); brute-force fitted decay (l2 over l, n in [14,24]) max_k = 0.865576
+     k =  1: rho(T_k)/2 = 0.866025   fitted (max over l) = 0.861926   fitted (l2 over l) = 0.865576   (|S_n|_2/2^n)^(1/n) at n = 24: 0.860856
+     k =  2: rho(T_k)/2 = 0.866025   fitted (max over l) = 0.861926   fitted (l2 over l) = 0.865576   (|S_n|_2/2^n)^(1/n) at n = 24: 0.860856
+   x,y-character sums agree with the (q,h) sums (4 pairs (k,l), n = 24): max rel err 1.35e-14
+   largest non-trivial |S_n(k,l)|/2^n at n = 24: 1.586e-02 at (k,l) = (1,1);  rate^n = 3.168e-02
+   k = 0: max_l!=0 |S_n(0,l)| at n = 24: 1.000 (claimed bounded by m/2 = 1.5)
+m = 5: identity sum = e^T T_k^n v_l, max relative error over all k, l, n <= 24: 3.19e-09
+   spectral rate max_k = 0.741760 (k = 4); brute-force fitted decay (l2 over l, n in [14,24]) max_k = 0.728330
+     k =  1: rho(T_k)/2 = 0.741760   fitted (max over l) = 0.716767   fitted (l2 over l) = 0.728330   (|S_n|_2/2^n)^(1/n) at n = 24: 0.751653
+     k =  2: rho(T_k)/2 = 0.634820   fitted (max over l) = 0.637450   fitted (l2 over l) = 0.626124   (|S_n|_2/2^n)^(1/n) at n = 24: 0.644650
+     k =  3: rho(T_k)/2 = 0.634820   fitted (max over l) = 0.637450   fitted (l2 over l) = 0.626124   (|S_n|_2/2^n)^(1/n) at n = 24: 0.644650
+     k =  4: rho(T_k)/2 = 0.741760   fitted (max over l) = 0.716767   fitted (l2 over l) = 0.728330   (|S_n|_2/2^n)^(1/n) at n = 24: 0.751653
+   x,y-character sums agree with the (q,h) sums (4 pairs (k,l), n = 24): max rel err 6.36e-12
+   largest non-trivial |S_n(k,l)|/2^n at n = 24: 6.705e-04 at (k,l) = (1,2);  rate^n = 7.697e-04
+   k = 0: max_l!=0 |S_n(0,l)| at n = 24: 1.000 (claimed bounded by m/2 = 2.5)
+m = 7: identity sum = e^T T_k^n v_l, max relative error over all k, l, n <= 24: 1.27e-08
+   spectral rate max_k = 0.932039 (k = 5); brute-force fitted decay (l2 over l, n in [14,24]) max_k = 0.932168
+     k =  1: rho(T_k)/2 = 0.761514   fitted (max over l) = 0.749203   fitted (l2 over l) = 0.750564   (|S_n|_2/2^n)^(1/n) at n = 24: 0.771469
+     k =  2: rho(T_k)/2 = 0.932039   fitted (max over l) = 0.932159   fitted (l2 over l) = 0.932168   (|S_n|_2/2^n)^(1/n) at n = 24: 0.936564
+     k =  3: rho(T_k)/2 = 0.854289   fitted (max over l) = 0.853694   fitted (l2 over l) = 0.853230   (|S_n|_2/2^n)^(1/n) at n = 24: 0.859619
+     k =  4: rho(T_k)/2 = 0.854289   fitted (max over l) = 0.853694   fitted (l2 over l) = 0.853230   (|S_n|_2/2^n)^(1/n) at n = 24: 0.859619
+     k =  5: rho(T_k)/2 = 0.932039   fitted (max over l) = 0.932159   fitted (l2 over l) = 0.932168   (|S_n|_2/2^n)^(1/n) at n = 24: 0.936564
+     k =  6: rho(T_k)/2 = 0.761514   fitted (max over l) = 0.749203   fitted (l2 over l) = 0.750564   (|S_n|_2/2^n)^(1/n) at n = 24: 0.771469
+   x,y-character sums agree with the (q,h) sums (4 pairs (k,l), n = 24): max rel err 1.79e-14
+   largest non-trivial |S_n(k,l)|/2^n at n = 24: 9.372e-02 at (k,l) = (5,4);  rate^n = 1.847e-01
+   k = 0: max_l!=0 |S_n(0,l)| at n = 24: 1.000 (claimed bounded by m/2 = 3.5)
+m = 11: identity sum = e^T T_k^n v_l, max relative error over all k, l, n <= 24: 1.36e-08
+   spectral rate max_k = 0.858710 (k = 4); brute-force fitted decay (l2 over l, n in [14,24]) max_k = 0.852797
+     k =  1: rho(T_k)/2 = 0.734912   fitted (max over l) = 0.710474   fitted (l2 over l) = 0.715037   (|S_n|_2/2^n)^(1/n) at n = 24: 0.750586
+     k =  2: rho(T_k)/2 = 0.814581   fitted (max over l) = 0.819138   fitted (l2 over l) = 0.813194   (|S_n|_2/2^n)^(1/n) at n = 24: 0.824067
+     k =  3: rho(T_k)/2 = 0.766096   fitted (max over l) = 0.759037   fitted (l2 over l) = 0.756964   (|S_n|_2/2^n)^(1/n) at n = 24: 0.776856
+     k =  4: rho(T_k)/2 = 0.858710   fitted (max over l) = 0.843208   fitted (l2 over l) = 0.852797   (|S_n|_2/2^n)^(1/n) at n = 24: 0.827909
+     k =  5: rho(T_k)/2 = 0.784330   fitted (max over l) = 0.765333   fitted (l2 over l) = 0.777503   (|S_n|_2/2^n)^(1/n) at n = 24: 0.794597
+     k =  6: rho(T_k)/2 = 0.784330   fitted (max over l) = 0.765333   fitted (l2 over l) = 0.777503   (|S_n|_2/2^n)^(1/n) at n = 24: 0.794597
+     k =  7: rho(T_k)/2 = 0.858710   fitted (max over l) = 0.843208   fitted (l2 over l) = 0.852797   (|S_n|_2/2^n)^(1/n) at n = 24: 0.827909
+     k =  8: rho(T_k)/2 = 0.766096   fitted (max over l) = 0.759037   fitted (l2 over l) = 0.756964   (|S_n|_2/2^n)^(1/n) at n = 24: 0.776856
+     k =  9: rho(T_k)/2 = 0.814581   fitted (max over l) = 0.819138   fitted (l2 over l) = 0.813194   (|S_n|_2/2^n)^(1/n) at n = 24: 0.824067
+     k = 10: rho(T_k)/2 = 0.734912   fitted (max over l) = 0.710474   fitted (l2 over l) = 0.715037   (|S_n|_2/2^n)^(1/n) at n = 24: 0.750586
+   x,y-character sums agree with the (q,h) sums (4 pairs (k,l), n = 24): max rel err 3.58e-13
+   largest non-trivial |S_n(k,l)|/2^n at n = 24: 4.599e-03 at (k,l) = (9,6);  rate^n = 2.584e-02
+   k = 0: max_l!=0 |S_n(0,l)| at n = 24: 3.513 (claimed bounded by m/2 = 5.5)
+m = 13: identity sum = e^T T_k^n v_l, max relative error over all k, l, n <= 24: 1.37e-08
+   spectral rate max_k = 0.827243 (k = 7); brute-force fitted decay (l2 over l, n in [14,24]) max_k = 0.824637
+     k =  1: rho(T_k)/2 = 0.729001   fitted (max over l) = 0.693558   fitted (l2 over l) = 0.721251   (|S_n|_2/2^n)^(1/n) at n = 24: 0.749028
+     k =  2: rho(T_k)/2 = 0.809259   fitted (max over l) = 0.778426   fitted (l2 over l) = 0.783301   (|S_n|_2/2^n)^(1/n) at n = 24: 0.798986
+     k =  3: rho(T_k)/2 = 0.728958   fitted (max over l) = 0.718576   fitted (l2 over l) = 0.703109   (|S_n|_2/2^n)^(1/n) at n = 24: 0.744367
+     k =  4: rho(T_k)/2 = 0.759992   fitted (max over l) = 0.749053   fitted (l2 over l) = 0.751263   (|S_n|_2/2^n)^(1/n) at n = 24: 0.775771
+     k =  5: rho(T_k)/2 = 0.772536   fitted (max over l) = 0.754750   fitted (l2 over l) = 0.763021   (|S_n|_2/2^n)^(1/n) at n = 24: 0.783773
+     k =  6: rho(T_k)/2 = 0.827243   fitted (max over l) = 0.826815   fitted (l2 over l) = 0.824637   (|S_n|_2/2^n)^(1/n) at n = 24: 0.831097
+     k =  7: rho(T_k)/2 = 0.827243   fitted (max over l) = 0.826815   fitted (l2 over l) = 0.824637   (|S_n|_2/2^n)^(1/n) at n = 24: 0.831097
+     k =  8: rho(T_k)/2 = 0.772536   fitted (max over l) = 0.754750   fitted (l2 over l) = 0.763021   (|S_n|_2/2^n)^(1/n) at n = 24: 0.783773
+     k =  9: rho(T_k)/2 = 0.759992   fitted (max over l) = 0.749053   fitted (l2 over l) = 0.751263   (|S_n|_2/2^n)^(1/n) at n = 24: 0.775771
+     k = 10: rho(T_k)/2 = 0.728958   fitted (max over l) = 0.718576   fitted (l2 over l) = 0.703109   (|S_n|_2/2^n)^(1/n) at n = 24: 0.744367
+     k = 11: rho(T_k)/2 = 0.809259   fitted (max over l) = 0.778426   fitted (l2 over l) = 0.783301   (|S_n|_2/2^n)^(1/n) at n = 24: 0.798986
+     k = 12: rho(T_k)/2 = 0.729001   fitted (max over l) = 0.693558   fitted (l2 over l) = 0.721251   (|S_n|_2/2^n)^(1/n) at n = 24: 0.749028
+   x,y-character sums agree with the (q,h) sums (4 pairs (k,l), n = 24): max rel err 4.07e-14
+   largest non-trivial |S_n(k,l)|/2^n at n = 24: 5.058e-03 at (k,l) = (6,2);  rate^n = 1.055e-02
+   k = 0: max_l!=0 |S_n(0,l)| at n = 24: 1.000 (claimed bounded by m/2 = 6.5)
+m = 17: identity sum = e^T T_k^n v_l, max relative error over all k, l, n <= 24: 2.60e-08
+   spectral rate max_k = 0.828856 (k = 2); brute-force fitted decay (l2 over l, n in [14,24]) max_k = 0.824082
+   x,y-character sums agree with the (q,h) sums (4 pairs (k,l), n = 24): max rel err 7.78e-14
+   largest non-trivial |S_n(k,l)|/2^n at n = 24: 5.685e-03 at (k,l) = (2,6);  rate^n = 1.105e-02
+   k = 0: max_l!=0 |S_n(0,l)| at n = 24: 1.000 (claimed bounded by m/2 = 8.5)
+m = 19: identity sum = e^T T_k^n v_l, max relative error over all k, l, n <= 24: 2.09e-08
+   spectral rate max_k = 0.805253 (k = 4); brute-force fitted decay (l2 over l, n in [14,24]) max_k = 0.801697
+   x,y-character sums agree with the (q,h) sums (4 pairs (k,l), n = 24): max rel err 2.01e-13
+   largest non-trivial |S_n(k,l)|/2^n at n = 24: 2.683e-03 at (k,l) = (15,18);  rate^n = 5.526e-03
+   k = 0: max_l!=0 |S_n(0,l)| at n = 24: 5.564 (claimed bounded by m/2 = 9.5)
+m = 23: identity sum = e^T T_k^n v_l, max relative error over all k, l, n <= 24: 1.85e-08
+   spectral rate max_k = 0.793054 (k = 13); brute-force fitted decay (l2 over l, n in [14,24]) max_k = 0.785850
+   x,y-character sums agree with the (q,h) sums (4 pairs (k,l), n = 24): max rel err 2.25e-13
+   largest non-trivial |S_n(k,l)|/2^n at n = 24: 2.244e-03 at (k,l) = (2,11);  rate^n = 3.831e-03
+   k = 0: max_l!=0 |S_n(0,l)| at n = 24: 3.816 (claimed bounded by m/2 = 11.5)
+m = 31: identity sum = e^T T_k^n v_l, max relative error over all k, l, n <= 24: 4.52e-08
+   spectral rate max_k = 0.900219 (k = 29); brute-force fitted decay (l2 over l, n in [14,24]) max_k = 0.858446
+   x,y-character sums agree with the (q,h) sums (4 pairs (k,l), n = 24): max rel err 3.52e-14
+   largest non-trivial |S_n(k,l)|/2^n at n = 24: 1.286e-02 at (k,l) = (2,15);  rate^n = 8.023e-02
+   k = 0: max_l!=0 |S_n(0,l)| at n = 24: 9.872 (claimed bounded by m/2 = 15.5)

@@ -1,0 +1,14 @@
+order 1:      1 rooted tournaments; E = U_odd - U_even: True; H(B + z) = D + 2 U_even (direct count): True
+order 2:      2 rooted tournaments; E = U_odd - U_even: True; H(B + z) = D + 2 U_even (direct count): True
+order 3:      6 rooted tournaments; E = U_odd - U_even: True; H(B + z) = D + 2 U_even (direct count): True
+order 4:     16 rooted tournaments; E = U_odd - U_even: True; H(B + z) = D + 2 U_even (direct count): True
+order 5:     60 rooted tournaments; E = U_odd - U_even: True; H(B + z) = D + 2 U_even (direct count): True
+order 6:    336 rooted tournaments; E = U_odd - U_even: True; H(B + z) = D + 2 U_even (direct count): True
+order 7:   3192 rooted tournaments; E = U_odd - U_even: True; H(B + z) = D + 2 U_even (direct count not run): True
+order 8:  55040 rooted tournaments; E = U_odd - U_even: True; H(B + z) = D + 2 U_even (direct count not run): True
+total rooted tournaments checked: 58653
+  11 = D - E + U = 5 - 1 + 7: head value of a base of order 4 (tournament of order 5)
+  13 = D - E + U = 5 - 1 + 9: head value of a base of order 4 (tournament of order 5)
+  47 = D - E + U = 17 - 1 + 31: head value of a base of order 6 (tournament of order 7)
+  67 = D - E + U = 33 - 7 + 41: head value of a base of order 6 (tournament of order 7)
+ALL CHECKS PASSED

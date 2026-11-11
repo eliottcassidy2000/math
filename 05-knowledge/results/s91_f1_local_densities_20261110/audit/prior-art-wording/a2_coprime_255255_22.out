@@ -1,0 +1,13 @@
+odd N in [2^22, 2^23): 2097152 integers; mean triples 12.3625 (sheet 0 5.4700, sheet 1 6.8925); mean word pairs 26.4087 = 2 * 13.2044
+share of N coprime to 255255: 0.3611
+mean over N coprime to 255255 / overall mean:
+    sheet 1 (triples): measured 0.7362   limit of THM-5128 (D3) 0.8213
+    sheet 0 (triples): measured 1.1061   limit of THM-5128 (D3) 1.0714
+    all triples:       measured 0.8999   limit 0.9293
+    word pairs (r1 of the S82 audit up to the factor 2): measured 0.8108   limit 0.8704   (S82 audit at k = 26: 0.809; 8/pi^2 = 0.8106)
+mean over N with N (N + 1) coprime to 255255 / overall mean: triples 0.7231, word pairs 0.7189   (limit: prod (1 - 1/p^2) = 0.8213 on both sheets)
+done
+
+real	0m2.238s
+user	0m0.031s
+sys	0m0.015s

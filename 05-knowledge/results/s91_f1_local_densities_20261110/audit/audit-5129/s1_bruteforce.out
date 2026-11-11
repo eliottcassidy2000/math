@@ -1,0 +1,27 @@
+order 1: 1 labelled tournaments, 1 distinct pairs (D,U), 1 distinct triples (D,E,U); elapsed 2.3s
+order 2: 2 labelled tournaments, 2 distinct pairs (D,U), 2 distinct triples (D,E,U); elapsed 2.3s
+order 3: 8 labelled tournaments, 4 distinct pairs (D,U), 4 distinct triples (D,E,U); elapsed 2.3s
+order 4: 64 labelled tournaments, 11 distinct pairs (D,U), 12 distinct triples (D,E,U); elapsed 2.3s
+order 5: 1024 labelled tournaments, 38 distinct pairs (D,U), 42 distinct triples (D,E,U); elapsed 3.1s
+order 6: 32768 labelled tournaments, 227 distinct pairs (D,U), 254 distinct triples (D,E,U); elapsed 33.1s
+
+rooted labelled tournaments checked: 202013
+counters: {'head_literal': 202013, 'tail1_literal': 5405, 'tail2_literal': 5405, 'tail1_dp': 196608, 'tail2_dp': 196608, 'tail3_dp': 201728, 'nonstrong': 10976, 'product_roots': 65270, 'root_trivial_component': 19262, 'sink_literal': 5405, 'sink_dp': 196608, 'U_eq_D_nonsink': 9454, 'U_eq_D_sink': 6505, 'tail3_literal': 285}
+failures: {'lit_vs_dp': 0, 'E_parity': 0, 'U_ge_D': 0, 'head': 0, 'head_even': 0, 'tail1': 0, 'tail2': 0, 'tail3': 0, 'pi2': 0, 'pi2_sum': 0, 'sink': 0, 'product_D': 0, 'product_U': 0}
+ALL CHECKS PASS
+order 6 literal tail sample: 600 (t=1), 60 (t=2) rooted tournaments, failures 0
+order 1 pairs (D,U): [(1, 1)]
+order 2 pairs (D,U): [(1, 1), (1, 2)]
+order 3 pairs (D,U): [(1, 1), (1, 2), (1, 4), (3, 3)]
+order 4 pairs (D,U): [(1, 1), (1, 2), (1, 4), (1, 8), (3, 3), (3, 6), (3, 12), (5, 5), (5, 6), (5, 7), (5, 9)]
+order 5 pairs (D,U): [(1, 1), (1, 2), (1, 4), (1, 8), (1, 16), (3, 3), (3, 6), (3, 12), (3, 24), (5, 5), (5, 6), (5, 7), (5, 9), (5, 10), (5, 12), (5, 14), (5, 18), (5, 32), (9, 9), (9, 10), (9, 11), (9, 15), (9, 16), (9, 21), (9, 23), (9, 25), (11, 12), (11, 13), (11, 17), (11, 20), (11, 27), (13, 14), (13, 15), (13, 18), (13, 26), (15, 15), (15, 19), (15, 21)]
+order 6: offsets [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+order 4 has triple (D,E,U) = (5, 1, 7) : head value D-E+U = 11
+order 4 has triple (D,E,U) = (5, 1, 9) : head value D-E+U = 13
+order 5 has triple (D,E,U) = (5, 1, 7) : head value D-E+U = 11
+order 5 has triple (D,E,U) = (5, 1, 9) : head value D-E+U = 13
+order 6 has triple (D,E,U) = (5, 1, 7) : head value D-E+U = 11
+order 6 has triple (D,E,U) = (5, 1, 9) : head value D-E+U = 13
+order 6 has triple (D,E,U) = (17, 1, 31) : head value D-E+U = 47
+order 6 has triple (D,E,U) = (33, 7, 41) : head value D-E+U = 67
+elapsed 33.4s

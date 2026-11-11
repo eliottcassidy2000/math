@@ -1,0 +1,21 @@
+rooted order <= 9: odd N < 32768 with r(N) = 0: [1, 7, 11, 13, 21, 47, 67]
+block: minimum of r (at N), median, mean, mean share of the N/6 lattice points
+  [2^6, 2^7): min     0 (N = 67), median     4, mean      4.3, share 0.271
+  [2^7, 2^8): min     5 (N = 131), median     9, mean      9.4, share 0.296
+  [2^8, 2^9): min     7 (N = 259), median    22, mean     21.4, share 0.333
+  [2^9, 2^10): min    23 (N = 521), median    46, mean     46.8, share 0.364
+  [2^10, 2^11): min    54 (N = 1027), median   108, mean    106.4, share 0.414
+  [2^11, 2^12): min   120 (N = 2101), median   212, mean    213.3, share 0.417
+  [2^12, 2^13): min   267 (N = 4117), median   385, mean    375.3, share 0.373
+  [2^13, 2^14): min   192 (N = 15427), median   303, mean    310.8, share 0.165
+  [2^14, 2^15): min    82 (N = 32615), median   138, mean    146.4, share 0.039
+r(N) >= N/64 for every odd N in [129, 2^14): NO; violations 758, first [14239, 14257, 14291, 14321, 14337, 14501, 14513, 14567]
+mean of r on [2^12, 2^13): 375.3
+N in [1024, 2048): share of lattice points (D, U) that are sources, by decile of 3D/N
+   U odd : 0.00 0.01 0.07 0.12 0.21 0.37 0.46 0.63 0.73 0.78   overall 0.339
+   U even: 0.08 0.24 0.42 0.51 0.65 0.81 0.43 0.58 0.58 0.62   overall 0.491
+N in [4096, 8192): share of lattice points (D, U) that are sources, by decile of 3D/N
+   U odd : 0.00 0.02 0.05 0.14 0.25 0.37 0.49 0.60 0.52 0.19   overall 0.263
+   U even: 0.10 0.32 0.50 0.59 0.70 0.74 0.49 0.57 0.50 0.18   overall 0.470
+(3 s)
+ALL CHECKS PASSED

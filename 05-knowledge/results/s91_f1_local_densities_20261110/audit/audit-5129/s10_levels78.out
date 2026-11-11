@@ -1,0 +1,9 @@
+strong classes with H <= 257: orders <= 8: 2100 ; order 9: 1199
+order 10: strong classes with H <= 257: 436 (least H 125); with H <= 255: 423  [3.8s]
+order 11: 423 parents, 1037 labelled extensions with H <= 257, 191 of them strong, 31 strong classes; least H of a strong one: 225 (f(11)); strong with H = 129: 0, with H = 257: 0  [17.4s]
+order 12: 31 parents (strong classes of order 11 with H <= 255), 62 labelled extensions with H <= 257, strong among them: 0 ; least H over all extensions with a non-trivial cut: 375  [21.1s]
+strong classes with H = 3 by order: {3: 1} ; 1 values of U, 1 values of Pi_2
+strong classes with H = 43 by order: {6: 2, 7: 2} ; 21 values of U, 2 values of Pi_2
+strong classes with H = 129 by order: {7: 7, 8: 26, 9: 7} ; 213 values of U, 13 values of Pi_2
+strong classes with H = 257 by order: {8: 30, 9: 30, 10: 13} ; 455 values of U, 25 values of Pi_2
+saved strong_le257.pkl (3766 strong classes with H <= 257)  [21.1s]

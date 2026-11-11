@@ -1,0 +1,6 @@
+(i) all heads: odd N < 9153 missed: [7, 21]
+(ii) heads at a root that is not a sink: odd N < 9153 missed: [1, 7, 21]
+(iii) heads with D <= N/3: odd N < 9153 missed: [1, 7, 11, 13, 21, 47, 67]
+(iv) heads with D <= N/3, root of out-degree >= 1: odd N < 9153 missed: [1, 7, 11, 13, 21, 47, 67]
+first odd N > 21 that is not a head value of a base of order <= 9: 9153
+ALL CHECKS PASSED

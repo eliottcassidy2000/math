@@ -1,0 +1,9 @@
+constants exit=0 seconds=0
+mod4_symbol exit=0 seconds=1
+box_identity exit=0 seconds=24
+ap_constants exit=0 seconds=21
+regions_check exit=0 seconds=13
+twisted_spectrum exit=0 seconds=18
+DONE
+twisted_spectrum_2adic exit=0
+divisible_states exit=0

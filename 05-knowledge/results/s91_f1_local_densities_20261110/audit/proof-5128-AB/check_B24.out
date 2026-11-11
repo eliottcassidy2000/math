@@ -1,0 +1,54 @@
+(B2) cells: max over all cells (t top, j bottom, r free digits) and residue pairs of |count - 2^r/m^2| / (2 rate)^r
+   m =  3, n = 12:   0.5185  at (t, j, r) = (1, 9, 2)
+   m =  3, n = 16:   0.5185  at (t, j, r) = (1, 13, 2)
+   m =  3, n = 18:   0.5185  at (t, j, r) = (1, 15, 2)
+   m =  5, n = 12:   0.6201  at (t, j, r) = (1, 10, 1)
+   m =  5, n = 16:   0.6201  at (t, j, r) = (1, 14, 1)
+   m =  5, n = 18:   0.6201  at (t, j, r) = (1, 16, 1)
+   m =  7, n = 12:   0.5146  at (t, j, r) = (1, 10, 1)
+   m =  7, n = 16:   0.5146  at (t, j, r) = (1, 14, 1)
+   m =  7, n = 18:   0.5146  at (t, j, r) = (1, 16, 1)
+   m =  9, n = 12:   0.5631  at (t, j, r) = (1, 10, 1)
+   m =  9, n = 16:   0.5631  at (t, j, r) = (1, 14, 1)
+   m =  9, n = 18:   0.5631  at (t, j, r) = (1, 16, 1)
+   m = 15, n = 12:   0.5554  at (t, j, r) = (1, 10, 1)
+   m = 15, n = 16:   0.5554  at (t, j, r) = (1, 14, 1)
+   m = 15, n = 18:   0.5554  at (t, j, r) = (1, 16, 1)
+(B4)(a) cut cells, b >= a: per (n, j) the largest numbers over random (a, b, X)
+  n   j  truly cut  proof-cut   4*2^j  max cut tops per bottom  sound
+  6   1          2          2       8                        1   True
+  6   2          4          7      16                        2   True
+  6   3          0         15      32                        2   True
+  8   1          2          2       8                        1   True
+  8   2          4          6      16                        2   True
+  8   3          8         12      32                        2   True
+  8   4          0         28      64                        2   True
+ 10   1          2          2       8                        1   True
+ 10   2          4          6      16                        2   True
+ 10   5          0         51     128                        2   True
+ 12   1          2          2       8                        1   True
+ 12   2          5          5      16                        2   True
+ 12   3          9         11      32                        2   True
+ 12   6          0         93     256                        2   True
+ 14   1          2          2       8                        1   True
+ 14   2          5          5      16                        2   True
+ 14   3         10         11      32                        2   True
+ 14   7          0        174     512                        2   True
+ 16   1          2          2       8                        1   True
+ 16   2          5          5      16                        2   True
+ 16   4         19         20      64                        2   True
+ 16   8          0        340    1024                        2   True
+(B4)(b) statement (i): max over random regions of |count - 2^n area| / 2^(n - floor(n/2)) (proof: <= 6)
+   b >= a                      : n=6: 0.268  n=8: 0.245  n=10: 0.143  n=12: 0.088  n=14: 0.063  n=16: 0.036  n=18: 0.040  n=20: 0.020
+   a > b (hypothesis dropped)  : n=6: 0.532  n=8: 0.233  n=10: 0.236  n=12: 0.159  n=14: 0.066  n=16: 0.058  n=18: 0.031  n=20: 0.025
+(B4)(c) statement (ii): max over random regions and residue vectors of |dev| / 2^(n (1 - theta_p))
+   p =  3 (theta = 0.1467): n=10: 0.094  n=12: 0.075  n=14: 0.069  n=16: 0.058  n=18: 0.057  n=20: 0.051
+   p =  5 (theta = 0.2315): n=10: 0.045  n=12: 0.025  n=14: 0.020  n=16: 0.012  n=18: 0.013  n=20: 0.007
+   p =  7 (theta = 0.0844): n=10: 0.040  n=12: 0.039  n=14: 0.031  n=16: 0.024  n=18: 0.029  n=20: 0.024
+   p = 11 (theta = 0.1527): n=10: 0.022  n=12: 0.018  n=14: 0.012  n=16: 0.011  n=18: 0.007  n=20: 0.006
+(B4)(d) statement (iii) with W = w_0(h), W_0 = 2^-n: |sum over B_n of chi W| / (W_0 2^(n (1 - theta_p)))
+   p =  3: n=8: 0.024  n=10: 0.011  n=12: 0.007  n=14: 0.013  n=16: 0.005  n=18: 0.007  n=20: 0.011
+   p =  5: n=8: 0.005  n=10: 0.000  n=12: 0.006  n=14: 0.001  n=16: 0.002  n=18: 0.000  n=20: 0.000
+   p =  7: n=8: 0.002  n=10: 0.002  n=12: 0.006  n=14: 0.007  n=16: 0.005  n=18: 0.003  n=20: 0.000
+   p = 11: n=8: 0.005  n=10: 0.001  n=12: 0.000  n=14: 0.001  n=16: 0.003  n=18: 0.000  n=20: 0.000
+ALL CHECKS PASSED

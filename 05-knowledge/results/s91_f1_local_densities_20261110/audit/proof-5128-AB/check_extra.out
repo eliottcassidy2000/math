@@ -1,0 +1,12 @@
+1. the constant of (2) is attained (c = 0, r = 2)
+   p =  3: Rhat(0)^2 == bound^2 exactly: True;  Rhat(c)/Rhat(0) for c != 0: ['-1/2']
+   p =  5: Rhat(0)^2 == bound^2 exactly: True;  Rhat(c)/Rhat(0) for c != 0: ['-1/4']
+   p =  7: Rhat(0)^2 == bound^2 exactly: True;  Rhat(c)/Rhat(0) for c != 0: ['-1/6']
+   p = 11: Rhat(0)^2 == bound^2 exactly: True;  Rhat(c)/Rhat(0) for c != 0: ['-1/10']
+2. exact characteristic polynomial at m = 3
+   m = 3, k = 1: det(lam - T_1) = (lam - 3/2 - sqrt(3)*I/2)*(lam - 1/2 + sqrt(3)*I/2)*(lam**2 + lam*(-1/2 - sqrt(3)*I/2) - 3/2 + sqrt(3)*I/2)*(lam**2 + lam*(1/2 + sqrt(3)*I/2) - 3/2 + sqrt(3)*I/2)
+   lam = 3/2 + sqrt(3) i/2 is an eigenvalue: True; its modulus squared = 3
+   root moduli: 1.732050808, 1.462389726, 1.462389726, 1.184397550, 1.184397550, 1.000000000   sqrt(3) = 1.732050808
+3. cell character sums
+   cell formula: max |direct - (e^T T[top]) T_k^r (T[bottom] v_l)| = 3.52e-13; max |cell sum| / ||T_k^r||_inf = 1.000
+ALL CHECKS PASSED

@@ -1,0 +1,24 @@
+PASS B' => S, S strong of order >= 3 [5044 rooted labelled tournaments of order <= 5]
+PASS H(B + z) = H(B') H(S) and D = H(B') H(S - z)
+PASS strong classes of orders 3..8: 1, 1, 6, 35, 353, 6008 : {3: 1, 4: 1, 5: 6, 6: 35, 7: 353, 8: 6008}
+PASS least H of a strong tournament of orders 3..8: 3, 5, 9, 15, 25, 45
+     N = 11: (order of S, D = H(S - z)) over the vertices z of out-degree 1: [(5, 5)]
+PASS N = 11: every head at a non-sink root has D > N/3
+     N = 13: (order of S, D = H(S - z)) over the vertices z of out-degree 1: [(5, 5)]
+PASS N = 13: every head at a non-sink root has D > N/3
+     N = 47: (order of S, D = H(S - z)) over the vertices z of out-degree 1: [(7, 17), (7, 23)]
+PASS N = 47: every head at a non-sink root has D > N/3
+     N = 67: (order of S, D = H(S - z)) over the vertices z of out-degree 1: [(7, 29), (7, 31), (7, 33)]
+PASS N = 67: every head at a non-sink root has D > N/3
+PASS the heads quoted in (C) occur: (5, 11), (5, 13), (17, 47), (33, 67)
+PASS head law H(B + z) = D + 2 U_even [285 rooted labelled tournaments of order <= 4]
+PASS one appended sink: D unchanged, U doubles, U_even(B + s) = U(B)
+PASS the tail value D + 2U of (B, y) is the head of (B + s, y): tails are heads with D <= N/3
+     census, N = 11: D of the heads at a root that is not a sink: [5] (base orders 4..9)
+     census, N = 13: D of the heads at a root that is not a sink: [5] (base orders 4..9)
+     census, N = 47: D of the heads at a root that is not a sink: [17, 23] (base orders 6..9)
+     census, N = 67: D of the heads at a root that is not a sink: [29, 31, 33] (base orders 6..9)
+PASS census of order <= 9: the heads of 11, 13, 47, 67 at non-sink roots have exactly the D of (2)
+PASS census of order <= 9: heads with D <= N/3 at non-sink roots miss exactly 1, 7, 11, 13, 21, 47, 67 below 9153 : [1, 7, 11, 13, 21, 47, 67]
+
+ALL VERIFIER CHECKS PASSED

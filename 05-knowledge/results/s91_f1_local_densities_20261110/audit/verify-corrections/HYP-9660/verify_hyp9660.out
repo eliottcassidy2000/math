@@ -1,0 +1,63 @@
+== 1. the table of rates ==
+PASS  262 moduli: every odd m in [3, 521], and 1023, 1143
+PASS  no rate above 0.932039   [max 0.932039]
+PASS  the maximum is attained exactly at the multiples of 7 (all of them, and nothing else)   [37 moduli]
+   top tiers prime to 7: [(0.913738, [93, 279, 465, 1023]), (0.900219, [31, 155, 341, 403]), (0.900128, [381, 1143]), (0.892191, [15, 45, 75, 135, 165, 195, 225, 255, 285, 345, 375, 405, 435, 495])]
+PASS  prime to 7: 0.913738 at 93, 279, 465 (and 1023); 0.900219 at 31, 155, 341, 403; 0.900128 at 381 (and 1143)
+PASS  every rate quoted in (B) is the table value at the quoted precision   [{}]
+PASS  63 has the rate of 7; 1023 that of 93; 1143 that of 381
+PASS  exceptions to the worst-prime-power rule up to 101 are exactly 15, 45, 51, 65, 75, 85, 93
+   all exceptions in the table: [15, 45, 51, 65, 75, 85, 93, 135, 153, 165, 171, 195, 205, 219, 225, 255, 279, 285, 325, 345, 375, 381, 395, 405, 425, 435, 445, 459, 465, 495, 513, 1023, 1143]
+   exceptions not inherited from a proper divisor: [(15, 0.892191), (51, 0.869011), (65, 0.848149), (85, 0.850338), (93, 0.913738), (171, 0.877604), (205, 0.818), (219, 0.878556), (381, 0.900128), (395, 0.77147), (445, 0.78257)]
+   above 101: 26 exceptions; 20 inherit the rate of a proper divisor: [135, 153, 165, 195, 225, 255, 279, 285, 325, 345, 375, 405, 425, 435, 459, 465, 495, 513, 1023, 1143]
+PASS  above 101 the table has 26 more exceptions; 171, 205, 219, 381, 395, 445 exceed every proper divisor (0.8776, 0.8180, 0.8786, 0.9001, 0.7715, 0.7826), the other 20 inherit
+PASS  no multiple of 7 is an exception (each has exactly the rate of 7)
+PASS  381 is an exception, and 45, 75 inherit the rate of 15
+PASS  rate(m) >= rate(d) for every divisor d > 1 (whole table)
+   slowest primes: [(7, 0.932039), (31, 0.900219), (127, 0.875417), (3, 0.866025), (11, 0.85871), (257, 0.855093), (73, 0.851574), (241, 0.850802), (331, 0.840984)]
+PASS  slowest primes of the scan: 7, 31, 127, 3, 11, 257, 73, 241
+PASS  5 is the fastest modulus of the scan (0.742)   [min 0.741760]
+PASS  D5 band: the other primes up to 89 lie in [0.7691 (79), 0.8060 (37)]
+PASS  orders of 2: 7, 31, 127, 73 -> 3, 5, 7, 9; 5 -> 4; 11 -> 10; 257 -> 16
+PASS  1023 = 2^10 - 1 = 3 * 11 * 31, 1143 = 9 * 127
+PASS  the table equals the per-modulus maxima of the four binary scans
+PASS  [103, 521]: 65,310 operators, 8,342 dense computations, largest |estimate - dense| = 0.002   [65310, 8342, 0.00204]
+PASS  dense eigenvalues of every operator for m <= 201; for m >= 203 of every estimate within 0.012 of the largest or >= 0.835
+== 2. operators: complement symmetry, divisor lemma, S82 dictionary ==
+PASS  T_k commutes with C, and C^2 = zeta^k (12 moduli, every k)
+PASS  spectrum of T_k = union of the spectra of the two reduced m x m operators (multisets for m <= 21, radii for all)
+PASS  k and m - k have the same spectral radius
+PASS  own full operators reproduce the table at 3, 5, 7, 9, 15, 21, 31, 45, 51, 63, 65, 93   [{3: 0.866025, 5: 0.74176, 7: 0.932039, 9: 0.866025, 15: 0.892191, 21: 0.932039, 31: 0.900219, 45: 0.892191, 51: 0.869011, 63: 0.932039, 65: 0.848149, 93: 0.913738}]
+PASS  C has the eigenvalues +- w only, and there u(eta, 1) = +- w^(-eta) u(-1 - eta, 0) (m = 15, k = 2)
+PASS  divisor lemma T_k E = E T_k' for k = (m/d) k' (7 pairs (m, d), every k')
+PASS  S82 dictionary: rho(T_(q, a)) = rho(T_k) for a = -k/2 (mod q), q = 7, 15, 31, 63, 93, every k
+PASS  63: 0.8895 over the characters prime to 63 (S82's 1/63), 0.932039 over all k; 8/93 has 0.8927 (S82 output)   [0.889493, 0.892691]
+== 3. (A) ==
+PASS  w_0 = 0.19640777, w_1 = 0.80359223, sigma = 2 w_1 = 1.60718   [1.60718446]
+PASS  conjectured limits (sigma = 2 w_1) as quoted   [[1.4946, 1.2982, 1.2156, 1.1396, 1.1188, 1.0916, 1.0682, 1.0509]]
+PASS  letter-count limits (sigma = 3/2) as quoted   [[1.4468, 1.2743, 1.1994, 1.1296, 1.1104, 1.0852, 1.0635, 1.0474]]
+PASS  sigma = 3/2 is THM-4916: L(0) = 1 + (3p-2)(p-1)/(2p^3), L(r) = 1 - (3p-2)/(2p^3)
+PASS  measured ratios on [2^23, 2^24) from the stored census (ties at 3 and 7 resolved)   [[1.856549, 1.613965, 1.239509, 1.373929, 1.170956, 1.533776, 1.124003, 1.101954]]
+PASS  ratios on [2^25, 2^26) as quoted (census_k2_25_26.out)   [[1.842021, 1.593511, 1.257121, 1.361005, 1.1694, 1.500929, 1.129928, 1.099714]]
+PASS  from [2^23, 2^24) to [2^25, 2^26) the ratios fall at 3, 5, 11, 13, 17, 31 and rise at 7 and 23
+PASS  on both later windows every ratio still exceeds both candidate limits
+   kappa, lambda by window: {'12_13': (0.80483, 0.7535), '23_24': (0.80409, 0.77922), '24_25': (0.80406, 0.7803), '25_26': (0.80404, 0.7813)}
+PASS  cascade shares kappa, lambda: 0.8041, 0.7792 on [2^23, 2^24); 0.8040, 0.7813 on [2^25, 2^26); 0.7535 on [2^12, 2^13)
+PASS  kappa is within 0.001 of w_1; lambda lies between 3/4 and w_1 and rises by about 0.001 per octave
+   excess over the conjectured limit: [0.362, 0.316, 0.024, 0.234, 0.052, 0.442, 0.056, 0.051]
+PASS  the measured ratio exceeds both candidate limits at all eight primes
+PASS  excess 0.36, 0.32, 0.23, 0.44 at 3, 5, 11, 17 and 0.02, 0.05, 0.06, 0.05 at 7, 13, 23, 31
+PASS  difference of the two candidates: 0.05 at 3, 0.02 at 5 and 7, at most 0.01 from 11 on   [[0.0478, 0.024, 0.0162, 0.01, 0.0084, 0.0064, 0.0047, 0.0035]]
+PASS  P(S2, -C1) is 1.4 to 6.7 times (p-1)/p^3 (cascade table of census_k2_23_24.out)   [[1.41, 1.98, 2.14, 3.34, 3.32, 5.31, 4.91, 6.72]]
+PASS  both candidates give P(S2) = share/p^2 + (p-1)/p^3 (columns 'letter c', 'value c' at p = 3: 0.15741, 0.16336)
+PASS  balanced divisible states: 3, 5, 11, 17 at h = 1, 2, 16, 8 (x = y = 3, 5, 33, 17); 13 first at h = 32 (65)
+PASS  7, 23, 31 have odd order of 2 (no balanced divisible state)
+== 4. (D), (E) ==
+PASS  deficit of class 2 between 0.73 % and 0.82 %   [[0.75, 0.77, 0.82, 0.82, 0.73]]
+PASS  class 2 is the largest deviation for n >= 13 and class 0 at n = 12
+PASS  classes 1 and 2 differ by 0.009 to 0.011 for n = 13..16   [[0.009, 0.01, 0.011, 0.01]]
+PASS  largest deviation at n = 16 is 0.73 % (title: up to 0.7 %)
+PASS  rank-r seam with uniform states: class factors 1 + p^(1-r) - p^(-r) and 1 - p^(-r)
+PASS  prod over odd p of (1 - 1/p^2) = 8/pi^2 = 0.8106   [0.8105695]
+PASS  3- and 7-divisible deviations below 2^26 change the coprime proportion by about -0.4 % and +0.5 %, and cancel   [-0.44 %, 0.47 %, product +0.020 %]
+ALL CHECKS PASSED

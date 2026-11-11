@@ -1,0 +1,7 @@
+m = 171: max_k rho(T_k)/2 = 0.877604 at k = +-58 (table 0.877604); proper divisors [(3, 0.866025), (9, 0.866025), (19, 0.805253), (57, 0.866025)]: above all of them by 0.0116   PASS   [12 s]
+m = 205: max_k rho(T_k)/2 = 0.818000 at k = +-48 (table 0.818000); proper divisors [(5, 0.74176), (41, 0.796193)]: above all of them by 0.0218   PASS   [33 s]
+m = 219: max_k rho(T_k)/2 = 0.878556 at k = +-10 (table 0.878556); proper divisors [(3, 0.866025), (73, 0.851574)]: above all of them by 0.0125   PASS   [59 s]
+m = 381: max_k rho(T_k)/2 = 0.900128 at k = +-86 (table 0.900128); proper divisors [(3, 0.866025), (127, 0.875417)]: above all of them by 0.0247   PASS   [227 s]
+m = 395: max_k rho(T_k)/2 = 0.771470 at k = +-48 (table 0.771470); proper divisors [(5, 0.74176), (79, 0.769084)]: above all of them by 0.0024   PASS   [574 s]
+m = 445: max_k rho(T_k)/2 = 0.782570 at k = +-6 (table 0.782570); proper divisors [(5, 0.74176), (89, 0.776578)]: above all of them by 0.0060   PASS   [1006 s]
+ALL CHECKS PASSED

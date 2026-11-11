@@ -1,0 +1,6 @@
+23 <= h <= 73: 26 attained offsets, Pearson correlation 0.6784 (quoted 0.68)
+15 <= h <= 73: 29 attained offsets, Pearson correlation 0.6601 (quoted 0.66)
+3 <= h <= 73: 34 attained offsets, Pearson correlation 0.4105 (quoted 0.41)
+offsets <= 73 with exactly two strong classes: [9, 17, 19, 35, 39, 47, 63]
+m(67) = 6 ; m(27) = 5 ; m(55) = 4
+ALL CHECKS PASSED

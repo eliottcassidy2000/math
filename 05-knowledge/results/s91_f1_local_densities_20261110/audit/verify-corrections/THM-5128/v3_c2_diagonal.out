@@ -1,0 +1,3 @@
+X = 2^18, p = 5, sheet 0: #T = 540939; p max|R| = 0.005065 with D of (C2) (h1 != h2), 0.005006 with the diagonal counted
+X = 2^20, p = 5, sheet 0: #T = 2398262; p max|R| = 0.003847 with D of (C2) (h1 != h2), 0.003839 with the diagonal counted
+X = 2^22, p = 5, sheet 0: #T = 10532579; p max|R| = 0.000459 with D of (C2) (h1 != h2), 0.000463 with the diagonal counted

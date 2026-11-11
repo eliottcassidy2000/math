@@ -1,19 +1,27 @@
 level s: least j <= s with a source (2^s + 1, 9 * 2^j) of order <= 9; least order; witness
   s = 2: D = 5, U = 9 = 9 * 2^0, order 4, root y = 3, out-masks B = (4,1,10,3)
+      rooted tournaments (class of the base, cut) with this pair, by order: {4: 3, 5: 3, 6: 3, 7: 3, 8: 3, 9: 3}
       H(B): DP 5, permutations 5; U by definition 9; H(T_1), H(T_2), H(T_3) = [23, 41, 77] (D + 2^t U = [23, 41, 77]); grid N(9, r, 2), r = 1, 2: [(1, 3, 77, 'explicit'), (2, 4, 149, 'tail law')]  ok
   s = 3: D = 9, U = 9 = 9 * 2^0, order 5, root y = 4, out-masks B = (16,17,19,7,8)
+      rooted tournaments (class of the base, cut) with this pair, by order: {5: 4, 6: 7, 7: 11, 8: 16, 9: 22}
       H(B): DP 9, permutations 9; U by definition 9; H(T_1), H(T_2), H(T_3) = [27, 45, 81] (D + 2^t U = [27, 45, 81]); grid N(9, r, 3), r = 1, 2: [(1, 4, 153, 'tail law'), (2, 5, 297, 'tail law')]  ok
   s = 4: D = 17, U = 18 = 9 * 2^1, order 6, root y = 5, out-masks B = (16,33,35,39,46,1)
+      rooted tournaments (class of the base, cut) with this pair, by order: {6: 1, 7: 1, 8: 1, 9: 1}
       H(B): DP 17, permutations 17; U by definition 18; H(T_1), H(T_2), H(T_3) = [53, 89, 161] (D + 2^t U = [53, 89, 161]); grid N(9, r, 4), r = 1, 2: [(1, 4, 305, 'tail law'), (2, 5, 593, 'tail law')]  ok
   s = 5: D = 33, U = 36 = 9 * 2^2, order 6, root y = 5, out-masks B = (48,41,35,37,14,16)
+      rooted tournaments (class of the base, cut) with this pair, by order: {6: 6, 7: 6, 8: 7, 9: 8}
       H(B): DP 33, permutations 33; U by definition 36; H(T_1), H(T_2), H(T_3) = [105, 177, 321] (D + 2^t U = [105, 177, 321]); grid N(9, r, 5), r = 1, 2: [(1, 4, 609, 'tail law'), (2, 5, 1185, 'tail law')]  ok
   s = 6: D = 65, U = 288 = 9 * 2^5, order 7, root y = 6, out-masks B = (34,24,3,5,13,94,31)
+      rooted tournaments (class of the base, cut) with this pair, by order: {7: 1, 8: 1, 9: 1}
       H(B): DP 65, permutations 65; U by definition 288; H(T_1), H(T_2), H(T_3) = [641, 1217, 2369] (D + 2^t U = [641, 1217, 2369]); grid N(9, r, 6), r = 1, 2: [(1, 2, 1217, 'explicit'), (2, 3, 2369, 'explicit')]  ok
   s = 7: D = 129, U = 144 = 9 * 2^4, order 9, root y = 8, out-masks B = (444,273,258,6,268,286,319,382,8)
+      rooted tournaments (class of the base, cut) with this pair, by order: {9: 1}
       H(B): DP 129, permutations 129; U by definition 144; H(T_1), H(T_2), H(T_3) = [417, 705, 1281] (D + 2^t U = [417, 705, 1281]); grid N(9, r, 7), r = 1, 2: [(1, 4, 2433, 'tail law'), (2, 5, 4737, 'tail law')]  ok
   s = 8: D = 257, U = 288 = 9 * 2^5, order 8, root y = 7, out-masks B = (82,36,129,135,142,157,190,3)
+      rooted tournaments (class of the base, cut) with this pair, by order: {8: 1, 9: 1}
       H(B): DP 257, permutations 257; U by definition 288; H(T_1), H(T_2), H(T_3) = [833, 1409, 2561] (D + 2^t U = [833, 1409, 2561]); grid N(9, r, 8), r = 1, 2: [(1, 4, 4865, 'tail law'), (2, 5, 9473, 'tail law')]  ok
   s = 9: D = 513, U = 576 = 9 * 2^6, order 9, root y = 8, out-masks B = (402,360,3,261,270,285,317,382,4)
+      rooted tournaments (class of the base, cut) with this pair, by order: {9: 1}
       H(B): DP 513, permutations 513; U by definition 576; H(T_1), H(T_2), H(T_3) = [1665, 2817, 5121] (D + 2^t U = [1665, 2817, 5121]); grid N(9, r, 9), r = 1, 2: [(1, 4, 9729, 'tail law'), (2, 5, 18945, 'tail law')]  ok
 orders of the first witness for every (s, j), j <= s ('.' = none at order <= 9):
   s = 2: j=0:4 j=1:5 j=2:6

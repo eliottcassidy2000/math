@@ -1,0 +1,38 @@
+(1) strong tournaments: order, classes, strong classes, least H, distinct (H, Pi_2), distinct (H, U)
+    n = 3:     2 classes,     1 strong, least H =   3,     1 pairs (H, Pi_2),      1 pairs (H, U)
+    n = 4:     4 classes,     1 strong, least H =   5,     1 pairs (H, Pi_2),      4 pairs (H, U)
+    n = 5:    12 classes,     6 strong, least H =   9,     5 pairs (H, Pi_2),     20 pairs (H, U)
+    n = 6:    56 classes,    35 strong, least H =  15,    16 pairs (H, Pi_2),    156 pairs (H, U)
+    n = 7:   456 classes,   353 strong, least H =  25,   131 pairs (H, Pi_2),   1984 pairs (H, U)
+    n = 8:  6880 classes,  6008 strong, least H =  45,  1567 pairs (H, Pi_2),  38935 pairs (H, U)
+    n = 9: least H of a strong tournament = 75 (list codes9.npy, every class of order 9)
+    attained odd numbers <= 73: all odd numbers except [7, 21]
+(2) census of order <= 9: 3239 pairs with D <= 73; not in the product-law set: 0; offsets where the product law has odd parts (or smaller exponents) beyond order 9: {55: 1}
+(3) odd parts d of the slopes at offset 2^s + 1, with the least 2-exponent j (d:j); '*' = j > s (finite head)
+    s = 1, D = 3: 1 odd parts, 1 with j <= s
+        3:0 
+    s = 2, D = 5: 5 odd parts, 4 with j <= s
+        1:5* 3:1 5:0 7:0 9:0 
+    s = 3, D = 9: 8 odd parts, 7 with j <= s
+        1:4* 5:1 9:0 11:0 15:0 21:0 23:0 25:0 
+    s = 4, D = 17: 11 odd parts, 11 with j <= s
+        5:2 7:2 9:1 11:2 17:0 21:0 31:0 33:0 55:0 61:0 69:0 
+    s = 5, D = 33: 34 odd parts, 33 with j <= s
+        1:6* 3:4 5:3 9:2 13:2 15:2 17:1 19:1 21:1 23:1 31:2 33:0 37:0 39:0 41:0 45:0 49:0 51:0 53:0 55:0 59:0 61:0 
+        63:0 67:0 75:2 81:0 93:0 99:0 111:0 123:0 153:2 165:2 193:0 197:0 
+    s = 6, D = 65: 66 odd parts, 66 with j <= s
+        3:5 5:4 7:6 9:5 11:3 13:3 15:5 17:2 19:2 21:2 23:2 25:2 27:2 29:2 33:1 35:1 37:1 39:1 41:2 45:1 47:1 49:1 53:1 
+        61:4 65:0 67:0 69:0 73:0 75:0 77:0 79:0 81:0 89:0 91:0 93:1 95:0 97:1 99:0 101:0 103:0 107:4 111:0 113:4 117:0 
+        127:0 129:0 137:1 141:0 143:0 163:0 169:0 177:0 183:0 189:0 191:0 215:0 259:2 273:0 277:0 287:0 303:0 307:0 
+        439:0 493:0 509:0 549:0 
+(4) odd N in [3, 225) that are not D + 2U for any one-vertex source, at any order: [7, 11, 13, 21, 47, 67]
+    number of representations r(N) = #{D : (D, (N - D)/2) a source}, N = 69, 71, ..., 131:
+    5 1 6 2 3 3 4 3 5 3 5 3 4 7 5 7 4 3 6 4 4 5 4 6 7 5 4 9 4 4 12 5
+    least r(N) on [129, 225): 5; mean 8.52; lattice points per line about N/6
+(5) h: number of slopes in [h, 3h/2] / number of integers there (attained h <= 73)
+    1:1/1 3:1/2 5:3/3 9:3/5 11:3/6 13:4/7 15:4/8 17:4/9 19:5/10 23:8/12 25:7/13 27:5/14 29:9/15 31:9/16 33:13/17 
+    35:5/18 37:12/19 39:7/20 41:14/21 43:9/22 45:12/23 47:5/24 49:15/25 51:14/26 53:15/27 55:10/28 57:11/29 59:19/30 
+    61:12/31 63:5/32 65:24/33 67:9/34 69:26/35 71:23/36 73:27/37 
+    h with the whole window [h, 3h/2] in the slope set: [1, 5]
+    mean covered fraction for 37 <= h <= 73: 0.500 (min 0.156, max 0.743)
+ALL CHECKS PASSED

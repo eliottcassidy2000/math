@@ -1,0 +1,15 @@
+m = 79: power iteration (6000 steps, first third discarded): max_k rho(T_k)/2 = 0.76908 at k = 36; min over k = 0.70937; five largest: [0.76908, 0.76845, 0.76669, 0.7652, 0.76323]
+
+real	0m1.617s
+user	0m0.000s
+sys	0m0.046s
+m = 127: power iteration (6000 steps, first third discarded): max_k rho(T_k)/2 = 0.87542 at k = 2; min over k = 0.71025; five largest: [0.87542, 0.86595, 0.86505, 0.86303, 0.84929]
+
+real	0m1.068s
+user	0m0.000s
+sys	0m0.031s
+m = 1039: power iteration (6000 steps, first third discarded): max_k rho(T_k)/2 = 0.76364 at k = 64; min over k = 0.70711; five largest: [0.76364, 0.75719, 0.75613, 0.75456, 0.75194]
+
+real	0m16.779s
+user	0m0.015s
+sys	0m0.030s

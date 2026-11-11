@@ -1,0 +1,3 @@
+order-9 census, D <= 257: 33803 pairs ; not predicted (or predicted only at a larger order): 0 ; predicted with least order <= 9: 33803 ; predicted but absent: 0
+offset 129: 405 slopes in the census of order <= 9
+offset 257: 519 slopes in the census of order <= 9

@@ -1,0 +1,15 @@
+PASS class law: remainder = law of the two deviations (bilinear), sums to 0 [66 instances]
+PASS class law: remainder scales with the product of the two deviations (second order)
+PASS excess of class 0 over the mean of the others = pi1 + pi2 - p^-r + (p/(p-1)) Rhat(0)
+PASS one uniform state: remainder vanishes identically
+PASS both uniform: 1/p + p^-r([c = 0] - 1/p), positive in every class
+PASS degenerate form (rank 1) does not satisfy the uniform law (nondegeneracy is needed) : [Fraction(5, 9), Fraction(2, 9), Fraction(2, 9)]
+PASS (psi, h, floor(h/2), 1) is mapped by two integer matrices, one per binary digit (h < 4096)
+PASS x <= y, x odd, y odd, y/2 < x (h < 4096)
+PASS a self-join x^2 + 2^s y^2 - [s = 0] is never 7 (mod 8) : [1, 3, 5]
+PASS 30 primes 4q - 1 < 3000 with q prime; F1 misses 7, 43, 67, 163, 211, 547, 1171, 1723 : 30 candidates, missed [7, 43, 67, 163, 211, 547, 1171, 1723]
+PASS r_F1(11) = 2, r_F1(19) = 4, r_F1(7) = r_F1(21) = 0 : (2, 4, 0, 0)
+     odd N < 200 missed by F1: [7, 13, 21, 41, 43, 55, 67, 77, 83, 105, 109, 131, 133, 147, 163, 173, 175, 177, 193]
+PASS F1: sheet s = 0 is D - E + U with E = 1, sheets s >= 1 are D + 2^s U, and U >= D
+
+ALL VERIFIER CHECKS PASSED

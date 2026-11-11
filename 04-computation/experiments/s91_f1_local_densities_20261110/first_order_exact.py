@@ -8,8 +8,8 @@ Among the triples (h1, h2, s) of a sheet with N <= X, with c_s the distinguished
 (2f = F_small + F_large; the two forms differ by ([c = c_s] - 1/p)(F_large - 1/p^2), and F_large -> 1/p^2 at the
 mixing rate).  THM-5128 (C) says both remainders are O(X^-delta).  This script enumerates all triples for X = 2^K
 and prints, per sheet and prime: F_small p^2, F_large p^2 and  p max_c |R_sym(c)|,  p max_c |R_small(c)|  with the
-sampling scale sqrt(p / #triples).  It also prints the same for the modulus 15 (product law, symmetric form with
-the exact four-way split of the divisibility pattern of the smaller state).
+sampling scale sqrt(p / #triples).  (The squarefree product law of THM-5128 (C) is not checked by this script;
+the independent audit checked it at several squarefree moduli: audit/recompute-5128/a11_squarefree.out.)
 
 Checked (exit code): every triple with a p-divisible state lies in the distinguished class (exact);
 p max|R_sym| < 0.005 at p = 5 for the largest X; and at the largest X the symmetric remainder is not larger than the

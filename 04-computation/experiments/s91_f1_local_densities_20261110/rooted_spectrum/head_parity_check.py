@@ -12,7 +12,7 @@ So the bare apex closes only the qualifying paths with an even number of vertice
 of a tail removes the parity condition.  (The first identity is Session261's marked odd-cycle formula at a
 one-vertex out-neighbourhood combined with the pendant law of THM-4865 / THM-5126 (A).)
 
-Checks (FINITE-EXACT, every root of every isomorphism class of order <= 8, 55,839 rooted tournaments):
+Checks (FINITE-EXACT, every root of every isomorphism class of order <= 8, 58,653 rooted tournaments):
   * E = U_odd - U_even;
   * H(B + z) computed by its own subset DP equals D + 2 U_even, for every class of order <= 6 and every root;
   * the four attained numbers that are not two-step values, 11, 13, 47, 67, are head values D - E + U: the least

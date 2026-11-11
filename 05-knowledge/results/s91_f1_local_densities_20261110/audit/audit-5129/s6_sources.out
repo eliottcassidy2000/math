@@ -1,0 +1,27 @@
+s = 7: order 9, valid tournament: True, strong: True, scores [6, 3, 2, 2, 3, 5, 7, 7, 1]
+   literal (all 362880 permutations): H(B) = 129, E(y) = 42, U_even = 51, U_odd = 93, U = 144
+   subset programme:            H(B) = 129, E(y) = 42, U = 144 ; claimed (D, U) = (129, 144) ; match: True
+   U = 9 * 2^4 ; grid: N(9, r, 7) = 1 + 2^7 + 9 * 2^(r+7) needs t = r + 7 - 4 >= 1
+   head H(B + z) = 231 ; D - E + U = 231 ; D + 2 U_even = 231
+   t = 1: H(closed tournament, order 11) = 417 ; D + 2^t U = 417 ; equal: True
+   t = 2: H(closed tournament, order 12) = 705 ; D + 2^t U = 705 ; equal: True
+   t = 3: H(closed tournament, order 13) = 1281 ; D + 2^t U = 1281 ; equal: True
+   slopes at all roots of this base: [606, 198, 168, 147, 318, 690, 1398, 1362, 144]
+s = 8: order 8, valid tournament: True, strong: True, scores [3, 2, 2, 4, 4, 5, 6, 2]
+   literal (all 40320 permutations): H(B) = 257, E(y) = 64, U_even = 112, U_odd = 176, U = 288
+   subset programme:            H(B) = 257, E(y) = 64, U = 288 ; claimed (D, U) = (257, 288) ; match: True
+   U = 9 * 2^5 ; grid: N(9, r, 8) = 1 + 2^8 + 9 * 2^(r+8) needs t = r + 8 - 5 >= 1
+   head H(B + z) = 481 ; D - E + U = 481 ; D + 2 U_even = 481
+   t = 1: H(closed tournament, order 10) = 833 ; D + 2^t U = 833 ; equal: True ; literal over 10! permutations: 833
+   t = 2: H(closed tournament, order 11) = 1409 ; D + 2^t U = 1409 ; equal: True
+   t = 3: H(closed tournament, order 12) = 2561 ; D + 2^t U = 2561 ; equal: True
+   slopes at all roots of this base: [313, 320, 332, 573, 655, 603, 1083, 288]
+s = 9: order 9, valid tournament: True, strong: True, scores [4, 4, 2, 3, 4, 5, 6, 7, 1]
+   literal (all 362880 permutations): H(B) = 513, E(y) = 212, U_even = 182, U_odd = 394, U = 576
+   subset programme:            H(B) = 513, E(y) = 212, U = 576 ; claimed (D, U) = (513, 576) ; match: True
+   U = 9 * 2^6 ; grid: N(9, r, 9) = 1 + 2^9 + 9 * 2^(r+9) needs t = r + 9 - 6 >= 1
+   head H(B + z) = 877 ; D - E + U = 877 ; D + 2 U_even = 877
+   t = 1: H(closed tournament, order 11) = 1665 ; D + 2^t U = 1665 ; equal: True
+   t = 2: H(closed tournament, order 12) = 2817 ; D + 2^t U = 2817 ; equal: True
+   t = 3: H(closed tournament, order 13) = 5121 ; D + 2^t U = 5121 ; equal: True
+   slopes at all roots of this base: [897, 1030, 527, 964, 1341, 1758, 2323, 3139, 576]

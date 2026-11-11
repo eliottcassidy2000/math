@@ -1,0 +1,106 @@
+order 7: pairs from the class list 2378, from all 2^21 labelled tournaments 2378, equal: True
+order 1: 1 distinct pairs (D,U); contained in the pairs of order 2: True
+order 2: 2 distinct pairs (D,U); contained in the pairs of order 3: True
+order 3: 4 distinct pairs (D,U); contained in the pairs of order 4: True
+order 4: 11 distinct pairs (D,U); contained in the pairs of order 5: True
+order 5: 38 distinct pairs (D,U); contained in the pairs of order 6: True
+order 6: 227 distinct pairs (D,U); contained in the pairs of order 7: True
+order 7: 2378 distinct pairs (D,U); contained in the pairs of order 8: True
+order 8: 43015 distinct pairs (D,U); contained in the pairs of order 9: True
+order 9: 1273591 distinct pairs
+
+== r_m(N) against the exact r(N), odd N in [3, 225) ==
+r_7 (a): exceeds exact r at 0 values; equals exact r at 81 of 111; zeros below 129: [7, 11, 13, 21, 47, 67]
+r_7 (b): exceeds exact r at 0 values; equals exact r at 70 of 111; zeros below 129: [7, 11, 13, 21, 47, 67]
+r_8 (a): exceeds exact r at 0 values; equals exact r at 107 of 111; zeros below 129: [7, 11, 13, 21, 47, 67]
+r_8 (b): exceeds exact r at 0 values; equals exact r at 104 of 111; zeros below 129: [7, 11, 13, 21, 47, 67]
+r_9 (a): exceeds exact r at 0 values; equals exact r at 111 of 111; zeros below 129: [7, 11, 13, 21, 47, 67]
+r_9 (b): exceeds exact r at 0 values; equals exact r at 111 of 111; zeros below 129: [7, 11, 13, 21, 47, 67]
+
+== blocks: min r_m (at N), median, share = sum r / sum lattice points ==
+r_7 (a):
+   [2^6, 2^7): min 0 (N = 67), median 4.0, share 0.2631, mean of r/L 0.2627, #N with r = 0: 1
+   [2^7, 2^8): min 3 (N = 231), median 8.0, share 0.2496, mean of r/L 0.2540, #N with r = 0: 0
+   [2^8, 2^9): min 4 (N = 259), median 12.5, share 0.1962, mean of r/L 0.1999, #N with r = 0: 0
+   [2^9, 2^10): min 2 (N = 851), median 9.0, share 0.0707, mean of r/L 0.0770, #N with r = 0: 0
+   [2^10, 2^11): min 0 (N = 1439), median 4.0, share 0.0167, mean of r/L 0.0181, #N with r = 0: 6
+   [2^11, 2^12): min 0 (N = 2131), median 2.0, share 0.0040, mean of r/L 0.0043, #N with r = 0: 98
+   [2^12, 2^13): min 0 (N = 4099), median 1.0, share 0.0010, mean of r/L 0.0011, #N with r = 0: 663
+   [2^13, 2^14): min 0 (N = 8199), median 0.0, share 0.0002, mean of r/L 0.0003, #N with r = 0: 2357
+   [2^14, 2^15): min 0 (N = 16387), median 0.0, share 0.0001, mean of r/L 0.0001, #N with r = 0: 6224
+r_7 (b):
+   [2^6, 2^7): min 0 (N = 67), median 4.0, share 0.2592, mean of r/L 0.2594, #N with r = 0: 1
+   [2^7, 2^8): min 3 (N = 199), median 7.0, share 0.2132, mean of r/L 0.2203, #N with r = 0: 0
+   [2^8, 2^9): min 3 (N = 259), median 8.0, share 0.1360, mean of r/L 0.1403, #N with r = 0: 0
+   [2^9, 2^10): min 0 (N = 749), median 1.0, share 0.0193, mean of r/L 0.0242, #N with r = 0: 105
+   [2^10, 2^11): min 0 (N = 1025), median 0.0, share 0.0000, mean of r/L 0.0000, #N with r = 0: 512
+   [2^11, 2^12): min 0 (N = 2049), median 0.0, share 0.0000, mean of r/L 0.0000, #N with r = 0: 1024
+   [2^12, 2^13): min 0 (N = 4097), median 0.0, share 0.0000, mean of r/L 0.0000, #N with r = 0: 2048
+   [2^13, 2^14): min 0 (N = 8193), median 0.0, share 0.0000, mean of r/L 0.0000, #N with r = 0: 4096
+   [2^14, 2^15): min 0 (N = 16385), median 0.0, share 0.0000, mean of r/L 0.0000, #N with r = 0: 8192
+r_8 (a):
+   [2^6, 2^7): min 0 (N = 67), median 4.0, share 0.2689, mean of r/L 0.2678, #N with r = 0: 1
+   [2^7, 2^8): min 5 (N = 131), median 9.0, share 0.2895, mean of r/L 0.2906, #N with r = 0: 0
+   [2^8, 2^9): min 7 (N = 259), median 20.0, share 0.3059, mean of r/L 0.3055, #N with r = 0: 0
+   [2^9, 2^10): min 20 (N = 547), median 36.0, share 0.2868, mean of r/L 0.2881, #N with r = 0: 0
+   [2^10, 2^11): min 37 (N = 1151), median 60.0, share 0.2350, mean of r/L 0.2411, #N with r = 0: 0
+   [2^11, 2^12): min 18 (N = 3911), median 39.0, share 0.0827, mean of r/L 0.0902, #N with r = 0: 0
+   [2^12, 2^13): min 5 (N = 7295), median 19.0, share 0.0194, mean of r/L 0.0210, #N with r = 0: 0
+   [2^13, 2^14): min 1 (N = 13979), median 9.0, share 0.0047, mean of r/L 0.0051, #N with r = 0: 0
+   [2^14, 2^15): min 0 (N = 22229), median 5.0, share 0.0011, mean of r/L 0.0012, #N with r = 0: 36
+r_8 (b):
+   [2^6, 2^7): min 0 (N = 67), median 4.0, share 0.2689, mean of r/L 0.2678, #N with r = 0: 1
+   [2^7, 2^8): min 5 (N = 131), median 9.0, share 0.2861, mean of r/L 0.2874, #N with r = 0: 0
+   [2^8, 2^9): min 7 (N = 259), median 18.0, share 0.2817, mean of r/L 0.2828, #N with r = 0: 0
+   [2^9, 2^10): min 15 (N = 547), median 30.0, share 0.2348, mean of r/L 0.2378, #N with r = 0: 0
+   [2^10, 2^11): min 25 (N = 1927), median 41.0, share 0.1598, mean of r/L 0.1666, #N with r = 0: 0
+   [2^11, 2^12): min 0 (N = 3143), median 6.0, share 0.0214, mean of r/L 0.0270, #N with r = 0: 268
+   [2^12, 2^13): min 0 (N = 4097), median 0.0, share 0.0000, mean of r/L 0.0000, #N with r = 0: 2045
+   [2^13, 2^14): min 0 (N = 8193), median 0.0, share 0.0000, mean of r/L 0.0000, #N with r = 0: 4096
+   [2^14, 2^15): min 0 (N = 16385), median 0.0, share 0.0000, mean of r/L 0.0000, #N with r = 0: 8192
+r_9 (a):
+   [2^6, 2^7): min 0 (N = 67), median 4.0, share 0.2689, mean of r/L 0.2678, #N with r = 0: 1
+   [2^7, 2^8): min 5 (N = 131), median 9.0, share 0.2933, mean of r/L 0.2939, #N with r = 0: 0
+   [2^8, 2^9): min 7 (N = 259), median 22.0, share 0.3340, mean of r/L 0.3315, #N with r = 0: 0
+   [2^9, 2^10): min 23 (N = 521), median 46.0, share 0.3651, mean of r/L 0.3632, #N with r = 0: 0
+   [2^10, 2^11): min 54 (N = 1027), median 108.0, share 0.4153, mean of r/L 0.4139, #N with r = 0: 0
+   [2^11, 2^12): min 120 (N = 2101), median 212.0, share 0.4165, mean of r/L 0.4165, #N with r = 0: 0
+   [2^12, 2^13): min 267 (N = 4117), median 385.0, share 0.3664, mean of r/L 0.3728, #N with r = 0: 0
+   [2^13, 2^14): min 192 (N = 15427), median 303.5, share 0.1518, mean of r/L 0.1647, #N with r = 0: 0
+   [2^14, 2^15): min 82 (N = 32615), median 138.0, share 0.0357, mean of r/L 0.0389, #N with r = 0: 0
+r_9 (b):
+   [2^6, 2^7): min 0 (N = 67), median 4.0, share 0.2689, mean of r/L 0.2678, #N with r = 0: 1
+   [2^7, 2^8): min 5 (N = 131), median 9.0, share 0.2933, mean of r/L 0.2939, #N with r = 0: 0
+   [2^8, 2^9): min 7 (N = 259), median 22.0, share 0.3313, mean of r/L 0.3291, #N with r = 0: 0
+   [2^9, 2^10): min 23 (N = 521), median 44.0, share 0.3486, mean of r/L 0.3479, #N with r = 0: 0
+   [2^10, 2^11): min 50 (N = 1027), median 98.0, share 0.3778, mean of r/L 0.3779, #N with r = 0: 0
+   [2^11, 2^12): min 104 (N = 2101), median 175.0, share 0.3451, mean of r/L 0.3473, #N with r = 0: 0
+   [2^12, 2^13): min 204 (N = 4187), median 274.0, share 0.2647, mean of r/L 0.2721, #N with r = 0: 0
+   [2^13, 2^14): min 0 (N = 15451), median 101.0, share 0.0562, mean of r/L 0.0675, #N with r = 0: 3
+   [2^14, 2^15): min 0 (N = 16561), median 0.0, share 0.0000, mean of r/L 0.0000, #N with r = 0: 7737
+
+== L1: odd N in [129, 2^14) with r_m(N) < N/64 ==
+r_7 (a): 7858 violations (least 231, largest 16383)
+r_7 (b): 7955 violations (least 199, largest 16383)
+r_8 (a): 6776 violations (least 2563, largest 16383)
+r_8 (b): 7125 violations (least 1911, largest 16383)
+r_9 (a): 758 violations (least 14239, largest 16383)
+r_9 (b): 2814 violations (least 10495, largest 16383)
+
+== r_m(N) >= 1 on odd N in [69, 32767] ==
+r_7 (a): 9348 values with r_m = 0 (least 1439)
+r_7 (b): 15977 values with r_m = 0 (least 749)
+r_8 (a): 36 values with r_m = 0 (least 22229)
+r_8 (b): 14601 values with r_m = 0 (least 3143)
+r_9 (a): 0 values with r_m = 0
+r_9 (b): 7740 values with r_m = 0 (least 15451)
+
+== values at the N named in the table of (F) ==
+N =   131: N/64 =    2.05 ; r_7(a) = 5 ; r_7(b) = 5 ; r_8(a) = 5 ; r_8(b) = 5 ; r_9(a) = 5 ; r_9(b) = 5
+N =   259: N/64 =    4.05 ; r_7(a) = 4 ; r_7(b) = 3 ; r_8(a) = 7 ; r_8(b) = 7 ; r_9(a) = 7 ; r_9(b) = 7
+N =   521: N/64 =    8.14 ; r_7(a) = 11 ; r_7(b) = 5 ; r_8(a) = 22 ; r_8(b) = 19 ; r_9(a) = 23 ; r_9(b) = 23
+N =  1027: N/64 =   16.05 ; r_7(a) = 6 ; r_7(b) = 0 ; r_8(a) = 44 ; r_8(b) = 33 ; r_9(a) = 54 ; r_9(b) = 50
+N =  2101: N/64 =   32.83 ; r_7(a) = 1 ; r_7(b) = 0 ; r_8(a) = 56 ; r_8(b) = 30 ; r_9(a) = 120 ; r_9(b) = 104
+N =  4109: N/64 =   64.20 ; r_7(a) = 1 ; r_7(b) = 0 ; r_8(a) = 28 ; r_8(b) = 0 ; r_9(a) = 276 ; r_9(b) = 224
+N =  8203: N/64 =  128.17 ; r_7(a) = 1 ; r_7(b) = 0 ; r_8(a) = 14 ; r_8(b) = 0 ; r_9(a) = 405 ; r_9(b) = 265
+N = 16447: N/64 =  256.98 ; r_7(a) = 0 ; r_7(b) = 0 ; r_8(a) = 9 ; r_8(b) = 0 ; r_9(a) = 215 ; r_9(b) = 4

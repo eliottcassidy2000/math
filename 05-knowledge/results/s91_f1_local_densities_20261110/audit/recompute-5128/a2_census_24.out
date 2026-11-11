@@ -1,0 +1,19 @@
+# B = 24: tables for h < 5592409 built in 0.4 s
+# enumeration done in 1.8 s
+# violations (triples with a p-divisible state outside the distinguished class): 0
+# cumulative ordered triples with N < 2^b:  b  sheet0  sheet1
+  10          1200          1423
+  11          2629          3148
+  12          5705          6876
+  13         12312         14973
+  14         26459         32367
+  15         56571         69522
+  16        120564        148622
+  17        255823        316595
+  18        540939        671731
+  19       1140617       1420668
+  20       2398262       2995785
+  21       5031319       6300586
+  22      10532579      13218857
+  23      22004074      27673487
+  24      45886662      57818155

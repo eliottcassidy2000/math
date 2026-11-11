@@ -1,0 +1,3 @@
+census_one against tables/root_stats on 300 random tournaments of order 10: 0 mismatches
+literal (10! permutations) on the last one: H 7931 vs 7931 ; U equal at all roots: True
+time per tournament of order 10: 27.2 microseconds

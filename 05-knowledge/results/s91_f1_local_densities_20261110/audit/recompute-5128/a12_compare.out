@@ -1,0 +1,159 @@
+== (B) rates max_k rho(T_k)/2 ==
+  OK   m = 3: quoted 0.8660, recomputed 0.866025
+  OK   m = 5: quoted 0.7418, recomputed 0.741760
+  OK   m = 7: quoted 0.9320, recomputed 0.932039
+  OK   m = 11: quoted 0.8587, recomputed 0.858710
+  OK   m = 13: quoted 0.8272, recomputed 0.827243
+  OK   m = 17: quoted 0.8289, recomputed 0.828856
+  OK   m = 19: quoted 0.8053, recomputed 0.805253
+  OK   m = 23: quoted 0.7931, recomputed 0.793054
+  OK   m = 31: quoted 0.9002, recomputed 0.900219
+  OK   m = 43: quoted 0.8342, recomputed 0.834248
+  OK   m = 73: quoted 0.8516, recomputed 0.851574
+  OK   m = 127: quoted 0.8754, recomputed 0.875417
+  OK   m = 29: quoted 0.7894, recomputed 0.789449
+  other primes up to 89: min 0.769084 (m = 79), max 0.805970 (m = 37); quoted range [0.776, 0.806]: DIFF
+  OK   theta_3/2 (with rho_p = the spectral rate): quoted 0.073, recomputed 0.07333
+  OK   theta_5/2 (with rho_p = the spectral rate): quoted 0.116, recomputed 0.11573
+  OK   theta_7/2 (with rho_p = the spectral rate): quoted 0.042, recomputed 0.04220
+== (C) VERIFIED parenthetical: p * max_c |remainder| of the form with 2f - 1/p^2 ('symmetric') ==
+  OK   X = 2^26, p = 5, sheet 0: quoted 0.0003, recomputed 0.000303
+  OK   X = 2^26, p = 5, sheet 1: quoted 0.0002, recomputed 0.000189
+  OK   X = 2^26, p = 17, sheet 0: quoted 0.002, recomputed 0.00242
+  OK   X = 2^26, p = 17, sheet 1: quoted 0.002, recomputed 0.00216
+  OK   X = 2^26, p = 13, sheet 0: quoted 0.004, recomputed 0.00367
+  OK   X = 2^26, p = 13, sheet 1: quoted 0.004, recomputed 0.00375
+  OK   X = 2^26, p = 3, sheet 0: quoted 0.009, recomputed 0.00923
+  OK   X = 2^26, p = 3, sheet 1: quoted 0.007, recomputed 0.00685
+  OK   X = 2^26, p = 31, sheet 0: quoted 0.011, recomputed 0.01103
+  OK   X = 2^26, p = 31, sheet 1: quoted 0.008, recomputed 0.00772
+  OK   X = 2^26, p = 7, sheet 0: quoted 0.059, recomputed 0.05924
+  OK   X = 2^26, p = 7, sheet 1: quoted 0.044, recomputed 0.04384
+  OK   X = 2^28, p = 5, sheet 0: quoted 0.00013, recomputed 0.0001270
+  DIFF X = 2^28, p = 5, sheet 1: quoted 0.00013, recomputed 0.0001404
+  DIFF X = 2^28, p = 17, sheet 0: quoted 0.0013, recomputed 0.001198
+  DIFF X = 2^28, p = 17, sheet 1: quoted 0.0013, recomputed 0.001367
+  DIFF X = 2^28, p = 13, sheet 0: quoted 0.002, recomputed 0.00261
+  OK   X = 2^28, p = 13, sheet 1: quoted 0.002, recomputed 0.00191
+  OK   X = 2^28, p = 3, sheet 0: quoted 0.014, recomputed 0.01353
+  OK   X = 2^28, p = 3, sheet 1: quoted 0.008, recomputed 0.00842
+  OK   X = 2^28, p = 31, sheet 0: quoted 0.009, recomputed 0.00859
+  OK   X = 2^28, p = 31, sheet 1: quoted 0.006, recomputed 0.00592
+  OK   X = 2^28, p = 7, sheet 0: quoted 0.053, recomputed 0.05308
+  OK   X = 2^28, p = 7, sheet 1: quoted 0.049, recomputed 0.04935
+  OK   X = 2^26, p = 7: form with F_small ('one-sided'), sheet 0: quoted 0.117, recomputed 0.11705
+  OK   X = 2^26, p = 7: F_large p^2, sheet 0: quoted 1.47, recomputed 1.4720
+   the form of (C2) as stated (F_small), p * max_c |remainder|, sheets 0 / 1:
+     X = 2^26: p = 5: 0.0019 / 0.0021; p = 17: 0.0032 / 0.0021; p = 13: 0.0040 / 0.0064; p = 3: 0.0175 / 0.0110; p = 31: 0.0076 / 0.0074; p = 7: 0.1170 / 0.1163
+     X = 2^28: p = 5: 0.0014 / 0.0019; p = 17: 0.0016 / 0.0022; p = 13: 0.0026 / 0.0026; p = 3: 0.0171 / 0.0148; p = 31: 0.0063 / 0.0054; p = 7: 0.0791 / 0.0926
+== (D4) census values (F_small - 1/p^2) #T / (2X) at X = 2^28 ==
+  OK   p = 5, sheet 0: quoted 0.0300, recomputed 0.030025
+  OK   p = 5, sheet 1: quoted 0.0434, recomputed 0.043408
+  OK   p = 17, sheet 0: quoted 0.0138, recomputed 0.013819
+  OK   p = 17, sheet 1: quoted 0.0197, recomputed 0.019707
+  OK   p = 11, sheet 0: quoted 0.0118, recomputed 0.011763
+  OK   p = 11, sheet 1: quoted 0.0155, recomputed 0.015529
+  OK   p = 13, sheet 0: quoted -0.0035, recomputed -0.003532
+  OK   p = 13, sheet 1: quoted -0.0044, recomputed -0.004432
+  OK   p = 31, sheet 0: quoted -0.0017, recomputed -0.001656
+  OK   p = 31, sheet 1: quoted -0.0021, recomputed -0.002100
+  OK   p = 7, sheet 0: quoted -0.005, recomputed -0.00456
+  OK   p = 7, sheet 1: quoted -0.010, recomputed -0.01044
+== (D4) A_p, partial sums over the states below 2^26 ==
+  DIFF A_3^0 (partial sum at 2^26): quoted 0.0557, recomputed 0.055650
+  OK   A_3^1 (partial sum at 2^26): quoted 0.0789, recomputed 0.078865
+  OK   A_5^0 (partial sum at 2^26): quoted 0.02943, recomputed 0.0294252
+  OK   A_5^1 (partial sum at 2^26): quoted 0.04250, recomputed 0.0424957
+  OK   A_7^0 (partial sum at 2^26): quoted 0.006, recomputed 0.00578
+  OK   A_7^1 (partial sum at 2^26): quoted 0.007, recomputed 0.00655
+  OK   A_11^0 (partial sum at 2^26): quoted 0.01096, recomputed 0.0109617
+  OK   A_11^1 (partial sum at 2^26): quoted 0.01449, recomputed 0.0144907
+  OK   A_13^0 (partial sum at 2^26): quoted -0.00377, recomputed -0.0037721
+  OK   A_13^1 (partial sum at 2^26): quoted -0.00488, recomputed -0.0048783
+  OK   A_17^0 (partial sum at 2^26): quoted 0.01355, recomputed 0.0135541
+  OK   A_17^1 (partial sum at 2^26): quoted 0.01931, recomputed 0.0193062
+  OK   A_31^0 (partial sum at 2^26): quoted -0.00194, recomputed -0.0019414
+  OK   A_31^1 (partial sum at 2^26): quoted -0.00261, recomputed -0.0026051
+  OK   A_43^0 (partial sum at 2^26): quoted 0.00235, recomputed 0.0023482
+  OK   A_43^1 (partial sum at 2^26): quoted 0.00323, recomputed 0.0032272
+== (D1) counts: two-point slopes at the top of the range against kappa ==
+  OK   kappa_0 from T(2^28), T(2^27): quoted 0.16154, recomputed 0.1615410
+  OK   kappa_0 from T(2^24), T(2^23): quoted 0.1615, recomputed 0.161536
+  OK   kappa_1 from T(2^28), T(2^27): quoted 0.21251, recomputed 0.2125132
+  OK   kappa_1 from T(2^24), T(2^23): quoted 0.2125, recomputed 0.212500
+== (G) window [2^24, 2^27): E measured ==
+  OK   E measured, p = 5, sheet 0: quoted 0.3130, recomputed 0.312988
+  OK   E measured, p = 5, sheet 1: quoted 0.3280, recomputed 0.327989
+  OK   E measured, p = 11, sheet 0: quoted 0.1690, recomputed 0.168993
+  OK   E measured, p = 11, sheet 1: quoted 0.1707, recomputed 0.170737
+  OK   E measured, p = 17, sheet 0: quoted 0.2107, recomputed 0.210672
+  OK   E measured, p = 17, sheet 1: quoted 0.2296, recomputed 0.229600
+  OK   E measured, p = 19, sheet 0: quoted 0.0510, recomputed 0.051031
+  OK   E measured, p = 19, sheet 1: quoted 0.0495, recomputed 0.049458
+  OK   E measured, p = 29, sheet 0: quoted 0.0051, recomputed 0.005068
+  OK   E measured, p = 29, sheet 1: quoted 0.0020, recomputed 0.002026
+  OK   E measured, p = 43, sheet 0: quoted 0.0885, recomputed 0.088470
+  OK   E measured, p = 43, sheet 1: quoted 0.0930, recomputed 0.093036
+  OK   E measured, p = 257, sheet 0: quoted 0.1859, recomputed 0.185929
+  OK   E measured, p = 257, sheet 1: quoted 0.2023, recomputed 0.202289
+  OK   E measured, p = 2731, sheet 0: quoted 0.063, recomputed 0.06291
+  OK   E measured, p = 2731, sheet 1: quoted 0.075, recomputed 0.07459
+  OK   E measured, p = 65537, sheet 0: quoted 0.144, recomputed 0.14402
+  OK   E measured, p = 65537, sheet 1: quoted 0.168, recomputed 0.16826
+  OK   E measured, p = 3, sheet 0: quoted 0.539, recomputed 0.53916
+  OK   E measured, p = 3, sheet 1: quoted 0.544, recomputed 0.54448
+  OK   E measured, p = 7, sheet 0: quoted 0.233, recomputed 0.23273
+  OK   E measured, p = 7, sheet 1: quoted 0.230, recomputed 0.22966
+  OK   E measured, p = 13, sheet 0: quoted 0.0441, recomputed 0.044084
+  OK   E measured, p = 13, sheet 1: quoted 0.0446, recomputed 0.044575
+  OK   E measured, p = 31, sheet 0: quoted 0.0041, recomputed 0.004107
+  OK   E measured, p = 31, sheet 1: quoted -0.0038, recomputed -0.003760
+  OK   mass per odd N, measured: quoted 14.1405, recomputed 14.140513
+== (G) window [2^24, 2^27): E predicted by the rule W ==
+  OK   mass per odd N, predicted: quoted 14.1417, recomputed 14.141671
+  OK   E predicted, p = 3, sheet 0: quoted 0.515, recomputed 0.51461
+  OK   E predicted, p = 3, sheet 1: quoted 0.532, recomputed 0.53172
+  OK   E predicted, p = 5, sheet 0: quoted 0.3120, recomputed 0.312013
+  OK   E predicted, p = 5, sheet 1: quoted 0.3284, recomputed 0.328352
+  OK   E predicted, p = 7, sheet 0: quoted 0.174, recomputed 0.17360
+  OK   E predicted, p = 7, sheet 1: quoted 0.175, recomputed 0.17549
+  OK   E predicted, p = 11, sheet 0: quoted 0.1705, recomputed 0.170453
+  OK   E predicted, p = 11, sheet 1: quoted 0.1749, recomputed 0.174864
+  OK   E predicted, p = 13, sheet 0: quoted 0.0459, recomputed 0.045943
+  OK   E predicted, p = 13, sheet 1: quoted 0.0448, recomputed 0.044787
+  OK   E predicted, p = 17, sheet 0: quoted 0.2081, recomputed 0.208063
+  OK   E predicted, p = 17, sheet 1: quoted 0.2288, recomputed 0.228823
+  OK   E predicted, p = 19, sheet 0: quoted 0.0511, recomputed 0.051123
+  OK   E predicted, p = 19, sheet 1: quoted 0.0497, recomputed 0.049667
+  OK   E predicted, p = 29, sheet 0: quoted 0.0032, recomputed 0.003211
+  OK   E predicted, p = 29, sheet 1: quoted 0.0007, recomputed 0.000676
+  OK   E predicted, p = 31, sheet 0: quoted -0.0061, recomputed -0.006110
+  OK   E predicted, p = 31, sheet 1: quoted -0.0089, recomputed -0.008872
+  OK   E predicted, p = 43, sheet 0: quoted 0.0877, recomputed 0.087731
+  OK   E predicted, p = 43, sheet 1: quoted 0.0941, recomputed 0.094109
+  OK   E predicted, p = 257, sheet 0: quoted 0.1815, recomputed 0.181524
+  OK   E predicted, p = 257, sheet 1: quoted 0.2044, recomputed 0.204363
+  OK   E predicted, p = 2731, sheet 0: quoted 0.061, recomputed 0.06085
+  OK   E predicted, p = 2731, sheet 1: quoted 0.069, recomputed 0.06853
+  OK   E predicted, p = 65537, sheet 0: quoted 0.183, recomputed 0.18317
+  OK   E predicted, p = 65537, sheet 1: quoted 0.206, recomputed 0.20633
+   per sheet: predicted 6.2819, 7.8598; measured 6.2379, 7.9026; predicted/measured - 1 = +0.70 %, -0.54 %
+== README section 1 table: generic limit p (1/p^2) / (1 - 1/p^2) ==
+  OK   generic limit, p = 3: quoted 0.375, recomputed 0.37500
+  OK   generic limit, p = 5: quoted 0.208, recomputed 0.20833
+  OK   generic limit, p = 7: quoted 0.146, recomputed 0.14583
+  OK   generic limit, p = 11: quoted 0.092, recomputed 0.09167
+  OK   generic limit, p = 13: quoted 0.077, recomputed 0.07738
+  OK   generic limit, p = 17: quoted 0.059, recomputed 0.05903
+  OK   generic limit, p = 19: quoted 0.053, recomputed 0.05278
+  DIFF generic limit, p = 29: quoted 0.034, recomputed 0.03452
+  OK   generic limit, p = 31: quoted 0.032, recomputed 0.03229
+  OK   generic limit, p = 43: quoted 0.023, recomputed 0.02327
+  OK   generic limit, p = 257: quoted 0.004, recomputed 0.00389
+  OK   generic limit, p = 65537: quoted 0.00002, recomputed 0.0000153
+
+134 quoted numbers reproduced at their own precision; 7 flagged DIFF
+
+real	0m28.236s
+user	0m0.015s
+sys	0m0.015s

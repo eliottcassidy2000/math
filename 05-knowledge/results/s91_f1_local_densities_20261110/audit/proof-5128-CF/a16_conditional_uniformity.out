@@ -1,0 +1,16 @@
+h1=0 s=0 G=4826517
+   share of y2 = 1,3,5,7 mod 8: [0.2243 0.2576 0.2398 0.2782]   (uniform would be 0.25 each)
+   max over y-classes of |P(x2 = a | y2) - 1/4|: 0.00142   (sqrt(1/G) = 0.00046)
+   N mod 16 on odd classes, max rel dev: 0.00262
+h1=1 s=0 G=1608828
+   share of y2 = 1,3,5,7 mod 8: [0.2243 0.2576 0.2398 0.2782]   (uniform would be 0.25 each)
+   max over y-classes of |P(x2 = a | y2) - 1/4|: 0.00176   (sqrt(1/G) = 0.00079)
+   N mod 16 on odd classes, max rel dev: 0.00317
+h1=5 s=1 G=292374
+   share of y2 = 1,3,5,7 mod 8: [0.2357 0.2545 0.2447 0.2651]   (uniform would be 0.25 each)
+   max over y-classes of |P(x2 = a | y2) - 1/4|: 0.00315   (sqrt(1/G) = 0.00185)
+   N mod 16 on odd classes, max rel dev: 0.00786
+h1=37 s=2 G=24667
+   share of y2 = 1,3,5,7 mod 8: [0.2428 0.2522 0.2476 0.2574]   (uniform would be 0.25 each)
+   max over y-classes of |P(x2 = a | y2) - 1/4|: 0.01148   (sqrt(1/G) = 0.00637)
+   N mod 16 on odd classes, max rel dev: 0.03223

@@ -1,0 +1,80 @@
+# census of [2^27, 2^28) done in 24.6 s; triples sheet 0 442236323, sheet 1 561401507; violations of confinement 0
+# relative variance used for the measured-variance se: 0.4219, 0.3682; mass per odd N: measured 14.95537, predicted 14.95653; sheets measured 6.5898, 8.3655, predicted 6.6338, 8.3227
+== tests with the registered rule (se = sqrt(0.75 p / #odd N), 4 se) ==
+  A: 3 items, 0 outside -> CONFIRMED;  tightest: sheet 0: deviation 0.00663 of tolerance 0.02000 (33 %)
+  B: 18 items, 0 outside -> CONFIRMED;  tightest: h1=1024 sheet 0: deviation 0.00012 of tolerance 0.00500 (2 %)
+  C: 68 items, 0 outside -> CONFIRMED;  tightest: p=257 sheet 0: deviation 0.00684 of tolerance 0.03725 (18 %)
+  D: 64 items, 0 outside -> CONFIRMED;  tightest: p=43691 sheet 1: deviation 0.01780 of tolerance 0.10158 (18 %)
+  E: 10 items, 0 outside -> CONFIRMED;  tightest: p=7 sheet 1: deviation 0.04344 of tolerance 0.15000 (29 %)
+  F: 18 items, 0 outside -> CONFIRMED;  tightest: p=65521 sheet 1: deviation 0.02896 of tolerance 0.11624 (25 %)
+  G: 52 items, 0 outside -> CONFIRMED;  tightest: p=109 sheet 0: deviation 0.00219 of tolerance 0.01641 (13 %)
+  H: 46 items, 0 outside -> CONFIRMED;  smallest margin: p=37 sheet 0 E=+0.0094 (margin 0.0106)
+  total items: 279
+== tests with se from the measured relative variance (0.446 / 0.390), 4 se ==
+  A: 3 items, 0 outside -> CONFIRMED;  tightest: sheet 0: deviation 0.00663 of tolerance 0.02000 (33 %)
+  B: 18 items, 0 outside -> CONFIRMED;  tightest: h1=1024 sheet 0: deviation 0.00012 of tolerance 0.00500 (2 %)
+  C: 68 items, 0 outside -> CONFIRMED;  tightest: p=257 sheet 0: deviation 0.00684 of tolerance 0.03725 (18 %)
+  D: 64 items, 0 outside -> CONFIRMED;  tightest: p=43691 sheet 1: deviation 0.01780 of tolerance 0.07512 (24 %)
+  E: 10 items, 0 outside -> CONFIRMED;  tightest: p=7 sheet 1: deviation 0.04344 of tolerance 0.15000 (29 %)
+  F: 18 items, 0 outside -> CONFIRMED;  tightest: p=65521 sheet 1: deviation 0.02896 of tolerance 0.08384 (35 %)
+  G: 52 items, 0 outside -> CONFIRMED;  tightest: p=109 sheet 0: deviation 0.00219 of tolerance 0.01531 (14 %)
+  H: 46 items, 0 outside -> CONFIRMED;  smallest margin: p=37 sheet 0 E=+0.0094 (margin 0.0106)
+  total items: 279
+== tests with se from the measured relative variance, 3 se ==
+  A: 3 items, 0 outside -> CONFIRMED;  tightest: sheet 0: deviation 0.00663 of tolerance 0.02000 (33 %)
+  B: 18 items, 0 outside -> CONFIRMED;  tightest: h1=1024 sheet 0: deviation 0.00012 of tolerance 0.00500 (2 %)
+  C: 68 items, 0 outside -> CONFIRMED;  tightest: p=257 sheet 0: deviation 0.00684 of tolerance 0.03725 (18 %)
+  D: 64 items, 0 outside -> CONFIRMED;  tightest: p=43691 sheet 1: deviation 0.01780 of tolerance 0.05964 (30 %)
+  E: 10 items, 0 outside -> CONFIRMED;  tightest: p=7 sheet 1: deviation 0.04344 of tolerance 0.15000 (29 %)
+  F: 18 items, 0 outside -> CONFIRMED;  tightest: p=65521 sheet 1: deviation 0.02896 of tolerance 0.06488 (45 %)
+  G: 52 items, 0 outside -> CONFIRMED;  tightest: p=109 sheet 0: deviation 0.00219 of tolerance 0.01448 (15 %)
+  H: 46 items, 0 outside -> CONFIRMED;  smallest margin: p=37 sheet 0 E=+0.0094 (margin 0.0106)
+  total items: 279
+== tests with se from the measured relative variance, 2 se ==
+  A: 3 items, 0 outside -> CONFIRMED;  tightest: sheet 0: deviation 0.00663 of tolerance 0.02000 (33 %)
+  B: 18 items, 0 outside -> CONFIRMED;  tightest: h1=1024 sheet 0: deviation 0.00012 of tolerance 0.00500 (2 %)
+  C: 68 items, 0 outside -> CONFIRMED;  tightest: p=257 sheet 0: deviation 0.00684 of tolerance 0.03725 (18 %)
+  D: 64 items, 0 outside -> CONFIRMED;  tightest: p=43691 sheet 1: deviation 0.01780 of tolerance 0.04416 (40 %)
+  E: 10 items, 0 outside -> CONFIRMED;  tightest: p=7 sheet 1: deviation 0.04344 of tolerance 0.15000 (29 %)
+  F: 18 items, 0 outside -> CONFIRMED;  tightest: p=65521 sheet 1: deviation 0.02896 of tolerance 0.04592 (63 %)
+  G: 52 items, 0 outside -> CONFIRMED;  tightest: p=109 sheet 0: deviation 0.00219 of tolerance 0.01366 (16 %)
+  H: 46 items, 0 outside -> CONFIRMED;  smallest margin: p=37 sheet 0 E=+0.0094 (margin 0.0106)
+  total items: 279
+
+== the Fermat / Wagstaff primes and what the D interval allows (registered rule) ==
+   p =    241 sheet 0: E measured +0.0152, predicted +0.0136; registered interval [-0.0021, +0.0292] (contains 0); deviation in measured-variance se: +1.36
+   p =    241 sheet 1: E measured +0.0145, predicted +0.0146; registered interval [-0.0011, +0.0304] (contains 0); deviation in measured-variance se: -0.13
+   p =    257 sheet 0: E measured +0.1741, predicted +0.1721; registered interval [+0.1436, +0.2007] (excludes 0); deviation in measured-variance se: +1.53
+   p =    257 sheet 1: E measured +0.1933, predicted +0.1932; registered interval [+0.1629, +0.2234] (excludes 0); deviation in measured-variance se: +0.10
+   p =    683 sheet 0: E measured +0.0607, predicted +0.0575; registered interval [+0.0338, +0.0811] (excludes 0); deviation in measured-variance se: +1.55
+   p =    683 sheet 1: E measured +0.0621, predicted +0.0645; registered interval [+0.0403, +0.0887] (excludes 0); deviation in measured-variance se: -1.20
+   p =   2731 sheet 0: E measured +0.0580, predicted +0.0576; registered interval [+0.0229, +0.0923] (excludes 0); deviation in measured-variance se: +0.09
+   p =   2731 sheet 1: E measured +0.0652, predicted +0.0647; registered interval [+0.0294, +0.1000] (excludes 0); deviation in measured-variance se: +0.14
+   p =  43691 sheet 0: E measured +0.0435, predicted +0.0578; registered interval [-0.0432, +0.1588] (contains 0); deviation in measured-variance se: -0.86
+   p =  43691 sheet 1: E measured +0.0471, predicted +0.0649; registered interval [-0.0366, +0.1665] (contains 0); deviation in measured-variance se: -1.15
+   p =  65537 sheet 0: E measured +0.1770, predicted +0.1734; registered interval [+0.0433, +0.3036] (excludes 0); deviation in measured-variance se: +0.17
+   p =  65537 sheet 1: E measured +0.1886, predicted +0.1949; registered interval [+0.0630, +0.3267] (excludes 0); deviation in measured-variance se: -0.33
+
+== measured / predicted for the primes not in the theorem's list ==
+   p =     47: E measured +0.01995 / predicted +0.01984 (s = 0);  +0.01851 / +0.01834 (s >= 1);  E_nd measured -0.02117, -0.02113
+   p =     53: E measured +0.01023 / predicted +0.00928 (s = 0);  +0.00795 / +0.00827 (s >= 1);  E_nd measured -0.01783, -0.01925
+   p =     59: E measured +0.01224 / predicted +0.01359 (s = 0);  +0.01277 / +0.01287 (s >= 1);  E_nd measured -0.01825, -0.01706
+   p =     67: E measured +0.00458 / predicted +0.00390 (s = 0);  +0.00363 / +0.00304 (s >= 1);  E_nd measured -0.01417, -0.01441
+   p =     71: E measured +0.00337 / predicted +0.00414 (s = 0);  +0.00250 / +0.00334 (s >= 1);  E_nd measured -0.01481, -0.01497
+   p =     79: E measured -0.00188 / predicted -0.00146 (s = 0);  -0.00169 / -0.00246 (s >= 1);  E_nd measured -0.01297, -0.01195
+   p =     83: E measured +0.00005 / predicted +0.00002 (s = 0);  -0.00179 / -0.00085 (s >= 1);  E_nd measured -0.01186, -0.01306
+   p =     89: E measured +0.00801 / predicted +0.00802 (s = 0);  +0.00807 / +0.00729 (s >= 1);  E_nd measured -0.01124, -0.01046
+   p =     97: E measured -0.00171 / predicted -0.00187 (s = 0);  -0.00386 / -0.00274 (s >= 1);  E_nd measured -0.01008, -0.01149
+   p =    101: E measured -0.00059 / predicted +0.00153 (s = 0);  +0.00154 / +0.00092 (s >= 1);  E_nd measured -0.01196, -0.00931
+   p =    103: E measured -0.00139 / predicted -0.00104 (s = 0);  -0.00101 / -0.00183 (s >= 1);  E_nd measured -0.00995, -0.00896
+   p =    107: E measured +0.03326 / predicted +0.03409 (s = 0);  +0.03557 / +0.03447 (s >= 1);  E_nd measured -0.01034, -0.00812
+   p =    109: E measured +0.00127 / predicted -0.00080 (s = 0);  -0.00191 / -0.00143 (s >= 1);  E_nd measured -0.00699, -0.00973
+   p =    113: E measured -0.00024 / predicted -0.00099 (s = 0);  -0.00105 / -0.00161 (s >= 1);  E_nd measured -0.00800, -0.00836
+   p =    131: E measured -0.00004 / predicted +0.00018 (s = 0);  -0.00036 / -0.00036 (s >= 1);  E_nd measured -0.00780, -0.00767
+   p =    241: E measured +0.01523 / predicted +0.01355 (s = 0);  +0.01449 / +0.01464 (s >= 1);  E_nd measured -0.00254, -0.00421
+   p =    683: E measured +0.06067 / predicted +0.05745 (s = 0);  +0.06214 / +0.06447 (s >= 1);  E_nd measured +0.00138, -0.00345
+   p =  43691: E measured +0.04348 / predicted +0.05780 (s = 0);  +0.04713 / +0.06493 (s >= 1);  E_nd measured -0.01481, -0.01762
+
+real	0m45.657s
+user	0m0.015s
+sys	0m0.015s

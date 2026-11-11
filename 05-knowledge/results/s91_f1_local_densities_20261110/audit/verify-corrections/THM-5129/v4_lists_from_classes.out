@@ -1,0 +1,8 @@
+classes of orders 3..8: [2, 4, 12, 56, 456, 6880] ; strong: [1, 1, 6, 35, 353, 6008]
+odd numbers <= 73 not attained: [7, 21]
+offsets: 35 ; pairs (offset, odd part): 1066 ; identical to slope_lists_le73.txt: True
+strong classes with H = h, h <= 73 with exactly two: [9, 17, 19, 35, 39, 47, 63] ; m(67) = 6 ; m(63) = 2
+9-grid: least exponent of d = 9 at offsets 5, 9, 17, 33, 65: [0, 0, 1, 2, 5] ; (65, 72) a slope: False ; (65, 144): False ; (65, 288): True
+dyadic slopes (d = 1) with least exponent, attained offsets <= 73: {1: 0, 5: 5, 9: 4, 19: 8, 25: 10, 31: 5, 33: 6, 37: 6, 41: 7, 43: 6, 45: 8, 49: 7, 59: 6, 63: 6, 71: 7, 73: 7}
+offset 55: least exponent of d = 11: 5
+ALL CHECKS PASSED

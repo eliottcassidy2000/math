@@ -1,0 +1,6 @@
+order 7: 2097152 labelled tournaments, 14680064 rooted
+strong labelled: 1677488 ; non-strong labelled: 419664 ; roots in a trivial component (non-strong): 580608
+failures: E = U_odd - U_even: 0 ; U >= D: 0 ; product law (D or U): 0 ; closing laws: 0 (on 240660 sampled rooted tournaments, head and t = 1, 2)
+distinct pairs (D, U) at order 7: 2378 ; offsets: 77 ; max D 189 ; max U 432
+literal recount of (D, U) on 2079 sampled labelled tournaments of order 7 (all roots): 0 mismatches
+elapsed 26.7s

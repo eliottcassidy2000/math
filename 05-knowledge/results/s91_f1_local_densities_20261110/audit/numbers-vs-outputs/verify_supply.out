@@ -1,0 +1,113 @@
+class counts n = 1..8: [1, 1, 2, 4, 12, 56, 456, 6880]
+  mass formula n = 3: sum n!/|Aut| = 8  (2^C(n,2) = 8)  ok
+  mass formula n = 4: sum n!/|Aut| = 64  (2^C(n,2) = 64)  ok
+  mass formula n = 5: sum n!/|Aut| = 1024  (2^C(n,2) = 1024)  ok
+  mass formula n = 6: sum n!/|Aut| = 32768  (2^C(n,2) = 32768)  ok
+  mass formula n = 7: sum n!/|Aut| = 2097152  (2^C(n,2) = 2097152)  ok
+  mass formula n = 8: sum n!/|Aut| = 268435456  (2^C(n,2) = 268435456)  ok
+U (DP) = U (literal enumeration of the qualifying paths) on 421 rooted tournaments of order <= 6: failures 0
+product law (A1) on every root of every class of order <= 8: 58653 rooted tournaments, failures 0
+violations of U >= D or U = E (mod 2), orders <= 8: 0
+(1) order: classes, strong classes, least H strong, #(H, Pi_2), #(H, U)
+    n = 3: 2 classes, 1 strong, least H = 3, 1 pairs (H, Pi_2), 1 pairs (H, U)
+    n = 4: 4 classes, 1 strong, least H = 5, 1 pairs (H, Pi_2), 4 pairs (H, U)
+    n = 5: 12 classes, 6 strong, least H = 9, 5 pairs (H, Pi_2), 20 pairs (H, U)
+    n = 6: 56 classes, 35 strong, least H = 15, 16 pairs (H, Pi_2), 156 pairs (H, U)
+    n = 7: 456 classes, 353 strong, least H = 25, 131 pairs (H, Pi_2), 1984 pairs (H, U)
+    n = 8: 6880 classes, 6008 strong, least H = 45, 1567 pairs (H, Pi_2), 38935 pairs (H, U)
+    attained odd numbers <= 73: all except [7, 21]
+(3) odd parts at the Fermat-type offsets (d:j), with the least order of a base in brackets when it is >= 9
+    D = 3: 1 odd parts, 1 with j <= s
+        3:0
+    D = 5: 5 odd parts, 4 with j <= s
+        1:5 3:1 5:0 7:0 9:0
+    D = 9: 8 odd parts, 7 with j <= s
+        1:4 5:1 9:0 11:0 15:0 21:0 23:0 25:0
+    D = 17: 11 odd parts, 11 with j <= s
+        5:2 7:2 9:1 11:2 17:0 21:0 31:0 33:0 55:0 61:0 69:0
+    D = 33: 34 odd parts, 33 with j <= s
+        1:6 3:4 5:3 9:2 13:2 15:2 17:1 19:1 21:1 23:1 31:2 33:0 37:0 39:0 41:0 45:0 49:0 51:0 53:0 55:0 59:0 61:0 63:0 67:0 75:2 81:0 93:0 99:0 111:0 123:0 153:2 165:2 193:0 197:0
+    D = 65: 66 odd parts, 66 with j <= s
+        3:5 5:4 7:6[9] 9:5 11:3 13:3 15:5[9] 17:2 19:2 21:2 23:2 25:2 27:2 29:2 33:1 35:1 37:1 39:1 41:2 45:1 47:1 49:1 53:1 61:4 65:0 67:0 69:0 73:0 75:0 77:0 79:0 81:0 89:0 91:0[9] 93:1 95:0 97:1 99:0 101:0 103:0 107:4[9] 111:0 113:4[9] 117:0 127:0 129:0 137:1 141:0 143:0 163:0 169:0 177:0 183:0 189:0 191:0 215:0 259:2 273:0 277:0 287:0 303:0 307:0 439:0 493:0 509:0 549:0
+(2') primitive slopes (D <= 73, odd part with its least exponent) by least order of a base: {1: 1, 3: 1, 4: 4, 5: 20, 6: 145, 7: 539, 8: 308, 9: 47, 10: 1}
+     those needing a base of order >= 10: [(55, 11, 5, 10)]
+     direct census of order <= 8: 2108 pairs (D, U) with D <= 73; not in the product-law set: 0
+     primitive slopes with predicted least order <= 8 that are absent from the direct census of order <= 8: []
+(4) odd N in [3, 225) with r(N) = 0: [7, 11, 13, 21, 47, 67]
+    r(N), N = 69..131: 5 1 6 2 3 3 4 3 5 3 5 3 4 7 5 7 4 3 6 4 4 5 4 6 7 5 4 9 4 4 12 5
+    least r on [129, 225): 5 (at N = [131, 145, 151, 163, 167, 173]); mean 8.5208
+(5) windows [h, 3h/2]
+    1:1/1 3:1/2 5:3/3 9:3/5 11:3/6 13:4/7 15:4/8 17:4/9 19:5/10 23:8/12 25:7/13 27:5/14 29:9/15 31:9/16 33:13/17 35:5/18 37:12/19 39:7/20 41:14/21 43:9/22 45:12/23 47:5/24 49:15/25 51:14/26 53:15/27 55:10/28 57:11/29 59:19/30 61:12/31 63:5/32 65:24/33 67:9/34 69:26/35 71:23/36 73:27/37
+    whole window present: [1, 5]
+    37 <= h <= 73: mean 0.4999, min 0.1562 at h = 63, max 0.7429 at h = 69
+(6) number of strong classes with H = h (all orders; complete for h <= 73 since f(9) = 75), covered share of [h, 3h/2], |Delta(h)|
+    h =  3: strong classes   1 (orders [3]), share 1/2 = 0.500, odd parts 1
+    h =  5: strong classes   1 (orders [4]), share 3/3 = 1.000, odd parts 5
+    h =  9: strong classes   2 (orders [5]), share 3/5 = 0.600, odd parts 8
+    h = 11: strong classes   1 (orders [5]), share 3/6 = 0.500, odd parts 7
+    h = 13: strong classes   1 (orders [5]), share 4/7 = 0.571, odd parts 4
+    h = 15: strong classes   4 (orders [5, 6]), share 4/8 = 0.500, odd parts 13
+    h = 17: strong classes   2 (orders [6]), share 4/9 = 0.444, odd parts 11
+    h = 19: strong classes   2 (orders [6]), share 5/10 = 0.500, odd parts 12
+    h = 23: strong classes   4 (orders [6]), share 8/12 = 0.667, odd parts 16
+    h = 25: strong classes   3 (orders [6, 7]), share 7/13 = 0.538, odd parts 21
+    h = 27: strong classes   5 (orders [6, 7]), share 5/14 = 0.357, odd parts 21
+    h = 29: strong classes   6 (orders [6, 7]), share 9/15 = 0.600, odd parts 26
+    h = 31: strong classes   4 (orders [6, 7]), share 9/16 = 0.562, odd parts 23
+    h = 33: strong classes   8 (orders [6, 7]), share 13/17 = 0.765, odd parts 34
+    h = 35: strong classes   2 (orders [7]), share 5/18 = 0.278, odd parts 15
+    h = 37: strong classes   7 (orders [6, 7]), share 12/19 = 0.632, odd parts 26
+    h = 39: strong classes   2 (orders [7]), share 7/20 = 0.350, odd parts 17
+    h = 41: strong classes   6 (orders [6, 7]), share 14/21 = 0.667, odd parts 33
+    h = 43: strong classes   4 (orders [6, 7]), share 9/22 = 0.409, odd parts 20
+    h = 45: strong classes  12 (orders [6, 7, 8]), share 12/23 = 0.522, odd parts 64
+    h = 47: strong classes   2 (orders [7]), share 5/24 = 0.208, odd parts 15
+    h = 49: strong classes   8 (orders [7, 8]), share 15/25 = 0.600, odd parts 42
+    h = 51: strong classes  12 (orders [7, 8]), share 14/26 = 0.538, odd parts 56
+    h = 53: strong classes  10 (orders [7, 8]), share 15/27 = 0.556, odd parts 57
+    h = 55: strong classes   4 (orders [7]), share 10/28 = 0.357, odd parts 40
+    h = 57: strong classes   7 (orders [7, 8]), share 11/29 = 0.379, odd parts 37
+    h = 59: strong classes  12 (orders [7, 8]), share 19/30 = 0.633, odd parts 62
+    h = 61: strong classes   5 (orders [7, 8]), share 12/31 = 0.387, odd parts 36
+    h = 63: strong classes   2 (orders [8]), share 5/32 = 0.156, odd parts 17
+    h = 65: strong classes  14 (orders [7, 8]), share 24/33 = 0.727, odd parts 66
+    h = 67: strong classes   6 (orders [7]), share 9/34 = 0.265, odd parts 31
+    h = 69: strong classes  18 (orders [7, 8]), share 26/35 = 0.743, odd parts 79
+    h = 71: strong classes  11 (orders [7, 8]), share 23/36 = 0.639, odd parts 62
+    h = 73: strong classes  19 (orders [7, 8]), share 27/37 = 0.730, odd parts 88
+    23 <= h <= 73 (26 attained h): Pearson correlation(share, #strong classes) = 0.6784; rank correlation (no tie correction) 0.6711; with log(#strong) 0.7351
+    15 <= h <= 73 (29 attained h): Pearson correlation(share, #strong classes) = 0.6601; rank correlation (no tie correction) 0.6320; with log(#strong) 0.6923
+    3 <= h <= 73 (34 attained h): Pearson correlation(share, #strong classes) = 0.4105; rank correlation (no tie correction) 0.4212; with log(#strong) 0.2801
+    37 <= h <= 73 (19 attained h): Pearson correlation(share, #strong classes) = 0.8171; rank correlation (no tie correction) 0.8228; with log(#strong) 0.8499
+    attained h <= 73 with exactly two strong classes: [9, 17, 19, 35, 39, 47, 63]
+    with exactly one: [3, 5, 11, 13]  with none (products only): []
+    23 <= h <= 73 sorted by covered share (poorest first): [(63, 0.156, 2), (47, 0.208, 2), (67, 0.265, 6), (35, 0.278, 2), (39, 0.35, 2), (27, 0.357, 5), (55, 0.357, 4), (57, 0.379, 7), (61, 0.387, 5), (43, 0.409, 4)]
+(7) rooted tournaments (class representative of order m - 1, cut; root = new vertex) with a given (D, U)
+    order 4: (D, U) = (5, 9): 3 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 5: (D, U) = (5, 9): 3 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 5: (D, U) = (9, 9): 4 (class, cut) pairs on 2 base classes; rooted tournaments up to isomorphism: 2
+    order 6: (D, U) = (5, 9): 3 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 6: (D, U) = (9, 9): 7 (class, cut) pairs on 5 base classes; rooted tournaments up to isomorphism: 5
+    order 6: (D, U) = (17, 18): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 6: (D, U) = (33, 36): 6 (class, cut) pairs on 2 base classes; rooted tournaments up to isomorphism: 2
+    order 7: (D, U) = (65, 288): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 7: (D, U) = (5, 9): 3 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 7: (D, U) = (9, 9): 11 (class, cut) pairs on 9 base classes; rooted tournaments up to isomorphism: 9
+    order 7: (D, U) = (17, 18): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 7: (D, U) = (33, 36): 6 (class, cut) pairs on 2 base classes; rooted tournaments up to isomorphism: 2
+    order 8: (D, U) = (257, 288): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 8: (D, U) = (129, 288): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 8: (D, U) = (65, 288): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 8: (D, U) = (5, 9): 3 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 8: (D, U) = (9, 9): 16 (class, cut) pairs on 14 base classes; rooted tournaments up to isomorphism: 14
+    order 8: (D, U) = (17, 18): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 8: (D, U) = (33, 36): 7 (class, cut) pairs on 3 base classes; rooted tournaments up to isomorphism: 3
+    order 9: (D, U) = (129, 144): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 9: (D, U) = (257, 288): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 9: (D, U) = (513, 576): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 9: (D, U) = (129, 288): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 9: (D, U) = (65, 288): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 9: (D, U) = (5, 9): 3 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 9: (D, U) = (9, 9): 22 (class, cut) pairs on 20 base classes; rooted tournaments up to isomorphism: 20
+    order 9: (D, U) = (17, 18): 1 (class, cut) pairs on 1 base classes; rooted tournaments up to isomorphism: 1
+    order 9: (D, U) = (33, 36): 8 (class, cut) pairs on 4 base classes; rooted tournaments up to isomorphism: 4

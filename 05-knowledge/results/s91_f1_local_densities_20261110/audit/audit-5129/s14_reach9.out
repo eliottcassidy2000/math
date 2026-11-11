@@ -1,0 +1,3 @@
+t <= 1: least odd N >= 69 not attained: 15451 ; odd N < 69 not attained: [1, 7, 11, 13, 21, 47, 67]
+t <= 8: least odd N >= 69 not attained: 382689 ; odd N < 69 not attained: [1, 7, 11, 13, 21, 47, 67]
+t <= 40: least odd N >= 69 not attained: 398131 ; odd N < 69 not attained: [1, 7, 11, 13, 21, 47, 67]

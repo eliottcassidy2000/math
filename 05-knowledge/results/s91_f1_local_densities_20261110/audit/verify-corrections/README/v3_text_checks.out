@@ -1,0 +1,21 @@
+PASS  1  excluded phrases absent   [[]]
+PASS  1b 'singular series' occurs only as 'not the singular series', 'the singular series proper would ...' or 'would make ... the singular series of a sheet' (4 occurrences)
+PASS  2  the 32 receipt paths in backticks exist   [[]]
+PASS  2b the scripts and outputs of section 7 exist   [[]]
+PASS  2c the notes of other sessions that the README credits exist (21 files)   [[]]
+PASS  3  the 29 theorems and 8 hypotheses cited exist   [([], [])]
+      MISTAKE numbers cited: ['758', '760']; present in 01-canon/MISTAKES.md now: ['758']
+PASS  4a modulo 9, sheet 1, X = 2^26: measured 0.848, 1.229, 1.456; first-order 0.852, 1.216, 1.457; limits 0.889, 1.185, 1.296   [['0.8476', '0.8518', '1.2291', '1.2162', '1.4563', '1.4570']]
+PASS  4b A_13 = -0.0038, -0.0049 and A_19 = -0.00014, -0.00032 (means of the last six partial sums)
+PASS  4c divisible states: 13: 32, 721, 877; 19: 218, 256, 294, 313, 351, 959
+PASS  4d dispersion and misses: Var/mean^2 0.5639 / 0.5066 and 0.4459 / 0.3900; Var/mean 2.76-2.79 and 3.06-3.11; miss rates 1.381, 0.823, 0.615, 0.347 %; ratio 2.52 to 3.69; difference +0.67
+PASS  4e p = 3, sheet 1, [2^22, 2^24): 1.2228 for 3 || N, 1.4497 for 9 | N
+PASS  4f 1039: rate 0.763636; S_1 = 0.81135, S_0 = 1.05523, S = 0.91667; E = -0.00121, +0.00189, predicted -0.00025, -0.00031, se 0.00364; 27: +0.49121, +0.48898; 58 divisible states, 62.2 expected
+PASS  4g rates of the section 1 table; 262 moduli = every odd m <= 521 and 1023, 1143; maximum 0.932039 at the multiples of 7 only; the list 93, 31, 381, 15, 219, 171, 127, 51, 3, 73; 5 the fastest
+PASS  4h the nine largest rates at moduli prime to 7 are those of 93, 31, 381, 15, 219, 171, 127, 51, 3   [[0.913738, 0.900219, 0.900128, 0.892191, 0.878556, 0.877604, 0.875417, 0.869011, 0.866025]]
+PASS  4i source_supply.out (6): correlations 0.68 (26 offsets), 0.66, 0.41 on 3 <= h <= 73 (34 offsets); poorest 63, 47, 67 (six classes), 35, 39
+PASS  4j line_density_classes.out: 0.5784 against 0.5574 at 3 (ratio 1.038); 5, 7, 11, 13 within 0.004 of 1
+PASS  4k all 279 items inside at 4, 3, 2 measured standard errors; 43691 and 241 intervals contain 0
+PASS  4l lightest integers: share 0.0873; 0.7273, 0.7244, 0.7319 of the mean; 22.2, 25.2, 28.0 % of the misses; word pairs 0.8016, 0.8097, 0.8087
+PASS  5  no text line wider than 118 characters; ASCII only   [[]]
+ALL CHECKS PASSED (19 checks)

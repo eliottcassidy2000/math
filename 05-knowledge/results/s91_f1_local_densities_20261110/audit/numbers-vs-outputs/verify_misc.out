@@ -1,0 +1,42 @@
+1. constants (mpmath, 30 digits)
+   Li2(-1/2) = -0.448414206923646   Li2(-1/4) = -0.235900297686263
+   kappa_0 = 0.1615389172631   kappa_1 = 0.2125139092374   g_bar = 0.7481056530009   pi^2/6 + 2 Li2(-1/2) = 0.7481056530009
+   triple shares w_0 = 0.43186123943  w_1 = 0.56813876057
+   word-pair shares w_0 = 0.19640777162  w_1 = 0.80359222838   sigma = 2 w_1 = 1.60718446
+   8/pi^2 = 0.8105694691
+   sum_{s>=0} (s+1)(l_s - 2 l_(s+1) + l_(s+2)) = 0.822467033424113   l_0 = pi^2/12 = 0.822467033424113
+   sum_{s>=1} (l_s - 2 l_(s+1) + l_(s+2)) = 0.212513909237383   l_1 - l_2 = 0.212513909237383
+2. generic limits p/(p^2 - 1): {3: 0.375, 5: 0.20833, 7: 0.14583, 11: 0.09167, 13: 0.07738, 17: 0.05903, 19: 0.05278, 29: 0.03452, 31: 0.03229, 43: 0.02327, 257: 0.00389, 65537: 2e-05}
+   p = 3: theta_p at the spectral rate = 0.1467 (theta_p/2 = 0.0733); at rate + 0.005 (regions_check) = 0.1425
+   p = 5: theta_p at the spectral rate = 0.2315 (theta_p/2 = 0.1157); at rate + 0.005 (regions_check) = 0.2286
+   p = 7: theta_p at the spectral rate = 0.0844 (theta_p/2 = 0.0422); at rate + 0.005 (regions_check) = 0.0790
+   p = 11: theta_p at the spectral rate = 0.1527 (theta_p/2 = 0.0763); at rate + 0.005 (regions_check) = 0.1486
+   HYP-9660 (A): rho(p) = L(0)/L(c) for sigma = 2 w_1 and sigma = 3/2
+     p =  3: 1.4946  1.4468
+     p =  5: 1.2982  1.2743
+     p =  7: 1.2156  1.1994
+     p = 11: 1.1396  1.1296
+     p = 13: 1.1188  1.1104
+     p = 17: 1.0916  1.0852
+     p = 23: 1.0682  1.0635
+     p = 31: 1.0509  1.0474
+3. max_k rho(T_k)/2 from the full 2m x 2m operator (numpy eigvals), k = 1..(m-1)/2
+   m =  65: 0.848149 at k = +-2;  over k prime to m: 0.848149
+   m =  71: 0.785277 at k = +-8;  over k prime to m: 0.785277
+   m =  79: 0.769084 at k = +-36;  over k prime to m: 0.769084
+   m =  83: 0.786546 at k = +-12;  over k prime to m: 0.786546
+   m =  89: 0.776578 at k = +-23;  over k prime to m: 0.776578
+   m =  63: 0.932039 at k = +-18;  over k prime to m: 0.889493
+   m =  93: 0.913738 at k = +-22;  over k prime to m: 0.913738
+   m =  51: 0.869011 at k = +-10;  over k prime to m: 0.869011
+   m =  85: 0.850338 at k = +-28;  over k prime to m: 0.850338
+4. F1 windows: triples per odd N, misses, relative variance var(r)/mean(r)^2
+   [2^18, 2^21): triples per odd N: sheet 0 4.8941, sheet 1 6.1350, total 11.0291; misses 12668 (1.381 %)
+       var/mean^2: sheet 0 0.5639, sheet 1 0.5066, both sheets 0.2749;   var/mean: sheet 0 2.760, sheet 1 3.108, both 3.031
+       miss rate by N mod 3 (classes 0, 1, 2): 0.850 %, 2.307 %, 0.984 %
+   [2^21, 2^23): triples per odd N: sheet 0 5.3955, sheet 1 6.7943, total 12.1898; misses 25878 (0.823 %)
+       var/mean^2: sheet 0 0.5139, sheet 1 0.4497, both sheets 0.2449;   var/mean: sheet 0 2.773, sheet 1 3.056, both 2.985
+       miss rate by N mod 3 (classes 0, 1, 2): 0.472 %, 1.492 %, 0.504 %
+   [2^23, 2^24): triples per odd N: sheet 0 5.6941, sheet 1 7.1870, total 12.8811; misses 25815 (0.615 %)
+       var/mean^2: sheet 0 0.4895, sheet 1 0.4259, both sheets 0.2313;   var/mean: sheet 0 2.787, sheet 1 3.061, both 2.980
+       miss rate by N mod 3 (classes 0, 1, 2): 0.325 %, 1.164 %, 0.358 %

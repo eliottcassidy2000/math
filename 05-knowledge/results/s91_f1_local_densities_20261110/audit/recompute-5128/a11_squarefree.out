@@ -1,0 +1,32 @@
+== m = 15 = 3 * 5, N < 2^24 ==
+   sheet 0: T = 45886662; m*share at the fully distinguished class 14: measured 1.52534, product law 1.54730 (flat = 1); m*max_c|share - product law| = 0.03090; m*max_c|share - 1/m| = 0.52534; sum of predictions = 1.000000
+   sheet 1: T = 57818155; m*share at the fully distinguished class 0: measured 1.53516, product law 1.57099 (flat = 1); m*max_c|share - product law| = 0.03938; m*max_c|share - 1/m| = 0.53516; sum of predictions = 1.000000
+== m = 55 = 5 * 11, N < 2^24 ==
+   sheet 0: T = 45886662; m*share at the fully distinguished class 54: measured 1.40606, product law 1.41526 (flat = 1); m*max_c|share - product law| = 0.00921; m*max_c|share - 1/m| = 0.40606; sum of predictions = 1.000000
+   sheet 1: T = 57818155; m*share at the fully distinguished class 0: measured 1.41675, product law 1.42880 (flat = 1); m*max_c|share - product law| = 0.01205; m*max_c|share - 1/m| = 0.41675; sum of predictions = 1.000000
+== m = 85 = 5 * 17, N < 2^24 ==
+   sheet 0: T = 45886662; m*share at the fully distinguished class 84: measured 1.47927, product law 1.49181 (flat = 1); m*max_c|share - product law| = 0.01255; m*max_c|share - 1/m| = 0.47927; sum of predictions = 1.000000
+   sheet 1: T = 57818155; m*share at the fully distinguished class 0: measured 1.52130, product law 1.52168 (flat = 1); m*max_c|share - product law| = 0.00839; m*max_c|share - 1/m| = 0.52130; sum of predictions = 1.000000
+== m = 165 = 3 * 5 * 11, N < 2^24 ==
+   sheet 0: T = 45886662; m*share at the fully distinguished class 164: measured 1.81378, product law 1.84305 (flat = 1); m*max_c|share - product law| = 0.03687; m*max_c|share - 1/m| = 0.81378; sum of predictions = 1.000000
+   sheet 1: T = 57818155; m*share at the fully distinguished class 0: measured 1.82694, product law 1.88280 (flat = 1); m*max_c|share - product law| = 0.05587; m*max_c|share - 1/m| = 0.82694; sum of predictions = 1.000000
+
+real	0m1.926s
+user	0m0.030s
+sys	0m0.000s
+== m = 15 = 3 * 5, N < 2^26 ==
+   sheet 0: T = 198575546; m*share at the fully distinguished class 14: measured 1.53540, product law 1.53649 (flat = 1); m*max_c|share - product law| = 0.03252; m*max_c|share - 1/m| = 0.53540; sum of predictions = 1.000000
+   sheet 1: T = 251044267; m*share at the fully distinguished class 0: measured 1.53855, product law 1.55609 (flat = 1); m*max_c|share - product law| = 0.02535; m*max_c|share - 1/m| = 0.53855; sum of predictions = 1.000000
+== m = 55 = 5 * 11, N < 2^26 ==
+   sheet 0: T = 198575546; m*share at the fully distinguished class 54: measured 1.39209, product law 1.40391 (flat = 1); m*max_c|share - product law| = 0.01181; m*max_c|share - 1/m| = 0.39209; sum of predictions = 1.000000
+   sheet 1: T = 251044267; m*share at the fully distinguished class 0: measured 1.40167, product law 1.41753 (flat = 1); m*max_c|share - product law| = 0.01586; m*max_c|share - 1/m| = 0.40167; sum of predictions = 1.000000
+== m = 85 = 5 * 17, N < 2^26 ==
+   sheet 0: T = 198575546; m*share at the fully distinguished class 84: measured 1.46677, product law 1.47033 (flat = 1); m*max_c|share - product law| = 0.00690; m*max_c|share - 1/m| = 0.46677; sum of predictions = 1.000000
+   sheet 1: T = 251044267; m*share at the fully distinguished class 0: measured 1.49962, product law 1.50098 (flat = 1); m*max_c|share - product law| = 0.00632; m*max_c|share - 1/m| = 0.49962; sum of predictions = 1.000000
+== m = 165 = 3 * 5 * 11, N < 2^26 ==
+   sheet 0: T = 198575546; m*share at the fully distinguished class 164: measured 1.81223, product law 1.81999 (flat = 1); m*max_c|share - product law| = 0.03752; m*max_c|share - 1/m| = 0.81223; sum of predictions = 1.000000
+   sheet 1: T = 251044267; m*share at the fully distinguished class 0: measured 1.82082, product law 1.85341 (flat = 1); m*max_c|share - product law| = 0.03259; m*max_c|share - 1/m| = 0.82082; sum of predictions = 1.000000
+
+real	0m3.571s
+user	0m0.031s
+sys	0m0.015s
