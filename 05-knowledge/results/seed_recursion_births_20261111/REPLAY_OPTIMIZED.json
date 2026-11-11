@@ -1,0 +1,24 @@
+{
+  "mode": "optimized",
+  "jobs": [
+    "head_search",
+    "head_completion",
+    "port_transport",
+    "cones",
+    "birth_atoms",
+    "marked_orbits",
+    "arithmetic_births",
+    "verify_new"
+  ],
+  "pinned_sources": 28,
+  "unchanged_outputs_sha256_lf": {
+    "head_search.json": "6ccbb43c8457e511b80a70eb459717d10ab49d58bbc55998a924daa8c686a3c0",
+    "head_completion.json": "eeb7b0ed333caa74fe00d74ad2d24f2b4eecccf077de8dda1514df286cffcf30",
+    "port_transport.json": "c99f06c3303c1147a12612675a64514de704644945b22fb731856ef6eb526332",
+    "cones.json": "99066928af80359b9ca750617de8fa45fc083832ffa7a8f706f60439d48f537c",
+    "birth_atoms.json": "d77e0567d6bfff07c39265c88653c485f9de3e4a3d8f050becd896edeb8618d0",
+    "marked_orbits.json": "0ebde2d75b12e45a53ee30524e21e9977413325c95d0072d0b3d0190efefaefd",
+    "arithmetic_births.json": "3b94f433c6c9ef866dffeed6673dd58e9a0a70597a95cb01cda04c868576ebc3",
+    "verification.json": "a128d62abef459359a9514ac6a8b19d1623f7f21996e78f11f29f0901cb4f71d"
+  }
+}

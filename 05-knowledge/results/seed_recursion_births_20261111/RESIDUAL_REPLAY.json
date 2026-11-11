@@ -1,0 +1,9 @@
+{
+  "normal_and_optimized_agree": true,
+  "output_sha256_lf": "f360f77874a8ceec4413d48630c003d3e31d342f8dac4f9be32fab7fef246ff4",
+  "source_manifest_sha256_lf": "4e10274ca87aaa6f5082dbb545448bd39dd1f93ab7d58ea322280f5b5ed22084",
+  "independent_head_kernels": 2,
+  "independent_seed_sizes": 7,
+  "literal_emitted_graphs": 6,
+  "separate_person_audit": false
+}

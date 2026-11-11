@@ -1,0 +1,8 @@
+{
+  "normalization": "CRLF to LF",
+  "sha256_lf": {
+    "05-knowledge/results/seed_recursion_births_20261111/residual_grids.py": "71c3f767ef8255b3d7f7eb252268c0e67ec82db96d86033e4286974d9d968f83",
+    "05-knowledge/results/seed_recursion_births_20261111/realize35.py": "f18d668ed39560a711e4a9939d4d33bd413d3fef9323046a55fef3e89987fdc7",
+    "05-knowledge/results/seed_recursion_births_20261111/SOURCE_PINS.json": "b2c2e4647d1344f19a8715b55b7db38c5587620fae1716e68c63086e0a6f1819"
+  }
+}

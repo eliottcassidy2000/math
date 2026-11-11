@@ -208,3 +208,25 @@ prime factors with **odd** exponent. They already differ at 12:
 rad(12)=6, sf(12)=3. Neither is the root of the squaring forest, which
 is 12 itself. This three-way separation prevents transferring a theorem
 between incompatible quotients merely because all use squares or primes.
+
+The next incoming checkpoint,
+[Session260's modular clone note](../session260_quasiperfect_chanpak_20261111/bridges/RESEARCH.md),
+gives a further precisely scoped bridge: for m>=2, replacing any rooted
+tournament vertex by TT_m preserves H modulo m for every source exactly
+when m is prime or a Carmichael number. This is CITED from that local
+note, not used as a dependency here or independently audited in this
+packet. It uses the same Stirling coefficients and provides a congruence
+filter, whereas R1 requires exact defect cancellation. Carmichael numbers
+in this statement are distinct from Carmichael's totient-multiplicity
+conjecture; neither that conjecture nor exact Hamilton coverage is settled
+by the congruence criterion.
+
+The final rebase brought the
+[finite-seed continuation](../summand_multiplicand_growth_20261111/README.md)
+at 8cc23df026. Its general positive-weight monoid theorem extends A3's
+two-seed closure to arbitrary finite seed sets; its prime-power map
+a->p^a carries additive doubles to multiplicative squares while preserving
+synchronous generation. These are CITED incoming extensions, not inputs
+to R1–R11. They sharpen the next tournament obligation: an arithmetic
+closure description needs a graph operation preserving the marked seed
+predicate before its finite generator proof can transfer.

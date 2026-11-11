@@ -72,3 +72,19 @@ identifies the prime-square atoms. It also gives the general two-seed
 strict sum closure, paired here with the product closure proof. Its
 radical quotient, the square-product parity quotient, and the squaring
 forest root are separated explicitly; their values at 12 are 6,3,12.
+
+The final binary-slope classification adds exactly one residual beyond
+3 and 21: d=35, with U=35*2^a+32. Its s=1 head is now closed uniformly;
+its tail covers s>=6. The s=2 head has no fixed one-port realization at
+shift zero by the complete H<=375 search; later shifts and s=3,4,5 start
+outside that inventory. This is the recorded stopping boundary for this
+additional positive probe, not a claim those counts are absent.
+
+Incoming Session260 checkpoint4315a74fe0 supplies the next useful move:
+clone a selected vertex while keeping its first copy selected. Exact
+marked isomorphisms identify its sources with our portless deletion roots
+c=29 and c=47. Independent full coefficient recovery shows the first
+birth introduces a stable unselected port, followed by c->3c+2 or c->3c+6.
+This is an explicit improvement on the earlier proposal to search these
+roots. It does not make a new source available for arbitrary c, and the
+resulting fixed ladders remain sparse.

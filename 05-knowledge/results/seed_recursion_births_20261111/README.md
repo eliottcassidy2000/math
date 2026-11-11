@@ -8,12 +8,15 @@ to 60 full commuting inflation families, with up to five independent
 block sizes. All remain unit seeds for every positive size tuple.
 The true marked-isomorphism quotient has 58 such core types.
 
-Seven missing head families now have explicit Hamiltonian-path
+Eight missing head families now have explicit Hamiltonian-path
 constructors. In particular, for every r,s>=1, we construct tournaments
 with **H=1+(3*2^r+1)*2^s** and **H=1+(21*2^r+1)*2^s**. This closes all
 below-ray gaps on these two infinite coefficient families.
 Equivalently, in the unique indexing H=1+2^s+d*2^(r+s), the entire
 odd-d grids d=3 and d=21 are now filled.
+The complete scan of binary slopes in the 95-port bank also finds d=35:
+its exponent 1 and every exponent >=6 now have explicit constructions;
+exponents 2–5 remain unclosed uniformly here.
 
 Composition is still constrained. All 322 old-vertex transport tests
 are classified at every positive inflation size: a single inflation
@@ -27,6 +30,13 @@ The marked seed birth graph has 4,7,43 deletion-root types at orders
 only 1,2,4,9,18,32,53 of these can descend to the singleton by unit-seed
 deletions. Keeping the actual source distinguishes roots with c=1 from
 the singleton with that same coefficient.
+
+Incoming selected-clone ladders now connect to two of these roots:
+starting from coefficients 29 and 47, a selected-vertex birth introduces
+a stable unselected port and realizes the respective updates c->3c+2
+and c->3c+6. R11 independently verifies their full coefficients and
+credits Session260's construction. This is a concrete legal way past
+the initial absence of a stable unselected port.
 
 - [Proofs and exact scope](PROOFS.md): R1–R9, full tensors, the completed
   lines, global fixed-kernel exclusions using the inherited H<=375
@@ -49,6 +59,10 @@ This emits an eight-vertex tournament with H=201. The supported complete
 line families are `three` and `twentyone`. `mixed11` supports exponent 1
 and all exponents >=3; it explicitly rejects the unresolved exponent 2.
 The adjacency convention is bit j of row i means i -> j.
+
+For the third residual family use `realize35.py --parameter 1 --exponent 1`.
+It emits the nine-vertex H=143 witness and supports all positive parameters
+at exponent 1 or any exponent >=6. See R10 for the remaining four heads.
 
 These results refine A000568's marked tournament structures and connect
 with the existing A135244/A002496 inverse work; no new general enumeration

@@ -1,0 +1,220 @@
+{
+  "scope": "all 95 strong stable ports, slopes A*2^a+2^j only",
+  "binary_records": [
+    {
+      "n": 6,
+      "code": 321,
+      "rows": [
+        2,
+        40,
+        3,
+        5,
+        15,
+        29
+      ],
+      "selected": 12,
+      "port": 4,
+      "A": 24,
+      "B": 16,
+      "d": 3,
+      "valuation_B": 4,
+      "block_size_for_parameter_shift": 1
+    },
+    {
+      "n": 6,
+      "code": 12866,
+      "rows": [
+        4,
+        9,
+        10,
+        49,
+        7,
+        23
+      ],
+      "selected": 17,
+      "port": 5,
+      "A": 42,
+      "B": 4,
+      "d": 21,
+      "valuation_B": 2,
+      "block_size_for_parameter_shift": 1
+    },
+    {
+      "n": 7,
+      "code": 1153,
+      "rows": [
+        2,
+        72,
+        3,
+        5,
+        15,
+        31,
+        61
+      ],
+      "selected": 12,
+      "port": 4,
+      "A": 48,
+      "B": 16,
+      "d": 3,
+      "valuation_B": 4,
+      "block_size_for_parameter_shift": 0
+    },
+    {
+      "n": 7,
+      "code": 1153,
+      "rows": [
+        2,
+        72,
+        3,
+        5,
+        15,
+        31,
+        61
+      ],
+      "selected": 12,
+      "port": 5,
+      "A": 48,
+      "B": 16,
+      "d": 3,
+      "valuation_B": 4,
+      "block_size_for_parameter_shift": 0
+    },
+    {
+      "n": 7,
+      "code": 528386,
+      "rows": [
+        4,
+        1,
+        18,
+        7,
+        75,
+        31,
+        47
+      ],
+      "selected": 9,
+      "port": 5,
+      "A": 35,
+      "B": 32,
+      "d": 35,
+      "valuation_B": 5,
+      "block_size_for_parameter_shift": 5
+    },
+    {
+      "n": 7,
+      "code": 790786,
+      "rows": [
+        4,
+        17,
+        18,
+        7,
+        105,
+        15,
+        47
+      ],
+      "selected": 9,
+      "port": 5,
+      "A": 84,
+      "B": 4,
+      "d": 21,
+      "valuation_B": 2,
+      "block_size_for_parameter_shift": 0
+    },
+    {
+      "n": 7,
+      "code": 790786,
+      "rows": [
+        4,
+        17,
+        18,
+        7,
+        105,
+        15,
+        47
+      ],
+      "selected": 9,
+      "port": 6,
+      "A": 84,
+      "B": 4,
+      "d": 21,
+      "valuation_B": 2,
+      "block_size_for_parameter_shift": 0
+    }
+  ],
+  "odd_residuals": [
+    3,
+    21,
+    35
+  ],
+  "d35_independent_seed_sizes": 7,
+  "d35_literal_tail_controls": 4,
+  "head_strong_ports_tested": 1940,
+  "head_queries": [
+    {
+      "exponent": 1,
+      "shift": 0,
+      "kernel": [
+        143,
+        70
+      ],
+      "factors": [
+        1
+      ],
+      "witness": {
+        "core_rows": [
+          8,
+          5,
+          9,
+          322,
+          15,
+          31,
+          55,
+          127,
+          247
+        ],
+        "core_port": 4,
+        "exterior_H": 1
+      }
+    },
+    {
+      "exponent": 1,
+      "shift": 1,
+      "kernel": [
+        283,
+        140
+      ],
+      "factors": [
+        1
+      ],
+      "witness": {
+        "core_rows": [
+          8,
+          5,
+          9,
+          642,
+          15,
+          31,
+          63,
+          119,
+          255,
+          503
+        ],
+        "core_port": 4,
+        "exterior_H": 1
+      }
+    },
+    {
+      "exponent": 2,
+      "shift": 0,
+      "kernel": [
+        285,
+        140
+      ],
+      "factors": [
+        1,
+        5
+      ],
+      "witness": null
+    }
+  ],
+  "independently_verified_head_kernels": 2
+}

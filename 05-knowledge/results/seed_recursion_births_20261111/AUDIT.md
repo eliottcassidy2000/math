@@ -1,8 +1,8 @@
 # Verification, provenance, and reproduction
 
 **Same-agent algorithmic audit. No separate-person audit or Lean proof.**
-Normal replay passed with all eight output hashes unchanged. Optimized
-replay is pending at this checkpoint.
+Both normal and optimized replays passed, with all eight generated data
+files retaining identical LF-normalized hashes in both modes.
 All checks in the new computation use explicit exceptions rather than
 Python `assert`. JSON certificates are the current computation surfaces;
 they accompany the proofs and do not replace their scope conditions.
@@ -75,6 +75,13 @@ algorithms are useful cross-checks, not independent-person certification.
 The full strong H<=375 inventory is **not** regenerated here. Its theorem
 route, input file and hash are stated in R4 and the source manifest.
 
+The supplemental `residual_grids.py` scans all 95 sources for slopes
+A*2^a+2^j, finds exactly the odd residuals 3,21,35, and checks 1,940
+additional strong head ports. It independently recovers the d=35 slope
+at seven sizes, verifies both successful full Hamilton kernels, and
+checks six emitted d=35 graphs. This supplies R10's eighth head. The
+original seven-head receipt remains intact and clearly scoped.
+
 ## Reproduction
 
 Run from the repository root with Python 3; only the standard library and
@@ -83,6 +90,10 @@ the pinned repository modules are needed:
 ```text
 python3 05-knowledge/results/seed_recursion_births_20261111/reproduce.py
 python3 05-knowledge/results/seed_recursion_births_20261111/reproduce.py --optimized
+python3 05-knowledge/results/seed_recursion_births_20261111/residual_grids.py
+python3 -O 05-knowledge/results/seed_recursion_births_20261111/residual_grids.py
+python3 05-knowledge/results/seed_recursion_births_20261111/selected_root_bridge.py
+python3 -O 05-knowledge/results/seed_recursion_births_20261111/selected_root_bridge.py
 ```
 
 `SOURCE_PINS.json` pins computation sources and inherited mathematical
@@ -91,11 +102,22 @@ conversion does not change the mathematical input. Each replay reruns
 all eight engines, checks those pins, and requires every generated data
 file to have exactly the same LF-normalized hash as before the run.
 `REPLAY.json` and `REPLAY_OPTIMIZED.json` record the two modes separately.
+The supplemental sources and shared input manifest are pinned in
+`RESIDUAL_PINS.json`; `RESIDUAL_REPLAY.json` records unchanged data in
+normal and optimized runs. The main eight-engine replay and this ninth
+supplement are separate, with their exact output domains recorded.
+The tenth engine, `selected_root_bridge.py`, independently recovers the
+incoming U=29/47 ladders and identifies their exact deletion roots. Its
+JSON pins its own source and the shared input manifest, records both
+complete coefficient vectors and the 14 physical states, and is required
+to remain unchanged on rerun. Normal and optimized runs agree.
 
 The constructor itself is `realize.py`; its arguments and supported
 domains are in README.md. The certificate files retain literal adjacency
 rows, selected masks, port identities and source inventory references.
 No numerical-only arrow is presented as a realizable graph operation.
+For d=35 use `realize35.py --parameter 1 --exponent 1`, which emits the
+nine-vertex H=143 witness; exponents 2–5 are explicitly rejected.
 
 ## Source and priority boundary
 
@@ -110,6 +132,15 @@ Incoming Session259 (commits ba5816cc83,9582a9d51a,2f91d2f837) supplies
 the complementary four-clock interpretation and general strict sum
 closure. Its prime-square atom overlap is credited in ARITHMETIC.md.
 Its persistence theorems are not inputs to any tournament proof here.
+The rebase also brought Session260 checkpoint 6f495220a6. Its universal
+prime/Carmichael clone congruence is connected in ARITHMETIC.md as a
+CITED local result; none of its claims is needed for this packet's proofs.
+Checkpoint 4315a74fe0 then supplied the selected-clone ladders. R11
+credits that discovery and verifies its relevant coefficient identities
+independently; its remaining coverage and rigidity claims are not imported.
+The final rebase included 8cc23df026's finite-seed monoid closure and
+valuation-chart continuation. Its extension of A3 is credited in the
+arithmetic connection note, with no new tournament dependency.
 
 Primary literature checked this session: Busch (2006) for the strong
 minimum and SCC product law; Chan–Pak's paper, Section 6.5, for Conjecture

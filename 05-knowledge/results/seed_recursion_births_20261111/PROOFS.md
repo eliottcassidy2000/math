@@ -327,6 +327,13 @@ Thus the 95 port presentations reduce to 93 marked port orbits; the
 to 58 marked core types. These are exact refinements of ordinary
 tournament enumeration, not additional terms of A000568.
 
+The complementary strong marked seed counts with **no** stable internal
+port are 1,0,0,2,3,11,60 at orders 1,...,7. Excluding the singleton,
+76 marked core types through seven therefore have no universally
+repeatable single-port transitive inflation at their starting state.
+They still supply unit-offset tails. This distinguishes failure of an
+internal recursion move from failure to be a seed at all.
+
 The inherited padding transform also applies to marked orbits. If K_m
 is the number of strong marked seed orbits, then A_n=sum_(m<=n)(n-m+1)K_m.
 Automorphisms fix the ordered exterior singleton components individually.
@@ -363,9 +370,104 @@ two exceptions explicit. It is an equivalent indexing, not a proof that
 a legal operation can change d or that all the other grids are filled.
 
 The progress here is explicit: commuting source-valid moves, no-activation
-certificates, seven completed heads, two complete infinite coefficient
+certificates, eight completed heads (including R10), two complete infinite coefficient
 lines, a small exact counterexample to interface transport, a fixed-bank
 density obstruction, and a birth-root classification through seven.
 The [arithmetic companion](ARITHMETIC.md) supplies analogous exact birth
 laws and explains which coordinates must be retained; it supplies no
 unproved lift from an arithmetic parent pair to a tournament seed.
+
+## R10. A third residual grid, and an eighth completed head
+
+**FINITE-EXACT classification of a specified slope shape; PROVED
+all-size consequence.** Among all 95 strong stable-port presentations,
+restrict to nonconstant slopes U(a)=A*2^a+2^j with A>0 and j>=0.
+There are seven presentations, with odd parts of A exactly {3,21,35}.
+The d=3 and d=21 cases have already been handled above. The remaining
+one is (n,code,selected mask,port)=(7,528386,9,5), with
+
+    U(a)=102P_1(a)+35P_2(a)=35*2^a+32.
+
+Put a=r+5. For every r>=1 this is 32*(35*2^r+1), so the tail constructs
+
+    H=1+(35*2^r+1)*2^s for every s>=6.                    (R10)
+
+This is a new explicit unbounded seed family in this packet. The
+classification is only for the specified binary slope shape, not for
+every possible odd-part sequence in the bank. A nonzero highest P_j
+coefficient with j>=3 gives a nonzero j^a term and cannot have that shape.
+
+The lowest head s=1 is also closed for every r>=1. Use
+
+    B=[8,5,9,322,15,31,55,127,247], port=4,
+    H(B[TT_r])=143P_1(r)+70P_2(r)=3+70*2^r.
+
+Thus the d=35 grid has exponent 1 and every exponent >=6 covered.
+The four exponents 2,3,4,5 remain unclosed uniformly by this packet.
+The inherited H<=375 inventory tests all its eligible head shifts:
+for s=1, shifts 0 and 1 both have witnesses; for s=2, shift 0 has none
+in the fixed one-port model at any base order, conditional on inventory
+completeness. Higher exponents and later shifts start above 375 and
+are outside this search. The s=1 head is the eighth completed head
+across R3 and R10. No missing numerical Hamilton value is inferred.
+
+`residual_grids.py` records the seven binary presentations, 1,940 strong
+head-port tests, and the full witnesses. Its separate physical-graph
+checks recover the entire slope and the two successful Hamilton kernels.
+For the latter it uses the sharper visit bound floor((n+1)/2): two visits
+to a port need at least two old vertices between them, since v->x->v is
+impossible in a tournament. This avoids unnecessary large expansions
+without weakening the zero-coefficient certificate.
+
+`realize35.py` emits literal graphs for precisely the supported domain:
+positive r and s=1 or s>=6. For s>=6 its order is r+s+7; at s=1 it is
+r+8. It rejects the four unresolved exponent levels. Four literal tail
+instances and six emitted graphs, including head instances, are checked
+separately. Both normal and optimized supplemental runs are recorded.
+
+## R11. Selected-vertex births activate a usable port at two deletion roots
+
+**Incoming construction, independently recovered full coefficients.**
+[Session260's selected-set ladders](../session260_quasiperfect_chanpak_20261111/constructors/RESEARCH.md)
+(checkpoint 4315a74fe0) supply a concrete move beyond R2's unchanged
+selected-set, unselected-port inflation. Two of R7's five-vertex
+deletion roots have U=29 and U=47 and no stable unselected internal port.
+Both have rows [2,24,3,5,13]. The permutation (1,0,2,3,4) maps this
+base to B=[24,1,3,6,14], mapping masks 5 and 24 to {1,2} and {3,4}.
+
+For O={1,2}, replace selected vertex 1 by TT_m, selecting only its first
+clone and retaining the other selected vertex. For O={3,4}, do the
+same at vertex 3. These are actual vertex births with all old arcs
+and old marks retained: add each new clone after the selected one.
+Every m>=1 gives a unit seed, with respective slopes
+
+    U_29(m)=10*3^m-1,
+    U_47(m)=50*3^(m-1)-3.                                  (R11)
+
+Thus the legal slope recurrences are U->3U+2 and U->3U+6, on these
+specific marked families. Both slopes are odd, so each coefficient in
+these families has its **entire** s>=1 tail line already covered.
+
+The first birth creates an unselected stable vertex. To check this
+independently, keep the first clone selected and inflate the second
+clone by TT_a. Exact coefficient recovery through the full bound gives
+
+    delta coefficients: (1,0,0,0,0,0), in both cases;
+    U coefficients: (89,90,30,0,0,0) and (147,150,50,0,0,0).
+
+With m=a+1 these yield R11. The m=1 roots are checked separately.
+`selected_root_bridge.py` checks the marked isomorphism, all 14 physical
+states used for the complete coefficient certificates, and normal versus
+optimized equality. The incoming source is credited; this is an
+independent verification and a connection to the deletion-root census,
+not a claim to have first discovered its ladders.
+
+This resolves a precise composition obstruction at two roots: an old
+stable-unselected inflation cannot activate another old port (R2), but
+a birth beside a **selected** vertex can introduce a fresh stable port.
+There is no contradiction with being a deletion root: the root cannot
+descend from a smaller seed but can have seed descendants. After the
+first birth these ladders again fit finite inflation templates, so
+they do not evade the fixed-bank density obstruction or prove coverage
+of every odd coefficient. A terminating family-changing descent still
+has to be supplied for the other coefficients.
