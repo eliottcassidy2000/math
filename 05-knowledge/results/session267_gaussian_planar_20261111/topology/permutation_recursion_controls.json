@@ -31,6 +31,20 @@
       "path_edges": 6
     }
   ],
+  "literal_tournament_control": {
+    "fixed_generation_basis": "all-degree wreath theorem, checked hypotheses",
+    "inner_fixed_generated_order": 1,
+    "inner_group_order": 3,
+    "order_basis": "full base C3^7 and outer K21 semidirect product; not enumerated",
+    "outer_fixed_generated_order": 21,
+    "outer_group_order": 21,
+    "scope": "actual tournament automorphism subgroup, not Keller realization",
+    "tournament": "Paley7[C3]",
+    "verified_wreath_generators": 9,
+    "vertices": 21,
+    "wreath_fixed_generated_order": 45927,
+    "wreath_subgroup_order": 45927
+  },
   "mark_control": {
     "inertia_fixed": [
       2,

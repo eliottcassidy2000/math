@@ -1,0 +1,151 @@
+{
+  "session": 267,
+  "scope": "Research artifacts, excluding manifest/hash index self-reference and interpreter caches",
+  "files": [
+    {
+      "path": "CHECKPOINT2.md",
+      "bytes": 1719,
+      "sha256": "326c5db893251f6d95f1528b0f8af3bf49753bc92610d9b0267d748fcbdd342d"
+    },
+    {
+      "path": "FINAL_CHECKS.json",
+      "bytes": 4587,
+      "sha256": "934aa22ab275dc0357474d69f163d2bfcb5d79a937aaf1ed3b5e401d81da4d09"
+    },
+    {
+      "path": "OPEN_BRIDGES.md",
+      "bytes": 3807,
+      "sha256": "1bbc2ba9c62cd43ce2244d52b4041d7f2b6f8f38a5fdc16c1ce4bfe76636bb0b"
+    },
+    {
+      "path": "PUBLICATION.md",
+      "bytes": 1377,
+      "sha256": "c6499f9f712b17d3be37eb3d3bf9d8f2a684c9c7a70cee9c13b7303d2b80cf64"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1839,
+      "sha256": "40acb523e4a3d6efaa4c3839a94348777d415064c9852d027b05e5edd41bfe8e"
+    },
+    {
+      "path": "REPRODUCE.md",
+      "bytes": 2398,
+      "sha256": "52cb0322f341cb32c871779fa567547c31a022164d74221b7bcc853db27ad3ef"
+    },
+    {
+      "path": "SCOPED_DOC_CHECKS.json",
+      "bytes": 203,
+      "sha256": "901aaab92d20cda15dbc427a97d4628d02d46da2c43383d73938054d46427936"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 5377,
+      "sha256": "5e65275c7773065d5e5dfc7fdad496b4532fc9e3ea00639f48b2cb3e416a6288"
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "bytes": 13013,
+      "sha256": "4a751e06cfe57bd79eb95449f11116e6c11a470b5561117fc6547a291925c4e5"
+    },
+    {
+      "path": "degree/ALGEBRAIC-STATE.md",
+      "bytes": 4797,
+      "sha256": "23120ddc1621316f1dc0b10bb2b549847a301ff62b90305db941d391d6067ad1"
+    },
+    {
+      "path": "degree/OUTPUT.json",
+      "bytes": 79,
+      "sha256": "098c943eb2c12c8a4fde7dc3324b673cba8bfbc1b4cf3b11c9260af4c69717fe"
+    },
+    {
+      "path": "degree/PROOF.md",
+      "bytes": 5439,
+      "sha256": "aff05591c4c9987a6499fe3d258d3e512b6d4651b32bc614bff6b0200fa7f785"
+    },
+    {
+      "path": "degree/STATE_OUTPUT.json",
+      "bytes": 167,
+      "sha256": "d4daa6f61fd6685fdd837049877275a6a8e70a89eb7a2677d4435649c9f69b2f"
+    },
+    {
+      "path": "degree/check.py",
+      "bytes": 1050,
+      "sha256": "2a69a6558a230918706c29709599a98cdbf897e0b4a1446bf5273174ead732b9"
+    },
+    {
+      "path": "degree/state_check.py",
+      "bytes": 1310,
+      "sha256": "20e9a92452c3092d94adb75bc3500e319d59e5e1527d5064edba80960577dacc"
+    },
+    {
+      "path": "gaussian/GAUSSIAN-NULL-PACKETS.md",
+      "bytes": 21580,
+      "sha256": "5e8ad8704b82b9bafd44b13c0d07922cc6a06934eb69fc866b7fc866a001822e"
+    },
+    {
+      "path": "gaussian/gaussian_bridge_exact.out",
+      "bytes": 371,
+      "sha256": "7a5861d92c2281ebcabb384b5df861f25c799f814b8db6eb30f023faa31de0ec"
+    },
+    {
+      "path": "gaussian/gaussian_bridge_exact.py",
+      "bytes": 3427,
+      "sha256": "5ea495ef1eaf04c084f9b78708487410559efe4115a38f21c6290afc4fc862d8"
+    },
+    {
+      "path": "meta/INHERITANCE.md",
+      "bytes": 2272,
+      "sha256": "0ce3b9e2f000d649ebc454e322f3691e0cb7c7eaae6bc1a4a0ce530ab951dd0d"
+    },
+    {
+      "path": "meta/QUOTIENT-GUARDRAILS.md",
+      "bytes": 2253,
+      "sha256": "f4aeacdc641d83339179630b7ce5771334be4af60ce9a3aecf341148e8b7b2a1"
+    },
+    {
+      "path": "planar/EXTENSION.md",
+      "bytes": 7729,
+      "sha256": "d8c19fab7b1ec13226657e9011a6a371025f04e6db3f39e517285fb562af5894"
+    },
+    {
+      "path": "planar/OUTPUT.txt",
+      "bytes": 119,
+      "sha256": "ee8bd9c5a13d88a016a0c4d48e3eaceb0768f6eeda319dce9d8bbc26693d4705"
+    },
+    {
+      "path": "planar/PROOF.md",
+      "bytes": 10400,
+      "sha256": "bf4876ab0ac7d4a83e28580e23ccbec38e9a4b6410a4e88d83601ed4d3c1791c"
+    },
+    {
+      "path": "planar/check.py",
+      "bytes": 2024,
+      "sha256": "e06e065ce3d49a4a222b2fdf1c74c0a7afa3c533dc9b2962a68f85d1d04b93c6"
+    },
+    {
+      "path": "planar/check_extension.py",
+      "bytes": 1916,
+      "sha256": "503cb7140769dec9601db2ce00bcf7ffad0543dcc24844d094c7b2c8c35f0ba6"
+    },
+    {
+      "path": "reproduce.py",
+      "bytes": 1507,
+      "sha256": "cadb6fae70b56b65ca9a8911208260a4da358549bd12a1eca094416be4f21001"
+    },
+    {
+      "path": "topology/boundary_recursion_bridge.md",
+      "bytes": 35966,
+      "sha256": "6c7917467923e958bf701ce231c7cd5239cfe5d0c1643fece914500d2ae485e7"
+    },
+    {
+      "path": "topology/permutation_recursion_controls.json",
+      "bytes": 1894,
+      "sha256": "d85741922953ce95a92a02212c715e41269b15d5bf7d2011775d3983acc2900c"
+    },
+    {
+      "path": "topology/permutation_recursion_controls.py",
+      "bytes": 7619,
+      "sha256": "01981ec30d69bbaf3ed62633825c677dbd46bafc8c13fa4d6c55a573b1c10aae"
+    }
+  ]
+}

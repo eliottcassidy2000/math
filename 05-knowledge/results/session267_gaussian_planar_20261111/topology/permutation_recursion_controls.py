@@ -141,6 +141,46 @@ def run():
     require(marked == {2} and marked < fixed(p), 'marked is strictly smaller than fixed')
     result['mark_control'] = {'inertia_fixed': sorted(fixed(p)), 'marked_survivors': sorted(marked),
                               'status': 'formal marks only, not claimed geometrically realizable'}
+    # Literal tournament substitution: Paley(7)[directed 3-cycle].
+    squares7 = {1, 2, 4}
+    K21 = {tuple((a * x + b) % 7 for x in range(7))
+           for a in squares7 for b in range(7)}
+    k_generators = [tuple((x + 1) % 7 for x in range(7)),
+                    tuple(2 * x % 7 for x in range(7))]
+    require(group(k_generators, 7) == K21 and len(K21) == 21, 'affine Paley subgroup')
+    require(fixed_generated(K21, 7) == K21, 'Paley outer fixed generation')
+    c3_generator = (1, 2, 0)
+    C3 = group([c3_generator], 3)
+    require(fixed_generated(C3, 3) == {identity(3)}, 'regular inner C3')
+
+    def paley_edge(i, j):
+        return (j - i) % 7 in squares7
+
+    def lex_edge(u, v):
+        i, a = divmod(u, 3)
+        j, b = divmod(v, 3)
+        return (b - a) % 3 == 1 if i == j else paley_edge(i, j)
+
+    require(all(not lex_edge(u, u) for u in range(21)), 'no tournament loops')
+    require(all(lex_edge(u, v) != lex_edge(v, u)
+                for u in range(21) for v in range(21) if u != v), 'one orientation per pair')
+    require(all(paley_edge(i, j) == paley_edge(g[i], g[j])
+                for g in K21 for i in range(7) for j in range(7)), 'outer tournament preservation')
+    wreath_gens = [lift_outer(h, 7, 3) for h in k_generators]
+    wreath_gens += [lift_inner(c3_generator, i, 7, 3) for i in range(7)]
+    require(all(lex_edge(u, v) == lex_edge(g[u], g[v])
+                for g in wreath_gens for u in range(21) for v in range(21)),
+            'all wreath generators preserve literal lexicographic tournament')
+    result['literal_tournament_control'] = {
+        'tournament': 'Paley7[C3]', 'vertices': 21,
+        'outer_group_order': len(K21), 'outer_fixed_generated_order': 21,
+        'inner_group_order': len(C3), 'inner_fixed_generated_order': 1,
+        'verified_wreath_generators': len(wreath_gens),
+        'wreath_subgroup_order': 3 ** 7 * 21,
+        'wreath_fixed_generated_order': 3 ** 7 * 21,
+        'order_basis': 'full base C3^7 and outer K21 semidirect product; not enumerated',
+        'fixed_generation_basis': 'all-degree wreath theorem, checked hypotheses',
+        'scope': 'actual tournament automorphism subgroup, not Keller realization'}
     print(json.dumps(result, indent=2, sort_keys=True))
 
 

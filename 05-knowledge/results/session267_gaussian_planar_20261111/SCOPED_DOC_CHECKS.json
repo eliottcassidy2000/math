@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "owned_markdown_links_checked": 27,
+  "scope": "Owned packet local destinations; external and inherited source links pinned separately. Repository-wide check_docs was not run."
+}

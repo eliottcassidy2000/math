@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "programs": [
+    {
+      "script": "gaussian/gaussian_bridge_exact.py",
+      "normal_exit": 0,
+      "optimized_exit": 0,
+      "outputs_identical": true,
+      "stdout_sha256": "7a5861d92c2281ebcabb384b5df861f25c799f814b8db6eb30f023faa31de0ec",
+      "stdout": "Primitive-return checks: 442\nUniform-family total checks: 470\nRank-one sample lower bound verified symbolically for m=1..30\nCovariance nullness hostile: E_I=0, E_rank1=m!, m=1..30\nPASS: 530 exact checks. No claim of a Keller compression construction.\nTwo-shear forward-data coefficient checks: 6125\nPASS total: 6655 exact checks; all requirements remain active under -O.\n"
+    },
+    {
+      "script": "planar/check.py",
+      "normal_exit": 0,
+      "optimized_exit": 0,
+      "outputs_identical": true,
+      "stdout_sha256": "a343b29b8fd557e690c4213b38feae4107ef51cf12f90f93cb6298e65433bd9c",
+      "stdout": "PASS: 334 exact Gaussian/rotation/convolution/flag controls.\n"
+    },
+    {
+      "script": "planar/check_extension.py",
+      "normal_exit": 0,
+      "optimized_exit": 0,
+      "outputs_identical": true,
+      "stdout_sha256": "b878dbc813bab9470fd8c48715113e1183a0d0b62be2750892bd2ce8aea63a9f",
+      "stdout": "PASS: 444 exact row-transport and rational-cone controls.\n"
+    },
+    {
+      "script": "topology/permutation_recursion_controls.py",
+      "normal_exit": 0,
+      "optimized_exit": 0,
+      "outputs_identical": true,
+      "stdout_sha256": "d85741922953ce95a92a02212c715e41269b15d5bf7d2011775d3983acc2900c",
+      "stdout": "{\n  \"adjacent_transposition_paths\": [\n    {\n      \"degree\": 3,\n      \"fixed_per_edge\": 1,\n      \"group_order\": 6,\n      \"path_edges\": 2\n    },\n    {\n      \"degree\": 4,\n      \"fixed_per_edge\": 2,\n      \"group_order\": 24,\n      \"path_edges\": 3\n    },\n    {\n      \"degree\": 5,\n      \"fixed_per_edge\": 3,\n      \"group_order\": 120,\n      \"path_edges\": 4\n    },\n    {\n      \"degree\": 6,\n      \"fixed_per_edge\": 4,\n      \"group_order\": 720,\n      \"path_edges\": 5\n    },\n    {\n      \"degree\": 7,\n      \"fixed_per_edge\": 5,\n      \"group_order\": 5040,\n      \"path_edges\": 6\n    }\n  ],\n  \"literal_tournament_control\": {\n    \"fixed_generation_basis\": \"all-degree wreath theorem, checked hypotheses\",\n    \"inner_fixed_generated_order\": 1,\n    \"inner_group_order\": 3,\n    \"order_basis\": \"full base C3^7 and outer K21 semidirect product; not enumerated\",\n    \"outer_fixed_generated_order\": 21,\n    \"outer_group_order\": 21,\n    \"scope\": \"actual tournament automorphism subgroup, not Keller realization\",\n    \"tournament\": \"Paley7[C3]\",\n    \"verified_wreath_generators\": 9,\n    \"vertices\": 21,\n    \"wreath_fixed_generated_order\": 45927,\n    \"wreath_subgroup_order\": 45927\n  },\n  \"mark_control\": {\n    \"inertia_fixed\": [\n      2,\n      3,\n      4,\n      5\n    ],\n    \"marked_survivors\": [\n      2\n    ],\n    \"status\": \"formal marks only, not claimed geometrically realizable\"\n  },\n  \"nilpotent_control\": {\n    \"fixed_generated_order\": 4,\n    \"group\": \"D8 on square vertices\",\n    \"order\": 8\n  },\n  \"scope\": \"FINITE-EXACT abstract permutation controls; no polynomial realization\",\n  \"wreath_controls\": [\n    {\n      \"degree\": 6,\n      \"fixed_generated_order\": 48,\n      \"fixed_generated_outer_order\": 6,\n      \"group\": \"C2 wr S3\",\n      \"order\": 48\n    },\n    {\n      \"degree\": 6,\n      \"fixed_generated_order\": 36,\n      \"fixed_generated_outer_order\": 1,\n      \"group\": \"S3 wr C2\",\n      \"order\": 72\n    }\n  ]\n}\n"
+    },
+    {
+      "script": "degree/check.py",
+      "normal_exit": 0,
+      "optimized_exit": 0,
+      "outputs_identical": true,
+      "stdout_sha256": "098c943eb2c12c8a4fde7dc3324b673cba8bfbc1b4cf3b11c9260af4c69717fe",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"checks\": 180,\n  \"families\": 48,\n  \"max_degree\": 100\n}\n"
+    },
+    {
+      "script": "degree/state_check.py",
+      "normal_exit": 0,
+      "optimized_exit": 0,
+      "outputs_identical": true,
+      "stdout_sha256": "d4daa6f61fd6685fdd837049877275a6a8e70a89eb7a2677d4435649c9f69b2f",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"checks\": 351,\n  \"row_range\": [\n    5,\n    80\n  ],\n  \"row16\": {\n    \"row\": 16,\n    \"before\": 7,\n    \"after\": 6\n  },\n  \"tomography_q_max\": 12\n}\n"
+    }
+  ],
+  "scope": "New finite controls only; no inherited proof rebuild or repository-wide test."
+}

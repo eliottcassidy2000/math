@@ -1,0 +1,86 @@
+[
+  {
+    "path": "01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md",
+    "use": "Inherited NC2/GMC(2) status and exact statement",
+    "commit": "1432c0ac0d987f1f7d8219a04c5326b2826e552d",
+    "blob_sha": "045c744fd5563a2f285649294a5d578c177ea5ca",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1432c0ac0d987f1f7d8219a04c5326b2826e552d/01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md"
+  },
+  {
+    "path": "01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md",
+    "use": "Special-image dimension boundary",
+    "commit": "1432c0ac0d987f1f7d8219a04c5326b2826e552d",
+    "blob_sha": "961c1a8a1673beb8c88b2b9df2ac7d8dbaa7c759",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1432c0ac0d987f1f7d8219a04c5326b2826e552d/01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md"
+  },
+  {
+    "path": "01-canon/theorems/THM-2811-special-image-linear-intertwiner-rigidity-and-jc-degree-wall.md",
+    "use": "Intertwiner obstruction",
+    "commit": "1432c0ac0d987f1f7d8219a04c5326b2826e552d",
+    "blob_sha": "98dca4b5533eb63cf52ac5cdd63bdd3e2409b281",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1432c0ac0d987f1f7d8219a04c5326b2826e552d/01-canon/theorems/THM-2811-special-image-linear-intertwiner-rigidity-and-jc-degree-wall.md"
+  },
+  {
+    "path": "04-computation/lean/TournamentH7/TournamentH7/GMC2Main.lean",
+    "use": "Inherited unconditional root interface; not rebuilt",
+    "commit": "1432c0ac0d987f1f7d8219a04c5326b2826e552d",
+    "blob_sha": "3ff2de69c13ff5caec6421440c0e27ab77cc9354",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1432c0ac0d987f1f7d8219a04c5326b2826e552d/04-computation/lean/TournamentH7/TournamentH7/GMC2Main.lean"
+  },
+  {
+    "path": "01-canon/theorems/THM-2633-derangement-character-obstruction-and-d4-keller-exclusion.md",
+    "use": "Finite survivors and fixed-sheet normal generation",
+    "commit": "1432c0ac0d987f1f7d8219a04c5326b2826e552d",
+    "blob_sha": "14c56f095a5308ce933d32ba2ce385103314637a",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1432c0ac0d987f1f7d8219a04c5326b2826e552d/01-canon/theorems/THM-2633-derangement-character-obstruction-and-d4-keller-exclusion.md"
+  },
+  {
+    "path": "01-canon/theorems/THM-1365-galois-reduction-jc-fixed-point-bridge.md",
+    "use": "Affine-chart recognition boundary",
+    "commit": "1432c0ac0d987f1f7d8219a04c5326b2826e552d",
+    "blob_sha": "31ca0d07900f802e0ec946f5da506de249ee528d",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1432c0ac0d987f1f7d8219a04c5326b2826e552d/01-canon/theorems/THM-1365-galois-reduction-jc-fixed-point-bridge.md"
+  },
+  {
+    "path": "05-knowledge/reference/CORE-PAPERS-PLANAR-JC.md",
+    "use": "Planar geometry source routes",
+    "commit": "1432c0ac0d987f1f7d8219a04c5326b2826e552d",
+    "blob_sha": "a2b224af7d8a2d7efb3e8cd0856cb28ad1a5b8d9",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1432c0ac0d987f1f7d8219a04c5326b2826e552d/05-knowledge/reference/CORE-PAPERS-PLANAR-JC.md"
+  },
+  {
+    "path": "01-canon/theorems/THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule.md",
+    "use": "Generic degree, units and finite factorization",
+    "commit": "1432c0ac0d987f1f7d8219a04c5326b2826e552d",
+    "blob_sha": "368c72e95f152d8b611e9b384cbde9eb1f323afe",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1432c0ac0d987f1f7d8219a04c5326b2826e552d/01-canon/theorems/THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule.md"
+  },
+  {
+    "path": "05-knowledge/reference/CORE-PAPERS.md",
+    "use": "Dimension-sensitive literature routes",
+    "commit": "1432c0ac0d987f1f7d8219a04c5326b2826e552d",
+    "blob_sha": "db844f9499998d2b2623b3ca6e536ca9a8f39cbc",
+    "url": "https://github.com/eliottcassidy2000/math/blob/1432c0ac0d987f1f7d8219a04c5326b2826e552d/05-knowledge/reference/CORE-PAPERS.md"
+  },
+  {
+    "path": "05-knowledge/results/session254_four_frontiers_20261111/jacobian/ALL_ROW_DEPTH.md",
+    "use": "Inherited homogeneous source-depth and source packet",
+    "commit": "946fb3f88f1db2c20a1ad01de0284a0ae7a2ba88",
+    "blob_sha": "cddc6584a88b758aa5571963dcad12396a0c3d4d",
+    "url": "https://github.com/eliottcassidy2000/math/blob/946fb3f88f1db2c20a1ad01de0284a0ae7a2ba88/05-knowledge/results/session254_four_frontiers_20261111/jacobian/ALL_ROW_DEPTH.md"
+  },
+  {
+    "path": "05-knowledge/results/session254_four_frontiers_20261111/jacobian/PROOF.md",
+    "use": "Inherited homogeneous source-depth and source packet",
+    "commit": "946fb3f88f1db2c20a1ad01de0284a0ae7a2ba88",
+    "blob_sha": "96d7cbebe5c6759f42af35dfe59bc8005144b004",
+    "url": "https://github.com/eliottcassidy2000/math/blob/946fb3f88f1db2c20a1ad01de0284a0ae7a2ba88/05-knowledge/results/session254_four_frontiers_20261111/jacobian/PROOF.md"
+  },
+  {
+    "path": "07-reflections/factorial-gaussian-power-compatible-quotient-no-go-bridge-probe-agent.md",
+    "use": "Inherited power-projection and primitive-content hostile; old computation not replayed",
+    "commit": "fd3bb5f293895c0d2ebf60ead535afcff4dd69d2",
+    "blob_sha": "73beb4a83ad33164b6158ff0872a1e6b1f892a3e",
+    "url": "https://github.com/eliottcassidy2000/math/blob/fd3bb5f293895c0d2ebf60ead535afcff4dd69d2/07-reflections/factorial-gaussian-power-compatible-quotient-no-go-bridge-probe-agent.md"
+  }
+]

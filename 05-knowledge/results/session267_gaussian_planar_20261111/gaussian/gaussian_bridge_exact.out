@@ -1,0 +1,7 @@
+Primitive-return checks: 442
+Uniform-family total checks: 470
+Rank-one sample lower bound verified symbolically for m=1..30
+Covariance nullness hostile: E_I=0, E_rank1=m!, m=1..30
+PASS: 530 exact checks. No claim of a Keller compression construction.
+Two-shear forward-data coefficient checks: 6125
+PASS total: 6655 exact checks; all requirements remain active under -O.
