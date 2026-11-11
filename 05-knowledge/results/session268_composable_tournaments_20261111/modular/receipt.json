@@ -1,0 +1,283 @@
+{
+  "status": "FINITE-EXACT",
+  "family": "Canonical prime quotients restricted to C3; arbitrary ordered strong-component sums",
+  "max_n": 16,
+  "rows": [
+    {
+      "n": 1,
+      "classes": 1,
+      "strong_classes": 1,
+      "response_types": 1,
+      "strong_response_types": 1,
+      "H_values": 1,
+      "labeled_tournaments": 1,
+      "largest_response_fiber": 1,
+      "max_H": 1
+    },
+    {
+      "n": 2,
+      "classes": 1,
+      "strong_classes": 0,
+      "response_types": 1,
+      "strong_response_types": 0,
+      "H_values": 1,
+      "labeled_tournaments": 2,
+      "largest_response_fiber": 1,
+      "max_H": 1
+    },
+    {
+      "n": 3,
+      "classes": 2,
+      "strong_classes": 1,
+      "response_types": 2,
+      "strong_response_types": 1,
+      "H_values": 2,
+      "labeled_tournaments": 8,
+      "largest_response_fiber": 1,
+      "max_H": 3
+    },
+    {
+      "n": 4,
+      "classes": 4,
+      "strong_classes": 1,
+      "response_types": 3,
+      "strong_response_types": 1,
+      "H_values": 3,
+      "labeled_tournaments": 64,
+      "largest_response_fiber": 2,
+      "max_H": 5
+    },
+    {
+      "n": 5,
+      "classes": 9,
+      "strong_classes": 3,
+      "response_types": 6,
+      "strong_response_types": 3,
+      "H_values": 6,
+      "labeled_tournaments": 760,
+      "largest_response_fiber": 3,
+      "max_H": 15
+    },
+    {
+      "n": 6,
+      "classes": 24,
+      "strong_classes": 9,
+      "response_types": 13,
+      "strong_response_types": 6,
+      "H_values": 12,
+      "labeled_tournaments": 11360,
+      "largest_response_fiber": 4,
+      "max_H": 45
+    },
+    {
+      "n": 7,
+      "classes": 65,
+      "strong_classes": 23,
+      "response_types": 28,
+      "strong_response_types": 14,
+      "H_values": 22,
+      "labeled_tournaments": 205520,
+      "largest_response_fiber": 5,
+      "max_H": 159
+    },
+    {
+      "n": 8,
+      "classes": 182,
+      "strong_classes": 66,
+      "response_types": 63,
+      "strong_response_types": 31,
+      "H_values": 50,
+      "labeled_tournaments": 4399360,
+      "largest_response_fiber": 8,
+      "max_H": 621
+    },
+    {
+      "n": 9,
+      "classes": 528,
+      "strong_classes": 194,
+      "response_types": 148,
+      "strong_response_types": 75,
+      "H_values": 124,
+      "labeled_tournaments": 108801280,
+      "largest_response_fiber": 12,
+      "max_H": 3159
+    },
+    {
+      "n": 10,
+      "classes": 1558,
+      "strong_classes": 572,
+      "response_types": 350,
+      "strong_response_types": 175,
+      "H_values": 293,
+      "labeled_tournaments": 3049625600,
+      "largest_response_fiber": 20,
+      "max_H": 14877
+    },
+    {
+      "n": 11,
+      "classes": 4674,
+      "strong_classes": 1726,
+      "response_types": 846,
+      "strong_response_types": 429,
+      "H_values": 709,
+      "labeled_tournaments": 95521395200,
+      "largest_response_fiber": 30,
+      "max_H": 79359
+    },
+    {
+      "n": 12,
+      "classes": 14225,
+      "strong_classes": 5273,
+      "response_types": 2076,
+      "strong_response_types": 1050,
+      "H_values": 1757,
+      "labeled_tournaments": 3306847667200,
+      "largest_response_fiber": 48,
+      "max_H": 515997
+    },
+    {
+      "n": 13,
+      "classes": 43769,
+      "strong_classes": 16262,
+      "response_types": 5149,
+      "strong_response_types": 2616,
+      "H_values": 4429,
+      "labeled_tournaments": 125385112652800,
+      "largest_response_fiber": 80,
+      "max_H": 3213771
+    },
+    {
+      "n": 14,
+      "classes": 135960,
+      "strong_classes": 50637,
+      "response_types": 12904,
+      "strong_response_types": 6556,
+      "H_values": 11248,
+      "labeled_tournaments": 5167669361254400,
+      "largest_response_fiber": 120,
+      "max_H": 22202613
+    },
+    {
+      "n": 15,
+      "classes": 425817,
+      "strong_classes": 158903,
+      "response_types": 32624,
+      "strong_response_types": 16610,
+      "H_values": 28830,
+      "labeled_tournaments": 230021881945856000,
+      "largest_response_fiber": 180,
+      "max_H": 178036299
+    },
+    {
+      "n": 16,
+      "classes": 1343039,
+      "strong_classes": 502000,
+      "response_types": 83073,
+      "strong_response_types": 42312,
+      "H_values": 74149,
+      "labeled_tournaments": 10997137501622272000,
+      "largest_response_fiber": 252,
+      "max_H": 1406711853
+    }
+  ],
+  "controls": {
+    "permutation_checks": [
+      {
+        "n": 3,
+        "q": [
+          3,
+          6,
+          6
+        ]
+      },
+      {
+        "n": 4,
+        "q": [
+          5,
+          22,
+          36,
+          24
+        ]
+      },
+      {
+        "n": 5,
+        "q": [
+          15,
+          78,
+          198,
+          240,
+          120
+        ]
+      },
+      {
+        "n": 6,
+        "q": [
+          33,
+          294,
+          1044,
+          1896,
+          1800,
+          720
+        ]
+      },
+      {
+        "n": 6,
+        "q": [
+          27,
+          234,
+          900,
+          1800,
+          1800,
+          720
+        ]
+      },
+      {
+        "n": 6,
+        "q": [
+          9,
+          126,
+          684,
+          1656,
+          1800,
+          720
+        ]
+      },
+      {
+        "n": 6,
+        "q": [
+          3,
+          90,
+          612,
+          1608,
+          1800,
+          720
+        ]
+      }
+    ],
+    "diagonal_Burnside_count_for_two_child_classes": 4,
+    "A_B_profile": [
+      3,
+      18,
+      36,
+      24
+    ]
+  },
+  "cache": {
+    "join": {
+      "hits": 39769,
+      "misses": 103793,
+      "maxsize": null,
+      "currsize": 103793
+    },
+    "C3": {
+      "hits": 1,
+      "misses": 69883,
+      "maxsize": null,
+      "currsize": 69883
+    }
+  },
+  "elapsed_seconds": 9.728,
+  "full_receipt_file": "full_receipt.json.gz.b64",
+  "full_receipt_sha256": "eef55022c968e82dba7b279c99ae3b03de8524350c4326132a513cbab3f8987a",
+  "full_receipt_note": "Decode base64 then gzip to recover every H histogram through16 and full response buckets through12."
+}

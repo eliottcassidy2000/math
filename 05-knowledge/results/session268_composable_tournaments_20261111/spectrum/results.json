@@ -1,0 +1,221 @@
+{
+  "scope": "physical exhaustive labelled seeds through n4 plus ten seeded random seeds at each n5,n6,n7",
+  "seed_count": 105,
+  "physical_tomography_checks": 260,
+  "physical_affine_lift_checks": 315,
+  "atom_controls": 14,
+  "physical_seam_ray_checks": 18,
+  "coefficient_triangle": [
+    [
+      3,
+      1
+    ],
+    [
+      11,
+      17,
+      4
+    ],
+    [
+      51,
+      229,
+      216,
+      36
+    ],
+    [
+      227,
+      2921,
+      7396,
+      4752,
+      576
+    ],
+    [
+      963,
+      34261,
+      207000,
+      339300,
+      158400,
+      14400
+    ],
+    [
+      3971,
+      370217,
+      5064004,
+      18133200,
+      20880000,
+      7387200,
+      518400
+    ]
+  ],
+  "hidden_seed_probe_pairs": [
+    [
+      177,
+      153
+    ],
+    [
+      5673,
+      4977
+    ],
+    [
+      259449,
+      236673
+    ],
+    [
+      15165777,
+      14335065
+    ],
+    [
+      1035295017,
+      1003282353
+    ]
+  ],
+  "atom_monoid_censuses": [
+    {
+      "bound": 1000,
+      "atoms": 25,
+      "product_counts": 95,
+      "odd_counts_in_interval": 500,
+      "first_absent_odds": [
+        7,
+        13,
+        19,
+        21,
+        29,
+        31,
+        35,
+        37,
+        39,
+        41,
+        43,
+        49,
+        53,
+        57,
+        59,
+        61,
+        63,
+        67,
+        71,
+        73,
+        77,
+        79,
+        83,
+        87,
+        89,
+        91,
+        93,
+        97
+      ],
+      "max_atom_vertices": 11
+    },
+    {
+      "bound": 10000,
+      "atoms": 43,
+      "product_counts": 368,
+      "odd_counts_in_interval": 5000,
+      "first_absent_odds": [
+        7,
+        13,
+        19,
+        21,
+        29,
+        31,
+        35,
+        37,
+        39,
+        41,
+        43,
+        49,
+        53,
+        57,
+        59,
+        61,
+        63,
+        67,
+        71,
+        73,
+        77,
+        79,
+        83,
+        87,
+        89,
+        91,
+        93,
+        97
+      ],
+      "max_atom_vertices": 15
+    },
+    {
+      "bound": 100000,
+      "atoms": 66,
+      "product_counts": 1308,
+      "odd_counts_in_interval": 50000,
+      "first_absent_odds": [
+        7,
+        13,
+        19,
+        21,
+        29,
+        31,
+        35,
+        37,
+        39,
+        41,
+        43,
+        49,
+        53,
+        57,
+        59,
+        61,
+        63,
+        67,
+        71,
+        73,
+        77,
+        79,
+        83,
+        87,
+        89,
+        91,
+        93,
+        97
+      ],
+      "max_atom_vertices": 18
+    },
+    {
+      "bound": 1000000,
+      "atoms": 94,
+      "product_counts": 4264,
+      "odd_counts_in_interval": 500000,
+      "first_absent_odds": [
+        7,
+        13,
+        19,
+        21,
+        29,
+        31,
+        35,
+        37,
+        39,
+        41,
+        43,
+        49,
+        53,
+        57,
+        59,
+        61,
+        63,
+        67,
+        71,
+        73,
+        77,
+        79,
+        83,
+        87,
+        89,
+        91,
+        93,
+        97
+      ],
+      "max_atom_vertices": 21
+    }
+  ]
+}

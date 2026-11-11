@@ -1,0 +1,238 @@
+{
+  "scope": "literal minimum-cost witnesses inside the declared generator language",
+  "witnesses": [
+    {
+      "target": 59,
+      "attained_in_language": true,
+      "vertices": 8,
+      "factors": [
+        {
+          "h": 59,
+          "size": 8,
+          "kind": "seam",
+          "parameters": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "rows": [
+        242,
+        252,
+        249,
+        161,
+        8,
+        16,
+        56,
+        112
+      ],
+      "states": 2,
+      "independent_hamilton_path_recount": 59
+    },
+    {
+      "target": 71,
+      "attained_in_language": true,
+      "vertices": 8,
+      "factors": [
+        {
+          "h": 71,
+          "size": 8,
+          "kind": "seam",
+          "parameters": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "rows": [
+        242,
+        252,
+        249,
+        129,
+        8,
+        24,
+        56,
+        112
+      ],
+      "states": 2,
+      "independent_hamilton_path_recount": 71
+    },
+    {
+      "target": 153,
+      "attained_in_language": true,
+      "vertices": 8,
+      "factors": [
+        {
+          "h": 153,
+          "size": 8,
+          "kind": "lift",
+          "parameters": [
+            1,
+            1
+          ]
+        }
+      ],
+      "rows": [
+        2,
+        252,
+        233,
+        241,
+        229,
+        65,
+        129,
+        33
+      ],
+      "states": 6,
+      "independent_hamilton_path_recount": 153
+    },
+    {
+      "target": 177,
+      "attained_in_language": true,
+      "vertices": 8,
+      "factors": [
+        {
+          "h": 177,
+          "size": 8,
+          "kind": "lift",
+          "parameters": [
+            0,
+            1
+          ]
+        }
+      ],
+      "rows": [
+        2,
+        252,
+        249,
+        17,
+        225,
+        201,
+        137,
+        9
+      ],
+      "states": 4,
+      "independent_hamilton_path_recount": 177
+    },
+    {
+      "target": 495,
+      "attained_in_language": true,
+      "vertices": 9,
+      "factors": [
+        {
+          "h": 495,
+          "size": 9,
+          "kind": "lift",
+          "parameters": [
+            0,
+            2
+          ]
+        }
+      ],
+      "rows": [
+        6,
+        508,
+        504,
+        497,
+        33,
+        449,
+        401,
+        273,
+        17
+      ],
+      "states": 12,
+      "independent_hamilton_path_recount": 495
+    },
+    {
+      "target": 2773,
+      "attained_in_language": true,
+      "vertices": 15,
+      "factors": [
+        {
+          "h": 47,
+          "size": 7,
+          "kind": "atom",
+          "parameters": [
+            2,
+            4
+          ]
+        },
+        {
+          "h": 59,
+          "size": 8,
+          "kind": "seam",
+          "parameters": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "rows": [
+        32646,
+        32764,
+        32760,
+        32753,
+        32737,
+        32705,
+        32641,
+        30976,
+        32256,
+        31872,
+        20608,
+        1024,
+        2048,
+        7168,
+        14336
+      ],
+      "states": 4,
+      "independent_hamilton_path_recount": 2773
+    },
+    {
+      "target": 27081,
+      "attained_in_language": true,
+      "vertices": 16,
+      "factors": [
+        {
+          "h": 153,
+          "size": 8,
+          "kind": "lift",
+          "parameters": [
+            1,
+            1
+          ]
+        },
+        {
+          "h": 177,
+          "size": 8,
+          "kind": "lift",
+          "parameters": [
+            0,
+            1
+          ]
+        }
+      ],
+      "rows": [
+        65282,
+        65532,
+        65513,
+        65521,
+        65509,
+        65345,
+        65409,
+        65313,
+        512,
+        64512,
+        63744,
+        4352,
+        57600,
+        51456,
+        35072,
+        2304
+      ],
+      "states": 16,
+      "independent_hamilton_path_recount": 27081
+    }
+  ]
+}

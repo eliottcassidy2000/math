@@ -1,0 +1,91 @@
+{
+  "scope": "minimum within declared generator bank plus ordered SCC product language, not all tournaments",
+  "targets": [
+    {
+      "target": 59,
+      "atom_vertices": null,
+      "atom_states": 1,
+      "atom_seam_vertices": 8,
+      "atom_seam_states": 2,
+      "full_vertices": 8,
+      "full_states": 2
+    },
+    {
+      "target": 71,
+      "atom_vertices": null,
+      "atom_states": 1,
+      "atom_seam_vertices": 8,
+      "atom_seam_states": 2,
+      "full_vertices": 8,
+      "full_states": 2
+    },
+    {
+      "target": 153,
+      "atom_vertices": 10,
+      "atom_states": 6,
+      "atom_seam_vertices": 10,
+      "atom_seam_states": 6,
+      "full_vertices": 8,
+      "full_states": 6
+    },
+    {
+      "target": 177,
+      "atom_vertices": null,
+      "atom_states": 2,
+      "atom_seam_vertices": 11,
+      "atom_seam_states": 4,
+      "full_vertices": 8,
+      "full_states": 4
+    },
+    {
+      "target": 393,
+      "atom_vertices": null,
+      "atom_states": 2,
+      "atom_seam_vertices": null,
+      "atom_seam_states": 2,
+      "full_vertices": null,
+      "full_states": 2
+    },
+    {
+      "target": 495,
+      "atom_vertices": 14,
+      "atom_states": 12,
+      "atom_seam_vertices": 13,
+      "atom_seam_states": 12,
+      "full_vertices": 9,
+      "full_states": 12
+    },
+    {
+      "target": 2773,
+      "atom_vertices": null,
+      "atom_states": 2,
+      "atom_seam_vertices": 15,
+      "atom_seam_states": 4,
+      "full_vertices": 15,
+      "full_states": 4
+    },
+    {
+      "target": 27081,
+      "atom_vertices": null,
+      "atom_states": 8,
+      "atom_seam_vertices": 20,
+      "atom_seam_states": 16,
+      "full_vertices": 16,
+      "full_states": 16
+    },
+    {
+      "target": 1000001,
+      "atom_vertices": null,
+      "atom_states": 1,
+      "atom_seam_vertices": null,
+      "atom_seam_states": 1,
+      "full_vertices": null,
+      "full_states": 1
+    }
+  ],
+  "generator_bank_to_1e6": {
+    "atom": 94,
+    "atom_seam": 307,
+    "full": 330
+  }
+}

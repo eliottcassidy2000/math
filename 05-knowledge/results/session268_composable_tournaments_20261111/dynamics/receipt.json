@@ -1,0 +1,123 @@
+{
+  "C3_towers": [
+    {
+      "depth": 1,
+      "fixed_space_dimension": 1,
+      "rank": 3,
+      "vertices": 3
+    },
+    {
+      "depth": 2,
+      "fixed_space_dimension": 0,
+      "rank": 8,
+      "vertices": 9
+    },
+    {
+      "depth": 3,
+      "fixed_space_dimension": 1,
+      "rank": 27,
+      "vertices": 27
+    },
+    {
+      "depth": 4,
+      "fixed_space_dimension": 0,
+      "rank": 80,
+      "vertices": 81
+    },
+    {
+      "depth": 5,
+      "fixed_space_dimension": 1,
+      "rank": 243,
+      "vertices": 243
+    }
+  ],
+  "H21": {
+    "37": 122621733302733,
+    "73": 123156134945235
+  },
+  "first_binary_word_similarity_collision_through_length14": [],
+  "mixed_towers": [
+    {
+      "one_eigen_dimension": 1,
+      "quadratic_blocks": 1,
+      "vertices": 3,
+      "word": "3",
+      "zero_eigen_dimension": 0
+    },
+    {
+      "one_eigen_dimension": 4,
+      "quadratic_blocks": 0,
+      "vertices": 7,
+      "word": "7",
+      "zero_eigen_dimension": 3
+    },
+    {
+      "one_eigen_dimension": 0,
+      "quadratic_blocks": 4,
+      "vertices": 9,
+      "word": "33",
+      "zero_eigen_dimension": 1
+    },
+    {
+      "one_eigen_dimension": 9,
+      "quadratic_blocks": 1,
+      "vertices": 21,
+      "word": "37",
+      "zero_eigen_dimension": 10
+    },
+    {
+      "one_eigen_dimension": 3,
+      "quadratic_blocks": 7,
+      "vertices": 21,
+      "word": "73",
+      "zero_eigen_dimension": 4
+    },
+    {
+      "one_eigen_dimension": 24,
+      "quadratic_blocks": 0,
+      "vertices": 49,
+      "word": "77",
+      "zero_eigen_dimension": 25
+    },
+    {
+      "one_eigen_dimension": 28,
+      "quadratic_blocks": 4,
+      "vertices": 63,
+      "word": "337",
+      "zero_eigen_dimension": 27
+    },
+    {
+      "one_eigen_dimension": 10,
+      "quadratic_blocks": 22,
+      "vertices": 63,
+      "word": "373",
+      "zero_eigen_dimension": 9
+    },
+    {
+      "one_eigen_dimension": 4,
+      "quadratic_blocks": 28,
+      "vertices": 63,
+      "word": "733",
+      "zero_eigen_dimension": 3
+    }
+  ],
+  "scope": "Exact formula controls, not all tournaments or all spectra",
+  "seed_profiles": {
+    "3": [
+      0,
+      3,
+      6,
+      6
+    ],
+    "7": [
+      0,
+      189,
+      1638,
+      6678,
+      15120,
+      20160,
+      15120,
+      5040
+    ]
+  }
+}

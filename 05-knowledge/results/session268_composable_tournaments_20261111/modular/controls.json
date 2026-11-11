@@ -1,0 +1,63 @@
+{
+  "status": "FINITE-EXACT",
+  "small_labelled_universe": [
+    {
+      "n": 1,
+      "orientation_universe": 1,
+      "family_labeled": 1,
+      "classes": 1,
+      "response_types": 1
+    },
+    {
+      "n": 2,
+      "orientation_universe": 2,
+      "family_labeled": 2,
+      "classes": 1,
+      "response_types": 1
+    },
+    {
+      "n": 3,
+      "orientation_universe": 8,
+      "family_labeled": 8,
+      "classes": 2,
+      "response_types": 2
+    },
+    {
+      "n": 4,
+      "orientation_universe": 64,
+      "family_labeled": 64,
+      "classes": 4,
+      "response_types": 3
+    },
+    {
+      "n": 5,
+      "orientation_universe": 1024,
+      "family_labeled": 760,
+      "classes": 9,
+      "response_types": 6
+    }
+  ],
+  "H_only_collision": {
+    "n": 6,
+    "H": 9,
+    "profile_A": [
+      9,
+      150,
+      756,
+      1704,
+      1800,
+      720
+    ],
+    "profile_B": [
+      9,
+      126,
+      684,
+      1656,
+      1800,
+      720
+    ],
+    "context": "C3[child,1,1]",
+    "context_H_A": 177,
+    "context_H_B": 153
+  }
+}
