@@ -1,0 +1,21 @@
+strong labelled S_n (n = 1..10): [1, 0, 2, 24, 544, 22320, 1677488, 236522496, 64026088576, 33832910196480]
+l_n = #{vertex n reaches every vertex} (n = 1..10): [1, 1, 4, 38, 728, 26704, 1866256, 251548592, 66296291072, 34496488594816]
+exponential formula T = exp(L) (n <= 12): holds
+n = 1: 1 tournaments; mean Redei-Berge function in power sums: 1 p_1
+        max-ordered types (weighted counts / 2^C(n,2)): 1:1
+        tournaments by max-ordered piece type: 1:1 ; vertex n reaches all in 1
+n = 2: 2 tournaments; mean Redei-Berge function in power sums: 1 p_11
+        max-ordered types (weighted counts / 2^C(n,2)): 11:1
+        tournaments by max-ordered piece type: 11:1, 2:1 ; vertex n reaches all in 1
+n = 3: 8 tournaments; mean Redei-Berge function in power sums: 1 p_111, 1/2 p_3
+        max-ordered types (weighted counts / 2^C(n,2)): 111:1, 3:1/2
+        tournaments by max-ordered piece type: 111:1, 12:2, 21:1, 3:4 ; vertex n reaches all in 4
+n = 4: 64 tournaments; mean Redei-Berge function in power sums: 1 p_1111, 2 p_31
+        max-ordered types (weighted counts / 2^C(n,2)): 1111:1, 13:3/2, 31:1/2
+        tournaments by max-ordered piece type: 1111:1, 112:3, 121:2, 13:12, 211:1, 22:3, 31:4, 4:38 ; vertex n reaches all in 38
+n = 5: 1024 tournaments; mean Redei-Berge function in power sums: 1 p_11111, 5 p_311, 3/2 p_5
+        max-ordered types (weighted counts / 2^C(n,2)): 11111:1, 113:3, 131:3/2, 311:1/2, 5:3/2
+        tournaments by max-ordered piece type: 11111:1, 1112:4, 1121:3, 113:24, 1211:2, 122:8, 131:12, 14:152, 2111:1, 212:4, 221:3, 23:24, 311:4, 32:16, 41:38, 5:728 ; vertex n reaches all in 728
+identity sum_{odd alpha} 2^l(alpha)/pi_u(alpha) = 2 checked for n <= 22
+failures: 0
+python3 records_check.py 5  4.68s user 0.03s system 97% cpu 4.825 total

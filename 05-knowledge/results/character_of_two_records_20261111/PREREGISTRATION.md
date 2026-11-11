@@ -96,3 +96,41 @@ Number of Hamiltonian paths starting `0 -> 1 -> ...` by a layered subset dynamic
 - **R8.** `H(P_27) = 27 * 13 = 351 = 7 (mod 8)`.
 
 Conjecture to be recorded if R8 holds: `H(P_q) = q(q-1)/2 (mod 8)` for every prime power `q = 3 (mod 4)`.
+
+---
+
+# Fourth block (same session): R9, R10
+
+Written after Runs A-F were read and the note was drafted (the folding formula, Theorem Q, is proved; so is
+`H(P_q) = q(q-1)/2 (mod 4)` for every prime power `q = 3 (mod 4)`), and before Run G was started. Checked first:
+canon has no statement on `H mod 4` of doubly regular tournaments and no path count of a non-Paley doubly regular
+tournament of order 19, 23 or 27 (grep of THM-447, 448, 451, 4557 and of "doubly regular" with "mod 4" / "mod 8").
+
+In-sample: Paley tournaments (`q = 3, 7, 11, 19, 23, 27`: `H = q(q-1)/2 (mod 8)`; mod 4 proved for all `q`) and one
+non-Paley class, `CD_4` of order 15 with `H = 198335025 = 1 (mod 8) = 105 (mod 8)`. The two doubly regular
+tournaments of order 15 are `CD_4` and its converse, so order 15 is exhausted. Nothing is known here about a
+non-Paley doubly regular tournament of order 19, 23 or 27.
+
+## Run G: doubly regular tournaments that are not Paley (`drt_zoo.py`, `hampaths_layered.c`)
+
+- **G1 (order 19).** All skew Hadamard matrices of order 20 given by the Goethals-Seidel array with four circulants
+  of order 5, the first of skew type; all 20 descendants of each (normalise a row and its column, delete them); exact
+  `H` by subset dynamic programming. If every tournament obtained is isomorphic to `P_19`, G1 is uninformative and a
+  search for another doubly regular tournament of order 19 (SAT, random seeds) replaces it.
+- **G2 (order 23).** The double `[[M, M], [-M^T, M^T]]` of the skew Hadamard matrix `M` of order 12 of `P_11`; its
+  24 descendants; `H mod 256` by the layered subset programme.
+- **G3 (order 27).** Goethals-Seidel with circulants of order 7; for the descendants that have a converse symmetry,
+  `H mod 4` by the folding formula. (Without a converse symmetry: not computed, unless time allows the direct
+  programme.)
+- Controls: the programmes must return `H(P_7) = 189`, `H(P_11) = 95095`, `H(P_19) = 1172695746915`,
+  `H(CD_4) = 198335025`, and `H(P_23) = 5 (mod 8)`.
+
+- **R9.** Every tournament of G1 has `H = 3 (mod 4)`; every tournament of G2 has `H = 1 (mod 4)`; every tournament
+  of G3 whose residue is computed has `H = 3 (mod 4)`. (The doubly regular form of the Paley law: `H = n(n-1)/2
+  (mod 4)`.)
+- **R10.** Every tournament of G1 has `H = 3 (mod 8)` and every tournament of G2 has `H = 5 (mod 8)`
+  (`H = n(n-1)/2 (mod 8)`).
+
+A single doubly regular tournament outside these residues refutes the corresponding statement; R9 failing would show
+that the Paley law of this note is a statement about the quadratic character and the converse symmetry, not about
+double regularity.

@@ -1,0 +1,7 @@
+n =  3:    2 connection sets; H = 1 (mod 4) for 0, H = 3 (mod 4) for 2; disagreements with Theorem Q: 0
+n =  5:    4 connection sets; H = 1 (mod 4) for 0, H = 3 (mod 4) for 4; disagreements with Theorem Q: 0
+n =  7:    8 connection sets; H = 1 (mod 4) for 2, H = 3 (mod 4) for 6; disagreements with Theorem Q: 0
+n =  9:   16 connection sets; H = 1 (mod 4) for 6, H = 3 (mod 4) for 10; disagreements with Theorem Q: 0
+n = 11:   32 connection sets; H = 1 (mod 4) for 0, H = 3 (mod 4) for 32; disagreements with Theorem Q: 0
+n = 13:   64 connection sets; H = 1 (mod 4) for 36, H = 3 (mod 4) for 28; disagreements with Theorem Q: 0
+python3 circulant_check.py 13  2.36s user 0.02s system 98% cpu 2.409 total

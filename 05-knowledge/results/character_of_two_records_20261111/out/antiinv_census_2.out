@@ -1,0 +1,4 @@
+n = 5 (m = 2): 16 normalised anti-invariant labelled tournaments; violations of H = 1 + 2F (mod 4): 0; violations of the quotient formula: 0
+  t = 0 cyclic invariant triples: 4 tournaments, F odd in 0, F even in 4; parity vectors (F_1..F_m, F_1 first): 00:4
+  t = 1 cyclic invariant triples: 8 tournaments, F odd in 4, F even in 4; parity vectors (F_1..F_m, F_1 first): 10:4 11:4
+  t = 2 cyclic invariant triples: 4 tournaments, F odd in 4, F even in 0; parity vectors (F_1..F_m, F_1 first): 01:4

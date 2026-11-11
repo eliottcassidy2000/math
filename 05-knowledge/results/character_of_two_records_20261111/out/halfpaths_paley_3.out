@@ -1,0 +1,2 @@
+k 1 length 3 F_k mod 256 = 1 (type i 0, type ii 1)
+F mod 2 = 1 ; F_1 mod 256 = 1 ; sum_{k>=2} F_k mod 2 = 0

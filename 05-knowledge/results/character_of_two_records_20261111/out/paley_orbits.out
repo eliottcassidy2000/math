@@ -1,0 +1,4 @@
+P_3: H = 3 = 3 * 1 (|Aut| = p(p-1)/2); Hamiltonian cycles c_p = 1; closing paths 3; non-closing paths 0 = 0 * |Aut| | H/|Aut| = 1 | cycles mod |Aut|: 1
+P_7: H = 189 = 21 * 9 (|Aut| = p(p-1)/2); Hamiltonian cycles c_p = 24; closing paths 168; non-closing paths 21 = 1 * |Aut| | H/|Aut| = 9 | cycles mod |Aut|: 3
+P_11: H = 95095 = 55 * 1729 (|Aut| = p(p-1)/2); Hamiltonian cycles c_p = 5505; closing paths 60555; non-closing paths 34540 = 628 * |Aut| | H/|Aut| = 1729 | cycles mod |Aut|: 5
+P_19: H = 1172695746915 = 171 * 6857869865 (|Aut| = p(p-1)/2); Hamiltonian cycles c_p = 34358763933; closing paths 652816514727; non-closing paths 519879232188 = 3040229428 * |Aut| | H/|Aut| = 6857869865 | cycles mod |Aut|: 9

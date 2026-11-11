@@ -1,0 +1,5 @@
+bound 300000: 30476 atoms; equal to the predicted list (primes != 7, 7p with p != 3, 63, 343): True
+composite atoms below 400: [35, 49, 63, 77, 91, 119, 133, 161, 203, 217, 259, 287, 301, 329, 343, 371]
+largest ratio longest/shortest factorisation below the bound: 5/2, first attained at 3969 (shortest 2, longest 5)
+elements with ratio 5/2: [3969]
+smallest element with two factorisations of different lengths: 315

@@ -1,0 +1,4 @@
+k 1 length 3 F_k mod 256 = 0 (type i 0, type ii 0)
+k 2 length 5 F_k mod 256 = 6 (type i 6, type ii 0)
+k 3 length 7 F_k mod 256 = 6 (type i 6, type ii 0)
+F mod 2 = 0 ; F_1 mod 256 = 0 ; sum_{k>=2} F_k mod 2 = 0

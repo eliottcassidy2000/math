@@ -1,0 +1,10 @@
+k 1 length 3 F_k mod 256 = 9 (type i 0, type ii 9)
+k 2 length 5 F_k mod 256 = 36 (type i 0, type ii 36)
+k 3 length 7 F_k mod 256 = 32 (type i 0, type ii 32)
+k 4 length 9 F_k mod 256 = 174 (type i 0, type ii 174)
+k 5 length 11 F_k mod 256 = 18 (type i 0, type ii 18)
+k 6 length 13 F_k mod 256 = 76 (type i 0, type ii 76)
+k 7 length 15 F_k mod 256 = 46 (type i 0, type ii 46)
+k 8 length 17 F_k mod 256 = 195 (type i 0, type ii 195)
+k 9 length 19 F_k mod 256 = 151 (type i 0, type ii 151)
+F mod 2 = 1 ; F_1 mod 256 = 9 ; sum_{k>=2} F_k mod 2 = 0

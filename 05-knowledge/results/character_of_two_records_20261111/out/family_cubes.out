@@ -1,0 +1,33 @@
+Paley tournaments P_q (R4: 2^q for q = 7 (mod 8), 2^((q+1)/2) for q = 3 (mod 8))
+P_3      m =   3: dim ker A^T =  0 (enumerated); K_1 non-empty; weights mod 4: K_0 [1, 0, 0, 0], K_1 [0, 0, 0, 1]; G_35 by the kernel formula = 2^2; Gauss sum by elimination = equal (rank 2); direct count over 2^m extensions = equal
+   prediction HOLDS
+P_7      m =   7: dim ker A^T =  3 (enumerated); K_1 non-empty; weights mod 4: K_0 [8, 0, 0, 0], K_1 [0, 0, 0, 8]; G_35 by the kernel formula = 2^7; Gauss sum by elimination = equal (rank 0); direct count over 2^m extensions = equal
+   prediction HOLDS
+P_11     m =  11: dim ker A^T =  0 (enumerated); K_1 non-empty; weights mod 4: K_0 [1, 0, 0, 0], K_1 [0, 0, 0, 1]; G_35 by the kernel formula = 2^6; Gauss sum by elimination = equal (rank 10); direct count over 2^m extensions = equal
+   prediction HOLDS
+P_19     m =  19: dim ker A^T =  0 (enumerated); K_1 non-empty; weights mod 4: K_0 [1, 0, 0, 0], K_1 [0, 0, 0, 1]; G_35 by the kernel formula = 2^10; Gauss sum by elimination = equal (rank 18)
+   prediction HOLDS
+P_23     m =  23: dim ker A^T = 11 (enumerated); K_1 non-empty; weights mod 4: K_0 [2048, 0, 0, 0], K_1 [0, 0, 0, 2048]; G_35 by the kernel formula = 2^23; Gauss sum by elimination = equal (rank 0)
+   prediction HOLDS
+P_27     m =  27: dim ker A^T =  0 (enumerated); K_1 non-empty; weights mod 4: K_0 [1, 0, 0, 0], K_1 [0, 0, 0, 1]; G_35 by the kernel formula = 2^14; Gauss sum by elimination = equal (rank 26)
+   prediction HOLDS
+P_31     m =  31: dim ker A^T = 15 (enumerated); K_1 non-empty; weights mod 4: K_0 [32768, 0, 0, 0], K_1 [0, 0, 0, 32768]; G_35 by the kernel formula = 2^31; Gauss sum by elimination = equal (rank 0)
+   prediction HOLDS
+P_43     m =  43: dim ker A^T =  0 (enumerated); K_1 non-empty; weights mod 4: K_0 [1, 0, 0, 0], K_1 [0, 0, 0, 1]; G_35 by the kernel formula = 2^22; Gauss sum by elimination = equal (rank 42)
+   prediction HOLDS
+P_47     m =  47: dim ker A^T = 23 (doubly even basis); K_1 non-empty; weights mod 4: K_0 [8388608, 0, 0, 0], K_1 [0, 0, 0, 8388608]; G_35 by the kernel formula = 2^47; Gauss sum by elimination = equal (rank 0)
+   prediction HOLDS
+Cayley-Dickson sign tournaments CD_k (R5: 2^(2^k - 1) for k = 3, 4, 5; k = 2, 6, 7 exploratory)
+CD_2     m =   3: dim ker A^T =  0 (enumerated); K_1 non-empty; weights mod 4: K_0 [1, 0, 0, 0], K_1 [0, 0, 0, 1]; G_35 by the kernel formula = 2^2; Gauss sum by elimination = equal (rank 2); direct count over 2^m extensions = equal
+   G_35 = 2^m: no
+CD_3     m =   7: dim ker A^T =  3 (enumerated); K_1 non-empty; weights mod 4: K_0 [8, 0, 0, 0], K_1 [0, 0, 0, 8]; G_35 by the kernel formula = 2^7; Gauss sum by elimination = equal (rank 0); direct count over 2^m extensions = equal
+   G_35 = 2^m: yes
+CD_4     m =  15: dim ker A^T =  7 (enumerated); K_1 non-empty; weights mod 4: K_0 [128, 0, 0, 0], K_1 [0, 0, 0, 128]; G_35 by the kernel formula = 2^15; Gauss sum by elimination = equal (rank 0)
+   G_35 = 2^m: yes
+CD_5     m =  31: dim ker A^T = 15 (enumerated); K_1 non-empty; weights mod 4: K_0 [32768, 0, 0, 0], K_1 [0, 0, 0, 32768]; G_35 by the kernel formula = 2^31; Gauss sum by elimination = equal (rank 0)
+   G_35 = 2^m: yes
+CD_6     m =  63: dim ker A^T = 31 (doubly even basis); K_1 non-empty; weights mod 4: K_0 [2147483648, 0, 0, 0], K_1 [0, 0, 0, 2147483648]; G_35 by the kernel formula = 2^63; Gauss sum by elimination = equal (rank 0)
+   G_35 = 2^m: yes
+CD_7     m = 127: dim ker A^T = 63 (doubly even basis); K_1 non-empty; weights mod 4: K_0 [9223372036854775808, 0, 0, 0], K_1 [0, 0, 0, 9223372036854775808]; G_35 by the kernel formula = 2^127; Gauss sum by elimination = equal (rank 0)
+   G_35 = 2^m: yes
+python3 family_cubes.py  178.73s user 0.74s system 99% cpu 3:01.26 total

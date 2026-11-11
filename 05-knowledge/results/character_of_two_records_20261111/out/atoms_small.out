@@ -1,0 +1,25 @@
+order: strong classes, self-converse among them, converse pairs
+  n = 3: 1 strong classes, 1 self-converse, 0 converse pairs
+  n = 4: 1 strong classes, 1 self-converse, 0 converse pairs
+  n = 5: 6 strong classes, 6 self-converse, 0 converse pairs
+  n = 6: 35 strong classes, 9 self-converse, 13 converse pairs
+  n = 7: 353 strong classes, 79 self-converse, 137 converse pairs
+edge-usage profiles (non-zero entries, sorted), orders 3-5:
+  n = 3, H =  1, not strong: [1, 1]
+  n = 3, H =  3, strong: [2, 2, 2]
+  n = 4, H =  1, not strong: [1, 1, 1]
+  n = 4, H =  3, not strong: [2, 2, 2, 1, 1, 1]
+  n = 4, H =  3, not strong: [2, 2, 2, 1, 1, 1]
+  n = 4, H =  5, strong: [4, 3, 3, 3, 1, 1]
+  n = 5, H =  1, not strong: [1, 1, 1, 1]
+  n = 5, H =  3, not strong: [3, 2, 2, 2, 1, 1, 1]
+  n = 5, H =  5, not strong: [4, 3, 3, 3, 2, 1, 1, 1, 1, 1]
+  n = 5, H = 11, strong: [7, 7, 6, 5, 5, 3, 3, 3, 3, 2]
+  n = 5, H = 13, strong: [9, 9, 6, 6, 5, 5, 4, 4, 2, 2]
+  n = 5, H =  9, strong: [6, 6, 6, 6, 4, 2, 2, 2, 2]
+  n = 5, H =  9, strong: [8, 5, 5, 5, 5, 2, 2, 2, 1, 1]
+  n = 5, H = 15, strong: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+  n = 5, H =  3, not strong: [2, 2, 2, 1, 1, 1, 1, 1, 1]
+  n = 5, H = 15, strong: [12, 8, 8, 8, 4, 4, 4, 4, 4, 4]
+  n = 5, H =  5, not strong: [4, 3, 3, 3, 2, 1, 1, 1, 1, 1]
+  n = 5, H =  3, not strong: [3, 2, 2, 2, 1, 1, 1]

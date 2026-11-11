@@ -1,0 +1,8 @@
+CD_2 (n = 3): anti-automorphisms found: 3; involutive: 3
+   fixed vertices of the first involution: [0]; pairs: 1; cyclic invariant triples (|D_1|): 1
+   |D_1| over all involutive anti-automorphisms: [1]
+CD_3 (n = 7): anti-automorphisms found: 21; involutive: 7
+   fixed vertices of the first involution: [0]; pairs: 3; cyclic invariant triples (|D_1|): 0
+   |D_1| over all involutive anti-automorphisms: [0]
+CD_4 (n = 15): anti-automorphisms found: 0; involutive: 0
+CD_5 (n = 31): anti-automorphisms found: 0; involutive: 0

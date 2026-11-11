@@ -1,0 +1,17 @@
+index  0: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index  1: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index  2: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index  3: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index  4: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index  5: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index  6: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index  7: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index  8: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index  9: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index 10: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index 11: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index 12: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index 13: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index 14: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+index 15: scores [7], common out-neighbours [3], H = 198335025, H mod 4 = 1, |Aut| = 21, self-converse: no, class A
+python3 drt_descendants.py 4  3.22s user 0.03s system 99% cpu 3.265 total

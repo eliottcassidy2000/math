@@ -1,0 +1,6 @@
+q =  7: folded tournament Z on  3 pairs; Z = P_q[squares] via a -> a^2: True; scores [1]; |D_1| = 0; H(Z) = 3; isomorphic to P_3: True (H(P_3) = 3)
+q = 11: folded tournament Z on  5 pairs; Z = P_q[squares] via a -> a^2: True; scores [2]; |D_1| = 5; H(Z) = 15
+q = 19: folded tournament Z on  9 pairs; Z = P_q[squares] via a -> a^2: True; scores [4]; |D_1| = 9; H(Z) = 3357
+q = 23: folded tournament Z on 11 pairs; Z = P_q[squares] via a -> a^2: True; scores [5]; |D_1| = 0; H(Z) = 92411; isomorphic to P_11: False (H(P_11) = 95095)
+q = 27: folded tournament Z on 13 pairs; Z = P_q[squares] via a -> a^2: True; scores [6]; |D_1| = 13; H(Z) = 3703011
+q = 31: folded tournament Z on 15 pairs; Z = P_q[squares] via a -> a^2: True; scores [7]; |D_1| = 0; H(Z) = 196922055
