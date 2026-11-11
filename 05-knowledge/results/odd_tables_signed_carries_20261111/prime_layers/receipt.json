@@ -1,0 +1,698 @@
+{
+  "status": "FINITE-EXACT controls; all-modulus proofs in PROOF.md",
+  "universe": "all admissible odd moduli5..199, exponent pairs[-8,8]^2; five named prime-power towers; all binary words lengths1..6 on odd moduli3..45 and both signs",
+  "relation_checks": 19074,
+  "word_fibre_checks": 5544,
+  "towers": [
+    {
+      "prime": 5,
+      "steps": [
+        {
+          "modulus": 5,
+          "lattice": [
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "modulus": 25,
+          "lattice": [
+            20,
+            13,
+            1
+          ],
+          "digit_functional": [
+            3,
+            1
+          ]
+        },
+        {
+          "modulus": 125,
+          "lattice": [
+            100,
+            93,
+            1
+          ],
+          "digit_functional": [
+            3,
+            3
+          ]
+        },
+        {
+          "modulus": 625,
+          "lattice": [
+            500,
+            393,
+            1
+          ],
+          "digit_functional": [
+            3,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 7,
+      "steps": [
+        {
+          "modulus": 7,
+          "lattice": [
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "modulus": 49,
+          "lattice": [
+            21,
+            8,
+            2
+          ],
+          "digit_functional": [
+            1,
+            5
+          ]
+        },
+        {
+          "modulus": 343,
+          "lattice": [
+            147,
+            50,
+            2
+          ],
+          "digit_functional": [
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 11,
+      "steps": [
+        {
+          "modulus": 11,
+          "lattice": [
+            10,
+            2,
+            1
+          ]
+        },
+        {
+          "modulus": 121,
+          "lattice": [
+            110,
+            22,
+            1
+          ],
+          "digit_functional": [
+            5,
+            1
+          ]
+        },
+        {
+          "modulus": 1331,
+          "lattice": [
+            1210,
+            572,
+            1
+          ],
+          "digit_functional": [
+            5,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 13,
+      "steps": [
+        {
+          "modulus": 13,
+          "lattice": [
+            12,
+            8,
+            1
+          ]
+        },
+        {
+          "modulus": 169,
+          "lattice": [
+            156,
+            32,
+            1
+          ],
+          "digit_functional": [
+            3,
+            7
+          ]
+        },
+        {
+          "modulus": 2197,
+          "lattice": [
+            2028,
+            32,
+            1
+          ],
+          "digit_functional": [
+            3,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 1093,
+      "steps": [
+        {
+          "modulus": 1093,
+          "lattice": [
+            364,
+            104,
+            1
+          ]
+        },
+        {
+          "modulus": 1194649,
+          "lattice": [
+            364,
+            104,
+            1093
+          ],
+          "digit_functional": [
+            0,
+            781
+          ]
+        }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "modulus": 35,
+      "lattice": [
+        12,
+        2,
+        2
+      ],
+      "order": 24,
+      "trace": [
+        {
+          "prime": 5,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 5,
+              "lattice": [
+                4,
+                1,
+                1
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            1
+          ],
+          "merged_lattice": [
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "prime": 7,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 7,
+              "lattice": [
+                3,
+                2,
+                2
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            1
+          ],
+          "merged_lattice": [
+            12,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 65,
+      "lattice": [
+        12,
+        8,
+        4
+      ],
+      "order": 48,
+      "trace": [
+        {
+          "prime": 5,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 5,
+              "lattice": [
+                4,
+                1,
+                1
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            1
+          ],
+          "merged_lattice": [
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "prime": 13,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 13,
+              "lattice": [
+                12,
+                8,
+                1
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            1
+          ],
+          "merged_lattice": [
+            12,
+            8,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 95,
+      "lattice": [
+        36,
+        5,
+        1
+      ],
+      "order": 36,
+      "trace": [
+        {
+          "prime": 5,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 5,
+              "lattice": [
+                4,
+                1,
+                1
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            1
+          ],
+          "merged_lattice": [
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "prime": 19,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 19,
+              "lattice": [
+                18,
+                5,
+                1
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            2
+          ],
+          "merged_lattice": [
+            36,
+            5,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 119,
+      "lattice": [
+        24,
+        17,
+        2
+      ],
+      "order": 48,
+      "trace": [
+        {
+          "prime": 7,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 7,
+              "lattice": [
+                3,
+                2,
+                2
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            1
+          ],
+          "merged_lattice": [
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "prime": 17,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 17,
+              "lattice": [
+                8,
+                1,
+                2
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            2
+          ],
+          "merged_lattice": [
+            24,
+            17,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 143,
+      "lattice": [
+        60,
+        32,
+        1
+      ],
+      "order": 60,
+      "trace": [
+        {
+          "prime": 11,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 11,
+              "lattice": [
+                10,
+                2,
+                1
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            1
+          ],
+          "merged_lattice": [
+            10,
+            2,
+            1
+          ]
+        },
+        {
+          "prime": 13,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 13,
+              "lattice": [
+                12,
+                8,
+                1
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            2
+          ],
+          "merged_lattice": [
+            60,
+            32,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 145,
+      "lattice": [
+        28,
+        18,
+        2
+      ],
+      "order": 56,
+      "trace": [
+        {
+          "prime": 5,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 5,
+              "lattice": [
+                4,
+                1,
+                1
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            1
+          ],
+          "merged_lattice": [
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "prime": 29,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 29,
+              "lattice": [
+                28,
+                23,
+                1
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            2
+          ],
+          "merged_lattice": [
+            28,
+            18,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 1225,
+      "lattice": [
+        420,
+        386,
+        2
+      ],
+      "order": 840,
+      "trace": [
+        {
+          "prime": 5,
+          "exponent": 2,
+          "local_steps": [
+            {
+              "modulus": 5,
+              "lattice": [
+                4,
+                1,
+                1
+              ]
+            },
+            {
+              "modulus": 25,
+              "lattice": [
+                20,
+                13,
+                1
+              ],
+              "digit_functional": [
+                3,
+                1
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            1
+          ],
+          "merged_lattice": [
+            20,
+            13,
+            1
+          ]
+        },
+        {
+          "prime": 7,
+          "exponent": 2,
+          "local_steps": [
+            {
+              "modulus": 7,
+              "lattice": [
+                3,
+                2,
+                2
+              ]
+            },
+            {
+              "modulus": 49,
+              "lattice": [
+                21,
+                8,
+                2
+              ],
+              "digit_functional": [
+                1,
+                5
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            1
+          ],
+          "merged_lattice": [
+            420,
+            386,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 1729,
+      "lattice": [
+        36,
+        12,
+        6
+      ],
+      "order": 216,
+      "trace": [
+        {
+          "prime": 7,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 7,
+              "lattice": [
+                3,
+                2,
+                2
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            1
+          ],
+          "merged_lattice": [
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "prime": 13,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 13,
+              "lattice": [
+                12,
+                8,
+                1
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            1
+          ],
+          "merged_lattice": [
+            12,
+            0,
+            6
+          ]
+        },
+        {
+          "prime": 19,
+          "exponent": 1,
+          "local_steps": [
+            {
+              "modulus": 19,
+              "lattice": [
+                18,
+                5,
+                1
+              ]
+            }
+          ],
+          "compatibility": [
+            1,
+            6
+          ],
+          "merged_lattice": [
+            36,
+            12,
+            6
+          ]
+        }
+      ]
+    }
+  ]
+}

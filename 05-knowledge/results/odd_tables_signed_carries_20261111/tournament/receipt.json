@@ -1,0 +1,620 @@
+{
+  "scope": "Bounded controls for proved actuator and reroot formulas, not a coverage scan.",
+  "actuator_and_preparation_inputs": 128,
+  "completed_prefixes": [
+    {
+      "prefix": 0,
+      "prepared_prefix": 2,
+      "q": 95,
+      "m": 19,
+      "address_bits": 87,
+      "target_bits": 92,
+      "lower_q_savings_bits": [
+        0,
+        91,
+        91,
+        91
+      ]
+    },
+    {
+      "prefix": 1,
+      "prepared_prefix": 12,
+      "q": 415,
+      "m": 105,
+      "address_bits": 433,
+      "target_bits": 438,
+      "lower_q_savings_bits": [
+        0,
+        436,
+        437,
+        437
+      ]
+    },
+    {
+      "prefix": 2,
+      "prepared_prefix": 20,
+      "q": 671,
+      "m": 165,
+      "address_bits": 674,
+      "target_bits": 679,
+      "lower_q_savings_bits": [
+        0,
+        678,
+        679,
+        679
+      ]
+    },
+    {
+      "prefix": 3,
+      "prepared_prefix": 28,
+      "q": 927,
+      "m": 247,
+      "address_bits": 1002,
+      "target_bits": 1008,
+      "lower_q_savings_bits": [
+        0,
+        1004,
+        1006,
+        1006
+      ]
+    },
+    {
+      "prefix": 4,
+      "prepared_prefix": 34,
+      "q": 1119,
+      "m": 327,
+      "address_bits": 1323,
+      "target_bits": 1328,
+      "lower_q_savings_bits": [
+        0,
+        1328,
+        1328,
+        1328
+      ]
+    },
+    {
+      "prefix": 5,
+      "prepared_prefix": 42,
+      "q": 1375,
+      "m": 418,
+      "address_bits": 1687,
+      "target_bits": 1692,
+      "lower_q_savings_bits": [
+        0,
+        1691,
+        1691,
+        1691
+      ]
+    },
+    {
+      "prefix": 6,
+      "prepared_prefix": 50,
+      "q": 1631,
+      "m": 486,
+      "address_bits": 1959,
+      "target_bits": 1964,
+      "lower_q_savings_bits": [
+        0,
+        1962,
+        1963,
+        1963
+      ]
+    },
+    {
+      "prefix": 7,
+      "prepared_prefix": 58,
+      "q": 1887,
+      "m": 582,
+      "address_bits": 2343,
+      "target_bits": 2349,
+      "lower_q_savings_bits": [
+        0,
+        2345,
+        2347,
+        2347
+      ]
+    },
+    {
+      "prefix": 8,
+      "prepared_prefix": 68,
+      "q": 2207,
+      "m": 570,
+      "address_bits": 2296,
+      "target_bits": 2301,
+      "lower_q_savings_bits": [
+        0,
+        2301,
+        2301,
+        2301
+      ]
+    },
+    {
+      "prefix": 9,
+      "prepared_prefix": 74,
+      "q": 2399,
+      "m": 734,
+      "address_bits": 2952,
+      "target_bits": 2957,
+      "lower_q_savings_bits": [
+        0,
+        2956,
+        2957,
+        2957
+      ]
+    },
+    {
+      "prefix": 10,
+      "prepared_prefix": 82,
+      "q": 2655,
+      "m": 788,
+      "address_bits": 3168,
+      "target_bits": 3173,
+      "lower_q_savings_bits": [
+        0,
+        3172,
+        3173,
+        3173
+      ]
+    },
+    {
+      "prefix": 11,
+      "prepared_prefix": 92,
+      "q": 2975,
+      "m": 810,
+      "address_bits": 3256,
+      "target_bits": 3261,
+      "lower_q_savings_bits": [
+        0,
+        3260,
+        3260,
+        3260
+      ]
+    },
+    {
+      "prefix": 12,
+      "prepared_prefix": 98,
+      "q": 3167,
+      "m": 951,
+      "address_bits": 3820,
+      "target_bits": 3825,
+      "lower_q_savings_bits": [
+        0,
+        3824,
+        3824,
+        3824
+      ]
+    },
+    {
+      "prefix": 13,
+      "prepared_prefix": 106,
+      "q": 3423,
+      "m": 1064,
+      "address_bits": 4272,
+      "target_bits": 4277,
+      "lower_q_savings_bits": [
+        0,
+        4275,
+        4276,
+        4276
+      ]
+    },
+    {
+      "prefix": 14,
+      "prepared_prefix": 114,
+      "q": 3679,
+      "m": 1112,
+      "address_bits": 4464,
+      "target_bits": 4470,
+      "lower_q_savings_bits": [
+        0,
+        4466,
+        4468,
+        4468
+      ]
+    },
+    {
+      "prefix": 15,
+      "prepared_prefix": 122,
+      "q": 3935,
+      "m": 1227,
+      "address_bits": 4924,
+      "target_bits": 4930,
+      "lower_q_savings_bits": [
+        0,
+        4925,
+        4928,
+        4928
+      ]
+    },
+    {
+      "prefix": 16,
+      "prepared_prefix": 132,
+      "q": 4255,
+      "m": 1109,
+      "address_bits": 4453,
+      "target_bits": 4458,
+      "lower_q_savings_bits": [
+        0,
+        4458,
+        4458,
+        4458
+      ]
+    },
+    {
+      "prefix": 17,
+      "prepared_prefix": 140,
+      "q": 4511,
+      "m": 1221,
+      "address_bits": 4901,
+      "target_bits": 4906,
+      "lower_q_savings_bits": [
+        0,
+        4906,
+        4906,
+        4906
+      ]
+    },
+    {
+      "prefix": 18,
+      "prepared_prefix": 148,
+      "q": 4767,
+      "m": 1241,
+      "address_bits": 4981,
+      "target_bits": 4986,
+      "lower_q_savings_bits": [
+        0,
+        4985,
+        4986,
+        4986
+      ]
+    },
+    {
+      "prefix": 19,
+      "prepared_prefix": 154,
+      "q": 4959,
+      "m": 1541,
+      "address_bits": 6181,
+      "target_bits": 6186,
+      "lower_q_savings_bits": [
+        0,
+        6185,
+        6186,
+        6186
+      ]
+    },
+    {
+      "prefix": 20,
+      "prepared_prefix": 164,
+      "q": 5279,
+      "m": 1376,
+      "address_bits": 5521,
+      "target_bits": 5526,
+      "lower_q_savings_bits": [
+        0,
+        5525,
+        5526,
+        5526
+      ]
+    },
+    {
+      "prefix": 21,
+      "prepared_prefix": 172,
+      "q": 5535,
+      "m": 1514,
+      "address_bits": 6073,
+      "target_bits": 6078,
+      "lower_q_savings_bits": [
+        0,
+        6077,
+        6077,
+        6077
+      ]
+    },
+    {
+      "prefix": 22,
+      "prepared_prefix": 180,
+      "q": 5791,
+      "m": 1528,
+      "address_bits": 6129,
+      "target_bits": 6134,
+      "lower_q_savings_bits": [
+        0,
+        6133,
+        6133,
+        6133
+      ]
+    },
+    {
+      "prefix": 23,
+      "prepared_prefix": 186,
+      "q": 5983,
+      "m": 1870,
+      "address_bits": 7497,
+      "target_bits": 7502,
+      "lower_q_savings_bits": [
+        0,
+        7501,
+        7501,
+        7501
+      ]
+    },
+    {
+      "prefix": 24,
+      "prepared_prefix": 196,
+      "q": 6303,
+      "m": 1653,
+      "address_bits": 6629,
+      "target_bits": 6634,
+      "lower_q_savings_bits": [
+        0,
+        6633,
+        6633,
+        6633
+      ]
+    },
+    {
+      "prefix": 25,
+      "prepared_prefix": 204,
+      "q": 6559,
+      "m": 1784,
+      "address_bits": 7153,
+      "target_bits": 7158,
+      "lower_q_savings_bits": [
+        0,
+        7156,
+        7157,
+        7157
+      ]
+    },
+    {
+      "prefix": 26,
+      "prepared_prefix": 212,
+      "q": 6815,
+      "m": 1784,
+      "address_bits": 7153,
+      "target_bits": 7158,
+      "lower_q_savings_bits": [
+        0,
+        7156,
+        7157,
+        7157
+      ]
+    },
+    {
+      "prefix": 27,
+      "prepared_prefix": 220,
+      "q": 7071,
+      "m": 1941,
+      "address_bits": 7781,
+      "target_bits": 7786,
+      "lower_q_savings_bits": [
+        0,
+        7784,
+        7785,
+        7785
+      ]
+    },
+    {
+      "prefix": 28,
+      "prepared_prefix": 226,
+      "q": 7263,
+      "m": 2196,
+      "address_bits": 8801,
+      "target_bits": 8807,
+      "lower_q_savings_bits": [
+        0,
+        8804,
+        8805,
+        8805
+      ]
+    },
+    {
+      "prefix": 29,
+      "prepared_prefix": 236,
+      "q": 7583,
+      "m": 2082,
+      "address_bits": 8345,
+      "target_bits": 8351,
+      "lower_q_savings_bits": [
+        0,
+        8347,
+        8349,
+        8349
+      ]
+    },
+    {
+      "prefix": 30,
+      "prepared_prefix": 244,
+      "q": 7839,
+      "m": 2076,
+      "address_bits": 8321,
+      "target_bits": 8327,
+      "lower_q_savings_bits": [
+        0,
+        8322,
+        8325,
+        8325
+      ]
+    },
+    {
+      "prefix": 31,
+      "prepared_prefix": 250,
+      "q": 8031,
+      "m": 2517,
+      "address_bits": 10085,
+      "target_bits": 10091,
+      "lower_q_savings_bits": [
+        0,
+        10085,
+        10089,
+        10089
+      ]
+    }
+  ],
+  "literal_C3_controls": [
+    {
+      "C": 2,
+      "rerooted_states": [
+        [
+          43,
+          13,
+          43,
+          13
+        ],
+        [
+          45,
+          15,
+          45,
+          15
+        ]
+      ]
+    },
+    {
+      "C": 3,
+      "rerooted_states": [
+        [
+          49,
+          22,
+          52,
+          25
+        ],
+        [
+          51,
+          24,
+          54,
+          27
+        ]
+      ]
+    },
+    {
+      "C": 9,
+      "rerooted_states": [
+        [
+          133,
+          25,
+          133,
+          25
+        ],
+        [
+          135,
+          27,
+          135,
+          27
+        ]
+      ]
+    },
+    {
+      "C": 21,
+      "rerooted_states": [
+        [
+          289,
+          79,
+          289,
+          79
+        ],
+        [
+          291,
+          81,
+          291,
+          81
+        ]
+      ]
+    }
+  ],
+  "literal_H13_at_B3": [
+    [
+      133,
+      13,
+      141,
+      13
+    ],
+    [
+      135,
+      13,
+      141,
+      13
+    ]
+  ],
+  "explicit_completed_sources": [
+    {
+      "q": 31,
+      "m": 1,
+      "B": 7989,
+      "C": 23967,
+      "targets": [
+        289381,
+        289383
+      ],
+      "old_pair": [
+        [
+          289381,
+          13,
+          296685,
+          13
+        ],
+        [
+          289383,
+          13,
+          296685,
+          13
+        ]
+      ],
+      "rerooted_C3_pair": [
+        [
+          289381,
+          91567,
+          289381,
+          91567
+        ],
+        [
+          289383,
+          91569,
+          289383,
+          91569
+        ]
+      ]
+    },
+    {
+      "q": 135,
+      "m": 7,
+      "B": 580679578421,
+      "C": 1742038735263,
+      "targets": [
+        21035117728249,
+        21035117728251
+      ],
+      "old_pair": [
+        [
+          21035117728249,
+          13,
+          39829808715923,
+          13
+        ],
+        [
+          21035117728251,
+          13,
+          39829808715923,
+          13
+        ]
+      ],
+      "rerooted_C3_pair": [
+        [
+          21035117728249,
+          7758514822900,
+          21035117728252,
+          7758514822903
+        ],
+        [
+          21035117728251,
+          7758514822902,
+          21035117728254,
+          7758514822905
+        ]
+      ]
+    }
+  ],
+  "beneficial_family_exponents": [
+    7,
+    14
+  ]
+}

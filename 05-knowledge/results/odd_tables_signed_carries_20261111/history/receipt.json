@@ -1,0 +1,79 @@
+{
+  "status": "FINITE-EXACT controls of arbitrary-parameter theorems",
+  "prefix_universe": "Both signs; starts 3,5,17; r=0,1,2,3; observer words all1, all5, or cycle3/7/13; k=0,1,2",
+  "lifted_prefix_checks": 216,
+  "least_period_rational_checks": 2044,
+  "largest_period": 162,
+  "factor_clock_universe": "Both signs; odd n<32; every odd divisor q>=3 of 4n+sign; 0<=j<=2ord_(3q)(4)",
+  "factor_clock_checks": 1848,
+  "composite_examples": [
+    {
+      "sign": 1,
+      "original_states": [
+        3,
+        5
+      ],
+      "word": [
+        1
+      ],
+      "observers": [
+        13,
+        21
+      ],
+      "individual_clock_moduli": [
+        117,
+        63
+      ],
+      "least_period": 6,
+      "R": 4096,
+      "K": 2275,
+      "first_lifted_states": [
+        14563,
+        21845
+      ],
+      "first_lifted_tables": [
+        58253,
+        87381
+      ],
+      "factor_cofactors": [
+        4481,
+        4161
+      ]
+    },
+    {
+      "sign": -1,
+      "original_states": [
+        5,
+        7
+      ],
+      "word": [
+        1
+      ],
+      "observers": [
+        19,
+        27
+      ],
+      "individual_clock_moduli": [
+        171,
+        81
+      ],
+      "least_period": 27,
+      "R": 18014398509481984,
+      "K": -10007999171934435,
+      "first_lifted_states": [
+        80063993375475485,
+        120095990063213227
+      ],
+      "first_lifted_tables": [
+        320255973501901939,
+        480383960252852907
+      ],
+      "factor_cofactors": [
+        16855577552731681,
+        17791998527883441
+      ]
+    }
+  ],
+  "hostile_controls": "Every smaller positive increment than the claimed least period is rejected by legal-head or observer congruence reconstruction. Minus examples retain their original cycle basin.",
+  "universal_convergence_claim": false
+}
