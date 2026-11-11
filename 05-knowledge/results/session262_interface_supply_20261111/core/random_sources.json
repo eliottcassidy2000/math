@@ -1,0 +1,23 @@
+{
+  "seed": 2026111126201,
+  "source_commit": "f01a7113774301573ebdacc6a49918b3ae54d242",
+  "pool_size": 14030,
+  "prefixes": [
+    "01-canon/theorems/",
+    "05-knowledge/results/"
+  ],
+  "exclusions": [
+    "chanpak",
+    "chan-pak",
+    "tournament",
+    "session261",
+    "session260",
+    "hamilton"
+  ],
+  "paths": [
+    "01-canon/theorems/THM-102-beta2-proof-status.md",
+    "05-knowledge/results/session74_eleven_mechanisms_20261027/session74-inheritance/seam_mills_20260925.md",
+    "01-canon/theorems/THM-4888-finite-oz-banks-mod3-law-involution-rigidity-residue-confinement.md",
+    "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-graph-pairs/inputs/04-THM-1370-h-spectrum-omits-7-21-all-n.md"
+  ]
+}
