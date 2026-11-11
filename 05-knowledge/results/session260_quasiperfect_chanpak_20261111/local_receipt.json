@@ -1,0 +1,1315 @@
+{
+  "status": "PASS",
+  "scope": "Every single edge of T(a,a+1),2<=a<=5; all-order theorem rests on proofs",
+  "edge_checks": 154,
+  "families": [
+    {
+      "a": 2,
+      "b": 3,
+      "H": 23,
+      "target": 21,
+      "minimum_decrease": 4,
+      "minimizing_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "changes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "type": "crossing",
+          "delta": 2
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "type": "crossing",
+          "delta": 10
+        },
+        {
+          "edge": [
+            0,
+            4
+          ],
+          "type": "crossing",
+          "delta": 18
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "type": "A-z",
+          "delta": -14
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "type": "crossing",
+          "delta": -4
+        },
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "type": "crossing",
+          "delta": 6
+        },
+        {
+          "edge": [
+            1,
+            4
+          ],
+          "type": "crossing",
+          "delta": 14
+        },
+        {
+          "edge": [
+            1,
+            5
+          ],
+          "type": "A-z",
+          "delta": -6
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "type": "internal",
+          "delta": 10
+        },
+        {
+          "edge": [
+            2,
+            5
+          ],
+          "type": "B-z",
+          "delta": 0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            3,
+            5
+          ],
+          "type": "B-z",
+          "delta": -4
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "type": "B-z",
+          "delta": -12
+        }
+      ]
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "H": 107,
+      "target": 105,
+      "minimum_decrease": 10,
+      "minimizing_edges": [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "changes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "type": "internal",
+          "delta": 34
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "type": "crossing",
+          "delta": 62
+        },
+        {
+          "edge": [
+            0,
+            4
+          ],
+          "type": "crossing",
+          "delta": 106
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "type": "crossing",
+          "delta": 164
+        },
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "type": "crossing",
+          "delta": 240
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "type": "A-z",
+          "delta": -60
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "type": "crossing",
+          "delta": 30
+        },
+        {
+          "edge": [
+            1,
+            4
+          ],
+          "type": "crossing",
+          "delta": 72
+        },
+        {
+          "edge": [
+            1,
+            5
+          ],
+          "type": "crossing",
+          "delta": 120
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "type": "crossing",
+          "delta": 178
+        },
+        {
+          "edge": [
+            1,
+            7
+          ],
+          "type": "A-z",
+          "delta": -28
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "type": "crossing",
+          "delta": -10
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "type": "crossing",
+          "delta": 36
+        },
+        {
+          "edge": [
+            2,
+            5
+          ],
+          "type": "crossing",
+          "delta": 78
+        },
+        {
+          "edge": [
+            2,
+            6
+          ],
+          "type": "crossing",
+          "delta": 122
+        },
+        {
+          "edge": [
+            2,
+            7
+          ],
+          "type": "A-z",
+          "delta": -12
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            3,
+            5
+          ],
+          "type": "internal",
+          "delta": 46
+        },
+        {
+          "edge": [
+            3,
+            6
+          ],
+          "type": "internal",
+          "delta": 92
+        },
+        {
+          "edge": [
+            3,
+            7
+          ],
+          "type": "B-z",
+          "delta": 0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "type": "internal",
+          "delta": 46
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "type": "B-z",
+          "delta": -10
+        },
+        {
+          "edge": [
+            5,
+            6
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            5,
+            7
+          ],
+          "type": "B-z",
+          "delta": -26
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "type": "B-z",
+          "delta": -56
+        }
+      ]
+    },
+    {
+      "a": 4,
+      "b": 5,
+      "H": 467,
+      "target": 465,
+      "minimum_decrease": 22,
+      "minimizing_edges": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          9
+        ]
+      ],
+      "changes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "type": "internal",
+          "delta": 190
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "type": "internal",
+          "delta": 380
+        },
+        {
+          "edge": [
+            0,
+            4
+          ],
+          "type": "crossing",
+          "delta": 554
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "type": "crossing",
+          "delta": 850
+        },
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "type": "crossing",
+          "delta": 1268
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "type": "crossing",
+          "delta": 1864
+        },
+        {
+          "edge": [
+            0,
+            8
+          ],
+          "type": "crossing",
+          "delta": 2700
+        },
+        {
+          "edge": [
+            0,
+            9
+          ],
+          "type": "A-z",
+          "delta": -248
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "type": "internal",
+          "delta": 190
+        },
+        {
+          "edge": [
+            1,
+            4
+          ],
+          "type": "crossing",
+          "delta": 366
+        },
+        {
+          "edge": [
+            1,
+            5
+          ],
+          "type": "crossing",
+          "delta": 600
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "type": "crossing",
+          "delta": 912
+        },
+        {
+          "edge": [
+            1,
+            7
+          ],
+          "type": "crossing",
+          "delta": 1344
+        },
+        {
+          "edge": [
+            1,
+            8
+          ],
+          "type": "crossing",
+          "delta": 1940
+        },
+        {
+          "edge": [
+            1,
+            9
+          ],
+          "type": "A-z",
+          "delta": -122
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "type": "crossing",
+          "delta": 180
+        },
+        {
+          "edge": [
+            2,
+            5
+          ],
+          "type": "crossing",
+          "delta": 384
+        },
+        {
+          "edge": [
+            2,
+            6
+          ],
+          "type": "crossing",
+          "delta": 624
+        },
+        {
+          "edge": [
+            2,
+            7
+          ],
+          "type": "crossing",
+          "delta": 936
+        },
+        {
+          "edge": [
+            2,
+            8
+          ],
+          "type": "crossing",
+          "delta": 1354
+        },
+        {
+          "edge": [
+            2,
+            9
+          ],
+          "type": "A-z",
+          "delta": -58
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "type": "crossing",
+          "delta": -22
+        },
+        {
+          "edge": [
+            3,
+            5
+          ],
+          "type": "crossing",
+          "delta": 192
+        },
+        {
+          "edge": [
+            3,
+            6
+          ],
+          "type": "crossing",
+          "delta": 396
+        },
+        {
+          "edge": [
+            3,
+            7
+          ],
+          "type": "crossing",
+          "delta": 630
+        },
+        {
+          "edge": [
+            3,
+            8
+          ],
+          "type": "crossing",
+          "delta": 926
+        },
+        {
+          "edge": [
+            3,
+            9
+          ],
+          "type": "A-z",
+          "delta": -24
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "type": "internal",
+          "delta": 214
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "type": "internal",
+          "delta": 428
+        },
+        {
+          "edge": [
+            4,
+            8
+          ],
+          "type": "internal",
+          "delta": 676
+        },
+        {
+          "edge": [
+            4,
+            9
+          ],
+          "type": "B-z",
+          "delta": 0
+        },
+        {
+          "edge": [
+            5,
+            6
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            5,
+            7
+          ],
+          "type": "internal",
+          "delta": 214
+        },
+        {
+          "edge": [
+            5,
+            8
+          ],
+          "type": "internal",
+          "delta": 428
+        },
+        {
+          "edge": [
+            5,
+            9
+          ],
+          "type": "B-z",
+          "delta": -22
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            6,
+            8
+          ],
+          "type": "internal",
+          "delta": 214
+        },
+        {
+          "edge": [
+            6,
+            9
+          ],
+          "type": "B-z",
+          "delta": -56
+        },
+        {
+          "edge": [
+            7,
+            8
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            7,
+            9
+          ],
+          "type": "B-z",
+          "delta": -118
+        },
+        {
+          "edge": [
+            8,
+            9
+          ],
+          "type": "B-z",
+          "delta": -240
+        }
+      ]
+    },
+    {
+      "a": 5,
+      "b": 6,
+      "H": 1955,
+      "target": 1953,
+      "minimum_decrease": 46,
+      "minimizing_edges": [
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "changes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "type": "internal",
+          "delta": 886
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "type": "internal",
+          "delta": 1772
+        },
+        {
+          "edge": [
+            0,
+            4
+          ],
+          "type": "internal",
+          "delta": 2788
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "type": "crossing",
+          "delta": 3998
+        },
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "type": "crossing",
+          "delta": 6010
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "type": "crossing",
+          "delta": 8948
+        },
+        {
+          "edge": [
+            0,
+            8
+          ],
+          "type": "crossing",
+          "delta": 13240
+        },
+        {
+          "edge": [
+            0,
+            9
+          ],
+          "type": "crossing",
+          "delta": 19472
+        },
+        {
+          "edge": [
+            0,
+            10
+          ],
+          "type": "crossing",
+          "delta": 28404
+        },
+        {
+          "edge": [
+            0,
+            11
+          ],
+          "type": "A-z",
+          "delta": -1008
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "type": "internal",
+          "delta": 886
+        },
+        {
+          "edge": [
+            1,
+            4
+          ],
+          "type": "internal",
+          "delta": 1772
+        },
+        {
+          "edge": [
+            1,
+            5
+          ],
+          "type": "crossing",
+          "delta": 2742
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "type": "crossing",
+          "delta": 4200
+        },
+        {
+          "edge": [
+            1,
+            7
+          ],
+          "type": "crossing",
+          "delta": 6288
+        },
+        {
+          "edge": [
+            1,
+            8
+          ],
+          "type": "crossing",
+          "delta": 9312
+        },
+        {
+          "edge": [
+            1,
+            9
+          ],
+          "type": "crossing",
+          "delta": 13680
+        },
+        {
+          "edge": [
+            1,
+            10
+          ],
+          "type": "crossing",
+          "delta": 19912
+        },
+        {
+          "edge": [
+            1,
+            11
+          ],
+          "type": "A-z",
+          "delta": -502
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "type": "internal",
+          "delta": 886
+        },
+        {
+          "edge": [
+            2,
+            5
+          ],
+          "type": "crossing",
+          "delta": 1740
+        },
+        {
+          "edge": [
+            2,
+            6
+          ],
+          "type": "crossing",
+          "delta": 2832
+        },
+        {
+          "edge": [
+            2,
+            7
+          ],
+          "type": "crossing",
+          "delta": 4320
+        },
+        {
+          "edge": [
+            2,
+            8
+          ],
+          "type": "crossing",
+          "delta": 6432
+        },
+        {
+          "edge": [
+            2,
+            9
+          ],
+          "type": "crossing",
+          "delta": 9456
+        },
+        {
+          "edge": [
+            2,
+            10
+          ],
+          "type": "crossing",
+          "delta": 13748
+        },
+        {
+          "edge": [
+            2,
+            11
+          ],
+          "type": "A-z",
+          "delta": -248
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            3,
+            5
+          ],
+          "type": "crossing",
+          "delta": 864
+        },
+        {
+          "edge": [
+            3,
+            6
+          ],
+          "type": "crossing",
+          "delta": 1776
+        },
+        {
+          "edge": [
+            3,
+            7
+          ],
+          "type": "crossing",
+          "delta": 2880
+        },
+        {
+          "edge": [
+            3,
+            8
+          ],
+          "type": "crossing",
+          "delta": 4368
+        },
+        {
+          "edge": [
+            3,
+            9
+          ],
+          "type": "crossing",
+          "delta": 6456
+        },
+        {
+          "edge": [
+            3,
+            10
+          ],
+          "type": "crossing",
+          "delta": 9394
+        },
+        {
+          "edge": [
+            3,
+            11
+          ],
+          "type": "A-z",
+          "delta": -118
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "type": "crossing",
+          "delta": -46
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "type": "crossing",
+          "delta": 888
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "type": "crossing",
+          "delta": 1800
+        },
+        {
+          "edge": [
+            4,
+            8
+          ],
+          "type": "crossing",
+          "delta": 2892
+        },
+        {
+          "edge": [
+            4,
+            9
+          ],
+          "type": "crossing",
+          "delta": 4350
+        },
+        {
+          "edge": [
+            4,
+            10
+          ],
+          "type": "crossing",
+          "delta": 6362
+        },
+        {
+          "edge": [
+            4,
+            11
+          ],
+          "type": "A-z",
+          "delta": -48
+        },
+        {
+          "edge": [
+            5,
+            6
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            5,
+            7
+          ],
+          "type": "internal",
+          "delta": 934
+        },
+        {
+          "edge": [
+            5,
+            8
+          ],
+          "type": "internal",
+          "delta": 1868
+        },
+        {
+          "edge": [
+            5,
+            9
+          ],
+          "type": "internal",
+          "delta": 2992
+        },
+        {
+          "edge": [
+            5,
+            10
+          ],
+          "type": "internal",
+          "delta": 4496
+        },
+        {
+          "edge": [
+            5,
+            11
+          ],
+          "type": "B-z",
+          "delta": 0
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            6,
+            8
+          ],
+          "type": "internal",
+          "delta": 934
+        },
+        {
+          "edge": [
+            6,
+            9
+          ],
+          "type": "internal",
+          "delta": 1868
+        },
+        {
+          "edge": [
+            6,
+            10
+          ],
+          "type": "internal",
+          "delta": 2992
+        },
+        {
+          "edge": [
+            6,
+            11
+          ],
+          "type": "B-z",
+          "delta": -46
+        },
+        {
+          "edge": [
+            7,
+            8
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            7,
+            9
+          ],
+          "type": "internal",
+          "delta": 934
+        },
+        {
+          "edge": [
+            7,
+            10
+          ],
+          "type": "internal",
+          "delta": 1868
+        },
+        {
+          "edge": [
+            7,
+            11
+          ],
+          "type": "B-z",
+          "delta": -116
+        },
+        {
+          "edge": [
+            8,
+            9
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            8,
+            10
+          ],
+          "type": "internal",
+          "delta": 934
+        },
+        {
+          "edge": [
+            8,
+            11
+          ],
+          "type": "B-z",
+          "delta": -244
+        },
+        {
+          "edge": [
+            9,
+            10
+          ],
+          "type": "internal",
+          "delta": 0
+        },
+        {
+          "edge": [
+            9,
+            11
+          ],
+          "type": "B-z",
+          "delta": -494
+        },
+        {
+          "edge": [
+            10,
+            11
+          ],
+          "type": "B-z",
+          "delta": -992
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "status": "FINITE-EXACT",
+  "literal_subset_DP_crossing_cases": 196,
+  "range": "2<=a,b<=5; every crossing edge",
+  "rows": [
+    {
+      "a": 2,
+      "b": 2,
+      "H": 11,
+      "decreasing_crossings": [
+        {
+          "i": 2,
+          "j": 1,
+          "decrease": 2
+        }
+      ]
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "H": 23,
+      "decreasing_crossings": [
+        {
+          "i": 2,
+          "j": 1,
+          "decrease": 4
+        }
+      ]
+    },
+    {
+      "a": 2,
+      "b": 4,
+      "H": 47,
+      "decreasing_crossings": [
+        {
+          "i": 2,
+          "j": 1,
+          "decrease": 8
+        }
+      ]
+    },
+    {
+      "a": 2,
+      "b": 5,
+      "H": 95,
+      "decreasing_crossings": [
+        {
+          "i": 2,
+          "j": 1,
+          "decrease": 16
+        }
+      ]
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "H": 23,
+      "decreasing_crossings": [
+        {
+          "i": 3,
+          "j": 1,
+          "decrease": 4
+        }
+      ]
+    },
+    {
+      "a": 3,
+      "b": 3,
+      "H": 51,
+      "decreasing_crossings": [
+        {
+          "i": 3,
+          "j": 1,
+          "decrease": 6
+        }
+      ]
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "H": 107,
+      "decreasing_crossings": [
+        {
+          "i": 3,
+          "j": 1,
+          "decrease": 10
+        }
+      ]
+    },
+    {
+      "a": 3,
+      "b": 5,
+      "H": 219,
+      "decreasing_crossings": [
+        {
+          "i": 3,
+          "j": 1,
+          "decrease": 18
+        }
+      ]
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "H": 47,
+      "decreasing_crossings": [
+        {
+          "i": 4,
+          "j": 1,
+          "decrease": 8
+        }
+      ]
+    },
+    {
+      "a": 4,
+      "b": 3,
+      "H": 107,
+      "decreasing_crossings": [
+        {
+          "i": 4,
+          "j": 1,
+          "decrease": 10
+        }
+      ]
+    },
+    {
+      "a": 4,
+      "b": 4,
+      "H": 227,
+      "decreasing_crossings": [
+        {
+          "i": 4,
+          "j": 1,
+          "decrease": 14
+        }
+      ]
+    },
+    {
+      "a": 4,
+      "b": 5,
+      "H": 467,
+      "decreasing_crossings": [
+        {
+          "i": 4,
+          "j": 1,
+          "decrease": 22
+        }
+      ]
+    },
+    {
+      "a": 5,
+      "b": 2,
+      "H": 95,
+      "decreasing_crossings": [
+        {
+          "i": 5,
+          "j": 1,
+          "decrease": 16
+        }
+      ]
+    },
+    {
+      "a": 5,
+      "b": 3,
+      "H": 219,
+      "decreasing_crossings": [
+        {
+          "i": 5,
+          "j": 1,
+          "decrease": 18
+        }
+      ]
+    },
+    {
+      "a": 5,
+      "b": 4,
+      "H": 467,
+      "decreasing_crossings": [
+        {
+          "i": 5,
+          "j": 1,
+          "decrease": 22
+        }
+      ]
+    },
+    {
+      "a": 5,
+      "b": 5,
+      "H": 963,
+      "decreasing_crossings": [
+        {
+          "i": 5,
+          "j": 1,
+          "decrease": 30
+        }
+      ]
+    }
+  ]
+}

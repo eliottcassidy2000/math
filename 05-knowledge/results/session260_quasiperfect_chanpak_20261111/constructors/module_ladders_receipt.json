@@ -1,0 +1,517 @@
+{
+  "status": "PASS",
+  "scope": "Exact finite skeleton-coefficient identities imply all nonnegative parameter values; strong seed statements exclude deletion boundaries",
+  "families": [
+    {
+      "name": "binary_q14_plus6",
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "selected_mask": 6,
+      "vertex": 3,
+      "mark": "none",
+      "parameter": "chain length",
+      "degree_bound": 6,
+      "skeleton_coefficients": {
+        "H": [
+          5,
+          9,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "D": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "U": [
+          11,
+          20,
+          7,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "samples": [
+        [
+          5,
+          1,
+          11
+        ],
+        [
+          9,
+          1,
+          20
+        ],
+        [
+          15,
+          1,
+          34
+        ],
+        [
+          27,
+          1,
+          62
+        ],
+        [
+          51,
+          1,
+          118
+        ],
+        [
+          99,
+          1,
+          230
+        ],
+        [
+          195,
+          1,
+          454
+        ]
+      ]
+    },
+    {
+      "name": "mixed_q4_3_plus9_2_plus2",
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "selected_mask": 10,
+      "vertex": 2,
+      "mark": "none",
+      "parameter": "chain length",
+      "degree_bound": 6,
+      "skeleton_coefficients": {
+        "H": [
+          5,
+          9,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "D": [
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "U": [
+          15,
+          32,
+          21,
+          4,
+          0,
+          0,
+          0
+        ]
+      },
+      "samples": [
+        [
+          5,
+          -1,
+          15
+        ],
+        [
+          9,
+          1,
+          32
+        ],
+        [
+          15,
+          1,
+          74
+        ],
+        [
+          27,
+          1,
+          182
+        ],
+        [
+          51,
+          1,
+          470
+        ],
+        [
+          99,
+          1,
+          1262
+        ],
+        [
+          195,
+          1,
+          3494
+        ]
+      ]
+    },
+    {
+      "name": "mixed_q8_3_plus12_2_minus4",
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "selected_mask": 24,
+      "vertex": 2,
+      "mark": "none",
+      "parameter": "chain length",
+      "degree_bound": 6,
+      "skeleton_coefficients": {
+        "H": [
+          5,
+          9,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "D": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "U": [
+          16,
+          44,
+          36,
+          8,
+          0,
+          0,
+          0
+        ]
+      },
+      "samples": [
+        [
+          5,
+          1,
+          16
+        ],
+        [
+          9,
+          1,
+          44
+        ],
+        [
+          15,
+          1,
+          116
+        ],
+        [
+          27,
+          1,
+          308
+        ],
+        [
+          51,
+          1,
+          836
+        ],
+        [
+          99,
+          1,
+          2324
+        ],
+        [
+          195,
+          1,
+          6596
+        ]
+      ]
+    },
+    {
+      "name": "ternary_q30_minus1",
+      "rows": [
+        24,
+        1,
+        3,
+        6,
+        14
+      ],
+      "selected_mask": 6,
+      "vertex": 1,
+      "mark": "first",
+      "parameter": "chain length minus one",
+      "degree_bound": 7,
+      "skeleton_coefficients": {
+        "H": [
+          11,
+          23,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "D": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "U": [
+          29,
+          89,
+          90,
+          30,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "samples": [
+        [
+          11,
+          1,
+          29
+        ],
+        [
+          23,
+          1,
+          89
+        ],
+        [
+          47,
+          1,
+          269
+        ],
+        [
+          95,
+          1,
+          809
+        ],
+        [
+          191,
+          1,
+          2429
+        ],
+        [
+          383,
+          1,
+          7289
+        ],
+        [
+          767,
+          1,
+          21869
+        ],
+        [
+          1535,
+          1,
+          65609
+        ]
+      ]
+    },
+    {
+      "name": "ternary_q50_minus3",
+      "rows": [
+        24,
+        1,
+        3,
+        6,
+        14
+      ],
+      "selected_mask": 24,
+      "vertex": 3,
+      "mark": "first",
+      "parameter": "chain length minus one",
+      "degree_bound": 7,
+      "skeleton_coefficients": {
+        "H": [
+          11,
+          23,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "D": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "U": [
+          47,
+          147,
+          150,
+          50,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "samples": [
+        [
+          11,
+          1,
+          47
+        ],
+        [
+          23,
+          1,
+          147
+        ],
+        [
+          47,
+          1,
+          447
+        ],
+        [
+          95,
+          1,
+          1347
+        ],
+        [
+          191,
+          1,
+          4047
+        ],
+        [
+          383,
+          1,
+          12147
+        ],
+        [
+          767,
+          1,
+          36447
+        ],
+        [
+          1535,
+          1,
+          109347
+        ]
+      ]
+    },
+    {
+      "name": "relocated_binary_q24_plus16",
+      "rows": [
+        40,
+        5,
+        1,
+        6,
+        15,
+        30
+      ],
+      "selected_mask": 10,
+      "vertex": 4,
+      "mark": "none",
+      "parameter": "chain length",
+      "degree_bound": 7,
+      "skeleton_coefficients": {
+        "H": [
+          11,
+          19,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "D": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "U": [
+          37,
+          64,
+          24,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "samples": [
+        [
+          11,
+          1,
+          37
+        ],
+        [
+          19,
+          1,
+          64
+        ],
+        [
+          33,
+          1,
+          112
+        ],
+        [
+          61,
+          1,
+          208
+        ],
+        [
+          117,
+          1,
+          400
+        ],
+        [
+          229,
+          1,
+          784
+        ],
+        [
+          453,
+          1,
+          1552
+        ],
+        [
+          901,
+          1,
+          3088
+        ]
+      ]
+    }
+  ]
+}
