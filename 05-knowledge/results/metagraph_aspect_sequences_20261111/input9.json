@@ -1,0 +1,6 @@
+{
+  "source": "05-knowledge/results/blue_quotient_20261020b/n9_classes.tsv.gz",
+  "sha256": "959c2276c57108d55b56d4906edfbd761fb9737e708b14114d66dd4ad618db0c",
+  "merged_rows": 97144,
+  "decoder": "upper triangle lexicographic, most significant bit first; bit one means i -> j"
+}

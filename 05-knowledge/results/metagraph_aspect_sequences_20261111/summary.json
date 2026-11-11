@@ -1,0 +1,58 @@
+[
+  {
+    "classes": 1,
+    "n": 1,
+    "named_attachments": 2,
+    "new_registry_terms": 82,
+    "unit_selections": 1
+  },
+  {
+    "classes": 1,
+    "n": 2,
+    "named_attachments": 4,
+    "new_registry_terms": 82,
+    "unit_selections": 2
+  },
+  {
+    "classes": 2,
+    "n": 3,
+    "named_attachments": 16,
+    "new_registry_terms": 82,
+    "unit_selections": 6
+  },
+  {
+    "classes": 4,
+    "n": 4,
+    "named_attachments": 64,
+    "new_registry_terms": 82,
+    "unit_selections": 13
+  },
+  {
+    "classes": 12,
+    "n": 5,
+    "named_attachments": 384,
+    "new_registry_terms": 82,
+    "unit_selections": 28
+  },
+  {
+    "classes": 56,
+    "n": 6,
+    "named_attachments": 3584,
+    "new_registry_terms": 82,
+    "unit_selections": 67
+  },
+  {
+    "classes": 456,
+    "n": 7,
+    "named_attachments": 58368,
+    "new_registry_terms": 82,
+    "unit_selections": 204
+  },
+  {
+    "classes": 6880,
+    "n": 8,
+    "named_attachments": 1761280,
+    "new_registry_terms": 82,
+    "unit_selections": 1336
+  }
+]

@@ -1,0 +1,83 @@
+id	kind	universe	definition	n=1	n=2	n=3	n=4	n=5	n=6	n=7	n=8	n=9
+H_ambiguous_pairs	tracked here	ordinary isomorphism classes	Number of unordered distinct class pairs with equal H	0	0	0	1	6	75	1633	89161	
+H_aut_ambiguous_pairs	tracked here	ordinary isomorphism classes	Number of unordered distinct class pairs with equal (H,Aut order)	0	0	0	1	5	53	1376	82908	
+H_aut_distinct	tracked here	ordinary isomorphism classes	Number of distinct (H,Aut order)	1	1	2	3	8	23	95	400	
+H_aut_largest_fibre	tracked here	ordinary isomorphism classes	Maximum number of classes sharing (H,Aut order)	1	1	1	2	3	5	15	48	
+H_distinct	tracked here	ordinary isomorphism classes	Number of distinct H	1	1	2	3	7	19	77	320	1520
+H_largest_fibre	tracked here	ordinary isomorphism classes	Maximum number of classes sharing H	1	1	1	2	3	6	15	49	
+attachment_orbits_max	tracked here	ordinary isomorphism classes	Maximum over classes of Aut(parent)-orbits of attachment subsets	2	4	8	16	32	64	128	256	
+attachment_orbits_sum	tracked here	ordinary isomorphism classes	Sum over classes of Aut(parent)-orbits of attachment subsets	2	4	12	48	296	3040	54256	1716608	
+deletion_H_ambiguous_pairs	tracked here	ordinary isomorphism classes	Number of unordered distinct class pairs with equal (H, multiset of H after each vertex deletion)	0	0	0	1	4	28	268	4213	
+deletion_H_distinct	tracked here	ordinary isomorphism classes	Number of distinct (H, multiset of H after each vertex deletion)	1	1	2	3	9	32	247	3328	
+deletion_H_largest_fibre	tracked here	ordinary isomorphism classes	Maximum number of classes sharing (H, multiset of H after each vertex deletion)	1	1	1	2	3	4	5	8	
+endpoint7_sources	tracked here	ordinary isomorphism classes	Classes with a start or end path count equal to 7	0	0	0	0	0	22	142	513	
+endpoint_roles_ambiguous_pairs	tracked here	ordinary isomorphism classes	Number of unordered distinct class pairs with equal (H, multiset of (outdegree, start count, end count, deletion H))	0	0	0	0	0	0	0	0	
+endpoint_roles_converse_ambiguous_pairs	tracked here	ordinary isomorphism classes	Number of unordered distinct class pairs with equal converse-normalized endpoint-role signature	0	0	0	1	2	22	184	3352	
+endpoint_roles_converse_distinct	tracked here	ordinary isomorphism classes	Number of distinct converse-normalized endpoint-role signature	1	1	2	3	10	34	272	3528	
+endpoint_roles_converse_largest_fibre	tracked here	ordinary isomorphism classes	Maximum number of classes sharing converse-normalized endpoint-role signature	1	1	1	2	2	2	2	2	
+endpoint_roles_distinct	tracked here	ordinary isomorphism classes	Number of distinct (H, multiset of (outdegree, start count, end count, deletion H))	1	1	2	4	12	56	456	6880	
+endpoint_roles_largest_fibre	tracked here	ordinary isomorphism classes	Maximum number of classes sharing (H, multiset of (outdegree, start count, end count, deletion H))	1	1	1	1	1	1	1	1	
+endpoint_support_max	tracked here	ordinary isomorphism classes	Maximum over classes of ordered endpoint pairs supporting a Hamiltonian path	1	1	3	5	15	30	42	56	
+endpoint_support_sum	tracked here	ordinary isomorphism classes	Sum over classes of ordered endpoint pairs supporting a Hamiltonian path	1	1	4	12	80	752	11830	296534	
+extension_collision_pairs_max	tracked here	ordinary isomorphism classes	Maximum over classes of pairs of distinct named attachments having equal child H	1	3	16	24	136	324	3368	5022	
+extension_collision_pairs_sum	tracked here	ordinary isomorphism classes	Sum over classes of pairs of distinct named attachments having equal child H	1	3	24	91	714	4962	52066	596112	
+extension_distribution_ambiguous_pairs	tracked here	ordinary isomorphism classes	Number of unordered distinct class pairs with equal (H, multiplicity distribution over all named attachment subsets)	0	0	0	1	2	22	184	3352	94392
+extension_distribution_distinct	tracked here	ordinary isomorphism classes	Number of distinct (H, multiplicity distribution over all named attachment subsets)	1	1	2	3	10	34	272	3528	97144
+extension_distribution_largest_fibre	tracked here	ordinary isomorphism classes	Maximum number of classes sharing (H, multiplicity distribution over all named attachment subsets)	1	1	1	2	2	2	2	2	2
+extension_support_ambiguous_pairs	tracked here	ordinary isomorphism classes	Number of unordered distinct class pairs with equal (H, set of one-vertex child H values)	0	0	0	1	2	22	184	3352	94392
+extension_support_distinct	tracked here	ordinary isomorphism classes	Number of distinct (H, set of one-vertex child H values)	1	1	2	3	10	34	272	3528	97144
+extension_support_largest_fibre	tracked here	ordinary isomorphism classes	Maximum number of classes sharing (H, set of one-vertex child H values)	1	1	1	2	2	2	2	2	2
+extension_width_max	tracked here	ordinary isomorphism classes	Maximum over classes of distinct child counts from one source	1	2	3	5	13	38	97	227	487
+extension_width_sum	tracked here	ordinary isomorphism classes	Sum over classes of distinct child counts from one source	1	2	5	20	112	1454	32683	1343912	86604641
+flux_ambiguous_pairs	tracked here	ordinary isomorphism classes	Number of unordered distinct class pairs with equal (H, endpoint-score flux polynomial)	0	0	0	1	2	22	188	3469	
+flux_distinct	tracked here	ordinary isomorphism classes	Number of distinct (H, endpoint-score flux polynomial)	1	1	2	3	10	34	269	3499	
+flux_largest_fibre	tracked here	ordinary isomorphism classes	Maximum number of classes sharing (H, endpoint-score flux polynomial)	1	1	1	2	2	2	3	6	
+incoherent_H_fibres	tracked here	same-order H-fibres	H-fibres containing at least one incompatible target pair	0	0	0	0	3	10	62	309	
+incompatible_target_pairs	tracked here	same-order H-fibres	Sum over H-fibres of unordered distinct target pairs individually attainable but never from one common source	0	0	0	0	13	1168	189080	32226456	
+joint_response_ambiguous_pairs	tracked here	ordinary isomorphism classes	Number of unordered distinct class pairs with equal joint extension, rooted-extension, deletion, converse-normalized endpoint and unit signature	0	0	0	0	0	11	136	2831	
+joint_response_distinct	tracked here	ordinary isomorphism classes	Number of distinct joint extension, rooted-extension, deletion, converse-normalized endpoint and unit signature	1	1	2	4	12	45	320	4049	
+joint_response_largest_fibre	tracked here	ordinary isomorphism classes	Maximum number of classes sharing joint extension, rooted-extension, deletion, converse-normalized endpoint and unit signature	1	1	1	1	1	2	2	2	
+line_H_descent_failures	tracked here	converse-merged line multigraph	Nodes with H>1 and no neighbour of smaller H	0	0	0	1	3	11	55	441	
+line_blue	baseline	converse-merged line multigraph	Literal blue (mirror-fixed frame) lines	0	0	1	2	8	32	256	2048	
+line_count	baseline	converse-merged line multigraph	Literal complement lines, retaining multiplicity	0	0	1	4	32	512	16384	1048576	
+line_current_square_sum	tracked here	converse-merged line multigraph	Sum of squared integer cyclic-triangle currents	0	0	2	24	440	25856	2368288	591680320	
+line_equal_H	tracked here	converse-merged line multigraph	Literal lines whose two endpoint H values agree, including loops	0	0	0	1	7	53	470	8179	
+line_loop_nodes	tracked here	converse-merged line multigraph	Merged nodes carrying a literal loop	0	0	0	1	2	10	44	235	
+line_loops	baseline	converse-merged line multigraph	Literal loop lines	0	0	0	1	4	26	114	622	
+line_support_edges	tracked here	simple support of merged line graph	Distinct nonloop endpoint pairs, colours and multiplicities forgotten	0	0	1	2	18	173	6032	437981	
+line_tc_descent_failures	tracked here	converse-merged line multigraph	Nodes with tc>1 and no neighbour of smaller tc	0	0	0	0	2	9	49	341	
+line_zero_current_nodes	tracked here	converse-merged line multigraph	Nodes with zero cyclic-triangle current	1	1	0	0	0	1	0	5	
+merged	baseline	converse-merged classes	Number of converse-merged classes	1	1	2	3	10	34	272	3528	97144
+merged_H_aut_sc_ambiguous_pairs	tracked here	converse-merged classes	Number of unordered distinct class pairs with equal (H, Aut, self-converse flag)	0	0	0	0	1	7	254	19120	
+merged_H_aut_sc_distinct	tracked here	converse-merged classes	Number of distinct (H, Aut, self-converse flag)	1	1	2	3	9	27	137	503	
+merged_H_aut_sc_largest_fibre	tracked here	converse-merged classes	Maximum number of classes sharing (H, Aut, self-converse flag)	1	1	1	1	2	2	7	24	
+neutral_attachments_max	tracked here	ordinary isomorphism classes	Maximum over classes of attachments preserving H	2	3	4	5	6	7	8	9	
+neutral_attachments_sum	tracked here	ordinary isomorphism classes	Sum over classes of attachments preserving H	2	3	6	13	36	148	1064	14848	
+ordinary	baseline	ordinary isomorphism classes	Number of ordinary classes	1	1	2	4	12	56	456	6880	191536
+partner_H_response_ambiguous_pairs	tracked here	converse-merged classes	Number of unordered distinct class pairs with equal (H, Aut, self-converse flag, multiplicity-weighted neighbour H profile); loops contribute twice	0	0	0	0	0	0	0	0	
+partner_H_response_distinct	tracked here	converse-merged classes	Number of distinct (H, Aut, self-converse flag, multiplicity-weighted neighbour H profile); loops contribute twice	1	1	2	3	10	34	272	3528	
+partner_H_response_largest_fibre	tracked here	converse-merged classes	Maximum number of classes sharing (H, Aut, self-converse flag, multiplicity-weighted neighbour H profile); loops contribute twice	1	1	1	1	1	1	1	1	
+path_presentations	baseline	ordinary isomorphism classes	Sum H/Aut; fixed-Hamilton-frame presentations	1	1	2	8	64	1024	32768	2097152	268435456
+rooted_extension_distribution_ambiguous_pairs	tracked here	ordinary isomorphism classes	Number of unordered distinct class pairs with equal (H, distribution over Aut(parent)-orbits of attachment subsets)	0	0	0	1	2	22	184	3352	
+rooted_extension_distribution_distinct	tracked here	ordinary isomorphism classes	Number of distinct (H, distribution over Aut(parent)-orbits of attachment subsets)	1	1	2	3	10	34	272	3528	
+rooted_extension_distribution_largest_fibre	tracked here	ordinary isomorphism classes	Maximum number of classes sharing (H, distribution over Aut(parent)-orbits of attachment subsets)	1	1	1	2	2	2	2	2	
+self_converse	baseline	ordinary isomorphism classes	Number of self-converse ordinary classes	1	1	2	2	8	12	88	176	
+strong	baseline	ordinary isomorphism classes	Number of strongly connected classes; singleton is strong	1	0	1	1	6	35	353	6008	
+symmetric	baseline	ordinary isomorphism classes	Number of ordinary classes with a nontrivial automorphism	0	0	1	2	5	15	57	324	
+tc_ambiguous_pairs	tracked here	ordinary isomorphism classes	Number of unordered distinct class pairs with equal H/Aut	0	0	1	3	10	84	1644	87892	
+tc_distinct	tracked here	ordinary isomorphism classes	Number of distinct H/Aut	1	1	1	2	6	17	74	318	1511
+tc_largest_fibre	tracked here	ordinary isomorphism classes	Maximum number of classes sharing H/Aut	1	1	2	3	4	6	15	48	
+ternary_both_sources	tracked here	ordinary isomorphism classes	Actual sources supporting both 3H+2 and 3H+4 in separate one-vertex attachments	0	0	0	0	3	24	133	617	
+ternary_common_fibres	tracked here	same-order H-fibres	H-fibres with one source supporting both ternary targets	0	0	0	0	2	10	39	151	
+ternary_union_fibres	tracked here	same-order H-fibres	H-fibres whose union of source supports contains both 3H+2 and 3H+4	0	0	0	0	2	12	47	223	
+unit_odd_coefficients	tracked here	ordinary isomorphism classes	Distinct odd parts of U among positive unit selections	1	1	2	3	7	24	89	636	5529
+unit_orbits_max	tracked here	ordinary isomorphism classes	Maximum over classes of Aut(parent)-orbits of positive unit selections	1	2	3	4	5	6	7	8	
+unit_orbits_sum	tracked here	ordinary isomorphism classes	Sum over classes of Aut(parent)-orbits of positive unit selections	1	2	4	9	22	59	194	1300	18849
+unit_profile_ambiguous_pairs	tracked here	ordinary isomorphism classes	Number of unordered distinct class pairs with equal (H, multiset of (odd coefficient, first ray exponent) over unit selections)	0	0	0	0	1	34	1092	65843	
+unit_profile_distinct	tracked here	ordinary isomorphism classes	Number of distinct (H, multiset of (odd coefficient, first ray exponent) over unit selections)	1	1	2	4	11	38	177	1363	
+unit_profile_largest_fibre	tracked here	ordinary isomorphism classes	Maximum number of classes sharing (H, multiset of (odd coefficient, first ray exponent) over unit selections)	1	1	1	1	2	5	15	44	
+unit_selections_max	tracked here	ordinary isomorphism classes	Maximum over classes of selected subsets with W=H-1 and U>0	1	2	3	4	5	6	7	8	
+unit_selections_sum	tracked here	ordinary isomorphism classes	Sum over classes of selected subsets with W=H-1 and U>0	1	2	6	13	28	67	204	1336	19011
+unit_sources	tracked here	ordinary isomorphism classes	Classes admitting at least one positive unit selection	1	1	2	4	9	26	110	1053	17423
+zero_flux_paths_max	tracked here	ordinary isomorphism classes	Maximum over classes of Hamiltonian paths with d(start)-d(end)-1=0	0	1	0	2	6	24	58	249	
+zero_flux_paths_sum	tracked here	ordinary isomorphism classes	Sum over classes of Hamiltonian paths with d(start)-d(end)-1=0	0	1	0	2	16	278	7344	435956	

@@ -1,0 +1,1499 @@
+{
+  "H_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal H",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      1,
+      6,
+      75,
+      1633,
+      89161
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "H_aut_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal (H,Aut order)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      1,
+      5,
+      53,
+      1376,
+      82908
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "H_aut_distinct": {
+    "definition": "Number of distinct (H,Aut order)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      8,
+      23,
+      95,
+      400
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "H_aut_largest_fibre": {
+    "definition": "Maximum number of classes sharing (H,Aut order)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      2,
+      3,
+      5,
+      15,
+      48
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "H_distinct": {
+    "definition": "Number of distinct H",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      7,
+      19,
+      77,
+      320,
+      1520
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "H_largest_fibre": {
+    "definition": "Maximum number of classes sharing H",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      2,
+      3,
+      6,
+      15,
+      49
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "attachment_orbits_max": {
+    "definition": "Maximum over classes of Aut(parent)-orbits of attachment subsets",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "attachment_orbits_sum": {
+    "definition": "Sum over classes of Aut(parent)-orbits of attachment subsets",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      2,
+      4,
+      12,
+      48,
+      296,
+      3040,
+      54256,
+      1716608
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "deletion_H_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal (H, multiset of H after each vertex deletion)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      1,
+      4,
+      28,
+      268,
+      4213
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "deletion_H_distinct": {
+    "definition": "Number of distinct (H, multiset of H after each vertex deletion)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      9,
+      32,
+      247,
+      3328
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "deletion_H_largest_fibre": {
+    "definition": "Maximum number of classes sharing (H, multiset of H after each vertex deletion)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      2,
+      3,
+      4,
+      5,
+      8
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "endpoint7_sources": {
+    "definition": "Classes with a start or end path count equal to 7",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      22,
+      142,
+      513
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "endpoint_roles_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal (H, multiset of (outdegree, start count, end count, deletion H))",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "endpoint_roles_converse_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal converse-normalized endpoint-role signature",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      22,
+      184,
+      3352
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "endpoint_roles_converse_distinct": {
+    "definition": "Number of distinct converse-normalized endpoint-role signature",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      10,
+      34,
+      272,
+      3528
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "endpoint_roles_converse_largest_fibre": {
+    "definition": "Maximum number of classes sharing converse-normalized endpoint-role signature",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "endpoint_roles_distinct": {
+    "definition": "Number of distinct (H, multiset of (outdegree, start count, end count, deletion H))",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      4,
+      12,
+      56,
+      456,
+      6880
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "endpoint_roles_largest_fibre": {
+    "definition": "Maximum number of classes sharing (H, multiset of (outdegree, start count, end count, deletion H))",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "endpoint_support_max": {
+    "definition": "Maximum over classes of ordered endpoint pairs supporting a Hamiltonian path",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      3,
+      5,
+      15,
+      30,
+      42,
+      56
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "endpoint_support_sum": {
+    "definition": "Sum over classes of ordered endpoint pairs supporting a Hamiltonian path",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      4,
+      12,
+      80,
+      752,
+      11830,
+      296534
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "extension_collision_pairs_max": {
+    "definition": "Maximum over classes of pairs of distinct named attachments having equal child H",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      3,
+      16,
+      24,
+      136,
+      324,
+      3368,
+      5022
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "extension_collision_pairs_sum": {
+    "definition": "Sum over classes of pairs of distinct named attachments having equal child H",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      3,
+      24,
+      91,
+      714,
+      4962,
+      52066,
+      596112
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "extension_distribution_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal (H, multiplicity distribution over all named attachment subsets)",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "order9_method": "derived from exact support separation and converse pairing",
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      22,
+      184,
+      3352,
+      94392
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "extension_distribution_distinct": {
+    "definition": "Number of distinct (H, multiplicity distribution over all named attachment subsets)",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      10,
+      34,
+      272,
+      3528,
+      97144
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "extension_distribution_largest_fibre": {
+    "definition": "Maximum number of classes sharing (H, multiplicity distribution over all named attachment subsets)",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "order9_method": "derived from exact support separation and existence of a non-self-converse class",
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "extension_support_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal (H, set of one-vertex child H values)",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "order9_method": "derived from exact support separation and converse pairing",
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      22,
+      184,
+      3352,
+      94392
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "extension_support_distinct": {
+    "definition": "Number of distinct (H, set of one-vertex child H values)",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      10,
+      34,
+      272,
+      3528,
+      97144
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "extension_support_largest_fibre": {
+    "definition": "Maximum number of classes sharing (H, set of one-vertex child H values)",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "order9_method": "derived from exact support separation and existence of a non-self-converse class",
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "extension_width_max": {
+    "definition": "Maximum over classes of distinct child counts from one source",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      2,
+      3,
+      5,
+      13,
+      38,
+      97,
+      227,
+      487
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "extension_width_sum": {
+    "definition": "Sum over classes of distinct child counts from one source",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      2,
+      5,
+      20,
+      112,
+      1454,
+      32683,
+      1343912,
+      86604641
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "flux_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal (H, endpoint-score flux polynomial)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      22,
+      188,
+      3469
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "flux_distinct": {
+    "definition": "Number of distinct (H, endpoint-score flux polynomial)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      10,
+      34,
+      269,
+      3499
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "flux_largest_fibre": {
+    "definition": "Maximum number of classes sharing (H, endpoint-score flux polynomial)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      6
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "incoherent_H_fibres": {
+    "definition": "H-fibres containing at least one incompatible target pair",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      10,
+      62,
+      309
+    ],
+    "universe": "same-order H-fibres"
+  },
+  "incompatible_target_pairs": {
+    "definition": "Sum over H-fibres of unordered distinct target pairs individually attainable but never from one common source",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      0,
+      13,
+      1168,
+      189080,
+      32226456
+    ],
+    "universe": "same-order H-fibres"
+  },
+  "joint_response_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal joint extension, rooted-extension, deletion, converse-normalized endpoint and unit signature",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      11,
+      136,
+      2831
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "joint_response_distinct": {
+    "definition": "Number of distinct joint extension, rooted-extension, deletion, converse-normalized endpoint and unit signature",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      4,
+      12,
+      45,
+      320,
+      4049
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "joint_response_largest_fibre": {
+    "definition": "Maximum number of classes sharing joint extension, rooted-extension, deletion, converse-normalized endpoint and unit signature",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "line_H_descent_failures": {
+    "definition": "Nodes with H>1 and no neighbour of smaller H",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      1,
+      3,
+      11,
+      55,
+      441
+    ],
+    "universe": "converse-merged line multigraph"
+  },
+  "line_blue": {
+    "definition": "Literal blue (mirror-fixed frame) lines",
+    "kind": "baseline",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      1,
+      2,
+      8,
+      32,
+      256,
+      2048
+    ],
+    "universe": "converse-merged line multigraph"
+  },
+  "line_count": {
+    "definition": "Literal complement lines, retaining multiplicity",
+    "kind": "baseline",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      1,
+      4,
+      32,
+      512,
+      16384,
+      1048576
+    ],
+    "universe": "converse-merged line multigraph"
+  },
+  "line_current_square_sum": {
+    "definition": "Sum of squared integer cyclic-triangle currents",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      2,
+      24,
+      440,
+      25856,
+      2368288,
+      591680320
+    ],
+    "universe": "converse-merged line multigraph"
+  },
+  "line_equal_H": {
+    "definition": "Literal lines whose two endpoint H values agree, including loops",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      1,
+      7,
+      53,
+      470,
+      8179
+    ],
+    "universe": "converse-merged line multigraph"
+  },
+  "line_loop_nodes": {
+    "definition": "Merged nodes carrying a literal loop",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      10,
+      44,
+      235
+    ],
+    "universe": "converse-merged line multigraph"
+  },
+  "line_loops": {
+    "definition": "Literal loop lines",
+    "kind": "baseline",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      1,
+      4,
+      26,
+      114,
+      622
+    ],
+    "universe": "converse-merged line multigraph"
+  },
+  "line_support_edges": {
+    "definition": "Distinct nonloop endpoint pairs, colours and multiplicities forgotten",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      1,
+      2,
+      18,
+      173,
+      6032,
+      437981
+    ],
+    "universe": "simple support of merged line graph"
+  },
+  "line_tc_descent_failures": {
+    "definition": "Nodes with tc>1 and no neighbour of smaller tc",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      9,
+      49,
+      341
+    ],
+    "universe": "converse-merged line multigraph"
+  },
+  "line_zero_current_nodes": {
+    "definition": "Nodes with zero cyclic-triangle current",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      5
+    ],
+    "universe": "converse-merged line multigraph"
+  },
+  "merged": {
+    "definition": "Number of converse-merged classes",
+    "kind": "baseline",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      10,
+      34,
+      272,
+      3528,
+      97144
+    ],
+    "universe": "converse-merged classes"
+  },
+  "merged_H_aut_sc_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal (H, Aut, self-converse flag)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      7,
+      254,
+      19120
+    ],
+    "universe": "converse-merged classes"
+  },
+  "merged_H_aut_sc_distinct": {
+    "definition": "Number of distinct (H, Aut, self-converse flag)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      9,
+      27,
+      137,
+      503
+    ],
+    "universe": "converse-merged classes"
+  },
+  "merged_H_aut_sc_largest_fibre": {
+    "definition": "Maximum number of classes sharing (H, Aut, self-converse flag)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      7,
+      24
+    ],
+    "universe": "converse-merged classes"
+  },
+  "neutral_attachments_max": {
+    "definition": "Maximum over classes of attachments preserving H",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "neutral_attachments_sum": {
+    "definition": "Sum over classes of attachments preserving H",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      2,
+      3,
+      6,
+      13,
+      36,
+      148,
+      1064,
+      14848
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "ordinary": {
+    "definition": "Number of ordinary classes",
+    "kind": "baseline",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      4,
+      12,
+      56,
+      456,
+      6880,
+      191536
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "partner_H_response_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal (H, Aut, self-converse flag, multiplicity-weighted neighbour H profile); loops contribute twice",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "universe": "converse-merged classes"
+  },
+  "partner_H_response_distinct": {
+    "definition": "Number of distinct (H, Aut, self-converse flag, multiplicity-weighted neighbour H profile); loops contribute twice",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      10,
+      34,
+      272,
+      3528
+    ],
+    "universe": "converse-merged classes"
+  },
+  "partner_H_response_largest_fibre": {
+    "definition": "Maximum number of classes sharing (H, Aut, self-converse flag, multiplicity-weighted neighbour H profile); loops contribute twice",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "universe": "converse-merged classes"
+  },
+  "path_presentations": {
+    "definition": "Sum H/Aut; fixed-Hamilton-frame presentations",
+    "kind": "baseline",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      8,
+      64,
+      1024,
+      32768,
+      2097152,
+      268435456
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "rooted_extension_distribution_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal (H, distribution over Aut(parent)-orbits of attachment subsets)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      22,
+      184,
+      3352
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "rooted_extension_distribution_distinct": {
+    "definition": "Number of distinct (H, distribution over Aut(parent)-orbits of attachment subsets)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      10,
+      34,
+      272,
+      3528
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "rooted_extension_distribution_largest_fibre": {
+    "definition": "Maximum number of classes sharing (H, distribution over Aut(parent)-orbits of attachment subsets)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "self_converse": {
+    "definition": "Number of self-converse ordinary classes",
+    "kind": "baseline",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      2,
+      8,
+      12,
+      88,
+      176
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "strong": {
+    "definition": "Number of strongly connected classes; singleton is strong",
+    "kind": "baseline",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      0,
+      1,
+      1,
+      6,
+      35,
+      353,
+      6008
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "symmetric": {
+    "definition": "Number of ordinary classes with a nontrivial automorphism",
+    "kind": "baseline",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      1,
+      2,
+      5,
+      15,
+      57,
+      324
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "tc_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal H/Aut",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      1,
+      3,
+      10,
+      84,
+      1644,
+      87892
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "tc_distinct": {
+    "definition": "Number of distinct H/Aut",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      2,
+      6,
+      17,
+      74,
+      318,
+      1511
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "tc_largest_fibre": {
+    "definition": "Maximum number of classes sharing H/Aut",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      4,
+      6,
+      15,
+      48
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "ternary_both_sources": {
+    "definition": "Actual sources supporting both 3H+2 and 3H+4 in separate one-vertex attachments",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      24,
+      133,
+      617
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "ternary_common_fibres": {
+    "definition": "H-fibres with one source supporting both ternary targets",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      10,
+      39,
+      151
+    ],
+    "universe": "same-order H-fibres"
+  },
+  "ternary_union_fibres": {
+    "definition": "H-fibres whose union of source supports contains both 3H+2 and 3H+4",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      12,
+      47,
+      223
+    ],
+    "universe": "same-order H-fibres"
+  },
+  "unit_odd_coefficients": {
+    "definition": "Distinct odd parts of U among positive unit selections",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      3,
+      7,
+      24,
+      89,
+      636,
+      5529
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "unit_orbits_max": {
+    "definition": "Maximum over classes of Aut(parent)-orbits of positive unit selections",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "unit_orbits_sum": {
+    "definition": "Sum over classes of Aut(parent)-orbits of positive unit selections",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      2,
+      4,
+      9,
+      22,
+      59,
+      194,
+      1300,
+      18849
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "unit_profile_ambiguous_pairs": {
+    "definition": "Number of unordered distinct class pairs with equal (H, multiset of (odd coefficient, first ray exponent) over unit selections)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      34,
+      1092,
+      65843
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "unit_profile_distinct": {
+    "definition": "Number of distinct (H, multiset of (odd coefficient, first ray exponent) over unit selections)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      4,
+      11,
+      38,
+      177,
+      1363
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "unit_profile_largest_fibre": {
+    "definition": "Maximum number of classes sharing (H, multiset of (odd coefficient, first ray exponent) over unit selections)",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      5,
+      15,
+      44
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "unit_selections_max": {
+    "definition": "Maximum over classes of selected subsets with W=H-1 and U>0",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "unit_selections_sum": {
+    "definition": "Sum over classes of selected subsets with W=H-1 and U>0",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      2,
+      6,
+      13,
+      28,
+      67,
+      204,
+      1336,
+      19011
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "unit_sources": {
+    "definition": "Classes admitting at least one positive unit selection",
+    "kind": "tracked here",
+    "last_order": 9,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      1,
+      1,
+      2,
+      4,
+      9,
+      26,
+      110,
+      1053,
+      17423
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "zero_flux_paths_max": {
+    "definition": "Maximum over classes of Hamiltonian paths with d(start)-d(end)-1=0",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      1,
+      0,
+      2,
+      6,
+      24,
+      58,
+      249
+    ],
+    "universe": "ordinary isomorphism classes"
+  },
+  "zero_flux_paths_sum": {
+    "definition": "Sum over classes of Hamiltonian paths with d(start)-d(end)-1=0",
+    "kind": "tracked here",
+    "last_order": 8,
+    "offset": 1,
+    "status": "FINITE-EXACT",
+    "terms": [
+      0,
+      1,
+      0,
+      2,
+      16,
+      278,
+      7344,
+      435956
+    ],
+    "universe": "ordinary isomorphism classes"
+  }
+}

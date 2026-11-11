@@ -7,9 +7,16 @@ construction and Chan-Pak remain OPEN.**
 This packet gives explicit unit-offset roots of order eleven for
 all 33 lines left without a seed in the precisely bounded bank of
 [HYP-9658](../../hypotheses/HYP-9658-unit-offset-seeds-of-the-two-adic-lines.md).
+
+**2026-11-11 continuation:** the [aspect-sequence census](../metagraph_aspect_sequences_20261111/PROOFS.md)
+independently replays the complete nine-vertex-base exclusion and proves source
+padding preserves a seed. Hence these 33 roots have minimum order eleven
+within the selected-set unit-offset tail construction. This does not assert
+minimum order for arbitrary realizations of individual ray values.
+
 Thus HYP-9658(B) is settled, with order eleven rather than twelve.
 The universal statement HYP-9658(A) remains OPEN. These are additional witnesses,
-not a census or an assertion of minimum order. Every first and second tail
+not a census; the minimum-order refinement above is subsequent work. Every first and second tail
 point is independently recounted by subset dynamic programming and path
 backtracking in `verify.py`; all literal adjacency lists are in `verification.json`.
 

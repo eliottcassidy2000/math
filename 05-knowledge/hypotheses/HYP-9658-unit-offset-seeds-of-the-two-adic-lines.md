@@ -54,7 +54,10 @@ with `H - 1 = c 2^s0`.
 - **(B) The thirty-three — PROVED, order eleven suffices.** Each of the 33 odd `c <= 4097` without a seed among the unit-offset roots of order
   `<= 10` and the doubling vertices of order `<= 9` (list in README section 2) has a seed of order at most twelve.
   [The continuation](../results/odd_c_seed_symmetry_20261110/README.md) supplies all 33 at order eleven.
-  No minimum-order claim is made; the historical doubling-vertex order-ten search remains separate.
+  The [2026-11-11 continuation](../results/metagraph_aspect_sequences_20261111/PROOFS.md)
+  proves minimum root order eleven within the unit-offset selected-set tail family,
+  by complete base-order-nine exclusion and source padding. The historical
+  doubling-vertex order-ten search and arbitrary point-realization minima remain separate.
 - **(C) Weight three.** Every number `1 + 2^a + 2^b` (`a > b >= 1`) other than `7` and `21` is a Hamiltonian-path
   count. (Rows `a - b <= 7` are THM-5126 (B4). This is a consequence of Chan-Pak.)
 - **(D) Growth.** The number `u(n)` of unit-offset roots of order `n` (class-vertex pairs) satisfies

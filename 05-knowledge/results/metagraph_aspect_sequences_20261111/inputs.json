@@ -1,0 +1,23 @@
+{
+  "hash_convention": "gzip bytes unchanged; text CRLF normalized to LF",
+  "sha256": {
+    "lines_1.tsv": "f62d8efa6a03e77950cba6b6e6323fb0ed02fd77fb9e24f6261d565a8155767c",
+    "lines_2.tsv": "f62d8efa6a03e77950cba6b6e6323fb0ed02fd77fb9e24f6261d565a8155767c",
+    "lines_3.tsv": "6a8c4a5bffdaa1666aa40fb1cb13b09fc566df79ecea6b48a3f5814b0b40fe60",
+    "lines_4.tsv": "8b37470d5cf86c00ae42baa18b4796d7da7314db7c400038cc9d95e3396a0fec",
+    "lines_5.tsv": "ee44e87e99dc26f6bcdd8bec33eadf3e724cb7ec89b2ca3e1943c35fb561c745",
+    "lines_6.tsv": "40dbe59ae45982d2247882b9a06f2db508710704d5a578cb457669cb10cbe459",
+    "lines_7.tsv": "a82cd534a71681265bacd13dc25bc8f72fe8586eb6c733abfbf63a4f8a3ec71b",
+    "lines_8.tsv.gz": "bf6bc69279a75ec0a390d99999b0ddc17c24346d34a1ec1e33ea682e089c4266",
+    "nodes_1.tsv": "35540ea1e6a11e98b460b21ceffd2a0b8931d5f383eb2716581facb82ebd1835",
+    "nodes_2.tsv": "35540ea1e6a11e98b460b21ceffd2a0b8931d5f383eb2716581facb82ebd1835",
+    "nodes_3.tsv": "480a3fe87e9e620201862c5bde86056428938334327c931117413d8376c90191",
+    "nodes_4.tsv": "ac5ae24a2aee2dfe10533b90e560eb15ed306be3dd880b87084b82f1d8e5361c",
+    "nodes_5.tsv": "f4d5c65af179d862eb0f0debdf1add0306582b9a697637f59c05cf79935c80ff",
+    "nodes_6.tsv": "80de6dc41d23ad72d974577bf09962b3a780328012f0ecae6c6227274c834f46",
+    "nodes_7.tsv": "0137ed1dc0f13fefb2db721d8ed5335b85cd5c63ddfd57271b2278b8614fdb97",
+    "nodes_8.tsv": "fb3b2d0b84113e48539a085e34b7dfcb12665500685573e4134c1b238e995802"
+  },
+  "source_directory": "05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-root/output",
+  "universe": "complete inherited ordinary classes and coloured merged lines, n=1..8"
+}

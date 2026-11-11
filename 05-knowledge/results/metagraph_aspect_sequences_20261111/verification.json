@@ -1,0 +1,55 @@
+{
+  "canonical_frames": 33868,
+  "line_rows": 6337,
+  "literal_children": 3401,
+  "literal_tails": 398,
+  "orders": [
+    {
+      "frames": 1,
+      "line_rows": 0,
+      "n": 1,
+      "ordinary": 1
+    },
+    {
+      "frames": 1,
+      "line_rows": 0,
+      "n": 2,
+      "ordinary": 1
+    },
+    {
+      "frames": 2,
+      "line_rows": 1,
+      "n": 3,
+      "ordinary": 2
+    },
+    {
+      "frames": 8,
+      "line_rows": 3,
+      "n": 4,
+      "ordinary": 4
+    },
+    {
+      "frames": 64,
+      "line_rows": 20,
+      "n": 5,
+      "ordinary": 12
+    },
+    {
+      "frames": 1024,
+      "line_rows": 187,
+      "n": 6,
+      "ordinary": 56
+    },
+    {
+      "frames": 32768,
+      "line_rows": 6126,
+      "n": 7,
+      "ordinary": 456
+    }
+  ],
+  "random_seed": 33117,
+  "record_count": 7412,
+  "relabelings": 72,
+  "scope": "complete independent frame/line audit through 7; all statistics use inherited complete n<=8 universe; specified literal child/tail controls",
+  "status": "PASS"
+}

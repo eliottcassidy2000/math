@@ -24515,3 +24515,28 @@ Lesson: a module supplies identical external contacts, not path contiguity.
 Before replacing it by its scalar H, retain the quotient's possible returns
 and the module's ordered path-cover counts. Ordered joins are the scalar
 product case; cyclic quotients require the full substitution response.
+
+## MISTAKE-757 (2026-11-11, codex-metagraph-aspects, unpublished census draft) -- converse-invariant selection counts do not preserve directed coefficient labels
+
+- **Failed implication.** The initial order-nine unit-seed screen evaluated
+  one representative per converse pair and doubled selection counts. Those
+  counts were correct, but treating their coefficient support the same way
+  omitted the opposite directed U coordinate: the draft reported4,441 instead
+  of5,529 distinct odd coefficients. It was corrected before publication.
+- **Witness and first lost coordinate.** A six-vertex H15 converse pair has
+  positive unit coefficient sets{29,37,43} and{1,17,55}. Literal rows, selected
+  subsets and tail checks are in
+  `05-knowledge/results/metagraph_aspect_sequences_20261111/hostiles.json`.
+  Converse preserves W(O), hence the offset-one predicate, but replaces
+  `U=sum_(j in O)(start_j+sum_i C_ij)` by
+  `U_dual=sum_(j in O)(end_j+sum_i C_ji)`.
+- **Repair and strongest survivor.** Count unit selections using converse
+  weights, but compute both U directions for coefficient labels. A separate
+  push-DP/scalar-convolution/Gray-code audit visits all191,536 ordinary sources
+  and confirms all5,529 coefficients and the33 missing coefficients<=4097.
+  One-vertex child-count supports remain converse invariant; tail-seed slopes
+  generally do not. The required sidecar is the direction of the tail.
+
+Lesson: a symmetry preserving membership in a fibre need not preserve the
+additional statistic subsequently measured on that fibre. Audit the statistic,
+not only the number of objects being quotiented.

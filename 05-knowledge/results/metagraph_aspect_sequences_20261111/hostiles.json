@@ -1,0 +1,159 @@
+[
+  {
+    "name": "decoration_81_27",
+    "order": 12,
+    "rows": [
+      [
+        254,
+        244,
+        248,
+        242,
+        4064,
+        3904,
+        3968,
+        3872,
+        3599,
+        1039,
+        2063,
+        527
+      ],
+      [
+        240,
+        249,
+        243,
+        245,
+        4064,
+        3904,
+        3968,
+        3872,
+        3599,
+        1039,
+        2063,
+        527
+      ]
+    ],
+    "H": [
+      462915,
+      462915
+    ],
+    "support_sizes": [
+      148,
+      362
+    ],
+    "equal_support": false,
+    "equal_distribution": false,
+    "symmetric_difference_size": 336,
+    "first_separating_value": 1611621
+  },
+  {
+    "name": "uniform_incidence_13",
+    "order": 13,
+    "rows": [
+      [
+        6020,
+        3849,
+        7698,
+        7205,
+        6219,
+        4247,
+        303,
+        606,
+        1212,
+        2424,
+        4848,
+        1505,
+        3010
+      ],
+      [
+        1430,
+        2860,
+        5720,
+        3249,
+        6498,
+        4805,
+        1419,
+        2838,
+        5676,
+        3161,
+        6322,
+        4453,
+        715
+      ]
+    ],
+    "H": [
+      3683797,
+      3704857
+    ],
+    "support_sizes": [
+      187,
+      187
+    ],
+    "equal_support": false,
+    "equal_distribution": false,
+    "symmetric_difference_size": 374,
+    "first_separating_value": 3683797
+  },
+  {
+    "name": "seed_direction_is_not_converse_invariant",
+    "order": 6,
+    "rows": [
+      [
+        6,
+        4,
+        8,
+        19,
+        39,
+        15
+      ],
+      [
+        56,
+        57,
+        51,
+        36,
+        8,
+        16
+      ]
+    ],
+    "H": [
+      15,
+      15
+    ],
+    "seeds": [
+      [
+        [
+          17,
+          43,
+          2
+        ],
+        [
+          36,
+          37,
+          2
+        ],
+        [
+          48,
+          29,
+          3
+        ]
+      ],
+      [
+        [
+          17,
+          55,
+          1
+        ],
+        [
+          36,
+          1,
+          7
+        ],
+        [
+          48,
+          17,
+          2
+        ]
+      ]
+    ],
+    "equal_extension_support": true
+  }
+]

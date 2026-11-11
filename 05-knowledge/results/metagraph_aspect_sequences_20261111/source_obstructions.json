@@ -1,0 +1,6542 @@
+{
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [],
+  "5": [
+    {
+      "H": 3,
+      "attachments": [
+        13,
+        3
+      ],
+      "incompatible_pairs": 4,
+      "pair": [
+        17,
+        29
+      ],
+      "source_count": 3,
+      "sources": [
+        31,
+        55
+      ]
+    },
+    {
+      "H": 9,
+      "attachments": [
+        10,
+        10
+      ],
+      "incompatible_pairs": 6,
+      "pair": [
+        25,
+        31
+      ],
+      "source_count": 2,
+      "sources": [
+        1,
+        0
+      ]
+    },
+    {
+      "H": 15,
+      "attachments": [
+        8,
+        6
+      ],
+      "incompatible_pairs": 3,
+      "pair": [
+        27,
+        41
+      ],
+      "source_count": 2,
+      "sources": [
+        10,
+        12
+      ]
+    }
+  ],
+  "6": [
+    {
+      "H": 3,
+      "attachments": [
+        27,
+        29
+      ],
+      "incompatible_pairs": 15,
+      "pair": [
+        35,
+        45
+      ],
+      "source_count": 4,
+      "sources": [
+        511,
+        895
+      ]
+    },
+    {
+      "H": 5,
+      "attachments": [
+        53,
+        3
+      ],
+      "incompatible_pairs": 56,
+      "pair": [
+        35,
+        71
+      ],
+      "source_count": 3,
+      "sources": [
+        127,
+        847
+      ]
+    },
+    {
+      "H": 9,
+      "attachments": [
+        2,
+        1
+      ],
+      "incompatible_pairs": 142,
+      "pair": [
+        17,
+        45
+      ],
+      "source_count": 5,
+      "sources": [
+        15,
+        510
+      ]
+    },
+    {
+      "H": 15,
+      "attachments": [
+        15,
+        19
+      ],
+      "incompatible_pairs": 182,
+      "pair": [
+        25,
+        99
+      ],
+      "source_count": 6,
+      "sources": [
+        1,
+        175
+      ]
+    },
+    {
+      "H": 17,
+      "attachments": [
+        2,
+        6
+      ],
+      "incompatible_pairs": 120,
+      "pair": [
+        29,
+        33
+      ],
+      "source_count": 2,
+      "sources": [
+        0,
+        19
+      ]
+    },
+    {
+      "H": 23,
+      "attachments": [
+        4,
+        2
+      ],
+      "incompatible_pairs": 165,
+      "pair": [
+        37,
+        41
+      ],
+      "source_count": 4,
+      "sources": [
+        25,
+        2
+      ]
+    },
+    {
+      "H": 29,
+      "attachments": [
+        31,
+        26
+      ],
+      "incompatible_pairs": 127,
+      "pair": [
+        49,
+        99
+      ],
+      "source_count": 4,
+      "sources": [
+        22,
+        4
+      ]
+    },
+    {
+      "H": 33,
+      "attachments": [
+        31,
+        8
+      ],
+      "incompatible_pairs": 219,
+      "pair": [
+        57,
+        59
+      ],
+      "source_count": 5,
+      "sources": [
+        20,
+        30
+      ]
+    },
+    {
+      "H": 37,
+      "attachments": [
+        47,
+        8
+      ],
+      "incompatible_pairs": 102,
+      "pair": [
+        65,
+        69
+      ],
+      "source_count": 5,
+      "sources": [
+        24,
+        26
+      ]
+    },
+    {
+      "H": 45,
+      "attachments": [
+        1,
+        1
+      ],
+      "incompatible_pairs": 40,
+      "pair": [
+        93,
+        95
+      ],
+      "source_count": 2,
+      "sources": [
+        40,
+        68
+      ]
+    }
+  ],
+  "7": [
+    {
+      "H": 3,
+      "attachments": [
+        54,
+        37
+      ],
+      "incompatible_pairs": 184,
+      "pair": [
+        35,
+        83
+      ],
+      "source_count": 5,
+      "sources": [
+        16383,
+        32255
+      ]
+    },
+    {
+      "H": 5,
+      "attachments": [
+        111,
+        6
+      ],
+      "incompatible_pairs": 252,
+      "pair": [
+        61,
+        71
+      ],
+      "source_count": 4,
+      "sources": [
+        4095,
+        27135
+      ]
+    },
+    {
+      "H": 9,
+      "attachments": [
+        4,
+        22
+      ],
+      "incompatible_pairs": 1229,
+      "pair": [
+        17,
+        61
+      ],
+      "source_count": 9,
+      "sources": [
+        511,
+        16351
+      ]
+    },
+    {
+      "H": 11,
+      "attachments": [
+        111,
+        5
+      ],
+      "incompatible_pairs": 287,
+      "pair": [
+        63,
+        207
+      ],
+      "source_count": 3,
+      "sources": [
+        2559,
+        27039
+      ]
+    },
+    {
+      "H": 13,
+      "attachments": [
+        125,
+        9
+      ],
+      "incompatible_pairs": 266,
+      "pair": [
+        39,
+        231
+      ],
+      "source_count": 3,
+      "sources": [
+        1535,
+        26975
+      ]
+    },
+    {
+      "H": 15,
+      "attachments": [
+        30,
+        79
+      ],
+      "incompatible_pairs": 1989,
+      "pair": [
+        25,
+        169
+      ],
+      "source_count": 12,
+      "sources": [
+        63,
+        5631
+      ]
+    },
+    {
+      "H": 17,
+      "attachments": [
+        4,
+        12
+      ],
+      "incompatible_pairs": 1024,
+      "pair": [
+        29,
+        33
+      ],
+      "source_count": 4,
+      "sources": [
+        31,
+        639
+      ]
+    },
+    {
+      "H": 19,
+      "attachments": [
+        111,
+        31
+      ],
+      "incompatible_pairs": 702,
+      "pair": [
+        61,
+        87
+      ],
+      "source_count": 4,
+      "sources": [
+        319,
+        575
+      ]
+    },
+    {
+      "H": 23,
+      "attachments": [
+        8,
+        4
+      ],
+      "incompatible_pairs": 2497,
+      "pair": [
+        37,
+        41
+      ],
+      "source_count": 8,
+      "sources": [
+        831,
+        95
+      ]
+    },
+    {
+      "H": 25,
+      "attachments": [
+        8,
+        16
+      ],
+      "incompatible_pairs": 1910,
+      "pair": [
+        43,
+        63
+      ],
+      "source_count": 5,
+      "sources": [
+        703,
+        39
+      ]
+    },
+    {
+      "H": 27,
+      "attachments": [
+        30,
+        2
+      ],
+      "incompatible_pairs": 2335,
+      "pair": [
+        53,
+        55
+      ],
+      "source_count": 7,
+      "sources": [
+        35,
+        607
+      ]
+    },
+    {
+      "H": 29,
+      "attachments": [
+        15,
+        8
+      ],
+      "incompatible_pairs": 2994,
+      "pair": [
+        45,
+        55
+      ],
+      "source_count": 10,
+      "sources": [
+        1,
+        287
+      ]
+    },
+    {
+      "H": 31,
+      "attachments": [
+        7,
+        94
+      ],
+      "incompatible_pairs": 3024,
+      "pair": [
+        51,
+        55
+      ],
+      "source_count": 6,
+      "sources": [
+        0,
+        351
+      ]
+    },
+    {
+      "H": 33,
+      "attachments": [
+        8,
+        95
+      ],
+      "incompatible_pairs": 5619,
+      "pair": [
+        51,
+        53
+      ],
+      "source_count": 13,
+      "sources": [
+        615,
+        51
+      ]
+    },
+    {
+      "H": 37,
+      "attachments": [
+        95,
+        94
+      ],
+      "incompatible_pairs": 3528,
+      "pair": [
+        61,
+        65
+      ],
+      "source_count": 12,
+      "sources": [
+        115,
+        799
+      ]
+    },
+    {
+      "H": 41,
+      "attachments": [
+        15,
+        8
+      ],
+      "incompatible_pairs": 4147,
+      "pair": [
+        69,
+        83
+      ],
+      "source_count": 7,
+      "sources": [
+        2,
+        927
+      ]
+    },
+    {
+      "H": 43,
+      "attachments": [
+        31,
+        32
+      ],
+      "incompatible_pairs": 3232,
+      "pair": [
+        73,
+        101
+      ],
+      "source_count": 6,
+      "sources": [
+        67,
+        1375
+      ]
+    },
+    {
+      "H": 45,
+      "attachments": [
+        8,
+        31
+      ],
+      "incompatible_pairs": 4542,
+      "pair": [
+        73,
+        75
+      ],
+      "source_count": 9,
+      "sources": [
+        563,
+        34
+      ]
+    },
+    {
+      "H": 49,
+      "attachments": [
+        8,
+        126
+      ],
+      "incompatible_pairs": 3380,
+      "pair": [
+        79,
+        83
+      ],
+      "source_count": 7,
+      "sources": [
+        619,
+        29
+      ]
+    },
+    {
+      "H": 51,
+      "attachments": [
+        63,
+        8
+      ],
+      "incompatible_pairs": 3995,
+      "pair": [
+        81,
+        83
+      ],
+      "source_count": 8,
+      "sources": [
+        583,
+        102
+      ]
+    },
+    {
+      "H": 53,
+      "attachments": [
+        95,
+        4
+      ],
+      "incompatible_pairs": 1927,
+      "pair": [
+        89,
+        91
+      ],
+      "source_count": 4,
+      "sources": [
+        83,
+        21
+      ]
+    },
+    {
+      "H": 55,
+      "attachments": [
+        95,
+        4
+      ],
+      "incompatible_pairs": 1332,
+      "pair": [
+        91,
+        95
+      ],
+      "source_count": 4,
+      "sources": [
+        275,
+        163
+      ]
+    },
+    {
+      "H": 57,
+      "attachments": [
+        15,
+        28
+      ],
+      "incompatible_pairs": 1408,
+      "pair": [
+        107,
+        111
+      ],
+      "source_count": 4,
+      "sources": [
+        36,
+        435
+      ]
+    },
+    {
+      "H": 59,
+      "attachments": [
+        4,
+        4
+      ],
+      "incompatible_pairs": 3969,
+      "pair": [
+        95,
+        97
+      ],
+      "source_count": 8,
+      "sources": [
+        61,
+        53
+      ]
+    },
+    {
+      "H": 65,
+      "attachments": [
+        4,
+        4
+      ],
+      "incompatible_pairs": 5108,
+      "pair": [
+        107,
+        111
+      ],
+      "source_count": 11,
+      "sources": [
+        57,
+        109
+      ]
+    },
+    {
+      "H": 67,
+      "attachments": [
+        4,
+        4
+      ],
+      "incompatible_pairs": 3692,
+      "pair": [
+        113,
+        131
+      ],
+      "source_count": 6,
+      "sources": [
+        305,
+        8
+      ]
+    },
+    {
+      "H": 69,
+      "attachments": [
+        63,
+        8
+      ],
+      "incompatible_pairs": 5748,
+      "pair": [
+        111,
+        119
+      ],
+      "source_count": 12,
+      "sources": [
+        580,
+        54
+      ]
+    },
+    {
+      "H": 71,
+      "attachments": [
+        95,
+        8
+      ],
+      "incompatible_pairs": 4489,
+      "pair": [
+        117,
+        123
+      ],
+      "source_count": 7,
+      "sources": [
+        50,
+        46
+      ]
+    },
+    {
+      "H": 73,
+      "attachments": [
+        4,
+        4
+      ],
+      "incompatible_pairs": 4275,
+      "pair": [
+        123,
+        125
+      ],
+      "source_count": 8,
+      "sources": [
+        117,
+        113
+      ]
+    },
+    {
+      "H": 75,
+      "attachments": [
+        8,
+        63
+      ],
+      "incompatible_pairs": 4557,
+      "pair": [
+        127,
+        135
+      ],
+      "source_count": 7,
+      "sources": [
+        114,
+        587
+      ]
+    },
+    {
+      "H": 77,
+      "attachments": [
+        63,
+        4
+      ],
+      "incompatible_pairs": 4173,
+      "pair": [
+        125,
+        129
+      ],
+      "source_count": 10,
+      "sources": [
+        620,
+        285
+      ]
+    },
+    {
+      "H": 79,
+      "attachments": [
+        95,
+        8
+      ],
+      "incompatible_pairs": 3432,
+      "pair": [
+        129,
+        131
+      ],
+      "source_count": 5,
+      "sources": [
+        306,
+        691
+      ]
+    },
+    {
+      "H": 81,
+      "attachments": [
+        8,
+        95
+      ],
+      "incompatible_pairs": 4781,
+      "pair": [
+        135,
+        137
+      ],
+      "source_count": 11,
+      "sources": [
+        811,
+        48
+      ]
+    },
+    {
+      "H": 83,
+      "attachments": [
+        63,
+        63
+      ],
+      "incompatible_pairs": 4017,
+      "pair": [
+        139,
+        143
+      ],
+      "source_count": 7,
+      "sources": [
+        616,
+        40
+      ]
+    },
+    {
+      "H": 89,
+      "attachments": [
+        125,
+        63
+      ],
+      "incompatible_pairs": 5021,
+      "pair": [
+        149,
+        151
+      ],
+      "source_count": 14,
+      "sources": [
+        508,
+        108
+      ]
+    },
+    {
+      "H": 91,
+      "attachments": [
+        63,
+        95
+      ],
+      "incompatible_pairs": 5222,
+      "pair": [
+        153,
+        155
+      ],
+      "source_count": 15,
+      "sources": [
+        76,
+        851
+      ]
+    },
+    {
+      "H": 93,
+      "attachments": [
+        63,
+        4
+      ],
+      "incompatible_pairs": 4918,
+      "pair": [
+        159,
+        161
+      ],
+      "source_count": 7,
+      "sources": [
+        72,
+        153
+      ]
+    },
+    {
+      "H": 95,
+      "attachments": [
+        63,
+        8
+      ],
+      "incompatible_pairs": 2546,
+      "pair": [
+        161,
+        165
+      ],
+      "source_count": 5,
+      "sources": [
+        132,
+        682
+      ]
+    },
+    {
+      "H": 97,
+      "attachments": [
+        4,
+        63
+      ],
+      "incompatible_pairs": 3991,
+      "pair": [
+        167,
+        169
+      ],
+      "source_count": 6,
+      "sources": [
+        149,
+        236
+      ]
+    },
+    {
+      "H": 99,
+      "attachments": [
+        63,
+        4
+      ],
+      "incompatible_pairs": 1637,
+      "pair": [
+        173,
+        177
+      ],
+      "source_count": 4,
+      "sources": [
+        170,
+        201
+      ]
+    },
+    {
+      "H": 101,
+      "attachments": [
+        63,
+        63
+      ],
+      "incompatible_pairs": 4442,
+      "pair": [
+        171,
+        177
+      ],
+      "source_count": 10,
+      "sources": [
+        648,
+        232
+      ]
+    },
+    {
+      "H": 103,
+      "attachments": [
+        63,
+        95
+      ],
+      "incompatible_pairs": 4119,
+      "pair": [
+        177,
+        179
+      ],
+      "source_count": 10,
+      "sources": [
+        142,
+        80
+      ]
+    },
+    {
+      "H": 105,
+      "attachments": [
+        4,
+        1
+      ],
+      "incompatible_pairs": 3133,
+      "pair": [
+        179,
+        207
+      ],
+      "source_count": 4,
+      "sources": [
+        345,
+        420
+      ]
+    },
+    {
+      "H": 109,
+      "attachments": [
+        63,
+        8
+      ],
+      "incompatible_pairs": 4552,
+      "pair": [
+        187,
+        195
+      ],
+      "source_count": 14,
+      "sources": [
+        680,
+        298
+      ]
+    },
+    {
+      "H": 111,
+      "attachments": [
+        4,
+        63
+      ],
+      "incompatible_pairs": 4099,
+      "pair": [
+        189,
+        191
+      ],
+      "source_count": 10,
+      "sources": [
+        465,
+        140
+      ]
+    },
+    {
+      "H": 113,
+      "attachments": [
+        63,
+        8
+      ],
+      "incompatible_pairs": 1755,
+      "pair": [
+        197,
+        201
+      ],
+      "source_count": 4,
+      "sources": [
+        172,
+        178
+      ]
+    },
+    {
+      "H": 115,
+      "attachments": [
+        63,
+        95
+      ],
+      "incompatible_pairs": 4576,
+      "pair": [
+        199,
+        207
+      ],
+      "source_count": 7,
+      "sources": [
+        202,
+        342
+      ]
+    },
+    {
+      "H": 117,
+      "attachments": [
+        8,
+        16
+      ],
+      "incompatible_pairs": 3585,
+      "pair": [
+        209,
+        221
+      ],
+      "source_count": 7,
+      "sources": [
+        186,
+        596
+      ]
+    },
+    {
+      "H": 121,
+      "attachments": [
+        16,
+        16
+      ],
+      "incompatible_pairs": 2208,
+      "pair": [
+        213,
+        233
+      ],
+      "source_count": 4,
+      "sources": [
+        844,
+        760
+      ]
+    },
+    {
+      "H": 123,
+      "attachments": [
+        16,
+        63
+      ],
+      "incompatible_pairs": 4727,
+      "pair": [
+        217,
+        219
+      ],
+      "source_count": 10,
+      "sources": [
+        724,
+        1225
+      ]
+    },
+    {
+      "H": 129,
+      "attachments": [
+        95,
+        8
+      ],
+      "incompatible_pairs": 4186,
+      "pair": [
+        231,
+        257
+      ],
+      "source_count": 7,
+      "sources": [
+        340,
+        689
+      ]
+    },
+    {
+      "H": 131,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 3131,
+      "pair": [
+        259,
+        265
+      ],
+      "source_count": 8,
+      "sources": [
+        300,
+        697
+      ]
+    },
+    {
+      "H": 133,
+      "attachments": [
+        8,
+        4
+      ],
+      "incompatible_pairs": 3713,
+      "pair": [
+        261,
+        269
+      ],
+      "source_count": 6,
+      "sources": [
+        316,
+        152
+      ]
+    },
+    {
+      "H": 135,
+      "attachments": [
+        16,
+        1
+      ],
+      "incompatible_pairs": 3223,
+      "pair": [
+        255,
+        269
+      ],
+      "source_count": 8,
+      "sources": [
+        852,
+        328
+      ]
+    },
+    {
+      "H": 137,
+      "attachments": [
+        4,
+        126
+      ],
+      "incompatible_pairs": 3208,
+      "pair": [
+        271,
+        275
+      ],
+      "source_count": 6,
+      "sources": [
+        280,
+        346
+      ]
+    },
+    {
+      "H": 139,
+      "attachments": [
+        95,
+        126
+      ],
+      "incompatible_pairs": 2421,
+      "pair": [
+        279,
+        281
+      ],
+      "source_count": 6,
+      "sources": [
+        778,
+        218
+      ]
+    },
+    {
+      "H": 141,
+      "attachments": [
+        4,
+        8
+      ],
+      "incompatible_pairs": 2368,
+      "pair": [
+        281,
+        287
+      ],
+      "source_count": 3,
+      "sources": [
+        284,
+        410
+      ]
+    },
+    {
+      "H": 143,
+      "attachments": [
+        4,
+        4
+      ],
+      "incompatible_pairs": 1300,
+      "pair": [
+        285,
+        289
+      ],
+      "source_count": 3,
+      "sources": [
+        1411,
+        348
+      ]
+    },
+    {
+      "H": 145,
+      "attachments": [
+        1,
+        2
+      ],
+      "incompatible_pairs": 992,
+      "pair": [
+        293,
+        301
+      ],
+      "source_count": 2,
+      "sources": [
+        776,
+        268
+      ]
+    },
+    {
+      "H": 151,
+      "attachments": [
+        8,
+        4
+      ],
+      "incompatible_pairs": 1953,
+      "pair": [
+        301,
+        305
+      ],
+      "source_count": 5,
+      "sources": [
+        824,
+        408
+      ]
+    },
+    {
+      "H": 153,
+      "attachments": [
+        4,
+        4
+      ],
+      "incompatible_pairs": 612,
+      "pair": [
+        307,
+        315
+      ],
+      "source_count": 3,
+      "sources": [
+        344,
+        404
+      ]
+    },
+    {
+      "H": 159,
+      "attachments": [
+        2,
+        32
+      ],
+      "incompatible_pairs": 1398,
+      "pair": [
+        315,
+        319
+      ],
+      "source_count": 4,
+      "sources": [
+        1308,
+        1240
+      ]
+    }
+  ],
+  "8": [
+    {
+      "H": 3,
+      "attachments": [
+        28,
+        97
+      ],
+      "incompatible_pairs": 562,
+      "pair": [
+        65,
+        101
+      ],
+      "source_count": 6,
+      "sources": [
+        1835007,
+        1048575
+      ]
+    },
+    {
+      "H": 5,
+      "attachments": [
+        222,
+        81
+      ],
+      "incompatible_pairs": 1655,
+      "pair": [
+        61,
+        217
+      ],
+      "source_count": 5,
+      "sources": [
+        262143,
+        2058239
+      ]
+    },
+    {
+      "H": 9,
+      "attachments": [
+        8,
+        44
+      ],
+      "incompatible_pairs": 5139,
+      "pair": [
+        17,
+        61
+      ],
+      "source_count": 14,
+      "sources": [
+        32767,
+        1046527
+      ]
+    },
+    {
+      "H": 11,
+      "attachments": [
+        249,
+        10
+      ],
+      "incompatible_pairs": 2640,
+      "pair": [
+        55,
+        207
+      ],
+      "source_count": 4,
+      "sources": [
+        163839,
+        1730559
+      ]
+    },
+    {
+      "H": 13,
+      "attachments": [
+        121,
+        18
+      ],
+      "incompatible_pairs": 2146,
+      "pair": [
+        131,
+        231
+      ],
+      "source_count": 4,
+      "sources": [
+        98303,
+        1726463
+      ]
+    },
+    {
+      "H": 15,
+      "attachments": [
+        60,
+        134
+      ],
+      "incompatible_pairs": 12035,
+      "pair": [
+        25,
+        279
+      ],
+      "source_count": 20,
+      "sources": [
+        4095,
+        360447
+      ]
+    },
+    {
+      "H": 17,
+      "attachments": [
+        8,
+        24
+      ],
+      "incompatible_pairs": 7934,
+      "pair": [
+        29,
+        33
+      ],
+      "source_count": 6,
+      "sources": [
+        2047,
+        40959
+      ]
+    },
+    {
+      "H": 19,
+      "attachments": [
+        222,
+        223
+      ],
+      "incompatible_pairs": 6502,
+      "pair": [
+        61,
+        127
+      ],
+      "source_count": 6,
+      "sources": [
+        20479,
+        36863
+      ]
+    },
+    {
+      "H": 23,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 15019,
+      "pair": [
+        37,
+        41
+      ],
+      "source_count": 12,
+      "sources": [
+        53247,
+        6143
+      ]
+    },
+    {
+      "H": 25,
+      "attachments": [
+        16,
+        32
+      ],
+      "incompatible_pairs": 17775,
+      "pair": [
+        43,
+        63
+      ],
+      "source_count": 9,
+      "sources": [
+        45055,
+        2559
+      ]
+    },
+    {
+      "H": 27,
+      "attachments": [
+        60,
+        4
+      ],
+      "incompatible_pairs": 16143,
+      "pair": [
+        53,
+        55
+      ],
+      "source_count": 16,
+      "sources": [
+        2303,
+        38911
+      ]
+    },
+    {
+      "H": 29,
+      "attachments": [
+        30,
+        16
+      ],
+      "incompatible_pairs": 20898,
+      "pair": [
+        45,
+        55
+      ],
+      "source_count": 16,
+      "sources": [
+        127,
+        18431
+      ]
+    },
+    {
+      "H": 31,
+      "attachments": [
+        14,
+        188
+      ],
+      "incompatible_pairs": 19739,
+      "pair": [
+        51,
+        55
+      ],
+      "source_count": 10,
+      "sources": [
+        63,
+        22527
+      ]
+    },
+    {
+      "H": 33,
+      "attachments": [
+        16,
+        190
+      ],
+      "incompatible_pairs": 30465,
+      "pair": [
+        51,
+        53
+      ],
+      "source_count": 23,
+      "sources": [
+        39423,
+        3327
+      ]
+    },
+    {
+      "H": 35,
+      "attachments": [
+        159,
+        159
+      ],
+      "incompatible_pairs": 4420,
+      "pair": [
+        165,
+        167
+      ],
+      "source_count": 4,
+      "sources": [
+        1279,
+        2175
+      ]
+    },
+    {
+      "H": 37,
+      "attachments": [
+        190,
+        188
+      ],
+      "incompatible_pairs": 31034,
+      "pair": [
+        61,
+        65
+      ],
+      "source_count": 19,
+      "sources": [
+        7423,
+        51199
+      ]
+    },
+    {
+      "H": 39,
+      "attachments": [
+        190,
+        249
+      ],
+      "incompatible_pairs": 11742,
+      "pair": [
+        61,
+        65
+      ],
+      "source_count": 6,
+      "sources": [
+        19711,
+        98302
+      ]
+    },
+    {
+      "H": 41,
+      "attachments": [
+        30,
+        16
+      ],
+      "incompatible_pairs": 32262,
+      "pair": [
+        69,
+        83
+      ],
+      "source_count": 13,
+      "sources": [
+        191,
+        59391
+      ]
+    },
+    {
+      "H": 43,
+      "attachments": [
+        62,
+        64
+      ],
+      "incompatible_pairs": 27248,
+      "pair": [
+        73,
+        101
+      ],
+      "source_count": 10,
+      "sources": [
+        4351,
+        88063
+      ]
+    },
+    {
+      "H": 45,
+      "attachments": [
+        16,
+        30
+      ],
+      "incompatible_pairs": 42214,
+      "pair": [
+        73,
+        75
+      ],
+      "source_count": 25,
+      "sources": [
+        36095,
+        71
+      ]
+    },
+    {
+      "H": 47,
+      "attachments": [
+        223,
+        125
+      ],
+      "incompatible_pairs": 5544,
+      "pair": [
+        145,
+        297
+      ],
+      "source_count": 4,
+      "sources": [
+        150783,
+        40191
+      ]
+    },
+    {
+      "H": 49,
+      "attachments": [
+        30,
+        16
+      ],
+      "incompatible_pairs": 36019,
+      "pair": [
+        75,
+        79
+      ],
+      "source_count": 15,
+      "sources": [
+        79,
+        39679
+      ]
+    },
+    {
+      "H": 51,
+      "attachments": [
+        31,
+        16
+      ],
+      "incompatible_pairs": 38453,
+      "pair": [
+        81,
+        83
+      ],
+      "source_count": 20,
+      "sources": [
+        3,
+        6591
+      ]
+    },
+    {
+      "H": 53,
+      "attachments": [
+        31,
+        15
+      ],
+      "incompatible_pairs": 32705,
+      "pair": [
+        81,
+        85
+      ],
+      "source_count": 14,
+      "sources": [
+        67,
+        1
+      ]
+    },
+    {
+      "H": 55,
+      "attachments": [
+        190,
+        8
+      ],
+      "incompatible_pairs": 22906,
+      "pair": [
+        91,
+        95
+      ],
+      "source_count": 8,
+      "sources": [
+        17663,
+        10495
+      ]
+    },
+    {
+      "H": 57,
+      "attachments": [
+        7,
+        30
+      ],
+      "incompatible_pairs": 36728,
+      "pair": [
+        93,
+        107
+      ],
+      "source_count": 11,
+      "sources": [
+        0,
+        2367
+      ]
+    },
+    {
+      "H": 59,
+      "attachments": [
+        31,
+        30
+      ],
+      "incompatible_pairs": 40336,
+      "pair": [
+        93,
+        95
+      ],
+      "source_count": 20,
+      "sources": [
+        195,
+        103
+      ]
+    },
+    {
+      "H": 61,
+      "attachments": [
+        191,
+        63
+      ],
+      "incompatible_pairs": 23407,
+      "pair": [
+        97,
+        103
+      ],
+      "source_count": 6,
+      "sources": [
+        2279,
+        6343
+      ]
+    },
+    {
+      "H": 65,
+      "attachments": [
+        16,
+        14
+      ],
+      "incompatible_pairs": 50269,
+      "pair": [
+        99,
+        105
+      ],
+      "source_count": 25,
+      "sources": [
+        39375,
+        39
+      ]
+    },
+    {
+      "H": 67,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 47256,
+      "pair": [
+        113,
+        131
+      ],
+      "source_count": 12,
+      "sources": [
+        19583,
+        575
+      ]
+    },
+    {
+      "H": 69,
+      "attachments": [
+        191,
+        126
+      ],
+      "incompatible_pairs": 57611,
+      "pair": [
+        107,
+        111
+      ],
+      "source_count": 30,
+      "sources": [
+        3303,
+        37183
+      ]
+    },
+    {
+      "H": 71,
+      "attachments": [
+        28,
+        191
+      ],
+      "incompatible_pairs": 48918,
+      "pair": [
+        111,
+        113
+      ],
+      "source_count": 18,
+      "sources": [
+        487,
+        1255
+      ]
+    },
+    {
+      "H": 73,
+      "attachments": [
+        191,
+        8
+      ],
+      "incompatible_pairs": 50691,
+      "pair": [
+        117,
+        121
+      ],
+      "source_count": 27,
+      "sources": [
+        6375,
+        2151
+      ]
+    },
+    {
+      "H": 75,
+      "attachments": [
+        16,
+        16
+      ],
+      "incompatible_pairs": 60036,
+      "pair": [
+        127,
+        135
+      ],
+      "source_count": 16,
+      "sources": [
+        7359,
+        2191
+      ]
+    },
+    {
+      "H": 77,
+      "attachments": [
+        31,
+        126
+      ],
+      "incompatible_pairs": 52579,
+      "pair": [
+        123,
+        125
+      ],
+      "source_count": 26,
+      "sources": [
+        2,
+        39743
+      ]
+    },
+    {
+      "H": 79,
+      "attachments": [
+        191,
+        190
+      ],
+      "incompatible_pairs": 68042,
+      "pair": [
+        121,
+        129
+      ],
+      "source_count": 16,
+      "sources": [
+        19687,
+        19647
+      ]
+    },
+    {
+      "H": 81,
+      "attachments": [
+        191,
+        31
+      ],
+      "incompatible_pairs": 55616,
+      "pair": [
+        127,
+        129
+      ],
+      "source_count": 32,
+      "sources": [
+        7399,
+        131
+      ]
+    },
+    {
+      "H": 83,
+      "attachments": [
+        126,
+        8
+      ],
+      "incompatible_pairs": 67396,
+      "pair": [
+        139,
+        141
+      ],
+      "source_count": 18,
+      "sources": [
+        39487,
+        2375
+      ]
+    },
+    {
+      "H": 85,
+      "attachments": [
+        254,
+        30
+      ],
+      "incompatible_pairs": 33650,
+      "pair": [
+        143,
+        153
+      ],
+      "source_count": 7,
+      "sources": [
+        123,
+        99
+      ]
+    },
+    {
+      "H": 87,
+      "attachments": [
+        31,
+        191
+      ],
+      "incompatible_pairs": 41302,
+      "pair": [
+        135,
+        139
+      ],
+      "source_count": 8,
+      "sources": [
+        66,
+        35047
+      ]
+    },
+    {
+      "H": 89,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 63220,
+      "pair": [
+        143,
+        149
+      ],
+      "source_count": 35,
+      "sources": [
+        2251,
+        198
+      ]
+    },
+    {
+      "H": 91,
+      "attachments": [
+        14,
+        2
+      ],
+      "incompatible_pairs": 55658,
+      "pair": [
+        147,
+        155
+      ],
+      "source_count": 42,
+      "sources": [
+        59,
+        4103
+      ]
+    },
+    {
+      "H": 93,
+      "attachments": [
+        254,
+        191
+      ],
+      "incompatible_pairs": 79925,
+      "pair": [
+        149,
+        155
+      ],
+      "source_count": 18,
+      "sources": [
+        2807,
+        1127
+      ]
+    },
+    {
+      "H": 95,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 75418,
+      "pair": [
+        145,
+        161
+      ],
+      "source_count": 20,
+      "sources": [
+        39399,
+        251
+      ]
+    },
+    {
+      "H": 97,
+      "attachments": [
+        191,
+        16
+      ],
+      "incompatible_pairs": 76494,
+      "pair": [
+        151,
+        155
+      ],
+      "source_count": 22,
+      "sources": [
+        36071,
+        39631
+      ]
+    },
+    {
+      "H": 99,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 73703,
+      "pair": [
+        153,
+        159
+      ],
+      "source_count": 22,
+      "sources": [
+        37327,
+        2215
+      ]
+    },
+    {
+      "H": 101,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 86114,
+      "pair": [
+        165,
+        169
+      ],
+      "source_count": 24,
+      "sources": [
+        2759,
+        727
+      ]
+    },
+    {
+      "H": 103,
+      "attachments": [
+        191,
+        4
+      ],
+      "incompatible_pairs": 80342,
+      "pair": [
+        171,
+        173
+      ],
+      "source_count": 24,
+      "sources": [
+        2407,
+        73
+      ]
+    },
+    {
+      "H": 105,
+      "attachments": [
+        254,
+        31
+      ],
+      "incompatible_pairs": 100292,
+      "pair": [
+        165,
+        171
+      ],
+      "source_count": 19,
+      "sources": [
+        12023,
+        68
+      ]
+    },
+    {
+      "H": 107,
+      "attachments": [
+        16,
+        16
+      ],
+      "incompatible_pairs": 55433,
+      "pair": [
+        165,
+        175
+      ],
+      "source_count": 10,
+      "sources": [
+        40167,
+        6535
+      ]
+    },
+    {
+      "H": 109,
+      "attachments": [
+        254,
+        127
+      ],
+      "incompatible_pairs": 84548,
+      "pair": [
+        175,
+        177
+      ],
+      "source_count": 36,
+      "sources": [
+        1915,
+        4431
+      ]
+    },
+    {
+      "H": 111,
+      "attachments": [
+        191,
+        63
+      ],
+      "incompatible_pairs": 95394,
+      "pair": [
+        183,
+        185
+      ],
+      "source_count": 32,
+      "sources": [
+        4135,
+        2180
+      ]
+    },
+    {
+      "H": 113,
+      "attachments": [
+        191,
+        63
+      ],
+      "incompatible_pairs": 94762,
+      "pair": [
+        179,
+        189
+      ],
+      "source_count": 16,
+      "sources": [
+        5351,
+        132
+      ]
+    },
+    {
+      "H": 115,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 92026,
+      "pair": [
+        181,
+        187
+      ],
+      "source_count": 28,
+      "sources": [
+        2283,
+        2171
+      ]
+    },
+    {
+      "H": 117,
+      "attachments": [
+        191,
+        8
+      ],
+      "incompatible_pairs": 98591,
+      "pair": [
+        183,
+        195
+      ],
+      "source_count": 29,
+      "sources": [
+        19686,
+        2791
+      ]
+    },
+    {
+      "H": 119,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 58658,
+      "pair": [
+        185,
+        189
+      ],
+      "source_count": 12,
+      "sources": [
+        2299,
+        2259
+      ]
+    },
+    {
+      "H": 121,
+      "attachments": [
+        191,
+        32
+      ],
+      "incompatible_pairs": 87006,
+      "pair": [
+        201,
+        213
+      ],
+      "source_count": 12,
+      "sources": [
+        295,
+        54079
+      ]
+    },
+    {
+      "H": 123,
+      "attachments": [
+        4,
+        8
+      ],
+      "incompatible_pairs": 102640,
+      "pair": [
+        209,
+        215
+      ],
+      "source_count": 34,
+      "sources": [
+        267,
+        78
+      ]
+    },
+    {
+      "H": 125,
+      "attachments": [
+        8,
+        63
+      ],
+      "incompatible_pairs": 76492,
+      "pair": [
+        203,
+        213
+      ],
+      "source_count": 12,
+      "sources": [
+        3143,
+        2252
+      ]
+    },
+    {
+      "H": 127,
+      "attachments": [
+        191,
+        8
+      ],
+      "incompatible_pairs": 66754,
+      "pair": [
+        205,
+        209
+      ],
+      "source_count": 10,
+      "sources": [
+        2278,
+        3431
+      ]
+    },
+    {
+      "H": 129,
+      "attachments": [
+        8,
+        16
+      ],
+      "incompatible_pairs": 99539,
+      "pair": [
+        203,
+        207
+      ],
+      "source_count": 40,
+      "sources": [
+        2291,
+        6605
+      ]
+    },
+    {
+      "H": 131,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 122468,
+      "pair": [
+        213,
+        215
+      ],
+      "source_count": 24,
+      "sources": [
+        4083,
+        2163
+      ]
+    },
+    {
+      "H": 133,
+      "attachments": [
+        127,
+        254
+      ],
+      "incompatible_pairs": 118375,
+      "pair": [
+        207,
+        219
+      ],
+      "source_count": 29,
+      "sources": [
+        37135,
+        1403
+      ]
+    },
+    {
+      "H": 135,
+      "attachments": [
+        16,
+        4
+      ],
+      "incompatible_pairs": 134129,
+      "pair": [
+        219,
+        221
+      ],
+      "source_count": 30,
+      "sources": [
+        36583,
+        93
+      ]
+    },
+    {
+      "H": 137,
+      "attachments": [
+        16,
+        16
+      ],
+      "incompatible_pairs": 118293,
+      "pair": [
+        215,
+        217
+      ],
+      "source_count": 26,
+      "sources": [
+        39671,
+        6541
+      ]
+    },
+    {
+      "H": 139,
+      "attachments": [
+        191,
+        16
+      ],
+      "incompatible_pairs": 115631,
+      "pair": [
+        221,
+        227
+      ],
+      "source_count": 30,
+      "sources": [
+        3302,
+        2444
+      ]
+    },
+    {
+      "H": 141,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 126831,
+      "pair": [
+        219,
+        227
+      ],
+      "source_count": 24,
+      "sources": [
+        39335,
+        3307
+      ]
+    },
+    {
+      "H": 143,
+      "attachments": [
+        8,
+        4
+      ],
+      "incompatible_pairs": 111591,
+      "pair": [
+        227,
+        243
+      ],
+      "source_count": 20,
+      "sources": [
+        3963,
+        329
+      ]
+    },
+    {
+      "H": 145,
+      "attachments": [
+        8,
+        254
+      ],
+      "incompatible_pairs": 94697,
+      "pair": [
+        229,
+        241
+      ],
+      "source_count": 12,
+      "sources": [
+        2555,
+        4855
+      ]
+    },
+    {
+      "H": 147,
+      "attachments": [
+        191,
+        16
+      ],
+      "incompatible_pairs": 79127,
+      "pair": [
+        233,
+        237
+      ],
+      "source_count": 12,
+      "sources": [
+        3239,
+        39319
+      ]
+    },
+    {
+      "H": 149,
+      "attachments": [
+        4,
+        8
+      ],
+      "incompatible_pairs": 81548,
+      "pair": [
+        245,
+        247
+      ],
+      "source_count": 14,
+      "sources": [
+        89,
+        2935
+      ]
+    },
+    {
+      "H": 151,
+      "attachments": [
+        63,
+        8
+      ],
+      "incompatible_pairs": 114949,
+      "pair": [
+        259,
+        265
+      ],
+      "source_count": 16,
+      "sources": [
+        204,
+        458
+      ]
+    },
+    {
+      "H": 153,
+      "attachments": [
+        191,
+        191
+      ],
+      "incompatible_pairs": 134081,
+      "pair": [
+        243,
+        251
+      ],
+      "source_count": 27,
+      "sources": [
+        38119,
+        19815
+      ]
+    },
+    {
+      "H": 155,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 106359,
+      "pair": [
+        243,
+        251
+      ],
+      "source_count": 28,
+      "sources": [
+        3323,
+        2427
+      ]
+    },
+    {
+      "H": 157,
+      "attachments": [
+        16,
+        4
+      ],
+      "incompatible_pairs": 112709,
+      "pair": [
+        257,
+        263
+      ],
+      "source_count": 16,
+      "sources": [
+        35286,
+        105
+      ]
+    },
+    {
+      "H": 159,
+      "attachments": [
+        4,
+        191
+      ],
+      "incompatible_pairs": 131739,
+      "pair": [
+        259,
+        263
+      ],
+      "source_count": 28,
+      "sources": [
+        117,
+        6439
+      ]
+    },
+    {
+      "H": 161,
+      "attachments": [
+        191,
+        8
+      ],
+      "incompatible_pairs": 81555,
+      "pair": [
+        253,
+        267
+      ],
+      "source_count": 12,
+      "sources": [
+        19623,
+        2274
+      ]
+    },
+    {
+      "H": 163,
+      "attachments": [
+        16,
+        16
+      ],
+      "incompatible_pairs": 96487,
+      "pair": [
+        257,
+        261
+      ],
+      "source_count": 20,
+      "sources": [
+        39655,
+        35302
+      ]
+    },
+    {
+      "H": 165,
+      "attachments": [
+        8,
+        253
+      ],
+      "incompatible_pairs": 93175,
+      "pair": [
+        271,
+        273
+      ],
+      "source_count": 17,
+      "sources": [
+        2411,
+        8179
+      ]
+    },
+    {
+      "H": 167,
+      "attachments": [
+        254,
+        191
+      ],
+      "incompatible_pairs": 47879,
+      "pair": [
+        267,
+        279
+      ],
+      "source_count": 8,
+      "sources": [
+        18299,
+        3264
+      ]
+    },
+    {
+      "H": 169,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 93118,
+      "pair": [
+        267,
+        273
+      ],
+      "source_count": 19,
+      "sources": [
+        40151,
+        2683
+      ]
+    },
+    {
+      "H": 171,
+      "attachments": [
+        8,
+        191
+      ],
+      "incompatible_pairs": 112588,
+      "pair": [
+        273,
+        279
+      ],
+      "source_count": 24,
+      "sources": [
+        3451,
+        2277
+      ]
+    },
+    {
+      "H": 173,
+      "attachments": [
+        191,
+        253
+      ],
+      "incompatible_pairs": 91488,
+      "pair": [
+        281,
+        283
+      ],
+      "source_count": 30,
+      "sources": [
+        3207,
+        4085
+      ]
+    },
+    {
+      "H": 175,
+      "attachments": [
+        191,
+        1
+      ],
+      "incompatible_pairs": 102474,
+      "pair": [
+        285,
+        295
+      ],
+      "source_count": 18,
+      "sources": [
+        2213,
+        640
+      ]
+    },
+    {
+      "H": 177,
+      "attachments": [
+        254,
+        253
+      ],
+      "incompatible_pairs": 96136,
+      "pair": [
+        279,
+        283
+      ],
+      "source_count": 35,
+      "sources": [
+        30782,
+        32761
+      ]
+    },
+    {
+      "H": 179,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 94978,
+      "pair": [
+        285,
+        289
+      ],
+      "source_count": 26,
+      "sources": [
+        3707,
+        2795
+      ]
+    },
+    {
+      "H": 181,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 95593,
+      "pair": [
+        295,
+        299
+      ],
+      "source_count": 18,
+      "sources": [
+        2787,
+        6635
+      ]
+    },
+    {
+      "H": 183,
+      "attachments": [
+        8,
+        253
+      ],
+      "incompatible_pairs": 97019,
+      "pair": [
+        303,
+        305
+      ],
+      "source_count": 14,
+      "sources": [
+        2643,
+        4074
+      ]
+    },
+    {
+      "H": 185,
+      "attachments": [
+        8,
+        191
+      ],
+      "incompatible_pairs": 107301,
+      "pair": [
+        297,
+        299
+      ],
+      "source_count": 18,
+      "sources": [
+        20347,
+        36070
+      ]
+    },
+    {
+      "H": 187,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 108944,
+      "pair": [
+        293,
+        299
+      ],
+      "source_count": 24,
+      "sources": [
+        40359,
+        6395
+      ]
+    },
+    {
+      "H": 189,
+      "attachments": [
+        8,
+        191
+      ],
+      "incompatible_pairs": 114055,
+      "pair": [
+        305,
+        307
+      ],
+      "source_count": 22,
+      "sources": [
+        3283,
+        18727
+      ]
+    },
+    {
+      "H": 191,
+      "attachments": [
+        191,
+        8
+      ],
+      "incompatible_pairs": 109896,
+      "pair": [
+        307,
+        309
+      ],
+      "source_count": 22,
+      "sources": [
+        3301,
+        3435
+      ]
+    },
+    {
+      "H": 193,
+      "attachments": [
+        191,
+        127
+      ],
+      "incompatible_pairs": 118820,
+      "pair": [
+        315,
+        319
+      ],
+      "source_count": 21,
+      "sources": [
+        21607,
+        4939
+      ]
+    },
+    {
+      "H": 195,
+      "attachments": [
+        8,
+        254
+      ],
+      "incompatible_pairs": 95352,
+      "pair": [
+        321,
+        327
+      ],
+      "source_count": 14,
+      "sources": [
+        2419,
+        37623
+      ]
+    },
+    {
+      "H": 197,
+      "attachments": [
+        127,
+        8
+      ],
+      "incompatible_pairs": 98871,
+      "pair": [
+        313,
+        323
+      ],
+      "source_count": 40,
+      "sources": [
+        39384,
+        12151
+      ]
+    },
+    {
+      "H": 199,
+      "attachments": [
+        16,
+        16
+      ],
+      "incompatible_pairs": 110287,
+      "pair": [
+        317,
+        327
+      ],
+      "source_count": 24,
+      "sources": [
+        52470,
+        7095
+      ]
+    },
+    {
+      "H": 201,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 106754,
+      "pair": [
+        325,
+        339
+      ],
+      "source_count": 15,
+      "sources": [
+        3947,
+        10966
+      ]
+    },
+    {
+      "H": 203,
+      "attachments": [
+        8,
+        253
+      ],
+      "incompatible_pairs": 105857,
+      "pair": [
+        331,
+        333
+      ],
+      "source_count": 26,
+      "sources": [
+        2675,
+        4092
+      ]
+    },
+    {
+      "H": 205,
+      "attachments": [
+        8,
+        253
+      ],
+      "incompatible_pairs": 109493,
+      "pair": [
+        341,
+        343
+      ],
+      "source_count": 18,
+      "sources": [
+        3403,
+        2026
+      ]
+    },
+    {
+      "H": 207,
+      "attachments": [
+        8,
+        16
+      ],
+      "incompatible_pairs": 124520,
+      "pair": [
+        329,
+        333
+      ],
+      "source_count": 28,
+      "sources": [
+        12027,
+        171751
+      ]
+    },
+    {
+      "H": 209,
+      "attachments": [
+        191,
+        8
+      ],
+      "incompatible_pairs": 97037,
+      "pair": [
+        333,
+        343
+      ],
+      "source_count": 16,
+      "sources": [
+        19622,
+        2667
+      ]
+    },
+    {
+      "H": 211,
+      "attachments": [
+        127,
+        8
+      ],
+      "incompatible_pairs": 110642,
+      "pair": [
+        333,
+        339
+      ],
+      "source_count": 20,
+      "sources": [
+        37132,
+        3955
+      ]
+    },
+    {
+      "H": 213,
+      "attachments": [
+        191,
+        8
+      ],
+      "incompatible_pairs": 115057,
+      "pair": [
+        339,
+        343
+      ],
+      "source_count": 28,
+      "sources": [
+        19685,
+        3699
+      ]
+    },
+    {
+      "H": 215,
+      "attachments": [
+        191,
+        127
+      ],
+      "incompatible_pairs": 115477,
+      "pair": [
+        349,
+        357
+      ],
+      "source_count": 20,
+      "sources": [
+        19692,
+        521
+      ]
+    },
+    {
+      "H": 217,
+      "attachments": [
+        191,
+        1
+      ],
+      "incompatible_pairs": 115638,
+      "pair": [
+        357,
+        361
+      ],
+      "source_count": 22,
+      "sources": [
+        7397,
+        15104
+      ]
+    },
+    {
+      "H": 219,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 110138,
+      "pair": [
+        355,
+        361
+      ],
+      "source_count": 42,
+      "sources": [
+        12019,
+        2659
+      ]
+    },
+    {
+      "H": 221,
+      "attachments": [
+        16,
+        191
+      ],
+      "incompatible_pairs": 115779,
+      "pair": [
+        351,
+        361
+      ],
+      "source_count": 29,
+      "sources": [
+        39340,
+        2212
+      ]
+    },
+    {
+      "H": 223,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 108083,
+      "pair": [
+        357,
+        359
+      ],
+      "source_count": 18,
+      "sources": [
+        39385,
+        3300
+      ]
+    },
+    {
+      "H": 225,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 104218,
+      "pair": [
+        369,
+        383
+      ],
+      "source_count": 15,
+      "sources": [
+        8523,
+        6731
+      ]
+    },
+    {
+      "H": 227,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 115601,
+      "pair": [
+        367,
+        371
+      ],
+      "source_count": 16,
+      "sources": [
+        20091,
+        3691
+      ]
+    },
+    {
+      "H": 229,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 121142,
+      "pair": [
+        371,
+        373
+      ],
+      "source_count": 38,
+      "sources": [
+        40150,
+        3939
+      ]
+    },
+    {
+      "H": 231,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 119066,
+      "pair": [
+        369,
+        371
+      ],
+      "source_count": 40,
+      "sources": [
+        37194,
+        3237
+      ]
+    },
+    {
+      "H": 233,
+      "attachments": [
+        253,
+        16
+      ],
+      "incompatible_pairs": 128447,
+      "pair": [
+        377,
+        381
+      ],
+      "source_count": 34,
+      "sources": [
+        8185,
+        36086
+      ]
+    },
+    {
+      "H": 235,
+      "attachments": [
+        253,
+        8
+      ],
+      "incompatible_pairs": 117002,
+      "pair": [
+        383,
+        385
+      ],
+      "source_count": 14,
+      "sources": [
+        2044,
+        2931
+      ]
+    },
+    {
+      "H": 237,
+      "attachments": [
+        191,
+        127
+      ],
+      "incompatible_pairs": 120532,
+      "pair": [
+        383,
+        387
+      ],
+      "source_count": 36,
+      "sources": [
+        3238,
+        4875
+      ]
+    },
+    {
+      "H": 239,
+      "attachments": [
+        4,
+        8
+      ],
+      "incompatible_pairs": 119999,
+      "pair": [
+        385,
+        389
+      ],
+      "source_count": 42,
+      "sources": [
+        1917,
+        3667
+      ]
+    },
+    {
+      "H": 241,
+      "attachments": [
+        8,
+        191
+      ],
+      "incompatible_pairs": 132205,
+      "pair": [
+        397,
+        401
+      ],
+      "source_count": 22,
+      "sources": [
+        2915,
+        7463
+      ]
+    },
+    {
+      "H": 243,
+      "attachments": [
+        191,
+        8
+      ],
+      "incompatible_pairs": 133345,
+      "pair": [
+        401,
+        405
+      ],
+      "source_count": 30,
+      "sources": [
+        3296,
+        7275
+      ]
+    },
+    {
+      "H": 245,
+      "attachments": [
+        16,
+        127
+      ],
+      "incompatible_pairs": 131589,
+      "pair": [
+        403,
+        405
+      ],
+      "source_count": 25,
+      "sources": [
+        7309,
+        4619
+      ]
+    },
+    {
+      "H": 247,
+      "attachments": [
+        254,
+        191
+      ],
+      "incompatible_pairs": 111176,
+      "pair": [
+        401,
+        409
+      ],
+      "source_count": 28,
+      "sources": [
+        11959,
+        3494
+      ]
+    },
+    {
+      "H": 249,
+      "attachments": [
+        8,
+        191
+      ],
+      "incompatible_pairs": 123443,
+      "pair": [
+        397,
+        413
+      ],
+      "source_count": 24,
+      "sources": [
+        19195,
+        3110
+      ]
+    },
+    {
+      "H": 251,
+      "attachments": [
+        127,
+        253
+      ],
+      "incompatible_pairs": 130347,
+      "pair": [
+        411,
+        421
+      ],
+      "source_count": 22,
+      "sources": [
+        8459,
+        6130
+      ]
+    },
+    {
+      "H": 253,
+      "attachments": [
+        16,
+        191
+      ],
+      "incompatible_pairs": 133717,
+      "pair": [
+        413,
+        415
+      ],
+      "source_count": 27,
+      "sources": [
+        7589,
+        19596
+      ]
+    },
+    {
+      "H": 255,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 139650,
+      "pair": [
+        405,
+        409
+      ],
+      "source_count": 28,
+      "sources": [
+        37196,
+        19620
+      ]
+    },
+    {
+      "H": 257,
+      "attachments": [
+        1,
+        8
+      ],
+      "incompatible_pairs": 127096,
+      "pair": [
+        423,
+        429
+      ],
+      "source_count": 30,
+      "sources": [
+        15616,
+        18302
+      ]
+    },
+    {
+      "H": 259,
+      "attachments": [
+        8,
+        191
+      ],
+      "incompatible_pairs": 133500,
+      "pair": [
+        425,
+        429
+      ],
+      "source_count": 34,
+      "sources": [
+        19067,
+        5349
+      ]
+    },
+    {
+      "H": 261,
+      "attachments": [
+        16,
+        127
+      ],
+      "incompatible_pairs": 147895,
+      "pair": [
+        435,
+        443
+      ],
+      "source_count": 24,
+      "sources": [
+        7389,
+        2830
+      ]
+    },
+    {
+      "H": 263,
+      "attachments": [
+        253,
+        127
+      ],
+      "incompatible_pairs": 137839,
+      "pair": [
+        429,
+        433
+      ],
+      "source_count": 22,
+      "sources": [
+        8177,
+        4873
+      ]
+    },
+    {
+      "H": 265,
+      "attachments": [
+        191,
+        16
+      ],
+      "incompatible_pairs": 137175,
+      "pair": [
+        437,
+        443
+      ],
+      "source_count": 26,
+      "sources": [
+        18852,
+        35574
+      ]
+    },
+    {
+      "H": 267,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 130574,
+      "pair": [
+        435,
+        445
+      ],
+      "source_count": 44,
+      "sources": [
+        19187,
+        3942
+      ]
+    },
+    {
+      "H": 269,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 141804,
+      "pair": [
+        445,
+        447
+      ],
+      "source_count": 29,
+      "sources": [
+        4617,
+        37449
+      ]
+    },
+    {
+      "H": 271,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 128500,
+      "pair": [
+        445,
+        453
+      ],
+      "source_count": 32,
+      "sources": [
+        39440,
+        4611
+      ]
+    },
+    {
+      "H": 273,
+      "attachments": [
+        191,
+        253
+      ],
+      "incompatible_pairs": 150962,
+      "pair": [
+        441,
+        447
+      ],
+      "source_count": 30,
+      "sources": [
+        3236,
+        4088
+      ]
+    },
+    {
+      "H": 275,
+      "attachments": [
+        16,
+        127
+      ],
+      "incompatible_pairs": 136141,
+      "pair": [
+        451,
+        453
+      ],
+      "source_count": 38,
+      "sources": [
+        44262,
+        8457
+      ]
+    },
+    {
+      "H": 277,
+      "attachments": [
+        253,
+        16
+      ],
+      "incompatible_pairs": 144374,
+      "pair": [
+        455,
+        457
+      ],
+      "source_count": 27,
+      "sources": [
+        12281,
+        44774
+      ]
+    },
+    {
+      "H": 279,
+      "attachments": [
+        191,
+        4
+      ],
+      "incompatible_pairs": 145188,
+      "pair": [
+        465,
+        473
+      ],
+      "source_count": 24,
+      "sources": [
+        3304,
+        617
+      ]
+    },
+    {
+      "H": 281,
+      "attachments": [
+        253,
+        191
+      ],
+      "incompatible_pairs": 121578,
+      "pair": [
+        461,
+        467
+      ],
+      "source_count": 48,
+      "sources": [
+        2040,
+        3492
+      ]
+    },
+    {
+      "H": 283,
+      "attachments": [
+        191,
+        253
+      ],
+      "incompatible_pairs": 144157,
+      "pair": [
+        469,
+        475
+      ],
+      "source_count": 32,
+      "sources": [
+        3244,
+        8176
+      ]
+    },
+    {
+      "H": 285,
+      "attachments": [
+        8,
+        191
+      ],
+      "incompatible_pairs": 142325,
+      "pair": [
+        473,
+        481
+      ],
+      "source_count": 34,
+      "sources": [
+        3958,
+        2340
+      ]
+    },
+    {
+      "H": 287,
+      "attachments": [
+        254,
+        16
+      ],
+      "incompatible_pairs": 131428,
+      "pair": [
+        473,
+        475
+      ],
+      "source_count": 34,
+      "sources": [
+        24894,
+        7605
+      ]
+    },
+    {
+      "H": 289,
+      "attachments": [
+        1,
+        127
+      ],
+      "incompatible_pairs": 146466,
+      "pair": [
+        479,
+        485
+      ],
+      "source_count": 28,
+      "sources": [
+        11520,
+        2320
+      ]
+    },
+    {
+      "H": 291,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 143042,
+      "pair": [
+        481,
+        485
+      ],
+      "source_count": 40,
+      "sources": [
+        8587,
+        19689
+      ]
+    },
+    {
+      "H": 293,
+      "attachments": [
+        191,
+        191
+      ],
+      "incompatible_pairs": 135503,
+      "pair": [
+        485,
+        489
+      ],
+      "source_count": 42,
+      "sources": [
+        19592,
+        3232
+      ]
+    },
+    {
+      "H": 295,
+      "attachments": [
+        127,
+        16
+      ],
+      "incompatible_pairs": 139641,
+      "pair": [
+        485,
+        493
+      ],
+      "source_count": 34,
+      "sources": [
+        8521,
+        7821
+      ]
+    },
+    {
+      "H": 297,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 144893,
+      "pair": [
+        495,
+        497
+      ],
+      "source_count": 20,
+      "sources": [
+        43750,
+        7787
+      ]
+    },
+    {
+      "H": 299,
+      "attachments": [
+        8,
+        191
+      ],
+      "incompatible_pairs": 131532,
+      "pair": [
+        505,
+        507
+      ],
+      "source_count": 22,
+      "sources": [
+        2658,
+        38183
+      ]
+    },
+    {
+      "H": 301,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 143208,
+      "pair": [
+        503,
+        505
+      ],
+      "source_count": 20,
+      "sources": [
+        39632,
+        524
+      ]
+    },
+    {
+      "H": 303,
+      "attachments": [
+        191,
+        191
+      ],
+      "incompatible_pairs": 138913,
+      "pair": [
+        503,
+        509
+      ],
+      "source_count": 30,
+      "sources": [
+        5285,
+        3080
+      ]
+    },
+    {
+      "H": 305,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 144202,
+      "pair": [
+        505,
+        509
+      ],
+      "source_count": 28,
+      "sources": [
+        8971,
+        4624
+      ]
+    },
+    {
+      "H": 307,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 138207,
+      "pair": [
+        517,
+        519
+      ],
+      "source_count": 36,
+      "sources": [
+        1910,
+        3922
+      ]
+    },
+    {
+      "H": 309,
+      "attachments": [
+        253,
+        8
+      ],
+      "incompatible_pairs": 151873,
+      "pair": [
+        515,
+        517
+      ],
+      "source_count": 30,
+      "sources": [
+        6136,
+        3962
+      ]
+    },
+    {
+      "H": 311,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 146301,
+      "pair": [
+        519,
+        523
+      ],
+      "source_count": 26,
+      "sources": [
+        8473,
+        4633
+      ]
+    },
+    {
+      "H": 313,
+      "attachments": [
+        253,
+        8
+      ],
+      "incompatible_pairs": 155943,
+      "pair": [
+        525,
+        529
+      ],
+      "source_count": 24,
+      "sources": [
+        26617,
+        3410
+      ]
+    },
+    {
+      "H": 315,
+      "attachments": [
+        191,
+        127
+      ],
+      "incompatible_pairs": 145354,
+      "pair": [
+        529,
+        535
+      ],
+      "source_count": 30,
+      "sources": [
+        5348,
+        2704
+      ]
+    },
+    {
+      "H": 317,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 134850,
+      "pair": [
+        531,
+        533
+      ],
+      "source_count": 42,
+      "sources": [
+        3186,
+        3666
+      ]
+    },
+    {
+      "H": 319,
+      "attachments": [
+        127,
+        8
+      ],
+      "incompatible_pairs": 145198,
+      "pair": [
+        533,
+        535
+      ],
+      "source_count": 26,
+      "sources": [
+        8665,
+        3946
+      ]
+    },
+    {
+      "H": 321,
+      "attachments": [
+        127,
+        8
+      ],
+      "incompatible_pairs": 142845,
+      "pair": [
+        537,
+        543
+      ],
+      "source_count": 40,
+      "sources": [
+        4496,
+        2914
+      ]
+    },
+    {
+      "H": 323,
+      "attachments": [
+        127,
+        8
+      ],
+      "incompatible_pairs": 142079,
+      "pair": [
+        539,
+        545
+      ],
+      "source_count": 32,
+      "sources": [
+        8537,
+        2674
+      ]
+    },
+    {
+      "H": 325,
+      "attachments": [
+        8,
+        127
+      ],
+      "incompatible_pairs": 146872,
+      "pair": [
+        543,
+        545
+      ],
+      "source_count": 27,
+      "sources": [
+        18294,
+        4625
+      ]
+    },
+    {
+      "H": 327,
+      "attachments": [
+        8,
+        127
+      ],
+      "incompatible_pairs": 157302,
+      "pair": [
+        549,
+        553
+      ],
+      "source_count": 28,
+      "sources": [
+        3194,
+        536
+      ]
+    },
+    {
+      "H": 329,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 147612,
+      "pair": [
+        555,
+        557
+      ],
+      "source_count": 35,
+      "sources": [
+        4890,
+        14859
+      ]
+    },
+    {
+      "H": 331,
+      "attachments": [
+        127,
+        8
+      ],
+      "incompatible_pairs": 137976,
+      "pair": [
+        549,
+        557
+      ],
+      "source_count": 16,
+      "sources": [
+        39504,
+        3450
+      ]
+    },
+    {
+      "H": 333,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 151655,
+      "pair": [
+        555,
+        561
+      ],
+      "source_count": 39,
+      "sources": [
+        8585,
+        8712
+      ]
+    },
+    {
+      "H": 335,
+      "attachments": [
+        8,
+        251
+      ],
+      "incompatible_pairs": 150951,
+      "pair": [
+        559,
+        561
+      ],
+      "source_count": 38,
+      "sources": [
+        3954,
+        32264
+      ]
+    },
+    {
+      "H": 337,
+      "attachments": [
+        4,
+        127
+      ],
+      "incompatible_pairs": 150203,
+      "pair": [
+        571,
+        573
+      ],
+      "source_count": 28,
+      "sources": [
+        1581,
+        4697
+      ]
+    },
+    {
+      "H": 339,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 151995,
+      "pair": [
+        565,
+        577
+      ],
+      "source_count": 36,
+      "sources": [
+        12809,
+        3180
+      ]
+    },
+    {
+      "H": 341,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 152339,
+      "pair": [
+        571,
+        579
+      ],
+      "source_count": 26,
+      "sources": [
+        4888,
+        3116
+      ]
+    },
+    {
+      "H": 343,
+      "attachments": [
+        8,
+        127
+      ],
+      "incompatible_pairs": 107174,
+      "pair": [
+        579,
+        589
+      ],
+      "source_count": 12,
+      "sources": [
+        20074,
+        2962
+      ]
+    },
+    {
+      "H": 345,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 148571,
+      "pair": [
+        573,
+        577
+      ],
+      "source_count": 49,
+      "sources": [
+        8969,
+        4880
+      ]
+    },
+    {
+      "H": 347,
+      "attachments": [
+        127,
+        8
+      ],
+      "incompatible_pairs": 157800,
+      "pair": [
+        577,
+        581
+      ],
+      "source_count": 38,
+      "sources": [
+        37456,
+        3698
+      ]
+    },
+    {
+      "H": 349,
+      "attachments": [
+        127,
+        4
+      ],
+      "incompatible_pairs": 150070,
+      "pair": [
+        597,
+        601
+      ],
+      "source_count": 38,
+      "sources": [
+        794,
+        1297
+      ]
+    },
+    {
+      "H": 351,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 163363,
+      "pair": [
+        589,
+        591
+      ],
+      "source_count": 46,
+      "sources": [
+        4632,
+        8472
+      ]
+    },
+    {
+      "H": 353,
+      "attachments": [
+        253,
+        8
+      ],
+      "incompatible_pairs": 158200,
+      "pair": [
+        589,
+        591
+      ],
+      "source_count": 33,
+      "sources": [
+        18424,
+        19826
+      ]
+    },
+    {
+      "H": 355,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 147733,
+      "pair": [
+        599,
+        601
+      ],
+      "source_count": 24,
+      "sources": [
+        4881,
+        2832
+      ]
+    },
+    {
+      "H": 357,
+      "attachments": [
+        8,
+        16
+      ],
+      "incompatible_pairs": 167717,
+      "pair": [
+        601,
+        607
+      ],
+      "source_count": 33,
+      "sources": [
+        3706,
+        7845
+      ]
+    },
+    {
+      "H": 359,
+      "attachments": [
+        127,
+        4
+      ],
+      "incompatible_pairs": 159855,
+      "pair": [
+        605,
+        607
+      ],
+      "source_count": 34,
+      "sources": [
+        8968,
+        1817
+      ]
+    },
+    {
+      "H": 361,
+      "attachments": [
+        8,
+        4
+      ],
+      "incompatible_pairs": 162201,
+      "pair": [
+        611,
+        613
+      ],
+      "source_count": 31,
+      "sources": [
+        3674,
+        1845
+      ]
+    },
+    {
+      "H": 363,
+      "attachments": [
+        191,
+        16
+      ],
+      "incompatible_pairs": 87010,
+      "pair": [
+        639,
+        653
+      ],
+      "source_count": 10,
+      "sources": [
+        1452,
+        11943
+      ]
+    },
+    {
+      "H": 365,
+      "attachments": [
+        4,
+        127
+      ],
+      "incompatible_pairs": 161770,
+      "pair": [
+        615,
+        617
+      ],
+      "source_count": 34,
+      "sources": [
+        1593,
+        43544
+      ]
+    },
+    {
+      "H": 367,
+      "attachments": [
+        127,
+        254
+      ],
+      "incompatible_pairs": 158993,
+      "pair": [
+        619,
+        627
+      ],
+      "source_count": 22,
+      "sources": [
+        4628,
+        10045
+      ]
+    },
+    {
+      "H": 369,
+      "attachments": [
+        191,
+        4
+      ],
+      "incompatible_pairs": 167651,
+      "pair": [
+        623,
+        625
+      ],
+      "source_count": 39,
+      "sources": [
+        5284,
+        1721
+      ]
+    },
+    {
+      "H": 371,
+      "attachments": [
+        127,
+        4
+      ],
+      "incompatible_pairs": 142395,
+      "pair": [
+        627,
+        633
+      ],
+      "source_count": 32,
+      "sources": [
+        6937,
+        1585
+      ]
+    },
+    {
+      "H": 373,
+      "attachments": [
+        8,
+        127
+      ],
+      "incompatible_pairs": 156806,
+      "pair": [
+        627,
+        629
+      ],
+      "source_count": 35,
+      "sources": [
+        11386,
+        6673
+      ]
+    },
+    {
+      "H": 375,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 153930,
+      "pair": [
+        633,
+        635
+      ],
+      "source_count": 40,
+      "sources": [
+        37584,
+        5281
+      ]
+    },
+    {
+      "H": 377,
+      "attachments": [
+        127,
+        8
+      ],
+      "incompatible_pairs": 149393,
+      "pair": [
+        639,
+        643
+      ],
+      "source_count": 20,
+      "sources": [
+        4696,
+        18290
+      ]
+    },
+    {
+      "H": 379,
+      "attachments": [
+        4,
+        127
+      ],
+      "incompatible_pairs": 162186,
+      "pair": [
+        643,
+        645
+      ],
+      "source_count": 28,
+      "sources": [
+        945,
+        796
+      ]
+    },
+    {
+      "H": 381,
+      "attachments": [
+        8,
+        127
+      ],
+      "incompatible_pairs": 160510,
+      "pair": [
+        649,
+        651
+      ],
+      "source_count": 25,
+      "sources": [
+        9574,
+        6809
+      ]
+    },
+    {
+      "H": 383,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 159197,
+      "pair": [
+        651,
+        655
+      ],
+      "source_count": 36,
+      "sources": [
+        6801,
+        5280
+      ]
+    },
+    {
+      "H": 385,
+      "attachments": [
+        4,
+        191
+      ],
+      "incompatible_pairs": 141981,
+      "pair": [
+        655,
+        671
+      ],
+      "source_count": 20,
+      "sources": [
+        1577,
+        5132
+      ]
+    },
+    {
+      "H": 387,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 157796,
+      "pair": [
+        663,
+        665
+      ],
+      "source_count": 22,
+      "sources": [
+        20404,
+        9850
+      ]
+    },
+    {
+      "H": 389,
+      "attachments": [
+        16,
+        254
+      ],
+      "incompatible_pairs": 160137,
+      "pair": [
+        667,
+        669
+      ],
+      "source_count": 29,
+      "sources": [
+        7829,
+        12091
+      ]
+    },
+    {
+      "H": 391,
+      "attachments": [
+        16,
+        254
+      ],
+      "incompatible_pairs": 151789,
+      "pair": [
+        671,
+        673
+      ],
+      "source_count": 20,
+      "sources": [
+        20156,
+        14013
+      ]
+    },
+    {
+      "H": 393,
+      "attachments": [
+        8,
+        254
+      ],
+      "incompatible_pairs": 153261,
+      "pair": [
+        675,
+        677
+      ],
+      "source_count": 33,
+      "sources": [
+        17778,
+        20283
+      ]
+    },
+    {
+      "H": 395,
+      "attachments": [
+        191,
+        8
+      ],
+      "incompatible_pairs": 76743,
+      "pair": [
+        745,
+        767
+      ],
+      "source_count": 8,
+      "sources": [
+        7688,
+        1140
+      ]
+    },
+    {
+      "H": 397,
+      "attachments": [
+        191,
+        191
+      ],
+      "incompatible_pairs": 157276,
+      "pair": [
+        685,
+        689
+      ],
+      "source_count": 25,
+      "sources": [
+        5292,
+        5540
+      ]
+    },
+    {
+      "H": 399,
+      "attachments": [
+        191,
+        8
+      ],
+      "incompatible_pairs": 146757,
+      "pair": [
+        689,
+        691
+      ],
+      "source_count": 30,
+      "sources": [
+        21923,
+        9594
+      ]
+    },
+    {
+      "H": 401,
+      "attachments": [
+        191,
+        16
+      ],
+      "incompatible_pairs": 154355,
+      "pair": [
+        697,
+        699
+      ],
+      "source_count": 43,
+      "sources": [
+        5289,
+        4020
+      ]
+    },
+    {
+      "H": 403,
+      "attachments": [
+        4,
+        254
+      ],
+      "incompatible_pairs": 156265,
+      "pair": [
+        685,
+        695
+      ],
+      "source_count": 28,
+      "sources": [
+        1841,
+        9533
+      ]
+    },
+    {
+      "H": 405,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 162671,
+      "pair": [
+        687,
+        705
+      ],
+      "source_count": 22,
+      "sources": [
+        4884,
+        12889
+      ]
+    },
+    {
+      "H": 407,
+      "attachments": [
+        127,
+        8
+      ],
+      "incompatible_pairs": 151813,
+      "pair": [
+        691,
+        703
+      ],
+      "source_count": 46,
+      "sources": [
+        6929,
+        9338
+      ]
+    },
+    {
+      "H": 409,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 164355,
+      "pair": [
+        693,
+        705
+      ],
+      "source_count": 36,
+      "sources": [
+        2840,
+        39971
+      ]
+    },
+    {
+      "H": 411,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 158412,
+      "pair": [
+        705,
+        711
+      ],
+      "source_count": 26,
+      "sources": [
+        43793,
+        10776
+      ]
+    },
+    {
+      "H": 413,
+      "attachments": [
+        16,
+        191
+      ],
+      "incompatible_pairs": 159594,
+      "pair": [
+        721,
+        723
+      ],
+      "source_count": 29,
+      "sources": [
+        11949,
+        5408
+      ]
+    },
+    {
+      "H": 415,
+      "attachments": [
+        254,
+        1
+      ],
+      "incompatible_pairs": 139657,
+      "pair": [
+        747,
+        807
+      ],
+      "source_count": 26,
+      "sources": [
+        16059,
+        18952
+      ]
+    },
+    {
+      "H": 417,
+      "attachments": [
+        16,
+        127
+      ],
+      "incompatible_pairs": 158763,
+      "pair": [
+        725,
+        731
+      ],
+      "source_count": 39,
+      "sources": [
+        3772,
+        8796
+      ]
+    },
+    {
+      "H": 419,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 136334,
+      "pair": [
+        735,
+        737
+      ],
+      "source_count": 20,
+      "sources": [
+        4722,
+        5714
+      ]
+    },
+    {
+      "H": 421,
+      "attachments": [
+        191,
+        191
+      ],
+      "incompatible_pairs": 142468,
+      "pair": [
+        737,
+        741
+      ],
+      "source_count": 34,
+      "sources": [
+        5538,
+        1324
+      ]
+    },
+    {
+      "H": 423,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 155524,
+      "pair": [
+        711,
+        733
+      ],
+      "source_count": 32,
+      "sources": [
+        29411,
+        9322
+      ]
+    },
+    {
+      "H": 425,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 170126,
+      "pair": [
+        729,
+        737
+      ],
+      "source_count": 42,
+      "sources": [
+        8984,
+        5164
+      ]
+    },
+    {
+      "H": 427,
+      "attachments": [
+        191,
+        8
+      ],
+      "incompatible_pairs": 145854,
+      "pair": [
+        729,
+        745
+      ],
+      "source_count": 28,
+      "sources": [
+        19752,
+        9570
+      ]
+    },
+    {
+      "H": 429,
+      "attachments": [
+        251,
+        254
+      ],
+      "incompatible_pairs": 151917,
+      "pair": [
+        733,
+        785
+      ],
+      "source_count": 23,
+      "sources": [
+        32296,
+        20093
+      ]
+    },
+    {
+      "H": 431,
+      "attachments": [
+        16,
+        253
+      ],
+      "incompatible_pairs": 148089,
+      "pair": [
+        783,
+        833
+      ],
+      "source_count": 20,
+      "sources": [
+        2740,
+        5864
+      ]
+    },
+    {
+      "H": 433,
+      "attachments": [
+        191,
+        191
+      ],
+      "incompatible_pairs": 130722,
+      "pair": [
+        789,
+        839
+      ],
+      "source_count": 19,
+      "sources": [
+        5484,
+        2424
+      ]
+    },
+    {
+      "H": 435,
+      "attachments": [
+        191,
+        16
+      ],
+      "incompatible_pairs": 142520,
+      "pair": [
+        771,
+        793
+      ],
+      "source_count": 20,
+      "sources": [
+        38120,
+        11924
+      ]
+    },
+    {
+      "H": 437,
+      "attachments": [
+        8,
+        191
+      ],
+      "incompatible_pairs": 140885,
+      "pair": [
+        845,
+        849
+      ],
+      "source_count": 20,
+      "sources": [
+        884,
+        7569
+      ]
+    },
+    {
+      "H": 439,
+      "attachments": [
+        191,
+        191
+      ],
+      "incompatible_pairs": 144625,
+      "pair": [
+        849,
+        853
+      ],
+      "source_count": 22,
+      "sources": [
+        7939,
+        7691
+      ]
+    },
+    {
+      "H": 441,
+      "attachments": [
+        251,
+        16
+      ],
+      "incompatible_pairs": 141512,
+      "pair": [
+        777,
+        803
+      ],
+      "source_count": 31,
+      "sources": [
+        31768,
+        10916
+      ]
+    },
+    {
+      "H": 443,
+      "attachments": [
+        2,
+        191
+      ],
+      "incompatible_pairs": 109346,
+      "pair": [
+        809,
+        861
+      ],
+      "source_count": 14,
+      "sources": [
+        30777,
+        7505
+      ]
+    },
+    {
+      "H": 445,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 154647,
+      "pair": [
+        771,
+        775
+      ],
+      "source_count": 27,
+      "sources": [
+        8988,
+        5412
+      ]
+    },
+    {
+      "H": 447,
+      "attachments": [
+        191,
+        127
+      ],
+      "incompatible_pairs": 148766,
+      "pair": [
+        773,
+        775
+      ],
+      "source_count": 18,
+      "sources": [
+        3368,
+        12945
+      ]
+    },
+    {
+      "H": 449,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 144939,
+      "pair": [
+        779,
+        781
+      ],
+      "source_count": 36,
+      "sources": [
+        15121,
+        12953
+      ]
+    },
+    {
+      "H": 451,
+      "attachments": [
+        8,
+        191
+      ],
+      "incompatible_pairs": 155542,
+      "pair": [
+        781,
+        783
+      ],
+      "source_count": 28,
+      "sources": [
+        9834,
+        7457
+      ]
+    },
+    {
+      "H": 453,
+      "attachments": [
+        8,
+        16
+      ],
+      "incompatible_pairs": 126075,
+      "pair": [
+        883,
+        887
+      ],
+      "source_count": 14,
+      "sources": [
+        7723,
+        3452
+      ]
+    },
+    {
+      "H": 455,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 129219,
+      "pair": [
+        887,
+        889
+      ],
+      "source_count": 18,
+      "sources": [
+        3618,
+        3602
+      ]
+    },
+    {
+      "H": 457,
+      "attachments": [
+        32,
+        8
+      ],
+      "incompatible_pairs": 130179,
+      "pair": [
+        873,
+        889
+      ],
+      "source_count": 17,
+      "sources": [
+        40232,
+        17648
+      ]
+    },
+    {
+      "H": 459,
+      "attachments": [
+        127,
+        253
+      ],
+      "incompatible_pairs": 151381,
+      "pair": [
+        795,
+        891
+      ],
+      "source_count": 30,
+      "sources": [
+        8856,
+        3956
+      ]
+    },
+    {
+      "H": 461,
+      "attachments": [
+        191,
+        32
+      ],
+      "incompatible_pairs": 134466,
+      "pair": [
+        835,
+        901
+      ],
+      "source_count": 20,
+      "sources": [
+        21801,
+        4924
+      ]
+    },
+    {
+      "H": 463,
+      "attachments": [
+        16,
+        16
+      ],
+      "incompatible_pairs": 148567,
+      "pair": [
+        831,
+        907
+      ],
+      "source_count": 32,
+      "sources": [
+        3764,
+        3754
+      ]
+    },
+    {
+      "H": 465,
+      "attachments": [
+        2,
+        16
+      ],
+      "incompatible_pairs": 148055,
+      "pair": [
+        843,
+        897
+      ],
+      "source_count": 22,
+      "sources": [
+        30769,
+        40177
+      ]
+    },
+    {
+      "H": 467,
+      "attachments": [
+        16,
+        16
+      ],
+      "incompatible_pairs": 128627,
+      "pair": [
+        841,
+        843
+      ],
+      "source_count": 34,
+      "sources": [
+        20117,
+        11940
+      ]
+    },
+    {
+      "H": 469,
+      "attachments": [
+        16,
+        127
+      ],
+      "incompatible_pairs": 150725,
+      "pair": [
+        845,
+        911
+      ],
+      "source_count": 33,
+      "sources": [
+        27797,
+        40016
+      ]
+    },
+    {
+      "H": 471,
+      "attachments": [
+        16,
+        16
+      ],
+      "incompatible_pairs": 146896,
+      "pair": [
+        849,
+        915
+      ],
+      "source_count": 26,
+      "sources": [
+        11444,
+        27897
+      ]
+    },
+    {
+      "H": 473,
+      "attachments": [
+        16,
+        253
+      ],
+      "incompatible_pairs": 138944,
+      "pair": [
+        849,
+        909
+      ],
+      "source_count": 26,
+      "sources": [
+        11941,
+        3952
+      ]
+    },
+    {
+      "H": 475,
+      "attachments": [
+        191,
+        191
+      ],
+      "incompatible_pairs": 140579,
+      "pair": [
+        857,
+        927
+      ],
+      "source_count": 24,
+      "sources": [
+        7465,
+        6817
+      ]
+    },
+    {
+      "H": 477,
+      "attachments": [
+        32,
+        32
+      ],
+      "incompatible_pairs": 150797,
+      "pair": [
+        861,
+        909
+      ],
+      "source_count": 27,
+      "sources": [
+        38698,
+        38186
+      ]
+    },
+    {
+      "H": 479,
+      "attachments": [
+        16,
+        191
+      ],
+      "incompatible_pairs": 115887,
+      "pair": [
+        925,
+        939
+      ],
+      "source_count": 14,
+      "sources": [
+        40176,
+        8484
+      ]
+    },
+    {
+      "H": 481,
+      "attachments": [
+        191,
+        16
+      ],
+      "incompatible_pairs": 144074,
+      "pair": [
+        939,
+        949
+      ],
+      "source_count": 21,
+      "sources": [
+        7601,
+        11505
+      ]
+    },
+    {
+      "H": 483,
+      "attachments": [
+        127,
+        254
+      ],
+      "incompatible_pairs": 121321,
+      "pair": [
+        945,
+        963
+      ],
+      "source_count": 16,
+      "sources": [
+        15384,
+        5306
+      ]
+    },
+    {
+      "H": 485,
+      "attachments": [
+        191,
+        16
+      ],
+      "incompatible_pairs": 114646,
+      "pair": [
+        927,
+        947
+      ],
+      "source_count": 12,
+      "sources": [
+        19976,
+        19193
+      ]
+    },
+    {
+      "H": 487,
+      "attachments": [
+        1,
+        16
+      ],
+      "incompatible_pairs": 87094,
+      "pair": [
+        947,
+        953
+      ],
+      "source_count": 10,
+      "sources": [
+        3856,
+        11513
+      ]
+    },
+    {
+      "H": 489,
+      "attachments": [
+        8,
+        16
+      ],
+      "incompatible_pairs": 128376,
+      "pair": [
+        957,
+        967
+      ],
+      "source_count": 18,
+      "sources": [
+        17656,
+        11556
+      ]
+    },
+    {
+      "H": 491,
+      "attachments": [
+        16,
+        254
+      ],
+      "incompatible_pairs": 143970,
+      "pair": [
+        957,
+        959
+      ],
+      "source_count": 24,
+      "sources": [
+        3512,
+        5941
+      ]
+    },
+    {
+      "H": 493,
+      "attachments": [
+        1,
+        253
+      ],
+      "incompatible_pairs": 138590,
+      "pair": [
+        957,
+        963
+      ],
+      "source_count": 18,
+      "sources": [
+        7696,
+        1976
+      ]
+    },
+    {
+      "H": 495,
+      "attachments": [
+        16,
+        191
+      ],
+      "incompatible_pairs": 117543,
+      "pair": [
+        961,
+        973
+      ],
+      "source_count": 22,
+      "sources": [
+        11512,
+        1456
+      ]
+    },
+    {
+      "H": 497,
+      "attachments": [
+        16,
+        191
+      ],
+      "incompatible_pairs": 152031,
+      "pair": [
+        963,
+        965
+      ],
+      "source_count": 33,
+      "sources": [
+        12070,
+        19864
+      ]
+    },
+    {
+      "H": 499,
+      "attachments": [
+        127,
+        1
+      ],
+      "incompatible_pairs": 135859,
+      "pair": [
+        973,
+        977
+      ],
+      "source_count": 20,
+      "sources": [
+        15896,
+        11784
+      ]
+    },
+    {
+      "H": 501,
+      "attachments": [
+        191,
+        16
+      ],
+      "incompatible_pairs": 122426,
+      "pair": [
+        977,
+        981
+      ],
+      "source_count": 15,
+      "sources": [
+        19824,
+        7841
+      ]
+    },
+    {
+      "H": 503,
+      "attachments": [
+        191,
+        191
+      ],
+      "incompatible_pairs": 141984,
+      "pair": [
+        985,
+        989
+      ],
+      "source_count": 28,
+      "sources": [
+        7714,
+        1464
+      ]
+    },
+    {
+      "H": 505,
+      "attachments": [
+        254,
+        16
+      ],
+      "incompatible_pairs": 120962,
+      "pair": [
+        979,
+        987
+      ],
+      "source_count": 18,
+      "sources": [
+        10029,
+        7700
+      ]
+    },
+    {
+      "H": 507,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 127493,
+      "pair": [
+        981,
+        995
+      ],
+      "source_count": 18,
+      "sources": [
+        21009,
+        5670
+      ]
+    },
+    {
+      "H": 509,
+      "attachments": [
+        1,
+        16
+      ],
+      "incompatible_pairs": 141997,
+      "pair": [
+        989,
+        993
+      ],
+      "source_count": 35,
+      "sources": [
+        18056,
+        7849
+      ]
+    },
+    {
+      "H": 511,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 139285,
+      "pair": [
+        997,
+        1001
+      ],
+      "source_count": 32,
+      "sources": [
+        23057,
+        19608
+      ]
+    },
+    {
+      "H": 513,
+      "attachments": [
+        1,
+        16
+      ],
+      "incompatible_pairs": 145152,
+      "pair": [
+        1001,
+        1005
+      ],
+      "source_count": 35,
+      "sources": [
+        25992,
+        19368
+      ]
+    },
+    {
+      "H": 515,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 95383,
+      "pair": [
+        1011,
+        1031
+      ],
+      "source_count": 12,
+      "sources": [
+        3884,
+        9321
+      ]
+    },
+    {
+      "H": 517,
+      "attachments": [
+        254,
+        191
+      ],
+      "incompatible_pairs": 137888,
+      "pair": [
+        1007,
+        1015
+      ],
+      "source_count": 21,
+      "sources": [
+        18105,
+        5926
+      ]
+    },
+    {
+      "H": 519,
+      "attachments": [
+        1,
+        16
+      ],
+      "incompatible_pairs": 109995,
+      "pair": [
+        1019,
+        1021
+      ],
+      "source_count": 24,
+      "sources": [
+        9864,
+        6833
+      ]
+    },
+    {
+      "H": 521,
+      "attachments": [
+        254,
+        8
+      ],
+      "incompatible_pairs": 124552,
+      "pair": [
+        1021,
+        1025
+      ],
+      "source_count": 17,
+      "sources": [
+        12075,
+        3634
+      ]
+    },
+    {
+      "H": 523,
+      "attachments": [
+        8,
+        127
+      ],
+      "incompatible_pairs": 131480,
+      "pair": [
+        1021,
+        1027
+      ],
+      "source_count": 38,
+      "sources": [
+        17776,
+        9497
+      ]
+    },
+    {
+      "H": 525,
+      "attachments": [
+        191,
+        16
+      ],
+      "incompatible_pairs": 76560,
+      "pair": [
+        1027,
+        1041
+      ],
+      "source_count": 10,
+      "sources": [
+        18736,
+        11044
+      ]
+    },
+    {
+      "H": 527,
+      "attachments": [
+        191,
+        254
+      ],
+      "incompatible_pairs": 114083,
+      "pair": [
+        1035,
+        1039
+      ],
+      "source_count": 22,
+      "sources": [
+        7441,
+        3642
+      ]
+    },
+    {
+      "H": 529,
+      "attachments": [
+        8,
+        191
+      ],
+      "incompatible_pairs": 113214,
+      "pair": [
+        1035,
+        1043
+      ],
+      "source_count": 19,
+      "sources": [
+        13995,
+        17164
+      ]
+    },
+    {
+      "H": 531,
+      "attachments": [
+        16,
+        16
+      ],
+      "incompatible_pairs": 98976,
+      "pair": [
+        1043,
+        1047
+      ],
+      "source_count": 16,
+      "sources": [
+        13484,
+        10920
+      ]
+    },
+    {
+      "H": 533,
+      "attachments": [
+        8,
+        254
+      ],
+      "incompatible_pairs": 122536,
+      "pair": [
+        1045,
+        1047
+      ],
+      "source_count": 24,
+      "sources": [
+        17784,
+        18108
+      ]
+    },
+    {
+      "H": 535,
+      "attachments": [
+        191,
+        127
+      ],
+      "incompatible_pairs": 82758,
+      "pair": [
+        1051,
+        1055
+      ],
+      "source_count": 10,
+      "sources": [
+        7288,
+        43560
+      ]
+    },
+    {
+      "H": 537,
+      "attachments": [
+        8,
+        127
+      ],
+      "incompatible_pairs": 87552,
+      "pair": [
+        1055,
+        1059
+      ],
+      "source_count": 12,
+      "sources": [
+        5666,
+        8880
+      ]
+    },
+    {
+      "H": 539,
+      "attachments": [
+        127,
+        127
+      ],
+      "incompatible_pairs": 93992,
+      "pair": [
+        1059,
+        1069
+      ],
+      "source_count": 16,
+      "sources": [
+        15641,
+        10808
+      ]
+    },
+    {
+      "H": 541,
+      "attachments": [
+        127,
+        16
+      ],
+      "incompatible_pairs": 74037,
+      "pair": [
+        1069,
+        1075
+      ],
+      "source_count": 10,
+      "sources": [
+        11184,
+        9636
+      ]
+    },
+    {
+      "H": 543,
+      "attachments": [
+        254,
+        2
+      ],
+      "incompatible_pairs": 58043,
+      "pair": [
+        1075,
+        1083
+      ],
+      "source_count": 8,
+      "sources": [
+        9276,
+        23096
+      ]
+    },
+    {
+      "H": 545,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 113808,
+      "pair": [
+        1067,
+        1073
+      ],
+      "source_count": 20,
+      "sources": [
+        9121,
+        5674
+      ]
+    },
+    {
+      "H": 547,
+      "attachments": [
+        254,
+        16
+      ],
+      "incompatible_pairs": 102982,
+      "pair": [
+        1081,
+        1083
+      ],
+      "source_count": 22,
+      "sources": [
+        11961,
+        11433
+      ]
+    },
+    {
+      "H": 549,
+      "attachments": [
+        2,
+        32
+      ],
+      "incompatible_pairs": 56409,
+      "pair": [
+        1093,
+        1101
+      ],
+      "source_count": 8,
+      "sources": [
+        15377,
+        5432
+      ]
+    },
+    {
+      "H": 551,
+      "attachments": [
+        1,
+        8
+      ],
+      "incompatible_pairs": 90690,
+      "pair": [
+        1083,
+        1089
+      ],
+      "source_count": 16,
+      "sources": [
+        9888,
+        18044
+      ]
+    },
+    {
+      "H": 553,
+      "attachments": [
+        8,
+        253
+      ],
+      "incompatible_pairs": 93881,
+      "pair": [
+        1101,
+        1109
+      ],
+      "source_count": 11,
+      "sources": [
+        3704,
+        10148
+      ]
+    },
+    {
+      "H": 555,
+      "attachments": [
+        223,
+        2
+      ],
+      "incompatible_pairs": 80622,
+      "pair": [
+        1105,
+        1107
+      ],
+      "source_count": 12,
+      "sources": [
+        26161,
+        15385
+      ]
+    },
+    {
+      "H": 557,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 45551,
+      "pair": [
+        1111,
+        1113
+      ],
+      "source_count": 6,
+      "sources": [
+        11441,
+        13433
+      ]
+    },
+    {
+      "H": 559,
+      "attachments": [
+        191,
+        127
+      ],
+      "incompatible_pairs": 36623,
+      "pair": [
+        1121,
+        1127
+      ],
+      "source_count": 6,
+      "sources": [
+        13353,
+        3864
+      ]
+    },
+    {
+      "H": 561,
+      "attachments": [
+        191,
+        16
+      ],
+      "incompatible_pairs": 104165,
+      "pair": [
+        1107,
+        1113
+      ],
+      "source_count": 15,
+      "sources": [
+        38128,
+        11449
+      ]
+    },
+    {
+      "H": 563,
+      "attachments": [
+        191,
+        127
+      ],
+      "incompatible_pairs": 84799,
+      "pair": [
+        1123,
+        1129
+      ],
+      "source_count": 12,
+      "sources": [
+        25868,
+        8632
+      ]
+    },
+    {
+      "H": 565,
+      "attachments": [
+        1,
+        8
+      ],
+      "incompatible_pairs": 53305,
+      "pair": [
+        1119,
+        1121
+      ],
+      "source_count": 7,
+      "sources": [
+        10144,
+        3890
+      ]
+    },
+    {
+      "H": 567,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 36703,
+      "pair": [
+        1111,
+        1127
+      ],
+      "source_count": 6,
+      "sources": [
+        12068,
+        9464
+      ]
+    },
+    {
+      "H": 569,
+      "attachments": [
+        253,
+        191
+      ],
+      "incompatible_pairs": 96333,
+      "pair": [
+        1113,
+        1117
+      ],
+      "source_count": 14,
+      "sources": [
+        6064,
+        40483
+      ]
+    },
+    {
+      "H": 571,
+      "attachments": [
+        8,
+        8
+      ],
+      "incompatible_pairs": 69163,
+      "pair": [
+        1131,
+        1133
+      ],
+      "source_count": 10,
+      "sources": [
+        20057,
+        9584
+      ]
+    },
+    {
+      "H": 573,
+      "attachments": [
+        251,
+        8
+      ],
+      "incompatible_pairs": 106166,
+      "pair": [
+        1123,
+        1127
+      ],
+      "source_count": 20,
+      "sources": [
+        30244,
+        9848
+      ]
+    },
+    {
+      "H": 575,
+      "attachments": [
+        16,
+        191
+      ],
+      "incompatible_pairs": 63484,
+      "pair": [
+        1135,
+        1139
+      ],
+      "source_count": 8,
+      "sources": [
+        3892,
+        20264
+      ]
+    },
+    {
+      "H": 577,
+      "attachments": [
+        16,
+        16
+      ],
+      "incompatible_pairs": 50027,
+      "pair": [
+        1151,
+        1153
+      ],
+      "source_count": 7,
+      "sources": [
+        28049,
+        7856
+      ]
+    },
+    {
+      "H": 579,
+      "attachments": [
+        8,
+        191
+      ],
+      "incompatible_pairs": 83114,
+      "pair": [
+        1131,
+        1139
+      ],
+      "source_count": 14,
+      "sources": [
+        18040,
+        19736
+      ]
+    },
+    {
+      "H": 581,
+      "attachments": [
+        16,
+        127
+      ],
+      "incompatible_pairs": 68196,
+      "pair": [
+        1147,
+        1155
+      ],
+      "source_count": 12,
+      "sources": [
+        16041,
+        21137
+      ]
+    },
+    {
+      "H": 583,
+      "attachments": [
+        127,
+        191
+      ],
+      "incompatible_pairs": 102265,
+      "pair": [
+        1147,
+        1151
+      ],
+      "source_count": 20,
+      "sources": [
+        13844,
+        7721
+      ]
+    },
+    {
+      "H": 585,
+      "attachments": [
+        8,
+        127
+      ],
+      "incompatible_pairs": 94031,
+      "pair": [
+        1151,
+        1155
+      ],
+      "source_count": 18,
+      "sources": [
+        13858,
+        17180
+      ]
+    },
+    {
+      "H": 587,
+      "attachments": [
+        127,
+        254
+      ],
+      "incompatible_pairs": 56940,
+      "pair": [
+        1161,
+        1163
+      ],
+      "source_count": 10,
+      "sources": [
+        15897,
+        14009
+      ]
+    },
+    {
+      "H": 589,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 87808,
+      "pair": [
+        1161,
+        1163
+      ],
+      "source_count": 16,
+      "sources": [
+        26284,
+        13994
+      ]
+    },
+    {
+      "H": 591,
+      "attachments": [
+        8,
+        127
+      ],
+      "incompatible_pairs": 72826,
+      "pair": [
+        1161,
+        1165
+      ],
+      "source_count": 12,
+      "sources": [
+        13986,
+        8888
+      ]
+    },
+    {
+      "H": 593,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 89075,
+      "pair": [
+        1167,
+        1171
+      ],
+      "source_count": 22,
+      "sources": [
+        11448,
+        5752
+      ]
+    },
+    {
+      "H": 595,
+      "attachments": [
+        191,
+        8
+      ],
+      "incompatible_pairs": 67500,
+      "pair": [
+        1171,
+        1173
+      ],
+      "source_count": 14,
+      "sources": [
+        5672,
+        9336
+      ]
+    },
+    {
+      "H": 597,
+      "attachments": [
+        1,
+        8
+      ],
+      "incompatible_pairs": 63997,
+      "pair": [
+        1173,
+        1175
+      ],
+      "source_count": 12,
+      "sources": [
+        13984,
+        10018
+      ]
+    },
+    {
+      "H": 599,
+      "attachments": [
+        8,
+        16
+      ],
+      "incompatible_pairs": 53274,
+      "pair": [
+        1185,
+        1199
+      ],
+      "source_count": 8,
+      "sources": [
+        9770,
+        13996
+      ]
+    },
+    {
+      "H": 605,
+      "attachments": [
+        8,
+        16
+      ],
+      "incompatible_pairs": 12876,
+      "pair": [
+        1197,
+        1213
+      ],
+      "source_count": 4,
+      "sources": [
+        13432,
+        13988
+      ]
+    },
+    {
+      "H": 621,
+      "attachments": [
+        1,
+        4
+      ],
+      "incompatible_pairs": 1288,
+      "pair": [
+        1393,
+        1395
+      ],
+      "source_count": 2,
+      "sources": [
+        10032,
+        140596
+      ]
+    },
+    {
+      "H": 631,
+      "attachments": [
+        16,
+        8
+      ],
+      "incompatible_pairs": 8455,
+      "pair": [
+        1391,
+        1403
+      ],
+      "source_count": 4,
+      "sources": [
+        20273,
+        5936
+      ]
+    },
+    {
+      "H": 639,
+      "attachments": [
+        2,
+        8
+      ],
+      "incompatible_pairs": 7912,
+      "pair": [
+        1403,
+        1419
+      ],
+      "source_count": 4,
+      "sources": [
+        13860,
+        12081
+      ]
+    },
+    {
+      "H": 641,
+      "attachments": [
+        2,
+        1
+      ],
+      "incompatible_pairs": 27258,
+      "pair": [
+        1403,
+        1405
+      ],
+      "source_count": 8,
+      "sources": [
+        19248,
+        16161
+      ]
+    },
+    {
+      "H": 643,
+      "attachments": [
+        1,
+        1
+      ],
+      "incompatible_pairs": 20741,
+      "pair": [
+        1403,
+        1413
+      ],
+      "source_count": 6,
+      "sources": [
+        20248,
+        11816
+      ]
+    },
+    {
+      "H": 645,
+      "attachments": [
+        16,
+        4
+      ],
+      "incompatible_pairs": 11211,
+      "pair": [
+        1445,
+        1447
+      ],
+      "source_count": 4,
+      "sources": [
+        7729,
+        13861
+      ]
+    },
+    {
+      "H": 649,
+      "attachments": [
+        239,
+        251
+      ],
+      "incompatible_pairs": 8100,
+      "pair": [
+        1439,
+        1459
+      ],
+      "source_count": 4,
+      "sources": [
+        9784,
+        13876
+      ]
+    },
+    {
+      "H": 651,
+      "attachments": [
+        253,
+        2
+      ],
+      "incompatible_pairs": 32421,
+      "pair": [
+        1431,
+        1441
+      ],
+      "source_count": 10,
+      "sources": [
+        5808,
+        15913
+      ]
+    },
+    {
+      "H": 653,
+      "attachments": [
+        1,
+        191
+      ],
+      "incompatible_pairs": 32362,
+      "pair": [
+        1433,
+        1447
+      ],
+      "source_count": 12,
+      "sources": [
+        18072,
+        26008
+      ]
+    },
+    {
+      "H": 657,
+      "attachments": [
+        16,
+        251
+      ],
+      "incompatible_pairs": 44228,
+      "pair": [
+        1423,
+        1425
+      ],
+      "source_count": 15,
+      "sources": [
+        26296,
+        29345
+      ]
+    },
+    {
+      "H": 659,
+      "attachments": [
+        8,
+        253
+      ],
+      "incompatible_pairs": 11058,
+      "pair": [
+        1459,
+        1469
+      ],
+      "source_count": 4,
+      "sources": [
+        12073,
+        14008
+      ]
+    },
+    {
+      "H": 661,
+      "attachments": [
+        254,
+        4
+      ],
+      "incompatible_pairs": 20561,
+      "pair": [
+        1443,
+        1457
+      ],
+      "source_count": 6,
+      "sources": [
+        9912,
+        17208
+      ]
+    }
+  ]
+}
