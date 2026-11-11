@@ -24904,6 +24904,17 @@ machine's own lanes; a prediction the repository decides is recorded as in-sampl
   "Fails" needs a proof; finitely many nonzero values are "no vanishing observed". (5) Report a grep as it came
   out. (6) When a cited canon theorem has several statements, use all of them. (7) Fetch before the audit returns:
   a concurrent session can build on a checkpoint within minutes.
+- **Found by the second audit (`audit/AUDIT-2.md`), in the text written after the first one.** (a) Section 8 and the
+  rewritten hypothesis said that a failure of the Image Conjecture in characteristic zero might be unrecorded and
+  quoted a survey of 2010. Canon has had it since 2026-07-28: THM-2801 proves that the Special Image Conjecture is
+  false in every dimension `n >= 2` (guardrail 58), and the note cites THM-2801 two sections earlier for another
+  purpose. So "K-GMC is an instance of the Image Conjecture" lends it no support, and `x^2 y` only adds the smallest
+  setting. (b) The last sentence of Corollary 5.6 was false without "`h` defined over `k_0`" (`h = x^(-2) - 1/a` on
+  the double cover). (c) Labels blended in the summary (FINITE-EXACT over statements that are PROVED), a hidden
+  citation, two missing credits (the first audit for the reduction to torsion-freeness, Session269 for the
+  single-centre formulation), stale counts, and "between" left in the title. All applied.
+- **Lesson (8).** When a note cites a canon theorem, read that theorem's status line against every other claim of
+  the note: the answer to "is this recorded?" was in a file already open.
 
 ## MISTAKE-765 (2026-11-11, opus-2026-11-11-S92; THM-5134, THM-5135, HYP-9665, HYP-9666 and `05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/README.md` at the pre-audit checkpoint ff37a34648; found by the independent audit of eight auditors, record `05-knowledge/results/s92_prime_powers_quaternions_bases_20261111/audit/AUDIT_REPORT.md`) -- two censuses that did not enumerate the set they named, a same-day answer to the same directive not credited, a known census given as the session's answer, a pre-registration less blind than stated, and a falsifier that the proved law itself would fail
 
