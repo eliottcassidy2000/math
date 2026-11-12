@@ -5,7 +5,7 @@ paths/revisions, and a hit is not automatically a distinct user session.
 Run from this worktree: python3 -X utf8 .../history_scan.py
 """
 from pathlib import Path
-import subprocess, re, json, collections, hashlib, time
+import subprocess, re, json, collections, hashlib, time, gzip
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
@@ -34,16 +34,40 @@ TOPICS = {
     'number_fields': r'\b(?:elliptic|bsd|chowla|eisenstein|cyclotomic|modular)\b',
 }
 TRX={k:re.compile(v,re.I) for k,v in TOPICS.items()}
+CHEAP={
+ 'five_word':['five'], 'five_object':['5-','5 '], 'set_of_5':['of'],
+ 'five_geometry':['pentagon','pentagram','pentatope','quintic','quintuplet','icosahedr','dodecahedr'],
+ 'stress':['nem','isothermal','isometric','stress'],
+}
+TCHEAP={
+ 'tournaments':['tournament','chan','hamilton','metagraph'],
+ 'primes':['prime','primality','sieve','lehmer','carmichael'],
+ 'collatz':['collatz','syracuse','hailstone'],
+ 'fibonacci':['fibonacci','zeckendorf','golden','lucas','tribonacci'],
+ 'lrc':['lrc','lonely','runner'], 'jacobian':['jacobian','keller','gmc','gaussian'],
+ 'pentagon_coherence':['associahedr','pentagon','coherence','catalan'],
+ 'groups':['group','representation','character','involution','symmetries'],
+ 'complex_geometry':['hermitian','mobius','möbius','lorentz','conformal','riemann','isothermal'],
+ 'stress':['stress','elasticity','airy','biharmonic','nem'],
+ 'graphs':['graph','flow','incidence','spectral','laplacian'],
+ 'computation':['automata','turing','cellular','finite','recursion'],
+ 'number_fields':['elliptic','bsd','chowla','eisenstein','cyclotomic','modular'],
+}
 
 def git(*args):
     return subprocess.check_output(['git',*args],cwd=ROOT)
 
+def frozen_git(*args):
+    refs=(HERE/'history_refs.txt').read_text(encoding='utf-8-sig').splitlines()
+    tips=sorted({line.split()[0] for line in refs if line.strip()})
+    return subprocess.check_output(['git',*args,'--stdin'],input=('\n'.join(tips)+'\n').encode(),cwd=ROOT)
+
 def scan():
     t=time.time()
-    head=git('rev-parse','HEAD').decode().strip()
+    head=git('rev-parse','7510e38f9c77').decode().strip()
     # rev-list yields each reachable object once and one observed path. Paths
     # are discovery names, not an exhaustive rename history.
-    raw=git('rev-list','--all','--objects').decode('utf8','replace').splitlines()
+    raw=frozen_git('rev-list','--objects').decode('utf8','replace').splitlines()
     objects=[]
     for line in raw:
         parts=line.split(' ',1)
@@ -61,11 +85,15 @@ def scan():
         if header[1]!='blob':continue
         counts['text_blobs_scanned']+=1;counts['bytes_scanned']+=size
         s=data.decode('utf8','replace')
-        tags=[k for k,rx in RX.items() if rx.search(s)]
+        lower=s.lower()
+        tags=[k for k,rx in RX.items() if any(t in lower for t in CHEAP[k]) and rx.search(s)]
+        if idx%10000==0:print(json.dumps({'phase':'scan','at':idx,'hits':len(hits),'seconds':round(time.time()-t,1)}),flush=True)
         if not tags:continue
         lines=s.splitlines();excerpts=[];prompt=[]
         for ln,line in enumerate(lines,1):
-            lt=[k for k,rx in RX.items() if rx.search(line)]
+            if len(excerpts)>=8:break
+            lowline=line.lower()
+            lt=[k for k,rx in RX.items() if any(t in lowline for t in CHEAP[k]) and rx.search(line)]
             if lt:
                 e={'line':ln,'tags':lt,'text':line[:700]}
                 if len(excerpts)<8:excerpts.append(e)
@@ -74,25 +102,25 @@ def scan():
                 context=' '.join(lines[max(0,ln-3):min(len(lines),ln+1)])
                 if PROMPT.search(context) and len(prompt)<6:
                     prompt.append({'line':ln,'text':context[:1100]})
-        topics=[k for k,rx in TRX.items() if rx.search(s)]
+        topics=[k for k,rx in TRX.items() if any(t in lower for t in TCHEAP[k]) and rx.search(s)]
         by_topic.update(topics);counts.update(tags)
         title=next((x.lstrip('# ').strip()[:200] for x in lines[:70] if x.startswith('# ')),path)
         hits.append({'oid':oid,'path':path,'bytes':size,'title':title,'tags':tags,'topics':topics,'excerpts':excerpts,'prompt_candidates':prompt})
-        if idx%10000==0:print(json.dumps({'phase':'scan','at':idx,'hits':len(hits),'seconds':round(time.time()-t,1)}),flush=True)
     p.stdin.close();p.wait()
-    commits=git('log','--all','--format=%H%x09%aI%x09%s').decode('utf8','replace').splitlines()
+    commits=frozen_git('log','--format=%H%x09%aI%x09%s').decode('utf8','replace').splitlines()
     cm=[]
     for c in commits:
         if any(rx.search(c.split('\t',2)[-1]) for rx in RX.values()):cm.append(c)
     # Current paths and exact object identities provide stable local retrieval.
     current={}
-    for line in git('ls-files','-s').decode('utf8','replace').splitlines():
-        meta,path=line.split('\t',1);current[path]=meta.split()[1]
-    for h in hits:h['current_at_discovery_path']=current.get(h['path'])==h['oid']
-    with (HERE/'history_hits.jsonl').open('w',encoding='utf8',newline='\n') as f:
-        for h in hits:f.write(json.dumps(h,ensure_ascii=False)+'\n')
+    for line in git('ls-tree','-r',head).decode('utf8','replace').splitlines():
+        meta,path=line.split('\t',1);current[path]=meta.split()[2]
+    for h in hits:h['baseline_at_discovery_path']=current.get(h['path'])==h['oid']
+    with (HERE/'history_hits.jsonl.gz').open('wb') as rawfile:
+        with gzip.GzipFile(filename='',fileobj=rawfile,mode='wb',mtime=0) as f:
+            for h in hits:f.write((json.dumps(h,ensure_ascii=False)+'\n').encode('utf8'))
     (HERE/'history_commits.txt').write_text('\n'.join(cm)+'\n',encoding='utf8')
-    stats={'baseline':head,'reachable_object_count':len(raw),'candidate_text_objects':len(objects),'counts':dict(counts),'hit_blobs':len(hits),'hit_discovery_paths':len({h['path'] for h in hits}),'current_discovery_hits':sum(h['current_at_discovery_path'] for h in hits),'topic_cooccurrence_blobs':dict(by_topic),'reachable_commits':len(commits),'matching_commit_subjects':len(cm),'seconds':round(time.time()-t,2),'patterns':PATTERNS,'topic_patterns':TOPICS,'limits':['Reachable local Git refs only; fetched origin/main at startup.','Each object has one Git discovery path; rename aliases not exhaustively reconstructed.','Lexical hits and prompt candidates are not validated claims or distinct sessions.','Binary attachments and inaccessible chats are outside the text universe.','Topic co-occurrence is evidence for retrieval, not a mathematical map.']}
+    stats={'baseline':head,'frozen_refs_file':'history_refs.txt','reachable_object_count':len(raw),'candidate_text_objects':len(objects),'counts':dict(counts),'hit_blobs':len(hits),'hit_discovery_paths':len({h['path'] for h in hits}),'baseline_discovery_hits':sum(h['baseline_at_discovery_path'] for h in hits),'topic_cooccurrence_blobs':dict(by_topic),'reachable_commits':len(commits),'matching_commit_subjects':len(cm),'seconds':round(time.time()-t,2),'patterns':PATTERNS,'topic_patterns':TOPICS,'limits':['Reachable local Git refs at frozen history_refs.txt only; shallow boundaries may omit older commits.','Each object has one Git discovery path; rename aliases not exhaustively reconstructed.','Whole-blob tag presence is scanned, but excerpts are the first eight matching lines only; contextual prompt candidates come from these lines. Later prompts can be absent from the excerpt index.','Lexical hits and prompt candidates are not validated claims or distinct sessions.','Binary attachments and inaccessible chats are outside the text universe.','Topic co-occurrence is evidence for retrieval, not a mathematical map.']}
     (HERE/'history_stats.json').write_text(json.dumps(stats,indent=2,ensure_ascii=False)+'\n',encoding='utf8')
     print(json.dumps(stats,ensure_ascii=False),flush=True)
 

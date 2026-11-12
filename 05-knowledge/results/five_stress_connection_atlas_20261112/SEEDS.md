@@ -238,3 +238,113 @@ density zero. This is a proved obstruction for these families, stronger
 than saying that the finite search has gaps. A proof of every odd seed
 must introduce another operation or leave this union. No unrestricted
 nonexistence claim is made for coefficient1039 or any other missing target.
+
+## 6. Beyond round tournaments: the complete stable-port bank at order eight
+
+This is a different universe from the round census. We use the inherited
+complete7,412 ordinary classes through order8 in
+[metagraph-aspect sequences](../metagraph_aspect_sequences_20261111/README.md),
+test every unit selection, and restrict to strong cores. All input H values
+and complete selected-set lists are rechecked by the compiled endpoint
+counter. Selection masks are quotiented by the actual automorphism action.
+
+The inherited rigidity lemma is useful here: Aut(T,O) acts freely on
+Hamilton paths and on the ordered two-path covers counted by the pair tax.
+Its order therefore divides delta; a unit seed has trivial marked
+stabilizer. See [odd-c seed symmetry](../odd_c_seed_symmetry_20261110/README.md),
+§symmetry, and [metagraph-aspect PROOFS](../metagraph_aspect_sequences_20261111/PROOFS.md).
+Consequently once O is quotiented, its individual ports and port pairs
+need no further stabilizer division. This is inherited, not a new lemma.
+
+At order8 there are971 strong marked unit seeds. Exactly103 have at least
+one individually stable unselected port. Their stable-port counts are
+
+| Number of stable ports |1|2|3|4|5|6|
+|---|---:|---:|---:|---:|---:|---:|
+| Marked seeds |46|34|18|4|0|1|
+
+Thus order8 adds190 stable-port orbits and127 stable-pair orbits. Together
+with the earlier93 and49 orbits through order7, the totals are283 and176.
+The old95 count was a presentation count, whose marked-orbit count is93.
+
+**FINITE-EXACT, with an all-length consequence:** all103 complete stable
+sets are transitive, and every one is jointly stable. The full finite
+Stirling tensor of delta is exactly1 at(1,...,1), zero elsewhere. Hence
+all their independent positive block lengths can vary arbitrarily while
+preserving the unit seed. The proof of tensor exhaustiveness is the acyclic
+port argument in the inherited R1: between fixed vertices no port can repeat,
+so a two-path cover visits each port at most(number of fixed vertices)+2
+times. `joint_port_extension.json.gz` stores every full tensor, all literal
+all-ports-doubled controls, and bounded sample coefficients. The103 families
+are not claimed disjoint after inflation.
+
+The exact count of strong marked seeds with a stable port, for n1..8, is
+
+    0,0,1,1,5,13,38,103.                                (8)
+
+A one-step screen is insufficient. At order7, the two cores
+
+    rows=(90,28,9,16,36,79,30), O-mask72, port2;
+    rows=(54,28,24,17,32,78,31), O-mask68, port0
+
+both have delta(m)=1−4·3!S(m,3). They survive m2 but fail at m3, where
+delta=−23. This recovers an old coefficient obstruction in a new literal
+gauge; it is not a new discovery that a finite successful inflation can
+fail later. There are no such false positives at order8 in this complete
+bank. We nevertheless compute every coefficient for all surviving ports.
+
+The new bank is richer than the four simple interval rows. For example
+
+    rows=(62,92,8,16,36,78,157,63), O-mask144, port1
+
+has delta(m)=1 and
+
+    U(m)=42·4^m+166·3^m+36·2^m−49, m>=1.               (9)
+
+Its positive Stirling coefficients are(689,786,334,42). Other rows have
+genuine mixed terms in independent clocks. The printed factorizations use
+xj_p=p^(length of port j), with4^m represented as(2^m)^2. These registers
+can be advanced exactly; their existence still does not make the odd-part
+image an interval. The declared finite length sample finds362 odd parts
+<=4097, not an initial segment or a complete all-length image.
+
+## 7. An inverse move and a new birth sequence
+
+**Stable-twin contraction lemma.** Suppose u,v are unselected adjacent
+transitive twins: they have identical orientations to every other vertex.
+If at least one of u,v is individually stable in a unit seed, contracting
+the pair to one vertex produces a unit seed with a stable contracted port.
+
+Proof: write the contracted object as S with port w. Inflating the stable
+member of the twin pair to length a produces exactly S[w<-TT_(a+1)].
+Thus the defect of S's one-port inflation is1 for every integer m>=2.
+It is a finite linear combination of positive-base exponentials, by the
+one-port skeleton formula. Such a combination vanishing for every m>=2
+is identically zero: successively divide by the largest base and take
+m→infinity. Hence its defect is also1 at m1, and w is stable. ∎
+
+Define a **stable-clone birth** to be a strong marked unit seed with some
+stable port but no pair eligible for this contraction. This is a birth for
+this specified operation, not a claim of irreducibility under every graph
+operation. Its counts for n1..8 are
+
+    0,0,1,0,4,8,25,60.                                  (10)
+
+At order8,60 states are births and43 have a stable-twin contraction.
+Every recorded contraction is checked against the full one-port kernel of
+its smaller actual graph. Contracting decreases the number of vertices,
+so it terminates; inflating the contracted stable port reconstructs the
+original state. This removes predictable clone descendants from future
+enumeration while retaining the growth law and endpoint marking.
+
+**OPEN stable-port hypothesis:** for every strong marked unit seed, the
+full set of individually stable unselected ports is transitive and jointly
+stable. The complete universe through8 supports both clauses. They are
+separate obligations, and the finite computation proves neither at larger
+orders. A directed triangle among individually stable ports or one nonzero
+mixed defect coefficient would refute the respective clause immediately.
+
+The next efficient search should enumerate stable-clone births, preserve
+their full endpoint tensors, and test operations changing the marked gap or
+the core. Repeating a fixed bank's commuting inflations cannot by itself
+justify every odd coefficient or all Chan–Pak targets.

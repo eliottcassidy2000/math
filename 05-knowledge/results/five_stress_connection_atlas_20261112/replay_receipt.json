@@ -1,0 +1,165 @@
+{
+  "scope": "Optimized-mode replay against previously produced normal-mode exact receipts. This does not replace independent controls. The expensive complete order18 census was run once; its order1..14 prefix was independently recomputed in Python and replayed here.",
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "results": [
+    {
+      "script": "verify_stress.py",
+      "arguments": [],
+      "seconds": 5.365,
+      "checks": [
+        {
+          "file": "stress_receipt.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "5c3515d22cff6dd5cdab9a2001b6a7009129a81ebbbbe411df3438c0e0f02ac8",
+          "optimized_sha256": "5c3515d22cff6dd5cdab9a2001b6a7009129a81ebbbbe411df3438c0e0f02ac8"
+        }
+      ]
+    },
+    {
+      "script": "c3_pair_family.py",
+      "arguments": [],
+      "seconds": 6.262,
+      "checks": [
+        {
+          "file": "c3_pair_family.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "2935e87ce62f1580ee2a64ad4819a97a9562c5ba127c3a89671c67001ba13c1d",
+          "optimized_sha256": "2935e87ce62f1580ee2a64ad4819a97a9562c5ba127c3a89671c67001ba13c1d"
+        }
+      ]
+    },
+    {
+      "script": "carousel_clocks.py",
+      "arguments": [],
+      "seconds": 2.965,
+      "checks": [
+        {
+          "file": "carousel_clocks.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "5b1efd948cf74e322f7dc1cd1a315e6a0d473b043e19c7c1180fc247a7942386",
+          "optimized_sha256": "5b1efd948cf74e322f7dc1cd1a315e6a0d473b043e19c7c1180fc247a7942386"
+        },
+        {
+          "file": "carousel_clock_certificates.json.gz",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "5bfa4dacbf5523ec36913b9dfae733c3e84f97540d5d0cdc901c1b86e3793025",
+          "optimized_sha256": "5bfa4dacbf5523ec36913b9dfae733c3e84f97540d5d0cdc901c1b86e3793025"
+        }
+      ]
+    },
+    {
+      "script": "seed_probes.py",
+      "arguments": [],
+      "seconds": 10.114,
+      "checks": [
+        {
+          "file": "seed_probes.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "07c38666ac902d21f6b2e2ea9fd19c43e9dc3e6105f3c74e8fd910425ca2ae7d",
+          "optimized_sha256": "07c38666ac902d21f6b2e2ea9fd19c43e9dc3e6105f3c74e8fd910425ca2ae7d"
+        }
+      ]
+    },
+    {
+      "script": "close_heads.py",
+      "arguments": [],
+      "seconds": 0.741,
+      "checks": [
+        {
+          "file": "heads.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "e0ee2fcead10e190bef523f63949704e37f2d460f82e0fc2f79b7dc23216fa9e",
+          "optimized_sha256": "e0ee2fcead10e190bef523f63949704e37f2d460f82e0fc2f79b7dc23216fa9e"
+        }
+      ]
+    },
+    {
+      "script": "classify_seed_census.py",
+      "arguments": [],
+      "seconds": 0.096,
+      "checks": [
+        {
+          "file": "seed_classification.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "5864826507ba4aa44943740acd88d5c0b2290d112e2e4df4d5c496b0587cfe83",
+          "optimized_sha256": "5864826507ba4aa44943740acd88d5c0b2290d112e2e4df4d5c496b0587cfe83"
+        }
+      ]
+    },
+    {
+      "script": "paper_transfers.py",
+      "arguments": [],
+      "seconds": 3.449,
+      "checks": [
+        {
+          "file": "paper_transfer_receipt.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "21c6bdb7f0509839ff76d3538bc83b6a42fb15c4013c3e6d8b7b85c576daeb77",
+          "optimized_sha256": "21c6bdb7f0509839ff76d3538bc83b6a42fb15c4013c3e6d8b7b85c576daeb77"
+        }
+      ]
+    },
+    {
+      "script": "cyclic_port_probe.py",
+      "arguments": [],
+      "seconds": 7.484,
+      "checks": [
+        {
+          "file": "cyclic_port_receipt.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "e8d5a599121f893d14a123020bb730563a2b6530d3257d2c459a872e4d984a6a",
+          "optimized_sha256": "e8d5a599121f893d14a123020bb730563a2b6530d3257d2c459a872e4d984a6a"
+        }
+      ]
+    },
+    {
+      "script": "joint_port_extension.py",
+      "arguments": [],
+      "seconds": 12.117,
+      "checks": [
+        {
+          "file": "joint_port_extension.json.gz",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "fcb72405357f4b36c370e45826f7eb1b76f3232ef03d2ec67dcf349c7dfe5ae4",
+          "optimized_sha256": "fcb72405357f4b36c370e45826f7eb1b76f3232ef03d2ec67dcf349c7dfe5ae4"
+        },
+        {
+          "file": "joint_port_forms.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "d61779c99b1eba34e189ad051888aef35025ca3cb21934597aa225327fba5d22",
+          "optimized_sha256": "d61779c99b1eba34e189ad051888aef35025ca3cb21934597aa225327fba5d22"
+        }
+      ]
+    },
+    {
+      "script": "verify_tournaments.py",
+      "arguments": [
+        "8"
+      ],
+      "seconds": 0.225,
+      "checks": [
+        {
+          "file": "tournament_receipt.json",
+          "mode": "All order1..8 levels, marked records and labelled controls match the saved order14 receipt.",
+          "normal_sha256": "e98f8fc78501896acc52df568a77ad1dd34c481576b3180546d0766b0231371c",
+          "optimized_sha256": "184d24a61119b2f37fbdb21c09030cdfe5bf04c558762a7a7c7f1534726d7ea1"
+        }
+      ]
+    },
+    {
+      "script": "extend_round.py",
+      "arguments": [
+        "14"
+      ],
+      "seconds": 7.33,
+      "checks": [
+        {
+          "file": "round_extension.json",
+          "mode": "All order1..14 levels match the saved order18 receipt; order15..18 not rerun under -O.",
+          "normal_sha256": "0714314028d9efb0935c63286fc738f1545ff5fc99f48266f8312b456dddb7b5",
+          "optimized_sha256": "780eab45c6a1bc3518680d08991221607f0d0166669c8c9d310360a321f24665"
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,9 @@ HERE=Path(__file__).resolve().parent
 
 def run():
     data=json.loads((HERE/'tournament_receipt.json').read_text())
+    if (HERE/'round_extension.json').exists():
+        ext=json.loads((HERE/'round_extension.json').read_text())
+        data['seed_records']+=ext['additional_seed_records'];data['scope']=ext['scope']
     records=[];levels={}
     for q in data['seed_records']:
         w=q['word'];rows=q['rows'];O=q['selected'];n=len(w)
@@ -30,6 +33,9 @@ def run():
                     a=pos[0];b=pos[1]-pos[0]-1;c=len(runs[j])-pos[1]-1
                     orient=[len(runs[(j+1)%3]),len(runs[(j+2)%3])]
                     label='marked pair family';pars={'a':a,'b':b,'c':c,'other_blocks':orient}
+                    K=({0:30,1:78} if orient==[1,2] else {0:50,1:130})[b]
+                    r0=1 if orient==[1,2] else 3
+                    if q['U']!=K*2**a*3**c-r0*(a==0):raise RuntimeError(('family slope',n,pars))
             if label=='other':label='C3 exception in this census'
         elif len(runs)==5:label='C5 exception in this census'
         item={**q,'class':label,'parameters':pars,'marked_blocks':[''.join('1' if O>>v&1 else '0' for v in r) for r in runs]}
@@ -39,7 +45,8 @@ def run():
     for n,v in levels.items():
         if n>=5:
             if v['transitive singleton mark']+v['book']+v['marked pair family']!=5*n-17:raise RuntimeError(('family count',n))
-    (HERE/'seed_classification.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf8')
+    tag='.optimized' if not __debug__ else ''
+    (HERE/('seed_classification'+tag+'.json')).write_text(json.dumps(out,indent=2)+'\n',encoding='utf8')
     print(json.dumps(out['totals']))
     print(json.dumps([(r['n'],r['H'],r['U'],r['marked_blocks']) for r in out['exceptions']]))
 

@@ -1,5 +1,5 @@
 {
-  "scope": "Every locally transitive isomorphism class and every nonempty marked set through order 14; marked sets quotiented by actual automorphisms. No arbitrary tournaments beyond controls.",
+  "scope": "All round isomorphism classes and every nonempty selected set through order18; actual stabilizer quotient. Complete agreement with original Python receipt through order14.",
   "by_size": {
     "1": {
       "transitive singleton mark": 1
@@ -70,13 +70,33 @@
       "transitive singleton mark": 14,
       "book": 1,
       "marked pair family": 38
+    },
+    "15": {
+      "transitive singleton mark": 15,
+      "book": 1,
+      "marked pair family": 42
+    },
+    "16": {
+      "transitive singleton mark": 16,
+      "book": 1,
+      "marked pair family": 46
+    },
+    "17": {
+      "transitive singleton mark": 17,
+      "book": 1,
+      "marked pair family": 50
+    },
+    "18": {
+      "transitive singleton mark": 18,
+      "book": 1,
+      "marked pair family": 54
     }
   },
   "totals": {
-    "transitive singleton mark": 105,
-    "book": 12,
+    "transitive singleton mark": 171,
+    "book": 16,
     "C3 exception in this census": 7,
-    "marked pair family": 200,
+    "marked pair family": 392,
     "C5 exception in this census": 4
   },
   "exceptions": [

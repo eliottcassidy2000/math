@@ -44,6 +44,18 @@ def run():
                 if i<2:O.append(L);L+=1
             rows=cyclic_blocks(L,*orientation)
             de,ue=cones.kernel(rows,ports,O);D=exponentials(de);U=exponentials(ue)
+            # Compare the entire symbolic kernels with the general formulas,
+            # including zero-length boundary strata; no interpolation step.
+            def expected(terms):
+                collected=defaultdict(int)
+                for bases,value in terms:
+                    collected[tuple(bases['abc'.index(q)] for q in names)]+=value
+                return {p:v for p,v in collected.items() if v}
+            expectedD=expected([((2,2,2),12),((2,3,2),-6),((2,1,2),-6),((1,2,1),1),((1,1,1),-1+int('b' not in names))])
+            scale=6 if orientation==(1,2) else 10
+            constant=1 if orientation==(1,2) else 3
+            expectedU=expected([((2,2,3),2*scale),((2,3,3),3*scale),((1,1,1),-constant*int('a' not in names))])
+            need(D==expectedD and U==expectedU,'complete general interval formulas')
             for args in product(range(1,4),repeat=len(ports)):
                 abc=[0,0,0]
                 for name,a in zip(names,args):abc['abc'.index(name)]=a
