@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-12: Research overview retained a refuted Paley maximization claim
+
+- **Affected source:** [research overview](../06-writeups/research-document-for-mathematicians.md), introduction, order-19 table row, section7.3 and status/open-problem summaries.
+- **Failed implication:** small-order Paley evidence was stated as universal maximization, despite the existing order-19 counterexample. The table also gave an incorrect order of magnitude and presented a witness as a global maximum.
+- **Witness and repair:** [THM-135](theorems/THM-135-paley-not-h-max-p19.md) and its [exact receipt](../05-knowledge/results/verify_p19.out) give H(Paley19)=1,172,695,746,915 and H(interval19)=1,184,212,824,763. The overview now marks the universal conjecture REFUTED, links the witness, and records only a lower bound for the order-19 global maximum.
+- **Scope:** this is propagation of an existing correction, not a new extremal theorem or a full audit of the historical overview. The interval witness does not identify the global maximizer. Preserve the size and search-universe qualifiers when promoting finite extremal evidence.
+
 ## 2026-11-11: Untouched triangle rotations do not require contiguous visits
 
 - **Affected source:** [triangle filtration, section2](../05-knowledge/results/berggren_target_return_20261111/fibres/TRIANGLE_FILTRATION.md),
