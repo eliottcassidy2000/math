@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "literal_module_words_through_length": 9,
+  "literal_module_words": 1023,
+  "induced_prime_inventory_words_through_length": 7,
+  "induced_prime_inventory_words": 255,
+  "transfer_binomial_recurrence_through_k": 100,
+  "tower": [
+    {
+      "order": 3,
+      "prime_induced_counts": [
+        1
+      ],
+      "automorphisms": 3
+    },
+    {
+      "order": 5,
+      "prime_induced_counts": [
+        3,
+        1
+      ],
+      "automorphisms": 1
+    },
+    {
+      "order": 7,
+      "prime_induced_counts": [
+        6,
+        5,
+        1
+      ],
+      "automorphisms": 1
+    },
+    {
+      "order": 9,
+      "prime_induced_counts": [
+        10,
+        15,
+        7,
+        1
+      ],
+      "automorphisms": 1
+    },
+    {
+      "order": 11,
+      "prime_induced_counts": [
+        15,
+        35,
+        28,
+        9,
+        1
+      ],
+      "automorphisms": 1
+    },
+    {
+      "order": 13,
+      "prime_induced_counts": [
+        21,
+        70,
+        84,
+        45,
+        11,
+        1
+      ],
+      "automorphisms": 1
+    },
+    {
+      "order": 15,
+      "prime_induced_counts": [
+        28,
+        126,
+        210,
+        165,
+        66,
+        13,
+        1
+      ],
+      "automorphisms": 1
+    }
+  ]
+}

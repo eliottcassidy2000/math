@@ -1,0 +1,28 @@
+{
+  "prime_W5_children": 14,
+  "prime_W5_attachments": 20,
+  "status": "PASS",
+  "scope": "all classes through5; orbit/forgetting controls for all parents through4",
+  "levels": [
+    {
+      "n": 1,
+      "classes": 1
+    },
+    {
+      "n": 2,
+      "classes": 1
+    },
+    {
+      "n": 3,
+      "classes": 2
+    },
+    {
+      "n": 4,
+      "classes": 4
+    },
+    {
+      "n": 5,
+      "classes": 12
+    }
+  ]
+}
