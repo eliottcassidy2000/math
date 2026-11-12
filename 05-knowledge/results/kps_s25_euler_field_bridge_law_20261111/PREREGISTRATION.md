@@ -74,3 +74,31 @@ Notes.
 3. The numbering in the file names of this packet was fixed after the registration: the stubs first carried
    THM-5145, THM-5146 and HYP-9675, which mac-mini-2026-11-11-rays had reserved one commit earlier; they were
    renumbered THM-5147, THM-5148, HYP-9677 in the next commit.
+
+---
+
+## Addendum D (registered after the outcomes of C1-C5 and before the runs below)
+
+The failure of C4 does not say which ingredient is missing: the joins without an inserted chain, or the bank of
+small rooted tournaments. Test: the semigroup of **direct** joins of one-apex blocks rooted at their apexes (chains
+of any length, zero included; the root moves to the new apex), which needs the parity split of the root paths.
+
+Working claim. State of a rooted tournament: `(A, o, e)` with `A = H`, `o` (`e`) the sum of `H(X - P)` over the
+paths `P` starting at the root with an odd (even) number of vertices. Joining a one-apex block with apex word of
+length `n`, values `P` (letters 1, first spine vertex = top bit) and `Q` (letters 0, first spine vertex = unit bit),
+with the arc between the old root and the new apex reversed, gives
+
+    A' = A g + 2 (o E + e O),     o' = A (1 + floor(P/2)) + o t_o + e t_e,     e' = A ceil(P/2) + o t_e + e t_o,
+
+with `O = 1 + floor(Q/2)`, `E = ceil(Q/2)`, `g = g(P)`, `t_e = t_o = 2^(n-1)` for `n >= 1` and `t_e = 1`, `t_o = 0`
+for `n = 0`; inserting a chain of `i >= 1` vertices first replaces `(o, e)` by `(2^(i-1)(o + e), 2^(i-1)(o + e))`.
+
+- **D1.** Brute force: the law agrees with the number of Hamiltonian paths on all chains of depth 2 and 3 with
+  words of length at most 2 and chain lengths 0, 1 (0 mismatches).
+- **D2.** The full closure of direct joins below `2^13` misses exactly 7 and 21. (My confidence is low, about 40
+  per cent: 13 is not a join of two one-apex tournaments, and I do not know whether three blocks give it.)
+- **D3.** If D2 fails, 13 is among the misses, and the number of misses below `2^13` is at most 50.
+
+Reading. D2 true: the bank is not needed in this range, only the direct joins are; the family of apex-path
+tournaments would be a bank-free candidate with growing multiplicity. D2 false with few misses: the bank repairs a
+thin exceptional set. D2 false with many misses: roots other than apexes are essential.
