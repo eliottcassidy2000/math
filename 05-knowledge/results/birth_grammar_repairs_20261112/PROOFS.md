@@ -86,6 +86,70 @@ lower-head invoice j=2m+2**. Finite growth rules do not imply a bounded number
 of unpaid exponents. This is the first obstruction the repair language must
 address. The displayed coefficient family is not claimed fully repaired.
 
+## B2. Composing extension with synchronization gives46 odd-order families
+
+Every one-vertex orientation, with either new marking, was tested on all24
+synchronized order-twelve births. This gives88 new strong births of order13,
+disjoint from all1414 in the plain extension layer. For each of the88, choose
+one member of each of the two inherited coupled blocks:352 pair tests.
+There are172 presentations preserving the diagonal unit identity. After
+weighted-quotient deduplication, **46 distinct all-length birth families**
+remain. Their complete two-port defects are
+
+    delta(a,b)=1+lambda*(2^a-2^b), lambda in {2,-2,6,-6}.
+
+For each, an actual stable unselected port p has a full three-variable
+tensor whose diagonal in a,b is identically1 at every positive p length.
+We do not require p to disappear from the off-diagonal tensor. This distinction
+avoids discarding valid synchronized families with mixed free-port terms.
+
+Increasing a or b separately at a=b=m changes delta by a nonzero
+`+/-lambda*2^m`, so the growing blocks cannot contract stably. For every
+remaining old nonsingleton block, the increment defect minus one has a
+strictly positive expansion in F_r(m)=r!S(m,r). The exact certificate is
+`u_r=sum_(b>=r) binom(b,r)*e_b`; all u_r>=0 and u_1>0. Thus it never
+vanishes at positive m. Strongness and the free singleton port survive.
+This proves birth status at every positive length, not only the tested ones.
+
+Every retained quotient is rigid. Exact linear weight comparisons decide all
+20 same-quotient chart pairs and show no positive-length intersections.
+Literal graph-key controls agree at orders13,15,17. Therefore their generating
+function is `46*z^13/(1-z^2)`. Together with B1 the new infinite grammar has
+
+    (24*z^12+46*z^13)/(1-z^2),
+
+in addition to its12 old order-ten starts:24 births at every even order>=12
+and46 at every odd order>=13. The extension step changes the quotient before
+the synchronized rule resumes. This is an explicit composition of two
+previously separated operations. It remains a finite family of quotients,
+not a universal birth grammar. `mixed_grammar.py` independently recompiles
+each whole free-port tensor by endpoint convolution, separate from the signed
+walk producer, and supplies the frozen-block and intersection certificates.
+
+## B3. Five independent stable ports, and a local saturation boundary
+
+The order13 tournament with rows
+`[128,129,1027,1031,3119,3407,3359,3708,7839,3199,3,1039,3839]`,
+selected vertices{2,3}, and unselected ports{4,9,10,11,12} is a strong birth.
+Its full five-variable signed Stirling tensor is exactly `a_(1,1,1,1,1)=1`.
+All five ports are jointly stable at all positive independent lengths.
+The separate endpoint convolution agrees and retains108 positive U terms.
+Nonuniform literal expansions of orders15,16,18 give defect1.
+
+With this exact source and selection held fixed, adding one unselected vertex
+has18 unit orientations. Fourteen keep the enlarged six-port set acyclic and
+the graph strong; ten retain stability of every old port and the new one.
+All ten merely place a twin immediately before or after one of the five
+ports, hence are descendants. None gives a six-port birth in this declared
+source-preserving move. Its transitive port word has letters
+`[127,63,31,15,3]` relative to the retained eight-vertex exterior.
+
+Across all eight five-port births in the retained order13 layer, both markings
+and all one-vertex orientations give44 strong order14 births:16 have five
+stable ports and28 have four. The16 weak source/sink paddings have six ports;
+they must not be reported as strong rank-six births. No minimum-size or
+global maximum-rank theorem is inferred from these restricted universes.
+
 ## V1. Complete valuation classification of the 478 old even higher-mode axes
 
 Write U(a)=sum e_b*b^a in its unique finite exponential form. In this bank
@@ -122,6 +186,24 @@ one also uses5. At birth519, port4, the full coefficients are
 
 These are classifications of a named finite collection of infinite axes.
 They neither classify all future seeds nor supply their missing heads.
+
+### V1a. All65 two-mode lifting roots are irrational2-adic integers
+
+For each two-mode unbounded branch, the lifting argument gives a unique
+t in Z2 with `9^t=-C1/(C3*3^p)`. If t=u/v is rational in lowest terms,
+v is odd. Raising the equality to v gives an equality of rational numbers
+`R^v=9^u`. Prime valuations imply v divides2u, hence v=1. The real sign
+also forces R positive. Thus t is rational iff it is an integer, equivalently
+`-C1/C3=3^(p+2t)` as a rational number. Exact rational factorization in
+`lifting_roots.py` rejects that possibility for every one of the65 branches.
+Their binary digit expansions are consequently not eventually periodic:
+an eventually periodic expansion sums to a rational geometric series, and
+conversely rational2-adic integers have eventually periodic binary expansions.
+
+This concerns the odd-mode lifting roots, not a claim of randomness or an
+automatic identification with another digit sequence. The single mixed3/5
+branch is outside this rationality classification. All66 roots remain
+computable by the uniform compatible one-bit lifting procedure.
 
 ## V2. Why a finite bank of affine transitive templates cannot close 126 families
 
@@ -195,8 +277,180 @@ Its minimal scalar recurrence has characteristic polynomial
 `(x-1)(x-2)(x-3)`. Cayley–Hamilton bounds it by the characteristic polynomial
 of the 3x3 word matrix; equality of degrees forces determinant6, a contradiction.
 
-Therefore this particular periodic repair architecture cannot generate a
-generic three-mode head. This is independent of V2: even wholly integral
-three-mode profiles meet it. Arbitrary nonperiodic words and higher-dimensional
-recursive constructions are not covered. `repair_obstructions.py` checks
-the pinned inherited atlas, rather than assuming its matrices unimodular.
+There is a stronger arithmetic-progression version. Among these determinants,
+those supported only on primes2,3 satisfy v3>=3*v2. Products preserve this
+cone. Therefore no word determinant can be 6^L for any positive integer L.
+On a progression a=Lm+r the three modes become1,2^L,3^L, whose required
+determinant is precisely6^L. Splitting a family into finitely many residue
+branches cannot cure this obstruction. Profiles with at least four distinct
+modes already exceed the three-dimensional recurrence bound.
+
+In the declared 478-family bank, **470 have a lowest-head progression
+excluded by these rank/determinant tests**; the other eight have only a
+constant and a pure3 mode. This includes a repair scheme assigning one fixed
+periodic word to each of finitely many arithmetic-progression branches.
+It does not assert the elementary real-zero argument for arbitrary matrix
+sequences, which may have negative or complex eigenvalues. This is independent
+of V2: even wholly integral three-mode profiles meet it. Arbitrary nonperiodic
+words and higher-dimensional recursive constructions are not covered.
+`repair_obstructions.py` checks the pinned inherited atlas, rather than
+assuming its matrices unimodular. The cone is a genuine bridge between
+tournament seam composition and prime valuations: the map is determinant,
+the preserved operation is multiplication, and the lost data are the actual
+state cone and endpoint realizability. A permitted determinant is necessary,
+never sufficient, for a physical repair.
+
+## V4. A25-state parity automaton excludes periodic O/Z/J repairs for all478
+
+The inherited physical root-change grammar acts on `(D,E,U,d)` by
+
+    O: (D,0,2U,d),
+    Z: (D-E+U,d,2U-d,d),
+    J: (D-E+U,D-E,D+U,D).
+
+This is [THM-4904, root-change word fibers](../../../01-canon/theorems/THM-4904-root-change-word-fibers-carmichael-chamber-parity-law-sqrt-density.md),
+not a new constructor. Reduce its integer4x4 matrices modulo2 and retain
+two flags: whether J has appeared, and whether O or Z has appeared.
+The complete reachable semigroup has25 flagged states. Exhaustive transition
+closure, independently reimplemented using bit-packed matrix multiplication
+and polynomial determinants, gives
+
+| Word class | States | Characteristic polynomial over F2 |
+|---|---:|---|
+| Empty |1| (x+1)^4 |
+| Nonempty O/Z only |4| x^2*(x+1)^2 |
+| J only |4| x*(x+1)^3 |
+| Contains J and O or Z |16| x^3*(x+1) |
+
+This is an all-word certificate: every generator transition remains in the
+listed finite closure. It is not an extrapolation from a maximum word length.
+
+**Modular eigenvalue multiplicity principle.** If an integer matrix M supports
+a scalar sequence with distinct integer exponential bases b_1,...,b_k and
+nonzero coefficients, Cayley–Hamilton and exponential independence imply
+that every b_i is a root of its characteristic polynomial. The monic product
+`product(x-b_i)` divides that integer polynomial. Reducing modulo a prime p,
+the number of these bases congruent to r cannot exceed the multiplicity of
+`x-r` in the reduced characteristic polynomial. This is a necessary spectral
+condition; it does not establish physical state or target realizability.
+
+A mixed O/Z/J period therefore cannot support two distinct odd integer
+exponential bases: it has only one `(x+1)` factor modulo2. In particular it
+cannot support both1 and3^L for any positive integer L.
+
+For an O/Z-only period of length ell>=1, the exact characteristic polynomial
+is `x*(x-1)^2*(x-2^ell)`. Indeed d is fixed, E is overwritten by0 or d,
+U has multiplier2 at each step, and D retains its own coefficient1. Thus
+this case also cannot supply3^L. A J-only period is a power of J, whose
+characteristic polynomial is `x*(x^3-x^2-x-1)`. The cubic has one real root
+rho>1 and a nonreal conjugate pair of modulus rho^(-1/2)<1 (its discriminant
+is-44 and root product1). No nonzero root has modulus1, so no positive power
+of J has eigenvalue1. The empty period is constant and cannot help.
+
+Each of the478 even higher-mode families has an infinite exact-valuation
+progression on which its lowest unpaid head retains nonzero bases1 and3^L.
+For the constant class use its eventual valuation; for the other126 use the
+explicit branches of V2. `audit_ozj.py` verifies both coefficients are nonzero
+in every case. Consequently **no fixed repeated O/Z/J word, with any fixed
+prefix, suffix and source interface, supplies that complete head progression**.
+This excludes all478 in this precise periodic architecture, including the
+eight pure3 families not excluded by V3. Assigning fixed periods to finitely
+many arithmetic-progression branches does not evade the result. Arbitrary
+adaptive words, new operations and general recursive grammars remain open.
+
+A stronger tempting guess is false: J-containing words can have eigenvalue1.
+The shortest examples have length7; `OOZOZOJ` has characteristic polynomial
+`x^2*(x-1)*(x-82)`. The even second mode is exactly what the parity theorem
+permits. All28,501 J-containing words through length9 were checked as a
+discovery/hostile test;82 have eigenvalue1, none also has eigenvalue3 or9.
+The25-state closure, rather than that finite word search, proves the theorem.
+
+The three arithmetic filters are distinct: V2 constrains coefficients,
+V3 constrains determinant valuations, and V4 constrains eigenvalue slots.
+An ordinary TT run transfer can have eigenvalues1,2,3 and determinant6,
+escaping V3/V4, but its integral readout still meets V2. A formal integer
+matrix `[[1,4],[0,9]]` with initial vector(1,1) gives `(9^m+1)/2` in its
+first coordinate, escaping V2's odd-coefficient restriction. No physical
+tournament realization of that matrix is asserted here. It is a concrete
+test interface for a richer repair language, not a proof by formal recurrence.
+
+## G1. Exponential growth rank detects active strong components
+
+Call a growing TT port active when it lies in a nontrivial strong component
+of the fixed template. Singleton strong components contribute H=1 at every
+transitive length and can be removed from the H calculation.
+
+If active ports p,q lie in one strong component, orient p->q and take a
+simple return path q,...,p. The walk `p,q,...,p,q` visits both twice and
+each intervening vertex only once. Insert every remaining fixed vertex and
+every missing port once into this directed walk. Insertion is always possible
+by the same first-permissible-position argument used in V2. This produces a
+positive skeleton term having at least two runs at both ports. If the ports
+lie in different strong components, construct a two-visit cycle at each and
+concatenate the completed component walks. The same positivity conclusion
+holds. For one active port a two-visit cycle suffices.
+
+Consequently two active ports of positive affine slopes give H>=c*4^m for
+large m, and one active port of slope>=2 does too. Cyclic sets of growing
+ports already have superexponential growth by V2. Therefore an affine TT
+chart with dominant exponential base3 has exactly one active growing port,
+of slope1. All other growing ports are H-invisible singleton components.
+
+This turns four finite profile absences into all-order structural barriers.
+The targets below are `1+U(a)` for the named old axes:
+
+| Old birth | Original parameter | Profile in new parameter m>=1 | First H |
+|---|---|---|---:|
+|3, port0|a=m|3+9*2^m+4*3^m|33|
+|3, port0|a=m+1|3+18*2^m+12*3^m|75|
+|4, port0|a=m|-3+12*2^m+8*3^m|45|
+|4, port0|a=m+1|-3+24*2^m+24*3^m|117|
+
+Any chart defined for every m>=1 has nonnegative offset at its unique active
+clock. Absorb that offset into a larger initial twin block. Write its count
+as G times the count of the pointed active strong component; G is the fixed
+product of all other nontrivial component counts. Integer one-port
+exponential coefficients force G to divide the target coefficient content,
+by uniqueness of the expansion. The possible divisors here are only1 or3.
+The active component's first H is at most117. The inherited Busch bound
+gives minimum125 at strong order10 and larger minima thereafter. Hence that
+component has order at most9. The complete pointed bank through9 excludes
+every required quotient profile. `small_head_barriers.py` checks all factors.
+This use of the bound was checked against [Busch, Corollary1, p.4](https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf/)
+on12 November2026; the bound itself is CITED, not a new result here.
+
+Thus none of these four families has an affine TT chart starting at the
+specified first parameter. Individual counts33,75,45,117 are all attainable.
+Later-start charts, multiple charts with exceptional prefixes, and non-affine
+recursive grammars are not excluded. This is a structural obstruction to a
+family representation, not a forbidden-number claim.
+
+## R1. Five complete repairs among the478, and one partial repair
+
+The following odd coefficient families now have actual constructors for every
+a>=1 and every s>=1, with target `1+c(a)*2^s`:
+
+| Old birth / port | c(a) | Repair |
+|---|---|---|
+|122 /2| -3+12*2^a+150*3^a | Another stable core has exactly this odd slope. |
+|334 /1| -3+20*2^a+390*3^a | Another stable core has exactly this odd slope. |
+|741 /3| -5+24*2^a+390*3^a | Another odd-slope core for a>=2; c(1)=1213 uses the certified finite band. |
+|14 /1| -7+32*2^a+18*3^a | Separate pointed H-profile pays s=1 for a>=2; c(1)=111 uses the finite band. |
+|42 /5| -25+25*2^(a-1)+60*3^a for a>=2; c(1)=45 | Separate pointed H-profile pays s=1 for a>=2; finite-band seed at a=1. |
+
+For the last two, the original unit seed pays every s>=2. For the first
+three, a genuine odd-slope unit seed pays every s>=1. The finite exceptional
+parameters have actual endpoint certificates and any needed finite head
+graphs, not an assumption that a small value must be present. The complete
+repair kernels are independently recounted by endpoint convolution;164
+whole constructed graphs are checked at positive parameter pairs whose
+orders are at most18. `repaired_rays.py --family 14 --parameter 4 --exponent 1`
+emits the actual adjacency rows of an example.
+
+For birth4/port0, c(a)=-1+3*2^a+2*3^a. The separate6-vertex profile
+`-1+6*2^a+4*3^a` pays s=1. The original seed pays s>=3. The s=2 family
+remains unresolved, with the early-start chart obstruction in G1.
+
+Thus **five of the478 are completely repaired;473 remain unclosed here**.
+Their valuation behaviors are all classified. Classification and repair
+are different deliverables; neither is silently substituted for the other.

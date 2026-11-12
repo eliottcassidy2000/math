@@ -27,6 +27,20 @@ def run():
     from bank import MATS
     determinants={name:det(M) for name,M in MATS.items()}
     need(all(abs(d)==1 or abs(d)>=5 for d in determinants.values()) and all(abs(d)!=6 for d in determinants.values()),'determinant6 absent from the generated multiplicative monoid')
-    out={'scope':'Exact source coefficients for the affine TT-chart odd-mode obstruction and the periodic65-seam determinant obstruction. Neither excludes general recursive tournament construction.','affine_TT_barrier_families':len(barriers),'barrier_type_histogram':dict(Counter(r['type'] for r in barriers)),'exact_valuation_AP_controls':len(barriers)*64,'records':barriers,'periodic65_determinants':determinants,'periodic65_absolute_determinant_histogram':dict(Counter(abs(x) for x in determinants.values()))}
-    save('repair_obstructions.json.gz',out);print(json.dumps({k:v for k,v in out.items() if k not in ['records','periodic65_determinants']}),flush=True)
+    smooth=[]
+    for name,d in determinants.items():
+        d=abs(d);a=0;b=0
+        while d%2==0:d//=2;a+=1
+        while d%3==0:d//=3;b+=1
+        if d==1:
+            need(b>=3*a,'2,3-smooth determinant cone');smooth.append({'letter':name,'v2':a,'v3':b})
+    periodic=[];byid={(r['birth_id'],r['port']):r for r in barriers}
+    for r in read('even_valuations.json.gz')['records']:
+        e=r['exponential_coefficients'];j=r['eventual_valuations_by_parity'][0] if r['type']=='bounded_constant' else byid[r['birth_id'],r['port']]['exact_valuation'];d=j-1
+        support=[b for b,c in enumerate(e,1) if c+(2**d if b==1 else 0)]
+        reason='scalar recurrence rank exceeds3' if len(support)>3 else 'determinant cone excludes6^L' if support==[1,2,3] else None
+        if reason:periodic.append({'birth_id':r['birth_id'],'port':r['port'],'lowest_head_division':d,'mode_support':support,'obstruction':reason})
+    need(len(periodic)==470,'all but eight pure3 families in periodic-word barrier')
+    out={'scope':'Exact source coefficients for the affine TT-chart odd-mode obstruction and the periodic65-seam rank/determinant obstruction, including every arithmetic-progression reparameterization. Neither excludes general recursive tournament construction.','affine_TT_barrier_families':len(barriers),'barrier_type_histogram':dict(Counter(r['type'] for r in barriers)),'exact_valuation_AP_controls':len(barriers)*64,'records':barriers,'periodic65_determinants':determinants,'periodic65_absolute_determinant_histogram':dict(Counter(abs(x) for x in determinants.values())),'smooth_determinant_cone':smooth,'periodic_barrier_families':len(periodic),'periodic_barrier_histogram':dict(Counter(r['obstruction'] for r in periodic)),'periodic_barriers':periodic}
+    save('repair_obstructions.json.gz',out);print(json.dumps({k:v for k,v in out.items() if k not in ['records','periodic65_determinants','periodic_barriers','smooth_determinant_cone']}),flush=True)
 if __name__=='__main__':run()
