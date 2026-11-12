@@ -28,6 +28,13 @@ signs differ. Magnitudes and p0 are lost. This construction preserves the
 sign of the actual observable, not physical work, energy or Hamiltonian-path
 multiplicity before taking the tournament.
 
+There is a sharp regularity boundary: if the field is required to have
+distinct principal stresses **everywhere on one connected domain**, lambda
+has constant sign and (2) is independent of all five parameters. The varying
+switch families below permit isotropic loci between sample sites, while
+requiring every sampled comparison to be nondegenerate. Five free parameters
+do not by themselves produce five observable tournament degrees of freedom.
+
 The rank-two local-transitivity theorem is inherited from
 [THM-2294, anchored-plucker-tournament-and-kakeya-address-bank](../../../01-canon/theorems/THM-2294-anchored-plucker-tournament-and-kakeya-address-bank.md).
 Its short proof applies directly: each in- or out-neighborhood lies in an
@@ -67,7 +74,17 @@ It is polynomial in n despite the exponentially many possible switches.
 
 Moving the sites is a different operation. In fact **one fixed net and one
 fixed stress field realize every locally transitive tournament**, as sites
-vary. Take on the first quadrant
+vary, even with globally distinct principal stresses. Take
+
+    Z=exp(z), h=exp(2z), lambda=1, q=exp(2z), p=0.
+
+For ordered `0<alpha_1<...<alpha_n<pi` and desired switch bits s_i, choose
+`z_i=x_i+i(alpha_i+pi*s_i)/2`, with arbitrary real x_i. Then q_i has argument
+`alpha_i+pi*s_i`, giving exactly (3). The entire field is compatible and
+nonisotropic. The isothermal coordinate is locally regular; its global
+injectivity is not needed.
+
+A second realization, useful for the curve tests below, takes on the first quadrant
 
     Z=z^2/2, h=z^2, lambda=|z|^2-1,
     q=z^2(|z|^2-1), p=-(1/2) Re(z^4).

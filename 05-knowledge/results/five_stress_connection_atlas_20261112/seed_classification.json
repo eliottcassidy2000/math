@@ -1,0 +1,404 @@
+{
+  "scope": "Every locally transitive isomorphism class and every nonempty marked set through order 14; marked sets quotiented by actual automorphisms. No arbitrary tournaments beyond controls.",
+  "by_size": {
+    "1": {
+      "transitive singleton mark": 1
+    },
+    "2": {
+      "transitive singleton mark": 2
+    },
+    "3": {
+      "transitive singleton mark": 3,
+      "book": 1
+    },
+    "4": {
+      "transitive singleton mark": 4,
+      "C3 exception in this census": 2,
+      "book": 1
+    },
+    "5": {
+      "transitive singleton mark": 5,
+      "book": 1,
+      "marked pair family": 2,
+      "C3 exception in this census": 1
+    },
+    "6": {
+      "transitive singleton mark": 6,
+      "book": 1,
+      "marked pair family": 6,
+      "C3 exception in this census": 2
+    },
+    "7": {
+      "transitive singleton mark": 7,
+      "book": 1,
+      "marked pair family": 10
+    },
+    "8": {
+      "transitive singleton mark": 8,
+      "book": 1,
+      "marked pair family": 14,
+      "C3 exception in this census": 2
+    },
+    "9": {
+      "transitive singleton mark": 9,
+      "book": 1,
+      "marked pair family": 18,
+      "C5 exception in this census": 2
+    },
+    "10": {
+      "transitive singleton mark": 10,
+      "book": 1,
+      "marked pair family": 22
+    },
+    "11": {
+      "transitive singleton mark": 11,
+      "book": 1,
+      "marked pair family": 26,
+      "C5 exception in this census": 2
+    },
+    "12": {
+      "transitive singleton mark": 12,
+      "book": 1,
+      "marked pair family": 30
+    },
+    "13": {
+      "transitive singleton mark": 13,
+      "book": 1,
+      "marked pair family": 34
+    },
+    "14": {
+      "transitive singleton mark": 14,
+      "book": 1,
+      "marked pair family": 38
+    }
+  },
+  "totals": {
+    "transitive singleton mark": 105,
+    "book": 12,
+    "C3 exception in this census": 7,
+    "marked pair family": 200,
+    "C5 exception in this census": 4
+  },
+  "exceptions": [
+    {
+      "n": 4,
+      "word": "0010",
+      "rows": [
+        10,
+        8,
+        3,
+        4
+      ],
+      "H": 5,
+      "selected": 5,
+      "U": 16,
+      "odd_part": 1,
+      "v2_U": 4,
+      "parabola_core": true,
+      "cubic_core": true,
+      "aut_order": 1,
+      "class": "C3 exception in this census",
+      "parameters": {},
+      "marked_blocks": [
+        "10",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "n": 4,
+      "word": "0010",
+      "rows": [
+        10,
+        8,
+        3,
+        4
+      ],
+      "H": 5,
+      "selected": 10,
+      "U": 11,
+      "odd_part": 11,
+      "v2_U": 0,
+      "parabola_core": true,
+      "cubic_core": true,
+      "aut_order": 1,
+      "class": "C3 exception in this census",
+      "parameters": {},
+      "marked_blocks": [
+        "01",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "n": 5,
+      "word": "00100",
+      "rows": [
+        26,
+        24,
+        3,
+        20,
+        4
+      ],
+      "H": 11,
+      "selected": 10,
+      "U": 37,
+      "odd_part": 37,
+      "v2_U": 0,
+      "parabola_core": true,
+      "cubic_core": true,
+      "aut_order": 1,
+      "class": "C3 exception in this census",
+      "parameters": {},
+      "marked_blocks": [
+        "01",
+        "10",
+        "0"
+      ]
+    },
+    {
+      "n": 6,
+      "word": "000100",
+      "rows": [
+        54,
+        52,
+        48,
+        7,
+        40,
+        8
+      ],
+      "H": 23,
+      "selected": 33,
+      "U": 111,
+      "odd_part": 111,
+      "v2_U": 0,
+      "parabola_core": true,
+      "cubic_core": true,
+      "aut_order": 1,
+      "class": "C3 exception in this census",
+      "parameters": {},
+      "marked_blocks": [
+        "100",
+        "01",
+        "0"
+      ]
+    },
+    {
+      "n": 6,
+      "word": "000110",
+      "rows": [
+        38,
+        36,
+        32,
+        23,
+        7,
+        24
+      ],
+      "H": 23,
+      "selected": 12,
+      "U": 99,
+      "odd_part": 99,
+      "v2_U": 0,
+      "parabola_core": true,
+      "cubic_core": true,
+      "aut_order": 1,
+      "class": "C3 exception in this census",
+      "parameters": {},
+      "marked_blocks": [
+        "001",
+        "0",
+        "10"
+      ]
+    },
+    {
+      "n": 8,
+      "word": "00001000",
+      "rows": [
+        238,
+        236,
+        232,
+        224,
+        15,
+        208,
+        144,
+        16
+      ],
+      "H": 107,
+      "selected": 34,
+      "U": 841,
+      "odd_part": 841,
+      "v2_U": 0,
+      "parabola_core": true,
+      "cubic_core": true,
+      "aut_order": 1,
+      "class": "C3 exception in this census",
+      "parameters": {},
+      "marked_blocks": [
+        "0100",
+        "100",
+        "0"
+      ]
+    },
+    {
+      "n": 8,
+      "word": "00001110",
+      "rows": [
+        142,
+        140,
+        136,
+        128,
+        111,
+        79,
+        15,
+        112
+      ],
+      "H": 107,
+      "selected": 68,
+      "U": 596,
+      "odd_part": 149,
+      "v2_U": 2,
+      "parabola_core": true,
+      "cubic_core": true,
+      "aut_order": 1,
+      "class": "C3 exception in this census",
+      "parameters": {},
+      "marked_blocks": [
+        "0010",
+        "0",
+        "001"
+      ]
+    },
+    {
+      "n": 9,
+      "word": "000001010",
+      "rows": [
+        350,
+        348,
+        344,
+        336,
+        320,
+        159,
+        288,
+        95,
+        160
+      ],
+      "H": 705,
+      "selected": 162,
+      "U": 6288,
+      "odd_part": 393,
+      "v2_U": 4,
+      "parabola_core": false,
+      "cubic_core": true,
+      "aut_order": 1,
+      "class": "C5 exception in this census",
+      "parameters": {},
+      "marked_blocks": [
+        "01000",
+        "1",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "n": 9,
+      "word": "000001010",
+      "rows": [
+        350,
+        348,
+        344,
+        336,
+        320,
+        159,
+        288,
+        95,
+        160
+      ],
+      "H": 705,
+      "selected": 328,
+      "U": 2718,
+      "odd_part": 1359,
+      "v2_U": 1,
+      "parabola_core": false,
+      "cubic_core": true,
+      "aut_order": 1,
+      "class": "C5 exception in this census",
+      "parameters": {},
+      "marked_blocks": [
+        "00010",
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "n": 11,
+      "word": "00010011100",
+      "rows": [
+        1590,
+        1588,
+        1584,
+        455,
+        1576,
+        1544,
+        439,
+        311,
+        55,
+        1480,
+        456
+      ],
+      "H": 54123,
+      "selected": 577,
+      "U": 358600,
+      "odd_part": 44825,
+      "v2_U": 3,
+      "parabola_core": false,
+      "cubic_core": true,
+      "aut_order": 1,
+      "class": "C5 exception in this census",
+      "parameters": {},
+      "marked_blocks": [
+        "100",
+        "0",
+        "00",
+        "100",
+        "10"
+      ]
+    },
+    {
+      "n": 11,
+      "word": "00011000110",
+      "rows": [
+        1254,
+        1252,
+        1248,
+        791,
+        775,
+        1240,
+        1176,
+        1048,
+        743,
+        231,
+        792
+      ],
+      "H": 54123,
+      "selected": 148,
+      "U": 236287,
+      "odd_part": 236287,
+      "v2_U": 0,
+      "parabola_core": false,
+      "cubic_core": true,
+      "aut_order": 1,
+      "class": "C5 exception in this census",
+      "parameters": {},
+      "marked_blocks": [
+        "001",
+        "01",
+        "001",
+        "00",
+        "0"
+      ]
+    }
+  ]
+}
