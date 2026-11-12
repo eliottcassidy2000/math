@@ -1,5 +1,5 @@
 {
-  "checks": 23116,
+  "checks": 23568,
   "histogram_non_lumpability": {
     "first": {
       "jump_histogram": {
@@ -112,5 +112,5 @@
     ]
   },
   "status": "FINITE-EXACT controls; proofs in PROOF.md",
-  "weighted_cases": 36
+  "weighted_cases": 60
 }

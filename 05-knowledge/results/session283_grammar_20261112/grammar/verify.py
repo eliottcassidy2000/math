@@ -117,7 +117,7 @@ def run():
    if len(chains(a))==n and len(Qs)<12: Qs.append(a)
  weighted=0
  for q in Qs:
-  for ls in ([3]*len(q),list(range(1,len(q)+1)),[1+(i%3) for i in range(len(q))]):
+  for ls in ([3]*len(q),[2]*len(q),[2+(i%3) for i in range(len(q))],list(range(1,len(q)+1)),[1+(i%3) for i in range(len(q))]):
    a,cs=blow(q,ls);b=len(q);n=len(a);weighted+=1
    check(len(chains(a))==b,'blowup core')
    check(Counter(h(a,u,v) for u,v in combinations(range(n),2))==predicted_h(q,ls))
@@ -141,6 +141,10 @@ def run():
    I=sum(max(l-2,0) for l in ls)
    guaranteed=comb(I,2)-sum(max(l-3,0) for l in ls)
    check(jump[4]>=guaranteed,'interior bulk')
+   if min(ls)>=2:
+    t2=ls.count(2)
+    bulk=+Counter({0:n-b,2:2*b*b-b-t2,3:2*b*(n-2*b-1)+2*t2,4:comb(n-2*b,2)-(n-3*b+t2)})
+    check(jump==bulk,'universal bulk kernel')
  # Sharpness of absolute bound.
  tt=tuple(sum(1<<j for j in range(i+1,5)) for i in range(5))
  sharp=flip(tt,1,3);check(len(chains(tt))==1 and len(chains(sharp))==5)

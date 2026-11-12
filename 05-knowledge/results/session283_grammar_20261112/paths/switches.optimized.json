@@ -1,0 +1,22 @@
+{
+  "complete_small_quotient_families": 74,
+  "false_mod8_shortcut_hostile": [
+    9,
+    15
+  ],
+  "literal_small_outputs": 237,
+  "mixed_12_vertex_deck": [
+    2721,
+    2721,
+    51,
+    51
+  ],
+  "mixed_12_vertex_outputs": [
+    2721,
+    8163,
+    2823,
+    8469
+  ],
+  "source_sha256": "7f9ee3012cc2d3bf34a83ae8bd14fa6c39fef32f08c8109df744e92f6b12fd8b",
+  "status": "finite controls PASS; proofs in ADDENDUM.md"
+}

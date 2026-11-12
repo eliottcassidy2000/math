@@ -1,8 +1,8 @@
 # Separator heat flow: an exact finite response grammar
 
 **PROVED candidate, independent review pending.** This is the expectation law for
-uniform labelled arc-reversal dynamics, not a Markov quotient of tournament
-isomorphism classes or an A000568 enumeration formula.
+uniform labelled arc-reversal dynamics, not a closed Markov process on the
+compressed separator/rank statistics or an A000568 enumeration formula.
 
 ## Inheritance and coordinates
 
@@ -86,8 +86,8 @@ Also a(s)^N→exp(-2tau). Consequently
 
     E[b(T(tau/n))]/n → 1-exp(-2tau).               (4)
 
-This is an exact scaling theorem: fixed-core compressed families lose their
-small-core description after order-n random arc edits. It does not say their
+This is an exact expectation scaling theorem: their expected core rank becomes
+linear after order-n expected random arc edits. No concentration or typical-trajectory claim is made. It does not say their
 whole structure becomes independent or random, and it is not a Chan–Pak
 coverage theorem. The mean number of flips by time tau/n is asymptotic to
 tau*n/2. No de-Poissonized distribution claim is required.

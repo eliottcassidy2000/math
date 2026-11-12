@@ -156,6 +156,48 @@ rank by four with probability tending to one, uniformly over all weighted
 pair-free cores of fixed order `b`. This does not say repeated flips keep
 that fixed core order; they generally do not.
 
+### Shape-independent bulk kernel
+
+A stronger statement holds away from singleton chains.
+
+**Theorem 3b (universal bulk row).** If every `l_i>=2`, put
+`t_2=#{i:l_i=2}`. Then, independently of the isomorphism class of `Q`,
+
+`F_(Q,l)(y) = c_0 + c_2 y^2 + c_3 y^3 + c_4 y^4`,
+
+where
+
+`c_0=n-b`,
+`c_2=2b^2-b-t_2`,
+`c_3=2b(n-2b-1)+2t_2`,
+`c_4=binom(n-2b,2)-(n-3b+t_2)`.                              (5b)
+
+In particular if all `l_i>=3`, even the allocation of chain lengths is
+irrelevant: the complete one-step rank distribution depends only on `(n,b)`.
+These are nonnegative integer coefficients and sum to `binom(n,2)`.
+
+**Proof.** A pair in different old core blocks has an unaffected third-core
+separator of total weight at least two. One reversal can change at most one
+vertex's distinguishing status, so such a pair cannot become homogeneous.
+A cross-chain reversal also cannot create a new homogeneous pair inside an
+old chain: it only adds a distinguishing outside vertex to pairs containing
+the touched endpoint. Thus a cross-chain flip destroys precisely the old
+homogeneous edges incident to its endpoints. An endpoint in a chain has
+degree one at either end and degree two in its interior. The cross-chain
+jump polynomial is therefore exactly
+
+`(2y+(l_i-2)y^2)(2y+(l_j-2)y^2)`.
+
+Sum over core pairs and add (3). For the `y^4` coefficient, combine all pairs
+of interior vertices and subtract adjacent interior pairs, giving the
+expression in (5b). The other coefficients simplify as displayed. QED.
+
+This is **one-step** universality, not a closed Markov process on `(n,b)`:
+a flip can create singleton chains and leave the bulk sector immediately.
+It classifies the entire arc-edit rank response of every transitive blow-up
+with no singleton factor, at arbitrary size, but not the isomorphism types
+or Hamiltonian counts of its children.
+
 ## 3. Exact separator polynomial and mean drift
 
 Let `P_T(z)=sum_(unordered {u,v}) z^h_T(u,v)`.
@@ -256,7 +298,7 @@ Run `python3 verify.py` from this directory (or its full path from any cwd).
 It independently constructs vertex-level tournaments, recomputes homogeneous
 pairs after every arc reversal, and checks the template compiler, separator
 polynomial, drift and sharp bound for every labelled tournament through
-order five, plus 36 weighted-core cases. It also computes a symbolic
+order five, plus 60 weighted-core cases. It also computes a symbolic
 three-million-vertex weighted-triangle example without expanding it.
 Normal and `python3 -O` output agree; checks use explicit exceptions rather
 than removable assertions. The finite controls support, but do not replace,

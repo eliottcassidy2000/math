@@ -24,3 +24,15 @@ Both outputs match the saved receipts. All1,099 labelled tournaments through
 order5 have independent permutation-cut profile checks;30 small-cap instances
 have literal Hamiltonian counts. No claim of Chan–Pak completeness or improved
 A000568 enumeration is made by this lane.
+
+## Constructive continuation
+
+[Contraction-deck addendum](ADDENDUM.md) gives the exact physical TT3/C3
+module-switch polynomial, fixed-precision 2-adic truncation, complete mod8
+controllability criterion, and an all-order interval obstruction for independent
+switch cubes. The explicit12-vertex cube realizes2721,2823,8163,8469, all four
+odd residue classes mod8, without forming an absolute interval. Run
+`python3 switches.py` and `python3 -O switches.py`; the237 literal outputs over
+74 small complete quotient families and the larger named cube match both
+saved receipts. The false shortcut discarding contraction counts is explicitly
+refuted before any use.
