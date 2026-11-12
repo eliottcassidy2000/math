@@ -1,0 +1,284 @@
+{
+  "good_prime_congruences": [
+    {
+      "length": 6,
+      "p": 5,
+      "precision": 1
+    },
+    {
+      "length": 22,
+      "p": 5,
+      "precision": 2
+    },
+    {
+      "length": 102,
+      "p": 5,
+      "precision": 3
+    },
+    {
+      "length": 502,
+      "p": 5,
+      "precision": 4
+    },
+    {
+      "length": 2502,
+      "p": 5,
+      "precision": 5
+    },
+    {
+      "length": 12502,
+      "p": 5,
+      "precision": 6
+    },
+    {
+      "length": 8,
+      "p": 7,
+      "precision": 1
+    },
+    {
+      "length": 44,
+      "p": 7,
+      "precision": 2
+    },
+    {
+      "length": 296,
+      "p": 7,
+      "precision": 3
+    },
+    {
+      "length": 2060,
+      "p": 7,
+      "precision": 4
+    },
+    {
+      "length": 14408,
+      "p": 7,
+      "precision": 5
+    },
+    {
+      "length": 100844,
+      "p": 7,
+      "precision": 6
+    },
+    {
+      "length": 12,
+      "p": 11,
+      "precision": 1
+    },
+    {
+      "length": 112,
+      "p": 11,
+      "precision": 2
+    },
+    {
+      "length": 1212,
+      "p": 11,
+      "precision": 3
+    },
+    {
+      "length": 13312,
+      "p": 11,
+      "precision": 4
+    },
+    {
+      "length": 146412,
+      "p": 11,
+      "precision": 5
+    },
+    {
+      "length": 1610512,
+      "p": 11,
+      "precision": 6
+    },
+    {
+      "length": 14,
+      "p": 13,
+      "precision": 1
+    },
+    {
+      "length": 158,
+      "p": 13,
+      "precision": 2
+    },
+    {
+      "length": 2030,
+      "p": 13,
+      "precision": 3
+    },
+    {
+      "length": 26366,
+      "p": 13,
+      "precision": 4
+    },
+    {
+      "length": 342734,
+      "p": 13,
+      "precision": 5
+    },
+    {
+      "length": 4455518,
+      "p": 13,
+      "precision": 6
+    }
+  ],
+  "literal_controls": [
+    {
+      "port": 2,
+      "rows": [
+        90,
+        28,
+        9,
+        16,
+        36,
+        79,
+        30
+      ],
+      "selected": 72,
+      "values": [
+        {
+          "H": 71,
+          "U": 268,
+          "W": 70,
+          "delta": 1,
+          "m": 1,
+          "n": 7
+        },
+        {
+          "H": 209,
+          "U": 908,
+          "W": 208,
+          "delta": 1,
+          "m": 2,
+          "n": 8
+        },
+        {
+          "H": 581,
+          "U": 2956,
+          "W": 604,
+          "delta": -23,
+          "m": 3,
+          "n": 9
+        },
+        {
+          "H": 1613,
+          "U": 9644,
+          "W": 1756,
+          "delta": -143,
+          "m": 4,
+          "n": 10
+        },
+        {
+          "H": 4541,
+          "U": 31948,
+          "W": 5140,
+          "delta": -599,
+          "m": 5,
+          "n": 11
+        }
+      ]
+    },
+    {
+      "port": 0,
+      "rows": [
+        54,
+        28,
+        24,
+        17,
+        32,
+        78,
+        31
+      ],
+      "selected": 68,
+      "values": [
+        {
+          "H": 71,
+          "U": 391,
+          "W": 70,
+          "delta": 1,
+          "m": 1,
+          "n": 7
+        },
+        {
+          "H": 209,
+          "U": 1279,
+          "W": 208,
+          "delta": 1,
+          "m": 2,
+          "n": 8
+        },
+        {
+          "H": 581,
+          "U": 3931,
+          "W": 604,
+          "delta": -23,
+          "m": 3,
+          "n": 9
+        },
+        {
+          "H": 1613,
+          "U": 11863,
+          "W": 1756,
+          "delta": -143,
+          "m": 4,
+          "n": 10
+        },
+        {
+          "H": 4541,
+          "U": 35611,
+          "W": 5140,
+          "delta": -599,
+          "m": 5,
+          "n": 11
+        }
+      ]
+    }
+  ],
+  "ternary_near_seeds": [
+    {
+      "a": 1,
+      "decimal_digits_abs_defect": 4,
+      "m": 6,
+      "v3": 3
+    },
+    {
+      "a": 2,
+      "decimal_digits_abs_defect": 10,
+      "m": 18,
+      "v3": 4
+    },
+    {
+      "a": 3,
+      "decimal_digits_abs_defect": 27,
+      "m": 54,
+      "v3": 5
+    },
+    {
+      "a": 4,
+      "decimal_digits_abs_defect": 78,
+      "m": 162,
+      "v3": 6
+    },
+    {
+      "a": 5,
+      "decimal_digits_abs_defect": 233,
+      "m": 486,
+      "v3": 7
+    },
+    {
+      "a": 6,
+      "decimal_digits_abs_defect": 697,
+      "m": 1458,
+      "v3": 8
+    },
+    {
+      "a": 7,
+      "decimal_digits_abs_defect": 2088,
+      "m": 4374,
+      "v3": 9
+    }
+  ],
+  "valuation_range": [
+    3,
+    500
+  ]
+}

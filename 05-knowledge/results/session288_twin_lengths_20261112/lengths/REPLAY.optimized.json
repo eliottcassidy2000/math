@@ -1,0 +1,422 @@
+{
+  "padic_false_comfort": [
+    {
+      "prime": 5,
+      "precision": 1,
+      "length": 5,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 5,
+      "precision": 2,
+      "length": 21,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 5,
+      "precision": 3,
+      "length": 101,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 5,
+      "precision": 4,
+      "length": 501,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 5,
+      "precision": 5,
+      "length": 2501,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 5,
+      "precision": 6,
+      "length": 12501,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 7,
+      "precision": 1,
+      "length": 7,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 7,
+      "precision": 2,
+      "length": 43,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 7,
+      "precision": 3,
+      "length": 295,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 7,
+      "precision": 4,
+      "length": 2059,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 7,
+      "precision": 5,
+      "length": 14407,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 7,
+      "precision": 6,
+      "length": 100843,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 13,
+      "precision": 1,
+      "length": 13,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 13,
+      "precision": 2,
+      "length": 157,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 13,
+      "precision": 3,
+      "length": 2029,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 13,
+      "precision": 4,
+      "length": 26365,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 13,
+      "precision": 5,
+      "length": 342733,
+      "defect_minus_one_mod_pk": 0
+    },
+    {
+      "prime": 13,
+      "precision": 6,
+      "length": 4455517,
+      "defect_minus_one_mod_pk": 0
+    }
+  ],
+  "scope": "Complete labelled tournaments orders2..4, every unselected port/nonempty exterior selected set; deterministic sampled higher cores; exact infinite statements proved separately. No all-order seed census.",
+  "levels": [
+    {
+      "n": 2,
+      "labelled_tournaments": 2,
+      "marked_port_cases": 4,
+      "unit_cases": 4,
+      "stable_unit_ports": 4,
+      "unstable_unit_ports": 0
+    },
+    {
+      "n": 3,
+      "labelled_tournaments": 8,
+      "marked_port_cases": 72,
+      "unit_cases": 42,
+      "stable_unit_ports": 42,
+      "unstable_unit_ports": 0
+    },
+    {
+      "n": 4,
+      "labelled_tournaments": 64,
+      "marked_port_cases": 1792,
+      "unit_cases": 528,
+      "stable_unit_ports": 432,
+      "unstable_unit_ports": 96
+    }
+  ],
+  "samples": [
+    {
+      "n": 5,
+      "code": 576,
+      "cases": [
+        75,
+        9,
+        9,
+        0
+      ]
+    },
+    {
+      "n": 5,
+      "code": 1009,
+      "cases": [
+        75,
+        3,
+        3,
+        0
+      ]
+    },
+    {
+      "n": 5,
+      "code": 983,
+      "cases": [
+        75,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 5,
+      "code": 963,
+      "cases": [
+        75,
+        12,
+        4,
+        8
+      ]
+    },
+    {
+      "n": 5,
+      "code": 97,
+      "cases": [
+        75,
+        9,
+        0,
+        9
+      ]
+    },
+    {
+      "n": 5,
+      "code": 879,
+      "cases": [
+        75,
+        9,
+        9,
+        0
+      ]
+    },
+    {
+      "n": 6,
+      "code": 1909,
+      "cases": [
+        186,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 6,
+      "code": 29976,
+      "cases": [
+        186,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 6,
+      "code": 30028,
+      "cases": [
+        186,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 6,
+      "code": 11943,
+      "cases": [
+        186,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 6,
+      "code": 31274,
+      "cases": [
+        186,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 6,
+      "code": 11037,
+      "cases": [
+        186,
+        12,
+        4,
+        8
+      ]
+    },
+    {
+      "n": 7,
+      "code": 2035020,
+      "cases": [
+        441,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1359313,
+      "cases": [
+        441,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 7,
+      "code": 498837,
+      "cases": [
+        441,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1518975,
+      "cases": [
+        441,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 7,
+      "code": 1326302,
+      "cases": [
+        441,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 7,
+      "code": 532618,
+      "cases": [
+        441,
+        5,
+        0,
+        5
+      ]
+    }
+  ],
+  "physical_delayed_failure": {
+    "rows": [
+      90,
+      28,
+      9,
+      16,
+      36,
+      79,
+      30
+    ],
+    "selected": [
+      3,
+      6
+    ],
+    "port": 2,
+    "matching": 2,
+    "delta_lengths1to6": [
+      1,
+      1,
+      -23,
+      -143,
+      -599,
+      -2159
+    ],
+    "positive_unit_lengths": [
+      1,
+      2
+    ]
+  },
+  "sharp_exponential_controls": [
+    {
+      "rank": 2,
+      "integer_roots": [
+        1
+      ],
+      "effective_cutoff": 2
+    },
+    {
+      "rank": 3,
+      "integer_roots": [
+        1,
+        2
+      ],
+      "effective_cutoff": 5
+    },
+    {
+      "rank": 4,
+      "integer_roots": [
+        1,
+        2,
+        3
+      ],
+      "effective_cutoff": 10
+    },
+    {
+      "rank": 5,
+      "integer_roots": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "effective_cutoff": 16
+    },
+    {
+      "rank": 6,
+      "integer_roots": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "effective_cutoff": 23
+    },
+    {
+      "rank": 7,
+      "integer_roots": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "effective_cutoff": 32
+    },
+    {
+      "rank": 8,
+      "integer_roots": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "effective_cutoff": 42
+    }
+  ]
+}
