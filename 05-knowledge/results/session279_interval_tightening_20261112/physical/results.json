@@ -1,0 +1,275 @@
+{
+  "physical_seed_words_literal_checked": 210,
+  "distinct_root_packets": 84,
+  "maximum_seed_W": 96,
+  "uniform_threshold": 25,
+  "valid_for": "every integer cone seed with 1<=A and W<=96, at every k>=25",
+  "growth_bounds_C3": [
+    "97/15",
+    "797/123"
+  ],
+  "wedge_four_step_norm": 992,
+  "rho_exact": "12664557242662387500000/22146714191080235692321",
+  "four_threshold_bounds": {
+    "25": {
+      "exact": "958167364406236464352425076027010580480/1018204727765304254274536120996225851081",
+      "decimal_display": 0.9410360591323964
+    },
+    "26": {
+      "exact": "84218108754232516207424220568391147061248/128178705994745296402484782887011718647163",
+      "decimal_display": 0.6570366590975341
+    },
+    "27": {
+      "exact": "1330532425894726165201159005740232519712768/1792892073499083298599388408336746659529609",
+      "decimal_display": 0.7421151811430586
+    },
+    "28": {
+      "exact": "103427605100782107330813853008564633940787200/225701747107109792188029363732263442455811003",
+      "decimal_display": 0.45824902299803266
+    }
+  },
+  "successful_packet_recoveries_k1_to40": 2180,
+  "sound_ambiguities": 1180,
+  "scalar_distinct_counts_by_k": {
+    "1": 62,
+    "2": 82,
+    "3": 84,
+    "4": 84,
+    "5": 84,
+    "6": 84,
+    "7": 84,
+    "8": 84,
+    "9": 84,
+    "10": 84,
+    "11": 84,
+    "12": 84,
+    "13": 84,
+    "14": 84,
+    "15": 84,
+    "16": 84,
+    "17": 84,
+    "18": 84,
+    "19": 84,
+    "20": 84,
+    "21": 84,
+    "22": 84,
+    "23": 84,
+    "24": 84,
+    "25": 84,
+    "26": 84,
+    "27": 84,
+    "28": 84,
+    "29": 84,
+    "30": 84,
+    "31": 84,
+    "32": 84,
+    "33": 84,
+    "34": 84,
+    "35": 84,
+    "36": 84,
+    "37": 84,
+    "38": 84,
+    "39": 84,
+    "40": 84
+  },
+  "depth25_near_target_trials": 252,
+  "accepted_in_seed_bank": 84,
+  "rejected_from_seed_bank": 168,
+  "missing_memory_control": [
+    {
+      "suffix_blocks": 0,
+      "counts": [
+        "9",
+        "9"
+      ],
+      "difference": "0"
+    },
+    {
+      "suffix_blocks": 1,
+      "counts": [
+        "53",
+        "51"
+      ],
+      "difference": "2"
+    },
+    {
+      "suffix_blocks": 2,
+      "counts": [
+        "339",
+        "333"
+      ],
+      "difference": "6"
+    },
+    {
+      "suffix_blocks": 5,
+      "counts": [
+        "92213",
+        "90771"
+      ],
+      "difference": "1442"
+    },
+    {
+      "suffix_blocks": 10,
+      "counts": [
+        "1051815963",
+        "1035366813"
+      ],
+      "difference": "16449150"
+    },
+    {
+      "suffix_blocks": 25,
+      "counts": [
+        "1560939784651746258677",
+        "1536528543867702606291"
+      ],
+      "difference": "24411240784043652386"
+    },
+    {
+      "suffix_blocks": 100,
+      "counts": [
+        "11236165082785123557127148946577078238116628717162501189279785434328931945672510139",
+        "11060444831419804769467576474465286440448991230887849590779357359617335033652750333"
+      ],
+      "difference": "175720251365318787659572472111791797667637486274651598500428074711596912019759806"
+    }
+  ],
+  "active_word_spectral_classification": [
+    {
+      "word_length": 2,
+      "Pisot": 1,
+      "not_Pisot": 0,
+      "first_failures": []
+    },
+    {
+      "word_length": 3,
+      "Pisot": 2,
+      "not_Pisot": 0,
+      "first_failures": []
+    },
+    {
+      "word_length": 4,
+      "Pisot": 4,
+      "not_Pisot": 0,
+      "first_failures": []
+    },
+    {
+      "word_length": 5,
+      "Pisot": 8,
+      "not_Pisot": 0,
+      "first_failures": []
+    },
+    {
+      "word_length": 6,
+      "Pisot": 16,
+      "not_Pisot": 0,
+      "first_failures": []
+    },
+    {
+      "word_length": 7,
+      "Pisot": 32,
+      "not_Pisot": 0,
+      "first_failures": []
+    },
+    {
+      "word_length": 8,
+      "Pisot": 63,
+      "not_Pisot": 1,
+      "first_failures": [
+        {
+          "word": "10101010",
+          "f(1)": 84,
+          "f(-1)": -1342
+        }
+      ]
+    },
+    {
+      "word_length": 9,
+      "Pisot": 120,
+      "not_Pisot": 8,
+      "first_failures": [
+        {
+          "word": "100101010",
+          "f(1)": 154,
+          "f(-1)": -2608
+        },
+        {
+          "word": "101001010",
+          "f(1)": 118,
+          "f(-1)": -2620
+        },
+        {
+          "word": "101010010",
+          "f(1)": 94,
+          "f(-1)": -2628
+        }
+      ]
+    },
+    {
+      "word_length": 10,
+      "Pisot": 232,
+      "not_Pisot": 24,
+      "first_failures": [
+        {
+          "word": "1000101010",
+          "f(1)": 294,
+          "f(-1)": -5140
+        },
+        {
+          "word": "1001001010",
+          "f(1)": 212,
+          "f(-1)": -5110
+        },
+        {
+          "word": "1001010010",
+          "f(1)": 164,
+          "f(-1)": -5110
+        }
+      ]
+    },
+    {
+      "word_length": 11,
+      "Pisot": 456,
+      "not_Pisot": 56,
+      "first_failures": [
+        {
+          "word": "10000101010",
+          "f(1)": 574,
+          "f(-1)": -10204
+        },
+        {
+          "word": "10001001010",
+          "f(1)": 400,
+          "f(-1)": -10090
+        },
+        {
+          "word": "10001010010",
+          "f(1)": 304,
+          "f(-1)": -10074
+        }
+      ]
+    },
+    {
+      "word_length": 12,
+      "Pisot": 892,
+      "not_Pisot": 132,
+      "first_failures": [
+        {
+          "word": "100000101010",
+          "f(1)": 1134,
+          "f(-1)": -20332
+        },
+        {
+          "word": "100001001010",
+          "f(1)": 776,
+          "f(-1)": -20050
+        },
+        {
+          "word": "100001010010",
+          "f(1)": 584,
+          "f(-1)": -20002
+        }
+      ]
+    }
+  ],
+  "scope": "Exact suffix decoder and seed-bank selector; not unrestricted tournament-spectrum coverage."
+}

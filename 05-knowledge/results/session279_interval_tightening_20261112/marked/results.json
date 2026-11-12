@@ -1,0 +1,596 @@
+{
+  "status": "PASS",
+  "seconds": 0.02951192855834961,
+  "rows": [
+    {
+      "n": 0,
+      "backbone": [],
+      "C0_C1_C2": [
+        "1",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 0,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "1",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 1,
+      "backbone": [],
+      "C0_C1_C2": [
+        "1",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 1,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "1",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 2,
+      "backbone": [],
+      "C0_C1_C2": [
+        "1",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 2,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "1",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 3,
+      "backbone": [],
+      "C0_C1_C2": [
+        "2",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 3,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "2",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 4,
+      "backbone": [],
+      "C0_C1_C2": [
+        "4",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 4,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "4",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 5,
+      "backbone": [],
+      "C0_C1_C2": [
+        "12",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 5,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "12",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 6,
+      "backbone": [],
+      "C0_C1_C2": [
+        "56",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 6,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "56",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 7,
+      "backbone": [],
+      "C0_C1_C2": [
+        "456",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 7,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "456",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 8,
+      "backbone": [],
+      "C0_C1_C2": [
+        "34416/5",
+        "16/5",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "n": 8,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "6880",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 9,
+      "backbone": [],
+      "C0_C1_C2": [
+        "957744/5",
+        "64/5",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "n": 9,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "191536",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 10,
+      "backbone": [],
+      "C0_C1_C2": [
+        "340658912/35",
+        "1952/35",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        4,
+        0
+      ]
+    },
+    {
+      "n": 10,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "9733056",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 11,
+      "backbone": [],
+      "C0_C1_C2": [
+        "31631376864/35",
+        "14976/35",
+        "256/5"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        4,
+        3
+      ]
+    },
+    {
+      "n": 11,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "903753248",
+        "0",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "n": 12,
+      "backbone": [],
+      "C0_C1_C2": [
+        "5393790994752/35",
+        "118208/35",
+        "2048/5"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        6,
+        3
+      ]
+    },
+    {
+      "n": 12,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "1078758178368/7",
+        "192/7",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "n": 13,
+      "backbone": [],
+      "C0_C1_C2": [
+        "8494870076239168/175",
+        "6658816/175",
+        "629248/175"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        6,
+        9
+      ]
+    },
+    {
+      "n": 13,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "339794802809152/7",
+        "768/7",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "n": 14,
+      "backbone": [],
+      "C0_C1_C2": [
+        "164018221981816944512/5775",
+        "596845312/825",
+        "9621504/175"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        10,
+        9
+      ]
+    },
+    {
+      "n": 14,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "596429898101578496/21",
+        "10112/21",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        4,
+        0
+      ]
+    },
+    {
+      "n": 15,
+      "backbone": [],
+      "C0_C1_C2": [
+        "179146287476183847998336/5775",
+        "137328428032/5775",
+        "150802432/175"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        10,
+        15
+      ]
+    },
+    {
+      "n": 15,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "651441045367458558080/21",
+        "54272/21",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "n": 16,
+      "backbone": [],
+      "C0_C1_C2": [
+        "144531696041254542725224704/2275",
+        "9842209289984/6825",
+        "3378282496/175"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        16,
+        21
+      ]
+    },
+    {
+      "n": 16,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "14675526059573209242860032/231",
+        "4693504/231",
+        "0"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        10,
+        0
+      ]
+    },
+    {
+      "n": 17,
+      "backbone": [],
+      "C0_C1_C2": [
+        "128707787888903706178140093680384/525525",
+        "28147038702642176/175175",
+        "29842748696576/40425"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        16,
+        36
+      ]
+    },
+    {
+      "n": 17,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "18858283939766098477150078720/77",
+        "20961280/77",
+        "73728/7"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        12,
+        3
+      ]
+    },
+    {
+      "n": 18,
+      "backbone": [],
+      "C0_C1_C2": [
+        "1562034464489679937785189984135343616/875875",
+        "28606202416676768768/875875",
+        "9835609321914368/202125"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        20,
+        48
+      ]
+    },
+    {
+      "n": 18,
+      "backbone": [
+        3
+      ],
+      "C0_C1_C2": [
+        "23184185001702113680454872605184/13",
+        "489765888/91",
+        "589824/7"
+      ],
+      "nonzero_marked_assignments": [
+        0,
+        18,
+        3
+      ]
+    },
+    {
+      "n": 14,
+      "backbone": [],
+      "C3": "65536/15",
+      "nonzero_marked_assignments": 4
+    },
+    {
+      "n": 18,
+      "backbone": [],
+      "C3": "3100178382848/2625",
+      "nonzero_marked_assignments": 36
+    },
+    {
+      "n": 22,
+      "backbone": [
+        3
+      ],
+      "C3": "614301696/7",
+      "nonzero_marked_assignments": 10
+    }
+  ]
+}

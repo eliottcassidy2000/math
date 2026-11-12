@@ -1,0 +1,1257 @@
+{
+  "status": "PASS",
+  "seconds": 23.15311098098755,
+  "rows": [
+    {
+      "n": 0,
+      "backbone": [],
+      "integer_jet_seconds": 2.0960993424523622e-05,
+      "reference_seconds": 3.09959941660054e-05,
+      "reference": "partition",
+      "partition_count": 1,
+      "C0": "1",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 0
+    },
+    {
+      "n": 0,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 0.00017055299394996837,
+      "reference_seconds": 1.1627002095337957e-05,
+      "reference": "partition",
+      "partition_count": 1,
+      "C0": "1",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 0
+    },
+    {
+      "n": 0,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 1.3870994735043496e-05,
+      "reference_seconds": 6.889997166581452e-06,
+      "reference": "partition",
+      "partition_count": 1,
+      "C0": "1",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 0
+    },
+    {
+      "n": 0,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 9.233997843693942e-06,
+      "reference_seconds": 5.098001565784216e-06,
+      "reference": "partition",
+      "partition_count": 1,
+      "C0": "1",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 0
+    },
+    {
+      "n": 1,
+      "backbone": [],
+      "integer_jet_seconds": 7.139999070204794e-06,
+      "reference_seconds": 8.12199868960306e-06,
+      "reference": "partition",
+      "partition_count": 1,
+      "C0": "1",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 0
+    },
+    {
+      "n": 1,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 2.6549998437985778e-05,
+      "reference_seconds": 6.219001079443842e-06,
+      "reference": "partition",
+      "partition_count": 1,
+      "C0": "1",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 0
+    },
+    {
+      "n": 1,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 7.059999916236848e-06,
+      "reference_seconds": 4.846995580010116e-06,
+      "reference": "partition",
+      "partition_count": 1,
+      "C0": "1",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 0
+    },
+    {
+      "n": 1,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 6.980997568462044e-06,
+      "reference_seconds": 4.396002623252571e-06,
+      "reference": "partition",
+      "partition_count": 1,
+      "C0": "1",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 0
+    },
+    {
+      "n": 2,
+      "backbone": [],
+      "integer_jet_seconds": 5.837995558977127e-06,
+      "reference_seconds": 6.520000169984996e-06,
+      "reference": "partition",
+      "partition_count": 1,
+      "C0": "1",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 0
+    },
+    {
+      "n": 2,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 5.98900078330189e-06,
+      "reference_seconds": 6.628994015045464e-06,
+      "reference": "partition",
+      "partition_count": 1,
+      "C0": "1",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 0
+    },
+    {
+      "n": 2,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 7.310998626053333e-06,
+      "reference_seconds": 5.387999408412725e-06,
+      "reference": "partition",
+      "partition_count": 1,
+      "C0": "1",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 0
+    },
+    {
+      "n": 2,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 1.9359002180863172e-05,
+      "reference_seconds": 5.588000931311399e-06,
+      "reference": "partition",
+      "partition_count": 1,
+      "C0": "1",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 0
+    },
+    {
+      "n": 3,
+      "backbone": [],
+      "integer_jet_seconds": 2.1701998775824904e-05,
+      "reference_seconds": 1.3830001989845186e-05,
+      "reference": "partition",
+      "partition_count": 2,
+      "C0": "2",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 5
+    },
+    {
+      "n": 3,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 1.0235999070573598e-05,
+      "reference_seconds": 1.0905998351518065e-05,
+      "reference": "partition",
+      "partition_count": 2,
+      "C0": "2",
+      "C1": "0",
+      "backbone_configs": 2,
+      "transitions": 0
+    },
+    {
+      "n": 3,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 2.2143001842778176e-05,
+      "reference_seconds": 9.934999980032444e-06,
+      "reference": "partition",
+      "partition_count": 2,
+      "C0": "2",
+      "C1": "0",
+      "backbone_configs": 2,
+      "transitions": 0
+    },
+    {
+      "n": 3,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 9.00399754755199e-06,
+      "reference_seconds": 9.423994924873114e-06,
+      "reference": "partition",
+      "partition_count": 2,
+      "C0": "2",
+      "C1": "0",
+      "backbone_configs": 2,
+      "transitions": 0
+    },
+    {
+      "n": 4,
+      "backbone": [],
+      "integer_jet_seconds": 2.2093001462053508e-05,
+      "reference_seconds": 1.2587996025104076e-05,
+      "reference": "partition",
+      "partition_count": 2,
+      "C0": "4",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 7
+    },
+    {
+      "n": 4,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 9.865005267784e-06,
+      "reference_seconds": 1.2158001482021064e-05,
+      "reference": "partition",
+      "partition_count": 2,
+      "C0": "4",
+      "C1": "0",
+      "backbone_configs": 2,
+      "transitions": 0
+    },
+    {
+      "n": 4,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 1.0526004189159721e-05,
+      "reference_seconds": 1.0656003723852336e-05,
+      "reference": "partition",
+      "partition_count": 2,
+      "C0": "4",
+      "C1": "0",
+      "backbone_configs": 2,
+      "transitions": 0
+    },
+    {
+      "n": 4,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 2.3544998839497566e-05,
+      "reference_seconds": 1.1807002010755241e-05,
+      "reference": "partition",
+      "partition_count": 2,
+      "C0": "4",
+      "C1": "0",
+      "backbone_configs": 2,
+      "transitions": 0
+    },
+    {
+      "n": 5,
+      "backbone": [],
+      "integer_jet_seconds": 3.123599890386686e-05,
+      "reference_seconds": 1.8907994672190398e-05,
+      "reference": "partition",
+      "partition_count": 3,
+      "C0": "12",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 16
+    },
+    {
+      "n": 5,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 1.9849001546390355e-05,
+      "reference_seconds": 1.7846999980974942e-05,
+      "reference": "partition",
+      "partition_count": 3,
+      "C0": "12",
+      "C1": "0",
+      "backbone_configs": 2,
+      "transitions": 7
+    },
+    {
+      "n": 5,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 4.2553001549094915e-05,
+      "reference_seconds": 2.1151005057618022e-05,
+      "reference": "partition",
+      "partition_count": 3,
+      "C0": "12",
+      "C1": "0",
+      "backbone_configs": 3,
+      "transitions": 0
+    },
+    {
+      "n": 5,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 1.8817998352460563e-05,
+      "reference_seconds": 1.5983001503627747e-05,
+      "reference": "partition",
+      "partition_count": 3,
+      "C0": "12",
+      "C1": "0",
+      "backbone_configs": 2,
+      "transitions": 7
+    },
+    {
+      "n": 6,
+      "backbone": [],
+      "integer_jet_seconds": 5.566299660131335e-05,
+      "reference_seconds": 2.617900463519618e-05,
+      "reference": "partition",
+      "partition_count": 4,
+      "C0": "56",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 21
+    },
+    {
+      "n": 6,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 2.202299947384745e-05,
+      "reference_seconds": 2.339499769732356e-05,
+      "reference": "partition",
+      "partition_count": 4,
+      "C0": "56",
+      "C1": "0",
+      "backbone_configs": 3,
+      "transitions": 9
+    },
+    {
+      "n": 6,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 1.5493002138100564e-05,
+      "reference_seconds": 2.2333006199914962e-05,
+      "reference": "partition",
+      "partition_count": 4,
+      "C0": "56",
+      "C1": "0",
+      "backbone_configs": 4,
+      "transitions": 0
+    },
+    {
+      "n": 6,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 2.3685002815909684e-05,
+      "reference_seconds": 2.251299883937463e-05,
+      "reference": "partition",
+      "partition_count": 4,
+      "C0": "56",
+      "C1": "0",
+      "backbone_configs": 3,
+      "transitions": 9
+    },
+    {
+      "n": 7,
+      "backbone": [],
+      "integer_jet_seconds": 4.764099867315963e-05,
+      "reference_seconds": 3.286900027887896e-05,
+      "reference": "partition",
+      "partition_count": 5,
+      "C0": "456",
+      "C1": "0",
+      "backbone_configs": 1,
+      "transitions": 35
+    },
+    {
+      "n": 7,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 3.5361998016014695e-05,
+      "reference_seconds": 3.031499363714829e-05,
+      "reference": "partition",
+      "partition_count": 5,
+      "C0": "456",
+      "C1": "0",
+      "backbone_configs": 3,
+      "transitions": 20
+    },
+    {
+      "n": 7,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 2.6209003408439457e-05,
+      "reference_seconds": 2.8772999939974397e-05,
+      "reference": "partition",
+      "partition_count": 5,
+      "C0": "456",
+      "C1": "0",
+      "backbone_configs": 4,
+      "transitions": 9
+    },
+    {
+      "n": 7,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 2.5046996597666293e-05,
+      "reference_seconds": 2.777099871309474e-05,
+      "reference": "partition",
+      "partition_count": 5,
+      "C0": "456",
+      "C1": "0",
+      "backbone_configs": 4,
+      "transitions": 11
+    },
+    {
+      "n": 8,
+      "backbone": [],
+      "integer_jet_seconds": 5.560200224863365e-05,
+      "reference_seconds": 4.808100493391976e-05,
+      "reference": "partition",
+      "partition_count": 6,
+      "C0": "34416/5",
+      "C1": "16/5",
+      "backbone_configs": 1,
+      "transitions": 42
+    },
+    {
+      "n": 8,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 4.5888002205174416e-05,
+      "reference_seconds": 3.9659003959968686e-05,
+      "reference": "partition",
+      "partition_count": 6,
+      "C0": "6880",
+      "C1": "0",
+      "backbone_configs": 3,
+      "transitions": 31
+    },
+    {
+      "n": 8,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 3.0915995012037456e-05,
+      "reference_seconds": 3.8887999835424125e-05,
+      "reference": "partition",
+      "partition_count": 6,
+      "C0": "6880",
+      "C1": "0",
+      "backbone_configs": 5,
+      "transitions": 11
+    },
+    {
+      "n": 8,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 3.359000402269885e-05,
+      "reference_seconds": 3.579300391720608e-05,
+      "reference": "partition",
+      "partition_count": 6,
+      "C0": "6880",
+      "C1": "0",
+      "backbone_configs": 4,
+      "transitions": 20
+    },
+    {
+      "n": 9,
+      "backbone": [],
+      "integer_jet_seconds": 0.00010815100540639833,
+      "reference_seconds": 6.027000199537724e-05,
+      "reference": "partition",
+      "partition_count": 8,
+      "C0": "957744/5",
+      "C1": "64/5",
+      "backbone_configs": 1,
+      "transitions": 61
+    },
+    {
+      "n": 9,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 6.720999954268336e-05,
+      "reference_seconds": 5.281899939291179e-05,
+      "reference": "partition",
+      "partition_count": 8,
+      "C0": "191536",
+      "C1": "0",
+      "backbone_configs": 4,
+      "transitions": 48
+    },
+    {
+      "n": 9,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 4.8663001507520676e-05,
+      "reference_seconds": 5.056500231148675e-05,
+      "reference": "partition",
+      "partition_count": 8,
+      "C0": "191536",
+      "C1": "0",
+      "backbone_configs": 6,
+      "transitions": 24
+    },
+    {
+      "n": 9,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 6.631799624301493e-05,
+      "reference_seconds": 5.1155999244656414e-05,
+      "reference": "partition",
+      "partition_count": 8,
+      "C0": "191536",
+      "C1": "0",
+      "backbone_configs": 5,
+      "transitions": 35
+    },
+    {
+      "n": 10,
+      "backbone": [],
+      "integer_jet_seconds": 0.0001263879967154935,
+      "reference_seconds": 7.710499630775303e-05,
+      "reference": "partition",
+      "partition_count": 10,
+      "C0": "340658912/35",
+      "C1": "1952/35",
+      "backbone_configs": 1,
+      "transitions": 72
+    },
+    {
+      "n": 10,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 8.15009989310056e-05,
+      "reference_seconds": 6.828099867561832e-05,
+      "reference": "partition",
+      "partition_count": 10,
+      "C0": "9733056",
+      "C1": "0",
+      "backbone_configs": 4,
+      "transitions": 66
+    },
+    {
+      "n": 10,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 6.055999983800575e-05,
+      "reference_seconds": 6.826200115028769e-05,
+      "reference": "partition",
+      "partition_count": 10,
+      "C0": "9733056",
+      "C1": "0",
+      "backbone_configs": 7,
+      "transitions": 37
+    },
+    {
+      "n": 10,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 5.96289974055253e-05,
+      "reference_seconds": 8.244199852924794e-05,
+      "reference": "partition",
+      "partition_count": 10,
+      "C0": "9733056",
+      "C1": "0",
+      "backbone_configs": 6,
+      "transitions": 42
+    },
+    {
+      "n": 11,
+      "backbone": [],
+      "integer_jet_seconds": 0.0001470889983465895,
+      "reference_seconds": 0.00017994699737755582,
+      "reference": "partition",
+      "partition_count": 12,
+      "C0": "31631376864/35",
+      "C1": "14976/35",
+      "backbone_configs": 1,
+      "transitions": 96
+    },
+    {
+      "n": 11,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 0.0001254759990843013,
+      "reference_seconds": 0.0001526769992779009,
+      "reference": "partition",
+      "partition_count": 12,
+      "C0": "903753248",
+      "C1": "0",
+      "backbone_configs": 4,
+      "transitions": 97
+    },
+    {
+      "n": 11,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 9.504099580226466e-05,
+      "reference_seconds": 0.00010214099893346429,
+      "reference": "partition",
+      "partition_count": 12,
+      "C0": "903753248",
+      "C1": "0",
+      "backbone_configs": 8,
+      "transitions": 56
+    },
+    {
+      "n": 11,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 9.773499914444983e-05,
+      "reference_seconds": 0.00012143099593231454,
+      "reference": "partition",
+      "partition_count": 12,
+      "C0": "903753248",
+      "C1": "0",
+      "backbone_configs": 6,
+      "transitions": 69
+    },
+    {
+      "n": 12,
+      "backbone": [],
+      "integer_jet_seconds": 0.00016078900080174208,
+      "reference_seconds": 0.00014635700063081458,
+      "reference": "partition",
+      "partition_count": 15,
+      "C0": "5393790994752/35",
+      "C1": "118208/35",
+      "backbone_configs": 1,
+      "transitions": 110
+    },
+    {
+      "n": 12,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 0.00015420900308527052,
+      "reference_seconds": 0.00011554199591046199,
+      "reference": "partition",
+      "partition_count": 15,
+      "C0": "1078758178368/7",
+      "C1": "192/7",
+      "backbone_configs": 5,
+      "transitions": 123
+    },
+    {
+      "n": 12,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.00013620199752040207,
+      "reference_seconds": 0.0001098930006264709,
+      "reference": "partition",
+      "partition_count": 15,
+      "C0": "154108311168",
+      "C1": "0",
+      "backbone_configs": 9,
+      "transitions": 84
+    },
+    {
+      "n": 12,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 0.00013922699872637168,
+      "reference_seconds": 0.00010775000555440784,
+      "reference": "partition",
+      "partition_count": 15,
+      "C0": "154108311168",
+      "C1": "0",
+      "backbone_configs": 7,
+      "transitions": 98
+    },
+    {
+      "n": 13,
+      "backbone": [],
+      "integer_jet_seconds": 0.00018974100385094061,
+      "reference_seconds": 0.00015872599760768935,
+      "reference": "partition",
+      "partition_count": 18,
+      "C0": "8494870076239168/175",
+      "C1": "6658816/175",
+      "backbone_configs": 1,
+      "transitions": 139
+    },
+    {
+      "n": 13,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 0.00019151499873260036,
+      "reference_seconds": 0.00014016899513080716,
+      "reference": "partition",
+      "partition_count": 18,
+      "C0": "339794802809152/7",
+      "C1": "768/7",
+      "backbone_configs": 5,
+      "transitions": 165
+    },
+    {
+      "n": 13,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.00018030799401458353,
+      "reference_seconds": 0.00013678299728780985,
+      "reference": "partition",
+      "partition_count": 18,
+      "C0": "48542114686912",
+      "C1": "0",
+      "backbone_configs": 10,
+      "transitions": 120
+    },
+    {
+      "n": 13,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 0.0001635529988561757,
+      "reference_seconds": 0.00013639200187753886,
+      "reference": "partition",
+      "partition_count": 18,
+      "C0": "48542114686912",
+      "C1": "0",
+      "backbone_configs": 8,
+      "transitions": 129
+    },
+    {
+      "n": 14,
+      "backbone": [],
+      "integer_jet_seconds": 0.00022405300114769489,
+      "reference_seconds": 0.00020145899907220155,
+      "reference": "partition",
+      "partition_count": 22,
+      "C0": "164018221981816944512/5775",
+      "C1": "596845312/825",
+      "backbone_configs": 1,
+      "transitions": 156
+    },
+    {
+      "n": 14,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 0.00025441800244152546,
+      "reference_seconds": 0.0001778840014594607,
+      "reference": "partition",
+      "partition_count": 22,
+      "C0": "596429898101578496/21",
+      "C1": "10112/21",
+      "backbone_configs": 5,
+      "transitions": 208
+    },
+    {
+      "n": 14,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.0002034819990512915,
+      "reference_seconds": 0.00017360800120513886,
+      "reference": "partition",
+      "partition_count": 22,
+      "C0": "28401423719122304",
+      "C1": "0",
+      "backbone_configs": 11,
+      "transitions": 161
+    },
+    {
+      "n": 14,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 0.00021076299890410155,
+      "reference_seconds": 0.00019063299987465143,
+      "reference": "partition",
+      "partition_count": 22,
+      "C0": "85204271157367040/3",
+      "C1": "128/3",
+      "backbone_configs": 9,
+      "transitions": 167
+    },
+    {
+      "n": 15,
+      "backbone": [],
+      "integer_jet_seconds": 0.0002809470024658367,
+      "reference_seconds": 0.00030489300115732476,
+      "reference": "partition",
+      "partition_count": 27,
+      "C0": "179146287476183847998336/5775",
+      "C1": "137328428032/5775",
+      "backbone_configs": 1,
+      "transitions": 192
+    },
+    {
+      "n": 15,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 0.0003454730031080544,
+      "reference_seconds": 0.00023128400061978027,
+      "reference": "partition",
+      "partition_count": 27,
+      "C0": "651441045367458558080/21",
+      "C1": "54272/21",
+      "backbone_configs": 6,
+      "transitions": 264
+    },
+    {
+      "n": 15,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.00028583499806700274,
+      "reference_seconds": 0.00022351300140144303,
+      "reference": "partition",
+      "partition_count": 27,
+      "C0": "31021002160355166848",
+      "C1": "0",
+      "backbone_configs": 13,
+      "transitions": 219
+    },
+    {
+      "n": 15,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 0.00030019599944353104,
+      "reference_seconds": 0.000226265998207964,
+      "reference": "partition",
+      "partition_count": 27,
+      "C0": "93063006481065501056/3",
+      "C1": "512/3",
+      "backbone_configs": 10,
+      "transitions": 225
+    },
+    {
+      "n": 16,
+      "backbone": [],
+      "integer_jet_seconds": 0.00031144300010055304,
+      "reference_seconds": 0.00033978500141529366,
+      "reference": "partition",
+      "partition_count": 32,
+      "C0": "144531696041254542725224704/2275",
+      "C1": "9842209289984/6825",
+      "backbone_configs": 1,
+      "transitions": 213
+    },
+    {
+      "n": 16,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 0.0003786829984164797,
+      "reference_seconds": 0.0002810870064422488,
+      "reference": "partition",
+      "partition_count": 32,
+      "C0": "14675526059573209242860032/231",
+      "C1": "4693504/231",
+      "backbone_configs": 6,
+      "transitions": 321
+    },
+    {
+      "n": 16,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.00035853299777954817,
+      "reference_seconds": 0.00029462800011970103,
+      "reference": "partition",
+      "partition_count": 32,
+      "C0": "63530415842308265100544",
+      "C1": "256",
+      "backbone_configs": 14,
+      "transitions": 283
+    },
+    {
+      "n": 16,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 0.0003324839999550022,
+      "reference_seconds": 0.00029693199758185074,
+      "reference": "partition",
+      "partition_count": 32,
+      "C0": "2096503722796172748334336/33",
+      "C1": "24832/33",
+      "backbone_configs": 11,
+      "transitions": 281
+    },
+    {
+      "n": 17,
+      "backbone": [],
+      "integer_jet_seconds": 0.0003760290055652149,
+      "reference_seconds": 0.00043655899935401976,
+      "reference": "partition",
+      "partition_count": 38,
+      "C0": "128707787888903706178140093680384/525525",
+      "C1": "28147038702642176/175175",
+      "backbone_configs": 1,
+      "transitions": 253
+    },
+    {
+      "n": 17,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 0.000494886000524275,
+      "reference_seconds": 0.00036083599843550473,
+      "reference": "partition",
+      "partition_count": 38,
+      "C0": "18858283939766098477150078720/77",
+      "C1": "20961280/77",
+      "backbone_configs": 6,
+      "transitions": 398
+    },
+    {
+      "n": 17,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.00047040900244610384,
+      "reference_seconds": 0.00035190299968235195,
+      "reference": "partition",
+      "partition_count": 38,
+      "C0": "244912778438520759443246848",
+      "C1": "1024",
+      "backbone_configs": 15,
+      "transitions": 369
+    },
+    {
+      "n": 17,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 0.0004357779980637133,
+      "reference_seconds": 0.0003664249961730093,
+      "reference": "partition",
+      "partition_count": 38,
+      "C0": "2694040562823728353875752192/11",
+      "C1": "48128/11",
+      "backbone_configs": 12,
+      "transitions": 355
+    },
+    {
+      "n": 18,
+      "backbone": [],
+      "integer_jet_seconds": 0.00040892800461733714,
+      "reference_seconds": 0.0005400430018198676,
+      "reference": "partition",
+      "partition_count": 46,
+      "C0": "1562034464489679937785189984135343616/875875",
+      "C1": "28606202416676768768/875875",
+      "backbone_configs": 1,
+      "transitions": 278
+    },
+    {
+      "n": 18,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 0.0005576990006375127,
+      "reference_seconds": 0.0004608149974956177,
+      "reference": "partition",
+      "partition_count": 46,
+      "C0": "23184185001702113680454872605184/13",
+      "C1": "489765888/91",
+      "backbone_configs": 7,
+      "transitions": 472
+    },
+    {
+      "n": 18,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.0005735020022257231,
+      "reference_seconds": 0.00044867699762107804,
+      "reference": "partition",
+      "partition_count": 46,
+      "C0": "19617387309132557729615603209216/11",
+      "C1": "49664/11",
+      "backbone_configs": 17,
+      "transitions": 464
+    },
+    {
+      "n": 18,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 0.000509367004269734,
+      "reference_seconds": 0.0004583710033330135,
+      "reference": "partition",
+      "partition_count": 46,
+      "C0": "255026035018723250485002845936640/143",
+      "C1": "4862464/143",
+      "backbone_configs": 13,
+      "transitions": 446
+    },
+    {
+      "n": 19,
+      "backbone": [],
+      "integer_jet_seconds": 0.00045498600229620934,
+      "reference_seconds": 0.0006605309972655959,
+      "reference": "partition",
+      "partition_count": 54,
+      "C0": "5877672534784822503972795184907637390848/238875",
+      "C1": "10624517783830071963648/875875",
+      "backbone_configs": 1,
+      "transitions": 324
+    },
+    {
+      "n": 19,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 0.0007024229998933151,
+      "reference_seconds": 0.0005477840022649616,
+      "reference": "partition",
+      "partition_count": 54,
+      "C0": "517235183061064380094740645602289140224/21021",
+      "C1": "3990613829632/21021",
+      "backbone_configs": 7,
+      "transitions": 568
+    },
+    {
+      "n": 19,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.0006796800007577986,
+      "reference_seconds": 0.0005272239941405132,
+      "reference": "partition",
+      "partition_count": 54,
+      "C0": "270662052883864144476578043761384960/11",
+      "C1": "288768/11",
+      "backbone_configs": 18,
+      "transitions": 585
+    },
+    {
+      "n": 19,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 0.0006835950043750927,
+      "reference_seconds": 0.0005600320000667125,
+      "reference": "partition",
+      "partition_count": 54,
+      "C0": "959620005679154694053322155169635840/39",
+      "C1": "17297408/39",
+      "backbone_configs": 14,
+      "transitions": 552
+    },
+    {
+      "n": 20,
+      "backbone": [],
+      "integer_jet_seconds": 0.0005456409999169409,
+      "reference_seconds": 0.000830773999041412,
+      "reference": "partition",
+      "partition_count": 64,
+      "C0": "28812893919204503211306186768164118318556568576/44669625",
+      "C1": "369581820561524111928470528/44669625",
+      "backbone_configs": 1,
+      "transitions": 352
+    },
+    {
+      "n": 20,
+      "backbone": [
+        3
+      ],
+      "integer_jet_seconds": 0.0007917560069472529,
+      "reference_seconds": 0.0006727590007358231,
+      "reference": "partition",
+      "partition_count": 64,
+      "C0": "13559008903155060334558429916212166560028672/21021",
+      "C1": "252534368921600/21021",
+      "backbone_configs": 7,
+      "transitions": 666
+    },
+    {
+      "n": 20,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.0008599670036346652,
+      "reference_seconds": 0.0007643760036444291,
+      "reference": "partition",
+      "partition_count": 64,
+      "C0": "276714467411327761929763875835914321197056/429",
+      "C1": "88655872/429",
+      "backbone_configs": 20,
+      "transitions": 717
+    },
+    {
+      "n": 20,
+      "backbone": [
+        3,
+        7
+      ],
+      "integer_jet_seconds": 0.0008376839978154749,
+      "reference_seconds": 0.0006932600008440204,
+      "reference": "partition",
+      "partition_count": 64,
+      "C0": "276714467411327761929763875835917873026048/429",
+      "C1": "3696714752/429",
+      "backbone_configs": 15,
+      "transitions": 668
+    },
+    {
+      "n": 32,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.006950167000468355,
+      "reference_seconds": 0.006092863994126674,
+      "reference": "partition",
+      "partition_count": 390,
+      "C0": "1100784711272821619692698726148720152348661708945951383828514682011140109634730131899505872934641804693063842765885219995648/1415781675",
+      "C1": "1285641327080333548769291872552731829549072384/18405161775",
+      "backbone_configs": 44,
+      "transitions": 4949
+    },
+    {
+      "n": 48,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.043716617001337,
+      "reference_seconds": 0.06839060000493191,
+      "reference": "partition",
+      "partition_count": 2910,
+      "C0": "119524492605090338285915387060689652852417677883651251543171120147627238819938161078852115567578374805797012703674331508080861424414603821883534000860142040346722414845251546961919113390528879218605293032009677095389436688599549682833936630431467303136656687856042618010402840651929891553713531079622656/406940194084253300145675",
+      "C1": "7470787479665559417741416068669516035300695472797102612699818366267087848302530068933052865061444940124198000271201569348534075021256569099304991625306200604672/2034700970421266500728375",
+      "backbone_configs": 92,
+      "transitions": 26132
+    },
+    {
+      "n": 64,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.17478361800021958,
+      "reference_seconds": 0.5342559029959375,
+      "reference": "partition",
+      "partition_count": 16444,
+      "C0": "102308994981177893969734043677712473780675480596388700630481999878406717201854681379982858317545310345899330518100638236819926644034722490601776114858194224395422394635433793361679847877810645151306033117885571519950665682343575569063934137729653413022042194908296117700712114106991978153278449471657323794328606009713515776316225580046978228270410724342769001667137828546069017035578550527715649324831039575092763099647644455663532813978295483175395946267787923237199802790457079407645142168033903798318983389451883422998706258320682732526063467402100736/1725279480931188026338098155538112125",
+      "C1": "318615589083801210085145206703511973911172621831793487941750969227301431991239693296234201442964160641976787606484984100466875152370049645107365552853081222773032534702985375976246419508920261284452246501083531507779579392542976364748980617428891970115244106577659294453482912560720401266282573240739434999637370962619223450556712685923586231238656/53483663908866828816481042821681475875",
+      "backbone_configs": 156,
+      "transitions": 85490
+    },
+    {
+      "n": 80,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 0.5560901549979462,
+      "reference_seconds": 3.4949186840021866,
+      "reference": "partition",
+      "partition_count": 77312,
+      "C0": "1251832184069902323724956483516002691776693911221618559932306889470040880584202542243744665930932000077328184060590963741344937534900622922703871159078596443081648550214380775965477680947238391025536243649670581181633043870603902635183923870099533496298964709150096477153753326461685557450985504856532775585650970437562875138809856397790571443525671691447296083074443465964811566929823364812331583099793778855592067901163639847762459514438107410931013317367610952126801767401169776779729094611842281890055398327499161756936241452629850308708378174772319794380033892566657690525229738252828613326821870115626750583974157641811472175433508009870793695911613697452599189174321732814664210672013200728489725756922891250843898621917026130422996519835159037545780316443753343213813814486400535828198720177791967408131093036764205039634140765354601541725230243882600794707530681973354331954479104/49829615633714353507774906996073314292544125131839421875",
+      "C1": "7193864093784767041069988453894296859193368810152503261895393623505083052441794316116774508186490711555604740824462897146375561083600947566418615410435040657212262642713457651550041079299232137597779171499379479448411706473079511783345301203100162964541735062243369987230560686176086358225374031254886842102441200157582281432510849283757766068703636203957415814748747186103452158647388981669562889590492078827689484491390957065451952330794910432684735537775731583168251572651193791636370772755546968194178956715779477797987870449015719043185096693180813716939723912799521161344089070163427321169950685148233735340032/1392606626394859037506761874469206836281101602368775421875",
+      "backbone_configs": 238,
+      "transitions": 215023
+    },
+    {
+      "n": 96,
+      "backbone": [
+        3,
+        5
+      ],
+      "integer_jet_seconds": 1.766821165998408,
+      "reference_seconds": 16.469888389998232,
+      "reference": "rational_jet",
+      "partition_count": null,
+      "C0": "6332051280447333213798176320857112608291334575786990615809732710189020919766877148238361635449191521941916842000080562311544575472018009999494166177141279182291785101384918545561411538373833197955694678422303445144399935984985532118689283391301102608455166393038010043072722378397344926297994731267332698140351565222399972813838100987643360689786965246593987721891066912194396479650763839923833619450665521343694850897410782454754386848073725217983626069544481250208628205131455592267952282504733414669704293417809650482448688035547640960471648257509342275678829546091939512995988786198432407611273813334353303382001516314681956600427575800960162817153538814927471731591986103557910385248914946541997452496321172564709419027865201125117169688720899643038069766769701342861831580638837925477018678122651028958751491734608677447483370388897851712371401727655444256448150859270070651949880868233013234917485982758851309042530510453171074821598459501841630076862118795113617150055739990274339391853249069287700292842356044559755036914075812903262326919332446313751109336463537404639273132247468021599753447743950601724310311577020077136679840998872358870389722291100968766610299029089982372155939088956596805010612297884226719811095678589113998900758130310667190542749208278857358130038361858516157173071872/126221938511206774627283607938211514909582297988888382849582923756832070955390625",
+      "C1": "131822694207802938643017524720683569866201685008377373714666009167807450666540399832748788154623612351096933453153262209559389874974527793079785381354405472891665612841287954131059776792747831174929637705689489535594839655529469205755965082555068405351986504901396923864316231638657933982383125807337599767613735343414500243796372026276242095315295309057841418502803597262188084498701920272726810537001212662682304329810923041183266202127093200128471593092441177043373831551042316456773557607908057299570463807997275389060222266111363521466388463706240862730606868092165814162374563751235704324214936431449619375262839185597332102410844403398841647303378247684576231025370001873189185920752401595824264950814199019139312536377366127396219005619996848174800204466990215517829290931955855258803201813982995734281092013638858654376980626382832049461689105545870659315653226210603703225337345954064111985780515390759773263646116053976299608028415886465331778136571904/14024659834578530514142623104245723878842477554320931427731435972981341217265625",
+      "backbone_configs": 337,
+      "transitions": 457684
+    }
+  ]
+}

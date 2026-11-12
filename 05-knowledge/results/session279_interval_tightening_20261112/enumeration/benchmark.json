@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 32,
+      "backbone": [
+        3,
+        5
+      ],
+      "marked_dp_seconds": 0.06044477500108769,
+      "partition_seconds": 0.006122286002209876,
+      "partition_count": 390,
+      "backbone_configs": 44,
+      "transitions": 4949
+    },
+    {
+      "n": 48,
+      "backbone": [
+        3,
+        5
+      ],
+      "marked_dp_seconds": 0.4954205219983123,
+      "partition_seconds": 0.07619820100080688,
+      "partition_count": 2910,
+      "backbone_configs": 92,
+      "transitions": 26132
+    },
+    {
+      "n": 64,
+      "backbone": [
+        3,
+        5
+      ],
+      "marked_dp_seconds": 2.241792405999149,
+      "partition_seconds": 0.6130963640025584,
+      "partition_count": 16444,
+      "backbone_configs": 156,
+      "transitions": 85490
+    },
+    {
+      "n": 80,
+      "backbone": [
+        3,
+        5
+      ],
+      "marked_dp_seconds": 7.501744375003909,
+      "partition_seconds": 3.9583654219968594,
+      "partition_count": 77312,
+      "backbone_configs": 238,
+      "transitions": 215023
+    }
+  ]
+}
