@@ -1,7 +1,7 @@
 # Stable port obstructions and the forbidden Hamiltonian spectrum
 
 **PROVED explicit infinite families / FINITE-EXACT classification through ten;
-Chan–Pak OPEN. Research continues in this packet.**
+Chan–Pak OPEN. Extended session completed with reproducible receipts.**
 
 Two different proposed composition principles fail on actual strong unit
 seeds. Individual stable ports need not be jointly stable, first at order
@@ -182,6 +182,14 @@ families,49+495*2^a and5841*2^a−241, a>=1. The first starts at1039;
 the second comes directly from the nonconfluent crossing. These are
 scoped infinite constructions, not coverage of all odd coefficients.
 
+The method then scales to the entire binary birth-clock library:
+[FAMILY-COMPILER.md](FAMILY-COMPILER.md) proves complete head closure for
+all540 normalized binary laws and identifies320 further higher-mode
+odd-slope families with no head debt. Its exact coefficient-overlap graph
+has540 vertices,257 edges and211 collision values; its distinct coefficient
+count at height2^b is exactly540*b−6078 for every b>=21. This coefficient
+graph is explicitly distinguished from the marked tournament metagraph.
+
 Let F_n be the positive odd integers not attained by a tournament of at
 most n vertices. Padding makes F_(n+1) a subset of F_n. The target is
 intersection_n F_n={7,21}; every finite F_n is still infinite above the
@@ -292,6 +300,20 @@ form. The one-fixed-vertex extension of J2, even allowing every selection,
 has no three-unit-corner survivor. These recorded stopping reasons direct
 the search toward changed cores or more than one new exterior vertex.
 
+The complete16,384 two-fixed-vertex decorations preserving J2's extreme
+gates likewise have no crossing. A broader all-threshold search over all
+ordinary quotients through9 examines22,003 extreme-port pairs and774,938
+selections and finds only J2, at thresholds(2,2). It solves the power-of-two
+roots of the entire bilinear tensor, so this result is not limited to
+small inflation lengths. At quotient order10, the complete6,880-class
+interior bank and all64 extreme-gate choices give440,320 presentations,
+432,851 strong. None has a crossing with both thresholds at least2;
+six three-corner candidates fail the fourth corner. This is a scoped
+negative classification of the extreme-gated chart, not of all order12
+seeds or of general higher-mode obstructions.
+
+![Exact unit loci and the two terminal births](crossings.png)
+
 ## Reproduction and dependencies
 
 The original order-nine chain is census_nine.py unit;
@@ -299,8 +321,8 @@ census_nine.py stable; joint_nine.py. The order-ten continuation is
 census_ten.py; audit_catalogue.py; stable_census.py10; joint_ten.py;
 birth_union.py10; descendants_eleven.py. Use a space before each numeric
 argument. The public ten-vertex input is cached outside the repository.
-Normal and optimized replays use separate receipts. Detailed final checks
-and source pins are recorded at close-out in the audit note.
+Normal and optimized replays use separate receipts. Detailed checks,
+source pins and executable commands are in [AUDIT.md](AUDIT.md).
 
 Inherited mechanisms: the previous atlas's endpoint tables and contraction
 lemma; Session288's selected-endpoint run bound and signed acyclic-port

@@ -101,6 +101,11 @@ verified general bounded range of the conjecture.
 
 ## F4 A renewable1039 family, and why99 closes its head
 
+Provenance boundary:1039 was already supplied by the inherited ordinary
+order-eight seed rows[22,36,8,19,38,77,159,63], O={4,7}, with H=137,
+delta=1,U=1039 and no stable port. The new contribution here is the
+renewable stable-port family, not the first realization of coefficient1039.
+
 Take the ten-vertex strong marked birth
 
 ```
@@ -229,6 +234,12 @@ does not assert such a grammar already exists. Its cheapest next test is
 to compile the complete head obligations of each new birth recurrence and
 look for a fixed interface bank; an unrepaired infinite family would
 refute a proposed finite bank, not the spectrum conjecture.
+
+**Completed next test in this session:** [FAMILY-COMPILER.md](FAMILY-COMPILER.md)
+closes all786 head obligations of all540 binary birth-clock laws through
+order10, after adding two auxiliary source graphs outside the unit-bearing
+source bank. A further320 higher-mode odd-slope families need no repair.
+This is a complete positive test for that library, not a universal grammar.
 
 Connections to Collatz, automata or prime geometry here are exact only
 when they retain the affine carry, integer divisibility state, physical

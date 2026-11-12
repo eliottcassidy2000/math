@@ -1,6 +1,7 @@
 # Joint stability, new births, and the decreasing forbidden spectrum
 
-**Research in progress; global joint stability REFUTED; Chan–Pak OPEN.**
+**Extended session completed; global joint stability REFUTED;
+scoped constructive families PROVED; Chan–Pak OPEN.**
 Started12 November2026,19:18 UTC. Baseline b203dbca83f0. Isolated worktree;
 the shared checkout's unrelated changes are preserved.
 
@@ -47,3 +48,21 @@ two unbounded coefficient recurrences with all heads closed. The successful
 new move is to compile lower heads into nonunit endpoint interfaces; unit
 stability is required for the renewable source, not for every auxiliary
 constructor. Prime wheels only prioritize costed physical branches.
+
+Final board revisit: all 540 binary birth laws now have all 786 head
+obligations closed; 320 higher-mode odd-slope laws need no head repair.
+Two necessary auxiliary sources admit no unit selection at all. This
+exposes the failed search filter rather than an arithmetic impossibility.
+The coefficient overlap graph is completely finite even though its rays
+are infinite, and has an exact eventual dyadic-height counting law.
+The contraction graph instead retains two distinct roots at its crossing.
+Neither projection may discard its graph witnesses, frozen lengths or
+valuations. The first library gap 53,559 still produces the explicit
+allowed output 107,119 by a different inherited constructor.
+
+The completed investigation ran for more than two hours. Final scope,
+independent algorithmic audits, reproduction commands and remaining open
+questions are recorded in [AUDIT.md](AUDIT.md). The next useful work is a
+grammar that creates new birth cores, not another finite inflation of the
+same core bank; the negative rank-raising and extreme-gate probes record
+specific routes already exhausted in this session.

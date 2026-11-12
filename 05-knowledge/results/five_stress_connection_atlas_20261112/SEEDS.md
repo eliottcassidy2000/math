@@ -337,12 +337,12 @@ so it terminates; inflating the contracted stable port reconstructs the
 original state. This removes predictable clone descendants from future
 enumeration while retaining the growth law and endpoint marking.
 
-**OPEN stable-port hypothesis:** for every strong marked unit seed, the
-full set of individually stable unselected ports is transitive and jointly
-stable. The complete universe through8 supports both clauses. They are
-separate obligations, and the finite computation proves neither at larger
-orders. A directed triangle among individually stable ports or one nonzero
-mixed defect coefficient would refute the respective clause immediately.
+**Status correction,12 November:** the proposed conjunction that every
+strong marked unit seed has a transitive and jointly stable full port set
+is now REFUTED. The joint clause fails first at order9, and even different
+contractible blocks fail at order11. The transitivity clause remains OPEN.
+The complete universe through8 still proves both finite clauses. See
+[the explicit mixed tensors and completed larger census](../joint_stability_forbidden_20261112/README.md).
 
 The next efficient search should enumerate stable-clone births, preserve
 their full endpoint tensors, and test operations changing the marked gap or
@@ -383,5 +383,6 @@ The continuation in [BIRTHS](BIRTHS.md) proves that the98 birth templates
 through8 have disjoint original-port inflation cones at all orders, with
 exactly19n−49 members at each n>=8. It also completes the entire order9
 descendant layer and gives a general rational enumeration theorem for
-finite clone banks. These are scoped positive results; general stable-port
-closure, arbitrary-order confluence and odd-coefficient coverage stay OPEN.
+finite clone banks. These are scoped positive results; arbitrary-order
+ordinary confluence is now REFUTED by the continuation linked above.
+The acyclic-port question and universal odd-coefficient coverage stay OPEN.

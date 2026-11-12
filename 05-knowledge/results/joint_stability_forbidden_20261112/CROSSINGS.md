@@ -102,6 +102,14 @@ U(a,2)=-204+1241*2^a+1960*3^a;
 U(2,b)=5841*2^b-964.
 ```
 
+The mode asymmetry has a concrete endpoint cause. At port0 the single
+out-neighbor bounds H and delta by two runs, but U allows both paths to
+end in the port, permitting three runs. At port8 the single in-neighbor
+still bounds U by two runs because its second path starts selected.
+Thus the respective U mode budgets are(3,2), explaining the3^a*2^b term
+and the different continuing profiles under converse. These integer
+bases count run allocations; primality alone is not the mechanism.
+
 At the terminal births, both H values are1347, while U is8158 or10718.
 Their odd parts are4079 and5359. At the shared state T(2,2), U=22400,
 whose odd part is175 and whose dyadic valuation is7. Neither H nor a
@@ -149,6 +157,42 @@ needed for enumeration by exact cylinder unions. The complete fixed-mark
 one-vertex extension probe of Q finds no strong extension preserving all
 three necessary unit corners. That failed local repair does not classify
 other cores or more general operations.
+
+## C5 The exact local transport test is weaker than full joint stability
+
+Suppose two eligible blocks have current lengths(A,B), both at least2,
+and let f(a,b) be the defect with the rest of the marked graph fixed.
+Individual stability gives f(a,B)=f(A,b)=1 at every positive length.
+After contracting the second block, the first remains stable **iff**
+f(a,B−1)=1 for every a>=1. The corresponding condition after the other
+contraction is f(A−1,b)=1 for every b>=1. These two univariate identities
+are exactly the test that the two elementary contractions form a legal
+commuting diamond. Full joint stability implies them, but is stronger.
+
+If this local test holds at every fork in a reduction-closed class,
+termination and the local-diamond argument give ordinary confluence.
+Failure of the test at a particular fork does not by itself exclude a
+later common descendant through other blocks; the explicit J2 roots
+prove nonconfluence because they are terminal and distinct.
+
+A unit double-contracted corner alone is insufficient algebraically.
+For example the **formal**, not asserted physical, function
+
+```
+f(a,b)=1+(2^a-4)*(2^b-4)*(2^a-2)
+```
+
+has stable axes at(2,2) and f(1,1)=1, but f(a,1) is not identically1.
+Thus the missing condition is stable-line transport, not just the four
+corner values, once the uniform two-run hypothesis is removed. A different
+formal example1+F_3(a)F_3(b), with F_3(m)=3^m−3*2^m+3, has the legal
+diamond at(2,2) but fails global joint stability. These separate the
+quantifiers a repaired proof must keep.
+
+For physical two-run crossings(C1), nonzero k and A,B>=2 always fail
+both adjacent transport identities. For higher-mode charts use the full
+univariate run bound at each contracted child. This is a cheaper sufficient
+confluence certificate than computing every multivariate coefficient.
 
 ## Map and verification contract
 

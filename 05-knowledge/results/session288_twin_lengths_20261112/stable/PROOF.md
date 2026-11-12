@@ -1,7 +1,8 @@
 # Stable lengths as a simplicial complex and a finite union of exact cylinders
 
 **PROVED structural statements; FINITE-EXACT source-bank compilation.**
-The global stable-port conjecture and Chan–Pak remain OPEN.
+The acyclic stable-port clause and Chan–Pak remain OPEN. The joint clause
+was subsequently REFUTED by the physical examples recorded in section2.
 
 ## 1. Provenance and the precise question
 
