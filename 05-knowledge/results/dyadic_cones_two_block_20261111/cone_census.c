@@ -1,6 +1,6 @@
 /* Cone census: all rooted tournaments (L, v), L = B + v, with response M = U_B(O) a power of two.
    Offsets c0 = H(B) - W(O) (THM-5126 (1')); then c0 + 2^(log2 M + t) is a path count for every t >= 1.
-   usage: cone_census nb ext rmax < reps      (nb = order of the listed tournaments; ext = 1: use all one-vertex
+   usage: cone_census nb ext rmax [c] < reps      (optional odd c: roots with response c 2^j instead of 2^j)      (nb = order of the listed tournaments; ext = 1: use all one-vertex
    extensions of the listed tournaments as B (order nb+1), ext = 0: the listed tournaments themselves)
    prints for every odd offset r with |r| <= rmax the least exponent j (M = 2^j) and one witness (out-masks of B, O). */
 #include <stdio.h>
@@ -26,25 +26,26 @@ static void compute(void){
 }
 #define RMAX 20001
 static int bestj[2*RMAX]; static int bestB[2*RMAX][10]; static int bestO[2*RMAX]; static int bestm[2*RMAX];
-static long nroots=0;
+static long nroots=0; static u64 codd=1;
 static void scan(int rmax){
     int N=1<<m; static ll wsum[1<<10]; static u64 usum[1<<10];
     wsum[0]=0; usum[0]=0;
     for(int O=1;O<N;O++){ int low=__builtin_ctz(O); int rest=O&(O-1); ll w=wsum[rest]; u64 u=usum[rest]+U[low];
         int t=rest; while(t){ int b=t&-t; int f=__builtin_ctz(b); w+=(ll)(W[low][f]+W[f][low]); t^=b; }
         wsum[O]=w; usum[O]=u;
-        if(u && !(u&(u-1))){ ll c0=(ll)Hval-w; if(c0>-rmax&&c0<rmax){ int j=__builtin_ctzll(u); int idx=(int)(c0+RMAX); nroots++;
+        if(u && (u%codd)==0 && !((u/codd)&((u/codd)-1))){ ll c0=(ll)Hval-w; if(c0>-rmax&&c0<rmax){ int j=__builtin_ctzll(u); int idx=(int)(c0+RMAX); nroots++;
             if(j<bestj[idx]){ bestj[idx]=j; bestO[idx]=O; bestm[idx]=m; for(int i=0;i<m;i++) bestB[idx][i]=out[i]; } } } }
 }
 int main(int argc,char**argv){
     int nb=atoi(argv[1]), ext=atoi(argv[2]), rmax=atoi(argv[3]); if(rmax>=RMAX) rmax=RMAX-1;
+    if(argc>4) codd=strtoull(argv[4],0,10);
     for(int i=0;i<2*RMAX;i++) bestj[i]=99;
     char line[256]; int base[10]; long nB=0;
     while(fgets(line,sizeof(line),stdin)){ char*p=line; int ok=1; for(int i=0;i<nb;i++){ char*e; long v=strtol(p,&e,10); if(e==p){ok=0;break;} base[i]=(int)v; p=e; } if(!ok) continue;
         if(!ext){ m=nb; for(int i=0;i<m;i++) out[i]=base[i]; compute(); scan(rmax); nB++; }
         else { m=nb+1; for(int X=0;X<(1<<nb);X++){ for(int i=0;i<nb;i++){ out[i]=base[i]; if(!((X>>i)&1)) out[i]|=1<<nb; } out[nb]=X; compute(); scan(rmax); nB++; } }
     }
-    printf("# bases of order %d: %ld ; cone roots found: %ld\n",m,nB,nroots);
-    for(int r=-rmax+1;r<rmax;r++){ int idx=r+RMAX; if(bestj[idx]<99){ printf("r=%d j=%d m=%d O=%d B:",r,bestj[idx],bestm[idx],bestO[idx]); for(int i=0;i<bestm[idx];i++) printf(" %d",bestB[idx][i]); printf("\n"); } }
+    printf("# bases of order %d: %ld ; roots with response %llu 2^j found: %ld\n",m,nB,codd,nroots);
+    for(int r=-rmax+1;r<rmax;r++){ int idx=r+RMAX; if(bestj[idx]<99){ printf("r=%d j=%d m=%d O=%d c=%llu B:",r,bestj[idx],bestm[idx],bestO[idx],codd); for(int i=0;i<bestm[idx];i++) printf(" %d",bestB[idx][i]); printf("\n"); } }
     return 0;
 }

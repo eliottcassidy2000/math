@@ -1,0 +1,17 @@
+types (c, r), c odd <= 255, |r| < 2047: 243055
+box: every odd c <=   1 and every odd r with |r| <=  647 is a root type (limiting c = 1)
+box: every odd c <=   3 and every odd r with |r| <=  295 is a root type (limiting c = 3)
+box: every odd c <=   7 and every odd r with |r| <=  295 is a root type (limiting c = 3)
+box: every odd c <=  15 and every odd r with |r| <=  295 is a root type (limiting c = 3)
+box: every odd c <=  31 and every odd r with |r| <=  275 is a root type (limiting c = 31)
+box: every odd c <=  63 and every odd r with |r| <=    9 is a root type (limiting c = 35)
+box: every odd c <= 127 and every odd r with |r| <=    9 is a root type (limiting c = 35)
+box: every odd c <= 255 and every odd r with |r| <=   -1 is a root type (limiting c = 245)
+  c= 1: positive complete to  647, negative complete to  791, largest j in |r| <= 63: 12
+  c= 3: positive complete to  295, negative complete to  803, largest j in |r| <= 63: 10
+  c= 5: positive complete to  401, negative complete to 1099, largest j in |r| <= 63: 10
+  c= 7: positive complete to  453, negative complete to  721, largest j in |r| <= 63: 9
+  c= 9: positive complete to  751, negative complete to 1135, largest j in |r| <= 63: 8
+  c=11: positive complete to  435, negative complete to  913, largest j in |r| <= 63: 8
+  c=13: positive complete to  417, negative complete to 1089, largest j in |r| <= 63: 7
+  c=15: positive complete to  483, negative complete to  911, largest j in |r| <= 63: 7

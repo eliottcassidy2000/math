@@ -1,0 +1,10 @@
+cone roots: 1012 positive offsets, 4165 negative offsets
+positive offsets complete (all odd r) up to 647 ; negative up to 791
+odd r <= 199 without a cone root: positive 0 [] ; negative 0 []
+odd r <= 499 without a cone root: positive 0 [] ; negative 0 []
+odd r <= 999 without a cone root: positive 2 [649, 825] ; negative 3 [793, 809, 891]
+odd r <= 1999 without a cone root: positive 101 [649, 825, 1147, 1175, 1189, 1199, 1207, 1257, 1351, 1355, 1397, 1401, 1437, 1441, 1447, 1479, 1487, 1489, 1535, 1549, 1565, 1603, 1607, 1609, 1617, 1629, 1631, 1679, 1691, 1701, 1711, 1715, 1717, 1721, 1727, 1733, 1735, 1747, 1751, 1761]... ; negative 20 [793, 809, 891, 1051, 1103, 1105, 1179, 1197, 1247, 1305, 1391, 1493, 1553, 1631, 1795, 1811, 1851, 1925, 1933, 1951]
+offsets 1 + 2^e (rows of weight three):  [(1, 5), (2, 5), (3, 4), (4, 7), (5, 6), (6, 8), (7, 10), (8, 10), (9, 10), (10, 11), (11, None), (12, None), (13, None), (14, None)]
+offsets 2^e - 1:  [(1, 0), (2, 5), (3, 5), (4, 7), (5, 5), (6, 6), (7, 7), (8, 10), (9, 13), (10, 12), (11, None), (12, None), (13, None), (14, None)]
+largest exponent j among cone roots with |r| <= 999: 13
+window check (offset <= response for positive offsets): True

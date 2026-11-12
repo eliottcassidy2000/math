@@ -32,4 +32,17 @@ Falsifiers: one missing offset in the stated range. Each prediction is scored se
 
 ## Outcomes
 
-(filled after the runs)
+`out/cones_roots_order10.txt`, `out/blocks_roots_order10.txt`; summaries in `out/summary_cones.txt`,
+`out/summary_blocks.txt`. Every cone witness was recounted literally (`verify_cones.c`: 5,177 witnesses of order
+10, three tail lengths each, no failure).
+
+- (Q1) **CONFIRMED.** Every odd `r` with `|r| <= 199` is the offset of a cone root of order at most 10; in fact
+  every odd `r` with `-791 <= r <= 647`.
+- (Q2) **CONFIRMED.** `257` has a cone root of order 10 (response `2^10`); so do `513` and `1025`.
+- (Q3) **FAILED.** The positive offsets `649` and `825` have no cone root of order at most 10 (the only two below
+  1000; the negative offsets missing below 1000 are `-793, -809, -891`).
+- (Q4) **CONFIRMED.** Every odd `c <= 15` and every odd `r` with `|r| <= 295` is a root type of order at most 10
+  (the registered range was `|r| <= 63`); every odd `c <= 31` and `|r| <= 275`.
+
+Not predicted: 243055 of the 261888 possible types with odd `c <= 255` and odd `|r| < 2047` occur among the roots of
+order at most 10 (92.8 percent).

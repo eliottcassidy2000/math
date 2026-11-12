@@ -1,0 +1,1 @@
+one back arc, 3 <= m <= 11: formulas hold in 165 cases, fail in 0
