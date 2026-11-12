@@ -153,3 +153,18 @@ largest being 10391, and none in `(10391, 2^17]`; with `L = 4` there are 127 mis
 
 Note on addendum D: the run at `2^18` (`runs/direct_closure_18.txt`, 32,860,481 live states) gives the same 29
 misses.
+
+## Audit notes (added after the independent audit, `audit/AUDIT.md`; nothing above this line was changed)
+
+- Integrity: the audit compared the registered text at every commit and the push times with the first appearance
+  of the programs and outputs (its section 5.5): PASS. Git cannot exclude an unlogged run.
+- C5: the count of the program is a count of parameter tuples, and the parametrisation is redundant (trailing
+  letters 1 and leading letters 0 are both chain vertices). 82.9 is that count; 43.9 tuples of the registered
+  matrices; 14.3 distinct chains per odd number. C5 is CONFIRMED for tuples only (audit M3).
+- D2, D3: the family of addendum D is the O/Z/J root-change grammar, whose 29 misses are in canon to `10^9`
+  (HYP-9494 (D), THM-4884 (2b), Session197). The predictions were registered without that knowledge; their outcome
+  was readable from canon, so they were not out-of-sample tests (audit M1 (iii)).
+- E: after the registered runs the `L = 5` closure was extended to `2^19` (`runs/finite_blocks_L5_19.txt`): the same
+  49 misses, none in `(10391, 2^19]`. Not a registered prediction.
+- Calibration: five of eleven predictions failed (C3, C4, D2, E2, E3), each by predicting more coverage than a
+  restricted family has.

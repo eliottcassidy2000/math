@@ -25106,3 +25106,58 @@ a witness run is still in progress: either wait, or write the exact range that h
 is cited for a mechanism, read its own credit lines: THM-5109's status names Session236's seeds and THM-4879's
 three-slot factor. (5) Fetch and read what the other agents pushed during an audit before adding anything typed
 after it.
+
+## MISTAKE-768 (2026-11-11, kind-pasteur-2026-11-11-S25, THM-5147, THM-5148, HYP-9677 and `05-knowledge/results/kps_s25_euler_field_bridge_law_20261111/`; found by the author during the session and by the independent audit `audit/AUDIT.md` of that packet) -- a family and its exception list re-computed although both were in canon to `10^9` in the author's own audited packet, a hypothesis filed that restates the author's own, a "multiplicity" that counted each object many times, a remark missing its hypothesis, a reservation pushed on numbers taken one commit earlier, and five failed predictions out of eleven
+
+- **M1 (audit M1, M4). A known family re-computed and filed as new.** "Apex-path tournaments" (iterated joins of
+  one-apex tournaments at their apexes) are the O/Z/J root-change words of Sessions 197-200 (`J` = new apex,
+  `O`, `Z` = spine letters). Their 29 missing odd values are in Session197 `C1_COMPLETE.md` (to 5,001), THM-4884
+  (2b) (to 50,001) and HYP-9494 (D) (to `10^9`), the last one audited and written by this agent four days earlier
+  (S14). The pre-audit drafts labelled the list FINITE-EXACT to `2^18`, filed HYP-9677 (A) with evidence to `2^18`,
+  and registered D2 ("only 7 and 21 are missed", 40 per cent) against a fact already in canon. A grep for the first
+  misses ("7, 13, 21, 41, 43, 55") finds THM-4884 at once. Corrected: THM-5148 relabelled KNOWN for the list,
+  HYP-9677 (A) WITHDRAWN.
+- **M2 (audit M2). "Not found in this form."** The block matrices of THM-5148 are the universal seam transfer
+  (SEAM.md (1)-(7), THM-4875 (B)) and products of the O/Z/J letter moves (THM-4904, Setting); the absorption of
+  leading letters 0 is `JZ = OJ` (THM-4888 (D) 1, a theorem of this agent's S13). The sweep quoted in the draft was
+  a sub-agent digest that missed the author's own S13, S14 and S18 packets, and the author had not opened his own
+  thread notes on root changes and port chains before deriving. Corrected: (A), (B), (D) of THM-5148 relabelled
+  KNOWN, re-derived; new only the closed entries of a block and the coverage data of two sub-languages.
+- **M3 (found by the author after the audit started). A hypothesis that is a variant of the author's own.**
+  HYP-9677 (B) (63 blocks reach every odd number above 10391) is a finitely generated orbit statement of the same
+  kind as HYP-9640 (B) (this agent, S18: 56 two-port block matrices of order at most 4, every odd `v >= 493`). The
+  draft listed neither HYP-9640 nor HYP-9494 among the related families. Corrected: stated as a variant, with both.
+- **M4 (audit M3). A multiplicity that is not one.** "Mean multiplicity 82.9" counted parameter tuples of a
+  redundant parametrisation: a chain with chain lengths `c_1, c_2` was counted `c_1 c_2 (c_2 + 1)/2` times. Distinct
+  chains per odd number: 14.3; prediction C5 (at least 40) holds for tuples only. The number stood in the title of
+  THM-5148 at the first checkpoint.
+- **M5 (audit M5). A remark without its hypothesis.** "`UV - c` is never a null element" needs `[1]_z != 0`; for the
+  double cover of S24 at the centres `(0, b)` the Stein space is zero and every `UV - c` is null. The identity
+  behind the remark is correct.
+- **M6. A reservation on taken numbers.** The reservation command printed the theorem and hypothesis numbers
+  present on `origin/main` and, in the same chain, wrote stubs with hard-coded numbers (THM-5145, THM-5146,
+  HYP-9675) that the printed list already contained: mac-mini-2026-11-11-rays had reserved them one commit earlier.
+  The colliding stubs were on `origin/main` for one commit and were renumbered THM-5147, THM-5148, HYP-9677 in the
+  next. The check was run and its output was not read before the write.
+- **M7. A question that two lines answer, open through two audits; and an example listed as open that the note's
+  own form settles.** HYP-9668 (E') asked whether the image for Broughton's polynomial `W = x + x^2 y` is a
+  Mathieu-Zhao subspace. The S24 note and both of its audits contain `[x] = -[1]` and `[x^2 y] = [1]`, whose sum is
+  `[W] = 0`. And the S25 draft listed `x (x^2 y + x + 1)` as not settled "for lack of an Euler field", although its
+  own residue form, with `e^(-r(x))` in place of `e^(-x)`, settles every `x^(l+1) y + r(x)` (audit U2).
+- **Minor (audit m1-m16, all applied).** "The same for every `x + x^(l+1) y`" was inexact for `l >= 2`; "absent
+  exactly there" unjustified; `W- = R(p) + 1` stated without "no leading letter 0"; "every state is generated"
+  where only every value is; a heuristic labelled KNOWN; `2^35` of THM-4885 quoted without "one run"; an inequality
+  true only after the first block.
+- **Calibration.** Of eleven pre-registered predictions five failed: C3 and C4 (the chains with an inserted
+  transitive chain were expected to be complete: they miss 1214 odd numbers below `2^14`), D2, E2 and E3
+  (three-letter and four-letter blocks were expected to suffice in range: 1355 and 127 misses below `2^17`). Each
+  time I predicted more coverage than a restricted family has.
+- **Lessons.** (1) Before any work on path-count spectra, open the author's own thread notes (signed responses,
+  root changes, finite O/Z banks, port chains, seam gadgets, towers, rays) and translate the planned family into
+  every coordinate system of canon: rooted `(D, E, U, d)`, seam `(H, S, R)`, port `(h, E, O)`, triples
+  `(x_h, x_R, x_e)`, O/Z/J letters, cut `(h, A, T)`, rays `(c_0, M)`, types `(c, r)`. (2) Grep canon for the first
+  values of any miss list before registering a prediction about it. (3) A sub-agent digest is not a sweep of one's
+  own packets. (4) Count objects, not parameter tuples; state the convention next to any multiplicity. (5) Compute
+  the next free number from the listing in the same command; never hard-code it after a fetch. (6) For the image of
+  `d - dW ^`, test `[W^m]` and `[W^m h]` first, and try the note's own linear form on every example it lists as
+  open. (7) When predicting the coverage of a restricted family, halve the optimism.

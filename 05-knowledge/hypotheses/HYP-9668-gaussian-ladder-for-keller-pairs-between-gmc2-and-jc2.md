@@ -19,10 +19,11 @@ status: >
   (first audit): for W = x^2 y, 1 = 2 (d/dy - W_y)(y) - (d/dx - W_x)(x) lies in the kernel, which has codimension
   one. The same for x^p y^q, p, q >= 1, p != q.
   (E') [the same when the class of 1 is not zero, e.g. W = x + x^2 y]: REFUTED (kind-pasteur-2026-11-11-S25,
-  THM-5147): for W = x + x^2 y every power W^m lies in the image and x W^m = m! x never does; the same for
-  W = x + x^(l+1) y, l >= 1.
+  THM-5147): for W = x + x^2 y every power W^m lies in the image and x W^m = m! x never does; for
+  W = x + x^(l+1) y: W^m lies in the image for m >= l and x^l W^n = n! x^l never does; the audit of S25 proved
+  the same for every W = x^(l+1) y + r(x), without an Euler field (THM-5147 (B)).
   (Q) OPEN question, no conjecture offered; two necessary conditions are known (the 1-property and the Euler
-  obstruction of THM-5147 (C)).
+  obstruction of THM-5147 (C)); settled negatively: x^p y^q with p != q, and x^(l+1) y + r(x).
   First audit: PASS WITH CORRECTIONS; second audit (of the statements quoted from THM-5138 (D), (E) and of the
   special-centre example; this file itself was not read by it): PASS WITH CORRECTIONS. All applied (MISTAKE-764).
 session: kind-pasteur-2026-11-11-S24
@@ -112,8 +113,11 @@ of its Euler field (1 against 0).
 (Q) For which potentials `q` is `Im(d - dq ^)` a Mathieu-Zhao subspace? Necessary: 1 is not in the image, unless
 the image is everything. Also necessary (THM-5147 (C)): if `q` has an Euler field `xi` (`xi(q) = q`) whose
 divergence `delta` is a non-positive integer, every eigen-polynomial of nonzero class must have an eigenvalue `e`
-with `e + delta` a non-positive integer. Not settled: rank-one potentials without an Euler field, such as
-`x (x^2 y + x + 1)`. Known cases: `q = xy` (GMC(2)); `q = (f - a)(g - b)` for automorphisms; one variable
+with `e + delta` a non-positive integer. Every polynomial without critical point has fields with `xi(q) = q`;
+what can be missing is one of constant divergence, as for `x (x^2 y + x + 1)` (audit of S25, U3), which is
+nevertheless settled: for every `q = x^(l+1) y + r(x)` the image is not a Mathieu-Zhao subspace (THM-5147 (B),
+by an explicit linear form). Not settled: rank-one potentials outside the monomials `x^p y^q` and that family.
+Known cases: `q = xy` (GMC(2)); `q = (f - a)(g - b)` for automorphisms; one variable
 (van den Essen, Wright, Zhao). For `q = (f - a)(g - b)` with `(f, g)` a Keller pair the answer is JC(2).
 
 ## History of this file
@@ -125,4 +129,5 @@ quoted above, in this session after the audit. The second audit added that the I
 refuted in canon (THM-2801), which the first rewrite of this file had presented as possibly unrecorded.
 The repaired question (E') stood for a few hours: it is refuted by a two-line identity (THM-5147) that neither the
 author nor the two audits had tried, although both audits had computed `[x] = -[1]` and `[x^2 y] = [1]`, whose sum
-is `[W] = 0`.
+is `[W] = 0`. The audit of S25 then showed that the example listed as not settled, `x (x^2 y + x + 1)`, is settled
+by the residue form of the same note (MISTAKE-768).

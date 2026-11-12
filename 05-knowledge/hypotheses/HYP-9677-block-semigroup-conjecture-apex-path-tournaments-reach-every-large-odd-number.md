@@ -11,7 +11,7 @@ status: >
   Relation to canon: HYP-9640 (B) (kind-pasteur-2026-11-09-S18) is a finitely generated statement of the same kind
   with other generators (56 two-port block matrices of order at most 4, every odd v >= 493, FINITE-EXACT to
   2 * 10^5; a 13-matrix subset, v >= 961); HYP-9494 (D) bounds the number of root changes (at most 7 above 2647),
-  not the run length. Neither implies this statement nor is implied by it.
+  not the run length. No implication between these statements and this one is known.
   Implication to Chan-Pak: PROVED given the KNOWN fact that every odd number below 80,557 except 7 and 21 is a path
   count.
   No proof strategy is established. The statement is a local-to-global question for an orbit of a finitely
