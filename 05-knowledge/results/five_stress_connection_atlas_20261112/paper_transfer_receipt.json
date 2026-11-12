@@ -1,0 +1,293 @@
+{
+  "scope": "Independent checks of supplied paper sections14-16 on local necessary conditions; global resolving check on all accepted words through10. No audit of the billion-graph census. Seed-family generating laws checked against complete round census only to stated order.",
+  "pdf_sha256": "4fd417095c00e982e60b7ebf55f95af95e7a4463a80c3416d6b1964f5912e078",
+  "tight_edges": 184,
+  "minimum_prefixes": 320,
+  "core_states": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      5,
+      4
+    ]
+  ],
+  "core_minimum_prefixes": 106,
+  "accepting_states": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      5,
+      4
+    ]
+  ],
+  "core_characteristic_polynomial": "z**14*(z - 3)*(z - 1)*(z + 1)*(z**2 + z + 2)",
+  "even_characteristic_polynomial": "z**8*(z - 3)*(z**2 + z + 2)",
+  "odd_characteristic_polynomial": "z**6*(z - 1)*(z + 1)",
+  "ranks_of_A_powers_1_to_4": [
+    9,
+    7,
+    5,
+    5
+  ],
+  "accepted_word_GF_from_n4": "-4*(30*z**2 + 17*z + 15)/((3*z - 1)*(2*z**2 + z + 1))",
+  "positive_eigenvector_for_3": [
+    9,
+    9,
+    6,
+    2,
+    9,
+    5,
+    9,
+    2,
+    9,
+    6,
+    9,
+    2,
+    9,
+    5,
+    9,
+    2,
+    6,
+    9,
+    9
+  ],
+  "accepted_counts": {
+    "4": 60,
+    "5": 188,
+    "6": 556,
+    "7": 1660,
+    "8": 5004,
+    "9": 15004,
+    "10": 44972
+  },
+  "global_resolving_counts": {
+    "4": 0,
+    "5": 0,
+    "6": 32,
+    "7": 320,
+    "8": 1328,
+    "9": 5664,
+    "10": 19008
+  },
+  "seed_dfa": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      4
+    ]
+  ],
+  "minimal_dfa_states": 5,
+  "family_count_GF": "z*(2*z**5 + 2*z**4 - z**3 + z**2 + 1)/(z - 1)**2",
+  "finite_exception_count_polynomial": "2*z**11 + 2*z**9 + 2*z**8 + 2*z**6 + z**5 + 2*z**4",
+  "family_sum_U_GF": "z*(24*z**7 + 212*z**6 - 144*z**5 - 94*z**4 + 24*z**3 - 6*z**2 + 3*z - 1)/((z - 1)*(2*z - 1)*(3*z - 1))",
+  "finite_exception_U_polynomial": "594887*z**11 + 9006*z**9 + 1437*z**8 + 210*z**6 + 37*z**5 + 27*z**4",
+  "round_count_and_moment_controls": [
+    {
+      "n": 1,
+      "types": 1,
+      "sum_U": 1
+    },
+    {
+      "n": 2,
+      "types": 2,
+      "sum_U": 3
+    },
+    {
+      "n": 3,
+      "types": 4,
+      "sum_U": 13
+    },
+    {
+      "n": 4,
+      "types": 7,
+      "sum_U": 54
+    },
+    {
+      "n": 5,
+      "types": 9,
+      "sum_U": 168
+    },
+    {
+      "n": 6,
+      "types": 15,
+      "sum_U": 921
+    },
+    {
+      "n": 7,
+      "types": 18,
+      "sum_U": 2775
+    },
+    {
+      "n": 8,
+      "types": 25,
+      "sum_U": 11028
+    },
+    {
+      "n": 9,
+      "types": 30,
+      "sum_U": 40293
+    },
+    {
+      "n": 10,
+      "types": 33,
+      "sum_U": 98871
+    },
+    {
+      "n": 11,
+      "types": 40,
+      "sum_U": 901502
+    },
+    {
+      "n": 12,
+      "types": 43,
+      "sum_U": 939831
+    },
+    {
+      "n": 13,
+      "types": 48,
+      "sum_U": 2859447
+    },
+    {
+      "n": 14,
+      "types": 53,
+      "sum_U": 8658231
+    },
+    {
+      "n": 15,
+      "types": 58,
+      "sum_U": 26134455
+    },
+    {
+      "n": 16,
+      "types": 63,
+      "sum_U": 78722871
+    }
+  ]
+}

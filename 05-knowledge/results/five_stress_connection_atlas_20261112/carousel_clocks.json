@@ -8,6 +8,7 @@
         "base_order": 3,
         "port": 0,
         "mark_patterns": 3,
+        "literal_controls": 6,
         "largest_dominance_bound": 1,
         "unit_solutions": [
           {
@@ -33,6 +34,7 @@
         "base_order": 4,
         "port": 3,
         "mark_patterns": 4,
+        "literal_controls": 8,
         "largest_dominance_bound": 2,
         "unit_solutions": [
           {
@@ -79,6 +81,7 @@
         "base_order": 4,
         "port": 2,
         "mark_patterns": 4,
+        "literal_controls": 8,
         "largest_dominance_bound": 2,
         "unit_solutions": [
           {
@@ -127,6 +130,7 @@
         "base_order": 5,
         "port": 0,
         "mark_patterns": 15,
+        "literal_controls": 30,
         "largest_dominance_bound": 4,
         "unit_solutions": []
       },
@@ -135,6 +139,7 @@
         "base_order": 6,
         "port": 5,
         "mark_patterns": 16,
+        "literal_controls": 32,
         "largest_dominance_bound": 6,
         "unit_solutions": []
       },
@@ -143,6 +148,7 @@
         "base_order": 6,
         "port": 4,
         "mark_patterns": 16,
+        "literal_controls": 32,
         "largest_dominance_bound": 6,
         "unit_solutions": []
       }
@@ -157,6 +163,7 @@
         "base_order": 7,
         "port": 0,
         "mark_patterns": 63,
+        "literal_controls": 126,
         "largest_dominance_bound": 9,
         "unit_solutions": []
       },
@@ -165,6 +172,7 @@
         "base_order": 8,
         "port": 7,
         "mark_patterns": 64,
+        "literal_controls": 128,
         "largest_dominance_bound": 14,
         "unit_solutions": []
       },
@@ -173,6 +181,7 @@
         "base_order": 8,
         "port": 6,
         "mark_patterns": 64,
+        "literal_controls": 128,
         "largest_dominance_bound": 14,
         "unit_solutions": []
       }
@@ -187,6 +196,7 @@
         "base_order": 9,
         "port": 0,
         "mark_patterns": 255,
+        "literal_controls": 510,
         "largest_dominance_bound": 18,
         "unit_solutions": []
       },
@@ -195,6 +205,7 @@
         "base_order": 10,
         "port": 9,
         "mark_patterns": 256,
+        "literal_controls": 512,
         "largest_dominance_bound": 24,
         "unit_solutions": []
       },
@@ -203,6 +214,7 @@
         "base_order": 10,
         "port": 8,
         "mark_patterns": 256,
+        "literal_controls": 512,
         "largest_dominance_bound": 24,
         "unit_solutions": []
       }
@@ -217,6 +229,7 @@
         "base_order": 11,
         "port": 0,
         "mark_patterns": 1023,
+        "literal_controls": 2046,
         "largest_dominance_bound": 28,
         "unit_solutions": []
       },
@@ -225,6 +238,7 @@
         "base_order": 12,
         "port": 11,
         "mark_patterns": 1024,
+        "literal_controls": 2048,
         "largest_dominance_bound": 35,
         "unit_solutions": []
       },
@@ -233,6 +247,7 @@
         "base_order": 12,
         "port": 10,
         "mark_patterns": 1024,
+        "literal_controls": 2048,
         "largest_dominance_bound": 35,
         "unit_solutions": []
       }

@@ -213,19 +213,21 @@ not directly yield every allowable odd tournament count.
 
 It may still supply **marked seeds for operations that leave this family**.
 That is a different question. The exact census tests every locally transitive
-isomorphism type and every nonempty selected set through order twelve, with
+isomorphism type and every nonempty selected set through order fourteen, with
 actual automorphism quotienting. It retains
 
     delta=H-sum_{a<b in O} W_ab, U=sum_{a in O} U_a.
 
 Unit seeds have delta=1 and yield the inherited tail counts `1+2^t U` for
-t>=1. There are227 marked unit-seed types in this finite universe. Of these,
-223 lie in (6), and four lie in the C5 palette. The first two, at order nine,
+t>=1. There are328 marked unit-seed types in this finite universe. Of these,
+324 lie in (6), and four lie in the C5 palette. The first two, at order nine,
 have H=705 and U=6288 or2718, with odd parts393 and1359. Two more at order
 eleven have H=54123 and U=358600 or236287. This is a
 specific next construction opportunity, not a coverage theorem or a novelty
 claim about prior repository discovery. Their recursive behavior is treated
-separately rather than inferred from one successful unit defect.
+separately rather than inferred from one successful unit defect. The
+compiled continuation in `round_extension.json` extends this census;
+[SEEDS](SEEDS.md) gives the all-length families and exact obstructions.
 
 ## Connection contract and controls
 

@@ -4,8 +4,10 @@ At baseline7510e38f9c77 the stress derivation and sampling investigations in
 this packet began independently. The first checkpoint is f362b4ee08. The
 next fetch revealed the concurrent Session285 checkpoints e8de44d917,
 e42c6cba4d and10973fb08c. Their current status at that fetch was review in
-progress; this note does not promote their whole packet to independently
-audited canon.
+progress. The final150848bce2 was then read and integrated by rebase, and
+this packet's first two checkpoints were pushed as ca74ca5585 and33a0ba3117.
+Session285's final audit is its own review; this note does not claim to have
+independently audited every result in that packet.
 
 The independently matching material is the local four-plus-one normal form,
 the Hermitian/circle carrier and the real period-rank formula with all ranks
@@ -22,6 +24,15 @@ test (stronger than single-valued stress), the Cartesian translation algebra,
 the actual commutator tournament, exact sampling-curve images, and the marked
 seed probes. Session285's distinctions between finite carrier, physical
 realization and absolute anchor reinforce the same limits found here.
+
+The final Session285 also proves the complete stellohedral continuation of
+the ready-tail pentagon, distinguishes real attachment fibers from binary
+ones, and supplies a new14207/14209 full-central switch. These are credited
+to [its synthesis](../session285_five_web_20261112/SYNTHESIS.md) and not
+claimed by this packet. Its history atlas searches a pinned current tree;
+our separate scan covers every reachable text blob in the frozen local Git
+ref universe, including historical versions. Their different retrieval
+counts cannot be treated as a time series or combined without deduplication.
 
 The first documentation check also found two inherited startup-budget failures
 at this baseline: META-PATTERNS has401 maintained lines (limit400), and startup

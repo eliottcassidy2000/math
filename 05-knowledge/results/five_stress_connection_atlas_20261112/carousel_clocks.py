@@ -1,7 +1,7 @@
 """All positive lengths in one-clock carousel families, by exact dominance."""
 from pathlib import Path
 from itertools import combinations
-import json,sys
+import json,sys,gzip
 from tournament_tools import switched_tt
 HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE.parent/'seed_recursion_births_20261111'))
@@ -11,7 +11,12 @@ ib=pt.ib
 def need(x,msg):
     if not x:raise RuntimeError(msg)
 def chart(rows,port,mandatory,optional,offset,kind):
-    h,u,w=ib.coefficients(rows,port);found=[];maxbound=0;tests=0
+    h,u,w=ib.coefficients(rows,port);found=[];maxbound=0;tests=0;certificates=[]
+    controls=[]
+    for length in (1,2):
+        labels,child=ib.inflate(rows,port,length)
+        ch,cu,cw,*_=ib.tc.path_tables(child)
+        controls.append((length,labels,ch,cu,cw))
     for mask in range(1<<len(optional)):
         O=mandatory+[v for i,v in enumerate(optional) if mask>>i&1]
         if not O:continue
@@ -19,13 +24,19 @@ def chart(rows,port,mandatory,optional,offset,kind):
         d={j:h[j]-sum(w[j][a][b] for a,b in combinations(O,2)) for j in range(1,len(h))}
         poly=pt.exponential(d);poly[1]=poly.get(1,0)-1;poly={b:c for b,c in poly.items() if c}
         U={j:sum(u[j][v] for v in O) for j in range(1,len(h))};ue=pt.exponential(U)
+        for length,labels,ch,cu,cw in controls:
+            selected=[i for i,v in enumerate(labels) if v in O]
+            need(port not in O,'clock must be unselected')
+            need(pt.evaluate(poly,length)==ch-sum(cw[a][b] for a,b in combinations(selected,2))-1,'literal defect control')
+            need(pt.evaluate(ue,length)==sum(cu[a] for a in selected),'literal slope control')
         if not poly:roots='all';bound=None
         else:
             bound=pt.dominance(poly);maxbound=max(maxbound,bound)
             roots=[a for a in range(1,bound) if pt.evaluate(poly,a)==0]
         if roots:
             found.append({'selected':O,'clock_sizes':roots,'big_block_sizes':roots if roots=='all' else [a+offset for a in roots],'no_further_roots_from_clock':bound,'defect_minus1_exponentials':sorted(poly.items()),'U_exponentials':sorted(ue.items())})
-    return {'kind':kind,'base_order':len(rows),'port':port,'mark_patterns':tests,'largest_dominance_bound':maxbound,'unit_solutions':found}
+        certificates.append({'selected':O,'defect_minus1_exponentials':sorted(poly.items()),'dominance_bound':bound,'roots':roots})
+    return {'kind':kind,'base_order':len(rows),'port':port,'mark_patterns':tests,'literal_controls':2*tests,'largest_dominance_bound':maxbound,'unit_solutions':found,'certificates':certificates}
 
 def run():
     out=[]
@@ -41,7 +52,11 @@ def run():
         result={'carousel_order':k,'scope':'All positive big-block lengths; the block is unselected or contains exactly one selected endpoint. Every subset of the other singleton blocks. Interior marks and multiple selected clone vertices excluded.','charts':charts}
         out.append(result)
         print(json.dumps({'k':k,'charts':[(v['kind'],v['mark_patterns'],v['largest_dominance_bound'],len(v['unit_solutions'])) for v in charts]}),flush=True)
-    dest=HERE/('carousel_clocks.optimized.json' if not __debug__ else 'carousel_clocks.json')
+    certificates=[{'carousel_order':r['carousel_order'],'charts':[{'kind':c['kind'],'certificates':c.pop('certificates')} for c in r['charts']]} for r in out]
+    tag='.optimized' if not __debug__ else ''
+    raw=(json.dumps(certificates,separators=(',',':'))+'\n').encode()
+    (HERE/('carousel_clock_certificates'+tag+'.json.gz')).write_bytes(gzip.compress(raw,mtime=0))
+    dest=HERE/('carousel_clocks'+tag+'.json')
     dest.write_text(json.dumps(out,indent=2)+'\n',encoding='utf8')
 
 if __name__=='__main__':run()
