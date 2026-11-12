@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "consumer_checks": [
+    {
+      "core_order": 5,
+      "tail_length": 0,
+      "counts": [
+        41,
+        43
+      ],
+      "difference": 2
+    },
+    {
+      "core_order": 5,
+      "tail_length": 1,
+      "counts": [
+        457,
+        467
+      ],
+      "difference": 10
+    },
+    {
+      "core_order": 5,
+      "tail_length": 2,
+      "counts": [
+        1207,
+        1229
+      ],
+      "difference": 22
+    },
+    {
+      "core_order": 5,
+      "tail_length": 3,
+      "counts": [
+        2707,
+        2753
+      ],
+      "difference": 46
+    },
+    {
+      "core_order": 7,
+      "tail_length": 0,
+      "counts": [
+        559,
+        561
+      ],
+      "difference": 2
+    },
+    {
+      "core_order": 7,
+      "tail_length": 1,
+      "counts": [
+        8471,
+        8457
+      ],
+      "difference": -14
+    },
+    {
+      "core_order": 7,
+      "tail_length": 2,
+      "counts": [
+        23177,
+        23127
+      ],
+      "difference": -50
+    },
+    {
+      "core_order": 7,
+      "tail_length": 3,
+      "counts": [
+        52589,
+        52467
+      ],
+      "difference": -122
+    }
+  ]
+}
