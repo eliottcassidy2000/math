@@ -57,6 +57,29 @@
   "hankel_det": -16,
   "literal_nontrivial_inputs": 1098,
   "observation_det": 8,
+  "prepared_inputs": 1098,
+  "prepared_pair": [
+    {
+      "H": 15,
+      "Q": 96,
+      "U": 60,
+      "V": 21,
+      "d": 0,
+      "e": 3,
+      "h": 3,
+      "k": 0
+    },
+    {
+      "H": 17,
+      "Q": 48,
+      "U": 33,
+      "V": 21,
+      "d": 1,
+      "e": 3,
+      "h": 3,
+      "k": 0
+    }
+  ],
   "probe_added_vertices_max": 2,
   "renewable_bank_left_observations": [
     [

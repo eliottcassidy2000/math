@@ -126,7 +126,23 @@ hs=[24875,24877,24879,24881,24883,24885]
 vs=[28119]*3+[27639]*3
 q3=[h+2*v for h,v in zip(hs,vs)]
 check(q3[3]-q3[0]==6-960,'six bank receiver hostile')
-result=dict(status='PASS',literal_nontrivial_inputs=count,probe_added_vertices_max=2,
+# Three experiments suffice before common C1 preparation.
+C1=(2,4,1)
+prepared_count=0
+for n in range(2,6):
+    for T in c.tournaments(n):
+        p=c.profile(T)
+        p1=c.profile(c.fuse(C1,T));p2=c.profile(c.fuse(C1,c.fuse(C1,T)))
+        r0,r1,r2=p['H'],p1['H'],p2['H']
+        check((r1-r0)//2==p['V'] and (5*r1-4*r0-r2)//2==p['h'],'prepared three probes')
+        check((p1['h'],p1['V'],p1['e'])==(p['h'],4*p['V']-p['h'],p['h']),'C1 renewal')
+        c.hp.cache_clear();prepared_count+=1
+raw=[(14,8,2,4,15),(12,5,8,2)]
+raw_profiles=[c.profile(T) for T in raw]
+ready=[c.profile(c.fuse(C1,T)) for T in raw]
+check([(p['H'],p['h'],p['V'],p['e']) for p in raw_profiles]==[(3,3,6,0),(5,3,6,2)],'raw nonrenewable pair')
+check([(p['H'],p['h'],p['V'],p['e']) for p in ready]==[(15,3,21,3),(17,3,21,3)],'prepared renewable pair')
+result=dict(status='PASS',literal_nontrivial_inputs=count,prepared_inputs=prepared_count,prepared_pair=ready,probe_added_vertices_max=2,
  observation_det=det(coef),transition_span_det=det(transition),hankel=Hankel,hankel_det=det(Hankel),
  full_eight_entry_det=det(co8),collision_packet=pa,collision_root_menus=[ma,mb],
  singleton_observations=iobs,renewable_bank_left_observations=lobs,six_bank_probe_delta=q3[3]-q3[0])

@@ -22,10 +22,10 @@ For odd m its full packet orbit is exactly
 
     Prim(m)={(A,W,d) mod m: gcd(A,W,d,m)=1}.
 
-Yet the number of its distinct actual counts <=X is O(X^(399/400)), hence
-has zero density among odd integers. The latter is inherited directly from
-[Session280's63-letter scarcity theorem](../../session280_arbitrary_switching_20261112/coverage/PROOF.md),
-because L is a subalphabet.
+Yet the number of its distinct actual counts <=X is at most (1000/41)X^(4/5), hence
+has zero density among odd integers. Section4 sharpens the inherited
+[Session28063-letter scarcity mechanism](../../session280_arbitrary_switching_20261112/coverage/PROOF.md)
+for this much smaller alphabet.
 
 **Priority and new scope.** Congruence completeness without integer coverage
 is ALREADY proved for fixed-port arithmetic states in
@@ -152,7 +152,7 @@ transient,
     (B^j s_i)_A=alpha_i lambda^j mod2^k.              (5)
 
 For k>=3, lambda=3mod8 has order2^(k-2): the elementary valuation identity
-v_2(lambda^(2^j)-1)=j+2 follows inductively from v_2(lambda²-1)=3.
+v_2(lambda^(2^j)-1)=j+2 for j>=1 follows inductively from v_2(lambda²-1)=3.
 Its powers are the index-two subgroup of odd units whose residues modulo8
 are1 or3. The two amplitudes(4) occupy different cosets. Thus(5) for the two
 seeds covers every odd residue modulo2^k. The k=1,2 cases follow directly
@@ -191,7 +191,46 @@ commutator element to send it to(r,1,1) modulo q without changing the dyadic
 coordinate. This gives the desired actual physical H modulo m. The q=1 and
 k=0 cases were handled separately. This proves full congruence coverage.
 
-## 4. Consequence and the missing height coordinate
+## 4. A quantified real-height tax
+
+On the physical cone 0<=d<=A<=W<2A, a block satisfies
+
+    A_new>= (h+b-1) A.
+
+In our alphabet order the seven floors are
+
+    G=(5,11,9,23,19,23,17).
+
+The integers u=(276,147,173,82,95,82,104) satisfy u_i^5 G_i^4>=1000^5.
+Therefore sum G_i^(-4/5)<=959/1000<1, certified without floating powers.
+For every word the inverse4/5-power of its actual count is at most the
+product of these letter weights. Summing the geometric word series gives
+
+    sum_(programs) H(program)^(-4/5) <=1000/41,
+    #{distinct H<=X} <= (1000/41)X^(4/5).             (7)
+
+Let R(m)=m for odd m and m/2 for even m, and let B(m) be the largest, over
+admissible residues, of the smallest actual L-count representing that residue.
+The congruence theorem makes B(m) finite; the R(m) distinct necessary witness
+counts and(7) imply
+
+    B(m) >= ((41/1000)R(m))^(5/4).                   (8)
+
+There is also a deliberately crude constructive upper bound. The residue
+graph has at most m^3 vertices for odd m, and at most(m/2)^3 for even m
+(all three packet coordinates stay odd). A shortest path to a chosen state
+is simple, so some scalar witness uses at most that number minus one letters.
+Every letter has A_new<=39A on the thin cone. Hence, with
+S(m)=m^3 for odd m and(m/2)^3 for even m,
+
+    B(m)<=39^(S(m)-1).                              (9)
+
+This is not an efficient exact-target algorithm. Bounds(8),(9) make explicit
+that modular universality and a controlled absolute target are very different
+resources. In particular a uniform linear-height modular compiler cannot
+exist in this seven-letter architecture.
+
+## 5. Consequence and the missing height coordinate
 
 The SAME seven-letter language is now provably congruence-complete and
 power-sparse. For every finite collection of fixed moduli, combine them by
@@ -212,11 +251,57 @@ a residue compiler can now be used as a benchmark which is guaranteed to
 pass every fixed modulus but fail an eventual-tail goal. Any proposed
 Chan–Pak selector needs a genuinely height-sensitive ingredient beyond it.
 
-## 5. Reproduction
+### Growing real gaps despite every finite congruence passing
+
+For each integer X>=1 there are t_X=ceil(X/2) odd integers in[X,2X]. Put
+B_X=ceil((1000/41)(2X)^(4/5)), the smallest nonnegative integer satisfying the
+fifth-power inequality41^5 B_X^5>=1000^5(2X)^4. At most B_X of those odd
+targets occur. The omitted targets split into at most B_X+1 runs between
+occupied targets. Therefore one run contains at least
+
+    max(0, ceil((t_X-B_X)/(B_X+1)))
+
+consecutive odd targets. In particular EVERY sufficiently large dyadic
+window has a run of Omega(X^(1/5)) consecutive odd integers omitted by this
+seven-letter language. The gaps concern this restricted initialized family,
+not all tournaments; they coexist with infinitely many witnesses in every
+fixed admissible residue class.
+
+### A scalar generating-function boundary
+
+The support is infinite (repeat100) and has zero density, so it cannot be
+ultimately periodic. Equivalently, no finite-state unary acceptor recognizes
+exactly these scalar counts. Its characteristic series
+
+    F(z)=sum_(N in scalar support) z^N
+
+is not rational over Q. Indeed rationality would give a fixed-order rational
+linear recurrence for its eventually0/1 coefficients. There are only finitely
+many0/1 recurrence windows; repetition of a window forces the entire future
+to repeat, hence eventual periodicity. This contradicts infinite zero-density
+support. No assertion about the multiplicity series or its analytic boundary
+is made. A rational generating function in CONSTRUCTION ORDER, already
+available in Session280, does not become rational in the exact scalar count.
+
+Moreover every admissible residue class contains infinitely many outputs:
+for any B choose a larger multiple M of its modulus and an admissible residue
+R>B in that class with R<M. Full congruence coverage modulo M supplies an
+actual positive count H=R mod M, hence H>=R>B. Thus the sparse support is not
+explained by eventually abandoning any fixed congruence class.
+
+## 6. Reproduction
 
 `verify.py` uses standard-library exact arithmetic and explicit exception
 gates. It checks rational identities, six elementary words modulo3, the
 rank-eight lift, dyadic roots/projectors/cosets, complete small odd packet
 orbits, simultaneous residue witnesses and literal physical controls.
 `certificate.json` supplies finite certificates, and `results.json` records
-controls. Sections1–3, not finite testing, establish the all-modulus result.
+controls. `python3 verify.py --witness 360 21` outputs physical words
+1010,10,100 with actual count1821, NOT21, at order13. The BFS compiler is not
+claimed efficient at large modulus. Sections1–3, not finite testing, establish
+the all-modulus result.
+
+Recovery note: the verifier was reconstructed after an execution-workspace
+reset. Its literal graph controls now contain the inherited Session279 subset
+DP directly rather than importing it. Fresh normal/optimized replays were
+required; this note makes no claim of byte identity to the lost source.

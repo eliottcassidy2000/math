@@ -1,0 +1,420 @@
+{
+  "dyadic_precisions": [
+    {
+      "amplitudes": [
+        1,
+        1
+      ],
+      "k": 1,
+      "lambda": 1
+    },
+    {
+      "amplitudes": [
+        1,
+        3
+      ],
+      "k": 2,
+      "lambda": 3
+    },
+    {
+      "amplitudes": [
+        1,
+        7
+      ],
+      "k": 3,
+      "lambda": 3
+    },
+    {
+      "amplitudes": [
+        9,
+        15
+      ],
+      "k": 4,
+      "lambda": 3
+    },
+    {
+      "amplitudes": [
+        9,
+        31
+      ],
+      "k": 5,
+      "lambda": 19
+    },
+    {
+      "amplitudes": [
+        41,
+        63
+      ],
+      "k": 6,
+      "lambda": 51
+    },
+    {
+      "amplitudes": [
+        41,
+        63
+      ],
+      "k": 7,
+      "lambda": 115
+    },
+    {
+      "amplitudes": [
+        169,
+        191
+      ],
+      "k": 8,
+      "lambda": 115
+    },
+    {
+      "amplitudes": [
+        425,
+        447
+      ],
+      "k": 9,
+      "lambda": 115
+    },
+    {
+      "amplitudes": [
+        937,
+        447
+      ],
+      "k": 10,
+      "lambda": 115
+    },
+    {
+      "amplitudes": [
+        1961,
+        1471
+      ],
+      "k": 11,
+      "lambda": 115
+    },
+    {
+      "amplitudes": [
+        1961,
+        3519
+      ],
+      "k": 12,
+      "lambda": 2163
+    },
+    {
+      "amplitudes": [
+        6057,
+        7615
+      ],
+      "k": 13,
+      "lambda": 6259
+    },
+    {
+      "amplitudes": [
+        6057,
+        7615
+      ],
+      "k": 14,
+      "lambda": 14451
+    },
+    {
+      "amplitudes": [
+        22441,
+        23999
+      ],
+      "k": 15,
+      "lambda": 30835
+    },
+    {
+      "amplitudes": [
+        22441,
+        23999
+      ],
+      "k": 16,
+      "lambda": 63603
+    },
+    {
+      "amplitudes": [
+        22441,
+        23999
+      ],
+      "k": 17,
+      "lambda": 129139
+    },
+    {
+      "amplitudes": [
+        22441,
+        23999
+      ],
+      "k": 18,
+      "lambda": 129139
+    },
+    {
+      "amplitudes": [
+        22441,
+        23999
+      ],
+      "k": 19,
+      "lambda": 129139
+    },
+    {
+      "amplitudes": [
+        22441,
+        548287
+      ],
+      "k": 20,
+      "lambda": 129139
+    },
+    {
+      "amplitudes": [
+        1071017,
+        548287
+      ],
+      "k": 21,
+      "lambda": 129139
+    },
+    {
+      "amplitudes": [
+        1071017,
+        548287
+      ],
+      "k": 22,
+      "lambda": 129139
+    },
+    {
+      "amplitudes": [
+        5265321,
+        4742591
+      ],
+      "k": 23,
+      "lambda": 4323443
+    },
+    {
+      "amplitudes": [
+        13653929,
+        4742591
+      ],
+      "k": 24,
+      "lambda": 4323443
+    }
+  ],
+  "hostile_absolute_examples": [
+    {
+      "actual_packet": [
+        559,
+        679,
+        19
+      ],
+      "modulus": 24,
+      "target_residue": 7,
+      "words": [
+        "1010",
+        "1100"
+      ]
+    },
+    {
+      "actual_packet": [
+        525,
+        717,
+        23
+      ],
+      "modulus": 24,
+      "target_residue": 21,
+      "words": [
+        "1100",
+        "1010"
+      ]
+    },
+    {
+      "actual_packet": [
+        3247,
+        4427,
+        145
+      ],
+      "modulus": 120,
+      "target_residue": 7,
+      "words": [
+        "10",
+        "1100",
+        "1010"
+      ]
+    },
+    {
+      "actual_packet": [
+        1941,
+        2307,
+        293
+      ],
+      "modulus": 120,
+      "target_residue": 21,
+      "words": [
+        "110",
+        "1100",
+        "10"
+      ]
+    },
+    {
+      "actual_packet": [
+        3247,
+        4427,
+        145
+      ],
+      "modulus": 360,
+      "target_residue": 7,
+      "words": [
+        "10",
+        "1100",
+        "1010"
+      ]
+    },
+    {
+      "actual_packet": [
+        1821,
+        2005,
+        137
+      ],
+      "modulus": 360,
+      "target_residue": 21,
+      "words": [
+        "1010",
+        "10",
+        "100"
+      ]
+    }
+  ],
+  "lie_span_rank": 8,
+  "literal_controls": 11,
+  "mod3_elementary_words": 6,
+  "odd_packet_orbits": [
+    {
+      "m": 3,
+      "packets": 26,
+      "scalar_residues": 3
+    },
+    {
+      "m": 5,
+      "packets": 124,
+      "scalar_residues": 5
+    },
+    {
+      "m": 7,
+      "packets": 342,
+      "scalar_residues": 7
+    },
+    {
+      "m": 9,
+      "packets": 702,
+      "scalar_residues": 9
+    },
+    {
+      "m": 11,
+      "packets": 1330,
+      "scalar_residues": 11
+    },
+    {
+      "m": 15,
+      "packets": 3224,
+      "scalar_residues": 15
+    },
+    {
+      "m": 21,
+      "packets": 8892,
+      "scalar_residues": 21
+    },
+    {
+      "m": 25,
+      "packets": 15500,
+      "scalar_residues": 25
+    },
+    {
+      "m": 27,
+      "packets": 18954,
+      "scalar_residues": 27
+    }
+  ],
+  "rational_identity_checks": 7,
+  "scarcity_exponent": "4/5",
+  "scarcity_sum_numerator": 959,
+  "scarcity_weights_over_1000": [
+    276,
+    147,
+    173,
+    82,
+    95,
+    82,
+    104
+  ],
+  "simultaneous_scalar_controls": [
+    {
+      "discovered_packets": 7,
+      "m": 8,
+      "residues": 4
+    },
+    {
+      "discovered_packets": 33,
+      "m": 16,
+      "residues": 8
+    },
+    {
+      "discovered_packets": 45,
+      "m": 32,
+      "residues": 16
+    },
+    {
+      "discovered_packets": 146,
+      "m": 64,
+      "residues": 32
+    },
+    {
+      "discovered_packets": 249,
+      "m": 128,
+      "residues": 64
+    },
+    {
+      "discovered_packets": 47,
+      "m": 24,
+      "residues": 12
+    },
+    {
+      "discovered_packets": 71,
+      "m": 40,
+      "residues": 20
+    },
+    {
+      "discovered_packets": 110,
+      "m": 48,
+      "residues": 24
+    },
+    {
+      "discovered_packets": 252,
+      "m": 72,
+      "residues": 36
+    },
+    {
+      "discovered_packets": 137,
+      "m": 80,
+      "residues": 40
+    },
+    {
+      "discovered_packets": 255,
+      "m": 120,
+      "residues": 60
+    },
+    {
+      "discovered_packets": 459,
+      "m": 144,
+      "residues": 72
+    },
+    {
+      "discovered_packets": 989,
+      "m": 240,
+      "residues": 120
+    },
+    {
+      "discovered_packets": 762,
+      "m": 288,
+      "residues": 144
+    },
+    {
+      "discovered_packets": 2845,
+      "m": 360,
+      "residues": 180
+    }
+  ],
+  "status": "finite controls for all-modulus proof; no Chan-Pak coverage"
+}
