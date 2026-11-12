@@ -26,19 +26,30 @@ def decode(code,n=9):
             b-=1
     return rows
 
-def run():
-    source=HERE.parent/'blue_quotient_20261020b/n9_classes.tsv.gz';start=time.time();stats=Counter();records=[];failures=[];false_corners=[]
+def run(n=9):
+    need(n in [8,9],'declared complete quotient order')
+    source=HERE.parent/('blue_quotient_20261020b/n9_classes.tsv.gz' if n==9 else 'metagraph_aspect_sequences_20261111/records.jsonl.gz');start=time.time();stats=Counter();records=[];failures=[];false_corners=[]
     with gzip.open(source,'rt') as f:
-        for ix,item in enumerate(csv.DictReader(f,delimiter='\t'),1):
-            rows=decode(int(item['code']))
+        if n==9:items=list(csv.DictReader(f,delimiter='\t'))
+        else:
+            items=[]
+            for line in f:
+                r=json.loads(line)
+                if r['n']!=n:continue
+                code=0
+                for a in range(n):
+                    for b in range(a+1,n):code=2*code+bool(r['rows'][a]>>b&1)
+                items.append({'code':code})
+        for ix,item in enumerate(items,1):
+            rows=decode(int(item['code']),n)
             if not strong(rows):continue
             candidates={};cache={}
-            for p in range(9):
+            for p in range(n):
                 labels,rr=ib.inflate(rows,p,2);h,u,w,masks=tables(np.array(rr,dtype=np.int64));stats['single_clone_tables']+=1
                 cache[p]=(labels,rr,int(h),w)
                 for mask in masks:
-                    if mask>>8:continue # both new clone labels are unselected
-                    O=sum(1<<labels[i] for i in range(8) if mask>>i&1)
+                    if mask>>(n-1):continue # both new clone labels are unselected
+                    O=sum(1<<labels[i] for i in range(n-1) if mask>>i&1)
                     candidates.setdefault(O,[]).append(p)
             for O,ps in candidates.items():
                 _,_,components=quotient(rows,O)
@@ -48,7 +59,7 @@ def run():
                     # Exclude two representatives in the SAME maximal block.
                     if component_of[p]==component_of[q]:continue
                     stats['L_shape_pairs']+=1
-                    selected=[i for i in range(9) if O>>i&1]
+                    selected=[i for i in range(n) if O>>i&1]
                     rr,oo,labels=cones.expand(rows,selected,[p,q],[2,2]);h,u,w,_=tables(np.array(rr,dtype=np.int64));stats['double_clone_tables']+=1
                     if defect(h,w,oo)!=1:continue
                     stats['unit_double_corners']+=1
@@ -71,6 +82,7 @@ def run():
                     if not joint:
                         failures.append(entry);print('CONTRACTIBLE_OBSTRUCTION '+json.dumps(entry),flush=True)
             if ix%5000==0:print(json.dumps({'quotients':ix,'seconds':round(time.time()-start,1),'stats':dict(stats),'failures':len(failures)}),flush=True)
-    out={'scope':'Every ordinary strong order-nine quotient, all selected sets, two different unselected blocks doubled. Equivalent complete search for stable port pairs in different contractible blocks at order eleven; triples and larger simultaneous stability are separate. Presentations are not quotiented by automorphisms.','ordinary_quotients':ix,'statistics':dict(stats),'false_unit_corner_screens':false_corners,'failures':failures,'records':records}
-    save('two_block_probe.json.gz',out);print(json.dumps({k:v for k,v in out.items() if k not in ['records','failures']}),flush=True)
-if __name__=='__main__':run()
+    need(ix=={8:6880,9:191536}[n],'complete quotient class count')
+    out={'scope':f'Every ordinary strong order-{n} quotient, all selected sets, two different unselected blocks doubled. Equivalent complete search for stable port pairs in different contractible blocks at order {n+2}; triples and larger simultaneous stability are separate. Presentations are not quotiented by automorphisms.','ordinary_quotients':ix,'statistics':dict(stats),'false_unit_corner_screens':false_corners,'failures':failures,'records':records}
+    save('two_block_probe'+('_eight' if n==8 else '')+'.json.gz',out);print(json.dumps({k:v for k,v in out.items() if k not in ['records','failures']}),flush=True)
+if __name__=='__main__':run(int(sys.argv[1]) if len(sys.argv)>1 else 9)

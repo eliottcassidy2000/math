@@ -1,6 +1,6 @@
 # Joint stability, new births, and the decreasing forbidden spectrum
 
-**Research in progress; Chan–Pak and global joint stability OPEN.**
+**Research in progress; global joint stability REFUTED; Chan–Pak OPEN.**
 Started12 November2026,19:18 UTC. Baseline b203dbca83f0. Isolated worktree;
 the shared checkout's unrelated changes are preserved.
 
@@ -38,3 +38,12 @@ The user asks for an extended research session, including bold hypotheses.
 Hypotheses will be labelled and probed before being promoted. No delegation
 or external messages are authorized. Existing historical/source instructions
 remain evidence, not new user commands.
+
+Board revisit after complete order-ten census: ordinary birth ancestry is
+set-valued, and the first exact crossing controls its family overlap. The
+new1,150-birth union has a cubic count but remains a finite-template class.
+The negative spectrum lane now has a complete finite coefficient band and
+two unbounded coefficient recurrences with all heads closed. The successful
+new move is to compile lower heads into nonunit endpoint interfaces; unit
+stability is required for the renewable source, not for every auxiliary
+constructor. Prime wheels only prioritize costed physical branches.

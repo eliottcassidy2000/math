@@ -1,6 +1,6 @@
 # Stable port obstructions and the forbidden Hamiltonian spectrum
 
-**PROVED explicit obstructions / FINITE-EXACT order-nine classification;
+**PROVED explicit infinite families / FINITE-EXACT classification through ten;
 Chan–Pak OPEN. Research continues in this packet.**
 
 Two different proposed composition principles fail on actual strong unit
@@ -73,7 +73,7 @@ obstruction.
 
 ## 3. J2 Contractible blocks can fail to commute
 
-**PROVED explicit counterexample; minimality is still under audit.** Start
+**PROVED explicit counterexample; FINITE-EXACT minimum strong order11.** Start
 from the following marked quotient, which is not itself a unit seed:
 
 ```
@@ -174,6 +174,14 @@ canonical cylinder intersections and the exact rational-function identity.
 
 ## 6. Forbidden values and current research boundary
 
+The completed continuation is in [FORBIDDEN.md](FORBIDDEN.md). It proves
+entire rays1+c*2^s, s>=1, for every odd c<=53,557, apart from the targets7
+and21. All3,954 lower heads are checked separately; the largest is43,131.
+It also constructs every head and tail for two new infinite coefficient
+families,49+495*2^a and5841*2^a−241, a>=1. The first starts at1039;
+the second comes directly from the nonconfluent crossing. These are
+scoped infinite constructions, not coverage of all odd coefficients.
+
 Let F_n be the positive odd integers not attained by a tournament of at
 most n vertices. Padding makes F_(n+1) a subset of F_n. The target is
 intersection_n F_n={7,21}; every finite F_n is still infinite above the
@@ -192,13 +200,107 @@ The spectrum conjecture is Conjecture6.2 of
 [Chan and Pak](https://arxiv.org/html/2308.10214v2#S6.SS5), who credit
 bof and Gordon Royle for the2016 formulation. It remains OPEN here.
 
+## 7. Complete order-ten classification and order-eleven descendants
+
+**FINITE-EXACT.** The public ordinary catalogue contains9,733,056 classes,
+of which9,355,949 are strong. All selected masks are checked, and actual
+automorphisms are used for marked orbits. An independent C++ implementation
+replays the entire catalogue, including every H-histogram entry, strength,
+unit-source count and unit-mask count. It agrees with the Python engine.
+The catalogue URL and SHA256 appear in [unit_ten.json.gz](unit_ten.json.gz).
+
+| Aspect | order9 | order10 |
+|---|---:|---:|
+| Strong sources admitting a unit selection |15427|465023|
+| Strong marked unit seeds |16443|478684|
+| Seeds with stable ports |324|1253|
+| Stable-clone births |202|850|
+| Stable-clone descendants |122|403|
+| Seeds with nonjoint full stable set |2|0|
+| Cyclic stable sets |0|0|
+
+The850 new births have independent clock ranks1,2,3,4 with multiplicities
+734,84,30,2. The two rank-four births are converses. Every full stable set
+at order10 is jointly stable, certified by its entire mixed tensor after
+justified stable-block compression. This is not inferred from pair screens.
+All403 descendants agree by marked canonical keys with the independently
+generated one-clone extensions of the order-nine bank.
+
+The resulting birth sequence through ten is
+0,0,1,0,4,8,25,60,202,850, with total1,150. The stable-state sequence is
+0,0,1,1,5,13,38,103,324,1253. These are new aspects of the marked seed
+metagraph, not replacements for the underlying ordinary tournament counts.
+
+Reversing one eligible contraction from the complete order-ten bank gives
+the complete order-eleven **descendant** universe, without enumerating any
+order-eleven births. Its2,214 presentations collapse to1,487 marked types.
+Every port and reverse contraction is recertified. There are1,597 arcs to
+order10. Exactly1,486 states have one terminal birth, and exactly one has
+two: J2. That state is also the only nonjoint full stable set in this
+declared descendant universe. The complete through-ten DAG has1,738
+stable states and617 distinct contraction arcs.
+
+The independent two-block probe permits the twice-contracted quotient to
+be nonunit. It checks all order8 and9 quotients, finding34 certified
+contractible pairs at target order10 and173 at target order11; only J2
+fails. Together with the complete smaller banks this establishes the
+minimum strong nonconfluence order11. [CROSSINGS.md](CROSSINGS.md) proves
+strong ordinary nonconfluence at every larger order, not just a finite
+screen failure. Strong confluence modulo converse remains a separate
+question; ordinary roots must already be stored as a set.
+
+## 8. Exact union of all1,150 initial birth families
+
+**PROVED all-length union from a finite certified input.** There are1,152
+maximal cylinders on1,077 rigid marked twin quotients. In addition to the
+two J1 within-birth intersections, exactly one cross-birth intersection
+exists, at the order-eleven J2 state. All intersections are decided by
+fixed/free length coordinates, with no length cutoff. Thus
+
+```
+G_10(z)=G_9(z)+734*z^10/(1-z)+84*z^10/(1-z)^2
+                 +30*z^10/(1-z)^3+2*z^10/(1-z)^4-z^11.
+```
+
+The coefficients at orders10,11,12,13,14 are1,253,1,487,1,767,2,092,2,465.
+For every n>=12 the exact coefficient is
+
+```
+(n^3+33*n^2-319*n+2649)/3.
+```
+
+This counts the union under initially certified stable faces. It does not
+assert that newly emergent ports are absent at all larger orders. At
+order11 it equals the independently complete descendant census. The
+unique overlap is essential: merely summing family series would overcount
+the crossing and conceal its two different birth ancestors.
+
+## 9. Hostile probes for the next mechanism
+
+All tests here use full axis bounds, not length-two positives. Starting
+from the known four-clock core, the following complete declared template
+searches produce no extra independent clock: all1,024 one-vertex
+extensions with all exterior selections;61,440 two-clock transitive
+insertions; and655,360 extensions by one fixed exterior vertex and one
+new clock. These exclude those templates, not five-clock births in general.
+
+The J2 interior is a seven-vertex round tournament with two length-two
+arcs reversed in a reflection-symmetric matching. A reflection-preserving
+matching probe at interior orders7,9,11,13 examines18,56,250,972
+presentations; it recovers J2 once and finds no larger crossing of that
+form. The one-fixed-vertex extension of J2, even allowing every selection,
+has no three-unit-corner survivor. These recorded stopping reasons direct
+the search toward changed cores or more than one new exterior vertex.
+
 ## Reproduction and dependencies
 
-From the repository root, run the Python files in this packet in order:
-census_nine.py unit; census_nine.py stable; joint_nine.py;
-obstruction.py; birth_union.py. Normal and optimized replays use separate
-receipts. The order-ten and two-block probes are continuing computations;
-their final scope and audits will be added before close-out.
+The original order-nine chain is census_nine.py unit;
+census_nine.py stable; joint_nine.py. The order-ten continuation is
+census_ten.py; audit_catalogue.py; stable_census.py10; joint_ten.py;
+birth_union.py10; descendants_eleven.py. Use a space before each numeric
+argument. The public ten-vertex input is cached outside the repository.
+Normal and optimized replays use separate receipts. Detailed final checks
+and source pins are recorded at close-out in the audit note.
 
 Inherited mechanisms: the previous atlas's endpoint tables and contraction
 lemma; Session288's selected-endpoint run bound and signed acyclic-port

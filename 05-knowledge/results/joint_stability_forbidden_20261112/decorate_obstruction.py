@@ -2,7 +2,7 @@
 from pathlib import Path
 from collections import Counter,defaultdict
 from itertools import combinations
-import json
+import json,sys
 import numpy as np
 from census_nine import tables,defect,need,save,strong
 from joint_nine import cones,kernel,expo,key
@@ -13,7 +13,7 @@ def axis(E,index,frozen=2):
     for bases,value in E.items():c[bases[index]]+=value*bases[1-index]**frozen
     return {b:v for b,v in c.items() if v}=={1:1}
 
-def run():
+def run(all_marks=False):
     Q=[2,100,49,7,75,409,173,31,223];P=[0,8];stats=Counter();records=[];memo={};details={}
     def terminal(rows,mask):
         k=key(rows,mask)
@@ -28,8 +28,19 @@ def run():
     for sig in range(512):
         q=[r|((1<<9) if not sig>>i&1 else 0) for i,r in enumerate(Q)]+[sig]
         if not strong(q):continue
-        for mark_new in [False,True]:
-            O=50|((1<<9) if mark_new else 0);sel=[i for i in range(10) if O>>i&1];stats['strong_presentations']+=1
+        if all_marks:
+            stats['strong_quotients']+=1;candidates=None
+            for sizes in [[1,2],[2,1],[2,2]]:
+                rr,_,labels=cones.expand(q,[],P,sizes);h,u,w,masks=tables(np.array(rr,dtype=np.int64));ms=set()
+                for m in masks:
+                    if any(m>>i&1 and v in P for i,v in enumerate(labels)):continue
+                    ms.add(sum(1<<v for i,v in enumerate(labels) if m>>i&1))
+                candidates=ms if candidates is None else candidates&ms
+                if not candidates:break
+            selected_masks=sorted(candidates)
+        else:selected_masks=[50,562]
+        for O in selected_masks:
+            mark_new=bool(O>>9&1);sel=[i for i in range(10) if O>>i&1];stats['strong_presentations']+=1
             corners=[];okay=True
             for sizes in [[1,2],[2,1],[2,2]]:
                 rr,oo,_=cones.expand(q,sel,P,sizes);h,u,w,_=tables(np.array(rr,dtype=np.int64));d=defect(h,w,oo);corners.append(d)
@@ -46,6 +57,6 @@ def run():
                 merged.add(min(k,key(rev,r['selected'])))
             entry={'signature':sig,'mark_new':mark_new,'quotient_rows':q,'quotient_selected':O,'ports':P,'Stirling_terms':[[*a,c] for a,c in sorted(K.items())],'target':details[key(target,m)],'ordinary_terminal_births':len(roots),'converse_terminal_births':len(merged),'terminal_births':[details[k] for k in sorted(roots)]}
             records.append(entry);print(json.dumps({'signature':sig,'mark_new':mark_new,'ordinary_roots':len(roots),'converse_roots':len(merged)}),flush=True)
-    out={'scope':'All 512 adjacency signatures and both marks for one new vertex on the order-nine nonunit quotient; then double its two named ports. Retain strong presentations. Full mixed kernels and complete terminal contraction sets. Not a complete order-twelve universe.','statistics':dict(stats),'records':records}
-    save('decorated_obstructions.json.gz',out);print(json.dumps({'statistics':dict(stats),'counterexamples':len(records)}),flush=True)
-if __name__=='__main__':run()
+    out={'scope':'All 512 adjacency signatures for one new vertex on the order-nine nonunit quotient; then double its two named ports. Retain strong presentations. '+('Every selection on the eight fixed exterior vertices.' if all_marks else 'Keep the original selection and optionally select the new vertex.')+' Full mixed kernels and complete terminal contraction sets. Not a complete order-twelve universe.','statistics':dict(stats),'records':records}
+    save('decorated_obstructions'+('_allmarks' if all_marks else '')+'.json.gz',out);print(json.dumps({'statistics':dict(stats),'counterexamples':len(records)}),flush=True)
+if __name__=='__main__':run('--all-marks' in sys.argv)
