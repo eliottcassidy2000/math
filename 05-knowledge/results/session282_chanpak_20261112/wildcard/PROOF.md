@@ -1,6 +1,6 @@
 # Rational receiver carries localize the Hamilton-count interaction
 
-**Session282. Proof candidate under independent review.** All-order statements
+**Session282. PROVED, independently reviewed.** All-order statements
 below are derived from the inherited physical fusion carrier; finite tests do
 not supply their quantifiers. Chan–Pak remains OPEN.
 
@@ -184,19 +184,72 @@ For repeated A in Section4 and k>=2, the explicit formula is
        =169+312k+1914*(8^k-7k-1)/49+40(k-1).          (13)
 
 The quotient `(8^k-7k-1)/49=sum_(j=1)^(k-1)(k-j)8^(j-1)` is integral.
-Modulo13 the right side is8k−8^k. Thus the exponentk−2 is attained whenever
+Modulo13 the right side is8k−8^k. Since8^4=1mod13, this residue
+has period52; checking that finite period gives the following four classes.
+Thus the exponentk−2 is attained whenever
 k is not in{1,34,44,51} modulo52. At k34 it first gains an extra factor13
 after the k>=2 boundary. No exact valuation beyond this first test is claimed.
 This strengthens the original finite sharpness control without promoting it
 to an invalid all-k equality.
 
-## 6. Reproduction and scope
+## 6. Exact monomer-dimer fibers and hidden rerooting freedom
+
+Within the THREE-letter alphabet A,B,C, compare a word W with A^k. Its
+V-digit differences are0,−8,+1. The carry automaton from0 has exactly
+
+    0 --A--> 0,   0 --B--> −1,   −1 --C--> 0.
+
+All other exits from these reachable states have a nonintegral next carry.
+Therefore, for every k>=1,
+
+    V(W)=V(A^k) iff W is tiled by monomers A and dimers BC.                (14)
+
+The identity(8) makes every such word agree with A^k on its complete packet
+except H. A word with j dimers has
+
+    H(W)=H(A^k)+2j*13^(k−2), 0<=j<=floor(k/2).         (15)
+
+At k1 there are no dimers and the count is simply37. The empty word is the
+singleton identity and is treated separately. At k>=2, expand each dimer
+matrix as M(A)^2+2E_14. Two E_14 insertions give zero, and a single insertion
+is multiplied by13^(k−2) by the remaining letters. This proves(15).
+
+There are exactly binom(k−j,j) such words with j dimers, with bivariate
+program generating function1/(1−z−t*z^2), including the empty word.
+D is strong (verified directly). Deleting the distinguished root of any
+word gives the ordered SCC chain D->...->D. Any rooted isomorphism must
+preserve each SCC position; restricted to that block and the root, it
+recovers the letter because A,B,C have distinct H37,33,43. Thus distinct
+programs here give distinct ROOTED isomorphism classes. In particular
+binom(k−j,j) rooted classes share the SAME FULL rooted packet. This is a
+statement within the specified alphabet, not the full packet fiber among
+all tournaments or an unrooted class count.
+
+The lost microscopic information becomes usable when rerooting is permitted.
+At k3, BCA and ABC both have packet
+
+    (H,h,Q,U,V,d,e)=(264251,2197,1124864,409318,717743,1352,845).
+
+But their vertex-deletion count multisets differ: BCA has minimum nonroot
+deletion count30693, while ABC has29047. The separate verifier records and
+independently recounts both complete menus. They are therefore nonisomorphic
+even without distinguished roots. This is not just a different presentation.
+
+For ABC, reroot at vertex1 in the literal fusion labeling. Its ending mass
+is325181 and its deletion count29047. A triangle fused at that NEW root has
+count264251+2*325181=914613, which is11mod13. Thus the fixed-language content
+obstruction of Section5 is genuinely escapable by a physical root change;
+it must not be stated as a theorem about arbitrary continuations. No claim
+is made that all odd targets are accessible through this escape.
+
+## 7. Reproduction and scope
 
 `python3 wildcard/verify.py` supplies independent backward subset counts,
 permutation/split controls for all32 core cuts, literal eleven-vertex packets,
 all1,048,576 two-letter pair comparisons, local-action checks on every accepted
-pair, and seeded longer controls in bases8,28/3,352/37. Normal and optimized
-runs must match. The all-order conclusions follow from the displayed proofs.
+pair, and seeded longer controls in bases8,28/3,352/37. `fiber_extension.py` independently checks the monomer-dimer support through
+k8, its exact full-packet formula, and both sixteen-vertex root menus.
+Normal and optimized runs must match. The all-order conclusions follow from the displayed proofs.
 
 A preliminary sampler of50 small labelled degree/H/Q signatures found theh13
 unittrade and no other baseh; those signatures were only search heuristics,

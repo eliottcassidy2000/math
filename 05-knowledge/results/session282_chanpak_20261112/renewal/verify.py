@@ -73,21 +73,36 @@ def main():
   levels.append(dict(k=k,V=str(V),P=str(P),start=str(vals[0])));bank=[fuse(unit(14,4),w) for w in bank]
  require(levels[0]['start']=='92862629','h5 eight baseline')
  literal8=[];renewable8=[];C1=unit(2,2)
- for D,w in eight_witnesses():
-  T=witness(D,w);p=profile(T);require(p==w['profile'],'literal new eight packet')
-  require(any(c['profile']==p for c in fiber(D,139878)),'eight witness recovered inverse')
+ for D,w in nine_witnesses():
+  T=witness(D,w);p=profile(T);require(p==w['profile'],'literal new nine packet')
+  require(any(c['profile']==p for c in fiber(D,139878)),'nine witness recovered inverse')
   literal8.append(dict(core=D,**w,rows=T,order=len(T)));renewable8.append(fuse(C1,p))
-  print('literal8',p['H'],'order',len(T),flush=True)
- require([p['H'] for p in renewable8]==list(range(334121,334136,2)),'renewable eight exact counts')
- require({(p['h'],p['V'],p['e']) for p in renewable8}=={(15,559497,15)},'renewable eight receiver')
+  print('literal9',p['H'],'order',len(T),flush=True)
+ require([p['H'] for p in renewable8]==list(range(334121,334138,2)),'renewable nine exact counts')
+ require({(p['h'],p['V'],p['e']) for p in renewable8}=={(15,559497,15)},'renewable nine receiver')
+ cheap=[fuse(E,w['profile']) for D,w in nine_witnesses()]
+ require([p['H'] for p in cheap]==list(range(54365,54382,2)),'count-neutral source completion')
+ require({(p['h'],p['V'],p['e']) for p in cheap}=={(15,279756,0)},'count-neutral common receiver')
  transport_checks=0
  for n in range(6):
   for x in range(1<<n):
    bank=[fuse(unit(x,n),p) for p in renewable8]
-   require([p['H']-bank[0]['H'] for p in bank]==list(range(0,16,2)),'all finite unit controls')
+   require([p['H']-bank[0]['H'] for p in bank]==list(range(0,18,2)),'all finite unit controls')
    require(len({(p['h'],p['V'],p['e']) for p in bank})==1,'receiver still common');transport_checks+=1
- orbit={139878*2**j%15 for j in range(4)};require(orbit=={3,6,12,9} and 8 not in orbit,'phase obstruction not erased')
- result=dict(status='PASS',strong_core_census=census,inverse_brute_fibers=fibers,triangle_receiver_codes=4096,exact_h5_fiber=actual,renewable_four=completed,h5_eight_levels=levels,literal_eight=literal8,renewable_eight=renewable8,unit_context_controls=transport_checks,scope='All-order fixed-core inverse; GLOBAL h3 no-three and h5 inverse via SCC/Camion+finite core certificate; renewable h15 eight-bank. No Chan-Pak completeness or repeated width doubling.')
+ orbit={139878*2**j%15 for j in range(4)};require(orbit=={3,6,12,9} and 8 not in orbit and 9 in orbit,'ninth state repairs carry phase')
+ eighteen=[];bank=[fuse(unit(14,4),w['profile']) for D,w in nine_witnesses()]
+ require([p['H'] for p in bank]==list(range(1173389,1173406,2)),'prepared nine counts')
+ require({(p['h'],p['V'],p['e']) for p in bank}=={(15,2238033,15)},'prepared nine receiver')
+ for k in range(41):
+  V=bank[0]['V'];require(V>33 and (V-33)%30==0,'eighteen phase');P=2*((V-33)//15)
+  outs=[fuse(outctx(p),w) for p in (P,P+1) for w in bank];vals=[p['H'] for p in outs]
+  require(vals==list(range(vals[0],vals[0]+36,2)),'eighteen exact interval')
+  require(outs[9]['V']-outs[0]['V']==-15*(1<<(P.bit_length()-1)),'eighteen receiver defect')
+  require(V==2238032*16**k+1,'receiver closed form')
+  require(bank[0]['H']==1173389+17904256*(16**k-1)//15+8*k,'baseline closed form')
+  eighteen.append(dict(k=k,V=str(V),P=str(P),start=str(vals[0])));bank=[fuse(unit(14,4),w) for w in bank]
+ require(eighteen[0]['start']=='667830121109','first eighteen baseline')
+ result=dict(status='PASS',strong_core_census=census,inverse_brute_fibers=fibers,triangle_receiver_codes=4096,exact_h5_fiber=actual,renewable_four=completed,h5_eight_levels=levels,literal_nine=literal8,cheap_renewable_nine=cheap,renewable_nine=renewable8,eighteen_levels=eighteen,unit_context_controls=transport_checks,scope='All-order fixed-core inverse; GLOBAL h3 no-three and h5 inverse via SCC/Camion+finite core certificate; renewable h15 nine-bank and infinite eighteen-wide family. No Chan-Pak completeness or repeated width doubling.')
  Path(__file__).with_name('RESULTS.json').write_text(json.dumps(result,indent=2)+'\n')
  print('PASS',fibers,4096,len(literal8),transport_checks)
 if __name__=='__main__':main()

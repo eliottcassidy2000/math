@@ -93,3 +93,11 @@ def eight_witnesses():
   w=dict(a=a,p=p,cut=x,q=q,b=q.bit_length());pr=fuse(fuse(unit(p,a),cores(D)[x]),unit(q));require((pr['H'],pr['h'],pr['V'])==(H,15,139878),'eight exact packet');w['profile']=pr
   out.append((D,w))
  return out
+C_SC_T=ordinal(S4,(0,),TRI)
+NINE=EIGHT+[(54381,C_SC_T,5,25,122,5)]
+def nine_witnesses():
+ out=[]
+ for H,D,a,p,x,q in NINE:
+  w=dict(a=a,p=p,cut=x,q=q,b=q.bit_length());pr=fuse(fuse(unit(p,a),cores(D)[x]),unit(q));require((pr['H'],pr['h'],pr['V'])==(H,15,139878),'nine exact packet');w['profile']=pr
+  out.append((D,w))
+ return out

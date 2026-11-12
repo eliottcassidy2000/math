@@ -1,0 +1,48 @@
+{
+  "method": "independent deletion start/end tables and root splitting; direct full path table control",
+  "new_packets": [
+    {
+      "H": 2747,
+      "Q": 10816,
+      "U": 4030,
+      "V": 6955,
+      "d": 104,
+      "e": 65,
+      "h": 169,
+      "k": 0
+    },
+    {
+      "H": 2749,
+      "Q": 10816,
+      "U": 4030,
+      "V": 6955,
+      "d": 104,
+      "e": 65,
+      "h": 169,
+      "k": 0
+    }
+  ],
+  "old_packets": [
+    {
+      "H": 41,
+      "Q": 120,
+      "U": 78,
+      "V": 57,
+      "d": 6,
+      "e": 9,
+      "h": 15,
+      "k": 0
+    },
+    {
+      "H": 43,
+      "Q": 120,
+      "U": 78,
+      "V": 57,
+      "d": 6,
+      "e": 9,
+      "h": 15,
+      "k": 0
+    }
+  ],
+  "status": "PASS"
+}

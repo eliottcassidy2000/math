@@ -1,6 +1,6 @@
 # Central fusion banks: prime ownership and the exact absolute carry
 
-**Session282. PROVED, independently reviewed; final restored-source replay pending.** Chan–Pak remains
+**Session282. PROVED, independently reviewed and freshly replayed after restoration.** Chan–Pak remains
 OPEN. The arithmetic below is elementary bounded coin/CRT algebra; novelty is
 not claimed for that algebra. The contribution is its exact physical carrier
 interface, a target decoder retaining the absolute carry, and the restriction

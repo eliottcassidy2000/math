@@ -1,6 +1,6 @@
 # Target height, transitive-module rigidity, and physical Jordan cancellation
 
-**Session282. PROOF CANDIDATE pending independent review.** Chan–Pak remains
+**Session282. PROVED, independently reviewed.** Chan–Pak remains
 OPEN. The underlying substitution/Stirling and ordinal-product laws are inherited;
 new applications concern exact target height, signed-correction rigidity, and
 explicit mixed-tape cancellations. No new all-even-gap existence claim is made.

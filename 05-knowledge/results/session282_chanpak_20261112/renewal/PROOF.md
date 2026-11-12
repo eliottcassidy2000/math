@@ -1,6 +1,6 @@
-# All-order receiver inversion and a renewable eight-count bank
+# All-order receiver inversion and a renewable nine-count bank
 
-**Session282. PROVED from the inherited rooted-fusion carrier, subject to final independent review. Chan–Pak remains OPEN.**
+**Session282. PROVED from the inherited rooted-fusion carrier, independently reviewed. Chan–Pak remains OPEN.**
 
 ## 1. Inheritance and new operation universe
 
@@ -77,7 +77,7 @@ At V1906 the complete support is
 
     {195,741,819,821,823,825}.
 
-The four consecutive values have minimal-padding witnesses `(H;a,p,x,q,b)`:
+The four consecutive values have witnesses with minimal suffix length `(H;a,p,x,q,b)`:
 
     (819;7,73,6,0,0), (821;3,1,10,7,3),
     (823;0,0,10,59,6), (825;8,73,8,0,0).
@@ -88,14 +88,14 @@ They share h5,V1906 but have e0,0,2,0. Applying C2 (root word100) gives
 
 hence renewable8443,8445,8447,8449 with(h,V,e)=(5,15243,5). The inherited paid carry uses z=(15243−13)/5=3046,P6092 and produces eight consecutive odds beginning92,862,629. Repeating C3 (root word1000, exponent4) preserves the carry congruence and gives infinitely many scales. The widened eight-output union has the known receiving defect; it is not recursively renewable. This is not a larger-width record than Section5. A universal maximum fiber-run length4 at h5 is NOT proved.
 
-## 5. Inversion across distinct cores produces a renewable EIGHT-bank
+## 5. Inversion across distinct cores produces a renewable NINE-bank
 
 The compiler was applied to distinct deletion-count15 cores, not just one core with a larger size cutoff. Define
 
     A=(6,12,24,17,3), E=(44,1,2,6,15,30),
     B=(2,4,1), C=(2,4,9,3), BC=B->C.
 
-All these deletion choices A,E,BC have h15. The following explicit minimal-padding witnesses have V139878:
+Also use CB=C -> TT1 -> B. All deletion choices A,E,BC,CB have h15. The following explicit witnesses, using minimal suffix length, have V139878:
 
 |H|core|a|p|incoming core mask x|q|
 |---:|:---|---:|---:|---:|---:|
@@ -107,6 +107,7 @@ All these deletion choices A,E,BC have h15. The following explicit minimal-paddi
 |54375|E|4|9|57|40|
 |54377|A|0|0|7|1165|
 |54379|A|0|0|11|1165|
+|54381|CB|5|25|122|5|
 
 Take b=bitlength(q). Every graph has17 vertices except54369, which has18. The verifier constructs their row masks and independently checks all receiver coordinates by literal subset DP. Neutral sink padding puts them all at18 if desired.
 
@@ -114,20 +115,74 @@ The common C1 context (root word10) has
 
     H'=H+2V, V'=4V−h, e'=h.
 
-It therefore produces the renewable EIGHT-bank
+It therefore produces the renewable NINE-bank
 
-    334121,334123,...,334135; (h,V,e)=(15,559497,15).    (4)
+    334121,334123,...,334137; (h,V,e)=(15,559497,15).    (4)
 
-Any common left unit-deletion context translates all eight counts by the same amount and retains their common receiver, indefinitely. This is a proof from literal seeds and the inherited action law, not extrapolation of an observed run.
+There is also a cheaper count-neutral renewal preparation. Prepending one
+global source is the inherited rooted edge E=(0,1), with action
+`H'=H,V'=2V,e'=0,h'=h`. It turns the raw bank into a renewable bank at the
+ORIGINAL counts54365..54381 with shared `(h,V,e)=(15,279756,0)`, at most19
+vertices. This does not yet set e=h for the standard carry readout. The
+C1 preparation above and C3 preparation below deliberately pay for that
+stronger interface. No new identity for source padding is claimed.
 
-**Load-bearing boundary.** The eight-bank does NOT satisfy the existing width-doubling phase criterion. V139878 mod15 is3; its power-of-two orbit is{3,6,12,9}, excluding width8. Completion does not repair that incompatibility. Selecting six members recovers a permitted six-to-twelve route, but not sixteen. The new bank is wider and genuinely renewable, while eventual target coverage and unbounded renewable width remain OPEN.
+Any common left unit-deletion context translates all nine counts by the same amount and retains their common receiver, indefinitely. This is a proof from literal seeds and the inherited action law, not extrapolation of an observed run.
 
-The discovery search included A, two six-vertex cores, and B/C in both orders with at most8 internal singleton vertices, followed by the exact all-order outer-padding inverse. It found the displayed eight-bank at V139878. The process searching for nine was interrupted by an environment reset; NO negative conclusion or completed range from that process is reported. Only the displayed positive witnesses are used.
+### A ninth seed pays the phase and yields eighteen consecutive odds
+
+The first eight members alone fail the inherited doubling criterion: their
+width8 is outside the doubling orbit `{3,6,12,9}` of raw V139878 modulo15.
+The ninth seed does more than add one point. Width9 belongs to that orbit,
+so it pays the phase obligation that blocked the preceding eight-bank.
+
+Apply C3 (root word1000) directly to the raw nine-bank. Its action is
+`H'=H+8V, V'=16V−15, e'=15`. This gives the ready nine-bank
+
+    A_0=1173389, A_0+2,...,A_0+16;
+    (h,V_0,e)=(15,2238033,15).
+
+After k further C3 operations its common receiver and baseline are
+
+    V_k=2238032·16^k+1,
+    A_k=1173389+(17904256/15)(16^k−1)+8k.               (5)
+
+The quotient is integral. Always V_k≡33 mod30. Set
+`z_k=(V_k−33)/15`, a positive even integer, and P_k=2z_k. For the inherited
+one-apex context L_P with root-outgoing word the ordinary binary expansion
+of P, the exact shift on a prepared bank is
+
+    T_k(P)=15(g(P)−1)+(V_k−15)P,
+    g(0)=1, g(2v+1)=g(v), g(2v)=g(v)+v+(v mod2).
+
+The even-to-odd carry gives `T_k(P_k+1)−T_k(P_k)=18`. Hence
+
+    N_k,N_k+2,...,N_k+34,
+    N_k=A_k+T_k(P_k),                                  (6)
+
+are EIGHTEEN consecutive odd Hamilton counts for every k≥0. At k0,
+P=298400,g(P)=291769 and N_0=667830121109. N_k tends to infinity by(5).
+The physical construction has at most `22+4k+bitlength(P_k)` vertices;
+at k0 that is41. Its larger outputs are verified by exact fusion, not a
+claimed literal2^41 subset-DP replay.
+
+The eighteen-output union incurs receiving defect
+`−15·2^(bitlength(P_k)−1)` between corresponding halves. The NINE-bank is
+renewable; the eighteen-wide union is not yet rearmed. No generic repeated
+doubling, eventual tail or prescribed-target coverage is inferred.
+
+Discovery used A, two six-vertex cores, and B/C in both orders with at most8
+internal singleton vertices, followed by the exact all-order outer-padding
+inverse. After recovery another five-vertex count15 core was added to the
+search, but the displayed ninth witness uses C->TT1->B, not that added core.
+The search was only a seed finder; all positive claims depend on the nine
+explicit witnesses and the proved action law. No claim of completeness of
+that deletion-core library or absence of wider banks is made.
 
 ## 6. What changes for the constructive problem
 
 The inverse replaces an unbounded padding search by a finite signed carry descent at a prescribed ACTUAL receiver. It keeps core identity, binary incidence and absolute H. Every accepted state owns a literal witness. It still prescribes V rather than H and does not give a uniform core supplier.
 
-The global h3 obstruction says the most natural low-count architecture cannot supply a three-bank. Unequal endpoint weights at h5 escape that obstruction. Crossing core types at h15 then supplies a new renewable eight-bank. The missing step is not another congruence check: it is a construction controlling both the absolute H target and the continuing receiver while increasing renewable width.
+The global h3 obstruction says the most natural low-count architecture cannot supply a three-bank. Unequal endpoint weights at h5 escape that obstruction. Crossing core types at h15 then supplies a new renewable nine-bank. The missing step is not another congruence check: it is a construction controlling both the absolute H target and the continuing receiver while increasing renewable width.
 
 Run `python3 verify.py` and `python3 -O verify.py`. Literal controls and the positive all-scale constructions are separated in RESULTS.json. The mathematical all-order guarantees come from the proofs, not finite census extrapolation.

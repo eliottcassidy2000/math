@@ -1,0 +1,165 @@
+{
+  "content_divisor": 9,
+  "delta": -3072,
+  "exact_matrix_sandwiches": 32,
+  "literal_sandwiches": [
+    {
+      "H": [
+        9,
+        9
+      ],
+      "V": [
+        9,
+        9
+      ],
+      "converse": false,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "H": [
+        21513,
+        18441
+      ],
+      "V": [
+        21513,
+        18441
+      ],
+      "converse": false,
+      "left": 0,
+      "right": 2
+    },
+    {
+      "H": [
+        43017,
+        36873
+      ],
+      "V": [
+        43017,
+        36873
+      ],
+      "converse": false,
+      "left": 0,
+      "right": 3
+    },
+    {
+      "H": [
+        9,
+        9
+      ],
+      "V": [
+        9,
+        9
+      ],
+      "converse": false,
+      "left": 1,
+      "right": 0
+    },
+    {
+      "H": [
+        9,
+        9
+      ],
+      "V": [
+        18,
+        18
+      ],
+      "converse": false,
+      "left": 2,
+      "right": 1
+    },
+    {
+      "H": [
+        27,
+        27
+      ],
+      "V": [
+        27,
+        27
+      ],
+      "converse": false,
+      "left": 3,
+      "right": 0
+    },
+    {
+      "H": [
+        9,
+        9
+      ],
+      "V": [
+        21504,
+        18432
+      ],
+      "converse": true,
+      "left": 0,
+      "right": 0
+    },
+    {
+      "H": [
+        9,
+        9
+      ],
+      "V": [
+        43008,
+        36864
+      ],
+      "converse": true,
+      "left": 0,
+      "right": 2
+    },
+    {
+      "H": [
+        27,
+        27
+      ],
+      "V": [
+        64512,
+        55296
+      ],
+      "converse": true,
+      "left": 0,
+      "right": 3
+    },
+    {
+      "H": [
+        21513,
+        18441
+      ],
+      "V": [
+        42999,
+        36855
+      ],
+      "converse": true,
+      "left": 1,
+      "right": 0
+    },
+    {
+      "H": [
+        9,
+        9
+      ],
+      "V": [
+        43008,
+        36864
+      ],
+      "converse": true,
+      "left": 2,
+      "right": 1
+    },
+    {
+      "H": [
+        43017,
+        36873
+      ],
+      "V": [
+        86007,
+        73719
+      ],
+      "converse": true,
+      "left": 3,
+      "right": 0
+    }
+  ],
+  "scope": "common fusion contexts only",
+  "status": "PASS"
+}

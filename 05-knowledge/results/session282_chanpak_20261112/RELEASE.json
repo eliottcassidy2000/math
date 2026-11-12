@@ -1,0 +1,25 @@
+{
+  "documentation_check": {
+    "baseline": "8fa150fcb72ce182cc1df3048c8c0f807f3d0072",
+    "issues": [
+      "00-navigation/META-PATTERNS.md: 401 maintained lines exceeds budget 400",
+      "startup surface: 180862 bytes exceeds 180000"
+    ],
+    "new_changes_outside_session_packet": false,
+    "status": "FAILED on two unchanged pre-existing budget excesses"
+  },
+  "limits": [
+    "Chan\u2013Pak remains OPEN",
+    "eighteen-output family is not a renewable eighteen-bank",
+    "41-vertex output counts are proved-fusion evaluations, not literal subset-DP claims",
+    "global fixed-receiver compression is a finite decision bound, not an efficient class census"
+  ],
+  "mathematical_files_bound": 50,
+  "relative_links": {
+    "broken": [],
+    "checked": 41
+  },
+  "restoration": "After environmental rollback, regenerated source and all load-bearing receipts; no lost broad-search transcript fabricated",
+  "source_manifest_sha256": "e26b78cd1ab792af03f0ca5425888b114a013c7c0797be65746e56caab9ba06a",
+  "status": "INDEPENDENT REVIEW PASS; all final producer replays passed"
+}
