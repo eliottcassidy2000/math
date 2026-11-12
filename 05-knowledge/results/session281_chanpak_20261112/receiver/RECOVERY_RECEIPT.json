@@ -1,0 +1,20 @@
+{
+  "status": "RECOVERED_AND_REPLAYED",
+  "source_recovery": "Reconstructed final proof and verifier from retained agent context. Not asserted byte-identical to prior filesystem. Former Session280 imported helper definitions copied into self-contained verifier.",
+  "normal_optimized_equal": true,
+  "search14": "skeletons 100 cuts 1638400 max_run 6",
+  "search16": "skeletons 144 cuts 9437184 max_run 6",
+  "sha256": {
+    "PROOF.md": "7e2682d500e473982e632dc98595b14216bd76dce9f592dac9aab8522db5b558",
+    "README.md": "626d45dab8902ca536a4fbc5aeaa3aea3ea571190e302186f87d453ef2282126",
+    "RESULTS.json": "3410f0ce058741b51f736d7a7e702d04026984ce4e335124d265214eb3bf509a",
+    "SEARCH14.txt": "5002437f3747f7ef48e663a5bbce97c491279ddc3edc3169cdbfc9a5d75dda04",
+    "SEARCH14_SUMMARY.txt": "83243f8e4e56687126619535096fe8dd83bcf08aa3a38cf9e39f9756a373dc13",
+    "SEARCH16.txt": "5650efabbc192b58a0a366b9b6324346edbd4149839c0f1782759641254d9b41",
+    "SEARCH16_SUMMARY.txt": "06247a7efd5b456ff6a4b2678b1b702938a8009fb1de55724211f1662b39c5f2",
+    "normal.json": "3410f0ce058741b51f736d7a7e702d04026984ce4e335124d265214eb3bf509a",
+    "optimized.json": "3410f0ce058741b51f736d7a7e702d04026984ce4e335124d265214eb3bf509a",
+    "search.cpp": "7abf60d6688c6622350e48bb678eb5b6b442cfee1dc0ac37dc7e9c1b70db5e5c",
+    "verify.py": "9a3f76e7c1c12614f60cfbcc8fbe725faabf05b065f4e33db8820a5b518ad491"
+  }
+}
