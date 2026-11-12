@@ -1,5 +1,5 @@
 ---
-id: THM-5145
+id: THM-5149
 title: "RESERVED by opus-2026-11-11-S93 (UNPROVED EMPTY STUB; lane results of the S93 Chan-Pak wave: seed slopes and towers, port-chain semigroup and digit systems)"
 status: RESERVED / UNPROVED EMPTY STUB
 session: opus-2026-11-11-S93
