@@ -61,3 +61,27 @@ different losses with different repair data, not one universal symmetry map.
 The inherited startup-budget failures were subsequently repaired by compacting
 existing META-PATTERNS prose without removing its evidence or boundary tests.
 The final checker result is recorded in the release receipt.
+
+Final synchronization brought in Session288 checkpoints a201359df7 and
+fb3be30421. Its [length proof](../session288_twin_lengths_20261112/lengths/PROOF.md)
+and [prime-adic bridge](../session288_twin_lengths_20261112/bridge/PROOF.md)
+were read in full; their verification programs were not rerun here and the
+session's independent review is still pending at this checkpoint. These are
+**CITED REPOSITORY CHECKPOINTS**, not additional results claimed by our packet.
+
+The first combines the inherited run expansion with a selected-endpoint
+capacity bound R=min(nu+2,1+min(d+,d−)). A nonzero defect-minus-one with q
+exponential modes has at most q−1 real zeros. Thus one fixed unselected
+length axis is either free or has a bounded finite admissibility set; any
+R distinct successful positive lengths certify the free case. This sharpens
+finite screening while retaining the exterior and marking. The second uses
+our inherited order7 hostile to separate arbitrarily precise ternary/good-prime
+agreement from exact unit equality; modulus32 detects every failed length.
+
+This complements the present weighted-twin quotient: free coordinates give
+our rays and quadrants, while fixed successful lengths remain indispensable
+weights. Its affine-ray compensation test concerns a different operation
+from independent port inflation. Neither note supplies arbitrary joint
+stability, an absolute target selector, or Chan–Pak coverage. The checkpoint's
+referenced future synchronized-family lane was not yet in these fetched
+commits and is not imported or claimed here.

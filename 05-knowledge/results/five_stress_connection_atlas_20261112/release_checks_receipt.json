@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "local_markdown_links": 103,
-  "source_pins": 57,
+  "local_markdown_links": 105,
+  "source_pins": 59,
   "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
   "packages": {
     "sympy": "1.14.0",

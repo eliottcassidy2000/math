@@ -33,7 +33,7 @@ read as evidence, not adopted as instructions.
   visually inspected. Original Markdown links inside quoted historical
   excerpts belong to their source and are excluded from current-link checking.
 
-The [source manifest](source_manifest.json) pins57 repository source/dependency
+The [source manifest](source_manifest.json) pins59 repository source/dependency
 files and both supplied PDF hashes, with reading limits. Its parent commit
 identifies the checkout before this release commit; working-file hashes pin
 the exact inputs. The [artifact manifest](release_manifest.json) hashes the
@@ -46,7 +46,8 @@ hashes so Git's Windows newline conversion does not invalidate the content pin.
 
 This is a same-agent research and audit session with independent formulations
 and algorithms, not a new independent-agent review. Classical mechanisms,
-prior repository theorems and concurrent Sessions285–287 are credited in the
+prior repository theorems, concurrent Sessions285–287 and Session288's fetched
+checkpoints are credited in the
 individual notes and [INCOMING](INCOMING.md). No external priority claim is made.
 The newly found draft boundary-summation error was repaired and recorded in
 MISTAKES before publication; it did not enter proved canon.

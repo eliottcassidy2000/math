@@ -31,8 +31,8 @@
     },
     {
       "file": "AUDIT.md",
-      "sha256": "c0ce7e7af44e692d4c514ca2c5efd57dfed00559f16d5f3e52f514e036d24641",
-      "bytes": 9477,
+      "sha256": "1e27bc5bcd1f283d0736f0752c941695cb8b085d5f144df10165c5d47c3c67b8",
+      "bytes": 9342,
       "lf_sha256": "1e27bc5bcd1f283d0736f0752c941695cb8b085d5f144df10165c5d47c3c67b8"
     },
     {
@@ -154,8 +154,8 @@
     },
     {
       "file": "documentation_check_receipt.json",
-      "sha256": "eb6036926a381eb036142628b59f6ddabd95e52406c3135d0f5b334da79f75b3",
-      "bytes": 533,
+      "sha256": "48c09fc9fd62ebd44149a27e6e27a9bfbd469ce4cc5d70c068be0411c728e0ae",
+      "bytes": 541,
       "lf_sha256": "eb6036926a381eb036142628b59f6ddabd95e52406c3135d0f5b334da79f75b3"
     },
     {
@@ -178,8 +178,8 @@
     },
     {
       "file": "HISTORY.md",
-      "sha256": "0de6bf3a00ee76db30c7568f44a9897d3c415a82fc6e66120e9fe3775cf8651b",
-      "bytes": 24354,
+      "sha256": "57d17b9564a1008ee1afe2cd6e4c7ae7b41b37cd4f89a333b99e6ccc3b2c9e03",
+      "bytes": 24154,
       "lf_sha256": "57d17b9564a1008ee1afe2cd6e4c7ae7b41b37cd4f89a333b99e6ccc3b2c9e03"
     },
     {
@@ -281,9 +281,9 @@
     },
     {
       "file": "INCOMING.md",
-      "sha256": "85514ee94efb457cc1b3cd1d08948fe36ebebb73265070e0d2e573889a4e275d",
-      "bytes": 3951,
-      "lf_sha256": "85514ee94efb457cc1b3cd1d08948fe36ebebb73265070e0d2e573889a4e275d"
+      "sha256": "2441cff9844cf002eda500d4ebcd08f65e7fd4c719c7271f99107af181314aec",
+      "bytes": 5514,
+      "lf_sha256": "2441cff9844cf002eda500d4ebcd08f65e7fd4c719c7271f99107af181314aec"
     },
     {
       "file": "joint_port_extension.json.gz",
@@ -322,20 +322,20 @@
     },
     {
       "file": "PLAN.md",
-      "sha256": "9c4942a816ec3b8de6ef908144d6865e14bd6dfbd98fe2feb0228b762bf053ab",
-      "bytes": 2562,
+      "sha256": "e0c939a7c634e14e1320d642b8896f5c7b32d4d581bd1e376ae266cc3707f1db",
+      "bytes": 2517,
       "lf_sha256": "e0c939a7c634e14e1320d642b8896f5c7b32d4d581bd1e376ae266cc3707f1db"
     },
     {
       "file": "PROMPT-INDEX.md",
-      "sha256": "32c8029619fabfeb5615899fcf59c8c7f3f51a9fabf60fef15c0aebc431679ea",
-      "bytes": 387860,
+      "sha256": "681f9e88efcf5165d066542609074c9282e6c8278a6bfcdefc4467f4eee4882e",
+      "bytes": 385014,
       "lf_sha256": "681f9e88efcf5165d066542609074c9282e6c8278a6bfcdefc4467f4eee4882e"
     },
     {
       "file": "README.md",
-      "sha256": "e6c4deca05a19aae6fcdca0d4cc55037c36754e7e10f782d5dcd354470bf431c",
-      "bytes": 9477,
+      "sha256": "6ac62fe5c28df64f764cd13977b13cec7acef9e437679e96c692ec6171bdd684",
+      "bytes": 9346,
       "lf_sha256": "6ac62fe5c28df64f764cd13977b13cec7acef9e437679e96c692ec6171bdd684"
     },
     {
@@ -346,9 +346,9 @@
     },
     {
       "file": "release_checks_receipt.json",
-      "sha256": "4f40d0ec7f0e6c7738a9d54a199a1a92662bf557dfef4becf8dd5f5ecad5aacf",
+      "sha256": "8ae5c6f1eb2e675113ed04a17fc56e124deaa5740ce9191a14d9df7cf57d7285",
       "bytes": 707,
-      "lf_sha256": "ab2d396665d74047b28ed21fca413d5fd5b038abe3569e649f203735577670ca"
+      "lf_sha256": "062c8411fa8def1b12cf7b99fb3744f809ed27c9d0c21d87f84cd232b93fe02e"
     },
     {
       "file": "replay_audit.py",
@@ -364,8 +364,8 @@
     },
     {
       "file": "REPRODUCE.md",
-      "sha256": "4704b8abb406f10227415d6b63273b8196d28f3cfe6584d60f710f5ea17b8c3e",
-      "bytes": 4076,
+      "sha256": "46af57360ee2a3c0bc184168f96af54da04f500c17fafb99b2e33b34a705215e",
+      "bytes": 4013,
       "lf_sha256": "46af57360ee2a3c0bc184168f96af54da04f500c17fafb99b2e33b34a705215e"
     },
     {
@@ -400,15 +400,15 @@
     },
     {
       "file": "SEEDS.md",
-      "sha256": "b77268a0a1813ee1e9aa94b07e513ef2380c7533be2bc72976d77fae9928319e",
-      "bytes": 19939,
+      "sha256": "8dfccd9b72a4aedc38e1b628010d2936d7a3442eafb22031ab6d7e6acc6b998d",
+      "bytes": 19552,
       "lf_sha256": "8dfccd9b72a4aedc38e1b628010d2936d7a3442eafb22031ab6d7e6acc6b998d"
     },
     {
       "file": "source_manifest.json",
-      "sha256": "e416547dfc86f34241618a0cfea85b1851865304e474616fc17b6ffed5fa7800",
-      "bytes": 26095,
-      "lf_sha256": "67524efb5ac26c03d23da63e01eafd989f3273aba04913442d80600b3f75c883"
+      "sha256": "abb9063f9a935a254a443ed64b5adbdff795c756ccf5d38268787188161e504f",
+      "bytes": 26966,
+      "lf_sha256": "e5b5a624d5883263cc85f35766abf5b0ccdb4d9e51f93378842d0fa194e0a28d"
     },
     {
       "file": "STRESS.md",

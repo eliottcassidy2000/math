@@ -1,6 +1,6 @@
 {
   "baseline": "7510e38f9c77",
-  "checkout_parent_commit": "c9b3c74fd4f1c0d2a60f06506382cc163ca8180c",
+  "checkout_parent_commit": "296f638d525667bbcd26011e05d263808fe920a9",
   "sources": [
     {
       "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
@@ -282,6 +282,18 @@
       "path": "05-knowledge/results/session287_padic_cores_20261112/SYNTHESIS.md",
       "worktree_sha256": "32f4a97294ade51c14eaf982cac0a6dc1c6e1572e3872f75512731a2b7ae60f6",
       "HEAD_blob": "f9a1e08833bfa6c8319d1c8f7bd9ca87e34966d2",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session288_twin_lengths_20261112/bridge/PROOF.md",
+      "worktree_sha256": "386e2832a68af2ed2b7b79fc2413a23cb3f4cb06a86b940f067614c08893e8cc",
+      "HEAD_blob": "2021d7285682f6e45c7f3bb7367a56b7270a9be0",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session288_twin_lengths_20261112/lengths/PROOF.md",
+      "worktree_sha256": "eddc6291757dec9910266cb87327e782010261aa8113be3bca1e2583f5c5e07e",
+      "HEAD_blob": "0fecbbfa63143f285cd7cb666b853342da00d919",
       "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
     },
     {
