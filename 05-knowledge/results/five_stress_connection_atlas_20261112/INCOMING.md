@@ -39,3 +39,25 @@ at this baseline: META-PATTERNS has401 maintained lines (limit400), and startup
 documents total180862 LF-normalized bytes (limit180000). No new file in this
 packet belongs to that startup surface. Recheck after integration; do not
 report the baseline checker as passing.
+
+The next fetch added Session286's final9d8a2ee20f and Session287's
+finalc0d4d649d0. Their syntheses, connection ledger and the beginning of the
+independent review were read; their full proofs were not independently
+rechecked here. [Session286](../session286_precise_bridges_20261112/SYNTHESIS.md)
+classifies a physical central fibre by a carry language, supplies an injective
+13-adic reset decoder, and keeps the absolute mesh in its semigroup theorem.
+[Session287](../session287_padic_cores_20261112/SYNTHESIS.md) separates correlated
+prime-adic addresses, formal additive saturation, visible automorphism loss,
+hidden endpoint divisibility and inflation-mode interpolation. These are
+incoming results, not contributions claimed by this packet.
+
+The useful synthesis is specific: our stable interval modes2 and3 are exact
+integer continuation laws; their local prime-adic images still need a physical
+selector and an absolute count bound. The king-strip reflection example shows
+how an observer can hide genuine modes, while Session287's endpoint action
+shows how divisibility can survive loss of visible graph symmetry. These are
+different losses with different repair data, not one universal symmetry map.
+
+The inherited startup-budget failures were subsequently repaired by compacting
+existing META-PATTERNS prose without removing its evidence or boundary tests.
+The final checker result is recorded in the release receipt.

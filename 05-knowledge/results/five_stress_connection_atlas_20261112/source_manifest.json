@@ -1,0 +1,371 @@
+{
+  "baseline": "7510e38f9c77",
+  "checkout_parent_commit": "c9b3c74fd4f1c0d2a60f06506382cc163ca8180c",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "worktree_sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "HEAD_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "01-canon/theorems/THM-2294-anchored-plucker-tournament-and-kakeya-address-bank.md",
+      "worktree_sha256": "f3b5f09cc4b7a9d4abe462a736212f4f517eb337595befc0843289b62f4809bf",
+      "HEAD_blob": "09757f45f0d247f9e3bba103fa3e527b70d31a7f",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "worktree_sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f",
+      "HEAD_blob": "21c54c68fac2c18efcacd26331006824fe891cda",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "01-canon/theorems/THM-5137-pentagon-cube-sums-of-doubly-regular-tournaments-and-the-record-lift-of-the-mean-redei-berge-function.md",
+      "worktree_sha256": "e34f45d1921ebc6ffd7d9b0330aeff724bcbe1d50de119d526e116d58ae3db72",
+      "HEAD_blob": "ca8b27fb0c4faed3ff831201ee7f1d2de729eab5",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/aliquot_66_five_fifteen_20261028/ATLAS.md",
+      "worktree_sha256": "60d672f425b42718e2a3a4e1c7bef0d4c7f8f1ae7580169dbbb9a55ee9804b5a",
+      "HEAD_blob": "d84acd997fbb7dd181a86d2f5059ae83dca17a70",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/catalan_elliptic_20260921_catalan.md",
+      "worktree_sha256": "21fbd1467d45b64e4f643e05aec8ac6dc091c3f106b8720ca2d415c00991da80",
+      "HEAD_blob": "58449f1017010177ff6a0261f3fc05c976417b24",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/history/RECOVERY.md",
+      "worktree_sha256": "041cb642c9efcf5f3aa2a613b962ba586c841b746c5e44a6792333542df8b399",
+      "HEAD_blob": "2b3206e23260e311f58aea71985f5eae84e1cb47",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/collatz_aliquot_lehmer_five_20260927.md",
+      "worktree_sha256": "c3448486209a3ca7d5713d78d56500ad63434df09674797af55cedd7c33fb19b",
+      "HEAD_blob": "6c129777f80ac19be0d2b997bd76751d2985a5bc",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/collatz_five_mirrors_20260929.md",
+      "worktree_sha256": "6305a4beda154c2447c10c43429524363e38f36e4c293d1f3039e5957657fa8c",
+      "HEAD_blob": "d3757accd10128ae348989cdec1047bb05c5f5e6",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/collatz_five_papers_synthesis_20261006.md",
+      "worktree_sha256": "969b5f4b214dab76153e60e0bf2e653ed5db8c6e9673ab79d139e8725c740fb6",
+      "HEAD_blob": "2a8b775a8494574ee4a57d028256f9a379030b60",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/collatz_pentagon_fixed_points_argument_styles_20260930.md",
+      "worktree_sha256": "3194d52e29fef37cbdb09a050c6925f0e09477714c4b9193ecdce7063d4913dd",
+      "HEAD_blob": "a1c392cca61b90f70fa92282ef372b33538c1676",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/collatz_pentagon_operator_coherence_20260930.md",
+      "worktree_sha256": "ac72a2461985a3428ad32aede3a674f091d573529fd8f910b043de7f8ec23fd0",
+      "HEAD_blob": "21899f8bafe582adb321f6f0dfe5dc3a60e0638d",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/endpoint_coverage_compiler_20261111/CONNECTIONS.md",
+      "worktree_sha256": "7954c9944aa82b756aba4566bc26902a266e99f75501c862c3cb70131c6bcc53",
+      "HEAD_blob": "be750d362cda7999122f91e4c7c75db2cdeb156c",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/endpoint_coverage_compiler_20261111/inflation_bank.py",
+      "worktree_sha256": "4996a1a1b12abfe1192a9fa47a0c7ce783551aa438d353b0c066458bdc0f7c7a",
+      "HEAD_blob": "f67b6b46208c3339e2957f89f72cc8f670035191",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/endpoint_coverage_compiler_20261111/inflation_bank_7.json",
+      "worktree_sha256": "772c77d2bb917fcf35c44d2a2ca625f6891c445552d5d94cc5b4a5754b84f1ba",
+      "HEAD_blob": "a524ad1c6c59fa9d619b140f494bed68ac450f5c",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/five_core_web_20261111/history/INCIDENCE_AND_HISTORY.md",
+      "worktree_sha256": "9b2f4a397bcf6b23c2c0d67a666a57edba8c10a378b556610b38801ed57a002e",
+      "HEAD_blob": "92f2463238b13dbba60e1edfd6030c67e57bab57",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/five_eight_nine_transfer_20261005.md",
+      "worktree_sha256": "4d5ab2f990bd62cb90adf70c58d5d0012b3a955cd86e8505f0b2bca24e243642",
+      "HEAD_blob": "516d2b9c167bde26104734f4d15a976d37c9d1a0",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/five_manuscripts_chowla_collatz_residue_bsd_20261013.md",
+      "worktree_sha256": "0e82c50c3d220fe5611fdf42b366dc1ab513c3adfb59469638265cd9c36bce3d",
+      "HEAD_blob": "3050394791038a2224b2af7646dd94b523b07543",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/fivefold_boundary_20261018g.md",
+      "worktree_sha256": "c56aa493928e053fc7fe2002a5c6900aab7018ac74f0934fdd3aad0854c6fd14",
+      "HEAD_blob": "efb4017f52f91b79dd176931043038a2039259b7",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/gilbreath_fermat_platonic_20260926.md",
+      "worktree_sha256": "4534109ce9ab42e9ef3370970187d16fad4e9adc8e5c03bbdb044220ab77919d",
+      "HEAD_blob": "0f25bfa0de84f3db4a559d554f07a395852aa5d1",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/groups_of_five_primegame_merged_metagraph_20261031.md",
+      "worktree_sha256": "70ad0f50758bd68e1d1664302d2879276dd9a7b4cd5a2b18e645aeb1f4f218d5",
+      "HEAD_blob": "dd8af4fec7974e8e004a9b6a7c44597b5a3142cf",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/infinite_birth_families_20261111/ARITHMETIC.md",
+      "worktree_sha256": "71fbae12cbd2a020aee2d9a69503fdd637f91db4ffe33e91cb9a69e03f006757",
+      "HEAD_blob": "c0114dc0f804cd2f6220c33ad164f8dbe0fb220e",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/metagraph_aspect_sequences_20261111/PROOFS.md",
+      "worktree_sha256": "019b6f1cd77033e3655420193b00089338f67822978d03d6a9c54584bb358948",
+      "HEAD_blob": "4f99a6197fb4e8be553802b7992ef3353cee275b",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/metagraph_aspect_sequences_20261111/README.md",
+      "worktree_sha256": "e98472a87250c4562dfa948408685a86f5de1f9eedb540bd13a6a6350d995049",
+      "HEAD_blob": "21da00f44d5a8b16da7569b233d89ea929ec62b9",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/metagraph_aspect_sequences_20261111/records.jsonl.gz",
+      "worktree_sha256": "93b37da5eb037ec5eddc3d9e9156404480e9a9d81badf6359f91646cd8ed41fc",
+      "HEAD_blob": "36df1a7947fa14458979a18b7572cd36a3467676",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/metagraph_five_census_hostile_20261023/README.md",
+      "worktree_sha256": "279a50a7df5d598b5122dabba8b9fd8e567ce7295059228efc24766ffc93b893",
+      "HEAD_blob": "614e99f77655ebc2865449b695a4db24c3c4355e",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/modular_centers_collatz_pell_20261111/content_checks.py",
+      "worktree_sha256": "bf894b45e3d3f29a5e953b72bc12fec6ba3a07db7868a768758624917eacc63d",
+      "HEAD_blob": "322ef46d03ff14d21917cdc938a04b362194d7b1",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/modular_centers_collatz_pell_20261111/tournament_checks.py",
+      "worktree_sha256": "25a193fe1d66a6c6780451f5de6c393398c1b7788e743744317c258f41aa6a7a",
+      "HEAD_blob": "5af88266d4124c0b71829f3d5f516e1fd68c191b",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/odd_c_seed_symmetry_20261110/README.md",
+      "worktree_sha256": "e2f813c6be6bf60c527cd9d3c458835d25429a538dd7f73127b0e6f6df0f215c",
+      "HEAD_blob": "5bb6411bebd6f2ff7dd48654607d2a86d5789b77",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/packing_bases_repunits_20261108/README.md",
+      "worktree_sha256": "290ec085e5e3b01bac3a5e056648c9769b22a6519ec05821134b534c35956053",
+      "HEAD_blob": "be5db33c133011d4d58836c8b975d7abc708a536",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/pentagon_context_number_fields_20261011.md",
+      "worktree_sha256": "29852d2d885a79d0c59d90b0a66f8b7426da81df4dc701ce4223dc8eb8a94bef",
+      "HEAD_blob": "bb4a90b82ac1477d735a46a993a157d17a03bf88",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/pentagon_flow_generating_functions_20261021/README.md",
+      "worktree_sha256": "b889c232e2a887e47bc2cd391b64f1653bde5178d354a3aec1d5fceb4a30a172",
+      "HEAD_blob": "f93e5518a845b903301cb598d31464a6d90fbb79",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/planar_jc_long_20260906_memory_valuation12.md",
+      "worktree_sha256": "82d4bf361e8f326c780a8c8a6dd742d2abe1da395b667960ad94981f73019f00",
+      "HEAD_blob": "c2fda5dd2bb052aa274ec0ad802ac7d5599e1eac",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/seed_recursion_births_20261111/ARITHMETIC.md",
+      "worktree_sha256": "315324a242513caf24391e475a6295b20bcd44d1625d32db218abf693a18db5b",
+      "HEAD_blob": "9bc013d20203aa63a4cf0a8c9b9c808aab2c9f06",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/seed_recursion_births_20261111/cones.py",
+      "worktree_sha256": "2b517a17b40bde55e5ed67c85cf72ba206f9ce33162dd6570e59f83faa7465a5",
+      "HEAD_blob": "66998652bac2f643cbf7daf7c60582974fa16b19",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/seed_recursion_births_20261111/port_transport.py",
+      "worktree_sha256": "acdc3a474a19ee7f7680886d31320cb7701c482b762e6d40b189fee321c7da03",
+      "HEAD_blob": "e4b757a569688b48b045ebadcadb66af65810062",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/seed_recursion_births_20261111/PROOFS.md",
+      "worktree_sha256": "b99ba63f85c2af089868bb1c90b1c6ba66b571fa1bfc3e3a16cbce01f6846f78",
+      "HEAD_blob": "19dd527e788d1d74561e2fe2430b34665f94b08d",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session251_creative_completion_20261111/ternary/compiler.py",
+      "worktree_sha256": "56c231002bb23fe56ced0455b0ffa4167fd4905f2aa38f313073d172d77cbc62",
+      "HEAD_blob": "bfbe45b038a7c2e5d78525aa823dc6a7c574381f",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session257_permutohedron_squares_20261111/history/README.md",
+      "worktree_sha256": "f6350d29503920200d9dda53623a31666eb1cd885091e382418d5549f847b649",
+      "HEAD_blob": "c22096aa1bbcc4ac3644fb8db27d8f0ea07179a5",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session260_quasiperfect_chanpak_20261111/bridges/RESEARCH.md",
+      "worktree_sha256": "0f85a5e253d000cb947a0ef1dd37a596ffee826787884192d19b5cf1cf01690c",
+      "HEAD_blob": "dd56e7b5edb91ea78872e25c61c2b4100106c1cb",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session285_five_web_20261112/bridges/PERIOD_FIBERS.md",
+      "worktree_sha256": "458224f9128c2891f3396e445adcb4cc0bab90a5e7cdc8086852552db7999190",
+      "HEAD_blob": "ccac4001be803c9aab48d129e82de4f85a398c55",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session285_five_web_20261112/history/MECHANISM_ATLAS.md",
+      "worktree_sha256": "681881f3ebf3c64e469080fa2e1567c671cea23b1585e2fd1750c59f8f9a3e40",
+      "HEAD_blob": "351e492b52a7495b086811f6b33d0807687bad04",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session285_five_web_20261112/stress/BRIDGES.md",
+      "worktree_sha256": "0cd08584de633752b48e9fbdca83ccc5c462aa8b177d4dfe08b768c7ccd0a405",
+      "HEAD_blob": "12a498646f0948e5bad52e53112ad94ae47f2c10",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session285_five_web_20261112/stress/PROOF.md",
+      "worktree_sha256": "06554fac255f4d749026757a883356de7d01575babfb096dbd962b56b11e25b9",
+      "HEAD_blob": "754314995640316032bf5e15571ae778af0e9212",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session285_five_web_20261112/SYNTHESIS.md",
+      "worktree_sha256": "85ba69cf9e1c93b855350a20d74a8c0af3d7e8c92372e4d24260b50f549e6330",
+      "HEAD_blob": "4bd7197c3a640d715c9c6dc82b713ce0e4306e9d",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session286_precise_bridges_20261112/SYNTHESIS.md",
+      "worktree_sha256": "26fbdf34bb6de75d51c3ae721068df0edc085a7e05d08bf27d3853a5182b771e",
+      "HEAD_blob": "545f39541ed796f4e6928edc48918da967b45db9",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session287_padic_cores_20261112/SYNTHESIS.md",
+      "worktree_sha256": "32f4a97294ade51c14eaf982cac0a6dc1c6e1572e3872f75512731a2b7ae60f6",
+      "HEAD_blob": "f9a1e08833bfa6c8319d1c8f7bd9ca87e34966d2",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/session31_mirror_mrb_20261022/README.md",
+      "worktree_sha256": "33b1a720949bd9c2a92e69116b5301ba497014e1bdc0787ad52225bb00ad7a16",
+      "HEAD_blob": "f7334bea2d7371d596fec743dddbdc130d2079ff",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/six_output_return_20261103/SIX_AND_CATALAN.md",
+      "worktree_sha256": "52a85d0e3ae1e0b6f875a473c4bb01d68f3f7fe77bbc9ae01f2226538b8fdac9",
+      "HEAD_blob": "c873c71f44facf1f9c433904a55a3a87b46db730",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/thomassen_merge_hypohamiltonian_groups_20261104.md",
+      "worktree_sha256": "62ea7ede8586d4f18dd6496810435215abfd3d0537d9bbb8b34ed043ad4b79e7",
+      "HEAD_blob": "9421544ca091973466640467ef7d49b7c3459b31",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/three_quantities_fortyfour_five_dudeney_fermat_clock_arrows_20261026.md",
+      "worktree_sha256": "684ad99c91c218caa1262f045a22e82be1519aa481476e7176d579d78c805ff8",
+      "HEAD_blob": "74f1f55b1f971824fd04027b9816165aa2053a94",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/three_quantities_fortyfour_five_dudeney_fermat_clock_arrows_20261026_audit.md",
+      "worktree_sha256": "b226cd7dd293a828254a6241a382ded5260b12123e03f37dd4836af7eec8c988",
+      "HEAD_blob": "431403f022ec260eae47646edd1182b9e640d4e0",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/tournament_growth_gaussian_gf_runs_fermat_20261029.md",
+      "worktree_sha256": "f607dc1183fc0e42495ed6553e5855cff579c6589cabab1bf23303ca963aa83a",
+      "HEAD_blob": "0ec15d7082dfcbdfd4a74a423f82bb039102cb04",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md",
+      "worktree_sha256": "d1be8736907ba3a9c5932c289f3c4a10f5b725f4c1689edbc70661b209f96178",
+      "HEAD_blob": "917faeb7c5d7655b3a69d62e8eee9cc682e5a34b",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "05-knowledge/results/uniform_return_metagraph_20261111/reset/ATLAS_TWO_BIRTH.md",
+      "worktree_sha256": "e3b89f89b7faad7fb9637055bdff706b43d10cbd4dc9850f2d366d347f94664e",
+      "HEAD_blob": "539d1b098011ac446867439bb2a2b0fe34849b38",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "07-reflections/the-five-faces-of-an-involution.md",
+      "worktree_sha256": "238f4136299330e8f296ae3ba281955be980dee4132d3cf8e41e1769c10074c1",
+      "HEAD_blob": "5581b869beae1d4a0dfcc8d639317035d407c46b",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    },
+    {
+      "path": "07-reflections/what-the-eq27-snippet-structure-lends-the-repo-five-transfers-klein-S405.md",
+      "worktree_sha256": "aab67abfe7896029fa6a93643230cdddd6e522228cf70826ae51ad94943e92c9",
+      "HEAD_blob": "e6486daaf3f5504635576ac2bc90587612633c9f",
+      "reading_scope": "Linked source or computation dependency; HISTORY and AUDIT specify the inspected portions. This entry does not assert full reading or revalidation."
+    }
+  ],
+  "supplied_pdfs": [
+    {
+      "filename": "The_Multiset_Dimension_of_Graphs_Extremal_Values_a.pdf",
+      "sha256": "4fd417095c00e982e60b7ebf55f95af95e7a4463a80c3416d6b1964f5912e078",
+      "reading_scope": "Opening/title and relevant sections14-16, selected later material; finite local automaton reconstructed, no billion-graph or Lean audit."
+    },
+    {
+      "filename": "2607.12873v1.pdf",
+      "sha256": "ccbe7b664afa3cc3e64eecbd0963fbb8bd139a06953095b0fd440ad1144034c3",
+      "reading_scope": "Opening/title and record-composition formula; existing THM-5137 descendant and correction lineage consulted."
+    }
+  ],
+  "external_primary_routes": [
+    "https://doi.org/10.1002/zamm.19330130506",
+    "https://www.sciencedirect.com/science/article/pii/S0065215608703004",
+    "https://link.springer.com/article/10.1007/s00707-008-0118-3",
+    "https://doi.org/10.1007/s00707-010-0370-1",
+    "https://ir.cwi.nl/pub/6805",
+    "https://oeis.org/A000016",
+    "https://oeis.org/A000568",
+    "https://oeis.org/A135244",
+    "https://oeis.org/A002496"
+  ]
+}

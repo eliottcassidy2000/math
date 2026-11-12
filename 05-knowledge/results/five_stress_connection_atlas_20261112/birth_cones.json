@@ -1,0 +1,6658 @@
+{
+  "scope": "Finite exact certificate for all-length cone intersections after canonical unselected-twin compression, for every stable-clone birth through8. All original stable ports inflated jointly and independently; no newly emergent ports are added to the allowed operation set.",
+  "births": 98,
+  "birth_order_port_histogram": [
+    [
+      3,
+      1,
+      1
+    ],
+    [
+      5,
+      1,
+      4
+    ],
+    [
+      6,
+      1,
+      8
+    ],
+    [
+      7,
+      1,
+      20
+    ],
+    [
+      7,
+      2,
+      5
+    ],
+    [
+      8,
+      1,
+      46
+    ],
+    [
+      8,
+      2,
+      14
+    ]
+  ],
+  "quotient_aut_order_histogram": {
+    "1": 98
+  },
+  "distinct_quotients": 88,
+  "chart_pair_tests": 10,
+  "overlaps": [],
+  "disjoint_certificates": [
+    {
+      "quotient": [
+        5,
+        24,
+        2,
+        28,
+        25,
+        1,
+        9
+      ],
+      "first": {
+        "birth_record": 15,
+        "fixed_coordinates": [
+          1,
+          2,
+          0,
+          1,
+          1
+        ]
+      },
+      "second": {
+        "birth_record": 18,
+        "fixed_coordinates": [
+          2,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "conflicts": [
+        {
+          "coordinate": 0,
+          "first_fixed_length": 1,
+          "second_fixed_length": 2
+        },
+        {
+          "coordinate": 1,
+          "first_fixed_length": 2,
+          "second_fixed_length": 1
+        }
+      ]
+    },
+    {
+      "quotient": [
+        5,
+        24,
+        2,
+        4,
+        25,
+        3,
+        11
+      ],
+      "first": {
+        "birth_record": 16,
+        "fixed_coordinates": [
+          0,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      "second": {
+        "birth_record": 19,
+        "fixed_coordinates": [
+          0,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      "conflicts": [
+        {
+          "coordinate": 1,
+          "first_fixed_length": 1,
+          "second_fixed_length": 2
+        },
+        {
+          "coordinate": 2,
+          "first_fixed_length": 2,
+          "second_fixed_length": 1
+        }
+      ]
+    },
+    {
+      "quotient": [
+        6,
+        48,
+        2,
+        4,
+        57,
+        51,
+        3,
+        19
+      ],
+      "first": {
+        "birth_record": 43,
+        "fixed_coordinates": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          1
+        ]
+      },
+      "second": {
+        "birth_record": 53,
+        "fixed_coordinates": [
+          0,
+          2,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "conflicts": [
+        {
+          "coordinate": 1,
+          "first_fixed_length": 1,
+          "second_fixed_length": 2
+        },
+        {
+          "coordinate": 2,
+          "first_fixed_length": 2,
+          "second_fixed_length": 1
+        }
+      ]
+    },
+    {
+      "quotient": [
+        6,
+        48,
+        4,
+        17,
+        58,
+        51,
+        1,
+        19
+      ],
+      "first": {
+        "birth_record": 44,
+        "fixed_coordinates": [
+          1,
+          1,
+          2,
+          0,
+          1,
+          1
+        ]
+      },
+      "second": {
+        "birth_record": 54,
+        "fixed_coordinates": [
+          2,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "conflicts": [
+        {
+          "coordinate": 0,
+          "first_fixed_length": 1,
+          "second_fixed_length": 2
+        },
+        {
+          "coordinate": 2,
+          "first_fixed_length": 2,
+          "second_fixed_length": 1
+        }
+      ]
+    },
+    {
+      "quotient": [
+        6,
+        48,
+        2,
+        8,
+        19,
+        53,
+        3,
+        23
+      ],
+      "first": {
+        "birth_record": 47,
+        "fixed_coordinates": [
+          0,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      "second": {
+        "birth_record": 57,
+        "fixed_coordinates": [
+          0,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "conflicts": [
+        {
+          "coordinate": 1,
+          "first_fixed_length": 1,
+          "second_fixed_length": 2
+        },
+        {
+          "coordinate": 3,
+          "first_fixed_length": 2,
+          "second_fixed_length": 1
+        }
+      ]
+    },
+    {
+      "quotient": [
+        7,
+        96,
+        2,
+        100,
+        105,
+        115,
+        103,
+        1,
+        33
+      ],
+      "first": {
+        "birth_record": 62,
+        "fixed_coordinates": [
+          1,
+          2,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "second": {
+        "birth_record": 79,
+        "fixed_coordinates": [
+          2,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "conflicts": [
+        {
+          "coordinate": 0,
+          "first_fixed_length": 1,
+          "second_fixed_length": 2
+        },
+        {
+          "coordinate": 1,
+          "first_fixed_length": 2,
+          "second_fixed_length": 1
+        }
+      ]
+    },
+    {
+      "quotient": [
+        7,
+        96,
+        2,
+        4,
+        9,
+        19,
+        103,
+        15,
+        47
+      ],
+      "first": {
+        "birth_record": 69,
+        "fixed_coordinates": [
+          0,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      "second": {
+        "birth_record": 70,
+        "fixed_coordinates": [
+          0,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      "conflicts": [
+        {
+          "coordinate": 3,
+          "first_fixed_length": 1,
+          "second_fixed_length": 2
+        },
+        {
+          "coordinate": 4,
+          "first_fixed_length": 2,
+          "second_fixed_length": 1
+        }
+      ]
+    },
+    {
+      "quotient": [
+        7,
+        96,
+        2,
+        108,
+        105,
+        113,
+        103,
+        1,
+        33
+      ],
+      "first": {
+        "birth_record": 97,
+        "fixed_coordinates": [
+          1,
+          2,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "second": {
+        "birth_record": 127,
+        "fixed_coordinates": [
+          2,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "conflicts": [
+        {
+          "coordinate": 0,
+          "first_fixed_length": 1,
+          "second_fixed_length": 2
+        },
+        {
+          "coordinate": 1,
+          "first_fixed_length": 2,
+          "second_fixed_length": 1
+        }
+      ]
+    },
+    {
+      "quotient": [
+        7,
+        96,
+        2,
+        12,
+        9,
+        17,
+        103,
+        15,
+        47
+      ],
+      "first": {
+        "birth_record": 99,
+        "fixed_coordinates": [
+          1,
+          1,
+          0,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      "second": {
+        "birth_record": 108,
+        "fixed_coordinates": [
+          1,
+          1,
+          0,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      "conflicts": [
+        {
+          "coordinate": 3,
+          "first_fixed_length": 1,
+          "second_fixed_length": 2
+        },
+        {
+          "coordinate": 4,
+          "first_fixed_length": 2,
+          "second_fixed_length": 1
+        }
+      ]
+    },
+    {
+      "quotient": [
+        7,
+        96,
+        2,
+        8,
+        35,
+        117,
+        103,
+        3,
+        39
+      ],
+      "first": {
+        "birth_record": 138,
+        "fixed_coordinates": [
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1
+        ]
+      },
+      "second": {
+        "birth_record": 155,
+        "fixed_coordinates": [
+          0,
+          2,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "conflicts": [
+        {
+          "coordinate": 1,
+          "first_fixed_length": 1,
+          "second_fixed_length": 2
+        },
+        {
+          "coordinate": 3,
+          "first_fixed_length": 2,
+          "second_fixed_length": 1
+        }
+      ]
+    }
+  ],
+  "provisional_sum_GF": "-z**3*(46*z**6 - 40*z**5 - 17*z**4 - 4*z**3 - 4*z**2 + z - 1)/(z - 1)**2",
+  "records": [
+    {
+      "birth_record": 0,
+      "order": 3,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        3,
+        6,
+        2,
+        4,
+        1
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 2,
+      "order": 5,
+      "stable_ports": [
+        4
+      ],
+      "quotient": [
+        5,
+        24,
+        10,
+        28,
+        25,
+        16,
+        1
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 3,
+      "order": 5,
+      "stable_ports": [
+        4
+      ],
+      "quotient": [
+        5,
+        24,
+        2,
+        24,
+        11,
+        1,
+        13
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 4,
+      "order": 5,
+      "stable_ports": [
+        0
+      ],
+      "quotient": [
+        5,
+        24,
+        8,
+        5,
+        25,
+        2,
+        11
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 5,
+      "order": 5,
+      "stable_ports": [
+        0
+      ],
+      "quotient": [
+        5,
+        24,
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 11,
+      "order": 6,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        6,
+        48,
+        2,
+        4,
+        25,
+        51,
+        35,
+        7
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 12,
+      "order": 6,
+      "stable_ports": [
+        5
+      ],
+      "quotient": [
+        6,
+        48,
+        2,
+        20,
+        57,
+        51,
+        33,
+        3
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 14,
+      "order": 6,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        6,
+        48,
+        2,
+        12,
+        25,
+        49,
+        3,
+        23
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 15,
+      "order": 6,
+      "stable_ports": [
+        5
+      ],
+      "quotient": [
+        5,
+        24,
+        2,
+        28,
+        25,
+        1,
+        9
+      ],
+      "components": [
+        [
+          0,
+          4
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          2,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 16,
+      "order": 6,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        5,
+        24,
+        2,
+        4,
+        25,
+        3,
+        11
+      ],
+      "components": [
+        [
+          0,
+          4
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          2,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 17,
+      "order": 6,
+      "stable_ports": [
+        5
+      ],
+      "quotient": [
+        6,
+        48,
+        6,
+        20,
+        56,
+        51,
+        1,
+        19
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 18,
+      "order": 6,
+      "stable_ports": [
+        4
+      ],
+      "quotient": [
+        5,
+        24,
+        2,
+        28,
+        25,
+        1,
+        9
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          2,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 19,
+      "order": 6,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        5,
+        24,
+        2,
+        4,
+        25,
+        3,
+        11
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          2,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 20,
+      "order": 7,
+      "stable_ports": [
+        6
+      ],
+      "quotient": [
+        7,
+        96,
+        32,
+        5,
+        105,
+        115,
+        103,
+        2,
+        35
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 21,
+      "order": 7,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        4,
+        9,
+        99,
+        47,
+        7,
+        55
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 22,
+      "order": 7,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        4,
+        9,
+        99,
+        15,
+        23,
+        55
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 23,
+      "order": 7,
+      "stable_ports": [
+        6
+      ],
+      "quotient": [
+        7,
+        96,
+        6,
+        96,
+        106,
+        115,
+        103,
+        1,
+        33
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 27,
+      "order": 7,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        12,
+        97,
+        53,
+        39,
+        3,
+        59
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 28,
+      "order": 7,
+      "stable_ports": [
+        5
+      ],
+      "quotient": [
+        7,
+        96,
+        18,
+        100,
+        105,
+        99,
+        110,
+        1,
+        33
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 29,
+      "order": 7,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        7,
+        112,
+        16,
+        33,
+        67,
+        87,
+        38,
+        13,
+        51
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 30,
+      "order": 7,
+      "stable_ports": [
+        2,
+        6
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        4,
+        41,
+        115,
+        103,
+        67,
+        7
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 33,
+      "order": 7,
+      "stable_ports": [
+        6
+      ],
+      "quotient": [
+        7,
+        96,
+        4,
+        41,
+        106,
+        113,
+        103,
+        1,
+        35
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 34,
+      "order": 7,
+      "stable_ports": [
+        5
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        8,
+        11,
+        113,
+        103,
+        7,
+        39
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 35,
+      "order": 7,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        16,
+        11,
+        19,
+        101,
+        15,
+        47
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 36,
+      "order": 7,
+      "stable_ports": [
+        2,
+        5
+      ],
+      "quotient": [
+        7,
+        112,
+        16,
+        49,
+        99,
+        87,
+        36,
+        73,
+        19
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 37,
+      "order": 7,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        12,
+        17,
+        37,
+        107,
+        7,
+        47
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 39,
+      "order": 7,
+      "stable_ports": [
+        3
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        12,
+        97,
+        117,
+        103,
+        3,
+        35
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 40,
+      "order": 7,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        7,
+        96,
+        10,
+        100,
+        97,
+        118,
+        103,
+        1,
+        33
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 43,
+      "order": 7,
+      "stable_ports": [
+        3,
+        6
+      ],
+      "quotient": [
+        6,
+        48,
+        2,
+        4,
+        57,
+        51,
+        3,
+        19
+      ],
+      "components": [
+        [
+          0,
+          5
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          2,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 44,
+      "order": 7,
+      "stable_ports": [
+        6
+      ],
+      "quotient": [
+        6,
+        48,
+        4,
+        17,
+        58,
+        51,
+        1,
+        19
+      ],
+      "components": [
+        [
+          0,
+          5
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          2,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 47,
+      "order": 7,
+      "stable_ports": [
+        3
+      ],
+      "quotient": [
+        6,
+        48,
+        2,
+        8,
+        19,
+        53,
+        3,
+        23
+      ],
+      "components": [
+        [
+          0,
+          5
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 48,
+      "order": 7,
+      "stable_ports": [
+        3
+      ],
+      "quotient": [
+        7,
+        96,
+        16,
+        5,
+        9,
+        19,
+        102,
+        15,
+        47
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 49,
+      "order": 7,
+      "stable_ports": [
+        6
+      ],
+      "quotient": [
+        7,
+        96,
+        34,
+        40,
+        11,
+        113,
+        103,
+        4,
+        39
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 50,
+      "order": 7,
+      "stable_ports": [
+        1,
+        3
+      ],
+      "quotient": [
+        7,
+        112,
+        16,
+        65,
+        35,
+        55,
+        70,
+        19,
+        45
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 52,
+      "order": 7,
+      "stable_ports": [
+        5
+      ],
+      "quotient": [
+        7,
+        112,
+        32,
+        97,
+        83,
+        55,
+        3,
+        84,
+        25
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 53,
+      "order": 7,
+      "stable_ports": [
+        2,
+        5
+      ],
+      "quotient": [
+        6,
+        48,
+        2,
+        4,
+        57,
+        51,
+        3,
+        19
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          2,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 54,
+      "order": 7,
+      "stable_ports": [
+        5
+      ],
+      "quotient": [
+        6,
+        48,
+        4,
+        17,
+        58,
+        51,
+        1,
+        19
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          2,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 57,
+      "order": 7,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        6,
+        48,
+        2,
+        8,
+        19,
+        53,
+        3,
+        23
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 58,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        196,
+        73,
+        211,
+        231,
+        207,
+        1,
+        69
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 59,
+      "order": 8,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        4,
+        9,
+        83,
+        39,
+        207,
+        23,
+        95
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 60,
+      "order": 8,
+      "stable_ports": [
+        0
+      ],
+      "quotient": [
+        8,
+        192,
+        12,
+        65,
+        74,
+        194,
+        111,
+        207,
+        1,
+        87
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 62,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        100,
+        105,
+        115,
+        103,
+        1,
+        33
+      ],
+      "components": [
+        [
+          0,
+          4
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          2,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 63,
+      "order": 8,
+      "stable_ports": [
+        5,
+        7
+      ],
+      "quotient": [
+        8,
+        192,
+        10,
+        196,
+        209,
+        214,
+        227,
+        207,
+        1,
+        65
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 65,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        68,
+        9,
+        211,
+        231,
+        207,
+        5,
+        71
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 67,
+      "order": 8,
+      "stable_ports": [
+        3
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        20,
+        9,
+        99,
+        109,
+        199,
+        7,
+        95
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 68,
+      "order": 8,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        4,
+        9,
+        211,
+        103,
+        207,
+        7,
+        87
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 69,
+      "order": 8,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        4,
+        9,
+        19,
+        103,
+        15,
+        47
+      ],
+      "components": [
+        [
+          0,
+          6
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 70,
+      "order": 8,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        4,
+        9,
+        19,
+        103,
+        15,
+        47
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 71,
+      "order": 8,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        8,
+        224,
+        2,
+        36,
+        97,
+        167,
+        207,
+        145,
+        43,
+        71
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 72,
+      "order": 8,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        64,
+        27,
+        83,
+        227,
+        79,
+        5,
+        111
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 73,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        8,
+        192,
+        6,
+        72,
+        82,
+        229,
+        203,
+        215,
+        1,
+        71
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 74,
+      "order": 8,
+      "stable_ports": [
+        2,
+        4
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        12,
+        33,
+        21,
+        39,
+        203,
+        31,
+        95
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 75,
+      "order": 8,
+      "stable_ports": [
+        2,
+        6
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        4,
+        17,
+        23,
+        227,
+        207,
+        15,
+        79
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 76,
+      "order": 8,
+      "stable_ports": [
+        1,
+        2
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        4,
+        33,
+        23,
+        39,
+        203,
+        31,
+        95
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 77,
+      "order": 8,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        4,
+        17,
+        23,
+        227,
+        79,
+        15,
+        111
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 78,
+      "order": 8,
+      "stable_ports": [
+        3
+      ],
+      "quotient": [
+        8,
+        224,
+        32,
+        129,
+        43,
+        227,
+        111,
+        194,
+        7,
+        85
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 79,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        100,
+        105,
+        115,
+        103,
+        1,
+        33
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          2,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 81,
+      "order": 8,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        8,
+        192,
+        66,
+        68,
+        73,
+        19,
+        39,
+        207,
+        24,
+        95
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 82,
+      "order": 8,
+      "stable_ports": [
+        3,
+        7
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        12,
+        193,
+        213,
+        231,
+        207,
+        3,
+        67
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 83,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        8,
+        192,
+        12,
+        65,
+        194,
+        214,
+        231,
+        207,
+        1,
+        67
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 84,
+      "order": 8,
+      "stable_ports": [
+        1,
+        7
+      ],
+      "quotient": [
+        8,
+        192,
+        10,
+        196,
+        193,
+        214,
+        231,
+        207,
+        1,
+        65
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 87,
+      "order": 8,
+      "stable_ports": [
+        3
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        4,
+        105,
+        115,
+        103,
+        3,
+        35
+      ],
+      "components": [
+        [
+          0,
+          5
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 88,
+      "order": 8,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        7,
+        96,
+        4,
+        97,
+        106,
+        115,
+        103,
+        1,
+        33
+      ],
+      "components": [
+        [
+          0,
+          5
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          0,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 90,
+      "order": 8,
+      "stable_ports": [
+        3,
+        6
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        36,
+        201,
+        211,
+        199,
+        221,
+        3,
+        67
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 91,
+      "order": 8,
+      "stable_ports": [
+        6
+      ],
+      "quotient": [
+        8,
+        192,
+        36,
+        65,
+        202,
+        211,
+        199,
+        222,
+        1,
+        67
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 92,
+      "order": 8,
+      "stable_ports": [
+        1,
+        6
+      ],
+      "quotient": [
+        8,
+        192,
+        36,
+        193,
+        202,
+        211,
+        199,
+        222,
+        1,
+        65
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 94,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        8,
+        224,
+        128,
+        33,
+        75,
+        115,
+        231,
+        69,
+        131,
+        46
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 97,
+      "order": 8,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        108,
+        105,
+        113,
+        103,
+        1,
+        33
+      ],
+      "components": [
+        [
+          0,
+          5
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          2,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 99,
+      "order": 8,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        12,
+        9,
+        17,
+        103,
+        15,
+        47
+      ],
+      "components": [
+        [
+          0,
+          6
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          2,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 100,
+      "order": 8,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        8,
+        224,
+        160,
+        37,
+        193,
+        167,
+        111,
+        68,
+        11,
+        114
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 101,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        7,
+        112,
+        32,
+        17,
+        83,
+        55,
+        65,
+        22,
+        43
+      ],
+      "components": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 102,
+      "order": 8,
+      "stable_ports": [
+        3
+      ],
+      "quotient": [
+        7,
+        112,
+        16,
+        97,
+        27,
+        51,
+        98,
+        69,
+        13
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 106,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        8,
+        224,
+        64,
+        37,
+        137,
+        99,
+        111,
+        133,
+        166,
+        27
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 107,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        196,
+        201,
+        83,
+        103,
+        79,
+        1,
+        121
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 108,
+      "order": 8,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        12,
+        9,
+        17,
+        103,
+        15,
+        47
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          2,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 109,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        4,
+        9,
+        115,
+        103,
+        7,
+        39
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          2,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 110,
+      "order": 8,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        4,
+        17,
+        7,
+        107,
+        15,
+        47
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 111,
+      "order": 8,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        7,
+        112,
+        16,
+        33,
+        51,
+        87,
+        66,
+        25,
+        39
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 112,
+      "order": 8,
+      "stable_ports": [
+        6
+      ],
+      "quotient": [
+        8,
+        224,
+        32,
+        5,
+        97,
+        199,
+        111,
+        138,
+        163,
+        23
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 114,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        7,
+        112,
+        18,
+        48,
+        67,
+        55,
+        100,
+        69,
+        11
+      ],
+      "components": [
+        [
+          0,
+          4
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          2,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 115,
+      "order": 8,
+      "stable_ports": [
+        3
+      ],
+      "quotient": [
+        8,
+        224,
+        32,
+        65,
+        43,
+        211,
+        167,
+        74,
+        149,
+        39
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 116,
+      "order": 8,
+      "stable_ports": [
+        0
+      ],
+      "quotient": [
+        8,
+        224,
+        34,
+        132,
+        97,
+        199,
+        111,
+        138,
+        35,
+        85
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 117,
+      "order": 8,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        8,
+        224,
+        32,
+        129,
+        163,
+        87,
+        103,
+        10,
+        39,
+        121
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 119,
+      "order": 8,
+      "stable_ports": [
+        3
+      ],
+      "quotient": [
+        8,
+        224,
+        32,
+        37,
+        201,
+        99,
+        175,
+        196,
+        19,
+        75
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 120,
+      "order": 8,
+      "stable_ports": [
+        2,
+        6
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        16,
+        11,
+        19,
+        229,
+        207,
+        15,
+        79
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 121,
+      "order": 8,
+      "stable_ports": [
+        6
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        16,
+        19,
+        71,
+        233,
+        207,
+        7,
+        79
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 124,
+      "order": 8,
+      "stable_ports": [
+        2
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        16,
+        11,
+        19,
+        229,
+        79,
+        15,
+        111
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 126,
+      "order": 8,
+      "stable_ports": [
+        7
+      ],
+      "quotient": [
+        8,
+        224,
+        32,
+        65,
+        99,
+        135,
+        79,
+        26,
+        169,
+        55
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 127,
+      "order": 8,
+      "stable_ports": [
+        0
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        108,
+        105,
+        113,
+        103,
+        1,
+        33
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          2,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 130,
+      "order": 8,
+      "stable_ports": [
+        4
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        24,
+        67,
+        197,
+        237,
+        207,
+        3,
+        71
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 131,
+      "order": 8,
+      "stable_ports": [
+        1,
+        4
+      ],
+      "quotient": [
+        8,
+        192,
+        2,
+        20,
+        201,
+        195,
+        237,
+        207,
+        3,
+        67
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 132,
+      "order": 8,
+      "stable_ports": [
+        1
+      ],
+      "quotient": [
+        8,
+        192,
+        20,
+        65,
+        202,
+        195,
+        238,
+        207,
+        1,
+        67
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 138,
+      "order": 8,
+      "stable_ports": [
+        4,
+        7
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        8,
+        35,
+        117,
+        103,
+        3,
+        39
+      ],
+      "components": [
+        [
+          0,
+          6
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 146,
+      "order": 8,
+      "stable_ports": [
+        4,
+        7
+      ],
+      "quotient": [
+        8,
+        192,
+        16,
+        5,
+        9,
+        19,
+        230,
+        207,
+        15,
+        79
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 147,
+      "order": 8,
+      "stable_ports": [
+        1,
+        4
+      ],
+      "quotient": [
+        8,
+        192,
+        32,
+        5,
+        9,
+        35,
+        15,
+        214,
+        31,
+        95
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 148,
+      "order": 8,
+      "stable_ports": [
+        4
+      ],
+      "quotient": [
+        8,
+        192,
+        16,
+        5,
+        9,
+        19,
+        230,
+        79,
+        15,
+        111
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 150,
+      "order": 8,
+      "stable_ports": [
+        6
+      ],
+      "quotient": [
+        8,
+        224,
+        34,
+        160,
+        67,
+        199,
+        111,
+        12,
+        35,
+        117
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "birth_record": 155,
+      "order": 8,
+      "stable_ports": [
+        3,
+        6
+      ],
+      "quotient": [
+        7,
+        96,
+        2,
+        8,
+        35,
+        117,
+        103,
+        3,
+        39
+      ],
+      "components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "quotient_automorphisms": 1,
+      "charts": [
+        [
+          0,
+          2,
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "joint_defect_terms": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "disjoint_family_GF": "-z**3*(46*z**6 - 40*z**5 - 17*z**4 - 4*z**3 - 4*z**2 + z - 1)/(z - 1)**2",
+  "counts_n1_to64": [
+    0,
+    0,
+    1,
+    1,
+    5,
+    13,
+    38,
+    103,
+    122,
+    141,
+    160,
+    179,
+    198,
+    217,
+    236,
+    255,
+    274,
+    293,
+    312,
+    331,
+    350,
+    369,
+    388,
+    407,
+    426,
+    445,
+    464,
+    483,
+    502,
+    521,
+    540,
+    559,
+    578,
+    597,
+    616,
+    635,
+    654,
+    673,
+    692,
+    711,
+    730,
+    749,
+    768,
+    787,
+    806,
+    825,
+    844,
+    863,
+    882,
+    901,
+    920,
+    939,
+    958,
+    977,
+    996,
+    1015,
+    1034,
+    1053,
+    1072,
+    1091,
+    1110,
+    1129,
+    1148,
+    1167
+  ],
+  "literal_controls": {
+    "all_cone_members_through_order": 10,
+    "marked_graph_counts": {
+      "3": 1,
+      "4": 1,
+      "5": 5,
+      "6": 13,
+      "7": 38,
+      "8": 103,
+      "9": 122,
+      "10": 141
+    },
+    "complete_bank_key_equality_through8": true,
+    "complete_order9_descendant_key_equality": true
+  },
+  "original_port_growth_graph": {
+    "components": {
+      "rays": 79,
+      "integer_quadrants": 19
+    },
+    "contraction_edge_GF": "-z**4*(46*z**6 - 54*z**5 - 22*z**4 - 4*z**3 - 4*z**2 + z - 1)/(z - 1)**2",
+    "two_child_state_GF": "z**9*(14*z + 5)/(z - 1)**2",
+    "edges_n1_to64": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      5,
+      13,
+      43,
+      127,
+      165,
+      203,
+      241,
+      279,
+      317,
+      355,
+      393,
+      431,
+      469,
+      507,
+      545,
+      583,
+      621,
+      659,
+      697,
+      735,
+      773,
+      811,
+      849,
+      887,
+      925,
+      963,
+      1001,
+      1039,
+      1077,
+      1115,
+      1153,
+      1191,
+      1229,
+      1267,
+      1305,
+      1343,
+      1381,
+      1419,
+      1457,
+      1495,
+      1533,
+      1571,
+      1609,
+      1647,
+      1685,
+      1723,
+      1761,
+      1799,
+      1837,
+      1875,
+      1913,
+      1951,
+      1989,
+      2027,
+      2065,
+      2103,
+      2141,
+      2179,
+      2217
+    ],
+    "two_child_states_n1_to64": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      24,
+      43,
+      62,
+      81,
+      100,
+      119,
+      138,
+      157,
+      176,
+      195,
+      214,
+      233,
+      252,
+      271,
+      290,
+      309,
+      328,
+      347,
+      366,
+      385,
+      404,
+      423,
+      442,
+      461,
+      480,
+      499,
+      518,
+      537,
+      556,
+      575,
+      594,
+      613,
+      632,
+      651,
+      670,
+      689,
+      708,
+      727,
+      746,
+      765,
+      784,
+      803,
+      822,
+      841,
+      860,
+      879,
+      898,
+      917,
+      936,
+      955,
+      974,
+      993,
+      1012,
+      1031,
+      1050
+    ],
+    "for_every_n_ge9": {
+      "vertices": "19*n-49",
+      "edges_to_previous_level": "38*n-215",
+      "two_child_states": "19*n-166",
+      "one_child_states": 117
+    },
+    "scope": "Only the original stable-port operations, with twin clones merged to one child type. No assertion that later emergent ports cannot add edges."
+  }
+}

@@ -11,7 +11,8 @@
           "file": "stress_receipt.json",
           "mode": "Complete parsed receipt equality.",
           "normal_sha256": "5c3515d22cff6dd5cdab9a2001b6a7009129a81ebbbbe411df3438c0e0f02ac8",
-          "optimized_sha256": "5c3515d22cff6dd5cdab9a2001b6a7009129a81ebbbbe411df3438c0e0f02ac8"
+          "optimized_sha256": "5c3515d22cff6dd5cdab9a2001b6a7009129a81ebbbbe411df3438c0e0f02ac8",
+          "normal_lf_sha256": "a4a287ccd33787bff94e014a7d8c2b40f5e4374e1f9ce2bc009e8542cbcc360b"
         }
       ]
     },
@@ -24,7 +25,8 @@
           "file": "c3_pair_family.json",
           "mode": "Complete parsed receipt equality.",
           "normal_sha256": "2935e87ce62f1580ee2a64ad4819a97a9562c5ba127c3a89671c67001ba13c1d",
-          "optimized_sha256": "2935e87ce62f1580ee2a64ad4819a97a9562c5ba127c3a89671c67001ba13c1d"
+          "optimized_sha256": "2935e87ce62f1580ee2a64ad4819a97a9562c5ba127c3a89671c67001ba13c1d",
+          "normal_lf_sha256": "df2de9be77063215ca7c37815a3e8064cb50d360f5e63e9daf3945be443477ac"
         }
       ]
     },
@@ -37,7 +39,8 @@
           "file": "carousel_clocks.json",
           "mode": "Complete parsed receipt equality.",
           "normal_sha256": "5b1efd948cf74e322f7dc1cd1a315e6a0d473b043e19c7c1180fc247a7942386",
-          "optimized_sha256": "5b1efd948cf74e322f7dc1cd1a315e6a0d473b043e19c7c1180fc247a7942386"
+          "optimized_sha256": "5b1efd948cf74e322f7dc1cd1a315e6a0d473b043e19c7c1180fc247a7942386",
+          "normal_lf_sha256": "1fab4095eda73b13044227cd464bba7fcb45f3ee55d76c861a2c851c60a051fe"
         },
         {
           "file": "carousel_clock_certificates.json.gz",
@@ -56,7 +59,8 @@
           "file": "seed_probes.json",
           "mode": "Complete parsed receipt equality.",
           "normal_sha256": "07c38666ac902d21f6b2e2ea9fd19c43e9dc3e6105f3c74e8fd910425ca2ae7d",
-          "optimized_sha256": "07c38666ac902d21f6b2e2ea9fd19c43e9dc3e6105f3c74e8fd910425ca2ae7d"
+          "optimized_sha256": "07c38666ac902d21f6b2e2ea9fd19c43e9dc3e6105f3c74e8fd910425ca2ae7d",
+          "normal_lf_sha256": "7440f74f1c2b875af2f937723a2bb58bd1b301d67dfa4c0d4ae8561c4f7a3a3b"
         }
       ]
     },
@@ -69,7 +73,8 @@
           "file": "heads.json",
           "mode": "Complete parsed receipt equality.",
           "normal_sha256": "e0ee2fcead10e190bef523f63949704e37f2d460f82e0fc2f79b7dc23216fa9e",
-          "optimized_sha256": "e0ee2fcead10e190bef523f63949704e37f2d460f82e0fc2f79b7dc23216fa9e"
+          "optimized_sha256": "e0ee2fcead10e190bef523f63949704e37f2d460f82e0fc2f79b7dc23216fa9e",
+          "normal_lf_sha256": "65a58dbf8282b144e353129c49c14fb5f5844ed50c3c5c61ed277f97e9b02376"
         }
       ]
     },
@@ -82,7 +87,8 @@
           "file": "seed_classification.json",
           "mode": "Complete parsed receipt equality.",
           "normal_sha256": "5864826507ba4aa44943740acd88d5c0b2290d112e2e4df4d5c496b0587cfe83",
-          "optimized_sha256": "5864826507ba4aa44943740acd88d5c0b2290d112e2e4df4d5c496b0587cfe83"
+          "optimized_sha256": "5864826507ba4aa44943740acd88d5c0b2290d112e2e4df4d5c496b0587cfe83",
+          "normal_lf_sha256": "0917b7d0262ee60fc064e29515db7f64d902ec4662638e17ba9848f8ec8dab51"
         }
       ]
     },
@@ -95,7 +101,8 @@
           "file": "paper_transfer_receipt.json",
           "mode": "Complete parsed receipt equality.",
           "normal_sha256": "21c6bdb7f0509839ff76d3538bc83b6a42fb15c4013c3e6d8b7b85c576daeb77",
-          "optimized_sha256": "21c6bdb7f0509839ff76d3538bc83b6a42fb15c4013c3e6d8b7b85c576daeb77"
+          "optimized_sha256": "21c6bdb7f0509839ff76d3538bc83b6a42fb15c4013c3e6d8b7b85c576daeb77",
+          "normal_lf_sha256": "3c6a56ef52feb37e623fe431115fdd55be8709f92149cc77f775382e8c8e2888"
         }
       ]
     },
@@ -108,7 +115,8 @@
           "file": "cyclic_port_receipt.json",
           "mode": "Complete parsed receipt equality.",
           "normal_sha256": "e8d5a599121f893d14a123020bb730563a2b6530d3257d2c459a872e4d984a6a",
-          "optimized_sha256": "e8d5a599121f893d14a123020bb730563a2b6530d3257d2c459a872e4d984a6a"
+          "optimized_sha256": "e8d5a599121f893d14a123020bb730563a2b6530d3257d2c459a872e4d984a6a",
+          "normal_lf_sha256": "7633c487d6416a8726d7385bc8445d0357442e67c12db31d730c996814657ef4"
         }
       ]
     },
@@ -127,7 +135,8 @@
           "file": "joint_port_forms.json",
           "mode": "Complete parsed receipt equality.",
           "normal_sha256": "d61779c99b1eba34e189ad051888aef35025ca3cb21934597aa225327fba5d22",
-          "optimized_sha256": "d61779c99b1eba34e189ad051888aef35025ca3cb21934597aa225327fba5d22"
+          "optimized_sha256": "d61779c99b1eba34e189ad051888aef35025ca3cb21934597aa225327fba5d22",
+          "normal_lf_sha256": "b70a61fbef7585b75dd45c97c16374c4395aedc9c8e719a40cfea818c173a2a9"
         }
       ]
     },
@@ -142,7 +151,8 @@
           "file": "tournament_receipt.json",
           "mode": "All order1..8 levels, marked records and labelled controls match the saved order14 receipt.",
           "normal_sha256": "e98f8fc78501896acc52df568a77ad1dd34c481576b3180546d0766b0231371c",
-          "optimized_sha256": "184d24a61119b2f37fbdb21c09030cdfe5bf04c558762a7a7c7f1534726d7ea1"
+          "optimized_sha256": "184d24a61119b2f37fbdb21c09030cdfe5bf04c558762a7a7c7f1534726d7ea1",
+          "normal_lf_sha256": "87bacfc8d82eb19aefaa032f96c7d213f3fd69f8d97ef8678258279d95a5caf2"
         }
       ]
     },
@@ -157,7 +167,72 @@
           "file": "round_extension.json",
           "mode": "All order1..14 levels match the saved order18 receipt; order15..18 not rerun under -O.",
           "normal_sha256": "0714314028d9efb0935c63286fc738f1545ff5fc99f48266f8312b456dddb7b5",
-          "optimized_sha256": "780eab45c6a1bc3518680d08991221607f0d0166669c8c9d310360a321f24665"
+          "optimized_sha256": "780eab45c6a1bc3518680d08991221607f0d0166669c8c9d310360a321f24665",
+          "normal_lf_sha256": "7cee2e7f84220363422618644b51852e7e25211bcad5b79cf874f0d9e52aa282"
+        }
+      ]
+    },
+    {
+      "script": "aspect_sequences.py",
+      "arguments": [],
+      "checks": [
+        {
+          "file": "aspect_sequences.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "86d8c890a3f816374987d954c897497c69721589ceed756d754b74bd057bcd70",
+          "optimized_sha256": "86d8c890a3f816374987d954c897497c69721589ceed756d754b74bd057bcd70",
+          "normal_lf_sha256": "381a1e90b385dbc5c0028417efecb46fcdb48f0d08fdb33e267a968d7ee5aee1"
+        }
+      ]
+    },
+    {
+      "script": "contraction_dag.py",
+      "arguments": [],
+      "checks": [
+        {
+          "file": "contraction_dag.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "8cdd27afeefca7ef5b96963c2b5b52602e3d61578f2843060a64a8930b92a5ee",
+          "optimized_sha256": "8cdd27afeefca7ef5b96963c2b5b52602e3d61578f2843060a64a8930b92a5ee",
+          "normal_lf_sha256": "f5ff80b416a22da1bd0af48e95464b7ca8b5ec202d87daae64cee64a5fccd988"
+        }
+      ]
+    },
+    {
+      "script": "descendants_nine.py",
+      "arguments": [],
+      "checks": [
+        {
+          "file": "descendants_nine.json.gz",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "53b53517e74b95e797ed9b7b6bfb23b52c369e6d15d6000381a2b16caaad81b0",
+          "optimized_sha256": "53b53517e74b95e797ed9b7b6bfb23b52c369e6d15d6000381a2b16caaad81b0"
+        }
+      ]
+    },
+    {
+      "script": "birth_cones.py",
+      "arguments": [],
+      "checks": [
+        {
+          "file": "birth_cones.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "647ae626e925caabfa3cecf0c198ee74ad0e7a9c33370a0bffd130ff8831d093",
+          "optimized_sha256": "647ae626e925caabfa3cecf0c198ee74ad0e7a9c33370a0bffd130ff8831d093",
+          "normal_lf_sha256": "f672af939e50326f0a81dcd38cbd0d6c842390b2cd7ad9ad786ffe5fa17a9a92"
+        }
+      ]
+    },
+    {
+      "script": "arithmetic_bridge_controls.py",
+      "arguments": [],
+      "checks": [
+        {
+          "file": "arithmetic_bridge_controls.json",
+          "mode": "Complete parsed receipt equality.",
+          "normal_sha256": "28184559f5e881d61dde5e863a8b98b5b37aafe603b4582e1729f3fa6760d143",
+          "optimized_sha256": "28184559f5e881d61dde5e863a8b98b5b37aafe603b4582e1729f3fa6760d143",
+          "normal_lf_sha256": "a0859c3dc5b5bfe2c6639be38f58077331b6b2930af40a6c06310310be496a92"
         }
       ]
     }

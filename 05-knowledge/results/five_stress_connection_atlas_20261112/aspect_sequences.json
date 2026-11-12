@@ -1,0 +1,360 @@
+{
+  "scope": "Classical Burnside formula n0..30; proved sampling-family formulas n1..64; independent cyclic-composition enumeration through18 and original sign-word census through14. No new OEIS terms or general complexity improvement claimed.",
+  "A000568_existing_formula": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880,
+    191536,
+    9733056,
+    903753248,
+    154108311168,
+    48542114686912,
+    28401423719122304,
+    31021002160355166848,
+    63530415842308265100288,
+    244912778438520759443245824,
+    1783398846284777975419600287232,
+    24605641171260376770598003978281472,
+    645022068557873570931850526424042500096,
+    32207364031661175384456332260036660040346624,
+    3070169883150468336193188889176239554269865953280,
+    559879382429394075397997876821117309031348506639435776,
+    195692027657521876084316842660833482785173437775365039898624,
+    131326696677895002131450257709457767457170027052967027982788816896,
+    169484335125246268100514597385576342667201246238506672327765919863947264,
+    421255599848131447082003884098323929861369544621589389269735693986231100612608,
+    2019284625667208265086928694043799677058780746074756618649807453554008410636526845952,
+    18691296182213712407784892577100643237772159079535345610331272616359410643727554822061146112,
+    334493774260141796028606267674709437232608940215918926763659414050175507824571200950884097540096000
+  ],
+  "parabola_GF": "-z*(2*z**4 - 2*z**3 + z**2 - z + 1)/((z - 1)**3*(z**2 + z + 1))",
+  "power_curve_GF": "-z*(3*z**10 - 6*z**9 + 6*z**8 - 3*z**7 + 5*z**6 - 5*z**5 + 5*z**4 - 3*z**3 + 2*z**2 - 2*z + 1)/((z - 1)**5*(z**2 + z + 1)*(z**4 + z**3 + z**2 + z + 1))",
+  "sampling_counts": [
+    {
+      "n": 1,
+      "parabola_classes": 1,
+      "power_curve_m_ge3_classes": 1
+    },
+    {
+      "n": 2,
+      "parabola_classes": 1,
+      "power_curve_m_ge3_classes": 1
+    },
+    {
+      "n": 3,
+      "parabola_classes": 2,
+      "power_curve_m_ge3_classes": 2
+    },
+    {
+      "n": 4,
+      "parabola_classes": 2,
+      "power_curve_m_ge3_classes": 2
+    },
+    {
+      "n": 5,
+      "parabola_classes": 3,
+      "power_curve_m_ge3_classes": 4
+    },
+    {
+      "n": 6,
+      "parabola_classes": 5,
+      "power_curve_m_ge3_classes": 6
+    },
+    {
+      "n": 7,
+      "parabola_classes": 6,
+      "power_curve_m_ge3_classes": 9
+    },
+    {
+      "n": 8,
+      "parabola_classes": 8,
+      "power_curve_m_ge3_classes": 15
+    },
+    {
+      "n": 9,
+      "parabola_classes": 11,
+      "power_curve_m_ge3_classes": 25
+    },
+    {
+      "n": 10,
+      "parabola_classes": 13,
+      "power_curve_m_ge3_classes": 39
+    },
+    {
+      "n": 11,
+      "parabola_classes": 16,
+      "power_curve_m_ge3_classes": 58
+    },
+    {
+      "n": 12,
+      "parabola_classes": 20,
+      "power_curve_m_ge3_classes": 86
+    },
+    {
+      "n": 13,
+      "parabola_classes": 23,
+      "power_curve_m_ge3_classes": 122
+    },
+    {
+      "n": 14,
+      "parabola_classes": 27,
+      "power_curve_m_ge3_classes": 170
+    },
+    {
+      "n": 15,
+      "parabola_classes": 32,
+      "power_curve_m_ge3_classes": 233
+    },
+    {
+      "n": 16,
+      "parabola_classes": 36,
+      "power_curve_m_ge3_classes": 309
+    },
+    {
+      "n": 17,
+      "parabola_classes": 41,
+      "power_curve_m_ge3_classes": 405
+    },
+    {
+      "n": 18,
+      "parabola_classes": 47,
+      "power_curve_m_ge3_classes": 523
+    },
+    {
+      "n": 19,
+      "parabola_classes": 52,
+      "power_curve_m_ge3_classes": 664
+    },
+    {
+      "n": 20,
+      "parabola_classes": 58,
+      "power_curve_m_ge3_classes": 834
+    },
+    {
+      "n": 21,
+      "parabola_classes": 65,
+      "power_curve_m_ge3_classes": 1034
+    },
+    {
+      "n": 22,
+      "parabola_classes": 71,
+      "power_curve_m_ge3_classes": 1268
+    },
+    {
+      "n": 23,
+      "parabola_classes": 78,
+      "power_curve_m_ge3_classes": 1541
+    },
+    {
+      "n": 24,
+      "parabola_classes": 86,
+      "power_curve_m_ge3_classes": 1857
+    },
+    {
+      "n": 25,
+      "parabola_classes": 93,
+      "power_curve_m_ge3_classes": 2219
+    },
+    {
+      "n": 26,
+      "parabola_classes": 101,
+      "power_curve_m_ge3_classes": 2631
+    },
+    {
+      "n": 27,
+      "parabola_classes": 110,
+      "power_curve_m_ge3_classes": 3100
+    },
+    {
+      "n": 28,
+      "parabola_classes": 118,
+      "power_curve_m_ge3_classes": 3628
+    },
+    {
+      "n": 29,
+      "parabola_classes": 127,
+      "power_curve_m_ge3_classes": 4222
+    },
+    {
+      "n": 30,
+      "parabola_classes": 137,
+      "power_curve_m_ge3_classes": 4888
+    },
+    {
+      "n": 31,
+      "parabola_classes": 146,
+      "power_curve_m_ge3_classes": 5627
+    },
+    {
+      "n": 32,
+      "parabola_classes": 156,
+      "power_curve_m_ge3_classes": 6449
+    },
+    {
+      "n": 33,
+      "parabola_classes": 167,
+      "power_curve_m_ge3_classes": 7359
+    },
+    {
+      "n": 34,
+      "parabola_classes": 177,
+      "power_curve_m_ge3_classes": 8361
+    },
+    {
+      "n": 35,
+      "parabola_classes": 188,
+      "power_curve_m_ge3_classes": 9464
+    },
+    {
+      "n": 36,
+      "parabola_classes": 200,
+      "power_curve_m_ge3_classes": 10672
+    },
+    {
+      "n": 37,
+      "parabola_classes": 211,
+      "power_curve_m_ge3_classes": 11992
+    },
+    {
+      "n": 38,
+      "parabola_classes": 223,
+      "power_curve_m_ge3_classes": 13432
+    },
+    {
+      "n": 39,
+      "parabola_classes": 236,
+      "power_curve_m_ge3_classes": 14999
+    },
+    {
+      "n": 40,
+      "parabola_classes": 248,
+      "power_curve_m_ge3_classes": 16699
+    },
+    {
+      "n": 41,
+      "parabola_classes": 261,
+      "power_curve_m_ge3_classes": 18539
+    },
+    {
+      "n": 42,
+      "parabola_classes": 275,
+      "power_curve_m_ge3_classes": 20529
+    },
+    {
+      "n": 43,
+      "parabola_classes": 288,
+      "power_curve_m_ge3_classes": 22674
+    },
+    {
+      "n": 44,
+      "parabola_classes": 302,
+      "power_curve_m_ge3_classes": 24984
+    },
+    {
+      "n": 45,
+      "parabola_classes": 317,
+      "power_curve_m_ge3_classes": 27468
+    },
+    {
+      "n": 46,
+      "parabola_classes": 331,
+      "power_curve_m_ge3_classes": 30130
+    },
+    {
+      "n": 47,
+      "parabola_classes": 346,
+      "power_curve_m_ge3_classes": 32983
+    },
+    {
+      "n": 48,
+      "parabola_classes": 362,
+      "power_curve_m_ge3_classes": 36035
+    },
+    {
+      "n": 49,
+      "parabola_classes": 377,
+      "power_curve_m_ge3_classes": 39293
+    },
+    {
+      "n": 50,
+      "parabola_classes": 393,
+      "power_curve_m_ge3_classes": 42769
+    },
+    {
+      "n": 51,
+      "parabola_classes": 410,
+      "power_curve_m_ge3_classes": 46470
+    },
+    {
+      "n": 52,
+      "parabola_classes": 426,
+      "power_curve_m_ge3_classes": 50406
+    },
+    {
+      "n": 53,
+      "parabola_classes": 443,
+      "power_curve_m_ge3_classes": 54588
+    },
+    {
+      "n": 54,
+      "parabola_classes": 461,
+      "power_curve_m_ge3_classes": 59026
+    },
+    {
+      "n": 55,
+      "parabola_classes": 478,
+      "power_curve_m_ge3_classes": 63729
+    },
+    {
+      "n": 56,
+      "parabola_classes": 496,
+      "power_curve_m_ge3_classes": 68707
+    },
+    {
+      "n": 57,
+      "parabola_classes": 515,
+      "power_curve_m_ge3_classes": 73973
+    },
+    {
+      "n": 58,
+      "parabola_classes": 533,
+      "power_curve_m_ge3_classes": 79535
+    },
+    {
+      "n": 59,
+      "parabola_classes": 552,
+      "power_curve_m_ge3_classes": 85406
+    },
+    {
+      "n": 60,
+      "parabola_classes": 572,
+      "power_curve_m_ge3_classes": 91598
+    },
+    {
+      "n": 61,
+      "parabola_classes": 591,
+      "power_curve_m_ge3_classes": 98118
+    },
+    {
+      "n": 62,
+      "parabola_classes": 611,
+      "power_curve_m_ge3_classes": 104982
+    },
+    {
+      "n": 63,
+      "parabola_classes": 632,
+      "power_curve_m_ge3_classes": 112201
+    },
+    {
+      "n": 64,
+      "parabola_classes": 652,
+      "power_curve_m_ge3_classes": 119785
+    }
+  ]
+}

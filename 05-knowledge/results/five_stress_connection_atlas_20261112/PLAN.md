@@ -1,6 +1,6 @@
 # Five and the isothermal stress family
 
-Status: research in progress. Chan–Pak remains OPEN. Baseline: 7510e38f9c77.
+Status: mathematical and historical work completed; release checks PASS. Chan–Pak remains OPEN. Baseline: 7510e38f9c77.
 
 The assigned anchor is tournament construction and its endpoint information.
 The niche is a provenance-aware recovery of five-related sessions across Git
@@ -33,3 +33,13 @@ and a synthesis distinguishing proved mechanisms from conjectural bridges.
 
 Method cards: Keep observer, recurrence class, and finite head; Separate local
 support from bounded-height coverage. Each computation will revisit the board.
+
+Final board update: the stress lane produced local/global and observer tests;
+the endpoint lane produced exact interval recursions and joint contraction;
+the birth lane produced98 disjoint infinite families and a finite-bank
+rationality theorem; the historical lane completed the frozen text scan and
+a193-entry attribution index. The recurring obstacle is information lost
+before the next operation: periods, fixed block lengths, mixed coefficients,
+ordered carries or absolute target height. The three live conjectural targets
+are all-order round seed classification, stable-port closure, and constructive
+odd-coefficient coverage. None is promoted to proved canon.

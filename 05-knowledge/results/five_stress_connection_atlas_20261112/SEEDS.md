@@ -348,3 +348,40 @@ The next efficient search should enumerate stable-clone births, preserve
 their full endpoint tensors, and test operations changing the marked gap or
 the core. Repeating a fixed bank's commuting inflations cannot by itself
 justify every odd coefficient or all Chan–Pak targets.
+
+**Joint contraction lemma.** If the contracted stable twin belongs to a
+jointly stable port set, the contracted port together with all its surviving
+ports is jointly stable. Fix arbitrary positive lengths of the other ports.
+The original joint identity gives defect1 at every contracted-port length
+m>=2. The same one-variable exponential argument extends it to m1. Since
+the other lengths were arbitrary, this proves the joint assertion. This
+retains an entire independent inflation family, not just its first member.
+
+`contraction_dag.json` constructs every eligible contraction for all161
+strong marked states with a stable port through8, with a separate full
+marked-isomorphism canonicalizer. There are63 edges between marked types.
+Every nonbirth has exactly one child type, and every contraction sequence
+ends at one birth type in this finite universe. At order8 the terminal-birth
+orders have multiplicities
+
+    order3:1, order5:4, order6:8, order7:30, order8:60.
+
+This is **FINITE-EXACT confluence through8**, not an all-order uniqueness
+theorem. It makes the birth interpretation stronger and supplies a specific
+next falsification test: two inequivalent terminal births from one state.
+
+Individual stability alone tests only coordinate axes in the full defect
+tensor. It cannot generally imply joint stability: the formal expression
+`1+(2^a-2)(2^b-2)` is1 on a1 or b1 but not at a=b=2. This is an algebraic
+hostile to that inference, not a claimed tournament counterexample. A proof
+for tournaments must use their actual path-cover coefficients to kill the
+mixed terms. If stable ports contain a directed triangle, even the finite
+acyclic skeleton bound needs replacement. These are the two separate
+composition obligations behind the stable-port hypothesis.
+
+The continuation in [BIRTHS](BIRTHS.md) proves that the98 birth templates
+through8 have disjoint original-port inflation cones at all orders, with
+exactly19n−49 members at each n>=8. It also completes the entire order9
+descendant layer and gives a general rational enumeration theorem for
+finite clone banks. These are scoped positive results; general stable-port
+closure, arbitrary-order confluence and odd-coefficient coverage stay OPEN.

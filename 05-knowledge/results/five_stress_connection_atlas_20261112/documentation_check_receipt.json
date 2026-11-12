@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "date": "2026-11-12",
+  "command": "python3 -X utf8 <extended-length absolute worktree path>/agents/check_docs.py",
+  "exit_code": 0,
+  "output": "Agent-facing documentation check PASSED: bounded startup surface, frontmatter-derived frontier status, correction sentinels, and router smoke.",
+  "scope": "Final research documents and explicit staged paths; Windows extended-length path required for existing long theorem filenames. This is a documentation consistency check, not a mathematical proof audit."
+}

@@ -50,7 +50,9 @@ retain color/amplitude/owner, and test phase-invisible same-axis dilation.
 
 ## Search the statement before the method
 
-**Action:** before naming a lemma, search constants, quantifiers, shape, IDs, synonyms, and citations; different methods hide the same theorem. Independent rederivation remains useful as explicit verification. **Evidence:** MISTAKE-158/183/187/189/200 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
+**Action:** before naming lemmas, search constants, quantifiers, shape, IDs, synonyms and citations. Different
+methods can rederive one theorem; credit verification as such. **Evidence:** MISTAKE-158/183/187/189/200 in
+[`MISTAKES.md`](../01-canon/MISTAKES.md).
 
 ## Retain local incidence through counting
 
@@ -59,11 +61,11 @@ retain color/amplitude/owner, and test phase-invisible same-axis dilation.
 
 ## Correct the object before sharpening the technique
 
-**Action:** when a method stalls, test mean/maximum, shadow/marked observer,
-scalar/profile, or capped/enlarged carrier. Bounds cannot recover lost data;
-local estimates may survive. **Evidence:** [S399 §1](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md),
-MISTAKE-209, and THM-4385/4388/4389: the capped elliptic curve remains a slice,
-but the first omitted face turns its equation into a coefficient graph.
+**Action:** at stalls test mean/maximum, shadow/marked observer, scalar/profile, capped/enlarged carrier. Bounds
+cannot restore lost data; local estimates may survive. **Evidence:** [S399
+§1](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md), MISTAKE-209,
+THM-4385/4388/4389: the capped elliptic slice survives, but the first omitted face turns its equation into a
+coefficient graph.
 
 ## Compute the repair quotient before testing the residual defect
 
@@ -184,7 +186,11 @@ THM-3990/3989/3991; THM-4002 is the nonlinear counterindication.
 
 ## Test a clutch on isotypic blocks, not by holonomy alone
 
-**Trigger/action:** for a proposed gain/Cech repair, write invariant `Pi`, charged `Q`, and compute `Q C Pi`; central or arm-blind holonomy can twist a line while this block stays zero, so seek unequal marked-arm gain or a lawful reference swap. **Boundary:** scalar clutching may orient existing charge; it cannot create charge from the invariant sector. **Evidence:** THM-2750's `C3` gate and repairs, THM-2743/2746's marked `S4`/`A4` models, and THM-2749's auxiliary `C13` unit.
+**Trigger/action:** for a proposed gain/Cech repair, write invariant `Pi`, charged `Q`, and compute `Q C Pi`;
+central or arm-blind holonomy can twist a line while this block stays zero, so seek unequal marked-arm gain or a
+lawful reference swap. **Boundary:** scalar clutching may orient existing charge; it cannot create charge from the
+invariant sector. **Evidence:** THM-2750's `C3` gate and repairs, THM-2743/2746's marked `S4`/`A4` models, and
+THM-2749's auxiliary `C13` unit.
 
 ## The same representation is not the same carrier
 
@@ -282,28 +288,21 @@ functional; projections can erase a mixed coefficient, chain or fixed minimizer.
 
 ## “One item left” requires a typed residual
 
-**Action:** before saying “one lemma/inequality/check remains,” type the residual independently: domain, quantifiers, symmetry, uniformity, and equivalent names; attack it first. Current vocabulary can hide escape clauses or renamed walls. Call a residual finite only with a verified exhaustive certificate and named checker. **Evidence:** fourteen near-completions and phase-boundary analysis in [S399 §1](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md).
+**Action:** type any “one remaining” residual: domain, quantifiers, symmetry, uniformity, aliases. Attack it first;
+names can hide escape clauses. “Finite” requires an exhaustive certificate and checker. **Evidence:** fourteen
+near-completions in [S399 §1](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md).
 
 ## Recover niches by more than citation counts
 
-**Action:** when mining neglected work, separate dormant frames, under-titled results, orphan computations, near-refutations, and cited stalls; rank by orthogonality, artifact readiness, transfer value, and probe cost. Citation counts confuse live code with abandonment and stagnation with health; use them only after semantic inspection. **Evidence:** S124, S79, and S128c136 atlases.
+**Action:** distinguish dormant frames, under-titled results, orphan computations, near-refutations and cited
+stalls. Rank orthogonality, readiness, transfer value and probe cost. Inspect meaning first: citations confuse
+neglect with health. **Evidence:** S124/S79/S128c136.
 
 ## Canonicalize mechanics; retain the predicate
 
-**Trigger/action:** if an operation has a clean orbit, factorization, or
-finite-level bijection, canonicalize it, then retain generator support,
-weights, and tail acceptance until descent is proved. Type its pullback and
-keep a decoder.
-**Mechanism/counterindication:** quotients saturate generators; CRT can factor
-a kernel but not its parity weight; inverse limits close strict/Buechi gates.
-A canonical carrier need not give a canonical observable or language.
-At the first collision, retain frustration/balance, characteristic address,
-feed/front/debt/phase, or width/owner clock; repeated-address and zero-width
-hostiles mark the boundary.
-**Evidence:** THM-4069 (tree-diameter generator orbits), THM-4071
-(kernel/parity split), THM-4072/4077 (carrier versus tail acceptance),
-THM-4078/4079/4084--4087 (retained sidecars), and
-THM-3756/3382/3758/3819/4065--4068.
+**Trigger/action:** canonicalize clean orbits, factorizations and finite bijections; retain support, weights, tail acceptance, typed pullback and decoder until descent is proved.
+**Boundary:** quotients saturate generators; CRT need not factor parity weights; inverse limits close strict/Buechi gates. Canonical carriers need not give canonical observables/languages. At collisions retain balance/frustration, address, feed/front/debt/phase or width/owner clock; test repeated addresses and zero width.
+**Evidence:** THM-4069 (generator orbits), 4071 (kernel/parity), 4072/4077 (carrier/tail), 4078/4079/4084--4087 (sidecars), 3756/3382/3758/3819/4065--4068.
 
 ## Tournament Analysis must preserve content
 
@@ -327,25 +326,19 @@ MISTAKE-226/234/235; THM-2059/2330/2334/2337/2340.
 
 ## Normalize repeated-response towers before scalarizing
 
-**Action:** classify repeated jets, transfers or arithmetic sections; conjugate
-stable scales to one carrier. Compute the first exact defect and compare
-`gr(ker)` with `ker(gr)` before taking limits.
-
-**Boundary:** retain transitions, eigenvalue fibres, integrality and positivity.
-Moving boundaries blind fixed banks; closeness does not imply termination.
-
-**Evidence:** THM-3181/3202/3186/3235/3268/3383/3397/3410--3413/3465/3466; THM-4080's `s=p` wall, THM-4082's exact divergent bit, and THM-4083's missing Hamilton layer.
+**Action:** conjugate repeated jets/transfers/sections to a stable carrier. Compute the first defect and compare
+`gr(ker)` with `ker(gr)` before limits. Retain transitions, eigenvalue fibres, integrality and positivity. Moving
+boundaries blind fixed banks; closeness need not terminate. **Evidence:**
+THM-3181/3202/3186/3235/3268/3383/3397/3410--3413/3465/3466; 4080 (`s=p` wall), 4082 (divergent bit), 4083 (missing
+Hamilton layer).
 
 ## Divide exceptional multiplicity before judging a wall
 
-**Action:** when a leading row/degree vanishes on a wall, retain the transverse
-parameter, divide the proved exceptional multiplicity, and recompute support
-plus the first normal coefficient (reciprocally at infinity). Strict transforms
-activate inert terms but need units and lose root labels/Keller data; lower
-terms may reopen the prior layer and force retuning. Resultant-cycle parity is
-not cover inertia. **Evidence:** THM-3231/3233/3237/3257/3263/3265; THM-4299
-divides the unit `r-1`, retains the critical value, and isolates its nonunit
-cubic corner.
+**Action:** when a leading row/degree vanishes, retain its transverse parameter, divide proved exceptional
+multiplicity, then recompute support and first normal coefficient (reciprocally at infinity). Strict transforms
+need units, activate inert terms and lose root labels/Keller data; lower terms may force retuning. Resultant-cycle
+parity is not cover inertia. **Evidence:** THM-3231/3233/3237/3257/3263/3265; THM-4299 divides unit `r-1`, retains
+the critical value and isolates the nonunit cubic corner.
 
 ## Refine vertices and lifetimes before quotienting
 
@@ -389,13 +382,9 @@ hostile kills both first currents.
 
 ## Budget the forgotten interaction before demanding integer accuracy
 
-**Trigger/action:** when a tiny relative error still spans many integers, expose
-what the next operation consumes. Retain a finite correction-degree jet or its
-marked interaction graph; resum a common defect before truncating; test absolute
-transverse contraction before rounding a hidden coordinate.
-**Evidence:** [Session279](../05-knowledge/results/session279_interval_tightening_20261112/SYNTHESIS.md)
-uses exact finite correction budgets for Burnside symmetry and Pisot cone slices
-for physical rooted-tournament recovery. **Boundaries:** fixed moment depth can
-retain unbounded absolute ambiguity; a scalar interval still needs lattice
-ancestry and a physical seed. Independent contraction does not imply arbitrary
-switching stability, and a fixed seed/suffix bank does not imply target coverage.
+**Trigger/action:** when relative error spans many integers, expose the next inputs. Keep correction jets or marked
+interaction graphs; resum common defects before truncation; test absolute transverse contraction before rounding.
+**Evidence:** [Session279](../05-knowledge/results/session279_interval_tightening_20261112/SYNTHESIS.md): finite
+Burnside budgets and Pisot slices for rooted-tournament recovery. **Limits:** fixed moments leave absolute
+ambiguity; intervals need lattice ancestry and physical seeds. Contraction need not survive switching; fixed
+seed/suffix banks need not cover targets.

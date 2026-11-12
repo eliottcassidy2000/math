@@ -4,6 +4,21 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-12: A boundary indicator was incorrectly propagated as a bulk mode
+
+- **Affected attempt:** the uncommitted first slope-moment generating function
+  in [five/stress seed work](../05-knowledge/results/five_stress_connection_atlas_20261112/SEEDS.md), caught before publication.
+- **Failed implication:** because the main slope contains3^c, its subtraction
+  at a=0 was also summed with denominator1−3z. The exact correction is a
+  constant in c, so its generating denominator is1−z.
+- **Minimal control:** at (a,b,c)=(0,0,1), the two slopes are89 and147,
+  not87 and141. The complete order6 marked-pair slope sum is600, not592.
+- **Repair:** retain the indicator [a=0] separately in the exponential kernel;
+  the corrected generating function agrees with every complete round level
+  through18. The underlying slope formulas survive. No published theorem
+  depended on the failed draft. The new question is all-order completeness of
+  the family list, not whether this repaired summation identity is true.
+
 ## 2026-11-12: Research overview retained a refuted Paley maximization claim
 
 - **Affected source:** [research overview](../06-writeups/research-document-for-mathematicians.md), introduction, order-19 table row, section7.3 and status/open-problem summaries.

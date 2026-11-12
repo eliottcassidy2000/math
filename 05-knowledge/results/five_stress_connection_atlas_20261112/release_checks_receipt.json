@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "local_markdown_links": 103,
+  "source_pins": 57,
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "sympy": "1.14.0",
+    "numpy": "2.3.2",
+    "numba": "0.64.0"
+  },
+  "checks": [
+    "Packet Python syntax and JSON/gzip parsing",
+    "All current packet navigation links resolve; original links inside verbatim PROMPT-INDEX excerpts excluded",
+    "Declared census and prompt-harvest extents agree with receipts",
+    "Source/PDF hashes recorded"
+  ],
+  "matplotlib_note": "Figure generated with Matplotlib in a dedicated temporary package directory; numerical checker environment unchanged."
+}

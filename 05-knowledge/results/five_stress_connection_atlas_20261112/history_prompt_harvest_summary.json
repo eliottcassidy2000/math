@@ -1,0 +1,16 @@
+{
+  "selection": "Largest byte-size revision per Git discovery path, ties by object ID, within frozen manifest. Complete marker search inside each chosen text; at most twelve lines/2600 characters per context.",
+  "selected_paths": 39399,
+  "selected_bytes": 1073964516,
+  "source_paths_with_five_and_prompt_marker": 446,
+  "marker_occurrences": 1326,
+  "unique_normalized_contexts": 1138,
+  "contexts_with_five_in_excerpt": 193,
+  "seconds": 22.84,
+  "limits": [
+    "Attribution markers are not authentication of original chats.",
+    "Five may occur only elsewhere in a source; such contexts are separately flagged.",
+    "Largest revision is not necessarily the current or corrected one.",
+    "All-revision catalog remains separate; this pass does not search every line of every revision for prompt markers."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "unique_context_candidates": 2884,
+  "with_explicit_prompt_marker": 83,
+  "candidate_discovery_paths": 1343,
+  "topic_hit_paths": {
+    "jacobian": 1309,
+    "groups": 4118,
+    "graphs": 5163,
+    "lrc": 2722,
+    "primes": 3597,
+    "computation": 1336,
+    "number_fields": 1970,
+    "complex_geometry": 732,
+    "tournaments": 5305,
+    "pentagon_coherence": 600,
+    "fibonacci": 1031,
+    "collatz": 1318,
+    "stress": 155
+  },
+  "limits": "Normalized contextual excerpts, not verified quotations or counts of distinct sessions. A prompt can mention five outside its quoted text. All source variants retained by blob."
+}

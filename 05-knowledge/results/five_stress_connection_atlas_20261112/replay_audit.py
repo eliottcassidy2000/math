@@ -9,6 +9,11 @@ import subprocess,sys,json,gzip,hashlib,time
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
 JOBS=[
+ ('arithmetic_bridge_controls.py',[],['arithmetic_bridge_controls.json']),
+ ('contraction_dag.py',[],['contraction_dag.json']),
+ ('descendants_nine.py',[],['descendants_nine.json.gz']),
+ ('birth_cones.py',[],['birth_cones.json']),
+ ('aspect_sequences.py',[],['aspect_sequences.json']),
  ('verify_stress.py',[],['stress_receipt.json']),
  ('c3_pair_family.py',[],['c3_pair_family.json']),
  ('carousel_clocks.py',[],['carousel_clocks.json','carousel_clock_certificates.json.gz']),
@@ -49,7 +54,9 @@ def run():
             else:
                 need(a==b,script+' receipt disagreement '+name)
                 mode='Complete parsed receipt equality.'
-            controls.append({'file':name,'mode':mode,'normal_sha256':hashlib.sha256(baseline.read_bytes()).hexdigest(),'optimized_sha256':hashlib.sha256(optimized.read_bytes()).hexdigest()})
+            control={'file':name,'mode':mode,'normal_sha256':hashlib.sha256(baseline.read_bytes()).hexdigest(),'optimized_sha256':hashlib.sha256(optimized.read_bytes()).hexdigest()}
+            if baseline.suffix!='.gz':control['normal_lf_sha256']=hashlib.sha256(baseline.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
+            controls.append(control)
             optimized.unlink()
         row={'script':script,'arguments':args,'seconds':round(time.time()-start,3),'checks':controls}
         results.append(row)

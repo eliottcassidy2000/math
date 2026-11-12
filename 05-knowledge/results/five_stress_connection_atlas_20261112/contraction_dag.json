@@ -1,0 +1,3828 @@
+{
+  "scope": "Every strong marked unit seed with at least one individually stable unselected port through8; exact marked-isomorphism quotient of every eligible stable-twin contraction. Finite confluence check only; no universal confluence inferred.",
+  "states": 161,
+  "edges_between_marked_types": 63,
+  "levels": [
+    {
+      "n": 1,
+      "states": 0,
+      "births": 0,
+      "nonunique_terminal_births": 0,
+      "terminal_birth_order_histogram": {}
+    },
+    {
+      "n": 2,
+      "states": 0,
+      "births": 0,
+      "nonunique_terminal_births": 0,
+      "terminal_birth_order_histogram": {}
+    },
+    {
+      "n": 3,
+      "states": 1,
+      "births": 1,
+      "nonunique_terminal_births": 0,
+      "terminal_birth_order_histogram": {
+        "3": 1
+      }
+    },
+    {
+      "n": 4,
+      "states": 1,
+      "births": 0,
+      "nonunique_terminal_births": 0,
+      "terminal_birth_order_histogram": {
+        "3": 1
+      }
+    },
+    {
+      "n": 5,
+      "states": 5,
+      "births": 4,
+      "nonunique_terminal_births": 0,
+      "terminal_birth_order_histogram": {
+        "5": 4,
+        "3": 1
+      }
+    },
+    {
+      "n": 6,
+      "states": 13,
+      "births": 8,
+      "nonunique_terminal_births": 0,
+      "terminal_birth_order_histogram": {
+        "5": 4,
+        "6": 8,
+        "3": 1
+      }
+    },
+    {
+      "n": 7,
+      "states": 38,
+      "births": 25,
+      "nonunique_terminal_births": 0,
+      "terminal_birth_order_histogram": {
+        "7": 25,
+        "5": 4,
+        "6": 8,
+        "3": 1
+      }
+    },
+    {
+      "n": 8,
+      "states": 103,
+      "births": 60,
+      "nonunique_terminal_births": 0,
+      "terminal_birth_order_histogram": {
+        "8": 60,
+        "7": 30,
+        "5": 4,
+        "6": 8,
+        "3": 1
+      }
+    }
+  ],
+  "records": [
+    {
+      "record": 0,
+      "n": 3,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        0
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 1,
+      "n": 4,
+      "rows": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "selected": 6,
+      "children": [
+        0
+      ],
+      "terminal_birth_records": [
+        0
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 2,
+      "n": 5,
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        2
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 3,
+      "n": 5,
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "selected": 9,
+      "children": [],
+      "terminal_birth_records": [
+        3
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 4,
+      "n": 5,
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "selected": 18,
+      "children": [],
+      "terminal_birth_records": [
+        4
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 5,
+      "n": 5,
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "selected": 24,
+      "children": [],
+      "terminal_birth_records": [
+        5
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 6,
+      "n": 5,
+      "rows": [
+        6,
+        4,
+        8,
+        19,
+        7
+      ],
+      "selected": 12,
+      "children": [
+        1
+      ],
+      "terminal_birth_records": [
+        0
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 7,
+      "n": 6,
+      "rows": [
+        6,
+        4,
+        8,
+        19,
+        39,
+        15
+      ],
+      "selected": 36,
+      "children": [
+        4
+      ],
+      "terminal_birth_records": [
+        4
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 8,
+      "n": 6,
+      "rows": [
+        6,
+        4,
+        8,
+        19,
+        39,
+        15
+      ],
+      "selected": 48,
+      "children": [
+        5
+      ],
+      "terminal_birth_records": [
+        5
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 9,
+      "n": 6,
+      "rows": [
+        14,
+        4,
+        8,
+        18,
+        39,
+        15
+      ],
+      "selected": 6,
+      "children": [
+        2
+      ],
+      "terminal_birth_records": [
+        2
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 10,
+      "n": 6,
+      "rows": [
+        14,
+        4,
+        8,
+        18,
+        39,
+        15
+      ],
+      "selected": 18,
+      "children": [
+        3
+      ],
+      "terminal_birth_records": [
+        3
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 11,
+      "n": 6,
+      "rows": [
+        38,
+        4,
+        8,
+        19,
+        39,
+        14
+      ],
+      "selected": 33,
+      "children": [],
+      "terminal_birth_records": [
+        11
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 12,
+      "n": 6,
+      "rows": [
+        6,
+        12,
+        8,
+        17,
+        39,
+        15
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        12
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 13,
+      "n": 6,
+      "rows": [
+        14,
+        12,
+        8,
+        16,
+        39,
+        15
+      ],
+      "selected": 24,
+      "children": [
+        6
+      ],
+      "terminal_birth_records": [
+        0
+      ],
+      "contraction_depth_min_max": [
+        3,
+        3
+      ]
+    },
+    {
+      "record": 14,
+      "n": 6,
+      "rows": [
+        22,
+        12,
+        8,
+        17,
+        38,
+        15
+      ],
+      "selected": 34,
+      "children": [],
+      "terminal_birth_records": [
+        14
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 15,
+      "n": 6,
+      "rows": [
+        38,
+        12,
+        8,
+        17,
+        39,
+        14
+      ],
+      "selected": 6,
+      "children": [],
+      "terminal_birth_records": [
+        15
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 16,
+      "n": 6,
+      "rows": [
+        38,
+        12,
+        8,
+        17,
+        39,
+        14
+      ],
+      "selected": 34,
+      "children": [],
+      "terminal_birth_records": [
+        16
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 17,
+      "n": 6,
+      "rows": [
+        14,
+        20,
+        8,
+        18,
+        37,
+        15
+      ],
+      "selected": 5,
+      "children": [],
+      "terminal_birth_records": [
+        17
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 18,
+      "n": 6,
+      "rows": [
+        38,
+        36,
+        8,
+        19,
+        39,
+        12
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        18
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 19,
+      "n": 6,
+      "rows": [
+        38,
+        36,
+        8,
+        19,
+        39,
+        12
+      ],
+      "selected": 17,
+      "children": [],
+      "terminal_birth_records": [
+        19
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 20,
+      "n": 7,
+      "rows": [
+        14,
+        4,
+        8,
+        18,
+        39,
+        79,
+        31
+      ],
+      "selected": 5,
+      "children": [],
+      "terminal_birth_records": [
+        20
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 21,
+      "n": 7,
+      "rows": [
+        14,
+        4,
+        8,
+        18,
+        39,
+        79,
+        31
+      ],
+      "selected": 33,
+      "children": [],
+      "terminal_birth_records": [
+        21
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 22,
+      "n": 7,
+      "rows": [
+        78,
+        4,
+        8,
+        18,
+        39,
+        79,
+        30
+      ],
+      "selected": 33,
+      "children": [],
+      "terminal_birth_records": [
+        22
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 23,
+      "n": 7,
+      "rows": [
+        6,
+        12,
+        8,
+        17,
+        39,
+        79,
+        31
+      ],
+      "selected": 6,
+      "children": [],
+      "terminal_birth_records": [
+        23
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 24,
+      "n": 7,
+      "rows": [
+        14,
+        12,
+        8,
+        16,
+        39,
+        79,
+        31
+      ],
+      "selected": 72,
+      "children": [
+        7
+      ],
+      "terminal_birth_records": [
+        4
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 25,
+      "n": 7,
+      "rows": [
+        14,
+        12,
+        8,
+        16,
+        39,
+        79,
+        31
+      ],
+      "selected": 96,
+      "children": [
+        8
+      ],
+      "terminal_birth_records": [
+        5
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 26,
+      "n": 7,
+      "rows": [
+        78,
+        12,
+        8,
+        16,
+        39,
+        79,
+        30
+      ],
+      "selected": 65,
+      "children": [
+        11
+      ],
+      "terminal_birth_records": [
+        11
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 27,
+      "n": 7,
+      "rows": [
+        86,
+        12,
+        8,
+        17,
+        38,
+        79,
+        30
+      ],
+      "selected": 34,
+      "children": [],
+      "terminal_birth_records": [
+        27
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 28,
+      "n": 7,
+      "rows": [
+        118,
+        12,
+        8,
+        17,
+        38,
+        78,
+        30
+      ],
+      "selected": 6,
+      "children": [],
+      "terminal_birth_records": [
+        28
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 29,
+      "n": 7,
+      "rows": [
+        70,
+        20,
+        8,
+        19,
+        37,
+        79,
+        30
+      ],
+      "selected": 88,
+      "children": [],
+      "terminal_birth_records": [
+        29
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 30,
+      "n": 7,
+      "rows": [
+        14,
+        28,
+        8,
+        16,
+        37,
+        79,
+        31
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        30
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 31,
+      "n": 7,
+      "rows": [
+        30,
+        28,
+        8,
+        16,
+        36,
+        79,
+        31
+      ],
+      "selected": 12,
+      "children": [
+        9
+      ],
+      "terminal_birth_records": [
+        2
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 32,
+      "n": 7,
+      "rows": [
+        30,
+        28,
+        8,
+        16,
+        36,
+        79,
+        31
+      ],
+      "selected": 36,
+      "children": [
+        10
+      ],
+      "terminal_birth_records": [
+        3
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 33,
+      "n": 7,
+      "rows": [
+        14,
+        44,
+        8,
+        16,
+        39,
+        77,
+        31
+      ],
+      "selected": 5,
+      "children": [],
+      "terminal_birth_records": [
+        33
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 34,
+      "n": 7,
+      "rows": [
+        78,
+        76,
+        8,
+        16,
+        39,
+        79,
+        28
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        34
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 35,
+      "n": 7,
+      "rows": [
+        78,
+        76,
+        8,
+        16,
+        39,
+        79,
+        28
+      ],
+      "selected": 33,
+      "children": [],
+      "terminal_birth_records": [
+        35
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 36,
+      "n": 7,
+      "rows": [
+        86,
+        76,
+        8,
+        17,
+        38,
+        79,
+        28
+      ],
+      "selected": 26,
+      "children": [],
+      "terminal_birth_records": [
+        36
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 37,
+      "n": 7,
+      "rows": [
+        22,
+        28,
+        8,
+        17,
+        36,
+        79,
+        31
+      ],
+      "selected": 66,
+      "children": [],
+      "terminal_birth_records": [
+        37
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 38,
+      "n": 7,
+      "rows": [
+        30,
+        12,
+        24,
+        16,
+        34,
+        79,
+        31
+      ],
+      "selected": 6,
+      "children": [
+        12
+      ],
+      "terminal_birth_records": [
+        12
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 39,
+      "n": 7,
+      "rows": [
+        14,
+        28,
+        24,
+        16,
+        33,
+        79,
+        31
+      ],
+      "selected": 6,
+      "children": [],
+      "terminal_birth_records": [
+        39
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 40,
+      "n": 7,
+      "rows": [
+        14,
+        28,
+        24,
+        16,
+        33,
+        79,
+        31
+      ],
+      "selected": 12,
+      "children": [],
+      "terminal_birth_records": [
+        40
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 41,
+      "n": 7,
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        32,
+        79,
+        31
+      ],
+      "selected": 48,
+      "children": [
+        13
+      ],
+      "terminal_birth_records": [
+        0
+      ],
+      "contraction_depth_min_max": [
+        4,
+        4
+      ]
+    },
+    {
+      "record": 42,
+      "n": 7,
+      "rows": [
+        46,
+        28,
+        24,
+        16,
+        33,
+        78,
+        31
+      ],
+      "selected": 66,
+      "children": [
+        14
+      ],
+      "terminal_birth_records": [
+        14
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 43,
+      "n": 7,
+      "rows": [
+        78,
+        28,
+        24,
+        16,
+        33,
+        79,
+        30
+      ],
+      "selected": 6,
+      "children": [],
+      "terminal_birth_records": [
+        43
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 44,
+      "n": 7,
+      "rows": [
+        78,
+        28,
+        24,
+        16,
+        33,
+        79,
+        30
+      ],
+      "selected": 10,
+      "children": [],
+      "terminal_birth_records": [
+        44
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 45,
+      "n": 7,
+      "rows": [
+        78,
+        28,
+        24,
+        16,
+        33,
+        79,
+        30
+      ],
+      "selected": 12,
+      "children": [
+        15
+      ],
+      "terminal_birth_records": [
+        15
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 46,
+      "n": 7,
+      "rows": [
+        78,
+        28,
+        24,
+        16,
+        33,
+        79,
+        30
+      ],
+      "selected": 66,
+      "children": [
+        16
+      ],
+      "terminal_birth_records": [
+        16
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 47,
+      "n": 7,
+      "rows": [
+        78,
+        28,
+        24,
+        16,
+        33,
+        79,
+        30
+      ],
+      "selected": 68,
+      "children": [],
+      "terminal_birth_records": [
+        47
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 48,
+      "n": 7,
+      "rows": [
+        30,
+        52,
+        24,
+        18,
+        32,
+        77,
+        31
+      ],
+      "selected": 65,
+      "children": [],
+      "terminal_birth_records": [
+        48
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 49,
+      "n": 7,
+      "rows": [
+        30,
+        12,
+        40,
+        16,
+        38,
+        75,
+        31
+      ],
+      "selected": 9,
+      "children": [],
+      "terminal_birth_records": [
+        49
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 50,
+      "n": 7,
+      "rows": [
+        106,
+        124,
+        9,
+        16,
+        37,
+        76,
+        28
+      ],
+      "selected": 81,
+      "children": [],
+      "terminal_birth_records": [
+        50
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 51,
+      "n": 7,
+      "rows": [
+        30,
+        28,
+        40,
+        16,
+        36,
+        75,
+        31
+      ],
+      "selected": 10,
+      "children": [
+        17
+      ],
+      "terminal_birth_records": [
+        17
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 52,
+      "n": 7,
+      "rows": [
+        86,
+        68,
+        8,
+        19,
+        38,
+        79,
+        28
+      ],
+      "selected": 26,
+      "children": [],
+      "terminal_birth_records": [
+        52
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 53,
+      "n": 7,
+      "rows": [
+        78,
+        76,
+        72,
+        16,
+        39,
+        79,
+        24
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        53
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 54,
+      "n": 7,
+      "rows": [
+        78,
+        76,
+        72,
+        16,
+        39,
+        79,
+        24
+      ],
+      "selected": 5,
+      "children": [],
+      "terminal_birth_records": [
+        54
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 55,
+      "n": 7,
+      "rows": [
+        78,
+        76,
+        72,
+        16,
+        39,
+        79,
+        24
+      ],
+      "selected": 6,
+      "children": [
+        18
+      ],
+      "terminal_birth_records": [
+        18
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 56,
+      "n": 7,
+      "rows": [
+        78,
+        76,
+        72,
+        16,
+        39,
+        79,
+        24
+      ],
+      "selected": 33,
+      "children": [
+        19
+      ],
+      "terminal_birth_records": [
+        19
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 57,
+      "n": 7,
+      "rows": [
+        78,
+        76,
+        72,
+        16,
+        39,
+        79,
+        24
+      ],
+      "selected": 34,
+      "children": [],
+      "terminal_birth_records": [
+        57
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 58,
+      "n": 8,
+      "rows": [
+        22,
+        4,
+        8,
+        19,
+        38,
+        79,
+        159,
+        63
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        58
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 59,
+      "n": 8,
+      "rows": [
+        46,
+        4,
+        8,
+        18,
+        39,
+        78,
+        159,
+        63
+      ],
+      "selected": 129,
+      "children": [],
+      "terminal_birth_records": [
+        59
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 60,
+      "n": 8,
+      "rows": [
+        22,
+        12,
+        8,
+        17,
+        38,
+        79,
+        159,
+        63
+      ],
+      "selected": 36,
+      "children": [],
+      "terminal_birth_records": [
+        60
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 61,
+      "n": 8,
+      "rows": [
+        30,
+        12,
+        8,
+        16,
+        38,
+        79,
+        159,
+        63
+      ],
+      "selected": 65,
+      "children": [
+        21
+      ],
+      "terminal_birth_records": [
+        21
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 62,
+      "n": 8,
+      "rows": [
+        38,
+        12,
+        8,
+        17,
+        39,
+        78,
+        159,
+        63
+      ],
+      "selected": 6,
+      "children": [],
+      "terminal_birth_records": [
+        62
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 63,
+      "n": 8,
+      "rows": [
+        118,
+        12,
+        8,
+        17,
+        38,
+        78,
+        158,
+        63
+      ],
+      "selected": 6,
+      "children": [],
+      "terminal_birth_records": [
+        63
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 64,
+      "n": 8,
+      "rows": [
+        158,
+        12,
+        8,
+        16,
+        38,
+        79,
+        159,
+        62
+      ],
+      "selected": 65,
+      "children": [
+        22
+      ],
+      "terminal_birth_records": [
+        22
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 65,
+      "n": 8,
+      "rows": [
+        30,
+        20,
+        8,
+        18,
+        36,
+        79,
+        159,
+        63
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        65
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 66,
+      "n": 8,
+      "rows": [
+        62,
+        28,
+        8,
+        16,
+        36,
+        78,
+        159,
+        63
+      ],
+      "selected": 10,
+      "children": [
+        20
+      ],
+      "terminal_birth_records": [
+        20
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 67,
+      "n": 8,
+      "rows": [
+        90,
+        28,
+        9,
+        16,
+        36,
+        79,
+        158,
+        63
+      ],
+      "selected": 130,
+      "children": [],
+      "terminal_birth_records": [
+        67
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 68,
+      "n": 8,
+      "rows": [
+        94,
+        28,
+        8,
+        16,
+        36,
+        79,
+        158,
+        63
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        68
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 69,
+      "n": 8,
+      "rows": [
+        158,
+        60,
+        8,
+        16,
+        36,
+        77,
+        159,
+        62
+      ],
+      "selected": 130,
+      "children": [],
+      "terminal_birth_records": [
+        69
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 70,
+      "n": 8,
+      "rows": [
+        62,
+        76,
+        8,
+        16,
+        38,
+        78,
+        157,
+        63
+      ],
+      "selected": 129,
+      "children": [],
+      "terminal_birth_records": [
+        70
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 71,
+      "n": 8,
+      "rows": [
+        238,
+        84,
+        8,
+        18,
+        37,
+        78,
+        156,
+        62
+      ],
+      "selected": 112,
+      "children": [],
+      "terminal_birth_records": [
+        71
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 72,
+      "n": 8,
+      "rows": [
+        62,
+        92,
+        8,
+        16,
+        36,
+        78,
+        157,
+        63
+      ],
+      "selected": 144,
+      "children": [],
+      "terminal_birth_records": [
+        72
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 73,
+      "n": 8,
+      "rows": [
+        30,
+        68,
+        8,
+        18,
+        38,
+        79,
+        157,
+        63
+      ],
+      "selected": 5,
+      "children": [],
+      "terminal_birth_records": [
+        73
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 74,
+      "n": 8,
+      "rows": [
+        62,
+        68,
+        8,
+        18,
+        38,
+        78,
+        157,
+        63
+      ],
+      "selected": 129,
+      "children": [],
+      "terminal_birth_records": [
+        74
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 75,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        8,
+        16,
+        36,
+        79,
+        159,
+        60
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        75
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 76,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        8,
+        16,
+        36,
+        79,
+        159,
+        60
+      ],
+      "selected": 65,
+      "children": [],
+      "terminal_birth_records": [
+        76
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 77,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        8,
+        16,
+        36,
+        79,
+        159,
+        60
+      ],
+      "selected": 66,
+      "children": [],
+      "terminal_birth_records": [
+        77
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 78,
+      "n": 8,
+      "rows": [
+        106,
+        252,
+        9,
+        16,
+        37,
+        76,
+        156,
+        61
+      ],
+      "selected": 49,
+      "children": [],
+      "terminal_birth_records": [
+        78
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 79,
+      "n": 8,
+      "rows": [
+        14,
+        12,
+        24,
+        16,
+        35,
+        79,
+        159,
+        63
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        79
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 80,
+      "n": 8,
+      "rows": [
+        62,
+        12,
+        24,
+        16,
+        34,
+        78,
+        159,
+        63
+      ],
+      "selected": 12,
+      "children": [
+        23
+      ],
+      "terminal_birth_records": [
+        23
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 81,
+      "n": 8,
+      "rows": [
+        38,
+        20,
+        24,
+        19,
+        33,
+        78,
+        159,
+        63
+      ],
+      "selected": 144,
+      "children": [],
+      "terminal_birth_records": [
+        81
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 82,
+      "n": 8,
+      "rows": [
+        14,
+        28,
+        24,
+        16,
+        33,
+        79,
+        159,
+        63
+      ],
+      "selected": 6,
+      "children": [],
+      "terminal_birth_records": [
+        82
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 83,
+      "n": 8,
+      "rows": [
+        14,
+        28,
+        24,
+        16,
+        33,
+        79,
+        159,
+        63
+      ],
+      "selected": 10,
+      "children": [],
+      "terminal_birth_records": [
+        83
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 84,
+      "n": 8,
+      "rows": [
+        14,
+        28,
+        24,
+        16,
+        33,
+        79,
+        159,
+        63
+      ],
+      "selected": 12,
+      "children": [],
+      "terminal_birth_records": [
+        84
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 85,
+      "n": 8,
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        32,
+        79,
+        159,
+        63
+      ],
+      "selected": 144,
+      "children": [
+        24
+      ],
+      "terminal_birth_records": [
+        4
+      ],
+      "contraction_depth_min_max": [
+        3,
+        3
+      ]
+    },
+    {
+      "record": 86,
+      "n": 8,
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        32,
+        79,
+        159,
+        63
+      ],
+      "selected": 192,
+      "children": [
+        25
+      ],
+      "terminal_birth_records": [
+        5
+      ],
+      "contraction_depth_min_max": [
+        3,
+        3
+      ]
+    },
+    {
+      "record": 87,
+      "n": 8,
+      "rows": [
+        78,
+        28,
+        24,
+        16,
+        33,
+        79,
+        158,
+        63
+      ],
+      "selected": 6,
+      "children": [],
+      "terminal_birth_records": [
+        87
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 88,
+      "n": 8,
+      "rows": [
+        78,
+        28,
+        24,
+        16,
+        33,
+        79,
+        158,
+        63
+      ],
+      "selected": 12,
+      "children": [],
+      "terminal_birth_records": [
+        88
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 89,
+      "n": 8,
+      "rows": [
+        158,
+        28,
+        24,
+        16,
+        32,
+        79,
+        159,
+        62
+      ],
+      "selected": 129,
+      "children": [
+        26
+      ],
+      "terminal_birth_records": [
+        11
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 90,
+      "n": 8,
+      "rows": [
+        238,
+        28,
+        24,
+        16,
+        33,
+        78,
+        158,
+        62
+      ],
+      "selected": 6,
+      "children": [],
+      "terminal_birth_records": [
+        90
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 91,
+      "n": 8,
+      "rows": [
+        238,
+        28,
+        24,
+        16,
+        33,
+        78,
+        158,
+        62
+      ],
+      "selected": 10,
+      "children": [],
+      "terminal_birth_records": [
+        91
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 92,
+      "n": 8,
+      "rows": [
+        238,
+        28,
+        24,
+        16,
+        33,
+        78,
+        158,
+        62
+      ],
+      "selected": 12,
+      "children": [],
+      "terminal_birth_records": [
+        92
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 93,
+      "n": 8,
+      "rows": [
+        142,
+        44,
+        24,
+        16,
+        35,
+        77,
+        159,
+        62
+      ],
+      "selected": 176,
+      "children": [
+        29
+      ],
+      "terminal_birth_records": [
+        29
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 94,
+      "n": 8,
+      "rows": [
+        86,
+        52,
+        24,
+        19,
+        32,
+        77,
+        158,
+        63
+      ],
+      "selected": 42,
+      "children": [],
+      "terminal_birth_records": [
+        94
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 95,
+      "n": 8,
+      "rows": [
+        30,
+        60,
+        24,
+        16,
+        32,
+        77,
+        159,
+        63
+      ],
+      "selected": 3,
+      "children": [
+        30
+      ],
+      "terminal_birth_records": [
+        30
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 96,
+      "n": 8,
+      "rows": [
+        46,
+        60,
+        24,
+        16,
+        33,
+        76,
+        159,
+        63
+      ],
+      "selected": 130,
+      "children": [
+        37
+      ],
+      "terminal_birth_records": [
+        37
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 97,
+      "n": 8,
+      "rows": [
+        78,
+        92,
+        24,
+        16,
+        33,
+        79,
+        156,
+        63
+      ],
+      "selected": 12,
+      "children": [],
+      "terminal_birth_records": [
+        97
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 98,
+      "n": 8,
+      "rows": [
+        174,
+        156,
+        24,
+        16,
+        33,
+        78,
+        159,
+        60
+      ],
+      "selected": 50,
+      "children": [
+        36
+      ],
+      "terminal_birth_records": [
+        36
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 99,
+      "n": 8,
+      "rows": [
+        158,
+        60,
+        40,
+        16,
+        36,
+        73,
+        159,
+        62
+      ],
+      "selected": 130,
+      "children": [],
+      "terminal_birth_records": [
+        99
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 100,
+      "n": 8,
+      "rows": [
+        134,
+        28,
+        40,
+        17,
+        37,
+        75,
+        159,
+        62
+      ],
+      "selected": 41,
+      "children": [],
+      "terminal_birth_records": [
+        100
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 101,
+      "n": 8,
+      "rows": [
+        110,
+        108,
+        40,
+        16,
+        39,
+        72,
+        156,
+        63
+      ],
+      "selected": 112,
+      "children": [],
+      "terminal_birth_records": [
+        101
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 102,
+      "n": 8,
+      "rows": [
+        202,
+        156,
+        41,
+        16,
+        37,
+        75,
+        158,
+        60
+      ],
+      "selected": 49,
+      "children": [],
+      "terminal_birth_records": [
+        102
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 103,
+      "n": 8,
+      "rows": [
+        62,
+        28,
+        56,
+        16,
+        32,
+        74,
+        159,
+        63
+      ],
+      "selected": 6,
+      "children": [
+        30
+      ],
+      "terminal_birth_records": [
+        30
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 104,
+      "n": 8,
+      "rows": [
+        62,
+        60,
+        56,
+        16,
+        32,
+        72,
+        159,
+        63
+      ],
+      "selected": 24,
+      "children": [
+        31
+      ],
+      "terminal_birth_records": [
+        2
+      ],
+      "contraction_depth_min_max": [
+        3,
+        3
+      ]
+    },
+    {
+      "record": 105,
+      "n": 8,
+      "rows": [
+        62,
+        60,
+        56,
+        16,
+        32,
+        72,
+        159,
+        63
+      ],
+      "selected": 72,
+      "children": [
+        32
+      ],
+      "terminal_birth_records": [
+        3
+      ],
+      "contraction_depth_min_max": [
+        3,
+        3
+      ]
+    },
+    {
+      "record": 106,
+      "n": 8,
+      "rows": [
+        82,
+        84,
+        57,
+        19,
+        32,
+        75,
+        156,
+        63
+      ],
+      "selected": 97,
+      "children": [],
+      "terminal_birth_records": [
+        106
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 107,
+      "n": 8,
+      "rows": [
+        230,
+        4,
+        8,
+        19,
+        39,
+        78,
+        158,
+        62
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        107
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 108,
+      "n": 8,
+      "rows": [
+        62,
+        44,
+        72,
+        16,
+        38,
+        76,
+        155,
+        63
+      ],
+      "selected": 129,
+      "children": [],
+      "terminal_birth_records": [
+        108
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 109,
+      "n": 8,
+      "rows": [
+        62,
+        60,
+        72,
+        16,
+        36,
+        76,
+        155,
+        63
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        109
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 110,
+      "n": 8,
+      "rows": [
+        62,
+        60,
+        72,
+        16,
+        36,
+        76,
+        155,
+        63
+      ],
+      "selected": 129,
+      "children": [],
+      "terminal_birth_records": [
+        110
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 111,
+      "n": 8,
+      "rows": [
+        182,
+        36,
+        8,
+        19,
+        38,
+        76,
+        159,
+        62
+      ],
+      "selected": 41,
+      "children": [],
+      "terminal_birth_records": [
+        111
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 112,
+      "n": 8,
+      "rows": [
+        2,
+        164,
+        9,
+        19,
+        39,
+        77,
+        159,
+        61
+      ],
+      "selected": 50,
+      "children": [],
+      "terminal_birth_records": [
+        112
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 113,
+      "n": 8,
+      "rows": [
+        62,
+        28,
+        88,
+        16,
+        32,
+        78,
+        155,
+        63
+      ],
+      "selected": 10,
+      "children": [
+        33
+      ],
+      "terminal_birth_records": [
+        33
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 114,
+      "n": 8,
+      "rows": [
+        34,
+        100,
+        89,
+        19,
+        35,
+        76,
+        153,
+        63
+      ],
+      "selected": 98,
+      "children": [],
+      "terminal_birth_records": [
+        114
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 115,
+      "n": 8,
+      "rows": [
+        202,
+        156,
+        9,
+        16,
+        37,
+        79,
+        158,
+        60
+      ],
+      "selected": 19,
+      "children": [],
+      "terminal_birth_records": [
+        115
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 116,
+      "n": 8,
+      "rows": [
+        238,
+        100,
+        72,
+        18,
+        39,
+        76,
+        152,
+        62
+      ],
+      "selected": 112,
+      "children": [],
+      "terminal_birth_records": [
+        116
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 117,
+      "n": 8,
+      "rows": [
+        214,
+        156,
+        8,
+        17,
+        36,
+        79,
+        158,
+        60
+      ],
+      "selected": 42,
+      "children": [],
+      "terminal_birth_records": [
+        117
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 118,
+      "n": 8,
+      "rows": [
+        158,
+        172,
+        136,
+        16,
+        38,
+        77,
+        159,
+        56
+      ],
+      "selected": 52,
+      "children": [
+        52
+      ],
+      "terminal_birth_records": [
+        52
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 119,
+      "n": 8,
+      "rows": [
+        170,
+        172,
+        25,
+        16,
+        35,
+        76,
+        159,
+        60
+      ],
+      "selected": 50,
+      "children": [],
+      "terminal_birth_records": [
+        119
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 120,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        152,
+        16,
+        32,
+        79,
+        159,
+        56
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        120
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 121,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        152,
+        16,
+        32,
+        79,
+        159,
+        56
+      ],
+      "selected": 5,
+      "children": [],
+      "terminal_birth_records": [
+        121
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 122,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        152,
+        16,
+        32,
+        79,
+        159,
+        56
+      ],
+      "selected": 6,
+      "children": [
+        34
+      ],
+      "terminal_birth_records": [
+        34
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 123,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        152,
+        16,
+        32,
+        79,
+        159,
+        56
+      ],
+      "selected": 65,
+      "children": [
+        35
+      ],
+      "terminal_birth_records": [
+        35
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 124,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        152,
+        16,
+        32,
+        79,
+        159,
+        56
+      ],
+      "selected": 66,
+      "children": [],
+      "terminal_birth_records": [
+        124
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 125,
+      "n": 8,
+      "rows": [
+        158,
+        172,
+        152,
+        16,
+        34,
+        77,
+        159,
+        56
+      ],
+      "selected": 52,
+      "children": [
+        36
+      ],
+      "terminal_birth_records": [
+        36
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 126,
+      "n": 8,
+      "rows": [
+        182,
+        212,
+        8,
+        19,
+        36,
+        78,
+        157,
+        60
+      ],
+      "selected": 104,
+      "children": [],
+      "terminal_birth_records": [
+        126
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 127,
+      "n": 8,
+      "rows": [
+        94,
+        28,
+        24,
+        48,
+        32,
+        71,
+        158,
+        63
+      ],
+      "selected": 6,
+      "children": [],
+      "terminal_birth_records": [
+        127
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 128,
+      "n": 8,
+      "rows": [
+        62,
+        60,
+        24,
+        48,
+        32,
+        68,
+        159,
+        63
+      ],
+      "selected": 12,
+      "children": [
+        38
+      ],
+      "terminal_birth_records": [
+        12
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 129,
+      "n": 8,
+      "rows": [
+        30,
+        60,
+        56,
+        48,
+        32,
+        65,
+        159,
+        63
+      ],
+      "selected": 6,
+      "children": [
+        39
+      ],
+      "terminal_birth_records": [
+        39
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 130,
+      "n": 8,
+      "rows": [
+        30,
+        60,
+        56,
+        48,
+        32,
+        65,
+        159,
+        63
+      ],
+      "selected": 10,
+      "children": [],
+      "terminal_birth_records": [
+        130
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 131,
+      "n": 8,
+      "rows": [
+        30,
+        60,
+        56,
+        48,
+        32,
+        65,
+        159,
+        63
+      ],
+      "selected": 12,
+      "children": [],
+      "terminal_birth_records": [
+        131
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 132,
+      "n": 8,
+      "rows": [
+        30,
+        60,
+        56,
+        48,
+        32,
+        65,
+        159,
+        63
+      ],
+      "selected": 20,
+      "children": [],
+      "terminal_birth_records": [
+        132
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 133,
+      "n": 8,
+      "rows": [
+        30,
+        60,
+        56,
+        48,
+        32,
+        65,
+        159,
+        63
+      ],
+      "selected": 24,
+      "children": [
+        40
+      ],
+      "terminal_birth_records": [
+        40
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 134,
+      "n": 8,
+      "rows": [
+        62,
+        60,
+        56,
+        48,
+        32,
+        64,
+        159,
+        63
+      ],
+      "selected": 96,
+      "children": [
+        41
+      ],
+      "terminal_birth_records": [
+        0
+      ],
+      "contraction_depth_min_max": [
+        5,
+        5
+      ]
+    },
+    {
+      "record": 135,
+      "n": 8,
+      "rows": [
+        94,
+        60,
+        56,
+        48,
+        32,
+        65,
+        158,
+        63
+      ],
+      "selected": 130,
+      "children": [
+        42
+      ],
+      "terminal_birth_records": [
+        14
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 136,
+      "n": 8,
+      "rows": [
+        238,
+        156,
+        24,
+        16,
+        33,
+        78,
+        158,
+        60
+      ],
+      "selected": 12,
+      "children": [
+        28
+      ],
+      "terminal_birth_records": [
+        28
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 137,
+      "n": 8,
+      "rows": [
+        158,
+        60,
+        56,
+        48,
+        32,
+        65,
+        159,
+        62
+      ],
+      "selected": 6,
+      "children": [
+        43
+      ],
+      "terminal_birth_records": [
+        43
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 138,
+      "n": 8,
+      "rows": [
+        158,
+        60,
+        56,
+        48,
+        32,
+        65,
+        159,
+        62
+      ],
+      "selected": 10,
+      "children": [],
+      "terminal_birth_records": [
+        138
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 139,
+      "n": 8,
+      "rows": [
+        158,
+        60,
+        56,
+        48,
+        32,
+        65,
+        159,
+        62
+      ],
+      "selected": 12,
+      "children": [
+        43
+      ],
+      "terminal_birth_records": [
+        43
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 140,
+      "n": 8,
+      "rows": [
+        158,
+        60,
+        56,
+        48,
+        32,
+        65,
+        159,
+        62
+      ],
+      "selected": 20,
+      "children": [
+        44
+      ],
+      "terminal_birth_records": [
+        44
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 141,
+      "n": 8,
+      "rows": [
+        158,
+        60,
+        56,
+        48,
+        32,
+        65,
+        159,
+        62
+      ],
+      "selected": 24,
+      "children": [
+        45
+      ],
+      "terminal_birth_records": [
+        15
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 142,
+      "n": 8,
+      "rows": [
+        158,
+        60,
+        56,
+        48,
+        32,
+        65,
+        159,
+        62
+      ],
+      "selected": 130,
+      "children": [
+        46
+      ],
+      "terminal_birth_records": [
+        16
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 143,
+      "n": 8,
+      "rows": [
+        158,
+        60,
+        56,
+        48,
+        32,
+        65,
+        159,
+        62
+      ],
+      "selected": 132,
+      "children": [
+        47
+      ],
+      "terminal_birth_records": [
+        47
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 144,
+      "n": 8,
+      "rows": [
+        62,
+        100,
+        56,
+        50,
+        34,
+        64,
+        157,
+        63
+      ],
+      "selected": 129,
+      "children": [
+        48
+      ],
+      "terminal_birth_records": [
+        48
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 145,
+      "n": 8,
+      "rows": [
+        218,
+        252,
+        25,
+        48,
+        32,
+        69,
+        156,
+        60
+      ],
+      "selected": 161,
+      "children": [
+        50
+      ],
+      "terminal_birth_records": [
+        50
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 146,
+      "n": 8,
+      "rows": [
+        62,
+        60,
+        104,
+        48,
+        36,
+        64,
+        155,
+        63
+      ],
+      "selected": 3,
+      "children": [],
+      "terminal_birth_records": [
+        146
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 147,
+      "n": 8,
+      "rows": [
+        62,
+        60,
+        104,
+        48,
+        36,
+        64,
+        155,
+        63
+      ],
+      "selected": 129,
+      "children": [],
+      "terminal_birth_records": [
+        147
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 148,
+      "n": 8,
+      "rows": [
+        62,
+        60,
+        104,
+        48,
+        36,
+        64,
+        155,
+        63
+      ],
+      "selected": 130,
+      "children": [],
+      "terminal_birth_records": [
+        148
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 149,
+      "n": 8,
+      "rows": [
+        174,
+        28,
+        24,
+        16,
+        33,
+        78,
+        159,
+        62
+      ],
+      "selected": 66,
+      "children": [
+        27
+      ],
+      "terminal_birth_records": [
+        27
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 150,
+      "n": 8,
+      "rows": [
+        130,
+        28,
+        25,
+        17,
+        33,
+        79,
+        159,
+        62
+      ],
+      "selected": 37,
+      "children": [],
+      "terminal_birth_records": [
+        150
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 151,
+      "n": 8,
+      "rows": [
+        62,
+        60,
+        24,
+        80,
+        32,
+        76,
+        151,
+        63
+      ],
+      "selected": 18,
+      "children": [
+        49
+      ],
+      "terminal_birth_records": [
+        49
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 152,
+      "n": 8,
+      "rows": [
+        214,
+        252,
+        248,
+        17,
+        32,
+        73,
+        152,
+        56
+      ],
+      "selected": 161,
+      "children": [
+        50
+      ],
+      "terminal_birth_records": [
+        50
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 153,
+      "n": 8,
+      "rows": [
+        62,
+        60,
+        56,
+        80,
+        32,
+        72,
+        151,
+        63
+      ],
+      "selected": 20,
+      "children": [
+        51
+      ],
+      "terminal_birth_records": [
+        17
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 154,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        152,
+        144,
+        32,
+        79,
+        159,
+        48
+      ],
+      "selected": 3,
+      "children": [
+        53
+      ],
+      "terminal_birth_records": [
+        53
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 155,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        152,
+        144,
+        32,
+        79,
+        159,
+        48
+      ],
+      "selected": 5,
+      "children": [],
+      "terminal_birth_records": [
+        155
+      ],
+      "contraction_depth_min_max": [
+        0,
+        0
+      ]
+    },
+    {
+      "record": 156,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        152,
+        144,
+        32,
+        79,
+        159,
+        48
+      ],
+      "selected": 6,
+      "children": [
+        53
+      ],
+      "terminal_birth_records": [
+        53
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 157,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        152,
+        144,
+        32,
+        79,
+        159,
+        48
+      ],
+      "selected": 10,
+      "children": [
+        54
+      ],
+      "terminal_birth_records": [
+        54
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    },
+    {
+      "record": 158,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        152,
+        144,
+        32,
+        79,
+        159,
+        48
+      ],
+      "selected": 12,
+      "children": [
+        55
+      ],
+      "terminal_birth_records": [
+        18
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 159,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        152,
+        144,
+        32,
+        79,
+        159,
+        48
+      ],
+      "selected": 65,
+      "children": [
+        56
+      ],
+      "terminal_birth_records": [
+        19
+      ],
+      "contraction_depth_min_max": [
+        2,
+        2
+      ]
+    },
+    {
+      "record": 160,
+      "n": 8,
+      "rows": [
+        158,
+        156,
+        152,
+        144,
+        32,
+        79,
+        159,
+        48
+      ],
+      "selected": 66,
+      "children": [
+        57
+      ],
+      "terminal_birth_records": [
+        57
+      ],
+      "contraction_depth_min_max": [
+        1,
+        1
+      ]
+    }
+  ]
+}

@@ -242,5 +242,37 @@ the parabola, and the all-order H13 obstruction.
 The finite engine compares the binary-word quotient with graph isomorphism
 through order six and with the entire labelled tournament universe through
 order five. Endpoint-cover counts are independently checked by permutation
-and cut enumeration through order seven. The full census and controls run
-with ordinary Python and `-O`; universal claims follow from the proofs above.
+and cut enumeration through order seven. Normal Python computes the original
+census through14. Optimized replay checks its prefix through8; the separately
+compiled engine rechecks all levels through14 before extending to18. Its
+optimized replay also reaches14; the expensive15..18 extension ran once.
+See `replay_receipt.json`. Universal claims follow from proofs, not cutoffs.
+
+## Exact enumeration across all sizes
+
+For prime k=3 or5, positive k-part compositions modulo cyclic rotation give
+
+    L_k(n)=[binom(n-1,k-1)+(k-1)1_(k divides n)]/k, n>=k,
+    L_k(n)=0, n<k.
+
+Burnside proves the formula: the identity fixes every composition, and each
+nonidentity rotation fixes exactly the constant composition when k divides n.
+No reflection quotient is taken. The previously proved sampling images give
+
+    P_n=1+L_3(n),          Q_n=1+L_3(n)+L_5(n), n>=1.
+
+Consequently
+
+    P(z)=z/(1-z)+(z^3/(1-z)^3+2z^3/(1-z^3))/3,
+    Q(z)=P(z)+(z^5/(1-z)^5+4z^5/(1-z^5))/5.
+
+These are all-order laws, with eventual quasipolynomial periods dividing3
+and15, respectively; retain the denominators and small-order boundary.
+At n18 the counts are47 and523, compared with7286 unrestricted locally
+transitive classes. At n64 they are652 and119785. These are family sequences,
+not new values or replacements for A000568.
+
+`aspect_sequences.py` independently enumerates cyclic compositions through18
+and matches the binary-word class census through14. It also evaluates the
+classical general tournament Burnside formula through30 as a scale control;
+that formula and those known terms are not claimed as new work.

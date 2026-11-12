@@ -35,7 +35,10 @@ TOPICS = {
 }
 TRX={k:re.compile(v,re.I) for k,v in TOPICS.items()}
 CHEAP={
- 'five_word':['five'], 'five_object':['5-','5 '], 'set_of_5':['of'],
+ 'five_word':['five'],
+ # Necessary suffix words reject huge numeric b-files before a regex pass.
+ 'five_object':['element','vertex','point','parameter','constant','dimensional','fold','core','group','set','tuple','cycle','adic'],
+ 'set_of_5':['set','group','collection','family','list','system'],
  'five_geometry':['pentagon','pentagram','pentatope','quintic','quintuplet','icosahedr','dodecahedr'],
  'stress':['nem','isothermal','isometric','stress'],
 }
@@ -53,6 +56,53 @@ TCHEAP={
  'computation':['automata','turing','cellular','finite','recursion'],
  'number_fields':['elliptic','bsd','chowla','eisenstein','cyclotomic','modular'],
 }
+STARTS={**CHEAP,'five_object':['5'],'set_of_5':['set','group','collection','family','list','system']}
+
+def fast_search(rx,starts,s,lower,start=0):
+    """Exact regex search localized to necessary literal initial prefixes.
+
+    Each regex alternative starts with one of these literals. Preserve the
+    original regex for boundaries, suffixes and arbitrary whitespace. Unicode
+    lowercase length changes use the ordinary regex as a safe fallback.
+    """
+    if len(s)!=len(lower):return rx.search(s,start)
+    best=None
+    for word in starts:
+        p=lower.find(word,start)
+        while p>=0 and (best is None or p<best.start()):
+            m=rx.match(s,p)
+            if m is not None:best=m;break
+            p=lower.find(word,p+1)
+    return best
+
+def early_excerpts(s,lower,tags):
+    # The first eight matching lines of the union can be found among the
+    # first eight matching lines of each constituent pattern.
+    positions=set()
+    for k in tags:
+        start=0;found=0
+        while found<8:
+            m=fast_search(RX[k],STARTS[k],s,lower,start)
+            if m is None:break
+            left=s.rfind('\n',0,m.start())+1
+            right=s.find('\n',m.start())
+            if right<0 or m.end()<=right:positions.add(left);found+=1
+            if right<0:break
+            start=right+1
+    excerpts=[];prompt=[]
+    for left in sorted(positions)[:8]:
+        right=s.find('\n',left)
+        if right<0:right=len(s)
+        line=s[left:right];ln=s.count('\n',0,left)+1
+        lt=[k for k in tags if RX[k].search(line)]
+        excerpts.append({'line':ln,'tags':lt,'text':line[:700]})
+        before=left
+        for _ in range(2):before=s.rfind('\n',0,max(0,before-1))+1
+        after=s.find('\n',right+1)
+        if after<0:after=len(s)
+        context=' '.join(s[before:after].splitlines())
+        if PROMPT.search(context) and len(prompt)<6:prompt.append({'line':ln,'text':context[:1100]})
+    return excerpts,prompt
 
 def git(*args):
     return subprocess.check_output(['git',*args],cwd=ROOT)
@@ -85,26 +135,14 @@ def scan():
         if header[1]!='blob':continue
         counts['text_blobs_scanned']+=1;counts['bytes_scanned']+=size
         s=data.decode('utf8','replace')
-        lower=s.lower()
-        tags=[k for k,rx in RX.items() if any(t in lower for t in CHEAP[k]) and rx.search(s)]
+        lower=s.lower().replace('\u0131','i').replace('\u017f','s')
+        tags=[k for k,rx in RX.items() if (len(s)!=len(lower) or any(t in lower for t in CHEAP[k])) and fast_search(rx,STARTS[k],s,lower)]
         if idx%10000==0:print(json.dumps({'phase':'scan','at':idx,'hits':len(hits),'seconds':round(time.time()-t,1)}),flush=True)
         if not tags:continue
-        lines=s.splitlines();excerpts=[];prompt=[]
-        for ln,line in enumerate(lines,1):
-            if len(excerpts)>=8:break
-            lowline=line.lower()
-            lt=[k for k,rx in RX.items() if any(t in lowline for t in CHEAP[k]) and rx.search(line)]
-            if lt:
-                e={'line':ln,'tags':lt,'text':line[:700]}
-                if len(excerpts)<8:excerpts.append(e)
-                # Two-line context helps multiline prompts without asserting
-                # that every contextual hit is an actual human instruction.
-                context=' '.join(lines[max(0,ln-3):min(len(lines),ln+1)])
-                if PROMPT.search(context) and len(prompt)<6:
-                    prompt.append({'line':ln,'text':context[:1100]})
-        topics=[k for k,rx in TRX.items() if any(t in lower for t in TCHEAP[k]) and rx.search(s)]
+        excerpts,prompt=early_excerpts(s,lower,tags)
+        topics=[k for k,rx in TRX.items() if fast_search(rx,TCHEAP[k],s,lower)]
         by_topic.update(topics);counts.update(tags)
-        title=next((x.lstrip('# ').strip()[:200] for x in lines[:70] if x.startswith('# ')),path)
+        title=next((x.lstrip('# ').strip()[:200] for x in s[:60000].splitlines()[:70] if x.startswith('# ')),path)
         hits.append({'oid':oid,'path':path,'bytes':size,'title':title,'tags':tags,'topics':topics,'excerpts':excerpts,'prompt_candidates':prompt})
     p.stdin.close();p.wait()
     commits=frozen_git('log','--format=%H%x09%aI%x09%s').decode('utf8','replace').splitlines()

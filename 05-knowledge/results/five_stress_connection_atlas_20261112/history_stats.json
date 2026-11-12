@@ -1,0 +1,69 @@
+{
+  "baseline": "7510e38f9c777a61a1b3210334077e0ebe0df2ad",
+  "frozen_refs_file": "history_refs.txt",
+  "reachable_object_count": 420019,
+  "candidate_text_objects": 78446,
+  "counts": {
+    "text_blobs_scanned": 78446,
+    "bytes_scanned": 56587125074,
+    "five_object": 17652,
+    "five_word": 35292,
+    "five_geometry": 20346,
+    "set_of_5": 865
+  },
+  "hit_blobs": 36903,
+  "hit_discovery_paths": 8486,
+  "baseline_discovery_hits": 5962,
+  "topic_cooccurrence_blobs": {
+    "jacobian": 14912,
+    "primes": 29796,
+    "lrc": 27319,
+    "groups": 29998,
+    "graphs": 31788,
+    "computation": 24591,
+    "number_fields": 25976,
+    "complex_geometry": 22751,
+    "tournaments": 31900,
+    "collatz": 20171,
+    "fibonacci": 24099,
+    "pentagon_coherence": 20232,
+    "stress": 18161
+  },
+  "reachable_commits": 28358,
+  "matching_commit_subjects": 415,
+  "seconds": 2420.19,
+  "patterns": {
+    "five_word": "\\bfive\\b",
+    "five_object": "(?<!\\w)5[- ](?:element|vertex|point|parameter|constant|dimensional|fold|core|group|set|tuple|cycle|adic)\\b",
+    "set_of_5": "\\b(?:set|group|collection|family|list|system)s?\\s+of\\s+5\\b",
+    "five_geometry": "\\b(?:pentagon(?:al)?|pentagram|pentatope|quintic|quintuplet|icosahedr(?:on|al)|dodecahedr(?:on|al))\\b",
+    "stress": "\\b(?:nem[eé]nyi|isothermal|isometric\\s+stress|stress\\s+trajector(?:y|ies))\\b"
+  },
+  "topic_patterns": {
+    "tournaments": "\\b(?:tournaments?|chan[– -]?pak|hamilton(?:ian)?|metagraph)\\b",
+    "primes": "\\b(?:primes?|primality|sieve|lehmer|carmichael)\\b",
+    "collatz": "\\b(?:collatz|syracuse|hailstone)\\b",
+    "fibonacci": "\\b(?:fibonacci|zeckendorf|golden|lucas|tribonacci)\\b",
+    "lrc": "\\b(?:lrc|lonely\\s+runner|runners?)\\b",
+    "jacobian": "\\b(?:jacobian|keller|gmc|gaussian\\s+moments?)\\b",
+    "pentagon_coherence": "\\b(?:associahedr\\w*|pentagon|coherence|catalan)\\b",
+    "groups": "\\b(?:groups?|representations?|characters?|involutions?|symmetries)\\b",
+    "complex_geometry": "\\b(?:hermitian|m[oö]bius|lorentz|conformal|riemann|isothermal)\\b",
+    "stress": "\\b(?:stress|elasticity|airy|biharmonic|nem[eé]nyi)\\b",
+    "graphs": "\\b(?:graphs?|flows?|incidence|spectral|laplacian)\\b",
+    "computation": "\\b(?:automata|turing|cellular|finite.state|recursion)\\b",
+    "number_fields": "\\b(?:elliptic|bsd|chowla|eisenstein|cyclotomic|modular)\\b"
+  },
+  "limits": [
+    "Only the saved initial local Git refs; shallow boundaries can omit earlier history.",
+    "Each object has one Git discovery path; rename aliases not exhaustively reconstructed.",
+    "Whole-blob tag presence is scanned, but excerpts are the first eight matching lines only; contextual prompt candidates come from these lines. Later prompts can be absent from the excerpt index.",
+    "Lexical hits and prompt candidates are not validated claims or distinct sessions.",
+    "Binary attachments and inaccessible chats are outside the text universe.",
+    "Topic co-occurrence is evidence for retrieval, not a mathematical map."
+  ],
+  "is_shallow_repository": false,
+  "raw_jsonl_sha256": "893f18c99bbac01211f065881ac337dd8f166b6b2dd70a0e76d9e09f6a14b957",
+  "compressed_sha256": "870b0018b8db1f0cc4356f15c9ca5515fbb83d4a2597d8aff0b40ddf28921140",
+  "universe_check": "Completed pass uses saved initial refs and baseline tree; independently regenerated frozen object-universe counts agree."
+}
