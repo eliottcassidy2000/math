@@ -1,6 +1,6 @@
 # Separator heat flow: an exact finite response grammar
 
-**PROVED candidate, independent review pending.** This is the expectation law for
+**PROVED, independently reviewed in this packet.** This is the expectation law for
 uniform labelled arc-reversal dynamics, not a closed Markov process on the
 compressed separator/rank statistics or an A000568 enumeration formula.
 

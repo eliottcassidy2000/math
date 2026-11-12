@@ -99,7 +99,8 @@ certificate-optimal initial backbone **within this b>=27, degree-four family**,
 not a globally optimal counting algorithm. Since20<=N_b-4b<=36, start at the
 least odd b>=27 strictly greater than(n-36)/4, then test successive odd b.
 The first successful value is b_*(n). By b>(n-20)/4 success is guaranteed, so
-only a constant-width interval is inspected. The monotonicity of N_b follows
+at most three successive odd candidates are inspected: the starting b is
+strictly above(n-36)/4, so b+4 is strictly above(n-20)/4. The monotonicity of N_b follows
 also directly: enlarging the backbone removes permitted residual cores.
 
 Moreover N_(b+6930)=N_b+27720. It follows that

@@ -1,0 +1,31 @@
+{
+  "large_complete_packets": [
+    {
+      "exact_bits": 1721,
+      "n": 64,
+      "odd_partitions": 16444
+    },
+    {
+      "exact_bits": 2083,
+      "n": 70,
+      "odd_partitions": 29927
+    }
+  ],
+  "n150_matches_independent_modular_completion": true,
+  "n150_packet_integer_bits": 10303,
+  "n200_independent_consumer_bits": 18655,
+  "small_complete_packets": 100,
+  "status": "PASS",
+  "threshold_histogram": {
+    "12": 1155,
+    "16": 462,
+    "18": 462,
+    "20": 792,
+    "22": 99,
+    "24": 99,
+    "26": 132,
+    "28": 264
+  },
+  "threshold_odd_classes": 3465,
+  "threshold_patterns": 53
+}

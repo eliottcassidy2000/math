@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "normal_optimized_pairs": [
+    "packet_controls.json",
+    "thresholds.json",
+    "completion.json"
+  ],
+  "ignored_fields": "timing fields containing seconds only",
+  "sources": {
+    "residual_compiler.py": "9e29bb7765d40039a803edfcc9bcea35e7a8898e14400cb33f0a69a8db4b9df1",
+    "thresholds.py": "a1a8078b7cfbacc3f7f0dc3ace05b53a8602b36c646853e7df3f344022f4161b",
+    "complete.py": "6580527cd76d72bea53f309c2b2dc4e2bdb62cbc357dfb4da474e777bfec454b"
+  }
+}

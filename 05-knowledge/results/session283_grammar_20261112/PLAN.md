@@ -1,6 +1,6 @@
 # Session283: exact enumeration, recursive cores, and contextual path structure
 
-**IN PROGRESS / UNPROVED candidates. Chan–Pak remains OPEN.**
+**COMPLETED. This was the opening plan; final proved scope and limits are in SYNTHESIS.md. Chan–Pak remains OPEN.**
 
 The user's goal is a size-recursive classification which improves exact A000568
 values and yields constructive coverage, not merely a larger numerical census.

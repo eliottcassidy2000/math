@@ -1,7 +1,7 @@
 # Arc-edit grammar on canonical weighted chains
 
 **Session283, 2026-11-12. Status: PROVED statements with FINITE-EXACT controls;
-independent review pending.** This is an exact local grammar for the
+independent review PASS in this packet.** This is an exact local grammar for the
 arc-reversal metagraph, not a finite classification of every pair-free core
 and not a Chan–Pak coverage proof.
 

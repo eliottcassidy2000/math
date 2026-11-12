@@ -3,6 +3,9 @@
 **Status: PROVED identities; implementation and timings are FINITE-EXACT controls.**
 This counts ordinary tournament isomorphism classes A000568. It does not classify
 all classes individually, and supplies no Hamiltonian-path spectrum theorem.
+The cycle-type sectors are not disjoint isomorphism-class families: fixed-point
+sets of different permutations may overlap; only their Burnside aggregate is
+the class count.
 
 ## Inheritance and precise advance
 

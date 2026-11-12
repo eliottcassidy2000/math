@@ -1,0 +1,13 @@
+{
+  "independent_counts": {
+    "independent_H9_attachment_counts": 64,
+    "independent_decodings": 7,
+    "literal_arc_reversals": 10650,
+    "literal_rank_forests": 1099,
+    "literal_trajectory_moments": 288,
+    "physical_caps": 150,
+    "weighted_bulk_families": 27
+  },
+  "scope": "new paths/grammar/metagraph formulas; enumeration audited separately",
+  "status": "PASS"
+}

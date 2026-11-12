@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "Reviewed source/proof snapshot and independent receipts; not a full historical dependency audit",
+  "sha256": {
+    "BRIDGE.md": "a53e4f1653ee4105dcaec8d408b6740330381bccdf299052c6265717781cbd3d",
+    "REPRODUCE.md": "2459f8164f9672344e5b5627651873a994fb8772d59f7a3b936750c3538e3f07",
+    "SYNTHESIS.md": "7867316e7e0152e40d241f3b5a34b70438588a40455d0578871c94105a2d303c",
+    "audit/enumeration_independent.json": "95ceb11b423317c4cc8400a09aa10fb3f9ca0b7e180f02a5af1b357142b50f63",
+    "audit/enumeration_independent.optimized.json": "95ceb11b423317c4cc8400a09aa10fb3f9ca0b7e180f02a5af1b357142b50f63",
+    "audit/enumeration_independent.py": "b7413d5fbff64b3d515a91a9b8675cbeac40e9b143e604e8c4064b0bf4f52906",
+    "audit/independent.json": "d6d0db1d0d69771e3788284d61505cf4c72b17b592390c007080c85fba73c922",
+    "audit/independent.optimized.json": "d6d0db1d0d69771e3788284d61505cf4c72b17b592390c007080c85fba73c922",
+    "audit/independent.py": "0ee4dc7f3adc7794ac73f175979d51432db4ce9c1ba6f8a3ced257aa6e366e3b",
+    "audit/switch_independent.json": "0528f20a91233d174fd341512323fcfd04a9e2bcef7143ec7dea6711de791e20",
+    "audit/switch_independent.optimized.json": "0528f20a91233d174fd341512323fcfd04a9e2bcef7143ec7dea6711de791e20",
+    "audit/switch_independent.py": "46c135ad8e4f2fdb449ce58a1cb502c3790b309827509fe3ce7ac03f15947d75",
+    "enumeration/PROOF.md": "3238f5f0220fddf213708cf186d8668f437f68d2d86ba7f662d9659c1be60ecf",
+    "enumeration/README.md": "390ac6e801708f7c2eca4b16b2a2a612d2463ec82426fb331df5a9769942c958",
+    "enumeration/THRESHOLD_PROOF.md": "93410e05d58c2d5f581252bb924cf047a59c38707d876f6a4f954e0da8d50933",
+    "enumeration/complete.py": "6580527cd76d72bea53f309c2b2dc4e2bdb62cbc357dfb4da474e777bfec454b",
+    "enumeration/residual_compiler.py": "9e29bb7765d40039a803edfcc9bcea35e7a8898e14400cb33f0a69a8db4b9df1",
+    "enumeration/thresholds.py": "a1a8078b7cfbacc3f7f0dc3ace05b53a8602b36c646853e7df3f344022f4161b",
+    "grammar/PROOF.md": "f3b702f71ef88f77a28e8e323e32ac115ffe8c0273af66e537ef8ca96a716467",
+    "grammar/verify.py": "fd390be5e41b0bcb00a65ac05e3f5bd8883607925f99d357c2c96a5129e06735",
+    "metagraph/PROOF.md": "96eee86e3e1289811dc75216de8bcf998108abc36bc08f6d90bbda66c8f863a7",
+    "metagraph/verify.py": "64f53e162afd2d344975a0ec58a2a08c9ede8fd70dc2608146602929d6fc5950",
+    "paths/ADDENDUM.md": "3b523b527017c681fc8004df871524547365042fc9fea0294c8fd3248abbd0bd",
+    "paths/PROOF.md": "062419c8be60c445758d4cebe725b82bc4109fd44c4c75f5de6447e2624074b3",
+    "paths/README.md": "98b2e81661b2094543d27b94c9e0c293ff7b6b877e5fb2b62ccc22c2e35e494d",
+    "paths/switches.py": "7f9ee3012cc2d3bf34a83ae8bd14fa6c39fef32f08c8109df744e92f6b12fd8b",
+    "paths/verify.py": "4a1b3d4505f16fc450c9881f78bbbc72a9f89b6b83c23b68ba2428ed66f88f01"
+  }
+}
