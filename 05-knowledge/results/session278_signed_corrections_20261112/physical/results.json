@@ -1,0 +1,284 @@
+{
+  "algebraic_words_checked": 1554,
+  "independent_subset_DP": 258,
+  "repeated_10": [
+    {
+      "blocks": 2,
+      "vertices": 6,
+      "H": "17",
+      "blind": "18",
+      "signed_error_blind_minus_H": "1",
+      "correction_degree": 1,
+      "certificates": [
+        {
+          "order": 0,
+          "lower": "1",
+          "upper": "18",
+          "residue_bits_sufficient": 5
+        },
+        {
+          "order": 1,
+          "lower": "17",
+          "upper": "18",
+          "residue_bits_sufficient": 1
+        }
+      ]
+    },
+    {
+      "blocks": 3,
+      "vertices": 9,
+      "H": "111",
+      "blind": "117",
+      "signed_error_blind_minus_H": "6",
+      "correction_degree": 1,
+      "certificates": [
+        {
+          "order": 0,
+          "lower": "1",
+          "upper": "117",
+          "residue_bits_sufficient": 7
+        },
+        {
+          "order": 1,
+          "lower": "111",
+          "upper": "117",
+          "residue_bits_sufficient": 3
+        }
+      ]
+    },
+    {
+      "blocks": 4,
+      "vertices": 12,
+      "H": "721",
+      "blind": "765",
+      "signed_error_blind_minus_H": "44",
+      "correction_degree": 2,
+      "certificates": [
+        {
+          "order": 0,
+          "lower": "1",
+          "upper": "765",
+          "residue_bits_sufficient": 10
+        },
+        {
+          "order": 1,
+          "lower": "720",
+          "upper": "765",
+          "residue_bits_sufficient": 6
+        },
+        {
+          "order": 2,
+          "lower": "720",
+          "upper": "721",
+          "residue_bits_sufficient": 1
+        }
+      ]
+    },
+    {
+      "blocks": 5,
+      "vertices": 15,
+      "H": "4671",
+      "blind": "5004",
+      "signed_error_blind_minus_H": "333",
+      "correction_degree": 2,
+      "certificates": [
+        {
+          "order": 0,
+          "lower": "1",
+          "upper": "5004",
+          "residue_bits_sufficient": 13
+        },
+        {
+          "order": 1,
+          "lower": "4662",
+          "upper": "5004",
+          "residue_bits_sufficient": 9
+        },
+        {
+          "order": 2,
+          "lower": "4662",
+          "upper": "4671",
+          "residue_bits_sufficient": 4
+        }
+      ]
+    },
+    {
+      "blocks": 10,
+      "vertices": 30,
+      "H": "53277425",
+      "blind": "59932665",
+      "signed_error_blind_minus_H": "6655240",
+      "correction_degree": 5,
+      "certificates": [
+        {
+          "order": 0,
+          "lower": "1",
+          "upper": "59932665",
+          "residue_bits_sufficient": 26
+        },
+        {
+          "order": 1,
+          "lower": "52912134",
+          "upper": "59932665",
+          "residue_bits_sufficient": 23
+        },
+        {
+          "order": 2,
+          "lower": "52912134",
+          "upper": "53288487",
+          "residue_bits_sufficient": 19
+        },
+        {
+          "order": 3,
+          "lower": "53277246",
+          "upper": "53288487",
+          "residue_bits_sufficient": 14
+        },
+        {
+          "order": 5,
+          "lower": "53277425",
+          "upper": "53277426",
+          "residue_bits_sufficient": 1
+        }
+      ]
+    },
+    {
+      "blocks": 20,
+      "vertices": 60,
+      "H": "6931716957290449",
+      "blind": "8597223505965546",
+      "signed_error_blind_minus_H": "1665506548675097",
+      "correction_degree": 10,
+      "certificates": [
+        {
+          "order": 0,
+          "lower": "1",
+          "upper": "8597223505965546",
+          "residue_bits_sufficient": 53
+        },
+        {
+          "order": 1,
+          "lower": "6750704791633887",
+          "upper": "8597223505965546",
+          "residue_bits_sufficient": 51
+        },
+        {
+          "order": 2,
+          "lower": "6750704791633887",
+          "upper": "6943993493549436",
+          "residue_bits_sufficient": 48
+        },
+        {
+          "order": 3,
+          "lower": "6931140029309970",
+          "upper": "6943993493549436",
+          "residue_bits_sufficient": 44
+        },
+        {
+          "order": 5,
+          "lower": "6931716477495885",
+          "upper": "6931736504872380",
+          "residue_bits_sufficient": 35
+        },
+        {
+          "order": 10,
+          "lower": "6931716957290448",
+          "upper": "6931716957290449",
+          "residue_bits_sufficient": 1
+        }
+      ]
+    },
+    {
+      "blocks": 50,
+      "vertices": 150,
+      "H": "15266293423385343933716677082865559051889",
+      "blind": "25377106402862651622144247530624573024978",
+      "signed_error_blind_minus_H": "10110812979477307688427570447759013973089",
+      "correction_degree": 25,
+      "certificates": [
+        {
+          "order": 0,
+          "lower": "1",
+          "upper": "25377106402862651622144247530624573024978",
+          "residue_bits_sufficient": 135
+        },
+        {
+          "order": 1,
+          "lower": "12493089892841047855995253024099673398881",
+          "upper": "25377106402862651622144247530624573024978",
+          "residue_bits_sufficient": 134
+        },
+        {
+          "order": 2,
+          "lower": "12493089892841047855995253024099673398881",
+          "upper": "15748819895844368993459954223857869974153",
+          "residue_bits_sufficient": 132
+        },
+        {
+          "order": 3,
+          "lower": "15205105788549940837406122942617307729305",
+          "upper": "15748819895844368993459954223857869974153",
+          "residue_bits_sufficient": 129
+        },
+        {
+          "order": 13,
+          "lower": "15266293423385340797395418877929219845269",
+          "upper": "15266293423385472298631997547237349986239",
+          "residue_bits_sufficient": 87
+        },
+        {
+          "order": 25,
+          "lower": "15266293423385343933716677082865559051889",
+          "upper": "15266293423385343933716677082865559051890",
+          "residue_bits_sufficient": 1
+        }
+      ]
+    },
+    {
+      "blocks": 100,
+      "vertices": 300,
+      "H": "569143237095509065321192494374066933604514707350112655865331768987504386100311761",
+      "blind": "1541399590470700852617002165003270395401313036267533672853968534143086175123155005",
+      "signed_error_blind_minus_H": "972256353375191787295809670629203461796798328917421016988636765155581789022843244",
+      "correction_degree": 50,
+      "certificates": [
+        {
+          "order": 0,
+          "lower": "1",
+          "upper": "1541399590470700852617002165003270395401313036267533672853968534143086175123155005",
+          "residue_bits_sufficient": 270
+        },
+        {
+          "order": 1,
+          "lower": "6312193060504814535067672690614217329900123603082801857704541258522167664946608",
+          "upper": "1541399590470700852617002165003270395401313036267533672853968534143086175123155005",
+          "residue_bits_sufficient": 270
+        },
+        {
+          "order": 2,
+          "lower": "6312193060504814535067672690614217329900123603082801857704541258522167664946608",
+          "upper": "769797491381921809286629235623605749769083861754595547005777703666373910664703729",
+          "residue_bits_sufficient": 269
+        },
+        {
+          "order": 3,
+          "lower": "517232826358529274666623106512318827737965112954970486572983831356633771175801697",
+          "upper": "769797491381921809286629235623605749769083861754595547005777703666373910664703729",
+          "residue_bits_sufficient": 268
+        },
+        {
+          "order": 25,
+          "lower": "569143237095509065321192494228617973398855846734074568728616969316452035213876747",
+          "upper": "569143237095509065321192499795825589427921773441135350595565437445028448175988997",
+          "residue_bits_sufficient": 182
+        },
+        {
+          "order": 50,
+          "lower": "569143237095509065321192494374066933604514707350112655865331768987504386100311760",
+          "upper": "569143237095509065321192494374066933604514707350112655865331768987504386100311761",
+          "residue_bits_sufficient": 1
+        }
+      ]
+    }
+  ]
+}

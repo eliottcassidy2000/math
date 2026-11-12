@@ -8,7 +8,10 @@ THM-116 (`01-canon/theorems/THM-116-arc-flip-contraction-reduction.md`)
 already gives the single-arc contraction difference. THM-517
 (`01-canon/theorems/THM-517-ocf-mayer-cluster-expansion.md`) already gives
 formal hard-core cumulants and explicitly warns against evaluating a divergent
-Taylor series at fugacity two. We do not rename either as new. Here we use a
+Taylor series at fugacity two. THM-4757
+(`01-canon/theorems/THM-4757-linear-forest-loop-expansion-of-hamiltonian-paths.md`)
+already compiles signed forced-arc insertions through directed linear forests;
+the contraction mechanism below is inherited/classical, not a new forest identity. We do not rename either as new. Here we use a
 finite, terminating coupled inclusion-exclusion ledger for simultaneous physical
 arc changes. Its purpose is a correction certificate that cancels shared error
 before estimating it. Inclusion-exclusion/Bonferroni themselves are standard.
