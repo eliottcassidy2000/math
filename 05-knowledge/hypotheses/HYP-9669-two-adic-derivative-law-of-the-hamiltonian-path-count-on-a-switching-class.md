@@ -7,18 +7,24 @@ status: >
   statement for H, and for odd order the two are equivalent; the digit lemma (the valuations imply degree at
   most 2^k for digit k); equivalent form: for every k the residue 2^(-k) c_U(H) mod 2, |U| = 2k, is the same at
   every member of the class.
-  FINITE-EXACT evidence: every U in random tournaments of orders 6-10 and in one circulant and the transitive
+  FINITE-EXACT evidence: every U in random tournaments of orders 9, 10 and in one circulant and the transitive
   tournament of order 9 (in sample); pre-registered run R1 (registration pushed at 9f260a24f7 before the runs):
   orders 11 (three random, one circulant), 12 (two random, transitive), 13 (one random, one circulant), 14 (one
-  random) - no violation, digits 1, 2, 3 of H of degree exactly 2, 4, 8. For odd order the bound is attained at
-  every |U| <= 6; for even order the least valuation at |U| = 5, 6 was 5 (orders 10, 12, 14).
+  random) - no violation, digits 1, 2, 3 of H of degree exactly 2, 4, 8. In the random tournaments of odd order of
+  R1 the bound is attained at every |U| <= 6 (not general: P_11 and circulants of order 9 have valuation 4 at
+  |U| = 5, audit); for even order the least valuation at |U| = 5, 6 was 5 (orders 10, 12, 14). For H the statement
+  is empty beyond |U| = 4 at orders <= 8 (THM-4524), so the evidence starts at order 9.
   KNOWN, credited: c_U(H) = 0 for |U| > 2 floor(n/3) (THM-4524); the digit-degree law of a vertex cube
   (THM-5127 (C) (8)), where H is a quadratic polynomial with even coefficients.
   NOT TRUE on the full arc cube (FINITE-EXACT, all labelled tournaments of orders 6 and 7): the mixed arc-flip
   differences of H are only even in general (two disjoint arcs: valuation 1), so the law is special to
   switching cubes and vertex cubes.
   Falsifier: one U with a smaller valuation.
-  AUDIT: AUDIT-PENDING (pre-audit checkpoint)
+  AUDIT: PASS WITH CORRECTIONS (05-knowledge/results/switching_quadratic_census_gauge_20261111/audit/AUDIT.md):
+  not refuted (every U for every tournament of order <= 7; Paley, circulant, transitive, near-transitive,
+  source-plus-Paley and 34 random tournaments of orders 7-12, the auditor's own program); corrections applied:
+  the attainment of the bound is a statement about the random tournaments of R1 only; for H the statement is
+  empty beyond |U| = 4 at orders <= 8; the digit lemma and the equivalent form restated. MISTAKE-766.
 session: mac-mini-2026-11-11-gauge
 source: 05-knowledge/results/switching_quadratic_census_gauge_20261111/README.md
 related:

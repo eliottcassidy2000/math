@@ -1,7 +1,7 @@
 # A switching class carries a quadratic form; the census at giant orders; a reading of the Yang-Mills construction
 
 **Session:** mac-mini-2026-11-11-gauge. **Canon:** THM-5139, THM-5140. **Hypotheses:** HYP-9669, HYP-9670.
-**Audit:** AUDIT-PENDING (pre-audit checkpoint; nothing here is canonised until the independent audit is applied).
+**Audit:** independent (a fresh sub-agent with its own programs; a first attempt stopped on a usage-credit error before writing anything and was repeated): [`audit/AUDIT.md`](audit/AUDIT.md). **No major finding**: every statement typed PROVED was re-derived by hand and recomputed (Theorem G and Corollaries 1-6 on every labelled tournament of orders 3-7; the class histograms; Proposition B1 on 8,656 cycle types; the enclosures by another code path; A049313 at odd orders; seventeen citations of the Yang-Mills source). Eleven minor findings (one overgeneralised evidence sentence, three overstated novelty claims, one misquoted exponent, one missing hypothesis, wording), all applied; MISTAKE-766. The text below is the corrected version.
 
 Owner directive (2026-11-11): predict A000568 at very large orders "a myriad of ways", classify the emergent
 recursive tournament structures and their interactions, do the same for Chan-Pak and related sequences, metrics
@@ -57,8 +57,9 @@ indexes, results, backlog, reflections), the two Codex packets of today, and the
   and `LIMITS_AND_NORMALIZATION.md` section 2 for `0 <= b_n - 1 <= q_n^3/(1-q_n)`), THM-4845 (Gaussian average
   with covariance `ln 2 gcd(p,q)`), Session249 (Mayer expansion of the cycle gas), Session271 (support envelope
   `U_M(n)`, forecasts, the factor 64 between two 3-cycles, the mixture `U = L/(1+delta) + delta D/(1+delta)`).
-  Session271 lists as open a growing-order truncation theorem and interval-certified digits; sections 3.2-3.3
-  answer those two points.
+  Session271 (`forecast/PROOF.md`, section 2) has a remainder bound by support that is valid for every `n` and
+  every truncation; it lists as open a growing-order statement by level and outward-rounded digits. Sections
+  3.2-3.3 give the level-wise form and the certified digits.
 - **Chan-Pak data used:** THM-4889 / HYP-9481 (spectrum by order to order 11), THM-329 (lower bounds for the
   maximum at orders 12-14), MISTAKE-743 (the value "545,835" for order 12 has no source).
 
@@ -89,7 +90,7 @@ zero row sums (the adjacency matrix of a graph in which every degree is even), s
 
     e_{T^X} = e_T + Lambda_T 1_X ,      Lambda_{T^X} = Lambda_T .
 
-For `u != w` and `n >= 4`, with `Q = T - u - w`, `a = N^+(u) cap Q`, `b = N^+(w) cap Q`:
+For `u != w` (in (**): `Q = T - u - w`, `a = N^+(u) cap Q`, `b = N^+(w) cap Q`):
 
     (*)   Lambda_T(u,w) = e_{T-u}(w) + sum_{v in N^+(u)} Lambda_{T-u}(v,w)        (n >= 3)
     (**)  Lambda_T(u,w) = 1 + <a + b, e_Q> + a^T Lambda_Q b                      (n >= 4)
@@ -130,7 +131,8 @@ Theorem G: `hc(T^(X+a)) = hc(T^X) + 1 + e_T(a) + sum_{w in X} Lambda(a,w)`; indu
 **Corollary 2 (cycles of each length; `H mod 4`).** Let `c_l(T)` be the number of directed cycles of length `l`.
 Since `c_l(T) = sum_{|W| = l} hc(T[W])` and `(T^X)[W] = T[W]^(X cap W)`, the parity of `c_l(T^X)` is a quadratic
 function of `X`, for every `l >= 3` (odd or even), with polar form `sum_{|W| = l, W contains a, b} Lambda_{T[W]}(a,b)`.
-Since `H = 1 + 2 (number of odd cycles) (mod 4)` (the odd-cycle formula, THM-002),
+Since `H = 1 + 2 (number of odd cycles) (mod 4)` (the odd-cycle formula: Grinberg-Stanley, arXiv:2307.05569,
+Theorem 7.1; THM-002),
 
     (H(T^X) - H(T))/2 = sum_{a in X} lambda_a + sum_{{a,b} in X} M(a,b)        (mod 2),
     lambda_a = sum_{W contains a, |W| odd >= 3} (1 + e_{T[W]}(a)) ,     M = sum_{|W| odd} Lambda_{T[W]} ,
@@ -177,6 +179,11 @@ every fibre is even; `Lambda = 0` for 184 of the 1,024 classes of order 6. (2) T
 (3) Relation to THM-5127: there the cube is the set of one-vertex extensions `R + v_X`; here it is the class
 `{R^Y + v_(V-Y)}`. Neither statement contains the other.
 
+**Literature.** Not found by the author or the audit: a statement of `e`, `Lambda` or a quadratic law on the
+switching cube (repository: none; literature searched: Redei, Berge, Thomason 1986 and a 2025 survey of Redei's
+theorem). R. Forcade, *Parity of paths and circuits in tournaments*, Discrete Math. 6 (1973) 115-118, could not
+be consulted by either; it has to be checked before Corollary 1 is called new in the literature.
+
 **Controls** (`qf_exhaustive.c`, `out/qf_exhaustive_n3_6.txt`, `out/qf_exhaustive_n7.txt`): on every labelled
 tournament of orders 3, 4, 5, 6, 7 (8; 64; 1,024; 32,768; 2,097,152 tournaments): `Lambda` symmetric with zero
 diagonal and even rows, equal at `T` and at every `T^w`; `hc(T) + hc(T^a) = 1 + e_T(a)`;
@@ -201,18 +208,27 @@ What is proved about it:
   statement for `H`; conversely for odd `n` the two are equivalent by induction on `n` (the term `k = 1`,
   `W_1 = V` is `2 c_U(hc(T))`).
 - **Digit lemma.** If `v_2(c_U(H)) >= ceil(|U|/2)` for all `U`, then the binary digit `k` of `H` has `F_2`-degree
-  at most `2^k` on the switching cube. (Write `H(T^X)` as a sum of terms `2^j x^U` with `|U| <= 2j <= 2^j`; the
+  at most `2^k` on the switching cube. (Reduce the coefficients modulo `2^(k+1)` to non-negative ones and write
+  `H(T^X)` as a sum of terms `2^j x^U` with `|U| <= 2j <= 2^j`; the
   digit `k` of a sum of numbers `2^(s_i) b_i`, `b_i` Boolean, is the sum over the sets `I` with
   `sum_{i in I} 2^(s_i) = 2^k` of `prod_{i in I} b_i` - Lucas and Vandermonde - and such a product has degree at
   most `sum 2^(s_i) = 2^k`.) This is the law of a vertex cube in THM-5127 (C) (8).
-- **Equivalent form.** The conjecture holds iff for every `k` and every `2k` vertices the number
-  `2^(-k) c_U(H) mod 2` is the same at every member of the class ("higher Hessians are gauge invariant");
-  `k = 1` is the invariance of `M`.
+- **Equivalent form.** The conjecture holds iff for every `k >= 0` and every `2k` vertices the number
+  `2^(-k) c_U(H)` is an integer whose parity is the same at every member of the class ("higher Hessians are gauge
+  invariant"; the integrality at level `k + 1` follows from the invariance at level `k`); `k = 0` is Redei's
+  theorem and `k = 1` is the invariance of `M`.
 
-Evidence: every `U` in random tournaments of orders 6-10 and three structured ones (in sample); the
-pre-registered run R1 at orders 11, 12, 13, 14 (ten tournaments: seven random, two circulant, one transitive;
-`out/two_adic_R1.txt`): **no violation**, and digits 1, 2, 3 of `H` have degree exactly 2, 4, 8. For odd `n` the
-bound is attained at every `|U| <= 6`. No proof for `|U| >= 5`.
+Evidence. For `H` the statement is empty beyond `|U| = 4` when `n <= 8` (THM-4524), so it starts at order 9: every
+`U` in the random tournaments of orders 9, 10 and three structured ones (in sample); the pre-registered run R1 at
+orders 11, 12, 13, 14 (ten tournaments: seven random, two circulant, one transitive; `out/two_adic_R1.txt`): **no
+violation**, and digits 1, 2, 3 of `H` have degree exactly 2, 4, 8; the audit's own runs (every `U` for every
+tournament of order at most 7; Paley, circulant, transitive, near-transitive, source-plus-Paley and 34 random
+tournaments of orders 7-12): no violation. In the random tournaments of R1 of odd order the bound is attained at
+every `|U| <= 6`; this is not general (the audit: `P_11` and circulants of order 9 have valuation 4 at `|U| = 5`).
+The runs keep one vertex out of every `U` and use one member of the class; this is enough: the coefficients at
+another member are signed sums of coefficients of larger sets, and for a set containing the excluded vertex
+`T^S = T^(V-S)` reduces the statement to the invariance of `2^(-k) c_U mod 2` between two members. No proof for
+`|U| >= 5`.
 
 ### 2.4 Exploratory: the rank of `M`
 
@@ -254,7 +270,8 @@ kept by level instead of by support). The right side decreases in `m` for `m <= 
 symmetric function `e_d(1, ..., n-1) <= C(n,2)^d / d!`; the number with `3k > n` is at most `n!`. Log-convexity:
 `t_{k+1} t_{k-1} / t_k^2 = 64 (2k)(2k-1)/((2k+2)(2k+1)) >= 32/3`. QED
 
-So the level expansion can be truncated at an order growing with `n` in any way, with a certified error; there
+So the level expansion can be truncated at a level growing with `n` in any way, with a certified error of the
+right exponential order (the support envelope of Session271 is also uniform, with the rate `2^(-2M n/3)`); there
 is no optimal truncation point (the terms are positive and the sum is finite: keeping all levels is the
 Burnside sum). Check (`out/census_bound.txt`): `T_K(n) <= B_K(n)` in all 395 cases `6 <= n <= 60`,
 `n = 80, 100, 150, 200, 250`, `K <= 6`; `B_0(n) < 1` for `n >= 8`. Examples: `n = 100`: `T_0 = 3.22e-54`,
@@ -311,9 +328,10 @@ the shifted sum over `j` is the unshifted one; for `J_1`, `Mj - j(j+1)/2 = -(j -
 `sum_j 2^(-(j + 1/2)^2/2)` does not depend on the integer `M`. The exponent of a cycle type is
 `e = C(M_1, 2) + (1/2) sum_{d >= 3} phi(d) M_d^2` with `M_d` the number of parts divisible by `d` (THM-516). QED
 
-This is Stieltjes' classical phenomenon (log-normal moments are indeterminate; the discrete law is the
-Stieltjes-Wigert / theta one). The theta shape of the exponent is noted in HYP-2538; the probabilistic reading
-and the indeterminacy were not found in the repository (searched: `discrete gaussian`, `stieltjes`,
+The indeterminacy of log-normal moments and its discrete theta solutions are classical (Stieltjes;
+Stieltjes-Wigert); what is added here is only their application to the cycle index of A000568. The theta shape
+of the exponent is noted in HYP-2538; the probabilistic reading and the indeterminacy were not found in the
+repository (searched: `discrete gaussian`, `stieltjes`,
 `indetermin`, `moment problem`, `theta` near A000568 in canon, hypotheses, results). Numerical control:
 `out/census_heights.txt` (moments to 40 digits; `a(n)` for `n <= 15`).
 
@@ -355,8 +373,9 @@ THM-479 (Babai-Cameron): `A049313(n) = N_odd(n) + N_lev(n)`, `N_odd(n) = sum ove
 (`o` = number of pair orbits, `l` = number of cycles), `N_lev` the sum over the other level permutations.
 
 **Proposition B3.** (i) `N_odd(n) = (2^C(n-1,2)/n!) sum_{k >= 0} P_k(n) 4^(-k(n-1))`, with the same polynomials
-`P_k` as for tournaments: the census of switching classes is the tournament census with the clock `n - 1`.
-(ii) `N_lev(n) = 0` for odd `n` and `0 <= N_lev(n) <= 2^(n^2/4)` for even `n`. (iii) Hence
+`P_k` as for tournaments: the census of switching classes is the tournament census with the clock `n - 1` (a
+rewriting of the formula of THM-479). (ii) `N_lev(n) = 0` for odd `n` (KNOWN: THM-479, part 3, with the values
+of `N_lev` to `n = 16`) and `0 <= N_lev(n) <= 2^(n^2/4)` for even `n` (immediate from THM-479). (iii) Hence
 `A049313(n) n!/2^C(n-1,2) = 1 + (64/3)(n)_3 4^(-n) + ...`, four times the first correction of the tournament
 census, with remainder at most `sum_{k > K} 4^k t_k(n) + 4^((n-1)/2) n! 2^(-ceil(n(n-1)/3)) + 2^(n^2/4) n!/2^C(n-1,2)`.
 
@@ -369,7 +388,9 @@ of the `2^(n-1)` sign vectors the fixed tournaments form an affine space of that
 Check (`out/census_switching.txt`, values of A049313 from the OEIS): the identity (i) is exact for
 `3 <= n <= 19`; `N_odd(n) = A049313(n)` for every odd `n <= 19`; `N_lev = 1, 2, 15, 280, 23464, 6819360, 6981258440,
 25417204478336` for `n = 4, ..., 18`; `A049313(19) n!/2^C(18,2) = 1.000000451 = 1 + (64/3)(19)_3 4^(-19)` to the
-digits shown. No asymptotic statement for A049313 was on record.
+digits shown. No asymptotic statement for A049313 was on record in the repository; the leading term is
+presumably folklore (Babai-Cameron 2000 was not consulted), the correction term with its remainder is what is
+added.
 
 ## 4. Part C: Chan-Pak side
 
@@ -385,7 +406,7 @@ digits shown. No asymptotic statement for A049313 was on record.
   orders `n` with `n!/2^(n-1)` comparable to `h`. There the number of classes per odd value is about
   `a(n)` divided by half the width of the distribution: about 1.5 at order 5 (12 classes on the odd values up
   to 15: 7 is missed), 2.4 at order 6 (56 classes up to 45: 7, 21, 35, 39 are missed), 5 at order 7, 20 at
-  order 8, and about `9 x 10^19` at order 18, the bulk order of `h` near `2^35`. Under a Poisson model the chance
+  order 8, and more than `10^19` at order 18, the bulk order of `h` near `2^35`. Under a Poisson model the chance
   that a bulk value is missed is `exp(-density)`: 22 and 9 percent at orders 5 and 6, below `10^-8` from order 8
   on. The values 7 and 21 are bulk values of the only two orders where the density is of order 1. This is
   consistent with the verified ranges (every odd number other than 7 and 21 up to `2^32`, THM-4875, and up to
@@ -452,7 +473,7 @@ a result about Yang-Mills.
 **1. Convergence and uniqueness of the infinite-volume limit.**
 (a) Full mesh limit at each fixed volume (`YM/FullVolume/Profiles.lean`, `PositionsUV` with `Sequence.full`;
 `YM/FullVolume/Glide/Vac.lean`, `Winter.convergence`: effective couplings and activities at a fixed level and
-period converge); bounds uniform in all periods (`YM/FullVolume/Discrete.lean`, `FixedBounds`); block steps shared
+period converge, under the hypothesis that the tuned parameter `bonusB` converges); bounds uniform in all periods (`YM/FullVolume/Discrete.lean`, `FixedBounds`); block steps shared
 between volumes (`path_shared`); period errors `exp(-cN)` for Hessians of log-determinants
 (`YM/Further/PHYSICAL_PERIOD_LIMIT_F933`). The volume limit is taken by Arzela-Ascoli
 (`YM/Extraction/Lipschitz.lean`, `first_surface`).
@@ -467,7 +488,8 @@ statement at the unit scale, so items 1 and 3 are one problem at that scale.
 **2. A probability measure for the continuum theory.**
 (a) Correlations exist on separated configurations only (`YM/Euclid/Table.lean`); a contact extension as
 distributions (`YM/Contacts/Solstice/Result.lean`), without positivity or uniqueness; growth in the arity
-`(n/r)^(4(D+1)n)` (`YM/OS/Slabs.lean`, `AllCopy`); all fields have weight at least 4.
+`C^n (n/r)^(A n)` with some exponent `A` (`YM/OS/Slabs.lean`, `AllCopy`, where `A` is existentially quantified;
+the survey reports `A = 4(D+1)` from its proof in `YM/Next/PHASE/Seats.lean`); all fields have weight at least 4.
 (b) `r^(-8) log^(-2)` is not locally integrable in dimension 4, so even second moments of one smeared field need
 the contact prescription; and a growth `n^(An)` with `A > 1` is beyond Carleman's condition, so the moments
 could not fix a measure even if it existed.
@@ -479,7 +501,7 @@ law `mu_m` of the level-`m` blocked configuration has density `rep(N,p,m).eval`,
 under the blocking kernel. The structure `Winter` (`YM/FullVolume/Glide/Vac.lean`, read by the author; its
 constructor is in the cone of the audited theorems according to `verification/declaration-usage.tsv`) asserts
 that, at a fixed period and level, the level-`m` coupling and the activities, in a weighted space, converge as
-`N -> infinity`. If this gives weak convergence of the normalised laws `mu_m` (an additional step that was not
+`N -> infinity`, provided the tuned parameter `bonusB` of the sequence converges. If this gives weak convergence of the normalised laws `mu_m` (an additional step that was not
 checked: the constant in the exponent diverges and has to cancel in the normalisation) and the kernels are
 continuous, the limits satisfy the same relation, so the joint
 laws of `(V_0, ..., V_M)` are consistent and Kolmogorov's theorem gives **a probability measure on the compact

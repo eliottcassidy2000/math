@@ -18,12 +18,20 @@ status: >
   Babai-Cameron 2000); the real Walsh expansion of H on a class, of degree at most 2 floor(N/3), and its Ising
   form for N <= 5 (THM-4524); (QF) as an observation, exhaustive for N <= 6 (HYP-9667, THM-5136, this machine,
   2026-11-11); the quadratic form of a vertex cube (THM-5127 (C)), a different cube; H = 1 + 2 (number of odd
-  cycles) (mod 4) (THM-002; Session29); the character sum of a quadratic function over F_2 (Dickson).
-  NEW here (not found by the author's survey; the audit is asked to refute this): Theorem (G), the endpoint
-  graph and its recursion; (C1); the proof of (QF) and of the quadratic law for every cycle length; (C3)-(C5).
+  cycles) (mod 4) (Grinberg-Stanley, arXiv:2307.05569, Theorem 7.1; THM-002; Session29); the character sum of a
+  quadratic function over F_2 (Dickson).
+  NEW to the repository (not found by the author's survey or by the audit): Theorem (G), the endpoint graph
+  and its recursion; (C1); the proof of (QF) and of the quadratic law for every cycle length; (C3)-(C5). In the
+  literature nothing was found, with the caveat that Forcade 1973 was not consulted.
   NOT CLAIMED: any value of H produced or excluded; the Chan-Pak conjecture is OPEN. Lambda is not a bijection
   from classes to even graphs (consistent with THM-4531, THM-4722).
-  AUDIT: AUDIT-PENDING (pre-audit checkpoint)
+  AUDIT: PASS (05-knowledge/results/switching_quadratic_census_gauge_20261111/audit/AUDIT.md; independent, own
+  programs): every step of the proof of (G) and of (C1)-(C6) re-derived by hand; no violation on every labelled
+  tournament of orders 3-7 (Lemmas 1, 2, the affine law for all X, the recursions, (C1) for all X, the cycle-length
+  law, the formula for H mod 4, (C3), (C4), the class histograms, the image sizes 1, 4, 22, 91, 2972); the data
+  used by (C5) cover all single and double switchings. Minor: credit Grinberg-Stanley (arXiv:2307.05569, Thm 7.1)
+  for H = 1 + 2 c_odd (mod 4); Forcade 1973 (Parity of paths and circuits in tournaments) could not be consulted
+  and has to be checked before (C1) is called new in the literature. MISTAKE-766.
 session: mac-mini-2026-11-11-gauge
 source: 05-knowledge/results/switching_quadratic_census_gauge_20261111/README.md
 related:
@@ -42,7 +50,8 @@ related:
 # THM-5139 - the endpoint graph of a switching class; H mod 4 is quadratic on a class
 
 Source: [the note](../../05-knowledge/results/switching_quadratic_census_gauge_20261111/README.md), section 2.
-Independent audit: AUDIT-PENDING (pre-audit checkpoint)
+Independent audit: [AUDIT.md](../../05-knowledge/results/switching_quadratic_census_gauge_20261111/audit/AUDIT.md), PASS
+(no major finding; credit and literature caveat added).
 
 ## Statement
 

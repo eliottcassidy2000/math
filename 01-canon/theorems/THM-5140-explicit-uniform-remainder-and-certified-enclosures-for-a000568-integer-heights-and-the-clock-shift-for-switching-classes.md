@@ -20,12 +20,20 @@ status: >
   its Mayer expansion (April reflections, Session249), the factor 64 (Session271); A049313 = N_odd + N_lev with
   the fixed-class counts (THM-479); that exact integers cannot be obtained by rounding a truncation (Session98,
   Session270); log-normal moment indeterminacy (Stieltjes).
-  NEW here (not found by the author's survey; the audit is asked to refute this): the explicit level-wise bound
-  B_K(n) valid for all n and K and its log-convexity; interval-certified digits; the integer-height
-  representation and the statement that the census moments do not determine the measure; the clock-shift form
-  of N_odd, the bound on N_lev and the first correction of A049313.
+  NEW to the repository (after the audit's corrections): the explicit level-wise bound B_K(n), of the true
+  exponential order, and its log-convexity (a bound by support valid for all n and all truncations is
+  Session271's); outward-rounded, interval-certified digits; the application of the classical log-normal
+  indeterminacy to the cycle index of A000568 (integer heights); the clock-shift rewriting of N_odd and the
+  first correction (64/3)(n)_3 4^(-n) of A049313 with its remainder (N_lev = 0 at odd n and its values are
+  THM-479; the bound on N_lev is immediate from it; the leading term is presumably folklore).
   NOT CLAIMED: any new asymptotic order (the orders are those of Session98 / THM-4845); exact integers.
-  AUDIT: AUDIT-PENDING (pre-audit checkpoint)
+  AUDIT: PASS WITH CORRECTIONS (05-knowledge/results/switching_quadratic_census_gauge_20261111/audit/AUDIT.md):
+  (B1) checked on all 8,656 odd cycle types with 3 <= n <= 40 and in 437 cases of the bound; the enclosures
+  reproduced by another code path (mpmath) at every n of the table, the ball computation reviewed; (B2), (B3)
+  proofs correct, N_odd reproduced at odd n <= 13. Corrections of credit applied: Session271 already has a
+  remainder bound by support valid for all n and all truncations (only the level-wise form and outward-rounded
+  digits were open); N_lev = 0 at odd n and the values of N_lev are THM-479 part 3; moment indeterminacy with
+  discrete theta solutions is classical. MISTAKE-766.
 session: mac-mini-2026-11-11-gauge
 source: 05-knowledge/results/switching_quadratic_census_gauge_20261111/README.md
 related:
@@ -40,7 +48,8 @@ related:
 # THM-5140 - the census at giant orders: uniform remainder, certified enclosures, integer heights, switching classes
 
 Source: [the note](../../05-knowledge/results/switching_quadratic_census_gauge_20261111/README.md), section 3.
-Independent audit: AUDIT-PENDING (pre-audit checkpoint)
+Independent audit: [AUDIT.md](../../05-knowledge/results/switching_quadratic_census_gauge_20261111/audit/AUDIT.md), PASS WITH
+CORRECTIONS (no mathematical error; three novelty claims narrowed).
 
 ## Statement
 

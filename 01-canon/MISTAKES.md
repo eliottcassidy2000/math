@@ -25015,3 +25015,38 @@ theorem elsewhere, for odd bases and for every kernel). The note: credits to Ses
 Session224 and THM-4922 (3), THM-5128 (F), paired_prime_collatz_20261003 and others; sections 6 to 9 retyped.
 Scripts: complete censuses with guards against a truncated table, corrected labels and messages, outputs
 regenerated; THM-5128 now points to THM-5134. The registered files were not edited.
+
+## MISTAKE-766 (2026-11-11, mac-mini-2026-11-11-gauge; THM-5139, THM-5140, HYP-9669 and `05-knowledge/results/switching_quadratic_census_gauge_20261111/` at the pre-audit commits ae904975ab and its successor; found by the independent audit `audit/AUDIT.md` of that packet) -- minor findings only: an evidence sentence generalised from three runs, three novelty claims stated too widely, a quoted exponent that is not in the cited file, a hypothesis dropped from a quoted statement
+
+- **m1. "For odd `n` the bound `ceil(|U|/2)` is attained at every `|U| <= 6`"** (HYP-9669, the note section 2.3, the
+  outcomes of the registration) was written from the three random tournaments of odd order of the registered run.
+  The audit's own run on `P_11` and on circulants of order 9 has valuation 4 at `|U| = 5`. The sentence is now a
+  statement about those runs.
+- **m2. In-sample evidence that was no evidence.** For `H` the conjecture is empty beyond `|U| = 4` at orders up to
+  8 (`c_U = 0` there, THM-4524, cited in the same paragraph); the checks at orders 6-8 were listed as evidence.
+- **m6, m7, m8. Novelty stated too widely.** (a) Session271 already has a remainder bound for the level
+  expansion of A000568 valid for every `n` and every truncation (by support); only the level-wise form and
+  outward-rounded digits were open, and the note said its Proposition B1 "answers" the open point. (b) `N_lev = 0`
+  at odd `n` and the values of `N_lev` are in THM-479 part 3, which the note cites for the formula; they were
+  typed as part of a new proposition. (c) Moment indeterminacy with discrete theta solutions is classical
+  (Stieltjes; Stieltjes-Wigert); only its application to the cycle index of A000568 is an addition.
+- **m10, m11. Quoting a source through a survey.** `Winter.convergence` of the Yang-Mills source assumes that the
+  tuned parameter converges, and the note stated it without the hypothesis; the exponent `4(D+1)` attributed to
+  `AllCopy` is not in that file (there the exponent is existentially quantified; `4(D+1)` is what a survey agent
+  reported from the proof in another file). Both sentences rested on sub-agent reports, not on the author's reading.
+- **m3, m4, m5, m9 and one wording point**: a missing sentence on why the registered runs (one base member, sets
+  avoiding one vertex) suffice; the digit lemma written for non-negative coefficients only; the credit to
+  Grinberg-Stanley for `H = 1 + 2 c_odd (mod 4)`; a density figure (`9 x 10^19`) that the stated rule does not give;
+  "`n >= 4`" attached to the wrong recursion.
+- **Process.** The first audit agent stopped on a usage-credit error before writing anything; the packet stayed
+  typed AUDIT-PENDING until a second, independent agent on another model completed the audit.
+- **Not affected.** No statement typed PROVED was wrong: Theorem G, its six corollaries, Propositions B1-B3 and the
+  enclosures were re-derived and recomputed by the audit with its own programs.
+
+Lesson: (1) a sentence about "every" or "the bound is attained" written from a registered run is a statement
+about that run until structured objects have been tried; the audit tried Paley and circulant tournaments in
+minutes. (2) Before listing a check as evidence, ask whether the statement is non-empty in that range. (3) When
+a result extends a file already cited for a formula, re-read that file's numbered parts for the pieces being
+"added" (THM-479 part 3; Session271 section 2). (4) A statement about an external source that comes from a
+survey agent is typed as such, with the hypothesis and the file checked by the author before it is used in a
+suggestion.

@@ -71,8 +71,10 @@ the runs). Orders 11 (three random tournaments, one circulant), 12 (two random, 
 random, one circulant), 14 (one random): no `U` violates (P1) or (P2) - 1,023 to 8,191 sets `U` per run and per
 function; the digits `k = 1, 2, 3` of `H` have `F_2`-degree exactly 2, 4, 8 in every run. The control
 `c_U(H) = 0` for `|U| > 2 floor(n/3)` holds. Not predicted, seen in the data: for even `n` the least valuation at
-`|U| = 5, 6` is 5 (orders 10, 12, 14), not 3; at odd `n` the bound `ceil(|U|/2)` is attained for every
-`|U| <= 6` (orders 9, 11, 13). The conjecture is not proved by these runs.
+`|U| = 5, 6` is 5 (orders 10, 12, 14), not 3; in the random tournaments of odd order of this run the bound
+`ceil(|U|/2)` is attained for every `|U| <= 6` (not general: the audit found valuation 4 at `|U| = 5` for `P_11` and
+circulants of order 9). The conjecture is not proved by these runs. Audit note: the in-sample runs at orders
+6-8 are no evidence for (P1), which is empty there beyond `|U| = 4` (THM-4524).
 
 **R2: not scored** (order 12 has not been enumerated). The forecasts stand as written, in HYP-9670.
 

@@ -1,0 +1,11 @@
+n=7 tournaments=2097152 mode=light
+  Lemma2                         checks=14680064 violations=0
+  G1 sym/diag/rowsum             checks=14680064 violations=0
+  G affine law all X             checks=268435456 violations=0
+  Lambda class-invariant         checks=102760448 violations=0
+  C1 hc formula all X            checks=268435456 violations=0
+  H triple sums mod 4            checks=73400320 violations=0
+classes=32768; histogram #(H=1 mod 4) per class: 24:1680 28:720 32:5040 36:19280 40:6048
+imbalance #(H=1)-#(H=3) per class: -16:1680 -8:720 +0:5040 +8:19280 +16:6048
+distinct Lambda over classes: 2972 ; classes with Lambda=0: 0
+2-adic (all T, all nonempty U subset V): violations H 0, hc 0; min v2 by |U| H: 1:1 2:1 3:2 4:2 5:99 6:99 7:99  hc: 1:0 2:0 3:1 4:1 5:99 6:99 7:99

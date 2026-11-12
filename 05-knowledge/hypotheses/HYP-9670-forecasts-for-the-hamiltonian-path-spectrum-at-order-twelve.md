@@ -10,7 +10,8 @@ status: >
   No model of the upper tail is claimed. The unsourced value 545,835 flagged in MISTAKE-743 lies in the interval
   for the maximum; the forecast does not use it and is not evidence for it.
   Scoring: each forecast is CONFIRMED if the exact value lies in its interval, FAILED otherwise.
-  AUDIT: AUDIT-PENDING (pre-audit checkpoint)
+  AUDIT: arithmetic of the ratios re-derived by the independent audit of the source packet (audit/AUDIT.md); the
+  forecasts themselves cannot be audited before order 12 is enumerated.
 session: mac-mini-2026-11-11-gauge
 source: 05-knowledge/results/switching_quadratic_census_gauge_20261111/README.md
 related:

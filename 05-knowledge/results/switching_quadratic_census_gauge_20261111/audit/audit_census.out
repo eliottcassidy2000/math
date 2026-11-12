@@ -1,0 +1,35 @@
+1. A000568(1..12) = [1, 1, 2, 4, 12, 56, 456, 6880, 191536, 9733056, 903753248, 154108311168]
+   matches known 1,1,2,4,12,56,456,6880,191536,9733056,903753248,154108311168: True
+2. bit-loss bound by level (n=3..40, every odd cycle type): cases 8656 violations 0 ; e_d(1..n-1) <= C(n,2)^d/d! violations: 0
+3. n=12 K=0  T_K=0.000422179  B_K=0.00268404  T<=B: True  T>=0: True
+3. n=20 K=1  T_K=2.22729e-14  B_K=7.35961e-13  T<=B: True  T>=0: True
+3. n=30 K=2  T_K=2.26427e-35  B_K=6.59331e-33  T<=B: True  T>=0: True
+   sweep 3<=n<=40, all K: cases 437 violations 0 (incl. log-convexity of t_k, n<200)
+   B_0(n) < 1 for n = 8..60: True ; B_0(7) = 1.01754
+   n=100: T_0 = 3.22004e-54  B_0 = 1.21984e-52
+4. n= 3 N_odd=1 A049313=1 equal=True clock-shift identity=True
+4. n= 5 N_odd=2 A049313=2 equal=True clock-shift identity=True
+4. n= 7 N_odd=12 A049313=12 equal=True clock-shift identity=True
+4. n= 9 N_odd=792 A049313=792 equal=True clock-shift identity=True
+4. n=11 N_odd=886288 A049313=886288 equal=True clock-shift identity=True
+4. n=13 N_odd=11856006240 A049313=11856006240 equal=True clock-shift identity=True
+5. n=300 a(n) = 5.1227420237392281309443937819074 x 10^12886
+5. n=1000 a(n) = 7.5542253561969970465585022424381 x 10^147796
+5. n=10000 a(n) = 1.5098931647244769495472939241657 x 10^15014335
+5. n=100000 a(n) = 2.3400374401848611737973671614340 x 10^1504678353
+5. n=1000000 a(n) = 1.1900875112156134028611789477663 x 10^150509281608
+5. n=1000000000 a(n) = 6.0123013904156987614211903387293 x 10^150514989115770076
+5. n=1000000000000 a(n) = 2.0393997258869877111961584776148 x 10^150514997820274377090934
+5. n=10^100 a(n) = 5.3636159852830989769140619573830 x 10^15051499783199059760...68445767 (200 digits)
+5. n=10^1000 a(n) = 2.0787887427905825278401391787918 x 10^15051499783199059760...70101263 (2000 digits)
+6. E[2^(M J_1)] / 2^C(M,2) - 1, M=0..12: max 0.0
+   E[2^(M J_d)] / 2^(phi M^2/2) - 1, phi in {2,4,6}, M=-3..6: max 1.6e-50
+   strong s(n), n=1..8: [1, 0, 1, 1, 6, 35, 353, 6008]
+   n=10 1-s/a=0.038745  n 2^(2-n)=0.0390625 ratio=0.991871
+   n=20 1-s/a=7.62912e-5  n 2^(2-n)=7.62939e-5 ratio=0.999964
+   n=40 1-s/a=1.45519e-10  n 2^(2-n)=1.45519e-10 ratio=1.0
+   order 5: a(n)=12, odd values up to max H=15: 8, density 1.50
+   order 6: a(n)=56, odd values up to max H=45: 23, density 2.43
+   order 7: a(n)=456, odd values up to max H=189: 95, density 4.80
+   order 8: a(n)=6880, odd values up to max H=661: 331, density 20.79
+   order 18: a(18)=1.7834e+30, mean H=4.8846e+10 (log2 35.51), a/(mean/2)=7.302e+19, a/mean=3.651e+19
