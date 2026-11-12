@@ -1,0 +1,217 @@
+{
+  "C5_exact_dyadic_closure": {
+    "balls_mod16": [
+      1,
+      13
+    ],
+    "isolated_counts": [
+      15,
+      41,
+      105
+    ],
+    "modes": [
+      0,
+      -5,
+      7,
+      2
+    ]
+  },
+  "Wieferich1093_triangle_chart_depth": 2,
+  "chart_and_physical_inverse_checks": 4594,
+  "hostiles": [
+    "triangle dyadic shadow is1, not its actual value3 at m1",
+    "base2 tangent freezes at Wieferich prime1093"
+  ],
+  "interior_derivative_controls": 85,
+  "representative_charts": [
+    {
+      "D": 1,
+      "delta": 5,
+      "m0": 1,
+      "modes": [
+        0,
+        -11,
+        5,
+        4
+      ],
+      "p": 2
+    },
+    {
+      "D": 1,
+      "delta": 5,
+      "m0": 2,
+      "modes": [
+        0,
+        -11,
+        5,
+        4
+      ],
+      "p": 2
+    },
+    {
+      "D": 1,
+      "delta": 1,
+      "m0": 1,
+      "modes": [
+        0,
+        -11,
+        5,
+        4
+      ],
+      "p": 3
+    },
+    {
+      "D": 2,
+      "delta": 1,
+      "m0": 2,
+      "modes": [
+        0,
+        -11,
+        5,
+        4
+      ],
+      "p": 3
+    },
+    {
+      "D": 2,
+      "delta": 1,
+      "m0": 1,
+      "modes": [
+        0,
+        -11,
+        5,
+        4
+      ],
+      "p": 5
+    },
+    {
+      "D": 1,
+      "delta": 1,
+      "m0": 2,
+      "modes": [
+        0,
+        -11,
+        5,
+        4
+      ],
+      "p": 5
+    },
+    {
+      "D": 3,
+      "delta": 1,
+      "m0": 3,
+      "modes": [
+        0,
+        -11,
+        5,
+        4
+      ],
+      "p": 5
+    },
+    {
+      "D": 4,
+      "delta": 1,
+      "m0": 4,
+      "modes": [
+        0,
+        -11,
+        5,
+        4
+      ],
+      "p": 5
+    },
+    {
+      "D": 1,
+      "delta": 1,
+      "m0": 1,
+      "modes": [
+        0,
+        -11,
+        5,
+        4
+      ],
+      "p": 7
+    },
+    {
+      "D": 4,
+      "delta": 1,
+      "m0": 2,
+      "modes": [
+        0,
+        -11,
+        5,
+        4
+      ],
+      "p": 7
+    }
+  ],
+  "rooted_core_controls_through_order4": 285,
+  "sampled_order5_direct_checks": 160,
+  "sharp_rank_examples": {
+    "1": {
+      "modes": [
+        0,
+        1,
+        1
+      ],
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "skeleton": [
+        0,
+        3,
+        1
+      ]
+    },
+    "2": {
+      "modes": [
+        0,
+        -5,
+        4,
+        2
+      ],
+      "rows": [
+        10,
+        28,
+        25,
+        16,
+        1
+      ],
+      "skeleton": [
+        0,
+        9,
+        10,
+        2
+      ]
+    },
+    "3": {
+      "modes": [
+        0,
+        -9,
+        -31,
+        26,
+        6
+      ],
+      "rows": [
+        42,
+        124,
+        121,
+        112,
+        97,
+        64,
+        1
+      ],
+      "skeleton": [
+        0,
+        31,
+        83,
+        50,
+        6
+      ]
+    }
+  },
+  "status": "PASS",
+  "tangent_observability_controls": 267
+}

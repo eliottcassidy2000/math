@@ -1,0 +1,26 @@
+{
+  "scope": "Exact controls for the specified families and proofs, not Chan-Pak completeness",
+  "status": "PASS",
+  "tasks": [
+    {
+      "normal_optimized_saved_agree": true,
+      "script": "reset/verify.py",
+      "sha256": "0dce643d27881ba0e4dd6ca9da3355790d2154c2e90e71c909118f1a54b946f8"
+    },
+    {
+      "normal_optimized_saved_agree": true,
+      "script": "symmetry/verify.py",
+      "sha256": "de5d076c367f530581beab4a996c3c5a39ed343dc8c12688666930e33cb727d7"
+    },
+    {
+      "normal_optimized_saved_agree": true,
+      "script": "wildcard/verify.py",
+      "sha256": "20d59c25b5108c31595e834ffc8a7f384e5cadab9c426d36244627ed81142826"
+    },
+    {
+      "normal_optimized_saved_agree": true,
+      "script": "audit/independent.py",
+      "sha256": "aff7f31c85c5cb95ef6e5fb3ce7682b505f2e0448550b15c47f45ff67904cd85"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Two different symmetry-breaking scales in ternary tournament cores
 
-**Status: PROVED IN NOTE; pending independent session review.** Exact laws
+**Status: PROVED, independently reviewed in this session.** Exact laws
 below concern the explicit balanced ternary family and uniformly independent
 attachment bits, not uniformly random tournament isomorphism classes. The
 Hamilton-count divisibility input is inherited. Chan–Pak remains open.
@@ -234,9 +234,12 @@ ordinary symmetry-breaking succeeds.
 
 This provides a precise large-scale classification of one emerging core
 family and a sharp probabilistic symmetry-erasure threshold. It also gives
-a negative design test: attaching o(n/log n) vertices to a large balanced
-ternary core cannot generally supply3-adic unit counts; for logarithmic k,
-(13) alone forces a vast divisor for every attachment. To obtain arbitrary
+a negative design test: for e>=1, the inherited floor is zero exactly when
+`2k>=3^(e-1)`. Thus any extension in this family whose count is a3-adic unit
+necessarily has **k>=ceil(n/6)**. This is a necessary contact budget, not a
+sufficiency theorem and not a new replacement for the inherited floor.
+For logarithmic k, (13) forces a vast divisor for every attachment.
+To obtain arbitrary
 odd targets a constructor must change the underlying core, use enough path
 contacts, or apply a lawful reset that breaks the protected endpoint action.
 The Session286 reset is such a different operation in its own family; no

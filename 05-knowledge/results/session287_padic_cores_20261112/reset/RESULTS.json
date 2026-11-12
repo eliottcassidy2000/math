@@ -1,0 +1,270 @@
+{
+  "additive_basis_orders": {
+    "13": 3,
+    "2": 2
+  },
+  "additive_inverse_checks": 374,
+  "boundary_status13": {
+    "00": [
+      0,
+      3,
+      11,
+      1
+    ],
+    "01": [
+      0,
+      3,
+      2,
+      5
+    ],
+    "10": [
+      0,
+      7,
+      11,
+      5
+    ],
+    "11": [
+      0,
+      7,
+      2,
+      9
+    ]
+  },
+  "cylinder_counts": [
+    {
+      "ambient13": 13,
+      "ambient8": 8,
+      "ambient_product": 104,
+      "count": 4,
+      "depth": 1
+    },
+    {
+      "ambient13": 169,
+      "ambient8": 64,
+      "ambient_product": 10816,
+      "count": 16,
+      "depth": 2
+    },
+    {
+      "ambient13": 2197,
+      "ambient8": 512,
+      "ambient_product": 1124864,
+      "count": 64,
+      "depth": 3
+    },
+    {
+      "ambient13": 28561,
+      "ambient8": 4096,
+      "ambient_product": 116985856,
+      "count": 256,
+      "depth": 4
+    },
+    {
+      "ambient13": 371293,
+      "ambient8": 32768,
+      "ambient_product": 12166529024,
+      "count": 1024,
+      "depth": 5
+    },
+    {
+      "ambient13": 4826809,
+      "ambient8": 262144,
+      "ambient_product": 1265319018496,
+      "count": 4096,
+      "depth": 6
+    }
+  ],
+  "good_root_triples": {
+    "0": [
+      1,
+      3,
+      3
+    ],
+    "1": [
+      0,
+      1,
+      2
+    ],
+    "2": [
+      3,
+      3,
+      3
+    ],
+    "3": [
+      0,
+      2,
+      3
+    ],
+    "4": [
+      1,
+      1,
+      2
+    ],
+    "5": [
+      0,
+      0,
+      3
+    ],
+    "6": [
+      1,
+      2,
+      3
+    ],
+    "7": [
+      2,
+      2,
+      2
+    ],
+    "8": [
+      0,
+      1,
+      3
+    ],
+    "9": [
+      0,
+      2,
+      2
+    ],
+    "10": [
+      0,
+      3,
+      3
+    ],
+    "11": [
+      0,
+      0,
+      2
+    ],
+    "12": [
+      1,
+      2,
+      2
+    ]
+  },
+  "inherited_physical_response_cases": 508,
+  "leading13": [
+    11,
+    3,
+    4
+  ],
+  "leading8": [
+    5,
+    7,
+    0
+  ],
+  "limits": [
+    "normalization and central subtraction are retained",
+    "paired prime residues share one address",
+    "no Chan-Pak coverage"
+  ],
+  "metric_checks": 1088,
+  "physical_layers": [
+    {
+      "depth": 1,
+      "k": 4,
+      "n": 2,
+      "residues13": 4,
+      "residues8": 4,
+      "vertices": 23
+    },
+    {
+      "depth": 1,
+      "k": 5,
+      "n": 3,
+      "residues13": 4,
+      "residues8": 4,
+      "vertices": 28
+    },
+    {
+      "depth": 2,
+      "k": 6,
+      "n": 4,
+      "residues13": 16,
+      "residues8": 16,
+      "vertices": 33
+    },
+    {
+      "depth": 2,
+      "k": 7,
+      "n": 5,
+      "residues13": 16,
+      "residues8": 16,
+      "vertices": 38
+    },
+    {
+      "depth": 3,
+      "k": 8,
+      "n": 6,
+      "residues13": 64,
+      "residues8": 64,
+      "vertices": 43
+    },
+    {
+      "depth": 3,
+      "k": 9,
+      "n": 7,
+      "residues13": 64,
+      "residues8": 64,
+      "vertices": 48
+    },
+    {
+      "depth": 4,
+      "k": 10,
+      "n": 8,
+      "residues13": 256,
+      "residues8": 256,
+      "vertices": 53
+    }
+  ],
+  "physical_sum_controls": [
+    {
+      "copies": 2,
+      "depth": 1,
+      "prime": 2,
+      "target": 7
+    },
+    {
+      "copies": 2,
+      "depth": 2,
+      "prime": 2,
+      "target": 63
+    },
+    {
+      "copies": 2,
+      "depth": 3,
+      "prime": 2,
+      "target": 511
+    },
+    {
+      "copies": 2,
+      "depth": 4,
+      "prime": 2,
+      "target": 4095
+    },
+    {
+      "copies": 3,
+      "depth": 1,
+      "prime": 13,
+      "target": 12
+    },
+    {
+      "copies": 3,
+      "depth": 2,
+      "prime": 13,
+      "target": 168
+    },
+    {
+      "copies": 3,
+      "depth": 3,
+      "prime": 13,
+      "target": 2196
+    },
+    {
+      "copies": 3,
+      "depth": 4,
+      "prime": 13,
+      "target": 28560
+    }
+  ],
+  "status": "PASS"
+}

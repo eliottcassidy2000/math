@@ -1,0 +1,256 @@
+{
+  "finite_scopes": {
+    "all_binary_attachments_n9": {
+      "colorings": 512,
+      "coupling_upper_bound": "576/3853",
+      "nonbottom_toll_probability": "7/64",
+      "path_count_valuation_histogram": {
+        "1": 378,
+        "2": 90,
+        "3": 42,
+        "5": 2
+      },
+      "root_stabilizer_valuation_histogram": {
+        "0": 162,
+        "1": 270,
+        "2": 72,
+        "3": 6,
+        "4": 2
+      },
+      "rootfree_labelled": 162
+    }
+  },
+  "fixed_q": {
+    "2": {
+      "certified_mu_interval": [
+        "0.095835431069906655",
+        "0.095835431069906656"
+      ],
+      "certified_sigma2_interval": [
+        "0.056588342094668773",
+        "0.056588342094668774"
+      ],
+      "depths": [
+        {
+          "depth": 1,
+          "free_orbits": "2",
+          "mean_density": 0.08333333333333333,
+          "n": 3,
+          "variance_density": 0.0625
+        },
+        {
+          "depth": 2,
+          "free_orbits": "2",
+          "mean_density": 0.0954861111111111,
+          "n": 9,
+          "variance_density": 0.057698567708333336
+        },
+        {
+          "depth": 3,
+          "free_orbits": "2",
+          "mean_density": 0.09583535017790618,
+          "n": 27,
+          "variance_density": 0.05658923146956517
+        },
+        {
+          "depth": 4,
+          "free_orbits": "2",
+          "mean_density": 0.09583543106990665,
+          "n": 81,
+          "variance_density": 0.056588342094669127
+        },
+        {
+          "depth": 5,
+          "free_orbits": "2",
+          "mean_density": 0.09583543106990665,
+          "n": 243,
+          "variance_density": 0.05658834209466877
+        }
+      ]
+    },
+    "3": {
+      "certified_mu_interval": [
+        "0.038273751460225443",
+        "0.038273751460225444"
+      ],
+      "certified_sigma2_interval": [
+        "0.033421387818908385",
+        "0.033421387818908386"
+      ],
+      "depths": [
+        {
+          "depth": 1,
+          "free_orbits": "8",
+          "mean_density": 0.037037037037037035,
+          "n": 3,
+          "variance_density": 0.03292181069958848
+        },
+        {
+          "depth": 2,
+          "free_orbits": "168",
+          "mean_density": 0.03827329844705245,
+          "n": 9,
+          "variance_density": 0.03342175328264582
+        },
+        {
+          "depth": 3,
+          "free_orbits": "1580488",
+          "mean_density": 0.03827375146022524,
+          "n": 27,
+          "variance_density": 0.033421387818909284
+        },
+        {
+          "depth": 4,
+          "free_orbits": "1315989286172397928",
+          "mean_density": 0.03827375146022544,
+          "n": 81,
+          "variance_density": 0.03342138781890838
+        },
+        {
+          "depth": 5,
+          "free_orbits": "759688944011109152811385627727261869811816950565641608",
+          "mean_density": 0.03827375146022544,
+          "n": 243,
+          "variance_density": 0.03342138781890838
+        }
+      ]
+    },
+    "4": {
+      "certified_mu_interval": [
+        "0.021063913562701204",
+        "0.021063913562701205"
+      ],
+      "certified_sigma2_interval": [
+        "0.019685054809346776",
+        "0.019685054809346777"
+      ],
+      "depths": [
+        {
+          "depth": 1,
+          "free_orbits": "20",
+          "mean_density": 0.020833333333333332,
+          "n": 3,
+          "variance_density": 0.01953125
+        },
+        {
+          "depth": 2,
+          "free_orbits": "2660",
+          "mean_density": 0.021063910590277776,
+          "n": 9,
+          "variance_density": 0.019685054818789165
+        },
+        {
+          "depth": 3,
+          "free_orbits": "6273697780",
+          "mean_density": 0.021063913562701205,
+          "n": 27,
+          "variance_density": 0.019685054809346778
+        },
+        {
+          "depth": 4,
+          "free_orbits": "82309417205543300830675084740",
+          "mean_density": 0.021063913562701205,
+          "n": 81,
+          "variance_density": 0.019685054809346778
+        },
+        {
+          "depth": 5,
+          "free_orbits": "185877715096419569961318564187618617552965077383382169393688505631668195462855348446420",
+          "mean_density": 0.021063913562701205,
+          "n": 243,
+          "variance_density": 0.019685054809346778
+        }
+      ]
+    },
+    "8": {
+      "certified_mu_interval": [
+        "0.005212095048705425",
+        "0.005212095048705426"
+      ],
+      "certified_sigma2_interval": [
+        "0.005130401788629269",
+        "0.005130401788629270"
+      ],
+      "depths": [
+        {
+          "depth": 1,
+          "free_orbits": "168",
+          "mean_density": 0.005208333333333333,
+          "n": 3,
+          "variance_density": 0.005126953125
+        },
+        {
+          "depth": 2,
+          "free_orbits": "1580488",
+          "mean_density": 0.005212095048692491,
+          "n": 9,
+          "variance_density": 0.005130401788619565
+        },
+        {
+          "depth": 3,
+          "free_orbits": "1315989286172397928",
+          "mean_density": 0.005212095048705426,
+          "n": 27,
+          "variance_density": 0.005130401788629269
+        },
+        {
+          "depth": 4,
+          "free_orbits": "759688944011109152811385627727261869811816950565641608",
+          "mean_density": 0.005212095048705426,
+          "n": 81,
+          "variance_density": 0.005130401788629269
+        },
+        {
+          "depth": 5,
+          "free_orbits": "146145740918547270949809494676703617265921850870874977084154577638630905893043255498196424021468003733567597358135998971195506253761974483227904083140609648995368",
+          "mean_density": 0.005212095048705426,
+          "n": 243,
+          "variance_density": 0.005130401788629269
+        }
+      ]
+    }
+  },
+  "poisson_controls": [
+    {
+      "e": 8,
+      "newborns": 7,
+      "poisson_mean": 0.13348388671875,
+      "quotient_v3_floor_if_pointwise_rigid": 3141,
+      "tv_upper_bound": 1.6295911564156995e-05,
+      "universal_H_v3_floor": 3197
+    },
+    {
+      "e": 12,
+      "newborns": 10,
+      "poisson_mean": 0.16894054412841797,
+      "quotient_v3_floor_if_pointwise_rigid": 265407,
+      "tv_upper_bound": 3.2222897682152724e-07,
+      "universal_H_v3_floor": 265527
+    },
+    {
+      "e": 16,
+      "newborns": 13,
+      "poisson_mean": 0.213815376162529,
+      "quotient_v3_floor_if_pointwise_rigid": 21522801,
+      "tv_upper_bound": 6.372194914271685e-09,
+      "universal_H_v3_floor": 21523009
+    },
+    {
+      "e": 20,
+      "newborns": 16,
+      "poisson_mean": 0.27061008545570076,
+      "quotient_v3_floor_if_pointwise_rigid": 1743391328,
+      "tv_upper_bound": 1.2601264079576834e-10,
+      "universal_H_v3_floor": 1743391648
+    },
+    {
+      "e": 20,
+      "newborns": 20,
+      "poisson_mean": 0.001057070646311331,
+      "quotient_v3_floor_if_pointwise_rigid": 1743391120,
+      "tv_upper_bound": 1.9228003044423045e-15,
+      "universal_H_v3_floor": 1743391520
+    }
+  ],
+  "status": "PASS"
+}
