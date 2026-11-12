@@ -1,0 +1,10 @@
+T1  W = x + x^2 y: codimension c(N) = [1, 1, 1, 1] ; class of 1: nonzero ; class of x: nonzero
+    W h = (k - l) h modulo M for monomials h = x^k y^l: 20 checked, 0 failures
+    W^m in M, m = 1..4: [True, True, True, True] ; x W^m - m! x in M: [True, True, True, True] ; x W^m in M: [False, False, False, False]
+T2  W = x + x^3 y: codimension c(N) = [1, 1, 1, 1] ; class of 1: nonzero ; class of x^2: nonzero
+    W h = (k - 2l - 1) h modulo M for monomials: 15 checked, 0 failures
+    W + 1 in M: True ; W^2 in M: True ; W^4 in M: True
+    x^2 W^n - n! x^2 in M, n = 1..4: [True, True, True, True]
+T3  W = x y: 2 W h = (k + l + 2) h modulo M for monomials: 25 checked, 0 failures
+T4  Keller pair (x + y^2, y), centre (2, 3): 2 U V h = (U d_u + V d_v + 2) h modulo M_z: 7 checked, 0 failures
+T5  slice map, centre (2, 3): 2 U V h = (U d_u + V d_v + 2) h modulo M_z: 6 checked, 0 failures
