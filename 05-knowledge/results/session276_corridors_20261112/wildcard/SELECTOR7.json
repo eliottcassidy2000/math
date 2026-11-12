@@ -1,0 +1,15 @@
+{
+  "N": 7,
+  "initial": 0,
+  "transitions": [
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "accepting": [],
+  "witness": null,
+  "status": "EMPTY"
+}

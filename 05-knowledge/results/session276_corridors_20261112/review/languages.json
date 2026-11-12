@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "independent_literal_words": 1365,
+  "full_GF_coefficient_checks": 192,
+  "lengths": "0..5",
+  "targets": "all odd1..63"
+}

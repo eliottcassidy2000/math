@@ -1,6 +1,6 @@
 # Session276: exact overlap, absolute targets, and continuing count corridors
 
-Status: WORK IN PROGRESS; Chan–Pak OPEN. Base: 436d4766545fdc277daeaa3ebe4da8027cd096ea.
+Status: COMPLETED scoped research; Chan–Pak OPEN. Base: 436d4766545fdc277daeaa3ebe4da8027cd096ea.
 
 The assignment is to turn physical constructions into a prescribed-target proof,
 not to increase a numerical coverage limit. Session275 supplies exact sparse
@@ -41,6 +41,28 @@ These are inspiration, not proof dependencies: distinguish a realizable finite
 carrier from a scalar shadow, distinguish prediction from exact inversion, and
 classify lawful continuation contexts before inferring a global selection rule.
 
-All new assertions remain provisional until their lane proof and replay are
-reviewed. Only session-owned paths may be staged; unrelated checkout changes
-and concurrent main additions must be preserved.
+The final lane proofs and focused independent review are linked in SYNTHESIS.md.
+Only session-owned paths were published; unrelated checkout changes were preserved.
+
+## Outcome of repeated pivots
+
+Sparse independent digits led to symmetric central fibers; primitive fibers
+led to unrestricted integer sandwiches; failed axis overlap led to compensated
+diagonal carries and a locally optimal four-count interval. A failed fixed-core
+island led to a core-changing gate; its receiver leak led to a full unit-context
+nonclosure theorem and then a finite old-edge repair. Scalar source failure led
+to target continuation automata, finite-core generating functions and an exact
+all-height insertion obstruction with a physical architecture-changing bypass.
+None of these local or infinite-family results supplies the missing widening
+return map or uniform target-core positivity.
+
+## Concurrent close-out signal
+
+Main advanced to6c5690b67ba34781f70e74224cd445aba344a9a6 during close-out.
+Its switching-gauge work corrects the first-difference identity and explicitly
+reports that the full arc-cube analogue of its proposed2-adic derivative law
+fails. It remains AUDIT-PENDING. No theorem from that update is used here.
+The distinction is relevant to the next repair search: switching cubes,
+root-incidence cubes and arbitrary old-edge cubes are different consumers;
+our explicit old-edge repairs must not inherit an unproved switching-class
+valuation law. The concurrent files are preserved unchanged in publication.

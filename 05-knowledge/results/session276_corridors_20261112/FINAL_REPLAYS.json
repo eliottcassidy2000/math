@@ -1,0 +1,32 @@
+{
+  "coordinator_controls": [
+    {
+      "script": "selector/check.py",
+      "normal_optimized_identical": true,
+      "output_sha256": "7dff6d976557f87d9fce4ad947b5d4523d84db96a043f8b0d0df5880b5850813"
+    },
+    {
+      "script": "hierarchy/check.py",
+      "normal_optimized_identical": true,
+      "output_sha256": "9a787971a000056b4b79253f6a6c1f603c182688606e28341ce365f2bc122ba5"
+    },
+    {
+      "script": "carry/check.py",
+      "normal_optimized_identical": true,
+      "output_sha256": "2cea7b7d16b00778956f4352803ae14166e2fd5c0e38bdb4ed144b46b922a71f"
+    },
+    {
+      "script": "digits/radix.py",
+      "normal_optimized_identical": true,
+      "output_sha256": "4af54d9192d79b98e06781b954876b0266ffa64def4381d46277aa2d8bd1e76a"
+    }
+  ],
+  "delegated_receipts": [
+    "digits/REPLAY.json",
+    "digits/OVERLAP.json",
+    "corridor/CHECKS.json",
+    "corridor/ESCAPE_CHECKS.json",
+    "wildcard/VERIFY.json",
+    "review/REVIEW.md"
+  ]
+}

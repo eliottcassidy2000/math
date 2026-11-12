@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "raw_live_states": 28016,
+  "count_Moore_states": 1080,
+  "source_h_range": "odd3..63",
+  "common_parent_h": [
+    5,
+    9
+  ],
+  "two_level_h_through31": [],
+  "method": "explicit DFS reachability independently replays producer topological-bitset readiness on inherited transfer closure"
+}

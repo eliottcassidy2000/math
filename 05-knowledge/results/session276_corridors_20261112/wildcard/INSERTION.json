@@ -1,0 +1,127 @@
+{
+  "hostile_repeat": {
+    "source_word": "1120",
+    "source_count": 25,
+    "neutral_prefix_word": "01120",
+    "flips": [
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "result_rows": [
+      118,
+      92,
+      80,
+      53,
+      96,
+      70,
+      8
+    ],
+    "result_count": 71,
+    "desired_upper_binary_count": 51
+  },
+  "target": 27,
+  "scope": "all source word lengths and all interior insertions retaining the apex pair, old arcs and spine subsequence",
+  "core_certificates": [
+    {
+      "H13core": "120",
+      "reachable_product_states": 56,
+      "accepting_product_states": 0
+    },
+    {
+      "H13core": "212",
+      "reachable_product_states": 57,
+      "accepting_product_states": 0
+    },
+    {
+      "H13core": "230",
+      "reachable_product_states": 58,
+      "accepting_product_states": 0
+    },
+    {
+      "H13core": "302",
+      "reachable_product_states": 59,
+      "accepting_product_states": 0
+    },
+    {
+      "H13core": "310",
+      "reachable_product_states": 59,
+      "accepting_product_states": 0
+    },
+    {
+      "H13core": "321",
+      "reachable_product_states": 57,
+      "accepting_product_states": 0
+    }
+  ],
+  "repair": {
+    "source_word": "120",
+    "source_rows": [
+      22,
+      12,
+      24,
+      17,
+      2
+    ],
+    "lower_word": "1120",
+    "lower_rows": [
+      46,
+      44,
+      24,
+      48,
+      35,
+      4
+    ],
+    "upper_word_after_reframe": "2010",
+    "padded_rows": [
+      62,
+      44,
+      24,
+      48,
+      34,
+      4
+    ],
+    "old_arc_flip": [
+      1,
+      2
+    ],
+    "intermediate_rows": [
+      62,
+      40,
+      26,
+      48,
+      34,
+      4
+    ],
+    "new_arc_flip": [
+      0,
+      2
+    ],
+    "upper_rows": [
+      58,
+      40,
+      27,
+      48,
+      34,
+      4
+    ],
+    "counts": [
+      13,
+      25,
+      13,
+      15,
+      27
+    ],
+    "upper_spine_reframe": [
+      2,
+      0,
+      1,
+      3
+    ]
+  }
+}

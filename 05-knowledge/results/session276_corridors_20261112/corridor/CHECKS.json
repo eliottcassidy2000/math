@@ -1,0 +1,102 @@
+{
+  "checks": {
+    "core_permutation_inputs": 32,
+    "quadratic_form_direct_DP": 544,
+    "island_components": 6,
+    "anomaly_formula_direct_DP": 256,
+    "source_escape_difference": 3,
+    "bifan_escape_difference": 4,
+    "one_apex_formula_direct_DP": 254
+  },
+  "core_cut_table": {
+    "0": [
+      15
+    ],
+    "1": [
+      33
+    ],
+    "2": [
+      41,
+      43
+    ],
+    "3": [
+      41,
+      43
+    ],
+    "4": [
+      33
+    ],
+    "5": [
+      15
+    ]
+  },
+  "exact_exit_minima": [
+    {
+      "left": 0,
+      "right": 0,
+      "all_exit_min": [
+        8,
+        3,
+        1,
+        41,
+        33
+      ],
+      "tail_exit_min": null
+    },
+    {
+      "left": 1,
+      "right": 0,
+      "all_exit_min": [
+        8,
+        6,
+        2,
+        41,
+        33
+      ],
+      "tail_exit_min": [
+        14,
+        22,
+        31,
+        43,
+        57
+      ]
+    },
+    {
+      "left": 0,
+      "right": 1,
+      "all_exit_min": [
+        8,
+        35,
+        33,
+        41,
+        33
+      ],
+      "tail_exit_min": [
+        14,
+        37,
+        1,
+        43,
+        57
+      ]
+    }
+  ],
+  "common_frames": [
+    [
+      0,
+      4,
+      1,
+      2,
+      3,
+      5
+    ],
+    [
+      0,
+      2,
+      4,
+      1,
+      3,
+      5
+    ]
+  ],
+  "status": "PASS; finite controls separate from all-order proofs"
+}

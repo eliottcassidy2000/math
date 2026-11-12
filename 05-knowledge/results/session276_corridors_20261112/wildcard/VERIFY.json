@@ -1,0 +1,22 @@
+{
+  "normal_optimized_outputs_identical": true,
+  "deterministic_receipts": {
+    "COMPARISON.json": "088f384a1864d2761048fa1fb968e03c1e97b76f021df110d0d3835762382a50",
+    "READINESS.json": "671e5ce02352099985742f9e7bf6c3e24df7f6af303c79d07e6c903d4cddf071",
+    "SELECTOR7.json": "2558d929113364dbbe53d06634adca7d1412f211ec877949fbf555243c696a5b",
+    "SELECTOR21.json": "810eeabdf7324e6f7e16a5b7c9396844f13766f2fba0d755e2853e464601e209",
+    "SELECTOR63.json": "58eda521177510831f5fc5a7fc1b8e4fe6d8225c20cfd0fcb226c063b2bb9201",
+    "INSERTION.json": "18e718523a4bceec4a29cbd81927d939e4311d02db5084d12d5b617f908e0745",
+    "FIBRES63.json": "5850a2d68a3fb7d10745a59d545461ac1856d59ded84254c94afafab9ee55d5f"
+  },
+  "script_hashes": {
+    "capped.py": "1fccee3200eb420d4bb531f722a5b7dc663465b39519906485221dc782d86cff",
+    "compare.py": "70641bc17a9ab88948a7de0e33ebcab37a1fb275e4001bdc92121c619f4fe863",
+    "fibres.py": "d521931a796cc091c750092a77c336a34556c006373c6c11f1a8f4f47811ddf1",
+    "insertion.py": "c3eeb1acc29916bd43db38d5c7048b6717b1459bc8029a6d3c3b8cef9769d51f",
+    "readiness.py": "f2d44fbe406337afa441737b6f46a8c33b0a815119b3e8eaa0d4bc94be985013",
+    "selector.py": "b069f2bc2909de8f5ac8a6a2e1ec46084380d59b3bb1deacce974e4b3d0c240a"
+  },
+  "verification_note": "The final insertion hostile-control addition changed its receipt during a combined replay. Final insertion source was separately replayed in normal and optimized modes and its identical output matches INSERTION.json. The other combined normal/optimized receipt digests agreed exactly.",
+  "scope": "Complete all-word-length capped closures; finite scalar windows explicitly stated in receipts."
+}

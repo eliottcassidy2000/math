@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "single_anomaly_checks": 256,
+  "whole_128_cut_boundary": {
+    "minimum_exit": 8,
+    "minimum_tail_exit": 14
+  }
+}

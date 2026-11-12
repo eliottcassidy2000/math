@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "coefficient_checks": 220,
+  "apex_orders": [
+    1,
+    2,
+    3
+  ],
+  "targets": [
+    1,
+    3,
+    5,
+    7,
+    9
+  ],
+  "spine_lengths": [
+    0,
+    1,
+    2,
+    3
+  ]
+}

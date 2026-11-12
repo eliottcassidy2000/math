@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "independent_H13_strong_cores": 6,
+  "independent_H27_strong_cores": 25,
+  "maximal_clock_templates": 35,
+  "forbidden_subsequence_pairs_checked": 210,
+  "positive_repair_counts": [
+    13,
+    25,
+    13,
+    15,
+    27
+  ],
+  "scope": "all word lengths by finite-core theorem and pattern-length clock saturation"
+}

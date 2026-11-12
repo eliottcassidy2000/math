@@ -1,0 +1,403 @@
+{
+  "separate_H23_branches": [
+    {
+      "source_word": "1321",
+      "source_count": 23,
+      "suffix": "1",
+      "target_word": "13211",
+      "target_count": 45
+    },
+    {
+      "source_word": "1222",
+      "source_count": 23,
+      "suffix": "2",
+      "target_word": "12222",
+      "target_count": 47
+    }
+  ],
+  "cap": 127,
+  "scope": "ALL source-word and suffix lengths; two-level only h<=31 fully inside cap",
+  "rows": [
+    {
+      "h": 3,
+      "source_continuation_classes": 43,
+      "available_branch_masks": [
+        0,
+        1
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 5,
+      "source_continuation_classes": 74,
+      "available_branch_masks": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "common_parent_exists": true,
+      "two_level_common_parent_exists": false,
+      "example": {
+        "H": 5,
+        "prefix": "12",
+        "children": [
+          {
+            "suffix": "1",
+            "H": 9,
+            "state": 25,
+            "physical_child_word": "121",
+            "continuation": null
+          },
+          {
+            "suffix": "2",
+            "H": 11,
+            "state": 26,
+            "physical_child_word": "122",
+            "continuation": null
+          }
+        ]
+      }
+    },
+    {
+      "h": 7,
+      "source_continuation_classes": 0,
+      "available_branch_masks": [],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 9,
+      "source_continuation_classes": 92,
+      "available_branch_masks": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "common_parent_exists": true,
+      "two_level_common_parent_exists": false,
+      "example": {
+        "H": 9,
+        "prefix": "102",
+        "children": [
+          {
+            "suffix": "1",
+            "H": 17,
+            "state": 73,
+            "physical_child_word": "1021",
+            "continuation": null
+          },
+          {
+            "suffix": "2",
+            "H": 19,
+            "state": 74,
+            "physical_child_word": "1022",
+            "continuation": null
+          }
+        ]
+      }
+    },
+    {
+      "h": 11,
+      "source_continuation_classes": 38,
+      "available_branch_masks": [
+        0,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 13,
+      "source_continuation_classes": 19,
+      "available_branch_masks": [
+        0,
+        1
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 15,
+      "source_continuation_classes": 69,
+      "available_branch_masks": [
+        0,
+        1,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 17,
+      "source_continuation_classes": 49,
+      "available_branch_masks": [
+        0,
+        1,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 19,
+      "source_continuation_classes": 46,
+      "available_branch_masks": [
+        0,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 21,
+      "source_continuation_classes": 0,
+      "available_branch_masks": [],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 23,
+      "source_continuation_classes": 58,
+      "available_branch_masks": [
+        0,
+        1,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 25,
+      "source_continuation_classes": 37,
+      "available_branch_masks": [
+        0,
+        1
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 27,
+      "source_continuation_classes": 47,
+      "available_branch_masks": [
+        0,
+        1,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 29,
+      "source_continuation_classes": 44,
+      "available_branch_masks": [
+        0,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 31,
+      "source_continuation_classes": 30,
+      "available_branch_masks": [
+        0
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": false,
+      "example": null
+    },
+    {
+      "h": 33,
+      "source_continuation_classes": 60,
+      "available_branch_masks": [
+        0,
+        1,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 35,
+      "source_continuation_classes": 14,
+      "available_branch_masks": [
+        0,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 37,
+      "source_continuation_classes": 40,
+      "available_branch_masks": [
+        0,
+        1
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 39,
+      "source_continuation_classes": 21,
+      "available_branch_masks": [
+        0,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 41,
+      "source_continuation_classes": 19,
+      "available_branch_masks": [
+        0,
+        1,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 43,
+      "source_continuation_classes": 8,
+      "available_branch_masks": [
+        0
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 45,
+      "source_continuation_classes": 37,
+      "available_branch_masks": [
+        0,
+        1
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 47,
+      "source_continuation_classes": 14,
+      "available_branch_masks": [
+        0,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 49,
+      "source_continuation_classes": 16,
+      "available_branch_masks": [
+        0,
+        1
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 51,
+      "source_continuation_classes": 28,
+      "available_branch_masks": [
+        0,
+        1,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 53,
+      "source_continuation_classes": 24,
+      "available_branch_masks": [
+        0,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 55,
+      "source_continuation_classes": 11,
+      "available_branch_masks": [
+        0
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 57,
+      "source_continuation_classes": 10,
+      "available_branch_masks": [
+        0,
+        1
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 59,
+      "source_continuation_classes": 14,
+      "available_branch_masks": [
+        0,
+        1,
+        2
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 61,
+      "source_continuation_classes": 10,
+      "available_branch_masks": [
+        0
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    },
+    {
+      "h": 63,
+      "source_continuation_classes": 5,
+      "available_branch_masks": [
+        0
+      ],
+      "common_parent_exists": false,
+      "two_level_common_parent_exists": null,
+      "example": null
+    }
+  ],
+  "two_level_examples": []
+}

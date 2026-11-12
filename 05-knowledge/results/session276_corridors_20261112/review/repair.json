@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "repaired_rows": [
+    210,
+    252,
+    241,
+    181,
+    96,
+    129,
+    168,
+    16
+  ],
+  "profile": {
+    "H": 159,
+    "h": 17,
+    "Q": 448,
+    "U": 312,
+    "V": 213,
+    "d": 8,
+    "e": 17
+  },
+  "same_V_direct_edge_changes": [
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "scope": "finite repair; three-free-edge enlarged move only for157toR159"
+}

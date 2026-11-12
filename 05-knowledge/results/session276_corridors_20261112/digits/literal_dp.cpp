@@ -1,0 +1,5 @@
+// Independent literal Hamilton-path subset DP; unsigned64 is sufficient at n<=20.
+#include <iostream>
+#include <vector>
+#include <cstdint>
+int main(int argc,char** argv){unsigned n;while(std::cin>>n){if(n>20||n==0)return 2;std::vector<unsigned>T(n);for(auto&x:T)std::cin>>x;unsigned full=(1u<<n)-1;std::vector<uint64_t>dp((size_t)(full+1)*n);for(unsigned i=0;i<n;i++)dp[((size_t)1<<i)*n+i]=1;for(unsigned s=1;s<=full;s++){for(unsigned v=0;v<n;v++){auto val=dp[(size_t)s*n+v];if(!val)continue;unsigned r=T[v]&~s&full;while(r){unsigned b=r&-r;r-=b;unsigned j=__builtin_ctz(b);dp[(size_t)(s|b)*n+j]+=val;}}}uint64_t H=0;for(unsigned i=0;i<n;i++)H+=dp[(size_t)full*n+i];std::cout<<H;if(argc>1&&H){unsigned S=full,v=0;while(!dp[(size_t)S*n+v])v++;std::vector<unsigned>path;while(S){path.push_back(v);unsigned old=S;S^=1u<<v;if(!S)break;unsigned u=0;while(!(S>>u&1)||!(T[u]>>v&1)||!dp[(size_t)S*n+u])u++;v=u;}std::cout<<":";for(auto it=path.rbegin();it!=path.rend();it++)std::cout<<" "<<*it;}std::cout<<"\n";}}

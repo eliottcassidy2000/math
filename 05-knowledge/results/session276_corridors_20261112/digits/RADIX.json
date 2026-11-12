@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "checks": 1020,
+  "examples": [
+    {
+      "core": 41,
+      "N": 41,
+      "solutions": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stats": {
+        "nodes": 1,
+        "max_depth": 0,
+        "constant_rejections": 0,
+        "forced_zero_leaves": 0
+      }
+    },
+    {
+      "core": 41,
+      "N": 3059,
+      "solutions": [
+        [
+          7,
+          3
+        ]
+      ],
+      "stats": {
+        "nodes": 303,
+        "max_depth": 6,
+        "constant_rejections": 23,
+        "forced_zero_leaves": 159
+      }
+    },
+    {
+      "core": 41,
+      "N": 110363,
+      "solutions": [
+        [
+          33,
+          27
+        ]
+      ],
+      "stats": {
+        "nodes": 17551,
+        "max_depth": 12,
+        "constant_rejections": 742,
+        "forced_zero_leaves": 9109
+      }
+    },
+    {
+      "core": 41,
+      "N": 475799,
+      "solutions": [
+        [
+          0,
+          7243
+        ],
+        [
+          15,
+          254
+        ],
+        [
+          63,
+          62
+        ]
+      ],
+      "stats": {
+        "nodes": 87437,
+        "max_depth": 14,
+        "constant_rejections": 3357,
+        "forced_zero_leaves": 45079
+      }
+    },
+    {
+      "core": 15381,
+      "N": 15381,
+      "solutions": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stats": {
+        "nodes": 1,
+        "max_depth": 0,
+        "constant_rejections": 0,
+        "forced_zero_leaves": 0
+      }
+    },
+    {
+      "core": 15381,
+      "N": 1312423,
+      "solutions": [
+        [
+          7,
+          3
+        ]
+      ],
+      "stats": {
+        "nodes": 313,
+        "max_depth": 6,
+        "constant_rejections": 25,
+        "forced_zero_leaves": 164
+      }
+    },
+    {
+      "core": 15381,
+      "N": 46054401,
+      "solutions": [
+        [
+          33,
+          27
+        ]
+      ],
+      "stats": {
+        "nodes": 17385,
+        "max_depth": 12,
+        "constant_rejections": 746,
+        "forced_zero_leaves": 9027
+      }
+    },
+    {
+      "core": 15381,
+      "N": 198358323,
+      "solutions": [
+        [
+          63,
+          62
+        ]
+      ],
+      "stats": {
+        "nodes": 86633,
+        "max_depth": 14,
+        "constant_rejections": 3358,
+        "forced_zero_leaves": 44680
+      }
+    }
+  ],
+  "scope": "exact finite decision tree for fixed physical central sandwich, not universal spectrum coverage"
+}

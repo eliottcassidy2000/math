@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "all_unit_deletion_contexts_spine_lengths": "0..5",
+  "contexts": 63,
+  "translated_shifts": [
+    0,
+    48,
+    114,
+    228,
+    456,
+    912
+  ]
+}

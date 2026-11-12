@@ -1,0 +1,111 @@
+{
+  "checks": {
+    "all_context_left_right_DP": 63,
+    "whole_three_value_translation_DP": 21,
+    "sandwich_receiver_formula_direct_DP": 49,
+    "transported_common_frames": 24,
+    "finite_repair_frame_controls": 2
+  },
+  "translations": [
+    {
+      "n": 0,
+      "cut": 0,
+      "counts": [
+        41,
+        43,
+        45
+      ]
+    },
+    {
+      "n": 1,
+      "cut": 0,
+      "counts": [
+        41,
+        43,
+        45
+      ]
+    },
+    {
+      "n": 1,
+      "cut": 1,
+      "counts": [
+        89,
+        91,
+        93
+      ]
+    },
+    {
+      "n": 2,
+      "cut": 0,
+      "counts": [
+        41,
+        43,
+        45
+      ]
+    },
+    {
+      "n": 2,
+      "cut": 1,
+      "counts": [
+        155,
+        157,
+        159
+      ]
+    },
+    {
+      "n": 3,
+      "cut": 0,
+      "counts": [
+        41,
+        43,
+        45
+      ]
+    },
+    {
+      "n": 3,
+      "cut": 1,
+      "counts": [
+        269,
+        271,
+        273
+      ]
+    },
+    {
+      "n": 4,
+      "cut": 0,
+      "counts": [
+        41,
+        43,
+        45
+      ]
+    },
+    {
+      "n": 4,
+      "cut": 1,
+      "counts": [
+        497,
+        499,
+        501
+      ]
+    },
+    {
+      "n": 5,
+      "cut": 0,
+      "counts": [
+        41,
+        43,
+        45
+      ]
+    },
+    {
+      "n": 5,
+      "cut": 1,
+      "counts": [
+        953,
+        955,
+        957
+      ]
+    }
+  ],
+  "status": "PASS; all-order classification proved in PROOF.md, finite controls independently count literal graphs"
+}
