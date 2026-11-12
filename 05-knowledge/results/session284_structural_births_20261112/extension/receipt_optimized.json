@@ -1,0 +1,166 @@
+{
+  "exact_ensembles": [
+    {
+      "k": 1,
+      "labelled_children": 2,
+      "n": 1,
+      "parent_core_ranks": [
+        1
+      ]
+    },
+    {
+      "k": 1,
+      "labelled_children": 8,
+      "n": 2,
+      "parent_core_ranks": [
+        1
+      ]
+    },
+    {
+      "k": 1,
+      "labelled_children": 64,
+      "n": 3,
+      "parent_core_ranks": [
+        1,
+        3
+      ]
+    },
+    {
+      "k": 1,
+      "labelled_children": 1024,
+      "n": 4,
+      "parent_core_ranks": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "k": 4,
+      "labelled_children": 1024,
+      "n": 1,
+      "parent_core_ranks": [
+        1
+      ]
+    },
+    {
+      "k": 3,
+      "labelled_children": 1024,
+      "n": 2,
+      "parent_core_ranks": [
+        1
+      ]
+    },
+    {
+      "k": 2,
+      "labelled_children": 1024,
+      "n": 3,
+      "parent_core_ranks": [
+        1,
+        3
+      ]
+    },
+    {
+      "k": 2,
+      "labelled_children": 32768,
+      "n": 4,
+      "parent_core_ranks": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "k": 3,
+      "labelled_children": 32768,
+      "n": 3,
+      "parent_core_ranks": [
+        1,
+        3
+      ]
+    }
+  ],
+  "external_births": [
+    {
+      "boundary": 1,
+      "core_rank": 1,
+      "first_order": 3
+    },
+    {
+      "boundary": 2,
+      "core_rank": 4,
+      "first_order": 6
+    },
+    {
+      "boundary": 3,
+      "core_rank": 11,
+      "first_order": 11
+    },
+    {
+      "boundary": 4,
+      "core_rank": 20,
+      "first_order": 20
+    },
+    {
+      "boundary": 5,
+      "core_rank": 37,
+      "first_order": 37
+    },
+    {
+      "boundary": 6,
+      "core_rank": 70,
+      "first_order": 70
+    },
+    {
+      "boundary": 7,
+      "core_rank": 135,
+      "first_order": 135
+    },
+    {
+      "boundary": 8,
+      "core_rank": 264,
+      "first_order": 264
+    }
+  ],
+  "families": [
+    {
+      "coefficients": {
+        "4": 1,
+        "5": 1,
+        "6": 2,
+        "7": 4
+      },
+      "group_order": 3,
+      "kernel_possible": false,
+      "new": 1,
+      "runs": 3
+    },
+    {
+      "coefficients": {
+        "4": 1,
+        "5": 3,
+        "6": 6,
+        "7": 10
+      },
+      "group_order": 1,
+      "kernel_possible": false,
+      "new": 1,
+      "runs": 3
+    },
+    {
+      "coefficients": {
+        "6": 1,
+        "7": 1
+      },
+      "group_order": 3,
+      "kernel_possible": false,
+      "new": 3,
+      "runs": 3
+    }
+  ],
+  "hamiltonian_substitution_controls": 32,
+  "hostile": "two old runs joined by newborn middle vertex",
+  "random_normal_forms": 180,
+  "scope": "labelled-uniform ensemble; marked batch isomorphisms, not unmarked A000568",
+  "status": "PASS"
+}

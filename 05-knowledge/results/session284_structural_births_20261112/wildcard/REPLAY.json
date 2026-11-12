@@ -1,0 +1,266 @@
+{
+  "all_512_one_vertex_extensions": {
+    "base_H": 3159,
+    "gcd": 3,
+    "valuation_histogram": {
+      "1": 378,
+      "2": 90,
+      "3": 42,
+      "5": 2
+    }
+  },
+  "all_order_family_examples": [
+    {
+      "birth_depth": 1,
+      "order": 3,
+      "smallest_balanced_host_order": 3,
+      "triangles": 1
+    },
+    {
+      "birth_depth": 2,
+      "order": 6,
+      "smallest_balanced_host_order": 9,
+      "triangles": 2
+    },
+    {
+      "birth_depth": 3,
+      "order": 9,
+      "smallest_balanced_host_order": 27,
+      "triangles": 3
+    },
+    {
+      "birth_depth": 3,
+      "order": 12,
+      "smallest_balanced_host_order": 27,
+      "triangles": 4
+    },
+    {
+      "birth_depth": 4,
+      "order": 21,
+      "smallest_balanced_host_order": 81,
+      "triangles": 7
+    },
+    {
+      "birth_depth": 4,
+      "order": 24,
+      "smallest_balanced_host_order": 81,
+      "triangles": 8
+    },
+    {
+      "birth_depth": 5,
+      "order": 27,
+      "smallest_balanced_host_order": 243,
+      "triangles": 9
+    },
+    {
+      "birth_depth": 7,
+      "order": 150,
+      "smallest_balanced_host_order": 2187,
+      "triangles": 50
+    },
+    {
+      "birth_depth": 9,
+      "order": 600,
+      "smallest_balanced_host_order": 19683,
+      "triangles": 200
+    }
+  ],
+  "depth3_complete_induced_grammar": {
+    "birth_depth_distribution": {
+      "0": 1,
+      "1": 2,
+      "2": 17,
+      "3": 3027
+    },
+    "types": 3047
+  },
+  "endpoint_protection": [
+    {
+      "depth": 1,
+      "exponents_k0_to_5": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vertices": 3
+    },
+    {
+      "depth": 2,
+      "exponents_k0_to_5": [
+        4,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vertices": 9
+    },
+    {
+      "depth": 3,
+      "exponents_k0_to_5": [
+        13,
+        8,
+        5,
+        3,
+        1,
+        0
+      ],
+      "vertices": 27
+    },
+    {
+      "depth": 4,
+      "exponents_k0_to_5": [
+        40,
+        33,
+        28,
+        24,
+        20,
+        17
+      ],
+      "vertices": 81
+    },
+    {
+      "depth": 5,
+      "exponents_k0_to_5": [
+        121,
+        112,
+        105,
+        99,
+        93,
+        88
+      ],
+      "vertices": 243
+    },
+    {
+      "depth": 6,
+      "exponents_k0_to_5": [
+        364,
+        353,
+        344,
+        336,
+        328,
+        321
+      ],
+      "vertices": 729
+    },
+    {
+      "depth": 7,
+      "exponents_k0_to_5": [
+        1093,
+        1080,
+        1069,
+        1059,
+        1049,
+        1040
+      ],
+      "vertices": 2187
+    },
+    {
+      "depth": 8,
+      "exponents_k0_to_5": [
+        3280,
+        3265,
+        3252,
+        3240,
+        3228,
+        3217
+      ],
+      "vertices": 6561
+    }
+  ],
+  "greedy_vs_minimax_cost_lists": 21844,
+  "independent_adjacency_automorphisms": {
+    "order9_automorphisms": 81,
+    "rooted_orbits": 24
+  },
+  "induced_host_types": [
+    {
+      "birth_depth_distribution": {
+        "0": 1
+      },
+      "depth": 0,
+      "nonempty_induced_types": 1
+    },
+    {
+      "birth_depth_distribution": {
+        "0": 1,
+        "1": 2
+      },
+      "depth": 1,
+      "nonempty_induced_types": 3
+    },
+    {
+      "birth_depth_distribution": {
+        "0": 1,
+        "1": 2,
+        "2": 17
+      },
+      "depth": 2,
+      "nonempty_induced_types": 20
+    }
+  ],
+  "marked_extension_orbits": [
+    {
+      "coefficients": 2,
+      "depth": 0,
+      "rooted_extension_types": 2,
+      "stabilizer_exponents": [
+        0,
+        0
+      ],
+      "vertices": 1
+    },
+    {
+      "coefficients": 4,
+      "depth": 1,
+      "rooted_extension_types": 4,
+      "stabilizer_exponents": [
+        0,
+        1
+      ],
+      "vertices": 3
+    },
+    {
+      "coefficients": 18,
+      "depth": 2,
+      "rooted_extension_types": 24,
+      "stabilizer_exponents": [
+        0,
+        4
+      ],
+      "vertices": 9
+    },
+    {
+      "coefficients": 196,
+      "depth": 3,
+      "rooted_extension_types": 4624,
+      "stabilizer_exponents": [
+        0,
+        13
+      ],
+      "vertices": 27
+    },
+    {
+      "coefficients": 2070,
+      "depth": 4,
+      "rooted_extension_types": 32955830624,
+      "stabilizer_exponents": [
+        0,
+        40
+      ],
+      "vertices": 81
+    }
+  ],
+  "ordered_cost_hostile": {
+    "costs_010": 3,
+    "costs_100": 2,
+    "orders": [
+      5,
+      5
+    ]
+  }
+}

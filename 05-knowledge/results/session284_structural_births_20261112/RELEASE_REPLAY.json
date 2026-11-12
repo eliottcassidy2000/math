@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "script": "architecture/verify.py",
+      "normal_optimized_match": true,
+      "output_sha256": "e01e1c9d1c72265758f931d09906993b9a6de9071fb44ffeafe49419f700d955",
+      "seconds": [
+        0.1688814409999395,
+        0.41276789900030053
+      ]
+    },
+    {
+      "script": "births/verify.py",
+      "normal_optimized_match": true,
+      "output_sha256": "ab54162cb06dd125544bb5df56ec2972cba9535bf6973efeffcfc160327ecd19",
+      "seconds": [
+        3.2607288770000196,
+        3.312457457000164
+      ]
+    },
+    {
+      "script": "extension/verify.py",
+      "normal_optimized_match": true,
+      "output_sha256": "ece7a1a19f3028047c39a6aaf00544422890f2733312384ef0ba2204aab5aa75",
+      "seconds": [
+        4.57954265699982,
+        3.315060448999702
+      ]
+    },
+    {
+      "script": "wildcard/verify.py",
+      "normal_optimized_match": true,
+      "output_sha256": "0e7fff29d7f391e144c01ab68c5aa01c2c285032a7266c98b6a980e3d5f12d46",
+      "seconds": [
+        1.8862225069997294,
+        1.795339480000166
+      ]
+    },
+    {
+      "script": "bridge_verify.py",
+      "normal_optimized_match": true,
+      "output_sha256": "b2cca7a1ca5b5ceefebd3a1b58da1f6547c73b5e0326eaf9132c83e0209d8a55",
+      "seconds": [
+        0.07746480100013287,
+        0.11092242899985649
+      ]
+    },
+    {
+      "script": "audit/independent.py",
+      "normal_optimized_match": true,
+      "output_sha256": "242295cffaedbc1ffba9a9ce5714ebcfbfd67806093e021e1169e730b63e0301",
+      "seconds": [
+        0.5282054099998277,
+        0.6597341229999074
+      ]
+    }
+  ]
+}

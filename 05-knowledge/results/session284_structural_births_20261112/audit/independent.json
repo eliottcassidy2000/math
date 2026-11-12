@@ -1,0 +1,64 @@
+{
+  "W5_distinct_prime_children": 14,
+  "W5_prime_attachments": 20,
+  "W5_prime_fibre_sizes": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "actual_intersection_words": 127,
+  "fixed_parent_batch_cases": 33864,
+  "nine_tower_coloring_group_orders": {
+    "1": 162,
+    "3": 270,
+    "9": 72,
+    "27": 6,
+    "81": 2
+  },
+  "nine_tower_pointwise_floors": {
+    "0": 81,
+    "1": 9,
+    "2": 3,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 1,
+    "9": 1
+  },
+  "status": "PASS",
+  "weighted_root_forgetting": [
+    {
+      "batch": 2,
+      "classes": 2,
+      "parent_order": 1
+    },
+    {
+      "batch": 2,
+      "classes": 4,
+      "parent_order": 2
+    },
+    {
+      "batch": 1,
+      "classes": 4,
+      "parent_order": 3
+    },
+    {
+      "batch": 2,
+      "classes": 12,
+      "parent_order": 3
+    }
+  ]
+}

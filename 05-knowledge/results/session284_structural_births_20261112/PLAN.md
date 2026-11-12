@@ -1,6 +1,6 @@
 # Session284: recursive understanding, not another size census
 
-Status: research in progress; Chan–Pak remains OPEN.
+Status: completed and independently reviewed in the scopes of SYNTHESIS.md; Chan–Pak remains OPEN.
 
 User goal: a concise but comprehensive description of all tournaments up to any prescribed size, with exact rules relating sizes. Individual sizes are controls, not the target.
 
