@@ -1,0 +1,35 @@
+{
+  "arithmetic_complete_bank_universes": 15,
+  "arithmetic_not_physical": true,
+  "arithmetic_targets_tested": 25469,
+  "literal_two_factor_counts": [
+    3705,
+    3735,
+    3735,
+    3765
+  ],
+  "physical_pair_profiles": [
+    {
+      "H": 41,
+      "Q": 120,
+      "U": 78,
+      "V": 57,
+      "d": 6,
+      "e": 9,
+      "h": 15,
+      "k": 0
+    },
+    {
+      "H": 43,
+      "Q": 120,
+      "U": 78,
+      "V": 57,
+      "d": 6,
+      "e": 9,
+      "h": 15,
+      "k": 0
+    }
+  ],
+  "prime_ownership_tuples": 780,
+  "status": "PASS"
+}
