@@ -3,6 +3,7 @@ from pathlib import Path
 import gzip,json
 import matplotlib
 matplotlib.use('Agg')
+matplotlib.rcParams['svg.hashsalt']='birth-grammar-20261112'
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 HERE=Path(__file__).resolve().parent
@@ -45,6 +46,8 @@ def run():
     fig.subplots_adjust(left=.025,right=.99,top=.98,bottom=.03)
     fig.savefig(HERE/'birth-grammar.png',facecolor=fig.get_facecolor())
     fig.savefig(HERE/'birth-grammar.svg',facecolor=fig.get_facecolor(),metadata={'Date':None})
+    svg=HERE/'birth-grammar.svg'
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf8').splitlines())+'\n',encoding='utf8',newline='\n')
     plt.close(fig)
 
 if __name__=='__main__':run()
