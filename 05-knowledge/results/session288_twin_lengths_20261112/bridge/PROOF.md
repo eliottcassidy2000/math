@@ -1,6 +1,6 @@
 # A twin clock can be arbitrarily near a unit seed without being one
 
-**PROVED, pending independent review.** The literal seed and its defect
+**PROVED; independently reviewed.** The literal seed and its defect
 polynomial are inherited; the precise valuation comparison below is this
 session's arithmetic consequence. This is not a Chan–Pak obstruction outside
 this one-port family.

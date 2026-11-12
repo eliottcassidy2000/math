@@ -1,0 +1,181 @@
+{
+  "births": [
+    {
+      "O": 65,
+      "kernel": [
+        [
+          [
+            1,
+            1,
+            1
+          ],
+          1
+        ]
+      ],
+      "literal_controls": [
+        {
+          "delta": 1,
+          "sizes": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "delta": 1,
+          "sizes": [
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "delta": 1,
+          "sizes": [
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "delta": 1,
+          "sizes": [
+            1,
+            3,
+            1
+          ]
+        },
+        {
+          "delta": 1,
+          "sizes": [
+            1,
+            1,
+            3
+          ]
+        }
+      ],
+      "n": 9,
+      "ports": [
+        1,
+        2,
+        8
+      ],
+      "rows": [
+        158,
+        156,
+        8,
+        16,
+        36,
+        335,
+        159,
+        60,
+        223
+      ],
+      "series": "z^9/(1-z)^3"
+    },
+    {
+      "O": 65,
+      "kernel": [
+        [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          1
+        ]
+      ],
+      "literal_controls": [
+        {
+          "delta": 1,
+          "sizes": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "delta": 1,
+          "sizes": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "delta": 1,
+          "sizes": [
+            3,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "delta": 1,
+          "sizes": [
+            1,
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "delta": 1,
+          "sizes": [
+            1,
+            1,
+            3,
+            1
+          ]
+        },
+        {
+          "delta": 1,
+          "sizes": [
+            1,
+            1,
+            1,
+            3
+          ]
+        }
+      ],
+      "n": 10,
+      "ports": [
+        1,
+        2,
+        8,
+        9
+      ],
+      "rows": [
+        670,
+        668,
+        8,
+        528,
+        36,
+        847,
+        671,
+        60,
+        735,
+        148
+      ],
+      "series": "z^10/(1-z)^4"
+    }
+  ],
+  "continuation_counts": {
+    "all_single_double_screens": 0,
+    "strong": 318,
+    "templates": 320,
+    "twin_reduced": 304,
+    "unit": 4
+  },
+  "first_three_clock_order": {
+    "lower_bound_source": "inherited complete strong marked stable-port bank through8; at most two canonical clocks",
+    "order": 9
+  },
+  "five_clock_survivors": [],
+  "four_clock_order10_is_not_claimed_minimal": true,
+  "scope": "Two exact jointly stable strong twin-reduced charts, plus all320 transitive-chain one-new-clock templates from the displayed ten-core with six exterior vertices and marks fixed. Does not exclude other operations or other cores."
+}

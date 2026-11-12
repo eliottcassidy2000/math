@@ -1,0 +1,56 @@
+{
+  "jobs": [
+    {
+      "normal_optimized_stored": "MATCH",
+      "receipt_sha256": "7d55c1972ed485d81ca5cda8186eb40fb7245e719b2569069909e146b797c4fe",
+      "script": "bridge/verify.py"
+    },
+    {
+      "normal_optimized_stored": "MATCH",
+      "receipt_sha256": "cde49bcd9351cc331e041c96611b3fd8a206623b8a6aba12f6205549d4329b4f",
+      "script": "lengths/verify.py"
+    },
+    {
+      "normal_optimized_stored": "MATCH",
+      "receipt_sha256": "26b24545ddcfc63758d087fadefc78e93e3aaa7484c0259a42799371b6e295bb",
+      "script": "wildcard/verify.py"
+    },
+    {
+      "normal_optimized_stored": "MATCH",
+      "receipt_sha256": "f6f8f4f2cbd5fa01950c9ea5517f38ffb4f4cb565531c692b708478f7b333e78",
+      "script": "stable/verify.py"
+    },
+    {
+      "normal_optimized_stored": "MATCH",
+      "receipt_sha256": "7a241583671fa44995578b5aeb19018224f8c69fad7099727af4f76d741ec822",
+      "script": "stable/cones.py"
+    },
+    {
+      "normal_optimized_stored": "MATCH",
+      "receipt_sha256": "96a6236a5c0ac2eb36887101ecf3caac51612e7365d2c64c502723ca4872d903",
+      "script": "stable/normalforms.py"
+    },
+    {
+      "normal_optimized_stored": "MATCH",
+      "receipt_sha256": "4b1cfcc15bd6f4dd79a3e31686761e722cbb749bf5241410ebc676012f9355ce",
+      "script": "stable/explore.py"
+    },
+    {
+      "normal_optimized_stored": "MATCH",
+      "receipt_sha256": "9ee738f79c28080dd7354e1bf69d9bda526d3277de6cd060a5cf843594f36642",
+      "script": "stable/clocks.py"
+    },
+    {
+      "normal_optimized_stored": "MATCH",
+      "receipt_sha256": "84275d24e3c79cf69c2843d8d9a8c10331b1834c2fdc86a2aa7711913c0f39d6",
+      "script": "audit/three_clock.py"
+    },
+    {
+      "normal_optimized_stored": "MATCH",
+      "receipt_sha256": "3968de33a1f0af8a8887421cfc6c9605f96ca20f24ee70098233d47445fdb6c2",
+      "script": "audit/independent.py"
+    }
+  ],
+  "scope": "Ten declared proof-engine/screen comparisons. Inherited full census is not re-enumerated. Optional wildcard discovery scans are not part of this release replay.",
+  "status": "PASS"
+}

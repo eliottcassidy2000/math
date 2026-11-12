@@ -1,0 +1,17 @@
+{
+  "source": "05-knowledge/results/metagraph_aspect_sequences_20261111/records.jsonl.gz",
+  "source_commit": "c9b3c74fd4f1",
+  "source_sha256": "93b37da5eb037ec5eddc3d9e9156404480e9a9d81badf6359f91646cd8ed41fc",
+  "retained_fields": [
+    "n",
+    "rep",
+    "rows",
+    "strong",
+    "seeds",
+    "attachment_orbit"
+  ],
+  "records": 7412,
+  "screen_universe": "strong marked unit seeds and pairs of unselected vertices through order8, modulo inherited selected-set automorphism representatives; tests diagonal identity via full tensor after length2 screen",
+  "matched_pairs": 14,
+  "tested_pairs": 12300
+}

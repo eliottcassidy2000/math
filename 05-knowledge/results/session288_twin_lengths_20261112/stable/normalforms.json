@@ -1,0 +1,68 @@
+{
+  "distinct_reduction_arcs": 63,
+  "levels": {
+    "3": {
+      "max_contraction_depth": 0,
+      "normal_form_order_histogram": {
+        "3": 1
+      },
+      "states": 1,
+      "terminal_births": 1
+    },
+    "4": {
+      "max_contraction_depth": 1,
+      "normal_form_order_histogram": {
+        "3": 1
+      },
+      "states": 1,
+      "terminal_births": 0
+    },
+    "5": {
+      "max_contraction_depth": 2,
+      "normal_form_order_histogram": {
+        "3": 1,
+        "5": 4
+      },
+      "states": 5,
+      "terminal_births": 4
+    },
+    "6": {
+      "max_contraction_depth": 3,
+      "normal_form_order_histogram": {
+        "3": 1,
+        "5": 4,
+        "6": 8
+      },
+      "states": 13,
+      "terminal_births": 8
+    },
+    "7": {
+      "max_contraction_depth": 4,
+      "normal_form_order_histogram": {
+        "3": 1,
+        "5": 4,
+        "6": 8,
+        "7": 25
+      },
+      "states": 38,
+      "terminal_births": 25
+    },
+    "8": {
+      "max_contraction_depth": 5,
+      "normal_form_order_histogram": {
+        "3": 1,
+        "5": 4,
+        "6": 8,
+        "7": 30,
+        "8": 60
+      },
+      "states": 103,
+      "terminal_births": 60
+    }
+  },
+  "nontrivial_local_diamonds": 0,
+  "scope": "All 161 strong marked unit seeds through order8 with at least one exact stable unselected port, inherited census. Canonical quotient/DAG recomputed; no census completeness re-enumeration.",
+  "source_sha256": "7633c487d6416a8726d7385bc8445d0357442e67c12db31d730c996814657ef4",
+  "states": 161,
+  "unique_terminal_all": true
+}
