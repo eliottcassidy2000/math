@@ -25050,3 +25050,59 @@ a result extends a file already cited for a formula, re-read that file's numbere
 "added" (THM-479 part 3; Session271 section 2). (4) A statement about an external source that comes from a
 survey agent is typed as such, with the hypothesis and the file checked by the author before it is used in a
 suggestion.
+
+## MISTAKE-767 (2026-11-11, mac-mini-2026-11-11-rays; THM-5145, HYP-9675 and `05-knowledge/results/dyadic_cones_two_block_20261111/` at the pre-audit commit aaf352fa43; found by the independent audit `audit/AUDIT.md` of that packet) -- five major findings: three results of other sessions typed as new, one equivalence with Chan-Pak asserted without a proof (and false at N = 1), one verification claim wider than what had been recounted
+
+- **M1. A census typed as new that kind-pasteur had published the day before.** The note's section 5 presented the
+  census of two-parameter blow-up templates `K[TT_a at x, TT_b at y]` to order 8 and the exclusion "no independent
+  (additive) pair" as new. kind-pasteur S21's `modfam.c` (`kps_s21_two_adic_lines_20261110`, README section 4) is
+  the same census over every class of order at most 8 and every ordered pair of vertices, with the statement
+  that no tuple is additive for any offset; THM-5124 (opus S90) is "no additive pair". Only the count of unit
+  polynomials, the targeted census at order 9 and the exclusion of the shape `1 + 2^j v + 2^i u v` were additions.
+- **M2. Negative offsets presented as almost unexplored.** The inheritance section named one negative offset
+  (`2^K - 159`, THM-5085) and the canon listed "numbers beginning with the binary digits 11 reached through
+  negative offsets" as new. On record: THM-5130 (D), (E) (offset `-1` with slope `2^10`, `2^N - 1` by towers,
+  anti-seeds for every odd `c <= 4097`), THM-4748 (`2^k - 1`), Session195's rays `66 * 2^k - 17`, `88 * 2^k - 13`,
+  THM-5129 (B) (complete slope lists for one-vertex sources), and HYP-9662 (A), which is exactly the columns
+  `r = 1`, `r = -1` of HYP-9675 and was not cited there.
+- **M3. An equivalence asserted from a degenerate construction.** HYP-9675 and section 6 said that the
+  quantitative type statement "is equivalent to the Chan-Pak conjecture" because "every path count is `H(L o 0)`
+  for some root (add a sink and a vertex beating only it)". That root has an empty out-set, hence response 0 and
+  no type; with response 0 allowed the reformulation is empty, and with a type required it fails at `N = 1`. What
+  is true: the quantitative statement implies Chan-Pak, and it is equivalent to Chan-Pak together with "every
+  path count `N >= 3` has a realiser with a strong component containing a vertex of out-degree one", which is
+  checked to 266,979 and open.
+- **M4. "Every witness recounted literally" for a theorem whose witnesses were not all on file.** For Theorem 2
+  the summary table said "PROVED (same)" under a row reading "every witness recounted literally"; 293 types of
+  its boxes (all with `c >= 9`, roots of order 10 only) had no witness line at the checkpoint, because the run
+  producing them was still in progress when the checkpoint was pushed. The audit recounted the 293 with its own
+  witnesses; the packet's file was completed and recounted afterwards (3,598 witnesses, no failure).
+- **M5. A section typed new as a whole.** In the one-back-arc section the count `1 + 2^k` is classical (Moon 1972;
+  THM-250; THM-4748), the factor `3^k` is the three-slot entry of THM-4879 (B) / THM-5109 (B), and the two cones
+  with offsets 5 and 9 are Session236's seeds, recorded in THM-5109 (C) - a file the note cites two sections
+  earlier. Only the closed forms of `U_B`, `W` and the classification were additions.
+- **Minor (m1-m9):** bases of order at most 6 not run (harmless: a source added to the base changes neither offset
+  nor response); a proof given as a sketch plus a check and typed PROVED; the template hypothesis written "three
+  times" instead of "three or more times" and the sufficiency of the `(3, 3)` test not argued; ten candidate
+  values missing from the order-9 target list and five listed values vacuous there; a wrong in-sample sentence
+  in the pre-registration ("fewer than 181"; exactly 181).
+- **After the audit, the same kind of error avoided once:** the queued item on the tail letters as a matrix
+  semigroup was about to be added as a result of this session. A fetch showed that opus S93 had pushed the same
+  three matrices as part of a general one-mark block law (digits lane) during the audit, and that the formulation
+  of Chan-Pak as a matrix-semigroup orbit and the Zaremba comparison were older (HYP-9640, HYP-9661). The item was
+  added as an independent check with the credit, not as a result.
+- **Not affected.** Theorems 1 to 3, the window lemma, the one-back-arc formulas and the census: the audit's own
+  census reproduces the type tables entry for entry and every literal recount agreed.
+
+Lesson: (1) Audits of this machine's packets have now found "known, typed as new" repeatedly in two days
+(MISTAKE-753, 755, 760, 766, and here). The inheritance pass read the canon files of the lane but not the *packets* of the other
+agents in the same lane: `modfam.c` and `portrait.c` are named only in kind-pasteur's READMEs. Before typing a
+census as new, list the programs of the same-lane packets of the last three days (`ls` their script folders, read
+the README tables) and ask of each whether it already computes the object, perhaps on a narrower range. (2) A
+conjecture that is offered as a reformulation of the target must have its equivalence proved in both directions
+with the degenerate cases named (empty out-set, `N = 1`) before the word "equivalent" is written; otherwise write
+"implies" and state what is missing. (3) Do not push a checkpoint whose summary table says "every witness" while
+a witness run is still in progress: either wait, or write the exact range that has been recounted. (4) When a file
+is cited for a mechanism, read its own credit lines: THM-5109's status names Session236's seeds and THM-4879's
+three-slot factor. (5) Fetch and read what the other agents pushed during an audit before adding anything typed
+after it.
