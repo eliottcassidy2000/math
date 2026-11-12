@@ -1,29 +1,20 @@
-# Signed correction as retained interaction
+# Session278: signed corrections and retained interactions
 
-Session278, 2026-11-12. Research in progress; Chan–Pak and planar JC remain OPEN.
-Base: e07f05b9fee2, following Session277's certified absolute recovery.
+**Completed research packet. Chan–Pak and planar JC remain OPEN.**
 
-This session extends exact correction rather than another target census:
+Start with [SYNTHESIS.md](SYNTHESIS.md).
 
-* [Coupled physical arc-edit correction](edits/PROOF.md): finite joint path
-  inventories cancel shared error before absolute bounds; exact contraction
-  compiler, signed remainder, and 255 independent dynamic-programming controls.
-* Enumeration lane (in progress): resum the 3-cycle symmetry gas and retain
-  exceptional-cycle interaction defects.
-* Physical block lane (in progress): eliminate hidden root memory into a
-  signed matching expansion with certified truncation error.
-* Cross-problem lane (in progress): defective Euler fields retain a signed
-  Stein correction without treating the quotient as an algebra.
+* [A000568 divisibility-defect gas](enumeration/README.md): exact resummation,
+  two-sided signed remainder, improved integer-recovery interval, fixed-depth
+  obstruction.
+* [Physical block memory](physical/PROOF.md): chronological matching expansion,
+  exact correction depth, certified remainders, and infinite-system pole shift.
+* [Correlated arc edits](edits/PROOF.md): finite paired remainder and cancellation.
+* [Defective Euler compiler](cross/PROOF.md): exact divergence certificates,
+  simultaneous defects, and substantially tighter Gaussian error bounds.
+* [Independent review](audit/REVIEW.md), scripts and exact outputs in each lane.
 
-These are proposed new research proofs pending independent review, not a
-promotion to canon. The aim is to turn a scalar approximation into an exact
-response by retaining precisely its interaction state. Computing the needed
-correction does not itself prove physical target realizability.
-
-Concept board: positive symmetry gas / signed physical memory / correlated
-edit tails / Euler defect / absolute target anchoring. Old inputs are credited,
-not re-audited. A deterministic random sample (seed278) of old reflections
-included `burnside-tower-of-hierarchy.md`, `representation-theory-of-numbers.md`
-and `lrc14-borel-baire-haar-anyangle-carrier-codex-s145.md`: useful prompts for
-quotient coupling, caution against numerical analogy, and retained boundary
-information respectively, not new proof dependencies.
+Base e07f05b9fee2; Session277 supplies the inherited recovery framework. New
+claims are proved in their explicit scopes, not a universal exact-correction
+classification. S25's physical law is a named inherited input and its
+pre-audit source status is retained.

@@ -63,3 +63,13 @@ for m in (1,2,4,6):
     c,d=signed_bracket(P(m,s.Integer(1)),14)
     assert a<=c<=d<=b
     print('m',m,'direct_width',s.N(b-a,8),'reduced_width',s.N(d-c,8),'gain',(s.N((b-a)/(d-c),8)), 'intersection_width',s.N(min(b,d)-max(a,c),8))
+# Mixed quartic/sextic defect formula, all coefficients through t^5.
+t,z,q=s.symbols('t z q');a=s.Rational(3,2);R=z+2*q
+@lru_cache(None)
+def mixed(m,h):
+    if m==0:return h
+    D=s.expand(a*h+2*z*s.diff(h,z)+3*q*s.diff(h,q))
+    return s.expand(mixed(m-1,s.expand(D+(m-1)*h-R*h)) + ((m-1)*mixed(m-2,s.expand(R*h)) if m>=2 else 0))
+G=s.series((1-t)**(-a)*s.exp(z*(1-(1-t)**-1)+q*(1-(1-t)**-2)),t,0,6).removeO().expand()
+for m in range(6): assert s.expand(s.factorial(m)*G.coeff(t,m)-mixed(m,s.Integer(1)))==0
+print('Mixed quartic/sextic generating identity, a=3/2, through t^5: PASS')

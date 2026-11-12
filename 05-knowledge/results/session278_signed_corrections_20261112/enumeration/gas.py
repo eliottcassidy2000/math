@@ -68,11 +68,11 @@ def census(n):
         modulus=1<<bits; residue=int(exact)%modulus
         recovered=ilo+(residue-ilo)%modulus
         assert recovered==exact and recovered+modulus>ihi
-        out[label]={'interval_low':str(ilo),'interval_high':str(ihi),'residue_bits_sufficient':bits,'remainder_lower':[str(v) for v in lows[g]],'remainder_upper':[str(v) for v in cs[1:]],'signed_errors':[str(b-exact) for b in bs], 'error_bits':[round(__import__('math').log2(abs(b-exact)),4) if b!=exact else None for b in bs]}
+        out[label]={'interval_low':str(ilo),'interval_high':str(ihi),'residue_bits_sufficient':bits,'remainder_lower':[str(v) for v in lows[g]],'remainder_upper':[str(v) for v in cs[1:]],'signed_errors':[str(b-exact) for b in bs], 'error_bits':[round(__import__('math').log2(abs((b-exact).numerator))-__import__('math').log2((b-exact).denominator),4) if b!=exact else None for b in bs]}
     return out
 
 if __name__=='__main__':
-    st=time.time(); rows=[census(n) for n in list(range(25))+[28,32,36,40]]
+    st=time.time(); rows=[census(n) for n in list(range(25))+[28,32,36,40,48,56,64]]
     # Independent labelled Burnside at n<=7: enumerate permutations and edge orbits.
     import itertools
     for n in range(8):

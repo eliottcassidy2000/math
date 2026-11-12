@@ -24,3 +24,4 @@ m 1 direct_width 7.7845020e-16 reduced_width 1.0820062e-16 gain 7.1945075 inters
 m 2 direct_width 2.8203527e-14 reduced_width 7.6203501e-16 gain 37.010803 intersection_width 7.6203501e-16
 m 4 direct_width 4.1461464e-11 reduced_width 7.5038797e-14 gain 552.53370 intersection_width 7.5038797e-14
 m 6 direct_width 7.0473872e-8 reduced_width 1.3922049e-11 gain 5062.0331 intersection_width 1.3922049e-11
+Mixed quartic/sextic generating identity, a=3/2, through t^5: PASS

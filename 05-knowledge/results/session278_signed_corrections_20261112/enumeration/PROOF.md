@@ -57,7 +57,8 @@ For each prior total m and j new cycles of length a, add
 
     D_{a-2}(m) 2^[jm+j(a-1)/2+a binom(j,2)]/(a^j j!)
 
-into D_a(m+aj). Then U_n=D_n(n)>=a(n).
+into D_a(m+aj). Then U_n=D_l(n)>=a(n), where l is the largest odd
+integer at most n; U_0=1.
 
 Proof: every old cycle has length at most a; its interaction with each new
 cycle is its own length, so the total cross exponent is jm. This is why size

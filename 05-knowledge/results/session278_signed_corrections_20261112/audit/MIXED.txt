@@ -1,0 +1,1 @@
+PASS: mixed quartic/sextic formal generating formula m=0..6, a=3/2
