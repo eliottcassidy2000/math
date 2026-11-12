@@ -233,6 +233,12 @@ odd integer. Those are different universes and different observers.
 
 ## 8. A weaker condition would imply global confluence
 
+**Subsequent resolution (12 November): the universal hypothesis below is
+REFUTED.** An order-eleven strong unit seed has two eligible blocks and
+two distinct terminal order-ten births. The conditional implication and
+the finite older receipts remain valid. [Explicit defect and contraction
+diagram](../joint_stability_forbidden_20261112/README.md#3-j2-contractible-blocks-can-fail-to-commute).
+
 **CONDITIONAL theorem.** Suppose that, in every strong marked unit seed,
 any two individually stable ports lying in different eligible twin blocks
 are jointly stable. Then every sequence of eligible stable-twin contractions
@@ -263,5 +269,5 @@ roots, intact. Conversely, a failed joint pair among two contractible blocks
 is the precise missing condition for this proof; it is not by itself a
 counterexample to confluence. The full stable sets through8 and the complete
 order9 descendant layer satisfy the hypothesis, but its universal statement
-remains OPEN. This separates the birth-classification obligation from the
+is now REFUTED by the linked continuation. This separates the birth-classification obligation from the
 stronger unrestricted composition obligation.

@@ -73,11 +73,12 @@ in locally transitive tournaments. If true, their eventual number is5n−17.
 The proved families alone have only O(log X) distinct odd parts <=X, so their
 successful recursion cannot supply every odd c.
 
-The other falsifiable target is the **stable-port hypothesis**: every strong
+The **stable-port hypothesis** proposed here asserted that every strong
 unit seed's individually stable unselected ports form a transitive set and
-are jointly stable. The full arbitrary-core census supports both clauses
-through8. One stable directed triangle or one surviving mixed defect term
-would disprove the respective clause.
+are jointly stable. **Subsequent resolution: its joint-stability clause is
+REFUTED at order nine**, with defect `1-(2^a-2)(2^b-2)`; the acyclicity
+clause remains OPEN. The full arbitrary-core through-eight results above
+remain valid. [Exact obstruction and stronger contractible-block failure](../joint_stability_forbidden_20261112/README.md).
 
 ## How this helps the larger enumeration programme
 

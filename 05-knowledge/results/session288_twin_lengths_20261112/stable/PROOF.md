@@ -76,6 +76,13 @@ formal hostile is **not** asserted to be realizable by a tournament. Proving
 that tournament geometry excludes such behavior is exactly the remaining
 stable-port problem, not a consequence of tensor algebra.
 
+**Subsequent resolution (12 November):** tournament geometry does not exclude
+mixed obstructions. The strong order-nine defect `1-(2^a-2)(2^b-2)` realizes
+two stable axes and a forbidden pair. The strong order-eleven defect obtained
+from `1+(2^a-4)(2^b-4)` also refutes joint stability in different contractible
+blocks and ordinary confluence. The tensor and stable-face results here
+remain valid. [Explicit constructions and independent checks](../../joint_stability_forbidden_20261112/README.md).
+
 ## 3. Canonical marked twin blocks and cylinder counting
 
 Partition the unselected vertices into maximal unselected transitive modules;

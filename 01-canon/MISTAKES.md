@@ -4,6 +4,32 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-12: Stable axes do not imply commuting stable contractions
+
+- **Status:** two formerly OPEN hypotheses are REFUTED, not retractions of
+  the prior finite through-eight tensors or conditional confluence theorem.
+- **Failed implication:** positive-length stability in each coordinate at
+  one frozen state was treated as a plausible route to a joint identity.
+  A mixed coefficient can vanish on those axes and survive elsewhere.
+- **First physical hostile in the complete strong bank:** order nine,
+  rows `[16,1,67,7,142,31,187,303,127]`, selection `{1,3}`, ports `{5,8}`,
+  defect `1-(2^a-2)(2^b-2)`. Both axes are free; double growth has defect-3.
+- **Stronger obstruction:** the quotient
+  `[2,100,49,7,75,409,173,31,223]`, selection `{1,4,5}`, ports `{0,8}` has
+  defect `1+(2^a-4)(2^b-4)`. At `(2,2)` it is an order-eleven strong unit
+  seed with two eligible blocks. Contracting either gives a different
+  terminal order-ten birth. They are nonisomorphic converses; double
+  contraction has defect5. Thus ordinary contraction confluence is false.
+- **Missing coordinate:** the exact frozen block length and signed mixed
+  tensor, including the nonunit twice-contracted corner. Searching only
+  unit quotients would miss the second obstruction, whose quotient defect is5.
+- **Strongest survivor:** the prior local diamond theorem is valid whenever
+  the chosen pair is certified jointly stable; the complete finite older
+  banks retain their stated properties. Retain a set of terminal births,
+  or count the union of stable-face cylinders with their intersections.
+- **Evidence and repair:** [J1–J3 and independent counting receipts](../05-knowledge/results/joint_stability_forbidden_20261112/README.md).
+  The current packet tests broader repairs rather than assuming them.
+
 ## 2026-11-12: A boundary indicator was incorrectly propagated as a bulk mode
 
 - **Affected attempt:** the uncommitted first slope-moment generating function

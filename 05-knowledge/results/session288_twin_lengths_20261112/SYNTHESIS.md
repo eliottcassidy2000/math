@@ -116,7 +116,10 @@ The session separates free clocks, finitely allowed single clocks, and exact
 synchronized directions. These are different slices of length geometry, not
 a claimed exhaustive classification of all multivariate loci. The general
 hypothesis that individually stable ports are transitive and jointly stable
-remains open; the finite contraction system's uniqueness does not prove it.
+was open at this packet's close. **Subsequent resolution:** its joint clause
+is refuted at order nine, and ordinary stable-twin confluence is refuted at
+order eleven. The transitivity clause remains OPEN. [Actual mixed tensors
+and terminal births](../joint_stability_forbidden_20261112/README.md).
 
 For Chan–Pak, the synchronized gate and the arbitrary-module determinant are
 new constructive ingredients. Neither supplies all required coefficient rays,
