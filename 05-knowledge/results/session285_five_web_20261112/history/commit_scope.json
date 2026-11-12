@@ -1,0 +1,20 @@
+{
+  "ref": "7510e38f9c777a61a1b3210334077e0ebe0df2ad",
+  "shallow": "true",
+  "reachable_commit_subjects": 4541,
+  "matched_subjects": 157,
+  "tag_counts": {
+    "five": 79,
+    "meta_search": 24,
+    "named": 85
+  },
+  "rules": {
+    "five": "\\bfive\\b|fivefold",
+    "named": "platonic|pentagon|Fermat|Ogg|moonshine|golden|icosahed",
+    "central": "isothermal|stress traject|Nem.nyi",
+    "meta_search": "(five|Platonic|Fermat).*(web|history|atlas|search|bridge)|(history|atlas|search|bridge).*(five|Platonic|Fermat)"
+  },
+  "oldest_reachable": "881a9903995884c02a03ffb45c68e9174f8b6c58\t2026-10-20\tcodex-tiling: prove finite-horizon scale bounds and accelerate tournament counts",
+  "newest_reachable": "7510e38f9c777a61a1b3210334077e0ebe0df2ad\t2026-11-12\tSession284 final: reviewed all-size family grammars, exact structural births, symmetry sections and extension laws",
+  "limitation": "Only reachable commit subjects; no exhaustive older/deleted content scan. Old dated bodies in current tree are separately included."
+}

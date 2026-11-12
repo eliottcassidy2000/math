@@ -1,0 +1,117 @@
+[
+  {
+    "path": "01-canon/MISTAKES.md",
+    "sha": "62df75a2ab16843766cd3ddd322b67c7497ad8a5",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "04-computation/b000612_full.txt",
+    "sha": "847e39ef972996e3e836fd83cebd754d1de8d504",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "04-computation/experiments/loop_nonregular_20261022/budget10.txt",
+    "sha": "86ae317ece6307d42e069ad63d078ff3cd8b92ea",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/hypotheses/INDEX-HISTORICAL-THROUGH-2026-07-21.md",
+    "sha": "899dc2349fc255c23572270f43f0a8580ceeb591",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/INDEX.md",
+    "sha": "0fa2b6abab0860ac9ac404590d59a66f84e73ddc",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/dyadic_cones_two_block_20261111/audit/ord10.txt",
+    "sha": "c8c44628a319dfc6fcae76caf63f4b3720d18147",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/dyadic_cones_two_block_20261111/out/blocks_roots_order10.txt",
+    "sha": "b5cd579da91cda0468f0d725a94db712a8d2b083",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/path_spectrum_two_angles_metagraph_20261106/data/census_10.txt",
+    "sha": "584c7e5269097f7b73c948fa70560625f9a1b695",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/path_spectrum_two_angles_metagraph_20261106/data/dels_9.txt",
+    "sha": "301294a4912a02992ef51d5c20e8f2aead3b8351",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/session284_structural_births_20261112/wildcard/PROOF.md",
+    "sha": "497ccaa5149d597725938e20b7f1e2cde774e44b",
+    "reason": "missing_local_blob"
+  },
+  {
+    "path": "05-knowledge/results/session284_structural_births_20261112/wildcard/README.md",
+    "sha": "1305e9dd32e9bb2d159ccfa5d96ea782977f73e1",
+    "reason": "missing_local_blob"
+  },
+  {
+    "path": "05-knowledge/results/session51_structural_errors_relational_packets_20261024/audit-parent-growth/producer/parents-nine.txt",
+    "sha": "a2666608022c7926349bac5ab07c22dc0c5cd272",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/session51_structural_errors_relational_packets_20261024/audit-regular-eleven/producer/sources/parents-nine.txt",
+    "sha": "a2666608022c7926349bac5ab07c22dc0c5cd272",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/session51_structural_errors_relational_packets_20261024/audit-relational-trades/sources/candidate-certificate.json.txt",
+    "sha": "603e9d748c35e938f4e2829a53f3cd3d1e6c5b05",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/session51_structural_errors_relational_packets_20261024/parent-nine/parents-nine.txt",
+    "sha": "a2666608022c7926349bac5ab07c22dc0c5cd272",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/session51_structural_errors_relational_packets_20261024/regular-eleven/sources/parents-nine.txt",
+    "sha": "a2666608022c7926349bac5ab07c22dc0c5cd272",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/session54_reframed_numerology_20261025/audit-final-synthesis/inputs/progress/before/07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+    "sha": "62505fc7e76ac9e1b6e814aed7a27cc5a0da8a76",
+    "reason": "missing_local_blob"
+  },
+  {
+    "path": "05-knowledge/results/session54_reframed_numerology_20261025/audit-paley-endpoint/inputs/session54-paley-endpoint-observer/sources/0-the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+    "sha": "62505fc7e76ac9e1b6e814aed7a27cc5a0da8a76",
+    "reason": "missing_local_blob"
+  },
+  {
+    "path": "05-knowledge/results/session54_reframed_numerology_20261025/paley-endpoint-observer/sources/0-the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+    "sha": "62505fc7e76ac9e1b6e814aed7a27cc5a0da8a76",
+    "reason": "missing_local_blob"
+  },
+  {
+    "path": "05-knowledge/results/spectrum_analogies_nearjoin_20261102/data/census2_9.txt",
+    "sha": "c7e35affc76e785001fa1127c40cc22b4b8664ce",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/data/gen1_order15.txt",
+    "sha": "891f4a5f1b0f636257ad586d58fdc07d55d96beb",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/data/pairs10_digits.txt",
+    "sha": "4ea6472dc1087daff8f1cf67f9b8e421a1c495f7",
+    "reason": "over_2MB"
+  },
+  {
+    "path": "05-knowledge/results/two_cycle_tournaments_gluing_20261104/data/hval_16.txt",
+    "sha": "428fd3510e71e9cef67fb37a1a9343a7bc306b85",
+    "reason": "over_2MB"
+  }
+]

@@ -1,0 +1,548 @@
+[
+  {
+    "a": "interface",
+    "b": "graph_spectrum",
+    "paths": 3325,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "cancellation",
+    "b": "graph_spectrum",
+    "paths": 3084,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "interface",
+    "b": "cancellation",
+    "paths": 2963,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "finite_state",
+    "b": "interface",
+    "paths": 1391,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "finite_state",
+    "b": "graph_spectrum",
+    "paths": 1370,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "finite_state",
+    "b": "cancellation",
+    "paths": 1359,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "number_theory",
+    "b": "graph_spectrum",
+    "paths": 1327,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "cancellation",
+    "b": "number_theory",
+    "paths": 1301,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "graph_spectrum",
+    "paths": 1294,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "interface",
+    "b": "number_theory",
+    "paths": 1203,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "arithmetic_dynamics",
+    "b": "graph_spectrum",
+    "paths": 1125,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "arithmetic_dynamics",
+    "b": "cancellation",
+    "paths": 1076,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "arithmetic_dynamics",
+    "b": "interface",
+    "paths": 1063,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "graph_spectrum",
+    "b": "prime_core",
+    "paths": 1062,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "cancellation",
+    "b": "prime_core",
+    "paths": 1004,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "cancellation",
+    "paths": 963,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "interface",
+    "b": "prime_core",
+    "paths": 959,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "interface",
+    "paths": 945,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "interface",
+    "b": "geometry",
+    "paths": 938,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "coherence",
+    "b": "graph_spectrum",
+    "paths": 928,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "cancellation",
+    "b": "geometry",
+    "paths": 925,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "coherence",
+    "b": "cancellation",
+    "paths": 908,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "geometry",
+    "b": "graph_spectrum",
+    "paths": 899,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "interface",
+    "b": "coherence",
+    "paths": 818,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "golden",
+    "b": "graph_spectrum",
+    "paths": 777,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "golden",
+    "b": "interface",
+    "paths": 663,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "finite_state",
+    "b": "number_theory",
+    "paths": 643,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "arithmetic_dynamics",
+    "b": "number_theory",
+    "paths": 629,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "golden",
+    "b": "cancellation",
+    "paths": 627,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "finite_state",
+    "b": "arithmetic_dynamics",
+    "paths": 589,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "symplectic",
+    "b": "graph_spectrum",
+    "paths": 527,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "symplectic",
+    "b": "cancellation",
+    "paths": 513,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "number_theory",
+    "b": "prime_core",
+    "paths": 493,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "number_theory",
+    "paths": 476,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "golden",
+    "b": "arithmetic_dynamics",
+    "paths": 446,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "finite_state",
+    "b": "geometry",
+    "paths": 444,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "finite_state",
+    "paths": 427,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "finite_state",
+    "b": "coherence",
+    "paths": 412,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "finite_state",
+    "b": "prime_core",
+    "paths": 408,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "symplectic",
+    "b": "interface",
+    "paths": 405,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "arithmetic_dynamics",
+    "paths": 400,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "geometry",
+    "b": "number_theory",
+    "paths": 396,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "finite_state",
+    "b": "golden",
+    "paths": 380,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "golden",
+    "b": "number_theory",
+    "paths": 366,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "arithmetic_dynamics",
+    "b": "geometry",
+    "paths": 366,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "arithmetic_dynamics",
+    "b": "coherence",
+    "paths": 349,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "coherence",
+    "b": "geometry",
+    "paths": 342,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "coherence",
+    "b": "number_theory",
+    "paths": 329,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "coherence",
+    "paths": 316,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "prime_core",
+    "paths": 316,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "curvature",
+    "b": "graph_spectrum",
+    "paths": 314,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "arithmetic_dynamics",
+    "b": "prime_core",
+    "paths": 309,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "golden",
+    "b": "coherence",
+    "paths": 298,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "curvature",
+    "b": "cancellation",
+    "paths": 284,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "modular_forms",
+    "b": "graph_spectrum",
+    "paths": 281,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "geometry",
+    "paths": 280,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "finite_state",
+    "b": "symplectic",
+    "paths": 260,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "golden",
+    "paths": 258,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "curvature",
+    "b": "interface",
+    "paths": 250,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "symplectic",
+    "b": "number_theory",
+    "paths": 247,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "coherence",
+    "b": "prime_core",
+    "paths": 237,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "modular_forms",
+    "b": "cancellation",
+    "paths": 230,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "golden",
+    "b": "geometry",
+    "paths": 226,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "symplectic",
+    "paths": 212,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "geometry",
+    "b": "prime_core",
+    "paths": 203,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "symplectic",
+    "b": "arithmetic_dynamics",
+    "paths": 200,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "golden",
+    "b": "prime_core",
+    "paths": 194,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "curvature",
+    "b": "number_theory",
+    "paths": 184,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "modular_forms",
+    "b": "interface",
+    "paths": 165,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "modular_forms",
+    "b": "number_theory",
+    "paths": 162,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "symplectic",
+    "b": "geometry",
+    "paths": 155,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "curvature",
+    "b": "arithmetic_dynamics",
+    "paths": 153,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "modular_forms",
+    "b": "arithmetic_dynamics",
+    "paths": 153,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "symplectic",
+    "b": "coherence",
+    "paths": 152,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "curvature",
+    "b": "coherence",
+    "paths": 146,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "curvature",
+    "b": "finite_state",
+    "paths": 145,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "symplectic",
+    "b": "prime_core",
+    "paths": 142,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "modular_forms",
+    "paths": 136,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "golden",
+    "b": "symplectic",
+    "paths": 116,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "curvature",
+    "b": "geometry",
+    "paths": 111,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "curvature",
+    "b": "golden",
+    "paths": 109,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "golden",
+    "b": "modular_forms",
+    "paths": 109,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "curvature",
+    "b": "prime_core",
+    "paths": 108,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "involution",
+    "b": "curvature",
+    "paths": 107,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "finite_state",
+    "b": "modular_forms",
+    "paths": 104,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "modular_forms",
+    "b": "symplectic",
+    "paths": 96,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "modular_forms",
+    "b": "geometry",
+    "paths": 79,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "modular_forms",
+    "b": "coherence",
+    "paths": 72,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "modular_forms",
+    "b": "prime_core",
+    "paths": 64,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "curvature",
+    "b": "symplectic",
+    "paths": 63,
+    "status": "LEXICAL_ONLY"
+  },
+  {
+    "a": "curvature",
+    "b": "modular_forms",
+    "paths": 62,
+    "status": "LEXICAL_ONLY"
+  }
+]

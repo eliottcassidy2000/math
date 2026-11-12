@@ -1,0 +1,177 @@
+{
+  "rule": "first four local 07-reflections/*.md after excluding filename five,pent,fermat,golden,chanpak,tournament, ranked SHA256(session285-lateral-v1:+path)",
+  "eligible": 3116,
+  "paths": [
+    "07-reflections/sop2-sop3-typed-incidence-compiler-and-rule30-trace-boundary-codex-20260815.md",
+    "07-reflections/lrc-r5-shared-rank-six-endpoint-quotient-codex-20260816.md",
+    "07-reflections/PINNED-the-inhomogeneous-AP-spectrum-is-an-LRC-2p-feature-odds-capped-by-the-apex-prime-opus-20260630.md",
+    "07-reflections/the-7-spread-torus-residual-macmini-S6.md"
+  ],
+  "local_reflection_paths": 3346,
+  "sources": [
+    {
+      "path": "07-reflections/sop2-sop3-typed-incidence-compiler-and-rule30-trace-boundary-codex-20260815.md",
+      "sha256": "1edceef569d36998247a3017b3fc155774d645a0281b45ff791c91c7dceae022",
+      "line_count": 469,
+      "sections": [
+        {
+          "line": 13,
+          "heading": "## 1. Inheritance and the exact question"
+        },
+        {
+          "line": 37,
+          "heading": "## 2. The universal typed-fibre lemma"
+        },
+        {
+          "line": 96,
+          "heading": "## 3. Compact homogeneous incidence systems"
+        },
+        {
+          "line": 157,
+          "heading": "## 4. The completion--finite-obstruction compiler"
+        },
+        {
+          "line": 268,
+          "heading": "## 5. Audit of the cited proof and its sharp assumptions"
+        },
+        {
+          "line": 315,
+          "heading": "## 6. THM-3456: a fixed-formula SOP2 witness"
+        },
+        {
+          "line": 394,
+          "heading": "## 7. Free-input theory versus the named Rule 30 seed"
+        },
+        {
+          "line": 441,
+          "heading": "## 8. Connection contract and non-consequences"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc-r5-shared-rank-six-endpoint-quotient-codex-20260816.md",
+      "sha256": "0a5f6756a9e5dc790174f2f09f1826e427c4e6b25a924740b43abcac57991772",
+      "line_count": 468,
+      "sections": [
+        {
+          "line": 34,
+          "heading": "## Inheritance pass"
+        },
+        {
+          "line": 67,
+          "heading": "## Typed response maps"
+        },
+        {
+          "line": 99,
+          "heading": "## Exact common-image result"
+        },
+        {
+          "line": 129,
+          "heading": "## The incoming four-way table identifies the carrier"
+        },
+        {
+          "line": 195,
+          "heading": "## The reflection descends, but not as a residue permutation"
+        },
+        {
+          "line": 260,
+          "heading": "## Why the pure three-way rank is also six"
+        },
+        {
+          "line": 290,
+          "heading": "## Path, cut, tournament, and tree ledger"
+        },
+        {
+          "line": 306,
+          "heading": "## Hostile boundary: the broad ceiling is refuted"
+        },
+        {
+          "line": 333,
+          "heading": "## Two-digit update: six is a projected carrier, not the ancestry ceiling"
+        },
+        {
+          "line": 381,
+          "heading": "## Precise surviving conjecture"
+        },
+        {
+          "line": 411,
+          "heading": "## Cheapest decisive computation"
+        },
+        {
+          "line": 440,
+          "heading": "## Connection contract"
+        },
+        {
+          "line": 454,
+          "heading": "## Reproduction"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/PINNED-the-inhomogeneous-AP-spectrum-is-an-LRC-2p-feature-odds-capped-by-the-apex-prime-opus-20260630.md",
+      "sha256": "28fdb8776025c17ea2a2761eac08374c566bff3f4212670b6cc636110a6f4d8b",
+      "line_count": 56,
+      "sections": [
+        {
+          "line": 6,
+          "heading": "## The pinned formula (n=2p)"
+        },
+        {
+          "line": 12,
+          "heading": "## The cap IS the apex prime (the real reason \"7 caps it\")"
+        },
+        {
+          "line": 21,
+          "heading": "## The witnesses sit at multiples of the apex prime"
+        },
+        {
+          "line": 28,
+          "heading": "## Honest correction (scope)"
+        },
+        {
+          "line": 36,
+          "heading": "## What it buys (the apex, through the translation knob)"
+        },
+        {
+          "line": 45,
+          "heading": "## Status"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/the-7-spread-torus-residual-macmini-S6.md",
+      "sha256": "362f1aca296c3dcef5c76a44a947b1d94f8d3efc119279528484df2e82dfc07d",
+      "line_count": 109,
+      "sections": [
+        {
+          "line": 9,
+          "heading": "## Where this sits"
+        },
+        {
+          "line": 18,
+          "heading": "## The characterization (derived, then broadcast)"
+        },
+        {
+          "line": 36,
+          "heading": "## Why it is exactly the residual (not reducible to the 2-class rung)"
+        },
+        {
+          "line": 46,
+          "heading": "## The empirical answer: bottom = 1/6, factor 2.08 above the window"
+        },
+        {
+          "line": 68,
+          "heading": "## The reduction (what remains for (A), precisely)"
+        },
+        {
+          "line": 87,
+          "heading": "## The unification (sibling's observation (c), now sharp)"
+        },
+        {
+          "line": 96,
+          "heading": "## Assembly state after this session"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "source": "stress_local",
+    "target": "stress_global",
+    "status": "PROVED_THIS_SESSION",
+    "mechanism": "period-kernel dimension5-rank; rank<=3",
+    "provenance": "../bridges/PERIOD_FIBERS.md"
+  },
+  {
+    "source": "C5_frame",
+    "target": "augmentation_lattice",
+    "status": "INHERITED_EXACT",
+    "mechanism": "constant plus augmentation has index5",
+    "provenance": "05-knowledge/results/session91_packing_golden_carriers_20261029/zeckendorf/GOLDEN_FIVE_CYCLE_FRAME.md"
+  },
+  {
+    "source": "augmentation_lattice",
+    "target": "all_n_lattice",
+    "status": "ELEMENTARY_PROVED_HERE",
+    "mechanism": "quotient Z/nZ; characteristic dividing n obstructs split",
+    "provenance": "MECHANISM_ATLAS.md#4"
+  },
+  {
+    "source": "stress_local",
+    "target": "C5_frame",
+    "status": "ANALOGY_NOT_ISOMORPHISM",
+    "mechanism": "real1+4 versus rational1+4 with integral extension index",
+    "provenance": "MECHANISM_ATLAS.md#7"
+  },
+  {
+    "source": "ready_five",
+    "target": "partial_permutations",
+    "status": "PROVED_THIS_SESSION",
+    "mechanism": "5 is k2 case; next layer16, not Catalan14",
+    "provenance": "../holonomy/PROOF.md"
+  },
+  {
+    "source": "ready_five",
+    "target": "Platonic_duality",
+    "status": "INHERITED_EXACT_INVOLUTION_ONLY",
+    "mechanism": "port swap orbit1+2+2; no adjacency/geometric identification",
+    "provenance": "05-knowledge/results/ready_return_pentagon_20261103/PENTAGON.md"
+  },
+  {
+    "source": "five_H_cores",
+    "target": "Platonic_duality",
+    "status": "OBSTRUCTION",
+    "mechanism": "all five self-converse versus duality1+2+2",
+    "provenance": "05-knowledge/results/chanpak_five_core_bridges_20261110/history/RECOVERY.md"
+  },
+  {
+    "source": "five_H_cores",
+    "target": "triangle_arc_incidence",
+    "status": "INHERITED_EXACT",
+    "mechanism": "H9 cores distinguish A3 versus affineA2",
+    "provenance": "05-knowledge/results/session252_fivefold_bridges_20261111/golden/PROOF.md"
+  },
+  {
+    "source": "typed_incidence",
+    "target": "anchored_completion",
+    "status": "PROPOSED_MISSING_LEMMA",
+    "mechanism": "retain witness and packet; prove compactness or finite obstruction",
+    "provenance": "07-reflections/sop2-sop3-typed-incidence-compiler-and-rule30-trace-boundary-codex-20260815.md"
+  },
+  {
+    "source": "rank6_quotient",
+    "target": "continuation_congruence",
+    "status": "ANALOGY",
+    "mechanism": "marginal kernel harmless only on legal response subspace",
+    "provenance": "07-reflections/lrc-r5-shared-rank-six-endpoint-quotient-codex-20260816.md"
+  },
+  {
+    "source": "torus_direction_classes",
+    "target": "endpoint_response_rays",
+    "status": "PROPOSED_EXPERIMENT",
+    "mechanism": "classwise feasibility need not glue",
+    "provenance": "07-reflections/the-7-spread-torus-residual-macmini-S6.md"
+  }
+]

@@ -1,0 +1,1289 @@
+[
+  {
+    "sha": "7dab03433bc6cf5746b69ab1fa8fa5e1f3d1765e",
+    "date": "2026-11-11",
+    "subject": "kind-pasteur-2026-11-11-S25: independent audit applied (PASS WITH CORRECTIONS, five major findings) - the tournament family of part B is the O/Z/J root-change grammar and its 29 missing values are KNOWN to 10^9 (HYP-9494 (D)); THM-5148 relabelled KNOWN re-derived plus two FINITE-EXACT sub-language measurements; HYP-9677 (A) WITHDRAWN, (B) kept as a variant of HYP-9640 (B), range 2^19; multiplicity 82.9 corrected to 14.3 distinct chains; THM-5147 extended by the audit to every x^(l+1) y + r(x); audit folder added. JC(2) and Chan-Pak OPEN.",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "e22bd06edb570e7df73967e1f2344a12f342f94a",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-rays: close-out letter (THM-5145 dyadic neighbourhoods and two-block families of Hamiltonian-path counts from the complete census of root types of order at most 10; HYP-9675 type conjecture, quantitative form implies Chan-Pak; independent audit applied, PASS WITH CORRECTIONS, five major findings on credit, an unsupported equivalence and an overstated verification, MISTAKE-767; Chan-Pak OPEN)",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "24472bc22c77f7bf92fce806442ea7ce8bf60330",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-rays: index rows, problem-ledger bullet and MISTAKE-767 for THM-5145 / HYP-9675 (audit PASS WITH CORRECTIONS; five major findings on credit, an unsupported equivalence and an overstated verification, all applied). Chan-Pak OPEN.",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "aa3f1a0f7d90290fb8a4511418ceec7e45d2d490",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-rays: independent audit applied (PASS WITH CORRECTIONS: Theorems 1-3 and the root-type census reproduced by the auditor's own census and literal recounts; five major findings - the two-module template census to order 8 and the absence of an additive pair are kind-pasteur S21's and THM-5124's, negative offsets and the columns r = +-1 are partly THM-5130 / THM-4748 / Session195 / THM-5129 / HYP-9662, parts of the one-back-arc section are classical or Session236's, the equivalence of the quantitative type statement with Chan-Pak was unsupported and is replaced by an implication, 293 types of Theorem 2 had no witness on file - and nine minor ones, all applied). Added after the audit: witness file for the remaining types (3,598 witnesses, 10,794 literal counts, no failure), second template run at order 9 on the ten missing candidate values (no template of the weight-three shape with H(K) <= 2113), coverage of every odd N in [3, 266979] by root types of order 10, written-out proofs for one back arc and for the sufficiency of the template test, credit to opus S93's one-mark block law for the matrix form of the tail letters. THM-5145, HYP-9675. Chan-Pak OPEN.",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "ae904975abbc3e14bd7524c3d58f97d1f201f95d",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-gauge: pre-audit checkpoint - THM-5139 (the endpoint graph of a switching class: the endpoint parity vector is affine on a class with an even graph as derivative; Hamiltonian-cycle parity, every cycle-count parity and H mod 4 are quadratic on a class - proof of the observation QF of HYP-9667; order 6: every class has 20 members with H = 1 mod 4), THM-5140 (explicit uniform remainder of the level expansion of A000568, certified enclosures to n = 10^1000, integer-height representation, clock shift for switching classes A049313), HYP-9669 (2-adic derivative law; registered run at orders 11-14 CONFIRMED), HYP-9670 (order-12 forecasts), reading note on the OpenAI Yang-Mills construction (fourteen typed analogies, the five open items; nothing claimed about Yang-Mills). AUDIT-PENDING. Chan-Pak OPEN.",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "f75886aabfbc4f5696d0f2836319d543a7c820d6",
+    "date": "2026-11-11",
+    "subject": "opus-2026-11-11-S92: independent audit applied (eight auditors, PASS WITH CORRECTIONS: 6 MAJOR, 64 MINOR, 41 NOTE; five editors, five verifiers, cross-check) - THM-5134 (credits to THM-5128, Session206, THM-5085; (E) limit and single-value dependence corrected; (G) every base with the product over primes not dividing 2b, complete censuses, and the second digit equidistributed for odd b, found by the audit), THM-5135 ((3)(b) E8 modulo 2^k by lifting; (4)(b) Smith-form law, found by the audit; (4)(c) scope of THM-4916 and parity of the fusion corner; two orders of C + C), HYP-9665, HYP-9666 retyped; note: credits to Session266 Collatz lane, Session224; two truncated base-b censuses fixed with guards; MISTAKE-765; index row; THM-5128 points to THM-5134",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "27d3024b2eefff59d87f762eeddebc1f42fb42bb",
+    "date": "2026-11-11",
+    "subject": "opus-2026-11-11-S92: audit applied (local, before renumbering the ledger reference) - eight auditors PASS WITH CORRECTIONS, 111 findings applied by five editors, five verifiers and a cross-check; scripts fixed and outputs regenerated; audit folder with receipts",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "26fa4d8d52e752c5a29cb181f0287ddedee3ef68",
+    "date": "2026-11-11",
+    "subject": "Session272 checkpoint3: synthesize sixteen Yang-Mills bridges and five precise extension programs",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "182fd0297962963d2b1796beb2d01c3e161a8d7c",
+    "date": "2026-11-11",
+    "subject": "kind-pasteur-2026-11-11-S24: MISTAKE-764 (conjectures announced as new and intermediate that were an instance of the Image Conjecture and equivalent to JC(2); HYP-9668 (E) refuted; failures claimed from five values)",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "c68e7bd93e9fd0191abfde494cea68af7a29cc31",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-gauge: reserve THM-5139, THM-5140, HYP-9669, HYP-9670 (empty stubs; owner directive on predictive tournament counts, recursive structures and the OpenAI Yang-Mills construction; lane: the census as a cycle gas, switching as a Z_2 gauge symmetry, dictionary with the Yang-Mills construction and its five open items). Chan-Pak OPEN.",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "7baeafc9a33f9d72d554da009b2bf9fa76ab1e65",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-atoms: close-out letter (THM-5136 folding formula, doubly regular tournaments with a converse symmetry, the character of 2 for Paley = HYP-9273 (B) modulo 4; THM-5137 pentagon sums and records; HYP-9667 cycle parities of doubly regular tournaments, true for all 37 of order 23, class form REFUTED by the audit at N = 24; audit applied, MISTAKE-763; twelve pre-registered predictions, three failed, four partly decidable from the repository; Chan-Pak OPEN)",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "37a0908878f0f3098df8768d2d84e50ead5c6d1a",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-atoms: index rows (hypotheses INDEX at budget, one row archived; results INDEX), problem-ledger bullet and MISTAKE-763 for THM-5136, THM-5137, HYP-9667 (audited: PASS WITH CORRECTIONS for the theorems; the switching-class form of the conjecture refuted by the audit; five results on record typed new; registrations decidable from the repository). Chan-Pak OPEN.",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "1ca9c5f83b55bcac7dacc0a6f5def38e02f245e7",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-atoms: checkpoint (pre-audit) - THM-5136 (folding formula for tournaments with a converse symmetry; doubly regular tournaments with a converse symmetry have H = n(n-1)/2 mod 4, invariant triples forced; Paley: the character of 2), THM-5137 (pentagon sums of doubly regular tournaments; records: mean Redei-Berge function = Schur Q-function, record lift, reach sets = connected graphs), HYP-9667 (H mod 4 constant on skew Hadamard switching classes; doubly regular residues mod 4 and mod 8; refuted local forms); Runs G, H (R9, R10, R11 confirmed; G1, G2 were decidable from the repository; order-27 direct counts still running). Chan-Pak OPEN. Audit pending.",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "48b8a901460a95312afa998932aacd361600f078",
+    "date": "2026-11-11",
+    "subject": "opus-2026-11-11-S92: checkpoint - exact bridge checks (multiplication table mod m and its additive square = m^3 L_m; 2r squares vs rank-r hyperbolic form; E8 form = rank-4 form at 2; r_4, Hurwitz, r_8, E8 shells; two-port kernels; the eight extensions of F_2^2 by F_2; signed-integer dictionary of table labels and the five cycles; fan primes; base-beta head sheet; Tao digit condition); abundancy index against multiplicities (exploratory)",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "6e387cf531304a9a86ad4d154511b1b47a3d28f3",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-atoms: pre-register R9, R10 (doubly regular tournaments that are not Paley, orders 19, 23, 27: H = n(n-1)/2 mod 4 and mod 8) before Run G; draft note (pre-audit), programs and outputs of Runs A-F (folding formula, Paley and the character of 2, pentagon sums of doubly regular tournaments, records). Chan-Pak OPEN.",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "c98a09856ad38a6940b364c0668f0d8d05b3086b",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-atoms: reserve THM-5136, THM-5137, HYP-9667 (honest empty stubs); pre-register R1-R6 before any run (invariant odd cycles of Paley tournaments at q = 27, 43 and the residue of H mod 4 as the quadratic character of 2; anti-involutions with all invariant triples cyclic; pentagon cube sums of Paley and Cayley-Dickson tournaments through the kernel formula of THM-5132; the Cayley-Dickson tower mod 4)",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "9fb167b45db1fed307789bb828ed2d796b5cacd3",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-race: close-out letter (THM-5132 the pentagon theorem: parity of 5-cycles by second-order scores, non-negative triangle-pentagon cube sums, closed forms at every order; THM-5131 triangle race and the square term of the mod-4 race; HYP-9663; audit applied, MISTAKE-760; pre-registered R1, R5, R6 FAILED, R2-R4, R7, R8 CONFIRMED; Chan-Pak OPEN)",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "5c3224375763e44118cd9aa6aafd9b4c6461a873",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-race: independent audit applied (PASS WITH CORRECTIONS: no mathematical error; every proof re-derived and every table recomputed with independent programs, exact order-11 census, independent order-12 estimator 1039 +- 125 against 989 +- 99) - M1: the residue H = 1 + 4s mod 8 of self-converse tournaments and the count bound are prior work (Session29 converse-congruences, Session130, Session29 half-path, THM-4743, THM-4930), retyped KNOWN / corollary; M2: the closed form E(-1)^(c_3) = 2^(-floor((n-1)/2)) is in THM-555 (verified, tiling ensemble) with the mechanism of HYP-2707, new are the proof for every n and the pointwise form; 22 minor (exact mod-8 masses at order 11 from a census, a 10^6 typo, sizes of the pentagon bias, citation of the score-parity uniformity, one-order rate claim, section-8 wording, sharper form of the cube-sum positivity, falsifiable window for the zero fraction, pre-registration erratum); MISTAKE-760; audit/ report, programs and outputs. THM-5132 (pentagon theorem) confirmed new to the repository. Chan-Pak OPEN.",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "b91157e81d00e17e59fff3522b96c1d83768d898",
+    "date": "2026-11-11",
+    "subject": "kind-pasteur-2026-11-11-S23: reserve THM-5133, HYP-9664 and pre-register, before the runs, E1 (Fermat modules: pairs (H, Pi_2) with H = 2^s + 1), E2 (two-port kernels: determinant and discriminant of the visit matrix), E3 (Cayley-Dickson sign tournaments, Fano census)",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "aa0edea9c1f1457d03daec4a3926a5d32b0745c5",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-race: checkpoint (pre-audit) - THM-5131 (triangle race: every vertex cube has triangle-parity sum 2^ceil(m/2); square term: self-converse tournaments, mod-8 refinement, count, three strata, class and strong races, exact mod-8 masses at orders 10-11 resolving HYP-9355), THM-5132 the pentagon theorem (c_3 = C(q_1,2) + floor(n/4), c_3 + c_5 = C(q_2,2) + floor(n/4) mod 2 with q_1 = number of odd scores and q_2 = number of vertices with an odd number of odd-score out-neighbours; closed formula and positivity of the triangle-pentagon vertex-cube sum; joint law of the two score-parity vectors; closed forms of E(-1)^(c_3+c_5) and E(-1)^(c_5) at every order; H mod 4 for n <= 6), HYP-9663 (persistent lead; symmetric lean; heptagon layer); pre-registered R1-R8 with outcomes (R1, R5, R6 FAILED; R2-R4, R7, R8 CONFIRMED; R7, R8 then proved); order-12 Monte Carlo; exact censuses to order 10 and samples to order 40. Chan-Pak OPEN. Audit pending.",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "607010376767a9d68a2cca48ddd36eb0608f6e1e",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-race: second pre-registration R7-R8 (triangle-plus-pentagon parity at orders 11-18 by plain Monte Carlo: value 2^(-(n-2)/2) at n = 2 mod 4; pair law 3 -> 0 mod 4) written after R5-R6 FAILED at order 10 and before Run C; sampler c35mc.c",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "80eaf478f080a70e7163548c99812328fc0a4108",
+    "date": "2026-11-11",
+    "subject": "mac-mini-2026-11-11-race: reserve THM-5131, THM-5132, HYP-9663 (honest stubs); pre-register R1-R6 before the order-12 Monte Carlo run (generic lead of the mod-4 race, rank law at order 11, deletion-pair correlation) and before any output of the order-10 cycle-length race (pentagon invisible at even order; pair law for short cycles); programs so far",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "206e445797338638604337b8fc1f581f30be0e00",
+    "date": "2026-11-10",
+    "subject": "[central-modular]: classify primitive golden content and construct odd carry lifts",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "b5d328981138fa824be19159d5190b3b44ec8fda",
+    "date": "2026-11-10",
+    "subject": "five-core bridges: integrate affine five-torsion and concurrent source frontiers",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "a4330610272302ee8f0bf40079935bbbbde04cbc",
+    "date": "2026-11-10",
+    "subject": "five-core bridges: publish seven-vertex reset and independent full support audit",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "46c7c46f3b4403c7b3f4415fee0c0f9f16ec3b7a",
+    "date": "2026-11-10",
+    "subject": "five-core web: integrate concurrent module and positive-fibre advances",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "462d171be65e6678ca53cb4e58af6ac3a3e0f673",
+    "date": "2026-11-10",
+    "subject": "five-core web: classify five observer modules and preserve constructive source sidecars",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "d64f0284edd07a8683846919af6995d02deb7a45",
+    "date": "2026-11-10",
+    "subject": "five-core web: connect golden incidence, dyadic shells and local binary energy",
+    "tags": [
+      "five",
+      "named",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "787a2f04b521f7ae818d248c42106bf22814070b",
+    "date": "2026-11-10",
+    "subject": "five-core bridges: classify interfaces and certify source-sensitive ternary failures",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "fe7ee3c8af8f9996721ce8a3bc8222f27ee5977e",
+    "date": "2026-11-10",
+    "subject": "five-core web: establish historical and constructive research board",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "b02c593ac08481ee34cb0837a2d508be7921c360",
+    "date": "2026-11-10",
+    "subject": "five-core bridges: checkpoint history, exact cover, and rooted switches",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "03c86ac88c4bc4ab5a2f94ac2763e474bdc13aba",
+    "date": "2026-11-10",
+    "subject": "codex five-core: recover alternating endpoint compiler and seven-context observer",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "f6fae409661bc4e13b465c5f8fc48c5b60ef499d",
+    "date": "2026-11-10",
+    "subject": "Session252 checkpoint3: complete golden five-core synthesis and historical source atlas",
+    "tags": [
+      "five",
+      "named",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "cb7a17db9710eaddc2fe374e0e37876f5ef9f4e3",
+    "date": "2026-11-10",
+    "subject": "Session252 checkpoint2: seven-coordinate reduction, ADE core bridge and Fermat modular theorem",
+    "tags": [
+      "named",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "688e150cb0146188e0d50796144a412d1f9e039f",
+    "date": "2026-11-10",
+    "subject": "Session252 checkpoint1: fivefold bridge board and historical research scope",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "5bddb480c6c74e8644104e9a06c9029440b81417",
+    "date": "2026-11-10",
+    "subject": "Session251 checkpoint3: five-core compiler, sharp H173 deletion floor and monotone ternary padding",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "6f44021adc666340fbe3587c9a8cb1df91bc634f",
+    "date": "2026-11-09",
+    "subject": "mac-mini-2026-11-09-genesis: canon after audit G1 (PASS WITH CORRECTIONS, 3 MAJOR + 23 MINOR, all applied; MISTAKE-743) - THM-4985 (five-operation grammar fails first at order 12: 193 escaper classes incl. two of decomposability defect 3; band = THM-4880 constant-letter ribbon escapers band_3(13), band_4(16); band lemmas; no bounded grammar and k*(n) -> inf under a superexponential solid prefix; first creators 92.0% at order 11), THM-4986 (spanning-tree twin of the 7/21 proof: block floor, crevasse lemma, alpha <-> n(h), Nebesky fixed points <-> floor-born values), HYP-9565; max H(12) unsourced value removed (THM-329 bounds); HYP-9532 (D)/(E)/(F) annotated; navigation max-H Theta claim corrected",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "47716c39e5b71b1e778baadc95937035a8e6573c",
+    "date": "2026-11-09",
+    "subject": "mac-mini-2026-11-09-genesis: checkpoint (pre-audit) - THM-4942's five-operation grammar fails at order 12 (12 escaper classes from S17's parents, 181 more by annealing, two of decomposability defect 3); band escapers band_3(13), band_4(16) witness-certified; band lemmas; first-creator share 0.920 at order 11",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "37f7d62b3f636807d8d67601edddc3cf62587804",
+    "date": "2026-11-08",
+    "subject": "mac-mini-2026-11-08-ternary: repair - untrack the 127 MB order-9 census part files, the 19.6 MB order-8 node census JSON and five compiled binaries that the closer swept into the close-out commit (lines_n9_summary.txt and lines_n9_merged.txt remain as receipts; the parts are regenerable with lines_census.c); .gitignore added to the experiment directory",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "f870c2abf10f08ac8648923e313ca417e5e797f3",
+    "date": "2026-11-08",
+    "subject": "kind-pasteur-2026-11-08-S17: checkpoint 2 (pre-audit) - the five-operation generation grammar (first creator, first creator + vertex, ordinal sum, substitution, ordinal sum re-connected by <= 2 arcs) holds exactly through order 11: the 11 classes of 3-arc-strong 11-tournaments with H <= 15,745 include 7 non-first-creators, all substitutions (floor f_3(11) = 11,475 = H(C3[R5, R5, 1]), built from first creators); witness files for R1 (one order-10 first-creator parent per new order-11 value) and for R10/R11",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "4f6a83092567aee9a32ff00403df9ff94fa16333",
+    "date": "2026-11-07",
+    "subject": "kind-pasteur-2026-11-07-S15: MISTAKE-734 (THM-4916 typed new though (1a) was KNOWN and Session223 had proved the 3-adic law 32 s earlier; an unproved 'impossibility' paragraph under 'what is proved'; a Fermat-boost mechanism asserted from an ordering test; finite-n constants and saturated means quoted as limits) + index rows and problem-ledger bullet for THM-4916 / HYP-9506 after the audit (PASS WITH CORRECTIONS); the S14 and S15 hypothesis rows combined (INDEX kept at 120 lines)",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "0df33d587f890d2c47929703d56786c1790856f1",
+    "date": "2026-11-07",
+    "subject": "kind-pasteur-2026-11-07-S15: apply the independent audit of THM-4916 / HYP-9506 (PASS WITH CORRECTIONS: identities correct, every registered number reproduced, R2 FAILED / R3-R5 CONFIRMED as reported; 3 majors - priority (1a KNOWN Session206, 1b concurrent with Session223 eq. (2), 1c/1e one-line corollaries, 1d = Session199's -f, Session223 checkpoint 2 PROVED the 3-adic law incl. 34/27, 47/54), the cutoff 'impossibility' paragraph replaced by a barrier lemma with per-item status, the Fermat-boost mechanism replaced by the measured split (multiplier words ~1/4, root-rectangle words ~1/5, seed confinement ~1/2); 14 minors); THM-4916 re-centred on the NEW closed forms for every odd prime: L_p(0) = 1 + (3p-2)(p-1)/(2p^3), nonzero classes 1 - (3p-2)/(2p^3) (two J), and 1 + (3p-4)/(4p^2) (one J), by a confinement cascade at the root changes (lemma (M) proved by the audit, reduction from Session223 section 5; exact at p = 3, 5, 7, within 1.2e-12 for p <= 31; not multiplicative across primes); audit folder",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "05b4c174db1ca6409151ccf947649d7763c33632",
+    "date": "2026-11-07",
+    "subject": "kind-pasteur-2026-11-07-S15: checkpoint (pre-audit) - THM-4916 (exact identities behind the local factors of the two-root-change multiplicity: seed confinement mod gcd(D,U), root-change tails in pre-change coordinates with tail confinement gcd(Q(m)+1, m+1), Fermat-type multipliers (2^(j-1)+1)(D+2U), the defect a = D-E-U+d and K(v,w) = U_vU_w + E_vE_w - d_vd_w + a_vd_w + a_wd_v, the two-state product family V V) and HYP-9506 (residue-automaton local factors, divisor-type with L_p(0)-1 ~ 1.5/p, mod-3 limit ~34/27; Fermat-type primes 3, 5, 17, 11 boosted at census scale; pre-registered R3, R4, R5 CONFIRMED, R2 FAILED (census boost exceeds the letter-count automaton at 5, 11, 13, 17: height weighting); rough near-misses; cutoff OPEN with a product/multiplier barrier and the Gerbicz/second-moment routes); small-number coincidence atlas (Chan-Pak, C=1, root changes, Fermat primes, square-sum, nine cubes, untouchables, three-core, prime square-sum); Session223 (same prompt) credited; R1 (census to 2^32) running",
+    "tags": [
+      "named",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "0cda2446321f7df69f6f2551580f44d496747cfe",
+    "date": "2026-11-07",
+    "subject": "kind-pasteur-2026-11-07-S15: reserve THM-4916 and HYP-9506; pre-register R1-R5 (census of two root changes to 2^32; local factors of the two-root-change multiplicity at fresh primes 5, 7, 11, 13, 17, 23, 31 and classes mod 27 against the residue-automaton prediction resdp.c; Fermat-prime finite-size boost ordering); concurrent Session223 (same prompt) and opus-S82 / Session193 / Session206 confinement method credited",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "8865bb666b3e6cebba43606d47b3c1b4557d522b",
+    "date": "2026-11-07",
+    "subject": "Session223 checkpoint 1: prove root-word product rectangle and exact Fermat-factor square-sum boundary",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "acbad6c8636cf8cbb675b4c947fa19e33ac0df23",
+    "date": "2026-11-07",
+    "subject": "Session219 checkpoint 2: prove sharp five-run Fermat escape, exact Mersenne fibers and optimal smooth tournament degrees",
+    "tags": [
+      "five",
+      "named"
+    ]
+  },
+  {
+    "sha": "fbaf4ba893a11ba0953a8690a571ea514b07d22f",
+    "date": "2026-11-07",
+    "subject": "Session219 checkpoint 1: prove Fermat-hole totient multiplicities, complete supplier convolution and exact deconvolution",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "5387e02f97548edf9ddffe8350872765bb8a374d",
+    "date": "2026-11-06",
+    "subject": "mac-mini-2026-11-06-microcosm: checkpoint (pre-audit) - THM-4900 gate and doubling in the marked resolvent: the strong gate acts linearly on (N, P) = (u^T adj(zI-M) u, det(zI-M)) by [[z^2+9, 2z], [2z, z^2+1]] (eigenvalues (sqrt(z^2+4) +- 1)^2, P_Gamma = P_E); closed-form nested gates, explicit one-vertex spectrum, universal metallic limit (2+sqrt(z^2+4))/z; z = 1 is the self-similar point of the doubling, phi(T) = u^T(I+M^TM)^(-1)u is a doubling invariant in (0, n], series composition is relativistic addition (THM-3322 in substance), the gate is the golden map with Fibonacci orbit F_(2k+2)/F_(2k-1); D and Gamma commute at z = 1 without the BS relation; tower odd-cycle formula with sw_1 = 2 c3 at every order. HYP-9490: deep gate towers forget the core except through c3 (exact reduction to Session210's operator; FINITE-EXACT on all 528 cores of orders 4-7). Gated floors, HC in {7,21} => gate-free and least HC orders re-typed KNOWN after the priority check (Session210/211/212, THM-4889); permutohedral face formula is a presentation of Session210's operator.",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "8acbc16ebc283a5863f8d5455cec0353ea394a83",
+    "date": "2026-11-06",
+    "subject": "opus-2026-11-06-S83: checkpoint (pre-audit) - THM-4886 bilinear Weyl bound for one-apex exponential sums (Session 193's concatenation law makes the middle block bilinear; Cauchy-Schwarz + geometric sums + a counting lemma give |S_n(theta)| <= 2^(n-1) 2^(-L/2) sqrt(1 + R), hence 6.5 q^(-1/2), 12 (q/2^n)^(1/4), and a 2^(-eps n/4) saving on minor arcs), the same for one-apex readouts (bank families), Fourier uniformity off (1/2)Z (irrational theta new); HYP-9479 P1-P3 CONFIRMED out of sample (square-root cancellation at five irrationals to n = 28, energy E_n/|X_n| = 3.25, diagonal dominance within 7%); positive density reduced to linear energy",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "185c2b3efad4eb664a3ae418993393a6366cd18a",
+    "date": "2026-11-06",
+    "subject": "opus-2026-11-06-S83: pre-register HYP-9479 (square-root cancellation of one-apex exponential sums at five irrationals for n = 26, 28; energy E_n/|X_n| in [3.1, 3.5]; diagonal dominance of the bilinear second moment at unseen splits) before any run beyond n = 24; in-sample checks (concatenation law, the bilinear bound and its core inequality with 0 violations)",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "b4d7029b02520814c472105c42fd0d00cab92003",
+    "date": "2026-11-05",
+    "subject": "Session198: prove sharp C3 source cutoff and five scalar forms",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "c665ef8b7bc1f8c9d58ceef01c9744a4a3b11d53",
+    "date": "2026-11-05",
+    "subject": "Session 197: add positive-five clock PROOF.md",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "303881c3c6573b3dfc5820d8d828c70aa5dcd557",
+    "date": "2026-11-05",
+    "subject": "Session 197: add positive-five clock PRIME_OFFSET_BRIDGE.md",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "c13f16e9984dcc978ddb50fdbb77570e9412d712",
+    "date": "2026-11-05",
+    "subject": "Session 197: add positive-five clock verify_prime_offset_bridge.py",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "8433f9d63d7e656c8a165a1d985aa7e779aa272d",
+    "date": "2026-11-05",
+    "subject": "Session 197: add positive-five clock witness.json",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "799bb73202b87acb74123ef187dc0888b48de110",
+    "date": "2026-11-05",
+    "subject": "Session 197: add positive-five clock verify.py",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "64e4c79af5bb7ac23eaef596c134d94d1e898836",
+    "date": "2026-11-05",
+    "subject": "Session 197: add positive-five clock REPORT.md",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "bc8e352710a3e7cf2f3e220bf096d07c9c0961d7",
+    "date": "2026-11-05",
+    "subject": "Session 197: add positive-five clock check.py",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "633386d5dee590b8fa2df6bdba8e62ccc2ad9c28",
+    "date": "2026-11-04",
+    "subject": "opus-2026-11-04-S79: checkpoint - index rows and ledger bullet carry the main finding (G(0,2) complete to 8191 with at most five reversed arcs); check_docs passes",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "88b91f2f86576317d45b79dc26cf1e9cf1ddfa2a",
+    "date": "2026-11-04",
+    "subject": "klein-2026-11-05: path count of a vertex gluing \u2014 five-term two-path-cover formula over the pieces (block patterns XZ, ZX, XZX, ZXZ, ZXZX; Rend_A, root response R_{b1}(Z)), exact on every vertex-gluing two-cycle class of orders 7\u20139 (gluing_path_count.py, receipts); the composition law for Hamiltonian paths of the classified hc \u2264 2 family (HYP-9472 numeration tool)",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "ebc9dbae52c5bbb1839548328c8b077ab146304b",
+    "date": "2026-11-04",
+    "subject": "klein-2026-11-05: the cut-vertex recursion beyond two cycles and the path spectrum of the hc \u2264 2 family \u2014 (\u00a79) every tournament of orders 8\u201310 with at most twelve Hamiltonian cycles (order 11: at most five) has a cut vertex, so Lemma A's product law hc = S\u00b7M\u00b7E classifies them recursively; minimum Hamiltonian cycles of 2-connected tournaments m(5..9) = 2, 4, 8, 13, 19 exactly (open question in the K\u00fchn\u2013Osthus survey); general gluing law hc(A \u2295 B) = 2\u00b7hc(A)\u00b7hc(B) (564 pairs); (\u00a710) the Hamiltonian-path counts of the uniquely Hamiltonian and two-cycle families (orders 6\u201314) attain every odd number in [15, 2001) except 21 and 67; two-cycle floor f(n) + 8a(n); HYP-9472: every odd N \u2265 23, N \u2260 67, is the path count of a tournament with at most two Hamiltonian cycles (a classified family; implies Chan\u2013Pak); scripts hval.c, hc2_spectrum.py, minhc2conn.c, twoconn_tab.py with receipts",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "baba886cbe54a4eb47c7d8a8ceafdee8e4fd5b98",
+    "date": "2026-11-04",
+    "subject": "opus-2026-11-04-S78: apply independent audit (PASS WITH CORRECTIONS, 3 majors, 16 minors, 4 upgrades) - (B) transfer and Lorentzian adjoint retyped KNOWN (SEAM.md 2026-10-29 eqs. (1)-(6); golden_hamilton (G1)-(G4)), only the closed subset-sum entries new; (A) bounds >= 4 / >= 6 and the mark retyped KNOWN (THM-4873 (ii); RESULT (12)), new: exact sink digit and equality cases; audit U1 adopted: every non-sink old vertex has digit >= 9 at every order, equality iff (TT_n, a sink, w penultimate) (HYP-9468 P3 conjecture PROVED; author-side labelled check orders 2-6, 972,230 cases, exactly n! digit-9 cases); (C) consequence withdrawn and replaced by the audit's corrected U2 (finite base, nonempty interior, coset), equality = sink port + transitive gadget entered at its source, unimodular share 9.4/4.7/1.7% at orders 4/5/6, precursors THM-4865 (f), HYP-9453, klein reflection credited; (D) F0 redundant (U3: F1 + F2 alone to 2^32), audit's independent 2^32 reproduction recorded, one-apex credits (session179, session124 f, Session191, THM-4876 (6)), F1 inside the two-apex family (overnight 20261030 conjecture, Session191 to 230,519), Session 193 concurrent packet cited; runtime 21.7 min; audit folder committed",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "6db22a2715ac72af55aa8616c1aa9762bed05a38",
+    "date": "2026-11-04",
+    "subject": "kind-pasteur-2026-11-04-S10: MISTAKE-712 ledger entry (AT_n mirror parity reading restated canon THM-582/647 without credit; Fermat condition stated backwards; small-range slips) - found by the independent audit of HYP-9464",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "6fb688c6edb6e1c37a597ae166fe344e3fb93bbb",
+    "date": "2026-11-04",
+    "subject": "Session188 checkpoint80: active navigation through prime-five and six closures with reviewed order-seven frontier",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "b9ecc8fe715c73c2c2573dce2d6db0c45d8a00a5",
+    "date": "2026-11-04",
+    "subject": "Session188 checkpoint76: complete prime-five all-cover separation in arbitrary fixed ambient",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "b9b734ccc9795e34d80ef4bc3babd7a9cd4bd233",
+    "date": "2026-11-04",
+    "subject": "Session188 checkpoint75: complete prime-five local separation for arbitrary nonempty children",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "4c66663fe882b51906ceaacaa1d7ecde08a3d119",
+    "date": "2026-11-04",
+    "subject": "Session188 checkpoint73: prime-five even-child all-cover fixed-ambient separation",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "720532bef9c2412a3e392e5ef2667cdce3021572",
+    "date": "2026-11-04",
+    "subject": "Session188 checkpoint72: complete prime-five even-child local separation with full named banks",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "041129a78df1c731e3ea042debcd2cd61fa778d0",
+    "date": "2026-11-04",
+    "subject": "Session188 checkpoint61: five profile types and complete cyclic coarse-response classification",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "dc453691b35395a726f419ae7f65bfe00cb44adc",
+    "date": "2026-11-04",
+    "subject": "Session188 checkpoint34: exact prime-five triple-child separation with full label transport audit",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "9a62d5c9b26c493187507b36a32acf605ee0cab0",
+    "date": "2026-11-04",
+    "subject": "Session188 checkpoint 7: exact order-five quartic classes and literal separator",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "16074dbbe3b86aeb23546c51fc04407997530b61",
+    "date": "2026-11-03",
+    "subject": "two-port-pair: full named seed responses, sharp five-run witness, incoming integration",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "c456e65bffd33ea75f0f7d572d5b40e43a96301a",
+    "date": "2026-11-03",
+    "subject": "ports56941: recover feedback phase from the guarded golden carrier",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "fffa1865ba3d3f1619aeeacb6ef4d25e0c86848f",
+    "date": "2026-11-03",
+    "subject": "[rooted-carry-closure]: prove parity entry, shared legalizers and golden recurrences",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "d79221bc31b8b251b2fb035a2f03387b22052806",
+    "date": "2026-11-03",
+    "subject": "[ordered-response]: integrate five-vertex generator and incoming source-matching laws",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "f6d5304849e50b29df6e368239e92fffa92e57e3",
+    "date": "2026-11-03",
+    "subject": "[golden-inverse-20261103]: prove realization inverse and transported ternary offsets",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "9c4bc5e48921c67320c5f09c5bf6f8b185659965",
+    "date": "2026-11-02",
+    "subject": "[golden-hamilton]: prove universal block closure and integrate concurrent six-vertex bank",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "92638c9116945b06618bf0575f28c032eaaeb434",
+    "date": "2026-11-02",
+    "subject": "[golden-hamilton]: exact three-coordinate transfer and all-order family obstructions",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "91283985b5c2e194399f23a7c2984e1a3726b91b",
+    "date": "2026-11-02",
+    "subject": "Session152 checkpoint 1: certify order-five ear-image polynomial",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "59fc9abf05f33772d5e573a4ba0487daebd22b5d",
+    "date": "2026-11-02",
+    "subject": "[complement-ports-crt]: derive golden seam recurrence and certified prime-lane bank",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "947b6c38523daf52b6f51b80efff725f7c48b46a",
+    "date": "2026-11-02",
+    "subject": "[fibonacci-parity-precision]: third-bit census law and marked golden complements",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "072cd911c3a6c36b9b040c9d142bb21b8baf1d55",
+    "date": "2026-11-02",
+    "subject": "[session143]: checkpoint 1 - exact five-tournament spectra and cyclic character bridge",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "12eaf3ab17de07fcfd8d495849c19c6ae1156039",
+    "date": "2026-11-02",
+    "subject": "klein-2026-11-02: THM-4861/HYP-9452 corrections after the canon digest - Fermat numbers as Hamiltonian path counts credited to THM-4749 (reversed-extreme-arc family, orders 3, 4, 6, 10, 18), so only the least orders are new (65537 at order 11; 17 and 257 readable from THM-4810/THM-4744); completeness of the odd spectrum stated as the OPEN Chan-Pak conjecture (MISTAKE-559), not as THM-1370; H(P_31) credited to paley_h31 note; quotients 1 mod 8 noted against HYP-9273 B; session107's odd-automorphism remark added",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "9269d70b5a40fec1ae7b4b6fc66ef5881e235fcb",
+    "date": "2026-11-02",
+    "subject": "klein-2026-11-02: THM-4861, HYP-9452 - Fermat primes as Hamiltonian path counts of tournaments with least orders 3, 4, 6, 8, 11 (census orders 3-9 re-confirming THM-4810 and tournament_pseudoprimes_20261021, hill-climb witnesses for 65537, A038375 bound); a vertex-transitive tournament has a prime count only for C_3; Fermat primes are free vertices (5, 17 mod 36) of the prime square-sum graph; Monster/Baby layers against the residue classes typed COINCIDENCE with null probabilities; Paley counts re-confirmed (THM-4747, CONJ-002); merge note with typed verdicts",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+    "date": "2026-11-02",
+    "subject": "clocks-carriers: prove endpoint compression and Fermat orbit collision classification",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "400dcd629598c30762eb9adb8bb85bea581698a7",
+    "date": "2026-11-02",
+    "subject": "research(session139): lower stability cutoff and recover five-vertex zeta boundary",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "02d31de51e61ced69991bc3d718a8c03fe27d2b2",
+    "date": "2026-11-01",
+    "subject": "mac-mini-2026-11-01-lenses: tournament automaton run - A1-A4 PASSED (converse-blind on all classes n <= 6; circulant rank formula on 26,039 sets; Paley rank by q mod 8 with Hamming [7,4,3] and Golay [23,12,7] images; all-ones kernel at q = 1 mod 4); exploratory A5: the coarse automaton type takes exactly 10 values on the 12 five-vertex classes, one per merged node; pre-register the decisive GF(2)-similarity test (S1: types = merged nodes for n = 3, 4, 5; S2: fewer than 34 types at n = 6) before its run",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "1224a73dfc37084ea96a775fc8cfbba30e69a879",
+    "date": "2026-11-01",
+    "subject": "mac-mini-2026-11-01-fractranTM: checkpoint (pre-audit) - THM-4855 circulant tournaments as S-sequencings: segment-sum criterion, prime q palindromic path <=> palindromic word, explicit A1/A2/B/D non-palindromic Hamiltonian paths for every odd circulant of order >= 7 (all-order arc-level proof along THM-4730 (B)'s original route; 131,071 connection sets to q = 35), q <= 5 all sequencings palindromes (T5: 1111, 2112, 2222); THM-4856 GOLDBACHGAME (37 fractions), FERMATGAME (36), LEGENDREGAME (33) halt iff the conjectures fail, built verbatim on PRIMEGAME's divisor loop (G4, L3 FAILED as stated, post-hoc anatomy); 25-state Goldbach machine structure; prime groups reading 3 and interleaving obstruction; results note",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "910ce37a99b2413237eab0cdc575b7457d882936",
+    "date": "2026-11-01",
+    "subject": "mac-mini-2026-11-01-fractranTM: FERMATGAME/LEGENDREGAME confirmatory run (F1-F3, L1, L2, K1 PASSED; L3 FAILED as stated: the control truncated W, which also drives the window jump); post-hoc anatomy: G4 halted while processing N = 12, corrected L3 control (budget register) halts at n = 5; pre-register the third indexing of the owner's prime groups (R3a, R3b) before its run",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "7c3ca7617c90d52d9ed0d633d71683fc1ed9962c",
+    "date": "2026-11-01",
+    "subject": "mac-mini-2026-11-01-fractranTM: pre-register FERMATGAME (36 fractions; halts iff a sixth Fermat prime exists) and LEGENDREGAME (33 fractions; halts iff Legendre's conjecture fails), both on PRIMEGAME's divisor loop, with positive and negative controls (F1-F3, L1-L3, K1) before the run",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "4c9623c61595c2398fb1e090b95e4b5efcee3d31",
+    "date": "2026-10-31",
+    "subject": "session131 checkpoint 1: integral reflection normal form, Hamiltonian carries and verified moonshine prime shells",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "6b41fdb802068da33c679aedc79fe64561dca3a8",
+    "date": "2026-10-31",
+    "subject": "mac-mini-2026-10-31-fivegroups: apply independent audit (SOUND WITH CORRECTIONS; MISTAKE-698) - the strong points of symmetry are the circulants of order <= 5 (not 'the Fermat-order circulants': all 256 circulants on Z_17 fail), Fermat reading retyped NUMEROLOGY; THM-4853 retitled: its A007546 per-phase formula is A. P. Heinz's 2009 OEIS Maple program (found by the session after the audit via S70's audited THM-4852), now CITED and proved here; new: the A007547 closed form, the difference law sum (D(n)-1) and the constant 2(1-c); c/2 credited to Eldar (A032742); black-line pairing credited to THM-4731 (3); OEIS check extended to the full b-files (5000 and 1000 terms, audit); phase-entry wording; cross-references and calibration wording fixed; hypotheses INDEX back to 120 lines (one blank line removed after S70's addition) so check_docs passes; audit folder with independent scripts and receipts",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+    "date": "2026-10-31",
+    "subject": "session126 checkpoint 2: classify balance dynamics, compile PRIMEGAME to a local CA, and synthesize five-family symmetry bridges",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "0bfb7da8713a2ca5e42091ad96df8bbbe21ee4be",
+    "date": "2026-10-31",
+    "subject": "opus-2026-10-31-S70: checkpoint (pre-audit) - THM-4852 PRIMEGAME over the first ten primes: both published lists (owner's Wikipedia/OEIS ...15/2, 1/7, 55/1 and Guy 1983 ...15/14, 15/2, 55/1) agree because every state-free configuration is 2^n 7^(D(n)-1) (HYP-9448 P1-P3 CONFIRMED to n = 2500); the owner's pure fractions 1/7, 1/17, 55/1 = {7,17,55}; selector cellular automaton in base 29#; no adjacency bijection to the n = 5 merged tiling line metagraph (pure-blue TT5, 1->C3->1, T5); registers = the ten smallest Ogg primes",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "683d9e32c0071ee028a010759a1fec40141fdbf8",
+    "date": "2026-10-30",
+    "subject": "session122: close E14, certify five-tail runner families and constructive capacity generators",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "88e2f1c4822d7f3a4f71956d6a3e3adca1609cf1",
+    "date": "2026-10-30",
+    "subject": "session122: certify all 715 four-tail families and exact graph-capacity rows five through eight",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "0578f16726e4e535189fb6074cc2ddb024c95d82",
+    "date": "2026-10-30",
+    "subject": "lucas-prime-marking: reduce E14 to five native forms with exact clock-lattice filters",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "7a88099199a975255d59a5fc6017bf58d8945393",
+    "date": "2026-10-30",
+    "subject": "session120: classify regular polynomial lifts and seal five-frontier independent verification",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "68be9ec6eb3cc0b4606a5de3625e00794f2a22eb",
+    "date": "2026-10-30",
+    "subject": "Prove exponent-p cancellation and minimal order-five doubling recurrence",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "3ee734e14f733fc2f0eda8145bdf610bdb0fd08b",
+    "date": "2026-10-29",
+    "subject": "research(session110): certify extra prime symmetry at ramified depth five",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "800c853c8ec3db3e87ba27adc377b5be88fbffca",
+    "date": "2026-10-29",
+    "subject": "mac-mini-2026-10-29-cycle101: apply independent audit (MISTAKE-696) - THM-4849 two-base-point lemma scoped to tournament cycles, audit's (B'') at most two base points for every odd q with closed count (HYP-9446 (4) PROVED), locking-theorem hypothesis in the title, C3 = positive 5x+1 pair by construction (reframes C1) with the new all-odd criterion and R7 identification, credits to reframes C2, five-mirrors Prop. 5, ramanujan_heegner7 Prop. 1 and the concurrent clock101 packet; THM-4848 signs, Z_13 block and controls (singletons force f = 1); HYP-9446 wording; audit report and scripts; letter",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "e871dd4513c7dcaa75cb29bb9847aafac35a795c",
+    "date": "2026-10-29",
+    "subject": "collatz-fermat-reframes: exact cycle transport recurrence and fixed-chart certificate bound",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "3b4571f3633ff7d814da7a2c389c5eb5608778b7",
+    "date": "2026-10-29",
+    "subject": "mac-mini-2026-10-29-growth: apply independent audit (MISTAKE-695; report audit/REPORT.md) - THM-4847 (C3) corrected: s_2(p) = (2/p) is -1 at p = 5 and +1 at 17, 257, 65537 (the draft claimed +1 at every Fermat prime p >= 5), s_3(p) = -1 at every Fermat prime p >= 5; the circular 'semicomplete Pepin form' check replaced by direct Wright recurrences mod p^2 (s_2 = -1,-1,+1,+1 and s_3 = 0,-1,-1,-1 at p = 3,5,17,257); (B) typed CLASSICAL (Lidl-Niederreiter Thm 2.47) and ANALOGY; (A2)/(A3) wording; audit upgrade: F_6, F_9, F_11 fail both strong rotation tests at known factors. THM-4846: first-level glue loss (spur_p > 0) distinguished from full Smith discrepancy (k = 2: 1, 24, 273, 5255 at orders 5-8; k = 3: 4, 31, 373), 'first S_2 losses at order 6' corrected (order 5 at k = 2); F(2n-6) is Garey's count (Douglas characterised the class); the four spurious Z/6 correspond to the 4-dimensional star span as a whole (the Z/5 rotation acts irreducibly through Phi_5), not one per star; Nauru citation; (F) wording (non-principal minors expand over path-and-cycle systems); vacuous exponent remark removed; compound_kernel.py sink case fixed (no failure count changes). THM-4845: Hubbard-Stratonovich named; OPEN-Q-105(a) reformulated, not answered; cores are cycle types; remainder and almost-sure radius proofs added (the latter via Pringsheim); classical correction terms credited (Polya, Oberschelp, Harary-Palmer, Moon, Wright); A002785's existing self-converse formula credited. HYP-9445: growth constant 1 + 2cos(2pi/7) is the root of y^3 - 2y^2 - y + 1 (not y^3 - y^2 - 2y + 1); both count fits typed NUMEROLOGY; k = 2 versus k = 3 Smith forms; (8a) feasibility corrected. Audit scripts and outputs committed.",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "447812773bf22352b9c98ae56dc6dece52662ee0",
+    "date": "2026-10-29",
+    "subject": "mac-mini-2026-10-29-growth: credit concurrent same-day work and extend evidence (pre-audit) - THM-4845 (D)-(E) (meromorphic normalized series, poles exactly 4^k of order 3k+1, non-P-recursiveness) were published first by session98's ALL_POLES_CORE_EXPANSION (08:43; read after our checkpoint): marked concurrent with priority theirs; our graph remark is their palette theorem at q = t = 2; NEW: the Gaussian form of session98's whole palette family (covariance ln q gcd, odd weights q^(-1/2) e^X, even weights (t/q) e^X), checked for nine (q,t) through order 9. THM-4846: the vacancy-walk/star-graph form of the one-arc observer and the sharp T5 explanation of the four Z/6 (kernel lattice 6K, exact sequence with quotient (Z/6)^4 and an order-five clock) are in the concurrent research packet four_vertex_glue_fermat_20261029 (09:00), priority theirs; our ghost lemma is the general all-class rank formula. THM-4847: (A1)/(A3) restate S58 section 1.2; the concurrent FERMAT.md has the dynamical twin of the blindness (C1) and odd-order-unit certificates. HYP-9445 (1): no counterexample in 1044 random/low-cycle samples at orders 9-10 (k = 2), all 60 + 124 order-8 classes with 2 or 3 Hamiltonian cycles have torsion at k = 3; the torsion is not always 2-primary (8 and 225 classes at orders 7, 8).",
+    "tags": [
+      "five",
+      "named",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "a37e12900dcaeba4eac535ebbacece491f8d1c7c",
+    "date": "2026-10-29",
+    "subject": "mac-mini-2026-10-29-growth: checkpoint (pre-audit) - THM-4845 A000568 as a Gaussian average: with X the centred Gaussian process on odd integers with covariance ln2 gcd(p,q) (one independent N(0, phi(d) ln2) per odd divisor, Smith) and W_p = 2^(-1/2) e^(X_p), sum a_n x^n = E exp(sum_{p odd} W_p x^p/p) coefficientwise, i.e. a_n = E[Z_n(W)] with the Newton recursion n Z_n = sum W_p Z_(n-p): the core kernel GF of THM-514/516 is the same average over parts >= 3 (answers OPEN-Q-105(a)/HYP-2538); the same field gives graphs (A000088; tournaments = graphs with even power sums switched off), digraphs (A000273, doubled covariance) and oriented graphs (A001174, base 3); Cameron-Martin = the inherited cycle-insertion PDE (session98/weighted_core_transport); n! a_n/2^C(n,2) has a meromorphic GF with poles exactly at 4^k of order 3k+1 (exact expansion 1 + 32C(n,3)/4^n + (98304C(n,5)+655360C(n,6))/16^n + ...; graphs: poles at 2^d of order 2d+1, Polya), so neither a_n nor its normalization is P-recursive. THM-4846 run observers (the metagraph base path cut into k runs): the one-arc observer orients the star-transposition graph of S_n (Nauru graph at n = 4; run-symmetric block A^T, sign block signed A^T, det = prod det(M_lambda)^(f^lambda)); the two-arc unordered observer is the second permanental compound; T5's four kernel directions are vertex stars (Hodge duals of the tetrahedron boundaries) living on copies T5-w of the strong 4-tournament (+1 on one diagonal's ends, -1 on the other's), proved by an alternating in-neighbourhood identity; ghost lemma: spurious 2-factors = rank of (S-P)/2 from ker to coker of the plus sector mod 2 (T5: the cut space of K5, rank 4), with four mod-3 ghosts = the four spurious Z/6; census thresholds by order 4..8 (glue losses 4/12, 30/56, 360/456; star law fails from order 6; every strong class with >= 2 Hamiltonian cycles has torsion in M_2 through order 8). THM-4847 Fermat primes: barriers (coprimality, periodicity, cyclotomic irreducibility, Pi^0_1), the F_q[T] analogue is a theorem, tournament counting mod F_n is blind (2^C(N,2) = 1 for every F_n) while 3^C(N,2) = -1 iff F_n prime (Pepin), F_5 fails both strong rotation tests at 641 and 6700417. HYP-9445 open questions. Experiments growth_gf_runs_fermat_20261029.",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "b39949c67316f7fc3997402d290589d332e2bf59",
+    "date": "2026-10-29",
+    "subject": "research: derive all-power T5 gluing and Smith recurrences with Fermat clock controls",
+    "tags": [
+      "named",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "35ef169158f1022a9bd2156e76a0a36650e2a410",
+    "date": "2026-10-29",
+    "subject": "mac-mini-2026-10-29-growth: reserve THM-4845..4847 and HYP-9445 (owner directive: A000568 recursion/GF, metagraph partial structures, T5 spurious Z/6 vs 4-vertex tournaments, Fermat primes)",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "cf3529657a5bb76035799e2c2c7e5038131e525c",
+    "date": "2026-10-29",
+    "subject": "overnight: prove ternary block termination and five failure cylinders",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "2c4e29a5bce087e62c106a127c9419ceef729074",
+    "date": "2026-10-29",
+    "subject": "codex: prove cheaper ternary integer entry and classify five growing returns",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "5d6eb91dd76eee86b91e04d856daa32c32b3d61d",
+    "date": "2026-10-29",
+    "subject": "[sha-marked-joins]: retain incoming golden clock by classical hyperbolization",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "0930c3981d67d9f9ced66a626dd8b1e5e888e256",
+    "date": "2026-10-28",
+    "subject": "[oddness-lucas]: integrate golden Gram sectors and topology-rank separation",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "10bfc908db93dafe40cefbd3a64fbecb44a93ec5",
+    "date": "2026-10-28",
+    "subject": "[oddness-lucas]: connect golden mirrors, biplane frames and marked gap topology",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "c4761b338bb15c640fdbb07fad5638cbd28d3bca",
+    "date": "2026-10-28",
+    "subject": "[session91]: synthesize golden observation, packing metrics and guard operators",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "79883869fc85aeed726c123f051e7aeaa2165421",
+    "date": "2026-10-28",
+    "subject": "[session91]: prove guarded flip rank and integral golden operator bridge",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "c3173ce4f3eb4bc8a8072c5d35b49df1f5af40dc",
+    "date": "2026-10-28",
+    "subject": "[session91]: prove guarded flip rank and integral golden operator bridge",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "a0f734ae2054e4b91b26ac09dc96825f84254201",
+    "date": "2026-10-28",
+    "subject": "[session91]: prove guarded flip rank and integral golden operator bridge",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "c3ab42e28101945b5151bf391bf04b6b3c022f8b",
+    "date": "2026-10-28",
+    "subject": "[session91]: prove guarded flip rank and integral golden operator bridge",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "bd3d583001ef4b5edfc4c28f056e41d9f69f4488",
+    "date": "2026-10-28",
+    "subject": "[session91]: prove guarded flip rank and integral golden operator bridge",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "d5375dbd4a6dbd0b00236d928aa9d84996918eee",
+    "date": "2026-10-28",
+    "subject": "[session91]: connect golden observer norms with exact geometric carriers",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "15de5f8befc060cc3c29e86329c68a61b051fa8a",
+    "date": "2026-10-28",
+    "subject": "[session91]: connect golden observer norms with exact geometric carriers",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "246658763ad1066e1e87af438b49b1ddbd024d2c",
+    "date": "2026-10-28",
+    "subject": "[session91]: connect golden observer norms with exact geometric carriers",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "94ed7c1a237a1ef9bbc947f800a39b754607ace6",
+    "date": "2026-10-28",
+    "subject": "[session91]: connect golden observer norms with exact geometric carriers",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "25ed54de69dda79e9ef7d1dcaf5bdb6f79d0916e",
+    "date": "2026-10-28",
+    "subject": "[session91]: connect golden observer norms with exact geometric carriers",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "b767e8904be7428e9db5685035418a5d94dfe137",
+    "date": "2026-10-28",
+    "subject": "[session91]: connect golden observer norms with exact geometric carriers",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "8a49ddbaa99d77de580a327fa0d07b1dc23fe9b7",
+    "date": "2026-10-28",
+    "subject": "[session91]: connect golden observer norms with exact geometric carriers",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "1899576fd6056cffde9fe38fa9006599b1477128",
+    "date": "2026-10-28",
+    "subject": "[session91]: connect golden observer norms with exact geometric carriers",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "fcf30b1c2337d5501655809811f94fb0080ca377",
+    "date": "2026-10-28",
+    "subject": "[session91]: distinguish golden cyclic quotients from exact toggle dynamics",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "774a05afe15528c6ff20793eb55b1a6b6d4099c1",
+    "date": "2026-10-28",
+    "subject": "[session91]: distinguish golden cyclic quotients from exact toggle dynamics",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "af4adda3decb65b8097217b148af2ea7fbad81a2",
+    "date": "2026-10-28",
+    "subject": "codex paired-budget: connect signed cycles, square-sum components, and lifted golden clocks",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "caa506eb9f7187e0fec06175545651c2e7a8f044",
+    "date": "2026-10-28",
+    "subject": "mac-mini: prove one-step paired ROOT budget and five-interior extension",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "933acccbf6d585d1077526f6eebe72df2109dc18",
+    "date": "2026-10-27",
+    "subject": "mac-mini-2026-10-27-slab: apply independent audits (three audits; every proof confirmed, every number reproduced; MISTAKE-687) - THM-4819: Lemma B / Theorem D / Lemma B' / Theorem E PROVED as written (audit: strong form of Lemma B on every Hamilton cycle, all regular classes at 7-11 and all circulants at 13, 15, ~1.97e9 instances; the construction executed; 127 replayed words archived); R5[C3], C3[R5] are Z15 circulants; the remark's transitivity clause needs the weak form (m = 4 added); (E) now from n = 8 by an exhaustive Lemma B' check; THM-4820: every number PASS, f(46,35,35) = 42 re-certified; the window lemma (a cost-C tree stays at norm <= 3C+1) makes all lattice values exact; 51 has no tight split; inertness reading restricted to the (C) class; asymptotic two-thirds marked conjecture; g(101) = floor(101^2/3) + 2 refutes HYP-9426 (3); Session75's EISENSTEIN_INVOICES credited as concurrent; k*(15) = 70; THM-4823: PASS, labelled count and W(n) = A133670(n) - n added, at most one matrix product; THM-402 verification note (its 544 is the W4-free count); ledger section 5 rewritten (ETH proper is Sigma^0_3, the 2^o(n) form Pi^0_4, the preprint's claim Sigma^0_2; canon horizons Collatz 2^71, cycles > 1.375e11 odd elements, JC(2) degrees 101/108, H >= disc through order 7; definitions, Reading and missing rows); reflection corrected (trace duality, not Lipschitz; Klein-four sentence; EM an ANALOGY, citations web-checked; five-vertex data); note in klein's reflection section 1; HYP-9426 (1) sampled at orders 11 (1,000/1,000) and 13 (300/300); audit reports saved",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "96e35642110104cc547516a63f37eebcf930f707",
+    "date": "2026-10-27",
+    "subject": "Session74: checkpoint 2 - exact Paley11 transitive distance and all-period golden arithmetic",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "e9b023a7ff84db3a24f7683cb904eac88fae8497",
+    "date": "2026-10-26",
+    "subject": "opus-2026-10-27-S63: note, THM-4810, HYP-9420 (pre-audit): raw-H atlas n <= 8 with strong fibres, exact low end of S_9 / S_10, certified witnesses to 6,000 (strong-untouchables below 6,001 = {1, 7, 21}); complement grammar: parity invariant, two-move criterion, score monotonicity d >= L (P_11 at least five moves from any forest frame; its depth-two census exhausted), Paley budgets; index rows, ledger",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "25ccfaa9caba673990c79c877b877394552b24ae",
+    "date": "2026-10-26",
+    "subject": "opus-2026-10-26-S62: reserve THM-4809, HYP-9419 (Dudeney/Fermat, 44 and 5, composition guards, tournaments vs even graphs, clock arrows, Turing machines, unifying theorems)",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+    "date": "2026-10-26",
+    "subject": "opus-2026-10-26-S58: THM-4800 (6) - the Fermat lines of F_n and F_(2^n) are antipodal arcs of one A-cycle mod F_n (F_(2^n) = 2 mod F_n), the dynamical form of kind-pasteur-S5's concurrent landing-point test F_n | L_(2^n); credits kind-pasteur-S5 (Theorem L, THM-4793 audit, Aurifeuillean no-go); CD-rung reading corrected (rungs are dim+1)",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "d738adf08e6ad6545e568aed99fd72c821b6e50b",
+    "date": "2026-10-26",
+    "subject": "opus-2026-10-26-S58: pre-audit checkpoint - THM-4800 (Pepin as the valuation-two Collatz branch (3x+1)/4: trivial-cycle fixed point, half-turn about 1, Fermat line = initial arc of the Pepin cycle, mirror line, Paley, Mersenne counterpart), THM-4801 (Collatz on constructible polygons: trunk five, initial-segment principle, Collatz-closed family 2^a{1,3,5,85,21845,1431655765}), HYP-9410 (Collatz-line calibration of the Fermat-prime heuristic: L-P1 failed, algebraic correction passes out of sample), figure; THM-4802/HYP-9411/HYP-9412 released",
+    "tags": [
+      "five",
+      "named"
+    ]
+  },
+  {
+    "sha": "a9060e82d9334ec875b93f647f95cfe18db61eb8",
+    "date": "2026-10-26",
+    "subject": "opus-2026-10-26-S58: L-P1 FAILED low (z=-3.2), L-P2/L-P3 pass; post-hoc explanation = algebraic/Aurifeuillean factorisations of 3^j 2^b +- 1 invisible to the sieve (genuine Fermat lines immune); pre-registration 2 (L-P4, L-P5) out of sample, committed before test2",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "3543031f963624411871a705eda626fd3c06b0b8",
+    "date": "2026-10-26",
+    "subject": "klein-2026-10-26-twist: cite the kind-pasteur audit and landing-point addendum in the Fermat packet",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "a015a5a6d4761d705d80e65af4d016982a1aac1b",
+    "date": "2026-10-26",
+    "subject": "klein-2026-10-26-twist: Theorem M* - L=1 mod 4 Fermat-line merges as THM-4581 chain, d>=L+5, L+5 iff L=81 mod 256, 2-adic depth tree",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "eb553116c28d1e78aaaeecce36b1fad5c5ea4f59",
+    "date": "2026-10-26",
+    "subject": "opus-2026-10-26-S58: pre-registration L-P1..L-P3 (prime counts on the Collatz Fermat/Mersenne lines vs the sieve-corrected random model behind the no-sixth-Fermat-prime heuristic), committed before the primality tests",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "efb476be0734dbf8ceb326ed4931a4048225df28",
+    "date": "2026-10-26",
+    "subject": "opus-2026-10-26-S58: reserve THM-4800..4802, HYP-9410..9412 (Fermat primes, Pepin reworked for Collatz, groups of five)",
+    "tags": [
+      "five",
+      "named"
+    ]
+  },
+  {
+    "sha": "bfca3648350028e0dda23da9cd03569ca8d5e469",
+    "date": "2026-10-26",
+    "subject": "mac-mini-2026-10-25-pyth: HYP-9391 after independent audit (MISTAKE-671) - seven-vertex Paley census: exact O(q^2) TT7 formula (four Legendre triple products; exact at 618 primes to 9967, audit), 37 graph identities, Y04 = -Y02 and Y06 = Y05 PROVED (audit), twisted fourth Legendre moment credited to Frechette-Ono-Papanikolas 2004 Prop. 2.1 (PROVED), four new irreducible weight-5 motives not GL(2) with statistics consistent with USp(2n) (rank not determined; claims corrected), Katz mechanism corrected; file renamed (four-new-weight-five-motives); audit report, scripts, data; extension of the triple products to 9999",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "96cddfc8964f8c6989893e1309da620edd4a91ab",
+    "date": "2026-10-25",
+    "subject": "klein-2026-10-25-twist: Fermat line under Collatz, exact merges, Pepin affine form, five-ladder",
+    "tags": [
+      "five",
+      "named"
+    ]
+  },
+  {
+    "sha": "a0645dc58ce10bd55e5a98a85d5b815993406ffa",
+    "date": "2026-10-25",
+    "subject": "klein-2026-10-25-twist: typed analogy atlas, Legendre tournament census, problem classification by level and machine size, fifteen/twenty-five ledger",
+    "tags": [
+      "five",
+      "meta_search"
+    ]
+  },
+  {
+    "sha": "bc3c88ec033d809dee0d665314005308012f0bd6",
+    "date": "2026-10-23",
+    "subject": "metagraph ports: ground rooted-five repairs and marked phase guards",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "211ab1a1c1d1cbc2ab1515142c6c22de5836fdeb",
+    "date": "2026-10-22",
+    "subject": "opus-2026-10-22-ssj: wave 2 checkpoint (pre-audit) - owner's split of Ogg's primes = M\\B, B\\Fi22, Fi22 along levels 1 | 2 | 6 (Aricheta's theorem, re-verified at 13 levels from newform Atkin-Lehner signs, cross-checked on 91 levels); 2^5*3^7*5^3*7^4*11*13^2 = Fi22-part of |M|/|B|; square-sum graph: s(n) runs and Pell coincidences, onset lemma (15, 23, 25), extension at 16, 17 and loss at 18, edge counts at 25, sum-graph hostile probe; {7, 21}: nested moonshine levels 7 (He) and 21, F_21 free on the 189 paths of QR_7, numerology typed",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "e3c2c954d56719cce646542ac0702707a1daf984",
+    "date": "2026-10-22",
+    "subject": "opus-2026-10-22-ssj: independent audit applied (audit_ssj/REPORT.md, PASS WITH CORRECTIONS) and MISTAKE-666 - X_0(8) is F_p-heavy at p = 7, 23 and X_0(7), X_0(9) split evenly at p = 5 (the 'F_{p^2}-heavy for every p' sentence was false); later supersingular arXiv papers listed (2610.21488, 2609.17819 offered as candidate sources); local factor at N = 9 is 1 + (-p/3); X_0(27) = 27a1 has j = 0 (CM by -3); route ranges stated; diamond convention (upper-left entry) stated; twist wording, proof model step, Ogg-list range fixed; level_relations.gp no longer appended on rerun; complete residue enumeration of the local numbers (92 classes mod 4N, 0 deviations) so the class-number table holds for every prime; KLS identifier intake file",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "33f9f99615a8cd9fa5f6a0f4309f2335834a0fd6",
+    "date": "2026-10-22",
+    "subject": "opus-2026-10-22-ssj: checkpoint (pre-audit) - supersingular counts vs the divisor shapes p^2, pq, p^2 q and six Rogers-Ramanujan-type families: F,U,S prime-blind (1,1,1)/(2,2,2)/(4,2,3) = defect -1/-2 level sets, prime-adjunction recursion; arXiv 2610.05474v1 is the KLS proof (source mismatch, recorded); supersingular census p < 3000 (three routes, class numbers, Ogg); identities = three theta families, products = Hauptmoduln of X_1(7), X_1(8), X_1(9); #ss exact (p-1)d/12, Frobenius = diamond <p>, F_p class-number formula with floor/surface local numbers (X_1(8) mod 16), Atkin-Lehner cross-check, level-N Ogg lists",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "856137b8f668b7b0479d98789d58315cd11eb54f",
+    "date": "2026-10-22",
+    "subject": "mac-mini-2026-10-22-loop4: HYP-9371 section 8 (pre-audit) - five loops on DRT(23): Delta c_10 = delta_10 + Delta X_4^(10) + Delta X_5^(10) exactly (<= 3e-18) for all 13 non-Paley classes, so Paley's offset and the six-vertex census enter at forest length 10 through five loops; strict n^-4 prediction 45-61% of each difference (slope 71%, Paley offset 17%); loops <= 5 by forest length predict 75-83% (slope 88%, Paley offset 61%) with no exact input; q^4 X_4(P_q) -> about 5.0e3",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "5230f1266aa4363c5169c044c43960459cc98a40",
+    "date": "2026-10-22",
+    "subject": "mac-mini-2026-10-22-loop4: five-loop engine - 1076 excess-4 cores and 2046 excess-5 cores with V <= 5 (individualisation-refinement canonical forms; configuration-model checks exact); sign-network engine loop_engine5.py (decomposition sum as a tensor network over half-edge orientation signs, closed runs removed by inclusion-exclusion over closed trails): equals decomp.c's tensors on all 129 cores of excess <= 3, X_4 z-series equals exact blow-up scaling on R_7, P_7, N_7 (z^6..z^14), R_9, N_9 (z^6..z^10)",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "f949b0c234db6b4c793e2870c9c914b2f7abbc74",
+    "date": "2026-10-22",
+    "subject": "opus-2026-10-22-S54: HYP-9369 - joint-remainder budget on all 13 doubly regular 23-tournaments (mac-mini's exact forest numbers): n^3 (A - W1 - W2) = -218.5, n^3 (B - B_f) = +225.3, joint +6.85 (P_23 +7.02); five-loop and higher about +145/n^3 given n^3 X_3(P_23) = -363.5",
+    "tags": [
+      "five"
+    ]
+  },
+  {
+    "sha": "9bee1a59fe0930e7677c9f1b07b9f097d2eee50d",
+    "date": "2026-10-21",
+    "subject": "opus-2026-10-21-S51: apply independent audit (MISTAKE-657; 656 was taken concurrently by Session26) - no numerical error (every formula, count, coefficient and verdict reproduced by independent code, incl. the 723,544-class inventory); prior art added: Moon 1972 (single arc, chains), bof MathOverflow 234029 (crossing case p = r = 0), El Sahili-Abi Aad DAM 2020 (co-author omitted before), Abi Aad DAM 2026 Prop 1, repo THM-250, deep_extension_s20al.out two-arc table, single-core signatures of the k = 6 fan; bof-Royle MO 232751 as origin of the 7/21 conjecture; mac-mini MSG-2400 credited for the 7-floor and the Fermat monoid; THM-4748 remark sentences corrected, statement 6 unbounded odd parts now PROVED, fan uniqueness at k = 6, 9, 11 (FINITE-EXACT); THM-4749 title no longer types the value set KNOWN, statement 4 unconditional, certified k >= 17 cases listed, 63 facts KNOWN (Session24); HYP-9359 pre-registration blindness downgraded (order-9 slice examined, 9.6 s margin, G1-G4 blind only to the decomposition), 'almost entirely'; note corrected (relative densities, fa-share mechanism moved to refuted, transition mixing printed); outliers.py; audit scripts c0-c9 and REPORT.md",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "be53c09bdd7c5fb3778279008cbbd5b3f19c2e45",
+    "date": "2026-10-21",
+    "subject": "mac-mini-2026-10-21-fanopsp: checkpoint (pre-audit) - THM-4750 the Camion function: strong tournament counts interpolate p-adically along classes mod p-1 at HALF the Kummer speed (v_p Delta^i >= ceil(i/2) from the Session25 filtered algebra; sharp; extra divisibility exactly at p | (2k-1)!!), full speed at Wieferich primes (1093 K=4, 3511 K=3) and, for base a, at base-a Wieferich primes (semicomplete digraphs at p = 11); Fermat-quotient curvature a_2/p = -q_2(p) X(m-2) with X(m-2) = #tournaments made strong by one two-way pair (every class, p <= 10^4); second-order Camion zeros: quadratic over F_p, split or inert 1:1 (1226 primes), triangle class always split, exactly one root per zero class at 1093 and 3511 (predicted before the test); Weierstrass degree 2 = deg C(n,2); r-uniform hypergraphs speed 1/r and cubic class sequences with random-cubic root statistics (60 primes <= 2200); Camion limit Lambda_p = class-1 function at n = 0, h(p) = v_p(Lambda_p); Camion-Wieferich primes <= 1e5 exactly 3, 13, 22409 (h = 2); the prime 2: strong tournament classes odd iff n != 2 mod 3 (T = Phi_3 mod 2, Moon), 2-adic quasi-period 3*2^j, simple 2-adic zero n* = 3250 mod 4096 of the groupoid count; HYP-9361 open laws; HYP-9358 updated; note section 13",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "153d17c527aef3552e9dc70dd7e7e66691e7a83e",
+    "date": "2026-10-21",
+    "subject": "mac-mini-2026-10-21-fanopsp: THM-4746 (9) prime-power towers - D(p^a) = (2/p)D(p^(a-1)) mod p^a (from Session25's mod p^k law, found independently here), Camion exponents form an initial segment of height h(p) = frozen v_p(D(p^a)); h(3) = h(13) = 2, h(p) = 1 for other odd p <= 10^4 (only primes, 9, 169); Fermat/Wieferich parallel; FINITE-EXACT replication on 48 (p,k) pairs, CRT criterion for all composites <= 3000, towers to 3^9, connected graphs 15 pairs, independent Python checks; HYP-9358(e) exact thresholds table and conjectures (e1), (e2), (a'); Mani-Stones quoted range n >= p^r vs n >= 2r; note section 12",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "f002fc425336929fc598f6d304ae4a067d651f6c",
+    "date": "2026-10-21",
+    "subject": "mac-mini-2026-10-21-fanopsp: checkpoint (pre-audit) - THM-4746 Camion pseudoprimes: strong labelled tournament counts are quasi-periodic, s(m+p-1) = (2/p) s(m) mod p (group-ring inversion in the Hurwitz ring; linear condensation essential: semicomplete digraphs obey (3/p), connected graphs nothing), Euler criterion s(p) = (2/p), Korselt-type criterion with universal residues 1,2,3 (K1, no strong K2, the triangle), so Carmichael numbers, 2p, 3p and 3b(3b-2) (incl. 4^q-1 for Mersenne-Wagstaff double primes) pass; 21 passes, 341 fails at 31 (residue = Wagstaff 11), 1023 passes; tournament-count test = Fermat to base 2^((n-1)/2), separated from the strong test exactly by the triangle; Camion-Wieferich primes <= 3000: 3, 13; THM-4747 Hamiltonian-cycle congruences (fixed-vertex lemma, circulant C = (p-1)/2 mod p*mu, Paley mod p(p-1)/2, rho_0 = mu mod 2mu, Wilson), exact circulant data n <= 23 and Paley P_19, P_23; HYP-9357 P_q H-maximal iff q = 3,7,11 = Kantor 2-transitive Paley designs = Galois exceptional primes (rotational circulant beats P_19, P_23); HYP-9358 open Camion laws (Wieferich-type primes, Poisson sporadic classes, counting, mod 9); census n <= 9 of H, C, tc",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "c217352c9a59b5264adbabc8db78cfe84ddb0226",
+    "date": "2026-10-21",
+    "subject": "mac-mini-2026-10-21-fanopsp: reserve THM-4746..4747, HYP-9357..9358 (pseudoprime lens: Fermat/Wilson congruences for Hamiltonian cycles and paths, tournament pseudoprimes, Paley/circulant count arithmetic, cyclotomic 7/21 vs Cipolla 341 dictionary); lane message to opus S50",
+    "tags": [
+      "named"
+    ]
+  },
+  {
+    "sha": "070879ed5b6e8154015a4fa96aff2ea8936e672d",
+    "date": "2026-10-21",
+    "subject": "session23 extension: prove pentagon flow functions with exact cone certificates",
+    "tags": [
+      "named"
+    ]
+  }
+]

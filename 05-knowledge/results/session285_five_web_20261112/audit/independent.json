@@ -1,0 +1,61 @@
+{
+  "checks": {
+    "independent_period_ranks": [
+      {
+        "coefficients": [
+          "1"
+        ],
+        "determinant": null,
+        "rank": 0
+      },
+      {
+        "coefficients": [
+          "I"
+        ],
+        "determinant": null,
+        "rank": 1
+      },
+      {
+        "coefficients": [
+          "1",
+          "I"
+        ],
+        "determinant": null,
+        "rank": 2
+      },
+      {
+        "coefficients": [
+          "1",
+          "I",
+          "1 + I"
+        ],
+        "determinant": "72",
+        "rank": 3
+      }
+    ],
+    "real_polynomial_kernels": [
+      [
+        1,
+        6,
+        1
+      ],
+      [
+        2,
+        15,
+        4
+      ],
+      [
+        3,
+        28,
+        9
+      ],
+      [
+        4,
+        45,
+        16
+      ]
+    ],
+    "symbolic_CR_flatness": true
+  },
+  "status": "PASS"
+}

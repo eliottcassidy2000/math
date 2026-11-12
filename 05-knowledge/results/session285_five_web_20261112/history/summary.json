@@ -1,0 +1,52 @@
+{
+  "ref": "7510e38f9c777a61a1b3210334077e0ebe0df2ad",
+  "scope": "tracked prose under 00\u201307 at pinned ref; no agents mirrors, untracked work, binary attachments or deleted versions; skip blobs over2MB and unavailable local objects",
+  "candidate_paths": 34887,
+  "distinct_candidate_blobs": 28622,
+  "read_paths": 34864,
+  "unavailable_paths": 23,
+  "seed_hit_paths": 7509,
+  "seed_hit_distinct_blobs": 6877,
+  "query_path_counts": {
+    "five_word": 6883,
+    "five_set": 584,
+    "pentagonal": 743,
+    "platonic": 251,
+    "ogg_moonshine": 331,
+    "prior_search": 452,
+    "fermat": 195,
+    "stress": 0
+  },
+  "expansion_only_paths_with_at_least_two_topics": 10069,
+  "expansion_vocabulary_provenance": "manually selected from deeply read inherited five-core, aliquot, Platonic, PRIMEGAME and coherence sources; co-occurrence edges are not mathematical bridges",
+  "seed_regex": {
+    "five_word": "\\bfive\\b|\\bfivefold\\b|\\bfive[- ](?:core|port|state|parameter|dimensional|fold)",
+    "five_set": "(?:set|group|collection|family|families|list|types?|classes|elements|parameters?)\\s+(?:of\\s+)?(?:exactly\\s+)?(?:five|5)\\b|\\b(?:five|5)[- ](?:element|parameter|dimensional|member|fold|core|port|state)",
+    "pentagonal": "pentagon|pentagonal|pentagram|pentad|quintic|quintuple",
+    "platonic": "platonic|icosahed|dodecahed|golden triangle",
+    "fermat": "Fermat (?:prime|number)|P[e\u00e9]pin",
+    "ogg_moonshine": "\\bOgg\\b|moonshine|supersingular",
+    "stress": "isothermal|isometric net|stress traject|Airy stress|Nem[e\u00e9]nyi",
+    "prior_search": "(?:search|histor|recover|collect|catalog|atlas|inventory).{0,70}(?:five|Platonic|Fermat)|(?:five|Platonic|Fermat).{0,70}(?:search|histor|recover|collect|catalog|atlas|inventory)"
+  },
+  "topic_regex": {
+    "involution": "involution|self.converse|anti.automorphism",
+    "curvature": "curvature|Gauss.Bonnet|angle.defect|hyperbolic|isothermal",
+    "finite_state": "automat|finite.state|transfer matrix|Hankel|realization rank",
+    "golden": "Fibonacci|Zeckendorf|golden|Lucas|Cassini",
+    "modular_forms": "modular form|moonshine|supersingular|Atkin.Lehner|Gleason",
+    "symplectic": "symplectic|Lagrangian|Richelot|Pauli|Hamming",
+    "arithmetic_dynamics": "Collatz|FRACTRAN|PRIMEGAME|register machine|cellular automat",
+    "interface": "interface|endpoint|receiver|rooted|port tensor",
+    "coherence": "associahed|pentagon|coherence|holonomy|flat connection|cocycle",
+    "cancellation": "cancellation|moment|signed|kernel|positive cone",
+    "geometry": "conformal|elastic|stress|harmonic|biharmonic|Airy|potential",
+    "number_theory": "aliquot|idoneal|divisor|totient|Carmichael|Pythagorean",
+    "graph_spectrum": "square.sum|metagraph|Hamilton|tournament|Cayley",
+    "prime_core": "prime core|indecomposable|modular decomposition|substitution|critical tournament"
+  },
+  "omission_reasons": {
+    "over_2MB": 18,
+    "missing_local_blob": 5
+  }
+}

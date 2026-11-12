@@ -1,0 +1,9 @@
+{
+  "candidate_paths": 34887,
+  "expansion_paths": 10069,
+  "omitted_paths": 23,
+  "read_paths": 34864,
+  "scope": "manifest and aggregate reconciliation; no full lexical replay",
+  "seed_paths": 7509,
+  "status": "PASS"
+}

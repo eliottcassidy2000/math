@@ -1,0 +1,20 @@
+{
+  "inventory.json": {
+    "raw_bytes": 5840650,
+    "gzip_bytes": 1299857,
+    "raw_sha256": "b99d4294c459e238b9d576bd9c42b2e177fdf210e4b79043798b53b1bb505ed9",
+    "gzip_sha256": "bf4357bd7abe9cbda1a860144e5db7fd3ccfcfecfee4f0ea127154cb6e911eee"
+  },
+  "expansion.json": {
+    "raw_bytes": 2569435,
+    "gzip_bytes": 471781,
+    "raw_sha256": "9ff26dd59126635aeffc8e6369e6289787d55e84186e9f4e484781f471b3b57b",
+    "gzip_sha256": "5d0adf222c729118e0209800d908cb4b2ccf8a2c7cb55334426a419d1654003b"
+  },
+  "searched_manifest.json": {
+    "raw_bytes": 5370279,
+    "gzip_bytes": 1278716,
+    "raw_sha256": "c6231846ecb55b71d1a197972701f1b30d2363e56f25b77315009b0616db3ab0",
+    "gzip_sha256": "5aa89c42044e2062e86372e586742f9e89f960857ec673479f9268c558b3a6fd"
+  }
+}

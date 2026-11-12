@@ -1,0 +1,72 @@
+{
+  "all_k3_path_counts": {
+    "0": 1,
+    "0 1": 5,
+    "0 1 2": 11,
+    "0 2": 5,
+    "0 2 1": 11,
+    "1": 3,
+    "1 0": 5,
+    "1 0 2": 13,
+    "1 2": 5,
+    "1 2 0": 11,
+    "2": 3,
+    "2 0": 5,
+    "2 0 1": 13,
+    "2 1": 5,
+    "2 1 0": 11,
+    "empty": 1
+  },
+  "grammar": [
+    {
+      "edges": 1,
+      "k": 1,
+      "oriented_swap_filling_checks": 0,
+      "vertices": 2
+    },
+    {
+      "edges": 5,
+      "k": 2,
+      "oriented_swap_filling_checks": 2,
+      "vertices": 5
+    },
+    {
+      "edges": 24,
+      "k": 3,
+      "oriented_swap_filling_checks": 18,
+      "vertices": 16
+    },
+    {
+      "edges": 130,
+      "k": 4,
+      "oriented_swap_filling_checks": 132,
+      "vertices": 65
+    },
+    {
+      "edges": 815,
+      "k": 5,
+      "oriented_swap_filling_checks": 980,
+      "vertices": 326
+    }
+  ],
+  "pentagon_only_hostile": {
+    "all_six_pentagon_defects": 0,
+    "hexagon_defect": 1,
+    "square_defect": -1
+  },
+  "scalar_quotient_hostile": {
+    "AB": 5,
+    "ABC": 11,
+    "BA": 5,
+    "BAC": 13,
+    "core_rows": [
+      0,
+      1
+    ],
+    "tail_beaten_core_masks": [
+      1,
+      2,
+      2
+    ]
+  }
+}

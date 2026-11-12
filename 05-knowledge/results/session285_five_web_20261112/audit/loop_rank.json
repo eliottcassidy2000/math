@@ -1,0 +1,37 @@
+{
+  "controls": [
+    {
+      "cell_rank": 0,
+      "cells": 0,
+      "cycle_rank": 0,
+      "edges": 1,
+      "k": 1,
+      "vertices": 2
+    },
+    {
+      "cell_rank": 1,
+      "cells": 1,
+      "cycle_rank": 1,
+      "edges": 5,
+      "k": 2,
+      "vertices": 5
+    },
+    {
+      "cell_rank": 9,
+      "cells": 9,
+      "cycle_rank": 9,
+      "edges": 24,
+      "k": 3,
+      "vertices": 16
+    },
+    {
+      "cell_rank": 66,
+      "cells": 66,
+      "cycle_rank": 66,
+      "edges": 130,
+      "k": 4,
+      "vertices": 65
+    }
+  ],
+  "status": "PASS"
+}

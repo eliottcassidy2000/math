@@ -1,0 +1,68 @@
+{
+  "catalog_hashes": "PASS",
+  "pairs": [
+    {
+      "normal_optimized": "identical",
+      "receipt": "stress/receipt.json",
+      "script": "stress/verify.py",
+      "sha256": "f804a08c670b679bf9bfcbaa5df0fae76e079d9b14ad426a5c125960d3df954c"
+    },
+    {
+      "normal_optimized": "identical",
+      "receipt": "bridges/periods.json",
+      "script": "bridges/verify_periods.py",
+      "sha256": "056c54e3ed014f4fe79a84dfb86c7fea622040edcad7d61ff48ead10ff95ccb6"
+    },
+    {
+      "normal_optimized": "identical",
+      "receipt": "tournaments/replay.json",
+      "script": "tournaments/verify.py",
+      "sha256": "16c881a4723ee088e91790f239a754c5ab38d49d9e193c33450a7c59c903040c"
+    },
+    {
+      "normal_optimized": "identical",
+      "receipt": "tournaments/orbit_scan.json",
+      "script": "tournaments/scan_orbits.py",
+      "sha256": "1bf5c9191e2f047c709c28870242b1e5fe94db6b38095fe5df329ce7cdd556e6"
+    },
+    {
+      "normal_optimized": "identical",
+      "receipt": "holonomy/RESULTS.json",
+      "script": "holonomy/verify.py",
+      "sha256": "24a9090b3f0f27f3cb236c758b186db80646a4c25235fa1905511e01638531cc"
+    },
+    {
+      "normal_optimized": "identical",
+      "receipt": "history/mechanisms.normal.json",
+      "script": "history/check_mechanisms.py",
+      "sha256": "3816cf7a35847f96544819ea4c9e745f1ce3843886663322e36969660eb2de5e"
+    },
+    {
+      "normal_optimized": "identical",
+      "receipt": "audit/independent.json",
+      "script": "audit/independent.py",
+      "sha256": "26a9231ffd833bf9abf3751ee8621db3cdf3d8c0051a89e1d61a33c761b52f20"
+    },
+    {
+      "normal_optimized": "identical",
+      "receipt": "audit/loop_rank.json",
+      "script": "audit/loop_rank.py",
+      "sha256": "6f23ae731b57dbdbac6389462fba399281716fd2653fa5c540cb06914aef3271"
+    },
+    {
+      "normal_optimized": "identical",
+      "receipt": "audit/tournament_counts.json",
+      "script": "audit/tournament_counts.py",
+      "sha256": "c2fd39d6558f716e98953fc1c96080cddf181b2dc8ed24cd299c9ea0240152a8"
+    },
+    {
+      "normal_optimized": "identical",
+      "receipt": "audit/inventory_scope.json",
+      "script": "audit/inventory_scope.py",
+      "sha256": "4b62f3d58a33d2454c970179d8f86bbaa07733a3ea73a840018b7f970b671c9a"
+    }
+  ],
+  "python": "3.12.14",
+  "status": "PASS",
+  "sympy": "1.14.0"
+}
