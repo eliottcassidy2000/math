@@ -1,0 +1,6 @@
+direct joins, full closure below 2^11: 25378 live states; odd numbers missed: 28
+   misses: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861]
+
+real	0m2.985s
+user	0m0.000s
+sys	0m0.062s

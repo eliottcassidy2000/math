@@ -1,0 +1,5 @@
+D1  direct joins, depth 2 and 3, words of length <= 2, chain lengths 0, 1: 1470 cases, 0 mismatches
+
+real	0m2.029s
+user	0m0.030s
+sys	0m0.062s
