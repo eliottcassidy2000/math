@@ -1,0 +1,60 @@
+PROGRESS (lane architecture, S94) - final state, 2026-11-11 about 19:40.  Chan-Pak stays OPEN.
+Files in this folder: PROOFS.txt (P1 reduction with 343; P2 certificate lemma; P3 necessary conditions; P4 one-exit
+extension in source coordinates - a first draft of P4 was wrong and is replaced), reduction_check.py/.out (PASS),
+det_density.py/.out, p4_check.py/.out (PASS, 5,405 rooted labelled tournaments).
+
+SOURCES READ: s93_finish_results.json (four route assessments, all claims); git log of 4 days (300 lines);
+THM-5126, THM-5130 (head, (A)), THM-5129 (head), THM-4885 (head), THM-4883, THM-4960, THM-5000, THM-4094 (head);
+HYP-9658, HYP-9662, HYP-9640, HYP-9659, HYP-9661, HYP-9664, HYP-9453, HYP-9454 (heads); titles of all THM 4861-5146
+and HYP 9420-9676 that mention the conjecture; Session276 SYNTHESIS, Session277 board, Session275/270 open questions,
+multiplicand_saturation_chanpak and summand_multiplicand_growth READMEs; OPEN-QUESTIONS OPEN-Q-028/055/094/100;
+Session193 modular_sync Theorem 1.  NOT read in full: Sessions 260-269, 271-274 lane notes, THM-5070/5080/5133/5138
+bodies, kind-pasteur S23-S24 notes, mac-mini 11-10/11 notes beyond commit messages and titles.
+
+ANSWERS
+(a) Nothing found goes beyond the session context: no positive-density statement, no exact covering family, no
+    reduction to a finite computation.  Best proved counting bound: A(Y) >= c Y^(3/4)/(log Y)^4 (THM-5141).
+    Hazard: OPEN-QUESTIONS OPEN-Q-094 says HYP-2271/2180 "prove the H-spectrum is a co-finite semigroup with exactly
+    2 gaps"; that argument proves only that 7 and 21 are not values (OPEN-Q-100 says surjectivity is out of its reach).
+(b) Proved infinite families of values (all of density zero): products of values (hence every odd N with all prime
+    factors <= 2^35, with the 7-lane caveat of P1); lines 1 + c 2^s and c 2^s - 1 for odd c <= 4097 (THM-5126,
+    HYP-9658 (B), THM-5130 (E)), extended in the S93 worktree to c < 53559 / c < 59083 (not in canon); weight three
+    1 + 2^b + 2^(b+d), d <= 7; grid 1 + 2^s + 35 * 2^(r+s) for all r, s >= 1; tower families of THM-5130 (D);
+    2^k - 1 (k >= 4); 57 * 2^t + {41, 43, 45}; runs of k+1 consecutive odd counts (THM-4960) and rectangles
+    B + 2(45 i + 37 j) (THM-5000); Session276 four consecutive odd counts N_j .. N_j + 6 for every j; the one-apex
+    counts themselves (at least c Y^(3/4)/(log Y)^4 of them).
+(c) Local: every residue class modulo every M (odd classes if M is even) contains infinitely many values (Session 25,
+    Session193 modular_sync Theorem 1: one-apex words).  F1 has positive by-value density in every class at fixed odd
+    primes, squarefree odd moduli, powers of 2 (THM-5128) and every odd modulus (THM-5134); two-apex H equidistributes
+    mod 3, 4, 8 (S93).  No residue class is known to contain all large values (that would be positive density).
+
+ROUTES (statement that would imply the conjecture | missing lemma | distance)
+ R1 two-apex completeness: every odd N >= 2^26 is H(w), w over {0,1,2,3} | pointwise r(N) > 0 | far (solvable
+    semigroup, multiplicity N^0.26 below the square-root barrier).
+ R2 port-chain orbit HYP-9640 (B): 56 matrices reach every odd v >= 493 (134 invertible: all but 7, 21) | pointwise
+    local-global for a 3x3 nonnegative semigroup | far (no theorem of this type exists, density one at best).
+ R3 seeds (US): every M >= 2^34 is a seed slope or M + 1 an anti-seed slope | infinite family of seeds with dense
+    slopes | far, harder than R1 (towers proved thin).
+ R4 windows / sources: HYP-9659 (C), HYP-9453 (2), HYP-9454 (1),(6), HYP-9661 (A) | the window law for every h
+    (two-dimensional fullness of the source set) | far; it is the only self-propagating formulation.
+ R5 one-arc joins F1/F2 with growing banks | pointwise; circle-method programme heuristic | far (finite banks are
+    conjectured to miss a positive proportion, HYP-9480 (C)).
+ R6 tilted local limit law HYP-9659 (A) | the local limit law | far (no technique).
+ R7 exact digit systems | an actual state in a non-commuting class space | excluded at every enumerated size.
+ R8 return maps / corridors / carries (Sessions 262-276) | a return map that widens intervals | far (matching and
+    receiver obstructions proved for the tested languages).
+ R9 order-by-order laws HYP-9452 (1), HYP-9481 (a) | no mechanism.
+ R10 structured-class strengthenings (strong, ribbon span 3, at most two Hamiltonian cycles, asymmetric) | same.
+ R11 multiplicative reduction to primes and 7p (THM-4094) | PROVED, gives no handle on primes.
+ R12 conditional density: two-apex collision energy E_n <= K (16/3)^n => positive lower density | not the conjecture.
+
+SINGLE MISSING LEMMA: in every route it is a pointwise representation statement for all large N.  The formulation
+with the least extra content is R4's source lemma (one source on every line D + 2U = N; data: at least N/64) or
+equivalently R1 (one word per N; data: multiplicity about N^0.26).  FINITE COMPUTATION + INDUCTION: only through a
+certificate in the sense of PROOFS.txt P2 (the induction is written there); no certificate exists with the objects
+enumerated so far (P3: orbit exponents 1.24-1.84 < 3, 1.16 < 2, no exact pair in dimension 1).  The one computation
+that is specified and feasible: port-chain blocks of orders 6 and 7 (order 7: 2^21 tournaments x 49 marks), restricted
+to the blocks whose matrix is closed on (h, R) = (D, U) (R = E + O = U_T(port); the S93 lane thinorbit has them only
+for orders <= 4, 5: 16 and 57 blocks, exponents 0.81 and 1.16, coverage 6.5 % and 89.9 % of [2^19, 2^20); for the
+closings of THM-5130 (A) with a one-vertex set P = {p} the condition is Start_X(p) = 0, read off the displayed
+formula for M+), orbit exponent and coverage; a certificate search is meaningful only if the exponent reaches 2.

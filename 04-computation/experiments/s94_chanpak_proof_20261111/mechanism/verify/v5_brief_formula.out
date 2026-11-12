@@ -1,0 +1,4 @@
+core order 2: 8 (core, cut) pairs; brief's formula wrong in 2 (always an undercount; max deficit 1); single-in-neighbour law 2H - s(u) + D(u): 4 cases, failures 0
+core order 3: 64 (core, cut) pairs; brief's formula wrong in 24 (always an undercount; max deficit 3); single-in-neighbour law 2H - s(u) + D(u): 24 cases, failures 0
+core order 4: 1024 (core, cut) pairs; brief's formula wrong in 640 (always an undercount; max deficit 9); single-in-neighbour law 2H - s(u) + D(u): 256 cases, failures 0
+core order 5: 32768 (core, cut) pairs; brief's formula wrong in 27280 (always an undercount; max deficit 27); single-in-neighbour law 2H - s(u) + D(u): 5120 cases, failures 0

@@ -1,0 +1,15 @@
+n = 4: table of 64 labelled tournaments in 13.9s; max H = 5, strong: 24; all H odd: True
+  distinct values: 3; odd numbers <= max missing: []
+(A) adjacent arc pairs: 192 squares, zero second differences: 0, min |D| = 2
+(B) disjoint arc pairs: 48 squares, D = 0: 48 (1.0000), with both increments nonzero: 24, of these with 4 strong tournaments: 0
+n = 5: table of 1024 labelled tournaments in 0.8s; max H = 15, strong: 544; all H odd: True
+  distinct values: 7; odd numbers <= max missing: [7]
+(A) adjacent arc pairs: 7680 squares, zero second differences: 0, min |D| = 2
+(B) disjoint arc pairs: 3840 squares, D = 0: 1860 (0.4844), with both increments nonzero: 720, of these with 4 strong tournaments: 240
+n = 6: table of 32768 labelled tournaments in 0.8s; max H = 45, strong: 22320; all H odd: True
+  distinct values: 19; odd numbers <= max missing: [7, 21, 35, 39]
+(A) adjacent arc pairs: 491520 squares, zero second differences: 0, min |D| = 2
+(B) disjoint arc pairs: 368640 squares, D = 0: 110520 (0.2998), with both increments nonzero: 50400, of these with 4 strong tournaments: 29520
+(C) additive 3-cubes on 3-matchings: {'cubes': 3900, 'nontrivial': 0, 'nontrivial_strong': 0, 'distinct8': 0, 'consecutive8': 0}
+    |increment| triples (sorted), all-strong flag : count
+    examples (mask, arcs, [h0, de, df, dg]):

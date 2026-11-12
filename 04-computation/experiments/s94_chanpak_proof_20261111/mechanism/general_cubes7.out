@@ -1,0 +1,20 @@
+order 7, k = 3: 1330 arc sets x 262144 bases (22.3s)
+   longest run of consecutive odd values inside one 3-cube: 7 (start 129, arcs [(0, 1), (0, 2), (3, 4)]); perfect cubes (2^k consecutive odd values): 0
+   cubes containing all odd numbers of [24, 48]: 0
+   cubes containing all odd numbers of [25, 50]: 0
+   cubes containing all odd numbers of [26, 52]: 0
+   cubes containing all odd numbers of [27, 54]: 0
+   cubes containing all odd numbers of [28, 56]: 0
+   cubes containing all odd numbers of [29, 58]: 0
+   cubes containing all odd numbers of [30, 60]: 0
+   cubes containing all odd numbers of [31, 62]: 0
+order 7, k = 4: 5985 arc sets x 131072 bases (69.1s)
+   longest run of consecutive odd values inside one 4-cube: 10 (start 25, arcs [(0, 1), (0, 2), (0, 3), (1, 4)]); perfect cubes (2^k consecutive odd values): 0
+   cubes containing all odd numbers of [24, 48]: 0
+   cubes containing all odd numbers of [25, 50]: 0
+   cubes containing all odd numbers of [26, 52]: 0
+   cubes containing all odd numbers of [27, 54]: 0
+   cubes containing all odd numbers of [28, 56]: 0
+   cubes containing all odd numbers of [29, 58]: 0
+   cubes containing all odd numbers of [30, 60]: 0
+   cubes containing all odd numbers of [31, 62]: 0

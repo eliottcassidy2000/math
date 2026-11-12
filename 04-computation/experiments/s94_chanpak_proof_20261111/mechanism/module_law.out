@@ -1,0 +1,5 @@
+(V1) two-module law: 300 random instances (context order 3..6, modules of order 1..3), failures: 0
+(V2) n = 3: strong labelled tournaments 2, port pairs 6, min c_22 = 1, divisibility-by-4 failures: 0, tournaments attaining the minimum: 2  [11.5s]
+(V2) n = 4: strong labelled tournaments 24, port pairs 144, min c_22 = 1, divisibility-by-4 failures: 0, tournaments attaining the minimum: 24  [0.0s]
+(V2) n = 5: strong labelled tournaments 544, port pairs 5440, min c_22 = 1, divisibility-by-4 failures: 0, tournaments attaining the minimum: 120  [0.0s]
+(V2) n = 6: strong labelled tournaments 22320, port pairs 334800, min c_22 = 2, divisibility-by-4 failures: 0, tournaments attaining the minimum: 2160  [2.9s]

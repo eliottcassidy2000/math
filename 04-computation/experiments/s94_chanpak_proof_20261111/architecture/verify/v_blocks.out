@@ -1,0 +1,9 @@
+bases: 39 distinct base states: [(1, 0, 1), (1, 1, 1), (1, 2, 2), (1, 4, 4), (3, 1, 2), (5, 3, 4), (5, 4, 5)]
+identity End_T(port) = O - E on the bases: failures 0
+fitting bases: (0, 2, 7) [(1, 0, 1), (1, 1, 1), (1, 2, 2)]
+marked blocks of order <= 4: 1105 | linearity failures on all bases: 0 | non-integer matrices: 0 | matrices with a negative entry: 0 | End = O - E failures on glued tournaments: 0
+order <= 3: mine 16 distinct, 5 invertible, 4 unimodular, sum 1/|det| = 17/4 ; S93 file 16 distinct ; equal as sets (row-major): True ; equal after transposition: False
+order <= 4: mine 56 distinct, 21 invertible, 8 unimodular, sum 1/|det| = 13297/1260 ; S93 file 56 distinct ; equal as sets (row-major): True ; equal after transposition: False
+order <= 5 (S93 file only, not recomputed): 264 distinct, 134 invertible, 18 unimodular, sum 1/|det| = 30.861853
+order <= 6 (S93 file only, not recomputed): 1884 distinct, 1252 invertible, 46 unimodular, sum 1/|det| = 99.564841
+one-vertex block matrix: [(1, 2, 0, 0, 0, 1, 1, 1, 0)] equals the tower matrix [[1,2,0],[0,0,1],[1,1,0]]: True

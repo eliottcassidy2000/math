@@ -1,0 +1,22 @@
+mask 50546 digit arcs [(0, 1), (2, 3), (4, 5)]
+    0010011  score 3
+    1010101  score 4
+    0000001  score 1
+    1110100  score 4
+    1010000  score 2
+    0111100  score 4
+    0001110  score 3
+   values {(0, 0, 0): 89, (0, 0, 1): 105, (0, 1, 0): 137, (0, 1, 1): 153, (1, 0, 0): 95, (1, 0, 1): 111, (1, 1, 0): 143, (1, 1, 1): 159}
+   (1) no odd cycle through two digit pairs: False   (2) cycles of different digit pairs always meet: False
+   #odd cycles 34  3-cycles: [(0, 5, 1), (0, 5, 3), (0, 6, 3), (0, 5, 4), (0, 6, 4), (1, 6, 3), (1, 6, 5), (2, 6, 3), (2, 6, 4), (2, 6, 5)]
+mask 53616 digit arcs [(0, 1), (2, 3), (4, 5)]
+    0000011  score 2
+    1010100  score 3
+    1000101  score 3
+    1110100  score 4
+    1000000  score 1
+    0111100  score 4
+    0101110  score 4
+   values {(0, 0, 0): 83, (0, 0, 1): 131, (0, 1, 0): 89, (0, 1, 1): 137, (1, 0, 0): 89, (1, 0, 1): 137, (1, 1, 0): 95, (1, 1, 1): 143}
+   (1) no odd cycle through two digit pairs: False   (2) cycles of different digit pairs always meet: False
+   #odd cycles 33  3-cycles: [(0, 5, 1), (0, 6, 1), (0, 5, 2), (0, 5, 3), (0, 6, 3), (0, 5, 4), (0, 6, 4), (1, 2, 6), (2, 6, 3), (2, 6, 5)]

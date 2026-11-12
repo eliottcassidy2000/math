@@ -1,0 +1,39 @@
+n=12 words=2048 ordered colliding pairs=3640 (1.7773 per word) distinct values=846 (0.4131 of 2^(n-1)) largest fibre=8
+  pairs by width, d = (n+w)/2 - log2 pairs, dominant cell: w=1:124[d=-0.45,(6, 5)] w=3:64[d=1.50,(5, 4)] w=4:28[d=3.19,(4, 4)] w=5:212[d=0.77,(4, 3)] w=6:88[d=2.54,(3, 3)] w=7:352[d=1.04,(3, 2)] w=8:196[d=2.39,(2, 2)] w=9:784[d=0.89,(2, 1)] w=10:412[d=2.31,(1, 1)] w=11:1380[d=1.07,(1, 0)]
+  classes (cell, eps) with a solution: 1810; max solutions in a class 62; max ratio sol/max(1,2^(m+z-w)) = 16.0; with lattice factor (1+2^m g/max): 8.0; with (1+2^max(t'-1,s) g/max): 8.0
+  width 11: (cell, eps) classes with a solution 678 in 1 cell(s); distinct eps 678; all odd classes per cell 78732; pairs 1380; mean sol 2.04
+  width 10: (cell, eps) classes with a solution 392 in 2 cell(s); distinct eps 392; all odd classes per cell 26244; pairs 412; mean sol 1.05
+  mean/max solutions per solved class by width: w=1:62.00/62 w=3:16.00/16 w=4:3.50/4 w=5:5.05/16 w=6:1.57/3 w=7:3.45/16 w=8:1.11/3 w=9:2.24/16 w=10:1.05/3 w=11:2.04/16
+  largest class at width 3: sol=16 cell (t',s)=(5,4) z=0 eps(top..bottom)=---  X=-7 Xi=-7 gcd=7 height=1 (X=Xi)  lattice bound per pair and parity class 1+g*min(2^(t'-1)/|X|,2^s/|Xi|) = 17.000
+  largest class at width 5: sol=16 cell (t',s)=(4,3) z=2 eps(top..bottom)=-0-0-  X=-21 Xi=-21 gcd=21 height=1 (X=Xi)  lattice bound per pair and parity class 1+g*min(2^(t'-1)/|X|,2^s/|Xi|) = 9.000
+  largest class at width 9: sol=16 cell (t',s)=(2,1) z=6 eps(top..bottom)=-000-000-  X=-273 Xi=-273 gcd=273 height=1 (X=Xi)  lattice bound per pair and parity class 1+g*min(2^(t'-1)/|X|,2^s/|Xi|) = 3.000
+  largest class at width 11: sol=16 cell (t',s)=(1,0) z=8 eps(top..bottom)=-0000-0000-  X=-1057 Xi=-1057 gcd=1057 height=1 (X=Xi)  lattice bound per pair and parity class 1+g*min(2^(t'-1)/|X|,2^s/|Xi|) = 2.000
+  solutions in height-1 classes: 2168 of 3640; max sol in a class of height > 1: 4 (ratio 4.0)
+  cell (1,0) [P=1, c=2 forced]: largest class sol=16, z=8, eps=-0000-0000-, height=1
+     top classes in cell (1,0): sol=16 z=8 height=1; sol=16 z=8 height=1; sol=16 z=8 height=1; sol=16 z=8 height=1; sol=8 z=6 height=1; sol=8 z=6 height=1
+n=16 words=32768 ordered colliding pairs=62216 (1.8987 per word) distinct values=13228 (0.4037 of 2^(n-1)) largest fibre=10
+  pairs by width, d = (n+w)/2 - log2 pairs, dominant cell: w=1:508[d=-0.49,(8, 7)] w=3:256[d=1.50,(7, 6)] w=4:92[d=3.48,(6, 6)] w=5:752[d=0.95,(6, 5)] w=6:396[d=2.37,(5, 5)] w=7:1604[d=0.85,(5, 4)] w=8:968[d=2.08,(4, 4)] w=9:3288[d=0.82,(4, 3)] w=10:1704[d=2.27,(3, 3)] w=11:6508[d=0.83,(3, 2)] w=12:3528[d=2.22,(2, 2)] w=13:12924[d=0.84,(2, 1)] w=14:6212[d=2.40,(1, 1)] w=15:23476[d=0.98,(1, 0)]
+  classes (cell, eps) with a solution: 30598; max solutions in a class 254; max ratio sol/max(1,2^(m+z-w)) = 64.0; with lattice factor (1+2^m g/max): 32.0; with (1+2^max(t'-1,s) g/max): 32.0
+  width 15: (cell, eps) classes with a solution 9850 in 1 cell(s); distinct eps 9850; all odd classes per cell 6377292; pairs 23476; mean sol 2.38
+  width 14: (cell, eps) classes with a solution 6048 in 2 cell(s); distinct eps 6048; all odd classes per cell 2125764; pairs 6212; mean sol 1.03
+  mean/max solutions per solved class by width: w=1:254.00/254 w=3:64.00/64 w=4:7.67/14 w=5:16.35/64 w=6:3.54/14 w=7:5.53/64 w=8:1.85/12 w=9:3.27/64 w=10:1.20/5 w=11:2.61/64 w=12:1.08/3 w=13:2.34/64 w=14:1.03/3 w=15:2.38/64
+  largest class at width 3: sol=64 cell (t',s)=(7,6) z=0 eps(top..bottom)=---  X=-7 Xi=-7 gcd=7 height=1 (X=Xi)  lattice bound per pair and parity class 1+g*min(2^(t'-1)/|X|,2^s/|Xi|) = 65.000
+  largest class at width 5: sol=64 cell (t',s)=(6,5) z=2 eps(top..bottom)=-0-0-  X=-21 Xi=-21 gcd=21 height=1 (X=Xi)  lattice bound per pair and parity class 1+g*min(2^(t'-1)/|X|,2^s/|Xi|) = 33.000
+  largest class at width 13: sol=64 cell (t',s)=(2,1) z=10 eps(top..bottom)=-00000-00000-  X=-4161 Xi=-4161 gcd=4161 height=1 (X=Xi)  lattice bound per pair and parity class 1+g*min(2^(t'-1)/|X|,2^s/|Xi|) = 3.000
+  largest class at width 15: sol=64 cell (t',s)=(1,0) z=12 eps(top..bottom)=-000000-000000-  X=-16513 Xi=-16513 gcd=16513 height=1 (X=Xi)  lattice bound per pair and parity class 1+g*min(2^(t'-1)/|X|,2^s/|Xi|) = 2.000
+  solutions in height-1 classes: 33272 of 62216; max sol in a class of height > 1: 14 (ratio 12.0)
+  cell (1,0) [P=1, c=2 forced]: largest class sol=64, z=12, eps=-000000-000000-, height=1
+     top classes in cell (1,0): sol=64 z=12 height=1; sol=64 z=12 height=1; sol=64 z=12 height=1; sol=64 z=12 height=1; sol=32 z=10 height=1; sol=32 z=10 height=1
+n=20 words=524288 ordered colliding pairs=1018040 (1.9418 per word) distinct values=210192 (0.4009 of 2^(n-1)) largest fibre=12
+  pairs by width, d = (n+w)/2 - log2 pairs, dominant cell: w=1:2044[d=-0.50,(10, 9)] w=3:1024[d=1.50,(9, 8)] w=4:400[d=3.36,(8, 8)] w=5:3068[d=0.92,(8, 7)] w=6:1700[d=2.27,(7, 7)] w=7:6392[d=0.86,(7, 6)] w=8:3800[d=2.11,(6, 6)] w=9:13588[d=0.77,(6, 5)] w=10:7784[d=2.07,(5, 5)] w=11:27468[d=0.75,(5, 4)] w=12:14284[d=2.20,(4, 4)] w=13:53212[d=0.80,(4, 3)] w=14:28868[d=2.18,(3, 3)] w=15:107748[d=0.78,(3, 2)] w=16:55516[d=2.24,(2, 2)] w=17:212432[d=0.80,(2, 1)] w=18:97956[d=2.42,(1, 1)] w=19:380756[d=0.96,(1, 0)]
+  classes (cell, eps) with a solution: 498538; max solutions in a class 1022; max ratio sol/max(1,2^(m+z-w)) = 256.0; with lattice factor (1+2^m g/max): 128.0; with (1+2^max(t'-1,s) g/max): 128.0
+  width 19: (cell, eps) classes with a solution 143518 in 1 cell(s); distinct eps 143518; all odd classes per cell 516560652; pairs 380756; mean sol 2.65
+  width 18: (cell, eps) classes with a solution 96632 in 2 cell(s); distinct eps 96632; all odd classes per cell 172186884; pairs 97956; mean sol 1.01
+  mean/max solutions per solved class by width: w=1:1022.00/1022 w=3:256.00/256 w=4:33.33/58 w=5:61.36/256 w=6:12.50/57 w=7:15.90/256 w=8:3.97/36 w=9:6.02/256 w=10:1.78/26 w=11:3.50/256 w=12:1.22/8 w=13:2.81/256 w=14:1.08/7 w=15:2.51/256 w=16:1.03/4 w=17:2.41/256 w=18:1.01/7 w=19:2.65/256
+  largest class at width 3: sol=256 cell (t',s)=(9,8) z=0 eps(top..bottom)=---  X=-7 Xi=-7 gcd=7 height=1 (X=Xi)  lattice bound per pair and parity class 1+g*min(2^(t'-1)/|X|,2^s/|Xi|) = 257.000
+  largest class at width 5: sol=256 cell (t',s)=(8,7) z=2 eps(top..bottom)=-0-0-  X=-21 Xi=-21 gcd=21 height=1 (X=Xi)  lattice bound per pair and parity class 1+g*min(2^(t'-1)/|X|,2^s/|Xi|) = 129.000
+  largest class at width 17: sol=256 cell (t',s)=(2,1) z=14 eps(top..bottom)=-0000000-0000000-  X=-65793 Xi=-65793 gcd=65793 height=1 (X=Xi)  lattice bound per pair and parity class 1+g*min(2^(t'-1)/|X|,2^s/|Xi|) = 3.000
+  largest class at width 19: sol=256 cell (t',s)=(1,0) z=16 eps(top..bottom)=-00000000-00000000-  X=-262657 Xi=-262657 gcd=262657 height=1 (X=Xi)  lattice bound per pair and parity class 1+g*min(2^(t'-1)/|X|,2^s/|Xi|) = 2.000
+  solutions in height-1 classes: 526328 of 1018040; max sol in a class of height > 1: 58 (ratio 26.0)
+  cell (1,0) [P=1, c=2 forced]: largest class sol=256, z=16, eps=-00000000-00000000-, height=1
+     top classes in cell (1,0): sol=256 z=16 height=1; sol=256 z=16 height=1; sol=256 z=16 height=1; sol=256 z=16 height=1; sol=128 z=14 height=1; sol=128 z=14 height=1

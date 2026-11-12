@@ -1,0 +1,32 @@
+order 7, k = 4: 5985 arc sets x 131072 bases (7.5s)
+   longest run of consecutive odd values in one 4-cube: 10; example arcs [(0, 1), (0, 2), (0, 3), (1, 4)], value set [25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 49, 53]
+   perfect cubes (2^k consecutive odd values): 0
+   cubes containing all odd numbers of [3, 6]: 25903080
+   cubes containing all odd numbers of [4, 8]: 0
+   cubes containing all odd numbers of [5, 10]: 0
+   cubes containing all odd numbers of [6, 12]: 0
+   cubes containing all odd numbers of [7, 14]: 0
+   cubes containing all odd numbers of [8, 16]: 14782320
+   cubes containing all odd numbers of [9, 18]: 4782960
+   cubes containing all odd numbers of [10, 20]: 2792160
+   cubes containing all odd numbers of [11, 22]: 0
+   cubes containing all odd numbers of [12, 24]: 0
+   cubes containing all odd numbers of [13, 26]: 0
+   cubes containing all odd numbers of [14, 28]: 0
+   cubes containing all odd numbers of [15, 30]: 0
+   cubes containing all odd numbers of [16, 32]: 0
+   cubes containing all odd numbers of [17, 34]: 0
+   cubes containing all odd numbers of [18, 36]: 0
+   cubes containing all odd numbers of [19, 38]: 0
+   cubes containing all odd numbers of [20, 40]: 0
+   cubes containing all odd numbers of [21, 42]: 0
+   cubes containing all odd numbers of [22, 44]: 0
+   cubes containing all odd numbers of [23, 46]: 0
+   cubes containing all odd numbers of [24, 48]: 0
+   cubes containing all odd numbers of [25, 50]: 0
+   cubes containing all odd numbers of [26, 52]: 0
+   cubes containing all odd numbers of [27, 54]: 0
+   cubes containing all odd numbers of [28, 56]: 0
+   cubes containing all odd numbers of [29, 58]: 0
+   cubes containing all odd numbers of [30, 60]: 0
+   cubes containing all odd numbers of [31, 62]: 0

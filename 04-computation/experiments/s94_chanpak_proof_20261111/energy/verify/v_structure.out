@@ -1,0 +1,6 @@
+Lemma 1 (2q = sum kappa h_i h_j), all h < 2^13: True
+Lemma 3 identity (exact), all n <= 14: True ; bounds 0 < rho < 3b/4 <= 3(n+1)/8: True ; max rho/(3(n+1)/8) = 0.8466 ; min rho = 6.1e-05
+Cor. 3a on all 1820 colliding pairs at n = 12: True (max |Phi - Phi'| = 2.749, bound 4.875)
+Lemma 4 involution, all n <= 18: True
+Lemma 2 (100000 random pairs, n <= 17): identity True ; lambda_j formula True ; Remark (i) |.| < 3: True
+Cor. 3b (100000 random K, eps, n <= 24): True (max |E|/min supp = 1.812)

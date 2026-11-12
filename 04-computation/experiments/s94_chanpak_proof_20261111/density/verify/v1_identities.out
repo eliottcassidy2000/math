@@ -1,0 +1,16 @@
+0. q via g-recursion = q-recursion, size bounds, h < 2^14: violations 0
+P1. readout identity and gcd(A,B)=gcd(x1,y1), random h1,h2 < 2^40, s < 30: instances 20000 violations 0
+P2. random (A,B) < 2^(n+1), n = 4..12: readouts 2250, colliding ordered pairs 3668, violations 0; readouts with A >= 2^(n-1) gcd: 1261, of which non-injective: 0
+   sharpness n=4: largest coprime A with a collision (B <= 4A+1): (6, 5)  (lemma: A <= 2^(n-1)-1 = 7)
+   sharpness n=5: largest coprime A with a collision (B <= 4A+1): (14, 11)  (lemma: A <= 2^(n-1)-1 = 15)
+   sharpness n=6: largest coprime A with a collision (B <= 4A+1): (30, 23)  (lemma: A <= 2^(n-1)-1 = 31)
+   sharpness n=7: largest coprime A with a collision (B <= 4A+1): (62, 47)  (lemma: A <= 2^(n-1)-1 = 63)
+   sharpness n=8: largest coprime A with a collision (B <= 4A+1): (126, 95)  (lemma: A <= 2^(n-1)-1 = 127)
+   sharpness n=9: largest coprime A with a collision (B <= 4A+1): (254, 191)  (lemma: A <= 2^(n-1)-1 = 255)
+   sharpness n=10: largest coprime A with a collision (B <= 4A+1): (510, 383)  (lemma: A <= 2^(n-1)-1 = 511)
+P2 corollary: coprime rows h1 (n1 <= 6), sigma = 1..3, all n2 <= sigma+n1+1: rows 1269, non-injective 0; at n2 = sigma+n1+2: 153 rows, 15 non-injective
+P2 corollary, h1 = 0 (A = 2^sigma + 1, B = 1), n2 <= sigma + 1, sigma <= 9: non-injective 0
+P3. affine fibre lemma, random pairs of width < 48: instances 4000 violations 0
+P3 (iii). formula for 4 L_i, all signed strings of width <= 8: instances 24604 violations 0
+P4. random A >= B >= 1, n = 6..12: readouts 420, colliding ordered pairs 54122; violations: equation/|gamma|/oddness 0, (a) 0, (b) 0, (c) 0, (d) 0; max of |t'-s-log2(A/B)| - R = 1.000
+ALL CHECKS PASS

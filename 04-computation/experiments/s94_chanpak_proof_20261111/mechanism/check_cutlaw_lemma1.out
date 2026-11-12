@@ -1,0 +1,4 @@
+core order 3: 8 labelled cores x 8 cuts: cut-law mismatches with the table: 0; mismatches between the two forms: 0; pairs with W_xy < 2H(C-x-y): 0; pairs with equality: 24 of 24
+core order 4: 64 labelled cores x 16 cuts: cut-law mismatches with the table: 0; mismatches between the two forms: 0; pairs with W_xy < 2H(C-x-y): 0; pairs with equality: 216 of 384
+core order 5: 1024 labelled cores x 32 cuts: cut-law mismatches with the table: 0; mismatches between the two forms: 0; pairs with W_xy < 2H(C-x-y): 0; pairs with equality: 1760 of 10240
+core order 6: 32768 labelled cores x 64 cuts: cut-law mismatches with the table: 0; mismatches between the two forms: 0; pairs with W_xy < 2H(C-x-y): 0; pairs with equality: 17520 of 491520

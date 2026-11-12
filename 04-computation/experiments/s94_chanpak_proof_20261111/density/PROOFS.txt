@@ -1,0 +1,185 @@
+S94 (opus-2026-11-11-S94), Chan-Pak proof wave, lane "density".  PROOFS and typed statements.
+=============================================================================================
+
+Nothing below proves positive lower density of the Hamiltonian path counts, and nothing below gives a counting
+exponent above the 3/4 of THM-5141.  Chan-Pak stays OPEN.  What is here: five short proved lemmas (P1-P5) that put the
+collision equation of the supercritical family F1 in three exact forms, one proved obstruction (P5), two analyses of
+what the THM-5141 method can and cannot give (A1, A2; these are statements about a method, not theorems about the
+spectrum), and numerical facts (N1-N4) with their receipts.  Types: PROVED (complete proof here), KNOWN (source given),
+FINITE-EXACT, NUMERICAL, CONDITIONAL, REFUTED, OPEN.
+
+0. Notation (all KNOWN; THM-5141, THM-4885, THM-4875)
+-----------------------------------------------------
+q(0) = 0, q(2h) = q(h), q(2h+1) = q(h) + ceil(h/2);  eta(h) = 2h + 1 - 2 q(h)  (odd; h + 2 <= eta(h) <= 2h + 1 for
+h >= 1; 0 <= q(h) <= (h-1)/2 for h >= 1).  State of h: (x, y) = (eta(h), 2h+1).
+F1 (one-apex x one-apex joins, THM-4885 / THM-4875 (D); every value is a Hamiltonian path count):
+    N(h1, h2, sigma) = x1 x2 + 2^sigma y1 y2 - [sigma = 0],   h1, h2 >= 0, sigma >= 0.
+(Q0) q(h) = sum over i < j of h_i h_j wt(j - i), wt(1) = 1, wt(d) = 2^(d-2) for d >= 2 (h_i = bit i of h).
+Proof of (Q0): unrolling the recursion, q(h) = sum_i h_i ceil(floor(h/2^(i+1))/2) (THM-5141, proof of (C)); and
+floor(h/2^(i+1)) = h_(i+1) + 2 sum_(j >= i+2) h_j 2^(j-i-2), so its half rounded up is h_(i+1) + sum_(j>=i+2) h_j 2^(j-i-2).
+(The same formula is the closed form E(a,a) of the S93 two-apex lane, TA-17.)  Checked: d1_verify_lemmas.out, h < 2^12.
+Readout: for integers A >= 1, B >= 1,   Phi_(A,B)(h) = A (2h+1) - 2 B q(h).
+Three-block notation of THM-5141 (C): n-bit words h = P | x | Z, h' = P | x' | Z (P of t' bits, windows of w bits, Z of
+s bits), X = x - x', Xi = rev_w x - rev_w x', c = 2^(s+1) - rev_s(Z), and
+gamma = 2 (q(x) - q(x')) + (P mod 2)(x_(w-1) - x'_(w-1)) + (c mod 2)(x_0 - x'_0);  eta(h) - eta(h') = c X - P Xi - gamma.
+Signed-digit difference of two w-bit words: eps_i = x_i - x'_i in {-1,0,1}; Zero(eps) = {i : eps_i = 0}, z(eps) its
+size; the pairs with difference eps are x = x+ + b, x' = x- + b, where x+ (x-) has the bits with eps_i = 1 (-1) and b is
+any word supported on Zero(eps) (the common bits): 2^z(eps) pairs.  D(eps) = sum eps_i 2^i = X.
+
+P1. Readout form of F1 (PROVED; trivial)
+----------------------------------------
+For sigma >= 1:  N(h1, h2, sigma) = Phi_(A,B)(h2)  with  A = x1 + 2^sigma y1,  B = x1   (for sigma = 0 subtract 1).
+Proof.  x2 = y2 - 2 q(h2), so x1 x2 + 2^sigma y1 y2 = (x1 + 2^sigma y1) y2 - 2 x1 q(h2).  QED
+Consequences.  (i) Phi_(A,B)(h) = Phi_(A,B)(h')  <=>  A (h - h') = B (q(h) - q(h')): two points of the graph
+Gamma = {(h, q(h))} on a line of slope A/B.  So F1 is the union, over the slopes
+lambda = A/B = 1 + 2^sigma y1/x1, of affine images of the projections of Gamma along (1, lambda); THM-5141 is the case
+lambda = 1 (A = B = 1, Phi = eta).  (ii) gcd(A, B) = gcd(x1, y1) because x1 is odd.
+Checked: d1_verify_lemmas.out (76,800 instances, 0 violations).
+
+P2. Residue lemma, localisation and injectivity of rows (PROVED)
+-----------------------------------------------------------------
+Let A, B >= 1, d = gcd(A, B), and h != h' with Phi_(A,B)(h) = Phi_(A,B)(h').  Then
+  (a) (B/d) divides h - h'  and  (A/d) divides q(h) - q(h'), and q(h) != q(h');
+  (b) if h, h' have n bits (2^(n-1) <= h, h' < 2^n):  A/d <= 2^(n-1) - 1  and  |h - h'| <= (B/A)(2^(n-1) - 1).
+Hence Phi_(A,B) is injective on the n-bit words whenever A >= 2^(n-1) gcd(A, B).
+Proof.  2A (h - h') = 2B (q(h) - q(h')), so (A/d)(h - h') = (B/d)(q(h) - q(h')) with A/d, B/d coprime: (a).  For n-bit
+words 0 <= q <= 2^(n-1) - 1, so 1 <= |q(h) - q(h')| <= 2^(n-1) - 1; a nonzero multiple of A/d of that size forces
+A/d <= 2^(n-1) - 1, and |h - h'| = (B/A)|q(h) - q(h')|.  QED
+Corollary (cells of F1).  Let h1 >= 1 have n1 bits and gcd(x1, y1) = 1.  Then A = x1 + 2^sigma y1 > 2^(sigma + n1), so
+h2 -> N(h1, h2, sigma) is injective on the n2-bit words for every n2 <= sigma + n1 + 1.  In a cell (n1, n2, sigma) with
+|n1 - n2| <= sigma + 1 every row and every column with a coprime state is injective: all collisions of the cell
+between coprime states are off-diagonal (h1 != h1' and h2 != h2').
+Checked: d2_f1_balanced_cell_s1.out, _s2.out (n1 = n2 = n <= 12: 0 same-row collisions in coprime rows; the non-coprime
+rows do collide, 1,880 ordered pairs at n = 12, sigma = 1); d1 (max |h - h'| below the bound for A = 2^sigma + 1, B = 1).
+
+P3. Affine fibre lemma; the collision equation as a subset-sum identity (PROVED)
+---------------------------------------------------------------------------------
+For a signed string eps in {-1,0,1}^w put  q0(eps) = q(x+) - q(x-)  and, for i in Zero(eps),
+    L_i(eps) = sum over j with eps_j != 0 of eps_j wt(|i - j|).
+Then for every pair (x, x') with difference eps and common bits b:
+    q(x) - q(x') = q0(eps) + sum over i in Zero(eps) of b_i L_i(eps).
+Proof.  By (Q0), q(x) - q(x') = sum over i < j of (x_i x_j - x'_i x'_j) wt(j - i).  If i, j are both in the support of
+eps the term is that of (x+, x-).  If both are in Zero(eps), x_i x_j = b_i b_j = x'_i x'_j.  If i is in Zero(eps) and j
+in the support, x_i x_j - x'_i x'_j = b_i (x_j - x'_j) = b_i eps_j.  QED
+Corollaries.  (i) Whole words (w = n): for n-bit h != h' with difference eps and common bits b,
+    Phi_(A,B)(h) = Phi_(A,B)(h')   <=>   A D(eps) = B ( q0(eps) + sum_(i in Zero(eps)) b_i L_i(eps) ),
+so the number of colliding ordered pairs is  sum over eps != 0 of the number of subsets of the weights L_i(eps),
+i in Zero(eps), with sum (A/B) D(eps) - q0(eps)  (for eta: D(eps) - q0(eps)).
+(ii) Windows: in the equation c X - P Xi = gamma of THM-5141 (C) the pair (X, Xi) determines eps (THM-5141 (A)2), the
+parity terms of gamma depend only on eps_(w-1), eps_0 and the parities of P and c, and
+gamma = gamma0(eps; P mod 2, c mod 2) + 2 sum_(i in Zero(eps)) b_i L_i(eps).  So for a fixed difference class the
+collision equation is ONE linear equation  c X - P Xi - 2 sum b_i L_i = gamma0  in the z(eps) + 2 unknowns
+(c, P, b), b in {0,1}^Zero(eps): the common bits of the windows are free parameters with integer weights.
+(iii) 4 L_i = (X - X_(<i))/2^i + (Xi - Xi_(>i))/2^(w-1-i) + 2 (eps_(i+1) + eps_(i-1)), with X_(<i) = sum_(j<i) eps_j 2^j
+and Xi_(>i) = sum_(j>i) eps_j 2^(w-1-j) (direct from the definition of wt): up to bounded rounding terms the common
+bits extend P and c to dyadic rationals, P~ = P + (1/2) sum b_i 2^(-(w-1-i)), c~ = c - (1/2) sum b_i 2^(-i).
+Checked: d1_verify_lemmas.out (all pairs of w-bit words, w <= 9: 349,524 pairs, 0 violations).
+Prior art: grep of THM-4886, THM-4887, THM-4890, THM-5141 for "common bits", "affine in", "subset sum", "signed digit"
+finds only THM-5141 (A)2 (the injectivity of eps -> (X, Xi)); the affine dependence on the common bits is not stated
+there.  It is elementary; "not found" is not a clearance.
+
+P4. Lattice-line equation for a readout; thinning of the window pairs (PROVED from THM-5141 (C))
+-------------------------------------------------------------------------------------------------
+For n-bit h = P|x|Z, h' = P|x'|Z as in THM-5141 (C) and integers A >= B >= 1:
+    Phi_(A,B)(h) = Phi_(A,B)(h')   <=>   (B c + (A - B) 2^(s+1)) X - B P Xi = B gamma.
+For F1 (A - B = 2^sigma y1, B = x1):  (x1 c + 2^(sigma+s+1) y1) X - x1 P Xi = x1 gamma; for h1 = 0:
+(c + 2^(s+sigma+1)) X - P Xi = gamma.
+Proof.  Phi_(A,B)(h) = (A - B)(2h+1) + B eta(h), h - h' = 2^s X, and eta(h) - eta(h') = c X - P Xi - gamma.  QED
+Consequences (same proofs as in THM-5141 (C), with P2):
+ (a) for a fixed odd pair and fixed parities of P, c the solutions (c, P) lie on a lattice line of direction
+     (Xi, X)/gcd(X, Xi): at most 1 + gcd(X, Xi) min(2^(t'-1)/|X|, 2^s/|Xi|) of them;
+ (b) if B is odd, (B/gcd(A,B)) divides X (P2 (a) and h - h' = 2^s X): at most 4^w/B' + 2^w ordered window pairs of width
+     w can collide at all, B' = B/gcd(A,B);
+ (c) all h with a given value lie in an interval of length (B/A) 2^(n-1) (P2 (b)), so a value is taken in at most
+     2 + 2^(t-1) B/A prefix classes of length t;
+ (d) balance: with lambda = A/B, P |Xi| = C |X| + theta 2^w, |theta| <= 1, where C = c + (lambda - 1) 2^(s+1) lies in
+     (2^s (2 lambda - 1), 2^(s+1) lambda].  If neither word has a run of more than R equal bits, then
+     |X|, |Xi| >= 2^(w-1-R) (THM-5141 (C)), and from 2^(t'-1) |Xi| <= P |Xi| <= 2^w (2^(s+1) lambda + 1) and
+     2^t' 2^w > P |Xi| >= 2^(s+w-1-R) (2 lambda - 1) - 2^w:   |t' - s - log2 lambda| <= R + 4.
+     For slope 2^sigma + 1 the cells with a solution have t' = s + sigma + O(R).
+Checked: d1_verify_lemmas.out (all colliding pairs of N = eta(h) + 2^sigma (2h+1), n = 12, 14, sigma = 1, 2, 3, 5: the
+equation, |gamma| <= 2^w and the localisation hold, 0 violations).
+
+P5. Obstruction: per-class bounds cannot pass the threshold t = n/4 (PROVED)
+-----------------------------------------------------------------------------
+Call a difference class eps of width w ODD if eps_0 and eps_(w-1) are nonzero (these are the classes of the odd pairs).
+For w >= 2 and every real K >= 1:
+    sum over odd classes eps of min(2^z(eps), K)  >=  2^w * #{subsets of size <= log2 K of a (w-2)-set}.
+In particular the sum is >= 4^w / 8 for K >= 2^((w-2)/2), and for K = 2^m with m = mu w, 0 < mu < 1/2 fixed, it is
+2^(w (1 + H(mu)) - O(log w)), H the binary entropy; since H(mu) > 2 mu on (0, 1/2) this exceeds
+2^(w + 2m) = 2^n (n = w + 2m, the balanced cell t' = s = m) by the factor 2^(w (H(mu) - 2 mu) - O(log w)).
+Proof.  There are 4 C(w-2, z) 2^(w-2-z) odd classes with z zeros, each with 2^z pairs; for 2^z <= K the class
+contributes 2^z, so the classes with z <= log2 K contribute 4 * 2^(w-2) sum_(z <= log2 K) C(w-2, z).  H is strictly
+concave with H(0) = 0, H(1/2) = 1, so it lies above the chord 2 mu.  QED
+Meaning.  In THM-5141 (D) the term 4 * 4^w is sum_eps 2^z(eps): one solution (P, c) for each pair of the class.  By
+P3 (ii) one can instead count, for each class, the (P, c) near the line (about 2^min(t',s) of them when the height is
+large) times the largest number of b with a prescribed fibre sum; even with perfect anti-concentration (every fibre
+sum taken once) this gives min(2^z, 2^m) per class, and P5 says that the total is still >= 2^(n + c(mu) w) as soon as
+t' + s < (1/2 - delta) n.  So no bound that allows one solution in every difference class with at most m zeros can
+beat 3/4: an exponent above 3/4 by the window method needs a proof that all but an exponentially small share of the
+difference classes have NO solution (numerically the share is 1.2e-4 at n = 22, w = 21; N3 below).
+
+A1. What the THM-5141 method gives for the large-slope readouts (ANALYSIS of a method; not a theorem)
+------------------------------------------------------------------------------------------------------
+Readout N = eta(h) + 2^sigma (2h+1) (h1 = 0; A = 2^sigma + 1, B = 1), n-bit h, values below 2^(n+sigma+2).
+By P4 (c) a value lies in at most 2 + 2^(t-1-sigma) prefix classes, which removes the loss 2^(t-1) of THM-5141 (E) for
+t <= sigma + 1; but by P4 (d) the cells have t' = s + sigma + O(R), so the windows are wider, w = n - 2t' + sigma + O(R),
+and the term 4 * 4^w of (D) is at most n^O(1) 2^n only for t' >= n/4 + sigma/2 - O(log n).  The resulting number of
+distinct values is 2^(n - t + sigma) with t = n/4 + sigma/2 for sigma <= n/2 (and 2^n for sigma >= n/2): counting
+exponent (3/4 + rho/2)/(1 + rho) for sigma = rho n, rho <= 1/2, and 1/(1 + rho) for rho >= 1/2; this is 3/4 at rho = 0,
+2/3 at rho = 1/2, 1/2 at rho = 1, decreasing.  Numerically the readout has about 1.2 * 2^(n - sigma) colliding ordered
+pairs (d1: 0.56, 0.30, 0.18, 0.043 per word at n = 14, sigma = 1, 2, 3, 5); the method cannot see this because of the
+same barrier.  Likewise P4 (b) thins the window pairs of a
+readout with B' = 2^(beta n) by the factor B', which would lower the threshold to t = (1 - beta) n/4 (if the gcd sum
+restricted to X = 0 mod B' is thinned as well: NOT proved), but the range of the readout grows by A >= B, and the
+exponent (3 + beta)/(4 (1 + beta)) is again below 3/4.  A union of 2^(beta n) such readouts would reach
+(3 + 5 beta)/(4 + 4 beta) (= 1 at beta = 1, the balanced cell) IF cross-readout collisions were under control; they
+are not (A2).
+
+A2. Why the supercriticality of F1 cannot be used against the barrier by a lattice argument (ANALYSIS)
+-------------------------------------------------------------------------------------------------------
+N(h1, P|x|Z, sigma) = x1 [c P 2^w + c x - P rev_w(x) + eta(Z) - 2 q(P) - 2 q(x) - parity] + 2^sigma y1 (2 h2 + 1).
+A collision between two windows with the same (h1, P, Z) is linear in (c, P) (P4).  A collision with h1 != h1' and
+the same (P, Z) contains (x1 - x1') (eta(Z) - 2 q(P)) + 2^(sigma+1) (y1 - y1') Z, which is not a polynomial in the free
+integers (P, c): the self-terms q(P), eta(Z), Z = rev_s(2^(s+1) - c) cancel only when x1 = x1' and y1 = y1'.  So classes
+must fix h1, a value may lie in as many classes as there are h1, and the count of distinct values per unit of range
+does not improve.  Assessment of the other candidates (NOT verified by computation in this lane): (b), (e) k-apex
+words: the window difference is <alpha(P), (M(x) - M(x')) beta(Z)> in the seam states (rank 17 for k = 2), whose
+coordinates are not affine in free integers, so no lattice-line equation is available outside the sub-family F1;
+(d) the port-chain orbit: no bilinear free parameters at all; (c) seeds: the unit condition r = 1 is one exact
+equation between exponential sums of the word.  The only families found with a lattice-line collision equation are
+the readouts of the one-apex graph, i.e. the rows of F1.
+
+N. Numerical facts (FINITE-EXACT counts; the fits are NUMERICAL)
+-----------------------------------------------------------------
+N1 (d3_collisions_by_width.out).  One-apex, n-bit words: ordered colliding pairs per word 1.8987, 1.9418, 1.9303 at
+   n = 16, 20, 24 (16,192,872 pairs at n = 24); distinct values 0.4037, 0.4009, 0.4018 of 2^(n-1); largest fibre 10,
+   12, 16.  This is linear energy to n = 24 with constant about 1.93 (OPEN in general, THM-4890 (DC)).
+N2 (same file).  Colliding pairs by window width w at n = 24: log2 of the count is (n + w)/2 - d with d between 0.75
+   and 1.0 for odd w and between 2.1 and 2.5 for even w (w = 5..23), against the bound 4 * 4^w per cell.  Dominant
+   cells: t' = s + 1 (odd w), t' = s (even w).
+N3 (d4_solutions_per_class.out).  Classes (cell, eps) with at least one solution, n = 22: 545,510 of the 4.6e9 odd
+   classes of width 21 (per cell), 380,504 of 1.5e9 at width 20; mean number of solutions in a solved class 2.5 - 3.1
+   (odd w >= 13) and 1.01 - 1.05 (even w >= 16).  REFUTED: the hypothesis "solutions in a class <= C max(1,
+   2^(min(t',s) + z - w))": the ratio reaches 64, 256, 512 at n = 16, 20, 22 (classes of small height, where the lattice
+   term of THM-5141 is large).
+N4 (d2_f1_balanced_cell_s1.out, _s2.out).  Balanced cell of F1, h1 <= h2 of n bits, N = x1 x2 + 2^sigma y1 y2:
+   sigma = 1: distinct/pairs = 0.9775, 0.9749, 0.9773, 0.9755, 0.9764 and E/M = 1.048, 1.052, 1.047, 1.050, 1.048 for
+   n = 8..12 (M = 2,098,176 pairs at n = 12; largest multiplicity 5), and 0.9759, 1.049 at n = 13 (M = 8,390,656;
+   d2_f1_balanced_cell_s1_n13.out); sigma = 2: distinct/pairs = 0.985 - 0.986,
+   E/M = 1.027 - 1.031 (n = 8..11).  The cell fills 2.6 % (sigma = 1), 1.6 % (sigma = 2) of the odd numbers of its span
+   [about 2.25 * 4^n, 12 * 4^n] for sigma = 1.
+
+C. Conditional statement (CONDITIONAL; the implication is Cauchy-Schwarz)
+--------------------------------------------------------------------------
+(BC) Suppose there are K and sigma >= 1 such that for all large n the number of ordered quadruples
+(h1, h2, h1', h2') of n-bit words with {h1, h2} != {h1', h2'} and N(h1, h2, sigma) = N(h1', h2', sigma) is at most
+K 4^n.  Then the Hamiltonian path counts have positive lower density among the odd numbers.
+Proof.  The M = 2^(n-2) (2^(n-1) + 1) unordered pairs give values in (2^sigma 4^n, 2^(sigma+2) 4^n + 4^(n+1)), and
+sum_N r(N)^2 <= M + K 4^n, so at least M^2/(M + K 4^n) >= 4^n/(8 (1 + 8K)) distinct odd values lie in that interval,
+whose endpoints have a bounded ratio rho0; every interval [Y, rho0^2 Y] contains one of these intervals.  QED
+By P2 the hypothesis concerns only off-diagonal quadruples when the states are coprime.  Numerically (N4) the excess
+E/M - 1 is 0.05 (sigma = 1) and 0.03 (sigma = 2), flat in n.  (BC) is a dot-product energy bound
+#{<p, q> = <p', q'>} = O(|G_n|^2) for the graph G_n = {(eta(h), 2h+1)} and the form x x' + 2^sigma y y'; no
+implication between (BC) and the linear energy of the one-apex counts is known to this lane in either direction.
+OPEN.

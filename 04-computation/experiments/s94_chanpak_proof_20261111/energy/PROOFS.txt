@@ -1,0 +1,213 @@
+PROOFS (lane "energy", S94, 2026-11-11)
+=======================================
+Nothing here proves an exponent above 3/4, linear energy, positive density or Chan-Pak (all OPEN).
+What is proved: a gcd-sum exponent below 3/2 and the bound A(Y) >= c Y^(3/4)/(log Y)^(1/4) (Prop. 7), the exact
+symmetry of the cell counts (Lemma 4), three exact reformulations of the collision equation (Lemmas 2, 3, Prop. 8),
+two conditional theorems (Prop. 5: hypothesis NET gives Y/(log Y)^A; Prop. 9: an exponential saving in the number
+of window pairs admitting a solution gives an exponent above 3/4) and an obstruction (Prop. 6).
+(Proposition 9 is printed before Proposition 8; the numbering follows the order of discovery.)
+Lemmas 1 and 3 are KNOWN in the repository in another normalisation
+(05-knowledge/results/feedback_word_hamilton_spectrum_20261020/BINARY_PRODUCT_DENSITY.md, section 2: weighted
+inversion formula and eq. (4), H(b) - N(b) R(b)/2^m = 1 + A(b) - B(b)); they are re-derived here in the
+eta-normalisation of THM-5141 because the later statements use them. Every identity below was checked exactly by
+verify_structure.py (output verify_structure_14_26.out).
+
+Notation (as in THM-5141). q(0) = 0, q(2h) = q(h), q(2h+1) = q(h) + ceil(h/2); eta(h) = 2h + 1 - 2 q(h).
+h_i = bit i of h. For an n-bit word h (2^(n-1) <= h < 2^n): rev(h) = rev_n(h) = sum h_i 2^(n-1-i),
+c(h) = 2^(n+1) - rev_n(h) in (2^n, 2^(n+1)],  Phi(h) = h c(h) / 2^n = 2h - h rev_n(h)/2^n.
+kappa(1) = 2, kappa(d) = 2^(d-1) for d >= 2.  B(a, b) = sum over i != j of kappa(|i-j|) a_i b_j (a, b integer vectors).
+For two words h != h' of the same length: eps_i = h_i - h'_i (signed pattern), S = support of eps, K_j = h_j = h'_j
+for j not in S (common bits), D(eps) = sum eps_i 2^i = h - h', D*(eps) = sum eps_i 2^(n-1-i) = rev h - rev h'.
+Cell (t', s): common prefix of exact length t' >= 1, common suffix of exact length s >= 0, window width w = n - t' - s;
+in window coordinates X = sum eps_(s+i) 2^i, Xi = sum eps_(s+i) 2^(w-1-i) (so D = 2^s X, D* = 2^t' Xi).
+
+--------------------------------------------------------------------------------------------------------------------
+LEMMA 1 (quadratic form; KNOWN).  2 q(h) = sum over i < j of kappa(j - i) h_i h_j, so
+    eta(h) = 1 + sum_i h_i 2^(i+1) - sum_{i<j} kappa(j-i) h_i h_j = 1 + 2h - (1/2) B(h, h).
+Proof. Unrolling the recursion (as in THM-5141, proof of the block law): q(h) = sum_i h_i ceil(m_i/2) with
+m_i = floor(h/2^(i+1)) = sum_{j>i} h_j 2^(j-i-1). Since m_i mod 2 = h_(i+1), ceil(m_i/2) = (m_i + h_(i+1))/2
+= sum_{j>=i+2} h_j 2^(j-i-2) + h_(i+1). Multiply by 2 h_i and sum.  QED
+
+LEMMA 2 (the collision equation is linear in the common bits).  For words h, h' of the same length with signed
+pattern eps, support S and common bits K:
+    eta(h) - eta(h') = L0(eps) - sum over j not in S of K_j lambda_j(eps),
+    lambda_j(eps) = sum_{i in S} kappa(|i-j|) eps_i,
+    L0(eps) = 2 D(eps) - (1/2) sum_{i<j, both in S} kappa(j-i) (eps_i + eps_j).
+Moreover, for j not in S:  lambda_j = X_{>j} + Xi_{<j} + eps_(j+1) + eps_(j-1)  with
+X_{>j} = sum_{i>j} eps_i 2^(i-j-1), Xi_{<j} = sum_{i<j} eps_i 2^(j-1-i) (eps outside the word = 0).
+Hence the colliding pairs with pattern eps are exactly the 0/1 solutions K of ONE subset-sum equation
+    sum_{j not in S} K_j lambda_j(eps) = L0(eps)                                                     (SS)
+(with K_(n-1) = 1 if the top bit is not in S), and two colliding pairs (K, eps), (K', eps) with the same pattern
+satisfy B(K - K', eps) = 0.
+Proof. Write h = K + e+, h' = K + e- (e+, e- the indicator vectors of eps = +1, -1). By Lemma 1 and bilinearity,
+eta(h) - eta(h') = 2 D(eps) - (1/2)[B(h,h) - B(h',h')] = 2 D(eps) - B(K, eps) - (1/2)[B(e+,e+) - B(e-,e-)].
+B(K, eps) = sum_j K_j lambda_j. For i < j in S the product e+_i e+_j - e-_i e-_j equals (eps_i + eps_j)/2 (it is 1 if
+both are +1, -1 if both are -1, 0 otherwise), and B(e,e) = 2 sum_{i<j} kappa e_i e_j; this gives L0. In lambda_j the
+terms |i-j| >= 2 give X_{>j} + Xi_{<j} minus the terms |i-j| = 1 counted with weight 2^0, and kappa(1) = 2 = 2^0 + 1
+adds eps_(j+1) + eps_(j-1).  QED
+Remarks. (i) For j above the window lambda_j = 2^(j-s-w) Xi + [j = s+w] eps_(s+w-1) and for j below it
+lambda_j = 2^(s-1-j) X + [j = s-1] eps_s, so (SS) contains the equation c X - P Xi = gamma of THM-5141 (C); the new
+content is that gamma itself is affine in the common bits INSIDE the window: gamma = L0' - sum_{j in window, eps_j=0}
+K_j lambda_j, with |lambda_j - X/2^(j+1) - Xi/2^(w-j)| < 3 in window coordinates.
+(ii) A common block M inside the window (a run of zeros of eps of length l, pattern parts eps1 above and eps2 below
+it) enters through the reversal-graph point (M, rev_l M): its contribution is rev_l(M) X1 + M Xi2 (X1 = D of the
+upper part, Xi2 = D* of the lower part). Prefix and suffix are the two degenerate cases (only M, only rev M).
+
+LEMMA 3 (product formula with a bounded local remainder; KNOWN, see the header).  For an n-bit word h
+    eta(h) = 1 + Phi(h) + rho(h),   rho(h) = sum_i h_i [ 1/2 - (3/4) h_(i-1) + sum_{j <= i-2} h_j 2^(j-i-1) ],
+and 0 < rho(h) < (3/4) b(h) <= 3(n+1)/8, where b(h) is the number of maximal blocks of ones of h.
+Proof. h rev_n(h)/2^n = sum_{i,j} h_i h_j 2^(j-i-1) (j runs over the bits of h, i over those of rev). The terms
+i < j are sum_{i<j} 2^(j-i-1) h_i h_j = 2 q(h) - N1(h), N1 = #{i : h_i = h_(i+1) = 1} (Lemma 1; kappa(1) - 1 = 1).
+The terms i >= j are F(h) = sum_i h_i [1/2 + sum_{j<i} h_j 2^(j-i-1)]. So 2 q(h) = h rev(h)/2^n - F(h) + N1(h) and
+eta(h) = 1 + 2h - h rev(h)/2^n + F(h) - N1(h); F - N1 is the stated rho (the term j = i-1 of F is h_(i-1)/4).
+Bounds: the bracket lies in [1/2, 3/4) if h_(i-1) = 0 (first one of a block) and in [-1/4, 0) otherwise, so
+rho < 3b/4. In a block of ones of length L the k-th one (k >= 2) has bracket >= -1/4 + (1/8 + ... + 2^(-k)) =
+-2^(-k), so the block contributes at least 1/2 - (2^(-2) + ... + 2^(-L)) = 2^(-L) > 0. Finally b <= (n+1)/2.  QED
+COROLLARY 3a.  eta(h) = eta(h') for n-bit words  <=>  h c(h) - h' c(h') = 2^n (rho(h') - rho(h)), and it implies
+    |Phi(h) - Phi(h')| < 3(n+1)/8.
+COROLLARY 3b (smooth form of B).  For vectors K, eps with disjoint supports in [0, n):
+    B(K, eps) = [D(K) D*(eps) + D*(K) D(eps)]/2^n + E,   |E| < 3 min(|supp K|, |supp eps|).
+(Proof: the main term is sum_{j in K, i in S} eps_i (2^(j-i-1) + 2^(i-j-1)); B has the integer powers only, plus
+one extra unit for |i-j| = 1; for a fixed i (or j) the discarded negative powers sum to less than 1/2 on each side.)
+So a collision in a cell (t', s) says, in window coordinates and up to an error < 3(n+1)/8 + 2:
+    (c 2^w - rev_w x) X - (P 2^w + x') Xi = 0 "to first order", i.e. the slope Xi/X of the difference of the two
+    net points equals the ratio C/A' of the EXTENDED contexts C = c(x|Z), A' = P|x' up to 2^(-w-t') n.
+
+LEMMA 4 (involution and exact cell symmetry; the invariance is the KNOWN converse symmetry).
+For n >= 2 and an (n-1)-bit string r (leading zeros allowed) let rc(r) be its reversed complement. Then
+eta(2^(n-1) + r) = eta(2^(n-1) + rc(r)). Consequently the map iota: 1|r -> 1|rc(r) sends colliding pairs of the cell
+(t', s) bijectively onto colliding pairs of the cell (s+1, t'-1): Coll(t', s) = Coll(s+1, t'-1) for all t' >= 1,
+s >= 0, and the pairs {h, iota h} lie in the cells (t', t'-1).
+Proof. By Lemma 1 with m = n-1: eta(2^m + r) = 1 + 2^(m+1) + G(r), G(r) = 2r - 2q(r) - rev_m(r) - r_(m-1)
+(the top bit interacts with bit i through kappa(m-i) = 2^(m-i-1) + [i = m-1]). The form q is invariant under
+reversal. For the complement r~ = 2^m - 1 - r: 2 q(r~) = T_m - sum_{i<j} kappa(j-i)(r_i + r_j) + 2 q(r), with
+T_m = sum_{d=1}^{m-1} (m-d) kappa(d) = sum_{k=1}^{m-1} K(k), K(k) = kappa(1) + ... + kappa(k) = 2^k, so T_m = 2^m - 2;
+and sum_{i<j} kappa(j-i)(r_i + r_j) = sum_i r_i [K(m-1-i) + K(i)] (K(0) = 0) = rev_m(r) + r - r_0 - r_(m-1).
+Hence 2 q(rc r) = 2 q(r~) = 2^m - 2 - rev(r) - r + r_0 + r_(m-1) + 2 q(r) and
+G(rc r) = 2 rev(r~) - 2 q(r~) - r~ - (r~)_0
+        = 2(2^m - 1 - rev r) - [2^m - 2 - rev r - r + r_0 + r_(m-1) + 2 q(r)] - (2^m - 1 - r) - (1 - r_0) = G(r).
+iota fixes the top bit and reverses the order of the other positions, so a common suffix of length s becomes the s
+positions below the top bit (common prefix s + 1) and the t' - 1 common prefix positions below the top bit become a
+common suffix; maximality is preserved because complementing both words preserves (in)equality of bits.  QED
+(Exact check: the tables in cells_*.out are symmetric under (t', s) <-> (s+1, t'-1) for every n <= 26.)
+
+--------------------------------------------------------------------------------------------------------------------
+PROPOSITION 5 (conditional theorem; hypothesis NET).  For T > 0 let
+    Net_n(T) = #{ordered pairs h != h' of n-bit words : |Phi(h) - Phi(h')| < T}
+             = #{pairs of points of the shifted Hammersley net {(h, 2^(n+1) - rev_n h)} whose coordinate products
+                 differ by less than T 2^n}.
+(a) (PROVED) The collision energy E_n = #{(h,h') : eta(h) = eta(h')} of the n-bit words satisfies
+    E_n <= 2^(n-1) + Net_n(3(n+1)/8),  and the n-bit words take at least 2^(2n-2)/E_n distinct values of eta.
+(b) (CONDITIONAL) If NET(A): Net_n(3(n+1)/8) <= C1 n^A 2^n for all n, then the number of distinct eta on n-bit
+    words is >= c 2^n / n^A and A(Y) >= c Y/(log Y)^A. If only Net_n(3(n+1)/8) <= C1 2^((1+dl) n), then
+    A(Y) >= c Y^(1-dl).
+Proof. (a) is Corollary 3a and Cauchy-Schwarz. (b): values of eta on n-bit words are < 2^(n+1); take n with
+2^(n+1) <= Y < 2^(n+2).  QED
+Status of the hypothesis: NUMERICAL. For 12 <= n <= 26 the number of unordered pairs with |Phi - Phi'| < T is
+0.48-0.49 T 2^(n-1) for T = 16, 5n/8, 3n/4 (0.596 T 2^(n-1) at T = 4, 1.03 2^(n-1) at T = 1): NET holds with A = 1
+and the pair correlation of the values Phi(h) is flat at scales >= 4 (verify_structure_14_26.out). NET is purely
+archimedean (no congruence, no rounding): it is the statement that the Hammersley net has bounded pair correlation
+along the hyperbolas h c = const at scale n. By Lemma 3 it loses only the factor n against the truth
+(E_n ~ 1.47 2^n numerically).
+
+PROPOSITION 6 (obstruction: gamma-blind arguments stop at 3/4).  Let w >= 8, t' >= 2, s = t' - 1. There are at
+least 4^(w-8) odd pairs (x, x') of w-bit windows for which some P in [2^(t'-1), 2^t'), c in (2^s, 2^(s+1)] and some
+integer g with |g| <= 2^(w-1) satisfy c X - P Xi = g. Hence an argument that uses only the shape of the equation
+c X - P Xi = gamma and the bound |gamma| <= 2^w (as THM-5141 (C), (D) do) cannot bound the number of window pairs
+admitting a solution by less than 4^(w-8), and so cannot give Coll(t) = O(2^(n+o(n))) for any t < n/4 - o(n): the
+value of gamma has to be used. By Corollary 3a,b it suffices to know gamma to within O(n) (hypothesis NET), while
+knowing it only to within about 2^(w-t') is useless (heuristic remark, not part of the proposition: the values
+c X - P Xi with (P, c) in the box and |c X - P Xi| <= 2^w number about 2^t').
+Proof. Take x with top four bits 1001 and bottom four bits 1111, x' with top four bits 0000 and bottom four bits
+0000, the middle w - 8 bits of each arbitrary: 4^(w-8) pairs, all odd. Then 8 2^(w-4) < X < 10 2^(w-4) and
+14 2^(w-4) < Xi < 16 2^(w-4) (rev x has top bits 1111, rev x' has 0000), so 1.4 < Xi/X < 2. Put P = 2^(t'-1) and
+c = the integer nearest to P Xi/X. Then 1.4 P - 1/2 <= c <= 2P, so 2^s + 1 <= c <= 2^(s+1) (t' >= 2), and
+|c X - P Xi| <= X/2 < 2^(w-1).  QED
+
+PROPOSITION 7 (gcd-sum exponent below 3/2, and the logarithm; PROVED given THM-5141 (A)3, (B2)-proof, (C)).
+NOT independently proof-read (written and checked by one agent in this session; numerical checks of the extended
+degree bound in deg_extended_check.out).
+(B2')  S_w <= C w^3 2^(beta1 w),   beta1 = (log2 6)/2 + 1/5 = 1.49248... < 3/2      (THM-5141 (B2): 3/2).
+(E')   The n-bit words take at least c 2^(3n/4)/n^(1/4) distinct values of eta, and
+       A(Y) >= c Y^(3/4)/(log Y)^(1/4)                                             (THM-5141 (E): (log Y)^4).
+Proof of (B2'). Notation of THM-5141 (half split, N(K), Deg_K, Deg'_K, s1 = ceil(w/2), s2 = floor(w/2)); w >= 4.
+Heights are < 2^w, so S_w <= sum_{i=0}^{w-1} 2^(-i) N(2^(i+1)) (THM-5141 (2)).
+(a) Range K = 2^(i+1) <= 2^s2. THM-5141, proof of (B2), "The sum": N(K)/K <= C0 (1+s1)^2 (6 * 2^(2/5))^s1 for
+    1 <= K <= 2^s2 (the theorem then rounds 6 * 2^(2/5) = 7.917 up to 8). These i contribute at most
+    C w^3 (6 * 2^(2/5))^(s1) <= C w^3 2^(beta1 (w+1)).
+(b) Range K >= 2^s2: here THM-5141 uses only N(K) <= 4^w, which is where 2^(3w/2) comes from. Instead extend the
+    divisor count (Deg2) to all K >= 1. Every (a', b') counted by Deg_K(p_u) arises from a triple (b', k', k): b' odd,
+    |b'| < 2^s2, k' <= K a positive divisor of Xi = a 2^s2 + b' (at most 2^(s2+1)/k' + 1 values of b' for each k'),
+    tau = Xi/k', and k with |k| <= K in one residue class mod 2^s1 (tau k = b mod 2^s1, tau odd): at most
+    2K/2^s1 + 1 values. The triple determines (a', b'). So
+        Deg_K <= (2K 2^(-s1) + 1)(2^(s2+1)(1 + ln K) + K)   for every K >= 1,
+    and in the same way (roles exchanged, as in THM-5141 (Deg2))
+        Deg'_K <= (2K 2^(-s2) + 1)(2^(s1+1)(1 + ln K) + K)  for every K >= 1.
+    For K >= 2^s2 (so 2^(s2+1) <= 2K, 2^(s1+1) <= 4K, 2^(-s2) <= 2 * 2^(-s1)): Deg_K <= 3K(1+ln K)(2K 2^(-s1) + 1) and
+    Deg'_K <= 5K(1+ln K)(4K 2^(-s1) + 1). By THM-5141 (1) and (A)3 (sum r_s1^2 = 6^s1 >= 6^s2 = sum r_s2^2):
+        N(K) <= 4 * 6^s1 K (1 + ln K)(4K 2^(-s1) + 1)       for K >= 2^s2.
+    For s2 - 1 <= i <= w - 1 and K = 2^(i+1) (ln K < w):
+        2^(-i) N(2^(i+1)) <= min( 2^(2w-i), 8 (1+w) 6^s1 (2^(i+3-s1) + 1) ).
+    The terms "+1" contribute at most 8 w (1+w) 6^s1. For the rest, sum_i min(A 2^(-i), B 2^i) <= 4 sqrt(AB) with
+    A = 4^w, B = 64 (1+w) 3^s1: at most 32 sqrt(1+w) 2^w 3^(s1/2). Since s1 <= (w+1)/2 these i contribute at most
+    C w^2 (2 * 3^(1/4))^w = C w^2 2^(1.3963 w)  (6^(1/2) < 2 * 3^(1/4)).
+Adding (a) and (b): S_w <= C w^3 2^(beta1 w). For w <= 3, S_w <= 16.  QED
+Proof of (E'). n >= 8, R = ceil(log2 n) + 1 (2n <= 2^R < 4n), W = n-bit words without a run of more than R equal
+bits (|W| >= 2^(n-2)), and now t = ceil(n/4 + (R+3)/4). Coll = number of ordered pairs h != h' in W with
+eta(h) = eta(h') and the same first t bits. By THM-5141 (C) every such pair lies in a cell with t' >= t,
+|s - t'| <= R + 3, and a cell contains at most 4 Av(t',s) + 4 * 2^max(t'-1,s) S_w pairs, where Av(t',s) <= 4^w is
+the number of odd pairs of w-bit windows that can occur in the cell (w = n - t' - s).
+(1) Ratio restriction. If s = t' - d with d >= 4, a solution has |Xi| P <= |X| c + |gamma| < 2^(w+s+2), so
+    |Xi| < 2^(w-d+3), and the ordered pairs of w-bit words with |rev x - rev x'| < 2^(w-d+3) number at most
+    2^w 2^(w-d+4): Av <= 16 * 2^(-d) 4^w. Hence
+    sum over cells of 4 Av <= sum_{t'>=t} [ sum_{s>=t'-3} 4 * 4^(n-t'-s) + sum_{d=4}^{R+3} 64 * 2^d 4^(n-2t') ]
+                           <= C 2^R 4^(n-2t) <= C 2^R 2^(n-R-3) <= C 2^n            (4t >= n + R + 3).
+(2) Cells with s >= t': sum_{t'>=t} sum_{s>=t'} C n^3 2^(s + beta1 (n-t'-s)) <= C n^3 2^(beta1 n - (2 beta1 - 1) t)
+    <= C n^3 2^(n (2 beta1 + 1)/4) = C n^3 2^(0.99624 n)                             (t >= n/4).
+(3) Cells with t'-R-3 <= s <= t'-1: sum C n^3 2^(t' + beta1 (n-t'-s)) <= C n^3 2^(beta1 (R+3)) 2^(beta1 n -
+    (2 beta1 - 1) t) <= C n^(3 + beta1) 2^(0.99624 n).
+So Coll <= C 2^n. The Cauchy-Schwarz step of THM-5141 (E) (valid for any prefix length t) gives at least
+|W|^2/(2^(t-1)(|W| + Coll)) >= c 2^(n-t) >= c 2^(3n/4) 2^(-R/4) >= c 2^(3n/4)/n^(1/4) distinct values, all
+< 2^(n+1).  QED
+Remarks. (i) With (B2) as stated (exponent exactly 3/2) the same bookkeeping gives Coll <= C n^(5/2) 2^n at
+t = ceil(n/4) (the term (3) is then n (4n)^(3/2) 2^n), i.e. (log Y)^(5/2).
+(ii) After (B2') the progression term has exponential slack at t = n/4: the ONLY obstruction to an exponent above
+3/4 in the method of THM-5141 is the count Av of window pairs admitting a solution (Prop. 9). With the exponent
+3/2 this was not so: at t = n/4 - dl n the term 2^max S_w alone would be 2^(n + 2 dl n).
+
+PROPOSITION 9 (conditional theorem: hypothesis (I_g) => exponent above 3/4; PROVED given Prop. 7 (B2')).
+Hypothesis (I_g), g > 0: there is C such that for all n >= n0 and all cells (t', s) with |s - t'| <= R + 3 and
+n/2 < w = n - t' - s <= 0.51 n, the number of odd pairs (x, x') of w-bit windows that admit at least one solution
+(P, c) of c X - P Xi = gamma in the cell is at most C 4^w 2^(-g w).
+Then with dl = min(g/9, 0.0018) the n-bit words take at least c 2^((3/4 + dl) n)/n^5 distinct values of eta, and
+A(Y) >= c Y^(3/4 + dl)/(log Y)^5.
+Proof. t = ceil((1/4 - dl) n), W and R as before. Cells with t' >= t, |s - t'| <= R + 3 have
+w <= n - 2t' + R + 3 <= n/2 + 2 dl n + R + 3 <= 0.51 n for large n; there are at most n(2R+7) of them. If w <= n/2
+the cell contributes 4 * 4^w <= 4 * 2^n to the first term; if w > n/2, by (I_g), at most
+4 C 4^w 2^(-g w) <= C' n^2 2^(n + 4 dl n - g n/2) <= C' n^2 2^n (4 dl <= 4g/9 < g/2). The progression terms are, by
+(2), (3) of Prop. 7 with this t, at most C n^(4.5) 2^(beta1 n - (2 beta1 - 1) t) <= C n^(4.5) 2^(n (0.99624 + 1.98496 dl))
+<= C n^(4.5) 2^n (1.98496 * 0.0018 < 0.00376). So Coll <= C n^5 2^n and the number of distinct values is at least
+c 2^(n-t)/n^5.  QED
+Numerical status of (I_g): the measured number of window pairs admitting a solution in a cell is about
+C_d 2^(w + min(t',s)) (cells_*.out), i.e. (I_g) holds for n <= 26 with g close to 1/2. The value 0.0018 is limited
+only by beta1; with the conjectured S_w <= C w^A 6^(w/2) (numerically true for w <= 21, THM-5141 remark 2) the same
+proof allows dl up to min(g/9, 0.17).
+
+PROPOSITION 8 (differencing inequality; the reduction is PROVED, the needed bound is OPEN).  Fix a cell (t', s) and
+an odd pattern eps in {-1,0,1}^w (eps_0, eps_(w-1) != 0) with interior zero set Z(eps), z = |Z(eps)|. Let M(eps) be
+the set of m in {0,1}^Z(eps) for which the window pair with pattern eps and common bits m admits a solution (P, c)
+in the cell, and
+    Lam+ = {dc X - dP Xi + th : |dc| < 2^s, |dP| < 2^(t'-1), |th| <= 2},
+    T'(eps) = #{(m, m') : sum_{j in Z(eps)} (m_j - m'_j) lambda_j(eps) in Lam+}.
+Then |M(eps)|^2 <= T'(eps), and the number of odd window pairs admitting a solution in the cell is
+    sum_eps |M(eps)| <= sum_eps T'(eps)^(1/2) <= (3^w sum_eps T'(eps))^(1/2).
+Proof. If (m, P, c) and (m', P', c') are solutions, subtract the two equations (SS): by Remark (i) to Lemma 2 the
+prefix contributes P Xi + (P mod 2) eps_(w-1) and the suffix (2^(s+1) - c) X + (c mod 2) eps_0, so
+sum_j (m_j - m'_j) lambda_j = (c - c') X - (P - P') Xi - th with |th| <= 2. The rest is Cauchy-Schwarz over the at
+most 3^w patterns.  QED
+What is needed. sum_eps T'(eps) counts the pairs of signed patterns (eps, dlt) with disjoint supports (weight 2 per
+position outside both) that are B-orthogonal modulo the box lattice. Its diagonal part (dlt = 0) is < 4^w, which
+would give (12)^(w/2) = 3.47^w window pairs instead of 4^w - an exponential saving (g = 0.2), and by Prop. 9 any
+saving 2^(-g w) with g > 0 for n/2 < w <= 0.51 n raises the exponent above 3/4. The trivial bound for the full sum is 6^w, which gives (18)^(w/2) = 4.25^w > 4^w: no gain.
+The requirement is sum_eps T'(eps) <= (16/3 - e)^w; the random heuristic predicts about 4^w + (6/sqrt 2)^w at
+w = n/2. NOT tested numerically in this session. OPEN.

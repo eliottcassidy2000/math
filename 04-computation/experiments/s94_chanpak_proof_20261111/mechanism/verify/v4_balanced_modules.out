@@ -1,0 +1,18 @@
+n = 4: 64 tournaments (3.3s); with a balanced arc 40; with an anti-balanced arc 64; strong 24; strong with balanced 0; strong with anti-balanced 24
+   H-values 3; admitting balanced 2; anti-balanced 3; neither 0: []
+   max # balanced arcs in one tournament 3; anti-balanced 3; sum of arc usages = (n-1) H for every tournament: True
+n = 5: 1024 tournaments (0.0s); with a balanced arc 840; with an anti-balanced arc 760; strong 544; strong with balanced 360; strong with anti-balanced 280
+   H-values 7; admitting balanced 6; anti-balanced 6; neither 0: []
+   max # balanced arcs in one tournament 6; anti-balanced 4; sum of arc usages = (n-1) H for every tournament: True
+n = 6: 32768 tournaments (0.1s); with a balanced arc 21120; with an anti-balanced arc 15840; strong 22320; strong with balanced 11520; strong with anti-balanced 8640
+   H-values 19; admitting balanced 14; anti-balanced 13; neither 1: [37]
+   max # balanced arcs in one tournament 10; anti-balanced 5; sum of arc usages = (n-1) H for every tournament: True
+n = 7: 2097152 tournaments (11.2s); with a balanced arc 532560; with an anti-balanced arc 409920; strong 1677488; strong with balanced 267120; strong with anti-balanced 220080
+   H-values 77; admitting balanced 37; anti-balanced 33; neither 27: [61, 79, 83, 85, 89, 93, 95, 99, 103, 105, 111, 121, 125, 127, 129, 135, 139, 141, 143, 145, 147, 151, 153, 157, 171, 175, 189]
+   max # balanced arcs in one tournament 15; anti-balanced 6; sum of arc usages = (n-1) H for every tournament: True
+n = 3: strong labelled tournaments 2; min over all port pairs of c_22 = 1; tournaments attaining it 2 (2.8s)
+n = 4: strong labelled tournaments 24; min over all port pairs of c_22 = 1; tournaments attaining it 24 (0.0s)
+n = 5: strong labelled tournaments 544; min over all port pairs of c_22 = 1; tournaments attaining it 120 (0.0s)
+n = 6: strong labelled tournaments 22320; min over all port pairs of c_22 = 2; tournaments attaining it 2160 (1.5s)
+module law: 300 random instances (context order 3..6, modules of order 1..3): failures 0
+transitive modules in strong contexts: 240 mixed differences H(s,t)-H(s,1)-H(1,t)+H(1,1), violations of >= (2^s-2)(2^t-2): 0

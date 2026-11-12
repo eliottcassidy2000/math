@@ -1,0 +1,44 @@
+cell (t'=4, s=3), w=9, n=16: ordered odd window pairs admitting a solution = 1012 (unordered 506) of 65536 odd pairs ; sum_eps |M(eps)| = 1012 (equal: True)
+   Prop. 8: patterns=8748 violations of |M|^2 <= T' = 0 ; sum_eps T'(eps) = 303208 ; diagonal sum 2^z = 65536 (4^(w-1) = 65536)
+   sum T' as x^w: x = 4.0652  (4, 6/sqrt2 = 4.243, 16/3 = 5.333, 6) ; bound (3^w sum T')^(1/2) = 7.725e+04 vs 4^w = 2.621e+05 vs actual 1012 ; sum sqrt(T') = 3.721e+04
+   (1.9s)
+cell (t'=5, s=4), w=7, n=16: ordered odd window pairs admitting a solution = 372 (unordered 186) of 4096 odd pairs ; sum_eps |M(eps)| = 372 (equal: True)
+   Prop. 8: patterns=972 violations of |M|^2 <= T' = 0 ; sum_eps T'(eps) = 23888 ; diagonal sum 2^z = 4096 (4^(w-1) = 4096)
+   sum T' as x^w: x = 4.2214  (4, 6/sqrt2 = 4.243, 16/3 = 5.333, 6) ; bound (3^w sum T')^(1/2) = 7.228e+03 vs 4^w = 1.638e+04 vs actual 372 ; sum sqrt(T') = 3.726e+03
+   (0.0s)
+cell (t'=3, s=3), w=10, n=16: ordered odd window pairs admitting a solution = 740 (unordered 370) of 262144 odd pairs ; sum_eps |M(eps)| = 740 (equal: True)
+   Prop. 8: patterns=26244 violations of |M|^2 <= T' = 0 ; sum_eps T'(eps) = 760444 ; diagonal sum 2^z = 262144 (4^(w-1) = 262144)
+   sum T' as x^w: x = 3.8735  (4, 6/sqrt2 = 4.243, 16/3 = 5.333, 6) ; bound (3^w sum T')^(1/2) = 2.119e+05 vs 4^w = 1.049e+06 vs actual 740 ; sum sqrt(T') = 1.044e+05
+   (0.0s)
+cell (t'=4, s=4), w=8, n=16: ordered odd window pairs admitting a solution = 418 (unordered 209) of 16384 odd pairs ; sum_eps |M(eps)| = 418 (equal: True)
+   Prop. 8: patterns=2916 violations of |M|^2 <= T' = 0 ; sum_eps T'(eps) = 99832 ; diagonal sum 2^z = 16384 (4^(w-1) = 16384)
+   sum T' as x^w: x = 4.2161  (4, 6/sqrt2 = 4.243, 16/3 = 5.333, 6) ; bound (3^w sum T')^(1/2) = 2.559e+04 vs 4^w = 6.554e+04 vs actual 418 ; sum sqrt(T') = 1.244e+04
+   (0.0s)
+cell (t'=5, s=5), w=6, n=16: ordered odd window pairs admitting a solution = 116 (unordered 58) of 1024 odd pairs ; sum_eps |M(eps)| = 116 (equal: True)
+   Prop. 8: patterns=324 violations of |M|^2 <= T' = 0 ; sum_eps T'(eps) = 4260 ; diagonal sum 2^z = 1024 (4^(w-1) = 1024)
+   sum T' as x^w: x = 4.0263  (4, 6/sqrt2 = 4.243, 16/3 = 5.333, 6) ; bound (3^w sum T')^(1/2) = 1.762e+03 vs 4^w = 4.096e+03 vs actual 116 ; sum sqrt(T') = 9.661e+02
+   (0.0s)
+cell (t'=3, s=2), w=6, n=11: ordered odd window pairs admitting a solution = 72 (unordered 36) of 1024 odd pairs ; sum_eps |M(eps)| = 72 (equal: True)
+   Prop. 8: patterns=324 violations of |M|^2 <= T' = 0 ; sum_eps T'(eps) = 3508 ; diagonal sum 2^z = 1024 (4^(w-1) = 1024)
+   sum T' as x^w: x = 3.8980  (4, 6/sqrt2 = 4.243, 16/3 = 5.333, 6) ; bound (3^w sum T')^(1/2) = 1.599e+03 vs 4^w = 4.096e+03 vs actual 72 ; sum sqrt(T') = 8.830e+02
+   (0.0s)
+cell (t'=3, s=3), w=6, n=12: ordered odd window pairs admitting a solution = 42 (unordered 21) of 1024 odd pairs ; sum_eps |M(eps)| = 42 (equal: True)
+   Prop. 8: patterns=324 violations of |M|^2 <= T' = 0 ; sum_eps T'(eps) = 3752 ; diagonal sum 2^z = 1024 (4^(w-1) = 1024)
+   sum T' as x^w: x = 3.9419  (4, 6/sqrt2 = 4.243, 16/3 = 5.333, 6) ; bound (3^w sum T')^(1/2) = 1.654e+03 vs 4^w = 4.096e+03 vs actual 42 ; sum sqrt(T') = 9.108e+02
+   (0.0s)
+cell (t'=4, s=3), w=8, n=15: ordered odd window pairs admitting a solution = 520 (unordered 260) of 16384 odd pairs ; sum_eps |M(eps)| = 520 (equal: True)
+   Prop. 8: patterns=2916 violations of |M|^2 <= T' = 0 ; sum_eps T'(eps) = 87612 ; diagonal sum 2^z = 16384 (4^(w-1) = 16384)
+   sum T' as x^w: x = 4.1478  (4, 6/sqrt2 = 4.243, 16/3 = 5.333, 6) ; bound (3^w sum T')^(1/2) = 2.398e+04 vs 4^w = 6.554e+04 vs actual 520 ; sum sqrt(T') = 1.176e+04
+   (0.0s)
+cell (t'=4, s=4), w=9, n=17: ordered odd window pairs admitting a solution = 792 (unordered 396) of 65536 odd pairs ; sum_eps |M(eps)| = 792 (equal: True)
+   Prop. 8: patterns=8748 violations of |M|^2 <= T' = 0 ; sum_eps T'(eps) = 353864 ; diagonal sum 2^z = 65536 (4^(w-1) = 65536)
+   sum T' as x^w: x = 4.1356  (4, 6/sqrt2 = 4.243, 16/3 = 5.333, 6) ; bound (3^w sum T')^(1/2) = 8.346e+04 vs 4^w = 2.621e+05 vs actual 792 ; sum sqrt(T') = 3.969e+04
+   (0.0s)
+cell (t'=5, s=4), w=10, n=19: ordered odd window pairs admitting a solution = 3804 (unordered 1902) of 262144 odd pairs ; sum_eps |M(eps)| = 3804 (equal: True)
+   Prop. 8: patterns=26244 violations of |M|^2 <= T' = 0 ; sum_eps T'(eps) = 1799100 ; diagonal sum 2^z = 262144 (4^(w-1) = 262144)
+   sum T' as x^w: x = 4.2219  (4, 6/sqrt2 = 4.243, 16/3 = 5.333, 6) ; bound (3^w sum T')^(1/2) = 3.259e+05 vs 4^w = 1.049e+06 vs actual 3804 ; sum sqrt(T') = 1.452e+05
+   (0.2s)
+cell (t'=5, s=5), w=10, n=20: ordered odd window pairs admitting a solution = 3254 (unordered 1627) of 262144 odd pairs ; sum_eps |M(eps)| = 3254 (equal: True)
+   Prop. 8: patterns=26244 violations of |M|^2 <= T' = 0 ; sum_eps T'(eps) = 2100980 ; diagonal sum 2^z = 262144 (4^(w-1) = 262144)
+   sum T' as x^w: x = 4.2879  (4, 6/sqrt2 = 4.243, 16/3 = 5.333, 6) ; bound (3^w sum T')^(1/2) = 3.522e+05 vs 4^w = 1.049e+06 vs actual 3254 ; sum sqrt(T') = 1.556e+05
+   (0.3s)

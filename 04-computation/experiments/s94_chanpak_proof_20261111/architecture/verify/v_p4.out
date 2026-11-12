@@ -1,0 +1,5 @@
+P4 exhaustive, rooted labelled tournaments of orders 1..5: 5405 failures: 0
+one-vertex closing law H = H(B) + 2^t U_B(y), orders 1..4, t = 1, 2, 3: 855 failures: 0
+P4 random sample, orders 6 and 7: 2100 failures: 0
+closing law random sample, order 6, t in {1, 2}: 300 failures: 0
+CHECK PASS

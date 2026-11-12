@@ -1,0 +1,4 @@
+with 343: odd misses up to 2000000 = [7, 21]
+without 343: number of odd misses = 7 first: [7, 21, 343, 1029, 16807, 50421, 823543]
+prediction for the misses without 343 holds: True
+CHECK PASS

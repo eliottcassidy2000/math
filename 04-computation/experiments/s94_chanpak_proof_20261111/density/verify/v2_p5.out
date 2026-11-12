@@ -1,0 +1,40 @@
+w= 2 odd classes 4 = 4*3^(w-2): True; class counts by z and the inequality for K = 2^m, m = 0..w: True
+w= 3 odd classes 12 = 4*3^(w-2): True; class counts by z and the inequality for K = 2^m, m = 0..w: True
+w= 4 odd classes 36 = 4*3^(w-2): True; class counts by z and the inequality for K = 2^m, m = 0..w: True
+w= 5 odd classes 108 = 4*3^(w-2): True; class counts by z and the inequality for K = 2^m, m = 0..w: True
+w= 6 odd classes 324 = 4*3^(w-2): True; class counts by z and the inequality for K = 2^m, m = 0..w: True
+w= 7 odd classes 972 = 4*3^(w-2): True; class counts by z and the inequality for K = 2^m, m = 0..w: True
+w= 8 odd classes 2916 = 4*3^(w-2): True; class counts by z and the inequality for K = 2^m, m = 0..w: True
+w= 9 odd classes 8748 = 4*3^(w-2): True; class counts by z and the inequality for K = 2^m, m = 0..w: True
+w=10 odd classes 26244 = 4*3^(w-2): True; class counts by z and the inequality for K = 2^m, m = 0..w: True
+w=11 odd classes 78732 = 4*3^(w-2): True; class counts by z and the inequality for K = 2^m, m = 0..w: True
+w=12 odd classes 236196 = 4*3^(w-2): True; class counts by z and the inequality for K = 2^m, m = 0..w: True
+
+n, m=t'=s, w | log2 LB - n | log2 SUM - n | log2 CLm - n | log2 CL - n
+n= 200 m=  10 w= 180 |     +32.7 |     +94.1 |     +22.8 |     +84.1
+n= 200 m=  20 w= 160 |     +43.4 |     +72.4 |     +23.7 |     +52.4
+n= 200 m=  30 w= 140 |     +41.1 |     +50.7 |     +11.7 |     +20.7
+n= 200 m=  34 w= 132 |     +36.7 |     +42.0 |      +3.7 |      +8.0
+n= 200 m=  36 w= 128 |     +33.8 |     +37.6 |      -1.0 |      +1.7
+n= 200 m=  38 w= 124 |     +30.3 |     +33.0 |      -6.2 |      -4.6
+n= 200 m=  40 w= 120 |     +26.3 |     +28.2 |     -11.7 |     -11.0
+n= 200 m=  44 w= 112 |     +16.5 |     +17.4 |     -23.7 |     -23.7
+n= 200 m=  48 w= 104 |      +4.3 |      +4.6 |     -36.3 |     -36.3
+n= 200 m=  50 w= 100 |      -2.7 |      -2.5 |     -42.7 |     -42.7
+n= 200 m=  52 w=  96 |     -10.2 |     -10.1 |     -49.0 |     -49.0
+n=1000 m=  50 w= 900 |    +174.4 |    +475.3 |    +124.5 |    +425.3
+n=1000 m= 100 w= 800 |    +230.1 |    +366.8 |    +130.4 |    +266.8
+n=1000 m= 150 w= 700 |    +219.7 |    +258.3 |     +70.4 |    +108.3
+n=1000 m= 170 w= 660 |    +198.2 |    +214.9 |     +29.2 |     +44.9
+n=1000 m= 180 w= 640 |    +183.5 |    +193.2 |      +4.9 |     +13.2
+n=1000 m= 190 w= 620 |    +166.1 |    +171.4 |     -21.9 |     -18.5
+n=1000 m= 200 w= 600 |    +145.9 |    +148.9 |     -51.1 |     -50.2
+n=1000 m= 220 w= 560 |     +96.5 |     +97.5 |    -113.6 |    -113.6
+n=1000 m= 240 w= 520 |     +33.7 |     +34.0 |    -177.0 |    -177.0
+n=1000 m= 250 w= 500 |      -2.9 |      -2.8 |    -208.7 |    -208.7
+n=1000 m= 260 w= 480 |     -42.0 |     -42.0 |    -240.4 |    -240.4
+
+Reading: LB and SUM exceed 2^n for every m < n/4 (the lane's inequality).  CL = 4*3^(w-2) is below 2^n as soon as
+w < n log_3 2 = 0.6309 n, i.e. m > 0.1845 n: a bound of ONE solution per difference class is not obstructed for
+0.1845 n < t' < n/4.  The obstruction concerns min(2^z, 2^m) solutions per class (one per (P,c) near the line).
+ALL CHECKS PASS

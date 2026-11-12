@@ -1,0 +1,7 @@
+n = 1: sum H = 6, formula = 6, OK ; smallest odd N > 21 not attained with length <= 1: 23 ; 7 or 21 attained: False
+n = 2: sum H = 48, formula = 48, OK ; smallest odd N > 21 not attained with length <= 2: 23 ; 7 or 21 attained: False
+n = 3: sum H = 432, formula = 432, OK ; smallest odd N > 21 not attained with length <= 3: 23 ; 7 or 21 attained: False
+n = 4: sum H = 4224, formula = 4224, OK ; smallest odd N > 21 not attained with length <= 4: 35 ; 7 or 21 attained: False
+n = 5: sum H = 43776, formula = 43776, OK ; smallest odd N > 21 not attained with length <= 5: 61 ; 7 or 21 attained: False
+n = 6: sum H = 473088, formula = 473088, OK ; smallest odd N > 21 not attained with length <= 6: 297 ; 7 or 21 attained: False
+CHECK first moment PASS

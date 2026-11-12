@@ -1,0 +1,2 @@
+sigma=1 n=13 pairs M=8390656 distinct=8188484 (0.9759 of M; 0.0257 of the odd numbers of the span) E=8804052 E/M=1.0493 K=39.8025 max r=5
+    coprime states 3142 of 4096; same-row ordered collisions: all rows 3566, coprime rows 0

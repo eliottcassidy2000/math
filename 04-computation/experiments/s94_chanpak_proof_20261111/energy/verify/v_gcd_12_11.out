@@ -1,0 +1,28 @@
+beta1 = 1.492481 ; 6*2^(2/5) = 7.91705 ; 2*3^(1/4) = 2.63215 (log2 = 1.39624)
+w= 4 odd pairs=64 (4^(w-1)=64) max height=13 (<2^w: True)  S_w=29.8235  S_w/6^(w/2)=0.8284  S_w/(w^3 2^(beta1 w))=7.435e-03  dyadic sum (2)=58.0 >= S_w: True
+      extended N(K) bound, every integer K >= 2^s2: True (max ratio 0.0047) ; max_K<=2^s2 N(K)/K / ((1+s1)^2 (6 2^.4)^s1) = 0.0425 ; max_K N(K)/K / 6^(w/2) = 0.667  (0.8s)
+w= 5 odd pairs=256 (4^(w-1)=256) max height=29 (<2^w: True)  S_w=89.5118  S_w/6^(w/2)=1.0151  S_w/(w^3 2^(beta1 w))=4.060e-03  dyadic sum (2)=177.5 >= S_w: True
+      extended N(K) bound, every integer K >= 2^s2: True (max ratio 0.0032) ; max_K<=2^s2 N(K)/K / ((1+s1)^2 (6 2^.4)^s1) = 0.0091 ; max_K N(K)/K / 6^(w/2) = 0.816  (0.0s)
+w= 6 odd pairs=1024 (4^(w-1)=1024) max height=61 (<2^w: True)  S_w=194.6283  S_w/6^(w/2)=0.9011  S_w/(w^3 2^(beta1 w))=1.816e-03  dyadic sum (2)=406.0 >= S_w: True
+      extended N(K) bound, every integer K >= 2^s2: True (max ratio 0.0023) ; max_K<=2^s2 N(K)/K / ((1+s1)^2 (6 2^.4)^s1) = 0.0181 ; max_K N(K)/K / 6^(w/2) = 0.667  (0.0s)
+w= 7 odd pairs=4096 (4^(w-1)=4096) max height=125 (<2^w: True)  S_w=559.0048  S_w/6^(w/2)=1.0565  S_w/(w^3 2^(beta1 w))=1.167e-03  dyadic sum (2)=1164.9 >= S_w: True
+      extended N(K) bound, every integer K >= 2^s2: True (max ratio 0.0016) ; max_K<=2^s2 N(K)/K / ((1+s1)^2 (6 2^.4)^s1) = 0.0044 ; max_K N(K)/K / 6^(w/2) = 0.816  (0.0s)
+w= 8 odd pairs=16384 (4^(w-1)=16384) max height=253 (<2^w: True)  S_w=1189.2004  S_w/6^(w/2)=0.9176  S_w/(w^3 2^(beta1 w))=5.912e-04  dyadic sum (2)=2535.4 >= S_w: True
+      extended N(K) bound, every integer K >= 2^s2: True (max ratio 0.0011) ; max_K<=2^s2 N(K)/K / ((1+s1)^2 (6 2^.4)^s1) = 0.0088 ; max_K N(K)/K / 6^(w/2) = 0.667  (0.0s)
+w= 9 odd pairs=65536 (4^(w-1)=65536) max height=509 (<2^w: True)  S_w=3363.0041  S_w/6^(w/2)=1.0594  S_w/(w^3 2^(beta1 w))=4.173e-04  dyadic sum (2)=7142.3 >= S_w: True
+      extended N(K) bound, every integer K >= 2^s2: True (max ratio 0.0008) ; max_K<=2^s2 N(K)/K / ((1+s1)^2 (6 2^.4)^s1) = 0.0023 ; max_K N(K)/K / 6^(w/2) = 0.816  (0.0s)
+w=10 odd pairs=262144 (4^(w-1)=262144) max height=1021 (<2^w: True)  S_w=7040.6619  S_w/6^(w/2)=0.9054  S_w/(w^3 2^(beta1 w))=2.264e-04  dyadic sum (2)=15255.8 >= S_w: True
+      extended N(K) bound, every integer K >= 2^s2: True (max ratio 0.0007) ; max_K<=2^s2 N(K)/K / ((1+s1)^2 (6 2^.4)^s1) = 0.0046 ; max_K N(K)/K / 6^(w/2) = 0.667  (0.0s)
+w=11 odd pairs=1048576 (4^(w-1)=1048576) max height=2045 (<2^w: True)  S_w=19946.7615  S_w/6^(w/2)=1.0472  S_w/(w^3 2^(beta1 w))=1.712e-04  dyadic sum (2)=42829.7 >= S_w: True
+      extended N(K) bound, every integer K >= 2^s2: True (max ratio 0.0005) ; max_K<=2^s2 N(K)/K / ((1+s1)^2 (6 2^.4)^s1) = 0.0013 ; max_K N(K)/K / 6^(w/2) = 0.816  (0.0s)
+w=12 odd pairs=4194304 (4^(w-1)=4194304) max height=4093 (<2^w: True)  S_w=40794.9493  S_w/6^(w/2)=0.8744  S_w/(w^3 2^(beta1 w))=9.587e-05  dyadic sum (2)=88294.5 >= S_w: True
+      extended N(K) bound, every integer K >= 2^s2: True (max ratio 0.0004) ; max_K<=2^s2 N(K)/K / ((1+s1)^2 (6 2^.4)^s1) = 0.0026 ; max_K N(K)/K / 6^(w/2) = 0.667  (0.2s)
+w= 4 extended degree bounds for ALL points and ALL integer K in [1, 2^w]: violations=0  max Deg/bound=0.2963  max Deg'/bound=0.2963  (0.5s)
+w= 5 extended degree bounds for ALL points and ALL integer K in [1, 2^w]: violations=0  max Deg/bound=0.1778  max Deg'/bound=0.3137  (0.0s)
+w= 6 extended degree bounds for ALL points and ALL integer K in [1, 2^w]: violations=0  max Deg/bound=0.1882  max Deg'/bound=0.1882  (0.0s)
+w= 7 extended degree bounds for ALL points and ALL integer K in [1, 2^w]: violations=0  max Deg/bound=0.1482  max Deg'/bound=0.1939  (0.0s)
+w= 8 extended degree bounds for ALL points and ALL integer K in [1, 2^w]: violations=0  max Deg/bound=0.1787  max Deg'/bound=0.1787  (0.0s)
+w= 9 extended degree bounds for ALL points and ALL integer K in [1, 2^w]: violations=0  max Deg/bound=0.1574  max Deg'/bound=0.1709  (0.1s)
+w=10 extended degree bounds for ALL points and ALL integer K in [1, 2^w]: violations=0  max Deg/bound=0.1710  max Deg'/bound=0.1710  (0.3s)
+w=11 extended degree bounds for ALL points and ALL integer K in [1, 2^w]: violations=0  max Deg/bound=0.1521  max Deg'/bound=0.1746  (1.2s)
+Prop. 6 family, w = 8..14, t' = 2..8 (38227 instances): True

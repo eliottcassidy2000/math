@@ -1,0 +1,14 @@
+sigma=1 n=6 pairs M=528 distinct=509 (0.9640 of M; 0.0349 of the odd numbers of the span) E=566 E/M=1.0720 K=29.5949 max r=2
+    coprime states 29 of 32; same-row ordered collisions: all rows 14, coprime rows 0
+sigma=1 n=7 pairs M=2080 distinct=2021 (0.9716 of M; 0.0315 of the odd numbers of the span) E=2198 E/M=1.0567 K=32.5885 max r=2
+    coprime states 52 of 64; same-row ordered collisions: all rows 28, coprime rows 0
+sigma=1 n=8 pairs M=8256 distinct=8070 (0.9775 of M; 0.0295 of the odd numbers of the span) E=8650 E/M=1.0477 K=34.6796 max r=4
+    coprime states 112 of 128; same-row ordered collisions: all rows 64, coprime rows 0
+sigma=1 n=9 pairs M=32896 distinct=32070 (0.9749 of M; 0.0280 of the odd numbers of the span) E=34602 E/M=1.0519 K=36.6025 max r=4
+    coprime states 204 of 256; same-row ordered collisions: all rows 172, coprime rows 0
+sigma=1 n=10 pairs M=131328 distinct=128350 (0.9773 of M; 0.0271 of the odd numbers of the span) E=137438 E/M=1.0465 K=37.6818 max r=5
+    coprime states 426 of 512; same-row ordered collisions: all rows 348, coprime rows 0
+sigma=1 n=11 pairs M=524800 distinct=511958 (0.9755 of M; 0.0265 of the odd numbers of the span) E=551070 E/M=1.0501 K=38.7212 max r=5
+    coprime states 784 of 1024; same-row ordered collisions: all rows 698, coprime rows 0
+sigma=1 n=12 pairs M=2098176 distinct=2048591 (0.9764 of M; 0.0260 of the odd numbers of the span) E=2199490 E/M=1.0483 K=39.3039 max r=5
+    coprime states 1593 of 2048; same-row ordered collisions: all rows 1880, coprime rows 0

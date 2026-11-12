@@ -1,0 +1,10 @@
+n = 5: strong affine squares by value set (set: count), sets with 4 distinct values listed first
+   4 distinct values: [((9, 11, 13, 15), 120)]  total kinds: 1
+   4 consecutive odd values: [((9, 11, 13, 15), 120)]
+   of these, sets containing all odd numbers of [X, 2X] with X = min - 1: [((9, 11, 13, 15), 120)]
+   3 distinct values: [((11, 13, 15), 120)]
+n = 6: strong affine squares by value set (set: count), sets with 4 distinct values listed first
+   4 distinct values: [((15, 23, 25, 33), 1440), ((15, 23, 29, 37), 1440), ((17, 19, 27, 29), 1440), ((17, 23, 27, 33), 1440), ((19, 23, 29, 33), 2880), ((19, 25, 37, 43), 1440), ((19, 29, 33, 43), 1440), ((23, 25, 29, 31), 1440), ((23, 27, 33, 37), 1440), ((29, 33, 37, 41), 2880), ((33, 37, 41, 45), 1440)]  total kinds: 11
+   4 consecutive odd values: []
+   of these, sets containing all odd numbers of [X, 2X] with X = min - 1: []
+   3 distinct values: [((15, 19, 23), 1440), ((17, 23, 29), 720), ((17, 27, 37), 720), ((23, 33, 43), 1440), ((25, 33, 41), 1440), ((29, 31, 33), 720), ((29, 33, 37), 1440), ((29, 37, 45), 720), ((31, 37, 43), 1440), ((41, 43, 45), 720)]

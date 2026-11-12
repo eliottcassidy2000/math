@@ -1,0 +1,34 @@
+n = 3: 8 labelled tournaments (0.4s); sum H = 12 (n! 2^(C(n,2)-n+1) = 12, match True); max H = 3; distinct values 2; strong: 2; min H over strong = 3; all odd: True
+   values: [1, 3];  strong values: [3]
+   brute-force (permutations) check of 8 table entries: mismatches 0
+n = 4: 64 labelled tournaments (0.0s); sum H = 192 (n! 2^(C(n,2)-n+1) = 192, match True); max H = 5; distinct values 3; strong: 24; min H over strong = 5; all odd: True
+   values: [1, 3, 5];  strong values: [5]
+   brute-force (permutations) check of 64 table entries: mismatches 0
+n = 5: 1024 labelled tournaments (0.0s); sum H = 7680 (n! 2^(C(n,2)-n+1) = 7680, match True); max H = 15; distinct values 7; strong: 544; min H over strong = 9; all odd: True
+   values: [1, 3, 5, 9, 11, 13, 15];  strong values: [9, 11, 13, 15]
+   brute-force (permutations) check of 1024 table entries: mismatches 0
+n = 6: 32768 labelled tournaments (0.0s); sum H = 737280 (n! 2^(C(n,2)-n+1) = 737280, match True); max H = 45; distinct values 19; strong: 22320; min H over strong = 15; all odd: True
+   values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45];  strong values: [15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+   brute-force (permutations) check of 60 table entries: mismatches 0
+n = 7: 2097152 labelled tournaments (2.1s); sum H = 165150720 (n! 2^(C(n,2)-n+1) = 165150720, match True); max H = 189; distinct values 77; strong: 1677488; min H over strong = 25; all odd: True
+   odd numbers <= max missing: [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+   brute-force (permutations) check of 60 table entries: mismatches 0
+n = 4 (A) adjacent: squares 192, D = 0: 0, min |D| = 2 | (B) disjoint: squares 48, D = 0: 48, both increments nonzero: 24, of these all four strong: 0
+n = 5 (A) adjacent: squares 7680, D = 0: 0, min |D| = 2 | (B) disjoint: squares 3840, D = 0: 1860, both increments nonzero: 720, of these all four strong: 240
+n = 6 (A) adjacent: squares 491520, D = 0: 0, min |D| = 2 | (B) disjoint: squares 368640, D = 0: 110520, both increments nonzero: 50400, of these all four strong: 29520
+n = 7 (A) adjacent: squares 55050240, D = 0: 0, min |D| = 2 | (B) disjoint: squares 55050240, D = 0: 8890560, both increments nonzero: 4717440, of these all four strong: 3648960
+n = 6 (C): 3-matchings 15; affine 3-cubes 3900; with three nonzero increments 0; of these all 8 strong 0; 8 distinct values 0; 8 consecutive odd 0
+      affine 3-cubes on arc triples that are NOT matchings (440 triples): 0
+n = 7 (C): 3-matchings 105; affine 3-cubes 378840; with three nonzero increments 21840; of these all 8 strong 21840; 8 distinct values 10080; 8 consecutive odd 0
+      |increments| (6, 6, 48) strong=1: 10080   example values [83, 89, 89, 95, 131, 137, 137, 143]
+      |increments| (6, 16, 48) strong=1: 10080   example values [89, 95, 105, 111, 137, 143, 153, 159]
+      |increments| (30, 30, 30) strong=1: 1680   example values [99, 129, 129, 129, 159, 159, 159, 189]
+      affine 3-cubes on arc triples that are NOT matchings (1225 triples): 0
+n = 5: strong affine squares with 4 distinct values: [((9, 11, 13, 15), 120)]
+   strong affine squares (any number of values) containing all odd numbers of some [X,2X], X>=3: [((9, 11, 13, 15), 120, [8])]
+   (for comparison, not-necessarily-strong affine squares with that property: [((1, 3, 5), 240, [3]), ((3, 5, 9, 11), 240, [3]), ((9, 11, 13, 15), 120, [8])])
+   n = 5: labelled strong affine squares with values 9,11,13,15: 120; isomorphism classes: 1 with sizes [120]
+   example: base mask 282, arcs (0, 1), (2, 3), values [11, 9, 15, 13]
+n = 6: strong affine squares with 4 distinct values: [((15, 23, 25, 33), 1440), ((15, 23, 29, 37), 1440), ((17, 19, 27, 29), 1440), ((17, 23, 27, 33), 1440), ((19, 23, 29, 33), 2880), ((19, 25, 37, 43), 1440), ((19, 29, 33, 43), 1440), ((23, 25, 29, 31), 1440), ((23, 27, 33, 37), 1440), ((29, 33, 37, 41), 2880), ((33, 37, 41, 45), 1440)]
+   strong affine squares (any number of values) containing all odd numbers of some [X,2X], X>=3: []
+   (for comparison, not-necessarily-strong affine squares with that property: [((1, 3, 5), 2160, [3]), ((3, 5), 1440, [3]), ((3, 5, 9, 11), 2880, [3]), ((9, 11, 13, 15), 1440, [8])])

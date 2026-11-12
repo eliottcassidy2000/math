@@ -1,0 +1,11 @@
+order 7, k = 5: 20349 arc sets x 65536 bases (183.1s)
+   longest run of consecutive odd values inside one 5-cube: 17 (start 25, arcs [(0, 1), (0, 2), (0, 3), (1, 4), (4, 5)]); perfect cubes (2^k consecutive odd values): 0
+   cubes containing all odd numbers of [24, 48]: 100800
+   cubes containing all odd numbers of [25, 50]: 90720
+   cubes containing all odd numbers of [26, 52]: 30240
+   cubes containing all odd numbers of [27, 54]: 20160
+   cubes containing all odd numbers of [28, 56]: 30240
+   cubes containing all odd numbers of [29, 58]: 30240
+   cubes containing all odd numbers of [30, 60]: 30240
+   cubes containing all odd numbers of [31, 62]: 0
+Wed Nov 11 19:09:26 MST 2026

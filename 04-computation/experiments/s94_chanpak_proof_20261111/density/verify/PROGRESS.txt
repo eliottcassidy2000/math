@@ -1,0 +1,39 @@
+VERIFIER (lane density, S94) - PROGRESS (final)
+Files: v1_identities.py/.out, v2_p5.py/.out, v3_oneapex_classes.py + _12_16_20.out + _22_24.out,
+       v4_balanced_cell.py + _s1.out + _s2.out, v6_converse_pairs.py/.out.   Every check passed (exact integers).
+
+VERDICTS
+D-01 CORRECTED (attribution).  Identity right (20,000 random instances, h < 2^40).  The readout form is KNOWN:
+     THM-4885 (A)/(C), Phi(v) = a g(v) - b e(v) + c (1+v) with (a,b,c) = rooted triple (g(u), e(u), 1+u); with
+     u = 2h1 followed by a1 ones, v = 2h2 followed by a2 ones this is x1 x2 + 2^(a1+a2) y1 y2 - [a1=a2=0].  Only the
+     q-normalisation and the slope reading are the lane's (one line).
+D-02 CONFIRMED.  Proof complete.  General (A,B): 2,250 readouts, 3,668 colliding pairs, 0 violations; threshold
+     sharp (largest coprime A with a collision = 2^(n-1) - 2, n = 4..10; 15 of 153 coprime rows fail at
+     n2 = sigma + n1 + 2).  D-10 rows: 0 collisions in coprime rows, 3,566 in the others at n = 13 (reproduced).
+D-03 CONFIRMED (two wording notes: gamma0 depends on the parities of P, c, so 'one linear equation' is per parity
+     class; the rounding term in (iii) is < 3 per common bit, i.e. < 3 z(eps) in total, not O(1)).
+D-04 CONFIRMED.  All of (a)-(d) checked for random A >= B (420 readouts, 54,122 pairs, 0 violations; (d) observed
+     max |t'-s-log2(A/B)| - R = 1).
+D-05 CORRECTED.  Inequality PROVED and exact for w <= 12.  The reading is overstated: ONE solution per difference
+     class is not obstructed (4*3^(w-2) < 2^n for w < 0.6309 n); obstructed is min(2^z, 2^m) per class.  'requires
+     that all but an exponentially small share of classes have no solution' holds only for w > 0.6309 n.  'it is
+     2^(w(1+H(mu)))' is a lower bound only.
+D-06 CONFIRMED (CONDITIONAL).  Implication and constants re-derived; (BC) count Q/4^n = 0.0237, 0.0259, 0.0233,
+     0.0250, 0.0241, 0.0246 (sigma = 1, n = 8..13), 0.0151, 0.0141, 0.0136, 0.0141 (sigma = 2, n = 8..11).
+D-07 CONFIRMED (all numbers reproduced, n = 16, 20, 22, 24).  Missing: exactly 2^(n-1) of the ordered pairs (1.0000
+     per word, n even) are the KNOWN converse-involution pairs h = 1|x -> 1|~rev(x) (THM-4886 forced floor,
+     THM-4890 (C')); the rest is 0.8987, 0.9418, 0.9328, 0.9303 per word.
+D-08 CORRECTED.  Counts exact.  The odd/even dichotomy is the involution: involution pairs = 2^((n+w)/2 - 3/2)
+     exactly at each odd w >= 3 (n even), none at even w; the other pairs have d in [2.06, 2.66] at every width
+     5..23 (n = 24), both parities.
+D-09 CONFIRMED (numbers reproduced).  Notes: width 20 at n = 22 spans two cells (eps distinct); without the
+     involution pairs the mean is 1.008 at width 21 (466,778 classes, 470,392 pairs; the other 78,732 classes are
+     the palindromic ones holding the 1,048,576 involution pairs).
+D-10 CONFIRMED (every number reproduced, independent states and counting; Counter cross-check n <= 9).
+D-11 CORRECTED.  H_class is refuted (64, 256, 512, and 1024 at n = 24).  The refuting classes are the palindromic
+     classes of the involution pairs (eps = -0^k-0^k- at the top width, cell (1,0), (P,c) = (1,2) forced: the 2^(n/2-2)
+     solutions are common-bit vectors, lattice bound 2) - not 'exactly the lattice term'.  The untested variant with
+     the factor (1 + 2^m g/max) is ALSO refuted: 32, 128, 256, 512 at n = 16, 20, 22, 24.  Without the involution
+     pairs: 32, 128, 128, 256 overall (small widths), at most 32 for w >= n/2.
+D-12 CONFIRMED (OPEN).
+No proof of the conjecture or of positive density is claimed by the lane; none found.

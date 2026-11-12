@@ -1,0 +1,77 @@
+n=16 words=32768 distinct=13228 ratio=0.40369 unordered_pairs=31108 pairs/word=0.94934 E_n/2^n=1.4493 symmetry=True | lane: distinct True, pairs True, all cell counts True
+   X,Xi odd violations=0  |gamma|>2^w violations=0  ratio-restriction violations (cells d>=4)=0  run-free pairs=23201, violating |s-t'|<=R+3: 0 (max |s-t'|=6, R=5)
+   d=-3  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -      -    0.0438 0.0476 0.0508 0.0420 0.0059
+   d=-2  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -    0.0948 0.0929 0.0903 0.1064 0.0938 0.0449
+   d=-1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.3582 0.3506 0.3445 0.3462 0.3496 0.3613 0.2500
+   d= 0  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0474 0.0464 0.0452 0.0532 0.0469 0.0225 0.0000
+   d= 1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0110 0.0119 0.0127 0.0105 0.0015 0.0000 0.0000
+   d= 2  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0037 0.0032 0.0028 0.0007 0.0000 0.0000 0.0000
+   d= 3  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0006 0.0005 0.0000 0.0000 0.0000 0.0000 0.0000
+   ordered pairs with common prefix >= t per word times 2^t, t=1..8: 3.797 4.227 4.393 4.451 4.277 3.828 3.219 3.969
+   NET unordered pairs / (T * words): T=1.000: 1.0066 | T=4.000: 0.5812 | T=16.000: 0.4852 | T=6.375: 0.5363 | T=10.000: 0.5045 | T=12.000: 0.4879   (1.6s)
+n=17 words=65536 distinct=26437 ratio=0.40340 unordered_pairs=62718 pairs/word=0.95700 E_n/2^n=1.4570 symmetry=True | lane: distinct True, pairs True, all cell counts True
+   X,Xi odd violations=0  |gamma|>2^w violations=0  ratio-restriction violations (cells d>=4)=0  run-free pairs=54700, violating |s-t'|<=R+3: 0 (max |s-t'|=6, R=6)
+   d=-3  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -      -    0.0488 0.0483 0.0481 0.0503 0.0498
+   d=-2  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -    0.0963 0.0941 0.0962 0.0986 0.0928 0.0850
+   d=-1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.3589 0.3528 0.3497 0.3533 0.3486 0.3457 0.3340
+   d= 0  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0482 0.0471 0.0481 0.0493 0.0464 0.0425 0.0000
+   d= 1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0122 0.0121 0.0120 0.0126 0.0125 0.0000 0.0000
+   d= 2  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0028 0.0029 0.0039 0.0023 0.0000 0.0000 0.0000
+   d= 3  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0008 0.0010 0.0006 0.0000 0.0000 0.0000 0.0000
+   ordered pairs with common prefix >= t per word times 2^t, t=1..8: 3.828 4.270 4.441 4.423 4.171 3.617 2.539 1.016
+   NET unordered pairs / (T * words): T=1.000: 1.0232 | T=4.000: 0.5861 | T=16.000: 0.4804 | T=6.750: 0.5325 | T=10.625: 0.4875 | T=12.750: 0.4885   (0.0s)
+n=18 words=131072 distinct=52738 ratio=0.40236 unordered_pairs=126088 pairs/word=0.96198 E_n/2^n=1.4620 symmetry=True | lane: distinct True, pairs True, all cell counts True
+   X,Xi odd violations=0  |gamma|>2^w violations=0  ratio-restriction violations (cells d>=4)=0  run-free pairs=108607, violating |s-t'|<=R+3: 0 (max |s-t'|=7, R=6)
+   d=-3  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -      -    0.0488 0.0490 0.0502 0.0505 0.0356
+   d=-2  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -    0.0911 0.0936 0.0984 0.1013 0.1064 0.0952
+   d=-1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.3607 0.3558 0.3451 0.3488 0.3491 0.3481 0.3643
+   d= 0  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0455 0.0468 0.0492 0.0507 0.0532 0.0476 0.0244
+   d= 1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0122 0.0123 0.0125 0.0126 0.0089 0.0029 0.0000
+   d= 2  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0033 0.0037 0.0032 0.0036 0.0007 0.0000 0.0000
+   d= 3  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0009 0.0008 0.0004 0.0001 0.0000 0.0000 0.0000
+   ordered pairs with common prefix >= t per word times 2^t, t=1..8: 3.848 4.313 4.541 4.657 4.601 4.348 3.893 3.270
+   NET unordered pairs / (T * words): T=1.000: 1.0286 | T=4.000: 0.5915 | T=16.000: 0.4870 | T=7.125: 0.5282 | T=11.250: 0.4872 | T=13.500: 0.4872   (0.0s)
+n=19 words=262144 distinct=105403 ratio=0.40208 unordered_pairs=253186 pairs/word=0.96583 E_n/2^n=1.4658 symmetry=True | lane: distinct True, pairs True, all cell counts True
+   X,Xi odd violations=0  |gamma|>2^w violations=0  ratio-restriction violations (cells d>=4)=0  run-free pairs=215384, violating |s-t'|<=R+3: 0 (max |s-t'|=7, R=6)
+   d=-3  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -      -    0.0473 0.0492 0.0491 0.0492 0.0562
+   d=-2  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -    0.0950 0.0938 0.0923 0.0966 0.0972 0.0999
+   d=-1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.3620 0.3564 0.3543 0.3565 0.3510 0.3528 0.3433
+   d= 0  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0475 0.0469 0.0462 0.0483 0.0486 0.0499 0.0439
+   d= 1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0118 0.0123 0.0123 0.0123 0.0140 0.0117 0.0000
+   d= 2  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0028 0.0030 0.0033 0.0034 0.0023 0.0000 0.0000
+   d= 3  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0008 0.0008 0.0007 0.0006 0.0000 0.0000 0.0000
+   ordered pairs with common prefix >= t per word times 2^t, t=1..8: 3.863 4.324 4.532 4.599 4.515 4.242 3.644 2.531
+   NET unordered pairs / (T * words): T=1.000: 1.0297 | T=4.000: 0.5896 | T=16.000: 0.4845 | T=7.500: 0.5153 | T=11.875: 0.4858 | T=14.250: 0.4772   (0.1s)
+n=20 words=524288 distinct=210192 ratio=0.40091 unordered_pairs=509020 pairs/word=0.97088 E_n/2^n=1.4709 symmetry=True | lane: distinct True, pairs True, all cell counts True
+   X,Xi odd violations=0  |gamma|>2^w violations=0  ratio-restriction violations (cells d>=4)=0  run-free pairs=428028, violating |s-t'|<=R+3: 0 (max |s-t'|=7, R=6)
+   d=-3  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -      -    0.0486 0.0487 0.0473 0.0500 0.0516
+   d=-2  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -    0.0934 0.0934 0.0959 0.0931 0.1039 0.1039
+   d=-1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.3631 0.3566 0.3561 0.3513 0.3619 0.3566 0.3491
+   d= 0  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0467 0.0467 0.0480 0.0466 0.0519 0.0519 0.0503
+   d= 1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0121 0.0122 0.0118 0.0125 0.0129 0.0101 0.0027
+   d= 2  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0031 0.0032 0.0035 0.0033 0.0030 0.0008 0.0000
+   d= 3  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0008 0.0009 0.0008 0.0008 0.0001 0.0000 0.0000
+   ordered pairs with common prefix >= t per word times 2^t, t=1..8: 3.884 4.358 4.611 4.722 4.773 4.681 4.398 3.935
+   NET unordered pairs / (T * words): T=1.000: 1.0351 | T=4.000: 0.5947 | T=16.000: 0.4887 | T=7.875: 0.5093 | T=12.500: 0.4987 | T=15.000: 0.4866   (0.2s)
+n=21 words=1048576 distinct=420751 ratio=0.40126 unordered_pairs=1018174 pairs/word=0.97101 E_n/2^n=1.4710 symmetry=True | lane: distinct True, pairs True, all cell counts True
+   X,Xi odd violations=0  |gamma|>2^w violations=0  ratio-restriction violations (cells d>=4)=0  run-free pairs=844525, violating |s-t'|<=R+3: 0 (max |s-t'|=7, R=6)
+   d=-3  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -      -    0.0478 0.0502 0.0480 0.0525 0.0509
+   d=-2  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -    0.0922 0.0945 0.0934 0.0954 0.0978 0.1045
+   d=-1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.3643 0.3575 0.3548 0.3571 0.3594 0.3554 0.3585
+   d= 0  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0461 0.0472 0.0467 0.0477 0.0489 0.0522 0.0490
+   d= 1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0119 0.0126 0.0120 0.0131 0.0127 0.0135 0.0118
+   d= 2  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0030 0.0032 0.0030 0.0032 0.0029 0.0023 0.0000
+   d= 3  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0007 0.0008 0.0008 0.0008 0.0008 0.0000 0.0000
+   ordered pairs with common prefix >= t per word times 2^t, t=1..8: 3.884 4.357 4.603 4.727 4.735 4.623 4.300 3.613
+   NET unordered pairs / (T * words): T=1.000: 1.0364 | T=4.000: 0.5943 | T=16.000: 0.4883 | T=8.250: 0.5033 | T=13.125: 0.4938 | T=15.750: 0.4901   (0.5s)
+n=22 words=2097152 distinct=842066 ratio=0.40153 unordered_pairs=2026664 pairs/word=0.96639 E_n/2^n=1.4664 symmetry=True | lane: distinct True, pairs True, all cell counts True
+   X,Xi odd violations=0  |gamma|>2^w violations=0  ratio-restriction violations (cells d>=4)=0  run-free pairs=1659261, violating |s-t'|<=R+3: 0 (max |s-t'|=7, R=6)
+   d=-3  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -      -    0.0470 0.0478 0.0473 0.0471 0.0502
+   d=-2  Coll(t',t'+d)/2^(n-t') for t'=1..7:   -    0.0915 0.0928 0.0930 0.0965 0.0983 0.1034
+   d=-1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.3622 0.3569 0.3558 0.3549 0.3546 0.3559 0.3547
+   d= 0  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0458 0.0464 0.0465 0.0483 0.0491 0.0517 0.0539
+   d= 1  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0117 0.0120 0.0118 0.0118 0.0126 0.0136 0.0101
+   d= 2  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0030 0.0030 0.0029 0.0032 0.0030 0.0031 0.0008
+   d= 3  Coll(t',t'+d)/2^(n-t') for t'=1..7: 0.0008 0.0007 0.0008 0.0008 0.0006 0.0000 0.0000
+   ordered pairs with common prefix >= t per word times 2^t, t=1..8: 3.866 4.342 4.597 4.732 4.792 4.786 4.682 4.397
+   NET unordered pairs / (T * words): T=1.000: 1.0333 | T=4.000: 0.5953 | T=16.000: 0.4894 | T=8.625: 0.5036 | T=13.750: 0.4868 | T=16.500: 0.4842   (1.3s)

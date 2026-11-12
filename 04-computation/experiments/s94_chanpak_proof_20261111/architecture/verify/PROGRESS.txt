@@ -1,0 +1,42 @@
+PROGRESS (verifier of lane architecture, S94) - FINAL.  Chan-Pak stays OPEN; the lane claims no proof and no density.
+
+FILES (this folder): v_reduction.py/.out, v_p4.py/.out, v_blocks.py/.out, v_twoapex.py/.out.  All PASS.
+
+CHECKS RUN (own code, exact integers)
+- v_reduction: atoms 49, 63, 343 -> misses up to 2,000,000 are exactly 7, 21; without 343 exactly 7, 21, 343, 1029,
+  16807, 50421, 823543 (the session-context list gives the same seven); without 49: 5,923 misses; without 63: 12.
+- v_p4: P4 on all 5,405 rooted labelled tournaments of orders 1..5 and 2,100 random of orders 6, 7: 0 failures;
+  one-vertex closing law H(B => TT_t => v, v -> y) = H(B) + 2^t U_B(y): 855 exhaustive + 300 random, 0 failures.
+- v_blocks: the port-chain block matrices of order <= 4 recomputed from the definition of THM-5070 (1) (fit on three
+  base states, checked on 39 bases): 1,105 marked blocks, linear, integer, nonnegative; 16 / 56 distinct matrices,
+  equal as sets to the S93 files; 5 / 21 invertible, 4 / 8 unimodular, sums 17/4 and 13297/1260 as the lane states.
+  Orders 5, 6: sums recomputed from the S93 files only (30.861853, 99.564841; 134 and 1252 invertible; 18, 46
+  unimodular).  Identity End_T(port) = O - E: 0 failures (so (h, e, u) of P4 is the THM-5070 state in other coordinates).
+- v_twoapex: sum of H over the 4^n two-apex words = 4^n (3^n + 3 2^n + 3)/8 for n = 1..6; first misses 61 (length
+  <= 5) and 297 (length <= 6) as in S93 TA-06.
+- S93 closed-quotient outputs re-read: exponents log2(525440/300096) = 0.81, log2(17264060/7719092) = 1.16; coverage
+  17104/262144 = 6.5 %, 235785/262144 = 89.9 %: as quoted by the lane.
+
+PROOFS READ LINE BY LINE: P1, P2, P3 (a), (b), P4: no mathematical error found.
+
+CORRECTIONS
+1. F-red: 'cannot be dropped' holds for the derivation from multiplicativity alone.  As a statement about the actual
+   spectrum the session-context equivalence is true (343 is a known value: THM-4094 (20), THM-4885 (D)); THM-4094
+   Theorem 6.1 itself states only the two lanes (p = 7 inside the second) with 49, 63, 343 as hypothesis (20).
+2. F-b: the list of proved infinite families is not exhaustive.  Missing at least: THM-5145 (1)-(3) (AUDIT-PENDING;
+   dyadic neighbourhoods -791 <= N - 2^e <= 647; c 2^e + r, c <= 31, |r| <= 275; 1 + 2^a + 2^b, a <= 10), THM-5109 (C)
+   (cones 5^a 19^b 217^c 223^d 599^f + 2^K), seed_recursion_births_20261111 (1 + (3 2^r + 1) 2^s, 1 + (21 2^r + 1) 2^s),
+   endpoint_coverage_compiler_20261111 (99 2^k + 23).  All of density zero: the conclusion stands.
+3. P3 remark 'So no polyhedral certificate exists with these objects': NUMERICAL evidence only (local exponents at
+   finite range, rising with the block order); the label 'FINITE-EXACT' for S93 digits D3-D13 upgrades D9, D10
+   (VERIFIED there) and D11 (NUMERICAL there).
+4. R5: 'F1 alone misses infinitely many' is HYP-9480 (D)(1), a conjecture.
+5. R2: Bourgain-Kontorovich density one also covers Apollonian gaskets (a thin group orbit), not only
+   continued-fraction semigroups; 'density one at best' stands.
+MISSED PRIOR ART: THM-5080 sections A, B (exact minimal cones of the ternary port orbit, 'conical geometry does not
+   settle integer reachability', word length <= 1 + log_(292/193) h) for P2 / P3 / Q2; THM-5145, HYP-9675 (type
+   conjecture: a route statement not in the map), THM-5148 (one-apex chain semigroup incomplete in range),
+   THM-5113 (endpoint universality).
+NOT CHECKED: S93 TA-14 (equidistribution mod 3, 4, 8; finisher proof, unaudited); bodies of THM-4960 / THM-5000;
+   the claims of the lane report after R5 were not visible (report truncated) and are judged from PROOFS.txt and
+   PROGRESS.txt of the lane.

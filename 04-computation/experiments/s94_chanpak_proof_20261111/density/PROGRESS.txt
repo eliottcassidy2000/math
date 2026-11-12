@@ -1,0 +1,21 @@
+LANE density (S94) - PROGRESS (final state of this run)
+[19:05] RESULT: no proof of positive density, no exponent above 3/4.  Chan-Pak OPEN.  Delivered:
+PROOFS.txt  P1 readout form of F1 (N = A(2h2+1) - 2 B q(h2), A = x1 + 2^s y1, B = x1; projections of the graph of q);
+            P2 residue lemma: a collision in one readout forces (B/d) | h - h', (A/d) | q(h) - q(h'); injective on
+               n-bit words if A >= 2^(n-1) gcd(A,B); rows/columns of F1 cells with |n1 - n2| <= sigma + 1 and coprime
+               state are injective (collisions are off-diagonal);
+            P3 affine fibre lemma: q(x) - q(x') = q0(eps) + sum_{i in Zero(eps)} b_i L_i(eps); collision equation =
+               one linear equation in (c, P, common bits b); whole-word subset-sum form;
+            P4 lattice-line equation for readouts, (B c + (A-B) 2^(s+1)) X - B P Xi = B gamma; thinning B' | X;
+               localisation; balance |t' - s - log2 lambda| <= R + 4;
+            P5 obstruction: sum over odd classes of min(2^z, K) >= 2^w * #{subsets of size <= log2 K of w-2}: no
+               per-class bound allowing one solution per class can pass t = n/4;
+            A1, A2 analyses (large slopes give exponent (3/4 + rho/2)/(1 + rho) <= 3/4 by the method; cross-readout
+               collisions are not lattice equations); C conditional (BC): off-diagonal energy O(4^n) of the balanced
+               F1 cell => positive lower density.
+NUMERICS    d1 (all checks pass), d2 (balanced cell: distinct/pairs 0.976, E/M 1.048 at sigma = 1; 0.986, 1.028 at
+            sigma = 2; no collision in coprime rows), d3 (one-apex: 1.93 colliding ordered pairs per word to n = 24,
+            pairs of width w ~ 2^((n+w)/2 - 1)), d4 (solved difference classes: 1.2e-4 of all at n = 22, w = 21;
+            per-class hypothesis sol <= C max(1, 2^(m+z-w)) REFUTED: ratio 64, 256, 512 at n = 16, 20, 22).
+NEXT (not done): thinning of the gcd sum S_w restricted to X = 0 mod B'; a uniform-in-(A,B) version of THM-5141;
+ any bound for the number of difference classes with a solution; (BC).

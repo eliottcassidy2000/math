@@ -1,0 +1,30 @@
+LANE mechanism (S94) - PROGRESS  [started 18:34 MST 2026-11-11; this file rewritten 19:08]
+
+STATUS: work finished, PROOFS.txt complete (sections 0-6, 5', 5''), structured report being delivered.
+        All runs finished (19:10).
+
+RESULTS (labels as in PROOFS.txt)
+ 0. CORRECTION [PROVED]: the brief's formula H(T+v) = H(T) + sum_{A->B arcs} mu is false (3-cycle: 3 vs 2); correct
+    cut law H(T+v_B) = H(T) + sum_{x in B}(U'(x) - s(x)) - sum_{pairs of B} W_xy [KNOWN: THM-4114, THM-5122, THM-5126].
+ 1. Lemma 1 W_xy >= 2 H(T-x-y) [KNOWN THM-5122; own insertion proof].
+ 2. Theorem A: (a) affine arc sets are matchings [KNOWN in substance]; (b) one strong affine arc cube has
+    <= 2^(n/2) <= sqrt2 (min value)^0.646 values; the only strong affine cube covering all odd numbers of some [X,2X]
+    is the order-5 square {9,11,13,15} [PROVED from KNOWN + CITED Busch + FINITE-EXACT n = 5, 6].
+ 3. Theorem B [PROVED]: two-module law H(T0[u:=C1,v:=C2]) = sum c_jk j!p_j(C1) k!p_k(C2); c_22 >= 1 for strong T0
+    (Camion); no additively separable two-module family; homogeneity (no H -> aH + b, b != 0, by substitution).
+ 4. FINITE-EXACT arc cube n <= 7 (arc_cube_456.out, arc_cube_7.out): adjacent arc pairs never additive (min |D| = 2);
+    disjoint pairs additive in 48.4 %, 30.0 %, 16.2 % of squares (n = 5, 6, 7); affine 3-cubes with nonzero increments:
+    none at n = 6; 21,840 at n = 7 with increments (6,16,48), (6,6,48), (30,30,30) only.
+ 5. FINITE-EXACT single-core extension spectra, core order 3..7: longest run of consecutive odd values 3, 4, 6, 10, 15;
+    largest dyadic interval covered by one core is [10,20] at core orders 5, 6, 7.  Guess 2^(c-3)+2 REFUTED at c = 7.
+ 5'. FINITE-EXACT general arc cubes at order 7: no perfect 3- or 4-cube; no 4-cube covers [X,2X], X = 24..31;
+    longest runs 7 (k = 3), 10 (k = 4), 17 (k = 5); 5-cubes DO cover [X,2X] for X = 24..30 (non-affine, redundancy ~2),
+    no perfect 5-cube.
+ 5''. FINITE-EXACT balanced arcs, orders 4..7: share of strong tournaments with a balanced arc 0, 0.66, 0.52, 0.16;
+    40 of the 77 values of order 7 have no balanced arc at order 7 (27 neither balanced nor anti-balanced).
+ 6. No route to a proof found.
+
+FILES: PROOFS.txt, arc_cube.py (+ arc_cube_456.out, arc_cube_7.out), look_cube7.py/.out, module_law.py/.out,
+       squares_values.py/.out, core_extension_runs.py/.out, core_runs_cutlaw.py/.out, balanced_arcs.py/.out,
+       general_cubes7.py (+ general_cubes7.out, general_cubes7_k5.out).
+NOT DONE: affine 4-cubes at order >= 8; two-vertex extension spectra of one core; order-8 censuses.

@@ -1,0 +1,48 @@
+VERIFY PROGRESS (lane "energy", adversarial verifier) - started 19:12, final state 19:30
+=========================================================================================
+No claim of a proof of Chan-Pak, of positive density or of an exponent above 3/4 is made by the lane; none exists.
+
+FILES (this folder)
+  v_structure.py / v_structure.out     Lemma 1 (all h < 2^13), Lemma 3 identity and bounds (exact, n <= 14), Cor. 3a
+                                       (all 1820 colliding pairs at n = 12), Lemma 4 (all n <= 18), Lemma 2 + lambda
+                                       formula + Remark (i) (10^5 random pairs), Cor. 3b (10^5 random): all pass.
+  v_cells.py / v_cells_16_22.out, v_cells_23_26.out
+                                       independent recount (q-recursion, xor cells) for n = 16..26: distinct values,
+                                       pair totals and EVERY cell count equal the lane's tables; symmetry exact; X, Xi
+                                       odd, |gamma| <= 2^w, ratio restriction of (E')(1), |s-t'| <= R+3 on all pairs;
+                                       NET counts reproduced.
+  v_gcd.py / v_gcd_12_11.out           S_w (w <= 12) equals the lane's values; extended N(K) bound for every integer
+                                       K >= 2^s2 (w <= 12); extended Deg, Deg' bounds for ALL points and ALL integer K
+                                       (w <= 11, max ratio 0.31); Prop. 6 family (w = 8..14, t' = 2..8).
+  v_prop8.py / v_prop8.out             Prop. 8 inequality on every pattern of 11 cells (no violation); recount of
+                                       "window pairs admitting a solution" equals the lane's column in 5 cells.
+  v_sumT.py / v_sumT_6_12.out          NEW DATA (the lane left it untested): sum_eps T'(eps) in balanced cells
+                                       t' = ceil(w/2), s = floor(w/2): 3752, 20024, 99832, 507352, 2100980, 10613720,
+                                       41895860 for w = 6..12; w-th root 3.94 .. 4.35; growth per unit w (even w)
+                                       5.16, 4.59, 4.47; ratio to (16/3)^w falls 0.163 -> 0.079. NUMERICAL only.
+  v_invol.py / v_invol.out             involution pairs: exactly 2^(n-2-t') unordered pairs in cell (t', t'-1).
+
+VERDICTS
+  EN-1  CORRECTED  counts exact and reproduced; law mis-stated: C_{-2} = 2 C_0 = 0.092 (not 0.0467; symmetry forces
+                   C_{-d-2} = 2^(d+1) C_d); admissible window pairs scale as 2^(w+min(t',s)-|d|); pairs/word is
+                   0.949-0.971 on n = 16..26 (0.963-0.971 only for n >= 19). Partly KNOWN: HYP-9482 P1/P3/P6.
+  EN-2  CORRECTED  correct, but KNOWN: THM-4890 (C') converse symmetry (v = 2h turns (a,s) -> (s,a) into
+                   (t',s) -> (s+1,t'-1)). Re-proved.
+  EN-3  CONFIRMED  KNOWN (also THM-4885 (A), THM-4890 (L0), THM-5093).
+  EN-4  CONFIRMED  proof correct; Remark (ii) omits the two end-adjacency terms.
+  EN-5  CORRECTED  proof correct (given THM-5141), but statement + exponent + method are the S93 (B2) proof-reader's
+                   "READER'S SKETCH" in s93_finish_results.json; not credited.
+  EN-6  CONFIRMED  proof correct; constant is tiny (n^4.5 2^(-0.00376 n) peaks at 4e12 near n = 1727).
+  EN-7  CORRECTED  implication correct; "0.17" is wrong: (3 - log2 6)/(4(log2 6 - 1)) = 0.0655.
+  EN-8  CONFIRMED  conditional and trivial given THM-4885 (A); = THM-4887's smoothed energy at Delta = O(n);
+                   A < 1 impossible by pigeonhole; HYP-9482 P4 already measured the flat pair correlation.
+  EN-9  CONFIRMED  explicit family correct; the "hence" is an informal statement about a class of arguments.
+  EN-10 CONFIRMED  inequality correct; needed bound numerically plausible (v_sumT) but OPEN.
+  EN-11 CONFIRMED  OPEN. The "negative results" have no written proofs on disk: treat as heuristic notes.
+
+ADDENDUM 19:31. Balanced cells t' = s = w/2 (lane tables + v_prop8): fraction of odd window pairs admitting a
+solution = 4.1%, 2.55%, 1.24%, 0.59% at w = 6, 8, 10, 12 (n = 12, 16, 20, 24): halving per two steps, i.e. g near 1/2
+as the lane says. Cauchy-Schwarz bound of Prop. 8 from the measured sum T': 0.40, 0.39, 0.34, 0.28 of 4^w
+(rate about 0.915 per unit w, i.e. g about 0.13 if the trend persists). Constants rechecked: beta1 = 1.4924813,
+dl_max(beta1) = 0.00189, dl_max(6^(w/2)) = 0.06546 (exponent 0.81546), peak of n^4.5 2^(-0.00376 n) = 4.1e12.
+Structured report delivered to the coordinator.

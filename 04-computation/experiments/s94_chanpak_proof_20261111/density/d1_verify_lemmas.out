@@ -1,0 +1,20 @@
+Q0 quadratic form of q on h < 2^12: violations 0
+L1 readout identity: instances 76800 violations 0
+L2 affine fibre lemma w=1: pairs 4 violations 0
+L2 affine fibre lemma w=2: pairs 16 violations 0
+L2 affine fibre lemma w=3: pairs 64 violations 0
+L2 affine fibre lemma w=4: pairs 256 violations 0
+L2 affine fibre lemma w=5: pairs 1024 violations 0
+L2 affine fibre lemma w=6: pairs 4096 violations 0
+L2 affine fibre lemma w=7: pairs 16384 violations 0
+L2 affine fibre lemma w=8: pairs 65536 violations 0
+L2 affine fibre lemma w=9: pairs 262144 violations 0
+shifted equation n=12 sigma=1: ordered colliding pairs 1152 violations 0 max|h-h'| 623 (bound 2^(n-1-sigma)=1024)
+shifted equation n=12 sigma=2: ordered colliding pairs 576 violations 0 max|h-h'| 359 (bound 2^(n-1-sigma)=512)
+shifted equation n=12 sigma=3: ordered colliding pairs 318 violations 0 max|h-h'| 199 (bound 2^(n-1-sigma)=256)
+shifted equation n=12 sigma=5: ordered colliding pairs 72 violations 0 max|h-h'| 37 (bound 2^(n-1-sigma)=64)
+shifted equation n=14 sigma=1: ordered colliding pairs 4592 violations 0 max|h-h'| 2431 (bound 2^(n-1-sigma)=4096)
+shifted equation n=14 sigma=2: ordered colliding pairs 2472 violations 0 max|h-h'| 1519 (bound 2^(n-1-sigma)=2048)
+shifted equation n=14 sigma=3: ordered colliding pairs 1476 violations 0 max|h-h'| 847 (bound 2^(n-1-sigma)=1024)
+shifted equation n=14 sigma=5: ordered colliding pairs 356 violations 0 max|h-h'| 183 (bound 2^(n-1-sigma)=256)
+ALL CHECKS PASS

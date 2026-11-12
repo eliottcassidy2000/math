@@ -1,0 +1,44 @@
+PROGRESS (lane "energy", S94) - final state, written 19:12 (session started 18:32)
+====================================================================================
+NOT ACHIEVED: an exponent above 3/4, linear energy, positive density, Chan-Pak (all OPEN).
+
+FILES (all in this folder)
+  cells.py, cells_16_20.out, cells_21_26.out      exact collision statistics per cell (t', s), n = 16..26
+  verify_structure.py, verify_structure_14_26.out exact checks of Lemmas 1-4; NET pair counts n = 12..26
+  deg_extended_check.py, deg_extended_check.out   brute-force checks of the extended divisor bound (Prop. 7)
+  PROOFS.txt                                      Lemmas 1-4, Propositions 5-9 (complete written proofs)
+
+RESULTS
+ 1. Measured law (FINITE-EXACT counts, n <= 26; the law itself is NUMERICAL):
+      unordered collisions in cell (t', s):  Coll(t', s) ~ C_d 2^(n-t'), d = s - t',
+      C_{-1} = 0.356 (1/4 forced by the involution pairs {h, iota h} + 0.106), C_0 = C_{-2} = 0.0467,
+      C_d ~ C_0 4^(-d) for d >= 0, and EXACTLY Coll(t', s) = Coll(s+1, t'-1) (proved, Lemma 4).
+      Total 0.963-0.971 unordered pairs per word; distinct values / words = 0.402.
+      Odd window pairs admitting a solution in a cell: equal to the collision count off the diagonal d = -1 for
+      small t' (one solution each), i.e. about 2^(w + min(t', s)), a fraction ~2^(min(t',s) - w) of the 4^(w-1) odd
+      pairs. On the diagonal d = -1 several (P, c) per window pair (1.5, 2.1, 2.7, 2.9, 3.4 at t' = 2..6, n = 20):
+      the involution family c = P.
+ 2. PROVED (PROOFS.txt):
+      Lemma 2  collision equation is linear in ALL common bits (subset-sum form), lambda_j = X_{>j} + Xi_{<j} + adj.
+      Lemma 4  eta(1|r) = eta(1|rc r) from the quadratic form; exact cell symmetry.
+      Prop. 6  obstruction: gamma-blind arguments cannot go below 4^(w-8) window pairs.
+      Prop. 7  (B2') S_w <= C w^3 2^(beta1 w), beta1 = (log2 6)/2 + 1/5 = 1.4925 < 3/2;
+               (E')  A(Y) >= c Y^(3/4)/(log Y)^(1/4)   (THM-5141: (log Y)^4).   Not independently proof-read.
+      Prop. 8  differencing inequality |M(eps)|^2 <= T'(eps).
+      Prop. 9  CONDITIONAL: (I_g) [window pairs admitting a solution <= C 4^w 2^(-g w) for n/2 < w <= 0.51 n]
+               => A(Y) >= c Y^(3/4 + min(g/9, 0.0018))/(log Y)^5.
+      Prop. 5  CONDITIONAL: NET [pairs with |Phi(h) - Phi(h')| < 3(n+1)/8 number <= C n^A 2^n]
+               => A(Y) >= c Y/(log Y)^A.  NET holds numerically with A = 1 (0.49 T 2^(n-1) unordered pairs).
+    KNOWN and re-derived: Lemma 1 (quadratic form), Lemma 3 (product formula eta = 1 + h c(h)/2^n + rho,
+      0 < rho < 3(n+1)/8) = BINARY_PRODUCT_DENSITY.md eq. (4) in another normalisation.
+ 3. Where the difficulty is (assessment): after (B2') the progression term is no longer an obstacle near t = n/4;
+    the only missing input for an exponent above 3/4 is (I_g) for ANY g > 0. (I_g) is equivalent in spirit to
+    THM-4890 (DC): reversal versus multiplication by the slope Xi/X. Every reformulation tried (subset sums in the
+    common bits, Riesz products over the zero positions of eps, differencing to B-orthogonal pattern pairs, net
+    points near hyperbolas) returns to the same count; none was closed.
+
+NEXT STEPS (not done)
+  - independent proof-reading of Prop. 7 and Prop. 9;
+  - numerical measurement of sum_eps T'(eps) (Prop. 8) for w <= 11 to see whether (16/3 - e)^w is plausible;
+  - (I_g) via a Riesz-product bound over the zero positions of eps (phases k/2^(j+1) + l/2^(w-j), l = round(k Xi/X));
+  - S_w <= C w^A 6^(w/2) (true numerically): would enlarge the window of Prop. 9 from 0.0018 to 0.17.

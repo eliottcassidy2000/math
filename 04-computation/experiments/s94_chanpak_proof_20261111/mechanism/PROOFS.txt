@@ -1,0 +1,211 @@
+S94 (opus-2026-11-11-S94), Chan-Pak proof wave, lane "mechanism".  PROOFS and typed statements.
+=====================================================================================================
+The Chan-Pak conjecture stays OPEN.  Nothing below proves it, nor positive density.  This lane found NO new route to
+a proof; it contributes one correction, two all-order obstruction theorems for "additive" architectures (with the
+prior art they rest on), and exhaustive exact data on the arc cube of orders <= 7.
+Types: PROVED (proof here), KNOWN (prior art named), CITED, FINITE-EXACT (exhaustive, exact integers, range stated).
+
+Notation.  H(T) = number of Hamiltonian paths; H(empty) = 1.  For a tournament T and x != y in V(T):
+  s(x), e(x) = number of Hamiltonian paths starting / ending at x;
+  Q(x, y)    = number of ordered pairs (P1, P2) of disjoint NONEMPTY paths covering V(T), P1 ending at x, P2 starting
+               at y;      W_xy = Q(x, y) + Q(y, x);
+  U'(x)      = number of ordered pairs (P1, P2) covering V(T), P1 ending at x, P2 possibly empty  (= e(x) + sum_y Q(x,y)).
+  T + v_B    = T with a new vertex v, x -> v for x in B, v -> y for y not in B.
+  j! p_j(C)  = number of ordered partitions of V(C) into j nonempty directed paths (p_j = unordered).
+
+0. CORRECTION of a formula in the lane brief                                             [PROVED / KNOWN]
+-----------------------------------------------------------------------------------------------------
+The brief states: "H(T + v) = H(T) + sum over arcs a -> b with a in A (out-set of v), b in B (in-set) of the number
+of Hamiltonian paths through that arc (so H(T + v) = 2H(T) - #paths starting at u when v loses only to u)".
+This is FALSE.  Counterexample: T = one arc a -> b, v -> a, b -> v.  Then T + v is the 3-cycle, H = 3; the formula
+gives 1 + 1 = 2 (and "2H - s(u)" with u = b gives 2 - 0 = 2, an even number).
+What the right-hand side counts: a Hamiltonian path of T + v in which the two neighbours of v are joined, in T, by an
+arc in the direction of the path, is a Hamiltonian path x_1..x_n of T with v inserted at a place B|A (or in front of
+x_1 in A, or behind x_n in B); the number of such places is 1 + #(places A|B), which gives H(T) + sum_{a->b} mu(a->b).
+Missing: the paths .. x v y .. with x in B, y in A and y -> x in T.
+Correct statements (all KNOWN in the repository; re-derived and machine-checked here):
+ (0.1) Cut law (THM-4114; THM-5122 "F(x) = h + 2 a^T x - (1/2) x^T W x"; THM-5126 (A)):
+          H(T + v_B) = H(T) + sum_{x in B} (U'(x) - s(x)) - sum_{pairs {x,y} of B} W_xy.
+       Proof.  A Hamiltonian path of T + v is (P1, v, P2) with P1 empty or ending in B and P2 empty or starting outside
+       B.  With b = indicator of B:  H = sum_y (1-b_y) s(y) + sum_x b_x e(x) + sum_{x != y} b_x (1-b_y) Q(x,y); expand,
+       use sum_y s(y) = H(T).  QED
+       Single in-neighbour u:  H(T + v_{u}) = H(T) + U'(u) - s(u) = 2H(T) - s(u) + D(u),
+       D(u) = #{covers (P1 u)(y P2) with y -> u} >= 0   (U'(u) = H(T) + D(u): the covers with u -> y, together with
+       those with P2 empty, are the Hamiltonian paths of T cut behind u).  The brief's formula is the case D(u) = 0.
+ (0.2) Claim A (THM-4876 (1), THM-070):  H(T + v) = H(T) + 2 sum over odd cycles c through v of H(T - (V(c) - v)).
+ Check: arc_cube_*.out line (A) (every labelled tournament of order <= 7): the mixed second difference of H in two
+ arcs at a common vertex is never 0 and has absolute value >= 2, as (0.1) + Lemma 1 predict.
+ Direct check (check_cutlaw_lemma1.out): both forms of (0.1) against the table of H, every labelled core of order
+ 3..6 and every cut (8, 64, 1,024, 32,768 cores x 2^c cuts): 0 mismatches; Lemma 1 on every pair of every core of
+ order 3..6: 0 violations, equality W_xy = 2H(C - x - y) in 24/24, 216/384, 1,760/10,240, 17,520/491,520 pairs.
+
+1. Lemma 1 (coupling floor)                                         [KNOWN: THM-5122 "W_ij >= 2 H(C - i - j) > 0"]
+-----------------------------------------------------------------------------------------------------
+For every tournament T and x != y:  W_xy >= 2 H(T - x - y) >= 2.
+Self-contained proof (insertion).  Let R = V(T) - {x, y}.  If R is empty, Q(x,y) = Q(y,x) = 1.  Otherwise let
+r_1 .. r_m be a Hamiltonian path of T[R] and give r in R the type a (r -> x, r -> y), b (x -> r, y -> r),
+c (r -> x, y -> r) or d (x -> r, r -> y).  Put t_0 = a, t_(m+1) = b (virtual).  For 0 <= i <= m the pair
+(r_1..r_i x)(y r_(i+1)..r_m) is a cover counted by Q(x, y) iff t_i in {a, c} and t_(i+1) in {b, c}; the pair
+(r_1..r_i y)(x r_(i+1)..r_m) is counted by Q(y, x) iff t_i in {a, d} and t_(i+1) in {b, d}.  Let i be the last index
+with t_0 = .. = t_i = a: the step t_i -> t_(i+1) is a -> b (two covers), a -> c (one) or a -> d (one).  Let j be the
+least index with t_(j+1) = .. = t_(m+1) = b: the step t_j -> t_(j+1) is a -> b (two covers), c -> b or d -> b (one).
+If i = j the step is a -> b: two covers.  If i != j: one cover at each of two different places.  A cover determines the
+path r_1..r_m and the place, so different (path, place, order of x,y) give different covers.  QED
+
+2. Theorem A (additive arc sets are matchings; exponent barrier for one affine cube)                  [mixed]
+-----------------------------------------------------------------------------------------------------
+For a tournament T on n vertices and a set E of k pairs of vertices let T^sigma (sigma in {0,1}^E) be T with the arcs
+on the pairs e with sigma_e = 1 reversed.  Call E AFFINE if H(T^sigma) = h_0 + sum_e delta_e sigma_e on the whole cube.
+ (a) [KNOWN in substance: THM-4114 (ear cube: every pair interaction strictly negative, no additive 2-cube),
+     THM-5122 (capacity k <= floor(|C|/2) for exchange families at one root); stated here for arbitrary arc cubes]
+     If E is affine, its pairs are pairwise disjoint; hence k <= floor(n/2).
+     Proof.  Let {v,x}, {v,y} be in E and fix the other coordinates.  The four tournaments are (T' - v) + v_B with B
+     ranging over B_0, B_0 + x, B_0 + y, B_0 + x + y; by (0.1) the mixed second difference is -W_xy(T' - v) <= -2
+     (Lemma 1), not 0.  QED
+ (b) [PROVED from (a), Busch's minimum (CITED: Busch 2006, as used in THM-4744 (3)) and FINITE-EXACT at n = 6]
+     If E is affine and every T^sigma is strong, the cube has at most 2^floor(n/2) values, each >= h_min(n), where
+     h_min(n) = 3*5^((n-3)/3), 5^((n-1)/3), 9*5^((n-5)/3) for n = 0, 1, 2 mod 3, so h_min(n) >= 5^((n-1)/3).  Hence
+          #values <= 2^(n/2) <= sqrt(2) * (min value)^theta,   theta = 3 / (2 log_2 5) = 0.64603...
+     and for n >= 3, n != 5, and X >= 3 no strong affine arc cube of order n contains all odd numbers of [X, 2X].
+     At n = 5 there is exactly one exception (FINITE-EXACT, squares_values.out): 120 labelled affine squares with
+     values 9, 11, 13, 15 = 9 + {0,2} + {0,4}, all odd numbers of [8, 16] and the whole spectrum of the strong
+     tournaments of order 5.  So this square is the only strong affine arc cube, at any order, whose value set
+     contains all odd numbers of an interval [X, 2X] with X >= 3.
+     Proof of the last sentence.  All odd numbers of [X, 2X] must be >= h_min(n), so the interval contains at least
+     (h_min(n) - 1)/2 odd numbers (X even, X = h_min - 1, is the smallest case), and at least two (X >= 3).
+     n = 3, 4: every strong tournament has H = 3, resp. 5: one value.  n = 6: h_min = 15, seven values are needed; a
+     cube of dimension <= 2 has at most 4, and all 3,900 affine 3-cubes of order 6 have a zero increment
+     (arc_cube_456.out (C)), hence at most 4 values.  n = 7, 8, 9: (25-1)/2 = 12 > 2^3, (45-1)/2 = 22 > 2^4,
+     (75-1)/2 = 37 > 2^4.  Step n -> n+3: h_min(n+3) = 5 h_min(n) and 2^floor((n+3)/2) <= 4 * 2^floor(n/2), so
+     (h_min(n) - 1)/2 > 2^floor(n/2) implies (5 h_min(n) - 1)/2 > 5 * 2^floor(n/2) > 2^floor((n+3)/2).  QED
+     (An earlier draft of this proof used the count (X+1)/2 for odd X only and missed the n = 5 square; the
+     exhaustive list of squares_values.out caught it.)
+ Scope (honest).  (b) is about ONE cube whose 2^k members are all strong of the same order; it does not bound unions
+ of cubes, nor cubes whose members change their strong component.  THM-5117 has affine exchange cubes of every
+ dimension (order 7k+1, spacing 50*37^(k-2)), THM-4960/5000 have k+1 consecutive odd counts on 12k+13 vertices; (b)
+ says that even an ideal positional cube (increments 2, 4, 8, ..) has too few digits: n/2 against log_2 h_min(n) =
+ 0.774 n.  A binary expansion argument "arc usages 1, 2, 4, .., 2^k" (direction (ii) of the brief) is therefore
+ impossible inside one strong arc cube, at every order.
+
+3. Theorem B (module law; the mixed term never vanishes in a strong context)                      [PROVED]
+-----------------------------------------------------------------------------------------------------
+Let T0 be a tournament, u != v two vertices, C1, C2 tournaments, and T = T0[u := C1, v := C2] (C1, C2 substituted as
+modules).  A (j,k)-walk of T0 is a sequence of vertices with consecutive terms joined by arcs of T0 in the direction of
+the sequence, in which u occurs exactly j times, v exactly k times and every other vertex exactly once; c_jk >= 0 is
+their number.
+ (a) H(T) = sum_{j,k >= 1} c_jk (j! p_j(C1)) (k! p_k(C2)).
+     [The one-module, visits <= 2 case is the closing law THM-5126 (A)/THM-5130; THM-5124 (4) is the full-cut case.
+      I did not find the two-module statement in 01-canon (grep "substitution|module|lexicographic" in THM-50xx-51xx).]
+     Proof.  In a Hamiltonian path of T contract every maximal run of vertices of C1 to u and every maximal run of
+     vertices of C2 to v: since C1, C2 are modules, the result is a (j,k)-walk of T0 (two consecutive runs of the same
+     module would be one run, so consecutive terms are distinct and joined by an arc), and the runs form an ordered
+     partition of V(C1) into j paths and of V(C2) into k paths.  Conversely every (j,k)-walk and every pair of ordered
+     partitions give a Hamiltonian path.  QED
+     For C_i = TT_t: j! p_j(TT_t) = j! S(t, j) = sum_i (-1)^(j-i) C(j,i) i^t, so
+     H(T0[u := TT_s, v := TT_t]) = sum_{i,l >= 1} d_il i^s l^t  with d_il = sum_{j>=i,k>=l} (-1)^(j-i+k-l) C(j,i) C(k,l) c_jk.
+ (b) If T0 is strong of order n >= 3 then c_22 >= 1 for every pair u != v.
+     Proof.  T0 has a Hamiltonian cycle (Camion) x_1 = u, x_2, .., x_n, x_1; let v = x_k (k >= 2).  If u -> v the
+     sequence x_1 x_2 .. x_n x_1 x_k is a (2,2)-walk: the arcs are those of the cycle and x_1 -> x_k; u occurs at places
+     1 and n+1, v at places k and n+2, all others once.  If v -> u the sequence x_k x_1 x_2 .. x_n x_1 is a (2,2)-walk.
+     QED
+ (c) Consequences.  (i) H(T0[u := C1, v := C2]) >= c_22 * 2p_2(C1) * 2p_2(C2) >= (2^|C1| - 2)(2^|C2| - 2) in a strong
+     context (p_2(C) >= 2^(|C|-1) - 1: every vertex set of a tournament carries a path).
+     (ii) No additive separation: the functions i^s l^t (i, l >= 1) are linearly independent on pairs (s,t) of
+     positive integers, the matrix (d_il)_(i,l>=2) is obtained from (c_jk)_(j,k>=2) by a unitriangular transformation,
+     and c_22 > 0; so in a strong context H(T0[u := TT_s, v := TT_t]) is NEVER of the form alpha(s) + beta(t).
+     In particular there is no strong two-port context with N = A + B 2^s + C 2^t, and no family
+     N = A + 2^(t_1) + .. + 2^(t_m) (numbers of bounded binary weight) by module substitution into a strong context.
+     (iii) Homogeneity: for one module, H(T0[u := C]) = sum_j c_j j! p_j(C) is a linear form WITHOUT constant term in
+     the path-cover vector of C; it is a function of H(C) alone on all tournaments C iff c_j = 0 for all j >= 2
+     (test on C = TT_t: sum_j c_j j! S(t,j) is constant in t iff c_j = 0 for j >= 2, all c_j being >= 0), i.e. iff u
+     lies on no cycle of T0, and then H = H(T0) H(C).  So module substitution into a fixed context realizes no exact
+     map H -> alpha H + beta with beta != 0, and no exact map other than a multiplication.  (All-order analogue, for
+     substitution, of the S93 "digits" finding; their vertex-extension rules are not covered by this statement.)
+ Checks: module_law.out (V1) 300 random two-module instances, context order 3..6, modules of order 1..3, exact, no
+ failure; (V2) every labelled strong tournament of order 3..6 and every port pair (340,390 pairs): min c_22 = 1, 1,
+ 1, 2 at n = 3, 4, 5, 6.
+
+4. FINITE-EXACT data: the arc cube of order n <= 7 (arc_cube.py; arc_cube_456.out, arc_cube_7.out)
+-----------------------------------------------------------------------------------------------------
+All 2^C(n,2) labelled tournaments, H by subset DP in exact integers; D = mixed second difference of H in two arcs.
+ n = 4:  adjacent pairs: 192 squares, D = 0 never, min |D| = 2.  Disjoint pairs: 48 squares, ALL additive (D = 0);
+         24 with both increments nonzero, none with four strong tournaments.
+ n = 5:  adjacent: 7,680 squares, never 0, min |D| = 2.  Disjoint: 3,840 squares, 1,860 additive (48.4 %), 720 with
+         both increments nonzero, 240 of them with four strong tournaments.
+ n = 6:  adjacent: 491,520, never 0, min 2.  Disjoint: 368,640 squares, 110,520 additive (30.0 %), 50,400 nonzero,
+         29,520 all strong.  Affine 3-cubes on perfect matchings: 3,900, NONE with three nonzero increments.
+ n = 7:  adjacent: 55,050,240, never 0, min 2.  Disjoint: 55,050,240 squares, 8,890,560 additive (16.2 %),
+         4,717,440 nonzero, 3,648,960 all strong.  Affine 3-cubes on 3-matchings: 378,840; 21,840 with three nonzero
+         increments, all with 8 strong members; their increment triples (absolute values) are exactly
+         (6, 16, 48): 10,080 cubes (8 distinct values, e.g. 89, 95, 105, 111, 137, 143, 153, 159),
+         (6, 6, 48): 10,080,   (30, 30, 30): 1,680.   No cube has 8 consecutive odd values.
+ The two cubes inspected (look_cube7.out) do NOT satisfy the structural sufficient condition "no odd cycle through two
+ digit pairs and cycles through different digit pairs always meet": their additivity is a numerical cancellation.
+ Reading: additive squares on DISJOINT arcs are common (a positive fraction at these orders), additive 3-cubes are
+ sporadic, and none is positional (no increments 2, 4, 8).  New relative to THM-5122/5117 only in that the cube
+ directions are single arcs anywhere in the tournament (not cut bits or exchanges at one root).
+
+5. FINITE-EXACT data: one-vertex extension spectrum of a single core (core_extension_runs.out, core_runs_cutlaw.out)
+-----------------------------------------------------------------------------------------------------
+For a labelled core C of order c, V(C) = {H(C + v_B) : B subset of V(C)} (2^c members; the quadratic cut law (0.1)).
+Exhaustive over ALL labelled cores, two independent methods for c <= 6 (table of order c+1; cut law), cut law for c = 7.
+  longest run of consecutive odd numbers contained in one V(C):   c = 3: 3,  c = 4: 4,  c = 5: 6 (9..19, core H = 5),
+      c = 6: 10 (65..83 and 87..105, core H = 29, 31),  c = 7: 15 (399..427, core H = 115; 10,080 labelled cores).
+  largest A such that ONE V(C) contains all odd numbers of the dyadic interval [A-1, 2A-2]:  A = 3, 9, 11, 11, 11 for
+      c = 3, 4, 5, 6, 7 (the last is 9..19 over a core with H = 5); with strong extensions only: A = 9 at c = 4 (the
+      values 9, 11, 13, 15 again), none at c = 5, 6.
+Reading: inside one core the run length grows slowly (3, 4, 6, 10, 15) while the height of the run grows
+geometrically (1, 9, 9, 65, 399); the largest dyadic interval covered by one core is [10, 20] at every core order
+5, 6, 7, so the covered dyadic intervals do not grow with the core.  This is the nonlinear
+(one-root, with interactions) companion of Theorem A (b), and it agrees with the repository's interval theorems
+(THM-4960: k+1 consecutive odd counts on 12k+13 vertices, baseline exponential, width linear).
+A pre-registered guess made in this lane after c <= 6 (run length 2^(c-3) + 2, predicting 18 at c = 7) was REFUTED
+by the c = 7 census (15).
+
+5'. FINITE-EXACT data: general (non-affine) arc cubes at order 7 (general_cubes7.out, general_cubes7_k5.out)
+-----------------------------------------------------------------------------------------------------
+A k-cube = k arcs in any position and a base; 2^k members.  "Positional system with carries" would show up as a cube
+whose values are 2^k consecutive odd numbers (perfect cube) or contain all odd numbers of a dyadic interval [X, 2X].
+At order 7 only 24 <= X <= 31 is possible for X >= 24 (63, 107, 119, 149 are not values of order 7; max H = 189).
+  k = 3 (1,330 arc sets x 262,144 bases): longest run of consecutive odd values in one cube 7 (129..141); NO perfect
+        3-cube.
+  k = 4 (5,985 arc sets x 131,072 bases): longest run 10 (25..43); NO perfect 4-cube; NO cube contains all odd numbers
+        of [X, 2X] for any X in 24..31.
+  k = 5 (20,349 arc sets x 65,536 bases, general_cubes7_k5.out): longest run 17 (25..57, arcs (0,1), (0,2), (0,3),
+        (1,4), (4,5)); NO perfect 5-cube; but cubes containing all odd numbers of [X, 2X] EXIST for X = 24, ..., 30:
+        100,800, 90,720, 30,240, 20,160, 30,240, 30,240, 30,240 labelled cubes; none for X = 31.
+Reading: at order 7 the exact binary digit block of order 5 has no successor of dimension 3 or 4, affine or not; a
+dyadic interval is first covered by a NON-affine cube of dimension 5 with redundancy about 2 (32 members for the 15
+odd numbers of [30, 60], 17 consecutive values at best).  So exact positional systems stop at order 5, and what
+exists at order 7 is a redundant system with interactions; this is a finite observation, no family is known.
+
+5''. FINITE-EXACT data and a remark on direction (i), balanced arcs (balanced_arcs.out)
+-----------------------------------------------------------------------------------------------------
+An arc x -> y of T is balanced if it lies on (H - 1)/2 Hamiltonian paths (seed, S93 Theorem 1), anti-balanced if on
+(H + 1)/2.  Exhaustive over all labelled tournaments:
+  order 4: 40 of 64 have a balanced arc (none of the 24 strong ones); order 5: 840 of 1,024 (strong: 360 of 544);
+  order 6: 21,120 of 32,768 (strong: 11,520 of 22,320 = 0.516); order 7: 532,560 of 2,097,152 (strong: 267,120 of
+  1,677,488 = 0.159).  Anti-balanced: 64, 760, 15,840, 409,920.
+  H-values of order 7 (77 values): 37 admit a balanced arc at order 7, 33 an anti-balanced arc, 27 neither
+  (61, 79, 83, 85, 89, 93, 95, 99, 103, 105, 111, 121, 125, ..., 189: the upper part of the spectrum).
+Remark [PROVED, trivial].  sum over the arcs of T of mu(arc) = (n - 1) H(T), so the mean usage of an arc is 2H/n, and
+sum_y mu(x -> y) = H - e(x): a vertex has at most two balanced out-arcs when H >= 5, and a balanced or anti-balanced
+arc carries about n/4 times the mean usage.  So balanced arcs are not a property of typical tournaments with a given H:
+the share of strong tournaments that have one falls from 0.66 (order 5) to 0.16 (order 7), and 40 of the 77 values
+of order 7 are not attained by any tournament of order 7 with a balanced arc; an induction on N through balanced
+arcs has to construct special tournaments, which is the seed problem of S93 unchanged.
+
+6. Route assessment (plain)
+-----------------------------------------------------------------------------------------------------
+No route to a proof of Chan-Pak was found in this lane.  What is closed, at every order:
+ - subset-sum / binary expansion over arcs at one vertex (cut bits): every pair interaction is <= -2 (KNOWN);
+ - a positional additive system on arcs anywhere: at most n/2 digits against log_2 h_min(n) = 0.774 n (Theorem A);
+   the only exact binary digit block is {9, 11, 13, 15} at order 5;
+ - additively separable multi-parameter families by module substitution into a strong context: the mixed term
+   c_22 * 2p_2(C1) * 2p_2(C2) is always present, every such family with transitive modules is a linear combination
+   of products i^s l^t with a nonzero mixed part, and no substitution realizes H -> alpha H + beta with beta != 0
+   (Theorem B).
+What every exact mechanism examined here and in the repository has in common: the free integer parameters enter
+exponentially (module sizes), or additively with at most O(n) unit steps at an exponentially large baseline.  A
+proof needs either a family with growing multiplicity and a distribution argument for it (several apexes; S93
+two-apex lane), or a non-additive decoding with carries; neither is supplied here.

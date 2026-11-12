@@ -1,0 +1,16 @@
+core order 3 (8 labelled cores, 8 cuts each): max H of extensions 5
+   longest run of consecutive odd values in one extension spectrum: 3 (core mask, start) = (0, 1)
+   largest A with all odd numbers of [A-1, 2A-2] in ONE extension spectrum: A = 3  (core, run start, run end) = (0, 1, 5)
+   same with strong extensions only: A = 0  None
+core order 4 (64 labelled cores, 16 cuts each): max H of extensions 15
+   longest run of consecutive odd values in one extension spectrum: 4 (core mask, start) = (4, 9)
+   largest A with all odd numbers of [A-1, 2A-2] in ONE extension spectrum: A = 9  (core, run start, run end) = (4, 9, 15)
+   same with strong extensions only: A = 9  (4, 9, 15)
+core order 5 (1024 labelled cores, 32 cuts each): max H of extensions 45
+   longest run of consecutive odd values in one extension spectrum: 6 (core mask, start) = (4, 9)
+   largest A with all odd numbers of [A-1, 2A-2] in ONE extension spectrum: A = 11  (core, run start, run end) = (4, 9, 19)
+   same with strong extensions only: A = 0  None
+core order 6 (32768 labelled cores, 64 cuts each): max H of extensions 189
+   longest run of consecutive odd values in one extension spectrum: 10 (core mask, start) = (146, 87)
+   largest A with all odd numbers of [A-1, 2A-2] in ONE extension spectrum: A = 11  (core, run start, run end) = (4, 9, 19)
+   same with strong extensions only: A = 0  None

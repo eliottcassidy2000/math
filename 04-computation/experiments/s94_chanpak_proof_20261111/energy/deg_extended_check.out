@@ -1,0 +1,22 @@
+w=4 s1=2 s2=2  S_w=29.8235  S_w/6^(w/2)=0.8284  S_w/2^(beta1 w)=0.47581  N(K) bound ok: True
+   i=1: N=32 bound=6.87e+03 ratio=0.0047 | i=2: N=40 bound=3.19e+04 ratio=0.0013 | i=3: N=64 bound=1.48e+05 ratio=0.0004
+   extended Deg_K bound for all points and dyadic K: True (max ratio 0.1287)
+w=5 s1=3 s2=2  S_w=89.5118  S_w/6^(w/2)=1.0151  S_w/2^(beta1 w)=0.50754  N(K) bound ok: True
+   i=1: N=80 bound=2.47e+04 ratio=0.0032 | i=2: N=124 bound=1.06e+05 ratio=0.0012 | i=3: N=148 bound=4.69e+05 ratio=0.0003 | i=4: N=256 bound=2.1e+06 ratio=0.0001
+   extended Deg_K bound for all points and dyadic K: True (max ratio 0.1226)
+w=6 s1=3 s2=3  S_w=194.6283  S_w/6^(w/2)=0.9011  S_w/2^(beta1 w)=0.39221  N(K) bound ok: True
+   i=2: N=240 bound=1.06e+05 ratio=0.0023 | i=3: N=408 bound=4.69e+05 ratio=0.0009 | i=4: N=624 bound=2.1e+06 ratio=0.0003 | i=5: N=1024 bound=9.41e+06 ratio=0.0001
+   extended Deg_K bound for all points and dyadic K: True (max ratio 0.1339)
+w=7 s1=4 s2=3  S_w=559.0048  S_w/6^(w/2)=1.0565  S_w/2^(beta1 w)=0.40035  N(K) bound ok: True
+   i=2: N=608 bound=3.83e+05 ratio=0.0016 | i=3: N=860 bound=1.56e+06 ratio=0.0005 | i=4: N=1672 bound=6.67e+06 ratio=0.0003 | i=5: N=2332 bound=2.91e+07 ratio=0.0001 | i=6: N=4096 bound=1.28e+08 ratio=0.0000
+   extended Deg_K bound for all points and dyadic K: True (max ratio 0.1266)
+w=8 s1=4 s2=4  S_w=1189.2004  S_w/6^(w/2)=0.9176  S_w/2^(beta1 w)=0.30269  N(K) bound ok: True
+   i=3: N=1708 bound=1.56e+06 ratio=0.0011 | i=4: N=3148 bound=6.67e+06 ratio=0.0005 | i=5: N=6184 bound=2.91e+07 ratio=0.0002 | i=6: N=9336 bound=1.28e+08 ratio=0.0001 | i=7: N=16384 bound=5.65e+08 ratio=0.0000
+   extended Deg_K bound for all points and dyadic K: True (max ratio 0.1304)
+w=9 s1=5 s2=4  S_w=3363.0041  S_w/6^(w/2)=1.0594  S_w/2^(beta1 w)=0.30422  N(K) bound ok: True
+   i=3: N=4392 bound=5.63e+06 ratio=0.0008 | i=4: N=7308 bound=2.22e+07 ratio=0.0003 | i=5: N=12280 bound=9.24e+07 ratio=0.0001 | i=6: N=25200 bound=3.96e+08 ratio=0.0001 | i=7: N=37512 bound=1.72e+09 ratio=0.0000 | i=8: N=65536 bound=7.49e+09 ratio=0.0000
+   extended Deg_K bound for all points and dyadic K: True (max ratio 0.1258)
+w=10 s1=5 s2=5  S_w=7040.6619  S_w/6^(w/2)=0.9054  S_w/2^(beta1 w)=0.22636  N(K) bound ok: True
+   i=4: N=15652 bound=2.22e+07 ratio=0.0007 | i=5: N=25028 bound=9.24e+07 ratio=0.0003 | i=6: N=46008 bound=3.96e+08 ratio=0.0001 | i=7: N=97184 bound=1.72e+09 ratio=0.0001 | i=8: N=149080 bound=7.49e+09 ratio=0.0000 | i=9: N=262144 bound=3.26e+10 ratio=0.0000
+w=11 s1=6 s2=5  S_w=19946.7615  S_w/6^(w/2)=1.0472  S_w/2^(beta1 w)=0.22792  N(K) bound ok: True
+   i=4: N=38632 bound=8e+07 ratio=0.0005 | i=5: N=61188 bound=3.08e+08 ratio=0.0002 | i=6: N=103412 bound=1.26e+09 ratio=0.0001 | i=7: N=182324 bound=5.32e+09 ratio=0.0000 | i=8: N=386980 bound=2.28e+10 ratio=0.0000 | i=9: N=589672 bound=9.85e+10 ratio=0.0000 | i=10: N=1048576 bound=4.25e+11 ratio=0.0000

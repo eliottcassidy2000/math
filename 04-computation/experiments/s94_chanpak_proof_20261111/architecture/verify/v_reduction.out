@@ -1,0 +1,7 @@
+atoms 49, 63, 343 : misses up to 2000000 = [7, 21]
+atoms 49, 63      : misses = [7, 21, 343, 1029, 16807, 50421, 823543]
+session-context list (49, 63, 7p with p != 3, p = 7 allowed): misses = [7, 21, 343, 1029, 16807, 50421, 823543]
+atoms 63, 343     : number of misses = 5923 first [7, 21, 49, 147, 245, 441, 539, 637, 735, 833]
+atoms 49, 343     : number of misses = 12 first [7, 21, 63, 189, 567, 1701, 5103, 15309, 45927, 137781]
+prediction {7, 21} + {7^a, 3*7^a : a odd >= 3} for the no-343 misses: True
+CHECK PASS

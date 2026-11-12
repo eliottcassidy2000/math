@@ -1,0 +1,6 @@
+order 3: 2 distinct ordered-path-partition profiles: [(1, 6, 6), (3, 6, 6)]
+order 4: 3 distinct ordered-path-partition profiles: [(1, 14, 36, 24), (3, 18, 36, 24), (5, 22, 36, 24)]
+order 5: 8 distinct ordered-path-partition profiles: [(1, 30, 150, 240, 120), (3, 42, 162, 240, 120), (5, 54, 174, 240, 120), (9, 66, 186, 240, 120), (11, 78, 198, 240, 120), (13, 78, 198, 240, 120), (15, 78, 198, 240, 120), (15, 90, 210, 240, 120)]
+context order 3: distinct c-matrices 1; zero mixed differences found so far: 0
+context order 4: distinct c-matrices 4; zero mixed differences found so far: 0
+context order 5: distinct c-matrices 34; zero mixed differences found so far: 0
