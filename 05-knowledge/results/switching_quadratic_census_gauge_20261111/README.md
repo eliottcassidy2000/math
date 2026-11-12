@@ -140,7 +140,7 @@ three vertices the eight tournaments `T^S`, `S` a subset of the triple, have `su
 
 **Corollary 3 (recursion for the Hessian).** For `n >= 4`, `a != b`, `R = T - a - b`:
 
-    M_T(a,b) = sum_{v in N^+(a) + N^+(b)} E_R(v) + iota_a^T M_R iota_b ,
+    M_T(a,b) = sum_{v in R : exactly one of a -> v, b -> v} E_R(v) + iota_a^T M_R iota_b ,
 
 where `E_R(v)` is the parity of the number of paths of `R` on an odd number (at least 3) of vertices having `v` as
 an endpoint. (Sum (**) over the odd sets `W` containing `a`, `b`; there are `2^(n-3)` of them.) Also `M = 0` for
@@ -171,7 +171,9 @@ classes constant; order 5: imbalance 4 (24 classes) or 8 (40 classes), always to
 **Remarks.** (1) `Lambda` is an `S_n`-equivariant map from labelled switching classes on `n` points to even
 graphs on `n` points, two sets with `2^C(n-1,2)` elements. It is not a bijection (order 3: both classes go to
 the triangle; order 4: `Lambda(u,w) = d_u + d_w`, image of size 4 out of 8), in agreement with THM-4531 /
-THM-4722. (2) Theorem G needs no parity of `n`; Corollary 2 for `H` uses odd cycles only.
+THM-4722. The number of distinct graphs is 1, 4, 22, 91, 2972 for the 2, 8, 64, 1024, 32768 classes of orders
+3-7 (`lambda_image.c`, `out/lambda_image.txt`); a class and the class of its converse have the same `Lambda`, so
+every fibre is even; `Lambda = 0` for 184 of the 1,024 classes of order 6. (2) Theorem G needs no parity of `n`; Corollary 2 for `H` uses odd cycles only.
 (3) Relation to THM-5127: there the cube is the set of one-vertex extensions `R + v_X`; here it is the class
 `{R^Y + v_(V-Y)}`. Neither statement contains the other.
 
@@ -386,7 +388,8 @@ digits shown. No asymptotic statement for A049313 was on record.
   order 8, and about `9 x 10^19` at order 18, the bulk order of `h` near `2^35`. Under a Poisson model the chance
   that a bulk value is missed is `exp(-density)`: 22 and 9 percent at orders 5 and 6, below `10^-8` from order 8
   on. The values 7 and 21 are bulk values of the only two orders where the density is of order 1. This is
-  consistent with the verified ranges (every odd number to `2^35`, THM-4875 / THM-4885) and proves nothing; the
+  consistent with the verified ranges (every odd number other than 7 and 21 up to `2^32`, THM-4875, and up to
+  `2^35` in one run, THM-4885) and proves nothing; the
   rigorous form of the statement is the local-limit hypothesis HYP-9659 (A).
 
 ## 5. Part D: reading the Yang-Mills construction
@@ -425,7 +428,7 @@ logical shape, different objects), ANALOGY (a dictionary with a precise statemen
 
 | | in the Yang-Mills source | in this repository | type |
 |---|---|---|---|
-| Y1 | large-field gas `sum over admissible families of prod K_i` (`YM/RG/Activities.lean`); Ursell coefficients and a Penrose bound by parent maps (`YM/Push/ABSOLUTE_SUMS`) (S) | `H(T) = I(Omega(T), 2)`, the hard-core gas of odd cycles (THM-002), its Mayer cumulants (THM-517) | STRUCTURAL; opposite regimes: activities `exp(-monitor^(1/5))` against fugacity 2, which is outside every cluster-expansion region (INV-028) - the reason 7 and 21 exist |
+| Y1 | large-field gas `sum over admissible families of prod K_i` (`YM/RG/Activities.lean`); Ursell coefficients and a Penrose bound by parent maps (`YM/Push/ABSOLUTE_SUMS`) (S) | `H(T) = I(Omega(T), 2)`, the hard-core gas of odd cycles (THM-002), its Mayer cumulants (THM-517) | STRUCTURAL; opposite regimes: activities `exp(-monitor^(1/5))` against fugacity 2, which is outside every cluster-expansion region (INV-028) |
 | Y2 | exact step `rep(m).eval = push(rep(m+1).eval)` with a kernel of total mass 1, in a fixed format (`History.lean`, `Transfer`) (S) | the proof of Theorem G: the pair `(e, Lambda)` at order `n` from orders `n-1`, `n-2` by (*), (**); the format "affine, symmetric" is preserved | STRUCTURAL: an exact recursion that closes on a format |
 | Y3 | small-field / large-field split (`flags`, `Healthy`, `forcedAllowance`) (S) | the unlabelled law is `L/(1+delta) + delta D/(1+delta)`: rigid bulk plus symmetric defects of weight `(16/3) n^3 4^(-n)` (Session271) | STRUCTURAL |
 | Y4 | convergence criterion for polymer sums, `(2M+1)^4 gamma <= 1` (`YM/Ac`, `forest`) (S) | `n 2^(-(n-1)/3) < 1` (Session98) and Proposition B1: number of supports times activity | STRUCTURAL |
@@ -473,8 +476,12 @@ there are at least two measures.
 (d) SUGGESTION (conditional on the reading (S) of `Transfer` and `Winter.convergence`; not checked). The blocked
 fields are honest random variables with values in compact groups. At a fixed volume, for each level `m` the
 law `mu_m` of the level-`m` blocked configuration has density `rep(N,p,m).eval`, and `mu_m` is the image of `mu_(m+1)`
-under the blocking kernel. If these densities converge as `N -> infinity` (what `Winter.convergence` asserts for the
-couplings and activities) and the kernels are continuous, the limits satisfy the same relation, so the joint
+under the blocking kernel. The structure `Winter` (`YM/FullVolume/Glide/Vac.lean`, read by the author; its
+constructor is in the cone of the audited theorems according to `verification/declaration-usage.tsv`) asserts
+that, at a fixed period and level, the level-`m` coupling and the activities, in a weighted space, converge as
+`N -> infinity`. If this gives weak convergence of the normalised laws `mu_m` (an additional step that was not
+checked: the constant in the exponent diverges and has to cancel in the normalisation) and the kernels are
+continuous, the limits satisfy the same relation, so the joint
 laws of `(V_0, ..., V_M)` are consistent and Kolmogorov's theorem gives **a probability measure on the compact
 space of sequences of blocked configurations of all levels**. This would be a continuum measure at finite
 volume on an explicit space, with bounded coordinates (no moment problem). What it would not give: the relation
@@ -536,6 +543,7 @@ registered; their exhaustive and random checks are controls.
     python3 endpoint_graph.py                                                                      # random checks, orders 3-10
     cc -O2 -o two_adic_cube two_adic_cube.c && ./two_adic_cube 11 1 0                              # R1 (arguments in PREREGISTRATION.md)
     cc -O2 -o rank_stats rank_stats.c && ./rank_stats 9 3000 1
+    cc -O2 -o lambda_image lambda_image.c && for n in 3 4 5 6 7; do ./lambda_image $n; done
     python3 census_forecast.py all                                                                 # needs python-flint, mpmath
 
 Outputs are in `out/`.

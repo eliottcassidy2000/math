@@ -1,0 +1,10 @@
+n=3 classes=2 distinct endpoint graphs=1 ; fibre size : number of graphs -> 2:1
+   classes by degree sequence of Lambda: 222:2
+n=4 classes=8 distinct endpoint graphs=4 ; fibre size : number of graphs -> 2:4
+   classes by degree sequence of Lambda: 2222:6 0000:2
+n=5 classes=64 distinct endpoint graphs=22 ; fibre size : number of graphs -> 2:12 4:10
+   classes by degree sequence of Lambda: 22222:24 22244:40
+n=6 classes=1024 distinct endpoint graphs=91 ; fibre size : number of graphs -> 4:60 16:15 24:15 184:1
+   classes by degree sequence of Lambda: 222222:240 222244:240 444444:360 000000:184
+n=7 classes=32768 distinct endpoint graphs=2972 ; fibre size : number of graphs -> 4:2100 8:70 16:675 48:105 240:1 368:21
+   classes by degree sequence of Lambda: 2222222:5760 2222244:1680 2444444:5040 2222266:7728 4444446:2240 2444466:5040 4444666:5040 6666666:240

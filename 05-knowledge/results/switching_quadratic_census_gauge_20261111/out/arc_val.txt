@@ -1,0 +1,25 @@
+n=6 shape 01           edges per component: 1   min v_2 over all T = 1 (nonzero at 28032 tournaments)   sum of ceil(m_c/2) = 1   #components = 1
+n=6 shape 012          edges per component: 2   min v_2 over all T = 1 (nonzero at 32768 tournaments)   sum of ceil(m_c/2) = 1   #components = 1
+n=6 shape 0123         edges per component: 3   min v_2 over all T = 1 (nonzero at 20480 tournaments)   sum of ceil(m_c/2) = 2   #components = 1
+n=6 shape 01234        edges per component: 4   min v_2 over all T = 1 (nonzero at 32768 tournaments)   sum of ceil(m_c/2) = 2   #components = 1
+n=6 shape 012345       edges per component: 5   min v_2 over all T = 99 (nonzero at 0 tournaments)   sum of ceil(m_c/2) = 3   #components = 1
+n=6 shape 01|23        edges per component: 1 1   min v_2 over all T = 1 (nonzero at 22944 tournaments)   sum of ceil(m_c/2) = 2   #components = 2
+n=6 shape 01|23|45     edges per component: 1 1 1   min v_2 over all T = 99 (nonzero at 0 tournaments)   sum of ceil(m_c/2) = 3   #components = 3
+n=6 shape 012|34       edges per component: 2 1   min v_2 over all T = 1 (nonzero at 25600 tournaments)   sum of ceil(m_c/2) = 2   #components = 2
+n=6 shape 012|345      edges per component: 2 2   min v_2 over all T = 2 (nonzero at 32768 tournaments)   sum of ceil(m_c/2) = 2   #components = 2
+n=6 shape 0123|45      edges per component: 3 1   min v_2 over all T = 99 (nonzero at 0 tournaments)   sum of ceil(m_c/2) = 3   #components = 2
+n=7 shape 01           edges per component: 1   min v_2 over all T = 1 (nonzero at 1950976 tournaments)   sum of ceil(m_c/2) = 1   #components = 1
+n=7 shape 012          edges per component: 2   min v_2 over all T = 1 (nonzero at 2097152 tournaments)   sum of ceil(m_c/2) = 1   #components = 1
+n=7 shape 0123         edges per component: 3   min v_2 over all T = 1 (nonzero at 1638400 tournaments)   sum of ceil(m_c/2) = 2   #components = 1
+n=7 shape 01234        edges per component: 4   min v_2 over all T = 1 (nonzero at 2097152 tournaments)   sum of ceil(m_c/2) = 2   #components = 1
+n=7 shape 012345       edges per component: 5   min v_2 over all T = 1 (nonzero at 1048576 tournaments)   sum of ceil(m_c/2) = 3   #components = 1
+n=7 shape 0123456      edges per component: 6   min v_2 over all T = 1 (nonzero at 2097152 tournaments)   sum of ceil(m_c/2) = 3   #components = 1
+n=7 shape 01|23        edges per component: 1 1   min v_2 over all T = 1 (nonzero at 1758464 tournaments)   sum of ceil(m_c/2) = 2   #components = 2
+n=7 shape 01|23|45     edges per component: 1 1 1   min v_2 over all T = 1 (nonzero at 1274176 tournaments)   sum of ceil(m_c/2) = 3   #components = 3
+n=7 shape 012|34       edges per component: 2 1   min v_2 over all T = 1 (nonzero at 1804288 tournaments)   sum of ceil(m_c/2) = 2   #components = 2
+n=7 shape 012|345      edges per component: 2 2   min v_2 over all T = 1 (nonzero at 2097152 tournaments)   sum of ceil(m_c/2) = 2   #components = 2
+n=7 shape 0123|45      edges per component: 3 1   min v_2 over all T = 1 (nonzero at 1081344 tournaments)   sum of ceil(m_c/2) = 3   #components = 2
+n=7 shape 01|234|56    edges per component: 1 2 1   min v_2 over all T = 1 (nonzero at 1312768 tournaments)   sum of ceil(m_c/2) = 3   #components = 3
+n=7 shape 012|34|56    edges per component: 2 1 1   min v_2 over all T = 1 (nonzero at 1312768 tournaments)   sum of ceil(m_c/2) = 3   #components = 3
+n=7 shape 0123|456     edges per component: 3 2   min v_2 over all T = 1 (nonzero at 1310720 tournaments)   sum of ceil(m_c/2) = 3   #components = 2
+n=7 shape 01234|56     edges per component: 4 1   min v_2 over all T = 1 (nonzero at 1310720 tournaments)   sum of ceil(m_c/2) = 3   #components = 2

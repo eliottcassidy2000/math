@@ -56,7 +56,7 @@ or ending at `v`; `hc` the number of Hamiltonian cycles.
 - **(C2)** For every `l`, the parity of the number of `l`-cycles of `T^X` is a quadratic function of `X`, and
   `(H(T^X) - H(T))/2 = sum_{a in X} lambda_a + sum_{{a,b} in X} M(a,b) (mod 2)` with
   `M = sum_{|W| odd} Lambda_{T[W]}`; for any three vertices, `sum_{S in the triple} H(T^S) = 0 (mod 4)`.
-- **(C3)** `M_T(a,b) = sum_{v in N^+(a) + N^+(b)} E_R(v) + iota_a^T M_R iota_b`, `R = T - a - b`, `E_R(v)` the parity of the
+- **(C3)** `M_T(a,b) = sum_{v in R : exactly one of a -> v, b -> v} E_R(v) + iota_a^T M_R iota_b`, `R = T - a - b`, `E_R(v)` the parity of the
   number of paths of `R` on an odd number (at least 3) of vertices with `v` as an endpoint (`n >= 4`).
 - **(C4)** Order 6: `M(a,b) = 1 + d_a + d_b`; every class has 20 members with `H = 1` and 12 with `H = 3 (mod 4)`.
 - **(C5)** Every member of the classes of `(source) + P_23`, `(source) + D(P_11)` has an even number of cycles of

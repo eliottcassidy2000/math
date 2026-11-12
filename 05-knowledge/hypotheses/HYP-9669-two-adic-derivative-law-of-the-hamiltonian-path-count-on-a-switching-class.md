@@ -14,6 +14,9 @@ status: >
   every |U| <= 6; for even order the least valuation at |U| = 5, 6 was 5 (orders 10, 12, 14).
   KNOWN, credited: c_U(H) = 0 for |U| > 2 floor(n/3) (THM-4524); the digit-degree law of a vertex cube
   (THM-5127 (C) (8)), where H is a quadratic polynomial with even coefficients.
+  NOT TRUE on the full arc cube (FINITE-EXACT, all labelled tournaments of orders 6 and 7): the mixed arc-flip
+  differences of H are only even in general (two disjoint arcs: valuation 1), so the law is special to
+  switching cubes and vertex cubes.
   Falsifier: one U with a smaller valuation.
   AUDIT: AUDIT-PENDING (pre-audit checkpoint)
 session: mac-mini-2026-11-11-gauge
@@ -35,6 +38,11 @@ registration and outcome in `PREREGISTRATION.md` of the packet (R1).
 
 **Next step.** The case `|U| = 5, 6` for Hamiltonian cycles: `c_U(hc) = 0 (mod 4)`; equivalently
 `(1/2) c_{abcd}(hc) mod 2` is a class invariant (a 4-uniform "second endpoint hypergraph"). The proof of THM-5139
-is a recursion modulo 2 on the pair (endpoint vector, endpoint graph); a recursion modulo 4 would need the exact
-identities `e_T(u) = H(T-u) + (1/2) <S_u, d_{T-u}>`, `d_T(u) = (1/2) <S_u, e_{T-u}>` for `e = s + t`, `d = s - t`
-(`S` the skew sign matrix).
+is a recursion modulo 2 on the pair (endpoint vector, endpoint graph); a recursion modulo 4 would start from
+the exact system, for `e = s + t`, `d = s - t` (integers):
+`e_T(u) = <iota_u, d_{T-u}> + H(T-u)`, `d_T(u) = <iota_u, e_{T-u}> - H(T-u)`, `hc(T) - hc(T^a) = <iota_a, d_{T-a}>`,
+and `H(T^u) - H(T) = - sum_{i in N^+(u)} w_i(T-u)` with `w_i(R) = 2 d_R(i) + K_R(.,i) - K_R(i,.)` (`K(y,z)` = number of
+ordered covers of `R` by two non-empty paths, the first ending at `y`, the second starting at `z`; from the cut
+quadratic of THM-5127; checked on 360 cases, orders 4-8). In this form the law for `H` at order `n` is a law with
+offset for the vector `w` at order `n - 1`, and the missing step is a symmetry of the next tensor
+(`sum_{v in U} (1/2) c_{U - v}(d(v)) = 0 (mod 2)` for `|U| = 4`), the analogue of the symmetry of `Lambda`.
