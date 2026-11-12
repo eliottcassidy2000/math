@@ -20,7 +20,17 @@ for cs, expected in cases:
     # Embed in a,b_real,b_imag,c,d: latter two are exactly free.
     E=M.row_join(s.zeros(len(rows),2))
     if len(E.nullspace())!=5-expected: raise ValueError('dimension')
-    out.append({'coefficients':list(map(str,cs)),'period_matrix':[[str(x) for x in row] for row in rows],
+    # Period-normalized holonomy: common factors do not affect rank or cocycle.
+    mons=[]
+    for row in rows:
+        N=s.zeros(5)
+        for k,x in enumerate(row): N[4,k]=x
+        mons.append(N)
+    for N in mons:
+        for K in mons:
+            if N*K!=s.zeros(5): raise ValueError('nilpotent product')
+            if (s.eye(5)+N)*(s.eye(5)+K)!=s.eye(5)+N+K: raise ValueError('cocycle')
+    out.append({'coefficients' :list(map(str,cs)),'period_matrix':[[str(x) for x in row] for row in rows],
                 'rank':M.rank(),'stress_dimension':5-M.rank(),
                 'determinant':str(M.det()) if M.rows==3 else None})
 print(json.dumps({'status':'PASS','cases':out},indent=2,sort_keys=True))

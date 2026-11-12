@@ -89,7 +89,30 @@ with R=1 and perturb within the kernel slightly; compactness keeps R positive.
 This establishes the same dimensions for a local open family of nondegenerate
 aligned stresses, after choosing boundary curves away from poles/zeros.
 
-## 3. The bridge to prior repository work
+## 3. The full-state loop law
+
+Choose the parameter vector θ=(a,u,v,c,d) at the basepoint. Analytic
+continuation around γ fixes its first four entries and sends
+
+    d ↦ d−2P_h(a,u,v)(γ).
+
+Thus the monodromy matrix is M_γ=I+e_5 ℓ_γ, where the last two entries of
+ℓ_γ are zero. Every nontrivial M_γ has rank-one deviation from identity,
+and
+
+    (M_γ−I)(M_η−I)=0,
+    M_γ M_η=M_(γη)=I+e_5(ℓ_γ+ℓ_η).
+
+All holonomy is therefore abelian (nilpotency class at most one), with a
+square-zero deviation algebra in this representation,
+even when the fundamental group of the punctured plane is nonabelian. The
+stress-space dimension is the dimension of the common fixed subspace. This
+is an exact finite-state loop law: it neither removes the topology nor
+replaces it by merely counting holes. Distinct nonhomologous loops can be
+invisible, and all commutators are invisible. To recover the underlying net
+or fundamental group requires additional information.
+
+## 4. The bridge to prior repository work
 
 The mechanism is **local compatibility → finite carrier → global holonomy
 annihilator**. It connects to, but does not identify, three different subjects:
@@ -116,7 +139,7 @@ all positive odd targets are covered. Physical binary choices and positivity
 can make the resulting feasible set disconnected or empty even when the
 linear annihilator has large dimension.
 
-## 4. Reproduction
+## 5. Reproduction
 
 `python3 verify_periods.py` checks residue formulas independently against
 symbolic Laurent residues, all ranks, determinant certificates, and the free
