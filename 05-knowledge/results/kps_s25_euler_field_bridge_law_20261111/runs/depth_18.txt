@@ -1,0 +1,21 @@
+depth <= 2 below 2^18: 16430 odd numbers missed; fraction missed in the top dyadic block: 0.1106
+depth <= 3 below 2^18: 9190 odd numbers missed; fraction missed in the top dyadic block: 0.05258
+   first misses at depth <= 3: [7, 13, 21, 29, 35, 41, 43, 49, 55, 59, 67, 71, 77, 83, 89, 101, 105, 109, 113, 119, 131, 133, 137, 147, 149, 161, 163, 173, 175, 177, 193, 197, 205, 209, 211, 231, 233, 239, 245, 247]
+   last misses at depth <= 3: [261739, 261743, 261757, 261767, 261781, 261797, 261803, 261847, 261869, 261971, 262003, 262103]
+tuples: depth 2: 2659887, depth 3: 8206973; mean multiplicity per odd number below 2^18: depth 2: 20.3, depth <= 3: 82.9
+   [2^6, 2^7): depth<=2 misses 10, depth<=3 misses 10 of 32
+   [2^7, 2^8): depth<=2 misses 21, depth<=3 misses 21 of 64
+   [2^8, 2^9): depth<=2 misses 37, depth<=3 misses 37 of 128
+   [2^9, 2^10): depth<=2 misses 56, depth<=3 misses 53 of 256
+   [2^10, 2^11): depth<=2 misses 118, depth<=3 misses 99 of 512
+   [2^11, 2^12): depth<=2 misses 220, depth<=3 misses 186 of 1024
+   [2^12, 2^13): depth<=2 misses 394, depth<=3 misses 320 of 2048
+   [2^13, 2^14): depth<=2 misses 671, depth<=3 misses 489 of 4096
+   [2^14, 2^15): depth<=2 misses 1260, depth<=3 misses 866 of 8192
+   [2^15, 2^16): depth<=2 misses 2327, depth<=3 misses 1451 of 16384
+   [2^16, 2^17): depth<=2 misses 4056, depth<=3 misses 2202 of 32768
+   [2^17, 2^18): depth<=2 misses 7250, depth<=3 misses 3446 of 65536
+
+real	0m3.217s
+user	0m0.000s
+sys	0m0.031s

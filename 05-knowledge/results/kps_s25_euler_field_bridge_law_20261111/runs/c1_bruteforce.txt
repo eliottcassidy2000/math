@@ -1,0 +1,6 @@
+C1  chains of depth 2 and 3, words of length <= 2, chain lengths 1, 2: 1470 cases, 0 mismatches
+    normal form M(B^k w; i) = M(w; i + k) on all words of length 4: 0 failures
+
+real	0m5.912s
+user	0m0.031s
+sys	0m0.015s

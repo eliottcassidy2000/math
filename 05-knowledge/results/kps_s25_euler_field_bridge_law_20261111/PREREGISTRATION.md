@@ -52,3 +52,25 @@ So the path-count spectrum contains the set `Sigma` of top-left entries of all p
 semigroup alone, with no bank of small tournaments, reaches every odd number in the range. It would not prove
 anything about all `N`. C4 false would show that the pure chains need the bank (or the joins without an inserted
 chain), and the misses would say which.
+
+---
+
+## Outcomes (added after the runs; nothing above was changed)
+
+| prediction | outcome |
+|---|---|
+| C1 (brute force of the chain law) | **CONFIRMED** (`runs/c1_bruteforce.txt`): 1470 chains of depth 2 and 3, 0 mismatches |
+| C2 (depth at most 2 misses more than 2 per cent in `[2^17, 2^18)`) | **CONFIRMED** (`runs/depth_18.txt`): 11.06 per cent |
+| C3 (depth at most 3: fewer than 0.5 per cent there, fewer than 600 below `2^18`) | **FAILED**: 5.26 per cent; 9190 misses below `2^18` |
+| C4 (full closure below `2^14` misses only 7 and 21) | **FAILED** (`runs/closure_14.txt`): 1214 odd numbers missed; 414 below `2^12` (`runs/closure_12.txt`) |
+| C5 (mean multiplicity at depth at most 3 at least 40) | **CONFIRMED**: 82.9 |
+
+Notes.
+
+1. C3 and C4 failed by a wide margin. The chain semigroup with a transitive chain inserted at every join is not a
+   complete family in this range; the reading is in the README, section B3.
+2. The closure run at `2^12` was made first, to gauge the cost; it is reported with the pre-registered run at
+   `2^14`.
+3. The numbering in the file names of this packet was fixed after the registration: the stubs first carried
+   THM-5145, THM-5146 and HYP-9675, which mac-mini-2026-11-11-rays had reserved one commit earlier; they were
+   renumbered THM-5147, THM-5148, HYP-9677 in the next commit.

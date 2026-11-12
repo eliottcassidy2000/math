@@ -1,6 +1,6 @@
 ---
 id: HYP-9668
-title: "Gaussian conditions on Keller pairs: what is left of the ladder between GMC(2) and JC(2). For a Keller pair (f, g) with Stein kernel M_z (THM-5138): K-GMC (M_z is a Mathieu-Zhao subspace), CV (cone vanishing) and SN (one-sided Stein nilpotence) follow from the automorphism property at every centre. As first filed, parts (A)-(C) proposed them for all Keller pairs as conjectures between GMC(2) and JC(2), (D) proposed that SN detects automorphisms, (E) proposed the Mathieu property for all rank-one potentials. Outcome: (A)-(C) are each equivalent to JC(2), so they are not intermediate; (D) is PROVED at centres in general position, FALSE on surfaces at special centres, and OPEN on C^2 at a prescribed centre; (E) is REFUTED (W = x^2 y). Open parts: (D') prescribed-centre detection on C^2; (E') the Mathieu property for rank-one potentials whose class of 1 is not zero; (Q) which hypothesis on a potential q makes Im(d - dq) a Mathieu-Zhao subspace."
+title: "Gaussian conditions on Keller pairs: what is left of the ladder between GMC(2) and JC(2). For a Keller pair (f, g) with Stein kernel M_z (THM-5138): K-GMC (M_z is a Mathieu-Zhao subspace), CV (cone vanishing) and SN (one-sided Stein nilpotence) follow from the automorphism property at every centre. As first filed, parts (A)-(C) proposed them for all Keller pairs as conjectures between GMC(2) and JC(2), (D) proposed that SN detects automorphisms, (E) proposed the Mathieu property for all rank-one potentials. Outcome: (A)-(C) are each equivalent to JC(2), so they are not intermediate; (D) is PROVED at centres in general position, FALSE on surfaces at special centres, and OPEN on C^2 at a prescribed centre; (E) is REFUTED (W = x^2 y) and so is its repair (E') (W = x + x^2 y, THM-5147). Open parts: (D') prescribed-centre detection on C^2; (Q) which hypothesis on a potential q makes Im(d - dq) a Mathieu-Zhao subspace."
 status: >
   (A), (B), (C) [K-GMC, CV, SN for all Keller pairs and all centres]: each is EQUIVALENT TO JC(2) (THM-5138 (E),
   PROVED; the two-direction form of this collapse, conditional on the dimension count, was pushed first by
@@ -18,8 +18,11 @@ status: >
   (E) [kernel of the functional is Mathieu-Zhao whenever H^2(C^2, d - dW ^) is one-dimensional]: REFUTED as filed
   (first audit): for W = x^2 y, 1 = 2 (d/dy - W_y)(y) - (d/dx - W_x)(x) lies in the kernel, which has codimension
   one. The same for x^p y^q, p, q >= 1, p != q.
-  (E') [the same when the class of 1 is not zero, e.g. W = x + x^2 y]: OPEN; no evidence either way.
-  (Q) OPEN question, no conjecture offered.
+  (E') [the same when the class of 1 is not zero, e.g. W = x + x^2 y]: REFUTED (kind-pasteur-2026-11-11-S25,
+  THM-5147): for W = x + x^2 y every power W^m lies in the image and x W^m = m! x never does; the same for
+  W = x + x^(l+1) y, l >= 1.
+  (Q) OPEN question, no conjecture offered; two necessary conditions are known (the 1-property and the Euler
+  obstruction of THM-5147 (C)).
   First audit: PASS WITH CORRECTIONS; second audit (of the statements quoted from THM-5138 (D), (E) and of the
   special-centre example; this file itself was not read by it): PASS WITH CORRECTIONS. All applied (MISTAKE-764).
 session: kind-pasteur-2026-11-11-S24
@@ -84,7 +87,7 @@ some `d_u^m x` or `d_u^m y`, `m >= 1`, lies in `M_z` without being zero). By THM
 proper algebraic subsets defined over the field of coefficients; detection at every centre would follow if for a
 non-automorphism these subsets, for `m` in an infinite set, never have a common point.
 
-## (E) REFUTED, and (E') (OPEN)
+## (E) and (E'): both REFUTED
 
 `dim H^2(C^2, d - dW ^) = 1` iff the generic fibre of `W` has `b_1 = 1`. Besides `xy` and its images under
 automorphisms this happens for `x^p y^q` with `gcd(p, q) = 1` and for Broughton's polynomial `x + x^2 y`, which
@@ -100,8 +103,17 @@ No record of this instance was found in the five papers read by the second audit
 `Im(d/dx - W_x) + Im(d/dy - W_y)` a Mathieu-Zhao subspace? Test case: `W = x + x^2 y` (`[1] != 0`, `[x] = -[1]`,
 `[x^2 y] = [1]`: second audit). GMC(2) is the case `W = xy`.
 
+**(E') is false (THM-5147, kind-pasteur-2026-11-11-S25).** The field `xi = x d/dx - y d/dy` satisfies `xi(W) = W`
+for `W = x + x^2 y` and has divergence 0, and `W h = xi(h)` modulo the image for every `h` (the image is the set of
+`div(v) - v(W)`). So `W^m` lies in the image for all `m >= 1`, while `x W^m = m! x` does not (`[x] = -[1] != 0`).
+A nonzero class of 1 was not the right repair: the Gaussian potential differs from Broughton's by the divergence
+of its Euler field (1 against 0).
+
 (Q) For which potentials `q` is `Im(d - dq ^)` a Mathieu-Zhao subspace? Necessary: 1 is not in the image, unless
-the image is everything. Known cases: `q = xy` (GMC(2)); `q = (f - a)(g - b)` for automorphisms; one variable
+the image is everything. Also necessary (THM-5147 (C)): if `q` has an Euler field `xi` (`xi(q) = q`) whose
+divergence `delta` is a non-positive integer, every eigen-polynomial of nonzero class must have an eigenvalue `e`
+with `e + delta` a non-positive integer. Not settled: rank-one potentials without an Euler field, such as
+`x (x^2 y + x + 1)`. Known cases: `q = xy` (GMC(2)); `q = (f - a)(g - b)` for automorphisms; one variable
 (van den Essen, Wright, Zhao). For `q = (f - a)(g - b)` with `(f, g)` a Keller pair the answer is JC(2).
 
 ## History of this file
@@ -111,3 +123,6 @@ claimed that SN fails on the slice, and filed (E) without checking whether 1 lie
 corrected all three (MISTAKE-764); the collapse of (A)-(C) was found the same day by Session269 and, in the form
 quoted above, in this session after the audit. The second audit added that the Image Conjecture was already
 refuted in canon (THM-2801), which the first rewrite of this file had presented as possibly unrecorded.
+The repaired question (E') stood for a few hours: it is refuted by a two-line identity (THM-5147) that neither the
+author nor the two audits had tried, although both audits had computed `[x] = -[1]` and `[x^2 y] = [1]`, whose sum
+is `[W] = 0`.
