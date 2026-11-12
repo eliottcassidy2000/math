@@ -1,0 +1,83 @@
+{
+  "cases": [
+    {
+      "coefficients": [
+        "1"
+      ],
+      "determinant": null,
+      "period_matrix": [
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "rank": 0,
+      "stress_dimension": 5
+    },
+    {
+      "coefficients": [
+        "I"
+      ],
+      "determinant": null,
+      "period_matrix": [
+        [
+          "2",
+          "0",
+          "0"
+        ]
+      ],
+      "rank": 1,
+      "stress_dimension": 4
+    },
+    {
+      "coefficients": [
+        "1",
+        "I"
+      ],
+      "determinant": null,
+      "period_matrix": [
+        [
+          "2",
+          "4",
+          "0"
+        ],
+        [
+          "0",
+          "-4",
+          "0"
+        ]
+      ],
+      "rank": 2,
+      "stress_dimension": 3
+    },
+    {
+      "coefficients": [
+        "1",
+        "I",
+        "1 + I"
+      ],
+      "determinant": "72",
+      "period_matrix": [
+        [
+          "5/2",
+          "9/2",
+          "-1/2"
+        ],
+        [
+          "6",
+          "0",
+          "4"
+        ],
+        [
+          "-9/2",
+          "-9/2",
+          "-7/2"
+        ]
+      ],
+      "rank": 3,
+      "stress_dimension": 2
+    }
+  ],
+  "status": "PASS"
+}
