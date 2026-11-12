@@ -1,0 +1,5 @@
+# bases 2 order 2 roots-in-window 6
+1 1 0
+3 -1 0
+W 1 1 0 2 1 0 1
+W 3 -1 0 2 3 0 1

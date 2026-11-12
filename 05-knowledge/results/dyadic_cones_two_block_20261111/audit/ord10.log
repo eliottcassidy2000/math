@@ -1,0 +1,1 @@
+./acensus ext 8 < ../out/classes_order8.txt > ord10.txt  432.32s user 6.82s system 92% cpu 7:54.27 total

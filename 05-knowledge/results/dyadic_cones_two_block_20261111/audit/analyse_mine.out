@@ -1,0 +1,20 @@
+types c<=255 |r|<=2045 (orders<=10): 243055
+packet union order9+10: 243055
+mine order 9+10 == packet order 9+10: True
+order-10 table identical: True 243055 243055
+cone gaps |r|<1000: [-891, -809, -793, 649, 825]
+max j cones in [-791,647]: 13
+box c<=31 |r|<=275: ([], 0, 12)
+box c<=31 |r|<=277: ([(31, 277)], 1, 12)
+box c<=15 |r|<=295: ([], 0, 13)
+box c<=15 |r|<=297: ([(3, 297)], 1, 13)
+box c<=63 |r|<=9: ([], 0, 11) box c<=63 |r|<=11 ([(35, 11)], 1, 11)
+(245,1) present: False
+box types present only at order 10: 365  with c>7: 281
+types in the two boxes without a witness line on file: 293 [(9, -291), (9, -279), (9, -275), (9, -261), (9, -229), (9, -209), (9, -187), (9, -131), (9, -87), (9, -41), (9, -19), (9, 37), (9, 119), (9, 127), (9, 155), (9, 181), (9, 183), (9, 207), (9, 209), (9, 219)]
+--- breakdown of types without witness line
+of these present at order<=9 in own census: 0 []
+by c: [(9, 27), (11, 18), (13, 29), (15, 23), (17, 22), (19, 28), (21, 14), (23, 30), (25, 24), (27, 22), (29, 27), (31, 29)]
+--- Theorem 3 offsets from own census (least j over orders <= 10)
+1+2^a: [(1, 5), (2, 5), (3, 4), (4, 7), (5, 6), (6, 8), (7, 10), (8, 10), (9, 10), (10, 11), (11, None)]
+2^a-1: [(1, 0), (2, 5), (3, 5), (4, 7), (5, 5), (6, 6), (7, 7), (8, 10), (9, 13), (10, 12), (11, None)]

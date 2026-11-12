@@ -1,0 +1,2 @@
+linear system vs literal count on random words (length <= 10): 300/300
+words of length <= 10: 323 values; odd numbers <= 400 missing: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299]

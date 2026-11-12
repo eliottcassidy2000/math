@@ -46,3 +46,15 @@ Falsifiers: one missing offset in the stated range. Each prediction is scored se
 
 Not predicted: 243055 of the 261888 possible types with odd `c <= 255` and odd `|r| < 2047` occur among the roots of
 order at most 10 (92.8 percent).
+
+## Erratum and additions after the audit (2026-11-11)
+
+- **Erratum (audit m7).** The sentence above, "(Q3) is the boldest: at order 9 the positive offsets below 1000 with
+  a cone root are fewer than 181", is wrong: they are exactly 181 (every positive cone offset at order 9 is below
+  1000; the largest is 597). The sentence is left as registered. The predictions and their scoring do not depend
+  on it.
+- The audit checked that the registration commit (`18571fc3da`) precedes the output commit (`aaf352fa43`) and that
+  the prediction text is unchanged between them, and confirmed the four outcomes with its own census.
+- Witnesses for (Q4) and for the wider boxes: the types with `c = 9, ..., 31` that occur only at order 10 had no
+  witness on file at the pre-audit checkpoint (audit M4). `out/types_c9_to_c31_roots_order10.txt` now holds them
+  (3,598 witnesses, 10,794 literal counts, no failure: `out/verify_types_order10_c9_to_c31.txt`).

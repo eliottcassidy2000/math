@@ -1,0 +1,22 @@
+types in the table: 243055
+odd N in [3, 4194304]: 2097151 ; of the form c 2^e + r with e > j(c, r): 991275 ; not of this form: 1105876
+first numbers not of this form: [7, 21, 266981, 283813, 285539, 285811, 287703, 302219, 303775, 307599, 318729, 339883]
+  [2^4, 2^5): 8 odd numbers, 1 not covered
+  [2^5, 2^6): 16 odd numbers, 0 not covered
+  [2^6, 2^7): 32 odd numbers, 0 not covered
+  [2^7, 2^8): 64 odd numbers, 0 not covered
+  [2^8, 2^9): 128 odd numbers, 0 not covered
+  [2^9, 2^10): 256 odd numbers, 0 not covered
+  [2^10, 2^11): 512 odd numbers, 0 not covered
+  [2^11, 2^12): 1024 odd numbers, 0 not covered
+  [2^12, 2^13): 2048 odd numbers, 0 not covered
+  [2^13, 2^14): 4096 odd numbers, 0 not covered
+  [2^14, 2^15): 8192 odd numbers, 0 not covered
+  [2^15, 2^16): 16384 odd numbers, 0 not covered
+  [2^16, 2^17): 32768 odd numbers, 0 not covered
+  [2^17, 2^18): 65536 odd numbers, 0 not covered
+  [2^18, 2^19): 131072 odd numbers, 31 not covered
+  [2^19, 2^20): 262144 odd numbers, 19089 not covered
+  [2^20, 2^21): 524288 odd numbers, 281233 not covered
+  [2^21, 2^22): 1048576 odd numbers, 805521 not covered
+1 is covered: False (a transitive tournament is no L o 0^t with a non-empty out-set)
