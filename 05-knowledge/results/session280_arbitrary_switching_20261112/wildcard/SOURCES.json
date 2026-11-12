@@ -1,0 +1,28 @@
+{
+  "seed": 2807,
+  "universe": "root-level 05-knowledge/results/*.md in filesystem iteration order at inherited main149bbef; explicit selected paths preserved below",
+  "selected": [
+    "05-knowledge/results/two_grids_ring_or_ideal_class_13_37_20261027.md",
+    "05-knowledge/results/planar_jc48_sep08_two_cusps_audit.md",
+    "05-knowledge/results/lrc14_j6_paircap_exception_h4_link_child_census_codex_20260729.md",
+    "05-knowledge/results/collatz_procgen_20260922_foundry.md",
+    "05-knowledge/results/collatz_mod6_20260922_paley_fano_octonion_design.md",
+    "05-knowledge/results/third_20260906_grid_refined_audit.md",
+    "05-knowledge/results/planar_jc48_sep08_four_two_one_one.md",
+    "05-knowledge/results/third_20260906_smith.md",
+    "05-knowledge/results/eternal_colours_audit_K2_20261108.md",
+    "05-knowledge/results/eleven_squares_routing_bridges_20261007.md",
+    "05-knowledge/results/finite_seed_bootstrap_boundary_20261005.md",
+    "05-knowledge/results/long_frontier2_sep06_stability_audit.md",
+    "05-knowledge/results/duck_primes_20260925.md",
+    "05-knowledge/results/continuing12_20260908_pair_degree.md",
+    "05-knowledge/results/square_sum_symmetric_elliptic_contact_pencil_20261019.md",
+    "05-knowledge/results/mixed_triangle_refinement_20261004.md"
+  ],
+  "read_for_transfer": [
+    "finite_seed_bootstrap_boundary_20261005.md",
+    "third_20260906_smith.md",
+    "collatz_procgen_20260922_foundry.md",
+    "two_grids_ring_or_ideal_class_13_37_20261027.md"
+  ]
+}

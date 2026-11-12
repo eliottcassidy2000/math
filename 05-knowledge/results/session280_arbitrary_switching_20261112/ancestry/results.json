@@ -1,0 +1,15 @@
+{
+  "seed": [
+    3,
+    3,
+    1
+  ],
+  "active_words_tested": 511,
+  "thin_step_checks": 3577,
+  "literal_cases": 6,
+  "all_7_letter_three_block_schedules": 343,
+  "long_unknown_schedules": 120,
+  "max_tested_count_bits": 1442,
+  "broad_cone_collision_found": null,
+  "scope": "All-order thin-strip hidden-itinerary theorem; finite controls only. No scalar coverage."
+}

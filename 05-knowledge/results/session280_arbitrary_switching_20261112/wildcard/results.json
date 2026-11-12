@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "smith_products": 12000,
+  "sharp_smith_depths": 40,
+  "literal_root_packets": 210,
+  "literal_equal_order_probes": 420,
+  "active_word_lengths": [
+    2,
+    8
+  ],
+  "active_words": 127,
+  "three_count_pairs": 16129,
+  "random_schedules": 120,
+  "blocks_per_schedule": 100,
+  "recurrence_instances": 11760,
+  "largest_final_count_bits": 835,
+  "hostile": [
+    {
+      "words": [
+        "100",
+        "0",
+        "110"
+      ],
+      "packet": [
+        145,
+        225,
+        15
+      ],
+      "counts": [
+        145,
+        1095,
+        7145
+      ]
+    },
+    {
+      "words": [
+        "100",
+        "1",
+        "110"
+      ],
+      "packet": [
+        145,
+        223,
+        9
+      ],
+      "counts": [
+        145,
+        1095,
+        7121
+      ]
+    }
+  ],
+  "formal_forbidden_packet": [
+    7,
+    7,
+    1
+  ],
+  "formal_probe_counts": [
+    83,
+    69
+  ],
+  "scope": "Exact identities prove all-word statements; finite tests do not prove Chan-Pak coverage."
+}

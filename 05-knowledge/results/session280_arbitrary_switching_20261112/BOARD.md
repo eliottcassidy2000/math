@@ -28,3 +28,11 @@ none is an all-odd selector. Retain absolute target, root packet, word and seed.
 Proofs and structural experiments, failed-implication anatomy, independent
 review, and a synthesis. Finite tests will not be promoted to all-order coverage.
 Chan–Pak remains OPEN unless an actual complete construction is supplied.
+
+## Checkpoint 2: candidates under independent review
+
+The ancestry, wildcard and coverage packets now contain proof candidates and
+reproducible controls. Independent review is underway; this checkpoint is not
+the final audited synthesis. New branches: a hidden-itinerary dyadic decoder,
+a three-physical-observation chart, a common exterior carry lattice, and a
+capacity phase transition. Switching and core-repair lanes remain in progress.
