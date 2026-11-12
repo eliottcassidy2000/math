@@ -1,0 +1,14 @@
+S94 pre-registered Q1, Q2 (PREREGISTRATION.md, pushed in commit 01a126ed29 before these runs).
+Program: census_twoapex_bitmap.py (36-state transfer; reproduces N_12 = 230521, N_14 = 2327675, N_15 = 7059819 of the
+S93 twoapex lane).  Outputs: census_twoapex_L17.out, census_twoapex_L18.out.
+
+Q1  REFUTED.  N_17 = 73,505,585 (N_17 / 3^18 = 0.1897); registered interval [2^26, 72,000,000].
+Q2  REFUTED.  N_18 = 226,079,703 (N_18 / 3^19 = 0.1945); registered interval [192,000,000, 221,000,000].
+    The clause "every odd N < 2^27 except 7 and 21 is attained with length at most 18" is true.
+
+Both first misses are LARGER than predicted: the family covers more than the extrapolation of the ratios
+0.1446, 0.1623, 0.1622, 0.1640, 0.1716 (L = 12..16) suggested; the ratio is still rising (0.1897, 0.1945).
+
+FINITE-EXACT consequence: every odd N < 226,079,703 other than 7 and 21 is the number of Hamiltonian paths of a
+two-apex tournament with spine length at most 18 (extends the bound 2^26 of the S93 lane; 6,126 odd N of
+[226,079,703, 2^28) are not attained at length 18).
