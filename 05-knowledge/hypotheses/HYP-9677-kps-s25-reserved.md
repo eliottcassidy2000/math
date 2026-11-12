@@ -1,5 +1,5 @@
 ---
-id: HYP-9675
+id: HYP-9677
 title: "RESERVED by kind-pasteur-2026-11-11-S25 (UNPROVED EMPTY STUB; Chan-Pak: one-apex chain semigroup)"
 status: RESERVED / UNPROVED EMPTY STUB
 session: kind-pasteur-2026-11-11-S25
