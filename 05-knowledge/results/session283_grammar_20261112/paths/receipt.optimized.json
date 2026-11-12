@@ -1,0 +1,234 @@
+{
+  "H9_attachment_menus": [
+    {
+      "15": [
+        8,
+        29
+      ],
+      "17": [
+        16,
+        24,
+        28,
+        30
+      ],
+      "19": [
+        12,
+        25
+      ],
+      "23": [
+        1,
+        4,
+        14,
+        15,
+        17,
+        27
+      ],
+      "25": [
+        9,
+        13
+      ],
+      "27": [
+        20,
+        26
+      ],
+      "29": [
+        10,
+        21
+      ],
+      "33": [
+        2,
+        5,
+        11,
+        23
+      ],
+      "37": [
+        6,
+        18,
+        19,
+        22
+      ],
+      "41": [
+        3,
+        7
+      ],
+      "9": [
+        0,
+        31
+      ]
+    },
+    {
+      "15": [
+        16,
+        24,
+        25,
+        29
+      ],
+      "17": [
+        8,
+        27
+      ],
+      "19": [
+        1,
+        17,
+        28,
+        30
+      ],
+      "23": [
+        9,
+        26
+      ],
+      "29": [
+        2,
+        10,
+        11,
+        12,
+        15,
+        19,
+        20,
+        21
+      ],
+      "31": [
+        4,
+        13,
+        18,
+        23
+      ],
+      "33": [
+        3,
+        14
+      ],
+      "37": [
+        5,
+        22
+      ],
+      "43": [
+        6,
+        7
+      ],
+      "9": [
+        0,
+        31
+      ]
+    }
+  ],
+  "H9_nonisomorphism_signatures": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "H9_profile": [
+    9,
+    66,
+    186,
+    240,
+    120
+  ],
+  "digit_box_caps": {
+    "1": {
+      "first_sufficient_cap": 1,
+      "universal_safe_cap": 8
+    },
+    "10": {
+      "first_sufficient_cap": 91,
+      "universal_safe_cap": 410
+    },
+    "16": {
+      "first_sufficient_cap": 276,
+      "universal_safe_cap": 1120
+    },
+    "2": {
+      "first_sufficient_cap": 3,
+      "universal_safe_cap": 20
+    },
+    "20": {
+      "first_sufficient_cap": 465,
+      "universal_safe_cap": 1820
+    },
+    "3": {
+      "first_sufficient_cap": 6,
+      "universal_safe_cap": 39
+    },
+    "4": {
+      "first_sufficient_cap": 11,
+      "universal_safe_cap": 68
+    },
+    "5": {
+      "first_sufficient_cap": 18,
+      "universal_safe_cap": 100
+    },
+    "6": {
+      "first_sufficient_cap": 27,
+      "universal_safe_cap": 144
+    },
+    "8": {
+      "first_sufficient_cap": 54,
+      "universal_safe_cap": 256
+    }
+  },
+  "formal_digit_roundtrips": 80,
+  "independent_permutation_cut_profiles": 1099,
+  "labelled_profiles": 1099,
+  "literal_cap_counts": 30,
+  "physical_code_roundtrips": 1099,
+  "safe_weight_checks_orders": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "source_sha256": "4a1b3d4505f16fc450c9881f78bbbc72a9f89b6b83c23b68ba2428ed66f88f01",
+  "status": "finite controls pass; general theorem proved separately",
+  "universe": {
+    "1": {
+      "labelled_tournaments": 1,
+      "max_encoded_bits": 16,
+      "profile_classes": 1,
+      "safe_cap_m": 8
+    },
+    "2": {
+      "labelled_tournaments": 2,
+      "max_encoded_bits": 65,
+      "profile_classes": 1,
+      "safe_cap_m": 20
+    },
+    "3": {
+      "labelled_tournaments": 8,
+      "max_encoded_bits": 159,
+      "profile_classes": 2,
+      "safe_cap_m": 39
+    },
+    "4": {
+      "labelled_tournaments": 64,
+      "max_encoded_bits": 321,
+      "profile_classes": 3,
+      "safe_cap_m": 68
+    },
+    "5": {
+      "labelled_tournaments": 1024,
+      "max_encoded_bits": 524,
+      "profile_classes": 8,
+      "safe_cap_m": 100
+    }
+  }
+}

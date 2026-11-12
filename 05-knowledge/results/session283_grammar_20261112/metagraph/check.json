@@ -1,0 +1,17 @@
+{
+  "controls": {
+    "full_walk_distributions": 360,
+    "one_step_tournaments": 1096,
+    "poissonized_edge_laws": 72
+  },
+  "scope": "labelled random arc reversals; no isoclass or path-count coverage claim",
+  "stationary_expected_rank": {
+    "10": "2515/256",
+    "100": "15845632502852867518708790064725/158456325028528675187087900672",
+    "20": "2621345/131072",
+    "3": "3/2",
+    "4": "5/2",
+    "5": "15/4"
+  },
+  "status": "PASS"
+}

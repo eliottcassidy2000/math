@@ -1,0 +1,116 @@
+{
+  "checks": 23116,
+  "histogram_non_lumpability": {
+    "first": {
+      "jump_histogram": {
+        "-2": 3,
+        "0": 7
+      },
+      "rows": [
+        16,
+        9,
+        3,
+        5,
+        14
+      ]
+    },
+    "n": 5,
+    "pair_histogram": {
+      "1": 3,
+      "2": 6,
+      "3": 1
+    },
+    "second": {
+      "jump_histogram": {
+        "-2": 2,
+        "-1": 2,
+        "0": 6
+      },
+      "rows": [
+        18,
+        8,
+        3,
+        5,
+        14
+      ]
+    }
+  },
+  "labelled_universes": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024
+  },
+  "large_weight_example": {
+    "core_rows": [
+      2,
+      4,
+      1
+    ],
+    "jump_histogram": {
+      "0": 3000000,
+      "2": 15,
+      "3": 17999976,
+      "4": 4499986500012
+    },
+    "weights": [
+      1000000,
+      1000001,
+      1000002
+    ]
+  },
+  "non_lumpability": {
+    "core_rank": 4,
+    "first": {
+      "e1": 6,
+      "jump_histogram": {
+        "-3": 3,
+        "0": 4,
+        "1": 3
+      },
+      "rows": [
+        4,
+        1,
+        2,
+        7,
+        15
+      ]
+    },
+    "n": 5,
+    "second": {
+      "e1": 4,
+      "jump_histogram": {
+        "-3": 1,
+        "-1": 2,
+        "0": 4,
+        "1": 3
+      },
+      "rows": [
+        8,
+        1,
+        3,
+        6,
+        15
+      ]
+    }
+  },
+  "rank_jump_sharp": {
+    "after": [
+      30,
+      20,
+      24,
+      18,
+      0
+    ],
+    "before": [
+      30,
+      28,
+      24,
+      16,
+      0
+    ]
+  },
+  "status": "FINITE-EXACT controls; proofs in PROOF.md",
+  "weighted_cases": 36
+}
