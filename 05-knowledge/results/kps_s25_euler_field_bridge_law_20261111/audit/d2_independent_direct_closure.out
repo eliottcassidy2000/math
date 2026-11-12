@@ -1,0 +1,42 @@
+independent closure of direct joins below 2^8, mode literal (every state with A <= X stored and expanded): 8815 states expanded, 8815 stored; odd numbers missed: 15  [0.1 s]
+   misses: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251]
+author's closure below 2^8: 1180 live states, 15 misses; full lists identical: True
+independent closure of direct joins below 2^8, mode numpy (expanded iff A + 2e <= X): 742 states expanded, 742 stored; odd numbers missed: 15  [0.0 s]
+   misses: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251]
+author's closure below 2^8: 1180 live states, 15 misses; full lists identical: True
+independent closure of direct joins below 2^11, mode numpy (expanded iff A + 2e <= X): 15957 states expanded, 15957 stored; odd numbers missed: 28  [1.8 s]
+   misses: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861]
+author's closure below 2^11: 25378 live states, 28 misses; full lists identical: True
+stored runs/direct_closure_11.txt: count 28, list identical to mine: True
+independent closure of direct joins below 2^11, mode literal (every state with A <= X stored and expanded): 242785 states expanded, 242785 stored; odd numbers missed: 28  [13.7 s]
+   misses: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861]
+author's closure below 2^11: 25378 live states, 28 misses; full lists identical: True
+stored runs/direct_closure_11.txt: count 28, list identical to mine: True
+
+real	0m14.882s
+user	0m0.015s
+sys	0m0.031s
+independent closure of direct joins below 2^11, mode numba (expanded iff A + 2e <= X; words sorted by O, exact cut): 15957 states expanded, 15957 stored; odd numbers missed: 28  [1.4 s]
+   misses: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861]
+author's closure below 2^11: 25378 live states, 28 misses; full lists identical: True
+stored runs/direct_closure_11.txt: count 28, list identical to mine: True
+
+real	0m1.921s
+user	0m0.000s
+sys	0m0.062s
+independent closure of direct joins below 2^13, mode numba (expanded iff A + 2e <= X; words sorted by O, exact cut): 124593 states expanded, 124593 stored; odd numbers missed: 29  [1.7 s]
+   misses: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861, 2647]
+author's closure below 2^13: 195244 live states, 29 misses; full lists identical: True
+stored runs/direct_closure_13.txt: count 29, list identical to mine: True
+
+real	0m2.277s
+user	0m0.015s
+sys	0m0.077s
+independent closure of direct joins below 2^16, mode numba (expanded iff A + 2e <= X; words sorted by O, exact cut): 2676377 states expanded, 2676377 stored; odd numbers missed: 29  [7.0 s]
+   misses: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861, 2647]
+author's closure below 2^16: 4225713 live states, 29 misses; full lists identical: True
+stored runs/direct_closure_16.txt: count 29, list identical to mine: True
+
+real	0m8.643s
+user	0m0.000s
+sys	0m0.031s

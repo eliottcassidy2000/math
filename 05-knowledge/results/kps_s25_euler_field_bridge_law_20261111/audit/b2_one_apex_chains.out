@@ -1,0 +1,9 @@
+K1  one-apex data on all words of length <= 8: 511 words, 0 failures
+K2  Corollary B2 on 400 random chains (depth 2..4, words <= 4 letters, chains 1..3, <= 17 vertices): H mismatches 0, W+ mismatches 0
+K3  law D1 on 600 random chains (depth 2..4, words <= 4 letters, chain lengths 0..2, <= 16 vertices), 1105 stages, state (A, o, e) compared at every stage: 0 failures
+    exhaustive: depth 2 and 3, words of length <= 2, chain lengths 0, 1, 2: 3234 cases, 0 failures
+K4  M(p2, i2) M(2 p1 + 1, i1) = M(p2, i2 + 1) M(p1, i1): 9600 checked, 0 failures (the same tournament has several tuples)
+
+real	0m12.044s
+user	0m0.030s
+sys	0m0.000s

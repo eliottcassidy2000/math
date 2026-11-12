@@ -1,0 +1,41 @@
+S1  H-spectra of all labeled tournaments: n=1: [1]; n=2: [1]; n=3: [1, 3]; n=4: [1, 3, 5]; n=5: [1, 3, 5, 9, 11, 13, 15]
+    n=6: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+    7 or 21 attained with at most 6 vertices: False
+S2  bank: 42 distinct rooted states (A, o, e) of rooted tournaments with at most 5 vertices
+S3  banks of rooted tournaments with at most 6 vertices: 254 left states (H, o, e), 254 right states (H, O-, E-)
+
+H =    7 : no witness found in this search (expected: 7 and 21 are not path counts, THM-1370)
+H =   13 : plain tournament of order 5 ; n = 5 ; rows = [18, 8, 3, 5, 14] ; literal recount = 13
+H =   21 : no witness found in this search (expected: 7 and 21 are not path counts, THM-1370)
+H =   41 : plain tournament of order 6 ; n = 6 ; rows = [48, 33, 3, 7, 14, 28] ; literal recount = 41
+H =   43 : plain tournament of order 6 ; n = 6 ; rows = [48, 41, 3, 5, 14, 28] ; literal recount = 43
+H =   55 : join of a rooted 5-vertex tournament (root 1) with the one-apex block 100 ; n = 9 ; rows = [498, 448, 483, 487, 494, 66, 384, 288, 32] ; literal recount = 55
+H =   67 : join X => Y of rooted tournaments of orders 1 and 6 (roots 0 and 0, arc between the roots reversed) ; n = 7 ; rows = [124, 73, 34, 4, 14, 26, 60] ; literal recount = 67
+H =   77 : join of a rooted 4-vertex tournament (root 2) with the one-apex block 000 ; n = 8 ; rows = [248, 241, 227, 246, 4, 208, 144, 16] ; literal recount = 77
+H =   83 : join X => Y of rooted tournaments of orders 1 and 6 (roots 0 and 3, arc between the roots reversed) ; n = 7 ; rows = [110, 96, 34, 6, 15, 24, 60] ; literal recount = 83
+H =  163 : join X => Y of rooted tournaments of orders 3 and 6 (roots 2 and 0, arc between the roots reversed) ; n = 9 ; rows = [504, 505, 499, 340, 128, 24, 48, 104, 240] ; literal recount = 163
+H =  173 : join X => Y of rooted tournaments of orders 2 and 6 (roots 1 and 1, arc between the roots reversed) ; n = 8 ; rows = [252, 245, 224, 6, 12, 24, 56, 120] ; literal recount = 173
+H =  231 : join of a rooted 4-vertex tournament (root 2) with the one-apex block 00010 ; n = 10 ; rows = [1016, 1009, 995, 1014, 260, 976, 912, 784, 512, 16] ; literal recount = 231
+H =  233 : join X => Y of rooted tournaments of orders 3 and 6 (roots 2 and 3, arc between the roots reversed) ; n = 9 ; rows = [504, 505, 443, 400, 64, 24, 44, 112, 240] ; literal recount = 233
+H =  247 : join X => Y of rooted tournaments of orders 3 and 6 (roots 2 and 2, arc between the roots reversed) ; n = 9 ; rows = [504, 505, 475, 336, 128, 28, 48, 104, 240] ; literal recount = 247
+H =  251 : join X => Y of rooted tournaments of orders 3 and 6 (roots 2 and 2, arc between the roots reversed) ; n = 9 ; rows = [504, 505, 475, 288, 8, 20, 56, 120, 240] ; literal recount = 251
+H =  277 : join of a rooted 4-vertex tournament (root 2) with the one-apex block 00100 ; n = 10 ; rows = [1016, 1009, 995, 1014, 132, 976, 912, 768, 528, 16] ; literal recount = 277
+H =  299 : join X => Y of rooted tournaments of orders 3 and 6 (roots 2 and 0, arc between the roots reversed) ; n = 9 ; rows = [504, 505, 499, 388, 328, 24, 40, 112, 224] ; literal recount = 299
+H =  421 : join X => Y of rooted tournaments of orders 4 and 6 (roots 3 and 4, arc between the roots reversed) ; n = 10 ; rows = [1008, 1009, 1011, 759, 800, 256, 48, 112, 200, 480] ; literal recount = 421
+H =  449 : join of a rooted 4-vertex tournament (root 2) with the one-apex block 101110 ; n = 11 ; rows = [2040, 2033, 2019, 2038, 932, 1984, 1936, 1792, 1536, 1024, 16] ; literal recount = 449
+H =  503 : join of a rooted 5-vertex tournament (root 4) with the one-apex block 1000 ; n = 10 ; rows = [1016, 993, 995, 998, 974, 80, 896, 800, 544, 32] ; literal recount = 503
+H =  533 : join of a rooted 5-vertex tournament (root 4) with the one-apex block 10110 ; n = 11 ; rows = [2036, 2017, 2018, 2023, 1998, 848, 1920, 1824, 1536, 1024, 32] ; literal recount = 533
+H =  569 : join of a rooted 5-vertex tournament (root 0) with the one-apex block 00100 ; n = 11 ; rows = [2002, 2024, 2019, 2021, 2030, 257, 1952, 1824, 1536, 1056, 32] ; literal recount = 569
+H =  583 : join of a rooted 5-vertex tournament (root 1) with the one-apex block 10110 ; n = 11 ; rows = [2032, 1993, 2019, 2021, 2030, 834, 1920, 1824, 1536, 1024, 32] ; literal recount = 583
+H =  637 : join of a rooted 4-vertex tournament (root 2) with the one-apex block 011000 ; n = 11 ; rows = [2040, 2033, 2019, 2038, 196, 2000, 1920, 1792, 1552, 1040, 16] ; literal recount = 637
+H =  821 : join X => Y of rooted tournaments of orders 5 and 6 (roots 4 and 3, arc between the roots reversed) ; n = 11 ; rows = [2016, 2017, 2019, 2023, 1775, 1024, 544, 96, 240, 416, 960] ; literal recount = 821
+H = 1067 : join of a rooted 4-vertex tournament (root 2) with the one-apex block 0010100 ; n = 12 ; rows = [4088, 4081, 4067, 4086, 644, 4048, 3984, 3840, 3600, 3072, 2064, 16] ; literal recount = 1067
+H = 1339 : join of a rooted 5-vertex tournament (root 4) with the one-apex block 011010 ; n = 12 ; rows = [4082, 4072, 4067, 4069, 4046, 1424, 4000, 3840, 3584, 3104, 2048, 32] ; literal recount = 1339
+H = 1861 : join of a rooted 5-vertex tournament (root 4) with the one-apex block 010000 ; n = 12 ; rows = [4088, 4065, 4067, 4070, 4046, 144, 4000, 3840, 3616, 3104, 2080, 32] ; literal recount = 1861
+H = 2647 : join X => Y of rooted tournaments of orders 6 and 6 (roots 5 and 2, arc between the roots reversed) ; n = 12 ; rows = [4070, 4032, 4034, 4039, 4047, 3806, 2304, 1088, 160, 448, 832, 1920] ; literal recount = 2647
+
+witnesses found and recounted: 27 of 27 targets other than 7 and 21
+
+real	0m7.283s
+user	0m0.031s
+sys	0m0.000s

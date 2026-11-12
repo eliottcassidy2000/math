@@ -1,0 +1,39 @@
+W = x^2 y + x + x^2 + x^3 (l = 1)
+   F1 generators killed: 140 checked, 0 failures; lambda(1) = -1, lambda(x^l) = 1
+   F2 lambda(W^m), m = 0..9: ['-1', '0', '0', '0', '0', '0', '0', '0', '0', '0'] ; zero for m >= l and lambda(x^l W^n) = n!: True
+   F3 x^k y^j - lambda(x^k y^j) x^l in M_W with an explicit field, k <= l + 2, j <= 2: 12 checked, 0 failures
+   F5 lambda(x^k W^m) = [x^(l-k)] m! e^(-r) e_m(r), k <= l + 2, m <= 6: 28 checked, 0 failures
+   F4 W^l                in M_W, explicit vector field over Q: True
+   F4 x^l W^2 - 2 x^l    in M_W, explicit vector field over Q: True
+W = x^3 y + x^2 (l = 2)
+   F1 generators killed: 140 checked, 0 failures; lambda(1) = -1, lambda(x^l) = 1
+   F2 lambda(W^m), m = 0..9: ['-1', '0', '0', '0', '0', '0', '0', '0', '0', '0'] ; zero for m >= l and lambda(x^l W^n) = n!: True
+   F3 x^k y^j - lambda(x^k y^j) x^l in M_W with an explicit field, k <= l + 2, j <= 2: 15 checked, 0 failures
+   F5 lambda(x^k W^m) = [x^(l-k)] m! e^(-r) e_m(r), k <= l + 2, m <= 6: 35 checked, 0 failures
+   F4 W^l                in M_W, explicit vector field over Q: True
+   F4 x^l W^2 - 2 x^l    in M_W, explicit vector field over Q: True
+W = x^3 y + x + x^2  [= x (x^2 y + x + 1)] (l = 2)
+   F1 generators killed: 140 checked, 0 failures; lambda(1) = -1/2, lambda(x^l) = 1
+   F2 lambda(W^m), m = 0..9: ['-1/2', '-1/2', '0', '0', '0', '0', '0', '0', '0', '0'] ; zero for m >= l and lambda(x^l W^n) = n!: True
+   F3 x^k y^j - lambda(x^k y^j) x^l in M_W with an explicit field, k <= l + 2, j <= 2: 15 checked, 0 failures
+   F5 lambda(x^k W^m) = [x^(l-k)] m! e^(-r) e_m(r), k <= l + 2, m <= 6: 35 checked, 0 failures
+   F4 W^l                in M_W, explicit vector field over Q: True
+   F4 x^l W^2 - 2 x^l    in M_W, explicit vector field over Q: True
+W = x^4 y + 2 x - x^4 (l = 3)
+   F1 generators killed: 140 checked, 0 failures; lambda(1) = -4/3, lambda(x^l) = 1
+   F2 lambda(W^m), m = 0..9: ['-4/3', '8/3', '-8/3', '0', '0', '0', '0', '0', '0', '0'] ; zero for m >= l and lambda(x^l W^n) = n!: True
+   F3 x^k y^j - lambda(x^k y^j) x^l in M_W with an explicit field, k <= l + 2, j <= 2: 18 checked, 0 failures
+   F5 lambda(x^k W^m) = [x^(l-k)] m! e^(-r) e_m(r), k <= l + 2, m <= 6: 42 checked, 0 failures
+   F4 W^l                in M_W, explicit vector field over Q: True
+   F4 x^l W^2 - 2 x^l    in M_W, explicit vector field over Q: True
+W = x^3 y - 3 x + x^5 (l = 2)
+   F1 generators killed: 140 checked, 0 failures; lambda(1) = 9/2, lambda(x^l) = 1
+   F2 lambda(W^m), m = 0..9: ['9/2', '-9/2', '0', '0', '0', '0', '0', '0', '0', '0'] ; zero for m >= l and lambda(x^l W^n) = n!: True
+   F3 x^k y^j - lambda(x^k y^j) x^l in M_W with an explicit field, k <= l + 2, j <= 2: 15 checked, 0 failures
+   F5 lambda(x^k W^m) = [x^(l-k)] m! e^(-r) e_m(r), k <= l + 2, m <= 6: 35 checked, 0 failures
+   F4 W^l                in M_W, explicit vector field over Q: True
+   F4 x^l W^2 - 2 x^l    in M_W, explicit vector field over Q: True
+
+real	0m6.225s
+user	0m0.046s
+sys	0m0.031s

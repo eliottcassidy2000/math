@@ -1,0 +1,8 @@
+R1  standard pair, symbolic centre: 64 identities checked, 0 failures
+    the functional kills (d_u - V) h and (d_v - U) h on 16 monomials: 0 failures
+R2  double cover, centre (4, 3): lambda_+- kill (d_u - V) h and (d_v - U) h: 60 checked, 0 failures
+    radial identity [(UV)^m h] = [(E+1)...(E+m) h] (m = 1, 2) and rotation identity: 126 checked, 0 failures
+    lambda_+-(1) = 1/2 1/2 ; lambda_+-(UV) = 1/2 1/2 ; lambda_+-((UV)^2) = 1 1
+R3  resultants of consecutive truncated exponentials e_m, e_(m+1), m = 1..8: [1/2, 1/36, 1/13824, 1/207360000, 1/193491763200000, 1/16390160963076096000000, 1/173238200573946282828103680000000, 1/300679807141675805997423113304381849600000000] -> all nonzero: True
+    (e_(m+1) - e_m = t^(m+1)/(m+1)! and e_m(0) = 1: a common root is impossible.)
+    sum_k C(m,k) (-c)^(m-k) k! = m! e_m(-c), m = 1..7: True

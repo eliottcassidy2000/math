@@ -1,0 +1,11 @@
+rooted labeled tournaments with at most 4 vertices: 285
+J1  all pairs, i = 1: 81225 cases; H formula failures: 0; W+ formula failures: 0
+J2  random pairs, i = 2: 3000 cases; H formula failures: 0; W+ formula failures: 0
+J2  random pairs, i = 3: 3000 cases; H formula failures: 0; W+ formula failures: 0
+J3  random pairs, orders 3..5, i = 1..3: 600 cases; H formula failures: 0; W+ formula failures: 0
+J4  W+_X(u) >= H(X) and W-_X(u) >= H(X) on all labeled rooted tournaments with at most 6 vertices: 202013 cases, 0 violations; W+ = H in 15959 cases (9454 of them with a root that is not a sink, e.g. any vertex of the 3-cycle)
+J5  i = 0 (direct join) with the same formula: 14400 cases, 5183 failures of the H formula (expected: many; the parity split is needed)
+
+real	0m28.439s
+user	0m0.000s
+sys	0m0.062s

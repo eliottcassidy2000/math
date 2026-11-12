@@ -1,0 +1,7 @@
+word-level, below 2^18: 106306 level-1 states, 311999 level-2 states, 347536 level-3 states
+depth <= 2: 16430 odd numbers missed (7250 in the top dyadic block); depth <= 3: 9190 missed (3446 in the top block)
+author's depth_cover at the same bound: depth <= 2: 16430 missed; depth <= 3: 9190 missed; lists identical to the word-level ones: True, True
+
+real	0m21.101s
+user	0m0.000s
+sys	0m0.015s

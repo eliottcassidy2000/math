@@ -1,0 +1,12 @@
+Z1  O/Z/J words of length <= 9 (at most 12 vertices): 29524 words, (D, E, U) = (H, o - e, o + e) of the literal apex-path tournament: 0 failures
+Z2  O/Z/J words of length <= 12: 797161 words, state (D, U, E) = M_(w_k)...M_(w_0)(1,0,0)^T: 0 failures
+Z3  O/Z/J closure below 2^11: 18274 states, odd misses: 28 [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861]
+    identical to the misses of the direct joins (runs/direct_closure_11.txt): True
+    Session197's 29 values (C1_COMPLETE.md; THM-4884 (2b); HYP-9494 (D)) below 2^11: identical: True
+Z4  OJ = JZ as maps on (D, E, U, d) (1440 integer states): 0 failures
+    O/Z/J words with every J preceded by O, closure below 2^12: 9975 states, odd misses: 414; identical to the misses of the pure chain semigroup (b3_misses_closure_12.txt): True
+Z5  O/Z/J words of length <= 8 (3 to 10 vertices): 9840 tournaments, 6560 with a Hamiltonian cycle (strong), 0 with more than one Hamiltonian cycle
+
+real	0m55.228s
+user	0m0.046s
+sys	0m0.047s

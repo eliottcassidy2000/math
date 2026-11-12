@@ -1,0 +1,10 @@
+self-test: closed formula for g against the subset DP (all words of length <= 8): 0 failures; against the recursion (length <= 13): 0 failures
+independent closure below 2^12 (no cut; 16383 words of length <= 13 as blocks): 4004 states expanded, 373550 transitions with A' <= X; odd numbers missed: 414
+   first 30 misses: [7, 13, 21, 29, 35, 41, 43, 49, 55, 59, 67, 71, 77, 83, 89, 101, 105, 109, 113, 119, 131, 133, 137, 147, 149, 161, 163, 173, 175, 177]
+   last 10 misses: [3961, 3997, 4001, 4025, 4027, 4039, 4041, 4061, 4087, 4091]
+author's closure below 2^12: 5382 live states, 414 misses; full lists identical: True
+stored runs/closure_12.txt: count 414 (equal: True); its first 80 misses equal mine: True
+
+real	0m2.321s
+user	0m0.000s
+sys	0m0.046s

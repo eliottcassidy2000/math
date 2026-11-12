@@ -1,0 +1,19 @@
+converse symmetry on even p < 2^12 (g(R(p)) = g(p), R(R(p)) = p, R(p) even of the same length): 0 failures
+depth 1: one-apex values <= 2^18: 65518 (author's table p <= X: 49190); values of g attained only for p in (X, 2X]: 16328, all in the top dyadic block: True
+author's depth-1 table (p <= X): depth <= 2 misses 16430 below 2^18, 7250 in the top block (0.1106); depth <= 3 misses 9190, 3446 in the top block (0.05258)
+    depth <= 3 misses below 2^14: 1225
+complete depth-1 table (p <= 2X): depth <= 2 misses 16430 below 2^18, 7250 in the top block (0.1106); depth <= 3 misses 9190, 3446 in the top block (0.05258)
+    depth <= 3 misses below 2^14: 1225
+one-apex values missing from the author's depth-1 table and not reached at depth 2: 0; not reached at depth 2 or 3: 0 []
+counts of representations with N <= 2^18:
+  depth 2: stripped presentations 671731; matrix tuples (last block stripped) 1352226; author's tuples 2659887
+  depth 3: stripped presentations 1199555; matrix tuples (last block stripped) 4406181; author's tuples 8206973
+  depth 1: stripped presentations (cores p in E with g(p) <= X): 181720
+  mean multiplicity per odd number, depth 2 + depth 3, stripped presentations              : 14.3   (depth 2 alone: 5.1)   threshold of C5: 40
+  mean multiplicity per odd number, depth 2 + depth 3, matrix tuples, last block stripped  : 43.9   (depth 2 alone: 10.3)   threshold of C5: 40
+  mean multiplicity per odd number, depth 2 + depth 3, author's tuples                     : 82.9   (depth 2 alone: 20.3)   threshold of C5: 40
+  stripped depth-2 chains by chain length c_1 = 1..12: [322704, 175567, 89694, 44025, 21127, 9970, 4671, 2160, 993, 456, 204, 92]
+
+real	0m3.349s
+user	0m0.062s
+sys	0m0.062s

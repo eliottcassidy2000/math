@@ -1,0 +1,16 @@
+words of length <= 0 (1 blocks), closure below 2^16: 18 states expanded; odd numbers missed: 32750; largest miss 65535; misses in [2^k, 2^(k+1)), k = 8..15: [127, 255, 511, 1022, 2047, 4095, 8191, 16383]  [1.2 s]
+words of length <= 1 (3 blocks), closure below 2^16: 23963 states expanded; odd numbers missed: 28170; largest miss 65535; misses in [2^k, 2^(k+1)), k = 8..15: [92, 187, 406, 854, 1747, 3473, 7003, 14323]  [0.4 s]
+words of length <= 2 (7 blocks), closure below 2^16: 222319 states expanded; odd numbers missed: 10078; largest miss 65515; misses in [2^k, 2^(k+1)), k = 8..15: [53, 105, 174, 347, 702, 1398, 2734, 4511]  [0.4 s]
+words of length <= 3 (15 blocks), closure below 2^16: 658253 states expanded; odd numbers missed: 1078; largest miss 65387; misses in [2^k, 2^(k+1)), k = 8..15: [29, 48, 58, 86, 119, 170, 257, 285]  [0.6 s]
+words of length <= 4 (31 blocks), closure below 2^16: 1199229 states expanded; odd numbers missed: 126; largest miss 63601; misses in [2^k, 2^(k+1)), k = 8..15: [12, 17, 20, 25, 15, 11, 5, 3]  [0.7 s]
+
+real	0m3.690s
+user	0m0.000s
+sys	0m0.031s
+words of length <= 3 (15 blocks), closure below 2^17: 1622853 states expanded; odd numbers missed: 1355; largest miss 130247; misses in [2^k, 2^(k+1)), k = 8..16: [29, 48, 58, 86, 119, 170, 257, 285, 277]  [1.5 s]
+words of length <= 4 (31 blocks), closure below 2^17: 3071170 states expanded; odd numbers missed: 127; largest miss 130247; misses in [2^k, 2^(k+1)), k = 8..16: [12, 17, 20, 25, 15, 11, 5, 3, 1]  [1.4 s]
+words of length <= 5 (63 blocks), closure below 2^17: 4400568 states expanded; odd numbers missed: 49; largest miss 10391; misses in [2^k, 2^(k+1)), k = 8..16: [9, 9, 8, 6, 1, 1, 0, 0, 0]  [1.8 s]
+
+real	0m5.140s
+user	0m0.016s
+sys	0m0.031s

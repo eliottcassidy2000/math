@@ -1,0 +1,10 @@
+L1  lambda kills (d/dx - W_x) x^k y^j and (d/dy - W_y) x^k y^j, l = 1..4, k < 14, j < 6: 672 generators, 0 failures
+L2  lambda(1) = (-1)^l/l!, lambda(x^l) = 1 for l = 1..8: True ; values of lambda(1): ['-1', '1/2', '-1/6', '1/24', '-1/120']
+L3  lambda(W h) = (k - l j + 1 - l) lambda(h) on monomials: 336 checked, 0 failures
+L4  l = 1: lambda(W^m), m = 1..8: ['0', '0', '0', '0', '0', '0', '0', '0'] ; equals (1-l)...(m-l) lambda(1): True ; lambda(x^l W^n) = n! for n = 1..8: True
+L4  l = 2: lambda(W^m), m = 1..8: ['-1/2', '0', '0', '0', '0', '0', '0', '0'] ; equals (1-l)...(m-l) lambda(1): True ; lambda(x^l W^n) = n! for n = 1..8: True
+L4  l = 3: lambda(W^m), m = 1..8: ['1/3', '-1/3', '0', '0', '0', '0', '0', '0'] ; equals (1-l)...(m-l) lambda(1): True ; lambda(x^l W^n) = n! for n = 1..8: True
+L4  l = 4: lambda(W^m), m = 1..8: ['-1/8', '1/4', '-1/4', '0', '0', '0', '0', '0'] ; equals (1-l)...(m-l) lambda(1): True ; lambda(x^l W^n) = n! for n = 1..8: True
+L5  lambda(x^k y^j) = Res_(x=0) j! x^(k-(l+1)(j+1)) e^(-x), l = 1..3, k < 9, j < 4: 108 checked, 0 failures
+    inner integral int_0^oo y^j e^(-t y) dy, j = 0..3: [1/t, t**(-2), 2/t**3, 6/t**4]
+L6  k/N! + 1/(N-1)! - (l+1)(j+1)/N! with N = (l+1)(j+1) - k simplifies to: 0

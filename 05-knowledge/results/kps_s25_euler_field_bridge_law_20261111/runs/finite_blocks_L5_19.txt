@@ -1,0 +1,1 @@
+L = 5 (63 blocks), below 2^19: 57008668 live states, 49 misses; misses in [2^k, 2^(k+1)), k = 8..18: 8:9 9:9 10:8 11:6 12:1 13:1 14:0 15:0 16:0 17:0 18:0; largest miss 10391
