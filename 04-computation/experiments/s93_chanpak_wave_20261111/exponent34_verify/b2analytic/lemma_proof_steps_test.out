@@ -1,0 +1,25 @@
+[generic |a| <= 2^40, L <= 2^11] instances = 6000 (h <= 128)   (9.4s)
+   max (V1) |S_h| / K-N Thm 2.7 bound (exact rho, exact f' difference): 0.107419   at a = -107123, ds = 0, L = 1129.5283, N = 565, h = 23
+   max (V2) |S_h| / (56 L lam^(1/2) + 8 lam^(-1/2) + 6): 0.043151   at a = 81, ds = 1, L = 1904.5385, N = 953, h = 36
+   max (E)  N D_N / Erdos-Turan bound (m = 1,2,4,...,128 and m = H): 0.392571   at a = 73996, ds = 0, L = 8.6063, N = 5, m = 16, H = 1
+   max (C)  N D_N / explicit chain bound (L >= |a|^(1/3) only): 0.009762   at a = -2201, ds = 1, L = 1820.4906, N = 910
+   (E at the draft's m = H, 5648 instances with H <= 128): max ratio 0.380637
+[regime |a|^(1/3) <= L <= |a|] instances = 6000 (h <= 128)   (12.5s)
+   max (V1) |S_h| / K-N Thm 2.7 bound (exact rho, exact f' difference): 0.106649   at a = 81847, ds = 0, L = 1105.6754, N = 553, h = 29
+   max (V2) |S_h| / (56 L lam^(1/2) + 8 lam^(-1/2) + 6): 0.043147   at a = 3107, ds = 1, L = 1983.7951, N = 992, h = 1
+   max (E)  N D_N / Erdos-Turan bound (m = 1,2,4,...,128 and m = H): 0.403407   at a = 402, ds = 0, L = 8.0378, N = 4, m = 16, H = 2
+   max (C)  N D_N / explicit chain bound (L >= |a|^(1/3) only): 0.009785   at a = 2545, ds = 1, L = 1938.2625, N = 969
+   (E at the draft's m = H, 5990 instances with H <= 128): max ratio 0.380522
+[small |a| < 50] instances = 6000 (h <= 128)   (14.8s)
+   max (V1) |S_h| / K-N Thm 2.7 bound (exact rho, exact f' difference): 0.103374   at a = 41, ds = 0, L = 55.3319, N = 27, h = 128
+   max (V2) |S_h| / (56 L lam^(1/2) + 8 lam^(-1/2) + 6): 0.043159   at a = 20, ds = 0, L = 2037.6017, N = 1019, h = 79
+   max (E)  N D_N / Erdos-Turan bound (m = 1,2,4,...,128 and m = H): 0.386388   at a = 13, ds = 0, L = 15.2504, N = 7, m = 16, H = 7
+   max (C)  N D_N / explicit chain bound (L >= |a|^(1/3) only): 0.007445   at a = 48, ds = 1, L = 70.6236, N = 36
+   (E at the draft's m = H, 4415 instances with H <= 128): max ratio 0.369333
+[large |a| >= 2^20, L <= 64 (lam >= 1 mostly)] instances = 6000 (h <= 128)   (15.0s)
+   max (V1) |S_h| / K-N Thm 2.7 bound (exact rho, exact f' difference): 0.007296   at a = 1112084, ds = 1, L = 59.0534, N = 29, h = 1
+   max (V2) |S_h| / (56 L lam^(1/2) + 8 lam^(-1/2) + 6): 0.001589   at a = 1112084, ds = 1, L = 59.0534, N = 29, h = 1
+   max (E)  N D_N / Erdos-Turan bound (m = 1,2,4,...,128 and m = H): 0.403680   at a = 61575693, ds = 1, L = 13.0468, N = 6, m = 16, H = 1
+   max (C)  N D_N / explicit chain bound (L >= |a|^(1/3) only): -1.000000   at a = 169444468425, ds = 1, L = 4.4367, N = 2
+   (E at the draft's m = H, 6000 instances with H <= 128): max ratio 0.274981
+total time 15.0s

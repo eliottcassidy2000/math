@@ -1,0 +1,19 @@
+S93 lane seeds: unit pairs over two-apex bases, every vertex set O
+n = 10: seeds: 70887 pairs; by |O|: [(1, 792), (2, 47363), (3, 22732)]; with an apex in O: 30165; distinct slopes 29361; largest slope 568052  [199.2 s]
+n = 10: anti-seeds: 69722 pairs; by |O|: [(2, 47000), (3, 22722)]; with an apex in O: 29638; distinct slopes 30133; largest slope 708132  [199.3 s]
+seeds: distinct slopes over lengths <= 10: 29361; distinct odd parts: 15319
+   odd c <= 2^4: odd parts covered 8 of 8; odd slopes 2; integers M in [2^4, 2^5) in the doubling closure: 5 (0.312)
+   odd c <= 2^6: odd parts covered 32 of 32; odd slopes 7; integers M in [2^6, 2^7) in the doubling closure: 29 (0.453)
+   odd c <= 2^8: odd parts covered 127 of 128; odd slopes 33; integers M in [2^8, 2^9) in the doubling closure: 135 (0.527)
+   odd c <= 2^10: odd parts covered 499 of 512; odd slopes 206; integers M in [2^10, 2^11) in the doubling closure: 592 (0.578)
+   odd c <= 2^12: odd parts covered 1865 of 2048; odd slopes 896; integers M in [2^12, 2^13) in the doubling closure: 2328 (0.568)
+   odd c <= 2^14: odd parts covered 5631 of 8192; odd slopes 2932; integers M in [2^14, 2^15) in the doubling closure: 6724 (0.410)
+   odd c <= 2^16: odd parts covered 11517 of 32768; odd slopes 6716; integers M in [2^16, 2^17) in the doubling closure: 13001 (0.198)
+anti-seeds: distinct slopes over lengths <= 10: 30133; distinct odd parts: 15875
+   odd c <= 2^4: odd parts covered 8 of 8; odd slopes 4; integers M in [2^4, 2^5) in the doubling closure: 6 (0.375)
+   odd c <= 2^6: odd parts covered 32 of 32; odd slopes 10; integers M in [2^6, 2^7) in the doubling closure: 23 (0.359)
+   odd c <= 2^8: odd parts covered 125 of 128; odd slopes 27; integers M in [2^8, 2^9) in the doubling closure: 115 (0.449)
+   odd c <= 2^10: odd parts covered 499 of 512; odd slopes 167; integers M in [2^10, 2^11) in the doubling closure: 611 (0.597)
+   odd c <= 2^12: odd parts covered 1845 of 2048; odd slopes 846; integers M in [2^12, 2^13) in the doubling closure: 2330 (0.569)
+   odd c <= 2^14: odd parts covered 5647 of 8192; odd slopes 2885; integers M in [2^14, 2^15) in the doubling closure: 6723 (0.410)
+   odd c <= 2^16: odd parts covered 11918 of 32768; odd slopes 6865; integers M in [2^16, 2^17) in the doubling closure: 13408 (0.205)

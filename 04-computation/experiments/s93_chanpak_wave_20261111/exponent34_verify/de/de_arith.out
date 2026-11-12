@@ -1,0 +1,50 @@
+== 1. |W| >= 2^(n-2) ==
+transfer recursion = enumeration for n <= 18, all R; each of the n - R positions carries exactly 2^(n-1-R) words (n <= 12 all R)
+n = 8..3000 and 4096, 4097, 8192, 8193, 20000: 2n <= 2^R < 4n, long-run words <= (n-R)2^(n-1-R) <= 2^(n-2), |W| >= 2^(n-2): OK
+   smallest |W|/2^(n-1) = 0.7790 at n = 8192 (the bound needs >= 0.5)
+   n=    8 R= 4  |W|/2^(n-1) = 0.84375   union bound for the complement: 0.25000
+   n=    9 R= 5  |W|/2^(n-1) = 0.92188   union bound for the complement: 0.12500
+   n=   16 R= 5  |W|/2^(n-1) = 0.81738   union bound for the complement: 0.34375
+   n=   17 R= 6  |W|/2^(n-1) = 0.90710   union bound for the complement: 0.17188
+   n=   22 R= 6  |W|/2^(n-1) = 0.87048   union bound for the complement: 0.25000
+   n=   26 R= 6  |W|/2^(n-1) = 0.84225   union bound for the complement: 0.31250
+   n=   32 R= 6  |W|/2^(n-1) = 0.80161   union bound for the complement: 0.40625
+   n=   33 R= 7  |W|/2^(n-1) = 0.89740   union bound for the complement: 0.20312
+   n=   64 R= 7  |W|/2^(n-1) = 0.79211   union bound for the complement: 0.44531
+   n=   65 R= 8  |W|/2^(n-1) = 0.89130   union bound for the complement: 0.22266
+   n= 1024 R=11  |W|/2^(n-1) = 0.78016   union bound for the complement: 0.49463
+   n= 1025 R=12  |W|/2^(n-1) = 0.88341   union bound for the complement: 0.24731
+   (information) with R = ceil(log2 n) instead: |W| >= 2^(n-2) fails for 0 values of n in 8..599, first few []
+
+== 2. cells and exponents, t = ceil(n/4) ==
+n = 8..600 and 9 larger n: w >= 1, w <= n-2t'+R+3, max(t'-1,s) <= t'+R+3, 4^w <= 4^(R+3) 2^n, 2^max 2^(3w/2) <= 2^((5/2)(R+3)) 2^n, #cells <= n(2R+7): all OK
+   max over cells of (max(t'-1,s) + 1.5 w - n)/(R+3) = 23/16 = 1.4375 at (n,t',s)=(4096, 1024, 1008)   [the proof uses 2.5; 1.5 suffices]
+   max over cells of (w - n/2)/(R+3) = 1.0000   [the proof uses 1]
+
+== 3. variants ==
+beta0 = 1.542481250361 ; (beta0-1)/(2 beta0-1) = 0.260187533432 ; beta0/(2 beta0-1) = 0.739812466568
+  beta0 (B1)                   t = ceil(n(beta-1)/(2beta-1)): n <= 4t and 4^w <= 4^(R+3) 2^n: True ; t'+beta(n-2t') <= n: True ; max (max(t'-1,s) + beta w - n)/(R+3) = 1.4822  (literal argument gives 1+beta = 2.5425, sharp split gives beta = 1.5425) ; exponent beta/(2beta-1) = 0.739812
+  beta=2 (trivial S_w <= 4^w)  t = ceil(n(beta-1)/(2beta-1)): n <= 4t and 4^w <= 4^(R+3) 2^n: True ; t'+beta(n-2t') <= n: True ; max (max(t'-1,s) + beta w - n)/(R+3) = 1.9231  (literal argument gives 1+beta = 3.0000, sharp split gives beta = 2.0000) ; exponent beta/(2beta-1) = 0.666667
+  beta=3/2 (B2)                t = ceil(n(beta-1)/(2beta-1)): n <= 4t and 4^w <= 4^(R+3) 2^n: True ; t'+beta(n-2t') <= n: True ; max (max(t'-1,s) + beta w - n)/(R+3) = 1.4375  (literal argument gives 1+beta = 2.5000, sharp split gives beta = 1.5000) ; exponent beta/(2beta-1) = 0.750000
+
+== 4. polynomial factors ==
+   n, R, n(2R+7)[4^(R+4) + n(32n)^(5/2)] / (n^(9/2) ln n), and the beta0-variant with (32n)^(1+beta0)
+   n=8                    R= 4  beta=3/2 literal: 4.2111e+04   beta0 literal: 5.3210e+04 (unbounded, ~ n^0.0425)   beta0 sharp split: 5.3302e+02
+   n=16                   R= 5  beta=3/2 literal: 3.5615e+04   beta0 literal: 4.6393e+04 (unbounded, ~ n^0.0425)   beta0 sharp split: 1.8852e+02
+   n=17                   R= 6  beta=3/2 literal: 3.9193e+04   beta0 literal: 5.1112e+04 (unbounded, ~ n^0.0425)   beta0 sharp split: 4.4046e+02
+   n=64                   R= 7  beta=3/2 literal: 2.9260e+04   beta0 literal: 4.0448e+04 (unbounded, ~ n^0.0425)   beta0 sharp split: 2.9844e+01
+   n=1024                 R=11  beta=3/2 literal: 2.4235e+04   beta0 literal: 3.7694e+04 (unbounded, ~ n^0.0425)   beta0 sharp split: 1.2811e+00
+   n=10000                R=15  beta=3/2 literal: 2.3270e+04   beta0 literal: 3.9872e+04 (unbounded, ~ n^0.0425)   beta0 sharp split: 1.3564e-01
+   n=1000000              R=21  beta=3/2 literal: 2.0545e+04   beta0 literal: 4.2809e+04 (unbounded, ~ n^0.0425)   beta0 sharp split: 1.3418e-03
+   n=1000000000           R=31  beta=3/2 literal: 1.9287e+04   beta0 literal: 5.3894e+04 (unbounded, ~ n^0.0425)   beta0 sharp split: 1.6843e-06
+   n=1000000000000        R=41  beta=3/2 literal: 1.8658e+04   beta0 literal: 6.9917e+04 (unbounded, ~ n^0.0425)   beta0 sharp split: 2.1849e-09
+   n=1000000000000000000  R=61  beta=3/2 literal: 1.8029e+04   beta0 literal: 1.2150e+05 (unbounded, ~ n^0.0425)   beta0 sharp split: 3.7969e-15
+
+== 5. from n to X ==
+   min over n in 8..20000 of [2^(3n/4)/(n^(9/2) ln n)] / [X^(3/4)/(ln X)^5] (worst X in [2^(n+1), 2^(n+2))) = 0.10691 at n = 25
+   (the ratio grows like sqrt(ln X)/ln ln X, so (log X)^5 is a valid, slightly lossy, exponent; (log X)^(9/2) log log X is exact)
+   x(0) = 1, x(1) = 3: for 3 <= X < 2^9 the count #{x(h) <= X} >= 2 > 0, so c can be adjusted
+
+real	0m54.238s
+user	0m0.000s
+sys	0m0.062s

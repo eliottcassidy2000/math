@@ -1,0 +1,81 @@
+w=4 (s1=2, s2=2, ds=0), all P_u (28) and P_v (28), all integer K <= 2^s2 = 4:
+   (D1) max Deg_K/(4K^2) = 1.0000 ; max Deg'_K/(8K^2) = 0.5000   (must be <= 1); Deg_1 max = 4, Deg'_1 max = 4
+   (D2) max Deg_K/(3*2^s1(3+2lnK)) = 0.1603 ; max Deg'_K/(3*2^s1(3+2lnK)) = 0.1603   (must be <= 1)
+   (D3) implied constant: max over P_u (a != 0), K of Deg_K/[K(1+lnK)^2 + K(1+lnK)|a|^(1/3) + K^(5/2)|a|^(-1/2)] = 1.3482 (at |a|=2, K=1) ; for Deg' with |a'|: 1.3482 (at |a'|=2, K=1)
+   max_Pu Deg_K at K=2^i: 4 4 10
+   max_Pv Deg'_K at K=2^i: 4 4 10
+   (1): N(K) <= (1/2) sum r^2 Deg_K + (1/2) sum r'^2 Deg'_K for all K <= 2^s2: True ; max N(K)/rhs = 0.5217 ; sum_{b odd} r_s1^2 = 12 (6^s1 = 36), sum_{b' odd} r_s2^2 = 12 (6^s2 = 36)
+   'The sum': max_K N(K)/(6^s1[K(1+lnK)^2 + K(1+lnK)2^(s1/3) + K^(5/2)2^(-s2/2)]) = 0.21593 ; max_K rhs(1)/(same) = 0.41387
+   time 6.8s
+w=5 (s1=3, s2=2, ds=1), all P_u (120) and P_v (28), all integer K <= 2^s2 = 4:
+   (D1) max Deg_K/(4K^2) = 0.5000 ; max Deg'_K/(8K^2) = 1.0000   (must be <= 1); Deg_1 max = 2, Deg'_1 max = 8
+   (D2) max Deg_K/(3*2^s1(3+2lnK)) = 0.0481 ; max Deg'_K/(3*2^s1(3+2lnK)) = 0.1443   (must be <= 1)
+   (D3) implied constant: max over P_u (a != 0), K of Deg_K/[K(1+lnK)^2 + K(1+lnK)|a|^(1/3) + K^(5/2)|a|^(-1/2)] = 0.6741 (at |a|=2, K=1) ; for Deg' with |a'|: 2.6963 (at |a'|=2, K=1)
+   max_Pu Deg_K at K=2^i: 2 2 6
+   max_Pv Deg'_K at K=2^i: 8 8 18
+   (1): N(K) <= (1/2) sum r^2 Deg_K + (1/2) sum r'^2 Deg'_K for all K <= 2^s2: True ; max N(K)/rhs = 0.6102 ; sum_{b odd} r_s1^2 = 72 (6^s1 = 216), sum_{b' odd} r_s2^2 = 12 (6^s2 = 36)
+   'The sum': max_K N(K)/(6^s1[K(1+lnK)^2 + K(1+lnK)2^(s1/3) + K^(5/2)2^(-s2/2)]) = 0.09524 ; max_K rhs(1)/(same) = 0.15608
+   time 0.0s
+w=6 (s1=3, s2=3, ds=0), all P_u (120) and P_v (120), all integer K <= 2^s2 = 8:
+   (D1) max Deg_K/(4K^2) = 1.0000 ; max Deg'_K/(8K^2) = 0.5000   (must be <= 1); Deg_1 max = 4, Deg'_1 max = 4
+   (D2) max Deg_K/(3*2^s1(3+2lnK)) = 0.1572 ; max Deg'_K/(3*2^s1(3+2lnK)) = 0.1572   (must be <= 1)
+   (D3) implied constant: max over P_u (a != 0), K of Deg_K/[K(1+lnK)^2 + K(1+lnK)|a|^(1/3) + K^(5/2)|a|^(-1/2)] = 1.3482 (at |a|=2, K=1) ; for Deg' with |a'|: 1.3482 (at |a'|=2, K=1)
+   max_Pu Deg_K at K=2^i: 4 4 10 26
+   max_Pv Deg'_K at K=2^i: 4 4 10 26
+   (1): N(K) <= (1/2) sum r^2 Deg_K + (1/2) sum r'^2 Deg'_K for all K <= 2^s2: True ; max N(K)/rhs = 0.5035 ; sum_{b odd} r_s1^2 = 72 (6^s1 = 216), sum_{b' odd} r_s2^2 = 72 (6^s2 = 216)
+   'The sum': max_K N(K)/(6^s1[K(1+lnK)^2 + K(1+lnK)2^(s1/3) + K^(5/2)2^(-s2/2)]) = 0.19879 ; max_K rhs(1)/(same) = 0.39483
+   time 0.0s
+w=7 (s1=4, s2=3, ds=1), all P_u (496) and P_v (120), all integer K <= 2^s2 = 8:
+   (D1) max Deg_K/(4K^2) = 0.5000 ; max Deg'_K/(8K^2) = 1.0000   (must be <= 1); Deg_1 max = 2, Deg'_1 max = 8
+   (D2) max Deg_K/(3*2^s1(3+2lnK)) = 0.0423 ; max Deg'_K/(3*2^s1(3+2lnK)) = 0.1572   (must be <= 1)
+   (D3) implied constant: max over P_u (a != 0), K of Deg_K/[K(1+lnK)^2 + K(1+lnK)|a|^(1/3) + K^(5/2)|a|^(-1/2)] = 0.6741 (at |a|=2, K=1) ; for Deg' with |a'|: 2.6963 (at |a'|=2, K=1)
+   max_Pu Deg_K at K=2^i: 2 2 6 14
+   max_Pv Deg'_K at K=2^i: 8 8 20 52
+   (1): N(K) <= (1/2) sum r^2 Deg_K + (1/2) sum r'^2 Deg'_K for all K <= 2^s2: True ; max N(K)/rhs = 0.6017 ; sum_{b odd} r_s1^2 = 432 (6^s1 = 1296), sum_{b' odd} r_s2^2 = 72 (6^s2 = 216)
+   'The sum': max_K N(K)/(6^s1[K(1+lnK)^2 + K(1+lnK)2^(s1/3) + K^(5/2)2^(-s2/2)]) = 0.08606 ; max_K rhs(1)/(same) = 0.14303
+   time 0.0s
+w=8 (s1=4, s2=4, ds=0), all P_u (496) and P_v (496), all integer K <= 2^s2 = 16:
+   (D1) max Deg_K/(4K^2) = 1.0000 ; max Deg'_K/(8K^2) = 0.5000   (must be <= 1); Deg_1 max = 4, Deg'_1 max = 4
+   (D2) max Deg_K/(3*2^s1(3+2lnK)) = 0.1535 ; max Deg'_K/(3*2^s1(3+2lnK)) = 0.1535   (must be <= 1)
+   (D3) implied constant: max over P_u (a != 0), K of Deg_K/[K(1+lnK)^2 + K(1+lnK)|a|^(1/3) + K^(5/2)|a|^(-1/2)] = 1.3482 (at |a|=2, K=1) ; for Deg' with |a'|: 1.3482 (at |a'|=2, K=1)
+   max_Pu Deg_K at K=2^i: 4 4 10 26 62
+   max_Pv Deg'_K at K=2^i: 4 4 10 26 62
+   (1): N(K) <= (1/2) sum r^2 Deg_K + (1/2) sum r'^2 Deg'_K for all K <= 2^s2: True ; max N(K)/rhs = 0.5006 ; sum_{b odd} r_s1^2 = 432 (6^s1 = 1296), sum_{b' odd} r_s2^2 = 432 (6^s2 = 1296)
+   'The sum': max_K N(K)/(6^s1[K(1+lnK)^2 + K(1+lnK)2^(s1/3) + K^(5/2)2^(-s2/2)]) = 0.17684 ; max_K rhs(1)/(same) = 0.35327
+   time 0.0s
+w=9 (s1=5, s2=4, ds=1), all P_u (2016) and P_v (496), all integer K <= 2^s2 = 16:
+   (D1) max Deg_K/(4K^2) = 0.5000 ; max Deg'_K/(8K^2) = 1.0000   (must be <= 1); Deg_1 max = 2, Deg'_1 max = 8
+   (D2) max Deg_K/(3*2^s1(3+2lnK)) = 0.0446 ; max Deg'_K/(3*2^s1(3+2lnK)) = 0.1337   (must be <= 1)
+   (D3) implied constant: max over P_u (a != 0), K of Deg_K/[K(1+lnK)^2 + K(1+lnK)|a|^(1/3) + K^(5/2)|a|^(-1/2)] = 0.6741 (at |a|=2, K=1) ; for Deg' with |a'|: 2.6963 (at |a'|=2, K=1)
+   max_Pu Deg_K at K=2^i: 2 2 6 18 36
+   max_Pv Deg'_K at K=2^i: 8 8 20 50 108
+   (1): N(K) <= (1/2) sum r^2 Deg_K + (1/2) sum r'^2 Deg'_K for all K <= 2^s2: True ; max N(K)/rhs = 0.6003 ; sum_{b odd} r_s1^2 = 2592 (6^s1 = 7776), sum_{b' odd} r_s2^2 = 432 (6^s2 = 1296)
+   'The sum': max_K N(K)/(6^s1[K(1+lnK)^2 + K(1+lnK)2^(s1/3) + K^(5/2)2^(-s2/2)]) = 0.07533 ; max_K rhs(1)/(same) = 0.12550
+   time 0.1s
+w=10 (s1=5, s2=5, ds=0), all P_u (2016) and P_v (2016), all integer K <= 2^s2 = 32:
+   (D1) max Deg_K/(4K^2) = 1.0000 ; max Deg'_K/(8K^2) = 0.5000   (must be <= 1); Deg_1 max = 4, Deg'_1 max = 4
+   (D2) max Deg_K/(3*2^s1(3+2lnK)) = 0.1541 ; max Deg'_K/(3*2^s1(3+2lnK)) = 0.1541   (must be <= 1)
+   (D3) implied constant: max over P_u (a != 0), K of Deg_K/[K(1+lnK)^2 + K(1+lnK)|a|^(1/3) + K^(5/2)|a|^(-1/2)] = 1.3482 (at |a|=2, K=1) ; for Deg' with |a'|: 1.3482 (at |a'|=2, K=1)
+   max_Pu Deg_K at K=2^i: 4 4 10 32 60 146
+   max_Pv Deg'_K at K=2^i: 4 4 10 32 60 146
+   (1): N(K) <= (1/2) sum r^2 Deg_K + (1/2) sum r'^2 Deg'_K for all K <= 2^s2: True ; max N(K)/rhs = 0.5001 ; sum_{b odd} r_s1^2 = 2592 (6^s1 = 7776), sum_{b' odd} r_s2^2 = 2592 (6^s2 = 7776)
+   'The sum': max_K N(K)/(6^s1[K(1+lnK)^2 + K(1+lnK)2^(s1/3) + K^(5/2)2^(-s2/2)]) = 0.15320 ; max_K rhs(1)/(same) = 0.30634
+   time 0.3s
+w=11 (s1=6, s2=5, ds=1), all P_u (8128) and P_v (2016), all integer K <= 2^s2 = 32:
+   (D1) max Deg_K/(4K^2) = 0.5000 ; max Deg'_K/(8K^2) = 1.0000   (must be <= 1); Deg_1 max = 2, Deg'_1 max = 8
+   (D2) max Deg_K/(3*2^s1(3+2lnK)) = 0.0401 ; max Deg'_K/(3*2^s1(3+2lnK)) = 0.1425   (must be <= 1)
+   (D3) implied constant: max over P_u (a != 0), K of Deg_K/[K(1+lnK)^2 + K(1+lnK)|a|^(1/3) + K^(5/2)|a|^(-1/2)] = 0.6741 (at |a|=2, K=1) ; for Deg' with |a'|: 2.6963 (at |a'|=2, K=1)
+   max_Pu Deg_K at K=2^i: 2 2 6 18 36 76
+   max_Pv Deg'_K at K=2^i: 8 8 20 51 114 270
+   (1): N(K) <= (1/2) sum r^2 Deg_K + (1/2) sum r'^2 Deg'_K for all K <= 2^s2: True ; max N(K)/rhs = 0.6000 ; sum_{b odd} r_s1^2 = 15552 (6^s1 = 46656), sum_{b' odd} r_s2^2 = 2592 (6^s2 = 7776)
+   'The sum': max_K N(K)/(6^s1[K(1+lnK)^2 + K(1+lnK)2^(s1/3) + K^(5/2)2^(-s2/2)]) = 0.06439 ; max_K rhs(1)/(same) = 0.10731
+   time 1.0s
+w=12 (s1=6, s2=6, ds=0), all P_u (8128) and P_v (8128), all integer K <= 2^s2 = 64:
+   (D1) max Deg_K/(4K^2) = 1.0000 ; max Deg'_K/(8K^2) = 0.5000   (must be <= 1); Deg_1 max = 4, Deg'_1 max = 4
+   (D2) max Deg_K/(3*2^s1(3+2lnK)) = 0.1523 ; max Deg'_K/(3*2^s1(3+2lnK)) = 0.1523   (must be <= 1)
+   (D3) implied constant: max over P_u (a != 0), K of Deg_K/[K(1+lnK)^2 + K(1+lnK)|a|^(1/3) + K^(5/2)|a|^(-1/2)] = 1.3482 (at |a|=2, K=1) ; for Deg' with |a'|: 1.3482 (at |a'|=2, K=1)
+   max_Pu Deg_K at K=2^i: 4 4 10 30 68 144 330
+   max_Pv Deg'_K at K=2^i: 4 4 10 30 68 144 330
+   (1): N(K) <= (1/2) sum r^2 Deg_K + (1/2) sum r'^2 Deg'_K for all K <= 2^s2: True ; max N(K)/rhs = 0.5000 ; sum_{b odd} r_s1^2 = 15552 (6^s1 = 46656), sum_{b' odd} r_s2^2 = 15552 (6^s2 = 46656)
+   'The sum': max_K N(K)/(6^s1[K(1+lnK)^2 + K(1+lnK)2^(s1/3) + K^(5/2)2^(-s2/2)]) = 0.13008 ; max_K rhs(1)/(same) = 0.26015
+   time 5.9s

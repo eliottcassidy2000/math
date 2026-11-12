@@ -1,0 +1,71 @@
+THM-5141 half split / (1) / (2) / (D1) / (D2) / (B1): independent checks
+numba threads: 4
+
+=== w = 13  s1 = 7  s2 = 6 ===
+energy r_s1: 279936 (6^s1 = 279936) OK;  energy r_s2: 46656 (6^s2 = 46656) OK;  support sizes 2187 (3^s1 = 2187), 729 (3^s2 = 729)
+number of odd pairs: 16777216 (4^(w-1) = 16777216) OK
+N(K) via the split (both orientations) == N(K) by direct enumeration for every K: OK
+(D1) Deg_K <= 4K^2 for all K in [1,2^w): violations 0; worst ratio 0.5000 at K = 1
+(D1) Deg'_K <= 8K^2 for all K in [1,2^w): violations 0; worst ratio 1.0000 at K = 1
+(D2) Deg_K <= 3*2^s1(3+2 ln K) for all K in [1,2^s2]: violations 0; worst ratio 0.0401 at K = 63
+(D2) Deg'_K <= 3*2^s1(3+2 ln K) for all K in [1,2^s2]: violations 0; worst ratio 0.1412 at K = 63
+(D2) intermediate bounds 3(2^(s2+1)(1+ln K)+K) resp. 3(2^(s1+1)(1+ln K)+K), and their comparison with the final one: violations 0
+     (for information) first K at which the (D2) expression is exceeded: Deg: 7945, Deg': 833
+(1) N(K) <= (1/2)[sum r_s1^2 Deg_K + sum r_s2^2 Deg'_K] for all K: violations 0; worst ratio N/RHS 0.6000
+(B1) N(K) <= 6^s1 min(8K^2, 3*2^s1(3+2 ln K)) for all K in [1,2^s2]: violations 0; worst ratio 0.04167 at K = 1;  N(K) <= 8K^2 6^s1 for all K: violations 0
+   i      K   maxDeg  (supp)   4K^2  maxDeg' (supp)   8K^2    D2bound        N(K)      RHS(1)/2   6^s1*min(...)
+   0      1        2       2      4        8      8      8     1152.0       93312      155518.0      2239488.0
+   1      2        2       2     16        8      8     32     1684.3       93312      155518.0      8957952.0
+   2      4        6       6     64       20     20    128     2216.7       96192      231831.0     35831808.0
+   3      8       20      16    256       53     53    512     2749.0      109632      456165.0    143327232.0
+   4     16       46      31   1024      126    115   2048     3281.3      130344      884866.0    573308928.0
+   5     32       86      77   4096      275    263   8192     3813.7      195184     1822734.0   1067587772.7
+   6     64      174     150  16384      612    553  32768     4346.0      291892     3525614.0   1216608072.8
+   7    128      363     326  65536     1354   1155 131072        nan      493356     7052569.0  36691771392.0
+   8    256      628     598 262144     2430   2376 524288        nan      838272    14071789.0 146767085568.0
+   9    512     1083    1069 1048576     4251   4236 2097152        nan     1470780    28285955.0 587068342272.0
+  10   1024     1854    1854 4194304     7323   7292 8388608        nan     2714404    56558305.0 2348273369088.0
+  11   2048     3094    3059 16777216    12221  12178 33554432        nan     6049508   113077396.0 9393093476352.0
+  12   4096     4932    4932 67108864    19561  19535 134217728        nan     9357600   248707972.0 37572373905408.0
+  13   8192     8128    8128 268435456    32640  32640 536870912        nan    16777216   633028608.0 150289495621632.0
+S_w = 115402.907754   S_w/6^(w/2) = 1.0098   (2) RHS = 250402.980 [S_w <= RHS(2): OK]
+   (B1) displayed line 1 = 338020352.000  [RHS(2) <= line 1: OK];  line 2 = (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 490701423.366 [line 1 <= line 2: OK];  S_w/line 2 = 0.00024
+   S_w <= explicit bound: OK;   line2 / (w (6 sqrt 2)^(w/2)) = 34.717
+   pairs of height 1: 93312;  h1 / 6^(w/2) = 0.8165  (closed form: 93312)
+   [25.4 s]
+
+=== w = 14  s1 = 7  s2 = 7 ===
+energy r_s1: 279936 (6^s1 = 279936) OK;  energy r_s2: 279936 (6^s2 = 279936) OK;  support sizes 2187 (3^s1 = 2187), 2187 (3^s2 = 2187)
+number of odd pairs: 67108864 (4^(w-1) = 67108864) OK
+N(K) via the split (both orientations) == N(K) by direct enumeration for every K: OK
+(D1) Deg_K <= 4K^2 for all K in [1,2^w): violations 0; worst ratio 1.0000 at K = 1
+(D1) Deg'_K <= 8K^2 for all K in [1,2^w): violations 0; worst ratio 0.5000 at K = 1
+(D2) Deg_K <= 3*2^s1(3+2 ln K) for all K in [1,2^s2]: violations 0; worst ratio 0.1564 at K = 127
+(D2) Deg'_K <= 3*2^s1(3+2 ln K) for all K in [1,2^s2]: violations 0; worst ratio 0.1564 at K = 127
+(D2) intermediate bounds 3(2^(s2+1)(1+ln K)+K) resp. 3(2^(s1+1)(1+ln K)+K), and their comparison with the final one: violations 0
+     (for information) first K at which the (D2) expression is exceeded: Deg: 1889, Deg': 1889
+(1) N(K) <= (1/2)[sum r_s1^2 Deg_K + sum r_s2^2 Deg'_K] for all K: violations 0; worst ratio N/RHS 0.5000
+(B1) N(K) <= 6^s1 min(8K^2, 3*2^s1(3+2 ln K)) for all K in [1,2^s2]: violations 0; worst ratio 0.08333 at K = 1;  N(K) <= 8K^2 6^s1 for all K: violations 0
+   i      K   maxDeg  (supp)   4K^2  maxDeg' (supp)   8K^2    D2bound        N(K)      RHS(1)/2   6^s1*min(...)
+   0      1        4       4      4        4      4      8     1152.0      186624      373246.0      2239488.0
+   1      2        4       4     16        4      4     32     1684.3      186624      373246.0      8957952.0
+   2      4       10      10     64       10     10    128     2216.7      193728      556092.0     35831808.0
+   3      8       30      29    256       30     29    512     2749.0      224944     1083822.0    143327232.0
+   4     16       80      59   1024       80     59   2048     3281.3      272464     2061612.0    573308928.0
+   5     32      168     142   4096      168    142   8192     3813.7      388896     4233542.0   1067587772.7
+   6     64      316     301  16384      316    301  32768     4346.0      592912     8453636.0   1216608072.8
+   7    128      762     640  65536      762    640 131072     4878.4      982420    17105730.0   1365628373.0
+   8    256     1373    1329 262144     1373   1329 524288        nan     1680320    34120270.0 146767085568.0
+   9    512     2436    2403 1048576     2436   2403 2097152        nan     3071448    68213660.0 587068342272.0
+  10   1024     4279    4246 4194304     4279   4246 8388608        nan     5520188   136052404.0 2348273369088.0
+  11   2048     7358    7303 16777216     7358   7303 33554432        nan    10388756   271899682.0 9393093476352.0
+  12   4096    12238   12170 67108864    12238  12170 134217728        nan    23819436   543334458.0 37572373905408.0
+  13   8192    19578   19549 268435456    19578  19549 536870912        nan    37216020  1196849460.0 150289495621632.0
+  14  16384    32640   32640 1073741824    32640  32640 2147483648        nan    67108864  3045703680.0 601157982486528.0
+S_w = 235466.848223   S_w/6^(w/2) = 0.8411   (2) RHS = 515119.569 [S_w <= RHS(2): OK]
+   (B1) displayed line 1 = 366991360.000  [RHS(2) <= line 1: OK];  line 2 = (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 534129582.194 [line 1 <= line 2: OK];  S_w/line 2 = 0.00044
+   S_w <= explicit bound: OK;   line2 / (w (6 sqrt 2)^(w/2)) = 12.046
+   pairs of height 1: 186624;  h1 / 6^(w/2) = 0.6667  (closed form: 186624)
+   [78.4 s]
+
+TOTAL VIOLATIONS: 0

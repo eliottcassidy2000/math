@@ -1,0 +1,341 @@
+S93 (opus-2026-11-11-S93), Chan-Pak wave, lane "seeds".  PROOFS and typed statements.
+==========================================================================================
+
+The Chan-Pak conjecture stays OPEN.  Nothing below proves a positive density of path counts.
+Types: PROVED (complete proof here), FINITE-EXACT (exhaustive computation, range stated), NUMERICAL, CONJECTURE,
+REFUTED, KNOWN (source given).  Scripts and outputs are in this folder; every number quoted is in an .out file.
+
+0. Setting (THM-5126, THM-5130)
+-------------------------------
+H(T) = number of Hamiltonian paths of a tournament T, S = set of its values.  For a tournament B and a vertex set O:
+  Q_B(e, f) = number of ordered pairs (P1, P2) of disjoint nonempty paths covering B, P1 ending at e, P2 starting at f;
+  W_ef = Q_B(e, f) + Q_B(f, e);   W_B(O) = sum of W_ef over the pairs {e, f} of O;
+  U_B(o) = number of ordered pairs (P1, P2) covering B with P2 starting at o, P1 possibly empty;  U_B(O) = sum over O;
+  r = H(B) - W_B(O) (offset),  M = U_B(O) (slope),  E = End_B(O),  h = H(B).
+Closing law (KNOWN, THM-5126 (A), THM-5130): the tournament T_t(B, O) = (B => TT_t => v, v -> O, B - O -> v) has
+H = r + 2^t M for t >= 1.  Seed: r = 1.  Anti-seed: r = -1.  Sink rule (KNOWN): adding a sink to B gives (r, 2M, h, 0).
+Gadget (X, P), constants H_X, Pi = Pi_2(X), w = W_X(P), w3, sigma = Start_X(P), u = U_X(P), eps = End_X(P),
+nu = V_X(P), u3, r_X = H_X - w, kappa_X = Pi - 2w - 2 w3; gadget law (KNOWN, THM-5130 (A)):
+  r+ = r_X r + kappa_X M,  M+ = u (r + h) + (4u - 2 sigma + 2 u3) M - sigma E,  h+ = H_X r + Pi M,
+  E+ = eps (r - h) + nu M      for the pair (B => X => v with v -> O, P).
+All of this was recounted here: a_verify.out (V1-V6: literal enumeration of vertex orders against the subset
+recursions; closing law on 3,294 + 275,072 cases), c_towers (T0: 1,042 towers), c_neutral_verify (84 closings).
+
+1. Seeds with |O| = 2 are balanced arcs                                              [PROVED; in substance KNOWN]
+-----------------------------------------------------------------------------------------------------------------
+Theorem 1.  Let e -> f in B, let B' be B with this arc reversed, and for an arc x -> y of a tournament T let
+w_T(x -> y) be the number of Hamiltonian paths of T through that arc.  Then
+      Q_B(e, f) = w_B(e -> f),      Q_B(f, e) = w_B'(f -> e),      r(B, {e, f}) = H(B') - 2 w_B'(f -> e).
+Hence (B, {e, f}) is a seed iff the arc f -> e of B' lies on exactly (H(B') - 1)/2 Hamiltonian paths of B', and an
+anti-seed iff it lies on (H(B') + 1)/2 of them.
+Proof.  A cover (P1, P2) with P1 ending at e and P2 starting at f is the Hamiltonian path P1 P2 of B cut at the arc
+e -> f, and conversely.  A cover with P1 ending at f and P2 starting at e uses no arc between e and f inside P1 or P2
+(they are the last and the first vertex), so it is a cover of B' as well, where it is the Hamiltonian path P1 P2 cut at
+f -> e.  Let A be the number of Hamiltonian paths of B in which e, f are not consecutive; these are also the
+Hamiltonian paths of B' in which they are not consecutive.  Then H(B) = A + w_B(e -> f), H(B') = A + w_B'(f -> e), and
+r = H(B) - Q_B(e, f) - Q_B(f, e) = A - w_B'(f -> e) = H(B') - 2 w_B'(f -> e).  QED
+Status: THM-5130 (F4) has the equivalent statement "the pair is unit iff the number of Hamiltonian paths of B avoiding
+the arc ef is one more than Q_B(f, e)".  Checked: a_verify.out V3 (80,880 arcs, literal counts).
+Remark (KNOWN reading, THM-5126 (B1)).  A seed is the same thing as a tournament K = T_1(B, O) with a vertex x (the
+tail vertex) of out-degree one that is a doubling vertex: H(K) = 1 + 2M and c_2(K, x) = M.
+
+2. Transitive tails: all vertex sets P                                                     [PROVED, every order]
+-----------------------------------------------------------------------------------------------------------------
+Theorem 2.  Let X = TT_a (vertices 1 -> 2 -> ... -> a) and P a subset of its vertices.  For a pair i < j of P put
+d = j - i.  Then
+   (a)  W_X(P) = sum over the pairs of P of (2^(d-1) + [d = 1]),
+        kappa_X(P) = 2^a (1 - sum over the pairs of P of phi(d)),   phi(d) = (1 + 3^(d-1)) / 2^d.
+   (b)  phi(1) = phi(2) = 1 and phi(d) > 1 for d >= 3.  Hence kappa_X(P) > 0 iff |P| <= 1, and kappa_X(P) = 0 iff P is
+        one pair at distance 1 or 2.  In particular the gadgets (X, P) with H(X) = 1 and kappa_X(P) = 0 are exactly
+        the transitive pairs at distance 1 or 2: the last sentence of HYP-9662 (D) is true at every order.
+   (c)  (No other transport through a transitive tail.)  Let (B, O) be a seed or an anti-seed and P any vertex set of
+        X = TT_a.  If the pair (B => X => v with v -> O, P) has offset +1 or -1, then P is a pair at distance 1 or 2
+        (and then the offset is -r for every base).
+Proof.  (a) w and w3 are sums over the ordered pairs e != f of P of quantities that depend on (X, e, f) only; these
+were computed in THM-5130 (B) (in TT_a a vertex set carries one path, so covers are ordered set partitions): for the
+pair {i, j}: Q(i, j) = [d = 1], Q(j, i) = 2^(d-1), and with a third nonempty block 2^(a-d-1) - [d = 1] and
+2^(a-d-1) 3^(d-1) - 2^(d-1).  So the pair contributes 2^(d-1) + [d = 1] to w and 2^(a-d-1)(1 + 3^(d-1)) - [d = 1]
+- 2^(d-1) to w3, that is 2^(a-d)(1 + 3^(d-1)) = 2^a phi(d) to 2w + 2 w3, and Pi_2(TT_a) = 2^a.
+(b) phi(d+1)/phi(d) = (1 + 3^d) / (2 + 2 * 3^(d-1)) > 1 iff 3^(d-1) > 1 iff d >= 2.  With k pairs the sum is >= k, with
+equality iff all distances are <= 2; it equals 1 iff k = 1 and d <= 2.  (Three vertices give three pairs.)
+(c) Write r = +-1 for the offset of (B, O) and M >= 1 for its slope; r+ = r_X r + kappa_X M with r_X = 1 - W_X(P).
+An anti-seed has |O| >= 2 (W = H + 1 > 0), so M >= 2 H(B) >= 2 by U_B(o) >= H(B) (THM-5130 (F1)); M = 2 would force
+B transitive and U(o) = 1 for two vertices o, but U(j) = 2^(n-j) in TT_n; so M >= 3 for an anti-seed.
+ |P| <= 1: w = w3 = 0 for |P| = 0 and for |P| = 1, so r_X = 1, kappa_X = 2^a and r+ = r + 2^a M >= -1 + 2 * 3 = 5 if
+   r = -1, and >= 3 if r = 1.
+ |P| = 2, d <= 2: r_X = -1, kappa_X = 0, r+ = -r.
+ |P| = 2, d >= 3: r_X = 1 - 2^(d-1), kappa_X = -2^(a-d) psi(d) with psi(d) = 3^(d-1) + 1 - 2^d; psi(3) = 2, and
+   psi(d) > 2^(d-1) for d >= 4, because (3/2)^(d-1) > 3 there.  If r = 1 then r+ <= -3 - 2M < -1.  If r = -1 then
+   r+ = 2^(d-1) - 1 - 2^(a-d) psi(d) M, and r+ = +1 or -1 needs 2^(a-d) psi(d) M = 2^(d-1) - 2 or 2^(d-1).  For d = 3
+   this reads 2^(a-3) M = 1 or 2, impossible because M >= 3.  For d >= 4 the left side is >= 3 psi(d) > 2^(d-1).
+ |P| >= 3: at least three pairs, so sum phi >= 3 and |kappa_X| = 2^a (sum phi - 1) >= (2/3) 2^a sum phi
+   >= (2/3) W_X(P), because 2^a phi(d) = 2^(a-d)(1 + 3^(d-1)) >= 2^(d-1) + [d = 1] (a >= d).  Also W_X(P) >= 6.  If
+   r = 1 then r+ = 1 - W_X(P) - |kappa_X| M < -1.  If r = -1 then r+ = W_X(P) - 1 - |kappa_X| M
+   <= W_X(P) - 1 - 2 W_X(P) < -1 (M >= 3).
+So |r+| = 1 only for a pair at distance 1 or 2.  QED
+Status: (a) for a single pair and the "for every base" criterion are THM-5130 (B) (KNOWN).  New here: all P, the
+classification (b) at every order (HYP-9662 (D) had it as FINITE-EXACT for orders <= 7), and (c) for a single base
+(the packet reports "none found").  Check: c_neutral_8.out, c_neutral.py at order 9 (number of neutral gadgets with
+H(X) = 1 is 2n - 3 for n = 2..9).
+
+2'. An identity for kappa of a pair                                                                     [PROVED]
+-----------------------------------------------------------------------------------------------------------------
+Let e -> f in X, X' = X with this arc reversed, and Pi_2(X - ef) = number of covers (A, B) of X by two possibly empty
+paths in which e and f are not consecutive.  Then  kappa_X({e, f}) = 2 Pi_2(X - ef) - Pi_2(X').
+Proof.  Pi_2(X) - Pi_2(X - ef) counts the covers (A, B) in which e is followed by f; cutting there gives a triple
+(D1, D2, D3) with D1 ending at e, D2 starting at f and D3 possibly empty, in two ways (D3 = B or D3 = A):
+2 Q(e, f) + 2 Q3(e, f).  In the same way Pi_2(X') - Pi_2(X - ef) = 2 Q(f, e) + 2 Q3(f, e).  Since
+kappa = Pi_2(X) - 2 (Q(e,f) + Q(f,e)) - 2 (Q3(e,f) + Q3(f,e)), the claim follows.  QED     (a_verify.out V6.)
+So a pair is neutral iff exactly half of the covers of X' by two possibly empty paths use the arc f -> e.
+
+3. HYP-9662 (D) is false at order 8                                    [REFUTED, FINITE-EXACT, literal recount]
+-----------------------------------------------------------------------------------------------------------------
+HYP-9662 (D): "if kappa_X(P) = 0 then |P| = 2 and W_X(P) = 2 H(X); if moreover H(X) = 1 then P is a pair at distance
+1 or 2 of a transitive tournament".  The second sentence is Theorem 2 (b).  The first sentence fails at order 8:
+  - all classes of order <= 7, every P: 1, 3, 5, 17, 37, 81 neutral gadgets at orders 2..7, all with |P| = 2 and
+    r_X = -H(X) (this reproduces THM-5130 (G));
+  - order 8 (6,880 classes, every P): 386 neutral gadgets (labelled P of the class representatives), of which
+    254 have |P| = 2 and r_X = -H(X), 16 have |P| = 2 and r_X != -H(X) (for instance H(X) = 45, r_X = -27), and 116 have
+    |P| = 3; none has |P| >= 4.  (c_neutral_8.out; literal enumeration over all 8! vertex orders of the 16 and of 20 of
+    the 116: c_neutral_viol_check.out.)
+  - order 9 (191,536 classes): 5,423 neutral gadgets, 4,019 of them violate the first sentence (c_neutral_9.out).
+Unit neutral gadgets (kappa = 0 and r_X = +1 or -1) over a non-transitive X:
+  - order 8: 14 (labelled), all with |P| = 3: twelve with r_X = -1 (H(X) = 277, 289, 349, 373, 379, 409, two gadgets
+    each, with (u, sigma) and (nu, eps) exchanged: a gadget and its converse) and two with r_X = +1 (H(X) = 293, again
+    a converse pair).  Each was recounted literally and the
+    full gadget law was checked on 6 explicit closings each (84 tournaments of order up to 14): c_neutral_verify_8.out,
+    list with constants in c_neutral_unit_8.txt.
+  - order 9: 70, of which 28 are the order-8 ones with one source or one sink added (Lemma G below, checked) and 42
+    are primitive: 20 with r_X = -1 and 22 with r_X = +1, all with |P| = 3 (c_gen_towers_26.out, c_gen_gadgets_9.txt).
+So there are gadgets that PRESERVE the sign of the offset for every base (r+ = r): the smallest have order 8.
+Example (FINITE-EXACT, recounted directly): X of order 8 with column-major code 19771611, P = vertices {1, 4, 5}
+(mask 50): H(X) = 293, Pi_2 = 4832, W_X(P) = 292, kappa = 0, r_X = +1, u = 1330, sigma = 85, u3 = 8034, eps = 92,
+nu = 1583.  Put on the seed (C_3, two vertices), state (1, 6, 3, 2), it gives a seed of order 12 with state
+(1, 132458, 29285, 9314); the closed tournaments have 264917 = 1 + 2 * 132458 and 529833 = 1 + 4 * 132458 paths.
+Prior art: the statement was a pre-registered test of HYP-9662 ("(D): order 8"); the packet's search stopped at order 7.
+A grep of 01-canon/theorems (THM-51xx), 05-knowledge/hypotheses and of the result packets dated 2026-11-10/11 for
+"neutral gadget", "kappa_X", "neutral.py" finds only the kps_s22 packet.
+
+Lemma G (padding).                                                                                      [PROVED]
+Let (X, P) be a gadget and X' = TT_(i-1) => X => TT_m (i >= 1, m >= 0), with the same P.  Then
+   H' = H,  Pi' = 2^(i-1+m) Pi,  W' = W,  r_X' = r_X,  kappa' = 2^(i-1+m) kappa,
+   u' = 2^m u,  sigma' = [i = 1] sigma,  eps' = [m = 0] eps,  nu' = 2^(i-1) nu,
+   u3' = (2u - sigma + u3) 2^(i-1) 3^m - 2^(m+1) u + [i = 1] sigma,
+   4u' - 2 sigma' + 2 u3' = c 2^(i-1) 3^m   with  c = 2 (2u - sigma + u3).
+Proof.  Let S = TT_(i-1), T = TT_m.  A path of X' is a run of S, then a possibly empty path of X, then a run of T, and
+every such concatenation is a path.  So a tuple of disjoint paths covering X' is a tuple of possibly empty paths
+covering X together with a distribution of the vertices of S and of T over the paths; a path that starts in X gets no
+vertex of S, a path that ends in X gets no vertex of T.
+ Pi': 2^(i-1) 2^m Pi.   Q'(e, f) = Q(e, f) (S goes to D1, T to D2), so W' = W, H' = H, r_X' = r_X.
+ Q3'(e, f): S to D1 or D3, T to D2 or D3; if the X-part of D3 is nonempty: 2^(i-1+m) Q3; if it is empty, D3 needs a
+ vertex of S or T: (2^(i-1+m) - 1) Q.  So W3' = 2^(i-1+m) (W3 + W) - W and kappa' = 2^(i-1+m)(Pi - 2W - 2W3).
+ u': S to P1, T free: 2^m u.   sigma', eps': a Hamiltonian path starting (ending) in X exists only if S (T) is empty.
+ nu' = 2^(i-1) nu by symmetry.
+ u3': triples (D, D', D'') of nonempty paths, D starting at o in P.  X-parts (E, E', E'') with E', E'' possibly empty:
+ Start(o) + 2 (U(o) - Start(o)) + u3(o) of them; S to D' or D'': 2^(i-1); T anywhere: 3^m.  Remove D' empty
+ (S to D'', T to D or D'', X-parts counted by U(o)): 2^m U(o); the same for D''; add back both empty (i = 1, T to D,
+ X-parts counted by Start(o)).  Sum over o in P.  The last line is arithmetic.  QED
+(For X = one vertex this is THM-5130 (H1); for a transitive pair, THM-5130 (B).  Checked on the 28 padded gadgets of
+order 9: c_gen_towers_26.out, line G1.)
+Corollary (level map of a padded unit neutral gadget, rho = r_X = +-1, kappa = 0):
+   r+ = rho r,   h+ = H r + 2^(i-1+m) Pi M,   M+ = 2^m u (r + h) + c 2^(i-1) 3^m M - [i = 1] sigma E,
+   E+ = [m = 0] eps (r - h) + 2^(i-1) nu M.
+For the transitive pairs (H, Pi, u, sigma, eps, nu, c) = (1, 2^(delta+1), alpha, 1, 1, alpha, 2 gamma),
+(alpha, gamma) = (3, 5), (5, 13): this is THM-5130 (1).
+
+4. Towers are thin                                                                                      [PROVED]
+-----------------------------------------------------------------------------------------------------------------
+Let G be a finite set of unit neutral gadgets, each with constants (rho, H, Pi, u, sigma, c, eps, nu).  A G-tower is
+obtained from a transitive base ((TT_n, {p}), state (1, 2^g, 1, [g = 0]), g = n - p; or a transitive pair, state
+(-1, alpha 2^m, 1, [m = 0])) by finitely many levels (g, i, m), g in G, i >= 1, m >= 0 (the padded gadget of Lemma G).
+For G = {the two transitive pairs} these are the towers of THM-5130 (C).  Put
+   lambda(g, i, m) = c_g 2^(i-1) 3^m - [i = 1] sigma_g,      rho_G(s) = sum over (g, i, m) of lambda(g, i, m)^(-s).
+Theorem 4.  (a) Every level multiplies the slope by at least lambda: M+ >= lambda(g, i, m) M.
+(b) For every s > 0 with rho_G(s) < 1 there is C with: the number of G-tower states with slope <= X, hence the number
+of distinct slopes of G-towers that are <= X, hence the number of integers N <= X of the form r + 2^t M (t >= 1) with
+(r, M) offset and slope of a G-tower, is at most C X^s.
+(c) For the towers of THM-5130: rho(s) = sum over delta in {1, 2} of [ sum_{m >= 0} (2 gamma 3^m - 1)^(-s)
++ gamma^(-s) 4^(-s) / ((1 - 2^(-s))(1 - 3^(-s))) ], gamma = 5, 13, and rho(s) = 1 at sigma_0 = 0.788507...; so the
+number of tower slopes below X, and the number of path counts below X that lie on a tower ray, is O(X^s) for every
+s > 0.788507.  In particular the towers have density zero, at every depth together.
+With the unit neutral gadgets of order 8: sigma_0 = 0.792831; of orders 8 and 9: sigma_0 = 0.797044.
+Proof.  (a) r + h >= 0 because h >= 1 and r = +-1; E = End_B(O) <= H(B) <= U_B(o) for every o (THM-5130 (F1)), so
+E <= M.  Insert into the level map: M+ >= c 2^(i-1) 3^m M - [i = 1] sigma M.  Also lambda >= c - sigma >= u >= 2:
+c - sigma = 4u - 3 sigma + 2 u3, sigma <= u, and u = U_X(P) >= |P| H(X) >= 2.
+(b) Let N(Y) be the number of finite sequences of levels with product of the lambda at most Y.  If rho_G(s) < 1 then
+N(Y) <= sum over sequences of (Y / prod lambda)^s = Y^s sum_k rho_G(s)^k = Y^s / (1 - rho_G(s)).  A tower state is
+determined by its base state and its sequence of levels, and by (a) its slope is at least M_0 prod lambda.  So the
+number of states with slope <= X is at most sum over base states of N(X / M_0) <= X^s (1 - rho_G(s))^(-1)
+sum over base states of M_0^(-s), and the base slopes are 2^g (g >= 0), 3 * 2^m, 5 * 2^m (m >= 0): a convergent sum.
+For the values: N - r = 2^t M <= X + 1, so their number is at most sum_{t >= 1} C ((X + 1)/2^t)^s.
+(c) lambda = 2 gamma 3^m - 1 for i = 1 and gamma 2^i 3^m for i >= 2; sum the geometric series.  Numerical root:
+c_towers_30.out (T1), c_gen_towers_26.out (G2).  QED
+Scope.  (i) The bound is for a FIXED finite G.  The supply of unit neutral gadgets grows with the order: besides the
+two transitive pairs there is no primitive one (no source or sink of X outside P) of order <= 7, there are 14 of order
+8 and 42 of order 9; their contribution to rho(0.8) is 0.0169 (order 8) and 0.0177 (order 9), to rho(1): 0.0017 and
+0.0013.  Whether the union over all orders still has an exponent below 1 is OPEN.
+(ii) NUMERICAL (c_towers_30.out): the number of tower states with slope <= 2^k is 89, 258, 745, 2200, 6456, 18985,
+55847, 165017, 485677, 1430288, 4212883, 12369105 for k = 8, 10, ..., 30 (local exponent 0.777 to 0.782); the number
+of DISTINCT slopes <= 2^30 is 2,304,424 (offset +1) and 2,332,088 (offset -1); the number of distinct integers
+2^t M <= 2^30 (t >= 0) is 4,760,878 and 4,890,946, local exponent 0.77 to 0.80.  States per distinct slope: 2.67 to
+2.71 from k = 18 to k = 30.  Collisions of slopes between different states exist and are partly systematic
+(c_towers_collisions_22.out, c_towers_subfamily_26.out: for instance, over a pair base the slope after two levels
+with i >= 2 is alpha_2 2^(m_1 + m_2 + i_1 + delta_1) M_0 + gamma_1 gamma_2 2^(i_1 + i_2) 3^(m_1 + m_2) M_0, which
+depends on m_1, m_2 through m_1 + m_2 only).
+(iii) CONJECTURE (tower counting).  The number of odd N <= X on a tower ray is X^(sigma_T + o(1)) with
+sigma_T = 0.778 +- 0.01 (> 2/3).  PROVED: the upper bound with 0.7886.  NOT PROVED: any lower bound of this kind; it
+needs a bound for the multiplicity of the slopes.  If the number of tower states with a given slope is X^(o(1)), the
+towers alone would give A(X) >= X^(0.77), above the proved X^(2/3) / (13 ln X + 102) of THM-4887.
+
+5. The set of seed slopes                                                                                [mixed]
+-----------------------------------------------------------------------------------------------------------------
+Sigma+ = set of slopes of seeds, Sigma- = set of slopes of anti-seeds.
+Theorem 5.  (a) [KNOWN: THM-5130 (F2), sink rule]  Sigma+ = {2^j : j >= 0} union {2^j U_Q(O) : j >= 0, Q strong,
+|O| >= 2, W_Q(O) = H(Q) - 1}.  It is closed under doubling.
+(b) [PROVED from (a) + closing law]  M -> 1 + 2M is an injection of Sigma+ into S, and M -> 2M - 1 an injection of
+Sigma- into S.  So A(X) >= #(Sigma+ in [1, (X-1)/2]), and the lower density of S is at least half the lower density
+of Sigma+.
+(c) [PROVED]  For odd c let v+(c) be the least v with c 2^v in Sigma+ (infinity if there is none).  The following are
+equivalent: (i) Sigma+ has positive lower density; (ii) there are J and delta > 0 with
+#{odd c <= Y : v+(c) <= J} >= delta Y for all large Y.  If (ii) holds, A(X) >= delta 2^(-J-1) X (1 + o(1)).
+(d) [PROVED from FINITE-EXACT + KNOWN (Busch's minimum, as cited in THM-4744)]  Sigma+ in [1, 449] is the list of
+b_small_slopes.out: 205 integers.  Exact counts: 4 of 7 in [1, 8), 3 of 8 in [8, 16), 5 of 16, 12 of 32, 29 of 64,
+53 of 128 in [128, 256), 99 of 194 in [256, 450).  The odd seed slopes below 450 are the 76 numbers 1, 11, 29, 37,
+47, 49, 55, 77, 89, 93, 95, 99, ... of that file.
+Proof.  (a) is THM-5130 (F2 (c)) and the sink rule.  (b) Closing law with t = 1.
+(c) (ii) => (i): for odd c <= Y 2^(-J) with v+(c) <= J the number c 2^J lies in Sigma+ and is <= Y; these are
+distinct.  (i) => (ii): if #(Sigma+ in [1, Y]) >= d Y, at most Y 2^(-J) of these have 2-adic valuation > J, and an
+odd c <= Y is the odd part of at most J + 1 of the others, each of which shows v+(c) <= J.  Take 2^(-J) < d/2.
+(d) By (a) a seed slope below 450 is a power of two or 2^j U_Q(O) with Q strong; U_Q(O) >= |O| H(Q) >= 2 H(Q)
+(THM-5130 (F1)).  A strong tournament of order >= 11 has at least 225 Hamiltonian paths (Busch 2006; THM-4744 (3)
+and its citation), so U_Q(O) >= 450.  Hence Q has order <= 10, and b_census.py lists every unit set of every
+tournament of order <= 10.  QED
+FINITE-EXACT (b_census.out; pairs (B, O) with B of order <= 10, EVERY O; orders <= 9 by class representatives, order
+10 by the 15,773,048 min-score one-vertex extensions of the 191,536 classes of order 9):
+  - unit sets have at most three vertices; numbers of seeds / anti-seeds (labelled O of the representatives) at orders
+    3..9: |O| = 2: 3, 9, 23, 61, 173, 604, 2771 / 3, 12, 27, 69, 180, 585, 2773; |O| = 3: 0, 0, 0, 0, 24, 724, 16231 /
+    0, 0, 0, 0, 12, 652, 15961.  (Orders <= 9: "only sizes 2 and 3" is KNOWN, THM-5126 audit; order 10 is new.)
+  - every odd c < 53559 is the odd part of a seed slope, with v+(c) <= 8; every odd c < 59083 is the odd part of an
+    anti-seed slope, with v-(c) <= 12 (v-(1) = 10).  (THM-5130 (E): c <= 4097; the 2,016 and 2,013 of the 2,049 odd
+    c <= 4097 found at order <= 9 are reproduced exactly.)  The first odd c without a seed of order <= 10 is 53559,
+    without an anti-seed 59083; the largest slopes at order 10 are 83557 and 83294, so these are edge effects.
+  - odd M <= 2^k that are seed slopes themselves: 3378 of 4096 (k = 13), 7417 of 8192 (k = 14), 15603 of 16384
+    (k = 15).  This is the pre-registered test 2 of HYP-9662 (>= 0.5 for X = 2^13, 2^14, 2^15 at order <= 12):
+    CONFIRMED already at order <= 10 (0.825, 0.905, 0.952).  Test 1 (a seed and an anti-seed for every odd c in
+    (4097, 16385]): CONFIRMED with pairs of order <= 10 and no tower level.
+  - share of the integers of [2^k, 2^(k+1)) that are seed slopes (order <= 10): 0.375, 0.312, 0.375, 0.453, 0.414,
+    0.531, 0.645, 0.790, 0.876, 0.977, 0.993, 0.9996, 0.9994 for k = 3, ..., 15; anti-seeds: 0.500, 0.375, 0.438,
+    0.359, 0.383, 0.461, 0.584, 0.777, 0.884, 0.981, 0.991, 0.9998, 0.9997.  Every integer of [21566, 53558] is a
+    seed slope and every integer of [23502, 59082] is an anti-seed slope.
+  - odd N on a unit ray (N = 1 + 2^t M, M a seed slope, or N = 2^t M - 1, M an anti-seed slope): all odd N of
+    [2^14, 2^17), all but one of [2^13, 2^14), 2019 of 2048 in [2^12, 2^13); 257 odd N < 4096 lie on no unit ray of a
+    pair of order <= 10 (7, 15, 21, 27, 31, 37, 43, 55, ...).
+Corollary (lines) [PROVED from FINITE-EXACT: the certificates of this folder and THM-4885 (D)].  For every odd
+c < 53559 the whole line {1 + c 2^s : s >= 1} consists of path counts, except 7 = 1 + 3 * 2 and 21 = 1 + 5 * 4; for
+every odd c < 59083 the whole line {c 2^s - 1 : s >= 1} consists of path counts, except 7 = 2^3 - 1 and
+21 = 11 * 2 - 1.  (Ray from s = v + 1 <= 13 on by the closing law; the points below it are < 2^29 and are path counts
+by THM-4885 (D), every odd N <= 2^35 other than 7 and 21.)  This extends THM-5126 (B3) (c <= 129) and THM-5130 (E).
+Certificates: certs_plus.txt, certs_minus.txt (one pair per odd c <= 65535 and sign, least v then least order), each
+recounted by an independent subset recursion on the closed tournaments t = 1, 2 (b_certs_verify.out).
+CONJECTURE (cofinite slopes).  All but finitely many positive integers are seed slopes, and all but finitely many are
+anti-seed slopes.  It implies the Chan-Pak conjecture for all large N (N = 1 + 2M) and is stronger than HYP-9662 (A),
+(B).  Evidence: the shares above; the integers of [2^14, 2^15) that are not seed slopes at order <= 10 are 16965,
+17185, 17281, 19541, 19811, 21565.  Out-of-sample test for a later session: these six are seed slopes of pairs of
+order 11, and so are the 21 integers 53559, ..., 65513 of b_small_slopes.out.  Heuristic: the number of unit pairs of
+order n (13, 28, 67, 204, 1336, 19011, about 5 * 10^5 classes at order 10) grows like the number of tournaments
+divided by H, while the slopes at order n stay below 2^n H.
+NOT PROVED: positive lower density of Sigma+ (HYP-9662 (B)); any lower bound for #(Sigma+ in [1, X]) better than
+a power of log X (THM-5130 (D3): the slopes 2 q 2^x 3^y).
+
+6. One-apex bases                                                                                        [mixed]
+-----------------------------------------------------------------------------------------------------------------
+B(y): spine z_1 -> ... -> z_n (z_i -> z_j for i < j), apex a, a -> z_i iff y_i = 1.  Write
+I(y) = sum over i < k with y_i = 1, y_k = 0 of 2^(k-i-1),  J(y) = #{k : y_k = 0, y_(k+1) = 1},
+val(y) = sum_i y_i 2^(n-i).
+Theorem 6.  (a) H(B(y)) = [y_1 = 1] + [y_n = 0] + J(y) + I(y).
+(b) U_B(a) = 1 + val(y): the slope of the apex is an affine function of the word.
+(c) W_{a z_j} = p_j + q_j + [j = n or y_(j+1) = 1] + [j = 1 or y_(j-1) = 0], where
+    p_j = sum_{i < j} y_i 2^(j-1-i),  q_j = sum_{k > j} (1 - y_k) 2^(k-j-1).
+(d) Let B(y) be strong (y_1 = 1, y_n = 0, n >= 2).  The pair (B(y), {a, z_j}) is a seed exactly in the following
+    cases: y = 1 0^(n-1), j = 1;  y = 1^(n-1) 0, j = n;  y = 110, j = 1;  y = 100, j = 3.  The slopes of the two
+    families are 3 * 2^(n-1); those of the two exceptional pairs are 16 and 11.
+Proof.  A Hamiltonian path is S1 a S2 with S1, S2 increasing runs partitioning the spine, last(S1) -> a (bit 0) and
+a -> first(S2) (bit 1).  (a) S1 empty: [y_1 = 1].  S2 empty: [y_n = 0].  Otherwise let z_k = max S1 (y_k = 0) and
+z_i = min S2 (y_i = 1); all vertices above k are in S2 and all below i in S1.  If i > k then i = k + 1 and the
+partition is determined: J(y).  If i < k the k - i - 1 vertices between are free: 2^(k-i-1).
+(b) P2 = a S2 with S2 empty (1 cover: P1 = the spine) or min S2 = z_i with y_i = 1; the vertices below i are in P1 and
+those above are free: 2^(n-i).
+(c) Q(z_j, a): P1 is a run with maximum z_j, P2 = a S2, S2 contains everything above j.  If min S2 = z_i with i < j:
+y_i = 1, vertices between free: 2^(j-1-i), total p_j.  If S2 is exactly the set above j: one cover iff j = n or
+y_(j+1) = 1.  Q(a, z_j): P1 = S1 a, P2 a run with minimum z_j; S1 contains everything below j.  If max S1 = z_k,
+k > j: y_k = 0 and 2^(k-j-1) choices, total q_j.  If S1 is exactly the set below j: one cover iff j = 1 or
+y_(j-1) = 0.
+(d) Let Y = y_1 .. y_(j-1), Z = y_(j+1) .. y_n, p = p_j, q = q_j.  Splitting the pairs of I(y):
+I(y) = I(Y) + I(Z) + 2pq + (q if y_j = 1, p if y_j = 0).  With beta = 2 + J(y) - [j = n or y_(j+1) = 1]
+- [j = 1 or y_(j-1) = 0] >= J(y) >= 0:
+     r = beta + I(Y) + I(Z) + p (2q - 1)  if y_j = 1,        r = beta + I(Y) + I(Z) + q (2p - 1)  if y_j = 0.
+ y_j = 1 (so j < n and q >= 1, because y_n = 0).  If j = 1: p = 0, beta = 1 + J - [y_2 = 1], r = 1 iff
+ J + I(Z) = [y_2 = 1].  For y_2 = 0 this means Z = 0^(n-1) (no inversion, no 01 junction, last letter 0).  For
+ y_2 = 1, Z begins with 1 and ends with 0, so I(Z) >= 2^(n-3) (n >= 3), and I(Z) + J = 1 forces n = 3, y = 110.
+ If j >= 2: p >= 2^(j-2) >= 1, so p (2q - 1) >= 1 and r = 1 forces beta = 0, p = q = 1, hence j = 2, y_3 = 0 and
+ y_k = 1 for k > 3; with y_n = 0 this is y = 110, j = 2, where beta = 2.  No solution.
+ y_j = 0 (so j > 1 and p >= 1).  If j = n: q = 0, beta = 1 + J - [y_(n-1) = 0], r = 1 iff J + I(Y) = [y_(n-1) = 0].
+ For y_(n-1) = 1: Y has no inversion and begins with 1, so Y = 1^(n-1).  For y_(n-1) = 0: Y begins with 1 and ends
+ with 0, I(Y) >= 2^(n-3), so n = 3, y = 100.  If j < n: q >= 1, q (2p - 1) >= 1, so beta = 0 and p = q = 1: j = 2,
+ n = 3, y = 100, where beta = 2.  No solution.
+ Slopes: for y = 1 0^(n-1), U(a) = 1 + 2^(n-1) by (b); U(z_1) = 2^(n-1) (P2 = z_1 S, P1 the rest with a last) +
+ 2^(n-1) - 1 (P2 = z_1 S' a, S' nonempty); total 3 * 2^(n-1).  For y = 1^(n-1) 0, U(a) = 1 + 2^n - 2 by (b);
+ U(z_n) = 1 (P2 = z_n, P1 = a z_1 ... z_(n-1)) + 2^(n-1) (P2 = z_n a S, S any run of z_1 .. z_(n-1)); total
+ 3 * 2^(n-1).  The two exceptional slopes are read from the census.  QED
+Checked: a_verify.out V5 (all 2,046 words of length <= 10); (d) and the rules below against the complete census
+d_one_14.npz (d_one_rules_check.out, R1-R5).
+FINITE-EXACT (d_one_14.out; all words of length n <= 14, every O):
+  - every unit set over a one-apex base has at most two vertices;
+  - unit pairs with |O| = 2 (all words): 3, 12, 30, 68, 134, 252, 431, 688, 1044, 1530, 2169, 3046, 4228 seeds for
+    n = 2, ..., 14 (ratios falling from 4 to 1.39; local degree log(ratio)/log(n/(n-1)) between 3.9 and 4.4);
+    anti-seeds: 5493 at n = 14;
+  - the seed slopes of all one-apex bases of length <= 14 fill 23, 58, 115, 195, 318, 533 integers of
+    [2^k, 2^(k+1)) for k = 6, 8, ..., 16: shares 0.359, 0.227, 0.112, 0.048, 0.019, 0.008.
+NUMERICAL reading: the one-apex seed slopes are thin; their counting function grows like X^0.36 on this range (a
+factor about 1.65 per two bits).  Largest slopes: 3^n-like (50 * 3^(n-4) - 3 for the pair {z_1, z_2} of y = 1^(n-2) 00).
+Rules with r = 1 on an infinite regular set (all with exponential slopes, none of positive density):
+  y = 1 0^(n-1), {a, z_1} and y = 1^(n-1) 0, {a, z_n}: M = 3 * 2^(n-1);
+  y = 1^a 00, twins {z_j, z_(j+1)}, j < a: M = 50 * 3^(a-2) - 3 (j = 1) and 100 * 2^(j-2) 3^(a-j-1) (j >= 2)
+  [FINITE-EXACT a <= 12; the unit offset is PROVED: r = H(1^a 0^b) - 2 H(1^(a-1) 0^b) = 2^b - 3 by (a) and the twin
+  lemma THM-5130 (F3), which is 1 iff b = 2];
+  y = 11 0^b, twins {z_j, z_(j+1)} in the 0-block: r = 2^2 - 3 = 1 by the same computation; M = 30 * 3^(b-2) - 1
+  (j = 3) and 60 * 2^(j-4) 3^(b-j+1) (j >= 4) [FINITE-EXACT b <= 12].
+  Twins in a 0-block with prefix Y and suffix Z are a unit pair iff val(Y) = 1 + [y_1 = 1] + [y_n = 0] + J + I(Y) + I(Z)
+  [PROVED: H as a function of the block length a is (C - p) + p (q + 1) 2^a with C = [y_1 = 1] + [y_n = 0] + J + I(Y)
+  + I(Z), p = val(Y), q = q(Z), and the twin lemma gives r = p - C]: one equation between two words.
+
+7. Two-apex bases                                                                 [FINITE-EXACT counts, NUMERICAL]
+-----------------------------------------------------------------------------------------------------------------
+B(a, b): spine with two apexes u -> v, one letter (a_i, b_i) per spine vertex; all 4^n words, n <= 10, every O
+(d_two_9.out, d_two_10_10.out, d_two_types.out, d_two_windows.out).
+  - seeds: 12, 54, 178, 497, 1297, 3360, 7836, 17320, 35842, 70887 pairs for n = 1, ..., 10 (ratios 4.5, 3.3, 2.79,
+    2.61, 2.59, 2.33, 2.21, 2.07, 1.98); |O| <= 3; anti-seeds: 69722 at n = 10.
+  - by type at n = 10 (apexes in O + number of spine vertices): two spine vertices 39622 (ratio to n = 9: 1.94), one
+    apex and two spine vertices 7727 each (2.66), both apexes and one spine vertex 6838 (1.78), one apex and one spine
+    vertex 3771 each (1.56), three spine vertices 440, one vertex 792, both apexes 199.
+  - distinct seed slopes of the words of length <= 10: 29361; median of log2(slope) over the pairs of length n:
+    5.46, 6.58, 8.04, 9.49, 10.85, 12.20, 13.57 for n = 4, ..., 10 (+1.36 per letter), largest slope about 4^n.
+  - share of the integers of [2^k, 2^(k+1)) that are seed slopes of a two-apex base of length <= 10: 0.453 (k = 6),
+    0.414, 0.527, 0.598, 0.578, 0.618 (k = 11), 0.564 (k = 12), then 0.490, 0.361, 0.199 (k = 13, 14, 15; these windows
+    are not saturated at length 10).  For k <= 8 these are (almost) all seed slopes there are (Theorem 5 (d)): 29 of 29
+    in [64, 128), 53 of 53 in [128, 256), 135 of 136 in [256, 512).
+NUMERICAL reading.  Up to 2^13 the two-apex bases give seed slopes of density about 0.55 to 0.6; whether this density
+persists is NOT decided by these data.  The number of pairs per letter grows by a factor that is still falling at
+n = 10 (1.98) while the slopes move up by a factor 2.57 per letter, which points to a thin family at large scales.
+No word family with r = 1 and slope affine in the word was found, in either family: by Theorem 6 (b) the only
+affine part is U_B(apex), and r = H(B) - W(O) = 1 is one equation between exponential sums of the word.
+
+8. Summary of what is and is not proved
+---------------------------------------
+PROVED here: Theorems 1, 2, 2', Lemma G, Theorem 4 (thinness of towers over any finite set of unit neutral gadgets,
+exponent 0.7885 for the towers of THM-5130), Theorem 5 (b), (c), (d), Theorem 6, the Corollary on lines.
+REFUTED here: HYP-9662 (D), first sentence (order 8).
+FINITE-EXACT: the census of unit pairs to order 10, the neutral gadgets to order 9, one-apex bases to length 14,
+two-apex bases to length 10.
+OPEN: Chan-Pak; a seed for every odd c (HYP-9658 (A)); positive lower density of the seed slopes (HYP-9662 (B)); a
+lower bound for the number of distinct tower slopes; the exponent of the towers over all unit neutral gadgets.

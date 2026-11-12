@@ -1,0 +1,6 @@
+min-score one-vertex extensions of the 191536 codes of order 9: 15773048
+order 5: 12 codes; sum n!/|Aut| = 1024 (2^C(n,2) = 1024); trivial group: 7; sum of H over labelled tournaments = 7680 (n! 2^(C(n,2)-n+1) = 7680)
+order 6: 56 codes; sum n!/|Aut| = 32768 (2^C(n,2) = 32768); trivial group: 41; sum of H over labelled tournaments = 737280 (n! 2^(C(n,2)-n+1) = 737280)
+order 7: 456 codes; sum n!/|Aut| = 2097152 (2^C(n,2) = 2097152); trivial group: 399; sum of H over labelled tournaments = 165150720 (n! 2^(C(n,2)-n+1) = 165150720)
+order 8: 6880 codes; sum n!/|Aut| = 268435456 (2^C(n,2) = 268435456); trivial group: 6556; sum of H over labelled tournaments = 84557168640 (n! 2^(C(n,2)-n+1) = 84557168640)
+order 9: 191536 codes; sum n!/|Aut| = 68719476736 (2^C(n,2) = 68719476736); trivial group: 188337; sum of H over labelled tournaments = 97409858273280 (n! 2^(C(n,2)-n+1) = 97409858273280)

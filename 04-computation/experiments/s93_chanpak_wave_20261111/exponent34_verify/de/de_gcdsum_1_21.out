@@ -1,0 +1,23 @@
+w= 1 odd pairs=2  S_w=2.000000  S_w/6^(w/2)=0.8165  S_w/2^(3w/2)=0.70711  height-1 pairs=2 (=0.8165*6^(w/2))  max height hit=1  combos=210  brute-force cross-check OK  0.8s
+w= 2 odd pairs=4  S_w=4.000000  S_w/6^(w/2)=0.6667  S_w/2^(3w/2)=0.50000  height-1 pairs=4 (=0.6667*6^(w/2))  max height hit=1  combos=195  brute-force cross-check OK  0.1s
+w= 3 odd pairs=16  S_w=12.800000  S_w/6^(w/2)=0.8709  S_w/2^(3w/2)=0.56569  height-1 pairs=12 (=0.8165*6^(w/2))  max height hit=5  combos=180  brute-force cross-check OK  0.0s
+w= 4 odd pairs=64  S_w=29.823510  S_w/6^(w/2)=0.8284  S_w/2^(3w/2)=0.46599  height-1 pairs=24 (=0.6667*6^(w/2))  max height hit=13  combos=165  brute-force cross-check OK  0.0s
+w= 5 odd pairs=256  S_w=89.511788  S_w/6^(w/2)=1.0151  S_w/2^(3w/2)=0.49449  height-1 pairs=72 (=0.8165*6^(w/2))  max height hit=29  combos=150  brute-force cross-check OK  0.0s
+w= 6 odd pairs=1024  S_w=194.628285  S_w/6^(w/2)=0.9011  S_w/2^(3w/2)=0.38013  height-1 pairs=144 (=0.6667*6^(w/2))  max height hit=61  combos=135  brute-force cross-check OK  0.0s
+w= 7 odd pairs=4096  S_w=559.004836  S_w/6^(w/2)=1.0565  S_w/2^(3w/2)=0.38601  height-1 pairs=432 (=0.8165*6^(w/2))  max height hit=125  combos=120  brute-force cross-check OK  0.0s
+w= 8 odd pairs=16384  S_w=1189.200366  S_w/6^(w/2)=0.9176  S_w/2^(3w/2)=0.29033  height-1 pairs=864 (=0.6667*6^(w/2))  max height hit=253  combos=105  brute-force cross-check OK  0.0s
+w= 9 odd pairs=65536  S_w=3363.004082  S_w/6^(w/2)=1.0594  S_w/2^(3w/2)=0.29028  height-1 pairs=2592 (=0.8165*6^(w/2))  max height hit=509  combos=91  brute-force cross-check OK  0.1s
+w=10 odd pairs=262144  S_w=7040.661878  S_w/6^(w/2)=0.9054  S_w/2^(3w/2)=0.21486  height-1 pairs=5184 (=0.6667*6^(w/2))  max height hit=1021  combos=78  brute-force cross-check OK  0.2s
+w=11 odd pairs=1048576  S_w=19946.761456  S_w/6^(w/2)=1.0472  S_w/2^(3w/2)=0.21522  height-1 pairs=15552 (=0.8165*6^(w/2))  max height hit=2045  combos=66  brute-force cross-check OK  0.5s
+w=12 odd pairs=4194304  S_w=40794.949294  S_w/6^(w/2)=0.8744  S_w/2^(3w/2)=0.15562  height-1 pairs=31104 (=0.6667*6^(w/2))  max height hit=4093  combos=55    0.0s
+w=13 odd pairs=16777216  S_w=115402.907754  S_w/6^(w/2)=1.0098  S_w/2^(3w/2)=0.15564  height-1 pairs=93312 (=0.8165*6^(w/2))  max height hit=8189  combos=45    0.1s
+w=14 odd pairs=67108864  S_w=235466.848223  S_w/6^(w/2)=0.8411  S_w/2^(3w/2)=0.11228  height-1 pairs=186624 (=0.6667*6^(w/2))  max height hit=16381  combos=36    0.3s
+w=15 odd pairs=268435456  S_w=667995.428360  S_w/6^(w/2)=0.9742  S_w/2^(3w/2)=0.11262  height-1 pairs=559872 (=0.8165*6^(w/2))  max height hit=32765  combos=28    0.7s
+w=16 odd pairs=1073741824  S_w=1360596.281994  S_w/6^(w/2)=0.8101  S_w/2^(3w/2)=0.08110  height-1 pairs=1119744 (=0.6667*6^(w/2))  max height hit=65533  combos=21    1.7s
+w=17 odd pairs=4294967296  S_w=3873634.619180  S_w/6^(w/2)=0.9415  S_w/2^(3w/2)=0.08163  height-1 pairs=3359232 (=0.8165*6^(w/2))  max height hit=131069  combos=15    3.8s
+w=18 odd pairs=17179869184  S_w=7819529.962847  S_w/6^(w/2)=0.7759  S_w/2^(3w/2)=0.05826  height-1 pairs=6718464 (=0.6667*6^(w/2))  max height hit=262141  combos=10    12.7s
+w=19 odd pairs=68719476736  S_w=22537574.974832  S_w/6^(w/2)=0.9130  S_w/2^(3w/2)=0.05937  height-1 pairs=20155392 (=0.8165*6^(w/2))  max height hit=524285  combos=6    32.6s
+w=20 odd pairs=274877906944  S_w=45368864.623067  S_w/6^(w/2)=0.7503  S_w/2^(3w/2)=0.04225  height-1 pairs=40310784 (=0.6667*6^(w/2))  max height hit=1048573  combos=3    62.3s
+w=21 odd pairs=1099511627776  S_w=131666014.793792  S_w/6^(w/2)=0.8890  S_w/2^(3w/2)=0.04335  height-1 pairs=120932352 (=0.8165*6^(w/2))  max height hit=2097149  combos=1    163.0s
+written de_gcdsum.json
+done

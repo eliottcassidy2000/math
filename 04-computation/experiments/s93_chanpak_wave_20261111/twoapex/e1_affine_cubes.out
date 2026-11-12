@@ -1,0 +1,37 @@
+n = 2: 16 words; affine 2-cubes: 10 ({('same position', 'aab'): 0, ('same position', 'ab'): 0, ('same position', 'abb'): 0, ('two positions', 'aa'): 0, ('two positions', 'aab'): 0, ('two positions', 'ab'): 8, ('two positions', 'abab'): 2, ('two positions', 'abb'): 0, ('two positions', 'bb'): 0}); affine 3-cubes: 0; sampled increment triples with all increments nonzero: 0
+n = 3: 64 words; affine 2-cubes: 87 ({('same position', 'aab'): 2, ('same position', 'ab'): 0, ('same position', 'abb'): 2, ('two positions', 'aa'): 0, ('two positions', 'aab'): 12, ('two positions', 'ab'): 47, ('two positions', 'abab'): 12, ('two positions', 'abb'): 12, ('two positions', 'bb'): 0}); affine 3-cubes: 2; sampled increment triples with all increments nonzero: 16
+    example affine 3-cube with nonzero increments: base 210 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 310 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 230 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 330 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    affine 4-cubes at n = 3: 0
+n = 4: 256 words; affine 2-cubes: 405 ({('same position', 'aab'): 11, ('same position', 'ab'): 0, ('same position', 'abb'): 11, ('two positions', 'aa'): 0, ('two positions', 'aab'): 58, ('two positions', 'ab'): 215, ('two positions', 'abab'): 52, ('two positions', 'abb'): 58, ('two positions', 'bb'): 0}); affine 3-cubes: 4; sampled increment triples with all increments nonzero: 32
+    example affine 3-cube with nonzero increments: base 2103 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 3103 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 2303 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 3303 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    affine 4-cubes at n = 4: 0
+n = 5: 1024 words; affine 2-cubes: 1514 ({('same position', 'aab'): 34, ('same position', 'ab'): 0, ('same position', 'abb'): 34, ('two positions', 'aa'): 0, ('two positions', 'aab'): 227, ('two positions', 'ab'): 834, ('two positions', 'abab'): 158, ('two positions', 'abb'): 227, ('two positions', 'bb'): 0}); affine 3-cubes: 6; sampled increment triples with all increments nonzero: 48
+    example affine 3-cube with nonzero increments: base 21033 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 31033 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 23033 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 33033 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    affine 4-cubes at n = 5: 0
+n = 6: 4096 words; affine 2-cubes: 4899 ({('same position', 'aab'): 89, ('same position', 'ab'): 0, ('same position', 'abb'): 89, ('two positions', 'aa'): 0, ('two positions', 'aab'): 703, ('two positions', 'ab'): 2849, ('two positions', 'abab'): 466, ('two positions', 'abb'): 703, ('two positions', 'bb'): 0}); affine 3-cubes: 8; sampled increment triples with all increments nonzero: 64
+    example affine 3-cube with nonzero increments: base 210333 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 310333 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 230333 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 330333 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    affine 4-cubes at n = 6: 0
+n = 7: 16384 words; affine 2-cubes: 14340 ({('same position', 'aab'): 190, ('same position', 'ab'): 0, ('same position', 'abb'): 190, ('two positions', 'aa'): 0, ('two positions', 'aab'): 1991, ('two positions', 'ab'): 8660, ('two positions', 'abab'): 1318, ('two positions', 'abb'): 1991, ('two positions', 'bb'): 0}); affine 3-cubes: 10; sampled increment triples with all increments nonzero: 80
+    example affine 3-cube with nonzero increments: base 2103333 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 3103333 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 2303333 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+    example affine 3-cube with nonzero increments: base 3303333 moves ((0, 1), (1, 2), (2, 3)) increments (2, 2, 10)
+
+fixed word b, free word a: H is a polynomial of degree <= 2 in the bits of a; c_ij(b) = d_i d_j H.
+  n = 3: largest set of a-bits with all c_ij(b) = 0, over all b: 1 (b = 000, positions [1]); every c_ij(b) <= 0: True
+  n = 4: largest set of a-bits with all c_ij(b) = 0, over all b: 1 (b = 0000, positions [1]); every c_ij(b) <= 0: True
+  n = 5: largest set of a-bits with all c_ij(b) = 0, over all b: 1 (b = 00000, positions [1]); every c_ij(b) <= 0: True
+  n = 6: largest set of a-bits with all c_ij(b) = 0, over all b: 1 (b = 000000, positions [1]); every c_ij(b) <= 0: True
+  n = 7: largest set of a-bits with all c_ij(b) = 0, over all b: 1 (b = 0000000, positions [1]); every c_ij(b) <= 0: True

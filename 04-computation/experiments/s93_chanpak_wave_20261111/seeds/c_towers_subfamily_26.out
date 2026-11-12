@@ -1,0 +1,14 @@
+i >= 2, X = 2^26: distinct reduced states 96129; distinct (sign, slope) 76099; classes with several states 11751; largest class 10
+    sign -1 slope 384: G=0 via ('pair', 1, 7) | G=64 via ('fan', 1, (1, 2, 2))
+    sign -1 slope 3744: G=1440 via ('pair', 1, 0, (1, 2, 1), (1, 2, 0)) | G=960 via ('pair', 1, 0, (1, 2, 0), (1, 2, 1))
+    sign +1 slope 5616: G=768 via ('pair', 1, 2, (2, 2, 2)) | G=1472 via ('fan', 1, (1, 2, 0), (1, 3, 1))
+    sign -1 slope 6240: G=2400 via ('pair', 2, 0, (1, 2, 1), (1, 2, 0)) | G=1600 via ('pair', 2, 0, (1, 2, 0), (1, 2, 1))
+    sign -1 slope 7344: G=2880 via ('pair', 1, 0, (1, 2, 1), (1, 3, 0)) | G=1920 via ('pair', 1, 0, (1, 2, 0), (1, 3, 1))
+    sign -1 slope 7488: G=2880 via ('pair', 1, 1, (1, 2, 1), (1, 2, 0)) | G=1920 via ('pair', 1, 1, (1, 2, 0), (1, 2, 1))
+i >= 3, X = 2^26: distinct reduced states 25748; distinct (sign, slope) 20133; classes with several states 2807; largest class 9
+    sign -1 slope 384: G=0 via ('pair', 1, 7) | G=64 via ('fan', 0, (1, 3, 2))
+    sign +1 slope 5616: G=768 via ('pair', 1, 1, (2, 3, 2)) | G=1472 via ('fan', 0, (1, 3, 0), (1, 3, 1))
+    sign -1 slope 14688: G=5760 via ('pair', 1, 0, (1, 3, 1), (1, 3, 0)) | G=3840 via ('pair', 1, 0, (1, 3, 0), (1, 3, 1))
+    sign -1 slope 24480: G=9600 via ('pair', 2, 0, (1, 3, 1), (1, 3, 0)) | G=6400 via ('pair', 2, 0, (1, 3, 0), (1, 3, 1))
+    sign +1 slope 27616: G=11008 via ('fan', 1, (1, 3, 0), (1, 6, 0)) | G=8448 via ('fan', 0, (1, 3, 1), (2, 4, 0))
+    sign -1 slope 29088: G=11520 via ('pair', 1, 0, (1, 3, 1), (1, 4, 0)) | G=7680 via ('pair', 1, 0, (1, 3, 0), (1, 4, 1))

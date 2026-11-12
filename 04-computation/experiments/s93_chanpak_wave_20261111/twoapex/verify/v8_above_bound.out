@@ -1,0 +1,8 @@
+n = 16: primitive words with H >= 2^26: 667; distinct values: 341; largest multiplicity of a value: 2; 8.2 s
+n = 17: primitive words with H >= 2^26: 301884199; distinct values: 27675301; largest multiplicity of a value: 84; 50.0 s
+all words of length 17 with H >= 2^26: 301885533 (lane: 301885533)
+sum over N >= 2^26 of c_17(N)^2 = 6330184577; largest c_17(N) for N >= 2^26: 84 at N = 67677509; distinct values >= 2^26: 27675301
+EXACT E_17 = 19383291132038; E_17 (3/16)^17 = 8.48104; 4^34 / E_17 = 15226924.2 = 3^17 / 8.481
+distinct values of the words of length exactly 17: 61229731 = 0.4741 * 3^17
+   N in [67108864, 134217728): odd N 33554432, zeros 7622574, mean multiplicity 8.89, max 84
+   N in [134217728, 258280327): odd N 62031299, zeros 60287856, mean multiplicity 0.06, max 10

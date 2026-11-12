@@ -1,0 +1,131 @@
+LANE "digits" (S93 Chan-Pak wave) - PROOFS written by the FINISHING agent (2026-11-11).
+
+The lane was interrupted before it wrote the file PROOFS.txt that its docstrings cite (P1, P2, P3, P4).  This file
+supplies the arguments that could be written and checked in the finishing pass.  They have NOT been read by a second
+auditor.  Nothing here touches the Chan-Pak conjecture, which stays OPEN.
+
+Notation.  T tournament, z a vertex (the mark).  h = H(T) (Hamiltonian paths), e = End_T(z) (those ending at z),
+B = U_T(z) = number of ordered pairs (P1, P2) of disjoint paths covering T with P1 possibly empty and P2 starting
+at z, g = H(T - z), with the convention g = 1 when T = {z}.  State s(T, z) = (h, e, B, g).  Always B >= g
+(P2 = {z}, P1 a Hamiltonian path of T - z; for T = {z}: B = g = 1).
+
+----------------------------------------------------------------------------------------------------------------
+P1.  ONE-MARK BLOCK LAW.  Block op (X, W, m): T' = T u X, T - z => X (every vertex of T - z beats every vertex of
+X), z -> X - W, W -> z, |X| >= 1; new mark m = z or m in X.  Then s(T', m) = N s(T, z) for an integer 4 x 4 matrix
+N that depends only on (X, W, m).
+
+Proof.  (S) The only arcs from X to T are the arcs w -> z, w in W.  Let a path system on T' be one directed path,
+or an ordered pair of disjoint paths, covering T' (or T' - m).  Cut every path into maximal T-segments and
+X-segments.  A T-segment is either initial in its path or is entered from X, hence by (S) starts at z; z lies in
+one segment, so there is at most one entered segment Z (it starts at z).  A T-segment that is followed by an
+X-vertex x imposes a condition on x only if it ends at z (then x is not in W); a segment that does not contain z,
+and a segment Z != {z} (it starts at z, so it ends elsewhere), impose none.
+Trace on T.  In each of the eight counts (h', e', B', g' for m = z and for m in X) the trace of the system on T is
+of one of two kinds:
+  (alpha) one segment covering T that is initial and not required to start at z: h traces, e of them ending at z;
+  (beta)  a pair (A, Z): A an initial segment avoiding z, possibly empty, Z a segment starting at z (entered from
+          W, or the initial segment of a path required to start at z): B traces, exactly g of them with Z = {z}
+          (for T = {z}: the single trace (empty, {z}), and g = 1 by convention).
+No other trace occurs: one path has at most one initial and one entered segment; for B' with m = z the path P2
+starts at z, so nothing is entered and the trace is (A, Z) with A = P1's initial segment; for B' with m in X the
+path P2 starts in X and can reach T only through the one entry, so the trace is (alpha) (P1 starts with a
+Hamiltonian path of T) or (beta) (A = P1's initial segment, Z entered in P1 or in P2).
+Completion on X.  Given the trace, the admissible configurations on X (the X-segments, their order, the conditions
+"ends in W" before Z, "does not start in W" after a segment ending at z, the boundary condition at m) depend only
+on the kind of the trace and on the bit "the segment before an X-vertex ends at z", not on T; in kind (beta) they
+do not depend on whether A is empty (A never contains z, and a path that would start with A simply starts in X,
+or is the empty P1).  Hence every count equals
+        c1 (h - e) + c2 e + c3 (B - g) + c4 g
+with c1..c4 depending only on (X, W, m) and on which coordinate is counted; g' for m = z is g H(X), for m in X it
+is the count h' of the block (X - m, W - m) (and h when X = {m}).  For T = {z} the formula is right as well:
+h - e = 0, e = 1, B - g = 0, g = 1 select exactly the traces ({z}) and (empty, {z}).                       QED
+
+Explicit forms used by the scripts (same argument, written out):
+  h' = (h - e) H(X) + e Start_X(X - W) + (B - g) Q + g Q_W,
+       Q = #{(Y1, Y2): disjoint paths covering X, Y1 nonempty ending in W, Y2 possibly empty},
+       Q_W = those with Y2 empty or starting outside W;
+  m = z:  e' = g End_X(W),  B' = (B - g) Pi + g Pi_W,  g' = g H(X),
+       Pi = #{(Y1, Y2) covering X, both possibly empty}, Pi_W = those with Y2 empty or starting outside W.
+One-vertex ops (X = {x}):
+  a (W = {x}, stay):  (h - e + B, g, 2B - g, g)        b (W = {x}, move):  (h - e + B, h - e, B + h, h)
+  c (W = {},  stay):  (h, 0, 2B, g)                    d (W = {},  move):  (h, h, h, h)
+(a: x has the single out-neighbour z.  Paths of T': x last after a path of T not ending at z (h - e); or
+[P1] x P2 with P2 starting at z (B).  Ending at z: (path of T - z) x z: g.  Pairs with P2 starting at z: x ends P1
+(B) or x ends P2 != {z} (B - g).  b: same tournament, mark x: paths ending at x: h - e; pairs with P2 starting at
+x: P2 = {x} (h) or P2 = x z ... (B); T' - x = T.  c, d: x is a sink.)
+Computer check (onemark.py): the matrices of all 202,012 labelled block ops with |X| <= 5, interpolated on four
+bases, reproduce the state of every marked tournament of order <= 5 with |T| + |X| <= 8 (0 failures).
+
+----------------------------------------------------------------------------------------------------------------
+P3.  CLASS SPACES (affine.py, F1 and F2).  States s in Q^d, operations G_1..G_k (d x d), readout row L, H = L s.
+
+(F1) Let K be a set of states with G K contained in K and L G s = a L s + b on K (a, b constants).  If L is not
+constant on K then a is an eigenvalue of G.  If moreover G is an integer matrix (or the matrix of an integer matrix
+on an invariant subquotient) and the states have integer H, then a is an integer.
+Proof.  W0 = span{s - s' : s, s' in K} is G-invariant and L G w = a L w on W0; L restricted to W0 is nonzero, so it
+is a left eigenvector of G|W0.  a = L G w / L w is rational, and a rational eigenvalue of an integer matrix is an
+integer.  QED
+(For extension operations H(G s) >= H(s) >= 1, so a class on which H is not eventually constant has a >= 1.)
+
+(F2) Fix multipliers a_i, lambda_i = L G_i - a_i L.  The orbit of s under the monoid generated by the G_i obeys
+H(G_i t) = a_i H(t) + b_i with constants b_i for every t in the orbit iff s lies in
+        C = { s : lambda_i (G_w - I) s = 0 for every word w and every i },
+and then b_i = lambda_i s.  C is a G-invariant subspace, the annihilator of the smallest row space V that contains
+the rows lambda_i (G_j - I) and is closed under right multiplication by every G_j.
+Proof.  The condition reads lambda_i G_w s = lambda_i s for all w, i.  Invariance: lambda_i (G_w - I) G_j s =
+lambda_i (G_(wj) - I) s - lambda_i (G_j - I) s.  The same identity, read as
+lambda_i (G_(wj) - I) = lambda_i (G_w - I) G_j + lambda_i (G_j - I), shows by induction on |w| that all these rows
+lie in V, and that their span is closed under right multiplication, hence equals V.  QED
+Two maps x -> a_1 x + b_1, x -> a_2 x + b_2 commute iff (a_2 - 1) b_1 = (a_1 - 1) b_2, i.e. iff
+kappa s = 0, kappa = (a_2 - 1) lambda_1 - (a_1 - 1) lambda_2.  If all maps of a system commute pairwise on a
+class they have a common fixed point p (or are all translations) and the values are p + (h0 - p) prod a_i^(e_i):
+no covering.  So a covering digit system needs a pair with kappa s != 0 for an ACTUAL state s in C.
+
+----------------------------------------------------------------------------------------------------------------
+P4.  ONE-APEX WORDS.  A word l_1 ... l_k in {a, c} (first letter = first new vertex) is the stay block (TT_k, W),
+W = {p : l_p = a}.  Its matrix is
+        [ 1  -sigma   V   -Wd ]      sigma = [1 in W], eps = [k in W],
+        [ 0    0      0   eps ]      V = sum_{p in W} 2^(p-1),  U = sum_{p in W} 2^(k-p),
+        [ 0    0     2^k  -U  ]      Wd = #{p : p, p+1 in W} + sum_{e > f in W} 2^(e-f-1).
+        [ 0    0      0    1  ]
+Proof by induction on k from the matrices of a and c (P1).  k = 1: a gives sigma = eps = V = U = 1, Wd = 0; c gives
+all zero.  Step: left multiplication by c keeps rows 1, 4, kills row 2, doubles row 3: (sigma, V, Wd, eps, U) ->
+(sigma, V, Wd, 0, 2U), as the definitions require for k + 1 not in W.  Left multiplication by a: row 1 becomes
+row1 - row2 + row3 = (1, -sigma, V + 2^k, -(Wd + eps + U)); row 2 becomes row 4; row 3 becomes 2 row3 - row4 =
+(0, 0, 2^(k+1), -(2U + 1)); and indeed V' = V + 2^k, U' = 2U + 1, eps' = 1,
+Wd' = Wd + [k in W] + sum_{f in W} 2^(k-f) = Wd + eps + U.  QED   (Checked against the product of the one-vertex
+matrices for all 8,190 words with k <= 12: finish_checks.py.)
+
+Criterion.  With L = (1, 0, 0, 0), a = 2^k: lambda = (1 - 2^k, -sigma, V, -Wd),
+mu = lambda (N - I) = (0, sigma 2^k, 0, (2^k - 1) Wd - sigma eps - V U),
+mu N = (0, 0, 0, sigma eps 2^k + (2^k - 1) Wd - sigma eps - V U) = mu N^j for every j >= 1.
+So a state with g != 0 lies in C(N; 2^k) iff  V U = (2^k - 1)(Wd + sigma eps)  and  sigma (e - eps g) = 0.  QED
+For W = {1..k} (the word a^k): V = U = 2^k - 1, Wd = (k - 1) + sum_{d=1}^{k-1} (k - d) 2^(d-1) = 2^k - 2,
+sigma = eps = 1: equality holds; the class is e = g (true after one letter a), and the offset is
+b = lambda s = (1 - 2^k) h - e + (2^k - 1) B - (2^k - 2) g, which for e = g equals (2^k - 1) beta with
+beta = B - h - g constant on the ray: the fan line  H + beta -> 2^k (H + beta).
+Enumeration (oneapex_exact_words.py, FINITE-EXACT): for k <= 24 the full set is the ONLY nonempty W with
+V U = (2^k - 1)(Wd + sigma eps).  No proof for all k is given here.
+
+----------------------------------------------------------------------------------------------------------------
+P5.  WHAT ONE ACTUAL EXACT PAIR WOULD GIVE.  Suppose an actual state s0 (H = h0) lies in a class on which two
+operations act as H -> 2H + b1 and H -> 2H + b2 with constants b1 < b2 (both odd).  After k steps the values are
+2^k h0 + (2^k - 1) b1 + (b2 - b1) m, m = 0, 1, ..., 2^k - 1: 2^k DISTINCT path counts below 2^k c0,
+c0 = h0 + max(b2, 0).  Hence A(X) >= X / (2 c0) for X >= c0: positive lower density of the path-count spectrum
+(OPEN, HYP-9662 (B)).
+If b2 - b1 = 2 the values fill every odd number of [2^k (h0 + b1) - b1, 2^k (h0 + b2) - b2].  With multipliers
+(a1, a2) the same count gives X^delta values, a1^(-delta) + a2^(-delta) = 1, so only multiplier sets with
+sum 1/a_i >= 1 can give density.  The class cannot contain a state with H in {1, 3, 5, 11} when (b1, b2) = (-1, 1)
+(7 = 2*3 + 1, 21 = 2*11 - 1 and their preimages 5 -> 11, 1 -> 3 are not path counts or lead to them).
+
+----------------------------------------------------------------------------------------------------------------
+P2.  (NOT a complete proof - recorded as a sketch.)  Rule sets in which every new vertex is beaten by all current
+vertices except a bounded set of current marks (marks may move to new vertices) have a finite-dimensional state:
+arcs from new vertices to the base T end only at the original marks, so a path system re-enters T at most (number
+of marks) times and its trace on T is one of finitely many kinds, as in P1.  For two marks the Hankel rank found is
+17 (twomark.py; verified on fresh bases of orders 6, 7, not proved to be closed).  For the mixed rules D (new v
+beats only z, mark := v) and U (new v beats everything except z, mark := v) each pair D U creates a connector
+t -> v1 -> v2 -> t' between arbitrary base vertices, so (D U)^n involves covers of T by n + 1 paths; the Hankel rank
+over bases of order <= n is 1, 3, 6, 9, 12, 15 for n = 1..6 (exact lower bounds), i.e. 3 (n - 1) for n >= 2, while
+it stabilises at 7 with the mark fixed and at 4 for the below-only rules a, b (mixed_rules_rank*.out).  That the
+rank is unbounded is NOT proved.

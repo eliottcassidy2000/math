@@ -1,0 +1,67 @@
+[exhaustive] a in [1, 4096], L = j/2 (2 <= j <= 1024), ds in {0,1}: 8380416 instances  (46.1s)
+  max (count - 2 dl L)/B = 0.370156 at a = 15, L = 2.5, ds = 0
+  max N D_N / B (L >= a^(1/3)) = 0.457680 at a = 3465, L = 44.5, ds = 0
+  exact recheck of the first: N = 2, E_L = 2 = 2.000000
+  exact recheck of the second: N = 23, N D_N = 80/7 = 11.428571
+  top a for E_L/B: [(15, 0.3702, 2.5, 0), (34, 0.3581, 4.5, 0), (30, 0.3481, 2.5, 0), (8, 0.345, 2.5, 0), (7, 0.3444, 2.5, 0)]
+  top a for N D_N/B: [(3465, 0.4577, 44.5, 0), (3466, 0.4529, 44.5, 0), (3464, 0.4509, 44.5, 0), (3467, 0.4462, 44.5, 0), (3463, 0.444, 44.5, 0)]
+[random: |a| log-uniform <= 2^40, L log-uniform <= 2^16] instances = 200000
+  max (count - 2 dl L)/B over all theta, dl:  0.370082
+     a = -15, ds = 1, L = np.float64(2.501072254943689): N = 2, E_L = 2.000000, B = 5.404209, ratio = 0.370082
+     a = -15, ds = 0, L = np.float64(2.5110984657260387): N = 2, E_L = 2.000000, B = 5.414357, ratio = 0.369388
+     a = -15, ds = 1, L = np.float64(2.60143159401487): N = 2, E_L = 2.000000, B = 5.505634, ratio = 0.363264
+     a = 15, ds = 1, L = np.float64(2.7062617059328264): N = 2, E_L = 2.000000, B = 5.611281, ratio = 0.356425
+     a = -15, ds = 0, L = np.float64(2.7077196602081024): N = 2, E_L = 2.000000, B = 5.612748, ratio = 0.356332
+     a = 15, ds = 0, L = np.float64(2.7934785621507423): N = 2, E_L = 2.000000, B = 5.699014, ratio = 0.350938
+  max N D_N / B over instances with L >= |a|^(1/3):  0.386196
+     a = -4316, ds = 0, L = np.float64(50.263482596249794): N = 25, N D_N = 10.281690, B = 26.622987, ratio = 0.386196
+     a = -75508, ds = 1, L = np.float64(56201.89388520028): N = 28101, N D_N = 18662.919842, B = 48541.720058, ratio = 0.384472
+     a = 87246, ds = 1, L = np.float64(64248.948183674096): N = 32125, N D_N = 21219.165131, B = 55191.282064, ratio = 0.384466
+     a = -79293, ds = 1, L = np.float64(60664.80546586385): N = 30333, N D_N = 20421.293311, B = 53117.484478, ratio = 0.384455
+     a = -66683, ds = 1, L = np.float64(49522.90298297047): N = 24762, N D_N = 16426.540846, B = 42730.117599, ratio = 0.384425
+     a = 79197, ds = 1, L = np.float64(58091.25191463664): N = 29045, N D_N = 19146.312251, B = 49807.050686, ratio = 0.384410
+  violations of the lemma with C = 208: 0;  with C = 1: 0
+  (119.8s)
+[random: L = 2^j (j <= 16), a ~ L^gamma, gamma in [1, 3]] instances = 200000
+  max (count - 2 dl L)/B over all theta, dl:  0.289178
+     a = 292, ds = 0, L = np.float64(8.0): N = 4, E_L = 3.191919, B = 11.037898, ratio = 0.289178
+     a = 292, ds = 0, L = np.float64(8.0): N = 4, E_L = 3.191919, B = 11.037898, ratio = 0.289178
+     a = 292, ds = 0, L = np.float64(8.0): N = 4, E_L = 3.191919, B = 11.037898, ratio = 0.289178
+     a = 292, ds = 0, L = np.float64(8.0): N = 4, E_L = 3.191919, B = 11.037898, ratio = 0.289178
+     a = 292, ds = 0, L = np.float64(8.0): N = 4, E_L = 3.191919, B = 11.037898, ratio = 0.289178
+     a = 292, ds = 0, L = np.float64(8.0): N = 4, E_L = 3.191919, B = 11.037898, ratio = 0.289178
+  max N D_N / B over instances with L >= |a|^(1/3):  0.386555
+     a = 1733, ds = 0, L = np.float64(32.0): N = 16, N D_N = 8.050259, B = 20.825661, ratio = 0.386555
+     a = 7727, ds = 0, L = np.float64(64.0): N = 32, N D_N = 11.839713, B = 30.753324, ratio = 0.384990
+     a = 87300, ds = 1, L = np.float64(65536.0): N = 32768, N D_N = 21855.916274, B = 56838.724795, ratio = 0.384525
+     a = 87248, ds = 1, L = np.float64(65536.0): N = 32768, N D_N = 21862.416026, B = 56855.634645, ratio = 0.384525
+     a = 87239, ds = 1, L = np.float64(65536.0): N = 32768, N D_N = 21863.540984, B = 56858.562885, ratio = 0.384525
+     a = 87425, ds = 1, L = np.float64(65536.0): N = 32768, N D_N = 21840.291870, B = 56798.137876, ratio = 0.384525
+  violations of the lemma with C = 208: 0;  with C = 1: 0
+  (213.2s)
+[structured: smooth a, stationary points, small a, boundary exponents] instances = 111402
+  max (count - 2 dl L)/B over all theta, dl:  0.348788
+     a = 15, ds = 0, L = np.float64(2.8284271247461903): N = 2, E_L = 2.000000, B = 5.734141, ratio = 0.348788
+     a = 15, ds = 1, L = np.float64(2.8284271247461903): N = 2, E_L = 2.000000, B = 5.734141, ratio = 0.348788
+     a = 30, ds = 1, L = np.float64(2.8284271247461903): N = 2, E_L = 2.000000, B = 6.015427, ratio = 0.332478
+     a = 30, ds = 0, L = np.float64(2.8284271247461903): N = 2, E_L = 2.000000, B = 6.015427, ratio = 0.332478
+     a = 45, ds = 1, L = np.float64(2.8284271247461903): N = 2, E_L = 2.000000, B = 6.305720, ratio = 0.317172
+     a = 45, ds = 0, L = np.float64(2.8284271247461903): N = 2, E_L = 2.000000, B = 6.305720, ratio = 0.317172
+  max N D_N / B over instances with L >= |a|^(1/3):  0.386555
+     a = 1733, ds = 0, L = np.float64(32.0): N = 16, N D_N = 8.050259, B = 20.825661, ratio = 0.386555
+     a = 59049, ds = 1, L = np.float64(46340.95001184158): N = 23171, N D_N = 15789.795363, B = 41103.327806, ratio = 0.384149
+     a = 65536, ds = 1, L = np.float64(46340.95001184158): N = 23171, N D_N = 14978.911615, B = 39019.999999, ratio = 0.383878
+     a = 32768, ds = 1, L = np.float64(23170.47500592079): N = 11585, N D_N = 7489.441937, B = 19527.020006, ratio = 0.383542
+     a = 16384, ds = 1, L = np.float64(11585.237502960395): N = 5792, N D_N = 3744.972105, B = 9777.740590, ratio = 0.383010
+     a = 19683, ds = 1, L = np.float64(16384.0): N = 8192, N D_N = 5732.000407, B = 14985.744452, ratio = 0.382497
+  violations of the lemma with C = 208: 0;  with C = 1: 0
+  (287.9s)
+[exact rechecks with fractions.Fraction]
+  a = -15, ds = 1, L = np.float64(2.501072254943689): exact E_L = 2.000000000 (float run 2.000000000), exact N D_N = 2.000000000 (float run 2.000000000), N = 2
+  a = -15, ds = 0, L = np.float64(2.5110984657260387): exact E_L = 2.000000000 (float run 2.000000000), exact N D_N = 2.000000000 (float run 2.000000000), N = 2
+  a = -4316, ds = 0, L = np.float64(50.263482596249794): exact E_L = 4.574735212 (float run 4.574735212), exact N D_N = 10.281690141 (float run 10.281690141), N = 25
+  a = 15, ds = 0, L = np.float64(2.8284271247461903): exact E_L = 2.000000000 (float run 2.000000000), exact N D_N = 2.000000000 (float run 2.000000000), N = 2
+  a = 15, ds = 1, L = np.float64(2.8284271247461903): exact E_L = 2.000000000 (float run 2.000000000), exact N D_N = 2.000000000 (float run 2.000000000), N = 2
+  a = 30, ds = 1, L = np.float64(2.8284271247461903): exact E_L = 2.000000000 (float run 2.000000000), exact N D_N = 2.000000000 (float run 2.000000000), N = 2
+  a = 1733, ds = 0, L = np.float64(32.0): exact E_L = 5.270253556 (float run 5.270253556), exact N D_N = 8.050258684 (float run 8.050258684), N = 16
+total time 287.9s

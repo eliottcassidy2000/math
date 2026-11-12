@@ -1,0 +1,128 @@
+root order 5, H = 5, scores [1, 1, 2, 2, 4]:
+    child 2H+1: out-set 00101 (|O| = 2), H = 11, scores [1, 2, 2, 2, 3, 5]: admits 2H'+1: 6, 2H'-1: 0
+    child 2H-1: out-set 00001 (|O| = 1), H = 9, scores [1, 1, 2, 3, 3, 5]: admits 2H'+1: 4, 2H'-1: 2
+    child 2H-1: out-set 00010 (|O| = 1), H = 9, scores [1, 1, 2, 3, 3, 5]: admits 2H'+1: 2, 2H'-1: 4
+root order 5, H = 9, scores [1, 1, 2, 3, 3]:
+    child 2H+1: out-set 00101 (|O| = 2), H = 19, scores [1, 2, 2, 2, 4, 4]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H+1: out-set 10011 (|O| = 3), H = 19, scores [1, 1, 3, 3, 3, 4]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H-1: out-set 00010 (|O| = 1), H = 17, scores [1, 1, 2, 3, 4, 4]: admits 2H'+1: 0, 2H'-1: 7
+root order 5, H = 5, scores [0, 2, 2, 3, 3]:
+    child 2H+1: out-set 01011 (|O| = 3), H = 11, scores [0, 2, 3, 3, 3, 4]: admits 2H'+1: 6, 2H'-1: 0
+    child 2H-1: out-set 00011 (|O| = 2), H = 9, scores [0, 2, 2, 3, 4, 4]: admits 2H'+1: 4, 2H'-1: 2
+    child 2H-1: out-set 00101 (|O| = 2), H = 9, scores [0, 2, 2, 3, 4, 4]: admits 2H'+1: 2, 2H'-1: 4
+root order 5, H = 9, scores [1, 1, 2, 3, 3]:
+    child 2H+1: out-set 00100 (|O| = 1), H = 19, scores [1, 2, 2, 2, 4, 4]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H+1: out-set 01011 (|O| = 3), H = 19, scores [1, 1, 3, 3, 3, 4]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H-1: out-set 00001 (|O| = 1), H = 17, scores [1, 1, 2, 3, 4, 4]: admits 2H'+1: 4, 2H'-1: 0
+root order 6, H = 5, scores [1, 1, 2, 2, 4, 5]:
+    child 2H+1: out-set 000101 (|O| = 2), H = 11, scores [1, 2, 2, 2, 3, 5, 6]: admits 2H'+1: 6, 2H'-1: 0
+    child 2H-1: out-set 000001 (|O| = 1), H = 9, scores [1, 1, 2, 3, 3, 5, 6]: admits 2H'+1: 4, 2H'-1: 2
+    child 2H-1: out-set 000010 (|O| = 1), H = 9, scores [1, 1, 2, 3, 3, 5, 6]: admits 2H'+1: 2, 2H'-1: 4
+root order 6, H = 9, scores [1, 1, 2, 3, 3, 5]:
+    child 2H+1: out-set 000101 (|O| = 2), H = 19, scores [1, 2, 2, 2, 4, 4, 6]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H+1: out-set 010011 (|O| = 3), H = 19, scores [1, 1, 3, 3, 3, 4, 6]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H-1: out-set 000010 (|O| = 1), H = 17, scores [1, 1, 2, 3, 4, 4, 6]: admits 2H'+1: 0, 2H'-1: 7
+root order 6, H = 5, scores [0, 2, 2, 3, 3, 5]:
+    child 2H+1: out-set 001011 (|O| = 3), H = 11, scores [0, 2, 3, 3, 3, 4, 6]: admits 2H'+1: 6, 2H'-1: 0
+    child 2H-1: out-set 000011 (|O| = 2), H = 9, scores [0, 2, 2, 3, 4, 4, 6]: admits 2H'+1: 4, 2H'-1: 2
+    child 2H-1: out-set 000101 (|O| = 2), H = 9, scores [0, 2, 2, 3, 4, 4, 6]: admits 2H'+1: 2, 2H'-1: 4
+root order 6, H = 9, scores [1, 1, 2, 3, 3, 5]:
+    child 2H+1: out-set 000100 (|O| = 1), H = 19, scores [1, 2, 2, 2, 4, 4, 6]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H+1: out-set 001011 (|O| = 3), H = 19, scores [1, 1, 3, 3, 3, 4, 6]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H-1: out-set 000001 (|O| = 1), H = 17, scores [1, 1, 2, 3, 4, 4, 6]: admits 2H'+1: 4, 2H'-1: 0
+root order 6, H = 9, scores [0, 2, 2, 3, 4, 4]:
+    child 2H+1: out-set 001011 (|O| = 3), H = 19, scores [0, 2, 3, 3, 3, 5, 5]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H+1: out-set 100111 (|O| = 4), H = 19, scores [0, 2, 2, 4, 4, 4, 5]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H-1: out-set 000101 (|O| = 2), H = 17, scores [0, 2, 2, 3, 4, 5, 5]: admits 2H'+1: 0, 2H'-1: 7
+root order 6, H = 15, scores [1, 1, 2, 3, 4, 4]:
+    child 2H+1: out-set 001011 (|O| = 3), H = 31, scores [1, 1, 3, 3, 3, 5, 5]: admits 2H'+1: 0, 2H'-1: 4
+    child 2H-1: out-set 000001 (|O| = 1), H = 29, scores [1, 1, 2, 3, 4, 5, 5]: admits 2H'+1: 3, 2H'-1: 0
+root order 6, H = 5, scores [0, 1, 3, 3, 4, 4]:
+    child 2H+1: out-set 010111 (|O| = 4), H = 11, scores [0, 1, 3, 4, 4, 4, 5]: admits 2H'+1: 6, 2H'-1: 0
+    child 2H-1: out-set 000111 (|O| = 3), H = 9, scores [0, 1, 3, 3, 4, 5, 5]: admits 2H'+1: 4, 2H'-1: 2
+    child 2H-1: out-set 001011 (|O| = 3), H = 9, scores [0, 1, 3, 3, 4, 5, 5]: admits 2H'+1: 2, 2H'-1: 4
+root order 6, H = 19, scores [1, 2, 2, 2, 4, 4]:
+    child 2H+1: out-set 001000 (|O| = 1), H = 39, scores [1, 2, 2, 3, 3, 5, 5]: admits 2H'+1: 4, 2H'-1: 0
+    child 2H-1: out-set 000101 (|O| = 2), H = 37, scores [1, 2, 2, 3, 3, 5, 5]: admits 2H'+1: 0, 2H'-1: 4
+root order 6, H = 9, scores [0, 2, 2, 3, 4, 4]:
+    child 2H+1: out-set 001001 (|O| = 2), H = 19, scores [0, 2, 3, 3, 3, 5, 5]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H+1: out-set 010111 (|O| = 4), H = 19, scores [0, 2, 2, 4, 4, 4, 5]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H-1: out-set 000011 (|O| = 2), H = 17, scores [0, 2, 2, 3, 4, 5, 5]: admits 2H'+1: 4, 2H'-1: 0
+root order 6, H = 15, scores [1, 1, 2, 3, 4, 4]:
+    child 2H+1: out-set 001011 (|O| = 3), H = 31, scores [1, 1, 3, 3, 3, 5, 5]: admits 2H'+1: 0, 2H'-1: 4
+    child 2H-1: out-set 101111 (|O| = 5), H = 29, scores [1, 1, 2, 3, 4, 5, 5]: admits 2H'+1: 3, 2H'-1: 0
+root order 6, H = 23, scores [1, 2, 2, 3, 3, 4]:
+    child 2H+1: out-set 000100 (|O| = 1), H = 47, scores [1, 2, 2, 3, 4, 4, 5]: admits 2H'+1: 5, 2H'-1: 0
+    child 2H-1: out-set 000011 (|O| = 2), H = 45, scores [1, 2, 2, 3, 4, 4, 5]: admits 2H'+1: 0, 2H'-1: 0
+root order 6, H = 19, scores [1, 1, 3, 3, 3, 4]:
+    child 2H+1: out-set 001011 (|O| = 3), H = 39, scores [1, 1, 3, 3, 4, 4, 5]: admits 2H'+1: 4, 2H'-1: 0
+    child 2H-1: out-set 010011 (|O| = 3), H = 37, scores [1, 1, 3, 3, 4, 4, 5]: admits 2H'+1: 0, 2H'-1: 4
+root order 6, H = 23, scores [1, 2, 2, 3, 3, 4]:
+    child 2H+1: out-set 000101 (|O| = 2), H = 47, scores [1, 2, 2, 3, 4, 4, 5]: admits 2H'+1: 5, 2H'-1: 0
+    child 2H-1: out-set 010111 (|O| = 4), H = 45, scores [1, 2, 2, 3, 4, 4, 5]: admits 2H'+1: 0, 2H'-1: 0
+root order 6, H = 37, scores [2, 2, 2, 2, 3, 4]:
+    child 2H+1: out-set 000010 (|O| = 1), H = 75, scores [1, 2, 3, 3, 3, 4, 5]: admits 2H'+1: 0, 2H'-1: 0
+    child 2H-1: out-set 000100 (|O| = 1), H = 73, scores [1, 2, 3, 3, 3, 4, 5]: admits 2H'+1: 0, 2H'-1: 0
+root order 6, H = 33, scores [2, 2, 2, 2, 3, 4]:
+    child 2H+1: out-set 000100 (|O| = 1), H = 67, scores [1, 2, 3, 3, 3, 4, 5]: admits 2H'+1: 0, 2H'-1: 0
+    child 2H+1: out-set 001000 (|O| = 1), H = 67, scores [1, 2, 3, 3, 3, 4, 5]: admits 2H'+1: 0, 2H'-1: 0
+    child 2H-1: out-set 001111 (|O| = 4), H = 65, scores [2, 2, 2, 2, 4, 4, 5]: admits 2H'+1: 2, 2H'-1: 4
+root order 6, H = 33, scores [1, 2, 3, 3, 3, 3]:
+    child 2H+1: out-set 011111 (|O| = 5), H = 67, scores [1, 2, 3, 3, 3, 4, 5]: admits 2H'+1: 0, 2H'-1: 0
+    child 2H+1: out-set 101111 (|O| = 5), H = 67, scores [1, 2, 3, 3, 3, 4, 5]: admits 2H'+1: 0, 2H'-1: 0
+    child 2H-1: out-set 000010 (|O| = 1), H = 65, scores [1, 2, 2, 4, 4, 4, 4]: admits 2H'+1: 2, 2H'-1: 4
+root order 6, H = 37, scores [1, 2, 3, 3, 3, 3]:
+    child 2H+1: out-set 111011 (|O| = 5), H = 75, scores [1, 2, 3, 3, 3, 4, 5]: admits 2H'+1: 0, 2H'-1: 0
+    child 2H-1: out-set 101111 (|O| = 5), H = 73, scores [1, 2, 3, 3, 3, 4, 5]: admits 2H'+1: 0, 2H'-1: 0
+root order 7, H = 5, scores [1, 1, 2, 2, 4, 5, 6]:
+    child 2H+1: out-set 0000101 (|O| = 2), H = 11, scores [1, 2, 2, 2, 3, 5, 6, 7]: admits 2H'+1: 6, 2H'-1: 0
+    child 2H-1: out-set 0000001 (|O| = 1), H = 9, scores [1, 1, 2, 3, 3, 5, 6, 7]: admits 2H'+1: 4, 2H'-1: 2
+    child 2H-1: out-set 0000010 (|O| = 1), H = 9, scores [1, 1, 2, 3, 3, 5, 6, 7]: admits 2H'+1: 2, 2H'-1: 4
+root order 7, H = 9, scores [1, 1, 2, 3, 3, 5, 6]:
+    child 2H+1: out-set 0000101 (|O| = 2), H = 19, scores [1, 2, 2, 2, 4, 4, 6, 7]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H+1: out-set 0010011 (|O| = 3), H = 19, scores [1, 1, 3, 3, 3, 4, 6, 7]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H-1: out-set 0000010 (|O| = 1), H = 17, scores [1, 1, 2, 3, 4, 4, 6, 7]: admits 2H'+1: 0, 2H'-1: 7
+root order 7, H = 5, scores [0, 2, 2, 3, 3, 5, 6]:
+    child 2H+1: out-set 0001011 (|O| = 3), H = 11, scores [0, 2, 3, 3, 3, 4, 6, 7]: admits 2H'+1: 6, 2H'-1: 0
+    child 2H-1: out-set 0000011 (|O| = 2), H = 9, scores [0, 2, 2, 3, 4, 4, 6, 7]: admits 2H'+1: 4, 2H'-1: 2
+    child 2H-1: out-set 0000101 (|O| = 2), H = 9, scores [0, 2, 2, 3, 4, 4, 6, 7]: admits 2H'+1: 2, 2H'-1: 4
+root order 7, H = 9, scores [1, 1, 2, 3, 3, 5, 6]:
+    child 2H+1: out-set 0000100 (|O| = 1), H = 19, scores [1, 2, 2, 2, 4, 4, 6, 7]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H+1: out-set 0001011 (|O| = 3), H = 19, scores [1, 1, 3, 3, 3, 4, 6, 7]: admits 2H'+1: 3, 2H'-1: 2
+    child 2H-1: out-set 0000001 (|O| = 1), H = 17, scores [1, 1, 2, 3, 4, 4, 6, 7]: admits 2H'+1: 4, 2H'-1: 0
+
+AGGREGATE over all roots with H > 1 (children counted per parent, up to isomorphism):
+type  order  (has 2H'+1, has 2H'-1): count
+  P     5   (True , False): 1
+  P     6   (False, False): 2
+  P     6   (True , False): 2
+  P     6   (True , True ): 6
+  P     7   (False, False): 14
+  P     7   (False, True ): 6
+  P     7   (True , False): 11
+  P     7   (True , True ): 14
+  P     8   (False, False): 90
+  P     8   (False, True ): 24
+  P     8   (True , False): 48
+  P     8   (True , True ): 26
+  P     9   (False, False): 678
+  P     9   (False, True ): 74
+  P     9   (True , False): 205
+  P     9   (True , True ): 38
+  M     4   (True , True ): 1
+  M     5   (True , True ): 4
+  M     6   (False, True ): 3
+  M     6   (True , False): 1
+  M     6   (True , True ): 7
+  M     7   (False, False): 10
+  M     7   (False, True ): 15
+  M     7   (True , False): 4
+  M     7   (True , True ): 12
+  M     8   (False, False): 96
+  M     8   (False, True ): 58
+  M     8   (True , False): 15
+  M     8   (True , True ): 21
+  M     9   (False, False): 726
+  M     9   (False, True ): 204
+  M     9   (True , False): 44
+  M     9   (True , True ): 38

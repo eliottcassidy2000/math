@@ -1,0 +1,92 @@
+Lane twoapex (S93 Chan-Pak wave) - notes of the ADVERSARIAL VERIFIER (2026-11-11).
+All scripts in this folder are the verifier's own; the only lane artefacts read are minrep17.json (checked, not
+trusted), census_by_length.jsonl, e2_two_block_templates.out (for comparison) and the lane's census state files in
+the session scratchpad (for array-level comparison).  Every run took under 3 minutes on 4 threads.
+
+1. WHAT WAS RECOMPUTED INDEPENDENTLY
+   v1_core.out      own literal Hamiltonian-path count; own 24-state transfer = literal count (all 21,845 words of
+                    length <= 7, 200 random words of length 8..12); identities on all words of length <= 9; Hankel
+                    ranks 4, 11, 17; pairing rank reachable x observable = 17; minrep17.json: x(w l) = x(w) A_l checked
+                    on a basis of the reachable space (a proof for all words), integrality, entries in [-41, 32], fixed
+                    vectors, characteristic polynomials, a common flag with common diagonal {3:1, 2:4, 1:8, 0:4};
+                    first moment n = 1..60; chains modulo 3, 4, 8 (236,196 / 512 / 262,144 states, strongly connected,
+                    self-loop, translation invariant); F1 three-term identity (16,129 instances, the two-term form
+                    fails on 4,096); second differences.  (The one FAIL line, G3c, is a defect of the verifier's first
+                    rate estimate - rounding errors seed the stationary component - repaired in v1b.)
+   v1b, v9b         twisted rates: modulo 3: 0.7706329 (both eigenspaces); primitive characters modulo 8: 0.617444.
+   v2_census_L16.out, v3 (three chunks), v5_assemble17.out
+                    INDEPENDENT CENSUS of all words of length <= 17 below 2^26, by enumerating only the primitive
+                    words (first letter not 0, last letter not 3) and rebuilding c_n = c_(n-1) + sum_{m <= n} P_m.
+   v4_compare16.out, v5_assemble17.out
+                    the verifier's arrays cum_16, c_16, cum_17, c_17, the minimal lengths and the primitive counts are
+                    IDENTICAL, entry by entry (2^25 entries each), to the lane's state files after lengths 16 and 17.
+                    So TA-05, TA-06, TA-07, TA-08, TA-09 no longer rest on a single run.
+   v7_max.out       maxima at lengths 16, 17 (above the histogram bound): 73,529,109 and 226,501,279, each attained by
+                    one primitive word.
+   v8_above_bound.out  the words with H >= 2^26 (not in the lane's histogram).
+   v6_misc.out      E S^2 = 29/320 (exact partial sums to index 60, error < 1e-10); maxima n <= 10; modulus 4: spectral
+                    radius 2.931142463754 = real root of x^3 - 2x^2 - 8 (to 1e-9, numerical identification); lane's
+                    residue histogram modulo 720720 = verifier's at n = 10, and its projection to (mod 3, mod 8) =
+                    verifier's census classes at n = 17; closed forms of TA-17 (n <= 8); ranks of the 36 two-block
+                    templates (closure, modulo the prime 2^61 - 1) and four coverages; affine cubes n <= 5; the lattice
+                    of the prefix states has index 2^21 in Z^17 and IS invariant under the four letters (so 2^21 is
+                    the index for all prefixes, not only for |w| <= 4).
+   v9_limit_law.out leading-term table n <= 9; distribution function of H/(2 3^17) at 2^-j; median.
+
+2. NEW EXACT NUMBERS (verifier; FINITE-EXACT, one run each)
+   E_16 = 3,619,785,801,824 exactly (the 667 words above 2^26 take 341 values, multiplicity <= 2):
+          E_16 (3/16)^16 = 8.44701 is exact, not only a lower bound.
+   E_17 = 19,383,291,132,038 exactly; E_17 (3/16)^17 = 8.48104 (lane's lower bound 8.47827).
+          Increments of E_n (3/16)^n for n = 14..17: 0.08518, 0.06443, 0.04716, 0.03403 (ratios 0.756, 0.732, 0.722).
+   sup_N c_17(N) = 3436 over ALL N (at N = 264,139); for N >= 2^26 the largest multiplicity is 84 (at N = 67,677,509).
+   Distinct values of the words of length exactly 16: 19,603,856 = 0.4554 * 3^16; exactly 17: 61,229,731 = 0.4741 * 3^17
+          (27,675,301 of them are >= 2^26); the lane's 6,259,388 = 0.4362 * 3^15 at n = 15.
+
+3. TWO SHORT PROOFS THE FINISHER LISTED AS NOT WRITTEN (verifier's; not audited by a third party)
+
+ (a) Strict negativity of the a-a interaction (FINISHER_PROOFS P7 gives <= 0; the data give <= -2 for n <= 10).
+     Claim: for every n >= 2, every b in {0,1}^n and every i < j, the coefficient of a_i a_j in H(., b) is <= -1.
+     By P7 it is minus the number of valid configurations of two kinds; it suffices to exhibit one.
+     Case b_i = 0.  Arrangement 0 (path [R1] u [R2] v [R3]; conditions on b: b(last R2) = 0, R3 empty or
+       b(first R3) = 1), with last(R1) = j, first(R2) = i.  Let m be the least index > j with b_m = 1, if any.
+       R1 = [1, j] minus {i};  R2 = {i} and the indices strictly between j and m (all indices > j if m does not
+       exist);  R3 = [m, n] (empty if m does not exist).  Then first(R2) = i, last(R2) is i (b_i = 0) or an index
+       in (j, m) (b = 0 by minimality of m), and first(R3) = m has b_m = 1.  Valid.
+     Case b_i = 1.  Arrangement 1 (path [R1] v [R2] u [R3]; conditions on b: R1 empty or b(last R1) = 0,
+       b(first R2) = 1), the pair being {last(R2), first(R3)}.  Put Sp = [1, j) minus {i}.
+       (1) If some k > j has b_k = 0: R2 = {i}, R1 = Sp and k, R3 = [j, n] minus {k}.
+       (2) Else if Sp is empty: R2 = {i}, R1 empty, R3 = [j, n].
+       (3) Else if b(max Sp) = 0: R2 = {i}, R1 = Sp, R3 = [j, n].
+       In (1)-(3) last(R2) = i, first(R3) = j, first(R2) = i has b = 1, and R1 is empty or ends at an index with b = 0.
+       (4) Else (Sp nonempty, b(max Sp) = 1, b = 1 on (j, n]): take last(R2) = j, first(R3) = i, R3 = {i} and (j, n].
+           If b = 1 on all of Sp: R1 empty, R2 = Sp and j (its first element is in Sp, b = 1).
+           Otherwise let z be the largest index of Sp with b_z = 0 (z < max Sp): R1 = {k in Sp : k <= z} (last z,
+           b_z = 0), R2 = {k in Sp : k > z} and j (its first element is in Sp, above z, so b = 1; its last is j).
+     In every case a valid configuration exists.  QED.
+     Consequence: H is affine on no 2-cube spanned by two bits of the same apex, for every n (by the converse
+     symmetry the same holds for two bits of b).  This does NOT exclude mixed cubes: e1 lists thousands of affine
+     2-cubes with one a-flip and one b-flip, and the affine 3-cubes with increments (2, 2, 10).
+
+ (b) H(3^p 0^q) exactly, and the constant 4.
+     Let A = {s_1..s_p} (letters 3: u, v -> A) and B = {s_(p+1)..s_n} (letters 0: B -> u, v).  For both
+     arrangements the conditions of P1 read: R1 empty or R1 meets B; R2 empty or (R2 meets A and R2 meets B);
+     R3 empty or R3 meets A; and R2 nonempty for arrangement 1.  Hence
+        H(3^p 0^q) = sum over the pairs (set of colours used on A, set of colours used on B) satisfying these
+                     conditions of  w * surj(p, |colours on A|) * surj(q, |colours on B|),   w = 2 if colour 2 is
+                     used, 1 otherwise  (surj(m, k) = number of surjections of an m-set onto a k-set).
+     Checked against the transfer for all p, q <= 8 (v1_core.out, F2).  The bad events per arrangement are
+     E1: R1 nonempty inside A (at most 3^p 2^q colourings), E2: R2 nonempty inside B (2^p 3^q), E3: R2 nonempty
+     inside A (3^p 2^q), E4: R3 nonempty inside B (2^p 3^q); the union bound gives
+        2 * 3^n - 4 (3^p 2^q + 2^p 3^q) - 2^n <= H(3^p 0^q) <= 2 * 3^n      (all p, q),
+     and each |E_i| is its bound minus 2^n while the pairwise intersections have at most 2^n, 3^p, 2^n, 0, 3^q, 2^n
+     elements, so by Bonferroni, for p = q,  (1 - H/(2 * 3^n)) / (2/3)^p = 4 + O((2/3)^p + (1/2)^p).  QED.
+
+4. REMARKS FOR THE COORDINATOR
+   * The proof of equidistribution modulo 3, 4, 8 (P5) is a statement BY INDEX (all 4^n words of one length), which
+     is what HYP-9660 (D) asks.  By value, in the windows [2^21, 2^26) with words of length <= 17, the class factors
+     of N modulo 3 are still (1.003, 1.003, 0.994), for all words and for primitive words; nothing is proved by value.
+   * Prior art not cited by the finisher for TA-04: THM-5123 (Session 246; common gap flags for any number of
+     apexes, proved and audited).
+   * TA-06: N_L / 3^(L+1) is not monotone (0.14589 at L = 11, 0.14459 at L = 12; 0.16228 at L = 13, 0.16222 at L = 14).
+   * The closed forms of TA-17 have two-line proofs (source/sink removal; contraction of the arc u -> v when a = 0;
+     the count of 2-colourings for E(a, b)); they are checked here for n <= 8 only.

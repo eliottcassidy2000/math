@@ -1,0 +1,6 @@
+(P) Lemma P formula (e, o, A0, A1 by plain DFS) vs matrices mod 2: 26705 marked blocks of order <= 5, mismatches 0
+(S) two-apex letters: charpoly of 30 words = t^8 (t-1)^16 (t-2^n)^10 (t-3^n)^2: mismatches 0; nilpotent commutators [L_i, L_j]: 6 / 6
+
+real	0m8.377s
+user	0m0.030s
+sys	0m0.031s

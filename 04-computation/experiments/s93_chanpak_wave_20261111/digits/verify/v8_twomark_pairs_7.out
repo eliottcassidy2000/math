@@ -1,0 +1,20 @@
+   order 2: marked bases so far 2, distinct states 2   [0.6 s]
+   order 3: marked bases so far 14, distinct states 8   [0.6 s]
+   order 4: marked bases so far 62, distinct states 32   [0.6 s]
+   order 5: marked bases so far 302, distinct states 176   [0.6 s]
+   order 6: marked bases so far 1982, distinct states 1400   [1.1 s]
+   order 7: marked bases so far 21134, distinct states 17694   [14.5 s]
+17694 distinct states of the 21134 two-marked tournaments of orders 2..7; suffix words 156
+non-commuting pairs with both single rays exact to depth 2: 404476; EXACT NON-COMMUTING PAIRS to depth 2: 0
+one-letter maps exact to depth 2 with H moving: op: states; multipliers (a: count)
+   (01,0): 1697; {2: 1697}
+   (01,1): 46; {2: 46}
+   (01,2): 1697; {2: 1697}
+   (10,0): 1697; {2: 1697}
+   (10,1): 1697; {2: 1697}
+   (10,2): 46; {2: 46}
+   (11,0): 668; {2: 646, 3: 22}
+   (11,1): 6; {2: 3, 3: 3}
+   (11,2): 6; {2: 3, 3: 3}
+two-letter words with at least one moving exact state: 57
+time 16.4 s

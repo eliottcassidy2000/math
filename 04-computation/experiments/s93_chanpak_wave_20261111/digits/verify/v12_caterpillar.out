@@ -1,0 +1,2 @@
+values <= 100000: nodes 1251471205; odd numbers not attained: 29: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861, 2647]; even values attained: 0   [5.2 s]
+equal to the 29 values of THM-4904 / depth_K7_1e6.txt: True

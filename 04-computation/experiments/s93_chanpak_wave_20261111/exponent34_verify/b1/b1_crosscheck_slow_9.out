@@ -1,0 +1,53 @@
+w = 2: S_w = 4 = 4.000000; N(K) split == direct; worst ratios: D1 1.0000, D1' 0.5000, D2 0.2222, D2' 0.2222, (1) 0.6667, N(K)/bound 0.08333; RHS(2) = 8.000 <= derived 208.0 <= line1 388.0 <= line2 829.6; failures: 0
+      K =     1: max Deg =     4, max Deg' =     4, N(K) =        4, RHS(1) = 6
+      K =     2: max Deg =     4, max Deg' =     4, N(K) =        4, RHS(1) = 6
+w = 3: S_w = 64/5 = 12.800000; N(K) split == direct; worst ratios: D1 0.5000, D1' 1.0000, D2 0.0556, D2' 0.2222, (1) 0.6667, N(K)/bound 0.04167; RHS(2) = 26.000 <= derived 1216.0 <= line1 4600.0 <= line2 6858.5; failures: 0
+      K =     1: max Deg =     2, max Deg' =     8, N(K) =       12, RHS(1) = 18
+      K =     2: max Deg =     2, max Deg' =     8, N(K) =       12, RHS(1) = 18
+      K =     4: max Deg =     4, max Deg' =    16, N(K) =       12, RHS(1) = 28
+w = 4: S_w = 89560/3003 = 29.823510; N(K) split == direct; worst ratios: D1 1.0000, D1' 0.5000, D2 0.1603, D2' 0.1603, (1) 0.5217, N(K)/bound 0.08333; RHS(2) = 66.000 <= derived 3584.0 <= line1 5096.0 <= line2 7888.0; failures: 0
+      K =     1: max Deg =     4, max Deg' =     4, N(K) =       24, RHS(1) = 46
+      K =     2: max Deg =     4, max Deg' =     4, N(K) =       24, RHS(1) = 46
+      K =     4: max Deg =    10, max Deg' =    10, N(K) =       32, RHS(1) = 64
+      K =     8: max Deg =    20, max Deg' =    20, N(K) =       40, RHS(1) = 138
+w = 5: S_w = 868670716112/9704539845 = 89.511788; N(K) split == direct; worst ratios: D1 0.5000, D1' 1.0000, D2 0.0481, D2' 0.1443, (1) 0.6102, N(K)/bound 0.04167; RHS(2) = 193.500 <= derived 21248.0 <= line1 39392.0 <= line2 65483.7; failures: 0
+      K =     1: max Deg =     2, max Deg' =     8, N(K) =       72, RHS(1) = 118
+      K =     2: max Deg =     2, max Deg' =     8, N(K) =       72, RHS(1) = 118
+      K =     4: max Deg =     6, max Deg' =    18, N(K) =       80, RHS(1) = 167
+      K =     8: max Deg =    12, max Deg' =    44, N(K) =      124, RHS(1) = 315
+      K =    16: max Deg =    20, max Deg' =    73, N(K) =      148, RHS(1) = 670
+w = 6: S_w = 1198450916004620810056103848/6157640021368865976621675 = 194.628285; N(K) split == direct; worst ratios: D1 1.0000, D1' 0.5000, D2 0.1572, D2' 0.1572, (1) 0.5035, N(K)/bound 0.08333; RHS(2) = 438.000 <= derived 33424.0 <= line1 45088.0 <= line2 74139.0; failures: 0
+      K =     1: max Deg =     4, max Deg' =     4, N(K) =      144, RHS(1) = 286
+      K =     2: max Deg =     4, max Deg' =     4, N(K) =      144, RHS(1) = 286
+      K =     4: max Deg =    10, max Deg' =    10, N(K) =      160, RHS(1) = 392
+      K =     8: max Deg =    26, max Deg' =    26, N(K) =      240, RHS(1) = 790
+      K =    16: max Deg =    48, max Deg' =    48, N(K) =      408, RHS(1) = 1582
+      K =    32: max Deg =    80, max Deg' =    80, N(K) =      624, RHS(1) = 3624
+w = 7: S_w = 51022625749890123545034165089192867970399560676491576/91274032774205842488269283166832325449330658683625 = 559.004836; N(K) split == direct; worst ratios: D1 0.5000, D1' 1.0000, D2 0.0423, D2' 0.1572, (1) 0.6017, N(K)/bound 0.04167; RHS(2) = 1228.875 <= derived 294400.0 <= line1 434368.0 <= line2 617504.6; failures: 0
+      K =     1: max Deg =     2, max Deg' =     8, N(K) =      432, RHS(1) = 718
+      K =     2: max Deg =     2, max Deg' =     8, N(K) =      432, RHS(1) = 718
+      K =     4: max Deg =     6, max Deg' =    20, N(K) =      464, RHS(1) = 1028
+      K =     8: max Deg =    14, max Deg' =    52, N(K) =      608, RHS(1) = 1943
+      K =    16: max Deg =    29, max Deg' =   112, N(K) =      860, RHS(1) = 3684
+      K =    32: max Deg =    51, max Deg' =   198, N(K) =     1672, RHS(1) = 7878
+      K =    64: max Deg =    79, max Deg' =   314, N(K) =     2332, RHS(1) = 17345
+w = 8: S_w = 25819414813385627079184957080444889321280628768563328842581446379812004053601673036757749214683629062077085064/21711576571478961812056000978875501758164485037642775846296163660857928874908897051291232506092458444452625 = 1189.200366; N(K) split == direct; worst ratios: D1 1.0000, D1' 0.5000, D2 0.1535, D2' 0.1535, (1) 0.5006, N(K)/bound 0.08333; RHS(2) = 2663.375 <= derived 384032.0 <= line1 469568.0 <= line2 690304.0; failures: 0
+      K =     1: max Deg =     4, max Deg' =     4, N(K) =      864, RHS(1) = 1726
+      K =     2: max Deg =     4, max Deg' =     4, N(K) =      864, RHS(1) = 1726
+      K =     4: max Deg =    10, max Deg' =    10, N(K) =      944, RHS(1) = 2534
+      K =     8: max Deg =    26, max Deg' =    26, N(K) =     1288, RHS(1) = 4876
+      K =    16: max Deg =    62, max Deg' =    62, N(K) =     1708, RHS(1) = 9620
+      K =    32: max Deg =   120, max Deg' =   120, N(K) =     3148, RHS(1) = 19896
+      K =    64: max Deg =   200, max Deg' =   200, N(K) =     6184, RHS(1) = 38676
+      K =   128: max Deg =   316, max Deg' =   316, N(K) =     9336, RHS(1) = 85706
+w = 9: S_w = 6106222610072188307729111898127257856131551487968609034761020096884735234561439744740791867503445616510480024834148920847527606744231642500367560196944390438091662950778264382652800719672005881373207386187286049030869048/1815704786950479627473366329529708710052205935461018559539655305414659248657742774992558881183159345297867929005072787612774209908057931342942579669043554912420272261182862170767211016668751435168127033455428831225375 = 3363.004082; N(K) split == direct; worst ratios: D1 0.5000, D1' 1.0000, D2 0.0446, D2' 0.1337, (1) 0.6003, N(K)/bound 0.04167; RHS(2) = 7398.312 <= derived 2801024.0 <= line1 3827456.0 <= line2 5764741.8; failures: 0
+      K =     1: max Deg =     2, max Deg' =     8, N(K) =     2592, RHS(1) = 4318
+      K =     2: max Deg =     2, max Deg' =     8, N(K) =     2592, RHS(1) = 4318
+      K =     4: max Deg =     6, max Deg' =    20, N(K) =     2720, RHS(1) = 6354
+      K =     8: max Deg =    18, max Deg' =    50, N(K) =     3432, RHS(1) = 12078
+      K =    16: max Deg =    36, max Deg' =   108, N(K) =     4392, RHS(1) = 23834
+      K =    32: max Deg =    70, max Deg' =   258, N(K) =     7308, RHS(1) = 49165
+      K =    64: max Deg =   120, max Deg' =   454, N(K) =    12280, RHS(1) = 97077
+      K =   128: max Deg =   204, max Deg' =   774, N(K) =    25200, RHS(1) = 194316
+      K =   256: max Deg =   317, max Deg' =  1227, N(K) =    37512, RHS(1) = 425059
+TOTAL FAILURES: 0

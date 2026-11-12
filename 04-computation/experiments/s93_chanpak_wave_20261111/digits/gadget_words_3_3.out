@@ -1,0 +1,83 @@
+alphabet: sigma + 14 gadget matrices (X of order <= 3); words of length <= 3; 2813 census states
+length 1: 15 words; words (sigma^k, k >= 2, omitted) with an integer eigenvalue >= 1 so far: 1  [1.1 s]
+length 2: 225 words; words (sigma^k, k >= 2, omitted) with an integer eigenvalue >= 1 so far: 25  [1.2 s]
+length 3: 3375 words; words (sigma^k, k >= 2, omitted) with an integer eigenvalue >= 1 so far: 100  [3.9 s]
+integer eigenvalues >= 1 by (word length, eigenvalue): count
+   (1, 1): 1
+   (1, 2): 1
+   (2, 1): 20
+   (2, 2): 2
+   (2, 80): 2
+   (2, 84): 2
+   (2, 431): 2
+   (3, 1): 57
+   (3, 2): 6
+   (3, 3): 6
+   (3, 80): 6
+   (3, 168): 3
+   (3, 431): 6
+   (3, 1752): 3
+   (3, 2544): 3
+   (3, 2646): 3
+
+=== readout L_h = [0, 0, 1, 0]
+  word [G(n=2,X=[0, 1],P=01) . G(n=3,X=[0, 1, 3],P=010)]: a = 80, dim C = 4, moving census states 2813, b: [(-999, 1), (-963, 1), (-927, 1), (-855, 1), '...', (7911, 1), (7965, 1), (8019, 1)], e.g. [(-297, 387, 45, 45), (-295, 381, 43, 43)]
+  word [G(n=3,X=[0, 1, 3],P=010) . G(n=2,X=[0, 1],P=01)]: a = 80, dim C = 3, moving census states 255, b: [(-259, 1), (-203, 1), (-189, 1), (-175, 1), '...', (5005, 1), (5103, 1), (5775, 1)], e.g. [(1, 0, 1, 0), (1, 1, 1, 1)]
+  word [s . G(n=1,X=[0],P=1) . G(n=3,X=[0, 1, 3],P=010)]: a = 80, dim C = 4, moving census states 2813, b: [(-999, 1), (-963, 1), (-927, 1), (-855, 1), '...', (7911, 1), (7965, 1), (8019, 1)], e.g. [(-297, 387, 45, 45), (-295, 381, 43, 43)]
+  word [s . G(n=2,X=[0, 1],P=10) . G(n=2,X=[0, 1],P=01)]: a = 80, dim C = 3, moving census states 255, b: [(-259, 1), (-203, 1), (-189, 1), (-175, 1), '...', (5005, 1), (5103, 1), (5775, 1)], e.g. [(1, 0, 1, 0), (1, 1, 1, 1)]
+  word [G(n=1,X=[0],P=1) . G(n=3,X=[0, 1, 3],P=010) . s]: a = 80, dim C = 3, moving census states 272, b: [(-405, 1), (-315, 1), (-279, 1), (-261, 2), '...', (1755, 1), (1809, 1), (2025, 1)], e.g. [(-75, 210, 15, 0), (-67, 178, 11, 0)]
+  word [G(n=2,X=[0, 1],P=01) . s . G(n=2,X=[0, 1],P=10)]: a = 80, dim C = 4, moving census states 2813, b: [(-999, 1), (-963, 1), (-927, 1), (-855, 1), '...', (7911, 1), (7965, 1), (8019, 1)], e.g. [(-297, 387, 45, 45), (-295, 381, 43, 43)]
+  word [G(n=2,X=[0, 1],P=10) . G(n=2,X=[0, 1],P=01) . s]: a = 80, dim C = 3, moving census states 46, b: [(-105, 1), (-63, 2), (-35, 2), (-21, 2), '...', (2093, 1), (2107, 1), (2415, 1)], e.g. [(1, 0, 1, 0), (1, 2, 1, 0)]
+  word [G(n=3,X=[0, 1, 3],P=010) . s . G(n=1,X=[0],P=1)]: a = 80, dim C = 3, moving census states 255, b: [(-259, 1), (-203, 1), (-189, 1), (-175, 1), '...', (5005, 1), (5103, 1), (5775, 1)], e.g. [(1, 0, 1, 0), (1, 1, 1, 1)]
+  summary (length, multiplier, kind): count
+     (1, 1, 'no moving census state'): 1
+     (1, 2, 'no moving census state'): 1
+     (2, 1, 'no moving census state'): 20
+     (2, 2, 'no moving census state'): 2
+     (2, 80, 'AFFINE b != 0'): 2
+     (2, 84, 'no moving census state'): 2
+     (2, 431, 'b = 0'): 1
+     (2, 431, 'no moving census state'): 1
+     (3, 1, 'no moving census state'): 57
+     (3, 2, 'no moving census state'): 6
+     (3, 3, 'no moving census state'): 6
+     (3, 80, 'AFFINE b != 0'): 6
+     (3, 168, 'no moving census state'): 3
+     (3, 431, 'b = 0'): 3
+     (3, 431, 'no moving census state'): 3
+     (3, 1752, 'no moving census state'): 3
+     (3, 2544, 'no moving census state'): 3
+     (3, 2646, 'no moving census state'): 3
+  pairs of words with class spaces: {'(ii) commute on all of C': 1869, '(i) C = 0': 5611}
+
+=== readout L_1 = [1, 2, 0, 0]
+  word [s]: a = 2, dim C = 4, moving census states 2812, b: [(-45, 4), (-43, 11), (-41, 6), (-37, 25), '...', (293, 1), (295, 1), (297, 1)], e.g. [(-297, 387, 45, 45), (-295, 381, 43, 43)]
+  word [G(n=2,X=[0, 1],P=01) . G(n=3,X=[0, 1, 3],P=010)]: a = 80, dim C = 3, moving census states 255, b: [(-111, 1), (-107, 1), (-103, 1), (-95, 1), '...', (325, 1), (327, 1), (375, 1)], e.g. [(1, 0, 1, 0), (1, 1, 1, 1)]
+  word [G(n=3,X=[0, 1, 3],P=010) . G(n=2,X=[0, 1],P=01)]: a = 80, dim C = 3, moving census states 255, b: [(-111, 1), (-87, 1), (-81, 1), (-75, 1), '...', (2145, 1), (2187, 1), (2475, 1)], e.g. [(1, 0, 1, 0), (1, 1, 1, 1)]
+  word [s . G(n=1,X=[0],P=1) . G(n=3,X=[0, 1, 3],P=010)]: a = 80, dim C = 3, moving census states 255, b: [(-111, 1), (-107, 1), (-103, 1), (-95, 1), '...', (325, 1), (327, 1), (375, 1)], e.g. [(1, 0, 1, 0), (1, 1, 1, 1)]
+  word [s . G(n=2,X=[0, 1],P=10) . G(n=2,X=[0, 1],P=01)]: a = 80, dim C = 3, moving census states 255, b: [(-111, 1), (-87, 1), (-81, 1), (-75, 1), '...', (2145, 1), (2187, 1), (2475, 1)], e.g. [(1, 0, 1, 0), (1, 1, 1, 1)]
+  word [G(n=1,X=[0],P=1) . G(n=3,X=[0, 1, 3],P=010) . s]: a = 80, dim C = 4, moving census states 2813, b: [(-3339, 1), (-3269, 1), (-3199, 1), (-2891, 1), '...', (945, 3), (973, 2), (1015, 1)], e.g. [(-297, 387, 45, 45), (-295, 381, 43, 43)]
+  word [G(n=2,X=[0, 1],P=01) . s . G(n=2,X=[0, 1],P=10)]: a = 80, dim C = 3, moving census states 255, b: [(-111, 1), (-107, 1), (-103, 1), (-95, 1), '...', (325, 1), (327, 1), (375, 1)], e.g. [(1, 0, 1, 0), (1, 1, 1, 1)]
+  word [G(n=2,X=[0, 1],P=10) . G(n=2,X=[0, 1],P=01) . s]: a = 80, dim C = 3, moving census states 46, b: [(-345, 1), (-301, 1), (-299, 1), (-297, 1), '...', (5, 2), (9, 2), (15, 1)], e.g. [(1, 0, 1, 0), (1, 2, 1, 0)]
+  word [G(n=3,X=[0, 1, 3],P=010) . s . G(n=1,X=[0],P=1)]: a = 80, dim C = 3, moving census states 255, b: [(-111, 1), (-87, 1), (-81, 1), (-75, 1), '...', (2145, 1), (2187, 1), (2475, 1)], e.g. [(1, 0, 1, 0), (1, 1, 1, 1)]
+  summary (length, multiplier, kind): count
+     (1, 1, 'no moving census state'): 1
+     (1, 2, 'AFFINE b != 0'): 1
+     (2, 1, 'no moving census state'): 20
+     (2, 2, 'no moving census state'): 2
+     (2, 80, 'AFFINE b != 0'): 2
+     (2, 84, 'no moving census state'): 2
+     (2, 431, 'b = 0'): 1
+     (2, 431, 'no moving census state'): 1
+     (3, 1, 'no moving census state'): 57
+     (3, 2, 'no moving census state'): 6
+     (3, 3, 'no moving census state'): 6
+     (3, 80, 'AFFINE b != 0'): 6
+     (3, 168, 'no moving census state'): 3
+     (3, 431, 'b = 0'): 3
+     (3, 431, 'no moving census state'): 3
+     (3, 1752, 'no moving census state'): 3
+     (3, 2544, 'no moving census state'): 3
+     (3, 2646, 'no moving census state'): 3
+  pairs of words with class spaces: {'(ii) commute on all of C': 1972, '(i) C = 0': 5508}
+time 35.9 s

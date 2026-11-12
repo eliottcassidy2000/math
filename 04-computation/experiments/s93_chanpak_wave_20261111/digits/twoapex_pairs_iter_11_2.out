@@ -1,0 +1,37 @@
+candidates: 60 (letters with a in 1, 2, 3; two-letter words with a in 1, 4, 9); base words: all of length <= 11; depth 2
+   length 0: 1 base words, non-commuting exact pairs passing to depth 2: 0   [1.8 s]
+   length 1: 4 base words, non-commuting exact pairs passing to depth 2: 0   [1.8 s]
+   length 2: 16 base words, non-commuting exact pairs passing to depth 2: 0   [1.8 s]
+   length 3: 64 base words, non-commuting exact pairs passing to depth 2: 0   [1.8 s]
+   length 4: 256 base words, non-commuting exact pairs passing to depth 2: 0   [1.8 s]
+   length 5: 1024 base words, non-commuting exact pairs passing to depth 2: 0   [1.8 s]
+   length 6: 4096 base words, non-commuting exact pairs passing to depth 2: 0   [1.8 s]
+   length 7: 16384 base words, non-commuting exact pairs passing to depth 2: 0   [2.1 s]
+   length 8: 65536 base words, non-commuting exact pairs passing to depth 2: 0   [3.0 s]
+   length 9: 262144 base words, non-commuting exact pairs passing to depth 2: 0   [6.3 s]
+   length 10: 1048576 base words, non-commuting exact pairs passing to depth 2: 0   [21.2 s]
+   length 11: 4194304 base words, non-commuting exact pairs passing to depth 2: 0   [75.1 s]
+total non-commuting exact pairs (base word, pair) passing to depth 2: 0
+single maps: candidate (word, a): base words whose p-ray is exact to the depth / of these with H moving
+   p = 0, a = 1: 12 / 0
+   p = 0, a = 2: 6186 / 6174
+   p = 0, a = 3: 543 / 531
+   p = 1, a = 1: 4095 / 0
+   p = 1, a = 2: 1411413 / 1407318
+   p = 1, a = 3: 4095 / 0
+   p = 2, a = 2: 1398101 / 1398101
+   p = 3, a = 1: 5592405 / 0
+   p = 3, a = 2: 5592405 / 0
+   p = 3, a = 3: 5592405 / 0
+   p = 00, a = 1: 12 / 0
+   p = 00, a = 4: 6186 / 6174
+   p = 00, a = 9: 543 / 531
+   p = 11, a = 1: 4095 / 0
+   p = 11, a = 4: 1411413 / 1407318
+   p = 11, a = 9: 4095 / 0
+   p = 22, a = 4: 1398101 / 1398101
+   p = 33, a = 1: 5592405 / 0
+   p = 33, a = 4: 5592405 / 0
+   p = 33, a = 9: 5592405 / 0
+time 75.1 s
+exit 0

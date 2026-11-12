@@ -1,0 +1,46 @@
+S93 Chan-Pak wave, lane "seeds": receipts of the adversarial verifier (2026-11-11, after the finisher)
+=================================================================================================
+Nothing here changes a status upward.  The Chan-Pak conjecture stays OPEN.
+All programs of this folder are the verifier's own (C kernel vk_c_source.txt, written from the definitions of
+THM-5130; two python scripts).  No code of the lane or of the finisher is imported.  The intermediate tables
+(*.bin) and the executable were removed after the runs; to rebuild:
+    gcc -O2 -fopenmp -x c vk_c_source.txt -o vk
+    vk selftest | neutral n ../cls_n.txt | example | small n ../cls_n.txt minv_small_n.bin | extcount ../cls_9.txt 9
+    vk mass n ../cls_n.txt | part P 32 ../cls_9.txt minv_part_P_32.bin | lowH 224 450 ../cls_9.txt minv_lowH_224.bin
+    vk certs ../certs_plus_full.txt 1 | certs ../certs_minus_full.txt -1 | oneapex 14 | towers K
+    vk twoapex n 0 0 two_slopes_n.bin   (n = 10 in two halves: 0 524288 two_slopes_10a.bin, 524288 1048576 two_slopes_10b.bin)
+    python v_tables.py ; python v_small.py ; python v_twoapex_slopes.py
+Every run took less than 2.1 minutes on 4 threads.
+
+Results (file : content)
+  v_selftest.out      : DP kernel = literal enumeration of vertex orders (400 random tournaments, orders 2..7);
+                        closing law on 2,400 closings; gadget law and Lemma G (all nine constants) on random gadgets.
+  v_neutral_small/8/9 : neutral gadgets, all classes, every P: 1, 3, 5, 17, 37, 81 (orders 2..7, all |P| = 2, W = 2H);
+                        order 8: 386 = 254 + 16 + 116; order 9: 5,423 (4,019 violate HYP-9662 (D), first sentence);
+                        unit neutral over non-transitive X: 14 (order 8; constants identical to c_neutral_unit_8.txt),
+                        70 = 28 + 42 primitive (order 9; 22 with r_X = +1, 20 with r_X = -1).
+  v_example.out       : the sign-preserving example: state (1, 132458, 29285, 9314), H = 264917, 529833.
+  v_classes.out       : 15,773,048 min-score extensions; mass formula and H-sum of the class lists, orders 5..9.
+  v_census_small.out  : unit pairs, orders 1..9: identical to b_census_small.log (counts by |O|, largest slopes).
+  v_census_parts.out  : order 10, parts 4, 13, 22, 31 of 32 (1,961,194 extensions): identical to the lane's logs.
+  v_tables.out        : my tables = the lane's tables (orders 1..9 complete; the four parts of order 10);
+                        seed slopes below 450 from MY tables only (orders <= 9 + all order-10 tournaments with
+                        H <= 224, v_lowH.out): 205, windows 4, 3, 5, 12, 29, 53, 99, 76 odd; statistics of section 5.
+  v_certs.out         : all 32,747 + 32,758 certificates: state recomputed, 131,010 closed tournaments counted: 0 failures.
+  v_oneapex_14.out    : Theorem 6 (a)-(d), twin criterion, twin families: every word of length <= 14, 0 mismatches;
+                        seeds with |O| = 2: 3, 12, ..., 4228; no unit set with |O| >= 3; windows: raw 309, 423 at
+                        k = 14, 16, and 318, 533 only in the closure under doubling (wording of PROOFS section 6).
+  v_twoapex*.out      : two-apex bases, n = 1..10: 12, 54, 178, 497, 1297, 3360, 7836, 17320, 35842, 70887 seeds;
+                        69722 anti-seeds at n = 10; types; shares; the finisher's gap slopes (f_gap_slopes.out).
+  v_towers.out        : tower states 89, ..., 12369105 (k = 8, ..., 30); distinct slopes and values; odd parts reached.
+  v_small.out         : roots 0.788507, 0.792831, 0.797044; Theorem 2 (a), (c), Theorem 2' (literal / exact).
+
+Corrections found (wording and credit; no statement of PROOFS.txt is false):
+  1. Section 6: the windows 318 and 533 (k = 14, 16) are counts in the closure under doubling (raw: 309, 423).
+  2. Section 6, Theorem 6 (a), (b): KNOWN (the rooted triple (g(v), e(v), 1 + v) of the one-apex tournament,
+     THM-4885 Notation, THM-4875 (D), THM-5126 (D)); (c), (d) are the new parts.
+  3. Section 4 (iii): the proved counting exponent is now 3/4 (THM-5141), not 2/3 (THM-4887).
+  4. Section 5, Corollary: the range 2^30 of THM-4885 (D) (reproduced independently) suffices; the range 2^35 is a
+     single run.  The full lines 1 + c 2^s for c <= 4097 are in odd_c_seed_symmetry_20261110 (README).
+  5. Section 1: Theorem 1 is THM-5130 (F4) rewritten (as PROOFS says); label KNOWN.
+Not recounted by the verifier: 28 of the 32 slices of the order-10 census (same program as the slices recounted).

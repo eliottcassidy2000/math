@@ -1,0 +1,4 @@
+x_0 A_l = x_0 over Z for the four letters: True ; x(empty) A_0 = x(empty) over Z: True
+m = 3: orbit 236196 states (closed, depth 15); strongly connected components: 1; self-loop at the start state under the letter 0: True; O + 1 x_0 = O: True; classes of H on O: [0, 1, 2]
+m = 4: orbit 512 states (closed, depth 8); strongly connected components: 1; self-loop at the start state under the letter 0: True; O + 2 x_0 = O: True; classes of H on O: [1, 3]
+m = 8: orbit 262144 states (closed, depth 14); strongly connected components: 1; self-loop at the start state under the letter 0: True; O + 2 x_0 = O: True; classes of H on O: [1, 3, 5, 7]

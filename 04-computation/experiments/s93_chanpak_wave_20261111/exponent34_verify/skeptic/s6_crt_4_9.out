@@ -1,0 +1,6 @@
+w=4 (s1=2 s2=2 ds=0): (P_u, P_v) pairs 784 ; violations {} ; max count/(6M/m+1): U-side 0.6842, V-side 0.6842 ; max #points per direction: U 2, V 2
+w=5 (s1=3 s2=2 ds=1): (P_u, P_v) pairs 3360 ; violations {} ; max count/(6M/m+1): U-side 0.9062, V-side 0.8286 ; max #points per direction: U 1, V 4
+w=6 (s1=3 s2=3 ds=0): (P_u, P_v) pairs 14400 ; violations {} ; max count/(6M/m+1): U-side 0.9104, V-side 0.9104 ; max #points per direction: U 2, V 2
+w=7 (s1=4 s2=3 ds=1): (P_u, P_v) pairs 59520 ; violations {} ; max count/(6M/m+1): U-side 0.9766, V-side 0.9542 ; max #points per direction: U 1, V 4
+w=8 (s1=4 s2=4 ds=0): (P_u, P_v) pairs 246016 ; violations {} ; max count/(6M/m+1): U-side 0.9768, V-side 0.9768 ; max #points per direction: U 2, V 2
+w=9 (s1=5 s2=4 ds=1): (P_u, P_v) pairs 999936 ; violations {} ; max count/(6M/m+1): U-side 0.9941, V-side 0.9883 ; max #points per direction: U 1, V 4

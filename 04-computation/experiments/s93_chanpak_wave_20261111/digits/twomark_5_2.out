@@ -1,0 +1,24 @@
+302 bases (orders 2..5), 157 suffix words (length <= 2)
+Hankel matrix computed  [0.6 s]
+   rank with suffix words of length <= 0 (1 columns): 1
+   rank with suffix words of length <= 1 (13 columns): 4
+   rank with suffix words of length <= 2 (157 columns): 12
+   rank with bases of order <= 2 (2 rows): 2
+   rank with bases of order <= 3 (14 rows): 7
+   rank with bases of order <= 4 (62 rows): 11
+   rank with bases of order <= 5 (302 rows): 12
+Hankel rank d = 12; state words: ['empty', '3', '6', '9', '03', '06', '33', '36', '39', '49', '66', '69']
+   op 0 = (S = 00, mu = 0): matrix solved, verification failures so far 804  [0.9 s]
+   op 1 = (S = 00, mu = 1): matrix solved, verification failures so far 804  [1.0 s]
+   op 2 = (S = 00, mu = 2): matrix solved, verification failures so far 804  [1.1 s]
+   op 3 = (S = 01, mu = 0): matrix solved, verification failures so far 2155  [1.3 s]
+   op 4 = (S = 01, mu = 1): matrix solved, verification failures so far 3369  [1.4 s]
+   op 5 = (S = 01, mu = 2): matrix solved, verification failures so far 3369  [1.5 s]
+   op 6 = (S = 10, mu = 0): matrix solved, verification failures so far 4697  [1.6 s]
+   op 7 = (S = 10, mu = 1): matrix solved, verification failures so far 4697  [1.8 s]
+   op 8 = (S = 10, mu = 2): matrix solved, verification failures so far 5915  [1.9 s]
+   op 9 = (S = 11, mu = 0): matrix solved, verification failures so far 7753  [2.0 s]
+   op 10 = (S = 11, mu = 1): matrix solved, verification failures so far 9117  [2.1 s]
+   op 11 = (S = 11, mu = 2): matrix solved, verification failures so far 10509  [2.3 s]
+denominators: [1, 2, 3, 6]; verification failures over all 302 bases: 10509
+-> twomark_rep_5_2.json   [2.3 s]

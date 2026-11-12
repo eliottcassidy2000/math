@@ -1,0 +1,41 @@
+THM-5141 (C), lattice line by direct solution of c X - P Xi = gamma, n = 2 .. 14
+n =  2: solutions of the equation in the boxes:        2; ordered colliding pairs:        2; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 2, with a solution: 2; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.1250; largest group 1
+        parity classes examined: 8, with a solution: 2; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 2; spacing violations: 0
+n =  3: solutions of the equation in the boxes:        6; ordered colliding pairs:        6; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 8, with a solution: 6; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.1250; largest group 1
+        parity classes examined: 32, with a solution: 6; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 6; spacing violations: 0
+n =  4: solutions of the equation in the boxes:        8; ordered colliding pairs:        8; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 30, with a solution: 6; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.1667; largest group 2
+        parity classes examined: 120, with a solution: 8; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 8; spacing violations: 0
+n =  5: solutions of the equation in the boxes:       20; ordered colliding pairs:       20; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 116, with a solution: 18; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.2321; largest group 2
+        parity classes examined: 464, with a solution: 20; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 20; spacing violations: 0
+n =  6: solutions of the equation in the boxes:       48; ordered colliding pairs:       48; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 458, with a solution: 34; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.3000; largest group 6
+        parity classes examined: 1832, with a solution: 44; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 40; spacing violations: 0
+n =  7: solutions of the equation in the boxes:       84; ordered colliding pairs:       84; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 1824, with a solution: 70; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.2458; largest group 4
+        parity classes examined: 7296, with a solution: 80; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 76; spacing violations: 0
+n =  8: solutions of the equation in the boxes:      184; ordered colliding pairs:      184; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 7286, with a solution: 126; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.3889; largest group 14
+        parity classes examined: 29144, with a solution: 156; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 152; spacing violations: 0
+n =  9: solutions of the equation in the boxes:      396; ordered colliding pairs:      396; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 29132, with a solution: 326; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.2490; largest group 8
+        parity classes examined: 116528, with a solution: 368; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 364; spacing violations: 0
+n = 10: solutions of the equation in the boxes:      912; ordered colliding pairs:      912; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 116514, with a solution: 698; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.4412; largest group 30
+        parity classes examined: 466056, with a solution: 796; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 792; spacing violations: 0
+n = 11: solutions of the equation in the boxes:     1744; ordered colliding pairs:     1744; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 466040, with a solution: 1418; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.4216; largest group 16
+        parity classes examined: 1864160, with a solution: 1604; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 1600; spacing violations: 0
+n = 12: solutions of the equation in the boxes:     3640; ordered colliding pairs:     3640; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 1864142, with a solution: 2826; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.4697; largest group 62
+        parity classes examined: 7456568, with a solution: 3212; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 3204; spacing violations: 0
+n = 13: solutions of the equation in the boxes:     7320; ordered colliding pairs:     7320; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 7456548, with a solution: 5922; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.4588; largest group 32
+        parity classes examined: 29826192, with a solution: 6696; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 6632; spacing violations: 0
+n = 14: solutions of the equation in the boxes:    15472; ordered colliding pairs:    15472; the two sets are equal: True
+        groups (t', s, x, x') examined (all odd pairs): 29826170, with a solution: 12410; violations of 4(1 + 2^max(t'-1,s) g/max): 0; max count/bound 0.4846; largest group 126
+        parity classes examined: 119304680, with a solution: 13896; violations of 1 + g min(...): 0; of the exact progression count: 0; classes attaining the exact progression count: 13788; spacing violations: 0
+time 50.4 s

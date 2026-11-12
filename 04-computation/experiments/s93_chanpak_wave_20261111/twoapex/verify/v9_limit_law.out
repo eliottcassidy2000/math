@@ -1,0 +1,14 @@
+(a) n = 2: max |H - 2 3^n S_n E_n| / (n 2^n) = 0.6250 (lane 0.6250)
+(a) n = 3: max |H - 2 3^n S_n E_n| / (n 2^n) = 0.5972 (lane 0.5972)
+(a) n = 4: max |H - 2 3^n S_n E_n| / (n 2^n) = 0.5781 (lane 0.5781)
+(a) n = 5: max |H - 2 3^n S_n E_n| / (n 2^n) = 0.6062 (lane 0.6062)
+(a) n = 6: max |H - 2 3^n S_n E_n| / (n 2^n) = 0.5940 (lane 0.5940)
+(a) n = 7: max |H - 2 3^n S_n E_n| / (n 2^n) = 0.5864 (lane 0.5864)
+(a) n = 8: max |H - 2 3^n S_n E_n| / (n 2^n) = 0.5654 (lane 0.5654)
+(a) n = 9: max |H - 2 3^n S_n E_n| / (n 2^n) = 0.5561 (lane 0.5561)
+(a) leading-term table reproduced: True
+(b) P(H < 2 3^17 / 2^j), j = 2..10: 0.97941 0.85323 0.63500 0.41843 0.25213 0.14174 0.07569 0.03871 0.01908 | reproduced: True
+(b) local exponents: 0.199 0.426 0.602 0.731 0.831 0.905 0.967 1.021
+(b) median of H over the words of length 17: 10617731 = 0.04111 * 2 * 3^17 (lane: 0.04114)
+(c) modulus 8, orbit 262144 states, component where x -> x + 2(1,..,1) acts by i^1: rate 0.617072 (lane: 0.6175)
+(c) modulus 8, orbit 262144 states, component where x -> x + 2(1,..,1) acts by i^2: rate 0.808974 (lane: 0.7327856)

@@ -1,0 +1,5 @@
+example: (C_3, two vertices) state (1, 6, 3, 2); gadget constants H 293 Pi 4832 W 292 r_X 1 kappa 0 u 1330 sigma 85 u3 8034 eps 92 nu 1583
+example: pair (C(C_3, O; X), P), order 12: state (1, 132458, 29285, 9314)
+example: closed tournament t = 1, order 14: H = 264917
+example: closed tournament t = 2, order 15: H = 529833
+example: anti-seed (TT_3, {1, 2}) state (-1, 6, 1, 0) -> (-1, 127308, 28699, 9314)

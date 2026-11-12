@@ -1,0 +1,8 @@
+V1  Q, U, H, Pi_2: subset recursion = literal enumeration on 1099 labelled tournaments of order <= 5: True
+V2i closing law, literal enumeration of all vertex orders, labelled B of order <= 4, every O, t = 1, 2, 3: 3294 cases: True
+V2ii closing law, independent subset recursion, all labelled B of order 5 (every O) and 6000 random B of order 6, 7: 275072 cases: True
+V3  r(B, {e, f}) = H(B') - 2 W_B'(f -> e) (literal), labelled B of order <= 5 and every 7th of order 6, every arc: 80880 cases: True;  r = A - Q(f, e), Q(e, f) = W_B(e -> f): True
+V4  F1, sink rule (r, 2M), source rule (r, M): labelled B of order <= 5, every nonempty O: 32767 cases: True
+V5  one-apex closed forms for H, U(apex) = 1 + val(y), W(apex, z_j): all 2046 words of length <= 10: True
+V6  kappa_X({e, f}) = 2 Pi_2(X - ef) - Pi_2(X'): labelled X of order <= 5, every arc: 10650 cases: True
+ALL CHECKS PASS

@@ -1,0 +1,21 @@
+n = 0: all 1 words, transfer != subset DP on 0 words
+n = 1: all 4 words, transfer != subset DP on 0 words
+n = 2: all 16 words, transfer != subset DP on 0 words
+n = 3: all 64 words, transfer != subset DP on 0 words
+n = 4: all 256 words, transfer != subset DP on 0 words
+n = 5: all 1024 words, transfer != subset DP on 0 words
+n = 6: all 4096 words, transfer != subset DP on 0 words
+n = 0: all 1 words, transfer != literal vertex orders on 0 words
+n = 1: all 4 words, transfer != literal vertex orders on 0 words
+n = 2: all 16 words, transfer != literal vertex orders on 0 words
+n = 3: all 64 words, transfer != literal vertex orders on 0 words
+n = 4: all 256 words, transfer != literal vertex orders on 0 words
+n = 0: all 1 words, transfer != literal 3-colourings on 0 words
+n = 1: all 4 words, transfer != literal 3-colourings on 0 words
+n = 2: all 16 words, transfer != literal 3-colourings on 0 words
+n = 3: all 64 words, transfer != literal 3-colourings on 0 words
+n = 4: all 256 words, transfer != literal 3-colourings on 0 words
+n = 5: all 1024 words, transfer != literal 3-colourings on 0 words
+random words of length 7..10: 205 tested, mismatches 0
+H(0 w) = H(w), H(w 3) = H(w), converse symmetry w -> w*: violations 0 (all words, n <= 6)
+ALL CHECKS PASS

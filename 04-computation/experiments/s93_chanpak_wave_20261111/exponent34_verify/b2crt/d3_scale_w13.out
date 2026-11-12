@@ -1,0 +1,30 @@
+W=13 s1=7 s2=6: |difference set, b odd| = 1458 (tested 1458), 486 (tested 486)
+  Deg  K=2^0 : max Deg/bracket = 0.6741 (|a|=2, Deg=2); max Deg = 2; max Deg/(K(1+lnK)^2) = 2.0000
+  Deg  K=2^1 : max Deg/bracket = 0.1441 (|a|=3, Deg=2); max Deg = 2; max Deg/(K(1+lnK)^2) = 0.3488
+  Deg  K=2^2 : max Deg/bracket = 0.1128 (|a|=6, Deg=6); max Deg = 6; max Deg/(K(1+lnK)^2) = 0.2634
+  Deg  K=2^3 : max Deg/bracket = 0.0873 (|a|=15, Deg=16); max Deg = 16; max Deg/(K(1+lnK)^2) = 0.2109
+  Deg  K=2^4 : max Deg/bracket = 0.0421 (|a|=15, Deg=27); max Deg = 31; max Deg/(K(1+lnK)^2) = 0.1361
+  Deg  K=2^5 : max Deg/bracket = 0.0197 (|a|=35, Deg=41); max Deg = 77; max Deg/(K(1+lnK)^2) = 0.1207
+  Deg  K=2^6 : max Deg/bracket = 0.0088 (|a|=35, Deg=73); max Deg = 150; max Deg/(K(1+lnK)^2) = 0.0881
+  Deg  K=2^7 : max Deg/bracket = 0.0035 (|a|=43, Deg=123); max Deg = 326; max Deg/(K(1+lnK)^2) = 0.0744
+  Deg  K=2^8 : max Deg/bracket = 0.0014 (|a|=63, Deg=203); max Deg = 598; max Deg/(K(1+lnK)^2) = 0.0545
+  Deg  K=2^9 : max Deg/bracket = 0.0005 (|a|=54, Deg=446); max Deg = 1069; max Deg/(K(1+lnK)^2) = 0.0399
+  Deg  K=2^10: max Deg/bracket = 0.0002 (|a|=15, Deg=1834); max Deg = 1854; max Deg/(K(1+lnK)^2) = 0.0288
+  Deg  K=2^11: max Deg/bracket = 0.0001 (|a|=31, Deg=3052); max Deg = 3059; max Deg/(K(1+lnK)^2) = 0.0201
+  Deg  K=2^12: max Deg/bracket = 0.0000 (|a|=63, Deg=4910); max Deg = 4932; max Deg/(K(1+lnK)^2) = 0.0139
+  Deg  K=2^13: max Deg/bracket = 0.0000 (|a|=127, Deg=8128); max Deg = 8128; max Deg/(K(1+lnK)^2) = 0.0099
+  Deg' K=2^0 : max Deg/bracket = 2.6963 (|a|=2, Deg=8); max Deg = 8; max Deg/(K(1+lnK)^2) = 8.0000
+  Deg' K=2^1 : max Deg/bracket = 0.5762 (|a|=3, Deg=8); max Deg = 8; max Deg/(K(1+lnK)^2) = 1.3953
+  Deg' K=2^2 : max Deg/bracket = 0.3752 (|a|=9, Deg=20); max Deg = 20; max Deg/(K(1+lnK)^2) = 0.8781
+  Deg' K=2^3 : max Deg/bracket = 0.2561 (|a|=9, Deg=48); max Deg = 53; max Deg/(K(1+lnK)^2) = 0.6986
+  Deg' K=2^4 : max Deg/bracket = 0.1281 (|a|=4, Deg=107); max Deg = 115; max Deg/(K(1+lnK)^2) = 0.5050
+  Deg' K=2^5 : max Deg/bracket = 0.0567 (|a|=5, Deg=197); max Deg = 263; max Deg/(K(1+lnK)^2) = 0.4121
+  Deg' K=2^6 : max Deg/bracket = 0.0243 (|a|=17, Deg=255); max Deg = 553; max Deg/(K(1+lnK)^2) = 0.3247
+  Deg' K=2^7 : max Deg/bracket = 0.0100 (|a|=17, Deg=512); max Deg = 1155; max Deg/(K(1+lnK)^2) = 0.2635
+  Deg' K=2^8 : max Deg/bracket = 0.0038 (|a|=17, Deg=1021); max Deg = 2376; max Deg/(K(1+lnK)^2) = 0.2167
+  Deg' K=2^9 : max Deg/bracket = 0.0014 (|a|=19, Deg=1942); max Deg = 4236; max Deg/(K(1+lnK)^2) = 0.1579
+  Deg' K=2^10: max Deg/bracket = 0.0006 (|a|=7, Deg=7209); max Deg = 7292; max Deg/(K(1+lnK)^2) = 0.1132
+  Deg' K=2^11: max Deg/bracket = 0.0002 (|a|=15, Deg=12095); max Deg = 12178; max Deg/(K(1+lnK)^2) = 0.0799
+  Deg' K=2^12: max Deg/bracket = 0.0001 (|a|=31, Deg=19513); max Deg = 19535; max Deg/(K(1+lnK)^2) = 0.0549
+  Deg' K=2^13: max Deg/bracket = 0.0000 (|a|=63, Deg=32640); max Deg = 32640; max Deg/(K(1+lnK)^2) = 0.0398
+W=13: (D1) ok, (D2) ok for K = 2^i <= 2^s2; 2.2 s

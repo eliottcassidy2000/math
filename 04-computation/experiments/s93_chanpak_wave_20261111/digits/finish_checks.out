@@ -1,0 +1,21 @@
+(V1) exact integer eigenvalues (divisor test) against affine.int_eigs
+   gadget_matrices_3.json: 14 matrices, disagreements 0, exact integer eigenvalues >= 1: {}
+   gadget_matrices_4.json: 57 matrices, disagreements 0, exact integer eigenvalues >= 1: {84: 1}
+   gadget_matrices_5.json: 331 matrices, disagreements 0, exact integer eigenvalues >= 1: {84: 1, 168: 1, 252: 1}
+   gadget_matrices_6.json: 3207 matrices, disagreements 0, exact integer eigenvalues >= 1: {84: 1, 168: 1, 252: 1, 255: 1, 336: 1, 504: 2, 756: 1}
+   onemark_matrices_3.json: 56 matrices, disagreements 0, exact integer eigenvalues >= 1: {1: 19, 2: 2, 3: 10, 4: 4, 5: 5, 8: 8, 12: 4}
+   onemark_matrices_4.json: 270 matrices, disagreements 0, exact integer eigenvalues >= 1: {1: 41, 2: 2, 3: 29, 4: 4, 5: 33, 8: 8, 9: 10, 12: 4, 15: 3, 16: 16, 24: 14, 32: 16}
+   onemark_matrices_5.json: 1922 matrices, disagreements 0, exact integer eigenvalues >= 1: {1: 83, 2: 2, 3: 73, 4: 4, 5: 106, 8: 8, 9: 100, 11: 45, 12: 4, 13: 44, 15: 45, 16: 16, 17: 16, 24: 14, 26: 10, 27: 7, 32: 48, 37: 3, 40: 6, 48: 38, 64: 62, 84: 64, 100: 32, 104: 32, 108: 16, 120: 8}
+   twomark_rep_5_3.json: 156 words of length <= 2, disagreements 0, (length, eigenvalue): count = {(1, 1): 12, (1, 2): 8, (1, 3): 4, (2, 1): 118, (2, 3): 44, (2, 4): 72, (2, 9): 16}
+(V2) closed form of the stay block (TT_k, W) against the product of the one-vertex matrices a, c, k <= 12
+   8190 words checked, mismatches: 0
+(V3) one-vertex tree by direct counts (hcount on explicit extensions), roots = all classes of order <= 6
+   classes in K_1 by order: {1: 0, 2: 1, 3: 1, 4: 2, 5: 5, 6: 18}   (lane: 0, 1, 1, 2, 5, 18)
+   classes in K_2 by order: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}   (lane: none)   [0.5 s]
+   order 1: classes with both targets by one-vertex steps: 0; by one- or two-vertex steps: 1; classes where a two-vertex step reaches a target that no one-vertex step reaches: [(1, (False, True), (True, True))]
+   order 2: classes with both targets by one-vertex steps: 1; by one- or two-vertex steps: 1; classes where a two-vertex step reaches a target that no one-vertex step reaches: []
+   order 3: classes with both targets by one-vertex steps: 1; by one- or two-vertex steps: 1; classes where a two-vertex step reaches a target that no one-vertex step reaches: []
+   order 4: classes with both targets by one-vertex steps: 2; by one- or two-vertex steps: 2; classes where a two-vertex step reaches a target that no one-vertex step reaches: []
+   order 5: classes with both targets by one-vertex steps: 5; by one- or two-vertex steps: 5; classes where a two-vertex step reaches a target that no one-vertex step reaches: []
+   [0.1 s]
+exit 0

@@ -1,0 +1,80 @@
+window [2^15, 2^16): 16384 odd N; words L1^p L2^q with p + q <= 22, p, q <= 18
+ L1  L2 | seam rank | max H at p+q=16 (log2) | distinct values at p+q=16 of 2^16*17 words | coverage of the window
+ 01  01 |         4 |      65027 (15.99) |   0.5007
+ 01  02 |         4 |   26126809 (24.64) |   0.8672
+ 01  03 |         4 |   73529109 (26.13) |   0.8658
+ 01  12 |         4 |    9652113 (23.20) |   0.9373
+ 01  13 |         1 |      65027 (15.99) |   0.7399
+ 01  23 |         3 |     130307 (16.99) |   0.5007
+ 02  01 |         2 |   26126683 (24.64) |   0.6400
+ 02  02 |         4 |     130307 (16.99) |   0.5007
+ 02  03 |         4 |   73529109 (26.13) |   0.8220
+ 02  12 |         4 |    9652113 (23.20) |   0.9139
+ 02  13 |         3 |     130307 (16.99) |   0.5007
+ 02  23 |         3 |     130307 (16.99) |   0.9587
+ 03  01 |         9 |   73529109 (26.13) |   0.6340
+ 03  02 |         9 |   73529109 (26.13) |   0.6102
+ 03  03 |         9 |   73529109 (26.13) |   0.0134
+ 03  12 |         9 |   73529109 (26.13) |   0.5273
+ 03  13 |         4 |   73529109 (26.13) |   0.8658
+ 03  23 |         4 |   73529109 (26.13) |   0.8220
+ 12  01 |        10 |   26145301 (24.64) |   0.7009
+ 12  02 |        10 |   26145301 (24.64) |   0.7341
+ 12  03 |         9 |   73529109 (26.13) |   0.5273
+ 12  12 |        15 |    9652113 (23.20) |   0.0695
+ 12  13 |         4 |    9652113 (23.20) |   0.9373
+ 12  23 |         4 |    9652113 (23.20) |   0.9139
+ 13  01 |         8 |   73529109 (26.13) |   0.6083
+ 13  02 |         9 |   73529109 (26.13) |   0.7632
+ 13  03 |         9 |   73529109 (26.13) |   0.6340
+ 13  12 |        10 |   26145301 (24.64) |   0.7009
+ 13  13 |         4 |      65027 (15.99) |   0.5007
+ 13  23 |         2 |   26126683 (24.64) |   0.6400
+ 23  01 |         9 |   73529109 (26.13) |   0.7632
+ 23  02 |        10 |   73529109 (26.13) |   0.5825
+ 23  03 |         9 |   73529109 (26.13) |   0.6102
+ 23  12 |        10 |   26145301 (24.64) |   0.7341
+ 23  13 |         4 |   26126809 (24.64) |   0.8672
+ 23  23 |         4 |     130307 (16.99) |   0.5007
+
+sorted by coverage:
+  (02, 23): rank 3, growth 2^1.062 per letter, coverage 0.9587
+  (01, 12): rank 4, growth 2^1.450 per letter, coverage 0.9373
+  (12, 13): rank 4, growth 2^1.450 per letter, coverage 0.9373
+  (02, 12): rank 4, growth 2^1.450 per letter, coverage 0.9139
+  (12, 23): rank 4, growth 2^1.450 per letter, coverage 0.9139
+  (01, 02): rank 4, growth 2^1.540 per letter, coverage 0.8672
+  (23, 13): rank 4, growth 2^1.540 per letter, coverage 0.8672
+  (01, 03): rank 4, growth 2^1.633 per letter, coverage 0.8658
+  (03, 13): rank 4, growth 2^1.633 per letter, coverage 0.8658
+  (02, 03): rank 4, growth 2^1.633 per letter, coverage 0.8220
+  (03, 23): rank 4, growth 2^1.633 per letter, coverage 0.8220
+  (13, 02): rank 9, growth 2^1.633 per letter, coverage 0.7632
+  (23, 01): rank 9, growth 2^1.633 per letter, coverage 0.7632
+  (01, 13): rank 1, growth 2^0.999 per letter, coverage 0.7399
+  (12, 02): rank 10, growth 2^1.540 per letter, coverage 0.7341
+  (23, 12): rank 10, growth 2^1.540 per letter, coverage 0.7341
+  (12, 01): rank 10, growth 2^1.540 per letter, coverage 0.7009
+  (13, 12): rank 10, growth 2^1.540 per letter, coverage 0.7009
+  (02, 01): rank 2, growth 2^1.540 per letter, coverage 0.6400
+  (13, 23): rank 2, growth 2^1.540 per letter, coverage 0.6400
+  (03, 01): rank 9, growth 2^1.633 per letter, coverage 0.6340
+  (13, 03): rank 9, growth 2^1.633 per letter, coverage 0.6340
+  (03, 02): rank 9, growth 2^1.633 per letter, coverage 0.6102
+  (23, 03): rank 9, growth 2^1.633 per letter, coverage 0.6102
+  (13, 01): rank 8, growth 2^1.633 per letter, coverage 0.6083
+  (23, 02): rank 10, growth 2^1.633 per letter, coverage 0.5825
+  (03, 12): rank 9, growth 2^1.633 per letter, coverage 0.5273
+  (12, 03): rank 9, growth 2^1.633 per letter, coverage 0.5273
+  (01, 01): rank 4, growth 2^0.999 per letter, coverage 0.5007
+  (01, 23): rank 3, growth 2^1.062 per letter, coverage 0.5007
+  (02, 02): rank 4, growth 2^1.062 per letter, coverage 0.5007
+  (02, 13): rank 3, growth 2^1.062 per letter, coverage 0.5007
+  (13, 13): rank 4, growth 2^0.999 per letter, coverage 0.5007
+  (23, 23): rank 4, growth 2^1.062 per letter, coverage 0.5007
+  (12, 12): rank 15, growth 2^1.450 per letter, coverage 0.0695
+  (03, 03): rank 9, growth 2^1.633 per letter, coverage 0.0134
+
+real	2m18.946s
+user	0m0.031s
+sys	0m0.000s

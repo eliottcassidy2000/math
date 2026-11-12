@@ -1,0 +1,5 @@
+order 10, H <= 224, slopes < 450: 4642 bases extended, 120966 min-score extensions enumerated
+order 10, H <= 224, slopes < 450: 9963 tournaments; seeds by |O|: (1, 10) (2, 2345) (3, 690); anti-seeds by |O|: (2, 2186) (3, 635); max slopes 8094 7740
+real	0m7.328s
+user	0m0.015s
+sys	0m0.015s

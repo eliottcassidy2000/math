@@ -1,0 +1,6 @@
+R1 classification of the unit pairs {apex, spine vertex} over strong words, n = 2..14: True
+R2 slopes of the twins of 1^a 00, a = 2..12 (66 pairs): True
+R3 twins of 11 0^b are seeds, b = 2..12 (66 pairs), first pair has slope 30 * 3^(b-2) - 1: True
+   slopes of the pair (z_j, z_(j+1)) of 11 0^b, b = 2..6: {(2, 3): 29, (3, 3): 89, (3, 4): 60, (4, 3): 269, (4, 4): 180, (4, 5): 120, (5, 3): 809, (5, 4): 540, (5, 5): 360, (5, 6): 240, (6, 3): 2429, (6, 4): 1620, (6, 5): 1080, (6, 6): 720, (6, 7): 480}
+R4 twin criterion val(Y) = 1 + [y_1 = 1] + [y_n = 0] + J + I(Y) + I(Z) for 0-blocks, all words n <= 12 (20481 twin pairs): True
+R5 every unit set (both signs) over a one-apex base of length <= 14 has at most two vertices: True

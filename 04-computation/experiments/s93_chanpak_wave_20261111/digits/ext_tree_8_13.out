@@ -1,0 +1,111 @@
+roots: isomorphism classes of orders 1..8: [1, 1, 2, 4, 12, 56, 456, 6880]
+order 1: 1 classes examined (1 roots); order 2 now holds 1 classes  [2.0 s]
+order 2: 1 classes examined (1 roots); order 3 now holds 2 classes  [2.0 s]
+order 3: 2 classes examined (2 roots); order 4 now holds 4 classes  [2.0 s]
+order 4: 4 classes examined (4 roots); order 5 now holds 12 classes  [2.0 s]
+order 5: 12 classes examined (12 roots); order 6 now holds 56 classes  [2.0 s]
+order 6: 56 classes examined (56 roots); order 7 now holds 456 classes  [2.0 s]
+order 7: 456 classes examined (456 roots); order 8 now holds 6880 classes  [2.0 s]
+order 8: 6880 classes examined (6880 roots); order 9 now holds 1959 classes  [2.5 s]
+order 9: 1959 classes examined (0 roots); order 10 now holds 756 classes  [2.9 s]
+order 10: 756 classes examined (0 roots); order 11 now holds 728 classes  [3.2 s]
+order 11: 728 classes examined (0 roots); order 12 now holds 829 classes  [3.7 s]
+order 12: 829 classes examined (0 roots); order 13 now holds 951 classes  [5.0 s]
+
+ROOT STATISTICS (all isomorphism classes of the order):
+ n  classes  has 2H+1  has 2H-1  both  | depth histogram (depth: classes), cap = NMAX - n
+ 1        1         0         1     0  | {0: 1}  cap 12
+ 2        1         1         1     1  | {1: 1}  cap 11
+ 3        2         1         2     1  | {0: 1, 1: 1}  cap 10
+ 4        4         2         4     2  | {0: 2, 1: 2}  cap 9
+ 5       12         7         9     5  | {0: 7, 1: 5}  cap 8
+ 6       56        31        32    18  | {0: 38, 1: 18}  cap 7
+ 7      456       141       141    50  | {0: 406, 1: 50}  cap 6
+ 8     6880       879       867   134  | {0: 6746, 1: 134}  cap 5
+
+Same statistics with the degenerate value H = 1 removed (2H - 1 = H there):
+ 1        0 both     0  | {}
+ 2        0 both     0  | {}
+ 3        1 both     0  | {0: 1}
+ 4        3 both     1  | {0: 2, 1: 1}
+ 5       11 both     4  | {0: 7, 1: 4}
+ 6       55 both    17  | {0: 38, 1: 17}
+ 7      455 both    49  | {0: 406, 1: 49}
+ 8     6879 both   133  | {0: 6746, 1: 133}
+
+order 4: deepest roots (depth, H, #ext 2H+1, #ext 2H-1, key): 
+    depth 1  H =      1  +:  3 -:  5  key 311
+    depth 1  H =      5  +:  4 -:  5  key 10293
+    depth 0  H =      3  +:  0 -:  6  key 2357
+    depth 0  H =      3  +:  0 -:  6  key 16679
+order 5: deepest roots (depth, H, #ext 2H+1, #ext 2H-1, key): 
+    depth 1  H =      1  +:  4 -:  6  key 36079
+    depth 1  H =      5  +:  4 -:  5  key 2362543
+    depth 1  H =      5  +:  4 -:  5  key 181483
+    depth 1  H =      9  +:  2 -:  4  key 2624749
+    depth 1  H =      9  +:  4 -:  2  key 2245867
+    depth 0  H =      3  +:  0 -:  6  key 4229359
+    depth 0  H =      3  +:  0 -:  6  key 298159
+    depth 0  H =      3  +:  0 -:  6  key 52459
+    depth 0  H =     11  +:  6 -:  0  key 8562247
+    depth 0  H =     13  +:  0 -:  4  key 8570059
+    depth 0  H =     15  +:  6 -:  0  key 17075374
+    depth 0  H =     15  +:  0 -:  0  key 25347274
+order 6: deepest roots (depth, H, #ext 2H+1, #ext 2H-1, key): 
+    depth 1  H =      1  +:  5 -:  7  key 17593311
+    depth 1  H =      5  +:  4 -:  5  key 88371935
+    depth 1  H =      5  +:  4 -:  5  key 2282509279
+    depth 1  H =      5  +:  4 -:  5  key 19805143
+    depth 1  H =      9  +:  2 -:  4  key 92566491
+    depth 1  H =      9  +:  4 -:  2  key 2219078367
+    depth 1  H =      9  +:  4 -:  2  key 86389719
+    depth 1  H =      9  +:  2 -:  4  key 2416735071
+    depth 1  H =     15  +:  1 -:  1  key 2223272923
+    depth 1  H =     15  +:  1 -:  1  key 2282640343
+    depth 1  H =     19  +:  3 -:  2  key 8676320215
+    depth 1  H =     19  +:  3 -:  2  key 2418882895
+order 7: deepest roots (depth, H, #ext 2H+1, #ext 2H-1, key): 
+    depth 1  H =      1  +:  6 -:  8  key 35179974591
+    depth 1  H =      5  +:  4 -:  5  key 176376958911
+    depth 1  H =      5  +:  4 -:  5  key 37386177471
+    depth 1  H =      5  +:  4 -:  5  key 35214446511
+    depth 1  H =      5  +:  4 -:  5  key 9071786971071
+    depth 1  H =      9  +:  2 -:  4  key 180671991231
+    depth 1  H =      9  +:  4 -:  2  key 37353541551
+    depth 1  H =      9  +:  2 -:  4  key 37453287351
+    depth 1  H =      9  +:  4 -:  2  key 8938110242751
+    depth 1  H =      9  +:  2 -:  4  key 9346669039551
+    depth 1  H =      9  +:  4 -:  2  key 174288260031
+    depth 1  H =     15  +:  1 -:  1  key 174355369911
+order 8: deepest roots (depth, H, #ext 2H+1, #ext 2H-1, key): 
+    depth 1  H =      1  +:  7 -:  9  key 284803830071167
+    depth 1  H =      5  +:  4 -:  5  key 284804374282079
+    depth 1  H =      5  +:  4 -:  5  key 293720181653375
+    depth 1  H =      5  +:  4 -:  5  key 1426096832593791
+    depth 1  H =      5  +:  4 -:  5  key 146370308152967039
+    depth 1  H =      5  +:  4 -:  5  key 284873489067903
+    depth 1  H =      9  +:  2 -:  4  key 1443689085484927
+    depth 1  H =      9  +:  2 -:  4  key 284874562813807
+    depth 1  H =      9  +:  4 -:  2  key 145259809931739007
+    depth 1  H =      9  +:  4 -:  2  key 293652402220927
+    depth 1  H =      9  +:  2 -:  4  key 148622116523032447
+    depth 1  H =      9  +:  4 -:  2  key 1417421065240447
+
+H-values of roots (order <= 8) that survive to the horizon (depth = NMAX - order): []
+H-values whose every root dies before the horizon, with the largest depth: [(1, 1), (3, 0), (5, 1), (9, 1), (11, 0), (13, 0), (15, 1), (17, 0), (19, 1), (23, 1), (25, 0), (27, 0), (29, 0), (31, 0), (33, 1), (35, 0), (37, 1), (39, 0), (41, 0), (43, 0), (45, 0), (47, 0), (49, 0), (51, 0), (53, 0), (55, 0), (57, 1), (59, 1), (61, 0), (63, 0), (65, 1), (67, 0), (69, 0), (71, 0), (73, 0), (75, 0), (77, 0), (79, 1), (81, 0), (83, 0), (85, 0), (87, 0), (89, 1), (91, 0), (93, 0), (95, 0), (97, 0), (99, 0), (101, 0), (103, 0), (105, 0), (107, 1), (109, 1), (111, 0), (113, 0), (115, 0), (117, 0), (119, 0), (121, 0), (123, 1), (125, 0), (127, 0), (129, 1), (131, 0), (133, 0), (135, 1), (137, 0), (139, 1), (141, 1), (143, 0), (145, 0), (147, 0), (149, 1), (151, 0), (153, 0), (155, 0), (157, 0), (159, 0), (161, 0), (163, 0)]
+
+order  classes reached  alive (depth = NMAX - order)
+    1         1         0
+    2         1         0
+    3         2         0
+    4         4         0
+    5        12         0
+    6        56         0
+    7       456         0
+    8      6880         0
+    9      1959         0
+   10       756         0
+   11       728         0
+   12       829        76
+   13       951       951
+total time 7.4 s

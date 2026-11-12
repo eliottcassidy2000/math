@@ -1,0 +1,98 @@
+36-state transfer = direct count for all words of length <= 6: True
+reachable dimension 28, minimal dimension d = 17
+denominators in the minimal representation: [1, 2, 3, 4, 6, 9, 12, 18, 36]
+non-integer entries in the letter matrices: 312 (the coordinates are integer on actual states)
+coordinates: x_k = H(word . u_k) for the suffix words u_k = ['empty', '0', '1', '2', '00', '01', '02', '03', '10', '11', '12', '13', '000', '001', '002', '010', '012']
+x0 = [Fraction(1, 1), Fraction(1, 1), Fraction(1, 1), Fraction(3, 1), Fraction(1, 1), Fraction(3, 1), Fraction(5, 1), Fraction(5, 1), Fraction(1, 1), Fraction(1, 1), Fraction(5, 1), Fraction(3, 1), Fraction(1, 1), Fraction(5, 1), Fraction(9, 1), Fraction(3, 1), Fraction(15, 1)]
+letter (0, 0): integer eigenvalues [0, 1, 2, 3]
+letter (1, 0): integer eigenvalues [0, 1, 2, 3]
+letter (0, 1): integer eigenvalues [0, 1, 2, 3]
+letter (1, 1): integer eigenvalues [0, 1, 2, 3]
+census: 5461 words of length <= 6, 4096 distinct states
+words of length <= 2 with an integer eigenvalue >= 1: 20
+  (length, eigenvalue): count {(1, 1): 4, (1, 2): 4, (1, 3): 4, (2, 1): 16, (2, 4): 16, (2, 9): 16}
+
+SINGLE WORDS: exact classes h -> a h + b with moving census states (letters: 0 = (0,0) sink, 1 = (1,0), 2 = (0,1), 3 = (1,1))
+  word 0: a = 2, dim C = 15, moving census states 99, b: [(Fraction(-1, 1), 11), (Fraction(1, 1), 21), (Fraction(3, 1), 5), (Fraction(5, 1), 7), (Fraction(7, 1), 13), '...', (Fraction(39, 1), 1), (Fraction(43, 1), 2), (Fraction(49, 1), 2), (Fraction(61, 1), 1)] [AFFINE b != 0]
+  word 0: a = 3, dim C = 15, moving census states 24, b: [(Fraction(18, 1), 2), (Fraction(22, 1), 2), (Fraction(30, 1), 2), (Fraction(34, 1), 9), (Fraction(50, 1), 2), (Fraction(58, 1), 4), (Fraction(98, 1), 2), (Fraction(182, 1), 1)] [AFFINE b != 0]
+  word 1: a = 2, dim C = 16, moving census states 1104, b: [(Fraction(-23, 1), 12), (Fraction(-19, 1), 12), (Fraction(-17, 1), 12), (Fraction(-15, 1), 12), (Fraction(-11, 1), 16), '...', (Fraction(129, 1), 2), (Fraction(131, 1), 2), (Fraction(153, 1), 2), (Fraction(175, 1), 2)] [AFFINE b != 0]
+  word 2: a = 2, dim C = 16, moving census states 1024, b: [(Fraction(-23, 1), 2), (Fraction(-19, 1), 2), (Fraction(-17, 1), 4), (Fraction(-15, 1), 6), (Fraction(-13, 1), 4), '...', (Fraction(171, 1), 2), (Fraction(173, 1), 2), (Fraction(199, 1), 2), (Fraction(227, 1), 2)] [AFFINE b != 0]
+  word 00: a = 4, dim C = 15, moving census states 99, b: [(Fraction(-3, 1), 11), (Fraction(3, 1), 21), (Fraction(9, 1), 5), (Fraction(15, 1), 7), (Fraction(21, 1), 13), '...', (Fraction(117, 1), 1), (Fraction(129, 1), 2), (Fraction(147, 1), 2), (Fraction(183, 1), 1)] [AFFINE b != 0]
+  word 00: a = 9, dim C = 15, moving census states 24, b: [(Fraction(72, 1), 2), (Fraction(88, 1), 2), (Fraction(120, 1), 2), (Fraction(136, 1), 9), (Fraction(200, 1), 2), (Fraction(232, 1), 4), (Fraction(392, 1), 2), (Fraction(728, 1), 1)] [AFFINE b != 0]
+  word 11: a = 4, dim C = 16, moving census states 1104, b: [(Fraction(-69, 1), 12), (Fraction(-57, 1), 12), (Fraction(-51, 1), 12), (Fraction(-45, 1), 12), (Fraction(-33, 1), 16), '...', (Fraction(387, 1), 2), (Fraction(393, 1), 2), (Fraction(459, 1), 2), (Fraction(525, 1), 2)] [AFFINE b != 0]
+  word 22: a = 4, dim C = 16, moving census states 1024, b: [(Fraction(-69, 1), 2), (Fraction(-57, 1), 2), (Fraction(-51, 1), 4), (Fraction(-45, 1), 6), (Fraction(-39, 1), 4), '...', (Fraction(513, 1), 2), (Fraction(519, 1), 2), (Fraction(597, 1), 2), (Fraction(681, 1), 2)] [AFFINE b != 0]
+  summary (length, multiplier, kind): count
+     (1, 1, 'no moving census state'): 4
+     (1, 2, 'AFFINE b != 0'): 3
+     (1, 2, 'no moving census state'): 1
+     (1, 3, 'AFFINE b != 0'): 1
+     (1, 3, 'no moving census state'): 3
+     (2, 1, 'no moving census state'): 16
+     (2, 4, 'AFFINE b != 0'): 3
+     (2, 4, 'no moving census state'): 13
+     (2, 9, 'AFFINE b != 0'): 1
+     (2, 9, 'no moving census state'): 15
+
+PAIRS OF WORDS (length <= 2): {'(ii) commute on all of C': 1575, '(iii) kappa != 0 somewhere on C': 135}
+category (iii): 135 pairs; with a census state in C and kappa != 0 (a non-commuting exact pair): 0
+   0 (a=2) & 1 (a=2): dim C = 10, census states in C: 0, non-commuting: []
+   0 (a=2) & 2 (a=2): dim C = 10, census states in C: 0, non-commuting: []
+   0 (a=2) & 01 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   0 (a=2) & 02 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   0 (a=2) & 10 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   0 (a=2) & 11 (a=4): dim C = 10, census states in C: 0, non-commuting: []
+   0 (a=2) & 12 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   0 (a=2) & 13 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   0 (a=2) & 20 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   0 (a=2) & 21 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   0 (a=2) & 22 (a=4): dim C = 10, census states in C: 0, non-commuting: []
+   0 (a=2) & 23 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   0 (a=2) & 31 (a=4): dim C = 6, census states in C: 0, non-commuting: []
+   0 (a=2) & 32 (a=4): dim C = 6, census states in C: 0, non-commuting: []
+   1 (a=2) & 2 (a=2): dim C = 5, census states in C: 0, non-commuting: []
+   1 (a=2) & 00 (a=4): dim C = 10, census states in C: 0, non-commuting: []
+   1 (a=2) & 01 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   1 (a=2) & 02 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   1 (a=2) & 03 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   1 (a=2) & 10 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   1 (a=2) & 12 (a=4): dim C = 8, census states in C: 0, non-commuting: []
+   1 (a=2) & 20 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   1 (a=2) & 21 (a=4): dim C = 6, census states in C: 0, non-commuting: []
+   1 (a=2) & 22 (a=4): dim C = 5, census states in C: 0, non-commuting: []
+   1 (a=2) & 23 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   1 (a=2) & 30 (a=4): dim C = 6, census states in C: 0, non-commuting: []
+   1 (a=2) & 32 (a=4): dim C = 6, census states in C: 0, non-commuting: []
+   2 (a=2) & 00 (a=4): dim C = 10, census states in C: 0, non-commuting: []
+   2 (a=2) & 01 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   2 (a=2) & 02 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   2 (a=2) & 03 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   2 (a=2) & 10 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   2 (a=2) & 11 (a=4): dim C = 5, census states in C: 0, non-commuting: []
+   2 (a=2) & 12 (a=4): dim C = 6, census states in C: 0, non-commuting: []
+   2 (a=2) & 13 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   2 (a=2) & 20 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   2 (a=2) & 21 (a=4): dim C = 8, census states in C: 0, non-commuting: []
+   2 (a=2) & 30 (a=4): dim C = 6, census states in C: 0, non-commuting: []
+   2 (a=2) & 31 (a=4): dim C = 6, census states in C: 0, non-commuting: []
+   00 (a=4) & 01 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   00 (a=4) & 02 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   00 (a=4) & 10 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   00 (a=4) & 11 (a=4): dim C = 10, census states in C: 0, non-commuting: []
+   00 (a=4) & 12 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   00 (a=4) & 13 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   00 (a=4) & 20 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   00 (a=4) & 21 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   00 (a=4) & 22 (a=4): dim C = 10, census states in C: 0, non-commuting: []
+   00 (a=4) & 23 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   00 (a=4) & 31 (a=4): dim C = 6, census states in C: 0, non-commuting: []
+   00 (a=4) & 32 (a=4): dim C = 6, census states in C: 0, non-commuting: []
+   01 (a=4) & 02 (a=4): dim C = 7, census states in C: 0, non-commuting: []
+   01 (a=4) & 03 (a=4): dim C = 7, census states in C: 0, non-commuting: []
+   01 (a=4) & 10 (a=4): dim C = 10, census states in C: 0, non-commuting: []
+   01 (a=4) & 11 (a=4): dim C = 11, census states in C: 0, non-commuting: []
+   01 (a=4) & 12 (a=4): dim C = 3, census states in C: 0, non-commuting: []
+   01 (a=4) & 13 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   01 (a=4) & 20 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+   01 (a=4) & 21 (a=4): dim C = 5, census states in C: 0, non-commuting: []
+   01 (a=4) & 22 (a=4): dim C = 4, census states in C: 0, non-commuting: []
+time 209.6 s

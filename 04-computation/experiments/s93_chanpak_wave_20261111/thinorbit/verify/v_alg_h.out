@@ -1,0 +1,36 @@
+(h) q = 2: all 56 -> (4, 1), invertible 21 -> (4, 1); expected h-residues 1, expected states 4; ok True
+(h) q = 4: all 56 -> (32, 2), invertible 21 -> (32, 2); expected h-residues 2, expected states 32; ok True
+(h) q = 8: all 56 -> (256, 4), invertible 21 -> (256, 4); expected h-residues 4, expected states 256; ok True
+(h) q = 16: all 56 -> (2048, 8), invertible 21 -> (2048, 8); expected h-residues 8, expected states 2048; ok True
+(h) q = 32: all 56 -> (16384, 16), invertible 21 -> (16384, 16); expected h-residues 16, expected states 16384; ok True
+(h) q = 64: all 56 -> (131072, 32), invertible 21 -> (131072, 32); expected h-residues 32, expected states 131072; ok True
+(h) q = 3: all 56 -> (27, 3), invertible 21 -> (27, 3); expected h-residues 3; ok True
+(h) q = 9: all 56 -> (729, 9), invertible 21 -> (729, 9); expected h-residues 9; ok True
+(h) q = 27: all 56 -> (19683, 27), invertible 21 -> (19683, 27); expected h-residues 27; ok True
+(h) q = 5: all 56 -> (125, 5), invertible 21 -> (125, 5); expected h-residues 5; ok True
+(h) q = 25: all 56 -> (15625, 25), invertible 21 -> (15625, 25); expected h-residues 25; ok True
+(h) q = 7: all 56 -> (343, 7), invertible 21 -> (343, 7); expected h-residues 7; ok True
+(h) q = 49: all 56 -> (117649, 49), invertible 21 -> (117649, 49); expected h-residues 49; ok True
+(h) q = 11: all 56 -> (1331, 11), invertible 21 -> (1330, 11); expected h-residues 11; ok True
+(h) q = 13: all 56 -> (2197, 13), invertible 21 -> (2196, 13); expected h-residues 13; ok True
+(h) q = 15: all 56 -> (3375, 15), invertible 21 -> (3375, 15); expected h-residues 15; ok True
+(h) q = 21: all 56 -> (9261, 21), invertible 21 -> (9261, 21); expected h-residues 21; ok True
+(h) q = 35: all 56 -> (42875, 35), invertible 21 -> (42875, 35); expected h-residues 35; ok True
+(h) q = 45: all 56 -> (91125, 45), invertible 21 -> (91125, 45); expected h-residues 45; ok True
+(h) q = 63: all 56 -> (250047, 63), invertible 21 -> (250047, 63); expected h-residues 63; ok True
+(h) q = 105: all 56 -> (1157625, 105), invertible 21 -> (1157625, 105); expected h-residues 105; ok True
+(h) q = 17: all 56 -> (4913, 17), invertible 21 -> (4912, 17); expected h-residues 17; ok True
+(h) q = 19: all 56 -> (6859, 19), invertible 21 -> (6858, 19); expected h-residues 19; ok True
+(h) q = 23: all 56 -> (12167, 23), invertible 21 -> (12166, 23); expected h-residues 23; ok True
+(h) q = 33: all 56 -> (35937, 33), invertible 21 -> (35910, 33); expected h-residues 33; ok True
+(h) q = 55: all 56 -> (166375, 55), invertible 21 -> (166250, 55); expected h-residues 55; ok True
+(h) q = 77: all 56 -> (456533, 77), invertible 21 -> (456190, 77); expected h-residues 77; ok True
+(h) q = 81: all 56 -> (531441, 81), invertible 21 -> (531441, 81); expected h-residues 81; ok True
+(h) q = 121: all 56 -> (1771561, 121), invertible 21 -> (1770230, 121); expected h-residues 121; ok True
+(h) q = 125: all 56 -> (1953125, 125), invertible 21 -> (1953125, 125); expected h-residues 125; ok True
+(h) q = 128: all 56 -> (1048576, 64), invertible 21 -> (1048576, 64); expected h-residues 64, expected states 1048576; ok True
+(h) all moduli complete: True
+
+real	5m18.051s
+user	0m0.046s
+sys	0m0.015s

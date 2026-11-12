@@ -1,0 +1,78 @@
+S93 Chan-Pak wave, lane "seeds": FINISHER NOTES (written after the lane agent was interrupted at about 16:35)
+===========================================================================================================
+The Chan-Pak conjecture stays OPEN.  Nothing here changes a status of PROOFS.txt upward.
+PROOFS.txt (16:33) is complete as a text (sections 0-8).  It was read line by line; every proof in it (Theorems 1,
+2, 2', Lemma G, Theorem 4, Theorem 5 (b)-(d), Theorem 6, the twin criterion, the Corollary on lines) was checked and
+found complete, with the errata E1-E3 below.  Files of the finisher have the prefix f_ (plus this file, the two
+certs_*_full.txt files and the 16 sub-part files b_census_part_P_32.npz).  No existing file was modified.
+
+1. State at the interruption
+----------------------------
+The agent had modified b_census.py at 16:25 (certificates for odd c <= 65535 instead of <= 8191), re-run "small" and
+the parts 0-3 of 8 of the order-10 census, and was running part 4 (empty log) when it was stopped.  So:
+  - b_census.out, b_census_minv.npz, certs_plus.txt, certs_minus.txt (16:10) are the COMPLETE outputs of the previous
+    version: tables for all odd c < 2^21, certificates for odd c <= 8191 only (4,096 per sign), and
+    b_certs_verify.out (16:12) is the recount of those 2 * 4,096 certificates (24,576 closed tournaments, 0 mismatches).
+  - PROOFS.txt, section 5, already describes the certificate files as covering odd c <= 65535: not true at that time.
+  - b_small_slopes.out and d_two_types.out have no saved generating script (they were produced inline);
+    c_kappa_sign.py had no saved output.
+
+2. What the finisher ran (every run under 25 s, at most 4 threads)
+------------------------------------------------------------------
+  - b_census.py part P 32 for P = 4..7 mod 8 (16 runs, logs f_part_P_32.log): the residues 4..7 mod 8 in the new format.
+  - f_cert_coverage.py (outputs f_cert_coverage_before.out, f_cert_coverage_full.out): the merged table minv of
+    (small + new parts 0-3 + sub-parts) is IDENTICAL to b_census_minv.npz (2 * 2^20 entries); the sub-parts
+    reproduce minv, the counts by |O| and the number of extensions of the old part files 4..7; totals at order 10:
+    15,773,048 extensions, seeds by |O| (1: 10, 2: 28,319, 3: 815,852), anti-seeds (2: 28,077, 3: 812,345), as in
+    b_census.out and in the first single run b_census_10.out (whose table minv is identical as well).  So the
+    order-10 census exists in three runs with identical tables.
+  - certs_plus_full.txt (32,747 certificates: every odd c <= 65535 except the 21 gaps 53559, ..., 65513) and
+    certs_minus_full.txt (32,758: every odd c <= 65535 except the 10 gaps 59083, ..., 65489); each certificate has
+    the least v of the table (largest v: 7 for seeds, 10 for anti-seeds, the latter at c = 1).
+  - f_certs_verify_full.py / .out: every certificate rebuilt as two explicit closed tournaments (t = 1, 2; code written
+    from the definition, nothing shared with the census or seedlib) and counted: 65,494 + 65,516 tournaments,
+    0 failures.  Hence the Corollary on lines of PROOFS.txt (odd c < 53559, resp. < 59083) now rests on certificates
+    that were recounted independently, not on the census program alone.
+  - f_recheck.py / .out: F1 root 0.788507 of rho(s) = 1 from the closed formula; F2 Theorem 2 (a)-(c) for TT_a,
+    a <= 9, every P (1,022 gadgets) by enumeration of ordered set partitions; F3 b_small_slopes.out reproduced from
+    b_census_minv.npz (205 seed slopes below 450, windows 4, 3, 5, 12, 29, 53, 99; 76 odd; six non-slopes in
+    [2^14, 2^15); intervals [21566, 53558] and [23502, 59082]); F4 d_two_types.out reproduced at n = 9, 10;
+    F5 the twin equation of section 6 has 1, 3, 5, 7, 12, 17, 22 solutions (Y, Z) with |Y| + |Z| = 2, ..., 8.
+  - f_indep_gadget_check.py / .out: the 14 unit neutral gadgets of order 8 recounted in pure python from the
+    definitions (kappa = 0, |P| = 3, r_X = -1 twelve times and +1 twice, H(X) = 277..409), and the two closed
+    tournaments of the sign-preserving example counted directly: 264,917 and 529,833.  The refutation of HYP-9662 (D),
+    first sentence, is therefore confirmed by a third program.
+  - f_kappa_sign_8.out (c_kappa_sign.py 8): for pairs {e, f}, sign(kappa) = sign(2 H - W_ef) holds without exception
+    up to order 5 only; exceptions from order 6 on (order 8: 14 + 2 pairs with kappa = 0 and W != 2H, the 16
+    violations with |P| = 2).
+  - f_gap_slopes.py / .out: of the integers below 2^16 that are not seed slopes of a pair of order <= 10, some are seed
+    slopes of two-apex bases of spine length <= 10 (orders 11, 12): 43 of 743 in [2^9, 2^13), 13 of 59 in
+    [2^13, 2^14), 19811 in [2^14, 2^15), 63757 in [2^15, 2^16); anti-seeds: 32 of 758, 16 of 74, three of four
+    (16977, 18047, 23501), none of ten.  So the gaps of the order-10 census are not final (this supports, and does
+    not test, the conjecture "cofinite slopes"; the out-of-sample test at order 11 written in PROOFS.txt was NOT run).
+
+3. Errata to PROOFS.txt (statements stay true; wording to correct when it is copied)
+-----------------------------------------------------------------------------------
+E1  Section 5, "Certificates: certs_plus.txt, certs_minus.txt (one pair per odd c <= 65535 ...)": the complete files
+    are certs_plus_full.txt, certs_minus_full.txt; the recount is f_certs_verify_full.out (b_certs_verify.out covers
+    odd c <= 8191).
+E2  Section 5: "v+(c) <= 8" and "v-(c) <= 12" are true but not sharp: the largest values are 7 and 10.
+E3  Section 6, NUMERICAL reading "X^0.36": the windows [2^14, 2^15) and [2^16, 2^17) are not saturated at length 14
+    (a strong one-apex word of length n has H >= 2^(n-2) + 2, so slopes below 2^13 need n <= 14; above that longer
+    words can contribute).  The saturated windows k = 6, 8, 10, 12 give 23, 58, 115, 195 (shares 0.359, 0.227, 0.112,
+    0.048), which shows the same thinning.
+E4  Section 5, heuristic "about 5 * 10^5 classes at order 10": an estimate (844,181 labelled unit pairs among
+    15,773,048 extensions, 9,733,056 classes); not a count.
+
+4. Remarks of the finisher (derived from formulas of PROOFS.txt)
+---------------------------------------------------------------
+R1  Sinks at intermediate bases give no new tower: by the level map of Lemma G, the sink rule
+    (r, M, h, E) -> (r, 2M, h, 0) followed by the level (g, i, m) is the level (g, i + 1, m) (the sink is one more
+    source of the tail), and a source of the base does not change the state.  So the G-towers of Theorem 4 are closed
+    under the two universal base operations, and Theorem 4 bounds everything that the known unit-preserving
+    operations generate from the transitive bases.
+R2  The anti-seed analogue of Theorem 5 (d) is NOT available by the same argument: for r = -1 the set O can meet two
+    strong components (transitive pairs), so THM-5130 (F2 (c)) does not reduce anti-seed slopes to strong
+    tournaments.  The list of anti-seed slopes below 450 in b_small_slopes.out is a list for pairs of order <= 10.
+R3  Not done by the lane: rules for the two-apex bases (only the exhaustive census to spine length 10); a lower bound
+    for the number of distinct tower slopes; the unit neutral gadgets of order 10; the order-11 out-of-sample test.

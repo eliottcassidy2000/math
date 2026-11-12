@@ -1,0 +1,43 @@
+P1  Q206(m) == 2 q(m) for m < 2^18: violations 0
+P2  Session206 identity == THM-5141 block law, exhaustive k<=8, v<2^9: 261120 cases, violations 0
+P2  block law, 20000 random big-integer cases (k<=80, v<2^200): violations 0
+P3  Session206 digit identity == 2 * (THM-5141 unrolled q), m < 2^14: violations 0
+P4  pair-energy form (w_1 = 2, w_d = 2^(d-1), THM-5093 / Session220) == Q, m < 2^14: violations 0
+P5  x(h) == g(2h) and g(v) == v+1-2q(v)-(v mod 2), h < 2^17: violations 0
+P5b 0 <= q(h) <= (h-1)/2 and h+2 <= x(h) <= 2h+1 for 1 <= h < 2^17: violations 0
+P6  x(h)-x(h') == c X - P Xi - gamma for all (P,x,x',Z), t'<=4, w<=5, s<=4: 302715 cases, violations 0
+P6b same cases: THM-4890 (B) window identity holds with tau = c - 1, Xi_C = -Xi_rev: violations 0
+P7  base 2 w 1 strings 5 nonzero common zeros of (D, D*): 0
+P7  base 2 w 2 strings 25 nonzero common zeros of (D, D*): 0
+P7  base 2 w 3 strings 125 nonzero common zeros of (D, D*): 0
+P7  base 2 w 4 strings 625 nonzero common zeros of (D, D*): 0
+P7  base 2 w 5 strings 3125 nonzero common zeros of (D, D*): 0
+P7  base 2 w 6 strings 15625 nonzero common zeros of (D, D*): 0
+P7  base 2 w 7 strings 78125 nonzero common zeros of (D, D*): 0
+P7  base 2 w 8 strings 390625 nonzero common zeros of (D, D*): 0
+P7  base 2 w 9 strings 1953125 nonzero common zeros of (D, D*): 0
+P7  base 3 w 1 strings 9 nonzero common zeros of (D, D*): 0
+P7  base 3 w 2 strings 81 nonzero common zeros of (D, D*): 0
+P7  base 3 w 3 strings 729 nonzero common zeros of (D, D*): 0
+P7  base 3 w 4 strings 6561 nonzero common zeros of (D, D*): 0
+P7  base 3 w 5 strings 59049 nonzero common zeros of (D, D*): 0
+P7  base 3 w 6 strings 531441 nonzero common zeros of (D, D*): 0
+P7  base 4 w 1 strings 13 nonzero common zeros of (D, D*): 0
+P7  base 4 w 2 strings 169 nonzero common zeros of (D, D*): 0
+P7  base 4 w 3 strings 2197 nonzero common zeros of (D, D*): 0
+P7  base 4 w 4 strings 28561 nonzero common zeros of (D, D*): 0
+P7  base 4 w 5 strings 371293 nonzero common zeros of (D, D*): 0
+P7  base 5 w 1 strings 17 nonzero common zeros of (D, D*): 0
+P7  base 5 w 2 strings 289 nonzero common zeros of (D, D*): 0
+P7  base 5 w 3 strings 4913 nonzero common zeros of (D, D*): 0
+P7  base 5 w 4 strings 83521 nonzero common zeros of (D, D*): 0
+P8  w 1 energy 6 6^w 6 equal True | distinct differences 3 3^w 3 | multiplicities powers of 2: True | energy of [0,2^w) alone 6 (2*8^w+2^w)/3 = 6
+P8  w 2 energy 36 6^w 36 equal True | distinct differences 9 3^w 9 | multiplicities powers of 2: True | energy of [0,2^w) alone 44 (2*8^w+2^w)/3 = 44
+P8  w 3 energy 216 6^w 216 equal True | distinct differences 27 3^w 27 | multiplicities powers of 2: True | energy of [0,2^w) alone 344 (2*8^w+2^w)/3 = 344
+P8  w 4 energy 1296 6^w 1296 equal True | distinct differences 81 3^w 81 | multiplicities powers of 2: True | energy of [0,2^w) alone 2736 (2*8^w+2^w)/3 = 2736
+P8  w 5 energy 7776 6^w 7776 equal True | distinct differences 243 3^w 243 | multiplicities powers of 2: True | energy of [0,2^w) alone 21856 (2*8^w+2^w)/3 = 21856
+P8  w 6 energy 46656 6^w 46656 equal True | distinct differences 729 3^w 729 | multiplicities powers of 2: True | energy of [0,2^w) alone 174784 (2*8^w+2^w)/3 = 174784
+P8  w 7 energy 279936 6^w 279936 equal True | distinct differences 2187 3^w 2187 | multiplicities powers of 2: True | energy of [0,2^w) alone 1398144 (2*8^w+2^w)/3 = 1398144
+P8  w 8 energy 1679616 6^w 1679616 equal True | distinct differences 6561 3^w 6561 | multiplicities powers of 2: True | energy of [0,2^w) alone 11184896 (2*8^w+2^w)/3 = 11184896
+P8  w 9 energy 10077696 6^w 10077696 equal True | distinct differences 19683 3^w 19683 | multiplicities powers of 2: True | energy of [0,2^w) alone 89478656 (2*8^w+2^w)/3 = 89478656
+P8  w 10 energy 60466176 6^w 60466176 equal True | distinct differences 59049 3^w 59049 | multiplicities powers of 2: True | energy of [0,2^w) alone 715828224 (2*8^w+2^w)/3 = 715828224

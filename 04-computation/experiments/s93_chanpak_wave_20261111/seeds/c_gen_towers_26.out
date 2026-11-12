@@ -1,0 +1,15 @@
+G1  order 8: unit neutral gadgets over non-transitive X: 14 (labelled P of the class representatives); padded 0; primitive 14
+      rho = -1: 12 gadgets; |P| in [3]; H(X) in [277, 409]; c in [20968, 31572]
+      rho = +1: 2 gadgets; |P| in [3]; H(X) in [293, 293]; c in [21218, 25492]
+G1  order 9: unit neutral gadgets over non-transitive X: 70 (labelled P of the class representatives); padded 28 (constants = padding formulas of an order-8 primitive gadget: True); primitive 42
+      rho = -1: 20 gadgets; |P| in [3]; H(X) in [469, 1525]; c in [62294, 144614]
+      rho = +1: 22 gadgets; |P| in [3]; H(X) in [473, 1565]; c in [55760, 143664]
+G2  gadget set 'transitive pairs only' (2 primitive gadgets): sigma_0 = 0.788507;  rho(1) = 0.429511
+G2  gadget set '+ order 8' (16 primitive gadgets): sigma_0 = 0.792831;  rho(1) = 0.431174
+G2  gadget set '+ orders 8, 9' (58 primitive gadgets): sigma_0 = 0.797044;  rho(1) = 0.432524
+      contribution of the primitive gadgets of order 8 to rho(1): 0.001663;  to rho(0.8): 0.016894
+      contribution of the primitive gadgets of order 9 to rho(1): 0.001349;  to rho(0.8): 0.017734
+G3  'transitive pairs only': X = 2^26: states 1430288; distinct slopes +: 269684, -: 263549; distinct values 2^t M <= X: +: 552160, -: 546317
+G3  '+ order 8': X = 2^26: states 1489270; distinct slopes +: 281833, -: 277059; distinct values 2^t M <= X: +: 576620, -: 571689
+G3  '+ orders 8, 9': X = 2^26: states 1543353; distinct slopes +: 293935, -: 289268; distinct values 2^t M <= X: +: 599456, -: 594880
+G4  seed (C_3, two vertices) with state (1, 6, 3, 2); the sign-preserving gadget of order 8 (H = 293, colcode 19771611, P mask 50) on top: state of the new pair (order 12) counted directly (1, 132458, 29285, 9314), gadget law (1, 132458, 29285, 9314); closed tournaments t = 1, 2: H = [264917, 529833] = 1 + 2^t * 132458: True

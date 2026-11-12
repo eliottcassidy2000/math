@@ -1,0 +1,25 @@
+(1) 36-state transfer vs own direct count: all 21845 words of length <= 7, mismatches 0   [0.7 s]
+    random words of lengths 8..12: 60 tests, mismatches 0   [0.8 s]
+    length 0: 1 base words; non-commuting pairs passing both single tests 0; passing the tree test to depth 2: 0   [0.8 s]
+    length 1: 4 base words; non-commuting pairs passing both single tests 6; passing the tree test to depth 2: 0   [0.8 s]
+    length 2: 16 base words; non-commuting pairs passing both single tests 14; passing the tree test to depth 2: 0   [0.9 s]
+    length 3: 64 base words; non-commuting pairs passing both single tests 30; passing the tree test to depth 2: 0   [0.9 s]
+    length 4: 256 base words; non-commuting pairs passing both single tests 66; passing the tree test to depth 2: 0   [0.9 s]
+    length 5: 1024 base words; non-commuting pairs passing both single tests 134; passing the tree test to depth 2: 0   [0.9 s]
+    length 6: 4096 base words; non-commuting pairs passing both single tests 266; passing the tree test to depth 2: 0   [0.9 s]
+    length 7: 16384 base words; non-commuting pairs passing both single tests 526; passing the tree test to depth 2: 0   [0.9 s]
+    length 8: 65536 base words; non-commuting pairs passing both single tests 1042; passing the tree test to depth 2: 0   [1.1 s]
+    length 9: 262144 base words; non-commuting pairs passing both single tests 2070; passing the tree test to depth 2: 0   [1.7 s]
+    length 10: 1048576 base words; non-commuting pairs passing both single tests 4122; passing the tree test to depth 2: 0   [4.0 s]
+    length 11: 4194304 base words; non-commuting pairs passing both single tests 8222; passing the tree test to depth 2: 0   [12.4 s]
+(2) base words of length <= 11: 5592405; non-commuting (p, q) with both single rays exact to depth 2: 16498; EXACT NON-COMMUTING PAIRS to depth 2: 0
+    single maps exact to depth 2 with H moving: suffix p: count; multipliers seen (a: count)
+       p = 0: 6705; {2: 6174, 3: 531}
+       p = 1: 1407318; {2: 1407318}
+       p = 2: 1398101; {2: 1398101}
+       p = 00: 6705; {4: 6174, 9: 531}
+       p = 01: 11; {7: 11}
+       p = 11: 1407318; {4: 1407318}
+       p = 22: 1398101; {4: 1398101}
+time 12.4 s
+exit 0

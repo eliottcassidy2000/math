@@ -1,0 +1,4 @@
+mod 2^1: 4 elements
+mod 2^2: 128 elements  (ratio to previous level 32.0)
+mod 2^3: 4096 elements  (ratio to previous level 32.0)
+mod 2^4: 1048576 elements  (ratio to previous level 256.0)

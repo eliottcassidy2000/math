@@ -1,0 +1,10 @@
+lane file: 1922 entries, 1922 distinct matrices
+   |X| = 1: 4 labelled blocks; distinct formula matrices so far 4   [5.2 s]
+   |X| = 2: 24 labelled blocks; distinct formula matrices so far 15   [5.2 s]
+   |X| = 3: 256 labelled blocks; distinct formula matrices so far 56   [5.2 s]
+   |X| = 4: 5120 labelled blocks; distinct formula matrices so far 270   [5.2 s]
+   |X| = 5: 196608 labelled blocks; distinct formula matrices so far 1922   [8.2 s]
+(1a) labelled blocks |X| <= 5: 202012; distinct matrices from the formulas: 1922; equal to the lane set: True; formula-only 0, lane-only 0
+(1b) json entries whose stored matrix differs from the formula matrix of their own (X, W, m): 0
+(2) law s' = N s by direct count (own DP), random marked bases of orders 6, 7, random blocks |X| <= 5: 1500 tests, failures 0
+time 10.9 s

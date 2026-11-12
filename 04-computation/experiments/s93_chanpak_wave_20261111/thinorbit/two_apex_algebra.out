@@ -1,0 +1,19 @@
+(A) two-apex transfer = direct count on 460 words (all of length <= 4, 60 random of lengths 5 and 6): True
+    all four letters upper triangular in the explicit tensor basis: True
+    the four diagonals coincide: True
+    diagonal multiset (per letter): [(0, 8), (1, 16), (2, 10), (3, 2)]
+    spectral radius of the sum of the four letters: 12.000000 (= 4 x 3: every letter has top diagonal entry 3)
+    n =  1: max H = 3, mean H = 1.50, 2 * 3^n = 6, max^(1/n) = 3.0000
+    n =  2: max H = 5, mean H = 3.00, 2 * 3^n = 18, max^(1/n) = 2.2361
+    n =  3: max H = 15, mean H = 6.75, 2 * 3^n = 54, max^(1/n) = 2.4662
+    n =  4: max H = 45, mean H = 16.50, 2 * 3^n = 162, max^(1/n) = 2.5900
+    n =  5: max H = 151, mean H = 42.75, 2 * 3^n = 486, max^(1/n) = 2.7277
+    n =  6: max H = 509, mean H = 115.50, 2 * 3^n = 1458, max^(1/n) = 2.8257
+    n =  7: max H = 1743, mean H = 321.75, 2 * 3^n = 4374, max^(1/n) = 2.9043
+    n =  8: max H = 6069, mean H = 916.50, 2 * 3^n = 13122, max^(1/n) = 2.9709
+    n =  9: max H = 20479, mean H = 2652.75, 2 * 3^n = 39366, max^(1/n) = 3.0132
+    n = 10: max H = 69485, mean H = 7765.50, 2 * 3^n = 118098, max^(1/n) = 3.0492
+(B) one-apex: x(h) = 2h + 1 - 2 q(h) equals the direct count of R(h) (apex arcs = binary digits of 2h on a spine of m + 1 vertices) for all h < 2^m, m = 1..8, under digit conventions (lsb at the spine source?, bit 1 = apex beats?): {(False, False): False, (True, False): True, (False, True): True, (True, True): False}
+    digit matrices reproduce (q, h, floor(h/2)) for all h < 2^10: True
+    M0 in the basis (e_q, e_g, e_h, e_1): [[1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 2, 0], [0, 0, 0, 1]], upper triangular: True, diagonal [1, 0, 2, 1]
+    M1 in the basis (e_q, e_g, e_h, e_1): [[1, -1, 1, 0], [0, 0, 1, 0], [0, 0, 2, 1], [0, 0, 0, 1]], upper triangular: True, diagonal [1, 0, 2, 1]

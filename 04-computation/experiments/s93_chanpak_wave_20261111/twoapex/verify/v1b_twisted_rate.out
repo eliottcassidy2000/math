@@ -1,0 +1,5 @@
+orbit: 236196 states
+eigenspace t = omega^+1: rate from steps 201..400: 0.7706329, from steps 401..600: 0.7706329   (lane: 0.7706329)
+   |twisted readout of the normalised iterate| = 1.151e+01
+eigenspace t = omega^-1: rate from steps 201..400: 0.7706329, from steps 401..600: 0.7706329   (lane: 0.7706329)
+   |twisted readout of the normalised iterate| = 1.151e+01

@@ -1,0 +1,68 @@
+priorart2 receipts (librarian pass for DRAFT THM-5141; nothing proved here; read-only on the repository)
+Date: 2026-11-11.  Scope: (1) repository prior art, (2) literature.  "OPENED" = source text read by this pass.
+
+== 1. Repository (git grep on the worktree index; commit subjects of the last 4 days, 394 commits) ==
+R1  No earlier or concurrent exponent above 2/3 for A(X).
+    - git grep for X^(3/4), 2^(3n/4), "exponent 3/4", "above/beyond 2/3", X^(4/5), X^(5/6) in 01-canon, 05-knowledge,
+      00-navigation, 04-computation, agents: only THM-5141 itself and the S93 coordinator sketch state such a bound.
+      Other hits are unrelated (O(X^(3/4)) error terms in THM-4885's note; session229 overlap/PROOF.md line 154 is an
+      UPPER bound O(X^(3/4)) for one repeated-template family, not a lower bound for A(X)).
+    - Best earlier bound: 05-knowledge/results/session216_overnight_constructions_20261107/density/audit/REVIEWED_RESULT.md
+      A(X) >= X^(2/3) / (60 (ln X)^(2/3))  (same exponent, better log power than THM-4887's X^(2/3)/(13 ln X + 102));
+      quoted as "best" in s90_rigidity_redei_20261110/README.md lines 210-211. THM-5141's title cites only THM-4887.
+    - Session216 (same file, line 68) lists "exact gcd counting in the balanced-window equation" under
+      "Explored but unproved ... None yields a stronger theorem here": the route of THM-5141 was named, not carried out.
+    - session220 .../exploration/DENSITY.md: "Status: OPEN; no stronger support lower bound or density theorem proved".
+R2  Block law in closed reversal form is prior repository art (same identity, f = Q = 2q):
+    - session206/parameter-capacity/audit/REVIEW.md line 13: Q(Mv+r)=Q(v)+Q(r)+v rev_k(r)+topbit_k(r)(v mod2)
+    - session220_binary_envelopes_and_selectors_20261107/extrema/PROOF.md line 37 (and THM-5093 body):
+      f(2^k x+v) = f(x)+f(v)+x rev_k(v)+(x mod 2) first_k(v)
+    - session231_overnight_completion_20261109/source/PROOF.md (1): g(Mu+r)=g(u)+(M-1-rev_k(r))u+(1-t)(u mod2)+g(r)-1
+    - five_core_web_20261111/SYNTHESIS.md line 137: g(2^k+n)-g(n)=2^k-rev_k(n)-topbit(n)
+    (equivalences Q = 2q, block law, window identity were machine-checked by the earlier pass: ../priorart/pa_checks.out)
+R3  Collision equation c X - P Xi = gamma = THM-4890 (B) window identity (Session 193 law (2)) in the q-normalisation
+    (tau = c - 1, Xi_C = -Xi_rev; ../priorart/pa_checks.out P6, P6b). Balance |s - t'| <= rho + 2 is weaker than
+    THM-4890 (C) (|A - S| <= 1); THM-5141 remark 4 says so.
+R4  Reversal graph as a point set: one_apex_collision_balance_20261106/README.md line 127 ("reflected Hammersley
+    (0, n, 2)-net"); five_core_web_20261111/fivefold/DYADIC_SHELLS.md Proposition 4 (dyadic rectangle law). Neither
+    states additive energy, signed-digit injectivity, or 2-dissociativity. No repository hit for the factor
+    2z^2 - 5z + 2, "reversal graph", "Freiman isomorph", "Kane-Tao", "log_2 6" outside THM-5141 / S93 files.
+R5  gcd sum / lattice line / Kloosterman-fraction CRT / van der Corput + Erdos-Turan for a/k: no earlier use in the
+    one-apex lane (THM-4885, 4886, 4887, 4890, HYP-9479, 9480, 9482, 9662 scanned). THM-4887 uses the spacing lemma
+    behind Weyl's inequality and a Farey dissection; THM-4886 the Weyl-Vinogradov Type II estimate.
+
+== 2. Literature ==
+L1  OPENED (PDF text). S. H. Chan, I. Pak, Computational complexity of counting coincidences, arXiv:2308.10214
+    (Theoret. Comput. Sci. 1015 (2024) 114776 per the repository's THM-4887; journal data not re-checked here).
+    Section 6.5 "Hamiltonian paths in tournaments": "it is not known if (h - 1)/2 is almost complete";
+    "Conjecture 6.2. Function h takes all odd values except 7 and 21."; made by MathOverflow user bof and Gordon
+    Royle (March 2016), footnote 7 = mathoverflow.net/q/232751; Royle: holds for all odd integers up to 80557.
+    "almost complete" = the value set contains all but finitely many integers. No counting-function bound stated.
+L2  NOT OPENED (fetch refused): mathoverflow.net/q/232751.  D. Grinberg's lecture notes arXiv:2308.04512 (search
+    snippet only) give "between 1 and 80555".
+L3  Follow-ups 2024-2026: none found (5 searches). Abstract OPENED: Schweser, Stiebitz, Toft, The Tournament Theorem
+    of Redei revisited, arXiv:2510.10659 (parity theorems only). Slides OPENED (text layer): I. Pak, Lattice Path
+    Conference, TU Wien, 22 July 2026, same title as L1: no tournament slide in the text layer.
+L4  Analogue (search-level): Chan, Kontorovich, Pak, Spanning trees and continued fractions, arXiv:2411.18782:
+    exponential growth of the set of spanning-tree counts of planar graphs on n vertices via Zaremba-type results.
+L5  OPENED (PDF text, grep). Dartyge, Martin, Rivat, Shparlinski, Swaenepoel, Reversible primes, arXiv:2309.11380
+    (J. London Math. Soc. 2024): F_n(alpha, theta) = mean of e(alpha rev(a) - theta a) over odd n-bit a, Lemma 2.3
+    product of |U(alpha 2^(n-1-j) - theta 2^j)|, large sieve + Sobolev-Gallagher. No occurrence of energy, fourth
+    moment, Sidon, dissociated, Freiman, collision counts.
+L6  Abstracts OPENED: Dartyge, Rivat, Swaenepoel, Prime numbers with an almost prime reverse, arXiv:2506.21642;
+    Tuxanidy, Distribution of square-free palindromes, arXiv:2603.02549. Search-level: Tuxanidy-Panario
+    arXiv:2307.16637; Col, Acta Arith. 137 (2009) 1-41; arXiv:2507.08714. None mentions additive energy.
+L7  Cube energy (the value 6^w): Kane, Tao, A bound on partitioning clusters, Electron. J. Combin. 24(2) (2017)
+    P2.31, arXiv:1702.00912 (abstract-level): E(A) <= |A|^(log_2 6) for A in {0,1}^n, sharp for subcubes.
+    de Dios Pont, Greenfeld, Ivanisvili, Madrid, Additive energies on discrete cubes, Discrete Analysis 2023,
+    arXiv:2112.09352 (editorial page OPENED). Shao arXiv:2407.06944; Mudgal-Schildkraut-Zakharov arXiv:2611.04644.
+L8  Signed-digit marginals: L. Monroe, Binary signed-digit integers and the Stern diatomic sequence, Des. Codes
+    Cryptogr. 89 (2021), arXiv:2108.11495 (search-level): the number of i-bit signed-digit representations of n is
+    the (2^i - n)-th Stern diatomic number. Ebeid-Hasan, Des. Codes Cryptogr. 42 (2007) (search-level).
+L9  OPENED (book text). Kuipers, Niederreiter, Uniform Distribution of Sequences: Chapter 1 Theorem 2.7 (van der
+    Corput, bound (|f'(b) - f'(a)| + 2)(4/sqrt(rho) + 3)); Chapter 2 Theorem 2.5 (Erdos-Turan, D_N <= 6/(m+1) +
+    (4/pi) sum (1/h - 1/(m+1)) |mean of e(h x_n)|). The draft's theorem numbers are correct.
+L10 Names (search-level or from memory, NOT OPENED unless said): Gal sums / GCD sums (Gal 1949; Dyer-Harman 1986;
+    Aistleitner-Berkes-Seip 2015; Bondarenko-Seip arXiv:1402.0249; Lewko-Radziwill arXiv:1408.2334); gcd-sum
+    functions (Cesaro, Pillai; Toth, J. Integer Seq. 13 (2010) 10.8.1); GCD graphs (Koukoulopoulos-Maynard 2020);
+    Kloosterman fractions (Duke-Friedlander-Iwaniec 1997; Bettin-Chandee 2018).

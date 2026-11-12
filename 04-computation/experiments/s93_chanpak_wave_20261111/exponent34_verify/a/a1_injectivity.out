@@ -1,0 +1,75 @@
+=== M1 brute force: number of delta in [-B,B]^w with D = 0 and D* = 0 ===
+  B = 2, w =  1:            5 strings, solutions = 1   [1.2s]
+  B = 2, w =  2:           25 strings, solutions = 1   [0.0s]
+  B = 2, w =  3:          125 strings, solutions = 1   [0.0s]
+  B = 2, w =  4:          625 strings, solutions = 1   [0.0s]
+  B = 2, w =  5:         3125 strings, solutions = 1   [0.0s]
+  B = 2, w =  6:        15625 strings, solutions = 1   [0.0s]
+  B = 2, w =  7:        78125 strings, solutions = 1   [0.0s]
+  B = 2, w =  8:       390625 strings, solutions = 1   [0.0s]
+  B = 2, w =  9:      1953125 strings, solutions = 1   [0.0s]
+  B = 2, w = 10:      9765625 strings, solutions = 1   [0.0s]
+  B = 2, w = 11:     48828125 strings, solutions = 1   [0.1s]
+  B = 2, w = 12:    244140625 strings, solutions = 1   [0.6s]
+  B = 2, w = 13:   1220703125 strings, solutions = 1   [4.1s]
+  B = 2, w = 14:   6103515625 strings, solutions = 1   [23.7s]
+  B = 3, w =  1:            7 strings, solutions = 1   [0.0s]
+  B = 3, w =  2:           49 strings, solutions = 1   [0.0s]
+  B = 3, w =  3:          343 strings, solutions = 1   [0.0s]
+  B = 3, w =  4:         2401 strings, solutions = 3   [0.0s]
+  B = 3, w =  5:        16807 strings, solutions = 7   [0.0s]
+  B = 3, w =  6:       117649 strings, solutions = 13   [0.0s]
+  B = 3, w =  7:       823543 strings, solutions = 23   [0.0s]
+  B = 3, w =  8:      5764801 strings, solutions = 43   [0.0s]
+  B = 3, w =  9:     40353607 strings, solutions = 83   [0.3s]
+  B = 4, w =  1:            9 strings, solutions = 1   [0.0s]
+  B = 4, w =  2:           81 strings, solutions = 1   [0.0s]
+  B = 4, w =  3:          729 strings, solutions = 1   [0.0s]
+  B = 4, w =  4:         6561 strings, solutions = 3   [0.0s]
+  B = 4, w =  5:        59049 strings, solutions = 7   [0.0s]
+  B = 4, w =  6:       531441 strings, solutions = 15   [0.0s]
+  B = 4, w =  7:      4782969 strings, solutions = 35   [0.0s]
+  B = 4, w =  8:     43046721 strings, solutions = 81   [0.3s]
+  pure python cross-check B = 2, w = 7: 1 solutions (numba: 1) match: True
+  pure python cross-check B = 3, w = 6: 13 solutions (numba: 13) match: True
+  pure python cross-check B = 4, w = 5: 7 solutions (numba: 7) match: True
+  example nonzero solutions for B = 3, w = 4: [(-2, 3, 3, -2), (2, -3, -3, 2)]
+=== M3 automaton (valid for every w) ===
+  B = 2: reachable states 1, transitions 1, max |carry| 0; counts w = 1..12: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; agrees with brute force on all 14 brute cases: True
+     B = 2: count = 1 for every w = 0..400: True
+     B = 2: transitions out of the start state (0,0): [((0, 0), 0, (0, 0))]
+     B = 2: reachable set from (0,0): [(0, 0)]
+  B = 3: reachable states 7, transitions 13, max |carry| 2; counts w = 1..12: [1, 1, 1, 3, 7, 13, 23, 43, 83, 159, 301, 569]; agrees with brute force on all 9 brute cases: True
+  B = 4: reachable states 15, transitions 35, max |carry| 3; counts w = 1..12: [1, 1, 1, 3, 7, 15, 35, 81, 183, 417, 957, 2191]; agrees with brute force on all 8 brute cases: True
+=== M2 meet in the middle (exhaustive for the full length w = h1 + h2) ===
+  B = 3 (control): MITM counts w = 2..10: [1, 1, 3, 7, 13, 23, 43, 83, 159]; equal to automaton counts: True
+  B = 4 (control): MITM counts w = 2..8: [1, 1, 3, 7, 15, 35, 81]; equal to automaton counts: True
+  B = 2: half tables h =  1 (5 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [0.1s]
+  B = 2: half tables h =  2 (25 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [0.0s]
+  B = 2: half tables h =  3 (125 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [0.0s]
+  B = 2: half tables h =  4 (625 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [0.0s]
+  B = 2: half tables h =  5 (3125 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [0.0s]
+  B = 2: half tables h =  6 (15625 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [0.0s]
+  B = 2: half tables h =  7 (78125 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [0.0s]
+  B = 2: half tables h =  8 (390625 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [0.0s]
+  B = 2: half tables h =  9 (1953125 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [0.0s]
+  B = 2: half tables h = 10 (9765625 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [0.1s]
+  B = 2: half tables h = 11 (48828125 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [0.2s]
+  B = 2: half tables h = 12 (244140625 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [0.7s]
+  B = 2: half tables h = 13 (1220703125 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [3.4s]
+  B = 2: half tables h = 14 (6103515625 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [25.7s]
+  B = 2: half tables h = 15 (30517578125 strings)  T1 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  T2 = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]  [53.7s]
+  B = 2: MITM solution counts for w = 2..30: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  B = 2: all 225 splits (h1, h2) with h1, h2 <= 15: every count = 1: True
+=== M4 the proof's lattice: delta = (2z^2 - 5z + 2) p ===
+  B = 3, w = 7: 22 nonzero solutions, every one = (2z^2-5z+2) * (integer polynomial): True
+  B = 4, w = 6: 14 nonzero solutions, every one = (2z^2-5z+2) * (integer polynomial): True
+  B = 3, w = 8: 42 nonzero solutions, every one = (2z^2-5z+2) * (integer polynomial): True
+  20000 random p: delta_i = 2p_i - 5p_(i-1) + 2p_(i-2) = u_i - 2u_(i-1), |u_m| = 2|p_m|, u_(d+1) = -p_d, u_(d+2) = 0, delta(2) = delta(1/2) = 0, max|delta_i| >= 3: True
+  exhaustive: 705894 polynomials p (coefficients in [-3,3], length <= 7, p_0 p_top != 0): min over p of max|delta_i| = 3 (>= 3: True)
+  lattice DFS to depth  6 (delta of length up to 7, p_0 = 1): nodes = 288, min |u_i| = 2, closures (p returns to 0 with |delta| <= 2) = 0, max |p_i| = 127  -> OK  [0.4s]
+  lattice DFS to depth 10 (delta of length up to 11, p_0 = 1): nodes = 9800, min |u_i| = 2, closures (p returns to 0 with |delta| <= 2) = 0, max |p_i| = 2047  -> OK  [0.4s]
+  lattice DFS to depth 14 (delta of length up to 15, p_0 = 1): nodes = 332928, min |u_i| = 2, closures (p returns to 0 with |delta| <= 2) = 0, max |p_i| = 32767  -> OK  [0.4s]
+  lattice DFS to depth 18 (delta of length up to 19, p_0 = 1): nodes = 11309768, min |u_i| = 2, closures (p returns to 0 with |delta| <= 2) = 0, max |p_i| = 524287  -> OK  [0.5s]
+  lattice DFS to depth 25 (delta of length up to 26, p_0 = 1): nodes = 5406093003, min |u_i| = 2, closures (p returns to 0 with |delta| <= 2) = 0, max |p_i| = 67108863  -> OK  [47.4s]
+ALL CHECKS PASSED

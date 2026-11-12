@@ -1,0 +1,23 @@
+(1) 36-state transfer vs own direct count: all 21845 words of length <= 7, mismatches 0   [9.5 s]
+    random words of lengths 8..12: 60 tests, mismatches 0   [9.7 s]
+    length 0: 1 base words; non-commuting pairs passing both single tests 0; passing the tree test to depth 2: 0   [16.1 s]
+    length 1: 4 base words; non-commuting pairs passing both single tests 6; passing the tree test to depth 2: 0   [16.1 s]
+    length 2: 16 base words; non-commuting pairs passing both single tests 14; passing the tree test to depth 2: 0   [45.2 s]
+    length 3: 64 base words; non-commuting pairs passing both single tests 30; passing the tree test to depth 2: 0   [45.3 s]
+    length 4: 256 base words; non-commuting pairs passing both single tests 66; passing the tree test to depth 2: 0   [45.3 s]
+    length 5: 1024 base words; non-commuting pairs passing both single tests 134; passing the tree test to depth 2: 0   [45.3 s]
+    length 6: 4096 base words; non-commuting pairs passing both single tests 266; passing the tree test to depth 2: 0   [45.4 s]
+    length 7: 16384 base words; non-commuting pairs passing both single tests 526; passing the tree test to depth 2: 0   [45.6 s]
+    length 8: 65536 base words; non-commuting pairs passing both single tests 1042; passing the tree test to depth 2: 0   [46.4 s]
+    length 9: 262144 base words; non-commuting pairs passing both single tests 2070; passing the tree test to depth 2: 0   [49.2 s]
+    length 10: 1048576 base words; non-commuting pairs passing both single tests 4122; passing the tree test to depth 2: 0   [60.1 s]
+(2) base words of length <= 10: 1398101; non-commuting (p, q) with both single rays exact to depth 2: 8276; EXACT NON-COMMUTING PAIRS to depth 2: 0
+    single maps exact to depth 2 with H moving: suffix p: count; multipliers seen (a: count)
+       p = 0: 3459; {2: 3094, 3: 365}
+       p = 1: 353622; {2: 353622}
+       p = 2: 349525; {2: 349525}
+       p = 00: 3459; {4: 3094, 9: 365}
+       p = 01: 10; {7: 10}
+       p = 11: 353622; {4: 353622}
+       p = 22: 349525; {4: 349525}
+time 60.1 s

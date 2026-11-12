@@ -1,0 +1,17 @@
+w = 2: S_w = 4 = 4.000000; N(K) split == direct; worst ratios: D1 1.0000, D1' 0.5000, D2 0.2222, D2' 0.2222, (1) 0.6667, N(K)/bound 0.08333; RHS(2) = 8.000 <= derived 208.0 <= line1 388.0 <= line2 829.6; failures: 0
+      K =     1: max Deg =     4, max Deg' =     4, N(K) =        4, RHS(1) = 6
+      K =     2: max Deg =     4, max Deg' =     4, N(K) =        4, RHS(1) = 6
+w = 3: S_w = 64/5 = 12.800000; N(K) split == direct; worst ratios: D1 0.5000, D1' 1.0000, D2 0.0556, D2' 0.2222, (1) 0.6667, N(K)/bound 0.04167; RHS(2) = 26.000 <= derived 1216.0 <= line1 4600.0 <= line2 6858.5; failures: 0
+      K =     1: max Deg =     2, max Deg' =     8, N(K) =       12, RHS(1) = 18
+      K =     2: max Deg =     2, max Deg' =     8, N(K) =       12, RHS(1) = 18
+      K =     4: max Deg =     4, max Deg' =    16, N(K) =       12, RHS(1) = 28
+w = 16 (Deg, 3364 points: structured + 3000 random): (D1) worst ratio 1.0000; (D2) worst ratio 0.1494 at K = 255; max Deg at K = 2^s2: 1616; violations 0
+w = 16 (Deg', 3364 points: structured + 3000 random): (D1) worst ratio 0.5000; (D2) worst ratio 0.1494 at K = 255; max Deg at K = 2^s2: 1616; violations 0
+   [75.3 s]
+w = 17 (Deg, 1905 points: structured + 1500 random): (D1) worst ratio 0.5000; (D2) worst ratio 0.0379 at K = 255; max Deg at K = 2^s2: 820; violations 0
+w = 17 (Deg', 1864 points: structured + 1500 random): (D1) worst ratio 1.0000; (D2) worst ratio 0.1377 at K = 255; max Deg at K = 2^s2: 2978; violations 0
+   [46.9 s]
+w = 18 (Deg, 1905 points: structured + 1500 random): (D1) worst ratio 1.0000; (D2) worst ratio 0.1469 at K = 511; max Deg at K = 2^s2: 3492; violations 0
+w = 18 (Deg', 1905 points: structured + 1500 random): (D1) worst ratio 0.5000; (D2) worst ratio 0.1463 at K = 511; max Deg at K = 2^s2: 3478; violations 0
+   [115.2 s]
+w = 20 (Deg, 720 points: structured + 300 random): (D1) worst ratio 1.0000; (D2) worst ratio 0.1446 at K = 1023; max Deg at K = 2^s2: 7488; violations 0

@@ -1,0 +1,9 @@
+order 1: 1 class
+order 2: 1 min-score extensions, 1 classes (known 1): OK  [2.4 s]
+order 3: 2 min-score extensions, 2 classes (known 2): OK  [0.0 s]
+order 4: 7 min-score extensions, 4 classes (known 4): OK  [0.0 s]
+order 5: 19 min-score extensions, 12 classes (known 12): OK  [0.0 s]
+order 6: 106 min-score extensions, 56 classes (known 56): OK  [0.0 s]
+order 7: 821 min-score extensions, 456 classes (known 456): OK  [0.0 s]
+order 8: 11592 min-score extensions, 6880 classes (known 6880): OK  [0.0 s]
+order 9: 316153 min-score extensions, 191536 classes (known 191536): OK  [0.8 s]

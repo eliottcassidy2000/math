@@ -1,0 +1,2 @@
+words: all 511 words of length <= 8 in two rules; bases: all marked tournaments of order <= n
+D, U with moving mark: (n, bases, Hankel rank) = [(1, 1, 1), (2, 3, 3), (3, 9, 6), (4, 25, 9), (5, 85, 12), (6, 421, 15)]   [452.3 s]

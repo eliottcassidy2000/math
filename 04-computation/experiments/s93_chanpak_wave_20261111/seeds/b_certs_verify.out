@@ -1,0 +1,12 @@
+sign +1: 4096 certificates (odd c <= 8191), 2049 of the 2049 odd c <= 4097; orders [1, 3, 4, 5, 6, 7, 8, 9, 10]; largest v 7; odd slopes (v = 0): 3378
+sign -1: 4096 certificates (odd c <= 8191), 2049 of the 2049 odd c <= 4097; orders [2, 3, 4, 5, 6, 7, 8, 9, 10]; largest v 10; odd slopes (v = 0): 3357
+closed tournaments recounted: 24576; mismatches: 0
+  odd N in [2^4, 2^5): on a ray of offset +1: 3 (0.375); offset -1: 4 (0.500); either: 5 (0.625) of 8
+  odd N in [2^5, 2^6): on a ray of offset +1: 5 (0.312); offset -1: 6 (0.375); either: 10 (0.625) of 16
+  odd N in [2^6, 2^7): on a ray of offset +1: 12 (0.375); offset -1: 14 (0.438); either: 22 (0.688) of 32
+  odd N in [2^7, 2^8): on a ray of offset +1: 29 (0.453); offset -1: 23 (0.359); either: 42 (0.656) of 64
+  odd N in [2^8, 2^9): on a ray of offset +1: 53 (0.414); offset -1: 49 (0.383); either: 87 (0.680) of 128
+  odd N in [2^9, 2^10): on a ray of offset +1: 136 (0.531); offset -1: 118 (0.461); either: 187 (0.730) of 256
+  odd N in [2^10, 2^11): on a ray of offset +1: 330 (0.645); offset -1: 300 (0.586); either: 446 (0.871) of 512
+  odd N in [2^11, 2^12): on a ray of offset +1: 809 (0.790); offset -1: 796 (0.777); either: 986 (0.963) of 1024
+  odd N in [2^12, 2^13): on a ray of offset +1: 1795 (0.876); offset -1: 1810 (0.884); either: 2019 (0.986) of 2048

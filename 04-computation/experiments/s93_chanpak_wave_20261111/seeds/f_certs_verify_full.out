@@ -1,0 +1,4 @@
+sign +1: 32747 certificates in certs_plus_full.txt; closed tournaments recounted: 65494 (t = 1, 2); certificates failing: 0
+   first odd c without a certificate: 53559 (census gap: 53559); odd c < 53559 certified: 26779 of 26779; largest v among them: 7; orders used: [1, 3, 4, 5, 6, 7, 8, 9, 10]; certificates with v = 0 and c <= 32767: 15603
+sign -1: 32758 certificates in certs_minus_full.txt; closed tournaments recounted: 65516 (t = 1, 2); certificates failing: 0
+   first odd c without a certificate: 59083 (census gap: 59083); odd c < 59083 certified: 29541 of 29541; largest v among them: 10; orders used: [2, 3, 4, 5, 6, 7, 8, 9, 10]; certificates with v = 0 and c <= 32767: 15569

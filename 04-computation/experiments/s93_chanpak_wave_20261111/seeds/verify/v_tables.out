@@ -1,0 +1,31 @@
+V1  orders 1..9: my cumulative table minv (2 x 2^20 entries) = lane's minv_n for every n = 1..9: True
+     odd c <= 4097 with a seed / anti-seed of order <= 9 (mine): 2016 2013 (lane, THM-5130 (E): 2016, 2013)
+V2  order 10, part 4 of 32: my table = lane's table: True; entries set: 34343
+V2  order 10, part 13 of 32: my table = lane's table: True; entries set: 34573
+V2  order 10, part 22 of 32: my table = lane's table: True; entries set: 34676
+V2  order 10, part 31 of 32: my table = lane's table: True; entries set: 34528
+V3  seed slopes below 450: mine 205 lane 205 equal: True
+     windows: [(1, 8, 4, 7), (8, 16, 3, 8), (16, 32, 5, 16), (32, 64, 12, 32), (64, 128, 29, 64), (128, 256, 53, 128), (256, 450, 99, 194)]
+     odd seed slopes below 450: 76 [1, 11, 29, 37, 47, 49, 55, 77, 89, 93, 95, 99, 109, 111] ...
+     small non-slopes (seeds): [3, 5, 7, 9, 10, 13, 14, 15, 17, 18, 19, 21, 23, 25, 26, 27, 28, 30, 31, 33, 35, 36, 38, 39]
+     anti-seed slopes below 450 from bases of order <= 10 with H <= 224 (mine) 183 lane (order <= 10) 183 equal: True [not a complete list of anti-seed slopes: see FINISHER R2]
+V4  seeds: first odd c without one (order <= 10): 53559; largest least-v below it: 7 at c = [9]
+     odd c <= 65535 without one: 21: [53559, 58381, 59093, 60365, 60441, 61313] ... [65035, 65195, 65513]
+     odd M <= 2^k that are slopes themselves (v = 0), k = 13, 14, 15: [3378, 7417, 15603]
+     share of the integers of [2^k, 2^(k+1)) that are slopes, k = 3..15: [0.375, 0.3125, 0.375, 0.4531, 0.4141, 0.5312, 0.6445, 0.79, 0.8765, 0.9773, 0.9928, 0.9996, 0.9994]
+     every integer of [21566, 53558] is a slope; non-slopes in [2^14, 2^15): [16965, 17185, 17281, 19541, 19811, 21565]
+V4  anti-seeds: first odd c without one (order <= 10): 59083; largest least-v below it: 10 at c = [1]
+     odd c <= 65535 without one: 10: [59083, 61099, 61877, 62873, 62921, 63385] ... [65107, 65329, 65489]
+     odd M <= 2^k that are slopes themselves (v = 0), k = 13, 14, 15: [3357, 7381, 15569]
+     share of the integers of [2^k, 2^(k+1)) that are slopes, k = 3..15: [0.5, 0.375, 0.4375, 0.3594, 0.3828, 0.4609, 0.584, 0.7773, 0.8838, 0.9807, 0.991, 0.9998, 0.9997]
+     every integer of [23502, 59082] is a slope; non-slopes in [2^14, 2^15): [16977, 17125, 18047, 23501]
+V5  odd N < 4096 on no unit ray of a pair of order <= 10: 257 [7, 15, 21, 27, 31, 37, 43, 55]
+     odd N in [2^12, 2^13) on a unit ray: 2019 of 2048
+     odd N in [2^13, 2^14) on a unit ray: 4095 of 4096
+     odd N in [2^14, 2^15) on a unit ray: 8192 of 8192
+     odd N in [2^15, 2^16) on a unit ray: 16384 of 16384
+     odd N in [2^16, 2^17) on a unit ray: 32768 of 32768
+
+real	0m0.931s
+user	0m0.000s
+sys	0m0.062s

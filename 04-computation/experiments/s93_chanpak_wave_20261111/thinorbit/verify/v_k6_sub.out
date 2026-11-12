@@ -1,0 +1,46 @@
+##### v_blocks2_k6.txt sing capped 16384 64
+file v_blocks2_k6.txt: 1884 matrices read, subset sing: 632 generators; min coefficient of E in the h-row: 2; LIM 16384
+capped search K = 64: 297934 states stored, 12834387 images with h <= LIM
+odd v <= 16384 not marked: 7 21 47
+#not marked 3, largest 47
+real	0m0.608s
+##### v_blocks2_k6.txt inv capped 16384 64
+file v_blocks2_k6.txt: 1884 matrices read, subset inv: 1252 generators; min coefficient of E in the h-row: 2; LIM 16384
+capped search K = 64: 308581 states stored, 5845359 images with h <= LIM
+odd v <= 16384 not marked: 7 21
+#not marked 2, largest 21
+real	0m0.845s
+##### v_blocks2_k6.txt all capped 8192 64
+file v_blocks2_k6.txt: 1884 matrices read, subset all: 1884 generators; min coefficient of E in the h-row: 2; LIM 8192
+capped search K = 64: 161028 states stored, 10590572 images with h <= LIM
+odd v <= 8192 not marked: 7 21
+#not marked 2, largest 21
+real	0m0.715s
+##### v_blocks2_k6.txt sing exact 64
+file v_blocks2_k6.txt: 1884 matrices read, subset sing: 632 generators; min coefficient of E in the h-row: 2; LIM 64
+exact closure: 1394 distinct states with h <= 64; overflow events 0 (must be 0); max E 2016, max O 2016
+cumulative #states with h <= 2^k: 0:7 1:7 2:15 3:40 4:171 5:487 6:1394
+odd v <= 64 with r(v) = 0: 7 21 47
+#misses 3; even v with r > 0: 0
+real	0m0.097s
+##### v_blocks2_k6.txt all exact 2048
+file v_blocks2_k6.txt: 1884 matrices read, subset all: 1884 generators; min coefficient of E in the h-row: 2; LIM 2048
+exact closure: 988056 distinct states with h <= 2048; overflow events 0 (must be 0); max E 65504, max O 65504
+cumulative #states with h <= 2^k: 0:7 1:7 2:15 3:40 4:175 5:566 6:1855 7:6712 8:24143 9:80748 10:280022 11:988056
+odd v <= 2048 with r(v) = 0: 7 21
+#misses 2; even v with r > 0: 0
+real	0m4.437s
+##### v_blocks2_k6.txt inv exact 2048
+file v_blocks2_k6.txt: 1884 matrices read, subset inv: 1252 generators; min coefficient of E in the h-row: 2; LIM 2048
+exact closure: 144739 distinct states with h <= 2048; overflow events 0 (must be 0); max E 6638, max O 6721
+cumulative #states with h <= 2^k: 0:2 1:2 2:3 3:6 4:28 5:136 6:516 7:2004 8:5218 9:13385 10:41267 11:144739
+odd v <= 2048 with r(v) = 0: 7 21
+#misses 2; even v with r > 0: 0
+real	0m0.482s
+##### v_blocks2_k6.txt sing exact 2048
+file v_blocks2_k6.txt: 1884 matrices read, subset sing: 632 generators; min coefficient of E in the h-row: 2; LIM 2048
+exact closure: 305028 distinct states with h <= 2048; overflow events 0 (must be 0); max E 65504, max O 65504
+cumulative #states with h <= 2^k: 0:7 1:7 2:15 3:40 4:171 5:487 6:1394 7:3972 8:11745 9:34179 10:102030 11:305028
+odd v <= 2048 with r(v) = 0: 7 21 47
+#misses 3; even v with r > 0: 0
+real	0m0.652s

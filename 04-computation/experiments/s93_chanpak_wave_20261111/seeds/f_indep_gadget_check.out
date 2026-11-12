@@ -1,0 +1,16 @@
+X = 5418559, P mask 50: H = 289, Pi_2 = 4816, W = 290, W3 = 2118, kappa = 0, r_X = -1, |P| = 3: agrees
+X = 19771611, P mask 50: H = 293, Pi_2 = 4832, W = 292, W3 = 2124, kappa = 0, r_X = 1, |P| = 3: agrees
+X = 54118952, P mask 168: H = 379, Pi_2 = 5920, W = 380, W3 = 2580, kappa = 0, r_X = -1, |P| = 3: agrees
+X = 65805665, P mask 88: H = 277, Pi_2 = 4768, W = 278, W3 = 2106, kappa = 0, r_X = -1, |P| = 3: agrees
+X = 79385985, P mask 137: H = 373, Pi_2 = 5680, W = 374, W3 = 2466, kappa = 0, r_X = -1, |P| = 3: agrees
+X = 81511938, P mask 140: H = 373, Pi_2 = 5680, W = 374, W3 = 2466, kappa = 0, r_X = -1, |P| = 3: agrees
+X = 101755468, P mask 49: H = 349, Pi_2 = 5512, W = 350, W3 = 2406, kappa = 0, r_X = -1, |P| = 3: agrees
+X = 132031790, P mask 11: H = 289, Pi_2 = 4816, W = 290, W3 = 2118, kappa = 0, r_X = -1, |P| = 3: agrees
+X = 141939287, P mask 112: H = 379, Pi_2 = 5920, W = 380, W3 = 2580, kappa = 0, r_X = -1, |P| = 3: agrees
+X = 161353636, P mask 162: H = 293, Pi_2 = 4832, W = 292, W3 = 2124, kappa = 0, r_X = 1, |P| = 3: agrees
+X = 169541297, P mask 74: H = 277, Pi_2 = 4768, W = 278, W3 = 2106, kappa = 0, r_X = -1, |P| = 3: agrees
+X = 203638720, P mask 164: H = 409, Pi_2 = 6160, W = 410, W3 = 2670, kappa = 0, r_X = -1, |P| = 3: agrees
+X = 210083518, P mask 208: H = 349, Pi_2 = 5512, W = 350, W3 = 2406, kappa = 0, r_X = -1, |P| = 3: agrees
+X = 215217243, P mask 224: H = 409, Pi_2 = 6160, W = 410, W3 = 2670, kappa = 0, r_X = -1, |P| = 3: agrees
+all 14 gadgets: kappa = 0, |P| = 3, r_X = +-1 over a non-transitive X: True
+sign-preserving gadget on (C_3, two vertices): H(T_1), H(T_2) = [264917, 529833]; expected [264917, 529833]: True

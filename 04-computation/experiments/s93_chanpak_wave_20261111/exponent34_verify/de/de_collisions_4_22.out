@@ -1,0 +1,40 @@
+table checks passed: q recursion, x(h) = g(2h) on samples, 0 <= q(h) <= (h-1)/2, h+2 <= x(h) <= 2h+1, x never 7 or 21 for h < 2^22
+n= 4 unordered colliding pairs=        4  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=7/2^3=0.8750  #|gamma|=2^w: 0  max(|s-t'|-max(dX,dXi))=1  max(|t'-s-1|-|dX-dXi|)=0  max group=2
+      run-free: max|s-t'| for R=1..12: [-1, 1, 1, 1] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = -1 ; theorem R=3: max|s-t'|=1
+n= 5 unordered colliding pairs=       10  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 1  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=4
+      run-free: max|s-t'| for R=1..12: [-1, 1, 1, 2, 2] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = -1 ; theorem R=4: max|s-t'|=2
+n= 6 unordered colliding pairs=       24  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 1  max(|s-t'|-max(dX,dXi))=1  max(|t'-s-1|-|dX-dXi|)=1  max group=4
+      run-free: max|s-t'| for R=1..12: [-1, 1, 2, 2, 2, 2] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = -1 ; theorem R=4: max|s-t'|=2
+n= 7 unordered colliding pairs=       42  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 1  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=4
+      run-free: max|s-t'| for R=1..12: [-1, 2, 2, 2, 2, 2, 2] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 0 ; theorem R=4: max|s-t'|=2
+n= 8 unordered colliding pairs=       92  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 4  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=4
+      run-free: max|s-t'| for R=1..12: [-1, 1, 2, 2, 2, 2, 2, 2] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = -1 ; theorem R=4: max|s-t'|=2
+n= 9 unordered colliding pairs=      198  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 1  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=5
+      run-free: max|s-t'| for R=1..12: [-1, 1, 3, 3, 3, 3, 3, 3, 3] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 0 ; theorem R=5: max|s-t'|=3
+n=10 unordered colliding pairs=      456  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 7  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=8
+      run-free: max|s-t'| for R=1..12: [-1, 2, 3, 3, 3, 3, 3, 3, 3, 3] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 0 ; theorem R=5: max|s-t'|=3
+n=11 unordered colliding pairs=      872  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 1  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=6
+      run-free: max|s-t'| for R=1..12: [-1, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 0 ; theorem R=5: max|s-t'|=4
+n=12 unordered colliding pairs=     1820  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 16  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=8
+      run-free: max|s-t'| for R=1..12: [-1, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 1 ; theorem R=5: max|s-t'|=4
+n=13 unordered colliding pairs=     3660  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=16/2^4=1.0000  #|gamma|=2^w: 3  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=8
+      run-free: max|s-t'| for R=1..12: [-1, 3, 3, 4, 5, 5, 5, 5, 5, 5, 5, 5] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 1 ; theorem R=5: max|s-t'|=5
+n=14 unordered colliding pairs=     7736  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 31  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=10
+      run-free: max|s-t'| for R=1..12: [-1, 2, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 1 ; theorem R=5: max|s-t'|=5
+n=15 unordered colliding pairs=    15564  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=16/2^4=1.0000  #|gamma|=2^w: 3  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=11
+      run-free: max|s-t'| for R=1..12: [-1, 2, 4, 5, 5, 6, 6, 6, 6, 6, 6, 6] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 1 ; theorem R=5: max|s-t'|=5
+n=16 unordered colliding pairs=    31108  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 66  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=10
+      run-free: max|s-t'| for R=1..12: [-1, 3, 4, 5, 6, 6, 6, 6, 6, 6, 6, 6] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 1 ; theorem R=5: max|s-t'|=6
+n=17 unordered colliding pairs=    62718  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=16/2^4=1.0000  #|gamma|=2^w: 7  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=10
+      run-free: max|s-t'| for R=1..12: [-1, 3, 4, 5, 6, 6, 7, 7, 7, 7, 7, 7] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 1 ; theorem R=6: max|s-t'|=6
+n=18 unordered colliding pairs=   126088  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 129  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=12
+      run-free: max|s-t'| for R=1..12: [-1, 2, 4, 5, 6, 7, 7, 7, 7, 7, 7, 7] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 1 ; theorem R=6: max|s-t'|=7
+n=19 unordered colliding pairs=   253186  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=16/2^4=1.0000  #|gamma|=2^w: 16  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=12
+      run-free: max|s-t'| for R=1..12: [-1, 2, 4, 5, 6, 7, 7, 8, 8, 8, 8, 8] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 1 ; theorem R=6: max|s-t'|=7
+n=20 unordered colliding pairs=   509020  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 262  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=12
+      run-free: max|s-t'| for R=1..12: [-1, 3, 4, 5, 6, 7, 8, 8, 8, 8, 8, 8] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 1 ; theorem R=6: max|s-t'|=7
+n=21 unordered colliding pairs=  1018174  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=16/2^4=1.0000  #|gamma|=2^w: 22  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=14
+      run-free: max|s-t'| for R=1..12: [-1, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 9] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 1 ; theorem R=6: max|s-t'|=7
+n=22 unordered colliding pairs=  2026664  viol(odd,eq,gamma,sign,bal4890,balhere)=(0,0,0,0,0,0)  max|gamma|/2^w=2/2^1=1.0000  #|gamma|=2^w: 528  max(|s-t'|-max(dX,dXi))=2  max(|t'-s-1|-|dX-dXi|)=1  max group=14
+      run-free: max|s-t'| for R=1..12: [-1, 3, 4, 6, 6, 7, 8, 9, 9, 9, 9, 9] ; violations of |s-t'|<=R+3: [] ; max over R of (max|s-t'| - R) = 2 ; theorem R=6: max|s-t'|=7
+written de_collisions.json time 11.8s

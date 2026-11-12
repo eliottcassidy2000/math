@@ -1,0 +1,37 @@
+O1a g(v) = v + 1 - 2q(v) - (v mod 2) for all v < 2^21: violations 0
+O1b x(h) = g(2h) for all h < 2^20: violations 0
+O2 0 <= q(h) <= (h-1)/2 and h+2 <= x(h) <= 2h+1 for 1 <= h < 2^21: violations 0 | x(0) = 1 (h = 0 is excluded: x(0) = 1 < 0 + 2) | equality x = h+2 at 21 values of h, x = 2h+1 at 21
+   equality cases x(h) = h + 2 (h < 64): [1, 3, 7, 15, 31, 63]
+   equality cases x(h) = 2h + 1 (h < 64): [1, 2, 4, 8, 16, 32]
+O3a g(word) = H(T(word)) by literal permutations, all words of chain length <= 6: 127 words, violations 0
+O3b g(word) = H(T(word)) by subset DP (pure Python), all words of chain length <= 9: 1023 words, violations 0
+O3b' g(word) = H(T(word)) by subset DP (numba), all words of chain length <= 14: 32767 words, violations 0
+O3c (information) words of length <= 8 with g(complement) != g:  450 ; with g(reverse-complement) != g: 0 (converse invariance => 0)
+O4 order 1 : labelled tournaments with a transitive one-vertex deletion: 1 | H-values [1] | equal to {g(v): v < 2^(N-1)}: True
+O4 order 2 : labelled tournaments with a transitive one-vertex deletion: 2 | H-values [1] | equal to {g(v): v < 2^(N-1)}: True
+O4 order 3 : labelled tournaments with a transitive one-vertex deletion: 8 | H-values [1, 3] | equal to {g(v): v < 2^(N-1)}: True
+O4 order 4 : labelled tournaments with a transitive one-vertex deletion: 64 | H-values [1, 3, 5] | equal to {g(v): v < 2^(N-1)}: True
+O4 order 5 : labelled tournaments with a transitive one-vertex deletion: 840 | H-values [1, 3, 5, 9, 11] | equal to {g(v): v < 2^(N-1)}: True
+O4 order 6 : labelled tournaments with a transitive one-vertex deletion: 13200 | H-values [1, 3, 5, 9, 11, 15, 17, 19, 23] | equal to {g(v): v < 2^(N-1)}: True
+O5 m = 4 : {g(v): v < 2^m} == {x(h): h < 2^(m-1)}: True | size 5
+O5 m = 8 : {g(v): v < 2^m} == {x(h): h < 2^(m-1)}: True | size 58
+O5 m = 12 : {g(v): v < 2^m} == {x(h): h < 2^(m-1)}: True | size 825
+O5 m = 16 : {g(v): v < 2^m} == {x(h): h < 2^(m-1)}: True | size 12408
+O5 m = 20 : {g(v): v < 2^m} == {x(h): h < 2^(m-1)}: True | size 196215
+B1 q(h) = sum_i h_i ceil(floor(h/2^(i+1))/2), h < 2^16: violations 0
+B2a block law, A < 2^8 (A = 0 and odd A included), 1 <= m <= 9, all B < 2^m: 261632 cases, violations 0
+B2b block law, random A (< 2^200), m < 200, B < 2^m: 20000 cases, violations 0
+B2c (information) the law is stated for m >= 1; at m = 0 it would read 2q(A) = 2q(A) + (A mod 2) B_(-1): the last term must be dropped, which is why s = 0 is treated separately (c = 2, c mod 2 = 0).
+B3 three-block formula x(h) = K(P,Z) + c x - P rev_w(x) - 2q(x) - (P mod 2) x_(w-1) - (c mod 2) x_0, t' <= 5 (and P = 0), 1 <= w <= 6, 0 <= s <= 5: 254016 cases; K depends on x: 0 ; K != 2P 2^(w+s) + 2Z + 1 - 2q(P) - 2q(Z) - P 2^w rev_s(Z): 0 ; Z_(s-1) != c mod 2 (s >= 1) or c != 2 (s = 0): 0 ; Z -> c not a bijection onto (2^s, 2^(s+1)]: 0
+B3b difference form x(h) - x(h') = c X - P Xi - gamma for random blocks up to 80 bits each (any x, x'): 20000 cases, violations 0
+G1 w = 1 : odd pairs 2 (4^(w-1) = 1 ; 2 for w = 1) max |gamma| = 2 2^w = 2 attained at (x, x', P mod 2, c mod 2) = (0, 1, 1, 1)
+G1 w = 2 : odd pairs 4 (4^(w-1) = 4 ; 2 for w = 1) max |gamma| = 4 2^w = 4 attained at (x, x', P mod 2, c mod 2) = (0, 3, 1, 1)
+G1 w = 3 : odd pairs 16 (4^(w-1) = 16 ; 2 for w = 1) max |gamma| = 8 2^w = 8 attained at (x, x', P mod 2, c mod 2) = (0, 7, 1, 1)
+G1 w = 4 : odd pairs 64 (4^(w-1) = 64 ; 2 for w = 1) max |gamma| = 16 2^w = 16 attained at (x, x', P mod 2, c mod 2) = (0, 15, 1, 1)
+G1 w = 5 : odd pairs 256 (4^(w-1) = 256 ; 2 for w = 1) max |gamma| = 32 2^w = 32 attained at (x, x', P mod 2, c mod 2) = (0, 31, 1, 1)
+G1 w = 6 : odd pairs 1024 (4^(w-1) = 1024 ; 2 for w = 1) max |gamma| = 64 2^w = 64 attained at (x, x', P mod 2, c mod 2) = (0, 63, 1, 1)
+G1 w = 7 : odd pairs 4096 (4^(w-1) = 4096 ; 2 for w = 1) max |gamma| = 128 2^w = 128 attained at (x, x', P mod 2, c mod 2) = (0, 127, 1, 1)
+G1 w = 8 : odd pairs 16384 (4^(w-1) = 16384 ; 2 for w = 1) max |gamma| = 256 2^w = 256 attained at (x, x', P mod 2, c mod 2) = (0, 255, 1, 1)
+G1 w = 9 : odd pairs 65536 (4^(w-1) = 65536 ; 2 for w = 1) max |gamma| = 512 2^w = 512 attained at (x, x', P mod 2, c mod 2) = (0, 511, 1, 1)
+G1 w = 10 : odd pairs 262144 (4^(w-1) = 262144 ; 2 for w = 1) max |gamma| = 1024 2^w = 1024 attained at (x, x', P mod 2, c mod 2) = (0, 1023, 1, 1)
+done

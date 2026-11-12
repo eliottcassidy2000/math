@@ -1,0 +1,19 @@
+3207 gadget matrices (X of order <= 6); 2813 distinct actual states (r, M, h, E) of pairs of order <= 6
+integer eigenvalues >= 1 (eigenvalue: number of matrices): {84: 1, 168: 1, 252: 1, 255: 1, 336: 1, 504: 2, 756: 1}
+matrices with an integer eigenvalue >= 1: 8 of 3207
+
+SINGLE GADGETS with an exact class h -> a h + b (census states in C on which h moves):
+  #1476(n=6,X=[16, 9, 3, 5, 14, 31],P=000001): a = 255, dim C = 2, C basis [[9, 10, 9, 0], [0, 0, 0, 1]], moving census states 2, b: [(0, 2)] [b = 0] e.g. [(9, 10, 9, 4), (27, 30, 27, 12)]
+summary (multiplier a, dim C, kind): number of gadget matrices
+   (84, 2, 'no census state'): 1
+   (168, 2, 'no census state'): 1
+   (252, 2, 'no census state'): 1
+   (255, 2, 'b = 0'): 1
+   (336, 2, 'no census state'): 1
+   (504, 2, 'no census state'): 2
+   (756, 2, 'no census state'): 1
+
+PAIRS OF GADGETS (both with an integer eigenvalue >= 1):
+   (ii) C != 0, the two maps commute on all of C: 28
+category (iii) pairs: 0; with a census state s in C, kappa s != 0: 0
+time 4.1 s

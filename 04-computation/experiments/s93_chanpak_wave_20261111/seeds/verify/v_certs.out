@@ -1,0 +1,7 @@
+sign +1: 32747 certificates; state (r, M) recomputed and 2 closings each counted directly (65494 closed tournaments, order <= 13): failing certificates 0
+   first odd c <= 65535 without a certificate: 53559; largest v among odd c below it: 7 (at c = 9); every integer of [21566, 53558] is a certified slope (doubling closure); odd c with v = 0: 3378 (c < 2^13), 7417 (c < 2^14), 15603 (c < 2^15)
+sign -1: 32758 certificates; state (r, M) recomputed and 2 closings each counted directly (65516 closed tournaments, order <= 13): failing certificates 0
+   first odd c <= 65535 without a certificate: 59083; largest v among odd c below it: 10 (at c = 1); every integer of [23502, 59082] is a certified slope (doubling closure); odd c with v = 0: 3357 (c < 2^13), 7381 (c < 2^14), 15569 (c < 2^15)
+real	0m59.510s
+user	0m0.046s
+sys	0m0.015s

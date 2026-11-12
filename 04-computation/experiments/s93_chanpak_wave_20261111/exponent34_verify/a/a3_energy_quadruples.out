@@ -1,0 +1,28 @@
+=== E1: all 2^(4w) quadruples ===
+  w = 1: sum-form energy = 6, difference-form energy = 6, 6^w = 6: True   [4.4s]
+  w = 2: sum-form energy = 36, difference-form energy = 36, 6^w = 36: True   [0.0s]
+  w = 3: sum-form energy = 216, difference-form energy = 216, 6^w = 216: True   [0.0s]
+  w = 4: sum-form energy = 1296, difference-form energy = 1296, 6^w = 1296: True   [0.0s]
+  w = 5: sum-form energy = 7776, difference-form energy = 7776, 6^w = 7776: True   [0.0s]
+  w = 6: sum-form energy = 46656, difference-form energy = 46656, 6^w = 46656: True   [0.0s]
+  w = 7: sum-form energy = 279936, difference-form energy = 279936, 6^w = 279936: True   [0.2s]
+=== E2: three free points ===
+  w =  1: energy = 6, 6^w = 6: True   [3.6s]
+  w =  2: energy = 36, 6^w = 36: True   [0.0s]
+  w =  3: energy = 216, 6^w = 216: True   [0.0s]
+  w =  4: energy = 1296, 6^w = 1296: True   [0.0s]
+  w =  5: energy = 7776, 6^w = 7776: True   [0.0s]
+  w =  6: energy = 46656, 6^w = 46656: True   [0.0s]
+  w =  7: energy = 279936, 6^w = 279936: True   [0.0s]
+  w =  8: energy = 1679616, 6^w = 1679616: True   [0.0s]
+  w =  9: energy = 10077696, 6^w = 10077696: True   [0.1s]
+  w = 10: energy = 60466176, 6^w = 60466176: True   [0.4s]
+  w = 11: energy = 362797056, 6^w = 362797056: True   [79.6s]
+=== control (the code can tell 6^w from something else): graph of the identity ===
+  w = 1: energy of {(x, x)} = 6  (6^w = 6)
+  w = 2: energy of {(x, x)} = 44  (6^w = 36)
+  w = 3: energy of {(x, x)} = 344  (6^w = 216)
+  w = 4: energy of {(x, x)} = 2736  (6^w = 1296)
+  w = 5: energy of {(x, x)} = 21856  (6^w = 7776)
+  w = 6: energy of {(x, x)} = 174784  (6^w = 46656)
+ALL CHECKS PASSED

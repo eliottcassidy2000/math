@@ -1,0 +1,24 @@
+(j) invertible blocks of order <= 6: 1252; with a rational invariant plane: 28; distinct rational invariant planes: 24; pencil cases (N - lam of rank 1): 0
+    planes through (1,0,1): 3; shared by >= 2 invertible blocks: [((1, 0, -1), 4)]
+    ALL rational invariant planes shared by >= 2 invertible blocks (through the start state or not): 2
+    (orbit states of the full order-<=6 semigroup with h <= 300: 31735)
+      normal (1, 0, -1): 4 invertible blocks; (lam, det N, det on plane) = [(-1, 1, '-1'), (1, -21, '-21'), (1, 1, '1'), (1, 5, '5')]; orbit states (h <= 300) on the plane: 480, e.g. [(1, 0, 1), (1, 1, 1), (3, 0, 3)]
+      normal (1, -2, 0): 2 invertible blocks; (lam, det N, det on plane) = [(-1, 60, '-60'), (-1, 100, '-100')]; orbit states (h <= 300) on the plane: 0
+    plane h = O: preserved by 4 invertible blocks; singular blocks with image inside it (row h = row O): 77; singular blocks having (1,0,-1) as a left eigenvector (any lam): 5
+      block (1, 4, 4, 2, 3, 2, 2, 4, 3): lam -1, det N 1, induced on (h,E): (5, 4, 4, 3), det -1
+      block (5, 8, 6, 3, 7, 6, 4, 8, 7): lam 1, det N 5, induced on (h,E): (11, 8, 9, 7), det 5
+      block (17, 32, 24, 12, 25, 20, 16, 32, 25): lam 1, det N 1, induced on (h,E): (41, 32, 32, 25), det 1
+      block (41, 56, 42, 35, 49, 38, 40, 56, 43): lam 1, det N -21, induced on (h,E): (83, 56, 73, 49), det -21
+      singular blocks into the plane: 65 distinct induced matrices; determinants all even or 0: True; odd determinants: []
+      unimodular block (1, 4, 4, 2, 3, 2, 2, 4, 3) preserves plane normal (1, 0, -1) (lam -1); orbit states with h<=300 on it: 480
+      unimodular block (17, 32, 24, 12, 25, 20, 16, 32, 25) preserves plane normal (1, 0, -1) (lam 1); orbit states with h<=300 on it: 480
+    unimodular blocks with a rational invariant plane (lam = +-1): 2
+    words of length <= 3 in the 21 invertible order-<=4 blocks: 8382 distinct matrices; rational invariant planes shared by >= 2 of them: 4
+      normal (1, 0, -1): 14 words, 3 act unimodularly on the plane (|det| = |lam|), non-commuting pair among them: False; order-<=4 orbit states (h <= 2000) on the plane: 2999
+      normal (1, 1, -2): 3 words, 0 act unimodularly on the plane (|det| = |lam|), non-commuting pair among them: False; order-<=4 orbit states (h <= 2000) on the plane: 2003
+      normal (3, 2, -4): 3 words, 0 act unimodularly on the plane (|det| = |lam|), non-commuting pair among them: False; order-<=4 orbit states (h <= 2000) on the plane: 0
+      normal (3, 0, -4): 3 words, 0 act unimodularly on the plane (|det| = |lam|), non-commuting pair among them: False; order-<=4 orbit states (h <= 2000) on the plane: 0
+
+real	0m52.838s
+user	0m0.046s
+sys	0m0.046s

@@ -1,0 +1,17 @@
+OUTCOME of PREREG_census_L16.txt (lane twoapex).  Runs: b1_census.py 15 16 26 (log b1_census_15_16.log),
+b2_windows.py (b2_windows_L16.out).  The pre-registration file was written before these runs and not edited.
+
+P1  CONFIRMED.  The words of length <= 16 attain every odd N in [23, 2^23); in fact every odd N in
+    [23, 22,156,805] (log2 = 24.40), so every odd N < 2^24 other than 7 and 21.
+P1' CONFIRMED.  N_15 = 7,059,819 (predicted interval [5,165,607, 7,748,410]); N_16 = 22,156,807 (predicted
+    [15,496,820, 23,245,229]); N_15 < 2^23 < N_16.
+P2  CONFIRMED.  Window [2^22, 2^23), words of length <= 16: minimum multiplicity 218 (predicted 80..450), median
+    490 (predicted 400..900), mean 512.8.
+P3  CONFIRMED.  n = 15: maximum 23,554,623 at 3^7 2 0^7, ratio 0.82078 (predicted [0.81, 0.84]);
+    n = 16: maximum 73,529,109 at 3^8 0^8, ratio 0.85406 (predicted [0.84, 0.88]).
+P4  CONFIRMED.  Distinct odd values of the words of length exactly 15: 6,259,388 (predicted 6.28e6 +- 3 %);
+    exactly 16, below 2^26: 19,603,515 (predicted 1.98e7 +- 3 %); 667 words of length 16 have H >= 2^26.
+P5  CONFIRMED.  Smallest value of minimal length 15: 2,327,675 = 0.1622 * 3^15; of minimal length 16:
+    7,059,819 = 0.1640 * 3^16 (predicted between 0.11 and 0.17 times 3^n).
+
+No prediction failed.  The statements are FINITE-EXACT (exhaustive over all 4^n words, n <= 16).

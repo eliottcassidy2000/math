@@ -1,0 +1,10 @@
+X = 2^22: distinct tower states 66762; distinct (sign, slope) 60817; (sign, slope) classes with more than one state: 3654; max class size 8
+  sign +1 slope 312: h=95 E=58 via ('pair', 1, 2, (2, 1, 0)) | h=119 E=84 via ('fan', 0, (1, 1, 0), (1, 2, 0))
+  sign -1 slope 384: h=1 E=0 via ('pair', 1, 7) | h=65 E=12 via ('fan', 2, (1, 1, 2))
+  sign +1 slope 800: h=319 E=238 via ('pair', 2, 4, (1, 1, 0)) | h=239 E=144 via ('fan', 0, (1, 1, 0), (2, 2, 0))
+  sign +1 slope 1404: h=191 E=30 via ('pair', 1, 1, (2, 1, 2)) | h=527 E=362 via ('fan', 2, (1, 1, 1), (1, 1, 0))
+  sign +1 slope 1946: h=495 E=186 via ('fan', 1, (2, 1, 0), (1, 1, 1)) | h=575 E=342 via ('fan', 1, (1, 1, 1), (2, 1, 0))
+  sign +1 slope 2748: h=687 E=258 via ('fan', 3, (1, 1, 0), (1, 1, 1)) | h=479 E=90 via ('fan', 0, (1, 1, 0), (1, 2, 2))
+  sign +1 slope 3304: h=991 E=602 via ('fan', 1, (2, 1, 0), (2, 2, 0)) | h=1311 E=974 via ('fan', 0, (1, 1, 1), (1, 4, 0))
+  sign -1 slope 3744: h=1441 E=1034 via ('pair', 1, 1, (1, 1, 1), (1, 2, 0)) | h=961 E=360 via ('pair', 1, 1, (1, 1, 0), (1, 2, 1))
+  distinct (sign, slope, h): 66762

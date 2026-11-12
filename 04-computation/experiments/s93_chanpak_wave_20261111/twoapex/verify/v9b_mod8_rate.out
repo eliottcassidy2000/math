@@ -1,0 +1,3 @@
+steps 100..300: rate from the l2 norm 0.617072; from the twisted readout 0.616687
+steps 300..500: rate from the l2 norm 0.617443; from the twisted readout 0.617439
+steps 500..700: rate from the l2 norm 0.617444; from the twisted readout 0.617444

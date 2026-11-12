@@ -1,0 +1,30 @@
+pair with |s - t'| = R + 2 for R = m = 4 (n = 22):
+h  = 1000101111011000100001  x(h)  = 3397163 = g(2h)  = 3397163
+h' = 1000100001010101011110  x(h') = 3397163 = g(2h') = 3397163   collision: True
+   n = 22, t' = 6, s = 0, w = 16, P = 34, c = 2, x = 1111011000100001, x' = 0001010101011110, X = 57539, Xi = 2503
+   gamma = 29976, c X - P Xi = 29976, 2^w = 65536, rho = 5 (lemma: -7 <= s - t' = -6 <= 4), longest run m = 4, |s - t'| - m = 2
+
+pair attaining s = t' + rho - 1 (the second carries bound is sharp), n = 22:
+h  = 1000100100000000011111  x(h)  = 2314709 = g(2h)  = 2314709
+h' = 1000110100111111111111  x(h') = 2314709 = g(2h') = 2314709   collision: True
+   n = 22, t' = 5, s = 5, w = 12, P = 17, c = 33, x = 001000000000, x' = 101001111111, X = -2175, Xi = -4065
+   gamma = -2670, c X - P Xi = -2670, 2^w = 4096, rho = 1 (lemma: -3 <= s - t' = 0 <= 0), longest run m = 12, |s - t'| - m = -12
+
+pair with t' = s + rho + 1 (the first carries bound t' <= s + rho + 2 is never attained for n <= 22), n = 22:
+h  = 1000000000000110100111  x(h)  = 2314709 = g(2h)  = 2314709
+h' = 1000001111111110110111  x(h') = 2314709 = g(2h') = 2314709   collision: True
+   n = 22, t' = 6, s = 4, w = 12, P = 32, c = 18, x = 000000011010, x' = 111111111011, X = -4065, Xi = -2175
+   gamma = -3570, c X - P Xi = -3570, 2^w = 4096, rho = 1 (lemma: -3 <= s - t' = -2 <= 0), longest run m = 12, |s - t'| - m = -10
+
+smallest collision:
+h  = 10  x(h)  = 5 = g(2h)  = 5
+h' = 11  x(h') = 5 = g(2h') = 5   collision: True
+   n = 2, t' = 1, s = 0, w = 1, P = 1, c = 2, x = 0, x' = 1, X = -1, Xi = -1
+   gamma = -1, c X - P Xi = -1, 2^w = 2, rho = 1 (lemma: -3 <= s - t' = -1 <= 0), longest run m = 2, |s - t'| - m = -1
+
+a pair with |gamma| = 2^w (w = 1):
+h  = 100000001110111111  x(h)  = 133193 = g(2h)  = 133193
+h' = 100000001010111111  x(h') = 133193 = g(2h') = 133193   collision: True
+   n = 18, t' = 9, s = 8, w = 1, P = 257, c = 259, x = 1, x' = 0, X = 1, Xi = 1
+   gamma = 2, c X - P Xi = 2, 2^w = 2, rho = 1 (lemma: -3 <= s - t' = -1 <= 0), longest run m = 7, |s - t'| - m = -6
+

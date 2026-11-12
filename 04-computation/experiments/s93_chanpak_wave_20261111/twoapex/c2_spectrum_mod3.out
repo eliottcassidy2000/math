@@ -1,0 +1,68 @@
+m = 3: 236196 states
+common left fixed vectors (x A_l = x for all l): dimension 1
+  x_0 = [np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1)] ; x_0 . readout = 1
+  orbit invariant under translation by x_0 modulo 3: True
+strongly connected components: 1; recurrent classes: 1 with sizes [236196]
+k = 1: |c_n| at n = 8, 12, 16, 20, 24, 32, 40, 48: 3.512e-02 5.276e-03 3.722e-03 1.174e-03 1.465e-04 1.842e-05 3.141e-06 1.752e-07
+   least-squares rate of |c_n| on n = 20..60: 0.77315 per letter (spectral radius 3.0926 of 4)
+leading 60 eigenvalues of P (173.2 s): modulus, argument/2pi, Fourier weights |w_k|
+  |lambda| = 1.000000  arg/2pi = +0.0000  1.01e-16 3.39e-16
+  |lambda| = 0.866025  arg/2pi = -0.0833  4.66e-17 2.60e-17
+  |lambda| = 0.866025  arg/2pi = +0.0833  2.58e-17 4.71e-17
+  |lambda| = 0.866025  arg/2pi = -0.0833  5.73e-18 3.90e-18
+  |lambda| = 0.866025  arg/2pi = +0.0833  3.21e-18 6.11e-18
+  |lambda| = 0.770633  arg/2pi = -0.0403  1.96e-02 3.83e-16  <- seen by H
+  |lambda| = 0.770633  arg/2pi = +0.0403  3.89e-16 1.96e-02  <- seen by H
+  |lambda| = 0.770633  arg/2pi = -0.0403  3.71e-03 1.52e-16  <- seen by H
+  |lambda| = 0.770633  arg/2pi = +0.0403  1.52e-16 3.71e-03  <- seen by H
+  |lambda| = 0.770633  arg/2pi = +0.4597  2.24e-03 3.28e-17  <- seen by H
+  |lambda| = 0.770633  arg/2pi = -0.4597  3.27e-17 2.24e-03  <- seen by H
+  |lambda| = 0.770633  arg/2pi = -0.4597  3.46e-17 4.49e-03  <- seen by H
+  |lambda| = 0.770633  arg/2pi = +0.4597  4.49e-03 3.36e-17  <- seen by H
+  |lambda| = 0.770633  arg/2pi = +0.0403  1.23e-16 1.12e-02  <- seen by H
+  |lambda| = 0.770633  arg/2pi = -0.0403  1.12e-02 1.21e-16  <- seen by H
+  |lambda| = 0.770633  arg/2pi = -0.0403  1.02e-02 1.73e-16  <- seen by H
+  |lambda| = 0.770633  arg/2pi = +0.0403  1.76e-16 1.02e-02  <- seen by H
+  |lambda| = 0.770633  arg/2pi = -0.4597  1.46e-16 7.30e-03  <- seen by H
+  |lambda| = 0.770633  arg/2pi = +0.4597  7.30e-03 1.46e-16  <- seen by H
+  |lambda| = 0.770633  arg/2pi = -0.4597  6.45e-17 5.59e-04  <- seen by H
+  |lambda| = 0.770633  arg/2pi = -0.0403  1.72e-02 4.00e-17  <- seen by H
+  |lambda| = 0.770633  arg/2pi = +0.0403  4.73e-17 1.72e-02  <- seen by H
+  |lambda| = 0.770633  arg/2pi = +0.4597  5.59e-04 6.43e-17  <- seen by H
+  |lambda| = 0.750000  arg/2pi = +0.0000  6.57e-16 6.57e-16
+  |lambda| = 0.750000  arg/2pi = +0.0000  3.06e-17 2.95e-17
+  |lambda| = 0.750000  arg/2pi = +0.0000  9.77e-17 9.74e-17
+  |lambda| = 0.750000  arg/2pi = +0.0000  5.12e-17 5.10e-17
+  |lambda| = 0.750000  arg/2pi = -0.1667  2.06e-17 2.61e-17
+  |lambda| = 0.750000  arg/2pi = +0.1667  2.59e-17 2.06e-17
+  |lambda| = 0.743147  arg/2pi = +0.0098  7.16e-03 6.95e-17  <- seen by H
+  |lambda| = 0.743147  arg/2pi = -0.0098  6.79e-17 7.16e-03  <- seen by H
+  |lambda| = 0.743147  arg/2pi = +0.4902  1.41e-16 2.19e-03  <- seen by H
+  |lambda| = 0.743147  arg/2pi = -0.4902  2.19e-03 1.40e-16  <- seen by H
+  |lambda| = 0.743147  arg/2pi = +0.4902  1.72e-16 2.35e-03  <- seen by H
+  |lambda| = 0.743147  arg/2pi = -0.4902  2.35e-03 1.72e-16  <- seen by H
+  |lambda| = 0.743147  arg/2pi = -0.0098  1.41e-14 1.13e-02  <- seen by H
+  |lambda| = 0.743147  arg/2pi = +0.0098  1.13e-02 1.41e-14  <- seen by H
+  |lambda| = 0.743147  arg/2pi = -0.4902  5.69e-04 1.64e-17  <- seen by H
+  |lambda| = 0.743147  arg/2pi = +0.4902  1.59e-17 5.69e-04  <- seen by H
+  |lambda| = 0.743147  arg/2pi = +0.0098  2.13e-02 4.36e-16  <- seen by H
+  |lambda| = 0.743147  arg/2pi = -0.0098  4.44e-16 2.13e-02  <- seen by H
+  |lambda| = 0.743147  arg/2pi = +0.0098  1.10e-02 3.03e-16  <- seen by H
+  |lambda| = 0.743147  arg/2pi = -0.0098  3.01e-16 1.10e-02  <- seen by H
+  |lambda| = 0.743147  arg/2pi = -0.4902  3.96e-03 2.57e-16  <- seen by H
+  |lambda| = 0.743147  arg/2pi = +0.4902  2.56e-16 3.96e-03  <- seen by H
+  |lambda| = 0.735532  arg/2pi = -0.0362  5.62e-16 6.76e-03  <- seen by H
+  |lambda| = 0.735532  arg/2pi = +0.0362  6.76e-03 5.60e-16  <- seen by H
+  |lambda| = 0.735532  arg/2pi = -0.4638  9.26e-03 8.42e-17  <- seen by H
+  |lambda| = 0.735532  arg/2pi = +0.4638  8.52e-17 9.26e-03  <- seen by H
+  |lambda| = 0.735532  arg/2pi = -0.4638  1.59e-03 1.21e-16  <- seen by H
+  |lambda| = 0.735532  arg/2pi = +0.4638  1.22e-16 1.59e-03  <- seen by H
+  |lambda| = 0.735532  arg/2pi = -0.4638  7.19e-03 2.15e-16  <- seen by H
+  |lambda| = 0.735532  arg/2pi = +0.4638  2.12e-16 7.19e-03  <- seen by H
+  |lambda| = 0.735532  arg/2pi = +0.0362  1.01e-02 9.89e-17  <- seen by H
+  |lambda| = 0.735532  arg/2pi = -0.0362  1.02e-16 1.01e-02  <- seen by H
+  |lambda| = 0.735532  arg/2pi = -0.4638  3.15e-03 5.03e-17  <- seen by H
+  |lambda| = 0.735532  arg/2pi = +0.4638  5.13e-17 3.15e-03  <- seen by H
+  |lambda| = 0.735532  arg/2pi = -0.0362  1.49e-16 6.35e-03  <- seen by H
+  |lambda| = 0.735532  arg/2pi = +0.0362  6.35e-03 1.48e-16  <- seen by H
+  |lambda| = 0.735532  arg/2pi = +0.4638  5.92e-13 3.63e-03  <- seen by H

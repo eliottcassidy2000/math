@@ -1,0 +1,1 @@
+blocks2_k6.txt: 1884 representative blocks; matrix mod 2 = [[1,0,0],[e,A0,A1],[o,A1,A0]] with the path counts of the proof: 1884 agree, 0 disagree; (A0, A1) mod 2 counts: {(0, 0): 959, (0, 1): 268, (1, 0): 254, (1, 1): 403}

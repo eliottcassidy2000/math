@@ -1,0 +1,8 @@
+(D) n = 3: 8 labelled tournaments; component/strong-component mismatches 0; components without a dominating cycle 0; without a dominating cycle on >= |W|-1 vertices 0; pairs at distance >= 3: 0; tournaments with a three-class chain component: 0
+(D) n = 4: 64 labelled tournaments; component/strong-component mismatches 0; components without a dominating cycle 0; without a dominating cycle on >= |W|-1 vertices 0; pairs at distance >= 3: 0; tournaments with a three-class chain component: 0
+(D) n = 5: 1024 labelled tournaments; component/strong-component mismatches 0; components without a dominating cycle 0; without a dominating cycle on >= |W|-1 vertices 0; pairs at distance >= 3: 0; tournaments with a three-class chain component: 0
+(D) n = 6: 32768 labelled tournaments; component/strong-component mismatches 0; components without a dominating cycle 0; without a dominating cycle on >= |W|-1 vertices 0; pairs at distance >= 3: 0; tournaments with a three-class chain component: 10800
+
+real	0m27.584s
+user	0m0.046s
+sys	0m0.046s

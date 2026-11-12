@@ -1,0 +1,16 @@
+sub_k4_uni.txt: 8 unimodular generators; image mod 2: 4, mod 4: 128 (full preimage of the mod-2 image: 1024), mod 8: 4096 (full preimage: 262144)
+sub_k6_uni.txt: 46 unimodular generators; image mod 2: 8, mod 4: 4096 (full preimage of the mod-2 image: 2048), mod 8: 1048576 (full preimage: 524288)
+words of length 1: 16 new group elements (total 16); unipotent non-identity elements found so far: 0
+words of length 2: 152 new group elements (total 168); unipotent non-identity elements found so far: 20
+words of length 3: 1532 new group elements (total 1700); unipotent non-identity elements found so far: 50
+words of length 4: 15106 new group elements (total 16806); unipotent non-identity elements found so far: 260
+   unipotent: (2, (1, 2, -2, -1, -1, 2, -1, -2, 3))
+   unipotent: (2, (1, 6, -6, -3, -15, 16, -3, -16, 17))
+   unipotent: (2, (1, -2, 2, 1, 1, 0, 1, 0, 1))
+   unipotent: (2, (1, 4, -4, -2, -9, 10, -2, -10, 11))
+   unipotent: (2, (5, 4, -8, 0, 1, 0, 2, 2, -3))
+   unipotent: (2, (1, -6, 6, 3, -1, 2, 3, -2, 3))
+   unipotent: (2, (1, -4, 4, 2, 3, -2, 2, 2, -1))
+   unipotent: (2, (1, 2, -2, -1, 3, 0, 1, 0, -1))
+   unipotent: (2, (-3, -4, 8, 0, 1, 0, -2, -2, 5))
+   unipotent: (2, (-3, 2, 6, -1, 1, 2, -3, 2, 5))

@@ -1,0 +1,11 @@
+[Deg ] W=5 s1=3 s2=2 ds=1 mode=box Kmax=8: P_u tested 120; box points 3360; directions tested 5744 (nonempty 3360, with k=+-1: 1152, with k<0: 2872); CRT class unique by brute force in 5744 cases; e in range 6820, giving box points 3360 (rejected: |a'|>=2^s2 1024, |b'|>=2^s2 2756); max points on one direction 1; max count/(6M/m+1) = 0.9062; directions with ||e0/m|| < 3M/m but no point: 2140
+        K=    1: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.6741 at P_u=(-2, -7) (Deg_K=2); min (S2 bound)/Deg_K = 7.00
+        K=    2: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.1441 at P_u=(-3, -7) (Deg_K=2); min (S2 bound)/Deg_K = 13.00
+        K=    4: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.0909 at P_u=(-3, -3) (Deg_K=5); min (S2 bound)/Deg_K = 14.67
+        K=    8: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.0426 at P_u=(-1, -1) (Deg_K=12); min (S2 bound)/Deg_K = 23.77
+[Deg'] W=5 s1=3 s2=2 ds=1 mode=box Kmax=8: P_v tested 28; box points 3360; directions tested 3344 (nonempty 3088, with k=+-1: 408, with k<0: 1672); CRT class unique by brute force in 3344 cases; e in range 5280, giving box points 3360 (rejected: |a|>=2^s1 1256, |b|>=2^s1 728); max points on one direction 4; max count/(6M/m+1) = 0.8286; directions with ||e0/m|| < 3M/m but no point: 256
+        K=    1: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 2.6963 at P_v=(-2, -3) (Deg'_K=8)
+        K=    2: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.5714 at P_v=(-2, -3) (Deg'_K=8)
+        K=    4: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.2487 at P_v=(-1, -3) (Deg'_K=16)
+        K=    8: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.1243 at P_v=(-1, -3) (Deg'_K=35)
+W=5 mode=box kfac=2 which=both: ALL CHECKS PASSED (1.3 s)

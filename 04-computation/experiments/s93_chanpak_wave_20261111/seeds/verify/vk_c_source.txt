@@ -1,0 +1,657 @@
+// vk.c - verifier's own kernels for the lane "seeds" (S93 Chan-Pak wave).  Written from the definitions of
+// THM-5130 (Setting); shares no code with seedlib.py / b_census.py / the finisher's f_ scripts.
+// build: gcc -O2 -fopenmp -o vk.exe vk.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <omp.h>
+typedef long long i64;
+typedef unsigned char u8;
+#define MAXN 16
+#define CN (1 << 20)
+
+static inline int popc(int x) { return __builtin_popcount(x); }
+
+// column-major code: pairs (i, j), i < j, ordered by j then i; bit = 1 iff i -> j
+static void decode(int n, i64 code, int *out) {
+    for (int v = 0; v < n; v++) out[v] = 0;
+    int b = 0;
+    for (int j = 1; j < n; j++)
+        for (int i = 0; i < j; i++) {
+            if ((code >> b) & 1) out[i] |= 1 << j; else out[j] |= 1 << i;
+            b++;
+        }
+}
+
+// E[S*n+v] = # Hamiltonian paths of T[S] ending at v, Bg[S*n+v] = # beginning at v, Hs[S] = H(T[S]), Hs[0] = 1
+static void tables(int n, const int *out, i64 *E, i64 *Bg, i64 *Hs, int lo, int hi) {
+    if (lo <= 0) { Hs[0] = 1; for (int v = 0; v < n; v++) { E[v] = 0; Bg[v] = 0; } lo = 1; }
+    for (int S = lo; S <= hi; S++) {
+        i64 t = 0;
+        for (int v = 0; v < n; v++) {
+            i64 a = 0, b = 0;
+            if ((S >> v) & 1) {
+                int R = S ^ (1 << v);
+                if (R == 0) { a = 1; b = 1; }
+                else {
+                    int x = R & ~out[v];
+                    while (x) { int u = __builtin_ctz(x); x &= x - 1; a += E[(size_t)R * n + u]; }
+                    x = R & out[v];
+                    while (x) { int u = __builtin_ctz(x); x &= x - 1; b += Bg[(size_t)R * n + u]; }
+                }
+            }
+            E[(size_t)S * n + v] = a; Bg[(size_t)S * n + v] = b; t += a;
+        }
+        Hs[S] = t;
+    }
+}
+
+// Q[e][f] = # (P1, P2) nonempty disjoint covering, P1 ending at e, P2 starting at f;  U[o] = # (P1 possibly empty, P2 starting at o)
+static void pairmats(int n, const i64 *E, const i64 *Bg, const i64 *Hs, i64 (*Q)[MAXN], i64 *U) {
+    int full = (1 << n) - 1;
+    for (int e = 0; e < n; e++) { U[e] = 0; for (int f = 0; f < n; f++) Q[e][f] = 0; }
+    for (int C = 1; C <= full; C++) {
+        int S = full ^ C; i64 h = Hs[S];
+        int x = C;
+        while (x) {
+            int f = __builtin_ctz(x); x &= x - 1;
+            i64 g = Bg[(size_t)C * n + f]; if (!g) continue;
+            U[f] += h * g;
+            int y = S;
+            while (y) { int e = __builtin_ctz(y); y &= y - 1; Q[e][f] += E[(size_t)S * n + e] * g; }
+        }
+    }
+}
+
+static void subsetsums(int n, i64 (*Q)[MAXN], const i64 *U, i64 *Ws, i64 *Ms) {
+    int full = (1 << n) - 1; Ws[0] = 0; Ms[0] = 0;
+    for (int O = 1; O <= full; O++) {
+        int l = __builtin_ctz(O); int R = O & (O - 1); i64 w = Ws[R]; int x = R;
+        while (x) { int e = __builtin_ctz(x); x &= x - 1; w += Q[l][e] + Q[e][l]; }
+        Ws[O] = w; Ms[O] = Ms[R] + U[l];
+    }
+}
+
+// closing C(B, O; X): B => X => v, v -> O, B - O -> v
+static int closing(int nB, const int *outB, int O, int a, const int *outX, int *res) {
+    int N = nB + a + 1; int xmask = ((1 << a) - 1) << nB; int vbit = 1 << (nB + a);
+    for (int x = 0; x < nB; x++) { int m = outB[x] | xmask; if (!((O >> x) & 1)) m |= vbit; res[x] = m; }
+    for (int j = 0; j < a; j++) res[nB + j] = (outX[j] << nB) | vbit;
+    res[nB + a] = O;
+    return N;
+}
+static void transitive(int a, int *out) { for (int j = 0; j < a; j++) out[j] = ((1 << a) - 1) & ~((1 << (j + 1)) - 1); }
+
+static i64 hcount(int n, const int *out) {   // H only
+    size_t sz = (size_t)1 << n;
+    i64 *E = malloc(sz * n * sizeof(i64)), *Bg = malloc(sz * n * sizeof(i64)), *Hs = malloc(sz * sizeof(i64));
+    tables(n, out, E, Bg, Hs, 0, (1 << n) - 1);
+    i64 h = Hs[sz - 1]; free(E); free(Bg); free(Hs); return h;
+}
+
+// state (r, M, h, Eend) of a pair
+static void state(int n, const int *out, int O, i64 *st) {
+    size_t sz = (size_t)1 << n;
+    i64 *E = malloc(sz * n * sizeof(i64)), *Bg = malloc(sz * n * sizeof(i64)), *Hs = malloc(sz * sizeof(i64));
+    i64 Q[MAXN][MAXN], U[MAXN];
+    tables(n, out, E, Bg, Hs, 0, (1 << n) - 1); pairmats(n, E, Bg, Hs, Q, U);
+    i64 W = 0, M = 0, en = 0;
+    for (int e = 0; e < n; e++) if ((O >> e) & 1) { M += U[e]; en += E[(sz - 1) * n + e]; for (int f = 0; f < n; f++) if (f != e && ((O >> f) & 1)) W += Q[e][f]; }
+    st[0] = Hs[sz - 1] - W; st[1] = M; st[2] = Hs[sz - 1]; st[3] = en;
+    free(E); free(Bg); free(Hs);
+}
+
+// gadget constants: H, Pi, W, kappa, u, sigma, u3, eps, nu
+static void gconst(int n, const int *out, int P, i64 *g) {
+    int full = (1 << n) - 1; size_t sz = (size_t)1 << n;
+    i64 *E = malloc(sz * n * sizeof(i64)), *Bg = malloc(sz * n * sizeof(i64)), *Hs = malloc(sz * sizeof(i64));
+    i64 *Us = calloc(sz * n, sizeof(i64)), *P2 = calloc(sz, sizeof(i64));
+    tables(n, out, E, Bg, Hs, 0, full);
+    for (int R = 0; R <= full; R++) {
+        for (int sub = R;; sub = (sub - 1) & R) {
+            P2[R] += Hs[sub] * Hs[R ^ sub];
+            int x = sub; while (x) { int f = __builtin_ctz(x); x &= x - 1; Us[(size_t)R * n + f] += Bg[(size_t)sub * n + f] * Hs[R ^ sub]; }
+            if (!sub) break;
+        }
+    }
+    i64 W = 0, qq = 0, u = 0, sig = 0, u3 = 0, eps = 0, nu = 0;
+    for (int e = 0; e < n; e++) if ((P >> e) & 1) {
+        u += Us[(size_t)full * n + e]; sig += Bg[(size_t)full * n + e]; eps += E[(size_t)full * n + e];
+        for (int S = 1; S <= full; S++) if ((S >> e) & 1) {
+            int C = full ^ S;
+            nu += E[(size_t)S * n + e] * Hs[C];
+            if (C) u3 += Bg[(size_t)S * n + e] * (P2[C] - 2 * Hs[C]);      // ordered pairs of NONEMPTY paths covering C
+            for (int f = 0; f < n; f++) if (f != e && ((P >> f) & 1) && ((C >> f) & 1)) {
+                W += E[(size_t)S * n + e] * Bg[(size_t)C * n + f];
+                qq += E[(size_t)S * n + e] * Us[(size_t)C * n + f];        // D1 ends at e, D2 starts at f, D3 possibly empty
+            }
+        }
+    }
+    g[0] = Hs[full]; g[1] = P2[full]; g[2] = W; g[3] = P2[full] - 2 * qq; g[4] = u; g[5] = sig; g[6] = u3; g[7] = eps; g[8] = nu;
+    free(E); free(Bg); free(Hs); free(Us); free(P2);
+}
+
+static i64 *readcodes(const char *fn, int *cnt) {
+    FILE *fh = fopen(fn, "r"); if (!fh) { fprintf(stderr, "cannot open %s\n", fn); exit(1); }
+    int cap = 1 << 18, k = 0; i64 *a = malloc(cap * sizeof(i64)); i64 x;
+    while (fscanf(fh, "%lld", &x) == 1) { if (k == cap) { cap *= 2; a = realloc(a, cap * sizeof(i64)); } a[k++] = x; }
+    fclose(fh); *cnt = k; return a;
+}
+
+// ---------------------------------------------------------------------------------------------------------- selftest
+static unsigned long long rs = 88172645463325252ULL;
+static unsigned rnd(void) { rs ^= rs << 13; rs ^= rs >> 7; rs ^= rs << 17; return (unsigned)(rs >> 11); }
+static void randtour(int n, int *out) { for (int v = 0; v < n; v++) out[v] = 0; for (int i = 0; i < n; i++) for (int j = i + 1; j < n; j++) { if (rnd() & 1) out[i] |= 1 << j; else out[j] |= 1 << i; } }
+static int ispath(const int *out, const int *p, int a, int b) { for (int k = a; k + 1 < b; k++) if (!((out[p[k]] >> p[k + 1]) & 1)) return 0; return 1; }
+static int nextperm(int *p, int n) { int i = n - 2; while (i >= 0 && p[i] > p[i + 1]) i--; if (i < 0) return 0; int j = n - 1; while (p[j] < p[i]) j--; int t = p[i]; p[i] = p[j]; p[j] = t; for (int a = i + 1, b = n - 1; a < b; a++, b--) { t = p[a]; p[a] = p[b]; p[b] = t; } return 1; }
+
+static int selftest(void) {
+    int bad = 0, cases = 0, lawcases = 0, gcases = 0, padcases = 0;
+    for (int trial = 0; trial < 400; trial++) {
+        int n = 2 + trial % 6;   // 2..7
+        int out[MAXN]; randtour(n, out);
+        i64 Hl = 0, Ql[MAXN][MAXN] = {{0}}, Ul[MAXN] = {0}, Pil = 0, ql[MAXN][MAXN] = {{0}};
+        int p[MAXN]; for (int i = 0; i < n; i++) p[i] = i;
+        do {
+            if (ispath(out, p, 0, n)) Hl++;
+            for (int k = 0; k <= n; k++) {
+                int a = ispath(out, p, 0, k), b = ispath(out, p, k, n);
+                if (a && b) { Pil++; if (k < n) Ul[p[k]]++; if (k >= 1 && k < n) Ql[p[k - 1]][p[k]]++; }
+                if (a && k >= 1) for (int k2 = k + 1; k2 <= n; k2++) if (ispath(out, p, k, k2) && ispath(out, p, k2, n)) ql[p[k - 1]][p[k]]++;
+            }
+        } while (nextperm(p, n));
+        size_t sz = (size_t)1 << n;
+        i64 *E = malloc(sz * n * sizeof(i64)), *Bg = malloc(sz * n * sizeof(i64)), *Hs = malloc(sz * sizeof(i64));
+        i64 Q[MAXN][MAXN], U[MAXN];
+        tables(n, out, E, Bg, Hs, 0, (1 << n) - 1); pairmats(n, E, Bg, Hs, Q, U);
+        if (Hs[sz - 1] != Hl) bad++;
+        for (int e = 0; e < n; e++) { if (U[e] != Ul[e]) bad++; for (int f = 0; f < n; f++) if (e != f && Q[e][f] != Ql[e][f]) bad++; }
+        // gadget constants against the literal q and Pi for every P
+        for (int P = 1; P < (1 << n); P++) {
+            i64 g[9]; gconst(n, out, P, g);
+            i64 W = 0, qq = 0;
+            for (int e = 0; e < n; e++) for (int f = 0; f < n; f++) if (e != f && ((P >> e) & 1) && ((P >> f) & 1)) { W += Ql[e][f]; qq += ql[e][f]; }
+            if (g[0] != Hl || g[1] != Pil || g[2] != W || g[3] != Pil - 2 * qq) bad++;
+            gcases++;
+        }
+        free(E); free(Bg); free(Hs);
+        cases++;
+        // closing law: literal permutation count when the closed order is <= 8, DP otherwise
+        for (int rep = 0; rep < 6; rep++) {
+            int O = 1 + rnd() % ((1 << n) - 1); int t = 1 + rnd() % 3;
+            i64 st[4]; state(n, out, O, st);
+            int tt[MAXN], res[MAXN]; transitive(t, tt);
+            int N = closing(n, out, O, t, tt, res);
+            if (N > 12) continue;
+            i64 h;
+            if (N <= 8) { h = 0; int pp[MAXN]; for (int i = 0; i < N; i++) pp[i] = i; do { if (ispath(res, pp, 0, N)) h++; } while (nextperm(pp, N)); }
+            else h = hcount(N, res);
+            if (h != st[0] + ((i64)1 << t) * st[1]) bad++;
+            lawcases++;
+        }
+        // gadget law (THM-5130 (A)) and Lemma G (padding) on random gadgets
+        if (n <= 5) for (int rep = 0; rep < 4; rep++) {
+            int a = 1 + rnd() % 4; int X[MAXN]; randtour(a, X); int P = 1 + rnd() % ((1 << a) - 1);
+            int O = 1 + rnd() % ((1 << n) - 1);
+            i64 st[4], g[9], st2[4]; state(n, out, O, st); gconst(a, X, P, g);
+            int res[MAXN]; int N = closing(n, out, O, a, X, res);
+            state(N, res, P << n, st2);
+            i64 r = st[0], M = st[1], h = st[2], En = st[3];
+            i64 rX = g[0] - g[2];
+            i64 e0 = rX * r + g[3] * M, e1 = g[4] * (r + h) + (4 * g[4] - 2 * g[5] + 2 * g[6]) * M - g[5] * En, e2 = g[0] * r + g[1] * M, e3 = g[7] * (r - h) + g[8] * M;
+            if (st2[0] != e0 || st2[1] != e1 || st2[2] != e2 || st2[3] != e3) bad++;
+            gcases++;
+            // padding X' = TT_(i-1) => X => TT_m
+            int i1 = rnd() % 3, m = rnd() % 3; int a2 = i1 + a + m; int Xp[MAXN];
+            for (int v = 0; v < a2; v++) Xp[v] = 0;
+            for (int v = 0; v < a2; v++) for (int w2 = v + 1; w2 < a2; w2++) {
+                int inx = (v >= i1 && v < i1 + a), iny = (w2 >= i1 && w2 < i1 + a);
+                if (inx && iny) { if ((X[v - i1] >> (w2 - i1)) & 1) Xp[v] |= 1 << w2; else Xp[w2] |= 1 << v; }
+                else Xp[v] |= 1 << w2;
+            }
+            i64 gp[9]; gconst(a2, Xp, P << i1, gp);
+            i64 pw = (i64)1 << (i1 + m), p2i = (i64)1 << i1, p2m = (i64)1 << m, p3m = 1; for (int k = 0; k < m; k++) p3m *= 3;
+            i64 u3p = (2 * g[4] - g[5] + g[6]) * p2i * p3m - 2 * p2m * g[4] + (i1 == 0 ? g[5] : 0);
+            if (gp[0] != g[0] || gp[1] != pw * g[1] || gp[2] != g[2] || gp[3] != pw * g[3] || gp[4] != p2m * g[4] || gp[5] != (i1 == 0 ? g[5] : 0)
+                || gp[7] != (m == 0 ? g[7] : 0) || gp[8] != p2i * g[8] || gp[6] != u3p) bad++;
+            padcases++;
+        }
+    }
+    printf("selftest: %d random tournaments (orders 2..7): H, Q, U, Pi_2, W(P), kappa(P) [DP] = literal enumeration of vertex orders; "
+           "%d gadget checks (every P; gadget law on random bases); closing law on %d closings; Lemma G on %d padded gadgets: mismatches %d\n",
+           cases, gcases, lawcases, padcases, bad);
+    return bad;
+}
+
+// ---------------------------------------------------------------------------------------------------------- neutral
+static void neutral(int n, const char *fn) {
+    int nrep; i64 *reps = readcodes(fn, &nrep);
+    int full = (1 << n) - 1; size_t sz = (size_t)1 << n;
+    i64 tot = 0, bysz[MAXN + 1] = {0}, conf = 0, pair_bad = 0, viol = 0, unit_tr = 0, unit_nt = 0, prim = 0, unit_plus = 0, unit_minus = 0, prim_plus = 0, prim_minus = 0, withH1 = 0;
+    #pragma omp parallel
+    {
+        i64 *E = malloc(sz * n * sizeof(i64)), *Bg = malloc(sz * n * sizeof(i64)), *Hs = malloc(sz * sizeof(i64));
+        i64 *Us = malloc(sz * n * sizeof(i64)), *Wp = malloc(sz * sizeof(i64)), *qp = malloc(sz * sizeof(i64));
+        int out[MAXN]; i64 Q[MAXN][MAXN], q[MAXN][MAXN];
+        #pragma omp for schedule(dynamic, 256) reduction(+:tot,conf,pair_bad,viol,unit_tr,unit_nt,prim,unit_plus,unit_minus,prim_plus,prim_minus,withH1) reduction(+:bysz[:MAXN+1])
+        for (int idx = 0; idx < nrep; idx++) {
+            decode(n, reps[idx], out);
+            tables(n, out, E, Bg, Hs, 0, full);
+            memset(Us, 0, sz * n * sizeof(i64));
+            for (int R = 1; R <= full; R++)
+                for (int sub = R; sub; sub = (sub - 1) & R) {
+                    i64 h = Hs[R ^ sub]; int x = sub;
+                    while (x) { int f = __builtin_ctz(x); x &= x - 1; Us[(size_t)R * n + f] += Bg[(size_t)sub * n + f] * h; }
+                }
+            for (int e = 0; e < n; e++) for (int f = 0; f < n; f++) { Q[e][f] = 0; q[e][f] = 0; }
+            i64 Pi = 0;
+            for (int S = 0; S <= full; S++) {
+                int C = full ^ S; Pi += Hs[S] * Hs[C];
+                if (S == 0 || C == 0) continue;
+                int y = S;
+                while (y) {
+                    int e = __builtin_ctz(y); y &= y - 1; i64 a = E[(size_t)S * n + e]; if (!a) continue;
+                    int x = C;
+                    while (x) { int f = __builtin_ctz(x); x &= x - 1; Q[e][f] += a * Bg[(size_t)C * n + f]; q[e][f] += a * Us[(size_t)C * n + f]; }
+                }
+            }
+            i64 H = Hs[full];
+            Wp[0] = 0; qp[0] = 0;
+            for (int P = 1; P <= full; P++) {
+                int l = __builtin_ctz(P), R = P & (P - 1); i64 w = Wp[R], qq = qp[R]; int x = R;
+                while (x) { int e = __builtin_ctz(x); x &= x - 1; w += Q[l][e] + Q[e][l]; qq += q[l][e] + q[e][l]; }
+                Wp[P] = w; qp[P] = qq;
+                if (Pi - 2 * qq != 0) continue;
+                int s = popc(P);
+                tot++; bysz[s]++;
+                if (H == 1) withH1++;
+                if (s == 2 && w == 2 * H) conf++; else { viol++; if (s == 2) pair_bad++; }
+                i64 rX = H - w;
+                if (rX == 1 || rX == -1) {
+                    if (H == 1) { unit_tr++; continue; }
+                    unit_nt++; if (rX == 1) unit_plus++; else unit_minus++;
+                    int pr = 1;
+                    for (int v = 0; v < n; v++) if (!((P >> v) & 1) && (out[v] == 0 || out[v] == (full ^ (1 << v)))) pr = 0;
+                    if (pr) { prim++; if (rX == 1) prim_plus++; else prim_minus++; }
+                    i64 g[9]; gconst(n, out, P, g);
+                    #pragma omp critical
+                    printf("UNIT %d %lld %d %d %lld %lld %lld %lld %lld %lld %lld %lld %lld %lld prim=%d\n", n, reps[idx], P, s, g[0], g[1], g[2], g[0] - g[2], g[3], g[4], g[5], g[6], g[7], g[8], pr);
+                }
+            }
+        }
+        free(E); free(Bg); free(Hs); free(Us); free(Wp); free(qp);
+    }
+    printf("order %d: %d classes; neutral gadgets (kappa = 0, labelled P): %lld; by |P|:", n, nrep, tot);
+    for (int s = 0; s <= n; s++) if (bysz[s]) printf(" %d:%lld", s, bysz[s]);
+    printf("; |P| = 2 and W = 2H: %lld; |P| = 2 and W != 2H: %lld; violating HYP-9662 (D) first sentence: %lld; with H(X) = 1: %lld (2n - 3 = %d)\n", conf, pair_bad, viol, withH1, 2 * n - 3);
+    printf("order %d: unit neutral gadgets: transitive X: %lld; non-transitive X: %lld (r_X = +1: %lld, r_X = -1: %lld); primitive (no source/sink of X outside P): %lld (+1: %lld, -1: %lld)\n",
+           n, unit_tr, unit_nt, unit_plus, unit_minus, prim, prim_plus, prim_minus);
+    free(reps);
+}
+
+// ---------------------------------------------------------------------------------------------------------- census
+typedef struct { u8 *minv[2]; i64 cnt[2][MAXN + 1]; i64 maxM[2]; i64 ncand; } Acc;
+static void acc_init(Acc *a) { for (int s = 0; s < 2; s++) { a->minv[s] = malloc(CN); memset(a->minv[s], 255, CN); a->maxM[s] = 0; for (int k = 0; k <= MAXN; k++) a->cnt[s][k] = 0; } a->ncand = 0; }
+static void acc_record(Acc *a, int n, i64 H, const i64 *Ws, const i64 *Ms, i64 slopecap) {
+    int full = (1 << n) - 1;
+    for (int O = 1; O <= full; O++) {
+        i64 w = Ws[O]; int sg;
+        if (w == H - 1) sg = 0; else if (w == H + 1) sg = 1; else continue;
+        i64 M = Ms[O];
+        a->cnt[sg][popc(O)]++;
+        if (M > a->maxM[sg]) a->maxM[sg] = M;
+        if (slopecap && M >= slopecap) continue;
+        int v = __builtin_ctzll(M); i64 c = M >> v; i64 ci = c >> 1;
+        if (ci < CN && v < a->minv[sg][ci]) a->minv[sg][ci] = (u8)v;
+    }
+}
+static void acc_merge(Acc *d, const Acc *s) {
+    for (int g = 0; g < 2; g++) { for (int i = 0; i < CN; i++) if (s->minv[g][i] < d->minv[g][i]) d->minv[g][i] = s->minv[g][i];
+        for (int k = 0; k <= MAXN; k++) d->cnt[g][k] += s->cnt[g][k]; if (s->maxM[g] > d->maxM[g]) d->maxM[g] = s->maxM[g]; }
+    d->ncand += s->ncand;
+}
+static void acc_print(const Acc *a, const char *label, const char *binfile) {
+    printf("%s: %lld tournaments; seeds by |O|:", label, a->ncand);
+    for (int k = 0; k <= MAXN; k++) if (a->cnt[0][k]) printf(" (%d, %lld)", k, a->cnt[0][k]);
+    printf("; anti-seeds by |O|:");
+    for (int k = 0; k <= MAXN; k++) if (a->cnt[1][k]) printf(" (%d, %lld)", k, a->cnt[1][k]);
+    printf("; max slopes %lld %lld\n", a->maxM[0], a->maxM[1]);
+    if (binfile) { FILE *fh = fopen(binfile, "wb"); fwrite(a->minv[0], 1, CN, fh); fwrite(a->minv[1], 1, CN, fh); fclose(fh); }
+}
+
+// mode 0: reps of order n themselves; mode 1: min-score extensions of reps of order n - 1 with idx % K == P;
+// mode 2: as mode 1 for all reps with H(rep) <= Hcap, keeping only extensions with H <= Hcap (slopes < slopecap recorded)
+static void census(int n, const char *fn, int mode, int P, int K, i64 Hcap, i64 slopecap, const char *binfile, const char *label) {
+    int nrep; i64 *reps = readcodes(fn, &nrep);
+    int full = (1 << n) - 1; size_t sz = (size_t)1 << n;
+    Acc tot; acc_init(&tot); i64 nbase = 0, next = 0;
+    #pragma omp parallel
+    {
+        Acc a; acc_init(&a); i64 lb = 0, le = 0;
+        i64 *E = malloc(sz * n * sizeof(i64)), *Bg = malloc(sz * n * sizeof(i64)), *Hs = malloc(sz * sizeof(i64));
+        i64 *Ws = malloc(sz * sizeof(i64)), *Ms = malloc(sz * sizeof(i64));
+        int out[MAXN], base[MAXN], sc[MAXN]; i64 Q[MAXN][MAXN], U[MAXN];
+        #pragma omp for schedule(dynamic, 64)
+        for (int idx = 0; idx < nrep; idx++) {
+            if (mode == 0) {
+                decode(n, reps[idx], out);
+                tables(n, out, E, Bg, Hs, 0, full); pairmats(n, E, Bg, Hs, Q, U); subsetsums(n, Q, U, Ws, Ms);
+                acc_record(&a, n, Hs[full], Ws, Ms, slopecap); a.ncand++;
+                continue;
+            }
+            if (mode == 1 && idx % K != P) continue;
+            int m = n - 1; int top = 1 << m;
+            decode(m, reps[idx], base);
+            for (int u = 0; u < m; u++) { sc[u] = popc(base[u]); out[u] = base[u]; }
+            out[m] = 0;
+            tables(n, out, E, Bg, Hs, 0, top - 1);        // sub-tournaments without the new vertex do not depend on its arcs
+            if (mode == 2 && Hs[top - 1] > Hcap) continue;
+            lb++;
+            for (int D = 0; D < top; D++) {
+                int d = popc(D), ok = 1;
+                for (int u = 0; u < m; u++) if (d > sc[u] + (((D >> u) & 1) ? 0 : 1)) { ok = 0; break; }
+                if (!ok) continue;
+                for (int u = 0; u < m; u++) out[u] = base[u] | (((D >> u) & 1) ? 0 : top);
+                out[m] = D;
+                tables(n, out, E, Bg, Hs, top, full);
+                le++;
+                if (mode == 2 && Hs[full] > Hcap) continue;
+                pairmats(n, E, Bg, Hs, Q, U); subsetsums(n, Q, U, Ws, Ms);
+                acc_record(&a, n, Hs[full], Ws, Ms, slopecap); a.ncand++;
+            }
+        }
+        #pragma omp critical
+        { acc_merge(&tot, &a); nbase += lb; next += le; }
+        free(E); free(Bg); free(Hs); free(Ws); free(Ms);
+    }
+    if (mode) printf("%s: %lld bases extended, %lld min-score extensions enumerated\n", label, nbase, next);
+    acc_print(&tot, label, binfile);
+    free(reps);
+}
+
+static void extcount(const char *fn, int m) {
+    int nrep; i64 *reps = readcodes(fn, &nrep); i64 tot = 0;
+    #pragma omp parallel for reduction(+:tot) schedule(static)
+    for (int idx = 0; idx < nrep; idx++) {
+        int base[MAXN], sc[MAXN]; decode(m, reps[idx], base);
+        for (int u = 0; u < m; u++) sc[u] = popc(base[u]);
+        for (int D = 0; D < (1 << m); D++) { int d = popc(D), ok = 1; for (int u = 0; u < m; u++) if (d > sc[u] + (((D >> u) & 1) ? 0 : 1)) { ok = 0; break; } tot += ok; }
+    }
+    printf("min-score one-vertex extensions of the %d codes of order %d: %lld\n", nrep, m, tot);
+    free(reps);
+}
+
+// automorphism count by backtracking; mass formula sum n!/|Aut| = 2^C(n,2)
+static i64 autcount(int n, const int *out, const int *sc, int *img, int used, int k) {
+    if (k == n) return 1;
+    i64 c = 0;
+    for (int w = 0; w < n; w++) if (!((used >> w) & 1) && sc[w] == sc[k]) {
+        int ok = 1;
+        for (int j = 0; j < k; j++) if (((out[j] >> k) & 1) != ((out[img[j]] >> w) & 1)) { ok = 0; break; }
+        if (ok) { img[k] = w; c += autcount(n, out, sc, img, used | (1 << w), k + 1); }
+    }
+    return c;
+}
+static void mass(int n, const char *fn) {
+    int nrep; i64 *reps = readcodes(fn, &nrep); i64 fact = 1; for (int k = 2; k <= n; k++) fact *= k;
+    i64 tot = 0, trivial = 0, hsum = 0;
+    #pragma omp parallel for reduction(+:tot,trivial,hsum) schedule(dynamic, 256)
+    for (int idx = 0; idx < nrep; idx++) {
+        int out[MAXN], sc[MAXN], img[MAXN]; decode(n, reps[idx], out);
+        for (int u = 0; u < n; u++) sc[u] = popc(out[u]);
+        i64 a = autcount(n, out, sc, img, 0, 0);
+        tot += fact / a; if (a == 1) trivial++;
+        hsum += (fact / a) * hcount(n, out);
+    }
+    printf("order %d: %d codes; sum n!/|Aut| = %lld (2^C(n,2) = %lld); trivial group: %lld; sum of H over labelled tournaments = %lld (n! 2^(C(n,2)-n+1) = %lld)\n",
+           n, nrep, tot, (i64)1 << (n * (n - 1) / 2), trivial, hsum, fact * ((i64)1 << (n * (n - 1) / 2 - n + 1)));
+    free(reps);
+}
+
+// ---------------------------------------------------------------------------------------------------------- certificates
+static void certs(const char *fn, int sign) {
+    FILE *fh = fopen(fn, "r"); if (!fh) { fprintf(stderr, "cannot open %s\n", fn); exit(1); }
+    int cap = 70000, k = 0; i64 (*L)[6] = malloc(cap * sizeof(*L)); char line[512];
+    while (fgets(line, sizeof line, fh)) { if (line[0] == '#') continue; if (sscanf(line, "%lld %lld %lld %lld %lld %lld", &L[k][0], &L[k][1], &L[k][2], &L[k][3], &L[k][4], &L[k][5]) == 6) k++; }
+    fclose(fh);
+    i64 fail = 0, closed = 0; int maxord = 0;
+    #pragma omp parallel for reduction(+:fail,closed) reduction(max:maxord) schedule(dynamic, 64)
+    for (int i = 0; i < k; i++) {
+        i64 c = L[i][0], v = L[i][1]; int n = (int)L[i][2]; i64 code = L[i][3]; int O = (int)L[i][4]; i64 M = L[i][5];
+        int out[MAXN], tt[MAXN], res[MAXN]; decode(n, code, out);
+        int bad = 0;
+        if (!(c & 1) || M != (c << v) || O <= 0 || O >= (1 << n)) bad = 1;
+        i64 st[4]; state(n, out, O, st);
+        if (st[0] != sign || st[1] != M) bad = 1;
+        for (int t = 1; t <= 2; t++) { transitive(t, tt); int N = closing(n, out, O, t, tt, res); i64 h = hcount(N, res); if (h != sign + ((i64)1 << t) * M) bad = 1; closed++; }
+        fail += bad; if (n > maxord) maxord = n;
+    }
+    // coverage statistics
+    u8 *have = calloc(1 << 16, 1); u8 *vv = calloc(1 << 16, 1);
+    for (int i = 0; i < k; i++) if (L[i][0] < (1 << 16)) { have[L[i][0]] = 1; vv[L[i][0]] = (u8)L[i][1]; }
+    i64 first = -1; for (i64 c = 1; c < (1 << 16); c += 2) if (!have[c]) { first = c; break; }
+    int maxv = 0; i64 argc_ = 0; for (i64 c = 1; c < first; c += 2) if (vv[c] > maxv) { maxv = vv[c]; argc_ = c; }
+    // integers n (not only odd) in [1, first) that are slopes by doubling closure: n = c 2^a with a >= v(c)
+    i64 lo = first - 1; while (lo >= 1) { i64 x = lo; int a = __builtin_ctzll(x); i64 c = x >> a; if (!(have[c] && vv[c] <= a)) break; lo--; }
+    int v0 = 0; for (i64 c = 1; c <= 32767; c += 2) if (have[c] && vv[c] == 0) v0++;
+    int v0a = 0, v0b = 0; for (i64 c = 1; c <= 8191; c += 2) if (have[c] && vv[c] == 0) v0a++; for (i64 c = 1; c <= 16383; c += 2) if (have[c] && vv[c] == 0) v0b++;
+    printf("sign %+d: %d certificates; state (r, M) recomputed and 2 closings each counted directly (%lld closed tournaments, order <= %d): failing certificates %lld\n", sign, k, closed, maxord + 3, fail);
+    printf("   first odd c <= 65535 without a certificate: %lld; largest v among odd c below it: %d (at c = %lld); every integer of [%lld, %lld] is a certified slope (doubling closure); "
+           "odd c with v = 0: %d (c < 2^13), %d (c < 2^14), %d (c < 2^15)\n", first, maxv, argc_, lo + 1, first - 1, v0a, v0b, v0);
+    free(L); free(have); free(vv);
+}
+
+// ---------------------------------------------------------------------------------------------------------- one apex
+// spine z_1..z_n = vertices 0..n-1 (z_i -> z_j for i < j), apex a = vertex n, a -> z_i iff y_i = 1 (bit i-1 of the word)
+static void oneapex(int nmax) {
+    int SL = 1 << 18; u8 *slope = calloc(SL, 1);
+    for (int n = 1; n <= nmax; n++) {
+        int N = n + 1, full = (1 << N) - 1; size_t sz = (size_t)1 << N;
+        i64 bad_a = 0, bad_b = 0, bad_c = 0, bad_d = 0, seeds2 = 0, anti2 = 0, big = 0, seeds1 = 0, badtw = 0, twchecked = 0, bad_crit = 0;
+        #pragma omp parallel
+        {
+            i64 *E = malloc(sz * N * sizeof(i64)), *Bg = malloc(sz * N * sizeof(i64)), *Hs = malloc(sz * sizeof(i64));
+            i64 *Ws = malloc(sz * sizeof(i64)), *Ms = malloc(sz * sizeof(i64));
+            int out[MAXN]; i64 Q[MAXN][MAXN], U[MAXN]; int y[MAXN + 2];
+            #pragma omp for schedule(dynamic, 16) reduction(+:bad_a,bad_b,bad_c,bad_d,seeds2,anti2,big,seeds1,badtw,twchecked,bad_crit)
+            for (int w = 0; w < (1 << n); w++) {
+                for (int i = 1; i <= n; i++) y[i] = (w >> (i - 1)) & 1;
+                for (int i = 0; i < n; i++) { out[i] = ((1 << n) - 1) & ~((1 << (i + 1)) - 1); if (!y[i + 1]) out[i] |= 1 << n; }
+                out[n] = w;
+                tables(N, out, E, Bg, Hs, 0, full); pairmats(N, E, Bg, Hs, Q, U); subsetsums(N, Q, U, Ws, Ms);
+                i64 H = Hs[full];
+                // (a)
+                i64 I = 0, J = 0, val = 0;
+                for (int i = 1; i <= n; i++) { val += (i64)y[i] << (n - i); if (i < n && y[i] == 0 && y[i + 1] == 1) J++; for (int k2 = i + 1; k2 <= n; k2++) if (y[i] == 1 && y[k2] == 0) I += (i64)1 << (k2 - i - 1); }
+                if (H != (y[1] == 1) + (y[n] == 0) + J + I) bad_a++;
+                if (U[n] != 1 + val) bad_b++;
+                for (int j = 1; j <= n; j++) {
+                    i64 p = 0, qv = 0;
+                    for (int i = 1; i < j; i++) p += (i64)y[i] << (j - 1 - i);
+                    for (int k2 = j + 1; k2 <= n; k2++) qv += (i64)(1 - y[k2]) << (k2 - j - 1);
+                    i64 Wf = p + qv + ((j == n || y[j + 1] == 1) ? 1 : 0) + ((j == 1 || y[j - 1] == 0) ? 1 : 0);
+                    i64 Wd = Q[n][j - 1] + Q[j - 1][n];
+                    if (Wf != Wd) bad_c++;
+                    // (d): strong words, seeds {a, z_j}
+                    if (n >= 2 && y[1] == 1 && y[n] == 0) {
+                        int isseed = (H - Wd == 1);
+                        int zeros_tail = 1, ones_head = 1;
+                        for (int i = 2; i <= n; i++) if (y[i]) zeros_tail = 0;
+                        for (int i = 1; i < n; i++) if (!y[i]) ones_head = 0;
+                        int pred = (zeros_tail && j == 1) || (ones_head && j == n) || (n == 3 && w == 3 && j == 1) || (n == 3 && w == 1 && j == 3);
+                        if (isseed != pred) bad_d++;
+                        if (isseed) {
+                            i64 Msl = U[n] + U[j - 1];
+                            if ((zeros_tail && j == 1) || (ones_head && j == n)) { if (Msl != 3 * ((i64)1 << (n - 1))) bad_d++; }
+                            else if (w == 3) { if (Msl != 16) bad_d++; } else { if (Msl != 11) bad_d++; }
+                        }
+                    }
+                }
+                // twin criterion: y = Y 0^a Z (a >= 2), twins = two consecutive vertices of the 0-block: r = val(Y) - C
+                for (int s = 1; s < n; s++) if (y[s] == 0 && y[s + 1] == 0) {
+                    int b0 = s, b1 = s + 1; while (b0 > 1 && y[b0 - 1] == 0) b0--; while (b1 < n && y[b1 + 1] == 0) b1++;
+                    i64 vY = 0, IY = 0, IZ = 0;
+                    for (int i = 1; i < b0; i++) { vY += (i64)y[i] << (b0 - 1 - i); for (int k2 = i + 1; k2 < b0; k2++) if (y[i] == 1 && y[k2] == 0) IY += (i64)1 << (k2 - i - 1); }
+                    for (int i = b1 + 1; i <= n; i++) for (int k2 = i + 1; k2 <= n; k2++) if (y[i] == 1 && y[k2] == 0) IZ += (i64)1 << (k2 - i - 1);
+                    i64 C = (y[1] == 1) + (y[n] == 0) + J + IY + IZ;
+                    i64 rr = H - (Q[s - 1][s] + Q[s][s - 1]);
+                    if (rr != vY - C) bad_crit++;
+                    twchecked++;
+                }
+                // families of twins: y = 1^a 00 and y = 11 0^b
+                {
+                    int a = n - 2;
+                    if (a >= 2) {
+                        int fam1 = 1; for (int i = 1; i <= a; i++) if (!y[i]) fam1 = 0; if (y[n - 1] || y[n]) fam1 = 0;
+                        if (fam1) for (int j = 1; j < a; j++) {
+                            i64 rr = H - (Q[j - 1][j] + Q[j][j - 1]); i64 Msl = U[j - 1] + U[j]; i64 pred;
+                            if (j == 1) { pred = 50; for (int k2 = 0; k2 < a - 2; k2++) pred *= 3; pred -= 3; }
+                            else { pred = 100 * ((i64)1 << (j - 2)); for (int k2 = 0; k2 < a - j - 1; k2++) pred *= 3; }
+                            if (rr != 1 || Msl != pred) badtw++;
+                        }
+                        int b = n - 2; int fam2 = (y[1] == 1 && y[2] == 1); for (int i = 3; i <= n; i++) if (y[i]) fam2 = 0;
+                        if (fam2 && b >= 2) for (int j = 3; j < n; j++) {
+                            i64 rr = H - (Q[j - 1][j] + Q[j][j - 1]); i64 Msl = U[j - 1] + U[j]; i64 pred;
+                            if (j == 3) { pred = 30; for (int k2 = 0; k2 < b - 2; k2++) pred *= 3; pred -= 1; }
+                            else { pred = 60 * ((i64)1 << (j - 4)); for (int k2 = 0; k2 < b - j + 1; k2++) pred *= 3; }
+                            if (rr != 1 || Msl != pred) badtw++;
+                        }
+                    }
+                }
+                for (int O = 1; O <= full; O++) {
+                    i64 wv = Ws[O]; int s = popc(O);
+                    if (wv == H - 1) { if (s == 2) seeds2++; else if (s == 1) seeds1++; else big++; if (Ms[O] < SL) {
+                        #pragma omp atomic write
+                        slope[Ms[O]] = 1; } }
+                    else if (wv == H + 1) { if (s == 2) anti2++; else big++; }
+                }
+            }
+            free(E); free(Bg); free(Hs); free(Ws); free(Ms);
+        }
+        printf("n = %2d: formula mismatches (a) %lld (b) %lld (c) %lld (d: classification + slopes) %lld; twin criterion r = val(Y) - C: %lld checked, %lld bad; twin families bad %lld; "
+               "seeds |O|=1: %lld, |O|=2: %lld; anti-seeds |O|=2: %lld; unit sets with |O| >= 3: %lld\n", n, bad_a, bad_b, bad_c, bad_d, twchecked, bad_crit, badtw, seeds1, seeds2, anti2, big);
+        fflush(stdout);
+    }
+    // doubling closure is automatic here only up to the lengths enumerated; report raw window counts
+    printf("seed slopes of one-apex bases of length <= %d in [2^k, 2^(k+1)):", nmax);
+    for (int k = 3; k <= 16; k++) { int c = 0; for (int x = 1 << k; x < (1 << (k + 1)); x++) c += slope[x]; printf(" k=%d:%d", k, c); }
+    printf("\n");
+    for (int x = 1; x < SL / 2; x++) if (slope[x]) slope[2 * x] = 1;      // closure under doubling (sink rule)
+    printf("the same in the closure under doubling:");
+    for (int k = 3; k <= 16; k++) { int c = 0; for (int x = 1 << k; x < (1 << (k + 1)); x++) c += slope[x]; printf(" k=%d:%d", k, c); }
+    printf("\n");
+    free(slope);
+}
+
+// ---------------------------------------------------------------------------------------------------------- two apex
+// spine 0..n-1, apexes u = n, v = n + 1, u -> v; letter (a_i, b_i): u -> z_i iff a_i = 1, v -> z_i iff b_i = 1
+static void twoapex(int n, i64 wlo, i64 whi, const char *binfile) {
+    int N = n + 2, full = (1 << N) - 1; size_t sz = (size_t)1 << N;
+    i64 seeds = 0, anti = 0, bysz[MAXN + 1] = {0}, typ[3][MAXN + 1]; memset(typ, 0, sizeof typ);
+    i64 nw = (i64)1 << (2 * n); if (whi <= 0 || whi > nw) whi = nw;
+    int SL = 1 << 17; u8 *sl = calloc(2 * SL, 1);
+    #pragma omp parallel
+    {
+        i64 *E = malloc(sz * N * sizeof(i64)), *Bg = malloc(sz * N * sizeof(i64)), *Hs = malloc(sz * sizeof(i64));
+        i64 *Ws = malloc(sz * sizeof(i64)), *Ms = malloc(sz * sizeof(i64));
+        int out[MAXN]; i64 Q[MAXN][MAXN], U[MAXN];
+        #pragma omp for schedule(dynamic, 64) reduction(+:seeds,anti) reduction(+:bysz[:MAXN+1]) reduction(+:typ[:3][:MAXN+1])
+        for (i64 w = wlo; w < whi; w++) {
+            int A = (int)(w & ((1 << n) - 1)), Bm = (int)(w >> n);
+            for (int i = 0; i < n; i++) { out[i] = ((1 << n) - 1) & ~((1 << (i + 1)) - 1); if (!((A >> i) & 1)) out[i] |= 1 << n; if (!((Bm >> i) & 1)) out[i] |= 1 << (n + 1); }
+            out[n] = A | (1 << (n + 1)); out[n + 1] = Bm;
+            tables(N, out, E, Bg, Hs, 0, full); pairmats(N, E, Bg, Hs, Q, U); subsetsums(N, Q, U, Ws, Ms);
+            i64 H = Hs[full];
+            for (int O = 1; O <= full; O++) {
+                if (Ws[O] == H - 1) { seeds++; bysz[popc(O)]++; typ[popc(O >> n)][popc(O & ((1 << n) - 1))]++; if (Ms[O] < SL) sl[Ms[O]] = 1; }
+                else if (Ws[O] == H + 1) { anti++; if (Ms[O] < SL) sl[SL + Ms[O]] = 1; }
+            }
+        }
+        free(E); free(Bg); free(Hs); free(Ws); free(Ms);
+    }
+    if (binfile) { FILE *fh = fopen(binfile, "wb"); fwrite(sl, 1, 2 * SL, fh); fclose(fh); }
+    free(sl);
+    printf("two-apex words of length %d, words [%lld, %lld) of %lld: seeds %lld (by |O|:", n, wlo, whi, nw, seeds);
+    for (int s = 0; s <= N; s++) if (bysz[s]) printf(" %d:%lld", s, bysz[s]);
+    printf("), anti-seeds %lld; seeds by type (apexes in O, spine vertices in O):", anti);
+    for (int a = 0; a < 3; a++) for (int s = 0; s <= n; s++) if (typ[a][s]) printf(" (%d,%d):%lld", a, s, typ[a][s]);
+    printf("\n");
+}
+
+// ---------------------------------------------------------------------------------------------------------- example
+static void example(void) {
+    int C3[3] = {2, 4, 1};          // 0 -> 1 -> 2 -> 0
+    int X[MAXN]; decode(8, 19771611LL, X); int P = 50;
+    i64 st[4], g[9]; state(3, C3, 3, st); gconst(8, X, P, g);
+    printf("example: (C_3, two vertices) state (%lld, %lld, %lld, %lld); gadget constants H %lld Pi %lld W %lld r_X %lld kappa %lld u %lld sigma %lld u3 %lld eps %lld nu %lld\n",
+           st[0], st[1], st[2], st[3], g[0], g[1], g[2], g[0] - g[2], g[3], g[4], g[5], g[6], g[7], g[8]);
+    int res[MAXN]; int N = closing(3, C3, 3, 8, X, res);
+    i64 st2[4]; state(N, res, P << 3, st2);
+    printf("example: pair (C(C_3, O; X), P), order %d: state (%lld, %lld, %lld, %lld)\n", N, st2[0], st2[1], st2[2], st2[3]);
+    for (int t = 1; t <= 2; t++) { int tt[MAXN], res2[MAXN]; transitive(t, tt); int N2 = closing(N, res, P << 3, t, tt, res2); printf("example: closed tournament t = %d, order %d: H = %lld\n", t, N2, hcount(N2, res2)); }
+    // sign preservation on an anti-seed: transitive pair at distance 1 with one vertex after it: state (-1, 6, 1, 0)
+    int T3[3]; transitive(3, T3); state(3, T3, 3, st); N = closing(3, T3, 3, 8, X, res); state(N, res, P << 3, st2);
+    printf("example: anti-seed (TT_3, {1, 2}) state (%lld, %lld, %lld, %lld) -> (%lld, %lld, %lld, %lld)\n", st[0], st[1], st[2], st[3], st2[0], st2[1], st2[2], st2[3]);
+}
+
+// ---------------------------------------------------------------------------------------------------------- towers
+// level map of THM-5130 (1) written out from Lemma G of PROOFS.txt with (H, Pi, u, sigma, eps, nu, c) of the two transitive pairs
+static i64 TX; static unsigned char *tbit[2]; static i64 tcount, tdepth[64], tsign[2];
+static void tdfs(i64 r, i64 M, i64 h, i64 E, int depth) {
+    tcount++; tdepth[depth]++; int sg = (r == 1) ? 0 : 1; tsign[sg]++;
+    tbit[sg][M >> 3] |= (unsigned char)(1 << (M & 7));
+    static const i64 AL[2] = {3, 5}, GA[2] = {5, 13};
+    for (int d = 0; d < 2; d++) {
+        i64 al = AL[d], ga = GA[d]; int delta = d + 1;
+        i64 p3 = 1;
+        for (int m = 0;; m++, p3 *= 3) {
+            i64 p2i = 1; int any = 0;
+            for (int i = 1;; i++, p2i *= 2) {
+                __int128 Mn = (__int128)al * ((i64)1 << m) * (h + r) + (__int128)2 * ga * p2i * p3 * M - (i == 1 ? E : 0);
+                if (Mn > TX) break;
+                any = 1;
+                i64 a = i + delta + m;
+                i64 hn = r + ((i64)1 << a) * M;
+                i64 En = al * p2i * M + (m == 0 ? (r - h) : 0);
+                tdfs(-r, (i64)Mn, hn, En, depth + 1);
+            }
+            if (!any) break;
+        }
+    }
+}
+static void towers(int K) {
+    TX = (i64)1 << K; size_t nb = ((size_t)TX >> 3) + 1;
+    tbit[0] = calloc(nb, 1); tbit[1] = calloc(nb, 1);
+    for (int g = 0; ((i64)1 << g) <= TX; g++) tdfs(1, (i64)1 << g, 1, g == 0 ? 1 : 0, 0);
+    for (int d = 0; d < 2; d++) for (int m = 0; (d ? 5 : 3) * ((i64)1 << m) <= TX; m++) tdfs(-1, (d ? 5 : 3) * ((i64)1 << m), 1, m == 0 ? 1 : 0, 0);
+    printf("towers over transitive bases, slope <= 2^%d: %lld states (r = +1: %lld, r = -1: %lld); by depth:", K, tcount, tsign[0], tsign[1]);
+    for (int d = 0; d < 64; d++) if (tdepth[d]) printf(" %lld", tdepth[d]);
+    printf("\n");
+    for (int sg = 0; sg < 2; sg++) {
+        i64 distinct = 0; for (i64 x = 1; x <= TX; x++) if ((tbit[sg][x >> 3] >> (x & 7)) & 1) distinct++;
+        // odd parts reached
+        int reach129 = 0, reach4097 = 0; printf("sign %s: distinct slopes %lld; odd c <= 129 not the odd part of a tower slope:", sg ? "-" : "+", distinct);
+        for (i64 c = 1; c <= 4097; c += 2) { int ok = 0; for (i64 x = c; x <= TX; x <<= 1) if ((tbit[sg][x >> 3] >> (x & 7)) & 1) { ok = 1; break; } if (ok) { reach4097++; if (c <= 129) reach129++; } else if (c <= 129) printf(" %lld", c); }
+        for (i64 x = 1; 2 * x <= TX; x++) if ((tbit[sg][x >> 3] >> (x & 7)) & 1) tbit[sg][(2 * x) >> 3] |= (unsigned char)(1 << ((2 * x) & 7));
+        i64 vals = 0; for (i64 x = 1; x <= TX; x++) if ((tbit[sg][x >> 3] >> (x & 7)) & 1) vals++;
+        printf("; reached: %d of 65 (c <= 129), %d of 2049 (c <= 4097); distinct values 2^t M <= 2^%d (t >= 0): %lld\n", reach129, reach4097, K, vals);
+    }
+}
+
+int main(int argc, char **argv) {
+    if (argc < 2) { fprintf(stderr, "modes: selftest | neutral n file | small n file bin | part P K file bin | lowH Hcap slopecap file bin | extcount file m | mass n file | certs file sign | oneapex nmax | twoapex n | example\n"); return 1; }
+    omp_set_num_threads(4);
+    if (!strcmp(argv[1], "selftest")) return selftest();
+    if (!strcmp(argv[1], "neutral")) neutral(atoi(argv[2]), argv[3]);
+    else if (!strcmp(argv[1], "small")) { char lab[64]; sprintf(lab, "order %d (class representatives)", atoi(argv[2])); census(atoi(argv[2]), argv[3], 0, 0, 1, 0, 0, argc > 4 ? argv[4] : NULL, lab); }
+    else if (!strcmp(argv[1], "part")) { char lab[64]; sprintf(lab, "order 10, part %d of %d", atoi(argv[2]), atoi(argv[3])); census(10, argv[4], 1, atoi(argv[2]), atoi(argv[3]), 0, 0, argc > 5 ? argv[5] : NULL, lab); }
+    else if (!strcmp(argv[1], "lowH")) { char lab[96]; sprintf(lab, "order 10, H <= %s, slopes < %s", argv[2], argv[3]); census(10, argv[4], 2, 0, 1, atoll(argv[2]), atoll(argv[3]), argc > 5 ? argv[5] : NULL, lab); }
+    else if (!strcmp(argv[1], "extcount")) extcount(argv[2], atoi(argv[3]));
+    else if (!strcmp(argv[1], "mass")) mass(atoi(argv[2]), argv[3]);
+    else if (!strcmp(argv[1], "certs")) certs(argv[2], atoi(argv[3]));
+    else if (!strcmp(argv[1], "oneapex")) oneapex(atoi(argv[2]));
+    else if (!strcmp(argv[1], "twoapex")) twoapex(atoi(argv[2]), argc > 3 ? atoll(argv[3]) : 0, argc > 4 ? atoll(argv[4]) : 0, argc > 5 ? argv[5] : NULL);
+    else if (!strcmp(argv[1], "example")) example();
+    else if (!strcmp(argv[1], "towers")) towers(atoi(argv[2]));
+    return 0;
+}

@@ -1,0 +1,12 @@
+class representatives (lane enumeration): [1, 1, 2, 4, 12, 56, 456, 6880]   [4.2 s]
+   order 1: classes 1, in K_1: 0, in K_2: 0   [5.1 s]
+   order 2: classes 1, in K_1: 1, in K_2: 0   [5.1 s]
+   order 3: classes 2, in K_1: 1, in K_2: 0   [5.1 s]
+   order 4: classes 4, in K_1: 2, in K_2: 0   [5.1 s]
+   order 5: classes 12, in K_1: 5, in K_2: 0   [5.1 s]
+   order 6: classes 56, in K_1: 18, in K_2: 0   [5.1 s]
+   order 7: classes 456, in K_1: 50, in K_2: 0   [5.1 s]
+   order 8: classes 6880, in K_1: 134, in K_2: 0   [5.7 s]
+   order 9: 1761280 labelled one-vertex extensions of the order-8 classes (every class of order 9 occurs): in K_1: 3012 (labelled instances), in K_2: 0   [120.0 s]
+time 120.0 s
+exit 0

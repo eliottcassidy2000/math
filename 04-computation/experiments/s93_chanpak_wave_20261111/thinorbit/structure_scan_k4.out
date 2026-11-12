@@ -1,0 +1,60 @@
+56 block matrices from blocks2_k4.txt
+(1) parity lemma N = [[1,0,0],[*,x,y],[*,y,x]] mod 2 holds for all: True  (x, y) counts: {(0, 0): 31, (0, 1): 6, (1, 1): 13, (1, 0): 6}
+    determinants: [(-2, 2), (0, 35), (1, 8), (4, 3), (5, 1), (8, 2), (9, 2), (21, 1), (24, 2)]
+    ranks: [(1, 12), (2, 23), (3, 21)]
+    det parity = x + y for all: True
+    trace odd for all: True
+(2) rank-2 blocks: t (t^2 - a t + b); (a, b): count
+      a =    3  b =     0  x2
+      a =    5  b =    -4  x3
+      a =    5  b =     0  x2
+      a =    9  b =    -8  x4
+      a =    9  b =     0  x2
+      a =   11  b =     6  x6
+      a =   13  b =   -20  x2
+      a =   15  b =     0  x2
+    all a odd: True ; all b even: True ; min |b| over b != 0: 4 ; b = 0 cases: 8
+(3) rank-2 blocks by kernel line: kernel -> number of blocks; induced 2 x 2 matrices (distinct) and their determinants
+    kernel (0, 1, -1): 10 blocks; quotient coordinates [(1, 0, 0), (0, 1, 1)] (saturated: True); 9 distinct induced matrices
+        [1, 2, 1, 2]  det 0  x1
+        [1, 4, 1, 4]  det 0  x1
+        [1, 8, 1, 8]  det 0  x1
+        [3, 12, 3, 12]  det 0  x1
+        [1, 4, 2, 4]  det -4  x1
+        [3, 6, 3, 8]  det 6  x2
+        [1, 4, 4, 8]  det -8  x1
+        [1, 8, 2, 8]  det -8  x1
+        [1, 8, 4, 12]  det -20  x1
+    kernel (2, -1, -1): 7 blocks; quotient coordinates [(1, 2, 0), (1, 0, 2)] (saturated: False); 7 distinct induced matrices
+        [2, 1, 2, 1]  det 0  x1
+        [3, 2, 3, 2]  det 0  x1
+        [5, 4, 5, 4]  det 0  x1
+        [9, 6, 9, 6]  det 0  x1
+        [3, 2, 5, 2]  det -4  x1
+        [6, 3, 8, 5]  det 6  x1
+        [5, 4, 7, 4]  det -8  x1
+    kernel (4, -3, 1): 3 blocks; quotient coordinates [(3, 4, 0), (1, 0, -4)] (saturated: False); 3 distinct induced matrices
+        [9/2, -5/2, -5/2, 1/2]  det -4  x1
+        [9, -4, -3, 2]  det 6  x1
+        [15/2, -7/2, -11/2, 3/2]  det -8  x1
+    kernel (8, -11, 9): 1 blocks; quotient coordinates [(11, 8, 0), (9, 0, -8)] (saturated: False); 1 distinct induced matrices
+        [25/2, -21/2, -5/2, 1/2]  det -20  x1
+    kernel (4, -3, 0): 1 blocks; quotient coordinates [(3, 4, 0), (0, 0, 1)] (saturated: True); 1 distinct induced matrices
+        [7, 22, 1, 4]  det 6  x1
+    kernel (2, -3, 3): 1 blocks; quotient coordinates [(3, 2, 0), (3, 0, -2)] (saturated: False); 1 distinct induced matrices
+        [11, -6, 1, 0]  det 6  x1
+(4) unimodular blocks: 8
+      1 [1, 2, 0, 0, 0, 1, 1, 1, 0] det 1 charpoly t**3 - t**2 - t - 1 [1 0 0 0] 
+      9 [1, 2, 2, 1, 1, 0, 1, 2, 1] det 1 charpoly t**3 - 3*t**2 - t - 1 [2 0010 0 1] 
+     18 [1, 4, 4, 2, 3, 2, 2, 4, 3] det 1 charpoly (t + 1)*(t**2 - 8*t - 1) [3 000100110 0 2] eigenvalue -1: line (2, -1, 0); plane normal (1, 0, -1) (factor -1)
+     24 [1, 8, 8, 4, 9, 8, 4, 10, 9] det 1 charpoly t**3 - 19*t**2 - 45*t - 1 [4 0000100011001110 0 3] 
+     27 [3, 4, 2, 1, 2, 1, 2, 3, 2] det 1 charpoly t**3 - 7*t**2 + 5*t - 1 [3 001100010 0 2] 
+     43 [5, 6, 4, 4, 6, 3, 5, 7, 4] det 1 charpoly t**3 - 15*t**2 + 9*t - 1 [4 0001100011000110 3 2] 
+     45 [5, 8, 4, 2, 3, 2, 4, 6, 3] det 1 charpoly t**3 - 11*t**2 - 5*t - 1 [4 0001100011000110 2 1] 
+     52 [5, 10, 8, 2, 4, 3, 3, 7, 6] det 1 charpoly t**3 - 15*t**2 + 9*t - 1 [4 0001100011000110 1 0] 
+    invariant lines shared by >= 2 unimodular blocks: {}
+    invariant planes shared by >= 2 unimodular blocks: {}
+    invertible blocks: invariant lines shared by >= 2: {(2, -1, 0): [(18, -1), (50, 1)]}
+    invertible blocks: invariant planes shared by >= 2: {(1, 0, -1): [(18, -1), (50, 1)]}
+(5) seam matrices with e-column (0, c, 0): c = 0 for 16 blocks (the (h, B)-closed singular blocks); c = +-1:
+      none

@@ -1,0 +1,143 @@
+n=4: words 2^(n-1)=8, distinct values 4, unordered colliding pairs 4 (energy incl. diagonal / words = 2.0000), largest fibre 2
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -2 ; max(|s-t'| - (R'+3)) = -4 ; max |gamma|/2^w = 0.875
+   R=3 t=1: |W|=7  2^(n-2)=4  |W|>=2^(n-2): True ; words with a run >= R+1: 1 <= (n-R)2^(n-1-R)=1: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.16667 at (t',s,w,count,bound)=(2, 1, 1, 4, 24.0)
+   W-pairs: max |s-t'| = 1 (R+3 = 6), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 6 (all words: 8);  E/2^n = 0.375000 ; explicit (D) sum over 6 cells (<= n(2R+7) = 52) = 3.1520e+02 ; E <= sum: True ; sum/2^n = 19.70 ; n^(9/2) log n = 7.098e+02
+   (E): distinct values on W = 4 ; sum_p d_p = 4 ; |W|^2/(|W|+E) = 3.8 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 3.8 <= distinct: True ; distinct/2^(3n/4) = 0.500 ; max value 23 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.0000 2:0.5000 3:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 6 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.1667 ; max #(P,c) for one window pair = 2
+   time 12.0s
+n=5: words 2^(n-1)=16, distinct values 9, unordered colliding pairs 10 (energy incl. diagonal / words = 2.2500), largest fibre 4
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -1 ; max(|s-t'| - (R'+3)) = -4 ; max |gamma|/2^w = 1.000
+   R=4 t=2: |W|=15  2^(n-2)=8  |W|>=2^(n-2): True ; words with a run >= R+1: 1 <= (n-R)2^(n-1-R)=1: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.08333 at (t',s,w,count,bound)=(2, 1, 2, 4, 48.0)
+   W-pairs: max |s-t'| = 2 (R+3 = 7), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 6 (all words: 8);  E/2^n = 0.187500 ; explicit (D) sum over 6 cells (<= n(2R+7) = 75) = 4.4640e+02 ; E <= sum: True ; sum/2^n = 13.95 ; n^(9/2) log n = 2.249e+03
+   (E): distinct values on W = 9 ; sum_p d_p = 12 ; |W|^2/(|W|+E) = 10.7 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 5.4 <= distinct: True ; distinct/2^(3n/4) = 0.669 ; max value 51 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.2500 2:0.5000 3:0.1250 4:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 18 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.2321 ; max #(P,c) for one window pair = 2
+   time 0.0s
+n=6: words 2^(n-1)=32, distinct values 14, unordered colliding pairs 24 (energy incl. diagonal / words = 2.5000), largest fibre 4
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -2 ; max(|s-t'| - (R'+3)) = -4 ; max |gamma|/2^w = 1.000
+   R=4 t=2: |W|=29  2^(n-2)=16  |W|>=2^(n-2): True ; words with a run >= R+1: 3 <= (n-R)2^(n-1-R)=4: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.30000 at (t',s,w,count,bound)=(3, 2, 1, 12, 40.0)
+   W-pairs: max |s-t'| = 2 (R+3 = 7), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 22 (all words: 24);  E/2^n = 0.343750 ; explicit (D) sum over 10 cells (<= n(2R+7) = 90) = 1.5538e+03 ; E <= sum: True ; sum/2^n = 24.28 ; n^(9/2) log n = 5.688e+03
+   (E): distinct values on W = 13 ; sum_p d_p = 19 ; |W|^2/(|W|+E) = 16.5 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 8.2 <= distinct: True ; distinct/2^(3n/4) = 0.575 ; max value 107 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.5000 2:0.7500 3:0.3750 4:0.0000 5:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 34 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.3000 ; max #(P,c) for one window pair = 6
+   time 0.0s
+n=7: words 2^(n-1)=64, distinct values 31, unordered colliding pairs 42 (energy incl. diagonal / words = 2.3125), largest fibre 4
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -1 ; max(|s-t'| - (R'+3)) = -3 ; max |gamma|/2^w = 1.000
+   R=4 t=2: |W|=56  2^(n-2)=32  |W|>=2^(n-2): True ; words with a run >= R+1: 8 <= (n-R)2^(n-1-R)=12: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.10000 at (t',s,w,count,bound)=(3, 2, 2, 8, 80.0)
+   W-pairs: max |s-t'| = 2 (R+3 = 7), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 28 (all words: 38);  E/2^n = 0.218750 ; explicit (D) sum over 15 cells (<= n(2R+7) = 105) = 5.2991e+03 ; E <= sum: True ; sum/2^n = 41.40 ; n^(9/2) log n = 1.236e+04
+   (E): distinct values on W = 29 ; sum_p d_p = 42 ; |W|^2/(|W|+E) = 37.3 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 18.7 <= distinct: True ; distinct/2^(3n/4) = 0.762 ; max value 227 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.3125 2:0.5938 3:0.1875 4:0.0312 5:0.0000 6:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 70 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.2458 ; max #(P,c) for one window pair = 4
+   time 0.0s
+n=8: words 2^(n-1)=128, distinct values 57, unordered colliding pairs 92 (energy incl. diagonal / words = 2.4375), largest fibre 4
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -1 ; max(|s-t'| - (R'+3)) = -4 ; max |gamma|/2^w = 1.000
+   R=4 t=2: |W|=108  2^(n-2)=64  |W|>=2^(n-2): True ; words with a run >= R+1: 20 <= (n-R)2^(n-1-R)=32: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.38889 at (t',s,w,count,bound)=(4, 3, 1, 28, 72.0)
+   W-pairs: max |s-t'| = 2 (R+3 = 7), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 80 (all words: 100);  E/2^n = 0.312500 ; explicit (D) sum over 21 cells (<= n(2R+7) = 120) = 1.7377e+04 ; E <= sum: True ; sum/2^n = 67.88 ; n^(9/2) log n = 2.409e+04
+   (E): distinct values on W = 51 ; sum_p d_p = 76 ; |W|^2/(|W|+E) = 62.0 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 31.0 <= distinct: True ; distinct/2^(3n/4) = 0.797 ; max value 467 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.4375 2:0.7812 3:0.3750 4:0.2188 5:0.0000 6:0.0000 7:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 126 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.3889 ; max #(P,c) for one window pair = 14
+   time 0.0s
+n=9: words 2^(n-1)=256, distinct values 116, unordered colliding pairs 198 (energy incl. diagonal / words = 2.5469), largest fibre 5
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -1 ; max(|s-t'| - (R'+3)) = -3 ; max |gamma|/2^w = 1.000
+   R=5 t=3: |W|=236  2^(n-2)=128  |W|>=2^(n-2): True ; words with a run >= R+1: 20 <= (n-R)2^(n-1-R)=32: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.11111 at (t',s,w,count,bound)=(4, 3, 2, 16, 144.0)
+   W-pairs: max |s-t'| = 3 (R+3 = 8), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 72 (all words: 82);  E/2^n = 0.140625 ; explicit (D) sum over 21 cells (<= n(2R+7) = 153) = 2.5804e+04 ; E <= sum: True ; sum/2^n = 50.40 ; n^(9/2) log n = 4.325e+04
+   (E): distinct values on W = 109 ; sum_p d_p = 202 ; |W|^2/(|W|+E) = 180.8 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 45.2 <= distinct: True ; distinct/2^(3n/4) = 1.013 ; max value 963 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.5469 2:0.7969 3:0.3203 4:0.0781 5:0.0078 6:0.0000 7:0.0000 8:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 326 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.2490 ; max #(P,c) for one window pair = 8
+   time 0.0s
+n=10: words 2^(n-1)=512, distinct values 211, unordered colliding pairs 456 (energy incl. diagonal / words = 2.7812), largest fibre 8
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -1 ; max(|s-t'| - (R'+3)) = -3 ; max |gamma|/2^w = 1.000
+   R=5 t=3: |W|=464  2^(n-2)=256  |W|>=2^(n-2): True ; words with a run >= R+1: 48 <= (n-R)2^(n-1-R)=80: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.44118 at (t',s,w,count,bound)=(5, 4, 1, 60, 136.0)
+   W-pairs: max |s-t'| = 3 (R+3 = 8), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 208 (all words: 240);  E/2^n = 0.203125 ; explicit (D) sum over 27 cells (<= n(2R+7) = 170) = 7.9342e+04 ; E <= sum: True ; sum/2^n = 77.48 ; n^(9/2) log n = 7.281e+04
+   (E): distinct values on W = 198 ; sum_p d_p = 377 ; |W|^2/(|W|+E) = 320.4 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 80.1 <= distinct: True ; distinct/2^(3n/4) = 1.094 ; max value 1955 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.7812 2:0.9766 3:0.4688 4:0.1875 5:0.1172 6:0.0000 7:0.0000 8:0.0000 9:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 698 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.4412 ; max #(P,c) for one window pair = 30
+   time 0.0s
+n=11: words 2^(n-1)=1024, distinct values 435, unordered colliding pairs 872 (energy incl. diagonal / words = 2.7031), largest fibre 6
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -1 ; max(|s-t'| - (R'+3)) = -3 ; max |gamma|/2^w = 1.000
+   R=5 t=3: |W|=912  2^(n-2)=512  |W|>=2^(n-2): True ; words with a run >= R+1: 112 <= (n-R)2^(n-1-R)=192: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.11765 at (t',s,w,count,bound)=(5, 4, 2, 32, 272.0)
+   W-pairs: max |s-t'| = 4 (R+3 = 8), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 362 (all words: 432);  E/2^n = 0.176758 ; explicit (D) sum over 34 cells (<= n(2R+7) = 187) = 2.4905e+05 ; E <= sum: True ; sum/2^n = 121.61 ; n^(9/2) log n = 1.164e+05
+   (E): distinct values on W = 404 ; sum_p d_p = 749 ; |W|^2/(|W|+E) = 652.9 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 163.2 <= distinct: True ; distinct/2^(3n/4) = 1.327 ; max value 3971 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.7031 2:0.9160 3:0.4219 4:0.1602 5:0.0352 6:0.0020 7:0.0000 8:0.0000 9:0.0000 10:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 1418 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.4216 ; max #(P,c) for one window pair = 16
+   time 0.0s
+n=12: words 2^(n-1)=2048, distinct values 846, unordered colliding pairs 1820 (energy incl. diagonal / words = 2.7773), largest fibre 8
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -1 ; max(|s-t'| - (R'+3)) = -2 ; max |gamma|/2^w = 1.000
+   R=5 t=3: |W|=1793  2^(n-2)=1024  |W|>=2^(n-2): True ; words with a run >= R+1: 255 <= (n-R)2^(n-1-R)=448: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.46970 at (t',s,w,count,bound)=(6, 5, 1, 124, 264.0)
+   W-pairs: max |s-t'| = 4 (R+3 = 8), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 858 (all words: 1012);  E/2^n = 0.209473 ; explicit (D) sum over 41 cells (<= n(2R+7) = 204) = 8.0823e+05 ; E <= sum: True ; sum/2^n = 197.32 ; n^(9/2) log n = 1.785e+05
+   (E): distinct values on W = 764 ; sum_p d_p = 1427 ; |W|^2/(|W|+E) = 1212.7 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 303.2 <= distinct: True ; distinct/2^(3n/4) = 1.492 ; max value 8003 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.7773 2:0.9668 3:0.4941 4:0.2402 5:0.1025 6:0.0605 7:0.0000 8:0.0000 9:0.0000 10:0.0000 11:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 2826 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.4697 ; max #(P,c) for one window pair = 62
+   time 0.0s
+n=13: words 2^(n-1)=4096, distinct values 1704, unordered colliding pairs 3660 (energy incl. diagonal / words = 2.7871), largest fibre 8
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -1 ; max(|s-t'| - (R'+3)) = -2 ; max |gamma|/2^w = 1.000
+   R=5 t=4: |W|=3525  2^(n-2)=2048  |W|>=2^(n-2): True ; words with a run >= R+1: 571 <= (n-R)2^(n-1-R)=1024: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.12121 at (t',s,w,count,bound)=(6, 5, 2, 64, 528.0)
+   W-pairs: max |s-t'| = 5 (R+3 = 8), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 736 (all words: 924);  E/2^n = 0.089844 ; explicit (D) sum over 39 cells (<= n(2R+7) = 221) = 1.0817e+06 ; E <= sum: True ; sum/2^n = 132.05 ; n^(9/2) log n = 2.641e+05
+   (E): distinct values on W = 1518 ; sum_p d_p = 3173 ; |W|^2/(|W|+E) = 2916.1 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 364.5 <= distinct: True ; distinct/2^(3n/4) = 1.763 ; max value 16131 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.7871 2:0.9766 3:0.4902 4:0.2256 5:0.0825 6:0.0166 7:0.0005 8:0.0000 9:0.0000 10:0.0000 11:0.0000 12:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 5922 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.4588 ; max #(P,c) for one window pair = 32
+   time 0.0s
+n=14: words 2^(n-1)=8192, distinct values 3316, unordered colliding pairs 7736 (energy incl. diagonal / words = 2.8887), largest fibre 10
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -1 ; max(|s-t'| - (R'+3)) = -2 ; max |gamma|/2^w = 1.000
+   R=5 t=4: |W|=6930  2^(n-2)=4096  |W|>=2^(n-2): True ; words with a run >= R+1: 1262 <= (n-R)2^(n-1-R)=2304: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.48462 at (t',s,w,count,bound)=(7, 6, 1, 252, 520.0)
+   W-pairs: max |s-t'| = 5 (R+3 = 8), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 1766 (all words: 2170);  E/2^n = 0.107788 ; explicit (D) sum over 46 cells (<= n(2R+7) = 238) = 3.3827e+06 ; E <= sum: True ; sum/2^n = 206.47 ; n^(9/2) log n = 3.793e+05
+   (E): distinct values on W = 2926 ; sum_p d_p = 6146 ; |W|^2/(|W|+E) = 5522.6 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 690.3 <= distinct: True ; distinct/2^(3n/4) = 2.021 ; max value 32387 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.8887 2:1.0547 3:0.5479 4:0.2649 5:0.1196 6:0.0503 7:0.0308 8:0.0000 9:0.0000 10:0.0000 11:0.0000 12:0.0000 13:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 12410 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.4846 ; max #(P,c) for one window pair = 126
+   time 0.0s
+n=15: words 2^(n-1)=16384, distinct values 6667, unordered colliding pairs 15564 (energy incl. diagonal / words = 2.8999), largest fibre 11
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -1 ; max(|s-t'| - (R'+3)) = -2 ; max |gamma|/2^w = 1.000
+   R=5 t=4: |W|=13624  2^(n-2)=8192  |W|>=2^(n-2): True ; words with a run >= R+1: 2760 <= (n-R)2^(n-1-R)=5120: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.12308 at (t',s,w,count,bound)=(7, 6, 2, 128, 1040.0)
+   W-pairs: max |s-t'| = 5 (R+3 = 8), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 3290 (all words: 4296);  E/2^n = 0.100403 ; explicit (D) sum over 54 cells (<= n(2R+7) = 255) = 1.1292e+07 ; E <= sum: True ; sum/2^n = 344.61 ; n^(9/2) log n = 5.310e+05
+   (E): distinct values on W = 5789 ; sum_p d_p = 12069 ; |W|^2/(|W|+E) = 10973.9 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 1371.7 <= distinct: True ; distinct/2^(3n/4) = 2.377 ; max value 65027 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.8999 2:1.0530 3:0.5394 4:0.2622 5:0.1160 6:0.0402 7:0.0081 8:0.0001 9:0.0000 10:0.0000 11:0.0000 12:0.0000 13:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 25462 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.4816 ; max #(P,c) for one window pair = 64
+   time 0.1s
+n=16: words 2^(n-1)=32768, distinct values 13228, unordered colliding pairs 31108 (energy incl. diagonal / words = 2.8987), largest fibre 10
+   violations: [t'<1 or w<1]=0 [X or Xi even]=0 [collision equation]=0 [|gamma|>2^w]=0 [|s-t'|>rho+2]=0 [|s-t'|>R'+3]=0 [min(|X|,|Xi|)<2^(w-1-R')]=0
+   max(|s-t'| - (rho+2)) = -1 ; max(|s-t'| - (R'+3)) = -2 ; max |gamma|/2^w = 1.000
+   R=5 t=4: |W|=26784  2^(n-2)=16384  |W|>=2^(n-2): True ; words with a run >= R+1: 5984 <= (n-R)2^(n-1-R)=11264: True
+   (D) per-cell: ordered pairs(t',s) <= 4*#odd(w) + 4*2^max(t'-1,s) S_w for all cells with w<=20: violations 0; max ratio 0.49225 at (t',s,w,count,bound)=(8, 7, 1, 508, 1032.0)
+   W-pairs: max |s-t'| = 6 (R+3 = 8), cells off balance: 0
+   (D): E = ordered pairs in W with common prefix >= t: 6772 (all words: 9116);  E/2^n = 0.103333 ; explicit (D) sum over 62 cells (<= n(2R+7) = 272) = 3.9100e+07 ; E <= sum: True ; sum/2^n = 596.62 ; n^(9/2) log n = 7.268e+05
+   (E): distinct values on W = 11353 ; sum_p d_p = 23697 ; |W|^2/(|W|+E) = 21378.7 <= sum_p d_p: True ; lower bound |W|^2/(2^(t-1)(|W|+E)) = 2672.3 <= distinct: True ; distinct/2^(3n/4) = 2.772 ; max value 130307 <= 2^(n+1)-1: True
+   ordered colliding pairs per word with common prefix >= t': 1:1.8987 2:1.0566 3:0.5491 4:0.2782 5:0.1337 6:0.0598 7:0.0251 8:0.0155 9:0.0000 10:0.0000 11:0.0000 12:0.0000 13:0.0000
+   lattice line (C): distinct ordered (t',s,x,x') = 50386 ; violations of #(P,c) <= 4(1 + 2^max(t'-1,s)/M): 0 ; max ratio 0.4922 ; max #(P,c) for one window pair = 254
+   time 0.1s

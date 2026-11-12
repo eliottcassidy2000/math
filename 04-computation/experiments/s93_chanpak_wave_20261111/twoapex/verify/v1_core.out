@@ -1,0 +1,41 @@
+[ok] A1 transfer = literal Held-Karp count, all words n <= 7 (21845 words, 0 mismatches)
+[ok] A2 transfer = literal count, 200 random words n = 8..12 
+[ok] B  H(0w)=H(w), H(w3)=H(w), converse, H odd, H <= 2 3^n; all words n <= 9 (0,0,0,0,0)
+    max H by length 1..9: {1: 3, 2: 5, 3: 15, 4: 45, 5: 151, 6: 509, 7: 1743, 8: 6069, 9: 20479}
+[ok] C1 Hankel blocks |p|,|s| <= 1, 2, 3 have exact ranks 4, 11, 17 (4, 11, 17)
+[ok] C2 rank of the pairing reachable x observable (= dimension of the minimal representation) is 17 (reachable dim 20, observable dim 20, pairing rank 17)
+    minrep17.json keys: ['A', 'common_diagonal_multiset', 'convention', 'dimension', 'readout', 'suffix_basis', 'x0']
+[ok] D0 suffix basis as claimed 
+[ok] D1 x(empty) = (H(s_j))_j = (1,1,1,3,1,1,3,3,1,5,5,5,1,3,1,5,9) 
+[ok] D2 x(w l) = x(w) A_l on a basis of the reachable space (hence for every word w) (20 basis vectors x 4 letters, 0 failures)
+[ok] D3 integer matrices, entries in [-41, 32] (min -41, max 32)
+[ok] D4 (1,...,1) A_l = (1,...,1) for the four letters; x(empty) A_0 = x(empty) 
+[ok] D5 the 17 suffix functions are linearly independent (rank on prefixes of length <= 3) 
+[ok] D6 char poly of each A_l is x^4 (x-3)(x-2)^4 (x-1)^8; of the sum x^4 (x-12)(x-8)^4 (x-4)^8 
+[ok] D7 common invariant flag with a common diagonal exists; multiset {3:1, 2:4, 1:8, 0:4} (diagonal found [1, 0, 0, 1, 1, 2, 1, 1, 0, 2, 1, 1, 0, 3, 2, 2, 1])
+[ok] D8 char poly of 12 random words of length L = 2..6 is x^4 (x-3^L)(x-2^L)^4 (x-1)^8 
+[ok] D9 first coordinate of x(empty) A_w = H(w), 300 random words of length < 60 
+[ok] E1 sum_{|w|=n} H(w) = 4^n (3^n + 3 2^n + 3)/8 for n = 1..60 (exact, own transfer) 
+    E2 E[H^2]/9^n (float): n=5: 0.0476807397; n=9: 0.0337882498; n=13: 0.0326848302; n=20: 0.0328070769; n=30: 0.0328499413; n=40: 0.0328515197; n=60: 0.0328515625 | (29/160)^2 = 0.0328515625
+[ok] E2 E[H^2]/9^n at n = 13, 60 matches 0.0326848302, 0.0328515625 to 1e-9 
+[ok] F  H(3^p 0^p): union-bound inequality holds; constants n=20: 3.885513092 n=30: 3.985095953 n=40: 3.998043360 n=60: 3.999966100 n=80: 3.999999412 n=120: 4.000000000
+[ok] F2 H(3^p 0^q) = inclusion-exclusion count by colour supports on the two blocks, all p, q <= 8 
+[ok] G3 orbit modulo 3: 236196 states (claimed 236196), strongly connected True, self-loop True, O + 1(1,..,1) = O True, classes of H [0, 1, 2] 
+    by-index class factors modulo 3 at n = 12: 1.010173 0.997340 0.992487
+    by-index class factors modulo 3 at n = 13: 1.006830 1.000903 0.992267
+    by-index class factors modulo 3 at n = 14: 1.006224 1.002012 0.991763
+    by-index class factors modulo 3 at n = 15: 1.005246 1.003000 0.991754
+    by-index class factors modulo 3 at n = 16: 1.004790 1.002540 0.992670
+    by-index class factors modulo 3 at n = 17: 1.003721 1.002709 0.993570
+    by-index class factors modulo 3 at n = 20: 1.001400 1.000933 0.997667
+    by-index class factors modulo 3 at n = 32: 0.999972 0.999993 1.000035
+    by-index class factors modulo 3 at n = 64: 1.000000 1.000000 1.000000
+[ok] G3b class factors at n = 16, 17 equal the lane's (1.004790, 1.002540, 0.992670), (1.003721, 1.002709, 0.993570) 
+    twisted rate modulo 3 (power iteration, mean of the last 200 log-ratios): 1.000000  (lane: 0.770633)
+[FAIL] G3c twisted rate modulo 3 within 2e-3 of 0.770633 
+[ok] G4 orbit modulo 4: 512 states (claimed 512), strongly connected True, self-loop True, O + 2(1,..,1) = O True, classes of H [1, 3] 
+[ok] G8 orbit modulo 8: 262144 states (claimed 262144), strongly connected True, self-loop True, O + 2(1,..,1) = O True, classes of H [1, 3, 5, 7] 
+[ok] H  F1 three-term identity, all p, q <= 6 (one-apex counts by literal enumeration) (16129 instances; two-term formula fails on 4096)
+[ok] I  second differences d_i d_j H(., b): independent of the other a-bits, largest value -2 for n = 2..8 {2: -2, 3: -2, 4: -2, 5: -2, 6: -2, 7: -2, 8: -2}
+total time 108.8 s
+SOME VERIFIER CHECK FAILED

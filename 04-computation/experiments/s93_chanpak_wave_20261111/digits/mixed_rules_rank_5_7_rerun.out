@@ -1,0 +1,5 @@
+words: all 255 words of length <= 7 in two rules; bases: all marked tournaments of order <= n
+D, U with moving mark: (n, bases, Hankel rank) = [(1, 1, 1), (2, 3, 3), (3, 9, 6), (4, 25, 9), (5, 85, 12)]   [3.5 s]
+D, U with fixed mark: (n, bases, Hankel rank) = [(1, 1, 1), (2, 3, 3), (3, 9, 6), (4, 25, 7), (5, 85, 7)]   [7.4 s]
+below only: D fixed (ray step a), D moving (tower step b): (n, bases, Hankel rank) = [(1, 1, 1), (2, 3, 2), (3, 9, 4), (4, 25, 4), (5, 85, 4)]   [8.8 s]
+exit 0

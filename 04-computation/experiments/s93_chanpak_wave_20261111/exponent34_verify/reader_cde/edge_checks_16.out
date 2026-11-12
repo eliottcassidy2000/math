@@ -1,0 +1,16 @@
+(1) three-block formula with explicit K(P,Z): cases 121086, violations 0
+(2,3) n =  2: ordered colliding pairs 2; violations {}; t'-s-(dXi-dX) in [1, 1]; lattice-line violations 0
+(2,3) n =  3: ordered colliding pairs 6; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0
+(2,3) n =  4: ordered colliding pairs 8; violations {}; t'-s-(dXi-dX) in [1, 1]; lattice-line violations 0
+(2,3) n =  5: ordered colliding pairs 20; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0
+(2,3) n =  6: ordered colliding pairs 48; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0
+(2,3) n =  7: ordered colliding pairs 84; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0
+(2,3) n =  8: ordered colliding pairs 184; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0
+(2,3) n =  9: ordered colliding pairs 396; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0
+(2,3) n = 10: ordered colliding pairs 912; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0
+(2,3) n = 11: ordered colliding pairs 1744; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0
+(2,3) n = 12: ordered colliding pairs 3640; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0
+(2,3) n = 13: ordered colliding pairs 7320; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0
+(2,3) n = 14: ordered colliding pairs 15472; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0
+(2,3) n = 15: ordered colliding pairs 31128; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0
+(2,3) n = 16: ordered colliding pairs 62216; violations {}; t'-s-(dXi-dX) in [0, 2]; lattice-line violations 0

@@ -1,0 +1,14 @@
+OUTCOME of PREREG_census_L17.txt (lane twoapex).  Run: b1_census.py 17 17 26 (log b1_census_17.log, 466 s),
+b2_windows.py (b2_windows_L17.out).  The pre-registration file was written before the run and not edited.
+
+Q1  CONFIRMED.  The words of length <= 17 attain every odd N < 2^26 = 67,108,864 other than 7 and 21 (no miss
+    below the bound of the run; the predicted interval for N_17 was [61,987,278, 69,735,688], so N_17 >= 2^26 is
+    inside it and its exact value is not determined by this run).
+Q2  CONFIRMED.  Window [2^23, 2^24), words of length <= 17: minimum multiplicity 550 (predicted 300..750), median
+    1042 (predicted 800..1300), mean 1072.5.
+Q3  CONFIRMED.  Maximum over the words of length 17: 226,501,279 at 3^8 2 0^8, ratio 0.87696 to 2 * 3^17
+    (predicted [0.870, 0.885]).
+Q4  CONFIRMED.  13,950,915 odd N < 2^26 have minimal length exactly 17 (every miss of the L = 16 census other than
+    7 and 21).
+No prediction failed.  FINITE-EXACT (exhaustive over all 4^17 = 17,179,869,184 words of length 17; 301,885,533 of
+them have H >= 2^26 and are not in the value histogram, they are counted in the residue histogram).

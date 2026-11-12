@@ -1,0 +1,24 @@
+PRE-REGISTRATION (lane twoapex, S93 Chan-Pak wave) - written BEFORE the census runs of lengths 15 and 16.
+Data in hand when this was written: the exhaustive census of all words of length <= 14 (b1_census.py, lengths 1..14;
+b2_windows_L14.out).  Not yet computed by this lane: any word of length 15 or 16.
+(Known from the repository and NOT predictions: HYP-9660 (D) has the residue-class factors of all 4^n words for
+n <= 16; Session 191 has the two-apex census to 230,519.  Nothing below is taken from them.)
+
+Notation: c_n(N) = number of words of length exactly n with H = N; cum_L(N) = sum over n <= L of c_n(N);
+N_L = the smallest odd N > 21 with cum_L(N) = 0.  Observed: N_14 = 2,327,675 and the smallest values of minimal
+length n are 2593, 7455, 24107, 77533, 230521, 776161 for n = 9..14, between 0.11 and 0.17 times 3^n.
+
+P1 (the deciding statement).  cum_16(N) > 0 for every odd N in [23, 2^23).  ("No odd N in [23, 2^23) is missed by
+    the words of length <= 16.")
+P1'. Position of the first misses: 0.12 * 3^16 <= N_15 <= 0.18 * 3^16 (5,165,607 <= N_15 <= 7,748,410) and
+    0.12 * 3^17 <= N_16 <= 0.18 * 3^17 (15,496,820 <= N_16 <= 23,245,229).  In particular N_15 < 2^23 < N_16.
+P2. Multiplicities of the window [2^22, 2^23) for the words of length <= 16: minimum between 80 and 450, median
+    between 400 and 900.
+P3. The maximum of H over the words of length n is attained at 3^7 2 0^7 for n = 15 and at 3^8 0^8 for n = 16, and
+    max / (2 * 3^n) lies in [0.81, 0.84] for n = 15 and in [0.84, 0.88] for n = 16.  (Theory behind it, derived
+    before the run: H(w) <= 2 * 3^n and max = 2 * 3^n (1 - O((2/3)^(n/2))).)
+P4. Number of distinct odd values of the words of length exactly n: 6.28e6 (+- 3 %) for n = 15 and 1.98e7 (+- 3 %)
+    for n = 16 (values below 2^26; a few words of length 16 exceed 2^26 and are not counted).
+P5. For every n in {15, 16} the smallest value of minimal length n lies between 0.11 * 3^n and 0.17 * 3^n.
+
+Outcome: to be appended to census_L16_outcome.txt after the runs (this file is not edited afterwards).

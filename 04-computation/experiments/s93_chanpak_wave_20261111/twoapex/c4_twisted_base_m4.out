@@ -1,0 +1,5 @@
+m = 4: base orbit 256 states, depth 7, closed, 0.0 s
+k, n: |c_n(k)| (twisted sum over all 4^n words, normalised) and the l2 norm of the twisted measure
+k = 1 (gcd 1): |c_n| at n = [8, 12, 16, 17, 20, 24, 32, 48, 64, 96, 128, 160, 200]: 5.664e-02 9.125e-03 3.087e-03 1.550e-03 1.432e-03 3.099e-04 2.874e-05 2.157e-07 1.398e-09 5.408e-14 2.707e-18 1.385e-22 5.344e-28
+   fitted on n >= 100: rate of |c_n| = 0.73295, rate of the l2 norm = 0.73265 -> rho(T_k) = 2.9318 (from c_n), 2.9306 (from the norm)
+summary for modulus 4 : {1: (0.73295, 0.73265)}

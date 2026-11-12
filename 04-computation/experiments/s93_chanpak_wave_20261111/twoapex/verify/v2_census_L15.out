@@ -1,0 +1,66 @@
+threads 4, bound 2^26
+n =  1: primitive words 2, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 2 (+0 above, complete); cumulative distinct: 2; misses <= 21: [5, 7, 9, 11, 13, 15, 17, 19, 21]; N_1 = 23
+        E_n = 10; E_n (3/16)^n = 1.87500; max_N c_n(N) = 3 at N = 1; max/(4/3)^n = 2.25; class factors mod 3: 0.750000 2.250000 0.000000; odd classes mod 8: 3.000000 1.000000 0.000000 0.000000; 4.5 s
+n =  2: primitive words 9, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 3 (+0 above, complete); cumulative distinct: 3; misses <= 21: [7, 9, 11, 13, 15, 17, 19, 21]; N_2 = 23
+        E_n = 88; E_n (3/16)^n = 3.09375; max_N c_n(N) = 6 at N = 1; max/(4/3)^n = 3.38; class factors mod 3: 0.750000 1.125000 1.125000; odd classes mod 8: 1.500000 1.000000 1.500000 0.000000; 12.0 s
+n =  3: primitive words 36, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 7 (+0 above, complete); cumulative distinct: 7; misses <= 21: [7, 17, 19, 21]; N_3 = 23
+        E_n = 714; E_n (3/16)^n = 4.70654; max_N c_n(N) = 16 at N = 5; max/(4/3)^n = 6.75; class factors mod 3: 1.218750 0.750000 1.031250; odd classes mod 8: 1.500000 0.937500 1.375000 0.187500; 2.9 s
+n =  4: primitive words 144, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 19 (+0 above, complete); cumulative distinct: 19; misses <= 21: [7, 21]; N_4 = 35
+        E_n = 4894; E_n (3/16)^n = 6.04880; max_N c_n(N) = 35 at N = 9; max/(4/3)^n = 11.07; class factors mod 3: 1.031250 0.808594 1.160156; odd classes mod 8: 1.375000 0.750000 1.125000 0.750000; 2.7 s
+n =  5: primitive words 576, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 59 (+0 above, complete); cumulative distinct: 59; misses <= 21: [7, 21]; N_5 = 61
+        E_n = 29436; E_n (3/16)^n = 6.82158; max_N c_n(N) = 63 at N = 9; max/(4/3)^n = 14.95; class factors mod 3: 0.996094 0.852539 1.151367; odd classes mod 8: 1.343750 0.921875 0.968750 0.765625; 3.4 s
+n =  6: primitive words 2304, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 202 (+0 above, complete); cumulative distinct: 202; misses <= 21: [7, 21]; N_6 = 297
+        E_n = 166044; E_n (3/16)^n = 7.21491; max_N c_n(N) = 98 at N = 9; max/(4/3)^n = 17.44; class factors mod 3: 1.018066 0.889893 1.092041; odd classes mod 8: 1.175781 0.992188 0.996094 0.835938; 2.8 s
+n =  7: primitive words 9216, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 617 (+0 above, complete); cumulative distinct: 617; misses <= 21: [7, 21]; N_7 = 727
+        E_n = 905870; E_n (3/16)^n = 7.38031; max_N c_n(N) = 160 at N = 73; max/(4/3)^n = 21.36; class factors mod 3: 1.048828 0.885498 1.065674; odd classes mod 8: 1.079102 1.000977 1.022461 0.897461; 3.9 s
+n =  8: primitive words 36864, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 1967 (+0 above, complete); cumulative distinct: 1967; misses <= 21: [7, 21]; N_8 = 2593
+        E_n = 4915150; E_n (3/16)^n = 7.50839; max_N c_n(N) = 243 at N = 73; max/(4/3)^n = 24.33; class factors mod 3: 1.045120 0.930817 1.024063; odd classes mod 8: 1.064453 0.955811 1.048828 0.930908; 3.8 s
+n =  9: primitive words 147456, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 6245 (+0 above, complete); cumulative distinct: 6245; misses <= 21: [7, 21]; N_9 = 7455
+        E_n = 26808748; E_n (3/16)^n = 7.67870; max_N c_n(N) = 346 at N = 129; max/(4/3)^n = 25.98; class factors mod 3: 1.040337 0.952229 1.007435; odd classes mod 8: 1.024414 0.980469 1.016602 0.978516; 3.6 s
+n = 10: primitive words 589824, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 19876 (+0 above, complete); cumulative distinct: 19876; misses <= 21: [7, 21]; N_10 = 24107
+        E_n = 146139968; E_n (3/16)^n = 7.84841; max_N c_n(N) = 466 at N = 45; max/(4/3)^n = 26.24; class factors mod 3: 1.025270 0.978404 0.996325; odd classes mod 8: 0.995300 1.011383 0.989563 1.003754; 2.5 s
+n = 11: primitive words 2359296, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 63113 (+0 above, complete); cumulative distinct: 63113; misses <= 21: [7, 21]; N_11 = 77533
+        E_n = 795048592; E_n (3/16)^n = 8.00585; max_N c_n(N) = 668 at N = 495; max/(4/3)^n = 28.21; class factors mod 3: 1.015285 0.990087 0.994627; odd classes mod 8: 1.006866 0.996445 1.004852 0.991837; 2.4 s
+n = 12: primitive words 9437184, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 200235 (+0 above, complete); cumulative distinct: 200235; misses <= 21: [7, 21]; N_12 = 230521
+        E_n = 4312042656; E_n (3/16)^n = 8.14139; max_N c_n(N) = 930 at N = 495; max/(4/3)^n = 29.46; class factors mod 3: 1.010173 0.997340 0.992487; odd classes mod 8: 1.009449 0.991112 1.008801 0.990639; 2.6 s
+n = 13: primitive words 37748736, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 632718 (+0 above, complete); cumulative distinct: 632718; misses <= 21: [7, 21]; N_13 = 776161
+        E_n = 23305052280; E_n (3/16)^n = 8.25024; max_N c_n(N) = 1244 at N = 963; max/(4/3)^n = 29.55; class factors mod 3: 1.006830 1.000903 0.992267; odd classes mod 8: 0.997965 1.002445 0.996634 1.002956; 3.5 s
+n = 14: primitive words 150994944, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 1993151 (+0 above, complete); cumulative distinct: 1993151; misses <= 21: [7, 21]; N_14 = 2327675
+        E_n = 125576935274; E_n (3/16)^n = 8.33542; max_N c_n(N) = 1600 at N = 963; max/(4/3)^n = 28.51; class factors mod 3: 1.006224 1.002012 0.991763; odd classes mod 8: 0.998497 1.001611 0.997994 1.001898; 5.8 s
+  --- words of length <= 14: total multiplicity below the bound 357913941; primitive words recorded 201326592; odd N < 2^26 not attained: 31561281 (first: [7, 21, 2327675, 2395551, 2395583, 2411371])
+      window          zeros      min   median       mean | prim: min  median     mean | max minlen
+      [2^19, 2^20)         0       86      240      251.1 |        82     210    212.6 | 14
+      [2^20, 2^21)         0        6       72       79.4 |         6      72     78.1 | 14
+      [2^21, 2^22)    199477        0        4        8.2 |         0       4      8.2 | 14
+      [2^22, 2^23)   2001674        0        0        0.1 |         0       0      0.1 | 14
+      [2^23, 2^24)   4194304        0        0        0.0 |         0       0      0.0 | -1
+      [2^24, 2^25)   8388608        0        0        0.0 |         0       0      0.0 | -1
+      [2^25, 2^26)  16777216        0        0        0.0 |         0       0      0.0 | -1
+      number of odd N of minimal length m: [(10, 13631), (11, 43237), (12, 137122), (13, 432483), (14, 1360433)]
+n = 15: primitive words 603979776, with H >= 2^26: 0; all words with H >= 2^26: 0; distinct odd values < 2^26 at exact length: 6259388 (+0 above, complete); cumulative distinct: 6259388; misses <= 21: [7, 21]; N_15 = 7059819
+        E_n = 674920483380; E_n (3/16)^n = 8.39985; max_N c_n(N) = 2060 at N = 14859; max/(4/3)^n = 27.53; class factors mod 3: 1.005246 1.003000 0.991754; odd classes mod 8: 1.003851 0.995883 1.004053 0.996213; 25.0 s
+  --- words of length <= 15: total multiplicity below the bound 1431655765; primitive words recorded 805306368; odd N < 2^26 not attained: 27295044 (first: [7, 21, 7059819, 7399483, 7405185, 7529245])
+      window          zeros      min   median       mean | prim: min  median     mean | max minlen
+      [2^19, 2^20)         0      554      970      987.8 |       332     504    504.8 | 14
+      [2^20, 2^21)         0      258      520      537.6 |       214     376    379.5 | 14
+      [2^21, 2^22)         0       64      210      222.4 |        64     200    205.9 | 15
+      [2^22, 2^23)       213        0       40       49.5 |         0      40     49.3 | 15
+      [2^23, 2^24)   2155200        0        0        2.6 |         0       0      2.6 | 15
+      [2^24, 2^25)   8362413        0        0        0.0 |         0       0      0.0 | 15
+      [2^25, 2^26)  16777216        0        0        0.0 |         0       0      0.0 | -1
+      number of odd N of minimal length m: [(11, 43237), (12, 137122), (13, 432483), (14, 1360433), (15, 4266237)]
+C:\tmp\wt-s93\04-computation\experiments\s93_chanpak_wave_20261111\twoapex\verify\v2_census.py:203: RuntimeWarning: invalid value encountered in scalar divide
+  lag = float((res[:, 1:] * res[:, :-1]).sum() / (res ** 2).sum())
+C:\tmp\wt-s93\04-computation\experiments\s93_chanpak_wave_20261111\twoapex\verify\v2_census.py:208: RuntimeWarning: invalid value encountered in scalar divide
+  print(f"      [2^{k}, 2^{k + 1}): mean {seg.mean():9.2f}  var/mean {var / seg.mean():.4f}  "
+C:\tmp\wt-s93\04-computation\experiments\s93_chanpak_wave_20261111\twoapex\verify\v2_census.py:209: RuntimeWarning: invalid value encountered in scalar divide
+  f"var/mean of prim/2 {var / seg.mean() / 2:.4f}  (blocks of 4096: {var2 / seg.mean() / 2:.4f})  "
+  --- dispersion of the primitive multiplicities (length <= 15), blocks of 256 consecutive odd N
+      [2^20, 2^21): mean    379.47  var/mean 2.0566  var/mean of prim/2 1.0283  (blocks of 4096: 1.0285)  lag-1 -0.0256  share of odd prim 0.015757  min 214
+      [2^21, 2^22): mean    205.91  var/mean 2.0201  var/mean of prim/2 1.0101  (blocks of 4096: 1.0100)  lag-1 -0.0108  share of odd prim 0.007822  min 64
+      [2^22, 2^23): mean     49.33  var/mean 2.0054  var/mean of prim/2 1.0027  (blocks of 4096: 1.0027)  lag-1 -0.0053  share of odd prim 0.002558  min 0
+      [2^23, 2^24): mean      2.56  var/mean 2.0019  var/mean of prim/2 1.0009  (blocks of 4096: 1.0009)  lag-1 -0.0056  share of odd prim 0.000415  min 0
+      [2^24, 2^25): mean      0.01  var/mean 2.0009  var/mean of prim/2 1.0005  (blocks of 4096: 1.0006)  lag-1 -0.0036  share of odd prim 0.000016  min 0
+      [2^25, 2^26): mean      0.00  var/mean nan  var/mean of prim/2 nan  (blocks of 4096: nan)  lag-1 +nan  share of odd prim 0.000000  min 0
+N_L: {1: 23, 2: 23, 3: 23, 4: 35, 5: 61, 6: 297, 7: 727, 8: 2593, 9: 7455, 10: 24107, 11: 77533, 12: 230521, 13: 776161, 14: 2327675, 15: 7059819}
+total time 86.7 s

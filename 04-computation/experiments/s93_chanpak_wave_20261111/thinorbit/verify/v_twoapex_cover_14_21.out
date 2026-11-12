@@ -1,0 +1,7 @@
+spot check transfer = direct count on 5 random words of length 7, 8: failures 0
+words of length <= 14 (pruned at H >= 2^21): 357912900 nodes; odd v < 2^21 not attained: 2; first [7, 21]; even values attained: 0
+   window [2^4, 2^5): 1 odd values not attained
+
+real	1m14.948s
+user	0m0.000s
+sys	0m0.077s

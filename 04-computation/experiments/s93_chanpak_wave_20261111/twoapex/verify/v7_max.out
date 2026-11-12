@@ -1,0 +1,2 @@
+n = 16: maximum over the primitive words 73529109 (lane: 73529109; equal: True), attained by 1 primitive word(s); primitive words with H >= 2^26: 667; ratio to 2 * 3^n: 0.85406; 6.6 s
+n = 17: maximum over the primitive words 226501279 (lane: 226501279; equal: True), attained by 1 primitive word(s); primitive words with H >= 2^26: 301884199; ratio to 2 * 3^n: 0.87696; 21.1 s

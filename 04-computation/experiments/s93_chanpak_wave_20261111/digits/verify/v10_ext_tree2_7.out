@@ -1,0 +1,8 @@
+   order 1: classes 1, in K_1 (one- or two-vertex steps): 1, in K_2: 0; distinct children tested so far 1   [1.0 s]
+   order 2: classes 1, in K_1 (one- or two-vertex steps): 1, in K_2: 0; distinct children tested so far 3   [1.0 s]
+   order 3: classes 2, in K_1 (one- or two-vertex steps): 1, in K_2: 0; distinct children tested so far 6   [1.0 s]
+   order 4: classes 4, in K_1 (one- or two-vertex steps): 2, in K_2: 0; distinct children tested so far 13   [1.0 s]
+   order 5: classes 12, in K_1 (one- or two-vertex steps): 5, in K_2: 0; distinct children tested so far 29   [1.1 s]
+   order 6: classes 56, in K_1 (one- or two-vertex steps): 18, in K_2: 0; distinct children tested so far 72   [2.2 s]
+   order 7: classes 456, in K_1 (one- or two-vertex steps): 50, in K_2: 0; distinct children tested so far 183   [17.3 s]
+time 17.3 s

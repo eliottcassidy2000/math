@@ -1,0 +1,6 @@
+|X| = 1: every labelled block x all 5405 labelled marked tournaments of order <= 5: 21620 tests, failures 0   [5.9 s]
+|X| = 2: every labelled block x all 5405 labelled marked tournaments of order <= 5: 129720 tests, failures 0   [6.6 s]
+|X| = 3: every labelled block x all 5405 labelled marked tournaments of order <= 5: 1383680 tests, failures 0   [18.7 s]
+|X| = 4: every labelled block x all 285 labelled marked tournaments of order <= 4: 1459200 tests, failures 0   [31.5 s]
+|X| = 5: every labelled block x all 29 labelled marked tournaments of order <= 3: 5701632 tests, failures 0   [77.0 s]
+total 8695852 tests, failures 0

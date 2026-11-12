@@ -1,0 +1,8 @@
+file v_blocks2_k4.txt: 56 matrices read, subset all: 56 generators; min coefficient of E in the h-row: 2; LIM 3000000
+capped search K = 16: 14721685 states stored, 258823196 images with h <= LIM
+odd v <= 3000000 not marked: 7 21 47 67 127 173 491 1283 2219
+#not marked 9, largest 2219
+
+real	0m5.920s
+user	0m0.000s
+sys	0m0.015s

@@ -1,0 +1,40 @@
+seeds
+   n   pairs  new slopes | new slopes by window k = 3..19
+   1      12       4 |     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   2      54       4 |     3     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   3     178       8 |     0     4     4     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   4     497      25 |     0     0     7    17     1     0     0     0     0     0     0     0     0     0     0     0     0
+   5    1297      99 |     0     0     1    10    39    46     3     0     0     0     0     0     0     0     0     0     0
+   6    3360     415 |     0     0     0     2    11    73   194   133     2     0     0     0     0     0     0     0     0
+   7    7836    1196 |     0     0     0     0     2    14    90   319   572   196     3     0     0     0     0     0     0
+   8   17320    3222 |     0     0     0     0     0     2    19   119   528  1220  1108   225     1     0     0     0     0
+   9   35842    7550 |     0     0     0     0     0     0     0    20   137   708  2003  2706  1699   275     2     0     0
+  10   70887   16838 |     0     0     0     0     0     0     0     1    26   188   903  2977  4833  5053  2454   398     5
+  cumulative share of the window: 0.375 0.312 0.375 0.453 0.414 0.527 0.598 0.578 0.618 0.564 0.490 0.361 0.199 0.081 0.019 0.002 0.000
+  n = 4: log2(slope) of the pairs: quartiles 4.00 5.46 6.00, max 7.20
+  n = 5: log2(slope) of the pairs: quartiles 5.46 6.58 7.49, max 9.13
+  n = 6: log2(slope) of the pairs: quartiles 6.79 8.04 9.16, max 11.01
+  n = 7: log2(slope) of the pairs: quartiles 8.02 9.49 10.57, max 13.13
+  n = 8: log2(slope) of the pairs: quartiles 9.43 10.85 12.04, max 15.13
+  n = 9: log2(slope) of the pairs: quartiles 10.63 12.20 13.50, max 17.12
+  n = 10: log2(slope) of the pairs: quartiles 11.89 13.57 15.06, max 19.12
+anti-seeds
+   n   pairs  new slopes | new slopes by window k = 3..19
+   1       9       3 |     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   2      48       4 |     4     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   3     166       9 |     0     5     4     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+   4     474      24 |     0     1     8    14     1     0     0     0     0     0     0     0     0     0     0     0     0
+   5    1209      77 |     0     0     2     9    33    31     2     0     0     0     0     0     0     0     0     0     0
+   6    3056     370 |     0     0     0     0    15    63   161   131     0     0     0     0     0     0     0     0     0
+   7    7432    1256 |     0     0     0     0     0    20   102   346   583   202     3     0     0     0     0     0     0
+   8   16534    3242 |     0     0     0     0     0     1    19   121   521  1227  1108   244     1     0     0     0     0
+   9   34559    7659 |     0     0     0     0     0     0     0    13   138   718  1947  2704  1809   327     3     0     0
+  10   69722   17489 |     0     0     0     0     0     0     0     0    22   173   940  2943  5095  5203  2709   400     4
+  cumulative share of the window: 0.500 0.375 0.438 0.359 0.383 0.449 0.555 0.597 0.617 0.566 0.488 0.360 0.211 0.084 0.021 0.002 0.000
+  n = 4: log2(slope) of the pairs: quartiles 3.97 5.17 6.09, max 7.19
+  n = 5: log2(slope) of the pairs: quartiles 5.17 6.36 7.36, max 9.10
+  n = 6: log2(slope) of the pairs: quartiles 6.52 7.91 9.00, max 10.94
+  n = 7: log2(slope) of the pairs: quartiles 7.91 9.46 10.62, max 13.14
+  n = 8: log2(slope) of the pairs: quartiles 9.34 10.86 12.08, max 15.01
+  n = 9: log2(slope) of the pairs: quartiles 10.62 12.21 13.57, max 17.26
+  n = 10: log2(slope) of the pairs: quartiles 11.93 13.63 15.13, max 19.43

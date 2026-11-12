@@ -1,0 +1,38 @@
+134 generators, LIM = 32768, LSTORE = 32768, CAP = 16777215 (24 bits for E and for O), phase-2 depth limit 400
+phase 1: 2989827 distinct states with h <= 32768
+saturated stored states: 0; over the others: max E/h = 2.147340, max O/h = 2.214567, min O/h = 0.536519
+growth: k, #distinct states with h <= 2^k (meaningful for 2^k <= LSTORE)
+   0 2
+   1 2
+   2 3
+   3 6
+   4 28
+   5 121
+   6 288
+   7 701
+   8 1877
+   9 5488
+  10 17127
+  11 50018
+  12 133621
+  13 359710
+  14 1020429
+  15 2989827
+odd v <= 32768 not reached: 7 21
+count of misses 2, largest miss 21
+reached odd values by dyadic window [2^k, 2^(k+1)) (cut at LIM): k reached total
+   1 1 1
+   2 1 2
+   3 4 4
+   4 7 8
+   5 16 16
+   6 32 32
+   7 64 64
+   8 128 128
+   9 256 256
+  10 512 512
+  11 1024 1024
+  12 2048 2048
+  13 4096 4096
+  14 8192 8192
+  15 0 0

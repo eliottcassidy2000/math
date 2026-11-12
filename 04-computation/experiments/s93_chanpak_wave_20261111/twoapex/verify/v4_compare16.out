@@ -1,0 +1,5 @@
+lane state: upto = 16
+cum_16 (all words of length <= 16): arrays identical: True; sum 5726622394 vs 5726622394
+c_16 (all words of length exactly 16): arrays identical: True; sum 4294966629 vs 4294966629
+minimal length: equal on the attained N: True; attained 19603515
+cumprim_16 (primitive words of length <= 16, enumerated directly) = lane's c_16 - c_15: True; sum 3221224805 vs 3221224805

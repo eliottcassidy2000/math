@@ -1,0 +1,2 @@
+subset count = permutation search, ext_values = direct count (orders 1..7, 30 random each): True
+isomorphism classes of orders 1..7: [1, 1, 2, 4, 12, 56, 456] (expected 1, 1, 2, 4, 12, 56, 456)

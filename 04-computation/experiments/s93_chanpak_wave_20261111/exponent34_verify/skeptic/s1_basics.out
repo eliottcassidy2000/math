@@ -1,0 +1,23 @@
+(a) g(v) = v+1-2q(v)-(v mod 2) for v < 2^17: violations 0
+(a) x(h) = g(2h) for h < 2^16: violations 0
+(a) 0 <= q(h) <= (h-1)/2 for 1 <= h < 2^17: violations 0
+(a) h+2 <= x(h) <= 2h+1 for 1 <= h < 2^17: violations 0
+(a) x(0) = 1  g(0) = 1
+(a) {g(v): v < 2^15} == {x(h): h < 2^14}: True
+(a) q(h) = sum_i h_i ceil(floor(h/2^(i+1))/2) for h < 2^14: violations 0
+(b) one-apex tournaments: chain c_0 -> c_1 -> ... (transitive, c_i beats c_j for i < j) plus an apex;
+    word bit = 1 iff the apex beats that chain vertex (convention A) or is beaten by it (convention B);
+    the word is read with chain vertex 0 as most significant bit (MSB) or least significant bit (LSB).
+    m = 1  mismatches H != g(word) by convention: {'A/LSB': 0, 'A/MSB': 0, 'B/LSB': 0, 'B/MSB': 0}  set{H} == {g(v): v < 2^m}: True  |set| = 1
+    m = 2  mismatches H != g(word) by convention: {'A/LSB': 2, 'A/MSB': 0, 'B/LSB': 0, 'B/MSB': 2}  set{H} == {g(v): v < 2^m}: True  |set| = 2
+    m = 3  mismatches H != g(word) by convention: {'A/LSB': 4, 'A/MSB': 0, 'B/LSB': 0, 'B/MSB': 4}  set{H} == {g(v): v < 2^m}: True  |set| = 3
+    m = 4  mismatches H != g(word) by convention: {'A/LSB': 12, 'A/MSB': 0, 'B/LSB': 0, 'B/MSB': 12}  set{H} == {g(v): v < 2^m}: True  |set| = 5
+    m = 5  mismatches H != g(word) by convention: {'A/LSB': 24, 'A/MSB': 0, 'B/LSB': 0, 'B/MSB': 24}  set{H} == {g(v): v < 2^m}: True  |set| = 9
+    m = 6  mismatches H != g(word) by convention: {'A/LSB': 56, 'A/MSB': 0, 'B/LSB': 0, 'B/MSB': 56}  set{H} == {g(v): v < 2^m}: True  |set| = 18
+    m = 7  mismatches H != g(word) by convention: {'A/LSB': 112, 'A/MSB': 0, 'B/LSB': 0, 'B/MSB': 112}  set{H} == {g(v): v < 2^m}: True  |set| = 30
+    m = 8  mismatches H != g(word) by convention: {'A/LSB': 240, 'A/MSB': 0, 'B/LSB': 0, 'B/MSB': 240}  set{H} == {g(v): v < 2^m}: True  |set| = 58
+    m = 9  mismatches H != g(word) by convention: {'A/LSB': 480, 'A/MSB': 0, 'B/LSB': 0, 'B/MSB': 480}  set{H} == {g(v): v < 2^m}: True  |set| = 110
+(c) block law 2q(A 2^m + B) = 2q(A)+2q(B)+A rev_m(B)+(A mod 2)B_(m-1): cases 65280 violations 0
+(c) block law, 20000 random cases with m <= 60, A < 2^60: violations 0
+(c) three-block formula: K(P,Z) independent of x; (P,Z,w) cases 2325 violations 0
+(c) Z -> c = 2^(s+1) - rev_s(Z) is a bijection onto (2^s, 2^(s+1)] for s <= 11: True

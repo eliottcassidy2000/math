@@ -1,0 +1,5 @@
+gadget words, alphabet sigma + 57, length <= 2, readout L_h: words with eigenvalue 1: {'offset = 0 on all of C (H fixed)': 92, 'offset != 0 somewhere on C (virtual translation)': 1}   [0.3 s]
+gadget words, alphabet sigma + 57, length <= 2, readout L_1: words with eigenvalue 1: {'offset = 0 on all of C (H fixed)': 92, 'offset != 0 somewhere on C (virtual translation)': 1}   [0.6 s]
+gadget words, alphabet sigma + 14, length <= 3, readout L_h: words with eigenvalue 1: {'offset = 0 on all of C (H fixed)': 79, 'offset != 0 somewhere on C (virtual translation)': 1}   [0.9 s]
+gadget words, alphabet sigma + 14, length <= 3, readout L_1: words with eigenvalue 1: {'offset = 0 on all of C (H fixed)': 79, 'offset != 0 somewhere on C (virtual translation)': 1}   [1.1 s]
+two-mark words of length <= 2 with eigenvalue 1 (exact rational linear algebra): {'offset = 0 on all of C (H fixed)': 90, 'offset != 0 somewhere on C (virtual translation)': 40}; among them words in the mu = 0 letters (two-apex): {'offset = 0 on all of C (H fixed)': 8, 'offset != 0 somewhere on C (virtual translation)': 12}   [1.5 s]

@@ -1,0 +1,11 @@
+two-apex words of length 1 (4^n = 4): seeds 12 (by |O|: 1:9 2:3), anti-seeds 9; seeds by type (apexes in O, spine vertices in O): (0,1):3 (1,0):6 (1,1):2 (2,0):1
+two-apex words of length 2 (4^n = 16): seeds 54 (by |O|: 1:24 2:30), anti-seeds 48; seeds by type (apexes in O, spine vertices in O): (0,1):12 (0,2):5 (1,0):12 (1,1):20 (2,0):5
+two-apex words of length 3 (4^n = 64): seeds 178 (by |O|: 1:50 2:128), anti-seeds 166; seeds by type (apexes in O, spine vertices in O): (0,1):30 (0,2):34 (1,0):20 (1,1):80 (2,0):14
+two-apex words of length 4 (4^n = 256): seeds 497 (by |O|: 1:90 2:407), anti-seeds 474; seeds by type (apexes in O, spine vertices in O): (0,1):60 (0,2):163 (1,0):30 (1,1):218 (2,0):26
+two-apex words of length 5 (4^n = 1024): seeds 1297 (by |O|: 1:147 2:1109 3:41), anti-seeds 1209; seeds by type (apexes in O, spine vertices in O): (0,1):105 (0,2):585 (0,3):2 (1,0):42 (1,1):480 (1,2):16 (2,0):44 (2,1):23
+two-apex words of length 6 (4^n = 4096): seeds 3360 (by |O|: 1:224 2:2760 3:376), anti-seeds 3056; seeds by type (apexes in O, spine vertices in O): (0,1):168 (0,2):1729 (0,3):10 (1,0):56 (1,1):966 (1,2):140 (2,0):65 (2,1):226
+two-apex words of length 7 (4^n = 16384): seeds 7836 (by |O|: 1:324 2:6101 3:1411), anti-seeds 7432; seeds by type (apexes in O, spine vertices in O): (0,1):252 (0,2):4270 (0,3):40 (1,0):72 (1,1):1740 (1,2):586 (2,0):91 (2,1):785
+two-apex words of length 8 (4^n = 65536): seeds 17320 (by |O|: 1:450 2:12878 3:3992), anti-seeds 16534; seeds by type (apexes in O, spine vertices in O): (0,1):360 (0,2):9784 (0,3):100 (1,0):90 (1,1):2972 (1,2):1988 (2,0):122 (2,1):1904
+real	0m3.997s
+user	0m0.090s
+sys	0m0.202s

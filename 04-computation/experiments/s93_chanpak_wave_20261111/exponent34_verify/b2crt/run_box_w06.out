@@ -1,0 +1,13 @@
+[Deg ] W=6 s1=3 s2=3 ds=0 mode=box Kmax=16: P_u tested 120; box points 14400; directions tested 23104 (nonempty 14040, with k=+-1: 2304, with k<0: 11552); CRT class unique by brute force in 23104 cases; e in range 24444, giving box points 14400 (rejected: |a'|>=2^s2 4424, |b'|>=2^s2 6028); max points on one direction 2; max count/(6M/m+1) = 0.9104; directions with ||e0/m|| < 3M/m but no point: 7752
+        K=    1: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 1.3482 at P_u=(-2, -7) (Deg_K=4); min (S2 bound)/Deg_K = 3.50
+        K=    2: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.2881 at P_u=(-3, -7) (Deg_K=4); min (S2 bound)/Deg_K = 6.50
+        K=    4: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.1567 at P_u=(-2, -5) (Deg_K=9); min (S2 bound)/Deg_K = 8.80
+        K=    8: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.0817 at P_u=(-1, -5) (Deg_K=23); min (S2 bound)/Deg_K = 10.97
+        K=   16: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.0366 at P_u=(-1, -7) (Deg_K=48); min (S2 bound)/Deg_K = 17.38
+[Deg'] W=6 s1=3 s2=3 ds=0 mode=box Kmax=16: P_v tested 120; box points 14400; directions tested 23104 (nonempty 14040, with k=+-1: 2304, with k<0: 11552); CRT class unique by brute force in 23104 cases; e in range 24444, giving box points 14400 (rejected: |a|>=2^s1 4424, |b|>=2^s1 6028); max points on one direction 2; max count/(6M/m+1) = 0.9104; directions with ||e0/m|| < 3M/m but no point: 7752
+        K=    1: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 1.3482 at P_v=(-2, -7) (Deg'_K=4)
+        K=    2: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.2881 at P_v=(-3, -7) (Deg'_K=4)
+        K=    4: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.1567 at P_v=(-2, -5) (Deg'_K=9)
+        K=    8: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.0817 at P_v=(-1, -5) (Deg'_K=23)
+        K=   16: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.0366 at P_v=(-1, -7) (Deg'_K=48)
+W=6 mode=box kfac=2 which=both: ALL CHECKS PASSED (16.5 s)

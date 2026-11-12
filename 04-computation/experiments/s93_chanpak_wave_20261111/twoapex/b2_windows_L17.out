@@ -1,0 +1,72 @@
+words of length <= 17 (4^0 + ... + 4^17 = 22906492245 words); odd N < 2^26
+total multiplicity recorded below the bound: 22604606045; primitive words recorded: 12583017022
+
+  window            odd N    zeros      min   median       mean | prim: min  median      mean | max minimal length
+  [2^ 0, 2^ 1)          1        0     1140     1140     1140.0 |        18      18      18.0 | 0
+  [2^ 1, 2^ 2)          1        0     1785     1785     1785.0 |        33      33      33.0 | 1
+  [2^ 2, 2^ 3)          2        1        0     1768     1768.0 |         0      33      33.0 | 2
+  [2^ 3, 2^ 4)          4        0      720     3655     3407.5 |         6      73      68.2 | 3
+  [2^ 4, 2^ 5)          8        1        0     3237     3112.4 |         0      65      62.6 | 4
+  [2^ 5, 2^ 6)         16        0      728     2730     3679.4 |         8      60      80.0 | 6
+  [2^ 6, 2^ 7)         32        0     1001     3696     4226.9 |        11      75      92.5 | 6
+  [2^ 7, 2^ 8)         64        0     1216     4286     4943.8 |        18      86     116.0 | 6
+  [2^ 8, 2^ 9)        128        0     2434     5232     5387.2 |        38     115     133.5 | 7
+  [2^ 9, 2^10)        256        0     1740     5876     6029.6 |        30     148     162.8 | 8
+  [2^10, 2^11)        512        0     3316     6521     6620.6 |        74     186     198.0 | 8
+  [2^11, 2^12)       1024        0     4110     7003     7061.2 |       113     226     239.4 | 9
+  [2^12, 2^13)       2048        0     4560     7458     7488.6 |       142     286     293.7 | 10
+  [2^13, 2^14)       4096        0     5458     7740     7774.1 |       210     354     361.6 | 10
+  [2^14, 2^15)       8192        0     5316     7810     7830.3 |       244     440     444.4 | 11
+  [2^15, 2^16)      16384        0     4810     7702     7718.3 |       346     546     548.2 | 11
+  [2^16, 2^17)      32768        0     5520     7348     7360.2 |       444     672     673.3 | 12
+  [2^17, 2^18)      65536        0     5136     6732     6748.2 |       556     796     795.3 | 13
+  [2^18, 2^19)     131072        0     4394     5952     5968.7 |       694     906     905.5 | 13
+  [2^19, 2^20)     262144        0     3628     4988     5009.0 |       766     994     993.6 | 14
+  [2^20, 2^21)     524288        0     2710     3928     3959.4 |       834    1040    1040.3 | 14
+  [2^21, 2^22)    1048576        0     1914     2882     2907.0 |       802    1028    1027.4 | 15
+  [2^22, 2^23)    2097152        0     1182     1866     1901.9 |       686     926     925.9 | 16
+  [2^23, 2^24)    4194304        0      550     1042     1072.5 |       448     714     718.2 | 16
+  [2^24, 2^25)    8388608        0      174      444      466.7 |       172     410     418.1 | 17
+  [2^25, 2^26)   16777216        0        6      104      122.1 |         6     104     121.0 | 17
+
+odd N < 2^26 not attained by words of length <= 17: 2 in all
+the first 60: [7, 21]
+  not attained below 2^10: 2  -> [7, 21]
+  not attained below 2^11: 2  -> [7, 21]
+  not attained below 2^12: 2  -> [7, 21]
+  not attained below 2^13: 2  -> [7, 21]
+  not attained below 2^14: 2  -> [7, 21]
+  not attained below 2^15: 2  -> [7, 21]
+  not attained below 2^16: 2  -> [7, 21]
+  not attained below 2^17: 2  -> [7, 21]
+  not attained below 2^18: 2  -> [7, 21]
+  not attained below 2^19: 2  -> [7, 21]
+  not attained below 2^20: 2  -> [7, 21]
+  not attained below 2^21: 2  -> [7, 21]
+  not attained below 2^22: 2  -> [7, 21]
+  not attained below 2^23: 2  -> [7, 21]
+  not attained below 2^24: 2  -> [7, 21]
+  not attained below 2^25: 2  -> [7, 21]
+  not attained below 2^26: 2  -> [7, 21]
+
+number of odd N < bound whose minimal word length is n (attained N only):
+  n =  0:         1 values; smallest 1, largest 1
+  n =  1:         1 values; smallest 3, largest 3
+  n =  2:         1 values; smallest 5, largest 5
+  n =  3:         4 values; smallest 9, largest 15
+  n =  4:        12 values; smallest 17, largest 45
+  n =  5:        40 values; smallest 35, largest 151
+  n =  6:       143 values; smallest 61, largest 509
+  n =  7:       415 values; smallest 297, largest 1743
+  n =  8:      1350 values; smallest 727, largest 6069
+  n =  9:      4278 values; smallest 2593, largest 20479
+  n = 10:     13631 values; smallest 7455, largest 69485
+  n = 11:     43237 values; smallest 24107, largest 227295
+  n = 12:    137122 values; smallest 77533, largest 744405
+  n = 13:    432483 values; smallest 230521, largest 2369791
+  n = 14:   1360433 values; smallest 776161, largest 7545389
+  n = 15:   4266237 values; smallest 2327675, largest 23554623
+  n = 16:  13344127 values; smallest 7059819, largest 67106993
+  n = 17:  13950915 values; smallest 22156807, largest 67108863
+
+every odd N in [23, 67108863] is attained by a word of length <= 17; log2 = 26.0000

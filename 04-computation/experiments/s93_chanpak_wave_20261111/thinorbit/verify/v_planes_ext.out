@@ -1,0 +1,24 @@
+order <= 5, length <= 2: 17583 distinct invertible words; with a rational invariant plane: 96 (word, plane) pairs; planes shared by >= 2 words: 14
+   normal (1, 0, -1): 10 words; acting unimodularly on the plane: 2; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 2999
+   normal (3, 2, -4): 4 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 0
+   normal (3, -2, -2): 3 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 0
+   normal (2, -1, -2): 3 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 1866
+   normal (1, 1, -2): 3 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 2003
+   normal (3, 0, -4): 2 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 0
+   normal (175, -120, -192): 2 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 0
+   normal (5, -2, -4): 2 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 0
+   normal (59, 152, -198): 2 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 0
+   normal (11, -4, -12): 2 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 0
+   normal (0, 2, -1): 2 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 837
+   normal (3, -1, -3): 2 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 1206
+   normal (3, -4, 0): 2 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 0
+   normal (2, 0, -1): 2 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 993
+order <= 4, length <= 4: 163685 distinct invertible words; with a rational invariant plane: 50 (word, plane) pairs; planes shared by >= 2 words: 4
+   normal (1, 0, -1): 30 words; acting unimodularly on the plane: 4; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 2999
+   normal (3, 0, -4): 4 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 0
+   normal (1, 1, -2): 4 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 2003
+   normal (3, 2, -4): 4 words; acting unimodularly on the plane: 0; non-commuting unimodular pair: False; orbit states (h <= 2000, order <= 4 orbit) on the plane: 0
+
+real	0m10.073s
+user	0m0.046s
+sys	0m0.046s

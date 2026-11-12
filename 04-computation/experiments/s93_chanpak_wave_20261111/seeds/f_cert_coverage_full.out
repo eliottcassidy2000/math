@@ -1,0 +1,17 @@
+orders <= 9: merged minv equals b_census_minv.npz minv_9: True
+order 10 parts: {0: 'new', 1: 'new', 2: 'new', 3: 'new', 4: 'new (4 sub-parts mod 32)', 5: 'new (4 sub-parts mod 32)', 6: 'new (4 sub-parts mod 32)', 7: 'new (4 sub-parts mod 32)'}
+sub-parts mod 32 reproduce minv, the counts by |O| and the number of extensions of the old part files: {4: True, 5: True, 6: True, 7: True}
+order 10: 15773048 extensions; seeds by |O| [(1, 10), (2, 28319), (3, 815852)]; anti-seeds [(2, 28077), (3, 812345)]
+orders <= 10: merged minv equals b_census_minv.npz minv_10: True
+seeds: least odd c without a unit pair of order <= 10 (table): 53559 (expected 53559); largest minv below it: 7
+   odd c < 53559: 26779; with a certificate present: 26779; missing: 0; certificate with v larger than the least v: 0; largest certificate v: 7
+   odd c <= 8191 with a certificate: 4096 of 4096;  odd c in (8191, 53559) with a certificate: 22683 of 22683
+   first missing: []
+   certificates with M != c 2^v: 0
+   written certs_plus_full.txt: 32747 certificates
+anti-seeds: least odd c without a unit pair of order <= 10 (table): 59083 (expected 59083); largest minv below it: 10
+   odd c < 59083: 29541; with a certificate present: 29541; missing: 0; certificate with v larger than the least v: 0; largest certificate v: 10
+   odd c <= 8191 with a certificate: 4096 of 4096;  odd c in (8191, 59083) with a certificate: 25445 of 25445
+   first missing: []
+   certificates with M != c 2^v: 0
+   written certs_minus_full.txt: 32758 certificates

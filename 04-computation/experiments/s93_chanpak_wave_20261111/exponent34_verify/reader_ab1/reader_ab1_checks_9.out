@@ -1,0 +1,17 @@
+T1 w=1: nonzero delta with D=0: 0; lowest digit +-2 and |u_i|>=2 for i>=m: True
+T1 w=2: nonzero delta with D=0: 2; lowest digit +-2 and |u_i|>=2 for i>=m: True
+T1 w=3: nonzero delta with D=0: 6; lowest digit +-2 and |u_i|>=2 for i>=m: True
+T1 w=4: nonzero delta with D=0: 16; lowest digit +-2 and |u_i|>=2 for i>=m: True
+T1 w=5: nonzero delta with D=0: 40; lowest digit +-2 and |u_i|>=2 for i>=m: True
+T1 w=6: nonzero delta with D=0: 98; lowest digit +-2 and |u_i|>=2 for i>=m: True
+T1 w=7: nonzero delta with D=0: 238; lowest digit +-2 and |u_i|>=2 for i>=m: True
+T1 w=8: nonzero delta with D=0: 576; lowest digit +-2 and |u_i|>=2 for i>=m: True
+T2/T3 w=2 (s1=1, s2=1): max #P_v per (P_u,direction) = 2 (<=2), max #P_u per (P_v,direction) = 2 (<=4); (D2) unsimplified worst ratios Deg 0.2667, Deg' 0.2667; ok=True
+T2/T3 w=3 (s1=2, s2=1): max #P_v per (P_u,direction) = 1 (<=2), max #P_u per (P_v,direction) = 4 (<=4); (D2) unsimplified worst ratios Deg 0.1333, Deg' 0.2963; ok=True
+T2/T3 w=4 (s1=2, s2=2): max #P_v per (P_u,direction) = 2 (<=2), max #P_u per (P_v,direction) = 2 (<=4); (D2) unsimplified worst ratios Deg 0.1684, Deg' 0.1684; ok=True
+T2/T3 w=5 (s1=3, s2=2): max #P_v per (P_u,direction) = 1 (<=2), max #P_u per (P_v,direction) = 4 (<=4); (D2) unsimplified worst ratios Deg 0.1011, Deg' 0.1640; ok=True
+T2/T3 w=6 (s1=3, s2=3): max #P_v per (P_u,direction) = 2 (<=2), max #P_u per (P_v,direction) = 2 (<=4); (D2) unsimplified worst ratios Deg 0.1601, Deg' 0.1601; ok=True
+T2/T3 w=7 (s1=4, s2=3): max #P_v per (P_u,direction) = 1 (<=2), max #P_u per (P_v,direction) = 4 (<=4); (D2) unsimplified worst ratios Deg 0.0862, Deg' 0.1712; ok=True
+T2/T3 w=8 (s1=4, s2=4): max #P_v per (P_u,direction) = 2 (<=2), max #P_u per (P_v,direction) = 2 (<=4); (D2) unsimplified worst ratios Deg 0.1546, Deg' 0.1546; ok=True
+T2/T3 w=9 (s1=5, s2=4): max #P_v per (P_u,direction) = 1 (<=2), max #P_u per (P_v,direction) = 4 (<=4); (D2) unsimplified worst ratios Deg 0.0898, Deg' 0.1427; ok=True
+ALL OK

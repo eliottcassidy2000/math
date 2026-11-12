@@ -1,0 +1,14 @@
+orders <= 9: merged minv equals b_census_minv.npz minv_9: True
+order 10 parts: {0: 'new', 1: 'new', 2: 'new', 3: 'new', 4: 'OLD (certificates only for odd c <= 8191)', 5: 'OLD (certificates only for odd c <= 8191)', 6: 'OLD (certificates only for odd c <= 8191)', 7: 'OLD (certificates only for odd c <= 8191)'}
+order 10: 15773048 extensions; seeds by |O| [(1, 10), (2, 28319), (3, 815852)]; anti-seeds [(2, 28077), (3, 812345)]
+orders <= 10: merged minv equals b_census_minv.npz minv_10: True
+seeds: least odd c without a unit pair of order <= 10 (table): 53559 (expected 53559); largest minv below it: 7
+   odd c < 53559: 26779; with a certificate present: 26765; missing: 14; certificate with v larger than the least v: 277; largest certificate v: 7
+   odd c <= 8191 with a certificate: 4096 of 4096;  odd c in (8191, 53559) with a certificate: 22669 of 22683
+   first missing: [37217, 38021, 39397, 40739, 42529, 44271, 45683, 46499, 47133, 48823, 49399, 50489]
+   certificates with M != c 2^v: 0
+anti-seeds: least odd c without a unit pair of order <= 10 (table): 59083 (expected 59083); largest minv below it: 10
+   odd c < 59083: 29541; with a certificate present: 29512; missing: 29; certificate with v larger than the least v: 287; largest certificate v: 10
+   odd c <= 8191 with a certificate: 4096 of 4096;  odd c in (8191, 59083) with a certificate: 25416 of 25445
+   first missing: [19727, 35077, 36617, 38291, 43047, 43511, 45435, 46195, 46405, 49721, 50021, 51009]
+   certificates with M != c 2^v: 0

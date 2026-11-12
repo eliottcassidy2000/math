@@ -1,0 +1,16 @@
+(e) dimension of the algebra spanned by words in the 8 unimodular generators: 9; by T0 and g alone: 9
+(f) group generated mod 2 by the 8 unimodular generators: 4; |SL_3(F_2)| = 168; equal False
+(f) group generated mod 3 by the 8 unimodular generators: 5616; |SL_3(F_3)| = 5616; equal True
+(f) group generated mod 5 by the 8 unimodular generators: 372000; |SL_3(F_5)| = 372000; equal True
+(f) group generated mod 7 by the 8 unimodular generators: 5630688; |SL_3(F_7)| = 5630688; equal True
+(g) 8 unimodular generators (order <= 4) mod 2^1: 4 = 2^2.000
+(g) 8 unimodular generators (order <= 4) mod 2^2: 128 = 2^7.000; ratio 32
+(g) 8 unimodular generators (order <= 4) mod 2^3: 4096 = 2^12.000; ratio 32
+(g) 8 unimodular generators (order <= 4) mod 2^4: 1048576 = 2^20.000; ratio 256
+(g) 46 unimodular generators (order <= 6) mod 2^1: 8 = 2^3.000
+(g) 46 unimodular generators (order <= 6) mod 2^2: 4096 = 2^12.000
+(g) 46 unimodular generators (order <= 6) mod 2^3: 1048576 = 2^20.000
+
+real	2m22.055s
+user	0m0.031s
+sys	0m0.031s

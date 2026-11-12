@@ -1,0 +1,43 @@
+   order 2: marked bases so far 2, distinct states 2  [0.4 s]
+   order 3: marked bases so far 14, distinct states 8  [0.4 s]
+   order 4: marked bases so far 62, distinct states 32  [0.4 s]
+   order 5: marked bases so far 302, distinct states 176  [0.5 s]
+   order 6: marked bases so far 1982, distinct states 1400  [0.9 s]
+   order 7: marked bases so far 21134, distinct states 17694  [12.2 s]
+representation against direct counts: 240 random (base, word of length 5) checks, failures 0
+17694 distinct states of the 21134 two-marked tournaments of orders 2..7; candidates 612
+NON-COMMUTING EXACT PAIRS (state, pair) passing to depth 2: 0
+single one-letter maps exact to depth 2: op (S, mu), a: states passing / with H moving
+   (00,0), a = 1: 17694 / 0
+   (00,0), a = 2: 17694 / 0
+   (00,0), a = 3: 17694 / 0
+   (00,1), a = 1: 17694 / 0
+   (00,1), a = 2: 17694 / 0
+   (00,1), a = 3: 17694 / 0
+   (00,2), a = 1: 17694 / 0
+   (00,2), a = 2: 17694 / 0
+   (00,2), a = 3: 17694 / 0
+   (01,0), a = 1: 273 / 0
+   (01,0), a = 2: 1970 / 1697
+   (01,0), a = 3: 273 / 0
+   (01,1), a = 2: 46 / 46
+   (01,2), a = 1: 273 / 0
+   (01,2), a = 2: 1970 / 1697
+   (01,2), a = 3: 273 / 0
+   (10,0), a = 1: 273 / 0
+   (10,0), a = 2: 1970 / 1697
+   (10,0), a = 3: 273 / 0
+   (10,1), a = 1: 273 / 0
+   (10,1), a = 2: 1970 / 1697
+   (10,1), a = 3: 273 / 0
+   (10,2), a = 2: 46 / 46
+   (11,0), a = 1: 14 / 0
+   (11,0), a = 2: 660 / 646
+   (11,0), a = 3: 36 / 22
+   (11,1), a = 2: 3 / 3
+   (11,1), a = 3: 3 / 3
+   (11,2), a = 2: 3 / 3
+   (11,2), a = 3: 3 / 3
+two-letter candidates with at least one moving exact state: 46
+time 16.4 s
+exit 0

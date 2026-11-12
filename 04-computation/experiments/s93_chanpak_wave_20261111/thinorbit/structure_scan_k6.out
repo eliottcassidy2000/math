@@ -1,0 +1,811 @@
+1884 block matrices from blocks2_k6.txt
+(1) parity lemma N = [[1,0,0],[*,x,y],[*,y,x]] mod 2 holds for all: True  (x, y) counts: {(0, 0): 959, (0, 1): 268, (1, 1): 403, (1, 0): 254}
+    determinants: [(-755, 2), (-720, 2), (-486, 2), (-432, 2), (-361, 2), (-331, 2), (-303, 2), (-296, 1), (-257, 2), (-229, 2), (-227, 2), (-213, 2), (-200, 1), (-191, 3), (-179, 2), (-171, 2), (-169, 2), (-162, 2), (-161, 2), (-157, 2), (-117, 2), (-109, 2), (-108, 4), (-106, 2), (-99, 2), (-97, 2), (-96, 2), (-90, 2), (-87, 2), (-84, 2), (-80, 2), (-78, 2), (-72, 3), (-69, 2), (-64, 2), (-63, 4), (-61, 2), (-60, 4), (-58, 2), (-55, 1), (-54, 6), (-48, 2), (-45, 2), (-44, 4), (-42, 2), (-36, 2), (-35, 3), (-30, 2), (-29, 8), (-27, 2), (-25, 2), (-24, 6), (-22, 2), (-21, 2), (-20, 2), (-19, 2), (-18, 2), (-16, 14), (-15, 10), (-14, 5), (-12, 6), (-11, 3), (-10, 2), (-9, 7), (-8, 18), (-7, 10), (-6, 8), (-5, 6), (-4, 10), (-3, 4), (-2, 14), (-1, 5), (0, 632), (1, 41), (2, 13), (4, 22), (5, 11), (6, 10), (7, 6), (8, 15), (9, 21), (10, 2), (12, 6), (13, 4), (15, 3), (16, 17), (17, 2), (19, 2), (21, 6), (22, 2), (23, 2), (24, 12), (25, 13), (26, 2), (27, 4), (29, 5), (30, 4), (31, 2), (32, 11), (33, 4), (34, 2), (35, 8), (36, 4), (37, 1), (39, 5), (40, 2), (41, 2), (43, 4), (45, 8), (46, 2), (47, 5), (48, 2), (49, 2), (50, 4), (54, 11), (55, 3), (60, 20), (61, 4), (62, 2), (65, 2), (68, 2), (69, 2), (70, 2), (72, 10), (76, 2), (80, 2), (81, 8), (82, 2), (83, 2), (84, 4), (86, 2), (95, 12), (96, 6), (99, 2), (100, 2), (101, 1), (102, 2), (103, 2), (107, 6), (109, 2), (112, 2), (113, 2), (117, 3), (120, 2), (125, 3), (128, 18), (129, 3), (132, 2), (133, 2), (135, 4), (137, 2), (138, 4), (139, 2), (140, 1), (143, 2), (144, 10), (145, 2), (147, 2), (152, 2), (154, 2), (156, 4), (157, 1), (160, 4), (161, 3), (168, 2), (171, 4), (172, 2), (173, 2), (182, 2), (187, 2), (189, 2), (191, 2), (192, 6), (194, 2), (196, 2), (198, 4), (207, 2), (213, 2), (216, 8), (220, 4), (224, 4), (225, 2), (228, 2), (232, 2), (233, 2), (240, 2), (242, 2), (243, 7), (248, 2), (249, 2), (252, 2), (256, 6), (261, 1), (264, 2), (276, 2), (277, 1), (279, 2), (281, 2), (288, 12), (297, 8), (312, 2), (315, 6), (316, 2), (320, 6), (321, 2), (323, 2), (324, 2), (329, 2), (339, 2), (340, 2), (342, 2), (348, 2), (349, 2), (359, 2), (360, 2), (368, 1), (369, 2), (375, 2), (376, 2), (383, 2), (385, 2), (394, 2), (399, 2), (409, 2), (413, 1), (420, 2), (431, 2), (432, 7), (440, 2), (443, 2), (444, 2), (450, 2), (451, 2), (457, 2), (468, 4), (479, 4), (485, 2), (487, 2), (491, 2), (492, 2), (503, 2), (504, 6), (513, 2), (516, 2), (527, 2), (528, 2), (537, 2), (543, 2), (544, 2), (557, 2), (561, 2), (581, 2), (585, 2), (621, 1), (625, 1), (640, 8), (657, 2), (659, 2), (663, 2), (666, 2), (672, 10), (675, 2), (676, 2), (697, 1), (700, 2), (721, 2), (723, 2), (726, 2), (728, 4), (748, 1), (751, 2), (756, 2), (771, 2), (777, 2), (810, 2), (825, 2), (829, 1), (831, 2), (837, 2), (840, 4), (855, 2), (882, 2), (885, 2), (903, 2), (905, 2), (917, 2), (920, 2), (935, 2), (945, 4), (960, 8), (984, 2), (992, 1), (994, 2), (996, 2), (999, 1), (1000, 2), (1024, 2), (1060, 1), (1062, 2), (1080, 2), (1082, 2), (1100, 2), (1160, 2), (1168, 2), (1176, 4), (1200, 4), (1280, 6), (1320, 2), (1380, 2), (1389, 1), (1431, 2), (1444, 1), (1492, 2), (1512, 4), (1536, 2), (1553, 2), (1596, 1), (1600, 4), (1647, 2), (1680, 8), (1756, 2), (1837, 1), (1872, 2), (2000, 2), (2016, 4), (2080, 2), (2100, 2), (2229, 2), (2288, 2), (2352, 4), (2443, 2), (2496, 2), (2688, 2), (2700, 2), (2889, 2), (2912, 2), (2940, 4), (2996, 1), (3000, 4), (3024, 2), (3025, 1), (3200, 2), (3328, 2), (3432, 2), (3528, 2), (3640, 2), (3888, 6), (4000, 2), (4160, 2), (4200, 2), (4320, 2), (4368, 2), (4500, 2), (4576, 2), (4680, 2), (4992, 2), (5600, 2), (5616, 2), (5832, 8), (6480, 4), (6552, 2)]
+    ranks: [(1, 141), (2, 491), (3, 1252)]
+    det parity = x + y for all: True
+    trace odd for all: True
+(2) rank-2 blocks: t (t^2 - a t + b); (a, b): count
+      a =    3  b =     0  x2
+      a =    5  b =    -4  x3
+      a =    5  b =     0  x2
+      a =    9  b =    -8  x4
+      a =    9  b =     0  x2
+      a =   11  b =     6  x6
+      a =   13  b =   -20  x2
+      a =   15  b =     0  x2
+      a =   17  b =   -16  x5
+      a =   17  b =     0  x4
+      a =   19  b =   -14  x6
+      a =   19  b =    -2  x5
+      a =   19  b =    12  x7
+      a =   21  b =    10  x4
+      a =   25  b =   -40  x3
+      a =   25  b =   -26  x4
+      a =   25  b =    10  x6
+      a =   27  b =   -72  x3
+      a =   27  b =   -52  x2
+      a =   27  b =     0  x2
+      a =   29  b =     0  x4
+      a =   29  b =    12  x4
+      a =   31  b =   -60  x4
+      a =   31  b =     0  x2
+      a =   33  b =   -32  x6
+      a =   33  b =   -28  x8
+      a =   33  b =    -4  x6
+      a =   33  b =     0  x2
+      a =   33  b =    16  x3
+      a =   33  b =    42  x2
+      a =   35  b =    -8  x6
+      a =   35  b =    24  x8
+      a =   37  b =   -92  x2
+      a =   37  b =   -26  x6
+      a =   37  b =    -2  x4
+      a =   37  b =     0  x2
+      a =   37  b =    10  x8
+      a =   37  b =    20  x6
+      a =   39  b =   -40  x2
+      a =   39  b =   -30  x6
+      a =   41  b =     0  x2
+      a =   41  b =    18  x4
+      a =   41  b =    46  x2
+      a =   43  b =    -2  x4
+      a =   43  b =    14  x2
+      a =   45  b =   -52  x6
+      a =   45  b =    20  x8
+      a =   47  b =   -46  x4
+      a =   47  b =    -8  x2
+      a =   47  b =    22  x14
+      a =   49  b =  -104  x3
+      a =   49  b =   -80  x4
+      a =   49  b =   -36  x6
+      a =   49  b =    10  x6
+      a =   51  b =  -144  x5
+      a =   51  b =   -84  x6
+      a =   51  b =   -46  x4
+      a =   51  b =     0  x2
+      a =   53  b =   -84  x4
+      a =   53  b =   -18  x6
+      a =   53  b =    16  x6
+      a =   53  b =    24  x6
+      a =   55  b =    30  x6
+      a =   57  b =   -74  x4
+      a =   57  b =    54  x4
+      a =   57  b =   108  x6
+      a =   59  b =  -120  x6
+      a =   59  b =     8  x4
+      a =   61  b =  -250  x2
+      a =   61  b =  -192  x2
+      a =   61  b =    18  x6
+      a =   61  b =    54  x6
+      a =   61  b =    84  x7
+      a =   63  b =    -2  x2
+      a =   63  b =    90  x4
+      a =   65  b =  -132  x2
+      a =   65  b =   -48  x4
+      a =   65  b =    28  x2
+      a =   67  b =  -122  x2
+      a =   69  b =  -320  x3
+      a =   69  b =  -280  x4
+      a =   69  b =  -208  x4
+      a =   69  b =     0  x2
+      a =   69  b =    60  x2
+      a =   69  b =    80  x2
+      a =   71  b =  -242  x4
+      a =   73  b =  -300  x4
+      a =   73  b =  -184  x3
+      a =   73  b =  -174  x4
+      a =   73  b =   -34  x2
+      a =   73  b =    64  x2
+      a =   73  b =    70  x4
+      a =   73  b =    76  x4
+      a =   75  b =  -376  x4
+      a =   75  b =  -360  x2
+      a =   75  b =  -130  x4
+      a =   75  b =    18  x2
+      a =   75  b =    24  x4
+      a =   75  b =    34  x4
+      a =   75  b =    56  x4
+      a =   75  b =   178  x2
+      a =   77  b =  -270  x2
+      a =   77  b =    48  x2
+      a =   77  b =   104  x4
+      a =   77  b =   150  x4
+      a =   77  b =   184  x2
+      a =   79  b =   -80  x2
+      a =   79  b =    78  x2
+      a =   79  b =   238  x2
+      a =   81  b =  -388  x4
+      a =   81  b =  -318  x4
+      a =   87  b =  -324  x4
+      a =   87  b =   134  x4
+      a =   91  b =  -338  x2
+      a =   91  b =  -320  x2
+      a =   93  b =  -494  x2
+      a =   93  b =     0  x2
+      a =   93  b =   140  x2
+      a =   93  b =   260  x4
+      a =   95  b =  -534  x2
+      a =   97  b =  -436  x4
+      a =   97  b =    68  x1
+      a =  101  b =   378  x2
+      a =  107  b =   172  x2
+      a =  109  b =  -632  x4
+      a =  109  b =  -404  x2
+      a =  111  b =     0  x2
+      a =  117  b =     0  x2
+      a =  123  b =     0  x2
+      a =  123  b =   738  x2
+      a =  129  b =   450  x2
+      a =  135  b =  -756  x2
+      a =  135  b =     0  x2
+    all a odd: True ; all b even: True ; min |b| over b != 0: 2 ; b = 0 cases: 40
+(3) rank-2 blocks by kernel line: kernel -> number of blocks; induced 2 x 2 matrices (distinct) and their determinants
+    kernel (0, 1, -1): 217 blocks; quotient coordinates [(1, 0, 0), (0, 1, 1)] (saturated: True); 211 distinct induced matrices
+        [1, 2, 1, 2]  det 0  x1
+        [1, 4, 1, 4]  det 0  x1
+        [1, 8, 1, 8]  det 0  x1
+        [1, 16, 1, 16]  det 0  x1
+        [1, 32, 1, 32]  det 0  x1
+        [3, 12, 3, 12]  det 0  x1
+        [3, 24, 3, 24]  det 0  x1
+        [3, 48, 3, 48]  det 0  x1
+        [5, 12, 5, 12]  det 0  x1
+        [5, 24, 5, 24]  det 0  x1
+        [5, 32, 5, 32]  det 0  x1
+        [5, 64, 5, 64]  det 0  x1
+        [9, 20, 9, 20]  det 0  x1
+        [9, 22, 9, 22]  det 0  x1
+        [9, 32, 9, 32]  det 0  x1
+        [9, 84, 9, 84]  det 0  x1
+        [11, 100, 11, 100]  det 0  x1
+        [13, 104, 13, 104]  det 0  x1
+        [15, 108, 15, 108]  det 0  x1
+        [15, 120, 15, 120]  det 0  x1
+        [5, 12, 6, 14]  det -2  x1
+        [11, 24, 12, 26]  det -2  x1
+        [13, 28, 14, 30]  det -2  x1
+        [15, 38, 19, 48]  det -2  x1
+        [1, 4, 2, 4]  det -4  x1
+        [5, 12, 12, 28]  det -4  x1
+        [5, 24, 6, 28]  det -4  x1
+        [3, 6, 3, 8]  det 6  x2
+        [1, 4, 4, 8]  det -8  x1
+        [1, 8, 2, 8]  det -8  x1
+        [9, 22, 11, 26]  det -8  x1
+        [11, 26, 20, 48]  det 8  x1
+        [11, 40, 13, 48]  det 8  x1
+        [13, 30, 15, 34]  det -8  x1
+        [5, 10, 7, 16]  det 10  x1
+        [5, 10, 9, 20]  det 10  x1
+        [5, 14, 5, 16]  det 10  x1
+        [5, 18, 5, 20]  det 10  x1
+        [9, 22, 11, 28]  det 10  x2
+        [11, 24, 17, 38]  det 10  x1
+        [11, 34, 12, 38]  det 10  x1
+        [3, 6, 6, 16]  det 12  x1
+        [3, 12, 3, 16]  det 12  x2
+        [5, 12, 9, 24]  det 12  x1
+        [5, 18, 6, 24]  det 12  x1
+        [5, 12, 7, 14]  det -14  x1
+        [5, 14, 6, 14]  det -14  x1
+        [11, 26, 13, 32]  det 14  x1
+        [1, 4, 8, 16]  det -16  x1
+        [1, 8, 4, 16]  det -16  x1
+        [1, 16, 2, 16]  det -16  x1
+        [9, 20, 10, 24]  det 16  x1
+        [13, 28, 18, 40]  det 16  x1
+        [13, 36, 14, 40]  det 16  x1
+        [9, 18, 15, 32]  det 18  x1
+        [9, 18, 25, 52]  det 18  x1
+        [9, 30, 9, 32]  det 18  x1
+        [9, 50, 9, 52]  det 18  x1
+        [11, 24, 20, 42]  det -18  x1
+        [11, 40, 12, 42]  det -18  x1
+        [15, 42, 21, 60]  det 18  x1
+        [1, 8, 4, 12]  det -20  x1
+        [5, 10, 14, 32]  det 20  x1
+        [5, 10, 18, 40]  det 20  x1
+        [5, 14, 10, 32]  det 20  x1
+        [5, 18, 10, 40]  det 20  x1
+        [5, 20, 7, 32]  det 20  x1
+        [5, 20, 9, 40]  det 20  x1
+        [5, 28, 5, 32]  det 20  x1
+        [5, 36, 5, 40]  det 20  x1
+        [9, 20, 16, 38]  det 22  x1
+        [9, 32, 10, 38]  det 22  x1
+        [13, 28, 15, 34]  det 22  x1
+        [13, 30, 14, 34]  det 22  x1
+        [3, 6, 12, 32]  det 24  x1
+        [3, 12, 6, 32]  det 24  x1
+        [3, 24, 3, 32]  det 24  x2
+        [5, 12, 18, 48]  det 24  x1
+        [5, 18, 12, 48]  det 24  x1
+        [5, 24, 9, 48]  det 24  x1
+        [5, 36, 6, 48]  det 24  x1
+        [11, 34, 20, 64]  det 24  x1
+        [11, 40, 17, 64]  det 24  x1
+        [5, 14, 9, 20]  det -26  x1
+        [5, 18, 7, 20]  det -26  x1
+        [11, 24, 13, 26]  det -26  x1
+        [11, 26, 12, 26]  det -26  x1
+        [5, 12, 14, 28]  det -28  x1
+        [5, 14, 12, 28]  det -28  x1
+        [5, 24, 7, 28]  det -28  x1
+        [5, 28, 6, 28]  det -28  x1
+        [13, 36, 18, 52]  det 28  x1
+        [9, 20, 15, 30]  det -30  x1
+        [9, 30, 10, 30]  det -30  x1
+        [15, 30, 19, 40]  det 30  x1
+        [15, 38, 15, 40]  det 30  x1
+        [1, 4, 16, 32]  det -32  x1
+        [1, 8, 8, 32]  det -32  x1
+        [1, 16, 4, 32]  det -32  x1
+        [1, 32, 2, 32]  det -32  x1
+        [13, 28, 18, 36]  det -36  x1
+        [13, 36, 14, 36]  det -36  x1
+        [1, 8, 8, 24]  det -40  x1
+        [1, 16, 4, 24]  det -40  x1
+        [5, 14, 7, 28]  det 42  x1
+        [9, 22, 11, 32]  det 46  x1
+        [11, 26, 17, 36]  det -46  x1
+        [11, 34, 13, 36]  det -46  x1
+        [13, 30, 18, 38]  det -46  x1
+        [13, 36, 15, 38]  det -46  x1
+        [15, 38, 21, 50]  det -48  x1
+        [15, 42, 19, 50]  det -48  x1
+        [15, 42, 21, 62]  det 48  x1
+        [5, 14, 18, 40]  det -52  x1
+        [5, 18, 9, 22]  det -52  x1
+        [5, 18, 14, 40]  det -52  x1
+        [5, 28, 9, 40]  det -52  x1
+        [5, 36, 7, 40]  det -52  x1
+        [9, 18, 21, 48]  det 54  x1
+        [9, 18, 23, 52]  det 54  x1
+        [9, 42, 9, 48]  det 54  x1
+        [9, 46, 9, 52]  det 54  x1
+        [11, 24, 27, 64]  det 56  x1
+        [11, 54, 12, 64]  det 56  x1
+        [3, 12, 12, 28]  det -60  x1
+        [3, 24, 6, 28]  det -60  x1
+        [11, 34, 17, 58]  det 60  x1
+        [9, 32, 16, 64]  det 64  x1
+        [9, 22, 23, 64]  det 70  x1
+        [9, 46, 11, 64]  det 70  x1
+        [3, 24, 6, 24]  det -72  x1
+        [9, 22, 23, 48]  det -74  x1
+        [9, 46, 11, 48]  det -74  x1
+        [9, 20, 25, 64]  det 76  x1
+        [9, 50, 10, 64]  det 76  x1
+        [15, 42, 21, 64]  det 78  x1
+        [1, 8, 16, 48]  det -80  x1
+        [1, 16, 8, 48]  det -80  x1
+        [1, 32, 4, 48]  det -80  x1
+        [13, 36, 18, 56]  det 80  x1
+        [5, 14, 14, 56]  det 84  x1
+        [5, 28, 7, 56]  det 84  x1
+        [9, 22, 21, 42]  det -84  x1
+        [9, 30, 16, 44]  det -84  x1
+        [9, 32, 15, 44]  det -84  x1
+        [9, 42, 11, 42]  det -84  x1
+        [13, 30, 18, 48]  det 84  x1
+        [13, 36, 15, 48]  det 84  x1
+        [15, 30, 21, 48]  det 90  x1
+        [15, 42, 15, 48]  det 90  x1
+        [1, 16, 8, 36]  det -92  x1
+        [5, 18, 18, 44]  det -104  x1
+        [5, 36, 9, 44]  det -104  x1
+        [13, 28, 26, 64]  det 104  x1
+        [13, 52, 14, 64]  det 104  x1
+        [9, 36, 9, 48]  det 108  x2
+        [3, 12, 24, 56]  det -120  x1
+        [3, 24, 12, 56]  det -120  x2
+        [3, 48, 6, 56]  det -120  x1
+        [13, 36, 26, 62]  det -130  x1
+        [13, 52, 18, 62]  det -130  x1
+        [15, 42, 21, 50]  det -132  x1
+        [11, 26, 27, 76]  det 134  x1
+        [11, 54, 13, 76]  det 134  x1
+        [3, 12, 24, 48]  det -144  x1
+        [3, 24, 12, 48]  det -144  x1
+        [3, 48, 6, 48]  det -144  x1
+        [9, 22, 21, 68]  det 150  x1
+        [9, 42, 11, 68]  det 150  x1
+        [9, 30, 25, 64]  det -174  x1
+        [9, 50, 15, 64]  det -174  x1
+        [15, 38, 19, 60]  det 178  x1
+        [1, 16, 16, 72]  det -184  x1
+        [1, 32, 8, 72]  det -184  x1
+        [13, 36, 18, 64]  det 184  x1
+        [15, 42, 21, 46]  det -192  x1
+        [13, 36, 26, 56]  det -208  x1
+        [13, 52, 18, 56]  det -208  x1
+        [15, 38, 19, 64]  det 238  x1
+        [9, 32, 25, 62]  det -242  x1
+        [9, 50, 16, 62]  det -242  x1
+        [11, 40, 20, 50]  det -250  x1
+        [13, 30, 26, 80]  det 260  x1
+        [13, 52, 15, 80]  det 260  x1
+        [9, 42, 21, 68]  det -270  x1
+        [11, 34, 27, 58]  det -280  x1
+        [11, 54, 17, 58]  det -280  x1
+        [5, 20, 32, 68]  det -300  x1
+        [5, 64, 10, 68]  det -300  x1
+        [9, 42, 23, 72]  det -318  x1
+        [9, 46, 21, 72]  det -318  x1
+        [5, 64, 10, 64]  det -320  x1
+        [9, 46, 23, 82]  det -320  x1
+        [3, 24, 24, 84]  det -324  x1
+        [3, 48, 12, 84]  det -324  x1
+        [13, 52, 26, 78]  det -338  x1
+        [3, 48, 12, 72]  det -360  x1
+        [11, 40, 27, 64]  det -376  x1
+        [11, 54, 20, 64]  det -376  x1
+        [9, 30, 15, 92]  det 378  x1
+        [5, 24, 32, 76]  det -388  x1
+        [5, 64, 12, 76]  det -388  x1
+        [1, 32, 16, 108]  det -404  x1
+        [5, 28, 32, 92]  det -436  x1
+        [5, 64, 14, 92]  det -436  x1
+        [9, 50, 25, 84]  det -494  x1
+        [11, 54, 27, 84]  det -534  x1
+        [5, 36, 32, 104]  det -632  x1
+        [5, 64, 18, 104]  det -632  x1
+        [15, 42, 21, 108]  det 738  x1
+        [3, 48, 24, 132]  det -756  x1
+    kernel (2, -1, -1): 54 blocks; quotient coordinates [(1, 2, 0), (1, 0, 2)] (saturated: False); 54 distinct induced matrices
+        [2, 1, 2, 1]  det 0  x1
+        [3, 2, 3, 2]  det 0  x1
+        [5, 4, 5, 4]  det 0  x1
+        [9, 6, 9, 6]  det 0  x1
+        [9, 8, 9, 8]  det 0  x1
+        [11, 6, 11, 6]  det 0  x1
+        [15, 12, 15, 12]  det 0  x1
+        [17, 12, 17, 12]  det 0  x1
+        [17, 16, 17, 16]  det 0  x1
+        [19, 10, 19, 10]  det 0  x1
+        [20, 11, 20, 11]  det 0  x1
+        [21, 16, 21, 16]  det 0  x1
+        [25, 16, 25, 16]  det 0  x1
+        [27, 24, 27, 24]  det 0  x1
+        [37, 32, 37, 32]  det 0  x1
+        [51, 42, 51, 42]  det 0  x1
+        [61, 50, 61, 50]  det 0  x1
+        [65, 52, 65, 52]  det 0  x1
+        [69, 54, 69, 54]  det 0  x1
+        [75, 60, 75, 60]  det 0  x1
+        [11, 6, 15, 8]  det -2  x1
+        [23, 12, 27, 14]  det -2  x1
+        [27, 14, 31, 16]  det -2  x1
+        [3, 2, 5, 2]  det -4  x1
+        [17, 12, 23, 16]  det -4  x1
+        [6, 3, 8, 5]  det 6  x1
+        [5, 4, 7, 4]  det -8  x1
+        [20, 11, 28, 15]  det -8  x1
+        [14, 9, 16, 11]  det 10  x1
+        [20, 11, 30, 17]  det 10  x1
+        [28, 17, 34, 21]  det 10  x1
+        [9, 6, 13, 10]  det 12  x1
+        [12, 7, 14, 7]  det -14  x1
+        [9, 8, 11, 8]  det -16  x1
+        [19, 10, 25, 14]  det 16  x1
+        [31, 18, 37, 22]  det 16  x1
+        [31, 20, 35, 22]  det -18  x1
+        [34, 25, 36, 27]  det 18  x1
+        [23, 18, 27, 22]  det 20  x1
+        [25, 16, 33, 22]  det 22  x1
+        [28, 15, 34, 19]  det 22  x1
+        [15, 12, 23, 20]  det 24  x1
+        [24, 13, 26, 13]  det -26  x1
+        [19, 14, 21, 14]  det -28  x1
+        [24, 15, 26, 15]  det -30  x1
+        [34, 19, 36, 21]  det 30  x1
+        [17, 16, 19, 16]  det -32  x1
+        [31, 18, 33, 18]  det -36  x1
+        [32, 23, 38, 29]  det 54  x1
+        [15, 12, 21, 12]  det -72  x1
+        [30, 21, 34, 21]  det -84  x1
+        [27, 18, 39, 30]  det 108  x1
+        [27, 24, 33, 24]  det -144  x1
+        [37, 32, 47, 32]  det -320  x1
+    kernel (4, -3, 1): 17 blocks; quotient coordinates [(3, 4, 0), (1, 0, -4)] (saturated: False); 17 distinct induced matrices
+        [31/2, -15/2, -15/2, 7/2]  det -2  x1
+        [9/2, -5/2, -5/2, 1/2]  det -4  x1
+        [55/2, -23/2, -27/2, 11/2]  det -4  x1
+        [9, -4, -3, 2]  det 6  x1
+        [15/2, -7/2, -11/2, 3/2]  det -8  x1
+        [29, -14, -13, 6]  det -8  x1
+        [32, -15, -10, 5]  det 10  x1
+        [33/2, -13/2, -9/2, 5/2]  det 12  x1
+        [27/2, -11/2, -23/2, 7/2]  det -16  x1
+        [53/2, -25/2, -25/2, 13/2]  det 16  x1
+        [77/2, -33/2, -37/2, 17/2]  det 22  x1
+        [63/2, -23/2, -15/2, 7/2]  det 24  x1
+        [51/2, -19/2, -47/2, 15/2]  det -32  x1
+        [45/2, -21/2, -33/2, 9/2]  det -72  x1
+        [99/2, -39/2, -27/2, 15/2]  det 108  x1
+        [81/2, -33/2, -69/2, 21/2]  det -144  x1
+        [111/2, -47/2, -91/2, 27/2]  det -320  x1
+    kernel (8, -11, 9): 13 blocks; quotient coordinates [(11, 8, 0), (9, 0, -8)] (saturated: False); 13 distinct induced matrices
+        [127/4, -97/4, 37/4, -27/4]  det 10  x1
+        [25/2, -21/2, -5/2, 1/2]  det -20  x1
+        [58, -43, 18, -13]  det 20  x1
+        [55, -42, 11, -8]  det 22  x1
+        [291/4, -261/4, 81/4, -71/4]  det 30  x1
+        [39/2, -31/2, -19/2, 11/2]  det -40  x1
+        [63/2, -59/2, -3/2, -1/2]  det -60  x1
+        [67/2, -51/2, -47/2, 31/2]  det -80  x1
+        [93/2, -85/2, -33/2, 25/2]  det -120  x1
+        [335/4, -297/4, 69/4, -67/4]  det -122  x1
+        [118, -103, 30, -25]  det 140  x1
+        [117/2, -93/2, -57/2, 33/2]  det -360  x1
+        [609/4, -519/4, 123/4, -93/4]  det 450  x1
+    kernel (4, -3, 0): 7 blocks; quotient coordinates [(3, 4, 0), (0, 0, 1)] (saturated: True); 7 distinct induced matrices
+        [7, 22, 1, 4]  det 6  x1
+        [23, 78, 4, 14]  det 10  x1
+        [11, 38, 2, 8]  det 12  x1
+        [13, 46, 2, 6]  det -14  x1
+        [19, 70, 4, 16]  det 24  x1
+        [23, 86, 3, 10]  det -28  x1
+        [33, 114, 6, 24]  det 108  x1
+    kernel (2, -3, 3): 7 blocks; quotient coordinates [(3, 2, 0), (3, 0, -2)] (saturated: False); 7 distinct induced matrices
+        [26, -15, 12, -7]  det -2  x1
+        [46, -27, 22, -13]  det -4  x1
+        [11, -6, 1, 0]  det 6  x1
+        [45, -26, 17, -10]  det -8  x1
+        [16, -9, -4, 3]  det 12  x1
+        [26, -15, -14, 9]  det 24  x1
+        [48, -27, -12, 9]  det 108  x1
+    kernel (2, 1, -3): 7 blocks; quotient coordinates [(1, -2, 0), (3, 0, 2)] (saturated: False); 7 distinct induced matrices
+        [-6, 5, -104, 81]  det 34  x1
+        [-3, 2, -97, 76]  det -34  x1
+        [-1, 0, -53, 40]  det -40  x1
+        [16, -13, -64, 49]  det -48  x1
+        [-1, 0, -93, 80]  det -80  x1
+        [8, -5, -124, 99]  det 172  x1
+        [30, -21, -120, 99]  det 450  x1
+    kernel (2, -1, 0): 5 blocks; quotient coordinates [(1, 2, 0), (0, 0, 1)] (saturated: True); 5 distinct induced matrices
+        [37, 62, 13, 22]  det 8  x1
+        [17, 32, 6, 12]  det 12  x1
+        [29, 56, 12, 24]  det 24  x1
+        [29, 56, 11, 20]  det -36  x1
+        [41, 78, 16, 32]  det 64  x1
+    kernel (8, -6, -1): 4 blocks; quotient coordinates [(3, 4, 0), (1, 0, 8)] (saturated: False); 4 distinct induced matrices
+        [25/2, 11/2, 35/2, 17/2]  det 10  x1
+        [41/2, 19/2, 67/2, 33/2]  det 20  x1
+        [49/2, 23/2, 67/2, 29/2]  det -30  x1
+        [75/2, 33/2, 105/2, 51/2]  det 90  x1
+    kernel (10, -1, -11): 4 blocks; quotient coordinates [(1, 10, 0), (11, 0, 10)] (saturated: False); 4 distinct induced matrices
+        [68/5, 37/5, 98/5, 57/5]  det 10  x1
+        [133/5, 72/5, 163/5, 92/5]  det 20  x1
+        [81/5, 44/5, 271/5, 154/5]  det 22  x1
+        [134/5, 81/5, 224/5, 141/5]  det 30  x1
+    kernel (4, -2, -1): 4 blocks; quotient coordinates [(1, 2, 0), (1, 0, 4)] (saturated: False); 4 distinct induced matrices
+        [39, 14, 67, 24]  det -2  x1
+        [16, 7, 28, 13]  det 12  x1
+        [28, 13, 52, 25]  det 24  x1
+        [28, 13, 56, 23]  det -84  x1
+    kernel (8, -5, 0): 4 blocks; quotient coordinates [(5, 8, 0), (0, 0, 1)] (saturated: True); 4 distinct induced matrices
+        [13, 94, 1, 8]  det 10  x1
+        [21, 158, 2, 16]  det 20  x1
+        [23, 174, 2, 14]  det -26  x1
+        [39, 282, 3, 24]  det 90  x1
+    kernel (2, -5, 5): 4 blocks; quotient coordinates [(5, 2, 0), (5, 0, -2)] (saturated: False); 4 distinct induced matrices
+        [91, -74, 59, -48]  det -2  x1
+        [36, -29, 14, -11]  det 10  x1
+        [47, -38, 3, -2]  det 20  x1
+        [78, -57, 32, -23]  det 30  x1
+    kernel (8, -8, 5): 4 blocks; quotient coordinates [(1, 1, 0), (5, 0, -8)] (saturated: True); 4 distinct induced matrices
+        [46, -4, -6, 1]  det 22  x1
+        [22, -2, -46, 3]  det -26  x1
+        [34, -2, -64, 3]  det -26  x1
+        [34, -3, -142, 11]  det -52  x1
+    kernel (10, -9, 3): 4 blocks; quotient coordinates [(9, 10, 0), (3, 0, -10)] (saturated: False); 4 distinct induced matrices
+        [301/5, -208/5, -103/5, 74/5]  det 34  x1
+        [164/5, -117/5, -52/5, 31/5]  det -40  x1
+        [249/5, -172/5, -117/5, 76/5]  det -48  x1
+        [346/5, -243/5, -78/5, 49/5]  det -80  x1
+    kernel (16, -47, 45): 3 blocks; quotient coordinates [(47, 16, 0), (45, 0, -16)] (saturated: False); 3 distinct induced matrices
+        [1233/8, -1123/8, 819/8, -745/8]  det 18  x1
+        [85/2, -81/2, 7/2, -11/2]  det -92  x1
+        [123/2, -115/2, -31/2, 23/2]  det -184  x1
+    kernel (12, -13, 7): 3 blocks; quotient coordinates [(13, 12, 0), (7, 0, -12)] (saturated: False); 3 distinct induced matrices
+        [181/3, -124/3, 1/3, 2/3]  det 54  x1
+        [47/2, -35/2, -27/2, 15/2]  det -60  x1
+        [81/2, -57/2, -61/2, 37/2]  det -120  x1
+    kernel (4, -1, -3): 3 blocks; quotient coordinates [(1, 4, 0), (3, 0, 4)] (saturated: False); 3 distinct induced matrices
+        [11, 6, 15, 8]  det -2  x1
+        [20, 11, 24, 13]  det -4  x1
+        [31/2, 17/2, 73/2, 39/2]  det -8  x1
+    kernel (4, -4, 3): 3 blocks; quotient coordinates [(1, 1, 0), (3, 0, -4)] (saturated: True); 3 distinct induced matrices
+        [38, -4, 12, -1]  det 10  x1
+        [18, -2, -16, 1]  det -14  x1
+        [28, -3, -56, 5]  det -28  x1
+    kernel (0, 3, -4): 3 blocks; quotient coordinates [(1, 0, 0), (0, 4, 3)] (saturated: True); 3 distinct induced matrices
+        [17, 6, 57, 20]  det -2  x1
+        [5, 2, 42, 14]  det -14  x1
+        [5, 2, 84, 28]  det -28  x1
+    kernel (14, -23, 19): 3 blocks; quotient coordinates [(23, 14, 0), (19, 0, -14)] (saturated: False); 3 distinct induced matrices
+        [542/7, -459/7, 200/7, -171/7]  det -18  x1
+        [197/7, -160/7, -29/7, 34/7]  det 42  x1
+        [302/7, -251/7, -134/7, 125/7]  det 84  x1
+    kernel (4, -7, 6): 3 blocks; quotient coordinates [(7, 4, 0), (3, 0, -2)] (saturated: False); 3 distinct induced matrices
+        [68, -93, 14, -19]  det 10  x1
+        [26, -37, 0, -1]  det -26  x1
+        [38, -53, -6, 7]  det -52  x1
+    kernel (14, -27, 25): 3 blocks; quotient coordinates [(27, 14, 0), (25, 0, -14)] (saturated: False); 3 distinct induced matrices
+        [577/7, -414/7, 289/7, -206/7]  det 16  x1
+        [226/7, -171/7, 34/7, -37/7]  det -52  x1
+        [317/7, -234/7, -57/7, 26/7]  det -104  x1
+    kernel (2, -9, 9): 2 blocks; quotient coordinates [(9, 2, 0), (9, 0, -2)] (saturated: False); 2 distinct induced matrices
+        [144, -133, 90, -83]  det 18  x1
+        [135, -124, 81, -74]  det 54  x1
+    kernel (2, -2, 1): 2 blocks; quotient coordinates [(1, 1, 0), (1, 0, -2)] (saturated: True); 2 distinct induced matrices
+        [42, -11, -30, 7]  det -36  x1
+        [84, -32, -32, 13]  det 68  x1
+    kernel (6, -1, -5): 2 blocks; quotient coordinates [(1, 6, 0), (5, 0, 6)] (saturated: False); 2 distinct induced matrices
+        [23, 16, 35, 24]  det -8  x1
+        [43, 30, 67, 50]  det 140  x1
+    kernel (16, -16, 7): 2 blocks; quotient coordinates [(1, 1, 0), (7, 0, -16)] (saturated: True); 2 distinct induced matrices
+        [42, -2, -212, 9]  det -46  x1
+        [52, -3, -372, 25]  det 184  x1
+    kernel (32, -203, 201): 1 blocks; quotient coordinates [(203, 32, 0), (201, 0, -32)] (saturated: False); 1 distinct induced matrices
+        [313/2, -309/2, 91/2, -95/2]  det -404  x1
+    kernel (8, -19, 17): 1 blocks; quotient coordinates [(19, 8, 0), (17, 0, -8)] (saturated: False); 1 distinct induced matrices
+        [147/2, -135/2, -39/2, 27/2]  det -324  x1
+    kernel (16, -55, 53): 1 blocks; quotient coordinates [(55, 16, 0), (53, 0, -16)] (saturated: False); 1 distinct induced matrices
+        [251/2, -247/2, 73/2, -77/2]  det -324  x1
+    kernel (16, -43, 41): 1 blocks; quotient coordinates [(43, 16, 0), (41, 0, -16)] (saturated: False); 1 distinct induced matrices
+        [267/2, -255/2, -15/2, 3/2]  det -756  x1
+    kernel (28, -37, 23): 1 blocks; quotient coordinates [(37, 28, 0), (23, 0, -28)] (saturated: False); 1 distinct induced matrices
+        [759/14, -563/14, -459/14, 263/14]  det -300  x1
+    kernel (216, -239, 149): 1 blocks; quotient coordinates [(239, 216, 0), (149, 0, -216)] (saturated: False); 1 distinct induced matrices
+        [1085/18, -761/18, -697/18, 373/18]  det -388  x1
+    kernel (140, -243, 193): 1 blocks; quotient coordinates [(243, 140, 0), (193, 0, -140)] (saturated: False); 1 distinct induced matrices
+        [753/10, -653/10, -317/10, 217/10]  det -436  x1
+    kernel (108, -173, 143): 1 blocks; quotient coordinates [(173, 108, 0), (143, 0, -108)] (saturated: False); 1 distinct induced matrices
+        [521/6, -449/6, -205/6, 133/6]  det -632  x1
+    kernel (64, -155, 145): 1 blocks; quotient coordinates [(155, 64, 0), (145, 0, -64)] (saturated: False); 1 distinct induced matrices
+        [225/2, -221/2, 75/2, -79/2]  det -300  x1
+    kernel (64, -199, 189): 1 blocks; quotient coordinates [(199, 64, 0), (189, 0, -64)] (saturated: False); 1 distinct induced matrices
+        [277/2, -273/2, 111/2, -115/2]  det -388  x1
+    kernel (64, -223, 213): 1 blocks; quotient coordinates [(223, 64, 0), (213, 0, -64)] (saturated: False); 1 distinct induced matrices
+        [317/2, -313/2, 119/2, -123/2]  det -436  x1
+    kernel (64, -163, 153): 1 blocks; quotient coordinates [(163, 64, 0), (153, 0, -64)] (saturated: False); 1 distinct induced matrices
+        [271/2, -263/2, 45/2, -53/2]  det -632  x1
+    kernel (16, -12, -3): 1 blocks; quotient coordinates [(3, 4, 0), (3, 0, 16)] (saturated: False); 1 distinct induced matrices
+        [47/2, 11/2, 143/2, 35/2]  det 18  x1
+    kernel (74, -29, -47): 1 blocks; quotient coordinates [(29, 74, 0), (47, 0, 74)] (saturated: False); 1 distinct induced matrices
+        [1366/37, 819/37, 1456/37, 891/37]  det 18  x1
+    kernel (8, -5, -2): 1 blocks; quotient coordinates [(5, 8, 0), (1, 0, 4)] (saturated: False); 1 distinct induced matrices
+        [63/2, 111/2, 27/2, 51/2]  det 54  x1
+    kernel (2, 5, -13): 1 blocks; quotient coordinates [(5, -2, 0), (13, 0, 2)] (saturated: False); 1 distinct induced matrices
+        [5, -2, -113, 56]  det 54  x1
+    kernel (8, -1, -6): 1 blocks; quotient coordinates [(1, 8, 0), (3, 0, 4)] (saturated: False); 1 distinct induced matrices
+        [35/2, 53/2, 25/2, 39/2]  det 10  x1
+    kernel (16, -17, 6): 1 blocks; quotient coordinates [(17, 16, 0), (3, 0, -8)] (saturated: False); 1 distinct induced matrices
+        [115/4, -213/4, -23/4, 49/4]  det 46  x1
+    kernel (2, -69, 81): 1 blocks; quotient coordinates [(69, 2, 0), (81, 0, -2)] (saturated: False); 1 distinct induced matrices
+        [451, -376, 449, -374]  det 150  x1
+    kernel (20, -25, 12): 1 blocks; quotient coordinates [(5, 4, 0), (3, 0, -5)] (saturated: True); 1 distinct induced matrices
+        [43, -26, -26, 14]  det -74  x1
+    kernel (10, -9, 6): 1 blocks; quotient coordinates [(9, 10, 0), (3, 0, -5)] (saturated: False); 1 distinct induced matrices
+        [173/5, -134/5, -34/5, 22/5]  det -30  x1
+    kernel (32, -21, 1): 1 blocks; quotient coordinates [(21, 32, 0), (1, 0, -32)] (saturated: False); 1 distinct induced matrices
+        [547/16, -271/16, -393/16, 205/16]  det 22  x1
+    kernel (128, -69, -31): 1 blocks; quotient coordinates [(69, 128, 0), (31, 0, 128)] (saturated: False); 1 distinct induced matrices
+        [2531/64, 2255/64, 2265/64, 2141/64]  det 76  x1
+    kernel (10, -7, 1): 1 blocks; quotient coordinates [(7, 10, 0), (1, 0, -10)] (saturated: False); 1 distinct induced matrices
+        [134/5, -73/5, -78/5, 41/5]  det -8  x1
+    kernel (2, 1, -4): 1 blocks; quotient coordinates [(1, -2, 0), (2, 0, 1)] (saturated: True); 1 distinct induced matrices
+        [11, -12, -23, 26]  det 10  x1
+    kernel (6, -5, 2): 1 blocks; quotient coordinates [(5, 6, 0), (1, 0, -3)] (saturated: False); 1 distinct induced matrices
+        [125/3, -112/3, -38/3, 28/3]  det -84  x1
+    kernel (96, -52, -17): 1 blocks; quotient coordinates [(13, 24, 0), (17, 0, 96)] (saturated: False); 1 distinct induced matrices
+        [475/12, 109/12, 1655/12, 401/12]  det 70  x1
+    kernel (16, -9, 0): 1 blocks; quotient coordinates [(9, 16, 0), (0, 0, 1)] (saturated: True); 1 distinct induced matrices
+        [25, 382, 1, 16]  det 18  x1
+    kernel (0, 7, -8): 1 blocks; quotient coordinates [(1, 0, 0), (0, 8, 7)] (saturated: True); 1 distinct induced matrices
+        [9, 2, 150, 30]  det -30  x1
+    kernel (62, -195, 183): 1 blocks; quotient coordinates [(195, 62, 0), (183, 0, -62)] (saturated: False); 1 distinct induced matrices
+        [3017/31, -2760/31, 7/31, 114/31]  det 378  x1
+    kernel (4, -11, 10): 1 blocks; quotient coordinates [(11, 4, 0), (5, 0, -2)] (saturated: False); 1 distinct induced matrices
+        [68, -117, 8, -15]  det -84  x1
+    kernel (28, -49, 38): 1 blocks; quotient coordinates [(7, 4, 0), (19, 0, -14)] (saturated: False); 1 distinct induced matrices
+        [64, -15, -50, 9]  det -174  x1
+    kernel (12, -13, 9): 1 blocks; quotient coordinates [(13, 12, 0), (3, 0, -4)] (saturated: False); 1 distinct induced matrices
+        [81/2, -193/2, -5/2, 13/2]  det 22  x1
+    kernel (10, -12, 9): 1 blocks; quotient coordinates [(6, 5, 0), (9, 0, -10)] (saturated: False); 1 distinct induced matrices
+        [238/5, -87/5, -98/5, 27/5]  det -84  x1
+    kernel (68, -125, 117): 1 blocks; quotient coordinates [(125, 68, 0), (117, 0, -68)] (saturated: False); 1 distinct induced matrices
+        [2383/34, -1725/34, -205/34, 31/34]  det -242  x1
+    kernel (8, -6, 3): 1 blocks; quotient coordinates [(3, 4, 0), (3, 0, -8)] (saturated: False); 1 distinct induced matrices
+        [81/2, -39/2, -63/2, 33/2]  det 54  x1
+    kernel (0, 10, -11): 1 blocks; quotient coordinates [(1, 0, 0), (0, 11, 10)] (saturated: True); 1 distinct induced matrices
+        [9, 2, 231, 42]  det -84  x1
+    kernel (26, -77, 73): 1 blocks; quotient coordinates [(77, 26, 0), (73, 0, -26)] (saturated: False); 1 distinct induced matrices
+        [1302/13, -1199/13, 348/13, -301/13]  det 150  x1
+    kernel (58, -141, 129): 1 blocks; quotient coordinates [(141, 58, 0), (129, 0, -58)] (saturated: False); 1 distinct induced matrices
+        [2624/29, -2309/29, 346/29, -391/29]  det -270  x1
+    kernel (54, -163, 155): 1 blocks; quotient coordinates [(163, 54, 0), (155, 0, -54)] (saturated: False); 1 distinct induced matrices
+        [2846/27, -2521/27, 652/27, -659/27]  det -318  x1
+    kernel (22, -22, 15): 1 blocks; quotient coordinates [(1, 1, 0), (15, 0, -22)] (saturated: True); 1 distinct induced matrices
+        [50, -2, -212, 7]  det -74  x1
+    kernel (32, -23, 12): 1 blocks; quotient coordinates [(23, 32, 0), (3, 0, -8)] (saturated: False); 1 distinct induced matrices
+        [197/4, -765/4, -23/4, 95/4]  det 70  x1
+    kernel (22, -55, 51): 1 blocks; quotient coordinates [(5, 2, 0), (51, 0, -22)] (saturated: False); 1 distinct induced matrices
+        [99, -8, 183, -18]  det -318  x1
+    kernel (102, -173, 147): 1 blocks; quotient coordinates [(173, 102, 0), (49, 0, -34)] (saturated: False); 1 distinct induced matrices
+        [1457/17, -3790/17, -59/17, 90/17]  det -320  x1
+    kernel (16, -12, 7): 1 blocks; quotient coordinates [(3, 4, 0), (7, 0, -16)] (saturated: False); 1 distinct induced matrices
+        [103/2, -25/2, -165/2, 43/2]  det 76  x1
+    kernel (6, -15, 14): 1 blocks; quotient coordinates [(5, 2, 0), (7, 0, -3)] (saturated: True); 1 distinct induced matrices
+        [99, -60, 40, -26]  det -174  x1
+    kernel (38, -123, 119): 1 blocks; quotient coordinates [(123, 38, 0), (119, 0, -38)] (saturated: False); 1 distinct induced matrices
+        [2226/19, -2027/19, 920/19, -877/19]  det -242  x1
+    kernel (58, -129, 118): 1 blocks; quotient coordinates [(129, 58, 0), (59, 0, -29)] (saturated: False); 1 distinct induced matrices
+        [3011/29, -5300/29, 100/29, -314/29]  det -494  x1
+    kernel (0, 6, -7): 1 blocks; quotient coordinates [(1, 0, 0), (0, 7, 6)] (saturated: True); 1 distinct induced matrices
+        [11, 2, 156, 26]  det -26  x1
+    kernel (16, -10, -3): 1 blocks; quotient coordinates [(5, 8, 0), (3, 0, 16)] (saturated: False); 1 distinct induced matrices
+        [99/4, 47/4, 149/4, 73/4]  det 14  x1
+    kernel (8, -14, 9): 1 blocks; quotient coordinates [(7, 4, 0), (9, 0, -8)] (saturated: False); 1 distinct induced matrices
+        [89/2, -37/2, -17/2, 5/2]  det -46  x1
+    kernel (14, -5, -7): 1 blocks; quotient coordinates [(5, 14, 0), (1, 0, 2)] (saturated: False); 1 distinct induced matrices
+        [33, 170, 5, 26]  det 8  x1
+    kernel (54, 39, -95): 1 blocks; quotient coordinates [(13, -18, 0), (95, 0, 54)] (saturated: False); 1 distinct induced matrices
+        [296/9, -73/9, -1826/9, 487/9]  det 134  x1
+    kernel (8, -4, -3): 1 blocks; quotient coordinates [(1, 2, 0), (3, 0, 8)] (saturated: False); 1 distinct induced matrices
+        [26, 3, 96, 11]  det -2  x1
+    kernel (8, -2, -7): 1 blocks; quotient coordinates [(1, 4, 0), (7, 0, 8)] (saturated: False); 1 distinct induced matrices
+        [30, 7, 80, 19]  det 10  x1
+    kernel (24, -5, -23): 1 blocks; quotient coordinates [(5, 24, 0), (23, 0, 24)] (saturated: False); 1 distinct induced matrices
+        [91/3, 50/3, 127/3, 68/3]  det -18  x1
+    kernel (32, -17, -10): 1 blocks; quotient coordinates [(17, 32, 0), (5, 0, 16)] (saturated: False); 1 distinct induced matrices
+        [81/2, 145/2, 37/2, 69/2]  det 56  x1
+    kernel (6, -4, 1): 1 blocks; quotient coordinates [(2, 3, 0), (1, 0, -6)] (saturated: False); 1 distinct induced matrices
+        [106/3, -38/3, -112/3, 41/3]  det 10  x1
+    kernel (14, -14, 9): 1 blocks; quotient coordinates [(1, 1, 0), (9, 0, -14)] (saturated: True); 1 distinct induced matrices
+        [42, -2, -128, 5]  det -46  x1
+    kernel (38, -37, 23): 1 blocks; quotient coordinates [(37, 38, 0), (23, 0, -38)] (saturated: False); 1 distinct induced matrices
+        [997/19, -734/19, -397/19, 314/19]  det 60  x1
+    kernel (8, -3, -2): 1 blocks; quotient coordinates [(3, 8, 0), (1, 0, 4)] (saturated: False); 1 distinct induced matrices
+        [79/2, 149/2, 37/2, 71/2]  det 24  x1
+    kernel (6, -25, 31): 1 blocks; quotient coordinates [(25, 6, 0), (31, 0, -6)] (saturated: False); 1 distinct induced matrices
+        [355/3, -244/3, 205/3, -148/3]  det -280  x1
+    kernel (4, 7, -11): 1 blocks; quotient coordinates [(7, -4, 0), (11, 0, 4)] (saturated: False); 1 distinct induced matrices
+        [-31/2, 25/2, -167/2, 137/2]  det -18  x1
+    kernel (64, -23, -11): 1 blocks; quotient coordinates [(23, 64, 0), (11, 0, 64)] (saturated: False); 1 distinct induced matrices
+        [1277/32, 1231/32, 1145/32, 1123/32]  det 24  x1
+    kernel (60, -129, 121): 1 blocks; quotient coordinates [(43, 20, 0), (121, 0, -60)] (saturated: False); 1 distinct induced matrices
+        [763/10, -199/10, 461/10, -153/10]  det -250  x1
+    kernel (152, -211, 165): 1 blocks; quotient coordinates [(211, 152, 0), (165, 0, -152)] (saturated: False); 1 distinct induced matrices
+        [5285/76, -3799/76, -1149/76, 415/76]  det -376  x1
+    kernel (8, -5, 2): 1 blocks; quotient coordinates [(5, 8, 0), (1, 0, -4)] (saturated: False); 1 distinct induced matrices
+        [99/2, -193/2, -25/2, 51/2]  det 56  x1
+    kernel (22, -69, 65): 1 blocks; quotient coordinates [(69, 22, 0), (65, 0, -22)] (saturated: False); 1 distinct induced matrices
+        [1395/11, -1304/11, 481/11, -438/11]  det 134  x1
+    kernel (10, -29, 27): 1 blocks; quotient coordinates [(29, 10, 0), (27, 0, -10)] (saturated: False); 1 distinct induced matrices
+        [561/5, -512/5, 223/5, -216/5]  det -280  x1
+    kernel (98, -201, 175): 1 blocks; quotient coordinates [(201, 98, 0), (25, 0, -14)] (saturated: False); 1 distinct induced matrices
+        [647/7, -4034/7, 15/7, -122/7]  det -376  x1
+    kernel (186, -295, 239): 1 blocks; quotient coordinates [(295, 186, 0), (239, 0, -186)] (saturated: False); 1 distinct induced matrices
+        [8501/93, -7276/93, -1025/93, 334/93]  det -534  x1
+    kernel (8, -3, -5): 1 blocks; quotient coordinates [(3, 8, 0), (5, 0, 8)] (saturated: False); 1 distinct induced matrices
+        [103/4, 59/4, 121/4, 69/4]  det -2  x1
+    kernel (2, 3, -8): 1 blocks; quotient coordinates [(3, -2, 0), (4, 0, 1)] (saturated: True); 1 distinct induced matrices
+        [-5, 6, -47, 52]  det 22  x1
+    kernel (36, -11, -27): 1 blocks; quotient coordinates [(11, 36, 0), (3, 0, 4)] (saturated: False); 1 distinct induced matrices
+        [65/2, 289/2, 9/2, 41/2]  det 16  x1
+    kernel (64, -39, -13): 1 blocks; quotient coordinates [(39, 64, 0), (13, 0, 64)] (saturated: False); 1 distinct induced matrices
+        [1375/32, 1219/32, 1141/32, 1089/32]  det 104  x1
+    kernel (6, -7, 4): 1 blocks; quotient coordinates [(7, 6, 0), (2, 0, -3)] (saturated: False); 1 distinct induced matrices
+        [41, -56, -4, 6]  det 22  x1
+    kernel (12, 4, -19): 1 blocks; quotient coordinates [(1, -3, 0), (19, 0, 12)] (saturated: False); 1 distinct induced matrices
+        [16, -3, -202, 35]  det -46  x1
+    kernel (12, -8, -1): 1 blocks; quotient coordinates [(2, 3, 0), (1, 0, 12)] (saturated: False); 1 distinct induced matrices
+        [36, 8, 102, 25]  det 84  x1
+    kernel (6, -13, 13): 1 blocks; quotient coordinates [(13, 6, 0), (13, 0, -6)] (saturated: False); 1 distinct induced matrices
+        [85, -60, -7, 8]  det 260  x1
+    kernel (0, 4, -5): 1 blocks; quotient coordinates [(1, 0, 0), (0, 5, 4)] (saturated: True); 1 distinct induced matrices
+        [13, 4, 126, 36]  det -36  x1
+    kernel (28, -3, -19): 1 blocks; quotient coordinates [(3, 28, 0), (19, 0, 28)] (saturated: False); 1 distinct induced matrices
+        [176/7, 131/7, 256/7, 195/7]  det 16  x1
+    kernel (8, -6, 1): 1 blocks; quotient coordinates [(3, 4, 0), (1, 0, -8)] (saturated: False); 1 distinct induced matrices
+        [39, -18, -43, 22]  det 84  x1
+    kernel (4, 11, -17): 1 blocks; quotient coordinates [(11, -4, 0), (17, 0, 4)] (saturated: False); 1 distinct induced matrices
+        [-26, 21, -114, 91]  det 28  x1
+    kernel (4, -37, 43): 1 blocks; quotient coordinates [(37, 4, 0), (43, 0, -4)] (saturated: False); 1 distinct induced matrices
+        [216, -173, 184, -147]  det 80  x1
+    kernel (68, -117, 91): 1 blocks; quotient coordinates [(117, 68, 0), (91, 0, -68)] (saturated: False); 1 distinct induced matrices
+        [1146/17, -859/17, -106/17, 27/17]  det -208  x1
+    kernel (64, -52, 13): 1 blocks; quotient coordinates [(13, 16, 0), (13, 0, -64)] (saturated: False); 1 distinct induced matrices
+        [217/4, -37/4, -543/4, 83/4]  det -130  x1
+    kernel (16, -10, 3): 1 blocks; quotient coordinates [(5, 8, 0), (3, 0, -16)] (saturated: False); 1 distinct induced matrices
+        [99/2, -47/2, -107/2, 55/2]  det 104  x1
+    kernel (28, -67, 63): 1 blocks; quotient coordinates [(67, 28, 0), (9, 0, -4)] (saturated: False); 1 distinct induced matrices
+        [109, -668, 3, -16]  det 260  x1
+    kernel (44, -107, 101): 1 blocks; quotient coordinates [(107, 44, 0), (101, 0, -44)] (saturated: False); 1 distinct induced matrices
+        [1090/11, -917/11, 366/11, -331/11]  det -208  x1
+    kernel (16, -34, 31): 1 blocks; quotient coordinates [(17, 8, 0), (31, 0, -16)] (saturated: False); 1 distinct induced matrices
+        [187/2, -79/2, 81/2, -37/2]  det -130  x1
+    kernel (4, -13, 13): 1 blocks; quotient coordinates [(13, 4, 0), (13, 0, -4)] (saturated: False); 1 distinct induced matrices
+        [134, -113, 48, -43]  det -338  x1
+    kernel (96, -88, 31): 1 blocks; quotient coordinates [(11, 12, 0), (31, 0, -96)] (saturated: False); 1 distinct induced matrices
+        [313/6, -35/6, -1195/6, 161/6]  det 238  x1
+    kernel (14, -43, 46): 1 blocks; quotient coordinates [(43, 14, 0), (23, 0, -7)] (saturated: False); 1 distinct induced matrices
+        [711/7, -1052/7, 134/7, -186/7]  det 178  x1
+    kernel (10, -31, 33): 1 blocks; quotient coordinates [(31, 10, 0), (33, 0, -10)] (saturated: False); 1 distinct induced matrices
+        [507/5, -374/5, 261/5, -202/5]  det -192  x1
+    kernel (10, -13, 9): 1 blocks; quotient coordinates [(13, 10, 0), (9, 0, -10)] (saturated: False); 1 distinct induced matrices
+        [306/5, -217/5, -42/5, 19/5]  det -132  x1
+    kernel (32, -17, -4): 1 blocks; quotient coordinates [(17, 32, 0), (1, 0, 8)] (saturated: False); 1 distinct induced matrices
+        [179/4, 665/4, 35/4, 137/4]  det 78  x1
+    kernel (10, -1, -7): 1 blocks; quotient coordinates [(1, 10, 0), (7, 0, 10)] (saturated: False); 1 distinct induced matrices
+        [187/5, 134/5, 259/5, 188/5]  det 18  x1
+    kernel (6, -9, 7): 1 blocks; quotient coordinates [(3, 2, 0), (7, 0, -6)] (saturated: False); 1 distinct induced matrices
+        [71, -18, -21, 6]  det 48  x1
+    kernel (22, -43, 39): 1 blocks; quotient coordinates [(43, 22, 0), (39, 0, -22)] (saturated: False); 1 distinct induced matrices
+        [1143/11, -948/11, -159/11, 210/11]  det 738  x1
+    kernel (2, -4, 3): 1 blocks; quotient coordinates [(2, 1, 0), (3, 0, -2)] (saturated: True); 1 distinct induced matrices
+        [74, -33, 12, -7]  det -122  x1
+    kernel (4, -4, 1): 1 blocks; quotient coordinates [(1, 1, 0), (1, 0, -4)] (saturated: True); 1 distinct induced matrices
+        [60, -11, -74, 13]  det -34  x1
+    kernel (4, -7, 9): 1 blocks; quotient coordinates [(7, 4, 0), (9, 0, -4)] (saturated: False); 1 distinct induced matrices
+        [215/2, -103/2, 137/2, -65/2]  det 34  x1
+    kernel (8, -5, -1): 1 blocks; quotient coordinates [(5, 8, 0), (1, 0, 8)] (saturated: False); 1 distinct induced matrices
+        [55, 26, 41, 20]  det 34  x1
+    kernel (14, -19, 15): 1 blocks; quotient coordinates [(19, 14, 0), (15, 0, -14)] (saturated: False); 1 distinct induced matrices
+        [841/7, -600/7, 143/7, -92/7]  det 172  x1
+(4) unimodular blocks: 46
+      1 [1, 2, 0, 0, 0, 1, 1, 1, 0] det 1 charpoly t**3 - t**2 - t - 1 [1 0 0 0] 
+     13 [1, 2, 2, 1, 1, 0, 1, 2, 1] det 1 charpoly t**3 - 3*t**2 - t - 1 [2 0010 0 1] 
+     26 [1, 4, 4, 2, 3, 2, 2, 4, 3] det 1 charpoly (t + 1)*(t**2 - 8*t - 1) [3 000100110 0 2] eigenvalue -1: line (2, -1, 0); plane normal (1, 0, -1) (factor -1)
+     42 [1, 8, 8, 4, 9, 8, 4, 10, 9] det 1 charpoly t**3 - 19*t**2 - 45*t - 1 [4 0000100011001110 0 3] 
+     56 [1, 16, 16, 8, 27, 26, 8, 28, 27] det 1 charpoly t**3 - 55*t**2 - 201*t - 1 [5 0000010000110001110011110 0 4] 
+     64 [1, 32, 32, 16, 81, 80, 16, 82, 81] det 1 charpoly t**3 - 163*t**2 - 861*t - 1 [6 000000100000110000111000111100111110 0 5] 
+     67 [3, 4, 2, 1, 2, 1, 2, 3, 2] det 1 charpoly t**3 - 7*t**2 + 5*t - 1 [3 001100010 0 2] 
+    146 [5, 6, 4, 4, 6, 3, 5, 7, 4] det 1 charpoly t**3 - 15*t**2 + 9*t - 1 [4 0001100011000110 3 2] 
+    157 [5, 8, 4, 2, 3, 2, 4, 6, 3] det 1 charpoly t**3 - 11*t**2 - 5*t - 1 [4 0001100011000110 2 1] 
+    195 [5, 10, 8, 2, 4, 3, 3, 7, 6] det 1 charpoly t**3 - 15*t**2 + 9*t - 1 [4 0001100011000110 1 0] 
+    309 [9, 10, 8, 12, 16, 9, 13, 17, 10] det 1 charpoly t**3 - 35*t**2 + 17*t - 1 [5 0000110000110001110001110 4 3] 
+    341 [9, 14, 6, 7, 11, 6, 9, 14, 7] det 1 charpoly t**3 - 27*t**2 + 3*t - 1 [5 0000110000110001110001110 3 2] 
+    350 [9, 14, 8, 4, 6, 3, 7, 11, 6] det 1 charpoly t**3 - 21*t**2 - t - 1 [5 0010110000010001110001110 3 2] 
+    382 [9, 18, 14, 3, 7, 6, 7, 14, 11] det 1 charpoly t**3 - 27*t**2 + 3*t - 1 [5 0000110000110001110001110 2 1] 
+    445 [9, 26, 24, 4, 10, 9, 5, 17, 16] det 1 charpoly t**3 - 35*t**2 + 17*t - 1 [5 0000110000110001110001110 1 0] 
+    506 [11, 14, 12, 13, 21, 16, 14, 22, 17] det 1 charpoly t**3 - 49*t**2 + 73*t - 1 [5 0001110000110000110001110 0 4] 
+    524 [11, 20, 14, 7, 14, 11, 10, 19, 14] det -1 charpoly t**3 - 39*t**2 + 15*t + 1 [5 0001110000110000110001110 3 2] 
+    563 [11, 28, 26, 6, 17, 16, 7, 22, 21] det 1 charpoly t**3 - 49*t**2 + 73*t - 1 [5 0001110000110000110001110 1 0] 
+    597 [13, 18, 10, 5, 7, 4, 9, 12, 7] det 1 charpoly t**3 - 27*t**2 + 3*t - 1 [5 0100100010110001010001110 4 1] 
+    711 [15, 20, 18, 28, 46, 39, 29, 47, 40] det 1 charpoly t**3 - 101*t**2 + 215*t - 1 [6 001101100000010000011000111100011110 0 5] 
+    733 [15, 24, 14, 13, 20, 11, 16, 25, 14] det 1 charpoly t**3 - 49*t**2 - 21*t - 1 [6 001101100000010000011000111100011110 4 3] 
+    769 [15, 32, 26, 7, 14, 11, 12, 25, 20] det 1 charpoly t**3 - 49*t**2 - 21*t - 1 [6 001001100000010000111000111100011110 3 2] 
+    804 [15, 58, 56, 9, 40, 39, 10, 47, 46] det 1 charpoly t**3 - 101*t**2 + 215*t - 1 [6 001001100000010000111000111100011110 1 0] 
+    831 [17, 18, 16, 34, 42, 27, 35, 43, 28] det 1 charpoly t**3 - 87*t**2 + 33*t - 1 [6 000001100000110000111000111100011110 5 4] 
+    848 [17, 26, 10, 21, 33, 16, 23, 36, 17] det 1 charpoly t**3 - 67*t**2 + 59*t - 1 [6 000001100000110000111000111100011110 4 3] 
+    851 [17, 26, 14, 7, 11, 6, 13, 20, 11] det 1 charpoly t**3 - 39*t**2 + 11*t - 1 [6 011001000100010000101000111100011110 4 2] 
+    858 [17, 32, 24, 12, 25, 20, 16, 32, 25] det 1 charpoly (t - 1)*(t**2 - 66*t + 1) [6 000001100000110000111000111100011110 3 2] eigenvalue 1: line (2, -1, 0); plane normal (1, 0, -1) (factor 1)
+    874 [17, 46, 42, 5, 17, 16, 13, 36, 33] det 1 charpoly t**3 - 67*t**2 + 59*t - 1 [6 000001100000110000111000111100011110 2 1] 
+    893 [17, 70, 68, 8, 28, 27, 9, 43, 42] det 1 charpoly t**3 - 87*t**2 + 33*t - 1 [6 000001100000110000111000111100011110 1 0] 
+    903 [19, 22, 20, 36, 52, 41, 37, 53, 42] det -1 charpoly t**3 - 113*t**2 + 265*t + 1 [6 001011100000010000111000011100011110 0 5] 
+    950 [19, 54, 50, 29, 53, 44, 30, 58, 49] det 1 charpoly t**3 - 121*t**2 - 1083*t - 1 [6 000101100000110000011000111100011110 2 5] 
+    956 [19, 60, 58, 25, 49, 44, 27, 58, 53] det 1 charpoly t**3 - 121*t**2 - 1083*t - 1 [6 001011100000010000111000011100011110 1 4] 
+    961 [19, 74, 72, 10, 42, 41, 11, 53, 52] det -1 charpoly t**3 - 113*t**2 + 265*t + 1 [6 000101100000110000011000111100011110 1 0] 
+    987 [23, 30, 28, 37, 69, 60, 38, 70, 61] det 1 charpoly t**3 - 153*t**2 + 825*t - 1 [6 000011100000110000111000011100011110 0 5] 
+    994 [23, 32, 18, 9, 12, 7, 18, 25, 14] det 1 charpoly t**3 - 49*t**2 - 21*t - 1 [6 011001000010010000111000101100011110 5 2] 
+    1016 [23, 34, 14, 29, 42, 21, 31, 45, 22] det 1 charpoly t**3 - 87*t**2 + 31*t - 1 [6 000111100000110000011000011100011110 5 4] 
+    1018 [23, 36, 18, 9, 14, 7, 16, 25, 12] det 1 charpoly t**3 - 49*t**2 - 21*t - 1 [6 010001000100110000101000111100011110 4 1] 
+    1039 [23, 40, 26, 25, 46, 33, 28, 51, 36] det 1 charpoly t**3 - 105*t**2 + 131*t - 1 [6 000011100000110000111000011100011110 4 3] 
+    1067 [23, 56, 50, 13, 36, 33, 20, 51, 46] det 1 charpoly t**3 - 105*t**2 + 131*t - 1 [6 000111100000110000011000011100011110 3 2] 
+    1078 [23, 62, 58, 7, 22, 21, 17, 45, 42] det 1 charpoly t**3 - 87*t**2 + 31*t - 1 [6 000011100000110000111000011100011110 2 1] 
+    1098 [23, 76, 74, 14, 61, 60, 15, 70, 69] det 1 charpoly t**3 - 153*t**2 + 825*t - 1 [6 000111100000110000011000011100011110 1 0] 
+    1128 [25, 36, 20, 18, 25, 14, 24, 34, 19] det -1 charpoly t**3 - 69*t**2 - 29*t + 1 [6 001101100010010000011000101100011110 5 3] 
+    1150 [25, 48, 36, 10, 19, 14, 18, 34, 25] det -1 charpoly t**3 - 69*t**2 - 29*t + 1 [6 010011000100110000101000011100011110 4 1] 
+    1430 [33, 42, 26, 13, 17, 10, 21, 26, 17] det 1 charpoly t**3 - 67*t**2 + 59*t - 1 [6 010001000010110000111000101100011110 5 1] 
+    1582 [37, 48, 28, 22, 28, 17, 28, 35, 22] det 1 charpoly t**3 - 87*t**2 + 31*t - 1 [6 000011100010110000111000001100011110 5 4] 
+    1639 [37, 56, 44, 14, 22, 17, 24, 35, 28] det 1 charpoly t**3 - 87*t**2 + 31*t - 1 [6 010011000001110000111000011100001110 0 1] 
+    invariant lines shared by >= 2 unimodular blocks: {(2, -1, 0): [(26, -1), (858, 1)]}
+    invariant planes shared by >= 2 unimodular blocks: {(1, 0, -1): [(26, -1), (858, 1)]}
+    invertible blocks: invariant lines shared by >= 2: {(2, -1, 0): [(26, -1), (171, 1), (858, 1), (1777, 1)], (1, 0, -1): [(1195, -1), (1473, -1)]}
+    invertible blocks: invariant planes shared by >= 2: {(1, 0, -1): [(26, -1), (171, 1), (858, 1), (1757, 1)], (1, -2, 0): [(1209, -1), (1437, -1)]}
+(5) seam matrices with e-column (0, c, 0): c = 0 for 267 blocks (the (h, B)-closed singular blocks); c = +-1:
+      none

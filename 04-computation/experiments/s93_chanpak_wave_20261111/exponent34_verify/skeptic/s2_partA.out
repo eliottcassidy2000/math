@@ -1,0 +1,61 @@
+(A)1 w=1: strings in {-2..2}^w with D = D* = 0: 1 (must be 1, the zero string)
+(A)1 w=2: strings in {-2..2}^w with D = D* = 0: 1 (must be 1, the zero string)
+(A)1 w=3: strings in {-2..2}^w with D = D* = 0: 1 (must be 1, the zero string)
+(A)1 w=4: strings in {-2..2}^w with D = D* = 0: 1 (must be 1, the zero string)
+(A)1 w=5: strings in {-2..2}^w with D = D* = 0: 1 (must be 1, the zero string)
+(A)1 w=6: strings in {-2..2}^w with D = D* = 0: 1 (must be 1, the zero string)
+(A)1 w=7: strings in {-2..2}^w with D = D* = 0: 1 (must be 1, the zero string)
+(A)1 w=8: strings in {-2..2}^w with D = D* = 0: 1 (must be 1, the zero string)
+(A)1 w=9: strings in {-2..2}^w with D = D* = 0: 1 (must be 1, the zero string)
+(A)1 w=10: strings in {-2..2}^w with D = D* = 0: 1 (must be 1, the zero string)
+(A)2 w=1: 3^w = 3 strings, distinct (D,D*) = 3, injective: True; D(eps)=0 only for eps=0: True
+(A)2 w=2: 3^w = 9 strings, distinct (D,D*) = 9, injective: True; D(eps)=0 only for eps=0: True
+(A)2 w=3: 3^w = 27 strings, distinct (D,D*) = 27, injective: True; D(eps)=0 only for eps=0: True
+(A)2 w=4: 3^w = 81 strings, distinct (D,D*) = 81, injective: True; D(eps)=0 only for eps=0: True
+(A)2 w=5: 3^w = 243 strings, distinct (D,D*) = 243, injective: True; D(eps)=0 only for eps=0: True
+(A)2 w=6: 3^w = 729 strings, distinct (D,D*) = 729, injective: True; D(eps)=0 only for eps=0: True
+(A)2 w=7: 3^w = 2187 strings, distinct (D,D*) = 2187, injective: True; D(eps)=0 only for eps=0: True
+(A)2 w=8: 3^w = 6561 strings, distinct (D,D*) = 6561, injective: True; D(eps)=0 only for eps=0: True
+(A)2 w=9: 3^w = 19683 strings, distinct (D,D*) = 19683, injective: True; D(eps)=0 only for eps=0: True
+(A)2 w=10: 3^w = 59049 strings, distinct (D,D*) = 59049, injective: True; D(eps)=0 only for eps=0: True
+(A)2 w=11: 3^w = 177147 strings, distinct (D,D*) = 177147, injective: True; D(eps)=0 only for eps=0: True
+(A)2 w=12: 3^w = 531441 strings, distinct (D,D*) = 531441, injective: True; D(eps)=0 only for eps=0: True
+(A)2 w=13: 3^w = 1594323 strings, distinct (D,D*) = 1594323, injective: True; D(eps)=0 only for eps=0: True
+direct w=1: distinct differences 3 (3^w=3) support==image:True r=2^z:True  energy=6 6^w=6 equal:True  (A)4 sum=2.0000  constant=sum/(6^w 2^(-w/2))=0.4714 (<=42: True)
+direct w=2: distinct differences 9 (3^w=9) support==image:True r=2^z:True  energy=36 6^w=36 equal:True  (A)4 sum=16.8116  constant=sum/(6^w 2^(-w/2))=0.9340 (<=42: True)
+direct w=3: distinct differences 27 (3^w=27) support==image:True r=2^z:True  energy=216 6^w=216 equal:True  (A)4 sum=105.1706  constant=sum/(6^w 2^(-w/2))=1.3772 (<=42: True)
+direct w=4: distinct differences 81 (3^w=81) support==image:True r=2^z:True  energy=1296 6^w=1296 equal:True  (A)4 sum=582.3639  constant=sum/(6^w 2^(-w/2))=1.7974 (<=42: True)
+direct w=5: distinct differences 243 (3^w=243) support==image:True r=2^z:True  energy=7776 6^w=7776 equal:True  (A)4 sum=3016.4540  constant=sum/(6^w 2^(-w/2))=2.1944 (<=42: True)
+direct w=6: distinct differences 729 (3^w=729) support==image:True r=2^z:True  energy=46656 6^w=46656 equal:True  (A)4 sum=14981.8241  constant=sum/(6^w 2^(-w/2))=2.5689 (<=42: True)
+direct w=7: distinct differences 2187 (3^w=2187) support==image:True r=2^z:True  energy=279936 6^w=279936 equal:True  (A)4 sum=72300.4855  constant=sum/(6^w 2^(-w/2))=2.9220 (<=42: True)
+direct w=8: distinct differences 6561 (3^w=6561) support==image:True r=2^z:True  energy=1679616 6^w=1679616 equal:True  (A)4 sum=341698.8653  constant=sum/(6^w 2^(-w/2))=3.2550 (<=42: True)
+direct w=9: distinct differences 19683 (3^w=19683) support==image:True r=2^z:True  energy=10077696 6^w=10077696 equal:True  (A)4 sum=1589523.3037  constant=sum/(6^w 2^(-w/2))=3.5690 (<=42: True)
+direct w=10: distinct differences 59049 (3^w=59049) support==image:True r=2^z:True  energy=60466176 6^w=60466176 equal:True  (A)4 sum=7303050.0346  constant=sum/(6^w 2^(-w/2))=3.8649 (<=42: True)
+direct w=11: distinct differences 177147 (3^w=177147) support==image:True r=2^z:True  energy=362797056 6^w=362797056 equal:True  (A)4 sum=33221315.3746  constant=sum/(6^w 2^(-w/2))=4.1440 (<=42: True)
+(A)4 eps w=2: constant 0.9340  max_j F_j/((5/3)(2/3)^j 6^w) = 0.6500 (<=1: True)
+(A)4 eps w=3: constant 1.3772  max_j F_j/((5/3)(2/3)^j 6^w) = 0.6833 (<=1: True)
+(A)4 eps w=4: constant 1.7974  max_j F_j/((5/3)(2/3)^j 6^w) = 0.7056 (<=1: True)
+(A)4 eps w=5: constant 2.1944  max_j F_j/((5/3)(2/3)^j 6^w) = 0.7319 (<=1: True)
+(A)4 eps w=6: constant 2.5689  max_j F_j/((5/3)(2/3)^j 6^w) = 0.7505 (<=1: True)
+(A)4 eps w=7: constant 2.9220  max_j F_j/((5/3)(2/3)^j 6^w) = 0.7628 (<=1: True)
+(A)4 eps w=8: constant 3.2550  max_j F_j/((5/3)(2/3)^j 6^w) = 0.7710 (<=1: True)
+(A)4 eps w=9: constant 3.5690  max_j F_j/((5/3)(2/3)^j 6^w) = 0.7796 (<=1: True)
+(A)4 eps w=10: constant 3.8649  max_j F_j/((5/3)(2/3)^j 6^w) = 0.7854 (<=1: True)
+(A)4 eps w=11: constant 4.1440  max_j F_j/((5/3)(2/3)^j 6^w) = 0.7892 (<=1: True)
+(A)4 eps w=12: constant 4.4071  max_j F_j/((5/3)(2/3)^j 6^w) = 0.7918 (<=1: True)
+(A)4 eps w=13: constant 4.6551  max_j F_j/((5/3)(2/3)^j 6^w) = 0.7940 (<=1: True)
+(A)4 eps w=14: constant 4.8890
+(A)4 eps w=15: constant 5.1095
+(A)4 eps w=16: constant 5.3173
+value-0/+-1 strings j=1: #value0=1 weight=4 (4^j=4); #value1=1 weight=1 ((4^j-1)/3=1); weight(-1)=1
+value-0/+-1 strings j=2: #value0=1 weight=16 (4^j=16); #value1=2 weight=5 ((4^j-1)/3=5); weight(-1)=5
+value-0/+-1 strings j=3: #value0=1 weight=64 (4^j=64); #value1=3 weight=21 ((4^j-1)/3=21); weight(-1)=21
+value-0/+-1 strings j=4: #value0=1 weight=256 (4^j=256); #value1=4 weight=85 ((4^j-1)/3=85); weight(-1)=85
+value-0/+-1 strings j=5: #value0=1 weight=1024 (4^j=1024); #value1=5 weight=341 ((4^j-1)/3=341); weight(-1)=341
+value-0/+-1 strings j=6: #value0=1 weight=4096 (4^j=4096); #value1=6 weight=1365 ((4^j-1)/3=1365); weight(-1)=1365
+value-0/+-1 strings j=7: #value0=1 weight=16384 (4^j=16384); #value1=7 weight=5461 ((4^j-1)/3=5461); weight(-1)=5461
+value-0/+-1 strings j=8: #value0=1 weight=65536 (4^j=65536); #value1=8 weight=21845 ((4^j-1)/3=21845); weight(-1)=21845
+value-0/+-1 strings j=9: #value0=1 weight=262144 (4^j=262144); #value1=9 weight=87381 ((4^j-1)/3=87381); weight(-1)=87381
+value-0/+-1 strings j=10: #value0=1 weight=1048576 (4^j=1048576); #value1=10 weight=349525 ((4^j-1)/3=349525); weight(-1)=349525
+value-0/+-1 strings j=11: #value0=1 weight=4194304 (4^j=4194304); #value1=11 weight=1398101 ((4^j-1)/3=1398101); weight(-1)=1398101
+value-0/+-1 strings j=12: #value0=1 weight=16777216 (4^j=16777216); #value1=12 weight=5592405 ((4^j-1)/3=5592405); weight(-1)=5592405

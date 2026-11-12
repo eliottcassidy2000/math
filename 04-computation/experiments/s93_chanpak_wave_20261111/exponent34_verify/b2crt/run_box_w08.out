@@ -1,0 +1,13 @@
+[Deg ] W=8 s1=4 s2=4 ds=0 mode=box Kmax=16: P_u tested 496; box points 246016; directions tested 281928 (nonempty 244176, with k=+-1: 10928, with k<0: 140964); CRT class unique by brute force in 135176 cases; e in range 291036, giving box points 246016 (rejected: |a'|>=2^s2 20052, |b'|>=2^s2 27284); max points on one direction 2; max count/(6M/m+1) = 0.9768; directions with ||e0/m|| < 3M/m but no point: 32196
+        K=    1: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 1.3482 at P_u=(-2, -15) (Deg_K=4); min (S2 bound)/Deg_K = 3.50
+        K=    2: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.2881 at P_u=(-3, -15) (Deg_K=4); min (S2 bound)/Deg_K = 6.50
+        K=    4: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.1854 at P_u=(-4, -9) (Deg_K=10); min (S2 bound)/Deg_K = 8.80
+        K=    8: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.1112 at P_u=(-3, -5) (Deg_K=24); min (S2 bound)/Deg_K = 10.97
+        K=   16: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.0442 at P_u=(-3, -5) (Deg_K=40); min (S2 bound)/Deg_K = 13.37
+[Deg'] W=8 s1=4 s2=4 ds=0 mode=box Kmax=16: P_v tested 496; box points 246016; directions tested 281928 (nonempty 244176, with k=+-1: 10840, with k<0: 140964); CRT class unique by brute force in 135176 cases; e in range 291036, giving box points 246016 (rejected: |a|>=2^s1 20052, |b|>=2^s1 27284); max points on one direction 2; max count/(6M/m+1) = 0.9768; directions with ||e0/m|| < 3M/m but no point: 32196
+        K=    1: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 1.3482 at P_v=(-2, -15) (Deg'_K=4)
+        K=    2: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.2881 at P_v=(-3, -15) (Deg'_K=4)
+        K=    4: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.1854 at P_v=(-4, -9) (Deg'_K=10)
+        K=    8: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.1112 at P_v=(-3, -5) (Deg'_K=24)
+        K=   16: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.0442 at P_v=(-3, -5) (Deg'_K=40)
+W=8 mode=box kfac=1 which=both: ALL CHECKS PASSED (75.3 s)

@@ -1,0 +1,29 @@
+(2) 3207 gadget matrices (X of order <= 6); with an integer eigenvalue >= 1 (exact): 8: [(31, 4, [4, 1, 2, 7], '111', [84]), (90, 5, [4, 1, 2, 7, 15], '111', [168]), (139, 5, [0, 9, 3, 5, 15], '1110', [252]), (396, 6, [4, 1, 2, 7, 15, 31], '111', [336]), (493, 6, [0, 9, 3, 5, 15, 31], '1110', [504]), (701, 6, [0, 1, 19, 7, 11, 31], '11100', [756]), (1476, 6, [16, 9, 3, 5, 14, 31], '1', [255]), (1727, 6, [4, 1, 2, 39, 15, 23], '111', [504])]   [0.5 s]
+      #31: a = 84, dim C = 2, offset identically 0 on C: True, H fixed on C: False
+      #90: a = 168, dim C = 2, offset identically 0 on C: True, H fixed on C: False
+      #139: a = 252, dim C = 2, offset identically 0 on C: True, H fixed on C: False
+      #396: a = 336, dim C = 2, offset identically 0 on C: True, H fixed on C: False
+      #493: a = 504, dim C = 2, offset identically 0 on C: True, H fixed on C: False
+      #701: a = 756, dim C = 2, offset identically 0 on C: True, H fixed on C: False
+      #1476: a = 255, dim C = 2, offset identically 0 on C: True, H fixed on C: False
+      #1727: a = 504, dim C = 2, offset identically 0 on C: True, H fixed on C: False
+      pairs among them: {'(ii) commute on all of C': 28}
+(1) gadget law by direct counts (own DP): 346 (base, gadget) tests incl. 12 per special gadget, failures 0; sink operation sigma: 200 tests, failures 0   [3.0 s]
+(3) alphabet sigma + 57 gadget matrices (X of order <= 4), all words of length <= 2:
+      length 1: 58 words; words with an integer eigenvalue >= 1 so far 2  [3.0 s]
+      length 2: 3364 words; words with an integer eigenvalue >= 1 so far 132  [4.0 s]
+      (length, eigenvalue): count = {(1, 1): 1, (1, 2): 1, (1, 84): 1, (2, 1): 92, (2, 2): 4, (2, 3): 22, (2, 4): 1, (2, 5): 4, (2, 6): 2, (2, 9): 2, (2, 80): 2, (2, 84): 2, (2, 168): 2, (2, 252): 2, (2, 402): 2, (2, 431): 4, (2, 1752): 2, (2, 2646): 2, (2, 2883): 2, (2, 3504): 2, (2, 4512): 2, (2, 5184): 2, (2, 7056): 1, (2, 7830): 2}
+      readout L_h: (word, a) with C != 0: 159; pairs: {'(i) C = 0': 8751, '(ii) commute on all of C': 3781}
+          of these, pairs in which one word is a power of sigma (not all examined by the lane): {'(i) C = 0': 226, '(ii) commute on all of C': 398}
+      readout L_1: (word, a) with C != 0: 159; pairs: {'(i) C = 0': 8523, '(ii) commute on all of C': 4009}
+          of these, pairs in which one word is a power of sigma (not all examined by the lane): {'(i) C = 0': 226, '(ii) commute on all of C': 398}
+(3) alphabet sigma + 14 gadget matrices (X of order <= 3), all words of length <= 3:
+      length 1: 15 words; words with an integer eigenvalue >= 1 so far 1  [8.8 s]
+      length 2: 225 words; words with an integer eigenvalue >= 1 so far 26  [8.8 s]
+      length 3: 3375 words; words with an integer eigenvalue >= 1 so far 102  [9.8 s]
+      (length, eigenvalue): count = {(1, 1): 1, (1, 2): 1, (2, 1): 21, (2, 2): 2, (2, 4): 1, (2, 80): 2, (2, 84): 2, (2, 431): 2, (3, 1): 58, (3, 2): 6, (3, 3): 6, (3, 8): 1, (3, 80): 6, (3, 168): 3, (3, 431): 6, (3, 1752): 3, (3, 2544): 3, (3, 2646): 3}
+      readout L_h: (word, a) with C != 0: 127; pairs: {'(i) C = 0': 5825, '(ii) commute on all of C': 2151}
+          of these, pairs in which one word is a power of sigma (not all examined by the lane): {'(i) C = 0': 321, '(ii) commute on all of C': 417}
+      readout L_1: (word, a) with C != 0: 127; pairs: {'(i) C = 0': 5722, '(ii) commute on all of C': 2254}
+          of these, pairs in which one word is a power of sigma (not all examined by the lane): {'(i) C = 0': 321, '(ii) commute on all of C': 417}
+time 11.6 s

@@ -1,0 +1,17 @@
+[Deg ] W=11 s1=6 s2=5 ds=1 mode=diff Kmax=64: P_u tested 486; box points 979776; directions tested 1758470 (nonempty 979776, with k=+-1: 32312, with k<0: 879252); CRT class unique by brute force in 855482 cases; e in range 1171626, giving box points 979776 (rejected: |a'|>=2^s2 61208, |b'|>=2^s2 142546); max points on one direction 1; max count/(6M/m+1) = 0.9985; directions with ||e0/m|| < 3M/m but no point: 212040
+        K=    1: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.6741 at P_u=(-2, 29) (Deg_K=2); min (S2 bound)/Deg_K = 7.00
+        K=    2: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.1441 at P_u=(-3, -3) (Deg_K=2); min (S2 bound)/Deg_K = 13.00
+        K=    4: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.1128 at P_u=(-6, -3) (Deg_K=6); min (S2 bound)/Deg_K = 14.67
+        K=    8: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.0731 at P_u=(-7, -35) (Deg_K=14); min (S2 bound)/Deg_K = 20.23
+        K=   16: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.0338 at P_u=(-8, 5) (Deg_K=24); min (S2 bound)/Deg_K = 26.16
+        K=   32: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.0151 at P_u=(-13, 25) (Deg_K=39); min (S2 bound)/Deg_K = 36.97
+        K=   64: max Deg_K/[K(1+lnK)^2+K(1+lnK)|a|^(1/3)+K^2.5|a|^-.5] = 0.0067 at P_u=(-20, -7) (Deg_K=67); min (S2 bound)/Deg_K = 44.30
+[Deg'] W=11 s1=6 s2=5 ds=1 mode=diff Kmax=64: P_v tested 162; box points 1316736; directions tested 1553000 (nonempty 1314902, with k=+-1: 10844, with k<0: 776414); CRT class unique by brute force in 339256 cases; e in range 1432256, giving box points 1316736 (rejected: |a|>=2^s1 70566, |b|>=2^s1 48344); max points on one direction 4; max count/(6M/m+1) = 0.9971; directions with ||e0/m|| < 3M/m but no point: 92018
+        K=    1: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 2.6963 at P_v=(-2, 13) (Deg'_K=8)
+        K=    2: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.5762 at P_v=(-3, -3) (Deg'_K=8)
+        K=    4: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.3752 at P_v=(-9, -15) (Deg'_K=20)
+        K=    8: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.2287 at P_v=(-4, 5) (Deg'_K=47)
+        K=   16: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.1012 at P_v=(-2, 13) (Deg'_K=104)
+        K=   32: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.0457 at P_v=(-9, 27) (Deg'_K=131)
+        K=   64: max Deg'_K/[K(1+lnK)^2+K(1+lnK)|a'|^(1/3)+K^2.5|a'|^-.5] = 0.0187 at P_v=(-9, 9) (Deg'_K=249)
+W=11 mode=diff kfac=2 which=both: ALL CHECKS PASSED (597.8 s)

@@ -1,0 +1,356 @@
+S_w available for w <= 21
+
+n=8  (R=4, t=2): ordered colliding pairs=184 ; (t',s) cells checked=28 ; worst ratios: {'E/L3': ('0.8750', (4, 3, 1)), 'E/L1': ('0.3889', (4, 3, 1)), 'E/B': ('0.3500', (4, 3, 1)), 'L1/B': ('0.9000', (4, 3, 1))}
+   R=2 : ordered colliding pairs in W_R: 28 ; max|s-t'|=1 (<= R+3=5 OK) ; with t'>=t: 14 pairs in 3 cells (E/2^n = 0.05469)
+   R=3 : ordered colliding pairs in W_R: 98 ; max|s-t'|=2 (<= R+3=6 OK) ; with t'>=t: 58 pairs in 5 cells (E/2^n = 0.22656)
+   R=4*: ordered colliding pairs in W_R: 144 ; max|s-t'|=2 (<= R+3=7 OK) ; with t'>=t: 80 pairs in 6 cells (E/2^n = 0.31250)
+   R=5 : ordered colliding pairs in W_R: 166 ; max|s-t'|=2 (<= R+3=8 OK) ; with t'>=t: 90 pairs in 6 cells (E/2^n = 0.35156)
+   R=6 : ordered colliding pairs in W_R: 172 ; max|s-t'|=2 (<= R+3=9 OK) ; with t'>=t: 94 pairs in 6 cells (E/2^n = 0.36719)
+   R=7 : ordered colliding pairs in W_R: 178 ; max|s-t'|=2 (<= R+3=10 OK) ; with t'>=t: 98 pairs in 6 cells (E/2^n = 0.38281)
+   R=8 : ordered colliding pairs in W_R: 184 ; max|s-t'|=2 (<= R+3=11 OK) ; with t'>=t: 100 pairs in 6 cells (E/2^n = 0.39062)
+   (D) totals, R=4, t=2: E=80 (outside |s-t'|<=R+3: 0) ; cells=21 (<= n(2R+7)=120) ; sum L3=7416 ; sum L1=10775 ; sum B=39169 = 29088 (4*4^w terms) + 10081 (gcd terms)
+       E/2^n=0.31250  sumL3/2^n=28.97  sumL1/2^n=42.09  sumB/2^n=153.00  [4^w part 113.62, gcd part 39.38]  sumB/(n^(9/2) ln n 2^n)=6.351e-03  n^(9/2) ln n=2.409e+04
+
+n=9  (R=5, t=3): ordered colliding pairs=396 ; (t',s) cells checked=36 ; worst ratios: {'E/L3': ('0.2500', (4, 3, 2)), 'E/L1': ('0.1111', (4, 3, 2)), 'E/B': ('0.0833', (4, 3, 2)), 'L1/B': ('0.7500', (4, 3, 2))}
+   R=2 : ordered colliding pairs in W_R: 40 ; max|s-t'|=1 (<= R+3=5 OK) ; with t'>=t: 8 pairs in 1 cells (E/2^n = 0.01562)
+   R=3 : ordered colliding pairs in W_R: 182 ; max|s-t'|=3 (<= R+3=6 OK) ; with t'>=t: 32 pairs in 4 cells (E/2^n = 0.06250)
+   R=4 : ordered colliding pairs in W_R: 302 ; max|s-t'|=3 (<= R+3=7 OK) ; with t'>=t: 52 pairs in 4 cells (E/2^n = 0.10156)
+   R=5*: ordered colliding pairs in W_R: 356 ; max|s-t'|=3 (<= R+3=8 OK) ; with t'>=t: 72 pairs in 4 cells (E/2^n = 0.14062)
+   R=6 : ordered colliding pairs in W_R: 374 ; max|s-t'|=3 (<= R+3=9 OK) ; with t'>=t: 76 pairs in 4 cells (E/2^n = 0.14844)
+   R=7 : ordered colliding pairs in W_R: 380 ; max|s-t'|=3 (<= R+3=10 OK) ; with t'>=t: 78 pairs in 4 cells (E/2^n = 0.15234)
+   R=8 : ordered colliding pairs in W_R: 388 ; max|s-t'|=3 (<= R+3=11 OK) ; with t'>=t: 80 pairs in 5 cells (E/2^n = 0.15625)
+   (D) totals, R=5, t=3: E=72 (outside |s-t'|<=R+3: 0) ; cells=21 (<= n(2R+7)=153) ; sum L3=7632 ; sum L1=11366 ; sum B=47596 = 29088 (4*4^w terms) + 18508 (gcd terms)
+       E/2^n=0.14062  sumL3/2^n=14.91  sumL1/2^n=22.20  sumB/2^n=92.96  [4^w part 56.81, gcd part 36.15]  sumB/(n^(9/2) ln n 2^n)=2.149e-03  n^(9/2) ln n=4.325e+04
+
+n=10  (R=5, t=3): ordered colliding pairs=912 ; (t',s) cells checked=45 ; worst ratios: {'E/L3': ('0.9375', (5, 4, 1)), 'E/L1': ('0.4412', (5, 4, 1)), 'E/B': ('0.4167', (5, 4, 1)), 'L1/B': ('0.9444', (5, 4, 1))}
+   R=2 : ordered colliding pairs in W_R: 80 ; max|s-t'|=2 (<= R+3=5 OK) ; with t'>=t: 24 pairs in 3 cells (E/2^n = 0.02344)
+   R=3 : ordered colliding pairs in W_R: 382 ; max|s-t'|=3 (<= R+3=6 OK) ; with t'>=t: 110 pairs in 6 cells (E/2^n = 0.10742)
+   R=4 : ordered colliding pairs in W_R: 614 ; max|s-t'|=3 (<= R+3=7 OK) ; with t'>=t: 172 pairs in 8 cells (E/2^n = 0.16797)
+   R=5*: ordered colliding pairs in W_R: 780 ; max|s-t'|=3 (<= R+3=8 OK) ; with t'>=t: 208 pairs in 8 cells (E/2^n = 0.20312)
+   R=6 : ordered colliding pairs in W_R: 856 ; max|s-t'|=3 (<= R+3=9 OK) ; with t'>=t: 224 pairs in 8 cells (E/2^n = 0.21875)
+   R=7 : ordered colliding pairs in W_R: 886 ; max|s-t'|=3 (<= R+3=10 OK) ; with t'>=t: 234 pairs in 8 cells (E/2^n = 0.22852)
+   R=8 : ordered colliding pairs in W_R: 900 ; max|s-t'|=3 (<= R+3=11 OK) ; with t'>=t: 240 pairs in 8 cells (E/2^n = 0.23438)
+   (D) totals, R=5, t=3: E=208 (outside |s-t'|<=R+3: 0) ; cells=27 (<= n(2R+7)=170) ; sum L3=30152 ; sum L1=40144 ; sum B=166654 = 116448 (4*4^w terms) + 50206 (gcd terms)
+       E/2^n=0.20312  sumL3/2^n=29.45  sumL1/2^n=39.20  sumB/2^n=162.75  [4^w part 113.72, gcd part 49.03]  sumB/(n^(9/2) ln n 2^n)=2.235e-03  n^(9/2) ln n=7.281e+04
+
+n=11  (R=5, t=3): ordered colliding pairs=1744 ; (t',s) cells checked=55 ; worst ratios: {'E/L3': ('0.2500', (5, 4, 2)), 'E/L1': ('0.1176', (5, 4, 2)), 'E/B': ('0.1000', (5, 4, 2)), 'L1/B': ('0.8500', (5, 4, 2))}
+   R=2 : ordered colliding pairs in W_R: 122 ; max|s-t'|=2 (<= R+3=5 OK) ; with t'>=t: 34 pairs in 2 cells (E/2^n = 0.01660)
+   R=3 : ordered colliding pairs in W_R: 644 ; max|s-t'|=3 (<= R+3=6 OK) ; with t'>=t: 162 pairs in 8 cells (E/2^n = 0.07910)
+   R=4 : ordered colliding pairs in W_R: 1192 ; max|s-t'|=4 (<= R+3=7 OK) ; with t'>=t: 294 pairs in 9 cells (E/2^n = 0.14355)
+   R=5*: ordered colliding pairs in W_R: 1452 ; max|s-t'|=4 (<= R+3=8 OK) ; with t'>=t: 362 pairs in 9 cells (E/2^n = 0.17676)
+   R=6 : ordered colliding pairs in W_R: 1648 ; max|s-t'|=4 (<= R+3=9 OK) ; with t'>=t: 410 pairs in 9 cells (E/2^n = 0.20020)
+   R=7 : ordered colliding pairs in W_R: 1700 ; max|s-t'|=4 (<= R+3=10 OK) ; with t'>=t: 422 pairs in 9 cells (E/2^n = 0.20605)
+   R=8 : ordered colliding pairs in W_R: 1726 ; max|s-t'|=4 (<= R+3=11 OK) ; with t'>=t: 426 pairs in 9 cells (E/2^n = 0.20801)
+   (D) totals, R=5, t=3: E=362 (outside |s-t'|<=R+3: 0) ; cells=34 (<= n(2R+7)=187) ; sum L3=119064 ; sum L1=144505 ; sum B=598454 = 465904 (4*4^w terms) + 132550 (gcd terms)
+       E/2^n=0.17676  sumL3/2^n=58.14  sumL1/2^n=70.56  sumB/2^n=292.21  [4^w part 227.49, gcd part 64.72]  sumB/(n^(9/2) ln n 2^n)=2.510e-03  n^(9/2) ln n=1.164e+05
+
+n=12  (R=5, t=3): ordered colliding pairs=3640 ; (t',s) cells checked=66 ; worst ratios: {'E/L3': ('0.9688', (6, 5, 1)), 'E/L1': ('0.4697', (6, 5, 1)), 'E/B': ('0.4559', (6, 5, 1)), 'L1/B': ('0.9706', (6, 5, 1))}
+   R=2 : ordered colliding pairs in W_R: 212 ; max|s-t'|=2 (<= R+3=5 OK) ; with t'>=t: 72 pairs in 7 cells (E/2^n = 0.01758)
+   R=3 : ordered colliding pairs in W_R: 1264 ; max|s-t'|=4 (<= R+3=6 OK) ; with t'>=t: 356 pairs in 14 cells (E/2^n = 0.08691)
+   R=4 : ordered colliding pairs in W_R: 2350 ; max|s-t'|=4 (<= R+3=7 OK) ; with t'>=t: 638 pairs in 15 cells (E/2^n = 0.15576)
+   R=5*: ordered colliding pairs in W_R: 3054 ; max|s-t'|=4 (<= R+3=8 OK) ; with t'>=t: 858 pairs in 15 cells (E/2^n = 0.20947)
+   R=6 : ordered colliding pairs in W_R: 3372 ; max|s-t'|=4 (<= R+3=9 OK) ; with t'>=t: 936 pairs in 15 cells (E/2^n = 0.22852)
+   R=7 : ordered colliding pairs in W_R: 3492 ; max|s-t'|=4 (<= R+3=10 OK) ; with t'>=t: 972 pairs in 15 cells (E/2^n = 0.23730)
+   R=8 : ordered colliding pairs in W_R: 3568 ; max|s-t'|=4 (<= R+3=11 OK) ; with t'>=t: 990 pairs in 15 cells (E/2^n = 0.24170)
+   (D) totals, R=5, t=3: E=858 (outside |s-t'|<=R+3: 0) ; cells=41 (<= n(2R+7)=204) ; sum L3=472832 ; sum L1=537775 ; sum B=2205993 = 1863728 (4*4^w terms) + 342265 (gcd terms)
+       E/2^n=0.20947  sumL3/2^n=115.44  sumL1/2^n=131.29  sumB/2^n=538.57  [4^w part 455.01, gcd part 83.56]  sumB/(n^(9/2) ln n 2^n)=3.017e-03  n^(9/2) ln n=1.785e+05
+   table (t', s, w, E, L3, L2, L1, B) for cells with E > 0 or t' >= t and |s-t'| <= 2:
+     t'= 1 s= 0 w=11  E=    1380  L3=     4194304  L2=     4194304  L1=     4274091.0  B=      16857003.0  E/L3=0.0003  L1/B=0.2535
+     t'= 1 s= 1 w=10  E=     206  L3=     1048576  L2=     1048576  L1=     1079076.9  B=       4250629.3  E/L3=0.0002  L1/B=0.2539
+     t'= 1 s= 2 w= 9  E=      66  L3=      262144  L2=      262144  L1=      277176.6  B=       1102384.1  E/L3=0.0003  L1/B=0.2514
+     t'= 1 s= 3 w= 8  E=       8  L3=       65536  L2=       65536  L1=       71060.3  B=        300198.4  E/L3=0.0001  L1/B=0.2367
+     t'= 2 s= 0 w=10  E=     206  L3=     1048576  L2=     1048576  L1=     1079076.9  B=       4250629.3  E/L3=0.0002  L1/B=0.2539
+     t'= 2 s= 1 w= 9  E=     652  L3=      262144  L2=      272512  L1=      289048.0  B=       1075480.0  E/L3=0.0025  L1/B=0.2688
+     t'= 2 s= 2 w= 8  E=      90  L3=       65536  L2=       69152  L1=       75887.0  B=        281171.2  E/L3=0.0014  L1/B=0.2699
+     t'= 2 s= 3 w= 7  E=      18  L3=       16384  L2=       18272  L1=       21429.8  B=         83424.2  E/L3=0.0011  L1/B=0.2569
+     t'= 2 s= 4 w= 6  E=       2  L3=        4096  L2=        4736  L1=        5885.6  B=         28840.2  E/L3=0.0005  L1/B=0.2041
+     t'= 3 s= 0 w= 9  E=      66  L3=      262144  L2=      262144  L1=      277176.6  B=       1102384.1  E/L3=0.0003  L1/B=0.2514
+     t'= 3 s= 1 w= 8  E=      90  L3=       65536  L2=       69152  L1=       75887.0  B=        281171.2  E/L3=0.0014  L1/B=0.2699
+     t'= 3 s= 2 w= 7  E=     316  L3=       18112  L2=       21696  L1=       25328.1  B=         74480.1  E/L3=0.0174  L1/B=0.3401
+     t'= 3 s= 3 w= 6  E=      42  L3=        4704  L2=        5984  L1=        7481.5  B=         22612.1  E/L3=0.0089  L1/B=0.3309
+     t'= 3 s= 4 w= 5  E=       6  L3=        1360  L2=        2072  L1=        2640.1  B=          9824.8  E/L3=0.0044  L1/B=0.2687
+     t'= 3 s= 5 w= 4  E=       0  L3=         376  L2=         624  L1=         806.3  B=          4841.4  E/L3=0.0000  L1/B=0.1665
+     t'= 4 s= 0 w= 8  E=       8  L3=       65536  L2=       65536  L1=       71060.3  B=        300198.4  E/L3=0.0001  L1/B=0.2367
+     t'= 4 s= 1 w= 7  E=      18  L3=       16384  L2=       18272  L1=       21429.8  B=         83424.2  E/L3=0.0011  L1/B=0.2569
+     t'= 4 s= 2 w= 6  E=      42  L3=        4704  L2=        5984  L1=        7481.5  B=         22612.1  E/L3=0.0089  L1/B=0.3309
+     t'= 4 s= 3 w= 5  E=     200  L3=        1920  L2=        3280  L1=        3888.4  B=          6960.4  E/L3=0.1042  L1/B=0.5586
+     t'= 4 s= 4 w= 4  E=      14  L3=         592  L2=        1104  L1=        1282.0  B=          2932.7  E/L3=0.0236  L1/B=0.4371
+     t'= 4 s= 5 w= 3  E=       0  L3=         232  L2=         456  L1=         512.0  B=          1894.4  E/L3=0.0000  L1/B=0.2703
+     t'= 4 s= 6 w= 2  E=       0  L3=          64  L2=         128  L1=         144.0  B=          1088.0  E/L3=0.0000  L1/B=0.1324
+     t'= 5 s= 1 w= 6  E=       2  L3=        4096  L2=        4736  L1=        5885.6  B=         28840.2  E/L3=0.0005  L1/B=0.2041
+     t'= 5 s= 2 w= 5  E=       6  L3=        1360  L2=        2072  L1=        2640.1  B=          9824.8  E/L3=0.0044  L1/B=0.2687
+     t'= 5 s= 3 w= 4  E=      14  L3=         592  L2=        1104  L1=        1282.0  B=          2932.7  E/L3=0.0236  L1/B=0.4371
+     t'= 5 s= 4 w= 3  E=      64  L3=         416  L2=         832  L1=         883.2  B=          1075.2  E/L3=0.1538  L1/B=0.8214
+     t'= 5 s= 5 w= 2  E=       0  L3=         128  L2=         256  L1=         272.0  B=           576.0  E/L3=0.0000  L1/B=0.4722
+     t'= 5 s= 6 w= 1  E=       0  L3=          64  L2=         128  L1=         136.0  B=           528.0  E/L3=0.0000  L1/B=0.2576
+     t'= 6 s= 4 w= 2  E=       0  L3=         128  L2=         256  L1=         272.0  B=           576.0  E/L3=0.0000  L1/B=0.4722
+     t'= 6 s= 5 w= 1  E=     124  L3=         128  L2=         256  L1=         264.0  B=           272.0  E/L3=0.9688  L1/B=0.9706
+
+n=13  (R=5, t=4): ordered colliding pairs=7320 ; (t',s) cells checked=78 ; worst ratios: {'E/L3': ('0.2500', (6, 5, 2)), 'E/L1': ('0.1212', (6, 5, 2)), 'E/B': ('0.1111', (6, 5, 2)), 'L1/B': ('0.9167', (6, 5, 2))}
+   R=2 : ordered colliding pairs in W_R: 344 ; max|s-t'|=3 (<= R+3=5 OK) ; with t'>=t: 54 pairs in 6 cells (E/2^n = 0.00659)
+   R=3 : ordered colliding pairs in W_R: 2144 ; max|s-t'|=3 (<= R+3=6 OK) ; with t'>=t: 284 pairs in 8 cells (E/2^n = 0.03467)
+   R=4 : ordered colliding pairs in W_R: 4476 ; max|s-t'|=4 (<= R+3=7 OK) ; with t'>=t: 556 pairs in 9 cells (E/2^n = 0.06787)
+   R=5*: ordered colliding pairs in W_R: 5956 ; max|s-t'|=5 (<= R+3=8 OK) ; with t'>=t: 736 pairs in 11 cells (E/2^n = 0.08984)
+   R=6 : ordered colliding pairs in W_R: 6754 ; max|s-t'|=5 (<= R+3=9 OK) ; with t'>=t: 846 pairs in 11 cells (E/2^n = 0.10327)
+   R=7 : ordered colliding pairs in W_R: 7108 ; max|s-t'|=5 (<= R+3=10 OK) ; with t'>=t: 896 pairs in 11 cells (E/2^n = 0.10938)
+   R=8 : ordered colliding pairs in W_R: 7224 ; max|s-t'|=5 (<= R+3=11 OK) ; with t'>=t: 908 pairs in 11 cells (E/2^n = 0.11084)
+   (D) totals, R=5, t=4: E=736 (outside |s-t'|<=R+3: 0) ; cells=39 (<= n(2R+7)=221) ; sum L3=475920 ; sum L1=546534 ; sum B=2478673 = 1862640 (4*4^w terms) + 616033 (gcd terms)
+       E/2^n=0.08984  sumL3/2^n=58.10  sumL1/2^n=66.72  sumB/2^n=302.57  [4^w part 227.37, gcd part 75.20]  sumB/(n^(9/2) ln n 2^n)=1.146e-03  n^(9/2) ln n=2.641e+05
+
+n=14  (R=5, t=4): ordered colliding pairs=15472 ; (t',s) cells checked=91 ; worst ratios: {'E/L3': ('0.9844', (7, 6, 1)), 'E/L1': ('0.4846', (7, 6, 1)), 'E/B': ('0.4773', (7, 6, 1)), 'L1/B': ('0.9848', (7, 6, 1))}
+   R=2 : ordered colliding pairs in W_R: 522 ; max|s-t'|=2 (<= R+3=5 OK) ; with t'>=t: 108 pairs in 6 cells (E/2^n = 0.00659)
+   R=3 : ordered colliding pairs in W_R: 4200 ; max|s-t'|=4 (<= R+3=6 OK) ; with t'>=t: 690 pairs in 12 cells (E/2^n = 0.04211)
+   R=4 : ordered colliding pairs in W_R: 8976 ; max|s-t'|=5 (<= R+3=7 OK) ; with t'>=t: 1280 pairs in 16 cells (E/2^n = 0.07812)
+   R=5*: ordered colliding pairs in W_R: 12246 ; max|s-t'|=5 (<= R+3=8 OK) ; with t'>=t: 1766 pairs in 18 cells (E/2^n = 0.10779)
+   R=6 : ordered colliding pairs in W_R: 14090 ; max|s-t'|=5 (<= R+3=9 OK) ; with t'>=t: 1988 pairs in 18 cells (E/2^n = 0.12134)
+   R=7 : ordered colliding pairs in W_R: 14812 ; max|s-t'|=5 (<= R+3=10 OK) ; with t'>=t: 2084 pairs in 18 cells (E/2^n = 0.12720)
+   R=8 : ordered colliding pairs in W_R: 15204 ; max|s-t'|=5 (<= R+3=11 OK) ; with t'>=t: 2126 pairs in 18 cells (E/2^n = 0.12976)
+   (D) totals, R=5, t=4: E=1766 (outside |s-t'|<=R+3: 0) ; cells=46 (<= n(2R+7)=238) ; sum L3=1888584 ; sum L1=2063319 ; sum B=8970709 = 7450672 (4*4^w terms) + 1520037 (gcd terms)
+       E/2^n=0.10779  sumL3/2^n=115.27  sumL1/2^n=125.94  sumB/2^n=547.53  [4^w part 454.75, gcd part 92.78]  sumB/(n^(9/2) ln n 2^n)=1.443e-03  n^(9/2) ln n=3.793e+05
+
+n=15  (R=5, t=4): ordered colliding pairs=31128 ; (t',s) cells checked=105 ; worst ratios: {'E/L3': ('0.2500', (7, 6, 2)), 'E/L1': ('0.1231', (7, 6, 2)), 'E/B': ('0.1176', (7, 6, 2)), 'L1/B': ('0.9559', (7, 6, 2))}
+   R=2 : ordered colliding pairs in W_R: 848 ; max|s-t'|=2 (<= R+3=5 OK) ; with t'>=t: 158 pairs in 8 cells (E/2^n = 0.00482)
+   R=3 : ordered colliding pairs in W_R: 7304 ; max|s-t'|=4 (<= R+3=6 OK) ; with t'>=t: 1084 pairs in 16 cells (E/2^n = 0.03308)
+   R=4 : ordered colliding pairs in W_R: 16774 ; max|s-t'|=5 (<= R+3=7 OK) ; with t'>=t: 2250 pairs in 18 cells (E/2^n = 0.06866)
+   R=5*: ordered colliding pairs in W_R: 23930 ; max|s-t'|=5 (<= R+3=8 OK) ; with t'>=t: 3290 pairs in 18 cells (E/2^n = 0.10040)
+   R=6 : ordered colliding pairs in W_R: 27576 ; max|s-t'|=6 (<= R+3=9 OK) ; with t'>=t: 3800 pairs in 19 cells (E/2^n = 0.11597)
+   R=7 : ordered colliding pairs in W_R: 29610 ; max|s-t'|=6 (<= R+3=10 OK) ; with t'>=t: 4066 pairs in 19 cells (E/2^n = 0.12408)
+   R=8 : ordered colliding pairs in W_R: 30478 ; max|s-t'|=6 (<= R+3=11 OK) ; with t'>=t: 4208 pairs in 19 cells (E/2^n = 0.12842)
+   (D) totals, R=5, t=4: E=3290 (outside |s-t'|<=R+3: 0) ; cells=54 (<= n(2R+7)=255) ; sum L3=7514568 ; sum L1=7949505 ; sum B=33644228 = 29802816 (4*4^w terms) + 3841412 (gcd terms)
+       E/2^n=0.10040  sumL3/2^n=229.33  sumL1/2^n=242.60  sumB/2^n=1026.74  [4^w part 909.51, gcd part 117.23]  sumB/(n^(9/2) ln n 2^n)=1.934e-03  n^(9/2) ln n=5.310e+05
+
+n=16  (R=5, t=4): ordered colliding pairs=62216 ; (t',s) cells checked=120 ; worst ratios: {'E/L3': ('0.9922', (8, 7, 1)), 'E/L1': ('0.4922', (8, 7, 1)), 'E/B': ('0.4885', (8, 7, 1)), 'L1/B': ('0.9923', (8, 7, 1))}
+   R=2 : ordered colliding pairs in W_R: 1374 ; max|s-t'|=3 (<= R+3=5 OK) ; with t'>=t: 298 pairs in 8 cells (E/2^n = 0.00455)
+   R=3 : ordered colliding pairs in W_R: 13566 ; max|s-t'|=4 (<= R+3=6 OK) ; with t'>=t: 2272 pairs in 19 cells (E/2^n = 0.03467)
+   R=4 : ordered colliding pairs in W_R: 31914 ; max|s-t'|=5 (<= R+3=7 OK) ; with t'>=t: 4678 pairs in 24 cells (E/2^n = 0.07138)
+   R=5*: ordered colliding pairs in W_R: 46402 ; max|s-t'|=6 (<= R+3=8 OK) ; with t'>=t: 6772 pairs in 26 cells (E/2^n = 0.10333)
+   R=6 : ordered colliding pairs in W_R: 54670 ; max|s-t'|=6 (<= R+3=9 OK) ; with t'>=t: 7990 pairs in 27 cells (E/2^n = 0.12192)
+   R=7 : ordered colliding pairs in W_R: 58806 ; max|s-t'|=6 (<= R+3=10 OK) ; with t'>=t: 8640 pairs in 27 cells (E/2^n = 0.13184)
+   R=8 : ordered colliding pairs in W_R: 60716 ; max|s-t'|=6 (<= R+3=11 OK) ; with t'>=t: 8878 pairs in 27 cells (E/2^n = 0.13547)
+   (D) totals, R=5, t=4: E=6772 (outside |s-t'|<=R+3: 0) ; cells=62 (<= n(2R+7)=272) ; sum L3=29961208 ; sum L1=31012675 ; sum B=128508553 = 119211392 (4*4^w terms) + 9297161 (gcd terms)
+       E/2^n=0.10333  sumL3/2^n=457.17  sumL1/2^n=473.22  sumB/2^n=1960.88  [4^w part 1819.02, gcd part 141.86]  sumB/(n^(9/2) ln n 2^n)=2.698e-03  n^(9/2) ln n=7.268e+05
+   table (t', s, w, E, L3, L2, L1, B) for cells with E > 0 or t' >= t and |s-t'| <= 2:
+     t'= 1 s= 0 w=15  E=   23476  L3=  1073741824  L2=  1073741824  L1=  1076413805.7  B=    4297639277.7  E/L3=0.0000  L1/B=0.2505
+     t'= 1 s= 1 w=14  E=    3106  L3=   268435456  L2=   268435456  L1=   269435316.3  B=    1075625558.8  E/L3=0.0000  L1/B=0.2505
+     t'= 1 s= 2 w=13  E=     718  L3=    67108864  L2=    67108864  L1=    67611738.1  B=     270281902.5  E/L3=0.0000  L1/B=0.2502
+     t'= 1 s= 3 w=12  E=     242  L3=    16777216  L2=    16777216  L1=    16961321.6  B=      68414302.4  E/L3=0.0000  L1/B=0.2479
+     t'= 1 s= 4 w=11  E=      42  L3=     4194304  L2=     4194304  L1=     4284779.4  B=      18053808.7  E/L3=0.0000  L1/B=0.2373
+     t'= 1 s= 5 w=10  E=       8  L3=     1048576  L2=     1048576  L1=     1081367.4  B=       5095508.7  E/L3=0.0000  L1/B=0.2122
+     t'= 2 s= 0 w=14  E=    3106  L3=   268435456  L2=   268435456  L1=   269435316.3  B=    1075625558.8  E/L3=0.0000  L1/B=0.2505
+     t'= 2 s= 1 w=13  E=   11488  L3=    67108864  L2=    67482112  L1=    68032087.3  B=     269358679.3  E/L3=0.0002  L1/B=0.2526
+     t'= 2 s= 2 w=12  E=    1522  L3=    16777216  L2=    16904896  L1=    17126878.8  B=      67761583.2  E/L3=0.0001  L1/B=0.2528
+     t'= 2 s= 3 w=11  E=     390  L3=     4194304  L2=     4259456  L1=     4370859.9  B=      17415512.4  E/L3=0.0001  L1/B=0.2510
+     t'= 2 s= 4 w=10  E=     104  L3=     1048576  L2=     1070976  L1=     1113416.8  B=       4644906.4  E/L3=0.0001  L1/B=0.2397
+     t'= 2 s= 5 w= 9  E=      18  L3=      262144  L2=      273432  L1=      293088.8  B=       1479040.5  E/L3=0.0001  L1/B=0.1982
+     t'= 2 s= 6 w= 8  E=       2  L3=       65536  L2=       69376  L1=       76693.4  B=        566579.3  E/L3=0.0000  L1/B=0.1354
+     t'= 3 s= 0 w=13  E=     718  L3=    67108864  L2=    67108864  L1=    67611738.1  B=     270281902.5  E/L3=0.0000  L1/B=0.2502
+     t'= 3 s= 1 w=12  E=    1522  L3=    16777216  L2=    16904896  L1=    17126878.8  B=      67761583.2  E/L3=0.0001  L1/B=0.2528
+     t'= 3 s= 2 w=11  E=    5644  L3=     4256512  L2=     4384000  L1=     4513452.2  B=      17096364.2  E/L3=0.0013  L1/B=0.2640
+     t'= 3 s= 3 w=10  E=     740  L3=     1070208  L2=     1114928  L1=     1170579.5  B=       4419605.2  E/L3=0.0007  L1/B=0.2649
+     t'= 3 s= 4 w= 9  E=     208  L3=      273168  L2=      296120  L1=      322274.5  B=       1263808.3  E/L3=0.0008  L1/B=0.2550
+     t'= 3 s= 5 w= 8  E=      46  L3=       69344  L2=       77496  L1=       87633.4  B=        414361.6  E/L3=0.0007  L1/B=0.2115
+     t'= 4 s= 0 w=12  E=     242  L3=    16777216  L2=    16777216  L1=    16961321.6  B=      68414302.4  E/L3=0.0000  L1/B=0.2479
+     t'= 4 s= 1 w=11  E=     390  L3=     4194304  L2=     4259456  L1=     4370859.9  B=      17415512.4  E/L3=0.0001  L1/B=0.2510
+     t'= 4 s= 2 w=10  E=     740  L3=     1070208  L2=     1114928  L1=     1170579.5  B=       4419605.2  E/L3=0.0007  L1/B=0.2649
+     t'= 4 s= 3 w= 9  E=    2836  L3=      293760  L2=      338592  L1=      369760.1  B=       1156192.1  E/L3=0.0097  L1/B=0.3198
+     t'= 4 s= 4 w= 8  E=     436  L3=       76816  L2=       93304  L1=      106940.0  B=        338252.8  E/L3=0.0057  L1/B=0.3162
+     t'= 4 s= 5 w= 7  E=      86  L3=       22224  L2=       30928  L1=       36567.4  B=        137088.6  E/L3=0.0039  L1/B=0.2667
+     t'= 4 s= 6 w= 6  E=       6  L3=        6096  L2=        9304  L1=       11254.4  B=         66208.8  E/L3=0.0010  L1/B=0.1700
+     t'= 5 s= 0 w=11  E=      42  L3=     4194304  L2=     4194304  L1=     4284779.4  B=      18053808.7  E/L3=0.0000  L1/B=0.2373
+     t'= 5 s= 1 w=10  E=     104  L3=     1048576  L2=     1070976  L1=     1113416.8  B=       4644906.4  E/L3=0.0001  L1/B=0.2397
+     t'= 5 s= 2 w= 9  E=     208  L3=      273168  L2=      296120  L1=      322274.5  B=       1263808.3  E/L3=0.0008  L1/B=0.2550
+     t'= 5 s= 3 w= 8  E=     436  L3=       76816  L2=       93304  L1=      106940.0  B=        338252.8  E/L3=0.0057  L1/B=0.3162
+     t'= 5 s= 4 w= 7  E=    1432  L3=       29312  L2=       45392  L1=       52160.3  B=        101312.3  E/L3=0.0489  L1/B=0.5148
+     t'= 5 s= 5 w= 6  E=     192  L3=        8976  L2=       15312  L1=       17637.9  B=         41296.4  E/L3=0.0214  L1/B=0.4271
+     t'= 5 s= 6 w= 5  E=       6  L3=        3608  L2=        6824  L1=        7488.3  B=         27011.0  E/L3=0.0017  L1/B=0.2772
+     t'= 5 s= 7 w= 4  E=       0  L3=        1160  L2=        2296  L1=        2457.1  B=         16293.6  E/L3=0.0000  L1/B=0.1508
+     t'= 6 s= 0 w=10  E=       8  L3=     1048576  L2=     1048576  L1=     1081367.4  B=       5095508.7  E/L3=0.0000  L1/B=0.2122
+     t'= 6 s= 1 w= 9  E=      18  L3=      262144  L2=      273432  L1=      293088.8  B=       1479040.5  E/L3=0.0001  L1/B=0.1982
+     t'= 6 s= 2 w= 8  E=      46  L3=       69344  L2=       77496  L1=       87633.4  B=        414361.6  E/L3=0.0007  L1/B=0.2115
+     t'= 6 s= 3 w= 7  E=      86  L3=       22224  L2=       30928  L1=       36567.4  B=        137088.6  E/L3=0.0039  L1/B=0.2667
+     t'= 6 s= 4 w= 6  E=     192  L3=        8976  L2=       15312  L1=       17637.9  B=         41296.4  E/L3=0.0214  L1/B=0.4271
+     t'= 6 s= 5 w= 5  E=     740  L3=        6048  L2=       11808  L1=       12481.5  B=         15553.5  E/L3=0.1224  L1/B=0.8025
+     t'= 6 s= 6 w= 4  E=      46  L3=        2144  L2=        4160  L1=        4360.0  B=          8658.8  E/L3=0.0215  L1/B=0.5035
+     t'= 6 s= 7 w= 3  E=       0  L3=         904  L2=        1800  L1=        1856.0  B=          6809.6  E/L3=0.0000  L1/B=0.2726
+     t'= 6 s= 8 w= 2  E=       0  L3=         256  L2=         512  L1=         528.0  B=          4160.0  E/L3=0.0000  L1/B=0.1269
+     t'= 7 s= 1 w= 8  E=       2  L3=       65536  L2=       69376  L1=       76693.4  B=        566579.3  E/L3=0.0000  L1/B=0.1354
+     t'= 7 s= 3 w= 6  E=       6  L3=        6096  L2=        9304  L1=       11254.4  B=         66208.8  E/L3=0.0010  L1/B=0.1700
+     t'= 7 s= 4 w= 5  E=       6  L3=        3608  L2=        6824  L1=        7488.3  B=         27011.0  E/L3=0.0017  L1/B=0.2772
+     t'= 7 s= 5 w= 4  E=      46  L3=        2144  L2=        4160  L1=        4360.0  B=          8658.8  E/L3=0.0215  L1/B=0.5035
+     t'= 7 s= 6 w= 3  E=     256  L3=        1648  L2=        3280  L1=        3340.8  B=          3532.8  E/L3=0.1553  L1/B=0.9457
+     t'= 7 s= 7 w= 2  E=       0  L3=         512  L2=        1024  L1=        1040.0  B=          2112.0  E/L3=0.0000  L1/B=0.4924
+     t'= 7 s= 8 w= 1  E=       0  L3=         256  L2=         512  L1=         520.0  B=          2064.0  E/L3=0.0000  L1/B=0.2519
+     t'= 8 s= 6 w= 2  E=       0  L3=         512  L2=        1024  L1=        1040.0  B=          2112.0  E/L3=0.0000  L1/B=0.4924
+     t'= 8 s= 7 w= 1  E=     508  L3=         512  L2=        1024  L1=        1032.0  B=          1040.0  E/L3=0.9922  L1/B=0.9923
+
+n=17  (R=6, t=5): ordered colliding pairs=125436 ; (t',s) cells checked=136 ; worst ratios: {'E/L3': ('0.2500', (8, 7, 2)), 'E/L1': ('0.1240', (8, 7, 2)), 'E/B': ('0.1212', (8, 7, 2)), 'L1/B': ('0.9773', (8, 7, 2))}
+   R=2 : ordered colliding pairs in W_R: 2242 ; max|s-t'|=3 (<= R+3=5 OK) ; with t'>=t: 252 pairs in 7 cells (E/2^n = 0.00192)
+   R=3 : ordered colliding pairs in W_R: 23950 ; max|s-t'|=4 (<= R+3=6 OK) ; with t'>=t: 1938 pairs in 16 cells (E/2^n = 0.01479)
+   R=4 : ordered colliding pairs in W_R: 61586 ; max|s-t'|=5 (<= R+3=7 OK) ; with t'>=t: 4436 pairs in 19 cells (E/2^n = 0.03384)
+   R=5 : ordered colliding pairs in W_R: 91644 ; max|s-t'|=6 (<= R+3=8 OK) ; with t'>=t: 6292 pairs in 21 cells (E/2^n = 0.04800)
+   R=6*: ordered colliding pairs in W_R: 109400 ; max|s-t'|=6 (<= R+3=9 OK) ; with t'>=t: 7480 pairs in 21 cells (E/2^n = 0.05707)
+   R=7 : ordered colliding pairs in W_R: 118106 ; max|s-t'|=7 (<= R+3=10 OK) ; with t'>=t: 8052 pairs in 22 cells (E/2^n = 0.06143)
+   R=8 : ordered colliding pairs in W_R: 122250 ; max|s-t'|=7 (<= R+3=11 OK) ; with t'>=t: 8318 pairs in 22 cells (E/2^n = 0.06346)
+   (D) totals, R=6, t=5: E=7480 (outside |s-t'|<=R+3: 0) ; cells=62 (<= n(2R+7)=323) ; sum L3=30007720 ; sum L1=31133065 ; sum B=137353811 = 119211392 (4*4^w terms) + 18142419 (gcd terms)
+       E/2^n=0.05707  sumL3/2^n=228.94  sumL1/2^n=237.53  sumB/2^n=1047.93  [4^w part 909.51, gcd part 138.42]  sumB/(n^(9/2) ln n 2^n)=1.074e-03  n^(9/2) ln n=9.757e+05
+
+n=18  (R=6, t=5): ordered colliding pairs=252176 ; (t',s) cells checked=153 ; worst ratios: {'E/L3': ('0.9961', (9, 8, 1)), 'E/L1': ('0.4961', (9, 8, 1)), 'E/B': ('0.4942', (9, 8, 1)), 'L1/B': ('0.9961', (9, 8, 1))}
+   R=2 : ordered colliding pairs in W_R: 3714 ; max|s-t'|=2 (<= R+3=5 OK) ; with t'>=t: 492 pairs in 11 cells (E/2^n = 0.00188)
+   R=3 : ordered colliding pairs in W_R: 44236 ; max|s-t'|=4 (<= R+3=6 OK) ; with t'>=t: 4048 pairs in 23 cells (E/2^n = 0.01544)
+   R=4 : ordered colliding pairs in W_R: 118184 ; max|s-t'|=5 (<= R+3=7 OK) ; with t'>=t: 9222 pairs in 27 cells (E/2^n = 0.03518)
+   R=5 : ordered colliding pairs in W_R: 180470 ; max|s-t'|=6 (<= R+3=8 OK) ; with t'>=t: 13422 pairs in 30 cells (E/2^n = 0.05120)
+   R=6*: ordered colliding pairs in W_R: 217214 ; max|s-t'|=7 (<= R+3=9 OK) ; with t'>=t: 16108 pairs in 31 cells (E/2^n = 0.06145)
+   R=7 : ordered colliding pairs in W_R: 235698 ; max|s-t'|=7 (<= R+3=10 OK) ; with t'>=t: 17602 pairs in 32 cells (E/2^n = 0.06715)
+   R=8 : ordered colliding pairs in W_R: 244598 ; max|s-t'|=7 (<= R+3=11 OK) ; with t'>=t: 18266 pairs in 32 cells (E/2^n = 0.06968)
+   (D) totals, R=6, t=5: E=16108 (outside |s-t'|<=R+3: 0) ; cells=71 (<= n(2R+7)=342) ; sum L3=119719272 ; sum L1=122477088 ; sum B=521851587 = 476845712 (4*4^w terms) + 45005875 (gcd terms)
+       E/2^n=0.06145  sumL3/2^n=456.69  sumL1/2^n=467.21  sumB/2^n=1990.71  [4^w part 1819.02, gcd part 171.68]  sumB/(n^(9/2) ln n 2^n)=1.546e-03  n^(9/2) ln n=1.287e+06
+
+n=19  (R=6, t=5): ordered colliding pairs=506372 ; (t',s) cells checked=171 ; worst ratios: {'E/L3': ('0.2500', (9, 8, 2)), 'E/L1': ('0.1245', (9, 8, 2)), 'E/B': ('0.1231', (9, 8, 2)), 'L1/B': ('0.9885', (9, 8, 2))}
+   R=2 : ordered colliding pairs in W_R: 5696 ; max|s-t'|=2 (<= R+3=5 OK) ; with t'>=t: 700 pairs in 11 cells (E/2^n = 0.00134)
+   R=3 : ordered colliding pairs in W_R: 78946 ; max|s-t'|=4 (<= R+3=6 OK) ; with t'>=t: 6808 pairs in 21 cells (E/2^n = 0.01299)
+   R=4 : ordered colliding pairs in W_R: 224736 ; max|s-t'|=5 (<= R+3=7 OK) ; with t'>=t: 17210 pairs in 27 cells (E/2^n = 0.03283)
+   R=5 : ordered colliding pairs in W_R: 352734 ; max|s-t'|=6 (<= R+3=8 OK) ; with t'>=t: 25774 pairs in 30 cells (E/2^n = 0.04916)
+   R=6*: ordered colliding pairs in W_R: 430768 ; max|s-t'|=7 (<= R+3=9 OK) ; with t'>=t: 31482 pairs in 32 cells (E/2^n = 0.06005)
+   R=7 : ordered colliding pairs in W_R: 470516 ; max|s-t'|=7 (<= R+3=10 OK) ; with t'>=t: 34334 pairs in 32 cells (E/2^n = 0.06549)
+   R=8 : ordered colliding pairs in W_R: 490016 ; max|s-t'|=8 (<= R+3=11 OK) ; with t'>=t: 35730 pairs in 33 cells (E/2^n = 0.06815)
+   (D) totals, R=6, t=5: E=31482 (outside |s-t'|<=R+3: 0) ; cells=80 (<= n(2R+7)=361) ; sum L3=478065456 ; sum L1=484641410 ; sum B=2014860841 = 1907382992 (4*4^w terms) + 107477849 (gcd terms)
+       E/2^n=0.06005  sumL3/2^n=911.84  sumL1/2^n=924.38  sumB/2^n=3843.04  [4^w part 3638.04, gcd part 205.00]  sumB/(n^(9/2) ln n 2^n)=2.298e-03  n^(9/2) ln n=1.673e+06
+
+n=20  (R=6, t=5): ordered colliding pairs=1018040 ; (t',s) cells checked=190 ; worst ratios: {'E/L3': ('0.9980', (10, 9, 1)), 'E/L1': ('0.4981', (10, 9, 1)), 'E/B': ('0.4971', (10, 9, 1)), 'L1/B': ('0.9981', (10, 9, 1))}
+   R=2 : ordered colliding pairs in W_R: 9196 ; max|s-t'|=3 (<= R+3=5 OK) ; with t'>=t: 1224 pairs in 12 cells (E/2^n = 0.00117)
+   R=3 : ordered colliding pairs in W_R: 144262 ; max|s-t'|=4 (<= R+3=6 OK) ; with t'>=t: 13232 pairs in 28 cells (E/2^n = 0.01262)
+   R=4 : ordered colliding pairs in W_R: 431672 ; max|s-t'|=5 (<= R+3=7 OK) ; with t'>=t: 34676 pairs in 36 cells (E/2^n = 0.03307)
+   R=5 : ordered colliding pairs in W_R: 693292 ; max|s-t'|=6 (<= R+3=8 OK) ; with t'>=t: 53440 pairs in 39 cells (E/2^n = 0.05096)
+   R=6*: ordered colliding pairs in W_R: 856056 ; max|s-t'|=7 (<= R+3=9 OK) ; with t'>=t: 65502 pairs in 41 cells (E/2^n = 0.06247)
+   R=7 : ordered colliding pairs in W_R: 940270 ; max|s-t'|=8 (<= R+3=10 OK) ; with t'>=t: 72060 pairs in 43 cells (E/2^n = 0.06872)
+   R=8 : ordered colliding pairs in W_R: 981618 ; max|s-t'|=8 (<= R+3=11 OK) ; with t'>=t: 75148 pairs in 44 cells (E/2^n = 0.07167)
+   (D) totals, R=6, t=5: E=65502 (outside |s-t'|<=R+3: 0) ; cells=90 (<= n(2R+7)=380) ; sum L3=1910389136 ; sum L1=1926332581 ; sum B=7894058955 = 7629532128 (4*4^w terms) + 264526827 (gcd terms)
+       E/2^n=0.06247  sumL3/2^n=1821.89  sumL1/2^n=1837.09  sumB/2^n=7528.36  [4^w part 7276.09, gcd part 252.27]  sumB/(n^(9/2) ln n 2^n)=3.512e-03  n^(9/2) ln n=2.144e+06
+
+n=21  (R=6, t=6): ordered colliding pairs=2036348 ; (t',s) cells checked=210 ; worst ratios: {'E/L3': ('0.2500', (10, 9, 2)), 'E/L1': ('0.1248', (10, 9, 2)), 'E/B': ('0.1240', (10, 9, 2)), 'L1/B': ('0.9942', (10, 9, 2))}
+   R=2 : ordered colliding pairs in W_R: 15006 ; max|s-t'|=3 (<= R+3=5 OK) ; with t'>=t: 1136 pairs in 12 cells (E/2^n = 0.00054)
+   R=3 : ordered colliding pairs in W_R: 258910 ; max|s-t'|=4 (<= R+3=6 OK) ; with t'>=t: 12002 pairs in 23 cells (E/2^n = 0.00572)
+   R=4 : ordered colliding pairs in W_R: 820630 ; max|s-t'|=5 (<= R+3=7 OK) ; with t'>=t: 33118 pairs in 27 cells (E/2^n = 0.01579)
+   R=5 : ordered colliding pairs in W_R: 1349840 ; max|s-t'|=6 (<= R+3=8 OK) ; with t'>=t: 51452 pairs in 31 cells (E/2^n = 0.02453)
+   R=6*: ordered colliding pairs in W_R: 1689050 ; max|s-t'|=7 (<= R+3=9 OK) ; with t'>=t: 62968 pairs in 34 cells (E/2^n = 0.03003)
+   R=7 : ordered colliding pairs in W_R: 1868458 ; max|s-t'|=8 (<= R+3=10 OK) ; with t'>=t: 69466 pairs in 35 cells (E/2^n = 0.03312)
+   R=8 : ordered colliding pairs in W_R: 1957018 ; max|s-t'|=9 (<= R+3=11 OK) ; with t'>=t: 72790 pairs in 37 cells (E/2^n = 0.03471)
+   (D) totals, R=6, t=6: E=62968 (outside |s-t'|<=R+3: 0) ; cells=84 (<= n(2R+7)=399) ; sum L3=1906494128 ; sum L1=1923179193 ; sum B=8073235374 = 7611636432 (4*4^w terms) + 461598942 (gcd terms)
+       E/2^n=0.03003  sumL3/2^n=909.09  sumL1/2^n=917.04  sumB/2^n=3849.62  [4^w part 3629.51, gcd part 220.11]  sumB/(n^(9/2) ln n 2^n)=1.419e-03  n^(9/2) ln n=2.713e+06
+
+n=22  (R=6, t=6): ordered colliding pairs=4053328 ; (t',s) cells checked=231 ; worst ratios: {'E/L3': ('0.9990', (11, 10, 1)), 'E/L1': ('0.4990', (11, 10, 1)), 'E/B': ('0.4985', (11, 10, 1)), 'L1/B': ('0.9990', (11, 10, 1))}
+   R=2 : ordered colliding pairs in W_R: 24068 ; max|s-t'|=3 (<= R+3=5 OK) ; with t'>=t: 2004 pairs in 17 cells (E/2^n = 0.00048)
+   R=3 : ordered colliding pairs in W_R: 469298 ; max|s-t'|=4 (<= R+3=6 OK) ; with t'>=t: 23658 pairs in 30 cells (E/2^n = 0.00564)
+   R=4 : ordered colliding pairs in W_R: 1551976 ; max|s-t'|=6 (<= R+3=7 OK) ; with t'>=t: 65282 pairs in 38 cells (E/2^n = 0.01556)
+   R=5 : ordered colliding pairs in W_R: 2621558 ; max|s-t'|=6 (<= R+3=8 OK) ; with t'>=t: 104210 pairs in 41 cells (E/2^n = 0.02485)
+   R=6*: ordered colliding pairs in W_R: 3318522 ; max|s-t'|=7 (<= R+3=9 OK) ; with t'>=t: 128912 pairs in 45 cells (E/2^n = 0.03074)
+   R=7 : ordered colliding pairs in W_R: 3696790 ; max|s-t'|=8 (<= R+3=10 OK) ; with t'>=t: 143244 pairs in 47 cells (E/2^n = 0.03415)
+   R=8 : ordered colliding pairs in W_R: 3884326 ; max|s-t'|=9 (<= R+3=11 OK) ; with t'>=t: 150202 pairs in 48 cells (E/2^n = 0.03581)
+   (D) totals, R=6, t=6: E=128912 (outside |s-t'|<=R+3: 0) ; cells=94 (<= n(2R+7)=418) ; sum L3=7620324072 ; sum L1=7660011076 ; sum B=31559494299 = 30446545888 (4*4^w terms) + 1112948411 (gcd terms)
+       E/2^n=0.03074  sumL3/2^n=1816.83  sumL1/2^n=1826.29  sumB/2^n=7524.37  [4^w part 7259.02, gcd part 265.35]  sumB/(n^(9/2) ln n 2^n)=2.215e-03  n^(9/2) ln n=3.396e+06
+   table (t', s, w, E, L3, L2, L1, B) for cells with E > 0 or t' >= t and |s-t'| <= 2:
+     t'= 1 s= 0 w=21  E= 1518968  L3=4398046511104  L2=4398046511104  L1=4398573175163.2  B=17592712708475.2  E/L3=0.0000  L1/B=0.2500
+     t'= 1 s= 1 w=20  E=  191910  L3=1099511627776  L2=1099511627776  L1=1099698919486.1  B= 4398409462021.0  E/L3=0.0000  L1/B=0.2500
+     t'= 1 s= 2 w=19  E=   49268  L3=274877906944  L2=274877906944  L1=274972245276.2  B= 1099872228975.6  E/L3=0.0000  L1/B=0.2500
+     t'= 1 s= 3 w=18  E=   12644  L3= 68719476736  L2= 68719476736  L1= 68752987712.0  B=  275128131902.8  E/L3=0.0000  L1/B=0.2499
+     t'= 1 s= 4 w=17  E=    3192  L3= 17179869184  L2= 17179869184  L1= 17196484480.3  B=   68967389351.6  E/L3=0.0000  L1/B=0.2493
+     t'= 1 s= 5 w=16  E=     810  L3=  4294967296  L2=  4294967296  L1=  4300946285.5  B=   17354025508.1  E/L3=0.0000  L1/B=0.2478
+     t'= 1 s= 6 w=15  E=     232  L3=  1073741824  L2=  1073741824  L1=  1076667411.1  B=    4465974125.7  E/L3=0.0000  L1/B=0.2411
+     t'= 1 s= 7 w=14  E=      66  L3=   268435456  L2=   268435456  L1=   269490358.0  B=    1194300850.3  E/L3=0.0000  L1/B=0.2256
+     t'= 1 s= 8 w=13  E=       6  L3=    67108864  L2=    67108864  L1=    67624931.1  B=     386608033.5  E/L3=0.0000  L1/B=0.1749
+     t'= 2 s= 0 w=20  E=  191910  L3=1099511627776  L2=1099511627776  L1=1099698919486.1  B= 4398409462021.0  E/L3=0.0000  L1/B=0.2500
+     t'= 2 s= 1 w=19  E=  748412  L3=274877906944  L2=274958528512  L1=275058207543.8  B= 1099691928375.8  E/L3=0.0000  L1/B=0.2501
+     t'= 2 s= 2 w=18  E=   97308  L3= 68719476736  L2= 68746614912  L1= 68784589136.0  B=  275003019423.4  E/L3=0.0000  L1/B=0.2501
+     t'= 2 s= 3 w=17  E=   25084  L3= 17179869184  L2= 17193524256  L1= 17212682051.0  B=   68843433043.8  E/L3=0.0000  L1/B=0.2500
+     t'= 2 s= 4 w=16  E=    6250  L3=  4294967296  L2=  4299570160  L1=  4306836453.7  B=   17266947346.0  E/L3=0.0000  L1/B=0.2494
+     t'= 2 s= 5 w=15  E=    1564  L3=  1073741824  L2=  1076047120  L1=  1079573049.8  B=    4380470710.8  E/L3=0.0000  L1/B=0.2465
+     t'= 2 s= 6 w=14  E=     398  L3=   268435456  L2=   269213712  L1=   270541142.0  B=    1134021337.1  E/L3=0.0000  L1/B=0.2386
+     t'= 2 s= 7 w=13  E=      98  L3=    67108864  L2=    67498720  L1=    68140031.3  B=     327521744.8  E/L3=0.0000  L1/B=0.2080
+     t'= 2 s= 8 w=12  E=      24  L3=    16777216  L2=    16909376  L1=    17149735.9  B=     108882892.1  E/L3=0.0000  L1/B=0.1575
+     t'= 2 s= 9 w=11  E=       2  L3=     4194304  L2=     4260720  L1=     4376242.0  B=      57628183.5  E/L3=0.0000  L1/B=0.0759
+     t'= 3 s= 0 w=19  E=   49268  L3=274877906944  L2=274877906944  L1=274972245276.2  B= 1099872228975.6  E/L3=0.0000  L1/B=0.2500
+     t'= 3 s= 1 w=18  E=   97308  L3= 68719476736  L2= 68746614912  L1= 68784589136.0  B=  275003019423.4  E/L3=0.0000  L1/B=0.2501
+     t'= 3 s= 2 w=17  E=  373072  L3= 17193306112  L2= 17220418304  L1= 17241847337.9  B=   68781454889.9  E/L3=0.0000  L1/B=0.2507
+     t'= 3 s= 3 w=16  E=   48748  L3=  4299508096  L2=  4308728240  L1=  4317869211.2  B=   17223408265.0  E/L3=0.0000  L1/B=0.2507
+     t'= 3 s= 4 w=15  E=   12388  L3=  1076033856  L2=  1080696384  L1=  1085218240.7  B=    4337719003.4  E/L3=0.0000  L1/B=0.2502
+     t'= 3 s= 5 w=14  E=    3074  L3=   269210448  L2=   270795696  L1=   272609319.7  B=    1103881580.6  E/L3=0.0000  L1/B=0.2470
+     t'= 3 s= 6 w=13  E=     810  L3=    67497680  L2=    68294408  L1=    69161884.8  B=     297978600.4  E/L3=0.0000  L1/B=0.2321
+     t'= 3 s= 7 w=12  E=     206  L3=    16909264  L2=    17181880  L1=    17520954.8  B=      87995878.0  E/L3=0.0000  L1/B=0.1991
+     t'= 3 s= 8 w=11  E=      56  L3=     4260688  L2=     4398528  L1=     4557957.3  B=      37202699.7  E/L3=0.0000  L1/B=0.1225
+     t'= 4 s= 0 w=18  E=   12644  L3= 68719476736  L2= 68719476736  L1= 68752987712.0  B=  275128131902.8  E/L3=0.0000  L1/B=0.2499
+     t'= 4 s= 1 w=17  E=   25084  L3= 17179869184  L2= 17193524256  L1= 17212682051.0  B=   68843433043.8  E/L3=0.0000  L1/B=0.2500
+     t'= 4 s= 2 w=16  E=   48748  L3=  4299508096  L2=  4308728240  L1=  4317869211.2  B=   17223408265.0  E/L3=0.0000  L1/B=0.2507
+     t'= 4 s= 3 w=15  E=  186052  L3=  1080511872  L2=  1089785024  L1=  1095117677.7  B=    4316343149.7  E/L3=0.0002  L1/B=0.2537
+     t'= 4 s= 4 w=14  E=   25304  L3=   270746544  L2=   273983664  L1=   276434338.7  B=    1088811702.3  E/L3=0.0001  L1/B=0.2539
+     t'= 4 s= 5 w=13  E=    6180  L3=    68282080  L2=    69917216  L1=    71131857.1  B=     283207028.2  E/L3=0.0001  L1/B=0.2512
+     t'= 4 s= 6 w=12  E=    1702  L3=    17179160  L2=    17753064  L1=    18250061.1  B=      77552371.0  E/L3=0.0001  L1/B=0.2353
+     t'= 4 s= 7 w=11  E=     394  L3=     4397616  L2=     4688704  L1=     4918107.4  B=      26989957.9  E/L3=0.0001  L1/B=0.1822
+     t'= 4 s= 8 w=10  E=      80  L3=     1118848  L2=     1220728  L1=     1310906.9  B=      11403941.8  E/L3=0.0001  L1/B=0.1150
+     t'= 4 s= 9 w= 9  E=       4  L3=      297152  L2=      348192  L1=      386523.0  B=       7936008.4  E/L3=0.0000  L1/B=0.0487
+     t'= 5 s= 0 w=17  E=    3192  L3= 17179869184  L2= 17179869184  L1= 17196484480.3  B=   68967389351.6  E/L3=0.0000  L1/B=0.2493
+     t'= 5 s= 1 w=16  E=    6250  L3=  4294967296  L2=  4299570160  L1=  4306836453.7  B=   17266947346.0  E/L3=0.0000  L1/B=0.2494
+     t'= 5 s= 2 w=15  E=   12388  L3=  1076033856  L2=  1080696384  L1=  1085218240.7  B=    4337719003.4  E/L3=0.0000  L1/B=0.2502
+     t'= 5 s= 3 w=14  E=   25304  L3=   270746544  L2=   273983664  L1=   276434338.7  B=    1088811702.3  E/L3=0.0001  L1/B=0.2539
+     t'= 5 s= 4 w=13  E=   92960  L3=    69798400  L2=    72981216  L1=    74494650.1  B=     275821242.1  E/L3=0.0013  L1/B=0.2701
+     t'= 5 s= 5 w=12  E=   12882  L3=    17717648  L2=    18863752  L1=    19574518.5  B=      72330617.5  E/L3=0.0007  L1/B=0.2706
+     t'= 5 s= 6 w=11  E=    3290  L3=     4678400  L2=     5271952  L1=     5606751.3  B=      21883586.9  E/L3=0.0007  L1/B=0.2562
+     t'= 5 s= 7 w=10  E=     786  L3=     1218696  L2=     1432648  L1=     1567302.3  B=       7799122.9  E/L3=0.0006  L1/B=0.2010
+     t'= 5 s= 8 w= 9  E=     164  L3=      347664  L2=      453768  L1=      509702.2  B=       4492292.2  E/L3=0.0005  L1/B=0.1135
+     t'= 5 s= 9 w= 8  E=       2  L3=       95520  L2=      134120  L1=      154795.6  B=       2697626.4  E/L3=0.0000  L1/B=0.0574
+     t'= 6 s= 0 w=16  E=     810  L3=  4294967296  L2=  4294967296  L1=  4300946285.5  B=   17354025508.1  E/L3=0.0000  L1/B=0.2478
+     t'= 6 s= 1 w=15  E=    1564  L3=  1073741824  L2=  1076047120  L1=  1079573049.8  B=    4380470710.8  E/L3=0.0000  L1/B=0.2465
+     t'= 6 s= 2 w=14  E=    3074  L3=   269210448  L2=   270795696  L1=   272609319.7  B=    1103881580.6  E/L3=0.0000  L1/B=0.2470
+     t'= 6 s= 3 w=13  E=    6180  L3=    68282080  L2=    69917216  L1=    71131857.1  B=     283207028.2  E/L3=0.0001  L1/B=0.2512
+     t'= 6 s= 4 w=12  E=   12882  L3=    17717648  L2=    18863752  L1=    19574518.5  B=      72330617.5  E/L3=0.0007  L1/B=0.2706
+     t'= 6 s= 5 w=11  E=   46648  L3=     5197744  L2=     6318992  L1=     6747489.5  B=      19330401.5  E/L3=0.0090  L1/B=0.3491
+     t'= 6 s= 6 w=10  E=    6776  L3=     1410088  L2=     1826944  L1=     2024604.1  B=       5996713.4  E/L3=0.0048  L1/B=0.3376
+     t'= 6 s= 7 w= 9  E=    1786  L3=      447584  L2=      661576  L1=      743188.0  B=       2770434.1  E/L3=0.0040  L1/B=0.2683
+     t'= 6 s= 8 w= 8  E=     400  L3=      133184  L2=      213736  L1=      242315.1  B=       1479885.2  E/L3=0.0030  L1/B=0.1637
+     t'= 6 s= 9 w= 7  E=       6  L3=       50648  L2=       90456  L1=       99594.5  B=       1210377.9  E/L3=0.0001  L1/B=0.0823
+     t'= 7 s= 0 w=15  E=     232  L3=  1073741824  L2=  1073741824  L1=  1076667411.1  B=    4465974125.7  E/L3=0.0000  L1/B=0.2411
+     t'= 7 s= 1 w=14  E=     398  L3=   268435456  L2=   269213712  L1=   270541142.0  B=    1134021337.1  E/L3=0.0000  L1/B=0.2386
+     t'= 7 s= 2 w=13  E=     810  L3=    67497680  L2=    68294408  L1=    69161884.8  B=     297978600.4  E/L3=0.0000  L1/B=0.2321
+     t'= 7 s= 3 w=12  E=    1702  L3=    17179160  L2=    17753064  L1=    18250061.1  B=      77552371.0  E/L3=0.0001  L1/B=0.2353
+     t'= 7 s= 4 w=11  E=    3290  L3=     4678400  L2=     5271952  L1=     5606751.3  B=      21883586.9  E/L3=0.0007  L1/B=0.2562
+     t'= 7 s= 5 w=10  E=    6776  L3=     1410088  L2=     1826944  L1=     2024604.1  B=       5996713.4  E/L3=0.0048  L1/B=0.3376
+     t'= 7 s= 6 w= 9  E=   23244  L3=      622880  L2=     1022096  L1=     1123073.0  B=       1909505.0  E/L3=0.0373  L1/B=0.5881
+     t'= 7 s= 7 w= 8  E=    3530  L3=      203248  L2=      361664  L1=      396768.2  B=        871014.6  E/L3=0.0174  L1/B=0.4555
+     t'= 7 s= 8 w= 7  E=     660  L3=       88128  L2=      168104  L1=      177851.0  B=        637957.0  E/L3=0.0075  L1/B=0.2788
+     t'= 7 s= 9 w= 6  E=      52  L3=       30128  L2=       58936  L1=       61362.9  B=        414982.7  E/L3=0.0017  L1/B=0.1479
+     t'= 8 s= 0 w=14  E=      66  L3=   268435456  L2=   268435456  L1=   269490358.0  B=    1194300850.3  E/L3=0.0000  L1/B=0.2256
+     t'= 8 s= 1 w=13  E=      98  L3=    67108864  L2=    67498720  L1=    68140031.3  B=     327521744.8  E/L3=0.0000  L1/B=0.2080
+     t'= 8 s= 2 w=12  E=     206  L3=    16909264  L2=    17181880  L1=    17520954.8  B=      87995878.0  E/L3=0.0000  L1/B=0.1991
+     t'= 8 s= 3 w=11  E=     394  L3=     4397616  L2=     4688704  L1=     4918107.4  B=      26989957.9  E/L3=0.0001  L1/B=0.1822
+     t'= 8 s= 4 w=10  E=     786  L3=     1218696  L2=     1432648  L1=     1567302.3  B=       7799122.9  E/L3=0.0006  L1/B=0.2010
+     t'= 8 s= 5 w= 9  E=    1786  L3=      447584  L2=      661576  L1=      743188.0  B=       2770434.1  E/L3=0.0040  L1/B=0.2683
+     t'= 8 s= 6 w= 8  E=    3530  L3=      203248  L2=      361664  L1=      396768.2  B=        871014.6  E/L3=0.0174  L1/B=0.4555
+     t'= 8 s= 7 w= 7  E=   11368  L3=      149152  L2=      293904  L1=      302594.5  B=        351746.5  E/L3=0.0762  L1/B=0.8603
+     t'= 8 s= 8 w= 6  E=    1622  L3=       55880  L2=      110120  L1=      112431.3  B=        215683.4  E/L3=0.0290  L1/B=0.5213
+     t'= 8 s= 9 w= 5  E=      86  L3=       26160  L2=       52032  L1=       52738.5  B=        187416.1  E/L3=0.0033  L1/B=0.2814
+     t'= 8 s=10 w= 4  E=       0  L3=        8856  L2=       17664  L1=       17864.6  B=        123181.1  E/L3=0.0000  L1/B=0.1450
+     t'= 9 s= 0 w=13  E=       6  L3=    67108864  L2=    67108864  L1=    67624931.1  B=     386608033.5  E/L3=0.0000  L1/B=0.1749
+     t'= 9 s= 1 w=12  E=      24  L3=    16777216  L2=    16909376  L1=    17149735.9  B=     108882892.1  E/L3=0.0000  L1/B=0.1575
+     t'= 9 s= 2 w=11  E=      56  L3=     4260688  L2=     4398528  L1=     4557957.3  B=      37202699.7  E/L3=0.0000  L1/B=0.1225
+     t'= 9 s= 3 w=10  E=      80  L3=     1118848  L2=     1220728  L1=     1310906.9  B=      11403941.8  E/L3=0.0001  L1/B=0.1150
+     t'= 9 s= 4 w= 9  E=     164  L3=      347664  L2=      453768  L1=      509702.2  B=       4492292.2  E/L3=0.0005  L1/B=0.1135
+     t'= 9 s= 5 w= 8  E=     400  L3=      133184  L2=      213736  L1=      242315.1  B=       1479885.2  E/L3=0.0030  L1/B=0.1637
+     t'= 9 s= 6 w= 7  E=     660  L3=       88128  L2=      168104  L1=      177851.0  B=        637957.0  E/L3=0.0075  L1/B=0.2788
+     t'= 9 s= 7 w= 6  E=    1622  L3=       55880  L2=      110120  L1=      112431.3  B=        215683.4  E/L3=0.0290  L1/B=0.5213
+     t'= 9 s= 8 w= 5  E=    5980  L3=       46176  L2=       92128  L1=       92684.1  B=         95756.1  E/L3=0.1295  L1/B=0.9679
+     t'= 9 s= 9 w= 4  E=     398  L3=       16488  L2=       32920  L1=       33088.2  B=         62102.5  E/L3=0.0241  L1/B=0.5328
+     t'= 9 s=10 w= 3  E=       0  L3=        7176  L2=       14344  L1=       14400.0  B=         52684.8  E/L3=0.0000  L1/B=0.2733
+     t'= 9 s=11 w= 2  E=       0  L3=        2048  L2=        4096  L1=        4112.0  B=         32832.0  E/L3=0.0000  L1/B=0.1252
+     t'=10 s= 1 w=11  E=       2  L3=     4194304  L2=     4260720  L1=     4376242.0  B=      57628183.5  E/L3=0.0000  L1/B=0.0759
+     t'=10 s= 3 w= 9  E=       4  L3=      297152  L2=      348192  L1=      386523.0  B=       7936008.4  E/L3=0.0000  L1/B=0.0487
+     t'=10 s= 4 w= 8  E=       2  L3=       95520  L2=      134120  L1=      154795.6  B=       2697626.4  E/L3=0.0000  L1/B=0.0574
+     t'=10 s= 5 w= 7  E=       6  L3=       50648  L2=       90456  L1=       99594.5  B=       1210377.9  E/L3=0.0001  L1/B=0.0823
+     t'=10 s= 6 w= 6  E=      52  L3=       30128  L2=       58936  L1=       61362.9  B=        414982.7  E/L3=0.0017  L1/B=0.1479
+     t'=10 s= 7 w= 5  E=      86  L3=       26160  L2=       52032  L1=       52738.5  B=        187416.1  E/L3=0.0033  L1/B=0.2814
+     t'=10 s= 8 w= 4  E=     398  L3=       16488  L2=       32920  L1=       33088.2  B=         62102.5  E/L3=0.0241  L1/B=0.5328
+     t'=10 s= 9 w= 3  E=    2048  L3=       13120  L2=       26224  L1=       26278.4  B=         26470.4  E/L3=0.1561  L1/B=0.9927
+     t'=10 s=10 w= 2  E=       0  L3=        4096  L2=        8192  L1=        8208.0  B=         16448.0  E/L3=0.0000  L1/B=0.4990
+     t'=10 s=11 w= 1  E=       0  L3=        2048  L2=        4096  L1=        4104.0  B=         16400.0  E/L3=0.0000  L1/B=0.2502
+     t'=11 s= 9 w= 2  E=       0  L3=        4096  L2=        8192  L1=        8208.0  B=         16448.0  E/L3=0.0000  L1/B=0.4990
+     t'=11 s=10 w= 1  E=    4092  L3=        4096  L2=        8192  L1=        8200.0  B=          8208.0  E/L3=0.9990  L1/B=0.9990
+
+TOTAL VIOLATIONS: 0

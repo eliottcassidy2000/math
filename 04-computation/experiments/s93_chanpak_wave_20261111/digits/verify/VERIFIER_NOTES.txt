@@ -1,0 +1,161 @@
+LANE "digits" (S93 Chan-Pak wave) - ADVERSARIAL VERIFIER NOTES (2026-11-11)
+
+Own code in this folder; nothing outside it was edited.  Every run below finished (exit 0) in under 3 minutes.
+Nothing here touches the Chan-Pak conjecture, which stays OPEN.
+
+=====================================================================================================================
+A.  CHECKS RUN (script -> output)
+
+V1  v1_onemark_matrices.py -> v1_onemark_matrices.out
+    The 4 x 4 matrix of every labelled one-mark block (X, W, m), |X| <= 5 (202,012 blocks), computed from the
+    path-surgery formulas of the proof (counts on X alone, no base tournament): 1,922 distinct matrices, the same set
+    as onemark_matrices_5.json; every json entry equals the formula matrix of its own (X, W, m).  Law s' = N s by direct
+    count on 1,500 random marked bases of orders 6, 7 with random blocks: 0 failures.
+    (The lane's onemark.py tests "every base of order <= 5" only for the FIRST labelled block of each distinct matrix:
+    1,922 blocks, not 202,012.  V1 closes that gap.)
+V2  v2_onemark_pairs.py 5 -> v2_onemark_pairs_5.out     (own integer linear algebra vlin.py, exact)
+    Integer eigenvalues >= 1 (rational root theorem): the lane's table.  Pairs: (i) 289,835, (ii) 101,876, (iii) 0.
+    Census-free single operations: of the 114 (matrix, a) whose offset is not identically 0 on C,
+      52 (a > 1) have C inside {g = 0};  52 (a = 1) have B = r g on C with r < 1 (V2b, exact);  5 are c^k with H fixed;
+      5 are the ray blocks a^k.  So for EVERY marked tournament (B >= g >= 1): the only block of order <= 5 with an
+      exact affine class, b != 0 and H moving is a^k, and there is no exact translation.
+V2b v2b_translations_exact.py -> v2b_translations_exact.out
+V3  v3_oneapex.py -> v3_oneapex.out;  v3b_oneapex_proof_check.py -> v3b_oneapex_proof_check.out
+    Closed form of (TT_k, W) = product of the one-vertex matrices, all 32,766 words k <= 14.
+    F(W) = V U - (2^k - 1)(Wd + sigma eps) from the definitions, all nonempty W, k <= 24: one zero per k (W full);
+    min over proper W = 2^ceil(k/2) + 2^floor(k/2) - 2.  Inequalities of the proof in B.1: 0 violations, k <= 16.
+V4  v4_gadgets.py -> v4_gadgets.out      (exact integer eigenvalues without floating point: vroots.py)
+    3,207 gadget matrices: exactly 8 with an integer eigenvalue >= 1 (84, 168, 252, 336, 504, 756, 255, 504); each
+    class space has dimension 2 and the offset is identically 0 on it; all 28 pairs commute.  Gadget law and sigma by
+    own direct counts: 346 + 200 tests, 0 failures.
+    Words, NOTHING omitted (the lane's (4,2) run dropped sigma and sigma^2, its (3,3) run sigma^2, sigma^3):
+      sigma + 57, length <= 2: 132 words with an eigenvalue; L_h: 8,751 / 3,781 / 0;  L_1: 8,523 / 4,009 / 0.
+      sigma + 14, length <= 3: 102 words;                   L_h: 5,825 / 2,151 / 0;  L_1: 5,722 / 2,254 / 0.
+    (Without the pairs containing a power of sigma: 8,525 / 3,383 and 8,297 / 3,611, the lane's numbers.)
+V5  v5_twoapex.py 11 -> v5_twoapex_11.out
+    36-state transfer = own direct count for all 21,845 words of length <= 7 and 60 random words of length 8..12.
+    All 5,592,405 base words of length <= 11, 20 suffix words, multiplier read off the data (any integer):
+    16,498 non-commuting pairs pass both single tests, 0 pass the tree test to depth 2.  Single counts = finisher's.
+V6  v6_ext_tree.py [9] -> v6_ext_tree_8.out, v6_ext_tree_9.out
+    One-vertex steps: K_1 classes by order 1..8: 0, 1, 1, 2, 5, 18, 50, 134 (lane's column "both"); K_2 empty.
+    Order 9 without canonical forms: all 1,761,280 labelled extensions of the 6,880 classes of order 8:
+    3,012 instances in K_1, 0 in K_2.
+V7  v7_twomark_trace.py 6 -> v7_twomark_trace.out      (see B.2)
+V8  v8_twomark_pairs.py 7 -> v8_twomark_pairs_7.out
+    All 21,134 two-marked tournaments of order <= 7 (17,694 states), 156 suffix words, any integer multiplier:
+    404,476 non-commuting pairs pass both single tests, 0 pass the tree test to depth 2.  One-letter counts = finisher's.
+V9  v9_twomark_classes.py -> v9_twomark_classes.out     (ranks modulo two 31-bit primes, which agree)
+    Two-mark words of length <= 2: (i) 1,476, (ii) 35,596, (iii) 177, same table by (a1, a2, dim C) as the lane;
+    one-letter words: 12 / 245 / 3.  Words in the four letters with mu = 0 = the two-apex family G(2,0):
+    (ii) 1,575, (iii) 135 - the lane's two-apex numbers, obtained here from a different representation.
+V10 v10_ext_tree2.py 7 -> v10_ext_tree2_7.out
+    One- or two-vertex steps, roots of order <= 7: K_1 by order 1, 1, 1, 2, 5, 18, 50; K_2 empty.
+V11 v11_translations.py, v11b_gadget_translation.py -> .out      (see B.3)
+V12 v12_caterpillar.py 100000 -> v12_caterpillar.out
+    Words in a, b, c over a point: exactly the 29 known odd values are missing up to 100,000.
+
+=====================================================================================================================
+B.  PROOFS SUPPLIED BY THE VERIFIER (written here, read by nobody else yet)
+
+B.1  ONE-APEX UNIQUENESS FOR EVERY k  (the finisher left it OPEN beyond k = 24).
+Notation of P4: W a nonempty subset of {1..k}, V = sum 2^(p-1), U = sum 2^(k-p) over p in W,
+Wd = c1 + sum_{f<e in W} 2^(e-f-1), c1 = #{p : p, p+1 in W}, sigma = [1 in W], eps = [k in W].
+Claim.  F(W) := V U - (2^k - 1)(Wd + sigma eps) >= 0, with equality iff W = {1..k}.
+Proof.  V U = sum_{p,q in W} 2^(k-1+p-q) = 2^(k-1)|W| + sum_{f<e} (2^(k-1+d) + 2^(k-1-d)), d = e - f, and
+2^(k-1+d) - (2^k - 1) 2^(d-1) = 2^(d-1).  Hence
+    F(W) = 2^(k-1)|W| + sum_{f<e in W} (2^(k-1-d) + 2^(d-1)) - (2^k - 1)(c1 + sigma eps).                      (*)
+Split W into maximal runs R_1 < ... < R_s of lengths r_i.  A run of length r has r - d pairs at distance d and r - 1
+adjacent pairs, so its own contribution to (*) is
+    S(r) = 2^(k-1) r + sum_{d=1}^{r-1} (r - d)(2^(k-1-d) + 2^(d-1)) - (2^k - 1)(r - 1) = 2^(k-r) + 2^r - 2 >= 1
+(sum (r-d) 2^(-d) = r - 2 + 2^(1-r), sum (r-d) 2^(d-1) = 2^r - r - 1).  Pairs in different runs contribute positive
+terms X(R_i, R_j).  So F(W) = sum S(r_i) + sum_{i<j} X(R_i, R_j) - (2^k - 1) sigma eps.
+ - sigma eps = 0: F >= sum S(r_i) >= 1.
+ - sigma eps = 1, s = 1: W = {1..k}, F = S(k) - (2^k - 1) = 0.
+ - sigma eps = 1, s >= 2: R_1 = {1..r_1}, R_s = {k-r_s+1..k}, r_1 + r_s <= k - 1, and
+   X(R_1, R_s) >= sum_{p in R_1, q in R_s} 2^(q-p-1) = (2^k - 2^(k-r_s))(1 - 2^(-r_1)), so
+   F >= S(r_1) + S(r_s) + X(R_1, R_s) - (2^k - 1) >= 2^(r_1) + 2^(r_s) + 2^(k-r_1-r_s) - 3 >= 3.           QED
+Consequence (with the criterion of P4): for every k the only word in {a, c} with an exact class of multiplier 2^k
+that contains a state with g != 0 is a^k.  Multiplier 1: for W nonempty, lambda = (0, -sigma, V, -Wd),
+mu = lambda (N - I) = (0, sigma, V (2^k - 1), -sigma eps - V U), mu N = V 2^k (0, 0, 2^k - 1, -U), so on C(N; 1)
+(2^k - 1) B = U g; an actual state has B >= g >= 1 and U <= 2^k - 1, hence W is full, B = g, and then mu s = 0 gives
+e = g and H' - H = lambda s = g - e = 0: no exact translation in the one-apex system, for every k.
+Checked numerically: (*) and both lower bounds for all W with k <= 16; zeros and minima for k <= 24.
+The closed form of P4 itself is KNOWN: Session 198 DIGIT_BLOCK.md, equation (1) (D' = D + U A - E eps_0 - d C(A),
+E' = d t, U' = B U - d R), credited in THM-4882 (1).
+
+B.2  THE 17-DIMENSIONAL TWO-MARK REPRESENTATION IS EXACT FOR EVERY BASE  (the lane interpolated it on bases of
+order <= 5 and sampled it on orders 6, 7; the finisher's P2 is a sketch).
+Trace lemma.  Let (T; z1, z2), |T| >= 2, z1 != z2, and let a word w of the 12 operations add the vertex set X.
+Every arc from X to T ends at z1 or z2 (a new vertex beats only current marks; marks that have moved are in X).
+Put W_i = the new vertices that beat z_i.  Then T - {z1, z2} => X, z_i -> X - W_i, W_i -> z_i.  Cut a Hamiltonian
+path of T u X into maximal T-segments and X-segments.  A T-segment is initial or entered from X, and then starts
+at z1 or z2; so there are at most three T-segments: at most one initial one (it comes first) and at most one
+entered at each mark.  An X-vertex before a segment entered at z_i must lie in W_i; an X-vertex after a T-segment
+that ends at z_i must lie outside W_i; no other condition links X and T.  Hence the number of completions on X
+depends only on the DESCRIPTOR of the trace: the kinds of the segments (initial / entered at z1 / entered at z2) in
+their order and the end type of each (z1, z2, other).  Counting traces by descriptor (the two orders of two entered
+segments have the same trace count) gives 25 numbers t_1(T), ..., t_25(T):
+  7:  one segment (initial: end z1, z2, other; entered at z1: end z2, other; entered at z2: end z1, other);
+  10: (initial I, entered Z_i), i = 1, 2: (I end z_j; Z_i = {z_i} / end other), (I end other; Z_i = {z_i} / end z_j / other);
+  4:  (Z_1, Z_2): Z_i = {z_i} or end other;      4: (I, Z_1, Z_2): the same four end types.
+So H(T.w) = sum_k c_w(k) t_k(T) for every base, with coefficients that depend on w only.                      (**)
+Finite facts (V7): the trace vectors of the two-marked tournaments of order <= 5 have rank 25 (ranks 2, 9, 21, 25, 25
+for orders <= 2, ..., 6); (**) holds numerically for all 157 words of length <= 2 on all 302 bases of order <= 5
+(coefficients solved on 25 bases, 277 further bases each); the 61,608 identities x(T.o)_k = (A_o x(T))_k
+(17 state words, 12 operations) hold on all 302 bases of order <= 5 by own direct counts.
+Conclusion.  Each identity is a linear relation between functionals of the form (**); it holds on a set of bases
+whose trace vectors span Q^25, so the coefficient vectors agree and it holds for EVERY two-marked tournament.  By
+induction x(T.w) = A_w x(T) for every base and every word.  So the Hankel rank of the two-mark system is exactly 17
+and every computation of the lane or the finisher that goes through twomark_rep_5_3.json is exact.
+(The two-apex family G(2,0) is the orbit of (TT_2; source, sink) under the four operations with mu = 0;
+letter (a, b) = operation S = (1 - a) + 2 (1 - b).  The comment "0 = (0,0) sink" in twoapex_classify.py is a
+slip: the sink is the letter 3 = (1,1).)
+
+B.3  TRANSLATIONS (correction to the last sentence of P3 / claim D1).
+Pairwise commuting affine maps with some multiplier != 1 have a common fixed point p, and the values are
+p + (h0 - p) prod a_i^(e_i): O((log X)^k) values below X.  But if ALL multipliers are 1 the maps are translations and
+the values h0 + sum e_i b_i contain an arithmetic progression: one exact translation H -> H + b, b != 0, on an actual
+state would already give positive density.  So "a covering system needs a non-commuting pair" is correct only
+after exact translations are excluded, and the pair statistic kappa says nothing about them (kappa = 0 identically
+when a1 = a2 = 1).  Status of that exclusion:
+ - one-mark blocks of order <= 5: none, for every marked tournament (V2/V2b: B = r g, r < 1, on the 52 class spaces);
+ - gadgets with X of order <= 6: none (no gadget matrix has the eigenvalue 1);
+ - gadget words (sigma + 57, length <= 2; sigma + 14, length <= 3): 93 / 80 words have the eigenvalue 1; the offset is
+   identically 0 on the class space except for the word G(TT_3, {1, 3})^2, whose class space is spanned by
+   (6110, -1927, 4418, 0), (-1880, 423, 0, 2209) in (r, M, h, E): h > 0 and 0 <= E <= h force M < 0, so it
+   contains no actual state (M >= 0).  None, for every pair (B, O);
+ - two-mark words of length <= 2: 130 words have the eigenvalue 1, on 40 of them (12 of the 20 two-apex ones) the
+   offset is NOT identically 0 on the class space; no actual translation was found among the two-apex words of
+   length <= 11 and the two-marked tournaments of order <= 7 (depth 2), which is finite evidence only.
+
+=====================================================================================================================
+C.  PRIOR ART FOUND (not credited, or credited with a smaller range)
+ - Caterpillar words a, b, c = the letters Z, J, O of the O/Z/J source language (THM-4904 setting: O = (D,0,2U,d),
+   Z = (D-E+U, d, 2U-d, d), J = (D-E+U, D-E, D+U, D)).  THM-4904 (FINITE-EXACT companion, audited): the strong
+   C = 1 spectrum misses exactly Session 197's 29 values below 10^9 (audit: every odd N in (2647, 10^9] has a word
+   with at most 7 root changes).  This supersedes the lane's range 400,000 and the "through 50,001" of THM-4884.
+ - Row h of the one-mark block law for an ARBITRARY block is ONE_EXIT.md Theorem 1
+   (05-knowledge/results/spectrum_multiplicity_signed_tables_20261111/returns/, 2026-11-10/11): H = hH + FU - sE - dW;
+   after reversing all arcs its (h, F, s, d) of (X, x) are (h, B, e, g) of the base and its gadget constants
+   (H, U, E, W) are (H(X), Q, paths of X starting in W, Q - Q_W).  THM-5130's status already notes that this implies
+   the existence of a transport matrix without its entries.
+ - Closed form of the one-apex block: Session 198 DIGIT_BLOCK.md (1) (see B.1).
+ - Two-apex Hankel rank 17: THM-4878 (Session 191), as the finisher says.
+
+=====================================================================================================================
+D.  FURTHER CERTIFICATIONS (added after the first pass)
+V1b v1b_onemark_all_matrices.py -> .out   every stored one-mark matrix (1,922) against own direct counts on 8 marked
+    bases of orders 3..5 with states of rank 4 (not the lane's interpolation bases): 0 failures.
+V1c v1c_onemark_exhaustive.py -> .out     the law by direct count for EVERY labelled block, |X| = k <= 5, and EVERY
+    labelled marked tournament of order <= min(5, 8 - k): 8,695,852 tests, 0 failures (the coverage the lane states).
+V4b v4b_gadget_all_matrices.py -> .out    every stored gadget matrix (14, 57, 3,207) against own direct counts on 7
+    pairs (B, O) with states of rank 4: 0 failures.
+V9b v9b_twoapex_dims.py -> .out           two-apex family through the two-mark representation: every letter has the
+    integer eigenvalues 0, 1, 2, 3, every two-letter word 1, 4, 9 (and no other integer >= 1); the 135 category (iii)
+    pairs have class spaces of dimension 3 to 11.
+
+LIMITS OF THIS VERIFICATION.  V9/V9b: ranks modulo two primes (agreement with the lane's exact rational run), not
+exact over Q.  V6 (orders <= 8) and V10 take class representatives / deduplication from the lane's tour.py (its class
+numbers are the known ones); order 9 in V6 uses no canonical form.  B.1 and B.2 are proofs written by the verifier and
+not yet read by anyone else.  Not re-run: mixed_rules_rank (P2 sketch), the 16-minute exact two-mark classification
+(replaced by V9), ext_tree depth beyond K_2.

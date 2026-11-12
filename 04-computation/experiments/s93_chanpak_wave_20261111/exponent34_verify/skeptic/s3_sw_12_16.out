@@ -1,0 +1,110 @@
+DIRECT w=1: odd pairs=2 (4^(w-1)=2)  S_w=2.000000  S_w/6^(w/2)=0.8165  S_w/2^(3w/2)=0.707107  S_w/(w 2^(3w/2))=0.707107  height-1 mass=2 (/6^(w/2)=0.8165)
+    N(2^i), i=0..1: 2 2
+    (2): S_w=2.0000 <= sum_i 2^-i N(2^(i+1)) = 3.0000 : True
+    time 10.6s
+DIRECT w=2: odd pairs=4 (4^(w-1)=4)  S_w=4.000000  S_w/6^(w/2)=0.6667  S_w/2^(3w/2)=0.500000  S_w/(w 2^(3w/2))=0.250000  height-1 mass=4 (/6^(w/2)=0.6667)
+    N(2^i), i=0..2: 4 4 4
+    (2): S_w=4.0000 <= sum_i 2^-i N(2^(i+1)) = 7.0000 : True
+    time 0.1s
+DIRECT w=3: odd pairs=16 (4^(w-1)=16)  S_w=12.800000  S_w/6^(w/2)=0.8709  S_w/2^(3w/2)=0.565685  S_w/(w 2^(3w/2))=0.188562  height-1 mass=12 (/6^(w/2)=0.8165)
+    N(2^i), i=0..3: 12 12 12 16
+    (2): S_w=12.8000 <= sum_i 2^-i N(2^(i+1)) = 24.0000 : True
+    time 0.1s
+DIRECT w=4: odd pairs=64 (4^(w-1)=64)  S_w=29.823510  S_w/6^(w/2)=0.8284  S_w/2^(3w/2)=0.465992  S_w/(w 2^(3w/2))=0.116498  height-1 mass=24 (/6^(w/2)=0.6667)
+    N(2^i), i=0..4: 24 24 32 40 64
+    (2): S_w=29.8235 <= sum_i 2^-i N(2^(i+1)) = 62.0000 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0833  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0185  max N(K)/(K 8^s1)=0.37500 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=29.82 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 7888.00 : True ; tail part 2*4^w*2^-s2=128.00 ; part of S_w from M>2^s2: 3.16 ; from M<=2^s2: 26.67
+    time 0.1s
+DIRECT w=5: odd pairs=256 (4^(w-1)=256)  S_w=89.511788  S_w/6^(w/2)=1.0151  S_w/2^(3w/2)=0.494487  S_w/(w 2^(3w/2))=0.098897  height-1 mass=72 (/6^(w/2)=0.8165)
+    N(2^i), i=0..5: 72 72 80 124 148 256
+    (2): S_w=89.5118 <= sum_i 2^-i N(2^(i+1)) = 185.5000 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0417  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0046  max N(K)/(K 8^s1)=0.14062 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=89.51 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 65483.74 : True ; tail part 2*4^w*2^-s2=512.00 ; part of S_w from M>2^s2: 14.85 ; from M<=2^s2: 74.67
+    time 0.1s
+DIRECT w=6: odd pairs=1024 (4^(w-1)=1024)  S_w=194.628285  S_w/6^(w/2)=0.9011  S_w/2^(3w/2)=0.380133  S_w/(w 2^(3w/2))=0.063356  height-1 mass=144 (/6^(w/2)=0.6667)
+    N(2^i), i=0..6: 144 144 160 240 408 624 1024
+    (2): S_w=194.6283 <= sum_i 2^-i N(2^(i+1)) = 422.0000 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0833  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0093  max N(K)/(K 8^s1)=0.28125 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=194.63 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 74138.95 : True ; tail part 2*4^w*2^-s2=1024.00 ; part of S_w from M>2^s2: 32.49 ; from M<=2^s2: 162.13
+    time 0.1s
+DIRECT w=7: odd pairs=4096 (4^(w-1)=4096)  S_w=559.004836  S_w/6^(w/2)=1.0565  S_w/2^(3w/2)=0.386012  S_w/(w 2^(3w/2))=0.055145  height-1 mass=432 (/6^(w/2)=0.8165)
+    N(2^i), i=0..7: 432 432 464 608 860 1672 2332 4096
+    (2): S_w=559.0048 <= sum_i 2^-i N(2^(i+1)) = 1196.8750 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0417  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0023  max N(K)/(K 8^s1)=0.10547 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=559.00 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 617504.62 : True ; tail part 2*4^w*2^-s2=4096.00 ; part of S_w from M>2^s2: 91.65 ; from M<=2^s2: 467.35
+    time 0.1s
+DIRECT w=8: odd pairs=16384 (4^(w-1)=16384)  S_w=1189.200366  S_w/6^(w/2)=0.9176  S_w/2^(3w/2)=0.290332  S_w/(w 2^(3w/2))=0.036292  height-1 mass=864 (/6^(w/2)=0.6667)
+    N(2^i), i=0..8: 864 864 944 1288 1708 3148 6184 9336 16384
+    (2): S_w=1189.2004 <= sum_i 2^-i N(2^(i+1)) = 2599.3750 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0833  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0046  max N(K)/(K 8^s1)=0.21094 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=1189.20 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 690304.00 : True ; tail part 2*4^w*2^-s2=8192.00 ; part of S_w from M>2^s2: 202.99 ; from M<=2^s2: 986.21
+    time 0.1s
+DIRECT w=9: odd pairs=65536 (4^(w-1)=65536)  S_w=3363.004082  S_w/6^(w/2)=1.0594  S_w/2^(3w/2)=0.290284  S_w/(w 2^(3w/2))=0.032254  height-1 mass=2592 (/6^(w/2)=0.8165)
+    N(2^i), i=0..9: 2592 2592 2720 3432 4392 7308 12280 25200 37512 65536
+    (2): S_w=3363.0041 <= sum_i 2^-i N(2^(i+1)) = 7270.3125 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0417  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0012  max N(K)/(K 8^s1)=0.07910 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=3363.00 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 5764741.77 : True ; tail part 2*4^w*2^-s2=32768.00 ; part of S_w from M>2^s2: 521.91 ; from M<=2^s2: 2841.09
+    time 0.1s
+DIRECT w=10: odd pairs=262144 (4^(w-1)=262144)  S_w=7040.661878  S_w/6^(w/2)=0.9054  S_w/2^(3w/2)=0.214864  S_w/(w 2^(3w/2))=0.021486  height-1 mass=5184 (/6^(w/2)=0.6667)
+    N(2^i), i=0..10: 5184 5184 5632 7000 9384 15652 25028 46008 97184 149080 262144
+    (2): S_w=7040.6619 <= sum_i 2^-i N(2^(i+1)) = 15511.8438 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0833  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0023  max N(K)/(K 8^s1)=0.15820 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=7040.66 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 6377325.21 : True ; tail part 2*4^w*2^-s2=65536.00 ; part of S_w from M>2^s2: 1011.74 ; from M<=2^s2: 6028.92
+    time 0.1s
+DIRECT w=11: odd pairs=1048576 (4^(w-1)=1048576)  S_w=19946.761456  S_w/6^(w/2)=1.0472  S_w/2^(3w/2)=0.215217  S_w/(w 2^(3w/2))=0.019565  height-1 mass=15552 (/6^(w/2)=0.8165)
+    N(2^i), i=0..11: 15552 15552 16320 19608 25292 38632 61188 103412 182324 386980 589672 1048576
+    (2): S_w=19946.7615 <= sum_i 2^-i N(2^(i+1)) = 43341.6875 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0417  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0006  max N(K)/(K 8^s1)=0.05933 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=19946.76 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 53371943.60 : True ; tail part 2*4^w*2^-s2=262144.00 ; part of S_w from M>2^s2: 2533.36 ; from M<=2^s2: 17413.40
+    time 0.1s
+DIRECT w=12: odd pairs=4194304 (4^(w-1)=4194304)  S_w=40794.949294  S_w/6^(w/2)=0.8744  S_w/2^(3w/2)=0.155620  S_w/(w 2^(3w/2))=0.012968  height-1 mass=31104 (/6^(w/2)=0.6667)
+    N(2^i), i=0..12: 31104 31104 32736 38992 50864 77632 119028 211824 366576 685660 1512896 2344968 4194304
+    (2): S_w=40794.9493 <= sum_i 2^-i N(2^(i+1)) = 89318.4922 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0833  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0012  max N(K)/(K 8^s1)=0.11865 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=40794.95 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 58528768.00 : True ; tail part 2*4^w*2^-s2=524288.00 ; part of S_w from M>2^s2: 5074.12 ; from M<=2^s2: 35720.83
+    time 0.3s
+EPS w=3: counts identical to the direct enumeration: True
+    time 12.6s
+EPS w=4: counts identical to the direct enumeration: True
+    time 0.1s
+EPS w=5: counts identical to the direct enumeration: True
+    time 0.1s
+EPS w=6: counts identical to the direct enumeration: True
+    time 0.1s
+EPS w=7: counts identical to the direct enumeration: True
+    time 0.1s
+EPS w=8: counts identical to the direct enumeration: True
+    time 0.1s
+EPS w=9: counts identical to the direct enumeration: True
+    time 0.1s
+EPS w=10: counts identical to the direct enumeration: True
+    time 0.1s
+EPS w=11: counts identical to the direct enumeration: True
+    time 0.1s
+EPS w=12: counts identical to the direct enumeration: True
+    time 0.1s
+EPS w=13: odd pairs=16777216 (4^(w-1)=16777216)  S_w=115402.907754  S_w/6^(w/2)=1.0098  S_w/2^(3w/2)=0.155644  S_w/(w 2^(3w/2))=0.011973  height-1 mass=93312 (/6^(w/2)=0.8165)
+    N(2^i), i=0..13: 93312 93312 96192 109632 130344 195184 291892 493356 838272 1470780 2714404 6049508 9357600 16777216
+    (2): S_w=115402.9078 <= sum_i 2^-i N(2^(i+1)) = 248354.9805 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0417  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0003  max N(K)/(K 8^s1)=0.04449 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=115402.91 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 490701423.37 : True ; tail part 2*4^w*2^-s2=2097152.00 ; part of S_w from M>2^s2: 12205.28 ; from M<=2^s2: 103197.62
+    time 0.1s
+EPS w=14: odd pairs=67108864 (4^(w-1)=67108864)  S_w=235466.848223  S_w/6^(w/2)=0.8411  S_w/2^(3w/2)=0.112279  S_w/(w 2^(3w/2))=0.008020  height-1 mass=186624 (/6^(w/2)=0.6667)
+    N(2^i), i=0..14: 186624 186624 193728 224944 272464 388896 592912 982420 1680320 3071448 5520188 10388756 23819436 37216020 67108864
+    (2): S_w=235466.8482 <= sum_i 2^-i N(2^(i+1)) = 511023.5693 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0833  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0007  max N(K)/(K 8^s1)=0.08899 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=235466.85 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 534129582.19 : True ; tail part 2*4^w*2^-s2=4194304.00 ; part of S_w from M>2^s2: 23713.61 ; from M<=2^s2: 211753.24
+    time 0.2s
+EPS w=15: odd pairs=268435456 (4^(w-1)=268435456)  S_w=667995.428360  S_w/6^(w/2)=0.9742  S_w/2^(3w/2)=0.112616  S_w/(w 2^(3w/2))=0.007508  height-1 mass=559872 (/6^(w/2)=0.8165)
+    N(2^i), i=0..15: 559872 559872 572768 638672 734336 982612 1406364 2261792 3795296 6645268 11987884 21855808 41197600 95045992 148660244 268435456
+    (2): S_w=667995.4284 <= sum_i 2^-i N(2^(i+1)) = 1424828.4575 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0417  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0001  max N(K)/(K 8^s1)=0.03337 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=667995.43 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 4484786662.41 : True ; tail part 2*4^w*2^-s2=16777216.00 ; part of S_w from M>2^s2: 55622.24 ; from M<=2^s2: 612373.19
+    time 0.5s
+EPS w=16: odd pairs=1073741824 (4^(w-1)=1073741824)  S_w=1360596.281994  S_w/6^(w/2)=0.8101  S_w/2^(3w/2)=0.081098  S_w/(w 2^(3w/2))=0.005069  height-1 mass=1119744 (/6^(w/2)=0.6667)
+    N(2^i), i=0..16: 1119744 1119744 1150656 1296152 1518992 2032964 2915412 4614724 7845044 13998428 24983092 46534864 85280860 160928676 377044748 592719724 1073741824
+    (2): S_w=1360596.2820 <= sum_i 2^-i N(2^(i+1)) = 2921750.9915 : True
+    for all integer 1<=K<=2^s2: max N(K)/(8K^2 6^s1)=0.0833  max N(K)/(3*6^s1*2^s1(3+2lnK))=0.0004  max N(K)/(K 8^s1)=0.06674 at K=1   [the (B2) bound says the last is <= C]
+    (B1) explicit: S_w=1360596.28 <= (6 sqrt2)^s1 (82+12 s2) + 2^(3w/2+2) = 4850655232.00 : True ; tail part 2*4^w*2^-s2=33554432.00 ; part of S_w from M>2^s2: 110591.07 ; from M<=2^s2: 1250005.22
+    time 1.2s

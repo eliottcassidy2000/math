@@ -1,0 +1,12 @@
+order 1: 1 marked blocks, 1 distinct matrices of this order, cumulative marked 1, cumulative distinct 1, negative entries 0
+order 2: 8 marked blocks, 4 distinct matrices of this order, cumulative marked 9, cumulative distinct 5, negative entries 0
+order 3: 72 marked blocks, 12 distinct matrices of this order, cumulative marked 81, cumulative distinct 16, negative entries 0
+order 4: 1024 marked blocks, 44 distinct matrices of this order, cumulative marked 1105, cumulative distinct 56, negative entries 0
+order 5: 25600 marked blocks, 220 distinct matrices of this order, cumulative marked 26705, cumulative distinct 264, negative entries 0
+order 6: 1179648 marked blocks, 1660 distinct matrices of this order, cumulative marked 1206353, cumulative distinct 1884, negative entries 0
+compare order <= 3: mine 16, lane 16, equal as sets: True
+compare order <= 4: mine 56, lane 56, equal as sets: True
+compare order <= 5: mine 264, lane 264, equal as sets: True
+compare order <= 6: mine 1884, lane 1884, equal as sets: True
+order exactly 6: mine 1660, lane fast_k6_only 1660, equal: True
+brute-force transfer checks (plain DFS path counting): 60 random glued tournaments, failures 0

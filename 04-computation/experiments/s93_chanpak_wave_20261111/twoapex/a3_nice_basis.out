@@ -1,0 +1,15 @@
+suffix basis words s_1..s_17: ['(empty)', '0', '1', '2', '00', '01', '02', '10', '11', '12', '20', '21', '001', '002', '011', '012', '102']
+det of the basis change: 1
+x(empty) = (H(s_j))_j = [1, 1, 1, 3, 1, 1, 3, 3, 1, 5, 5, 5, 1, 3, 1, 5, 9]
+readout = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+entries of the four matrices: min -41 max 32
+x_j(w) = H(w s_j) for all j: 6961 words (all of length <= 6, 1500 random of length 7..39), violations 0
+char poly of A_0: x**4*(x - 3)*(x - 2)**4*(x - 1)**8
+char poly of A_1: x**4*(x - 3)*(x - 2)**4*(x - 1)**8
+char poly of A_2: x**4*(x - 3)*(x - 2)**4*(x - 1)**8
+char poly of A_3: x**4*(x - 3)*(x - 2)**4*(x - 1)**8
+char poly of A_0 + A_1 + A_2 + A_3: x**4*(x - 12)*(x - 8)**4*(x - 4)**8
+char poly of A(w) is x^4 (x - 3^L)(x - 2^L)^4 (x - 1)^8 for 40 random words of length L = 2..6: True
+common flag found: dimension 17 ; diagonal along the flag (column action): [1, 2, 2, 3, 1, 1, 0, 1, 1, 2, 0, 1, 1, 2, 0, 0, 1]
+multiset of the common diagonal: [(0, 4), (1, 8), (2, 4), (3, 1)]
+written minrep17.json

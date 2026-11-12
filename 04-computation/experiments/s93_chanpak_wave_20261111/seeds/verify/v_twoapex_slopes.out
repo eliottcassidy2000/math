@@ -1,0 +1,14 @@
+files missing: []
+two-apex seed slopes, length <= 10 (raw): share of [2^k, 2^(k+1)), k = 6..15: [0.453, 0.414, 0.527, 0.598, 0.578, 0.618, 0.564, 0.49, 0.361, 0.199]
+   counts in [64, 128), [128, 256), [256, 512): [29, 53, 135]  (PROOFS: 29, 53, 135)
+two-apex seed slopes, length <= 10 (doubling closure): share of [2^k, 2^(k+1)), k = 6..15: [0.453, 0.414, 0.527, 0.598, 0.578, 0.618, 0.568, 0.507, 0.41, 0.301]
+   counts in [64, 128), [128, 256), [256, 512): [29, 53, 135]  (PROOFS: 29, 53, 135)
+seed: [512, 8192): 743 integers are not slopes of a pair of order <= 10; two-apex (length <= 10) slopes among them: raw 43, closure 43; first [1419, 1542, 1777, 1798, 1903, 2076]
+seed: [8192, 16384): 59 integers are not slopes of a pair of order <= 10; two-apex (length <= 10) slopes among them: raw 13, closure 13; first [8399, 8949, 9339, 9461, 9498, 11153]
+seed: [16384, 32768): 6 integers are not slopes of a pair of order <= 10; two-apex (length <= 10) slopes among them: raw 1, closure 1; first [19811]
+seed: [32768, 65536): 21 integers are not slopes of a pair of order <= 10; two-apex (length <= 10) slopes among them: raw 1, closure 1; first [63757]
+anti-seed: [512, 8192): 758 integers are not slopes of a pair of order <= 10; two-apex (length <= 10) slopes among them: raw 32, closure 32; first [1734, 1778, 2116, 2253, 2479, 2802]
+anti-seed: [8192, 16384): 74 integers are not slopes of a pair of order <= 10; two-apex (length <= 10) slopes among them: raw 16, closure 16; first [8266, 9267, 9289, 10169, 11139, 11187]
+anti-seed: [16384, 32768): 4 integers are not slopes of a pair of order <= 10; two-apex (length <= 10) slopes among them: raw 3, closure 3; first [16977, 18047, 23501]
+anti-seed: [32768, 65536): 10 integers are not slopes of a pair of order <= 10; two-apex (length <= 10) slopes among them: raw 0, closure 0; first []
+census seed slopes in [256, 512) that are not two-apex slopes (length <= 10): [427]

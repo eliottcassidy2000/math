@@ -1,0 +1,6 @@
+{"n": 17, "words": 17179869184, "ge_bound": 301885533, "bound_exp": 26, "max_H": 226501279, "max_word": "33333333200000000", "max_over_2_3n": 0.8769590874683967, "distinct_odd_values_below_bound_exact_length": 33554430, "distinct_odd_values_below_bound_cumulative": 33554430, "mean_H": 16191688.820034064, "kept_coordinates": 24, "seconds": 465.8}
+state saved: C:/Users/Eliott/AppData/Local/Temp/claude/800365894db7d24c/a206924c-7a08-46f2-b54a-e8f296f441a0/scratchpad/twoapex_state\census_state_b26.npz
+
+real	7m47.716s
+user	0m0.030s
+sys	0m0.015s

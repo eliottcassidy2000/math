@@ -1,0 +1,17 @@
+roots: 532 isomorphism classes of orders 1..7
+level 1: children computed for 532 tournaments (orders Counter({7: 456, 6: 56, 5: 12, 4: 4, 3: 2, 1: 1, 2: 1})), total known 532  [3.6 s]
+   roots in K_1 by order: {1: 1, 2: 1, 3: 1, 4: 2, 5: 5, 6: 18, 7: 50}
+   roots in K_1: 78; their H-values: [1, 5, 9, 15, 19, 23, 33, 37, 57, 59, 65, 79, 89, 109, 123, 129, 141]
+   next: 289 new tournaments (orders {8: 110, 9: 179})
+level 2: children computed for 289 tournaments (orders Counter({9: 179, 8: 110})), total known 821  [21.2 s]
+   roots in K_1 by order: {1: 1, 2: 1, 3: 1, 4: 2, 5: 5, 6: 18, 7: 50}
+   roots in K_2 by order: {}
+   roots in K_2: 0; their H-values: []
+   next: 179 new tournaments (orders {9: 4, 10: 77, 11: 98})
+level 3: children computed for 179 tournaments (orders Counter({11: 98, 10: 77, 9: 4})), total known 1000  [191.4 s]
+   roots in K_1 by order: {1: 1, 2: 1, 3: 1, 4: 2, 5: 5, 6: 18, 7: 50}
+   roots in K_2 by order: {}
+   roots in K_3 by order: {}
+   roots in K_3: 0; their H-values: []
+   next: 151 new tournaments (orders {10: 4, 11: 8, 12: 63, 13: 76})
+total time 191.6 s

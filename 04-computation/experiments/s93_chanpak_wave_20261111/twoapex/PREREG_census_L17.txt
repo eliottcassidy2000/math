@@ -1,0 +1,13 @@
+PRE-REGISTRATION (lane twoapex) - written BEFORE the census run of length 17 (b1_census.py 17 17 26).
+Data in hand: the exhaustive census of all words of length <= 16 (b2_windows_L16.out, census_L16_outcome.txt).
+
+Q1. The words of length <= 17 attain every odd N in [23, 61,900,000].  The smallest odd N > 21 not attained, N_17,
+    lies in [0.16 * 3^18, 0.18 * 3^18] = [61,987,278, 69,735,688]; the bound of the run is 2^26 = 67,108,864, so
+    either the run finds N_17 in [61,987,278, 2^26) or it finds no miss below 2^26 other than 7 and 21.
+Q2. Window [2^23, 2^24), words of length <= 17: minimum multiplicity between 300 and 750, median between 800 and
+    1300.
+Q3. The maximum of H over the words of length 17 is attained at 3^8 2 0^8, with max / (2 * 3^17) in [0.870, 0.885].
+Q4. The smallest value of minimal length 17 is N_16 = 22,156,807 (this is forced by the L = 16 census, not a
+    prediction); the number of odd N < 2^26 of minimal length exactly 17 equals the number of misses of the L = 16
+    census below 2^26 minus the misses of the L = 17 census, predicted to be at least 13,900,000 of the 13,950,915.
+Outcome: census_L17_outcome.txt.

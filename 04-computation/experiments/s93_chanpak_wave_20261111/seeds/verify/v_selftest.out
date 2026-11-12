@@ -1,0 +1,1 @@
+selftest: 400 random tournaments (orders 2..7): H, Q, U, Pi_2, W(P), kappa(P) [DP] = literal enumeration of vertex orders; 17364 gadget checks (every P; gadget law on random bases); closing law on 2400 closings; Lemma G on 1072 padded gadgets: mismatches 0

@@ -1,0 +1,34 @@
+56 block matrices (blocks of order <= 3); 273 distinct actual states (h, e, B, g) from marked tournaments of order <= 6
+integer eigenvalues >= 1 of the block matrices (eigenvalue: number of matrices): {1: 19, 2: 2, 3: 10, 4: 4, 5: 5, 8: 8, 12: 4}
+
+SINGLE OPERATIONS with an exact class h -> a h + b on which h is not fixed (a = integer eigenvalue):
+  [census states in C with a h + b != h; offsets b seen with multiplicities]
+  #2(k=1,X=[0],W=1,m=-1): a = 2, dim C = 3, moving states 43, b: [(-5, 5), (-3, 5), (-1, 9), (1, 8), (3, 3), (5, 4), (7, 6), (13, 1), (15, 1), (17, 1)]  [AFFINE, b != 0]
+  #7(k=2,X=[0, 1],W=01,m=0): a = 3, dim C = 3, moving states 19, b: [(0, 19)]  [b = 0 on the class]
+  #11(k=2,X=[0, 1],W=10,m=1): a = 3, dim C = 2, moving states 8, b: [(0, 8)]  [b = 0 on the class]
+  #12(k=2,X=[0, 1],W=11,m=-1): a = 4, dim C = 3, moving states 43, b: [(-15, 5), (-9, 5), (-3, 9), (3, 8), (9, 3), (15, 4), (21, 6), (39, 1), (45, 1), (51, 1)]  [AFFINE, b != 0]
+  #13(k=2,X=[0, 1],W=11,m=0): a = 3, dim C = 1, moving states 2, b: [(0, 2)]  [b = 0 on the class]
+  #18(k=3,X=[0, 1, 3],W=001,m=0): a = 5, dim C = 3, moving states 19, b: [(0, 19)]  [b = 0 on the class]
+  #22(k=3,X=[0, 1, 3],W=010,m=0): a = 3, dim C = 3, moving states 19, b: [(0, 19)]  [b = 0 on the class]
+  #23(k=3,X=[0, 1, 3],W=010,m=1): a = 5, dim C = 3, moving states 10, b: [(0, 10)]  [b = 0 on the class]
+  #30(k=3,X=[0, 1, 3],W=100,m=1): a = 3, dim C = 3, moving states 11, b: [(0, 11)]  [b = 0 on the class]
+  #31(k=3,X=[0, 1, 3],W=100,m=2): a = 5, dim C = 2, moving states 6, b: [(0, 6)]  [b = 0 on the class]
+  #33(k=3,X=[0, 1, 3],W=101,m=0): a = 5, dim C = 2, moving states 5, b: [(0, 5)]  [b = 0 on the class]
+  #40(k=3,X=[0, 1, 3],W=111,m=-1): a = 8, dim C = 3, moving states 43, b: [(-35, 5), (-21, 5), (-7, 9), (7, 8), (21, 3), (35, 4), (49, 6), (91, 1), (105, 1), (119, 1)]  [AFFINE, b != 0]
+  #41(k=3,X=[0, 1, 3],W=111,m=0): a = 5, dim C = 1, moving states 2, b: [(0, 2)]  [b = 0 on the class]
+  #44(k=3,X=[4, 1, 2],W=000,m=-1): a = 3, dim C = 4, moving states 273, b: [(0, 273)]  [multiplicative on every state]
+  #45(k=3,X=[4, 1, 2],W=000,m=0): a = 3, dim C = 4, moving states 273, b: [(0, 273)]  [multiplicative on every state]
+  #54(k=3,X=[4, 1, 2],W=111,m=-1): a = 3, dim C = 2, moving states 7, b: [(0, 7)]  [b = 0 on the class]
+summary (multiplier, kind): number of ops
+   (2, 'AFFINE, b != 0'): 1
+   (3, 'b = 0 on the class'): 6
+   (3, 'multiplicative on every state'): 2
+   (4, 'AFFINE, b != 0'): 1
+   (5, 'b = 0 on the class'): 5
+   (8, 'AFFINE, b != 0'): 1
+
+PAIRS OF OPERATIONS (op1 < op2, integer eigenvalues a1, a2 >= 1):
+   (i) C = 0: 547
+   (ii) C != 0, the two maps commute on all of C: 761
+category (iii) pairs: 0; of these with a census state s in C and kappa s != 0: 0
+time 1.6 s

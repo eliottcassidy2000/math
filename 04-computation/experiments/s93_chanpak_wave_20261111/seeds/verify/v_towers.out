@@ -1,0 +1,17 @@
+towers over transitive bases, slope <= 2^8: 89 states (r = +1: 35, r = -1: 54); by depth: 22 66 1
+towers over transitive bases, slope <= 2^10: 258 states (r = +1: 131, r = -1: 127); by depth: 28 186 44
+towers over transitive bases, slope <= 2^12: 745 states (r = +1: 421, r = -1: 324); by depth: 34 401 303 7
+towers over transitive bases, slope <= 2^14: 2200 states (r = +1: 1206, r = -1: 994); by depth: 40 746 1265 14
+towers over transitive bases, slope <= 2^16: 6456 states (r = +1: 3229, r = -1: 3227); by depth: 46 1249 3838 
+towers over transitive bases, slope <= 2^18: 18985 states (r = +1: 8895, r = -1: 10090); by depth: 52 1940 952
+towers over transitive bases, slope <= 2^20: 55847 states (r = +1: 26594, r = -1: 29253); by depth: 58 2851 20
+towers over transitive bases, slope <= 2^22: 165017 states (r = +1: 82402, r = -1: 82615); by depth: 64 4012 4
+towers over transitive bases, slope <= 2^24: 485677 states (r = +1: 248245, r = -1: 237432); by depth: 70 5453
+towers over transitive bases, slope <= 2^26: 1430288 states (r = +1: 727962, r = -1: 702326); by depth: 76 720
+towers over transitive bases, slope <= 2^28: 4212883 states (r = +1: 2118358, r = -1: 2094525); by depth: 82 9
+towers over transitive bases, slope <= 2^30: 12369105 states (r = +1: 6154133, r = -1: 6214972); by depth: 88 11756 308130 2287082 5332063 3718908 686768 24230 80
+sign +: distinct slopes 2304424; odd c <= 129 not the odd part of a tower slope: 5 11 23 73 85 91 95 125 127; reached: 56 of 65 (c <= 129), 1507 of 2049 (c <= 4097); distinct values 2^t M <= 2^30 (t >= 0): 4760878
+sign -: distinct slopes 2332088; odd c <= 129 not the odd part of a tower slope: 19 29 37 55 59 99 115; reached: 58 of 65 (c <= 129), 1510 of 2049 (c <= 4097); distinct values 2^t M <= 2^30 (t >= 0): 4890946
+real	0m14.603s
+user	0m0.015s
+sys	0m0.015s

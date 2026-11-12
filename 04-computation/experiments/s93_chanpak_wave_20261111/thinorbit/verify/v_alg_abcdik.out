@@ -1,0 +1,32 @@
+(a) order <= 3: 16 matrices; rank1 4, rank2 7, invertible 5, unimodular 4 (det +1: 4, det -1: 0); singular 11
+(a) order <= 4: 56 matrices; rank1 12, rank2 23, invertible 21, unimodular 8 (det +1: 8, det -1: 0); singular 35
+(a) order <= 5: 264 matrices; rank1 40, rank2 90, invertible 134, unimodular 18 (det +1: 17, det -1: 1); singular 130
+(a) order <= 6: 1884 matrices; rank1 141, rank2 491, invertible 1252, unimodular 46 (det +1: 41, det -1: 5); singular 632
+    determinants of the invertible generators of order <= 4: [-2, 1, 4, 5, 8, 9, 21, 24]
+(b) parity shape [[1,0,0],[p,x,y],[q,y,x]] mod 2, order <= 4: violations 0 / 56
+(b) parity shape [[1,0,0],[p,x,y],[q,y,x]] mod 2, order <= 5: violations 0 / 264
+(b) parity shape [[1,0,0],[p,x,y],[q,y,x]] mod 2, order <= 6: violations 0 / 1884
+(c) singular blocks of order <= 4: charpoly t(t^2 - a t + b) with a odd, b even: violations 0; rank-2 blocks 23, min |b| over rank-2 blocks = 0
+(c) singular blocks of order <= 5: charpoly t(t^2 - a t + b) with a odd, b even: violations 0; rank-2 blocks 90, min |b| over rank-2 blocks = 0
+(c) singular blocks of order <= 6: charpoly t(t^2 - a t + b) with a odd, b even: violations 0; rank-2 blocks 491, min |b| over rank-2 blocks = 0
+(d) T0 in order<=3 list: True; g in order<=3 list: True; det T0 = 1, det g = 1
+    charpoly T0: t^3 - 1 t^2 + (-1) t - (1); values at +-1: -2, -2
+    discriminant = -44
+    g T0 g^-1 = (1, 6, -4, -2, -2, 5, -1, 1, 2); commutes with T0: False
+    the 8 unimodular generators of order <= 4 (all det +1: True):
+      (1, 2, 0, 0, 0, 1, 1, 1, 0) det 1 charpoly (tr, c2): 1 -1
+      (1, 2, 2, 1, 1, 0, 1, 2, 1) det 1 charpoly (tr, c2): 3 -1
+      (1, 4, 4, 2, 3, 2, 2, 4, 3) det 1 charpoly (tr, c2): 7 -9
+      (1, 8, 8, 4, 9, 8, 4, 10, 9) det 1 charpoly (tr, c2): 19 -45
+      (3, 4, 2, 1, 2, 1, 2, 3, 2) det 1 charpoly (tr, c2): 7 5
+      (5, 6, 4, 4, 6, 3, 5, 7, 4) det 1 charpoly (tr, c2): 15 9
+      (5, 8, 4, 2, 3, 2, 4, 6, 3) det 1 charpoly (tr, c2): 11 -5
+      (5, 10, 8, 2, 4, 3, 3, 7, 6) det 1 charpoly (tr, c2): 15 9
+(i) blocks of order <= 4 killing (0,1,-1): 16; induced 2x2 on (h,R) with even determinant: 16; singular among them: 16
+(i) blocks of order <= 5 killing (0,1,-1): 57; induced 2x2 on (h,R) with even determinant: 57; singular among them: 57
+(i) blocks of order <= 6 killing (0,1,-1): 267; induced 2x2 on (h,R) with even determinant: 267; singular among them: 267
+(k) invertible blocks of order <= 6 with (0,1,-1) as an eigenvector: 0; with eigenvalue +-1: 0
+
+real	0m0.669s
+user	0m0.015s
+sys	0m0.062s

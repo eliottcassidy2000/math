@@ -1,0 +1,20 @@
+one-mark words in a, b, c over a point: values <= 400000; word-nodes visited 18337351898  [32.9 s]
+odd numbers <= 400000 not attained: 29
+   first 80: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861, 2647]
+   last 20: [163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861, 2647]
+   odd N in [2^3, 2^4): attained 3 of 4 (0.7500); min mult 0, median 286
+   odd N in [2^4, 2^5): attained 7 of 8 (0.8750); min mult 0, median 476
+   odd N in [2^5, 2^6): attained 13 of 16 (0.8125); min mult 0, median 389
+   odd N in [2^6, 2^7): attained 29 of 32 (0.9062); min mult 0, median 729
+   odd N in [2^7, 2^8): attained 58 of 64 (0.9062); min mult 0, median 810
+   odd N in [2^8, 2^9): attained 123 of 128 (0.9609); min mult 0, median 1489
+   odd N in [2^9, 2^10): attained 251 of 256 (0.9805); min mult 0, median 2450
+   odd N in [2^10, 2^11): attained 509 of 512 (0.9941); min mult 0, median 3658
+   odd N in [2^11, 2^12): attained 1023 of 1024 (0.9990); min mult 0, median 5722
+   odd N in [2^12, 2^13): attained 2048 of 2048 (1.0000); min mult 240, median 7840
+   odd N in [2^13, 2^14): attained 4096 of 4096 (1.0000); min mult 276, median 10721
+   odd N in [2^14, 2^15): attained 8192 of 8192 (1.0000); min mult 484, median 14755
+   odd N in [2^15, 2^16): attained 16384 of 16384 (1.0000); min mult 636, median 19707
+   odd N in [2^16, 2^17): attained 32768 of 32768 (1.0000); min mult 1364, median 23467
+   odd N in [2^17, 2^18): attained 65536 of 65536 (1.0000); min mult 1728, median 21892
+exit 0

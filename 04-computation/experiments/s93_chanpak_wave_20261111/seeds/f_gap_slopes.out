@@ -1,0 +1,8 @@
+seed: [512, 8192): 743 integers are not slopes of a pair of order <= 10; of these 43 are slopes of two-apex bases (length <= 10), 1 of one-apex bases (length <= 14); first two-apex ones: [1419, 1542, 1777, 1798, 1903, 2076, 2077, 2329, 2385, 2395]
+seed: [8192, 16384): 59 integers are not slopes of a pair of order <= 10; of these 13 are slopes of two-apex bases (length <= 10), 0 of one-apex bases (length <= 14); first two-apex ones: [8399, 8949, 9339, 9461, 9498, 11153, 11387, 11459, 11689, 12289]
+seed: [16384, 32768): 6 integers are not slopes of a pair of order <= 10; of these 1 are slopes of two-apex bases (length <= 10), 0 of one-apex bases (length <= 14); two-apex: [19811]
+seed: [32768, 65536): 21 integers are not slopes of a pair of order <= 10; of these 1 are slopes of two-apex bases (length <= 10), 0 of one-apex bases (length <= 14); two-apex: [63757]
+anti-seed: [512, 8192): 758 integers are not slopes of a pair of order <= 10; of these 32 are slopes of two-apex bases (length <= 10), 5 of one-apex bases (length <= 14); first two-apex ones: [1734, 1778, 2116, 2253, 2479, 2802, 2998, 3031, 3047, 3230]
+anti-seed: [8192, 16384): 74 integers are not slopes of a pair of order <= 10; of these 16 are slopes of two-apex bases (length <= 10), 1 of one-apex bases (length <= 14); first two-apex ones: [8266, 9267, 9289, 10169, 11139, 11187, 11751, 11927, 12321, 12539]
+anti-seed: [16384, 32768): 4 integers are not slopes of a pair of order <= 10; of these 3 are slopes of two-apex bases (length <= 10), 0 of one-apex bases (length <= 14); two-apex: [16977, 18047, 23501]
+anti-seed: [32768, 65536): 10 integers are not slopes of a pair of order <= 10; of these 0 are slopes of two-apex bases (length <= 10), 0 of one-apex bases (length <= 14); two-apex: []

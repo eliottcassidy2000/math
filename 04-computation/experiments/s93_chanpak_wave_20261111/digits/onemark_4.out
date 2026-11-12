@@ -1,0 +1,11 @@
+85 marked base tournaments of order <= 5
+interpolation bases (order, mark, state): [(1, 0, (1, 1, 1, 1)), (2, 1, (1, 0, 2, 1)), (3, 2, (1, 0, 4, 1)), (3, 0, (3, 1, 3, 1))]
+blocks of order <= 1: 4 labelled ops, 4 distinct matrices, failures 0
+blocks of order <= 2: 28 labelled ops, 15 distinct matrices, failures 0
+blocks of order <= 3: 284 labelled ops, 56 distinct matrices, failures 0
+blocks of order <= 4: 5404 labelled ops, 270 distinct matrices, failures 0
+closed form of op a: CONFIRMED  {'k': 1, 'adjX': [0], 'W': 1, 'm': -1, 'count': 1}
+closed form of op b: CONFIRMED  {'k': 1, 'adjX': [0], 'W': 1, 'm': 0, 'count': 1}
+closed form of op c: CONFIRMED  {'k': 1, 'adjX': [0], 'W': 0, 'm': -1, 'count': 1}
+closed form of op d: CONFIRMED  {'k': 1, 'adjX': [0], 'W': 0, 'm': 0, 'count': 33}
+270 distinct matrices -> onemark_matrices_4.json; total failures 0

@@ -1,0 +1,17 @@
+== (A)4 constant: (5 sqrt2/3) * sum_j (2 sqrt2/3)^j  (must be < 42)
+   ratio 2sqrt2/3 = 0.9428090415820635  value = 41.2132034355965
+== van der Corput step: (8 lam L + 2)(4/sqrt(lam) + 3) <= 56 L sqrt(lam) + 8/sqrt(lam) + 6 for 0 < lam < 1
+   max lhs/rhs on grid = 0.9999999997000053 (<= 1 required)
+== Erdos-Turan chain with H = ceil(L |a|^(-1/3)), L >= |a|^(1/3) >= 1:
+   count - 2 dl L <= 12 L/H + (8/pi) * sum_{h<=H} (1/h) (56 L lam_h^(1/2) + 8 lam_h^(-1/2) + 6)
+   zeta(3/2) <= 2.612375348508712
+   coefficients: |a|^(1/3): 415.34   L^(3/2)|a|^(-1/2): 75.26   const: 25.87   ln L: 15.28
+   => count <= 2 dl L + 416 |a|^(1/3) + 76 L^(3/2) |a|^(-1/2) + 26 + 16 ln L
+== number of odd integers in (L, 2L] is <= L for real L >= 1 (grid check)
+   violations: 0
+== the sum: 6 * 2^(2/5) = 7.917047464637365  (< 8)
+   sup_s (1+s)^3 (6*2^(2/5)/8)^s = 1199509.1 at s = 287  (finite: the factor w in (B2) is not needed)
+   sup_s (1+s)^2 (6*2^(2/5)/8)^s = 5035.0
+== exponents: min(A K^(3/2), B/K) <= A^(2/5) B^(3/5):  (3/2)(2/5) - (3/5) = 0
+   tail: sum_{i>=s2} 2^-i 4^w = 2^(2w - s2 + 1) <= 2^(3w/2 + 3/2);  8^s1 <= 2^(3w/2 + 3/2)
+   checked for w = 4..11 (parity pattern)

@@ -1,0 +1,38 @@
+(1) group generated mod p by the 8 unimodular generators (order <= 4):
+    p = 2: 4 elements; |SL_3(F_2)| = 168; equal: False
+    p = 3: 5616 elements; |SL_3(F_3)| = 5616; equal: True
+    p = 5: 372000 elements; |SL_3(F_5)| = 372000; equal: True
+    p = 7: 5630688 elements; |SL_3(F_7)| = 5630688; equal: True
+    (mod 2 the parity lemma confines every block to [[1,0,0],[*,x,y],[*,y,x]]: a subgroup of order 8 of SL_3(F_2))
+(2) monoid generated mod p by all 56 generators:
+    p = 2: 16 elements, of which 8 invertible; |Mat_3(F_2)| = 512, |GL_3(F_2)| = 168
+    p = 3: 19683 elements, of which 11232 invertible; |Mat_3(F_3)| = 19683, |GL_3(F_3)| = 11232
+    the 21 invertible generators mod 3: 19683 elements, 11232 invertible (det 9, 21, 24 vanish mod 3)
+    the 21 invertible generators mod 5: 1953125 elements, 1488000 invertible (det 5 vanishes mod 5); |GL_3(F_5)| = 1488000
+(3) orbit of (1,0,1) mod q: (#states reached, #residues of h reached, expected) for all 56 / invertible 21 / unimodular 8
+    q =   2: [(4, 1), (4, 1), (4, 1)]  expected residues 1  all three complete: True
+    q =   4: [(32, 2), (32, 2), (16, 2)]  expected residues 2  all three complete: True
+    q =   8: [(256, 4), (256, 4), (128, 4)]  expected residues 4  all three complete: True
+    q =  16: [(2048, 8), (2048, 8), (1024, 8)]  expected residues 8  all three complete: True
+    q =  32: [(16384, 16), (16384, 16), (8192, 16)]  expected residues 16  all three complete: True
+    q =  64: [(131072, 32), (131072, 32), (65536, 32)]  expected residues 32  all three complete: True
+    q =   3: [(27, 3), (27, 3), (26, 3)]  expected residues 3  all three complete: True
+    q =   9: [(729, 9), (729, 9), (702, 9)]  expected residues 9  all three complete: True
+    q =  27: [(19683, 27), (19683, 27), (18954, 27)]  expected residues 27  all three complete: True
+    q =   5: [(125, 5), (125, 5), (124, 5)]  expected residues 5  all three complete: True
+    q =  25: [(15625, 25), (15625, 25), (15500, 25)]  expected residues 25  all three complete: True
+    q =   7: [(343, 7), (343, 7), (342, 7)]  expected residues 7  all three complete: True
+    q =  49: [(117649, 49), (117649, 49), (117306, 49)]  expected residues 49  all three complete: True
+    q =  11: [(1331, 11), (1330, 11), (1330, 11)]  expected residues 11  all three complete: True
+    q =  13: [(2197, 13), (2196, 13), (2196, 13)]  expected residues 13  all three complete: True
+    q =  15: [(3375, 15), (3375, 15), (3224, 15)]  expected residues 15  all three complete: True
+    q =  21: [(9261, 21), (9261, 21), (8892, 21)]  expected residues 21  all three complete: True
+    q =  35: [(42875, 35), (42875, 35), (42408, 35)]  expected residues 35  all three complete: True
+    q =  45: [(91125, 45), (91125, 45), (87048, 45)]  expected residues 45  all three complete: True
+    q =  63: [(250047, 63), (250047, 63), (240084, 63)]  expected residues 63  all three complete: True
+    q = 105: [(1157625, 105), (1157625, 105), (1102608, 105)]  expected residues 105  all three complete: True
+(4) orbit of the readout functional (1,0,0) under the transposed generators mod q (left orbit): #states, #first coordinates
+    q =   8: [(64, 4), (64, 4), (32, 4)]
+    q =   9: [(729, 9), (729, 9), (702, 9)]
+    q =   5: [(125, 5), (125, 5), (124, 5)]
+    q =   7: [(343, 7), (343, 7), (342, 7)]

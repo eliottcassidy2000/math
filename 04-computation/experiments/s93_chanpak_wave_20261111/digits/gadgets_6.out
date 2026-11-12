@@ -1,0 +1,8 @@
+order 1: gadgets so far 1, distinct matrices 1
+order 2: gadgets so far 4, distinct matrices 4
+order 3: gadgets so far 18, distinct matrices 14
+order 4: gadgets so far 78, distinct matrices 57
+order 5: gadgets so far 450, distinct matrices 331
+order 6: gadgets so far 3978, distinct matrices 3207
+gadget law checked on 600 random (base, gadget) pairs with bases of order <= 6: 0 failures
+3978 gadgets (iso classes of X of order <= 6, all nonempty P), 3207 distinct matrices -> gadget_matrices_6.json

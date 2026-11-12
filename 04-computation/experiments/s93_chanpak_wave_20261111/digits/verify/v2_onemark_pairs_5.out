@@ -1,0 +1,23 @@
+1922 matrices; integer eigenvalues >= 1 (exact): {1: 83, 2: 2, 3: 73, 4: 4, 5: 106, 8: 8, 9: 100, 11: 45, 12: 4, 13: 44, 15: 45, 16: 16, 17: 16, 24: 14, 26: 10, 27: 7, 32: 48, 37: 3, 40: 6, 48: 38, 64: 62, 84: 64, 100: 32, 104: 32, 108: 16, 120: 8}
+   (matrix, eigenvalue) incidences: 886; matrices with 1 / 2 / 3+ such eigenvalues: 198 / 344 / 0
+(b) single operations, census-free classification of (matrix, a):
+      ('a>1', 'lambda != 0 somewhere on C'): 62
+      ('a>1', 'lambda = 0 identically'): 51
+      ('a>1', 'lambda = 0 on C (b = 0 for EVERY state of the class)'): 690
+      (1, 'lambda != 0 somewhere on C'): 52
+      (1, 'lambda = 0 identically'): 10
+      (1, 'lambda = 0 on C (b = 0 for EVERY state of the class)'): 21
+    (matrix, a) with lambda not identically 0 on C: 114
+    refined classification of the (matrix, a) with lambda not identically 0 on C  [LP over the cone of actual states]:
+      ('other', 'a=1', 'H moves on C', 'C not in {g=0}', 'cone EMPTY', 'b = 0 on cone', 'H fixed in cone'): 52
+      ('other', 'a>1', 'H fixed on C', 'C not in {g=0}', 'cone feasible', 'b != 0 possible in cone', 'H fixed in cone'): 5
+      ('other', 'a>1', 'H moves on C', 'C in {g=0}', 'cone EMPTY', 'b = 0 on cone', 'H fixed in cone'): 52
+      ('ray a^k', 'a>1', 'H moves on C', 'C not in {g=0}', 'cone feasible', 'b != 0 possible in cone', 'H moves in cone'): 5
+    NON-RAY operations whose class space meets the cone with b != 0 and H moving (LP): 0
+(c) pairs (i < j, integer eigenvalues a1, a2 >= 1):
+         of (ii): both a = 1 and some offset not identically 0 on C: 2
+      (i) C = 0: 289835
+      (ii) kappa = 0 on C: 101876
+    pairs with a1 = a2 = 1 inside (ii): 2216
+    category (iii): 0 []
+time 73.5 s

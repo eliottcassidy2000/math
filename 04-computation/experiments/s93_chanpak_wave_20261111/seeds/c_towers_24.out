@@ -1,0 +1,24 @@
+T0  level map = direct count (subset recursion) on 1042 one- and two-level towers of order <= 13: True
+T1  sigma_0 (lambda = gamma 2^i 3^m - [i = 1]): 0.788507;  without the correction (lambda = gamma 2^i 3^m): 0.784105;  rho(1) = 0.429511
+T2  X = 2^24: 485677 tower states with slope <= X  (1.8 s); by depth: [70, 5453, 73011, 225885, 160497, 20458, 303]
+    states with r = +1: 248245, distinct slopes 93595;  r = -1: 237432, distinct slopes 86394
+    k, #states with M <= 2^k, #distinct slopes <= 2^k (sign +, sign -), #distinct values 2^t M <= 2^k (t >= 0; sign +, sign -), log2 of the last two
+    k =  8: states         89  distinct M        24        30  values        31        50  log2 4.954 5.644
+    k = 10: states        258  distinct M        67        58  values        98       117  log2 6.615 6.870  local exponents (states, +, -): 0.768 0.830 0.613
+    k = 12: states        745  distinct M       182       142  values       298       298  log2 8.219 8.219  local exponents (states, +, -): 0.765 0.802 0.674
+    k = 14: states       2200  distinct M       459       424  values       857       853  log2 9.743 9.736  local exponents (states, +, -): 0.781 0.762 0.759
+    k = 16: states       6456  distinct M      1195      1254  values      2414      2481  log2 11.237 11.277  local exponents (states, +, -): 0.777 0.747 0.770
+    k = 18: states      18985  distinct M      3421      3592  values      7032      7246  log2 12.780 12.823  local exponents (states, +, -): 0.778 0.771 0.773
+    k = 20: states      55847  distinct M     10464     10084  values     21264     20886  log2 14.376 14.350  local exponents (states, +, -): 0.778 0.798 0.764
+    k = 22: states     165017  distinct M     31912     28905  values     64315     60513  log2 15.973 15.885  local exponents (states, +, -): 0.782 0.798 0.767
+    k = 24: states     485677  distinct M     93595     86394  values    190197    180162  log2 17.537 17.459  local exponents (states, +, -): 0.779 0.782 0.787
+    sign +: odd c <= 129 that are the odd part of a tower slope M <= 2^24: 54 of 65
+    sign +: odd c <= 1025 that are the odd part of a tower slope M <= 2^24: 361 of 513
+    sign +: odd c <= 4097 that are the odd part of a tower slope M <= 2^24: 1235 of 2049
+    sign +: odd c <= 16385 that are the odd part of a tower slope M <= 2^24: 4190 of 8193
+    sign +: odd c <= 129 not reached: [5, 11, 23, 41, 47, 73, 85, 91, 95, 125, 127]
+    sign -: odd c <= 129 that are the odd part of a tower slope M <= 2^24: 53 of 65
+    sign -: odd c <= 1025 that are the odd part of a tower slope M <= 2^24: 325 of 513
+    sign -: odd c <= 4097 that are the odd part of a tower slope M <= 2^24: 1224 of 2049
+    sign -: odd c <= 16385 that are the odd part of a tower slope M <= 2^24: 4449 of 8193
+    sign -: odd c <= 129 not reached: [19, 25, 29, 37, 47, 53, 55, 59, 73, 99, 101, 115]

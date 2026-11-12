@@ -1,0 +1,36 @@
+S93 lane seeds: neutral gadgets, kappa_X(P) = 0, all classes X of each order, every nonempty P
+order 2: 1 classes; kappa = 0 for 1 gadgets (labelled P of the representatives)  [5.2 s]
+   pairs {e, f}: kappa < 0: 0, = 0: 1, > 0: 0;  range of kappa / Pi_2 over pairs: [0.0000, 0.0000]
+   by (|P|, r_X, H(X)): (2, -1, 1): 1
+   violations of HYP-9662 (D) (|P| != 2 or r_X != -H(X)): 0
+   neutral with |r_X| = 1: 1; all of them have H(X) = 1: True; number with H(X) = 1: 1 (2n - 3 = 1)
+order 3: 2 classes; kappa = 0 for 3 gadgets (labelled P of the representatives)  [0.0 s]
+   pairs {e, f}: kappa < 0: 0, = 0: 3, > 0: 3;  range of kappa / Pi_2 over pairs: [0.0000, 0.3333]
+   by (|P|, r_X, H(X)): (2, -1, 1): 3
+   violations of HYP-9662 (D) (|P| != 2 or r_X != -H(X)): 0
+   neutral with |r_X| = 1: 3; all of them have H(X) = 1: True; number with H(X) = 1: 3 (2n - 3 = 3)
+order 4: 4 classes; kappa = 0 for 5 gadgets (labelled P of the representatives)  [0.0 s]
+   pairs {e, f}: kappa < 0: 1, = 0: 5, > 0: 18;  range of kappa / Pi_2 over pairs: [-0.2500, 0.5000]
+   by (|P|, r_X, H(X)): (2, -1, 1): 5
+   violations of HYP-9662 (D) (|P| != 2 or r_X != -H(X)): 0
+   neutral with |r_X| = 1: 5; all of them have H(X) = 1: True; number with H(X) = 1: 5 (2n - 3 = 5)
+order 5: 12 classes; kappa = 0 for 17 gadgets (labelled P of the representatives)  [0.0 s]
+   pairs {e, f}: kappa < 0: 4, = 0: 17, > 0: 99;  range of kappa / Pi_2 over pairs: [-0.7500, 0.6154]
+   by (|P|, r_X, H(X)): (2, -1, 1): 7, (2, -3, 3): 8, (2, -5, 5): 2
+   violations of HYP-9662 (D) (|P| != 2 or r_X != -H(X)): 0
+   neutral with |r_X| = 1: 7; all of them have H(X) = 1: True; number with H(X) = 1: 7 (2n - 3 = 7)
+order 6: 56 classes; kappa = 0 for 37 gadgets (labelled P of the representatives)  [0.0 s]
+   pairs {e, f}: kappa < 0: 33, = 0: 37, > 0: 770;  range of kappa / Pi_2 over pairs: [-1.5625, 0.7024]
+   by (|P|, r_X, H(X)): (2, -1, 1): 9, (2, -3, 3): 20, (2, -5, 5): 6, (2, -9, 9): 2
+   violations of HYP-9662 (D) (|P| != 2 or r_X != -H(X)): 0
+   neutral with |r_X| = 1: 9; all of them have H(X) = 1: True; number with H(X) = 1: 9 (2n - 3 = 9)
+order 7: 456 classes; kappa = 0 for 81 gadgets (labelled P of the representatives)  [0.0 s]
+   pairs {e, f}: kappa < 0: 291, = 0: 81, > 0: 9204;  range of kappa / Pi_2 over pairs: [-2.8125, 0.7509]
+   by (|P|, r_X, H(X)): (2, -1, 1): 11, (2, -3, 3): 36, (2, -5, 5): 14, (2, -9, 9): 8, (2, -11, 11): 2, (2, -13, 13): 2, (2, -15, 15): 4, (2, -17, 17): 2, (2, -37, 37): 2
+   violations of HYP-9662 (D) (|P| != 2 or r_X != -H(X)): 0
+   neutral with |r_X| = 1: 11; all of them have H(X) = 1: True; number with H(X) = 1: 11 (2n - 3 = 11)
+order 8: 6880 classes; kappa = 0 for 386 gadgets (labelled P of the representatives)  [0.2 s]
+   pairs {e, f}: kappa < 0: 3238, = 0: 270, > 0: 189132;  range of kappa / Pi_2 over pairs: [-4.7031, 0.8026]
+   by (|P|, r_X, H(X)): (2, -1, 1): 13, (2, -3, 3): 56, (2, -5, 5): 26, (2, -9, 9): 37, (2, -11, 11): 8, (2, -13, 13): 8, (2, -15, 15): 24, (2, -17, 17): 8, (2, -19, 19): 4, (2, -23, 23): 8, (2, -25, 25): 4, (2, -27, 27): 6, (2, -29, 29): 8, (2, -31, 31): 4, (2, -33, 33): 10, (2, -37, 37): 14, (2, -49, 37): 2, (2, -41, 41): 4, (2, -43, 43): 4, (2, -27, 45): 2, (2, -45, 45): 6, (2, -55, 61): 2, (2, -89, 89): 2, (2, -67, 109): 2, (2, -87, 135): 2, (2, -133, 145): 2, (2, -99, 153): 2, (2, -119, 173): 2, (3, 7, 143): 2, (3, 15, 171): 2, (3, 35, 211): 2, (3, 5, 253): 2, (3, 15, 255): 2, (3, -9, 261): 2, (3, -1, 277): 2, (3, 13, 287): 2, (3, 7, 287): 2, (3, -1, 289): 2, (3, 3, 291): 2, (3, 1, 293): 2, (3, 25, 317): 2, (3, -11, 323): 2, (3, 5, 325): 2, (3, 3, 339): 2, (3, -1, 349): 2, (3, 9, 363): 2, (3, 3, 363): 2, (3, -7, 367): 2, (3, 27, 369): 2, (3, -19, 373): 2, (3, -1, 373): 2, (3, 3, 375): 2, (3, -1, 379): 2, (3, -9, 381): 2, (3, 7, 383): 2, (3, -3, 387): 2, (3, -21, 393): 2, (3, -17, 395): 2, (3, -19, 397): 2, (3, 3, 405): 2, (3, -1, 409): 2, (3, -5, 413): 2, (3, -17, 413): 2, (3, -9, 417): 2, (3, -11, 419): 2, (3, -5, 425): 2, (3, -13, 427): 4, (3, -7, 433): 2, (3, 19, 443): 2, (3, -19, 445): 2, (3, -15, 447): 2, (3, -25, 451): 2, (3, -17, 455): 2, (3, -15, 471): 2, (3, -17, 473): 2, (3, -19, 475): 2, (3, -27, 483): 2, (3, -31, 499): 2, (3, -35, 509): 4, (3, -33, 513): 4, (3, -33, 525): 2, (3, -27, 585): 2, (3, -39, 591): 2
+   violations of HYP-9662 (D) (|P| != 2 or r_X != -H(X)): 132; first [(14434534, 146, -13, 427), (142080592, 145, -19, 397), (216685518, 73, -7, 433), (87817797, 100, 27, 369), (87817797, 137, 27, 369), (210083518, 208, -1, 349)]
+   neutral with |r_X| = 1: 27; all of them have H(X) = 1: False; number with H(X) = 1: 13 (2n - 3 = 13)
