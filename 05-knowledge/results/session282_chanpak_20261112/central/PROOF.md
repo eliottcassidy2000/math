@@ -1,6 +1,6 @@
 # Central fusion banks: prime ownership and the exact absolute carry
 
-**Session282. PROOF CANDIDATE, pending independent review.** Chan–Pak remains
+**Session282. PROVED, independently reviewed; final restored-source replay pending.** Chan–Pak remains
 OPEN. The arithmetic below is elementary bounded coin/CRT algebra; novelty is
 not claimed for that algebra. The contribution is its exact physical carrier
 interface, a target decoder retaining the absolute carry, and the restriction
@@ -159,3 +159,20 @@ Take arithmetic bank data h=(3,5), E_1=[0,2], E_2=[0,4]. The sum
 r=(2,2), and c=(1-10-6)/15=−1. The exact selector rejects it immediately.
 These are arithmetic controls, NOT claimed physical central banks of those
 deletions. An arbitrary bank of matrices is not a tournament.
+
+## 5. Physical cross-lane application: primitive mesh still needs ownership
+
+The new [carry-loop pair](../wildcard/PROOF.md) has counts2747/2749 and common
+full carrier deletion169. Compose it on the right of the inherited41/43
+central pair. The four actual sixteen-vertex tournaments have counts
+
+    474053,474083,474391,474421.
+
+Their shared deletion is2535=15·169; normalized choice weights169 and15 have
+gcd1. The exact target test selects precisely these four outputs with
+E_1=E_2={0,1}, and rejects474055. Independent path recurrence checks all four
+literal counts. This physical example separates primitive mesh from interval
+coverage; it does not realize the complete digit banks hypothesized in§3.
+
+This section was reconstructed after environment rollback and freshly replayed;
+the final session audit binds the exact restored files.

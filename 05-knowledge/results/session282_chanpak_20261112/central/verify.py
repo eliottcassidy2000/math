@@ -43,6 +43,20 @@ for X,Y in product((A,B),repeat=2):
     ck(H==c.from_matrix(M)['H'],'physical product count')
     physical.append(H)
 ck(sorted(set(physical))==list(range(min(physical),min(physical)+61,30)),'mesh15 progression')
+# Session282 carry-loop pair, also independently replayed by wildcard lane.
+X=(594,2020,2001,1991,1994,2013,1152,513,193,320,897)
+Y=(1542,2020,2000,1991,1995,2013,1153,513,193,320,896)
+px=c.profile(X);py=c.profile(Y)
+ck(px['h']==169 and px['H']==2747 and py['H']==2749,'new central gate')
+ck(all(px[k]==py[k] for k in px if k!='H'),'new whole packet')
+coprime_counts=[]
+for left,right in product((A,B),(X,Y)):
+    H=literal_hp(c.fuse(left,right));coprime_counts.append(H)
+ck(coprime_counts==[474053,474083,474391,474421],'literal coprime composition')
+ck(gcd(169,15)==1 and 474055 not in coprime_counts,'primitive not interval')
+for N in range(474051,474424,2):
+    hit=carry_select((15,169),[(0,1),(0,1)],(N-474053)//2)
+    ck((hit is not None)==(N in coprime_counts),'physical absolute target oracle')
 # Exact integer arithmetic controls; no claim these synthetic banks are physical.
 universes=0;targets=0
 for hs in ((3,5),(3,7),(5,7),(3,5,7),(3,5,7,11)):
@@ -72,6 +86,6 @@ for r in range(1,5):
         ck(G==D//lcm(*hs),'prime ownership gcd')
         ck((G==1)==all(gcd(a,b)==1 for a,b in combinations(hs,2)),'primitive iff disjoint primes')
         valuation_checks+=1
-print(json.dumps(dict(status='PASS',physical_pair_profiles=[pa,pb],literal_two_factor_counts=physical,
+print(json.dumps(dict(status='PASS',physical_pair_profiles=[pa,pb],literal_two_factor_counts=physical,physical_coprime_counts=coprime_counts,
  arithmetic_complete_bank_universes=universes,arithmetic_targets_tested=targets,
  prime_ownership_tuples=valuation_checks,arithmetic_not_physical=True),indent=2,sort_keys=True))
