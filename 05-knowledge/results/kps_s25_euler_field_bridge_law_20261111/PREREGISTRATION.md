@@ -133,3 +133,23 @@ state `(1, 0, 0)`.
 Reading. E2 true would give a finitely generated semigroup of 3 x 3 integer matrices whose first coordinates cover
 the odd numbers of a long range: a local-to-global statement about a finitely generated semigroup, which is a
 smaller target than the infinite family.
+
+---
+
+## Outcomes of addendum E (added after the runs; nothing above was changed)
+
+`runs/finite_blocks_16.txt` (closure below `2^16`, `L = 0..4`), `runs/finite_blocks_trend_17.txt` (below `2^17`,
+`L = 3, 4, 5`; the value `L = 5` was not in the registration and was run after the outcomes for `L <= 4`).
+
+| prediction | outcome |
+|---|---|
+| E1 (`L <= 1`: more than 1000 misses in `[2^15, 2^16)`) | **CONFIRMED**: 14,323 for `L = 1` (16,383 for `L = 0`) |
+| E2 (`L = 3`: no miss in `[2^13, 2^16)`) | **FAILED**: 712 misses there (285 in `[2^15, 2^16)`) |
+| E3 (`L = 4`: a superset of the 29 numbers with at most 60 elements below `2^16`) | **FAILED** on the count: 126 misses (the 29 numbers are among them, as they must be) |
+
+Not predicted: with words of length at most 5 (63 blocks) the closure below `2^17` misses 49 odd numbers, the
+largest being 10391, and none in `(10391, 2^17]`; with `L = 4` there are 127 misses below `2^17`, the largest
+130247; with `L = 3`, 1355. A run for `L = 5` below `2^19` was started after these numbers were known.
+
+Note on addendum D: the run at `2^18` (`runs/direct_closure_18.txt`, 32,860,481 live states) gives the same 29
+misses.

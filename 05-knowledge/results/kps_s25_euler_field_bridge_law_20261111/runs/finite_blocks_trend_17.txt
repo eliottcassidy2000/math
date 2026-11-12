@@ -1,0 +1,7 @@
+L = 3 (15 blocks), below 2^17: 2847187 live states, 1355 misses; misses in [2^k, 2^(k+1)), k = 8..16: 8:29 9:48 10:58 11:86 12:119 13:170 14:257 15:285 16:277; largest miss 130247
+L = 4 (31 blocks), below 2^17: 5646103 live states, 127 misses; misses in [2^k, 2^(k+1)), k = 8..16: 8:12 9:17 10:20 11:25 12:15 13:11 14:5 15:3 16:1; largest miss 130247
+L = 5 (63 blocks), below 2^17: 8204363 live states, 49 misses; misses in [2^k, 2^(k+1)), k = 8..16: 8:9 9:9 10:8 11:6 12:1 13:1 14:0 15:0 16:0; largest miss 10391
+
+real	1m36.895s
+user	0m0.046s
+sys	0m0.030s
