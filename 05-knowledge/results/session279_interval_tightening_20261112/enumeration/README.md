@@ -28,6 +28,7 @@ From any working directory:
     python3 /path/to/enumeration/second_jet.py > second_jet_results.json
     python3 /path/to/enumeration/benchmark.py > benchmark.json
     python3 /path/to/enumeration/integer_jet.py > integer_jet_results.json
+    python3 /path/to/enumeration/divisor_jet.py > divisor_jet_results.json
 
 `backbone.py` imports Session278's partition generator and elementary-symmetric
 routine by a path anchored to its own file, not the current working directory.
@@ -62,6 +63,15 @@ they are not compared to the optimized GMP counter. The polynomial operation
 exponent worsens as correction depth/backbone cardinality grows. General
 fixed-order closure is a theorem; arbitrary-order optimized software is not
 claimed.
+
+## Primitive-word response compression
+
+The identity 2^g=sum_(d|g)P(d), with P(d) primitive binary word counts,
+rewrites the first correction response into divisor-weighted multiplicity
+moments. Only odd divisor indices d<=n/3 are needed. The divisor jet agrees
+with the length jet through128. It is not uniformly faster in the local runs;
+its contribution is an exact necklace/Witt-to-correction response map, not a
+claim that the full tournament structure is encoded by word periods.
 
 ## Structural connection
 

@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "independent_first_moment_controls": 175,
+  "independent_second_moment_controls": 63,
+  "first_moment_orders": [
+    0,
+    24
+  ],
+  "second_moment_orders": [
+    0,
+    20
+  ],
+  "independent_marked_graph_controls": 99,
+  "independent_integer_jet_controls": 75,
+  "independent_dual_vertices_classified": 3002,
+  "arbitrary_positive_moment_mixtures": 70,
+  "independent_uniform_threshold_bounds": {
+    "25": "958167364406236464352425076027010580480/1018204727765304254274536120996225851081",
+    "26": "84218108754232516207424220568391147061248/128178705994745296402484782887011718647163",
+    "27": "1330532425894726165201159005740232519712768/1792892073499083298599388408336746659529609",
+    "28": "103427605100782107330813853008564633940787200/225701747107109792188029363732263442455811003"
+  },
+  "independent_permutation_physical_packets": 44,
+  "independent_divisor_jet_controls": 75,
+  "order64_independent_representations_agree_bits": 1721,
+  "independent_endpoint_classification": [
+    {
+      "length": 2,
+      "failures": 0
+    },
+    {
+      "length": 3,
+      "failures": 0
+    },
+    {
+      "length": 4,
+      "failures": 0
+    },
+    {
+      "length": 5,
+      "failures": 0
+    },
+    {
+      "length": 6,
+      "failures": 0
+    },
+    {
+      "length": 7,
+      "failures": 0
+    },
+    {
+      "length": 8,
+      "failures": 1
+    },
+    {
+      "length": 9,
+      "failures": 8
+    },
+    {
+      "length": 10,
+      "failures": 24
+    },
+    {
+      "length": 11,
+      "failures": 56
+    },
+    {
+      "length": 12,
+      "failures": 132
+    }
+  ],
+  "ground_four_moment_first_core_rank5": [
+    [
+      70,
+      [
+        13,
+        15,
+        17,
+        25
+      ]
+    ]
+  ]
+}

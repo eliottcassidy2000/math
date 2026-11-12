@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "normal_optimized_math_payload_identical": true,
+  "timing_fields_excluded": true,
+  "files": {
+    "ground_moments.py": "8859f815783721a33597dc1f6c5e1b19b3ed9105c860bd4a7a5b0a6f5e69178e",
+    "PROOF.md": "54376f96130fd07e5714e9a245f4a6678d785b0f5df61f59e6673af3462858be",
+    "results.json": "1d11013319ff79df7a5145106c7d6cb89ad03d4cd98ecf197eb38e684f3baf08",
+    "packet_n64_B11.json": "19309e9bfbbfd4450d4f4c4825110d732f26788f710494fd8cee0f6daa101afe",
+    "packet_n64_B3.json": "e770c297c821714ad30dba30bb47048feca5cfb19b41db72de50af06f0bbbc36"
+  }
+}

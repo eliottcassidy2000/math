@@ -386,3 +386,16 @@ Finite states can hide memory or chronology.
 this; nonconstant blocks, ties or contraction kernels may not. Currents need
 not be injective. **Evidence:** THM-3369/3372/3377; THM-3380's `ABBA/BAAB`
 hostile kills both first currents.
+
+## Budget the forgotten interaction before demanding integer accuracy
+
+**Trigger/action:** when a tiny relative error still spans many integers, expose
+what the next operation consumes. Retain a finite correction-degree jet or its
+marked interaction graph; resum a common defect before truncating; test absolute
+transverse contraction before rounding a hidden coordinate.
+**Evidence:** [Session279](../05-knowledge/results/session279_interval_tightening_20261112/SYNTHESIS.md)
+uses exact finite correction budgets for Burnside symmetry and Pisot cone slices
+for physical rooted-tournament recovery. **Boundaries:** fixed moment depth can
+retain unbounded absolute ambiguity; a scalar interval still needs lattice
+ancestry and a physical seed. Independent contraction does not imply arbitrary
+switching stability, and a fixed seed/suffix bank does not imply target coverage.

@@ -146,6 +146,53 @@ improvement for the specified first-correction computation after the earlier
 rational prototype was slower. The arbitrary fixed-order theorem is separate
 from these implementation timings.
 
+## 4b. Primitive binary words compress the correction response
+
+Let P(d) be the number of binary words of length d with least period d. The
+classical period decomposition gives
+
+    2^g = sum_(d|g) P(d),     P(d)=sum_(e|d) mu(d/e)2^e.
+
+This is the same Möbius/primitive-period mechanism appearing in the repository's
+Witt and necklace work (for example THM-505
+`the-ocf-non-spectral-defect-H-equals-spectral-skeleton-plus-witt-defect`), but
+here it is applied to the **correction kernel**, not used to identify simple
+cycles with primitive walks. For previously processed a<b,
+
+    q_ab = 1-2^(-a) sum_(d|a,d|b) P(d).
+
+Thus the first correction response can be retained as
+
+    T=sum_a M_a,
+    R_d=sum_(a:d|a) 2^(n-a) M_a,
+    Qhat_b=2^n T-sum_(d|b) P(d)R_d.                         (6)
+
+Only odd d<=n/3 are needed. For distinct positive odd a<b<=n, b/gcd(a,b)
+is an odd integer >=3, so gcd(a,b)<=n/3. No larger common divisor can occur
+in the future interaction being queried. This boundary uses distinct lengths;
+within-equal-length interactions were already exact and have zero defect.
+
+The integer transition is
+
+    T' += Ahat(T+jV),
+    R_d' += Ahat[R_d+1_(d|b) j 2^(n-b)V],
+    C1' += Ahat(C1+jQhat_b).
+
+This retains a divisor response, rather than each cycle length separately.
+It is a legitimate quotient for the first jet because (6) factors every
+future response. The backbone-dependent external field remains separately
+retained. It is not a lossless quotient for every higher correction order
+without corresponding mixed divisor moments.
+
+`divisor_jet.py` agrees with the integer length-moment jet through128. It uses
+floor((floor(n/3)+1)/2) divisor coordinates plus T instead of all previous odd
+length coordinates. This is an exact structural compression. Local times were
+not uniformly smaller: at64 about0.211s versus0.200s; at128 about7.68s versus8.77s.
+No robust further speedup is claimed from those single runs. A useful outcome
+is the new precise bridge: **primitive-period counts implement the response of
+an enumeration-error certificate**. A numerical resemblance to necklace counts
+has become an explicit map and sufficient-state identity.
+
 ## 5. All fixed orders close: the triangular precision budget
 
 For processed off-backbone lengths and a nonnegative integer multi-index alpha,

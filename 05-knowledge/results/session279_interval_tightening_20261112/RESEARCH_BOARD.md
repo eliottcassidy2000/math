@@ -28,3 +28,13 @@ Proof notes, exact runnable experiments, scoped comparisons with Session278,
 independent review of new claims, and a synthesis identifying the strongest
 remaining obstruction. No claim of instantaneous enumeration or global
 Hamiltonian-count coverage is presupposed.
+
+## Closed results and retained obligations
+
+All four mathematical lanes completed, with independent new-claim review.
+The synthesis records finite correction compilers, divisor-response compression,
+ground-state moment bounds exact through69, and physical Pisot interface
+recovery. The cheap hostiles became precise boundaries: fixed-depth moment
+ambiguity grows without bound, and word10101010 first defeats the repeated-
+block Pisot criterion at length8. Efficient stratified moments and overlapping
+physical target supply remain open. See SYNTHESIS.md and audit/REVIEW.md.

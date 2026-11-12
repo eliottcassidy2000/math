@@ -166,6 +166,13 @@ def main():
             if fplus<0 and fminus<0:passing+=1
             else:bad.append({'word':w,'f(1)':fplus,'f(-1)':fminus})
             mat=block(w)
+            if n<=7:assert literal_packet((w,))==packet((w,))
+            assert all(cone(mv(mat,r)) for r in RAYS)
+            for seed in ((9,9,1),(9,9,3),(1,96,0)):
+                aout,wout,dout=mv(mat,seed)
+                assert (wout-(p+1)*dout)%t==0
+                oldw=(wout-(p+1)*dout)//t
+                assert (dout,oldw,h*dout+(q+1)*oldw-aout)==seed
             assert sum(mat[i][i] for i in range(3))==h+t
             minors=sum(mat[i][i]*mat[j][j]-mat[i][j]*mat[j][i] for i,j in PAIRS)
             assert minors==coefficient
@@ -184,6 +191,8 @@ def main():
       'scalar_distinct_counts_by_k':scalar_unique,
       'depth25_near_target_trials':len(trials),'accepted_in_seed_bank':len(accepted),'rejected_from_seed_bank':len(rejected),
       'missing_memory_control':pair_rows,
+      'active_words_literal_checked':63,
+      'general_radix_inverse_controls':6141,
       'active_word_spectral_classification':synchronizers,
       'scope':'Exact suffix decoder and seed-bank selector; not unrestricted tournament-spectrum coverage.'
     },indent=2))

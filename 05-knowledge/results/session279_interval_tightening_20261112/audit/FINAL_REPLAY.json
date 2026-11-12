@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "local_links_checked": 23,
+  "two_view_exact64_bits": 1721,
+  "physical_normal_optimized_equal": true,
+  "independent_normal_audit": "PASS"
+}

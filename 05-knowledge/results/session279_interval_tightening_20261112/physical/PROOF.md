@@ -349,6 +349,16 @@ below one. In this irreducible characteristic-zero cubic the roots are distinct.
 The specific uniform threshold25 belongs only to the triangle and B96; it is
 not exported to other words.
 
+The corresponding inverse retains its own radix rather than imposing mod4:
+
+    A_old=d,
+    W_old=(W−(P+1)d)/t,
+    d_old=h d+(Q+1)W_old−A.                             (20a)
+
+Thus divisibility by t=2^n, cone membership, and a physical seed owner give
+the same exact ancestry test. The lattice image index is t, not one; a
+real-cone classification without this radix sidecar would lose admissibility.
+
 Exact enumeration of this criterion finds all63 eligible words of lengths
 2 through7 pass. At length8 the unique failure is
 
