@@ -1,0 +1,67 @@
+{
+  "controls": 410,
+  "rows": [
+    {
+      "n": 40,
+      "bits": 521,
+      "count_bits": 621,
+      "seconds": 0.0018551369939814322,
+      "peak_states": 130,
+      "transitions": 1274
+    },
+    {
+      "n": 64,
+      "bits": 1544,
+      "count_bits": 1721,
+      "seconds": 0.011600611003814265,
+      "peak_states": 517,
+      "transitions": 8225
+    },
+    {
+      "n": 80,
+      "bits": 2538,
+      "count_bits": 2766,
+      "seconds": 0.031384943999000825,
+      "peak_states": 1227,
+      "transitions": 21833
+    },
+    {
+      "n": 100,
+      "bits": 4132,
+      "count_bits": 4426,
+      "seconds": 0.09230016700166743,
+      "peak_states": 2953,
+      "transitions": 61947
+    },
+    {
+      "n": 120,
+      "bits": 6122,
+      "count_bits": 6480,
+      "seconds": 0.30620709199865814,
+      "peak_states": 6776,
+      "transitions": 153595
+    },
+    {
+      "n": 150,
+      "bits": 9846,
+      "count_bits": 10303,
+      "seconds": 1.1333598740020534,
+      "peak_states": 20052,
+      "transitions": 506659
+    },
+    {
+      "n": 200,
+      "bits": 18034,
+      "count_bits": 18655,
+      "seconds": 7.207618039996305,
+      "peak_states": 96836,
+      "transitions": 2770773
+    }
+  ],
+  "blocked": {
+    "n": 250,
+    "exit_code": 137,
+    "reason": "Python process killed during raw modular query; resource limit inferred, no arithmetic mismatch reported"
+  },
+  "scope": "single run; cache comparison through200; n250 not completed by Python"
+}

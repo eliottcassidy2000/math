@@ -1,6 +1,6 @@
 # Session277: absolute recovery and recursive interaction
 
-Status: ACTIVE RESEARCH; no Chan–Pak completeness claim.
+Status: COMPLETED RESEARCH; Chan–Pak remains OPEN.
 Baseline: adb804e215da (current main at startup, 12 November 2026).
 
 The user asks for integer-accurate corrections, not merely small relative
@@ -36,3 +36,5 @@ Startup note: the isolated worktree inherits sparse checkout and has 53
 pre-existing inbox normalization differences. They are unrelated and will not
 be staged. Historical dependencies outside the sparse selection are read from
 Git, not assumed absent. No machine identity was invented.
+
+Outcome: see SYNTHESIS.md and the independent reviews. No unresolved publication claim is promoted to a proof.

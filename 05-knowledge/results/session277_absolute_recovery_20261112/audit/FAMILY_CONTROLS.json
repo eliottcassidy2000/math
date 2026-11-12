@@ -1,0 +1,6 @@
+{
+  "independent_permutation_checks": 72,
+  "transitive_aggregate_checks": 42,
+  "regular_convolution_checks": 120,
+  "status": "PASS"
+}

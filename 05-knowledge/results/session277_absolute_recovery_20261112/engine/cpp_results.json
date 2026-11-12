@@ -1,0 +1,47 @@
+{
+  "controls": 186,
+  "rows": [
+    {
+      "n": 100,
+      "bits": 4132,
+      "elapsed": 0.020863591998931952,
+      "returncode": 0,
+      "status": "PASS",
+      "seconds": 0.0169159,
+      "transitions": 61947,
+      "peak_states": 2953
+    },
+    {
+      "n": 150,
+      "bits": 9846,
+      "elapsed": 0.2612290299948654,
+      "returncode": 0,
+      "status": "PASS",
+      "seconds": 0.253913,
+      "transitions": 506659,
+      "peak_states": 20052
+    },
+    {
+      "n": 200,
+      "bits": 18034,
+      "elapsed": 1.719112518003385,
+      "returncode": 0,
+      "status": "PASS",
+      "seconds": 1.70657,
+      "transitions": 2770773,
+      "peak_states": 96836
+    },
+    {
+      "n": 250,
+      "bits": 28703,
+      "elapsed": 14.41639397200197,
+      "returncode": 0,
+      "status": "PASS",
+      "seconds": 14.3969,
+      "transitions": 12024202,
+      "peak_states": 441859
+    }
+  ],
+  "memory_limit_bytes": 838860800,
+  "per_large_case_timeout_seconds": 90
+}

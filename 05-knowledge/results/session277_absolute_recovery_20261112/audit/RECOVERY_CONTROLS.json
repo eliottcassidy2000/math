@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "independent_controls": 907,
+  "cpp_independent_controls": 128,
+  "n_range": [
+    0,
+    24
+  ],
+  "residue_bits": [
+    0,
+    1,
+    2,
+    3,
+    7,
+    17,
+    61,
+    151
+  ],
+  "sources": {
+    "absolute/PROOF.md": "746639e3ebad97cc110ae582fedbf35aba93bc3d37da3b152f635b91c85d8318",
+    "absolute/certified_interval.py": "2f7f45cff2f8eeb09ef42acf7a9ca675613d01fe197624dd8edf93829e7e8746",
+    "engine/dyadic_completion.py": "cf09916cffb50a87e2b3f798084697c6f7cb615d8c15f3689aa026d7f1088d4c",
+    "engine/PROOF.md": "9fcbebde82ac6d2405c6289d698d216fbf72cba4f2a0655db87f5cc2a431d32a",
+    "engine/modular_counter.cpp": "c4fbd2a6df3e580be27f3bbf704a3f996e6c997b48881176f30a402d6e12732f",
+    "bridges/CENSUS_VERSUS_SUPPORT.md": "10351c08821e3cbd4d2ef2cf61f7543303c7982d946f675201b469181c2c7fe5"
+  }
+}
