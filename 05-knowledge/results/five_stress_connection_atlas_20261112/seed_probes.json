@@ -1,0 +1,2603 @@
+{
+  "scope": "Every unselected port and first/last one-selected-clone gate of the four non-parabola unit seeds through order12; full finite Stirling coefficients. Six two-clock charts on one C5 port; roots searched only in [1,40]^2 unless separately proved.",
+  "records": [
+    {
+      "source": {
+        "n": 9,
+        "word": "000001010",
+        "rows": [
+          350,
+          348,
+          344,
+          336,
+          320,
+          159,
+          288,
+          95,
+          160
+        ],
+        "H": 705,
+        "selected": 162,
+        "U": 6288,
+        "odd_part": 393,
+        "v2_U": 4,
+        "parabola_core": false,
+        "cubic_core": true,
+        "aut_order": 1
+      },
+      "unselected_ports": [
+        {
+          "port": 0,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            174,
+            82,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            6288,
+            5704,
+            1680,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 2,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            134,
+            90,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            6288,
+            6892,
+            2880,
+            288,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 3,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            134,
+            90,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            6288,
+            6892,
+            2880,
+            288,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 4,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            134,
+            90,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            6288,
+            6892,
+            2880,
+            288,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 6,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            330,
+            222,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            6288,
+            9122,
+            5080,
+            828,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 8,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            672,
+            574,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            6288,
+            12723,
+            9812,
+            2484,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "selected_clone_gates": [
+        {
+          "old_selected": 1,
+          "selected_end": "first",
+          "rows": [
+            942,
+            172,
+            168,
+            160,
+            847,
+            144,
+            815,
+            80,
+            686,
+            174
+          ],
+          "selected": 336,
+          "port": 9,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            269,
+            538,
+            270,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            20072,
+            22424,
+            9792,
+            1152,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 1,
+          "selected_end": "last",
+          "rows": [
+            942,
+            172,
+            168,
+            160,
+            847,
+            144,
+            815,
+            80,
+            686,
+            174
+          ],
+          "selected": 592,
+          "port": 8,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            349,
+            594,
+            246,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            17696,
+            16448,
+            5040,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 5,
+          "selected_end": "first",
+          "rows": [
+            190,
+            188,
+            184,
+            176,
+            160,
+            896,
+            63,
+            832,
+            607,
+            95
+          ],
+          "selected": 322,
+          "port": 9,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            -1543,
+            -4825,
+            -5736,
+            -2700,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            41413,
+            81157,
+            60978,
+            14946,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 5,
+          "selected_end": "last",
+          "rows": [
+            190,
+            188,
+            184,
+            176,
+            160,
+            896,
+            63,
+            832,
+            607,
+            95
+          ],
+          "selected": 578,
+          "port": 8,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            -1629,
+            -4857,
+            -2996,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            39832,
+            68650,
+            33696,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 7,
+          "selected_end": "first",
+          "rows": [
+            222,
+            220,
+            216,
+            208,
+            192,
+            799,
+            160,
+            800,
+            607,
+            95
+          ],
+          "selected": 290,
+          "port": 9,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            -469,
+            -1163,
+            -1220,
+            -504,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            28385,
+            42257,
+            24846,
+            4686,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 7,
+          "selected_end": "last",
+          "rows": [
+            222,
+            220,
+            216,
+            208,
+            192,
+            799,
+            160,
+            800,
+            607,
+            95
+          ],
+          "selected": 546,
+          "port": 8,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            -463,
+            -305,
+            68,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            26054,
+            31310,
+            11484,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "n": 9,
+        "word": "000001010",
+        "rows": [
+          350,
+          348,
+          344,
+          336,
+          320,
+          159,
+          288,
+          95,
+          160
+        ],
+        "H": 705,
+        "selected": 328,
+        "U": 2718,
+        "odd_part": 1359,
+        "v2_U": 1,
+        "parabola_core": false,
+        "cubic_core": true,
+        "aut_order": 1
+      },
+      "unselected_ports": [
+        {
+          "port": 0,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            134,
+            90,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            2718,
+            2180,
+            540,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 1,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            134,
+            90,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            2718,
+            2180,
+            540,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 2,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            134,
+            90,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            2718,
+            2180,
+            540,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 4,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            174,
+            82,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            2718,
+            2783,
+            1164,
+            162,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 5,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            672,
+            574,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            2718,
+            6651,
+            4068,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 7,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            330,
+            222,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            2718,
+            3718,
+            1460,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "selected_clone_gates": [
+        {
+          "old_selected": 3,
+          "selected_end": "first",
+          "rows": [
+            942,
+            940,
+            936,
+            160,
+            847,
+            144,
+            815,
+            80,
+            680,
+            168
+          ],
+          "selected": 416,
+          "port": 9,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            349,
+            594,
+            246,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            8284,
+            9058,
+            4140,
+            648,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 3,
+          "selected_end": "last",
+          "rows": [
+            942,
+            940,
+            936,
+            160,
+            847,
+            144,
+            815,
+            80,
+            680,
+            168
+          ],
+          "selected": 672,
+          "port": 8,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            269,
+            538,
+            270,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            7078,
+            5980,
+            1620,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 6,
+          "selected_end": "first",
+          "rows": [
+            926,
+            924,
+            920,
+            912,
+            896,
+            95,
+            799,
+            96,
+            672,
+            160
+          ],
+          "selected": 392,
+          "port": 9,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            -463,
+            -305,
+            68,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            12847,
+            20701,
+            13854,
+            3282,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 6,
+          "selected_end": "last",
+          "rows": [
+            926,
+            924,
+            920,
+            912,
+            896,
+            95,
+            799,
+            96,
+            672,
+            160
+          ],
+          "selected": 648,
+          "port": 8,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            -469,
+            -1163,
+            -1220,
+            -504,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            12076,
+            17674,
+            10332,
+            2016,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 8,
+          "selected_end": "first",
+          "rows": [
+            862,
+            860,
+            856,
+            848,
+            832,
+            159,
+            800,
+            95,
+            672,
+            160
+          ],
+          "selected": 328,
+          "port": 9,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            -1629,
+            -4857,
+            -2996,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            20621,
+            47843,
+            44166,
+            14226,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 8,
+          "selected_end": "last",
+          "rows": [
+            862,
+            860,
+            856,
+            848,
+            832,
+            159,
+            800,
+            95,
+            672,
+            160
+          ],
+          "selected": 584,
+          "port": 8,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            -1543,
+            -4825,
+            -5736,
+            -2700,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            19880,
+            43226,
+            36804,
+            10800,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "n": 11,
+        "word": "00010011100",
+        "rows": [
+          1590,
+          1588,
+          1584,
+          455,
+          1576,
+          1544,
+          439,
+          311,
+          55,
+          1480,
+          456
+        ],
+        "H": 54123,
+        "selected": 577,
+        "U": 358600,
+        "odd_part": 44825,
+        "v2_U": 3,
+        "parabola_core": false,
+        "cubic_core": true,
+        "aut_order": 1
+      },
+      "unselected_ports": [
+        {
+          "port": 1,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            2100,
+            2124,
+            504,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            358600,
+            650426,
+            557832,
+            220536,
+            30240,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 2,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            2100,
+            2124,
+            504,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            358600,
+            650426,
+            557832,
+            220536,
+            30240,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 3,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            20103,
+            51956,
+            40212,
+            6288,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            358600,
+            1047824,
+            1346624,
+            756534,
+            143568,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 4,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            3374,
+            4020,
+            1152,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            358600,
+            735634,
+            698688,
+            302544,
+            45600,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 5,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            3374,
+            4020,
+            1152,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            358600,
+            735634,
+            698688,
+            302544,
+            45600,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 7,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            4496,
+            -1536,
+            -8952,
+            -4080,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            358600,
+            719162,
+            669912,
+            286776,
+            43680,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 8,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            4496,
+            -1536,
+            -8952,
+            -4080,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            358600,
+            719162,
+            669912,
+            286776,
+            43680,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 10,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            26976,
+            64308,
+            51210,
+            10272,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            358600,
+            1129173,
+            1651376,
+            1174002,
+            370800,
+            36720,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "selected_clone_gates": [
+        {
+          "old_selected": 0,
+          "selected_end": "first",
+          "rows": [
+            794,
+            792,
+            3299,
+            788,
+            772,
+            3291,
+            3227,
+            3099,
+            740,
+            228,
+            2843,
+            795
+          ],
+          "selected": 1312,
+          "port": 11,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            4201,
+            10572,
+            8388,
+            2016,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            1659452,
+            2974348,
+            2555640,
+            1033344,
+            151200,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 0,
+          "selected_end": "last",
+          "rows": [
+            794,
+            792,
+            3299,
+            788,
+            772,
+            3291,
+            3227,
+            3099,
+            740,
+            228,
+            2843,
+            795
+          ],
+          "selected": 2336,
+          "port": 10,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            4581,
+            9606,
+            -1266,
+            -11730,
+            -5376,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            1529546,
+            2447584,
+            1792188,
+            569568,
+            54000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 6,
+          "selected_end": "first",
+          "rows": [
+            822,
+            820,
+            816,
+            3271,
+            808,
+            776,
+            183,
+            55,
+            3784,
+            3272,
+            2295,
+            247
+          ],
+          "selected": 1281,
+          "port": 11,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            8993,
+            4384,
+            -40416,
+            -56208,
+            -20400,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            1796924,
+            3448060,
+            3156840,
+            1365504,
+            218400,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 6,
+          "selected_end": "last",
+          "rows": [
+            822,
+            820,
+            816,
+            3271,
+            808,
+            776,
+            183,
+            55,
+            3784,
+            3272,
+            2295,
+            247
+          ],
+          "selected": 2305,
+          "port": 10,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            23197,
+            75018,
+            79442,
+            27594,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            1641474,
+            2688128,
+            1866456,
+            460704,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 9,
+          "selected_end": "first",
+          "rows": [
+            3638,
+            3636,
+            3632,
+            455,
+            3624,
+            3592,
+            439,
+            311,
+            55,
+            456,
+            3016,
+            968
+          ],
+          "selected": 1089,
+          "port": 11,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            53953,
+            246876,
+            397764,
+            256200,
+            51360,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            2616946,
+            7212474,
+            9650136,
+            6550008,
+            2074320,
+            220320,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 9,
+          "selected_end": "last",
+          "rows": [
+            3638,
+            3636,
+            3632,
+            455,
+            3624,
+            3592,
+            439,
+            311,
+            55,
+            456,
+            3016,
+            968
+          ],
+          "selected": 2113,
+          "port": 10,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            39369,
+            169090,
+            253790,
+            137790,
+            4512,
+            -7200,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            2543702,
+            6594844,
+            7913256,
+            4467216,
+            1019520,
+            51840,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "n": 11,
+        "word": "00011000110",
+        "rows": [
+          1254,
+          1252,
+          1248,
+          791,
+          775,
+          1240,
+          1176,
+          1048,
+          743,
+          231,
+          792
+        ],
+        "H": 54123,
+        "selected": 148,
+        "U": 236287,
+        "odd_part": 236287,
+        "v2_U": 0,
+        "parabola_core": false,
+        "cubic_core": true,
+        "aut_order": 1
+      },
+      "unselected_ports": [
+        {
+          "port": 0,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            2100,
+            2124,
+            504,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            236287,
+            358530,
+            231414,
+            53088,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 1,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            2100,
+            2124,
+            504,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            236287,
+            358530,
+            231414,
+            53088,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 3,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            26976,
+            64308,
+            51210,
+            10272,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            236287,
+            805220,
+            1139358,
+            669384,
+            126240,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 5,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            4496,
+            -1536,
+            -8952,
+            -4080,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            236287,
+            447774,
+            388470,
+            151632,
+            20400,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 6,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            4496,
+            -1536,
+            -8952,
+            -4080,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            236287,
+            447774,
+            388470,
+            151632,
+            20400,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 8,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            3374,
+            4020,
+            1152,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            236287,
+            424978,
+            325086,
+            89592,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 9,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            3374,
+            4020,
+            1152,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            236287,
+            424978,
+            325086,
+            89592,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "port": 10,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            1,
+            20103,
+            51956,
+            40212,
+            6288,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            236287,
+            817233,
+            1254002,
+            900936,
+            273696,
+            23040,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "selected_clone_gates": [
+        {
+          "old_selected": 2,
+          "selected_end": "first",
+          "rows": [
+            3698,
+            3696,
+            3467,
+            3459,
+            620,
+            588,
+            524,
+            3443,
+            3187,
+            396,
+            2672,
+            624
+          ],
+          "selected": 1096,
+          "port": 11,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            4581,
+            9606,
+            -1266,
+            -11730,
+            -5376,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            1043212,
+            1764555,
+            1408716,
+            515598,
+            64512,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 2,
+          "selected_end": "last",
+          "rows": [
+            3698,
+            3696,
+            3467,
+            3459,
+            620,
+            588,
+            524,
+            3443,
+            3187,
+            396,
+            2672,
+            624
+          ],
+          "selected": 2120,
+          "port": 10,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            4201,
+            10572,
+            8388,
+            2016,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            953347,
+            1411302,
+            906594,
+            212352,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 4,
+          "selected_end": "first",
+          "rows": [
+            630,
+            628,
+            624,
+            3463,
+            3688,
+            3656,
+            3592,
+            375,
+            119,
+            3464,
+            2439,
+            391
+          ],
+          "selected": 1092,
+          "port": 11,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            39369,
+            169090,
+            253790,
+            137790,
+            4512,
+            -7200,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            1928524,
+            5711859,
+            8002032,
+            5576682,
+            1777872,
+            183600,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 4,
+          "selected_end": "last",
+          "rows": [
+            630,
+            628,
+            624,
+            3463,
+            3688,
+            3656,
+            3592,
+            375,
+            119,
+            3464,
+            2439,
+            391
+          ],
+          "selected": 2116,
+          "port": 10,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            53953,
+            246876,
+            397764,
+            256200,
+            51360,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            1846727,
+            5028514,
+            6095610,
+            3308736,
+            631200,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 7,
+          "selected_end": "first",
+          "rows": [
+            3686,
+            3684,
+            3680,
+            407,
+            391,
+            3672,
+            3608,
+            3431,
+            3175,
+            408,
+            2584,
+            536
+          ],
+          "selected": 1044,
+          "port": 11,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            23197,
+            75018,
+            79442,
+            27594,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            1196460,
+            2351315,
+            2237880,
+            1026306,
+            179568,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "old_selected": 7,
+          "selected_end": "last",
+          "rows": [
+            3686,
+            3684,
+            3680,
+            407,
+            391,
+            3672,
+            3608,
+            3431,
+            3175,
+            408,
+            2584,
+            536
+          ],
+          "selected": 2068,
+          "port": 10,
+          "stable_all_positive": false,
+          "defect_coefficients": [
+            0,
+            8993,
+            4384,
+            -40416,
+            -56208,
+            -20400,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "slope_coefficients": [
+            0,
+            1131835,
+            2060958,
+            1771938,
+            708528,
+            102000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "two_clock_charts": [
+    {
+      "selected": [
+        1,
+        3,
+        4
+      ],
+      "defect_exponentials": [
+        [
+          1,
+          1,
+          -5
+        ],
+        [
+          1,
+          2,
+          -2
+        ],
+        [
+          2,
+          1,
+          -6
+        ],
+        [
+          2,
+          2,
+          12
+        ],
+        [
+          2,
+          3,
+          -8
+        ],
+        [
+          3,
+          2,
+          -6
+        ]
+      ],
+      "U_exponentials": [
+        [
+          1,
+          1,
+          -8
+        ],
+        [
+          1,
+          2,
+          -9
+        ],
+        [
+          2,
+          2,
+          26
+        ],
+        [
+          2,
+          3,
+          24
+        ],
+        [
+          3,
+          3,
+          24
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "unit_roots_positive_40_square": [],
+      "U_at_roots": []
+    },
+    {
+      "selected": [
+        1,
+        3,
+        5
+      ],
+      "defect_exponentials": [
+        [
+          1,
+          1,
+          -5
+        ],
+        [
+          1,
+          2,
+          -12
+        ],
+        [
+          2,
+          1,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          -4
+        ],
+        [
+          3,
+          2,
+          -10
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ],
+      "U_exponentials": [
+        [
+          1,
+          1,
+          -8
+        ],
+        [
+          1,
+          2,
+          -9
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          24
+        ],
+        [
+          3,
+          3,
+          48
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "unit_roots_positive_40_square": [
+        [
+          1,
+          3
+        ]
+      ],
+      "U_at_roots": [
+        [
+          1,
+          3,
+          6288
+        ]
+      ]
+    },
+    {
+      "selected": [
+        1,
+        3,
+        6
+      ],
+      "defect_exponentials": [
+        [
+          1,
+          1,
+          -5
+        ],
+        [
+          1,
+          2,
+          -4
+        ],
+        [
+          2,
+          1,
+          -4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          -6
+        ],
+        [
+          3,
+          2,
+          -6
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ],
+      "U_exponentials": [
+        [
+          1,
+          1,
+          -6
+        ],
+        [
+          1,
+          2,
+          -9
+        ],
+        [
+          2,
+          2,
+          24
+        ],
+        [
+          2,
+          3,
+          24
+        ],
+        [
+          3,
+          3,
+          24
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "unit_roots_positive_40_square": [],
+      "U_at_roots": []
+    },
+    {
+      "selected": [
+        1,
+        4,
+        5
+      ],
+      "defect_exponentials": [
+        [
+          1,
+          1,
+          -7
+        ],
+        [
+          1,
+          2,
+          -4
+        ],
+        [
+          2,
+          1,
+          -4
+        ],
+        [
+          2,
+          2,
+          14
+        ],
+        [
+          2,
+          3,
+          -8
+        ],
+        [
+          3,
+          2,
+          -8
+        ]
+      ],
+      "U_exponentials": [
+        [
+          1,
+          1,
+          -6
+        ],
+        [
+          1,
+          2,
+          -9
+        ],
+        [
+          2,
+          2,
+          12
+        ],
+        [
+          2,
+          3,
+          24
+        ],
+        [
+          3,
+          3,
+          36
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "unit_roots_positive_40_square": [],
+      "U_at_roots": []
+    },
+    {
+      "selected": [
+        1,
+        4,
+        6
+      ],
+      "defect_exponentials": [
+        [
+          1,
+          1,
+          -5
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          2,
+          1,
+          -12
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          -10
+        ],
+        [
+          3,
+          2,
+          -4
+        ],
+        [
+          3,
+          3,
+          6
+        ]
+      ],
+      "U_exponentials": [
+        [
+          1,
+          1,
+          -4
+        ],
+        [
+          1,
+          2,
+          -9
+        ],
+        [
+          2,
+          2,
+          34
+        ],
+        [
+          2,
+          3,
+          24
+        ],
+        [
+          3,
+          3,
+          12
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "unit_roots_positive_40_square": [
+        [
+          3,
+          1
+        ]
+      ],
+      "U_at_roots": [
+        [
+          3,
+          1,
+          2718
+        ]
+      ]
+    },
+    {
+      "selected": [
+        1,
+        5,
+        6
+      ],
+      "defect_exponentials": [
+        [
+          1,
+          1,
+          -5
+        ],
+        [
+          1,
+          2,
+          -6
+        ],
+        [
+          2,
+          1,
+          -2
+        ],
+        [
+          2,
+          2,
+          12
+        ],
+        [
+          2,
+          3,
+          -6
+        ],
+        [
+          3,
+          2,
+          -8
+        ]
+      ],
+      "U_exponentials": [
+        [
+          1,
+          1,
+          -4
+        ],
+        [
+          1,
+          2,
+          -9
+        ],
+        [
+          2,
+          2,
+          10
+        ],
+        [
+          2,
+          3,
+          24
+        ],
+        [
+          3,
+          3,
+          36
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "unit_roots_positive_40_square": [],
+      "U_at_roots": []
+    }
+  ],
+  "two_clock_literal_controls": 54
+}
