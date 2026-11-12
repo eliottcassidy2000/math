@@ -35,7 +35,7 @@ A **tournament** $T$ on vertex set $[n] = \{1, \ldots, n\}$ is a complete direct
 
 This is the starting point. The project has produced four independent proofs (Q-Lemma involution, anti-isomorphism involution, automorphism parity, and a direct corollary of OCF). Henceforth $H(T) \in \{1, 3, 5, 7, \ldots\}$.
 
-**The transitive tournament** $T_n^{\mathrm{trans}}$ (with $i \to j \iff i > j$) achieves $H = 1$; **Paley tournaments** (see §7) achieve the maximum $H$ for their size.
+**The transitive tournament** $T_n^{\mathrm{trans}}$ (with $i \to j \iff i > j$) achieves $H = 1$; **Paley tournaments** (see §7) do not maximize $H$ at every size: the order-19 cyclic interval tournament has strictly more Hamiltonian paths ([THM-135](../01-canon/theorems/THM-135-paley-not-h-max-p19.md)).
 
 ---
 
@@ -262,7 +262,7 @@ and the Euler characteristic satisfies $\chi(T_p) = p$.
 | 7 | 189 | $T_7$ (Paley) | Unique maximizer among $2^{21}$ tournaments |
 | 8 | 661 | SC | |
 | 11 | 95,095 | $T_{11}$ (Paley) | $H/|\mathrm{Aut}(T_{11})| = 1729$ |
-| 19 | $\sim 1.17 \times 10^{15}$ | $T_{19}$ (Paley) | |
+| 19 | $\geq 1{,}184{,}212{,}824{,}763$ | Cyclic interval $C_{19}$ gives this lower bound | Exceeds Paley; no global maximizer asserted |
 
 The value $H(T_{11})/|\mathrm{Aut}(T_{11})| = 1729$ is the Hardy–Ramanujan taxicab number.
 
@@ -272,11 +272,13 @@ The value $H(T_{11})/|\mathrm{Aut}(T_{11})| = 1729$ is the Hardy–Ramanujan tax
 
 **Observation (verified $n \leq 8$).** For every $n$, the maximum $H(T)$ is always achieved by a self-complementary tournament. At $n = 6$, two distinct SC mechanisms both achieve $H = 45$.
 
-### 7.3 Paley Maximization Conjecture
+### 7.3 Paley Maximization Conjecture: Refuted at Order 19
 
-**Conjecture (CONJ-002).** Among all tournaments on $p$ vertices ($p$ prime, $p \equiv 3 \pmod{4}$), the Paley tournament $T_p$ maximizes $H(T)$.
+**REFUTED (CONJ-002).** The former conjecture that Paley maximizes $H$ at every prime order $p \equiv 3 \pmod{4}$ fails at $p=19$. The exact counts are
 
-Verified: $p = 3, 7, 11$. Matches OEIS A038375 exactly for all computed cases.
+$H(T_{19})=1{,}172{,}695{,}746{,}915 < 1{,}184{,}212{,}824{,}763=H(C_{19}),$
+
+where $C_{19}$ is the cyclic interval tournament with connection set $\{1,\ldots,9\}$. See [THM-135](../01-canon/theorems/THM-135-paley-not-h-max-p19.md) and the [exact computation receipt](../05-knowledge/results/verify_p19.out). The earlier small-order evidence does not extend to all Paley primes. This counterexample does not identify the global maximum at order 19.
 
 ---
 
@@ -547,7 +549,7 @@ where the empty determinant and permanent are $1$. See https://arxiv.org/html/24
 | Result | Evidence |
 |--------|----------|
 | Paley Betti formula (THM-130) | Verified $p = 7, 11$; algebraic proof in progress |
-| Paley tournaments maximize $H$ | Verified $p = 3, 7, 11$; matches A038375 |
+| Paley maximization at small orders only | Earlier evidence at $p = 3, 7, 11$; universal claim refuted at $p=19$ (see §7.3) |
 | Unimodality of $F(T,x)$ | $50{,}000+$ tests; zero failures |
 | At most 3 bad vertices (HYP-282) | Verified $n \leq 10$ |
 | Eigenspace rank shift $R_d^{(k)} - R_d^{(0)} = (-1)^{d+1}$ | Verified $p = 7, 11$ |
@@ -563,7 +565,7 @@ where the empty determinant and permanent are $1$. See https://arxiv.org/html/24
 4. Is $\beta_{(p-1)/2}(T_p) = p - 1$ for all Paley primes? (Verified $p = 7, 11$)
 
 **Tier 2 (major open problems):**
-5. Prove the Paley maximization conjecture: $H(T_p) = \max_{|V|=p} H(T)$ for all Paley primes
+5. Determine the maximizers of $H$ beyond the small Paley orders; the universal Paley maximization conjecture is refuted at $p=19$ (see §7.3)
 6. Characterize $\beta_3 = 2$ at $n = 8$ (which tournaments achieve it? what is the structural explanation?)
 7. What replaces $\beta_k \leq 1$ at $n \geq 8$? Is there a bound $\beta_k \leq C(n,k)$ for some combinatorial $C$?
 8. Does the density of achievable $H$-values approach 1? Are there infinitely many permanent gaps beyond $\{7, 21\}$?
