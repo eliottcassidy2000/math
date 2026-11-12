@@ -58,6 +58,15 @@
     111
   ],
   "all32_word_controls": 33824,
+  "all_baseline_classification": {
+    "rigid": 28,
+    "two_state": [
+      9,
+      13,
+      18,
+      22
+    ]
+  },
   "core": [
     18,
     8,
@@ -66,6 +75,7 @@
     14
   ],
   "gf": "(1-z*t^-8)/((1-z)*(1-z*t^-8)-z^2*t)",
+  "integer_flow_controls": 173,
   "inverse_controls": 85812,
   "literal_counts": [
     {

@@ -1,0 +1,356 @@
+{
+  "homometric13": {
+    "A": [
+      0,
+      1,
+      3,
+      9
+    ],
+    "B": [
+      1,
+      2,
+      5,
+      7
+    ],
+    "common_toggle_table": [
+      [
+        1,
+        18584981,
+        18514801,
+        70180
+      ],
+      [
+        4,
+        23448993,
+        23368921,
+        80072
+      ],
+      [
+        6,
+        23536891,
+        23433251,
+        103640
+      ],
+      [
+        8,
+        23572029,
+        23562137,
+        9892
+      ],
+      [
+        10,
+        23489981,
+        23515615,
+        -25634
+      ],
+      [
+        11,
+        23426063,
+        23525435,
+        -99372
+      ],
+      [
+        12,
+        23388633,
+        23527411,
+        -138778
+      ]
+    ],
+    "core_Q": 84542744,
+    "core_h": 3711175,
+    "released_packets": [
+      [
+        23572029,
+        3711175,
+        84542744,
+        34800240,
+        53453679,
+        2283800,
+        1427375
+      ],
+      [
+        23562137,
+        3711175,
+        84542744,
+        34800240,
+        53453679,
+        2283800,
+        1427375
+      ]
+    ],
+    "twin_packet": [
+      21508189,
+      3711175,
+      84542744,
+      28582427,
+      59671492,
+      2569275,
+      1141900
+    ]
+  },
+  "hostile": "Paley7: every cardinality layer is scalar-rigid",
+  "literal_attachment_checks": 244,
+  "replica_gap44": {
+    "core_increments": [
+      12,
+      2,
+      10,
+      9,
+      8,
+      7
+    ],
+    "local_gaps": [
+      -2390,
+      2434
+    ],
+    "new_cuts": [
+      2135,
+      3180
+    ],
+    "original_cuts": [
+      83,
+      1128
+    ],
+    "packets": [
+      [
+        24389195,
+        3683797,
+        84190184,
+        40840591,
+        47033390,
+        1983583,
+        1700214
+      ],
+      [
+        24389151,
+        3683797,
+        84190184,
+        40840591,
+        47033390,
+        1983583,
+        1700214
+      ]
+    ],
+    "toggles": [
+      2,
+      11
+    ]
+  },
+  "small_layers": [
+    {
+      "distinct_counts": 2,
+      "increments": [
+        1,
+        2
+      ],
+      "k": 2,
+      "n": 5,
+      "variance": "1"
+    },
+    {
+      "distinct_counts": 2,
+      "increments": [
+        1,
+        2
+      ],
+      "k": 3,
+      "n": 5,
+      "variance": "1"
+    },
+    {
+      "distinct_counts": 3,
+      "increments": [
+        1,
+        2,
+        3
+      ],
+      "k": 2,
+      "n": 7,
+      "variance": "152/3"
+    },
+    {
+      "distinct_counts": 4,
+      "increments": [
+        1,
+        2,
+        3
+      ],
+      "k": 3,
+      "n": 7,
+      "variance": "456/5"
+    },
+    {
+      "distinct_counts": 4,
+      "increments": [
+        1,
+        2,
+        3
+      ],
+      "k": 4,
+      "n": 7,
+      "variance": "456/5"
+    },
+    {
+      "distinct_counts": 3,
+      "increments": [
+        1,
+        2,
+        3
+      ],
+      "k": 5,
+      "n": 7,
+      "variance": "152/3"
+    },
+    {
+      "distinct_counts": 1,
+      "increments": [
+        1,
+        2,
+        4
+      ],
+      "k": 2,
+      "n": 7,
+      "variance": "0"
+    },
+    {
+      "distinct_counts": 1,
+      "increments": [
+        1,
+        2,
+        4
+      ],
+      "k": 3,
+      "n": 7,
+      "variance": "0"
+    },
+    {
+      "distinct_counts": 1,
+      "increments": [
+        1,
+        2,
+        4
+      ],
+      "k": 4,
+      "n": 7,
+      "variance": "0"
+    },
+    {
+      "distinct_counts": 1,
+      "increments": [
+        1,
+        2,
+        4
+      ],
+      "k": 5,
+      "n": 7,
+      "variance": "0"
+    },
+    {
+      "distinct_counts": 4,
+      "increments": [
+        1,
+        7,
+        6,
+        5
+      ],
+      "k": 2,
+      "n": 9,
+      "variance": "7091/4"
+    },
+    {
+      "distinct_counts": 7,
+      "increments": [
+        1,
+        7,
+        6,
+        5
+      ],
+      "k": 3,
+      "n": 9,
+      "variance": "15195/4"
+    },
+    {
+      "distinct_counts": 10,
+      "increments": [
+        1,
+        7,
+        6,
+        5
+      ],
+      "k": 4,
+      "n": 9,
+      "variance": "5065"
+    },
+    {
+      "distinct_counts": 10,
+      "increments": [
+        1,
+        7,
+        6,
+        5
+      ],
+      "k": 5,
+      "n": 9,
+      "variance": "5065"
+    },
+    {
+      "distinct_counts": 7,
+      "increments": [
+        1,
+        7,
+        6,
+        5
+      ],
+      "k": 6,
+      "n": 9,
+      "variance": "15195/4"
+    },
+    {
+      "distinct_counts": 4,
+      "increments": [
+        1,
+        7,
+        6,
+        5
+      ],
+      "k": 7,
+      "n": 9,
+      "variance": "7091/4"
+    }
+  ],
+  "unique_sum_control": {
+    "A": [
+      0,
+      1,
+      3,
+      10,
+      11,
+      13,
+      40,
+      41,
+      43
+    ],
+    "B": [
+      0,
+      1,
+      3,
+      61,
+      62,
+      64,
+      91,
+      92,
+      94
+    ],
+    "P": [
+      0,
+      1,
+      3
+    ],
+    "Q": [
+      0,
+      10,
+      40
+    ],
+    "n": 101
+  }
+}

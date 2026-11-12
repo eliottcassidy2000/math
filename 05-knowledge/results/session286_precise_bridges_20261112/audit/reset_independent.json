@@ -1,0 +1,54 @@
+{
+  "spin_checks": [
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      16
+    ],
+    [
+      7,
+      32
+    ],
+    [
+      8,
+      64
+    ],
+    [
+      9,
+      128
+    ]
+  ],
+  "path_triples": 471,
+  "K_scalar": -27648000,
+  "R_scalar": -829440,
+  "matrix_identities": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "status": "PASS",
+  "note": "Nineteen consecutive exact identities independently establish recurrences via Cayley-Hamilton on the18-state matrix plus the named scalar eigenvalue; Boolean-degree tests are finite controls, all-order proof separately reviewed"
+}

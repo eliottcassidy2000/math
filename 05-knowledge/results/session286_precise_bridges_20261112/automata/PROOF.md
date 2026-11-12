@@ -88,6 +88,40 @@ Each transition in the finite table is a finite arithmetic deduction from
 literal packets; the bound |x|,|y|<13 is the all-length carry theorem that
 makes this finite table exhaustive.
 
+### Complete classification across all32 constant baselines
+
+The same finite carry test classifies the fiber of T_c^k for EVERY cut c.
+For28 of the32 choices it trims to just the repeated letter T_c: the full
+central fiber is rigid at every length. The four exceptions are below; each
+has precisely the grammar `(A|BE*C)*`, with the letters reinterpreted by row:
+
+|baseline A|B|E|C|excursion action J for BE^rC|
+|---|---|---|---|---|
+|9|3|18|24|2−16r|
+|13|7|22|28|34+16r|
+|18|24|9|3|34+16r|
+|22|28|13|7|2−16r|
+
+For each baseline the verifier recomputes the entire finite reachable and
+co-reachable carry graph, with its own endpoint values, rather than assuming
+that symmetry transfers the first graph. All discarded states fail acceptance.
+This finite graph certificate proves the statement for all word lengths.
+The respective B/E/C edge weights are(−52,−16,54), (−52,16,86),
+(78,16,−44), and(78,−16,−76); the three weights in a row telescope to
+the displayed excursion action. Baseline/return transitions have zero action.
+
+Thus the two other fibers have normalized energy `j=17m+8r`, or
+`j=17 sum s_i−9 sum s_i s_(i+1)`. Their exact spectrum is
+
+    {0} union {17m+8r: m>=1,r>=0,2m+r<=k}.
+
+This is `0 union (17+<8,17>)` truncated at
+`17 floor(k/2)+8(k mod2)`, by the same resource proof used below. The signed
+and positive-energy sectors therefore share the same coin-semigroup boundary
+but have different baselines, endpoint contributions and spin fields.
+No equality of their absolute H spectra is asserted. The rest of this note
+uses baseline9 unless explicitly stated otherwise.
+
 ## 3. Exact central action and binary spins
 
 S282's local integer action J satisfies `H(R)−H(A^k)=13^(k−2) J` for k>=2.
@@ -232,7 +266,63 @@ Thus the thermodynamic perspective gives exact finite-size moments as well
 as exact support. No central-limit, large-deviation or mixing hypothesis is
 needed for these formulas; none is being used to assert nonempty fibers.
 
-## 6. Boundary and next constructive question
+## 6. General carry languages have an exact integer-flow selector
+
+There is a second precise imported-tool interface, valid beyond this example.
+For any finite physical alphabet sharing h,Q, S282's carry theorem produces
+a finite directed graph recognizing equal U,V and the appropriate endpoint
+flags. Store the previous letter pair to make the central action an integer
+edge weight. Fix a source and one acceptable terminal state (or take their
+finite union). Each edge is an actual pair of physical letters.
+
+**Finite-flow selector.** A length-k accepted walk of action J exists iff
+there is an edge support F whose underlying undirected graph on incident
+vertices is connected and contains source and terminal, and integers n_e>=1
+for e in F, zero otherwise, satisfying
+
+    out_n(v)−in_n(v) = [v=source]−[v=terminal],
+    sum_e n_e=k,                  sum_e weight(e)n_e=J.       (11)
+
+For source=terminal the balance is zero, with the zero-length walk treated
+separately. Thus a finite union over supports and terminal states gives an
+EXACT integer linear feasibility problem, not just a necessary gcd test.
+If a flag implementation uses an initial edge, it consumes the corresponding
+one physical letter and is included in k, as in our start state above.
+
+Proof: a walk supplies(11) and connected support. Conversely replace each
+edge by n_e parallel copies; add terminal->source if different. The resulting
+balanced weakly connected directed multigraph has an Euler circuit. To see
+this without an extra hypothesis, its condensation DAG could have no edge
+leaving a source component: balance would force its outgoing count to equal
+its zero incoming count. Weak connectedness therefore leaves one component.
+The usual unused-edge splicing yields a directed Euler circuit. Remove the
+added edge to get the required source-terminal trail. Reading its edge labels
+constructs the physical module word/pair. ∎
+
+Connectivity cannot be dropped: take an edge source->terminal of weight0
+and an isolated loop of weight1. The balance equations with each edge used
+once give length2/action1, but there is no such source-terminal walk. This is
+a minimal missing-sidecar example for naïve circulation or coin-gcd transfers.
+
+The finite support list can be enormous; no polynomial-time claim follows.
+For a **fixed baseline word at each length**, first constrain the left tape
+to that exact word: take the product of the pair-labelled carry graph with
+the position automaton for the supplied baseline, retaining only edges whose
+left letter matches the next baseline letter. Apply(11) to this product graph,
+not the unrestricted pair graph. Constant-baseline graphs used above already
+enforce this constraint. Only then add the supplied baseline's actual H and
+factor h^(k−2). A regular left language alone does not fix the absolute H;
+if it admits several left words, retain their actual counts separately or
+further constrain the left tape. If h>1 and the alphabet's deletion count is
+h, deleting the fused root leaves h^k Hamilton paths, and insertion into any
+path gives H(full)>=h^k. Hence a prescribed count N only requires
+k<=floor(log_h N), plus its length1 boundary. This yields a finite exact
+all-length decision procedure in that specified baseline/fiber universe.
+It neither makes the dependence on N efficient nor bounds the deletion
+interfaces needed by an arbitrary tournament. General varying-left comparison
+languages do not have a supplied absolute baseline and must retain it.
+
+## 7. Boundary and next constructive question
 
 At every k>=3 the absolute mesh is at least26. No amount of symbolic
 mixing or semigroup saturation IN THIS SAME fixed-core fiber can fill all

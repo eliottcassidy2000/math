@@ -1,0 +1,66 @@
+{
+  "all_length_content_controls": 481,
+  "distinct_alphabet": 40,
+  "finite_rows": [
+    {
+      "central_fibers": 38,
+      "distinct_packets": 40,
+      "length": 1,
+      "max_residues_by_deletion": {
+        "13": 1,
+        "15": 2
+      }
+    },
+    {
+      "central_fibers": 1376,
+      "distinct_packets": 1584,
+      "length": 2,
+      "max_residues_by_deletion": {
+        "169": 2,
+        "195": 2,
+        "225": 3
+      }
+    },
+    {
+      "central_fibers": 49696,
+      "distinct_packets": 62416,
+      "length": 3,
+      "max_residues_by_deletion": {
+        "2197": 4,
+        "2535": 4,
+        "2925": 3,
+        "3375": 4
+      }
+    },
+    {
+      "central_fibers": 1789952,
+      "distinct_packets": 2448564,
+      "length": 4,
+      "max_residues_by_deletion": {
+        "28561": 8,
+        "32955": 8,
+        "38025": 6,
+        "43875": 4,
+        "50625": 5
+      }
+    }
+  ],
+  "literal_cores": [
+    [
+      18,
+      8,
+      3,
+      5,
+      14
+    ],
+    [
+      24,
+      17,
+      3,
+      6,
+      12
+    ]
+  ],
+  "scope": "All words in two named32-cut alphabets; no saturation theorem outside this language",
+  "status": "PASS"
+}

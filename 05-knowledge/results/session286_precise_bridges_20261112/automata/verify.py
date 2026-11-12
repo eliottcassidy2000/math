@@ -101,6 +101,33 @@ def inverse(k,j):
     require(r>=0,'resource bound')
     return (3,)+(18,)*r+(24,)+(3,24)*u+(9,)*a
 
+def baseline_graph(ai,Ps):
+    A=Ps[ai];start=('start',);seen={start};todo=deque([start]);edges={}
+    while todo:
+        st=todo.popleft();out=[]
+        for c,R in enumerate(Ps):
+            if st==start:
+                x=y=0;prev=None
+                if R['e']!=A['e']:continue
+            else:x,y,prev=st
+            num=x+R['V']-A['V'];ny=8*y-R['U']+A['U']
+            if num%8 or abs(num//8)>=13 or abs(ny)>=13:continue
+            ns=(num//8,ny,c);wt=13*(R['H']-A['H'])
+            if prev is not None:wt+=-(A['U']-13)*x-(R['V']-13)*y+(Ps[prev]['d']-13)*(R['e']-13)-(A['d']-13)*(A['e']-13)
+            out.append((ns,c,wt))
+            if ns not in seen:seen.add(ns);todo.append(ns)
+        edges[st]=out
+    final={st for st in seen if st!=start and st[:2]==(0,0) and Ps[st[2]]['d']==A['d']}
+    rev=defaultdict(set)
+    for st,ee in edges.items():
+        for ns,c,wt in ee:rev[ns].add(st)
+    good=set(final);todo=deque(final)
+    while todo:
+        for st in rev[todo.popleft()]:
+            if st not in good:good.add(st);todo.append(st)
+    slim={(st[:2] if st!=start else(0,0),c,ns[:2],wt) for st in good for ns,c,wt in edges[st] if ns in good}
+    return len(seen),len(good),slim
+
 def main():
     Ts=[attach(c) for c in range(32)];Ps=[packet(T) for T in Ts]
     for T,P in zip(Ts,Ps):require(P==perm_packet(T),'independent six-vertex packet')
@@ -133,6 +160,15 @@ def main():
     require(len(seen)==7 and len(good)==5,'exact carry graph')
     slim={(s[0:2] if s!=start else(0,0),c,t[:2],wt) for s,ee in edges.items() if s in good for t,c,wt in ee if t in good}
     require(slim=={((0,0),9,(0,0),0),((0,0),3,(-1,1),-52),((-1,1),18,(-1,1),-16),((-1,1),24,(0,0),54)},'trim transitions')
+    baseline_results={}
+    exceptions={9:(3,18,24,-1,1,-52,-16,54),13:(7,22,28,-1,1,-52,16,86),18:(24,9,3,1,-1,78,16,-44),22:(28,13,7,1,-1,78,-16,-76)}
+    for ai in range(32):
+        reachable,trimmed,trans=baseline_graph(ai,Ps)
+        if ai in exceptions:
+            bi,ei,ci,x,y,wb,we,wc=exceptions[ai]
+            require(trans=={((0,0),ai,(0,0),0),((0,0),bi,(x,y),wb),((x,y),ei,(x,y),we),((x,y),ci,(0,0),wc)},'exceptional baseline exact grammar')
+        else:require(trans=={((0,0),ai,(0,0),0)},'rigid baseline')
+        baseline_results[str(ai)]=dict(reachable=reachable,trimmed=trimmed,transitions=sorted(trans))
     word_controls=0
     for k in (1,2,3):
         base=word_packet((9,)*k,Ps)
@@ -171,6 +207,19 @@ def main():
                 require(len(w)==k and accepted(w),'inverse physical word')
                 # Compute the action directly from excursions, not large matrix products.
                 require(sum(c==3 for c in w)-8*sum(c==18 for c in w)==j,'inverse action');inverse_controls+=1
+    flow_controls=0
+    for k in range(1,13):
+        flow_values=set()
+        for aa in range(k+1):
+            for bb in range(k+1-aa):
+                for cc in range(k+1-aa-bb):
+                    ee=k-aa-bb-cc
+                    # Four edge types00,01,10,11, pinned start/end0.
+                    if bb!=cc:continue
+                    if bb==0 and ee>0:continue  # disconnected1-loop
+                    flow_values.add(bb-8*ee);flow_controls+=1
+        require(flow_values==spectrum(k),'connected integer flow iff')
+    require(-8 not in spectrum(1),'disconnected circulation hostile')
     literal=[]
     for w in ((9,9),(3,24),(3,18,24),(9,9,9)):
         T=literal_word(w);H=hp(T)[0][-1];P=word_packet(w,Ps)
@@ -182,8 +231,12 @@ def main():
         elif j<0:k=2*j+17*((1-j+7)//8)
         else:k=1
         require(j in spectrum(k) and (k==1 or j not in spectrum(k-1)),'minimum length')
+    for k in range(2,101):
+        pos={0}|{17*m+8*r for m in range(1,k//2+1) for r in range(k-2*m+1)}
+        require(pos=={0}|{17+t for t in range(17*(k//2)+8*(k%2)-16) if semigroup(t)},'positive sector semigroup')
+    (BASE/'baseline_graphs.json').write_text(json.dumps(baseline_results,sort_keys=True,indent=2)+'\n')
     table={str(i):P for i,P in enumerate(Ps)}
     (BASE/'attachment_table.json').write_text(json.dumps(table,sort_keys=True,indent=2)+'\n')
-    result=dict(status='PASS',scope='Complete fixed-core central fiber; no absolute odd target coverage',core=list(D),reachable_states=len(seen),trimmed_states=len(good),all32_word_controls=word_controls,spin_word_controls=spin_controls,semigroup_max_k=150,inverse_controls=inverse_controls,Apery_gaps=gaps,literal_counts=literal,normalized_support_at_k17=sorted(spectrum(17)),gf='(1-z*t^-8)/((1-z)*(1-z*t^-8)-z^2*t)')
+    result=dict(status='PASS',scope='Complete fixed-core central fiber; no absolute odd target coverage',core=list(D),reachable_states=len(seen),trimmed_states=len(good),all_baseline_classification={'rigid':28,'two_state':[9,13,18,22]},all32_word_controls=word_controls,spin_word_controls=spin_controls,integer_flow_controls=flow_controls,semigroup_max_k=150,inverse_controls=inverse_controls,Apery_gaps=gaps,literal_counts=literal,normalized_support_at_k17=sorted(spectrum(17)),gf='(1-z*t^-8)/((1-z)*(1-z*t^-8)-z^2*t)')
     print(json.dumps(result,sort_keys=True,indent=2))
 if __name__=='__main__':main()

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "minimum_k": 3,
+  "maximum_k": 100,
+  "exact_inverse_controls": 3102,
+  "offset_controls": 3102,
+  "scope": "finite controls of separately proved all-order valuation argument"
+}

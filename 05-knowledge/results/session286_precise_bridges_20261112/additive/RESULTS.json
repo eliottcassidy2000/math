@@ -1,0 +1,22 @@
+{
+  "arithmetic_cases": 258,
+  "illustrative_holes": [
+    1,
+    2,
+    4,
+    7,
+    57,
+    60,
+    62,
+    63
+  ],
+  "physical_support": [
+    474053,
+    474083,
+    474391,
+    474421
+  ],
+  "scope": "Exact arithmetic and inherited physical support; no new physical complete-residue banks or Chan-Pak proof",
+  "status": "PASS",
+  "target_checks": 10359
+}

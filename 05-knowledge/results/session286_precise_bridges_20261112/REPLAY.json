@@ -1,0 +1,61 @@
+{
+  "scope": "Exact finite controls of stated proofs; not a Chan\u2013Pak completeness certificate",
+  "status": "PASS",
+  "tasks": [
+    {
+      "normal_optimized_and_saved_agree": true,
+      "script": "automata/verify.py",
+      "source_sha256": "704059c63db381a208aa6869101274d4fda65b5edd82edd58eeac5f7ee06ebb2"
+    },
+    {
+      "normal_optimized_and_saved_agree": true,
+      "script": "additive/verify.py",
+      "source_sha256": "71a0ec7d9f7de85df16a0da925b461674a1e0180a8e815f1668b5373c063cd17"
+    },
+    {
+      "normal_optimized_and_saved_agree": true,
+      "script": "additive/mixed.py",
+      "source_sha256": "a509ac9988dc8c4aee5ca05d99c029010e3b8caaf0387279030f8136482b0d79"
+    },
+    {
+      "normal_optimized_and_saved_agree": true,
+      "script": "additive/padded_bank.py",
+      "source_sha256": "eeb9eaf05753114d49134aa23f0163fe2f239a0799562c693d256bf40016c509"
+    },
+    {
+      "normal_optimized_and_saved_agree": true,
+      "script": "reset/verify.py",
+      "source_sha256": "3a7932fe008e269f71b511c50da946a68d6506fa43eb1e0da4c97b52ab132f30"
+    },
+    {
+      "normal_optimized_and_saved_agree": true,
+      "script": "wildcard/verify.py",
+      "source_sha256": "5d4678ef54f10dab2d9394cd6c8f50e0ca607c20d79dff00b02c7e38d83d4a71"
+    },
+    {
+      "normal_optimized_and_saved_agree": true,
+      "script": "audit/independent.py",
+      "source_sha256": "7ed28d0ffcb09cb1493fea541337eca7e74b00e8d0e1687f5968bebc7b77ad38"
+    },
+    {
+      "normal_optimized_and_saved_agree": true,
+      "script": "audit/reset_independent.py",
+      "source_sha256": "fb971d1474aa084b4f24789bff76de1797b6b8eac2d132a8904d1deaa52c8c83"
+    },
+    {
+      "normal_optimized_and_saved_agree": true,
+      "script": "audit/homometry_independent.py",
+      "source_sha256": "6ca6403121fdf9d510b20be56b7f6e0526380a81ef1be2200e58ec93f5e14019"
+    },
+    {
+      "normal_optimized_and_saved_agree": true,
+      "script": "audit/decoder_independent.py",
+      "source_sha256": "4ecc354975f60fabad09e61b254ebf0875c5da459439363f1b84cf00db906842"
+    },
+    {
+      "normal_optimized_and_saved_agree": true,
+      "script": "audit/padded_independent.py",
+      "source_sha256": "cd6ffebfe35b21acacfbb4379d2d832ddb0919f58aefb0c64ddc9b5da125f05d"
+    }
+  ]
+}

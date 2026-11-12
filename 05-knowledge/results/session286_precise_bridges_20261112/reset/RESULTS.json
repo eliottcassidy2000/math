@@ -1,0 +1,158 @@
+{
+  "all_spin_checks": 510,
+  "decoder_residues": {
+    "later_coefficients": [
+      [
+        3,
+        2
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        10,
+        9
+      ]
+    ],
+    "outer": [
+      0,
+      3,
+      2,
+      12
+    ],
+    "single": [
+      5,
+      12,
+      6
+    ]
+  },
+  "extrema": [
+    {
+      "k": 12,
+      "max_word": "AAAAAABEEECA",
+      "maximum": 18320575778665385198423793651571,
+      "min_word": "BEEEEECAAAAA",
+      "minimum": 18017210932107834046093854228563
+    },
+    {
+      "k": 20,
+      "max_word": "AAAAAAAAAABEEEEEEECA",
+      "maximum": 44371982180024739634294161671432443658787603568835555,
+      "min_word": "BEEEEEEEEECAAAAAAAAA",
+      "minimum": 43636733034540174832405533918903783302205201280469187
+    },
+    {
+      "k": 50,
+      "max_word": "AAAAAAAAAAAAAAAAAAAAAAAAABEEEEEEEEEEEEEEEEEEEEEECA",
+      "maximum": 6882338827633815093252109906064741471181496705703266291541050616677723614742524872870118072642593800773721835262382667426886347969543,
+      "min_word": "BEEEEEEEEEEEEEEEEEEEEEEEECAAAAAAAAAAAAAAAAAAAAAAAA",
+      "minimum": 6768297448128846639659441670340220272378510944607436437371595632176337830119729095660968298778040994697803189651498229997438507009511
+    },
+    {
+      "k": 100,
+      "max_word": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEECA",
+      "maximum": 308163647727178693005228400205495789241019510310710384598009689195501633311337528098381261024383961888305087343944126641305883307057403881635804471809197303822965464452503863262981367182487650480409923734749838054665450006013602957332875483004837788729914816336304195,
+      "min_word": "BEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEECAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "minimum": 303057330183063665115666897039185018082487096699920649513228980542574592420792118167472157431981367388527714456019295487558437830193798589277254541280622988910858293491039348984204014089505099518010725230552465382484385458100567317455658405924771496693635108359208227
+    }
+  ],
+  "literal_controls": [
+    {
+      "H": 131,
+      "order": 8,
+      "word": "A"
+    },
+    {
+      "H": 40453,
+      "order": 13,
+      "word": "AA"
+    },
+    {
+      "H": 16801195,
+      "order": 18,
+      "word": "AAA"
+    },
+    {
+      "H": 16636101,
+      "order": 18,
+      "word": "BCA"
+    }
+  ],
+  "matrix_annihilator_roots": [
+    0,
+    13,
+    13,
+    104,
+    104,
+    471
+  ],
+  "response_rectangle": [
+    6,
+    6
+  ],
+  "scope": "Exact reset Ising/extrema/injective inverse family; no universal prescribed target coverage",
+  "small": [
+    {
+      "coefficient_gcd": 165094,
+      "distinct": 2,
+      "k": 3,
+      "maximum": 16801195,
+      "minimum": 16636101
+    },
+    {
+      "coefficient_gcd": 2,
+      "distinct": 4,
+      "k": 4,
+      "maximum": 7643438625,
+      "minimum": 7547113699
+    },
+    {
+      "coefficient_gcd": 2,
+      "distinct": 8,
+      "k": 5,
+      "maximum": 3570321521105,
+      "minimum": 3518331733633
+    },
+    {
+      "coefficient_gcd": 2,
+      "distinct": 16,
+      "k": 6,
+      "maximum": 1678510856828575,
+      "minimum": 1652405082881663
+    },
+    {
+      "coefficient_gcd": 2,
+      "distinct": 32,
+      "k": 7,
+      "maximum": 790338987513822093,
+      "minimum": 777617985089682365
+    },
+    {
+      "coefficient_gcd": 2,
+      "distinct": 64,
+      "k": 8,
+      "maximum": 372242605778657767739,
+      "minimum": 366161167940591453211
+    },
+    {
+      "coefficient_gcd": 2,
+      "distinct": 128,
+      "k": 9,
+      "maximum": 175331593364187586800841,
+      "minimum": 172444933834121451158649
+    },
+    {
+      "coefficient_gcd": 2,
+      "distinct": 256,
+      "k": 10,
+      "maximum": 82582773356676536342395863,
+      "minimum": 81218641497049058880111031
+    }
+  ],
+  "status": "PASS"
+}
