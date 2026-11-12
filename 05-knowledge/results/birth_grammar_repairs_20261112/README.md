@@ -1,6 +1,6 @@
 # Infinite birth grammar and finite endpoint repairs
 
-**Research results, 12 November 2026; final replay in progress. Chan–Pak OPEN.**
+**PROVED scoped / FINITE-EXACT, 12 November 2026. Chan–Pak OPEN.**
 This packet continues the complete 1,150-birth bank and its 478 even
 higher-mode axes. It distinguishes mathematical obstructions to a specified
 construction language from finite searches that merely found no witness.
@@ -27,7 +27,8 @@ construction language from finite searches that merely found no witness.
   synchronized grammar itself generates unbounded lower-head depth.
 - **PROVED:** three precise barriers explain why familiar repairs stall:
   126 families violate the odd-coefficient invariant of finite affine TT
-  template banks;470 violate periodic65-seam rank/determinant constraints;
+  template banks, even generalized to ordered repetitions of fixed cyclic
+  atoms;470 violate periodic65-seam rank/determinant constraints;
   **all478 have a head branch excluded by fixed periodic O/Z/J words**.
   The last theorem uses a complete25-state matrix automaton modulo2.
   These restrict construction languages, not attainable individual integers.
@@ -36,10 +37,13 @@ construction language from finite searches that merely found no witness.
   two missing head families repaired. **473 of478 remain unclosed here.**
 
 [Proofs and exact scope](PROOFS.md) · [methods and obstruction atlas](METHODS-ATLAS.md) ·
+[audit and reproduction](AUDIT.md) · [next proof obligations](HANDOFF.md) ·
 [research plan](PLAN.md) ·
 [inherited complete bank and corrections](../joint_stability_forbidden_20261112/README.md).
 
-The atlas classifies24 inherited methods plus the new mechanisms by their
+![The declared birth grammar and its infinite branches](birth-grammar.png)
+
+The atlas classifies inherited methods and the new mechanisms by their
 actual tournament structure, preserved observer, failed implication and
 required sidecar. It distinguishes stable-clone births, substitution primes,
 first count creators and restricted word births. The universal source-selector
@@ -54,5 +58,6 @@ python3 -X utf8 05-knowledge/results/birth_grammar_repairs_20261112/repaired_ray
 The Python producers and deterministic compressed receipts live here. Run
 from the repository root with `python3 -X utf8` and a producer path. Each
 producer's `-O` run uses explicit validity gates and writes a separate optimized
-receipt. A final audit records hashes, reproduction commands, universe
-boundaries, positive/hostile controls and replay results.
+receipt. All33 computation pairs match byte for byte. The final audit records
+hashes, reproduction commands, universe boundaries, positive/hostile controls
+and the limits of same-agent proof review with independent computational paths.

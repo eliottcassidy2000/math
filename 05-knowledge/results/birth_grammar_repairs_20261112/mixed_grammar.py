@@ -19,7 +19,7 @@ def run():
         signs=[]
         for f in r['frozen_tests']:
             E=dict(f['increment_defect_minus_one']);R=max(E);u=[sum(comb(b,j)*c for b,c in E.items() if b>=j) for j in range(1,R+1)]
-            sign=1 if u[0]>0 else -1;need(all(sign*c>=0 for c in u) and sign*u[0]>0,'all-length positive Stirling nonvanishing certificate');signs.append({'block':f['block'],'sign':sign,'Stirling_coefficients':u})
+            sign=1 if u[0]>0 else -1;need(sign==1 and all(c>=0 for c in u) and u[0]>0,'all-length positive Stirling nonvanishing certificate');signs.append({'block':f['block'],'sign':sign,'Stirling_coefficients':u})
         p=r['free_ports'][0]['port'];P=r['coupled_ports']+[p];D,U=covers(r['rows'],P,[v for v in range(len(r['rows'])) if r['selected']>>v&1])
         need([[*b,c] for b,c in sorted(expo(D).items())]==r['free_ports'][0]['triple_exponential'],'independent entire mixed-family free-port kernel')
         found[k]={**r,'quotient':list(canon),'weights':weights,'frozen_nonvanishing':signs}
@@ -33,7 +33,7 @@ def run():
         bad=any(x==0 and y!=0 or x and y%x for x,y in eq);roots={y//x for x,y in eq if x and y%x==0}
         bad|=len(roots)>1
         root=None if bad else next(iter(roots))
-        need(root is None or root<=1,'all new positive-length overlaps confined to the original base')
+        need(root is None or root<=0,'no positive-length overlap between distinct mixed charts')
         intersections.append({'first':i,'second':j,'equations':eq,'intersection_m':root})
     counts={};literal=[]
     for m in [1,2,3]:
@@ -43,7 +43,7 @@ def run():
             if m==2:
                 h,u,w,_=tables(np.array(rr,dtype=np.int64));need(defect(h,w,[v for v in range(len(rr)) if O>>v&1])==1,'literal mixed birth unit count');literal.append({'family':i,'m':m,'H':int(h),'order':len(rr)})
         counts[11+2*m]=len(keys)
-        if m>=2:need(len(keys)==len(bank),'all-length chart count literal check')
+        need(len(keys)==len(bank),'all-length chart count literal check including the first positive length')
     out={'scope':'All-length strong stable-clone birth proof from complete signed free-port kernels, positive Stirling certificates for every old frozen block, and rigid weighted-quotient intersections. This is a finite family grammar, not all births.','families':len(bank),'base_order13_births':counts[13],'counts':counts,'new_GF':f'{len(bank)}*z^15/(1-z^2)','whole_GF':f'{counts[13]}*z^13+{len(bank)}*z^15/(1-z^2)','same_quotient_pair_tests':len(intersections),'intersections':intersections,'literal_controls':literal,'records':bank}
     save('mixed_grammar.json.gz',out);print(json.dumps({k:v for k,v in out.items() if k not in ['intersections','literal_controls','records']}),flush=True)
 if __name__=='__main__':run()

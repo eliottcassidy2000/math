@@ -263,6 +263,63 @@ obstruction is to this precise representation class, not to Chan–Pak and
 not to finite-rule grammars in general. The other 352 families are outside
 this eventual obstruction; that is not a proof they admit such repairs.
 
+### V2a. Ordered repetitions of fixed nontransitive atoms do not evade V2
+
+The same obstruction holds for a wider class. At each growing port of a fixed
+quotient, substitute an ordered join of atoms from a fixed finite list of
+nonempty tournaments. Each atom's multiplicity is an integer affine function
+of m, nonnegative eventually. The order of the atoms may even vary with m.
+Call this an **ordered-atom chart**. TT charts are the singleton-atom case.
+
+Let C_r(A) count ordered r-nonempty-path covers, and let Q_r(A) allow empty
+slots among r ordered paths. For nonempty A,
+
+    Q_r(A)=sum_(s=1..r) binom(r,s)*C_s(A),
+    C_r(A)=sum_(j=1..r) (-1)^(r-j)*binom(r,j)*Q_j(A).
+
+In an ordered join A->B, each path consists of its A segment followed by its
+B segment. Cutting every slot at this boundary is a bijection, so
+`Q_r(A->B)=Q_r(A)*Q_r(B)`. Consequently, for a word having multiplicities
+ell_i(m)=alpha_i*m+beta_i,
+
+    Q_r(word_m)=product_i Q_r(A_i)^ell_i(m).
+
+This is the inherited ordinal slot-product law, now used as a repair-language
+invariant. Binomial inversion gives finite exponential expressions with
+integer bases. At an odd base every factor with positive alpha_i has odd
+Q_r(A_i), so its negative offsets introduce only odd denominators. Zero-slope
+multiplicities are nonnegative constants and contribute integers. A finite skeleton over
+an acyclic set of growing ports preserves this 2-integrality exactly as in
+V2. If the growing ports contain a directed triangle, each module contains
+a transitive subtournament of length proportional to m, obtained by choosing
+one vertex from each atom. The same factorial-cube argument gives
+superexponential H and rules out equality with the head target.
+
+Thus **no finite bank of ordered-atom charts repairs the126 V2 families**,
+even with arbitrary parameter-wise chart choice and arbitrary orderings of
+the prescribed atom multisets. It also cannot realize the whole stress
+family `(9^m+1)/2` from V4a. The fixed-atom and affine-multiplicity hypotheses
+are essential to this statement; nonlinear multiplicities, genuinely new
+atoms and general recursive module constructions remain outside it.
+
+The order-loss boundary is physical: `C3->point` and `point->C3` have the
+same entire ordered-cover sequence by this product law, but their outdegree
+multisets are `{0,2,2,2}` and `{1,1,1,3}`. They are not isomorphic. Uniform
+module substitution cannot distinguish them by H, while operations using a
+named endpoint can. Commutativity of the cover observer is not commutativity
+of the tournament construction.
+
+Independent subset convolution checks all39 words of lengths1..3 in the
+atoms point,TT2,C3 and their first four Q/C channels. A separate full tensor
+and nine literal substituted tournaments agree. For example, the diagonal
+`C3[(C3->...->C3)_m,TT_m,point]` has exactly
+
+    H_m=3*3^m-6^m-12^m+24^m, m>=1.
+
+The complete profile and the order-reversal hostile are retained in
+`ordinal_chart_audit.json.gz`. The all-length theorem follows from the
+bijection and inversion, not extrapolation from these finite controls.
+
 ## V3. A different obstruction to periodically repeating old seam words
 
 The inherited 65-letter seam grammar acts on a three-coordinate state by
@@ -373,6 +430,41 @@ matrix `[[1,4],[0,9]]` with initial vector(1,1) gives `(9^m+1)/2` in its
 first coordinate, escaping V2's odd-coefficient restriction. No physical
 tournament realization of that matrix is asserted here. It is a concrete
 test interface for a richer repair language, not a proof by formal recurrence.
+
+### V4a. A concrete test family outside three familiar periodic architectures
+
+Let `N_m=(9^m+1)/2`, m>=0. The positive integer matrix just displayed
+generates it from(1,1), since its upper-right entry after m steps is
+`4*(9^m-1)/8`. This is an integer recurrence despite its two rational
+exponential coefficients. For m>=1, LTE gives
+
+    v2(N_m-1)=2+v2(m).
+
+Every fixed finite bank of affine TT charts is excluded by V2, also after
+any arithmetic-progression restriction: the coefficients at the two odd
+bases1 and9^L have denominator2. Every fixed periodic O/Z/J word is excluded
+by V4, again on every progression: mixed words have only one odd eigenvalue
+slot, pure O/Z words only powers of2 besides1, and pure J words lack1.
+
+For the inherited65-seam language, take its formal root and any fixed
+prefix, repeated period of length ell, and fixed suffix. Its nonnegative
+row state v has `N(v)=v*(6,9,5)^t`. The inherited physical cone gives
+`N(v)<=230h`, and every letter P satisfies `5Pu>=9u` entrywise. Therefore
+an output asymptotic to9^m requires `(9/5)^ell<=9`, forcing ell<=3.
+The exact integer screen of all65+4225+274625=278915 such periods finds60
+with eigenvalue1 and none with both1 and9. Cayley-Hamilton then excludes
+every fixed prefix/period/suffix realization of N_m in this language.
+The empty period is constant. This argument uses the inherited reachable
+physical cone, not arbitrary formal source vectors. Its finite matrix
+certificate is `periodic_nine.json.gz`. Unlike V2/V4, this particular
+65-bank screen is not asserted for every arithmetic subsequence of m.
+
+Actual tournaments with these counts are supplied for m=0,...,6:
+`1,5,41,365,3281,29525,265721`, all of order at most14. The rows are
+recounted literally. Neither infinite physical realization nor a global
+forbidden-value claim follows. The family is a concrete diagnostic for a
+new operation: an integer transfer by itself does not establish that any
+tournament interface implements it. An all-m physical lift remains OPEN.
 
 ## G1. Exponential growth rank detects active strong components
 

@@ -39,11 +39,15 @@ quotient preserves marked isomorphism only when all block lengths survive.
 | Stable ports in distinct contractible blocks | Each individual contraction is legal. | The order-eleven crossing has two different terminal births; ordinary confluence fails. | Frozen lengths and the whole set of terminal ancestors. [J2/J3](../joint_stability_forbidden_20261112/CROSSINGS.md). |
 | Stable faces and fixed length cylinders | Exact support ideal and weighted-quotient intersection tests. | Faces describe independent directions, not resonant diagonals. | Keep coefficient values as well as supports; the present synchronization locus a=b is invisible to the face list. [Tensor proof](../session288_twin_lengths_20261112/stable/PROOF.md). |
 | Coupled growth in two unstable blocks | The present gate `1+/- (2^a-2^b)` yields infinitely many births. | A finite number of growth rules can create unbounded unpaid head depth. | U as well as delta; example j=2m+2. [B1](PROOFS.md). |
+| Core-changing extension followed by coupled growth | Forty-six further infinite birth families at odd orders, in addition to24 even-order families. | Preserving the diagonal does not make the free port disappear off the diagonal. | Whole three-variable defect; frozen-block nonvanishing; rigid weighted quotient. [B2](PROOFS.md). |
+| Arbitrary-module Farey gate | `g(h+c)-hd=1`, with physical module profiles, gives a locally finite directed partner graph. | Coprime numerical profiles need not exist; any nontrivial independent ordinal TT padding destroys a nontransitive unit pair. | Full C2/C3 profiles and an actual renewing module change, rather than merely padding both sides. [Inherited renewal boundary](../session288_twin_lengths_20261112/wildcard/PROOF.md). |
+| Sign-flip and anti-seed towers | A transitive selected pair at distance1 or2 universally flips the offset. | Flipping delta does not preserve U or pay the lower heads; the universal equation `2^d-3^(d-1)=1` fails from d=3. | Retain all four coordinates `(delta,U,H,E)` and the full parameter domain. [THM-5130 source dictionary](../kps_s22_sign_flip_towers_20261110/SOURCES_AND_DOMINATION.md). |
 | One-new-vertex induced extension | Quadratic orientation response for H and delta. | Complete local orientation search is not a complete size census if the parent bank is restricted. | Parent provenance, both new markings, full axis certificates and strongness filter. [Current producer](birth_extensions.py). |
 | Same-source one-apex head repair | `H(T+x)=delta+U-E(O)` for the selected cut. | The ending-path term E(O) is missing from the desired `delta+U`. All tested one-apex orientations on the478 sources fail the full head-profile test. | Entire endpoint vector, or an actual core change; never infer a new graph from a scalar adjustment. [Search](extension_heads.py). |
 | Odd slope from another stable core | Entire normalized coefficient family becomes a physical seed slope. | Equality at one parameter is insufficient; selected ports and all-length kernels must match. | Full profile identity and finite-prefix invoices. This closes three old families. [Constructors](repaired_rays.py). |
 | Direct Hamilton-profile repair | A separate pointed tournament realizes the missing head itself. | Requiring that head graph to have a unit selection can discard a valid repair. | H-kernel and actual rows; only the original tail needs the unit interface. This closes two more old families. [Constructors](repaired_rays.py). |
 | Affine TT-inflation repair charts | Odd-base exponential coefficients are 2-integral. | 126 families have heads violating this invariant on an infinite valuation branch. | Change the representation class: recursive core changes or non-affine state, not more fixed TT templates. [V2](PROOFS.md). |
+| Ordered repetitions of a finite atom alphabet | Empty-slot cover counts multiply; binomial inversion gives the whole nonempty-cover profile. | Fixed nontransitive atoms with affine multiplicities retain the same odd-coefficient obstruction; varying their order cannot help H. | New atoms or nonlinear multiplicities, and actual endpoint data. `C3->point` and `point->C3` have equal cover profiles but are nonisomorphic. [V2a](PROOFS.md). |
 | Repeated fixed words in the65-seam bank | Three-dimensional recurrence and multiplicative determinant. | 378 head profiles violate its determinant cone on every arithmetic progression;92 exceed its recurrence rank. | Aperiodic word choices, a larger observer or different graph operations. This is a470-family periodic-language barrier, not a scalar nonexistence theorem. [V3](PROOFS.md). |
 | Same-end append-only digit induction | Exact inverse on the physical three-coordinate cone. | Below5H only a or aa can follow one source, insufficient for all three ternary successors. | Source reset and legal reentry, not merely another spelling of the same H. [Inverse65 I3](../inverse65_zeckendorf_20261103/INVERSE.md). |
 | Induced continuation of H55 | Every orientation through three added vertices was tested. | All six bank presentations fail H111 although an external H55 source succeeds. | Actual isomorphism type, not scalar H or an observer-state representative. [Return-channel census](../return_channels_20261103/BIRTHS.md). |
@@ -51,7 +55,7 @@ quotient preserves marked isomorphism only when all block lengths survive.
 | Balanced oldest-leaf resets | C3/C5 maps genuinely repeat with an eight-state projective guard. | Even all permitted lengths supply only O(X^(2/3)) declared outputs. | An output-supply argument separate from recurrence closure; leave this architecture when necessary. [Balanced boundary](../source_selection_closure_20261103/BALANCED_BOUNDARY.md). |
 | Four-coordinate cone /28 maps | Full-rank suffixes peel uniquely; singular fibres admit finite inverse tests. | A fixed number of singular choices is too sparse. | Unbounded singular choices with a finite program, and actual witnesses. [Grammar](../source_selection_closure_20261103/GRAMMAR.md). |
 | Both birth polarities | Eighteen graded endpoint-cover polynomials update exactly. | No universal bounded-dimensional linear observer suffices even on strong sources. | Unbounded polynomial degree; finite instructions are not finite state dimension. [Graded observer](../source_selection_closure_20261103/GRADED_OBSERVER.md). |
-| O/Z/J root-change words | A known reusable rooted grammar and exact transfer matrices. | A finite missing list observed to a cutoff is not a proof of its infinite complement. Repackaging one-apex block joins is not a new grammar. | Root and endpoint guards, actual word, independent novelty audit. [Block-form reconciliation](../kps_s25_euler_field_bridge_law_20261111/README.md). |
+| O/Z/J root-change words | A known reusable rooted grammar and exact transfer matrices. | The new25-state parity closure proves every mixed period has only one odd eigenvalue slot; all478 head branches require two. | Adaptive words or a different operation; retain root and endpoint guards. [V4](PROOFS.md), with [inherited block-form reconciliation](../kps_s25_euler_field_bridge_law_20261111/README.md). |
 | Additive / multiplicative value graphs | Exact seed-support closures in their own arithmetic universes. | Addition or multiplication of integers does not automatically lift to a seed-preserving tournament operation. Multiplicative finite-seed rank>=2 has persistent holes. | Specify an actual graph constructor and endpoint map for each arithmetic edge. [Arithmetic growth](../summand_multiplicand_growth_20261111/README.md). |
 
 The one-vertex quadratic compiler is a specialization of the inherited
@@ -81,6 +85,32 @@ prime-valuation cone for periodic seam matrices. Neither is a blanket
 impossibility statement. Their intersection tells us exactly which familiar
 construction languages should not be searched again for those heads.
 
+V4 adds a different prime filter: reduce the *whole transfer matrix* modulo2
+and count characteristic-root multiplicities. Two distinct odd exponential
+modes both reduce to1 and require two slots. Mixed O/Z/J words have just one.
+The source is a physical transfer word; the target is a finite matrix
+semigroup; reduction preserves composition and a necessary mode-capacity
+bound, while losing magnitudes, positivity and actual endpoints. The
+required sidecar is the integer lift and its source/readout. Complete closure
+of25 states is the cheapest decisive all-word test. Determinants alone
+discard exactly the information that makes this new obstruction visible.
+
+The stress family `(9^m+1)/2` isolates the distinction. A positive2x2 integer
+transfer generates it; V2, V4 and a complete bounded-period65-bank test
+exclude several familiar physical realizations. Finite tournaments are
+provided through m=6, but an all-m tournament lift is OPEN. This is a
+concrete target for richer endpoint rules, not an assertion that the formal
+matrix can simply be declared to be a graph operation.
+
+The ordered-product bridge makes the obstruction more robust. Passing from
+an SCC word to Q_r turns ordered join into multiplication and discards the
+word's order. Binomial inversion recovers C_r but cannot recover that order.
+The fixed quotient's Hamilton count needs only the cover profile, whereas
+named-port continuation may need more. Therefore rearranging repeated cyclic
+atoms can create different graphs without gaining any head-repair capacity
+in this representation class. The cheap hostile is the four-vertex pair
+`C3->point` and `point->C3`; their degree multisets already distinguish them.
+
 **The2-adic branches have nonperiodic clocks.** Of the66 unbounded families,
 65 have two odd modes. Their unique lifting roots in Z2 are all irrational;
 see [V1a](PROOFS.md) and `lifting_roots.json.gz`. Thus their binary root digits
@@ -103,6 +133,17 @@ The H55 source obstruction, the H31 neutral loop, and the new head graphs
 without a unit selection are three concrete instances of the same loss.
 The bridge preserves only the future operations it was proved to preserve.
 
+**The Farey and sign-flip comparisons locate two different renewal failures.**
+The Farey gate retains a determinant-one condition on actual cover profiles;
+ordinal padding changes C2 but leaves H fixed, destroying that condition
+unless both modules are transitive. Sign flips retain the offset predicate
+but change the slope and ending-path count. Both are exact constructions;
+neither supplies free renewal of the whole endpoint interface. The adjacent
+powers8 and9 occur in the latter's first failed distance d=3. This uses an
+elementary inequality, not Catalan's theorem and not a reduction of Chan–Pak
+to Catalan. These bridges have explicit maps and failure coordinates; shared
+small numbers alone would not establish the connection.
+
 **Finite rules, finite states, and finite target alphabets must not be merged.**
 A finite algorithm can carry unbounded integer valuations, polynomial degree,
 or core size. The new synchronized rule is finite but has unbounded head
@@ -122,7 +163,9 @@ Keep the following sequences separate:
    order-ten birth layer. E_10=850, E_11=464, E_12=834, E_13=1414.
    This definition is recursively exact but does not equal B_n by assumption.
 3. S_n: synchronized births outside the old base layer:24 at even n>=12,
-   zero otherwise. This entire infinite sequence is proved.
+   46 at odd n>=13, zero otherwise, using the extension-plus-synchronization
+   alphabet. This entire infinite sequence and its rational generating
+   function are proved. Keep its even and odd subgrammars separately.
 4. E_(n,r): the rank-refined version, recording number r of stable singleton
    ports; retain a separate joint-stable rank. In particular E_(13,5)=8,
    while the full five-port joint tensor is certified for an explicit example.

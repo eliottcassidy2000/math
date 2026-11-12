@@ -4,6 +4,33 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-12: Birth rank, zero clocks, and periodic-word eigenvalue overreach
+
+- **Status:** rejected discovery/proof shortcuts in the
+  [birth-grammar packet](../05-knowledge/results/birth_grammar_repairs_20261112/PROOFS.md),
+  repaired before close-out; not retractions of a previously promoted theorem.
+- **Strong versus weak birth:** source/sink padding of the eight retained
+  five-port order13 births gives16 weak six-port births. Counting these as
+  strong new cores loses the SCC filter. The complete declared strong
+  extension universe has44 order14 births, with stable-port ranks4 or5.
+  Keep strongness and the parent universe in every rank statement.
+- **Zero-clock trap:** the complete positive TT-inflation profile of a C3
+  port is `H(a)=1+2^a`. Its analytic value at a=0 is2, while actually deleting
+  the vertex leaves a transitive pair with H=1. Exponential continuation
+  through0 is not physical deletion. Use positive clocks or recount deletion.
+- **Periodic-word overreach:** the tempting claim that every O/Z/J word
+  containing J lacks eigenvalue1 is false. The shortest counterexamples
+  have length7; `OOZOZOJ` has characteristic polynomial
+  `x^2*(x-1)*(x-82)`. The repaired all-word statement is that a mixed word
+  has only one odd eigenvalue slot modulo2, proved by the complete25-state
+  flagged semigroup. It cannot supply both constant and3^L modes.
+- **Scope repair:** V2's finite-choice argument applies to finite sums of
+  positive real exponentials. It was not exported to arbitrary matrix-word
+  sequences with complex eigenvalues. Periodic65 and O/Z/J exclusions cover
+  fixed periods and finite AP branching, not arbitrary adaptive words.
+- **Remaining question:** which physical core-changing rule retains a legal
+  endpoint interface while escaping these precisely scoped barriers?
+
 ## 2026-11-12: Stable axes do not imply commuting stable contractions
 
 - **Status:** two formerly OPEN hypotheses are REFUTED, not retractions of

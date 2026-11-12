@@ -30,3 +30,35 @@ statement before the method”. Each bridge records its source, target, map,
 preserved predicate, lost information, required sidecar and cheapest test.
 All finite computations retain universe, controls, full certificates and
 normal/optimized receipts. No delegation or external messages are used.
+
+## Final board revision
+
+1. **Birth generation:** the one-vertex layers alone are incomplete; adding
+   resonant diagonals gives24 even and46 odd infinite families. Seventy fixed
+   quotients remain sparse. The next novelty test must examine quotient
+   changes, not count different parameter spellings as new families.
+2. **Mixed signatures:** the full tensor is essential in both directions:
+   J1 obstructs naive independent composition, whereas B2 permits mixed
+   off-diagonal free-port terms that disappear on the unit diagonal.
+3. **Valuation branches:** all478 old even axes are classified;65 root
+   clocks have irrational2-adic limits. A finite algorithm can carry these
+   clocks, but a periodic word is too restrictive for their required heads.
+4. **Physical repairs:** three odd-slope replacements and two direct
+   Hamilton-profile replacements close five families. Birth4 still lacks
+   its s=2 head family. Fixed parameter prefixes must stay explicit.
+5. **Lost structure:** coefficient denominators, determinant valuations,
+   modular eigenvalue slots, source isomorphism and endpoint guards give
+   different barriers. An allowed scalar invariant is never sufficient.
+   The late ordered-atom generalization shows that changing a repeated
+   transitive atom to a fixed cyclic atom still preserves the denominator
+   obstruction; the slot-product observer also explains the lost SCC order.
+6. **Recursive language:** finite instruction sets with unbounded state and
+   changing cores remain plausible. Neither finite-template banks nor
+   finite residue branching of periodic O/Z/J words can settle this task.
+
+The Anchor yielded five full repairs and complete obstruction classifications;
+the Niche yielded70 infinite birth families and a strong five-port birth;
+the Wildcard yielded the finite matrix-semigroup barrier and the explicit
+formal test sequence `(9^m+1)/2`. No lane established a universal selector,
+every odd coefficient, all478 repairs, or Chan–Pak. See [HANDOFF](HANDOFF.md)
+for sharply separated next obligations and [AUDIT](AUDIT.md) for evidence.
