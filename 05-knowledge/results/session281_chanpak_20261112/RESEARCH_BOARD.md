@@ -17,3 +17,15 @@ Closest inherited mechanism: physical root fusion and active-block transfer. Can
 Parallel lanes pursue receiver repair, scalar selection and unrelated constructive bridges. Every positive statement will retain its physical source, operation scope, boundary, and remaining target obligation. New claims require independent review; inherited results are dependencies, not repeatedly recertified in full.
 
 Random source sampler seed281: bounded chain exterior compression, golden seam recurrence, clock channels, odd transport valuation frames, and two-sheet boundary polarity. These are inspiration until an explicit mathematical map is provided.
+
+## Closing comparison
+
+The initial board above records the research plan, not the final status. The resulting packet changes the five live concepts as follows:
+
+1. Scalar ownership: the seven-letter compiler passes every fixed modulus while its exact support is power-sparse. Absolute height is an indispensable separate coordinate.
+2. Receiver repair: a different raw six-bank, sharing two rather than three receiver coordinates, becomes renewable under a common physical preparation. Paid doubling then gives twelve-wide outputs without renewing their union.
+3. Switching ancestry: coprime central +4 switches add another physical digit direction, but their bounded digit ranges demonstrably leave holes despite gcd2.
+4. Compression: seven experiments recover the full fusion carrier; four recover a left receiver, and three characterize common preparation. Rerooting still requires information outside that carrier.
+5. Wildcard bridge: recognizable-series observation and finite-monoid sandwiches become explicit tools. Their associated information-loss statements explain both their successes and why they do not supply an exact-target constructor.
+
+See SYNTHESIS.md and audit/REVIEW.md for final statement status. No global odd-tail result was obtained.

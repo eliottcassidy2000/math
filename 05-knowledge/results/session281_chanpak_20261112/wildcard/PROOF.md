@@ -285,7 +285,7 @@ The three counts r0=H(T), r1=H(C1*T), r2=H(C1*C1*T) therefore recover
 
     V=(r1-r0)/2, h=(5r1-4r0-r2)/2.
 
-For two inputs whose count difference is delta, all three experiment differences equal delta if and only if their h,V agree. In that case their C1-prepared receivers agree in h,V,e, and all subsequent common left fusion contexts preserve that offset. This is an exact iff for this preparation, not for arbitrary graph operations.
+For two inputs whose count difference is delta, all three experiment differences equal delta if and only if their h,V agree. In that case their C1-prepared receivers agree in h,V,e, and all subsequent common left fusion contexts of deletion count1 preserve that offset. An arbitrary common left context L scales the offset by h_L. This is an exact iff for this preparation, not for arbitrary graph operations.
 
 The raw row-mask pair(14,8,2,4,15) and(12,5,8,2) has(H,h,V,e)=(3,3,6,0) and(5,3,6,2). The two prepared objects have(15,3,21,3) and(17,3,21,3). The gap was not initially renewable under every left context, but becomes renewable after preparation.
 
@@ -299,6 +299,6 @@ All have the same carrier
 
     H=h=9^m, Q=84^m, U=d=9^m, V=84^m, e=0.
 
-Indeed path counts and two-cover counts multiply across ordered SCCs. At the sink, root-start paths have only the singleton root, while root-end cover sums range over every ordered two-cover of the deletion. Its alternating cover sum is zero for a nonempty deletion. These facts give the displayed coordinates directly.
+Indeed path counts and two-cover counts multiply across ordered SCCs. At the sink, root-start paths have only the singleton root, while root-end cover sums range over every ordered two-cover of the deletion. The alternating cover sum of each five-vertex core is zero by complement-pair cancellation in odd order, and these alternating cover sums multiply across ordinal factors, so the deletion also has alternating sum zero. These facts give the displayed coordinates directly.
 
 Deleting a vertex from one core multiplies that core's deletion count by9^(m-1); deleting the sink gives9^m. In A0 the deletion counts are1,3,3,5,5, while B0 gives1,1,5,5,5. Thus the number of occurrences of3*9^(m-1) distinguishes m+1 menus according to how many A0 factors occur. Equal fusion carriers can conceal unboundedly many different rerooting resources. This is an all-order construction, not an extrapolation of the six-vertex pair.

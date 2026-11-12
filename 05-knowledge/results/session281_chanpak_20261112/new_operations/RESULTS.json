@@ -1,0 +1,164 @@
+{
+  "coprime_presentations": 1728,
+  "deletion_isomorphism_classes": 56,
+  "distinct_coprime_signatures": 1672,
+  "labelled_deletion_universe": 32768,
+  "literal_context_controls": 64,
+  "nonconstant_fibers": [
+    {
+      "carrier_without_H": [
+        17,
+        224,
+        89,
+        152,
+        11,
+        6
+      ],
+      "witnesses": [
+        {
+          "H": 65,
+          "root": 6,
+          "rows": [
+            96,
+            65,
+            3,
+            7,
+            79,
+            94,
+            12
+          ]
+        },
+        {
+          "H": 69,
+          "root": 6,
+          "rows": [
+            102,
+            8,
+            66,
+            69,
+            79,
+            30,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "carrier_without_H": [
+        17,
+        224,
+        152,
+        89,
+        6,
+        11
+      ],
+      "witnesses": [
+        {
+          "H": 65,
+          "root": 6,
+          "rows": [
+            32,
+            1,
+            67,
+            71,
+            15,
+            30,
+            51
+          ]
+        },
+        {
+          "H": 69,
+          "root": 6,
+          "rows": [
+            38,
+            72,
+            2,
+            5,
+            15,
+            94,
+            29
+          ]
+        }
+      ]
+    },
+    {
+      "carrier_without_H": [
+        29,
+        320,
+        122,
+        227,
+        20,
+        9
+      ],
+      "witnesses": [
+        {
+          "H": 91,
+          "root": 6,
+          "rows": [
+            116,
+            81,
+            66,
+            7,
+            12,
+            94,
+            24
+          ]
+        },
+        {
+          "H": 95,
+          "root": 6,
+          "rows": [
+            114,
+            80,
+            3,
+            7,
+            76,
+            94,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "carrier_without_H": [
+        29,
+        320,
+        227,
+        122,
+        9,
+        20
+      ],
+      "witnesses": [
+        {
+          "H": 91,
+          "root": 6,
+          "rows": [
+            52,
+            17,
+            2,
+            71,
+            76,
+            30,
+            39
+          ]
+        },
+        {
+          "H": 95,
+          "root": 6,
+          "rows": [
+            50,
+            16,
+            67,
+            71,
+            12,
+            30,
+            51
+          ]
+        }
+      ]
+    }
+  ],
+  "pointed_presentations": 3584,
+  "scope": "Every seven-vertex pointed tournament with deletion count coprime to15; isomorphic deletion representatives and every cut, no global omission claim",
+  "status": "PASS"
+}

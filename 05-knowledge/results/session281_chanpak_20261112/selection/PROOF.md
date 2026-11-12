@@ -1,6 +1,6 @@
 # Seven physical letters: full congruence coverage and zero-density integer support
 
-**Session281. PROOF DRAFT under independent review. Chan–Pak remains OPEN.**
+**Session281. PROVED with final restored-source independent review; see ../audit/REVIEW.md. Chan–Pak remains OPEN.**
 
 ## 0. Scope and inheritance
 

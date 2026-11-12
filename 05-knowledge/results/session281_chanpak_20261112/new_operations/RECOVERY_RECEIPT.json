@@ -1,0 +1,17 @@
+{
+  "byte_identity_to_lost_workspace": "not claimed",
+  "mathematical_scope": "Same four full-carrier fibers and literal seeds; bounded n7 scope; independent receiver review",
+  "normal_optimized_checks": {
+    "central_search": true,
+    "receiver_review": true
+  },
+  "sha256": {
+    "PROOF.md": "62e2bb56143c6dd41f6e74fde402a744658fa82a8cbaef7c58cb4176474dd5e4",
+    "RECEIVER_REVIEW.md": "c5a93a08f94ac54f47bfd0f932842d52894faa297ffd64e85a2b3de6f15bf7ef",
+    "RECEIVER_REVIEW_RESULTS.json": "1f5c6399da3a6ef213f8ed99cdb466d65e90c826a433abb0b56ca24a0bdce947",
+    "RESULTS.json": "5531c78bd0d15683f246e8ede21609d123b8130c902fd4884caabb0bb6eff0db",
+    "review_receiver.py": "34813ac75d9c22b23efff501882e10cbf2855f738c9bf443bc0a7f5718201060",
+    "verify.py": "6cf090981d095d0911792d9782e51b550ced0f6a5c2907483636c6b1acc84a23"
+  },
+  "status": "RESTORED_AND_REPLAYED"
+}
