@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "method": "backward incoming-edge subset recurrence; no imports from candidate verifiers",
+  "base_profiles": [
+    {
+      "H": 269,
+      "h": 15,
+      "V": 441,
+      "e": 15
+    },
+    {
+      "H": 271,
+      "h": 15,
+      "V": 441,
+      "e": 15
+    },
+    {
+      "H": 273,
+      "h": 15,
+      "V": 441,
+      "e": 15
+    }
+  ],
+  "six_counts": [
+    24875,
+    24877,
+    24879,
+    24881,
+    24883,
+    24885
+  ],
+  "six_receivers": [
+    28119,
+    28119,
+    28119,
+    27639,
+    27639,
+    27639
+  ]
+}

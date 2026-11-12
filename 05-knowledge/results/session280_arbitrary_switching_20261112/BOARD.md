@@ -36,3 +36,13 @@ reproducible controls. Independent review is underway; this checkpoint is not
 the final audited synthesis. New branches: a hidden-itinerary dyadic decoder,
 a three-physical-observation chart, a common exterior carry lattice, and a
 capacity phase transition. Switching and core-repair lanes remain in progress.
+
+## Final outcome
+
+All five lanes completed and independently reviewed. The final synthesis
+supersedes the checkpoint status above. Retained results combine151-letter
+arbitrary switching and supercritical packet supply; exact hidden-itinerary
+ancestry; three-count observation and common carries; packet generating
+functions; and a repaired reusable triple yielding infinite six-count banks.
+The exact next repair bill and the still-open scalar-target obligation are
+recorded rather than replaced by finite evidence. See SYNTHESIS.md and RELEASE.json.

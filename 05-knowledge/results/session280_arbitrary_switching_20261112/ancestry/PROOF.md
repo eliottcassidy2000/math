@@ -110,6 +110,22 @@ This strengthens the known-schedule inverse: no word, length, depth or common
 Perron direction is supplied. It is unrelated to convergence of normalized
 ratios. Real expansion under a bad switched product does not affect it.
 
+### An elementary transferable principle
+
+More generally, let b>=2 be an integer radix, let A,W be positive integers,
+and suppose a family has `D'=A`, `V'=aA+tW`, `t=b^n` for integer n>=1,
+`gcd(A,b)=1`, and its letter is determined by `(t,a)` with `0<=a<t`.
+If input ratios satisfy `L<=W/A<U` and digit ratios satisfy `c<a/t<d`,
+then the output scale lies in `t(L+c,U+d)`. The scale intervals for adjacent
+powers of b are disjoint whenever `U+d<=b(L+c)`. The residue of `V'/D'`
+modulo t then recovers a. This is an **Archimedean–radix seam code**: scale
+separation locates the radix, and a modular unit locates the letter. This
+recovers `(t,a,A,W)`; any further state coordinates require their own exact
+inverse, such as(6). Its proof is the two preceding one-line arguments.
+Here `(b,L,U,c,d)=(2,1,2,1/2,1)`, at equality in the scale-separation bound.
+This elementary framework is not an assertion that every recursive system
+has such coordinates, a unit, or an invariant strip.
+
 ## 5. Full unknown-itinerary recovery and its physical gate
 
 Each active block satisfies h>=3,b>=3. On C,

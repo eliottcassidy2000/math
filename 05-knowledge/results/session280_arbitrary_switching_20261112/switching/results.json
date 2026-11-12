@@ -1,0 +1,43 @@
+{
+  "status": "PROVED rational certificate, not Chan-Pak coverage",
+  "alphabet_size": 56,
+  "metric_PSD_tests": 9408,
+  "tau": "249/250",
+  "ell": "1/2",
+  "initial_energy": "6112850971/845000000",
+  "B": 96,
+  "uniform_threshold": 3292,
+  "threshold_squared_width_bound_decimal_display": 0.9965573681539244,
+  "minimum_determinant": "24498391046322451576763/18073575031250000000000000",
+  "hostile_words": [
+    "10",
+    "101010",
+    "1000"
+  ],
+  "hostile_matrix": [
+    [
+      6801,
+      8157,
+      -923
+    ],
+    [
+      7125,
+      8545,
+      -967
+    ],
+    [
+      221,
+      265,
+      -31
+    ]
+  ],
+  "hostile_characteristic": [
+    1,
+    -15315,
+    -19568,
+    -4096
+  ],
+  "hostile_f_minus1": 156,
+  "shorter_total_triples_tested": 1023,
+  "certificate_sha256": "3f2a92dbeb645ccd5cefb74ea3e28a90d7fc543eb619489c089512e3b688627a"
+}

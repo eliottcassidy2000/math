@@ -251,6 +251,24 @@ perhaps by an allowed-transition automaton or a richer observable. A permitted
 transition graph simply zeros the corresponding entries of K or L, making
 this pressure test immediately reusable for such proposed repairs.
 
+### Packet distinctness supplied by the parallel ancestry theorem
+
+The sibling [thin-strip ancestry theorem](../ancestry/PROOF.md) strengthens
+the interpretation for a fixed physical seed with A<=W<2A. Every active
+itinerary has a unique complete output packet: the terminal ratio W/d
+identifies its block length, and a modular inverse identifies the block word.
+Consequently (12), for such a fixed seed, is also a divergent reciprocal sum
+over **distinct rooted packets**, not merely distinct word presentations.
+This upgrade depends on that theorem and does not follow from pressure alone.
+The scalar projection still collides: from the rooted singleton,
+
+    (10,1100) -> (A,W,d)=(145,177,5),
+    (100,100) -> (A,W,d)=(145,159,11).
+
+Thus exact ancestry removes the presentation-to-packet loss, but not the
+packet-to-count loss. This names the remaining multiplicity problem precisely.
+The pressure proofs above remain valid without using ancestry uniqueness.
+
 ### 5a. An alternative with a structural rather than lexicographic rule
 
 Let S98 consist of every active word of length at most8 with at most3 bit
@@ -266,6 +284,159 @@ than adding arbitrary lexicographic letters. **No contraction of S98 is
 asserted in this lane**; its status must come from the switching lane. Removing
 letters or transitions can lose the strict inequality, so the pressure
 certificate must be recomputed on the actual permitted language.
+
+### 5b. Capacity plus ancestry forces polynomial scalar ambiguity
+
+Fix the rooted singleton seed (A,W,d)=(1,1,1), which lies in the thin strip.
+For S83 let gamma=1003/1000 and delta=1/4096. For S98 use gamma=101/100 and
+delta=1/1024. The following exact integer tests, performed by the verifier,
+
+    512*1000^4096 <1003^4096,
+    512*100^1024  <101^1024,
+
+give512^delta<gamma. Every letter in these libraries has W'/W<=512. The
+ancestry theorem ensures all programs from this fixed seed give distinct
+root packets, including across different program lengths.
+
+**Corollary4 (forced multiplicity inside the explicit library).** Let m(N)
+count distinct rooted packets with A=N in this fixed-seed library. Then
+
+    sum_N m(N) N^(-1-delta) = infinity,                  (13)
+
+and m(N) is NOT O(N^epsilon) for ANY0<=epsilon<delta. Moreover
+
+    max_(N<=X) m(N) = Omega(X^delta / log X).             (14)
+
+These are large fibers along suitable targets, NOT a lower bound at every N.
+They do not assert that any particular missing target is realized.
+
+**Proof of(13).** Replace L by the inverse-growth matrix at exponent1+delta.
+Since beta_uv<=512, it is entrywise at least512^(-delta)L. Its witness vector
+therefore expands by gamma/512^delta>1. The weighted sum over all depths
+diverges. Packet injectivity makes it a sum over different packets; A<=W
+then implies(13). If m(N)<=C N^epsilon for epsilon<delta, comparison with
+sum_N N^(-1-(delta-epsilon)) would make(13) converge, a contradiction.
+
+**Explicit finite-depth version of(14).** The first-letter inverse W-growth
+is at least1/512. Normalize the positive witness vector to maximum1. The
+sum over its entries is at least1. Thus for every m>=1,
+
+    sum_(packets at depth m) 1/A >= gamma^(m-1)/512.
+
+All such A are at most X_m=512^m. Their sum is at most
+(max_(N<=X_m)m(N))(1+log X_m), giving
+
+    max_(N<=512^m)m(N) >= gamma^(m-1)/(512(1+m log512)).   (15)
+
+For arbitrary large X choose m=floor(log_512 X); use512^delta<gamma and
+monotonicity to obtain(14). No floating spectral approximation is used.
+
+At depth m every literal tournament has at most1+9m vertices. One unrooted
+isomorphism class can supply at most1+9m different root packets, one per root.
+Consequently the same argument supplies some count N<=X with
+Omega(X^delta/(log X)^2) different unrooted tournament classes from this
+explicit construction family. The statement is cumulative in size, not a
+fixed-order fiber theorem. No claim of priority for globally unbounded
+multiplicities is made; the contribution is this quantified collision tax
+inside the newly specified bounded-block languages.
+
+Thus supercritical packet supply is real, but it **necessarily** accumulates
+large scalar fibers. Increasing supply cannot be equated with filling holes:
+the scalar projection must be controlled as a separate part of a target proof.
+
+### 5c. Exact packet enumeration and the target-generating functional equation
+
+Ancestry injectivity also gives a positive enumeration theorem. Grade each
+root packet by the vertex count of its unique construction from the singleton.
+A block of word length n adds n+1 vertices. Hence the ordinary generating
+function for DISTINCT root packets in S83 is exactly
+
+    P83(u)=u/(1-u^3-2u^4-4u^5-8u^6-16u^7-32u^8-20u^9). (16)
+
+For S98 it is
+
+    P98(u)=u/(1-u^3-2u^4-4u^5-8u^6-15u^7-26u^8-42u^9). (17)
+
+The coefficient at each degree is a packet count, not A000568 and not the
+number of rooted or unrooted isomorphism classes. Two tournaments can share
+one packet; different rootings of one tournament can have different packets.
+The scalar multiplicities are not obtained from(16) alone.
+
+A multivariate form keeps exactly what the scalar projection loses. For either
+finite alphabet S define
+
+    G(u;x,y,z)=sum_(all programs) u^order x^A y^W z^d.
+
+It has the exact recursive equation
+
+    G = uxyz + sum_(w in S) u^(|w|+1)
+                  G(u; x^h y^(P+1) z, x^(Q+1)y^t, x^(-1)). (18)
+
+Despite x^(-1) in the notation, (18) is a well-defined positive formal series
+on the cone-supported completion: every monomial lies in0<=d<=A<=W<2A,
+and each substituted A-degree is hA+(Q+1)W-d>=5A. Each A-degree has only
+finitely many possible W,d. Substitution therefore preserves nonnegative
+exponents on this support and strictly increases positive A-degree, yielding
+a unique solution by iteration from zero. It must not be applied as an
+unrestricted substitution on arbitrary formal series.
+
+Packet uniqueness makes every (A,W,d) monomial appear once, with its unique
+construction order. Setting u=y=z=1 gives sum_N m(N)x^N; this specialization
+is coefficientwise finite. Setting x=y=z=1 while retaining u gives(16)/(17).
+Thus one exact object simultaneously records recursive order growth and
+scalar fiber multiplicity. Eliminating y,z from(18) would discard the very
+interface needed by its recursive substitution; no closed scalar recurrence
+or universal target positivity is claimed.
+
+### 5d. One library now satisfies BOTH switching stability and supercritical supply
+
+The final switching search supplies a151-letter library L151, with maximum
+block length9, explicitly listed in
+[`switching/metric151.json`](../switching/metric151.json). Its rational
+last-letter quadratic certificate proves arbitrary switching stability in the
+sibling [switching proof](../switching/PROOF.md). The literal word list, not a
+claim about all low-oscillation words, defines this library.
+
+The independent exact pressure witness in `synchronized_pressure151.json`
+uses **the identical alphabet**, checked by the main verifier and bound to the
+metric file's SHA256. It satisfies
+
+    L151 d > (1069/1000)d.                               (19)
+
+The smallest rational ratio has decimal display1.0699030054. Thus this is not
+merely a stable-but-sparse replacement: the same arbitrary-switching language
+has supercritical physical packet supply. Its stability does not depend on a
+particular switching schedule, while the scalar decoder still uses a supplied
+schedule and a bounded source scale, as stated by the switching lane.
+
+The pressure proofs above now apply with maximum W-growth1024 and
+
+    gamma=1069/1000, delta=1/128,
+    1024*1000^128 <1069^128.                             (20)
+
+For the singleton seed, ancestry again makes all programs distinct root packets.
+Consequently this very SAME stable language has
+
+    sum_N m151(N) N^(-129/128) = infinity,
+    max_(N<=X)m151(N) = Omega(X^(1/128)/log X),           (21)
+
+and m151(N) is not O(N^epsilon) for any0<=epsilon<1/128. At depth m, the
+explicit lower bound is gamma^(m-1)/(1024(1+m log1024)), with all outputs
+at most1024^m. Literal order is at most1+10m, so some target<=X supports
+Omega(X^(1/128)/(log X)^2) unrooted classes in this family. This is a large-fiber
+statement somewhere below X, not at every count or one fixed tournament order.
+
+The order generating function for its distinct packets is exactly
+
+    P151(u)=u/(1-u^3-2u^4-4u^5-8u^6-15u^7-26u^8-37u^9-58u^10). (22)
+
+Its multivariate target series satisfies(18) with S=L151. Thus we have one
+concrete physical language with (a) uniform switched observation, (b) exact
+unknown-itinerary ancestry from a full packet, (c) supercritical supply,
+(d) exact packet enumeration, and (e) provably growing scalar collisions.
+The missing Chan–Pak step is now not a failure to combine observation with
+capacity. It is selecting an initialized packet on EVERY prescribed scalar
+fiber. Neither stability, supercriticality nor(21) proves that nonemptiness.
 
 ## 6. What this supplies toward an actual proof
 

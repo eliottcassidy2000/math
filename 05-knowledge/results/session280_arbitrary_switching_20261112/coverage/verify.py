@@ -59,6 +59,21 @@ def main():
     require(all(pisot(m) for m in mslow),'low oscillation individual Pisot')
     lowratios=ratios(inverse_growth(mslow,False),low['vector'])
     require(all(r>F(101,100) for r in lowratios),'low oscillation pressure')
+    require(512*1000**4096<1003**4096,'S83 collision exponent')
+    require(512*100**1024<101**1024,'S98 collision exponent')
+    require([sum(len(w)==n for w in ws83) for n in range(2,9)]==[1,2,4,8,16,32,20],'S83 order polynomial')
+    require([sum(len(w)==n for w in wslow) for n in range(2,9)]==[1,2,4,8,15,26,42],'S98 order polynomial')
+    sync=json.loads(Path(__file__).with_name('synchronized_pressure151.json').read_text())
+    metricpath=Path(__file__).resolve().parents[1]/'switching/metric151.json'
+    metric=json.loads(metricpath.read_text())
+    require(sync['alphabet']==metric['words'] and len(sync['alphabet'])==151,'synchronized151 shared alphabet')
+    require(sync['metric_file_sha256']==hashlib.sha256(metricpath.read_bytes()).hexdigest(),'metric151 binding')
+    mssync=[block(w) for w in sync['alphabet']]
+    require(all(pisot(m) for m in mssync),'synchronized individual Pisot')
+    syncratios=ratios(inverse_growth(mssync,False),sync['vector'])
+    require(all(r>F(1069,1000) for r in syncratios),'synchronized151 pressure')
+    require(1024*1000**128<1069**128,'synchronized151 collision exponent')
+    require([sum(len(w)==n for w in sync['alphabet']) for n in range(2,10)]==[1,2,4,8,15,26,37,58],'synchronized151 order polynomial')
     # Literal graph controls use inherited DP independently of our bounds.
     import importlib.util
     old=Path(__file__).resolve().parents[2]/'session279_interval_tightening_20261112/physical/verify.py'
@@ -93,6 +108,7 @@ def main():
          'subcritical':{'alphabet':ws63,'vector':C63,'max_ratio_exact':str(max(rs)),'max_ratio_display':float(max(rs)),'certificate_upper':'973/1000','s':'399/400','rho':str(rho),'chunk_bound_exact':str(chunk),'usable_chunk_bound':164},
          'supercritical':{'alphabet':ws83,'vector':d,'min_ratio_exact':str(min(ls)),'min_ratio_display':float(min(ls)),'certificate_lower':'1003/1000','all_letters_Pisot':True},
          'low_oscillation':{'letters':98,'certificate_lower':'101/100','min_ratio_exact':str(min(lowratios))},
+         'synchronized151':{'letters':151,'certificate_lower':'1069/1000','min_ratio_exact':str(min(syncratios)),'collision_exponent':'1/128','metric_file_sha256':sync['metric_file_sha256']},
          'literal_controls':controls,'exact_transition_controls':checks,'scalar_collision':collision,
          'source_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
     print(json.dumps(out,indent=2))

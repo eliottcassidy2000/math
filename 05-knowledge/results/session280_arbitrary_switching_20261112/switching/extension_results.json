@@ -1,0 +1,13 @@
+{
+  "status": "PROVED rational switched metric; not scalar coverage",
+  "alphabet_size": 151,
+  "metric_PSD_tests": 68403,
+  "tau": "9991/10000",
+  "ell": "1/4",
+  "initial_energy": "12225700863/1690000000",
+  "B": 96,
+  "uniform_threshold": 15417,
+  "squared_width_bound_decimal_display": 0.9994498630272722,
+  "minimum_PSD_determinant": "11069560736050394668917674993/138603529000000000000000000000000",
+  "certificate_sha256": "e5db6e22d288aa6dd2e1f8809053c9772d03a588c38d4519f8733b52f9897021"
+}
