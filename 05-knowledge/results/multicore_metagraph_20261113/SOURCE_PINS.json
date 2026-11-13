@@ -38,6 +38,10 @@
       "sha256": "25a193fe1d66a6c6780451f5de6c393398c1b7788e743744317c258f41aa6a7a"
     },
     {
+      "path": "05-knowledge/results/mrb_seven_cutoffs_20261113/module/PROOF.md",
+      "sha256": "6eafe01ccabc747435b65e3397139e4b3cd25a5f4ef453183de6cd70eceaf2e3"
+    },
+    {
       "path": "05-knowledge/results/multicore_metagraph_20261113/blue_incidence.py",
       "sha256": "7d2c75fe7900abff2efaedbac9ce6e3b1c05a635b098e659ad93dab394f99e40"
     },
@@ -87,7 +91,7 @@
     },
     {
       "path": "05-knowledge/results/multicore_metagraph_20261113/seal.py",
-      "sha256": "0e9d9c74e774e900866bafb51b7eddaacc14af107a5a71ff0ceffcbee982e31e"
+      "sha256": "f20c21386c88a4872671247813c3473e39246774921da1d38a3432746e2d301d"
     },
     {
       "path": "05-knowledge/results/nonzero_preparation_20261103/surgery/ORDER_OBSTRUCTION.md",
@@ -112,6 +116,18 @@
     {
       "path": "05-knowledge/results/session295_construction_atlas_20261113/bridges.md",
       "sha256": "b3f3f95e6b9dd75a4aa58a9c9248d046240b745dfea76b8a5771b6d3cf529414"
+    },
+    {
+      "path": "05-knowledge/results/session296_multicore_metagraph_20261113/cores/FINITE_ATLAS.md",
+      "sha256": "51d10a86ce98a03566b304b0df2924bf4900ed1eb901f7da84c836522168ca72"
+    },
+    {
+      "path": "05-knowledge/results/session296_multicore_metagraph_20261113/cores/PROOF.md",
+      "sha256": "be6abcd7eca1ac80cda2fd2d754303d1dcece5b5948783163b848051c79bbb8b"
+    },
+    {
+      "path": "05-knowledge/results/session296_multicore_metagraph_20261113/metagraph/PROOF.md",
+      "sha256": "4141496a8660ad5321bf6b6db0502fcb941dd092c888e6846a1816d74fc7af42"
     },
     {
       "path": "05-knowledge/results/two_entry_funnels_20261103/READY.md",

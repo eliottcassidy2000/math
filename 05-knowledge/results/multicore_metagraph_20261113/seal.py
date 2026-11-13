@@ -15,7 +15,11 @@ PROOFS=[
 '05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md',
 '05-knowledge/results/cycle_opening_six_return_20261112/compiler/MODULE_RETURN.md',
 '05-knowledge/results/cycle_opening_six_return_20261112/compiler/SIX_STATE_MINIMALITY.md',
-'05-knowledge/results/session295_construction_atlas_20261113/bridges.md']
+'05-knowledge/results/session295_construction_atlas_20261113/bridges.md',
+'05-knowledge/results/session296_multicore_metagraph_20261113/cores/PROOF.md',
+'05-knowledge/results/session296_multicore_metagraph_20261113/cores/FINITE_ATLAS.md',
+'05-knowledge/results/session296_multicore_metagraph_20261113/metagraph/PROOF.md',
+'05-knowledge/results/mrb_seven_cutoffs_20261113/module/PROOF.md']
 
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 

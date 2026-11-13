@@ -262,6 +262,12 @@ entry problem is stronger than those three scalar instances.
 
 The family address, actual port, and full target now survive each displayed
 edge. What is absent is a theorem ensuring that every next target enters
-some chart, with a decreasing inverse measure. A larger finite atlas alone
-does not supply that theorem. In particular F3 is a uniform finite-depth
-chain, and the old 473 repair families are not thereby closed.
+some chart, with a decreasing inverse measure. The incoming
+[finite-atlas theorem](../session296_multicore_metagraph_20261113/cores/FINITE_ATLAS.md)
+proves a stronger restriction: no finite bank of dyadic charts can support
+indefinite exact H↦3H+2 iteration, even with arbitrary clock reindexing.
+Thus an escape needs unbounded core types, another arithmetic mode, or a
+different transition grammar. F3 is a uniform finite-depth chain, and the
+old 473 repair families are not thereby closed. See [the integration
+audit](INCOMING.md) for overlap with the stronger incoming single-module
+obstruction and the earlier complete ready fibre at 881.
