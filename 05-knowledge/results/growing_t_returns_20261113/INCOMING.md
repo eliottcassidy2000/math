@@ -77,3 +77,15 @@ that makes an operation physical and composable. Here those coordinates
 are the induced source, unique-start root, positive cut kernel, and second
 and third module-run responses. No theorem about those separate
 conjectures follows.
+
+## Final incoming review through5f5324a962
+
+The later clone-clock commits add a finite tail-law screen, strengthen
+the typed duality discussion, and independently route the same complete
+k17 exclusion. The added CLOCKS section reports digit3 for its155 pure
+responses, within its declared finite universe. We do not turn that
+screen or its failed single-bin identity probe into a universal law.
+The earlier Pi/Psi formulas and the corrected constant-term boundary
+are unchanged. The current CLOCKS source pin was refreshed only after
+reviewing this diff; the independent small-control audit was rerun in
+both modes with unchanged results.
