@@ -52,3 +52,17 @@ $$
 and at $i=n$ use $8\,19^{n-1}$ instead of $130\,19^{n-2}$. The nonterminal contribution is $6\,19^{n-1}+2\cdot8\,19^{n-2}$ (the same-module split uses one block, an adjacent split uses two); the terminal contribution is $(6+2)19^{n-1}$. For $i\ge2$ the $j=1$ summand has valuation $n-i$ and coefficient $1128\cdot256^{i-2}$ a unit mod 19. For $i=2<n$, the constant term has the same valuation, but the sum of the two coefficients is $1258=4\bmod19$, still a unit. Thus for $n\ge2$, the valuations of sites $2,\ldots,n$ are $n-2,\ldots,0$ respectively (at $n=2$ the terminal coefficient is $1280=7\bmod19$). Site 1 also has valuation $n-2$.
 
 Fix site 1. Subtract the all-40 baseline from a target. Reduce mod 19 to identify the final switch bit: the residue must be 0 or the unit of $w_n$. Subtract its contribution, divide by 19, and continue backward through site 2. Require the final integer remainder to be zero. This is a genuine exact selector for this physical bank. The latest differing site determines the valuation of two output counts' difference. Thus the bank realizes a binary prefix tree of target addresses in 19-adic distance, but only $2^{n-1}$ of $19^{n-1}$ residue classes. The terminal remainder test distinguishes exact targeting from a residue match. Site 1 can also be tried both ways; no claim of all odd counts follows.
+
+## Exact independence test, including the adjacent seam
+
+The one-sided guard is sufficient but not the only way to obtain independence. In fact the same formula gives a complete test when each site's two choices keep $h_i,q_i$ fixed. Let $\Delta$ denote the change from option zero to option one. For $j<i-1$, the mixed coefficient for the two sites $j,i$ is
+$$
+\Delta s_j^*\,\Delta e_i^*
+\prod_{j<k<i}q_k\prod_{k<j\ \mathrm{or}\ k>i}h_k .
+$$
+For $i=j+1$ it is instead
+$$
+(\Delta s_j^*\,\Delta e_i^*+\Delta e_j\,\Delta s_i)
+\prod_{k<j\ \mathrm{or}\ k>i}h_k .
+$$
+There are no higher-order terms, so the switches are independent exactly when all these coefficients vanish. Every product outside the parentheses is positive. In particular, if there is a first site changing $s^*$ and a last site changing $e^*$, the latter cannot lie more than one step to the right of the former. Before the first site all two-slot starts are fixed; after the last site all two-slot ends are fixed. Only adjacent sites can cancel a nonzero two-slot interaction against a one-slot interaction. This characterizes the obstruction without assuming the one-way guard up front.
