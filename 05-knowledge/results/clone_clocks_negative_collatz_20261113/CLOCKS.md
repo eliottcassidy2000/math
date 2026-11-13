@@ -274,7 +274,8 @@ universes of §8.4 the anchors, with the number of **distinct** `(A,α)` familie
 `9` (31), `11` (8), `13` (8), `15` (17), `17` (5), `19` (2), `23` (1), `25` (1), `27` (3), `29` (2), `33` (3), plus
 `−3` (11), `−5` (1). **The anchor 7 never occurs**, although its neighbours 5 and 9 have 52 and 31 families. 21 and 31
 are also absent, but there only one to three families would be expected. Every anchor that occurs is a
-Hamiltonian path count; 7 and 21 are the only odd numbers that are not.
+Hamiltonian path count; 7 and 21 are proved exclusions. The assertion that they
+are the only missing positive odd counts remains the OPEN Chan–Pak conjecture.
 *Prediction, registered before any larger search:* (P1) no pure two-clock is anchored at 7; (P2) none at 21;
 (P3) anchor 31 appears once the universe grows. A refutation of P1 needs one table. The anchor is not
 `H(S−u−v)` or any other deleted-subtournament count tried, so no mechanism is proposed.
@@ -301,6 +302,8 @@ both ternary-shaped: `H(A)=λP_M(3)+μH(M)` and `Π_2(A)=ρP_M(3)+τH(M)`, with 
 system (for the order-5 kernel, `μ=1`, `τ=0`). `c/pi2scan.c` computes `Π_2` along all 1,549 census clocks
 (`data/pi2_census_clocks.txt.gz`). **None has a ternary-shaped `Π_2`.** Two bins let the module be visited four or
 more times, so `4^j,5^j,6^j` terms appear. Kernels that read only `H(A)` give ordinal-sum-like products, and those
-cannot reach the C2 line because clone digits are odd. So a C2-line two-clock, if it exists, is a primitive
-ternary×dyadic kernel. It does not come from composing a clock with any of THM-5133's dyadic kernels. The −1 anchor
+cannot reach the C2 line because clone digits are odd. For the 1,549 scanned
+clocks, this excludes the tested composition route through THM-5133's dyadic
+kernels. It does not prove an all-order composition exclusion or that every
+possible C2-line two-clock must be primitive. The −1 anchor
 exists for dyadic×dyadic (THM-5133); for ternary×dyadic it is exactly the open question.

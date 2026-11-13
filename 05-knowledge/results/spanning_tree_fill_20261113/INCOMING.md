@@ -71,3 +71,18 @@ for its declared language and finite head, not every odd target. The
 the complete k17 unit-ready exclusion. These results reinforce the need
 for changing interfaces: increasing the number of count-preserving
 contexts does not produce a unit-ready source at an all-order ready hole.
+
+During final integration,68ab145445 supplied the
+[endpoint-context grammar](../endpoint_context_recursion_20261113/PORT_GRAMMAR.md):
+changing the output port closes three fixed-port obstructions and gives a
+renewable four-vertex context with target recurrence X_(k+2)=8X_(k+1)+X_k.
+Its all-order four-coordinate compiler and our retained-singleton handoff
+both require the physical output port to be part of the state. Neither
+supplies a universal absolute-target selector or removes the ready hole.
+
+The clock continuation through8961e87e88 adds a proved two-cherry I/O
+factorization and declared finite order-twelve search results. Its wrap
+and anchor patterns remain hypotheses. During integration, unsupported
+global spectrum and all-clock composition wording was narrowed to its
+actual scope and recorded in [MISTAKES](../../../01-canon/MISTAKES.md).
+No numerical result or clock construction was changed.

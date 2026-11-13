@@ -33,8 +33,9 @@ produced:
   `a_3=2FG`, a product of constrained path covers of the in- and out-neighbourhoods of `u`.
 * **Wrap law (conjecture, no exception found):** a dyadic module on a digit-1 clock always lands outside it,
   `H=(α3^j−1)2^k+1`. The 2↔3 / +1↔−1 duality is broken in one direction only.
-* **Composition no-go:** no clone clock has a ternary-shaped `Π_2` (1,549 checked), so THM-5133's hyperbolic
-  kernel (`H+1=3·2^{a+b}`, the −1 anchor for two dyadic ports) cannot be composed into the C2 line.
+* **Finite composition exclusion:** none of the 1,549 scanned clone clocks has a ternary-shaped `Π_2`, so
+  those clocks cannot produce the C2 line through the tested THM-5133 dyadic-kernel route.
+  No all-order composition exclusion follows from this census.
 
 **What this changes.** The question "can `3H+2` be repeated exactly by a physical move?" has a sharp answer in
 the clone language. One clock can do it: Session 197's `60·3^m−1`, which is never ready in the screened range.

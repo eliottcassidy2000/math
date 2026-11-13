@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13: A finite clock continuation used universal spectrum wording
+
+- **Status:** unsupported scope wording repaired in [clone-clock CLOCKS §8](../05-knowledge/results/clone_clocks_negative_collatz_20261113/CLOCKS.md) and its README; finite receipts and constructions are unchanged. Neither conjecture is refuted by this correction.
+- **First failed implication:** the anchor discussion called7 and21 the only missing odd Hamilton counts, although that is the open Chan–Pak assertion. A separate composition paragraph promoted a1,549-clock check into a conclusion about every possible clock and the primitivity of every possible C2-line kernel.
+- **Boundary witness:** the actual evidence universe is the declared finite clock bank; an arbitrary larger clock has no supplied certificate in that computation. This is a quantifier gap, not an exhibited counterexample to either proposed universal statement.
+- **Repair / strongest survivor:**7 and21 remain proved exclusions; every observed anchor remains attained. The tested dyadic-kernel composition route is excluded for the scanned clocks. Universal spectrum coverage, all-order composition exclusion and universal primitivity remain OPEN.
+- **Missing coordinate / new question:** retain the quantified source universe when applying a symbolic composition criterion. An all-order exclusion needs a proof for the unbounded source class, rather than another finite-bank result.
+
 ## 2026-11-13: Collatz odd-branch depth was mislabelled as an ascent count
 
 - **Status:** demonstrated scope/index error repaired in [clone-clock COLLATZ §3](../05-knowledge/results/clone_clocks_negative_collatz_20261113/COLLATZ.md), its README and verifier labels/controls; the tournament clock constructions are unchanged.
