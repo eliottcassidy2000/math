@@ -1,0 +1,1630 @@
+{
+  "collatz_carry_control": [
+    {
+      "child": 37,
+      "child_mod9": 1,
+      "exponent": 4,
+      "first_menu": [
+        4,
+        6
+      ],
+      "next_menu": [
+        2,
+        4
+      ],
+      "source": 7,
+      "source_mod27": 7
+    },
+    {
+      "child": 133,
+      "child_mod9": 7,
+      "exponent": 4,
+      "first_menu": [
+        4,
+        6
+      ],
+      "next_menu": [
+        4,
+        6
+      ],
+      "source": 25,
+      "source_mod27": 25
+    },
+    {
+      "child": 229,
+      "child_mod9": 4,
+      "exponent": 4,
+      "first_menu": [
+        4,
+        6
+      ],
+      "next_menu": [
+        2,
+        6
+      ],
+      "source": 43,
+      "source_mod27": 16
+    }
+  ],
+  "compatible_indexed_starts": [
+    8
+  ],
+  "context_cases": [
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        1,
+        0
+      ],
+      "rows": [
+        14,
+        12,
+        0,
+        4
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        1,
+        0
+      ],
+      "rows": [
+        0,
+        1,
+        11,
+        3
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        1,
+        0
+      ],
+      "rows": [
+        0,
+        1,
+        11,
+        3
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        1,
+        0
+      ],
+      "rows": [
+        6,
+        4,
+        0,
+        7
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        1,
+        0
+      ],
+      "rows": [
+        14,
+        12,
+        0,
+        4
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        1,
+        0
+      ],
+      "rows": [
+        2,
+        0,
+        11,
+        3
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        1,
+        2
+      ],
+      "rows": [
+        6,
+        0,
+        10,
+        3
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        1,
+        2
+      ],
+      "rows": [
+        6,
+        0,
+        10,
+        3
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        0,
+        1
+      ],
+      "rows": [
+        8,
+        13,
+        9,
+        0
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        0,
+        1
+      ],
+      "rows": [
+        6,
+        0,
+        2,
+        7
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        2,
+        1
+      ],
+      "rows": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        2,
+        1
+      ],
+      "rows": [
+        10,
+        12,
+        9,
+        0
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        4,
+        1
+      ],
+      "rows": [
+        2,
+        12,
+        1,
+        5
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        4,
+        1
+      ],
+      "rows": [
+        12,
+        1,
+        10,
+        2
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        1,
+        4
+      ],
+      "rows": [
+        8,
+        5,
+        1,
+        6
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        1,
+        4
+      ],
+      "rows": [
+        4,
+        9,
+        2,
+        5
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        4,
+        1
+      ],
+      "rows": [
+        12,
+        1,
+        2,
+        6
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 2,
+      "exterior_order": 2,
+      "layers": [
+        0,
+        1,
+        4
+      ],
+      "rows": [
+        10,
+        4,
+        1,
+        6
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "rows": [
+        0,
+        1,
+        3,
+        23,
+        7,
+        31
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        15,
+        18,
+        0
+      ],
+      "rows": [
+        52,
+        49,
+        50,
+        7,
+        40,
+        8
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        3,
+        0,
+        0
+      ],
+      "rows": [
+        62,
+        56,
+        58,
+        16,
+        32,
+        8
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        5,
+        18,
+        0
+      ],
+      "rows": [
+        32,
+        33,
+        35,
+        23,
+        7,
+        24
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "rows": [
+        8,
+        13,
+        9,
+        0,
+        47,
+        15
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "rows": [
+        58,
+        56,
+        59,
+        48,
+        32,
+        0
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        13,
+        10,
+        0
+      ],
+      "rows": [
+        4,
+        9,
+        10,
+        17,
+        39,
+        15
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        7,
+        6,
+        0
+      ],
+      "rows": [
+        18,
+        28,
+        17,
+        5,
+        8,
+        31
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        7,
+        6,
+        0
+      ],
+      "rows": [
+        50,
+        52,
+        57,
+        19,
+        0,
+        24
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        3,
+        6,
+        0
+      ],
+      "rows": [
+        32,
+        37,
+        41,
+        3,
+        47,
+        8
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        5,
+        24,
+        4
+      ],
+      "rows": [
+        36,
+        45,
+        40,
+        17,
+        7,
+        24
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        13,
+        10,
+        0
+      ],
+      "rows": [
+        58,
+        52,
+        49,
+        22,
+        32,
+        8
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        4,
+        14,
+        5
+      ],
+      "rows": [
+        32,
+        41,
+        51,
+        37,
+        11,
+        16
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        7,
+        34,
+        4
+      ],
+      "rows": [
+        38,
+        36,
+        56,
+        19,
+        3,
+        24
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        15,
+        12,
+        2
+      ],
+      "rows": [
+        26,
+        4,
+        9,
+        18,
+        38,
+        15
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        1,
+        6,
+        2
+      ],
+      "rows": [
+        40,
+        41,
+        51,
+        36,
+        43,
+        0
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        9,
+        20,
+        8
+      ],
+      "rows": [
+        10,
+        12,
+        17,
+        36,
+        43,
+        7
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 3,
+      "exterior_order": 3,
+      "layers": [
+        0,
+        9,
+        22,
+        2
+      ],
+      "rows": [
+        38,
+        44,
+        56,
+        17,
+        35,
+        8
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        5,
+        42,
+        0,
+        0
+      ],
+      "rows": [
+        156,
+        157,
+        152,
+        144,
+        0,
+        95,
+        31,
+        112
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        25,
+        66,
+        0,
+        0
+      ],
+      "rows": [
+        38,
+        40,
+        42,
+        33,
+        15,
+        80,
+        31,
+        127
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        15,
+        54,
+        0,
+        0
+      ],
+      "rows": [
+        168,
+        161,
+        171,
+        162,
+        207,
+        208,
+        143,
+        0
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        5,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        164,
+        161,
+        170,
+        163,
+        175,
+        0,
+        191,
+        32
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        15,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        244,
+        241,
+        250,
+        243,
+        0,
+        144,
+        48,
+        80
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        25,
+        66,
+        0,
+        0
+      ],
+      "rows": [
+        106,
+        100,
+        105,
+        98,
+        239,
+        192,
+        128,
+        15
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        27,
+        54,
+        0,
+        0
+      ],
+      "rows": [
+        6,
+        12,
+        16,
+        5,
+        171,
+        207,
+        159,
+        15
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        35,
+        108,
+        0,
+        0
+      ],
+      "rows": [
+        48,
+        41,
+        35,
+        53,
+        198,
+        16,
+        47,
+        111
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        49,
+        152,
+        64,
+        0
+      ],
+      "rows": [
+        98,
+        124,
+        113,
+        117,
+        33,
+        128,
+        176,
+        31
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        5,
+        40,
+        24,
+        0
+      ],
+      "rows": [
+        126,
+        108,
+        112,
+        100,
+        106,
+        0,
+        160,
+        63
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        49,
+        172,
+        40,
+        0
+      ],
+      "rows": [
+        134,
+        152,
+        130,
+        133,
+        109,
+        15,
+        175,
+        48
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        18,
+        93,
+        24,
+        0
+      ],
+      "rows": [
+        110,
+        120,
+        114,
+        116,
+        193,
+        208,
+        0,
+        79
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        20,
+        45,
+        8,
+        0
+      ],
+      "rows": [
+        2,
+        56,
+        19,
+        21,
+        33,
+        141,
+        191,
+        31
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        21,
+        196,
+        216,
+        24
+      ],
+      "rows": [
+        106,
+        80,
+        83,
+        102,
+        169,
+        6,
+        176,
+        47
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        11,
+        92,
+        70,
+        0
+      ],
+      "rows": [
+        124,
+        93,
+        64,
+        100,
+        140,
+        22,
+        48,
+        111
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        46,
+        138,
+        55,
+        0
+      ],
+      "rows": [
+        90,
+        100,
+        73,
+        82,
+        134,
+        93,
+        16,
+        111
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        6,
+        66,
+        83,
+        8
+      ],
+      "rows": [
+        80,
+        69,
+        65,
+        119,
+        134,
+        87,
+        144,
+        47
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 4,
+      "exterior_order": 4,
+      "layers": [
+        0,
+        9,
+        179,
+        185,
+        16
+      ],
+      "rows": [
+        94,
+        112,
+        98,
+        70,
+        44,
+        9,
+        176,
+        63
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        111,
+        2268,
+        2916,
+        0,
+        0
+      ],
+      "rows": [
+        318,
+        312,
+        306,
+        308,
+        288,
+        960,
+        159,
+        287,
+        576,
+        223
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        185,
+        1782,
+        1392,
+        0,
+        0
+      ],
+      "rows": [
+        658,
+        656,
+        667,
+        643,
+        648,
+        479,
+        799,
+        576,
+        159,
+        288
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        187,
+        624,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        876,
+        877,
+        888,
+        880,
+        867,
+        256,
+        288,
+        639,
+        128,
+        352
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        111,
+        882,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        484,
+        481,
+        482,
+        503,
+        487,
+        576,
+        768,
+        96,
+        672,
+        159
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        45,
+        132,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        110,
+        108,
+        112,
+        100,
+        107,
+        0,
+        544,
+        127,
+        767,
+        191
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        297,
+        3234,
+        2976,
+        0,
+        0
+      ],
+      "rows": [
+        430,
+        424,
+        418,
+        436,
+        423,
+        576,
+        543,
+        864,
+        96,
+        287
+      ],
+      "selective_vertices": 0
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        85,
+        456,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        960,
+        1001,
+        963,
+        1013,
+        967,
+        277,
+        160,
+        32,
+        704,
+        224
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        51,
+        580,
+        576,
+        0,
+        0
+      ],
+      "rows": [
+        384,
+        401,
+        443,
+        419,
+        425,
+        195,
+        543,
+        64,
+        224,
+        447
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        106,
+        249,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        8,
+        53,
+        9,
+        2,
+        45,
+        845,
+        159,
+        63,
+        735,
+        223
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        14,
+        299,
+        300,
+        0,
+        0
+      ],
+      "rows": [
+        928,
+        929,
+        923,
+        931,
+        939,
+        516,
+        703,
+        800,
+        608,
+        0
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        329,
+        2118,
+        1492,
+        0,
+        0
+      ],
+      "rows": [
+        822,
+        788,
+        792,
+        771,
+        808,
+        334,
+        927,
+        63,
+        128,
+        416
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        288,
+        1019,
+        348,
+        0,
+        0
+      ],
+      "rows": [
+        102,
+        88,
+        106,
+        65,
+        77,
+        154,
+        160,
+        543,
+        255,
+        383
+      ],
+      "selective_vertices": 1
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        328,
+        2426,
+        2755,
+        480,
+        0
+      ],
+      "rows": [
+        686,
+        680,
+        754,
+        756,
+        707,
+        976,
+        131,
+        768,
+        95,
+        320
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        112,
+        1563,
+        2664,
+        652,
+        0
+      ],
+      "rows": [
+        216,
+        157,
+        161,
+        164,
+        204,
+        979,
+        14,
+        576,
+        223,
+        351
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        525,
+        3370,
+        4044,
+        792,
+        0
+      ],
+      "rows": [
+        436,
+        441,
+        482,
+        453,
+        492,
+        328,
+        515,
+        608,
+        704,
+        63
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        6,
+        18,
+        13,
+        0,
+        0
+      ],
+      "rows": [
+        944,
+        1013,
+        929,
+        1015,
+        964,
+        912,
+        677,
+        0,
+        704,
+        128
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        357,
+        2106,
+        2252,
+        424,
+        0
+      ],
+      "rows": [
+        686,
+        756,
+        696,
+        658,
+        673,
+        136,
+        189,
+        256,
+        127,
+        480
+      ],
+      "selective_vertices": 2
+    },
+    {
+      "core_order": 5,
+      "exterior_order": 5,
+      "layers": [
+        0,
+        509,
+        2864,
+        2130,
+        0,
+        0
+      ],
+      "rows": [
+        678,
+        756,
+        728,
+        707,
+        681,
+        844,
+        273,
+        96,
+        671,
+        192
+      ],
+      "selective_vertices": 2
+    }
+  ],
+  "square_clock": [
+    9,
+    16,
+    25,
+    16,
+    9,
+    16,
+    25,
+    16,
+    9,
+    16,
+    25,
+    16,
+    9,
+    16
+  ],
+  "square_endpoints": [
+    8,
+    9
+  ],
+  "square_path": [
+    8,
+    1,
+    15,
+    10,
+    6,
+    3,
+    13,
+    12,
+    4,
+    5,
+    11,
+    14,
+    2,
+    7,
+    9
+  ],
+  "status": "FINITE-EXACT controls for proved shifted factorial and inherited clock maps",
+  "top_layer_family": [
+    {
+      "k": 2,
+      "s": 1,
+      "top_layer": 1,
+      "whole_count": 3
+    },
+    {
+      "k": 3,
+      "s": 1,
+      "top_layer": 4,
+      "whole_count": 33
+    },
+    {
+      "k": 3,
+      "s": 2,
+      "top_layer": 4,
+      "whole_count": 37
+    },
+    {
+      "k": 4,
+      "s": 1,
+      "top_layer": 36,
+      "whole_count": 947
+    },
+    {
+      "k": 4,
+      "s": 2,
+      "top_layer": 48,
+      "whole_count": 1301
+    },
+    {
+      "k": 4,
+      "s": 3,
+      "top_layer": 36,
+      "whole_count": 1331
+    },
+    {
+      "k": 5,
+      "s": 1,
+      "top_layer": 576,
+      "whole_count": 56281
+    },
+    {
+      "k": 5,
+      "s": 2,
+      "top_layer": 864,
+      "whole_count": 84805
+    },
+    {
+      "k": 5,
+      "s": 3,
+      "top_layer": 864,
+      "whole_count": 98989
+    },
+    {
+      "k": 5,
+      "s": 4,
+      "top_layer": 576,
+      "whole_count": 100021
+    }
+  ]
+}

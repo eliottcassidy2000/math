@@ -1,0 +1,164 @@
+{
+  "status": "FINITE-EXACT bounded operation search; not global normalization",
+  "universe": "Four named order7 sources; every transitive prefix/suffix padding through order10; one and two edge reversals, every Hamilton-spine complement, and all one-vertex orientations from bases of order<=9. Stop each source at parity minimum.",
+  "kinds": [
+    "one_edge_reversal",
+    "two_edge_reversals",
+    "native_spine_complement",
+    "one_vertex_extension"
+  ],
+  "records": [
+    {
+      "type": "positive_control",
+      "H": 513,
+      "g": 3,
+      "rows": [
+        212,
+        137,
+        186,
+        97,
+        170,
+        195,
+        22,
+        72
+      ],
+      "base": [
+        56,
+        117,
+        129,
+        22,
+        100,
+        76,
+        141,
+        59
+      ],
+      "args": [
+        1,
+        0,
+        4,
+        5,
+        6,
+        2,
+        7,
+        3
+      ],
+      "ordered_covers": [
+        513,
+        6294,
+        33804,
+        102696,
+        190800,
+        217440,
+        141120,
+        40320
+      ],
+      "polynomial_coefficients": [
+        0,
+        0,
+        238,
+        0,
+        238,
+        0,
+        36,
+        0,
+        1
+      ]
+    },
+    {
+      "type": "summary",
+      "H": 55,
+      "minimum_found": 5,
+      "parity_target": 1,
+      "attempts": 9907,
+      "neutral_attempts": 86,
+      "distinct_neutral_labelled_graphs": 82,
+      "attempts_by_kind": [
+        365,
+        6816,
+        550,
+        2176
+      ],
+      "neutral_by_kind": [
+        18,
+        48,
+        0,
+        20
+      ],
+      "distinct_neutral_g_histogram": {
+        "5": 82
+      }
+    },
+    {
+      "type": "summary",
+      "H": 171,
+      "minimum_found": 9,
+      "parity_target": 3,
+      "attempts": 11067,
+      "neutral_attempts": 32,
+      "distinct_neutral_labelled_graphs": 28,
+      "attempts_by_kind": [
+        365,
+        6816,
+        1710,
+        2176
+      ],
+      "neutral_by_kind": [
+        8,
+        4,
+        0,
+        20
+      ],
+      "distinct_neutral_g_histogram": {
+        "9": 28
+      }
+    },
+    {
+      "type": "summary",
+      "H": 175,
+      "minimum_found": 7,
+      "parity_target": 1,
+      "attempts": 11107,
+      "neutral_attempts": 32,
+      "distinct_neutral_labelled_graphs": 28,
+      "attempts_by_kind": [
+        365,
+        6816,
+        1750,
+        2176
+      ],
+      "neutral_by_kind": [
+        8,
+        4,
+        0,
+        20
+      ],
+      "distinct_neutral_g_histogram": {
+        "7": 28
+      }
+    },
+    {
+      "type": "summary",
+      "H": 189,
+      "minimum_found": 63,
+      "parity_target": 3,
+      "attempts": 11247,
+      "neutral_attempts": 32,
+      "distinct_neutral_labelled_graphs": 28,
+      "attempts_by_kind": [
+        365,
+        6816,
+        1890,
+        2176
+      ],
+      "neutral_by_kind": [
+        8,
+        4,
+        0,
+        20
+      ],
+      "distinct_neutral_g_histogram": {
+        "63": 28
+      }
+    }
+  ]
+}

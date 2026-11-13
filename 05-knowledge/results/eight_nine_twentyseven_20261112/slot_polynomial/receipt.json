@@ -1,0 +1,98 @@
+{
+  "status": "FINITE-EXACT controls; universal conclusions proved in PROOF.md",
+  "core": [
+    56,
+    117,
+    129,
+    22,
+    100,
+    76,
+    141,
+    59
+  ],
+  "ordered_covers": [
+    513,
+    6102,
+    32508,
+    99432,
+    187200,
+    216000,
+    141120,
+    40320
+  ],
+  "power_coefficients": [
+    0,
+    0,
+    246,
+    0,
+    232,
+    0,
+    34,
+    0,
+    1
+  ],
+  "independent_color_controls": [
+    {
+      "slots": 1,
+      "literal_colorings": 1,
+      "value": 513
+    },
+    {
+      "slots": 2,
+      "literal_colorings": 256,
+      "value": 7128
+    },
+    {
+      "slots": 3,
+      "literal_colorings": 6561,
+      "value": 52353
+    },
+    {
+      "slots": 4,
+      "literal_colorings": 65536,
+      "value": 268128
+    }
+  ],
+  "residue_integer_interval": [
+    -200,
+    200
+  ],
+  "normalized_mod3_period": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    0
+  ],
+  "literal_padding_controls": [
+    {
+      "suffix": 0,
+      "order": 8,
+      "h": 9,
+      "g": 27
+    },
+    {
+      "suffix": 1,
+      "order": 9,
+      "h": 9,
+      "g": 27
+    },
+    {
+      "suffix": 2,
+      "order": 10,
+      "h": 9,
+      "g": 27
+    }
+  ],
+  "binomial_period_controls": 1680,
+  "hostile_nonunit_only_explanation": {
+    "unit_input": 4,
+    "value": 268128,
+    "v3": 2
+  },
+  "source_sha256": "e14331d4a51788463724262103c6cf61351b714fea7d6f0eabcc13b03305d907"
+}

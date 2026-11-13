@@ -1,0 +1,51 @@
+{
+  "status": "FINITE-EXACT controls; all-precision proof in BINARY_LIFT.md",
+  "precisions": [
+    3,
+    10
+  ],
+  "odd_residue_cases": 1020,
+  "literal_precision4_outputs": [
+    {
+      "target": 1,
+      "order": 14,
+      "actual_H": 513
+    },
+    {
+      "target": 3,
+      "order": 14,
+      "actual_H": 515
+    },
+    {
+      "target": 5,
+      "order": 14,
+      "actual_H": 517
+    },
+    {
+      "target": 7,
+      "order": 14,
+      "actual_H": 4455
+    },
+    {
+      "target": 9,
+      "order": 14,
+      "actual_H": 4617
+    },
+    {
+      "target": 11,
+      "order": 14,
+      "actual_H": 4635
+    },
+    {
+      "target": 13,
+      "order": 14,
+      "actual_H": 4653
+    },
+    {
+      "target": 15,
+      "order": 14,
+      "actual_H": 495
+    }
+  ],
+  "source_sha256": "f9fb0567197b0b7a9b3df9dd713b2b600d05448050746d76efe94093a86c4e60"
+}

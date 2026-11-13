@@ -1,0 +1,483 @@
+{
+  "status": "Exact controls for the all-length and all-context proofs in PROOF.md",
+  "sources": {
+    "C": {
+      "rows": [
+        56,
+        117,
+        129,
+        22,
+        100,
+        76,
+        141,
+        59
+      ],
+      "H": 513,
+      "ordered_covers": [
+        513,
+        6102,
+        32508,
+        99432,
+        187200,
+        216000,
+        141120,
+        40320
+      ],
+      "raw_content": 9,
+      "uniform_context_content": 27,
+      "slot_coefficients": [
+        0,
+        0,
+        246,
+        0,
+        232,
+        0,
+        34,
+        0,
+        1
+      ]
+    },
+    "C2": {
+      "rows": [
+        56,
+        53,
+        129,
+        22,
+        100,
+        76,
+        143,
+        59
+      ],
+      "H": 515,
+      "ordered_covers": [
+        515,
+        6130,
+        32580,
+        99480,
+        187200,
+        216000,
+        141120,
+        40320
+      ],
+      "raw_content": 5,
+      "uniform_context_content": 5,
+      "slot_coefficients": [
+        0,
+        0,
+        246,
+        0,
+        234,
+        0,
+        34,
+        0,
+        1
+      ]
+    },
+    "C4": {
+      "rows": [
+        56,
+        117,
+        137,
+        18,
+        100,
+        76,
+        141,
+        59
+      ],
+      "H": 517,
+      "ordered_covers": [
+        517,
+        6110,
+        32508,
+        99432,
+        187200,
+        216000,
+        141120,
+        40320
+      ],
+      "raw_content": 1,
+      "uniform_context_content": 1,
+      "slot_coefficients": [
+        0,
+        0,
+        250,
+        0,
+        232,
+        0,
+        34,
+        0,
+        1
+      ]
+    },
+    "C24": {
+      "rows": [
+        56,
+        53,
+        137,
+        18,
+        100,
+        76,
+        143,
+        59
+      ],
+      "H": 495,
+      "ordered_covers": [
+        495,
+        5994,
+        32292,
+        99288,
+        187200,
+        216000,
+        141120,
+        40320
+      ],
+      "raw_content": 9,
+      "uniform_context_content": 9,
+      "slot_coefficients": [
+        0,
+        0,
+        234,
+        0,
+        226,
+        0,
+        34,
+        0,
+        1
+      ]
+    },
+    "native": {
+      "rows": [
+        212,
+        137,
+        186,
+        97,
+        170,
+        195,
+        22,
+        72
+      ],
+      "H": 513,
+      "ordered_covers": [
+        513,
+        6294,
+        33804,
+        102696,
+        190800,
+        217440,
+        141120,
+        40320
+      ],
+      "raw_content": 3,
+      "uniform_context_content": 3,
+      "slot_coefficients": [
+        0,
+        0,
+        238,
+        0,
+        238,
+        0,
+        36,
+        0,
+        1
+      ]
+    }
+  },
+  "native_path": [
+    1,
+    0,
+    4,
+    5,
+    6,
+    2,
+    7,
+    3
+  ],
+  "rooted_entry": [
+    513,
+    77,
+    129,
+    711
+  ],
+  "external_root_controls": [
+    {
+      "exterior": [
+        2,
+        0
+      ],
+      "beats_module": [
+        false,
+        true
+      ],
+      "replacement": "C2",
+      "before": [
+        7641,
+        513,
+        513,
+        13743
+      ],
+      "after": [
+        7675,
+        515,
+        515,
+        13805
+      ],
+      "small_context": [
+        17,
+        1,
+        1,
+        31
+      ],
+      "amplitude": 2
+    },
+    {
+      "exterior": [
+        2,
+        0
+      ],
+      "beats_module": [
+        false,
+        true
+      ],
+      "replacement": "C4",
+      "before": [
+        7641,
+        513,
+        513,
+        13743
+      ],
+      "after": [
+        7661,
+        517,
+        517,
+        13771
+      ],
+      "small_context": [
+        5,
+        1,
+        1,
+        7
+      ],
+      "amplitude": 4
+    },
+    {
+      "exterior": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "beats_module": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "replacement": "C2",
+      "before": [
+        130653,
+        7641,
+        7641,
+        213975
+      ],
+      "after": [
+        131095,
+        7675,
+        7675,
+        214645
+      ],
+      "small_context": [
+        221,
+        17,
+        17,
+        335
+      ],
+      "amplitude": 2
+    },
+    {
+      "exterior": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "beats_module": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "replacement": "C4",
+      "before": [
+        130653,
+        7641,
+        7641,
+        213975
+      ],
+      "after": [
+        130769,
+        7661,
+        7661,
+        214115
+      ],
+      "small_context": [
+        29,
+        5,
+        5,
+        35
+      ],
+      "amplitude": 4
+    }
+  ],
+  "selector_controls": [
+    {
+      "exterior": [
+        2,
+        0
+      ],
+      "beats_module": [
+        false,
+        true
+      ],
+      "h_A_B": [
+        7641,
+        17,
+        5
+      ],
+      "four_counts": [
+        7641,
+        7675,
+        7661,
+        7479
+      ],
+      "residues_mod8": [
+        1,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "exterior": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "beats_module": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "h_A_B": [
+        130653,
+        221,
+        29
+      ],
+      "four_counts": [
+        130653,
+        131095,
+        130769,
+        128979
+      ],
+      "residues_mod8": [
+        5,
+        7,
+        1,
+        3
+      ]
+    }
+  ],
+  "literal_returns": [
+    {
+      "k": 1,
+      "rows": [
+        198,
+        136,
+        122,
+        225,
+        139,
+        915,
+        50,
+        68,
+        223,
+        1503,
+        511
+      ],
+      "root": 9,
+      "state_h_s_q_F": [
+        3733,
+        1147,
+        1147,
+        3733
+      ]
+    },
+    {
+      "k": 2,
+      "rows": [
+        198,
+        136,
+        122,
+        225,
+        139,
+        1939,
+        50,
+        68,
+        223,
+        479,
+        3039,
+        1023
+      ],
+      "root": 10,
+      "state_h_s_q_F": [
+        7225,
+        2311,
+        2311,
+        7225
+      ]
+    },
+    {
+      "k": 3,
+      "rows": [
+        198,
+        136,
+        122,
+        225,
+        139,
+        3987,
+        50,
+        68,
+        223,
+        479,
+        991,
+        6111,
+        2047
+      ],
+      "root": 11,
+      "state_h_s_q_F": [
+        14209,
+        4639,
+        4639,
+        14209
+      ]
+    }
+  ],
+  "powers_of_two_mod73": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    55,
+    37
+  ],
+  "eight_nine_character": {
+    "modulus": 73,
+    "kernel_order": 9,
+    "image_order": 8,
+    "forbidden_residue": 28,
+    "character_value": 10
+  }
+}

@@ -193,7 +193,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
-[Descent](../05-knowledge/results/core_descent_endpoints_20261112/README.md):five-base grammar;473 repairs/Chan–Pak OPEN.
+[8/9/27](EIGHT-NINE.md); [descent](../05-knowledge/results/core_descent_endpoints_20261112/README.md): Chan–Pak OPEN.
 - [Clocks](../05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md); [more](S111-plus.md).
 - [Exact U5-free capacity](../05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md).
 - [67](S67.md);[68](S68.md);[69](S69.md);[70](S70.md);[71](S71.md);[72](S72.md);[73](S73.md);[74](S74.md);[HN](HN.md);[Twists](../05-knowledge/results/twist_conductor_reverse_20261025/README.md);[Unnamed](../05-knowledge/results/unnamed_carrier_dissection_20261026/README.md).
