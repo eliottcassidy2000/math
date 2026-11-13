@@ -36,6 +36,12 @@ birth probes have gcd equal to the full marked content, supplying a
 bounded escape from any specified odd divisor. This is not a claim that
 one probe is prime or avoids every divisor simultaneously.
 
+The late [geometric comparison](INCOMING.md#late-session312-a-neutral-return-can-leave-the-geometric-chart)
+sharpens this distinction: the symmetric three-B join has an explicit
+rank-two 3-adic determinant chart, while the neutral partner containing D
+has none. The repair preserves the protected counting response while
+leaving that geometric representation class.
+
 ## 2. A repeatable clock refill keeps a strong right module
 
 [The wrapped reservoir](clock/PROOF.md) uses

@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13: A rigidity generalization dropped the inner-seed size boundary
+
+- **Status:** corrected in [symmetry_port_return/INCOMING](../05-knowledge/results/symmetry_port_return_20261113/INCOMING.md) during final independent review. The original clock proof and every A95/A317 family already impose the needed boundary.
+- **Minimal witness:** the one-vertex tournament is rigid, but its cyclic wrapper W(TT1)=C3 has three automorphisms.
+- **First failed implication:** rigidity of a module was treated as sufficient for rigidity of C3[T,1,1], omitting the distinct block-size argument.
+- **Repair / strongest survivor:** require rigid T with |T|>1. The larger block then fixes the cyclic quotient, and internal rigidity gives the identity. All actual returns and arithmetic certificates are unchanged.
+- **Missing coordinate / new question:** retain the block-size equality boundary when generalizing a quotient stabilizer proof; an initial rigid singleton does not satisfy it.
+
 ## 2026-11-13: A filtered extension census dropped its height qualifier
 
 - **Status:** draft scope wording repaired during independent review before checkpoint; [frame search F5](../05-knowledge/results/prime_terminal_20261113_1610/frames/PROOF.md) now says every order-nine tournament with H<=601 is represented.

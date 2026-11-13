@@ -33,7 +33,9 @@ scoped canon or exact-result files linked in the notes. Neighboring LRC,
 six-uniform, planar-Jacobian and port papers are not treated as theorems
 about tournament target coverage.
 
-Incoming work through7888efd8f9 is separated in INCOMING.md. No scarce
+Incoming work through5ad93a5c0c is separated in INCOMING.md. The
+late correction to HYP-9678(A) is explicitly retained; the Session312
+chart corollary inherits its B chart and D obstruction with source scope. No scarce
 theorem ID was reserved. There is no new canonical claim of a solved prize.
 
 ## Exact universes and controls
@@ -73,7 +75,11 @@ The initial history replay scripts used Python assertions. Before this
 packet was integrated those21 assertions were replaced by explicit
 require/RuntimeError checks. Normal and optimized modes both reject a
 deliberate false guard. This is checker hardening, not a change to a
-mathematical result. Other Python guards are likewise explicit.
+mathematical result. Other Python guards are likewise explicit. Final
+review also restored the inner-seed order>1 hypothesis to the incoming
+rigidity generalization: W(TT1)=C3 is the missing boundary. The original
+clock proof and all actual seed families already included this condition;
+the correction mechanism is logged in 01-canon/MISTAKES.md.
 
 ## Reproduction
 

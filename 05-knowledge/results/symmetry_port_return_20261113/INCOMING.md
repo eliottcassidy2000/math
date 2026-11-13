@@ -1,7 +1,7 @@
 # Incoming work and the actual interface changes
 
 The session began at087740676b20 and inspected incoming commits through
-7888efd8f9. Existing mathematical results are used with their source scope;
+7888efd8f9, with the final merge reviewed through5ad93a5c0c. Existing mathematical results are used with their source scope;
 we did not repeat their large enumerations. The late incoming work changes
 the available stock and resource interpretation, not the coverage status.
 
@@ -9,9 +9,13 @@ the available stock and resource interpretation, not the coverage status.
 
 [THM-5151 / the S26 exact-pair packet](../kps_s26_exact_pair_returns_20261113/PROOF.md)
 classifies the declared small-order exact-profile pairs and supplies an
-additional actual detachable pair with H317. The larger search is only
-complete in its stated uniquely-Hamiltonian-cycle class; the hypotheses
-about all such pairs and all odd merges remain hypotheses.
+additional actual detachable pair with H317. The larger uniquely-Hamiltonian-cycle search is complete only in that
+stated class. The subsequent corrected
+[THM-5151](../../../01-canon/theorems/THM-5151-exact-strong-decomposable-slot-pairs-census-r-factor-sites-one-apex-b-and-a-prime-pair.md)
+records an order-ten H333 pair member with five Hamiltonian cycles,
+refuting HYP-9678(A). The narrower detachable-member conjecture(A′),
+infinite-pair supply and additive capacity remain OPEN. No all-order
+unique-cycle assumption is used here.
 
 The exact global-tail budget cap(Q) is invariant under neutral full-Q
 replacement and decreases by one when the entire right-module polynomial
@@ -37,7 +41,9 @@ The identical named-arc proof gives
 
     (M,T)→(TT1→M, W^d(T)→A_i).
 
-Rigidity follows when the seeds and chosen blocks are rigid. The exact
+Rigidity follows when the seeds and chosen blocks are rigid and the inner
+seed has more than one vertex, as required in clock/PROOF §4. The singleton
+boundary is essential: W(TT1)=C3 is not rigid. The exact
 profile operator is multiplication by Q_Ai after W^d. This is a proved
 extension with a supplied pair, not a theorem supplying pairs for arbitrary
 targets. The implemented exact selector and its O(Y^(1/4)) bound concern
@@ -88,3 +94,36 @@ module boundary; the exact two-flip law accounts for its count cost;
 and the finite entry selector checks whether a prescribed target actually
 belongs to the next language. Their universal target-supply counterpart
 remains open.
+
+## Late Session312: a neutral return can leave the geometric chart
+
+[The mixed Berggren–Price observer](../session312_cluster_pythagorean_symmetry_20261113/ARITHMETIC.md)
+uses determinants ±1 versus ±2 to track the loss of dyadic seed precision,
+while the [odd observer](../session312_cluster_pythagorean_symmetry_20261113/README.md)
+retains its residue. This supplies a precise example of observer-dependent
+memory loss inside a fixed full-Q fibre; it does not supply new target
+counts or ordinary Collatz convergence.
+
+More directly, the incoming
+[rank-two 3-adic chart and its obstruction](../session312_cluster_pythagorean_symmetry_20261113/CLUSTER_CHART.md)
+give B an affine chart x=(12,1,3,9,5,0,2,27), but prove that D=A→TT1 has
+no rank-two 3-adic determinant orientation. These are inherited results,
+including the stated six-vertex hereditary obstruction in D.
+
+There is an immediate exact consequence for our protected construction.
+For U=C3[B,B,B], assign the column (1,b+3x_i) to vertex i in block b,
+where b=0,1,2. The leading 3-adic unit within a block is unchanged by
+multiplication by3; between blocks it gives0→1→2→0. Thus U has this
+rank-two chart. Its protected neutral partner U′=C3[B,D,B] cannot have
+any such chart, since restricting its columns to the D block would give
+one for D. Meanwhile U and U′ have the same full Q and the same allowed
+marked response, and their global groups are C3 and trivial respectively.
+
+Source: a labelled determinant chart on U. Target: the actual neutral leaf
+replacement to U′. Preserved predicate: full-Q and protected-port responses.
+Destroyed predicate: rank-two 3-adic representability. Needed additional
+data: the internal tournament module, not merely the ternary address
+valuation. The decisive obstruction is the inherited D subgraph. This
+is a concrete reason a chart-only inverse cannot be assumed closed under
+our repair. A higher-dimensional or module-decorated chart is a new
+question, not an established universal construction.

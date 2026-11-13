@@ -165,12 +165,17 @@
     "staged_diff_check": "git diff --cached --check passed before first checkpoint; final diff checked separately before integration."
   },
   "relative_links": {
-    "count": 75,
+    "count": 80,
     "status": "PASS",
     "missing": []
   },
   "history_manifest": {
     "status": "PASS",
     "files": 8
+  },
+  "late_review": {
+    "rigidity_boundary": "Restored |T_seed|>1 in generalized incoming statement; W(TT1)=C3 is the minimal hostile. Original theorem and actual families unchanged.",
+    "incoming_correction": "HYP-9678(A) is REFUTED at order10; narrower conjectures remain OPEN.",
+    "geometric_corollary": "Explicit 24-column chart b+3x_i for C3[B,B,B]; obstruction in the D leaf inherited from Session312, not recounted."
   }
 }
