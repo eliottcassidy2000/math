@@ -1,0 +1,25 @@
+{
+  "abstract_residue_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    9
+  ],
+  "order8_polynomial_multiplicities": {
+    "(22, 76, 36)": 2,
+    "(34, 214, 210)": 8,
+    "(34, 232, 246)": 2,
+    "(40, 292, 288)": 2
+  },
+  "cyclic_three_copies": {
+    "H": 163567386770762025,
+    "gcds": [
+      6561,
+      6561
+    ]
+  },
+  "checks": "pass"
+}

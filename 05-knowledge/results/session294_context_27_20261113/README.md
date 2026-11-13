@@ -142,3 +142,9 @@ context, so this is not a coverage proof.
 
 Arithmetic and order-seven proof independently reviewed. The order-eight
 class claim uses the completeness of the inherited Session24 catalog.
+
+## Reproduction
+
+- From the repository root: `python 05-knowledge/results/session294_context_27_20261113/scan.py .` replays the complete inherited order 7/8 class scan (`scan.json`).
+- `g++ -std=c++14 -O3 05-knowledge/results/session294_context_27_20261113/order7.cpp -o /tmp/context27-order7 && /tmp/context27-order7` produces `order7.txt` without depending on the class catalog.
+- `python 05-knowledge/results/session294_context_27_20261113/checks.py` replays the residue, graph, composition and mixed-block controls (`checks.json`).
