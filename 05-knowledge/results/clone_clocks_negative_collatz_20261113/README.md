@@ -45,7 +45,10 @@ Session 197 (minimum ternary clock 60, run expansion, matching bound), Session 2
 excursion-factorial filtration, the path-bin calculus (P, E, S), the six-state funnel compiler
 (berggren_target_return §3; reimplemented and checked against brute force here, `scripts/funnel.py`), the 881 fibre
 and finite-atlas theorems (Session 296, mrb_seven_cutoffs), the multicore F3 chain and inflation exclusions,
-MODULE_RETURN, the same-night H17 exact-repair packet, and HYP-9339 (2–3 axis).
+MODULE_RETURN, the same-night H17 exact-repair packet, HYP-9339 (2–3 axis), and the dyadic-pair template census
+(kind-pasteur S21 `modfam.c`, mac-mini dyadic_cones). That census covers modules visited at most twice; the two-clocks
+here are its ternary-by-dyadic continuation. Concurrent changing-core, growing-t, ternary-grammar and surplus work is
+mapped in [INCOMING](INCOMING.md).
 
 Concept board at close: exact clone clocks / anchor sign / unit coefficient `c_{11}` / Collatz exchange rates /
 readiness. The decisive next test is a single two-module table with `c_{11}=−1` and ternary shape (it refutes
