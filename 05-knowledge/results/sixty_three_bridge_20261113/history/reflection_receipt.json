@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "universe": "all endpoint-normalized binary words of lengths2..8; familyb1..4; literal63NR",
+  "allword_controls": 127,
+  "defect_zero_to_one_controls": 32,
+  "feedback_rank_controls_all_labelled_orders1_to4": 285,
+  "family": [
+    {
+      "b": 1,
+      "word": "10100",
+      "before": [
+        19,
+        5,
+        5,
+        19
+      ],
+      "after": [
+        19,
+        8,
+        9,
+        20
+      ]
+    },
+    {
+      "b": 2,
+      "word": "1001100",
+      "before": [
+        63,
+        11,
+        11,
+        63
+      ],
+      "after": [
+        63,
+        24,
+        25,
+        64
+      ]
+    },
+    {
+      "b": 3,
+      "word": "100011100",
+      "before": [
+        223,
+        23,
+        23,
+        223
+      ],
+      "after": [
+        223,
+        80,
+        81,
+        224
+      ]
+    },
+    {
+      "b": 4,
+      "word": "10000111100",
+      "before": [
+        831,
+        47,
+        47,
+        831
+      ],
+      "after": [
+        831,
+        288,
+        289,
+        832
+      ]
+    }
+  ],
+  "hostile": {
+    "word": "1010",
+    "state": [
+      9,
+      3,
+      3,
+      9
+    ]
+  },
+  "literal_NR": {
+    "rows": [
+      16,
+      5,
+      1,
+      23,
+      198,
+      31,
+      431,
+      47,
+      703,
+      255
+    ],
+    "root": 8,
+    "state": [
+      191,
+      63,
+      63,
+      191
+    ]
+  }
+}

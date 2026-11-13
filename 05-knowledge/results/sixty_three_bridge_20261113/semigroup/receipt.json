@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "counts": {
+    "atom_checks": 501,
+    "closure_pairs": 3136,
+    "conductor_products": 5454,
+    "square_cube_inputs": 501,
+    "localization_numerators": 1414,
+    "activation_inputs": 67,
+    "subadditivity_pairs": 4489,
+    "activation_addresses": 216
+  },
+  "scope": "Arithmetic controls only; no tournament census and no claim that S_E is an actual tournament spectrum.",
+  "infinite_countermodel": "E={p,7p:p prime>13}; S_E=positive odds minus {7,21} minus E",
+  "named_missing": [
+    7,
+    17,
+    19,
+    21,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71,
+    73,
+    79,
+    83,
+    89,
+    97,
+    101,
+    103,
+    107,
+    109,
+    113,
+    119,
+    127
+  ],
+  "activation_ideal": {
+    "base": 7,
+    "multipliers": [
+      3,
+      5,
+      49
+    ],
+    "minimal_addresses": [
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "source_values": [
+      63,
+      35,
+      343
+    ],
+    "examples": [
+      {
+        "address": [
+          0,
+          0,
+          0
+        ],
+        "value": 7,
+        "active": false,
+        "ordinal_factors": null
+      },
+      {
+        "address": [
+          0,
+          0,
+          1
+        ],
+        "value": 343,
+        "active": true,
+        "ordinal_factors": [
+          343
+        ]
+      },
+      {
+        "address": [
+          0,
+          1,
+          0
+        ],
+        "value": 35,
+        "active": true,
+        "ordinal_factors": [
+          35
+        ]
+      },
+      {
+        "address": [
+          1,
+          0,
+          0
+        ],
+        "value": 21,
+        "active": false,
+        "ordinal_factors": null
+      },
+      {
+        "address": [
+          2,
+          0,
+          0
+        ],
+        "value": 63,
+        "active": true,
+        "ordinal_factors": [
+          63
+        ]
+      },
+      {
+        "address": [
+          2,
+          2,
+          1
+        ],
+        "value": 77175,
+        "active": true,
+        "ordinal_factors": [
+          35,
+          3,
+          3,
+          5,
+          49
+        ]
+      }
+    ]
+  },
+  "controls": {
+    "known_holes": [
+      7,
+      21
+    ],
+    "first_ternary_activation": [
+      7,
+      21,
+      63
+    ],
+    "removed_ordinary_atom": {
+      "value": 17,
+      "first_activation": 51
+    },
+    "removed_seven_prime_atom": {
+      "value": 119,
+      "first_activation": 357
+    },
+    "conductor_multipliers": [
+      9,
+      49
+    ]
+  },
+  "inherited_source": "THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md; Session193 prime_induction/PROOF.md"
+}

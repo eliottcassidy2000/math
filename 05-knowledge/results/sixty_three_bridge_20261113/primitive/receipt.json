@@ -1,0 +1,517 @@
+{
+  "inherited_ref": "d0b91cae1d58fc72140f14e305a054c9d22d29c5",
+  "scope": "six named module controls, exact rooted graphs through order13; residue controls through7^4",
+  "core63": {
+    "rows": [
+      126,
+      252,
+      248,
+      112,
+      96,
+      192,
+      128,
+      25
+    ],
+    "apex": 7,
+    "blocks": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ]
+  },
+  "controls": [
+    {
+      "module": "TT1",
+      "module_rows": [
+        0
+      ],
+      "h": 1,
+      "p2": 2,
+      "trace": [
+        {
+          "command": "source",
+          "root": 6,
+          "state": [
+            37,
+            1,
+            1,
+            51
+          ]
+        },
+        {
+          "command": "N",
+          "root": 7,
+          "state": [
+            87,
+            36,
+            37,
+            88
+          ]
+        },
+        {
+          "command": "N",
+          "root": 8,
+          "state": [
+            139,
+            51,
+            87,
+            175
+          ]
+        },
+        {
+          "command": "R",
+          "root": 8,
+          "state": [
+            263,
+            87,
+            87,
+            263
+          ]
+        }
+      ],
+      "final_rows": [
+        62,
+        124,
+        56,
+        48,
+        96,
+        64,
+        141,
+        319,
+        639,
+        255
+      ]
+    },
+    {
+      "module": "TT2",
+      "module_rows": [
+        2,
+        0
+      ],
+      "h": 1,
+      "p2": 4,
+      "trace": [
+        {
+          "command": "source",
+          "root": 7,
+          "state": [
+            63,
+            1,
+            1,
+            103
+          ]
+        },
+        {
+          "command": "N",
+          "root": 8,
+          "state": [
+            165,
+            62,
+            63,
+            166
+          ]
+        },
+        {
+          "command": "N",
+          "root": 9,
+          "state": [
+            269,
+            103,
+            165,
+            331
+          ]
+        },
+        {
+          "command": "R",
+          "root": 9,
+          "state": [
+            497,
+            165,
+            165,
+            497
+          ]
+        }
+      ],
+      "final_rows": [
+        126,
+        252,
+        248,
+        112,
+        96,
+        192,
+        128,
+        281,
+        639,
+        1279,
+        511
+      ]
+    },
+    {
+      "module": "TT3",
+      "module_rows": [
+        6,
+        4,
+        0
+      ],
+      "h": 1,
+      "p2": 8,
+      "trace": [
+        {
+          "command": "source",
+          "root": 8,
+          "state": [
+            115,
+            1,
+            1,
+            207
+          ]
+        },
+        {
+          "command": "N",
+          "root": 9,
+          "state": [
+            321,
+            114,
+            115,
+            322
+          ]
+        },
+        {
+          "command": "N",
+          "root": 10,
+          "state": [
+            529,
+            207,
+            321,
+            643
+          ]
+        },
+        {
+          "command": "R",
+          "root": 10,
+          "state": [
+            965,
+            321,
+            321,
+            965
+          ]
+        }
+      ],
+      "final_rows": [
+        254,
+        508,
+        504,
+        496,
+        224,
+        192,
+        384,
+        256,
+        561,
+        1279,
+        2559,
+        1023
+      ]
+    },
+    {
+      "module": "TT4",
+      "module_rows": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "h": 1,
+      "p2": 16,
+      "trace": [
+        {
+          "command": "source",
+          "root": 9,
+          "state": [
+            219,
+            1,
+            1,
+            415
+          ]
+        },
+        {
+          "command": "N",
+          "root": 10,
+          "state": [
+            633,
+            218,
+            219,
+            634
+          ]
+        },
+        {
+          "command": "N",
+          "root": 11,
+          "state": [
+            1049,
+            415,
+            633,
+            1267
+          ]
+        },
+        {
+          "command": "R",
+          "root": 11,
+          "state": [
+            1901,
+            633,
+            633,
+            1901
+          ]
+        }
+      ],
+      "final_rows": [
+        510,
+        1020,
+        1016,
+        1008,
+        992,
+        448,
+        384,
+        768,
+        512,
+        1121,
+        2559,
+        5119,
+        2047
+      ]
+    },
+    {
+      "module": "C3",
+      "module_rows": [
+        2,
+        4,
+        1
+      ],
+      "h": 3,
+      "p2": 12,
+      "trace": [
+        {
+          "command": "source",
+          "root": 8,
+          "state": [
+            189,
+            3,
+            3,
+            309
+          ]
+        },
+        {
+          "command": "N",
+          "root": 9,
+          "state": [
+            495,
+            186,
+            189,
+            498
+          ]
+        },
+        {
+          "command": "N",
+          "root": 10,
+          "state": [
+            807,
+            309,
+            495,
+            993
+          ]
+        },
+        {
+          "command": "R",
+          "root": 10,
+          "state": [
+            1491,
+            495,
+            495,
+            1491
+          ]
+        }
+      ],
+      "final_rows": [
+        254,
+        500,
+        504,
+        498,
+        224,
+        192,
+        384,
+        256,
+        561,
+        1279,
+        2559,
+        1023
+      ]
+    },
+    {
+      "module": "Q4",
+      "module_rows": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "h": 5,
+      "p2": 32,
+      "trace": [
+        {
+          "command": "source",
+          "root": 9,
+          "state": [
+            471,
+            5,
+            5,
+            827
+          ]
+        },
+        {
+          "command": "N",
+          "root": 10,
+          "state": [
+            1293,
+            466,
+            471,
+            1298
+          ]
+        },
+        {
+          "command": "N",
+          "root": 11,
+          "state": [
+            2125,
+            827,
+            1293,
+            2591
+          ]
+        },
+        {
+          "command": "R",
+          "root": 11,
+          "state": [
+            3889,
+            1293,
+            1293,
+            3889
+          ]
+        }
+      ],
+      "final_rows": [
+        510,
+        996,
+        1000,
+        1010,
+        998,
+        448,
+        384,
+        768,
+        512,
+        1121,
+        2559,
+        5119,
+        2047
+      ]
+    }
+  ],
+  "tail_growth_embeddings": [
+    {
+      "old_module_order": 1,
+      "new_vertex": 2,
+      "old_vertex_embedding": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "retained_root": [
+        8,
+        9
+      ]
+    },
+    {
+      "old_module_order": 2,
+      "new_vertex": 3,
+      "old_vertex_embedding": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "retained_root": [
+        9,
+        10
+      ]
+    },
+    {
+      "old_module_order": 3,
+      "new_vertex": 4,
+      "old_vertex_embedding": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "retained_root": [
+        10,
+        11
+      ]
+    }
+  ],
+  "seven_adic_controls": [
+    {
+      "exponent": 1,
+      "modulus": 7,
+      "distinct": 7
+    },
+    {
+      "exponent": 2,
+      "modulus": 49,
+      "distinct": 49
+    },
+    {
+      "exponent": 3,
+      "modulus": 343,
+      "distinct": 343
+    },
+    {
+      "exponent": 4,
+      "modulus": 2401,
+      "distinct": 2401
+    }
+  ]
+}
