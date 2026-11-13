@@ -15,6 +15,7 @@ PAIRS=[('closure/normal.out','closure/optimized.out'),
  ('bridges/check.normal.json','bridges/check.optimized.json'),
  ('audit/normal.json','audit/optimized.json'),
  ('audit/anchors.normal.json','audit/anchors.optimized.json'),
+ ('audit/f8.normal.json','audit/f8.optimized.json'),
  ('closure/signed_review.normal.json','closure/signed_review.optimized.json'),
  ('audit_closure/normal.json','audit_closure/optimized.json'),
  ('audit_closure/root_anchors.normal.json','audit_closure/root_anchors.optimized.json'),
@@ -39,6 +40,7 @@ def main():
  promoted = dict(read('PROMOTIONS.json')['files'])
  promoted.update(read('BLACK_PROMOTION.json')['files'])
  promoted.update(read('SHADOW_PROMOTION.json')['files'])
+ promoted.update(read('F8_PROMOTION.json')['files'])
  for name,row in promoted.items():
   text=(P/name).read_text();need(digest(text.encode())==row['after_sha256'],'promoted bytes '+name)
   for edit in reversed(row['edits']):
@@ -64,6 +66,7 @@ def main():
  bound('closure/analysis.json',read('audit/anchors.normal.json')['claims_sha256'])
  bound('closure/analyze.py',read('closure/analysis.json')['source_sha256'])
  bound('closure/data.json',read('pairings/normal.json')['producer_sha256'])
+ bound('audit/f8_action.py',read('audit/f8.normal.json')['source_sha256'])
  bound('closure/check_black.py',read('closure/black.normal.json')['source_sha256'])
  bound('closure/data.json',read('closure/black.normal.json')['data_sha256'])
  pv=read('audit_bridges/promotion_verification.json')
@@ -94,5 +97,5 @@ def main():
    else:
     need(target.is_relative_to(REPO),'escaping link '+link)
     need(target.relative_to(REPO).as_posix() in pins,'unpinned external reference '+link)
- print('PASS: closed manifest, reversible proof promotions, 12 receipt pairs, input/code/review bindings and historical source pins.')
+ print('PASS: closed manifest, reversible proof promotions, 13 receipt pairs, input/code/review bindings and historical source pins.')
 if __name__=='__main__':main()

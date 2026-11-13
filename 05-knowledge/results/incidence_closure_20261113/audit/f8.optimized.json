@@ -1,0 +1,35 @@
+{
+  "checks": 5320,
+  "evaluation_quotient_hostile": {
+    "cross_orientation_counts": [
+      8,
+      1
+    ],
+    "same_fibre": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "target": [
+      1,
+      1
+    ]
+  },
+  "field_elements": 8,
+  "field_modulus_bits": 11,
+  "frobenius_exponents": [
+    1,
+    2,
+    4
+  ],
+  "group_elements": 21,
+  "nonzero_points": 7,
+  "primitive_element_bits": 2,
+  "source_sha256": "4292f81a4df90f47841a60b5759db39769360643d9993c377d774ca67024b6fd",
+  "status": "PASS; complete finite action, not an arithmetic conjecture"
+}

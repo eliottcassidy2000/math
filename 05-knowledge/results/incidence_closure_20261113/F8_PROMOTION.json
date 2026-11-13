@@ -1,0 +1,15 @@
+{
+  "files": {
+    "F8_ACTION.md": {
+      "after_sha256": "4d0795e13a02816be62f2c9def1c047d2f06d9c6636732426e915b769874e93a",
+      "before_sha256": "e7d46d431635e8d1d6c4d46bb7d5ec752e65eb1001c0464784b891b572889416",
+      "edits": [
+        {
+          "count": 1,
+          "new": "**Status: PROVED IN NOTES after independent review; see [review](audit/F8_REVIEW.md).**",
+          "old": "**Status: RESERVED / elementary bridge pending independent review.**"
+        }
+      ]
+    }
+  }
+}

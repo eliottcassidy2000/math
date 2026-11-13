@@ -5,8 +5,8 @@
       "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
     },
     "AUDIT.md": {
-      "bytes": 8418,
-      "sha256": "0d219f69e3efcc979058be19ae7cb8fba49dc0c2d7d8c05bbad7f08c208cb898"
+      "bytes": 8649,
+      "sha256": "a501b70712e9474ad597c7123d86816d7fd58bb805b6bc307a833c5b16d1d3ce"
     },
     "BLACK_PROMOTION.json": {
       "bytes": 508,
@@ -19,6 +19,14 @@
     "CLIFFORD_BOUNDARY.md": {
       "bytes": 4327,
       "sha256": "6615b63e6e7c1bb692facbe99ade8a925b96cebb963ecdd8305d56f13ca7fa10"
+    },
+    "F8_ACTION.md": {
+      "bytes": 3523,
+      "sha256": "4d0795e13a02816be62f2c9def1c047d2f06d9c6636732426e915b769874e93a"
+    },
+    "F8_PROMOTION.json": {
+      "bytes": 493,
+      "sha256": "908ec5543e0f6c2cf0a1f6464a8b22bffaefbdf67acb98c88a4c50b3a5c2e449"
     },
     "INCOMING_RECONCILIATION.md": {
       "bytes": 3910,
@@ -37,8 +45,8 @@
       "sha256": "dbccf7ced4fe064dbe908d196ebdf507542018b2c8acf74ff57fdcc84db1a898"
     },
     "README.md": {
-      "bytes": 9292,
-      "sha256": "3f0360d4fcf83b426b482fb473365929e6206e676d84281bd9cba654e5cf44cc"
+      "bytes": 9816,
+      "sha256": "a56c14c4989406be539b95f298d1b1efd2a1d25fd26f15017d9bd795a4646833"
     },
     "ROOT_OBSERVERS.md": {
       "bytes": 5300,
@@ -51,6 +59,10 @@
     "SOURCE_PINS.json": {
       "bytes": 14804,
       "sha256": "920c01cd03a707852aed6fc251ceb2ddf51be51a61757b8965d6130b36ac3418"
+    },
+    "audit/F8_REVIEW.md": {
+      "bytes": 1109,
+      "sha256": "1336441014da1b447c96f3f0c8bf95ae7d8c38b959f4d31a7a422ae81ada4cd2"
     },
     "audit/JOINT_SHADOW_REVIEW.md": {
       "bytes": 1270,
@@ -67,6 +79,18 @@
     "audit/anchors.py": {
       "bytes": 4395,
       "sha256": "1cadc0b12e072a0cecc18cdfa19e52aed438708bd3b5ac50295cde59395c2609"
+    },
+    "audit/f8.normal.json": {
+      "bytes": 602,
+      "sha256": "31ea2f994c0a372d55b32f815a30651dfcc320d83299bd7902fa21881f8129ce"
+    },
+    "audit/f8.optimized.json": {
+      "bytes": 602,
+      "sha256": "31ea2f994c0a372d55b32f815a30651dfcc320d83299bd7902fa21881f8129ce"
+    },
+    "audit/f8_action.py": {
+      "bytes": 2229,
+      "sha256": "4292f81a4df90f47841a60b5759db39769360643d9993c377d774ca67024b6fd"
     },
     "audit/independent.py": {
       "bytes": 6781,
@@ -313,8 +337,8 @@
       "sha256": "2415033baad4c940db3b76dfe06e4f6c5ab2ed414e3de6b6f9e62761701f321e"
     },
     "verify_packet.py": {
-      "bytes": 5834,
-      "sha256": "20656c922e002d2222de553feb5aba5a3d740417ceade93ce472a21cbede7cc7"
+      "bytes": 6015,
+      "sha256": "03d28b215c0c655e2bba3bcec0d098e7db37128dcf8f7f3c33776b9f7de2bef3"
     }
   },
   "status": "closed publication inventory excluding generated scratch/cache"

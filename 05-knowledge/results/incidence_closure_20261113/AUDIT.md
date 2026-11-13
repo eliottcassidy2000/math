@@ -136,3 +136,7 @@ all-k corollary combining the incoming 21-vertex core with full-Q ordinal
 multiplicativity. The root replayed the core certificate normally and with -O.
 SHADOW_PROMOTION.json records its status-only promotion; no core Hamilton-path
 census or all-order native-incidence claim is made.
+
+The [F8 action review](audit/F8_REVIEW.md) independently checks the algebraic
+map and replays all 5,320 finite gates in both Python modes, including the
+failed seven-point quotient. F8_PROMOTION.json retains the status-only edit.

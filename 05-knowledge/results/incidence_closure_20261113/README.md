@@ -157,6 +157,14 @@ is at order22. These outputs are nonstrong. This is an all-scale obstruction
 to that proposed richer observer, not to the separate native class-incidence
 matrix or the finite anchor result.
 
+The [F8 action bridge](F8_ACTION.md) identifies that 21-vertex Cayley core's
+group as GammaL_1(F8), acting by x->theta^a x^(2^b). The 1-2-4 cycle is
+literally Frobenius. Evaluation at1 forgets the ternary phase and does not
+produce a seven-point tournament quotient: one pair of fibres has eight arcs
+one way and one the other. Retaining the phase restores the group element
+and Cayley orientation. This is an exact finite-field map and obstruction,
+with no inference about Hamiltonian counts7/21, abc or prime infinitude.
+
 The next sharp tests are whether signed support stays connected at higher orders,
 whether full-Q stable closure ever ceases to be discrete, and whether an inter-order
 constructor transports the signed matrix and joint terminal response without
