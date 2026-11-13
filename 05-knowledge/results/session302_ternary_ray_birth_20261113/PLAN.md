@@ -1,0 +1,3 @@
+# The ternary ray birth test
+
+Session 302 compares the globally excluded counts 7 and 21 with the first strong witnesses for 63. The research question is not whether arbitrarily many factors of 3 occur, but whether we can hold the 3-free part fixed while changing the valuation using legal, ready operations. We compare first-born cores, weighted inversion boards, ordinal triangle multiplication, context divisibility, and exact-ray intersections. No conjectural coverage is assumed.
