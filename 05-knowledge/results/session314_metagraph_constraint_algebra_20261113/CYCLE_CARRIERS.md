@@ -1,0 +1,34 @@
+# Cyclic ports: an exact carrier and a divisor generating polynomial
+
+Use the path-reversal convention of [THM-4729](../../../01-canon/theorems/THM-4729-closed-and-open-tilings-hamiltonian-cycle-bipartition-of-the-metagraph-lines-and-the-forced-arrangement.md). Every line has exactly one closed endpoint (its chosen Hamilton path closes to a directed Hamilton cycle) and one open endpoint. [THM-4730](../../../01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md) uses reflections of a Hamilton cycle in the pure-blue case. Here retain a cycle as an explicit carrier for arbitrary classes.
+
+Fix a directed Hamilton cycle C of T. A cut at edge e gives a path containing all other cycle edges. Its line partner is T with all cycle edges other than e reversed, so open partners for cuts e and f differ by reversing exactly e and f, with the same off-cycle arcs. Thus a cycle orbit presents one group of related actual lines, not merely a count of them. Let a be the order of its cycle stabilizer in Aut(T). This stabilizer acts by rotations (freely on cycle edges), so a is odd and divides n. There are exactly g=n/a distinct seam ports of C up to that stabilizer. Modulo Aut(T), each closed half-edge belongs to exactly one such cycle-orbit carrier.
+
+A blue seam e is precisely an edge fixed by a reflection of C that reverses T. The reflections that reverse T form a coset of the cycle stabilizer if nonempty. No edge is fixed by two such reflections, because their product would be a nonidentity rotation fixing an edge. At odd order each reflection fixes exactly one edge, so a carrier has one blue seam if the coset exists and zero otherwise. At even order a reflection with two fixed vertices cannot reverse their arc. Consequently every allowable reflection has an edge-axis, fixing two edges, and a carrier with a coset has two blue seams after dividing by a. Without the coset it has zero.
+
+The triangle flux on a seam is the inherited [THM-785](../../../01-canon/theorems/THM-785-cyclic-triangle-flow-on-blue-black-metagraph.md) quantity s(start)−s(end)−1. Summing across all n cuts telescopes and gives −n. Quotient by the freely rotating stabilizer to get total −g. In particular every strong node has a strictly triangle-decreasing edge, using any directed Hamilton cycle. Conversely for a nonstrong tournament every Hamilton path starts in the first SCC and ends in the last. The score difference is at least 1, and strictly greater than 1 when n≥3: any middle vertex adds one to the gap, a nonsingleton first component gives the start an internal win, and a nonsingleton last component gives the end an internal loss. The equality case could only be two singleton components. Thus nonstrong nodes are exactly the strict local minima of the triangle count (not necessarily global minima, and this alone does not prove connectivity).
+
+## Divisor inventories, including reflection type
+
+Put the cycle vertices on Z_n in their directed order. For n=2m+1 odd, freely encode orientations by rows x_{d,i} for distances d=2,...,m: x_{d,i}=1 iff i→i+d. The row d=1 is pinned forward. For even n=2m use the independent ordinary rows d=2,...,m−1 and the antipodal row x_{m,i+m}=1−x_{m,i}. Thus n=3 and n=4 are included without additional free ordinary rows.
+
+For any divisor g of n let F(g) be the number of words whose rows are periodic with period dividing g. Then
+
+    odd n:     F(g)=2^[g(m−1)]
+    even n:    F(g)=0 if g divides m, else 2^[g(m−2)+g/2].
+
+The antipodal case is empty if period g forces x_{i+m}=x_i; otherwise i↦i+m induces the shift by g/2 on residues modulo g, so contributes g/2 free bits. Let E(g)=sum_(d|g) μ(g/d)F(d). This is the exact period-g count, hence E(g)/g cyclic carriers before merging converse.
+
+Reflection k:i↦k−i, accompanied by converse, fixes a word exactly when x_{d,i}=x_{d,k−i−d}. In an ordinary row of period dividing g the number of free bits is (g+f_d)/2, where f_d is the number of solutions of 2i=k−d mod g. In the antipodal row, if g divides m there is still no solution. Otherwise put J(i)=i+g/2 and R(i)=k−i−m on Z_g. They commute; J complements the bit and R preserves it. If k is even, RJ has a fixed point and the system is inconsistent. If k is odd, neither J nor RJ has fixed points, hence each orbit of <J,R> contributes one free bit; its orbit count by Burnside is (g+f_m)/4. This gives a closed formula F_k(g) by adding the ordinary-row exponents and the antipodal exponent where applicable; inconsistent cases are zero.
+
+Let E_k(g)=sum_(d|g) μ(g/d)F_k(d). For a cyclic carrier that admits a reflection, the g words in its rotation orbit each have n/g allowable reflections, so exactly n pairs (word, reflection k) occur. Therefore B(g)=(1/n)sum_(k=0)^(n−1) E_k(g) counts the period-g ordinary carriers admitting a reflection. The remaining ordinary carriers occur in converse pairs. In particular the polynomial
+
+    C_n(z,w) = Σ_(g|n) z^g [ (E(g)/g − B(g))/2 + B(g) w ]
+
+counts merged cyclic carriers by number g of closed seams for one representative cycle and records the reflection-admitting ones. For ordinary carriers omit the factor 1/2 in the first term. When counting actual directed half-edges in the merged metagraph, give a non-reflective merged carrier twice its ordinary seam count because both ordinary carriers' presentations persist, even if the underlying tournament class itself is self-converse. This is a clean divisor recurrence at the carrier level, not a substitute for the node identification or arbitrary edge entries.
+
+The closed-seam blue contribution from each reflective carrier is 1 for odd n, 2 for even n. These sum to the known aggregate closed-blue count; the refinement says exactly how the aggregate breaks up by carrier period. The full class edge recurrence in the companion note supplies the endpoint identifications; the cycle portfolio retains why certain lines come in rotation-correlated groups rather than treating them as independent.
+
+The reflection sum can be removed. For odd n every g is odd, so each ordinary row has f_d=1, and all k give the same F_k(g)=2^[(m−1)(g+1)/2]; hence B(g)=E_0(g). For even n, all even k are forbidden, all odd k have the same counts, and B(g)=E_1(g)/2. In the consistent even case the ordinary-row contributions simplify with the antipodal one to exponent g(2m−3)/4+(m−2)/2: there are floor(m/2)−1 odd distances in 2,...,m−1, and the antipodal f_m is two exactly when m is odd. This only reflects the residue constraints of the cycle coordinates; it does not imply any Bott period for the full metagraph.
+
+The companion [Python replay](cycle_replay.py) compares each exact period/reflection coefficient with direct cyclic-word enumeration through order seven, checking integrality of all orbit quotients and the aggregate closed-blue identity. At orders 3,4,5,6,7 the ordinary carrier counts are 1,1,8,88,2344 and the reflective carrier counts are 1,1,8,16,256.
