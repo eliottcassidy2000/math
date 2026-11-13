@@ -1,0 +1,16 @@
+n=10 maxb=5 part 0/8: tern=3138 gen=1631 two=0
+n=10 maxb=5 part 1/8: tern=2992 gen=1573 two=0
+n=10 maxb=5 part 2/8: tern=2921 gen=1674 two=0
+n=10 maxb=5 part 3/8: tern=2943 gen=1633 two=0
+n=10 maxb=5 part 4/8: tern=3085 gen=1548 two=0
+n=10 maxb=5 part 5/8: tern=3017 gen=1598 two=0
+n=10 maxb=5 part 6/8: tern=3033 gen=1607 two=0
+n=10 maxb=5 part 7/8: tern=3081 gen=1678 two=0
+n=11 maxb=4 part 0/8: tern=645 gen=496 two=0
+n=11 maxb=4 part 1/8: tern=625 gen=541 two=0
+n=11 maxb=4 part 2/8: tern=625 gen=471 two=0
+n=11 maxb=4 part 3/8: tern=656 gen=495 two=0
+n=11 maxb=4 part 4/8: tern=625 gen=499 two=0
+n=11 maxb=4 part 5/8: tern=661 gen=503 two=0
+n=11 maxb=4 part 6/8: tern=661 gen=528 two=0
+n=11 maxb=4 part 7/8: tern=689 gen=583 two=0
