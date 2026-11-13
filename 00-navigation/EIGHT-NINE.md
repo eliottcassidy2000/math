@@ -10,6 +10,14 @@ excursions. Arithmetic target tree is explicit; pure-birth lift is
 refuted by the complete ordinary count-containment table through73.
 Global numerical coverage remains OPEN.
 
+[Spanning trees and exact count growth](../05-knowledge/results/spanning_tree_fill_20261113/README.md):
+complete descent for the explicitly enlarged Collatz graph with all genuine
+reverse edges and the extra odd inverse; peak12n+4 and a macro tree at every
+integer birth. Exact permanent-port padding forests, constant eventual
+unit-ready multiplicity and a neutral H3 preparation switching17↔29.
+Tail-marked tree extraction retains Hamilton occupancy. The four-rule target
+tree still lacks a universal physical lift;13→27 cannot be pure birth.
+
 [Growing t and multi-birth repairs](../05-knowledge/results/growing_t_returns_20261113/README.md):
 actual881 ->1691 ->3311 ->6551 unit-ready target chain; a separate growing-t
 module family with an explicit positive offset cost; exact minimum and all

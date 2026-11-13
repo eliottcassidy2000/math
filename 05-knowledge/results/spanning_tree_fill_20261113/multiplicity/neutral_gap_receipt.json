@@ -1,0 +1,148 @@
+{
+  "status": "PASS",
+  "scope": "Five specified nonempty cores, selected entry sets, epsilon0/1, seven specified suffixes; literal full-state controls",
+  "cores": [
+    [
+      0
+    ],
+    [
+      6,
+      4,
+      0
+    ],
+    [
+      2,
+      4,
+      1
+    ],
+    [
+      2,
+      4,
+      9,
+      3
+    ],
+    [
+      22,
+      8,
+      2,
+      5,
+      14
+    ]
+  ],
+  "suffixes": [
+    [],
+    [
+      0
+    ],
+    [
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1
+    ]
+  ],
+  "full_state_controls": 308,
+  "examples": [
+    {
+      "core": [
+        2,
+        4,
+        1
+      ],
+      "J": [
+        0
+      ],
+      "epsilon": 1,
+      "word": [
+        1
+      ],
+      "post_rows": [
+        26,
+        60,
+        57,
+        16,
+        32,
+        9
+      ],
+      "pre_rows": [
+        18,
+        52,
+        49,
+        23,
+        32,
+        9
+      ],
+      "post_profile": [
+        17,
+        1,
+        3,
+        33
+      ],
+      "pre_profile": [
+        29,
+        3,
+        3,
+        39
+      ],
+      "change": [
+        12,
+        2,
+        0,
+        6
+      ],
+      "retained_u_profile": [
+        29,
+        8,
+        9,
+        30
+      ]
+    }
+  ],
+  "difference_inverse_examples": [
+    {
+      "desired_difference": 8,
+      "addresses": [
+        0
+      ]
+    },
+    {
+      "desired_difference": 12,
+      "addresses": [
+        1
+      ]
+    },
+    {
+      "desired_difference": 20,
+      "addresses": [
+        2
+      ]
+    },
+    {
+      "desired_difference": 24,
+      "addresses": [
+        3
+      ]
+    },
+    {
+      "desired_difference": 48,
+      "addresses": [
+        7
+      ]
+    }
+  ]
+}

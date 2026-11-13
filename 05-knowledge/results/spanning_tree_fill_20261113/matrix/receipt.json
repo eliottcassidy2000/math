@@ -1,0 +1,435 @@
+{
+  "status": "PASS",
+  "universe": "All labelled tournaments n1..5 and every loopless directed graph n1..3, plus named controls; loops excluded, digons allowed in general class",
+  "counts": {
+    "tournaments": 1099,
+    "general_digraphs": 69,
+    "rooted_tree_checks": 5606,
+    "growth_checks": 1166,
+    "edge_change_checks": 802,
+    "mobius_endpoint_checks": 674,
+    "birth_coefficient_checks": 1099
+  },
+  "examples": {
+    "TT4": {
+      "A": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "H": 1,
+      "walks_n_minus_1": 1,
+      "walks_n": 0,
+      "out_arborescences": 6,
+      "root0_tail_cofactor_squarefree": {
+        "7": 1
+      },
+      "root0_head_cofactor": {
+        "14": 6
+      }
+    },
+    "C3_then_sink": {
+      "A": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "H": 3,
+      "walks_n_minus_1": 6,
+      "walks_n": 6,
+      "out_arborescences": 9,
+      "root0_tail_cofactor_squarefree": {
+        "7": 1
+      },
+      "root0_head_cofactor": {
+        "14": 3
+      }
+    },
+    "C3_plus_two_isolates": {
+      "A": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "H": 0,
+      "walks_n_minus_1": 3,
+      "walks_n": 3,
+      "out_arborescences": 0,
+      "root0_tail_cofactor_squarefree": {},
+      "root0_head_cofactor": {}
+    },
+    "out_star3": {
+      "A": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "H": 0,
+      "walks_n_minus_1": 0,
+      "walks_n": 0,
+      "out_arborescences": 1,
+      "root0_tail_cofactor_squarefree": {},
+      "root0_head_cofactor": {
+        "6": 1
+      }
+    },
+    "directed_chain3": {
+      "A": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "H": 1,
+      "walks_n_minus_1": 1,
+      "walks_n": 0,
+      "out_arborescences": 1,
+      "root0_tail_cofactor_squarefree": {
+        "3": 1
+      },
+      "root0_head_cofactor": {
+        "6": 1
+      }
+    },
+    "bidirected_edge": {
+      "A": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "H": 2,
+      "walks_n_minus_1": 2,
+      "walks_n": 2,
+      "out_arborescences": 2,
+      "root0_tail_cofactor_squarefree": {
+        "1": 1
+      },
+      "root0_head_cofactor": {
+        "2": 1
+      }
+    },
+    "empty2": {
+      "A": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "H": 0,
+      "walks_n_minus_1": 0,
+      "walks_n": 0,
+      "out_arborescences": 0,
+      "root0_tail_cofactor_squarefree": {},
+      "root0_head_cofactor": {}
+    },
+    "TT3": {
+      "A": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "H": 1,
+      "walks_n_minus_1": 1,
+      "walks_n": 0,
+      "out_arborescences": 2,
+      "root0_tail_cofactor_squarefree": {
+        "3": 1
+      },
+      "root0_head_cofactor": {
+        "6": 2
+      }
+    },
+    "known_one_missing_pair_H7": {
+      "A": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "H": 7,
+      "walks_n_minus_1": 31,
+      "walks_n": 49,
+      "out_arborescences": 30,
+      "root0_tail_cofactor_squarefree": {
+        "29": 1
+      },
+      "root0_head_cofactor": {
+        "30": 6
+      }
+    },
+    "known_one_missing_pair_H21": {
+      "A": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "H": 21,
+      "walks_n_minus_1": 309,
+      "walks_n": 661,
+      "out_arborescences": 204,
+      "root0_tail_cofactor_squarefree": {
+        "61": 1
+      },
+      "root0_head_cofactor": {
+        "62": 36
+      }
+    }
+  },
+  "known_one_defect_controls": [
+    {
+      "name": "known_one_missing_pair_H7",
+      "H": 7,
+      "missing_pair": [
+        0,
+        2
+      ],
+      "completions": [
+        {
+          "added_arc": [
+            0,
+            2
+          ],
+          "H": 9,
+          "added_paths": 2
+        },
+        {
+          "added_arc": [
+            2,
+            0
+          ],
+          "H": 9,
+          "added_paths": 2
+        }
+      ]
+    },
+    {
+      "name": "known_one_missing_pair_H21",
+      "H": 21,
+      "missing_pair": [
+        1,
+        5
+      ],
+      "completions": [
+        {
+          "added_arc": [
+            1,
+            5
+          ],
+          "H": 41,
+          "added_paths": 20
+        },
+        {
+          "added_arc": [
+            5,
+            1
+          ],
+          "H": 23,
+          "added_paths": 2
+        }
+      ]
+    }
+  ],
+  "known_one_defect_source": "05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/out/one_defect_witness.out (THM-5071 (4c), already known)",
+  "independent_paths": [
+    "permutation endpoint counts",
+    "subset dynamic program",
+    "square-zero matrix powers",
+    "square-zero determinant expansion",
+    "parent-function spanning-tree enumeration",
+    "numeric cofactors and Boolean Mobius extraction"
+  ]
+}

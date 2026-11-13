@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "head": 100001,
+  "allowed_targets": 49999,
+  "maximum_depth": 18,
+  "bypasses": [
+    [
+      3,
+      15
+    ],
+    [
+      3,
+      25
+    ],
+    [
+      13,
+      33
+    ],
+    [
+      13,
+      43
+    ],
+    [
+      13,
+      65
+    ]
+  ],
+  "base_witnesses": [
+    {
+      "target": 15,
+      "order": 7,
+      "rows": [
+        122,
+        124,
+        121,
+        48,
+        96,
+        64,
+        8
+      ],
+      "subset_count": 15,
+      "permutation_count": 15
+    },
+    {
+      "target": 25,
+      "order": 8,
+      "rows": [
+        246,
+        252,
+        248,
+        241,
+        96,
+        192,
+        128,
+        16
+      ],
+      "subset_count": 25,
+      "permutation_count": 25
+    },
+    {
+      "target": 33,
+      "order": 7,
+      "rows": [
+        62,
+        124,
+        120,
+        112,
+        96,
+        64,
+        1
+      ],
+      "subset_count": 33,
+      "permutation_count": 33
+    },
+    {
+      "target": 43,
+      "order": 7,
+      "rows": [
+        118,
+        44,
+        120,
+        113,
+        98,
+        64,
+        2
+      ],
+      "subset_count": 43,
+      "permutation_count": 43
+    },
+    {
+      "target": 65,
+      "order": 8,
+      "rows": [
+        126,
+        252,
+        248,
+        240,
+        224,
+        192,
+        128,
+        1
+      ],
+      "subset_count": 65,
+      "permutation_count": 65
+    }
+  ],
+  "inherited43_bank": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/n7_representatives.txt",
+  "inherited_git_ref": "dfaf7c7e88dc",
+  "scope": "Arithmetic tree and five actual bases only; universal tournament lift OPEN"
+}
