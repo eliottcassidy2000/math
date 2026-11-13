@@ -26,6 +26,9 @@ $$
 $$
 This gives the actual stabilizer decomposition even when the exponent alone cannot distinguish it. For an arbitrary leaf coloring the missing child positions still indicate where rotations can survive, but the groups of those subtrees then depend on their colors. A chart flip re-expresses the same marks. It is not a physical recoloring or an edge reversal. This distinction matches the exact [marking-budget result](../session311_recursive_symmetry_20261113/MARKING_BUDGETS.md).
 
+
+The sum of consecutive $l_s$ has an order-free interpretation: it is the maximum spanning-tree weight on the marked addresses with edge weight $w=v_3(p)$. Indeed, at each depth $j\ge1$, a tree has at most $k-a_j$ edges within occupied prefix classes, where $a_j$ is the number of those classes. Its total weight sums these internal-edge counts for $j=1,\dots,d-1$. The path through the lexically sorted marks attains every upper bound, because each prefix class is consecutive. This also gives a greedy rule that does not depend on a chosen digit order: at each step choose a leaf minimizing its maximum $w$ to the current marks. For $0<k<3^d$, if the first $k$ marks have optimal occupancies, put $t=\lfloor\log_3 k\rfloor$. All depth-$t$ classes are occupied and some depth-$(t+1)$ class is empty. The minimizers are exactly the leaves in empty depth-$(t+1)$ classes, and any such choice preserves optimality at every depth. Induction from any first mark proves the rule for arbitrary ties. The exponent drops by exactly $d-1-\max_s w(x,i_s)$ on adding a leaf $x$ to a nonempty set.
+
 ## A boundary even for 3-adic orientation charts
 
 Write $\chi(x)$ for the leading 3-adic unit of a nonzero number, identified with $\pm1$. A tournament is the orientation given by $\chi(\det(v_i,v_j))$ for projectively distinct $v_i\in\mathbb Q_3^2$ exactly when some vertex switch of it belongs to the grammar generated from singletons by binary ordinal joins and cyclic ternary joins.
