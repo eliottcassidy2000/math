@@ -43,6 +43,11 @@ unless 7 divides the intercept.
 
 ## What this means for a return rule
 
+**Proved:** call cap(Q_N) the site budget of the right module. It is the largest number of trailing singletons
+any tournament with the same slot polynomial can have. It does not change under neutral rebases and drops by
+exactly one per transfer, so a clock fed only by neutral refills stops after cap(Q_(N_0)) transfers (PROOF
+Proposition 8).
+
 Under HYP-9678 (C), checked through order 9, a neutral rebase of a right module can only cash in detachable even
 components that are already present. After a run the right module consists of odd cores, which hide nothing.
 
@@ -75,7 +80,14 @@ must keep growing. This is why HYP-9678 (B), infinitely many detachable pairs, m
 order-11 tournaments with at most 5 backward arcs. The same program at orders 7 and 9 with at most 4 backward arcs
 returns exactly the known partners.
 
-- **S1** (order-12 detachable partners, predicted yes): RESULT PENDING.
+- **S1** (order-12 detachable partners, predicted yes): **FAILED, no match.**
+  - 1,291 distinct target profiles Q_X/t from the 2,584 uniquely Hamiltonian order-12 classes.
+  - 3,847,591 candidates, of which 1,243,347 strong; 312,197 were fully profiled; 18 min 42 s.
+  - Not pre-registered: a follow-up over "biclique" backward-arc patterns L × U (L entirely below U, |L|, |U| <= 5;
+    7,469 tournaments) also found nothing. Session 310's partner A has this shape ({5,6} × {0,2}); the order-9 H =
+    317 partners do not.
+  - Order 12 is therefore undecided. Detachable partners there, if any, need at least 6 backward arcs and are not
+    bicliques.
 - **S2** (order-11 odd merges, predicted no): **CONFIRMED (no match).**
   - 655 distinct target profiles Q(Y5 => Y7)/t.
   - 3,847,591 candidate tournaments, of which 1,243,347 strong; 189,829 passed the triangle and H filters and were

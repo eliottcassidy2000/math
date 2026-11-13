@@ -5,12 +5,17 @@ status: >
   OPEN.
   (A): all 7 strong members through order 9 have C = 1, and the census there is complete over all classes. Above
   order 9 only the C = 1 slice was searched, which cannot test (A).
-  (B): FINITE-EXACT pairs at orders 6, 8, 10 (THM-5151 (4), (5)). Order 12 is pre-registered search S1 (packet
-  README).
+  (B): FINITE-EXACT pairs at orders 6, 8, 10 (THM-5151 (4), (5)). Order 12 is undecided:
+  - pre-registered S1 found no partner among strong order-11 tournaments with at most 5 backward arcs (prediction
+    FAILED);
+  - a biclique follow-up was also empty;
+  - no (3,9) or (5,7) block partner exists within C = 1.
   (C): FINITE-EXACT for every tournament of order <= 9 (198,946 classes, 52,432 profile groups, no violation;
-  THM-5151 PROOF Proposition 3'). The odd-merge case is checked for |Y1| + |Y2| <= 10, with order 11 as
-  pre-registered search S2.
-  (D) is a logical consequence of (C) together with THM-5151 (2). It is not a statement about other frames or about
+  THM-5151 PROOF Proposition 3'). The odd-merge case is checked completely for |Y1| + |Y2| <= 10. At order 11,
+  pre-registered S2 CONFIRMED no match among the 3,847,591 tournaments with at most 5 backward arcs, for all
+  (5,7) block pairs.
+  (D) is a logical consequence of (C) together with THM-5151 (2) and (9). The unconditional part, that the
+  transfer count is at most cap(Q_(N_0)), is THM-5151 (9). It is not a statement about other frames or about
   non-neutral moves.
 session: kind-pasteur-2026-11-13-S26
 source: 05-knowledge/results/kps_s26_exact_pair_returns_20261113/README.md

@@ -86,6 +86,28 @@ expose.
 For N = B^r, beta = 2r and the R-product is R_A^r, so cap <= 2r - 1. This is Session 310's ceiling. Their A^r -> TT_r
 realizes r. Exceeding r requires a realization with o + 2e < r, that is, a merge.
 
+**Proposition 8 (site budget; unconditional).** If Q/t is the slot polynomial of some tournament, then
+
+    cap(Q/t) = cap(Q) - 1.
+
+Consequently, consider any sequence of Π transfers (a trailing singleton of the right module N moves to the
+left module) interleaved with Q-neutral rebases of N. The number of transfers is at most cap(Q_(N_0)). A neutral
+rebase leaves cap(Q_N) unchanged, and a transfer lowers it by exactly one.
+
+*Proof.* If T' realizes Q/t with s' = cap(Q/t) singleton components, then T' -> TT1 realizes Q with s' + 1. So
+cap(Q) >= cap(Q/t) + 1, and in particular cap(Q) >= 1.
+
+Conversely, take T realizing Q with s = cap(Q) >= 1. Reordering the strong components keeps Q by (I1), so we may
+place a singleton component last and write T = T'' -> TT1. Then T'' realizes Q/t with s - 1 singletons, so
+cap(Q/t) >= cap(Q) - 1.
+
+A transfer replaces N = N' -> TT1 by N', so Q_N becomes Q_N / t. A neutral rebase keeps Q_N. Every transfer needs
+a singleton in the current realization, and s <= cap. QED.
+
+So a clock fed only by neutral refills runs at most cap(Q_(N_0)) steps. Through order 9 this budget is
+s(N_0) + d(N_0) (Proposition 3' below), and HYP-9678 (C) conjectures it in general. For B^r this would be exactly
+r, the number Session 310 realizes. An unbounded return must therefore raise the budget by non-neutral moves.
+
 **Proposition 3 (no small odd merge; FINITE-EXACT).** Take odd strong Y_1, Y_2 with |Y_1| + |Y_2| <= 10. Then no
 tournament Z has Q_(Y_1 => Y_2) = Q_(Z -> TT1). This covers all pairs of orders (3,3), (3,5), (3,7), (5,5).
 
@@ -138,8 +160,13 @@ mix strong and non-strong classes are reported (`scripts/census.py`).
 (a) Generation. Extending each C = 1 strong class of order m by one vertex in all 2^m - 2 strong ways keeps
 exactly the extensions with C = 1. Canonical forms come from the unique Hamiltonian cycle (the lexicographically
 least pair word over its rotations). The procedure gives 1, 3, 8, 21, 55, 144, 377, 987, 2584 classes at orders
-4..12. These are Session 197's F_(2n-6), so the generation is complete. Only "every generated class is C = 1 and
-strong" plus the count is needed; Session 197's theorem a_n = F_(2n-6) supplies the count.
+4..12. These equal F_(2n-6), so the generation is complete: it is enough that every generated class is C = 1
+and strong, and that the true count is F_(2n-6).
+
+The count is KNOWN: Garey 1972 (also Moon 1982), re-proved in Session 197's C1_COMPLETE / FIBONACCI_CLASS and in
+this machine's THM-4868 (G) (S10, which enumerated all F_(2n-6) classes through order 18). The structure is also
+KNOWN: Shelor 1977, opus-S74's THM-4867 (an in-degree-1 vertex and a one-arc cut) and THM-4868 (E) (rigidity). Only
+the slot profiles of these classes are new here.
 
 (b) Order 10. Exactly 6 of the 377 classes collide with a non-strong tournament:
 
@@ -275,6 +302,9 @@ prime-producing polynomials. It is recorded here in clock form.
 
 ## 7. Pre-registered searches (PREREGISTRATION.md; results filled in after the runs)
 
-- S1: order-12 detachable partners among strong order-11 tournaments with at most 5 backward arcs. RESULT: see
-  README.md.
-- S2: order-11 odd merges, targets Q(Y5 => Y7)/t, same restriction. RESULT: see README.md.
+- S1: order-12 detachable partners among strong order-11 tournaments with at most 5 backward arcs. RESULT: no
+  match, so the prediction FAILED. 1,291 targets; 3,847,591 candidates, 1,243,347 strong, 312,197 profiled.
+- S2: order-11 odd merges, targets Q(Y5 => Y7)/t, same restriction. RESULT: no match, prediction CONFIRMED. 655
+  targets; 189,829 profiled.
+- Not pre-registered: biclique backward patterns L × U with L below U and |L|, |U| <= 5 (7,469 order-11
+  tournaments) contain no S1 partner either.
