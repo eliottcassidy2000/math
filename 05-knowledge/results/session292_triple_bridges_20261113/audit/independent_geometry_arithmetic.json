@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "independent_edge_set_checks": 9555,
+  "hidden_primes": [
+    149,
+    347,
+    2111,
+    15583
+  ],
+  "orders": [
+    148,
+    346,
+    1055,
+    1113
+  ],
+  "surviving_four_factor_cylinder": [
+    34,
+    30670763342539320
+  ]
+}

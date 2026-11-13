@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "sparse_counts": [
+    {
+      "n": 1,
+      "masks": 1,
+      "cases": 1
+    },
+    {
+      "n": 2,
+      "masks": 2,
+      "cases": 4
+    },
+    {
+      "n": 3,
+      "masks": 8,
+      "cases": 64
+    },
+    {
+      "n": 4,
+      "masks": 64,
+      "cases": 4096
+    },
+    {
+      "n": 5,
+      "masks": 51,
+      "cases": 52224
+    }
+  ],
+  "designed_certificates": 1099,
+  "scope": "All pair constraint subsets through n4; deterministic 51 masks at n5. Literal C3 grouping and permutation linear-extension count; producer tree/color routines reused."
+}

@@ -1,0 +1,15 @@
+{
+  "COLORED_FIBERS.md": "9f2911f0ec39f30c9b80e250f4d450c4b5cb8717c044b737789ccdfa03820d9f",
+  "PROOF.md": "d08db8277fa5aa2c55ac7078ce1cb0ddab922d673ebd130991f86195482011ec",
+  "README.md": "1eefb0635aaa88f0914c9087f5d9ada3b06a055b07ab1e796e75446ad930660b",
+  "colored_fibers.json": "e15fd7ac9179becc3ef989501a40a94059d6787a33fb0e29e202720ed4d4f068",
+  "colored_fibers.py": "064eacf1ba145787903633cae95c6b981d3636e380d0b4fb829ee530884da97f",
+  "paired_seam_probe.json": "cb502c2508f6a1d4314de097d9d0148ebd3aadcdab978e8ad25fcb60d420d738",
+  "paired_seam_probe.py": "81b699e8684128c5afe56bed310126ee6182a4531a22598a22a05f54979f1d17",
+  "receipt.json": "ced8ab9533aeb754be1e217594932bb8bbf08141efa8db26d6f8228910f31c41",
+  "rigidity_probe.json": "90156645d810e15d11002180e2bf8c4c99b10f6298c96278bf253dd581e26efd",
+  "rigidity_probe.py": "090e6cdeac7d22de61b7ac010524d476df50d4c41d05a540515bbbdc0d74fed1",
+  "seam_probe.json": "402a4345a030215c874c6191de5f9477c6bef69e9a97d36dc7b86ac9473a1319",
+  "seam_probe.py": "e38910dbb657e323f3b5ce3a3c1487e6a05a8ec6a50a72d9ce19923461f3e1ad",
+  "verify.py": "bfb3dffc69b57bd530051139e5a8e85f39d464186d985cbe40d964c4ee40b920"
+}

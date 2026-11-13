@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "tournaments": 125,
+  "pivot_steps": 1680,
+  "two_pivot_exchanges": 1305,
+  "random_divided_power_examples": 84,
+  "triangle_action_checks": 576,
+  "formal_seam_checks": 30,
+  "reciprocal_entries": 2630,
+  "cutoffs": [
+    {
+      "p": 2,
+      "s": 1,
+      "K": 2,
+      "triangles_for_sharpness": 1
+    },
+    {
+      "p": 2,
+      "s": 2,
+      "K": 4,
+      "triangles_for_sharpness": 3
+    },
+    {
+      "p": 2,
+      "s": 3,
+      "K": 4,
+      "triangles_for_sharpness": 3
+    },
+    {
+      "p": 2,
+      "s": 4,
+      "K": 6,
+      "triangles_for_sharpness": 5
+    },
+    {
+      "p": 3,
+      "s": 1,
+      "K": 3,
+      "triangles_for_sharpness": 2
+    },
+    {
+      "p": 3,
+      "s": 2,
+      "K": 6,
+      "triangles_for_sharpness": 5
+    },
+    {
+      "p": 3,
+      "s": 3,
+      "K": 9,
+      "triangles_for_sharpness": 8
+    },
+    {
+      "p": 3,
+      "s": 4,
+      "K": 9,
+      "triangles_for_sharpness": 8
+    },
+    {
+      "p": 5,
+      "s": 1,
+      "K": 5,
+      "triangles_for_sharpness": 4
+    },
+    {
+      "p": 5,
+      "s": 2,
+      "K": 10,
+      "triangles_for_sharpness": 9
+    },
+    {
+      "p": 5,
+      "s": 3,
+      "K": 15,
+      "triangles_for_sharpness": 14
+    },
+    {
+      "p": 5,
+      "s": 4,
+      "K": 20,
+      "triangles_for_sharpness": 19
+    },
+    {
+      "p": 7,
+      "s": 1,
+      "K": 7,
+      "triangles_for_sharpness": 6
+    },
+    {
+      "p": 7,
+      "s": 2,
+      "K": 14,
+      "triangles_for_sharpness": 13
+    },
+    {
+      "p": 7,
+      "s": 3,
+      "K": 21,
+      "triangles_for_sharpness": 20
+    },
+    {
+      "p": 7,
+      "s": 4,
+      "K": 28,
+      "triangles_for_sharpness": 27
+    }
+  ],
+  "notes": [
+    "Exact DFS and polynomial path atlas agree.",
+    "Sharpness concerns geometric power, not number of cycles or complexity."
+  ]
+}

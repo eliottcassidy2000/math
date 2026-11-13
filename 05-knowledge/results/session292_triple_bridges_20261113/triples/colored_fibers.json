@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "counts": [
+    {
+      "n": 1,
+      "tournaments": 1,
+      "palettes": [
+        2,
+        3
+      ],
+      "tested": 5,
+      "max_fiber": 1,
+      "random_counts": {
+        "2": {
+          "min_unique": 2,
+          "denominator": 2
+        },
+        "3": {
+          "min_unique": 3,
+          "denominator": 3
+        }
+      },
+      "engineered_ports": 1
+    },
+    {
+      "n": 2,
+      "tournaments": 2,
+      "palettes": [
+        2,
+        3
+      ],
+      "tested": 26,
+      "max_fiber": 2,
+      "random_counts": {
+        "2": {
+          "min_unique": 2,
+          "denominator": 4
+        },
+        "3": {
+          "min_unique": 6,
+          "denominator": 9
+        }
+      },
+      "engineered_ports": 2
+    },
+    {
+      "n": 3,
+      "tournaments": 8,
+      "palettes": [
+        2,
+        3
+      ],
+      "tested": 280,
+      "max_fiber": 6,
+      "random_counts": {
+        "2": {
+          "min_unique": 2,
+          "denominator": 8
+        },
+        "3": {
+          "min_unique": 12,
+          "denominator": 27
+        }
+      },
+      "engineered_ports": 8
+    },
+    {
+      "n": 4,
+      "tournaments": 64,
+      "palettes": [
+        2,
+        3
+      ],
+      "tested": 6208,
+      "max_fiber": 24,
+      "random_counts": {
+        "2": {
+          "min_unique": 2,
+          "denominator": 16
+        },
+        "3": {
+          "min_unique": 24,
+          "denominator": 81
+        }
+      },
+      "engineered_ports": 64
+    },
+    {
+      "n": 5,
+      "tournaments": 1024,
+      "palettes": [
+        2
+      ],
+      "tested": 32768,
+      "max_fiber": 120,
+      "random_counts": {
+        "2": {
+          "min_unique": 2,
+          "denominator": 32
+        }
+      },
+      "engineered_ports": 1024
+    }
+  ],
+  "total": 39287
+}

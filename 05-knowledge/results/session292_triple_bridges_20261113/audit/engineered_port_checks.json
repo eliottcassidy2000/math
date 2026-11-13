@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "counts": [
+    {
+      "n": 1,
+      "all_tournaments": 1,
+      "singleton_fibres": 1
+    },
+    {
+      "n": 2,
+      "all_tournaments": 2,
+      "singleton_fibres": 2
+    },
+    {
+      "n": 3,
+      "all_tournaments": 8,
+      "singleton_fibres": 8
+    },
+    {
+      "n": 4,
+      "all_tournaments": 64,
+      "singleton_fibres": 64
+    },
+    {
+      "n": 5,
+      "all_tournaments": 1024,
+      "singleton_fibres": 1024
+    }
+  ],
+  "scope": "All labelled tournaments n<=5, direct C3/cross-color grouping with independently implemented port coloring; no isomorphism or H preservation claim."
+}

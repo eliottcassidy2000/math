@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "all_three_color_cases_at_n5": 248832,
+  "refinement_cases_n1_to_n4": 16932,
+  "scope": "Direct C3/cross-color grouping; producer strong-module tree routine reused, independent cycle test and refinement criterion."
+}

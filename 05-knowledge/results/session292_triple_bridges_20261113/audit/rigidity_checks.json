@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "universes": [
+    {
+      "n": 3,
+      "tournaments": 8,
+      "C3_equal_pairs": 16,
+      "pairs_tested": 16,
+      "accepted_port_cuts": 44,
+      "ordered_port_pairs": 136,
+      "module_checks": 18,
+      "scope": "exhaustive pairs"
+    },
+    {
+      "n": 4,
+      "tournaments": 64,
+      "C3_equal_pairs": 336,
+      "pairs_tested": 336,
+      "accepted_port_cuts": 1144,
+      "ordered_port_pairs": 5328,
+      "module_checks": 752,
+      "scope": "exhaustive pairs"
+    },
+    {
+      "n": 5,
+      "tournaments": 1024,
+      "C3_equal_pairs": 9912,
+      "pairs_tested": 595,
+      "accepted_port_cuts": 2370,
+      "ordered_port_pairs": 17428,
+      "module_checks": 1875,
+      "scope": "deterministic 1/17 pair sample"
+    }
+  ],
+  "method": "literal permutation paths, no path DP or algebraic producer"
+}

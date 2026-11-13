@@ -1,0 +1,41 @@
+{
+  "scope": "All labelled tournaments n=3..6; ports0,1; fixed exterior incidences/port edge; group by degree3 Q_st and degree2 Q_0t/Q_1t, check complete boundary and augmented relative C3 iff.",
+  "rows": [
+    {
+      "n": 3,
+      "tournaments": 8,
+      "distinct_signatures": 8,
+      "relative_C3_fibres": 8,
+      "signature_collisions": 0,
+      "collisions_with_changed_target_coefficient": 0,
+      "examples": []
+    },
+    {
+      "n": 4,
+      "tournaments": 64,
+      "distinct_signatures": 56,
+      "relative_C3_fibres": 56,
+      "signature_collisions": 8,
+      "collisions_with_changed_target_coefficient": 0,
+      "examples": []
+    },
+    {
+      "n": 5,
+      "tournaments": 1024,
+      "distinct_signatures": 832,
+      "relative_C3_fibres": 832,
+      "signature_collisions": 192,
+      "collisions_with_changed_target_coefficient": 0,
+      "examples": []
+    },
+    {
+      "n": 6,
+      "tournaments": 32768,
+      "distinct_signatures": 26728,
+      "relative_C3_fibres": 26728,
+      "signature_collisions": 6040,
+      "collisions_with_changed_target_coefficient": 0,
+      "examples": []
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "tournament_palette_probability_cases": 225,
+  "transitive_exact_cases": 99,
+  "prime_valuation_expectation_cases": 450,
+  "scope": "Every labelled tournament n<=4; q1,2,3. Exact Fractions; no logarithmic floating point."
+}

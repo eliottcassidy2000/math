@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "all_tournaments_through_4": 75,
+  "all_pivot_orders": 1589,
+  "triangle_blocks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "eight_mode_witness": "PASS",
+  "scope": "Independent literal Hamiltonian permutation counts versus occupancy elimination, explicit determinant-denominator algebra, exact delayed-profile witness. Does not establish physical replacement or coverage."
+}
