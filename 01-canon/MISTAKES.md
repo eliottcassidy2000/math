@@ -4,6 +4,26 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13: Initial path modes are not continuation modes
+
+- **Status:** a mistaken progress statement in the core-descent session was
+  corrected immediately; no theorem had been promoted.
+- **False inference:** all78 free-clock presentations of the70 new birth
+  charts have initial H profiles using only bases1,2, therefore every
+  two-live-port continuation also uses only those bases.
+- **Witness:** `even:8`, free clock10 and roots6,9 in the
+  [endpoint packet](../05-knowledge/results/core_descent_endpoints_20261112/PLAN.md)
+  has a higher-mode continuation (the receipt retains the actual root labels).
+  The complete17-query observer, not its first column, must be inspected.
+- **Repair:** exactly39 stored presentations have observer modes confined
+  to1,2; the other39 reach base4. Naming the two ends of a split clock gives
+  base3 in all78 presentations. Linear continuation preserves the full
+  observer's spectral support, not the initial scalar's support.
+- **Lost coordinate:** the future-response columns. The same safeguard
+  applies when inferring endpoint stability or physical source equivalence
+  from an initial count. Scope here is the stored sources, not every length
+  of both synchronized blocks.
+
 ## 2026-11-12: Birth rank, zero clocks, and periodic-word eigenvalue overreach
 
 - **Status:** rejected discovery/proof shortcuts in the
