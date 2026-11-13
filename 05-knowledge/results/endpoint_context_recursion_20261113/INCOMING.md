@@ -59,3 +59,14 @@ a precise branching/growth sparsity inequality; the spatial-fill lane
 then separated populated count fibres from absent target labels and from
 forbidden induced embeddings. No unproved universal rank or selector is
 used as a dependency.
+
+The final publication rebased onto15b734fb16 and8e4e46d671 from
+`spanning_tree_fill_20261113`, and71befde106 from the clone-clock study.
+The former proves universal reachability for the UNION of bidirectional
+ordinary Collatz edges and the literal extra odd inverse; its edge set
+is larger than either of our two requested models. We read its explicit
+macro proof and independently verified every macro through100,000,
+retaining the distinction in COLLATZ_MODELS. The same incoming note had
+already connected our first changed-port checkpoint to its retained-port
+growth analysis. The clone-clock continuation retains a finite order13
+scope and adds no dependency to our matrix grammar.

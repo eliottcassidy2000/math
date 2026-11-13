@@ -16,7 +16,7 @@
   ],
   "pins": {
     "05-knowledge/results/endpoint_context_recursion_20261113/audit.py": "db3c7f0a63896ff6e9243a6e7083b6f05126bfe1e0376587db4273ae3cfb136e",
-    "05-knowledge/results/endpoint_context_recursion_20261113/collatz_graphs.py": "47e6976b6f4a480686583e42b4586fc3361b2ce9d4bf57f559f06664a2ac450e",
+    "05-knowledge/results/endpoint_context_recursion_20261113/collatz_graphs.py": "594f04af8249ba2d46646fc11b3683cad8672a7f3d7168c8a706ac121d9f08fb",
     "05-knowledge/results/endpoint_context_recursion_20261113/context_head.py": "54983758cf8dfcca6c35ba60ca07fdcf584045300a551f0089a98a817407490e",
     "05-knowledge/results/endpoint_context_recursion_20261113/feedback_probe.py": "95ab6cb125554b74d3ee5356e92d2ab904af8fc24fe74c12fb5cf92e9e3a0f5d",
     "05-knowledge/results/endpoint_context_recursion_20261113/language.py": "ed0650ece41c611cddc7cfac3b5a9c7e241ebad5147bc30e04f51f6105286470",

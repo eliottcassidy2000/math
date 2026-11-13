@@ -50,7 +50,7 @@ the enumerations have the explicit finite scopes listed below.
 |renewal_verify|Three selected escapes; two actual repeated returns; exact characteristic polynomial and decreasing inverse identities|
 |renewal_catalog|All half-slope plane-preserving return matrices through8; literal U/W context factorization|
 |language|Complete forward closure throughH=10^8; independent backward membership on every1,346 positive state and1,000 controls|
-|collatz_graphs|Three induced graphs on1..10^6;270,000 reverse-edge guard controls; separate greedy certificates for starts through10^5|
+|collatz_graphs|Three induced graphs on1..10^6;270,000 reverse-edge guard controls; separate greedy certificates through10^5;99,999 macros and216,667 native-edge checks for the strictly larger union model|
 |walk_controls|All4,096 loopless digraphs on four vertices: permutations, subset DP, squarefree propagation; selected one-arc witnesses|
 |audit|Eleven strict sign-cone checks; seven literal strong words;6,087 primitive gcd-gate controls; cross-receipt checks|
 
@@ -81,7 +81,9 @@ run finishes.
 **Completion: PASS.** All twelve engines completed in normal and optimized
 Python modes, and all thirteen compressed receipt pairs were byte-identical.
 The replay manifest pins26 executable/input files. The final optimized
-replay was run after the substantive code changes above.
+replay was followed by a targeted normal/optimized replay of the added
+union-model macros; all thirteen pairs still agree. Documentation guards,
+resolved local links and `git diff --check` passed.
 
 Corrections caught during development: the inherited list has eleven
 pairs, not ten; the length of a first saved witness word is not the

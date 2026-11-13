@@ -24,6 +24,9 @@ new output-port choice instead of fixing the root of every context.
   reachability; an explicit strategy reaches1 from all starts through
   100,000. The inherited forced family rules out a uniform linear height
   buffer. No every-integer proof is claimed.
+  A separately defined UNION of both move sets has an incoming proved
+  descent to1 for every positive integer; its stronger edge permissions
+  are explicitly checked and distinguished.
 - [Spatial fill and matrix memory](FILL_AND_MATRICES.md): recovered exact
   multiplicity geometry, proper Hamiltonian matrix formulas, and oriented
   graphs with7 or21 paths obtained by removing one tournament arc.

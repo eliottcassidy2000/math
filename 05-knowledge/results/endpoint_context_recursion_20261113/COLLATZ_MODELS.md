@@ -102,3 +102,33 @@ selector in LANGUAGE supplies exactly that tree for its sparse language.
 It does not establish that the tree's projection covers every allowed
 odd count. This is the precise shared obstruction: well-defined local
 transitions versus surjectivity onto the intended integer set.
+
+## A third model: combining both sets of moves is solvable
+
+Incoming15b734fb16 introduced the[union-graph descent proof](../spanning_tree_fill_20261113/collatz/PROOF.md).
+It permits ALL ordinary edges in both directions AND the literal extra
+odd inverse move. This is larger than either requested model separately.
+Its macro-parent is
+
+    D(n)=n/2                    for even n;
+    D(n)=n/3                    for odd n=0 mod3;
+    D(n)=(n−1)/3                for odd n=1 mod3, n>1;
+    D(n)=(2n−1)/3               for odd n=2 mod3.
+
+In every case0<D(n)<=2n/3<n. The first and third are single native
+moves. The last is n→2n→(2n−1)/3. For odd multiples of3, use
+
+    n→3n+1→6n+2→12n+4→4n+1→4n/3→2n/3→n/3.
+
+All guards are valid in the union: the step12n+4→4n+1 is a genuine
+reverse odd edge, and4n+1→4n/3 is the additional inverse with even
+quotient. Each macro uses at most7 edges and peak at most12n+4.
+Consequently every positive integer reaches1 in this union graph, with
+peak<=12n+4 and at most7 ceil(log_(3/2)n) native edges.
+
+This is not a proof for the literal graph. For instance its n=3 macro
+needs40→13, which the literal graph does not allow; the n=5 macro also
+uses the forbidden odd doubling5→10. It is not a proof for the purely
+bidirectional graph either, because the new odd inverse is essential.
+The incoming proof is credited; our checker independently verifies the
+native edge permissions and strict descent for every n=2..100,000.

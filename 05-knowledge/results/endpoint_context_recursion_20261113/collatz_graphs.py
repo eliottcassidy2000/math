@@ -84,8 +84,25 @@ def run():
         need(all(3*x+1==2*y for x,y in zip(chain,chain[1:])),'forced odd chain')
         need(3*chain[-1]+1==2*3**K-2,'forced native peak')
         forced.append(dict(K=K,start=chain[0],forced_peak=2*3**K-2))
-    save('collatz_graphs',dict(status='FINITE-EXACT',scope='Positive vertices1..1,000,000, induced graphs, exact minimum maximum vertex on a path to1. Claims about1..100,000; unresolved means no path within this cap, not divergence. Separate deterministic literal strategy with10000-step cap and30 algebraic forced-excursion controls.',reverse_guard_checks=270000,ordinary_bidirectional_costs_identical=True,literal_strict_improvements=len(improved),rows=rows,greedy=greedy_data,forced_excursions=forced))
+    # Incoming spanning_tree_fill's THIRD model is the union of the two
+    # requested edge sets. Check its exact macro descent independently.
+    union_steps={1:0};union_max_path=0;union_edges=0;forbidden_literal=None
+    for n in range(2,target+1):
+        if n%2==0:path=[n,n//2]
+        elif n%3==1:path=[n,(n-1)//3]
+        elif n%3==2:path=[n,2*n,(2*n-1)//3]
+        else:path=[n,3*n+1,6*n+2,12*n+4,4*n+1,4*n//3,2*n//3,n//3]
+        need(0<path[-1]<n and 3*path[-1]<=2*n,'union macro descent')
+        need(max(path)<=12*n+4 and len(path)-1<=7,'union native resource bounds')
+        for a,b in zip(path,path[1:]):
+            need(allowed(a,b,'bidirectional') or allowed(a,b,'literal'),'union edge guard')
+            if forbidden_literal is None and not allowed(a,b,'literal'):forbidden_literal=[a,b]
+            union_edges+=1
+        union_steps[n]=len(path)-1+union_steps[path[-1]];union_max_path=max(union_max_path,union_steps[n])
+    union=dict(status='PROVED in incoming note; independently controlled here',definition='Union of bidirectional ordinary edges and the literal extra edges; strictly more allowed edges than either requested model separately.',macro_controls=target-1,native_edge_checks=union_edges,max_composed_length=union_max_path,first_required_edge_forbidden_in_literal_model=forbidden_literal)
+    save('collatz_graphs',dict(status='FINITE-EXACT',scope='Positive vertices1..1,000,000, induced graphs, exact minimum maximum vertex on a path to1. Claims about1..100,000; unresolved means no path within this cap, not divergence. Separate deterministic literal strategy with10000-step cap,30 algebraic forced-excursion controls, and independent macros for the larger union graph.',reverse_guard_checks=270000,ordinary_bidirectional_costs_identical=True,literal_strict_improvements=len(improved),rows=rows,greedy=greedy_data,forced_excursions=forced,combined_model=union))
     print('LITERAL GREEDY',greedy_data,flush=True)
+    print('COMBINED MODEL',union,flush=True)
 
 
 if __name__=='__main__':run()
