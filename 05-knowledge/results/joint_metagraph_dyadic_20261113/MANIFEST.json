@@ -3,8 +3,8 @@
   "scope": "Closed set of final packet files; excludes only this manifest itself. Historical pre-audit manifests remain provenance.",
   "files": {
     "AUDIT.md": {
-      "sha256": "a4a391fd616bdaf2da7ae7c211124eb9f35d717404d8d0158c7f25f32a0a9f6f",
-      "bytes": 8315
+      "sha256": "0a9caa134224805ba5b4a8417fc43362a1260d9b37c3075c1241a408700b60c2",
+      "bytes": 9411
     },
     "BOARD.md": {
       "sha256": "299a18abcbc34d47ed20355ebeae8bc0b7ec75a20d188b2a39bb92c29551164e",
@@ -13,6 +13,10 @@
     "INCOMING_RECONCILIATION.md": {
       "sha256": "7bc97075215cb34e48da564b2053601f08fb71d4cbae4a2a492c3a6e2a0fde2b",
       "bytes": 8346
+    },
+    "LATE_INCOMING.md": {
+      "sha256": "12927bee1a16e5e60a67608bc55c763d49f443b76211a41564e2db2731f749af",
+      "bytes": 4207
     },
     "PAIRING_WIRING.md": {
       "sha256": "968aa6c1504f8c5868d58c71b50044509b0ba6a4c5f20b6c94185ab5fec10c3b",
@@ -23,16 +27,32 @@
       "bytes": 2769
     },
     "README.md": {
-      "sha256": "91e9ce0ec43211d74f319747ed4511947edf8b5d3c3b330aefbbbc424ae89c3d",
-      "bytes": 8599
+      "sha256": "20371615ff2cd7724fbcd484aa0e6fde3ce4c24ba8ede12c25526381e6b28193",
+      "bytes": 9439
+    },
+    "SLOT_WIRING.md": {
+      "sha256": "91f9830b551764c55dd5346921a635537210e9a761cca1c0e414139b2ddbc2b1",
+      "bytes": 7587
     },
     "SOURCE_PINS.json": {
-      "sha256": "c64a89a1e997cbd59968b99670ad9a13f377f3faf3f7634131ce1227a278d2de",
-      "bytes": 9188
+      "sha256": "a163f7a40e2572fff782aced26ddba0192b1ef5dad3f2ee88b9c70ee588dc802",
+      "bytes": 10885
     },
     "audit/check_small.py": {
       "sha256": "ea71adf577950bbda301271355f1893418d3017c77f4297bb330459d601d3406",
       "bytes": 11097
+    },
+    "audit/slot_profiles.normal.json": {
+      "sha256": "5e88b55f443ac14fb512ab643f733b41928c451036506c61dd117a690ee1f0b5",
+      "bytes": 12284
+    },
+    "audit/slot_profiles.optimized.json": {
+      "sha256": "5e88b55f443ac14fb512ab643f733b41928c451036506c61dd117a690ee1f0b5",
+      "bytes": 12284
+    },
+    "audit/slot_profiles.py": {
+      "sha256": "8fe0729a6e687ddeb45fb07abd170c0ddae5f6279a38dbf1cc4f9c6341222265",
+      "bytes": 6547
     },
     "audit/small.normal.json": {
       "sha256": "c5decd3d04c8704b16b311e86ba29208a7daf6cca13574b0854ba73ed33cb5b5",
@@ -183,8 +203,8 @@
       "bytes": 610
     },
     "verify_packet.py": {
-      "sha256": "b5e1fc250e885fde807c127a25c615f5e9dac4206c0b41ac317c345e4680e50c",
-      "bytes": 7917
+      "sha256": "12ea07d35ddf425981f45d13831e1cb78d9a927bae1ffd2693c9b2d6c766bf7b",
+      "bytes": 8525
     }
   }
 }

@@ -61,6 +61,15 @@ in the specified linear model already requires all **10** merged-class
 dimensions at order five and all **34** at order six. This is not an all-order
 observability claim. [Proof, generating function, colored version and receipts](metagraph/PROOF.md).
 
+The final incoming merge supplies a stronger finite obstruction. The H9
+classes have the same **entire slot polynomial** `Q(t)=t^5+6t^3+2t`, as
+well as the same scores, automorphism order, converse status and degree.
+Their transitions to TT5 still differ. Thus even this augmented observer
+fails Markov closure. The complete slot partition first loses closure at
+order five on the n>=3 tower, again giving the erroneous two-step return
+1/18. Two independent path-cover counts certify all merged classes through
+order five. [Slot/wiring proof](SLOT_WIRING.md).
+
 ## The dyadic clock is exact at fixed cutoff and precision
 
 For fixed B>=3 and k>=1, put R=floor(log_3 B). Every ordinary and self-converse
@@ -159,3 +168,8 @@ See [audit and reproduction](AUDIT.md), [inheritance board](BOARD.md), and
 [incoming source reconciliation](INCOMING_RECONCILIATION.md). Proof-status
 promotions are reversible in [PROMOTIONS.json](PROMOTIONS.json); the closed
 file manifest and source pins bind the final packet.
+
+The [last bounded concurrent merge](LATE_INCOMING.md) also connects Session316's
+squarefree port elimination, its A5 seam channel, cyclic wrap operator and
+neutral reentry to the present observer boundaries. Larger incoming censuses
+remain credited with their own audit status.

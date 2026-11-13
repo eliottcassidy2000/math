@@ -53,6 +53,11 @@
       "sha256": "cef4afa6aa13cbdcb6bd20e142b896871059c1ad703ef7e6e05422761ff9141d",
       "bytes": 6251
     },
+    "01-canon/theorems/THM-5153-exact-slot-pairings-of-merged-tournament-classes-and-self-converse-structure-to-order-nine.md": {
+      "git_commit": "5479c530c7907b5442dd885cbd6b47d76b41b8ba",
+      "sha256": "a559cd55bb088a1c040bcfc7bcf84a54fa8596bd0dfc2ef6c8861b094da5016b",
+      "bytes": 2864
+    },
     "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md": {
       "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
       "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
@@ -73,6 +78,11 @@
       "sha256": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe",
       "bytes": 15376
     },
+    "05-knowledge/results/kps_s28_exact_pairing_sc_census_20261113/README.md": {
+      "git_commit": "5479c530c7907b5442dd885cbd6b47d76b41b8ba",
+      "sha256": "11c922067fc9570b4aa293c9f7e4a2abf2a503caf2ee4e4e54346f9c61c6a938",
+      "bytes": 3274
+    },
     "05-knowledge/results/paired_recursions_20261103/PAIRINGS.md": {
       "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
       "sha256": "a3263bbb8c5e79616721f27330b7eb1338faf4f25fb330e6d2f73872dc47e1e8",
@@ -87,6 +97,11 @@
       "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
       "sha256": "65b4c32f861f1e6b450fbf383af24736bf86eabbcca3135d2d07648d8c384933",
       "bytes": 12237
+    },
+    "05-knowledge/results/session310_positive_clocks_20261113/NEUTRAL_TAILS.md": {
+      "git_commit": "5479c530c7907b5442dd885cbd6b47d76b41b8ba",
+      "sha256": "0564bc34ae2cf46311ccb681a25923a05c2abb5e9da91b2acf61e36f6e8c3139",
+      "bytes": 6341
     },
     "05-knowledge/results/session314_metagraph_constraint_algebra_20261113/ALIGNMENT_RECURRENCE.md": {
       "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
@@ -133,6 +148,21 @@
       "sha256": "06b59c09dd674720e8c4bfe213cc51b206b6fb56ad08642941acb111176a8ab5",
       "bytes": 6427
     },
+    "05-knowledge/results/session316_hinge_and_signed_repairs_20261113/CYCLIC_WRAP.md": {
+      "git_commit": "5479c530c7907b5442dd885cbd6b47d76b41b8ba",
+      "sha256": "8e55df7b665d4e1d0ccd4ddaac7630e584d9f4dd6c81952b11eb8f2c8ea1d707",
+      "bytes": 3420
+    },
+    "05-knowledge/results/session316_hinge_and_signed_repairs_20261113/SEQUENTIAL_REENTRY.md": {
+      "git_commit": "5479c530c7907b5442dd885cbd6b47d76b41b8ba",
+      "sha256": "6107959512a510b0c89e112c9fe8d78f795ded4d449287c8d1b1f1e6e023967d",
+      "bytes": 3972
+    },
+    "05-knowledge/results/session316_hinge_and_signed_repairs_20261113/SQUAREFREE_PORTS.md": {
+      "git_commit": "5479c530c7907b5442dd885cbd6b47d76b41b8ba",
+      "sha256": "35d59dfdba68052ae0ceb3ec38c974ed00a08e0ae8ee465927ba69d29199e3fd",
+      "bytes": 10975
+    },
     "05-knowledge/results/session97_overnight_arithmetic_carriers_20261029/leech/GOLAY_LEECH_SUM_GUARD.md": {
       "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
       "sha256": "952459ef196d6309c1c4a1f90c62b51b24c6f76ef4822880794678fa988f3f1b",
@@ -168,5 +198,6 @@
       "sha256": "c1e58986eaf9b07b01d9092328400bbcc25ed0e3db2e243ed0351906d996a5ea",
       "bytes": 6990
     }
-  }
+  },
+  "late_incoming_commit": "5479c530c7907b5442dd885cbd6b47d76b41b8ba"
 }
