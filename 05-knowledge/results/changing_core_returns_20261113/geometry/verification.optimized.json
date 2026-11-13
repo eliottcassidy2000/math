@@ -1,0 +1,64 @@
+{
+  "status": "FINITE-EXACT",
+  "python_optimized": true,
+  "counts": {
+    "contexts": 514,
+    "tournaments": 1799,
+    "literal_checks": 547,
+    "adjacent_steps": 1285,
+    "strict_even_differences": 1087,
+    "kernel_checks": 91,
+    "contraction_differences": 2945,
+    "odd_source_equalities": 114,
+    "binomial_reconstructions": 1799
+  },
+  "H9_root_states": [
+    [
+      9,
+      4,
+      5,
+      10
+    ],
+    [
+      9,
+      2,
+      5,
+      16
+    ],
+    [
+      9,
+      1,
+      5,
+      25
+    ]
+  ],
+  "H9_D": [
+    0,
+    4,
+    12
+  ],
+  "H9_interior_R2NR": {
+    "b": 143,
+    "t": 45
+  },
+  "nonuniform_single_arc_H": [
+    3,
+    1
+  ],
+  "non_twin_neutral_arc": {
+    "before": [
+      8,
+      1,
+      3,
+      6
+    ],
+    "after": [
+      12,
+      1,
+      2,
+      6
+    ],
+    "H": 5
+  },
+  "scope": "All labelled homogeneous exterior contexts e<=3, m<=6; 16 deterministic e=4 contexts m=2..5. General theorem is in PROOF.md."
+}

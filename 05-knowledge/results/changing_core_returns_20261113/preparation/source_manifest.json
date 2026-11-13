@@ -1,0 +1,11 @@
+{
+  "startup_base": "b1f253bebc",
+  "receipt_sha256": "113fa185a6da9059c3701255af47543293df93f88d7f368e4980b3e74372457f",
+  "source_sha256": {
+    "05-knowledge/results/eight_nine_twentyseven_20261112/constructors/SIX_RETURN.md": "fb8bd98aa7d3960389b91e11c2f05bf9bb06a036863a05ae01244b506c4d7928",
+    "05-knowledge/results/session298_exact_target_geometry_20261113/README.md": "6e24968ae5c84a9b9c632cdd93dce1215ec9ee56e0ce75950205491e66047d74",
+    "05-knowledge/results/session298_exact_target_geometry_20261113/TWO_WIDTH.md": "443963696f053a529f13dfbbb526fd4e0092a06c70de4d7aefdc782cac9c5110",
+    "05-knowledge/results/source_selection_closure_20261103/NATIVE_SELECTION.md": "5e7c574cf63fe13db453d9c4f63f3d1035194516a0957e489d88b60d299db178",
+    "05-knowledge/results/cycle_opening_six_return_20261112/counts/PROOF.md": "c1d0421675ebe7c397c1aa527fbcf4126040271c7663bfc9e0f7e86869c21695"
+  }
+}

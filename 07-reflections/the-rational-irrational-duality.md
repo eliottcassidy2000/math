@@ -1,5 +1,7 @@
 # The rational/irrational duality — why the base floor is a density argument
 
+> Historical reflection, corrected2026-11-13: the displayed ceiling witness is rational for integer N. The valid distinction is a bounded residue search versus a real-variable existence/margin argument, not the arithmetic type of the constructed witness. Historical LRC proof-status language below is provenance, not current closure; LRC14 remains OPEN. See [the recovered observer guard](../05-knowledge/results/changing_core_returns_20261113/geometry/HISTORY.md).
+
 *kind-pasteur-2026-07-03-S31. The user asked me to work the density bridge and step-5
 against the old dualities: irrational/rational, odd/even, positive/negative,
 addition/multiplication. The density bridge turned out to BE the rational/irrational
@@ -15,8 +17,8 @@ that duality does in the LRC(14) proof.*
   with `q` small (spread13, the sieve, the denominator route). This is the RATIONAL
   side: loneliness is a finite check over residues mod `lcm(1,…,Q)`.
 - **Above `M`** — the analytic / renormalization sweep. The lonely time is chosen by a
-  free construction `t* = (⌈N(t₀ − δ/V) − 1/14⌉ + 1/14)/N`, generically IRRATIONAL.
-  This is the IRRATIONAL side: loneliness comes from a measure floor on an interval, not
+  free construction `t* = (⌈N(t₀ − δ/V) − 1/14⌉ + 1/14)/N`, rational for every positive integer N.
+  This is the real-variable analytic side: loneliness comes from a measure floor on an interval, not
   from a residue.
 
 The two sides look like different mathematics — number theory versus measure theory,

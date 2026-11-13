@@ -1,0 +1,120 @@
+{
+  "source_commit": "b1f253bebcfc674da68bbe5474ab6265b5ab7e2e",
+  "scope": "Read-only inherited source pins; the reflection is provenance only and its rationality slip is corrected in the new history note.",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session298_exact_target_geometry_20261113/README.md",
+      "sha256": "6e24968ae5c84a9b9c632cdd93dce1215ec9ee56e0ce75950205491e66047d74",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/session298_exact_target_geometry_20261113/TWO_WIDTH.md",
+      "sha256": "443963696f053a529f13dfbbb526fd4e0092a06c70de4d7aefdc782cac9c5110",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/session298_exact_target_geometry_20261113/LATTICE.md",
+      "sha256": "d74abd653b4984497693577ac9886f513c197f14131400ebe41e97f44b05fff9",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "01-canon/theorems/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md",
+      "sha256": "d2a7eca6ec57b9827e0e2e025cda33c7f4ac8bd01f831acb823542c3040f40ce",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "01-canon/theorems/THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density.md",
+      "sha256": "674d661389c3097b223c025c83d0288c97aa5b0aacfc1364d42e89d4bbf67866",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "01-canon/theorems/THM-4739-kirchhoff-and-hodge-laws-of-the-tournament-metagraph-intransitivity-currents-second-order-determination-and-the-consecutive-start-port-ledgers.md",
+      "sha256": "cac20c9b48bef294e670ee629f885113d1a0c4b8e1a6031b6e53851712e0022a",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "01-canon/theorems/THM-509-the-two-layer-baby-hodge-dichotomy.md",
+      "sha256": "f0fdeb3394b66398d0540427abbe3ae97d1bd38e7e56ca95e0073b698bd856bc",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/lattice-cap/LATTICE_CAP_REPAIR.md",
+      "sha256": "2c6212ebc62d6ceb18c4d5e5b1b61a1b5cc2ec85a78453d57a378e4a087ae04f",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/README.md",
+      "sha256": "872db2646a826cf95e58c5d24f005461978142a8a933b6ca82c9b4142e5e6029",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/PROOF.md",
+      "sha256": "e714ae9c62d4fd218911bb3ed313ff986c4735d51c73100413f6ce767dfde54e",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/session254_four_frontiers_20261111/hadwiger_nelson/PROOF.md",
+      "sha256": "2692448c13f03fac17d1cf6a01a8a5325a6827bad33f8851830763c15cc80602",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "07-reflections/hodge-conjecture-cycle-lifting-lrc14-codex-s232.md",
+      "sha256": "f20b9d6b1b90e59e8afac960534bc7375dcc14a32240b7f4ba8bd09a727f7574",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "07-reflections/the-rational-irrational-duality.md",
+      "sha256": "d9fa34f0bf4c8a0dc5787af20a547a487da823449204dbbd575655800a4b674d",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/weighted_core_transport_20261020/core_count.md",
+      "sha256": "94c06341010fc4e762c7cd912a071c6f433155d9bd20259ce5de23ea9b3287a9",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/twin_quotient_defect_weights_20261020/TWIN_QUOTIENT_DEFECTS.md",
+      "sha256": "1885f93a4896737996f718834b8127512e7c09d183a51d9081130bb1517e27b4",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/return6325_observer_20261103/PROOFS.md",
+      "sha256": "b83f005cae793af92a76049b4a0d3fe5a5660deb5775845973c634b8404a1b0d",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/return18979_ports_20261103/PROOFS.md",
+      "sha256": "ab17e49da4b59fa57937c5567d2280bb9dd31b9fef9265aab8e16240a480f9f2",
+      "hash_basis": "git blob bytes at source_commit"
+    }
+  ],
+  "local_controls": [
+    {
+      "path": "root_phase.py",
+      "sha256": "5088b2704ae92a1189fd65d2344694bc48c6347902d229b0a4e4525b29ff8c24"
+    },
+    {
+      "path": "verification.json",
+      "sha256": "7108ac44ea9a1ec64a5048eb0a42fc52237c9c14fe8ca0df1bdcca326adc2d63"
+    },
+    {
+      "path": "verification.optimized.json",
+      "sha256": "9fbcd4fd4dd6b1546eb750bc8daf6b64ef09324bbc27f881e4a5e08c18a5e299"
+    }
+  ],
+  "primary_literature": [
+    {
+      "url": "https://arxiv.org/html/0801.4069v1#S1.SS1",
+      "authors": "Youssef Boudabbous and Maurice Pouzet",
+      "title": "The morphology of infinite tournaments. Application to the growth of their profile",
+      "identifier": "arXiv:0801.4069v1 (2008)",
+      "used_claim": "Theorem1, canonical acyclic block decomposition; established precedent only",
+      "access_date": "2026-11-13"
+    }
+  ]
+}

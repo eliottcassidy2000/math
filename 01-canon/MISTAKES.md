@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13: A ceiling-selected time was incorrectly called irrational
+
+- **Status:** demonstrated historical error corrected in [the rational/irrational reflection](../07-reflections/the-rational-irrational-duality.md); no current LRC theorem is promoted or retracted.
+- **First failed implication:** the construction `(ceil(N(t0-delta/V)-1/14)+1/14)/N` was described as generically irrational. For positive integer N its ceiling is an integer, so the result is rational regardless of the arithmetic type of t0 or delta/V.
+- **Minimal witness:** N1 and t0-delta/V0 give1/14.
+- **Strongest survivor:** a real-variable positive-margin existence argument can select a rational witness by density. Finite strict polynomial sign data cannot distinguish rational, fixed-degree algebraic, and transcendental parameters away from equality walls; see the [scoped observer proof](../05-knowledge/results/changing_core_returns_20261113/geometry/HISTORY.md).
+- **Missing coordinate:** arithmetic type is not the same as the method used to certify existence. Preserve historical provenance while using current scoped proofs for status.
+
 ## 2026-11-13: A component sorter cannot inspect its own mutating list
 
 - **Status:** local implementation error repaired before promotion in the

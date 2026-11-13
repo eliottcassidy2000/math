@@ -1,0 +1,422 @@
+{
+  "status": "PASS",
+  "H847_bridge": {
+    "source": [
+      984,
+      29,
+      25,
+      16,
+      32,
+      15,
+      62,
+      126,
+      254,
+      1534,
+      511
+    ],
+    "source_root": 9,
+    "target": [
+      60,
+      61,
+      56,
+      48,
+      32,
+      960,
+      415,
+      799,
+      543,
+      95
+    ],
+    "target_root": 0,
+    "retained_name_to_target_index": {
+      "9": 0,
+      "0": 1,
+      "1": 2,
+      "2": 3,
+      "3": 4,
+      "4": 5,
+      "5": 6,
+      "6": 7,
+      "7": 8,
+      "8": 9
+    },
+    "deleted": [
+      10
+    ],
+    "flipped_pairs": [
+      [
+        9,
+        5
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "source_state": [
+      847,
+      269,
+      269,
+      847
+    ],
+    "target_state": [
+      847,
+      40,
+      415,
+      3912
+    ],
+    "exit_state": [
+      19537,
+      4719,
+      4719,
+      19537
+    ],
+    "scope": "Endpoint-neutral relabel/replace macro; same physical root; root-star may change; no claim for intermediate single edits"
+  },
+  "explicit_checks": 1533,
+  "source_universe": "Every labelled tournament B of orders1..4, all resource widths m2..4 and every root position; no quotient filters",
+  "carrier_contexts": 675,
+  "independent_permutation_controls": 35,
+  "prepared_family": [
+    {
+      "m": 3,
+      "H": 199,
+      "prepared": [
+        199,
+        10,
+        91,
+        852
+      ],
+      "unprepared": [
+        199,
+        5,
+        91,
+        1167
+      ],
+      "delta": 572,
+      "odd_delta": 143,
+      "period": 60,
+      "odd_progression_step": 60,
+      "returns": [
+        {
+          "k": 1,
+          "H_bits": 13,
+          "t_bits": 11,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        },
+        {
+          "k": 61,
+          "H_bits": 73,
+          "t_bits": 71,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        },
+        {
+          "k": 121,
+          "H_bits": 133,
+          "t_bits": 131,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        }
+      ]
+    },
+    {
+      "m": 5,
+      "H": 847,
+      "prepared": [
+        847,
+        40,
+        415,
+        3912
+      ],
+      "unprepared": [
+        847,
+        5,
+        415,
+        12399
+      ],
+      "delta": 2690,
+      "odd_delta": 1345,
+      "period": 268,
+      "odd_progression_step": 268,
+      "returns": [
+        {
+          "k": 1,
+          "H_bits": 15,
+          "t_bits": 13,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        },
+        {
+          "k": 269,
+          "H_bits": 283,
+          "t_bits": 281,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        },
+        {
+          "k": 537,
+          "H_bits": 551,
+          "t_bits": 549,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        }
+      ]
+    },
+    {
+      "m": 7,
+      "H": 3439,
+      "prepared": [
+        3439,
+        160,
+        1711,
+        16152
+      ],
+      "unprepared": [
+        3439,
+        5,
+        1711,
+        118527
+      ],
+      "delta": 11162,
+      "odd_delta": 5581,
+      "period": 124,
+      "odd_progression_step": 124,
+      "returns": [
+        {
+          "k": 1,
+          "H_bits": 17,
+          "t_bits": 15,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        },
+        {
+          "k": 125,
+          "H_bits": 141,
+          "t_bits": 139,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        },
+        {
+          "k": 249,
+          "H_bits": 265,
+          "t_bits": 263,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        }
+      ]
+    },
+    {
+      "m": 9,
+      "H": 13807,
+      "prepared": [
+        13807,
+        640,
+        6895,
+        65112
+      ],
+      "unprepared": [
+        13807,
+        5,
+        6895,
+        1093839
+      ],
+      "delta": 45050,
+      "odd_delta": 22525,
+      "period": 520,
+      "odd_progression_step": 520,
+      "returns": [
+        {
+          "k": 1,
+          "H_bits": 19,
+          "t_bits": 17,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        },
+        {
+          "k": 521,
+          "H_bits": 539,
+          "t_bits": 537,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        },
+        {
+          "k": 1041,
+          "H_bits": 1059,
+          "t_bits": 1057,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        }
+      ]
+    },
+    {
+      "m": 11,
+      "H": 55279,
+      "prepared": [
+        55279,
+        2560,
+        27631,
+        260952
+      ],
+      "unprepared": [
+        55279,
+        5,
+        27631,
+        9952287
+      ],
+      "delta": 180602,
+      "odd_delta": 90301,
+      "period": 3708,
+      "odd_progression_step": 3708,
+      "returns": [
+        {
+          "k": 1,
+          "H_bits": 21,
+          "t_bits": 19,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        },
+        {
+          "k": 3709,
+          "H_bits": 3729,
+          "t_bits": 3727,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        },
+        {
+          "k": 7417,
+          "H_bits": 7437,
+          "t_bits": 7435,
+          "gcd": 1,
+          "H_mod3": 1,
+          "t_mod3": 0
+        }
+      ]
+    }
+  ],
+  "H141_trap_states": [
+    [
+      141,
+      24,
+      69,
+      324
+    ],
+    [
+      141,
+      12,
+      69,
+      480
+    ],
+    [
+      141,
+      6,
+      69,
+      708
+    ],
+    [
+      141,
+      3,
+      69,
+      1029
+    ]
+  ],
+  "source_profile_B": [
+    5,
+    32,
+    117
+  ],
+  "B_rows": [
+    6,
+    12,
+    8,
+    1
+  ],
+  "formula_scope": "All nonempty tournament B and m>=2 proved inPROOF.md; finite computations are independent controls",
+  "prime_phase_certificates": {
+    "113": {
+      "order2": 28,
+      "forbidden": 58,
+      "found": false
+    },
+    "149": {
+      "order2": 148,
+      "forbidden": 81,
+      "log2": 52
+    }
+  }
+}
