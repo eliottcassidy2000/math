@@ -1,0 +1,47 @@
+{
+  "status": "FINITE-EXACT",
+  "source_ref": "06847e4c6e6709585bf1b4cfa6f84713081034ea",
+  "scope": "All response pairs represented in inherited ordinary types orders1..8; ordered module pairs tested for j(6p+h)-6hq=\u00b11",
+  "profile_count": 1922,
+  "hit_count": 9,
+  "nontrivial_count": 1,
+  "nontrivial": [
+    {
+      "M": {
+        "n": 8,
+        "rows": [
+          4,
+          9,
+          82,
+          21,
+          35,
+          143,
+          187,
+          31
+        ],
+        "code": 1188354,
+        "h": 181,
+        "p": 3424
+      },
+      "N": {
+        "n": 8,
+        "rows": [
+          6,
+          12,
+          48,
+          21,
+          131,
+          219,
+          159,
+          15
+        ],
+        "code": 524868,
+        "h": 179,
+        "p": 3416
+      },
+      "e": -1,
+      "H": 145259777,
+      "target": 435779329
+    }
+  ]
+}

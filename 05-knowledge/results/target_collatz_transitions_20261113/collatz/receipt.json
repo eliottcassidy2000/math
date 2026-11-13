@@ -1,0 +1,82 @@
+{
+  "status": "FINITE-EXACT controls of independently proved all-word statements",
+  "universe": {
+    "actions": [
+      "U",
+      "V"
+    ],
+    "word_lengths": [
+      1,
+      5
+    ],
+    "halving_counts_per_action": [
+      1,
+      2,
+      3
+    ],
+    "positive_test_starts": [
+      "1",
+      "7",
+      "100",
+      "100000000"
+    ]
+  },
+  "counts": {
+    "all_words": 9330,
+    "paid_words": 4917,
+    "positive_paid_traces": 6342,
+    "positive_formal_fixed_points": 1599
+  },
+  "formal_endpoint_hostile": [
+    "1/3",
+    "-2/9",
+    "-1/9",
+    "2/3",
+    "1/3"
+  ],
+  "graph_guard_controls": {
+    "7_to_2": {
+      "A": false,
+      "L": true
+    },
+    "40_to_13": {
+      "A": true,
+      "L": false
+    },
+    "5_to_10": {
+      "A": true,
+      "L": false
+    },
+    "1_to_0": {
+      "A": false,
+      "L": false
+    }
+  },
+  "source_family": {
+    "r": [
+      1,
+      5
+    ],
+    "q": [
+      1,
+      30
+    ],
+    "total_controls": 150,
+    "first": {
+      "r": 1,
+      "q": 1,
+      "source": 9,
+      "edges": 5,
+      "peak": 28
+    },
+    "last": {
+      "r": 5,
+      "q": 30,
+      "source": 61781,
+      "edges": 13,
+      "peak": 185344
+    }
+  },
+  "scope": "No orbit census; no claim of universal classical or literal reachability.",
+  "reproduce": "python3 -B 05-knowledge/results/target_collatz_transitions_20261113/collatz/check.py"
+}

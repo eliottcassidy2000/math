@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "normal_optimized_receipts_equal": true,
+  "sha256": {
+    "response_probe.json": "6611d503f02e7ebb993ab05060427156f977433146449d78877e06c3b16497c5",
+    "response_bank.json.gz": "1d4ee32f619f59933390cd378f73d457d4e6981c902d87e40efee2f4c7bcd57c",
+    "polarized_receipt.json": "946c7a814fe0fb0936c852a198d0909953c210becd238a8aaee445b291ad1a03",
+    "selector_head.json": "bfb67a038e2b7122ded15a9074420b82ccc7b2235e38b029175e4511e77c7ee7"
+  },
+  "runs": [
+    {
+      "script": "response_probe.py",
+      "optimized_pass": true,
+      "stdout": "{\n  \"status\": \"FINITE-EXACT\",\n  \"source_ref\": \"06847e4c6e6709585bf1b4cfa6f84713081034ea\",\n  \"scope\": \"All response pairs represented in inherited ordinary types orders1..8; ordered module pairs tested for j(6p+h)-6hq=\\u00b11\",\n  \"profile_count\": 1922,\n  \"hit_count\": 9,\n  \"nontrivial_count\": 1\n}\nH 145259777 target 435779329 e -1 M (8, 181, 3424) N (8, 179, 3416)\n"
+    },
+    {
+      "script": "polarized.py",
+      "optimized_pass": true,
+      "stdout": "PASS:16 literal module pairs, exact run tables, negative digit and factor inverse\nArithmetic candidate counts: {'7': 0, '21': 0, '191': 1, '197': 0, '347': 1, '371': 1, '881': 0, '5299': 1}\n"
+    },
+    {
+      "script": "selector_head.py",
+      "optimized_pass": true,
+      "stdout": "{'status': 'FINITE-EXACT with proved all-order cutoff', 'scope': 'polarized nonempty-module constructor; allY<39971, inherited completeordinarymodules\u22648; no global spectrum exclusion', 'targets': 205, 'prime_targets': 34, 'seven_prime_targets': 9}\n"
+    }
+  ],
+  "lane_checks": [
+    {
+      "script": "targets/handoff.py",
+      "optimized_pass": true,
+      "normal_optimized_equal": true,
+      "receipt": "targets/receipt.json",
+      "sha256": "1e3afb3270fa281bd00aec6456264f9d1720be6ec9075961e66f6fe6d12c7921",
+      "stdout": "PASS: five universal-move controls and three one-arc clock transfers\n"
+    },
+    {
+      "script": "history/check.py",
+      "optimized_pass": true,
+      "normal_optimized_equal": true,
+      "receipt": "history/receipt.json",
+      "sha256": "49d39fc001ee1069ea781c71a3a4175bf822b566a3f1e59804b360309a5c8d85",
+      "stdout": "PASS 4134 unit tests; 5512 valuations; 15 prime candidates; nine literal module pairs; actual Farey witness\n"
+    },
+    {
+      "script": "collatz/check.py",
+      "optimized_pass": true,
+      "normal_optimized_equal": true,
+      "receipt": "collatz/receipt.json",
+      "sha256": "9857a48893ba336180c34585ffcd8b260a3ec23983cc51718ef0864ddf74ebe9",
+      "stdout": "{\n  \"status\": \"FINITE-EXACT controls of independently proved all-word statements\",\n  \"universe\": {\n    \"actions\": [\n      \"U\",\n      \"V\"\n    ],\n    \"word_lengths\": [\n      1,\n      5\n    ],\n    \"halving_counts_per_action\": [\n      1,\n      2,\n      3\n    ],\n    \"positive_test_starts\": [\n      \"1\",\n      \"7\",\n      \"100\",\n      \"100000000\"\n    ]\n  },\n  \"counts\": {\n    \"all_words\": 9330,\n    \"paid_words\": 4917,\n    \"positive_paid_traces\": 6342,\n    \"positive_formal_fixed_points\": 1599\n  },\n  \"formal_endpoint_hostile\": [\n    \"1/3\",\n    \"-2/9\",\n    \"-1/9\",\n    \"2/3\",\n    \"1/3\"\n  ],\n  \"graph_guard_controls\": {\n    \"7_to_2\": {\n      \"A\": false,\n      \"L\": true\n    },\n    \"40_to_13\": {\n      \"A\": true,\n      \"L\": false\n    },\n    \"5_to_10\": {\n      \"A\": true,\n      \"L\": false\n    },\n    \"1_to_0\": {\n      \"A\": false,\n      \"L\": false\n    }\n  },\n  \"source_family\": {\n    \"r\": [\n      1,\n      5\n    ],\n    \"q\": [\n      1,\n      30\n    ],\n    \"total_controls\": 150,\n    \"first\": {\n      \"r\": 1,\n      \"q\": 1,\n      \"source\": 9,\n      \"edges\": 5,\n      \"peak\": 28\n    },\n    \"last\": {\n      \"r\": 5,\n      \"q\": 30,\n      \"source\": 61781,\n      \"edges\": 13,\n      \"peak\": 185344\n    }\n  },\n  \"scope\": \"No orbit census; no claim of universal classical or literal reachability.\",\n  \"reproduce\": \"python3 -B 05-knowledge/results/target_collatz_transitions_20261113/collatz/check.py\"\n}\n"
+    },
+    {
+      "script": "collatz/clock_boundary.py",
+      "optimized_pass": true,
+      "normal_optimized_equal": true,
+      "receipt": "collatz/clock_boundary_receipt.json",
+      "sha256": "0c1b77b50924609a7b7d7d381a5c722192032a92eaf979ffa877584edc008ca0",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"Gamma_rows\": [\n    230,\n    60,\n    248,\n    241,\n    225,\n    192,\n    130,\n    2\n  ],\n  \"complete_run_signature\": [\n    163,\n    180,\n    60\n  ],\n  \"module_controls\": [\n    {\n      \"module\": \"TT1\",\n      \"h\": 1,\n      \"P3\": 3,\n      \"before\": 361,\n      \"after\": 523,\n      \"desired\": 541,\n      \"debt\": 18,\n      \"recharged\": 1081\n    },\n    {\n      \"module\": \"TT2\",\n      \"h\": 1,\n      \"P3\": 9,\n      \"before\": 1081,\n      \"after\": 1603,\n      \"desired\": 1621,\n      \"debt\": 18,\n      \"recharged\": 3241\n    },\n    {\n      \"module\": \"TT3\",\n      \"h\": 1,\n      \"P3\": 27,\n      \"before\": 3241,\n      \"after\": 4843,\n      \"desired\": 4861,\n      \"debt\": 18,\n      \"recharged\": 9721\n    },\n    {\n      \"module\": \"C3\",\n      \"h\": 3,\n      \"P3\": 33,\n      \"before\": 3963,\n      \"after\": 5889,\n      \"desired\": 5943,\n      \"debt\": 54,\n      \"recharged\": 11883\n    },\n    {\n      \"module\": \"strong4\",\n      \"h\": 5,\n      \"P3\": 117,\n      \"before\": 14045,\n      \"after\": 20975,\n      \"desired\": 21065,\n      \"debt\": 90,\n      \"recharged\": 42125\n    }\n  ],\n  \"repair_universe\": {\n    \"1\": {\n      \"examined\": 28,\n      \"scalar_fits\": 0,\n      \"universal_fits\": 0\n    },\n    \"2\": {\n      \"examined\": 378,\n      \"scalar_fits\": 2,\n      \"universal_fits\": 0\n    }\n  },\n  \"singleton_only_fits\": [\n    {\n      \"flips\": [\n        [\n          0,\n          4\n        ],\n        [\n          2,\n          5\n        ]\n      ],\n      \"rows\": [\n        246,\n        60,\n        216,\n        241,\n        224,\n        196,\n        130,\n        2\n      ],\n      \"complete_signature\": [\n        181,\n        260,\n        132,\n        18\n      ],\n      \"universal_repair\": false\n    },\n    {\n      \"flips\": [\n        [\n          2,\n          4\n        ],\n        [\n          5,\n          7\n        ]\n      ],\n      \"rows\": [\n        230,\n        60,\n        232,\n        241,\n        229,\n        64,\n        130,\n        34\n      ],\n      \"complete_signature\": [\n        181,\n        174,\n        48,\n        0\n      ],\n      \"universal_repair\": false\n    }\n  ],\n  \"scope\": \"Fixed 8-vertex Gamma and named modules only; no census of all clocks or all tournaments.\"\n}\n"
+    }
+  ],
+  "relative_links": {
+    "count": 51,
+    "missing": [],
+    "git_ref": "ebd71e68d8"
+  },
+  "history_manifest_pass": true
+}

@@ -1,0 +1,7364 @@
+{
+  "status": "FINITE-EXACT with proved all-order cutoff",
+  "scope": "polarized nonempty-module constructor; allY<39971, inherited completeordinarymodules\u22648; no global spectrum exclusion",
+  "targets": 205,
+  "prime_targets": 34,
+  "seven_prime_targets": 9,
+  "records": [
+    {
+      "Y": 191,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 347,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 371,
+      "prime": false,
+      "seven_prime": true,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 659,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 671,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 731,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 1041,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 1113,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 1271,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 1283,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 1319,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 1451,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 1977,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 2013,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 2193,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 2471,
+      "prime": false,
+      "seven_prime": true,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 2495,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 2531,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 2615,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 2671,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 2891,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 2935,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 3813,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 3849,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              16,
+              19,
+              23,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 48
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 3957,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 4353,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              16,
+              19,
+              23,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 48
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 4847,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 4871,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 4943,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 5027,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              32,
+              33,
+              35,
+              39,
+              47,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 64
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 5155,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 5167,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              17,
+              23,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 64
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 5207,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 5299,
+      "prime": false,
+      "seven_prime": true,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 5771,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              32,
+              33,
+              35,
+              39,
+              47,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 64
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 5815,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              17,
+              23,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 64
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 6039,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 6867,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              25,
+              19,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 84
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 7413,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              16,
+              19,
+              23,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 48
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 7485,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 7593,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              32,
+              35,
+              39,
+              47,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 96
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 7659,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              25,
+              19,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 84
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 7845,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              16,
+              19,
+              23,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 48
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 8185,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              17,
+              21,
+              3
+            ],
+            "code": 97,
+            "h": 11,
+            "p": 100
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 8567,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              9,
+              17,
+              7
+            ],
+            "code": 68,
+            "h": 13,
+            "p": 104
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 8673,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              32,
+              35,
+              39,
+              47,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 96
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 8949,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              8,
+              5,
+              17,
+              22,
+              3
+            ],
+            "code": 40,
+            "h": 15,
+            "p": 108
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 9121,
+      "prime": false,
+      "seven_prime": true,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              17,
+              21,
+              3
+            ],
+            "code": 97,
+            "h": 11,
+            "p": 100
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 9503,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              9,
+              17,
+              7
+            ],
+            "code": 68,
+            "h": 13,
+            "p": 104
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 9551,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 9599,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 9671,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              32,
+              33,
+              35,
+              39,
+              47,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 64
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 9839,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 9885,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              6,
+              12,
+              24,
+              17,
+              3
+            ],
+            "code": 76,
+            "h": 15,
+            "p": 120
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              8,
+              5,
+              17,
+              22,
+              3
+            ],
+            "code": 40,
+            "h": 15,
+            "p": 108
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 9955,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              17,
+              23,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 64
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 10019,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              64,
+              65,
+              67,
+              71,
+              79,
+              95,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 128
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 10027,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 10123,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 10159,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              33,
+              39,
+              47,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 128
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 10391,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              32,
+              33,
+              35,
+              39,
+              47,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 64
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 10483,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              17,
+              23,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 64
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 10965,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              6,
+              12,
+              24,
+              17,
+              3
+            ],
+            "code": 76,
+            "h": 15,
+            "p": 120
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 11439,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 11531,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 7,
+            "rows": [
+              64,
+              65,
+              67,
+              71,
+              79,
+              95,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 128
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 11547,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              32,
+              43,
+              51,
+              39,
+              1
+            ],
+            "code": 8194,
+            "h": 9,
+            "p": 144
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 11575,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              33,
+              39,
+              47,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 128
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 11871,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 13059,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              32,
+              43,
+              51,
+              39,
+              1
+            ],
+            "code": 8194,
+            "h": 9,
+            "p": 144
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 13239,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              25,
+              19,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 84
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 13419,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              41,
+              35,
+              47,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 168
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 13815,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              25,
+              19,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 84
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 14541,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              16,
+              19,
+              23,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 48
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 14613,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              32,
+              35,
+              39,
+              47,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 96
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 14829,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              16,
+              19,
+              23,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 48
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 15081,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              2,
+              64,
+              67,
+              71,
+              79,
+              95,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 192
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 15219,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              41,
+              35,
+              47,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 168
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 15465,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 15621,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              32,
+              35,
+              39,
+              47,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 96
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 15781,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              17,
+              21,
+              3
+            ],
+            "code": 97,
+            "h": 11,
+            "p": 100
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 15897,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 15985,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              33,
+              37,
+              47,
+              3
+            ],
+            "code": 193,
+            "h": 11,
+            "p": 200
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 16453,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              17,
+              21,
+              3
+            ],
+            "code": 97,
+            "h": 11,
+            "p": 100
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 16523,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              9,
+              17,
+              7
+            ],
+            "code": 68,
+            "h": 13,
+            "p": 104
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 16679,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              9,
+              33,
+              47,
+              7
+            ],
+            "code": 132,
+            "h": 13,
+            "p": 208
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 17147,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              9,
+              17,
+              7
+            ],
+            "code": 68,
+            "h": 13,
+            "p": 104
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 17265,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              8,
+              5,
+              17,
+              22,
+              3
+            ],
+            "code": 40,
+            "h": 15,
+            "p": 108
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 17313,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 7,
+            "rows": [
+              2,
+              64,
+              67,
+              71,
+              79,
+              95,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 192
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 17373,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              8,
+              5,
+              33,
+              38,
+              47,
+              3
+            ],
+            "code": 72,
+            "h": 15,
+            "p": 216
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 17841,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              8,
+              5,
+              17,
+              22,
+              3
+            ],
+            "code": 40,
+            "h": 15,
+            "p": 108
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 18067,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              8,
+              3,
+              53,
+              39,
+              7
+            ],
+            "code": 16,
+            "h": 17,
+            "p": 224
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 18121,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              33,
+              37,
+              47,
+              3
+            ],
+            "code": 193,
+            "h": 11,
+            "p": 200
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 18863,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              9,
+              33,
+              47,
+              7
+            ],
+            "code": 132,
+            "h": 13,
+            "p": 208
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 18911,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 18959,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              32,
+              33,
+              35,
+              39,
+              47,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 64
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 19065,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              6,
+              12,
+              24,
+              17,
+              3
+            ],
+            "code": 76,
+            "h": 15,
+            "p": 120
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 19103,
+      "prime": false,
+      "seven_prime": true,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 19245,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              6,
+              12,
+              40,
+              33,
+              47,
+              3
+            ],
+            "code": 140,
+            "h": 15,
+            "p": 240
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 19271,
+      "prime": false,
+      "seven_prime": true,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              64,
+              65,
+              67,
+              71,
+              79,
+              95,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 128
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 19483,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 19531,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              17,
+              23,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 64
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 19555,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              33,
+              39,
+              47,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 128
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 19605,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              8,
+              5,
+              33,
+              38,
+              47,
+              3
+            ],
+            "code": 72,
+            "h": 15,
+            "p": 216
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 19631,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              32,
+              33,
+              35,
+              39,
+              47,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 64
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 19785,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              6,
+              12,
+              24,
+              17,
+              3
+            ],
+            "code": 76,
+            "h": 15,
+            "p": 120
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 19819,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              17,
+              23,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 64
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 20003,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 8,
+            "rows": [
+              128,
+              129,
+              131,
+              135,
+              143,
+              159,
+              191,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 256
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 20059,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 20143,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              65,
+              71,
+              79,
+              95,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 256
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 20347,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              8,
+              3,
+              53,
+              39,
+              7
+            ],
+            "code": 16,
+            "h": 17,
+            "p": 224
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 20633,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              33,
+              53,
+              39,
+              3
+            ],
+            "code": 321,
+            "h": 19,
+            "p": 256
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 20759,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 7,
+            "rows": [
+              64,
+              65,
+              67,
+              71,
+              79,
+              95,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 128
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 20851,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              33,
+              39,
+              47,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 128
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 21765,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              6,
+              12,
+              40,
+              33,
+              47,
+              3
+            ],
+            "code": 140,
+            "h": 15,
+            "p": 240
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 22021,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              9,
+              17,
+              39,
+              15
+            ],
+            "code": 260,
+            "h": 23,
+            "p": 272
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 22239,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              32,
+              43,
+              51,
+              39,
+              1
+            ],
+            "code": 8194,
+            "h": 9,
+            "p": 144
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              16,
+              19,
+              23,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 48
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 22455,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 22779,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              2,
+              64,
+              75,
+              83,
+              71,
+              95,
+              1
+            ],
+            "code": 65538,
+            "h": 9,
+            "p": 288
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 23051,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 8,
+            "rows": [
+              128,
+              129,
+              131,
+              135,
+              143,
+              159,
+              191,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 256
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 23095,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              65,
+              71,
+              79,
+              95,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 256
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 23249,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              33,
+              53,
+              39,
+              3
+            ],
+            "code": 321,
+            "h": 19,
+            "p": 256
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 23409,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              8,
+              5,
+              33,
+              54,
+              39,
+              3
+            ],
+            "code": 80,
+            "h": 27,
+            "p": 288
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 23535,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              16,
+              19,
+              23,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 48
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              32,
+              43,
+              51,
+              39,
+              1
+            ],
+            "code": 8194,
+            "h": 9,
+            "p": 144
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 23893,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              20,
+              41,
+              35,
+              45,
+              3
+            ],
+            "code": 385,
+            "h": 23,
+            "p": 296
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 24587,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              41,
+              49,
+              39,
+              3
+            ],
+            "code": 8385,
+            "h": 25,
+            "p": 304
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 24733,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              9,
+              17,
+              39,
+              15
+            ],
+            "code": 260,
+            "h": 23,
+            "p": 272
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 25839,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              41,
+              35,
+              47,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 168
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 25975,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              20,
+              9,
+              35,
+              45,
+              7
+            ],
+            "code": 1313,
+            "h": 29,
+            "p": 320
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 25983,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              25,
+              19,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 84
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 26019,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 7,
+            "rows": [
+              2,
+              64,
+              75,
+              83,
+              71,
+              95,
+              1
+            ],
+            "code": 65538,
+            "h": 9,
+            "p": 288
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 26127,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              25,
+              19,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 84
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 26217,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              8,
+              5,
+              33,
+              54,
+              39,
+              3
+            ],
+            "code": 80,
+            "h": 27,
+            "p": 288
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 26523,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              73,
+              67,
+              79,
+              95,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 336
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 26669,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              17,
+              37,
+              43,
+              7
+            ],
+            "code": 1282,
+            "h": 31,
+            "p": 328
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 26893,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              20,
+              41,
+              35,
+              45,
+              3
+            ],
+            "code": 385,
+            "h": 23,
+            "p": 296
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 27363,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              4,
+              17,
+              42,
+              35,
+              45,
+              3
+            ],
+            "code": 264,
+            "h": 33,
+            "p": 336
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 27423,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              41,
+              35,
+              47,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 168
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 27635,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              41,
+              49,
+              39,
+              3
+            ],
+            "code": 8385,
+            "h": 25,
+            "p": 304
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 28653,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              32,
+              35,
+              39,
+              47,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 96
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 28751,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              16,
+              5,
+              9,
+              35,
+              46,
+              7
+            ],
+            "code": 144,
+            "h": 37,
+            "p": 352
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 28797,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              16,
+              19,
+              23,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 48
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              16,
+              19,
+              23,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 48
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 29013,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              2,
+              64,
+              67,
+              71,
+              79,
+              95,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 192
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              32,
+              33,
+              35,
+              39,
+              47,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 64
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 29119,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              20,
+              9,
+              35,
+              45,
+              7
+            ],
+            "code": 1313,
+            "h": 29,
+            "p": 320
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 29235,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              6,
+              24,
+              34,
+              37,
+              45,
+              3
+            ],
+            "code": 88,
+            "h": 33,
+            "p": 360
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 29517,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              32,
+              35,
+              39,
+              47,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 96
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 29861,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              17,
+              37,
+              43,
+              7
+            ],
+            "code": 1282,
+            "h": 31,
+            "p": 328
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 29865,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              17,
+              23,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 64
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 30057,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 8,
+            "rows": [
+              2,
+              128,
+              131,
+              135,
+              143,
+              159,
+              191,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 384
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 30081,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 30339,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              73,
+              67,
+              79,
+              95,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 336
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 30369,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              8,
+              11,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 24
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 30477,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              2,
+              64,
+              75,
+              83,
+              103,
+              79,
+              1
+            ],
+            "code": 131074,
+            "h": 15,
+            "p": 384
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 30603,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              4,
+              17,
+              42,
+              35,
+              45,
+              3
+            ],
+            "code": 264,
+            "h": 33,
+            "p": 336
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 30623,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              6,
+              12,
+              24,
+              33,
+              11,
+              23
+            ],
+            "code": 148,
+            "h": 37,
+            "p": 376
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 30781,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              33,
+              37,
+              47,
+              3
+            ],
+            "code": 193,
+            "h": 11,
+            "p": 200
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 30973,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              17,
+              21,
+              3
+            ],
+            "code": 97,
+            "h": 11,
+            "p": 100
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 31117,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              17,
+              21,
+              3
+            ],
+            "code": 97,
+            "h": 11,
+            "p": 100
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 31173,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              32,
+              33,
+              35,
+              39,
+              47,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 64
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 7,
+            "rows": [
+              2,
+              64,
+              67,
+              71,
+              79,
+              95,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 192
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 31449,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              17,
+              23,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 64
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 31585,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              65,
+              69,
+              79,
+              95,
+              3
+            ],
+            "code": 385,
+            "h": 11,
+            "p": 400
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 32087,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              16,
+              5,
+              9,
+              35,
+              46,
+              7
+            ],
+            "code": 144,
+            "h": 37,
+            "p": 352
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 32123,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              9,
+              33,
+              47,
+              7
+            ],
+            "code": 132,
+            "h": 13,
+            "p": 208
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 32435,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              9,
+              17,
+              7
+            ],
+            "code": 68,
+            "h": 13,
+            "p": 104
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              9,
+              17,
+              7
+            ],
+            "code": 68,
+            "h": 13,
+            "p": 104
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 32653,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              33,
+              37,
+              47,
+              3
+            ],
+            "code": 193,
+            "h": 11,
+            "p": 200
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 32763,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              6,
+              24,
+              34,
+              37,
+              45,
+              3
+            ],
+            "code": 88,
+            "h": 33,
+            "p": 360
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 32903,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              9,
+              65,
+              79,
+              95,
+              7
+            ],
+            "code": 260,
+            "h": 13,
+            "p": 416
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 33465,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              8,
+              5,
+              33,
+              38,
+              47,
+              3
+            ],
+            "code": 72,
+            "h": 15,
+            "p": 216
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 33753,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              8,
+              5,
+              17,
+              22,
+              3
+            ],
+            "code": 40,
+            "h": 15,
+            "p": 108
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 33883,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              6,
+              12,
+              24,
+              49,
+              35,
+              7
+            ],
+            "code": 280,
+            "h": 41,
+            "p": 416
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 33897,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              8,
+              5,
+              17,
+              22,
+              3
+            ],
+            "code": 40,
+            "h": 15,
+            "p": 108
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 33995,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              9,
+              33,
+              47,
+              7
+            ],
+            "code": 132,
+            "h": 13,
+            "p": 208
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 34221,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              8,
+              5,
+              65,
+              70,
+              79,
+              95,
+              3
+            ],
+            "code": 136,
+            "h": 15,
+            "p": 432
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 34247,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              6,
+              12,
+              24,
+              33,
+              11,
+              23
+            ],
+            "code": 148,
+            "h": 37,
+            "p": 376
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 34577,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              6,
+              40,
+              26,
+              49,
+              35,
+              5
+            ],
+            "code": 1298,
+            "h": 43,
+            "p": 424
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 34593,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 8,
+            "rows": [
+              2,
+              128,
+              131,
+              135,
+              143,
+              159,
+              191,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 384
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 34725,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 7,
+            "rows": [
+              2,
+              64,
+              75,
+              83,
+              103,
+              79,
+              1
+            ],
+            "code": 131074,
+            "h": 15,
+            "p": 384
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 34807,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              8,
+              3,
+              53,
+              39,
+              7
+            ],
+            "code": 16,
+            "h": 17,
+            "p": 224
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 35271,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              10,
+              48,
+              19,
+              38,
+              41,
+              5
+            ],
+            "code": 8850,
+            "h": 45,
+            "p": 432
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 35337,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              8,
+              5,
+              33,
+              38,
+              47,
+              3
+            ],
+            "code": 72,
+            "h": 15,
+            "p": 216
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 35539,
+      "prime": false,
+      "seven_prime": true,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              2,
+              8,
+              3,
+              85,
+              71,
+              95,
+              7
+            ],
+            "code": 16,
+            "h": 17,
+            "p": 448
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 36121,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              65,
+              69,
+              79,
+              95,
+              3
+            ],
+            "code": 385,
+            "h": 11,
+            "p": 400
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 36679,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              8,
+              3,
+              53,
+              39,
+              7
+            ],
+            "code": 16,
+            "h": 17,
+            "p": 224
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 37065,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              6,
+              12,
+              40,
+              33,
+              47,
+              3
+            ],
+            "code": 140,
+            "h": 15,
+            "p": 240
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 37425,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              6,
+              12,
+              24,
+              17,
+              3
+            ],
+            "code": 76,
+            "h": 15,
+            "p": 120
+          },
+          "primitive": false
+        },
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              6,
+              12,
+              24,
+              17,
+              3
+            ],
+            "code": 76,
+            "h": 15,
+            "p": 120
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 37535,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              32,
+              33,
+              35,
+              39,
+              47,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 64
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 37583,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              9,
+              65,
+              79,
+              95,
+              7
+            ],
+            "code": 260,
+            "h": 13,
+            "p": 416
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 37631,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 37775,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              64,
+              65,
+              67,
+              71,
+              79,
+              95,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 128
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 37891,
+      "prime": false,
+      "seven_prime": true,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              6,
+              12,
+              24,
+              49,
+              35,
+              7
+            ],
+            "code": 280,
+            "h": 41,
+            "p": 416
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 37965,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              6,
+              12,
+              72,
+              65,
+              79,
+              95,
+              3
+            ],
+            "code": 268,
+            "h": 15,
+            "p": 480
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 38111,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              32,
+              33,
+              35,
+              39,
+              47,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 64
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 38347,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              33,
+              39,
+              47,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 128
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 38395,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 38471,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 8,
+            "rows": [
+              128,
+              129,
+              131,
+              135,
+              143,
+              159,
+              191,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 256
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 38491,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              17,
+              23,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 64
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 38633,
+      "prime": false,
+      "seven_prime": true,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              6,
+              40,
+              26,
+              49,
+              35,
+              5
+            ],
+            "code": 1298,
+            "h": 43,
+            "p": 424
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 38683,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 4,
+            "rows": [
+              8,
+              9,
+              11,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 16
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              17,
+              23,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 64
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 38755,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              65,
+              71,
+              79,
+              95,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 256
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 39045,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 7,
+            "rows": [
+              8,
+              5,
+              65,
+              70,
+              79,
+              95,
+              3
+            ],
+            "code": 136,
+            "h": 15,
+            "p": 432
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 39215,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 7,
+            "rows": [
+              64,
+              65,
+              67,
+              71,
+              79,
+              95,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 128
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 39225,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              6,
+              12,
+              40,
+              33,
+              47,
+              3
+            ],
+            "code": 140,
+            "h": 15,
+            "p": 240
+          },
+          "N": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 39375,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              10,
+              48,
+              19,
+              38,
+              41,
+              5
+            ],
+            "code": 8850,
+            "h": 45,
+            "p": 432
+          },
+          "N": {
+            "n": 1,
+            "rows": [
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 2
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 39403,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              33,
+              39,
+              47,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 128
+          },
+          "N": {
+            "n": 3,
+            "rows": [
+              4,
+              5,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 8
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 39717,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 3,
+            "rows": [
+              2,
+              4,
+              1
+            ],
+            "code": 2,
+            "h": 3,
+            "p": 12
+          },
+          "N": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              25,
+              19,
+              3
+            ],
+            "code": 8,
+            "h": 9,
+            "p": 84
+          },
+          "primitive": false
+        }
+      ]
+    },
+    {
+      "Y": 39749,
+      "prime": true,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 2,
+            "rows": [
+              2,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 4
+          },
+          "N": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              33,
+              53,
+              39,
+              3
+            ],
+            "code": 321,
+            "h": 19,
+            "p": 256
+          },
+          "primitive": true
+        }
+      ]
+    },
+    {
+      "Y": 39931,
+      "prime": false,
+      "seven_prime": false,
+      "witnesses": [
+        {
+          "M": {
+            "n": 5,
+            "rows": [
+              16,
+              17,
+              19,
+              23,
+              0
+            ],
+            "code": 0,
+            "h": 1,
+            "p": 32
+          },
+          "N": {
+            "n": 4,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "code": 4,
+            "h": 5,
+            "p": 32
+          },
+          "primitive": true
+        }
+      ]
+    }
+  ]
+}

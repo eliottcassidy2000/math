@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "Gamma_rows": [
+    230,
+    60,
+    248,
+    241,
+    225,
+    192,
+    130,
+    2
+  ],
+  "complete_run_signature": [
+    163,
+    180,
+    60
+  ],
+  "module_controls": [
+    {
+      "module": "TT1",
+      "h": 1,
+      "P3": 3,
+      "before": 361,
+      "after": 523,
+      "desired": 541,
+      "debt": 18,
+      "recharged": 1081
+    },
+    {
+      "module": "TT2",
+      "h": 1,
+      "P3": 9,
+      "before": 1081,
+      "after": 1603,
+      "desired": 1621,
+      "debt": 18,
+      "recharged": 3241
+    },
+    {
+      "module": "TT3",
+      "h": 1,
+      "P3": 27,
+      "before": 3241,
+      "after": 4843,
+      "desired": 4861,
+      "debt": 18,
+      "recharged": 9721
+    },
+    {
+      "module": "C3",
+      "h": 3,
+      "P3": 33,
+      "before": 3963,
+      "after": 5889,
+      "desired": 5943,
+      "debt": 54,
+      "recharged": 11883
+    },
+    {
+      "module": "strong4",
+      "h": 5,
+      "P3": 117,
+      "before": 14045,
+      "after": 20975,
+      "desired": 21065,
+      "debt": 90,
+      "recharged": 42125
+    }
+  ],
+  "repair_universe": {
+    "1": {
+      "examined": 28,
+      "scalar_fits": 0,
+      "universal_fits": 0
+    },
+    "2": {
+      "examined": 378,
+      "scalar_fits": 2,
+      "universal_fits": 0
+    }
+  },
+  "singleton_only_fits": [
+    {
+      "flips": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "rows": [
+        246,
+        60,
+        216,
+        241,
+        224,
+        196,
+        130,
+        2
+      ],
+      "complete_signature": [
+        181,
+        260,
+        132,
+        18
+      ],
+      "universal_repair": false
+    },
+    {
+      "flips": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "rows": [
+        230,
+        60,
+        232,
+        241,
+        229,
+        64,
+        130,
+        34
+      ],
+      "complete_signature": [
+        181,
+        174,
+        48,
+        0
+      ],
+      "universal_repair": false
+    }
+  ],
+  "scope": "Fixed 8-vertex Gamma and named modules only; no census of all clocks or all tournaments."
+}
