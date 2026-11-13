@@ -1,0 +1,32 @@
+# Pre-registration (kind-pasteur-2026-11-13-S27)
+
+Written before the order-11 run below. An earlier launch of the same run was stopped unread: its output file was
+empty when it was killed. Reserved identifiers: THM-5152, HYP-9679 (next free on origin/main at 3194e2073f).
+
+## Object
+
+Session 312 (CLUSTER_CHART.md) proves that a tournament is a 3-adic determinant orientation chi(det(v_i, v_j)),
+v_i in Q_3^2, iff some vertex switch of it lies in the grammar G generated from a vertex by ordinal joins X => Y and
+cyclic joins C3[X,Y,Z]. Call these the *chart class*. The question is which odd numbers are Hamiltonian-path counts
+of chart-class tournaments.
+
+## Already computed (reported, not predicted)
+
+- G up to isomorphism, by canonical modular-decomposition trees (linear nodes flattened, C3 nodes up to rotation):
+  1, 1, 2, 4, 9, 24, 65, 182, 528, 1597 classes at orders 1..10.
+- Every vertex switch of every G member through order 10. The odd values below 400 not attained are 7, 21, 31, 35,
+  53, 113, 125, 127, 149, 173, 181, 203, 215, 217, 235, 251, 263, 267, 277, 287, 305, 341, 343.
+- Busch's bound gives min H over strong tournaments of order n = 3, 5, 9, 15, 25, 45, 75, 125, 225, 375 for
+  n = 3..12 (THM-4744).
+- The chart class is hereditary (Session 312), and H is multiplicative over ordinal sums.
+- Hence a value below f(11) = 225 that is missed through order 10 and is not a product of attained values is missed
+  at every order: 31, 35, 53, 113, 127, 149, 173, 181, 203, 217 (besides 7, 21).
+- The bare grammar G, without switching, misses 13, 19, 29, ... (406 odd values below 1200 through order 13).
+
+## Decisive run P1 (order 11, every switch, values below 3000)
+
+Prediction:
+- the permanent misses below f(12) = 375 (missed through order 11, and not a product of attained values) are the
+  ten listed above together with at least one value in (225, 375) — candidates 251, 263, 277, 287, 341, 343;
+- 31 and 127 stay missed (Mersenne primes);
+- confidence about 0.65 for "at least one more".
