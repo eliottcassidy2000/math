@@ -1,0 +1,122 @@
+# Frozen missing-value bands, and the arithmetic cost of fixed cores
+
+**PROVED consequences of explicitly cited inherited mechanisms.** No new
+Busch theorem, prime-lane reduction, global Chan–Pak proof or eventual
+threshold is claimed. Reconstructed after environment rollback; fresh
+controls accompany this version.
+
+## 1. Two different increasing spectra
+
+Let S_n be Hamiltonian path counts of tournaments on at most n vertices.
+Singleton source/sink padding preserves H, so these are also the exact-order
+spectra for n≥1. Let A_n contain H-values of strongly connected tournaments
+of order at most n, including1 for the singleton, and let B_n be its
+multiplicative monoid. Unlike S_n, B_n permits arbitrarily many SCC blocks,
+so it does not bound total vertex count. Both are increasing, and
+
+    S = union_n S_n = union_n B_n.
+
+This uses the inherited SCC ordinal-product formula. Thus the complements
+M_n=positive odds\S_n decrease to positive odds\S, but writing this identity
+alone does not prove their intersection is{7,21}.
+
+We use the **CITED Busch strong-order floor**, as recorded in
+[Session258 exact-multiplier compiler](../../session258_endpoint_seed_20261111/seed_decision/PROOF.md),
+§2, from A.H. Busch, *A Note on the Number of Hamiltonian Paths in Strong
+Tournaments*, EJC13(2006),N3, Theorem1/Corollary1:
+
+    f(3a)=3·5^(a−1), f(3a+1)=5^a, f(3a+2)=9·5^(a−1), a≥1.
+
+It is strictly increasing. This note does not reprove that external result.
+The elementary Camion bound H≥order suffices for a weaker finite cutoff.
+
+## 2. A hole-freezing theorem
+
+For every n≥3,
+
+    S ∩ [1,f(n+1)) = B_n ∩ [1,f(n+1)).                         (1)
+
+Proof: if h=H(T)<f(n+1), every nontrivial SCC C has H(C)≤h. Busch forces
+|C|≤n, so h is in B_n. Conversely each product in B_n is realized by its
+ordinal sum. Consequently a hole in B_n below f(n+1) is a permanent global
+hole, not a value merely awaiting a larger tournament.
+
+This gives exact finite-height obligations rather than numerical optimism:
+for I_n={odd h:f(n)≤h<f(n+1)}, prove
+
+    I_n\{7,21} subset B_n                                  (2)
+
+for every n, together with the small initial region. By(1), these obligations
+are equivalent to the desired spectrum after the inherited impossibility
+of7 and21 is included. They are not discharged here. A method capable of
+constructing the products symbolically would be a genuine complement-first
+proof; merely enumerating each larger B_n is not such a method.
+
+For completeness, every realizable h>1 has a witness of size at most
+floor(3 log_3 h). Indeed f(s)≥3^(s/3) for s≥3 (check the three residue
+classes). Delete singleton SCCs, which do not change H. Then
+sum |C|≤3 sum log_3 H(C)=3 log_3 h. This is an inherited-bound consequence,
+not a claim of a sharp minimal-order formula or an efficient algorithm.
+Thus every fixed h has a finite exact exclusion test. Uniformly solving
+all h, rather than decidability one at a time, is the outstanding issue.
+
+## 3. A sharper internal twin-length bound
+
+Let S be strong and let a proper transitive module TT_m contract to vertex v
+of a quotient Q. Q is strong and has at least3 vertices. In the positive
+path-run expansion of H(S), the one-run coefficient is H(Q). A Hamilton
+cycle of Q, cut at v, yields a valid two-run skeleton: one v-run, the path
+through all of Q−v, then another v-run. Thus the two-run coefficient is at
+least1 and all remaining coefficients are nonnegative. Therefore
+
+    H(S) ≥ H(Q)+(2^m−2) ≥ 2^m+1.                            (3)
+
+For Q=C3 equality is attained: H(C3[TT_m,1,1])=2^m+1. This sharpens the
+2^m−2 cycle-inflation bound by retaining the mandatory one-run contribution.
+
+For selected set O of r vertices in S, each Hamilton path can be uniquely
+split immediately before a fixed j∈O to make a U_j object (allowing an empty
+first path). Hence U_j≥H(S), so if exact multiplier U(S,O)=q,
+
+    2^m ≤ q/r−1.                                           (4)
+
+In a nontransitive unit seed r≥2, since a singleton selection has W=0 and
+would force H=1. Therefore fixed-q bounds all internal transitive lengths.
+This does NOT bound lengths at a fixed odd part of q when its2-adic valuation
+is unrestricted, nor exterior neutral padding that changes q.
+
+## 4. The99 ray: natural recursion with a permanent7-lane blind spot
+
+The physical realization of R_k=99·2^k+23,k≥1, is inherited from
+[endpoint coverage compiler](../../endpoint_coverage_compiler_20261111/README.md)
+and Session258's continuation, not newly established here. The first25
+primes are exactly the primes below100; using them as a small-prime wheel
+filters arithmetic divisibility, not path-spectrum realizability.
+
+Modulo7, 99≡1 and23≡2, while2^k cycles through2,4,1. Thus R_k is always
+in{3,4,6} modulo7 and never divisible by7. This yields a full all-k obstruction:
+for ANY finite bank F of realized counts, the ordinal-product grammar
+generated by F and all R_k misses7p for every prime p>max(F∪{7}).
+Indeed a factor divisible by7 would have to come from F and divide7p.
+Its only possible positive divisors are1,7,p,7p; neither1 nor p is divisible
+by7,7 is globally impossible, and7p exceeds the bank. Contradiction.
+
+This is a grammar obstruction, not nonexistence of those7p as tournament
+counts. It explains why the pleasant99 recursion and every finite supplement
+cannot by themselves prove the global theorem. A new primitive source of
+7-bearing counts is necessary for that grammar.
+
+The general two-prime-lane reduction already appears in
+[THM-4094](../../../../01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md):
+odd primes except7 and7p for odd primes p≠3, with known finite carry atoms.
+We do not present it as a new discovery. It identifies the actual arithmetic
+information a target-decreasing recursive move must preserve.
+
+## 5. Conjecture ledger
+
+**OPEN:** a finite collection of physical core changes, allowed to move among
+birth charts, that sends every target in the frozen bands to smaller targets
+while retaining endpoint selection and the necessary7-lane data.
+The rank must decrease in the prescribed target, not merely vertex count
+of an unrelated seed. Local p-adic solvability, independent stable lengths,
+and bounded-size evidence do not discharge this conjecture.

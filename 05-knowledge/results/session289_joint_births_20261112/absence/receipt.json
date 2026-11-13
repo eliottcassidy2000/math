@@ -1,0 +1,162 @@
+{
+  "census": [
+    {
+      "n": 1,
+      "strong_labelled": 1,
+      "strong_values": [
+        1
+      ]
+    },
+    {
+      "n": 2,
+      "strong_labelled": 0,
+      "strong_values": []
+    },
+    {
+      "n": 3,
+      "strong_labelled": 2,
+      "strong_values": [
+        3
+      ]
+    },
+    {
+      "n": 4,
+      "strong_labelled": 24,
+      "strong_values": [
+        5
+      ]
+    },
+    {
+      "n": 5,
+      "strong_labelled": 544,
+      "strong_values": [
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "n": 6,
+      "strong_labelled": 22320,
+      "strong_values": [
+        15,
+        17,
+        19,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        37,
+        41,
+        43,
+        45
+      ]
+    }
+  ],
+  "fresh_scope": "all labelled tournaments through6; fixed examples and algebraic controls",
+  "frozen_cutoff": 25,
+  "frozen_holes": [
+    7,
+    21
+  ],
+  "primes_below100": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71,
+    73,
+    79,
+    83,
+    89,
+    97
+  ],
+  "ray_mod7": [
+    4,
+    6,
+    3,
+    4,
+    6,
+    3,
+    4,
+    6,
+    3,
+    4,
+    6,
+    3
+  ],
+  "status": "PASS",
+  "strong_alphabet": [
+    1,
+    3,
+    5,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    37,
+    41,
+    43,
+    45
+  ],
+  "triangle_twins": [
+    {
+      "H": 3,
+      "m": 1
+    },
+    {
+      "H": 5,
+      "m": 2
+    },
+    {
+      "H": 9,
+      "m": 3
+    },
+    {
+      "H": 17,
+      "m": 4
+    },
+    {
+      "H": 33,
+      "m": 5
+    },
+    {
+      "H": 65,
+      "m": 6
+    },
+    {
+      "H": 129,
+      "m": 7
+    },
+    {
+      "H": 257,
+      "m": 8
+    }
+  ]
+}
