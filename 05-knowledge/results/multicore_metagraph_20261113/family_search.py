@@ -35,10 +35,10 @@ def run(core_order=8,fixed=12):
                     A=tuple((v-u)//2 for u,v in zip(samples[0],samples[1]))
                     B=tuple(u-2*a for u,a in zip(samples[0],A))
                     need(tuple(8*a+b for a,b in zip(A,B))==samples[2],'one-clock exact exponential candidate')
-                    key=A+B
+                    key=A+B+(middle,)
                     distinct.setdefault(key,(left,middle,right))
         contexts+=sum(1 for _ in distinct)
-        for (aL,aB,aD,bL,bB,bD),(left,middle,right) in distinct.items():
+        for (aL,aB,aD,bL,bB,bD,_),(left,middle,right) in distinct.items():
             for core in cores:
                 h,e,s,p,ee,t=core['state'];G=s+p
                 a=aL*G+aB*h-aD*e;b=bL*G+bB*h-bD*e-ee-1
@@ -50,18 +50,19 @@ def run(core_order=8,fixed=12):
                     rec=dict(**core,left=left,middle=middle,right=right,A=a,B=b,fixed_order=cost,word_coefficients=[aL,aB,aD,bL,bB,bD])
                     hits[key]=rec
                 # Keep a bounded reusable coefficient grammar, not all huge rays.
-                if a<=5000 and abs(b)<=5000 and (key not in families or cost<families[key]['fixed_order']):
-                    families[key]=rec or dict(**core,left=left,middle=middle,right=right,A=a,B=b,fixed_order=cost,word_coefficients=[aL,aB,aD,bL,bB,bD])
+                interface_key=(a,b,middle)
+                if a<=5000 and abs(b)<=5000 and (interface_key not in families or cost<families[interface_key]['fixed_order']):
+                    families[interface_key]=rec or dict(**core,left=left,middle=middle,right=right,A=a,B=b,fixed_order=cost,word_coefficients=[aL,aB,aD,bL,bB,bD])
         print('fixed',size,'contexts',contexts,'families',len(families),'targets',[(k,v['fixed_order']) for k,v in sorted(hits.items()) if v], 'seconds',round(time.time()-t0,1),flush=True)
     edges=[]
-    for a,b in families:
+    for a,b,middle in families:
         for d in (2,4):
-            if (3*a,3*b+d) in families:edges.append([a,b,3*a,3*b+d,d])
+            if (3*a,3*b+d,middle) in families:edges.append([a,b,3*a,3*b+d,d,middle])
     data=dict(scope=f'All unique-start strong rooted cores through{core_order}, plus singleton; all binary contexts with total fixed length <= {fixed}; middle bit0 or1; tail ends1; k>=1',core_order=core_order,fixed=fixed,cores=len(cores),distinct_word_observers=contexts,
               hits=[dict(target=k,recipe=v) for k,v in sorted(hits.items())],families=list(families.values()),edges=edges)
     tag='' if __debug__ else '.optimized'
     (HERE/('family_search'+tag+'.json.gz')).write_bytes(gzip.compress(json.dumps(data,separators=(',',':')).encode(),mtime=0))
-    print('PASS',len(families),'families',len(edges),'arithmetic edges; physical compilation audited separately',flush=True)
+    print('PASS',len(families),'families with interface',len(edges),'same-interface arithmetic edges; physical compilation audited separately',flush=True)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--core-order',type=int,default=8);p.add_argument('--fixed',type=int,default=12);a=p.parse_args();run(a.core_order,a.fixed)

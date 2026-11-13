@@ -4,6 +4,23 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13: A component sorter cannot inspect its own mutating list
+
+- **Status:** local implementation error repaired before promotion in the
+  [multi-core metagraph audit](../05-knowledge/results/multicore_metagraph_20261113/AUDIT.md).
+- **Mechanism:** a Python `list.sort` key computed component dominance by
+  iterating over that same list. During sorting the list appears empty, so
+  every key was zero and the SCCs remained in vertex-label order.
+- **Minimal witness:** rows(0,1) have SCC order({1},{0}), whereas collecting
+  by smallest unused label and applying the broken key leaves({0},{1}).
+- **Repair:** compute keys against an immutable snapshot. The independent
+  suffix-merge audit then passes all2961 rooted parent profiles through7.
+  The all-order SCC theorem was not changed; its first implementation had
+  failed the mandatory exact control.
+- **Survivor and lesson:** SCC membership alone does not encode the source-
+  to-sink order used by a recurrence. Retain and independently check that
+  order before interpreting transition mismatches as mathematical evidence.
+
 
 ## 2026-11-13: A malformed tournament control and a verifier-name collision
 

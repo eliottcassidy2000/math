@@ -1,0 +1,129 @@
+{
+  "scope": "Imported repository Python modules and named proof dependencies at seal time",
+  "files": [
+    {
+      "path": "01-canon/theorems/THM-1430-the-tiling-class-metagraph-dictionary-and-which-tricks-pay.md",
+      "sha256": "3a39720c36fc9e98a6717cf176739664827e1ac47633b2f22f7c1c4eb3a135ab"
+    },
+    {
+      "path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95"
+    },
+    {
+      "path": "05-knowledge/results/berggren_target_return_20261111/reset/funnel_six_state.py",
+      "sha256": "662c41a3f9dc6fbd1fe6c5d34ee30ac4e737d5371390dbf7dfacf342368a87f6"
+    },
+    {
+      "path": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md",
+      "sha256": "32b7a924b004552958ca72ea7ec41597aa35a7e67b141d6595cf32534c270af9"
+    },
+    {
+      "path": "05-knowledge/results/cycle_opening_six_return_20261112/compiler/MODULE_RETURN.md",
+      "sha256": "322a1e96ea2ff705502031cfae6c90bd51cca51fd40967596734bc8b9ba9f8a8"
+    },
+    {
+      "path": "05-knowledge/results/cycle_opening_six_return_20261112/compiler/SIX_STATE_MINIMALITY.md",
+      "sha256": "d9541f86221c404ecd757541142e05924322953e7187421d5e2bb1b145399a53"
+    },
+    {
+      "path": "05-knowledge/results/endpoint_coverage_compiler_20261111/inflation_bank.py",
+      "sha256": "4996a1a1b12abfe1192a9fa47a0c7ce783551aa438d353b0c066458bdc0f7c7a"
+    },
+    {
+      "path": "05-knowledge/results/modular_centers_collatz_pell_20261111/content_checks.py",
+      "sha256": "bf894b45e3d3f29a5e953b72bc12fec6ba3a07db7868a768758624917eacc63d"
+    },
+    {
+      "path": "05-knowledge/results/modular_centers_collatz_pell_20261111/tournament_checks.py",
+      "sha256": "25a193fe1d66a6c6780451f5de6c393398c1b7788e743744317c258f41aa6a7a"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/blue_incidence.py",
+      "sha256": "7d2c75fe7900abff2efaedbac9ce6e3b1c05a635b098e659ad93dab394f99e40"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/clock_probe.py",
+      "sha256": "5f66555a9a6eaec8fa801279451bd3ec3640ca0547cfa78f88e1f82c5a1c8f92"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/component_growth.py",
+      "sha256": "36be35f418ec716cbe82f54621d4c254f0f59e043067baf14539d54105875a9b"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/cycle_index.py",
+      "sha256": "15b666eace60bc5c8e8ce08a8d2b108952fda5b190496f4b7d17546a93484b24"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/divisor_entry.py",
+      "sha256": "3c2880ff87799aff1dc4b7632e4fe192d0caf19f1a73cf0cb4a9406a21fc252c"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/family_audit.py",
+      "sha256": "a26d8aa59708a7948c9a334e6a99556e48a559e6922fbc10a7b24bae29d7a094"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/family_search.py",
+      "sha256": "12e169e0ea73b98793a90f3809b7fe127e8758d0feb36ab9147615fd94146d65"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/growth_audit.py",
+      "sha256": "1f142429ba90527667d4b0d3b30231d5d2cc18f7854cafcc0e2ae332c39e8d76"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/inflation_descent.py",
+      "sha256": "16545dc7d3e0f81202956628e4585e0bda388eca3df318a1c01c93f84f429ecf"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/next_target.py",
+      "sha256": "8fb0ba76ebb5e7cb135c09a4d76bbc805f32ef7156291158b69c4718d32d4d63"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/reproduce.py",
+      "sha256": "7e8ab775c88ce7eb07fbc040fe0763c900bc9fa247e7d16b04bb22bc92c4f776"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/rooted_growth.py",
+      "sha256": "d4cdeba1cc07667a982cc2401456d5628804a4b3ef17832b7b7179d359a837b5"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/seal.py",
+      "sha256": "0e9d9c74e774e900866bafb51b7eddaacc14af107a5a71ff0ceffcbee982e31e"
+    },
+    {
+      "path": "05-knowledge/results/nonzero_preparation_20261103/surgery/ORDER_OBSTRUCTION.md",
+      "sha256": "27c34815dad6203180df0ba68fdbba1018fdf08bee4a20b17482596b934bdb93"
+    },
+    {
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/explore.py",
+      "sha256": "343b6168f5116275538a87959e6a0949ad8518aaede6d5a5952479069255bbb4"
+    },
+    {
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md",
+      "sha256": "d4415fe860bdcc737c05614d97f3909168dd73a783f892505e42103add064a8e"
+    },
+    {
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/recognize.py",
+      "sha256": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/OBSTRUCTION.md",
+      "sha256": "5890c526288797d4bd80ffaa5eefaa9aa148ee928163f104dea76fc5c4fc39ef"
+    },
+    {
+      "path": "05-knowledge/results/session295_construction_atlas_20261113/bridges.md",
+      "sha256": "b3f3f95e6b9dd75a4aa58a9c9248d046240b745dfea76b8a5771b6d3cf529414"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/READY.md",
+      "sha256": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/research.py",
+      "sha256": "75e0188ab2763faa84637c8ed07a05a0978e9034b3fc3a91de1661162cb6a387"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/verify.py",
+      "sha256": "7f982b5173292ec904d99bc75f074cd66ee885674bda361c0142aed8f9a30de1"
+    }
+  ]
+}

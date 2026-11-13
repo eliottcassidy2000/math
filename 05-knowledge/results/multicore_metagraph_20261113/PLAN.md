@@ -26,3 +26,22 @@ individual count matches. Every negative search will state its finite scope.
 
 Repository output belongs in this packet. No existing theorem is promoted
 without a proof and an explicit dependency audit; no scarce ID is reserved.
+
+## Board after the exact experiments
+
+The endpoint lane closes for forward growth on end-rooted classes, and the
+SCC size word is a further exact quotient. It fails for complement incidence:
+cyclic sandwiches preserve any fixed endpoint window while changing colour.
+The core lane now has159 genuine +2 family transitions with a protected
+TT_k and port pair, but no unrestricted re-entry theorem. The positive-cover
+lane supplies an all-size finite inflation budget, ruling out six successive
+405-ray steps from every ready source. The word-automaton lane supplies an
+independent all-size reduction excluding the outer-tail405 family. The
+ordinal-component lane connects all of these through exact orbit mass and
+the classification of zero-cost padding.
+
+Next useful experiments should change quotient cores or admit an eventual
+ray with explicit entry data; enlarging a fixed-module inflation search
+cannot repair the six certified steps. The all-k inflation obstruction is
+a named open hypothesis in FAMILIES, with the next exact count pair as its
+cheapest hostile test. No numerical coincidence is promoted to a connection.

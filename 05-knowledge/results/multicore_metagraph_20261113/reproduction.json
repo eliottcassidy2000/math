@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "scope": "Eleven deterministic normal and optimization-mode receipts agree byte for byte. This tests guard robustness; mathematical independence is specified in AUDIT.md.",
+  "pairs": [
+    {
+      "name": "rooted_growth",
+      "sha256": "3bf25d80ade2bcb7f3af880dd0b9c31e58766529c4be8b99d79a2d8efaa999f5"
+    },
+    {
+      "name": "cycle_index",
+      "sha256": "dc92892c493a966cd57699cd4ab445fa4a86ed9ac9ec6edffa6ca15baa0b9d50"
+    },
+    {
+      "name": "family_search",
+      "sha256": "a968e4690c8b43ace4f157b2355c3b581bdcdb70c6d70292f3f3ced1791834b3"
+    },
+    {
+      "name": "next_target",
+      "sha256": "b3e04e0dd033f673e0dc1900b31500972c518ab416b33a164c2ad7c678743df5"
+    },
+    {
+      "name": "clock_probe",
+      "sha256": "33f533ddb5963d4d90b68e4731b0e1b0c4631d5fa72281c4050b533f6fd85c31"
+    },
+    {
+      "name": "divisor_entry",
+      "sha256": "2ae84ab717901a56096aa1d76d195e80dee56013bc3a1384326c972e2f4e13c8"
+    },
+    {
+      "name": "family_audit",
+      "sha256": "9eee17783158543e12d382a601c38a9280f49f96e5a2ee4a6a6b1b038bb3728d"
+    },
+    {
+      "name": "blue_incidence",
+      "sha256": "a1685ba2accf6212a23872e98212b7606285dfffd7a113bd493d7e033e978b8a"
+    },
+    {
+      "name": "component_growth",
+      "sha256": "4bce9e65e72afefe7ba83dd24bda148396fafab2f0be461b01b21ebc7397c687"
+    },
+    {
+      "name": "growth_audit",
+      "sha256": "090e21ef143178d57385970c23577a8be46d722b561b1a4309f316e184599df9"
+    },
+    {
+      "name": "inflation_descent",
+      "sha256": "bc8a8fe88fca59489c655fc8751f2fad1d6d35785182624195a9d73b17a44c0a"
+    }
+  ]
+}

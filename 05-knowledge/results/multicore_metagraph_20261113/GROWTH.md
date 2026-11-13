@@ -111,7 +111,63 @@ At order eight this replaces 2,097,152 path presentations by 50,709 end
 states for forward counting. It does not claim to outperform specialized
 unmarked tournament generators, or to extend A000568's known census.
 
+This gives explicit structural meanings to7 and33: they count end states
+at orders4 and5. At order5,24 counts strong rooted classes; independently,
+24 also counts black complement lines. Those two objects are connected to
+the same presentation space but are not identified by the equality: at
+order6 their counts are194 and480. The distinct forgetful maps and growth
+laws, rather than the shared small integer, are the useful connection.
+
 Reproduction: `python -B 05-knowledge/results/multicore_metagraph_20261113/rooted_growth.py 8`.
 Every transfer attachment is enumerated. Independent endpoint subset
 counting checks every state; literal path permutations through five and
 all tilings through six check the weights by different routes.
+
+## A still smaller quotient describes exactly how components merge
+
+Let the ordered strong components of T have sizes (n_1,...,n_t); the end
+root p belongs to the last. Append x with p→x as in G1. If x beats no old
+vertex, it becomes a new terminal singleton. Otherwise let i be the first
+component containing an out-neighbour of x. Then the new component word is
+
+    (C_1,...,C_(i−1), strong block on C_i∪...∪C_t∪{x}).          (G5)
+
+Proof: x reaches all of C_i by strongness, then every later component.
+Every vertex of the suffix reaches p and hence x. Every earlier component
+dominates both x and the suffix. These facts prove the asserted SCCs exactly.
+Thus adding a final vertex either appends a singleton or merges a suffix.
+
+The number of attachments giving each size-word transition is
+
+    (n_1,...,n_t) → (n_1,...,n_t,1):                    1;
+    (n_1,...,n_t) → (n_1,...,n_(i−1),1+sum_(j≥i)n_j):
+        (2^n_i−1) 2^(sum_(j>i)n_j−1),                 i<t;
+        2^(n_t−1)−1,                                 i=t.       (G6)
+
+The first affected component must contain at least one out-neighbour of x;
+earlier vertices have forced orientations. Later orientations are free
+except p→x. For i=t the forbidden choice is the empty out-neighbour set.
+These cases partition all 2^(n−1) attachments. In particular a singleton
+terminal component cannot turn into a strong component of size two.
+
+Consequently the SCC **size word itself** is a further exact quotient for
+this observable. It does not retain the new core's isomorphism type. A
+strong child occurs precisely in the i=1 case, giving an explicit entry
+condition into the strong family, including from a nonstrong parent.
+
+Let X_0=1, X_n=2^binomial(n−1,2) for n≥1, and let C_n count strong path
+presentations of order n, including C_1=1. SCC factorization of H and Aut
+gives, in formal power series,
+
+    C(z)=1−1/X(z),      C_n=X_n−sum_(i=1)^(n−1) C_i X_(n−i).   (G7)
+
+For a prescribed component size word (n_1,...,n_t), its entire presentation
+mass is exactly product_i C_(n_i). This is an infinite layer whose counts
+and size transitions are both known. These weights are distinct from the
+number of ordinary strong classes; replacing them by A000568 coefficients
+would be an invalid change of counting measure.
+
+`component_growth.py` independently checks G6 on every end state through
+seven and G7 against all size-word weights through eight. `cycle_index.py`
+evaluates the separate unlabelled formulas G4 through30. Neither computation
+requires assuming that a bare merged node is a sufficient recursive state.
