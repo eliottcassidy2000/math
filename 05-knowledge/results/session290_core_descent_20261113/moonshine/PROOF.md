@@ -47,7 +47,11 @@ Let a_k=binom(2k,k)binom(3k,k)binom(6k,3k), and define s_1B by (1) with q=-432. 
 
 f=(1+432y)/(1-432y)=320 sqrt(645)/8127.
 
-Transport of the linear observer5418k+263 gives
+The cited N43 input, with j=-960^3 and sqrt(j)=i sqrt(-j), is
+
+1/pi = 36i sum_{k>=0} a_k (5418k+263) / j^(k+1/2).
+
+Choose sqrt(x)=1/sqrt(j) and sqrt(y)=1/sqrt(t), not independently chosen principal square roots of the negative reciprocals. Transport of the linear observer5418k+263 gives
 
 36*[5418 f (k+1/2)+(263-5418/2)]
  =24*[-3669+320 sqrt(645)(k+1/2)].
@@ -66,3 +70,5 @@ A head repair has two obligations: its scalar output and its reusable interface.
 - session201/twelve-factorization/PROOF.md gives finite odd cores with dyadic rays and an all-height gap for the restricted twelve-form grammar. That is why a new clock/state compiler should be tested for escaping the old class rather than merely repackaging it.
 
 The synthesis is a research direction, not a proof of unrestricted odd coverage: transport marked interfaces, then prove a physical lifting theorem, then prove a well-founded inverse has an admissible branch for every target outside7,21.
+
+Historical priority: cardinality_bridges_20261018m.md, section7, already proposes a graph of sporadic recurrences connected by pullbacks, twists and binomial transforms, and explicitly asks for marked obligation transport. This packet implements one precise edge and its observer, not a claim to originate that research principle.
