@@ -45,3 +45,8 @@ Prediction:
 - The permanent omissions below 375, besides 7, are 21, 31, 35, 53, 113, 127, 149, 173, 181, 203, 217, 251, 263,
   277, 287, 341 and 343.
 - All six candidates in (225, 375) are omitted at every order, and 31 and 127 stay omitted.
+
+## Audit note
+
+The audit (audit/AUDIT.md) confirms P1. It adds three omissions the author's closure rule had wrongly counted as
+attained: 215, 267, 305 (MISTAKE-770). P1 concerned the six registered candidates, all omitted, and is unaffected.

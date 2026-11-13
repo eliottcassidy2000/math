@@ -12,7 +12,9 @@ the tournaments whose arcs are read off from the digit-reversed address chart (v
 digit = orientation).
 
 The spectrum of G itself, without switching, is KNOWN: it is Session 268's composable-tournament census
-(session268_composable_tournaments_20261111/modular, n <= 16), which names 13 as outside it. Only the switching
+(session268_composable_tournaments_20261111/modular, n <= 16), which names 13 as missing from its smaller atom family.
+The Busch-floor decision mechanism of section 1 is already used in THM-1370, THM-4873 (iii), THM-5129 (A)/(C) and the
+chanpak_55_105 and decomposition16 packets. Only the switching
 closure C is studied here.
 
 ## 1. A finite decision procedure (proved)
@@ -28,12 +30,18 @@ member of C, and H(T) is the product of the H(S_i).
 are 3, 5, 9, 15, 25, 45, 75, 125, 225, 375 for n = 3..12, and f increases. This is Busch's theorem, attained by
 interval chains (THM-4744).
 
-**Proposition 4.** Fix B and let n_0 be largest with f(n_0) < B. The set of odd values below B attained by C is the
-multiplicative closure, inside [1, B), of the values attained by strong members of C of order at most n_0.
+**Proposition 4 (inclusion only).** Fix B and let n_0 be largest with f(n_0) < B. Every odd value below B attained
+by C is a product of values attained by strong members of C of order at most n_0.
 
 *Proof.* Combine Lemmas 2 and 3. A strong member with H < B has f(n) <= H < B, so n <= n_0. QED.
 
-So whether C attains v < B is a finite computation. In particular, a prime or 7p value missed by every strong member
+The converse is false. C is not closed under ordinal sums: for every strong order-5 member with H = 13, adding a
+sink or a source leaves C. A composite value is attained iff some singleton-free ordinal sum of strong members with
+those values lies in C. By heredity, this is a finite test (audit/AUDIT.md M1). The pre-audit draft stated an
+equality here and missed three omissions (MISTAKE-770).
+
+So whether C attains v < B is a finite computation: the strong members, plus the finitely many cores for
+composite values. In particular, a prime or 7p value missed by every strong member
 of order <= n_0 is missed at **every** order, since 7 is never a count (THM-1370).
 
 ## 2. The computation (FINITE-EXACT)
@@ -59,23 +67,30 @@ the result was read.
   (scripts/closure.py). Besides 7, the values omitted at every order are:
   - 10 primes: 31, 53, 113, 127, 149, 173, 181, 251, 263, 277;
   - 5 values 7p: 21, 35, 203, 217, 287;
-  - 2 other values: 341 = 11 · 31 and 343 = 7^3.
+  - 5 other values: 215 = 5 · 43, 267 = 3 · 89 and 305 = 5 · 61 (corrected after the audit: their factors are all
+    chart values, but every ordinal-sum core leaves C), 341 = 11 · 31 and 343 = 7^3.
+
+  125 is attained, but only at order 12, by S4 => S4 => S4. That is 21 values in all.
 
   The omitted primes are 11 of the 73 odd primes below 375, counting 7.
 - **Pre-registered P1: CONFIRMED.** The ten omissions below 225 persist, and all six candidates in (225, 375)
   (251, 263, 277, 287, 341, 343) are omitted at every order. 31 and 127 remain omitted.
-- **Independent check.** The read-only sweep of this session reproduced the order-10 spectrum with its own code
-  (sweep27c/sw.c). It certified the omissions 31, 35, 53, 113, 127, 149, 173, 181 and 203 by the same reduction.
+- **Independent checks.** The read-only sweep of this session reproduced the order-10 spectrum with its own code
+  (scratch only, not committed). The audit reproduced the 7,048 classes and the order-11 miss list with its own code
+  (audit/AUDIT.md). It certified the omissions 31, 35, 53, 113, 127, 149, 173, 181 and 203 by the same reduction.
 
 ## 3. Consequences
 
 - **A chart-only selector cannot be complete.** It misses the primes and the 7p targets listed in section 2 at every
   order. The 7p omissions (21, 35, 203, 217, ...) are exactly the kind of target THM-4094 §6 leaves to strong cores.
-- **Most omissions are primes or 7p.** Below 225 every omission is prime or 7p. Below 375 two more appear, 341 =
-  11 · 31 and 343 = 7^3. In both, every factorization uses an omitted value (31 or 7), as Proposition 4 requires.
+- **Omissions that are not prime or 7p.** Two kinds occur.
+  - 341 = 11 · 31 and 343 = 7^3: every factorization uses an omitted value.
+  - 215, 267, 305: every factor is a chart value, but no ordinal-sum core stays in C.
+
+  The second kind is why Proposition 4 is only an inclusion.
 - **Mersenne curiosity.** 7, 31 and 127, the Mersenne primes 2^p − 1 for p = 3, 5, 7, are all omitted, while 3, 63,
   511 and 1023 are attained. No mechanism is known. The next test is 8191, which needs strong members of order up to
-  n with f(n) <= 8191, that is n <= 18.
+  17 (f(17) = 5625 < 8191 < f(18) = 9375).
 - **Relation to Session 312's boundary.** That boundary shows the neutral partner D of the order-8 core B is not
   chartable. The omissions here show that even values attained by small ordinary tournaments, such as 31 at order 6,
   need non-chart structure. Module interiors, or Session 313's tournament-specific port data, are unavoidable for

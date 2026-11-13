@@ -1,11 +1,12 @@
 ---
 id: HYP-9679
-title: "The 3-adic chart class (switches of the ordinal/C3 grammar; Session 312) omits infinitely many primes: (A) the set of primes it attains has relative density strictly less than 1 among primes, and omits infinitely many 7p values; (B) curiosity, weakly supported: it omits every Mersenne prime 2^p - 1 with p >= 3 (7, 31, 127 omitted; 3 attained; next test 8191)"
+title: "The 3-adic chart class (switches of the ordinal/C3 grammar; Session 312) omits infinitely many primes: (A) it omits infinitely many primes and infinitely many 7p values (stronger form: the attained primes have relative density strictly less than 1); (B) curiosity, weakly supported: it omits every Mersenne prime 2^p - 1 with p >= 3 (7, 31, 127 omitted; 3 attained; next test 8191)"
 status: >
   OPEN (CONJECTURE).
   Evidence for (A), THM-5152, FINITE-EXACT through order 11 and decided below 375: 11 of the 73 odd primes below 375
   (7, 31, 53, 113, 127, 149, 173, 181, 251, 263, 277) and the 7p values 21, 35, 203, 217, 287 are omitted at every
-  order. Primes above 375 cannot be decided from the order-11 data.
+  order. The audit-corrected list of THM-5152 adds the composites 215, 267, 305, which does not affect the prime
+  and 7p evidence. Primes above 375 cannot be decided from the order-11 data.
   (B) rests on three data points. 63, 511 and 1023 are attained, so the pattern, if real, concerns Mersenne primes,
   not 2^k - 1 in general. Deciding 8191 needs every strong member of order up to 17 (Busch: f(17) = 5625 < 8191 < f(18) = 9375), far
   beyond exhaustive reach.

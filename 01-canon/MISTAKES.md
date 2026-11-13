@@ -25492,3 +25492,37 @@ after it.
   5. Never launch a decisive run before its pre-registration commit.
   6. Do not register a law from a slice constrained by the very property the law asserts; test outside the slice
      first.
+
+## MISTAKE-770 (2026-11-13, kind-pasteur-2026-11-13-S27, THM-5152, HYP-9679 and `05-knowledge/results/kps_s27_chart_spectrum_20261113/`; found by the independent audit `audit/AUDIT.md` of that packet) -- an equality claimed where only an inclusion holds, a "complete" omission list missing three values, and a decision mechanism presented without its precursors
+
+- **M1 (audit M1). Inclusion stated as equality.** Proposition 4 claimed that the values attained by the 3-adic
+  chart class below B are the multiplicative closure of its strong values. Heredity, Busch and multiplicativity
+  prove only the inclusion "attained implies product of strong chart values". The class is not closed under ordinal
+  sums: the strong order-5 members with H = 13 leave it on adding a sink or a source. The draft itself recorded that
+  observation and called it harmless. Corrected: the proposition is an inclusion, and composite values need explicit
+  membership checks of their singleton-free ordinal-sum cores.
+- **M2 (audit M2). Incomplete "exact" list.** Because of M1, closure.py counted 215 = 5·43, 267 = 3·89 and 305 = 5·61
+  as attained. The audit's core checks (S4 with T43, C3 with T89, S4 with T61, in both orders and with padding)
+  show all three are omitted at every order; 125 is attained, but only at order 12. The canon title and README
+  claimed "exactly" 18 values with "all except 341 and 343 primes or 7p". The correct list has 21 values, five of
+  them composite and not 7p. The pre-registered prediction P1 is unaffected.
+- **Minor (audit m1-m10, all applied).**
+  - The Busch-floor decision mechanism was presented without its precursors: THM-1370, THM-4873 (iii), THM-5129
+    (A)/(C), chanpak_55_105 and decomposition16.
+  - The 8191 bound was given as n <= 18; it is 17.
+  - The title count was off by one.
+  - An uncommitted scratch check was cited as independent evidence.
+  - Session 268's 13 is missing only from its smaller atom family.
+  - SELECTION_MAP presented the Wythoff decoding as the owner's construction, but it is a candidate that fails at
+    colour 35.
+  - "Decided below Busch's bound" holds only for prime and 7p values.
+  - HYP-9679 stated (A) differently in its title and body.
+  - A citation for the 382,687 range was missing.
+  - The verifier used the closure rule without saying why it is exact below 75; it now checks that.
+- **Lessons.**
+  1. A reduction that deletes structure (heredity) proves only one direction. Test closure under the inverse
+     operation (here, ordinal sums) before claiming equality.
+  2. When a draft records an observation that contradicts an assumed closure property, stop and re-derive; do not
+     label it harmless.
+  3. Before calling a list "exact", check the composite values that a closure argument adds, by direct
+     construction.

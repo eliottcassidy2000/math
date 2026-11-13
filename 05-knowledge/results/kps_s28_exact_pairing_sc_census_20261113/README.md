@@ -1,5 +1,7 @@
 # Exact pairings of merged classes, with self-converse structure, through order 9
 
+Audit: PASS with minor corrections, all applied ([audit](../kps_s27_chart_spectrum_20261113/audit/AUDIT.md), THM-5153 section).
+
 kind-pasteur-2026-11-13-S28 · [THM-5153](../../../01-canon/theorems/THM-5153-exact-slot-pairings-of-merged-tournament-classes-and-self-converse-structure-to-order-nine.md) · **Chan–Pak remains open.**
 
 The owner asked to find exact pairings, including self-converse classes, toward a complete spectrum and the
@@ -27,7 +29,8 @@ exterior (Session 310 NEUTRAL_TAILS).
 
 - "Merged" equals (A000568 + A002785)/2, a built-in check.
 - A Q-class is the set of merged classes sharing Q. "SC-SC" means the Q-class contains at least two self-converse
-  classes. "SC-NSC" means it contains a self-converse class and a converse pair.
+  classes. "SC-NSC" means it contains a self-converse class and a converse pair. The two columns overlap: 0, 0, 0,
+  1, 9, 22, 101 Q-classes are both (audit).
 
 **Findings.**
 
@@ -46,6 +49,9 @@ exterior (Session 310 NEUTRAL_TAILS).
   converse) and the other two H = 45 members.
 
 ## Replay
+
+The inputs are pinned by their line counts, which equal the class counts in the table (cls_n.txt and prof_n.txt
+each have A000568(n) lines).
 
 Run `python scpairs.py` in a scratch directory holding `cls_n.txt` (classgen output: code, H, c3, strong, SC, aut,
 converse code) and `prof_n.txt` (fprof profiles) for n = 3..9. The kps_s26 packet's `scripts/README.md` explains how

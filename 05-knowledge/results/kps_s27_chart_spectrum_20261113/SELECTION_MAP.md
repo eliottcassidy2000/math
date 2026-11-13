@@ -39,21 +39,23 @@ Tags: **P** proved, **FE** finite-exact with range, **C** conjecture, **S** spec
 - **Anchors.** THM-5114 gives a multiplicatively closed countermodel with every even gap. THM-5115 leaves exact
   anchor selection OPEN.
 - **The 3-adic chart itself.** THM-5152 (this packet) shows the chart class omits 31, 35, 53, 113, 127, 149, 173,
-  181, 203, 217 at every order. A chart-only selector cannot be complete.
+  181, 203, 215, 217, ... at every order. A chart-only selector cannot be complete.
 
 The common pointer: every route needs **new strong cores per target**, built by budget-raising (non-neutral) moves
 through composite intermediate states, with a bank or repair radius that grows with the target.
 
 ## 4. The Zeckendorf tricolour and why it has not yet transferred
 
-The owner's construction (2026-09-26, crossroads_crossing_20260926_colour.md, collatz_crossings_20260926_potential_and_seeds.md):
+The owner's construction (2026-09-26, crossroads_crossing_20260926_colour.md) is a 35-symbol red/black/blue word laid on the
+diagonals of a triangle. The repository's decoding (collatz_crossings_20260926_potential_and_seeds.md) is a
+*candidate*: it matches the owner's first 34 colours and fails at the 35th.
 
 - Write 1, 2, 3, ... row by row in a triangle; row r holds labels r(r−1)/2 + 1, ..., r(r+1)/2.
 - Colour each cell by its diagonal d = r − c + 1, according to the lowest digit of d's Zeckendorf representation:
   - red if it is F_2 = 1;
   - black if its index is odd and at least 3;
   - blue if its index is even and at least 4.
-- This is the Wythoff AA/B/AB split.
+- This candidate rule is the Wythoff AA/B/AB split.
 - The extension with three typed units 1_K, 1_B, 1_R gives every n exactly 2 or 3 representations
   (reset_20260926_colours.md, P).
 - The zero-slot alphabet gives 3 or 4 (odd_cell_gluing_20261023/ZERO-SLOT.md, P).
@@ -87,7 +89,8 @@ Two facts bound what this can give.
 - **The Poisson heuristic** (HYP-9480 (C)) predicts that every fixed finite bank eventually misses. Escalation should
   therefore never stop, and the useful quantity is how slowly it grows (number of escalators against X).
 - **Partial finite-truth phenomena already exist.** The two-step family's six all-order omissions are decided on
-  [3, 225) (THM-5129 (C)), and this packet's chart-class omissions are decided below Busch's bound. In each case a
+  [3, 225) (THM-5129 (C)). This packet's prime and 7p chart-class omissions are decided below Busch's bound;
+  composite values also need ordinal-sum core checks. In each case a
   minimum-H bound (Busch, THM-4744) converts finite data into all-order statements for prime or unfactorable values.
 
 That last mechanism is the closest thing to a truth set this repository has. Busch's bound n <= 1 + 3 log_5 H for
@@ -102,7 +105,7 @@ contains/omits the prime p" decidable by a finite search, provided C is heredita
 2. **Bounded root changes** (HYP-9494): two root changes suffice above 3,780,967, which is FE to 10^9.
 3. **A finitely generated matrix orbit** (HYP-9677, HYP-9640): 63 or 56 explicit nonnegative matrices; FE to 2^19
    and 2 · 10^5 respectively.
-4. **Two-step line supply** (HYP-9661): r(N) >= 1 suffices; FE to 382,687.
+4. **Two-step line supply** (HYP-9661): r(N) >= 1 suffices; FE to 382,687 (THM-5129 (C), THM-4865 (e)).
 
 ## 7. Bypass ideas on record
 

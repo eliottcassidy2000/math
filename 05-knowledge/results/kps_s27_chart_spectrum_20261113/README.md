@@ -1,6 +1,6 @@
 # The address chart cannot select every target; a map of where selection stands
 
-kind-pasteur-2026-11-13-S27 · [THM-5152](../../../01-canon/theorems/THM-5152-the-3-adic-chart-class-omits-31-and-sixteen-more-counts-at-every-order.md) · [HYP-9679](../../hypotheses/HYP-9679-the-3-adic-chart-class-omits-infinitely-many-primes-including-every-mersenne-prime.md) · **Chan–Pak remains open.**
+kind-pasteur-2026-11-13-S27 · audit PASS WITH CORRECTIONS ([audit](audit/AUDIT.md); all applied; MISTAKE-770) · [THM-5152](../../../01-canon/theorems/THM-5152-the-3-adic-chart-class-omits-31-and-eighteen-more-counts-at-every-order.md) · [HYP-9679](../../hypotheses/HYP-9679-the-3-adic-chart-class-omits-infinitely-many-primes-including-every-mersenne-prime.md) · **Chan–Pak remains open.**
 
 The owner asked for creative work toward target-dependent selection, or a bypass. The prompt pointed at Session
 312's chart: digit-reversed addresses give positive Plücker coordinates, and the leading 3-adic digits recover
@@ -17,19 +17,20 @@ but it is not complete.
 
 - Every grammar class through order 11 (7,048 classes, every switch) was computed.
 - Three facts make this decisive below 375: Busch's minimum for strong tournaments, heredity of the class, and
-  multiplicativity of H.
-- The chart class misses at **every** order:
+  multiplicativity of H. The audit added explicit membership checks of ordinal-sum cores for composite values.
+- The chart class misses at **every** order (corrected after the audit, which found 215, 267, 305):
 
-    7, 21, 31, 35, 53, 113, 127, 149, 173, 181, 203, 217, 251, 263, 277, 287, 341, 343.
+    7, 21, 31, 35, 53, 113, 127, 149, 173, 181, 203, 215, 217, 251, 263, 267, 277, 287, 305, 341, 343.
 
-- Apart from 341 = 11·31 and 343 = 7³, these are primes and 7p values. Each, except 7 and 21, is an ordinary count;
+- These are 11 primes, 5 values 7p, and 215, 267, 305, 341, 343. The chart class is not closed under ordinal sums,
+  so a product of chart values can still be missed; 125 is reached only at order 12. Each, except 7 and 21, is an ordinary count;
   for example 31 is attained at order 6.
 - A selector that stays inside the address chart therefore cannot prove Chan–Pak. HYP-9679 conjectures it misses
   infinitely many primes.
 - A curiosity: the Mersenne primes 7, 31 and 127 are all omitted.
 
-This was pre-registered (P1, 961f30e87b) and CONFIRMED. The order-10 data was reproduced independently by this
-session's sweep. Replay: `python verify_s27.py` (pure Python, orders <= 8, passes under `-O`) and `scripts/`.
+This was pre-registered (P1, 961f30e87b) and CONFIRMED. The audit (PASS WITH CORRECTIONS, two majors, MISTAKE-770)
+reproduced the computation and supplied the core checks. Replay: `python verify_s27.py` (pure Python, orders <= 8, passes under `-O`) and `scripts/`.
 
 ## 2. The selection map ([SELECTION_MAP](SELECTION_MAP.md))
 

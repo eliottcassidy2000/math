@@ -116,6 +116,10 @@ if __name__ == '__main__':
                     closure.add(a * b); grew = True
     omitted = [v for v in range(1, B, 2) if v not in closure]
     need(omitted == [7, 21, 31, 35, 53], omitted)
+    # the closure rule is only an upper bound for attainment (C is not closed under ordinal sums, THM-5152 (1));
+    # below 75 it is exact because no value is attained only through a product: the direct set equals the closure
+    direct = [v for v in range(1, B, 2) if v not in vals]
+    need(direct == omitted, ('closure-only values below 75', direct, omitted))
     print('  ok  permanent chart-class omissions below 75:', omitted)
     T31 = [36, 17, 2, 7, 13, 30]
     need(H(T31) == 31, 'H(T31)')
