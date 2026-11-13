@@ -1,0 +1,151 @@
+{
+  "census_sha256": "959c2276c57108d55b56d4906edfbd761fb9737e708b14114d66dd4ad618db0c",
+  "clock": 0,
+  "controls": [
+    {
+      "H_source": 9,
+      "U": 44,
+      "a": 1,
+      "delta": 1,
+      "precursor_H": 43,
+      "precursor_selected_ends": [
+        6,
+        7
+      ],
+      "root_end": 7,
+      "source_order": 5,
+      "source_selected_ends": [
+        1,
+        1
+      ],
+      "target": 45
+    },
+    {
+      "H_source": 15,
+      "U": 116,
+      "a": 2,
+      "delta": 1,
+      "precursor_H": 115,
+      "precursor_selected_ends": [
+        10,
+        13
+      ],
+      "root_end": 13,
+      "source_order": 6,
+      "source_selected_ends": [
+        1,
+        1
+      ],
+      "target": 117
+    },
+    {
+      "H_source": 27,
+      "U": 308,
+      "a": 3,
+      "delta": 1,
+      "precursor_H": 307,
+      "precursor_selected_ends": [
+        18,
+        25
+      ],
+      "root_end": 25,
+      "source_order": 7,
+      "source_selected_ends": [
+        1,
+        1
+      ],
+      "target": 309
+    },
+    {
+      "H_source": 51,
+      "U": 836,
+      "a": 4,
+      "delta": 1,
+      "precursor_H": 835,
+      "precursor_selected_ends": [
+        34,
+        49
+      ],
+      "root_end": 49,
+      "source_order": 8,
+      "source_selected_ends": [
+        1,
+        1
+      ],
+      "target": 837
+    },
+    {
+      "H_source": 99,
+      "U": 2324,
+      "a": 5,
+      "delta": 1,
+      "precursor_H": 2323,
+      "precursor_selected_ends": [
+        66,
+        97
+      ],
+      "root_end": 97,
+      "source_order": 9,
+      "source_selected_ends": [
+        1,
+        1
+      ],
+      "target": 2325
+    },
+    {
+      "H_source": 195,
+      "U": 6596,
+      "a": 6,
+      "delta": 1,
+      "precursor_H": 6595,
+      "precursor_selected_ends": [
+        130,
+        193
+      ],
+      "root_end": 193,
+      "source_order": 10,
+      "source_selected_ends": [
+        1,
+        1
+      ],
+      "target": 6597
+    },
+    {
+      "H_source": 387,
+      "U": 19028,
+      "a": 7,
+      "delta": 1,
+      "precursor_H": 19027,
+      "precursor_selected_ends": [
+        258,
+        385
+      ],
+      "root_end": 385,
+      "source_order": 11,
+      "source_selected_ends": [
+        1,
+        1
+      ],
+      "target": 19029
+    }
+  ],
+  "full_census_replayed": true,
+  "scan_sha256": "47e7da86db92abbd7c9531f24c96f4a35c1572978948fe287a01ad437dffd8b1",
+  "second_hits": 24,
+  "selected": [
+    3,
+    4
+  ],
+  "slope_presentations": 14892,
+  "source": [
+    2,
+    4,
+    9,
+    19,
+    7
+  ],
+  "source_count": 68,
+  "status": "PROVED endpoint corollary; FINITE-EXACT declared chart scan; OPEN repair",
+  "third_hits": 0,
+  "unclosed_family_ledger_unchanged": 473
+}

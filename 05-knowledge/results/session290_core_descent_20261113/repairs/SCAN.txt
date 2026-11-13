@@ -1,0 +1,25 @@
+131334 factor 3 slopes 0 0 0 1 2 0 0 0 0 third 2019
+1058849 factor 3 slopes 0 0 0 0 0 2 0 0 1 third 2019
+4196897 factor 1 slopes 0 0 1 2 0 0 0 0 0 third 6057
+16785456 factor 3 slopes 0 0 1 2 0 0 0 0 0 third 2019
+16785469 factor 1 slopes 0 0 1 2 0 0 0 0 0 third 6057
+16908305 factor 1 slopes 0 1 0 0 0 0 1 0 0 third 5085
+16908305 factor 1 slopes 1 1 0 0 0 0 1 0 0 third 5085
+22036513 factor 1 slopes 0 0 0 0 0 2 0 0 1 third 6057
+67126532 factor 1 slopes 0 0 0 0 1 0 0 0 1 third 5085
+67126532 factor 1 slopes 1 0 0 0 1 0 0 0 1 third 5085
+134431233 factor 1 slopes 0 0 0 0 0 0 2 0 1 third 6057
+134873604 factor 3 slopes 0 0 0 0 2 0 0 1 0 third 2019
+1073889796 factor 1 slopes 0 1 2 0 0 0 0 0 0 third 6057
+4295492352 factor 3 slopes 0 1 2 0 0 0 0 0 0 third 2019
+4295492516 factor 1 slopes 0 1 2 0 0 0 0 0 0 third 6057
+4311744772 factor 1 slopes 1 0 0 0 0 1 0 0 0 third 5085
+4311744772 factor 1 slopes 1 0 0 0 0 1 0 0 1 third 5085
+5503975940 factor 1 slopes 0 0 0 0 2 0 0 1 0 third 6057
+17180000518 factor 1 slopes 0 0 0 1 2 0 0 0 0 third 6057
+17180991520 factor 1 slopes 0 0 0 1 0 0 0 1 0 third 5085
+17180991520 factor 1 slopes 0 0 0 1 0 0 0 1 1 third 5085
+34385969156 factor 1 slopes 0 0 0 0 0 2 0 1 0 third 6057
+34435252229 factor 1 slopes 0 0 0 2 0 1 0 0 0 third 6057
+34443640864 factor 3 slopes 0 0 0 2 0 0 1 0 0 third 2019
+TOTAL 191536 sources 68 tests 14892 secondhits 24 thirdhits 0
