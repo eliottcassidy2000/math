@@ -38,3 +38,10 @@ Prediction:
 - **Credit.** The spectrum of the unswitched grammar G is KNOWN. It is Session 268's composable-tournament census
   (session268_composable_tournaments_20261111/modular, n <= 16, 74,149 distinct H at order 16), which also names
   13 as outside the family. Only the switching closure, the chart class proper, is new here.
+
+## Outcome
+
+- **P1: CONFIRMED**, 2026-11-13. Order 11 has 4,674 classes and took 48 min 45 s.
+- The permanent omissions below 375, besides 7, are 21, 31, 35, 53, 113, 127, 149, 173, 181, 203, 217, 251, 263,
+  277, 287, 341 and 343.
+- All six candidates in (225, 375) are omitted at every order, and 31 and 127 stay omitted.
