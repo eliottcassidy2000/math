@@ -122,3 +122,9 @@ Incoming Session294/295 results at9138a603e2 were compared in
 stabilization threshold, and independently obtained all-r filtration are
 credited explicitly. The new sharp parity bound and physical source
 operations are not presented as consequences of numeral coincidence.
+
+After rebase, Session296's actual ready handoffs and finite-chart barrier,
+and Session297's residue-with-size cutoff criterion, were read and
+integrated in the incoming note. Packet hashes agree after rebase;
+documentation and all local Markdown link checks pass. No theorem source
+used by the packet was retracted by those arrivals.

@@ -109,3 +109,26 @@ indegree1→3. Exterior-root neutrality from the incoming theorem remains
 true. The next selective birth splits the resource module, so later
 reusability comes from the independently inherited balanced controller,
 not from blindly repeating the old neutral-phase argument.
+
+## Rebase arrivals through d0f4bda6c1
+
+[Session296](../session296_multicore_metagraph_20261113/README.md)
+adds actual unit-ready replacements continuing the97 branch through71441,
+and separately certifies the next dyadic entry for k=1,...,9. Its proof
+that a finite dyadic chart bank cannot sustain infinite H-to-3H+2 handoffs
+strengthens the reason to seek a growing source mechanism. Our H17
+preparation changes an internal mark and yields a different, explicitly
+guarded balanced interface; equal scalar counts alone do not authorize
+composition with those unit-ready replacements. Its oriented deletion
+cards give another exact example of retaining the lift data lost by
+an isomorphism/converse quotient.
+
+[Session297's cutoff criterion](../session297_parity_cutoff_20261113/CUTOFF.md)
+sharpens the next target for our binary lift: if an actual count matches
+a target modulo m and differs from it by less than m, equality follows.
+Our powers-of9 construction proves the residue but provides no such size
+bound. The sharp relative band for the four local switches and the
+global size of the binary lift concern different steps and must not be
+combined into an unproved approximation estimate. These arrivals do not
+alter the new proofs or close the full-spectrum gap. The incoming
+mistakes-ledger diff after9138a603e2 is empty.
