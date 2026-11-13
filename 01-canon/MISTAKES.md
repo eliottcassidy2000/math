@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13 — transpose invariance was mistaken for loss of a named kernel
+
+- **Scope:** prepublication B1 in [integer32 two-edge bridges](../05-knowledge/results/integer32_twoedge_20261113/bridges/RESULT.md), repaired after merging Session321; the converse-invariant nullity and equal-Q counterexample remain valid.
+- **First failed implication:** from `Phi(M(T^op))=Phi(M(T))^t`, the draft and first review inferred that named kernel vectors need an orientation gauge. They omitted the additional tournament identity making Phi itself symmetric and exactly converse-invariant.
+- **Minimal nonzero-kernel witness:** on a directed triangle, `Phi(M)=J_3` in both orientations. The named even-weight kernel, including `(1,1,0)`, is unchanged, although the row-zero matrices M differ.
+- **Repair / strongest survivor:** `M^t=M+J+I`, `MJ=0`, `JM=(n-1)J` and `J^2=nJ` give `Phi(M^op)=Phi(M)` on the same labels. The aligned wedge observer recovers the full matrix Phi and its embedded kernel, not only its dimension. Only M itself still needs the orientation choice.
+- **Correction lineage / next guard:** [Session321 BSD parity](../05-knowledge/results/session321_selective_returns_and_fano_wiring_20261113/BSD_PARITY.md) supplied the stronger identity; [the explicit repair record](../05-knowledge/results/integer32_twoedge_20261113/bridges/CORRECTION.md) binds old/new artifacts. Test extra carrier identities before treating a transpose as destroyed data; the analogous statement for arbitrary matrices need not transfer to tournament row-zero matrices.
+
 ## 2026-11-13 — observer closure and representation blocks lost their input conventions
 
 - **Scope:** unpublished candidates in [incidence closure](../05-knowledge/results/incidence_closure_20261113/README.md), repaired during independent audit before promotion. No accepted theorem is retracted.

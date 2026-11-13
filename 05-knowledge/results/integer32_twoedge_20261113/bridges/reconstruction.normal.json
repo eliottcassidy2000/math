@@ -1,0 +1,47 @@
+{
+  "checker_sha256": "8f6beb667d3e0d779037b898fee5969b7b0dea0b3b0c32c392043e4b2e7d0622",
+  "checks": 68665,
+  "reviewed_sha256": {
+    "INHERITED_AUDIT.md": "089421c85674284d820f12b2b22f116aaee29a05775d0f139e5ff58754ed448a",
+    "PROOF.md": "f2ba72de4e691ff25f46a1849109a4db30fa0a6917c31a3363b0190b5998647c",
+    "check.py": "2f6991f470496b2b802fe8a20760fd459562148678b9015be2fab1272cc8ab05",
+    "normal.json": "bdd9fbc57328a637c1153cde5bea2c7c6f29d650d5744b6eb1d758055dbfcab1",
+    "optimized.json": "bdd9fbc57328a637c1153cde5bea2c7c6f29d650d5744b6eb1d758055dbfcab1"
+  },
+  "rows": [
+    {
+      "all_formal_fields": 8,
+      "formal_fields_in_radius": 4,
+      "image_size": 4,
+      "minimum_distance": 2,
+      "n": 3,
+      "reference_error_controls": 0
+    },
+    {
+      "all_formal_fields": 4096,
+      "formal_fields_in_radius": 416,
+      "image_size": 32,
+      "minimum_distance": 4,
+      "n": 4,
+      "reference_error_controls": 0
+    },
+    {
+      "all_formal_fields": 0,
+      "formal_fields_in_radius": 0,
+      "image_size": 512,
+      "minimum_distance": 6,
+      "n": 5,
+      "reference_error_controls": 466
+    },
+    {
+      "all_formal_fields": 0,
+      "formal_fields_in_radius": 0,
+      "image_size": 16384,
+      "minimum_distance": 8,
+      "n": 6,
+      "reference_error_controls": 256
+    }
+  ],
+  "scope": "independent direct-incidence encoding and degree-cut on all converse states n3..6; complete formal-field/nearest-word checks n3..4; all466 reference errors n5; first256 weight-ordered reference errors n6",
+  "status": "FINITE-EXACT independent audit controls PASS"
+}

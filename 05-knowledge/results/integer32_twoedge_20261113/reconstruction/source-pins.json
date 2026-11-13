@@ -1,0 +1,14 @@
+{
+  "baseline_commit": "68d0d86bef480b6a36efc3d9864fd01ff3244bf5",
+  "sources": {
+    "05-knowledge/results/hamilton_path_relocation_connectivity_20261020/THEOREM.txt": "9365e8472a229a625eb6c09a9a43c707d0a6d9b967f0fe4a11e84c55b3d35fee",
+    "05-knowledge/results/incidence_closure_20261113/closure/data.json": "c0484a99712edff88e8158b5f6000097f32f88874150d059da5aefa20f3de8f7",
+    "05-knowledge/results/session319_arc_usage_and_signed_cycles_20261113/ARC_USAGE_SHADOW.md": "14ce622c5d4811ecc1a133a428f438675bf32887bb71e2907a6386398987ed20",
+    "05-knowledge/results/session320_second_moments_and_native_contexts_20261113/F1_WEDGE_JET.md": "1c22af90bf8db037dcc79583fda852284b98b7284f5684b721828a18b4cc270e",
+    "05-knowledge/results/session320_second_moments_and_native_contexts_20261113/HEREDITARY_SLOTS.md": "11bd748a216e776d6502fc64609e8c08711f91a814ca0a7fd96f924d55136117",
+    "05-knowledge/results/session320_second_moments_and_native_contexts_20261113/ORDINAL_SHADOW.md": "a8fc25424f16796abbc1382e814d721ad8d0d29d5d43d0e40f8d6a4d450ac870",
+    "05-knowledge/results/session320_second_moments_and_native_contexts_20261113/STRONG_SHADOW.md": "e06b9aea04e2c7cc2259a10d320310943fb022ababeed319876357e2295ed374",
+    "05-knowledge/results/session320_second_moments_and_native_contexts_20261113/WEDGE_RECONSTRUCTION.md": "80840c4719ca1f95a77ef947dcef4fd5b2b98ad948c6520aaf31124290186ac8",
+    "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-guards/REPORT.md": "3159646021bf7b2c2ad6025f636274a1e6f4f60df87f1728e3f2f4b095923563"
+  }
+}

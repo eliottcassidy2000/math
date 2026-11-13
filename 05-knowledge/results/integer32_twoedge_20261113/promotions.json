@@ -1,0 +1,143 @@
+{
+  "files": {
+    "bridges/CORRECTION.md": {
+      "after_sha256": "da4ee800d47131833b5e9f928de960fe33b7c8832b5d16109beac42f05a79334",
+      "before_sha256": "dfa1cee6f976feb6b3873957eceac8d46edcae14e215f3a1a91e234944d20c63",
+      "edits": [
+        {
+          "count": 1,
+          "new": "**Corrected and independently audited; see ../promotions.json for the reviewed byte bindings.**",
+          "old": "**Corrected immediately; revised proof remains RESERVED pending renewed audit.**"
+        }
+      ],
+      "review_files": {
+        "reconstruction/BSD_FANO_FINAL_REVIEW.md": "8f4e80d3a719ae1180d7ba3b8f77c8b9206482446f14fc95ce666c74a6d860b5"
+      }
+    },
+    "bridges/FANO_ORBITS.md": {
+      "after_sha256": "d5fb87085e9488dad827432364b41370e69a3b06b0fe0d7fd70586e6aeb6da90",
+      "before_sha256": "cd7bb7e6d9c8d79c995e835f8b374c4d819e554eba86f03b34431acb027f28cb",
+      "edits": [
+        {
+          "count": 1,
+          "new": "**Status: PROVED IN NOTES after independent audit; FINITE-EXACT replay.**",
+          "old": "**Status: RESERVED scoped proof candidate pending independent audit;\nFINITE-EXACT replay.**"
+        }
+      ],
+      "review_files": {
+        "reconstruction/BSD_FANO_FINAL_REVIEW.md": "8f4e80d3a719ae1180d7ba3b8f77c8b9206482446f14fc95ce666c74a6d860b5"
+      }
+    },
+    "bridges/RESULT.md": {
+      "after_sha256": "69f435d07c43b2a049fd6515203cc4547cd1c40e35180e70dfbbe49ba406d6ef",
+      "before_sha256": "29fc9ca464171bd1f5ef30602786cac2bbe222bda2b5b7cab9deb34e7e9699b8",
+      "edits": [
+        {
+          "count": 1,
+          "new": "**Status: PROVED IN NOTES, corrected B1\u2013B3, after independent audit.**",
+          "old": "**Status: RESERVED proof candidates B1\u2013B3, pending independent audit.**"
+        }
+      ],
+      "review_files": {
+        "ROOT_AUDIT.md": "5de765b35c8609a48d6ae7669f1709e22239a369c354a551f7a9f370e72371a5",
+        "reconstruction/BSD_FANO_FINAL_REVIEW.md": "8f4e80d3a719ae1180d7ba3b8f77c8b9206482446f14fc95ce666c74a6d860b5"
+      }
+    },
+    "census/GENERAL_CLOSURE.md": {
+      "after_sha256": "34140cc0dc8f7002666de291efbbd92fde4854d2c166e17b35759461edbb8b5d",
+      "before_sha256": "a7f664adbadd16efc75f9d4ade404a9358971b1fd8d2a6eea56c6347f0aa31a1",
+      "edits": [
+        {
+          "count": 1,
+          "new": "Status: **PROVED IN NOTES, G1\u2013G2, after independent audit.**",
+          "old": "Status: **RESERVED / proof candidate pending independent audit.**"
+        }
+      ],
+      "review_files": {
+        "reconstruction/GENERAL_CLOSURE_REVIEW.md": "88ba0e046893087a10a90c09a12d8846551d728d88a7fb69359a182f99bdf396"
+      }
+    },
+    "census/NORM_CLOSURE.md": {
+      "after_sha256": "2a5bcb6805f77c407d644d5dc20a6fb8a19bad3d686d9930cb39425049342653",
+      "before_sha256": "ceb1d2279bf5be30a2b51f13efb2e90de11facd417d739bb05c06dcb8382ae6b",
+      "edits": [
+        {
+          "count": 1,
+          "new": "Status: **PROVED IN NOTES after independent audit.**",
+          "old": "Status: **RESERVED / proof candidate pending independent audit.**"
+        }
+      ],
+      "review_files": {
+        "ROOT_AUDIT.md": "5de765b35c8609a48d6ae7669f1709e22239a369c354a551f7a9f370e72371a5"
+      }
+    },
+    "census/RECOVERY.md": {
+      "after_sha256": "0a546f960b59bf809bee2ad9323b990a5504c554de5d05b1292556cb0888ae50",
+      "before_sha256": "fbec3a301e0d05c1feb61626bafb04060769c516529481dfe8f68b02c1b3efcc",
+      "edits": [
+        {
+          "count": 1,
+          "new": "The new norm-closure proof is **PROVED IN NOTES** after\nindependent audit;",
+          "old": "The new norm-closure proof is **RESERVED** pending\nindependent audit;"
+        },
+        {
+          "count": 1,
+          "new": "**PROVED IN NOTES / FINITE-EXACT control:**",
+          "old": "**NEW RESERVED proof candidate / FINITE-EXACT control:**"
+        },
+        {
+          "count": 1,
+          "new": "**PROVED IN NOTES** after its independent audit.",
+          "old": "**RESERVED** pending its own audit."
+        }
+      ],
+      "review_files": {
+        "ROOT_AUDIT.md": "5de765b35c8609a48d6ae7669f1709e22239a369c354a551f7a9f370e72371a5",
+        "reconstruction/BSD_FANO_FINAL_REVIEW.md": "8f4e80d3a719ae1180d7ba3b8f77c8b9206482446f14fc95ce666c74a6d860b5"
+      }
+    },
+    "native/RESULT.md": {
+      "after_sha256": "fda2c40bd38061537aa064b0104ca51f64464530f32e8264f60d075f9740eccf",
+      "before_sha256": "344d0dec8efdce732c51a243fab11ccdbdb22905447cfffc08f5661077d6f2ba",
+      "edits": [
+        {
+          "count": 1,
+          "new": "Status: **PROVED IN NOTES after independent audit.**",
+          "old": "Status: **RESERVED \u2014 proof candidate awaiting independent audit.**"
+        }
+      ],
+      "review_files": {
+        "native/AUDIT.md": "6ba9bf0c8a1fdd9ca8b069af9c4c86af748efca6258b37ec503ab32323dda664"
+      }
+    },
+    "reconstruction/INHERITED_AUDIT.md": {
+      "after_sha256": "95872192d4b96fd39f78a1a55c28e67a02736a8aa61f4f0b9d09d8a816e19649",
+      "before_sha256": "089421c85674284d820f12b2b22f116aaee29a05775d0f139e5ff58754ed448a",
+      "edits": [
+        {
+          "count": 1,
+          "new": "The reviewed statements in PROOF.md were RESERVED at this audit; current\nstatus is recorded in ../promotions.json.",
+          "old": "The new statements in PROOF.md remain RESERVED."
+        }
+      ],
+      "review_files": {
+        "bridges/RECONSTRUCTION_REVIEW.md": "185885753c4c01161918c7572ee5d14c71090bc6adf43ae66b199172541f58d9"
+      }
+    },
+    "reconstruction/PROOF.md": {
+      "after_sha256": "1b0470bcecf881558ce4fe84ba24f51eed8a1b9222226fccf1de9d5ee1c253ca",
+      "before_sha256": "f2ba72de4e691ff25f46a1849109a4db30fa0a6917c31a3363b0190b5998647c",
+      "edits": [
+        {
+          "count": 1,
+          "new": "**Status: PROVED IN NOTES, R1\u2013R3, after independent review.**",
+          "old": "**Status: RESERVED / complete elementary proof candidates R1\u2013R3 pending\nindependent review.**"
+        }
+      ],
+      "review_files": {
+        "bridges/RECONSTRUCTION_REVIEW.md": "185885753c4c01161918c7572ee5d14c71090bc6adf43ae66b199172541f58d9"
+      }
+    }
+  },
+  "status": "Independent reviewed promotions; mathematical text unchanged except previously documented correction"
+}

@@ -1,0 +1,106 @@
+{
+  "H_scope": "No Hamilton-path subset DP or large path-count verification was performed.",
+  "all_regular_outdegree": 10,
+  "all_strong": true,
+  "canonical_pair_weight": 7,
+  "checks": 72243,
+  "common_out_histogram_across_all_twists": {
+    "3": 5376,
+    "4": 8064,
+    "5": 10752,
+    "7": 2688
+  },
+  "family_boundary": "128 internal triangle-orientation masks on one fixed U21 port lift; not the30 labelled Fano-plane/simplex-code family.",
+  "maximum_cross_pair_common_out": 5,
+  "merged_representatives": [
+    0,
+    1,
+    3,
+    7,
+    11,
+    13
+  ],
+  "ordinary_orbit_count": 12,
+  "ordinary_representatives": [
+    0,
+    1,
+    3,
+    7,
+    11,
+    13,
+    15,
+    23,
+    29,
+    31,
+    63,
+    127
+  ],
+  "quotient_anti_maps": 21,
+  "quotient_auto_order": 21,
+  "self_converse_count": 0,
+  "source_sha256": "3e45d571686a4b02cbf0777b6c3f24870a9c1b55cee92b7e7b3b7423d863c065",
+  "status": "FINITE-EXACT literal128-twist replay; inherited H only arithmetic-checked",
+  "three_point_types": [
+    {
+      "mask": 7,
+      "orbit_size": 21,
+      "type": "transitive"
+    },
+    {
+      "mask": 11,
+      "orbit_size": 7,
+      "type": "Fano-line cycle"
+    },
+    {
+      "mask": 13,
+      "orbit_size": 7,
+      "type": "nonline cycle"
+    }
+  ],
+  "twists": 128,
+  "vertices": "(a,b), a mod7, b mod3; index3a+b",
+  "weights": [
+    {
+      "automorphism_order": 21,
+      "full_merged_black_degree_arithmetic": 11750132561470,
+      "fundamental_black_degree_arithmetic": 5875066280735,
+      "inherited_H_not_recomputed": 123376391895435,
+      "mask": 0
+    },
+    {
+      "automorphism_order": 3,
+      "full_merged_black_degree_arithmetic": 82254156618954,
+      "fundamental_black_degree_arithmetic": 41127078309477,
+      "inherited_H_not_recomputed": 123381234928431,
+      "mask": 1
+    },
+    {
+      "automorphism_order": 1,
+      "full_merged_black_degree_arithmetic": 246768936574870,
+      "fundamental_black_degree_arithmetic": 123384468287435,
+      "inherited_H_not_recomputed": 123384468287435,
+      "mask": 3
+    },
+    {
+      "automorphism_order": 1,
+      "full_merged_black_degree_arithmetic": 246772173202570,
+      "fundamental_black_degree_arithmetic": 123386086601285,
+      "inherited_H_not_recomputed": 123386086601285,
+      "mask": 7
+    },
+    {
+      "automorphism_order": 3,
+      "full_merged_black_degree_arithmetic": 82257018364158,
+      "fundamental_black_degree_arithmetic": 41128509182079,
+      "inherited_H_not_recomputed": 123385527546237,
+      "mask": 11
+    },
+    {
+      "automorphism_order": 3,
+      "full_merged_black_degree_arithmetic": 82257763225858,
+      "fundamental_black_degree_arithmetic": 41128881612929,
+      "inherited_H_not_recomputed": 123386644838787,
+      "mask": 13
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "checks": 38705,
+  "complete_GL2_controls": [
+    {
+      "dimension": 2,
+      "invertible_matrices": 6,
+      "line_moving_cases": 12,
+      "line_moving_counts": [
+        4
+      ],
+      "line_preserving_cases": 6,
+      "q": 2
+    },
+    {
+      "dimension": 2,
+      "invertible_matrices": 48,
+      "line_moving_cases": 288,
+      "line_moving_counts": [
+        5,
+        9
+      ],
+      "line_preserving_cases": 96,
+      "q": 3
+    },
+    {
+      "dimension": 2,
+      "invertible_matrices": 180,
+      "line_moving_cases": 2160,
+      "line_moving_counts": [
+        6,
+        15,
+        16
+      ],
+      "line_preserving_cases": 540,
+      "q": 4
+    },
+    {
+      "dimension": 2,
+      "invertible_matrices": 480,
+      "line_moving_cases": 9600,
+      "line_moving_counts": [
+        7,
+        23,
+        25
+      ],
+      "line_preserving_cases": 1920,
+      "q": 5
+    }
+  ],
+  "field4": "F2[X]/(X^2+X+1), polynomial coefficient bits",
+  "independent_dimension3_counts": [
+    22,
+    63,
+    64
+  ],
+  "line_preserving_controls": [
+    {
+      "B": "identity",
+      "counts": [
+        4
+      ],
+      "dimension": 2,
+      "q": 2,
+      "remaining_nonsingleton_sizes": []
+    },
+    {
+      "B": "identity",
+      "counts": [
+        5,
+        9
+      ],
+      "dimension": 2,
+      "q": 3,
+      "remaining_nonsingleton_sizes": []
+    },
+    {
+      "B": "identity",
+      "counts": [
+        6,
+        15
+      ],
+      "dimension": 2,
+      "q": 4,
+      "remaining_nonsingleton_sizes": [
+        2
+      ]
+    },
+    {
+      "B": "identity",
+      "counts": [
+        7,
+        23,
+        24,
+        25
+      ],
+      "dimension": 2,
+      "q": 5,
+      "remaining_nonsingleton_sizes": []
+    },
+    {
+      "B": "identity",
+      "counts": [
+        9,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "dimension": 2,
+      "q": 7,
+      "remaining_nonsingleton_sizes": []
+    }
+  ],
+  "scope": "finite controls accompany a general proof candidate; no native tournament-action claim",
+  "source_sha256": "d0b02864e5c99bf9856ecfb4a89b2c770fdf9307b4a87a58aac74052277c58d2",
+  "status": "FINITE-EXACT",
+  "universe": "all GL2(Fq) and all nonzero v for q=2,3,4,5; explicit identity controls q=2,3,4,5,7; coordinate-cycle q=4,d=3"
+}
