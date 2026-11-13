@@ -25581,3 +25581,21 @@ after it.
      exist (here two interior cores, order 12), not only on a strong slice.
   2. Any breakdown quoted in prose must come from a committed script.
   3. Size buffers from the maximum possible count, here C(n,2) arcs.
+
+## MISTAKE-772 (2026-11-13, kind-pasteur-2026-11-13-S30, THM-5155, HYP-9681 and `05-knowledge/results/kps_s30_observer_lattice_20261113/`; found by the independent audit `audit/AUDIT.md`) -- a mechanism conjecture filed for all orders from order <= 9 data, a mislabelled observer column, a wrong explanation, and an unscoped title
+
+- **M1-M2 (audit).** HYP-9681 claimed that every coincidence of (score sequence, arc-usage multiset) is a single
+  converse flip of a strong module. The audit refuted this at order 13 (reversal of a non-strong two-core block A => B
+  with equal-score strong 5-tournaments) and at order 15 (two simultaneous flips). It is restated as generation by
+  observer-preserving module flips.
+- **Minor (audit m1-m6, all applied).**
+  - The "scores" column folded each vertex separately, which is coarser than the score sequence up to converse from
+    order 7.
+  - The "This is forced" paragraph misstated why slides are seen.
+  - The THM-5155 title and filename had no order bound.
+  - Credits were missing: THM-4889, THM-5153/5154, THM-1965, incidence_closure.
+  - The structural check of the six pairs was not shipped as a script.
+- **Lessons.**
+  1. Before filing an all-order mechanism, construct the smallest instances of each new block pattern: two cores
+     that can be swapped, and two cores that can flip together. Test the conjecture on those.
+  2. Name an observer by what it computes; a "score" column must say whether it folds vertices or whole sequences.
