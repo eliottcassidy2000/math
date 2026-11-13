@@ -30,9 +30,9 @@ These cases are disjoint and exhaust the paths. Therefore any switches that fix 
 
 Using zero-based outgoing masks, $(20,1,2,7,14)$ has $(h,q)=(9,84)$. The two apex cuts $U=\{0\}$ and $\{2\}$ both have $(s,s^*)=(1,11)$, and $(e,e^*,b)$ is respectively $(8,64,10)$ and $(6,52,10)$. In a chain of $n$ identical modules, switching from $\{2\}$ to $\{0\}$ at site $i$ (now one-indexed) increases $H$ by
 $$
-2\,9^{n-1}+132\sum_{j=1}^{i-1}84^{i-j-1}9^{n-i+j-1}.
+2\,9^{n-2}+132\sum_{j=1}^{i-1}84^{i-j-1}9^{n-i+j-1}.
 $$
-All subsets of switches are legal. The sum is absent at the first site. The displayed rule is affine independently in every bit, not just pairwise along a particular path in the space of cuts.
+For the terminal site use $2\,9^{n-1}$ instead of $2\,9^{n-2}$. All subsets of switches are legal. The sum is absent at the first site. The displayed rule is affine independently in every bit, not just pairwise along a particular path in the space of cuts.
 
 The other module $(24,17,3,6,12)$ has $(h,q)=(15,120)$. Cuts with masks 5 and 3 have the same four external responses $(s,s^*,e,e^*)=(6,42,9,63)$, but $b=28$ and 26. They yield a purely internal $+2$ times the product of all other $h$, in **any** ordinal chain of modules sharing an apex. In particular the change is exactly $+2$ whenever the other modules are transitive, regardless of their sizes or apex incidences. This is an exact offset with the four named responses unchanged. It does not assert that the second output is ready for every possible nonuniform continuation.
 
@@ -46,9 +46,9 @@ The next quantitative design test is to find interacting port responses that giv
 
 The order-six core with outgoing masks $(40,1,3,6,15,30)$ (also used in Session 309) has $(h,q)=(19,256)$. The out-cut masks 40 and 17 have the same $(s,s^*)=(8,94)$, with $(e,e^*,b)$ equal to $(15,175,72)$ and $(17,187,78)$. Switch from 40 to 17. At site $i$ the resulting increment in the repeated core bank is
 $$
-w_i=22\,19^{n-1}+1128\sum_{j=1}^{i-1}256^{i-j-1}19^{n-i+j-1}
+w_i=130\,19^{n-2}+1128\sum_{j=1}^{i-1}256^{i-j-1}19^{n-i+j-1}
 \quad(i<n),
 $$
-and at $i=n$ use 8 instead of 22 in the first term. The 22 is $6+2\cdot8$ (local offset plus adjacent right start); the terminal 8 is $6+2$ because the right side is empty. For $i=1$, the sum is empty and the leading coefficient (22 or 8) is a unit mod 19. For $i\ge2$, the $j=1$ term is the unique term of valuation $n-i$, and its coefficient $1128\cdot256^{i-2}$ is a unit. Thus $v_{19}(w_i)=n-i$ for every site.
+and at $i=n$ use $8\,19^{n-1}$ instead of $130\,19^{n-2}$. The nonterminal contribution is $6\,19^{n-1}+2\cdot8\,19^{n-2}$ (the same-module split uses one block, an adjacent split uses two); the terminal contribution is $(6+2)19^{n-1}$. For $i\ge2$ the $j=1$ summand has valuation $n-i$ and coefficient $1128\cdot256^{i-2}$ a unit mod 19. For $i=2<n$, the constant term has the same valuation, but the sum of the two coefficients is $1258=4\bmod19$, still a unit. Thus for $n\ge2$, the valuations of sites $2,\ldots,n$ are $n-2,\ldots,0$ respectively (at $n=2$ the terminal coefficient is $1280=7\bmod19$). Site 1 also has valuation $n-2$.
 
-Subtract the all-40 baseline from a prescribed target. Reduce mod 19 to identify the final switch bit: the residue must be 0 or the unit of $w_n$. Subtract its contribution, divide by 19, and continue backward. This is a genuine exact selector for the physical bank: reject as soon as a residue is illegal, then require the final integer remainder to be zero. The latest differing site of two words determines the valuation of their exact count difference. Thus this bank realizes a full binary prefix tree of target addresses in 19-adic distance, but only $2^n$ of $19^n$ residue classes at length $n$. The terminal remainder test separates exact targeting from a residue match. No claim of all odd counts follows.
+Fix site 1. Subtract the all-40 baseline from a target. Reduce mod 19 to identify the final switch bit: the residue must be 0 or the unit of $w_n$. Subtract its contribution, divide by 19, and continue backward through site 2. Require the final integer remainder to be zero. This is a genuine exact selector for this physical bank. The latest differing site determines the valuation of two output counts' difference. Thus the bank realizes a binary prefix tree of target addresses in 19-adic distance, but only $2^{n-1}$ of $19^{n-1}$ residue classes. The terminal remainder test distinguishes exact targeting from a residue match. Site 1 can also be tried both ways; no claim of all odd counts follows.
