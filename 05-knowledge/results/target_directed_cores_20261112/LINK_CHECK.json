@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "method": "Filesystem or fetched origin/main tree; sparse checkout paths allowed",
-  "checked_links": 87,
+  "method": "Filesystem or committed HEAD tree after rebase; sparse checkout paths allowed",
+  "checked_links": 89,
   "links": [
     {
       "source": "05-knowledge/results/target_directed_cores_20261112/AT_TARGET.md",
@@ -91,6 +91,18 @@
       "source": "05-knowledge/results/target_directed_cores_20261112/INCOMING.md",
       "target": "../surplus_selector_20261113/SELECTOR.md",
       "resolved": "05-knowledge/results/surplus_selector_20261113/SELECTOR.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/INCOMING.md",
+      "target": "../clone_clocks_negative_collatz_20261113/CLOCKS.md",
+      "resolved": "05-knowledge/results/clone_clocks_negative_collatz_20261113/CLOCKS.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/INCOMING.md",
+      "target": "../clone_clocks_negative_collatz_20261113/RAY405.md",
+      "resolved": "05-knowledge/results/clone_clocks_negative_collatz_20261113/RAY405.md",
       "exists": true
     },
     {

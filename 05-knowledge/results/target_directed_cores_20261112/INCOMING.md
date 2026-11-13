@@ -1,6 +1,6 @@
 # Concurrent results and exact attribution
 
-Started at e62213ab8b7c; incoming work read through b69ca1bdb7.
+Started at e62213ab8b7c; incoming work read through 5e148f917a.
 
 The [changing-core packet](../changing_core_returns_20261113/README.md)
 independently recovers the same arbitrary-tail observer and section inverse,
@@ -62,3 +62,30 @@ explicit parameter selector are proved there. The general pair-bound
 method and finite-atlas valuation argument are credited to the incoming
 prefix selector; the all-depth5039 gate and ordinal-square factory use
 the new physical predecessor response from this packet.
+
+## Clone-clock integration after rebase
+
+Commits c91e7d49aa,94cb3ea067 and5e148f917a supply
+[clone-clock constructions](../clone_clocks_negative_collatz_20261113/CLOCKS.md).
+Their actual two-module formula60P_M(3)P_N(2)+H(M)H(N) gives a
+one-arc move H→(3H−1)/2 on its declared family. This is a genuine
+restricted negative-Collatz lift. Our fixed-valuation conjugacy has a
+different address and branch convention; its23→7 and45→21 boundary
+excludes a universal lift, not their selected family.
+
+Their arbitrary-module run formulas and the new digit3 two-clock provide
+additional actual source languages. Our ordinal-square factory uses a
+different operation: repeated nontransitive ordinal factors, followed by
+the certified predecessor entry. Neither proves a union covers all odd
+targets. Their corrected constant-term hypothesis is retained: products
+already give constant−1, so the surviving conjectural obstruction must
+keep the complete C2 shape, not that coefficient alone.
+
+Their [405 route](../clone_clocks_negative_collatz_20261113/RAY405.md)
+left nonuniform unit-ready core selection open after closing clone menus.
+The present intrinsic inverse closes that all-k interface proposal at k17
+even with arbitrary changing cores. Nonunit interfaces and direct target
+surgeries remain valid escapes, as our explicit constructors demonstrate.
+Our periodic-core proof also upgrades their bounded funnel-block spectral
+screen in its declared append-only language; it is not a two-module
+nonexistence theorem.

@@ -6,7 +6,8 @@
 [Changing cores at881](../05-knowledge/results/changing_core_returns_20261113/README.md):
 minimal arc repairs and a smaller strong core; exact neutral-component products;
 fixed-balanced dyadic classification; all30 ray targets with one defect3 exception.
-The repeatable unit-ready405-ray return remains OPEN.
+All-k indegree-one unit readiness is now excluded at k17 by the
+target-directed packet below; changed-interface returns remain OPEN.
 
 [Next: exact-target repairs and reusable marked grammar](../05-knowledge/results/h17_exact_repairs_20261112/README.md):
 H9 root-star repair, arbitrary-left-factor same-next-target repair, closed

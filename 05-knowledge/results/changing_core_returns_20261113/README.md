@@ -1,5 +1,7 @@
 # Changing cores and reusable exact target preparation
 
+> **LATER RESULT (2026-11-13):** [The complete intrinsic inverse](../target_directed_cores_20261112/TARGET_INVERSE.md) upgrades the bounded k17 miss below to an all-order absence of indegree-one unit-ready sources at53084231. The count is attained, with least positive indegree-one defect2; [changed-interface repairs](../target_directed_cores_20261112/AT_TARGET.md) and [unbounded entered core families](../target_directed_cores_20261112/GROWING_FAMILY.md) remain available. Chan–Pak is OPEN.
+
 **Chan-Pak remains OPEN.** This packet advances exact-H preparation, arbitrary-core target inversion, and the geometry of marked responses. It does not claim a uniform unit-ready return on405*2^k+71 or a classification of the complete native metagraph.
 
 ## Proved mechanisms and exact constructions
