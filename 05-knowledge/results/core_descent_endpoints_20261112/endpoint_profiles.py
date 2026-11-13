@@ -14,6 +14,15 @@ OBS=load('two_port_envelope.json',HERE.parent/'adaptive_state_induction_20261103
 QUERIES=OBS['rank']['suffixes']
 MATRICES=[[(i,j,int(2*Fraction(x))) for i,row in enumerate(M) for j,x in enumerate(row) if Fraction(x)] for M in OBS['rank']['query_matrices']]
 
+def exact_skeleton(rows,clock):
+    # For m<=17 fixed vertices every internal cell is bounded by
+    # max(m!*C(m,r-1),(m-1)!*C(m,r))<2^63. Each final run sum is
+    # <=m!*C(m+1,r)<2^64; a signed overflow would therefore be negative.
+    need(len(rows)<=18,'proved run-DP arithmetic range')
+    u=[int(x) for x in skeleton(np.array(rows,dtype=np.int64),clock)]
+    need(all(x>=0 for x in u),'nonnegative run sum excludes signed overflow')
+    return u
+
 def attach(rows,roots,mask,drop=2):
     n=len(rows);incoming={roots[i] for i in range(2) if mask>>i&1}
     out=[r|((1<<n) if i in incoming else 0) for i,r in enumerate(rows)]
@@ -27,7 +36,7 @@ def observer(rows,roots,clock):
     for word in QUERIES:
         rr,pp=list(rows),list(roots)
         for mask in word:rr,pp=attach(rr,pp,mask)
-        profiles.append(list(trim(expcoeff([int(x) for x in skeleton(np.array(rr,dtype=np.int64),clock)]))))
+        profiles.append(list(trim(expcoeff(exact_skeleton(rr,clock)))))
     width=max(map(len,profiles))
     return tuple(tuple(p+[0]*(width-len(p))) for p in profiles)
 
@@ -37,6 +46,12 @@ def advance(X,letter):
         for k,x in enumerate(X[i]):Y[j][k]+=c*x
     need(all(x%2==0 for p in Y for x in p),'integral physical exponential observer')
     return tuple(tuple(x//2 for x in p) for p in Y)
+
+def canonical_observer(X):
+    # Zero trailing mode columns carry no function. Commands act linearly
+    # and cannot revive them, so this is a sound continuation quotient.
+    width=max(1,max((i+1 for p in X for i,x in enumerate(p) if x),default=1))
+    return tuple(tuple(p[:width]) for p in X)
 
 def sources():
     for i,r in enumerate(load('birth_sources_synchrony_12.json.gz')['records']):
@@ -69,12 +84,12 @@ def compile_sources(split=False):
             for k in [0,1,4]:
                 rrr,ppp=rr,pp
                 for mask in QUERIES[k]:rrr,ppp=attach(rrr,ppp,mask)
-                e=trim(expcoeff([int(x) for x in skeleton(np.array(rrr,dtype=np.int64),src['clock'])]))
+                e=trim(expcoeff(exact_skeleton(rrr,src['clock'])))
                 need(trim(list(y[k]))==e,'literal whole-profile continuation control');checks+=1
         stats[len(trim(list(X[0])))]+=1
         out.append({**src,'observer':X})
         if len(out)%10==0:print('compiled',len(out),'seconds',round(time.time()-start,1),flush=True)
-    result={'scope':'Every free clock of each of the70 inherited birth charts at its stored smallest source; two named roots chosen in the coupled blocks. Complete17-query exponential observers, all positive clock lengths; no arbitrary-size census.','source_observers':len(out),'H_dominant_base_distribution':dict(stats),'literal_profile_controls':checks,'records':out}
+    result={'scope':'Every free clock of each of the70 inherited birth charts at its stored smallest source. Named roots are the two free-clock endpoints if split_clock_endpoints is true, otherwise coupled-block representatives. Complete17-query exponential observers, all positive clock lengths; no arbitrary-size census.','source_observers':len(out),'H_dominant_base_distribution':dict(stats),'whole_observer_max_base_distribution':dict(Counter(len(r['observer'][0]) for r in out)),'literal_profile_controls':checks,'records':out}
     result['split_clock_endpoints']=split
     save('split_endpoint_profiles.json.gz' if split else 'endpoint_profiles.json.gz',result)
     print({k:v for k,v in result.items() if k!='records'},flush=True)
@@ -99,7 +114,7 @@ def target_queries():
 
 def search(depth=4,split=False):
     queries=target_queries();maxh=max(value(p,1) for p in queries);maxbase=max(map(len,queries))
-    records=load('split_endpoint_profiles.json.gz' if split else 'endpoint_profiles.json.gz',HERE)['records'];hits=[];stats=Counter();seen=set();start=time.time()
+    records=load('split_endpoint_profiles.json.gz' if split else 'endpoint_profiles.json.gz',HERE)['records'];hits=[];stats=Counter();seen=set();start=time.time();digest=hashlib.sha256()
     # All12 commands, including neutral universal-source insertion. Depth is
     # explicit; source/word witnesses survive observer deduplication.
     frontier=[]
@@ -110,9 +125,9 @@ def search(depth=4,split=False):
     for level in range(depth+1):
         nxt=[]
         for src,word,X in frontier:
-            key=X
+            key=canonical_observer(X)
             if key in seen:stats['duplicate_observers']+=1;continue
-            seen.add(key);stats[f'states_depth{level}']+=1
+            seen.add(key);digest.update((repr(key)+'\n').encode());stats[f'states_depth{level}']+=1
             p=trim(list(X[0]));h=value(p,1)
             if p in queries:
                 for q in queries[p]:hits.append({**q,'source':{k:v for k,v in src.items() if k!='observer'},'word':word,'H_profile':p,'full_observer':X})
@@ -126,6 +141,8 @@ def search(depth=4,split=False):
         print('depth',level,'seen',len(seen),'next',len(nxt),'hits',len(hits),'seconds',round(time.time()-start,1),flush=True)
     out={'scope':f'All12 universal two-live-port commands through word length{depth}, starting at the declared70-chart free-clock source observers. Matching exact entire H profiles with d0..8,shift0..12 and attained content factors. Observer equality is exact only for this continuation language.','statistics':dict(stats),'hits':hits,'matched_axes':sorted({(h['birth_id'],h['port']) for h in hits})}
     out['split_clock_endpoints']=split
+    out['canonicalization']='Remove common trailing zero mode columns before observer deduplication. Exact equality of all17 exponential functions.'
+    out['observer_traversal_sha256']=digest.hexdigest()
     save(f'{"split_" if split else ""}endpoint_search_{depth}.json.gz',out)
     print({k:v for k,v in out.items() if k!='hits'},flush=True)
 

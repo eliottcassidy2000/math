@@ -20,6 +20,8 @@ def run():
     for src in sources():
         typ,idx=src['family'].split(':');original=(even if typ=='even' else odd)[int(idx)];O=original['selected']
         ports=src['roots']+[src['clock']]
+        need(strong(src['rows']),'physical strong source')
+        need(O>0 and all(not O>>v&1 for v in ports),'nonempty selected gate and unselected variable ports')
         # Acyclic variable ports make the finite run polynomial exact.
         degrees=[sum(src['rows'][p]>>q&1 for q in ports) for p in ports]
         need(sorted(degrees)==[0,1,2],'acyclic three-port run kernel')
@@ -33,9 +35,11 @@ def run():
             unclassified.append({**src,'selected':O,'A':sorted(A.items()),'B':sorted(B.items()),'defect_runs':[[*b,c] for b,c in sorted(D.items())],'slope_runs':[[*b,c] for b,c in sorted(U.items())]});continue
         vA=v2(A[4]);anchor=A[4]>>vA
         vB=v2(abs(B[1]));need(all(v2(abs(c))+v2(b)>vB for b,c in B.items() if b!=1),'constant controls v2(B(m)) for m>=1')
+        need(all(c%(1<<vB)==0 for c in B.values()),'coefficientwise exact normalization before binary shifts')
+        need(3+vA-vB>0,'minimum positive free clock in the guarded chart')
         bnorm={b:c>>vB for b,c in B.items()};content=abs(gcd(*bnorm.values()));primitive={b:c//content for b,c in bnorm.items()}
         monotone=[sum(comb(b,j)*c for b,c in bnorm.items() if b>=j) for j in range(1,max(bnorm)+1)]
-        need(monotone[0]>0 and all(c>=0 for c in monotone) and any(monotone[1:]),'positive increasing odd B via Stirling basis')
+        need(monotone[0]>0 and all(c>=0 for c in monotone) and monotone[1]>0,'positive increasing odd B via Stirling basis')
         rec={**src,'selected':O,'defect_runs':[[*b,c] for b,c in sorted(D.items())],'slope_runs':[[*b,c] for b,c in sorted(U.items())],'A_coefficient':A[4],'A_valuation_offset':vA,'anchor':anchor,'B':sorted(B.items()),'B_valuation':vB,'B_odd':sorted(bnorm.items()),'B_odd_content':content,'primitive_B_odd':sorted(primitive.items()),'B_odd_Stirling':monotone,'z_offset':vA-vB}
         records.append(rec);classes[anchor,vA,vB,tuple(sorted(primitive.items()))]+=1
     links=[]
@@ -48,6 +52,7 @@ def run():
             if parent['primitive_B_odd']!=child['primitive_B_odd'] or parent['anchor']!=child['anchor']:continue
             n=len(parent['rows']);mask=(1<<n)-1
             need(len(child['rows'])==n+1 and [r&mask for r in child['rows'][:n]]==parent['rows'],'literal core extension')
+            need(child['selected']==parent['selected'],'selected gate retained by core extension')
             if parent['roots']!=child['roots']:continue
             ratio=Fraction(child['B_odd_content'],parent['B_odd_content'])
             if ratio<=1:continue

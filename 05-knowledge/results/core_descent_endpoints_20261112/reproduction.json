@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "scope": "Fifteen producer/receipt pairs normal and optimized. Independent methods are those described in independent_descent and verify; same-code optimization agreement is not an independent proof.",
+  "pairs": [
+    {
+      "receipt": "head_factor_search",
+      "sha256": "a12d1f89b9422389d778905323062acd9f34354de59185b1d7e75221f91dbe2e"
+    },
+    {
+      "receipt": "endpoint_profiles",
+      "sha256": "ece85dbf3c326fd079ca8e6e247ae20019147141e35579c1007f75b3fe8983dd"
+    },
+    {
+      "receipt": "split_endpoint_profiles",
+      "sha256": "f7244e5a0bd5453228a6d9042fb0fbd8bc2544ff0eb01bf202981448cb9ff746"
+    },
+    {
+      "receipt": "endpoint_search_3",
+      "sha256": "c075eff32ef7e3c99a5e387a692a15237c5f0f82d8cca4e7416e77a54e7ae265"
+    },
+    {
+      "receipt": "endpoint_search_5",
+      "sha256": "390651464b33423960d97217da2d92bc2d03723f41bbcea4c10301d8c6ea1359"
+    },
+    {
+      "receipt": "split_endpoint_search_5",
+      "sha256": "d52ae57f3173a76057d237b701a8f942a2c51bd3f7b072b8585b6da2c8f067de"
+    },
+    {
+      "receipt": "endpoint_periods",
+      "sha256": "e803a065f866d8d6549fcb68ed2972dc7d1bcd61a18e88a02eed5490b6a89e27"
+    },
+    {
+      "receipt": "observer_rewrites",
+      "sha256": "15d1144db5f7d7d0dc28c1cf5b3e331f2a9bf5eef8c7122a16bce0866133d1d2"
+    },
+    {
+      "receipt": "synchronized_descent",
+      "sha256": "f26b482d999aca42d582c2536f5a9e3f6a368318ef3ce032a92118762adb083c"
+    },
+    {
+      "receipt": "synchronized_repairs",
+      "sha256": "fb0e9786e70393ebb2e796a8fe27e951ff380a348db9aca8af3d40c2614c3116"
+    },
+    {
+      "receipt": "independent_descent",
+      "sha256": "026f44b55f7e65e020ba66bd39ac422323eeea7490fe07e814bc84fbb439ed90"
+    },
+    {
+      "receipt": "descent_grammar",
+      "sha256": "01b56f8fa3fcf549adade3a4c77dc2a95e9081b4506f807f2fb220c1f257ba36"
+    },
+    {
+      "receipt": "modular_bridge",
+      "sha256": "06e42a71d6123eeac83cf2f4c75ce0bd8b8c656f8af1cd1fdaf7ad16cf4f1662"
+    },
+    {
+      "receipt": "connection_checks",
+      "sha256": "959447a6d31c4e2f6f73693a95d67a73d46ff45c5444980f6a3b0f8a110af01e"
+    },
+    {
+      "receipt": "verification",
+      "sha256": "02097d499efc87f832990c41653d20705a811b88be34c0bd32c470e4bb37bd75"
+    }
+  ]
+}

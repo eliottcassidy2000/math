@@ -34,3 +34,23 @@ boundaries; check the quoted modular identity and its reciprocal branch.
 Use the META-PATTERNS cards on observer/recurrence/head, missing second
 coordinates, and exceptional strata. Each connection must name its map,
 preserved predicate, loss, required sidecar and cheapest hostile test.
+
+## Closing board
+
+1. **Target:** a terminating nine-chart grammar with five terminal types is
+   proved; its O(log^2 X) supply leaves universal selection open.
+2. **Endpoints:** identical ordinary responses can hide different selected
+   gates. Retain the paired cover and selected set in a seed state.
+3. **Core changes:** four actual order-12/13 links transport the threshold;
+   ordinary observer collisions yield no distinct unmarked core reduction.
+4. **Normalization:** all 473 old residual repair families remain open.
+   Fixed-word, bounded-period, factor and synchronized-profile probes now
+   have separately recorded failure boundaries.
+5. **Square sums:** insertion of node 25 needs a two-path cover with named
+   endpoints; scalar path totals alone do not compose.
+6. **Arithmetic:** reduction of the trace-127 unit modulo 13 yields order 7
+   and a Paley orientation; Frobenius exposes the forgotten sign. The
+   modular formula needs the unit cube under the stated normalization.
+
+The final proofs, scopes and reproducibility audit supersede this initial
+planning text. No universal conjecture has been promoted from the probes.

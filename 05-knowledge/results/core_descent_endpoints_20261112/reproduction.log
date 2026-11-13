@@ -1,0 +1,155 @@
+{"scope": "Every478 old even axis; divisions0..8; shifts0..12; every divisor of the integer profile content having a physical factor witness through9. Whole pointed H kernels from every ordinary tournament through9 plus all listed retained birth layers. New-source duplicate row presentations are suppressed; this is not an unmarked size census. An identity is not by itself full ray closure.", "statistics": {"old_matching_profiles": 6, "queries": 16755, "distinct_target_profiles": 16464, "new_source_presentations": 2224, "H_filtered_new_sources": 330, "new_full_pointed_profiles": 4007}, "source_receipts": ["birth_extensions_11.json.gz", "birth_extensions_12.json.gz", "birth_extensions_13.json.gz", "birth_extensions_13_synchrony.json.gz", "birth_extensions_14_rank5.json.gz", "birth_sources_synchrony_12.json.gz"], "matched_old_axes": [[4, 0], [14, 1], [42, 5]], "matched_axes_outside_previous_five": [[4, 0]]}
+seconds 6.74 hits 6
+{"scope": "Every478 old even axis; divisions0..8; shifts0..12; every divisor of the integer profile content having a physical factor witness through9. Whole pointed H kernels from every ordinary tournament through9 plus all listed retained birth layers. New-source duplicate row presentations are suppressed; this is not an unmarked size census. An identity is not by itself full ray closure.", "statistics": {"old_matching_profiles": 6, "queries": 16755, "distinct_target_profiles": 16464, "new_source_presentations": 2224, "H_filtered_new_sources": 330, "new_full_pointed_profiles": 4007}, "source_receipts": ["birth_extensions_11.json.gz", "birth_extensions_12.json.gz", "birth_extensions_13.json.gz", "birth_extensions_13_synchrony.json.gz", "birth_extensions_14_rank5.json.gz", "birth_sources_synchrony_12.json.gz"], "matched_old_axes": [[4, 0], [14, 1], [42, 5]], "matched_axes_outside_previous_five": [[4, 0]]}
+seconds 6.86 hits 6
+PAIRED head_factor_search elapsed 15.6
+compiled 10 seconds 1.2
+compiled 20 seconds 2.4
+compiled 30 seconds 4.4
+compiled 40 seconds 6.5
+compiled 50 seconds 8.5
+compiled 60 seconds 11.3
+compiled 70 seconds 14.3
+{'scope': 'Every free clock of each of the70 inherited birth charts at its stored smallest source. Named roots are the two free-clock endpoints if split_clock_endpoints is true, otherwise coupled-block representatives. Complete17-query exponential observers, all positive clock lengths; no arbitrary-size census.', 'source_observers': 78, 'H_dominant_base_distribution': {2: 78}, 'whole_observer_max_base_distribution': {2: 39, 4: 39}, 'literal_profile_controls': 468, 'split_clock_endpoints': False}
+compiled 10 seconds 1.3
+compiled 20 seconds 2.4
+compiled 30 seconds 4.3
+compiled 40 seconds 6.4
+compiled 50 seconds 8.7
+compiled 60 seconds 11.7
+compiled 70 seconds 14.8
+{'scope': 'Every free clock of each of the70 inherited birth charts at its stored smallest source. Named roots are the two free-clock endpoints if split_clock_endpoints is true, otherwise coupled-block representatives. Complete17-query exponential observers, all positive clock lengths; no arbitrary-size census.', 'source_observers': 78, 'H_dominant_base_distribution': {2: 78}, 'whole_observer_max_base_distribution': {2: 39, 4: 39}, 'literal_profile_controls': 468, 'split_clock_endpoints': False}
+PAIRED endpoint_profiles elapsed 51.7
+compiled 10 seconds 5.6
+compiled 20 seconds 11.0
+compiled 30 seconds 20.6
+compiled 40 seconds 31.9
+compiled 50 seconds 43.1
+compiled 60 seconds 53.8
+compiled 70 seconds 65.7
+{'scope': 'Every free clock of each of the70 inherited birth charts at its stored smallest source. Named roots are the two free-clock endpoints if split_clock_endpoints is true, otherwise coupled-block representatives. Complete17-query exponential observers, all positive clock lengths; no arbitrary-size census.', 'source_observers': 78, 'H_dominant_base_distribution': {2: 78}, 'whole_observer_max_base_distribution': {3: 78}, 'literal_profile_controls': 468, 'split_clock_endpoints': True}
+compiled 10 seconds 5.6
+compiled 20 seconds 10.9
+compiled 30 seconds 20.7
+compiled 40 seconds 31.9
+compiled 50 seconds 42.9
+compiled 60 seconds 53.7
+compiled 70 seconds 65.5
+{'scope': 'Every free clock of each of the70 inherited birth charts at its stored smallest source. Named roots are the two free-clock endpoints if split_clock_endpoints is true, otherwise coupled-block representatives. Complete17-query exponential observers, all positive clock lengths; no arbitrary-size census.', 'source_observers': 78, 'H_dominant_base_distribution': {2: 78}, 'whole_observer_max_base_distribution': {3: 78}, 'literal_profile_controls': 468, 'split_clock_endpoints': True}
+PAIRED split_endpoint_profiles elapsed 204.9
+depth 0 seen 36 next 432 hits 0 seconds 0.0
+depth 1 seen 468 next 5184 hits 0 seconds 0.2
+depth 2 seen 3924 next 41472 hits 0 seconds 1.7
+depth 3 seen 28116 next 0 hits 0 seconds 1.9
+{'scope': 'All12 universal two-live-port commands through word length3, starting at the declared70-chart free-clock source observers. Matching exact entire H profiles with d0..8,shift0..12 and attained content factors. Observer equality is exact only for this continuation language.', 'statistics': {'states_depth0': 36, 'duplicate_observers': 19050, 'states_depth1': 432, 'states_depth2': 3456, 'states_depth3': 24192}, 'matched_axes': [], 'split_clock_endpoints': False, 'observer_traversal_sha256': 'efcd4df2d16c977cbfbf0c36a3e823b256bb196f2ef4eeba7765052fa55291e2'}
+depth 0 seen 36 next 432 hits 0 seconds 0.0
+depth 1 seen 468 next 5184 hits 0 seconds 0.2
+depth 2 seen 3924 next 41472 hits 0 seconds 1.7
+depth 3 seen 28116 next 0 hits 0 seconds 1.9
+{'scope': 'All12 universal two-live-port commands through word length3, starting at the declared70-chart free-clock source observers. Matching exact entire H profiles with d0..8,shift0..12 and attained content factors. Observer equality is exact only for this continuation language.', 'statistics': {'states_depth0': 36, 'duplicate_observers': 19050, 'states_depth1': 432, 'states_depth2': 3456, 'states_depth3': 24192}, 'matched_axes': [], 'split_clock_endpoints': False, 'observer_traversal_sha256': 'efcd4df2d16c977cbfbf0c36a3e823b256bb196f2ef4eeba7765052fa55291e2'}
+PAIRED endpoint_search_3 elapsed 215.7
+depth 0 seen 36 next 432 hits 0 seconds 0.0
+depth 1 seen 468 next 5184 hits 0 seconds 0.2
+depth 2 seen 3924 next 41472 hits 0 seconds 1.7
+depth 3 seen 28116 next 290304 hits 0 seconds 12.3
+depth 4 seen 195012 next 2002752 hits 0 seconds 85.9
+depth 5 seen 1353470 next 0 hits 0 seconds 94.5
+{'scope': 'All12 universal two-live-port commands through word length5, starting at the declared70-chart free-clock source observers. Matching exact entire H profiles with d0..8,shift0..12 and attained content factors. Observer equality is exact only for this continuation language.', 'statistics': {'states_depth0': 36, 'duplicate_observers': 986752, 'states_depth1': 432, 'states_depth2': 3456, 'states_depth3': 24192, 'states_depth4': 166896, 'states_depth5': 1158458}, 'matched_axes': [], 'split_clock_endpoints': False, 'observer_traversal_sha256': '9126c8f09f79165347c6890bda250a332cb09f6be04018341487d86d21abdca2'}
+depth 0 seen 36 next 432 hits 0 seconds 0.0
+depth 1 seen 468 next 5184 hits 0 seconds 0.2
+depth 2 seen 3924 next 41472 hits 0 seconds 1.7
+depth 3 seen 28116 next 290304 hits 0 seconds 12.5
+depth 4 seen 195012 next 2002752 hits 0 seconds 85.2
+depth 5 seen 1353470 next 0 hits 0 seconds 93.8
+{'scope': 'All12 universal two-live-port commands through word length5, starting at the declared70-chart free-clock source observers. Matching exact entire H profiles with d0..8,shift0..12 and attained content factors. Observer equality is exact only for this continuation language.', 'statistics': {'states_depth0': 36, 'duplicate_observers': 986752, 'states_depth1': 432, 'states_depth2': 3456, 'states_depth3': 24192, 'states_depth4': 166896, 'states_depth5': 1158458}, 'matched_axes': [], 'split_clock_endpoints': False, 'observer_traversal_sha256': '9126c8f09f79165347c6890bda250a332cb09f6be04018341487d86d21abdca2'}
+PAIRED endpoint_search_5 elapsed 414.9
+depth 0 seen 62 next 744 hits 0 seconds 0.0
+depth 1 seen 806 next 8928 hits 0 seconds 0.4
+depth 2 seen 6674 next 70416 hits 0 seconds 3.1
+depth 3 seen 48086 next 496944 hits 0 seconds 22.6
+depth 4 seen 334510 next 3437088 hits 0 seconds 151.4
+depth 5 seen 2324250 next 0 hits 0 seconds 167.9
+{'scope': 'All12 universal two-live-port commands through word length5, starting at the declared70-chart free-clock source observers. Matching exact entire H profiles with d0..8,shift0..12 and attained content factors. Observer equality is exact only for this continuation language.', 'statistics': {'states_depth0': 62, 'duplicate_observers': 1689948, 'states_depth1': 744, 'states_depth2': 5868, 'states_depth3': 41412, 'states_depth4': 286424, 'states_depth5': 1989740}, 'matched_axes': [], 'split_clock_endpoints': True, 'observer_traversal_sha256': 'cc1087f6dc069b7f26580667b970b0d10049193504ab1d0b2a9243484b324c4d'}
+depth 0 seen 62 next 744 hits 0 seconds 0.0
+depth 1 seen 806 next 8928 hits 0 seconds 0.4
+depth 2 seen 6674 next 70416 hits 0 seconds 3.0
+depth 3 seen 48086 next 496944 hits 0 seconds 21.3
+depth 4 seen 334510 next 3437088 hits 0 seconds 148.8
+depth 5 seen 2324250 next 0 hits 0 seconds 165.5
+{'scope': 'All12 universal two-live-port commands through word length5, starting at the declared70-chart free-clock source observers. Matching exact entire H profiles with d0..8,shift0..12 and attained content factors. Observer equality is exact only for this continuation language.', 'statistics': {'states_depth0': 62, 'duplicate_observers': 1689948, 'states_depth1': 744, 'states_depth2': 5868, 'states_depth3': 41412, 'states_depth4': 286424, 'states_depth5': 1989740}, 'matched_axes': [], 'split_clock_endpoints': True, 'observer_traversal_sha256': 'cc1087f6dc069b7f26580667b970b0d10049193504ab1d0b2a9243484b324c4d'}
+PAIRED split_endpoint_search_5 elapsed 762.7
+stride 1 length 1 tested 6 survivors 2 seconds 1.4
+stride 1 length 2 tested 36 survivors 0 seconds 1.4
+stride 2 length 1 tested 6 survivors 0 seconds 1.4
+stride 2 length 2 tested 36 survivors 4 seconds 1.4
+stride 2 length 3 tested 216 survivors 0 seconds 1.4
+stride 2 length 4 tested 1296 survivors 0 seconds 1.4
+stride 2 length 5 tested 7776 survivors 0 seconds 1.5
+stride 3 length 1 tested 6 survivors 0 seconds 1.5
+stride 3 length 2 tested 36 survivors 0 seconds 1.5
+stride 3 length 3 tested 216 survivors 8 seconds 1.5
+stride 3 length 4 tested 1296 survivors 0 seconds 1.5
+stride 3 length 5 tested 7776 survivors 0 seconds 1.6
+stride 3 length 6 tested 46656 survivors 0 seconds 1.9
+stride 3 length 7 tested 279936 survivors 0 seconds 3.8
+stride 3 length 8 tested 1679616 survivors 0 seconds 14.9
+stride 1 length 1 tested 6 survivors 2 seconds 0.4
+stride 1 length 2 tested 36 survivors 0 seconds 0.4
+stride 2 length 1 tested 6 survivors 0 seconds 0.4
+stride 2 length 2 tested 36 survivors 4 seconds 0.4
+stride 2 length 3 tested 216 survivors 0 seconds 0.4
+stride 2 length 4 tested 1296 survivors 0 seconds 0.4
+stride 2 length 5 tested 7776 survivors 0 seconds 0.5
+stride 3 length 1 tested 6 survivors 0 seconds 0.5
+stride 3 length 2 tested 36 survivors 0 seconds 0.5
+stride 3 length 3 tested 216 survivors 8 seconds 0.5
+stride 3 length 4 tested 1296 survivors 0 seconds 0.5
+stride 3 length 5 tested 7776 survivors 0 seconds 0.5
+stride 3 length 6 tested 46656 survivors 0 seconds 0.8
+stride 3 length 7 tested 279936 survivors 0 seconds 2.7
+stride 3 length 8 tested 1679616 survivors 0 seconds 13.6
+PAIRED endpoint_periods elapsed 793.2
+{'scope': 'All78 retained source/free-clock presentations; named roots ordered, clock distinguished. Equality of complete17-query exponential profiles proves equality of every future12-command H response at every positive clock length. Original seed marking and arbitrary operations are not quotiented.', 'classes': 36, 'widths': {2: 39, 4: 39}, 'statistics': {'pairs': 66, 'unmarked_only': 50, 'marked_isomorphic': 16}}
+{'scope': 'All78 retained source/free-clock presentations; named roots ordered, clock distinguished. Equality of complete17-query exponential profiles proves equality of every future12-command H response at every positive clock length. Original seed marking and arbitrary operations are not quotiented.', 'classes': 36, 'widths': {2: 39, 4: 39}, 'statistics': {'pairs': 66, 'unmarked_only': 50, 'marked_isomorphic': 16}}
+PAIRED observer_rewrites elapsed 796.9
+{'presentations': 78, 'base4_descent_presentations': 9, 'other_presentations': 69, 'distinct_tail_shapes': 7, 'verified_parent_child_links': 4} seconds 14.19
+anchors Counter({3: 6, 5: 2, 9: 1}) ratios Counter({(13, 5): 2, (3, 1): 2})
+links [{'parent_family': 'even:0', 'child_family': 'odd:0', 'clock': 4, 'incoming_new': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0], 'child_z_minus_parent_z': 1, 'ratio': [13, 5], 'anchor': 3, 'identity': '13*parent_c-5*child_c=24'}, {'parent_family': 'even:0', 'child_family': 'odd:1', 'clock': 4, 'incoming_new': [1, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0, 2], 'child_z_minus_parent_z': 1, 'ratio': [3, 1], 'anchor': 3, 'identity': '3*parent_c-1*child_c=6'}, {'parent_family': 'even:5', 'child_family': 'odd:15', 'clock': 5, 'incoming_new': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0], 'child_z_minus_parent_z': 1, 'ratio': [13, 5], 'anchor': 3, 'identity': '13*parent_c-5*child_c=24'}, {'parent_family': 'even:5', 'child_family': 'odd:16', 'clock': 5, 'incoming_new': [1, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0, 2], 'child_z_minus_parent_z': 1, 'ratio': [3, 1], 'anchor': 3, 'identity': '3*parent_c-1*child_c=6'}]
+{'presentations': 78, 'base4_descent_presentations': 9, 'other_presentations': 69, 'distinct_tail_shapes': 7, 'verified_parent_child_links': 4} seconds 14.03
+anchors Counter({3: 6, 5: 2, 9: 1}) ratios Counter({(13, 5): 2, (3, 1): 2})
+links [{'parent_family': 'even:0', 'child_family': 'odd:0', 'clock': 4, 'incoming_new': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0], 'child_z_minus_parent_z': 1, 'ratio': [13, 5], 'anchor': 3, 'identity': '13*parent_c-5*child_c=24'}, {'parent_family': 'even:0', 'child_family': 'odd:1', 'clock': 4, 'incoming_new': [1, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0, 2], 'child_z_minus_parent_z': 1, 'ratio': [3, 1], 'anchor': 3, 'identity': '3*parent_c-1*child_c=6'}, {'parent_family': 'even:5', 'child_family': 'odd:15', 'clock': 5, 'incoming_new': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0], 'child_z_minus_parent_z': 1, 'ratio': [13, 5], 'anchor': 3, 'identity': '13*parent_c-5*child_c=24'}, {'parent_family': 'even:5', 'child_family': 'odd:16', 'clock': 5, 'incoming_new': [1, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0, 2], 'child_z_minus_parent_z': 1, 'ratio': [3, 1], 'anchor': 3, 'identity': '3*parent_c-1*child_c=6'}]
+PAIRED synchronized_descent elapsed 826.8
+{'scope': 'All78 exact synchronized seed tensors; equal coupled lengths1..20, free-clock shifts0..12; old478 axes with division exponents1..12 and shifts0..12. A match must be a whole odd U profile, so it would pay every exponent for that shifted coefficient family; finite omitted prefixes would still require witnesses.', 'queries': 4422, 'distinct_queries': 4321, 'statistics': {'profiles': 20280}, 'hits': [], 'matched_axes': []}
+{'scope': 'All78 exact synchronized seed tensors; equal coupled lengths1..20, free-clock shifts0..12; old478 axes with division exponents1..12 and shifts0..12. A match must be a whole odd U profile, so it would pay every exponent for that shifted coefficient family; finite omitted prefixes would still require witnesses.', 'queries': 4422, 'distinct_queries': 4321, 'statistics': {'profiles': 20280}, 'hits': [], 'matched_axes': []}
+PAIRED synchronized_repairs elapsed 828.9
+audited even:0 4 seconds 1.2
+audited even:5 5 seconds 1.3
+audited odd:0 4 seconds 1.6
+audited odd:1 4 seconds 1.9
+audited odd:2 4 seconds 2.2
+audited odd:3 4 seconds 2.5
+audited odd:15 5 seconds 2.8
+audited odd:16 5 seconds 3.0
+audited odd:17 5 seconds 3.3
+{'full_tensor_identities': 9, 'literal_controls': 36}
+audited even:0 4 seconds 1.2
+audited even:5 5 seconds 1.3
+audited odd:0 4 seconds 1.6
+audited odd:1 4 seconds 1.9
+audited odd:2 4 seconds 2.2
+audited odd:3 4 seconds 2.6
+audited odd:15 5 seconds 2.8
+audited odd:16 5 seconds 3.1
+audited odd:17 5 seconds 3.4
+{'full_tensor_identities': 9, 'literal_controls': 36}
+PAIRED independent_descent elapsed 837.4
+literal even:0 20 1421569
+literal odd:0 21 3694849
+{'scope': 'Nine certified infinite charts and their four literal core links; inverse k, synchronized m, and parent moves. Formal grammar states are distinguished, not unmarked tournament isomorphism classes.', 'terminal_families': ['even:0', 'even:5', 'odd:17', 'odd:2', 'odd:3'], 'terminal_coefficients': {'even:0': 5553, 'even:5': 3153, 'odd:17': 8195, 'odd:2': 14435, 'odd:3': 10859}, 'formal_state_GF': '(3*z^17+2*z^18+4*z^19)/((1-z)*(1-z^4))', 'formal_counts_orders17_through36': [3, 5, 9, 9, 12, 14, 18, 18, 21, 23, 27, 27, 30, 32, 36, 36, 39, 41, 45, 45], 'finite_grid_states': 900, 'decreasing_edge_controls': 2020, 'commuting_diamond_controls': 1449, 'scalar_recognition_controls': 900, 'congruence_only_hostile': 29}
+literal even:0 20 1421569
+literal odd:0 21 3694849
+{'scope': 'Nine certified infinite charts and their four literal core links; inverse k, synchronized m, and parent moves. Formal grammar states are distinguished, not unmarked tournament isomorphism classes.', 'terminal_families': ['even:0', 'even:5', 'odd:17', 'odd:2', 'odd:3'], 'terminal_coefficients': {'even:0': 5553, 'even:5': 3153, 'odd:17': 8195, 'odd:2': 14435, 'odd:3': 10859}, 'formal_state_GF': '(3*z^17+2*z^18+4*z^19)/((1-z)*(1-z^4))', 'formal_counts_orders17_through36': [3, 5, 9, 9, 12, 14, 18, 18, 21, 23, 27, 27, 30, 32, 36, 36, 39, 41, 45, 45], 'finite_grid_states': 900, 'decreasing_edge_controls': 2020, 'commuting_diamond_controls': 1449, 'scalar_recognition_controls': 900, 'congruence_only_hostile': 29}
+PAIRED descent_grammar elapsed 841.7
+{'scope': 'PROVED exact algebra and coefficient transform; cited classical discriminant43 identity; VERIFIED high-precision evaluations with a proved analytic tail estimate (not an interval-arithmetic roundoff certificate). U means (127+5sqrt645)/2.', 'trace': '127', 'cube_trace': '2048002', 'J': '-884736000', 'derivative_coefficient': '8127', 'first_A': [1, 120, 83160, 81681600, 93699005400, 117386113965120, 155667030019300800, 214804163196079142400], 'first_B': [1, -312, 114264, -44196288, 17571260376, -7102429365312, 2902756971524544, -1195767284675194368], 'terms': 100, 'decimal_precision': 120, 'evaluations': [{'U_exponent': 1, 'value': '45.4538069822441923125521279179091354756758111134177696229379296322410333781729759112005231', 'absolute_error_against_1_over_pi': '45.1354971', 'analytic_absolute_tail_bound': '2.646146433e-85'}, {'U_exponent': 3, 'value': '0.318309886183790671537767526745028724068919291480912897495334688117793595268453070180227606', 'absolute_error_against_1_over_pi': '0.0', 'analytic_absolute_tail_bound': '3.194317216e-508'}], 'classical_value': '0.318309886183790671537767526745028724068919291480912897495334688117793595268453070180227606'}
+{'scope': 'PROVED exact algebra and coefficient transform; cited classical discriminant43 identity; VERIFIED high-precision evaluations with a proved analytic tail estimate (not an interval-arithmetic roundoff certificate). U means (127+5sqrt645)/2.', 'trace': '127', 'cube_trace': '2048002', 'J': '-884736000', 'derivative_coefficient': '8127', 'first_A': [1, 120, 83160, 81681600, 93699005400, 117386113965120, 155667030019300800, 214804163196079142400], 'first_B': [1, -312, 114264, -44196288, 17571260376, -7102429365312, 2902756971524544, -1195767284675194368], 'terms': 100, 'decimal_precision': 120, 'evaluations': [{'U_exponent': 1, 'value': '45.4538069822441923125521279179091354756758111134177696229379296322410333781729759112005231', 'absolute_error_against_1_over_pi': '45.1354971', 'analytic_absolute_tail_bound': '2.646146433e-85'}, {'U_exponent': 3, 'value': '0.318309886183790671537767526745028724068919291480912897495334688117793595268453070180227606', 'absolute_error_against_1_over_pi': '0.0', 'analytic_absolute_tail_bound': '3.194317216e-508'}], 'classical_value': '0.318309886183790671537767526745028724068919291480912897495334688117793595268453070180227606'}
+PAIRED modular_bridge elapsed 843.7

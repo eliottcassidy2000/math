@@ -1,0 +1,23 @@
+{'presentations': 78, 'base4_descent_presentations': 9, 'other_presentations': 69, 'distinct_tail_shapes': 7, 'verified_parent_child_links': 4} seconds 14.5
+anchors Counter({3: 6, 5: 2, 9: 1}) ratios Counter({(13, 5): 2, (3, 1): 2})
+links [{'parent_family': 'even:0', 'child_family': 'odd:0', 'clock': 4, 'incoming_new': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0], 'child_z_minus_parent_z': 1, 'ratio': [13, 5], 'anchor': 3, 'identity': '13*parent_c-5*child_c=24'}, {'parent_family': 'even:0', 'child_family': 'odd:1', 'clock': 4, 'incoming_new': [1, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0, 2], 'child_z_minus_parent_z': 1, 'ratio': [3, 1], 'anchor': 3, 'identity': '3*parent_c-1*child_c=6'}, {'parent_family': 'even:5', 'child_family': 'odd:15', 'clock': 5, 'incoming_new': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0], 'child_z_minus_parent_z': 1, 'ratio': [13, 5], 'anchor': 3, 'identity': '13*parent_c-5*child_c=24'}, {'parent_family': 'even:5', 'child_family': 'odd:16', 'clock': 5, 'incoming_new': [1, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0, 2], 'child_z_minus_parent_z': 1, 'ratio': [3, 1], 'anchor': 3, 'identity': '3*parent_c-1*child_c=6'}]
+{'presentations': 78, 'base4_descent_presentations': 9, 'other_presentations': 69, 'distinct_tail_shapes': 7, 'verified_parent_child_links': 4} seconds 14.48
+anchors Counter({3: 6, 5: 2, 9: 1}) ratios Counter({(13, 5): 2, (3, 1): 2})
+links [{'parent_family': 'even:0', 'child_family': 'odd:0', 'clock': 4, 'incoming_new': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0], 'child_z_minus_parent_z': 1, 'ratio': [13, 5], 'anchor': 3, 'identity': '13*parent_c-5*child_c=24'}, {'parent_family': 'even:0', 'child_family': 'odd:1', 'clock': 4, 'incoming_new': [1, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0, 2], 'child_z_minus_parent_z': 1, 'ratio': [3, 1], 'anchor': 3, 'identity': '3*parent_c-1*child_c=6'}, {'parent_family': 'even:5', 'child_family': 'odd:15', 'clock': 5, 'incoming_new': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0], 'child_z_minus_parent_z': 1, 'ratio': [13, 5], 'anchor': 3, 'identity': '13*parent_c-5*child_c=24'}, {'parent_family': 'even:5', 'child_family': 'odd:16', 'clock': 5, 'incoming_new': [1, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'outgoing_new': [0, 2], 'child_z_minus_parent_z': 1, 'ratio': [3, 1], 'anchor': 3, 'identity': '3*parent_c-1*child_c=6'}]
+PAIRED head_factor_search elapsed 0.0
+PAIRED endpoint_profiles elapsed 0.0
+PAIRED split_endpoint_profiles elapsed 0.0
+PAIRED endpoint_search_3 elapsed 0.0
+PAIRED endpoint_search_5 elapsed 0.0
+PAIRED split_endpoint_search_5 elapsed 0.0
+PAIRED endpoint_periods elapsed 0.0
+PAIRED observer_rewrites elapsed 0.0
+PAIRED synchronized_descent elapsed 0.0
+PAIRED synchronized_repairs elapsed 0.0
+PAIRED independent_descent elapsed 0.0
+PAIRED descent_grammar elapsed 0.0
+PAIRED modular_bridge elapsed 0.0
+PAIRED connection_checks elapsed 0.0
+{'scope': 'Cross-checks and hostile controls; symbolic independent polynomial audit through period length3, not an independent rerun of every long word.', 'selected_gate_hostile': [{'family': 'even:0', 'H': 2663, 'U': 11292, 'selected': [1, 3], 'tail_H': 22585}, {'family': 'even:2', 'H': 2663, 'U': 17025, 'selected': [3, 4], 'tail_H': 34051}], 'exact_polynomial_tests': 558, 'bounded_periods_total': 2024910, 'arithmetic_bounds': {'largest_run_cell': 8646761377013760000, 'largest_run_sum': 17293522754027520000}, 'ordinary_observer_classes': 36, 'old_remaining_repairs': 473, 'zero_padding_quotient_controls': 936} seconds 1.5
+{'scope': 'Cross-checks and hostile controls; symbolic independent polynomial audit through period length3, not an independent rerun of every long word.', 'selected_gate_hostile': [{'family': 'even:0', 'H': 2663, 'U': 11292, 'selected': [1, 3], 'tail_H': 22585}, {'family': 'even:2', 'H': 2663, 'U': 17025, 'selected': [3, 4], 'tail_H': 34051}], 'exact_polynomial_tests': 558, 'bounded_periods_total': 2024910, 'arithmetic_bounds': {'largest_run_cell': 8646761377013760000, 'largest_run_sum': 17293522754027520000}, 'ordinary_observer_classes': 36, 'old_remaining_repairs': 473, 'zero_padding_quotient_controls': 936} seconds 1.61
+PAIRED verification elapsed 5.2

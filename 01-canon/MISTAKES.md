@@ -11,9 +11,9 @@ a historical synthesis or promoting computational evidence.
 - **False inference:** all78 free-clock presentations of the70 new birth
   charts have initial H profiles using only bases1,2, therefore every
   two-live-port continuation also uses only those bases.
-- **Witness:** `even:8`, free clock10 and roots6,9 in the
+- **Witness:** `even:8`, free clock10 and roots0,4 in the
   [endpoint packet](../05-knowledge/results/core_descent_endpoints_20261112/PLAN.md)
-  has a higher-mode continuation (the receipt retains the actual root labels).
+  has one-query profile `-133+2036*2^a+9090*3^a`.
   The complete17-query observer, not its first column, must be inspected.
 - **Repair:** exactly39 stored presentations have observer modes confined
   to1,2; the other39 reach base4. Naming the two ends of a split clock gives
@@ -23,6 +23,15 @@ a historical synthesis or promoting computational evidence.
   applies when inferring endpoint stability or physical source equivalence
   from an initial count. Scope here is the stored sources, not every length
   of both synchronized blocks.
+
+- **Enumeration companion correction:** variable-width observer arrays can
+  represent the same function after higher-mode columns vanish. The first
+  depth-three traversal counted 28,116 stored arrays but only 27,988
+  observer functions. Remove common trailing zero columns before hashing.
+  Linear continuation cannot revive a zero column, so this quotient is
+  sound. Both length-five searches were rerun with canonical keys; earlier
+  log totals are superseded by the current endpoint receipts. This changes
+  state counts, not the absence of whole-profile repair matches.
 
 ## 2026-11-12: Birth rank, zero clocks, and periodic-word eigenvalue overreach
 
