@@ -265,10 +265,19 @@ the C2 line, and never `H+1=3^j·F(k)`.
 abundant: `H−1=2^k·Y_j`, ternary inside, dyadic outside. The C2 line `H+1=3^j·F(k)`, dyadic inside and ternary
 outside, never appears. The C2 map survives, but on the slope `c=Y_j` of the unit line, not on the count.
 
-**Watch item (not a claim).** The constant terms of the pure two-clocks found (`σ_2=0`) are
-`1,3,5,9,11,13,…,33,−3,−5`. Missing are `7, 21` (the Chan–Pak exceptions), `31` and `−1`. The constant is not
-the path count of any deleted subtournament (checked), so this is probably a small-sample accident. A
-pure two-clock with constant 7 or 21 would settle it.
+**Anchor anomaly and a pre-registered prediction.** A pure two-clock (`σ_2=0`) has constant `d=−σ`, its
+*anchor*, the 3-adic limit of `H` as `j→∞`. All but one of the positive-anchor families found have `β=0`, so
+`H−d = α·2^k·3^j`, and both clock maps fix `d` (`H↦3H−2d`, `H↦2H−d`). The exception, from the order-13
+extension run, is a certified order-12 family `H=3^j(1720·2^k−400)+5`. It has P-form
+`1720P_3P_2−400P_3H(N)+5H(M)H(N)`: the C2-line shape with a negative `β`, anchored at 5. Moreover `d = 2H(T)−H(T')` for every member `T`, where `T'` doubles the `v`-block. Across all
+universes of §8.4 the anchors, with the number of **distinct** `(A,α)` families, are `1` (68), `3` (53), `5` (52),
+`9` (31), `11` (8), `13` (8), `15` (17), `17` (5), `19` (2), `23` (1), `25` (1), `27` (3), `29` (2), `33` (3), plus
+`−3` (11), `−5` (1). **The anchor 7 never occurs**, although its neighbours 5 and 9 have 52 and 31 families. 21 and 31
+are also absent, but there only one to three families would be expected. Every anchor that occurs is a
+Hamiltonian path count; 7 and 21 are the only odd numbers that are not.
+*Prediction, registered before any larger search:* (P1) no pure two-clock is anchored at 7; (P2) none at 21;
+(P3) anchor 31 appears once the universe grows. A refutation of P1 needs one table. The anchor is not
+`H(S−u−v)` or any other deleted-subtournament count tried, so no mechanism is proposed.
 
 ### 8.4 Final counts of the order-12 hunt (FINITE-EXACT; scripts in `c/`, outputs in `data/`)
 

@@ -331,5 +331,24 @@ for f in ('cherries_gen.txt.gz', 'backscan_n12_b4_gen.txt.gz', 'flipsearch_hits.
 out.append('9. continuation: a_3 = 2FG (S60: F=2, G=15); digit 1 -> A=4 mod 8, digit -1 -> A=0 mod 8; no ternary Pi_2 '
            'among 1,549 clocks; order-12 (1,1),(1,2) certified with A = 2 alpha; no C2 line in the order-12 universes: OK')
 
+# 9e. anchors of pure two-clocks: positive anchors have beta = 0; anchor 7 never occurs (pre-registered P1)
+anch = {}
+for f in ('gen_all_orders.txt.gz', 'backscan_n8_b4.txt.gz', 'backscan_n10_b5.txt.gz', 'backscan_n11_b4.txt.gz',
+          'backscan_n12_b4_gen.txt.gz', 'extscan_e1.txt.gz', 'extscan_e2.txt.gz', 'extone_from_certified.txt.gz',
+          'extone868_from_certified.txt.gz', 'cherries_gen.txt.gz'):
+    for l in lines(f):
+        m = re.search(r' A=(\d+) sigma=(-?\d+) al=(\d+) sig2=(-?\d+)', l)
+        if not l.startswith('GEN') or not m: continue
+        A_, s, al, s2 = map(int, m.groups())
+        if s2 != 0: continue
+        d = -s
+        if d > 0 and A_ != 2 * al:
+            need((d, A_, al) == (5, 3040, 1720), 'only one positive-anchor family has beta != 0')
+        anch.setdefault(d, set()).add((A_, al))
+need(7 not in anch and 21 not in anch, 'anchors 7 and 21 absent (P1, P2)')
+need(all(d in (1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 33) for d in anch if d > 0), 'positive anchors are the recorded path counts')
+out.append('9e. pure two-clock anchors (distinct families): %s; 7 and 21 absent: OK'
+           % ', '.join('%d:%d' % (d, len(anch[d])) for d in sorted(anch)))
+
 print('\n'.join(out))
 print('ALL CHECKS PASSED')
