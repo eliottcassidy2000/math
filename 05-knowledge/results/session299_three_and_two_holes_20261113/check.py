@@ -89,3 +89,12 @@ src=[2,12,145,149,99,143,175,19]
 req([direct(inflate(src,7,[(1<<m)-(1<<(i+1)) for i in range(m)])) for m in (1,2,3,4)]==[179,539,1619,4859],"ternary clock")
 req(direct(inflate(src,7,[2,4,1]))==1977,"different triangle outcome")
 print("substitution, cycle bound and literal clock pass")
+for value,a in {
+    35:[4,117,64,39,77,85,9], 49:[4,109,24,17,99,77,13],
+    63:[94,88,194,20,4,95,24,123], 343:[226,68,49,231,139,146,52,70]
+}.items():
+    req(all(not(a[i]>>i&1) for i in range(len(a))) and all(
+        (a[i]>>j&1)+(a[j]>>i&1)==1 for i in range(len(a)) for j in range(i+1,len(a))),
+        "seed tournament")
+    req(strong(a) and direct(a)==value,"exceptional seed")
+print("literal strong seeds 35,49,63,343 pass")
