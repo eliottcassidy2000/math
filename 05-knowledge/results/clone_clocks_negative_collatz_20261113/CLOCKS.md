@@ -270,9 +270,9 @@ outside, never appears. The C2 map survives, but on the slope `c=Y_j` of the uni
 `H−d = α·2^k·3^j`, and both clock maps fix `d` (`H↦3H−2d`, `H↦2H−d`). The exception, from the order-13
 extension run, is a certified order-12 family `H=3^j(1720·2^k−400)+5`. It has P-form
 `1720P_3P_2−400P_3H(N)+5H(M)H(N)`: the C2-line shape with a negative `β`, anchored at 5. Moreover `d = 2H(T)−H(T')` for every member `T`, where `T'` doubles the `v`-block. Across all
-universes of §8.4 the anchors, with the number of **distinct** `(A,α)` families, are `1` (68), `3` (53), `5` (52),
-`9` (31), `11` (8), `13` (8), `15` (17), `17` (5), `19` (2), `23` (1), `25` (1), `27` (3), `29` (2), `33` (3), plus
-`−3` (11), `−5` (1). **The anchor 7 never occurs**, although its neighbours 5 and 9 have 52 and 31 families. 21 and 31
+universes of §8.4 the anchors, with the number of **distinct** `(A,α)` families, are `1` (71), `3` (59), `5` (60),
+`9` (34), `11` (8), `13` (8), `15` (17), `17` (5), `19` (2), `23` (1), `25` (1), `27` (3), `29` (2), `33` (3), plus
+`−3` (13), `−5` (1). **The anchor 7 never occurs**, although its neighbours 5 and 9 have 60 and 34 families. 21 and 31
 are also absent, but there only one to three families would be expected. Every anchor that occurs is a
 Hamiltonian path count; 7 and 21 are proved exclusions. The assertion that they
 are the only missing positive odd counts remains the OPEN Chan–Pak conjecture.
@@ -287,7 +287,7 @@ are the only missing positive odd counts remains the OPEN Chan–Pak conjecture.
 | near-transitive order 12, ≤4 reversed arcs, every `(u,v)` (`backscan.c 12 4`) | 10,160 | 170 × (1,1) | 0 |
 | two-cherry family, near-transitive sides: orders 9, 10, 11, 12 with ≤1 reversed arc per side, order 10 with ≤2 (1,515,222 skeletons, 6,094 digit-1 clocks) | 6,118 | 6,070 × (1,1), 48 × (1,2) at order 12 | 0 |
 | all double arc reversals of the 90 certified near-C2 skeletons, triple reversals of the 23 of order ≤10 (`flipsearch.c`) | 4,841 | (1,1), (1,3), (1,9) | 0 |
-| one-vertex extensions of all 868 certified skeletons (orders up to 13, `extone.c`) | see `data/` | (1,1), (1,2), (1,3), (1,9), (1,15), (1,27) | 0 |
+| one-vertex extensions of all 868 certified skeletons (orders up to 13, `extone.c`; `data/extone868_from_certified.txt.gz`) | 19,927 | (1,1), (1,2), (1,3), (1,9), (1,15), (1,27) | 0 |
 
 The order-12 near-transitive universe has pure `v`-sectors only with digit −1 (1,176 lines). The constant term
 `−1` of the C2 line appears there only through the `(1,1)` and product types, never with a pure `v`-sector.
