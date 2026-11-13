@@ -25,3 +25,21 @@ In that order the positive Plücker coordinates are literally $H_v-H_u$ (columns
 The outputs can be taken strong without changing these counts. Vertex 6 of each local block is a source within that block, and is outside all three out-cuts. Delete vertex 6 of the first block, a source of the whole tournament. The remaining first block is strong, as is the six-vertex interior of each other block (a reachability check on the displayed rows). The apex reaches the first interior, all later vertices are reachable through the ordinal arcs, and every vertex can reach the apex. Deleting a global source does not change the count. This is an orientation on a family **of counts**, not a claim that a single tournament realizing a count has the tower as its automorphism group.
 
 The result gives a literal three-way physical address compiler, including the signed digit, but still not a dense interval: at a fixed length only three leading choices at each stage are available. Nothing here covers all odd targets.
+
+## A neutral two-vertex pad makes every site usable
+
+Append one sink to each block, placing it in the complement of the apex out-cut (so it beats the apex). The response transformation is
+$$
+(h,q,s,s^*,e,e^*,b)\longmapsto(h,2q,s,2s^*,h,e^*+q,b+s^*).
+$$
+For two-slot covers, split according to which slot contains the sink. It contributes at the end of that slot, may be a slot by itself, and is an allowed end but never an allowed start. This gives the displayed transformations, including the cases of an empty other slot. Two successive sinks therefore give $(h,q,s,s^*)=(33,2880,0,508)$, with $e=33$ constant, $e^*$ increased by 2160 and $b$ increased by 381 for all three choices. The rotation signatures are unchanged: 2880 reduces to the square 9 modulo 11 and 508 to the nonsquare 2. The same argument now gives simultaneous real and 11-adic prefix order with **every** site $2,\ldots,n$ active. Indeed $G_{i+1}>(2880/33)G_i$ and
+$$
+\frac{508\cdot210+33\cdot40}{2880/33-1}<508\cdot6 .
+$$
+So the full earlier span is less than a single current digit gap. The 11-adic valuation is the common prefix length itself, no longer doubled. One sink already suffices for real order, but reverses the cyclic convention on alternating levels; two make the same convention uniform.
+
+The length-bypass calculation also applies here. For a uniform cut and $n\ge k+2$, the count modulo $11^k$ is
+$$
+s^*e^*q^{n-2}(1-33/q)^{-2}.
+$$
+The unit $q=2880$ has order five modulo 11 and $q^5\equiv23\bmod121$, so it generates the square subgroup at every precision by binomial lifting. Choices B and A have $s^*e^*$ respectively nonsquare and square. Thus two fixed uniform choices, varying only the length, realize every unit modulo each $11^k$; ordinal appendages of the 33-path block supply nonunits. On the other hand, every depth-$n$ count is of order $2880^n$, by the positive endpoint term and the same geometric upper bound as in [LENGTH_BYPASS](LENGTH_BYPASS.md). The combined family with appendages has exactly order $X^{\log_{2880}3}$ distinct counts up to $X$: one depth gives the lower bound, and summing the at-most-$3^n$ words over depths and appendages gives the matching upper bound. In the upper bound a fixed choice at the first site or finitely many uniform cuts changes only constants. Once again complete modular coverage leaves a thin absolute spectrum.
