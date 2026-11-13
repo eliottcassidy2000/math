@@ -179,9 +179,23 @@ This is complete within C = 1, since all two-block partners of Proposition 1 hav
 (c) Order 12. None of the 2584 classes collides with a two-block sum of type (3,9) or (5,7). Type (1,11) is
 pre-registered search S1 (section 7).
 
+**Proposition 5(d) (outside C = 1 at order 10; FINITE-EXACT in its range; pre-registered S3).** Search every
+strong order-10 tournament with at most 5 backward arcs relative to 0<1<...<9 (1,385,979 candidates). Compare each
+against all two-block sums of Proposition 1: TT1 + Y9, C3 => Y7 and Y5 => Y5' over all odd strong blocks (48,908
+profiles). The matches have four profiles:
+
+- H = 153, 219, 317, all with C = 1;
+- **H = 333, with C = 5.**
+
+The H = 333 profile equals Q(C3 => Y7) for Y7 = classgen order-7 code 43104 (H = 111, C = 11). One member is
+X = (1002,1020,1017,1008,481,704,896,768,544,16). Vertex-deletion fingerprints give at least 2 isomorphism
+classes. So the uniquely Hamiltonian property of Proposition 4 is a small-order fact and fails at order 10. Within
+this range, every detachable match (partner Y9 -> TT1) is the H = 317 profile, which has C = 1.
+
 **Remark (C = 1 is not forced by the construction at orders <= 9).** Proposition 4 searched every class. The C = 1
-property of all 7 strong members is therefore an observation (HYP-9678 (A)), not a restriction of the search. A
-complete order-10 census would need the 9.7 million order-10 classes and was not attempted.
+property of all 7 strong members is therefore an observation, not a restriction of the search. Proposition 5(d)
+shows it does not persist: HYP-9678 (A) is refuted and replaced by the detachable form (A'). A complete order-10
+census would need the 9.7 million order-10 classes and was not attempted.
 
 ## 4. One-apex form, and what Session 310's B is
 

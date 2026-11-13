@@ -48,3 +48,12 @@ order, so labelled copies of each must appear.
 
 Prediction: every match has C = 1, so HYP-9678 (A) survives, and the matched profiles are exactly the three known
 ones (H = 153, 219, 317). Confidence about 0.7.
+
+- **S3: FAILED, HYP-9678 (A) REFUTED**, 2026-11-13.
+  - 1,385,979 candidates, of which 507,458 strong; 486,580 were fully profiled.
+  - 862 labelled matches. 742 have C = 1, spread over the three known profiles: H = 153 (440), 219 (272) and 317
+    (30).
+  - The other 120 matches have **C = 5 and H = 333**. Their slot polynomial equals that of C3 => Y7, where Y7 is
+    classgen order-7 code 43104 (H = 111, C = 11).
+  - Vertex-deletion fingerprints separate them into at least 2 isomorphism classes.
+  - The control passed. Every detachable match (partner Y9 -> TT1) is the H = 317 profile, with C = 1.

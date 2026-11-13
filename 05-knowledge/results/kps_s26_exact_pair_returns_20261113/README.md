@@ -12,6 +12,8 @@ what such pairs can and cannot supply to a return.
 
 - Through order 9, exactly 7 strong classes share their full slot polynomial with a decomposable tournament: H = 15
   at order 6, and H = 45 and 95 at order 8. All 7 have exactly one Hamiltonian cycle.
+- This is a small-order fact, not a law. At order 10, strong tournaments with five Hamiltonian cycles (H = 333)
+  also have a partner (pre-registered S3).
 - Session 310's component budget forces even order and a two-component partner (§1).
 - Inside the uniquely Hamiltonian class, generated to order 12 with Session 197's Fibonacci counts, order 10 adds
   exactly three more profiles: H = 153, 219, and the prime **317**.
@@ -88,6 +90,13 @@ returns exactly the known partners.
     317 partners do not.
   - Order 12 is therefore undecided. Detachable partners there, if any, need at least 6 backward arcs and are not
     bicliques.
+- **S3** (order 10 outside the uniquely Hamiltonian class, predicted all C = 1): **FAILED; HYP-9678 (A) is
+  REFUTED.**
+  - Strong order-10 tournaments with **C = 5 and H = 333**, at least 2 isomorphism classes, have the full slot
+    polynomial of C3 => Y7 (Y7 = code 43104, H = 111, C = 11).
+  - The refuted law survives only for **detachable** pairs. Every detachable member found (H = 15, 95, 317) is
+    uniquely Hamiltonian; this weaker form is HYP-9678 (A').
+  - Scope: 1,385,979 candidates with at most 5 backward arcs; 862 matches.
 - **S2** (order-11 odd merges, predicted no): **CONFIRMED (no match).**
   - 655 distinct target profiles Q(Y5 => Y7)/t.
   - 3,847,591 candidate tournaments, of which 1,243,347 strong; 189,829 passed the triangle and H filters and were

@@ -138,17 +138,19 @@ def is_prime(n):
 
 C3 = [2, 4, 1]; TT1 = [0]
 PAIRS = [
-    # (label, strong X rows, decomposable partner rows, expected H)
-    ('order 6, H=15, C=1 one-apex word 01001', [6, 4, 8, 19, 39, 15], ordinal(decode(152, 5), TT1), 15),
-    ('order 8, H=95 (Session 310 B) vs A->TT1', [2, 80, 3, 7, 173, 143, 189, 15], ordinal([2, 28, 25, 81, 97, 79, 7], TT1), 95),
-    ('order 8, H=45, C3 => Y5', [30, 12, 8, 16, 38, 79, 159, 63], ordinal(C3, decode(739, 5)), 45),
-    ('order 10, H=153, C3 => Y7', [126, 60, 56, 48, 32, 64, 158, 319, 639, 255], ordinal(C3, decode(1116481, 7)), 153),
-    ('order 10, H=219, C3 => Y7', [254, 508, 504, 240, 224, 192, 128, 256, 633, 255], ordinal(C3, decode(202882, 7)), 219),
-    ('order 10, H=317 (prime), Y9 -> TT1', [254, 508, 120, 112, 224, 192, 128, 268, 637, 255], ordinal([378, 380, 505, 496, 224, 448, 384, 259, 16], TT1), 317),
+    # (label, strong X rows, decomposable partner rows, expected H, expected C(X))
+    ('order 6, H=15, C=1 one-apex word 01001', [6, 4, 8, 19, 39, 15], ordinal(decode(152, 5), TT1), 15, 1),
+    ('order 8, H=95 (Session 310 B) vs A->TT1', [2, 80, 3, 7, 173, 143, 189, 15], ordinal([2, 28, 25, 81, 97, 79, 7], TT1), 95, 1),
+    ('order 8, H=45, C3 => Y5', [30, 12, 8, 16, 38, 79, 159, 63], ordinal(C3, decode(739, 5)), 45, 1),
+    ('order 10, H=153, C3 => Y7', [126, 60, 56, 48, 32, 64, 158, 319, 639, 255], ordinal(C3, decode(1116481, 7)), 153, 1),
+    ('order 10, H=219, C3 => Y7', [254, 508, 504, 240, 224, 192, 128, 256, 633, 255], ordinal(C3, decode(202882, 7)), 219, 1),
+    ('order 10, H=317 (prime), Y9 -> TT1', [254, 508, 120, 112, 224, 192, 128, 268, 637, 255], ordinal([378, 380, 505, 496, 224, 448, 384, 259, 16], TT1), 317, 1),
+    # pre-registered S3: refutes HYP-9678 (A) - a strong member with five Hamiltonian cycles
+    ('order 10, H=333, C3 => Y7, C(X)=5', [1002, 1020, 1017, 1008, 481, 704, 896, 768, 544, 16], ordinal(C3, decode(43104, 7)), 333, 5),
 ]
 
 def check_pairs():
-    for lab, X, Z, H in PAIRS:
+    for lab, X, Z, H, CX in PAIRS:
         FX, FZ = profile(X), profile(Z)
         need(FX == FZ, lab)
         need(FX[0] == H, lab)
@@ -156,7 +158,7 @@ def check_pairs():
         need(all(Q(FX, t) == Q(FZ, t) for t in range(len(X) + 1)), lab)
         c = ham_cycles(X)
         print('  ok  %-44s F = %s  C(X) = %d' % (lab, FX, c))
-        need(c == 1, lab)
+        need(c == CX, lab)
 
 def iso(A, B):
     n = len(A)

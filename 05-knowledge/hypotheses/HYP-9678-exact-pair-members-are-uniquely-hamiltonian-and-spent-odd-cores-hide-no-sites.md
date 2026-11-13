@@ -1,10 +1,13 @@
 ---
 id: HYP-9678
-title: "Exact slot pairs and hidden transfer sites. (A) Every strong tournament with the same full slot polynomial as a non-strong one is uniquely Hamiltonian. (B) Detachable exact pairs, strong X of even order with Q_X = t Q_Y for a strong Y, exist at infinitely many orders; known at 6, 8, 10 with H = 15, 95, 317. (C) Capacity is additive: the maximum number of singleton components over all tournaments with slot polynomial Q_T is s(T) + d(T), where d(T) counts the even strong components of T that have a detachable partner. In particular a sum of odd strong cores hides no site; in particular no odd merge Q(Y1 => Y2) = Q(Z -> TT1) exists. (D) Consequence of (C) for returns: in the Pi clock a neutral rebase of the right module adds at most d sites, so an unbounded return must bring in a fresh detachable even component by a non-neutral move before each refill"
+title: "Exact slot pairs and hidden transfer sites. (A) REFUTED (pre-registered S3): order-10 strong tournaments with five Hamiltonian cycles (H = 333) share the full slot polynomial of C3 => Y7. (A') Every strong member of a DETACHABLE pair (Q_X = Q_(Y -> TT1)) is uniquely Hamiltonian. (B) Detachable exact pairs, strong X of even order with Q_X = t Q_Y for a strong Y, exist at infinitely many orders; known at 6, 8, 10 with H = 15, 95, 317. (C) Capacity is additive: the maximum number of singleton components over all tournaments with slot polynomial Q_T is s(T) + d(T), where d(T) counts the even strong components of T that have a detachable partner. In particular a sum of odd strong cores hides no site; in particular no odd merge Q(Y1 => Y2) = Q(Z -> TT1) exists. (D) Consequence of (C) for returns: in the Pi clock a neutral rebase of the right module adds at most d sites, so an unbounded return must bring in a fresh detachable even component by a non-neutral move before each refill"
 status: >
   OPEN.
-  (A): all 7 strong members through order 9 have C = 1, and the census there is complete over all classes. Above
-  order 9 only the C = 1 slice was searched, which cannot test (A).
+  (A): REFUTED. Through order 9 all 7 strong members have C = 1 (complete census). At order 10, pre-registered S3
+  searched every strong tournament with at most 5 backward arcs. It found members with C = 5 and H = 333 (partner
+  C3 => Y7, Y7 = classgen code 43104), at least 2 isomorphism classes; THM-5151 PROOF Proposition 5(d).
+  (A'): OPEN. Every detachable member known has C = 1: orders <= 9 complete, and in S3's range the only detachable
+  profile is H = 317, with C = 1.
   (B): FINITE-EXACT pairs at orders 6, 8, 10 (THM-5151 (4), (5)). Order 12 is undecided:
   - pre-registered S1 found no partner among strong order-11 tournaments with at most 5 backward arcs (prediction
     FAILED);
@@ -31,9 +34,18 @@ related:
 Q_T(t) = sum_j F_j(T) binom(t, j). Let s(T) count singleton strong components. Call an even strong X
 *detachable* if Q_X = Q_(Y -> TT1) for some odd strong Y.
 
-**(A) C = 1 law.** If X is strong, Z is not, and Q_X = Q_Z, then X has exactly one directed Hamiltonian cycle.
-Evidence: the complete census through order 9 (7 classes). A test at order 10 needs a census outside the C = 1
-class.
+**(A) C = 1 law: REFUTED.** The claim was that if X is strong, Z is not, and Q_X = Q_Z, then X has exactly one
+directed Hamiltonian cycle. It holds through order 9, where the census is complete (7 classes). At order 10 it
+fails:
+
+    X = (1002,1020,1017,1008,481,704,896,768,544,16)
+
+has C(X) = 5, H = 333 and Q_X = Q(C3 => Y7), where Y7 is classgen code 43104 (H = 111, C = 11). This came from
+pre-registered search S3.
+
+**(A') Detachable C = 1 law (OPEN).** If X is strong and Q_X = Q_(Y -> TT1), then C(X) = 1. Every known detachable
+member (H = 15, 95, 317) satisfies it, and S3 found no detachable counterexample with at most 5 backward arcs at
+order 10.
 
 **(B) Infinitely many detachable pairs.** Known detachable members:
 
