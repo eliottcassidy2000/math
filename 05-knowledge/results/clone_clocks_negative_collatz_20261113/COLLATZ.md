@@ -72,9 +72,9 @@ clock transfer `(j,k)↦(j+1,k−1)` is `y↦3y/2`.
   `3x+1` step **on the negative integers**: `T(−H)=−(3H−1)/2`.
 
 The classical ascent criterion makes the residues explicit. For odd `n` and `s≥2`:
-`n≡−1 (mod 2^s)` iff the first `s−1` steps of `3x+1` are ascents, and `n≡+1 (mod 2^s)` iff the first `s−1`
-steps of `3x−1` are ascents (`verify.py` checks `s≤5`, `n<4000`). So `4x±1` and `8x±1` are the one- and
-two-step ascent classes of the two variants, with the sign choosing the variant. The doubly multiplicative
+`n≡−1 (mod 2^s)` iff the `3x+1` orbit begins with at least `s` consecutive ascents (odd steps), and
+`n≡+1 (mod 2^s)` iff the `3x−1` orbit does (`verify.py` checks `s≤5`, `n<4000`). So `4x∓1` and `8x∓1` are the
+classes with at least two, respectively three, initial ascents of `3x±1`; the sign chooses the variant. The doubly multiplicative
 two-clock grids of [CLOCKS](CLOCKS.md) (`σ_2=0, σ=−1`) have amplitude divisible by 8 and anchor +1, so they live
 in `8x+1`: the `3x−1` (negative-integer) ascent class. The C2 line with a free dyadic parameter would need `8x−1`.
 It is absent, although the digit-3 family Ψ (anchor −3) shows the −anchors are not excluded wholesale. Section 4 of CLOCKS realizes the negative-integer Collatz step by **one arc reversal**.

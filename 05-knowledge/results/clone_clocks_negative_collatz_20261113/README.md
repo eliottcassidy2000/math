@@ -10,7 +10,7 @@ three, and the Jacobian / Hadwiger–Nelson / Hodge lanes.
 |---|---|---|
 | `3H+2 = T(2H+1) = 2T(H)+1` on odd `H`. In `r=(H+1)/2` the three C2 digits are `3r−1, 3r, 3r+1`: the `3x−1` (negative-Collatz) step, pure tripling, and the `3x+1` step. The non-multiples of three are exactly the `r` reached by a Collatz-type step. `r(7)=3·1+1`, `r(21)=3·4−1`. | PROVED | [COLLATZ §1](COLLATZ.md) |
 | Dyadic rays shadow Collatz cycles with Størmer exchange rates. In particular `T^{3t}(462·8^t−5)=462·9^t−5` on the Catalan cycle `{−5,−7,−10}`, and the chain's anchors `−5→−13→−37` end on the unbalanced `−17` cycle. | PROVED / VERIFIED | [COLLATZ §2](COLLATZ.md) |
-| `4x±1` and `8x±1` are the one- and two-step ascent classes of `3x∓1`; the sign of the anchor selects the variant. | PROVED (classical) | [COLLATZ §3](COLLATZ.md) |
+| `4x∓1` and `8x∓1` are the classes whose `3x±1` orbits begin with at least two, respectively three, ascents; the sign of the anchor selects the variant. | PROVED (classical) | [COLLATZ §3](COLLATZ.md) |
 | Every transitive-clone ternary clock `H_m=A3^m−σ` has `A` even and **σ odd**, and is constant mod 4. Clone clocks never realize `3H` or `3H+4`. | PROVED | [CLOCKS §1](CLOCKS.md) |
 | Complete census of ternary clocks of every digit through order 9: `0,4,30,206,1309`. Digit-1 amplitudes are `60,100,156,180`, extending Session 197's minimum. Near-transitive order 10 adds `260,300,468,540`. None of 416 digit-1 clocks is ready at its first member. | FINITE-EXACT | [CLOCKS §1](CLOCKS.md) |
 | **Two-clock skeleton Π (9 vertices):** `H(Π[u←M,v←N]) = 60·P_M(3)·P_N(2) + H(M)·H(N)` for all tournaments `M, N`, i.e. `1+60·2^k·3^j`: exact repeatable returns `H↦3H−2` and `H↦2H−1` by one-vertex growth. | PROVED (complete table) | [CLOCKS §3](CLOCKS.md) |
@@ -19,7 +19,7 @@ three, and the Jacobian / Hadwiger–Nelson / Hodge lanes.
 | Two-clock census, 21,047 lines in five universes, complete through order 9: the C2 shape `(σ,σ_2)=(1,0)` never occurs. Pure `v`-sectors occur with digits `−11,−9,−5,−3,−1,3`. The stronger claim pushed earlier, constant term never `−1`, is **refuted**: products such as `(60·3^j−1)(2^k+1)` and one genuine family. | FINITE-EXACT; hypothesis OPEN; stronger form REFUTED | [CLOCKS §5](CLOCKS.md) |
 | **Infinitely many seeded unit lines:** 217 certified unit two-clocks `H=1+(α3^j−σ_2)2^k` give, for every `j`, an explicit ray of the line `1+c·2^s`. That seeds infinitely many odd `c` for HYP-9658 (A), e.g. `c=30·3^j−1`, whose slopes follow the C2 map `c↦3c+2`. All 868 two-clock tuples are certified by complete tables. | PROVED (certificates) | [CLOCKS §6](CLOCKS.md) |
 | A ready repeatable 405 return cannot be a double-cloning family (from the complete 881 fibre). Uniform selective ports reduce to modules. The remaining escapes are non-uniform or numeration-driven cores, or a change of arithmetic. | PROVED corollary + route map | [RAY405](RAY405.md) |
-| 2–3 axis, planar Jacobian shears, Hodge bidegrees, Hadwiger–Nelson shape | typed bridges; analogies flagged | [BRIDGES](BRIDGES.md) |
+| 2–3 axis, planar Jacobian shears, Hodge bidegrees, Hadwiger–Nelson shape, and the old rational/irrational, odd/even, positive/negative, addition/multiplication dualities | typed bridges; analogies flagged | [BRIDGES](BRIDGES.md) |
 
 **What this changes.** The question "can `3H+2` be repeated exactly by a physical move?" has a sharp answer in
 the clone language. One clock can do it: Session 197's `60·3^m−1`, which is never ready in the screened range.
@@ -51,18 +51,24 @@ MODULE_RETURN, the same-night H17 exact-repair packet, HYP-9339 (2–3 axis), an
 here are its ternary-by-dyadic continuation. Concurrent changing-core, growing-t, ternary-grammar and surplus work is
 mapped in [INCOMING](INCOMING.md).
 
-Concept board at close: exact clone clocks / anchor sign / unit coefficient `c_{11}` / Collatz exchange rates /
-readiness. The decisive next test is a single two-module table with `c_{11}=−1` and ternary shape (it refutes
-the hypothesis), or a proof that ternary shape forces `c_{11}≠−1`. META-PATTERNS card used: "type every analogy
-and implication"; no new card is promoted from one session.
+Concept board at close: exact clone clocks / sector digits `(σ,σ_2)` / Collatz exchange rates / tail-law
+offsets / readiness. The decisive next test is a single two-module table with `(σ,σ_2)=(1,0)`. It would refute
+the C2-line exclusion and give an exactly repeatable `3H+2` with a free dyadic parameter. The alternative is a proof
+that a pure `v`-sector forbids digit 1; the tail-law screen of CLOCKS §7 (pure responses always carry offset
+digit 3) shows where such a proof should look. META-PATTERNS card used: "type every analogy and implication". A
+candidate lesson for the cards, from the refuted constant-term hypothesis: run the closure operations a
+coefficient respects (products, converse) before proposing an obstruction for it. It is not promoted from one
+session.
 
 ## Reproduce
 
-    python3 -B 05-knowledge/results/clone_clocks_negative_collatz_20261113/verify.py        # ~2 s
+    python3 -B 05-knowledge/results/clone_clocks_negative_collatz_20261113/verify.py        # ~30 s, needs cc
     python3 -O -B 05-knowledge/results/clone_clocks_negative_collatz_20261113/verify.py
     python3 -B 05-knowledge/results/clone_clocks_negative_collatz_20261113/verify.py --full # + order-10 readiness
 
 Census regeneration (C, `gentourng` from nauty): `c/ternscan.c` and `c/ternscan_all.c` read `gentourng -q n` on
-stdin; `c/backscan.c n maxb part nparts`; `c/extscan.c e`. Outputs are in `data/` (gzip). Exploratory scripts
+stdin; `c/backscan.c n maxb part nparts`; `c/extscan.c e`; `c/extone.c part nparts` reads skeleton lines
+(`n u v rows…`) and extends each by one vertex; `c/certify.c` computes complete tables. Outputs are in `data/`
+(gzip). Tail-law screens: `python3 -B scripts/tail_c2_multi.py 3` and `scripts/tail_constants.py` (about 45 s each). Exploratory scripts
 that found nothing are kept with their stated scope: `scripts/ternary_funnel_search.py`,
 `scripts/twoclock_search.py`, `scripts/eig3.py`, `scripts/atlas.py`.

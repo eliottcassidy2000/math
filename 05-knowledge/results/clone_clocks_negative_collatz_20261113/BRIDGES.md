@@ -53,3 +53,27 @@ into reusable exact-target repairs and a closed recursion `C(q,s)` with dyadic f
 is sparse, of order `O(√X)`. The Π family is a second closed recursion, simpler and with a two-dimensional grid of
 exact returns, but on the +1 anchor. Both packets land on the same boundary: exact reuse is achievable, while
 target supply at the C2 anchor remains open.
+
+## 6. The old dualities (rational/irrational, odd/even, positive/negative, addition/multiplication)
+
+[The rational/irrational reflection](../../../07-reflections/the-rational-irrational-duality.md) (corrected
+2026-11-13) frames proofs as a bounded census plus a sweep that certifies the census is non-vacuous. Each
+duality meets this packet in a checkable place.
+
+* **Finite certificate ⇒ all sizes (the census/sweep hinge).** A finite visit table, computed once with
+  rigorous caps, certifies a two-clock for every `(j,k)` and every pair of modules (CLOCKS §2, §6). The finite
+  object is what is verified; the exponential-polynomial identity is the sweep. The refuted constant-term
+  hypothesis (CLOCKS §5) is the failure mode the reflection warns about: a census boundary was read as a law.
+* **Odd/even.** Rédei oddness forces every clone clock to have even amplitude and an odd digit (Theorem 2 of
+  CLOCKS). The even C2 digits `0, 2` (`3H`, `3H+4`) are exactly the ones clone clocks cannot produce.
+* **Positive/negative.** The +1 and −1 anchors are exchanged by `x=−H`. The certified family Π runs the
+  negative-integer Collatz moves physically, with one arc for the odd step (CLOCKS §4). The C2 line is the
+  positive-side mirror, and it is the one still missing.
+* **Addition/multiplication.** Ordinal sums multiply counts, so constant terms multiply too. This is what
+  refuted the additive "constant never −1" reading: `(60·3^j−1)(2^k+1)` has constant −1 for a purely
+  multiplicative reason. The surviving C2-line exclusion is stable under products, because odd digits make
+  every product carry a nonzero pure-`2^k` term.
+* **Rational/irrational.** Each clock family converges p-adically to a rational point, its anchor: dyadic rays
+  2-adically to their offset, ternary clocks 3-adically to `−σ`. The irrational slope `log2/log3` governs only
+  how the `(j,k)` lattice of values spreads on the log scale. Such families always have density zero, which is
+  why they seed lines (CLOCKS §6) and do not cover the spectrum.

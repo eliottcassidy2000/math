@@ -175,3 +175,26 @@ already covers every odd `c≤4097` (HYP-9658 (B), PROVED). Families such as `30
 `130·3^j−1`, `390·3^j−σ_2` and `60·3^j` (odd part `15·3^j`) continue past every finite census bound.
 This is progress on HYP-9658 (A) for explicit infinite sets of `c`, not for all `c`. The families and their
 skeleton rows are in `data/unit_two_clock_families.json`.
+
+## 7. The tail-law route to the C2 line lands on digit 3 (FINITE-EXACT)
+
+The inherited tail law ([THM-5126 (A)](../../../01-canon/theorems/THM-5126-unit-offset-rays-two-adic-lines-isolation-of-7-and-21-extension-mean-law.md))
+gives a direct way to put a dyadic clock on a digit-1 clock `B=S[u←TT_j]`. Add a root `r` beating exactly a set
+`O⊆B`, and a chain of `k` vertices beaten by all of `B` and beating only `r`. Then
+
+    H = c_0 + M·2^k,   c_0 = H(B) − Σ_{e<f in O} W_ef,   M = Σ_{y in O} U_B(y).
+
+The C2 line needs `c_0=A'3^j−1` together with a pure response `M=α'3^j`. `scripts/tail_c2_multi.py` and
+`scripts/tail_constants.py` screen all 416 digit-1 clocks (complete through order 9 plus the near-transitive
+order-10 clocks) and every `O` with `|O|≤3`, at `j=1,2,3`:
+
+* `|O|=1` never gives a pure response. The ternary-shaped responses have constants `−1` or `−2`.
+* every pure response, 155 tails, occurs for `|O|=2`, and **every one has offset digit exactly 3**. These are the Ψ shape
+  of §3b; Ψ itself is the tail `O={2,6}` over `S_60`.
+* the observed pairs (offset constant, response constant) are `(−1,−2), (−1,−1), (−3,0), (1,−3), (−3,−2), (−3,−1)`.
+  The C2 target `(−1,0)` is absent.
+
+So in this tail family a pure response forces the offset constant to `−3`, i.e. a `v`-once digit of 3, never 1.
+That is the C2-line exclusion seen through the tail law. Why the constant is pinned at `−3` is not explained
+here; an identity relating the single-bin coefficients of `W_ef` and `U_e+U_f` over a digit-1 clock would explain
+it, and none is proved.
