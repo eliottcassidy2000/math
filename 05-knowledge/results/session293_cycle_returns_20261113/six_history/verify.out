@@ -1,0 +1,8 @@
+n 1 order6 0 primitive_sixth_mode 0
+n 2 order6 0 primitive_sixth_mode 0
+n 3 order6 0 primitive_sixth_mode 0
+n 4 order6 0 primitive_sixth_mode 0
+n 5 order6 20 primitive_sixth_mode 0
+n 6 order6 240 primitive_sixth_mode 120
+PASS: inherited quadratic3 versus new Möbius6; exact Sym² mass return; minimal positive mode controls
+PASS: balanced nonnegative token exchanges preserve full three-mode observer

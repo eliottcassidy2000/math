@@ -1,0 +1,2 @@
+{'checks': 154, 'permutation_counts_n_order6_primitive6': [[1, 0, 0], [2, 0, 0], [3, 0, 0], [4, 0, 0], [5, 20, 0], [6, 240, 120]], 'status': 'PASS'}
+{'total_checks_including_cyclotomic': 2199, 'q_range': [2, 30], 'status': 'PASS'}
