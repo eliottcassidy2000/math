@@ -196,5 +196,6 @@ order-10 clocks) and every `O` with `|O|≤3`, at `j=1,2,3`:
 
 So in this tail family a pure response forces the offset constant to `−3`, i.e. a `v`-once digit of 3, never 1.
 That is the C2-line exclusion seen through the tail law. Why the constant is pinned at `−3` is not explained
-here; an identity relating the single-bin coefficients of `W_ef` and `U_e+U_f` over a digit-1 clock would explain
-it, and none is proved.
+here. No universal linear identity among the single-bin coefficients of `H(B)`, `U_e`, `U_f` and `W_ef` exists:
+`scripts/single_bin_identity.py` fits one on 40 random rooted tournaments with nonzero residual. Any explanation must
+use the clock structure of `B`.
