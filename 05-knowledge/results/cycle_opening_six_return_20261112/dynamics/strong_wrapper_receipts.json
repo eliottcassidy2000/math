@@ -1,0 +1,169 @@
+{
+  "equal_order_equal_H_hostile": [
+    {
+      "order": 6,
+      "H": 9,
+      "P2": 144,
+      "wrapper_H": 153
+    },
+    {
+      "order": 6,
+      "H": 9,
+      "P2": 168,
+      "wrapper_H": 177
+    }
+  ],
+  "status": "PASS",
+  "literal_full_and_root_subset_DP_controls": [
+    {
+      "coordinates": [
+        2,
+        1
+      ],
+      "blocks": [
+        "A1",
+        "A2",
+        "B1",
+        "B2"
+      ],
+      "vertices": 16,
+      "full_H": 147681,
+      "root": 1,
+      "sole_in_neighbor": 0,
+      "root_start_H": 225,
+      "root_deletion_H": 225,
+      "defect": 0
+    },
+    {
+      "coordinates": [
+        1,
+        2
+      ],
+      "blocks": [
+        "A1",
+        "B1",
+        "B2",
+        "A2"
+      ],
+      "vertices": 16,
+      "full_H": 147681,
+      "root": 1,
+      "sole_in_neighbor": 0,
+      "root_start_H": 225,
+      "root_deletion_H": 225,
+      "defect": 0
+    },
+    {
+      "coordinates": [
+        0,
+        2
+      ],
+      "blocks": [
+        "B1",
+        "B2",
+        "A1",
+        "A2"
+      ],
+      "vertices": 16,
+      "full_H": 147681,
+      "root": 1,
+      "sole_in_neighbor": 0,
+      "root_start_H": 225,
+      "root_deletion_H": 225,
+      "defect": 0
+    },
+    {
+      "coordinates": [
+        0,
+        1
+      ],
+      "blocks": [
+        "B1",
+        "A1",
+        "A2",
+        "B2"
+      ],
+      "vertices": 16,
+      "full_H": 147681,
+      "root": 1,
+      "sole_in_neighbor": 0,
+      "root_start_H": 225,
+      "root_deletion_H": 225,
+      "defect": 0
+    },
+    {
+      "coordinates": [
+        1,
+        0
+      ],
+      "blocks": [
+        "A1",
+        "A2",
+        "B1",
+        "B2"
+      ],
+      "vertices": 16,
+      "full_H": 147681,
+      "root": 1,
+      "sole_in_neighbor": 0,
+      "root_start_H": 225,
+      "root_deletion_H": 225,
+      "defect": 0
+    },
+    {
+      "coordinates": [
+        2,
+        0
+      ],
+      "blocks": [
+        "A1",
+        "A2",
+        "B1",
+        "B2"
+      ],
+      "vertices": 16,
+      "full_H": 147681,
+      "root": 1,
+      "sole_in_neighbor": 0,
+      "root_start_H": 225,
+      "root_deletion_H": 225,
+      "defect": 0
+    }
+  ],
+  "H5_H17_wrapper": {
+    "core_counts": [
+      5,
+      17
+    ],
+    "P2_values": [
+      32,
+      224
+    ],
+    "vertices": 22,
+    "full_H_by_proved_cover_identity": 51387449,
+    "factorization": [
+      29,
+      1771981
+    ],
+    "root_start_and_deletion": 7225,
+    "defect": 0
+  },
+  "Fermat_unit_branch": [
+    {
+      "m": 1,
+      "H": 17
+    },
+    {
+      "m": 2,
+      "H": 257
+    },
+    {
+      "m": 4,
+      "H": 65537
+    },
+    {
+      "m": 8,
+      "H": 4294967297
+    }
+  ]
+}

@@ -1,0 +1,983 @@
+{
+  "status": "FINITE-EXACT radius-three repair scope plus exact module-polynomial audit",
+  "audit": [
+    {
+      "port": 0,
+      "H": {
+        "1": 7,
+        "2": 45
+      },
+      "defect": {
+        "1": 1,
+        "2": 6
+      },
+      "H_runs": {
+        "1": 97,
+        "2": 45
+      },
+      "defect_runs": {
+        "1": 13,
+        "2": 6
+      }
+    },
+    {
+      "port": 4,
+      "H": {
+        "1": 7,
+        "2": 45
+      },
+      "defect": {
+        "1": 1
+      },
+      "H_runs": {
+        "1": 97,
+        "2": 45
+      },
+      "defect_runs": {
+        "1": 1
+      }
+    }
+  ],
+  "literal": [
+    {
+      "k": 1,
+      "port": 0,
+      "state": [
+        52,
+        13,
+        45
+      ]
+    },
+    {
+      "k": 1,
+      "port": 4,
+      "state": [
+        52,
+        1,
+        45
+      ]
+    },
+    {
+      "k": 2,
+      "port": 0,
+      "state": [
+        100,
+        25,
+        87
+      ]
+    },
+    {
+      "k": 2,
+      "port": 4,
+      "state": [
+        100,
+        1,
+        87
+      ]
+    },
+    {
+      "k": 3,
+      "port": 0,
+      "state": [
+        196,
+        49,
+        171
+      ]
+    },
+    {
+      "k": 3,
+      "port": 4,
+      "state": [
+        196,
+        1,
+        171
+      ]
+    },
+    {
+      "k": 4,
+      "port": 0,
+      "state": [
+        388,
+        97,
+        339
+      ]
+    },
+    {
+      "k": 4,
+      "port": 4,
+      "state": [
+        388,
+        1,
+        339
+      ]
+    },
+    {
+      "k": 5,
+      "port": 0,
+      "state": [
+        772,
+        193,
+        675
+      ]
+    },
+    {
+      "k": 5,
+      "port": 4,
+      "state": [
+        772,
+        1,
+        675
+      ]
+    }
+  ],
+  "scope": "all parent arc subsets of radius <=3 in X=P+z+x (9 vertices), every new sole predecessor, child total H=293, defect<=2; base module vertex1",
+  "stats": {
+    "0": 1,
+    "1": 36,
+    "2": 630,
+    "3": 7140
+  },
+  "hits": [
+    {
+      "radius": 1,
+      "flips": [
+        [
+          7,
+          8
+        ]
+      ],
+      "port": 7,
+      "defect": 0,
+      "H_coeff": {
+        "1": 23,
+        "2": 135
+      },
+      "defect_coeff": {},
+      "all_height_H": true,
+      "rows": [
+        78,
+        12,
+        24,
+        16,
+        163,
+        79,
+        30,
+        623,
+        255,
+        383
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 2,
+      "flips": [
+        [
+          0,
+          5
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "port": 7,
+      "defect": 0,
+      "H_coeff": {
+        "1": 23,
+        "2": 135
+      },
+      "defect_coeff": {},
+      "all_height_H": true,
+      "rows": [
+        110,
+        12,
+        24,
+        16,
+        163,
+        78,
+        30,
+        623,
+        255,
+        383
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 2,
+      "flips": [
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "port": 7,
+      "defect": 0,
+      "H_coeff": {
+        "1": 23,
+        "2": 135
+      },
+      "defect_coeff": {},
+      "all_height_H": true,
+      "rows": [
+        78,
+        12,
+        16,
+        20,
+        163,
+        79,
+        30,
+        623,
+        255,
+        383
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 2,
+      "flips": [
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "port": 8,
+      "defect": 0,
+      "H_coeff": {
+        "1": 23,
+        "2": 135
+      },
+      "defect_coeff": {},
+      "all_height_H": true,
+      "rows": [
+        78,
+        12,
+        24,
+        16,
+        291,
+        79,
+        30,
+        383,
+        623,
+        255
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 2,
+      "flips": [
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "port": 5,
+      "defect": 0,
+      "H_coeff": {
+        "1": 23,
+        "2": 135
+      },
+      "defect_coeff": {},
+      "all_height_H": true,
+      "rows": [
+        78,
+        12,
+        24,
+        16,
+        163,
+        719,
+        30,
+        79,
+        255,
+        479
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "port": 7,
+      "defect": 0,
+      "H_coeff": {
+        "1": -1,
+        "2": 147
+      },
+      "defect_coeff": {},
+      "all_height_H": false,
+      "rows": [
+        94,
+        76,
+        24,
+        16,
+        162,
+        79,
+        28,
+        623,
+        255,
+        383
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "port": 3,
+      "defect": 0,
+      "H_coeff": {
+        "1": -97,
+        "2": 99,
+        "3": 64
+      },
+      "defect_coeff": {},
+      "all_height_H": false,
+      "rows": [
+        94,
+        12,
+        24,
+        528,
+        2,
+        95,
+        30,
+        383,
+        127,
+        503
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "port": 6,
+      "defect": 0,
+      "H_coeff": {
+        "1": 5,
+        "2": 144
+      },
+      "defect_coeff": {},
+      "all_height_H": false,
+      "rows": [
+        94,
+        12,
+        24,
+        16,
+        34,
+        79,
+        798,
+        383,
+        63,
+        447
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "port": 0,
+      "defect": 0,
+      "H_coeff": {
+        "1": 23,
+        "2": 135
+      },
+      "defect_coeff": {},
+      "all_height_H": true,
+      "rows": [
+        750,
+        12,
+        24,
+        16,
+        163,
+        78,
+        30,
+        110,
+        255,
+        510
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "port": 7,
+      "defect": 0,
+      "H_coeff": {
+        "1": 23,
+        "2": 135
+      },
+      "defect_coeff": {},
+      "all_height_H": true,
+      "rows": [
+        110,
+        12,
+        16,
+        20,
+        163,
+        78,
+        30,
+        623,
+        255,
+        383
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          0,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "port": 8,
+      "defect": 0,
+      "H_coeff": {
+        "1": 23,
+        "2": 135
+      },
+      "defect_coeff": {},
+      "all_height_H": true,
+      "rows": [
+        110,
+        12,
+        24,
+        16,
+        291,
+        78,
+        30,
+        383,
+        623,
+        255
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "port": 7,
+      "defect": 0,
+      "H_coeff": {
+        "1": -19,
+        "2": 156
+      },
+      "defect_coeff": {},
+      "all_height_H": false,
+      "rows": [
+        14,
+        28,
+        24,
+        16,
+        161,
+        79,
+        31,
+        623,
+        255,
+        383
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          0,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "port": 2,
+      "defect": 1,
+      "H_coeff": {
+        "1": -3,
+        "2": 148
+      },
+      "defect_coeff": {
+        "1": 1
+      },
+      "all_height_H": false,
+      "rows": [
+        14,
+        12,
+        536,
+        0,
+        171,
+        15,
+        63,
+        367,
+        127,
+        507
+      ],
+      "strong": false,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "port": 5,
+      "defect": 0,
+      "H_coeff": {
+        "1": 23,
+        "2": 135
+      },
+      "defect_coeff": {},
+      "all_height_H": true,
+      "rows": [
+        206,
+        12,
+        24,
+        16,
+        163,
+        719,
+        30,
+        78,
+        255,
+        479
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "port": 2,
+      "defect": 2,
+      "H_coeff": {
+        "1": 293
+      },
+      "defect_coeff": {
+        "1": 2
+      },
+      "all_height_H": false,
+      "rows": [
+        78,
+        8,
+        538,
+        0,
+        171,
+        207,
+        30,
+        335,
+        127,
+        507
+      ],
+      "strong": false,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "port": 8,
+      "defect": 0,
+      "H_coeff": {
+        "1": 23,
+        "2": 135
+      },
+      "defect_coeff": {},
+      "all_height_H": true,
+      "rows": [
+        78,
+        12,
+        16,
+        20,
+        291,
+        79,
+        30,
+        383,
+        623,
+        255
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "port": 5,
+      "defect": 0,
+      "H_coeff": {
+        "1": 23,
+        "2": 135
+      },
+      "defect_coeff": {},
+      "all_height_H": true,
+      "rows": [
+        78,
+        12,
+        16,
+        20,
+        163,
+        719,
+        30,
+        79,
+        255,
+        479
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "port": 0,
+      "defect": 0,
+      "H_coeff": {
+        "1": 13,
+        "2": 140
+      },
+      "defect_coeff": {},
+      "all_height_H": false,
+      "rows": [
+        590,
+        12,
+        88,
+        0,
+        171,
+        79,
+        26,
+        111,
+        255,
+        510
+      ],
+      "strong": false,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "port": 5,
+      "defect": 0,
+      "H_coeff": {
+        "1": 7,
+        "2": 143
+      },
+      "defect_coeff": {},
+      "all_height_H": false,
+      "rows": [
+        78,
+        12,
+        280,
+        0,
+        43,
+        591,
+        30,
+        383,
+        123,
+        479
+      ],
+      "strong": false,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "port": 2,
+      "defect": 1,
+      "H_coeff": {
+        "1": -3,
+        "2": 148
+      },
+      "defect_coeff": {
+        "1": 1
+      },
+      "all_height_H": false,
+      "rows": [
+        78,
+        12,
+        536,
+        0,
+        203,
+        95,
+        14,
+        367,
+        127,
+        507
+      ],
+      "strong": false,
+      "module_port_compatible": true
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "port": 1,
+      "defect": 0,
+      "H_coeff": {
+        "1": -81,
+        "2": -113,
+        "3": 200
+      },
+      "defect_coeff": {},
+      "all_height_H": false,
+      "rows": [
+        78,
+        524,
+        24,
+        0,
+        107,
+        79,
+        14,
+        383,
+        127,
+        509
+      ],
+      "strong": false,
+      "module_port_compatible": false
+    },
+    {
+      "radius": 3,
+      "flips": [
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "port": 5,
+      "defect": 0,
+      "H_coeff": {
+        "1": 23,
+        "2": 135
+      },
+      "defect_coeff": {},
+      "all_height_H": true,
+      "rows": [
+        78,
+        12,
+        24,
+        16,
+        291,
+        847,
+        30,
+        383,
+        79,
+        479
+      ],
+      "strong": true,
+      "module_port_compatible": true
+    }
+  ]
+}

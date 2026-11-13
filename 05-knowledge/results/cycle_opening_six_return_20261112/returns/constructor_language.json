@@ -1,0 +1,505 @@
+{
+  "status": "VERIFIED exact symbolic matrices plus independent literal HP checks",
+  "interface_checks": 100,
+  "controls": [
+    {
+      "rows": [
+        2,
+        0
+      ],
+      "root": 1,
+      "input_state": [
+        0,
+        1,
+        1
+      ],
+      "q": 3,
+      "H": 153,
+      "left_state": [
+        72,
+        27,
+        81
+      ],
+      "right_state": [
+        66,
+        36,
+        87
+      ],
+      "changed_arcs": [
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "strong_input": false,
+      "strong_outputs": [
+        true,
+        true
+      ]
+    },
+    {
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "root": 0,
+      "input_state": [
+        2,
+        0,
+        1
+      ],
+      "q": 5,
+      "H": 255,
+      "left_state": [
+        120,
+        45,
+        135
+      ],
+      "right_state": [
+        110,
+        60,
+        145
+      ],
+      "changed_arcs": [
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "strong_input": true,
+      "strong_outputs": [
+        true,
+        true
+      ]
+    },
+    {
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "root": 1,
+      "input_state": [
+        2,
+        0,
+        1
+      ],
+      "q": 5,
+      "H": 255,
+      "left_state": [
+        120,
+        45,
+        135
+      ],
+      "right_state": [
+        110,
+        60,
+        145
+      ],
+      "changed_arcs": [
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "strong_input": true,
+      "strong_outputs": [
+        true,
+        true
+      ]
+    },
+    {
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "root": 2,
+      "input_state": [
+        2,
+        0,
+        1
+      ],
+      "q": 5,
+      "H": 255,
+      "left_state": [
+        120,
+        45,
+        135
+      ],
+      "right_state": [
+        110,
+        60,
+        145
+      ],
+      "changed_arcs": [
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "strong_input": true,
+      "strong_outputs": [
+        true,
+        true
+      ]
+    },
+    {
+      "rows": [
+        6,
+        4,
+        0
+      ],
+      "root": 1,
+      "input_state": [
+        0,
+        1,
+        1
+      ],
+      "q": 3,
+      "H": 153,
+      "left_state": [
+        72,
+        27,
+        81
+      ],
+      "right_state": [
+        66,
+        36,
+        87
+      ],
+      "changed_arcs": [
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "strong_input": false,
+      "strong_outputs": [
+        false,
+        false
+      ]
+    },
+    {
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "root": 3,
+      "input_state": [
+        6,
+        0,
+        3
+      ],
+      "q": 15,
+      "H": 765,
+      "left_state": [
+        360,
+        135,
+        405
+      ],
+      "right_state": [
+        330,
+        180,
+        435
+      ],
+      "changed_arcs": [
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "strong_input": true,
+      "strong_outputs": [
+        true,
+        true
+      ]
+    },
+    {
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "root": 4,
+      "input_state": [
+        4,
+        2,
+        5
+      ],
+      "q": 17,
+      "H": 867,
+      "left_state": [
+        408,
+        153,
+        459
+      ],
+      "right_state": [
+        374,
+        204,
+        493
+      ],
+      "changed_arcs": [
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "strong_input": true,
+      "strong_outputs": [
+        true,
+        true
+      ]
+    },
+    {
+      "rows": [
+        6,
+        4,
+        8,
+        19,
+        7
+      ],
+      "root": 3,
+      "input_state": [
+        8,
+        0,
+        1
+      ],
+      "q": 17,
+      "H": 867,
+      "left_state": [
+        408,
+        153,
+        459
+      ],
+      "right_state": [
+        374,
+        204,
+        493
+      ],
+      "changed_arcs": [
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "strong_input": true,
+      "strong_outputs": [
+        true,
+        true
+      ]
+    }
+  ],
+  "A": [
+    [
+      48,
+      48,
+      24
+    ],
+    [
+      18,
+      18,
+      9
+    ],
+    [
+      54,
+      54,
+      27
+    ]
+  ],
+  "B": [
+    [
+      44,
+      44,
+      22
+    ],
+    [
+      24,
+      24,
+      12
+    ],
+    [
+      58,
+      58,
+      29
+    ]
+  ],
+  "census": [
+    {
+      "cost": 1,
+      "words": 1,
+      "H_rows": 1,
+      "collisions": []
+    },
+    {
+      "cost": 2,
+      "words": 2,
+      "H_rows": 2,
+      "collisions": []
+    },
+    {
+      "cost": 3,
+      "words": 3,
+      "H_rows": 3,
+      "collisions": []
+    },
+    {
+      "cost": 4,
+      "words": 5,
+      "H_rows": 5,
+      "collisions": []
+    },
+    {
+      "cost": 5,
+      "words": 8,
+      "H_rows": 8,
+      "collisions": []
+    },
+    {
+      "cost": 6,
+      "words": 13,
+      "H_rows": 13,
+      "collisions": []
+    },
+    {
+      "cost": 7,
+      "words": 21,
+      "H_rows": 20,
+      "collisions": [
+        {
+          "words": [
+            "TLTLL",
+            "TLLLT"
+          ],
+          "same_state": false,
+          "different_defect": false
+        }
+      ]
+    },
+    {
+      "cost": 8,
+      "words": 34,
+      "H_rows": 32,
+      "collisions": [
+        {
+          "words": [
+            "TTTLL",
+            "TTLTL"
+          ],
+          "same_state": false,
+          "different_defect": true
+        },
+        {
+          "words": [
+            "LTLTLL",
+            "LTLLLT"
+          ],
+          "same_state": false,
+          "different_defect": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PROVED via exact two-block run compiler",
+  "description": "Q of internal inflated port minus Q of existing latest port; variables are left/right clone counts, each allowed zero",
+  "delta_onto_coefficients": {
+    "(0, 0)": 1026,
+    "(0, 1)": 1948,
+    "(0, 2)": 903,
+    "(1, 0)": 3122,
+    "(1, 1)": 5988,
+    "(1, 2)": 2847,
+    "(2, 0)": 3134,
+    "(2, 1)": 6116,
+    "(2, 2)": 2982,
+    "(3, 0)": 1038,
+    "(3, 1)": 2076,
+    "(3, 2)": 1038
+  }
+}

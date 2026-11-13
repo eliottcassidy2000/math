@@ -1,0 +1,172 @@
+{
+  "status": "FINITE-EXACT bounded target-module search with exact all-height polynomial certificates",
+  "scope": "every positive-defect<=2 target found at radius<=4, every one-vertex transitive module other than final root or its sole predecessor",
+  "module_checks": 168,
+  "hits": [
+    {
+      "base": {
+        "radius": 4,
+        "flips": [
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "port": 6,
+        "defect": 1,
+        "H_coeff": {
+          "1": 29,
+          "2": 132
+        },
+        "defect_coeff": {
+          "1": 1
+        },
+        "all_height_H": false,
+        "rows": [
+          14,
+          12,
+          8,
+          64,
+          175,
+          79,
+          535,
+          367,
+          127,
+          447
+        ],
+        "strong": true,
+        "module_port_compatible": true
+      },
+      "module": 5,
+      "H": {
+        "1": 23,
+        "2": 135
+      },
+      "defect": {
+        "1": 1
+      }
+    },
+    {
+      "base": {
+        "radius": 4,
+        "flips": [
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "port": 4,
+        "defect": 1,
+        "H_coeff": {
+          "1": 29,
+          "2": 132
+        },
+        "defect_coeff": {
+          "1": 1
+        },
+        "all_height_H": false,
+        "rows": [
+          14,
+          12,
+          8,
+          16,
+          647,
+          223,
+          31,
+          335,
+          127,
+          495
+        ],
+        "strong": true,
+        "module_port_compatible": true
+      },
+      "module": 6,
+      "H": {
+        "1": 23,
+        "2": 135
+      },
+      "defect": {
+        "1": 1
+      }
+    },
+    {
+      "base": {
+        "radius": 4,
+        "flips": [
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "port": 4,
+        "defect": 1,
+        "H_coeff": {
+          "1": 29,
+          "2": 132
+        },
+        "defect_coeff": {
+          "1": 1
+        },
+        "all_height_H": false,
+        "rows": [
+          14,
+          12,
+          8,
+          16,
+          551,
+          207,
+          31,
+          351,
+          127,
+          495
+        ],
+        "strong": true,
+        "module_port_compatible": true
+      },
+      "module": 6,
+      "H": {
+        "1": 23,
+        "2": 135
+      },
+      "defect": {
+        "1": 1
+      }
+    }
+  ]
+}

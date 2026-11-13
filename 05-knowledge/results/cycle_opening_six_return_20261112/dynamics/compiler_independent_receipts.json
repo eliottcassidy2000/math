@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "method": "independent Fraction elimination and literal permutation/weak-cut enumeration; no imported compiler code",
+  "hankel_det": 552960,
+  "affine_difference_det": 811008,
+  "literal_controls": [
+    {
+      "word": "",
+      "order": 3,
+      "state": [
+        3,
+        1,
+        3,
+        12,
+        3,
+        7
+      ],
+      "ready_full_H": 5
+    },
+    {
+      "word": "B",
+      "order": 5,
+      "state": [
+        9,
+        3,
+        9,
+        84,
+        21,
+        45
+      ],
+      "ready_full_H": 29
+    },
+    {
+      "word": "C",
+      "order": 6,
+      "state": [
+        17,
+        3,
+        21,
+        224,
+        33,
+        147
+      ],
+      "ready_full_H": 49
+    },
+    {
+      "word": "D",
+      "order": 6,
+      "state": [
+        15,
+        3,
+        15,
+        216,
+        45,
+        111
+      ],
+      "ready_full_H": 59
+    },
+    {
+      "word": "E",
+      "order": 4,
+      "state": [
+        5,
+        2,
+        6,
+        32,
+        9,
+        19
+      ],
+      "ready_full_H": 13
+    },
+    {
+      "word": "EB",
+      "order": 6,
+      "state": [
+        17,
+        5,
+        17,
+        224,
+        55,
+        121
+      ],
+      "ready_full_H": 71
+    },
+    {
+      "word": "EE",
+      "order": 5,
+      "state": [
+        9,
+        3,
+        11,
+        84,
+        23,
+        51
+      ],
+      "ready_full_H": 31
+    }
+  ]
+}

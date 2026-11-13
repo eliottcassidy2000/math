@@ -1,0 +1,478 @@
+{
+  "status": "VERIFIED exact literal and permutation controls",
+  "universe": {
+    "selected_k": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "independent_permutation_parent_k": [
+      1,
+      2
+    ],
+    "all_neutral_charts_k2": 225,
+    "two_block_left_right_grid": "0..3 each, including empty blocks"
+  },
+  "selected_family": [
+    {
+      "k": 1,
+      "parent_H": 45,
+      "children": [
+        {
+          "H": 97,
+          "defect": 13,
+          "start": 32
+        },
+        {
+          "H": 97,
+          "defect": 1,
+          "start": 44
+        }
+      ]
+    },
+    {
+      "k": 2,
+      "parent_H": 87,
+      "children": [
+        {
+          "H": 187,
+          "defect": 25,
+          "start": 62
+        },
+        {
+          "H": 187,
+          "defect": 1,
+          "start": 86
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "parent_H": 171,
+      "children": [
+        {
+          "H": 367,
+          "defect": 49,
+          "start": 122
+        },
+        {
+          "H": 367,
+          "defect": 1,
+          "start": 170
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "parent_H": 339,
+      "children": [
+        {
+          "H": 727,
+          "defect": 97,
+          "start": 242
+        },
+        {
+          "H": 727,
+          "defect": 1,
+          "start": 338
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "parent_H": 675,
+      "children": [
+        {
+          "H": 1447,
+          "defect": 193,
+          "start": 482
+        },
+        {
+          "H": 1447,
+          "defect": 1,
+          "start": 674
+        }
+      ]
+    },
+    {
+      "k": 6,
+      "parent_H": 1347,
+      "children": [
+        {
+          "H": 2887,
+          "defect": 385,
+          "start": 962
+        },
+        {
+          "H": 2887,
+          "defect": 1,
+          "start": 1346
+        }
+      ]
+    },
+    {
+      "k": 7,
+      "parent_H": 2691,
+      "children": [
+        {
+          "H": 5767,
+          "defect": 769,
+          "start": 1922
+        },
+        {
+          "H": 5767,
+          "defect": 1,
+          "start": 2690
+        }
+      ]
+    },
+    {
+      "k": 8,
+      "parent_H": 5379,
+      "children": [
+        {
+          "H": 11527,
+          "defect": 1537,
+          "start": 3842
+        },
+        {
+          "H": 11527,
+          "defect": 1,
+          "start": 5378
+        }
+      ]
+    }
+  ],
+  "arbitrary_module_controls": [
+    {
+      "module": "C3",
+      "H_module": 3,
+      "P_module_2": 12,
+      "children": [
+        {
+          "H": 561,
+          "defect": 75
+        },
+        {
+          "H": 561,
+          "defect": 3
+        }
+      ]
+    },
+    {
+      "module": "C4",
+      "H_module": 5,
+      "P_module_2": 32,
+      "children": [
+        {
+          "H": 1475,
+          "defect": 197
+        },
+        {
+          "H": 1475,
+          "defect": 5
+        }
+      ]
+    },
+    {
+      "module": "five_core",
+      "H_module": 9,
+      "P_module_2": 84,
+      "children": [
+        {
+          "H": 3843,
+          "defect": 513
+        },
+        {
+          "H": 3843,
+          "defect": 9
+        }
+      ]
+    },
+    {
+      "module": "TT3",
+      "H_module": 1,
+      "P_module_2": 8,
+      "children": [
+        {
+          "H": 367,
+          "defect": 49
+        },
+        {
+          "H": 367,
+          "defect": 1
+        }
+      ]
+    }
+  ],
+  "fixed_port_differences_runs": {
+    "0": [
+      348,
+      156,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "2": [
+      1224,
+      1156,
+      346,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "3": [
+      1638,
+      1372,
+      346,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "4": [
+      68,
+      30,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "5": [
+      176,
+      78,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "6": [
+      524,
+      261,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "7": [
+      -36,
+      -18,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "8": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "internal_port_difference_runs": {
+    "(0, 0)": 1026,
+    "(0, 1)": 1948,
+    "(0, 2)": 903,
+    "(1, 0)": 3122,
+    "(1, 1)": 5988,
+    "(1, 2)": 2847,
+    "(2, 0)": 3134,
+    "(2, 1)": 6116,
+    "(2, 2)": 2982,
+    "(3, 0)": 1038,
+    "(3, 1)": 2076,
+    "(3, 2)": 1038
+  },
+  "internal_port_literal_grid": [
+    {
+      "left": 0,
+      "right": 0,
+      "difference": 1026
+    },
+    {
+      "left": 0,
+      "right": 1,
+      "difference": 1948
+    },
+    {
+      "left": 0,
+      "right": 2,
+      "difference": 3754
+    },
+    {
+      "left": 0,
+      "right": 3,
+      "difference": 7366
+    },
+    {
+      "left": 1,
+      "right": 0,
+      "difference": 3122
+    },
+    {
+      "left": 1,
+      "right": 1,
+      "difference": 5988
+    },
+    {
+      "left": 1,
+      "right": 2,
+      "difference": 11682
+    },
+    {
+      "left": 1,
+      "right": 3,
+      "difference": 23070
+    },
+    {
+      "left": 2,
+      "right": 0,
+      "difference": 9390
+    },
+    {
+      "left": 2,
+      "right": 1,
+      "difference": 18220
+    },
+    {
+      "left": 2,
+      "right": 2,
+      "difference": 35842
+    },
+    {
+      "left": 2,
+      "right": 3,
+      "difference": 71086
+    },
+    {
+      "left": 3,
+      "right": 0,
+      "difference": 28154
+    },
+    {
+      "left": 3,
+      "right": 1,
+      "difference": 55140
+    },
+    {
+      "left": 3,
+      "right": 2,
+      "difference": 109074
+    },
+    {
+      "left": 3,
+      "right": 3,
+      "difference": 216942
+    }
+  ],
+  "source_sha256": {
+    "counts\\inflation_probe.py": "0567acbc38d5b27933d31202ba47b4f5e5b9ea3a596acbbdc5e4b43c2ede5162",
+    "counts\\inflation_probe.json": "b7771005aea9f6597cf4cceefd0e12d8bb3dcacdac412e65130a485cba8bc112",
+    "counts\\two_block.py": "130f30b89e8694a13577c28ac79ee91361f25c344c2c1b7b48a7de244ce171a5",
+    "counts\\audit_counts.py": "db34f8240d6c17b68066b0514c0363a4f95e2dc7a873b04ea726805bf218e4ab",
+    "returns\\port_collisions.json": "96f9d5883a0854331b1818de21c914a3fcafb3aa64f47bdace43a049255b7e92"
+  }
+}

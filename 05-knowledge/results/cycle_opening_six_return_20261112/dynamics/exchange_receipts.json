@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "positive_rational_pairs": 1849,
+  "numerator_and_denominator_bounds": [
+    1,
+    8
+  ],
+  "odd_input_pairs": 256,
+  "period_five_example": [
+    1,
+    1,
+    2,
+    3,
+    2
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "status": "VERIFIED independent physical checks",
+  "macro_sources": [
+    {
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "root": 0,
+      "state": [
+        2,
+        0,
+        1
+      ],
+      "q": 5,
+      "outputs": {
+        "L": [
+          2,
+          1,
+          3
+        ],
+        "T": [
+          4,
+          1,
+          5
+        ],
+        "TTTLL": [
+          120,
+          45,
+          135
+        ],
+        "TTLTL": [
+          110,
+          60,
+          145
+        ]
+      },
+      "changed_arcs": [
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          9
+        ]
+      ]
+    },
+    {
+      "rows": [
+        2,
+        4,
+        25,
+        3,
+        11
+      ],
+      "root": 4,
+      "state": [
+        4,
+        1,
+        5
+      ],
+      "q": 15,
+      "outputs": {
+        "L": [
+          6,
+          4,
+          9
+        ],
+        "T": [
+          10,
+          5,
+          15
+        ],
+        "TTTLL": [
+          360,
+          135,
+          405
+        ],
+        "TTLTL": [
+          330,
+          180,
+          435
+        ]
+      },
+      "changed_arcs": [
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          11
+        ]
+      ]
+    },
+    {
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "root": 4,
+      "state": [
+        4,
+        2,
+        5
+      ],
+      "q": 17,
+      "outputs": {
+        "L": [
+          8,
+          3,
+          9
+        ],
+        "T": [
+          12,
+          5,
+          17
+        ],
+        "TTTLL": [
+          408,
+          153,
+          459
+        ],
+        "TTLTL": [
+          374,
+          204,
+          493
+        ]
+      },
+      "changed_arcs": [
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          11
+        ]
+      ]
+    },
+    {
+      "rows": [
+        78,
+        12,
+        24,
+        16,
+        163,
+        79,
+        30,
+        111
+      ],
+      "root": 7,
+      "state": [
+        52,
+        1,
+        45
+      ],
+      "q": 151,
+      "outputs": {
+        "L": [
+          54,
+          44,
+          97
+        ],
+        "T": [
+          106,
+          45,
+          151
+        ],
+        "TTTLL": [
+          3624,
+          1359,
+          4077
+        ],
+        "TTLTL": [
+          3322,
+          1812,
+          4379
+        ]
+      },
+      "changed_arcs": [
+        [
+          11,
+          13
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ]
+    }
+  ],
+  "universal_ready_targets": [
+    {
+      "module": "TT1",
+      "H_module": 1,
+      "P_module_2": 2,
+      "targets": [
+        {
+          "H": 293,
+          "defect": 1
+        },
+        {
+          "H": 293,
+          "defect": 1
+        }
+      ],
+      "funnel_changed_arcs": 9,
+      "funnel_root_and_predecessor_fixed": true
+    },
+    {
+      "module": "TT2",
+      "H_module": 1,
+      "P_module_2": 4,
+      "targets": [
+        {
+          "H": 563,
+          "defect": 1
+        },
+        {
+          "H": 563,
+          "defect": 1
+        }
+      ],
+      "funnel_changed_arcs": 12,
+      "funnel_root_and_predecessor_fixed": true
+    },
+    {
+      "module": "C3",
+      "H_module": 3,
+      "P_module_2": 12,
+      "targets": [
+        {
+          "H": 1689,
+          "defect": 3
+        },
+        {
+          "H": 1689,
+          "defect": 3
+        }
+      ],
+      "funnel_changed_arcs": 15,
+      "funnel_root_and_predecessor_fixed": true
+    },
+    {
+      "module": "C4",
+      "H_module": 5,
+      "P_module_2": 32,
+      "targets": [
+        {
+          "H": 4435,
+          "defect": 5
+        },
+        {
+          "H": 4435,
+          "defect": 5
+        }
+      ],
+      "funnel_changed_arcs": 18,
+      "funnel_root_and_predecessor_fixed": true
+    },
+    {
+      "module": "five_core",
+      "H_module": 9,
+      "P_module_2": 84,
+      "targets": [
+        {
+          "H": 11547,
+          "defect": 9
+        },
+        {
+          "H": 11547,
+          "defect": 9
+        }
+      ],
+      "funnel_changed_arcs": 21,
+      "funnel_root_and_predecessor_fixed": true
+    }
+  ],
+  "script_sha256": "4299f042f623883f08cbb746976dfd476283d3ab08b3dce99fb0b7f79932d570"
+}
