@@ -19,7 +19,7 @@ int main(int argc,char**argv){
       u64 a=F[(size_t)S*n+v]; if(a) for(int w=0;w<n;w++) if(!(S>>w&1)&&(out[v]>>w&1)) F[(size_t)(S|1u<<w)*n+w]+=a;
       u64 b=Bk[(size_t)S*n+v]; if(b) for(int w=0;w<n;w++) if(!(S>>w&1)&&(out[w]>>v&1)) Bk[(size_t)(S|1u<<w)*n+w]+=b; }
     u64 H=0; for(int v=0;v<n;v++) H+=F[(size_t)FULL*n+v];
-    u64 Wl[64]; int m=0, zeros=0;
+    u64 Wl[256]; int m=0, zeros=0;
     for(int u=0;u<n;u++) for(int v=0;v<n;v++) if(u!=v && (out[u]>>v&1)){
       u64 W=0;
       for(unsigned S=1;S<N;S++) if((S>>u&1) && !(S>>v&1)){ u64 a=F[(size_t)S*n+u]; if(!a) continue; unsigned R=FULL&~S; W+=a*Bk[(size_t)R*n+v]; }

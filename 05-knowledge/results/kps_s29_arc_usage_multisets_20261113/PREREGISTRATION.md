@@ -26,3 +26,8 @@ the number of classes up to converse at each of the three orders. Confidence abo
 - **P1: CONFIRMED**, 2026-11-13. The uniquely Hamiltonian strong classes of orders 10, 11, 12 give 195, 517 and
   1,309 merged classes, with 13, 47 and 34 self-converse. They have exactly 195, 517 and 1,309 distinct arc-usage
   multisets, and every multiset group is a single class or a converse pair.
+
+## Audit note
+
+The audit confirmed that P1 was registered before the computation: commit at 15:35:27, run at 15:35:48. It
+reproduced the outcome independently.

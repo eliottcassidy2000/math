@@ -25549,3 +25549,27 @@ after it.
      label it harmless.
   3. Before calling a list "exact", check the composite values that a closure argument adds, by direct
      construction.
+
+## MISTAKE-771 (2026-11-13, kind-pasteur-2026-11-13-S29, THM-5154, HYP-9680 and `05-knowledge/results/kps_s29_arc_usage_multisets_20261113/`; found by the independent audit `audit/AUDIT.md`) -- a conjectured generating set for multiset coincidences stated without testing beyond the uniquely Hamiltonian slice, a miscounted breakdown, a wrong reading of a concurrent result, and an array overflow
+
+- **M2 (audit).** HYP-9680 (C) claimed that run slides, converse and seam-preserving core flips generate every
+  coincidence of the arc-usage multiset. It was tested only through order 9 and in the strong C=1 slice. The audit
+  found an order-12 pair related by reversing an interior two-core block.
+- **M1 (audit).** HYP-9680 (A) is refuted by Session 320's strong order-24 pair, which reached origin 76 s after the
+  S29 checkpoint. That is a concurrency event, not a credit failure, but (A) was stated for all orders on
+  slice-only evidence.
+- **Minor (audit m1-m9, all applied).**
+  - The order-9 breakdown "11 slides + 10 flips" was wrong: it is 8 + 13 + 1, and no script produced it.
+  - The order-4 table was already in Session 319.
+  - Credits were missing for Q multiplicativity.
+  - The reservoir paragraph called slopes intercepts, called 21 3-smooth, and drew an unsupported link to run
+    moves.
+  - "Tiny denominator" was used for 139.
+  - `arcms_rows.c` wrote past a 64-entry array on order-12 rows with up to 66 positive weights. The output was
+    nevertheless correct.
+  - The replay steps were incomplete.
+- **Lessons.**
+  1. A conjectured generating set for coincidences must be tested on the first orders where new block patterns
+     exist (here two interior cores, order 12), not only on a strong slice.
+  2. Any breakdown quoted in prose must come from a committed script.
+  3. Size buffers from the maximum possible count, here C(n,2) arcs.
