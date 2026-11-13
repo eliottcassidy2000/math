@@ -199,3 +199,99 @@ That is the C2-line exclusion seen through the tail law. Why the constant is pin
 here. No universal linear identity among the single-bin coefficients of `H(B)`, `U_e`, `U_f` and `W_ef` exists:
 `scripts/single_bin_identity.py` fits one on 40 random rooted tournaments with nonzero residual. Any explanation must
 use the clock structure of `B`.
+
+## 8. The order-12 hunt for the C2 line, and three structural laws (session continuation)
+
+Owner directive (continuation): find the `(σ,σ_2)=(1,0)` two-clock at order 12. Searches run (all with complete
+tables and rigorous caps; universes and counts in `data/`, final numbers in §8.4):
+
+* one-vertex extensions of all 868 certified skeletons (orders up to 13, `c/extone.c`);
+* all single and double arc reversals of the 90 certified skeletons adjacent to the C2 shape (`σ=1` with
+  `σ_2∈{1,3}`; `σ_2=0` with `σ∈{−3,−1,3}`), and all triple reversals of the 23 of order ≤10 (`c/flipsearch.c`);
+* the order-12 near-transitive universe with at most four reversed arcs (`c/backscan.c 12 4`);
+* the targeted two-cherry family of §8.2 at orders 9–12 (`c/cherries.c`).
+
+None produced the C2 line. What they did produce is structure.
+
+### 8.1 Amplitude classes (FINITE-EXACT)
+
+Every digit-1 clock found has amplitude `A≡4 (mod 8)` (416/416 single clocks; all digit-1 slices of two-clocks);
+every digit −1 clock has `A≡0 (mod 8)` (342/342). Equivalently a digit-1 clock count satisfies `H≡3 (mod 8)`:
+`v_2(H+1)=2`, i.e. its `3x+1` orbit begins with exactly two ascents. Larger digits mix classes. **Consequence.**
+If the law holds, every `k`-slice `α2^k+β` of a C2-line two-clock is `≡4 (mod 8)`, which forces
+`β≡4 (mod 8)` and `α≡0 (mod 4)`. All pure two-clocks found (`σ_2=0`) have `β≡0 (mod 8)`. This is a sharp
+necessary condition and a search filter, not an exclusion: `β≡4` does occur for other digit pairs.
+
+### 8.2 Crossing structure and the I/O factorization (PROVED for the factorization)
+
+Call an arc `o→i` with `o∈N^+(u)`, `i∈N^-(u)` a *crossing*. In the complete census every digit-1 clock has exactly
+four crossings forming two disjoint 2-stars, two "cherries" `s_1,s_2→t_1` and `s_3,s_4→t_2` (208 clocks, plus their
+208 converses). In the order-10 data, small digits (`−1,1,3,5,7`) occur only with four crossings. Digit-1 clocks
+with five crossings do occur in the extension data, so "digit 1 ⇒ four crossings" is false in general.
+
+For a two-cherry skeleton, write `I=N^-(u)`, `O=N^+(u)`. Every arc between `I` and `O` points `I→O` except the four
+cherry arcs. **Lemma (I/O factorization).** `a_3 = 2·F·G`, where
+
+    F = Σ_{(P_0,Q_1,Q_2)} H(P_0)·s_{t_1}(Q_1)·s_{t_2}(Q_2),    G = Σ_{(R_1,R_2,P_3)} e_{\{s_1,s_2\}}(R_1)·e_{\{s_3,s_4\}}(R_2)·H(P_3)
+
+are sums over ordered partitions of `I` and of `O`. Here `Q_i`, `R_i` are nonempty, `s_t(Q)` counts Hamiltonian paths
+of `T[Q]` starting at `t`, and `e_X(R)` those ending in `X`. *Proof.* A word with three `u`-runs has two internal
+excursions. Each must cross back from `O` to `I`, and the only such arcs are cherry arcs, so the two excursions
+use the two different targets. The prefix therefore stays in `I` and the suffix in `O`. Each excursion is an
+`O`-path ending at a source of its target, the cherry arc, then an `I`-path starting at that target. Both orders of
+the two excursions occur, which gives the factor 2. ∎ (Check: `S_60` gives `F=2`, `G=15`, `a_3=60`.) More
+generally every word is an alternation of `I`-blocks and `O`-blocks. `O→I` steps use cherry arcs, and each
+`I→O` step is a *slot* that may hold a `u`-run. An empty slot is a direct arc, which is forbidden only from a target
+into its own source. So the P-form is an inclusion–exclusion over forbidden slots. This **slot calculus** is the
+proof route for §8.3.
+
+### 8.3 The wrap law (FINITE-EXACT; conjecture)
+
+In the two-cherry family with near-transitive sides (`c/cherries.c`, §8.4), **every** two-clock attached to a
+digit-1 clock through order 11 has `(σ,σ_2)=(1,1)` and `A=2α`:
+
+    H(S[u←M, v←N]) = P_N(2)·(α·P_M(3) − H(M)) + H(M)·H(N),     i.e.   H = (α·3^j − 1)·2^k + 1.
+
+Through order 11 each digit-1 clock has exactly one such `v`. It is a non-target in-neighbour of `u`, beaten by
+exactly one cherry target (usually its unique in-neighbour). At order 12 some clocks gain a second `v` in the same
+local position, with `σ_2=2` and still `A=2α` (48 lines, `H=(α3^j−2)2^k+3`). Across all certified digit-1
+two-clocks `v` never lies on a crossing. Four crossings give `σ_2∈{1,2}`; five crossings give `σ_2∈{3,9}`.
+**Conjecture (wrap law).** For a digit-1 clone clock, every dyadic two-clock vertex has `σ_2≥1`. Together with the observation that cloning a crossing vertex changes the crossing graph with `k`,
+this would imply the C2-line exclusion. It would also explain it: a dyadic module attached to a digit-1 ternary
+clock always goes *outside* it. That gives `H−1=2^k·(α3^j−1)`, the unit two-clocks of §6, whose slopes run along
+the C2 line, and never `H+1=3^j·F(k)`.
+
+**The duality this exposes.** Swapping `2↔3` and `+1↔−1` exchanges the two shapes. The unit two-clocks are
+abundant: `H−1=2^k·Y_j`, ternary inside, dyadic outside. The C2 line `H+1=3^j·F(k)`, dyadic inside and ternary
+outside, never appears. The C2 map survives, but on the slope `c=Y_j` of the unit line, not on the count.
+
+**Watch item (not a claim).** The constant terms of the pure two-clocks found (`σ_2=0`) are
+`1,3,5,9,11,13,…,33,−3,−5`. Missing are `7, 21` (the Chan–Pak exceptions), `31` and `−1`. The constant is not
+the path count of any deleted subtournament (checked), so this is probably a small-sample accident. A
+pure two-clock with constant 7 or 21 would settle it.
+
+### 8.4 Final counts of the order-12 hunt (FINITE-EXACT; scripts in `c/`, outputs in `data/`)
+
+| universe | two-clock lines | digit-1 two-clocks `(σ,σ_2)` | C2 line |
+|---|---:|---|---:|
+| near-transitive order 12, ≤4 reversed arcs, every `(u,v)` (`backscan.c 12 4`) | 10,160 | 170 × (1,1) | 0 |
+| two-cherry family, near-transitive sides: orders 9, 10, 11, 12 with ≤1 reversed arc per side, order 10 with ≤2 (1,515,222 skeletons, 6,094 digit-1 clocks) | 6,118 | 6,070 × (1,1), 48 × (1,2) at order 12 | 0 |
+| all double arc reversals of the 90 certified near-C2 skeletons, triple reversals of the 23 of order ≤10 (`flipsearch.c`) | 4,841 | (1,1), (1,3), (1,9) | 0 |
+| one-vertex extensions of all 868 certified skeletons (orders up to 13, `extone.c`) | see `data/` | (1,1), (1,2), (1,3), (1,9), (1,15), (1,27) | 0 |
+
+The order-12 near-transitive universe has pure `v`-sectors only with digit −1 (1,176 lines). The constant term
+`−1` of the C2 line appears there only through the `(1,1)` and product types, never with a pure `v`-sector.
+
+### 8.5 Why kernel composition cannot manufacture the C2 line (FINITE + elementary)
+
+[THM-5133](../../../01-canon/theorems/THM-5133-flip-and-spin-kernel-signature-sign-tournaments-of-twisted-algebras-and-the-pg32-extremal-theorems.md)
+(kind-pasteur S23) has two-port kernels with at most two visits per port, and a hyperbolic one of order 5 with
+`H(K[A,B]) = 3Π_2(A)Π_2(B) − H(A)H(B)`. That gives `H+1 = 3·2^{a+b}`, the −1 anchor in the dyadic×dyadic world.
+Substituting a clone clock `A=Y[u←M]` into such a kernel's port gives the C2 line only if `H(A)` and `Π_2(A)` are
+both ternary-shaped: `H(A)=λP_M(3)+μH(M)` and `Π_2(A)=ρP_M(3)+τH(M)`, with `(μ,τ)` solving the kernel's 2×2
+system (for the order-5 kernel, `μ=1`, `τ=0`). `c/pi2scan.c` computes `Π_2` along all 1,549 census clocks
+(`data/pi2_census_clocks.txt.gz`). **None has a ternary-shaped `Π_2`.** Two bins let the module be visited four or
+more times, so `4^j,5^j,6^j` terms appear. Kernels that read only `H(A)` give ordinal-sum-like products, and those
+cannot reach the C2 line because clone digits are odd. So a C2-line two-clock, if it exists, is a primitive
+ternary×dyadic kernel. It does not come from composing a clock with any of THM-5133's dyadic kernels. The −1 anchor
+exists for dyadic×dyadic (THM-5133); for ternary×dyadic it is exactly the open question.

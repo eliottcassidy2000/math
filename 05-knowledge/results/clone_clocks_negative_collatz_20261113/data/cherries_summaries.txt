@@ -1,0 +1,8 @@
+n=10 B=1 part 0/1: skeletons 45000 digit1 364 gen 364 c2 0
+n=10 B=2 part 0/1: skeletons 621810 digit1 2186 gen 2186 c2 0
+n=11 B=1 part 0/1: skeletons 186660 digit1 1032 gen 1032 c2 0
+n=12 B=1 part 0/4: skeletons 163287 digit1 523 gen 523 c2 0
+n=12 B=1 part 1/4: skeletons 163287 digit1 562 gen 574 c2 0
+n=12 B=1 part 2/4: skeletons 163287 digit1 627 gen 627 c2 0
+n=12 B=1 part 3/4: skeletons 163287 digit1 708 gen 720 c2 0
+n=9 B=1 part 0/1: skeletons 8604 digit1 92 gen 92 c2 0

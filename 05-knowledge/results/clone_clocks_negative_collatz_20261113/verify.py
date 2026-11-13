@@ -278,5 +278,58 @@ need(any(f['alpha'] == 30 and f['sig2'] == 1 for f in unit), 'the C2-line multip
 out.append('8. all 868 two-clock tuples certified by complete tables (rigorous caps) + literal counts; 217 unit-offset '
            'families give seeds; multipliers follow c -> 3c + 2 sig2: OK')
 
+# ---------------------------------------------------------------- 9. continuation: the order-12 hunt
+# 9a. I/O factorisation a_3 = 2 F G on the Session-197 two-cherry skeleton
+s60 = [206, 252, 56, 240, 225, 193, 132, 4]; u60 = 3
+I60 = [x for x in range(8) if s60[x] >> u60 & 1]; O60 = [x for x in range(8) if s60[u60] >> x & 1]
+cher = [(o, i) for o in O60 for i in I60 if s60[o] >> i & 1]
+tg = sorted({i for o, i in cher}); srcs = {t: {o for o, i in cher if i == t} for t in tg}
+def npaths(vs, start=None, end=None):
+    if not vs: return 1
+    c = 0
+    for perm in itertools.permutations(vs):
+        if start is not None and perm[0] not in start: continue
+        if end is not None and perm[-1] not in end: continue
+        if all(s60[perm[q]] >> perm[q + 1] & 1 for q in range(len(perm) - 1)): c += 1
+    return c
+F = sum(npaths([x for x, a in zip(I60, asg) if a == 0]) * npaths([x for x, a in zip(I60, asg) if a == 1], start={tg[0]})
+        * npaths([x for x, a in zip(I60, asg) if a == 2], start={tg[1]})
+        for asg in itertools.product(range(3), repeat=len(I60)) if 1 in asg and 2 in asg)
+G = sum(npaths([x for x, a in zip(O60, asg) if a == 0], end=srcs[tg[0]]) * npaths([x for x, a in zip(O60, asg) if a == 1], end=srcs[tg[1]])
+        * npaths([x for x, a in zip(O60, asg) if a == 2])
+        for asg in itertools.product(range(3), repeat=len(O60)) if 0 in asg and 1 in asg)
+need((F, G, 2 * F * G) == (2, 15, 60), 'I/O factorisation a_3 = 2FG on S60')
+# 9b. amplitude classes: digit 1 -> A = 4 mod 8, digit -1 -> A = 0 mod 8 (complete census + order-10 near-transitive)
+amp = Counter()
+for l in lines('tern_all_orders.txt.gz'):
+    if l.startswith('TERN'):
+        amp[(-int(re.search(r' C=(-?\d+)', l).group(1)), int(re.search(r' A=(\d+)', l).group(1)) % 8)] += 1
+for l in lines('backscan_n10_b5.txt.gz'):
+    if l.startswith('TERN'):
+        amp[(int(re.search(r'sigma=(-?\d+)', l).group(1)), int(re.search(r' A=(\d+)', l).group(1)) % 8)] += 1
+need(all(r == 4 for (s, r) in amp if s == 1) and all(r == 0 for (s, r) in amp if s == -1), 'amplitude classes')
+# 9c. no clone clock in the census has a ternary-shaped Pi_2
+for l in lines('pi2_census_clocks.txt.gz'):
+    P = [int(x.split(':')[1]) for x in l.split()[2:]]
+    need(not (P[1] - 3 * P[0] == P[2] - 3 * P[1] == P[3] - 3 * P[2]), 'Pi_2 never ternary-shaped')
+# 9d. certified order-12 two-cherry examples of types (1,1) and (1,2); no C2 line in any archived universe
+ex12 = {}
+for l in lines('cherries_gen.txt.gz'):
+    if l.startswith('GEN n=12'):
+        key = (int(re.search(r'sigma=(-?\d+)', l).group(1)), int(re.search(r'sig2=(-?\d+)', l).group(1)))
+        ex12.setdefault(key, l)
+need(set(ex12) == {(1, 1), (1, 2)}, 'order-12 two-cherry types')
+for key, l in ex12.items():
+    rows = list(map(int, re.search(r'rows=([\d,]+)', l).group(1).split(',')))
+    uu = int(re.search(r' u=(\d+)', l).group(1)); vv = int(re.search(r' v=(\d+)', l).group(1))
+    tb = complete_table(rows, 12, uu, vv)
+    A_, al_ = tb[(3, 1)], tb[(3, 2)]
+    need(not any(c for (i, ip), c in tb.items() if i >= 4 or ip >= 3) and tb[(2, 1)] == 3 * A_ and tb[(2, 2)] == 3 * al_
+         and (3 * A_ - tb[(1, 1)], 3 * al_ - tb[(1, 2)]) == key and A_ == 2 * al_, 'order-12 example %s' % (key,))
+for f in ('cherries_gen.txt.gz', 'backscan_n12_b4_gen.txt.gz', 'flipsearch_hits.txt.gz'):
+    need(not any(l.startswith(('C2LINE', 'TWO')) for l in lines(f)), 'no C2 line in ' + f)
+out.append('9. continuation: a_3 = 2FG (S60: F=2, G=15); digit 1 -> A=4 mod 8, digit -1 -> A=0 mod 8; no ternary Pi_2 '
+           'among 1,549 clocks; order-12 (1,1),(1,2) certified with A = 2 alpha; no C2 line in the order-12 universes: OK')
+
 print('\n'.join(out))
 print('ALL CHECKS PASSED')

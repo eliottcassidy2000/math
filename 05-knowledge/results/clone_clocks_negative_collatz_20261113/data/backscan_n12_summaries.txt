@@ -1,0 +1,8 @@
+n=12 maxb=4 part 0/8: tern=1132 gen=1347 two=0
+n=12 maxb=4 part 1/8: tern=1102 gen=1305 two=0
+n=12 maxb=4 part 2/8: tern=1113 gen=1268 two=0
+n=12 maxb=4 part 3/8: tern=1090 gen=1240 two=0
+n=12 maxb=4 part 4/8: tern=1033 gen=1221 two=0
+n=12 maxb=4 part 5/8: tern=1116 gen=1254 two=0
+n=12 maxb=4 part 6/8: tern=1122 gen=1298 two=0
+n=12 maxb=4 part 7/8: tern=1018 gen=1227 two=0

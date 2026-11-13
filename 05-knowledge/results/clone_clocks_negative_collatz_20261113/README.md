@@ -21,6 +21,21 @@ three, and the Jacobian / Hadwiger–Nelson / Hodge lanes.
 | A ready repeatable 405 return cannot be a double-cloning family (from the complete 881 fibre). Uniform selective ports reduce to modules. **Concurrent result:** the [complete intrinsic inverse](../target_directed_cores_20261112/TARGET_INVERSE.md) shows `405·2^17+71` has no in-degree-one unit-ready presentation at any order, so no construction makes the whole ray unit-ready. Non-unit interfaces, direct target surgery, or a change of arithmetic (Π, Ψ) remain. | PROVED corollary + route map; ray closure CITED (concurrent) | [RAY405](RAY405.md) |
 | 2–3 axis, planar Jacobian shears, Hodge bidegrees, Hadwiger–Nelson shape, and the old rational/irrational, odd/even, positive/negative, addition/multiplication dualities | typed bridges; analogies flagged | [BRIDGES](BRIDGES.md) |
 
+**Continuation (owner: "find the (1,0) two-clock at order 12").** [CLOCKS §8](CLOCKS.md) reports the order-12
+hunt. Five search universes were run: the order-12 near-transitive scan, the two-cherry family at orders 9–12,
+double and triple arc flips of every near-C2 skeleton, one-vertex extensions of all certified skeletons, and
+composition with THM-5133's kernels. **No C2-line two-clock was found** (final counts in CLOCKS §8.4). What the hunt
+produced:
+
+* **Amplitude classes:** every digit-1 clock found has `A≡4 (mod 8)` (so `H≡3 (mod 8)`, exactly two
+  initial Collatz ascents). A C2 line would therefore need `β≡4 (mod 8)`, `α≡0 (mod 4)`.
+* **I/O factorization (PROVED):** for the two-cherry crossing structure shared by every census digit-1 clock,
+  `a_3=2FG`, a product of constrained path covers of the in- and out-neighbourhoods of `u`.
+* **Wrap law (conjecture, no exception found):** a dyadic module on a digit-1 clock always lands outside it,
+  `H=(α3^j−1)2^k+1`. The 2↔3 / +1↔−1 duality is broken in one direction only.
+* **Composition no-go:** no clone clock has a ternary-shaped `Π_2` (1,549 checked), so THM-5133's hyperbolic
+  kernel (`H+1=3·2^{a+b}`, the −1 anchor for two dyadic ports) cannot be composed into the C2 line.
+
 **What this changes.** The question "can `3H+2` be repeated exactly by a physical move?" has a sharp answer in
 the clone language. One clock can do it: Session 197's `60·3^m−1`, which is never ready in the screened range.
 Two clocks can do it exactly for other digits. On the +1 anchor (Π) the moves are `x↦3x+2`, `x↦2x+1` and the
