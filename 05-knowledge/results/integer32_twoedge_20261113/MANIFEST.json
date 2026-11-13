@@ -5,8 +5,8 @@
       "sha256": "bd9981766250aa99dbf5a2e4c4c8672729a1304f3c82835a5c62b5932bdc9c95"
     },
     "INTEGRATION.md": {
-      "bytes": 5940,
-      "sha256": "104faa129ede42999d6e60173e2d3e7cd303d9f4819bb49fc6373e0ed1b6f97c"
+      "bytes": 7604,
+      "sha256": "168a00411f059cad35851e23214307b1bfb3861138708d75013e3a80a5fdf6c3"
     },
     "README.md": {
       "bytes": 9375,
@@ -17,8 +17,8 @@
       "sha256": "5de765b35c8609a48d6ae7669f1709e22239a369c354a551f7a9f370e72371a5"
     },
     "SOURCE_PINS.json": {
-      "bytes": 11153,
-      "sha256": "e43262ff90d53ab9d02a51daf6cf164ad200aeb1dcc2ffbeb40761a6fed889d5"
+      "bytes": 12502,
+      "sha256": "3d61c09a03fe8613420d975476d13f34cec3a81d2efd3a569810e8478744694e"
     },
     "bridges/CORRECTION.md": {
       "bytes": 3256,

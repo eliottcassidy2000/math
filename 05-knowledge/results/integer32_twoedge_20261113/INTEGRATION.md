@@ -96,3 +96,27 @@ forced-map proof and replays all128 twist orientations, their canonical
 partition, majority and mask actions. The large order21 Hamilton DP values
 are inherited finite computations and are not claimed as independently
 rerun in this packet.
+
+## Final synchronization: corrected S29 and Session322
+
+The final incoming tip `0469f4d529` adds two pertinent boundaries. Corrected
+[THM-5154, arc-usage multiset](../../../01-canon/theorems/THM-5154-the-arc-usage-multiset-is-complete-up-to-run-slides-core-flips-and-converse-to-order-nine.md)
+and its [independent audit](../kps_s29_arc_usage_multisets_20261113/audit/AUDIT.md)
+retain a finite classification, but retract the universal sufficiency of the
+listed moves: an interior block reversal already escapes them at order12.
+The strong order24 labelled-shadow pair also refutes the proposed strong
+multiset faithfulness. The hypothesis that the arc-usage multiset determines
+Q remains open. Our same-Q/different-Phi pair does not refute that different
+implication, and the faithful joint wedge observer remains a larger object.
+The incoming large multiset census is not independently replayed here.
+
+[Session322's target inverse](../session322_target_inverse_prime_channels_20261113/README.md)
+and [hybrid capacity proof](../session322_target_inverse_prime_channels_20261113/HYBRID_CAPACITY.md)
+separate all-modulus feasibility from absolute realization. Its declared
+one-apex/dyadic-factor grammar meets every odd-compatible residue modulo
+every modulus but has only O(X^(1999/2000)) absolute outputs through X.
+This is a useful incoming stopping rule for the earlier growing-sieve lane:
+enlarging the CRT modulus cannot supply missing physical capacity. It is
+an obstruction to that grammar, not to arbitrary tournaments or prime
+generation. No producer or theorem in our packet is changed by this final
+pull; these boundaries refine the next search space.
