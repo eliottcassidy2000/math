@@ -3,7 +3,11 @@
 Let a ready chart, in its transitive parameter, have full count
 `H_i(k)=a_i 2^k+b_i`, with positive integer a_i, integer b_i, and k≥0.
 The assertions below concern only this scalar projection. In particular
-success in the scalar projection is not a certificate for entry.
+success in the scalar projection is not a certificate for entry. The
+fixed-clock-shift cycle obstruction was already recorded in
+[the two-entry funnel transport](../../two_entry_funnels_20261103/TRANSPORT.md).
+The extension here allows arbitrary clock reindexing, sporadic handoffs,
+and mixed affine rules.
 
 ## Infinite handoffs are rigid, and their directed graph has no cycle
 
@@ -48,6 +52,25 @@ to 1 and are rational S-units for a fixed finite S (primes dividing
 gives finitely many pairs; it is a cited input only for this
 stronger conclusion. The elementary finite-bank proof does not use
 it.
+
+## Mixed exact affine handoffs
+
+The same bounded-shift proof works for a fixed positive rational slope
+q and rational offset d, replacing 3 and 2 by q and d. On an edge that
+is realized at infinitely many scalar inputs, the equations are
+
+    a_j 2^s = q a_i,       b_j = q b_i + d.
+
+Multiplying along a cycle forces the product of slopes to be a power
+of two, and the composed offset map fixes the initial intercept.
+A finite bank cannot support an unbounded monotone sequence that keeps
+using a slope divisible by 3 with no compensating inverse 3-valuation:
+each ordered pair and each rule has only finitely many accidental
+inputs, and the remaining steps propagate the 3-adic valuation of the
+positive dyadic coefficient exactly. The rule bank is assumed finite,
+and slopes with negative 3-valuation are expressly outside the latter
+claim. This is a scalar obstruction, not an impossibility theorem for
+a graph family with a genuine mixed dyadic/ternary clock.
 
 ## Payoff for the mod-45 question
 
