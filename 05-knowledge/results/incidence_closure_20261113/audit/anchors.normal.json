@@ -1,0 +1,74 @@
+{
+  "checks": 493,
+  "claims_sha256": "41093c9b0b11e055ceaafcd3b6e247da1077cbe978a7addd9661fe1300e65023",
+  "controls": 480,
+  "data_sha256": "c0484a99712edff88e8158b5f6000097f32f88874150d059da5aefa20f3de8f7",
+  "results": {
+    "A": {
+      "budget_eight_feasible": false,
+      "independent_search_states": 38757,
+      "minimum": 9,
+      "witness": [
+        301,
+        291,
+        161,
+        4722,
+        677,
+        288,
+        4708,
+        4642,
+        5749
+      ]
+    },
+    "A_colored": {
+      "budget_eight_feasible": false,
+      "independent_search_states": 38620,
+      "minimum": 9,
+      "witness": [
+        301,
+        291,
+        161,
+        4722,
+        677,
+        288,
+        4708,
+        4642,
+        5749
+      ]
+    },
+    "P": {
+      "budget_eight_feasible": false,
+      "independent_search_states": 36606,
+      "minimum": 9,
+      "witness": [
+        301,
+        291,
+        161,
+        4722,
+        549,
+        288,
+        4728,
+        805,
+        5368
+      ]
+    },
+    "P_colored": {
+      "budget_eight_feasible": false,
+      "independent_search_states": 35943,
+      "minimum": 9,
+      "witness": [
+        301,
+        291,
+        161,
+        4722,
+        549,
+        288,
+        4728,
+        805,
+        5368
+      ]
+    }
+  },
+  "source_sha256": "1cadc0b12e072a0cecc18cdfa19e52aed438708bd3b5ac50295cde59395c2609",
+  "status": "PASS; independent exact n7 lower and upper bounds"
+}

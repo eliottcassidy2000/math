@@ -1,0 +1,6 @@
+analyzed 3 {'A': 0, 'A_colored': 0, 'P': 0, 'P_colored': 0}
+analyzed 4 {'A': 0, 'A_colored': 0, 'P': 0, 'P_colored': 0}
+analyzed 5 {'A': 1, 'A_colored': 1, 'P': 1, 'P_colored': 1}
+analyzed 6 {'A': 2, 'A_colored': 2, 'P': 2, 'P_colored': 2}
+analyzed 7 {'A': 9, 'A_colored': 9, 'P': 9, 'P_colored': 9}
+{"analysis_sha256": "41093c9b0b11e055ceaafcd3b6e247da1077cbe978a7addd9661fe1300e65023", "checks": 66}

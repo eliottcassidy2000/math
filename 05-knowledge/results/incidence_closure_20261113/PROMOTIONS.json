@@ -1,0 +1,100 @@
+{
+  "files": {
+    "CLIFFORD_BOUNDARY.md": {
+      "after_sha256": "6615b63e6e7c1bb692facbe99ade8a925b96cebb963ecdd8305d56f13ca7fa10",
+      "before_sha256": "ee27ca8a5bd08b7db309286052c63e9a41ef215e5820e4bbe402c5a79b77c1f4",
+      "edits": [
+        {
+          "count": 1,
+          "new": "**Status: PROVED IN NOTES, C1\u2013C3, after independent review; see [AUDIT.md](AUDIT.md).**",
+          "old": "**Status: RESERVED / elementary proof candidates C1\u2013C3 pending independent review.**"
+        }
+      ]
+    },
+    "ROOT_OBSERVERS.md": {
+      "after_sha256": "bbe31d87ba4a7d328add13194af9dde80f68a2d6d03bcadb5de3e47bce4063c7",
+      "before_sha256": "b0b4508aa28b76bd05d4f9e006d4139ad44267afbad98a38f8f16313b644d6a1",
+      "edits": [
+        {
+          "count": 1,
+          "new": "**Status: PROVED IN NOTES, O1\u2013O3, after independent review; see [AUDIT.md](AUDIT.md).**",
+          "old": "**Status: RESERVED / elementary proof candidates O1\u2013O3 pending independent review.**"
+        }
+      ]
+    },
+    "bridges/PROOF.md": {
+      "after_sha256": "271ad8a5a9ffe408e62b2148b88d26ce9fd255b595267523740da0811923fb2c",
+      "before_sha256": "e0e6c6428614e9ebdd0be5417d5373f9b509b43c3d57eb0081809d6aabd860ce",
+      "edits": [
+        {
+          "count": 1,
+          "new": "**Status: PROVED IN NOTES after independent proof/code audit; see [AUDIT.md](../AUDIT.md).** Claims B1\u2013B6\nbelow have audited elementary proofs in their stated scopes.",
+          "old": "**Status: RESERVED / proof candidates pending independent audit.** Claims B1\u2013B6\nbelow have explicit elementary proofs, but are not promoted to the proved graph."
+        },
+        {
+          "count": 1,
+          "new": "**B1 (proved).**",
+          "old": "**B1 (candidate).**"
+        },
+        {
+          "count": 1,
+          "new": "**B2 (proved).**",
+          "old": "**B2 (candidate).**"
+        },
+        {
+          "count": 1,
+          "new": "**B3 (proved).**",
+          "old": "**B3 (candidate).**"
+        },
+        {
+          "count": 1,
+          "new": "**B4 (proved elementary model; inherited mechanism).**",
+          "old": "**B4 (candidate elementary model; inherited mechanism).**"
+        },
+        {
+          "count": 1,
+          "new": "**B5 (proved, flat transport retained).**",
+          "old": "**B5 (candidate, flat transport retained).**"
+        },
+        {
+          "count": 1,
+          "new": "**B6 (proved).**",
+          "old": "**B6 (candidate).**"
+        },
+        {
+          "count": 1,
+          "new": "The statements above were promoted after that independent review; see AUDIT.md.",
+          "old": "The proof candidates above remain RESERVED until that review."
+        }
+      ]
+    },
+    "closure/PROOF.md": {
+      "after_sha256": "f8df88766fb56a1383a5ea8ab9e2b90dc2411bdbb734dec7324809ab9a046929",
+      "before_sha256": "960634c39d54650ca1bc5ff44b56a2de1b3ef66e9e7bda1cd5604f14f78d2a53",
+      "edits": [
+        {
+          "count": 1,
+          "new": "**Status: PROVED IN NOTES after independent proof/code audit; see [AUDIT.md](../AUDIT.md).**",
+          "old": "**Status: RESERVED / PROOF CANDIDATE pending independent root audit.**"
+        }
+      ]
+    },
+    "pairings/SIGNED_LIFT.md": {
+      "after_sha256": "b33b6554becc179a60879302750c14643386187664ac0c30444bc67303e284b8",
+      "before_sha256": "1710c4730bb2512e8574984ddb4a5a398fe46c699824571bd309b40210407ac7",
+      "edits": [
+        {
+          "count": 1,
+          "new": "**Status: PROVED IN NOTES after independent proof/code audit; see [AUDIT.md](../AUDIT.md).**",
+          "old": "**Status: RESERVED / complete proof candidate under independent audit.**"
+        },
+        {
+          "count": 1,
+          "new": "The elementary statements S1\u2013S4 are proved all-order operator statements;",
+          "old": "The elementary statements S1\u2013S4 are proposed all-order operator statements;"
+        }
+      ]
+    }
+  },
+  "scope": "Status-only promotion of independently reviewed statements; no mathematical edits."
+}

@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13 — observer closure and representation blocks lost their input conventions
+
+- **Scope:** unpublished candidates in [incidence closure](../05-knowledge/results/incidence_closure_20261113/README.md), repaired during independent audit before promotion. No accepted theorem is retracted.
+- **First failed implication / witness:** O1 allowed an initial function space merely containing the initial partition indicators, then identified its algebra closure with that partition's closure. On three points, one initial cell and the identity operator leave the partition unchanged, while adding the observer (0,1,2) generates the full three-point algebra.
+- **Repair / strongest survivor:** require the initial space to be exactly the block-constant algebra, or first replace the partition by the joint level sets of every initial observer. The finite stable-refinement theorem is unchanged. O3 also explicitly limits its lower bound to strongly lumpable partition quotients refining the declared observer; it is not a lower bound for every linear realization of selected statistics.
+- **Second convention repair:** the ordinary random-walk plus block equals the merged stochastic operator in the natural fibre-constant basis. In the orthonormal basis of singleton indicators and normalized pair sums it is M^(1/2) P_Y M^(-1/2). An audit caught the omitted basis distinction; no computed matrix or pairing count changed.
+- **Missing coordinates / next guard:** bind the initial observer space exactly and retain the basis with every operator block. Dimension, partition, selected moments and allowed measurement cost are different minimality problems.
+
 ## 2026-11-13 — a canonical-code caption silently changed the orientation gauge
 
 - **Scope:** unpublished `joint_metagraph_dyadic_20261113/PAIRING_WIRING.md`, caught while producing its independent figure and repaired before promotion.

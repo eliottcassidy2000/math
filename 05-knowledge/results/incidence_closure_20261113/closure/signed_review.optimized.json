@@ -1,0 +1,93 @@
+{
+  "always_active_checks": 1260321,
+  "input_sha256": "afd9c477812121bd7df67b970a12a330313e04f093bc99df7c91dc0fcabe982f",
+  "rows": [
+    {
+      "kernel_fixed_histogram": {
+        "2": 1
+      },
+      "minus_dimension": 0,
+      "n": 3,
+      "plus_dimension": 2,
+      "signed_component_sizes": [],
+      "weighted_refinement": [
+        1,
+        1
+      ]
+    },
+    {
+      "kernel_fixed_histogram": {
+        "2": 1,
+        "4": 1
+      },
+      "minus_dimension": 1,
+      "n": 4,
+      "plus_dimension": 3,
+      "signed_component_sizes": [
+        1
+      ],
+      "weighted_refinement": [
+        3,
+        3
+      ]
+    },
+    {
+      "kernel_fixed_histogram": {
+        "8": 1,
+        "10": 2,
+        "12": 1
+      },
+      "minus_dimension": 2,
+      "n": 5,
+      "plus_dimension": 10,
+      "signed_component_sizes": [
+        1,
+        1
+      ],
+      "weighted_refinement": [
+        8,
+        10,
+        10
+      ]
+    },
+    {
+      "kernel_fixed_histogram": {
+        "12": 1,
+        "56": 1
+      },
+      "minus_dimension": 22,
+      "n": 6,
+      "plus_dimension": 34,
+      "signed_component_sizes": [
+        22
+      ],
+      "weighted_refinement": [
+        26,
+        33,
+        34,
+        34
+      ]
+    },
+    {
+      "kernel_fixed_histogram": {
+        "88": 1,
+        "456": 1
+      },
+      "minus_dimension": 184,
+      "n": 7,
+      "plus_dimension": 272,
+      "signed_component_sizes": [
+        184
+      ],
+      "weighted_refinement": [
+        145,
+        271,
+        272,
+        272
+      ]
+    }
+  ],
+  "scope": "operator intertwining and component-kernel cycle consequences on audited full matrices; not a new n7 census",
+  "source_sha256": "ae8247cb233bc15d600c6881b25e4d7e8344bd5983bd5961e51c04004d6e6734",
+  "status": "PASS"
+}

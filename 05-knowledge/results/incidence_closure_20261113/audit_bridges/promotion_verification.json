@@ -1,0 +1,27 @@
+{
+  "files": {
+    "CLIFFORD_BOUNDARY.md": {
+      "after_sha256": "6615b63e6e7c1bb692facbe99ade8a925b96cebb963ecdd8305d56f13ca7fa10",
+      "before_sha256": "ee27ca8a5bd08b7db309286052c63e9a41ef215e5820e4bbe402c5a79b77c1f4",
+      "inverse_recovered_sha256": "ee27ca8a5bd08b7db309286052c63e9a41ef215e5820e4bbe402c5a79b77c1f4",
+      "inverse_verified": true,
+      "reversible_edits": 1
+    },
+    "ROOT_OBSERVERS.md": {
+      "after_sha256": "bbe31d87ba4a7d328add13194af9dde80f68a2d6d03bcadb5de3e47bce4063c7",
+      "before_sha256": "b0b4508aa28b76bd05d4f9e006d4139ad44267afbad98a38f8f16313b644d6a1",
+      "inverse_recovered_sha256": "b0b4508aa28b76bd05d4f9e006d4139ad44267afbad98a38f8f16313b644d6a1",
+      "inverse_verified": true,
+      "reversible_edits": 1
+    },
+    "bridges/PROOF.md": {
+      "after_sha256": "271ad8a5a9ffe408e62b2148b88d26ce9fd255b595267523740da0811923fb2c",
+      "before_sha256": "e0e6c6428614e9ebdd0be5417d5373f9b509b43c3d57eb0081809d6aabd860ce",
+      "inverse_recovered_sha256": "e0e6c6428614e9ebdd0be5417d5373f9b509b43c3d57eb0081809d6aabd860ce",
+      "inverse_verified": true,
+      "reversible_edits": 8
+    }
+  },
+  "promotion_manifest_sha256": "dbccf7ced4fe064dbe908d196ebdf507542018b2c8acf74ff57fdcc84db1a898",
+  "status": "VERIFIED status-only promotion inverse; mathematical text byte-identical after reversing declared edits"
+}

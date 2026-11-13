@@ -1,0 +1,374 @@
+{
+  "checks": 12305,
+  "data_sha256": "c0484a99712edff88e8158b5f6000097f32f88874150d059da5aefa20f3de8f7",
+  "reversible_path_controls": [
+    {
+      "counts": [
+        2,
+        3
+      ],
+      "edges": 2,
+      "strict_rounds": 1
+    },
+    {
+      "counts": [
+        2,
+        3,
+        4
+      ],
+      "edges": 3,
+      "strict_rounds": 2
+    },
+    {
+      "counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "edges": 4,
+      "strict_rounds": 3
+    },
+    {
+      "counts": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "edges": 5,
+      "strict_rounds": 4
+    },
+    {
+      "counts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "edges": 6,
+      "strict_rounds": 5
+    },
+    {
+      "counts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "edges": 7,
+      "strict_rounds": 6
+    },
+    {
+      "counts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "edges": 8,
+      "strict_rounds": 7
+    },
+    {
+      "counts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "edges": 9,
+      "strict_rounds": 8
+    },
+    {
+      "counts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "edges": 10,
+      "strict_rounds": 9
+    },
+    {
+      "counts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "edges": 11,
+      "strict_rounds": 10
+    },
+    {
+      "counts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "edges": 12,
+      "strict_rounds": 11
+    },
+    {
+      "counts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "edges": 13,
+      "strict_rounds": 12
+    },
+    {
+      "counts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "edges": 14,
+      "strict_rounds": 13
+    }
+  ],
+  "rows": [
+    {
+      "literal": {
+        "C_sha256": "d4c4f0aef055492f80e70d66f5b091da29a20733762ce14ffe1e169869e9b90e",
+        "chiral_signed_components": [],
+        "n": 3,
+        "ordinary": 2,
+        "self_converse": 2
+      },
+      "n": 3,
+      "refinement": {
+        "A": [
+          2
+        ],
+        "A_colored": [
+          2
+        ],
+        "P": [
+          2
+        ],
+        "P_colored": [
+          2
+        ]
+      },
+      "weighted_degree_WL": [
+        1
+      ]
+    },
+    {
+      "literal": {
+        "C_sha256": "b9f13ffbf557baac9164c34f03fed684164b22096759f811f219acf86f276562",
+        "chiral_signed_components": [
+          [
+            2
+          ]
+        ],
+        "n": 4,
+        "ordinary": 4,
+        "self_converse": 2
+      },
+      "n": 4,
+      "refinement": {
+        "A": [
+          3
+        ],
+        "A_colored": [
+          3
+        ],
+        "P": [
+          3
+        ],
+        "P_colored": [
+          3
+        ]
+      },
+      "weighted_degree_WL": [
+        3
+      ]
+    },
+    {
+      "literal": {
+        "C_sha256": "ea027207996cb4cb09d952fbcaeb34a483a463687738a3fbd6a84cecbd5c429f",
+        "chiral_signed_components": [
+          [
+            2
+          ],
+          [
+            4
+          ]
+        ],
+        "n": 5,
+        "ordinary": 12,
+        "self_converse": 8
+      },
+      "n": 5,
+      "refinement": {
+        "A": [
+          8,
+          10
+        ],
+        "A_colored": [
+          8,
+          10
+        ],
+        "P": [
+          8,
+          10
+        ],
+        "P_colored": [
+          8,
+          10
+        ]
+      },
+      "weighted_degree_WL": [
+        8,
+        10
+      ]
+    },
+    {
+      "literal": {
+        "C_sha256": "df22bf75d70d49d9f2b69215aa88587c6193c30d96981fd092495ff715da0edf",
+        "chiral_signed_components": [
+          [
+            2,
+            4,
+            5,
+            8,
+            10,
+            12,
+            18,
+            20,
+            24,
+            72,
+            73,
+            80,
+            81,
+            88,
+            89,
+            140,
+            146,
+            148,
+            152,
+            156,
+            177,
+            344
+          ]
+        ],
+        "n": 6,
+        "ordinary": 56,
+        "self_converse": 12
+      },
+      "n": 6,
+      "refinement": {
+        "A": [
+          24,
+          34
+        ],
+        "A_colored": [
+          24,
+          34
+        ],
+        "P": [
+          24,
+          34
+        ],
+        "P_colored": [
+          24,
+          34
+        ]
+      },
+      "weighted_degree_WL": [
+        23,
+        33,
+        34
+      ]
+    },
+    {
+      "n": 7,
+      "refinement": {
+        "A": [
+          156,
+          272
+        ],
+        "A_colored": [
+          156,
+          272
+        ],
+        "P": [
+          156,
+          271,
+          272
+        ],
+        "P_colored": [
+          156,
+          272
+        ]
+      },
+      "weighted_degree_WL": [
+        118,
+        271,
+        272
+      ]
+    }
+  ],
+  "source_sha256": "793dc9f3090387e826446d8a749ca80870ee5d6d3a148b5597162f791a2b4831",
+  "status": "PASS: independent finite audit; no all-order tournament extrapolation"
+}

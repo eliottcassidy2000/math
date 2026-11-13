@@ -1,0 +1,9 @@
+{
+  "budgets_per_family": 5,
+  "checker_sha256": "d6eed6c7f9cea63849f948ba8995a3f13f7cdbff3bc5e537f2d8d2c2419bfee5",
+  "checks": 24775,
+  "extra_families": 11,
+  "families_four_bit": 4944,
+  "source_sha256": "1cadc0b12e072a0cecc18cdfa19e52aed438708bd3b5ac50295cde59395c2609",
+  "status": "PASS: differential finite controls"
+}
