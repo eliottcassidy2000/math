@@ -19,7 +19,7 @@ Eight matching receipt pairs are byte-identical. Do not silently reseal
 changed dependencies when reproducing an existing claim; `--seal` is an
 authoring operation. Third-party environment requirements are Python3,
 NumPy and Numba; no network access or external solver is needed.
-The repository documentation checker,26 local packet links, all23 pinned
+The repository documentation checker, all local packet links, all23 pinned
 inputs, and the final eight receipt-pair comparisons also passed.
 
 | receipt | explicit universe and check |
@@ -100,6 +100,12 @@ count supply and physical transport. The retained-star three-arc repair,
 paired-module primitive guard and finite activation ideal are credited
 in `COLLATZ_AND_TARGETS.md`; no automatic entry into our frame rules is
 inferred from them.
+
+After the second checkpoint, Session305's synthesis and Session306's
+exact-observer note were read. Their physical-versus-arithmetic and
+finite-state boundaries are recorded in the final section of
+`COLLATZ_AND_TARGETS.md`. They are not dependencies of the proofs or
+computations in this packet.
 
 No new theorem ID, global tournament sequence term, universal seed,
 all-prime selector, complete spectrum classification, or Collatz

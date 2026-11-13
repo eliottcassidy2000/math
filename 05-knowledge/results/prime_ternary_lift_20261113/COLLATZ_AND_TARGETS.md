@@ -166,3 +166,24 @@ selector for the prime/7p targets rather than another finite frame bank;
 or prove a companion-source -2 rule on a class whose entry follows from
 the smaller-target induction hypothesis. No asserted connection to
 unrelated number coincidences is used as a proof dependency.
+
+## Final incoming boundary check
+
+The newly received [Session305 synthesis](../session305_collatz_core_changes_20261113/README.md)
+distinguishes its bounded-depth signed arithmetic compiler from the still
+missing physical reverse-block compiler. Its selective fusion transports
+an existing triangle factor by exchanging transitive and nontransitive
+blocks with the same normalized two-cover clock. Such an exchange is
+outside our fixed-transitive-block parity obstruction and is a concrete
+candidate preparation to investigate; neither packet proves that it
+repairs the halved mixed family. Its warning that a third visit can
+distinguish equal two-cover clocks supports retaining our full run vectors.
+
+The new [Session306 exact Collatz observer](../session306_relative_isolators_20261113/COLLATZ_LANGUAGE.md)
+studies a different finite-state limitation, for prefix-slope recognition.
+That language and our graph of exact frame identities are different
+objects. Its finite-state boundary does not prove our construction
+obstruction or conversely; integer registers and changing physical cores
+lie outside the respective finite-state restrictions. These incoming
+notes were read for compatibility and next questions, not used as proof
+dependencies or treated as a resolution of ordinary Collatz.
