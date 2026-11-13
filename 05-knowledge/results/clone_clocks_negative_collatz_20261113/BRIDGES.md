@@ -77,3 +77,28 @@ duality meets this packet in a checkable place.
   2-adically to their offset, ternary clocks 3-adically to `−σ`. The irrational slope `log2/log3` governs only
   how the `(j,k)` lattice of values spreads on the log scale. Such families always have density zero, which is
   why they seed lines (CLOCKS §6) and do not cover the spectrum.
+
+## 7. The attached briefs of the continuation (typed; owner-supplied, read as inspiration)
+
+* **Wrap and split words** (Session23 report). `Wrap(U)=C3[K1,U,K1]` has `H=Π_2(U)+H(U)`, the canonical unit
+  dyadic clock (`1+2^k`). The wrap law of CLOCKS §8.3 says that a dyadic module placed on a digit-1 clone clock
+  always ends up in this *outer* position, `H−1=2^k·(α3^j−1)`. The split-word cores `3^t(1+2^{a+2t})` multiply
+  by 3 through triangle letters. That is a different "three" from three-bin clone growth, matching the
+  four-way distinction of the concurrent ternary-core grammar packet.
+* **Controlled repair** (2026-10-19 research map: "preserve exactly the state needed by the next
+  argument"). For clone growth that state is the complete visit table. The map's matching certificate
+  `ν≥2b−E` and Session 197's matching number `ν_u` play the same role, a matching size bounding exchange
+  capacity. Here `ν_u=2` caps the ternary support, and in every census digit-1 clock the crossing matching is
+  realized by two cherries.
+* **Metagraph briefs** (pure-blue atoms `K1, C3, C5`; `a_j=a_{j−1}+a_{j−3}`). No transfer: clock skeletons are
+  near-transitive strong cores, and their counts are not the merged-node masses those briefs classify.
+* **Quantum brief** (native moves, Paley frames). The one-arc Collatz move of CLOCKS §4 is a single-arc
+  operation with an exact count law, `H↦(3H−1)/2`. That is the kind of named-move control the brief asks for, but
+  no frame or measurement statement is made.
+* **Square-sum panels** (prime-indexed graphs, "67 missing"). 67 is also a persistent exception of the
+  near-join and C2-sweep spectra (THM-4865 (e)). The repository has already typed the 25-prime grouping as
+  numerology; it is not redone here.
+
+Two checks prompted by this list are recorded for completeness. `Π−v` is itself a digit-17 clock
+(`H=60·3^m−17`, the most frequent digit), so the one-arc Collatz run of Π stops when the `v`-block has one vertex.
+And THM-5133's hyperbolic kernel cannot be composed with a clock (CLOCKS §8.5).
