@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "contexts": 675,
+  "ports": 5415,
+  "scope": "Every labelled B of orders1..4, every resource width2..4 and position; every physical vertex tested for indegree1 and q-s1",
+  "nontransitive_B_with_global_source_controls": [
+    {
+      "B": [
+        4,
+        1,
+        2,
+        7
+      ],
+      "root": 6,
+      "state": [
+        69,
+        30,
+        33,
+        72
+      ],
+      "deletion_source_H": 3
+    },
+    {
+      "B": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "root": 6,
+      "state": [
+        69,
+        30,
+        33,
+        72
+      ],
+      "deletion_source_H": 3
+    },
+    {
+      "B": [
+        14,
+        8,
+        2,
+        4
+      ],
+      "root": 3,
+      "state": [
+        69,
+        30,
+        33,
+        72
+      ],
+      "deletion_source_H": 3
+    },
+    {
+      "B": [
+        8,
+        13,
+        1,
+        4
+      ],
+      "root": 4,
+      "state": [
+        69,
+        30,
+        33,
+        72
+      ],
+      "deletion_source_H": 3
+    },
+    {
+      "B": [
+        8,
+        1,
+        11,
+        2
+      ],
+      "root": 5,
+      "state": [
+        69,
+        30,
+        33,
+        72
+      ],
+      "deletion_source_H": 3
+    },
+    {
+      "B": [
+        14,
+        4,
+        8,
+        2
+      ],
+      "root": 3,
+      "state": [
+        69,
+        30,
+        33,
+        72
+      ],
+      "deletion_source_H": 3
+    },
+    {
+      "B": [
+        2,
+        8,
+        11,
+        1
+      ],
+      "root": 5,
+      "state": [
+        69,
+        30,
+        33,
+        72
+      ],
+      "deletion_source_H": 3
+    },
+    {
+      "B": [
+        4,
+        13,
+        8,
+        1
+      ],
+      "root": 4,
+      "state": [
+        69,
+        30,
+        33,
+        72
+      ],
+      "deletion_source_H": 3
+    }
+  ]
+}

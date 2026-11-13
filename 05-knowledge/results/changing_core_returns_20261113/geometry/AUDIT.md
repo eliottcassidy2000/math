@@ -40,7 +40,7 @@ Normal and optimized runs both pass and agree after removing their mode flag:
 
 The all-k and all-odd-m arithmetic obstruction is proved in PROOF.md using
 the inherited Session298 formula; the finite k-range is only a control.
-All local Markdown links resolve. SOURCE_PINS.json pins18 inherited files to
+All local Markdown links resolve. SOURCE_PINS.json pins23 inherited files to
 base commit b1f253bebcfc674da68bbe5474ab6265b5ab7e2e, records the primary
 literature precedent, and hashes the script and both exact reports.
 
@@ -59,3 +59,21 @@ has the explicitly computed new count b. The controller imbalance D is never
 identified with the ready-state defect q-s. Contraction is used for response
 calculation, not claimed to be a legal H-preserving physical repair. Arc flips
 are not identified with native metagraph edges.
+
+
+## Follow-up selector and strong-component audit
+
+NEUTRAL_SCC.md records a separate independent audit of selector/PROOF.md,
+including the full-state return formulas and complete prime/parity guards.
+No proof error was found. A new all-size cross-SCC reversal obstruction gives
+an exact Cartesian-product decomposition of the labelled neutral arc component.
+Equivariance turns the two finite881 neighbour lists into complete component
+classifications, and the SCC product theorem extends this to every weak
+unit-ready881 transitive padding. The padding also preserves the entire
+rooted state and commutes with the explicit selector preparation and births.
+
+`neutral_scc.py` imports no selector code. Normal and optimized runs agree:
+1,099 labelled tournaments through order5, 3,212 cross-SCC flips, 2,398 neutral
+adjacencies; full881 component traversals of sizes4 and2; all21 source-root
+profiles, both physical replacements, and all six literal returned graphs.
+The reports and audited selector source hashes are included in SOURCE_PINS.json.

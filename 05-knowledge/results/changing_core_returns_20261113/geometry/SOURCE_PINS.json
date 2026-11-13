@@ -91,6 +91,31 @@
       "path": "05-knowledge/results/return18979_ports_20261103/PROOFS.md",
       "sha256": "ab17e49da4b59fa57937c5567d2280bb9dd31b9fef9265aab8e16240a480f9f2",
       "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "01-canon/theorems/THM-013-arc-flip-delta-I.md",
+      "sha256": "d7bbcc7b280e41562d4eb74dc65ca7f24a4d1afed6512ca898afc5c867ae1274",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "01-canon/theorems/THM-1862-order-join-reduction-principle.md",
+      "sha256": "329eb02887d21f178db6ddb2c71806da0b9f2695552c645409be64360ac6d58e",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/source_selection_closure_20261103/NATIVE_SELECTION.md",
+      "sha256": "5e7c574cf63fe13db453d9c4f63f3d1035194516a0957e489d88b60d299db178",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/FAMILIES.md",
+      "sha256": "e52e32d1a0a6355a981ce5242edd7c578fd77282c014b76a6feac94058871b35",
+      "hash_basis": "git blob bytes at source_commit"
     }
   ],
   "local_controls": [
@@ -105,6 +130,18 @@
     {
       "path": "verification.optimized.json",
       "sha256": "9fbcd4fd4dd6b1546eb750bc8daf6b64ef09324bbc27f881e4a5e08c18a5e299"
+    },
+    {
+      "path": "neutral_scc.py",
+      "sha256": "a04b2608ce7d2eb3f8215f5d928616c05f5cb1d9c40c05018f882b71ebb73bc5"
+    },
+    {
+      "path": "neutral_scc.json",
+      "sha256": "cdc83415146110924ebcce200431fc0d387c0df0248060c01c817fab80014dcb"
+    },
+    {
+      "path": "neutral_scc.optimized.json",
+      "sha256": "c535d9ba95f3d3e62c6daee42d4ca94d2d080c1d21921963565cf7cd7b5f46ed"
     }
   ],
   "primary_literature": [
@@ -115,6 +152,26 @@
       "identifier": "arXiv:0801.4069v1 (2008)",
       "used_claim": "Theorem1, canonical acyclic block decomposition; established precedent only",
       "access_date": "2026-11-13"
+    },
+    {
+      "url": "https://arxiv.org/html/2412.10572v3#S3.SS4",
+      "authors": "John Irving and Mohamed Omar",
+      "title": "Revisiting The Redei-Berge Symmetric Functions via Matrix Algebra",
+      "identifier": "arXiv:2412.10572v3 (2025 revision)",
+      "used_claim": "Corollary20 odd-cycle collection formula, attributed there to Grinberg-Stanley",
+      "access_date": "2026-11-13"
+    }
+  ],
+  "audited_selector_sources": [
+    {
+      "path": "05-knowledge/results/changing_core_returns_20261113/selector/PROOF.md",
+      "sha256": "a8b0b3c8e3002bc681a5ea5ee222cfbf8797d4d675843cb79e5370e0e5b2de69",
+      "hash_basis": "working file at audit time"
+    },
+    {
+      "path": "05-knowledge/results/changing_core_returns_20261113/selector/receipt.json",
+      "sha256": "5990eb4b8c69c300706d9a2fd5d2f0b218e0e157412ec3bea5343d9d82dadf87",
+      "hash_basis": "working file at audit time"
     }
   ]
 }
