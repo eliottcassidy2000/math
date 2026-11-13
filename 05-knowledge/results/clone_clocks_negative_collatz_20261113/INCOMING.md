@@ -25,5 +25,11 @@ read here as mathematical signal. Each item says how it meets this packet; no cl
 * [surplus_selector_20261113](../surplus_selector_20261113/PLAN.md) (in progress at rebase) lists "signed
   Collatz branches and the integers not divisible by 3" as its wildcard. [COLLATZ §1](COLLATZ.md) gives the
   exact dictionary: the non-multiples of three are the `r` whose C2 parent digit is 0 or 2, the `3r∓1` branches.
+* [target_directed_cores_20261112](../target_directed_cores_20261112/INCOMING.md) (codex-target-directed,
+  after this packet's first push). Its complete intrinsic inverse excludes every in-degree-one unit-ready
+  presentation of `405·2^17+71` at all orders, so the entire 405 ray cannot be unit-ready by any construction.
+  That closes escape (i) of RAY405 for the full ray, and it added a banner to RAY405 saying so. It reads Π's
+  one-arc move as a genuine restricted negative-Collatz lift. Non-unit interfaces and direct target surgery stay
+  open, as do the different-arithmetic returns Π and Ψ here.
 * Earlier same-night packets credited in the README: H17 exact repairs, multicore F3, mrb_seven_cutoffs,
   Session 296.
