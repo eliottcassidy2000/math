@@ -1,0 +1,172 @@
+{
+  "research_base": "f90cd879d156a37f0027d1719a25b8731918db6a",
+  "incoming_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+  "scope": "Historical source bytes read for this packet; future working-tree source edits do not invalidate these historical pins.",
+  "files": {
+    "00-navigation/META-PATTERNS.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "59def444882d34520e988626821b1826686232eb22b569184f6f02b58b5c2b5d",
+      "bytes": 27146
+    },
+    "00-navigation/RESEARCH-PROTOCOL.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "bytes": 10465
+    },
+    "01-canon/ACTIVE-GUARDRAILS.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "906ae3d7a2fcd70f7170f3b529ca6056c7bc2f4b053bc7fa811ef477eeed3cee",
+      "bytes": 23381
+    },
+    "01-canon/theorems/THM-024-involution-anti-aut.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "b3c1ffaab6d1c6fbc7c72611c51dc743ba18b34840207f622e01827b5760287e",
+      "bytes": 2953
+    },
+    "01-canon/theorems/THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d",
+      "bytes": 23768
+    },
+    "01-canon/theorems/THM-4752-tournament-scores-in-ii-25-1-backward-length-and-the-a24-deep-hole.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "6a1337f0b4249d897ca352c8deb0614b42251c645a0b078b132b1d3682520b69",
+      "bytes": 12008
+    },
+    "01-canon/theorems/THM-4838-von-staudt-clausen-as-reciprocal-sum-thresholds-orbifold-euler-characteristics-triangle-groups-2-3-p-and-the-twelve-behind-the-owners-sets.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "f6d59c36836ef3b1a77dde7bab0c8a5cc81ef67537eb3b569fda3dec8d91025f",
+      "bytes": 5542
+    },
+    "01-canon/theorems/THM-4857-the-gf2-automaton-of-a-tournament-classifies-the-merged-metagraph-exactly-through-order-five-circulants-are-additive-cellular-automata-and-paley-tournaments-give-quadratic-residue-codes.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "cf0ad43ede8ab39d20f430ad1ef2db90538219c2d1d08bb3a438e6293cd7a558",
+      "bytes": 9837
+    },
+    "01-canon/theorems/THM-4860-the-prime-square-sum-graph-is-bipartite-by-residue-mod-4-two-primes-1-mod-3-are-never-adjacent-chebyshev-bias-obstruction-to-prime-square-sum-paths-none-below-615731-and-the-25-primes-below-100-by-ogg-layer.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "c69fabfbd52d50e475b19cd04b6e49cce729da689b6e71e4c976af39429ca19f",
+      "bytes": 11598
+    },
+    "01-canon/theorems/THM-4922-first-creators-of-hamiltonian-path-counts-converse-fibers-endpoint-genealogy.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "cef4afa6aa13cbdcb6bd20e142b896871059c1ad703ef7e6e05422761ff9141d",
+      "bytes": 6251
+    },
+    "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+      "bytes": 34249
+    },
+    "05-knowledge/reference/CORE-PAPERS-RECIPROCAL-SEQUENCES.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "1a50530db8d6e2b0575ab62a303c23f183f2d40ab2d59963a1a35940a16d1532",
+      "bytes": 2538
+    },
+    "05-knowledge/reference/CORE-PAPERS.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+      "bytes": 42860
+    },
+    "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe",
+      "bytes": 15376
+    },
+    "05-knowledge/results/paired_recursions_20261103/PAIRINGS.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "a3263bbb8c5e79616721f27330b7eb1338faf4f25fb330e6d2f73872dc47e1e8",
+      "bytes": 7276
+    },
+    "05-knowledge/results/residue_290_transport_20261102/tournament/README.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "21e50788bc4e88bf3a7cb9bec9df114308d0bf55bb19d2d27c66d09035e94cd5",
+      "bytes": 10757
+    },
+    "05-knowledge/results/session28_modular_spectral_20261022/session28-lorentzian/GEOMETRY.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "65b4c32f861f1e6b450fbf383af24736bf86eabbcca3135d2d07648d8c384933",
+      "bytes": 12237
+    },
+    "05-knowledge/results/session314_metagraph_constraint_algebra_20261113/ALIGNMENT_RECURRENCE.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "202db02b441ebc58f37ebad4834385bb74f0937590228e1150898fefbdebda00",
+      "bytes": 7581
+    },
+    "05-knowledge/results/session314_metagraph_constraint_algebra_20261113/ALL_SCORE_SUPPORT.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "298caac16a8e837163db0cb1cae25f358e185664290e02aa839010a5886e500c",
+      "bytes": 3223
+    },
+    "05-knowledge/results/session314_metagraph_constraint_algebra_20261113/HISTORICAL_BRIDGES.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "632a7acc0cea15251513d75f50279a33722812612dbffdee0838a56b6b90281a",
+      "bytes": 14907
+    },
+    "05-knowledge/results/session315_dyadic_pairing_20261113/DYADIC_SPECTRUM.md": {
+      "git_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+      "sha256": "b8ead6c95249077cf3bc67ae288ef8a4e65dc6b48fc462bc5585cd4dc6aab0be",
+      "bytes": 10287
+    },
+    "05-knowledge/results/session315_dyadic_pairing_20261113/HALF_CUTS.md": {
+      "git_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+      "sha256": "b4a66faba1ba8d5b85f8654407c7487c07fdc47dc1fa31acd71ed332c65536ef",
+      "bytes": 2656
+    },
+    "05-knowledge/results/session315_dyadic_pairing_20261113/HISTORY_AND_CLOCKS.md": {
+      "git_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+      "sha256": "4562b058ccc58b12b5f00be129e5214f0f09ecba61c4eae67944dbc84c473a2f",
+      "bytes": 15034
+    },
+    "05-knowledge/results/session315_dyadic_pairing_20261113/PAIRED_SITES.md": {
+      "git_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+      "sha256": "429bc6512e456c7c4540ca3f8e5009fb671dfb4c218e757db189ab96019d03ef",
+      "bytes": 13377
+    },
+    "05-knowledge/results/session315_dyadic_pairing_20261113/README.md": {
+      "git_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+      "sha256": "09f8265fc3cf4d89c5c8c24f58426302263a601a103d296e39adb85758b50784",
+      "bytes": 3559
+    },
+    "05-knowledge/results/session315_dyadic_pairing_20261113/SPECTRUM_AND_SIEVE.md": {
+      "git_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+      "sha256": "06b59c09dd674720e8c4bfe213cc51b206b6fb56ad08642941acb111176a8ab5",
+      "bytes": 6427
+    },
+    "05-knowledge/results/session97_overnight_arithmetic_carriers_20261029/leech/GOLAY_LEECH_SUM_GUARD.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "952459ef196d6309c1c4a1f90c62b51b24c6f76ef4822880794678fa988f3f1b",
+      "bytes": 8806
+    },
+    "05-knowledge/results/session97_overnight_arithmetic_carriers_20261029/supersingular/CYCLIC_KERNEL_RECURRENCE.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "d4fcd4e1ea3e1fdad0ff957095c01971a33e37c14331712a3877a5e8c6275c86",
+      "bytes": 9962
+    },
+    "05-knowledge/results/tournament_hasse_frobenius_20261019/PADDING_FROBENIUS_PROOF.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "7efc364d5bcf48ee1d3cb4cb10943119db4c0fccf5c99b36a0e850d46720bedd",
+      "bytes": 19903
+    },
+    "05-knowledge/results/tournament_joint_parity_20261102/spectrum.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "123e9a79464182ce9811c72cb2125e59bdea66e45cc632a20a058241996cbd36",
+      "bytes": 12881
+    },
+    "05-knowledge/results/tournament_joint_parity_20261102/toothpick.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "b4d83e0aaa3a1b498853b3dbb0113991db8ed676945c5ba8931079e3f70d58f3",
+      "bytes": 13196
+    },
+    "05-knowledge/results/weighted_crt_clocks_20261028/ETA_RECURRENCE.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "69b8e4ccec6a2e8bc0a726f1bfc57f2d032c6687771e8014841f4530b5e7578c",
+      "bytes": 2549
+    },
+    "AGENTS.md": {
+      "git_commit": "f90cd879d156a37f0027d1719a25b8731918db6a",
+      "sha256": "c1e58986eaf9b07b01d9092328400bbcc25ed0e3db2e243ed0351906d996a5ea",
+      "bytes": 6990
+    }
+  }
+}

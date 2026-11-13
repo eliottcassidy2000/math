@@ -1,0 +1,360 @@
+{
+  "audit_code_sha256": "355ffe3dbd5bad5fad7934f3bfcbcba5083bc16197ea7ba3b5f0548a1aac1dc4",
+  "eta": [
+    {
+      "N": 2,
+      "cusp_orders": {
+        "1": "1",
+        "2": "-1"
+      },
+      "degree": 80,
+      "first13": [
+        1,
+        -24,
+        276,
+        -2048,
+        11202,
+        -49152,
+        184024,
+        -614400,
+        1881471,
+        -5373952,
+        14478180,
+        -37122048,
+        91231550
+      ],
+      "first_odd_degree": 8,
+      "r": 24,
+      "root_depth": 3
+    },
+    {
+      "N": 3,
+      "cusp_orders": {
+        "1": "1",
+        "3": "-1"
+      },
+      "degree": 80,
+      "first13": [
+        1,
+        -12,
+        54,
+        -76,
+        -243,
+        1188,
+        -1384,
+        -2916,
+        11934,
+        -11580,
+        -21870,
+        79704,
+        -71022
+      ],
+      "first_odd_degree": 4,
+      "r": 12,
+      "root_depth": 2
+    },
+    {
+      "N": 4,
+      "cusp_orders": {
+        "1": "1",
+        "2": "0",
+        "4": "-1"
+      },
+      "degree": 80,
+      "first13": [
+        1,
+        -8,
+        20,
+        0,
+        -62,
+        0,
+        216,
+        0,
+        -641,
+        0,
+        1636,
+        0,
+        -3778
+      ],
+      "first_odd_degree": 8,
+      "r": 8,
+      "root_depth": 3
+    },
+    {
+      "N": 5,
+      "cusp_orders": {
+        "1": "1",
+        "5": "-1"
+      },
+      "degree": 80,
+      "first13": [
+        1,
+        -6,
+        9,
+        10,
+        -30,
+        6,
+        -25,
+        96,
+        60,
+        -250,
+        45,
+        -150,
+        544
+      ],
+      "first_odd_degree": 2,
+      "r": 6,
+      "root_depth": 1
+    },
+    {
+      "N": 7,
+      "cusp_orders": {
+        "1": "1",
+        "7": "-1"
+      },
+      "degree": 80,
+      "first13": [
+        1,
+        -4,
+        2,
+        8,
+        -5,
+        -4,
+        -10,
+        12,
+        -7,
+        8,
+        46,
+        -36,
+        -26
+      ],
+      "first_odd_degree": 4,
+      "r": 4,
+      "root_depth": 2
+    },
+    {
+      "N": 9,
+      "cusp_orders": {
+        "1": "1",
+        "3": "0",
+        "9": "-1"
+      },
+      "degree": 80,
+      "first13": [
+        1,
+        -3,
+        0,
+        5,
+        0,
+        0,
+        -7,
+        0,
+        0,
+        3,
+        0,
+        0,
+        15
+      ],
+      "first_odd_degree": 1,
+      "r": 3,
+      "root_depth": 0
+    },
+    {
+      "N": 13,
+      "cusp_orders": {
+        "1": "1",
+        "13": "-1"
+      },
+      "degree": 80,
+      "first13": [
+        1,
+        -2,
+        -1,
+        2,
+        1,
+        2,
+        -2,
+        0,
+        -2,
+        -2,
+        1,
+        0,
+        0
+      ],
+      "first_odd_degree": 2,
+      "r": 2,
+      "root_depth": 1
+    },
+    {
+      "N": 25,
+      "cusp_orders": {
+        "1": "1",
+        "25": "-1",
+        "5": "0"
+      },
+      "degree": 80,
+      "first13": [
+        1,
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "first_odd_degree": 1,
+      "r": 1,
+      "root_depth": 0
+    }
+  ],
+  "signed": [
+    {
+      "literal_signed_pair_tournaments": 2,
+      "literal_signed_tournaments": 2,
+      "m": 3,
+      "negative_reflection_fixed_vertices": [
+        2
+      ],
+      "pair_vertices": 3,
+      "signed_obstruction": null
+    },
+    {
+      "literal_cyclic_pair_tournaments": 512,
+      "literal_signed_tournaments": 4,
+      "m": 5,
+      "negative_reflection_fixed_vertices": [
+        6,
+        7
+      ],
+      "pair_vertices": 10,
+      "signed_obstruction": {
+        "negative": 1,
+        "pair": [
+          0,
+          8
+        ],
+        "permutation": [
+          0,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          9,
+          8,
+          7
+        ],
+        "swap": 0
+      }
+    },
+    {
+      "m": 7,
+      "negative_reflection_fixed_vertices": [
+        10,
+        13,
+        15
+      ],
+      "pair_vertices": 21,
+      "signed_obstruction": {
+        "negative": 1,
+        "pair": [
+          0,
+          14
+        ],
+        "permutation": [
+          0,
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          20,
+          19,
+          17,
+          14,
+          18,
+          16,
+          13,
+          15,
+          12,
+          11
+        ],
+        "swap": 0
+      }
+    },
+    {
+      "m": 9,
+      "negative_reflection_fixed_vertices": [
+        14,
+        19,
+        23,
+        26
+      ],
+      "pair_vertices": 36,
+      "signed_obstruction": {
+        "negative": 1,
+        "pair": [
+          0,
+          20
+        ],
+        "permutation": [
+          0,
+          14,
+          13,
+          12,
+          11,
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          35,
+          34,
+          32,
+          29,
+          25,
+          20,
+          33,
+          31,
+          28,
+          24,
+          19,
+          30,
+          27,
+          23,
+          18,
+          26,
+          22,
+          17,
+          21,
+          16,
+          15
+        ],
+        "swap": 0
+      }
+    }
+  ],
+  "source_hashes": {
+    "BRIDGES.md": "f65914985afd0015116516c05ed09dafc38b3ce2e26c5bffd9b1854127c3d216",
+    "check.json": "39f70f3ddbd0de375bc68adcf72d88448c66e05c196c9de87bb32b9189c535de",
+    "check.py": "69afc608987887d9fd8dbefb13e434c2c7acf0da9a93126967fbd10c55c4609f"
+  },
+  "status": "PASS: independent finite controls and source-input audit"
+}

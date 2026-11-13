@@ -1,0 +1,48 @@
+{
+  "purpose": "Exact reversible status/title promotions after proof review; finite and cited statuses remain distinct. Original review snapshots are reconstructible by reversing these replacements.",
+  "files": {
+    "pairings/PROOF.md": {
+      "before_sha256": "1c5dd12a4ffcf8d52e59f9414fc00d5b4ed4b504cb6b31065e44e188de35dfed",
+      "after_sha256": "b200b4d5c8c95ad96b3146cb243d02d0a6e9a26930e548bed27700188b3e9f85",
+      "edits": [
+        {
+          "old": "**Status: RESERVED / proof candidate under independent audit.** The arguments\nP1–P4 below are complete elementary derivations from the stated inherited\nmechanisms; they are not yet promoted canon. The independent executable gives\n**FINITE-EXACT** controls. Chan–Pak completeness remains **OPEN**.",
+          "new": "**Status: PROVED IN NOTES, P1–P4; independently audited.** The arguments\nare elementary derivations from the stated inherited mechanisms. The\nexecutables give **FINITE-EXACT** controls. See the root [audit](../AUDIT.md)\nand byte-level [promotion record](../PROMOTIONS.json). Chan–Pak completeness\nremains **OPEN**.",
+          "count": 1
+        }
+      ]
+    },
+    "metagraph/PROOF.md": {
+      "before_sha256": "1eb44268e5bbbfc1f374f97281cf4def000d6dab6c3bcd72352412d17874d9db",
+      "after_sha256": "b57778f4a5d4bd97fcf977a2a2ce44db9aa03033ce77e6c7d6b864ab1e9cefbf",
+      "edits": [
+        {
+          "old": "RESERVED / PROOF CANDIDATE pending final independent root audit",
+          "new": "PROVED IN NOTES after independent root audit; see [AUDIT.md](../AUDIT.md)",
+          "count": 1
+        }
+      ]
+    },
+    "sporadic/BRIDGES.md": {
+      "before_sha256": "f84faf01b59b8a0a212090e93f6ac8213ada4c4400206ffe62c7fe7c80c6588f",
+      "after_sha256": "f65914985afd0015116516c05ed09dafc38b3ce2e26c5bffd9b1854127c3d216",
+      "edits": [
+        {
+          "old": "# Pair lifts can destroy signed orientation; eta recurrences require growing memory",
+          "new": "# Signed pair lifts and eta coefficients beyond fixed finite-matrix recurrences",
+          "count": 1
+        },
+        {
+          "old": "**Status: RESERVED / proof candidates pending independent audit.** The scoped elementary arguments below are not promoted canon;\nliterature inputs **CITED**; specified computations **FINITE-EXACT**.",
+          "new": "**Status: PROVED IN NOTES, Propositions1–4 including3a, after independent audit.**\nLiterature inputs remain **CITED**; specified computations **FINITE-EXACT**.\nSee the root [audit](../AUDIT.md) and [promotion record](../PROMOTIONS.json).",
+          "count": 1
+        },
+        {
+          "old": ", RESERVED proof candidate (",
+          "new": ", PROVED IN NOTES (",
+          "count": 5
+        }
+      ]
+    }
+  }
+}
