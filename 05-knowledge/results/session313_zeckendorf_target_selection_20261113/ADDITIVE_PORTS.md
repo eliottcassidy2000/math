@@ -41,3 +41,14 @@ The other module $(24,17,3,6,12)$ has $(h,q)=(15,120)$. Cuts with masks 5 and 3 
 For the repeated order-five binary bank, every count is at least $9^n$: every path of the ordinal chain admits an insertion of the apex, and deleting it recovers the original path. Thus through target $X$, all bank lengths together supply at most $\sum_{n\le\log_9 X}2^n=O(X^{\log_9 2})$ counts. This is a zero-density family. The switches are truly independent, but they do not generate offsets at sufficient density or anchor a prescribed target. The pure $+2$ switch does not by itself solve that problem either: it needs a family whose unshifted values hit the adjacent targets.
 
 The next quantitative design test is to find interacting port responses that give enough choices per multiplicative cost, and verify overlap on the actual output ranges. The symbolic Fibonacci/Jacobsthal decoder tells us what such a range proof could look like; it is not a substitute for the physical anchors.
+
+## A physical target decoder in a sparse 19-adic family
+
+The order-six core with outgoing masks $(40,1,3,6,15,30)$ (also used in Session 309) has $(h,q)=(19,256)$. The out-cut masks 40 and 17 have the same $(s,s^*)=(8,94)$, with $(e,e^*,b)$ equal to $(15,175,72)$ and $(17,187,78)$. Switch from 40 to 17. At site $i$ the resulting increment in the repeated core bank is
+$$
+w_i=22\,19^{n-1}+1128\sum_{j=1}^{i-1}256^{i-j-1}19^{n-i+j-1}
+\quad(i<n),
+$$
+and at $i=n$ use 8 instead of 22 in the first term. The 22 is $6+2\cdot8$ (local offset plus adjacent right start); the terminal 8 is $6+2$ because the right side is empty. For $i=1$, the sum is empty and the leading coefficient (22 or 8) is a unit mod 19. For $i\ge2$, the $j=1$ term is the unique term of valuation $n-i$, and its coefficient $1128\cdot256^{i-2}$ is a unit. Thus $v_{19}(w_i)=n-i$ for every site.
+
+Subtract the all-40 baseline from a prescribed target. Reduce mod 19 to identify the final switch bit: the residue must be 0 or the unit of $w_n$. Subtract its contribution, divide by 19, and continue backward. This is a genuine exact selector for the physical bank: reject as soon as a residue is illegal, then require the final integer remainder to be zero. The latest differing site of two words determines the valuation of their exact count difference. Thus this bank realizes a full binary prefix tree of target addresses in 19-adic distance, but only $2^n$ of $19^n$ residue classes at length $n$. The terminal remainder test separates exact targeting from a residue match. No claim of all odd counts follows.
