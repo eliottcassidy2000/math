@@ -1,0 +1,261 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "source_H": 881,
+      "target": 1691,
+      "source_rows": [
+        518,
+        388,
+        456,
+        1011,
+        487,
+        455,
+        387,
+        257,
+        1,
+        502
+      ],
+      "ports": [
+        {
+          "port": 0,
+          "deletion_H": 27,
+          "one_start_entries": [
+            1,
+            2,
+            6
+          ],
+          "zero_start_entries": [
+            7,
+            8
+          ]
+        },
+        {
+          "port": 1,
+          "deletion_H": 277,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 2,
+          "deletion_H": 61,
+          "one_start_entries": [],
+          "zero_start_entries": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "port": 3,
+          "deletion_H": 193,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 4,
+          "deletion_H": 369,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 5,
+          "deletion_H": 369,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 6,
+          "deletion_H": 391,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 7,
+          "deletion_H": 415,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 8,
+          "deletion_H": 415,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 9,
+          "deletion_H": 141,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        }
+      ],
+      "unique_start_star_choices": 12,
+      "hits": [
+        {
+          "port": 0,
+          "outneighbors": [
+            1,
+            7
+          ],
+          "star_flips": [
+            2,
+            7,
+            9
+          ],
+          "parent_rows": [
+            130,
+            388,
+            457,
+            1011,
+            487,
+            455,
+            387,
+            256,
+            1,
+            503
+          ],
+          "parent_state": [
+            153,
+            1,
+            27,
+            1539
+          ],
+          "parent_strong": true,
+          "output_rows": [
+            1154,
+            388,
+            457,
+            1011,
+            487,
+            455,
+            387,
+            256,
+            1,
+            503,
+            1022
+          ],
+          "output_root": 10,
+          "output_state": [
+            1691,
+            152,
+            153,
+            1692
+          ],
+          "output_strong": true
+        }
+      ]
+    },
+    {
+      "source_H": 1691,
+      "target": 3311,
+      "source_rows": [
+        1154,
+        388,
+        457,
+        1011,
+        487,
+        455,
+        387,
+        256,
+        1,
+        503,
+        1022
+      ],
+      "ports": [
+        {
+          "port": 0,
+          "deletion_H": 27,
+          "one_start_entries": [],
+          "zero_start_entries": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "port": 1,
+          "deletion_H": 531,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 2,
+          "deletion_H": 165,
+          "one_start_entries": [
+            0,
+            7,
+            8
+          ],
+          "zero_start_entries": []
+        },
+        {
+          "port": 3,
+          "deletion_H": 281,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 4,
+          "deletion_H": 675,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 5,
+          "deletion_H": 675,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 6,
+          "deletion_H": 699,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 7,
+          "deletion_H": 1055,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 8,
+          "deletion_H": 455,
+          "one_start_entries": [],
+          "zero_start_entries": [
+            7
+          ]
+        },
+        {
+          "port": 9,
+          "deletion_H": 675,
+          "one_start_entries": [],
+          "zero_start_entries": []
+        },
+        {
+          "port": 10,
+          "deletion_H": 153,
+          "one_start_entries": [
+            0,
+            7,
+            8
+          ],
+          "zero_start_entries": []
+        }
+      ],
+      "unique_start_star_choices": 6,
+      "hits": []
+    }
+  ]
+}

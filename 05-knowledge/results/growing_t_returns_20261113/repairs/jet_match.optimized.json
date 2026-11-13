@@ -1,0 +1,383 @@
+{
+  "status": "PASS",
+  "scope": "Every resource vertex of the complete three strong unit-ready3311 cores; inherited complete finite head",
+  "target_coefficients": [
+    3311,
+    3148,
+    936
+  ],
+  "vertices": 37,
+  "K2_matches": [],
+  "records": [
+    {
+      "parent_order": 10,
+      "parent_rank": 577,
+      "order": 11,
+      "ready_root": 10,
+      "module_vertex": 0,
+      "H2": 17821,
+      "K2": 7255,
+      "K2_match": false
+    },
+    {
+      "parent_order": 10,
+      "parent_rank": 577,
+      "order": 11,
+      "ready_root": 10,
+      "module_vertex": 1,
+      "H2": 8615,
+      "K2": 2652,
+      "K2_match": false
+    },
+    {
+      "parent_order": 10,
+      "parent_rank": 577,
+      "order": 11,
+      "ready_root": 10,
+      "module_vertex": 2,
+      "H2": 16825,
+      "K2": 6757,
+      "K2_match": false
+    },
+    {
+      "parent_order": 10,
+      "parent_rank": 577,
+      "order": 11,
+      "ready_root": 10,
+      "module_vertex": 3,
+      "H2": 13011,
+      "K2": 4850,
+      "K2_match": false
+    },
+    {
+      "parent_order": 10,
+      "parent_rank": 577,
+      "order": 11,
+      "ready_root": 10,
+      "module_vertex": 4,
+      "H2": 11849,
+      "K2": 4269,
+      "K2_match": false
+    },
+    {
+      "parent_order": 10,
+      "parent_rank": 577,
+      "order": 11,
+      "ready_root": 10,
+      "module_vertex": 5,
+      "H2": 9811,
+      "K2": 3250,
+      "K2_match": false
+    },
+    {
+      "parent_order": 10,
+      "parent_rank": 577,
+      "order": 11,
+      "ready_root": 10,
+      "module_vertex": 6,
+      "H2": 8417,
+      "K2": 2553,
+      "K2_match": false
+    },
+    {
+      "parent_order": 10,
+      "parent_rank": 577,
+      "order": 11,
+      "ready_root": 10,
+      "module_vertex": 7,
+      "H2": 9577,
+      "K2": 3133,
+      "K2_match": false
+    },
+    {
+      "parent_order": 10,
+      "parent_rank": 577,
+      "order": 11,
+      "ready_root": 10,
+      "module_vertex": 8,
+      "H2": 9415,
+      "K2": 3052,
+      "K2_match": false
+    },
+    {
+      "parent_order": 10,
+      "parent_rank": 577,
+      "order": 11,
+      "ready_root": 10,
+      "module_vertex": 9,
+      "H2": 7067,
+      "K2": 1878,
+      "K2_match": false
+    },
+    {
+      "parent_order": 10,
+      "parent_rank": 577,
+      "order": 11,
+      "ready_root": 10,
+      "module_vertex": 10,
+      "H2": 9395,
+      "K2": 3042,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 0,
+      "H2": 159265,
+      "K2": 77977,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 1,
+      "H2": 10165,
+      "K2": 3427,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 2,
+      "H2": 8487,
+      "K2": 2588,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 3,
+      "H2": 8061,
+      "K2": 2375,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 4,
+      "H2": 6491,
+      "K2": 1590,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 5,
+      "H2": 6491,
+      "K2": 1590,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 6,
+      "H2": 6587,
+      "K2": 1638,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 7,
+      "H2": 6587,
+      "K2": 1638,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 8,
+      "H2": 6797,
+      "K2": 1743,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 9,
+      "H2": 6317,
+      "K2": 1503,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 10,
+      "H2": 7307,
+      "K2": 1998,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 11,
+      "H2": 7307,
+      "K2": 1998,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 12,
+      "H2": 8387,
+      "K2": 2538,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 0,
+      "H2": 107391,
+      "K2": 52040,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 1,
+      "H2": 11963,
+      "K2": 4326,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 2,
+      "H2": 8179,
+      "K2": 2434,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 3,
+      "H2": 8179,
+      "K2": 2434,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 4,
+      "H2": 9379,
+      "K2": 3034,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 5,
+      "H2": 6655,
+      "K2": 1672,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 6,
+      "H2": 6655,
+      "K2": 1672,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 7,
+      "H2": 6731,
+      "K2": 1710,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 8,
+      "H2": 6731,
+      "K2": 1710,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 9,
+      "H2": 6067,
+      "K2": 1378,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 10,
+      "H2": 6067,
+      "K2": 1378,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 11,
+      "H2": 8813,
+      "K2": 2751,
+      "K2_match": false
+    },
+    {
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "ready_root": 12,
+      "module_vertex": 12,
+      "H2": 8219,
+      "K2": 2454,
+      "K2_match": false
+    }
+  ]
+}

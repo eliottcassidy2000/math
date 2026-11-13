@@ -1,0 +1,123 @@
+{
+  "status": "FINITE-EXACT controls for scoped proved statements",
+  "universe": {
+    "odd_targets": "1..201, excluding multiples of3",
+    "exponents": "1..24",
+    "iterate_depth": "0..6",
+    "binary_width": "0..5, all suffixes",
+    "stencil_j": "0..24",
+    "physical_graphs": "four inherited404-ray graphs, orders10..13",
+    "module_cores": "eleven literal strong71 cores from inherited complete head",
+    "hereditary_products": "36 ordered pairs of six literal graphs"
+  },
+  "inverse_cases": 1608,
+  "first_return_table": [
+    [
+      1,
+      1,
+      2,
+      1,
+      2
+    ],
+    [
+      2,
+      1,
+      2,
+      -1,
+      1
+    ],
+    [
+      2,
+      -1,
+      1,
+      -1,
+      2
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "stencil_cases": 1575,
+  "physical_404_ray": [
+    {
+      "h": 879,
+      "t": 71,
+      "amplitude": 808,
+      "n": 269,
+      "sign": 1,
+      "mod3": 2
+    },
+    {
+      "h": 1687,
+      "t": 71,
+      "amplitude": 1616,
+      "n": 539,
+      "sign": -1,
+      "mod3": 2
+    },
+    {
+      "h": 3303,
+      "t": 71,
+      "amplitude": 3232,
+      "n": 1077,
+      "sign": 1,
+      "mod3": 0
+    },
+    {
+      "h": 6535,
+      "t": 71,
+      "amplitude": 6464,
+      "n": 2155,
+      "sign": -1,
+      "mod3": 1
+    }
+  ],
+  "strong71_P2_values": [
+    1012,
+    1012,
+    1012,
+    1012,
+    1072,
+    1012,
+    1012,
+    1976,
+    1976,
+    1976,
+    1976
+  ],
+  "hereditary_product_cases": 36,
+  "same_H_hostile": {
+    "first_rows": [
+      46,
+      44,
+      40,
+      48,
+      39,
+      0
+    ],
+    "second_rows": [
+      58,
+      60,
+      57,
+      16,
+      32,
+      8
+    ],
+    "H": 9,
+    "first_I": [
+      1,
+      3,
+      5,
+      9
+    ],
+    "second_I": [
+      1,
+      3,
+      9
+    ]
+  }
+}

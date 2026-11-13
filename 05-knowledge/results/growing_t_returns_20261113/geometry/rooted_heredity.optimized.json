@@ -1,0 +1,279 @@
+{
+  "status": "FINITE-EXACT all labelled rooted tournaments of orders1..5",
+  "counts": {
+    "tournaments": 1099,
+    "rooted_tournaments": 5405,
+    "positive_start_restrictions": 59509,
+    "unit_ready_roots": 656,
+    "unit_ready_restrictions": 10012,
+    "subdoubling_subsets": 624
+  },
+  "source_pins": [
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/alternatives/NOTE.md",
+      "sha256": "2551e403fea8876cded588cca929e4d35945a6d0c5662e7c5cb0580123a44c3f"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/READY_REPAIR.md",
+      "sha256": "70506b11fbc5409d8378825ff7c6b7c5f98cbad55adac84009d2177edceaa5c6"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/READY.md",
+      "sha256": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c"
+    },
+    {
+      "path": "05-knowledge/results/changing_core_returns_20261113/preparation/NEUTRAL_881.md",
+      "sha256": "50fd0e2685f84e82be64b50fa4047bce65c4d311c6c5828074a9cd2ed5584d50"
+    }
+  ],
+  "source881_menus": [
+    {
+      "name": "A2",
+      "rows": [
+        518,
+        388,
+        456,
+        1011,
+        487,
+        455,
+        387,
+        257,
+        1,
+        502
+      ],
+      "states": [
+        {
+          "root": 0,
+          "state": [
+            881,
+            14,
+            27,
+            2026
+          ],
+          "readiness_defect": 1145
+        },
+        {
+          "root": 1,
+          "state": [
+            881,
+            48,
+            277,
+            3626
+          ],
+          "readiness_defect": 2745
+        },
+        {
+          "root": 2,
+          "state": [
+            881,
+            61,
+            61,
+            1335
+          ],
+          "readiness_defect": 454
+        },
+        {
+          "root": 3,
+          "state": [
+            881,
+            183,
+            193,
+            891
+          ],
+          "readiness_defect": 10
+        },
+        {
+          "root": 4,
+          "state": [
+            881,
+            214,
+            369,
+            1218
+          ],
+          "readiness_defect": 337
+        },
+        {
+          "root": 5,
+          "state": [
+            881,
+            133,
+            369,
+            1773
+          ],
+          "readiness_defect": 892
+        },
+        {
+          "root": 6,
+          "state": [
+            881,
+            72,
+            391,
+            3182
+          ],
+          "readiness_defect": 2301
+        },
+        {
+          "root": 7,
+          "state": [
+            881,
+            28,
+            415,
+            6716
+          ],
+          "readiness_defect": 5835
+        },
+        {
+          "root": 8,
+          "state": [
+            881,
+            14,
+            415,
+            9574
+          ],
+          "readiness_defect": 8693
+        },
+        {
+          "root": 9,
+          "state": [
+            881,
+            114,
+            141,
+            1066
+          ],
+          "readiness_defect": 185
+        }
+      ],
+      "strong": true,
+      "minimum_starts": 14,
+      "minimum_readiness_defect": 10,
+      "forbidden_ready_interval": [
+        881,
+        1761
+      ],
+      "interval_upper_endpoint_is_open": true
+    },
+    {
+      "name": "B9",
+      "rows": [
+        354,
+        228,
+        425,
+        179,
+        231,
+        192,
+        140,
+        1,
+        250
+      ],
+      "states": [
+        {
+          "root": 0,
+          "state": [
+            881,
+            40,
+            73,
+            1472
+          ],
+          "readiness_defect": 591
+        },
+        {
+          "root": 1,
+          "state": [
+            881,
+            105,
+            259,
+            1773
+          ],
+          "readiness_defect": 892
+        },
+        {
+          "root": 2,
+          "state": [
+            881,
+            102,
+            167,
+            1242
+          ],
+          "readiness_defect": 361
+        },
+        {
+          "root": 3,
+          "state": [
+            881,
+            123,
+            175,
+            1219
+          ],
+          "readiness_defect": 338
+        },
+        {
+          "root": 4,
+          "state": [
+            881,
+            193,
+            309,
+            1179
+          ],
+          "readiness_defect": 298
+        },
+        {
+          "root": 5,
+          "state": [
+            881,
+            54,
+            331,
+            3338
+          ],
+          "readiness_defect": 2457
+        },
+        {
+          "root": 6,
+          "state": [
+            881,
+            55,
+            137,
+            1871
+          ],
+          "readiness_defect": 990
+        },
+        {
+          "root": 7,
+          "state": [
+            881,
+            40,
+            257,
+            4208
+          ],
+          "readiness_defect": 3327
+        },
+        {
+          "root": 8,
+          "state": [
+            881,
+            169,
+            201,
+            977
+          ],
+          "readiness_defect": 96
+        }
+      ],
+      "strong": true,
+      "minimum_starts": 40,
+      "minimum_readiness_defect": 96,
+      "forbidden_ready_interval": [
+        881,
+        1761
+      ],
+      "interval_upper_endpoint_is_open": true
+    }
+  ],
+  "positivity_guard_hostile": {
+    "rows": [
+      2,
+      0
+    ],
+    "root": 1,
+    "full_starts": 0,
+    "singleton_starts": 1
+  }
+}

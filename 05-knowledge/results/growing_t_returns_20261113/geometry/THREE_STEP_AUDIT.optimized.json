@@ -1,0 +1,152 @@
+{
+  "status": "FINITE-EXACT independent full physical audit accepted",
+  "scope": "one helper and three target returns with old-arc repairs; no all-k claim",
+  "stages": [
+    {
+      "stage": "helper",
+      "order": 11,
+      "root": 10,
+      "state": [
+        1589,
+        698,
+        881,
+        1772
+      ],
+      "strong": true
+    },
+    {
+      "stage": "parent351",
+      "order": 11,
+      "root": 0,
+      "state": [
+        351,
+        1,
+        3,
+        1341
+      ],
+      "strong": true
+    },
+    {
+      "stage": "ready1691",
+      "order": 12,
+      "root": 11,
+      "state": [
+        1691,
+        350,
+        351,
+        1692
+      ],
+      "strong": true
+    },
+    {
+      "stage": "parent853",
+      "order": 12,
+      "root": 0,
+      "state": [
+        853,
+        1,
+        5,
+        2459
+      ],
+      "strong": true
+    },
+    {
+      "stage": "ready3311",
+      "order": 13,
+      "root": 12,
+      "state": [
+        3311,
+        852,
+        853,
+        3312
+      ],
+      "strong": true
+    },
+    {
+      "stage": "parent495",
+      "order": 13,
+      "root": 0,
+      "state": [
+        495,
+        1,
+        33,
+        6057
+      ],
+      "strong": false
+    },
+    {
+      "stage": "ready6551_before_deletion",
+      "order": 14,
+      "root": 13,
+      "state": [
+        6551,
+        494,
+        495,
+        6552
+      ],
+      "strong": false
+    },
+    {
+      "stage": "ready6551_final",
+      "order": 13,
+      "root": 12,
+      "state": [
+        6551,
+        494,
+        495,
+        6552
+      ],
+      "strong": true
+    }
+  ],
+  "patch_widths": [
+    5,
+    6,
+    12
+  ],
+  "canonical_to_actual_names": [
+    0,
+    2,
+    3,
+    10,
+    9,
+    4,
+    5,
+    6,
+    1,
+    7,
+    8,
+    11
+  ],
+  "deleted_old_name": 8,
+  "source_pins": [
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/repairs/chain_881_1691_3311_6551.json",
+      "sha256": "c146236ef11e9f79d1bc39798edb41dcd5d4fa34f0a95cf5e9038c00480fbce9"
+    },
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/repairs/chain_881_1691_3311_6551.optimized.json",
+      "sha256": "c146236ef11e9f79d1bc39798edb41dcd5d4fa34f0a95cf5e9038c00480fbce9"
+    },
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/repairs/chain_881_1691_3311_6551.py",
+      "sha256": "62443935f9cd03183da2f358ca6cf08678fdaa4c42a0a5ef7f73051866eb4316"
+    },
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/repairs/alternate_1691_inputs.json",
+      "sha256": "12e2c31997fc5c7cc89fa4c65e05b0135c3c78dd2ec051a66554d7ab78294d07"
+    },
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/repairs/helper_alt303_two_star.raw.jsonl",
+      "sha256": "973bd82ab629a7576ae5a7e16d460d317329ebb62efe00aff918803899823f5e"
+    },
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/repairs/alternate303_two_star.raw.jsonl",
+      "sha256": "e18873d94a3aef82ce3da77eccafe4a2a4c557d88f9b69c7b9170c25eb722212"
+    },
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/repairs/alternate6551_two_star.raw.jsonl",
+      "sha256": "180307ccaf4609d5a738b99ba4c947423930af4e68402fabfb5d1a239244d0f3"
+    }
+  ]
+}

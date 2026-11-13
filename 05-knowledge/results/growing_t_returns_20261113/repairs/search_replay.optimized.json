@@ -1,0 +1,392 @@
+{
+  "status": "PASS",
+  "searches": 8,
+  "independent_positive_recounts": 12,
+  "records": [
+    {
+      "raw": "a2_parent_patch.raw.jsonl",
+      "input_order": 10,
+      "target": 1691,
+      "source_sha256": "ad11f2fbe36800c91c6bbbc99677c02e15449c13984c993ab0c9065322913cd0",
+      "raw_sha256": "21c8bbb2a79cdeef873b0e37e3425a3cbf3bd214b0b7985ad3a739bb17368c27",
+      "metadata": [
+        {
+          "status": "PASS",
+          "width": 0,
+          "checked": 1,
+          "one_start": 0,
+          "hits": 0
+        },
+        {
+          "status": "PASS",
+          "width": 1,
+          "checked": 45,
+          "one_start": 0,
+          "hits": 0
+        },
+        {
+          "status": "PASS",
+          "width": 2,
+          "checked": 990,
+          "one_start": 0,
+          "hits": 0
+        },
+        {
+          "status": "PASS",
+          "width": 3,
+          "checked": 14190,
+          "one_start": 0,
+          "hits": 0
+        },
+        {
+          "status": "PASS",
+          "width": 4,
+          "checked": 148995,
+          "one_start": 0,
+          "hits": 0
+        }
+      ],
+      "positive_recounts": []
+    },
+    {
+      "raw": "a2_selective_parent_patch.raw.jsonl",
+      "input_order": 10,
+      "target": 1691,
+      "source_sha256": "b84f6373323a5f426d438326e10de9ed410c99f17e80b8a0d843d03f9dd59b38",
+      "raw_sha256": "1fbfa84ba5568e0739d567907e92579f6680d5915b668835f1c76ffad0763cc5",
+      "metadata": [
+        {
+          "status": "PASS",
+          "width": 0,
+          "checked": 1,
+          "one_start": 0,
+          "hits": 0
+        },
+        {
+          "status": "PASS",
+          "width": 1,
+          "checked": 45,
+          "one_start": 0,
+          "hits": 0
+        },
+        {
+          "status": "PASS",
+          "width": 2,
+          "checked": 990,
+          "one_start": 3,
+          "hits": 0
+        },
+        {
+          "status": "PASS",
+          "width": 3,
+          "checked": 14190,
+          "one_start": 61,
+          "hits": 1
+        },
+        {
+          "status": "PASS",
+          "width": 4,
+          "checked": 148995,
+          "one_start": 587,
+          "hits": 6
+        }
+      ],
+      "positive_recounts": [
+        {
+          "root": 0,
+          "parent_state": [
+            153,
+            1,
+            27,
+            1539
+          ],
+          "output_state": [
+            1691,
+            152,
+            153,
+            1692
+          ],
+          "output_strong": true
+        },
+        {
+          "root": 0,
+          "parent_state": [
+            153,
+            1,
+            27,
+            1539
+          ],
+          "output_state": [
+            1691,
+            152,
+            153,
+            1692
+          ],
+          "output_strong": true
+        },
+        {
+          "root": 0,
+          "parent_state": [
+            153,
+            1,
+            27,
+            1539
+          ],
+          "output_state": [
+            1691,
+            152,
+            153,
+            1692
+          ],
+          "output_strong": true
+        },
+        {
+          "root": 0,
+          "parent_state": [
+            153,
+            1,
+            27,
+            1539
+          ],
+          "output_state": [
+            1691,
+            152,
+            153,
+            1692
+          ],
+          "output_strong": true
+        },
+        {
+          "root": 1,
+          "parent_state": [
+            153,
+            1,
+            27,
+            1539
+          ],
+          "output_state": [
+            1691,
+            152,
+            153,
+            1692
+          ],
+          "output_strong": true
+        },
+        {
+          "root": 8,
+          "parent_state": [
+            153,
+            1,
+            27,
+            1539
+          ],
+          "output_state": [
+            1691,
+            152,
+            153,
+            1692
+          ],
+          "output_strong": true
+        },
+        {
+          "root": 7,
+          "parent_state": [
+            153,
+            1,
+            27,
+            1539
+          ],
+          "output_state": [
+            1691,
+            152,
+            153,
+            1692
+          ],
+          "output_strong": true
+        }
+      ]
+    },
+    {
+      "raw": "two_star_3311.raw.jsonl",
+      "input_order": 11,
+      "target": 3311,
+      "source_sha256": "27a1b4fda74b1f7fa6a5e3a0b86e678229f9daa2e504a64d180374df4c74361f",
+      "raw_sha256": "8c15ac3803459af590f1e7023db6709a7d4b00a640f0610858712f288af11b3f",
+      "metadata": [
+        {
+          "status": "PASS",
+          "stopped_at_first_hit": false,
+          "inner_stars_checked": 56320,
+          "target_face_choices_counted": 14816
+        }
+      ],
+      "positive_recounts": []
+    },
+    {
+      "raw": "alternate298_two_star.raw.jsonl",
+      "input_order": 11,
+      "target": 3311,
+      "source_sha256": "27a1b4fda74b1f7fa6a5e3a0b86e678229f9daa2e504a64d180374df4c74361f",
+      "raw_sha256": "25bdcfbd15bd17c2f4f4cc2045bf9070e17528dcab49cf8b2e54afa34d6468ba",
+      "metadata": [
+        {
+          "status": "PASS",
+          "stopped_at_first_hit": true,
+          "inner_stars_checked": 3580,
+          "target_face_choices_counted": 7082
+        }
+      ],
+      "positive_recounts": [
+        {
+          "root": 0,
+          "parent_state": [
+            205,
+            1,
+            65,
+            3107
+          ],
+          "output_state": [
+            3311,
+            204,
+            205,
+            3312
+          ],
+          "output_strong": false
+        }
+      ]
+    },
+    {
+      "raw": "a2_alt298_two_star.raw.jsonl",
+      "input_order": 10,
+      "target": 1691,
+      "source_sha256": "27a1b4fda74b1f7fa6a5e3a0b86e678229f9daa2e504a64d180374df4c74361f",
+      "raw_sha256": "68937fcc891e21a1729e76c70b436956dd813d0c4b2939daa5e2b5baea425582",
+      "metadata": [
+        {
+          "status": "PASS",
+          "stopped_at_first_hit": true,
+          "inner_stars_checked": 125,
+          "target_face_choices_counted": 336
+        }
+      ],
+      "positive_recounts": [
+        {
+          "root": 0,
+          "parent_state": [
+            183,
+            1,
+            19,
+            1509
+          ],
+          "output_state": [
+            1691,
+            182,
+            183,
+            1692
+          ],
+          "output_strong": true
+        }
+      ]
+    },
+    {
+      "raw": "alternate303_two_star.raw.jsonl",
+      "input_order": 12,
+      "target": 3311,
+      "source_sha256": "27a1b4fda74b1f7fa6a5e3a0b86e678229f9daa2e504a64d180374df4c74361f",
+      "raw_sha256": "e18873d94a3aef82ce3da77eccafe4a2a4c557d88f9b69c7b9170c25eb722212",
+      "metadata": [
+        {
+          "status": "PASS",
+          "stopped_at_first_hit": true,
+          "inner_stars_checked": 1021,
+          "target_face_choices_counted": 11493
+        }
+      ],
+      "positive_recounts": [
+        {
+          "root": 0,
+          "parent_state": [
+            853,
+            1,
+            5,
+            2459
+          ],
+          "output_state": [
+            3311,
+            852,
+            853,
+            3312
+          ],
+          "output_strong": true
+        }
+      ]
+    },
+    {
+      "raw": "alternate6551_two_star.raw.jsonl",
+      "input_order": 13,
+      "target": 6551,
+      "source_sha256": "27a1b4fda74b1f7fa6a5e3a0b86e678229f9daa2e504a64d180374df4c74361f",
+      "raw_sha256": "180307ccaf4609d5a738b99ba4c947423930af4e68402fabfb5d1a239244d0f3",
+      "metadata": [
+        {
+          "status": "PASS",
+          "stopped_at_first_hit": true,
+          "inner_stars_checked": 1521,
+          "target_face_choices_counted": 22753
+        }
+      ],
+      "positive_recounts": [
+        {
+          "root": 0,
+          "parent_state": [
+            495,
+            1,
+            33,
+            6057
+          ],
+          "output_state": [
+            6551,
+            494,
+            495,
+            6552
+          ],
+          "output_strong": false
+        }
+      ]
+    },
+    {
+      "raw": "helper_alt303_two_star.raw.jsonl",
+      "input_order": 11,
+      "target": 1691,
+      "source_sha256": "27a1b4fda74b1f7fa6a5e3a0b86e678229f9daa2e504a64d180374df4c74361f",
+      "raw_sha256": "973bd82ab629a7576ae5a7e16d460d317329ebb62efe00aff918803899823f5e",
+      "metadata": [
+        {
+          "status": "PASS",
+          "stopped_at_first_hit": true,
+          "inner_stars_checked": 768,
+          "target_face_choices_counted": 4721
+        }
+      ],
+      "positive_recounts": [
+        {
+          "root": 0,
+          "parent_state": [
+            351,
+            1,
+            3,
+            1341
+          ],
+          "output_state": [
+            1691,
+            350,
+            351,
+            1692
+          ],
+          "output_strong": true
+        }
+      ]
+    }
+  ],
+  "scope": "Every declared C++ search exactly replayed; all positive profiles and unit-ready births independently recounted in Python; first-hit searches not treated as complete classifications"
+}

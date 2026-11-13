@@ -1,0 +1,241 @@
+{
+  "status": "PASS",
+  "source_quotient": [
+    134,
+    100,
+    120,
+    499,
+    99,
+    65,
+    1,
+    374,
+    119
+  ],
+  "repaired_quotient": [
+    34,
+    100,
+    121,
+    499,
+    99,
+    64,
+    1,
+    375,
+    119
+  ],
+  "outside_old_names": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    7,
+    8,
+    9
+  ],
+  "module_old_names": [
+    4,
+    5
+  ],
+  "patch_in_family_indices": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      7
+    ]
+  ],
+  "source_coefficients": [
+    [
+      369,
+      8,
+      15,
+      766
+    ],
+    [
+      256,
+      3,
+      6,
+      630
+    ],
+    [
+      52,
+      0,
+      0,
+      156
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "parent_coefficients": [
+    [
+      85,
+      1,
+      15,
+      591
+    ],
+    [
+      34,
+      0,
+      6,
+      474
+    ],
+    [
+      0,
+      0,
+      0,
+      114
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "arbitrary_module_controls": 11,
+  "family": [
+    {
+      "m": 1,
+      "source_state": [
+        369,
+        8,
+        15,
+        766
+      ],
+      "parent_state": [
+        85,
+        1,
+        15,
+        591
+      ],
+      "output_state": [
+        675,
+        84,
+        85,
+        676
+      ],
+      "ray_error": 8
+    },
+    {
+      "m": 2,
+      "source_state": [
+        881,
+        14,
+        27,
+        2026
+      ],
+      "parent_state": [
+        153,
+        1,
+        27,
+        1539
+      ],
+      "output_state": [
+        1691,
+        152,
+        153,
+        1692
+      ],
+      "ray_error": 0
+    },
+    {
+      "m": 3,
+      "source_state": [
+        2217,
+        26,
+        51,
+        5482
+      ],
+      "parent_state": [
+        289,
+        1,
+        51,
+        4119
+      ],
+      "output_state": [
+        4407,
+        288,
+        289,
+        4408
+      ],
+      "ray_error": 44
+    },
+    {
+      "m": 4,
+      "source_state": [
+        5825,
+        50,
+        99,
+        15202
+      ],
+      "parent_state": [
+        561,
+        1,
+        99,
+        11331
+      ],
+      "output_state": [
+        11891,
+        560,
+        561,
+        11892
+      ],
+      "ray_error": 312
+    },
+    {
+      "m": 5,
+      "source_state": [
+        15849,
+        98,
+        195,
+        43066
+      ],
+      "parent_state": [
+        1105,
+        1,
+        195,
+        31911
+      ],
+      "output_state": [
+        33015,
+        1104,
+        1105,
+        33016
+      ],
+      "ray_error": 1388
+    },
+    {
+      "m": 6,
+      "source_state": [
+        44321,
+        194,
+        387,
+        124066
+      ],
+      "parent_state": [
+        2193,
+        1,
+        387,
+        91539
+      ],
+      "output_state": [
+        93731,
+        2192,
+        2193,
+        93732
+      ],
+      "ray_error": 5160
+    }
+  ],
+  "scope": "All nonempty module B proved by finite run-skeleton coefficients; unit-ready iff H(B)=1 iff B transitive"
+}

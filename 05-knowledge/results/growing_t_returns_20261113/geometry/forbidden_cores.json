@@ -1,0 +1,1645 @@
+{
+  "status": "FINITE-EXACT full profiles and all92 nonempty proper induced subsets",
+  "scope": "minimal forbidden cores use the proved all-order criterion; proper-subset embeddings are literal",
+  "records": [
+    {
+      "name": "R5",
+      "rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ],
+      "H": 15,
+      "starts": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "readiness_defects": [
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "proper_subset_witnesses": [
+        {
+          "mask": 1,
+          "rows": [
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 2,
+          "rows": [
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 3,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 4,
+          "rows": [
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 5,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 6,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 7,
+          "rows": [
+            6,
+            4,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            6,
+            4,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 8,
+          "rows": [
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 9,
+          "rows": [
+            0,
+            1
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            0,
+            1
+          ],
+          "witness_root": 0,
+          "witness_H": 1
+        },
+        {
+          "mask": 10,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 11,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 12,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 13,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 14,
+          "rows": [
+            6,
+            4,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            6,
+            4,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 15,
+          "rows": [
+            6,
+            12,
+            8,
+            1
+          ],
+          "H": 5,
+          "unique_start": 0,
+          "witness_rows": [
+            22,
+            12,
+            8,
+            1,
+            14
+          ],
+          "witness_root": 4,
+          "witness_H": 9
+        },
+        {
+          "mask": 16,
+          "rows": [
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 17,
+          "rows": [
+            0,
+            1
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            0,
+            1
+          ],
+          "witness_root": 0,
+          "witness_H": 1
+        },
+        {
+          "mask": 18,
+          "rows": [
+            0,
+            1
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            0,
+            1
+          ],
+          "witness_root": 0,
+          "witness_H": 1
+        },
+        {
+          "mask": 19,
+          "rows": [
+            2,
+            0,
+            3
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0,
+            3
+          ],
+          "witness_root": 0,
+          "witness_H": 1
+        },
+        {
+          "mask": 20,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 21,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 22,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 23,
+          "rows": [
+            6,
+            4,
+            8,
+            3
+          ],
+          "H": 5,
+          "unique_start": 1,
+          "witness_rows": [
+            6,
+            20,
+            8,
+            3,
+            13
+          ],
+          "witness_root": 4,
+          "witness_H": 13
+        },
+        {
+          "mask": 24,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 25,
+          "rows": [
+            0,
+            5,
+            1
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            0,
+            5,
+            1
+          ],
+          "witness_root": 2,
+          "witness_H": 1
+        },
+        {
+          "mask": 26,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 27,
+          "rows": [
+            2,
+            4,
+            9,
+            3
+          ],
+          "H": 5,
+          "unique_start": 0,
+          "witness_rows": [
+            18,
+            4,
+            9,
+            3,
+            14
+          ],
+          "witness_root": 4,
+          "witness_H": 13
+        },
+        {
+          "mask": 28,
+          "rows": [
+            6,
+            4,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            6,
+            4,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 29,
+          "rows": [
+            2,
+            12,
+            9,
+            1
+          ],
+          "H": 5,
+          "unique_start": 0,
+          "witness_rows": [
+            18,
+            12,
+            9,
+            1,
+            14
+          ],
+          "witness_root": 4,
+          "witness_H": 11
+        },
+        {
+          "mask": 30,
+          "rows": [
+            6,
+            12,
+            8,
+            1
+          ],
+          "H": 5,
+          "unique_start": 0,
+          "witness_rows": [
+            22,
+            12,
+            8,
+            1,
+            14
+          ],
+          "witness_root": 4,
+          "witness_H": 9
+        }
+      ]
+    },
+    {
+      "name": "C3_TT222",
+      "rows": [
+        14,
+        12,
+        56,
+        48,
+        35,
+        3
+      ],
+      "H": 45,
+      "starts": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "readiness_defects": [
+        13,
+        26,
+        13,
+        26,
+        13,
+        26
+      ],
+      "proper_subset_witnesses": [
+        {
+          "mask": 1,
+          "rows": [
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 2,
+          "rows": [
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 3,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 4,
+          "rows": [
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 5,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 6,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 7,
+          "rows": [
+            6,
+            4,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            6,
+            4,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 8,
+          "rows": [
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 9,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 10,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 11,
+          "rows": [
+            6,
+            4,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            6,
+            4,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 12,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 13,
+          "rows": [
+            6,
+            4,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            6,
+            4,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 14,
+          "rows": [
+            6,
+            4,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            6,
+            4,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 15,
+          "rows": [
+            14,
+            12,
+            8,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            14,
+            12,
+            8,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 16,
+          "rows": [
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 17,
+          "rows": [
+            0,
+            1
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            0,
+            1
+          ],
+          "witness_root": 0,
+          "witness_H": 1
+        },
+        {
+          "mask": 18,
+          "rows": [
+            0,
+            1
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            0,
+            1
+          ],
+          "witness_root": 0,
+          "witness_H": 1
+        },
+        {
+          "mask": 19,
+          "rows": [
+            2,
+            0,
+            3
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0,
+            3
+          ],
+          "witness_root": 0,
+          "witness_H": 1
+        },
+        {
+          "mask": 20,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 21,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 22,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 23,
+          "rows": [
+            6,
+            4,
+            8,
+            3
+          ],
+          "H": 5,
+          "unique_start": 1,
+          "witness_rows": [
+            6,
+            20,
+            8,
+            3,
+            13
+          ],
+          "witness_root": 4,
+          "witness_H": 13
+        },
+        {
+          "mask": 24,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 25,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 26,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 27,
+          "rows": [
+            6,
+            4,
+            8,
+            3
+          ],
+          "H": 5,
+          "unique_start": 1,
+          "witness_rows": [
+            6,
+            20,
+            8,
+            3,
+            13
+          ],
+          "witness_root": 4,
+          "witness_H": 13
+        },
+        {
+          "mask": 28,
+          "rows": [
+            6,
+            4,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            6,
+            4,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 29,
+          "rows": [
+            6,
+            12,
+            8,
+            1
+          ],
+          "H": 5,
+          "unique_start": 0,
+          "witness_rows": [
+            22,
+            12,
+            8,
+            1,
+            14
+          ],
+          "witness_root": 4,
+          "witness_H": 9
+        },
+        {
+          "mask": 30,
+          "rows": [
+            6,
+            12,
+            8,
+            1
+          ],
+          "H": 5,
+          "unique_start": 0,
+          "witness_rows": [
+            22,
+            12,
+            8,
+            1,
+            14
+          ],
+          "witness_root": 4,
+          "witness_H": 9
+        },
+        {
+          "mask": 31,
+          "rows": [
+            14,
+            12,
+            24,
+            16,
+            3
+          ],
+          "H": 11,
+          "unique_start": 3,
+          "witness_rows": [
+            14,
+            12,
+            24,
+            48,
+            3,
+            23
+          ],
+          "witness_root": 5,
+          "witness_H": 37
+        },
+        {
+          "mask": 32,
+          "rows": [
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 33,
+          "rows": [
+            0,
+            1
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            0,
+            1
+          ],
+          "witness_root": 0,
+          "witness_H": 1
+        },
+        {
+          "mask": 34,
+          "rows": [
+            0,
+            1
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            0,
+            1
+          ],
+          "witness_root": 0,
+          "witness_H": 1
+        },
+        {
+          "mask": 35,
+          "rows": [
+            2,
+            0,
+            3
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0,
+            3
+          ],
+          "witness_root": 0,
+          "witness_H": 1
+        },
+        {
+          "mask": 36,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 37,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 38,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 39,
+          "rows": [
+            6,
+            4,
+            8,
+            3
+          ],
+          "H": 5,
+          "unique_start": 1,
+          "witness_rows": [
+            6,
+            20,
+            8,
+            3,
+            13
+          ],
+          "witness_root": 4,
+          "witness_H": 13
+        },
+        {
+          "mask": 40,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 41,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 42,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "H": 3,
+          "unique_start": 0,
+          "witness_rows": [
+            10,
+            4,
+            1,
+            6
+          ],
+          "witness_root": 3,
+          "witness_H": 5
+        },
+        {
+          "mask": 43,
+          "rows": [
+            6,
+            4,
+            8,
+            3
+          ],
+          "H": 5,
+          "unique_start": 1,
+          "witness_rows": [
+            6,
+            20,
+            8,
+            3,
+            13
+          ],
+          "witness_root": 4,
+          "witness_H": 13
+        },
+        {
+          "mask": 44,
+          "rows": [
+            6,
+            4,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            6,
+            4,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 45,
+          "rows": [
+            6,
+            12,
+            8,
+            1
+          ],
+          "H": 5,
+          "unique_start": 0,
+          "witness_rows": [
+            22,
+            12,
+            8,
+            1,
+            14
+          ],
+          "witness_root": 4,
+          "witness_H": 9
+        },
+        {
+          "mask": 46,
+          "rows": [
+            6,
+            12,
+            8,
+            1
+          ],
+          "H": 5,
+          "unique_start": 0,
+          "witness_rows": [
+            22,
+            12,
+            8,
+            1,
+            14
+          ],
+          "witness_root": 4,
+          "witness_H": 9
+        },
+        {
+          "mask": 47,
+          "rows": [
+            14,
+            12,
+            24,
+            16,
+            3
+          ],
+          "H": 11,
+          "unique_start": 3,
+          "witness_rows": [
+            14,
+            12,
+            24,
+            48,
+            3,
+            23
+          ],
+          "witness_root": 5,
+          "witness_H": 37
+        },
+        {
+          "mask": 48,
+          "rows": [
+            2,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 49,
+          "rows": [
+            0,
+            5,
+            1
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            0,
+            5,
+            1
+          ],
+          "witness_root": 2,
+          "witness_H": 1
+        },
+        {
+          "mask": 50,
+          "rows": [
+            0,
+            5,
+            1
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            0,
+            5,
+            1
+          ],
+          "witness_root": 2,
+          "witness_H": 1
+        },
+        {
+          "mask": 51,
+          "rows": [
+            2,
+            0,
+            11,
+            3
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            2,
+            0,
+            11,
+            3
+          ],
+          "witness_root": 3,
+          "witness_H": 1
+        },
+        {
+          "mask": 52,
+          "rows": [
+            6,
+            4,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            6,
+            4,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 53,
+          "rows": [
+            2,
+            12,
+            9,
+            1
+          ],
+          "H": 5,
+          "unique_start": 0,
+          "witness_rows": [
+            18,
+            12,
+            9,
+            1,
+            14
+          ],
+          "witness_root": 4,
+          "witness_H": 11
+        },
+        {
+          "mask": 54,
+          "rows": [
+            2,
+            12,
+            9,
+            1
+          ],
+          "H": 5,
+          "unique_start": 0,
+          "witness_rows": [
+            18,
+            12,
+            9,
+            1,
+            14
+          ],
+          "witness_root": 4,
+          "witness_H": 11
+        },
+        {
+          "mask": 55,
+          "rows": [
+            6,
+            4,
+            24,
+            19,
+            3
+          ],
+          "H": 11,
+          "unique_start": 1,
+          "witness_rows": [
+            6,
+            36,
+            24,
+            19,
+            3,
+            29
+          ],
+          "witness_root": 5,
+          "witness_H": 37
+        },
+        {
+          "mask": 56,
+          "rows": [
+            6,
+            4,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            6,
+            4,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 57,
+          "rows": [
+            2,
+            12,
+            9,
+            1
+          ],
+          "H": 5,
+          "unique_start": 0,
+          "witness_rows": [
+            18,
+            12,
+            9,
+            1,
+            14
+          ],
+          "witness_root": 4,
+          "witness_H": 11
+        },
+        {
+          "mask": 58,
+          "rows": [
+            2,
+            12,
+            9,
+            1
+          ],
+          "H": 5,
+          "unique_start": 0,
+          "witness_rows": [
+            18,
+            12,
+            9,
+            1,
+            14
+          ],
+          "witness_root": 4,
+          "witness_H": 11
+        },
+        {
+          "mask": 59,
+          "rows": [
+            6,
+            4,
+            24,
+            19,
+            3
+          ],
+          "H": 11,
+          "unique_start": 1,
+          "witness_rows": [
+            6,
+            36,
+            24,
+            19,
+            3,
+            29
+          ],
+          "witness_root": 5,
+          "witness_H": 37
+        },
+        {
+          "mask": 60,
+          "rows": [
+            14,
+            12,
+            8,
+            0
+          ],
+          "H": 1,
+          "transitive": true,
+          "witness_rows": [
+            14,
+            12,
+            8,
+            0
+          ],
+          "witness_root": 1,
+          "witness_H": 1
+        },
+        {
+          "mask": 61,
+          "rows": [
+            6,
+            28,
+            24,
+            17,
+            1
+          ],
+          "H": 11,
+          "unique_start": 0,
+          "witness_rows": [
+            38,
+            28,
+            24,
+            17,
+            1,
+            30
+          ],
+          "witness_root": 5,
+          "witness_H": 23
+        },
+        {
+          "mask": 62,
+          "rows": [
+            6,
+            28,
+            24,
+            17,
+            1
+          ],
+          "H": 11,
+          "unique_start": 0,
+          "witness_rows": [
+            38,
+            28,
+            24,
+            17,
+            1,
+            30
+          ],
+          "witness_root": 5,
+          "witness_H": 23
+        }
+      ]
+    }
+  ],
+  "proof_sha256": "b7138298357f32bea9530adc1c2946779dd101ee4853063e17215890585ce217"
+}

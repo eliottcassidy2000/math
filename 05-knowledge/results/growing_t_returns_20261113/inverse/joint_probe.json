@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "target": 53084231,
+  "core_order": 18,
+  "rooted_classes_tested": 2178309,
+  "complete_at_this_order": true,
+  "total_inverse_nodes": 2178309,
+  "arbitrary_outer_tail": true,
+  "hits": []
+}

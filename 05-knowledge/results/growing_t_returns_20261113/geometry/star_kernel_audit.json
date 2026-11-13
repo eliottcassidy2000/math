@@ -1,0 +1,42 @@
+{
+  "status": "VERIFIED proof review plus FINITE-EXACT independent literal controls",
+  "scope": "three literal graphs and exact repair; exhaustive star menus inherited from reviewed root checker",
+  "literal_states": [
+    [
+      881,
+      14,
+      27,
+      2026
+    ],
+    [
+      153,
+      1,
+      27,
+      1539
+    ],
+    [
+      1691,
+      152,
+      153,
+      1692
+    ]
+  ],
+  "source_pins": [
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/star_kernel/PROOF.md",
+      "sha256": "1cf8394f19f432b8bb185128002f1c34f481b63e2e6dc1b03b9a344f0e66e894"
+    },
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/star_kernel/check.py",
+      "sha256": "cac5514361411415282303b390837e4cd413f5e9de2c27e7fd36099496b6ee3e"
+    },
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/star_kernel/receipt.json",
+      "sha256": "705a386f996e8b6412061cf587a007b92776d8bf2c7727440351d139eadb4736"
+    },
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/star_kernel/receipt.optimized.json",
+      "sha256": "705a386f996e8b6412061cf587a007b92776d8bf2c7727440351d139eadb4736"
+    }
+  ]
+}

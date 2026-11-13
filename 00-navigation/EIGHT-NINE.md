@@ -3,6 +3,13 @@
 [Research packet](../05-knowledge/results/eight_nine_twentyseven_20261112/README.md).
 **PROVED IN NOTES / FINITE-EXACT; Chan–Pak OPEN.**
 
+[Growing t and multi-birth repairs](../05-knowledge/results/growing_t_returns_20261113/README.md):
+actual881 ->1691 ->3311 ->6551 unit-ready target chain; a separate growing-t
+module family with an explicit positive offset cost; exact minimum and all
+minimizing types at every strong unit-ready order. All-count induced-core
+barriers, minimal five/six obstructions, sharp binary drift, and a twenty-cell
+remaining k17 inverse. Repeatable405 return and Chan-Pak remain OPEN.
+
 [Changing cores at881](../05-knowledge/results/changing_core_returns_20261113/README.md):
 minimal arc repairs and a smaller strong core; exact neutral-component products;
 fixed-balanced dyadic classification; all30 ray targets with one defect3 exception.

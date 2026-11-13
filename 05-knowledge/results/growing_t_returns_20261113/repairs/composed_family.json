@@ -1,0 +1,192 @@
+{
+  "status": "PASS",
+  "first_parent_quotient": [
+    36,
+    881,
+    122,
+    1011,
+    97,
+    64,
+    1,
+    887,
+    117,
+    373
+  ],
+  "second_parent_quotient": [
+    128,
+    673,
+    43,
+    739,
+    943,
+    1,
+    695,
+    36,
+    751,
+    165
+  ],
+  "first_coefficients": [
+    [
+      183,
+      1,
+      19,
+      1509
+    ],
+    [
+      90,
+      0,
+      10,
+      1484
+    ],
+    [
+      0,
+      0,
+      0,
+      468
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "second_coefficients": [
+    [
+      205,
+      1,
+      65,
+      3107
+    ],
+    [
+      102,
+      0,
+      34,
+      2950
+    ],
+    [
+      0,
+      0,
+      0,
+      890
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "arbitrary_bulk_controls": 11,
+  "family": [
+    {
+      "bulk_size": 1,
+      "source_H": 881,
+      "first_ready": [
+        1691,
+        182,
+        183,
+        1692
+      ],
+      "second_ready": [
+        3311,
+        204,
+        205,
+        3312
+      ],
+      "offset": 71
+    },
+    {
+      "bulk_size": 2,
+      "source_H": 2217,
+      "first_ready": [
+        4839,
+        362,
+        363,
+        4840
+      ],
+      "second_ready": [
+        9415,
+        408,
+        409,
+        9416
+      ],
+      "offset": 263
+    },
+    {
+      "bulk_size": 3,
+      "source_H": 5825,
+      "first_ready": [
+        13943,
+        722,
+        723,
+        13944
+      ],
+      "second_ready": [
+        26963,
+        816,
+        817,
+        26964
+      ],
+      "offset": 923
+    },
+    {
+      "bulk_size": 4,
+      "source_H": 15849,
+      "first_ready": [
+        40575,
+        1442,
+        1443,
+        40576
+      ],
+      "second_ready": [
+        78079,
+        1632,
+        1633,
+        78080
+      ],
+      "offset": 3071
+    },
+    {
+      "bulk_size": 5,
+      "source_H": 44321,
+      "first_ready": [
+        119111,
+        2882,
+        2883,
+        119112
+      ],
+      "second_ready": [
+        228371,
+        3264,
+        3265,
+        228372
+      ],
+      "offset": 9851
+    }
+  ],
+  "scope": "Two physically composable repairs for every nonempty bulk B; defectH(B), unit-ready iffBtransitive; no third-stage closure asserted"
+}

@@ -1,0 +1,51 @@
+{
+  "startup_base": "9b8aa35188",
+  "status": "PASS",
+  "normal_optimized_pairs": {
+    "chain_881_1691_3311.json": {
+      "byte_identical": true,
+      "sha256": "0272c0be788a37c4c5f7e9bcb0fe47d1a4d92a3d112be9f20e11be0dd4aa28f1"
+    },
+    "chain_881_1691_3311_6551.json": {
+      "byte_identical": true,
+      "sha256": "c146236ef11e9f79d1bc39798edb41dcd5d4fa34f0a95cf5e9038c00480fbce9"
+    },
+    "composed_family.json": {
+      "byte_identical": true,
+      "sha256": "4106593f4203f816c20f387d804d0ea8d6e8890ec5d345a0fc427077bfd247fd"
+    },
+    "delete_star_3311.json": {
+      "byte_identical": true,
+      "sha256": "fd2f576cd1cc90270d4e7cc3a7c43c9fea1a5bc300cf9cf6dff87c65ad83f60b"
+    },
+    "jet_match.json": {
+      "byte_identical": true,
+      "sha256": "e71c44ca0cb0b5073b3d19c252163dd9e4163db1d8708a690d3ce89833496295"
+    },
+    "search_replay.json": {
+      "byte_identical": true,
+      "sha256": "5f5719712c56de128eec0a9c4448df9cec48e6197f7d29c22ffe73bac833ff68"
+    },
+    "star_family.json": {
+      "byte_identical": true,
+      "sha256": "f086de6af159d45e4d09b26305875853a43a1dffbf46f5202f23754f2aff9f9a"
+    },
+    "star_successor_probe.json": {
+      "byte_identical": true,
+      "sha256": "62c7dbb764a8309f3fee6ec8c97e9667ca0672911f4761ce67cfb2a5299c4465"
+    },
+    "two_port_trace.json": {
+      "byte_identical": true,
+      "sha256": "e3f42e017c8dd0b58007e753253205ee8e6aead4afbf9584e4da1406c1ad017a"
+    }
+  },
+  "checked_local_links": 10,
+  "source_sha256": {
+    "05-knowledge/results/growing_t_returns_20261113/containment/PROOF.md": "e13a415d33825882f6f4ae730dbb26fe81629b583bf6ed873f0453f13853e7de",
+    "05-knowledge/results/h17_exact_repairs_20261112/history/CONTINUATION_FIBRES.md": "792d61393306a2a758da4818491d31b18fa5cef3d8f7aad9c54ed7b19b0da02e",
+    "05-knowledge/results/changing_core_returns_20261113/preparation/NEUTRAL_881.md": "50fd0e2685f84e82be64b50fa4047bce65c4d311c6c5828074a9cd2ed5584d50",
+    "05-knowledge/results/changing_core_returns_20261113/preparation/check.py": "780a362726fef1d4903f3105c0df482848cffdc2f61c47a7b2392265640df652",
+    "05-knowledge/results/berggren_target_return_20261111/reset/funnel_six_state.py": "662c41a3f9dc6fbd1fe6c5d34ee30ac4e737d5371390dbf7dfacf342368a87f6",
+    "05-knowledge/results/multicore_metagraph_20261113/next_target.json.gz": "b3e04e0dd033f673e0dc1900b31500972c518ab416b33a164c2ad7c678743df5"
+  }
+}

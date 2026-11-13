@@ -1,0 +1,144 @@
+{
+  "status": "FINITE-EXACT independent all-subset recount; completeness inherited",
+  "total_subsets": 321536,
+  "records": [
+    {
+      "target": 1691,
+      "parent_order": 10,
+      "parent_rank": 298,
+      "order": 11,
+      "subsets": 2048,
+      "distinct_counts": 74
+    },
+    {
+      "target": 1691,
+      "parent_order": 10,
+      "parent_rank": 385,
+      "order": 11,
+      "subsets": 2048,
+      "distinct_counts": 56
+    },
+    {
+      "target": 3311,
+      "parent_order": 10,
+      "parent_rank": 577,
+      "order": 11,
+      "subsets": 2048,
+      "distinct_counts": 86
+    },
+    {
+      "target": 1691,
+      "parent_order": 11,
+      "parent_rank": 303,
+      "order": 12,
+      "subsets": 4096,
+      "distinct_counts": 66
+    },
+    {
+      "target": 3311,
+      "parent_order": 12,
+      "parent_rank": 595,
+      "order": 13,
+      "subsets": 8192,
+      "distinct_counts": 143
+    },
+    {
+      "target": 3311,
+      "parent_order": 12,
+      "parent_rank": 676,
+      "order": 13,
+      "subsets": 8192,
+      "distinct_counts": 135
+    },
+    {
+      "target": 6551,
+      "parent_order": 12,
+      "parent_rank": 1228,
+      "order": 13,
+      "subsets": 8192,
+      "distinct_counts": 185
+    },
+    {
+      "target": 6551,
+      "parent_order": 12,
+      "parent_rank": 1494,
+      "order": 13,
+      "subsets": 8192,
+      "distinct_counts": 79
+    },
+    {
+      "target": 6551,
+      "parent_order": 13,
+      "parent_rank": 1181,
+      "order": 14,
+      "subsets": 16384,
+      "distinct_counts": 223
+    },
+    {
+      "target": 6551,
+      "parent_order": 14,
+      "parent_rank": 27,
+      "order": 15,
+      "subsets": 32768,
+      "distinct_counts": 111
+    },
+    {
+      "target": 13031,
+      "parent_order": 14,
+      "parent_rank": 1514,
+      "order": 15,
+      "subsets": 32768,
+      "distinct_counts": 212
+    },
+    {
+      "target": 13031,
+      "parent_order": 14,
+      "parent_rank": 1697,
+      "order": 15,
+      "subsets": 32768,
+      "distinct_counts": 212
+    },
+    {
+      "target": 25991,
+      "parent_order": 14,
+      "parent_rank": 4619,
+      "order": 15,
+      "subsets": 32768,
+      "distinct_counts": 332
+    },
+    {
+      "target": 25991,
+      "parent_order": 16,
+      "parent_rank": 135,
+      "order": 17,
+      "subsets": 131072,
+      "distinct_counts": 207
+    }
+  ],
+  "source_pins": [
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/containment/receipt.json.gz",
+      "sha256": "b28c2baaa03195126dc8e23ebb41a40c2cdaa0b6a988f61e444ae7252e73fc59"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/next_target.json.gz",
+      "sha256": "b3e04e0dd033f673e0dc1900b31500972c518ab416b33a164c2ad7c678743df5"
+    },
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/containment/count_spectrum.py",
+      "sha256": "13a1bb42f05eec61a9991cafed0e8abf27b6d82a388cf8e14445104f589d8d76"
+    },
+    {
+      "path": "05-knowledge/results/growing_t_returns_20261113/containment/PROOF.md",
+      "sha256": "e13a415d33825882f6f4ae730dbb26fe81629b583bf6ed873f0453f13853e7de"
+    },
+    {
+      "path": "05-knowledge/results/multicore_metagraph_20261113/next_target.py",
+      "sha256": "8fb0ba76ebb5e7cb135c09a4d76bbc805f32ef7156291158b69c4718d32d4d63"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/READY.md",
+      "sha256": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c"
+    }
+  ]
+}

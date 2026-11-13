@@ -1,0 +1,2 @@
+{"status":"HIT","root":0,"other_star":7,"parent_state":[205,1,65,3107],"rows":[576,789,889,1011,865,835,770,1911,513,0,895],"changed_arcs":[[0,1],[0,6],[0,8],[0,9],[0,10],[1,7],[2,7],[4,7],[5,7],[6,7],[7,10]]}
+{"status":"PASS","stopped_at_first_hit":true,"inner_stars_checked":3580,"target_face_choices_counted":7082}

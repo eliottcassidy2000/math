@@ -1,0 +1,640 @@
+{
+  "status": "PASS",
+  "scalar_exhaustive_max_r": 18,
+  "scalar_minima": [
+    {
+      "order": 4,
+      "H": 5,
+      "addresses": [
+        1
+      ]
+    },
+    {
+      "order": 5,
+      "H": 9,
+      "addresses": [
+        2
+      ]
+    },
+    {
+      "order": 6,
+      "H": 17,
+      "addresses": [
+        4
+      ]
+    },
+    {
+      "order": 7,
+      "H": 33,
+      "addresses": [
+        8,
+        9
+      ]
+    },
+    {
+      "order": 8,
+      "H": 61,
+      "addresses": [
+        17
+      ]
+    },
+    {
+      "order": 9,
+      "H": 115,
+      "addresses": [
+        35
+      ]
+    },
+    {
+      "order": 10,
+      "H": 219,
+      "addresses": [
+        67
+      ]
+    },
+    {
+      "order": 11,
+      "H": 423,
+      "addresses": [
+        135
+      ]
+    },
+    {
+      "order": 12,
+      "H": 823,
+      "addresses": [
+        263
+      ]
+    },
+    {
+      "order": 13,
+      "H": 1615,
+      "addresses": [
+        527
+      ]
+    },
+    {
+      "order": 14,
+      "H": 3183,
+      "addresses": [
+        1039
+      ]
+    },
+    {
+      "order": 15,
+      "H": 6303,
+      "addresses": [
+        2079
+      ]
+    },
+    {
+      "order": 16,
+      "H": 12511,
+      "addresses": [
+        4127
+      ]
+    },
+    {
+      "order": 17,
+      "H": 24895,
+      "addresses": [
+        8255
+      ]
+    },
+    {
+      "order": 18,
+      "H": 49599,
+      "addresses": [
+        16447
+      ]
+    },
+    {
+      "order": 19,
+      "H": 98943,
+      "addresses": [
+        32895
+      ]
+    },
+    {
+      "order": 20,
+      "H": 197503,
+      "addresses": [
+        65663
+      ]
+    },
+    {
+      "order": 21,
+      "H": 394495,
+      "addresses": [
+        131327
+      ]
+    },
+    {
+      "order": 22,
+      "H": 788223,
+      "addresses": [
+        262399
+      ]
+    }
+  ],
+  "strong_order8_controls": 6008,
+  "minimum_triangle_count": 6,
+  "minimum_P2": 1416,
+  "source_census_sha256": "ea57031fbd33f9b01de907a9248c99a01daf971fca2f27f3bbd74329e61d4525",
+  "complete_grammar_parent_order": 15,
+  "complete_grammar_classes": 196417,
+  "grammar_minima": [
+    {
+      "order": 4,
+      "H": 5,
+      "parent_ranks": [
+        0
+      ]
+    },
+    {
+      "order": 5,
+      "H": 9,
+      "parent_ranks": [
+        0
+      ]
+    },
+    {
+      "order": 6,
+      "H": 17,
+      "parent_ranks": [
+        0
+      ]
+    },
+    {
+      "order": 7,
+      "H": 33,
+      "parent_ranks": [
+        0,
+        1
+      ]
+    },
+    {
+      "order": 8,
+      "H": 61,
+      "parent_ranks": [
+        1
+      ]
+    },
+    {
+      "order": 9,
+      "H": 115,
+      "parent_ranks": [
+        3
+      ]
+    },
+    {
+      "order": 10,
+      "H": 219,
+      "parent_ranks": [
+        3
+      ]
+    },
+    {
+      "order": 11,
+      "H": 423,
+      "parent_ranks": [
+        7
+      ]
+    },
+    {
+      "order": 12,
+      "H": 823,
+      "parent_ranks": [
+        7
+      ]
+    },
+    {
+      "order": 13,
+      "H": 1615,
+      "parent_ranks": [
+        15
+      ]
+    },
+    {
+      "order": 14,
+      "H": 3183,
+      "parent_ranks": [
+        15
+      ]
+    },
+    {
+      "order": 15,
+      "H": 6303,
+      "parent_ranks": [
+        31
+      ]
+    },
+    {
+      "order": 16,
+      "H": 12511,
+      "parent_ranks": [
+        31
+      ]
+    }
+  ],
+  "literal_extremizers": [
+    {
+      "order": 4,
+      "H": 5,
+      "address": 1,
+      "word": "1",
+      "rows": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "root": 3,
+      "predecessor": 2,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "order": 5,
+      "H": 9,
+      "address": 2,
+      "word": "01",
+      "rows": [
+        6,
+        4,
+        8,
+        19,
+        7
+      ],
+      "root": 4,
+      "predecessor": 3,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "order": 6,
+      "H": 17,
+      "address": 4,
+      "word": "001",
+      "rows": [
+        14,
+        12,
+        8,
+        16,
+        39,
+        15
+      ],
+      "root": 5,
+      "predecessor": 4,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        4
+      ]
+    },
+    {
+      "order": 7,
+      "H": 33,
+      "address": 8,
+      "word": "0001",
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        32,
+        79,
+        31
+      ],
+      "root": 6,
+      "predecessor": 5,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        5
+      ]
+    },
+    {
+      "order": 7,
+      "H": 33,
+      "address": 9,
+      "word": "1001",
+      "rows": [
+        30,
+        60,
+        24,
+        16,
+        32,
+        77,
+        31
+      ],
+      "root": 6,
+      "predecessor": 5,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        4,
+        4,
+        4,
+        5
+      ]
+    },
+    {
+      "order": 8,
+      "H": 61,
+      "address": 17,
+      "word": "10001",
+      "rows": [
+        62,
+        124,
+        56,
+        48,
+        32,
+        64,
+        157,
+        63
+      ],
+      "root": 7,
+      "predecessor": 6,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        3,
+        5,
+        5,
+        5,
+        6
+      ]
+    },
+    {
+      "order": 9,
+      "H": 115,
+      "address": 35,
+      "word": "110001",
+      "rows": [
+        126,
+        252,
+        248,
+        112,
+        96,
+        64,
+        128,
+        313,
+        127
+      ],
+      "root": 8,
+      "predecessor": 7,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        3,
+        5,
+        5,
+        6,
+        6,
+        7
+      ]
+    },
+    {
+      "order": 10,
+      "H": 219,
+      "address": 67,
+      "word": "1100001",
+      "rows": [
+        254,
+        508,
+        504,
+        240,
+        224,
+        192,
+        128,
+        256,
+        633,
+        255
+      ],
+      "root": 9,
+      "predecessor": 8,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        6,
+        6,
+        7,
+        7,
+        8
+      ]
+    },
+    {
+      "order": 11,
+      "H": 423,
+      "address": 135,
+      "word": "11100001",
+      "rows": [
+        510,
+        1020,
+        1016,
+        1008,
+        480,
+        448,
+        384,
+        256,
+        512,
+        1265,
+        511
+      ],
+      "root": 10,
+      "predecessor": 9,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        6,
+        6,
+        7,
+        8,
+        8,
+        9
+      ]
+    },
+    {
+      "order": 12,
+      "H": 823,
+      "address": 263,
+      "word": "111000001",
+      "rows": [
+        1022,
+        2044,
+        2040,
+        2032,
+        992,
+        960,
+        896,
+        768,
+        512,
+        1024,
+        2545,
+        1023
+      ],
+      "root": 11,
+      "predecessor": 10,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        7,
+        8,
+        9,
+        9,
+        10
+      ]
+    },
+    {
+      "order": 13,
+      "H": 1615,
+      "address": 527,
+      "word": "1111000001",
+      "rows": [
+        2046,
+        4092,
+        4088,
+        4080,
+        4064,
+        1984,
+        1920,
+        1792,
+        1536,
+        1024,
+        2048,
+        5089,
+        2047
+      ],
+      "root": 12,
+      "predecessor": 11,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        7,
+        8,
+        9,
+        10,
+        10,
+        11
+      ]
+    },
+    {
+      "order": 14,
+      "H": 3183,
+      "address": 1039,
+      "word": "11110000001",
+      "rows": [
+        4094,
+        8188,
+        8184,
+        8176,
+        8160,
+        4032,
+        3968,
+        3840,
+        3584,
+        3072,
+        2048,
+        4096,
+        10209,
+        4095
+      ],
+      "root": 13,
+      "predecessor": 12,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        8,
+        9,
+        10,
+        11,
+        11,
+        12
+      ]
+    },
+    {
+      "order": 15,
+      "H": 6303,
+      "address": 2079,
+      "word": "111110000001",
+      "rows": [
+        8190,
+        16380,
+        16376,
+        16368,
+        16352,
+        16320,
+        8064,
+        7936,
+        7680,
+        7168,
+        6144,
+        4096,
+        8192,
+        20417,
+        8191
+      ],
+      "root": 14,
+      "predecessor": 13,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        8,
+        9,
+        10,
+        11,
+        12,
+        12,
+        13
+      ]
+    }
+  ]
+}

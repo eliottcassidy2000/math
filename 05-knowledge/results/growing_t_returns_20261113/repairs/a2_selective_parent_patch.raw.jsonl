@@ -1,0 +1,12 @@
+{"status":"PASS","width":0,"checked":1,"one_start":0,"hits":0}
+{"status":"PASS","width":1,"checked":45,"one_start":0,"hits":0}
+{"status":"PASS","width":2,"checked":990,"one_start":3,"hits":0}
+{"width":3,"patch":[[0,2],[0,7],[0,9]],"state":[153,1,27,1539],"root":0,"strong":true}
+{"status":"PASS","width":3,"checked":14190,"one_start":61,"hits":1}
+{"width":4,"patch":[[0,2],[0,7],[0,9],[4,5]],"state":[153,1,27,1539],"root":0,"strong":true}
+{"width":4,"patch":[[0,2],[0,7],[0,9],[4,9]],"state":[153,1,27,1539],"root":0,"strong":true}
+{"width":4,"patch":[[0,2],[0,8],[0,9],[7,8]],"state":[153,1,27,1539],"root":0,"strong":true}
+{"width":4,"patch":[[0,2],[0,9],[1,2],[2,7]],"state":[153,1,27,1539],"root":1,"strong":true}
+{"width":4,"patch":[[0,7],[0,9],[1,2],[1,8]],"state":[153,1,27,1539],"root":8,"strong":true}
+{"width":4,"patch":[[0,8],[0,9],[1,2],[1,8]],"state":[153,1,27,1539],"root":7,"strong":true}
+{"status":"PASS","width":4,"checked":148995,"one_start":587,"hits":6}

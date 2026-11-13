@@ -1,0 +1,38 @@
+[
+  {
+    "path": "05-knowledge/results/thirtysix_digits_20260925.md",
+    "sha256": "d0e426853b97abe11ff6c7040814b284786eab89c544d4714370934b0ec341ea"
+  },
+  {
+    "path": "05-knowledge/results/collatz_mod6_20260917_reverse_tree_pieces.md",
+    "sha256": "f14a600175c8e08b3fe622cd84b1ff685f5a91a5bf4dc79b9ae174e9f6ad7519"
+  },
+  {
+    "path": "05-knowledge/results/inverse_predecessor_sections_20261005.md",
+    "sha256": "5ee1280a9e4530959bb96824a7e2c6a9c5c8c6c1780c1903188cc853ce0e752b"
+  },
+  {
+    "path": "05-knowledge/results/central_modular_chanpak_20261110/compiler/PROOF.md",
+    "sha256": "5e891a744363bc573cf18565947ebeb40e9e4d15e982536f7e977fdb3b8e5ce0"
+  },
+  {
+    "path": "05-knowledge/results/h13_paired_descent_20261111/square_graceful/PROOF.md",
+    "sha256": "44d4b8ea9bd60d8e4480580ea19e5ceaf8ecf9259585382d9854a8f5edaef52c"
+  },
+  {
+    "path": "05-knowledge/results/multiplicand_saturation_chanpak_20261111/chanpak/OFFSET_TRANSPORT.md",
+    "sha256": "33022a2f8564c6b7d86bfd5c2bf18424ec897a0b051f82d18c4e3e5a9b1b9b04"
+  },
+  {
+    "path": "05-knowledge/results/changing_core_returns_20261113/returns/FIXED_BALANCED.md",
+    "sha256": "d1a3fe52f9f63cff5143abfbea32390619f814053af830c91eb4ba020263e737"
+  },
+  {
+    "path": "05-knowledge/results/changing_core_returns_20261113/returns/BIRTH_BUDGET.md",
+    "sha256": "0b7fd77298aa84037a5025314f142e088992431166522abc177a07c6cc759e61"
+  },
+  {
+    "path": "05-knowledge/results/changing_core_returns_20261113/returns/birth_budget_receipt.json",
+    "sha256": "7295f11e4deeaa616750bbe44bfaa19746c4dbb6ffc83a63ba9b224bbcb87110"
+  }
+]
