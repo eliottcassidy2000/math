@@ -1,7 +1,8 @@
 # Incoming mathematics and the changed construction obligation
 
 The session started at06847e4c6e6709585bf1b4cfa6f84713081034ea and read
-incoming work through ebd71e68d8. The claims below retain the scope of
+incoming work through d8aae7c5ae (Session307; the earlier comparison
+was through ebd71e68d8). The claims below retain the scope of
 their source proofs. We did not rerun their broad computations; their
 role here is to identify which physical interfaces new work must supply.
 
@@ -100,3 +101,38 @@ not a recognition theorem for all surviving ordinary Collatz words.
 Our reusable clock circuit changes the arithmetic map at its boundary.
 Keeping these quantifiers prevents either result from becoming an
 unjustified convergence or finite-automaton claim.
+
+## 6. A late incoming symmetry constraint sharpens the prime and7p lanes
+
+[Session307 SYMMETRY_BUDGET](../session307_symmetry_and_collatz_20261113/SYMMETRY_BUDGET.md)
+proves that a tournament with prime Hamilton count at least5 has trivial
+automorphism group. Its mechanism is integer-valued, not just modular:
+an automorphism of prime order l has a moved circulant orbit supplying
+at least l(l−1)/2 internal paths, all of which extend to spanning paths.
+The free action on spanning paths also forces the automorphism-group
+order to divide the total count. The accompanying
+[ORBIT_FOLD](../session307_symmetry_and_collatz_20261113/ORBIT_FOLD.md)
+retains separate phase-weighted quotients for each prime-power orbit tier;
+its characteristic-l cancellation is not exact integer count control.
+
+**Target-specific consequence (PROVED from that bound).** If H(T)=7p
+with p prime and p≥17, then Aut(T) is either trivial or cyclic of order7.
+Indeed its order divides7p. If p divided that order, Cauchy's theorem
+and the incoming orbit bound would imply7p≥p(p−1)/2, hence p≤15,
+a contradiction. The only remaining possible orders are1 and7.
+For a prime target≥5, the stronger incoming result gives order1.
+
+In our uniform polarized construction every automorphism of M and of N
+extends independently, fixing the whole exterior. Thus for prime outputs
+both modules must be asymmetric. For7p with p≥17, their automorphism
+groups have orders1 or7 and cannot both have order7. These are necessary
+physical-module filters, not existence theorems or restrictions on the
+arithmetic candidates alone. The finite selectors remain complete without
+implementing this optional extra filter.
+
+This gives a further design condition on an unbounded changing-core rule:
+any permanent nontrivial symmetry must be broken before a prime output.
+The present explicit core changes are allowed to do that; neither neutral
+padding nor a characteristic-prime quotient alone guarantees it. This is
+consistent with the ordered response sidecar and adds a different one:
+actual global automorphisms, which marked primitivity does not measure.

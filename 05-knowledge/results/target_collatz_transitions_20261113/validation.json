@@ -59,9 +59,9 @@
     }
   ],
   "relative_links": {
-    "count": 51,
+    "count": 53,
     "missing": [],
-    "git_ref": "ebd71e68d8"
+    "git_ref": "d8aae7c5ae"
   },
   "history_manifest_pass": true,
   "repository_docs_check": "PASS: bounded startup, frontier status, correction sentinels, router smoke"

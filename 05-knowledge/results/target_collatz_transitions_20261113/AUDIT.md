@@ -10,7 +10,8 @@ universal literal-extra-graph reachability. No Lean claim is made.
 ## Proof dependencies and priority
 
 The starting snapshot is06847e4c6e6709585bf1b4cfa6f84713081034ea.
-Incoming comparisons are read through ebd71e68d8. Every new computation
+Incoming comparisons are read through d8aae7c5ae, including the late
+Session307 symmetry constraints. Every new computation
 that reads the inherited tournament inventory pins its Git object rather
 than reading an unversioned working-tree bank.
 
