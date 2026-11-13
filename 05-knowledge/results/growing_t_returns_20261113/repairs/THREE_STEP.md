@@ -2,6 +2,8 @@
 
 **FINITE-EXACT physical construction:**881 ->1691 ->3311 ->6551. Each of the last three targets has an actual strong unit-ready endpoint. Every intermediate adjacency matrix, physical name map, patch, birth, and deletion is independently recounted in [chain_881_1691_3311_6551.json](chain_881_1691_3311_6551.json). This is a finite program; no all-k return or Chan-Pak proof is claimed.
 
+**Incoming correction to the research target (commit c85ab9a188):** an all-k indegree-one unit-ready405 ray is **REFUTED**. The [complete intrinsic inverse](../../target_directed_cores_20261112/TARGET_INVERSE.md) and its [independent exhaustive audit](../../target_directed_cores_20261112/ports/COMPLETE_INVERSE_AUDIT.md) exclude every tournament order at53,084,231=405*2^17+71. The ordinary Hamilton count is attained, and Chan-Pak remains OPEN. The finite constructions and module formulas here remain valid; future continuation must change the required interface or skip an obstructed target.
+
 ## Actual operations and count budget
 
 Start from the ten-vertex A2 source in [PROOF.md](PROOF.md). Add one helper beaten only by old vertex3. The helper has physical name10 and raises H from881 to1589. Thereafter all old-arc repairs use the same two physical vertices0,2, and all target births are beaten only by physical vertex0.
@@ -73,7 +75,7 @@ For each backbone vertex u encode the letter([u->0],[u->2]). Keep the separate o
 
 Each target birth at0 prefixes a new01 letter and makes that newborn the active root. The first helper inserts11 after the initial backbone vertex3. Every repair changes only the two old-port comparisons and their mutual edge; all remaining old pairwise relations are retained. The final neutral deletion removes the last backbone vertex8, then a00 letter.
 
-This gives a concrete two-port word compiler target: extend this finite thin word sequence with a proved selector that repeatedly reaches405*2^k+71 and returns a unit-ready root. The backbone/word representation is exact. A regular selector, finite automaton, or all-height accepted language has **not** been proved. The full-cylinder doubling obstruction does not itself exclude such a thin language.
+The backbone/word representation remains an exact two-port compiler for this finite trace. Its future predicate must change: a selector visiting every405-ray count with unit readiness is impossible because k17 has no such source at any order. A regular selector or all-height accepted language that permits a nonunit defect, another marked interface, or skips the obstructed count remains OPEN. The full-cylinder doubling obstruction alone did not exclude a thin language; the new intrinsic target obstruction excludes this particular all-k unit-ready language even without a word-compiler restriction.
 
 ## Reproduction
 

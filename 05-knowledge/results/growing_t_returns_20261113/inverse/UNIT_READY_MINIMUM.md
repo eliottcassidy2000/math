@@ -15,7 +15,9 @@ Every minimizer has a singleton core in its canonical funnel decomposition.
 There is one rooted isomorphism type at each order except M7, where there
 are two; those two also have different unrooted degree multisets.
 This classifies an infinite extremal slice, not all tournaments or all
-Hamilton counts. Chan--Pak and the target-preserving405 return remain OPEN.
+Hamilton counts. Chan--Pak remains OPEN. The all-k indegree-one unit-ready
+405 ray is now REFUTED by the independently audited incoming complete
+inverse linked in section5; the extremal theorem here is unaffected.
 
 ## 1. Inheritance and the physical reduction
 
@@ -185,7 +187,7 @@ At M7 the two degree multisets are
 
 so even their unrooted tournaments are different.
 
-## 5. Enumeration consequences and the unresolved k17 inverse
+## 5. Enumeration consequences and the completed k17 inverse
 
 The exact minima begin, at M4,
 
@@ -197,13 +199,15 @@ finite prefix. It supplies a strictly smaller finite head for the
 complete ready-value inverse. No new A000568 term is claimed.
 
 For N_k=405*2^k+71, equation(8) gives source order at most k+11.
-The targeted k17 inverse now excludes every canonical inner core
-through order18 at every outer-word length. Equations(3),(4),(6) give
-the additional necessary inequality
+Our targeted k17 inverse excludes every canonical inner core through
+order18 at every outer-word length. Equations(3),(4),(6) give the
+additional necessary inequality
 
     N>=c*2^(c-2)(2n+1)+2,       c>=3.                 (11)
 
-At N=53084231, only these twenty core-size/address choices remain:
+**SUPERSEDED search frontier, retained as a proved narrowing.** Before
+the complete incoming inverse was integrated, at N=53084231 these were
+the only twenty core-size/address choices not excluded by this lane:
 
 |inner core size c|possible outer addresses n|possible tail lengths|
 |--:|---|---|
@@ -213,12 +217,35 @@ At N=53084231, only these twenty core-size/address choices remain:
 |22|0|0|
 |23|0|0|
 
-Every c>=24 is excluded by(11). Counting M=c+L+2 now restricts any
-undiscovered strong unit-ready witness to source orders21..25. The
-table restricts constructor parameters; it does not enumerate all
-large cores in those cells and does not assert that any cell is nonempty.
-The earlier defect-three witness at the same full count remains valid
-and is not relabelled as unit-ready.
+Every c>=24 is excluded by(11). Counting M=c+L+2 restricts any witness
+surviving this lane's bounds to source orders21..25. The table restricts
+constructor parameters; it does not enumerate all large cores in those
+cells and never asserted that any cell was nonempty.
+
+**Current status: PROVED reduction / independently reproduced FINITE-EXACT
+all-order exclusion.** Incoming commits `c85ab9a188` and `5d58ce365f`,
+in [TARGET_INVERSE](../../target_directed_cores_20261112/TARGET_INVERSE.md)
+and its [independent audit](../../target_directed_cores_20261112/ports/COMPLETE_INVERSE_AUDIT.md),
+close the entire search. Every target core satisfies p<=2N; adjoining a
+vertex at least doubles P2, so the same budget safely prunes every
+ancestor. Together with p>=2^c this gives an absolute core cap26.
+The complete retained grammar has5,640,026 core addresses, with no
+retained core above order19. The producer's exact binary inverse finds
+no hit. A separate depth-first core traversal tests all74,845,805
+eligible outer addresses directly, matches every retained-order count,
+and also finds no hit. Weak unit-ready padding adds no new counts.
+
+Consequently **no indegree-one unit-ready tournament of any order has
+H=53084231=405*2^17+71**. The all-k unit-ready405 ray, and any return
+construction required to realize every one of its targets with that
+interface, is REFUTED. This is new complete evidence superseding our
+bounded search frontier, not a correction of the extremal theorem or
+the earlier bounded miss. The ordinary Hamilton count is attained:
+the old defect-three witness remains valid, and the incoming
+[defect-two construction](../../target_directed_cores_20261112/constructors/DEFECT_TWO.md)
+improves its positive defect. Chan--Pak and other selected interfaces
+remain OPEN. This lane read and checked the incoming reduction and
+receipt consistency; it did not rerun the large incoming searches.
 
 ## 6. Exact controls and reproduction
 

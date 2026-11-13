@@ -3,7 +3,10 @@
 **PROVED IN NOTE:** the cyclic correlation formula, its sharp lower bound,
 its equality cases, and the fixed-period obstruction below. **FINITE-EXACT:**
 all32766 binary periods through length14 and four actual unit-ready graphs.
-The growing-core selector, the unit-ready405 ray, and Chan--Pak remain OPEN.
+The all-k indegree-one unit-ready405 ray is REFUTED by the incoming
+[complete inverse](../../target_directed_cores_20261112/TARGET_INVERSE.md)
+at k17. Chan--Pak and growing-core selectors with other target/interface
+requirements remain OPEN; the drift theorem is unaffected.
 
 ## 1. Inheritance and the exact inverse interface
 
@@ -164,8 +167,9 @@ inherited funnel/newborn construction. The first four positive-j
 counts are95,353,1379,5477. They are independently counted from their
 literal adjacency matrices, including the predecessor's unique start
 and the newborn's defect1. The linear term is2j, exactly3*(2/3)j.
-This is a classified infinite family beyond pure dyadic clocks, not
-the missing405 family or a source-return theorem.
+This is a classified infinite family beyond pure dyadic clocks. It is
+not a source-return theorem and does not realize the now-refuted all-k
+unit-ready405 ray.
 
 Reproduce with `python -B 05-knowledge/results/growing_t_returns_20261113/inverse/cyclic_drift.py`
 and then `-O -B`. Every word through length14 is checked against the

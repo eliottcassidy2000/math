@@ -1,5 +1,27 @@
 # Concurrent work integrated into the session
 
+## Current decisive result: the requested universal interface is impossible
+
+Final synchronization addedc85ab9a188 and5d58ce365f, whose
+[complete ready inverse](../target_directed_cores_20261112/TARGET_INVERSE.md)
+excludes53084231=405*2^17+71 at every order. Its intrinsic bound
+P_C(2)<=2N and hereditary pruning produce a complete finite universe;
+independent binary-inverse and direct-word traversals agree. The coordinator
+recompiled the independent implementation and exactly reproduced
+5,640,026 retained cores and74,845,805 outer-word tests with zero hits.
+The reduction and pruning were reviewed independently again in this session.
+
+This supersedes our twenty-cell remaining-head status and refutes an
+all-k unit-ready405 ray. It does not refute Chan-Pak: the same N has an
+actual defect-two source, and a direct ready bridge exists at3N+2.
+The three finite repairs and the exact minimum theorem in this packet
+remain valid. Future word selectors must change the interface at the
+hole, skip that target, or solve a different target-coverage obligation.
+
+The additional surplus commitbfa07f5283 supplies context transport and
+arithmetic audits. Its exact neutral transport is a useful response-level
+mechanism, not a way around a proved empty unit-ready fibre.
+
 The clean worktree began at9b8aa351882593034ec908abe1bebb8d73046460.
 During this session, origin/main advanced throughb69ca1bdb7,c91e7d49aa,
 94cb3ea067. These commits were read as mathematics before integration.
@@ -36,6 +58,15 @@ The incoming factorial normalization agrees with
 divide the skeleton coefficient, not an extra ordered-cover factor.
 The incoming finite census is not promoted here to an all-order exclusion
 of its open digit-one shape.
+
+Correction lineage:5e148f917a refutes the earlier *stronger* hypothesis
+that a two-clock constant term can never be-1. Products such as
+(60*3^j-1)(2^k+1), and a further genuine two-clock, supply counterexamples.
+Only the narrower pure-sector C2-line hypothesis remains open. Our
+Pi/Psi hereditary barriers depend on their unchanged literal quotients,
+so this correction does not alter those theorems. The94cb3ea source hash
+in their receipt is an immutable provenance pin, not the current truth
+for the refuted constant-term hypothesis.
 
 ## Geometric transfers
 

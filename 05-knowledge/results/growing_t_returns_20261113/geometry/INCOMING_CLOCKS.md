@@ -9,6 +9,14 @@ The incoming revision94cb3ea contains
 `05-knowledge/results/clone_clocks_negative_collatz_20261113/CLOCKS.md`.
 It was read directly from that Git blob before integration. Its full
 commit, Git blob identity and SHA256 are pinned in `incoming_clocks.json`.
+This is an immutable **historical** provenance pin, not a claim that every
+hypothesis in that version remains current. Revision5e148f917a refuted its
+stronger claim that the constant term can never be-1: products such as
+(60*3^j-1)(2^k+1) are counterexamples. The corrected
+[current CLOCKS section5](../../clone_clocks_negative_collatz_20261113/CLOCKS.md)
+separates this **REFUTED** claim from its narrower still-open C2-line
+hypothesis. No constant-term exclusion was used below; the Pi/Psi source
+identities and their hereditary barriers are unaffected.
 The source proves the actual arbitrary-module interfaces
 
     H(Pi[M,N])=60 P_M(3)P_N(2)+H(M)H(N),
@@ -60,7 +68,9 @@ base and lie outside the birth-only obstruction.
 This strengthens the incoming finite readiness screens for these two
 specified families to an all-order, arbitrary-module statement. It does
 not address every two-clock template, negate their Hamilton-count
-coverage, or solve the requested unit-ready return problem.
+coverage, or settle other interfaces. The proposed all-k indegree-one
+unit-ready405 interface has separately been **REFUTED** by the complete
+k17 exclusion reviewed in [K17_INCOMING_AUDIT.md](K17_INCOMING_AUDIT.md).
 
 Reproduce `python -B .../geometry/incoming_clocks.py`, then with `-O`.
 The referenced Git object must be present; no mutable working-tree copy

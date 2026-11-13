@@ -1,6 +1,8 @@
 # A three-arc repair reaches the next ready target, with an exact module law
 
-**PROVED with an exact finite run-skeleton certificate:** the arbitrary-module formulas, literal repair family, and stated closure obstructions. **FINITE-EXACT:** complete local star probes and the selected graph counts. A repeatable unit-ready405 ray and Chan-Pak remain OPEN.
+**PROVED with an exact finite run-skeleton certificate:** the arbitrary-module formulas, literal repair family, and stated closure obstructions. **FINITE-EXACT:** complete local star probes and the selected graph counts. The universal indegree-one unit-ready405 ray is REFUTED at k17; Chan-Pak remains OPEN.
+
+**Incoming correction to the research target (commit c85ab9a188):** an all-k indegree-one unit-ready405 ray is **REFUTED**. The [complete intrinsic inverse](../../target_directed_cores_20261112/TARGET_INVERSE.md) and its [independent exhaustive audit](../../target_directed_cores_20261112/ports/COMPLETE_INVERSE_AUDIT.md) exclude every tournament order at53,084,231=405*2^17+71. The ordinary Hamilton count is attained, and Chan-Pak remains OPEN. The finite constructions and module formulas here remain valid; future continuation must change the required interface or skip an obstructed target.
 
 ## Inheritance and the operation being changed
 

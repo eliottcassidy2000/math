@@ -4,7 +4,9 @@
 independent literal controls.** This addresses the reindexing boundary
 left open by the earlier one-TT-clock result. It does not exclude all
 delayed clocks, two changing modules, selective incidences, or growing
-cores. Chan--Pak and the unit-ready405 return remain OPEN.
+cores in general. The all-k indegree-one unit-ready405 ray is REFUTED
+by the incoming complete inverse at k17, which supplies the additional
+phase gate below. Chan--Pak remains OPEN.
 
 ## 1. The exact clock language and its inherited coefficients
 
@@ -93,14 +95,27 @@ a transitive tail. Inflating a tail vertex leaves H unchanged; inflating
 the strong component uses the same table. Thus weak padding does not
 repair any displayed miss.
 
-Combining the arithmetic and finite gates, a surviving clock of the
-exact form(1) would have to lie in one of the still-open regions
+Combining the arithmetic and finite gates alone gives the intermediate
+necessary regions
 
     d1,c>=6,       or       d2,c>=5.                   (6)
 
-There is no claim that these remaining charts exist. Conversely, the
-finite head does not exclude them. A delayed clock is not equivalent
-to an early clock without an actual smaller-context construction.
+The incoming [complete inverse](../../target_directed_cores_20261112/TARGET_INVERSE.md),
+independently checked in its
+[audit](../../target_directed_cores_20261112/ports/COMPLETE_INVERSE_AUDIT.md),
+now excludes a unit-ready source at N17 at every tournament order.
+The eventual count identity and readiness argument above extend to
+every positive module size. Therefore any phase with17=dm+c for an
+integer m>=1 is also impossible. Combining this with(6) leaves only
+
+    d1,c>=17;
+    d2, even c>=6 or odd c>=17.                       (7)
+
+There is no claim that these remaining charts exist. A chart avoiding
+the k17 hole is a different target subset from the refuted all-k ray.
+A delayed clock is not equivalent to an early clock without an actual
+smaller-context construction. The new gate is inherited complete
+evidence; the finite-head checker below does not rerun that search.
 
 ## 4. Verification and what this changes
 
@@ -118,5 +133,6 @@ specific finite ready-fibre test. It preserves full H and explicitly
 retains the ready root's location. It loses selective-port information
 because uniform module incidences are a hypothesis of the map.
 The practical boundary is now narrower: rapid reindexing cannot rescue
-one fixed module, while delayed dyadic/quartic charts and genuinely
-changing cores remain legitimate targets.
+one fixed module. Delayed dyadic/quartic charts may still address target
+subsets avoiding the hole; changing cores remain useful with those
+subsets or with a different selected interface.

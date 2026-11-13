@@ -1,5 +1,23 @@
 # Review and reproduction record
 
+**Current frontier correction:** the incoming complete inverse excludes
+the exact indegree-one unit-ready interface at53084231=405*2^17+71.
+The all-k unit-ready405 proposal is therefore **REFUTED**, superseding
+the earlier bounded-search/open-interface language. The ordinary count
+is attained and Chan--Pak remains open. `K17_INCOMING_AUDIT.md` reviews
+the intrinsic P2 bound, all ancestor pruning, both enumerator scopes and
+the matching exhaustive receipts; its independent small controls cover
+75 tournaments,285 roots,1098 births and1023 legal words. Parent reran
+the large independent auditor with the same5640026 cores and74845805
+outer tests and no hit. Earlier finite positive constructions remain valid.
+
+The incoming94cb3ea clock pin is explicitly historical. The later
+5e148f917a correction refutes its constant-term-never-minus-one hypothesis;
+the Pi/Psi formulas and induced barriers used here do not depend on it.
+`INCOMING_CLOCKS.md` now links the corrected current statement. The star
+kernel proof's status-only header change was reviewed and both audit
+metadata pins refreshed, without rerunning unchanged mathematical counts.
+
 The parent agent independently reviewed `PROOF.md`, sections2--4, on
 2026-11-13 and accepted the signed-clock types and guards and the
 two-adic slope consequence. The acceptance specifically retains the

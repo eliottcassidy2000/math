@@ -24,7 +24,7 @@
   "source_pins": [
     {
       "path": "05-knowledge/results/growing_t_returns_20261113/star_kernel/PROOF.md",
-      "sha256": "1cf8394f19f432b8bb185128002f1c34f481b63e2e6dc1b03b9a344f0e66e894"
+      "sha256": "3d8f50627fd23764ea64fd8e478752f418f58df1a947a1f2f0768aca19f6482d"
     },
     {
       "path": "05-knowledge/results/growing_t_returns_20261113/star_kernel/check.py",

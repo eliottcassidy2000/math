@@ -1,6 +1,8 @@
 # Inverse-lane audit and source pins
 
-**VERIFIED controls; PROVED IN NOTE mathematical results; target return OPEN.**
+**VERIFIED controls; PROVED IN NOTE extremal/drift/clock results;
+all-k indegree-one unit-ready405 ray REFUTED by incoming complete evidence.
+Chan--Pak OPEN.**
 This lane uses the session base `9b8aa35188`. The parent session owns Git
 integration and publication. This child made no Git mutations.
 
@@ -20,10 +22,13 @@ to21..25 by evaluating its already-reviewed inequality at the target.
 The root separately checked and requested that exact table: nineteen-
 vertex cores allow n0..10; twenty allow n0..4; twenty-one allow n0..1;
 twenty-two and twenty-three allow n0 only. This is twenty parameter
-cells, not an enumeration of the cores in those cells. The other final
-change was the explicit source link for the inherited suffix identity.
+cells, not an enumeration of the cores in those cells. The geometry
+agent subsequently checked the sharper table independently and agreed.
+The other change was the explicit source link for the inherited suffix
+identity. This bounded search frontier is now SUPERSEDED by the complete
+incoming certificate described below; its inequalities remain valid.
 
-The final reviewed proof snapshot is:
+The reviewed mathematical snapshot before incoming status integration was:
 
     UNIT_READY_MINIMUM.md
     SHA256 666062186917059e90b0860ab70138f6afd5a8bb41e2d8f3845497319bca13ab
@@ -37,7 +42,8 @@ formula begins at j1, since the first prefix can have a parity boundary
 correction. The positive physical example has compatible prefix parity
 and retains its all-j formula. The clock note explicitly keeps both the
 marked root and predecessor outside the uniform module in its eventual
-readiness argument. Their final proof snapshots are:
+readiness argument. Their reviewed snapshots before incoming status
+integration were:
 
     CYCLIC_DRIFT.md
     SHA256 45fa46b1fc46a2e8790403f242d46bb4f74da59098d5c1ab0f4eb8b99f4de444
@@ -47,7 +53,48 @@ readiness argument. Their final proof snapshots are:
 
 `SOURCE_PINS.json` records these files, all four checkers and eight
 receipts, and the inherited proof/data dependencies. It records hashes,
-not a claim that the inherited census was freshly generated.
+not a claim that the inherited census was freshly generated. Its current
+hashes include the incoming-status integration below; the earlier hashes
+above retain the exact review lineage. Rebase checked out the local
+receipts with CRLF endings: the four pairs are still byte-identical,
+and normalizing CRLF to LF reproduces all four original receipt hashes.
+The current pins retain both raw and normalized-LF hashes so this
+checkout change is distinguished from any mathematical-content change.
+
+## Incoming complete certificate supersedes the bounded frontier
+
+After clean rebase, incoming commits `c85ab9a188` and `5d58ce365f`
+supplied [TARGET_INVERSE](../../target_directed_cores_20261112/TARGET_INVERSE.md),
+`complete_53084231.json`, and the
+[independent all-order audit](../../target_directed_cores_20261112/ports/COMPLETE_INVERSE_AUDIT.md).
+This lane read the proof and audit, inspected the producer's pruning
+implementation, and checked the two incoming receipt files directly.
+It did not rerun either large computation.
+
+The target-core inequality P2<=2N follows from the complete observer
+formula and root-cover injections. The deterministic insertion of a
+vertex into either cover bin proves hereditary doubling of P2; the
+stronger legal-tail lower bound is also proved in the incoming note.
+Together with P2>=2^c, this makes the complete finite grammar search
+rigorous at core cap26. The independent audit uses a different core
+traversal and direct outer-address enumeration, avoiding the producer's
+binary inverse and retained core bank.
+
+The consistency check verified the exact target53084231, budget106168462,
+cap26, every retained-core layer, total5,640,026 cores, the last nonempty
+layer19,74,845,805 independent direct outer-address tests, and zero hits.
+The inherited weak-ready classification extends this to every tournament
+order. Ordinary attainment remains positive, and the incoming defect-two
+source improves the previous defect-three source. The failed predicate
+is specifically an indegree-one unit-ready root.
+
+Accordingly the three lane proof headers now mark the all-k unit-ready405
+ray REFUTED; section5 of the minimum note preserves the old twenty-cell
+table as a SUPERSEDED frontier. This is new complete evidence, not a
+demonstrated error in the bounded search or all-order minimum theorem.
+The clock note also applies the new hole to every positive module size:
+its remaining necessary phases are d1,c>=17, or d2 with even c>=6 or odd
+c>=17. This does not assert the existence of any remaining clock.
 
 ## Executed controls
 
@@ -79,7 +126,8 @@ complete ready fibres and independently recounts54 actual source/clone
 graphs. The targeted joint probe excludes every2,178,309 canonical
 inner core of order18 with arbitrary outer-tail length.
 
-These finite universes support the proofs at their stated scope. They
-do not prove completeness of the whole metagraph, produce a unit-ready
-k17 witness, or establish a uniform target-preserving405 return. Chan--Pak
-remains OPEN.
+These local finite universes support the proofs at their stated scope.
+The additional incoming certificate decides the unit-ready k17 question
+negatively at all orders and refutes an all-k return with that required
+interface. Neither the local controls nor that certificate classify the
+whole metagraph or refute Chan--Pak, which remains OPEN.

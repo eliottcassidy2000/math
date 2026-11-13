@@ -4,8 +4,10 @@
 lift of the inherited signed inverse clock, and the hereditary-spectrum
 operation rules. **FINITE-EXACT:** the explicitly declared controls in
 `check.json`. **INHERITED:** the signed inverse-fibre classification, the
-binary-shell stencil, and the supplied404 ray. **OPEN:** a growing-t
-repeatable405 return, complete Chan--Pak coverage, and Collatz convergence.
+binary-shell stencil, and the supplied404 ray. **REFUTED:** an all-k
+unit-ready405 return in the exact indegree-one interface, by the incoming
+complete k17 exclusion reviewed in [K17_INCOMING_AUDIT.md](K17_INCOMING_AUDIT.md).
+**OPEN:** broader interfaces, complete Chan--Pak coverage, and Collatz convergence.
 No external novelty claim is made.
 
 ## 1. Inheritance and the useful distinction

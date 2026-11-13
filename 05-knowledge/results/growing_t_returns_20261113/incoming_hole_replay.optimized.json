@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "target": 53084231,
+  "incoming_audit_reproduced_exactly": true,
+  "total_cores": 5640026,
+  "direct_outer_tests": 74845805,
+  "found": false,
+  "source_sha256": "14d62a7132dc6f823161a2312d60a4f6673601e4c1be56c1e0636370c8a78b18",
+  "scope": "Independent incoming depth-first/direct-word implementation recompiled and replayed; its complete reduction and two implementations were reviewed separately."
+}

@@ -8,7 +8,8 @@ actual881 ->1691 ->3311 ->6551 unit-ready target chain; a separate growing-t
 module family with an explicit positive offset cost; exact minimum and all
 minimizing types at every strong unit-ready order. All-count induced-core
 barriers, minimal five/six obstructions, sharp binary drift, and a twenty-cell
-remaining k17 inverse. Repeatable405 return and Chan-Pak remain OPEN.
+k17 inverse narrowing, now superseded by the complete exclusion below.
+All-k unit-ready405 return REFUTED; Chan-Pak remains OPEN.
 
 [Changing cores at881](../05-knowledge/results/changing_core_returns_20261113/README.md):
 minimal arc repairs and a smaller strong core; exact neutral-component products;

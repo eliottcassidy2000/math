@@ -1,11 +1,7 @@
 {
   "status": "PASS",
-  "local_markdown_links": 68,
-  "incoming_links_pending_checkout": [
-    "05-knowledge/results/clone_clocks_negative_collatz_20261113/BRIDGES.md",
-    "05-knowledge/results/clone_clocks_negative_collatz_20261113/CLOCKS.md",
-    "05-knowledge/results/surplus_selector_20261113/REPAIR23.md"
-  ],
+  "local_markdown_links": 92,
+  "incoming_links_pending_checkout": [],
   "normal_optimized_pairs": [
     "containment/receipt.json.gz",
     "extremal_arithmetic.json",
@@ -13,9 +9,11 @@
     "geometry/containment_audit.json",
     "geometry/forbidden_cores.json",
     "geometry/incoming_clocks.json",
+    "geometry/K17_INCOMING_AUDIT.json",
     "geometry/rooted_heredity.json",
     "geometry/star_kernel_audit.json",
     "geometry/THREE_STEP_AUDIT.json",
+    "incoming_hole_replay.json",
     "inverse/cyclic_drift_receipt.json",
     "inverse/joint_probe.json",
     "inverse/reindexed_clocks_receipt.json",
@@ -31,7 +29,7 @@
     "repairs/two_port_trace.json",
     "star_kernel/receipt.json"
   ],
-  "distinct_files_and_hashes_checked": 54,
+  "distinct_files_and_hashes_checked": 66,
   "immutable_incoming_commit": "94cb3ea067d2b0af3e8f63f736d901ef52d159ab",
   "scope": "Integrity and receipt agreement; independent mathematical proof reviews remain in AUDIT.md. Inherited complete isomorphism censuses are pinned, not regenerated."
 }

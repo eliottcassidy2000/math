@@ -1,10 +1,12 @@
 # Growing deletion counts, changing cores, and exact ready targets
 
-**PROVED IN NOTES / FINITE-EXACT; Chan-Pak and an indefinitely repeatable
-unit-ready405 ray remain OPEN.** This session constructs three physical
-target steps, derives a growing-parameter repair family, and classifies
-the minimum count at every strong unit-ready order. It does not classify
-the full metagraph or add terms to the general tournament census.
+**PROVED IN NOTES / FINITE-EXACT; Chan-Pak remains OPEN.** This session
+constructs three physical target steps, derives a growing-parameter repair
+family, and classifies the minimum count at every strong unit-ready order.
+**The universal unit-ready405 ray is now REFUTED:** a concurrent complete
+inverse excludes its k17 target at every order. The incoming independent
+74,845,805-word audit was recompiled and reproduced during final integration.
+This is a missing interface, not a missing ordinary Hamilton count.
 
 ## A constructive return and its remaining obstruction
 
@@ -33,7 +35,8 @@ physical vertices0 and2. Removing those ports leaves a transitive
 backbone. Every target birth adds a prefix vertex with the same port
 letter01; the final sink deletion removes the last backbone vertex.
 Thus the actual trace is a two-apex, four-letter word program. The
-three successful word repairs do not yet define an all-height selector.
+three successful word repairs cannot extend to every405-ray target with
+the same unit-ready requirement, because that requirement fails at k17.
 
 For a genuine bulk module B, put h=H(B), v=K2(B), w=K3(B). The two outputs
 satisfy
@@ -63,7 +66,7 @@ that exclusion.
 | A2 and B9 have no unit-ready induced extension at any count | All orders; start monotonicity and literal source data | [Rooted heredity](geometry/ROOTED_HEREDITY.md) |
 | Minimal forbidden configurations on five and six vertices | Actual ready extensions for all proper subsets; an infinite regular-five-free forbidden family | [Five/six cores](geometry/ROOTED_HEREDITY.md) |
 | Sharp cyclic drift of the binary-shell function | Every binary period; positive mixed drift and classified minimizers | [Drift](inverse/CYCLIC_DRIFT.md) |
-| Reindexed fixed-module gates | Every rate d>=3 excluded; ten early dyadic/quartic phases excluded; delayed phases open | [Clock gates](inverse/REINDEXED_CLOCKS.md) |
+| Reindexed fixed-module gates | Factorial, complete-head and k17-hole restrictions; some delayed or hole-skipping phases remain open | [Clock gates](inverse/REINDEXED_CLOCKS.md) |
 | Signed Collatz clock lifted to actual births | Exact map with residue guards; arithmetic target differs from Hamilton count | [Arithmetic lift](geometry/PROOF.md) |
 | Incoming two-clock families cannot acquire readiness by further growth | Arbitrary nonempty substitutions and further births | [Incoming clocks](geometry/INCOMING_CLOCKS.md) |
 | Optimal counts meet A002496 exactly in5 and17 | All orders, by factorization and eventual residue7 modulo8 | [Arithmetic](EXTREMAL_ARITHMETIC.md) |
@@ -89,23 +92,33 @@ small graphs is needed.
 
 ## Exact inverse progress
 
-The new computation excludes every canonical inner core through order18
-at every tail length for405*2^17+71=53084231. This extends the preceding
-order17 exclusion; it does not prove nonexistence of a ready source.
-The sharper cover bound leaves these core-size/address cells:
+Our computation excludes every canonical inner core through order18 at
+every tail length for405*2^17+71=53084231. Its sharper cover bound reduced
+the then-unresolved head to these core-size/address cells:
 
     c19: n0..10; c20: n0..4; c21: n0..1; c22: n0; c23: n0.
 
-Any remaining witness has total order21..25. The existing defect-three
-witness remains valid. This is a complete narrowing, not a completed
-search of the twenty remaining parameter cells.
+**That remaining-head status is SUPERSEDED.** The incoming
+[complete inverse](../target_directed_cores_20261112/TARGET_INVERSE.md)
+uses P_C(2)<=2N and hereditary pruning to exhaust every core, at every
+order. Two algorithms agree:5,640,026 retained cores, zero target hits.
+The independent direct-word implementation was rerun here and exactly
+reproduced all74,845,805 tests; see `incoming_hole_replay.json`.
 
-The next constructive question is specific: change the first response
-or introduce a selective second resource so that96K2+46K3 is cancelled
-while preserving an actual unique-start parent. Increasing t alone,
-repeating a mixed period, or growing a forbidden induced core cannot do
-this. Changing-core constructions with full-address dependence remain
-outside the proved obstructions.
+The target itself is attained. The incoming
+[defect-two construction](../target_directed_cores_20261112/constructors/DEFECT_TWO.md)
+improves the preceding defect-three witness. Defect2 is the least positive
+indegree-one defect there. This does not exclude balanced defect0 or a
+different selected interface. Explicit ready sources through k16 make
+k17 the first unit-ready failure on the ray.
+
+The next constructive question must allow a different interface at the
+hole, skip that target, or use a direct target conversion. Cancelling the
+local96K2+46K3 cost could still extend finite branches or other families,
+but cannot restore an all-k unit-ready405 ray. Full-address dependence
+cannot bypass nonexistence of the required interface either. Chan-Pak
+needs ordinary count coverage, so variable-defect constructions remain
+legitimate avenues.
 
 ## Recovery and claim boundaries
 

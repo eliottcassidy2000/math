@@ -1,0 +1,50 @@
+{
+  "status": "VERIFIED intrinsic proof/code review and FINITE-EXACT local controls; large census inherited and replayed by parent",
+  "consequence": "REFUTED all-k indegree-one unit-ready405 interface; ordinary count and Chan-Pak unaffected",
+  "small_controls": {
+    "tournaments": 75,
+    "roots": 285,
+    "births": 1098,
+    "legal_words": 1023
+  },
+  "target": 53084231,
+  "core_p2_bound": 106168462,
+  "core_order_bound": 26,
+  "retained_cores": 5640026,
+  "direct_outer_tests": 74845805,
+  "found": false,
+  "source_pins": [
+    {
+      "path": "05-knowledge/results/target_directed_cores_20261112/TARGET_INVERSE.md",
+      "sha256": "d595a5d94e04ac158dbe5f250e6e0ef65db24a90b6ca98b42da2201c969313b6"
+    },
+    {
+      "path": "05-knowledge/results/target_directed_cores_20261112/ports/COMPLETE_INVERSE_AUDIT.md",
+      "sha256": "34a3ce7d39e48b8c7f7430f1c471c8f3307deae3b475d0715d5d9473e8384a44"
+    },
+    {
+      "path": "05-knowledge/results/target_directed_cores_20261112/complete_ready_inverse.cpp",
+      "sha256": "3437bbb74fc35ff9dd11a98e80fc0072851de488761bb9391aa3133e42f87d5f"
+    },
+    {
+      "path": "05-knowledge/results/target_directed_cores_20261112/target_inverse.cpp",
+      "sha256": "9abdc76ba0f309b59d37fdc5d8db035cb956f2e66c4e2971f06cdbd7529cefd6"
+    },
+    {
+      "path": "05-knowledge/results/target_directed_cores_20261112/ports/complete_audit.cpp",
+      "sha256": "14d62a7132dc6f823161a2312d60a4f6673601e4c1be56c1e0636370c8a78b18"
+    },
+    {
+      "path": "05-knowledge/results/target_directed_cores_20261112/complete_53084231.json",
+      "sha256": "6deb63961383d964c20b6058864bb92c7bfd595a989af9ac4cc7ed61b0bde80b"
+    },
+    {
+      "path": "05-knowledge/results/target_directed_cores_20261112/ports/complete_audit_53084231.json",
+      "sha256": "a784f1c84cea92dacbaa123cfcdb8accdc7af59c53f1e8aa5264d7497ecf606b"
+    },
+    {
+      "path": "05-knowledge/results/clone_clocks_negative_collatz_20261113/CLOCKS.md",
+      "sha256": "1b9b82e59724a5aec5804cd6d785e866a96f538fccf6b683c51fa9847d4dda62"
+    }
+  ]
+}

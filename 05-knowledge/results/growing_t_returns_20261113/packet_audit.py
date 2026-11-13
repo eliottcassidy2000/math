@@ -75,6 +75,10 @@ for item in read_json(HERE / 'geometry/star_kernel_audit.json')['source_pins']:
     check_pin(item['path'], item['sha256'])
 for item in read_json(HERE / 'geometry/THREE_STEP_AUDIT.json')['source_pins']:
     check_pin(item['path'], item['sha256'])
+for item in read_json(HERE / 'geometry/K17_INCOMING_AUDIT.json')['source_pins']:
+    check_pin(item['path'], item['sha256'])
+check_pin('05-knowledge/results/target_directed_cores_20261112/ports/complete_audit.cpp',
+          read_json(HERE / 'incoming_hole_replay.json')['source_sha256'])
 for relative in ('containment/receipt.json.gz', 'star_kernel/receipt.json'):
     for path, sha in read_json(HERE / relative)['source_pins'].items():
         check_pin(path, sha)

@@ -1,8 +1,9 @@
 # Validity audit and reproduction boundary
 
-**PROVED IN NOTES / FINITE-EXACT controls.** No Chan-Pak proof, complete
-405-ray return, global metagraph classification, or OEIS enumeration
-record is asserted. `packet_audit.json` records the final machine-readable
+**PROVED IN NOTES / FINITE-EXACT controls.** The universal unit-ready405
+return is **REFUTED** by the incoming complete k17 inverse, independently
+replayed here. No Chan-Pak proof, global metagraph classification or OEIS
+enumeration record is asserted. `packet_audit.json` records the final machine-readable
 integrity result; individual proofs retain their declared scopes.
 
 ## Independent mathematical reviews
@@ -55,7 +56,15 @@ length19, all6008 strong order-eight representatives, all196417 rooted
 unique-start parents through order15, and literal extremizers through
 order15. The separate k17 search covers all2178309 inner cores of order18
 and every admissible outer-word length by exact inversion. It does not
-search the remaining core orders19 through23.
+search core orders19 through23. Its unresolved-head status is superseded
+by the incoming complete inverse. The coordinator recompiled that
+independent C++ audit in a temporary directory and exactly reproduced
+5,640,026 cores and74,845,805 direct outer-word tests, with zero hits.
+The reduction, pruning and scope were independently reviewed again.
+The [incoming exclusion review](geometry/K17_INCOMING_AUDIT.md) records
+the complete argument and its separate small positive controls. The
+recompiled exhaustive replay is reproducible with
+`python -B 05-knowledge/results/growing_t_returns_20261113/incoming_hole_replay.py`.
 
 The primary induced-spectrum calculation covers every subset of all14
 strong targets in the five selected complete heads. The independent

@@ -122,11 +122,11 @@
   "source_pins": [
     {
       "path": "05-knowledge/results/growing_t_returns_20261113/repairs/chain_881_1691_3311_6551.json",
-      "sha256": "c146236ef11e9f79d1bc39798edb41dcd5d4fa34f0a95cf5e9038c00480fbce9"
+      "sha256": "62b9b42038bff2f347dd4720a9ce741c24579251a306eef7f398380a9e3e5b98"
     },
     {
       "path": "05-knowledge/results/growing_t_returns_20261113/repairs/chain_881_1691_3311_6551.optimized.json",
-      "sha256": "c146236ef11e9f79d1bc39798edb41dcd5d4fa34f0a95cf5e9038c00480fbce9"
+      "sha256": "62b9b42038bff2f347dd4720a9ce741c24579251a306eef7f398380a9e3e5b98"
     },
     {
       "path": "05-knowledge/results/growing_t_returns_20261113/repairs/chain_881_1691_3311_6551.py",
@@ -134,7 +134,7 @@
     },
     {
       "path": "05-knowledge/results/growing_t_returns_20261113/repairs/alternate_1691_inputs.json",
-      "sha256": "12e2c31997fc5c7cc89fa4c65e05b0135c3c78dd2ec051a66554d7ab78294d07"
+      "sha256": "0dbd0e8ada5eed9657fe280eaf967abe137579007fdcaf3b7d3c5126a60fb84f"
     },
     {
       "path": "05-knowledge/results/growing_t_returns_20261113/repairs/helper_alt303_two_star.raw.jsonl",

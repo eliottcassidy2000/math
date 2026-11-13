@@ -3,8 +3,11 @@
 **PROVED, scoped:** the exact newborn response on every unique-start star
 face, its positive network representation, and the chain of minimizing
 repairs within each face. **FINITE-EXACT:** the881 repair and its immediate
-one-star continuation obstruction. **OPEN:** a selector that composes such
-repairs for every405-ray step or every admissible odd target.
+one-star continuation obstruction. A selector producing a unit-ready
+source at every405-ray step is **REFUTED** by the incoming all-order k17
+exclusion; see [the current synthesis](../README.md#exact-inverse-progress).
+Constructors with a changed interface and general count coverage remain
+**OPEN**. The kernel itself and all finite repairs below are unchanged.
 
 The one-vertex quadratic and positive cut geometry are inherited from
 [session124](../../session124_tournament_cut_response_20261031/README.md)
