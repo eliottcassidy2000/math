@@ -3,6 +3,13 @@
 [Research packet](../05-knowledge/results/eight_nine_twentyseven_20261112/README.md).
 **PROVED IN NOTES / FINITE-EXACT; Chan–Pak OPEN.**
 
+[63 and retained-root repairs](../05-knowledge/results/sixty_three_bridge_20261113/README.md):
+sharp three-arc neutral repair; arbitrary paired-module norm and exact
+primitive guard; repeatable 63→165→269→497 continuation family. Incoming
+ternary forks gain a reflected +2 exit, with a precise feedback-rank cost.
+Activation ideals retain actual source witnesses; localization alone can
+hide infinitely many primitive holes. Full target selection remains OPEN.
+
 [Strategy reframe: supply, transport and terminal absorption](../05-knowledge/results/strategy_fibres_absorption_20261113/README.md):
 exact reset/short-word pruning preserves prime and7p lanes; five-atom Markov
 basis has a sharp one-singleton helper theorem and prescribed P2 inversion.
