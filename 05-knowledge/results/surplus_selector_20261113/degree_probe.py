@@ -2,7 +2,7 @@
 import random,json,gzip
 import numpy as np
 from inflation_probe import zprofile
-from fibre_probe import HERE,save
+from fibre_probe import HERE,save,need
 
 def state(T):
     n=len(T);z=tuple(map(int,zprofile(np.array(T,dtype=np.int64),n-1)))
@@ -11,6 +11,13 @@ def state(T):
 
 def run():
     rng=random.Random(61113);best=[];trials=0;bad=None
+    rows=json.loads(gzip.decompress((HERE/'fibre_probe.json.gz').read_bytes()))['records']
+    small=[]
+    for row in rows:
+        T=row['rows'];h,s,q,F=row['profile'];d=sum(t>>(len(T)-1)&1 for t in T)
+        if h-q-d*s<0:small.append(row)
+    hostile=(2,20,25,19,1);hz,hd,hm=state(hostile)
+    need(hz==(9,1,5,23) and hd==3 and hm==1,'cyclic-three in-neighbourhood is not a chart')
     for n in range(8,13):
         record=None
         for seed in range(25):
@@ -29,6 +36,6 @@ def run():
             if bad:break
         best.append(dict(n=n,best=record));print('ORDER',n,'BEST',record,flush=True)
         if bad:break
-    save('degree_probe',dict(status='REFUTED' if bad else 'FINITE-EXACT search only; not proved',universe='Deterministic25-start100-step one-arc hill search per order8..12; stops on first negative',evaluations=trials,best=best,counterexample=bad))
+    save('degree_probe',dict(status='REFUTED' if bad or small else 'OPEN; exact bounded and sampled controls only',universe='Complete2618 rooted strong classes through7, then deterministic25-start100-step one-arc hill search per order8..12; stops on first negative',small_classes=len(rows),small_violations=small,evaluations=trials,best=best,counterexample=bad,cyclic_three_hostile=dict(rows=hostile,root=4,profile=hz,indegree=hd,margin=hm)))
 
 if __name__=='__main__':run()

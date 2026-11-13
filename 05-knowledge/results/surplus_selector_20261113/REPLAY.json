@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.2",
+  "numba": "0.64.0",
+  "pairs": [
+    {
+      "engine": "fibre_probe",
+      "sha256": "9c6cb60eb93636fe945a3b5eea4acf3902a740d13626a5aa1c2c44b3f6a15696"
+    },
+    {
+      "engine": "inflation_probe",
+      "sha256": "929409bc6d15e8d4cfbad0c2c4627317d163c8db19657c0a2b031155810adcea"
+    },
+    {
+      "engine": "degree_probe",
+      "sha256": "83cbfd22e08427bcc336a6e3125276810db5d65758628a330d7c429ecbcef55a"
+    },
+    {
+      "engine": "repair23",
+      "sha256": "16993286d2a2b42cbc7cd862776e986262400979306c2d5517210ee960aa80cc"
+    },
+    {
+      "engine": "prefix_selector",
+      "sha256": "7de43071f616b61894ee84744690dbfda6ce9f5764b38da39f81ac8cc2a86755"
+    },
+    {
+      "engine": "context_transport",
+      "sha256": "5cf1da6bd8ef6d89b68777433b5efa6e0f58426b13784d141aa9c473b5c9dce5"
+    },
+    {
+      "engine": "direction_probe",
+      "sha256": "964377839a5763a284e17dfd0d58151d59fba55deb2f7d13cca1fa78db4748ec"
+    },
+    {
+      "engine": "transport_words",
+      "sha256": "01d052a8689ad6159072c8fba1c2ef9e4908112636c644d09740e0319b6be424"
+    },
+    {
+      "engine": "arithmetic_probe",
+      "sha256": "fd6f9fcafa014c13f91132750272c8d41b2d510c2abe2084c761ab35f12d2471"
+    },
+    {
+      "engine": "audit",
+      "sha256": "afa4ff6ac0ba45f8edb20fde3406bddac1812fcabfcec8e08731493558f31e98"
+    }
+  ],
+  "sources": {
+    "05-knowledge/results/surplus_selector_20261113/arithmetic_probe.py": "31a4fdc588afe5b229976d88c3def9312ed91bd750e021314d981cbb3f9c1baa",
+    "05-knowledge/results/surplus_selector_20261113/audit.py": "6b40be821b108c8e2b6db3da8bb34ef7ec92005c99cd42cbb9ffd511fbaf0f16",
+    "05-knowledge/results/surplus_selector_20261113/context_transport.py": "f4524a0dfb55adf2205f2a9317adb23bd90feef8d5889a6e37e6931c28df3e92",
+    "05-knowledge/results/surplus_selector_20261113/degree_probe.py": "ca1d39f73aa58d947f22ea5d4aa9f3742134eadbca48426e4b57fd3f2f1f520d",
+    "05-knowledge/results/surplus_selector_20261113/direction_probe.py": "1dcc55d65568adfd1bf5e73f5c7978e4a7f1b078a73d33d3513f9f764c80bdad",
+    "05-knowledge/results/surplus_selector_20261113/fibre_probe.py": "f7dc21f9ff27be417daeeddf41443e59c0e910cc993ecccf019b899aaed93c74",
+    "05-knowledge/results/surplus_selector_20261113/inflation_probe.py": "02abbf8e22ea7f64abe64d0f05491ace5659e8f78ab5f517f4d67486f5999665",
+    "05-knowledge/results/surplus_selector_20261113/prefix_selector.py": "bc10481f577d463c1bdecb41e7ac954990f47978e93da00e77994a19746def2d",
+    "05-knowledge/results/surplus_selector_20261113/repair23.py": "8fea714774104b69536d73455203e6252e061282d642720332d080b0e67821e3",
+    "05-knowledge/results/surplus_selector_20261113/reproduce.py": "f20adc786998ae466deac641547fd0ef538b22a31e27cd5153267587b8730bf4",
+    "05-knowledge/results/surplus_selector_20261113/transport_words.py": "50bbbc32f4abd3582620d60a22202994729bf455c274cc45f662bb764ac76ff0",
+    "05-knowledge/results/ternary_core_grammar_20261113/triangle_probe.py": "1177fe052b72efd908b82a9e41cee14ea6cb394a7ca6babc7f50eb6edc55e4aa",
+    "05-knowledge/results/ternary_core_grammar_20261113/atomic_ears.py": "2174a9b9c3f2c3d67c91662c40dc55718a59240c72f50d0130e229c91857968a",
+    "05-knowledge/results/ternary_core_grammar_20261113/peeling.py": "11db65786e0904e6b0d73414cc15185f944d7d71474a6fdb84b10f489828b230",
+    "05-knowledge/results/multicore_metagraph_20261113/rooted_growth.py": "d4cdeba1cc07667a982cc2401456d5628804a4b3ef17832b7b7179d359a837b5",
+    "05-knowledge/results/multicore_metagraph_20261113/rooted_growth.json.gz": "3bf25d80ade2bcb7f3af880dd0b9c31e58766529c4be8b99d79a2d8efaa999f5",
+    "05-knowledge/results/modular_centers_collatz_pell_20261111/content_checks.py": "bf894b45e3d3f29a5e953b72bc12fec6ba3a07db7868a768758624917eacc63d",
+    "05-knowledge/results/modular_centers_collatz_pell_20261111/tournament_checks.py": "25a193fe1d66a6c6780451f5de6c393398c1b7788e743744317c258f41aa6a7a"
+  },
+  "independent_agent_review": false
+}

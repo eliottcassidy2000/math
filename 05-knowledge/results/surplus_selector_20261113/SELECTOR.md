@@ -59,6 +59,16 @@ the final target because the root is in the separate terminal23-core.
 This quotient does not classify L itself or preserve arbitrary roots inside L.
 Retaining one full prefix graph and its component word is the lifting data.
 
+This also gives a target-decreasing inverse recursion within the language.
+For a candidate pair(h,f), select an actual strong component with pair(u,v)
+dividing it and recurse on(h/u,f/v). Every nonempty component has v≥2,
+so f strictly decreases and the scalar23h+60f decreases. The terminal pair
+is(1,1), the empty prefix; at least one selected component is required.
+An actual component word reconstructs L, after which REPAIR23 supplies
+the marked root and chain entry. The recursion proves termination and
+correct reconstruction. It does not prove that any admissible scalar N
+has a successful initial pair or component branch.
+
 ## 3. A complete implementation below26521
 
 The bank contains every ordinary strong tournament through order7. Suppose
