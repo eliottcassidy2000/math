@@ -54,6 +54,11 @@ From the repository root:
 
     python -B 05-knowledge/results/multicore_metagraph_20261113/reproduce.py
 
+The audited environment uses Python 3.13.14, NumPy 2.3.2 and Numba 0.64.0.
+NumPy and Numba are required by the accelerated inflation checker;
+Matplotlib is needed only to regenerate the separate figure. The receipt
+checks do not depend on Matplotlib or on regeneration of that illustration.
+
 The11 producer pairs are rerun normally and with Python optimization;
 `reproduction.json` checks byte-identical deterministic receipts. The
 optimization-only option compares a fresh optimized run with existing normal

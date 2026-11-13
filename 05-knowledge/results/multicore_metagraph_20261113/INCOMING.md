@@ -1,7 +1,7 @@
 # Concurrent results and precise overlap
 
 **Integration audit, 13 November 2026.** The final synchronization brought
-two directly relevant packets. All 31 previously pinned dependencies of
+directly relevant packets. All 31 previously pinned dependencies of
 this packet retained their exact hashes. The following results are credited
 to those packets; independent rediscovery is not a priority claim.
 
@@ -69,3 +69,22 @@ Together they identify a useful division: end-rooted classes suffice for
 forward counting, while exact complement incidence requires internal
 alignment information. Neither statement supplies a smaller complete
 metagraph state or a new A000568 term by itself.
+
+## A contrasting escape changes the marked response at the same count
+
+The later synchronization also brought
+[Session 298's exact-target preparation](../session298_exact_target_geometry_20261113/README.md)
+and its [two-width chart](../session298_exact_target_geometry_20261113/TWO_WIDTH.md).
+These move a named root within a transitive block while preserving the
+unrooted tournament, hence its whole Hamilton count. The changed marked
+response opens infinitely many permitted entries into a balanced controller
+at the displayed targets 2^m+1 and, in the two-width example, 47.
+
+This suggests a different role for the metagraph: several marked states
+over one ordinary node can have different outgoing permissions despite
+identical full counts. Such neutral preparation can change the available
+arithmetic operation before a growth step. It is not a counterexample to
+the finite-bank obstruction, which fixes the exact 3H+2 iteration, and it
+does not establish a ready source at every target. The next proof obligation
+is an all-target source or a target-decreasing physical repair with its
+specified marked coordinates, rather than another list of scalar matches.

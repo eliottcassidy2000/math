@@ -19,7 +19,9 @@ PROOFS=[
 '05-knowledge/results/session296_multicore_metagraph_20261113/cores/PROOF.md',
 '05-knowledge/results/session296_multicore_metagraph_20261113/cores/FINITE_ATLAS.md',
 '05-knowledge/results/session296_multicore_metagraph_20261113/metagraph/PROOF.md',
-'05-knowledge/results/mrb_seven_cutoffs_20261113/module/PROOF.md']
+'05-knowledge/results/mrb_seven_cutoffs_20261113/module/PROOF.md',
+'05-knowledge/results/session298_exact_target_geometry_20261113/README.md',
+'05-knowledge/results/session298_exact_target_geometry_20261113/TWO_WIDTH.md']
 
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 

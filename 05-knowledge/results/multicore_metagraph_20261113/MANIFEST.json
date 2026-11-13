@@ -1,12 +1,12 @@
 {
   "status": "PASS",
-  "source_pins": 35,
-  "local_links": 20,
+  "source_pins": 37,
+  "local_links": 22,
   "files": [
     {
       "path": "AUDIT.md",
-      "sha256": "26767b06eb9aad8e458025cf095f21d4907864d5705da3087ee5eb58b5d51353",
-      "bytes": 5181
+      "sha256": "33a424261ef5d509cbb57a1f4b4134a115834b0d253f2e634b50ce535a671c17",
+      "bytes": 5473
     },
     {
       "path": "blue_incidence.json.gz",
@@ -150,8 +150,8 @@
     },
     {
       "path": "INCOMING.md",
-      "sha256": "ebdb2dec50d7080a35cae008e95b8f29efb33c34161f9ce74ea1dc18f4a071c0",
-      "bytes": 3937
+      "sha256": "635ac0b17834a893af9702555f2ed99e7b7a11b59edb2bc30c0066c24cd92c8c",
+      "bytes": 5099
     },
     {
       "path": "inflation_descent.json.gz",
@@ -230,13 +230,13 @@
     },
     {
       "path": "seal.py",
-      "sha256": "f20c21386c88a4872671247813c3473e39246774921da1d38a3432746e2d301d",
-      "bytes": 2864
+      "sha256": "07a6e3360f2d9f95cb11d1bc362bfb95b9479c80937bf0ea7d70d99ceeabe24f",
+      "bytes": 3019
     },
     {
       "path": "SOURCE_PINS.json",
-      "sha256": "4b866d937662ddc0bd5d19cc46dc42d473b8e784231941e3645da86ef9c747ac",
-      "bytes": 6685
+      "sha256": "c0b5ed8b3fa8a4e3700ee812e7b59d3606b03f3a34372e49fcb12ebf4a773df5",
+      "bytes": 7068
     }
   ]
 }

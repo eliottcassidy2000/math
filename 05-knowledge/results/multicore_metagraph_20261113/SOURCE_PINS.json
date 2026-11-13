@@ -91,7 +91,7 @@
     },
     {
       "path": "05-knowledge/results/multicore_metagraph_20261113/seal.py",
-      "sha256": "f20c21386c88a4872671247813c3473e39246774921da1d38a3432746e2d301d"
+      "sha256": "07a6e3360f2d9f95cb11d1bc362bfb95b9479c80937bf0ea7d70d99ceeabe24f"
     },
     {
       "path": "05-knowledge/results/nonzero_preparation_20261103/surgery/ORDER_OBSTRUCTION.md",
@@ -128,6 +128,14 @@
     {
       "path": "05-knowledge/results/session296_multicore_metagraph_20261113/metagraph/PROOF.md",
       "sha256": "4141496a8660ad5321bf6b6db0502fcb941dd092c888e6846a1816d74fc7af42"
+    },
+    {
+      "path": "05-knowledge/results/session298_exact_target_geometry_20261113/README.md",
+      "sha256": "6e24968ae5c84a9b9c632cdd93dce1215ec9ee56e0ce75950205491e66047d74"
+    },
+    {
+      "path": "05-knowledge/results/session298_exact_target_geometry_20261113/TWO_WIDTH.md",
+      "sha256": "443963696f053a529f13dfbbb526fd4e0092a06c70de4d7aefdc782cac9c5110"
     },
     {
       "path": "05-knowledge/results/two_entry_funnels_20261103/READY.md",
