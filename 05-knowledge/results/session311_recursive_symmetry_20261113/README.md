@@ -1,0 +1,12 @@
+# Session 311: recursion separates count, symmetry, and ports
+
+The underlying replacement from Session 310 changes a strong eight-vertex block into a strong seven-vertex block followed by a sink without changing its full path-slot polynomial. This session uses that replacement to build and analyze symmetry at all depths, rather than searching for a larger isolated coincidence.
+
+- [Exact recursive atlas](WREATH_ATLAS.md): inflate directed triangles repeatedly and color the leaves by the two equivalent blocks. At height d all strong tournaments in the resulting family have the same full polynomial, while the possible group orders are exactly every power of 3 from 1 through 3^((3^d−1)/2). There are exactly two rigid classes at every depth, and an exact polynomial recurrence counts all group orders. A single neutral leaf change can remove d powers of three; making a monochromatic tower fully rigid takes exactly (3^d−1)/2 neutral changes, compared with 3^(d−1) pointwise marks.
+- [Arbitrary group control](SYMMETRY_CONTROL.md): any finite list of finite odd-order groups, together with the trivial group, can be realized by same-order strong tournaments sharing one full path-slot polynomial. The control is by actual stabilizers of neutral leaf types. A separate construction changes whether a strong tournament is self-converse while preserving both its full polynomial and its ordinary automorphism group.
+- [Typical rather than extremal symmetry](RANDOM_GROWTH.md): for independent binary leaves the logarithm base three of the group order has a positive limiting density per leaf, with exact expectation and a concentration estimate. This distinguishes the probability distribution on labeled trees from the count of distinct isomorphism classes.
+- [Selective ports](PORT_DETECTORS.md): uniform observers cannot distinguish the two Session 310 blocks, but a single outside vertex with one exceptional incidence already distinguishes the swap at every possible internal mark. Two outside vertices give a general deletion-polynomial test. A protected external mark can still survive a recursively nested uniform swap.
+
+These are exact recursive constructions and obstructions, not an all-count compiler. The neutral swaps deliberately preserve the count; none supplies a repeatable return at every prescribed prime or 7p. Chan–Pak remains open.
+
+Replay `verify_wreath.py`, `verify_seeds.py`, and `verify_ports.py` in ordinary Python and with `-O`.
