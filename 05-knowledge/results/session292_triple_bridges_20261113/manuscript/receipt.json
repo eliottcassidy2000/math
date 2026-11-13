@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "bases": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    9,
+    12
+  ],
+  "weights": [
+    -216,
+    1188,
+    -2464,
+    2079,
+    -924,
+    594,
+    -264,
+    7
+  ],
+  "moments_0_to_9": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3991680,
+    179625600,
+    4750099200
+  ],
+  "shifted_weights": [
+    -186624,
+    256608,
+    -236544,
+    112266,
+    -22176,
+    8019,
+    -2816,
+    42
+  ],
+  "shifted_first_difference": 3448811520,
+  "annihilator_ascending": [
+    124416,
+    -319680,
+    318240,
+    -163380,
+    47908,
+    -8295,
+    835,
+    -45,
+    1
+  ],
+  "quartet_root_controls": 16,
+  "sparse_surviving_lengths": [
+    2,
+    4,
+    5,
+    6,
+    8,
+    10,
+    12,
+    14
+  ],
+  "sparse_determinant": 125904415848584637492689645208600576000000000,
+  "scope": "Exact elementary controls; no physical realization or RH conclusion."
+}
