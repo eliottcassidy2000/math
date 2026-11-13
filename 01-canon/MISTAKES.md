@@ -5,6 +5,14 @@ statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
 
+## 2026-11-13: A malformed tournament control and a verifier-name collision
+
+- **Status:** caught and repaired before publishing the [MRB/seven/cutoff packet](../05-knowledge/results/mrb_seven_cutoffs_20261113/AUDIT.md); no theorem was retracted.
+- **Minimal fixture:** the supposed strong four-vertex tournament(6,4,8,1) omitted the arc1→3. A path counter alone accepts such a directed graph and therefore cannot certify that a tournament control has the intended type. The repaired rows are(6,12,8,1); explicit pairwise orientation checks now precede every control, and normal/optimized replays agree.
+- **Strongest survivor:** the independent skeleton proof and all correctly typed module controls support the three-size certificate. The missing coordinate was the ambient graph type, not an extra numerical sample.
+- **Operational mechanism:** importing a new file named verify.py collided with an inherited module of that name and stopped an interactive probe. Rename the new module to module_certificates.py and replay the import and full commands. An aborted import supplies no computation evidence; the earlier CLI runs were unaffected.
+
+
 ## 2026-11-13: A six-step marked return needs its cut and nontrivial clock
 
 - **Status:** endpoint guard and quotient-loss clarification repaired during

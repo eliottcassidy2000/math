@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "engines": 9,
+  "executions": 18,
+  "python": "3.13.14",
+  "checks": [
+    {
+      "script": "module/module_certificates.py",
+      "normal_optimized_equal": true,
+      "script_text_lf_sha256": "a2cdbf5fa078a087f4d5dcb7888b8205ee81dcb83949d2aaf6431cebd9bac2e0",
+      "mathematical_receipt_sha256": "8a67481f417ef433134f8924ca110046d5c6c944299b62c55399dadd881cf01d"
+    },
+    {
+      "script": "module/escape_probes.py",
+      "normal_optimized_equal": true,
+      "script_text_lf_sha256": "499d79435fd01e07e1692747531bfaa8ea5ff362c09861855d163d02e6c3e5d9",
+      "mathematical_receipt_sha256": "ed53317e5763e4c394703b00e9f7eb266d87f0ac37faf3e1f065d7677cc89801"
+    },
+    {
+      "script": "curves/verify_curves.py",
+      "normal_optimized_equal": true,
+      "script_text_lf_sha256": "30405fa29d3f18ad429aa07c2526bb1d3e3cf255f67ad6b08c0ff01a2ab31c27",
+      "mathematical_receipt_sha256": "5409e07e62fcdfbf8398cf2a035d2f95addc04dfe1089227c0a4f7f823c0eb86"
+    },
+    {
+      "script": "curves/module_audit.py",
+      "normal_optimized_equal": true,
+      "script_text_lf_sha256": "95b54324eeeae29def8a523ff06413635ec87763df94220cf1160fe0918be821",
+      "mathematical_receipt_sha256": "b661c0b392e39dc6c5a955ace3aba2f16f6751a72a0610c36b0eba44acff5538"
+    },
+    {
+      "script": "curves/verify_881_profiles.py",
+      "normal_optimized_equal": true,
+      "script_text_lf_sha256": "ab52f0f1c586a5e4ad85f3ae81269c007de4fd4c4f87da54fb49e3ed9cb86881",
+      "mathematical_receipt_sha256": "6c9d6bdde74e67598ba3f53ef5c86d24fd8a18b3be2599f2e11f196750f45815"
+    },
+    {
+      "script": "anchor/check.py",
+      "normal_optimized_equal": true,
+      "script_text_lf_sha256": "9d43f700ae43fbc932585ac69c242801e75e9be388d85a49bfd3c523c774442a",
+      "mathematical_receipt_sha256": "0a501e7563a73733ff0abf42c68ba51d22c94cc66523d3feceb2d3e816367ebd"
+    },
+    {
+      "script": "anchor/audit_loops.py",
+      "normal_optimized_equal": true,
+      "script_text_lf_sha256": "33a7d64c0f516052c3b05dcd7de6280a5e125cc9feea4718b506d9e1246f4879",
+      "mathematical_receipt_sha256": "9d36a9ac278f0f5555a4a4007b2cf47c58c25586b626a251b328c803ee49b19a"
+    },
+    {
+      "script": "loops/verify.py",
+      "normal_optimized_equal": true,
+      "script_text_lf_sha256": "54942e0d76850c9840ce6c8ce64db51c26b600a8e7e9b20ea2dfba7575559a7b",
+      "mathematical_receipt_sha256": "80deb2be40bf5c447f8de5e27841b50239b553c85e548c64760fdde260eae94b"
+    },
+    {
+      "script": "loops/audit_anchor.py",
+      "normal_optimized_equal": true,
+      "script_text_lf_sha256": "850cdb082f4b0ac31fdaddba9711cf7445bf111d3d487fbdf164bb4dc8885a54",
+      "mathematical_receipt_sha256": "aae94b57971354c945887ed55c87c9c5bad42abc462e75fa0a508a559c3646cc"
+    }
+  ]
+}

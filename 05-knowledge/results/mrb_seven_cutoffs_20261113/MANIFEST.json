@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "local_prose_links": 69,
+  "source_pins": 38,
+  "packet_files": 41,
+  "hash_convention": "UTF8 text bytes with CRLF normalized toLF",
+  "files": [
+    {
+      "path": "anchor/audit_loops.json",
+      "text_lf_sha256": "234c18a325d30e4ba2a86760f8c6fcb6ccaa42c99aea797e409f831d5d5d503f"
+    },
+    {
+      "path": "anchor/AUDIT_LOOPS.md",
+      "text_lf_sha256": "04a99005c7d0b176e25c1be8511349c3ed0b1105e6fbd19e3b6dfcbf6ea03f1d"
+    },
+    {
+      "path": "anchor/audit_loops.optimized.json",
+      "text_lf_sha256": "234c18a325d30e4ba2a86760f8c6fcb6ccaa42c99aea797e409f831d5d5d503f"
+    },
+    {
+      "path": "anchor/audit_loops.py",
+      "text_lf_sha256": "33a7d64c0f516052c3b05dcd7de6280a5e125cc9feea4718b506d9e1246f4879"
+    },
+    {
+      "path": "anchor/check.py",
+      "text_lf_sha256": "9d43f700ae43fbc932585ac69c242801e75e9be388d85a49bfd3c523c774442a"
+    },
+    {
+      "path": "anchor/HISTORY.md",
+      "text_lf_sha256": "7f0022977f651ac9e4d846c347f9f29d9b7d448c9fe839acca51230d8526146e"
+    },
+    {
+      "path": "anchor/PROOF.md",
+      "text_lf_sha256": "2823f4f7a1e2f4ca7b770d8023c3d36fc8cd95cc47d40b95ecfb6b870e2161fe"
+    },
+    {
+      "path": "anchor/receipt.json",
+      "text_lf_sha256": "d8df352226eee6e684e5f039c669ddc49258c6a8a59aa462682801474f425891"
+    },
+    {
+      "path": "anchor/receipt.optimized.json",
+      "text_lf_sha256": "d8df352226eee6e684e5f039c669ddc49258c6a8a59aa462682801474f425891"
+    },
+    {
+      "path": "AUDIT.md",
+      "text_lf_sha256": "204856ea1f3a4cb867e07fb91d47a7e65eff4e0521d2b41db2049422ff6d71be"
+    },
+    {
+      "path": "BOARD.md",
+      "text_lf_sha256": "7331ac7af7dde549b8d39f3e2a8b0c181b198fc809d0b98be67a9ead68dd438d"
+    },
+    {
+      "path": "curves/881_profiles.json",
+      "text_lf_sha256": "95c9c6ea8014400cf1286df766a81215c7e1e1815dc3eaf6fcbd7ba8e08050b6"
+    },
+    {
+      "path": "curves/module_audit.json",
+      "text_lf_sha256": "55c3a11486f1212a635997b5df273ffccc60f90ea3914b8c537a1af343603b2b"
+    },
+    {
+      "path": "curves/MODULE_AUDIT.md",
+      "text_lf_sha256": "dbd016141f554f3268cbb9184a2aca1b693feace8a7a5152efa16a05177199ed"
+    },
+    {
+      "path": "curves/module_audit.py",
+      "text_lf_sha256": "95b54324eeeae29def8a523ff06413635ec87763df94220cf1160fe0918be821"
+    },
+    {
+      "path": "curves/NO_SINGLE_MODULE_AUDIT.md",
+      "text_lf_sha256": "076eea345301fce418bdb9fe3bb8371ea9e752d925b98b7d2d09ddf7f25aece2"
+    },
+    {
+      "path": "curves/PROOF.md",
+      "text_lf_sha256": "7df7e4a686d18da4525250c24bca42facd5fb48652bac41f8bb2ef258f42f0ef"
+    },
+    {
+      "path": "curves/verification.json",
+      "text_lf_sha256": "c6cc40ba44a3fcb0a34179eb95b2b0ce62d227a1315794835cec83dd85bb883f"
+    },
+    {
+      "path": "curves/verify_881_profiles.py",
+      "text_lf_sha256": "ab52f0f1c586a5e4ad85f3ae81269c007de4fd4c4f87da54fb49e3ed9cb86881"
+    },
+    {
+      "path": "curves/verify_curves.py",
+      "text_lf_sha256": "30405fa29d3f18ad429aa07c2526bb1d3e3cf255f67ad6b08c0ff01a2ab31c27"
+    },
+    {
+      "path": "loops/audit_anchor.json",
+      "text_lf_sha256": "9fad9dd6a3807ba13265262c70695f19b5f4db06545f2be69218ff3552a4ebf2"
+    },
+    {
+      "path": "loops/AUDIT_ANCHOR.md",
+      "text_lf_sha256": "d0a01eea55c390d1e3fafd59497e077ab96a7fa19db79be23aaf01dd9e09b2d2"
+    },
+    {
+      "path": "loops/audit_anchor.optimized.json",
+      "text_lf_sha256": "9fad9dd6a3807ba13265262c70695f19b5f4db06545f2be69218ff3552a4ebf2"
+    },
+    {
+      "path": "loops/audit_anchor.py",
+      "text_lf_sha256": "850cdb082f4b0ac31fdaddba9711cf7445bf111d3d487fbdf164bb4dc8885a54"
+    },
+    {
+      "path": "loops/LOOP_VIEW.md",
+      "text_lf_sha256": "5b43dff763aa22a26c022069fef8a625a1a09f6f38d217837838675ad623bae5"
+    },
+    {
+      "path": "loops/PROOF.md",
+      "text_lf_sha256": "89bff41e647f25a8d43d027e6b19c9f55340efd85342c2ba56f9c6451a9ab9a6"
+    },
+    {
+      "path": "loops/receipt.json",
+      "text_lf_sha256": "c46ec37802ab089b91a1da4ae1567d08267dc1494a30dbc1966641c8d14e766e"
+    },
+    {
+      "path": "loops/receipt.optimized.json",
+      "text_lf_sha256": "c46ec37802ab089b91a1da4ae1567d08267dc1494a30dbc1966641c8d14e766e"
+    },
+    {
+      "path": "loops/SOURCES.json",
+      "text_lf_sha256": "8a3f41d623e89ded67c2c359fdc7ee7798b6256b8dd6239092fd21d5f0fbede3"
+    },
+    {
+      "path": "loops/verify.py",
+      "text_lf_sha256": "54942e0d76850c9840ce6c8ce64db51c26b600a8e7e9b20ea2dfba7575559a7b"
+    },
+    {
+      "path": "module/escape_probes.py",
+      "text_lf_sha256": "499d79435fd01e07e1692747531bfaa8ea5ff362c09861855d163d02e6c3e5d9"
+    },
+    {
+      "path": "module/escapes.json",
+      "text_lf_sha256": "2d1d11d23a00ebede4caee36fd2b33a96e8949d64c857035a02f96c2d957eed1"
+    },
+    {
+      "path": "module/escapes.optimized.json",
+      "text_lf_sha256": "2d1d11d23a00ebede4caee36fd2b33a96e8949d64c857035a02f96c2d957eed1"
+    },
+    {
+      "path": "module/module_certificates.py",
+      "text_lf_sha256": "a2cdbf5fa078a087f4d5dcb7888b8205ee81dcb83949d2aaf6431cebd9bac2e0"
+    },
+    {
+      "path": "module/PROOF.md",
+      "text_lf_sha256": "6eafe01ccabc747435b65e3397139e4b3cd25a5f4ef453183de6cd70eceaf2e3"
+    },
+    {
+      "path": "module/verification.json",
+      "text_lf_sha256": "21bcad24189addee222bb3fcd5f0b23cd19caced0b2b690406b21ae1a56c460f"
+    },
+    {
+      "path": "module/verification.optimized.json",
+      "text_lf_sha256": "21bcad24189addee222bb3fcd5f0b23cd19caced0b2b690406b21ae1a56c460f"
+    },
+    {
+      "path": "README.md",
+      "text_lf_sha256": "167d324a67b3ed1dc5e407bd28d3332b6c713ccc08722ef7803336c327ec7372"
+    },
+    {
+      "path": "REPLAY.json",
+      "text_lf_sha256": "2b7c549c95f1703f780220df6824d5e5cf5a0e5a693d060651c6ef1efd0090bc"
+    },
+    {
+      "path": "REPRODUCE.py",
+      "text_lf_sha256": "4c2556683dab04e1dd5e034dd86e68cff9005b3ee28e184c98071632d4c5d8d3"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "text_lf_sha256": "29cfe5c5b11e8c1f3189a1afa02aba233f151273d09616359ff1a8cc3aad9064"
+    }
+  ]
+}

@@ -28,3 +28,5 @@ The analytic side supplies a decisive caution for target-preserving returns: act
 Independent cross-audits cover the module theorem and the complete881 exclusion, both finite-loop classifiers, literal Hamiltonian paths and marked states, finite difference profiles, graph-type controls, and analytic coefficient/endpoint bounds. All replay commands and source pins are in the packet. No new A000568, A135244 or A002496 term, universal metagraph classification, prime infinitude, or Chan-Pak proof is claimed.
 
 [Board and inheritance](BOARD.md); [independent module audit](curves/MODULE_AUDIT.md); [independent881 audit](curves/NO_SINGLE_MODULE_AUDIT.md); [loop audit](anchor/AUDIT_LOOPS.md); [birth-state audit](loops/AUDIT_ANCHOR.md). The remaining constructive obligation is an exact-target source-return family outside the fixed uniform block model, retaining the full count, defect, and marked interface.
+
+Run the full replay with `python -B 05-knowledge/results/mrb_seven_cutoffs_20261113/REPRODUCE.py`. [Integration audit](AUDIT.md) records the exact scopes, corrections, priority, and remaining proof obligation.

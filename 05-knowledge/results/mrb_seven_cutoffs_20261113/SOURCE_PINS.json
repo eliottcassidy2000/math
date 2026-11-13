@@ -1,0 +1,159 @@
+{
+  "status": "PASS",
+  "integrated_commit": "4fa17264fb2832b2e4ca3b2e51678c2ad6eea0f1",
+  "hash_convention": "UTF8 text bytes with CRLF normalized toLF",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md",
+      "text_lf_sha256": "0ff08a37801c5f3b96fa3ee74b0d7a897b3f87c5db4397b4abdadbe99f38562a"
+    },
+    {
+      "path": "01-canon/theorems/THM-3363-d14-complement-clock-small-lrc-terminal.md",
+      "text_lf_sha256": "18a4655c3ca1fa2f7fc8a7071e44cde2f34b4663eef2713f973da3ddc326a214"
+    },
+    {
+      "path": "01-canon/theorems/THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase.md",
+      "text_lf_sha256": "4d8e97c83d54a878c3f628d1944be0d5d391e1c0a2e96a5cf877f5edef875cbe"
+    },
+    {
+      "path": "01-canon/theorems/THM-4872-unit-start-plus-minus-two-port-pairs-and-the-z3-trivial-symmetry-split-of-three-cycle-tournaments.md",
+      "text_lf_sha256": "7e8d57164b4c572dbae87561291e2555f547639b466498c188886cbf0b48d271"
+    },
+    {
+      "path": "01-canon/theorems/THM-4900-gate-and-doubling-in-the-marked-resolvent-golden-towers-and-tower-ocf.md",
+      "text_lf_sha256": "38c7c118f2e06660114eb26e592a2796a09949077ea2f5f9ba8a537c220870ca"
+    },
+    {
+      "path": "01-canon/theorems/THM-4940-odd-cycle-packing-counts-in-every-base.md",
+      "text_lf_sha256": "fd7d1fc7b987a2788cf606971529cfb25350a7fe9571fb718d255bf593439931"
+    },
+    {
+      "path": "01-canon/theorems/THM-5102-minimum-order-seventy-seven-symmetry-and-exact-mixed-path-cost.md",
+      "text_lf_sha256": "78fed586f5deae2f2bfa57a91f534a9ffb8d7d32a8ddce6c2b3e8536f3f53550"
+    },
+    {
+      "path": "01-canon/theorems/THM-621-fourteen-fold-ladder-law.md",
+      "text_lf_sha256": "ffdc4d3063c6dbeec86db59320e1c3943d73c21f0218daafbe0c67e9bd516ee0"
+    },
+    {
+      "path": "05-knowledge/results/berggren_target_return_20261111/reset/funnel_six_state.py",
+      "text_lf_sha256": "662c41a3f9dc6fbd1fe6c5d34ee30ac4e737d5371390dbf7dfacf342368a87f6"
+    },
+    {
+      "path": "05-knowledge/results/central_modular_chanpak_20261110/gauge/PROOF.md",
+      "text_lf_sha256": "742407177e47b6d0fe77e0ca4432447a5a44e25bc536a32bd90664244dbcabd2"
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260917_extended_collatz_scc.md",
+      "text_lf_sha256": "b916797f95efb38b3e8071ad7f069478ad6fb6872c759c978279fec56384eb32"
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260922_minus_sheet_positive_control.md",
+      "text_lf_sha256": "a1fbffa9a85d29a6b33975af25230d0fc40d51944356cde1acd26ff71c0df8d3"
+    },
+    {
+      "path": "05-knowledge/results/cycle_opening_six_return_20261112/compiler/ANCESTRY_BOUNDARY.md",
+      "text_lf_sha256": "33ee05cfe98fedff0449e5c1b6b39a5806511f750de29e8ffd8601b6e992a081"
+    },
+    {
+      "path": "05-knowledge/results/cycle_opening_six_return_20261112/counts/PROOF.md",
+      "text_lf_sha256": "c1d0421675ebe7c397c1aa527fbcf4126040271c7663bfc9e0f7e86869c21695"
+    },
+    {
+      "path": "05-knowledge/results/cycle_opening_six_return_20261112/returns/BINARY_LANGUAGE.md",
+      "text_lf_sha256": "fb82f9af011e36614140a02ba89cf5e5d95c27c5af769e5b12a125d077877f33"
+    },
+    {
+      "path": "05-knowledge/results/cycle_opening_six_return_20261112/returns/NEUTRAL_LANGUAGE.md",
+      "text_lf_sha256": "f009d5d427889bc3edd99d4bf18c0ccf42f918c37b7a694dbe369fbc41e4b722"
+    },
+    {
+      "path": "05-knowledge/results/even_graph_response_merge_20261104/SOURCE_LEDGER.md",
+      "text_lf_sha256": "dbb613e7fcf60e9d159d5b344666d5f5190718fc59e2368b51b4bbedecaeafd7"
+    },
+    {
+      "path": "05-knowledge/results/microcosm_audit_H1_20261106.md",
+      "text_lf_sha256": "d8b4f9948ab40ba4c980cd90b07edcbc3aea04540838a967eaac8a6ef7d5f414"
+    },
+    {
+      "path": "05-knowledge/results/microcosm_gate_doubling_resolvent_20261106.md",
+      "text_lf_sha256": "801b52a78896fa42853b568b7a68b7ae75b6e86b46cd7e1e5e97458276ee6da5"
+    },
+    {
+      "path": "05-knowledge/results/mutation_collatz_chanpak_20261112/README.md",
+      "text_lf_sha256": "46095a8502e8d7fb756ee6a96dcdf8f9928fc1af78a3288131ccb304b0ca675e"
+    },
+    {
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/explore.py",
+      "text_lf_sha256": "343b6168f5116275538a87959e6a0949ad8518aaede6d5a5952479069255bbb4"
+    },
+    {
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/recognize.py",
+      "text_lf_sha256": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85"
+    },
+    {
+      "path": "05-knowledge/results/session127_gsma_norm_collapse_20261031/volume/THEORY.md",
+      "text_lf_sha256": "5e141fed011c9e21d76dfb85d1e356c2b64f7d8073341dde3e38dcb66eaad662"
+    },
+    {
+      "path": "05-knowledge/results/session144_jacobian_eth_mrb_20261103/mrb/RESEARCH.md",
+      "text_lf_sha256": "cb574aca3217cfd0ea9ff65f8e5209302241167a28d1b0f8f67af7a8d7d01c59"
+    },
+    {
+      "path": "05-knowledge/results/session162_mrb_square_20261103/mrb_weighted/RESULT.md",
+      "text_lf_sha256": "d6185b1b0bcfd2351fe790c3f5d4f44d77e151a81f2487faec1c5b91072d08ee"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/clone_obstruction/PROOF.md",
+      "text_lf_sha256": "c0fa1d6773a42723f5a53f7645f0b22fa98db01168762ec0516b5f382f42afb0"
+    },
+    {
+      "path": "05-knowledge/results/session181_multiport_defect_20261104/older/PROOF.md",
+      "text_lf_sha256": "ad793a5a811718edb47c512b9a2a0a0c35ae51012afdcda9751f1be6421b9413"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/provenance/README.md",
+      "text_lf_sha256": "1442c12d1a39a2f7e9defd81175105478818d25c2b347ba9b7be1146669062f2"
+    },
+    {
+      "path": "05-knowledge/results/session295_construction_atlas_20261113/bridges.md",
+      "text_lf_sha256": "b3f3f95e6b9dd75a4aa58a9c9248d046240b745dfea76b8a5771b6d3cf529414"
+    },
+    {
+      "path": "05-knowledge/results/session296_multicore_metagraph_20261113/cores/ENTRANCES.md",
+      "text_lf_sha256": "44dcc6ad1886edcbeb8c668e4be84aa4a23506ccdb37b5cb45aa3f3a993deba3"
+    },
+    {
+      "path": "05-knowledge/results/session296_multicore_metagraph_20261113/cores/FINITE_ATLAS.md",
+      "text_lf_sha256": "51d10a86ce98a03566b304b0df2924bf4900ed1eb901f7da84c836522168ca72"
+    },
+    {
+      "path": "05-knowledge/results/session296_multicore_metagraph_20261113/cores/PROOF.md",
+      "text_lf_sha256": "be6abcd7eca1ac80cda2fd2d754303d1dcece5b5948783163b848051c79bbb8b"
+    },
+    {
+      "path": "05-knowledge/results/session297_parity_cutoff_20261113/BRIDGES.md",
+      "text_lf_sha256": "d31c8d4458338db51a002b0e27e8abe7e7d35ece559dead802485cadcc8ec47b"
+    },
+    {
+      "path": "05-knowledge/results/session297_parity_cutoff_20261113/CUTOFF.md",
+      "text_lf_sha256": "af6d292fb46974752cc7886622317c91848615ca5837ee59ef02585b643074a3"
+    },
+    {
+      "path": "05-knowledge/results/session297_parity_cutoff_20261113/CYCLIC.md",
+      "text_lf_sha256": "4331e53312b9dd606e2cc4387ef3a46001e2efe5b855aa4ab41ac5beabc3c561"
+    },
+    {
+      "path": "05-knowledge/results/triples_ports_sieve_20261112/arithmetic/WHEEL.md",
+      "text_lf_sha256": "925902d52ab3658dc1312961ea96fd4fa0ba15a66e5f170c9077c2300357607f"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/research.py",
+      "text_lf_sha256": "75e0188ab2763faa84637c8ed07a05a0978e9034b3fc3a91de1661162cb6a387"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/verify.py",
+      "text_lf_sha256": "7f982b5173292ec904d99bc75f074cd66ee885674bda361c0142aed8f9a30de1"
+    }
+  ]
+}

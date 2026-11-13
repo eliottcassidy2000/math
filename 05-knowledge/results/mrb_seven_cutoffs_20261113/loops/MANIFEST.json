@@ -8,9 +8,9 @@
     "05-knowledge/results/session297_parity_cutoff_20261113/CYCLIC.md"
   ],
   "files": {
-    "audit_anchor.json": "557457ab25f6c343b49e69d5447d38e4396e5ff3a783a8a801b3ddd364f572c1",
+    "audit_anchor.json": "9fad9dd6a3807ba13265262c70695f19b5f4db06545f2be69218ff3552a4ebf2",
     "AUDIT_ANCHOR.md": "d0a01eea55c390d1e3fafd59497e077ab96a7fa19db79be23aaf01dd9e09b2d2",
-    "audit_anchor.optimized.json": "557457ab25f6c343b49e69d5447d38e4396e5ff3a783a8a801b3ddd364f572c1",
+    "audit_anchor.optimized.json": "9fad9dd6a3807ba13265262c70695f19b5f4db06545f2be69218ff3552a4ebf2",
     "audit_anchor.py": "850cdb082f4b0ac31fdaddba9711cf7445bf111d3d487fbdf164bb4dc8885a54",
     "LOOP_VIEW.md": "5b43dff763aa22a26c022069fef8a625a1a09f6f38d217837838675ad623bae5",
     "PROOF.md": "89bff41e647f25a8d43d027e6b19c9f55340efd85342c2ba56f9c6451a9ab9a6",
@@ -18,5 +18,6 @@
     "receipt.optimized.json": "c46ec37802ab089b91a1da4ae1567d08267dc1494a30dbc1966641c8d14e766e",
     "SOURCES.json": "8a3f41d623e89ded67c2c359fdc7ee7798b6256b8dd6239092fd21d5f0fbede3",
     "verify.py": "54942e0d76850c9840ce6c8ce64db51c26b600a8e7e9b20ea2dfba7575559a7b"
-  }
+  },
+  "all_links_now_resolve_after_integration": true
 }
