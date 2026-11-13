@@ -1,0 +1,15 @@
+{
+  "files": {
+    "closure/BLACK_BOUNDARY.md": {
+      "after_sha256": "7106701edb9f2287442e9355105f9792e7770842819ece881352f794cd786a73",
+      "before_sha256": "712a9616ebb5425c35107a00c3bb4b11017d4b758afcc1bd6fb1325509774616",
+      "edits": [
+        {
+          "count": 1,
+          "new": "**Status: PROVED IN NOTES after independent root review; see [BLACK_REVIEW.md](BLACK_REVIEW.md).**",
+          "old": "**Status: RESERVED / proof candidate pending root review.**"
+        }
+      ]
+    }
+  }
+}

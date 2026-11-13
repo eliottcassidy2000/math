@@ -1,0 +1,231 @@
+{
+  "algebra": {
+    "binary_3_by_3_matrix_partition_pairs": 2560,
+    "repaired_hypothesis": "V0 is exactly the block-constant algebra of Pi0"
+  },
+  "checks": 3605,
+  "clifford": {
+    "minimal_additions": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "nonnegative_matrices_tested": 512,
+    "nonnegative_survivors": 1,
+    "scope": "finite linear controls, not extra tournament classes or a Bott recurrence",
+    "sector_dimensions": [
+      [
+        0,
+        1,
+        false
+      ],
+      [
+        0,
+        2,
+        false
+      ],
+      [
+        0,
+        3,
+        false
+      ],
+      [
+        0,
+        4,
+        false
+      ],
+      [
+        1,
+        0,
+        false
+      ],
+      [
+        1,
+        1,
+        true
+      ],
+      [
+        1,
+        2,
+        false
+      ],
+      [
+        1,
+        3,
+        false
+      ],
+      [
+        1,
+        4,
+        false
+      ],
+      [
+        2,
+        0,
+        false
+      ],
+      [
+        2,
+        1,
+        false
+      ],
+      [
+        2,
+        2,
+        true
+      ],
+      [
+        2,
+        3,
+        false
+      ],
+      [
+        2,
+        4,
+        false
+      ],
+      [
+        3,
+        0,
+        false
+      ],
+      [
+        3,
+        1,
+        false
+      ],
+      [
+        3,
+        2,
+        false
+      ],
+      [
+        3,
+        3,
+        true
+      ],
+      [
+        3,
+        4,
+        false
+      ],
+      [
+        4,
+        0,
+        false
+      ],
+      [
+        4,
+        1,
+        false
+      ],
+      [
+        4,
+        2,
+        false
+      ],
+      [
+        4,
+        3,
+        false
+      ],
+      [
+        4,
+        4,
+        true
+      ]
+    ]
+  },
+  "paths": [
+    {
+      "actual_return": "1/2",
+      "m": 2,
+      "quotient_return": "1/3",
+      "strict_rounds": 1
+    },
+    {
+      "actual_return": "1/2",
+      "m": 3,
+      "quotient_return": "1/5",
+      "strict_rounds": 2
+    },
+    {
+      "actual_return": "1/2",
+      "m": 4,
+      "quotient_return": "1/7",
+      "strict_rounds": 3
+    },
+    {
+      "actual_return": "1/2",
+      "m": 5,
+      "quotient_return": "1/9",
+      "strict_rounds": 4
+    },
+    {
+      "actual_return": "1/2",
+      "m": 6,
+      "quotient_return": "1/11",
+      "strict_rounds": 5
+    },
+    {
+      "actual_return": "1/2",
+      "m": 7,
+      "quotient_return": "1/13",
+      "strict_rounds": 6
+    },
+    {
+      "actual_return": "1/2",
+      "m": 8,
+      "quotient_return": "1/15",
+      "strict_rounds": 7
+    },
+    {
+      "actual_return": "1/2",
+      "m": 9,
+      "quotient_return": "1/17",
+      "strict_rounds": 8
+    },
+    {
+      "actual_return": "1/2",
+      "m": 10,
+      "quotient_return": "1/19",
+      "strict_rounds": 9
+    },
+    {
+      "actual_return": "1/2",
+      "m": 11,
+      "quotient_return": "1/21",
+      "strict_rounds": 10
+    },
+    {
+      "actual_return": "1/2",
+      "m": 12,
+      "quotient_return": "1/23",
+      "strict_rounds": 11
+    },
+    {
+      "actual_return": "1/2",
+      "m": 13,
+      "quotient_return": "1/25",
+      "strict_rounds": 12
+    },
+    {
+      "actual_return": "1/2",
+      "m": 14,
+      "quotient_return": "1/27",
+      "strict_rounds": 13
+    }
+  ],
+  "reviewed_sha256": {
+    "CLIFFORD_BOUNDARY.md": "6615b63e6e7c1bb692facbe99ade8a925b96cebb963ecdd8305d56f13ca7fa10",
+    "ROOT_OBSERVERS.md": "bbe31d87ba4a7d328add13194af9dde80f68a2d6d03bcadb5de3e47bce4063c7"
+  },
+  "source_sha256": "b1d8ff1934dfa3d2b981ef53c95e9e10284307de6ba95ff2ea8a246346a9419e",
+  "status": "FINITE-EXACT independent controls; root proof status unchanged"
+}

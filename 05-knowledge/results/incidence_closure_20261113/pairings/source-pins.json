@@ -1,0 +1,12 @@
+{
+  "base_commit": "a8b6d8dbf0c6b601813785efb0b5904b46c23d43",
+  "files": {
+    "00-navigation/RESEARCH-PROTOCOL.md": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+    "01-canon/ACTIVE-GUARDRAILS.md": "906ae3d7a2fcd70f7170f3b529ca6056c7bc2f4b053bc7fa811ef477eeed3cee",
+    "05-knowledge/results/joint_metagraph_dyadic_20261113/PAIRING_WIRING.md": "968aa6c1504f8c5868d58c71b50044509b0ba6a4c5f20b6c94185ab5fec10c3b",
+    "05-knowledge/results/joint_metagraph_dyadic_20261113/SLOT_WIRING.md": "91f9830b551764c55dd5346921a635537210e9a761cca1c0e414139b2ddbc2b1",
+    "05-knowledge/results/joint_metagraph_dyadic_20261113/metagraph/PAIRING_LIFT_REVIEW.md": "3659d2d938e026091cbf5dbb2e120275c192ca266eca38fa0ace1b7f8849802a",
+    "05-knowledge/results/session102_tournament_classification_20261029/switching/SIGNED_CUTS_AND_SIMPLE_SYMMETRY.md": "60fe8c43973587e35a6f23a1eabd53e8f5049300919e531947f2590bce49ca17",
+    "05-knowledge/results/session315_dyadic_pairing_20261113/SPECTRUM_AND_SIEVE.md": "06b59c09dd674720e8c4bfe213cc51b206b6fb56ad08642941acb111176a8ab5"
+  }
+}

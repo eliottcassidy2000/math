@@ -1,0 +1,181 @@
+{
+  "checks": 16097,
+  "concrete_anchor_certificates": [
+    {
+      "n": 3,
+      "palettes": {
+        "A": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 0,
+          "packing_lower_bound": 0,
+          "witness_verified": true
+        },
+        "A_colored": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 0,
+          "packing_lower_bound": 0,
+          "witness_verified": true
+        },
+        "P": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 0,
+          "packing_lower_bound": 0,
+          "witness_verified": true
+        },
+        "P_colored": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 0,
+          "packing_lower_bound": 0,
+          "witness_verified": true
+        }
+      },
+      "same_slot_pairs": 0
+    },
+    {
+      "n": 4,
+      "palettes": {
+        "A": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 0,
+          "packing_lower_bound": 0,
+          "witness_verified": true
+        },
+        "A_colored": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 0,
+          "packing_lower_bound": 0,
+          "witness_verified": true
+        },
+        "P": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 0,
+          "packing_lower_bound": 0,
+          "witness_verified": true
+        },
+        "P_colored": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 0,
+          "packing_lower_bound": 0,
+          "witness_verified": true
+        }
+      },
+      "same_slot_pairs": 0
+    },
+    {
+      "n": 5,
+      "palettes": {
+        "A": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 1,
+          "packing_lower_bound": 1,
+          "witness_verified": true
+        },
+        "A_colored": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 1,
+          "packing_lower_bound": 1,
+          "witness_verified": true
+        },
+        "P": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 1,
+          "packing_lower_bound": 1,
+          "witness_verified": true
+        },
+        "P_colored": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 1,
+          "packing_lower_bound": 1,
+          "witness_verified": true
+        }
+      },
+      "same_slot_pairs": 2
+    },
+    {
+      "n": 6,
+      "palettes": {
+        "A": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 2,
+          "packing_lower_bound": 2,
+          "witness_verified": true
+        },
+        "A_colored": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 2,
+          "packing_lower_bound": 2,
+          "witness_verified": true
+        },
+        "P": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 2,
+          "packing_lower_bound": 2,
+          "witness_verified": true
+        },
+        "P_colored": {
+          "brute_force_lower_bound_here": true,
+          "minimum_claimed": 2,
+          "packing_lower_bound": 2,
+          "witness_verified": true
+        }
+      },
+      "same_slot_pairs": 11
+    },
+    {
+      "n": 7,
+      "palettes": {
+        "A": {
+          "brute_force_lower_bound_here": false,
+          "minimum_claimed": 9,
+          "packing_lower_bound": 5,
+          "witness_verified": true
+        },
+        "A_colored": {
+          "brute_force_lower_bound_here": false,
+          "minimum_claimed": 9,
+          "packing_lower_bound": 5,
+          "witness_verified": true
+        },
+        "P": {
+          "brute_force_lower_bound_here": false,
+          "minimum_claimed": 9,
+          "packing_lower_bound": 5,
+          "witness_verified": true
+        },
+        "P_colored": {
+          "brute_force_lower_bound_here": false,
+          "minimum_claimed": 9,
+          "packing_lower_bound": 5,
+          "witness_verified": true
+        }
+      },
+      "same_slot_pairs": 184
+    }
+  ],
+  "differential_cover": {
+    "distinct_nonzero_four_bit_families": 4944,
+    "extra_cases": 10,
+    "producer_function_loaded_only_for_differential_test": true,
+    "reference": "exhaustive column combinations"
+  },
+  "partition_universal_property": {
+    "cases": 2010,
+    "universe": "all simple undirected graphs on 1..4 labelled vertices; all initial partitions; raw and endpoint-parity two-color palettes"
+  },
+  "source_pins": {
+    "audit/independent.py": "793dc9f3090387e826446d8a749ca80870ee5d6d3a148b5597162f791a2b4831",
+    "audit_closure/check.py": "67091a89429d1972c669b793cd9b53a9052285fc655edc8d6ceb30c69330b5d7",
+    "closure/PROOF.md": "960634c39d54650ca1bc5ff44b56a2de1b3ef66e9e7bda1cd5604f14f78d2a53",
+    "closure/analysis.json": "41093c9b0b11e055ceaafcd3b6e247da1077cbe978a7addd9661fe1300e65023",
+    "closure/analyze.py": "8a06553cdd048e5345188311f9f026317cf7fc24d5f6dace64e94bf48d1a611c",
+    "closure/check.py": "4638279a9cd5fc6c121a0dff84fbf500c029ac4915e0db78df47a4c7ff434747",
+    "closure/data.json": "c0484a99712edff88e8158b5f6000097f32f88874150d059da5aefa20f3de8f7",
+    "closure/orbits.cpp": "afbe0cee83c798cac153b1950e5cc0012d4339acf7f766560f1e8188cac68f12",
+    "reviewed_root_functions": {
+      "initial": "51076567717e5bc6c864bb9fe6cdf7acba43ca271ecd5f475e2072fd674a6c6d",
+      "literal": "fd7d88b40272b90960cb6be021abccfc18ee7c4e613e0aa50cc9cce25035a3bc",
+      "refine": "9eb421ffeda8500c1dc9712856f1759ad5210bf24727f21f1fcf2f03257d2b07"
+    }
+  },
+  "status": "FINITE-EXACT; audit controls, not independent n7 cover exhaustion"
+}

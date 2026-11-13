@@ -1,0 +1,11 @@
+{
+  "base_commit": "a8b6d8dbf0c6b601813785efb0b5904b46c23d43",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "python": "3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]",
+  "sources": {
+    "01-canon/theorems/THM-5153-exact-slot-pairings-of-merged-tournament-classes-and-self-converse-structure-to-order-nine.md": "0f9c51742318b7045f9340474f11e39f9f184cd7bf26ff7cde6e36b384c6c237",
+    "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+    "05-knowledge/results/joint_metagraph_dyadic_20261113/SLOT_WIRING.md": "91f9830b551764c55dd5346921a635537210e9a761cca1c0e414139b2ddbc2b1",
+    "05-knowledge/results/joint_metagraph_dyadic_20261113/metagraph/PROOF.md": "b57778f4a5d4bd97fcf977a2a2ce44db9aa03033ce77e6c7d6b864ab1e9cefbf"
+  }
+}
