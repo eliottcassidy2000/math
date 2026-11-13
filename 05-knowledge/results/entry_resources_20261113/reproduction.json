@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "scope": "Fifteen normal/optimized producer pairs, byte-identical deterministic receipts. Independent mathematical engines are separately identified in AUDIT.md.",
+  "pairs": [
+    {
+      "receipt": "cut_gadgets",
+      "sha256": "46d58a5fb8d43b3f086085c7aaf13f7d0de37dd53901ae451242e0f021723ec3"
+    },
+    {
+      "receipt": "uniform_gadgets",
+      "sha256": "4442085dfa0c3a5ae99ea5ba9ca808fd693f16eea9667ac902afbe10362e0dff"
+    },
+    {
+      "receipt": "port_gadgets",
+      "sha256": "1908e74f2206c2dbe5286682ee9d3db38a3b607d042938ac24508f5a19e542da"
+    },
+    {
+      "receipt": "graceful_padding",
+      "sha256": "5a1566734adcac80e5204e554b04f837de7d90bd6bd313119266941cdddcdb13"
+    },
+    {
+      "receipt": "square_covers",
+      "sha256": "190f9192176210f3ae5540a5ee0ec8a6f0d94e68d41eb9eb63befdfe055e3b5d"
+    },
+    {
+      "receipt": "square_cut_audit",
+      "sha256": "f000deca5eb48c563096c69b7bf2ad061e0ffe5bb18f1f134243e219409d6d57"
+    },
+    {
+      "receipt": "square_endpoint_certificate",
+      "sha256": "01f69829705ad70244879a5aa1fbc0a3e599e294bed0593ea6c9b71606d1a826"
+    },
+    {
+      "receipt": "prime_phase_machine",
+      "sha256": "0ea4043a01f64dc70525d966c65a709aa467264df368c7d674eb64368697b661"
+    },
+    {
+      "receipt": "moving_root",
+      "sha256": "79bbd534750c830f86f2c15fdbdc2a932590ff30f1962f4334e9c7a43096cda4"
+    },
+    {
+      "receipt": "weighted_entry_search",
+      "sha256": "6a5e432084fbac389c46fcd635de2b937d8f6f87da90361209819e695b29357a"
+    },
+    {
+      "receipt": "budget_complexes",
+      "sha256": "efdf23c470efbd5a852d5a4b4df4213c63ded5eeb3c04da86035aff8e466173c"
+    },
+    {
+      "receipt": "budget_hostiles",
+      "sha256": "39ef0ea2cf1800a770b045fb6d480eb0d743bf4aae7441d8ea97e4f4e1c18e03"
+    },
+    {
+      "receipt": "resource_checks",
+      "sha256": "2bbbe13dbbe89ab83b20faf109ce9a552a6eef4a0358e569128049a1faec43d0"
+    },
+    {
+      "receipt": "independent_checks",
+      "sha256": "6be4ce1e80d489691986d95f0079625d0bbdfb417a68ebe8e14a06b30b5d9d26"
+    },
+    {
+      "receipt": "paley_resources",
+      "sha256": "b06370a39423941226a59898022f3382c61d024eaca9c5dd9a6e288394d31391"
+    }
+  ]
+}

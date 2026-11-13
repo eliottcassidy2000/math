@@ -26,7 +26,7 @@ def attach(rr,O,gg,types,s):
             else:out[i]|=1<<v
     return out,O|(s<<n)
 
-def run(maxq=4):
+def run(maxq=5):
     start=time.time();alive=[];universe=Counter()
     for q in range(1,maxq+1):
         for gg in cores(q):
@@ -59,4 +59,4 @@ def run(maxq=4):
         records.append({'core':gg,'types':ts,'selected_new':s,'ordinary_transitive_padding':padding and transitive})
     out={'scope':f'Every new-core isomorphism class of orders1..{maxq}, every selected/complement uniform orientation for its vertices, every new selected subset. All nonempty proper selected unit sets in old labelled tournaments through5. Rejection certificates exhaustive for this finite gadget universe; surviving nonpadding patterns would still need a proof.','universe_by_order':dict(universe),'unit_source_presentations':tested,'survivors':records,'rejections_by_core_and_source_order':[[*k,v] for k,v in sorted(fails.items())],'rejection_groups':[{'rows':rr,'selected':O,'rejected':v} for (rr,O),v in witnesses.items()]}
     save('uniform_gadgets',out)
-if __name__=='__main__':run(int(sys.argv[1]) if len(sys.argv)>1 else 4)
+if __name__=='__main__':run(int(sys.argv[1]) if len(sys.argv)>1 else 5)

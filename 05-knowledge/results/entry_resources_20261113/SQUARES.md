@@ -1,5 +1,7 @@
 # Endpoint obstructions in the first25 square-sum graphs
 
+![Minimum path-cover width and the complete cut bound](square_widths.png)
+
 **FINITE-EXACT: S1–S3; PROVED: the dynamic-programming recurrence.**
 Q_n has vertices1,...,n and an undirected edge when their sum is a square.
 No artificial tournament orientation is imposed. Paths may be singletons;
@@ -56,7 +58,9 @@ For all23 choices of v this closes without a single branch. Choices
 v=2,9,11,22 fail by a forced cycle; all others fail by degree contradiction.
 `square_endpoint_certificate.json.gz` stores the exact graph and every
 terminal certificate. Separate literal Hamilton-path enumeration also
-returns zero. This supplies a structural obstruction beyond all cut tests.
+returns zero. A separate checker validates all378 recorded forced/forbidden
+steps and every terminal contradiction, without searching for a path.
+This supplies a structural obstruction beyond all cut tests.
 
 ## S3. Actual endpoint repair at25
 

@@ -22,6 +22,23 @@ a historical synthesis or promoting computational evidence.
 - **Surviving question:** a renewable core rule must supply a new unit
   marking; this particular root-changing chain cannot do so through19.
 
+## 2026-11-13: The ray slope is not the one-vertex linear coefficient
+
+- **Status:** repaired during the Paley resource audit, before its result
+  was committed. A draft used H+U(O)−E(O) for a one-vertex child.
+- **Minimal witness:** on a directed triangle H=3,U_i=3,W_ij=2. A singleton
+  outgoing neighborhood would give6 under the wrong formula, contradicting
+  the direct child count5 and Rédei parity.
+- **Repair:** subtract the old end counts: H_child=H−end(O)+U(O)−E(O).
+  For a pair-transitive q-vertex source this becomes H+(w/2)k(q−k).
+  The correct Paley11 extension content is209, not the draft's19.
+- **Mechanism:** U permits an empty first path, while an ending-at-the-new-
+  vertex path must end outside its outgoing neighborhood. That endpoint
+  exclusion is a real term. The inherited extension formula was correct;
+  the new attempted reuse of the ray-slope coordinate was not.
+- **Control:** [paley_resources.py](../05-knowledge/results/entry_resources_20261113/paley_resources.py)
+  checks actual child Hamilton counts for every degree on Paley3,7,11.
+
 ## 2026-11-13: Initial path modes are not continuation modes
 
 - **Status:** a mistaken progress statement in the core-descent session was

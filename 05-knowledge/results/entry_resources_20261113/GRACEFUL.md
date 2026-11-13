@@ -1,5 +1,7 @@
 # Consecutive star buffers for graceful forest completion
 
+![A literal two-move bridge after one new star leaf](graceful_bridge.png)
+
 **PROVED scoped: G1–G3 below.** The abstract tree may change. This is a
 completion and exchange theorem, not a proof that every prescribed tree is
 graceful. No external priority claim is made.

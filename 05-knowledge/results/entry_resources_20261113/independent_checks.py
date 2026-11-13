@@ -84,9 +84,17 @@ def small_covers():
     return checks
 
 def ports():
-    data=read('port_gadgets');count=0
+    from common import OLD
+    sys.path.insert(0,str(OLD))
+    from stable_census import certify
+    data=read('port_gadgets');count=0;source_checks={}
     for r in data['failures']:
         rr,O,p=r['rows'],r['selected'],r['port'];fR,fO,edge,sel=r['rule'];n=len(rr)
+        key=(tuple(rr),O)
+        if key not in source_checks:
+            need(signed_cut(np.array(rr,dtype=np.int64),O)==1,'port counterexample has a unit source')
+            source_checks[key]=certify(rr,[O])[0][O]
+        need(p in source_checks[key],'port counterexample has an all-length stable input port')
         rows=list(rr)+[0]
         for v in range(n):
             old=(rr[p]>>v)&1
@@ -99,6 +107,39 @@ def ports():
     need(count==60 and len(data['survivors'])==4,'all64 port rules accounted for')
     return count
 
+def square_proofs():
+    from math import isqrt
+    data=read('square_endpoint_certificate');edges=data['edges'];inc=[0]*25;checked=0
+    need(edges==[[a,b] for a in range(1,25) for b in range(a+1,25) if isqrt(a+b)**2==a+b],'certificate is for the actual square-sum graph')
+    need([r['endpoints'] for r in data['endpoint_exclusions']]==[[18,v] for v in range(1,25) if v!=18],'all23 endpoint cases are present')
+    for i,(a,b) in enumerate(edges):inc[a]|=1<<i;inc[b]|=1<<i
+    for record in data['endpoint_exclusions']:
+        need(not record['solutions'] and len(record['leaves'])==1,'one contradiction per endpoint choice')
+        leaf=record['leaves'][0];need(not leaf['choices'],'certificate needs no branching')
+        target=[0]+[1 if v in record['endpoints'] else 2 for v in range(1,25)];yes=no=0
+        for step in leaf['trace']:
+            v=step['vertex'];free=inc[v]&~(yes|no);have=(inc[v]&yes).bit_count()
+            need(step['edges']==free and free!=0,'exact available edge set')
+            if step['action']=='force':need(have+free.bit_count()==target[v],'forced degree rule');yes|=free
+            else:need(step['action']=='forbid' and have==target[v],'saturated degree rule');no|=free
+            checked+=1
+        need(yes==leaf['selected'] and no==leaf['forbidden'],'terminal graph exactly matches trace')
+        if leaf['contradiction']=='degree':
+            v=leaf['vertex'];have=(yes&inc[v]).bit_count();free=inc[v]&~(yes|no)
+            need(have>target[v] or have+free.bit_count()<target[v],'actual impossible degree')
+        else:
+            # Independent cycle criterion via component traversal, not DSU.
+            adj=[set() for _ in range(25)]
+            for i,(a,b) in enumerate(edges):
+                if yes>>i&1:adj[a].add(b);adj[b].add(a)
+            unseen=set(range(1,25));components=0
+            while unseen:
+                stack=[unseen.pop()];components+=1
+                while stack:
+                    v=stack.pop();new=adj[v]&unseen;unseen-=new;stack.extend(new)
+            need(yes.bit_count()>24-components,'forced undirected cycle')
+    return checked
+
 def run():
     t=time.time();n=gadgets();print('independent rejected gadgets',n,'seconds',round(time.time()-t,1),flush=True)
     p=small_covers();print('independent graphs',p,flush=True)
@@ -110,7 +151,7 @@ def run():
         need(int(signed_cut(rows,O))==r['fixed_state'][1],'moving-root selected defect')
         for mark in r['all_unit_selected_masks']:need(signed_cut(rows,mark)==1,'all reported unit markings')
         chain+=1
-    pc=ports()
-    out={'status':'PASS','all_rejection_certificates':n,'port_rule_counterexamples':pc,'independent_path_cover_graphs':p,'moving_root_states':chain,'methods':['Two-phase spanning-word automaton with exactly one selected reset; independent of endpoint convolution.','All simple paths plus minimum set partitions; independent of append/reset minimum-cover recursion.','No assertion statements; normal and optimized receipts are compared separately.']}
+    pc=ports();sp=square_proofs()
+    out={'status':'PASS','all_rejection_certificates':n,'port_rule_counterexamples':pc,'independent_path_cover_graphs':p,'moving_root_states':chain,'square_certificate_steps':sp,'methods':['Two-phase spanning-word automaton with exactly one selected reset; independent of endpoint convolution.','All simple paths plus minimum set partitions; independent of append/reset minimum-cover recursion.','Independent degree-trace verification with component-traversal cycle criterion.','No assertion statements; normal and optimized receipts are compared separately.']}
     tag='' if __debug__ else '.optimized';(HERE/('independent_checks'+tag+'.json.gz')).write_bytes(gzip.compress((json.dumps(out,separators=(',',':'))+'\n').encode(),mtime=0))
 if __name__=='__main__':run()

@@ -1,0 +1,37 @@
+PAIRED cut_gadgets elapsed 0.0
+PAIRED uniform_gadgets elapsed 0.0
+PAIRED port_gadgets elapsed 0.0
+PAIRED graceful_padding elapsed 0.0
+PAIRED square_covers elapsed 0.0
+PAIRED square_cut_audit elapsed 0.0
+PAIRED square_endpoint_certificate elapsed 0.0
+PAIRED prime_phase_machine elapsed 0.0
+0 12 fixed (2663, 1, 11292) all markings [10, 18, 24] total 3
+1 13 fixed (4439, 1, 29244) all markings [10, 18, 24] total 3
+2 14 fixed (8023, -31, 74616) all markings [] total 0
+3 15 fixed (15125, -29, 201060) all markings [] total 0
+4 16 fixed (27587, -59, 535224) all markings [] total 0
+5 17 fixed (50735, -119, 1420740) all markings [] total 0
+6 18 fixed (93447, -207, 3778824) all markings [] total 0
+7 19 fixed (171769, -385, 10048836) all markings [] total 0
+moving_root saved
+0 12 fixed (2663, 1, 11292) all markings [10, 18, 24] total 3
+1 13 fixed (4439, 1, 29244) all markings [10, 18, 24] total 3
+2 14 fixed (8023, -31, 74616) all markings [] total 0
+3 15 fixed (15125, -29, 201060) all markings [] total 0
+4 16 fixed (27587, -59, 535224) all markings [] total 0
+5 17 fixed (50735, -119, 1420740) all markings [] total 0
+6 18 fixed (93447, -207, 3778824) all markings [] total 0
+7 19 fixed (171769, -385, 10048836) all markings [] total 0
+moving_root saved
+PAIRED moving_root elapsed 5.0
+PAIRED weighted_entry_search elapsed 5.0
+PAIRED budget_complexes elapsed 5.0
+PAIRED budget_hostiles elapsed 5.0
+PAIRED resource_checks elapsed 5.0
+independent rejected gadgets 410676 seconds 8.4
+independent graphs 1299
+independent rejected gadgets 410676 seconds 8.2
+independent graphs 1299
+PAIRED independent_checks elapsed 25.3
+PAIRED paley_resources elapsed 25.3

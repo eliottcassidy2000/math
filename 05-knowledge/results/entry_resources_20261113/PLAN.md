@@ -38,3 +38,25 @@ Incoming Session292 is investigating square-color words and exponent fibers.
 Read its results at checkpoints and credit overlap; do not modify its files.
 The existing META-PATTERNS on observer/head separation, local support versus
 bounded-height coverage and retained incidence guide this session.
+
+## Outcome and concept-board revision
+
+Current results are in README and the topic proofs, not this plan.
+The universal small-gadget lane closes exactly within its declared universe,
+while the moving-root chain is stopped by absence of any unit marking.
+The energy/occupancy representation supplies an exact faster marking search,
+new budget-complex sequences and a first four-way obstruction at9.
+Pair-transitive symmetry compresses the entire budget topology and one-new-
+vertex count layer; the endpoint subtraction survives this compression.
+
+The niche lane overtook the anchor on positive all-order construction:
+consecutive star buffers give sharp graceful completion and literal eventual
+stabilization. Q24/Q25 separates a coarse cut observer from the exact repair
+ports. The arithmetic lane gives a compact local realization of an already
+exact sieve, with the composite-survivor limitation preserved.
+
+Session292's sparse guards and Session293's context ideal were integrated.
+The next anchor experiment should combine a genuinely selective incidence
+change with a small renewable endpoint predicate and an exact compensator.
+Neither rich budget topology, unit arithmetic content nor simulation by a
+universal machine supplies that physical entry rule on its own.

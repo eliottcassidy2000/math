@@ -173,3 +173,15 @@ provide its changed adjacency, transported selected marking, full target
 equation, preserved readiness predicate and decreasing inverse measure.
 The graceful buffer suggests proving existence after controlled enlargement;
 T1,T2 and J1 specify which simple enlargement/exchange models are inadequate.
+
+The later incoming
+[Session293 uniform-module ideal](../session293_cycle_returns_20261113/control/MODULE_IDEAL.md)
+gives a complementary all-context gate: a fixed uniform module with
+nonprimitive ideal cannot support a count difference2 in any such context.
+Its scaled path-cover profile detects arithmetic obstruction even for
+asymmetric modules. Our T1 universe permits different incidences to selected
+and unselected old vertices and is not identical to that uniform-module
+setting. A candidate compensator must state which uniform modules remain
+protected, which selective incidences change, and how its selected budget
+is transported. Primitive arithmetic content still does not give a positive
+physical construction or arbitrary-target entry.

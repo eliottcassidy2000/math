@@ -1,0 +1,21 @@
+PAIRED cut_gadgets elapsed 0.0
+PAIRED uniform_gadgets elapsed 0.0
+PAIRED port_gadgets elapsed 0.0
+PAIRED graceful_padding elapsed 0.0
+PAIRED square_covers elapsed 0.0
+PAIRED square_cut_audit elapsed 0.0
+Q24 contradiction leaves 23 max branch depth 0 endpoints [{'n': 23, 'directed_paths': 6, 'endpoint_pairs': [[2, 18, 1], [9, 18, 1], [18, 22, 1]]}, {'n': 24, 'directed_paths': 0, 'endpoint_pairs': []}, {'n': 25, 'directed_paths': 20, 'endpoint_pairs': [[2, 18, 1], [3, 18, 1], [4, 18, 1], [8, 18, 1], [9, 18, 1], [10, 18, 1], [11, 18, 1], [13, 18, 1], [18, 22, 1], [18, 23, 1]]}]
+Q24 contradiction leaves 23 max branch depth 0 endpoints [{'n': 23, 'directed_paths': 6, 'endpoint_pairs': [[2, 18, 1], [9, 18, 1], [18, 22, 1]]}, {'n': 24, 'directed_paths': 0, 'endpoint_pairs': []}, {'n': 25, 'directed_paths': 20, 'endpoint_pairs': [[2, 18, 1], [3, 18, 1], [4, 18, 1], [8, 18, 1], [9, 18, 1], [10, 18, 1], [11, 18, 1], [13, 18, 1], [18, 22, 1], [18, 23, 1]]}]
+PAIRED square_endpoint_certificate elapsed 0.2
+PAIRED prime_phase_machine elapsed 0.2
+PAIRED moving_root elapsed 0.2
+PAIRED weighted_entry_search elapsed 0.2
+PAIRED budget_complexes elapsed 0.2
+PAIRED budget_hostiles elapsed 0.2
+PAIRED resource_checks elapsed 0.2
+independent rejected gadgets 410676 seconds 8.6
+independent graphs 1299
+independent rejected gadgets 410676 seconds 8.4
+independent graphs 1299
+PAIRED independent_checks elapsed 20.0
+PAIRED paley_resources elapsed 20.0

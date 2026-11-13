@@ -28,5 +28,5 @@ def run():
         print(k,n,'fixed',records[-1]['fixed_state'],'all markings',masks[:30],'total',len(masks),flush=True)
         rr=[r|((1<<n) if v!=root else 0) for v,r in enumerate(rr)]+[1<<root];root=n
     need(records[0]['fixed_state'][1]==records[1]['fixed_state'][1]==1 and records[2]['fixed_state'][1]==-31,'first core move succeeds; second loses selected gate')
-    save('moving_root',{'scope':'Eight actual one-exit root-changing extensions from the inherited12-vertex parent. All selected subsets tested at each order12..19; exact finite experiment, not an all-order obstruction.','records':records})
+    save('moving_root',{'scope':'Eight actual cores: the inherited12-vertex parent and seven successive one-exit root-changing extensions. All selected subsets tested at each order12..19; exact finite experiment, not an all-order obstruction.','records':records})
 if __name__=='__main__':run()

@@ -13,6 +13,8 @@ positive all-order repair theorem in the graceful-forest lane.
   unit markings at orders14–19. Complete budget complexes through8 expose
   the first four-way obstruction at9; a pruned marking search cuts one
   order19 example from524288 candidate subsets to80 visited subsets.
+  Pair-transitive symmetry determines the whole budget topology; Paley11's
+  exact prime factors force every selected defect to be divisible by209.
 - [Sharp graceful completion and stabilization](GRACEFUL.md): any rainbow
   forest missing differences C can be completed after max(C)−1 prescribed
   new star leaves. The bound is sharp. Two-color exchange diameter is at

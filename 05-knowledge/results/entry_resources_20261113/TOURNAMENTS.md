@@ -148,6 +148,68 @@ the marked automorphism group acts freely on both Hamilton paths and taxed
 covers, so its order divides delta=1. No such free action is assumed on
 ordinary budget faces.
 
+## T4a. Symmetry turns the full budget complex into a simplex skeleton
+
+**PROVED structural reduction; FINITE-EXACT values below.** If Aut(T) is
+transitive on unordered vertex pairs and n≥3, all W_ij equal one integer w. Then
+
+    delta(T,O)=H−binom(|O|,2)w.
+
+If r is the first cardinality with binom(r,2)w>H−1, the entire budget
+complex is the complete (r−2)-skeleton of the (n−1)-simplex. Its reduced
+integral homology is concentrated in dimension r−2, free of rank
+binom(n−1,r−1). To see this, cone every lower-dimensional cycle to one
+vertex inside the available skeleton; the top rank then follows from
+the alternating binomial identity for its Euler characteristic. The top
+cycle group is a subgroup of a free integral chain group, so has no torsion.
+
+This applies to every Paley tournament over a field of order q=3 mod4:
+translations and nonzero square multipliers act transitively on unordered
+pairs. Choosing the sign of a difference permits the needed square ratio.
+Thus an infinite symmetry type has an exact budget description in terms
+of only H and w, although their general numerical values remain to be found.
+
+|q|H|w|gcd(H,w)|Budget dimension|Reduced homology rank|
+|---:|---:|---:|---:|---:|---:|
+|3|3|2|1|1|1|
+|7|189|78|3|1|15|
+|11|95095|28842|209|2|120|
+|19|1172695746915|223117808922|9|2|816|
+
+Only q=3 has a unit marking in this control set. For q=7,11,19 the common
+content already excludes delta=1. This is stronger than counting many
+allowed faces or observing their topology. In particular
+
+    H(Paley11)=5·7·11·13·19,
+    w(Paley11)=2·3·11·19·23,
+    delta(Paley11,O)=209[455−138 binom(|O|,2)].
+
+These factors have a precise role:11·19 divides every selected defect.
+The per-vertex slope is u=H/q+(q−1)w/2 by vertex transitivity. For a
+new vertex whose outgoing neighborhood is O, k=|O|, the exact extension is
+
+    H_child = H + (u−H/q)k − w binom(k,2)
+            = H + (w/2)k(q−k).
+
+Indeed the general formula is H_child=H−sum_(i in O)end_i+U(O)−E(O):
+split a child Hamilton path at the new vertex, allowing either end to be
+empty. The end subtraction is essential. Vertex transitivity makes every
+end_i=H/q and every U_i=u, proving the displayed specialization.
+
+Thus this entire one-vertex extension layer has exactly(q+1)/2 count
+values. The value indexed by0≤k≤(q−1)/2 has labelled attachment
+multiplicity2 binom(q,k), pairing complementary new neighborhoods.
+This counts attachments, not child isomorphism classes. Finite differences
+give C_1=gcd(H,(q−1)w/2,w)=gcd(H,w), namely1,3,209,9 in the controls.
+For Paley11 the six values are
+
+    95095,239305,354673,441199,498883,527725.
+
+Literal children through source order11 are independently counted. The
+order19 profile follows from its exact endpoint tables and the proved
+formula; no general int64 order20 computation is used. No exclusion for
+every larger Paley order is inferred from the four content values.
+
 ## T5. Exact search after endpoint tables are available
 
 Unit entry is a nonnegative quadratic subset-sum problem E_T(O)=H−1.

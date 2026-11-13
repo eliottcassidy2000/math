@@ -34,10 +34,12 @@ print(json.dumps([str(Path(x.__file__).resolve()) for x in list(sys.modules.valu
       'session289_joint_births_20261112/absence/PROOF.md',
       'session291_cluster_ports_20261113/SYNTHESIS.md',
       'session292_triple_bridges_20261113/arithmetic/PROOF.md',
+      'session293_cycle_returns_20261113/control/MODULE_IDEAL.md',
+      'session293_cycle_returns_20261113/audit/REVIEW_IDEAL.md',
       'core_descent_endpoints_20261112/PROOFS.md']
     paths.update(HERE.parent/name for name in inherited)
     entries=[{'path':p.relative_to(ROOT).as_posix(),'sha256':digest(p)} for p in sorted(paths)]
-    data={'scope':'CRLF normalized for text; binary hashes exact. Own packet, actual imported repository engines, consumed inherited data and principal inherited proof statements. Logs excluded.','python':platform.python_version(),'packages':{n:importlib.metadata.version(n) for n in ['numpy','numba']},'files':entries}
+    data={'scope':'CRLF normalized for text; binary hashes exact. Own packet, actual imported repository engines, consumed inherited data and principal inherited proof statements. Logs excluded.','python':platform.python_version(),'packages':{n:importlib.metadata.version(n) for n in ['numpy','numba']},'optional_figure_runtime':{'matplotlib':'3.11.2','scope':'Separate temporary installation; not needed for mathematical replay.'},'files':entries}
     MANIFEST.write_text(json.dumps(data,indent=2)+'\n',encoding='utf8',newline='\n');print('WROTE',len(entries),'pins')
 
 def check():

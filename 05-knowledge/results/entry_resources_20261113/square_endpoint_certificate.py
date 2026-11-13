@@ -18,15 +18,18 @@ def solve(n,ends):
     edges,inc=graph(n);full=(1<<len(edges))-1
     target=[0]+[1 if v in ends else 2 for v in range(1,n+1)]
     reasons=Counter();leaves=[]
-    def visit(yes,no,choices):
+    def visit(yes,no,choices,trace):
+        trace=trace[:]
         while True:
             old=(yes,no)
             for v in range(1,n+1):
                 have=(yes&inc[v]).bit_count();free=inc[v]&~(yes|no)
                 if have>target[v] or have+free.bit_count()<target[v]:
-                    reasons['degree']+=1;leaves.append({'choices':choices,'contradiction':'degree','vertex':v});return []
-                if have==target[v]:no|=free
-                elif have+free.bit_count()==target[v]:yes|=free
+                    reasons['degree']+=1;leaves.append({'choices':choices,'trace':trace,'selected':yes,'forbidden':no,'contradiction':'degree','vertex':v});return []
+                if free and have==target[v]:
+                    trace.append({'vertex':v,'action':'forbid','edges':free});no|=free
+                elif free and have+free.bit_count()==target[v]:
+                    trace.append({'vertex':v,'action':'force','edges':free});yes|=free
             # No Hamilton path contains a selected cycle, even a spanning one.
             parent=list(range(n+1))
             def root(v):
@@ -36,7 +39,7 @@ def solve(n,ends):
                 if yes>>i&1:
                     a,b=root(a),root(b)
                     if a==b:
-                        reasons['cycle']+=1;leaves.append({'choices':choices,'contradiction':'cycle'});return []
+                        reasons['cycle']+=1;leaves.append({'choices':choices,'trace':trace,'selected':yes,'forbidden':no,'contradiction':'cycle'});return []
                     parent[a]=b
             if (yes,no)==old:break
         todo=full&~(yes|no)
@@ -46,8 +49,8 @@ def solve(n,ends):
         # Branch at the most constrained remaining vertex.
         v=min((v for v in range(1,n+1) if inc[v]&todo),key=lambda v:(inc[v]&todo).bit_count())
         bit=inc[v]&todo;bit&=-bit;i=bit.bit_length()-1
-        return visit(yes|bit,no,choices+[[i,1]])+visit(yes,no|bit,choices+[[i,0]])
-    solutions=visit(0,0,[])
+        return visit(yes|bit,no,choices+[[i,1]],trace)+visit(yes,no|bit,choices+[[i,0]],trace)
+    solutions=visit(0,0,[],[])
     return {'endpoints':ends,'solutions':solutions,'leaves':leaves,'reasons':dict(reasons)}
 
 def run():

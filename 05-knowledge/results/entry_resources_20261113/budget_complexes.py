@@ -1,4 +1,4 @@
-"""Intrinsic selected-budget invariants across every tournament through7."""
+"""Intrinsic selected-budget invariants across every tournament through8."""
 from common import *
 from collections import Counter
 from math import factorial
@@ -7,7 +7,7 @@ sys.path.insert(0,str(HERE.parent/'modular_centers_collatz_pell_20261111'))
 import content_checks as cc
 import tournament_checks as tc
 
-def run(max_n=7):
+def run(max_n=8):
     codes={0};levels=[];records=[];expected=[1,1,2,4,12,56,456,6880]
     need(1<=max_n<=8,'declared complete universe through8')
     for n in range(1,max_n+1):
@@ -35,4 +35,4 @@ def run(max_n=7):
         level={'n':n,'ordinary_types':len(codes),'budget_face_totals_by_size':[totals[i] for i in range(n+1)],'distinct_budget_f_vectors':len(vectors),'nonflag_budget_complexes':nonflag,'maximum_minimal_nonface_size':max_arity,'unit_marked_orbits':sum(r['marked_unit_orbits'] for r in group),'cores_with_unit_marking':sum(r['nonempty_unit_markings']>0 for r in group)}
         levels.append(level);print(level,flush=True)
     save('budget_complexes',{'scope':f'Every unmarked tournament class of orders1..{max_n}, no converse merging. Budget complex includes empty selection; unit-orbit counts exclude it. Face totals count vertex subsets on one representative of each ordinary class, not marked orbits. Counts are intrinsic under relabeling. A000568 and labelled orbit masses are controls, not new sequence terms.','levels':levels,'records':records})
-if __name__=='__main__':run(int(sys.argv[1]) if len(sys.argv)>1 else 7)
+if __name__=='__main__':run(int(sys.argv[1]) if len(sys.argv)>1 else 8)
