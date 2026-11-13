@@ -113,6 +113,13 @@ cores of those same counts restore it at the base size, but their growing
 response vectors do not match. This is a concrete finite source reselection,
 not a proof of repeatable return.
 
+The final [three-root theorem](absorption/NATURAL_ROOTS.md) explains part of
+that failure in every order: after the generic +4 two-birth operation on a
+G-H=2 source, neither the original marked vertex nor either newborn has
+G-H=2. The other old vertices remain possible. This gives a precise reason
+to search for a changed old root or a genuine core repair, rather than
+assuming the new vertices automatically renew the preparation.
+
 ## Where the outside comparisons enter
 
 The Collatz comparison motivates choosing among arithmetic parents rather

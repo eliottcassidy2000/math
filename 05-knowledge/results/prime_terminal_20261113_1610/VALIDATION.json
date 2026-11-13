@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "normal_optimized_receipt_pairs": [
+    "absorption/cone_receipt.json",
+    "absorption/receipt.json",
+    "arithmetic/alternative_receipt.json",
+    "arithmetic/module_receipt.json",
+    "arithmetic/receipt.json",
+    "arithmetic/target_receipt.json",
+    "frames/receipt.json",
+    "repairs/rearming_receipt.json",
+    "repairs/receipt.json"
+  ],
+  "post_merge_validation": "Eleven checkers passed in normal and optimized modes. Referee and natural-root checks use one deterministic receipt; remaining paired receipts are byte-identical.",
+  "complete_frame_search": {
+    "ordinary_order8_parents": 6880,
+    "filtered_extensions": 1736448,
+    "positive_shifted_presentations": 18,
+    "local_neutral_probe_graphs": 164221
+  },
+  "repository_documentation": "Final check_docs.py PASS after integration and all mathematical additions",
+  "local_markdown_links": "All local targets exist",
+  "proof_status": "Scoped constructions and obstructions; uniform prime/7p coverage and Chan-Pak OPEN",
+  "initial_snapshot": "06847e4c6e",
+  "integrated_incoming": "1ec6d12336",
+  "first_pushed_checkpoint": "a6dcf4ce866a6722c948f7aa817807f3c489fa22"
+}

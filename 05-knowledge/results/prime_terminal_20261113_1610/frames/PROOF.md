@@ -87,7 +87,7 @@ The source and target orders are k+5 and k+6. The first instances are
 199->599,415->1247,847->2543. Each is a full Hamiltonian count. The
 construction selects a different core and uses two fewer vertices in the
 uniform module. It does not assert an induced one-vertex extension.
-The companion [repair packet](../repairs/TERNARY.md) records the explicit
+The companion [rearming packet](../repairs/REARMING.md) records the explicit
 marked embedding test: none of the eighteen order-nine target presentations
 found here contains the required marked eight-vertex source presentation.
 

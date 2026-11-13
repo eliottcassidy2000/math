@@ -1,0 +1,461 @@
+{
+  "status": "PASS",
+  "scope": "N1-N3 finite controls",
+  "census": [
+    {
+      "n": 1,
+      "rooted_labelled_cases": 1,
+      "ready_sources": 0,
+      "new_a_ready": 0
+    },
+    {
+      "n": 2,
+      "rooted_labelled_cases": 4,
+      "ready_sources": 0,
+      "new_a_ready": 0
+    },
+    {
+      "n": 3,
+      "rooted_labelled_cases": 24,
+      "ready_sources": 0,
+      "new_a_ready": 6
+    },
+    {
+      "n": 4,
+      "rooted_labelled_cases": 256,
+      "ready_sources": 24,
+      "new_a_ready": 24
+    }
+  ],
+  "padding_controls": [
+    {
+      "left": 0,
+      "right": 0,
+      "root": 0,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "h": 3,
+      "g": 3,
+      "q": 1,
+      "endpaths": 1,
+      "child_h": 9,
+      "defects_a_b_u": [
+        2,
+        0,
+        2
+      ],
+      "a_classified_ready": true,
+      "source_ready": false
+    },
+    {
+      "left": 0,
+      "right": 0,
+      "root": 1,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "h": 3,
+      "g": 3,
+      "q": 1,
+      "endpaths": 1,
+      "child_h": 9,
+      "defects_a_b_u": [
+        2,
+        0,
+        2
+      ],
+      "a_classified_ready": true,
+      "source_ready": false
+    },
+    {
+      "left": 0,
+      "right": 0,
+      "root": 2,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "h": 3,
+      "g": 3,
+      "q": 1,
+      "endpaths": 1,
+      "child_h": 9,
+      "defects_a_b_u": [
+        2,
+        0,
+        2
+      ],
+      "a_classified_ready": true,
+      "source_ready": false
+    },
+    {
+      "left": 1,
+      "right": 0,
+      "root": 1,
+      "rows": [
+        14,
+        4,
+        8,
+        2
+      ],
+      "h": 3,
+      "g": 3,
+      "q": 1,
+      "endpaths": 1,
+      "child_h": 9,
+      "defects_a_b_u": [
+        2,
+        0,
+        2
+      ],
+      "a_classified_ready": true,
+      "source_ready": false
+    },
+    {
+      "left": 1,
+      "right": 0,
+      "root": 2,
+      "rows": [
+        14,
+        4,
+        8,
+        2
+      ],
+      "h": 3,
+      "g": 3,
+      "q": 1,
+      "endpaths": 1,
+      "child_h": 9,
+      "defects_a_b_u": [
+        2,
+        0,
+        2
+      ],
+      "a_classified_ready": true,
+      "source_ready": false
+    },
+    {
+      "left": 1,
+      "right": 0,
+      "root": 3,
+      "rows": [
+        14,
+        4,
+        8,
+        2
+      ],
+      "h": 3,
+      "g": 3,
+      "q": 1,
+      "endpaths": 1,
+      "child_h": 9,
+      "defects_a_b_u": [
+        2,
+        0,
+        2
+      ],
+      "a_classified_ready": true,
+      "source_ready": false
+    },
+    {
+      "left": 3,
+      "right": 0,
+      "root": 3,
+      "rows": [
+        62,
+        60,
+        56,
+        16,
+        32,
+        8
+      ],
+      "h": 3,
+      "g": 3,
+      "q": 1,
+      "endpaths": 1,
+      "child_h": 9,
+      "defects_a_b_u": [
+        2,
+        0,
+        2
+      ],
+      "a_classified_ready": true,
+      "source_ready": false
+    },
+    {
+      "left": 3,
+      "right": 0,
+      "root": 4,
+      "rows": [
+        62,
+        60,
+        56,
+        16,
+        32,
+        8
+      ],
+      "h": 3,
+      "g": 3,
+      "q": 1,
+      "endpaths": 1,
+      "child_h": 9,
+      "defects_a_b_u": [
+        2,
+        0,
+        2
+      ],
+      "a_classified_ready": true,
+      "source_ready": false
+    },
+    {
+      "left": 3,
+      "right": 0,
+      "root": 5,
+      "rows": [
+        62,
+        60,
+        56,
+        16,
+        32,
+        8
+      ],
+      "h": 3,
+      "g": 3,
+      "q": 1,
+      "endpaths": 1,
+      "child_h": 9,
+      "defects_a_b_u": [
+        2,
+        0,
+        2
+      ],
+      "a_classified_ready": true,
+      "source_ready": false
+    },
+    {
+      "left": 0,
+      "right": 1,
+      "root": 0,
+      "rows": [
+        10,
+        12,
+        9,
+        0
+      ],
+      "h": 3,
+      "g": 6,
+      "q": 1,
+      "endpaths": 0,
+      "child_h": 15,
+      "defects_a_b_u": [
+        3,
+        0,
+        8
+      ],
+      "a_classified_ready": false,
+      "source_ready": false
+    },
+    {
+      "left": 0,
+      "right": 1,
+      "root": 1,
+      "rows": [
+        10,
+        12,
+        9,
+        0
+      ],
+      "h": 3,
+      "g": 6,
+      "q": 1,
+      "endpaths": 0,
+      "child_h": 15,
+      "defects_a_b_u": [
+        3,
+        0,
+        8
+      ],
+      "a_classified_ready": false,
+      "source_ready": false
+    },
+    {
+      "left": 0,
+      "right": 1,
+      "root": 2,
+      "rows": [
+        10,
+        12,
+        9,
+        0
+      ],
+      "h": 3,
+      "g": 6,
+      "q": 1,
+      "endpaths": 0,
+      "child_h": 15,
+      "defects_a_b_u": [
+        3,
+        0,
+        8
+      ],
+      "a_classified_ready": false,
+      "source_ready": false
+    },
+    {
+      "left": 1,
+      "right": 1,
+      "root": 1,
+      "rows": [
+        30,
+        20,
+        24,
+        18,
+        0
+      ],
+      "h": 3,
+      "g": 6,
+      "q": 1,
+      "endpaths": 0,
+      "child_h": 15,
+      "defects_a_b_u": [
+        3,
+        0,
+        8
+      ],
+      "a_classified_ready": false,
+      "source_ready": false
+    },
+    {
+      "left": 1,
+      "right": 1,
+      "root": 2,
+      "rows": [
+        30,
+        20,
+        24,
+        18,
+        0
+      ],
+      "h": 3,
+      "g": 6,
+      "q": 1,
+      "endpaths": 0,
+      "child_h": 15,
+      "defects_a_b_u": [
+        3,
+        0,
+        8
+      ],
+      "a_classified_ready": false,
+      "source_ready": false
+    },
+    {
+      "left": 1,
+      "right": 1,
+      "root": 3,
+      "rows": [
+        30,
+        20,
+        24,
+        18,
+        0
+      ],
+      "h": 3,
+      "g": 6,
+      "q": 1,
+      "endpaths": 0,
+      "child_h": 15,
+      "defects_a_b_u": [
+        3,
+        0,
+        8
+      ],
+      "a_classified_ready": false,
+      "source_ready": false
+    },
+    {
+      "left": 2,
+      "right": 2,
+      "root": 2,
+      "rows": [
+        126,
+        124,
+        104,
+        112,
+        100,
+        64,
+        0
+      ],
+      "h": 3,
+      "g": 12,
+      "q": 1,
+      "endpaths": 0,
+      "child_h": 27,
+      "defects_a_b_u": [
+        3,
+        0,
+        20
+      ],
+      "a_classified_ready": false,
+      "source_ready": false
+    },
+    {
+      "left": 2,
+      "right": 2,
+      "root": 3,
+      "rows": [
+        126,
+        124,
+        104,
+        112,
+        100,
+        64,
+        0
+      ],
+      "h": 3,
+      "g": 12,
+      "q": 1,
+      "endpaths": 0,
+      "child_h": 27,
+      "defects_a_b_u": [
+        3,
+        0,
+        20
+      ],
+      "a_classified_ready": false,
+      "source_ready": false
+    },
+    {
+      "left": 2,
+      "right": 2,
+      "root": 4,
+      "rows": [
+        126,
+        124,
+        104,
+        112,
+        100,
+        64,
+        0
+      ],
+      "h": 3,
+      "g": 12,
+      "q": 1,
+      "endpaths": 0,
+      "child_h": 27,
+      "defects_a_b_u": [
+        3,
+        0,
+        20
+      ],
+      "a_classified_ready": false,
+      "source_ready": false
+    }
+  ]
+}

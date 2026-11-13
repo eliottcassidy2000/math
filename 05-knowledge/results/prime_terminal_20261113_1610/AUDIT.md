@@ -36,6 +36,22 @@ The proof counts scalar outputs rather than formal words and separates
 cyclic module slots from singleton strong components; neutral singleton
 padding is never incorrectly bounded by total order.
 
+The final constructive additions were also checked: the H79 repair minimizes
+distance only to the chosen A5[TT4] isomorphism class; its two individual
+flip counts are97 and61. The full unchanged-module response difference is
+4K2(M), making its singleton-only neutrality explicit. The prime47184047
+certificate has independent physical path-assignment and weighted-inversion
+counts; the retained-Q^4 theorem is not a global absence claim. The9011
+certificate uses an acyclic product source, not the impossible cyclic
+(95,11) response.
+
+The last [natural-root addendum](absorption/NATURAL_ROOTS.md) was derived
+independently by root and absorption lanes. Its path-category formulas agree;
+the new-a classification uses a recoverable non-ending-path insertion,
+then the complete H3 strong-component structure. All285 rooted labelled
+tournaments through four vertices and18 padding controls pass. The theorem
+does not classify the unmarked old vertices.
+
 ## Reproduction
 
 Every lane's proof names its checker and universe. The root frame controls

@@ -113,3 +113,19 @@ and the fixed-partner finiteness result are another instance of the present
 distinction: an integer Bezout solution must lie in the physical response
 set. Those theorems are credited to the incoming packet; no blanket coverage
 claim or unverified combination is made here.
+
+The final integration also includes1ec6d12336 and
+[Session307's prime symmetry bound](../session307_symmetry_and_collatz_20261113/SYMMETRY_BUDGET.md).
+Its prime-count consequence follows directly: automorphisms act freely on
+Hamiltonian words, so their order divides H. An automorphism of prime order
+p supplies at least p(p-1)/2 paths in a moved circulant orbit; tournament
+insertion extends them injectively. Thus prime H=p>=5 forces asymmetry.
+The same argument makes Aut(T) trivial or cyclic of order7 when H=7p,
+p>=17. These are inherited necessary filters, not additional coverage.
+
+Our Q^r modules already have trivial automorphism groups: Q's degree classes
+have sizes two and two, while a tournament automorphism group has odd order;
+the ordered strong components of Q^r cannot be permuted. Hence C5's
+retained-module obstruction persists after both cover content and symmetry
+have passed their primitive tests. Changing modules is addressing a distinct
+constraint, not merely removing a common divisor or an automorphism.
