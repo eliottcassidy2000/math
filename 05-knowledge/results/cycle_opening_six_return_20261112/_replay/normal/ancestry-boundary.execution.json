@@ -1,0 +1,9 @@
+{
+  "id": "ancestry-boundary",
+  "exit_code": 0,
+  "script_lf_sha256": "77bac5caadd66eac7eda2b2a66695f5cd1d0f00ade05c3e6f3240cc0bff484f9",
+  "receipts": {
+    "compiler/ancestry_boundary.json": "7126b6eb5a88b3f4cc5b90bade28fb40d6dc381b6cda9977d4dfb612e28ad9d9"
+  },
+  "input_capture": "_replay/normal/ancestry-boundary.inputs.json"
+}

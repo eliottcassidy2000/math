@@ -1,0 +1,1 @@
+PASS: 225 exact neutral charts at k2; growing-defect-to-1 family k1..8; independent permutation parents k1,k2; complete all-k no-retarget coefficient certificate plus 16 literal split-block controls.

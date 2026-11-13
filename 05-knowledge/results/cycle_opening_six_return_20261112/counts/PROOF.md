@@ -299,7 +299,7 @@ for non-inflated entries; that auxiliary scope is recorded in
 The [uniform module return](../compiler/MODULE_RETURN.md) now constructs a
 ready representative at the successor target for every nonempty M. Its
 full count is `23h+135p` and defect is h. In the transitive case it restores
-defect one at exactly `135·2^k+23`. It keeps the same physical newest root
+defect one at exactly `135Â·2^k+23`. It keeps the same physical newest root
 y, its sole predecessor x, every internal M arc, and every root-star arc;
 it changes six fixed parent arcs and three homogeneous module boundaries.
 Thus section 7 excludes only predecessor toggles with a frozen parent,

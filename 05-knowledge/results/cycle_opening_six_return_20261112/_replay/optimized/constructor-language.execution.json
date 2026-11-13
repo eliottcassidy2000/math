@@ -1,0 +1,9 @@
+{
+  "id": "constructor-language",
+  "exit_code": 0,
+  "script_lf_sha256": "c82e9cc39bf29c61868e667332f11f0f830262e1f10f284503b1e99b2f47ca7a",
+  "receipts": {
+    "returns/constructor_language.json": "a4f9ff891f5bda9280e88d0a230a9aaf5fd095e1de12eb6285127e99dbf13d83"
+  },
+  "input_capture": "_replay/optimized/constructor-language.inputs.json"
+}

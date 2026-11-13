@@ -90,7 +90,7 @@ def main():
   require(actual==expect and len(actual)==6+3*m,('named funnel return map',name))
   require(lift[len(old)-1]==len(old)-1 and lift[len(old)-2]==len(old)-2,'root and sole predecessor retained')
   report['universal_ready_targets'].append({'module':name,'H_module':hm,'P_module_2':pm,'targets':both,'funnel_changed_arcs':len(actual),'funnel_root_and_predecessor_fixed':True})
- report['script_sha256']=sha256(Path(__file__).read_bytes()).hexdigest()
+ report['script_sha256']=sha256(Path(__file__).read_bytes().replace(b"\r\n",b"\n")).hexdigest()
  (HERE/'cross_audit.json').write_text(json.dumps(report,indent=2)+'\n')
  print('PASS: L/T and A/B physical states on four sources, exact four-arc same-root-star switch, two ready-target constructions on five modules including nontransitive controls.')
 if __name__=='__main__':main()

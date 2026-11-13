@@ -1,0 +1,36 @@
+{
+  "status": "metadata-only portability repair; mathematical receipt data unchanged; full normal and optimized engine replay required",
+  "hash_basis": "SHA256 of LF-normalized text; source paths use POSIX separators",
+  "changes": [
+    {
+      "receipt": "counts/inflation_probe.json",
+      "field": "source_bank_sha256",
+      "before": "96f9d5883a0854331b1818de21c914a3fcafb3aa64f47bdace43a049255b7e92",
+      "after": "ee5d4382072cc57082328493dada60ae03b0cd832c00938c912f45d62e764ab5"
+    },
+    {
+      "receipt": "counts/audit_counts.json",
+      "field": "source_sha256",
+      "before": {
+        "counts\\inflation_probe.py": "0567acbc38d5b27933d31202ba47b4f5e5b9ea3a596acbbdc5e4b43c2ede5162",
+        "counts\\inflation_probe.json": "b7771005aea9f6597cf4cceefd0e12d8bb3dcacdac412e65130a485cba8bc112",
+        "counts\\two_block.py": "130f30b89e8694a13577c28ac79ee91361f25c344c2c1b7b48a7de244ce171a5",
+        "counts\\audit_counts.py": "db34f8240d6c17b68066b0514c0363a4f95e2dc7a873b04ea726805bf218e4ab",
+        "returns\\port_collisions.json": "96f9d5883a0854331b1818de21c914a3fcafb3aa64f47bdace43a049255b7e92"
+      },
+      "after": {
+        "counts/inflation_probe.py": "e589e70381fee7a271d3b0f56a0524906c95e90dc027953f4f64ab775299cbd2",
+        "counts/inflation_probe.json": "33e76def5a8084fa677557e2203865aa1f3d69476c99904cd25de512f4d5f99b",
+        "counts/two_block.py": "c89345567e62c07357b9edb0091e220151d6c37cf200fc93e4561c915a58143f",
+        "counts/audit_counts.py": "eaabbab87154a62da4620f0ed2e5ecc2132b67d820d8bd9c0bd2c21f6085c924",
+        "returns/port_collisions.json": "ee5d4382072cc57082328493dada60ae03b0cd832c00938c912f45d62e764ab5"
+      }
+    },
+    {
+      "receipt": "counts/cross_audit.json",
+      "field": "script_sha256",
+      "before": "4299f042f623883f08cbb746976dfd476283d3ab08b3dce99fb0b7f79932d570",
+      "after": "c9d259ade6d43f761755068ac3ce1fab92a08f908c5ccab88db64e2f9279ef0f"
+    }
+  ]
+}

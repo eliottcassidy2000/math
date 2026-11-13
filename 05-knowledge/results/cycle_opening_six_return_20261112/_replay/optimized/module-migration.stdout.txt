@@ -1,0 +1,1 @@
+PASS same-root full-target module migration for k1..5; all-height coefficient identities

@@ -1,0 +1,9 @@
+{
+  "id": "count-audit",
+  "exit_code": 0,
+  "script_lf_sha256": "eaabbab87154a62da4620f0ed2e5ecc2132b67d820d8bd9c0bd2c21f6085c924",
+  "receipts": {
+    "counts/audit_counts.json": "556d86e956ae1d1aef59732797070120b06f1fc8153b97c775223df0e04c0c64"
+  },
+  "input_capture": "_replay/optimized/count-audit.inputs.json"
+}

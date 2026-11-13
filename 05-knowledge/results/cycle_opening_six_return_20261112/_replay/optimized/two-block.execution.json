@@ -1,0 +1,9 @@
+{
+  "id": "two-block",
+  "exit_code": 0,
+  "script_lf_sha256": "c89345567e62c07357b9edb0091e220151d6c37cf200fc93e4561c915a58143f",
+  "receipts": {
+    "counts/two_block.json": "bcea9054436b46d49d46df384e89836cb6a2237e0514178d7511a33006f02f6d"
+  },
+  "input_capture": "_replay/optimized/two-block.inputs.json"
+}

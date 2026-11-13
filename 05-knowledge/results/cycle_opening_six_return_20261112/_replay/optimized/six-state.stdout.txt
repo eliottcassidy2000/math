@@ -1,0 +1,1 @@
+{"status": "PASS", "hankel_determinant": 552960, "literal_controls": 7, "periodic_programs": 510}

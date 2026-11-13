@@ -1,0 +1,1 @@
+{"status": "PASS", "independent_literal_controls": 7, "determinants": [552960, 811008]}

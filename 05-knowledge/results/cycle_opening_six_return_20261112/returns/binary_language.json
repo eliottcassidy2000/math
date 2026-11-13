@@ -1,0 +1,1591 @@
+{
+  "status": "VERIFIED restricted-language corollary of inherited adaptive ancestry; exact coordinate and graph controls",
+  "inheritance": "adaptive_metagraph_reformulation_20261103/ANCESTRY.md A1-A3,A5",
+  "max_added_vertices": 10,
+  "binary_rooted_checks": 2046,
+  "literal_interface_checks": 62,
+  "K": [
+    [
+      2,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "all_K_book_controls": [
+    {
+      "births": 0,
+      "H": 3,
+      "module_order": 1
+    },
+    {
+      "births": 1,
+      "H": 5,
+      "module_order": 2
+    },
+    {
+      "births": 2,
+      "H": 9,
+      "module_order": 3
+    },
+    {
+      "births": 3,
+      "H": 17,
+      "module_order": 4
+    },
+    {
+      "births": 4,
+      "H": 33,
+      "module_order": 5
+    },
+    {
+      "births": 5,
+      "H": 65,
+      "module_order": 6
+    },
+    {
+      "births": 6,
+      "H": 129,
+      "module_order": 7
+    },
+    {
+      "births": 7,
+      "H": 257,
+      "module_order": 8
+    },
+    {
+      "births": 8,
+      "H": 513,
+      "module_order": 9
+    },
+    {
+      "births": 9,
+      "H": 1025,
+      "module_order": 10
+    },
+    {
+      "births": 10,
+      "H": 2049,
+      "module_order": 11
+    },
+    {
+      "births": 11,
+      "H": 4097,
+      "module_order": 12
+    },
+    {
+      "births": 12,
+      "H": 8193,
+      "module_order": 13
+    },
+    {
+      "births": 13,
+      "H": 16385,
+      "module_order": 14
+    },
+    {
+      "births": 14,
+      "H": 32769,
+      "module_order": 15
+    },
+    {
+      "births": 15,
+      "H": 65537,
+      "module_order": 16
+    },
+    {
+      "births": 16,
+      "H": 131073,
+      "module_order": 17
+    }
+  ],
+  "H9_cores": [
+    {
+      "word": "LL",
+      "rows": [
+        10,
+        4,
+        1,
+        22,
+        7
+      ],
+      "root": 4,
+      "core": "S5a",
+      "state": [
+        4,
+        2,
+        5
+      ]
+    },
+    {
+      "word": "KL",
+      "rows": [
+        26,
+        4,
+        1,
+        6,
+        14
+      ],
+      "root": 4,
+      "core": "S5b",
+      "state": [
+        4,
+        1,
+        5
+      ]
+    }
+  ],
+  "records": [
+    {
+      "added_vertices": 1,
+      "rooted_binary_words": 2,
+      "ordinary_binary_classes": 1,
+      "binary_H_distribution": [
+        {
+          "H": 5,
+          "classes": 1
+        }
+      ],
+      "binary_interface_states": 2,
+      "Fibonacci_classes": 1,
+      "Fibonacci_H_distribution": [
+        {
+          "H": 5,
+          "classes": 1
+        }
+      ]
+    },
+    {
+      "added_vertices": 2,
+      "rooted_binary_words": 4,
+      "ordinary_binary_classes": 2,
+      "binary_H_distribution": [
+        {
+          "H": 9,
+          "classes": 2
+        }
+      ],
+      "binary_interface_states": 4,
+      "Fibonacci_classes": 2,
+      "Fibonacci_H_distribution": [
+        {
+          "H": 9,
+          "classes": 2
+        }
+      ]
+    },
+    {
+      "added_vertices": 3,
+      "rooted_binary_words": 8,
+      "ordinary_binary_classes": 4,
+      "binary_H_distribution": [
+        {
+          "H": 15,
+          "classes": 2
+        },
+        {
+          "H": 17,
+          "classes": 2
+        }
+      ],
+      "binary_interface_states": 8,
+      "Fibonacci_classes": 3,
+      "Fibonacci_H_distribution": [
+        {
+          "H": 15,
+          "classes": 2
+        },
+        {
+          "H": 17,
+          "classes": 1
+        }
+      ]
+    },
+    {
+      "added_vertices": 4,
+      "rooted_binary_words": 16,
+      "ordinary_binary_classes": 8,
+      "binary_H_distribution": [
+        {
+          "H": 25,
+          "classes": 1
+        },
+        {
+          "H": 27,
+          "classes": 3
+        },
+        {
+          "H": 29,
+          "classes": 2
+        },
+        {
+          "H": 31,
+          "classes": 1
+        },
+        {
+          "H": 33,
+          "classes": 1
+        }
+      ],
+      "binary_interface_states": 15,
+      "Fibonacci_classes": 5,
+      "Fibonacci_H_distribution": [
+        {
+          "H": 25,
+          "classes": 1
+        },
+        {
+          "H": 27,
+          "classes": 1
+        },
+        {
+          "H": 29,
+          "classes": 2
+        },
+        {
+          "H": 31,
+          "classes": 1
+        }
+      ]
+    },
+    {
+      "added_vertices": 5,
+      "rooted_binary_words": 32,
+      "ordinary_binary_classes": 16,
+      "binary_H_distribution": [
+        {
+          "H": 45,
+          "classes": 5
+        },
+        {
+          "H": 49,
+          "classes": 1
+        },
+        {
+          "H": 51,
+          "classes": 4
+        },
+        {
+          "H": 53,
+          "classes": 4
+        },
+        {
+          "H": 57,
+          "classes": 1
+        },
+        {
+          "H": 65,
+          "classes": 1
+        }
+      ],
+      "binary_interface_states": 28,
+      "Fibonacci_classes": 8,
+      "Fibonacci_H_distribution": [
+        {
+          "H": 45,
+          "classes": 2
+        },
+        {
+          "H": 49,
+          "classes": 1
+        },
+        {
+          "H": 51,
+          "classes": 2
+        },
+        {
+          "H": 53,
+          "classes": 2
+        },
+        {
+          "H": 57,
+          "classes": 1
+        }
+      ]
+    },
+    {
+      "added_vertices": 6,
+      "rooted_binary_words": 64,
+      "ordinary_binary_classes": 32,
+      "binary_H_distribution": [
+        {
+          "H": 75,
+          "classes": 3
+        },
+        {
+          "H": 81,
+          "classes": 5
+        },
+        {
+          "H": 85,
+          "classes": 4
+        },
+        {
+          "H": 87,
+          "classes": 4
+        },
+        {
+          "H": 89,
+          "classes": 2
+        },
+        {
+          "H": 91,
+          "classes": 1
+        },
+        {
+          "H": 93,
+          "classes": 2
+        },
+        {
+          "H": 97,
+          "classes": 5
+        },
+        {
+          "H": 99,
+          "classes": 2
+        },
+        {
+          "H": 101,
+          "classes": 2
+        },
+        {
+          "H": 105,
+          "classes": 1
+        },
+        {
+          "H": 129,
+          "classes": 1
+        }
+      ],
+      "binary_interface_states": 53,
+      "Fibonacci_classes": 13,
+      "Fibonacci_H_distribution": [
+        {
+          "H": 75,
+          "classes": 1
+        },
+        {
+          "H": 81,
+          "classes": 1
+        },
+        {
+          "H": 85,
+          "classes": 2
+        },
+        {
+          "H": 87,
+          "classes": 2
+        },
+        {
+          "H": 91,
+          "classes": 1
+        },
+        {
+          "H": 93,
+          "classes": 2
+        },
+        {
+          "H": 97,
+          "classes": 3
+        },
+        {
+          "H": 105,
+          "classes": 1
+        }
+      ]
+    },
+    {
+      "added_vertices": 7,
+      "rooted_binary_words": 128,
+      "ordinary_binary_classes": 64,
+      "binary_H_distribution": [
+        {
+          "H": 125,
+          "classes": 1
+        },
+        {
+          "H": 135,
+          "classes": 10
+        },
+        {
+          "H": 145,
+          "classes": 4
+        },
+        {
+          "H": 147,
+          "classes": 2
+        },
+        {
+          "H": 153,
+          "classes": 10
+        },
+        {
+          "H": 155,
+          "classes": 2
+        },
+        {
+          "H": 159,
+          "classes": 8
+        },
+        {
+          "H": 161,
+          "classes": 1
+        },
+        {
+          "H": 165,
+          "classes": 5
+        },
+        {
+          "H": 167,
+          "classes": 2
+        },
+        {
+          "H": 169,
+          "classes": 3
+        },
+        {
+          "H": 171,
+          "classes": 2
+        },
+        {
+          "H": 177,
+          "classes": 4
+        },
+        {
+          "H": 179,
+          "classes": 2
+        },
+        {
+          "H": 185,
+          "classes": 2
+        },
+        {
+          "H": 193,
+          "classes": 1
+        },
+        {
+          "H": 195,
+          "classes": 2
+        },
+        {
+          "H": 197,
+          "classes": 2
+        },
+        {
+          "H": 257,
+          "classes": 1
+        }
+      ],
+      "binary_interface_states": 98,
+      "Fibonacci_classes": 21,
+      "Fibonacci_H_distribution": [
+        {
+          "H": 135,
+          "classes": 2
+        },
+        {
+          "H": 145,
+          "classes": 2
+        },
+        {
+          "H": 153,
+          "classes": 3
+        },
+        {
+          "H": 155,
+          "classes": 2
+        },
+        {
+          "H": 159,
+          "classes": 2
+        },
+        {
+          "H": 165,
+          "classes": 3
+        },
+        {
+          "H": 171,
+          "classes": 2
+        },
+        {
+          "H": 177,
+          "classes": 2
+        },
+        {
+          "H": 179,
+          "classes": 2
+        },
+        {
+          "H": 193,
+          "classes": 1
+        }
+      ]
+    },
+    {
+      "added_vertices": 8,
+      "rooted_binary_words": 256,
+      "ordinary_binary_classes": 128,
+      "binary_H_distribution": [
+        {
+          "H": 225,
+          "classes": 9
+        },
+        {
+          "H": 243,
+          "classes": 8
+        },
+        {
+          "H": 245,
+          "classes": 2
+        },
+        {
+          "H": 255,
+          "classes": 12
+        },
+        {
+          "H": 261,
+          "classes": 10
+        },
+        {
+          "H": 265,
+          "classes": 8
+        },
+        {
+          "H": 267,
+          "classes": 4
+        },
+        {
+          "H": 273,
+          "classes": 2
+        },
+        {
+          "H": 279,
+          "classes": 5
+        },
+        {
+          "H": 281,
+          "classes": 1
+        },
+        {
+          "H": 285,
+          "classes": 4
+        },
+        {
+          "H": 289,
+          "classes": 4
+        },
+        {
+          "H": 291,
+          "classes": 10
+        },
+        {
+          "H": 297,
+          "classes": 5
+        },
+        {
+          "H": 301,
+          "classes": 6
+        },
+        {
+          "H": 303,
+          "classes": 6
+        },
+        {
+          "H": 305,
+          "classes": 3
+        },
+        {
+          "H": 307,
+          "classes": 1
+        },
+        {
+          "H": 309,
+          "classes": 2
+        },
+        {
+          "H": 313,
+          "classes": 1
+        },
+        {
+          "H": 315,
+          "classes": 2
+        },
+        {
+          "H": 319,
+          "classes": 2
+        },
+        {
+          "H": 323,
+          "classes": 1
+        },
+        {
+          "H": 325,
+          "classes": 4
+        },
+        {
+          "H": 327,
+          "classes": 2
+        },
+        {
+          "H": 329,
+          "classes": 4
+        },
+        {
+          "H": 337,
+          "classes": 2
+        },
+        {
+          "H": 355,
+          "classes": 1
+        },
+        {
+          "H": 361,
+          "classes": 2
+        },
+        {
+          "H": 387,
+          "classes": 2
+        },
+        {
+          "H": 389,
+          "classes": 2
+        },
+        {
+          "H": 513,
+          "classes": 1
+        }
+      ],
+      "binary_interface_states": 181,
+      "Fibonacci_classes": 34,
+      "Fibonacci_H_distribution": [
+        {
+          "H": 225,
+          "classes": 1
+        },
+        {
+          "H": 243,
+          "classes": 1
+        },
+        {
+          "H": 255,
+          "classes": 4
+        },
+        {
+          "H": 261,
+          "classes": 2
+        },
+        {
+          "H": 265,
+          "classes": 2
+        },
+        {
+          "H": 279,
+          "classes": 3
+        },
+        {
+          "H": 281,
+          "classes": 1
+        },
+        {
+          "H": 285,
+          "classes": 2
+        },
+        {
+          "H": 289,
+          "classes": 1
+        },
+        {
+          "H": 291,
+          "classes": 4
+        },
+        {
+          "H": 301,
+          "classes": 2
+        },
+        {
+          "H": 303,
+          "classes": 2
+        },
+        {
+          "H": 305,
+          "classes": 1
+        },
+        {
+          "H": 315,
+          "classes": 2
+        },
+        {
+          "H": 323,
+          "classes": 1
+        },
+        {
+          "H": 325,
+          "classes": 2
+        },
+        {
+          "H": 329,
+          "classes": 2
+        },
+        {
+          "H": 355,
+          "classes": 1
+        }
+      ]
+    },
+    {
+      "added_vertices": 9,
+      "rooted_binary_words": 512,
+      "ordinary_binary_classes": 256,
+      "binary_H_distribution": [
+        {
+          "H": 375,
+          "classes": 4
+        },
+        {
+          "H": 405,
+          "classes": 20
+        },
+        {
+          "H": 425,
+          "classes": 6
+        },
+        {
+          "H": 435,
+          "classes": 12
+        },
+        {
+          "H": 441,
+          "classes": 5
+        },
+        {
+          "H": 445,
+          "classes": 4
+        },
+        {
+          "H": 455,
+          "classes": 2
+        },
+        {
+          "H": 459,
+          "classes": 20
+        },
+        {
+          "H": 465,
+          "classes": 6
+        },
+        {
+          "H": 477,
+          "classes": 20
+        },
+        {
+          "H": 481,
+          "classes": 1
+        },
+        {
+          "H": 483,
+          "classes": 2
+        },
+        {
+          "H": 485,
+          "classes": 10
+        },
+        {
+          "H": 493,
+          "classes": 8
+        },
+        {
+          "H": 495,
+          "classes": 12
+        },
+        {
+          "H": 501,
+          "classes": 4
+        },
+        {
+          "H": 505,
+          "classes": 4
+        },
+        {
+          "H": 507,
+          "classes": 6
+        },
+        {
+          "H": 513,
+          "classes": 7
+        },
+        {
+          "H": 515,
+          "classes": 2
+        },
+        {
+          "H": 517,
+          "classes": 2
+        },
+        {
+          "H": 521,
+          "classes": 2
+        },
+        {
+          "H": 525,
+          "classes": 4
+        },
+        {
+          "H": 527,
+          "classes": 4
+        },
+        {
+          "H": 531,
+          "classes": 10
+        },
+        {
+          "H": 537,
+          "classes": 4
+        },
+        {
+          "H": 549,
+          "classes": 3
+        },
+        {
+          "H": 553,
+          "classes": 7
+        },
+        {
+          "H": 555,
+          "classes": 6
+        },
+        {
+          "H": 557,
+          "classes": 2
+        },
+        {
+          "H": 561,
+          "classes": 5
+        },
+        {
+          "H": 565,
+          "classes": 3
+        },
+        {
+          "H": 573,
+          "classes": 6
+        },
+        {
+          "H": 577,
+          "classes": 1
+        },
+        {
+          "H": 579,
+          "classes": 2
+        },
+        {
+          "H": 585,
+          "classes": 5
+        },
+        {
+          "H": 587,
+          "classes": 2
+        },
+        {
+          "H": 591,
+          "classes": 4
+        },
+        {
+          "H": 593,
+          "classes": 4
+        },
+        {
+          "H": 599,
+          "classes": 2
+        },
+        {
+          "H": 601,
+          "classes": 3
+        },
+        {
+          "H": 605,
+          "classes": 2
+        },
+        {
+          "H": 623,
+          "classes": 4
+        },
+        {
+          "H": 645,
+          "classes": 2
+        },
+        {
+          "H": 649,
+          "classes": 2
+        },
+        {
+          "H": 653,
+          "classes": 1
+        },
+        {
+          "H": 657,
+          "classes": 2
+        },
+        {
+          "H": 713,
+          "classes": 2
+        },
+        {
+          "H": 771,
+          "classes": 2
+        },
+        {
+          "H": 773,
+          "classes": 2
+        },
+        {
+          "H": 1025,
+          "classes": 1
+        }
+      ],
+      "binary_interface_states": 333,
+      "Fibonacci_classes": 55,
+      "Fibonacci_H_distribution": [
+        {
+          "H": 405,
+          "classes": 2
+        },
+        {
+          "H": 425,
+          "classes": 1
+        },
+        {
+          "H": 435,
+          "classes": 2
+        },
+        {
+          "H": 459,
+          "classes": 4
+        },
+        {
+          "H": 465,
+          "classes": 4
+        },
+        {
+          "H": 477,
+          "classes": 2
+        },
+        {
+          "H": 485,
+          "classes": 4
+        },
+        {
+          "H": 493,
+          "classes": 2
+        },
+        {
+          "H": 495,
+          "classes": 2
+        },
+        {
+          "H": 513,
+          "classes": 3
+        },
+        {
+          "H": 515,
+          "classes": 2
+        },
+        {
+          "H": 525,
+          "classes": 2
+        },
+        {
+          "H": 527,
+          "classes": 2
+        },
+        {
+          "H": 531,
+          "classes": 4
+        },
+        {
+          "H": 537,
+          "classes": 2
+        },
+        {
+          "H": 553,
+          "classes": 7
+        },
+        {
+          "H": 561,
+          "classes": 1
+        },
+        {
+          "H": 579,
+          "classes": 2
+        },
+        {
+          "H": 593,
+          "classes": 2
+        },
+        {
+          "H": 599,
+          "classes": 2
+        },
+        {
+          "H": 605,
+          "classes": 2
+        },
+        {
+          "H": 653,
+          "classes": 1
+        }
+      ]
+    },
+    {
+      "added_vertices": 10,
+      "rooted_binary_words": 1024,
+      "ordinary_binary_classes": 512,
+      "binary_H_distribution": [
+        {
+          "H": 625,
+          "classes": 1
+        },
+        {
+          "H": 675,
+          "classes": 22
+        },
+        {
+          "H": 725,
+          "classes": 6
+        },
+        {
+          "H": 729,
+          "classes": 13
+        },
+        {
+          "H": 735,
+          "classes": 6
+        },
+        {
+          "H": 765,
+          "classes": 36
+        },
+        {
+          "H": 775,
+          "classes": 3
+        },
+        {
+          "H": 783,
+          "classes": 20
+        },
+        {
+          "H": 795,
+          "classes": 24
+        },
+        {
+          "H": 801,
+          "classes": 10
+        },
+        {
+          "H": 805,
+          "classes": 2
+        },
+        {
+          "H": 819,
+          "classes": 5
+        },
+        {
+          "H": 825,
+          "classes": 9
+        },
+        {
+          "H": 833,
+          "classes": 4
+        },
+        {
+          "H": 835,
+          "classes": 4
+        },
+        {
+          "H": 837,
+          "classes": 10
+        },
+        {
+          "H": 841,
+          "classes": 4
+        },
+        {
+          "H": 843,
+          "classes": 2
+        },
+        {
+          "H": 845,
+          "classes": 6
+        },
+        {
+          "H": 855,
+          "classes": 10
+        },
+        {
+          "H": 867,
+          "classes": 12
+        },
+        {
+          "H": 873,
+          "classes": 27
+        },
+        {
+          "H": 881,
+          "classes": 1
+        },
+        {
+          "H": 885,
+          "classes": 8
+        },
+        {
+          "H": 891,
+          "classes": 10
+        },
+        {
+          "H": 895,
+          "classes": 6
+        },
+        {
+          "H": 899,
+          "classes": 4
+        },
+        {
+          "H": 901,
+          "classes": 16
+        },
+        {
+          "H": 903,
+          "classes": 12
+        },
+        {
+          "H": 909,
+          "classes": 14
+        },
+        {
+          "H": 915,
+          "classes": 6
+        },
+        {
+          "H": 921,
+          "classes": 2
+        },
+        {
+          "H": 925,
+          "classes": 4
+        },
+        {
+          "H": 927,
+          "classes": 4
+        },
+        {
+          "H": 937,
+          "classes": 1
+        },
+        {
+          "H": 939,
+          "classes": 4
+        },
+        {
+          "H": 941,
+          "classes": 4
+        },
+        {
+          "H": 943,
+          "classes": 2
+        },
+        {
+          "H": 945,
+          "classes": 7
+        },
+        {
+          "H": 947,
+          "classes": 1
+        },
+        {
+          "H": 949,
+          "classes": 2
+        },
+        {
+          "H": 953,
+          "classes": 2
+        },
+        {
+          "H": 957,
+          "classes": 8
+        },
+        {
+          "H": 961,
+          "classes": 7
+        },
+        {
+          "H": 965,
+          "classes": 2
+        },
+        {
+          "H": 969,
+          "classes": 6
+        },
+        {
+          "H": 971,
+          "classes": 2
+        },
+        {
+          "H": 975,
+          "classes": 12
+        },
+        {
+          "H": 977,
+          "classes": 2
+        },
+        {
+          "H": 981,
+          "classes": 6
+        },
+        {
+          "H": 985,
+          "classes": 4
+        },
+        {
+          "H": 987,
+          "classes": 10
+        },
+        {
+          "H": 1005,
+          "classes": 2
+        },
+        {
+          "H": 1009,
+          "classes": 8
+        },
+        {
+          "H": 1011,
+          "classes": 5
+        },
+        {
+          "H": 1013,
+          "classes": 2
+        },
+        {
+          "H": 1015,
+          "classes": 2
+        },
+        {
+          "H": 1017,
+          "classes": 1
+        },
+        {
+          "H": 1019,
+          "classes": 2
+        },
+        {
+          "H": 1021,
+          "classes": 2
+        },
+        {
+          "H": 1023,
+          "classes": 2
+        },
+        {
+          "H": 1025,
+          "classes": 2
+        },
+        {
+          "H": 1031,
+          "classes": 1
+        },
+        {
+          "H": 1033,
+          "classes": 2
+        },
+        {
+          "H": 1043,
+          "classes": 2
+        },
+        {
+          "H": 1045,
+          "classes": 6
+        },
+        {
+          "H": 1049,
+          "classes": 1
+        },
+        {
+          "H": 1059,
+          "classes": 2
+        },
+        {
+          "H": 1061,
+          "classes": 2
+        },
+        {
+          "H": 1065,
+          "classes": 2
+        },
+        {
+          "H": 1083,
+          "classes": 4
+        },
+        {
+          "H": 1089,
+          "classes": 2
+        },
+        {
+          "H": 1093,
+          "classes": 2
+        },
+        {
+          "H": 1101,
+          "classes": 4
+        },
+        {
+          "H": 1105,
+          "classes": 6
+        },
+        {
+          "H": 1113,
+          "classes": 2
+        },
+        {
+          "H": 1117,
+          "classes": 4
+        },
+        {
+          "H": 1121,
+          "classes": 2
+        },
+        {
+          "H": 1123,
+          "classes": 1
+        },
+        {
+          "H": 1145,
+          "classes": 2
+        },
+        {
+          "H": 1147,
+          "classes": 2
+        },
+        {
+          "H": 1161,
+          "classes": 5
+        },
+        {
+          "H": 1167,
+          "classes": 4
+        },
+        {
+          "H": 1169,
+          "classes": 2
+        },
+        {
+          "H": 1177,
+          "classes": 1
+        },
+        {
+          "H": 1201,
+          "classes": 1
+        },
+        {
+          "H": 1215,
+          "classes": 2
+        },
+        {
+          "H": 1231,
+          "classes": 2
+        },
+        {
+          "H": 1285,
+          "classes": 2
+        },
+        {
+          "H": 1289,
+          "classes": 2
+        },
+        {
+          "H": 1297,
+          "classes": 2
+        },
+        {
+          "H": 1417,
+          "classes": 2
+        },
+        {
+          "H": 1539,
+          "classes": 2
+        },
+        {
+          "H": 1541,
+          "classes": 2
+        },
+        {
+          "H": 2049,
+          "classes": 1
+        }
+      ],
+      "binary_interface_states": 610,
+      "Fibonacci_classes": 89,
+      "Fibonacci_H_distribution": [
+        {
+          "H": 675,
+          "classes": 1
+        },
+        {
+          "H": 729,
+          "classes": 1
+        },
+        {
+          "H": 765,
+          "classes": 6
+        },
+        {
+          "H": 775,
+          "classes": 1
+        },
+        {
+          "H": 783,
+          "classes": 2
+        },
+        {
+          "H": 795,
+          "classes": 2
+        },
+        {
+          "H": 825,
+          "classes": 2
+        },
+        {
+          "H": 837,
+          "classes": 4
+        },
+        {
+          "H": 841,
+          "classes": 1
+        },
+        {
+          "H": 855,
+          "classes": 4
+        },
+        {
+          "H": 867,
+          "classes": 3
+        },
+        {
+          "H": 873,
+          "classes": 5
+        },
+        {
+          "H": 885,
+          "classes": 4
+        },
+        {
+          "H": 895,
+          "classes": 2
+        },
+        {
+          "H": 899,
+          "classes": 2
+        },
+        {
+          "H": 901,
+          "classes": 2
+        },
+        {
+          "H": 903,
+          "classes": 2
+        },
+        {
+          "H": 909,
+          "classes": 2
+        },
+        {
+          "H": 941,
+          "classes": 4
+        },
+        {
+          "H": 945,
+          "classes": 3
+        },
+        {
+          "H": 947,
+          "classes": 1
+        },
+        {
+          "H": 961,
+          "classes": 1
+        },
+        {
+          "H": 965,
+          "classes": 2
+        },
+        {
+          "H": 969,
+          "classes": 4
+        },
+        {
+          "H": 975,
+          "classes": 4
+        },
+        {
+          "H": 987,
+          "classes": 2
+        },
+        {
+          "H": 1009,
+          "classes": 4
+        },
+        {
+          "H": 1011,
+          "classes": 1
+        },
+        {
+          "H": 1015,
+          "classes": 2
+        },
+        {
+          "H": 1019,
+          "classes": 2
+        },
+        {
+          "H": 1021,
+          "classes": 2
+        },
+        {
+          "H": 1031,
+          "classes": 1
+        },
+        {
+          "H": 1065,
+          "classes": 2
+        },
+        {
+          "H": 1089,
+          "classes": 1
+        },
+        {
+          "H": 1093,
+          "classes": 2
+        },
+        {
+          "H": 1101,
+          "classes": 2
+        },
+        {
+          "H": 1113,
+          "classes": 2
+        },
+        {
+          "H": 1201,
+          "classes": 1
+        }
+      ]
+    }
+  ]
+}

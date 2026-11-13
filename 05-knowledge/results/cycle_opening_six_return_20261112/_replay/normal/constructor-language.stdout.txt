@@ -1,0 +1,1 @@
+PASS 100 literal interfaces; 8 literal macro pairs; complete symbolic diamonds

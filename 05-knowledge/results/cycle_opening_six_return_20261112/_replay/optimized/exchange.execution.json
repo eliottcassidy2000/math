@@ -1,0 +1,9 @@
+{
+  "id": "exchange",
+  "exit_code": 0,
+  "script_lf_sha256": "78ebed9ef19ede89ecf90ddc44850c3a647ffe81b7c0cf03b6e6450fddde2dc0",
+  "receipts": {
+    "dynamics/exchange_receipts.json": "1043dbee0134c1df3d2eca5feffc129cdbc57e18a59e575209207f9a9b1f8f1a"
+  },
+  "input_capture": "_replay/optimized/exchange.inputs.json"
+}

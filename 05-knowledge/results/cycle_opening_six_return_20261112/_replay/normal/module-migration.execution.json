@@ -1,0 +1,9 @@
+{
+  "id": "module-migration",
+  "exit_code": 0,
+  "script_lf_sha256": "2246f98693b4e449eb94b4dc8723ff38af9d690d773b41384802794307a7ea29",
+  "receipts": {
+    "returns/module_migration.json": "fd444d48e302ec639b222e6d2e61cf88ba85366d122c309d5b92e3266103b9f4"
+  },
+  "input_capture": "_replay/normal/module-migration.inputs.json"
+}

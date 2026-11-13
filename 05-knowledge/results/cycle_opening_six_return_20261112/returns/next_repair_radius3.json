@@ -1,0 +1,12 @@
+{
+  "status": "FINITE-EXACT bounded repair search",
+  "scope": "Q standard advance: every parent arc subset of radius <= requested bound, all latest-root sole predecessors, target881 defects1/2, every target one-vertex module except final root/predecessor",
+  "max_radius": 3,
+  "stats": {
+    "0": 1,
+    "1": 55,
+    "2": 1485,
+    "3": 26235
+  },
+  "hits": []
+}

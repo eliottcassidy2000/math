@@ -1,0 +1,9 @@
+{
+  "id": "module-return",
+  "exit_code": 0,
+  "script_lf_sha256": "b9c35004b34072569e092c5a65be98758a34eda775aa37cbe87fba00b4708110",
+  "receipts": {
+    "compiler/module_return.json": "8b029f86cc781ccc3f9ba5afe51057ed39ec2a7988bc28e47d9d8e075d9b87da"
+  },
+  "input_capture": "_replay/optimized/module-return.inputs.json"
+}

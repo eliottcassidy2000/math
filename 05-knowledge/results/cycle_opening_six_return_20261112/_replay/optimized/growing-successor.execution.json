@@ -1,0 +1,9 @@
+{
+  "id": "growing-successor",
+  "exit_code": 0,
+  "script_lf_sha256": "a52cee3815e8d896837d1c13ec75e738cbf1ad5c20d47870680fb0abcf235f4d",
+  "receipts": {
+    "returns/growing_successor_probe.json": "e444df1d0c2ecf803990624233b2fd38f0c4aebb15d5b172b458f499c5590a5e"
+  },
+  "input_capture": "_replay/optimized/growing-successor.inputs.json"
+}

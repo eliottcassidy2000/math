@@ -1,0 +1,9 @@
+{
+  "id": "count-repair-radius2",
+  "exit_code": 0,
+  "script_lf_sha256": "824ef8e3aaf87a00c09f45711437513d8a6c9c2658bc0aa00e9e5b1b11090a16",
+  "receipts": {
+    "counts/repair_search.json": "0d6179ded2aa5e8f9cb751911978e28b3b09720831fa517bbba1b0e250348650"
+  },
+  "input_capture": "_replay/normal/count-repair-radius2.inputs.json"
+}

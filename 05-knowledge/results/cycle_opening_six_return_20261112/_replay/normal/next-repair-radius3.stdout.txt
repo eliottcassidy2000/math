@@ -1,0 +1,4 @@
+radius 0 parents 1 small-defect hits 0 uniform 0 seconds 0.01
+radius 1 parents 55 small-defect hits 0 uniform 0 seconds 0.38
+radius 2 parents 1485 small-defect hits 0 uniform 0 seconds 10.82
+radius 3 parents 26235 small-defect hits 0 uniform 0 seconds 220.55

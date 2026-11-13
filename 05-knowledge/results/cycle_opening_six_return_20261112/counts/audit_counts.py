@@ -109,7 +109,7 @@ def main():
  record['fixed_port_differences_runs']={str(a):d for a,d in fixed_differences.items()}
  record['internal_port_difference_runs']={str(q):v for q,v in sorted(delta.items())}
  record['internal_port_literal_grid']=grid
- record['source_sha256']={str(p.relative_to(HERE.parent)):sha256(p.read_bytes()).hexdigest()for p in [HERE/'inflation_probe.py',HERE/'inflation_probe.json',HERE/'two_block.py',HERE/'audit_counts.py',HERE.parent/'returns/port_collisions.json']}
+ record['source_sha256']={p.relative_to(HERE.parent).as_posix():sha256(p.read_bytes().replace(b"\r\n",b"\n")).hexdigest()for p in [HERE/'inflation_probe.py',HERE/'inflation_probe.json',HERE/'two_block.py',HERE/'audit_counts.py',HERE.parent/'returns/port_collisions.json']}
  (HERE/'audit_counts.json').write_text(json.dumps(record,indent=2)+'\n')
  print('PASS: 225 exact neutral charts at k2; growing-defect-to-1 family k1..8; independent permutation parents k1,k2; complete all-k no-retarget coefficient certificate plus 16 literal split-block controls.')
 if __name__=='__main__':main()

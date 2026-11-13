@@ -1,0 +1,5 @@
+radius 0 parents 1 strong target hits 1 seconds 0.01
+radius 1 parents 55 strong target hits 4 seconds 0.37
+radius 2 parents 1485 strong target hits 11 seconds 10.72
+minimum positive defect 213 selected hits 7 spectrum {213: 7, 0: 4}
+PASS module checks 70 uniform lifts 7 seconds 11.94

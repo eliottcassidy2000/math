@@ -1,0 +1,10 @@
+{
+  "id": "inflation-charts",
+  "exit_code": 0,
+  "script_lf_sha256": "e589e70381fee7a271d3b0f56a0524906c95e90dc027953f4f64ab775299cbd2",
+  "receipts": {
+    "counts/inflation_probe.json": "33e76def5a8084fa677557e2203865aa1f3d69476c99904cd25de512f4d5f99b",
+    "counts/ready_families.json": "de4b4cb85ced2154b946e9e3f9baf8bc9b4d1ced3e81d6a7e61eff16fa933b96"
+  },
+  "input_capture": "_replay/normal/inflation-charts.inputs.json"
+}

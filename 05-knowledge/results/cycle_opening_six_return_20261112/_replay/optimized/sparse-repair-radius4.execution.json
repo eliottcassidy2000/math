@@ -1,0 +1,9 @@
+{
+  "id": "sparse-repair-radius4",
+  "exit_code": 0,
+  "script_lf_sha256": "9c507bac708d4c210263c43d226d97f41fcf0b7d376cf91e19bfb9e7f6823ee5",
+  "receipts": {
+    "returns/sparse_repair_radius4.json": "c7148282dc3a7be58c728e965befb1e33703b11a96814091fc71de704b816339"
+  },
+  "input_capture": "_replay/optimized/sparse-repair-radius4.inputs.json"
+}

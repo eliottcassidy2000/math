@@ -1,6 +1,6 @@
 # Cycle opening, growing defect, and six-state returns
 
-Status: LIVE RESEARCH BOARD. Chan-Pak remains OPEN. Started 2026-11-12 (local).
+Status: RESEARCH BOARD WITH VERIFIED OUTCOMES. Chan-Pak remains OPEN. Started 2026-11-12 (local).
 
 ## Inheritance
 
@@ -24,3 +24,14 @@ Live concepts:
 6. Rational dynamics, central lifts, and multiplicative six-state carriers.
 
 Each proposed bridge must give its objects, map, preserved predicate, loss, needed sidecar, and a hostile test. Finite surveys are not universal theorems; graph count identities are not graph-return identities; a finite-order lift is not an exact scalar orbit of that order.
+
+## Revisited board after computation, proof audit, and incoming integration
+
+1. Full-count sectors: the exact birth score Q=E(2)−start classifies every fixed-parent indegree-one fibre. This replaces sector-only reasoning with an exhaustive bijection.
+2. Root/port resources: the five-core two-arc switch returns growing defect to1; the successor replacement can retain both physical root and port. Moving only the latest port is proved insufficient at every size, so parent change is load-bearing.
+3. Growing defect: the arbitrary-module identity retains H(M),P_M(2), not just module order. One exact3H+2 successor is closed; the next405·2^k+71 remains unclosed. The independent L/T macro family repeats indefinitely with a factor51 restriction.
+4. Six-state observation: affine as well as linear dimension6 is minimal. The3-adic lower-block obstruction defeats every periodic E/B program; growing parent count is not enough.
+5. Boundary equivalence: contextual neutrality can strongify a six-return but freezes the external defect. Incoming Session293's full context ideal supplies a further divisibility screen; neither it nor scalar gcd1 supplies positive coverage.
+6. Dynamics and counting: valuation hexagons classify actual six-period arithmetic; a complementary resource reservoir lifts them into strong tournaments. Canonical peeling upgrades the macro address census to ordinary nonisomorphic classes. The first25-prime and older aliquot/near-square work remains a correctly typed arithmetic sidecar, not a substitute for target-return closure.
+
+The most productive change of representation was moving the repeated module while retaining an exact run profile. The saturated route was fixed-parent retargeting; its all-size obstruction is now explicit. The next research move should change the parent template or multiple interfaces, rather than repeat a frozen-module fit. The broadest new completed family is the macro Johnson-product fibre with canonical ordinary enumeration; the anchor remains unlimited affine source-return closure.

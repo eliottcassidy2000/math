@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "engines": 22,
+  "normal_optimized_receipts_match": true,
+  "hash_basis": "LF-normalized text bytes; binary bytes unchanged"
+}

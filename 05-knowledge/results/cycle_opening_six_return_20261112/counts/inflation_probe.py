@@ -83,7 +83,7 @@ def main():
    D=[x-y-z+w for x,y,z,w in zip(Fa,Sa,Fb,Sb)]
    if not any(D):
     hits.append(dict(parent=rows,parent_H=row['parent_H'],ports=[a,b],inflate=e,strong_parent=row['strong_parent'],H_runs=H,Sa=Sa,Sb=Sb,Fa=Fa,Fb=Fb,samples=[dict(k=k,H=evalrun(H,k)+evalrun(Fa,k)-evalrun(Sa,k),defects=[evalrun(Sa,k),evalrun(Sb,k)])for k in(1,2,3,4,8)]))
- report=dict(status='FINITE-EXACT finite catalogue; all-module identities follow from the run-cover bijection',source_bank_sha256=sha256(src.read_bytes()).hexdigest(),universe='Every unequal-start equal-entry-score pair in the complete ordinary parent bank through order 8; each non-port vertex chosen as the one substituted nonempty module',tested_charts=tested,literal_controls=controls,neutral_infinite_charts=len(hits),strong_neutral_charts=sum(x['strong_parent'] for x in hits),hits=hits)
+ report=dict(status='FINITE-EXACT finite catalogue; all-module identities follow from the run-cover bijection',source_bank_sha256=sha256(src.read_bytes().replace(b"\r\n",b"\n")).hexdigest(),universe='Every unequal-start equal-entry-score pair in the complete ordinary parent bank through order 8; each non-port vertex chosen as the one substituted nonempty module',tested_charts=tested,literal_controls=controls,neutral_infinite_charts=len(hits),strong_neutral_charts=sum(x['strong_parent'] for x in hits),hits=hits)
  (HERE/'inflation_probe.json').write_text(json.dumps(report,indent=2)+'\n')
  def modes(c):
   d={}

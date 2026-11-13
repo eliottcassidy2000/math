@@ -1,0 +1,328 @@
+{
+  "status": "VERIFIED exact structural controls; universal statements proved in ANCESTRY_BOUNDARY.md",
+  "controls": [
+    {
+      "module": "TT1",
+      "size": 1,
+      "source_indegrees": [
+        3,
+        5,
+        5,
+        6,
+        3,
+        2,
+        3,
+        1
+      ],
+      "raw_indegrees": [
+        5,
+        7,
+        7,
+        8,
+        5,
+        4,
+        5,
+        2,
+        1,
+        1
+      ],
+      "returned_indegrees": [
+        3,
+        2,
+        2,
+        4,
+        6,
+        7,
+        8,
+        8,
+        4,
+        1
+      ],
+      "source_root": 7,
+      "source_port": 4,
+      "returned_root": 9,
+      "returned_port": 8
+    },
+    {
+      "module": "TT2",
+      "size": 2,
+      "source_indegrees": [
+        3,
+        5,
+        6,
+        6,
+        7,
+        3,
+        2,
+        3,
+        1
+      ],
+      "raw_indegrees": [
+        5,
+        7,
+        8,
+        8,
+        9,
+        5,
+        4,
+        5,
+        2,
+        1,
+        1
+      ],
+      "returned_indegrees": [
+        3,
+        2,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        9,
+        5,
+        1
+      ],
+      "source_root": 8,
+      "source_port": 5,
+      "returned_root": 10,
+      "returned_port": 9
+    },
+    {
+      "module": "C3",
+      "size": 3,
+      "source_indegrees": [
+        3,
+        6,
+        6,
+        6,
+        7,
+        8,
+        3,
+        2,
+        3,
+        1
+      ],
+      "raw_indegrees": [
+        5,
+        8,
+        8,
+        8,
+        9,
+        10,
+        5,
+        4,
+        5,
+        2,
+        1,
+        1
+      ],
+      "returned_indegrees": [
+        3,
+        2,
+        2,
+        5,
+        5,
+        5,
+        8,
+        9,
+        10,
+        10,
+        6,
+        1
+      ],
+      "source_root": 9,
+      "source_port": 6,
+      "returned_root": 11,
+      "returned_port": 10
+    },
+    {
+      "module": "C4",
+      "size": 4,
+      "source_indegrees": [
+        3,
+        7,
+        7,
+        6,
+        6,
+        8,
+        9,
+        3,
+        2,
+        3,
+        1
+      ],
+      "raw_indegrees": [
+        5,
+        9,
+        9,
+        8,
+        8,
+        10,
+        11,
+        5,
+        4,
+        5,
+        2,
+        1,
+        1
+      ],
+      "returned_indegrees": [
+        3,
+        2,
+        2,
+        6,
+        6,
+        5,
+        5,
+        9,
+        10,
+        11,
+        11,
+        7,
+        1
+      ],
+      "source_root": 10,
+      "source_port": 7,
+      "returned_root": 12,
+      "returned_port": 11
+    },
+    {
+      "module": "H9_five_core",
+      "size": 5,
+      "source_indegrees": [
+        3,
+        6,
+        8,
+        8,
+        7,
+        6,
+        9,
+        10,
+        3,
+        2,
+        3,
+        1
+      ],
+      "raw_indegrees": [
+        5,
+        8,
+        10,
+        10,
+        9,
+        8,
+        11,
+        12,
+        5,
+        4,
+        5,
+        2,
+        1,
+        1
+      ],
+      "returned_indegrees": [
+        3,
+        2,
+        2,
+        5,
+        7,
+        7,
+        6,
+        5,
+        10,
+        11,
+        12,
+        12,
+        8,
+        1
+      ],
+      "source_root": 11,
+      "source_port": 8,
+      "returned_root": 13,
+      "returned_port": 12
+    },
+    {
+      "module": "weak_C3_then_singleton",
+      "size": 4,
+      "source_indegrees": [
+        3,
+        6,
+        6,
+        6,
+        8,
+        8,
+        9,
+        3,
+        2,
+        3,
+        1
+      ],
+      "raw_indegrees": [
+        5,
+        8,
+        8,
+        8,
+        10,
+        10,
+        11,
+        5,
+        4,
+        5,
+        2,
+        1,
+        1
+      ],
+      "returned_indegrees": [
+        3,
+        2,
+        2,
+        5,
+        5,
+        5,
+        7,
+        9,
+        10,
+        11,
+        11,
+        7,
+        1
+      ],
+      "source_root": 10,
+      "source_port": 7,
+      "returned_root": 12,
+      "returned_port": 11
+    }
+  ],
+  "bank_sha256": "93b37da5eb037ec5eddc3d9e9156404480e9a9d81badf6359f91646cd8ed41fc",
+  "ordinary_bank_rows": 7412,
+  "bank_scope": "complete ordinary tournament bank through order8, strong members only for recurrence",
+  "root_count_census": {
+    "3": {
+      "3": 1
+    },
+    "4": {
+      "2": 1
+    },
+    "5": {
+      "0": 1,
+      "1": 3,
+      "2": 2
+    },
+    "6": {
+      "0": 9,
+      "1": 19,
+      "2": 7
+    },
+    "7": {
+      "0": 150,
+      "1": 170,
+      "2": 33
+    },
+    "8": {
+      "0": 3563,
+      "1": 2209,
+      "2": 236
+    }
+  },
+  "strict_inverse_checks": 279
+}

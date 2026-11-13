@@ -1,0 +1,1 @@
+PASS: L/T and A/B physical states on four sources, exact four-arc same-root-star switch, two ready-target constructions on five modules including nontransitive controls.

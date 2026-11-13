@@ -1,0 +1,9 @@
+{
+  "id": "binary-language",
+  "exit_code": 0,
+  "script_lf_sha256": "3f342e5361aede1f47eb46267c0762dc3852588be6d57206ff67286252d7e4b6",
+  "receipts": {
+    "returns/binary_language.json": "f006064a46665d0c682467732dd6ce67040c34bc4270bcebc2213a174b208b17"
+  },
+  "input_capture": "_replay/optimized/binary-language.inputs.json"
+}

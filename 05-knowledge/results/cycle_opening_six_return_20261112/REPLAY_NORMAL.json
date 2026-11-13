@@ -1,0 +1,565 @@
+{
+  "status": "PASS",
+  "mode": "normal",
+  "hash_basis": "SHA256; text CRLF normalized to LF, binary untouched",
+  "declared_engine_ids": [
+    "port-collisions",
+    "port-advance",
+    "constructor-language",
+    "inflation-charts",
+    "two-block",
+    "count-audit",
+    "count-repair-radius2",
+    "six-state",
+    "module-return",
+    "dynamics",
+    "strong-wrapper",
+    "exchange",
+    "compiler-independent",
+    "sparse-repair-radius4",
+    "module-relocation",
+    "module-migration",
+    "cross-audit",
+    "next-repair-radius3",
+    "fibre-graph",
+    "growing-successor",
+    "binary-language",
+    "ancestry-boundary"
+  ],
+  "complete": true,
+  "engines": [
+    {
+      "id": "port-collisions",
+      "script": "returns/probe.py",
+      "receipts": [
+        "returns/port_collisions.json"
+      ],
+      "scope": "All7412 inherited ordinary parent classes of orders1..8; every unordered pair of entry ports.",
+      "args": [],
+      "depends": [],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "returns/port_collisions.json",
+          "sha256": "ee5d4382072cc57082328493dada60ae03b0cd832c00938c912f45d62e764ab5",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/port-collisions.inputs.json",
+      "script_lf_sha256": "272856fece9ef73bcafa0a601f6bd2ca30d2b836ff4913779e5b10fc0f2ea18a"
+    },
+    {
+      "id": "port-advance",
+      "script": "returns/follow_port_switch.py",
+      "receipts": [
+        "returns/port_advance.json"
+      ],
+      "scope": "Every retained neutral collision and the explicit birth-following port comparison.",
+      "args": [],
+      "depends": [
+        "port-collisions"
+      ],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "returns/port_advance.json",
+          "sha256": "8fd49b8fd79229b7080543ddc2ab83b4ae2bfb1bbc3dc9f55380308be1813417",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/port-advance.inputs.json",
+      "script_lf_sha256": "15e262d87169f53f77a2e16a2a25194e9b2c3dce0e3757f0b7ba6130e300bb7a"
+    },
+    {
+      "id": "constructor-language",
+      "script": "returns/constructor_language.py",
+      "receipts": [
+        "returns/constructor_language.json"
+      ],
+      "scope": "All inherited parent classes through order5 and indegree-one roots; legal L/T words of cost1..8; physical macro controls.",
+      "args": [],
+      "depends": [
+        "port-collisions"
+      ],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "returns/constructor_language.json",
+          "sha256": "a4f9ff891f5bda9280e88d0a230a9aaf5fd095e1de12eb6285127e99dbf13d83",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/constructor-language.inputs.json",
+      "script_lf_sha256": "c82e9cc39bf29c61868e667332f11f0f830262e1f10f284503b1e99b2f47ca7a"
+    },
+    {
+      "id": "inflation-charts",
+      "script": "counts/inflation_probe.py",
+      "receipts": [
+        "counts/inflation_probe.json",
+        "counts/ready_families.json"
+      ],
+      "scope": "All3615 non-port module charts over the complete collision bank; exact run polynomials and60 literal controls.",
+      "args": [],
+      "depends": [
+        "port-collisions"
+      ],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "counts/inflation_probe.json",
+          "sha256": "33e76def5a8084fa677557e2203865aa1f3d69476c99904cd25de512f4d5f99b",
+          "status": "RECOMPUTED"
+        },
+        {
+          "receipt": "counts/ready_families.json",
+          "sha256": "de4b4cb85ced2154b946e9e3f9baf8bc9b4d1ced3e81d6a7e61eff16fa933b96",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/inflation-charts.inputs.json",
+      "script_lf_sha256": "e589e70381fee7a271d3b0f56a0524906c95e90dc027953f4f64ab775299cbd2"
+    },
+    {
+      "id": "two-block",
+      "script": "counts/two_block.py",
+      "receipts": [
+        "counts/two_block.json"
+      ],
+      "scope": "Exact two-block run polynomial for the specified internal-port versus latest-port difference; empty blocks allowed.",
+      "args": [],
+      "depends": [],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "counts/two_block.json",
+          "sha256": "bcea9054436b46d49d46df384e89836cb6a2237e0514178d7511a33006f02f6d",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/two-block.inputs.json",
+      "script_lf_sha256": "c89345567e62c07357b9edb0091e220151d6c37cf200fc93e4561c915a58143f"
+    },
+    {
+      "id": "count-audit",
+      "script": "counts/audit_counts.py",
+      "receipts": [
+        "counts/audit_counts.json"
+      ],
+      "scope": "Selected k1..8, independent parent permutations k1/2, all225 neutral charts at k2, and two-block grid0..3.",
+      "args": [],
+      "depends": [
+        "inflation-charts",
+        "two-block"
+      ],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "counts/audit_counts.json",
+          "sha256": "556d86e956ae1d1aef59732797070120b06f1fc8153b97c775223df0e04c0c64",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/count-audit.inputs.json",
+      "script_lf_sha256": "eaabbab87154a62da4620f0ed2e5ecc2132b67d820d8bd9c0bd2c21f6085c924"
+    },
+    {
+      "id": "count-repair-radius2",
+      "script": "counts/repair_search.py",
+      "receipts": [
+        "counts/repair_search.json"
+      ],
+      "scope": "Every arc subset of sizes0..2 of the specified9-vertex parent; all nonmodule ports, target293 and defect1.",
+      "args": [],
+      "depends": [],
+      "bounded_search": true,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "counts/repair_search.json",
+          "sha256": "0d6179ded2aa5e8f9cb751911978e28b3b09720831fa517bbba1b0e250348650",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/count-repair-radius2.inputs.json",
+      "script_lf_sha256": "824ef8e3aaf87a00c09f45711437513d8a6c9c2658bc0aa00e9e5b1b11090a16"
+    },
+    {
+      "id": "six-state",
+      "script": "compiler/six_state_audit.py",
+      "receipts": [
+        "compiler/six_state_audit.json"
+      ],
+      "scope": "Exact six-dimensional rank and affine-rank certificates; seven literal controls; all510 E/B programs length1..8;64 fixed tails length0..6.",
+      "args": [],
+      "depends": [],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "compiler/six_state_audit.json",
+          "sha256": "cf3008308cf4bccd7b094fcaa75becc18329f6a1fa5c302fe60a15be113f4f5e",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/six-state.inputs.json",
+      "script_lf_sha256": "12284fc1392bb7990c6201c9855a02960c17f2669029d90ae10c9e3df7f60cdd"
+    },
+    {
+      "id": "module-return",
+      "script": "compiler/module_return.py",
+      "receipts": [
+        "compiler/module_return.json"
+      ],
+      "scope": "Literal TT1..7 and three nontransitive module controls for the proved universal return.",
+      "args": [],
+      "depends": [],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "compiler/module_return.json",
+          "sha256": "8b029f86cc781ccc3f9ba5afe51057ed39ec2a7988bc28e47d9d8e075d9b87da",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/module-return.inputs.json",
+      "script_lf_sha256": "b9c35004b34072569e092c5a65be98758a34eda775aa37cbe87fba00b4708110"
+    },
+    {
+      "id": "dynamics",
+      "script": "dynamics/verify.py",
+      "receipts": [
+        "dynamics/receipts.json"
+      ],
+      "scope": "7396 rational pairs; integral reservoirs1..200; hexagon radii1..12; all circulants q3/5/7; three Collatz clocks; six20-vertex full subset counts.",
+      "args": [],
+      "depends": [],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "dynamics/receipts.json",
+          "sha256": "8aa968133160fa677cac775706744a2f11e96aaf5a35c1b49e8608f4f16e9988",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/dynamics.inputs.json",
+      "script_lf_sha256": "8ac3cc8b9981b4970d4e25e7a7f3fddb8614f657baf82b1a440ae866b48f2504"
+    },
+    {
+      "id": "strong-wrapper",
+      "script": "dynamics/strong_wrapper_control.py",
+      "receipts": [
+        "dynamics/strong_wrapper_receipts.json"
+      ],
+      "scope": "Six16-vertex strong carriers counted in full and from the root; independent local P2 for22-vertex5/17 formula; equal-order H9 hostile.",
+      "args": [],
+      "depends": [],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "dynamics/strong_wrapper_receipts.json",
+          "sha256": "da6469f9e1d6ca75676884a1d75e167af781433c08da7d505c6630a42403d026",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/strong-wrapper.inputs.json",
+      "script_lf_sha256": "e0e3f2b68c315453ec9fbf757752fbd74ed2be8cadac3b3e5fb139e1f4f9e427"
+    },
+    {
+      "id": "exchange",
+      "script": "dynamics/exchange_control.py",
+      "receipts": [
+        "dynamics/exchange_receipts.json"
+      ],
+      "scope": "1849 positive rational pairs of numerator/denominator1..8;256 odd-input pairs1..31.",
+      "args": [],
+      "depends": [],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "dynamics/exchange_receipts.json",
+          "sha256": "1043dbee0134c1df3d2eca5feffc129cdbc57e18a59e575209207f9a9b1f8f1a",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/exchange.inputs.json",
+      "script_lf_sha256": "78ebed9ef19ede89ecf90ddc44850c3a647ffe81b7c0cf03b6e6450fddde2dc0"
+    },
+    {
+      "id": "compiler-independent",
+      "script": "dynamics/audit_compiler.py",
+      "receipts": [
+        "dynamics/compiler_independent_receipts.json"
+      ],
+      "scope": "Independent Fraction determinant computation and direct permutation/weak-cut enumeration on all seven compiler controls.",
+      "args": [],
+      "depends": [
+        "six-state"
+      ],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "dynamics/compiler_independent_receipts.json",
+          "sha256": "0570ceb58f6fb8a06e3eb6ac70fdf46c6fc097d2c33284fc11c7ae0098398d4d",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/compiler-independent.inputs.json",
+      "script_lf_sha256": "b29eea12fd2f74afb901a806a65e791e5b25022ff2b900ce617895d7b278e93f"
+    },
+    {
+      "id": "sparse-repair-radius4",
+      "script": "returns/sparse_repair.py",
+      "receipts": [
+        "returns/sparse_repair_radius4.json"
+      ],
+      "scope": "Every parent arc subset of sizes0..4 in the specified9-vertex parent; every sole predecessor; target293 and defect<=2; exact module polynomial controls.",
+      "args": [
+        "--radius",
+        "4"
+      ],
+      "depends": [],
+      "bounded_search": true,
+      "derived": [
+        {
+          "source": "returns/sparse_repair_radius4.json",
+          "target": "returns/sparse_repair.json",
+          "radius": 3
+        }
+      ],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "returns/sparse_repair_radius4.json",
+          "sha256": "c7148282dc3a7be58c728e965befb1e33703b11a96814091fc71de704b816339",
+          "status": "RECOMPUTED"
+        },
+        {
+          "receipt": "returns/sparse_repair.json",
+          "sha256": "66f873122bedcb85bd95899034b2a9810add17f67124f5bf6dfc7b1caccd4552",
+          "status": "DERIVED, exact radius projection",
+          "source": "returns/sparse_repair_radius4.json"
+        }
+      ],
+      "input_capture": "_replay/normal/sparse-repair-radius4.inputs.json",
+      "script_lf_sha256": "9c507bac708d4c210263c43d226d97f41fcf0b7d376cf91e19bfb9e7f6823ee5"
+    },
+    {
+      "id": "module-relocation",
+      "script": "returns/relocate_modules.py",
+      "receipts": [
+        "returns/repair_module_relocation.json"
+      ],
+      "scope": "Every retained positive-defect<=2 radius<=4 target and every one-vertex module except final root and predecessor.",
+      "args": [],
+      "depends": [
+        "sparse-repair-radius4"
+      ],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "returns/repair_module_relocation.json",
+          "sha256": "50b2a05f2b7b5399c7a14072e5b6f59a2f4caf5a64966fdce26ec4ee2ecfbd30",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/module-relocation.inputs.json",
+      "script_lf_sha256": "df7111bf738e09b77d1d92d462de2cbeaa660344f53e8f47359f84aef91c3b16"
+    },
+    {
+      "id": "module-migration",
+      "script": "returns/module_migration.py",
+      "receipts": [
+        "returns/module_migration.json"
+      ],
+      "scope": "Exact all-module polynomial certificate and independent literal transitive k1..5.",
+      "args": [],
+      "depends": [],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "returns/module_migration.json",
+          "sha256": "fd444d48e302ec639b222e6d2e61cf88ba85366d122c309d5b92e3266103b9f4",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/module-migration.inputs.json",
+      "script_lf_sha256": "2246f98693b4e449eb94b4dc8723ff38af9d690d773b41384802794307a7ea29"
+    },
+    {
+      "id": "cross-audit",
+      "script": "counts/cross_audit.py",
+      "receipts": [
+        "counts/cross_audit.json"
+      ],
+      "scope": "Physical L/T macro states on four seeds; exact four-arc root-star switch; two universal ready targets on five modules.",
+      "args": [],
+      "depends": [],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "counts/cross_audit.json",
+          "sha256": "3ed8bb82ebce743e9911063adf0017e43d1630f775f8fd825721ddb7be4d2dc9",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/cross-audit.inputs.json",
+      "script_lf_sha256": "c9d259ade6d43f761755068ac3ce1fab92a08f908c5ccab88db64e2f9279ef0f"
+    },
+    {
+      "id": "next-repair-radius3",
+      "script": "returns/next_repair.py",
+      "receipts": [
+        "returns/next_repair_radius3.json"
+      ],
+      "scope": "All27776 arc subsets of sizes0..3 of the next11-vertex parent; every sole predecessor; target881, defects1/2; all eligible single modules.",
+      "args": [
+        "--radius",
+        "3"
+      ],
+      "depends": [],
+      "bounded_search": true,
+      "derived": [
+        {
+          "source": "returns/next_repair_radius3.json",
+          "target": "returns/next_repair_radius2.json",
+          "radius": 2
+        }
+      ],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "returns/next_repair_radius3.json",
+          "sha256": "b821e2e1ac4c8423f1d226b652ed57f77d5832e006dc88e3f9286ced3d586143",
+          "status": "RECOMPUTED"
+        },
+        {
+          "receipt": "returns/next_repair_radius2.json",
+          "sha256": "38de55afcb149f890972685eda06f8925899aa0d7f636f0822645721f78d1286",
+          "status": "DERIVED, exact radius projection",
+          "source": "returns/next_repair_radius3.json"
+        }
+      ],
+      "input_capture": "_replay/normal/next-repair-radius3.inputs.json",
+      "script_lf_sha256": "e207c2bb817f4b12167f6b4aa8ec8a13ff642f8d2d632865ad822ca766765bc5"
+    },
+    {
+      "id": "fibre-graph",
+      "script": "returns/fibre_graph.py",
+      "receipts": [
+        "returns/fibre_graph.json"
+      ],
+      "scope": "Every macro word through depth7; private-bit recovery; intrinsic peeling under original/reversed labels; Johnson x K2 degrees/diameters, every pairwise BFS distance, both distance-generating profiles, adjacent refinement, and weak-source hostile.",
+      "args": [],
+      "depends": [],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "returns/fibre_graph.json",
+          "sha256": "08cac2e99b1fbe4eb7fa9f6731960e09ce9ca36e9f80559ad7b0ef46472906dc",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/fibre-graph.inputs.json",
+      "script_lf_sha256": "371229ee10a3404bc271128da8c6e806bab8106ce72d118bc885ccc11eb837f7"
+    },
+    {
+      "id": "growing-successor",
+      "script": "returns/growing_successor_probe.py",
+      "receipts": [
+        "returns/growing_successor_probe.json"
+      ],
+      "scope": "All1541 radius0..2 parents of the next source; all strong target881 ports and all defects; all70 eligible one-module lifts on positive hits.",
+      "args": [],
+      "depends": [],
+      "bounded_search": true,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "returns/growing_successor_probe.json",
+          "sha256": "e444df1d0c2ecf803990624233b2fd38f0c4aebb15d5b172b458f499c5590a5e",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/growing-successor.inputs.json",
+      "script_lf_sha256": "a52cee3815e8d896837d1c13ec75e738cbf1ad5c20d47870680fb0abcf235f4d"
+    },
+    {
+      "id": "binary-language",
+      "script": "returns/binary_language.py",
+      "receipts": [
+        "returns/binary_language.json"
+      ],
+      "scope": "All2046 L/K words through10 births with canonical decoding/relabeling;62 literal state controls; binary/Fibonacci class counts and H histograms;17 all-K closed-form/book-isomorphism controls c0..16.",
+      "args": [],
+      "depends": [],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "returns/binary_language.json",
+          "sha256": "f006064a46665d0c682467732dd6ce67040c34bc4270bcebc2213a174b208b17",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/binary-language.inputs.json",
+      "script_lf_sha256": "3f342e5361aede1f47eb46267c0762dc3852588be6d57206ff67286252d7e4b6"
+    },
+    {
+      "id": "ancestry-boundary",
+      "script": "compiler/ancestry_boundary.py",
+      "receipts": [
+        "compiler/ancestry_boundary.json"
+      ],
+      "scope": "Six module degree/strongness profiles; all7412 ordinary bank classes through order8;279 strong two-root inverse controls and the exact restricted-birth recurrence.",
+      "args": [],
+      "depends": [],
+      "bounded_search": false,
+      "derived": [],
+      "exit_code": 0,
+      "outputs": [
+        {
+          "receipt": "compiler/ancestry_boundary.json",
+          "sha256": "7126b6eb5a88b3f4cc5b90bade28fb40d6dc381b6cda9977d4dfb612e28ad9d9",
+          "status": "RECOMPUTED"
+        }
+      ],
+      "input_capture": "_replay/normal/ancestry-boundary.inputs.json",
+      "script_lf_sha256": "77bac5caadd66eac7eda2b2a66695f5cd1d0f00ade05c3e6f3240cc0bff484f9"
+    }
+  ]
+}

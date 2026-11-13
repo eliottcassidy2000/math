@@ -1,0 +1,9 @@
+{
+  "id": "fibre-graph",
+  "exit_code": 0,
+  "script_lf_sha256": "371229ee10a3404bc271128da8c6e806bab8106ce72d118bc885ccc11eb837f7",
+  "receipts": {
+    "returns/fibre_graph.json": "08cac2e99b1fbe4eb7fa9f6731960e09ce9ca36e9f80559ad7b0ef46472906dc"
+  },
+  "input_capture": "_replay/optimized/fibre-graph.inputs.json"
+}

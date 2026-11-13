@@ -1,5 +1,6 @@
 {
-  "status": "FINITE-EXACT radius-three repair scope plus exact module-polynomial audit",
+  "status": "FINITE-EXACT bounded sparse repair scope plus exact module-polynomial audit",
+  "max_radius": 3,
   "audit": [
     {
       "port": 0,
@@ -130,7 +131,7 @@
       ]
     }
   ],
-  "scope": "all parent arc subsets of radius <=3 in X=P+z+x (9 vertices), every new sole predecessor, child total H=293, defect<=2; base module vertex1",
+  "scope": "all parent arc subsets of radius <=requested maximum in X=P+z+x (9 vertices), every new sole predecessor, child total H=293, defect<=2; base module vertex1",
   "stats": {
     "0": 1,
     "1": 36,
@@ -979,5 +980,15 @@
       "strong": true,
       "module_port_compatible": true
     }
-  ]
+  ],
+  "derived_receipt": {
+    "source": "returns/sparse_repair_radius4.json",
+    "source_lf_sha256": "c7148282dc3a7be58c728e965befb1e33703b11a96814091fc71de704b816339",
+    "rule": "Keep identical audit/literal/filter metadata, set max_radius, retain stats and hits with radius<=bound. No independent search rerun is claimed.",
+    "bound": 3,
+    "legacy_metadata": {
+      "status": "FINITE-EXACT radius-three repair scope plus exact module-polynomial audit",
+      "scope": "all parent arc subsets of radius <=3 in X=P+z+x (9 vertices), every new sole predecessor, child total H=293, defect<=2; base module vertex1"
+    }
+  }
 }

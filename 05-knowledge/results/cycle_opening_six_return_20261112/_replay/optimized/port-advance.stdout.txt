@@ -1,0 +1,18 @@
+SUMMARY {"(4, 'seeds')": 2, "(4, 'neutral')": 0, "(4, 'improved')": 0, "(4, 'ready')": 0, "(5, 'seeds')": 4, "(5, 'neutral')": 1, "(5, 'improved')": 1, "(5, 'ready')": 0, "(6, 'seeds')": 26, "(6, 'neutral')": 2, "(6, 'improved')": 2, "(6, 'ready')": 0, "(7, 'seeds')": 147, "(7, 'neutral')": 5, "(7, 'improved')": 5, "(7, 'ready')": 0, "(8, 'seeds')": 1046, "(8, 'neutral')": 8, "(8, 'improved')": 8, "(8, 'ready')": 0}
+IMPROVEMENTS 16
+{'parent': (6, 4, 8, 19, 7), 'port': 0, 'H': 23, 'defect': 2, 'target': 73, 'raw_defect': 16, 'neutral_ports': [{'port': 5, 'defect': 9}], 'ready': [], 'improved': [5]}
+{'parent': (34, 12, 9, 17, 39, 14), 'port': 2, 'H': 103, 'defect': 4, 'target': 317, 'raw_defect': 70, 'neutral_ports': [{'port': 6, 'defect': 37}], 'ready': [], 'improved': [6]}
+{'parent': (38, 36, 40, 51, 39, 0), 'port': 0, 'H': 23, 'defect': 2, 'target': 73, 'raw_defect': 16, 'neutral_ports': [{'port': 6, 'defect': 9}], 'ready': [], 'improved': [6]}
+{'parent': (26, 28, 25, 16, 32, 79, 31), 'port': 0, 'H': 141, 'defect': 6, 'target': 435, 'raw_defect': 96, 'neutral_ports': [{'port': 7, 'defect': 51}], 'ready': [], 'improved': [7]}
+{'parent': (26, 28, 25, 16, 32, 79, 31), 'port': 1, 'H': 141, 'defect': 6, 'target': 435, 'raw_defect': 96, 'neutral_ports': [{'port': 7, 'defect': 51}], 'ready': [], 'improved': [7]}
+{'parent': (26, 28, 25, 16, 32, 79, 31), 'port': 2, 'H': 141, 'defect': 6, 'target': 435, 'raw_defect': 96, 'neutral_ports': [{'port': 7, 'defect': 51}], 'ready': [], 'improved': [7]}
+{'parent': (98, 76, 73, 81, 103, 78, 0), 'port': 2, 'H': 103, 'defect': 4, 'target': 317, 'raw_defect': 70, 'neutral_ports': [{'port': 7, 'defect': 37}], 'ready': [], 'improved': [7]}
+{'parent': (102, 100, 104, 115, 103, 64, 0), 'port': 0, 'H': 23, 'defect': 2, 'target': 73, 'raw_defect': 16, 'neutral_ports': [{'port': 7, 'defect': 9}], 'ready': [], 'improved': [7]}
+{'parent': (130, 244, 9, 19, 37, 77, 157, 60), 'port': 4, 'H': 1161, 'defect': 45, 'target': 3573, 'raw_defect': 789, 'neutral_ports': [{'port': 8, 'defect': 417}], 'ready': [], 'improved': [8]}
+{'parent': (114, 196, 57, 19, 34, 74, 156, 61), 'port': 3, 'H': 1393, 'defect': 55, 'target': 4289, 'raw_defect': 947, 'neutral_ports': [{'port': 8, 'defect': 501}], 'ready': [], 'improved': [8]}
+{'parent': (230, 228, 232, 243, 231, 64, 128, 32), 'port': 0, 'H': 69, 'defect': 6, 'target': 219, 'raw_defect': 48, 'neutral_ports': [{'port': 8, 'defect': 27}], 'ready': [], 'improved': [8]}
+{'parent': (154, 156, 153, 144, 160, 207, 159, 0), 'port': 0, 'H': 141, 'defect': 6, 'target': 435, 'raw_defect': 96, 'neutral_ports': [{'port': 8, 'defect': 51}], 'ready': [], 'improved': [8]}
+{'parent': (154, 156, 153, 144, 160, 207, 159, 0), 'port': 1, 'H': 141, 'defect': 6, 'target': 435, 'raw_defect': 96, 'neutral_ports': [{'port': 8, 'defect': 51}], 'ready': [], 'improved': [8]}
+{'parent': (154, 156, 153, 144, 160, 207, 159, 0), 'port': 2, 'H': 141, 'defect': 6, 'target': 435, 'raw_defect': 96, 'neutral_ports': [{'port': 8, 'defect': 51}], 'ready': [], 'improved': [8]}
+{'parent': (226, 204, 201, 209, 231, 206, 128, 0), 'port': 2, 'H': 103, 'defect': 4, 'target': 317, 'raw_defect': 70, 'neutral_ports': [{'port': 8, 'defect': 37}], 'ready': [], 'improved': [8]}
+{'parent': (230, 228, 232, 243, 231, 192, 128, 0), 'port': 0, 'H': 23, 'defect': 2, 'target': 73, 'raw_defect': 16, 'neutral_ports': [{'port': 8, 'defect': 9}], 'ready': [], 'improved': [8]}

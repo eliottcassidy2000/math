@@ -1,0 +1,8 @@
+{
+  "script": "dynamics/audit_compiler.py",
+  "arguments": [],
+  "external_repository_inputs": {},
+  "runtime_versions": {
+    "python": "3.13.14"
+  }
+}

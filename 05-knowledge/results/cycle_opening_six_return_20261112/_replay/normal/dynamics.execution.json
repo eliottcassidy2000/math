@@ -1,0 +1,9 @@
+{
+  "id": "dynamics",
+  "exit_code": 0,
+  "script_lf_sha256": "8ac3cc8b9981b4970d4e25e7a7f3fddb8614f657baf82b1a440ae866b48f2504",
+  "receipts": {
+    "dynamics/receipts.json": "8aa968133160fa677cac775706744a2f11e96aaf5a35c1b49e8608f4f16e9988"
+  },
+  "input_capture": "_replay/normal/dynamics.inputs.json"
+}

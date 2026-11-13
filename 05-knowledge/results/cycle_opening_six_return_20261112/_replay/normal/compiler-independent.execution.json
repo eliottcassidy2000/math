@@ -1,0 +1,9 @@
+{
+  "id": "compiler-independent",
+  "exit_code": 0,
+  "script_lf_sha256": "b29eea12fd2f74afb901a806a65e791e5b25022ff2b900ce617895d7b278e93f",
+  "receipts": {
+    "dynamics/compiler_independent_receipts.json": "0570ceb58f6fb8a06e3eb6ac70fdf46c6fc097d2c33284fc11c7ae0098398d4d"
+  },
+  "input_capture": "_replay/normal/compiler-independent.inputs.json"
+}

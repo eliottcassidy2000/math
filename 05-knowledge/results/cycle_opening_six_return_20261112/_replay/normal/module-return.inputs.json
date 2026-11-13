@@ -1,0 +1,14 @@
+{
+  "script": "compiler/module_return.py",
+  "arguments": [],
+  "external_repository_inputs": {
+    "05-knowledge/results/berggren_target_return_20261111/reset/funnel_six_state.py": "662c41a3f9dc6fbd1fe6c5d34ee30ac4e737d5371390dbf7dfacf342368a87f6",
+    "05-knowledge/results/polarized_path_calculus_20261103/explore.py": "343b6168f5116275538a87959e6a0949ad8518aaede6d5a5952479069255bbb4",
+    "05-knowledge/results/polarized_path_calculus_20261103/recognize.py": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85",
+    "05-knowledge/results/two_entry_funnels_20261103/research.py": "75e0188ab2763faa84637c8ed07a05a0978e9034b3fc3a91de1661162cb6a387",
+    "05-knowledge/results/two_entry_funnels_20261103/verify.py": "7f982b5173292ec904d99bc75f074cd66ee885674bda361c0142aed8f9a30de1"
+  },
+  "runtime_versions": {
+    "python": "3.13.14"
+  }
+}

@@ -74,3 +74,11 @@ The root lane independently recovered the same second family via a C3 funnel and
 `module_migration.json` includes the literal source/raw/repaired states and exact changed-arc lists for k=1,...,5. `sparse_repair_radius4.json` examines all 1+36+630+7140+58905 subsets of at most four arcs of the 9-vertex raw parent, every latest-root sole predecessor, target H=293, and defects at most two. This universe has 112 hits (including defect zero). Exactly three positive-small-defect hits are strong; they all have b=1 and frozen-module H=132*2^k+29. Relocating the target module yields H=135*2^k+23 with b=1 in all three. `repair_module_relocation.json` records these three target-module choices. These are bounded neighborhoods and module choices, not an exhaustion of all ready tournaments.
 
 The radius-three frontier has no strong positive defect <=2 hit. The first successful source-return route at radius four is therefore minimal within this precise parent-flip radius and latest-root retarget search, before the module relocation. This does not claim a universal minimum number of changed arcs for arbitrary constructions.
+
+## Bounded next-step stopping result
+
+Starting with Q at k=1 (H=293,b=1), the next two-birth target is H=881. Delete the latest newborn to obtain the 11-vertex raw parent. `next_repair.py --radius 3` examines every subset of at most three of its 55 arcs, then every possible sole predecessor of a replacement latest root. Across 1+55+1485+26235=27776 parent variants, there are **zero** H=881 children with defect 1 or 2, even without requiring strongness. Thus this exact local repair grammar fails before any choice of target inflation module is considered. The receipt is `next_repair_radius3.json`; radius two is retained as an independently run smaller control.
+
+This is a finite obstruction at one specified base source and one arc radius. It does not exclude larger sparse repairs, vertex deletion/replacement, a different H=293 source, modules with several boundary types, or a nonlocal uniform next return. The positive 45*2^k+7 to 135*2^k+23 construction and the negative next-neighborhood result have different quantifiers.
+
+    python -B 05-knowledge/results/cycle_opening_six_return_20261112/returns/next_repair.py --radius 3

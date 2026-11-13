@@ -1,0 +1,10 @@
+{
+  "script": "returns/relocate_modules.py",
+  "arguments": [],
+  "external_repository_inputs": {
+    "05-knowledge/results/chanpak_five_core_bridges_20261110/alternatives/check.py": "f35eadd3bcb884afa3c11ca05fcf5fbaf706c72643dede8607b13df06d62d2c7"
+  },
+  "runtime_versions": {
+    "python": "3.13.14"
+  }
+}

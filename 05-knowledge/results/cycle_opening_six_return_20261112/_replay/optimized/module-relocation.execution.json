@@ -1,0 +1,9 @@
+{
+  "id": "module-relocation",
+  "exit_code": 0,
+  "script_lf_sha256": "df7111bf738e09b77d1d92d462de2cbeaa660344f53e8f47359f84aef91c3b16",
+  "receipts": {
+    "returns/repair_module_relocation.json": "50b2a05f2b7b5399c7a14072e5b6f59a2f4caf5a64966fdce26ec4ee2ecfbd30"
+  },
+  "input_capture": "_replay/optimized/module-relocation.inputs.json"
+}

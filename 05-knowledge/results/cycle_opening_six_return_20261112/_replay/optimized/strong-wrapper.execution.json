@@ -1,0 +1,9 @@
+{
+  "id": "strong-wrapper",
+  "exit_code": 0,
+  "script_lf_sha256": "e0e3f2b68c315453ec9fbf757752fbd74ed2be8cadac3b3e5fb139e1f4f9e427",
+  "receipts": {
+    "dynamics/strong_wrapper_receipts.json": "da6469f9e1d6ca75676884a1d75e167af781433c08da7d505c6630a42403d026"
+  },
+  "input_capture": "_replay/optimized/strong-wrapper.inputs.json"
+}

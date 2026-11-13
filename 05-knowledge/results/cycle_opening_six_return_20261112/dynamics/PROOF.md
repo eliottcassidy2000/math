@@ -44,7 +44,8 @@ therefore has exact six, and no point has exact four or five. This is a
 
 ## S2. Complete integral classification by prime-wise hexagons
 
-Fix positive rational C and impose, for every integer i,
+Fix positive rational C and a positive rational sequence (h[i]), and impose,
+for every integer i,
 
     h[i−1] h[i+1] = C h[i].                           (1)
 
@@ -112,7 +113,11 @@ The domain becomes |x|,|y|,|x+y|<=m, which Q preserves. Only the center is
 fixed; every other state has exact six because Q−I and Q^2−I are invertible,
 and Q^3v=v forces v=0. Hence X_m has1+3m(m+1) states and m(m+1)/2
 nontrivial six-cycles. After six operations the same labeled tournament and
-marked cut return.
+marked cut return. Exact period six belongs to this **named-resource and
+cut state**. Forgetting the cut can identify phases: at m=1, (2,1) and
+(2,0) both have block order A1,A2,B1,B2 and hence the same labeled
+unmarked tournament, but their cuts differ. No exact-six orbit is asserted
+in the unmarked tournament quotient.
 
 An ordinal-sum Hamiltonian path traverses the blocks in order and consists
 of one internal Hamiltonian path per block. This bijection gives
@@ -214,7 +219,10 @@ M and then X. Deleting Y leaves M→X. Thus the rooted defect
 H(W−Y)−start_Y(W) is zero.
 
 The controller F_m therefore supplies an **actual strong, target-preserving,
-repeatable six-step return with the same physical root and unique port**.
+repeatable six-step return with the same physical root and unique port**
+on the marked resource-and-cut carrier. The same cut-forgetting collapse
+persists after strongification; exact period six is not claimed for the
+unmarked rooted graph alone.
 Writing alpha=P_A(2), beta=P_B(2), the full target is
 
     N_m=(ab)^(2m)+(alpha beta)^(2m).                  (10)
@@ -272,7 +280,8 @@ Incoming-surface credit: commit c022b73c3c, read via `git show origin/main`,
 contains [Session293, sixth-mode carrier](../../session293_cycle_returns_20261113/six_history/PROOF.md).
 Its conserved-positive-mass theorem gives a stronger six-hidden-state lower
 bound without assuming a globally finite-order integer update, and it credits
-THM-2619 for the older nonnegative-inverse mechanism. The elementary lemma
+[THM-2619, projective kernel and retained-target obstruction](../../../../01-canon/theorems/THM-2619-psl2f13-seven-edge-norm-minimal-projective-kernel-and-retained-target-obstruction.md)
+for the older nonnegative-inverse mechanism. The elementary lemma
 below is a narrower recovered control, not a novelty claim. Session293 also
 constructs a different rational Möbius map of projective exact order six;
 that source should be used for the one-dimensional rational-map variant.
@@ -328,7 +337,7 @@ length divisible by3. Three cycle components themselves are fixed by
 iteration, not a three-cycle of points.
 
 THM-4849 provides a genuine different map. A circulant tournament on odd
-q=2k+1 has connection set S with S disjoint from−S and
+q=2k+1>=3 has connection set S with S disjoint from−S and
 S union−S=(Z/qZ)\{0}. The indicator word has q letters and k ones. Its
 Terras3x+1 rational periodic point has positive numerator and denominator
 
@@ -418,8 +427,9 @@ pairs. The sibling compiler audit uses independent rational elimination and
 permutation/weak-cut enumeration rather than importing its counting code.
 
 The infinite results are proved above; no finite bound is extrapolated.
-What remains missing is a strong return that changes the necessary internal
-rooted state while preserving the desired full target and that composes with
-the actual cycle-opening/birth operations. Contextually neutral module
-permutations cannot supply that change by themselves. No claim closes
+The sibling [module return](../compiler/MODULE_RETURN.md) now proves one
+uniform successor replacement that changes the rooted state at the required
+full target. What remains missing is an indefinitely iterable construction
+with the coverage needed for Chan–Pak. The contextually neutral controller
+here cannot supply that state change by itself. No claim closes
 Chan–Pak, Landau, or the positive3x−1 cycle classification.

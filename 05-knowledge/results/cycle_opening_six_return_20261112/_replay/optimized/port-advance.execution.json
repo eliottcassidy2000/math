@@ -1,0 +1,9 @@
+{
+  "id": "port-advance",
+  "exit_code": 0,
+  "script_lf_sha256": "15e262d87169f53f77a2e16a2a25194e9b2c3dce0e3757f0b7ba6130e300bb7a",
+  "receipts": {
+    "returns/port_advance.json": "8fd49b8fd79229b7080543ddc2ab83b4ae2bfb1bbc3dc9f55380308be1813417"
+  },
+  "input_capture": "_replay/optimized/port-advance.inputs.json"
+}

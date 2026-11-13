@@ -1,0 +1,9 @@
+{
+  "id": "next-repair-radius3",
+  "exit_code": 0,
+  "script_lf_sha256": "e207c2bb817f4b12167f6b4aa8ec8a13ff642f8d2d632865ad822ca766765bc5",
+  "receipts": {
+    "returns/next_repair_radius3.json": "b821e2e1ac4c8423f1d226b652ed57f77d5832e006dc88e3f9286ced3d586143"
+  },
+  "input_capture": "_replay/optimized/next-repair-radius3.inputs.json"
+}

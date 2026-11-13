@@ -1,0 +1,9 @@
+{
+  "id": "cross-audit",
+  "exit_code": 0,
+  "script_lf_sha256": "c9d259ade6d43f761755068ac3ce1fab92a08f908c5ccab88db64e2f9279ef0f",
+  "receipts": {
+    "counts/cross_audit.json": "3ed8bb82ebce743e9911063adf0017e43d1630f775f8fd825721ddb7be4d2dc9"
+  },
+  "input_capture": "_replay/normal/cross-audit.inputs.json"
+}

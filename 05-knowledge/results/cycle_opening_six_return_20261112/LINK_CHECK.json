@@ -1,0 +1,411 @@
+{
+  "status": "PASS",
+  "scope": "Explicit local Markdown prose links; inline and fenced code removed; URL fragments excluded; URLs not fetched",
+  "local_links": 101,
+  "links": [
+    {
+      "note": "compiler/ANCESTRY_BOUNDARY.md",
+      "target": "../../adaptive_metagraph_reformulation_20261103/ANCESTRY.md"
+    },
+    {
+      "note": "compiler/ANCESTRY_BOUNDARY.md",
+      "target": "../returns/BINARY_LANGUAGE.md"
+    },
+    {
+      "note": "compiler/ANCESTRY_BOUNDARY.md",
+      "target": "MODULE_RETURN.md"
+    },
+    {
+      "note": "compiler/ANCESTRY_BOUNDARY.md",
+      "target": "../../mutation_collatz_chanpak_20261112/returns/PROOF.md"
+    },
+    {
+      "note": "compiler/MODULE_RETURN.md",
+      "target": "../counts/PROOF.md"
+    },
+    {
+      "note": "compiler/MODULE_RETURN.md",
+      "target": "../returns/MODULE_MIGRATION.md"
+    },
+    {
+      "note": "compiler/SIX_STATE_MINIMALITY.md",
+      "target": "../../berggren_target_return_20261111/reset/TARGET_RETURN.md"
+    },
+    {
+      "note": "compiler/SIX_STATE_MINIMALITY.md",
+      "target": "../../berggren_target_return_20261111/reset/ALTERNATING_AND_CAP.md"
+    },
+    {
+      "note": "compiler/SIX_STATE_MINIMALITY.md",
+      "target": "../../berggren_target_return_20261111/reset/funnel_six_state.py"
+    },
+    {
+      "note": "compiler/SIX_STATE_MINIMALITY.md",
+      "target": "../dynamics/PROOF.md"
+    },
+    {
+      "note": "counts/PROOF.md",
+      "target": "../../polarized_path_calculus_20261103/CALCULUS.md"
+    },
+    {
+      "note": "counts/PROOF.md",
+      "target": "../../chanpak_five_core_bridges_20261110/algebra/POSITIVE_COMPILER.md"
+    },
+    {
+      "note": "counts/PROOF.md",
+      "target": "../../berggren_target_return_20261111/reset/TARGET_RETURN.md"
+    },
+    {
+      "note": "counts/PROOF.md",
+      "target": "../../triples_ports_sieve_20261112/squares/PROOF.md"
+    },
+    {
+      "note": "counts/PROOF.md",
+      "target": "../returns/port_collisions.json"
+    },
+    {
+      "note": "counts/PROOF.md",
+      "target": "../compiler/MODULE_RETURN.md"
+    },
+    {
+      "note": "counts/PROOF.md",
+      "target": "../returns/MODULE_MIGRATION.md"
+    },
+    {
+      "note": "counts/PROOF.md",
+      "target": "ROOT_RETURN_AUDIT.md"
+    },
+    {
+      "note": "counts/ROOT_RETURN_AUDIT.md",
+      "target": "../compiler/MODULE_RETURN.md"
+    },
+    {
+      "note": "counts/ROOT_RETURN_AUDIT.md",
+      "target": "../returns/MODULE_MIGRATION.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "PROOF.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../../../01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../../../01-canon/theorems/THM-3166-falling-factorial-order-join-path-colour-transform.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../session36_information_curl_contexts_20261023/context/RESULT.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../session36_information_curl_contexts_20261023/audit/AUDIT.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../../../01-canon/theorems/THM-3023-newton-ratio-transform-dynamics.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../../../01-canon/theorems/THM-4139-rational-three-cycle-order-six-lift-and-horizontal-carrier.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../../../01-canon/theorems/THM-4146-rational-three-cycle-order-six-lift-horizontal-divisor-fibre-firewall.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../../../01-canon/theorems/THM-4484-free-and-sporadic-cycles.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../../../01-canon/theorems/THM-4849-circulant-tournaments-are-rational-collatz-cycles-shift-decimation-reversal-two-base-points-and-the-locking-theorem-behind-35-and-175.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../../../01-canon/MISTAKES.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../../../07-reflections/three-kinds-of-six-and-the-last-max-eight-wall-codex-20260825.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../collatz_hexagonal_growth_20261102/GEOMETRY.md"
+    },
+    {
+      "note": "dynamics/HISTORY.md",
+      "target": "../../berggren_target_return_20261111/reset/ALTERNATING_AND_CAP.md"
+    },
+    {
+      "note": "dynamics/INDEPENDENT_AUDIT.md",
+      "target": "PROOF.md"
+    },
+    {
+      "note": "dynamics/INDEPENDENT_AUDIT.md",
+      "target": "../../../../01-canon/theorems/THM-209-independence-polynomial.md"
+    },
+    {
+      "note": "dynamics/INDEPENDENT_AUDIT.md",
+      "target": "../compiler/MODULE_RETURN.md"
+    },
+    {
+      "note": "dynamics/PROOF.md",
+      "target": "HISTORY.md"
+    },
+    {
+      "note": "dynamics/PROOF.md",
+      "target": "../../../../01-canon/theorems/THM-3166-falling-factorial-order-join-path-colour-transform.md"
+    },
+    {
+      "note": "dynamics/PROOF.md",
+      "target": "../../../../01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md"
+    },
+    {
+      "note": "dynamics/PROOF.md",
+      "target": "../../session36_information_curl_contexts_20261023/context/RESULT.md"
+    },
+    {
+      "note": "dynamics/PROOF.md",
+      "target": "../../../../01-canon/theorems/THM-209-independence-polynomial.md"
+    },
+    {
+      "note": "dynamics/PROOF.md",
+      "target": "../../session293_cycle_returns_20261113/six_history/PROOF.md"
+    },
+    {
+      "note": "dynamics/PROOF.md",
+      "target": "../../../../01-canon/theorems/THM-2619-psl2f13-seven-edge-norm-minimal-projective-kernel-and-retained-target-obstruction.md"
+    },
+    {
+      "note": "dynamics/PROOF.md",
+      "target": "../compiler/MODULE_RETURN.md"
+    },
+    {
+      "note": "INCOMING.md",
+      "target": "../session292_triple_bridges_20261113/README.md"
+    },
+    {
+      "note": "INCOMING.md",
+      "target": "../session293_cycle_returns_20261113/opening/PROOF.md"
+    },
+    {
+      "note": "INCOMING.md",
+      "target": "../session293_cycle_returns_20261113/opening/MULTI_FEEDBACK.md"
+    },
+    {
+      "note": "INCOMING.md",
+      "target": "../session293_cycle_returns_20261113/switches/PROOF.md"
+    },
+    {
+      "note": "INCOMING.md",
+      "target": "../session293_cycle_returns_20261113/audit/REVIEW_OPENING_SWITCHES.md"
+    },
+    {
+      "note": "INCOMING.md",
+      "target": "../session293_cycle_returns_20261113/control/MODULE_IDEAL.md"
+    },
+    {
+      "note": "INCOMING.md",
+      "target": "../session293_cycle_returns_20261113/audit/REVIEW_IDEAL.md"
+    },
+    {
+      "note": "INCOMING.md",
+      "target": "../mutation_collatz_chanpak_20261112/README.md"
+    },
+    {
+      "note": "INCOMING.md",
+      "target": "../entry_resources_20261113/README.md"
+    },
+    {
+      "note": "INCOMING.md",
+      "target": "../session293_cycle_returns_20261113/six_history/PROOF.md"
+    },
+    {
+      "note": "INCOMING.md",
+      "target": "../session293_cycle_returns_20261113/audit/REVIEW_SIX.md"
+    },
+    {
+      "note": "README.md",
+      "target": "SYNTHESIS.md"
+    },
+    {
+      "note": "README.md",
+      "target": "INCOMING.md"
+    },
+    {
+      "note": "README.md",
+      "target": "BOARD.md"
+    },
+    {
+      "note": "README.md",
+      "target": "counts/PROOF.md"
+    },
+    {
+      "note": "README.md",
+      "target": "AUDIT_ROOT.md"
+    },
+    {
+      "note": "README.md",
+      "target": "compiler/MODULE_RETURN.md"
+    },
+    {
+      "note": "README.md",
+      "target": "counts/ROOT_RETURN_AUDIT.md"
+    },
+    {
+      "note": "README.md",
+      "target": "returns/MODULE_MIGRATION.md"
+    },
+    {
+      "note": "README.md",
+      "target": "AUDIT_ROOT.md"
+    },
+    {
+      "note": "README.md",
+      "target": "returns/NEUTRAL_LANGUAGE.md"
+    },
+    {
+      "note": "README.md",
+      "target": "counts/ROOT_RETURN_AUDIT.md"
+    },
+    {
+      "note": "README.md",
+      "target": "returns/FIBRE_GRAPH.md"
+    },
+    {
+      "note": "README.md",
+      "target": "returns/FIBRE_AUDIT.md"
+    },
+    {
+      "note": "README.md",
+      "target": "compiler/ANCESTRY_BOUNDARY.md"
+    },
+    {
+      "note": "README.md",
+      "target": "returns/BINARY_LANGUAGE.md"
+    },
+    {
+      "note": "README.md",
+      "target": "compiler/SIX_STATE_MINIMALITY.md"
+    },
+    {
+      "note": "README.md",
+      "target": "compiler/INDEPENDENT_AUDIT.md"
+    },
+    {
+      "note": "README.md",
+      "target": "dynamics/PROOF.md"
+    },
+    {
+      "note": "README.md",
+      "target": "dynamics/INDEPENDENT_AUDIT.md"
+    },
+    {
+      "note": "README.md",
+      "target": "dynamics/HISTORY.md"
+    },
+    {
+      "note": "returns/BINARY_LANGUAGE.md",
+      "target": "../../adaptive_metagraph_reformulation_20261103/ANCESTRY.md"
+    },
+    {
+      "note": "returns/BINARY_LANGUAGE.md",
+      "target": "../../adaptive_metagraph_reformulation_20261103/ancestry_audit.md"
+    },
+    {
+      "note": "returns/BINARY_LANGUAGE.md",
+      "target": "FIBRE_GRAPH.md"
+    },
+    {
+      "note": "returns/BINARY_LANGUAGE.md",
+      "target": "../../operation_closed_synthesis_20261029/THEORY.md"
+    },
+    {
+      "note": "returns/BINARY_LANGUAGE.md",
+      "target": "../../two_entry_funnels_20261103/TWO_ENTRY.md"
+    },
+    {
+      "note": "returns/BINARY_LANGUAGE.md",
+      "target": "../dynamics/PROOF.md"
+    },
+    {
+      "note": "returns/FIBRE_AUDIT.md",
+      "target": "FIBRE_GRAPH.md"
+    },
+    {
+      "note": "returns/FIBRE_AUDIT.md",
+      "target": "BINARY_LANGUAGE.md"
+    },
+    {
+      "note": "returns/FIBRE_AUDIT.md",
+      "target": "../../adaptive_metagraph_reformulation_20261103/ANCESTRY.md"
+    },
+    {
+      "note": "returns/FIBRE_AUDIT.md",
+      "target": "../compiler/ANCESTRY_BOUNDARY.md"
+    },
+    {
+      "note": "returns/FIBRE_GRAPH.md",
+      "target": "NEUTRAL_LANGUAGE.md"
+    },
+    {
+      "note": "returns/FIBRE_GRAPH.md",
+      "target": "../../adaptive_metagraph_reformulation_20261103/ANCESTRY.md"
+    },
+    {
+      "note": "returns/FIBRE_GRAPH.md",
+      "target": "BINARY_LANGUAGE.md"
+    },
+    {
+      "note": "SYNTHESIS.md",
+      "target": "compiler/MODULE_RETURN.md"
+    },
+    {
+      "note": "SYNTHESIS.md",
+      "target": "returns/MODULE_MIGRATION.md"
+    },
+    {
+      "note": "SYNTHESIS.md",
+      "target": "compiler/ANCESTRY_BOUNDARY.md"
+    },
+    {
+      "note": "SYNTHESIS.md",
+      "target": "../session293_cycle_returns_20261113/opening/PROOF.md"
+    },
+    {
+      "note": "SYNTHESIS.md",
+      "target": "INCOMING.md"
+    },
+    {
+      "note": "SYNTHESIS.md",
+      "target": "../adaptive_metagraph_reformulation_20261103/ANCESTRY.md"
+    },
+    {
+      "note": "SYNTHESIS.md",
+      "target": "returns/FIBRE_GRAPH.md"
+    },
+    {
+      "note": "SYNTHESIS.md",
+      "target": "returns/BINARY_LANGUAGE.md"
+    },
+    {
+      "note": "SYNTHESIS.md",
+      "target": "compiler/SIX_STATE_MINIMALITY.md"
+    },
+    {
+      "note": "SYNTHESIS.md",
+      "target": "dynamics/PROOF.md"
+    },
+    {
+      "note": "SYNTHESIS.md",
+      "target": "../uniform_return_metagraph_20261111/arithmetic/PROOF.md"
+    },
+    {
+      "note": "SYNTHESIS.md",
+      "target": "returns/GROWING_SUCCESSOR.md"
+    }
+  ]
+}

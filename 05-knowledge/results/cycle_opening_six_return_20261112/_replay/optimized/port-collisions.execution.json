@@ -1,0 +1,9 @@
+{
+  "id": "port-collisions",
+  "exit_code": 0,
+  "script_lf_sha256": "272856fece9ef73bcafa0a601f6bd2ca30d2b836ff4913779e5b10fc0f2ea18a",
+  "receipts": {
+    "returns/port_collisions.json": "ee5d4382072cc57082328493dada60ae03b0cd832c00938c912f45d62e764ab5"
+  },
+  "input_capture": "_replay/optimized/port-collisions.inputs.json"
+}

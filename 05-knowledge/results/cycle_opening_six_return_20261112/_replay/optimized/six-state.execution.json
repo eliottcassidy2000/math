@@ -1,0 +1,9 @@
+{
+  "id": "six-state",
+  "exit_code": 0,
+  "script_lf_sha256": "12284fc1392bb7990c6201c9855a02960c17f2669029d90ae10c9e3df7f60cdd",
+  "receipts": {
+    "compiler/six_state_audit.json": "cf3008308cf4bccd7b094fcaa75becc18329f6a1fa5c302fe60a15be113f4f5e"
+  },
+  "input_capture": "_replay/optimized/six-state.inputs.json"
+}

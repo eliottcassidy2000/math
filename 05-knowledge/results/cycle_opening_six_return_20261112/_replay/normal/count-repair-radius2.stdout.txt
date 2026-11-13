@@ -1,0 +1,4 @@
+cost 0 checked 1 found 0 seconds 0.0
+cost 1 checked 37 found 0 seconds 0.15
+cost 2 checked 667 found 0 seconds 2.65
+[]

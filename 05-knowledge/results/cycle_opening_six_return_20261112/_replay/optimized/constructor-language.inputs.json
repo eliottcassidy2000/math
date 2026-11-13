@@ -1,0 +1,11 @@
+{
+  "script": "returns/constructor_language.py",
+  "arguments": [],
+  "external_repository_inputs": {
+    "05-knowledge/results/chanpak_five_core_bridges_20261110/alternatives/check.py": "f35eadd3bcb884afa3c11ca05fcf5fbaf706c72643dede8607b13df06d62d2c7",
+    "05-knowledge/results/metagraph_aspect_sequences_20261111/records.jsonl.gz": "93b37da5eb037ec5eddc3d9e9156404480e9a9d81badf6359f91646cd8ed41fc"
+  },
+  "runtime_versions": {
+    "python": "3.13.14"
+  }
+}

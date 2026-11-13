@@ -1,0 +1,28 @@
+{
+  "status": "all checks passed",
+  "receipt": "C:\\Users\\Eliott\\Documents\\GitHub\\ephrepos\\math-wt-cycle-six-return-20261112\\05-knowledge\\results\\cycle_opening_six_return_20261112\\dynamics\\receipts.json",
+  "rational_pairs": 7396,
+  "integral_C_checked": 200,
+  "marked_radii_checked": 12,
+  "circulant_H": {
+    "3": [
+      3
+    ],
+    "5": [
+      15
+    ],
+    "7": [
+      175,
+      189
+    ]
+  },
+  "target": 7225,
+  "prefixes": [
+    425,
+    1445,
+    289,
+    17,
+    5,
+    25
+  ]
+}

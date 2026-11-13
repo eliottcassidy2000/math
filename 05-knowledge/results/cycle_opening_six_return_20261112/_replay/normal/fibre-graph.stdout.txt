@@ -1,0 +1,1 @@
+PASS every macro word through depth7, private-bit recovery and canonical peeling, Johnson x K2 degree/diameter and adjacent refinement

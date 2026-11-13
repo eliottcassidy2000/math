@@ -4,6 +4,31 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+
+## 2026-11-13: A six-step marked return needs its cut and nontrivial clock
+
+- **Status:** endpoint guard and quotient-loss clarification repaired during
+  the [cycle-return packet](../05-knowledge/results/cycle_opening_six_return_20261112/dynamics/PROOF.md)
+  audit; no new rational quadratic six-cycle is claimed.
+- **Boundary witness:** the circulant/Collatz positive-numerator statement
+  needs odd q>=3. At q=1 its empty connection word has numerator0 and gives
+  the fixed point0, so odd q alone does not imply positivity. The repaired
+  statement explicitly excludes that degenerate clock.
+- **First failed quotient implication:** an exact six-cycle of named resource
+  states does not imply six distinct unmarked tournament graphs. At m=1,
+  resource states(2,1) and(2,0) both have block order A1,A2,B1,B2; their cuts
+  differ, but even their labeled unmarked graphs agree. Retain the cut and
+  resource coordinates as part of the state. The full-count return and its
+  strong fixed-root wrapper remain valid.
+- **Strongest survivor:** L(a,b)=(b,b/a) has exact period6 on nontrivial
+  positive rational pairs, and the explicit marked reservoir realizes that
+  order. The quadratic map x^2−29/16 instead has the recovered rational
+  three-cycle −7/4→5/4→−1/4→−7/4; its signed matrix lift has order6.
+- **New question:** a defect-changing return must deliberately change the
+  observable interface; forgetting a mark or a cover coordinate cannot
+  supply that physical change.
+
+
 ## 2026-11-13: A symmetric endpoint table must not be symmetrized twice
 
 - **Status:** repaired during the entry-resource experiment before promotion.

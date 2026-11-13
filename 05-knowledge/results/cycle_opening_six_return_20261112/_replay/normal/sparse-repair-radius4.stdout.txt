@@ -1,0 +1,6 @@
+radius 0 parents 1 hits 0 seconds 0.0
+radius 1 parents 36 hits 1 seconds 0.05
+radius 2 parents 630 hits 5 seconds 1.01
+radius 3 parents 7140 hits 22 seconds 11.57
+radius 4 parents 58905 hits 112 seconds 99.7
+PASS independent all-height neutral family; repair hits 112

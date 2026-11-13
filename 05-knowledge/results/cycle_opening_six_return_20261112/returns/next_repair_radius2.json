@@ -1,0 +1,17 @@
+{
+  "status": "FINITE-EXACT bounded repair search",
+  "scope": "Q standard advance: every parent arc subset of radius <= requested bound, all latest-root sole predecessors, target881 defects1/2, every target one-vertex module except final root/predecessor",
+  "max_radius": 2,
+  "stats": {
+    "0": 1,
+    "1": 55,
+    "2": 1485
+  },
+  "hits": [],
+  "derived_receipt": {
+    "source": "returns/next_repair_radius3.json",
+    "source_lf_sha256": "b821e2e1ac4c8423f1d226b652ed57f77d5832e006dc88e3f9286ced3d586143",
+    "rule": "Keep identical audit/literal/filter metadata, set max_radius, retain stats and hits with radius<=bound. No independent search rerun is claimed.",
+    "bound": 2
+  }
+}
