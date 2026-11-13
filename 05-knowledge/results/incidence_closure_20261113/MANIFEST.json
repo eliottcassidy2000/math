@@ -5,8 +5,8 @@
       "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
     },
     "AUDIT.md": {
-      "bytes": 8054,
-      "sha256": "2b357f72ab3b7713e9e48540e32d65e0b73a292ebb5e2272d9e726400c506712"
+      "bytes": 8418,
+      "sha256": "0d219f69e3efcc979058be19ae7cb8fba49dc0c2d7d8c05bbad7f08c208cb898"
     },
     "BLACK_PROMOTION.json": {
       "bytes": 508,
@@ -24,25 +24,37 @@
       "bytes": 3910,
       "sha256": "4e04e260d5e04fedff1089c0835a18685e56c864a32768a117b9491cc1691551"
     },
+    "JOINT_SHADOW_BOUNDARY.md": {
+      "bytes": 3876,
+      "sha256": "a76b049678242ae593375021f7ca4001a67d8df1a56c8a8a48d5c48aed6f8569"
+    },
     "LATE_INCOMING.md": {
-      "bytes": 5947,
-      "sha256": "778b93536bc77485c8025da40a13ed6c3037bdf596bf007b9ca703cf149389f8"
+      "bytes": 6596,
+      "sha256": "f8674b06436a49f950f87cd421f78ec043bc0713a5697ec234ff2166963c3add"
     },
     "PROMOTIONS.json": {
       "bytes": 4071,
       "sha256": "dbccf7ced4fe064dbe908d196ebdf507542018b2c8acf74ff57fdcc84db1a898"
     },
     "README.md": {
-      "bytes": 8785,
-      "sha256": "cf56124cfa82636d0f9a0a6d3f44254fecce9b2874c5d62ceb6515e70b0cedd7"
+      "bytes": 9292,
+      "sha256": "3f0360d4fcf83b426b482fb473365929e6206e676d84281bd9cba654e5cf44cc"
     },
     "ROOT_OBSERVERS.md": {
       "bytes": 5300,
       "sha256": "bbe31d87ba4a7d328add13194af9dde80f68a2d6d03bcadb5de3e47bce4063c7"
     },
+    "SHADOW_PROMOTION.json": {
+      "bytes": 530,
+      "sha256": "6f113d967651e08153fcb52361d5bf9904bd18792c8f1df17ee3e517a7166bfc"
+    },
     "SOURCE_PINS.json": {
-      "bytes": 13904,
-      "sha256": "d9504cc98335ca264bf4fcd5997e78c45c0986951f32725fa759cafc209b6600"
+      "bytes": 14804,
+      "sha256": "920c01cd03a707852aed6fc251ceb2ddf51be51a61757b8965d6130b36ac3418"
+    },
+    "audit/JOINT_SHADOW_REVIEW.md": {
+      "bytes": 1270,
+      "sha256": "612479792bdc5739d464221f34b92cea5b437d414f3fb68e925469858a607a42"
     },
     "audit/anchors.normal.json": {
       "bytes": 1456,
@@ -301,8 +313,8 @@
       "sha256": "2415033baad4c940db3b76dfe06e4f6c5ab2ed414e3de6b6f9e62761701f321e"
     },
     "verify_packet.py": {
-      "bytes": 5777,
-      "sha256": "da9772f4b4d915bed42e9d3d85a9cd06088037d731ddcdc98a10dd324a45524f"
+      "bytes": 5834,
+      "sha256": "20656c922e002d2222de553feb5aba5a3d740417ceade93ce472a21cbede7cc7"
     }
   },
   "status": "closed publication inventory excluding generated scratch/cache"

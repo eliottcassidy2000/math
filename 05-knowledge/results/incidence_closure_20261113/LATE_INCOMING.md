@@ -91,3 +91,14 @@ the displayed maps, not a theorem equating the underlying open problems.
 
 Specialist reconciliation: [voltage and character comparison](audit_bridges/LATE_VOLTAGE_REVIEW.md)
 and [terminal comparison](audit_closure/LATE_TERMINAL_REVIEW.md).
+
+## Publication-time incoming Session319
+
+The main branch advanced during the first publication attempt to
+cb37bf63e976f9197267f0d1c366cd7f2fa4894c. Its weighted arc-usage shadow has
+an exact SCC seam product and a vertex-transitive non-self-converse Cayley
+core on 21 vertices. The root read the proof/certificate, reran the certificate
+normally and under -O, and merged the incoming files. The independently reviewed
+[joint-shadow corollary](JOINT_SHADOW_BOUNDARY.md) adds full Q to the same
+exponential collision family. The large weighted-shadow census was not rerun;
+this corollary uses the explicit core and symbolic product, not that census.

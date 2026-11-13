@@ -38,6 +38,7 @@ def main():
  historical={}
  promoted = dict(read('PROMOTIONS.json')['files'])
  promoted.update(read('BLACK_PROMOTION.json')['files'])
+ promoted.update(read('SHADOW_PROMOTION.json')['files'])
  for name,row in promoted.items():
   text=(P/name).read_text();need(digest(text.encode())==row['after_sha256'],'promoted bytes '+name)
   for edit in reversed(row['edits']):

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "JOINT_SHADOW_BOUNDARY.md": {
+      "after_sha256": "a76b049678242ae593375021f7ca4001a67d8df1a56c8a8a48d5c48aed6f8569",
+      "before_sha256": "b13badfb43c8009e1f87e40955f6b7d41ec0217d11ddb3c1f80196dad6e44de3",
+      "edits": [
+        {
+          "count": 1,
+          "new": "**Status: PROVED IN NOTES after independent proof review; see [review](audit/JOINT_SHADOW_REVIEW.md).**",
+          "old": "**Status: RESERVED / elementary corollary pending independent proof review.**"
+        }
+      ]
+    }
+  }
+}

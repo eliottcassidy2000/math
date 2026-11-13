@@ -261,11 +261,27 @@
       "git_commit": "20c9c7e0a500077380bc172d18f332d6c446caca",
       "sha256": "0990c73e33d0b57da7ed5b12b862471c5f370d777f036aa43fd6c0054b0cecd5"
     },
+    "05-knowledge/results/session319_arc_usage_and_signed_cycles_20261113/ARC_USAGE_SHADOW.md": {
+      "bytes": 8860,
+      "git_commit": "cb37bf63e976f9197267f0d1c366cd7f2fa4894c",
+      "sha256": "14ce622c5d4811ecc1a133a428f438675bf32887bb71e2907a6386398987ed20"
+    },
+    "05-knowledge/results/session319_arc_usage_and_signed_cycles_20261113/cayley_certificate.py": {
+      "bytes": 1001,
+      "git_commit": "cb37bf63e976f9197267f0d1c366cd7f2fa4894c",
+      "sha256": "880e21a6a37cdf5ce0217957845714318099450181cb1d94caf572003331d32a"
+    },
+    "05-knowledge/results/session319_arc_usage_and_signed_cycles_20261113/replay_shadow.py": {
+      "bytes": 2224,
+      "git_commit": "cb37bf63e976f9197267f0d1c366cd7f2fa4894c",
+      "sha256": "8e1e471f5a4cb21831279ee223301f935ce6d6c3fe0587efec3d323f0bd370ff"
+    },
     "05-knowledge/results/sheafification_plus_construction_20261107/audit/AUDIT.md": {
       "bytes": 37865,
       "git_commit": "a8b6d8dbf0c6b601813785efb0b5904b46c23d43",
       "sha256": "6e45b80ba5493a884fc82653d114f8053c502840d86b815c1e3b5d0f1281210d"
     }
   },
-  "late_incoming_commit": "20c9c7e0a500077380bc172d18f332d6c446caca"
+  "late_incoming_commit": "20c9c7e0a500077380bc172d18f332d6c446caca",
+  "publication_time_incoming_commit": "cb37bf63e976f9197267f0d1c366cd7f2fa4894c"
 }

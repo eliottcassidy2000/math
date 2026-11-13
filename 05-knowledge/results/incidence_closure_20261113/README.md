@@ -149,6 +149,14 @@ fixed-flat product theorem for graceful completions. Equal-H reservoir switches
 can change Q(2), whereas our full-Q twins change incidence: the two obstructions
 locate successive information losses rather than competing descriptions.
 
+A final [joint-shadow corollary](JOINT_SHADOW_BOUNDARY.md) combines incoming
+Session319 with slot multiplicativity: at every order 21k+1, k>=1, there are
+2^k distinct merged classes with identical full Q, labelled weighted Hamiltonian
+arc-usage graph, and both labelled endpoint vectors. The first certified example
+is at order22. These outputs are nonstrong. This is an all-scale obstruction
+to that proposed richer observer, not to the separate native class-incidence
+matrix or the finite anchor result.
+
 The next sharp tests are whether signed support stays connected at higher orders,
 whether full-Q stable closure ever ceases to be discrete, and whether an inter-order
 constructor transports the signed matrix and joint terminal response without

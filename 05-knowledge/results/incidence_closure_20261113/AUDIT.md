@@ -130,3 +130,9 @@ Frozen producer JSON retains its generation-time candidate status as provenance;
 the proof promotion and this audit determine the current scoped status.
 Repository check: `python3 agents/check_docs.py` passed the bounded startup,
 frontmatter, correction-sentinel and router checks.
+
+The final [joint-shadow review](audit/JOINT_SHADOW_REVIEW.md) passes the exact
+all-k corollary combining the incoming 21-vertex core with full-Q ordinal
+multiplicativity. The root replayed the core certificate normally and with -O.
+SHADOW_PROMOTION.json records its status-only promotion; no core Hamilton-path
+census or all-order native-incidence claim is made.
