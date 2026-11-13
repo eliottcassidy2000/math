@@ -1,0 +1,25 @@
+{
+  "primary_source": {
+    "checked": "2026-11-12",
+    "title": "Fomin\u2013Zelevinsky, Cluster algebras I: Foundations",
+    "url": "https://arxiv.org/abs/math/0104151",
+    "use": "Attribution of ordinary matrix mutation"
+  },
+  "source_HEAD": "ab5098e5b8e3",
+  "source_sha256": {
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "01-canon/theorems/THM-344-n8-h63-complete-omega.md": "2115ecae62413bd1b42247c48f1c951cc564fa9cbe3f633c9a9a564c5501a6a5",
+    "04-computation/h63_counterexample_audit_s8.py": "5339a9001573c755fe8112bf1a7a5c451171bf13bf4893ac20b6a2de336b3b9a",
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971",
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ANCESTRY.md": "c3581c0a5341ef20ad094df4c1a07f8396302b1bd0d99b1010d068e1e9eb9f9b",
+    "05-knowledge/results/central_modular_chanpak_20261110/central/PROOF.md": "7f2a9323eb60c7458fc9d59200c1b2fb06dc455f9c8eb15605d964abffdbd39f",
+    "05-knowledge/results/core_descent_endpoints_20261112/README.md": "fa1c10ef938eb1eb2a926db2f6765ea69e788665d73d3a3a75188f00d3ef2259",
+    "05-knowledge/results/odd_tables_signed_carries_20261111/tournament/CONTENT.md": "cfd4b6a0cffb1ee3c867b1ecd99591caafbfb16e3fd66fa5d9087a8bab287e26",
+    "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md": "d4415fe860bdcc737c05614d97f3909168dd73a783f892505e42103add064a8e",
+    "05-knowledge/results/session291_cluster_ports_20261113/cluster/PROOF.md": "9cf295db2b10d12144f1d39663a4b064a5ca4215a8ffb1a0b9f2184a68b6711c",
+    "05-knowledge/results/triples_ports_sieve_20261112/ports/AUDIT_FOUR.md": "c6b09a9fff9b5645482970a3ee4f1ad6a22b96b6e61a0e4ec83b429b8bc39c3e",
+    "05-knowledge/results/triples_ports_sieve_20261112/ports/FOUR_RETURNS.md": "9551ae9558fd8b6c442451b88b904bc04a99a06eb94885d27820147ed98e6c57",
+    "05-knowledge/results/triples_ports_sieve_20261112/ports/PROOF.md": "154507a9946d7c414b3303fe09cd81dacb8afd7694d9f8e036247c68e14758d4",
+    "05-knowledge/results/two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c"
+  }
+}

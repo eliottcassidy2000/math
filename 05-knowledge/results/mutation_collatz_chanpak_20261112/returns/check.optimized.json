@@ -1,0 +1,682 @@
+{
+  "actual_branches": [
+    {
+      "I": 1,
+      "child_H": 17,
+      "child_defects": [
+        16,
+        4,
+        38,
+        44,
+        0,
+        3
+      ],
+      "child_rows": [
+        10,
+        28,
+        1,
+        4,
+        45,
+        15
+      ],
+      "m": 1,
+      "profile_H_F_s_q": [
+        5,
+        6,
+        2,
+        3
+      ],
+      "rows": [
+        10,
+        12,
+        1,
+        4
+      ]
+    },
+    {
+      "I": 2,
+      "child_H": 31,
+      "child_defects": [
+        32,
+        8,
+        56,
+        132,
+        114,
+        0,
+        6
+      ],
+      "child_rows": [
+        26,
+        60,
+        9,
+        16,
+        4,
+        93,
+        31
+      ],
+      "m": 2,
+      "profile_H_F_s_q": [
+        9,
+        11,
+        3,
+        5
+      ],
+      "rows": [
+        26,
+        28,
+        9,
+        16,
+        4
+      ]
+    },
+    {
+      "I": 7,
+      "child_H": 53,
+      "child_defects": [
+        52,
+        10,
+        194,
+        131,
+        239,
+        408,
+        0,
+        9
+      ],
+      "child_rows": [
+        58,
+        124,
+        1,
+        52,
+        36,
+        4,
+        189,
+        63
+      ],
+      "m": 3,
+      "profile_H_F_s_q": [
+        17,
+        18,
+        8,
+        9
+      ],
+      "rows": [
+        58,
+        60,
+        1,
+        52,
+        36,
+        4
+      ]
+    }
+  ],
+  "checks": {
+    "first_birth_dichotomies": 513,
+    "literal_path_counts": 23,
+    "polynomial_equalities": 3344,
+    "residual_inputs": 76,
+    "triangle_births": 456,
+    "two_root_cuts": 247
+  },
+  "collatz_cycle": {
+    "arithmetic_count_cycle": [
+      5,
+      17,
+      9,
+      5
+    ],
+    "base_rows": [
+      10,
+      12,
+      1,
+      4
+    ],
+    "canonical_H17_determinant": 1,
+    "canonical_H17_rows": [
+      58,
+      60,
+      1,
+      52,
+      36,
+      4
+    ],
+    "first_birth_rows": [
+      10,
+      28,
+      1,
+      4,
+      13
+    ],
+    "retained_base_names": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "second_birth_rows": [
+      10,
+      28,
+      1,
+      4,
+      45,
+      15
+    ],
+    "transient_H17_determinant": 49
+  },
+  "collatz_staircase": [
+    {
+      "H": 9,
+      "child_H": 5,
+      "child_rows": [
+        10,
+        12,
+        1,
+        4
+      ],
+      "j": 2,
+      "retained_order": [
+        0,
+        3,
+        2,
+        4
+      ],
+      "rows": [
+        26,
+        28,
+        1,
+        20,
+        4
+      ]
+    },
+    {
+      "H": 17,
+      "child_H": 9,
+      "child_rows": [
+        26,
+        28,
+        1,
+        20,
+        4
+      ],
+      "j": 3,
+      "retained_order": [
+        0,
+        3,
+        2,
+        4,
+        5
+      ],
+      "rows": [
+        58,
+        60,
+        1,
+        52,
+        36,
+        4
+      ]
+    },
+    {
+      "H": 33,
+      "child_H": 17,
+      "child_rows": [
+        58,
+        60,
+        1,
+        52,
+        36,
+        4
+      ],
+      "j": 4,
+      "retained_order": [
+        0,
+        3,
+        2,
+        4,
+        5,
+        6
+      ],
+      "rows": [
+        122,
+        124,
+        1,
+        116,
+        100,
+        68,
+        4
+      ]
+    },
+    {
+      "H": 65,
+      "child_H": 33,
+      "child_rows": [
+        122,
+        124,
+        1,
+        116,
+        100,
+        68,
+        4
+      ],
+      "j": 5,
+      "retained_order": [
+        0,
+        3,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "rows": [
+        250,
+        252,
+        1,
+        244,
+        228,
+        196,
+        132,
+        4
+      ]
+    },
+    {
+      "H": 129,
+      "child_H": 65,
+      "child_rows": [
+        250,
+        252,
+        1,
+        244,
+        228,
+        196,
+        132,
+        4
+      ],
+      "j": 6,
+      "retained_order": [
+        0,
+        3,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "rows": [
+        506,
+        508,
+        1,
+        500,
+        484,
+        452,
+        388,
+        260,
+        4
+      ]
+    },
+    {
+      "H": 257,
+      "child_H": 129,
+      "child_rows": [
+        506,
+        508,
+        1,
+        500,
+        484,
+        452,
+        388,
+        260,
+        4
+      ],
+      "j": 7,
+      "retained_order": [
+        0,
+        3,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "rows": [
+        1018,
+        1020,
+        1,
+        1012,
+        996,
+        964,
+        900,
+        772,
+        516,
+        4
+      ]
+    },
+    {
+      "H": 513,
+      "child_H": 257,
+      "child_rows": [
+        1018,
+        1020,
+        1,
+        1012,
+        996,
+        964,
+        900,
+        772,
+        516,
+        4
+      ],
+      "j": 8,
+      "retained_order": [
+        0,
+        3,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "rows": [
+        2042,
+        2044,
+        1,
+        2036,
+        2020,
+        1988,
+        1924,
+        1796,
+        1540,
+        1028,
+        4
+      ]
+    }
+  ],
+  "ready_cuts": [
+    {
+      "H": 5,
+      "I": 1,
+      "defect": 1,
+      "deletion": 3,
+      "m": 1,
+      "start": 2
+    },
+    {
+      "H": 5,
+      "I": 1,
+      "defect": 1,
+      "deletion": 3,
+      "m": 2,
+      "start": 2
+    },
+    {
+      "H": 9,
+      "I": 2,
+      "defect": 2,
+      "deletion": 5,
+      "m": 2,
+      "start": 3
+    },
+    {
+      "H": 9,
+      "I": 3,
+      "defect": 1,
+      "deletion": 5,
+      "m": 2,
+      "start": 4
+    },
+    {
+      "H": 5,
+      "I": 1,
+      "defect": 1,
+      "deletion": 3,
+      "m": 3,
+      "start": 2
+    },
+    {
+      "H": 9,
+      "I": 2,
+      "defect": 2,
+      "deletion": 5,
+      "m": 3,
+      "start": 3
+    },
+    {
+      "H": 9,
+      "I": 3,
+      "defect": 1,
+      "deletion": 5,
+      "m": 3,
+      "start": 4
+    },
+    {
+      "H": 17,
+      "I": 7,
+      "defect": 1,
+      "deletion": 9,
+      "m": 3,
+      "start": 8
+    },
+    {
+      "H": 5,
+      "I": 1,
+      "defect": 1,
+      "deletion": 3,
+      "m": 4,
+      "start": 2
+    },
+    {
+      "H": 9,
+      "I": 2,
+      "defect": 2,
+      "deletion": 5,
+      "m": 4,
+      "start": 3
+    },
+    {
+      "H": 9,
+      "I": 3,
+      "defect": 1,
+      "deletion": 5,
+      "m": 4,
+      "start": 4
+    },
+    {
+      "H": 17,
+      "I": 7,
+      "defect": 1,
+      "deletion": 9,
+      "m": 4,
+      "start": 8
+    },
+    {
+      "H": 33,
+      "I": 15,
+      "defect": 1,
+      "deletion": 17,
+      "m": 4,
+      "start": 16
+    },
+    {
+      "H": 5,
+      "I": 1,
+      "defect": 1,
+      "deletion": 3,
+      "m": 5,
+      "start": 2
+    },
+    {
+      "H": 9,
+      "I": 2,
+      "defect": 2,
+      "deletion": 5,
+      "m": 5,
+      "start": 3
+    },
+    {
+      "H": 9,
+      "I": 3,
+      "defect": 1,
+      "deletion": 5,
+      "m": 5,
+      "start": 4
+    },
+    {
+      "H": 17,
+      "I": 7,
+      "defect": 1,
+      "deletion": 9,
+      "m": 5,
+      "start": 8
+    },
+    {
+      "H": 33,
+      "I": 15,
+      "defect": 1,
+      "deletion": 17,
+      "m": 5,
+      "start": 16
+    },
+    {
+      "H": 65,
+      "I": 31,
+      "defect": 1,
+      "deletion": 33,
+      "m": 5,
+      "start": 32
+    },
+    {
+      "H": 5,
+      "I": 1,
+      "defect": 1,
+      "deletion": 3,
+      "m": 6,
+      "start": 2
+    },
+    {
+      "H": 9,
+      "I": 2,
+      "defect": 2,
+      "deletion": 5,
+      "m": 6,
+      "start": 3
+    },
+    {
+      "H": 9,
+      "I": 3,
+      "defect": 1,
+      "deletion": 5,
+      "m": 6,
+      "start": 4
+    },
+    {
+      "H": 17,
+      "I": 7,
+      "defect": 1,
+      "deletion": 9,
+      "m": 6,
+      "start": 8
+    },
+    {
+      "H": 33,
+      "I": 15,
+      "defect": 1,
+      "deletion": 17,
+      "m": 6,
+      "start": 16
+    },
+    {
+      "H": 65,
+      "I": 31,
+      "defect": 1,
+      "deletion": 33,
+      "m": 6,
+      "start": 32
+    },
+    {
+      "H": 129,
+      "I": 63,
+      "defect": 1,
+      "deletion": 65,
+      "m": 6,
+      "start": 64
+    },
+    {
+      "H": 5,
+      "I": 1,
+      "defect": 1,
+      "deletion": 3,
+      "m": 7,
+      "start": 2
+    },
+    {
+      "H": 9,
+      "I": 2,
+      "defect": 2,
+      "deletion": 5,
+      "m": 7,
+      "start": 3
+    },
+    {
+      "H": 9,
+      "I": 3,
+      "defect": 1,
+      "deletion": 5,
+      "m": 7,
+      "start": 4
+    },
+    {
+      "H": 17,
+      "I": 7,
+      "defect": 1,
+      "deletion": 9,
+      "m": 7,
+      "start": 8
+    },
+    {
+      "H": 33,
+      "I": 15,
+      "defect": 1,
+      "deletion": 17,
+      "m": 7,
+      "start": 16
+    },
+    {
+      "H": 65,
+      "I": 31,
+      "defect": 1,
+      "deletion": 33,
+      "m": 7,
+      "start": 32
+    },
+    {
+      "H": 129,
+      "I": 63,
+      "defect": 1,
+      "deletion": 65,
+      "m": 7,
+      "start": 64
+    },
+    {
+      "H": 257,
+      "I": 127,
+      "defect": 1,
+      "deletion": 129,
+      "m": 7,
+      "start": 128
+    }
+  ],
+  "scope": "Exact declared small universes; no unrestricted return or spectrum classification",
+  "script_sha256": "f1598625fc479ddbeb97b8392483ec664fef81709df1e7a946c9d10e2941b088",
+  "source_sha256": {
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "05-knowledge/results/core_descent_endpoints_20261112/README.md": "fa1c10ef938eb1eb2a926db2f6765ea69e788665d73d3a3a75188f00d3ef2259",
+    "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md": "d4415fe860bdcc737c05614d97f3909168dd73a783f892505e42103add064a8e",
+    "05-knowledge/results/triples_ports_sieve_20261112/ports/FOUR_RETURNS.md": "9551ae9558fd8b6c442451b88b904bc04a99a06eb94885d27820147ed98e6c57",
+    "05-knowledge/results/two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c"
+  },
+  "status": "PASS; FINITE-EXACT controls"
+}

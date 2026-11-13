@@ -1,0 +1,105 @@
+{
+  "H9_controls": [
+    {
+      "H": 9,
+      "det": 25,
+      "indegree_one": [
+        3,
+        4
+      ],
+      "name": "two_root",
+      "pfaffian": 5,
+      "rank_mod3": 6,
+      "rows": [
+        52,
+        33,
+        34,
+        39,
+        46,
+        0
+      ]
+    },
+    {
+      "H": 9,
+      "det": 81,
+      "indegree_one": [
+        0,
+        1,
+        2
+      ],
+      "name": "three_root",
+      "pfaffian": 9,
+      "rank_mod3": 4,
+      "rows": [
+        58,
+        60,
+        57,
+        16,
+        32,
+        8
+      ]
+    }
+  ],
+  "mutation_checks": 855,
+  "prime17_controls": [
+    {
+      "H": 17,
+      "defects": [
+        0,
+        3
+      ],
+      "det": 49,
+      "indegree_one": [
+        4,
+        5
+      ],
+      "name": "after_5_to_17",
+      "rank_mod7": 4,
+      "rows": [
+        10,
+        28,
+        1,
+        4,
+        45,
+        15
+      ]
+    },
+    {
+      "H": 17,
+      "defects": [
+        0,
+        1
+      ],
+      "det": 1,
+      "indegree_one": [
+        0,
+        1
+      ],
+      "name": "ready_17_chart",
+      "rank_mod7": 6,
+      "rows": [
+        58,
+        60,
+        1,
+        52,
+        36,
+        4
+      ]
+    }
+  ],
+  "residual_tournaments": 76,
+  "residue_hostile": {
+    "modulus": 3,
+    "new_02_entries": [
+      2,
+      1
+    ],
+    "pivot": 1
+  },
+  "scope": "explicit finite controls; identities supply all orders",
+  "script_sha256": "95ba35ddc567e5016014c6618006428d78a6b1741d24db0ae9f1055cfaf14011",
+  "source_sha256": {
+    "05-knowledge/results/triples_ports_sieve_20261112/ports/PROOF.md": "154507a9946d7c414b3303fe09cd81dacb8afd7694d9f8e036247c68e14758d4"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,128 @@
+{
+  "H5_predecessor_profiles": [
+    {
+      "H": 5,
+      "defect": 0,
+      "deletion": 1,
+      "end_two_cover": 5,
+      "root": 0,
+      "start": 1
+    },
+    {
+      "H": 5,
+      "defect": 1,
+      "deletion": 3,
+      "end_two_cover": 6,
+      "root": 1,
+      "start": 2
+    }
+  ],
+  "basis_checks": 132,
+  "literal_H9_controls": [
+    {
+      "H": 9,
+      "det": 25,
+      "indegree_one": [
+        3,
+        4
+      ],
+      "rows": [
+        52,
+        33,
+        34,
+        39,
+        46,
+        0
+      ]
+    },
+    {
+      "H": 9,
+      "det": 81,
+      "indegree_one": [
+        0,
+        1,
+        2
+      ],
+      "rows": [
+        58,
+        60,
+        57,
+        16,
+        32,
+        8
+      ]
+    }
+  ],
+  "mutation_checks": 375,
+  "ordinal_determinants": [
+    9,
+    81
+  ],
+  "ordinal_templates": 40,
+  "prime_H17_controls": [
+    {
+      "det": 49,
+      "root_profiles": [
+        {
+          "H": 17,
+          "defect": 0,
+          "deletion": 5,
+          "end_two_cover": 17,
+          "root": 4,
+          "start": 5
+        },
+        {
+          "H": 17,
+          "defect": 3,
+          "deletion": 9,
+          "end_two_cover": 20,
+          "root": 5,
+          "start": 6
+        }
+      ],
+      "rows": [
+        10,
+        28,
+        1,
+        4,
+        45,
+        15
+      ]
+    },
+    {
+      "det": 1,
+      "root_profiles": [
+        {
+          "H": 17,
+          "defect": 0,
+          "deletion": 1,
+          "end_two_cover": 17,
+          "root": 0,
+          "start": 1
+        },
+        {
+          "H": 17,
+          "defect": 1,
+          "deletion": 9,
+          "end_two_cover": 18,
+          "root": 1,
+          "start": 8
+        }
+      ],
+      "rows": [
+        58,
+        60,
+        1,
+        52,
+        36,
+        4
+      ]
+    }
+  ],
+  "script_sha256": "a8f25ed0f2d38435fef5310d1d81712eb965bd8dca46af6db6c80fd308817f85",
+  "source_sha256": {
+    "05-knowledge/results/mutation_collatz_chanpak_20261112/matrix/PROOF.md": "0e45480f00836ce6220a91821ec5f4076fa7f38bee6d6f956a984f6b2d8d072c",
+    "05-knowledge/results/mutation_collatz_chanpak_20261112/matrix/check.py": "95ba35ddc567e5016014c6618006428d78a6b1741d24db0ae9f1055cfaf14011"
+  },
+  "status": "PASS; independent algebra and complete small ordinal templates"
+}

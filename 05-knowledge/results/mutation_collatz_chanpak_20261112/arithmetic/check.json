@@ -1,0 +1,169 @@
+{
+  "checks": {
+    "digit_guard_checks": 502,
+    "even_guard_exits": 171,
+    "legal_halving_endpoints": 1023,
+    "odd_sources": 512
+  },
+  "clock_hostiles": {
+    "minus": [
+      43,
+      127,
+      63
+    ],
+    "plus": [
+      13,
+      41,
+      21
+    ]
+  },
+  "factor_budget_controls": [
+    {
+      "H": 63,
+      "max_ordinal_C3_factors": 0,
+      "r": 2
+    },
+    {
+      "H": 189,
+      "max_ordinal_C3_factors": 1,
+      "r": 3
+    },
+    {
+      "H": 567,
+      "max_ordinal_C3_factors": 2,
+      "r": 4
+    },
+    {
+      "H": 1701,
+      "max_ordinal_C3_factors": 3,
+      "r": 5
+    },
+    {
+      "H": 5103,
+      "max_ordinal_C3_factors": 4,
+      "r": 6
+    },
+    {
+      "H": 15309,
+      "max_ordinal_C3_factors": 5,
+      "r": 7
+    },
+    {
+      "H": 45927,
+      "max_ordinal_C3_factors": 6,
+      "r": 8
+    },
+    {
+      "H": 137781,
+      "max_ordinal_C3_factors": 7,
+      "r": 9
+    },
+    {
+      "H": 413343,
+      "max_ordinal_C3_factors": 8,
+      "r": 10
+    },
+    {
+      "H": 1240029,
+      "max_ordinal_C3_factors": 9,
+      "r": 11
+    },
+    {
+      "H": 3720087,
+      "max_ordinal_C3_factors": 10,
+      "r": 12
+    },
+    {
+      "H": 11160261,
+      "max_ordinal_C3_factors": 11,
+      "r": 13
+    },
+    {
+      "H": 33480783,
+      "max_ordinal_C3_factors": 12,
+      "r": 14
+    },
+    {
+      "H": 100442349,
+      "max_ordinal_C3_factors": 13,
+      "r": 15
+    },
+    {
+      "H": 301327047,
+      "max_ordinal_C3_factors": 14,
+      "r": 16
+    }
+  ],
+  "limits": [
+    "No all-length mutation-invariance claim",
+    "No inference that divisibility implies an ordinal factor",
+    "No Collatz convergence or Chan-Pak completeness conclusion"
+  ],
+  "literal_witnesses": [
+    {
+      "H": 63,
+      "counters": [
+        "subset DP",
+        "all 8! permutations"
+      ],
+      "n": 8,
+      "rows": [
+        162,
+        252,
+        249,
+        17,
+        1,
+        152,
+        185,
+        24
+      ],
+      "strong": true
+    },
+    {
+      "H": 189,
+      "counters": [
+        "subset DP"
+      ],
+      "n": 11,
+      "ordinal_triangle": true,
+      "rows": [
+        2042,
+        2044,
+        2041,
+        1296,
+        2016,
+        1992,
+        136,
+        8,
+        1216,
+        1480,
+        192
+      ]
+    }
+  ],
+  "script_sha256": "8721a73328b0a13caabbc6cb0ebc4b3d387314db2205ebe45ed7c994e434ab13",
+  "source_sha256": {
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "01-canon/theorems/THM-344-n8-h63-complete-omega.md": "2115ecae62413bd1b42247c48f1c951cc564fa9cbe3f633c9a9a564c5501a6a5",
+    "04-computation/h63_counterexample_audit_s8.py": "5339a9001573c755fe8112bf1a7a5c451171bf13bf4893ac20b6a2de336b3b9a",
+    "05-knowledge/results/central_modular_chanpak_20261110/central/PROOF.md": "7f2a9323eb60c7458fc9d59200c1b2fb06dc455f9c8eb15605d964abffdbd39f",
+    "05-knowledge/results/odd_tables_signed_carries_20261111/tournament/CONTENT.md": "cfd4b6a0cffb1ee3c867b1ecd99591caafbfb16e3fd66fa5d9087a8bab287e26",
+    "05-knowledge/results/triples_ports_sieve_20261112/ports/FOUR_RETURNS.md": "9551ae9558fd8b6c442451b88b904bc04a99a06eb94885d27820147ed98e6c57"
+  },
+  "status": "PASS; FINITE-EXACT controls with inherited all-order dependencies",
+  "universe": {
+    "digit_H_max": 501,
+    "digit_H_min": 1,
+    "factor_r": [
+      2,
+      16
+    ],
+    "halving_depth": "all legal depths after each sampled odd source",
+    "odd_x_max": 511,
+    "odd_x_min": 1,
+    "signs": [
+      -1,
+      1
+    ]
+  }
+}
