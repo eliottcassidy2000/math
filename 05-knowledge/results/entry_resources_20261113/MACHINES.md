@@ -185,3 +185,32 @@ setting. A candidate compensator must state which uniform modules remain
 protected, which selective incidences change, and how its selected budget
 is transported. Primitive arithmetic content still does not give a positive
 physical construction or arbitrary-target entry.
+
+## M5. A positive incoming core return and its remaining entry gate
+
+Incoming commit79a49f99d2 supplies a complementary constructive result in
+the [uniform successor return](../cycle_opening_six_return_20261112/compiler/MODULE_RETURN.md).
+For a transitive module of size k, it replaces an actual core after two
+births while preserving the physical root and its sole predecessor. The
+full target is135·2^k+23 and the returned indegree-one defect is1.
+The replacement changes six fixed arcs and three uniform module boundaries.
+This exceeds the input domains of T1/T2 and is not refuted by them.
+
+Keep the defect types distinct: that result uses
+delta_root=H(T−root)−(paths starting at root), while T1–T7 use the selected
+two-cover defect H−E_T(O). The linked proof supplies its own physical
+interface and all-module identities. It is inherited incoming progress,
+not a new selected-seed theorem claimed here.
+
+There is a simple exact obstruction to iterating only that one source
+family. Its source targets are A_k=45·2^k+7, all7 mod45, whereas its
+returned targets B_k=3A_k+2=135·2^k+23 are all23 mod45. Therefore no
+returned target is another A_j. Interface readiness alone does not prove
+source-family membership. This does not exclude a different constructor
+at the next target405·2^k+71, which the incoming proof leaves open.
+
+The135 ray and the inherited99 ray are also disjoint: equality would
+require2^(j−k)=135/99=15/11. Thus the shared offset23 does not identify
+their actual sources or combine their interfaces. The usable next step
+is a typed multi-core entry grammar with proven transfers between source
+domains, rather than iterating the scalar map without a constructor.

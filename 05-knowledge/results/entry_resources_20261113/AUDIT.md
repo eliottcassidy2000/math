@@ -72,6 +72,10 @@ encoding, not a competing claim of first wheel minimization.
 Incoming c022b73c3c (Session293) supplies the exact uniform-module context
 ideal. Its scope and its distinction from the selected-cut gadget universe
 are integrated in MACHINES. The reviewed sources were read before rebase.
+The later79a49f99d2 successor-return proof is likewise integrated, with its
+indegree-one defect distinguished from our selected-cover defect. M5 records
+the precise source-family residue barrier. Session294's incoming summaries
+were read; no unverified numerical claim from them is a dependency here.
 
 The shared original checkout's1440 unrelated changes were preserved.
 All work uses the clean isolated branch `codex/session-entry-machines-20261113`.

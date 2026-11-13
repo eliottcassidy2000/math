@@ -36,6 +36,7 @@ print(json.dumps([str(Path(x.__file__).resolve()) for x in list(sys.modules.valu
       'session292_triple_bridges_20261113/arithmetic/PROOF.md',
       'session293_cycle_returns_20261113/control/MODULE_IDEAL.md',
       'session293_cycle_returns_20261113/audit/REVIEW_IDEAL.md',
+      'cycle_opening_six_return_20261112/compiler/MODULE_RETURN.md',
       'core_descent_endpoints_20261112/PROOFS.md']
     paths.update(HERE.parent/name for name in inherited)
     entries=[{'path':p.relative_to(ROOT).as_posix(),'sha256':digest(p)} for p in sorted(paths)]
