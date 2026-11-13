@@ -1,0 +1,253 @@
+{
+  "status": "FINITE-EXACT controls for the proved ready-star kernel",
+  "universe": "All labelled nonempty deletion tournaments through order4, every star, every newborn; all unique-start star choices at every port of A2 and its selected1691 child",
+  "inherited_filters": "No strongness filter; weak candidates retained",
+  "deletion_tournaments": 75,
+  "stars": 1098,
+  "minimum_faces": 135,
+  "source_pins": {
+    "05-knowledge/results/session124_tournament_cut_response_20261031/README.md": "b497fb33d662598913946bbeb818c7d758aec38782488f0ca6f0da4581ca5dc8",
+    "05-knowledge/results/session136_full_tournament_spectrum_20261102/ear_geometry/positive_cut_geometry.md": "3ce83912d0d0a75f3fe94af6ee5535b3227b9ed4af7ca1daaf682ec39e2cb719"
+  },
+  "first": {
+    "source_rows": [
+      518,
+      388,
+      456,
+      1011,
+      487,
+      455,
+      387,
+      257,
+      1,
+      502
+    ],
+    "target": 1691,
+    "total_unique_start_stars": 12,
+    "hits": [
+      {
+        "selected_old_port": 0,
+        "changed_old_neighbours": [
+          2,
+          7,
+          9
+        ],
+        "parent_rows": [
+          194,
+          740,
+          1017,
+          755,
+          739,
+          705,
+          128,
+          512,
+          763,
+          65
+        ],
+        "parent_state": [
+          153,
+          1,
+          27,
+          1539
+        ],
+        "child_rows": [
+          194,
+          740,
+          1017,
+          755,
+          739,
+          705,
+          128,
+          512,
+          763,
+          1089,
+          511
+        ],
+        "child_state": [
+          1691,
+          152,
+          153,
+          1692
+        ],
+        "deletion_rows": [
+          194,
+          228,
+          505,
+          243,
+          227,
+          193,
+          128,
+          0,
+          251
+        ],
+        "kernel": {
+          "H": 27,
+          "E": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            27,
+            0
+          ],
+          "S": [
+            1,
+            1,
+            3,
+            6,
+            3,
+            1,
+            0,
+            0,
+            12
+          ],
+          "deletion_H": [
+            9,
+            1,
+            3,
+            15,
+            15,
+            17,
+            27,
+            27,
+            15
+          ],
+          "F": [
+            153,
+            47,
+            27,
+            48,
+            77,
+            155,
+            564,
+            1128,
+            30
+          ],
+          "Q": [
+            [
+              0,
+              18,
+              22,
+              30,
+              19,
+              8,
+              9,
+              0,
+              47
+            ],
+            [
+              0,
+              0,
+              24,
+              6,
+              3,
+              2,
+              1,
+              0,
+              11
+            ],
+            [
+              0,
+              0,
+              0,
+              6,
+              3,
+              2,
+              1,
+              0,
+              15
+            ],
+            [
+              2,
+              2,
+              6,
+              0,
+              15,
+              6,
+              2,
+              0,
+              15
+            ],
+            [
+              5,
+              5,
+              11,
+              15,
+              0,
+              13,
+              4,
+              0,
+              24
+            ],
+            [
+              18,
+              8,
+              24,
+              30,
+              19,
+              0,
+              9,
+              0,
+              47
+            ],
+            [
+              27,
+              35,
+              93,
+              108,
+              68,
+              35,
+              0,
+              27,
+              171
+            ],
+            [
+              54,
+              70,
+              186,
+              216,
+              136,
+              70,
+              27,
+              0,
+              342
+            ],
+            [
+              1,
+              1,
+              3,
+              15,
+              6,
+              3,
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        "unique_entry": 1
+      }
+    ]
+  },
+  "second": {
+    "source_rows": [
+      1154,
+      388,
+      457,
+      1011,
+      487,
+      455,
+      387,
+      256,
+      1,
+      503,
+      1022
+    ],
+    "target": 3311,
+    "total_unique_start_stars": 6,
+    "hits": []
+  }
+}
