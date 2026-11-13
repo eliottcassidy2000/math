@@ -1,0 +1,356 @@
+{
+  "scope": "Relative Markdown links in this packet; sparse paths checked against origin/main tree.",
+  "remote_tree": "3983515e7002828015d884f86ace03dc5bf7267e",
+  "links": [
+    {
+      "file": "CHAIN_LANGUAGE.md",
+      "target": "constructors/CHAIN_REUSE.md",
+      "resolved": true
+    },
+    {
+      "file": "CHAIN_LANGUAGE.md",
+      "target": "EXACT_REPAIR.md",
+      "resolved": true
+    },
+    {
+      "file": "EXACT_REPAIR.md",
+      "target": "../coverage_machine_induction_20261103/RESET_JUNCTION.md",
+      "resolved": true
+    },
+    {
+      "file": "EXACT_REPAIR.md",
+      "target": "../two_port_return_induction_20261103/ROOTED_RESETS.md",
+      "resolved": true
+    },
+    {
+      "file": "EXACT_REPAIR.md",
+      "target": "../source_selection_closure_20261103/NATIVE_SELECTION.md",
+      "resolved": true
+    },
+    {
+      "file": "INCOMING.md",
+      "target": "../session298_exact_target_geometry_20261113/README.md",
+      "resolved": true
+    },
+    {
+      "file": "INCOMING.md",
+      "target": "../session298_exact_target_geometry_20261113/LATTICE.md",
+      "resolved": true
+    },
+    {
+      "file": "INCOMING.md",
+      "target": "../multicore_metagraph_20261113/INCOMING.md",
+      "resolved": true
+    },
+    {
+      "file": "INCOMING.md",
+      "target": "../session296_multicore_metagraph_20261113/README.md",
+      "resolved": true
+    },
+    {
+      "file": "INCOMING.md",
+      "target": "../mrb_seven_cutoffs_20261113/module/PROOF.md",
+      "resolved": true
+    },
+    {
+      "file": "INCOMING.md",
+      "target": "../session299_three_and_two_holes_20261113/README.md",
+      "resolved": true
+    },
+    {
+      "file": "README.md",
+      "target": "history/ONE_ARC_H9.md",
+      "resolved": true
+    },
+    {
+      "file": "README.md",
+      "target": "constructors/CHAIN_REUSE.md",
+      "resolved": true
+    },
+    {
+      "file": "README.md",
+      "target": "CHAIN_LANGUAGE.md",
+      "resolved": true
+    },
+    {
+      "file": "README.md",
+      "target": "EXACT_REPAIR.md",
+      "resolved": true
+    },
+    {
+      "file": "README.md",
+      "target": "constructors/PROOF.md",
+      "resolved": true
+    },
+    {
+      "file": "README.md",
+      "target": "history/HISTORY.md",
+      "resolved": true
+    },
+    {
+      "file": "README.md",
+      "target": "history/CONTINUATION_FIBRES.md",
+      "resolved": true
+    },
+    {
+      "file": "README.md",
+      "target": "ports/PROOF.md",
+      "resolved": true
+    },
+    {
+      "file": "README.md",
+      "target": "READY29.md",
+      "resolved": true
+    },
+    {
+      "file": "README.md",
+      "target": "constructors/H9_INFLATION.md",
+      "resolved": true
+    },
+    {
+      "file": "README.md",
+      "target": "REVIEW.md",
+      "resolved": true
+    },
+    {
+      "file": "README.md",
+      "target": "INCOMING.md",
+      "resolved": true
+    },
+    {
+      "file": "READY29.md",
+      "target": "history/ONE_ARC_H9.md",
+      "resolved": true
+    },
+    {
+      "file": "READY29.md",
+      "target": "constructors/H9_INFLATION.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/CHAIN_REUSE.md",
+      "target": "../../adaptive_state_induction_20261103/LIVE_PORTS.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/CHAIN_REUSE.md",
+      "target": "../../two_port_return_induction_20261103/ROOTED_RESETS.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/CHAIN_REUSE.md",
+      "target": "../../two_port_return_induction_20261103/ROOTED_RESETS.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/CHAIN_REUSE.md",
+      "target": "../../rooted_carry_closure_20261103/ROOTED_RETURN.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/CHAIN_REUSE.md",
+      "target": "../history/ONE_ARC_H9.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/CHAIN_REUSE.md",
+      "target": "H9_INFLATION.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/CHAIN_REUSE.md",
+      "target": "PROOF.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/CHAIN_REUSE.md",
+      "target": "../EXACT_REPAIR.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/H9_INFLATION.md",
+      "target": "../../session298_exact_target_geometry_20261113/TWO_WIDTH.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/PROOF.md",
+      "target": "../../eight_nine_twentyseven_20261112/constructors/SIX_RETURN.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/PROOF.md",
+      "target": "../../source_selection_closure_20261103/NATIVE_SELECTION.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/PROOF.md",
+      "target": "../../coverage_machine_induction_20261103/RESET_JUNCTION.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/PROOF.md",
+      "target": "../../adaptive_metagraph_reformulation_20261103/METAGRAPH.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/PROOF.md",
+      "target": "../../session298_exact_target_geometry_20261113/README.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/PROOF.md",
+      "target": "CHAIN_REUSE.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/PROOF.md",
+      "target": "../../two_port_return_induction_20261103/ROOTED_RESETS.md",
+      "resolved": true
+    },
+    {
+      "file": "constructors/PROOF.md",
+      "target": "../../source_selection_closure_20261103/NATIVE_SELECTION.md",
+      "resolved": true
+    },
+    {
+      "file": "history/CONTINUATION_FIBRES.md",
+      "target": "../EXACT_REPAIR.md",
+      "resolved": true
+    },
+    {
+      "file": "history/CONTINUATION_FIBRES.md",
+      "target": "../../two_port_return_induction_20261103/ROOTED_RESETS.md",
+      "resolved": true
+    },
+    {
+      "file": "history/CONTINUATION_FIBRES.md",
+      "target": "../ports/PROOF.md",
+      "resolved": true
+    },
+    {
+      "file": "history/CONTINUATION_FIBRES.md",
+      "target": "../constructors/PROOF.md",
+      "resolved": true
+    },
+    {
+      "file": "history/CONTINUATION_FIBRES.md",
+      "target": "../../coverage_machine_induction_20261103/RESET_JUNCTION.md",
+      "resolved": true
+    },
+    {
+      "file": "history/HISTORY.md",
+      "target": "CONTINUATION_FIBRES.md",
+      "resolved": true
+    },
+    {
+      "file": "history/HISTORY.md",
+      "target": "ONE_ARC_H9.md",
+      "resolved": true
+    },
+    {
+      "file": "history/HISTORY.md",
+      "target": "../../../../01-canon/theorems/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md",
+      "resolved": true
+    },
+    {
+      "file": "history/HISTORY.md",
+      "target": "../../../../01-canon/theorems/THM-3406-affine-modification-power-jets-and-principal-part-transgression.md",
+      "resolved": true
+    },
+    {
+      "file": "history/HISTORY.md",
+      "target": "../../../../01-canon/theorems/THM-3477-jacobian-effectivity-moving-numerator-jordan-prufer-response-normal-form.md",
+      "resolved": true
+    },
+    {
+      "file": "history/HISTORY.md",
+      "target": "../../../hypotheses/HYP-2892-lrc14-unital-pair-frame-hodge-refinement.md",
+      "resolved": true
+    },
+    {
+      "file": "history/HISTORY.md",
+      "target": "../../../hypotheses/HYP-3066-hodge-cycle-lifting-carrier-lrc14.md",
+      "resolved": true
+    },
+    {
+      "file": "history/HISTORY.md",
+      "target": "../../../../01-canon/theorems/THM-509-the-two-layer-baby-hodge-dichotomy.md",
+      "resolved": true
+    },
+    {
+      "file": "history/HISTORY.md",
+      "target": "../EXACT_REPAIR.md",
+      "resolved": true
+    },
+    {
+      "file": "history/HISTORY.md",
+      "target": "ONE_ARC_H9.md",
+      "resolved": true
+    },
+    {
+      "file": "history/HISTORY.md",
+      "target": "../../session298_exact_target_geometry_20261113/README.md",
+      "resolved": true
+    },
+    {
+      "file": "history/HISTORY.md",
+      "target": "../../session298_exact_target_geometry_20261113/LATTICE.md",
+      "resolved": true
+    },
+    {
+      "file": "history/ONE_ARC_H9.md",
+      "target": "../../session296_multicore_metagraph_20261113/cores/PROOF.md",
+      "resolved": true
+    },
+    {
+      "file": "history/ONE_ARC_H9.md",
+      "target": "CONTINUATION_FIBRES.md",
+      "resolved": true
+    },
+    {
+      "file": "history/ONE_ARC_H9.md",
+      "target": "../../two_port_return_induction_20261103/ROOTED_RESETS.md",
+      "resolved": true
+    },
+    {
+      "file": "history/ONE_ARC_H9.md",
+      "target": "../constructors/CHAIN_REUSE.md",
+      "resolved": true
+    },
+    {
+      "file": "history/ONE_ARC_H9.md",
+      "target": "../../five_core_web_20261111/history/INCIDENCE_AND_HISTORY.md",
+      "resolved": true
+    },
+    {
+      "file": "history/ONE_ARC_H9.md",
+      "target": "../../two_port_return_induction_20261103/NATIVE_RESET_INDUCTION.md",
+      "resolved": true
+    },
+    {
+      "file": "history/ONE_ARC_H9.md",
+      "target": "../../coverage_machine_induction_20261103/RESET_JUNCTION.md",
+      "resolved": true
+    },
+    {
+      "file": "history/ONE_ARC_H9.md",
+      "target": "../constructors/H9_INFLATION.md",
+      "resolved": true
+    },
+    {
+      "file": "ports/PROOF.md",
+      "target": "../../session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+      "resolved": true
+    },
+    {
+      "file": "ports/PROOF.md",
+      "target": "../../hn_metagraph_information_20261026/six_color/RESULT.md",
+      "resolved": true
+    },
+    {
+      "file": "ports/PROOF.md",
+      "target": "../../eight_nine_twentyseven_20261112/constructors/SIX_RETURN.md",
+      "resolved": true
+    }
+  ]
+}

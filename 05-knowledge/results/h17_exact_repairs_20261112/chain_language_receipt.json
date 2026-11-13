@@ -1,0 +1,115 @@
+{
+  "status": "PASS: recurrence-level exact controls of an independently proved physical grammar",
+  "universe": {
+    "seeds": 3,
+    "max_added_vertices": 24,
+    "letters": "every integer k>=2 with cost k+2"
+  },
+  "results": [
+    {
+      "seed": [
+        135,
+        38
+      ],
+      "words": 1252,
+      "counts_by_added_vertices": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        10,
+        14,
+        19,
+        26,
+        36,
+        50,
+        69,
+        95,
+        131,
+        181,
+        250,
+        345
+      ],
+      "scalar_collisions": []
+    },
+    {
+      "seed": [
+        215,
+        74
+      ],
+      "words": 1252,
+      "counts_by_added_vertices": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        10,
+        14,
+        19,
+        26,
+        36,
+        50,
+        69,
+        95,
+        131,
+        181,
+        250,
+        345
+      ],
+      "scalar_collisions": []
+    },
+    {
+      "seed": [
+        87,
+        20
+      ],
+      "words": 1252,
+      "counts_by_added_vertices": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        10,
+        14,
+        19,
+        26,
+        36,
+        50,
+        69,
+        95,
+        131,
+        181,
+        250,
+        345
+      ],
+      "scalar_collisions": []
+    }
+  ]
+}

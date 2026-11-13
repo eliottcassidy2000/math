@@ -1,0 +1,1474 @@
+{
+  "status": "FINITE-EXACT controls; universal proof in H9_INFLATION.md",
+  "universe": "Common TT_a,TT_b,TT_c inflation at1,2,4; all positive sizes<=4",
+  "controls": [
+    {
+      "a": 1,
+      "b": 1,
+      "c": 1,
+      "old_profile": [
+        9,
+        3,
+        3,
+        9
+      ],
+      "new_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "H_gap": 0,
+      "incoming_port": 3
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "c": 2,
+      "old_profile": [
+        15,
+        3,
+        3,
+        15
+      ],
+      "new_profile": [
+        17,
+        8,
+        9,
+        18
+      ],
+      "H_gap": 2,
+      "incoming_port": 3
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "c": 3,
+      "old_profile": [
+        27,
+        3,
+        3,
+        27
+      ],
+      "new_profile": [
+        33,
+        16,
+        17,
+        34
+      ],
+      "H_gap": 6,
+      "incoming_port": 3
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "c": 4,
+      "old_profile": [
+        51,
+        3,
+        3,
+        51
+      ],
+      "new_profile": [
+        65,
+        32,
+        33,
+        66
+      ],
+      "H_gap": 14,
+      "incoming_port": 3
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "c": 1,
+      "old_profile": [
+        15,
+        5,
+        5,
+        15
+      ],
+      "new_profile": [
+        17,
+        8,
+        9,
+        18
+      ],
+      "H_gap": 2,
+      "incoming_port": 4
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "c": 2,
+      "old_profile": [
+        25,
+        5,
+        5,
+        25
+      ],
+      "new_profile": [
+        33,
+        16,
+        17,
+        34
+      ],
+      "H_gap": 8,
+      "incoming_port": 4
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "c": 3,
+      "old_profile": [
+        45,
+        5,
+        5,
+        45
+      ],
+      "new_profile": [
+        65,
+        32,
+        33,
+        66
+      ],
+      "H_gap": 20,
+      "incoming_port": 4
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "c": 4,
+      "old_profile": [
+        85,
+        5,
+        5,
+        85
+      ],
+      "new_profile": [
+        129,
+        64,
+        65,
+        130
+      ],
+      "H_gap": 44,
+      "incoming_port": 4
+    },
+    {
+      "a": 1,
+      "b": 3,
+      "c": 1,
+      "old_profile": [
+        27,
+        9,
+        9,
+        27
+      ],
+      "new_profile": [
+        33,
+        16,
+        17,
+        34
+      ],
+      "H_gap": 6,
+      "incoming_port": 5
+    },
+    {
+      "a": 1,
+      "b": 3,
+      "c": 2,
+      "old_profile": [
+        45,
+        9,
+        9,
+        45
+      ],
+      "new_profile": [
+        65,
+        32,
+        33,
+        66
+      ],
+      "H_gap": 20,
+      "incoming_port": 5
+    },
+    {
+      "a": 1,
+      "b": 3,
+      "c": 3,
+      "old_profile": [
+        81,
+        9,
+        9,
+        81
+      ],
+      "new_profile": [
+        129,
+        64,
+        65,
+        130
+      ],
+      "H_gap": 48,
+      "incoming_port": 5
+    },
+    {
+      "a": 1,
+      "b": 3,
+      "c": 4,
+      "old_profile": [
+        153,
+        9,
+        9,
+        153
+      ],
+      "new_profile": [
+        257,
+        128,
+        129,
+        258
+      ],
+      "H_gap": 104,
+      "incoming_port": 5
+    },
+    {
+      "a": 1,
+      "b": 4,
+      "c": 1,
+      "old_profile": [
+        51,
+        17,
+        17,
+        51
+      ],
+      "new_profile": [
+        65,
+        32,
+        33,
+        66
+      ],
+      "H_gap": 14,
+      "incoming_port": 6
+    },
+    {
+      "a": 1,
+      "b": 4,
+      "c": 2,
+      "old_profile": [
+        85,
+        17,
+        17,
+        85
+      ],
+      "new_profile": [
+        129,
+        64,
+        65,
+        130
+      ],
+      "H_gap": 44,
+      "incoming_port": 6
+    },
+    {
+      "a": 1,
+      "b": 4,
+      "c": 3,
+      "old_profile": [
+        153,
+        17,
+        17,
+        153
+      ],
+      "new_profile": [
+        257,
+        128,
+        129,
+        258
+      ],
+      "H_gap": 104,
+      "incoming_port": 6
+    },
+    {
+      "a": 1,
+      "b": 4,
+      "c": 4,
+      "old_profile": [
+        289,
+        17,
+        17,
+        289
+      ],
+      "new_profile": [
+        513,
+        256,
+        257,
+        514
+      ],
+      "H_gap": 224,
+      "incoming_port": 6
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "c": 1,
+      "old_profile": [
+        19,
+        5,
+        5,
+        19
+      ],
+      "new_profile": [
+        23,
+        10,
+        11,
+        24
+      ],
+      "H_gap": 4,
+      "incoming_port": 4
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "c": 2,
+      "old_profile": [
+        33,
+        5,
+        5,
+        33
+      ],
+      "new_profile": [
+        47,
+        22,
+        23,
+        48
+      ],
+      "H_gap": 14,
+      "incoming_port": 4
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "c": 3,
+      "old_profile": [
+        61,
+        5,
+        5,
+        61
+      ],
+      "new_profile": [
+        95,
+        46,
+        47,
+        96
+      ],
+      "H_gap": 34,
+      "incoming_port": 4
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "c": 4,
+      "old_profile": [
+        117,
+        5,
+        5,
+        117
+      ],
+      "new_profile": [
+        191,
+        94,
+        95,
+        192
+      ],
+      "H_gap": 74,
+      "incoming_port": 4
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "c": 1,
+      "old_profile": [
+        37,
+        11,
+        11,
+        37
+      ],
+      "new_profile": [
+        47,
+        22,
+        23,
+        48
+      ],
+      "H_gap": 10,
+      "incoming_port": 5
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "c": 2,
+      "old_profile": [
+        63,
+        11,
+        11,
+        63
+      ],
+      "new_profile": [
+        95,
+        46,
+        47,
+        96
+      ],
+      "H_gap": 32,
+      "incoming_port": 5
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "c": 3,
+      "old_profile": [
+        115,
+        11,
+        11,
+        115
+      ],
+      "new_profile": [
+        191,
+        94,
+        95,
+        192
+      ],
+      "H_gap": 76,
+      "incoming_port": 5
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "c": 4,
+      "old_profile": [
+        219,
+        11,
+        11,
+        219
+      ],
+      "new_profile": [
+        383,
+        190,
+        191,
+        384
+      ],
+      "H_gap": 164,
+      "incoming_port": 5
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "c": 1,
+      "old_profile": [
+        73,
+        23,
+        23,
+        73
+      ],
+      "new_profile": [
+        95,
+        46,
+        47,
+        96
+      ],
+      "H_gap": 22,
+      "incoming_port": 6
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "c": 2,
+      "old_profile": [
+        123,
+        23,
+        23,
+        123
+      ],
+      "new_profile": [
+        191,
+        94,
+        95,
+        192
+      ],
+      "H_gap": 68,
+      "incoming_port": 6
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "c": 3,
+      "old_profile": [
+        223,
+        23,
+        23,
+        223
+      ],
+      "new_profile": [
+        383,
+        190,
+        191,
+        384
+      ],
+      "H_gap": 160,
+      "incoming_port": 6
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "c": 4,
+      "old_profile": [
+        423,
+        23,
+        23,
+        423
+      ],
+      "new_profile": [
+        767,
+        382,
+        383,
+        768
+      ],
+      "H_gap": 344,
+      "incoming_port": 6
+    },
+    {
+      "a": 2,
+      "b": 4,
+      "c": 1,
+      "old_profile": [
+        145,
+        47,
+        47,
+        145
+      ],
+      "new_profile": [
+        191,
+        94,
+        95,
+        192
+      ],
+      "H_gap": 46,
+      "incoming_port": 7
+    },
+    {
+      "a": 2,
+      "b": 4,
+      "c": 2,
+      "old_profile": [
+        243,
+        47,
+        47,
+        243
+      ],
+      "new_profile": [
+        383,
+        190,
+        191,
+        384
+      ],
+      "H_gap": 140,
+      "incoming_port": 7
+    },
+    {
+      "a": 2,
+      "b": 4,
+      "c": 3,
+      "old_profile": [
+        439,
+        47,
+        47,
+        439
+      ],
+      "new_profile": [
+        767,
+        382,
+        383,
+        768
+      ],
+      "H_gap": 328,
+      "incoming_port": 7
+    },
+    {
+      "a": 2,
+      "b": 4,
+      "c": 4,
+      "old_profile": [
+        831,
+        47,
+        47,
+        831
+      ],
+      "new_profile": [
+        1535,
+        766,
+        767,
+        1536
+      ],
+      "H_gap": 704,
+      "incoming_port": 7
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "c": 1,
+      "old_profile": [
+        39,
+        9,
+        9,
+        39
+      ],
+      "new_profile": [
+        51,
+        22,
+        23,
+        52
+      ],
+      "H_gap": 12,
+      "incoming_port": 5
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "c": 2,
+      "old_profile": [
+        69,
+        9,
+        9,
+        69
+      ],
+      "new_profile": [
+        107,
+        50,
+        51,
+        108
+      ],
+      "H_gap": 38,
+      "incoming_port": 5
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "c": 3,
+      "old_profile": [
+        129,
+        9,
+        9,
+        129
+      ],
+      "new_profile": [
+        219,
+        106,
+        107,
+        220
+      ],
+      "H_gap": 90,
+      "incoming_port": 5
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "c": 4,
+      "old_profile": [
+        249,
+        9,
+        9,
+        249
+      ],
+      "new_profile": [
+        443,
+        218,
+        219,
+        444
+      ],
+      "H_gap": 194,
+      "incoming_port": 5
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "c": 1,
+      "old_profile": [
+        81,
+        23,
+        23,
+        81
+      ],
+      "new_profile": [
+        107,
+        50,
+        51,
+        108
+      ],
+      "H_gap": 26,
+      "incoming_port": 6
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "c": 2,
+      "old_profile": [
+        139,
+        23,
+        23,
+        139
+      ],
+      "new_profile": [
+        219,
+        106,
+        107,
+        220
+      ],
+      "H_gap": 80,
+      "incoming_port": 6
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "c": 3,
+      "old_profile": [
+        255,
+        23,
+        23,
+        255
+      ],
+      "new_profile": [
+        443,
+        218,
+        219,
+        444
+      ],
+      "H_gap": 188,
+      "incoming_port": 6
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "c": 4,
+      "old_profile": [
+        487,
+        23,
+        23,
+        487
+      ],
+      "new_profile": [
+        891,
+        442,
+        443,
+        892
+      ],
+      "H_gap": 404,
+      "incoming_port": 6
+    },
+    {
+      "a": 3,
+      "b": 3,
+      "c": 1,
+      "old_profile": [
+        165,
+        51,
+        51,
+        165
+      ],
+      "new_profile": [
+        219,
+        106,
+        107,
+        220
+      ],
+      "H_gap": 54,
+      "incoming_port": 7
+    },
+    {
+      "a": 3,
+      "b": 3,
+      "c": 2,
+      "old_profile": [
+        279,
+        51,
+        51,
+        279
+      ],
+      "new_profile": [
+        443,
+        218,
+        219,
+        444
+      ],
+      "H_gap": 164,
+      "incoming_port": 7
+    },
+    {
+      "a": 3,
+      "b": 3,
+      "c": 3,
+      "old_profile": [
+        507,
+        51,
+        51,
+        507
+      ],
+      "new_profile": [
+        891,
+        442,
+        443,
+        892
+      ],
+      "H_gap": 384,
+      "incoming_port": 7
+    },
+    {
+      "a": 3,
+      "b": 3,
+      "c": 4,
+      "old_profile": [
+        963,
+        51,
+        51,
+        963
+      ],
+      "new_profile": [
+        1787,
+        890,
+        891,
+        1788
+      ],
+      "H_gap": 824,
+      "incoming_port": 7
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "c": 1,
+      "old_profile": [
+        333,
+        107,
+        107,
+        333
+      ],
+      "new_profile": [
+        443,
+        218,
+        219,
+        444
+      ],
+      "H_gap": 110,
+      "incoming_port": 8
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "c": 2,
+      "old_profile": [
+        559,
+        107,
+        107,
+        559
+      ],
+      "new_profile": [
+        891,
+        442,
+        443,
+        892
+      ],
+      "H_gap": 332,
+      "incoming_port": 8
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "c": 3,
+      "old_profile": [
+        1011,
+        107,
+        107,
+        1011
+      ],
+      "new_profile": [
+        1787,
+        890,
+        891,
+        1788
+      ],
+      "H_gap": 776,
+      "incoming_port": 8
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "c": 4,
+      "old_profile": [
+        1915,
+        107,
+        107,
+        1915
+      ],
+      "new_profile": [
+        3579,
+        1786,
+        1787,
+        3580
+      ],
+      "H_gap": 1664,
+      "incoming_port": 8
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "c": 1,
+      "old_profile": [
+        79,
+        17,
+        17,
+        79
+      ],
+      "new_profile": [
+        107,
+        46,
+        47,
+        108
+      ],
+      "H_gap": 28,
+      "incoming_port": 6
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "c": 2,
+      "old_profile": [
+        141,
+        17,
+        17,
+        141
+      ],
+      "new_profile": [
+        227,
+        106,
+        107,
+        228
+      ],
+      "H_gap": 86,
+      "incoming_port": 6
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "c": 3,
+      "old_profile": [
+        265,
+        17,
+        17,
+        265
+      ],
+      "new_profile": [
+        467,
+        226,
+        227,
+        468
+      ],
+      "H_gap": 202,
+      "incoming_port": 6
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "c": 4,
+      "old_profile": [
+        513,
+        17,
+        17,
+        513
+      ],
+      "new_profile": [
+        947,
+        466,
+        467,
+        948
+      ],
+      "H_gap": 434,
+      "incoming_port": 6
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "c": 1,
+      "old_profile": [
+        169,
+        47,
+        47,
+        169
+      ],
+      "new_profile": [
+        227,
+        106,
+        107,
+        228
+      ],
+      "H_gap": 58,
+      "incoming_port": 7
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "c": 2,
+      "old_profile": [
+        291,
+        47,
+        47,
+        291
+      ],
+      "new_profile": [
+        467,
+        226,
+        227,
+        468
+      ],
+      "H_gap": 176,
+      "incoming_port": 7
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "c": 3,
+      "old_profile": [
+        535,
+        47,
+        47,
+        535
+      ],
+      "new_profile": [
+        947,
+        466,
+        467,
+        948
+      ],
+      "H_gap": 412,
+      "incoming_port": 7
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "c": 4,
+      "old_profile": [
+        1023,
+        47,
+        47,
+        1023
+      ],
+      "new_profile": [
+        1907,
+        946,
+        947,
+        1908
+      ],
+      "H_gap": 884,
+      "incoming_port": 7
+    },
+    {
+      "a": 4,
+      "b": 3,
+      "c": 1,
+      "old_profile": [
+        349,
+        107,
+        107,
+        349
+      ],
+      "new_profile": [
+        467,
+        226,
+        227,
+        468
+      ],
+      "H_gap": 118,
+      "incoming_port": 8
+    },
+    {
+      "a": 4,
+      "b": 3,
+      "c": 2,
+      "old_profile": [
+        591,
+        107,
+        107,
+        591
+      ],
+      "new_profile": [
+        947,
+        466,
+        467,
+        948
+      ],
+      "H_gap": 356,
+      "incoming_port": 8
+    },
+    {
+      "a": 4,
+      "b": 3,
+      "c": 3,
+      "old_profile": [
+        1075,
+        107,
+        107,
+        1075
+      ],
+      "new_profile": [
+        1907,
+        946,
+        947,
+        1908
+      ],
+      "H_gap": 832,
+      "incoming_port": 8
+    },
+    {
+      "a": 4,
+      "b": 3,
+      "c": 4,
+      "old_profile": [
+        2043,
+        107,
+        107,
+        2043
+      ],
+      "new_profile": [
+        3827,
+        1906,
+        1907,
+        3828
+      ],
+      "H_gap": 1784,
+      "incoming_port": 8
+    },
+    {
+      "a": 4,
+      "b": 4,
+      "c": 1,
+      "old_profile": [
+        709,
+        227,
+        227,
+        709
+      ],
+      "new_profile": [
+        947,
+        466,
+        467,
+        948
+      ],
+      "H_gap": 238,
+      "incoming_port": 9
+    },
+    {
+      "a": 4,
+      "b": 4,
+      "c": 2,
+      "old_profile": [
+        1191,
+        227,
+        227,
+        1191
+      ],
+      "new_profile": [
+        1907,
+        946,
+        947,
+        1908
+      ],
+      "H_gap": 716,
+      "incoming_port": 9
+    },
+    {
+      "a": 4,
+      "b": 4,
+      "c": 3,
+      "old_profile": [
+        2155,
+        227,
+        227,
+        2155
+      ],
+      "new_profile": [
+        3827,
+        1906,
+        1907,
+        3828
+      ],
+      "H_gap": 1672,
+      "incoming_port": 9
+    },
+    {
+      "a": 4,
+      "b": 4,
+      "c": 4,
+      "old_profile": [
+        4083,
+        227,
+        227,
+        4083
+      ],
+      "new_profile": [
+        7667,
+        3826,
+        3827,
+        7668
+      ],
+      "H_gap": 3584,
+      "incoming_port": 9
+    }
+  ],
+  "literal_selected_sources": [
+    {
+      "a": 1,
+      "b": 1,
+      "c": 1,
+      "old_profile": [
+        9,
+        3,
+        3,
+        9
+      ],
+      "new_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "H_gap": 0,
+      "incoming_port": 3,
+      "old_rows": [
+        22,
+        8,
+        2,
+        5,
+        14
+      ],
+      "new_rows": [
+        22,
+        8,
+        2,
+        21,
+        6
+      ]
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "c": 1,
+      "old_profile": [
+        19,
+        5,
+        5,
+        19
+      ],
+      "new_profile": [
+        23,
+        10,
+        11,
+        24
+      ],
+      "H_gap": 4,
+      "incoming_port": 4,
+      "old_rows": [
+        46,
+        20,
+        16,
+        6,
+        9,
+        30
+      ],
+      "new_rows": [
+        46,
+        20,
+        16,
+        6,
+        41,
+        14
+      ]
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "c": 4,
+      "old_profile": [
+        423,
+        23,
+        23,
+        423
+      ],
+      "new_profile": [
+        767,
+        382,
+        383,
+        768
+      ],
+      "H_gap": 344,
+      "incoming_port": 6,
+      "old_rows": [
+        1982,
+        68,
+        64,
+        54,
+        38,
+        6,
+        57,
+        1918,
+        1662,
+        1150,
+        126
+      ],
+      "new_rows": [
+        1982,
+        68,
+        64,
+        54,
+        38,
+        6,
+        1977,
+        1854,
+        1598,
+        1086,
+        62
+      ]
+    }
+  ],
+  "direct_H47": {
+    "rows": [
+      30,
+      28,
+      24,
+      16,
+      96,
+      15,
+      47
+    ],
+    "root": 6,
+    "profile": [
+      47,
+      16,
+      17,
+      48
+    ]
+  },
+  "H47_NR_exit": {
+    "rows": [
+      30,
+      28,
+      24,
+      16,
+      96,
+      15,
+      175,
+      319,
+      127
+    ],
+    "root": 7,
+    "profile": [
+      143,
+      47,
+      47,
+      143
+    ]
+  },
+  "H29_handoff_boundary": {
+    "h_run_coefficients": [
+      29,
+      15
+    ],
+    "q_run_coefficients": [
+      9,
+      3
+    ],
+    "raw_U9_run_coefficients": [
+      9,
+      4
+    ],
+    "literal_controls": [
+      {
+        "b": 1,
+        "rows": [
+          24,
+          1,
+          11,
+          34,
+          46,
+          7
+        ],
+        "root": 4,
+        "profile": [
+          29,
+          8,
+          9,
+          30
+        ],
+        "H_drift_from_raw_NR": 0
+      },
+      {
+        "b": 2,
+        "rows": [
+          48,
+          5,
+          1,
+          23,
+          70,
+          94,
+          15
+        ],
+        "root": 5,
+        "profile": [
+          59,
+          14,
+          15,
+          60
+        ],
+        "H_drift_from_raw_NR": 6
+      },
+      {
+        "b": 3,
+        "rows": [
+          96,
+          13,
+          9,
+          1,
+          47,
+          142,
+          190,
+          31
+        ],
+        "root": 6,
+        "profile": [
+          119,
+          26,
+          27,
+          120
+        ],
+        "H_drift_from_raw_NR": 18
+      }
+    ],
+    "nontransitive_module_hostile": {
+      "module_rows": [
+        2,
+        4,
+        1
+      ],
+      "H_module": 3,
+      "ordered_nonempty_two_cover_count": 6,
+      "raw_NR_profile": [
+        159,
+        51,
+        51,
+        159
+      ],
+      "modified_profile": [
+        177,
+        42,
+        45,
+        180
+      ],
+      "H_drift": 18,
+      "repaired_readiness_defect": 3
+    }
+  }
+}

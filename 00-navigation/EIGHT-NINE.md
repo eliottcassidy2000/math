@@ -3,6 +3,10 @@
 [Research packet](../05-knowledge/results/eight_nine_twentyseven_20261112/README.md).
 **PROVED IN NOTES / FINITE-EXACT; Chan–Pak OPEN.**
 
+[Next: exact-target repairs and reusable marked grammar](../05-knowledge/results/h17_exact_repairs_20261112/README.md):
+H9 root-star repair, arbitrary-left-factor same-next-target repair, closed
+primitive chain recursion and exact addresses; arbitrary target supply OPEN.
+
 Sharp raw/context content bound `h|g|h²/rad(h)`; the asymmetric9/27
 example is extremal. Two actual arc flips select every odd residue modulo8
 in any fixed uniform exterior, with exact mixed response and sharp count

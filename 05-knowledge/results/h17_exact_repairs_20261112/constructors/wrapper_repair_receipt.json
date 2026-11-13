@@ -1,0 +1,1236 @@
+{
+  "status": "FINITE-EXACT controls; all-parameter theorem in PROOF.md",
+  "universe": "W_n root positions n3..7; eight literal returns through order15",
+  "profiles": [
+    {
+      "n": 3,
+      "position": 0,
+      "rows": [
+        14,
+        12,
+        8,
+        16,
+        7
+      ],
+      "module_order": [
+        0,
+        1,
+        2
+      ],
+      "root": 0,
+      "indegree": 1,
+      "state_h_s_q_F": [
+        9,
+        4,
+        5,
+        10
+      ]
+    },
+    {
+      "n": 3,
+      "position": 1,
+      "rows": [
+        12,
+        13,
+        8,
+        16,
+        7
+      ],
+      "module_order": [
+        1,
+        0,
+        2
+      ],
+      "root": 0,
+      "indegree": 2,
+      "state_h_s_q_F": [
+        9,
+        2,
+        5,
+        16
+      ]
+    },
+    {
+      "n": 3,
+      "position": 2,
+      "rows": [
+        8,
+        13,
+        9,
+        16,
+        7
+      ],
+      "module_order": [
+        1,
+        2,
+        0
+      ],
+      "root": 0,
+      "indegree": 3,
+      "state_h_s_q_F": [
+        9,
+        1,
+        5,
+        25
+      ]
+    },
+    {
+      "n": 4,
+      "position": 0,
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        32,
+        15
+      ],
+      "module_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "root": 0,
+      "indegree": 1,
+      "state_h_s_q_F": [
+        17,
+        8,
+        9,
+        18
+      ]
+    },
+    {
+      "n": 4,
+      "position": 1,
+      "rows": [
+        28,
+        29,
+        24,
+        16,
+        32,
+        15
+      ],
+      "module_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "root": 0,
+      "indegree": 2,
+      "state_h_s_q_F": [
+        17,
+        4,
+        9,
+        28
+      ]
+    },
+    {
+      "n": 4,
+      "position": 2,
+      "rows": [
+        24,
+        29,
+        25,
+        16,
+        32,
+        15
+      ],
+      "module_order": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "root": 0,
+      "indegree": 3,
+      "state_h_s_q_F": [
+        17,
+        2,
+        9,
+        44
+      ]
+    },
+    {
+      "n": 4,
+      "position": 3,
+      "rows": [
+        16,
+        29,
+        25,
+        17,
+        32,
+        15
+      ],
+      "module_order": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "root": 0,
+      "indegree": 4,
+      "state_h_s_q_F": [
+        17,
+        1,
+        9,
+        69
+      ]
+    },
+    {
+      "n": 5,
+      "position": 0,
+      "rows": [
+        62,
+        60,
+        56,
+        48,
+        32,
+        64,
+        31
+      ],
+      "module_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "root": 0,
+      "indegree": 1,
+      "state_h_s_q_F": [
+        33,
+        16,
+        17,
+        34
+      ]
+    },
+    {
+      "n": 5,
+      "position": 1,
+      "rows": [
+        60,
+        61,
+        56,
+        48,
+        32,
+        64,
+        31
+      ],
+      "module_order": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ],
+      "root": 0,
+      "indegree": 2,
+      "state_h_s_q_F": [
+        33,
+        8,
+        17,
+        52
+      ]
+    },
+    {
+      "n": 5,
+      "position": 2,
+      "rows": [
+        56,
+        61,
+        57,
+        48,
+        32,
+        64,
+        31
+      ],
+      "module_order": [
+        1,
+        2,
+        0,
+        3,
+        4
+      ],
+      "root": 0,
+      "indegree": 3,
+      "state_h_s_q_F": [
+        33,
+        4,
+        17,
+        80
+      ]
+    },
+    {
+      "n": 5,
+      "position": 3,
+      "rows": [
+        48,
+        61,
+        57,
+        49,
+        32,
+        64,
+        31
+      ],
+      "module_order": [
+        1,
+        2,
+        3,
+        0,
+        4
+      ],
+      "root": 0,
+      "indegree": 4,
+      "state_h_s_q_F": [
+        33,
+        2,
+        17,
+        124
+      ]
+    },
+    {
+      "n": 5,
+      "position": 4,
+      "rows": [
+        32,
+        61,
+        57,
+        49,
+        33,
+        64,
+        31
+      ],
+      "module_order": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "root": 0,
+      "indegree": 5,
+      "state_h_s_q_F": [
+        33,
+        1,
+        17,
+        193
+      ]
+    },
+    {
+      "n": 6,
+      "position": 0,
+      "rows": [
+        126,
+        124,
+        120,
+        112,
+        96,
+        64,
+        128,
+        63
+      ],
+      "module_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "root": 0,
+      "indegree": 1,
+      "state_h_s_q_F": [
+        65,
+        32,
+        33,
+        66
+      ]
+    },
+    {
+      "n": 6,
+      "position": 1,
+      "rows": [
+        124,
+        125,
+        120,
+        112,
+        96,
+        64,
+        128,
+        63
+      ],
+      "module_order": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "root": 0,
+      "indegree": 2,
+      "state_h_s_q_F": [
+        65,
+        16,
+        33,
+        100
+      ]
+    },
+    {
+      "n": 6,
+      "position": 2,
+      "rows": [
+        120,
+        125,
+        121,
+        112,
+        96,
+        64,
+        128,
+        63
+      ],
+      "module_order": [
+        1,
+        2,
+        0,
+        3,
+        4,
+        5
+      ],
+      "root": 0,
+      "indegree": 3,
+      "state_h_s_q_F": [
+        65,
+        8,
+        33,
+        152
+      ]
+    },
+    {
+      "n": 6,
+      "position": 3,
+      "rows": [
+        112,
+        125,
+        121,
+        113,
+        96,
+        64,
+        128,
+        63
+      ],
+      "module_order": [
+        1,
+        2,
+        3,
+        0,
+        4,
+        5
+      ],
+      "root": 0,
+      "indegree": 4,
+      "state_h_s_q_F": [
+        65,
+        4,
+        33,
+        232
+      ]
+    },
+    {
+      "n": 6,
+      "position": 4,
+      "rows": [
+        96,
+        125,
+        121,
+        113,
+        97,
+        64,
+        128,
+        63
+      ],
+      "module_order": [
+        1,
+        2,
+        3,
+        4,
+        0,
+        5
+      ],
+      "root": 0,
+      "indegree": 5,
+      "state_h_s_q_F": [
+        65,
+        2,
+        33,
+        356
+      ]
+    },
+    {
+      "n": 6,
+      "position": 5,
+      "rows": [
+        64,
+        125,
+        121,
+        113,
+        97,
+        65,
+        128,
+        63
+      ],
+      "module_order": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        0
+      ],
+      "root": 0,
+      "indegree": 6,
+      "state_h_s_q_F": [
+        65,
+        1,
+        33,
+        549
+      ]
+    },
+    {
+      "n": 7,
+      "position": 0,
+      "rows": [
+        254,
+        252,
+        248,
+        240,
+        224,
+        192,
+        128,
+        256,
+        127
+      ],
+      "module_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "root": 0,
+      "indegree": 1,
+      "state_h_s_q_F": [
+        129,
+        64,
+        65,
+        130
+      ]
+    },
+    {
+      "n": 7,
+      "position": 1,
+      "rows": [
+        252,
+        253,
+        248,
+        240,
+        224,
+        192,
+        128,
+        256,
+        127
+      ],
+      "module_order": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "root": 0,
+      "indegree": 2,
+      "state_h_s_q_F": [
+        129,
+        32,
+        65,
+        196
+      ]
+    },
+    {
+      "n": 7,
+      "position": 2,
+      "rows": [
+        248,
+        253,
+        249,
+        240,
+        224,
+        192,
+        128,
+        256,
+        127
+      ],
+      "module_order": [
+        1,
+        2,
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "root": 0,
+      "indegree": 3,
+      "state_h_s_q_F": [
+        129,
+        16,
+        65,
+        296
+      ]
+    },
+    {
+      "n": 7,
+      "position": 3,
+      "rows": [
+        240,
+        253,
+        249,
+        241,
+        224,
+        192,
+        128,
+        256,
+        127
+      ],
+      "module_order": [
+        1,
+        2,
+        3,
+        0,
+        4,
+        5,
+        6
+      ],
+      "root": 0,
+      "indegree": 4,
+      "state_h_s_q_F": [
+        129,
+        8,
+        65,
+        448
+      ]
+    },
+    {
+      "n": 7,
+      "position": 4,
+      "rows": [
+        224,
+        253,
+        249,
+        241,
+        225,
+        192,
+        128,
+        256,
+        127
+      ],
+      "module_order": [
+        1,
+        2,
+        3,
+        4,
+        0,
+        5,
+        6
+      ],
+      "root": 0,
+      "indegree": 5,
+      "state_h_s_q_F": [
+        129,
+        4,
+        65,
+        680
+      ]
+    },
+    {
+      "n": 7,
+      "position": 5,
+      "rows": [
+        192,
+        253,
+        249,
+        241,
+        225,
+        193,
+        128,
+        256,
+        127
+      ],
+      "module_order": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        0,
+        6
+      ],
+      "root": 0,
+      "indegree": 6,
+      "state_h_s_q_F": [
+        129,
+        2,
+        65,
+        1036
+      ]
+    },
+    {
+      "n": 7,
+      "position": 6,
+      "rows": [
+        128,
+        253,
+        249,
+        241,
+        225,
+        193,
+        129,
+        256,
+        127
+      ],
+      "module_order": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0
+      ],
+      "root": 0,
+      "indegree": 7,
+      "state_h_s_q_F": [
+        129,
+        1,
+        65,
+        1585
+      ]
+    }
+  ],
+  "native_preparations": [
+    {
+      "n": 3,
+      "temporary_vertex": 5,
+      "temporary_outmask": 1,
+      "first_word": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "second_word": [
+        0,
+        5,
+        1,
+        2,
+        3,
+        4
+      ],
+      "endpoint_rows": [
+        12,
+        13,
+        8,
+        16,
+        7
+      ]
+    },
+    {
+      "n": 4,
+      "temporary_vertex": 6,
+      "temporary_outmask": 1,
+      "first_word": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "second_word": [
+        0,
+        6,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "endpoint_rows": [
+        28,
+        29,
+        24,
+        16,
+        32,
+        15
+      ]
+    },
+    {
+      "n": 5,
+      "temporary_vertex": 7,
+      "temporary_outmask": 1,
+      "first_word": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "second_word": [
+        0,
+        7,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "endpoint_rows": [
+        60,
+        61,
+        56,
+        48,
+        32,
+        64,
+        31
+      ]
+    },
+    {
+      "n": 6,
+      "temporary_vertex": 8,
+      "temporary_outmask": 1,
+      "first_word": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "second_word": [
+        0,
+        8,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "endpoint_rows": [
+        124,
+        125,
+        120,
+        112,
+        96,
+        64,
+        128,
+        63
+      ]
+    },
+    {
+      "n": 7,
+      "temporary_vertex": 9,
+      "temporary_outmask": 1,
+      "first_word": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "second_word": [
+        0,
+        9,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "endpoint_rows": [
+        252,
+        253,
+        248,
+        240,
+        224,
+        192,
+        128,
+        256,
+        127
+      ]
+    }
+  ],
+  "literal_returns": [
+    {
+      "n": 3,
+      "k": 1,
+      "rows": [
+        108,
+        13,
+        8,
+        16,
+        7,
+        30,
+        190,
+        63
+      ],
+      "root": 6,
+      "state_h_s_q_F": [
+        77,
+        23,
+        23,
+        77
+      ],
+      "pre_last_R_state": [
+        45,
+        18,
+        23,
+        50
+      ],
+      "other_retained_root": 7,
+      "other_port_state": [
+        77,
+        27,
+        45,
+        95
+      ],
+      "C3_profile_parameters": [
+        4651,
+        693
+      ]
+    },
+    {
+      "n": 3,
+      "k": 2,
+      "rows": [
+        236,
+        13,
+        8,
+        16,
+        7,
+        30,
+        62,
+        382,
+        127
+      ],
+      "root": 7,
+      "state_h_s_q_F": [
+        143,
+        45,
+        45,
+        143
+      ],
+      "pre_last_R_state": [
+        89,
+        40,
+        45,
+        94
+      ],
+      "other_retained_root": 8,
+      "other_port_state": [
+        143,
+        49,
+        89,
+        183
+      ],
+      "C3_profile_parameters": [
+        8633,
+        1287
+      ]
+    },
+    {
+      "n": 4,
+      "k": 1,
+      "rows": [
+        220,
+        29,
+        24,
+        16,
+        32,
+        15,
+        62,
+        382,
+        127
+      ],
+      "root": 7,
+      "state_h_s_q_F": [
+        135,
+        41,
+        41,
+        135
+      ],
+      "pre_last_R_state": [
+        79,
+        32,
+        41,
+        88
+      ],
+      "other_retained_root": 8,
+      "other_port_state": [
+        135,
+        47,
+        79,
+        167
+      ],
+      "C3_profile_parameters": [
+        8153,
+        1215
+      ]
+    },
+    {
+      "n": 4,
+      "k": 2,
+      "rows": [
+        476,
+        29,
+        24,
+        16,
+        32,
+        15,
+        62,
+        126,
+        766,
+        255
+      ],
+      "root": 8,
+      "state_h_s_q_F": [
+        249,
+        79,
+        79,
+        249
+      ],
+      "pre_last_R_state": [
+        155,
+        70,
+        79,
+        164
+      ],
+      "other_retained_root": 9,
+      "other_port_state": [
+        249,
+        85,
+        155,
+        319
+      ],
+      "C3_profile_parameters": [
+        15031,
+        2241
+      ]
+    },
+    {
+      "n": 4,
+      "k": 3,
+      "rows": [
+        988,
+        29,
+        24,
+        16,
+        32,
+        15,
+        62,
+        126,
+        254,
+        1534,
+        511
+      ],
+      "root": 9,
+      "state_h_s_q_F": [
+        477,
+        155,
+        155,
+        477
+      ],
+      "pre_last_R_state": [
+        307,
+        146,
+        155,
+        316
+      ],
+      "other_retained_root": 10,
+      "other_port_state": [
+        477,
+        161,
+        307,
+        623
+      ],
+      "C3_profile_parameters": [
+        28787,
+        4293
+      ]
+    },
+    {
+      "n": 5,
+      "k": 2,
+      "rows": [
+        956,
+        61,
+        56,
+        48,
+        32,
+        64,
+        31,
+        126,
+        254,
+        1534,
+        511
+      ],
+      "root": 9,
+      "state_h_s_q_F": [
+        461,
+        147,
+        147,
+        461
+      ],
+      "pre_last_R_state": [
+        287,
+        130,
+        147,
+        304
+      ],
+      "other_retained_root": 10,
+      "other_port_state": [
+        461,
+        157,
+        287,
+        591
+      ],
+      "C3_profile_parameters": [
+        27827,
+        4149
+      ]
+    },
+    {
+      "n": 6,
+      "k": 3,
+      "rows": [
+        3964,
+        125,
+        120,
+        112,
+        96,
+        64,
+        128,
+        63,
+        254,
+        510,
+        1022,
+        6142,
+        2047
+      ],
+      "root": 11,
+      "state_h_s_q_F": [
+        1689,
+        551,
+        551,
+        1689
+      ],
+      "pre_last_R_state": [
+        1087,
+        518,
+        551,
+        1120
+      ],
+      "other_retained_root": 12,
+      "other_port_state": [
+        1689,
+        569,
+        1087,
+        2207
+      ],
+      "C3_profile_parameters": [
+        101927,
+        15201
+      ]
+    },
+    {
+      "n": 7,
+      "k": 4,
+      "rows": [
+        16124,
+        253,
+        248,
+        240,
+        224,
+        192,
+        128,
+        256,
+        127,
+        510,
+        1022,
+        2046,
+        4094,
+        24574,
+        8191
+      ],
+      "root": 13,
+      "state_h_s_q_F": [
+        6449,
+        2127,
+        2127,
+        6449
+      ],
+      "pre_last_R_state": [
+        4223,
+        2062,
+        2127,
+        4288
+      ],
+      "other_retained_root": 14,
+      "other_port_state": [
+        6449,
+        2161,
+        4223,
+        8511
+      ],
+      "C3_profile_parameters": [
+        389135,
+        58041
+      ]
+    }
+  ],
+  "off_clock_hostile": {
+    "n": 7,
+    "k": 6,
+    "balanced_b_t": [
+      25313,
+      8415
+    ],
+    "returned_root_gcd": 17,
+    "scope": "proved state formula, not a 19-vertex DP recount"
+  }
+}

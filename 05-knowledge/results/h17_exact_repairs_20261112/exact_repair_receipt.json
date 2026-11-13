@@ -1,0 +1,693 @@
+{
+  "status": "PASS: finite physical controls; universal claims proved in EXACT_REPAIR.md",
+  "universe": "Two labelled order5 sources; eight explicitly listed nonempty left factors; four full R^a N R returns with a=1..4, orders9..15. No spectrum census.",
+  "base_controls": [
+    {
+      "rows": [
+        16,
+        9,
+        3,
+        5,
+        14
+      ],
+      "state": [
+        15,
+        3,
+        3,
+        21
+      ],
+      "first_child_rows": [
+        48,
+        9,
+        3,
+        5,
+        14,
+        30
+      ],
+      "first_child_state": [
+        33,
+        3,
+        3,
+        39
+      ]
+    },
+    {
+      "rows": [
+        18,
+        24,
+        3,
+        5,
+        12
+      ],
+      "state": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "first_child_rows": [
+        50,
+        24,
+        3,
+        5,
+        12,
+        30
+      ],
+      "first_child_state": [
+        33,
+        5,
+        5,
+        37
+      ]
+    }
+  ],
+  "left_factor_controls": [
+    {
+      "left_rows": [
+        0
+      ],
+      "h": 1,
+      "f": 2,
+      "entries": [
+        {
+          "rows": [
+            62,
+            32,
+            18,
+            6,
+            10,
+            28
+          ],
+          "root": 1,
+          "state": [
+            15,
+            0,
+            3,
+            42
+          ],
+          "first_child_state": [
+            57,
+            3,
+            3,
+            81
+          ],
+          "content": 3
+        },
+        {
+          "rows": [
+            62,
+            36,
+            48,
+            6,
+            10,
+            24
+          ],
+          "root": 1,
+          "state": [
+            15,
+            0,
+            5,
+            42
+          ],
+          "first_child_state": [
+            57,
+            5,
+            5,
+            79
+          ],
+          "content": 1
+        }
+      ],
+      "accepted_period": 10
+    },
+    {
+      "left_rows": [
+        2,
+        0
+      ],
+      "h": 1,
+      "f": 4,
+      "entries": [
+        {
+          "rows": [
+            126,
+            124,
+            64,
+            36,
+            12,
+            20,
+            56
+          ],
+          "root": 2,
+          "state": [
+            15,
+            0,
+            3,
+            84
+          ],
+          "first_child_state": [
+            99,
+            3,
+            3,
+            165
+          ],
+          "content": 3
+        },
+        {
+          "rows": [
+            126,
+            124,
+            72,
+            96,
+            12,
+            20,
+            48
+          ],
+          "root": 2,
+          "state": [
+            15,
+            0,
+            5,
+            84
+          ],
+          "first_child_state": [
+            99,
+            5,
+            5,
+            163
+          ],
+          "content": 1
+        }
+      ],
+      "accepted_period": 1
+    },
+    {
+      "left_rows": [
+        6,
+        4,
+        0
+      ],
+      "h": 1,
+      "f": 8,
+      "entries": [
+        {
+          "rows": [
+            254,
+            252,
+            248,
+            128,
+            72,
+            24,
+            40,
+            112
+          ],
+          "root": 3,
+          "state": [
+            15,
+            0,
+            3,
+            168
+          ],
+          "first_child_state": [
+            183,
+            3,
+            3,
+            333
+          ],
+          "content": 3
+        },
+        {
+          "rows": [
+            254,
+            252,
+            248,
+            144,
+            192,
+            24,
+            40,
+            96
+          ],
+          "root": 3,
+          "state": [
+            15,
+            0,
+            5,
+            168
+          ],
+          "first_child_state": [
+            183,
+            5,
+            5,
+            331
+          ],
+          "content": 1
+        }
+      ],
+      "accepted_period": 36
+    },
+    {
+      "left_rows": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "h": 1,
+      "f": 16,
+      "entries": [
+        {
+          "rows": [
+            510,
+            508,
+            504,
+            496,
+            256,
+            144,
+            48,
+            80,
+            224
+          ],
+          "root": 4,
+          "state": [
+            15,
+            0,
+            3,
+            336
+          ],
+          "first_child_state": [
+            351,
+            3,
+            3,
+            669
+          ],
+          "content": 3
+        },
+        {
+          "rows": [
+            510,
+            508,
+            504,
+            496,
+            288,
+            384,
+            48,
+            80,
+            192
+          ],
+          "root": 4,
+          "state": [
+            15,
+            0,
+            5,
+            336
+          ],
+          "first_child_state": [
+            351,
+            5,
+            5,
+            667
+          ],
+          "content": 1
+        }
+      ],
+      "accepted_period": 39
+    },
+    {
+      "left_rows": [
+        2,
+        4,
+        1
+      ],
+      "h": 3,
+      "f": 12,
+      "entries": [
+        {
+          "rows": [
+            250,
+            252,
+            249,
+            128,
+            72,
+            24,
+            40,
+            112
+          ],
+          "root": 3,
+          "state": [
+            45,
+            0,
+            9,
+            252
+          ],
+          "first_child_state": [
+            297,
+            9,
+            9,
+            495
+          ],
+          "content": 9
+        },
+        {
+          "rows": [
+            250,
+            252,
+            249,
+            144,
+            192,
+            24,
+            40,
+            96
+          ],
+          "root": 3,
+          "state": [
+            45,
+            0,
+            15,
+            252
+          ],
+          "first_child_state": [
+            297,
+            15,
+            15,
+            489
+          ],
+          "content": 3
+        }
+      ]
+    },
+    {
+      "left_rows": [
+        10,
+        12,
+        9,
+        0
+      ],
+      "h": 3,
+      "f": 24,
+      "entries": [
+        {
+          "rows": [
+            506,
+            508,
+            505,
+            496,
+            256,
+            144,
+            48,
+            80,
+            224
+          ],
+          "root": 4,
+          "state": [
+            45,
+            0,
+            9,
+            504
+          ],
+          "first_child_state": [
+            549,
+            9,
+            9,
+            999
+          ],
+          "content": 9
+        },
+        {
+          "rows": [
+            506,
+            508,
+            505,
+            496,
+            288,
+            384,
+            48,
+            80,
+            192
+          ],
+          "root": 4,
+          "state": [
+            45,
+            0,
+            15,
+            504
+          ],
+          "first_child_state": [
+            549,
+            15,
+            15,
+            993
+          ],
+          "content": 3
+        }
+      ]
+    },
+    {
+      "left_rows": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "h": 5,
+      "f": 32,
+      "entries": [
+        {
+          "rows": [
+            502,
+            508,
+            504,
+            497,
+            256,
+            144,
+            48,
+            80,
+            224
+          ],
+          "root": 4,
+          "state": [
+            75,
+            0,
+            15,
+            672
+          ],
+          "first_child_state": [
+            747,
+            15,
+            15,
+            1329
+          ],
+          "content": 3
+        },
+        {
+          "rows": [
+            502,
+            508,
+            504,
+            497,
+            288,
+            384,
+            48,
+            80,
+            192
+          ],
+          "root": 4,
+          "state": [
+            75,
+            0,
+            25,
+            672
+          ],
+          "first_child_state": [
+            747,
+            25,
+            25,
+            1319
+          ],
+          "content": 1
+        }
+      ],
+      "accepted_period": 60
+    },
+    {
+      "left_rows": [
+        24,
+        1,
+        3,
+        6,
+        14
+      ],
+      "h": 11,
+      "f": 100,
+      "entries": [
+        {
+          "rows": [
+            1016,
+            993,
+            995,
+            998,
+            1006,
+            512,
+            288,
+            96,
+            160,
+            448
+          ],
+          "root": 5,
+          "state": [
+            165,
+            0,
+            33,
+            2100
+          ],
+          "first_child_state": [
+            2265,
+            33,
+            33,
+            4167
+          ],
+          "content": 3
+        },
+        {
+          "rows": [
+            1016,
+            993,
+            995,
+            998,
+            1006,
+            576,
+            768,
+            96,
+            160,
+            384
+          ],
+          "root": 5,
+          "state": [
+            165,
+            0,
+            55,
+            2100
+          ],
+          "first_child_state": [
+            2265,
+            55,
+            55,
+            4145
+          ],
+          "content": 5
+        }
+      ]
+    }
+  ],
+  "literal_returns": [
+    {
+      "a": 1,
+      "k": 1,
+      "order": 9,
+      "rows": [
+        62,
+        228,
+        48,
+        6,
+        10,
+        24,
+        61,
+        381,
+        127
+      ],
+      "root": 7,
+      "state": [
+        215,
+        57,
+        57,
+        215
+      ],
+      "repaired_target": 57
+    },
+    {
+      "a": 2,
+      "k": 2,
+      "order": 11,
+      "rows": [
+        126,
+        124,
+        968,
+        96,
+        12,
+        20,
+        48,
+        123,
+        251,
+        1531,
+        511
+      ],
+      "root": 9,
+      "state": [
+        899,
+        257,
+        257,
+        899
+      ],
+      "repaired_target": 99
+    },
+    {
+      "a": 3,
+      "k": 3,
+      "order": 13,
+      "rows": [
+        254,
+        252,
+        248,
+        3984,
+        192,
+        24,
+        40,
+        96,
+        247,
+        503,
+        1015,
+        6135,
+        2047
+      ],
+      "root": 11,
+      "state": [
+        3779,
+        1161,
+        1161,
+        3779
+      ],
+      "repaired_target": 183
+    },
+    {
+      "a": 4,
+      "k": 4,
+      "order": 15,
+      "rows": [
+        510,
+        508,
+        504,
+        496,
+        16160,
+        384,
+        48,
+        80,
+        192,
+        495,
+        1007,
+        2031,
+        4079,
+        24559,
+        8191
+      ],
+      "root": 13,
+      "state": [
+        15587,
+        4985,
+        4985,
+        15587
+      ],
+      "repaired_target": 351
+    }
+  ],
+  "inherited_graph_helper": "05-knowledge/results/eight_nine_twentyseven_20261112/constructors/escape.py",
+  "helper_sha256": "c1d53210c15f5a38942cc1b7d242a9fe33bc2b33cdd72988e74f13a0109ffac1"
+}

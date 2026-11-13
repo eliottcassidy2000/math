@@ -1,0 +1,212 @@
+{
+  "status": "FINITE-EXACT: fixed-source local minimum and six declared enlargement controls",
+  "source_rows": [
+    54,
+    8,
+    2,
+    21,
+    6,
+    94,
+    31
+  ],
+  "root": 5,
+  "nonroot_radius_one_two_attempts": 120,
+  "ready_hits": [],
+  "repair_pairs": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      4,
+      6
+    ]
+  ],
+  "repaired_rows": [
+    50,
+    0,
+    3,
+    23,
+    70,
+    94,
+    15
+  ],
+  "repaired_state": [
+    29,
+    8,
+    9,
+    30
+  ],
+  "deleted_physical_vertex": 1,
+  "six_vertex_rows": [
+    24,
+    1,
+    11,
+    34,
+    46,
+    7
+  ],
+  "six_vertex_name_map": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "next_rows": [
+    24,
+    1,
+    11,
+    34,
+    110,
+    7,
+    175,
+    63
+  ],
+  "next_root": 6,
+  "next_state": [
+    89,
+    29,
+    29,
+    89
+  ],
+  "enlargements": [
+    {
+      "b": 1,
+      "initial": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "raw": [
+        29,
+        9,
+        9,
+        29
+      ],
+      "modified": [
+        29,
+        8,
+        9,
+        30
+      ],
+      "target_preserved": true
+    },
+    {
+      "b": 2,
+      "initial": [
+        17,
+        8,
+        9,
+        18
+      ],
+      "raw": [
+        53,
+        17,
+        17,
+        53
+      ],
+      "modified": [
+        59,
+        14,
+        15,
+        60
+      ],
+      "target_preserved": false
+    },
+    {
+      "b": 3,
+      "initial": [
+        33,
+        16,
+        17,
+        34
+      ],
+      "raw": [
+        101,
+        33,
+        33,
+        101
+      ],
+      "modified": [
+        119,
+        26,
+        27,
+        120
+      ],
+      "target_preserved": false
+    },
+    {
+      "b": 4,
+      "initial": [
+        65,
+        32,
+        33,
+        66
+      ],
+      "raw": [
+        197,
+        65,
+        65,
+        197
+      ],
+      "modified": [
+        239,
+        50,
+        51,
+        240
+      ],
+      "target_preserved": false
+    },
+    {
+      "b": 5,
+      "initial": [
+        129,
+        64,
+        65,
+        130
+      ],
+      "raw": [
+        389,
+        129,
+        129,
+        389
+      ],
+      "modified": [
+        479,
+        98,
+        99,
+        480
+      ],
+      "target_preserved": false
+    },
+    {
+      "b": 6,
+      "initial": [
+        257,
+        128,
+        129,
+        258
+      ],
+      "raw": [
+        773,
+        257,
+        257,
+        773
+      ],
+      "modified": [
+        959,
+        194,
+        195,
+        960
+      ],
+      "target_preserved": false
+    }
+  ]
+}

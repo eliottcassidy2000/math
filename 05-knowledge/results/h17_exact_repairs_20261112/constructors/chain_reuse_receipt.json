@@ -1,0 +1,420 @@
+{
+  "coefficient_certificate": {
+    "formal_variables": [
+      "h",
+      "s",
+      "q",
+      "F",
+      "e"
+    ],
+    "three_birth_chain_mark_matrix": [
+      [
+        1,
+        -1,
+        -2,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        4,
+        -1,
+        -1,
+        10,
+        0
+      ]
+    ],
+    "carrier_sizes_after_births": [
+      15,
+      20,
+      22
+    ],
+    "status": "Universal coefficient identity from the endpoint-cover bijection"
+  },
+  "literal_H17_entry": {
+    "k": 2,
+    "rows": [
+      476,
+      29,
+      24,
+      16,
+      32,
+      15,
+      62,
+      126,
+      766,
+      255
+    ],
+    "source_root": 0,
+    "retained_ports": [
+      8,
+      7
+    ],
+    "root": 7,
+    "source_state": [
+      17,
+      4,
+      9,
+      28
+    ],
+    "state_h_s_q_F": [
+      249,
+      38,
+      135,
+      616
+    ],
+    "root_indegree": 3,
+    "fixed_slot_trace": {
+      "input_slots": [
+        0,
+        5
+      ],
+      "input_active_slot": 0,
+      "word": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "output_slots": [
+        8,
+        7
+      ],
+      "output_active_slot": 1
+    }
+  },
+  "literal_H9_N_entry": {
+    "k": 2,
+    "rows": [
+      54,
+      8,
+      2,
+      21,
+      6,
+      478,
+      31,
+      95,
+      735,
+      255
+    ],
+    "source_root": 5,
+    "retained_ports": [
+      8,
+      7
+    ],
+    "root": 7,
+    "source_state": [
+      15,
+      5,
+      9,
+      19
+    ],
+    "state_h_s_q_F": [
+      147,
+      20,
+      87,
+      388
+    ],
+    "root_indegree": 3,
+    "fixed_slot_trace": {
+      "input_slots": [
+        0,
+        5
+      ],
+      "input_active_slot": 1,
+      "word": [
+        3,
+        3,
+        4,
+        5
+      ],
+      "output_slots": [
+        7,
+        8
+      ],
+      "output_active_slot": 0
+    }
+  },
+  "all_nonzero_mod3_connector_cases": [
+    {
+      "residue_b_t": [
+        0,
+        1
+      ],
+      "usual_guard_word": [
+        "C3"
+      ],
+      "primitive_chain_word": [
+        "L_k"
+      ]
+    },
+    {
+      "residue_b_t": [
+        0,
+        2
+      ],
+      "usual_guard_word": [
+        "C3"
+      ],
+      "primitive_chain_word": [
+        "L_k"
+      ]
+    },
+    {
+      "residue_b_t": [
+        1,
+        0
+      ],
+      "usual_guard_word": [
+        "C3"
+      ],
+      "primitive_chain_word": [
+        "L_k"
+      ]
+    },
+    {
+      "residue_b_t": [
+        1,
+        1
+      ],
+      "usual_guard_word": [
+        "C3"
+      ],
+      "primitive_chain_word": [
+        "C3",
+        "L_k"
+      ]
+    },
+    {
+      "residue_b_t": [
+        1,
+        2
+      ],
+      "usual_guard_word": [
+        "R",
+        "C3"
+      ],
+      "primitive_chain_word": [
+        "L_k"
+      ]
+    },
+    {
+      "residue_b_t": [
+        2,
+        0
+      ],
+      "usual_guard_word": [
+        "C3"
+      ],
+      "primitive_chain_word": [
+        "L_k"
+      ]
+    },
+    {
+      "residue_b_t": [
+        2,
+        1
+      ],
+      "usual_guard_word": [
+        "R",
+        "C3"
+      ],
+      "primitive_chain_word": [
+        "L_k"
+      ]
+    },
+    {
+      "residue_b_t": [
+        2,
+        2
+      ],
+      "usual_guard_word": [
+        "C3"
+      ],
+      "primitive_chain_word": [
+        "C3",
+        "L_k"
+      ]
+    }
+  ],
+  "literal_renewals": [
+    {
+      "k": 2,
+      "rows": [
+        476,
+        29,
+        24,
+        16,
+        32,
+        15,
+        62,
+        7294,
+        766,
+        255,
+        895,
+        1919,
+        12159,
+        4095
+      ],
+      "source_root": 7,
+      "retained_ports": [
+        12,
+        11
+      ],
+      "root": 11,
+      "source_state": [
+        249,
+        38,
+        135,
+        616
+      ],
+      "state_h_s_q_F": [
+        5907,
+        962,
+        3021,
+        14008
+      ],
+      "root_indegree": 3,
+      "fixed_slot_trace": {
+        "input_slots": [
+          8,
+          7
+        ],
+        "input_active_slot": 1,
+        "word": [
+          3,
+          3,
+          4,
+          5
+        ],
+        "output_slots": [
+          11,
+          12
+        ],
+        "output_active_slot": 0
+      }
+    },
+    {
+      "k": 3,
+      "rows": [
+        476,
+        29,
+        24,
+        16,
+        32,
+        15,
+        62,
+        15486,
+        766,
+        255,
+        895,
+        1919,
+        3967,
+        24447,
+        8191
+      ],
+      "source_root": 7,
+      "retained_ports": [
+        13,
+        12
+      ],
+      "root": 12,
+      "source_state": [
+        249,
+        38,
+        135,
+        616
+      ],
+      "state_h_s_q_F": [
+        11679,
+        1924,
+        5907,
+        27476
+      ],
+      "root_indegree": 3,
+      "fixed_slot_trace": {
+        "input_slots": [
+          8,
+          7
+        ],
+        "input_active_slot": 1,
+        "word": [
+          3,
+          3,
+          3,
+          4,
+          5
+        ],
+        "output_slots": [
+          12,
+          13
+        ],
+        "output_active_slot": 0
+      }
+    }
+  ],
+  "formula_only_long_address": [
+    {
+      "k": 2,
+      "q": 3021,
+      "s": 962,
+      "H": 5907
+    },
+    {
+      "k": 3,
+      "q": 134865,
+      "s": 43948,
+      "H": 266709
+    },
+    {
+      "k": 2,
+      "q": 3089811,
+      "s": 984982,
+      "H": 6044757
+    },
+    {
+      "k": 5,
+      "q": 542580867,
+      "s": 179830352,
+      "H": 1082071923
+    },
+    {
+      "k": 4,
+      "q": 48240260187,
+      "s": 15899226440,
+      "H": 95937939507
+    },
+    {
+      "k": 2,
+      "q": 1107355660833,
+      "s": 353038466882,
+      "H": 2166471061479
+    },
+    {
+      "k": 3,
+      "q": 49445082655989,
+      "s": 16112575665052,
+      "H": 97782809651145
+    },
+    {
+      "k": 2,
+      "q": 1132807478444415,
+      "s": 361120798596142,
+      "H": 2216169874232841
+    }
+  ],
+  "status": "Universal law proved in CHAIN_REUSE.md; bounded literal DP controls"
+}
