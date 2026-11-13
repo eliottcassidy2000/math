@@ -1,0 +1,197 @@
+{
+  "status": "VERIFIED",
+  "census_scope": "FINITE-EXACT orders 1 through 7",
+  "optimized_unoptimized_identical": true,
+  "witnesses": [
+    {
+      "code": 1162,
+      "rows": [
+        44,
+        17,
+        2,
+        6,
+        13,
+        30,
+        63
+      ],
+      "H_permutations": 25,
+      "sccs": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          6
+        ]
+      ]
+    },
+    {
+      "code": 33931,
+      "rows": [
+        110,
+        16,
+        2,
+        6,
+        13,
+        30,
+        62
+      ],
+      "H_permutations": 25,
+      "sccs": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "code": 1163,
+      "rows": [
+        46,
+        16,
+        2,
+        6,
+        13,
+        30,
+        63
+      ],
+      "H_permutations": 15,
+      "sccs": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          6
+        ]
+      ]
+    },
+    {
+      "code": 33930,
+      "rows": [
+        108,
+        17,
+        2,
+        6,
+        13,
+        30,
+        62
+      ],
+      "H_permutations": 49,
+      "sccs": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "code": 32897,
+      "rows": [
+        66,
+        16,
+        3,
+        7,
+        13,
+        31,
+        62
+      ],
+      "H_permutations": 59,
+      "sccs": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "code": 37065,
+      "rows": [
+        90,
+        16,
+        35,
+        6,
+        12,
+        27,
+        62
+      ],
+      "H_permutations": 61,
+      "sccs": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ]
+    }
+  ],
+  "independent_literal_spectra": [
+    {
+      "n": 1,
+      "spectrum": [
+        1
+      ]
+    },
+    {
+      "n": 2,
+      "spectrum": [
+        1
+      ]
+    },
+    {
+      "n": 3,
+      "spectrum": [
+        1,
+        3
+      ]
+    },
+    {
+      "n": 4,
+      "spectrum": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "n": 5,
+      "spectrum": [
+        1,
+        3,
+        5,
+        9,
+        11,
+        13,
+        15
+      ]
+    }
+  ],
+  "census_source_sha256": "82a9cfcdbcaf29df169a7053c0299144a9c069207177c8cef8dbd5cec2a86daa"
+}

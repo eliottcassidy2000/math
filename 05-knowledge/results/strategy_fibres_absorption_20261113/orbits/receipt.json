@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "scope": "Exact all-word reduction plus complete finite scalar caps; no coverage theorem",
+  "cap": 10001,
+  "full_states": 517983,
+  "reset_free_states": 408813,
+  "full_shortest_depth_max": 15,
+  "reset_free_shortest_depth_max": 15,
+  "full_values": 4989,
+  "reset_free_values": 4985,
+  "reset_return_values": 4976,
+  "reset_added_values": [
+    55,
+    559,
+    951,
+    1837
+  ],
+  "full_missing_allowed_odds": [
+    47,
+    67,
+    127,
+    163,
+    173,
+    331,
+    491,
+    511,
+    799,
+    959
+  ],
+  "prime_lane_misses": [
+    47,
+    67,
+    127,
+    163,
+    173,
+    331,
+    491
+  ],
+  "seven_prime_lane_misses": [
+    511,
+    959
+  ],
+  "labelled_word_identity_checks": 402234,
+  "actual_rooted_graph_identity_checks": 2380,
+  "independent_direct_state_checks": 183,
+  "source_pins": [
+    {
+      "path": "05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/out/generators_base2_13.txt",
+      "sha256_lf": "167b09b501b63f299de7b1c3a59926284a069a9189587af2ccbd18a750f10bf6"
+    }
+  ]
+}

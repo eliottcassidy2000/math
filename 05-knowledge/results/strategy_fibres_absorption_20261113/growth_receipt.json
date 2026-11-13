@@ -1,0 +1,83 @@
+{
+  "status": "VERIFIED finite controls; universal proof in GROWTH.md",
+  "universe": "all labelled tournaments of order 0 through 6; no filters",
+  "tournaments": 33868,
+  "all_start_prefix_comparisons": 940064,
+  "permutation_cross_checks_through_order5": 1100,
+  "census": [
+    {
+      "order": 0,
+      "labelled_tournaments": 1,
+      "largest_positive_prefix_depth": 0
+    },
+    {
+      "order": 1,
+      "labelled_tournaments": 1,
+      "largest_positive_prefix_depth": 0
+    },
+    {
+      "order": 2,
+      "labelled_tournaments": 2,
+      "largest_positive_prefix_depth": 0
+    },
+    {
+      "order": 3,
+      "labelled_tournaments": 8,
+      "largest_positive_prefix_depth": 1
+    },
+    {
+      "order": 4,
+      "labelled_tournaments": 64,
+      "largest_positive_prefix_depth": 2
+    },
+    {
+      "order": 5,
+      "labelled_tournaments": 1024,
+      "largest_positive_prefix_depth": 3
+    },
+    {
+      "order": 6,
+      "labelled_tournaments": 32768,
+      "largest_positive_prefix_depth": 4
+    }
+  ],
+  "threshold_targets_checked": 5004,
+  "threshold_examples": [
+    {
+      "h": 5,
+      "vertices": 2,
+      "word": "IU"
+    },
+    {
+      "h": 7,
+      "vertices": 3,
+      "word": "IUU"
+    },
+    {
+      "h": 17,
+      "vertices": 4,
+      "word": "IUIU"
+    },
+    {
+      "h": 21,
+      "vertices": 4,
+      "word": "IUUI"
+    },
+    {
+      "h": 1000000000000000000000000000001,
+      "vertices": 128,
+      "word": "IUUIUIIUUIUIUUIUUIUIUUIUUIUUIUUIIUUIUIUUIIIUIIUUIUUIUIIIUIUIIIIIIIIUIUUIUIUUIIUUIUIIUIUUIUIUIUIUUIUUIIUUIUUIUUIUIUUIIUUIUIUUIIIU"
+    },
+    {
+      "h": 147808829414345923316083210206383297601,
+      "vertices": 80,
+      "word": "IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII"
+    },
+    {
+      "h": 170141183460469231731687303715884105727,
+      "vertices": 161,
+      "word": "IIIUUIIIUIIIUIUUIUUIUIUIUUIIIUIUUIUIIUIUIUIUUIIUIIIUIIUUIUIUUIUIUIIUUIIIUUIUUIUUIUUIUUIIIUIUUIUIUUIUIUIUIUUIUIUIUIIIUUIUUIUIUUIUIIUUIUIIIIUIUUIUIUIUIUUIUUIUIUIUU"
+    }
+  ],
+  "source_sha256": "0035b91d6a9744b0e57ecb3e51ebe329f01f796c3d2c7fac9508e38107f354f2"
+}

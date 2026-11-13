@@ -3,6 +3,14 @@
 [Research packet](../05-knowledge/results/eight_nine_twentyseven_20261112/README.md).
 **PROVED IN NOTES / FINITE-EXACT; Chan–Pak OPEN.**
 
+[Strategy reframe: supply, transport and terminal absorption](../05-knowledge/results/strategy_fibres_absorption_20261113/README.md):
+exact reset/short-word pruning preserves prime and7p lanes; five-atom Markov
+basis has a sharp one-singleton helper theorem and prescribed P2 inversion.
+Complete three-arc unit rewiring through7 joins exactly the spectrum blocks;
+H25 neutral core absorption reaches the strong rank-one reset N², but every
+nonsingleton single-port inflation fails. Pure-birth positive depth is
+logarithmically bounded; unbounded critical supply and terminal capacity OPEN.
+
 [Changed-port recursion and exact language limits](../05-knowledge/results/endpoint_context_recursion_20261113/README.md):
 four-coordinate entry/exit compiler; explicit escapes for1/3,4/9,6/11;
 renewable H5 repair pair with recurrence X_(k+2)=8X_(k+1)+X_k.
