@@ -1,0 +1,28 @@
+{
+  "status": "PASS; runtime unchanged, narrowly reviewed nonruntime prose repin permitted",
+  "integrated_origin_main": "0cc6ceb9b0",
+  "runtime_python_files": 6,
+  "runtime_gzip_banks": 1,
+  "runtime_input_hashes_unchanged": {
+    "05-knowledge/results/berggren_target_return_20261111/reset/funnel_six_state.py": "662c41a3f9dc6fbd1fe6c5d34ee30ac4e737d5371390dbf7dfacf342368a87f6",
+    "05-knowledge/results/chanpak_five_core_bridges_20261110/alternatives/check.py": "f35eadd3bcb884afa3c11ca05fcf5fbaf706c72643dede8607b13df06d62d2c7",
+    "05-knowledge/results/metagraph_aspect_sequences_20261111/records.jsonl.gz": "93b37da5eb037ec5eddc3d9e9156404480e9a9d81badf6359f91646cd8ed41fc",
+    "05-knowledge/results/polarized_path_calculus_20261103/explore.py": "343b6168f5116275538a87959e6a0949ad8518aaede6d5a5952479069255bbb4",
+    "05-knowledge/results/polarized_path_calculus_20261103/recognize.py": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85",
+    "05-knowledge/results/two_entry_funnels_20261103/research.py": "75e0188ab2763faa84637c8ed07a05a0978e9034b3fc3a91de1661162cb6a387",
+    "05-knowledge/results/two_entry_funnels_20261103/verify.py": "7f982b5173292ec904d99bc75f074cd66ee885674bda361c0142aed8f9a30de1"
+  },
+  "changed_nonruntime_pins": [
+    {
+      "path": "01-canon/MISTAKES.md",
+      "before_sha256": "43ee3d5a5831bc9f709899740cbbd1d224521387dcdf988fa1e349e30743ff1a",
+      "after_sha256": "905eab858c8b9eedb438b6b6f47ab0d6c34352101479218ba790a0d6d0578d8c"
+    },
+    {
+      "path": "05-knowledge/results/entry_resources_20261113/README.md",
+      "before_sha256": "6730300f86efe0d5924153b1bb02f044de55bdccde1ff6f5fbb940e64751bdab",
+      "after_sha256": "3e44b1cc55eafcd4d3b23f25ca91ed856357c7ed284c7de7977090b12dd14f1c"
+    }
+  ],
+  "review": "Read-only ORIG_HEAD..HEAD comparison: MISTAKES adds the corrected endpoint exclusion in a Paley one-vertex formula; entry_resources README adds its209-divisibility summary. Neither modifies this packet counting code or data. No mathematical receipt was recomputed for prose-only drift. New incoming results retain their own audit/dependency boundaries in INCOMING.md."
+}

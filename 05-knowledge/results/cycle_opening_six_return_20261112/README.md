@@ -2,7 +2,7 @@
 
 **PROVED IN NOTES / FINITE-EXACT; Chan–Pak remains OPEN.** Extended research session, 12–13 November2026. First published checkpoint: `79a49f99d2469ba0ee902ffaf35a6a4107ef37e9`. Proof statuses record the internal independent reviews below, not a literature-priority claim or external referee certification.
 
-[Synthesis](SYNTHESIS.md) · [Inherited and incoming mathematics](INCOMING.md) · [Concept board](BOARD.md)
+[Synthesis](SYNTHESIS.md) · [Inherited and incoming mathematics](INCOMING.md) · [Final incoming audit](INCOMING_FINAL.md) · [Concept board](BOARD.md)
 
 The main advance is a uniform source return controlling the **full** Hamiltonian-path count. A five-core family with H=45·2^k+7 has a literal two-arc switch from growing defect6·2^k+1 to1. After two births, a larger named replacement restores defect1 at the exact target135·2^k+23. It retains the same physical root and incoming port. The theorem works coefficientwise for arbitrary nonempty substituted tournament modules; the unit offset requires H(module)=1.
 

@@ -35,3 +35,5 @@ As a cheap hostile probe, the raw and returned examples in compiler/MODULE_RETUR
 [Entry resources](../entry_resources_20261113/README.md), commit14315b9df9, classifies a finite universal-gadget universe and shows why only padding survives its uniform entry rules. Its graceful-forest repair is a different positive resource model; no tournament realization follows merely from that analogy.
 
 Session293's [sixfold transport](../session293_cycle_returns_20261113/six_history/PROOF.md) and [review](../session293_cycle_returns_20261113/audit/REVIEW_SIX.md) supply a stronger positive-mass hidden-state bound than the elementary finite-order integer lemma recovered in our dynamics note. This overlap is credited there. Our new finite-resource controller is distinguished by its actual strong tournament realization and its exact integral hexagon classification; the compiler's six-coordinate minimality concerns observation rank, a separate statement.
+
+The final Session294/295 integration is audited separately in [INCOMING_FINAL](INCOMING_FINAL.md). It preserves the distinction between changing homogeneous module boundaries and introducing individually selective ports.
