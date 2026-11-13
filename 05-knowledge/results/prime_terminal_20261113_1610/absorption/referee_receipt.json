@@ -1,0 +1,177 @@
+{
+  "status": "ACCEPTED independent finite controls; proof review REFEREE.md",
+  "generic_small_root_cases": 285,
+  "literal_module_controls": [
+    {
+      "module": "TT1",
+      "h": 1,
+      "p": 2,
+      "full_counts": [
+        25,
+        77,
+        79
+      ],
+      "G_source_root1": 27
+    },
+    {
+      "module": "TT2",
+      "h": 1,
+      "p": 4,
+      "full_counts": [
+        49,
+        149,
+        151
+      ],
+      "G_source_root1": 51
+    },
+    {
+      "module": "TT3",
+      "h": 1,
+      "p": 8,
+      "full_counts": [
+        97,
+        293,
+        295
+      ],
+      "G_source_root1": 99
+    },
+    {
+      "module": "C3",
+      "h": 3,
+      "p": 12,
+      "full_counts": [
+        147,
+        447,
+        453
+      ],
+      "G_source_root1": 153
+    },
+    {
+      "module": "Q4",
+      "h": 5,
+      "p": 32,
+      "full_counts": [
+        389,
+        1177,
+        1187
+      ],
+      "G_source_root1": 399
+    }
+  ],
+  "failure_of_automatic_rearm": [
+    {
+      "name": "T2",
+      "G_minus_H": [
+        202,
+        105,
+        8,
+        44,
+        48,
+        76,
+        9
+      ]
+    },
+    {
+      "name": "T4",
+      "G_minus_H": [
+        22,
+        0,
+        117,
+        26,
+        223,
+        279,
+        289,
+        509
+      ]
+    }
+  ],
+  "alternate_heads": [
+    {
+      "rows": [
+        22,
+        124,
+        88,
+        113,
+        96,
+        69,
+        1
+      ],
+      "root": 6,
+      "H": 77,
+      "G": 79
+    },
+    {
+      "rows": [
+        64,
+        17,
+        67,
+        7,
+        13,
+        31,
+        58
+      ],
+      "root": 0,
+      "H": 79,
+      "G": 81
+    }
+  ],
+  "two_port_universal_certificate": {
+    "pairs": 21,
+    "sign_cases": 11,
+    "lower_bound_cases": 6,
+    "mod4_cases": 4
+  },
+  "three_port_controls": [
+    {
+      "b": 1,
+      "h": 1,
+      "p": 2,
+      "counts": [
+        25,
+        25
+      ]
+    },
+    {
+      "b": 2,
+      "h": 25,
+      "p": 304,
+      "counts": [
+        2725,
+        8179
+      ]
+    },
+    {
+      "b": 3,
+      "h": 5,
+      "p": 32,
+      "counts": [
+        1805,
+        1971
+      ]
+    }
+  ],
+  "root_frame_controls": {
+    "bezout": [
+      199,
+      599,
+      601
+    ],
+    "shifted": [
+      {
+        "k": 3,
+        "source": 199,
+        "target": 599
+      },
+      {
+        "k": 4,
+        "source": 415,
+        "target": 1247
+      },
+      {
+        "k": 5,
+        "source": 847,
+        "target": 2543
+      }
+    ]
+  }
+}

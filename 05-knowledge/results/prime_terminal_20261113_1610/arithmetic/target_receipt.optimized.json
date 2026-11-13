@@ -1,0 +1,350 @@
+{
+  "status": "PASS",
+  "Q_power_unit_target_factors": [
+    {
+      "r": 1,
+      "source": 475,
+      "digit": 2,
+      "target": 1427,
+      "factorization": [
+        1427
+      ],
+      "prime": true,
+      "seven_prime": false
+    },
+    {
+      "r": 1,
+      "source": 475,
+      "digit": 4,
+      "target": 1429,
+      "factorization": [
+        1429
+      ],
+      "prime": true,
+      "seven_prime": false
+    },
+    {
+      "r": 2,
+      "source": 15335,
+      "digit": 2,
+      "target": 46007,
+      "factorization": [
+        13,
+        3539
+      ],
+      "prime": false,
+      "seven_prime": false
+    },
+    {
+      "r": 2,
+      "source": 15335,
+      "digit": 4,
+      "target": 46009,
+      "factorization": [
+        139,
+        331
+      ],
+      "prime": false,
+      "seven_prime": false
+    },
+    {
+      "r": 3,
+      "source": 491395,
+      "digit": 2,
+      "target": 1474187,
+      "factorization": [
+        11,
+        13,
+        13,
+        13,
+        61
+      ],
+      "prime": false,
+      "seven_prime": false
+    },
+    {
+      "r": 3,
+      "source": 491395,
+      "digit": 4,
+      "target": 1474189,
+      "factorization": [
+        17,
+        17,
+        5101
+      ],
+      "prime": false,
+      "seven_prime": false
+    },
+    {
+      "r": 4,
+      "source": 15728015,
+      "digit": 2,
+      "target": 47184047,
+      "factorization": [
+        47184047
+      ],
+      "prime": true,
+      "seven_prime": false
+    },
+    {
+      "r": 4,
+      "source": 15728015,
+      "digit": 4,
+      "target": 47184049,
+      "factorization": [
+        11,
+        19,
+        61,
+        3701
+      ],
+      "prime": false,
+      "seven_prime": false
+    },
+    {
+      "r": 5,
+      "source": 503313355,
+      "digit": 2,
+      "target": 1509940067,
+      "factorization": [
+        37,
+        83,
+        491677
+      ],
+      "prime": false,
+      "seven_prime": false
+    },
+    {
+      "r": 5,
+      "source": 503313355,
+      "digit": 4,
+      "target": 1509940069,
+      "factorization": [
+        11,
+        10883,
+        12613
+      ],
+      "prime": false,
+      "seven_prime": false
+    },
+    {
+      "r": 6,
+      "source": 16106111735,
+      "digit": 2,
+      "target": 48318335207,
+      "factorization": [
+        191,
+        252975577
+      ],
+      "prime": false,
+      "seven_prime": false
+    },
+    {
+      "r": 6,
+      "source": 16106111735,
+      "digit": 4,
+      "target": 48318335209,
+      "factorization": [
+        23,
+        2011,
+        1044653
+      ],
+      "prime": false,
+      "seven_prime": false
+    }
+  ],
+  "source_replacements": [
+    {
+      "target": 1427,
+      "core_order": 8,
+      "core_rank": 58,
+      "core_words": [
+        "11",
+        "",
+        "01"
+      ],
+      "tail_address": 0,
+      "tail_word": "",
+      "order": 10,
+      "rows": [
+        66,
+        452,
+        457,
+        499,
+        487,
+        455,
+        384,
+        257,
+        513,
+        255
+      ],
+      "root": 9,
+      "sole_predecessor": 8,
+      "H_starting_at_root": 110,
+      "H_after_root_deletion": 111,
+      "ready_defect": 1,
+      "parent_six_state": [
+        111,
+        44,
+        120,
+        4692,
+        1317,
+        2573
+      ],
+      "cores_tried": 148,
+      "inverse_nodes": 164,
+      "verification": "Independent full subset path DP, including rooted starts and deletion",
+      "transitive_spine": null,
+      "apex_word": null
+    },
+    {
+      "target": 1429,
+      "core_order": 1,
+      "core_rank": 0,
+      "core_words": [],
+      "tail_address": 380,
+      "tail_word": "001111101",
+      "order": 12,
+      "rows": [
+        1022,
+        1020,
+        1016,
+        2032,
+        2016,
+        1984,
+        1920,
+        1792,
+        512,
+        1024,
+        2311,
+        1023
+      ],
+      "root": 11,
+      "sole_predecessor": 10,
+      "H_starting_at_root": 668,
+      "H_after_root_deletion": 669,
+      "ready_defect": 1,
+      "parent_six_state": [
+        669,
+        1,
+        899,
+        64596,
+        761,
+        43345
+      ],
+      "cores_tried": 1,
+      "inverse_nodes": 15,
+      "verification": "Independent actual one-apex two-slot path DP and inversion formula",
+      "transitive_spine": [
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "apex_word": "11110000010"
+    },
+    {
+      "target": 47184047,
+      "core_order": 1,
+      "core_rank": 0,
+      "core_words": [],
+      "tail_address": 13992709,
+      "tail_word": "101000001100000110101011",
+      "order": 27,
+      "rows": [
+        33554430,
+        67108860,
+        33554424,
+        67108848,
+        33554400,
+        33554368,
+        33554304,
+        33554176,
+        33553920,
+        67107840,
+        67106816,
+        33550336,
+        33546240,
+        33538048,
+        33521664,
+        33488896,
+        66977792,
+        66846720,
+        33030144,
+        66060288,
+        31457280,
+        62914560,
+        25165824,
+        50331648,
+        33554432,
+        72677877,
+        33554431
+      ],
+      "root": 26,
+      "sole_predecessor": 25,
+      "H_starting_at_root": 19198628,
+      "H_after_root_deletion": 19198629,
+      "ready_defect": 1,
+      "parent_six_state": [
+        19198629,
+        1,
+        23019093,
+        823905414240,
+        27985419,
+        562132421237
+      ],
+      "cores_tried": 1,
+      "inverse_nodes": 2047,
+      "verification": "Independent actual one-apex two-slot path DP and inversion formula",
+      "transitive_spine": [
+        26,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "apex_word": "11010111110011111001010100"
+    },
+    {
+      "target": 317,
+      "status": "NO HIT IN DECLARED BANK",
+      "core_order_cap": 10,
+      "distinct_core_observers": 1596,
+      "inverse_nodes": 1602,
+      "scope": "Complete inherited arbitrary-tail inverse for each listed core; not a global absence claim"
+    }
+  ],
+  "prime47184047_trial_division_bound": 6869,
+  "inverse_source_pin": {
+    "path": "05-knowledge/results/changing_core_returns_20261113/returns/inverse.py",
+    "sha256_lf": "f1480ce89ff505cb8f4244d8e88663184e3eb38df1eeb373a0d63503ec49d6fe"
+  },
+  "scope": "Successful target witnesses with ready roots; no retained-Q-module repair or source-to-target transition is claimed"
+}

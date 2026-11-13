@@ -1,0 +1,109 @@
+{
+  "status": "FINITE-EXACT controls for the proved response statements",
+  "bezout": [
+    {
+      "rows": [
+        2,
+        4,
+        25,
+        19,
+        3
+      ],
+      "root": 1,
+      "ordered_runs": {
+        "1": 9,
+        "2": 7
+      },
+      "Q_inflation_H": 199
+    },
+    {
+      "rows": [
+        2,
+        12,
+        73,
+        81,
+        103,
+        79,
+        3
+      ],
+      "root": 5,
+      "ordered_runs": {
+        "1": 45,
+        "2": 17
+      },
+      "Q_inflation_H": 599
+    },
+    {
+      "rows": [
+        2,
+        12,
+        9,
+        17,
+        103,
+        79,
+        15
+      ],
+      "root": 5,
+      "ordered_runs": {
+        "1": 41,
+        "2": 18
+      },
+      "Q_inflation_H": 601
+    }
+  ],
+  "shifted_controls": [
+    {
+      "k": 1,
+      "source_H": 37,
+      "source_order": 6
+    },
+    {
+      "k": 2,
+      "source_H": 91,
+      "source_order": 7
+    },
+    {
+      "k": 3,
+      "source_H": 199,
+      "source_order": 8,
+      "target_H": 599,
+      "target_order": 9
+    },
+    {
+      "k": 4,
+      "source_H": 415,
+      "source_order": 9,
+      "target_H": 1247,
+      "target_order": 10
+    },
+    {
+      "k": 5,
+      "source_H": 847,
+      "source_order": 10,
+      "target_H": 2543,
+      "target_order": 11
+    }
+  ],
+  "order9_audit": {
+    "target_presentations": 80,
+    "two_run_root_recounts": 534,
+    "positive_presentations": 18,
+    "negative_unshifted_profiles": [
+      [
+        81,
+        -49
+      ],
+      [
+        81,
+        -47
+      ]
+    ],
+    "larger_shift_absence_scope": "order<=9 only; no all-order claim for shifted negative charts"
+  },
+  "source_sha256": {
+    "prime_ternary_lift_20261113/frames.json.gz": "dc0bd2d253e2c4348c265b582949e99cf2909fcbea88a8f155b2192d4aa6dc3d",
+    "multicore_metagraph_20261113/rooted_growth.json.gz": "3bf25d80ade2bcb7f3af880dd0b9c31e58766529c4be8b99d79a2d8efaa999f5",
+    "prime_terminal_20261113_1610/frames/rooted9.cpp": "9c846cf0e506f1e2bb253e947388c99ac397362bf2d3128abb036bc150e93df1",
+    "prime_terminal_20261113_1610/frames/search.py": "f91f1e2909ffd8b11aef9b145190307b1ad4970e90313961a174c1cecaa5c2a9"
+  }
+}

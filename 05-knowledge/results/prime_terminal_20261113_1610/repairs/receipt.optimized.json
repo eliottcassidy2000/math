@@ -1,0 +1,1819 @@
+{
+  "status": "FINITE-EXACT",
+  "two_port_obstruction": {
+    "pairs": [
+      {
+        "ports": [
+          0,
+          1
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": -23
+          },
+          {
+            "runs": [
+              1,
+              3
+            ],
+            "coefficient": -14
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -9
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": -79
+          },
+          {
+            "runs": [
+              2,
+              3
+            ],
+            "coefficient": -78
+          },
+          {
+            "runs": [
+              2,
+              4
+            ],
+            "coefficient": -12
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": -6
+          },
+          {
+            "runs": [
+              3,
+              2
+            ],
+            "coefficient": -58
+          },
+          {
+            "runs": [
+              3,
+              3
+            ],
+            "coefficient": -100
+          },
+          {
+            "runs": [
+              3,
+              4
+            ],
+            "coefficient": -36
+          },
+          {
+            "runs": [
+              4,
+              2
+            ],
+            "coefficient": -6
+          },
+          {
+            "runs": [
+              4,
+              3
+            ],
+            "coefficient": -30
+          },
+          {
+            "runs": [
+              4,
+              4
+            ],
+            "coefficient": -24
+          }
+        ],
+        "certificate": "all coefficients negative"
+      },
+      {
+        "ports": [
+          0,
+          2
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -9
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": -8
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": -6
+          },
+          {
+            "runs": [
+              3,
+              2
+            ],
+            "coefficient": -4
+          }
+        ],
+        "certificate": "all coefficients negative"
+      },
+      {
+        "ports": [
+          0,
+          3
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -9
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": -8
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": -6
+          },
+          {
+            "runs": [
+              3,
+              2
+            ],
+            "coefficient": -4
+          }
+        ],
+        "certificate": "all coefficients negative"
+      },
+      {
+        "ports": [
+          0,
+          4
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": 22
+          },
+          {
+            "runs": [
+              1,
+              3
+            ],
+            "coefficient": 12
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -9
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": 63
+          },
+          {
+            "runs": [
+              2,
+              3
+            ],
+            "coefficient": 80
+          },
+          {
+            "runs": [
+              2,
+              4
+            ],
+            "coefficient": 18
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": -6
+          },
+          {
+            "runs": [
+              3,
+              2
+            ],
+            "coefficient": 30
+          },
+          {
+            "runs": [
+              3,
+              3
+            ],
+            "coefficient": 96
+          },
+          {
+            "runs": [
+              3,
+              4
+            ],
+            "coefficient": 42
+          },
+          {
+            "runs": [
+              4,
+              3
+            ],
+            "coefficient": 24
+          },
+          {
+            "runs": [
+              4,
+              4
+            ],
+            "coefficient": 24
+          }
+        ],
+        "certificate": "nontrivial first module: difference2mod4"
+      },
+      {
+        "ports": [
+          0,
+          5
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -9
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": -21
+          },
+          {
+            "runs": [
+              2,
+              3
+            ],
+            "coefficient": -8
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": -6
+          },
+          {
+            "runs": [
+              3,
+              2
+            ],
+            "coefficient": -14
+          },
+          {
+            "runs": [
+              3,
+              3
+            ],
+            "coefficient": -8
+          }
+        ],
+        "certificate": "all coefficients negative"
+      },
+      {
+        "ports": [
+          0,
+          6
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": 10
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -9
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": 10
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": -6
+          }
+        ],
+        "certificate": "nontrivial first module: difference2mod4"
+      },
+      {
+        "ports": [
+          1,
+          2
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -23
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": -32
+          },
+          {
+            "runs": [
+              2,
+              3
+            ],
+            "coefficient": -12
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": -14
+          },
+          {
+            "runs": [
+              3,
+              2
+            ],
+            "coefficient": -24
+          },
+          {
+            "runs": [
+              3,
+              3
+            ],
+            "coefficient": -12
+          }
+        ],
+        "certificate": "all coefficients negative"
+      },
+      {
+        "ports": [
+          1,
+          3
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -23
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": -32
+          },
+          {
+            "runs": [
+              2,
+              3
+            ],
+            "coefficient": -12
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": -14
+          },
+          {
+            "runs": [
+              3,
+              2
+            ],
+            "coefficient": -24
+          },
+          {
+            "runs": [
+              3,
+              3
+            ],
+            "coefficient": -12
+          }
+        ],
+        "certificate": "all coefficients negative"
+      },
+      {
+        "ports": [
+          1,
+          4
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": 22
+          },
+          {
+            "runs": [
+              1,
+              3
+            ],
+            "coefficient": 12
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -23
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": 29
+          },
+          {
+            "runs": [
+              2,
+              3
+            ],
+            "coefficient": 54
+          },
+          {
+            "runs": [
+              2,
+              4
+            ],
+            "coefficient": 12
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": -14
+          },
+          {
+            "runs": [
+              3,
+              2
+            ],
+            "coefficient": -4
+          },
+          {
+            "runs": [
+              3,
+              3
+            ],
+            "coefficient": 58
+          },
+          {
+            "runs": [
+              3,
+              4
+            ],
+            "coefficient": 30
+          },
+          {
+            "runs": [
+              4,
+              2
+            ],
+            "coefficient": -6
+          },
+          {
+            "runs": [
+              4,
+              3
+            ],
+            "coefficient": 12
+          },
+          {
+            "runs": [
+              4,
+              4
+            ],
+            "coefficient": 18
+          }
+        ],
+        "certificate": "nontrivial first module: difference2mod4"
+      },
+      {
+        "ports": [
+          1,
+          5
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -23
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": -16
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": -14
+          },
+          {
+            "runs": [
+              3,
+              2
+            ],
+            "coefficient": -10
+          }
+        ],
+        "certificate": "all coefficients negative"
+      },
+      {
+        "ports": [
+          1,
+          6
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": 10
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -23
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": 8
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": -14
+          }
+        ],
+        "certificate": "nontrivial first module: difference2mod4"
+      },
+      {
+        "ports": [
+          2,
+          3
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": -1
+          }
+        ],
+        "certificate": "all coefficients negative"
+      },
+      {
+        "ports": [
+          2,
+          4
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": 22
+          },
+          {
+            "runs": [
+              1,
+              3
+            ],
+            "coefficient": 12
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": 10
+          },
+          {
+            "runs": [
+              2,
+              3
+            ],
+            "coefficient": 8
+          }
+        ],
+        "certificate": "positive after K2>=2H in coordinate1"
+      },
+      {
+        "ports": [
+          2,
+          5
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": -2
+          }
+        ],
+        "certificate": "all coefficients negative"
+      },
+      {
+        "ports": [
+          2,
+          6
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": 10
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": 4
+          }
+        ],
+        "certificate": "positive after K2>=2H in coordinate1"
+      },
+      {
+        "ports": [
+          3,
+          4
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": 22
+          },
+          {
+            "runs": [
+              1,
+              3
+            ],
+            "coefficient": 12
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": 10
+          },
+          {
+            "runs": [
+              2,
+              3
+            ],
+            "coefficient": 8
+          }
+        ],
+        "certificate": "positive after K2>=2H in coordinate1"
+      },
+      {
+        "ports": [
+          3,
+          5
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": -2
+          }
+        ],
+        "certificate": "all coefficients negative"
+      },
+      {
+        "ports": [
+          3,
+          6
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": 10
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": 4
+          }
+        ],
+        "certificate": "positive after K2>=2H in coordinate1"
+      },
+      {
+        "ports": [
+          4,
+          5
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": 22
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": 9
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": 12
+          },
+          {
+            "runs": [
+              3,
+              2
+            ],
+            "coefficient": 6
+          }
+        ],
+        "certificate": "positive after K2>=2H in coordinate0"
+      },
+      {
+        "ports": [
+          4,
+          6
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": 10
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": 22
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": 24
+          },
+          {
+            "runs": [
+              3,
+              1
+            ],
+            "coefficient": 12
+          },
+          {
+            "runs": [
+              3,
+              2
+            ],
+            "coefficient": 12
+          }
+        ],
+        "certificate": "all coefficients positive"
+      },
+      {
+        "ports": [
+          5,
+          6
+        ],
+        "delta": [
+          {
+            "runs": [
+              1,
+              2
+            ],
+            "coefficient": 10
+          },
+          {
+            "runs": [
+              2,
+              1
+            ],
+            "coefficient": -2
+          },
+          {
+            "runs": [
+              2,
+              2
+            ],
+            "coefficient": 5
+          }
+        ],
+        "certificate": "positive after K2>=2H in coordinate1"
+      }
+    ],
+    "literal_DP_checks": 378
+  },
+  "induced_ternary_family": {
+    "source_rows": [
+      44,
+      17,
+      2,
+      6,
+      13,
+      30
+    ],
+    "source_port": 2,
+    "plus2_rows": [
+      110,
+      92,
+      24,
+      112,
+      97,
+      70,
+      4
+    ],
+    "plus2_port": 6,
+    "plus4_rows": [
+      2,
+      8,
+      11,
+      97,
+      15,
+      87,
+      151,
+      63
+    ],
+    "plus4_port": 2,
+    "run_vectors": [
+      [
+        {
+          "runs": [
+            1
+          ],
+          "coefficient": 25
+        },
+        {
+          "runs": [
+            2
+          ],
+          "coefficient": 12
+        }
+      ],
+      [
+        {
+          "runs": [
+            1
+          ],
+          "coefficient": 77
+        },
+        {
+          "runs": [
+            2
+          ],
+          "coefficient": 36
+        }
+      ],
+      [
+        {
+          "runs": [
+            1
+          ],
+          "coefficient": 79
+        },
+        {
+          "runs": [
+            2
+          ],
+          "coefficient": 36
+        }
+      ]
+    ],
+    "marked_source_root": 1,
+    "marked_source_run_vector": [
+      {
+        "runs": [
+          1
+        ],
+        "coefficient": 27
+      },
+      {
+        "runs": [
+          2
+        ],
+        "coefficient": 12
+      }
+    ],
+    "embeddings": [
+      {
+        "source_to_target": {
+          "2": 6,
+          "0": 4,
+          "1": 2,
+          "3": 5,
+          "4": 3,
+          "5": 0
+        },
+        "newborns": [
+          1
+        ],
+        "old_arc_changes": 0,
+        "module_port": 6
+      },
+      {
+        "source_to_target": {
+          "2": 2,
+          "0": 6,
+          "1": 3,
+          "3": 4,
+          "4": 5,
+          "5": 7
+        },
+        "newborns": [
+          0,
+          1
+        ],
+        "old_arc_changes": 0,
+        "module_port": 2
+      }
+    ],
+    "literal_family": [
+      {
+        "m": 1,
+        "source": 25,
+        "plus2": 77,
+        "plus4": 79,
+        "orders": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "m": 2,
+        "source": 49,
+        "plus2": 149,
+        "plus4": 151,
+        "orders": [
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "m": 3,
+        "source": 97,
+        "plus2": 293,
+        "plus4": 295,
+        "orders": [
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "m": 4,
+        "source": 193,
+        "plus2": 581,
+        "plus4": 583,
+        "orders": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "m": 5,
+        "source": 385,
+        "plus2": 1157,
+        "plus4": 1159,
+        "orders": [
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "m": 6,
+        "source": 769,
+        "plus2": 2309,
+        "plus4": 2311,
+        "orders": [
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "m": 7,
+        "source": 1537,
+        "plus2": 4613,
+        "plus4": 4615,
+        "orders": [
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "m": 8,
+        "source": 3073,
+        "plus2": 9221,
+        "plus4": 9223,
+        "orders": [
+          13,
+          14,
+          15
+        ]
+      }
+    ],
+    "cyclic_module_counts": [
+      147,
+      447,
+      453
+    ],
+    "base_child_G_minus_H_by_root": {
+      "plus2": [
+        202,
+        105,
+        8,
+        44,
+        48,
+        76,
+        9
+      ],
+      "plus4": [
+        22,
+        0,
+        117,
+        26,
+        223,
+        279,
+        289,
+        509
+      ]
+    }
+  },
+  "three_port_selector": {
+    "source_coefficients": [
+      {
+        "runs": [
+          1,
+          1,
+          1
+        ],
+        "coefficient": 25
+      },
+      {
+        "runs": [
+          1,
+          2,
+          1
+        ],
+        "coefficient": 42
+      },
+      {
+        "runs": [
+          1,
+          3,
+          1
+        ],
+        "coefficient": 14
+      },
+      {
+        "runs": [
+          2,
+          1,
+          1
+        ],
+        "coefficient": 28
+      },
+      {
+        "runs": [
+          2,
+          2,
+          1
+        ],
+        "coefficient": 95
+      },
+      {
+        "runs": [
+          2,
+          3,
+          1
+        ],
+        "coefficient": 78
+      },
+      {
+        "runs": [
+          2,
+          4,
+          1
+        ],
+        "coefficient": 12
+      },
+      {
+        "runs": [
+          3,
+          1,
+          1
+        ],
+        "coefficient": 6
+      },
+      {
+        "runs": [
+          3,
+          2,
+          1
+        ],
+        "coefficient": 58
+      },
+      {
+        "runs": [
+          3,
+          3,
+          1
+        ],
+        "coefficient": 100
+      },
+      {
+        "runs": [
+          3,
+          4,
+          1
+        ],
+        "coefficient": 36
+      },
+      {
+        "runs": [
+          4,
+          2,
+          1
+        ],
+        "coefficient": 6
+      },
+      {
+        "runs": [
+          4,
+          3,
+          1
+        ],
+        "coefficient": 30
+      },
+      {
+        "runs": [
+          4,
+          4,
+          1
+        ],
+        "coefficient": 24
+      }
+    ],
+    "target_coefficients": [
+      {
+        "runs": [
+          1,
+          1,
+          1
+        ],
+        "coefficient": 25
+      },
+      {
+        "runs": [
+          1,
+          1,
+          2
+        ],
+        "coefficient": 10
+      },
+      {
+        "runs": [
+          1,
+          2,
+          1
+        ],
+        "coefficient": 19
+      },
+      {
+        "runs": [
+          1,
+          2,
+          2
+        ],
+        "coefficient": 8
+      },
+      {
+        "runs": [
+          2,
+          1,
+          1
+        ],
+        "coefficient": 19
+      },
+      {
+        "runs": [
+          2,
+          1,
+          2
+        ],
+        "coefficient": 10
+      },
+      {
+        "runs": [
+          2,
+          2,
+          1
+        ],
+        "coefficient": 16
+      },
+      {
+        "runs": [
+          2,
+          2,
+          2
+        ],
+        "coefficient": 8
+      }
+    ],
+    "formula_examples": [
+      {
+        "b": 1,
+        "module_H": 1,
+        "module_P2": 2,
+        "source": 25,
+        "target": 25
+      },
+      {
+        "b": 1,
+        "module_H": 3,
+        "module_P2": 12,
+        "source": 75,
+        "target": 135
+      },
+      {
+        "b": 1,
+        "module_H": 25,
+        "module_P2": 304,
+        "source": 625,
+        "target": 3165
+      },
+      {
+        "b": 2,
+        "module_H": 1,
+        "module_P2": 2,
+        "source": 109,
+        "target": 63
+      },
+      {
+        "b": 2,
+        "module_H": 3,
+        "module_P2": 12,
+        "source": 327,
+        "target": 345
+      },
+      {
+        "b": 2,
+        "module_H": 25,
+        "module_P2": 304,
+        "source": 2725,
+        "target": 8179
+      },
+      {
+        "b": 3,
+        "module_H": 1,
+        "module_P2": 2,
+        "source": 361,
+        "target": 139
+      },
+      {
+        "b": 3,
+        "module_H": 3,
+        "module_P2": 12,
+        "source": 1083,
+        "target": 765
+      },
+      {
+        "b": 3,
+        "module_H": 25,
+        "module_P2": 304,
+        "source": 9025,
+        "target": 18207
+      },
+      {
+        "b": 4,
+        "module_H": 1,
+        "module_P2": 2,
+        "source": 1117,
+        "target": 291
+      },
+      {
+        "b": 4,
+        "module_H": 3,
+        "module_P2": 12,
+        "source": 3351,
+        "target": 1605
+      },
+      {
+        "b": 4,
+        "module_H": 25,
+        "module_P2": 304,
+        "source": 27925,
+        "target": 38263
+      },
+      {
+        "b": 5,
+        "module_H": 1,
+        "module_P2": 2,
+        "source": 3385,
+        "target": 595
+      },
+      {
+        "b": 5,
+        "module_H": 3,
+        "module_P2": 12,
+        "source": 10155,
+        "target": 3285
+      },
+      {
+        "b": 5,
+        "module_H": 25,
+        "module_P2": 304,
+        "source": 84625,
+        "target": 78375
+      }
+    ],
+    "witness": {
+      "source_rows": [
+        88,
+        37,
+        33,
+        6,
+        14,
+        25,
+        62,
+        5759,
+        2303,
+        383,
+        895,
+        1791,
+        3967
+      ],
+      "target_rows": [
+        8158,
+        36,
+        32,
+        6,
+        14,
+        25,
+        62,
+        5758,
+        2302,
+        382,
+        894,
+        1790,
+        3966
+      ],
+      "H": [
+        2725,
+        8179
+      ],
+      "orders": [
+        13,
+        13
+      ],
+      "target_prime": true
+    }
+  },
+  "actual_source_transfer": {
+    "inherited_five_core": [
+      2,
+      12,
+      1,
+      21,
+      7
+    ],
+    "induced_child": [
+      2,
+      12,
+      33,
+      53,
+      7,
+      19
+    ],
+    "incoming_source": [
+      2,
+      20,
+      9,
+      35,
+      45,
+      7
+    ],
+    "marked_isomorphism": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      3
+    ],
+    "family": [
+      {
+        "k": 1,
+        "source": 9,
+        "target": 29
+      },
+      {
+        "k": 2,
+        "source": 19,
+        "target": 59
+      },
+      {
+        "k": 3,
+        "source": 39,
+        "target": 119
+      },
+      {
+        "k": 4,
+        "source": 79,
+        "target": 239
+      },
+      {
+        "k": 5,
+        "source": 159,
+        "target": 479
+      }
+    ],
+    "neutral_H79_repair": {
+      "source_rows": [
+        2,
+        8,
+        11,
+        97,
+        15,
+        87,
+        151,
+        63
+      ],
+      "target_rows": [
+        10,
+        8,
+        11,
+        96,
+        15,
+        23,
+        183,
+        63
+      ],
+      "minimum_distance_to_A5_TT4_class": 2,
+      "minimizing_bijections": 1,
+      "bijections_checked": 40320,
+      "old_to_A5_TT4": [
+        2,
+        3,
+        1,
+        4,
+        0,
+        5,
+        6,
+        7
+      ],
+      "flipped_arcs": [
+        [
+          0,
+          3
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "single_flip_counts": [
+        97,
+        61
+      ],
+      "module_order": [
+        4,
+        2,
+        0,
+        1
+      ],
+      "ready_root": 3,
+      "before_response": [
+        {
+          "runs": [
+            1
+          ],
+          "coefficient": 79
+        },
+        {
+          "runs": [
+            2
+          ],
+          "coefficient": 36
+        }
+      ],
+      "after_response": [
+        {
+          "runs": [
+            1
+          ],
+          "coefficient": 79
+        },
+        {
+          "runs": [
+            2
+          ],
+          "coefficient": 40
+        }
+      ]
+    },
+    "literal_composition": {
+      "counts": [
+        25,
+        79,
+        79,
+        239,
+        721
+      ],
+      "orders": [
+        6,
+        8,
+        8,
+        9,
+        12
+      ],
+      "H239_rows": [
+        10,
+        8,
+        11,
+        96,
+        15,
+        279,
+        439,
+        63,
+        159
+      ],
+      "H239_newborn_outmask": 159,
+      "H239_to_incoming_S15_TT4": [
+        2,
+        3,
+        1,
+        4,
+        0,
+        5,
+        7,
+        8,
+        6
+      ],
+      "H721_rows": [
+        3594,
+        3592,
+        3595,
+        1632,
+        3599,
+        3607,
+        4023,
+        3647,
+        3775,
+        3072,
+        2048,
+        8
+      ],
+      "H239_to_H721_old_changes": [
+        [
+          5,
+          8
+        ]
+      ],
+      "H721_newborns": [
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  "inherited_helper_pin": {
+    "path": "05-knowledge/results/strategy_fibres_absorption_20261113/fibres/check.py",
+    "sha256_lf": "307bc7491ed59cb9a83c0ef4879554cb6d2365de26f4fc339ad71abf665b33dc"
+  }
+}

@@ -1,0 +1,478 @@
+{
+  "status": "PASS",
+  "scope": "Formal arithmetic forests; physical gates remain conditional except the separately verified finite controls",
+  "arithmetic_cap": 100001,
+  "allowed_targets": 49999,
+  "critical_targets": 11263,
+  "maximum_symbolic_costs": {
+    "gates": [
+      9,
+      96787
+    ],
+    "depth": [
+      9,
+      96787
+    ],
+    "leaves": [
+      10,
+      59049
+    ]
+  },
+  "literal_seeds": [
+    {
+      "H": 1,
+      "rows": [
+        0
+      ],
+      "strong": true
+    },
+    {
+      "H": 3,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "word": "10",
+      "kind": "one",
+      "strong": true
+    },
+    {
+      "H": 5,
+      "rows": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "word": "100",
+      "kind": "one",
+      "strong": true
+    },
+    {
+      "H": 23,
+      "rows": [
+        30,
+        28,
+        56,
+        48,
+        32,
+        3
+      ],
+      "word": "11000",
+      "kind": "one",
+      "strong": true
+    },
+    {
+      "H": 49,
+      "rows": [
+        38,
+        80,
+        122,
+        115,
+        97,
+        66,
+        1
+      ],
+      "word": "10212",
+      "kind": "two",
+      "strong": true
+    },
+    {
+      "H": 63,
+      "rows": [
+        126,
+        252,
+        248,
+        112,
+        96,
+        192,
+        128,
+        25
+      ],
+      "word": "1001100",
+      "kind": "one",
+      "strong": true
+    },
+    {
+      "H": 67,
+      "rows": [
+        86,
+        24,
+        122,
+        113,
+        96,
+        67,
+        2
+      ],
+      "word": "12301",
+      "kind": "two",
+      "strong": true
+    },
+    {
+      "H": 343,
+      "rows": [
+        22,
+        32,
+        506,
+        499,
+        482,
+        449,
+        387,
+        259,
+        3
+      ],
+      "word": "1012000",
+      "kind": "two",
+      "strong": true
+    }
+  ],
+  "independent_permutation_seed_checks": 5,
+  "optimal_factorization": {
+    "improved_targets": 3453,
+    "largest_gate_saving": [
+      5,
+      34895
+    ],
+    "certificate_1367": {
+      "kind": "one_shot_gate",
+      "value": 1367,
+      "gate_cost": 3,
+      "digit": 2,
+      "source_count": 455,
+      "source": {
+        "kind": "product",
+        "value": 455,
+        "gate_cost": 2,
+        "children": [
+          {
+            "kind": "seed",
+            "value": 5,
+            "gate_cost": 0
+          },
+          {
+            "kind": "one_shot_gate",
+            "value": 91,
+            "gate_cost": 2,
+            "digit": 4,
+            "source_count": 29,
+            "source": {
+              "kind": "one_shot_gate",
+              "value": 29,
+              "gate_cost": 1,
+              "digit": 2,
+              "source_count": 9,
+              "source": {
+                "kind": "product",
+                "value": 9,
+                "gate_cost": 0,
+                "children": [
+                  {
+                    "kind": "seed",
+                    "value": 3,
+                    "gate_cost": 0
+                  },
+                  {
+                    "kind": "seed",
+                    "value": 3,
+                    "gate_cost": 0
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "actual_source455_rows": [
+      8182,
+      8188,
+      8184,
+      8177,
+      4064,
+      8128,
+      8064,
+      3840,
+      7680,
+      3072,
+      2048,
+      4096,
+      1680
+    ],
+    "H91_rows": [
+      254,
+      508,
+      504,
+      240,
+      480,
+      192,
+      128,
+      256,
+      105
+    ]
+  },
+  "incoming_frame_controls": [
+    {
+      "module_order": 1,
+      "values": [
+        29,
+        89,
+        91
+      ],
+      "orders": [
+        6,
+        8,
+        9
+      ],
+      "rows": null
+    },
+    {
+      "module_order": 2,
+      "values": [
+        59,
+        179,
+        181
+      ],
+      "orders": [
+        7,
+        9,
+        10
+      ],
+      "rows": null
+    },
+    {
+      "module_order": 3,
+      "values": [
+        119,
+        359,
+        361
+      ],
+      "orders": [
+        8,
+        10,
+        11
+      ],
+      "rows": null
+    },
+    {
+      "module_order": 7,
+      "values": [
+        1919,
+        5759,
+        5761
+      ],
+      "orders": [
+        12,
+        14,
+        15
+      ],
+      "rows": [
+        [
+          254,
+          252,
+          248,
+          240,
+          224,
+          192,
+          128,
+          1280,
+          639,
+          2303,
+          2943,
+          511
+        ],
+        [
+          2,
+          12,
+          9,
+          4081,
+          10215,
+          10183,
+          10119,
+          9991,
+          9735,
+          9223,
+          8199,
+          14327,
+          10239,
+          15
+        ],
+        [
+          16382,
+          32764,
+          32760,
+          16368,
+          32736,
+          32704,
+          32640,
+          32512,
+          32256,
+          31744,
+          30720,
+          12288,
+          8192,
+          16384,
+          6153
+        ]
+      ]
+    }
+  ],
+  "nonunit_module_hostile": {
+    "module": [
+      2,
+      4,
+      1
+    ],
+    "values": [
+      177,
+      537,
+      543
+    ],
+    "actual_digits": [
+      6,
+      12
+    ]
+  },
+  "same_count_source_hostile": {
+    "H": 1919,
+    "factor_counts": [
+      19,
+      101
+    ],
+    "factor_rows": [
+      [
+        30,
+        60,
+        24,
+        48,
+        32,
+        5
+      ],
+      [
+        250,
+        508,
+        505,
+        240,
+        224,
+        192,
+        128,
+        256,
+        121
+      ]
+    ],
+    "canonical_rows": [
+      32734,
+      32764,
+      32728,
+      32752,
+      32736,
+      32709,
+      16000,
+      32512,
+      32320,
+      15360,
+      14336,
+      12288,
+      8192,
+      16384,
+      7744
+    ],
+    "canonical_strong": false,
+    "eligible_strong": true,
+    "eligible_rows": [
+      254,
+      252,
+      248,
+      240,
+      224,
+      192,
+      128,
+      1280,
+      639,
+      2303,
+      2943,
+      511
+    ],
+    "critical_child": 5761
+  },
+  "certificate_5761": {
+    "kind": "one_shot_gate",
+    "value": 5761,
+    "digit": 4,
+    "source_count": 1919,
+    "source": {
+      "kind": "product",
+      "value": 1919,
+      "children": [
+        {
+          "kind": "one_shot_gate",
+          "value": 19,
+          "digit": 4,
+          "source_count": 5,
+          "source": {
+            "kind": "seed",
+            "value": 5
+          }
+        },
+        {
+          "kind": "one_shot_gate",
+          "value": 101,
+          "digit": 2,
+          "source_count": 33,
+          "source": {
+            "kind": "product",
+            "value": 33,
+            "children": [
+              {
+                "kind": "seed",
+                "value": 3
+              },
+              {
+                "kind": "one_shot_gate",
+                "value": 11,
+                "digit": 2,
+                "source_count": 3,
+                "source": {
+                  "kind": "seed",
+                  "value": 3
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "certificate_5761_statistics": [
+    4,
+    3,
+    [
+      [
+        3,
+        2
+      ],
+      [
+        5,
+        1
+      ]
+    ]
+  ],
+  "source_pins": [
+    {
+      "path": "05-knowledge/results/session193_triangulated_proof_20261105/prime_induction/PROOF.md",
+      "sha256_lf": "0143b1c74207a61056c5ffd22230f2a300f4563acd9aa32cf60f8135845a5f82"
+    },
+    {
+      "path": "05-knowledge/results/prime_ternary_lift_20261113/CORE_REPLACEMENTS.md",
+      "sha256_lf": "ad5bc5ffad076975abfdf97c50fe3add107f1276d547cd387f8e490886ac89cd"
+    },
+    {
+      "path": "05-knowledge/results/sixty_three_bridge_20261113/semigroup/PROOF.md",
+      "sha256_lf": "7bbddd1e0fbe98bd8e3b3c7c0dd2ed92e0da2449e613bbad58755296d851ec91"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/history/NEAR_SQUARE_AND_ADJACENT.md",
+      "sha256_lf": "ab5734a1961163b269d364430ab6a96089a2de2559d27633d1984f5dc129beb3"
+    }
+  ]
+}

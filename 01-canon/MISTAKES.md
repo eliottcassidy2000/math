@@ -4,6 +4,22 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13: A filtered extension census dropped its height qualifier
+
+- **Status:** draft scope wording repaired during independent review before checkpoint; [frame search F5](../05-knowledge/results/prime_terminal_20261113_1610/frames/PROOF.md) now says every order-nine tournament with H<=601 is represented.
+- **Minimal witness:** the cyclic order-nine tournament with each vertex beating the next four has H3267 and every vertex deletion has H629. The parent filter H<=601 excludes every one of its deletion presentations.
+- **First failed implication:** a complete ordinary order-eight input bank was mistaken in one sentence for an unfiltered order-nine output universe, after a height filter had been applied.
+- **Repair / strongest survivor:** induced monotonicity guarantees completeness for every selected target count<=601. The all-order exclusions at H113/115 and all positive certificates are unchanged. The receipt's filter and counts were already explicit.
+- **Missing coordinate / new question:** carry inherited filters into the stated output universe even when the unfiltered input bank is complete.
+
+## 2026-11-13: A draft retained-module proof reduced modulo too large a power
+
+- **Status:** local proof-line error repaired during independent audit before checkpoint; [two-run cone C5](../05-knowledge/results/prime_terminal_20261113_1610/absorption/TWO_RUN_CONE.md) is unchanged in its theorem statement.
+- **Minimal witness:** h=125,p=32768 gives45p mod125=60. Thus45p-3h+delta is not congruent to delta modulo h, as the draft acyclic-root paragraph said.
+- **First failed implication:** divisibility of45p by5 was silently strengthened to divisibility by5^r.
+- **Repair / strongest survivor:** reduce modulo5. The source15p-h is divisible by5, so3S+delta is nonzero modulo5 fordelta2/4; every acyclic-root inflation is a multiple ofh and hence of5. The later cyclic-root cone argument remains valid.
+- **Missing coordinate / new question:** retain the exact modulus and its valuation when comparing an affine target with module content. A weaker modulus already proves the required exclusion; no full-power cancellation is needed.
+
 ## 2026-11-13: A preliminary clone probe omitted the internal clone arcs
 
 - **Status:** local exploratory-code error repaired before any theorem claim; [prime-lane core replacements](../05-knowledge/results/prime_ternary_lift_20261113/CORE_REPLACEMENTS.md) use the repaired constructor and explicit tournament-validity controls.

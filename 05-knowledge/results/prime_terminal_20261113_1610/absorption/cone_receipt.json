@@ -1,0 +1,86 @@
+{
+  "status": "VERIFIED finite controls for independently audited TWO_RUN_CONE.md",
+  "universe": "all rooted labelled tournaments n1..5 passing cyclic matching-star guard; three explicit incoming frames",
+  "census": [
+    {
+      "n": 1,
+      "rooted_cyclic_two_run": 0,
+      "upper_equality": 0,
+      "lower_equality": 0
+    },
+    {
+      "n": 2,
+      "rooted_cyclic_two_run": 0,
+      "upper_equality": 0,
+      "lower_equality": 0
+    },
+    {
+      "n": 3,
+      "rooted_cyclic_two_run": 6,
+      "upper_equality": 6,
+      "lower_equality": 6
+    },
+    {
+      "n": 4,
+      "rooted_cyclic_two_run": 144,
+      "upper_equality": 48,
+      "lower_equality": 96
+    },
+    {
+      "n": 5,
+      "rooted_cyclic_two_run": 3200,
+      "upper_equality": 600,
+      "lower_equality": 1080
+    }
+  ],
+  "named_frames": [
+    {
+      "n": 6,
+      "root": 0,
+      "hub_after_possible_converse": 1,
+      "conversed": false,
+      "H": 29,
+      "a2": 15,
+      "B": 3,
+      "classes": {
+        "Q0": 2,
+        "Q1": 11,
+        "D0": 1,
+        "D1": 4
+      },
+      "name": "S"
+    },
+    {
+      "n": 8,
+      "root": 4,
+      "hub_after_possible_converse": 3,
+      "conversed": true,
+      "H": 89,
+      "a2": 45,
+      "B": 9,
+      "classes": {
+        "Q0": 6,
+        "Q1": 35,
+        "D0": 3,
+        "D1": 10
+      },
+      "name": "B2"
+    },
+    {
+      "n": 9,
+      "root": 4,
+      "hub_after_possible_converse": 8,
+      "conversed": false,
+      "H": 91,
+      "a2": 45,
+      "B": 5,
+      "classes": {
+        "Q0": 4,
+        "Q1": 41,
+        "D0": 1,
+        "D1": 4
+      },
+      "name": "B4"
+    }
+  ]
+}

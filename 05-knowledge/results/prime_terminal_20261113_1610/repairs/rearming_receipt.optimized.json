@@ -1,0 +1,583 @@
+{
+  "status": "FINITE-EXACT",
+  "ready_charts": [
+    {
+      "rows": [
+        22,
+        124,
+        88,
+        113,
+        96,
+        69,
+        1
+      ],
+      "root": 6,
+      "module_port": 1,
+      "H_coefficients": [
+        77,
+        45
+      ],
+      "G_coefficients": [
+        79,
+        45
+      ],
+      "plus4_rows": [
+        406,
+        508,
+        472,
+        497,
+        480,
+        453,
+        129,
+        256,
+        64
+      ],
+      "plus4_root_defects": [
+        350,
+        1740,
+        744,
+        1005,
+        539,
+        534,
+        52,
+        50,
+        0
+      ],
+      "one_birth_plus2_cuts": []
+    },
+    {
+      "rows": [
+        64,
+        17,
+        67,
+        7,
+        13,
+        31,
+        58
+      ],
+      "root": 0,
+      "module_port": 5,
+      "H_coefficients": [
+        79,
+        41
+      ],
+      "G_coefficients": [
+        81,
+        41
+      ],
+      "plus4_rows": [
+        192,
+        401,
+        451,
+        391,
+        397,
+        415,
+        442,
+        256,
+        1
+      ],
+      "plus4_root_defects": [
+        60,
+        478,
+        642,
+        774,
+        648,
+        1998,
+        440,
+        58,
+        0
+      ],
+      "one_birth_plus2_cuts": []
+    },
+    {
+      "rows": [
+        4,
+        5,
+        80,
+        7,
+        43,
+        15,
+        187,
+        63
+      ],
+      "root": 2,
+      "module_port": 0,
+      "H_coefficients": [
+        79,
+        40
+      ],
+      "G_coefficients": [
+        81,
+        40
+      ],
+      "plus4_rows": [
+        772,
+        773,
+        336,
+        775,
+        811,
+        783,
+        955,
+        831,
+        512,
+        4
+      ],
+      "plus4_root_defects": [
+        323,
+        607,
+        82,
+        1035,
+        2088,
+        1678,
+        2716,
+        4478,
+        78,
+        0
+      ],
+      "one_birth_plus2_cuts": [
+        175
+      ]
+    }
+  ],
+  "catalogue": {
+    "scope": "complete inherited ordinary order8 bank, selected H values; lower frames embed by neutral prefix",
+    "class_counts": {
+      "37": 19,
+      "293": 42,
+      "199": 24,
+      "295": 34,
+      "581": 12,
+      "583": 20,
+      "233": 34,
+      "235": 14,
+      "77": 26,
+      "79": 16,
+      "241": 22,
+      "149": 14,
+      "151": 16,
+      "91": 42
+    },
+    "scalar_ready_roots": [
+      {
+        "H": 293,
+        "root": 0,
+        "rows": [
+          32,
+          5,
+          25,
+          19,
+          99,
+          206,
+          143,
+          31
+        ]
+      },
+      {
+        "H": 233,
+        "root": 0,
+        "rows": [
+          32,
+          5,
+          25,
+          19,
+          67,
+          94,
+          143,
+          63
+        ]
+      },
+      {
+        "H": 79,
+        "root": 2,
+        "rows": [
+          4,
+          5,
+          80,
+          7,
+          43,
+          15,
+          187,
+          63
+        ]
+      },
+      {
+        "H": 79,
+        "root": 0,
+        "rows": [
+          32,
+          5,
+          25,
+          19,
+          35,
+          78,
+          31,
+          127
+        ]
+      },
+      {
+        "H": 77,
+        "root": 0,
+        "rows": [
+          16,
+          5,
+          25,
+          35,
+          74,
+          23,
+          47,
+          127
+        ]
+      },
+      {
+        "H": 37,
+        "root": 0,
+        "rows": [
+          4,
+          9,
+          26,
+          49,
+          35,
+          7,
+          63,
+          127
+        ]
+      }
+    ],
+    "required_slopes": {
+      "37": 27,
+      "91": 54,
+      "199": 108,
+      "149": 72,
+      "151": 72,
+      "293": 144,
+      "295": 144,
+      "581": 288,
+      "583": 288
+    },
+    "matched_shifted_ready_candidates": [],
+    "all_two_run_ready_slots_in_selected_heads": [
+      {
+        "H": 79,
+        "a2": 40,
+        "root": 2,
+        "port": 0
+      },
+      {
+        "H": 79,
+        "a2": 40,
+        "root": 2,
+        "port": 1
+      },
+      {
+        "H": 79,
+        "a2": 40,
+        "root": 2,
+        "port": 3
+      },
+      {
+        "H": 79,
+        "a2": 40,
+        "root": 2,
+        "port": 5
+      },
+      {
+        "H": 79,
+        "a2": 41,
+        "root": 0,
+        "port": 6
+      },
+      {
+        "H": 79,
+        "a2": 0,
+        "root": 0,
+        "port": 7
+      },
+      {
+        "H": 77,
+        "a2": 45,
+        "root": 0,
+        "port": 6
+      },
+      {
+        "H": 77,
+        "a2": 0,
+        "root": 0,
+        "port": 7
+      },
+      {
+        "H": 37,
+        "a2": 0,
+        "root": 0,
+        "port": 6
+      },
+      {
+        "H": 37,
+        "a2": 0,
+        "root": 0,
+        "port": 7
+      }
+    ]
+  },
+  "local_H241_repairs": {
+    "target_rows": [
+      192,
+      401,
+      451,
+      391,
+      397,
+      415,
+      442,
+      256,
+      1
+    ],
+    "module_port": 5,
+    "allowed_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "radii": [
+      {
+        "radius": 1,
+        "tested": 28,
+        "scalar_H241_candidates": 0,
+        "full_response_scalar_ready_candidates": 0,
+        "universal_rearms": []
+      },
+      {
+        "radius": 2,
+        "tested": 378,
+        "scalar_H241_candidates": 4,
+        "full_response_scalar_ready_candidates": 0,
+        "universal_rearms": []
+      },
+      {
+        "radius": 3,
+        "tested": 3276,
+        "scalar_H241_candidates": 8,
+        "full_response_scalar_ready_candidates": 0,
+        "universal_rearms": []
+      }
+    ]
+  },
+  "shifted_Q_source": {
+    "source_rows": [
+      70,
+      68,
+      64,
+      23,
+      39,
+      143,
+      184,
+      31
+    ],
+    "presentations": 18,
+    "marked_cases": 432,
+    "marked_embeddings": [],
+    "scope": "variable source slot is one of three clones; target marked slot must be retained",
+    "Q_literal_root_defects": [
+      {
+        "k": 1,
+        "G_minus_H": [
+          0,
+          12,
+          6,
+          22,
+          22,
+          31
+        ]
+      },
+      {
+        "k": 2,
+        "G_minus_H": [
+          42,
+          5,
+          96,
+          76,
+          136,
+          22,
+          163
+        ]
+      },
+      {
+        "k": 3,
+        "G_minus_H": [
+          234,
+          101,
+          5,
+          420,
+          360,
+          556,
+          22,
+          631
+        ]
+      },
+      {
+        "k": 4,
+        "G_minus_H": [
+          942,
+          509,
+          209,
+          5,
+          1536,
+          1360,
+          1972,
+          22,
+          2179
+        ]
+      },
+      {
+        "k": 5,
+        "G_minus_H": [
+          3330,
+          1973,
+          1049,
+          425,
+          5,
+          5172,
+          4656,
+          6532,
+          22,
+          7111
+        ]
+      },
+      {
+        "k": 6,
+        "G_minus_H": [
+          11022,
+          6845,
+          4025,
+          2129,
+          857,
+          5,
+          16656,
+          15136,
+          20836,
+          22,
+          22483
+        ]
+      }
+    ],
+    "fixed_old_root4_defect_coefficient": 22,
+    "last_clone_defect_coefficient_nonempty_remainder": 5
+  },
+  "source_pins": [
+    {
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/n8_classes.csv",
+      "sha256_lf": "5226fb6d6cb71e2c99dc50536744f044c31af55e173e3be9f5f722a39edf3bc2"
+    },
+    {
+      "path": "05-knowledge/results/prime_terminal_20261113_1610/frames/search_receipt.json",
+      "sha256_lf": "0526dec076650b4f991bc97ecba7e78fab5f64a9c7ccd51fe3dce4f43fa59046"
+    }
+  ]
+}

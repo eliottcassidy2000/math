@@ -1,0 +1,7 @@
+{
+  "tested": 164221,
+  "two_run_guarded": 141879,
+  "neutral": 257,
+  "hits": [],
+  "scope": "All distance<=4 arc reversals from the named H601 Bezout witness; no all-order negative inference"
+}
