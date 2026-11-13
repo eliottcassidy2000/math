@@ -47,6 +47,7 @@ arbitrary prime/7p supply, and a universal changing-module return remain
 | Neutral relocation | Same H and root star for every M | Δq=−c2 for |M|≥2; hence the move leaves the labelled triangle fibre |
 | Short/long guard words | Exact guarded matrix identity at different lengths | Last-child responses differ and content513 blocks prime use without another operation |
 | Residue compiler | Every unit modulo11^k and simultaneous v7=1 | n=0 has a different image; all family counts are4 modulo5 and sparse |
+| Incoming score transport | Exact score feasibility supplies orientation candidates | Same-score modules give(h,p)=(15,108),(11,100), with frame contents15 and1 |
 
 The two-polar-port language also has an all-depth small-target exclusion:
 starting at C3 it misses11 and13. Its growth inequality, rather than a
@@ -65,6 +66,8 @@ the constructive agent. The root's chirality proof was independently read
 by both lanes, with the nontrivial-strong-block boundary made explicit.
 The residue digit lift was separately checked algebraically by the
 constructive agent. Incoming priority was reviewed in two lanes.
+The finite prefix/suffix proof was independently read by the history lane,
+including the forward-orbit density proof and negative offset boundary.
 
 The ten Python checkers have no removable AST Assert nodes. All were run
 normally and with Python optimization; deterministic receipts agree.

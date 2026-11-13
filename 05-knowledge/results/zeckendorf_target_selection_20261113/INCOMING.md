@@ -31,3 +31,36 @@ identity; the scalar15p−h already appeared in earlier core-replacement
 work, as documented in [selection](selection/PROOF.md). The new claim is
 the named physical repair, arbitrary-module proof, and composable handoff,
 not rediscovery of those scalar formulae.
+
+## A later score-transport signal, with an exact response hostile
+
+At incoming commit `4f10a1cb9e`, S314
+[ALL_SCORE_SUPPORT](../session314_metagraph_constraint_algebra_20261113/ALL_SCORE_SUPPORT.md)
+and [BLUE_PROFILE_SUPPORT](../session314_metagraph_constraint_algebra_20261113/BLUE_PROFILE_SUPPORT.md)
+give constructive score-transfer feasibility and connectivity at the score
+quotient. Their matching construction supplies an orientation realizing
+the transfer. It does not promise a transport starting at an arbitrarily
+specified module with its full marked response retained.
+
+The old [S40 endpoint/wiring hostile](../session40_marked_ports_square_sum_20261023/ENDPOINTS_DO_NOT_DETERMINE_WIRING.md)
+is decisive in the current frame. The
+five-vertex row masks
+
+    U=(14,24,18,20,1),  V=(26,20,9,18,4)
+
+both have sorted score sequence(1,2,2,2,3). They have respective profiles
+`(h,p)=(15,108)` and `(11,100)`. Hence our repair construction gives
+`(H,content)=(1605,15)` and `(1489,1)`. These literal controls are retained
+in selection/lift_receipt.json. Even one score fibre therefore contains
+both an unusably divisible source and a primitive prime source for this
+frame. The quotient erases a decisive selector coordinate. S40 already
+proved the H separation for two complementary path-arc outputs from paths
+with the same endpoints; the current comparison adds Q(2) and frame content.
+
+This still suggests a concrete larger source family: retain a labelled
+backbone, enumerate its feasible orientation fibre using the score
+transport constraints, and evaluate the full(h,p) response distribution
+there. The new obligation is to select within that fibre, rather than
+mistaking score connectivity for an arbitrary-target source theorem.
+This paragraph is a bounded incoming comparison, not a new proof of the
+all-score support results.

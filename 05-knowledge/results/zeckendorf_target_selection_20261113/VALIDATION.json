@@ -95,10 +95,10 @@
         "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/selection/lift_check.py",
         "python3 -B -O 05-knowledge/results/zeckendorf_target_selection_20261113/selection/lift_check.py"
       ],
-      "script_sha256": "d8c5e66536901c4cab586a159f8fc4260e45fb8fd857ce097d5f2ad991c4c451",
+      "script_sha256": "d98b343818fc169f73e403eb33669a436343d6a696588702cf93ea0d59c98a67",
       "receipt": "selection/lift_receipt.json",
-      "normal_sha256": "4a0da55dda8adab840a2cc0292f05f89ca728a8c0ccb84367da3e169a2ed89d9",
-      "optimized_sha256": "4a0da55dda8adab840a2cc0292f05f89ca728a8c0ccb84367da3e169a2ed89d9",
+      "normal_sha256": "419ced62b522b0b50436ff664492a580d23e674fc5ac416c809841424a219773",
+      "optimized_sha256": "419ced62b522b0b50436ff664492a580d23e674fc5ac416c809841424a219773",
       "assert_nodes": 0,
       "stdout": "PASS universal one-arc module repair, exact target phases, strong short/long controls"
     },
@@ -144,5 +144,15 @@
       "assert_nodes": 0,
       "stdout": "tested 2718 cross-order primitive hits 2\n[{'state': (29, 5, 5, 35), 'left': [(46, 12, 56, 48, 35, 2), 4], 'right': [(16, 1, 3, 71, 14, 31, 55), 3], 'star_preserving_minimum_embedding': (1, 1, (6, 0, 5, 4, 3, 2), [(1, 2)])}, {'state': (31, 3, 15, 89), 'left': [(36, 17, 2, 7, 13, 30), 2], 'right': [(42, 124, 121, 112, 97, 64, 1), 4], 'star_preserving_minimum_embedding': None}]"
     }
-  ]
+  ],
+  "documentation_check": {
+    "command": "python3 agents/check_docs.py",
+    "status": "PASS",
+    "output": "Agent-facing documentation check PASSED: bounded startup surface, frontmatter-derived frontier status, correction sentinels, and router smoke."
+  },
+  "relative_link_check": {
+    "status": "PASS",
+    "universe": "All14 Markdown files in this packet; local or HEAD-tracked relative targets"
+  },
+  "manifest_scope": "Source notes, scripts and receipts only; ignored bytecode excluded"
 }

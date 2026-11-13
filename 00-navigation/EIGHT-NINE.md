@@ -3,6 +3,15 @@
 [Research packet](../05-knowledge/results/eight_nine_twentyseven_20261112/README.md).
 **PROVED IN NOTES / FINITE-EXACT; Chan–Pak OPEN.**
 
+[Shared owners and reusable module repairs](../05-knowledge/results/zeckendorf_target_selection_20261113/README.md):
+arbitrary-module full-state neutral repair commutes with binary growth;
+a named root-star handoff realizes3p−h→9p−h→15p−h, including289→889→1489.
+The diagonal Fibonacci grid has an exact shared-owner classification and
+constrained target selectors. Weighted marking uses the actual colored
+stabilizer and retains adjacency/role guards. Repair families select every
+unit11-adic suffix with arbitrary finite leading digits and exact factor7,
+but remain sparse and4mod5. Universal joint-source selection stays OPEN.
+
 [Protected symmetry returns and changing strong reservoirs](../05-knowledge/results/symmetry_port_return_20261113/README.md):
 an explicit primitive marked port survives global C3-to-trivial symmetry
 breaking; arbitrary wrapped refills preserve all old arcs and exterior ports.

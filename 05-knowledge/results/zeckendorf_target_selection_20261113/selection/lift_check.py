@@ -101,6 +101,15 @@ def main():
         controls.append(dict(module=name,rows=M,h=h,p=p,state=predicted,content=content,source_rows=A,target_rows=B,root=r))
     H,_=moments(CORE);full=len(H)-1
     need(H[-1]==11 and sum(H[a]*H[full^a]for a in range(full+1))==100,'unbounded-core seed profile')
+    score_twins=[]
+    for mask,rows,expected in [(871,(14,24,18,20,1),(15,108)),(733,(26,20,9,18,4),(11,100))]:
+        H,_=moments(rows);full=len(H)-1
+        hp=(H[-1],sum(H[a]*H[full^a]for a in range(full+1)))
+        scores=sorted(row.bit_count()for row in rows)
+        need(scores==[1,2,2,2,3] and hp==expected,'same-score response hostile')
+        h,p=hp
+        score_twins.append(dict(mask=mask,rows=rows,scores=scores,h=h,p=p,target=15*p-h,content=gcd(h,15*p)))
+    need([(x['target'],x['content'])for x in score_twins]==[(1605,15),(1489,1)],'score quotient loses primitive entry')
     phases=[]
     for n in range(9):
         for m in range(14):
@@ -129,6 +138,6 @@ def main():
         need(profiles(sealed)[rr]==(2565,513,513,2565),'fresh-seal rooted equality')
         word_controls.append(dict(word=word,order=len(G),state=z,last_child_state=other,sealed_order=len(sealed)))
     need(word_controls[0]['last_child_state']!=word_controls[1]['last_child_state'],'hostile reused-last-child distinction')
-    Path(__file__).with_name('lift_receipt.json').write_text(json.dumps(dict(status='PASS',ref=REF,scope='Complete at-most-two-run coefficients; selected literal modules and guard words; finite arithmetic controls, not target coverage',coefficients=coeff,intermediate_coefficients=middle_coeff,literal_controls=controls,phase_controls=phases,prime_fixtures=fixtures,short_long=word_controls),indent=2)+'\n')
+    Path(__file__).with_name('lift_receipt.json').write_text(json.dumps(dict(status='PASS',ref=REF,scope='Complete at-most-two-run coefficients; selected literal modules and guard words; finite arithmetic controls, not target coverage',coefficients=coeff,intermediate_coefficients=middle_coeff,literal_controls=controls,score_twins=score_twins,phase_controls=phases,prime_fixtures=fixtures,short_long=word_controls),indent=2)+'\n')
     print('PASS universal one-arc module repair, exact target phases, strong short/long controls')
 if __name__=='__main__':main()
