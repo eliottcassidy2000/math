@@ -1,0 +1,9 @@
+{
+"target": 3887, "core_p2_bound": 7774, "core_order_bound": 12,
+"layers": [
+{"order": 1, "retained_cores": 1, "evaluated": 0, "p2_pruned": 0},
+{"order": 3, "retained_cores": 1, "evaluated": 1, "p2_pruned": 0},
+{"order": 4, "retained_cores": 3, "evaluated": 3, "p2_pruned": 0}
+],
+"found": true, "core_order": 4, "filtered_index": 2, "core_state": [5, 2, 6, 32, 9, 19], "word_integer": 92, "address": ["1", "", "0011101"], "inverse_visits": 42
+}

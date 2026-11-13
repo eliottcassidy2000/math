@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "Independent reconstruction of both actual graphs; six-state source compiler and two N births; all retained old pairs and exact target state; no large inverse or large subset census",
+  "source_order": 28,
+  "target_order": 29,
+  "source_state": [
+    53084231,
+    17694744,
+    31850517,
+    67240004
+  ],
+  "target_state": [
+    159252695,
+    68937626,
+    68937627,
+    159252696
+  ],
+  "retained_vertices": 28,
+  "inserted_target_vertex": 26,
+  "changed_old_pairs": 75,
+  "retained_root": 27,
+  "target_root": 28,
+  "retained_predecessor": 26,
+  "target_predecessor": 27,
+  "retained_transitive_module_order": 17,
+  "changed_predecessor_module_arcs": [
+    4,
+    5,
+    6,
+    7,
+    10,
+    13,
+    14,
+    19
+  ],
+  "all_old_root_star_pairs_preserved": true,
+  "all_module_internal_pairs_preserved": true
+}

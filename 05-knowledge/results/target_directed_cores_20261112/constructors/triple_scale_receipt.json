@@ -1,0 +1,9 @@
+{
+  "scope": "Synchronized transitive-module increments totaling the stated stride; unchanged exterior root/predecessor",
+  "stride": 3,
+  "inherited_bank": "05-knowledge/results/multicore_metagraph_20261113/inflation_descent.json.gz",
+  "source_count": 9,
+  "tested_graphs": 3038,
+  "hits": [],
+  "near_within20": []
+}

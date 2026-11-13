@@ -1,0 +1,15 @@
+{
+"target": 1997, "core_p2_bound": 3994, "core_order_bound": 11,
+"layers": [
+{"order": 1, "retained_cores": 1, "evaluated": 0, "p2_pruned": 0},
+{"order": 3, "retained_cores": 1, "evaluated": 1, "p2_pruned": 0},
+{"order": 4, "retained_cores": 3, "evaluated": 3, "p2_pruned": 0},
+{"order": 5, "retained_cores": 8, "evaluated": 8, "p2_pruned": 0},
+{"order": 6, "retained_cores": 21, "evaluated": 21, "p2_pruned": 0},
+{"order": 7, "retained_cores": 55, "evaluated": 55, "p2_pruned": 0},
+{"order": 8, "retained_cores": 144, "evaluated": 144, "p2_pruned": 0},
+{"order": 9, "retained_cores": 54, "evaluated": 339, "p2_pruned": 285},
+{"order": 10, "retained_cores": 0, "evaluated": 152, "p2_pruned": 152},
+{"order": 11, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0}
+], "found": false, "complete_core_universe": true, "inverse_visits": 313
+}

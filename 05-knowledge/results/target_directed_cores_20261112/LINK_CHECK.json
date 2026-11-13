@@ -1,0 +1,529 @@
+{
+  "status": "PASS",
+  "method": "Filesystem or fetched origin/main tree; sparse checkout paths allowed",
+  "checked_links": 87,
+  "links": [
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/AT_TARGET.md",
+      "target": "TARGET_INVERSE.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/TARGET_INVERSE.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/AT_TARGET.md",
+      "target": "constructors/DEFECT_TWO.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/constructors/DEFECT_TWO.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/AT_TARGET.md",
+      "target": "ports/COMPLETE_INVERSE_AUDIT.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/ports/COMPLETE_INVERSE_AUDIT.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/AT_TARGET.md",
+      "target": "../cycle_opening_six_return_20261112/compiler/MODULE_RETURN.md",
+      "resolved": "05-knowledge/results/cycle_opening_six_return_20261112/compiler/MODULE_RETURN.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/AT_TARGET.md",
+      "target": "gap_bridge.json",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/gap_bridge.json",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/AT_TARGET.md",
+      "target": "../changing_core_returns_20261113/returns/PROOF.md",
+      "resolved": "05-knowledge/results/changing_core_returns_20261113/returns/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/GROWING_FAMILY.md",
+      "target": "ports/PROOF.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/ports/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/GROWING_FAMILY.md",
+      "target": "../surplus_selector_20261113/REPAIR23.md",
+      "resolved": "05-knowledge/results/surplus_selector_20261113/REPAIR23.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/GROWING_FAMILY.md",
+      "target": "ports/PORT_ESCAPE.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/ports/PORT_ESCAPE.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/GROWING_FAMILY.md",
+      "target": "../growing_t_returns_20261113/containment/PROOF.md",
+      "resolved": "05-knowledge/results/growing_t_returns_20261113/containment/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/INCOMING.md",
+      "target": "../changing_core_returns_20261113/README.md",
+      "resolved": "05-knowledge/results/changing_core_returns_20261113/README.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/INCOMING.md",
+      "target": "../ternary_core_grammar_20261113/README.md",
+      "resolved": "05-knowledge/results/ternary_core_grammar_20261113/README.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/INCOMING.md",
+      "target": "../growing_t_returns_20261113/containment/PROOF.md",
+      "resolved": "05-knowledge/results/growing_t_returns_20261113/containment/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/INCOMING.md",
+      "target": "../surplus_selector_20261113/REPAIR23.md",
+      "resolved": "05-knowledge/results/surplus_selector_20261113/REPAIR23.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/INCOMING.md",
+      "target": "../surplus_selector_20261113/SELECTOR.md",
+      "resolved": "05-knowledge/results/surplus_selector_20261113/SELECTOR.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "TARGET_INVERSE.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/TARGET_INVERSE.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "constructors/DEFECT_TWO.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/constructors/DEFECT_TWO.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "AT_TARGET.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/AT_TARGET.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "constructors/SINGLETON_CONTINUATION.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/constructors/SINGLETON_CONTINUATION.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "GROWING_FAMILY.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/GROWING_FAMILY.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "ports/PROOF.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/ports/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "ports/PORT_ESCAPE.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/ports/PORT_ESCAPE.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "constructors/PROOF.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/constructors/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "history/PERIODIC_CORE_OBSTRUCTION.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/history/PERIODIC_CORE_OBSTRUCTION.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "history/REWRITE_DEBT.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/history/REWRITE_DEBT.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "history/README.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "history/NEGATIVE_COLLATZ_STRATA.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/history/NEGATIVE_COLLATZ_STRATA.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "INCOMING.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/INCOMING.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/README.md",
+      "target": "REVIEW.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/TARGET_INVERSE.md",
+      "target": "../polarized_path_calculus_20261103/FUNNELS.md",
+      "resolved": "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/TARGET_INVERSE.md",
+      "target": "../berggren_target_return_20261111/reset/TARGET_RETURN.md",
+      "resolved": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/TARGET_INVERSE.md",
+      "target": "../h13_paired_descent_20261111/square_graceful/GRAMMAR.md",
+      "resolved": "05-knowledge/results/h13_paired_descent_20261111/square_graceful/GRAMMAR.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/TARGET_INVERSE.md",
+      "target": "../changing_core_returns_20261113/returns/PROOF.md",
+      "resolved": "05-knowledge/results/changing_core_returns_20261113/returns/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/TARGET_INVERSE.md",
+      "target": "ports/COMPLETE_INVERSE_AUDIT.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/ports/COMPLETE_INVERSE_AUDIT.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/TARGET_INVERSE.md",
+      "target": "AT_TARGET.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/AT_TARGET.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/constructors/DEFECT_TWO.md",
+      "target": "../../two_entry_funnels_20261103/TWO_ENTRY.md",
+      "resolved": "05-knowledge/results/two_entry_funnels_20261103/TWO_ENTRY.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/constructors/DEFECT_TWO.md",
+      "target": "../../polarized_path_calculus_20261103/FUNNELS.md",
+      "resolved": "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/constructors/DEFECT_TWO.md",
+      "target": "../../h17_exact_repairs_20261112/constructors/CHAIN_REUSE.md",
+      "resolved": "05-knowledge/results/h17_exact_repairs_20261112/constructors/CHAIN_REUSE.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/constructors/PROOF.md",
+      "target": "../../multicore_metagraph_20261113/FAMILIES.md",
+      "resolved": "05-knowledge/results/multicore_metagraph_20261113/FAMILIES.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/constructors/PROOF.md",
+      "target": "../../session296_multicore_metagraph_20261113/cores/ENTRANCES.md",
+      "resolved": "05-knowledge/results/session296_multicore_metagraph_20261113/cores/ENTRANCES.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/constructors/PROOF.md",
+      "target": "DEFECT_TWO.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/constructors/DEFECT_TWO.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/constructors/SINGLETON_CONTINUATION.md",
+      "target": "DEFECT_TWO.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/constructors/DEFECT_TWO.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/NEGATIVE_COLLATZ_STRATA.md",
+      "target": "../../collatz_procgen_20260924_inverse_tree_mod192.md",
+      "resolved": "05-knowledge/results/collatz_procgen_20260924_inverse_tree_mod192.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/NEGATIVE_COLLATZ_STRATA.md",
+      "target": "../../../../01-canon/theorems/THM-4472-four-vertex-reading-of-3n-plus-minus-1.md",
+      "resolved": "01-canon/theorems/THM-4472-four-vertex-reading-of-3n-plus-minus-1.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/NEGATIVE_COLLATZ_STRATA.md",
+      "target": "../../mutation_collatz_chanpak_20261112/arithmetic/PROOF.md",
+      "resolved": "05-knowledge/results/mutation_collatz_chanpak_20261112/arithmetic/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/NEGATIVE_COLLATZ_STRATA.md",
+      "target": "../../../../01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "resolved": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/NEGATIVE_COLLATZ_STRATA.md",
+      "target": "../../mutation_collatz_chanpak_20261112/returns/COLLATZ_LIFT.md",
+      "resolved": "05-knowledge/results/mutation_collatz_chanpak_20261112/returns/COLLATZ_LIFT.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/NEGATIVE_COLLATZ_STRATA.md",
+      "target": "../../cycle_opening_six_return_20261112/compiler/MODULE_RETURN.md",
+      "resolved": "05-knowledge/results/cycle_opening_six_return_20261112/compiler/MODULE_RETURN.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/NEGATIVE_COLLATZ_STRATA.md",
+      "target": "../TARGET_INVERSE.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/TARGET_INVERSE.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/NEGATIVE_COLLATZ_STRATA.md",
+      "target": "../AT_TARGET.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/AT_TARGET.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/PERIODIC_CORE_OBSTRUCTION.md",
+      "target": "../../berggren_target_return_20261111/reset/TARGET_RETURN.md",
+      "resolved": "05-knowledge/results/berggren_target_return_20261111/reset/TARGET_RETURN.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/PERIODIC_CORE_OBSTRUCTION.md",
+      "target": "../../multicore_metagraph_20261113/FAMILIES.md",
+      "resolved": "05-knowledge/results/multicore_metagraph_20261113/FAMILIES.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "PERIODIC_CORE_OBSTRUCTION.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/history/PERIODIC_CORE_OBSTRUCTION.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "REWRITE_DEBT.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/history/REWRITE_DEBT.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../procgen_brackets_20260924_pairings_transitions.md",
+      "resolved": "05-knowledge/results/procgen_brackets_20260924_pairings_transitions.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../collatz_binary_ternary_guard_fusion_20261004.md",
+      "resolved": "05-knowledge/results/collatz_binary_ternary_guard_fusion_20261004.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../../../01-canon/theorems/THM-4472-four-vertex-reading-of-3n-plus-minus-1.md",
+      "resolved": "01-canon/theorems/THM-4472-four-vertex-reading-of-3n-plus-minus-1.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../collatz_procgen_20260924_inverse_tree_mod192.md",
+      "resolved": "05-knowledge/results/collatz_procgen_20260924_inverse_tree_mod192.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "NEGATIVE_COLLATZ_STRATA.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/history/NEGATIVE_COLLATZ_STRATA.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../../../01-canon/theorems/THM-4640-the-repair-algebra-at-minus-one-collisions-are-increasing-two-three-representations-ladders-and-gersonides-carries.md",
+      "resolved": "01-canon/theorems/THM-4640-the-repair-algebra-at-minus-one-collisions-are-increasing-two-three-representations-ladders-and-gersonides-carries.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "REWRITE_DEBT.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/history/REWRITE_DEBT.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../../../07-reflections/the-rational-irrational-duality.md",
+      "resolved": "07-reflections/the-rational-irrational-duality.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../changing_core_returns_20261113/geometry/HISTORY.md",
+      "resolved": "05-knowledge/results/changing_core_returns_20261113/geometry/HISTORY.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../../../07-reflections/irrational-transcendental-approximation-sidecar-lrc14-codex-s265.md",
+      "resolved": "07-reflections/irrational-transcendental-approximation-sidecar-lrc14-codex-s265.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../../../01-canon/theorems/THM-3224-complete-lrc-orbit-bernoulli-gcd-carry-and-owner-hodge-splitting.md",
+      "resolved": "01-canon/theorems/THM-3224-complete-lrc-orbit-bernoulli-gcd-carry-and-owner-hodge-splitting.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../../../01-canon/theorems/THM-3784-rational-keller-tower-different-codifferent-trace-duality.md",
+      "resolved": "01-canon/theorems/THM-3784-rational-keller-tower-different-codifferent-trace-duality.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../../../01-canon/theorems/THM-3882-rational-dual-one-place-wronskian-projection-criterion.md",
+      "resolved": "01-canon/theorems/THM-3882-rational-dual-one-place-wronskian-projection-criterion.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../central_modular_chanpak_20261110/compiler/PROOF.md",
+      "resolved": "05-knowledge/results/central_modular_chanpak_20261110/compiler/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../h13_paired_descent_20261111/square_graceful/GRAMMAR.md",
+      "resolved": "05-knowledge/results/h13_paired_descent_20261111/square_graceful/GRAMMAR.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../recursive_seed_switching_20261103/selector/NOTE.md",
+      "resolved": "05-knowledge/results/recursive_seed_switching_20261103/selector/NOTE.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "../../changing_core_returns_20261113/returns/PROOF.md",
+      "resolved": "05-knowledge/results/changing_core_returns_20261113/returns/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/README.md",
+      "target": "PERIODIC_CORE_OBSTRUCTION.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/history/PERIODIC_CORE_OBSTRUCTION.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/REWRITE_DEBT.md",
+      "target": "../../multicore_metagraph_20261113/FAMILIES.md",
+      "resolved": "05-knowledge/results/multicore_metagraph_20261113/FAMILIES.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/history/REWRITE_DEBT.md",
+      "target": "PERIODIC_CORE_OBSTRUCTION.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/history/PERIODIC_CORE_OBSTRUCTION.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/COMPLETE_INVERSE_AUDIT.md",
+      "target": "../constructors/DEFECT_TWO.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/constructors/DEFECT_TWO.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/COMPLETE_INVERSE_AUDIT.md",
+      "target": "../AT_TARGET.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/AT_TARGET.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/PORT_ESCAPE.md",
+      "target": "PROOF.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/ports/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/PORT_ESCAPE.md",
+      "target": "../../h17_exact_repairs_20261112/constructors/CHAIN_REUSE.md",
+      "resolved": "05-knowledge/results/h17_exact_repairs_20261112/constructors/CHAIN_REUSE.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/PORT_ESCAPE.md",
+      "target": "PROOF.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/ports/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/PORT_ESCAPE.md",
+      "target": "PROOF.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/ports/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/PROOF.md",
+      "target": "../../multicore_metagraph_20261113/FAMILIES.md",
+      "resolved": "05-knowledge/results/multicore_metagraph_20261113/FAMILIES.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/PROOF.md",
+      "target": "../../atomic_tail_reset_20261029/WEDGE_GEOMETRY.md",
+      "resolved": "05-knowledge/results/atomic_tail_reset_20261029/WEDGE_GEOMETRY.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/PROOF.md",
+      "target": "../../h17_exact_repairs_20261112/ports/PROOF.md",
+      "resolved": "05-knowledge/results/h17_exact_repairs_20261112/ports/PROOF.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/PROOF.md",
+      "target": "PORT_ESCAPE.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/ports/PORT_ESCAPE.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/PROOF.md",
+      "target": "../history/PERIODIC_CORE_OBSTRUCTION.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/history/PERIODIC_CORE_OBSTRUCTION.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/PROOF.md",
+      "target": "../history/REWRITE_DEBT.md",
+      "resolved": "05-knowledge/results/target_directed_cores_20261112/history/REWRITE_DEBT.md",
+      "exists": true
+    },
+    {
+      "source": "05-knowledge/results/target_directed_cores_20261112/ports/PROOF.md",
+      "target": "../../birth_grammar_repairs_20261112/PROOFS.md",
+      "resolved": "05-knowledge/results/birth_grammar_repairs_20261112/PROOFS.md",
+      "exists": true
+    }
+  ]
+}

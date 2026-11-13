@@ -1,0 +1,251 @@
+{
+  "scope": "Every strong unique-start parent throughorder9; exterior root and predecessor; H1=2mod3; eligible vertex modules",
+  "compiler": "05-knowledge/results/session296_multicore_metagraph_20261113/cores/verify_ready.py",
+  "parents_by_order": {
+    "1": 1,
+    "3": 1,
+    "4": 3,
+    "5": 8,
+    "6": 21,
+    "7": 55,
+    "8": 144,
+    "9": 377
+  },
+  "module_tests_at_size2": 1729,
+  "candidates": [
+    {
+      "parent_order": 8,
+      "address": [
+        "1",
+        "11",
+        "1"
+      ],
+      "H1": 431,
+      "rows": [
+        250,
+        252,
+        217,
+        240,
+        224,
+        68,
+        128,
+        288,
+        127
+      ],
+      "module": 0,
+      "H2": 1295,
+      "profiles_sizes2_3_4": [
+        [
+          1295,
+          99,
+          98
+        ],
+        [
+          3815,
+          207,
+          206
+        ],
+        [
+          11231,
+          423,
+          422
+        ]
+      ],
+      "pure_ternary_ready_certificate": false,
+      "nonempty_run_coefficients1_4": [
+        431,
+        432,
+        132,
+        0
+      ],
+      "all_size_exponential_coefficients_base3_base2_base1": [
+        132,
+        36,
+        -37
+      ],
+      "all_size_reason": "M1 positive-run support descends: A4=0 forces every later coefficient0",
+      "ready_at_sizes1_2_3_4": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "parent_order": 8,
+      "address": [
+        "1",
+        "101",
+        ""
+      ],
+      "H1": 551,
+      "rows": [
+        250,
+        252,
+        185,
+        240,
+        160,
+        192,
+        20,
+        320,
+        127
+      ],
+      "module": 5,
+      "H2": 1655,
+      "profiles_sizes2_3_4": [
+        [
+          1655,
+          117,
+          116
+        ],
+        [
+          4907,
+          237,
+          236
+        ],
+        [
+          14543,
+          477,
+          476
+        ]
+      ],
+      "pure_ternary_ready_certificate": false,
+      "nonempty_run_coefficients1_4": [
+        551,
+        552,
+        174,
+        0
+      ],
+      "all_size_exponential_coefficients_base3_base2_base1": [
+        174,
+        30,
+        -31
+      ],
+      "all_size_reason": "M1 positive-run support descends: A4=0 forces every later coefficient0",
+      "ready_at_sizes1_2_3_4": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "parent_order": 9,
+      "address": [
+        "01",
+        "",
+        "101"
+      ],
+      "H1": 677,
+      "rows": [
+        502,
+        500,
+        504,
+        483,
+        232,
+        448,
+        128,
+        256,
+        592,
+        255
+      ],
+      "module": 4,
+      "H2": 2033,
+      "profiles_sizes2_3_4": [
+        [
+          2033,
+          407,
+          404
+        ],
+        [
+          6005,
+          1371,
+          1364
+        ],
+        [
+          17729,
+          4379,
+          4364
+        ]
+      ],
+      "pure_ternary_ready_certificate": false,
+      "nonempty_run_coefficients1_4": [
+        677,
+        678,
+        210,
+        0
+      ],
+      "all_size_exponential_coefficients_base3_base2_base1": [
+        210,
+        48,
+        -49
+      ],
+      "all_size_reason": "M1 positive-run support descends: A4=0 forces every later coefficient0",
+      "ready_at_sizes1_2_3_4": [
+        1,
+        3,
+        7,
+        15
+      ]
+    },
+    {
+      "parent_order": 9,
+      "address": [
+        "1",
+        "11",
+        "11"
+      ],
+      "H1": 893,
+      "rows": [
+        506,
+        508,
+        473,
+        496,
+        480,
+        196,
+        384,
+        256,
+        544,
+        255
+      ],
+      "module": 0,
+      "H2": 2681,
+      "profiles_sizes2_3_4": [
+        [
+          2681,
+          165,
+          164
+        ],
+        [
+          7889,
+          345,
+          344
+        ],
+        [
+          23201,
+          705,
+          704
+        ]
+      ],
+      "pure_ternary_ready_certificate": false,
+      "nonempty_run_coefficients1_4": [
+        893,
+        894,
+        272,
+        0
+      ],
+      "all_size_exponential_coefficients_base3_base2_base1": [
+        272,
+        78,
+        -79
+      ],
+      "all_size_reason": "M1 positive-run support descends: A4=0 forces every later coefficient0",
+      "ready_at_sizes1_2_3_4": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

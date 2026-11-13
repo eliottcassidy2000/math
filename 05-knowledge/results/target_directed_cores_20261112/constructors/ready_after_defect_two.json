@@ -1,0 +1,32 @@
+{
+"target": 159252697, "core_p2_bound": 318505394, "core_order_bound": 28,
+"layers": [
+{"order": 1, "retained_cores": 1, "evaluated": 0, "p2_pruned": 0},
+{"order": 3, "retained_cores": 1, "evaluated": 1, "p2_pruned": 0},
+{"order": 4, "retained_cores": 3, "evaluated": 3, "p2_pruned": 0},
+{"order": 5, "retained_cores": 8, "evaluated": 8, "p2_pruned": 0},
+{"order": 6, "retained_cores": 21, "evaluated": 21, "p2_pruned": 0},
+{"order": 7, "retained_cores": 55, "evaluated": 55, "p2_pruned": 0},
+{"order": 8, "retained_cores": 144, "evaluated": 144, "p2_pruned": 0},
+{"order": 9, "retained_cores": 377, "evaluated": 377, "p2_pruned": 0},
+{"order": 10, "retained_cores": 987, "evaluated": 987, "p2_pruned": 0},
+{"order": 11, "retained_cores": 2584, "evaluated": 2584, "p2_pruned": 0},
+{"order": 12, "retained_cores": 6765, "evaluated": 6765, "p2_pruned": 0},
+{"order": 13, "retained_cores": 17711, "evaluated": 17711, "p2_pruned": 0},
+{"order": 14, "retained_cores": 46368, "evaluated": 46368, "p2_pruned": 0},
+{"order": 15, "retained_cores": 121393, "evaluated": 121393, "p2_pruned": 0},
+{"order": 16, "retained_cores": 317811, "evaluated": 317811, "p2_pruned": 0},
+{"order": 17, "retained_cores": 832040, "evaluated": 832040, "p2_pruned": 0},
+{"order": 18, "retained_cores": 2178309, "evaluated": 2178309, "p2_pruned": 0},
+{"order": 19, "retained_cores": 5560130, "evaluated": 5694382, "p2_pruned": 134252},
+{"order": 20, "retained_cores": 6986689, "evaluated": 13154232, "p2_pruned": 6167543},
+{"order": 21, "retained_cores": 3933, "evaluated": 12181833, "p2_pruned": 12177900},
+{"order": 22, "retained_cores": 0, "evaluated": 10860, "p2_pruned": 10860},
+{"order": 23, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0},
+{"order": 24, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0},
+{"order": 25, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0},
+{"order": 26, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0},
+{"order": 27, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0},
+{"order": 28, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0}
+], "found": false, "complete_core_universe": true, "inverse_visits": 16164458
+}

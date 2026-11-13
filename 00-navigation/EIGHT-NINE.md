@@ -12,6 +12,11 @@ The repeatable unit-ready405-ray return remains OPEN.
 H9 root-star repair, arbitrary-left-factor same-next-target repair, closed
 primitive chain recursion and exact addresses; arbitrary target supply OPEN.
 
+[Target-directed changing cores](../05-knowledge/results/target_directed_cores_20261112/README.md):
+complete unit-ready hole at405·2^17+71, minimum positive defect2 and a
+selective next-target bridge; ordinal squares give unbounded cores with
+reusable primitive entry. Arbitrary target coverage remains OPEN.
+
 Sharp raw/context content bound `h|g|h²/rad(h)`; the asymmetric9/27
 example is extremal. Two actual arc flips select every odd residue modulo8
 in any fixed uniform exterior, with exact mixed response and sharp count

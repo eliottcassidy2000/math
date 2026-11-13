@@ -1,0 +1,360 @@
+{
+  "status": "PASS",
+  "universe": "624 parameter pairs; all family targets <=10^9",
+  "modular_certificate": {
+    "2": 1,
+    "35": 1,
+    "676": 1,
+    "2365": 5038
+  },
+  "checked_pairs": 624,
+  "complete_head_bound": 1000000000,
+  "complete_head_targets": 31,
+  "complete_head": {
+    "2759": [
+      [
+        1,
+        0
+      ]
+    ],
+    "5531": [
+      [
+        2,
+        0
+      ]
+    ],
+    "11075": [
+      [
+        3,
+        0
+      ]
+    ],
+    "22163": [
+      [
+        4,
+        0
+      ]
+    ],
+    "44339": [
+      [
+        5,
+        0
+      ]
+    ],
+    "88691": [
+      [
+        6,
+        0
+      ]
+    ],
+    "177395": [
+      [
+        7,
+        0
+      ]
+    ],
+    "354803": [
+      [
+        8,
+        0
+      ]
+    ],
+    "709619": [
+      [
+        9,
+        0
+      ]
+    ],
+    "1419251": [
+      [
+        10,
+        0
+      ]
+    ],
+    "2838515": [
+      [
+        11,
+        0
+      ]
+    ],
+    "5677043": [
+      [
+        12,
+        0
+      ]
+    ],
+    "11354099": [
+      [
+        13,
+        0
+      ]
+    ],
+    "22708211": [
+      [
+        14,
+        0
+      ]
+    ],
+    "45416435": [
+      [
+        15,
+        0
+      ]
+    ],
+    "90832883": [
+      [
+        16,
+        0
+      ]
+    ],
+    "181665779": [
+      [
+        17,
+        0
+      ]
+    ],
+    "363331571": [
+      [
+        18,
+        0
+      ]
+    ],
+    "726663155": [
+      [
+        19,
+        0
+      ]
+    ],
+    "936481": [
+      [
+        0,
+        1
+      ]
+    ],
+    "1873417": [
+      [
+        1,
+        1
+      ]
+    ],
+    "3747289": [
+      [
+        2,
+        1
+      ]
+    ],
+    "7495033": [
+      [
+        3,
+        1
+      ]
+    ],
+    "14990521": [
+      [
+        4,
+        1
+      ]
+    ],
+    "29981497": [
+      [
+        5,
+        1
+      ]
+    ],
+    "59963449": [
+      [
+        6,
+        1
+      ]
+    ],
+    "119927353": [
+      [
+        7,
+        1
+      ]
+    ],
+    "239855161": [
+      [
+        8,
+        1
+      ]
+    ],
+    "479710777": [
+      [
+        9,
+        1
+      ]
+    ],
+    "959422009": [
+      [
+        10,
+        1
+      ]
+    ],
+    "633352811": [
+      [
+        0,
+        2
+      ]
+    ]
+  },
+  "scoped_negative_targets": [
+    7,
+    21,
+    881,
+    1691,
+    53084231,
+    159252695
+  ],
+  "examples": [
+    {
+      "a": 1,
+      "b": 0,
+      "target": 2759,
+      "module_pair": [
+        1,
+        2
+      ],
+      "module_recipe": {
+        "ordinal_copies_of": [
+          8,
+          5,
+          9,
+          18,
+          71,
+          31,
+          47
+        ],
+        "copies": 0,
+        "transitive_suffix": 1
+      },
+      "source_order": 12,
+      "source_at_x": [
+        2759,
+        15,
+        15,
+        5055
+      ],
+      "RNR_order": 15,
+      "balanced_state": [
+        27989,
+        7799,
+        7799,
+        27989
+      ],
+      "controller": "C3 then inherited mod11 bridge / C5"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "target": 936481,
+      "module_pair": [
+        35,
+        676
+      ],
+      "module_recipe": {
+        "ordinal_copies_of": [
+          8,
+          5,
+          9,
+          18,
+          71,
+          31,
+          47
+        ],
+        "copies": 1,
+        "transitive_suffix": 0
+      },
+      "source_order": 18,
+      "source_at_x": [
+        936481,
+        525,
+        525,
+        1747677
+      ],
+      "RNR_order": 21,
+      "balanced_state": [
+        9673291,
+        2683633,
+        2683633,
+        9673291
+      ],
+      "controller": "C3 then inherited mod11 bridge / C5"
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "target": 3747289,
+      "module_pair": [
+        35,
+        2704
+      ],
+      "module_recipe": {
+        "ordinal_copies_of": [
+          8,
+          5,
+          9,
+          18,
+          71,
+          31,
+          47
+        ],
+        "copies": 1,
+        "transitive_suffix": 2
+      },
+      "source_order": 20,
+      "source_at_x": [
+        3747289,
+        525,
+        525,
+        7004253
+      ],
+      "RNR_order": 23,
+      "balanced_state": [
+        38766979,
+        10751017,
+        10751017,
+        38766979
+      ],
+      "controller": "C3 then inherited mod11 bridge / C5"
+    },
+    {
+      "a": 0,
+      "b": 2,
+      "target": 633352811,
+      "module_pair": [
+        1225,
+        456976
+      ],
+      "module_recipe": {
+        "ordinal_copies_of": [
+          8,
+          5,
+          9,
+          18,
+          71,
+          31,
+          47
+        ],
+        "copies": 2,
+        "transitive_suffix": 0
+      },
+      "source_order": 25,
+      "source_at_x": [
+        633352811,
+        18375,
+        18375,
+        1184323767
+      ],
+      "RNR_order": 28,
+      "balanced_state": [
+        6554916521,
+        1817658203,
+        1817658203,
+        6554916521
+      ],
+      "controller": "C3 then inherited mod11 bridge / C5"
+    }
+  ],
+  "scope": "Family membership only; all-module and all-parameter proofs in GROWING_FAMILY.md"
+}

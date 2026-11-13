@@ -1,0 +1,8 @@
+{
+  "scope": "Two equal growing modules, or one twice-growing module; unchanged exterior root/predecessor",
+  "inherited_bank": "05-knowledge/results/multicore_metagraph_20261113/inflation_descent.json.gz",
+  "source_count": 6,
+  "tested_graphs": 322,
+  "hits": [],
+  "near_within20": []
+}

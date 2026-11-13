@@ -1,0 +1,7 @@
+{
+"target": 8045, "core_p2_bound": 16090, "core_order_bound": 13,
+"layers": [
+{"order": 1, "retained_cores": 1, "evaluated": 0, "p2_pruned": 0}
+],
+"found": true, "core_order": 1, "filtered_index": 0, "core_state": [1, 1, 1, 2, 1, 1], "word_integer": 2084, "address": ["001001000001"], "inverse_visits": 8
+}

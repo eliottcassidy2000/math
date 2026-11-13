@@ -1,0 +1,7 @@
+{
+"target": 159252695, "core_p2_bound": 318505390, "core_order_bound": 28,
+"layers": [
+{"order": 1, "retained_cores": 1, "evaluated": 0, "p2_pruned": 0}
+],
+"found": true, "core_order": 1, "filtered_index": 0, "core_state": [1, 1, 1, 2, 1, 1], "word_integer": 45157534, "address": ["01111001001100001000110101"], "inverse_visits": 1944
+}

@@ -1,0 +1,7 @@
+{
+  "status": "FINITE-EXACT",
+  "scope": "Every two-funnel address with each word length <= 6; empty or ending1",
+  "words": 64,
+  "distinct_observers": 4096,
+  "factor3_identities": []
+}

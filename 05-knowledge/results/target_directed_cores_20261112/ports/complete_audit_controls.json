@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "full_core_layers_agree": true,
+  "total_cores": 5640026,
+  "independent_direct_outer_tests": 74845805,
+  "small_unpruned_controls": [
+    {
+      "target": 881,
+      "unfiltered_cores": 1597,
+      "filtered_counts": {
+        "1": 1,
+        "3": 1,
+        "4": 3,
+        "5": 8,
+        "6": 21,
+        "7": 55,
+        "8": 75,
+        "9": 0,
+        "10": 0
+      },
+      "direct_outer_tests": 599,
+      "hits": 2
+    },
+    {
+      "target": 1997,
+      "unfiltered_cores": 4181,
+      "filtered_counts": {
+        "1": 1,
+        "3": 1,
+        "4": 3,
+        "5": 8,
+        "6": 21,
+        "7": 55,
+        "8": 144,
+        "9": 54,
+        "10": 0,
+        "11": 0
+      },
+      "direct_outer_tests": 1531,
+      "hits": 0
+    }
+  ],
+  "complete_target_comparisons": [
+    {
+      "target": 53084231,
+      "full_core_layers_agree": true,
+      "total_cores": 5640026,
+      "independent_direct_outer_tests": 74845805
+    },
+    {
+      "target": 159252697,
+      "full_core_layers_agree": true,
+      "total_cores": 16075330,
+      "independent_direct_outer_tests": 233412223
+    }
+  ]
+}

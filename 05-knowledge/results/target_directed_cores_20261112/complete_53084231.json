@@ -1,0 +1,30 @@
+{
+"target": 53084231, "core_p2_bound": 106168462, "core_order_bound": 26,
+"layers": [
+{"order": 1, "retained_cores": 1, "evaluated": 0, "p2_pruned": 0},
+{"order": 3, "retained_cores": 1, "evaluated": 1, "p2_pruned": 0},
+{"order": 4, "retained_cores": 3, "evaluated": 3, "p2_pruned": 0},
+{"order": 5, "retained_cores": 8, "evaluated": 8, "p2_pruned": 0},
+{"order": 6, "retained_cores": 21, "evaluated": 21, "p2_pruned": 0},
+{"order": 7, "retained_cores": 55, "evaluated": 55, "p2_pruned": 0},
+{"order": 8, "retained_cores": 144, "evaluated": 144, "p2_pruned": 0},
+{"order": 9, "retained_cores": 377, "evaluated": 377, "p2_pruned": 0},
+{"order": 10, "retained_cores": 987, "evaluated": 987, "p2_pruned": 0},
+{"order": 11, "retained_cores": 2584, "evaluated": 2584, "p2_pruned": 0},
+{"order": 12, "retained_cores": 6765, "evaluated": 6765, "p2_pruned": 0},
+{"order": 13, "retained_cores": 17711, "evaluated": 17711, "p2_pruned": 0},
+{"order": 14, "retained_cores": 46368, "evaluated": 46368, "p2_pruned": 0},
+{"order": 15, "retained_cores": 121393, "evaluated": 121393, "p2_pruned": 0},
+{"order": 16, "retained_cores": 317811, "evaluated": 317811, "p2_pruned": 0},
+{"order": 17, "retained_cores": 832040, "evaluated": 832040, "p2_pruned": 0},
+{"order": 18, "retained_cores": 2108788, "evaluated": 2174086, "p2_pruned": 65298},
+{"order": 19, "retained_cores": 2184969, "evaluated": 4873239, "p2_pruned": 2688270},
+{"order": 20, "retained_cores": 0, "evaluated": 3889830, "p2_pruned": 3889830},
+{"order": 21, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0},
+{"order": 22, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0},
+{"order": 23, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0},
+{"order": 24, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0},
+{"order": 25, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0},
+{"order": 26, "retained_cores": 0, "evaluated": 0, "p2_pruned": 0}
+], "found": false, "complete_core_universe": true, "inverse_visits": 5682252
+}

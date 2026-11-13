@@ -1,0 +1,4 @@
+{"target":881,"status":"complete independent depth-first core traversal with direct outer-word enumeration","hits":[
+{"core_order":4,"outer_word":20,"address":["1",""],"state":[5,2,6,32,9,19]},
+{"core_order":6,"outer_word":3,"address":["11","1"],"state":[15,5,15,216,57,115]}
+],"layers":[{"order":1,"retained":1,"attempts":0},{"order":2,"retained":0,"attempts":0},{"order":3,"retained":1,"attempts":1},{"order":4,"retained":3,"attempts":3},{"order":5,"retained":8,"attempts":8},{"order":6,"retained":21,"attempts":21},{"order":7,"retained":55,"attempts":55},{"order":8,"retained":75,"attempts":142},{"order":9,"retained":0,"attempts":140},{"order":10,"retained":0,"attempts":0}],"total_cores":164,"direct_outer_tests":599,"found":true}

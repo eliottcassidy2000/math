@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "base": {
+    "x": 45157534,
+    "g": 23780093,
+    "H": 159252695,
+    "q": 68937627
+  },
+  "scope": "All normalized fixed singleton outer words surrounding one growing constant-bit run with coefficient oddpart1215; normalization proves r<=8",
+  "constant_run_gate": [
+    {
+      "bit": 0,
+      "low_length": 0,
+      "low_value": 0,
+      "high_value": 1215,
+      "coefficient": 4860,
+      "offset": -1199
+    },
+    {
+      "bit": 0,
+      "low_length": 2,
+      "low_value": 2,
+      "high_value": 81,
+      "coefficient": 1215,
+      "offset": -33
+    },
+    {
+      "bit": 0,
+      "low_length": 3,
+      "low_value": 5,
+      "high_value": 45,
+      "coefficient": 1215,
+      "offset": -11
+    },
+    {
+      "bit": 0,
+      "low_length": 6,
+      "low_value": 44,
+      "high_value": 5,
+      "coefficient": 1215,
+      "offset": 167
+    },
+    {
+      "bit": 0,
+      "low_length": 7,
+      "low_value": 107,
+      "high_value": 3,
+      "coefficient": 1215,
+      "offset": 339
+    },
+    {
+      "bit": 1,
+      "low_length": 0,
+      "low_value": 0,
+      "high_value": 404,
+      "coefficient": 1215,
+      "offset": 339
+    },
+    {
+      "bit": 1,
+      "low_length": 2,
+      "low_value": 0,
+      "high_value": 80,
+      "coefficient": 1215,
+      "offset": 65
+    },
+    {
+      "bit": 1,
+      "low_length": 3,
+      "low_value": 1,
+      "high_value": 44,
+      "coefficient": 1215,
+      "offset": 15
+    },
+    {
+      "bit": 1,
+      "low_length": 6,
+      "low_value": 12,
+      "high_value": 4,
+      "coefficient": 1215,
+      "offset": -191
+    },
+    {
+      "bit": 1,
+      "low_length": 7,
+      "low_value": 43,
+      "high_value": 2,
+      "coefficient": 1215,
+      "offset": -263
+    }
+  ],
+  "arithmetic_controls": [
+    {
+      "ell": 1,
+      "zero_prefix_H": 339882831,
+      "nearby_H": 2597
+    },
+    {
+      "ell": 2,
+      "zero_prefix_H": 701143103,
+      "nearby_H": 5027
+    },
+    {
+      "ell": 3,
+      "zero_prefix_H": 1423663647,
+      "nearby_H": 9887
+    },
+    {
+      "ell": 4,
+      "zero_prefix_H": 2868704735,
+      "nearby_H": 19607
+    },
+    {
+      "ell": 5,
+      "zero_prefix_H": 5758786911,
+      "nearby_H": 39047
+    },
+    {
+      "ell": 6,
+      "zero_prefix_H": 11538951263,
+      "nearby_H": 77927
+    },
+    {
+      "ell": 7,
+      "zero_prefix_H": 23099279967,
+      "nearby_H": 155687
+    },
+    {
+      "ell": 8,
+      "zero_prefix_H": 46219937375,
+      "nearby_H": 311207
+    },
+    {
+      "ell": 9,
+      "zero_prefix_H": 92461252191,
+      "nearby_H": 622247
+    },
+    {
+      "ell": 10,
+      "zero_prefix_H": 184943881823,
+      "nearby_H": 1244327
+    },
+    {
+      "ell": 11,
+      "zero_prefix_H": 369909141087,
+      "nearby_H": 2488487
+    },
+    {
+      "ell": 12,
+      "zero_prefix_H": 739839659615,
+      "nearby_H": 4976807
+    }
+  ]
+}

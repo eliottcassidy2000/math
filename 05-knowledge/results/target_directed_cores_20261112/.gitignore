@@ -1,0 +1,7 @@
+# Generated complete core banks; rebuild from the small deterministic compiler.
+core_bank.json
+core_bank.txt
+core_bank_extra.json
+core_bank_extra.txt
+target_extra_receipt.json
+__pycache__/
