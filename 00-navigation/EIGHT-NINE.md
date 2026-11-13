@@ -3,6 +3,15 @@
 [Research packet](../05-knowledge/results/eight_nine_twentyseven_20261112/README.md).
 **PROVED IN NOTES / FINITE-EXACT; Chan–Pak OPEN.**
 
+[Exact targets and guarded Collatz renewal](../05-knowledge/results/target_collatz_transitions_20261113/README.md):
+independent-module repair escapes the paired norm obstruction at7p, with
+a complete finite factor inverse and a sharp all-order constructor head.
+Ordered determinant−1 gives an actual nontrivial3H−2 source; fixed-core
+padding is proved unable to renew it. A physical core handoff gives
+239→721→1081; the last-site tax18H(M) and native refill make its boundary
+exact. Positive extra-inverse debt gives guarded descent. Universal
+source coverage and return remain OPEN.
+
 [63 and retained-root repairs](../05-knowledge/results/sixty_three_bridge_20261113/README.md):
 sharp three-arc neutral repair; arbitrary paired-module norm and exact
 primitive guard; repeatable 63→165→269→497 continuation family. Incoming

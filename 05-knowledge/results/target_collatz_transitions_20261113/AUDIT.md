@@ -100,3 +100,7 @@ are not dependent on Python assertions remaining enabled. Root SHA256SUMS
 covers the finished packet; the history lane additionally has its own
 manifest. New relative links are checked against working files or the
 Git object tree, including files omitted by the sparse checkout.
+
+Repository integration: `agents/check_docs.py` passed after adding the
+results-index and EIGHT-NINE routes. Maintained header/status lines remain
+at their existing positions. `git diff --check` also passed.
