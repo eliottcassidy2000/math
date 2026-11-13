@@ -1,0 +1,21 @@
+{
+  "atlas_graphs": 119,
+  "cycle3_determinant": {
+    "constant": 1,
+    "x0x1x2": -1
+  },
+  "elimination_orders": 593,
+  "fz_valid_counts": {
+    "1": 1,
+    "2": 4,
+    "3": 12,
+    "4": 64,
+    "5": 640
+  },
+  "fz_vertex_tests": 5405,
+  "labelled_components": 772,
+  "pentagon_tests": 10650,
+  "scope": "FZ all labelled n<=5; atlas all labelled n<=4 and seeded samples n5,n6",
+  "status": "PASS",
+  "two_pivot_exchange_checks": 2050
+}

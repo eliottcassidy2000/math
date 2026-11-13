@@ -1,0 +1,15 @@
+{
+  "exhaustive_h_digest": "7dedf9268d154124dc70df004e72cc3fbccc39d05355fc4c023aa06ab0681355",
+  "marked_necklace_orbit_cases": 5,
+  "scope": "all labelled n<=5; 80 seeded samples each n=6,7; not coverage evidence",
+  "status": "PASS",
+  "tournament_cases": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024,
+    "6_sample": 80,
+    "7_sample": 80
+  }
+}

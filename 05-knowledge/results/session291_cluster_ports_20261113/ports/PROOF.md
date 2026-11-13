@@ -1,6 +1,6 @@
 # Paired ports: an exact arithmetic observation code, not the Golay code
 
-**Status: PROOF CANDIDATE / UNDER INDEPENDENT REVIEW.** All claims below concern
+**Status: PROVED / FINITE-EXACT where stated; independently reviewed.** All claims below concern
 Session290's declared 24 even charts, with its third free port fixed at length
 one. The underlying chart construction and its unit-defect identities are
 inherited; the arithmetic observer and comparisons here are new applications.
