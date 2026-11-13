@@ -159,7 +159,10 @@
   ],
   "census": "pair_growth2.cpp exhaustive O3 run performed once; independent Python input/witness checks and mathematical completeness review retained.",
   "repository_checks": {
-    "status": "PENDING"
+    "status": "PASS",
+    "command": "python3 agents/check_docs.py",
+    "result": "Agent-facing documentation check PASSED: bounded startup surface, frontmatter-derived frontier status, correction sentinels, and router smoke.",
+    "staged_diff_check": "git diff --cached --check passed before first checkpoint; final diff checked separately before integration."
   },
   "relative_links": {
     "count": 75,

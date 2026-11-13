@@ -3,6 +3,15 @@
 [Research packet](../05-knowledge/results/eight_nine_twentyseven_20261112/README.md).
 **PROVED IN NOTES / FINITE-EXACT; Chan–Pak OPEN.**
 
+[Protected symmetry returns and changing strong reservoirs](../05-knowledge/results/symmetry_port_return_20261113/README.md):
+an explicit primitive marked port survives global C3-to-trivial symmetry
+breaking; arbitrary wrapped refills preserve all old arcs and exterior ports.
+Two-vertex module extensions give six determinant pairs and four prime exits.
+An infinite clock family has exact seven-adic valuation one. Complete physical
+probe bases and marked triangle-hypergraph congruence come from older LRC and
+six-uniform work. The fixed clock language is sparse and rejects all six new
+exits; arbitrary prime/7p entry and Chan–Pak remain OPEN.
+
 [Exact targets and guarded Collatz renewal](../05-knowledge/results/target_collatz_transitions_20261113/README.md):
 independent-module7p selector, physical core handoff and exact boundary/refill;
 guarded extra-inverse descent. Universal source coverage and return OPEN.
