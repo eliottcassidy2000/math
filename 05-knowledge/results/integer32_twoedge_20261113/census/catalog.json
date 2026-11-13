@@ -1,0 +1,1138 @@
+{
+  "status": "SOURCE-PINNED RECOVERY CATALOG; not an exhaustive occurrence or request-history census",
+  "source_commit": "68d0d86bef480b6a36efc3d9864fd01ff3244bf5",
+  "universe": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "literal_entries_in_old_role_index": 26,
+  "absent_from_old_role_index": [
+    0,
+    22,
+    23,
+    25,
+    26,
+    28,
+    30
+  ],
+  "sources": [
+    {
+      "path": "05-knowledge/results/natural_number_roles_20261004.md",
+      "source_kind": "curated small-number index",
+      "session_route": "20261004 difference-families-oct04",
+      "sha256": "d909b5b6b0489cfcc1bd1d0a0ced0fcf726f782c1d2b83446044b45ad1fbfa3a",
+      "git_blob": "b86ab86eab43a8be48e3c73b650159d543bbc5ed"
+    },
+    {
+      "path": "05-knowledge/results/constants_atlas_20260926_recurrent_numbers.md",
+      "source_kind": "lexical census; deliberately filters small integers",
+      "session_route": "20260926 collatz-exponent-atlas",
+      "sha256": "29bd19af07e652a9e4cfb70c2928c5e2eecf164c6c79e27e164eab842e7547b0",
+      "git_blob": "8112482edc8527161f5ce2c597273ef4f9e67966"
+    },
+    {
+      "path": "05-knowledge/results/six_roots_hidden_bits_20261103/NUMBER_ATLAS.md",
+      "source_kind": "six-numeral lexical census and selective proof atlas",
+      "session_route": "six_roots_hidden_bits_20261103",
+      "sha256": "6c6e57afdcccbfc01c2b6fc0958f3d55c6c4e351a19912a9c37c426a20b4f4c3",
+      "git_blob": "486e4fdd7c5ed3865b9aca18b8745eea373ea232"
+    },
+    {
+      "path": "05-knowledge/results/merge_18_19_11_22_collatz_hn_20261018.md",
+      "source_kind": "explicit owner-requested four-number survey",
+      "session_route": "20261018 sixcolour second brief",
+      "sha256": "a5dc90f685c6184ba1efe2faefc9449340ad8fab8e1de5932b7d66304d533911",
+      "git_blob": "595edd55dd1a4cb160985b6e1375de9203c64900"
+    },
+    {
+      "path": "05-knowledge/results/joint_metagraph_dyadic_20261113/sporadic/BRIDGES.md",
+      "source_kind": "audited typed bridges; not a numeral occurrence census",
+      "session_route": "joint_metagraph_dyadic_20261113 sporadic",
+      "sha256": "f65914985afd0015116516c05ed09dafc38b3ce2e26c5bffd9b1854127c3d216",
+      "git_blob": "ec3897e334502e99aa43160209dbaf84a786e7e2"
+    },
+    {
+      "path": "05-knowledge/results/pythagorean_form_conic_graphs_rp_margin_20261018.md",
+      "source_kind": "typed conic dictionary with finite controls",
+      "session_route": "20261018 pythagorean/form/conic",
+      "sha256": "fd52d3b3c37a601840c84497372e36c6049867f004d0845dc9a7de9c86163e6c",
+      "git_blob": "dbd556444456789f947f803d453f27644abda07a"
+    },
+    {
+      "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "source_kind": "targeted cardinality atlas; not an occurrence census",
+      "session_route": "20261018 frontier_petersen_oct18",
+      "sha256": "0bdb02e403ec498dccd654459dc311667441dc14888a30ec430bbb9efd3c7a81",
+      "git_blob": "2cbd3ad3962eec0e0363746fa2d3139a3b33e17d"
+    },
+    {
+      "path": "05-knowledge/results/odd_tables_signed_carries_20261111/history/NATIVE_ZERO.md",
+      "source_kind": "native zero-digit construction; synthesized lookup for numeral zero",
+      "session_route": "odd_tables_signed_carries_20261111",
+      "sha256": "853428b83e4cdd26bce52202be89dc88c10677046de2ceb8289d8314b86afa1c",
+      "git_blob": "01f953debb64bff6c4570252a492f885c7f9a23e"
+    },
+    {
+      "path": "05-knowledge/results/eight_nine_twentyseven_20261112/history/HISTORY.md",
+      "source_kind": "targeted 8/9/27 recovery and new construction",
+      "session_route": "eight_nine_twentyseven_20261112",
+      "sha256": "231c882b85668732910ce5c31c623064f86ab6d55e22a59f3447f34e7b7b31b5",
+      "git_blob": "237056e54f2612fa6540dcd80e63083bc3ce47f2"
+    },
+    {
+      "path": "05-knowledge/results/eleven_wedge_honeycomb_20261102/RECOVERY.md",
+      "source_kind": "targeted 20 and 7/15/24/26 recovery",
+      "session_route": "eleven_wedge_honeycomb_20261102",
+      "sha256": "7febc725d8acb53e812ed9694b3572f0c283af6ce9eaf4f9b4ddc5c16e9ef39b",
+      "git_blob": "fa755ddc591232698aa81054445698b6649ca0c4"
+    },
+    {
+      "path": "05-knowledge/results/sextic_subfield_clock_20261004.md",
+      "source_kind": "proved finite-field norm/tensor clock",
+      "session_route": "20261004 sextic-subfield-clock",
+      "sha256": "6f2004328d86130dc404b22ab4635532011a4eb6a2228021ed7dc975ff38389f",
+      "git_blob": "cb8fe4d2222ab4c12a946c146fbb96784100cd68"
+    },
+    {
+      "path": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/README.md",
+      "source_kind": "proved bridge conditional on independently reproduced finite blocker census",
+      "session_route": "session54_reframed_numerology_20261025",
+      "sha256": "716c0776db45065193de1a00849bd0b951bec403c175d728617b5d2eed57ae83",
+      "git_blob": "596326cad653f02bc79dd60eb6f53c08b264bf5a"
+    },
+    {
+      "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+      "source_kind": "proved pair-palette, Fano-completion and holonomy transfer; finite controls",
+      "session_route": "session61_hadwiger_six_seven_20261025",
+      "sha256": "e85f046a6b72d16bd7aefcbec0c8cc8fde886537b36ef289213fc1226c01a5a4",
+      "git_blob": "97da03bd49ab8289279d2ff531f3de8b8d3ec8e5"
+    },
+    {
+      "path": "05-knowledge/results/hn_metagraph_information_20261026/information/RESULT.md",
+      "source_kind": "proved full labelled Hamilton-path flip-response reconstruction",
+      "session_route": "hn_metagraph_information_20261026",
+      "sha256": "52b3f998e4c73b28705ccbce4cd2ad752cc08a4be17ef3840908a072cadf9bc8",
+      "git_blob": "ce71e766c2cc5a9d99a828a4ec83be8051e5020d"
+    }
+  ],
+  "scope_limits": [
+    "bounded recovery of named atlases and targeted source notes",
+    "no complete archived chat or deleted-only history scan",
+    "a supplemental typed route does not establish a dedicated old census for that integer",
+    "inherited mathematical statuses are not newly promoted by inclusion"
+  ],
+  "rows": [
+    {
+      "number": 0,
+      "old_role_index_entry": false,
+      "recovery_status": "SUPPLEMENTAL_TYPED_ROUTE",
+      "claim_status": "PROVED in inherited source; route is not an old numeral census",
+      "roles": "native zero-digit return; a preserved two-birth interface multiplies H by3",
+      "source": {
+        "path": "05-knowledge/results/odd_tables_signed_carries_20261111/history/NATIVE_ZERO.md",
+        "line": 35,
+        "source_kind": "native zero-digit construction; synthesized lookup for numeral zero",
+        "session_route": "odd_tables_signed_carries_20261111"
+      },
+      "linked_source_paths": [],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": []
+    },
+    {
+      "number": 1,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "odd positive Collatz root; unit for multiplication; the diagonal excluded by distinct-summand pairs",
+      "relation_and_source_verbatim": "Root and unit are different types. A certificate must name its terminal basin. [Sibling grammar](creative_sibling_20260925.md), [braid](arithmetic_braids_20260917_collatz.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 45,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/creative_sibling_20260925.md",
+        "05-knowledge/results/arithmetic_braids_20260917_collatz.md"
+      ],
+      "request_provenance": "Inherited atlas explicitly identifies the annotation {1,23,25,63,65,67}; no individual archived chat opened",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/six_roots_hidden_bits_20261103/NUMBER_ATLAS.md",
+          "line": 35,
+          "source_kind": "six-numeral lexical census and selective proof atlas",
+          "session_route": "six_roots_hidden_bits_20261103"
+        },
+        {
+          "path": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/README.md",
+          "line": 1,
+          "source_kind": "proved bridge conditional on independently reproduced finite blocker census",
+          "session_route": "session54_reframed_numerology_20261025"
+        },
+        {
+          "path": "05-knowledge/results/hn_metagraph_information_20261026/information/RESULT.md",
+          "line": 1,
+          "source_kind": "proved full labelled Hamilton-path flip-response reconstruction",
+          "session_route": "hn_metagraph_information_20261026"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "binary valuation; first-reset boundary; two proper subfield degrees begin with 2; two golden ideal branches",
+      "relation_and_source_verbatim": "Map: exponents control the real denominator and the binary guard. A reset equal to 2 creates the debt state (4), rather than the legal switch (3). [New construction](checked_switch_phase19_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 46,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/checked_switch_phase19_20261004.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/sextic_subfield_clock_20261004.md",
+          "line": 1,
+          "source_kind": "proved finite-field norm/tensor clock",
+          "session_route": "20261004 sextic-subfield-clock"
+        },
+        {
+          "path": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/README.md",
+          "line": 1,
+          "source_kind": "proved bridge conditional on independently reproduced finite blocker census",
+          "session_route": "session54_reframed_numerology_20261025"
+        },
+        {
+          "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+          "line": 1,
+          "source_kind": "proved pair-palette, Fano-completion and holonomy transfer; finite controls",
+          "session_route": "session61_hadwiger_six_seven_20261025"
+        },
+        {
+          "path": "05-knowledge/results/hn_metagraph_information_20261026/information/RESULT.md",
+          "line": 1,
+          "source_kind": "proved full labelled Hamilton-path flip-response reconstruction",
+          "session_route": "hn_metagraph_information_20261026"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "Collatz multiplier; ternary inverse integrality; cubic extension; three torus layers at 19; lost ternary digit",
+      "relation_and_source_verbatim": "Maps exist, but the spaces differ. `3/2 mod 19` has order 3; `F64* -> F4* x F8*` has kernel of order 3. [Phase geometry](checked_switch_phase19_20261004.md), [subfield norms](sextic_subfield_clock_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 47,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/checked_switch_phase19_20261004.md",
+        "05-knowledge/results/sextic_subfield_clock_20261004.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/sextic_subfield_clock_20261004.md",
+          "line": 1,
+          "source_kind": "proved finite-field norm/tensor clock",
+          "session_route": "20261004 sextic-subfield-clock"
+        },
+        {
+          "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+          "line": 1,
+          "source_kind": "proved pair-palette, Fano-completion and holonomy transfer; finite controls",
+          "session_route": "session61_hadwiger_six_seven_20261025"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "ordinary positive Collatz cycle includes 4; sibling map `4n+1`; four isomorphism classes of 4-tournaments; gap of both `(7,11)` and `(8,12)`; `76=4*19`",
+      "relation_and_source_verbatim": "Sibling relation is a map. A count of four does not canonically identify tournaments with the four denominators `{1,2,11,76}`. [Difference operations](difference_family_operations_20261004.md), [golden phase recursion](difference_diagonals_golden_phase_recursion_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 48,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/difference_family_operations_20261004.md",
+        "05-knowledge/results/difference_diagonals_golden_phase_recursion_20261004.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+          "line": 1,
+          "source_kind": "targeted cardinality atlas; not an occurrence census",
+          "session_route": "20261018 frontier_petersen_oct18"
+        },
+        {
+          "path": "05-knowledge/results/sextic_subfield_clock_20261004.md",
+          "line": 1,
+          "source_kind": "proved finite-field norm/tensor clock",
+          "session_route": "20261004 sextic-subfield-clock"
+        },
+        {
+          "path": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/README.md",
+          "line": 1,
+          "source_kind": "proved bridge conditional on independently reproduced finite blocker census",
+          "session_route": "session54_reframed_numerology_20261025"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "spherical `(2,3,5)`; golden discriminant; norm of `1+3phi` is -5; negative Collatz basin at -5",
+      "relation_and_source_verbatim": "Exact algebra gives `(1+3phi)^2=5phi^4`. Geometry and the signed basin have no supplied dynamics-preserving map. [Sixth clock](sixth_clock_branches_20261004.md), [geometry](camion_busch_gaps_polyhedra_collatz_20261002.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 49,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/sixth_clock_branches_20261004.md",
+        "05-knowledge/results/camion_busch_gaps_polyhedra_collatz_20261002.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": []
+    },
+    {
+      "number": 6,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "flat `(2,3,6)`; binary dimension of F64; order of 2 mod 9; six units mod 14; six free edges after fixing a Hamiltonian path on five vertices; exceptional Mersenne index",
+      "relation_and_source_verbatim": "Strong maps: cyclotomic degree, inverse valuation clock, and the phase action table. Six free bits represent 64 encodings, not six tournament isomorphism classes. [Subfield clock](sextic_subfield_clock_20261004.md), [THM-873 μ6 spine](../../01-canon/theorems/THM-873-mu6-spine-tight-locus.md), [new note](checked_switch_phase19_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 50,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/sextic_subfield_clock_20261004.md",
+        "01-canon/theorems/THM-873-mu6-spine-tight-locus.md",
+        "05-knowledge/results/checked_switch_phase19_20261004.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+          "line": 1,
+          "source_kind": "targeted cardinality atlas; not an occurrence census",
+          "session_route": "20261018 frontier_petersen_oct18"
+        },
+        {
+          "path": "05-knowledge/results/sextic_subfield_clock_20261004.md",
+          "line": 1,
+          "source_kind": "proved finite-field norm/tensor clock",
+          "session_route": "20261004 sextic-subfield-clock"
+        },
+        {
+          "path": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/README.md",
+          "line": 1,
+          "source_kind": "proved bridge conditional on independently reproduced finite blocker census",
+          "session_route": "session54_reframed_numerology_20261025"
+        },
+        {
+          "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+          "line": 1,
+          "source_kind": "proved pair-palette, Fano-completion and holonomy transfer; finite controls",
+          "session_route": "session61_hadwiger_six_seven_20261025"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "hyperbolic `(2,3,7)`; Paley K7 torus; `F8*` order; Lucas `L4`; minus basin pair 5,7; first uncertified source in the old sibling grammar",
+      "relation_and_source_verbatim": "K7 -> torus is a map. The Lucas identity `phi^8+1=7phi^4` is Cayley–Hamilton. Source 7 needs a different certificate rule, not a geometrical label. [Camion–Busch](camion_busch_gaps_polyhedra_collatz_20261002.md), [unit-minus-one clocks](collatz_lucas_monotile_discrepancy_20260930.md), [sibling](creative_sibling_20260925.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 51,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/camion_busch_gaps_polyhedra_collatz_20261002.md",
+        "05-knowledge/results/collatz_lucas_monotile_discrepancy_20260930.md",
+        "05-knowledge/results/creative_sibling_20260925.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/eleven_wedge_honeycomb_20261102/RECOVERY.md",
+          "line": 1,
+          "source_kind": "targeted 20 and 7/15/24/26 recovery",
+          "session_route": "eleven_wedge_honeycomb_20261102"
+        },
+        {
+          "path": "05-knowledge/results/sextic_subfield_clock_20261004.md",
+          "line": 1,
+          "source_kind": "proved finite-field norm/tensor clock",
+          "session_route": "20261004 sextic-subfield-clock"
+        },
+        {
+          "path": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/README.md",
+          "line": 1,
+          "source_kind": "proved bridge conditional on independently reproduced finite blocker census",
+          "session_route": "session54_reframed_numerology_20261025"
+        },
+        {
+          "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+          "line": 1,
+          "source_kind": "proved pair-palette, Fano-completion and holonomy transfer; finite controls",
+          "session_route": "session61_hadwiger_six_seven_20261025"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "F8 subfield; `2^3`; Sylow-7 normalizer index `168/21`; 8 and 12 have gap4",
+      "relation_and_source_verbatim": "The subfield sits in F64; the group index belongs to PSL2(7). A cardinality match alone does not identify the subfield with a homogeneous space. [Subfield clock](sextic_subfield_clock_20261004.md), [Ogg audit](ogg_triangular_chowla_20260927_audit.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 52,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/sextic_subfield_clock_20261004.md",
+        "05-knowledge/results/ogg_triangular_chowla_20260927_audit.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/eight_nine_twentyseven_20261112/history/HISTORY.md",
+          "line": 1,
+          "source_kind": "targeted 8/9/27 recovery and new construction",
+          "session_route": "eight_nine_twentyseven_20261112"
+        },
+        {
+          "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+          "line": 1,
+          "source_kind": "targeted cardinality atlas; not an occurrence census",
+          "session_route": "20261018 frontier_petersen_oct18"
+        },
+        {
+          "path": "05-knowledge/results/sextic_subfield_clock_20261004.md",
+          "line": 1,
+          "source_kind": "proved finite-field norm/tensor clock",
+          "session_route": "20261004 sextic-subfield-clock"
+        },
+        {
+          "path": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/README.md",
+          "line": 1,
+          "source_kind": "proved bridge conditional on independently reproduced finite blocker census",
+          "session_route": "session54_reframed_numerology_20261025"
+        },
+        {
+          "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+          "line": 1,
+          "source_kind": "proved pair-palette, Fano-completion and holonomy transfer; finite controls",
+          "session_route": "session61_hadwiger_six_seven_20261025"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "order of the sextic root modulo 2; `Phi9(X)=X^6+X^3+1`; inverse residues mod 9; nine quadratic residues mod 19",
+      "relation_and_source_verbatim": "Map: the nine directions partition into three cube-root cosets. Root order 9 differs from generator order 63. [Subfield clock](sextic_subfield_clock_20261004.md), [phase geometry](checked_switch_phase19_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 53,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/sextic_subfield_clock_20261004.md",
+        "05-knowledge/results/checked_switch_phase19_20261004.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/eight_nine_twentyseven_20261112/history/HISTORY.md",
+          "line": 1,
+          "source_kind": "targeted 8/9/27 recovery and new construction",
+          "session_route": "eight_nine_twentyseven_20261112"
+        },
+        {
+          "path": "05-knowledge/results/sextic_subfield_clock_20261004.md",
+          "line": 1,
+          "source_kind": "proved finite-field norm/tensor clock",
+          "session_route": "20261004 sextic-subfield-clock"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "edges of K5; triangular number T4; proper nontrivial divisors of `p^2qr`; `10=7+3`",
+      "relation_and_source_verbatim": "The divisor classification uses nested subsets: seven squarefree divisors include the three prime divisors. It is not a disjoint 7+3 partition. [Divisor balance](seam_prime_balance_20260925.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 54,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/seam_prime_balance_20260925.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": []
+    },
+    {
+      "number": 11,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "`L5`; 11 halvings in the -17 cycle; golden denominator11; prime triple `{2,3,11}`; binary coefficient label of `zeta^3+zeta+1`",
+      "relation_and_source_verbatim": "The first three roles have their own exact clocks. The last role depends on a chosen polynomial basis and does not explain prime 11. [Golden recursion](difference_diagonals_golden_phase_recursion_20261004.md), [unit clocks](collatz_lucas_monotile_discrepancy_20260930.md), [new phase seed](checked_switch_phase19_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 55,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/difference_diagonals_golden_phase_recursion_20261004.md",
+        "05-knowledge/results/collatz_lucas_monotile_discrepancy_20260930.md",
+        "05-knowledge/results/checked_switch_phase19_20261004.md"
+      ],
+      "request_provenance": "Inherited note quotes owner request to recover 18,19,11,22; not an independently opened archived chat",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/merge_18_19_11_22_collatz_hn_20261018.md",
+          "line": 28,
+          "source_kind": "explicit owner-requested four-number survey",
+          "session_route": "20261018 sixcolour second brief"
+        },
+        {
+          "path": "05-knowledge/results/eleven_wedge_honeycomb_20261102/RECOVERY.md",
+          "line": 1,
+          "source_kind": "targeted 20 and 7/15/24/26 recovery",
+          "session_route": "eleven_wedge_honeycomb_20261102"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "`tau(p^2qr)=3*2*2`; twelve classes of 5-tournaments; 12 and 8 share gap4",
+      "relation_and_source_verbatim": "The first 12 is an exponent-box size; the second is a quotient count. Their identification is an echo. [Divisor balance](seam_prime_balance_20260925.md), [difference operations](difference_family_operations_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 56,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/seam_prime_balance_20260925.md",
+        "05-knowledge/results/difference_family_operations_20261004.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": []
+    },
+    {
+      "number": 13,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "`2^8-3^5`; LRC(14)'s thirteen nonstationary speeds; exponent13 gives a translation on the 19-phase; first bad reset from 7 lands at 13",
+      "relation_and_source_verbatim": "New map: `2^13=3 mod 19`, hence `C13(x)=x+13`. The Pillai gap13 is a separate integer equation. [Phase geometry](checked_switch_phase19_20261004.md), [constants atlas](constants_atlas_20260926_recurrent_numbers.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 57,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/checked_switch_phase19_20261004.md",
+        "05-knowledge/results/constants_atlas_20260926_recurrent_numbers.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": []
+    },
+    {
+      "number": 14,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "LRC anchor; K7 triangular faces; Heawood vertices; 14 edges in the finite flat-star refinement graph",
+      "relation_and_source_verbatim": "K7 duality gives Heawood and its 14 vertices. The flat-star graph and the LRC problem require separate predicates. [Camion–Busch](camion_busch_gaps_polyhedra_collatz_20261002.md), [flat stars](forest_20260926_tilings.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 58,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/camion_busch_gaps_polyhedra_collatz_20261002.md",
+        "05-knowledge/results/forest_20260926_tilings.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+          "line": 1,
+          "source_kind": "targeted cardinality atlas; not an occurrence census",
+          "session_route": "20261018 frontier_petersen_oct18"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "T5 and K6 edge count; `6+9` enlarged triangular array; first square-sum Hamiltonian threshold in the audited lane",
+      "relation_and_source_verbatim": "Array coordinates can store information; no Collatz certificate follows from their number. [Square-sum audit](collatz_mod6_20260922_w6_square_sum_hamiltonicity.md), [decoder seams](seam_threshold_20260925.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 59,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/collatz_mod6_20260922_w6_square_sum_hamiltonicity.md",
+        "05-knowledge/results/seam_threshold_20260925.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/eleven_wedge_honeycomb_20261102/RECOVERY.md",
+          "line": 1,
+          "source_kind": "targeted 20 and 7/15/24/26 recovery",
+          "session_route": "eleven_wedge_honeycomb_20261102"
+        },
+        {
+          "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+          "line": 1,
+          "source_kind": "targeted cardinality atlas; not an occurrence census",
+          "session_route": "20261018 frontier_petersen_oct18"
+        },
+        {
+          "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+          "line": 1,
+          "source_kind": "proved pair-palette, Fano-completion and holonomy transfer; finite controls",
+          "session_route": "session61_hadwiger_six_seven_20261025"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "AMM superblock uses16 terms; `2^4`; threshold for nonplanarity of the integer graph with +2 and doubling edges; denominator of -29/16",
+      "relation_and_source_verbatim": "These are separate mechanisms. The last is a quadratic-dynamical parameter, not a Collatz multiplier. [THM-4468](../../01-canon/theorems/THM-4468-golden-zero-superblocks-beat-golden-amm12592.md), [graph minors](decoder_minors_20260925.md), [difference norms](difference_visibility_norms_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 60,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "01-canon/theorems/THM-4468-golden-zero-superblocks-beat-golden-amm12592.md",
+        "05-knowledge/results/decoder_minors_20260925.md",
+        "05-knowledge/results/difference_visibility_norms_20261004.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+          "line": 1,
+          "source_kind": "targeted cardinality atlas; not an occurrence census",
+          "session_route": "20261018 frontier_petersen_oct18"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "minimum absolute value in one known negative Collatz cycle; 17 unordered locally flat polygon stars",
+      "relation_and_source_verbatim": "Equal numbers, different predicates. The cycle has seven odd steps and eleven halvings; the star count is an Egyptian-fraction classification. [Golden carriers](collatz_golden_carriers_20261004.md), [flat stars](forest_20260926_tilings.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 61,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/collatz_golden_carriers_20261004.md",
+        "05-knowledge/results/forest_20260926_tilings.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": []
+    },
+    {
+      "number": 18,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "second cubic field dimension; multiplicative order of 2 modulo 19; golden period associated with denominator76",
+      "relation_and_source_verbatim": "First two are directly linked: a primitive order-19 root first lives in F_(2^18). The golden clock needs its separate denominator/phase map. [Depth tower](cyclotomic_depth_towers_20261004.md), [golden recursion](difference_diagonals_golden_phase_recursion_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 62,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/cyclotomic_depth_towers_20261004.md",
+        "05-knowledge/results/difference_diagonals_golden_phase_recursion_20261004.md"
+      ],
+      "request_provenance": "Inherited note quotes owner request to recover 18,19,11,22; not an independently opened archived chat",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/merge_18_19_11_22_collatz_hn_20261018.md",
+          "line": 26,
+          "source_kind": "explicit owner-requested four-number survey",
+          "session_route": "20261018 sixcolour second brief"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "missing multiplicative phase; `3^3-2^3`; Eisenstein norm19; torus vertices; `76/4`; golden norm `L3^2+3`",
+      "relation_and_source_verbatim": "Strongest joined hub: explicit norm factorization, quotient lattice, and guarded phase semiconjugacy. The scalar golden norm does not alone identify golden ideals with Eisenstein ideals. [New proof](checked_switch_phase19_20261004.md), [depth tower](cyclotomic_depth_towers_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 63,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/checked_switch_phase19_20261004.md",
+        "05-knowledge/results/cyclotomic_depth_towers_20261004.md"
+      ],
+      "request_provenance": "Inherited note quotes owner request to recover 18,19,11,22; not an independently opened archived chat",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/merge_18_19_11_22_collatz_hn_20261018.md",
+          "line": 27,
+          "source_kind": "explicit owner-requested four-number survey",
+          "session_route": "20261018 sixcolour second brief"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "proper divisors of 60 include20; one nonextendable flat star is 5.5.10, another4.5.20",
+      "relation_and_source_verbatim": "Distinct boundary mechanisms. Flat local angle sums do not guarantee global tiling. [Flat stars](forest_20260926_tilings.md), [divisors](seam_prime_balance_20260925.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 64,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/forest_20260926_tilings.md",
+        "05-knowledge/results/seam_prime_balance_20260925.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/eleven_wedge_honeycomb_20261102/RECOVERY.md",
+          "line": 1,
+          "source_kind": "targeted 20 and 7/15/24/26 recovery",
+          "session_route": "eleven_wedge_honeycomb_20261102"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "edges of K7; order of its Paley affine automorphism group; nonzero rank-one F4-tensor-F8 elements; cyclic flat-star types",
+      "relation_and_source_verbatim": "Paley's group acts on its21 arcs. Tensor rank-one count is `(4-1)(8-1)=21`. No isomorphism is claimed between that cyclic multiplicative subgroup and the nonabelian Paley group. [Camion–Busch](camion_busch_gaps_polyhedra_collatz_20261002.md), [tensor clock](sextic_subfield_clock_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 65,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/camion_busch_gaps_polyhedra_collatz_20261002.md",
+        "05-knowledge/results/sextic_subfield_clock_20261004.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+          "line": 1,
+          "source_kind": "targeted cardinality atlas; not an occurrence census",
+          "session_route": "20261018 frontier_petersen_oct18"
+        },
+        {
+          "path": "05-knowledge/results/sextic_subfield_clock_20261004.md",
+          "line": 1,
+          "source_kind": "proved finite-field norm/tensor clock",
+          "session_route": "20261004 sextic-subfield-clock"
+        },
+        {
+          "path": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/README.md",
+          "line": 1,
+          "source_kind": "proved bridge conditional on independently reproduced finite blocker census",
+          "session_route": "session54_reframed_numerology_20261025"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "old_role_index_entry": false,
+      "recovery_status": "SUPPLEMENTAL_TYPED_ROUTE",
+      "claim_status": "INHERITED_SCOPED; no cross-problem theorem inferred",
+      "roles": "explicit four-number survey; 22 is a merge vertex congruent4 mod18, with separate HN/Jacobian roles",
+      "source": {
+        "path": "05-knowledge/results/merge_18_19_11_22_collatz_hn_20261018.md",
+        "line": 29,
+        "source_kind": "explicit owner-requested four-number survey",
+        "session_route": "20261018 sixcolour second brief"
+      },
+      "linked_source_paths": [],
+      "request_provenance": "Inherited note quotes owner request to recover 18,19,11,22; not an independently opened archived chat",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/merge_18_19_11_22_collatz_hn_20261018.md",
+          "line": 29,
+          "source_kind": "explicit owner-requested four-number survey",
+          "session_route": "20261018 sixcolour second brief"
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "old_role_index_entry": false,
+      "recovery_status": "SUPPLEMENTAL_TYPED_ROUTE",
+      "claim_status": "INHERITED_SCOPED; lexical coverage is FINITE-EXACT in its stated source revision",
+      "roles": "dedicated lexical census plus residue slots, square-sum order23 and Paley/Golay routes",
+      "source": {
+        "path": "05-knowledge/results/six_roots_hidden_bits_20261103/NUMBER_ATLAS.md",
+        "line": 54,
+        "source_kind": "six-numeral lexical census and selective proof atlas",
+        "session_route": "six_roots_hidden_bits_20261103"
+      },
+      "linked_source_paths": [],
+      "request_provenance": "Inherited atlas explicitly identifies the annotation {1,23,25,63,65,67}; no individual archived chat opened",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/six_roots_hidden_bits_20261103/NUMBER_ATLAS.md",
+          "line": 54,
+          "source_kind": "six-numeral lexical census and selective proof atlas",
+          "session_route": "six_roots_hidden_bits_20261103"
+        },
+        {
+          "path": "05-knowledge/results/joint_metagraph_dyadic_20261113/sporadic/BRIDGES.md",
+          "line": 264,
+          "source_kind": "audited typed bridges; not a numeral occurrence census",
+          "session_route": "joint_metagraph_dyadic_20261113 sporadic"
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "labelled transitive 4-tournaments; labelled strong 4-tournaments; Hamiltonian cycles of P7 in the inherited convention; tetrahedron flags",
+      "relation_and_source_verbatim": "Tetrahedron flags map to transitive orientations; equality with strong orientations uses the cited duality. The cycle count is separate. [Polyhedral tournament study](camion_busch_gaps_polyhedra_collatz_20261002.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 66,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/camion_busch_gaps_polyhedra_collatz_20261002.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/eleven_wedge_honeycomb_20261102/RECOVERY.md",
+          "line": 1,
+          "source_kind": "targeted 20 and 7/15/24/26 recovery",
+          "session_route": "eleven_wedge_honeycomb_20261102"
+        },
+        {
+          "path": "05-knowledge/results/joint_metagraph_dyadic_20261113/sporadic/BRIDGES.md",
+          "line": 264,
+          "source_kind": "audited typed bridges; not a numeral occurrence census",
+          "session_route": "joint_metagraph_dyadic_20261113 sporadic"
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "old_role_index_entry": false,
+      "recovery_status": "SUPPLEMENTAL_TYPED_ROUTE",
+      "claim_status": "INHERITED_SCOPED; score-hostile boundary retained",
+      "roles": "dedicated lexical census; 25-coordinate score/Lorentzian route retains scores but loses H",
+      "source": {
+        "path": "05-knowledge/results/six_roots_hidden_bits_20261103/NUMBER_ATLAS.md",
+        "line": 79,
+        "source_kind": "six-numeral lexical census and selective proof atlas",
+        "session_route": "six_roots_hidden_bits_20261103"
+      },
+      "linked_source_paths": [],
+      "request_provenance": "Inherited atlas explicitly identifies the annotation {1,23,25,63,65,67}; no individual archived chat opened",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/six_roots_hidden_bits_20261103/NUMBER_ATLAS.md",
+          "line": 79,
+          "source_kind": "six-numeral lexical census and selective proof atlas",
+          "session_route": "six_roots_hidden_bits_20261103"
+        },
+        {
+          "path": "05-knowledge/results/joint_metagraph_dyadic_20261113/sporadic/BRIDGES.md",
+          "line": 264,
+          "source_kind": "audited typed bridges; not a numeral occurrence census",
+          "session_route": "joint_metagraph_dyadic_20261113 sporadic"
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "old_role_index_entry": false,
+      "recovery_status": "SUPPLEMENTAL_TYPED_ROUTE",
+      "claim_status": "INHERITED PROVED/CITED; 26 is total rank, not eta level",
+      "roles": "rank26 = Leech rank24 plus hyperbolic plane; signature(25,1)",
+      "source": {
+        "path": "05-knowledge/results/joint_metagraph_dyadic_20261113/sporadic/BRIDGES.md",
+        "line": 264,
+        "source_kind": "audited typed bridges; not a numeral occurrence census",
+        "session_route": "joint_metagraph_dyadic_20261113 sporadic"
+      },
+      "linked_source_paths": [],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/eleven_wedge_honeycomb_20261102/RECOVERY.md",
+          "line": 1,
+          "source_kind": "targeted 20 and 7/15/24/26 recovery",
+          "session_route": "eleven_wedge_honeycomb_20261102"
+        },
+        {
+          "path": "05-knowledge/results/joint_metagraph_dyadic_20261113/sporadic/BRIDGES.md",
+          "line": 264,
+          "source_kind": "audited typed bridges; not a numeral occurrence census",
+          "session_route": "joint_metagraph_dyadic_20261113 sporadic"
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "order ofzeta in dimension 18; `3^3`; least positive source whose reset-two debt in this note reaches31",
+      "relation_and_source_verbatim": "Field order and inverse integrality share powers of 3; the hard source27 remains an arithmetic orbit. [New construction](checked_switch_phase19_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 67,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/checked_switch_phase19_20261004.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/eight_nine_twentyseven_20261112/history/HISTORY.md",
+          "line": 1,
+          "source_kind": "targeted 8/9/27 recovery and new construction",
+          "session_route": "eight_nine_twentyseven_20261112"
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "old_role_index_entry": false,
+      "recovery_status": "SUPPLEMENTAL_TYPED_ROUTE",
+      "claim_status": "INHERITED FINITE-EXACT/classical identification; not a global number census",
+      "roles": "28 exterior conic points at p=7 carry the Coxeter graph",
+      "source": {
+        "path": "05-knowledge/results/pythagorean_form_conic_graphs_rp_margin_20261018.md",
+        "line": 108,
+        "source_kind": "typed conic dictionary with finite controls",
+        "session_route": "20261018 pythagorean/form/conic"
+      },
+      "linked_source_paths": [],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+          "line": 1,
+          "source_kind": "targeted cardinality atlas; not an occurrence census",
+          "session_route": "20261018 frontier_petersen_oct18"
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "`|N(phi^7-1)|`; numerator of quadratic parameter -29/16",
+      "relation_and_source_verbatim": "Exact norm identity explains that arithmetic occurrence. A shared parameter does not transfer the Collatz cycle graph. [Difference norms](difference_visibility_norms_20261004.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 68,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/difference_visibility_norms_20261004.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": []
+    },
+    {
+      "number": 30,
+      "old_role_index_entry": false,
+      "recovery_status": "SUPPLEMENTAL_TYPED_ROUTE",
+      "claim_status": "INHERITED PROVED/FINITE-EXACT; inherited classical interpretations are CITED",
+      "roles": "30 nonmatching Lagrangians in binary symplectic dimension6: labelled affine/Fano structures",
+      "source": {
+        "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+        "line": 13,
+        "source_kind": "targeted cardinality atlas; not an occurrence census",
+        "session_route": "20261018 frontier_petersen_oct18"
+      },
+      "linked_source_paths": [],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+          "line": 1,
+          "source_kind": "targeted cardinality atlas; not an occurrence census",
+          "session_route": "20261018 frontier_petersen_oct18"
+        },
+        {
+          "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+          "line": 1,
+          "source_kind": "proved pair-palette, Fano-completion and holonomy transfer; finite controls",
+          "session_route": "session61_hadwiger_six_seven_20261025"
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "Mersenne `2^5-1`; smaller source in 63=>31; Paley31 with some connected genus63 triangular maps; debt state from 27",
+      "relation_and_source_verbatim": "The first two have the checked reset map. The geometry uses a different genus formula. [Route switch](checked_switch_phase19_20261004.md), [Camion–Busch](camion_busch_gaps_polyhedra_collatz_20261002.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 69,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/checked_switch_phase19_20261004.md",
+        "05-knowledge/results/camion_busch_gaps_polyhedra_collatz_20261002.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": []
+    },
+    {
+      "number": 32,
+      "old_role_index_entry": true,
+      "recovery_status": "RECOVERED_INDEX_ENTRY",
+      "claim_status": "INHERITED_SCOPED: exact roles and echoes must retain linked-source scope",
+      "roles": "F4 x F8 as an additive Cartesian product; number of children per clock under a binary precision lift; pure-power endpoint in the 3 mod 6 row",
+      "relation_and_source_verbatim": "The tensor product has 64 elements, so Cartesian and tensor products must be distinguished. [Subfields](sextic_subfield_clock_20261004.md), [sixth clock](sixth_clock_branches_20261004.md), [braid](arithmetic_braids_20260917_collatz.md).",
+      "source": {
+        "path": "05-knowledge/results/natural_number_roles_20261004.md",
+        "line": 70,
+        "source_kind": "curated small-number index",
+        "session_route": "20261004 difference-families-oct04"
+      },
+      "linked_source_paths": [
+        "05-knowledge/results/sextic_subfield_clock_20261004.md",
+        "05-knowledge/results/sixth_clock_branches_20261004.md",
+        "05-knowledge/results/arithmetic_braids_20260917_collatz.md"
+      ],
+      "request_provenance": "User reports prior request; individual archived request not independently located",
+      "additional_routes": [
+        {
+          "path": "05-knowledge/results/sextic_subfield_clock_20261004.md",
+          "line": 1,
+          "source_kind": "proved finite-field norm/tensor clock",
+          "session_route": "20261004 sextic-subfield-clock"
+        }
+      ]
+    }
+  ]
+}

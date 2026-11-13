@@ -1,0 +1,45 @@
+{
+  "checks": 140887,
+  "minimal_nonzero_kernel_hostile": {
+    "Phi_rows": [
+      7,
+      7,
+      7
+    ],
+    "codes": [
+      5,
+      2
+    ],
+    "n": 3,
+    "named_kernel_vector": 3
+  },
+  "source_sha256": "e5d932483fc4e52fd381398ad262310bbf56a6b5ff13bebf1e2c8f1f6653b63a",
+  "status": "FINITE-EXACT",
+  "universe": [
+    {
+      "all_labelled_tournaments": 2,
+      "fixed_spine_words": 1,
+      "n": 2
+    },
+    {
+      "all_labelled_tournaments": 8,
+      "fixed_spine_words": 2,
+      "n": 3
+    },
+    {
+      "all_labelled_tournaments": 64,
+      "fixed_spine_words": 8,
+      "n": 4
+    },
+    {
+      "all_labelled_tournaments": 1024,
+      "fixed_spine_words": 64,
+      "n": 5
+    },
+    {
+      "all_labelled_tournaments": 32768,
+      "fixed_spine_words": 1024,
+      "n": 6
+    }
+  ]
+}

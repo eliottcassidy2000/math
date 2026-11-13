@@ -1,0 +1,32 @@
+[
+  {
+    "path": "05-knowledge/results/session321_selective_returns_and_fano_wiring_20261113/FANO_METAGRAPH.md",
+    "commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+    "sha256": "d9d9453a5822e5990c35ce9d7ab514dfe3aa1281afac99951b4a93163bcc3b04",
+    "git_blob": "406fa4bbbb241271167c472cc5c351022ca6381a"
+  },
+  {
+    "path": "05-knowledge/results/session321_selective_returns_and_fano_wiring_20261113/BSD_WIRING_STENCIL.md",
+    "commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+    "sha256": "85fb1253cc96b8e2e105b0ca6ee7a82f3434f7d9f5275b6baf144cc2713293f1",
+    "git_blob": "b3c5c05066d385e718b61f9cbeaf80a3b4f1705b"
+  },
+  {
+    "path": "05-knowledge/results/session321_selective_returns_and_fano_wiring_20261113/BSD_PARITY.md",
+    "commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+    "sha256": "ff315c0645bc37b42170b725a0aca77eebcd608401c6c25ee8d35ffbe74d5e0c",
+    "git_blob": "b815af0a05ea3931dd909d96e03f0bbeeeb8d41b"
+  },
+  {
+    "path": "05-knowledge/results/session321_selective_returns_and_fano_wiring_20261113/WEDGE_WIRING.md",
+    "commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+    "sha256": "fd575ef635182a1e74cfc79476baab8eecbf9989f3f083b875b4f22320b95286",
+    "git_blob": "9314261111ce03cadf400216eb3df8303a67b20d"
+  },
+  {
+    "path": "01-canon/theorems/THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md",
+    "commit": "68d0d86bef480b6a36efc3d9864fd01ff3244bf5",
+    "sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d",
+    "git_blob": "5a3290df1ccc4edc2c28ac7e6456427af247e54c"
+  }
+]

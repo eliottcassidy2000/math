@@ -1,0 +1,91 @@
+{
+  "Fano_pencils": 15,
+  "Fano_systems": 30,
+  "address_types": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "checker_sha256": "7db5d081678a593e9ac2c5ae000c86f5cc3c971518eb85679c2389b3c5baff1b",
+  "checks": 13600,
+  "fixed_count_multiplicities": {
+    "2": 6,
+    "6": 14,
+    "30": 1
+  },
+  "full_Fano_automorphisms": 168,
+  "matrix_universe": [
+    {
+      "all_labelled": 1,
+      "n": 1
+    },
+    {
+      "all_labelled": 2,
+      "n": 2
+    },
+    {
+      "all_labelled": 8,
+      "n": 3
+    },
+    {
+      "all_labelled": 64,
+      "n": 4
+    },
+    {
+      "all_labelled": 1024,
+      "n": 5
+    }
+  ],
+  "odd_embedding_hostile": {
+    "code": 2,
+    "converse_second_half": 5,
+    "n": 3,
+    "second_half": 6,
+    "x": 3
+  },
+  "orbit_profile": [
+    1,
+    1,
+    7,
+    7,
+    7,
+    7
+  ],
+  "same_Q_witness_kernels": {
+    "8": [
+      0,
+      15,
+      17,
+      30
+    ],
+    "10": [
+      0
+    ]
+  },
+  "source_pins": {
+    "bridges/CORRECTION.md": "dfa1cee6f976feb6b3873957eceac8d46edcae14e215f3a1a91e234944d20c63",
+    "bridges/FANO_ORBITS.md": "cd7bb7e6d9c8d79c995e835f8b374c4d819e554eba86f03b34431acb027f28cb",
+    "bridges/RESULT.md": "29fc9ca464171bd1f5ef30602786cac2bbe222bda2b5b7cab9deb34e7e9699b8",
+    "bridges/check_bridges.py": "89fae3be3a595d5de0b7427485092c24a5099e9cba3894718a08746775f3da95",
+    "bridges/check_fano_orbits.py": "8effd5070d1b6d79718a205d969fa22b3ae54ea408d8d1c3d8d5606da6a504cd",
+    "bridges/fano.normal.json": "2d0525d93012115e5ce251e76d9e73f8702e29b219f9943eeab47f7ecd4518e7",
+    "bridges/fano.optimized.json": "2d0525d93012115e5ce251e76d9e73f8702e29b219f9943eeab47f7ecd4518e7",
+    "bridges/normal.json": "1d98df0f4bbc99b7f4dc6969eb8f6291a22b6ac21a6998c40b4e5ca3b28a82f9",
+    "bridges/optimized.json": "1d98df0f4bbc99b7f4dc6969eb8f6291a22b6ac21a6998c40b4e5ca3b28a82f9",
+    "incoming/check_stencil.py": "e5d932483fc4e52fd381398ad262310bbf56a6b5ff13bebf1e2c8f1f6653b63a"
+  },
+  "status": "FINITE-EXACT independent audit, no status promotion"
+}

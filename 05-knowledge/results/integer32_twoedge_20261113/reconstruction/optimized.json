@@ -1,0 +1,147 @@
+{
+  "actual_tournaments": [
+    {
+      "Hamilton_paths": 4,
+      "all_ordinary_classes": 2,
+      "n": 3,
+      "omitted_positive_arcs_total": 1
+    },
+    {
+      "Hamilton_paths": 12,
+      "all_ordinary_classes": 4,
+      "n": 4,
+      "omitted_positive_arcs_total": 3
+    },
+    {
+      "Hamilton_paths": 92,
+      "all_ordinary_classes": 12,
+      "n": 5,
+      "omitted_positive_arcs_total": 14
+    },
+    {
+      "Hamilton_paths": 1224,
+      "all_ordinary_classes": 56,
+      "n": 6,
+      "omitted_positive_arcs_total": 47
+    }
+  ],
+  "checks": 57186,
+  "error_correction": [
+    {
+      "all_error_patterns_at_zero": 1,
+      "correctable_radius": 0,
+      "first_ambiguous_radius": 1,
+      "n": 3
+    },
+    {
+      "all_error_patterns_at_zero": 13,
+      "correctable_radius": 1,
+      "first_ambiguous_radius": 2,
+      "n": 4
+    },
+    {
+      "all_error_patterns_at_zero": 466,
+      "correctable_radius": 2,
+      "first_ambiguous_radius": 3,
+      "n": 5
+    },
+    {
+      "all_error_patterns_at_zero": 36051,
+      "correctable_radius": 3,
+      "first_ambiguous_radius": 4,
+      "n": 6
+    }
+  ],
+  "image": [
+    {
+      "dimension": 2,
+      "image_size": 4,
+      "length": 3,
+      "minimum_distance": 2,
+      "n": 3,
+      "weight_distribution": {
+        "0": 1,
+        "2": 3
+      }
+    },
+    {
+      "dimension": 5,
+      "image_size": 32,
+      "length": 12,
+      "minimum_distance": 4,
+      "n": 4,
+      "weight_distribution": {
+        "0": 1,
+        "4": 6,
+        "6": 16,
+        "8": 9
+      }
+    },
+    {
+      "dimension": 9,
+      "image_size": 512,
+      "length": 30,
+      "minimum_distance": 6,
+      "n": 5,
+      "weight_distribution": {
+        "0": 1,
+        "6": 10,
+        "10": 30,
+        "12": 50,
+        "14": 150,
+        "16": 135,
+        "18": 130,
+        "20": 6
+      }
+    },
+    {
+      "dimension": 14,
+      "image_size": 16384,
+      "length": 60,
+      "minimum_distance": 8,
+      "n": 6,
+      "weight_distribution": {
+        "0": 1,
+        "8": 15,
+        "14": 60,
+        "16": 45,
+        "18": 80,
+        "20": 216,
+        "22": 360,
+        "24": 765,
+        "26": 1680,
+        "28": 2520,
+        "30": 3132,
+        "32": 3750,
+        "34": 2880,
+        "36": 880
+      }
+    }
+  ],
+  "input_sha256": "c0484a99712edff88e8158b5f6000097f32f88874150d059da5aefa20f3de8f7",
+  "module_invariance": {
+    "results": [
+      {
+        "first_moments_equal": true,
+        "q": 1,
+        "slot_covers": 33,
+        "wedge_moments_different": true
+      },
+      {
+        "first_moments_equal": true,
+        "q": 2,
+        "slot_covers": 360,
+        "wedge_moments_different": true
+      },
+      {
+        "first_moments_equal": true,
+        "q": 3,
+        "slot_covers": 2025,
+        "wedge_moments_different": true
+      }
+    ],
+    "scope": "six-vertex labelled toy with a self-converse C3 module; not the nonisomorphic order-24 witness"
+  },
+  "source_sha256": "2f6991f470496b2b802fe8a20760fd459562148678b9015be2fab1272cc8ab05",
+  "status": "FINITE-EXACT controls; new statements RESERVED pending independent review"
+}

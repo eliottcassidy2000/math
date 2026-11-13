@@ -1,0 +1,88 @@
+{
+  "checks": 51504,
+  "hostiles": {
+    "complementary_paths": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        2,
+        0,
+        3,
+        1
+      ]
+    ],
+    "degree_hostile": "triangle plus disjoint edge",
+    "order4_tournament_code": 45,
+    "orientation_hostile": [
+      0,
+      2,
+      1,
+      3
+    ]
+  },
+  "input_sha256": "c0484a99712edff88e8158b5f6000097f32f88874150d059da5aefa20f3de8f7",
+  "producer_sha256": "c639decc73052fdb238d63911db2105c749476544af26bbc50fc7c0a73687550",
+  "rows": [
+    {
+      "blue_darts": 2,
+      "double_support_jumps_in_representatives": 0,
+      "exhaustive_target_guards": true,
+      "fixed_spine_darts": 2,
+      "labelled_tournaments": 8,
+      "maximum_supports_per_jump": 1,
+      "merged_classes": 2,
+      "n": 3,
+      "native_jump_weight": 2,
+      "ordinary_classes": 2,
+      "physical_paths": 4,
+      "premature_reflection_quotient": 2
+    },
+    {
+      "blue_darts": 4,
+      "double_support_jumps_in_representatives": 1,
+      "exhaustive_target_guards": true,
+      "fixed_spine_darts": 8,
+      "labelled_tournaments": 64,
+      "maximum_supports_per_jump": 2,
+      "merged_classes": 3,
+      "n": 4,
+      "native_jump_weight": 8,
+      "ordinary_classes": 4,
+      "physical_paths": 12,
+      "premature_reflection_quotient": 6
+    },
+    {
+      "blue_darts": 16,
+      "double_support_jumps_in_representatives": 0,
+      "exhaustive_target_guards": true,
+      "fixed_spine_darts": 64,
+      "labelled_tournaments": 1024,
+      "maximum_supports_per_jump": 1,
+      "merged_classes": 10,
+      "n": 5,
+      "native_jump_weight": 18,
+      "ordinary_classes": 12,
+      "physical_paths": 92,
+      "premature_reflection_quotient": 40
+    },
+    {
+      "blue_darts": 64,
+      "double_support_jumps_in_representatives": 0,
+      "exhaustive_target_guards": false,
+      "fixed_spine_darts": 1024,
+      "labelled_tournaments": 32768,
+      "maximum_supports_per_jump": 1,
+      "merged_classes": 34,
+      "n": 6,
+      "native_jump_weight": 32,
+      "ordinary_classes": 56,
+      "physical_paths": 1224,
+      "premature_reflection_quotient": 544
+    }
+  ],
+  "status": "FINITE-EXACT"
+}

@@ -1,0 +1,686 @@
+{
+  "F8": {
+    "C7_submodule_dimensions": [
+      0,
+      3,
+      6
+    ],
+    "Phi3_sigma_kernel_dimension": 4,
+    "cyclic_generator_dimension_counts": {
+      "0": 1,
+      "3": 14,
+      "6": 49
+    },
+    "fano_codes": 30,
+    "fano_lines": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        1,
+        6,
+        7
+      ],
+      [
+        2,
+        4,
+        6
+      ],
+      [
+        2,
+        5,
+        7
+      ],
+      [
+        3,
+        4,
+        7
+      ],
+      [
+        3,
+        5,
+        6
+      ]
+    ],
+    "polynomial": "X^3+X+1",
+    "trace_zero": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "trace_zero_exponents": [
+      1,
+      2,
+      4
+    ],
+    "translation_hostile": {
+      "input": [
+        4,
+        0
+      ],
+      "output": [
+        3,
+        0
+      ],
+      "traces": [
+        0,
+        1
+      ]
+    }
+  },
+  "base_commit": "68d0d86bef480b6a36efc3d9864fd01ff3244bf5",
+  "checker_sha256": "89fae3be3a595d5de0b7427485092c24a5099e9cba3894718a08746775f3da95",
+  "checks": 19447,
+  "gauge": "code bit 1 is increasing arc in lexicographic pair order; M is row-zero binary adjacency",
+  "source_pins": {
+    "01-canon/theorems/THM-5125-residue-tournament-model-heegner-domination-and-cycle-gas-identities.md": "aa0af4a6c8dc5f543e0c6c46ded9e6903cffbb6b446ad89e10be602b573a9a6d",
+    "05-knowledge/reference/CORE-PAPERS-OPENAI-FIVE-MANUSCRIPTS-2026-10-13.md": "b6352cde94b07fef40d7f09a33fa0f2d1fe6ae6110b53e15c8dc843163035e98",
+    "05-knowledge/results/bsd_component_recursion_20261013c.md": "f2a0bb17f4b408ad3ca3b3481a737623b88c0f567954809b30470e51204dc60a",
+    "05-knowledge/results/bsd_selmer_growth_20261013a.md": "120ba2d4a7147ac85a22e1152babc96754a0b466a785dbdfda101818db4544ca",
+    "05-knowledge/results/bsd_tunnell_terminals_20261013c.md": "e3dfdee5d2966671bbe791545de5c4b4629a40a8dd6002953500bf6db78da81c",
+    "05-knowledge/results/hn_metagraph_information_20261026/information/RESULT.md": "52b3f998e4c73b28705ccbce4cd2ad752cc08a4be17ef3840908a072cadf9bc8",
+    "05-knowledge/results/session320_second_moments_and_native_contexts_20261113/F1_WEDGE_JET.md": "1c22af90bf8db037dcc79583fda852284b98b7284f5684b721828a18b4cc270e",
+    "05-knowledge/results/session320_second_moments_and_native_contexts_20261113/WEDGE_RECONSTRUCTION.md": "80840c4719ca1f95a77ef947dcef4fd5b2b98ad948c6520aaf31124290186ac8",
+    "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/README.md": "716c0776db45065193de1a00849bd0b951bec403c175d728617b5d2eed57ae83",
+    "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md": "e85f046a6b72d16bd7aefcbec0c8cc8fde886537b36ef289213fc1226c01a5a4"
+  },
+  "status": "FINITE-EXACT controls; general candidate proof separate and RESERVED pending audit",
+  "tournaments": {
+    "arithmetic": [
+      {
+        "Monsky_rank": 8,
+        "N": 85512939,
+        "code": 8,
+        "nu": 2,
+        "primes": [
+          3,
+          19,
+          43,
+          139,
+          251
+        ]
+      },
+      {
+        "Monsky_rank": 10,
+        "N": 2745574347,
+        "code": 10,
+        "nu": 0,
+        "primes": [
+          3,
+          19,
+          83,
+          499,
+          1163
+        ]
+      }
+    ],
+    "joined_controls": [
+      {
+        "Q": [
+          0,
+          2,
+          0,
+          6,
+          0,
+          1
+        ],
+        "n": 5,
+        "nu": [
+          2,
+          0
+        ]
+      },
+      {
+        "Q": [
+          0,
+          0,
+          2,
+          0,
+          6,
+          0,
+          1
+        ],
+        "n": 6,
+        "nu": [
+          2,
+          0
+        ]
+      },
+      {
+        "Q": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          6,
+          0,
+          1
+        ],
+        "n": 7,
+        "nu": [
+          2,
+          0
+        ]
+      },
+      {
+        "Q": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          6,
+          0,
+          1
+        ],
+        "n": 8,
+        "nu": [
+          2,
+          0
+        ]
+      },
+      {
+        "Q": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          6,
+          0,
+          1
+        ],
+        "n": 9,
+        "nu": [
+          2,
+          0
+        ]
+      }
+    ],
+    "minimality": [
+      {
+        "H_collisions": {},
+        "labelled_tournaments": 1,
+        "n": 1
+      },
+      {
+        "H_collisions": {},
+        "labelled_tournaments": 2,
+        "n": 2
+      },
+      {
+        "H_collisions": {},
+        "labelled_tournaments": 8,
+        "n": 3
+      },
+      {
+        "H_collisions": {},
+        "labelled_tournaments": 64,
+        "n": 4
+      },
+      {
+        "H_collisions": {
+          "9": [
+            0,
+            2
+          ],
+          "15": [
+            0,
+            4
+          ]
+        },
+        "labelled_tournaments": 1024,
+        "n": 5
+      }
+    ],
+    "witnesses": [
+      {
+        "H": 9,
+        "M": [
+          [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "Phi_M": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "Q": [
+          0,
+          2,
+          0,
+          6,
+          0,
+          1
+        ],
+        "code": 8,
+        "kernel": [
+          0,
+          15,
+          17,
+          30
+        ],
+        "nu": 2,
+        "ordered_covers": [
+          9,
+          66,
+          186,
+          240,
+          120
+        ],
+        "scores": [
+          1,
+          1,
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "H": 9,
+        "M": [
+          [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "Phi_M": [
+          [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        ],
+        "Q": [
+          0,
+          2,
+          0,
+          6,
+          0,
+          1
+        ],
+        "code": 10,
+        "kernel": [
+          0
+        ],
+        "nu": 0,
+        "ordered_covers": [
+          9,
+          66,
+          186,
+          240,
+          120
+        ],
+        "scores": [
+          1,
+          1,
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "H": 15,
+        "M": [
+          [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "Phi_M": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "Q": [
+          0,
+          6,
+          0,
+          8,
+          0,
+          1
+        ],
+        "code": 40,
+        "kernel": [
+          0,
+          3,
+          5,
+          6,
+          9,
+          10,
+          12,
+          15,
+          17,
+          18,
+          20,
+          23,
+          24,
+          27,
+          29,
+          30
+        ],
+        "nu": 4,
+        "ordered_covers": [
+          15,
+          78,
+          198,
+          240,
+          120
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "H": 15,
+        "M": [
+          [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "Phi_M": [
+          [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            1
+          ]
+        ],
+        "Q": [
+          0,
+          4,
+          0,
+          10,
+          0,
+          1
+        ],
+        "code": 76,
+        "kernel": [
+          0
+        ],
+        "nu": 0,
+        "ordered_covers": [
+          15,
+          90,
+          210,
+          240,
+          120
+        ],
+        "scores": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ]
+  },
+  "universe": "all labelled tournaments orders1..5; all joins of orders1..3; specified family controls5..9; all64 augmentation states and21 group elements; all30 labelled Fano codes"
+}

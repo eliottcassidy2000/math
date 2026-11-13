@@ -1,0 +1,209 @@
+{
+  "files": {
+    "01-canon/theorems/THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md": {
+      "bytes": 23768,
+      "git_blob": "5a3290df1ccc4edc2c28ac7e6456427af247e54c",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d"
+    },
+    "01-canon/theorems/THM-5125-residue-tournament-model-heegner-domination-and-cycle-gas-identities.md": {
+      "bytes": 14722,
+      "git_blob": "edb78a2bb8697379e13bc60aa88d0e39a4a9d13f",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "aa0af4a6c8dc5f543e0c6c46ded9e6903cffbb6b446ad89e10be602b573a9a6d"
+    },
+    "05-knowledge/reference/CORE-PAPERS-OPENAI-FIVE-MANUSCRIPTS-2026-10-13.md": {
+      "bytes": 6480,
+      "git_blob": "5f38a6663d9bff111dc0e8e722205000fa0b5a65",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "b6352cde94b07fef40d7f09a33fa0f2d1fe6ae6110b53e15c8dc843163035e98"
+    },
+    "05-knowledge/results/bsd_component_recursion_20261013c.md": {
+      "bytes": 8170,
+      "git_blob": "31539305c0f1f9c1d28997e5780a9cc080769a0f",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "f2a0bb17f4b408ad3ca3b3481a737623b88c0f567954809b30470e51204dc60a"
+    },
+    "05-knowledge/results/bsd_selmer_growth_20261013a.md": {
+      "bytes": 13925,
+      "git_blob": "a128ed603c6a2869a020d242aee42fc6e4aa8f33",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "120ba2d4a7147ac85a22e1152babc96754a0b466a785dbdfda101818db4544ca"
+    },
+    "05-knowledge/results/bsd_tunnell_terminals_20261013c.md": {
+      "bytes": 8491,
+      "git_blob": "97b734fcf6dc8fa22fc6a934305bff6a8c4d1872",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "e3dfdee5d2966671bbe791545de5c4b4629a40a8dd6002953500bf6db78da81c"
+    },
+    "05-knowledge/results/cardinality_bridges_20261018m.md": {
+      "bytes": 37719,
+      "git_blob": "2cbd3ad3962eec0e0363746fa2d3139a3b33e17d",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "0bdb02e403ec498dccd654459dc311667441dc14888a30ec430bbb9efd3c7a81"
+    },
+    "05-knowledge/results/constants_atlas_20260926_recurrent_numbers.md": {
+      "bytes": 12967,
+      "git_blob": "8112482edc8527161f5ce2c597273ef4f9e67966",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "29bd19af07e652a9e4cfb70c2928c5e2eecf164c6c79e27e164eab842e7547b0"
+    },
+    "05-knowledge/results/eight_nine_twentyseven_20261112/history/HISTORY.md": {
+      "bytes": 10192,
+      "git_blob": "237056e54f2612fa6540dcd80e63083bc3ce47f2",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "231c882b85668732910ce5c31c623064f86ab6d55e22a59f3447f34e7b7b31b5"
+    },
+    "05-knowledge/results/eleven_wedge_honeycomb_20261102/RECOVERY.md": {
+      "bytes": 10088,
+      "git_blob": "fa755ddc591232698aa81054445698b6649ca0c4",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "7febc725d8acb53e812ed9694b3572f0c283af6ce9eaf4f9b4ddc5c16e9ef39b"
+    },
+    "05-knowledge/results/hamilton_path_relocation_connectivity_20261020/THEOREM.txt": {
+      "bytes": 7589,
+      "git_blob": "8eea31ba0fd1b00475ab6bd405368a12c1d06caa",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "9365e8472a229a625eb6c09a9a43c707d0a6d9b967f0fe4a11e84c55b3d35fee"
+    },
+    "05-knowledge/results/hn_metagraph_information_20261026/information/RESULT.md": {
+      "bytes": 14954,
+      "git_blob": "ce71e766c2cc5a9d99a828a4ec83be8051e5020d",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "52b3f998e4c73b28705ccbce4cd2ad752cc08a4be17ef3840908a072cadf9bc8"
+    },
+    "05-knowledge/results/incidence_closure_20261113/closure/PROOF.md": {
+      "bytes": 16604,
+      "git_blob": "a2da94c1feec53979f70c1b16aa335e78eed8b88",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "f8df88766fb56a1383a5ea8ab9e2b90dc2411bdbb734dec7324809ab9a046929"
+    },
+    "05-knowledge/results/incidence_closure_20261113/closure/data.json": {
+      "bytes": 4552965,
+      "git_blob": "f68ac12285136128e17c7694aa8f606f1bb3fea7",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "c0484a99712edff88e8158b5f6000097f32f88874150d059da5aefa20f3de8f7"
+    },
+    "05-knowledge/results/joint_metagraph_dyadic_20261113/sporadic/BRIDGES.md": {
+      "bytes": 20721,
+      "git_blob": "ec3897e334502e99aa43160209dbaf84a786e7e2",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "f65914985afd0015116516c05ed09dafc38b3ce2e26c5bffd9b1854127c3d216"
+    },
+    "05-knowledge/results/merge_18_19_11_22_collatz_hn_20261018.md": {
+      "bytes": 24533,
+      "git_blob": "595edd55dd1a4cb160985b6e1375de9203c64900",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "a5dc90f685c6184ba1efe2faefc9449340ad8fab8e1de5932b7d66304d533911"
+    },
+    "05-knowledge/results/natural_number_roles_20261004.md": {
+      "bytes": 25547,
+      "git_blob": "b86ab86eab43a8be48e3c73b650159d543bbc5ed",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "d909b5b6b0489cfcc1bd1d0a0ced0fcf726f782c1d2b83446044b45ad1fbfa3a"
+    },
+    "05-knowledge/results/odd_tables_signed_carries_20261111/history/NATIVE_ZERO.md": {
+      "bytes": 6947,
+      "git_blob": "01f953debb64bff6c4570252a492f885c7f9a23e",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "853428b83e4cdd26bce52202be89dc88c10677046de2ceb8289d8314b86afa1c"
+    },
+    "05-knowledge/results/pythagorean_form_conic_graphs_rp_margin_20261018.md": {
+      "bytes": 18690,
+      "git_blob": "dbd556444456789f947f803d453f27644abda07a",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "fd52d3b3c37a601840c84497372e36c6049867f004d0845dc9a7de9c86163e6c"
+    },
+    "05-knowledge/results/session319_arc_usage_and_signed_cycles_20261113/ARC_USAGE_SHADOW.md": {
+      "bytes": 8860,
+      "git_blob": "c6e92807ed752af8781089ea9f0febe379dcaabf",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "14ce622c5d4811ecc1a133a428f438675bf32887bb71e2907a6386398987ed20"
+    },
+    "05-knowledge/results/session320_second_moments_and_native_contexts_20261113/F1_WEDGE_JET.md": {
+      "bytes": 2532,
+      "git_blob": "54c651e664972648c605e42596e5f8910e660574",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "1c22af90bf8db037dcc79583fda852284b98b7284f5684b721828a18b4cc270e"
+    },
+    "05-knowledge/results/session320_second_moments_and_native_contexts_20261113/HEREDITARY_SLOTS.md": {
+      "bytes": 3656,
+      "git_blob": "67a8ff0f57ee9637fb0708255c835e3e183ca210",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "11bd748a216e776d6502fc64609e8c08711f91a814ca0a7fd96f924d55136117"
+    },
+    "05-knowledge/results/session320_second_moments_and_native_contexts_20261113/ORDINAL_SHADOW.md": {
+      "bytes": 9220,
+      "git_blob": "0d66e014200e9c206092a76b08ea37acdb55ed0b",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "a8fc25424f16796abbc1382e814d721ad8d0d29d5d43d0e40f8d6a4d450ac870"
+    },
+    "05-knowledge/results/session320_second_moments_and_native_contexts_20261113/STRONG_SHADOW.md": {
+      "bytes": 4042,
+      "git_blob": "91d3fff88b28581d7aea592b3776b52f2f52edfc",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "e06b9aea04e2c7cc2259a10d320310943fb022ababeed319876357e2295ed374"
+    },
+    "05-knowledge/results/session320_second_moments_and_native_contexts_20261113/WEDGE_RECONSTRUCTION.md": {
+      "bytes": 3840,
+      "git_blob": "25b62b8ac789b67cd11938a712a70cc3c3d60d2a",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "80840c4719ca1f95a77ef947dcef4fd5b2b98ad948c6520aaf31124290186ac8"
+    },
+    "05-knowledge/results/session321_selective_returns_and_fano_wiring_20261113/BSD_PARITY.md": {
+      "bytes": 3127,
+      "git_blob": "b815af0a05ea3931dd909d96e03f0bbeeeb8d41b",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "ff315c0645bc37b42170b725a0aca77eebcd608401c6c25ee8d35ffbe74d5e0c"
+    },
+    "05-knowledge/results/session321_selective_returns_and_fano_wiring_20261113/BSD_WIRING_STENCIL.md": {
+      "bytes": 2101,
+      "git_blob": "b3c5c05066d385e718b61f9cbeaf80a3b4f1705b",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "85fb1253cc96b8e2e105b0ca6ee7a82f3434f7d9f5275b6baf144cc2713293f1"
+    },
+    "05-knowledge/results/session321_selective_returns_and_fano_wiring_20261113/FANO_METAGRAPH.md": {
+      "bytes": 9380,
+      "git_blob": "406fa4bbbb241271167c472cc5c351022ca6381a",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "d9d9453a5822e5990c35ce9d7ab514dfe3aa1281afac99951b4a93163bcc3b04"
+    },
+    "05-knowledge/results/session321_selective_returns_and_fano_wiring_20261113/WEDGE_WIRING.md": {
+      "bytes": 3326,
+      "git_blob": "9314261111ce03cadf400216eb3df8303a67b20d",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "fd575ef635182a1e74cfc79476baab8eecbf9989f3f083b875b4f22320b95286"
+    },
+    "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/README.md": {
+      "bytes": 8220,
+      "git_blob": "596326cad653f02bc79dd60eb6f53c08b264bf5a",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "716c0776db45065193de1a00849bd0b951bec403c175d728617b5d2eed57ae83"
+    },
+    "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md": {
+      "bytes": 15551,
+      "git_blob": "97da03bd49ab8289279d2ff531f3de8b8d3ec8e5",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "e85f046a6b72d16bd7aefcbec0c8cc8fde886537b36ef289213fc1226c01a5a4"
+    },
+    "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-guards/REPORT.md": {
+      "bytes": 16467,
+      "git_blob": "1619d2b4d7e69df2a96e70ade51d9841f946533a",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "3159646021bf7b2c2ad6025f636274a1e6f4f60df87f1728e3f2f4b095923563"
+    },
+    "05-knowledge/results/sextic_subfield_clock_20261004.md": {
+      "bytes": 12225,
+      "git_blob": "cb8fe4d2222ab4c12a946c146fbb96784100cd68",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "6f2004328d86130dc404b22ab4635532011a4eb6a2228021ed7dc975ff38389f"
+    },
+    "05-knowledge/results/six_roots_hidden_bits_20261103/NUMBER_ATLAS.md": {
+      "bytes": 11279,
+      "git_blob": "486e4fdd7c5ed3865b9aca18b8745eea373ea232",
+      "git_commit": "0eab57c4327b6056480f1943bd2629a32dc6e969",
+      "sha256": "6c6e57afdcccbfc01c2b6fc0958f3d55c6c4e351a19912a9c37c426a20b4f4c3"
+    }
+  },
+  "status": "historical bytes; source scope remains with each cited file"
+}
