@@ -33,3 +33,10 @@ If |M|≥2 and e=±1 then Y≡−e mod 96; when |M| is even and at least four th
 The known negative-det repair with p=3424 has v2(p)=5, and 435779329−1 indeed has valuation 8. This is a precise least significant bit obstruction, not just a finite filter in a response bank. With |N|≥2, a determinant output for which v2(Y+e)=5 must have |M|=2 or odd order with an odd number of Hamilton cycles. In the inherited clock Π, the stronger intercept modulus from the same expansion is 2^4·3^2·5=720 when |N|≥2, and 2160 when |M| is also even; it follows from 60Q_M(3)Q_N(2).
 
 The proved constraints suggest that searches should pair output valuation with the physical cover data of the corresponding module, rather than fill gaps in a residue list and infer a continuation. They do not preclude a different chart from reaching omitted residue classes or prove a supply of modules realizing each permitted combination.
+
+
+## A second meaning of the lowest exponent: a component budget
+
+By ordinal multiplicativity, the order of vanishing of Q_T at t=0 is additive across strong components. A singleton contributes one. An odd nontrivial strong component contributes one because it has a spanning directed odd cycle. An even nontrivial strong component contributes two: parity requires at least two, and a directed cycle on all but one vertex attains two. The cycle existence here is [Moon's vertex-pancyclicity theorem](https://www.cambridge.org/core/journals/canadian-mathematical-bulletin/article/on-subtournaments-of-a-tournament/5D7CCBE66AB07BB3F90F771D1CD3CD08), also used in the contact calculation. Thus the least power of t exactly counts singleton and odd strong components once and even strong components twice. This is an order-of-vanishing bound, not a complete SCC fingerprint.
+
+For the full-profile neutral pair in this packet, ord₀(Q_B)=2 and H(B)=95>1, so any realization of the same polynomial must spend at least one unit on a nontrivial SCC. At most one trailing singleton can be exposed, and A→TT1 attains that maximum. For B^r the analogous ceiling is 2r−1; our construction exposes r and no optimality is asserted for r>1.
