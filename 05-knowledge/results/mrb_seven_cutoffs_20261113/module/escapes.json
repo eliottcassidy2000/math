@@ -1,0 +1,1121 @@
+{
+  "status": "FINITE-EXACT",
+  "selective_scope": "Both complete881 strong ready sources; every nonport vertex cloned once; all four comparison words against sole predecessor; other comparisons uniform; transitive clone pair",
+  "selective_tests": 68,
+  "selective_ready": 36,
+  "selective_rows": [
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 1,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 2673,
+      "defect": 0
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 1,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 2615,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 1,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 2731,
+      "defect": 2
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 1,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 2643,
+      "defect": 3
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 2,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 3939,
+      "defect": 3
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 2,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 4085,
+      "defect": 7
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 2,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 4173,
+      "defect": 8
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 2,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 4289,
+      "defect": 12
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 3,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 2957,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 3,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 3463,
+      "defect": 12
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 3,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 3645,
+      "defect": 15
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 3,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 4121,
+      "defect": 26
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 4,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 2237,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 4,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 2583,
+      "defect": 7
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 4,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 2831,
+      "defect": 13
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 4,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 3147,
+      "defect": 19
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 5,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 2237,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 5,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 2405,
+      "defect": 4
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 5,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 2583,
+      "defect": 7
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 5,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 2721,
+      "defect": 10
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 6,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 2195,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 6,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 2135,
+      "defect": 2
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 6,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 2275,
+      "defect": 3
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 6,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 2185,
+      "defect": 4
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 7,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 1805,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 7,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 1373,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 7,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 1629,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 7,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 1167,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 8,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 1805,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 8,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 881,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 8,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 1373,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "module": 8,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 419,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 1,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 1935,
+      "defect": 0
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 1,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 2115,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 1,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 2251,
+      "defect": 2
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 1,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 2421,
+      "defect": 3
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 2,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 2707,
+      "defect": 3
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 2,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 2919,
+      "defect": 4
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 2,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 3029,
+      "defect": 5
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 2,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 3231,
+      "defect": 6
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 3,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 2529,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 3,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 2919,
+      "defect": 4
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 3,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 3071,
+      "defect": 5
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 3,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 3451,
+      "defect": 8
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 4,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 2115,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 4,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 2421,
+      "defect": 3
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 4,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 2615,
+      "defect": 5
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 4,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 2911,
+      "defect": 7
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 5,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 1707,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 5,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 1681,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 5,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 1777,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 5,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 1741,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 6,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 1909,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 6,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 1777,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 6,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 1883,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 6,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 1741,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 7,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 1883,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 7,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 1559,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 7,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 1741,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 7,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 1407,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 8,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 2541,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 8,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 1883,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 8,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 2227,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 8,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 1559,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 9,
+      "port_bits": [
+        0,
+        0
+      ],
+      "H": 2227,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 9,
+      "port_bits": [
+        0,
+        1
+      ],
+      "H": 881,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 9,
+      "port_bits": [
+        1,
+        0
+      ],
+      "H": 1559,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "module": 9,
+      "port_bits": [
+        1,
+        1
+      ],
+      "H": 203,
+      "defect": 1
+    }
+  ],
+  "extension_scope": "Every one-new-vertex induced extension of both classified881 strong ready sources; same physical indegree-one root and predecessor; every orientation against all other old vertices; filter exact defect1",
+  "extension_tests": 1536,
+  "extension_ready": 38,
+  "extension_target_hits": [],
+  "predecessor_clone_scope": "TT_k substitutes the old predecessor in the parent; marked first or last clone becomes the new root sole predecessor; k1..4",
+  "predecessor_clone_rows": [
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "k": 1,
+      "mark": 0,
+      "H": 881,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "k": 2,
+      "mark": 0,
+      "H": 2747,
+      "defect": 2
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "k": 2,
+      "mark": 1,
+      "H": 3555,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "k": 3,
+      "mark": 0,
+      "H": 6081,
+      "defect": 4
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "k": 3,
+      "mark": 2,
+      "H": 12019,
+      "defect": 1
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "k": 4,
+      "mark": 0,
+      "H": 12749,
+      "defect": 8
+    },
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "k": 4,
+      "mark": 3,
+      "H": 38295,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "k": 1,
+      "mark": 0,
+      "H": 881,
+      "defect": 1
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "k": 2,
+      "mark": 0,
+      "H": 7553,
+      "defect": 36
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "k": 2,
+      "mark": 1,
+      "H": 8217,
+      "defect": 35
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "k": 3,
+      "mark": 0,
+      "H": 36823,
+      "defect": 286
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "k": 3,
+      "mark": 2,
+      "H": 49165,
+      "defect": 215
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "k": 4,
+      "mark": 0,
+      "H": 151271,
+      "defect": 1578
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "k": 4,
+      "mark": 3,
+      "H": 255117,
+      "defect": 827
+    }
+  ]
+}

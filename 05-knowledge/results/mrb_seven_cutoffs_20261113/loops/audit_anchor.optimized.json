@@ -1,0 +1,49 @@
+{
+  "complete_modular_closures": {
+    "7": {
+      "plane": 49,
+      "reachable": 337
+    },
+    "11": {
+      "plane": 121,
+      "reachable": 1311
+    },
+    "14": {
+      "plane": 49,
+      "reachable": 434
+    },
+    "77": {
+      "plane": 5929,
+      "reachable": 429807
+    }
+  },
+  "crt_excluded_product_states": 12000,
+  "crt_gcd": 2,
+  "defect_one_words": 11,
+  "first_false_ready": {
+    "length": 6,
+    "state": [
+      38,
+      15,
+      53
+    ],
+    "word": "KLLLKL"
+  },
+  "integral_words": 4095,
+  "local_phase_counts": {
+    "7": {
+      "0": 6,
+      "1": 120,
+      "2": 120,
+      "3": 97
+    },
+    "11": {
+      "0": 20,
+      "1": 50,
+      "2": 50,
+      "3": 1211
+    }
+  },
+  "norm_pairs": 49,
+  "status": "PASS"
+}

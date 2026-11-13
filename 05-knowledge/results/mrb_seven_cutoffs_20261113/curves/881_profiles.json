@@ -1,0 +1,261 @@
+{
+  "status": "FINITE-EXACT independent literal 17-vertex-profile audit; completeness inherited, not inferred",
+  "checks": 63,
+  "universe": "both classified rooted 881 source representatives, every non-root/non-predecessor vertex, TT_k inflation at k=1,2,3",
+  "source_completeness_dependency": "Session296 cores/PROOF.md Section4 in pinned incoming commit",
+  "controls": "graph type, root-star, full H, direct defect and unique-start inverse, coefficient integrality/divisibility",
+  "sources": [
+    {
+      "words": [
+        "11",
+        "1",
+        "11"
+      ],
+      "masks": [
+        502,
+        508,
+        504,
+        465,
+        480,
+        200,
+        384,
+        256,
+        544,
+        255
+      ],
+      "root": 9,
+      "predecessor": 8,
+      "order": 10,
+      "H": 881,
+      "parent_H": 75,
+      "profiles": [
+        {
+          "vertex": 0,
+          "F1_F2_F3": [
+            881,
+            2957,
+            9245
+          ],
+          "A1": 881,
+          "A2": 1038,
+          "A3": 356
+        },
+        {
+          "vertex": 1,
+          "F1_F2_F3": [
+            881,
+            2237,
+            5885
+          ],
+          "A1": 881,
+          "A2": 678,
+          "A3": 156
+        },
+        {
+          "vertex": 2,
+          "F1_F2_F3": [
+            881,
+            2237,
+            5885
+          ],
+          "A1": 881,
+          "A2": 678,
+          "A3": 156
+        },
+        {
+          "vertex": 3,
+          "F1_F2_F3": [
+            881,
+            3939,
+            15167
+          ],
+          "A1": 881,
+          "A2": 1529,
+          "A3": 852
+        },
+        {
+          "vertex": 4,
+          "F1_F2_F3": [
+            881,
+            2195,
+            5639
+          ],
+          "A1": 881,
+          "A2": 657,
+          "A3": 136
+        },
+        {
+          "vertex": 5,
+          "F1_F2_F3": [
+            881,
+            2643,
+            7751
+          ],
+          "A1": 881,
+          "A2": 881,
+          "A3": 264
+        },
+        {
+          "vertex": 6,
+          "F1_F2_F3": [
+            881,
+            1805,
+            3653
+          ],
+          "A1": 881,
+          "A2": 462,
+          "A3": 0
+        },
+        {
+          "vertex": 7,
+          "F1_F2_F3": [
+            881,
+            1805,
+            3653
+          ],
+          "A1": 881,
+          "A2": 462,
+          "A3": 0
+        }
+      ]
+    },
+    {
+      "words": [
+        "1",
+        "",
+        "00101"
+      ],
+      "masks": [
+        1018,
+        1020,
+        1009,
+        500,
+        480,
+        448,
+        896,
+        256,
+        512,
+        1208,
+        511
+      ],
+      "root": 10,
+      "predecessor": 9,
+      "order": 11,
+      "H": 881,
+      "parent_H": 219,
+      "profiles": [
+        {
+          "vertex": 0,
+          "F1_F2_F3": [
+            881,
+            2529,
+            7073
+          ],
+          "A1": 881,
+          "A2": 824,
+          "A3": 208
+        },
+        {
+          "vertex": 1,
+          "F1_F2_F3": [
+            881,
+            2115,
+            5327
+          ],
+          "A1": 881,
+          "A2": 617,
+          "A3": 124
+        },
+        {
+          "vertex": 2,
+          "F1_F2_F3": [
+            881,
+            2707,
+            7871
+          ],
+          "A1": 881,
+          "A2": 913,
+          "A3": 252
+        },
+        {
+          "vertex": 3,
+          "F1_F2_F3": [
+            881,
+            2421,
+            6701
+          ],
+          "A1": 881,
+          "A2": 770,
+          "A3": 200
+        },
+        {
+          "vertex": 4,
+          "F1_F2_F3": [
+            881,
+            1741,
+            3461
+          ],
+          "A1": 881,
+          "A2": 430,
+          "A3": 0
+        },
+        {
+          "vertex": 5,
+          "F1_F2_F3": [
+            881,
+            1741,
+            3461
+          ],
+          "A1": 881,
+          "A2": 430,
+          "A3": 0
+        },
+        {
+          "vertex": 6,
+          "F1_F2_F3": [
+            881,
+            1883,
+            3887
+          ],
+          "A1": 881,
+          "A2": 501,
+          "A3": 0
+        },
+        {
+          "vertex": 7,
+          "F1_F2_F3": [
+            881,
+            1559,
+            2915
+          ],
+          "A1": 881,
+          "A2": 339,
+          "A3": 0
+        },
+        {
+          "vertex": 8,
+          "F1_F2_F3": [
+            881,
+            2227,
+            4919
+          ],
+          "A1": 881,
+          "A2": 673,
+          "A3": 0
+        }
+      ]
+    }
+  ],
+  "incoming_source_pins": [
+    {
+      "commit": "a03df4746338daf016df8819bcce373ec35c95e8",
+      "path": "05-knowledge/results/session296_multicore_metagraph_20261113/cores/PROOF.md",
+      "text_lf_sha256": "be6abcd7eca1ac80cda2fd2d754303d1dcece5b5948783163b848051c79bbb8b"
+    },
+    {
+      "commit": "a03df4746338daf016df8819bcce373ec35c95e8",
+      "path": "05-knowledge/results/session297_parity_cutoff_20261113/BRIDGES.md",
+      "text_lf_sha256": "d31c8d4458338db51a002b0e27e8abe7e7d35ece559dead802485cadcc8ec47b"
+    }
+  ]
+}

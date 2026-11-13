@@ -1,0 +1,82 @@
+{
+  "base": "b3276a2c9e",
+  "source_pins": [
+    {
+      "path": "01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md",
+      "git_blob": "f47cef4ff98bab1f1cbfbd6024666edef3dd6d3f"
+    },
+    {
+      "path": "01-canon/theorems/THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase.md",
+      "git_blob": "712d8d3c10d70e987e6356e890fe3f5101352b51"
+    },
+    {
+      "path": "01-canon/theorems/THM-3363-d14-complement-clock-small-lrc-terminal.md",
+      "git_blob": "18bbad0e213c154bd0d11f7c6af2a85dec53b51a"
+    },
+    {
+      "path": "01-canon/theorems/THM-621-fourteen-fold-ladder-law.md",
+      "git_blob": "5a67978620afc3ba9dbd81ae78065ee950a262a2"
+    },
+    {
+      "path": "01-canon/theorems/THM-5102-minimum-order-seventy-seven-symmetry-and-exact-mixed-path-cost.md",
+      "git_blob": "381c3467504ebefd77ca0d63ee1bcf2e6cf6c613"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/provenance/README.md",
+      "git_blob": "af99c951afc3a1b7a0b1b6b1cc95df5e90b8f7ad"
+    },
+    {
+      "path": "05-knowledge/results/session295_construction_atlas_20261113/bridges.md",
+      "git_blob": "4b6fb0471b693c82f6683f60320acc5eaf677c49"
+    },
+    {
+      "path": "05-knowledge/results/session293_cycle_returns_20261113/control/MODULE_IDEAL.md",
+      "git_blob": "7be4c98d50b816eb54afb51495e0af8ef15a2d54"
+    },
+    {
+      "path": "05-knowledge/results/triples_ports_sieve_20261112/arithmetic/WHEEL.md",
+      "git_blob": "c1ef4d17899785c623746b16af2927cb47b4692e"
+    },
+    {
+      "path": "05-knowledge/results/microcosm_gate_doubling_resolvent_20261106.md",
+      "git_blob": "7de74c2ce85b75707143426260753b1be7906283"
+    },
+    {
+      "path": "05-knowledge/results/microcosm_audit_H1_20261106.md",
+      "git_blob": "5c8f0642e2b4e18170a041ce58b01a34647cc7b5"
+    },
+    {
+      "commit": "b3276a2c9e",
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/clone_obstruction/PROOF.md",
+      "git_blob": "c8a93318b7d8fee11f15a1c7381db665bb7b27c7"
+    },
+    {
+      "commit": "b3276a2c9e",
+      "path": "05-knowledge/results/session181_multiport_defect_20261104/older/PROOF.md",
+      "git_blob": "2820354d57d5a0131ee8dfc31ad34f4d6a2db0d9"
+    },
+    {
+      "commit": "a03df47463",
+      "path": "05-knowledge/results/session297_parity_cutoff_20261113/CUTOFF.md",
+      "git_blob": "c4ac003027a26dac9bf96b9c1579948edea9b2a2"
+    },
+    {
+      "commit": "a03df47463",
+      "path": "05-knowledge/results/session297_parity_cutoff_20261113/CYCLIC.md",
+      "git_blob": "cac843de98aadfa55a0c8fe9e0e2506beee3680d"
+    },
+    {
+      "commit": "a03df47463",
+      "path": "05-knowledge/results/session297_parity_cutoff_20261113/BRIDGES.md",
+      "git_blob": "136237362221af1cf55f2da8db1ceb2d02c23748"
+    }
+  ],
+  "external": [
+    {
+      "url": "https://virtualmath1.stanford.edu/~conrad/249BW09Page/handouts/profcohom.pdf",
+      "location": "section1 and Lemma3.1",
+      "used_for": "standard inverse-limit definition and finite factorization; no dependency for new orbit formula",
+      "read": "2026-11-13"
+    }
+  ]
+}

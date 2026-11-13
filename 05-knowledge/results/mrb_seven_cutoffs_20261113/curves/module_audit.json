@@ -1,0 +1,81 @@
+{
+  "status": "FINITE-EXACT independent audit; no proof inferred from census",
+  "checks": 26069,
+  "context_universe": "all labelled tournaments on m=0..4 external vertices, all uniform module attachments",
+  "observers": "full H; fixed external start 0; fixed external start/end 0,1 when present",
+  "arbitrary_module_controls": [
+    {
+      "masks": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "H": 1,
+      "P2": 16
+    },
+    {
+      "masks": [
+        2,
+        4,
+        1
+      ],
+      "H": 3,
+      "P2": 12
+    },
+    {
+      "masks": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "H": 5,
+      "P2": 32
+    },
+    {
+      "masks": [
+        22,
+        4,
+        8,
+        3,
+        14
+      ],
+      "H": 9,
+      "P2": 84
+    }
+  ],
+  "counts": {
+    "0": {
+      "contexts": 1,
+      "observers": 1,
+      "zero_E": 1,
+      "positive_E": 0
+    },
+    "1": {
+      "contexts": 2,
+      "observers": 4,
+      "zero_E": 4,
+      "positive_E": 0
+    },
+    "2": {
+      "contexts": 8,
+      "observers": 24,
+      "zero_E": 24,
+      "positive_E": 0
+    },
+    "3": {
+      "contexts": 64,
+      "observers": 192,
+      "zero_E": 192,
+      "positive_E": 0
+    },
+    "4": {
+      "contexts": 1024,
+      "observers": 3072,
+      "zero_E": 2904,
+      "positive_E": 168
+    }
+  },
+  "maximum_E": 24
+}
