@@ -1,0 +1,369 @@
+{
+  "H_changing_witnesses": [],
+  "depth_seven": [
+    {
+      "H": 1,
+      "depth": 7,
+      "distinct_matrices": 12,
+      "layers": {
+        "0": 1,
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 2
+      },
+      "max_abs_entry": 2,
+      "n": 3,
+      "returned_tournaments": 5,
+      "seed_mask": 0
+    },
+    {
+      "H": 3,
+      "depth": 7,
+      "distinct_matrices": 14,
+      "layers": {
+        "0": 1,
+        "1": 3,
+        "2": 6,
+        "3": 3,
+        "4": 1
+      },
+      "max_abs_entry": 1,
+      "n": 3,
+      "returned_tournaments": 1,
+      "seed_mask": 2
+    },
+    {
+      "H": 1,
+      "depth": 7,
+      "distinct_matrices": 1990,
+      "layers": {
+        "0": 1,
+        "1": 4,
+        "2": 11,
+        "3": 31,
+        "4": 85,
+        "5": 203,
+        "6": 467,
+        "7": 1188
+      },
+      "max_abs_entry": 822512,
+      "n": 4,
+      "returned_tournaments": 23,
+      "seed_mask": 0
+    },
+    {
+      "H": 3,
+      "depth": 7,
+      "distinct_matrices": 1213,
+      "layers": {
+        "0": 1,
+        "1": 4,
+        "2": 12,
+        "3": 27,
+        "4": 64,
+        "5": 145,
+        "6": 309,
+        "7": 651
+      },
+      "max_abs_entry": 62,
+      "n": 4,
+      "returned_tournaments": 15,
+      "seed_mask": 2
+    },
+    {
+      "H": 5,
+      "depth": 7,
+      "distinct_matrices": 1102,
+      "layers": {
+        "0": 1,
+        "1": 4,
+        "2": 12,
+        "3": 28,
+        "4": 69,
+        "5": 147,
+        "6": 279,
+        "7": 562
+      },
+      "max_abs_entry": 801,
+      "n": 4,
+      "returned_tournaments": 20,
+      "seed_mask": 4
+    },
+    {
+      "H": 3,
+      "depth": 7,
+      "distinct_matrices": 1213,
+      "layers": {
+        "0": 1,
+        "1": 4,
+        "2": 12,
+        "3": 27,
+        "4": 64,
+        "5": 145,
+        "6": 309,
+        "7": 651
+      },
+      "max_abs_entry": 62,
+      "n": 4,
+      "returned_tournaments": 15,
+      "seed_mask": 5
+    },
+    {
+      "H": 1,
+      "depth": 7,
+      "distinct_matrices": 22108,
+      "layers": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 78,
+        "4": 311,
+        "5": 1189,
+        "6": 4365,
+        "7": 16139
+      },
+      "max_abs_entry": 1843633,
+      "n": 5,
+      "returned_tournaments": 86,
+      "seed_mask": 0
+    },
+    {
+      "H": 3,
+      "depth": 7,
+      "distinct_matrices": 17406,
+      "layers": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 77,
+        "4": 276,
+        "5": 999,
+        "6": 3510,
+        "7": 12518
+      },
+      "max_abs_entry": 822512,
+      "n": 5,
+      "returned_tournaments": 51,
+      "seed_mask": 2
+    },
+    {
+      "H": 5,
+      "depth": 7,
+      "distinct_matrices": 16255,
+      "layers": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 74,
+        "4": 270,
+        "5": 956,
+        "6": 3308,
+        "7": 11621
+      },
+      "max_abs_entry": 822512,
+      "n": 5,
+      "returned_tournaments": 52,
+      "seed_mask": 4
+    },
+    {
+      "H": 3,
+      "depth": 7,
+      "distinct_matrices": 17208,
+      "layers": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 77,
+        "4": 273,
+        "5": 991,
+        "6": 3473,
+        "7": 12368
+      },
+      "max_abs_entry": 822512,
+      "n": 5,
+      "returned_tournaments": 56,
+      "seed_mask": 5
+    },
+    {
+      "H": 9,
+      "depth": 7,
+      "distinct_matrices": 14506,
+      "layers": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 71,
+        "4": 259,
+        "5": 886,
+        "6": 2982,
+        "7": 10282
+      },
+      "max_abs_entry": 822512,
+      "n": 5,
+      "returned_tournaments": 16,
+      "seed_mask": 8
+    },
+    {
+      "H": 5,
+      "depth": 7,
+      "distinct_matrices": 16255,
+      "layers": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 74,
+        "4": 270,
+        "5": 956,
+        "6": 3308,
+        "7": 11621
+      },
+      "max_abs_entry": 822512,
+      "n": 5,
+      "returned_tournaments": 52,
+      "seed_mask": 9
+    },
+    {
+      "H": 9,
+      "depth": 7,
+      "distinct_matrices": 13384,
+      "layers": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 71,
+        "4": 255,
+        "5": 854,
+        "6": 2806,
+        "7": 9372
+      },
+      "max_abs_entry": 822512,
+      "n": 5,
+      "returned_tournaments": 18,
+      "seed_mask": 10
+    },
+    {
+      "H": 3,
+      "depth": 7,
+      "distinct_matrices": 17406,
+      "layers": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 77,
+        "4": 276,
+        "5": 999,
+        "6": 3510,
+        "7": 12518
+      },
+      "max_abs_entry": 822512,
+      "n": 5,
+      "returned_tournaments": 51,
+      "seed_mask": 11
+    },
+    {
+      "H": 11,
+      "depth": 7,
+      "distinct_matrices": 12332,
+      "layers": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 68,
+        "4": 242,
+        "5": 798,
+        "6": 2580,
+        "7": 8618
+      },
+      "max_abs_entry": 822512,
+      "n": 5,
+      "returned_tournaments": 25,
+      "seed_mask": 12
+    },
+    {
+      "H": 15,
+      "depth": 7,
+      "distinct_matrices": 10151,
+      "layers": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 68,
+        "4": 228,
+        "5": 700,
+        "6": 2161,
+        "7": 6968
+      },
+      "max_abs_entry": 4621,
+      "n": 5,
+      "returned_tournaments": 9,
+      "seed_mask": 40
+    },
+    {
+      "H": 13,
+      "depth": 7,
+      "distinct_matrices": 10677,
+      "layers": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 68,
+        "4": 236,
+        "5": 754,
+        "6": 2324,
+        "7": 7269
+      },
+      "max_abs_entry": 4621,
+      "n": 5,
+      "returned_tournaments": 11,
+      "seed_mask": 41
+    },
+    {
+      "H": 15,
+      "depth": 7,
+      "distinct_matrices": 9786,
+      "layers": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 65,
+        "4": 225,
+        "5": 710,
+        "6": 2160,
+        "7": 6600
+      },
+      "max_abs_entry": 801,
+      "n": 5,
+      "returned_tournaments": 10,
+      "seed_mask": 76
+    }
+  ],
+  "four_step": [
+    {
+      "H_changes": 0,
+      "excursion_shapes": {
+        "0120": 24
+      },
+      "n": 3
+    },
+    {
+      "H_changes": 0,
+      "excursion_shapes": {
+        "0101": 96,
+        "0120": 96
+      },
+      "n": 4
+    },
+    {
+      "H_changes": 0,
+      "excursion_shapes": {
+        "0101": 1920,
+        "0120": 480
+      },
+      "n": 5
+    }
+  ],
+  "mutation_words_cutoff": 7,
+  "status": "FINITE-EXACT; bounded search, not full mutation-class closure",
+  "weight_cutoff": null
+}

@@ -1,0 +1,59 @@
+{
+  "optimized": false,
+  "engines": [
+    {
+      "script": "arithmetic/wheel_refinement.py",
+      "receipt": "arithmetic/wheel_refinement.json",
+      "sha256": "f7646d7956f90685782df2fe993ad93e50227797522862b3802da7c336c131ee",
+      "exit_code": 0
+    },
+    {
+      "script": "arithmetic/joint_branch_sieve.py",
+      "receipt": "arithmetic/joint_branch_sieve.json",
+      "sha256": "6e687d9698e6664c1a122448476cf7eeea0f6e5caf4dbd50ceaeb2b1b6f10bdd",
+      "exit_code": 0
+    },
+    {
+      "script": "arithmetic/audit_root.py",
+      "receipt": "arithmetic/audit_root.json",
+      "sha256": "545dd4327f86a97cdb3bb095e9c691ef9ac7e6545dc493042c34e478cdc156f3",
+      "exit_code": 0
+    },
+    {
+      "script": "dihedral/check.py",
+      "receipt": "dihedral/check.json",
+      "sha256": "6eca72ec7f00435b9f20deed8d74e05bbc0ea2ecfea1f5c18eb9976665a47ea1",
+      "exit_code": 0
+    },
+    {
+      "script": "triples/check.py",
+      "receipt": "triples/check.json",
+      "sha256": "1067a84120fae8d9b3d3015e971168cae1dafd59678818c6ea16700769f4cb51",
+      "exit_code": 0
+    },
+    {
+      "script": "squares/verify.py",
+      "receipt": "squares/receipt.json",
+      "sha256": "51cf2e2fc85d9a0a1b84dea11a9510e8babd1df8b4d196470302216013027811",
+      "exit_code": 0
+    },
+    {
+      "script": "ports/verify.py",
+      "receipt": "ports/receipt.json",
+      "sha256": "1a8f30085731659657d786fb852f513300e406819d95fff9f9390a6d57b3bcf3",
+      "exit_code": 0
+    },
+    {
+      "script": "ports/four_local.py",
+      "receipt": "ports/four_local_receipt.json",
+      "sha256": "3a4d1a184c0188051cd6be18f7accb050c154dd2fe7df62eb31072e86502d268",
+      "exit_code": 0
+    },
+    {
+      "script": "ports/scout_returns.py",
+      "receipt": "ports/scout_receipt.json",
+      "sha256": "991b6ec3fb3a249eb8984f59f9f2bc854a570e9bdc230f6fbed8be3f55f0eb45",
+      "exit_code": 0
+    }
+  ]
+}

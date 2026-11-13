@@ -1,0 +1,45 @@
+{
+  "status": "FINITE-EXACT",
+  "literal_triangles": {
+    "2": 5,
+    "3": 64,
+    "4": 97,
+    "5": 226,
+    "6": 253,
+    "7": 540,
+    "8": 513,
+    "9": 1054,
+    "10": 901,
+    "11": 1816
+  },
+  "joins": {
+    "2": {
+      "exhaustive": true,
+      "triples": 125
+    },
+    "4": {
+      "exhaustive": true,
+      "triples": 912673
+    },
+    "3": {
+      "exhaustive": false,
+      "triples": 5000
+    },
+    "5": {
+      "exhaustive": false,
+      "triples": 5000
+    },
+    "7": {
+      "exhaustive": false,
+      "triples": 5000
+    },
+    "10": {
+      "exhaustive": false,
+      "triples": 5000
+    }
+  },
+  "large_modulus_formula_only": {
+    "30": 17101,
+    "42": 44101
+  }
+}

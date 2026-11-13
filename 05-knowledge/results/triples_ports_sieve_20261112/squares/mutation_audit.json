@@ -1,0 +1,110 @@
+{
+  "four_step_local_implications": [
+    {
+      "n": 3,
+      "return_counts": {
+        "(0, 1, 0, 1)": 4,
+        "(0, 1, 0, 2)": 2,
+        "(0, 1, 2, 0)": 6,
+        "(0, 1, 2, 1)": 2
+      },
+      "tournaments": 8
+    },
+    {
+      "n": 4,
+      "return_counts": {
+        "(0, 1, 0, 1)": 16,
+        "(0, 1, 0, 2)": 2,
+        "(0, 1, 2, 0)": 4,
+        "(0, 1, 2, 1)": 2,
+        "(0, 1, 2, 3)": 2
+      },
+      "tournaments": 64
+    },
+    {
+      "n": 5,
+      "return_counts": {
+        "(0, 1, 0, 1)": 128,
+        "(0, 1, 0, 2)": 4,
+        "(0, 1, 2, 0)": 8,
+        "(0, 1, 2, 1)": 4,
+        "(0, 1, 2, 3)": 2
+      },
+      "tournaments": 1024
+    }
+  ],
+  "rank_four_obstruction_rows": [
+    {
+      "e_f": [
+        -1,
+        -1
+      ],
+      "remaining_column": [
+        -5,
+        -2,
+        4
+      ]
+    },
+    {
+      "e_f": [
+        -1,
+        1
+      ],
+      "remaining_column": [
+        -3,
+        0,
+        2
+      ]
+    },
+    {
+      "e_f": [
+        1,
+        -1
+      ],
+      "remaining_column": [
+        -1,
+        -2,
+        2
+      ]
+    },
+    {
+      "e_f": [
+        1,
+        1
+      ],
+      "remaining_column": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "rank_three_complete_return_rows": {
+    "(0, 1, 0)": [
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        -1
+      ]
+    ],
+    "(0, 1, 2)": [
+      [
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "source": "../ports/PROOF.md, propositions4-5",
+  "status": "FINITE-EXACT independent case-table audit"
+}

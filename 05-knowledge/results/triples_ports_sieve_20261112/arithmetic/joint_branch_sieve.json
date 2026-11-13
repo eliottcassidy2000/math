@@ -1,0 +1,554 @@
+{
+  "accepted_k_phases": 64216152,
+  "aliquot_bridge": {
+    "bound_source_controls": 4999,
+    "enumeration_extension": false,
+    "inherited": true,
+    "seed_maxima": [
+      {
+        "certificate": "inherited sharp bound plus prime-square equality",
+        "maximum_source": 40436881,
+        "target": 6360
+      },
+      {
+        "certificate": "inherited sharp bound plus prime-square equality",
+        "maximum_source": 364008241,
+        "target": 19080
+      },
+      {
+        "certificate": "inherited sharp bound plus prime-square equality",
+        "maximum_source": 364084561,
+        "target": 19082
+      }
+    ],
+    "simultaneous_composite_consequence": "At all three targets count+1, A135244 is strictly below count squared along the displayed u>=1 progression."
+  },
+  "all_prime_seed": {
+    "counts": [
+      6359,
+      19079,
+      19081
+    ],
+    "k": 6,
+    "primality": "complete trial division"
+  },
+  "allowed_per_clock": [
+    27,
+    9,
+    22,
+    11,
+    28,
+    39
+  ],
+  "compatible_CRT_intersections": 323,
+  "conditional_t_clauses": [
+    {
+      "forbidden": [
+        5,
+        6
+      ],
+      "modulus": 11,
+      "prime": 23
+    },
+    {
+      "forbidden": [
+        1
+      ],
+      "modulus": 5,
+      "prime": 31
+    },
+    {
+      "forbidden": [
+        22
+      ],
+      "modulus": 23,
+      "prime": 47
+    },
+    {
+      "forbidden": [
+        1
+      ],
+      "modulus": 13,
+      "prime": 53
+    },
+    {
+      "forbidden": [
+        11
+      ],
+      "modulus": 29,
+      "prime": 59
+    },
+    {
+      "forbidden": [
+        18
+      ],
+      "modulus": 35,
+      "prime": 71
+    },
+    {
+      "forbidden": [
+        3
+      ],
+      "modulus": 13,
+      "prime": 79
+    },
+    {
+      "forbidden": [
+        13,
+        16
+      ],
+      "modulus": 41,
+      "prime": 83
+    }
+  ],
+  "direct_exponent_controls": 10000,
+  "first_25_primes": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71,
+    73,
+    79,
+    83,
+    89,
+    97
+  ],
+  "forcing_modulus": 12,
+  "forcing_primes": [
+    5,
+    7,
+    13
+  ],
+  "forcing_residues": [
+    6
+  ],
+  "formal_counts": [
+    [
+      99,
+      23
+    ],
+    [
+      297,
+      71
+    ],
+    [
+      297,
+      73
+    ]
+  ],
+  "independent_clocks": [
+    35,
+    11,
+    23,
+    13,
+    29,
+    41
+  ],
+  "k_density": [
+    5346,
+    136735
+  ],
+  "k_minimal_period": 1642460820,
+  "minimality_witnesses": [
+    {
+      "at_k": true,
+      "at_shift": false,
+      "k": 6,
+      "prime_factor": 2,
+      "shift": 821230410
+    },
+    {
+      "at_k": true,
+      "at_shift": false,
+      "k": 6,
+      "prime_factor": 3,
+      "shift": 547486940
+    },
+    {
+      "at_k": true,
+      "at_shift": false,
+      "k": 54,
+      "prime_factor": 5,
+      "shift": 328492164
+    },
+    {
+      "at_k": false,
+      "at_shift": true,
+      "k": 222,
+      "prime_factor": 7,
+      "shift": 234637260
+    },
+    {
+      "at_k": true,
+      "at_shift": false,
+      "k": 30,
+      "prime_factor": 11,
+      "shift": 149314620
+    },
+    {
+      "at_k": true,
+      "at_shift": false,
+      "k": 30,
+      "prime_factor": 13,
+      "shift": 126343140
+    },
+    {
+      "at_k": false,
+      "at_shift": true,
+      "k": 270,
+      "prime_factor": 23,
+      "shift": 71411340
+    },
+    {
+      "at_k": false,
+      "at_shift": true,
+      "k": 834,
+      "prime_factor": 29,
+      "shift": 56636580
+    },
+    {
+      "at_k": false,
+      "at_shift": true,
+      "k": 162,
+      "prime_factor": 41,
+      "shift": 40060020
+    }
+  ],
+  "original_prime_clauses": [
+    {
+      "forbidden": [
+        [],
+        [],
+        []
+      ],
+      "order": 2,
+      "prime": 3
+    },
+    {
+      "forbidden": [
+        [
+          3
+        ],
+        [
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "order": 4,
+      "prime": 5
+    },
+    {
+      "forbidden": [
+        [],
+        [
+          1
+        ],
+        []
+      ],
+      "order": 3,
+      "prime": 7
+    },
+    {
+      "forbidden": [
+        [],
+        [],
+        []
+      ],
+      "order": 10,
+      "prime": 11
+    },
+    {
+      "forbidden": [
+        [
+          1
+        ],
+        [
+          4
+        ],
+        [
+          2
+        ]
+      ],
+      "order": 12,
+      "prime": 13
+    },
+    {
+      "forbidden": [
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "order": 8,
+      "prime": 17
+    },
+    {
+      "forbidden": [
+        [
+          9
+        ],
+        [
+          1
+        ],
+        [
+          16
+        ]
+      ],
+      "order": 18,
+      "prime": 19
+    },
+    {
+      "forbidden": [
+        [],
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "order": 11,
+      "prime": 23
+    },
+    {
+      "forbidden": [
+        [
+          27
+        ],
+        [
+          20
+        ],
+        [
+          1
+        ]
+      ],
+      "order": 28,
+      "prime": 29
+    },
+    {
+      "forbidden": [
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "order": 5,
+      "prime": 31
+    },
+    {
+      "forbidden": [
+        [
+          23
+        ],
+        [
+          26
+        ],
+        [
+          0
+        ]
+      ],
+      "order": 36,
+      "prime": 37
+    },
+    {
+      "forbidden": [
+        [],
+        [],
+        [
+          7
+        ]
+      ],
+      "order": 20,
+      "prime": 41
+    },
+    {
+      "forbidden": [
+        [],
+        [],
+        []
+      ],
+      "order": 14,
+      "prime": 43
+    },
+    {
+      "forbidden": [
+        [],
+        [
+          17
+        ],
+        []
+      ],
+      "order": 23,
+      "prime": 47
+    },
+    {
+      "forbidden": [
+        [
+          25
+        ],
+        [
+          4
+        ],
+        [
+          18
+        ]
+      ],
+      "order": 52,
+      "prime": 53
+    },
+    {
+      "forbidden": [
+        [
+          35
+        ],
+        [
+          22
+        ],
+        [
+          47
+        ]
+      ],
+      "order": 58,
+      "prime": 59
+    },
+    {
+      "forbidden": [
+        [
+          0
+        ],
+        [
+          20
+        ],
+        [
+          5
+        ]
+      ],
+      "order": 60,
+      "prime": 61
+    },
+    {
+      "forbidden": [
+        [
+          56
+        ],
+        [
+          57
+        ],
+        [
+          29
+        ]
+      ],
+      "order": 66,
+      "prime": 67
+    },
+    {
+      "forbidden": [
+        [],
+        [],
+        [
+          12
+        ]
+      ],
+      "order": 35,
+      "prime": 71
+    },
+    {
+      "forbidden": [
+        [],
+        [],
+        []
+      ],
+      "order": 9,
+      "prime": 73
+    },
+    {
+      "forbidden": [
+        [],
+        [],
+        [
+          3
+        ]
+      ],
+      "order": 39,
+      "prime": 79
+    },
+    {
+      "forbidden": [
+        [
+          15
+        ],
+        [
+          80
+        ],
+        [
+          34
+        ]
+      ],
+      "order": 82,
+      "prime": 83
+    },
+    {
+      "forbidden": [
+        [],
+        [],
+        []
+      ],
+      "order": 11,
+      "prime": 89
+    },
+    {
+      "forbidden": [
+        [],
+        [],
+        [
+          2
+        ]
+      ],
+      "order": 48,
+      "prime": 97
+    }
+  ],
+  "scope": "All positive exponents k, by complete local phase words and CRT. Three formal scalar counts; no simultaneous tournament-return realization claim.",
+  "simultaneous_composites": {
+    "finite_controls": 100,
+    "fixed_prime_divisors": [
+      6359,
+      19079,
+      19081
+    ],
+    "k0": 6,
+    "orders": [
+      3179,
+      9539,
+      3180
+    ],
+    "step": 239978082932247660,
+    "t_scope": "every integer t>=1"
+  },
+  "status": "PASS",
+  "t_density": [
+    64152,
+    136735
+  ],
+  "t_minimal_period": 136871735
+}

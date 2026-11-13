@@ -1,0 +1,181 @@
+{
+  "exceptional_triples": [
+    {
+      "H": 1,
+      "final": 3,
+      "initial": 0
+    },
+    {
+      "H": 1,
+      "final": 1,
+      "initial": 1
+    },
+    {
+      "H": 3,
+      "final": 5,
+      "initial": 2
+    },
+    {
+      "H": 3,
+      "final": 2,
+      "initial": 5
+    },
+    {
+      "H": 1,
+      "final": 6,
+      "initial": 6
+    },
+    {
+      "H": 1,
+      "final": 4,
+      "initial": 7
+    }
+  ],
+  "local_universe": "All labelled tournaments through five for the displayed words",
+  "rows": [
+    {
+      "n": 3,
+      "necessary_native_prefix": 3,
+      "returns": 2,
+      "word": [
+        0,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "n": 4,
+      "necessary_native_prefix": 3,
+      "returns": 2,
+      "word": [
+        0,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "n": 5,
+      "necessary_native_prefix": 3,
+      "returns": 4,
+      "word": [
+        0,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "n": 3,
+      "necessary_native_prefix": 1,
+      "returns": 2,
+      "word": [
+        0,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "n": 4,
+      "necessary_native_prefix": 1,
+      "returns": 2,
+      "word": [
+        0,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "n": 5,
+      "necessary_native_prefix": 1,
+      "returns": 4,
+      "word": [
+        0,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "n": 4,
+      "return_masks": [
+        0,
+        63
+      ],
+      "word": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 5,
+      "return_masks": [
+        0,
+        1023
+      ],
+      "word": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 3,
+      "return_masks": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7
+      ],
+      "word": [
+        0,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "n": 4,
+      "return_masks": [
+        2,
+        9,
+        54,
+        61
+      ],
+      "word": [
+        0,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "n": 5,
+      "return_masks": [
+        2,
+        17,
+        494,
+        509,
+        514,
+        529,
+        1006,
+        1021
+      ],
+      "word": [
+        0,
+        1,
+        2,
+        0
+      ]
+    }
+  ],
+  "status": "PASS: finite lemmas used in all-order proof"
+}

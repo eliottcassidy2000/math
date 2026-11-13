@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "literal_grounded_theta_matrices": 364,
+  "theta_degree_hostiles": [
+    {
+      "arms": [
+        2,
+        3,
+        4
+      ],
+      "hub_demands": [
+        2,
+        2
+      ],
+      "internal_demands": 1,
+      "degree_completions": 2
+    },
+    {
+      "arms": [
+        2,
+        3,
+        6
+      ],
+      "hub_demands": [
+        2,
+        2
+      ],
+      "internal_demands": 1,
+      "degree_completions": 2
+    },
+    {
+      "arms": [
+        2,
+        3,
+        8
+      ],
+      "hub_demands": [
+        2,
+        2
+      ],
+      "internal_demands": 1,
+      "degree_completions": 2
+    }
+  ],
+  "independent_boundary_counts": [
+    {
+      "modulus": 2,
+      "boundaries": 1,
+      "states": 2
+    },
+    {
+      "modulus": 2,
+      "boundaries": 2,
+      "states": 3
+    },
+    {
+      "modulus": 2,
+      "boundaries": 3,
+      "states": 5
+    },
+    {
+      "modulus": 3,
+      "boundaries": 1,
+      "states": 5
+    },
+    {
+      "modulus": 3,
+      "boundaries": 2,
+      "states": 16
+    },
+    {
+      "modulus": 3,
+      "boundaries": 3,
+      "states": 64
+    },
+    {
+      "modulus": 4,
+      "boundaries": 1,
+      "states": 4
+    },
+    {
+      "modulus": 4,
+      "boundaries": 2,
+      "states": 17
+    },
+    {
+      "modulus": 4,
+      "boundaries": 3,
+      "states": 97
+    },
+    {
+      "modulus": 5,
+      "boundaries": 1,
+      "states": 7
+    },
+    {
+      "modulus": 5,
+      "boundaries": 2,
+      "states": 36
+    },
+    {
+      "modulus": 5,
+      "boundaries": 3,
+      "states": 226
+    },
+    {
+      "modulus": 6,
+      "boundaries": 1,
+      "states": 5
+    },
+    {
+      "modulus": 6,
+      "boundaries": 2,
+      "states": 31
+    },
+    {
+      "modulus": 6,
+      "boundaries": 3,
+      "states": 253
+    },
+    {
+      "modulus": 7,
+      "boundaries": 1,
+      "states": 9
+    },
+    {
+      "modulus": 7,
+      "boundaries": 2,
+      "states": 64
+    },
+    {
+      "modulus": 7,
+      "boundaries": 3,
+      "states": 540
+    },
+    {
+      "modulus": 8,
+      "boundaries": 1,
+      "states": 6
+    },
+    {
+      "modulus": 8,
+      "boundaries": 2,
+      "states": 49
+    },
+    {
+      "modulus": 8,
+      "boundaries": 3,
+      "states": 513
+    }
+  ],
+  "square_reflection_generator_moduli": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "scope": "Finite independent controls supplement the all-parameter proofs; no tournament or literal square-sum realization inference."
+}
