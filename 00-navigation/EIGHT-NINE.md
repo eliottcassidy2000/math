@@ -3,6 +3,13 @@
 [Research packet](../05-knowledge/results/eight_nine_twentyseven_20261112/README.md).
 **PROVED IN NOTES / FINITE-EXACT; Chan–Pak OPEN.**
 
+[Spatial fill and spanning trees](../05-knowledge/results/fill_tree_matrix_20261113/README.md):
+exact neutral-growth orthants and weighted uniform simplex fill;5/17
+multiplicities, marked matrix/forest identities, and guarded Collatz
+excursions. Arithmetic target tree is explicit; pure-birth lift is
+refuted by the complete ordinary count-containment table through73.
+Global numerical coverage remains OPEN.
+
 [Growing t and multi-birth repairs](../05-knowledge/results/growing_t_returns_20261113/README.md):
 actual881 ->1691 ->3311 ->6551 unit-ready target chain; a separate growing-t
 module family with an explicit positive offset cost; exact minimum and all

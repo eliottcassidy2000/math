@@ -1,0 +1,245 @@
+{
+  "status": "FINITE-EXACT controls of stated all-order identities; no coverage proof",
+  "all_loopless_labelled_digraphs_through_order4": 4165,
+  "weighted_forest_and_bin_controls": {
+    "graphs": 4165,
+    "bin_values": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "all_labelled_tournaments_through_order5": 1099,
+  "subset_cells": 33866,
+  "birth_factor_checks": 1098,
+  "labelled_H_histograms": {
+    "1": {
+      "1": 1
+    },
+    "2": {
+      "1": 2
+    },
+    "3": {
+      "1": 6,
+      "3": 2
+    },
+    "4": {
+      "1": 24,
+      "3": 16,
+      "5": 24
+    },
+    "5": {
+      "1": 120,
+      "3": 120,
+      "5": 240,
+      "9": 240,
+      "11": 120,
+      "13": 120,
+      "15": 64
+    }
+  },
+  "directed_books": [
+    {
+      "pages": 1,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "H": 3
+    },
+    {
+      "pages": 2,
+      "rows": [
+        2,
+        12,
+        9,
+        1
+      ],
+      "H": 5
+    },
+    {
+      "pages": 3,
+      "rows": [
+        2,
+        28,
+        25,
+        17,
+        1
+      ],
+      "H": 9
+    },
+    {
+      "pages": 4,
+      "rows": [
+        2,
+        60,
+        57,
+        49,
+        33,
+        1
+      ],
+      "H": 17
+    },
+    {
+      "pages": 5,
+      "rows": [
+        2,
+        124,
+        121,
+        113,
+        97,
+        65,
+        1
+      ],
+      "H": 33
+    },
+    {
+      "pages": 6,
+      "rows": [
+        2,
+        252,
+        249,
+        241,
+        225,
+        193,
+        129,
+        1
+      ],
+      "H": 65
+    },
+    {
+      "pages": 7,
+      "rows": [
+        2,
+        508,
+        505,
+        497,
+        481,
+        449,
+        385,
+        257,
+        1
+      ],
+      "H": 129
+    },
+    {
+      "pages": 8,
+      "rows": [
+        2,
+        1020,
+        1017,
+        1009,
+        993,
+        961,
+        897,
+        769,
+        513,
+        1
+      ],
+      "H": 257
+    }
+  ],
+  "fake_three_page_fill": {
+    "cycle_supports": [
+      7,
+      11,
+      19
+    ],
+    "all32_cells_positive_odd": true,
+    "H": 7,
+    "real_completion_H": 9
+  },
+  "one_missing_arc_witnesses": {
+    "7": {
+      "n": 5,
+      "tournament_rows": [
+        16,
+        1,
+        3,
+        7,
+        14
+      ],
+      "deleted_arc": [
+        2,
+        0
+      ],
+      "rows": [
+        16,
+        1,
+        2,
+        7,
+        14
+      ],
+      "H_before": 9,
+      "H_after": 7,
+      "H_opposite_completion": 9
+    },
+    "21": {
+      "n": 6,
+      "tournament_rows": [
+        48,
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "deleted_arc": [
+        5,
+        1
+      ],
+      "rows": [
+        48,
+        1,
+        3,
+        7,
+        14,
+        28
+      ],
+      "H_before": 23,
+      "H_after": 21,
+      "H_opposite_completion": 41
+    }
+  },
+  "matrix_hostiles": {
+    "TT3_A3_zero_H1": true,
+    "three_star_one_tree_H0": true,
+    "padded_C3_trace_A6_3_H0": true
+  },
+  "source_pins": [
+    {
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1"
+    },
+    {
+      "path": "01-canon/theorems/THM-029-alpha1-gap.md",
+      "sha256": "ab429d583dc881a89d07b1ca33cd1085ae82f6ae15f2ec6b80b30ceb235635cf"
+    },
+    {
+      "path": "01-canon/theorems/THM-1460-arborescences-are-the-determinantal-relaxation-of-H.md",
+      "sha256": "4ca3d090e4c82a47e7124bf51a7309cdd16642d945da8ef539eb216c84040c7c"
+    },
+    {
+      "path": "01-canon/theorems/THM-1745-leaf-graded-arborescence-filtration-721-shadow.md",
+      "sha256": "f518f3c04d27f75ace849f2652c0401eaaa1a8d8606644ba0598bbca671437a1"
+    },
+    {
+      "path": "01-canon/theorems/THM-1870-the-cycle-count-spectral-boundary-is-the-hamiltonian-length.md",
+      "sha256": "724ea320fa6e2db5d7e3ba0377937cd8201a07255e1a4265b309c142996f7220"
+    },
+    {
+      "path": "01-canon/theorems/THM-4986-the-7-21-omission-proof-has-an-exact-spanning-tree-twin-block-floor-crevasse-lemma-and-the-first-creator-contrast.md",
+      "sha256": "6d03df97d2e6c80c86724440366d35c39668b6f8edbd47852053de08a9d17f30"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9640-chan-pak-as-a-matrix-semigroup-orbit-and-one-defect-digraph-spectra.md",
+      "sha256": "032eae5f7592e9e4171797419bf198bf354c37a9144fcbe3b2f674ffb3783ad8"
+    },
+    {
+      "path": "05-knowledge/results/squarefree_cycle_inventory_20261019/SQUAREFREE_CYCLE_BRIDGES.md",
+      "sha256": "691afd4916ebf7f0baa42279c20f2e6d6fd24c06588c4cd78f4818a75f504ddb"
+    }
+  ]
+}

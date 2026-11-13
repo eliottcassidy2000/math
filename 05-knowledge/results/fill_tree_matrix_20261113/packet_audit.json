@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "local_markdown_links": 32,
+  "normal_optimized_pairs": [
+    "collatz/receipt.json",
+    "containment_edges.json",
+    "matrix/containment_audit.json",
+    "matrix/receipt.json",
+    "multiplicity/receipt.json",
+    "tree_blueprint.json"
+  ],
+  "distinct_source_pins": 23,
+  "scope": "Integrity checks; independent proof reviews and exact computation universes are stated in AUDIT.md."
+}

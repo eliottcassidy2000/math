@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "scope": "Arithmetic tree only; physical tournament lift OPEN",
+  "universe": {
+    "odd_limit": 131071,
+    "holes": [
+      7,
+      21
+    ]
+  },
+  "vertices": 65534,
+  "max_depth": 16,
+  "splice_parent": {
+    "13": 3,
+    "15": 3,
+    "41": 11,
+    "43": 11
+  },
+  "collatz_odd_routes": {
+    "5": [
+      5,
+      1
+    ],
+    "17": [
+      17,
+      13,
+      5,
+      1
+    ],
+    "7": [
+      7,
+      11,
+      17,
+      13,
+      5,
+      1
+    ],
+    "21": [
+      21,
+      1
+    ]
+  },
+  "proof_sha256": "7bd090c88c11734381a3cfc0b60c7fc600e2cb00633c09b6936da7c05a5d0f19"
+}

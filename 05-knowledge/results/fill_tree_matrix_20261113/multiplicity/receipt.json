@@ -1,0 +1,230 @@
+{
+  "status": "PASS",
+  "labelled_tournaments": 33867,
+  "neutral_attachments": 1098,
+  "all_order_target_atom_counts": {
+    "5": 1,
+    "7": 0,
+    "17": 2,
+    "21": 0
+  },
+  "target_strong_representatives": {
+    "5": [
+      [
+        2,
+        4,
+        9,
+        3
+      ]
+    ],
+    "7": [],
+    "17": [
+      [
+        2,
+        4,
+        9,
+        19,
+        39,
+        15
+      ],
+      [
+        2,
+        16,
+        3,
+        7,
+        45,
+        15
+      ]
+    ],
+    "21": []
+  },
+  "target_labelled_counts": {
+    "1": {},
+    "2": {},
+    "3": {},
+    "4": {
+      "5": 24
+    },
+    "5": {
+      "5": 240
+    },
+    "6": {
+      "5": 2160,
+      "17": 1440
+    }
+  },
+  "literal_history_controls": [
+    {
+      "r": 1,
+      "added": 0,
+      "cells": 1,
+      "histories": 1
+    },
+    {
+      "r": 1,
+      "added": 1,
+      "cells": 2,
+      "histories": 2
+    },
+    {
+      "r": 1,
+      "added": 2,
+      "cells": 3,
+      "histories": 6
+    },
+    {
+      "r": 1,
+      "added": 3,
+      "cells": 4,
+      "histories": 24
+    },
+    {
+      "r": 1,
+      "added": 4,
+      "cells": 5,
+      "histories": 120
+    },
+    {
+      "r": 1,
+      "added": 5,
+      "cells": 6,
+      "histories": 720
+    },
+    {
+      "r": 2,
+      "added": 0,
+      "cells": 1,
+      "histories": 1
+    },
+    {
+      "r": 2,
+      "added": 1,
+      "cells": 3,
+      "histories": 3
+    },
+    {
+      "r": 2,
+      "added": 2,
+      "cells": 6,
+      "histories": 12
+    },
+    {
+      "r": 2,
+      "added": 3,
+      "cells": 10,
+      "histories": 60
+    }
+  ],
+  "exact_urn_cells": 5004,
+  "unweighted_quotient_hostile": [
+    "1/4",
+    "1/2",
+    "1/4"
+  ],
+  "unmarked_h9_third_difference": {
+    "5": 2,
+    "6": -1
+  },
+  "inherited_fill_frontiers": {
+    "3": {
+      "first_unfilled_nonexception": 5,
+      "filled_prefix": 3,
+      "source": "inherited complete ordinary-isomorphism census"
+    },
+    "4": {
+      "first_unfilled_nonexception": 9,
+      "filled_prefix": 7,
+      "source": "inherited complete ordinary-isomorphism census"
+    },
+    "5": {
+      "first_unfilled_nonexception": 17,
+      "filled_prefix": 15,
+      "source": "inherited complete ordinary-isomorphism census"
+    },
+    "6": {
+      "first_unfilled_nonexception": 35,
+      "filled_prefix": 33,
+      "source": "inherited complete ordinary-isomorphism census"
+    },
+    "7": {
+      "first_unfilled_nonexception": 63,
+      "filled_prefix": 61,
+      "source": "inherited complete ordinary-isomorphism census"
+    },
+    "8": {
+      "first_unfilled_nonexception": 611,
+      "filled_prefix": 609,
+      "source": "inherited complete ordinary-isomorphism census"
+    }
+  },
+  "thirteen_to_twentyseven_core_controls": [
+    {
+      "rows": [
+        30,
+        52,
+        56,
+        50,
+        32,
+        1
+      ],
+      "five_vertex_hamilton_histogram": {
+        "3": 2,
+        "15": 1,
+        "9": 3
+      }
+    },
+    {
+      "rows": [
+        62,
+        124,
+        120,
+        112,
+        32,
+        64,
+        17
+      ],
+      "five_vertex_hamilton_histogram": {
+        "1": 8,
+        "9": 7,
+        "5": 3,
+        "3": 3
+      }
+    },
+    {
+      "rows": [
+        118,
+        124,
+        40,
+        113,
+        100,
+        64,
+        4
+      ],
+      "five_vertex_hamilton_histogram": {
+        "9": 5,
+        "5": 4,
+        "1": 5,
+        "3": 7
+      }
+    }
+  ],
+  "source_pins": [
+    {
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md",
+      "sha256": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe"
+    },
+    {
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/extended_census.json",
+      "sha256": "1b3930fa5e192859b830ddc01c11358fa1f5dcc82d43cddec570577b41c5a974"
+    },
+    {
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/low_H_formulas.json",
+      "sha256": "7ebb3407d60b4708194d0a050e157aee0ebcb8ce11755717fca87c355f4a03f5"
+    },
+    {
+      "path": "01-canon/theorems/THM-1900-the-insertion-response-calculus.md",
+      "sha256": "18f85768d767365dd28e69d2f5faa43bb9f292efa505f01828056c81f8690bb4"
+    }
+  ],
+  "scope": "All labelled tournaments through6 directly enumerated; neutral attachments through4; literal histories as listed; all-order proofs separate. n7/n8 frontier rows inherited, not re-enumerated."
+}

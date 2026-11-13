@@ -1,0 +1,68 @@
+{
+  "status": "PASS independent literal-path and factor-multiset audit",
+  "scope": "All-order conclusion inherits complete strong census and Busch bound; class census not regenerated",
+  "cores": 148,
+  "core_orders": {
+    "3": 1,
+    "4": 1,
+    "5": 6,
+    "6": 22,
+    "7": 65,
+    "8": 53
+  },
+  "subset_counts": 23512,
+  "individual_simple_paths_enumerated": 87388,
+  "all37_count_unions_match": true,
+  "missing_edges": [
+    [
+      13,
+      27
+    ],
+    [
+      25,
+      51
+    ],
+    [
+      29,
+      57
+    ],
+    [
+      31,
+      63
+    ],
+    [
+      35,
+      69
+    ]
+  ],
+  "source_pins": [
+    {
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/census.json",
+      "sha256": "88f841986e53e185c4eea42ece62f562260868d964efdce8aed77e3e351fc7a4"
+    },
+    {
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/n8_classes.csv",
+      "sha256": "5226fb6d6cb71e2c99dc50536744f044c31af55e173e3be9f5f722a39edf3bc2"
+    },
+    {
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md",
+      "sha256": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe"
+    },
+    {
+      "path": "05-knowledge/results/fill_tree_matrix_20261113/containment_edges.py",
+      "sha256": "eaa3e05b95f2fede0ecf876e9e79cec7001476250257a5164ff13b15d9a6397f"
+    },
+    {
+      "path": "05-knowledge/results/fill_tree_matrix_20261113/containment_edges.json",
+      "sha256": "62937a1be9f7df263b67e5251ade1c815ab86f49b74988c05904c0456572cf5d"
+    },
+    {
+      "path": "05-knowledge/results/fill_tree_matrix_20261113/tree_blueprint.py",
+      "sha256": "0d445c3591b64befb6b2c73bfc4f7b79272c421c5be4594f3732b55503c0f272"
+    },
+    {
+      "path": "05-knowledge/results/metagraph_primegame_20261102/INDUCED_OBSTRUCTIONS.md",
+      "sha256": "4e27c4c91ad22038a1927cf912ef33062d5d165640f16f97f8cd3f1e01c833e4"
+    }
+  ]
+}
