@@ -102,7 +102,7 @@ def run():
         rec=dict(**pair,profiles=[x,y],difference=d,hits=[v[1] for k,v in sorted(hits.items())],counts=[dict(side=s,mode=m,count=c) for (s,m),c in sorted(counts.items())])
         outputs.append(rec)
         print('PAIR',pair['label'],'ORDER',len(pair['rows'][0]),'DIFFERENCE',d,'TYPED_RULES',[(v[1]['side'],v[1]['mode'],v[1]['slope'],v[1]['context']['n']) for v in hits.values()],flush=True)
-    save('typed_glue',dict(status='FINITE-EXACT',scope='All ordinary contexts through8 and all roots; grouped only by full seven-coordinate equality. Ten inherited literal pairs. No exhaustive search over arbitrary input pairs.',physical_checks=checks,permutation_controls=literal,associativity_controls=assoc,context_response_types=len(catalog),pairs=outputs))
+    save('typed_glue',dict(status='FINITE-EXACT',scope='All ordinary contexts through8 and all roots; grouped only by full seven-coordinate equality. Eleven inherited literal pairs. No exhaustive search over arbitrary input pairs.',physical_checks=checks,permutation_controls=literal,associativity_controls=assoc,context_response_types=len(catalog),pairs=outputs))
     save('context_catalog',dict(status='FINITE-EXACT',records=list(catalog.values())))
 
 

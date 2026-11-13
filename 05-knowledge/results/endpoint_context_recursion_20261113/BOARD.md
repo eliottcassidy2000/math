@@ -1,6 +1,6 @@
 # Endpoint types, witness trees, and exact filling
 
-**Research in progress; Chan–Pak and Collatz OPEN.** Start snapshot dfaf7c7e88.
+**Session completed with scoped proofs and finite exact receipts; Chan–Pak and Collatz OPEN.** Start snapshot dfaf7c7e88.
 Anchor: extend the eight actual neutral directions to a physically composable
 core-changing language. Niche: exact count multiplicities by SCC words and
 singleton placement. Wildcard: literal versus bidirectional Collatz reachability
@@ -24,3 +24,13 @@ Live board:
 Every lane records its map, preserved predicate, lost information, decisive
 test and stopping reason. We use the existing META-PATTERNS cards on correcting
 the object, retaining incidence, and separating local support from coverage.
+
+End-of-session board: the seven-coordinate fixed-root response yielded a
+strict sign-cone obstruction; a different output vertex restored physical
+composition and produced a universal four-coordinate compiler. The H5 pair
+now has two reusable strong return contexts and an exact decreasing language
+selector. Its nine-matrix head is nevertheless provably sparse. Incoming
+neutral-simplex geometry and count-containment results explain why larger
+fibres and more ports do not by themselves create a prescribed target.
+Both Collatz models were kept separate; finite height equivalence, forced
+excursions and100,000 actual literal-strategy certificates are recorded.

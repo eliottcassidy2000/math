@@ -3,6 +3,15 @@
 [Research packet](../05-knowledge/results/eight_nine_twentyseven_20261112/README.md).
 **PROVED IN NOTES / FINITE-EXACT; Chan–Pak OPEN.**
 
+[Changed-port recursion and exact language limits](../05-knowledge/results/endpoint_context_recursion_20261113/README.md):
+four-coordinate entry/exit compiler; explicit escapes for1/3,4/9,6/11;
+renewable H5 repair pair with recurrence X_(k+2)=8X_(k+1)+X_k.
+Nine small return matrices have an exact decreasing selector,1,346 targets
+through10^8, and a proved density-zero bound. Fixed-root sign-cone,
+unit-readiness and induced-containment obstructions are kept distinct.
+Both requested Collatz graphs and the vertex-memory matrix model are audited.
+No universal odd-target selector is claimed.
+
 [Spatial fill and spanning trees](../05-knowledge/results/fill_tree_matrix_20261113/README.md):
 exact neutral-growth orthants and weighted uniform simplex fill;5/17
 multiplicities, marked matrix/forest identities, and guarded Collatz

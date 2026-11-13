@@ -91,7 +91,7 @@ def run():
         iterates.append(dict(k=k,order=11+7*k,profiles=zs,next_H=zs[0][0]+zs[0][3]-zs[0][1]))
         zs=[mul(M,z) for z in zs]
     need(iterates[1]['profiles']==[tuple(z[j] for j in (0,1,3,4)) for s in w['states'] if s['root']==u and s['mode']=='E' for z in s['profiles']],'independent literal order18 renewal')
-    save('port_compiler',dict(status='PROVED-IN-NOTE; FINITE-EXACT certificate',scope='Color-word proof applies to every rooted tournament context with >=2 vertices and every output root in that context; numerical controls all labelled contexts2..3 and all labelled attachments2..4, all entry/exit vertices. Selected order8 matrix compiled from all abstract words, independent order18 literal check.',physical_controls=controls,small_contexts=small,renewal=dict(context_rows=A,entry=r,exit=u,matrix=M,input_direction=v,output_direction=image,initial_rows=w['rows'] if False else next(x['rows'] for x in d['pairs'] if x['label']=='2/3>1/3'),initial_root=source['root'],initial_profiles=z0,iterates=iterates)))
+    save('port_compiler',dict(status='PROVED-IN-NOTE; FINITE-EXACT certificate',scope='Color-word proof applies to every rooted tournament context with >=2 vertices and every output root in that context; numerical controls all labelled contexts2..3 and all labelled attachments2..4, all entry/exit vertices. Selected order8 matrix compiled from all abstract words, independent order18 literal check.',physical_controls=controls,small_contexts=small,renewal=dict(context_rows=A,entry=r,exit=u,matrix=M,input_direction=v,output_direction=image,initial_rows=next(x['rows'] for x in d['pairs'] if x['label']=='2/3>1/3'),initial_root=source['root'],initial_profiles=z0,iterates=iterates)))
 
 
 if __name__=='__main__':run()

@@ -22,7 +22,7 @@ with the second possibly empty. H(empty)=1. Let A have entry r and exit u.
 Identify the root of B with r, and orient every other cross edge
 A−r → B−r. Denote the resulting tournament A⋆B.
 
-For each fixed (A,r,u) there is an integer matrix M(A,r,u), independent of B,
+For each fixed (A,r,u), with |A|>=2, there is an integer matrix M(A,r,u), independent of B with |B|>=2,
 such that
 
     z(A⋆B,u) = M(A,r,u) z(B,r).
@@ -136,7 +136,12 @@ Hence both scalar sequences satisfy X_(k+2)=8X_(k+1)+X_k. The full matrix
 has characteristic polynomial x(x+1)(x²−8x−1): the −1 mode transports
 the exact repair difference while the targets grow.
 
-The inherited H605 pair can be re-rooted at vertex3, with states
+The smallest seed is already H5: states(5,2,3,6) and(5,1,1,5), with
+common E9. It gives H=5,41,333,2705,... under the return. See
+[LANGUAGE](LANGUAGE.md) for a second strong context, its physical
+factorization, and the exact finite-language inverse.
+
+The inherited H605 pair can also be re-rooted at vertex3, with states
 
     (605,208,319,716),  (605,202,307,710).
 
@@ -165,6 +170,10 @@ needs a cover of target/endpoint states by physically invertible rules,
 with every selected predecessor realized and a well-founded decrease.
 The present rule proves renewable forward entry and gives a precise
 inverse test; it does not supply that cover.
+
+Every context word retains its input as an induced subtournament. The
+incoming all-order13→27 containment obstruction therefore remains in
+force even after changing ports; see[OBSTRUCTIONS](OBSTRUCTIONS.md).
 
 The attained H=53,084,231 still has its inherited all-order exclusion of
 unit-ready representatives. Nothing here repairs it at the same target.
