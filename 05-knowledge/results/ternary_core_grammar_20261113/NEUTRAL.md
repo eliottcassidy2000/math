@@ -32,7 +32,8 @@ The new profile is
 Thus h and q−s=0 survive, while the readiness defect changes0→2 and the
 profile gcd changes5→1. The separate start/deletion counts are deliberately
 changed. This is a nonisomorphic core replacement, not mere re-marking.
-The all-order ready classification already contains the target class;
+The [all-order ready classification](../two_entry_funnels_20261103/READY.md)
+already contains the target class;
 the contribution here is its concrete connection to the blocked count25
 interval chain, with the physical edit and retained interface explicit.
 

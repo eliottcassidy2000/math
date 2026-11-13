@@ -14,7 +14,7 @@
     "05-knowledge/results/ternary_core_grammar_20261113/local_obstruction.json.gz": "aa266e0a269f4d1b08f7d900f95373d373db1d3a76fda3b61bfd2cea2902ea6c",
     "05-knowledge/results/ternary_core_grammar_20261113/local_obstruction.optimized.json.gz": "aa266e0a269f4d1b08f7d900f95373d373db1d3a76fda3b61bfd2cea2902ea6c",
     "05-knowledge/results/ternary_core_grammar_20261113/local_obstruction.py": "b6a555e26ea65746e55cc1f9dbd47917e357d793c1e574e57ffd52bd3659212b",
-    "05-knowledge/results/ternary_core_grammar_20261113/NEUTRAL.md": "65348d6d1c88def82a33eb76e710ea556d0abb9179150be99bada3e39fccfb30",
+    "05-knowledge/results/ternary_core_grammar_20261113/NEUTRAL.md": "d982fb6eab7a1fcff9d980753a8392e2af75120912c7330934b60af102ffe5eb",
     "05-knowledge/results/ternary_core_grammar_20261113/neutral_entry.json.gz": "02027fed93a5f18baf70a469e98f856b223743de0cc6cbd4d3f614bd3c576cb2",
     "05-knowledge/results/ternary_core_grammar_20261113/neutral_entry.optimized.json.gz": "02027fed93a5f18baf70a469e98f856b223743de0cc6cbd4d3f614bd3c576cb2",
     "05-knowledge/results/ternary_core_grammar_20261113/neutral_entry.py": "8bb003dad03e6b73c89455b5ee7cf85b194012b231b6aab77340caf80badad13",
@@ -25,7 +25,7 @@
     "05-knowledge/results/ternary_core_grammar_20261113/README.md": "2bce330246ee4ccef20c49e8a49e5c86eb33214507925aa9aeee2ab9b1132ec5",
     "05-knowledge/results/ternary_core_grammar_20261113/reproduce.py": "dac7b0ffe5210ec80f4fd82a6d676a22fc05bc9b3b885dca09e05242568587a9",
     "05-knowledge/results/ternary_core_grammar_20261113/reproduction.json": "1b9fa04b32bd3ff829c67aef6ffc1b888a54e28a2bb50558be59679958ad5012",
-    "05-knowledge/results/ternary_core_grammar_20261113/seal.py": "687380ffef70e80d04756198a18f0e50ac144fbc30ed4399b8190302058065ac",
+    "05-knowledge/results/ternary_core_grammar_20261113/seal.py": "d20fa2b1abd098ed3d0a5047b081c41110c749946b8e3279a901138861665c5f",
     "05-knowledge/results/ternary_core_grammar_20261113/triangle_probe.json.gz": "11b922f39aeb6e13bf122c32dfde53387f99607e3af28ba79aabc22a66cb1a57",
     "05-knowledge/results/ternary_core_grammar_20261113/triangle_probe.optimized.json.gz": "11b922f39aeb6e13bf122c32dfde53387f99607e3af28ba79aabc22a66cb1a57",
     "05-knowledge/results/ternary_core_grammar_20261113/triangle_probe.py": "1177fe052b72efd908b82a9e41cee14ea6cb394a7ca6babc7f50eb6edc55e4aa"
@@ -43,11 +43,13 @@
     "05-knowledge/results/modular_centers_collatz_pell_20261111/tournament_checks.py": "25a193fe1d66a6c6780451f5de6c393398c1b7788e743744317c258f41aa6a7a",
     "05-knowledge/results/multicore_metagraph_20261113/README.md": "4cc99d7305de5d17221b361cca751371f76a7e7418b8560923cb9f3d9aa24f9f",
     "05-knowledge/results/multicore_metagraph_20261113/rooted_growth.json.gz": "3bf25d80ade2bcb7f3af880dd0b9c31e58766529c4be8b99d79a2d8efaa999f5",
+    "05-knowledge/results/multicore_metagraph_20261113/rooted_growth.py": "d4cdeba1cc07667a982cc2401456d5628804a4b3ef17832b7b7179d359a837b5",
     "05-knowledge/results/mutation_collatz_chanpak_20261112/mutation/TWO_ROOTS.md": "cfea78507df377dce9855456a048bdd419653a3e4b5b4f069b30d5fb826a10c0",
     "05-knowledge/results/ready_return_pentagon_20261103/OBSTRUCTION.md": "5890c526288797d4bd80ffaa5eefaa9aa148ee928163f104dea76fc5c4fc39ef",
     "05-knowledge/results/session296_multicore_metagraph_20261113/cores/FINITE_ATLAS.md": "51d10a86ce98a03566b304b0df2924bf4900ed1eb901f7da84c836522168ca72",
     "05-knowledge/results/session299_three_and_two_holes_20261113/README.md": "87d14f18161dd9390393ee03699335313c61f41a57de692b11aef0e1cff09012",
     "05-knowledge/results/source_selection_closure_20261103/NATIVE_SELECTION.md": "5e7c574cf63fe13db453d9c4f63f3d1035194516a0957e489d88b60d299db178",
-    "05-knowledge/results/strong_H_spectrum_m9_values_kps_S134.out": "27fbef5b06fcf0369eeb602e513c3802ea171492e1292a3f6afa3efeadef9f55"
+    "05-knowledge/results/strong_H_spectrum_m9_values_kps_S134.out": "27fbef5b06fcf0369eeb602e513c3802ea171492e1292a3f6afa3efeadef9f55",
+    "05-knowledge/results/two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c"
   }
 }

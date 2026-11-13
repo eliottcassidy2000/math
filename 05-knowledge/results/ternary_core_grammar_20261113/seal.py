@@ -29,7 +29,8 @@ def inputs():
         if not name:continue
         p=Path(name).resolve()
         if p.is_relative_to(ROOT) and p.parent!=HERE and p.suffix=='.py':paths.add(p)
-    paths.update([HERE.parent/'multicore_metagraph_20261113/rooted_growth.json.gz',
+    paths.update([HERE.parent/'multicore_metagraph_20261113/rooted_growth.py',
+                  HERE.parent/'multicore_metagraph_20261113/rooted_growth.json.gz',
                   HERE.parent/'strong_H_spectrum_m9_values_kps_S134.out'])
     return paths
 
