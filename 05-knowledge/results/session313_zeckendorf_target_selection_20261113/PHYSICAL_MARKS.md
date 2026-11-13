@@ -39,3 +39,14 @@ $$
 where $s_v,e_v$ count paths starting and ending at $v$, and $D_v$ counts ordered spanning covers by two nonempty paths whose first ends at $v$. The lost paths started at the added source and then at $v$; the new ones end at the added source or insert it after $v$ between the two pieces. For blue, reverse all paths to get the corresponding start-rooted formula. Each number can be computed by summing the quotient walks of the three leaves, multiplying the ordered-cover counts for the indicated runs in each copy of $B$.
 
 At designation 1 (zero-based $B$ order), the red and blue counts are respectively $378758117678610131$ and $326103131557254703$, congruent to 26 and 22 modulo 27. Designation 0 has both counts congruent to 24 modulo 27, despite the same trivial group. This is an exact finite example of eliminating divisibility and an exact counterexample to automatic elimination by rigidity. It does not certify an all-depth or absolute-target selector. See [replay](probe_replay.py).
+
+## Path packets retain symmetries that the extended graph can lose
+
+There is a stronger obstruction that does not depend on the red/blue protocol. Add $r$ arbitrary exterior vertices to the monochromatic tower. Keep the original tower arcs, but allow arbitrary directions both among exterior vertices and between them and the tower. Then the full Hamiltonian path count is divisible by
+$$
+3^{\,\sum_{j=0}^{d-1}\max(3^j-2r,0)} .
+$$
+
+Partition the paths by the order of the exterior vertices, by which of the $r+1$ intervening tower segments (including the initial and final ones) are empty, and by the **actual** tower vertex on each side of each exterior vertex whenever that side is in the tower. This freezes all used arcs involving the exterior and names at most $2r$ tower leaves in a packet. The pointwise stabilizer of those named leaves inside the original tower acts on the packet: it preserves every within-tower arc of the path and fixes all its used exterior arcs. It need not preserve unused arcs of the extended graph. The action is free, since fixing a path as a directed sequence fixes every vertex. The stabilizer order is divisible by the displayed power, since at depth $j$ at most $2r$ nodes can contain a named leaf. Sum the packet sizes. The $r=0$ case is the ordinary free action on all paths.
+
+For instance a depth-three tower extended by two probes can be rigid, yet **every** such extension, even with arbitrary incidences, has $3^5\mid H$. Targets coprime to three require at least $\lceil 3^{d-1}/2\rceil$ exterior vertices if the core is kept unchanged. This is a hierarchical version of the triangle-contact argument: name used endpoints, not every arc in the full graph. The result is a lower bound, not a sufficiency claim at that threshold. Any proposed fixed-probe exact selector must replace or recolor part of the growing core, or abandon this tower.
