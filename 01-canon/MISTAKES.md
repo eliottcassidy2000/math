@@ -4,6 +4,15 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13: Collatz odd-branch depth was mislabelled as an ascent count
+
+- **Status:** demonstrated scope/index error repaired in [clone-clock COLLATZ §3](../05-knowledge/results/clone_clocks_negative_collatz_20261113/COLLATZ.md), its README and verifier labels/controls; the tournament clock constructions are unchanged.
+- **Minimal witnesses:** the plus orbit1→2 has one strict ascent although1 is not−1 modulo4; the minus orbit1→1 has none although1 is+1 modulo every power of2. At r3 the C2 digit isσ1 but its affine offsetσ−1 is0, correcting a separate digit/offset wording error.
+- **First failed implication:** the code tested at least s consecutive odd-branch inputs, while prose said s−1 strict ascents and forgot the fixed point. Parity and growth are different predicates at that boundary.
+- **Repair / strongest survivor:** for positive odd n, the congruences n≡−1 or+1 mod2^s characterize s odd-branch applications on the respective sheets. They characterize s strict ascents for plus, and for minus with n>1. The verifier now independently checks strict growth, normally and with optimization. The C2 residue split uses the nonzero offsetσ−1.
+- **Missing coordinate / new question:** retain the branch-input clock, the actual inequality being observed, and fixed points before transferring a residue law to physical graph operations. No Collatz convergence conclusion follows.
+- **Concurrent credit:**602e20ca7b independently corrected the depth to s during this audit; the merged repair retains that change and supplies the fixed-point/positive-domain guard and strict-growth controls.
+
 ## 2026-11-13: A constant-term hypothesis for clone two-clocks ignored ordinal-sum products
 
 - **Status:** OPEN hypothesis refuted by the proposing session (klein `chanpak-881-negcollatz`) after checkpoint `c91e7d49aa` was pushed; repaired in [clone_clocks_negative_collatz_20261113/CLOCKS.md §5](../05-knowledge/results/clone_clocks_negative_collatz_20261113/CLOCKS.md). No theorem depended on it.

@@ -5,7 +5,7 @@ head and actual lifts. This is not an all-target source theorem.**
 
 ## 1. The context is a typed rule, not just a count
 
-Use the one-sided rooted amalgamation and context quantities in
+Use a context of order at least2 and the one-sided rooted amalgamation and quantities in
 [CONTEXT](CONTEXT.md). For two actual rooted graphs B,B' sharing the current
 count and the first root-child target, write their profile difference as
 
@@ -84,7 +84,9 @@ order6 contexts rooted at5; the latter includes every rooted isomorphism
 class. There are38172 sampled representations,4238 singular response
 matrices and exactly eight slopes. These are representation counts, not
 A000568 counts. The outgoing slopes1/3,4/9,6/11 have no accepting context
-through order6. Their availability at larger sizes is **OPEN** here.
+of orders2..6. Their availability at larger sizes is **OPEN** here. The
+singleton identity context accepts every slope but supplies no growth or
+change; it is outside formula(1) and this nontrivial-context classification.
 
 ## 3. An all-size conversion of the H9 repair
 

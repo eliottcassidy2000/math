@@ -7,7 +7,7 @@ Run from the repository root:
 
     python3 -B -X utf8 05-knowledge/results/surplus_selector_20261113/reproduce.py
 
-The driver runs ten engines normally and with optimization, compares the
+The driver runs eleven engines normally and with optimization, compares the
 compressed receipts byte-for-byte, and hashes every local script plus the
 explicit inherited code/data dependencies, including the dynamic import
 of rooted_growth.py. REPLAY.json records Python, NumPy and Numba versions.
@@ -26,6 +26,7 @@ it is not independent mathematical evidence.
 |transport_words|All eight slopes matched to actual strong bank pairs; actual one/two-context outputs recounted. No larger-context classification.|
 |arithmetic_probe|All43 ordinary strong tournaments through6 plus six transitive controls: independent permutation/bin and odd-cycle enumeration at z1..4. Signed inverse guards over all odd y<200, both signs,k1..20; mod8 depths on all odd x<1000.|
 |audit|Python arbitrary-integer recounts of21 selector outputs and16 transport outputs, six short output graphs checked by permutations, H9 conversion checked literally,4920 signed lattice points.|
+|context_sequences|Complete rooted isomorphism quotient through6, with independent root-forgetting ordinary canonicalization; A000568 head agrees. Neutral classes2,3,5,13,33 at n2..6.|
 
 The largest NumPy profile calculation has18 vertices. Its full path count
 and the single-root-cut cover count F are each at most18!, below signed
@@ -45,3 +46,10 @@ from navigation. Primary sources consulted: Chan–Pak Conjecture6.2;
 Busch's strong minimum and shared-root decomposition; Irving–Omar
 Corollary19. The latter's polynomial is cited, with new elementary
 specializations explicitly derived in ARITHMETIC.
+
+The concurrent Collatz wording correction is checked by
+`clone_clocks_negative_collatz_20261113/verify.py --dictionary-only`, both
+normally and with `-O`. Its full verifier reached the later compiler stage
+and stopped because `cc` is absent on this Windows host; no full clone-clock
+revalidation is claimed. The new option runs the changed dictionary section
+without that unrelated compilation dependency.

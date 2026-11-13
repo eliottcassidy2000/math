@@ -3,7 +3,7 @@ from pathlib import Path
 import subprocess,sys,json,hashlib
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
-ENGINES=['fibre_probe','inflation_probe','degree_probe','repair23','prefix_selector','context_transport','direction_probe','transport_words','arithmetic_probe','audit']
+ENGINES=['fibre_probe','inflation_probe','degree_probe','repair23','prefix_selector','context_transport','direction_probe','transport_words','arithmetic_probe','audit','context_sequences']
 def main():
     pairs=[]
     for name in ENGINES:
@@ -19,5 +19,5 @@ def main():
         p=HERE.parent/rel;sources[str(p.relative_to(ROOT)).replace('\\','/')]=hashlib.sha256(p.read_bytes()).hexdigest()
     import numpy,numba
     (HERE/'REPLAY.json').write_text(json.dumps(dict(status='PASS',python=sys.version,numpy=numpy.__version__,numba=numba.__version__,pairs=pairs,sources=sources,independent_agent_review=False),indent=2)+'\n',encoding='utf-8')
-    print('PASS: ten normal/optimized receipt pairs; all explicit inherited executable dependencies pinned')
+    print('PASS: eleven normal/optimized receipt pairs; all explicit inherited executable dependencies pinned')
 if __name__=='__main__':main()

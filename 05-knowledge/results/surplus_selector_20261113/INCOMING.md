@@ -30,7 +30,7 @@ No historical-priority claim and no full audit of the linked packets.
   3r-1,3r,3r+1, and gives concrete two-clock tournament families. Its
   corrected constant-term boundary matters: the absence of a particular
   digit-one shape is not the absence of every negative constant term.
-  We read COLLAtZ and the synthesis, and inspected the corresponding
+  We read COLLATZ and the synthesis, and inspected the corresponding
   verifier's dictionary; the large clock census is not re-audited here.
 
 The latter packet's dictionary also exposed a small scope/index correction:
@@ -43,3 +43,26 @@ mod8 valuation statement is a separate, compatible observation.
 The complete source bank, dynamic rooted-growth import and its helper
 imports are explicitly hashed in REPLAY.json. Routing summaries are
 navigation only; the linked proofs and receipts determine scope.
+
+Incomingc85ab9a188/5d58ce365f arrived during the second checkpoint and was
+read before close-out: [target-directed cores](../target_directed_cores_20261112/README.md)
+and[AT_TARGET](../target_directed_cores_20261112/AT_TARGET.md). Its complete
+inverse excludes a unit-ready representative at the attained target
+53,084,231 at every order, while constructing a defect-two source and a
+selective bridge to a ready3N+2 target. This is inherited audited finite
+evidence, not independently rerun here. It decisively forbids demanding
+unit readiness at every attained intermediate count. Our primitive chart
+entry has a different predicate and is consistent with that exclusion.
+
+The same packet already gives unbounded entered prefixes from(35,676)
+and an exact sparse selector. Thus unbounded cores beyond finite dyadic
+rays are a shared method, not a first here. The23-core coefficients,
+one-arc guard, context iff/transducer and complete prefix head are the
+specific new contributions of this packet.
+
+During the final push, incoming602e20ca7b independently repaired the ascent
+depth s-1→s. The merge retains that repair, adds the positive-source/fixed-
+point guard and independent strict-growth checks, and preserves all its
+other clock changes. Incoming8b5d6560c3 routes the complete k17 obstruction;
+5f5324a962 records a failed identity probe. No new mathematical dependency
+on that probe is introduced.

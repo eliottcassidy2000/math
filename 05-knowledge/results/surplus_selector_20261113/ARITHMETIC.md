@@ -51,6 +51,27 @@ This sharpens the earlier [signed modular-table work](../odd_tables_signed_carri
 and [radix transport](../collatz_radix_families_20261018p.md): residue, sign,
 exponent and integer carry are separate coordinates.
 
+The concurrent [clone-clock dictionary](../clone_clocks_negative_collatz_20261113/COLLATZ.md)
+adds the exact normalization r=(H+1)/2: a permitted tournament move
+H→3H+2σ becomes r→3r+(σ-1), for σ=0,1,2. The nonzero offset is σ-1,
+not σ. On odd H, with T(x)=(3x+1)/2 at odd x and T(x)=x/2 at even x,
+one has3H+2=T(2H+1)=2T(H)+1. This is an arithmetic identity; its tournament
+realization still requires the appropriate ready source.
+
+In particular the formal nodes r7=4=3·1+1 and r21=11=3·4-1 locate the
+exceptions in that arithmetic tree, but do not prove their exclusion or
+realize the other branches. The [rooted atomic grammar](../ternary_core_grammar_20261113/GRAMMAR.md)
+has the actual surplus obstruction. A scalar recursion loses precisely
+the source and cross-matrix information the selector must recover.
+
+For the one-division signed maps, x≡∓1 mod2^s characterizes s consecutive
+odd-branch applications. On positive sources these are s strict ascents,
+apart from the minus-map fixed point1. Thus4±1 and8±1 also encode two
+and three such applications. This branch clock is distinct from the
+single accelerated halving-depth table and the inverse recurrences above.
+The incoming wording's off-by-one and fixed-point boundary were corrected
+and checked in its verifier's `--dictionary-only` mode.
+
 ## 2. A genuine mod3 law for tournament path covers
 
 Let P_T(z) count ordered z-bin spanning path covers, permitting empty bins.

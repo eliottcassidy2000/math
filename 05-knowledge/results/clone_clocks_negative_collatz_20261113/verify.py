@@ -4,6 +4,7 @@ Run from the repository root or from this directory:
     python3 -B 05-knowledge/results/clone_clocks_negative_collatz_20261113/verify.py
     python3 -O -B 05-knowledge/results/clone_clocks_negative_collatz_20261113/verify.py
 Add --full to rescreen the 402 order-10 digit-1 clocks for ready vertices (about a minute).
+Add --dictionary-only to check section 1 without the later C compiler/census dependency.
 Checks raise explicit exceptions (no bare asserts), so -O does not weaken them.
 """
 import gzip, itertools, os, random, re, sys
@@ -42,11 +43,11 @@ for H in range(-2001, 2002, 2):
     r = (H + 1) // 2
     for sig in (0, 1, 2):
         need((3 * H + 2 * sig + 1) // 2 == 3 * r + sig - 1, 'C2 digit sig is r -> 3r + sig - 1')
-# unique C2 parent of every r >= 2 with digit sig in {0,1,2}; nonzero digits exactly at r not divisible by 3
+# unique C2 parent; the affine offset sig-1, rather than sig, is nonzero iff 3 does not divide r
 for r in range(2, 5000):
     par = [(p, s) for s in (0, 1, 2) for p in [(r - s + 1) / 3] if p == int(p) and p >= 1]
     need(len(par) == 1, 'unique C2 parent')
-    need((par[0][1] != 1) == (r % 3 != 0), 'nonzero digit iff r not divisible by 3')
+    need((par[0][1] != 1) == (r % 3 != 0), 'nonzero affine offset iff r not divisible by 3')
 need(((7 + 1) // 2, (21 + 1) // 2) == (4, 11) and 4 == 3 * 1 + 1 and 11 == 3 * 4 - 1, 'r(7)=4=3*1+1, r(21)=11=3*4-1')
 cycles = {}
 for start in (-1, -5, -17, 1):
@@ -66,7 +67,7 @@ need([Tn(462 * 8 ** t - 5, 3 * t) for t in range(1, 6)] == [462 * 9 ** t - 5 for
 need([3 * (-5) + 2, 3 * (-13) + 2] == [-13, -37], 'anchors -5 -> -13 -> -37 under C2')
 need(-37 in [-17, -25, -37, -55, -82, -41, -61, -91, -136, -68, -34], '-37 lies on the -17 cycle')
 need(Tn(-13, 4) == -7, '-13 is preperiodic into the -5 cycle')
-# ascending runs: n = -1 mod 2^s  <=> first s-1 steps of T odd ;  n = +1 mod 2^s <=> same for (3x-1)/2
+# n = -1 or +1 mod 2^s iff the first s branch inputs are odd, on the respective sheet.
 def Tm(x):
     return (3 * x - 1) // 2 if x % 2 else x // 2
 for s in range(2, 6):
@@ -76,9 +77,21 @@ for s in range(2, 6):
             x = T(x); runp += 1
         while y % 2 and runm < s:
             y = Tm(y); runm += 1
-        need((n % 2 ** s == 2 ** s - 1) == (runp >= s), '3x+1 ascents vs n = -1 mod 2^s')
-        need((n % 2 ** s == 1) == (runm >= s), '3x-1 ascents vs n = +1 mod 2^s')
+        need((n % 2 ** s == 2 ** s - 1) == (runp >= s), '3x+1 odd branches vs n = -1 mod 2^s')
+        need((n % 2 ** s == 1) == (runm >= s), '3x-1 odd branches vs n = +1 mod 2^s')
+        xp = xm = n
+        plus_growth = minus_growth = True
+        for _ in range(s):
+            yp, ym = T(xp), Tm(xm)
+            plus_growth = plus_growth and yp > xp
+            minus_growth = minus_growth and ym > xm
+            xp, xm = yp, ym
+        need(plus_growth == (n % 2 ** s == 2 ** s - 1), 's strict plus ascents')
+        need(minus_growth == (n > 1 and n % 2 ** s == 1), 's strict minus ascents; fixed point excluded')
 out.append('1. Collatz dictionary: C2 = T.D = D.T; r-digits 3r-1/3r/3r+1; shadowing at -1,-5,-17,+1; ascent classes mod 2^s: OK')
+if '--dictionary-only' in sys.argv:
+    print(out[-1])
+    raise SystemExit(0)
 
 # ---------------------------------------------------------------- 2. the 462 chain (inherited F3) in the funnel compiler
 for k in range(1, 7):

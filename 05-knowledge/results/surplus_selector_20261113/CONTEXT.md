@@ -49,7 +49,8 @@ Let T,T' be their one-sided amalgamations with the same A. Put
 
     delta_out(A,r)=G_A-h_A-q_A+e_A.
 
-The inherited weighted-cut identity, applied to the converse of A, gives
+The inherited [weighted-cut identity](../adaptive_metagraph_reformulation_20261103/ADAPTIVE.md#3-the-defect-detects-indegree-and-the-legal-inverse),
+applied to the converse of A, gives
 
     delta_out≥d_out(r)(d_out(r)-1),
     delta_out=0 iff d_out(r)≤1.                     (2)

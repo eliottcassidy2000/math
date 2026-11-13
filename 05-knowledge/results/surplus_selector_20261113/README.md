@@ -53,11 +53,18 @@ context accepts its slope v/w and computes the outgoing slope. All eight
 slopes occurring through order6 have actual matching pairs through7.
 The physical word5/6→2/3→1/3 yields a pair with common H49821 and next
 target157053. The outgoing slopes1/3,4/9,6/11 have no accepting context
-through6; larger-context availability remains open.
+of orders2..6; larger-context availability remains open. The singleton
+identity context adds no vertices and is excluded from this question.
 
 This is a graph grammar with retained witnesses, not just a graph of
 rational labels. Its own H9 conversion also supplies a hostile: two-count
 neutrality can survive indefinitely while the entry gcd remains3 or5.
+
+[METAGRAPH](METAGRAPH.md) defines the corresponding isomorphism-level
+counting sequences. Neutral contexts number2,3,5,13,33 at orders2..6.
+Three explicit infinite families give the bound
+J_n≥2·A000568(n-1)+A000568(n-2). The remaining contexts and the loss of
+some slopes between sizes make the operation-specific structure visible.
 
 ## Arithmetic and older geometry
 

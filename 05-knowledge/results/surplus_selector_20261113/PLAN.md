@@ -1,6 +1,8 @@
 # Exact surplus and physical target fibres
 
-**Research in progress. Chan–Pak OPEN.** Source snapshot9b8aa35188.
+**Session complete with scoped proved notes and exact receipts; Chan–Pak OPEN.**
+Initial source snapshot9b8aa35188. Current results and remaining gaps are
+in README, HISTORY and INCOMING; this file retains the initial research board.
 
 Anchor: turn a supplied-graph atomic parse into a target-dependent selector,
 retaining actual endpoint entry. Niche: complete current/next-count fibres

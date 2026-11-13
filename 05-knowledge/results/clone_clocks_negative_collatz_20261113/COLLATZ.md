@@ -25,7 +25,7 @@ the forbidden counts 7, 21 become 4, 11):
 The three C2 digits σ=0,1,2 are therefore exactly `r↦3r−1, 3r, 3r+1`. The digit-2 branch is the odd step of
 the classical `3x+1` map; the digit-0 branch is the odd step of the `3x−1` map, which is `3x+1` on the negative
 integers under `x↦−x`. Pure tripling, the digit-1 branch, sits between them. Every `r≥2` has exactly one C2
-parent `(r−σ+1)/3`, and the parent digit is nonzero exactly when `3∤r`. Hence the sequence
+parent `(r−σ+1)/3`, and the affine offset `σ−1` is nonzero exactly when `3∤r`. Hence the sequence
 `2,4,5,7,8,10,11,13,14,16,…` (non-multiples of three) is precisely the set of `r` whose last C2 step is a Collatz
 step (`3r±1`); the multiples of three are reached by pure tripling. The same residue split governs Collatz
 itself: an odd number has a `3x+1` (or `3x−1`) predecessor iff it is prime to 3.
@@ -71,10 +71,16 @@ clock transfer `(j,k)↦(j+1,k−1)` is `y↦3y/2`.
   `y↦3y/2` is the `3x−1` odd step `H↦(3H−1)/2`. Reflecting `x=−H`, these are `x↦3x+2`, `x↦2x+1` and the
   `3x+1` step **on the negative integers**: `T(−H)=−(3H−1)/2`.
 
-The classical ascent criterion makes the residues explicit. For odd `n` and `s≥2`:
-`n≡−1 (mod 2^s)` iff the `3x+1` orbit begins with at least `s` consecutive ascents (odd steps), and
-`n≡+1 (mod 2^s)` iff the `3x−1` orbit does (`verify.py` checks `s≤5`, `n<4000`). So `4x∓1` and `8x∓1` are the
-classes with at least two, respectively three, initial ascents of `3x±1`; the sign chooses the variant. The doubly multiplicative
+The classical odd-branch criterion makes the residues explicit. For positive odd `n` and `s≥2`:
+`n≡−1 (mod 2^s)` iff the first `s` applications of `T` use its odd branch, and `n≡+1 (mod 2^s)` iff the
+first `s` applications of the analogous minus map use its odd branch. These are also exactly `s` strict
+ascents for the plus map, and for the minus map when `n>1`; its fixed point `n=1` is not a strict ascent.
+Thus `4x±1` and `8x±1` specify two and three consecutive odd-branch applications, respectively, with the
+sign choosing the variant (`verify.py` checks `s≤5`, odd `n<4000`, and strict growth separately).
+Indeed along such a run the iterates are `3^j(n+1)/2^j−1` or `3^j(n−1)/2^j+1`; the first `s` inputs
+are odd exactly under the stated congruence. Positive even inputs decrease, so these parity guards
+are necessary for strict growth as well. This corrects the earlier `s−1` ascent wording and fixed-point omission.
+The doubly multiplicative
 two-clock grids of [CLOCKS](CLOCKS.md) (`σ_2=0, σ=−1`) have amplitude divisible by 8 and anchor +1, so they live
 in `8x+1`: the `3x−1` (negative-integer) ascent class. The C2 line with a free dyadic parameter would need `8x−1`.
 It is absent, although the digit-3 family Ψ (anchor −3) shows the −anchors are not excluded wholesale. Section 4 of CLOCKS realizes the negative-integer Collatz step by **one arc reversal**.
