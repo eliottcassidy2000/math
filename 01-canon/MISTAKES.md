@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13: A preliminary clone probe omitted the internal clone arcs
+
+- **Status:** local exploratory-code error repaired before any theorem claim; [prime-lane core replacements](../05-knowledge/results/prime_ternary_lift_20261113/CORE_REPLACEMENTS.md) use the repaired constructor and explicit tournament-validity controls.
+- **Minimal witness:** replacing a single vertex by TT2 produced two vertices with no arc between them. An exterior-only condition incorrectly suppressed the internal transitive arc.
+- **First failed implication:** an absence in these malformed digraphs was interpreted provisionally as absence of a tournament clone family. That probe is discarded.
+- **Repair / strongest survivor:** internal clone pairs are oriented by their transitive order, and exterior pairs inherit the old orientation. The repaired source has counts29,59,119,239, exactly15*2^m-1; no absence conclusion from the malformed probe survives.
+- **Missing coordinate / new question:** retain a literal tournament check including pairs inside every substituted block before counting. Universal response coefficients now have an independent permutation-and-slots certificate.
+
 ## 2026-11-13: A finite clock continuation used universal spectrum wording
 
 - **Status:** unsupported scope wording repaired in [clone-clock CLOCKS §8](../05-knowledge/results/clone_clocks_negative_collatz_20261113/CLOCKS.md) and its README; finite receipts and constructions are unchanged. Neither conjecture is refuted by this correction.

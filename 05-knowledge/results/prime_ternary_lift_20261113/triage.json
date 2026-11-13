@@ -1,0 +1,1563 @@
+{
+  "status": "FINITE-EXACT",
+  "scope": "Parent counts3..73 present in the complete order8 bank; prime and7p target lanes; absence of direct surplus roots requires the separate all-order padding argument. Frame repairs are certified infinite identities, but this is not complete across all frames.",
+  "rows": [
+    {
+      "h": 3,
+      "target": 11,
+      "digit": 2,
+      "frame_families": []
+    },
+    {
+      "h": 3,
+      "target": 13,
+      "digit": 4,
+      "frame_families": []
+    },
+    {
+      "h": 15,
+      "target": 47,
+      "digit": 2,
+      "frame_families": []
+    },
+    {
+      "h": 15,
+      "target": 49,
+      "digit": 4,
+      "frame_families": [
+        {
+          "amplitude": 3,
+          "offset": 3,
+          "exponent": 2,
+          "source": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              9,
+              19,
+              7
+            ],
+            "root": 0,
+            "alpha": 3,
+            "beta": 3,
+            "checks": [
+              9,
+              15,
+              27,
+              51
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              41,
+              19,
+              71,
+              91,
+              15
+            ],
+            "root": 0,
+            "alpha": 18,
+            "beta": 13,
+            "checks": [
+              49,
+              85,
+              157,
+              301
+            ],
+            "shift": 1,
+            "min_exponent": 2
+          }
+        },
+        {
+          "amplitude": 11,
+          "offset": -7,
+          "exponent": 1,
+          "source": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              9,
+              51,
+              39,
+              7
+            ],
+            "root": 3,
+            "alpha": 11,
+            "beta": -7,
+            "checks": [
+              15,
+              37,
+              81,
+              169
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              41,
+              19,
+              71,
+              91,
+              15
+            ],
+            "root": 1,
+            "alpha": 33,
+            "beta": -17,
+            "checks": [
+              49,
+              115,
+              247,
+              511
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    },
+    {
+      "h": 25,
+      "target": 77,
+      "digit": 2,
+      "frame_families": [
+        {
+          "amplitude": 3,
+          "offset": 1,
+          "exponent": 3,
+          "source": {
+            "n": 5,
+            "rows": [
+              2,
+              12,
+              9,
+              17,
+              7
+            ],
+            "root": 0,
+            "alpha": 6,
+            "beta": 1,
+            "checks": [
+              13,
+              25,
+              49,
+              97
+            ],
+            "shift": 1,
+            "min_exponent": 2
+          },
+          "target": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              9,
+              17,
+              39,
+              15
+            ],
+            "root": 5,
+            "alpha": 9,
+            "beta": 5,
+            "checks": [
+              23,
+              41,
+              77,
+              149
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    },
+    {
+      "h": 27,
+      "target": 83,
+      "digit": 2,
+      "frame_families": [
+        {
+          "amplitude": 3,
+          "offset": 3,
+          "exponent": 3,
+          "source": {
+            "n": 5,
+            "rows": [
+              2,
+              4,
+              9,
+              19,
+              7
+            ],
+            "root": 0,
+            "alpha": 3,
+            "beta": 3,
+            "checks": [
+              9,
+              15,
+              27,
+              51
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              12,
+              137,
+              177,
+              135,
+              215,
+              159,
+              3
+            ],
+            "root": 4,
+            "alpha": 36,
+            "beta": 11,
+            "checks": [
+              83,
+              155,
+              299,
+              587
+            ],
+            "shift": 2,
+            "min_exponent": 3
+          }
+        },
+        {
+          "amplitude": 21,
+          "offset": -15,
+          "exponent": 1,
+          "source": {
+            "n": 6,
+            "rows": [
+              8,
+              5,
+              33,
+              54,
+              39,
+              3
+            ],
+            "root": 0,
+            "alpha": 21,
+            "beta": -15,
+            "checks": [
+              27,
+              69,
+              153,
+              321
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              4,
+              41,
+              19,
+              135,
+              219,
+              159,
+              15
+            ],
+            "root": 5,
+            "alpha": 63,
+            "beta": -43,
+            "checks": [
+              83,
+              209,
+              461,
+              965
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    },
+    {
+      "h": 33,
+      "target": 103,
+      "digit": 4,
+      "frame_families": [
+        {
+          "amplitude": 7,
+          "offset": 5,
+          "exponent": 2,
+          "source": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              33,
+              53,
+              39,
+              3
+            ],
+            "root": 4,
+            "alpha": 7,
+            "beta": 5,
+            "checks": [
+              19,
+              33,
+              61,
+              117
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              4,
+              41,
+              147,
+              135,
+              219,
+              159,
+              7
+            ],
+            "root": 0,
+            "alpha": 21,
+            "beta": 19,
+            "checks": [
+              61,
+              103,
+              187,
+              355
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    },
+    {
+      "h": 35,
+      "target": 107,
+      "digit": 2,
+      "frame_families": [
+        {
+          "amplitude": 9,
+          "offset": -1,
+          "exponent": 2,
+          "source": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              9,
+              19,
+              39,
+              15
+            ],
+            "root": 1,
+            "alpha": 9,
+            "beta": -1,
+            "checks": [
+              17,
+              35,
+              71,
+              143
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              9,
+              49,
+              71,
+              87,
+              15
+            ],
+            "root": 6,
+            "alpha": 27,
+            "beta": -1,
+            "checks": [
+              53,
+              107,
+              215,
+              431
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    },
+    {
+      "h": 35,
+      "target": 109,
+      "digit": 4,
+      "frame_families": []
+    },
+    {
+      "h": 41,
+      "target": 127,
+      "digit": 4,
+      "frame_families": [
+        {
+          "amplitude": 5,
+          "offset": 1,
+          "exponent": 3,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              9,
+              51,
+              39,
+              71,
+              31
+            ],
+            "root": 6,
+            "alpha": 20,
+            "beta": 1,
+            "checks": [
+              41,
+              81,
+              161,
+              321
+            ],
+            "shift": 2,
+            "min_exponent": 3
+          },
+          "target": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              49,
+              69,
+              75,
+              91,
+              7
+            ],
+            "root": 0,
+            "alpha": 30,
+            "beta": 7,
+            "checks": [
+              67,
+              127,
+              247,
+              487
+            ],
+            "shift": 1,
+            "min_exponent": 2
+          }
+        },
+        {
+          "amplitude": 9,
+          "offset": 5,
+          "exponent": 2,
+          "source": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              9,
+              17,
+              39,
+              15
+            ],
+            "root": 5,
+            "alpha": 9,
+            "beta": 5,
+            "checks": [
+              23,
+              41,
+              77,
+              149
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              4,
+              5,
+              168,
+              147,
+              135,
+              219,
+              159,
+              3
+            ],
+            "root": 6,
+            "alpha": 27,
+            "beta": 19,
+            "checks": [
+              73,
+              127,
+              235,
+              451
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    },
+    {
+      "h": 43,
+      "target": 131,
+      "digit": 2,
+      "frame_families": [
+        {
+          "amplitude": 9,
+          "offset": 7,
+          "exponent": 2,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              9,
+              49,
+              7,
+              87,
+              31
+            ],
+            "root": 4,
+            "alpha": 18,
+            "beta": 7,
+            "checks": [
+              43,
+              79,
+              151,
+              295
+            ],
+            "shift": 1,
+            "min_exponent": 2
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              4,
+              25,
+              147,
+              163,
+              207,
+              159,
+              7
+            ],
+            "root": 0,
+            "alpha": 27,
+            "beta": 23,
+            "checks": [
+              77,
+              131,
+              239,
+              455
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    },
+    {
+      "h": 43,
+      "target": 133,
+      "digit": 4,
+      "frame_families": [
+        {
+          "amplitude": 5,
+          "offset": 3,
+          "exponent": 3,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              9,
+              49,
+              7,
+              87,
+              31
+            ],
+            "root": 0,
+            "alpha": 20,
+            "beta": 3,
+            "checks": [
+              43,
+              83,
+              163,
+              323
+            ],
+            "shift": 2,
+            "min_exponent": 3
+          },
+          "target": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              9,
+              49,
+              7,
+              87,
+              31
+            ],
+            "root": 6,
+            "alpha": 15,
+            "beta": 13,
+            "checks": [
+              43,
+              73,
+              133,
+              253
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        },
+        {
+          "amplitude": 9,
+          "offset": 7,
+          "exponent": 2,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              9,
+              49,
+              7,
+              87,
+              31
+            ],
+            "root": 4,
+            "alpha": 18,
+            "beta": 7,
+            "checks": [
+              43,
+              79,
+              151,
+              295
+            ],
+            "shift": 1,
+            "min_exponent": 2
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              12,
+              9,
+              177,
+              135,
+              215,
+              159,
+              7
+            ],
+            "root": 6,
+            "alpha": 27,
+            "beta": 25,
+            "checks": [
+              79,
+              133,
+              241,
+              457
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    },
+    {
+      "h": 45,
+      "target": 139,
+      "digit": 4,
+      "frame_families": [
+        {
+          "amplitude": 9,
+          "offset": 9,
+          "exponent": 2,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              17,
+              7,
+              107,
+              79,
+              15
+            ],
+            "root": 0,
+            "alpha": 9,
+            "beta": 9,
+            "checks": [
+              27,
+              45,
+              81,
+              153
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              4,
+              9,
+              26,
+              49,
+              131,
+              215,
+              159,
+              15
+            ],
+            "root": 6,
+            "alpha": 54,
+            "beta": 31,
+            "checks": [
+              139,
+              247,
+              463,
+              895
+            ],
+            "shift": 1,
+            "min_exponent": 2
+          }
+        },
+        {
+          "amplitude": 11,
+          "offset": 1,
+          "exponent": 2,
+          "source": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              9,
+              17,
+              39,
+              15
+            ],
+            "root": 0,
+            "alpha": 11,
+            "beta": 1,
+            "checks": [
+              23,
+              45,
+              89,
+              177
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              41,
+              81,
+              71,
+              91,
+              7
+            ],
+            "root": 0,
+            "alpha": 33,
+            "beta": 7,
+            "checks": [
+              73,
+              139,
+              271,
+              535
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        },
+        {
+          "amplitude": 33,
+          "offset": -21,
+          "exponent": 1,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              33,
+              23,
+              71,
+              91,
+              15
+            ],
+            "root": 5,
+            "alpha": 33,
+            "beta": -21,
+            "checks": [
+              45,
+              111,
+              243,
+              507
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              4,
+              9,
+              26,
+              49,
+              131,
+              215,
+              159,
+              15
+            ],
+            "root": 5,
+            "alpha": 99,
+            "beta": -59,
+            "checks": [
+              139,
+              337,
+              733,
+              1525
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    },
+    {
+      "h": 53,
+      "target": 161,
+      "digit": 2,
+      "frame_families": [
+        {
+          "amplitude": 3,
+          "offset": 5,
+          "exponent": 4,
+          "source": {
+            "n": 6,
+            "rows": [
+              2,
+              4,
+              9,
+              19,
+              39,
+              15
+            ],
+            "root": 0,
+            "alpha": 6,
+            "beta": 5,
+            "checks": [
+              17,
+              29,
+              53,
+              101
+            ],
+            "shift": 1,
+            "min_exponent": 2
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              4,
+              9,
+              35,
+              15,
+              215,
+              159,
+              31
+            ],
+            "root": 0,
+            "alpha": 18,
+            "beta": 17,
+            "checks": [
+              53,
+              89,
+              161,
+              305
+            ],
+            "shift": 1,
+            "min_exponent": 2
+          }
+        },
+        {
+          "amplitude": 11,
+          "offset": 9,
+          "exponent": 2,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              25,
+              67,
+              107,
+              79,
+              7
+            ],
+            "root": 0,
+            "alpha": 11,
+            "beta": 9,
+            "checks": [
+              31,
+              53,
+              97,
+              185
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              4,
+              73,
+              147,
+              167,
+              143,
+              187,
+              7
+            ],
+            "root": 0,
+            "alpha": 33,
+            "beta": 29,
+            "checks": [
+              95,
+              161,
+              293,
+              557
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        },
+        {
+          "amplitude": 25,
+          "offset": 3,
+          "exponent": 1,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              9,
+              49,
+              71,
+              87,
+              15
+            ],
+            "root": 0,
+            "alpha": 25,
+            "beta": 3,
+            "checks": [
+              53,
+              103,
+              203,
+              403
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              40,
+              35,
+              149,
+              135,
+              217,
+              159,
+              7
+            ],
+            "root": 0,
+            "alpha": 75,
+            "beta": 11,
+            "checks": [
+              161,
+              311,
+              611,
+              1211
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        },
+        {
+          "amplitude": 39,
+          "offset": -25,
+          "exponent": 1,
+          "source": {
+            "n": 8,
+            "rows": [
+              2,
+              4,
+              9,
+              19,
+              39,
+              207,
+              159,
+              31
+            ],
+            "root": 5,
+            "alpha": 39,
+            "beta": -25,
+            "checks": [
+              53,
+              131,
+              287,
+              599
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              68,
+              153,
+              147,
+              163,
+              143,
+              189,
+              3
+            ],
+            "root": 6,
+            "alpha": 117,
+            "beta": -73,
+            "checks": [
+              161,
+              395,
+              863,
+              1799
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    },
+    {
+      "h": 55,
+      "target": 167,
+      "digit": 2,
+      "frame_families": [
+        {
+          "amplitude": 41,
+          "offset": -27,
+          "exponent": 1,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              12,
+              17,
+              69,
+              107,
+              79,
+              7
+            ],
+            "root": 4,
+            "alpha": 41,
+            "beta": -27,
+            "checks": [
+              55,
+              137,
+              301,
+              629
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              6,
+              12,
+              48,
+              69,
+              11,
+              27,
+              183,
+              63
+            ],
+            "root": 6,
+            "alpha": 123,
+            "beta": -79,
+            "checks": [
+              167,
+              413,
+              905,
+              1889
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    },
+    {
+      "h": 57,
+      "target": 173,
+      "digit": 2,
+      "frame_families": [
+        {
+          "amplitude": 31,
+          "offset": -5,
+          "exponent": 1,
+          "source": {
+            "n": 8,
+            "rows": [
+              2,
+              4,
+              9,
+              19,
+              39,
+              79,
+              159,
+              63
+            ],
+            "root": 1,
+            "alpha": 31,
+            "beta": -5,
+            "checks": [
+              57,
+              119,
+              243,
+              491
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              68,
+              9,
+              147,
+              167,
+              143,
+              189,
+              7
+            ],
+            "root": 0,
+            "alpha": 93,
+            "beta": -13,
+            "checks": [
+              173,
+              359,
+              731,
+              1475
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        },
+        {
+          "amplitude": 33,
+          "offset": -9,
+          "exponent": 1,
+          "source": {
+            "n": 8,
+            "rows": [
+              2,
+              4,
+              9,
+              211,
+              167,
+              143,
+              183,
+              7
+            ],
+            "root": 1,
+            "alpha": 33,
+            "beta": -9,
+            "checks": [
+              57,
+              123,
+              255,
+              519
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              12,
+              17,
+              53,
+              195,
+              151,
+              175,
+              15
+            ],
+            "root": 6,
+            "alpha": 99,
+            "beta": -25,
+            "checks": [
+              173,
+              371,
+              767,
+              1559
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    },
+    {
+      "h": 63,
+      "target": 193,
+      "digit": 4,
+      "frame_families": [
+        {
+          "amplitude": 13,
+          "offset": 11,
+          "exponent": 2,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              41,
+              83,
+              71,
+              91,
+              7
+            ],
+            "root": 0,
+            "alpha": 13,
+            "beta": 11,
+            "checks": [
+              37,
+              63,
+              115,
+              219
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              4,
+              17,
+              39,
+              107,
+              199,
+              143,
+              31
+            ],
+            "root": 0,
+            "alpha": 39,
+            "beta": 37,
+            "checks": [
+              115,
+              193,
+              349,
+              661
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        },
+        {
+          "amplitude": 15,
+          "offset": 3,
+          "exponent": 2,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              20,
+              9,
+              3,
+              109,
+              79,
+              15
+            ],
+            "root": 2,
+            "alpha": 15,
+            "beta": 3,
+            "checks": [
+              33,
+              63,
+              123,
+              243
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              12,
+              137,
+              209,
+              135,
+              31,
+              183,
+              35
+            ],
+            "root": 0,
+            "alpha": 90,
+            "beta": 13,
+            "checks": [
+              193,
+              373,
+              733,
+              1453
+            ],
+            "shift": 1,
+            "min_exponent": 2
+          }
+        }
+      ]
+    },
+    {
+      "h": 67,
+      "target": 203,
+      "digit": 2,
+      "frame_families": [
+        {
+          "amplitude": 1,
+          "offset": 3,
+          "exponent": 6,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              20,
+              9,
+              35,
+              45,
+              71,
+              31
+            ],
+            "root": 6,
+            "alpha": 32,
+            "beta": 3,
+            "checks": [
+              67,
+              131,
+              259,
+              515
+            ],
+            "shift": 5,
+            "min_exponent": 6
+          },
+          "target": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              9,
+              51,
+              71,
+              87,
+              15
+            ],
+            "root": 0,
+            "alpha": 12,
+            "beta": 11,
+            "checks": [
+              35,
+              59,
+              107,
+              203
+            ],
+            "shift": 2,
+            "min_exponent": 3
+          }
+        },
+        {
+          "amplitude": 9,
+          "offset": -5,
+          "exponent": 3,
+          "source": {
+            "n": 6,
+            "rows": [
+              2,
+              12,
+              17,
+              37,
+              43,
+              7
+            ],
+            "root": 4,
+            "alpha": 18,
+            "beta": -5,
+            "checks": [
+              31,
+              67,
+              139,
+              283
+            ],
+            "shift": 1,
+            "min_exponent": 2
+          },
+          "target": {
+            "n": 7,
+            "rows": [
+              2,
+              4,
+              25,
+              19,
+              35,
+              79,
+              31
+            ],
+            "root": 1,
+            "alpha": 27,
+            "beta": -13,
+            "checks": [
+              41,
+              95,
+              203,
+              419
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        },
+        {
+          "amplitude": 17,
+          "offset": -1,
+          "exponent": 2,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              20,
+              9,
+              35,
+              45,
+              71,
+              31
+            ],
+            "root": 0,
+            "alpha": 34,
+            "beta": -1,
+            "checks": [
+              67,
+              135,
+              271,
+              543
+            ],
+            "shift": 1,
+            "min_exponent": 2
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              36,
+              25,
+              19,
+              195,
+              157,
+              175,
+              15
+            ],
+            "root": 0,
+            "alpha": 102,
+            "beta": -1,
+            "checks": [
+              203,
+              407,
+              815,
+              1631
+            ],
+            "shift": 1,
+            "min_exponent": 2
+          }
+        },
+        {
+          "amplitude": 31,
+          "offset": 5,
+          "exponent": 1,
+          "source": {
+            "n": 7,
+            "rows": [
+              2,
+              20,
+              73,
+              67,
+              45,
+              79,
+              19
+            ],
+            "root": 0,
+            "alpha": 31,
+            "beta": 5,
+            "checks": [
+              67,
+              129,
+              253,
+              501
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          },
+          "target": {
+            "n": 8,
+            "rows": [
+              2,
+              12,
+              25,
+              113,
+              163,
+              135,
+              183,
+              15
+            ],
+            "root": 0,
+            "alpha": 93,
+            "beta": 17,
+            "checks": [
+              203,
+              389,
+              761,
+              1505
+            ],
+            "shift": 0,
+            "min_exponent": 1
+          }
+        }
+      ]
+    }
+  ]
+}
