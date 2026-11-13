@@ -18,11 +18,14 @@ generated data never enters the repository. The quick standard-library checks li
    - For each order run `rprof < c1_n.txt > c1p_n.txt`.
    - Run `python match.py`. It needs `prof_3,5,7,9.txt` from step 2 for the odd strong blocks.
 5. **Proposition 3 (no small odd merge).** Run `python refill2.py`.
-6. **Pre-registered searches S1 and S2.** Run `ysearch 11 5 targets.txt`, where each target line is
-   `c3 F_1 .. F_11`.
-   - S1 targets are Q_X / t over the C = 1 order-12 classes.
-   - S2 targets are Q(Y5 => Y7) / t over the odd strong pairs.
-   - The PROOF section 7 notes give the construction. Validation: `ysearch 7 4` and `ysearch 9 4` on the order-8 and
-     order-10 targets return exactly the known partners (H = 95, 317).
+6. **Pre-registered searches S1, S2, S3.**
+   - `python targets.py` builds the target files from `prof_3,5,7,9.txt` and `c1p_12.txt`: `ytargets2.txt` (S1,
+     1,291 profiles), `mtargets11.txt` (S2, 655) and `targets10.txt` (S3, 48,908). Each line is `c3 F_1 .. F_n`.
+   - S1: `ysearch 11 5 ytargets2.txt`. S2: `ysearch 11 5 mtargets11.txt`. S3: `yhash 10 5 targets10.txt`. yhash
+     prints C(X) for every match.
+   - The non-registered biclique follow-up is `ysearch_bic 11 5 ytargets2.txt`.
+   - Validation: `ysearch 7 4` and `ysearch 9 4` on the order-8 and order-10 C = 1 targets (built the same way as
+     S1) return exactly the known partners (H = 95, 317).
+7. **Proposition 3' (capacity).** Run `python capcheck.py` with `prof_3..9.txt` present.
 
 `trade.py` (odd-cycle census and the shared `decode`) is used by the census and by the one-off structure checks.

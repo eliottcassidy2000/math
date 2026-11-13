@@ -11,7 +11,8 @@ session; its script is in `scripts/` or the line says how. No claim here enters 
 ## A. Heegner numbers, Ramanujan's constant, 30000
 
 **The 2647 coincidence.** *Checked.* Session 310's prime cyclic-frame value Q_B(2) + H(B) = 2647 is the largest
-odd number that no uniquely Hamiltonian (C = 1) tournament attains. That list of 29 misses is Session 197's;
+odd number below 10^9 that no uniquely Hamiltonian (C = 1) tournament attains. This is FINITE-EXACT through 10^9;
+whether it is the largest overall is open. That list of 29 misses is Session 197's;
 HYP-9494 (D), this machine's S14, has it to 10^9, and THM-4884 names it.
 
 The order-6 exact pair gives the frame value 2 Q_(Y5)(2) + H(Y5) = 231, also a C = 1 miss. Among the 85 C = 1
@@ -25,7 +26,8 @@ Treat this as a coincidence until a reason appears (`scripts/match.py` and the s
 
 - 7, 43, 67, 163 are C = 1 misses; 11 and 19 are not.
 - The one-arc-join family F1 has zero representations at 7, 43, 67, 163.
-- Ramanujan's ternary form x^2 + y^2 + 10 z^2 misses 7, 21, 43, 67 among small values.
+- Ramanujan's ternary form x^2 + y^2 + 10 z^2 has odd misses 3, 7, 21, 31, 33, 43, 67, 79, 87, 133, 217, ... below
+  400 (audit). 7, 21, 43 and 67 are among them, so this item is selective.
 - HYP-9657 (B), opus-S90, gives a partial reason. Values N where N(N+1) has no small odd prime factor carry less
   mass, and are missed about 3.3 times as often.
 
@@ -56,9 +58,12 @@ Heegner point of discriminant -7, where j = -15^3.
 *Checked:* 3, 7, 19, 163 = 2·3^k + 1 for k = 0, 1, 2, 4. The k = 3 term is 55, itself a C = 1 miss. The repository
 types this as numerology.
 
-**Rabinowitsch-type clock criterion.** This is THM-5151's Proposition 7. For a clock H_k = I + c 2^(r-k) 3^k, a
-prime l either never divides a term or divides exactly one residue class of k modulo ord_l(3/2). Because 3/2 is a
-primitive root mod 7, a run of length 6 always meets a 7-multiple unless 7 | I.
+**Clock divisibility criterion.** This is THM-5151's Proposition 7. Its mod-7 mechanism is already in Session
+309's MIGRATING_CLOCK §2; the comparison with Rabinowitsch's polynomials is the sweep's analogy only.
+
+For a clock H_k = I + c 2^(r-k) 3^k, a prime l either never divides a term or divides exactly one residue class of
+k modulo ord_l(3/2). Because 3/2 is a
+primitive root mod 7, any six consecutive values include a 7-multiple unless 7 | c·I.
 
 For Session 309's clock (I = 499), the primes 13, 19, 29, 43, 47, 53 never divide a term (*checked*). The
 inert-prime analogy for Q(sqrt(-163)), whose small primes are inert, is the sweep's; this note does not adopt it.
@@ -156,8 +161,9 @@ peel of a spent site, and possibly the reverse insertion.
    THM-4349). FIXED_BANKS plays the role of THM-2072 here. A core-dependent Π modulus, chosen after the right
    module, is the untried analogue.
 2. **Spend before refill is wrong; refill before spending the last site.** This is LRC's collision-backed handoff.
-   In THM-5151's language: before the last transfer, the left or exterior part must already hold an even component
-   with a partner, because spent odd cores have no hidden capacity (Propositions 2-3).
+   In THM-5151's language, under HYP-9678 (C): before the last transfer, the left or exterior part must already
+   hold an even component with a partner. The reason is that spent odd cores hide no capacity. That is proved only
+   through order 9 (Proposition 3') and for two-core merges up to total order 10 (Proposition 3).
 3. **Hypergraph view.** Site creation must change C3(T) (THM-4803 Lemma C), and every such change is an R-factor
    recombination. The resource-hypergraph numbers ν, τ of Session 261 are cheap necessary filters for candidate
    partners.

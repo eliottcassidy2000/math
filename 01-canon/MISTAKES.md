@@ -25422,3 +25422,65 @@ after it.
   the next free number from the listing in the same command; never hard-code it after a fetch. (6) For the image of
   `d - dW ^`, test `[W^m]` and `[W^m h]` first, and try the note's own linear form on every example it lists as
   open. (7) When predicting the coverage of a restricted family, halve the optimism.
+
+## MISTAKE-769 (2026-11-13, kind-pasteur-2026-11-13-S26, THM-5151, HYP-9678 and `05-knowledge/results/kps_s26_exact_pair_returns_20261113/`; found by the author during the session and by the independent audit `audit/AUDIT.md` of that packet) -- a one-apex direction stated backwards in prose, a range dropped from a FINITE-EXACT extremum, five missed credits (two of them the author's own or same-day work), a false remark about Session 310's A, a search launched before its pre-registration commit, and a law registered from a slice that could not test it and refuted at the next order
+
+- **M1 (audit M1). One-apex direction backwards in prose.** The packet's convention is body i -> j for i < j, so
+  body vertex 1 is the top-ranked vertex.
+  - Under it, Session 310's B = O(0011111) has an apex that beats the two top-ranked vertices of TT7.
+  - The README, PROOF section 4 and the verifier said "the two lowest / bottom m". The literal reading of that
+    prose, O(1111100), is not even strong.
+  - THM-5151 (6) did not state the direction, and Session 191 uses the complementary letters.
+  - Corrected: the convention is now stated in THM-5151 (6), PROOF section 4 and HYP-9678, the prose is fixed, and
+    O(w) = Session 191's T(w-bar) is noted.
+- **M2 (audit M2). An extremum without its range.** "2647 is the largest C = 1 miss" is FINITE-EXACT only through
+  10^9 (HYP-9494 (D), this agent's own S14). Corrected in README, HISTORY_TANGENTS and the results INDEX row.
+- **M3 (audit M3; item (a) found by the author before the audit). Missed credits.**
+  - (a) The uniquely Hamiltonian count F_(2n-6) and its structure are KNOWN: Garey 1972, Shelor 1977, opus-S74's
+    THM-4867, and this agent's own THM-4868 (S10, which enumerated the class through order 18). The author's S10
+    hand-over note was opened only late in the session.
+  - (b) Proposition 7's mod-7 mechanism is in Session 309 MIGRATING_CLOCK section 2, the same day and the same
+    clock family. That 3/2 is a primitive root mod 7 is in THM-4800.
+  - (c) The chain description of one-apex cycles was credited to "Session 191 one_apex (1)". That is the H
+    recurrence and never mentions cycles. The real sources are intercyclic_rays.md section 4, THM-5134 (G) and
+    THM-5070 (2).
+  - (d) H(O(m,k)) = 2 + (2^m - 1)(2^k - 1) is Session 191's U(o,z), formula (5).
+  - (e) Session 261 MODULE_REBASE already ran profile-collision censuses at orders 5-6.
+- **M4 (audit M4). A false remark.** "Session 310's partner A has this shape ({5,6} x {0,2})" is wrong. The
+  biclique is a different class in A's profile group; Session 310's literal A has no biclique form.
+- **M5 (audit m5). A run launched before its registration.** S1 was launched at 11:06, four minutes before its
+  pre-registration commit b1b011e4d2 at 11:10. Its output was buffered and unseen, so the prediction was blind. The
+  README nevertheless said "pushed before these ran". The wording is corrected.
+- **M6. A law registered from a slice that could not test it.**
+  - What was registered: HYP-9678 (A), "every exact-pair member is uniquely Hamiltonian", and the README headline
+    "the complete stock is ... uniquely Hamiltonian".
+  - The evidence was the complete census to order 9 plus a slice that is uniquely Hamiltonian by construction.
+  - The author's own pre-registered S3 refuted it at order 10 (H = 333, C = 5). It is kept as (A') for detachable
+    members only.
+- **Minor (audit m1-m4, m6-m13, all applied).**
+  - Stale headings.
+  - Proposition 7 confused c with c 2^r, and said "unless 7 | I" where "unless 7 | c I" is meant.
+  - The S1 scope sentence was too broad.
+  - The wrong commit was given for S3.
+  - "At least 2 classes" is sharpened to exactly 2, a converse pair.
+  - HYP-9678 (B) and its heading are updated.
+  - "Must" sentences are now conditioned on HYP-9678 (C).
+  - Merges into an even component are made explicit.
+  - A selective line about a ternary form is now full.
+  - There was no S3 replay and no target builder. scripts/targets.py now reproduces all three target files
+    byte for byte.
+  - Camion's theorem was cited the wrong way round.
+  - "At least 3" needs n >= 6.
+- **Calibration.** Of three pre-registered predictions, S2 was CONFIRMED. S1 (an order-12 partner within 5
+  backward arcs) and S3 (all exact-pair members C = 1) FAILED; both predicted more regularity than the next order
+  has.
+- **Lessons.**
+  1. At the start, open every one of the author's own thread notes and hand-over notes, including the shared
+     notes folder. The S10 note on uniquely Hamiltonian tournaments was there.
+  2. Every canon statement that uses words or positions states its index convention, and describes positions by
+     rank rather than "low" or "high".
+  3. Every "largest" or "only" claim carries its range.
+  4. Grep the same day's packets for every mechanism; the mod-7 clock was in Session 309.
+  5. Never launch a decisive run before its pre-registration commit.
+  6. Do not register a law from a slice constrained by the very property the law asserts; test outside the slice
+     first.

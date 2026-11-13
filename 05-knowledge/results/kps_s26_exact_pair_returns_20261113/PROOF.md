@@ -78,8 +78,9 @@ expose.
 
 - Split an even strong X into an odd strong Y and a singleton. This needs R_X = R_Y and gives +1 site. Session 310's
   B -> A -> TT1 is of this kind.
-- Merge odd strong components into fewer ones carrying the same R-product. For example R_Z = R_(Y1) R_(Y2) gives
-  Y_1 => Y_2 -> Z -> TT1, +1 site.
+- Merge, meaning any recombination that lowers o + 2e. For example R_Z = R_(Y1) R_(Y2) for odd strong Z gives
+  Y_1 => Y_2 -> Z -> TT1, +1 site. Three odd cores merging into one even component (R_X = R_(Y1) R_(Y2) R_(Y3))
+  also gives +1 site.
 - Recombinations through even components, such as R_X = R_(Y1) R_(Y2) (the H = 45 type below), change no site
   count by themselves.
 
@@ -106,7 +107,8 @@ a singleton in the current realization, and s <= cap. QED.
 
 So a clock fed only by neutral refills runs at most cap(Q_(N_0)) steps. Through order 9 this budget is
 s(N_0) + d(N_0) (Proposition 3' below), and HYP-9678 (C) conjectures it in general. For B^r this would be exactly
-r, the number Session 310 realizes. An unbounded return must therefore raise the budget by non-neutral moves.
+r, the number Session 310 realizes. Unconditionally, an unbounded return must raise the budget by non-neutral
+moves.
 
 **Proposition 3 (no small odd merge; FINITE-EXACT).** Take odd strong Y_1, Y_2 with |Y_1| + |Y_2| <= 10. Then no
 tournament Z has Q_(Y_1 => Y_2) = Q_(Z -> TT1). This covers all pairs of orders (3,3), (3,5), (3,7), (5,5).
@@ -141,6 +143,9 @@ component hides at most one, and it hides one exactly when it is detachable.
 The general statement is HYP-9678 (C).
 
 ## 3. Census of exact strong/decomposable pairs
+
+**Precursor.** Session 261 constructors/MODULE_REBASE.md §3 ran full cover-profile collision censuses at orders 5
+and 6 (56 classes and 24 profiles at order 6), without separating strong from non-strong.
 
 **Proposition 4 (FINITE-EXACT, all orders <= 9).** Exactly 7 isomorphism classes of strong tournaments of order
 <= 9 share their full profile with a non-strong tournament. All 7 have C = 1 (uniquely Hamiltonian).
@@ -188,8 +193,9 @@ profiles). The matches have four profiles:
 - **H = 333, with C = 5.**
 
 The H = 333 profile equals Q(C3 => Y7) for Y7 = classgen order-7 code 43104 (H = 111, C = 11). One member is
-X = (1002,1020,1017,1008,481,704,896,768,544,16). Vertex-deletion fingerprints give at least 2 isomorphism
-classes. So the uniquely Hamiltonian property of Proposition 4 is a small-order fact and fails at order 10. Within
+X = (1002,1020,1017,1008,481,704,896,768,544,16). Among the 120 labelled H = 333 matches there are exactly 2
+isomorphism classes, a converse pair. The author's vertex-deletion fingerprints separate 2; the audit's canonical
+forms show there are no more. So the uniquely Hamiltonian property of Proposition 4 is a small-order fact and fails at order 10. Within
 this range, every detachable match (partner Y9 -> TT1) is the H = 317 profile, which has C = 1.
 
 **Remark (C = 1 is not forced by the construction at orders <= 9).** Proposition 4 searched every class. The C = 1
@@ -199,8 +205,12 @@ census would need the 9.7 million order-10 classes and was not attempted.
 
 ## 4. One-apex form, and what Session 310's B is
 
-A one-apex tournament O(w) has an apex x and a transitive body 1 -> 2 -> ... -> m (i -> j for i < j). Its word
-w in {0,1}^m has w_i = 1 iff body vertex i beats x.
+A one-apex tournament O(w) has an apex x and a transitive body 1 -> 2 -> ... -> m (i -> j for i < j). So body
+vertex 1 beats the rest of the body and is its top-ranked vertex. The word w in {0,1}^m has w_i = 1 iff body vertex i
+beats x.
+
+Session 191 (one_apex/PROOF.md) uses the complementary letters: there x -> i iff b_i = 1. So O(w) is Session 191's
+T(w̄), and the same word names different tournaments in the two packets.
 
 **Proposition 6.**
 
@@ -213,15 +223,22 @@ O(w) is strong iff w_1 = 0 and w_m = 1, and then C = 1.
 from a to b in the body, then b -> x, with w_a = 0 and w_b = 1. Its length is one plus the chain size, so it is
 odd iff the chain has 2l vertices; there are binom(b - a - 1, 2l - 2) such chains. All cycles share x, so the only
 packings are the empty one and single cycles. Apply (I2). A Hamiltonian cycle needs the chain to be the whole
-body: this exists iff w_1 = 0 and w_m = 1, and it is unique. Camion's theorem gives strongness. QED.
+body: this exists iff w_1 = 0 and w_m = 1, and it is unique. A Hamiltonian cycle makes O(w) strong. Conversely, a
+strong tournament has one by Camion's theorem, which forces w_1 = 0 and w_m = 1. QED.
 
-**Credit.** "Odd cycles of a one-apex tournament are increasing chains through the apex" is KNOWN: THM-5070 (2),
-this machine's S18, and Session 191 one_apex/PROOF.md (1). The t-graded form is (I2) applied to it. The H formula
-is the t = 1 case. For O(m,k) (apex beats the bottom m, loses to the top k) it gives
-H = 2 + (2^m - 1)(2^k - 1).
+**Credit.** "Odd cycles of a one-apex tournament are increasing chains through the apex" is KNOWN:
+
+- feedback_word_hamilton_spectrum_20261020/intercyclic_rays.md §4 (Oct 20);
+- THM-5134 (G), "every odd cycle of a one-apex tournament passes through its apex";
+- THM-5070 (2), this machine's S18.
+
+The t-graded form is (I2) applied to it, and the H formula is the t = 1 case. Write O(m,k) = O(0^m 1^k): the apex
+beats the first, top-ranked, m body vertices and loses to the last k. Its value H = 2 + (2^m - 1)(2^k - 1) is
+Session 191's U(o,z), formula (5).
 
 **Identification (new; verifier step 3).** Session 310's eight-vertex B (rows 2,80,3,7,173,143,189,15) is
-isomorphic to O(0011111) = O(2,5). Its apex beats the two lowest vertices of TT7, and its converse is O(5,2).
+isomorphic to O(0011111) = O(2,5). Its apex beats the two top-ranked vertices of TT7 and loses to the other five.
+Its converse is O(0000011) = O(5,2). Among all 128 words of length 7, B matches only O(0011111) (audit).
 
 - Proposition 6 explains Session 310's cycle table by counting chains: 10 = 2·5 triangles, 30 pentagons and 7
   heptagons. Q_B = t^8 + 20 t^6 + 60 t^4 + 14 t^2 and H = 2 + 3·31 = 95.
@@ -241,8 +258,8 @@ isomorphic to O(0011111) = O(2,5). Its apex beats the two lowest vertices of TT7
 - If instead Q_X = Q(Y1 => Y2) with both blocks odd strong, then c_(n-1)(X) + 2 d(X) = 2 C(Y1) C(Y2).
 
 For a strong one-apex X = O(w) with n >= 6, d(X) = 0. A cycle on n - 1 vertices omits exactly one body vertex.
-Omitting an interior one always leaves an admissible chain. Omitting the lowest is admissible iff w_2 = 0, and
-omitting the highest iff w_(n-2) = 1. Hence
+Omitting an interior one always leaves an admissible chain. Omitting body vertex 1 (the body's source) is
+admissible iff w_2 = 0, and omitting body vertex n - 1 (its sink) iff w_(n-2) = 1. Hence
 
     c_(n-1)(O(w)) = (n - 3) + [w_2 = 0] + [w_(n-2) = 1] >= 3.
 
@@ -289,12 +306,18 @@ For l = 7, 3/2 ≡ 5 is a primitive root, so ord_7(3/2) = 6:
 - if 7 does not divide c·I, exactly one of any 6 consecutive k has 7 | H_k;
 - if 7 | I but 7 does not divide c, no term is divisible by 7.
 
-Session 309's clock (I = 499, c = 83,404,800) hits 7 at k = 2: 187,661,299 = 7 × 26,808,757. Primes l with -I/c
-outside the subgroup generated by 3/2 never divide any term; for that clock these include 13, 19, 29, 43, 47, 53.
+Session 309's clock has I = 499, c = 1,303,200 and r = 6, so c 2^r = 83,404,800. It hits 7 at k = 2:
+187,661,299 = 7 × 26,808,757. A prime l with -I/(c 2^r) outside the subgroup generated by 3/2 never divides any
+term. For that clock these are exactly 13, 19, 29, 43, 47, 53 below 60 (audit); the next are 61, 67, 71, 97,
+101.
 
-So a long run cannot avoid 7. That is good for 7p targets, which recur with period 6 in k, and bad for a run of
-consecutive primes. The criterion was noticed by this session's history sweep, by analogy with Rabinowitsch's
-prime-producing polynomials. It is recorded here in clock form.
+So a long run cannot avoid 7 unless 7 | c·I. That is good for 7p targets, which recur with period 6 in k, and bad
+for a run of consecutive primes.
+
+**Credit.** The mod-7 mechanism is already in Session 309's MIGRATING_CLOCK.md §2, on the same day and for the same
+clock family ("Modulo 7 the ratio ... has order 6 ... 7 | H_n iff n ≡ 0 mod 6"). That 3/2 is a primitive root mod 7
+is also in THM-4800. Proposition 7 is the elementary general form. The history sweep's comparison with
+Rabinowitsch's prime-producing polynomials is an analogy only, with no class-number content.
 
 ## 6. What this does and does not give toward a return rule
 
@@ -302,6 +325,7 @@ prime-producing polynomials. It is recorded here in clock form.
 
 - The complete exact-pair stock through order 9.
 - The C = 1 stock through order 10: detachable partners at H = 15, 95, 317, and block partners at H = 45, 153, 219.
+- Outside C = 1, in S3's range at order 10, the block pair H = 333 with C = 5.
 - A prime-valued detachable pair whose Π clock is not stuck at a fixed prime divisor.
 - The bookkeeping of Proposition 2: every new site in a neutral rebase is an R-factor recombination.
 
@@ -309,10 +333,13 @@ prime-producing polynomials. It is recorded here in clock form.
 
 - An infinite family of primitive pairs.
 - A second refill after a run. After the r transfers the right module is Y^r, a sum of odd cores. By Proposition
-  2 its hidden capacity is zero unless odd merges exist, and Proposition 3 excludes them in small orders.
-- A target selector. An unbounded return therefore needs either odd merges, or a fresh even component with a
-  partner brought in by a non-neutral move (for example Session 309's migration and recharge) before each
-  neutral rebase. HYP-9678 records this dichotomy and the conjectures behind it.
+  2 its hidden capacity is zero unless merges exist (any recombination lowering o + 2e). Proposition 3 excludes
+two-core odd merges with |Y1| + |Y2| <= 10. Proposition 3' excludes every merge when the module has total order at
+most 9.
+- A target selector. By Proposition 8, an unbounded return needs non-neutral moves. If, as HYP-9678 (C)
+  conjectures, merges never occur, each refill needs a fresh even component with a partner, brought in by a
+  non-neutral move (for example Session 309's migration and recharge) before the neutral rebase that splits it.
+  HYP-9678 records this and the conjectures behind it.
 
 ## 7. Pre-registered searches (PREREGISTRATION.md; results filled in after the runs)
 

@@ -3,7 +3,8 @@
 Checks, from literal adjacency rows (outgoing-neighbour bit masks, labels from 0):
   1. the full slot profiles F_j (ordered covers by j nonempty paths) of every claimed exact pair;
   2. Q_X(t) = Q_Z(t) for t = 0..n (so the polynomials agree) and the SCC shape of each side;
-  3. Session 310's B is isomorphic to the one-apex tournament O(5,2) (apex beats the bottom five of TT7);
+  3. Session 310's B is isomorphic to the one-apex tournament O(2,5) = O(0011111): body 1 -> ... -> 7 (i -> j for
+     i < j), apex beats the first two (top-ranked) body vertices and loses to the other five;
   4. the one-apex closed form of Q against brute force for every apex word of length <= 7;
   5. the C=1 counts F_(2n-6) for n = 4..9 by one-vertex extension (n = 10 with --full);
   6. the Pi-clock values of the prime pair, their recurrence and their primality (deterministic Miller-Rabin).
@@ -171,10 +172,10 @@ def iso(A, B):
 
 def check_B_one_apex():
     B = [2, 80, 3, 7, 173, 143, 189, 15]
-    need(iso(B, one_apex('0011111')))  # apex beats the two lowest body vertices, loses to the top five
+    need(iso(B, one_apex('0011111')))  # apex beats body vertices 1, 2 (the two top-ranked) and loses to 3..7
     need(not iso(B, one_apex('0000011')))  # that is the converse O(5,2), which has the same Q
     need(profile(one_apex('0000011')) == profile(B))
-    print('  ok  Session 310 B is the one-apex tournament O(2,5): apex beats the bottom two of TT7 (converse O(5,2))')
+    print('  ok  Session 310 B is the one-apex tournament O(0011111): apex beats the two top-ranked vertices of TT7 (converse O(0000011))')
 
 def mono_from_F(F):
     n = len(F); pts = [Q(F, t) for t in range(n + 1)]

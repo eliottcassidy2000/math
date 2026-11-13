@@ -8,11 +8,12 @@ status: >
   C3 => Y7, Y7 = classgen code 43104), at least 2 isomorphism classes; THM-5151 PROOF Proposition 5(d).
   (A'): OPEN. Every detachable member known has C = 1: orders <= 9 complete, and in S3's range the only detachable
   profile is H = 317, with C = 1.
-  (B): FINITE-EXACT pairs at orders 6, 8, 10 (THM-5151 (4), (5)). Order 12 is undecided:
-  - pre-registered S1 found no partner among strong order-11 tournaments with at most 5 backward arcs (prediction
-    FAILED);
-  - a biclique follow-up was also empty;
-  - no (3,9) or (5,7) block partner exists within C = 1.
+  (B): FINITE-EXACT detachable pairs at orders 6, 8, 10 (THM-5151 (4), (5)). Order 12 is undecided:
+  - pre-registered S1 found no order-11 partner, within at most 5 backward arcs, for any uniquely Hamiltonian
+    order-12 member (prediction FAILED);
+  - a biclique follow-up with both sides of size at most 5 was also empty.
+  Block pairs, for comparison: H = 45 (order 8), H = 153 and 219 (order 10, C = 1) and H = 333 (order 10, C = 5).
+  At order 12 no uniquely Hamiltonian member has a (3,9) or (5,7) block partner.
   (C): FINITE-EXACT for every tournament of order <= 9 (198,946 classes, 52,432 profile groups, no violation;
   THM-5151 PROOF Proposition 3'). The odd-merge case is checked completely for |Y1| + |Y2| <= 10. At order 11,
   pre-registered S2 CONFIRMED no match among the 3,847,591 tournaments with at most 5 backward arcs, for all
@@ -29,7 +30,9 @@ related:
   - 05-knowledge/results/session261_creative_chanpak_20261111/core/PACKING_GRAMMARS.md
 ---
 
-# HYP-9678 - exact pair members are uniquely Hamiltonian; spent odd cores hide no sites
+# HYP-9678 - detachable pair members are uniquely Hamiltonian ((A) refuted, (A') open); spent odd cores hide no sites
+
+The filename keeps the original (A) wording for link stability. (A) itself is REFUTED.
 
 Q_T(t) = sum_j F_j(T) binom(t, j). Let s(T) count singleton strong components. Call an even strong X
 *detachable* if Q_X = Q_(Y -> TT1) for some odd strong Y.
@@ -50,11 +53,12 @@ order 10.
 **(B) Infinitely many detachable pairs.** Known detachable members:
 
 - order 6, H = 15, the one-apex O(01001);
-- order 8, H = 95, Session 310's B = O(0011111);
+- order 8, H = 95, Session 310's B = O(0011111), whose apex beats the two top-ranked body vertices (THM-5151
+  (6) convention);
 - order 10, H = 317 (prime), not one-apex.
 
-Block-type members, Q_X = Q(Y1 => Y2) with both Y_i odd strong, are known at H = 45 (order 8) and H = 153, 219
-(order 10).
+Block-type members, Q_X = Q(Y1 => Y2) with both Y_i odd strong, are known at H = 45 (order 8), and at H = 153, 219
+(C = 1) and H = 333 (C = 5) at order 10.
 
 **(C) Additive capacity.**
 

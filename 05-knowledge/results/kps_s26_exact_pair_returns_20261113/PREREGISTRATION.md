@@ -57,3 +57,13 @@ ones (H = 153, 219, 317). Confidence about 0.7.
     classgen order-7 code 43104 (H = 111, C = 11).
   - Vertex-deletion fingerprints separate them into at least 2 isomorphism classes.
   - The control passed. Every detachable match (partner Y9 -> TT1) is the H = 317 profile, with C = 1.
+
+## Audit note
+
+The independent audit (audit/AUDIT.md, m5) pins down the timing.
+
+- S1 was launched at 11:06, four minutes before this file was committed (b1b011e4d2, 11:10). Its output was
+  buffered and unseen until the run ended, so the prediction was written blind; it was still not registered before
+  the run started (MISTAKE-769 M5).
+- S2 started at 11:10:37, after the commit.
+- S3 started after its addendum commit 5d04e33349.
