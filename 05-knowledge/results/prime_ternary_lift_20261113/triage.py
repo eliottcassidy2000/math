@@ -6,7 +6,7 @@ import gzip,json
 HERE=Path(__file__).resolve().parent
 
 def prime(n):return n>=2 and all(n%d for d in range(2,isqrt(n)+1))
-def atom(n):return prime(n) and n!=7 or n%7==0 and prime(n//7) and n//7>=5
+def atom(n):return prime(n) and n!=7 or n%7==0 and prime(n//7) and n//7>=5 and n//7!=7
 
 def run():
     head=json.loads(gzip.decompress((HERE/'surplus.json.gz').read_bytes()))['head']

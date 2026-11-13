@@ -1,0 +1,28 @@
+{
+  "status": "sealed executable dependencies and ordinary-class bank",
+  "pins": {
+    "05-knowledge/results/endpoint_context_recursion_20261113/context_head.py": "54983758cf8dfcca6c35ba60ca07fdcf584045300a551f0089a98a817407490e",
+    "05-knowledge/results/endpoint_context_recursion_20261113/feedback_probe.py": "95ab6cb125554b74d3ee5356e92d2ab904af8fc24fe74c12fb5cf92e9e3a0f5d",
+    "05-knowledge/results/endpoint_context_recursion_20261113/typed_glue.py": "0703cdcaf60d5ce05bf4d09e39ac7869fc8c7d347a83e8a4bac3f2177f29cd9d",
+    "05-knowledge/results/modular_centers_collatz_pell_20261111/content_checks.py": "bf894b45e3d3f29a5e953b72bc12fec6ba3a07db7868a768758624917eacc63d",
+    "05-knowledge/results/modular_centers_collatz_pell_20261111/tournament_checks.py": "25a193fe1d66a6c6780451f5de6c393398c1b7788e743744317c258f41aa6a7a",
+    "05-knowledge/results/multicore_metagraph_20261113/rooted_growth.json.gz": "3bf25d80ade2bcb7f3af880dd0b9c31e58766529c4be8b99d79a2d8efaa999f5",
+    "05-knowledge/results/prime_ternary_lift_20261113/clone_parity.py": "cc0dca35bded0f05c22c3e87470013f75246a068e7a24537a718106ac2977824",
+    "05-knowledge/results/prime_ternary_lift_20261113/core_moves.py": "4f448a4aef8761f6ee43a464d9c9d28444a4818d192fbd95210350a85059af12",
+    "05-knowledge/results/prime_ternary_lift_20261113/frame_probe.py": "ce3698a57ec26e265a6e411a7acd63f80cbaa29397f303b410facbecbc1fa617",
+    "05-knowledge/results/prime_ternary_lift_20261113/renewal_probe.py": "3395cb496bb85222899eea8c0d0cd2bfc2d949605bd1928d7995f919ba2dac64",
+    "05-knowledge/results/prime_ternary_lift_20261113/replay.py": "352fbb7932fa98f67b81c464d36dad0640afe58ce007227230ab199d17f6249b",
+    "05-knowledge/results/prime_ternary_lift_20261113/surplus_audit.py": "d06eef0d03bce1d4e017189cbfe3699b8bad2bdda3ba41492d5c60c3899602d6",
+    "05-knowledge/results/prime_ternary_lift_20261113/surplus_probe.py": "af00adda58c3fa0bfe3db74244a393f3a293c3a8ec5aa29a0f41c9d634d02c6d",
+    "05-knowledge/results/prime_ternary_lift_20261113/triage.py": "96e27084c322b75e11d50c96013b85d059ed9fb4ae01b981c42f85de33546b0a",
+    "05-knowledge/results/prime_ternary_lift_20261113/visit_probe.py": "81648e1124c236fdfe0e653b140bad7a4e6ad3501195cf64de224e0ea1dd89c0",
+    "05-knowledge/results/surplus_selector_20261113/context_sequences.py": "7ab6b8bb2204aaa0b279ada807d2bf4150fe6f33ae0e1059732c486bfd59f05a",
+    "05-knowledge/results/surplus_selector_20261113/context_transport.py": "f4524a0dfb55adf2205f2a9317adb23bd90feef8d5889a6e37e6931c28df3e92",
+    "05-knowledge/results/surplus_selector_20261113/fibre_probe.py": "f7dc21f9ff27be417daeeddf41443e59c0e910cc993ecccf019b899aaed93c74",
+    "05-knowledge/results/surplus_selector_20261113/inflation_probe.py": "02abbf8e22ea7f64abe64d0f05491ace5659e8f78ab5f517f4d67486f5999665",
+    "05-knowledge/results/surplus_selector_20261113/repair23.py": "8fea714774104b69536d73455203e6252e061282d642720332d080b0e67821e3",
+    "05-knowledge/results/ternary_core_grammar_20261113/atomic_ears.py": "2174a9b9c3f2c3d67c91662c40dc55718a59240c72f50d0130e229c91857968a",
+    "05-knowledge/results/ternary_core_grammar_20261113/peeling.py": "11db65786e0904e6b0d73414cc15185f944d7d71474a6fdb84b10f489828b230",
+    "05-knowledge/results/ternary_core_grammar_20261113/triangle_probe.py": "1177fe052b72efd908b82a9e41cee14ea6cb394a7ca6babc7f50eb6edc55e4aa"
+  }
+}

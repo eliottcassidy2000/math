@@ -36,3 +36,31 @@ Collatz transfer on7,21 and on a nonrenewable destination.
 
 Research cards used: search the statement before the method; correct the
 object before sharpening the technique; type every analogy and implication.
+
+## Closing comparison of the six concepts
+
+1. **Scalar/core:** actual shared-source and mixed-mode replacements succeed;
+   arbitrary-module substitution still scales the digit by H(M). The source
+   selector remains the global gap.
+2. **Broken joins:** dropping indegree one adds47 occurrences, all delta2;
+   the padding lemma makes the h<=73 absence lists all-order for this move.
+   The proposed indegree bound has only finite evidence.
+3. **Outgoing response:**22,817 full vectors give312 exact transitions;
+   mixed2^m/3^m/4^m modes add84 beyond the two-visit transition class.
+   Exact matching provides a three-step family chain, not indefinite entry.
+4. **Atoms:** the target lanes choose only one digit at each target and allow
+   changing parent witnesses. The catalog is not a covering theorem for them.
+5. **Collatz:** the plus branch has an actual one-arc lift; the next halving
+   loses excursion divisibility. Fixed multi-block growth also fails by
+   modulo4 stabilization. The known guarded minus step retains two modules.
+6. **Renewal:** finite one-module phase cycles cannot contain +4. More
+   generally, pure growth of fixed transitive blocks consumes singleton
+   status at every +4 step. New cores, new singleton blocks, or changing
+   module types are precise resources to supply, rather than an unspecified
+   endpoint-readiness promise.
+
+The niche/wildcard overtook the initial small-root census: excursion
+permutation symmetry led both to the finite-phase theorem and to the
+all-frame modulo4 quotient. These are proof mechanisms, not new evidence
+that all odd targets are covered. No META-PATTERNS promotion was made:
+this session alone does not supply the required distinct-thread evidence.
