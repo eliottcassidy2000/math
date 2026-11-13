@@ -1,0 +1,9 @@
+{'n': 1, 'ordinary_types': 1, 'budget_face_totals_by_size': [1, 1], 'distinct_budget_f_vectors': 1, 'nonflag_budget_complexes': 0, 'maximum_minimal_nonface_size': 0, 'unit_marked_orbits': 1, 'cores_with_unit_marking': 1}
+{'n': 2, 'ordinary_types': 1, 'budget_face_totals_by_size': [1, 2, 0], 'distinct_budget_f_vectors': 1, 'nonflag_budget_complexes': 0, 'maximum_minimal_nonface_size': 2, 'unit_marked_orbits': 2, 'cores_with_unit_marking': 1}
+{'n': 3, 'ordinary_types': 2, 'budget_face_totals_by_size': [2, 6, 3, 0], 'distinct_budget_f_vectors': 2, 'nonflag_budget_complexes': 1, 'maximum_minimal_nonface_size': 3, 'unit_marked_orbits': 4, 'cores_with_unit_marking': 2}
+{'n': 4, 'ordinary_types': 4, 'budget_face_totals_by_size': [4, 16, 11, 0, 0], 'distinct_budget_f_vectors': 3, 'nonflag_budget_complexes': 3, 'maximum_minimal_nonface_size': 3, 'unit_marked_orbits': 9, 'cores_with_unit_marking': 4}
+{'n': 5, 'ordinary_types': 12, 'budget_face_totals_by_size': [12, 60, 75, 0, 0, 0], 'distinct_budget_f_vectors': 6, 'nonflag_budget_complexes': 11, 'maximum_minimal_nonface_size': 3, 'unit_marked_orbits': 22, 'cores_with_unit_marking': 9}
+{'n': 6, 'ordinary_types': 56, 'budget_face_totals_by_size': [56, 336, 640, 0, 0, 0, 0], 'distinct_budget_f_vectors': 12, 'nonflag_budget_complexes': 55, 'maximum_minimal_nonface_size': 3, 'unit_marked_orbits': 59, 'cores_with_unit_marking': 26}
+{'n': 7, 'ordinary_types': 456, 'budget_face_totals_by_size': [456, 3192, 8318, 66, 0, 0, 0, 0], 'distinct_budget_f_vectors': 25, 'nonflag_budget_complexes': 455, 'maximum_minimal_nonface_size': 3, 'unit_marked_orbits': 194, 'cores_with_unit_marking': 110}
+{'n': 8, 'ordinary_types': 6880, 'budget_face_totals_by_size': [6880, 55040, 179519, 9144, 0, 0, 0, 0, 0], 'distinct_budget_f_vectors': 77, 'nonflag_budget_complexes': 6879, 'maximum_minimal_nonface_size': 3, 'unit_marked_orbits': 1300, 'cores_with_unit_marking': 1053}
+budget_complexes saved

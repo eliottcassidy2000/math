@@ -4,6 +4,24 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13: A symmetric endpoint table must not be symmetrized twice
+
+- **Status:** repaired during the entry-resource experiment before promotion.
+- **False computation:** a new all-markings scan used W_ij+W_ji even though
+  the inherited table already stored W=q+q-transpose. It consequently
+  reported no unit markings even on the known twelve-vertex positive source.
+- **Minimal local witness:** selected mask10 on the first core in
+  [moving_root.py](../05-knowledge/results/entry_resources_20261113/moving_root.py)
+  has H=2663, taxed covers2662 and defect1. The doubled table rejects it.
+- **Repair:** add W_ij once per unordered selected pair. The independent
+  signed-cut automaton and a mandatory known-source control verify the
+  corrected convention. Orders12,13 have masks10,18,24; orders14–19 have none.
+- **Missing coordinate:** directed q versus already symmetric W is part of
+  the table's type, not an interchangeable storage convention. Check an
+  inherited positive source before interpreting an empty new census.
+- **Surviving question:** a renewable core rule must supply a new unit
+  marking; this particular root-changing chain cannot do so through19.
+
 ## 2026-11-13: Initial path modes are not continuation modes
 
 - **Status:** a mistaken progress statement in the core-descent session was

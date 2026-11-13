@@ -1,0 +1,5 @@
+source order 2 survivors Counter({5: 118, 4: 49, 3: 20, 2: 7, 1: 2}) seconds 7.0
+source order 3 survivors Counter({5: 6, 4: 5, 3: 4, 2: 3, 1: 2}) seconds 7.0
+source order 4 survivors Counter({5: 6, 4: 5, 3: 4, 2: 3, 1: 2}) seconds 7.1
+source order 5 survivors Counter({5: 6, 4: 5, 3: 4, 2: 3, 1: 2}) seconds 10.1
+uniform_gadgets saved
