@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify the closed research packet; --replay reruns all seven exact checks.
+"""Verify the closed research packet; --replay reruns all eight exact checks.
 
 Standard library only. All gates survive optimized Python. Historical source
 pins are checked against their Git revisions, not against evolving canon.
@@ -26,6 +26,7 @@ RUNS = [
     ('audit_sporadic/check.py', 'audit_sporadic/receipt.json', 'audit_sporadic/receipt-optimized.json'),
     ('sporadic/check_other_lanes.py', 'sporadic/review_other_lanes.json', 'sporadic/review_other_lanes.optimized.json'),
     ('metagraph/pairing_lift_check.py', 'metagraph/pairing_lift.normal.json', 'metagraph/pairing_lift.optimized.json'),
+    ('audit/slot_profiles.py', 'audit/slot_profiles.normal.json', 'audit/slot_profiles.optimized.json'),
 ]
 
 
@@ -84,6 +85,11 @@ def check_packet():
     check_hashes(read_json('sporadic/review_other_lanes.json')['source_sha256'])
     need(read_json('metagraph/pairing_lift.normal.json')['root_receipt_sha256'] ==
          digest((PACKET / 'audit/small.normal.json').read_bytes()), 'lift input receipt')
+    slot = read_json('audit/slot_profiles.normal.json')
+    need(slot['root_census_sha256'] == digest((PACKET / 'audit/small.normal.json').read_bytes()),
+         'slot input census')
+    need(slot['checker_sha256'] == digest((PACKET / 'audit/slot_profiles.py').read_bytes()),
+         'slot source binding')
 
     for lane in ['metagraph', 'sporadic']:
         for line in (PACKET / lane / 'SHA256SUMS').read_text().splitlines():
@@ -114,6 +120,9 @@ def check_packet():
         need(pins[name]['sha256'] == value, 'pairings source pin: ' + name)
     for name, row in read_json('incoming-sources.json')['sources'].items():
         need(pins[name]['sha256'] == row['sha256'], 'incoming source pin: ' + name)
+    for name, row in slot['source_pins'].items():
+        need(pins[name]['sha256'] == row['sha256'] and pins[name]['git_commit'] == row['commit'],
+             'late slot source pin: ' + name)
     for file in PACKET.rglob('*.md'):
         for link in re.findall(r'\]\(([^\n)]+)\)', file.read_text()):
             if '://' in link or link.startswith('#'):
@@ -125,7 +134,7 @@ def check_packet():
                 need(target.is_relative_to(REPO), 'link escapes repository: ' + link)
                 need(target.relative_to(REPO).as_posix() in pins,
                      'unbound historical reference: ' + link)
-    print('PASS: closed manifest, seven receipt pairs, promotions, source/review/figure bindings.', flush=True)
+    print('PASS: closed manifest, eight receipt pairs, promotions, source/review/figure bindings.', flush=True)
 
 
 def replay():

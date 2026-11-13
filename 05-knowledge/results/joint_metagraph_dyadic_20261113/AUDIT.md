@@ -53,6 +53,18 @@ identity as an involution and restricts the base group to preserve fibre
 sizes and any requested H/colors. Independent brute-force controls include
 exchanged double fibres, where the two coherent lift choices are essential.
 
+**Final slot observer.** Root reviewed the new literal permutation/break
+enumeration and the independent subset Hamilton-DP/ordered-partition method.
+Each ordered cover has one concatenated permutation with its designated
+breaks, and one ordered sequence of disjoint nonempty subset paths, so the
+two counts target the same complete object. Exact rational basis conversion
+gives the full slot polynomial, not just evaluations. The source-dart-weighted
+quotient is recomputed from the existing independently audited native matrix.
+The H9 pair shares every displayed observer and has distinct TT incidence;
+its actual/coarse returns are1/9 and1/18. All merged classes n3..5 are tested.
+The larger incoming THM-5153 census through nine is not adopted as audited
+evidence for this result. [Proof and source scope](SLOT_WIRING.md).
+
 **Signed actions and eta products.** [Independent proof review](audit_sporadic/REPORT.md)
 checks the signed pair-stabilizer iff, the composite odd-cycle controls,
 integral-root necessity/sufficiency, support depth and valuation equality
@@ -81,6 +93,7 @@ The review script also independently checks the displayed Gram arithmetic.
 | `audit_sporadic/check.py` | Independent eta Euler-division versus recurrence through degree80; permitted roots and first forbidden coefficient; literal signed action checks at m3,5 and stabilizers through m9; all512 cyclic pair completions; cusp controls. |
 | `sporadic/check_other_lanes.py` | P1 binomial controls R1..48,k1..5; 2040 synthetic reduced-pole cases for P2; Lorentzian Gram arithmetic; 382887 always-active checks. Its prose root-code review predates the final pairing block, which is separately reviewed above. |
 | `metagraph/pairing_lift_check.py` | General lift formula versus all ordinary permutations in eleven synthetic cases with at most six ordinary objects; subgroup and double-orbit controls; n3..5 graph/abstract pairing polynomials; 22 always-active checks. |
+| `audit/slot_profiles.py` | Every merged class n3..5 from the frozen root census; all vertex permutations with all break subsets versus independent subset-path/ordered-partition DP; exact slot polynomials, all collision blocks and source-weighted quotient failure. |
 
 Each program has matching normal and optimized-Python receipts. Explicit
 exceptions retain the gates under `-O`; producer code is not imported by the
@@ -98,7 +111,7 @@ python3 -I -B 05-knowledge/results/joint_metagraph_dyadic_20261113/verify_packet
 
 The first command verifies the closed packet manifest, promotion inverses,
 review/source bindings and stored normal/optimized equality. The second also
-reruns all seven programs in both modes and compares their exact output bytes.
+reruns all eight programs in both modes and compares their exact output bytes.
 It does not recreate the historical external source documents.
 
 ## Repairs and status lineage
