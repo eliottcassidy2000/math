@@ -157,7 +157,7 @@ def main():
               "permutation_cross_checks_through_order5": independent,
               "census": census, "threshold_targets_checked": len(targets),
               "threshold_examples": examples,
-              "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+              "source_sha256_lf": hashlib.sha256(Path(__file__).read_bytes().replace(b'\r\n', b'\n')).hexdigest()}
     destination = Path(__file__).with_name("growth_receipt.json")
     destination.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))

@@ -129,6 +129,33 @@ connected witness graph has jumps at most2D, and every lower endpoint can
 correct by0,2,...,2D−2, all intervening odd targets are attained. The output
 need not be ready again. Neither hypothesis is proved uniformly here.
 
+## Integration with the concurrent ternary work
+
+The separately published [question audit](../strategy_reframe_20261113/README.md)
+reaches the same strategic conclusion: existential prime/7p supply need not
+preserve a renewable paired interface. Its all-order factor-five theorem
+rules out slow net returns in the specified identified-root half-repair
+language, even after visiting other slopes. Our block rewrites and two-arc
+core surgery are different operations. Neither result overrides the other.
+
+[Session303](../session303_ternary_normal_form_20261113/README.md) proves a
+confluent exact triangle-peeling rule and finite capacity at a fixed reduced
+core. Our chosen U is triangle-module-free, whereas TT has two peelable
+triangle components. Thus SU->TT is a literal restricted example of its
+desired neutral replacement creating peelability, after adding one singleton.
+It works in ordinal contexts and supplies no new ternary-ray base. The chosen
+V already has a peelable triangle; it must not be used for the same claim.
+
+[Session304's physical fork](../session304_collatz_peeling_20261113/PHYSICAL_FORK.md)
+now provides all three children3H−2,3H,3H+2 from the same strong family
+H=15·2^k+1. The destinations have not been returned to a common ready class.
+This gives another precise place to test consumer-specific transport; our
+scalar-preserving word reductions do not automatically retain its marks.
+The [six-seed arithmetic criterion](../session304_collatz_peeling_20261113/ARITHMETIC.md)
+is conditional on an actual compatible compiler. Triangle peeling, whose
+purpose is exact division by3, cannot by itself implement mixed digits that
+change the3-free part.
+
 ## Updated concept board and next proof obligations
 
 The assigned anchor is Chan–Pak supply; the niche is nonnegative fibre

@@ -5,6 +5,14 @@
 was reserved. The ready-interface hole at53084231, induced13->27 obstruction,
 and density-zero changed-port grammar were inherited as hostile controls.
 
+Incoming work through `0e95e7353a` was read before publication: the independent
+strategy question audit and Sessions302–304. A concurrent packet used the
+initial directory name, so this session's entire packet was renamed
+`strategy_fibres_absorption_20261113`; the incoming
+`strategy_reframe_20261113` was preserved intact. Both results and their
+different operation scopes are linked from the synthesis. Two independent
+agents reviewed the incoming factor-five and ternary-normal-form boundaries.
+
 ## Mathematical review
 
 - Root reviewed the fibre normal form, indispensability witnesses, helper
@@ -64,6 +72,11 @@ Complete C++ commands and all operation parameters are in
 [absorption/PROOF.md](absorption/PROOF.md). Executables are disposable and
 excluded. Source and output hashes are in the applicable receipts; inherited
 generator pins use LF-normalized text for portability.
+
+Final integration checks passed: all55 local Markdown links resolve,
+`git diff --check` is clean, and the repository documentation checker passes
+after the incoming work was integrated. Source hash receipts were normalized
+to LF and the two affected verification entry points rerun successfully.
 
 A word is not an isomorphism class; rank one is not necessarily an SCC cut;
 a gcd is not a realizable factor; transport within an attained interval is

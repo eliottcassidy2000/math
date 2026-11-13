@@ -93,7 +93,7 @@ def main():
     receipt = {"status": "VERIFIED", "census_scope": "FINITE-EXACT orders 1 through 7",
                "optimized_unoptimized_identical": True, "witnesses": witnesses,
                "independent_literal_spectra": brute_spectra,
-               "census_source_sha256": hashlib.sha256((HERE / "corridor.cpp").read_bytes()).hexdigest()}
+               "census_source_sha256_lf": hashlib.sha256((HERE / "corridor.cpp").read_bytes().replace(b'\r\n', b'\n')).hexdigest()}
     (HERE / "check.json").write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"status": "VERIFIED", "witness_counts": [w["H_permutations"] for w in witnesses],
                       "components": expected_components, "anchor_maxima": expected_maximum}))
