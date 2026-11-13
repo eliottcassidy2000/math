@@ -26,3 +26,8 @@ Confidence about 0.6. A null result is inconclusive, because the search is restr
 **S2. Odd merges at order 11.** Same program, targets Q(Y5 => Y7)/t over all odd strong Y5, Y7 (2118 pairs).
 
 Prediction: no match. Confidence about 0.8.
+
+## Outcomes
+
+- **S2: CONFIRMED** (no match), 2026-11-13. There were 655 distinct targets and 3,847,591 candidates with at most
+  5 backward arcs; 1,243,347 were strong and 189,829 were fully profiled.
