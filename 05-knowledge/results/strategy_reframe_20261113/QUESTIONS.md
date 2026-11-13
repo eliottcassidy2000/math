@@ -177,6 +177,18 @@ what resource it renews, and show the new block satisfies the next rule's
 entry conditions. For the Chan--Pak atom induction, it may instead be
 better to avoid demanding renewal at all and rebuild for each target.
 
+Later incoming checkpoints sharpen this same boundary. [Session303,
+ternary normal form](../session303_ternary_normal_form_20261113/README.md)
+proves in its note that eligible triangle peels have a confluent reduced
+core and a finite inverse-expansion capacity within that core. Peeling
+preserves the 3-free part of H. [Session304's arithmetic descent](../session304_collatz_peeling_20261113/ARITHMETIC.md)
+uses both signs of 3n+-1 to move between such rays while avoiding7,21;
+its note explicitly leaves the physical tournament lift open. These are
+incoming scoped results, not independently replayed in this packet.
+They reinforce the distinction between an exact arithmetic descent, an
+actual local replacement, and a construction that can renew its entry
+conditions. Neither supplies a missing universal tournament selector.
+
 ## Decision after this session
 
 1. Prioritize the inherited existential prime-lane induction, permitting
