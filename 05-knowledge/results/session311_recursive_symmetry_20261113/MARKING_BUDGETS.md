@@ -1,6 +1,6 @@
 # How the placement of marks controls every intermediate symmetry order
 
-This is a follow-up to [the recursive neutral-flip atlas](WREATH_ATLAS.md), §5. Fix the monochromatic depth-$d$ tower formed by cyclically joining three copies at each internal node, starting from a rigid leaf tournament. A marked leaf is fixed individually, not merely as part of a set of marked leaves; one can equivalently name a vertex inside that rigid leaf. The marks do not alter the tournament or its full path-cover polynomial.
+This is a follow-up to [the recursive neutral-flip atlas](WREATH_ATLAS.md), §5. Fix the monochromatic depth-$d$ tower formed by cyclically joining three copies at each internal node, starting from a rigid leaf tournament. A marked leaf is fixed individually, not merely as part of a set of marked leaves; one can equivalently name a vertex inside that rigid leaf. The optimal marking orders below are the base-three van der Corput (digit-reversal) order and the ordinary lexicographic order. The marks do not alter the tournament or its full path-cover polynomial.
 
 ## Extremal budgets, with nested optimal placements
 
@@ -15,7 +15,7 @@ A mark covers at most one node on each level; conversely an occupied depth-$j$ n
 
 ## There are no gaps between the two exponents
 
-For $k>0$, an integer profile $(a_0,\ldots,a_d)$ comes from a marking if and only if (a_0=1, a_d=k), and $a_j\le a_{j+1}\le3a_j$ for each $j$. Necessity follows by counting occupied children. For sufficiency, give each occupied node one occupied child, then distribute $a_{j+1}-a_j$ extra children with capacity two per parent. Do this recursively and mark exactly the occupied leaves.
+For $k>0$, an integer profile $(a_0,\ldots,a_d)$ comes from a marking if and only if $a_0=1$ and $a_d=k$, and $a_j\le a_{j+1}\le3a_j$ for each $j$. Necessity follows by counting occupied children. For sufficiency, give each occupied node one occupied child, then distribute $a_{j+1}-a_j$ extra children with capacity two per parent. Do this recursively and mark exactly the occupied leaves.
 
 Write $b_j=\min(k,3^j)$, the componentwise maximal profile. Starting with the componentwise minimal profile $a_j=\lceil k/3^{d-j}\rceil$, increase one internal coordinate at a time until $a=b$. To see a move always exists, look at the deficient indices $j$ with $a_j<b_j$. An increase at $j$ can only be blocked to the left by $a_j=3a_{j-1}$ or to the right by $a_j=a_{j+1}$. In either case the blocking neighbor must itself be deficient, by the corresponding inequality for $b$. If every deficient coordinate were blocked, pointing each to one blocker would give a directed cycle on a path, necessarily a two-cycle. A two-cycle would require $a_{j+1}=a_j=3a_j$, impossible for a positive profile. Thus an increment is always possible. Each increment changes the stabilizer exponent by exactly one. The empty marking has only the full-group exponent. The profile path proves existence; it does not assert that a single leaf exchange realizes each step for arbitrary presentations.
 
