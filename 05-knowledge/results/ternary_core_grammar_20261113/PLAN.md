@@ -1,6 +1,6 @@
 # Ternary cores, neutral preparation, and the two omissions
 
-**Research in progress; Chan–Pak OPEN.** Source snapshot b1f253bebc.
+**Completed research scope; Chan–Pak OPEN.** Source snapshot b1f253bebc.
 
 Anchor: an unbounded grammar with actual endpoint entry. Niche: extract
 the local overlap obstruction in the proofs excluding 7 and 21. Wildcard:

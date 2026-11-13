@@ -4,6 +4,20 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13: Near-transitive atom recognition needs an independent strongness guard
+
+- **Status:** implementation error caught and repaired before promotion in the [ternary-core audit](../05-knowledge/results/ternary_core_grammar_20261113/AUDIT.md). No false atomic certificate was published.
+- **Minimal witness:** the transitive triple with rows(6,4,0) becomes transitive again after reversing an adjacent comparison. The predicate 'one reversal makes transitive' alone therefore does not imply a strong nearly transitive atom.
+- **First failed implication:** accepting this candidate inside a strong ambient tournament allowed an atom of count1, violating the required factor-at-least3 descent.
+- **Repair and survivor:** require the induced atom itself to be strong before applying the reversal test. All2,618 rooted strong inputs through7 then parse with the physical root retained and the product descent checked independently; normal and optimized receipts agree.
+- **Missing coordinate and new question:** ambient strongness does not pass to induced subgraphs. Any larger ear recognizer must certify its own type before using that type's count floor.
+
+## 2026-11-13: Two OCF papers were conflated in the H7 bibliography
+
+- **Status:** the reference and axiom-source table in [THM-343, H7 impossible](theorems/THM-343-H7-impossible.md) are repaired; the mathematical theorem and Lean axiom list are unchanged.
+- **Error:** arXiv2412.10572 was attributed to Grinberg–Stanley. It is Irving–Omar, whose Corollary20 explicitly attributes the formula to Grinberg–Stanley's Theorem1.39 and Lemma6.5 in arXiv2307.05569.
+- **Repair:** distinguish both authors, identifiers and theorem locations, and state the complement/converse path-reversal convention. The minimal failed implication was bibliographic identification, not the odd-cycle collection formula.
+
 ## 2026-11-13: A ceiling-selected time was incorrectly called irrational
 
 - **Status:** demonstrated historical error corrected in [the rational/irrational reflection](../07-reflections/the-rational-irrational-duality.md); no current LRC theorem is promoted or retracted.

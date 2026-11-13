@@ -36,7 +36,7 @@ Equivalently: the value 7 does not appear in the H-spectrum of any tournament.
 | A10 | Camion (1959): SC ⇒ ∃ directed Hamilton cycle                                | exhaustive n=3..6 ✓   |
 
 **References:**
-  - Grinberg-Stanley, OCF: arXiv:2412.10572 Corollary 20.
+  - Grinberg–Stanley, OCF: [arXiv:2307.05569](https://arxiv.org/abs/2307.05569), Theorem 1.39 and Lemma 6.5. An explicit formulation is [Irving–Omar, arXiv:2412.10572, Corollary 20](https://arxiv.org/html/2412.10572v3#S3.SS4); reversal identifies the complement/converse path count with H(T).
   - Moon, J.W. (1966), *On subtournaments of a tournament*, Canad. Math. Bull. 9 (3), 297-301 — **Corollary 2.1**: "The minimum number of cycles of length k a strong tournament T_n can contain is n − k + 1." (k = 3, ..., n.)
   - Camion, P. (1959), *Chemins et circuits hamiltoniens des graphes complets*, C. R. Acad. Sci. Paris 249, 2151-2152.
 
@@ -190,7 +190,7 @@ session-S5 proof, depending on 7 cited mathematical axioms (in
 
 | Axiom                    | Source                                                |
 |--------------------------|-------------------------------------------------------|
-| `ocf`                    | Grinberg–Stanley, arXiv:2412.10572, Corollary 20      |
+| `ocf`                    | Grinberg–Stanley, arXiv:2307.05569; explicit Corollary 20 in Irving–Omar, arXiv:2412.10572 |
 | `moonMoser`              | Moon (1962), s−2 distinct 3-cycles in SC tournament   |
 | `moonCamion_oddSize`     | Camion (1959) / Moon (1968), SC ⟹ Hamilton cycle      |
 | `omegaTriangleLocalises` | Folklore: cycles partition by SCC                     |

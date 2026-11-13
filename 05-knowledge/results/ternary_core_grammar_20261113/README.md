@@ -40,6 +40,8 @@ named open hypothesis, and the certificates do not set a new coverage record.
 The implementation also verifies the root-preserving atomic parse on every
 rooted strong class through seven. [Audit and reproduction](AUDIT.md) retain
 the source universe, independent controls, known overlaps and limitations.
+The [connection map](INCOMING.md) credits the concurrent neutral-core,
+marked-chain and uniform triangle-substitution results.
 
 The exact missing theorem is a target-dependent selection of a smaller
 realizable parent, an atom and a cross matrix producing the requested full

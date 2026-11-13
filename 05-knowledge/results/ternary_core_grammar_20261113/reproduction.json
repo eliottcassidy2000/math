@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "scope": "Six deterministic normal/optimized receipt pairs; independent controls are in AUDIT.md",
+  "pairs": [
+    {
+      "name": "triangle_probe",
+      "sha256": "11b922f39aeb6e13bf122c32dfde53387f99607e3af28ba79aabc22a66cb1a57"
+    },
+    {
+      "name": "local_obstruction",
+      "sha256": "aa266e0a269f4d1b08f7d900f95373d373db1d3a76fda3b61bfd2cea2902ea6c"
+    },
+    {
+      "name": "peeling",
+      "sha256": "1fff9413e25a0b2b8a18f49de2c930dbd499110c3874d512723387633a68f504"
+    },
+    {
+      "name": "atomic_ears",
+      "sha256": "cec91f63db779f8f947d5f5dbafb1c5e55a3cda460d4ae111777ed04959bd7ea"
+    },
+    {
+      "name": "neutral_entry",
+      "sha256": "02027fed93a5f18baf70a469e98f856b223743de0cc6cbd4d3f614bd3c576cb2"
+    },
+    {
+      "name": "audit",
+      "sha256": "062d9cb1c1b6404a7df0f361e186fd646863e6c0a39a735f5d6ee253b8ea9667"
+    }
+  ]
+}
