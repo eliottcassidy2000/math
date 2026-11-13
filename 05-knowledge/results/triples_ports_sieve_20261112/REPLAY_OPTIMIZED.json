@@ -1,0 +1,65 @@
+{
+  "optimized": true,
+  "engines": [
+    {
+      "script": "arithmetic/wheel_refinement.py",
+      "receipt": "arithmetic/wheel_refinement.json",
+      "sha256": "8f8642ce84b316fb38fa7d365844be6708462a7391c6ed33d884650e6b36ca68",
+      "exit_code": 0
+    },
+    {
+      "script": "arithmetic/joint_branch_sieve.py",
+      "receipt": "arithmetic/joint_branch_sieve.json",
+      "sha256": "d096392073a482c54f3470e2d2d659c4dbb378e77d5afeb864c79dd25e5e730e",
+      "exit_code": 0
+    },
+    {
+      "script": "arithmetic/audit_root.py",
+      "receipt": "arithmetic/audit_root.json",
+      "sha256": "8018ea88039e1252c50c10bb0b84266296829d682c27b6f915e7c0e0e659d5dd",
+      "exit_code": 0
+    },
+    {
+      "script": "dihedral/check.py",
+      "receipt": "dihedral/check.json",
+      "sha256": "3192b1b21fa7983c4b3cee0f0dd598cb2997ae479c104f23d1d7366539351a10",
+      "exit_code": 0
+    },
+    {
+      "script": "triples/check.py",
+      "receipt": "triples/check.json",
+      "sha256": "82d5b56af64a44832e26c9fc417996f40999f14c778a4bf38dd785c2afdd27ea",
+      "exit_code": 0
+    },
+    {
+      "script": "squares/verify.py",
+      "receipt": "squares/receipt.json",
+      "sha256": "c885f1419cd8e09672a83a18838ac526d5e884ba3d1abd035db95377b6931b8e",
+      "exit_code": 0
+    },
+    {
+      "script": "squares/audit_mutation.py",
+      "receipt": "squares/mutation_audit.json",
+      "sha256": "605580baf05dd93538af3ddaabd42f14a544e865037d5ba280536f9d967be606",
+      "exit_code": 0
+    },
+    {
+      "script": "ports/verify.py",
+      "receipt": "ports/receipt.json",
+      "sha256": "80a589abfe6f48b51caa194cda4b47c64a352f7d937ff80e0cf5d97bf0115670",
+      "exit_code": 0
+    },
+    {
+      "script": "ports/four_local.py",
+      "receipt": "ports/four_local_receipt.json",
+      "sha256": "66b3c546d5e7f10b6b680cdb13f005e076691f54e73c409b419c9b2bc6e399f9",
+      "exit_code": 0
+    },
+    {
+      "script": "ports/scout_returns.py",
+      "receipt": "ports/scout_receipt.json",
+      "sha256": "349a0eea8eb50cd1ff0371cdf24569ad4190a05037934c9c5861f49ada1c6d7c",
+      "exit_code": 0
+    }
+  ]
+}

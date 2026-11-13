@@ -4,55 +4,61 @@
     {
       "script": "arithmetic/wheel_refinement.py",
       "receipt": "arithmetic/wheel_refinement.json",
-      "sha256": "f7646d7956f90685782df2fe993ad93e50227797522862b3802da7c336c131ee",
+      "sha256": "8f8642ce84b316fb38fa7d365844be6708462a7391c6ed33d884650e6b36ca68",
       "exit_code": 0
     },
     {
       "script": "arithmetic/joint_branch_sieve.py",
       "receipt": "arithmetic/joint_branch_sieve.json",
-      "sha256": "6e687d9698e6664c1a122448476cf7eeea0f6e5caf4dbd50ceaeb2b1b6f10bdd",
+      "sha256": "d096392073a482c54f3470e2d2d659c4dbb378e77d5afeb864c79dd25e5e730e",
       "exit_code": 0
     },
     {
       "script": "arithmetic/audit_root.py",
       "receipt": "arithmetic/audit_root.json",
-      "sha256": "545dd4327f86a97cdb3bb095e9c691ef9ac7e6545dc493042c34e478cdc156f3",
+      "sha256": "8018ea88039e1252c50c10bb0b84266296829d682c27b6f915e7c0e0e659d5dd",
       "exit_code": 0
     },
     {
       "script": "dihedral/check.py",
       "receipt": "dihedral/check.json",
-      "sha256": "6eca72ec7f00435b9f20deed8d74e05bbc0ea2ecfea1f5c18eb9976665a47ea1",
+      "sha256": "3192b1b21fa7983c4b3cee0f0dd598cb2997ae479c104f23d1d7366539351a10",
       "exit_code": 0
     },
     {
       "script": "triples/check.py",
       "receipt": "triples/check.json",
-      "sha256": "1067a84120fae8d9b3d3015e971168cae1dafd59678818c6ea16700769f4cb51",
+      "sha256": "82d5b56af64a44832e26c9fc417996f40999f14c778a4bf38dd785c2afdd27ea",
       "exit_code": 0
     },
     {
       "script": "squares/verify.py",
       "receipt": "squares/receipt.json",
-      "sha256": "51cf2e2fc85d9a0a1b84dea11a9510e8babd1df8b4d196470302216013027811",
+      "sha256": "c885f1419cd8e09672a83a18838ac526d5e884ba3d1abd035db95377b6931b8e",
+      "exit_code": 0
+    },
+    {
+      "script": "squares/audit_mutation.py",
+      "receipt": "squares/mutation_audit.json",
+      "sha256": "605580baf05dd93538af3ddaabd42f14a544e865037d5ba280536f9d967be606",
       "exit_code": 0
     },
     {
       "script": "ports/verify.py",
       "receipt": "ports/receipt.json",
-      "sha256": "1a8f30085731659657d786fb852f513300e406819d95fff9f9390a6d57b3bcf3",
+      "sha256": "80a589abfe6f48b51caa194cda4b47c64a352f7d937ff80e0cf5d97bf0115670",
       "exit_code": 0
     },
     {
       "script": "ports/four_local.py",
       "receipt": "ports/four_local_receipt.json",
-      "sha256": "3a4d1a184c0188051cd6be18f7accb050c154dd2fe7df62eb31072e86502d268",
+      "sha256": "66b3c546d5e7f10b6b680cdb13f005e076691f54e73c409b419c9b2bc6e399f9",
       "exit_code": 0
     },
     {
       "script": "ports/scout_returns.py",
       "receipt": "ports/scout_receipt.json",
-      "sha256": "991b6ec3fb3a249eb8984f59f9f2bc854a570e9bdc230f6fbed8be3f55f0eb45",
+      "sha256": "349a0eea8eb50cd1ff0371cdf24569ad4190a05037934c9c5861f49ada1c6d7c",
       "exit_code": 0
     }
   ]

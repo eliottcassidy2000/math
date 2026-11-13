@@ -214,7 +214,7 @@ def main():
         primorial_25=W,phi_primorial_25=phiW,ambient_affine_unit_density=[ambient.numerator,ambient.denominator],
         nicolas_threshold=dict(index=120569,prime=bound,prime_count=sum(sieve)),
         direct_exponent_controls=10000,
-        inherited_wheel_sha256=sha256(inherited.read_bytes()).hexdigest())
+        inherited_wheel_sha256=sha256(inherited.read_bytes().replace(b"\r\n", b"\n")).hexdigest())
     (HERE/'wheel_refinement.json').write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8')
     print(json.dumps(dict(status='PASS',minimal_period=L,survivors=survivors,
                           triple_predicates=len(classes),triple_count=len(triple_rows),

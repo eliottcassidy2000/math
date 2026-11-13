@@ -1,11 +1,12 @@
 """Replay this packet only; pin all required external repository inputs.
 
-Run at repository root or from any directory. Output comparison is exact;
+Run at repository root or from any directory. Text hashes and comparisons normalize CRLF to LF;
 all subprocesses use -B, and --optimized adds -O without disabling checks.
 """
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -20,14 +21,22 @@ ENGINES = [
     ('dihedral/check.py', 'dihedral/check.json', []),
     ('triples/check.py', 'triples/check.json', []),
     ('squares/verify.py', 'squares/receipt.json', ['--output', 'receipt.json']),
+    ('squares/audit_mutation.py', 'squares/mutation_audit.json', []),
     ('ports/verify.py', 'ports/receipt.json', []),
     ('ports/four_local.py', 'ports/four_local_receipt.json', []),
     ('ports/scout_returns.py', 'ports/scout_receipt.json', []),
 ]
 
 
+def native(path):
+    return Path('\\\\?\\'+str(path)) if os.name == 'nt' and not str(path).startswith('\\\\?\\') else path
+
+
 def digest(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    raw = native(path).read_bytes()
+    if path.suffix in (".md", ".py", ".json"):
+        raw = raw.replace(b"\r\n", b"\n")
+    return hashlib.sha256(raw).hexdigest()
 
 
 def main():
@@ -53,17 +62,22 @@ def main():
             json.dumps({'optimized':args.optimized,'engines':rows},indent=2)+'\n',encoding='utf-8')
     # Every linked local source is pinned; missing links fail instead of silently
     # treating a historical or renamed file as an available dependency.
-    linked = set()
+    linked = {
+        ROOT/'05-knowledge/results/session290_core_descent_20261113/descent/profiles.json.gz',
+        ROOT/'05-knowledge/results/endpoint_coverage_compiler_20261111/wheel.json',
+    }
     links = 0
     for note in sorted(HERE.rglob('*.md')):
-        for target in re.findall(r'\]\(([^)]+)\)', note.read_text(encoding='utf-8')):
+        prose = re.sub(r'```.*?```', '', note.read_text(encoding='utf-8'), flags=re.S)
+        prose = re.sub(r'`[^`]*`', '', prose)
+        for target in re.findall(r'\]\(([^)]+)\)', prose):
             if '://' in target or target.startswith('#'):
                 continue
             target = target.split('#')[0].strip('<>')
             if not target:
                 continue
             path = (note.parent/target).resolve()
-            if not path.is_file():
+            if not native(path).is_file():
                 raise RuntimeError(f'Broken link {note.relative_to(HERE)} -> {target}')
             links += 1
             if not path.is_relative_to(HERE):

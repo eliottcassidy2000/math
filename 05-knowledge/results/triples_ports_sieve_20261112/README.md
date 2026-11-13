@@ -34,6 +34,10 @@ For A135244, the inherited exact equivalence `M(n)=(n-1)^2 iff n-1 is prime` tra
 
 The earlier [absolute-return packet](../berggren_target_return_20261111/SYNTHESIS.md) supplies actual target-preserving returns at221 and665 and finite defect-growing branches from1997. Those constructions remain the anchor. This packet adds a precise reason to carry a cycle-defect sector through a birth, a complete infinite family of local completion spaces, a classifier for several compatibility interfaces, and arithmetic diagnostics for formal ternary branches. None supplies the missing all-target, source-valid return selector.
 
+There is a positive exact root-return family inside the cluster theorem: `R→C3` maps to `converse(C3)→R`, preserving `H=3H(R)` and all vertex names while creating three indegree-one roots. It toggles back repeatably, adds no vertices, and changes old arcs; the intermediate quivers need not be tournaments. This requires an extreme ordinal C3 factor. Both desired next targets3H+2 and3H+4 lose divisibility by3, so this carrier cannot by itself return after either branch. That is its exact closure failure.
+
+At checkpoint, incoming Session292 supplied a stronger hidden-factor theorem. [Its joint extension](arithmetic/JOINT_REFINEMENT.md) proves that every accepted joint phase has subprogressions with arbitrarily many distinct prime factors in each of A,B,C; the three factor lists are automatically disjoint. The entire triple also misses A002496, with C excluded by8 mod16 at k>=4. These are complete statements about this family, with no new global prime or sequence record.
+
 The synthesis is operational: retain the variable shared by the next move. For the wheel it is the exponent phase; for CRT transport it is the sign; for square kernels it is the outside component partition; for ports it is the continuation profile; for quiver mutation it is the full weighted matrix. These are related ways of repairing a lossy summary, not a proved identification of all five objects.
 
 - [Inheritance, corrections, and the live concept board](INHERITANCE.md)
@@ -44,3 +48,5 @@ The synthesis is operational: retain the variable shared by the next move. For t
 - Reproduce with `python -B 05-knowledge/results/triples_ports_sieve_20261112/reproduce.py` (and `--optimized`).
 
 The packet's receipts declare finite universes, positive and hostile controls, source hashes, and exact stopping boundaries. No new theorem namespace is reserved and no unreviewed canon promotion is made.
+
+For cross-platform reproduction, SHA-256 values in the packet manifest, source pins, and replay summaries normalize CRLF text to LF; compressed binary inputs are hashed without alteration. Mathematical receipts retain their declared source-hash conventions.
