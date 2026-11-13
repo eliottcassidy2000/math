@@ -1,0 +1,1269 @@
+{
+  "status": "PASS",
+  "source": {
+    "path": "session212/cycle-spectrum/tournaments8.txt",
+    "sha256": "ea57031fbd33f9b01de907a9248c99a01daf971fca2f27f3bbd74329e61d4525",
+    "order8_presentations": 6880,
+    "H71_presentations": 18
+  },
+  "scope": "Inherited complete census; independently counted selected profiles, not regenerated isomorphism classes",
+  "strong_core_presentations": [
+    {
+      "rows": [
+        4,
+        9,
+        66,
+        37,
+        15,
+        23,
+        59
+      ],
+      "order": 7,
+      "H": 71,
+      "P2": 1012,
+      "P2_oddpart": 253,
+      "roots": [
+        {
+          "root": 0,
+          "start": 5,
+          "deletion": 31,
+          "F": 287,
+          "indegree": 5,
+          "delta": 190
+        },
+        {
+          "root": 1,
+          "start": 9,
+          "deletion": 27,
+          "F": 167,
+          "indegree": 4,
+          "delta": 78
+        },
+        {
+          "root": 2,
+          "start": 5,
+          "deletion": 5,
+          "F": 105,
+          "indegree": 4,
+          "delta": 34
+        },
+        {
+          "root": 3,
+          "start": 8,
+          "deletion": 15,
+          "F": 118,
+          "indegree": 3,
+          "delta": 40
+        },
+        {
+          "root": 4,
+          "start": 16,
+          "deletion": 29,
+          "F": 102,
+          "indegree": 2,
+          "delta": 18
+        },
+        {
+          "root": 5,
+          "start": 12,
+          "deletion": 19,
+          "F": 90,
+          "indegree": 2,
+          "delta": 12
+        },
+        {
+          "root": 6,
+          "start": 16,
+          "deletion": 17,
+          "F": 72,
+          "indegree": 1,
+          "delta": 0
+        }
+      ]
+    },
+    {
+      "rows": [
+        4,
+        17,
+        50,
+        39,
+        9,
+        83,
+        31
+      ],
+      "order": 7,
+      "H": 71,
+      "P2": 1012,
+      "P2_oddpart": 253,
+      "roots": [
+        {
+          "root": 0,
+          "start": 5,
+          "deletion": 23,
+          "F": 241,
+          "indegree": 5,
+          "delta": 152
+        },
+        {
+          "root": 1,
+          "start": 6,
+          "deletion": 29,
+          "F": 184,
+          "indegree": 4,
+          "delta": 90
+        },
+        {
+          "root": 2,
+          "start": 5,
+          "deletion": 9,
+          "F": 115,
+          "indegree": 3,
+          "delta": 40
+        },
+        {
+          "root": 3,
+          "start": 9,
+          "deletion": 15,
+          "F": 97,
+          "indegree": 2,
+          "delta": 20
+        },
+        {
+          "root": 4,
+          "start": 7,
+          "deletion": 17,
+          "F": 149,
+          "indegree": 4,
+          "delta": 68
+        },
+        {
+          "root": 5,
+          "start": 13,
+          "deletion": 13,
+          "F": 77,
+          "indegree": 2,
+          "delta": 6
+        },
+        {
+          "root": 6,
+          "start": 26,
+          "deletion": 33,
+          "F": 78,
+          "indegree": 1,
+          "delta": 0
+        }
+      ]
+    },
+    {
+      "rows": [
+        4,
+        17,
+        66,
+        71,
+        77,
+        31,
+        35
+      ],
+      "order": 7,
+      "H": 71,
+      "P2": 1012,
+      "P2_oddpart": 253,
+      "roots": [
+        {
+          "root": 0,
+          "start": 5,
+          "deletion": 33,
+          "F": 273,
+          "indegree": 5,
+          "delta": 174
+        },
+        {
+          "root": 1,
+          "start": 7,
+          "deletion": 15,
+          "F": 139,
+          "indegree": 4,
+          "delta": 60
+        },
+        {
+          "root": 2,
+          "start": 5,
+          "deletion": 13,
+          "F": 167,
+          "indegree": 4,
+          "delta": 88
+        },
+        {
+          "root": 3,
+          "start": 13,
+          "deletion": 29,
+          "F": 103,
+          "indegree": 2,
+          "delta": 16
+        },
+        {
+          "root": 4,
+          "start": 11,
+          "deletion": 17,
+          "F": 95,
+          "indegree": 2,
+          "delta": 18
+        },
+        {
+          "root": 5,
+          "start": 21,
+          "deletion": 23,
+          "F": 73,
+          "indegree": 1,
+          "delta": 0
+        },
+        {
+          "root": 6,
+          "start": 9,
+          "deletion": 9,
+          "F": 91,
+          "indegree": 3,
+          "delta": 20
+        }
+      ]
+    },
+    {
+      "rows": [
+        4,
+        33,
+        66,
+        7,
+        15,
+        29,
+        59
+      ],
+      "order": 7,
+      "H": 71,
+      "P2": 1012,
+      "P2_oddpart": 253,
+      "roots": [
+        {
+          "root": 0,
+          "start": 5,
+          "deletion": 33,
+          "F": 291,
+          "indegree": 5,
+          "delta": 192
+        },
+        {
+          "root": 1,
+          "start": 9,
+          "deletion": 17,
+          "F": 137,
+          "indegree": 4,
+          "delta": 58
+        },
+        {
+          "root": 2,
+          "start": 5,
+          "deletion": 5,
+          "F": 109,
+          "indegree": 4,
+          "delta": 38
+        },
+        {
+          "root": 3,
+          "start": 11,
+          "deletion": 29,
+          "F": 143,
+          "indegree": 3,
+          "delta": 54
+        },
+        {
+          "root": 4,
+          "start": 16,
+          "deletion": 29,
+          "F": 100,
+          "indegree": 2,
+          "delta": 16
+        },
+        {
+          "root": 5,
+          "start": 11,
+          "deletion": 15,
+          "F": 89,
+          "indegree": 2,
+          "delta": 14
+        },
+        {
+          "root": 6,
+          "start": 14,
+          "deletion": 15,
+          "F": 72,
+          "indegree": 1,
+          "delta": 0
+        }
+      ]
+    },
+    {
+      "rows": [
+        8,
+        41,
+        19,
+        36,
+        75,
+        21,
+        47
+      ],
+      "order": 7,
+      "H": 71,
+      "P2": 1072,
+      "P2_oddpart": 67,
+      "roots": [
+        {
+          "root": 0,
+          "start": 4,
+          "deletion": 33,
+          "F": 292,
+          "indegree": 5,
+          "delta": 192
+        },
+        {
+          "root": 1,
+          "start": 11,
+          "deletion": 29,
+          "F": 147,
+          "indegree": 3,
+          "delta": 58
+        },
+        {
+          "root": 2,
+          "start": 7,
+          "deletion": 15,
+          "F": 113,
+          "indegree": 3,
+          "delta": 34
+        },
+        {
+          "root": 3,
+          "start": 4,
+          "deletion": 13,
+          "F": 172,
+          "indegree": 4,
+          "delta": 92
+        },
+        {
+          "root": 4,
+          "start": 13,
+          "deletion": 13,
+          "F": 79,
+          "indegree": 2,
+          "delta": 8
+        },
+        {
+          "root": 5,
+          "start": 7,
+          "deletion": 15,
+          "F": 119,
+          "indegree": 3,
+          "delta": 40
+        },
+        {
+          "root": 6,
+          "start": 25,
+          "deletion": 33,
+          "F": 79,
+          "indegree": 1,
+          "delta": 0
+        }
+      ]
+    },
+    {
+      "rows": [
+        32,
+        17,
+        19,
+        39,
+        9,
+        86,
+        31
+      ],
+      "order": 7,
+      "H": 71,
+      "P2": 1012,
+      "P2_oddpart": 253,
+      "roots": [
+        {
+          "root": 0,
+          "start": 5,
+          "deletion": 15,
+          "F": 201,
+          "indegree": 5,
+          "delta": 120
+        },
+        {
+          "root": 1,
+          "start": 7,
+          "deletion": 29,
+          "F": 193,
+          "indegree": 4,
+          "delta": 100
+        },
+        {
+          "root": 2,
+          "start": 11,
+          "deletion": 29,
+          "F": 137,
+          "indegree": 3,
+          "delta": 48
+        },
+        {
+          "root": 3,
+          "start": 8,
+          "deletion": 17,
+          "F": 104,
+          "indegree": 2,
+          "delta": 24
+        },
+        {
+          "root": 4,
+          "start": 6,
+          "deletion": 15,
+          "F": 152,
+          "indegree": 4,
+          "delta": 72
+        },
+        {
+          "root": 5,
+          "start": 5,
+          "deletion": 5,
+          "F": 79,
+          "indegree": 2,
+          "delta": 8
+        },
+        {
+          "root": 6,
+          "start": 29,
+          "deletion": 33,
+          "F": 75,
+          "indegree": 1,
+          "delta": 0
+        }
+      ]
+    },
+    {
+      "rows": [
+        64,
+        9,
+        19,
+        5,
+        75,
+        31,
+        46
+      ],
+      "order": 7,
+      "H": 71,
+      "P2": 1012,
+      "P2_oddpart": 253,
+      "roots": [
+        {
+          "root": 0,
+          "start": 5,
+          "deletion": 17,
+          "F": 207,
+          "indegree": 5,
+          "delta": 124
+        },
+        {
+          "root": 1,
+          "start": 7,
+          "deletion": 29,
+          "F": 189,
+          "indegree": 4,
+          "delta": 96
+        },
+        {
+          "root": 2,
+          "start": 8,
+          "deletion": 15,
+          "F": 112,
+          "indegree": 3,
+          "delta": 34
+        },
+        {
+          "root": 3,
+          "start": 6,
+          "deletion": 19,
+          "F": 168,
+          "indegree": 4,
+          "delta": 84
+        },
+        {
+          "root": 4,
+          "start": 12,
+          "deletion": 27,
+          "F": 110,
+          "indegree": 2,
+          "delta": 24
+        },
+        {
+          "root": 5,
+          "start": 28,
+          "deletion": 31,
+          "F": 74,
+          "indegree": 1,
+          "delta": 0
+        },
+        {
+          "root": 6,
+          "start": 5,
+          "deletion": 5,
+          "F": 81,
+          "indegree": 2,
+          "delta": 10
+        }
+      ]
+    },
+    {
+      "rows": [
+        4,
+        33,
+        2,
+        71,
+        79,
+        157,
+        39,
+        95
+      ],
+      "order": 8,
+      "H": 71,
+      "P2": 1976,
+      "P2_oddpart": 247,
+      "roots": [
+        {
+          "root": 0,
+          "start": 1,
+          "deletion": 39,
+          "F": 535,
+          "indegree": 6,
+          "delta": 426
+        },
+        {
+          "root": 1,
+          "start": 1,
+          "deletion": 9,
+          "F": 243,
+          "indegree": 5,
+          "delta": 164
+        },
+        {
+          "root": 2,
+          "start": 1,
+          "deletion": 23,
+          "F": 517,
+          "indegree": 6,
+          "delta": 424
+        },
+        {
+          "root": 3,
+          "start": 9,
+          "deletion": 35,
+          "F": 167,
+          "indegree": 3,
+          "delta": 70
+        },
+        {
+          "root": 4,
+          "start": 18,
+          "deletion": 35,
+          "F": 112,
+          "indegree": 2,
+          "delta": 24
+        },
+        {
+          "root": 5,
+          "start": 3,
+          "deletion": 3,
+          "F": 75,
+          "indegree": 2,
+          "delta": 4
+        },
+        {
+          "root": 6,
+          "start": 6,
+          "deletion": 27,
+          "F": 182,
+          "indegree": 3,
+          "delta": 90
+        },
+        {
+          "root": 7,
+          "start": 32,
+          "deletion": 35,
+          "F": 74,
+          "indegree": 1,
+          "delta": 0
+        }
+      ]
+    },
+    {
+      "rows": [
+        4,
+        65,
+        2,
+        71,
+        79,
+        31,
+        165,
+        63
+      ],
+      "order": 8,
+      "H": 71,
+      "P2": 1976,
+      "P2_oddpart": 247,
+      "roots": [
+        {
+          "root": 0,
+          "start": 1,
+          "deletion": 37,
+          "F": 531,
+          "indegree": 6,
+          "delta": 424
+        },
+        {
+          "root": 1,
+          "start": 1,
+          "deletion": 11,
+          "F": 287,
+          "indegree": 5,
+          "delta": 206
+        },
+        {
+          "root": 2,
+          "start": 1,
+          "deletion": 23,
+          "F": 505,
+          "indegree": 6,
+          "delta": 412
+        },
+        {
+          "root": 3,
+          "start": 6,
+          "deletion": 35,
+          "F": 190,
+          "indegree": 3,
+          "delta": 90
+        },
+        {
+          "root": 4,
+          "start": 12,
+          "deletion": 35,
+          "F": 128,
+          "indegree": 2,
+          "delta": 34
+        },
+        {
+          "root": 5,
+          "start": 21,
+          "deletion": 29,
+          "F": 103,
+          "indegree": 2,
+          "delta": 24
+        },
+        {
+          "root": 6,
+          "start": 3,
+          "deletion": 3,
+          "F": 87,
+          "indegree": 3,
+          "delta": 16
+        },
+        {
+          "root": 7,
+          "start": 26,
+          "deletion": 29,
+          "F": 74,
+          "indegree": 1,
+          "delta": 0
+        }
+      ]
+    },
+    {
+      "rows": [
+        8,
+        17,
+        19,
+        38,
+        9,
+        151,
+        63,
+        95
+      ],
+      "order": 8,
+      "H": 71,
+      "P2": 1976,
+      "P2_oddpart": 247,
+      "roots": [
+        {
+          "root": 0,
+          "start": 1,
+          "deletion": 29,
+          "F": 523,
+          "indegree": 6,
+          "delta": 424
+        },
+        {
+          "root": 1,
+          "start": 3,
+          "deletion": 35,
+          "F": 349,
+          "indegree": 5,
+          "delta": 246
+        },
+        {
+          "root": 2,
+          "start": 6,
+          "deletion": 35,
+          "F": 236,
+          "indegree": 4,
+          "delta": 136
+        },
+        {
+          "root": 3,
+          "start": 1,
+          "deletion": 3,
+          "F": 153,
+          "indegree": 4,
+          "delta": 80
+        },
+        {
+          "root": 4,
+          "start": 2,
+          "deletion": 29,
+          "F": 404,
+          "indegree": 5,
+          "delta": 306
+        },
+        {
+          "root": 5,
+          "start": 11,
+          "deletion": 11,
+          "F": 85,
+          "indegree": 2,
+          "delta": 14
+        },
+        {
+          "root": 6,
+          "start": 24,
+          "deletion": 37,
+          "F": 84,
+          "indegree": 1,
+          "delta": 0
+        },
+        {
+          "root": 7,
+          "start": 23,
+          "deletion": 23,
+          "F": 71,
+          "indegree": 1,
+          "delta": 0
+        }
+      ]
+    },
+    {
+      "rows": [
+        16,
+        17,
+        19,
+        7,
+        136,
+        159,
+        63,
+        79
+      ],
+      "order": 8,
+      "H": 71,
+      "P2": 1976,
+      "P2_oddpart": 247,
+      "roots": [
+        {
+          "root": 0,
+          "start": 1,
+          "deletion": 35,
+          "F": 595,
+          "indegree": 6,
+          "delta": 490
+        },
+        {
+          "root": 1,
+          "start": 2,
+          "deletion": 35,
+          "F": 404,
+          "indegree": 5,
+          "delta": 300
+        },
+        {
+          "root": 2,
+          "start": 4,
+          "deletion": 35,
+          "F": 268,
+          "indegree": 4,
+          "delta": 166
+        },
+        {
+          "root": 3,
+          "start": 7,
+          "deletion": 27,
+          "F": 217,
+          "indegree": 4,
+          "delta": 126
+        },
+        {
+          "root": 4,
+          "start": 1,
+          "deletion": 3,
+          "F": 177,
+          "indegree": 5,
+          "delta": 104
+        },
+        {
+          "root": 5,
+          "start": 24,
+          "deletion": 39,
+          "F": 86,
+          "indegree": 1,
+          "delta": 0
+        },
+        {
+          "root": 6,
+          "start": 23,
+          "deletion": 23,
+          "F": 71,
+          "indegree": 1,
+          "delta": 0
+        },
+        {
+          "root": 7,
+          "start": 9,
+          "deletion": 9,
+          "F": 87,
+          "indegree": 2,
+          "delta": 16
+        }
+      ]
+    }
+  ],
+  "root_controls": 81,
+  "equality_controls": [
+    {
+      "rows": [
+        8,
+        17,
+        19,
+        38,
+        9,
+        151,
+        63,
+        95
+      ],
+      "root": 7,
+      "state": [
+        71,
+        23,
+        23,
+        71
+      ]
+    },
+    {
+      "rows": [
+        16,
+        17,
+        19,
+        7,
+        136,
+        159,
+        63,
+        79
+      ],
+      "root": 6,
+      "state": [
+        71,
+        23,
+        23,
+        71
+      ]
+    }
+  ],
+  "P2_values": [
+    1012,
+    1072,
+    1976
+  ],
+  "maximum_F": 595,
+  "excluded_oddpart": 405,
+  "balanced_t71_ray_support": [
+    {
+      "oddpart": 1,
+      "minimum_exponent": 8
+    },
+    {
+      "oddpart": 7,
+      "minimum_exponent": 5
+    },
+    {
+      "oddpart": 9,
+      "minimum_exponent": 4
+    },
+    {
+      "oddpart": 13,
+      "minimum_exponent": 4
+    },
+    {
+      "oddpart": 19,
+      "minimum_exponent": 4
+    },
+    {
+      "oddpart": 21,
+      "minimum_exponent": 3
+    },
+    {
+      "oddpart": 23,
+      "minimum_exponent": 4
+    },
+    {
+      "oddpart": 25,
+      "minimum_exponent": 3
+    },
+    {
+      "oddpart": 37,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 39,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 43,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 45,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 51,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 55,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 59,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 67,
+      "minimum_exponent": 3
+    },
+    {
+      "oddpart": 71,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 73,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 75,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 77,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 79,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 81,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 85,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 87,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 89,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 91,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 95,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 97,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 101,
+      "minimum_exponent": 3
+    },
+    {
+      "oddpart": 103,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 105,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 109,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 113,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 115,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 119,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 137,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 139,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 143,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 147,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 149,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 153,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 167,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 177,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 189,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 193,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 201,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 207,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 217,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 241,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 243,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 247,
+      "minimum_exponent": 3
+    },
+    {
+      "oddpart": 253,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 273,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 287,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 291,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 349,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 505,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 517,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 523,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 531,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 535,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 595,
+      "minimum_exponent": 1
+    }
+  ],
+  "neighboring_ray": {
+    "core_rows": [
+      8,
+      17,
+      19,
+      38,
+      9,
+      151,
+      63,
+      95
+    ],
+    "core_root": 4,
+    "parent_rows": [
+      8,
+      17,
+      19,
+      38,
+      9,
+      151,
+      63,
+      95,
+      255
+    ],
+    "literal_levels": [
+      {
+        "k": 1,
+        "rows": [
+          8,
+          17,
+          19,
+          38,
+          521,
+          151,
+          63,
+          95,
+          255,
+          495
+        ],
+        "root": 9,
+        "state": [
+          879,
+          71,
+          71,
+          879
+        ]
+      },
+      {
+        "k": 2,
+        "rows": [
+          8,
+          17,
+          19,
+          38,
+          521,
+          151,
+          63,
+          95,
+          255,
+          1519,
+          511
+        ],
+        "root": 9,
+        "state": [
+          1687,
+          71,
+          71,
+          1687
+        ]
+      },
+      {
+        "k": 3,
+        "rows": [
+          8,
+          17,
+          19,
+          38,
+          521,
+          151,
+          63,
+          95,
+          255,
+          3567,
+          511,
+          1535
+        ],
+        "root": 9,
+        "state": [
+          3303,
+          71,
+          71,
+          3303
+        ]
+      },
+      {
+        "k": 4,
+        "rows": [
+          8,
+          17,
+          19,
+          38,
+          521,
+          151,
+          63,
+          95,
+          255,
+          7663,
+          511,
+          1535,
+          3583
+        ],
+        "root": 9,
+        "state": [
+          6535,
+          71,
+          71,
+          6535
+        ]
+      }
+    ]
+  }
+}

@@ -3,6 +3,11 @@
 [Research packet](../05-knowledge/results/eight_nine_twentyseven_20261112/README.md).
 **PROVED IN NOTES / FINITE-EXACT; Chan–Pak OPEN.**
 
+[Changing cores at881](../05-knowledge/results/changing_core_returns_20261113/README.md):
+minimal arc repairs and a smaller strong core; exact neutral-component products;
+fixed-balanced dyadic classification; all30 ray targets with one defect3 exception.
+The repeatable unit-ready405-ray return remains OPEN.
+
 [Next: exact-target repairs and reusable marked grammar](../05-knowledge/results/h17_exact_repairs_20261112/README.md):
 H9 root-star repair, arbitrary-left-factor same-next-target repair, closed
 primitive chain recursion and exact addresses; arbitrary target supply OPEN.

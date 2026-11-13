@@ -1,11 +1,38 @@
 {
   "startup_base": "b1f253bebc",
-  "receipt_sha256": "113fa185a6da9059c3701255af47543293df93f88d7f368e4980b3e74372457f",
+  "incoming_continuation_fibre_commit": "e62213ab8b",
+  "local_proof_links_checked": 12,
+  "receipt_pairs": {
+    "receipt": {
+      "byte_identical": true,
+      "sha256": "456d14ee2c0e14b1ec2fef648e5b45773771ad1e8f9d62518d33182fa6163ce3"
+    },
+    "port_readiness": {
+      "byte_identical": true,
+      "sha256": "cdecef79f68c2110260a1cc7906f646d6d0683105bc6d331714a45492565f44b"
+    },
+    "neutral_881_patch": {
+      "byte_identical": true,
+      "sha256": "725f47d6f5df727ecd0b268d685b4035833ed1d62366512e33d6f13b9d16798a"
+    },
+    "neutral_881_three": {
+      "byte_identical": true,
+      "sha256": "86191aa5de9ccd7c9eb0b0de657f2f7237dd3533cd6246b46eca47121d8e0f7e"
+    },
+    "neutral_881_four": {
+      "byte_identical": true,
+      "sha256": "5b0b6c99999b2879d08fd443cc8d350b291063fe005093499a3af33971db9e50"
+    }
+  },
   "source_sha256": {
     "05-knowledge/results/eight_nine_twentyseven_20261112/constructors/SIX_RETURN.md": "fb8bd98aa7d3960389b91e11c2f05bf9bb06a036863a05ae01244b506c4d7928",
     "05-knowledge/results/session298_exact_target_geometry_20261113/README.md": "6e24968ae5c84a9b9c632cdd93dce1215ec9ee56e0ce75950205491e66047d74",
     "05-knowledge/results/session298_exact_target_geometry_20261113/TWO_WIDTH.md": "443963696f053a529f13dfbbb526fd4e0092a06c70de4d7aefdc782cac9c5110",
     "05-knowledge/results/source_selection_closure_20261103/NATIVE_SELECTION.md": "5e7c574cf63fe13db453d9c4f63f3d1035194516a0957e489d88b60d299db178",
-    "05-knowledge/results/cycle_opening_six_return_20261112/counts/PROOF.md": "c1d0421675ebe7c397c1aa527fbcf4126040271c7663bfc9e0f7e86869c21695"
+    "05-knowledge/results/cycle_opening_six_return_20261112/counts/PROOF.md": "c1d0421675ebe7c397c1aa527fbcf4126040271c7663bfc9e0f7e86869c21695",
+    "05-knowledge/results/session26_random_bridges_20261022/session26-tournament/CUT_ADDENDUM.md": "05d8be14ff381ff5dc403ca2d2d50ca5199b9d34d2c1dcd832e9cd803bebe244",
+    "05-knowledge/results/changing_core_returns_20261113/selector/receipt.json": "5990eb4b8c69c300706d9a2fd5d2f0b218e0e157412ec3bea5343d9d82dadf87",
+    "05-knowledge/results/changing_core_returns_20261113/geometry/NEUTRAL_SCC.md": "7bc2da406d623f47911dfe68faad4fa1160ace4c7cdbfa9917e4b6dc463c41c7",
+    "05-knowledge/results/h17_exact_repairs_20261112/history/CONTINUATION_FIBRES.md": "792d61393306a2a758da4818491d31b18fa5cef3d8f7aad9c54ed7b19b0da02e"
   }
 }

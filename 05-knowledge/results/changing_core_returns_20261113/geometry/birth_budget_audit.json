@@ -1,0 +1,553 @@
+{
+  "status": "FINITE-EXACT",
+  "optimized": false,
+  "scope": "Eleven supplied literal strong H71 cores, 62-ray compression, and four actual neighboring-ray graphs; inherited isomorphism census completeness not regenerated.",
+  "literal_permutations_tested": 534293,
+  "root_profiles": 81,
+  "cores": [
+    {
+      "rows": [
+        4,
+        9,
+        66,
+        37,
+        15,
+        23,
+        59
+      ],
+      "order": 7,
+      "P2": 1012,
+      "F": [
+        287,
+        167,
+        105,
+        118,
+        102,
+        90,
+        72
+      ]
+    },
+    {
+      "rows": [
+        4,
+        17,
+        50,
+        39,
+        9,
+        83,
+        31
+      ],
+      "order": 7,
+      "P2": 1012,
+      "F": [
+        241,
+        184,
+        115,
+        97,
+        149,
+        77,
+        78
+      ]
+    },
+    {
+      "rows": [
+        4,
+        17,
+        66,
+        71,
+        77,
+        31,
+        35
+      ],
+      "order": 7,
+      "P2": 1012,
+      "F": [
+        273,
+        139,
+        167,
+        103,
+        95,
+        73,
+        91
+      ]
+    },
+    {
+      "rows": [
+        4,
+        33,
+        66,
+        7,
+        15,
+        29,
+        59
+      ],
+      "order": 7,
+      "P2": 1012,
+      "F": [
+        291,
+        137,
+        109,
+        143,
+        100,
+        89,
+        72
+      ]
+    },
+    {
+      "rows": [
+        8,
+        41,
+        19,
+        36,
+        75,
+        21,
+        47
+      ],
+      "order": 7,
+      "P2": 1072,
+      "F": [
+        292,
+        147,
+        113,
+        172,
+        79,
+        119,
+        79
+      ]
+    },
+    {
+      "rows": [
+        32,
+        17,
+        19,
+        39,
+        9,
+        86,
+        31
+      ],
+      "order": 7,
+      "P2": 1012,
+      "F": [
+        201,
+        193,
+        137,
+        104,
+        152,
+        79,
+        75
+      ]
+    },
+    {
+      "rows": [
+        64,
+        9,
+        19,
+        5,
+        75,
+        31,
+        46
+      ],
+      "order": 7,
+      "P2": 1012,
+      "F": [
+        207,
+        189,
+        112,
+        168,
+        110,
+        74,
+        81
+      ]
+    },
+    {
+      "rows": [
+        4,
+        33,
+        2,
+        71,
+        79,
+        157,
+        39,
+        95
+      ],
+      "order": 8,
+      "P2": 1976,
+      "F": [
+        535,
+        243,
+        517,
+        167,
+        112,
+        75,
+        182,
+        74
+      ]
+    },
+    {
+      "rows": [
+        4,
+        65,
+        2,
+        71,
+        79,
+        31,
+        165,
+        63
+      ],
+      "order": 8,
+      "P2": 1976,
+      "F": [
+        531,
+        287,
+        505,
+        190,
+        128,
+        103,
+        87,
+        74
+      ]
+    },
+    {
+      "rows": [
+        8,
+        17,
+        19,
+        38,
+        9,
+        151,
+        63,
+        95
+      ],
+      "order": 8,
+      "P2": 1976,
+      "F": [
+        523,
+        349,
+        236,
+        153,
+        404,
+        85,
+        84,
+        71
+      ]
+    },
+    {
+      "rows": [
+        16,
+        17,
+        19,
+        7,
+        136,
+        159,
+        63,
+        79
+      ],
+      "order": 8,
+      "P2": 1976,
+      "F": [
+        595,
+        404,
+        268,
+        217,
+        177,
+        86,
+        71,
+        87
+      ]
+    }
+  ],
+  "exact_ray_support": [
+    {
+      "oddpart": 1,
+      "minimum_exponent": 8
+    },
+    {
+      "oddpart": 7,
+      "minimum_exponent": 5
+    },
+    {
+      "oddpart": 9,
+      "minimum_exponent": 4
+    },
+    {
+      "oddpart": 13,
+      "minimum_exponent": 4
+    },
+    {
+      "oddpart": 19,
+      "minimum_exponent": 4
+    },
+    {
+      "oddpart": 21,
+      "minimum_exponent": 3
+    },
+    {
+      "oddpart": 23,
+      "minimum_exponent": 4
+    },
+    {
+      "oddpart": 25,
+      "minimum_exponent": 3
+    },
+    {
+      "oddpart": 37,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 39,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 43,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 45,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 51,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 55,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 59,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 67,
+      "minimum_exponent": 3
+    },
+    {
+      "oddpart": 71,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 73,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 75,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 77,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 79,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 81,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 85,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 87,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 89,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 91,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 95,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 97,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 101,
+      "minimum_exponent": 3
+    },
+    {
+      "oddpart": 103,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 105,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 109,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 113,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 115,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 119,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 137,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 139,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 143,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 147,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 149,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 153,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 167,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 177,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 189,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 193,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 201,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 207,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 217,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 241,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 243,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 247,
+      "minimum_exponent": 3
+    },
+    {
+      "oddpart": 253,
+      "minimum_exponent": 2
+    },
+    {
+      "oddpart": 273,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 287,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 291,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 349,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 505,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 517,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 523,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 531,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 535,
+      "minimum_exponent": 1
+    },
+    {
+      "oddpart": 595,
+      "minimum_exponent": 1
+    }
+  ],
+  "neighboring_levels": [
+    {
+      "k": 1,
+      "state": [
+        879,
+        71,
+        71,
+        879
+      ],
+      "order": 10
+    },
+    {
+      "k": 2,
+      "state": [
+        1687,
+        71,
+        71,
+        1687
+      ],
+      "order": 11
+    },
+    {
+      "k": 3,
+      "state": [
+        3303,
+        71,
+        71,
+        3303
+      ],
+      "order": 12
+    },
+    {
+      "k": 4,
+      "state": [
+        6535,
+        71,
+        71,
+        6535
+      ],
+      "order": 13
+    }
+  ],
+  "inherited_census_sha256": "ea57031fbd33f9b01de907a9248c99a01daf971fca2f27f3bbd74329e61d4525",
+  "input_sha256": "b0a897c5a43053be6a59dccca93285ed07a5f00534afcf41a268b78a0030a600"
+}

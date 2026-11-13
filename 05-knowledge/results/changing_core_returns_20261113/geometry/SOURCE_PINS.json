@@ -116,6 +116,26 @@
       "path": "05-knowledge/results/multicore_metagraph_20261113/FAMILIES.md",
       "sha256": "e52e32d1a0a6355a981ce5242edd7c578fd77282c014b76a6feac94058871b35",
       "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md",
+      "sha256": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/OBSTRUCTION.md",
+      "sha256": "5890c526288797d4bd80ffaa5eefaa9aa148ee928163f104dea76fc5c4fc39ef",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "session212/cycle-spectrum/PROOF.md",
+      "sha256": "37644c01ae4829514002111953497dcd7615bbef6731082c33eb4bc4b8665960",
+      "hash_basis": "git blob bytes at source_commit"
+    },
+    {
+      "path": "session212/cycle-spectrum/tournaments8.txt",
+      "sha256": "86df994d7c4f535d1ea7fc7f452c07177a426f5fe12efa37e2134dbe0f192f5b",
+      "hash_basis": "git blob bytes at source_commit"
     }
   ],
   "local_controls": [
@@ -142,6 +162,30 @@
     {
       "path": "neutral_scc.optimized.json",
       "sha256": "c535d9ba95f3d3e62c6daee42d4ca94d2d080c1d21921963565cf7cd7b5f46ed"
+    },
+    {
+      "path": "birth_budget_audit.py",
+      "sha256": "a3b0d724d6637608f3d2293ffb4625e95ffc3737ef09f59bd9710d58b1d0f93c"
+    },
+    {
+      "path": "birth_budget_audit.json",
+      "sha256": "0c5247b5f87b226c087fcf779a6a2313aadf8b48d746cc64d5fc5ada62bf1720"
+    },
+    {
+      "path": "birth_budget_audit.optimized.json",
+      "sha256": "16dc39266eb69a1b5dcd69e0d6de420a71de66efa91538023dfc5bc356576bc8"
+    },
+    {
+      "path": "preparation_audit.py",
+      "sha256": "50e6c8c9c50c9df22ab8f25b5fff1233107f3f20296fae0af77c578121b496f0"
+    },
+    {
+      "path": "preparation_audit.json",
+      "sha256": "f1f441f7cfe8086f58672b0a1d587b6f8e36ea6be1cc53ff5eaee272246033a7"
+    },
+    {
+      "path": "preparation_audit.optimized.json",
+      "sha256": "70049438159210e943ae94aaf3367dd589ec8d74fdfe299de05452c875aeab8c"
     }
   ],
   "primary_literature": [
@@ -160,18 +204,65 @@
       "identifier": "arXiv:2412.10572v3 (2025 revision)",
       "used_claim": "Corollary20 odd-cycle collection formula, attributed there to Grinberg-Stanley",
       "access_date": "2026-11-13"
+    },
+    {
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf/",
+      "authors": "Arthur H. Busch",
+      "title": "A Note on the Number of Hamiltonian Paths in Strong Tournaments",
+      "identifier": "Electronic Journal of Combinatorics13 (2006), N3",
+      "used_claim": "Corollary1 exact minimum strong Hamiltonian counts; at order9 the bound is75 and increases thereafter",
+      "access_date": "2026-11-13"
     }
   ],
   "audited_selector_sources": [
     {
       "path": "05-knowledge/results/changing_core_returns_20261113/selector/PROOF.md",
-      "sha256": "a8b0b3c8e3002bc681a5ea5ee222cfbf8797d4d675843cb79e5370e0e5b2de69",
-      "hash_basis": "working file at audit time"
+      "sha256": "0a038942da29d3bb63fc3f311c9382142325bf9da5c43eafe3b6f6d6fe1855c2",
+      "hash_basis": "current working revision reviewed including weak-padding and minimal-repair follow-up scope"
     },
     {
       "path": "05-knowledge/results/changing_core_returns_20261113/selector/receipt.json",
       "sha256": "5990eb4b8c69c300706d9a2fd5d2f0b218e0e157412ec3bea5343d9d82dadf87",
-      "hash_basis": "working file at audit time"
+      "hash_basis": "current working revision reviewed including weak-padding and minimal-repair follow-up scope"
+    }
+  ],
+  "audited_birth_budget_sources": [
+    {
+      "path": "05-knowledge/results/changing_core_returns_20261113/returns/BIRTH_BUDGET.md",
+      "sha256": "0b7fd77298aa84037a5025314f142e088992431166522abc177a07c6cc759e61",
+      "hash_basis": "current working revision reviewed including 62-ray support, t1 boundary, and neighboring literal ray"
+    },
+    {
+      "path": "05-knowledge/results/changing_core_returns_20261113/returns/FIXED_BALANCED.md",
+      "sha256": "d1a3fe52f9f63cff5143abfbea32390619f814053af830c91eb4ba020263e737",
+      "hash_basis": "current working revision reviewed including 62-ray support, t1 boundary, and neighboring literal ray"
+    },
+    {
+      "path": "05-knowledge/results/changing_core_returns_20261113/returns/birth_budget_receipt.json",
+      "sha256": "b0a897c5a43053be6a59dccca93285ed07a5f00534afcf41a268b78a0030a600",
+      "hash_basis": "current working revision reviewed including 62-ray support, t1 boundary, and neighboring literal ray"
+    }
+  ],
+  "audited_preparation_sources": [
+    {
+      "path": "05-knowledge/results/changing_core_returns_20261113/preparation/NEUTRAL_881.md",
+      "sha256": "50fd0e2685f84e82be64b50fa4047bce65c4d311c6c5828074a9cd2ed5584d50",
+      "hash_basis": "current working revision reviewed including corrected first-birth versus balanced-entry wording"
+    },
+    {
+      "path": "05-knowledge/results/changing_core_returns_20261113/preparation/neutral_881_four.cpp",
+      "sha256": "31503fd9607574a15134355b433c0c7afc96629ab486519ff7ea329814780598",
+      "hash_basis": "current working revision reviewed including corrected first-birth versus balanced-entry wording"
+    },
+    {
+      "path": "05-knowledge/results/changing_core_returns_20261113/preparation/neutral_881_four.py",
+      "sha256": "7b05913217cd9d472caff37b18280f1ba99c99a077ac889eabfc0b51ebb27be8",
+      "hash_basis": "current working revision reviewed including corrected first-birth versus balanced-entry wording"
+    },
+    {
+      "path": "05-knowledge/results/changing_core_returns_20261113/preparation/neutral_881_four.json",
+      "sha256": "5b0b6c99999b2879d08fd443cc8d350b291063fe005093499a3af33971db9e50",
+      "hash_basis": "current working revision reviewed including corrected first-birth versus balanced-entry wording"
     }
   ]
 }

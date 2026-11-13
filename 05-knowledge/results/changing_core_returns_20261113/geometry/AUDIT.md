@@ -6,7 +6,7 @@ test universe only. No theorem ID was reserved or promoted by this lane.
 
 ## Independent proof review
 
-The sibling reusable-repairs agent independently reviewed Sections1–7 of the
+The sibling reusable-repairs agent independently reviewed Sections1â€“7 of the
 initial proof and confirmed the positive skeleton multiplicities, including
 B_2>=H(Q), the empty-exterior boundary, strict even differences, and the
 isometric neutral interval. No correction was requested.
@@ -40,7 +40,7 @@ Normal and optimized runs both pass and agree after removing their mode flag:
 
 The all-k and all-odd-m arithmetic obstruction is proved in PROOF.md using
 the inherited Session298 formula; the finite k-range is only a control.
-All local Markdown links resolve. SOURCE_PINS.json pins23 inherited files to
+All local Markdown links resolve. SOURCE_PINS.json pins27 inherited files to
 base commit b1f253bebcfc674da68bbe5474ab6265b5ab7e2e, records the primary
 literature precedent, and hashes the script and both exact reports.
 
@@ -77,3 +77,26 @@ rooted state and commutes with the explicit selector preparation and births.
 adjacencies; full881 component traversals of sizes4 and2; all21 source-root
 profiles, both physical replacements, and all six literal returned graphs.
 The reports and audited selector source hashes are included in SOURCE_PINS.json.
+
+
+The reusable-repairs agent separately audited NEUTRAL_SCC.md Sections1â€“5:
+triangle-packing increment, reverse no-splitting argument, Cartesian factors,
+homogeneous-neighbour equivariance, and tail-profile/operation commutation.
+They found no correction and independently obtained the same4/2 source components.
+
+BIRTH_BUDGET_AUDIT.md records the later independent proof audit of the all-order
+one-birth405-ray defect bound. All eleven literal core arrays and81 marked
+profiles were recounted by534,293 explicit subset-permutation tests, importing
+no original counting implementation. Normal and optimized results agree. The
+inherited6880-class census completeness remains explicitly inherited; its hash
+and line count were checked. No mathematical correction was required.
+
+
+Final FOLLOWUP_AUDIT.md reviews the fixed-order minimum patch widths and the
+all-fixed-t balanced support theorem, including the t1/Fermat boundary. All44
+supplied endpoint records, the two individual neutral tail deletions, and the
+nine-vertex core return were independently recounted. The H71 audit now also
+reconstructs all62 odd-part rays and independently checks the first four actual
+404-neighbor graphs. All four geometry normal/optimized report pairs agree.
+Current selector, fixed-balanced, birth-budget, and preparation revision hashes
+are refreshed in SOURCE_PINS.json, including their final scope clarifications.

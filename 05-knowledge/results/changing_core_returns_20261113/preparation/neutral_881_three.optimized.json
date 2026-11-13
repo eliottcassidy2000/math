@@ -1,0 +1,884 @@
+{
+  "status": "PASS",
+  "scope": "All three-arc endpoint patches from the second named strong unit-ready H881 source, 55 choose3",
+  "patch_count": 26235,
+  "H881_endpoints": [
+    {
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "rows": [
+        1380,
+        1005,
+        1000,
+        1009,
+        999,
+        960,
+        896,
+        769,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "rows": [
+        1392,
+        1013,
+        1001,
+        1011,
+        996,
+        960,
+        896,
+        769,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "rows": [
+        1392,
+        997,
+        1017,
+        1011,
+        994,
+        960,
+        896,
+        769,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "rows": [
+        1514,
+        1012,
+        1001,
+        1010,
+        997,
+        960,
+        896,
+        768,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        348,
+        351,
+        884
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 3,
+      "wheel": {
+        "delta": 0,
+        "d": 533,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "rows": [
+        1522,
+        1004,
+        1001,
+        1009,
+        998,
+        960,
+        896,
+        768,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        348,
+        351,
+        884
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 3,
+      "wheel": {
+        "delta": 0,
+        "d": 533,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "rows": [
+        1442,
+        996,
+        1001,
+        1011,
+        999,
+        960,
+        769,
+        832,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "rows": [
+        1058,
+        996,
+        1001,
+        995,
+        1007,
+        960,
+        897,
+        769,
+        513,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        143,
+        143,
+        881
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 0,
+      "wheel": {
+        "delta": 0,
+        "d": 738,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "rows": [
+        1250,
+        996,
+        1001,
+        1011,
+        999,
+        960,
+        896,
+        512,
+        641,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "rows": [
+        1506,
+        868,
+        993,
+        1015,
+        999,
+        960,
+        896,
+        770,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        133,
+        133,
+        881
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 0,
+      "wheel": {
+        "delta": 0,
+        "d": 748,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "rows": [
+        1634,
+        996,
+        1001,
+        1011,
+        999,
+        960,
+        896,
+        769,
+        1,
+        256,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          0,
+          10
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "rows": [
+        354,
+        996,
+        1001,
+        947,
+        935,
+        960,
+        920,
+        769,
+        512,
+        1,
+        1023
+      ],
+      "state": [
+        881,
+        881,
+        881,
+        881
+      ],
+      "strong": false,
+      "root_indegree": 0,
+      "ready_defect": 0,
+      "wheel": {
+        "delta": 0,
+        "d": 0,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "rows": [
+        1378,
+        1000,
+        1003,
+        1009,
+        999,
+        896,
+        928,
+        769,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "rows": [
+        1378,
+        1008,
+        1003,
+        1011,
+        997,
+        896,
+        928,
+        769,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "rows": [
+        1378,
+        960,
+        971,
+        1011,
+        999,
+        966,
+        896,
+        769,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "rows": [
+        1378,
+        960,
+        1003,
+        979,
+        999,
+        970,
+        896,
+        769,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "rows": [
+        1378,
+        960,
+        1003,
+        1011,
+        967,
+        978,
+        896,
+        769,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "rows": [
+        1378,
+        996,
+        1009,
+        999,
+        1003,
+        960,
+        896,
+        769,
+        512,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "rows": [
+        1378,
+        996,
+        1001,
+        1011,
+        999,
+        960,
+        512,
+        577,
+        704,
+        1,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    },
+    {
+      "arcs": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "rows": [
+        1378,
+        996,
+        1001,
+        1011,
+        999,
+        960,
+        896,
+        1,
+        128,
+        385,
+        1022
+      ],
+      "state": [
+        881,
+        218,
+        219,
+        882
+      ],
+      "strong": true,
+      "root_indegree": 1,
+      "ready_defect": 1,
+      "wheel": {
+        "delta": 0,
+        "d": 663,
+        "period": 1,
+        "good": [],
+        "reason": "delta divisible by three"
+      },
+      "entry_possible": false
+    }
+  ],
+  "entry_repairs": [],
+  "count_engine": "Independent subset-path engine from preparation/check.py",
+  "wheel_engine": "Audited exact selector.wheel; successful short returns independently counted"
+}

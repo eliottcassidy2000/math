@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "local_markdown_links": 86,
+  "normal_optimized_pairs": [
+    "geometry\\birth_budget_audit.json",
+    "geometry\\neutral_scc.json",
+    "geometry\\preparation_audit.json",
+    "geometry\\verification.json",
+    "preparation\\neutral_881_four.json",
+    "preparation\\neutral_881_patch.json",
+    "preparation\\neutral_881_three.json",
+    "preparation\\port_readiness.json",
+    "preparation\\receipt.json",
+    "returns\\birth_budget_receipt.json",
+    "returns\\deepening_receipt.json",
+    "returns\\growing_receipt.json",
+    "returns\\inverse_receipt.json",
+    "returns\\wrapper_receipt.json",
+    "selector\\receipt.json"
+  ],
+  "inherited_pins_checked": 43,
+  "final_reviewed_sources": 9,
+  "scope": "Does not regenerate inherited isomorphism census or replace the mathematical proof reviews; every optimized receipt is compared with its normal partner."
+}

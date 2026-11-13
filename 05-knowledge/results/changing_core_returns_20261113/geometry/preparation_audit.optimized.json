@@ -1,0 +1,48 @@
+{
+  "status": "FINITE-EXACT",
+  "optimized": true,
+  "scope": "Independent endpoint recount; exhaustive patch enumeration completeness was reviewed in source code, not rerun.",
+  "patch_endpoints_recounted": 44,
+  "strong_filtered_width4": [
+    [
+      881,
+      97,
+      97,
+      941
+    ]
+  ],
+  "successful_weak_width4": 4,
+  "selected_deletion_steps": [
+    {
+      "deleted_old_name": 9,
+      "state": [
+        881,
+        169,
+        201,
+        977
+      ],
+      "order": 10
+    },
+    {
+      "deleted_old_name": 8,
+      "state": [
+        881,
+        169,
+        201,
+        977
+      ],
+      "order": 9
+    }
+  ],
+  "selected_return": [
+    5195,
+    1689,
+    1689,
+    5195
+  ],
+  "reviewed_source_hashes": {
+    "NEUTRAL_881.md": "50fd0e2685f84e82be64b50fa4047bce65c4d311c6c5828074a9cd2ed5584d50",
+    "neutral_881_four.cpp": "31503fd9607574a15134355b433c0c7afc96629ab486519ff7ea329814780598",
+    "neutral_881_four.py": "7b05913217cd9d472caff37b18280f1ba99c99a077ac889eabfc0b51ebb27be8"
+  }
+}
