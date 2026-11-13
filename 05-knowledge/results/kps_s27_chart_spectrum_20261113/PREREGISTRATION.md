@@ -30,3 +30,11 @@ Prediction:
   ten listed above together with at least one value in (225, 375) — candidates 251, 263, 277, 287, 341, 343;
 - 31 and 127 stay missed (Mersenne primes);
 - confidence about 0.65 for "at least one more".
+
+## Correction appended after registration (before the P1 result was read)
+
+- The order-10 count of G classes is **1,558**, not 1,597. The file g10.txt has 2,374 lines over orders 1-10, and
+  orders 1-9 account for 816 of them. The read-only sweep regenerated 1,558 independently and matched Session 268.
+- **Credit.** The spectrum of the unswitched grammar G is KNOWN. It is Session 268's composable-tournament census
+  (session268_composable_tournaments_20261111/modular, n <= 16, 74,149 distinct H at order 16), which also names
+  13 as outside the family. Only the switching closure, the chart class proper, is new here.
