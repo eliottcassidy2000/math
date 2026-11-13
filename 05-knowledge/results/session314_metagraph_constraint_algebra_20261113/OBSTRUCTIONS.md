@@ -48,7 +48,7 @@ y^{n+1}\left(\prod_i z_i\right)P_n(z)(1+y^{-1})^u
 $$
 with $u=2$ for odd $n$, $u=1$ for even $n$. Each product on the right ranges over the old indices meeting its condition. Each monomial deposits its coefficient on the unordered profile pair obtained from $s$ and $s-e_0$ by centering, taking magnitudes and sorting. Divide by two at the end to count lines rather than their two tilings. This recovers exact quotient multiplicities, including pairs with equal profiles, not the edges of the unquotiented graph.
 
-The [direct score replay](replay_score_quotient.py) finds through odd order 9 that every feasible one-box pair occurs except when both profiles are nonstrong. The profile/edge counts are $2/1,5/4,15/17,48/71$ for $n=3,5,7,9$. That candidate sufficiency is not proved in general; the exact coefficient rule does not depend on it.
+The [direct score replay](replay_score_quotient.py) finds through odd order 9 that every feasible one-box pair occurs except when both profiles are nonstrong. The profile/edge counts are $2/1,5/4,15/17,48/71$ for $n=3,5,7,9$. The candidate is now proved in all orders in [complete blue profile support](BLUE_PROFILE_SUPPORT.md).
 
 ## (A_5) and Petersen live differently in the shadow
 
@@ -66,4 +66,4 @@ P_{2m+1}(z)=P_{2m}(z)\prod_{i=0}^{m-1}(1+z_i).
 $$
 The old transitive scores each rise by one and the unary exponent each rises by one. There is a new free mirror orbit at every pair: at the innermost pair the old central backbone arc is freed and the new two center arcs are fixed. In centered coordinates the extra factor is $\prod_i(z_i^{1/2}+z_i^{-1/2})$, the spin-weight pattern. In particular $4\to5$ supplies two bits and $8\to9$ supplies four bits, multiplying the blue tiling totals by four and sixteen. This is a precise score transfer, not an eight-period theorem about whole metagraphs.
 
-The [coefficient DP](replay_score_dp.py) also verifies the one-box support conjecture through odd orders 11 and 13, with respectively 161 profiles and 295 edges, then 557 profiles and 1219 edges. It enumerates score monomials, not the blue tiling cube. This is evidence for a score-quotient conjecture; it does not force edges between individual classes.
+The [coefficient DP](replay_score_dp.py) also verifies the one-box support conjecture through odd orders 11 and 13, with respectively 161 profiles and 295 edges, then 557 profiles and 1219 edges. It enumerates score monomials, not the blue tiling cube. These were finite controls for the now-proved [score-quotient theorem](BLUE_PROFILE_SUPPORT.md); they do not force edges between individual classes.
