@@ -4,6 +4,8 @@ Let T be the ordinary plus shortcut map on the 2-adic integers: even x maps to x
 
 ## 1. The exact Hausdorff dimension is h₂(p)
 
+The [September directions note](../collatz_directions_20260926.md), Proposition 1, already proved the box dimension of this exact set, with sharper level counts from THM-4495. Here the block measure gives a Hausdorff lower bound as well.
+
 The map sending a 2-adic integer to its sequence of shortcut parities is a bijective isometry for the cylinder metric (distance 2^(−k) at common-prefix length k). The proof is recursive: on a common length-k cylinder the first k steps are affine of slope 3^S_k/2^k, so the two lifts modulo 2^(k+1) have opposite parities at step k. This also ensures that every infinite parity sequence is realized by exactly one 2-adic point.
 
 For the upper bound, level k needs at most sum_{s≥pk} binom(k,s) cylinders of diameter 2^(−k). The logarithm of this bound divided by k tends to h₂(p), by the elementary binomial entropy bound and Stirling's formula.
@@ -17,6 +19,8 @@ For an infinite regular language, trim a finite deterministic automaton to verti
 More strongly, every infinite regular sublanguage of L has minimum cycle mean q>p. In that automaton each accepted length-k word has at least qk−O(1) ones by the same decomposition. Its exponential counting rate is therefore at most h₂(q)<h₂(p), including the case q=1. Finite-state safe underapproximations can approach h₂(p) via the good-block languages above but can never attain the full rate. This is a theorem about exact prefix-slope language recognition. It does not rule out finite-state approximate tests, a transducer with auxiliary counters, or any ordinary Collatz proof.
 
 ## 3. Periodic shadows are dense and cannot be positive counterexamples
+
+Density of negative periodic points is inherited, with a stronger purely periodic construction in Proposition 2 of the September directions note. The tail argument below makes the sign of every eventually periodic survivor explicit.
 
 Every admitted prefix extends by 1 forever. The resulting 2-adic point is rational and negative: after the prefix its value is the all-ones fixed point −1, and inverting the prefix affine map subtracts a nonnegative carry before dividing by a positive slope. More generally, every eventually periodic parity vector in X describes a strictly negative rational. For a periodic tail with period m and b ones the tail slope must be ≥1, otherwise its repetitions would eventually consume the finite prefix surplus. Equality is impossible for m>0, so the tail is the negative rational fixed point of its affine map, whose carry is positive since b≥1. Inverting the prefix again leaves a negative rational. This explains how a compact infinite survivor can contain periodic witnesses densely while those witnesses cannot supply a positive cycle or counterexample. Every individual finite cylinder also contains arbitrarily large positive integers; taking the intersection does not preserve that statement.
 
@@ -34,7 +38,7 @@ If a positive ordinary shortcut orbit never repeats, its integer values x_i tend
 
     log(x_k/x_0) = S_k log 3 − k log 2 + ∑_{i<k, x_i odd} log(1+1/(3x_i)).
 
-The sum is o(k), by Cesàro averaging, so such an orbit necessarily satisfies liminf S_k/k≥p. It need not lie in X, which imposes an inequality at each prefix, not just an asymptotic lower bound. This is why the entropy computation cannot by itself rule out escape: it describes an exact slope language and gives a limiting necessary arithmetic feature, not an integral orbit existence or exclusion theorem.
+The sum is o(k), by Cesàro averaging, so such an orbit necessarily satisfies liminf S_k/k≥p. It need not lie in X, which imposes an inequality at each prefix, not just an asymptotic lower bound. This is why the entropy computation cannot by itself rule out escape: it describes an exact slope language and gives a limiting necessary arithmetic feature, not an integral orbit existence or exclusion theorem. The companion [escape note](ESCAPE_BUFFER.md) goes further using THM-4476: any divergent integer orbit has a tail in the exact survivor set.
 
 ## 6. Quantitative finite-horizon obstruction
 
