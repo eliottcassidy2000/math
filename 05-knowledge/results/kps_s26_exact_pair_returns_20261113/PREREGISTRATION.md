@@ -31,3 +31,20 @@ Prediction: no match. Confidence about 0.8.
 
 - **S2: CONFIRMED** (no match), 2026-11-13. There were 655 distinct targets and 3,847,591 candidates with at most
   5 backward arcs; 1,243,347 were strong and 189,829 were fully profiled.
+- **S1: FAILED** (predicted at least one match; none found), 2026-11-13. There were 1,291 distinct targets and
+  3,847,591 candidates; 1,243,347 were strong and 312,197 were fully profiled. Because the search is restricted to
+  at most 5 backward arcs, the outcome is inconclusive about order 12. A non-registered biclique follow-up
+  (scripts/ysearch_bic.c, 7,469 tournaments) also found none.
+
+## Addendum (S3), registered before its run
+
+**S3. HYP-9678 (A) outside the C = 1 class at order 10.** Search every strong order-10 tournament with at most 5
+backward arcs relative to 0<1<...<9 (about 1.39 million labelled tournaments). Compare its full profile with every
+order-10 two-block sum allowed by THM-5151 (1): TT1 + Y9, C3 => Y7, and Y5 => Y5' over all odd strong blocks.
+Record C (Hamiltonian cycles) for each match.
+
+Built-in control: the six known C = 1 classes (H = 153, 219, 317) have at most 4 backward arcs in a suitable
+order, so labelled copies of each must appear.
+
+Prediction: every match has C = 1, so HYP-9678 (A) survives, and the matched profiles are exactly the three known
+ones (H = 153, 219, 317). Confidence about 0.7.
