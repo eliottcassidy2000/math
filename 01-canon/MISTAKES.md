@@ -4,6 +4,21 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13 — a canonical-code caption silently changed the orientation gauge
+
+- **Scope:** unpublished `joint_metagraph_dyadic_20261113/PAIRING_WIRING.md`, caught while producing its independent figure and repaired before promotion.
+- **Minimal witness / failed implication:** the producer calls one merged order-five class258 after sorting degree buckets, while unrestricted minimization over all relabelings calls it10. The note copied the former label but described the latter convention; a first review checked the incidence proof without comparing the two code gauges.
+- **Repair / strongest survivor:** every label in the note and figure now uses the independent census's unrestricted minimum. The explicit transport is32→5,68→41,97→12,258→10, with ordinary partners256→11 and64→9. All Hamilton counts, dart incidences, vertex rigidity and pairing minima are unchanged.
+- **Missing coordinate / next guard:** a canonical representative is relative to its gauge. Bind a displayed label to the actual encoding and transport every label when joining independently generated censuses; matching invariant histograms alone does not certify labels.
+
+## 2026-11-13 — raw dart mass was confused with normalized path sampling
+
+- **Scope:** prepublication `joint_metagraph_dyadic_20261113/metagraph/PROOF.md`; no accepted theorem is retracted.
+- **Failed implication:** the draft correctly needed automorphism and converse factors for raw half-edge counts, but incorrectly inferred that uniform physical Hamilton-path sampling in one ordinary representative induces a different merged-node transition law.
+- **Repair / mechanism:** the automorphism action on directed Hamilton paths is free, so every path orbit has the same size; simultaneous converse gives the same merged target distribution. Both common factors cancel after normalization. Raw degree remains `|R(T)| H(T)/|Aut(T)|`; the merged-node transition probabilities equal the pushforward of uniform physical-path sampling.
+- **Hostile / strongest survivor:** a directed triangle joined to a singleton has three physical paths, automorphism order3 and two ordinary converse representatives, hence merged degree2. Raw cardinalities differ, while their normalized projected law agrees. The weighted memory theorem and the all-order score-closure obstruction survive unchanged.
+- **Missing coordinate:** distinguish literal darts, physical paths and their normalized pushforward, rather than treating a necessary counting factor as an obstruction to sampling equivalence.
+
 ## 2026-11-13: A rigidity generalization dropped the inner-seed size boundary
 
 - **Status:** corrected in [symmetry_port_return/INCOMING](../05-knowledge/results/symmetry_port_return_20261113/INCOMING.md) during final independent review. The original clock proof and every A95/A317 family already impose the needed boundary.

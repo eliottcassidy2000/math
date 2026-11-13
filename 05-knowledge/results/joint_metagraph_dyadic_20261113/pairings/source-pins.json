@@ -1,0 +1,24 @@
+{
+  "base_revision": "f90cd879d156a37f0027d1719a25b8731918db6a",
+  "external_sources": [
+    {
+      "checked": "2026-11-13",
+      "import": "Theorem1 and Corollary1: strong minimum at n7 is25 and minima are increasing thereafter",
+      "title": "Busch, A Note on the Number of Hamiltonian Paths in Strong Tournaments",
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf/"
+    }
+  ],
+  "files": {
+    "00-navigation/RESEARCH-PROTOCOL.md": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+    "01-canon/ACTIVE-GUARDRAILS.md": "906ae3d7a2fcd70f7170f3b529ca6056c7bc2f4b053bc7fa811ef477eeed3cee",
+    "01-canon/theorems/THM-4922-first-creators-of-hamiltonian-path-counts-converse-fibers-endpoint-genealogy.md": "cef4afa6aa13cbdcb6bd20e142b896871059c1ad703ef7e6e05422761ff9141d",
+    "05-knowledge/reference/CORE-PAPERS-RECIPROCAL-SEQUENCES.md": "1a50530db8d6e2b0575ab62a303c23f183f2d40ab2d59963a1a35940a16d1532",
+    "05-knowledge/reference/CORE-PAPERS.md": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+    "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe",
+    "05-knowledge/results/paired_recursions_20261103/PAIRINGS.md": "a3263bbb8c5e79616721f27330b7eb1338faf4f25fb330e6d2f73872dc47e1e8",
+    "05-knowledge/results/tournament_hasse_frobenius_20261019/PADDING_FROBENIUS_PROOF.md": "7efc364d5bcf48ee1d3cb4cb10943119db4c0fccf5c99b36a0e850d46720bedd",
+    "05-knowledge/results/tournament_joint_parity_20261102/spectrum.md": "123e9a79464182ce9811c72cb2125e59bdea66e45cc632a20a058241996cbd36",
+    "05-knowledge/results/tournament_joint_parity_20261102/toothpick.md": "b4d83e0aaa3a1b498853b3dbb0113991db8ed676945c5ba8931079e3f70d58f3",
+    "AGENTS.md": "c1e58986eaf9b07b01d9092328400bbcc25ed0e3db2e243ed0351906d996a5ea"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "incoming_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+  "sources": {
+    "00-navigation/META-PATTERNS.md": {
+      "bytes": 27146,
+      "card": "Controlled forgetting and unlabeled quotients require a sidecar",
+      "sha256": "59def444882d34520e988626821b1826686232eb22b569184f6f02b58b5c2b5d",
+      "source": "worktree bytes read 2026-11-13"
+    },
+    "05-knowledge/results/session315_dyadic_pairing_20261113/DYADIC_SPECTRUM.md": {
+      "bytes": 10287,
+      "git_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+      "sha256": "b8ead6c95249077cf3bc67ae288ef8a4e65dc6b48fc462bc5585cd4dc6aab0be"
+    },
+    "05-knowledge/results/session315_dyadic_pairing_20261113/HALF_CUTS.md": {
+      "bytes": 2656,
+      "git_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+      "sha256": "b4a66faba1ba8d5b85f8654407c7487c07fdc47dc1fa31acd71ed332c65536ef"
+    },
+    "05-knowledge/results/session315_dyadic_pairing_20261113/HISTORY_AND_CLOCKS.md": {
+      "bytes": 15034,
+      "git_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+      "sha256": "4562b058ccc58b12b5f00be129e5214f0f09ecba61c4eae67944dbc84c473a2f"
+    },
+    "05-knowledge/results/session315_dyadic_pairing_20261113/PAIRED_SITES.md": {
+      "bytes": 13377,
+      "git_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+      "sha256": "429bc6512e456c7c4540ca3f8e5009fb671dfb4c218e757db189ab96019d03ef"
+    },
+    "05-knowledge/results/session315_dyadic_pairing_20261113/README.md": {
+      "bytes": 3559,
+      "git_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+      "sha256": "09f8265fc3cf4d89c5c8c24f58426302263a601a103d296e39adb85758b50784"
+    },
+    "05-knowledge/results/session315_dyadic_pairing_20261113/SPECTRUM_AND_SIEVE.md": {
+      "bytes": 6427,
+      "git_commit": "ae6c9620d8718e3ce5dd710ef6ecb1e00b93436a",
+      "sha256": "06b59c09dd674720e8c4bfe213cc51b206b6fb56ad08642941acb111176a8ab5"
+    }
+  }
+}

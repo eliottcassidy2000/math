@@ -1,0 +1,21 @@
+{
+  "Lorentzian_Gram": [
+    [
+      0,
+      -1
+    ],
+    [
+      -1,
+      0
+    ]
+  ],
+  "P1_universe": "R=1..48, k=1..5, all r<=R and t<=floor(R/2), 41 nonnegative upper shifts each",
+  "P2_synthetic_cases": 2040,
+  "P2_universe": "all binary numerators of degree<=d+1, denominator (1+x)^d, d=1..8; 100 coefficients; all tested periods1..16",
+  "active_checks": 382887,
+  "source_sha256": {
+    "audit/check_small.py": "ea71adf577950bbda301271355f1893418d3017c77f4297bb330459d601d3406",
+    "pairings/PROOF.md": "b200b4d5c8c95ad96b3146cb243d02d0a6e9a26930e548bed27700188b3e9f85"
+  },
+  "status": "PASS"
+}
