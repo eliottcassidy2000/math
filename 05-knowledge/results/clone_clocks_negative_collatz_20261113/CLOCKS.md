@@ -111,7 +111,7 @@ The two module growths are `H↦3H−2` and `H↦2H−1`, which are `x↦3x+2` a
 `3x−1` ascending run is a chain of single-arc reversals until the `v`-block has one vertex. Section 3 of
 [COLLATZ](COLLATZ.md) explains the anchor bookkeeping. `verify.py` §3 checks every `j≤3`, `2≤k≤4` literally.
 
-## 5. Census of two-clocks and the digit-1 exclusion (FINITE-EXACT; hypothesis OPEN)
+## 5. Census of two-clocks and the C2-line exclusion (FINITE-EXACT; hypothesis OPEN; stronger form REFUTED)
 
 | universe | two-clock lines | `(σ,σ_2)=(1,0)` | lines with `σ_2=0` |
 |---|---:|---:|---|
@@ -120,37 +120,49 @@ The two module growths are `H↦3H−2` and `H↦2H−1`, which are `x↦3x+2` a
 | near-transitive `n=11`, ≤4 back arcs (labelled) | 4,116 | 0 | 344, all `σ=−1` |
 | Session-197 skeleton + one vertex, all 256 attachments | 13 | 0 | 2, both `σ=−1` |
 | Session-197 skeleton + two vertices, all 131,072 attachments (`c/extscan.c`) | 186 | 0 | 52: `σ=−1` (42), `σ=3` (6, Ψ), `σ=−3` (4) |
+| every certified two-clock skeleton + one vertex, all attachments, `v` old or new (`c/extone.c`) | 3,648 | 0 | 699: `σ∈{−11,−9,−5,−3,−1,3}` |
 
 Lines with `σ_2=0` and `σ=−1` all have `A=2α`, i.e. `H=1+α2^k3^j`. The two-vertex extension adds `σ_2=0` with
 `σ=3` (Ψ of §3b, `β=40`) and with `σ=−3` (`H=3+180·2^k3^j`). So pure `v`-sectors are **not** confined to the +1
 anchor, and the earlier draft of this note that said so was wrong before publication. Other pairs are common,
-for example `(51,17)`, `(5,3)`, `(1,1)`, `(49,21)`. The constant term of `H(j,k)` is `c_{11}=2σ_2−σ`; it takes many odd values (`1, −3, −5, −7, 3, 9, 17, …`) but
-**never −1** in any line, which is stronger than the absence of `(1,0)`. No found two-clock contains a ray of the 45 chain or the 462 chain (checked over all 203
+for example `(51,17)`, `(5,3)`, `(1,1)`, `(49,21)`. The constant term of `H(j,k)` is `c_{11}=2σ_2−σ`. The dominant law is `c_{11}=+1`, i.e. `σ_2=(σ+1)/2`. Other odd
+values occur too. Through the first four universes `c_{11}=−1` never appeared. The one-vertex extension search
+then found exactly three lines with `c_{11}=−1`, all certified (`verify.py` §3c):
+
+    (60·3^j−1)(2^k+1),     (100·3^j−1)(2^k+1),     3^j(440·2^k+60) − 2^{k+1} − 1.
+
+The first two are ordinal-sum products of a digit-1 clock with the classical `1+2^k` family, since `H` multiplies
+over ordinal sums. The third is a genuine two-clock with `σ_2=2`. None has `σ_2=0`, so none is the C2 line. No found two-clock contains a ray of the 45 chain or the 462 chain (checked over all 203
 distinct parameter tuples, `j≤7`, dyadic shifts ≤5).
 
-**OPEN hypothesis (digit-1 exclusion).** No two-module transitive-clone two-clock has constant term `c_{11}=−1`.
-In particular none has P-form `αP_M(3)P_N(2)+βP_M(3)H(N)−H(M)H(N)` with `α>0`, so no double cloning realizes
-`H(j,k)=3^jF(k)−1`. A single explicit table refutes it. Ψ shows the shape exists with constant `−3`, so any
-proof must single out `−1` arithmetically, not by sign. The single-module clock `60P_M(3)−H(M)` shows that
-constant `−1` is reachable with one clone block; the hypothesis concerns two blocks only. The failed shortcut
+**OPEN hypothesis (C2-line exclusion).** No two-module transitive-clone two-clock has `(σ,σ_2)=(1,0)`, i.e.
+P-form `αP_M(3)P_N(2)+βP_M(3)H(N)−H(M)H(N)` with `α>0`. Equivalently, no double cloning realizes
+`H(j,k)=3^jF(k)−1`. Evidence: none among 21,047 two-clock lines in five universes. A single explicit table refutes
+it. Ψ shows the same P-form with constant `−3`. Products of clocks can never give it, because clone digits are
+odd and a product's `2^k`-only term is `−σ·c≠0`. Any proof must therefore single out digit 1 jointly with a
+pure `v`-sector.
+
+**REFUTED hypothesis (the earlier, stronger form).** The checkpoint pushed at `c91e7d49aa` proposed that the
+constant term `c_{11}` is never −1. The three lines above refute it; the products were the overlooked trivial
+case. See `01-canon/MISTAKES.md` (2026-11-13, clone-clock constant term). The failed shortcut
 `X_1−2X_2=X_0` is false in general (`scripts/identity_test.py`); the coefficient `c_{11}=−1` alone does occur for
 general pairs (`scripts/c11_census.py`), so any proof must use the ternary-shape conditions jointly.
 
 ## 6. Unit-offset two-clocks seed infinitely many 2-adic lines (PROVED by certificate)
 
-`scripts/certify_all.py` takes one representative of each of the 214 distinct two-clock parameter tuples in the
-censuses (the 17,399 lines above). Each is recertified with `c/certify.c`, which computes the complete table
+`scripts/certify_all.py` takes one representative of each of the 868 distinct two-clock parameter tuples in the
+censuses (the 21,047 lines above). Each is recertified with `c/certify.c`, which computes the complete table
 `a_{ii'}` with rigorous caps. The caps come from the in-neighbour bound of §2, so the DP can never be
 truncated. The script recomputes the tuple from the table and checks literal Hamiltonian-path counts at
-`(j,k)=(1,1),(2,1),(1,2)`. All 214 pass; by the run expansion each formula then holds for all `j,k≥1` and for
+`(j,k)=(1,1),(2,1),(1,2)`. All 868 pass; by the run expansion each formula then holds for all `j,k≥1` and for
 arbitrary modules.
 
-The 128 tuples with `β=0` and constant term `+1` (`A=2α`, `σ−2σ_2=−1`) are **unit-offset two-clocks**:
+The 217 tuples with `β=0` and constant term `+1` (`A=2α`, `σ−2σ_2=−1`) are **unit-offset two-clocks**:
 
     H(S[u←TT_j, v←TT_k]) = 1 + (α·3^j − σ_2)·2^k        (all j, k ≥ 1).
 
 For each fixed `j` this is an explicit ray of the 2-adic line `{1+c·2^s}` with `c` the odd part of
-`α3^j−σ_2`. It is a seed for HYP-9658 (A) at that `c`. In 50 of the 128 representatives the `v`-vertex has out-
+`α3^j−σ_2`. It is a seed for HYP-9658 (A) at that `c`. In 50 of the first 128 representatives (the census tuples before the extension search) the `v`-vertex has out-
 or in-degree one. Directly or after taking the converse, the ray is then literally the tail-law ray
 `L∘0^k` of THM-5126 (A). The others are rays in the module sense. Along `j` the multipliers obey
 `c_{j+1}=3c_j+2σ_2`. For the family `(α,σ_2)=(30,1)`, which is the converse of Session 197's source with `v` at

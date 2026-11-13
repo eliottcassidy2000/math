@@ -4,6 +4,15 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-13: A constant-term hypothesis for clone two-clocks ignored ordinal-sum products
+
+- **Status:** OPEN hypothesis refuted by the proposing session (klein `chanpak-881-negcollatz`) after checkpoint `c91e7d49aa` was pushed; repaired in [clone_clocks_negative_collatz_20261113/CLOCKS.md §5](../05-knowledge/results/clone_clocks_negative_collatz_20261113/CLOCKS.md). No theorem depended on it.
+- **Error:** from 17,399 two-clock lines the packet proposed that the constant term `c_11` of `H(S[u←TT_j, v←TT_k])` is never −1, and its README and bridge note described the missing C2 line as "specific to the constant −1".
+- **Minimal witness:** the ordinal sum of the Session-197 clock with the classical `1+2^k` family has `H=(60·3^j−1)(2^k+1)`, with constant −1. A genuine two-clock `3^j(440·2^k+60)−2^{k+1}−1` also exists. All three witnesses are certified in `verify.py` §3c.
+- **First failed implication:** "absent from every scanned universe" was promoted to a hypothesis without testing the trivial construction the theory predicts. Counts multiply over ordinal sums, so constants multiply too. The scans stopped one order and one back arc short of the product.
+- **Repair and survivor:** the hypothesis is restated as the C2-line exclusion `(σ,σ_2)≠(1,0)`. Products cannot violate it, because clone digits are odd and a product's pure-`2^k` term is `−σc≠0`. It survives 21,047 lines in five universes.
+- **Missing coordinate and new question:** before proposing a coefficient obstruction, run the closure operations the coefficient is known to respect: products, converse, padding. Does a genuine (non-product) family with `(σ,σ_2)=(1,0)` exist at order 12?
+
 ## 2026-11-13: Near-transitive atom recognition needs an independent strongness guard
 
 - **Status:** implementation error caught and repaired before promotion in the [ternary-core audit](../05-knowledge/results/ternary_core_grammar_20261113/AUDIT.md). No false atomic certificate was published.

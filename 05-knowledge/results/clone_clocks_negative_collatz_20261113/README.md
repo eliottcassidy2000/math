@@ -16,8 +16,8 @@ three, and the Jacobian / Hadwiger–Nelson / Hodge lanes.
 | **Two-clock skeleton Π (9 vertices):** `H(Π[u←M,v←N]) = 60·P_M(3)·P_N(2) + H(M)·H(N)` for all tournaments `M, N`, i.e. `1+60·2^k·3^j`: exact repeatable returns `H↦3H−2` and `H↦2H−1` by one-vertex growth. | PROVED (complete table) | [CLOCKS §3](CLOCKS.md) |
 | **One arc reversal realizes the negative-integer Collatz step:** in Π, reversing the arc from the last `v`-clone to `c` gives `H↦(3H−1)/2`, i.e. `T(−H)=−H'`. | PROVED | [CLOCKS §4](CLOCKS.md) |
 | **Digit-3 two-clock Ψ (10 vertices):** `H = 160·P_M(3)P_N(2) + 40·P_M(3)H(N) − 3·H(M)H(N)`, i.e. `3^j(160·2^k+40)−3`: an exact `H↦3H+6` return for every `k`, with a genuine dyadic parameter. | PROVED (complete table) | [CLOCKS §3b](CLOCKS.md) |
-| Two-clock census, 17,399 lines, complete through order 9: the C2 shape `(σ,σ_2)=(1,0)` never occurs, nor does the constant term `−1`. Pure `v`-sectors occur with digits `−1` (1,156 lines), `3` and `−3`. | FINITE-EXACT; hypothesis OPEN | [CLOCKS §5](CLOCKS.md) |
-| **Infinitely many seeded unit lines:** 128 certified unit two-clocks `H=1+(α3^j−σ_2)2^k` give, for every `j`, an explicit ray of the line `1+c·2^s`. That seeds infinitely many odd `c` for HYP-9658 (A), e.g. `c=30·3^j−1`, whose slopes follow the C2 map `c↦3c+2`. All 214 two-clock tuples are certified by complete tables. | PROVED (certificates) | [CLOCKS §6](CLOCKS.md) |
+| Two-clock census, 21,047 lines in five universes, complete through order 9: the C2 shape `(σ,σ_2)=(1,0)` never occurs. Pure `v`-sectors occur with digits `−11,−9,−5,−3,−1,3`. The stronger claim pushed earlier, constant term never `−1`, is **refuted**: products such as `(60·3^j−1)(2^k+1)` and one genuine family. | FINITE-EXACT; hypothesis OPEN; stronger form REFUTED | [CLOCKS §5](CLOCKS.md) |
+| **Infinitely many seeded unit lines:** 217 certified unit two-clocks `H=1+(α3^j−σ_2)2^k` give, for every `j`, an explicit ray of the line `1+c·2^s`. That seeds infinitely many odd `c` for HYP-9658 (A), e.g. `c=30·3^j−1`, whose slopes follow the C2 map `c↦3c+2`. All 868 two-clock tuples are certified by complete tables. | PROVED (certificates) | [CLOCKS §6](CLOCKS.md) |
 | A ready repeatable 405 return cannot be a double-cloning family (from the complete 881 fibre). Uniform selective ports reduce to modules. The remaining escapes are non-uniform or numeration-driven cores, or a change of arithmetic. | PROVED corollary + route map | [RAY405](RAY405.md) |
 | 2–3 axis, planar Jacobian shears, Hodge bidegrees, Hadwiger–Nelson shape | typed bridges; analogies flagged | [BRIDGES](BRIDGES.md) |
 
@@ -26,7 +26,8 @@ the clone language. One clock can do it: Session 197's `60·3^m−1`, which is n
 Two clocks can do it exactly for other digits. On the +1 anchor (Π) the moves are `x↦3x+2`, `x↦2x+1` and the
 Collatz step **on the negative integers** `x=−H`, the last realized by a single arc. On the −3 anchor (Ψ) the
 move is `H↦3H+6` with a free dyadic parameter. The digit-1 shape `H+1=3^jF(k)`, which is the C2 line, never
-appears; the obstruction, if real, is specific to the constant `−1`, not to its sign. With the inherited 881
+appears. The obstruction, if real, is specific to digit 1 together with a pure `v`-sector: the constant `−1` alone
+does occur, for instance in products like `(60·3^j−1)(2^k+1)`. With the inherited 881
 fibre, a ready repeatable `405·2^k+71` return must leave the clone/port language entirely. Concretely: cores
 that change with `k` in a non-uniform or numeration-driven way, or an arithmetic other than exact `3H+2`.
 

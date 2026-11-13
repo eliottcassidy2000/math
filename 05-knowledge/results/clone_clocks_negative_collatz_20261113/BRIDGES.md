@@ -25,15 +25,16 @@ Collatz statement is claimed.**
   the middle vertex `x0` acts on the tensor as the shear `(c_{12},c_{11},c_{32}) : (−1,1,30) → (0,1,60)`. It moves
   the dyadic defect and fixes the unit coefficient `c_{11}=+1`.
 * **Preserved:** `c_{11}` under the `x0` shear. **Lost:** any Keller condition; none is transported.
-* **Test (run):** the shear fixes `c_{11}=+1` inside the block family only. Across all 17,399 two-clock lines
-  `c_{11}` takes the values `±3, ±5, …` but **never −1** (Ψ has `c_{11}=−3`). So the sign is not invariant; the
-  value `−1` is what is missing. The analogy predicted a sign rule, and the digit-3 family refuted that reading.
+* **Test (run):** the shear fixes `c_{11}=+1` inside the block family only. Across all two-clock lines `c_{11}`
+  takes many odd values (Ψ has `−3`), and `−1` occurs in products and one genuine family. So the "unit
+  coefficient" is not an invariant of two-clocks. The analogy's prediction failed twice, and it is kept only as
+  the record of a failed transfer.
 
 ## 3. Hodge-type bidegrees — vocabulary only
 
 The P-form is a finite Künneth-like decomposition into bidegrees `(m,m')`. Two-clocks are the tensors supported
-in `{(1,1),(3,1),(3,2)}` (plus the `σ_2` term `(1,2)`). The digit-1 exclusion is a rule on the value
-of the `(1,1)` component: never `−1`. This is a description of the observed data, not a transfer. The repository's earlier Hodge lane
+in `{(1,1),(3,1),(3,2)}` (plus the `σ_2` term `(1,2)`). The C2-line exclusion concerns the support,
+`(1,2)` absent, jointly with the value `−1` of the `(1,1)` component. This is a description of the observed data, not a transfer. The repository's earlier Hodge lane
 (connecting homomorphisms, H17 history) is about lifting quotient loops, which these exact identities do not need.
 
 ## 4. Hadwiger–Nelson — shape coincidence, flagged as such

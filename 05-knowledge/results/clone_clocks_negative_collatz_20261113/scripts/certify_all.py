@@ -47,6 +47,11 @@ for f in ('extscan_e1.txt.gz', 'extscan_e2.txt.gz'):
         e = int(re.search(r'e=(\d+)', l).group(1)); pat = int(re.search(r'pat=(\d+)', l).group(1)); v = int(re.search(r' v=(\d+)', l).group(1))
         adj, n = s60_ext(pat, e)
         add(tup(l), n, adj, 3, v)
+for l in lines('extone_from_certified.txt.gz'):
+    if not l.startswith('GEN'): continue
+    n = int(re.search(r'n=(\d+)', l).group(1)); u = int(re.search(r' u=(\d+)', l).group(1)); v = int(re.search(r' v=(\d+)', l).group(1))
+    rows = list(map(int, re.search(r'rows=([\d,]+)', l).group(1).split(',')))
+    add(tup(l), n, rows, u, v)
 def main(certifier):
   keys = sorted(reps)
   inp = ''.join('%d %d %d %s\n' % (reps[k][0], reps[k][2], reps[k][3], ' '.join(map(str, reps[k][1]))) for k in keys)
@@ -80,6 +85,8 @@ def main(certifier):
   print('distinct odd seed multipliers c <= 10^6:', len([c for c in seeded if c <= 10**6]),
       ' first 40:', [c for c in seeded][:40])
   json.dump({'certified_tuples': certified, 'unit_families': unit}, open(os.path.join(ROOT, 'data', 'unit_two_clock_families.json'), 'w'), indent=0)
+  allrep = [{'A': k[0], 'sigma': k[1], 'alpha': k[2], 'sig2': k[3], 'n': reps[k][0], 'u': reps[k][2], 'v': reps[k][3], 'rows': reps[k][1]} for k in keys]
+  json.dump(allrep, open(os.path.join(ROOT, 'data', 'two_clock_representatives.json'), 'w'), indent=0)
 
   return certified, unit, seeded
 

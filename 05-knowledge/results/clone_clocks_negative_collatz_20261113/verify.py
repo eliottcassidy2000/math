@@ -134,6 +134,21 @@ for M in (TT(1), TT(2), C3):
              - 3 * H_only(M, len(M)) * H_only(N, len(N)), 'Psi literal')
 out.append('3b. Psi: H = 3^j(160*2^k+40) - 3, exact digit-3 step H -> 3H+6 for every k; complete table + literal: OK')
 
+# ---------------------------------------------------------------- 3c. the refutation witnesses of 'c11 never -1'
+wit = {'genuine': ([1998, 2044, 1592, 2032, 2017, 1985, 1156, 1796, 1092, 320, 512], 3, 10, {(1, 1): -1, (1, 2): -2, (3, 1): 60, (3, 2): 440}),
+       'product60': ([2042, 2044, 2041, 1776, 1760, 1472, 1408, 1792, 1560, 96, 512], 7, 0, {(1, 1): -1, (1, 2): -1, (3, 1): 60, (3, 2): 60}),
+       'product100': ([1530, 2044, 2041, 2032, 1504, 192, 1920, 1792, 1568, 1073, 32], 8, 2, {(1, 1): -1, (1, 2): -1, (3, 1): 100, (3, 2): 100})}
+for name, (rows, uu, vv, pf) in wit.items():
+    need(pform(complete_table(rows, 11, uu, vv)) == pf, 'witness P-form ' + name)
+    for j in (1, 2):
+        for k in (1, 2):
+            A, tot = substitute(rows, 11, uu, vv, TT(j), TT(k))
+            need(H_only(A, tot) == sum(c * m ** j * mp ** k for (m, mp), c in pf.items()), 'witness literal ' + name)
+need(all(60 * 3 ** j * 2 ** k + 60 * 3 ** j - 2 ** k - 1 == (60 * 3 ** j - 1) * (2 ** k + 1) for j in range(1, 5) for k in range(1, 5)),
+     'product form (60*3^j-1)(2^k+1)')
+out.append('3c. refutation of c11 != -1: products (60*3^j-1)(2^k+1), (100*3^j-1)(2^k+1) and the genuine '
+           '3^j(440*2^k+60)-2^(k+1)-1, all certified: OK')
+
 # ---------------------------------------------------------------- 4. Session 197 skeleton with v = b
 order0 = ['a', 'v', 'c', 'u', 'd0', 'd1', 'f0', 'f1']
 adj0, idx0 = build(order0, back)
@@ -182,14 +197,16 @@ need(dig1 == Counter({60: 6, 100: 2, 156: 2, 180: 4}), 'digit-1 amplitudes throu
 gen = [l for l in lines('gen_all_orders.txt.gz') if l.startswith('GEN')]
 need(Counter(int(l.split()[1]) for l in gen) == Counter({8: 10, 9: 132}), 'complete two-clock census counts')
 allgen = gen + [l for l in lines('backscan_n10_b5.txt.gz') + lines('backscan_n11_b4.txt.gz') + lines('extscan_e1.txt.gz')
-                + lines('extscan_e2.txt.gz') if l.startswith('GEN')]
-pairs = Counter()
+                + lines('extscan_e2.txt.gz') + lines('extone_from_certified.txt.gz') if l.startswith('GEN')]
+pairs = Counter(); cm1 = []
 for l in allgen:
     s = int(re.search(r'sigma=(-?\d+)', l).group(1)); s2 = int(re.search(r'sig2=(-?\d+)', l).group(1))
     A_ = int(re.search(r' A=(\d+)', l).group(1)); al = int(re.search(r' al=(\d+)', l).group(1))
     pairs[(s, s2)] += 1
     need((s, s2) != (1, 0), 'no C2-line two-clock')
-    need(2 * s2 - s != -1, 'constant term c11 = 2 sig2 - sigma is never -1')
+    need((s, s2) != (1, 0), 'no C2-line two-clock (sigma, sig2) = (1, 0)')
+    if 2 * s2 - s == -1:
+        cm1.append((A_, s, al, s2))
     for j in range(1, 8):
         lead, const = 3 ** j * al - s2, 3 ** j * (A_ - 2 * al) - (s - 2 * s2)
         for (Tt, Bb) in ((45, 7), (135, 23), (405, 71), (1215, 215), (462, -5), (1386, -13), (4158, -37)):
@@ -197,10 +214,11 @@ for l in allgen:
                 need(not (lead == Tt * 2 ** sh and const == Bb), 'no two-clock contains a 45/462 chain ray')
 need(not any(l.startswith('TWO') for l in lines('backscan_n10_b5.txt.gz') + lines('backscan_n11_b4.txt.gz')), 'no TWO lines')
 pure = Counter(s for (s, s2) in pairs.elements() if s2 == 0)
-need(set(pure) == {-1, 3, -3}, 'pure v-sector digits observed: %s' % dict(pure))
+need(set(pure) == {-11, -9, -5, -3, -1, 3}, 'pure v-sector digits observed: %s' % dict(pure))
+need(sorted(cm1) == [(180, 3, 60, 1), (300, 3, 100, 1), (940, 5, 440, 2)], 'the three c11 = -1 lines (refutation witnesses)')
 out.append('6. census: ternary 0/4/30/206/1309 (n=5..9, all A even, all digits odd); two-clock lines %d, '
-           '(sigma,sig2)=(1,0) never; c11 never -1; pure v-sectors with sigma in %s; no 45/462 ray: OK'
-           % (len(allgen), dict(sorted(pure.items()))))
+           '(sigma,sig2)=(1,0) never; c11=-1 only in the 3 refutation witnesses; pure v-sectors with sigma in %s; '
+           'no 45/462 ray: OK' % (len(allgen), dict(sorted(pure.items()))))
 
 # ---------------------------------------------------------------- 7. readiness screen
 cnt = 0
@@ -240,11 +258,11 @@ with tempfile.TemporaryDirectory() as d:
     exe = os.path.join(d, 'certify')
     subprocess.run(['cc', '-O2', '-o', exe, os.path.join(HERE, 'c', 'certify.c')], check=True)
     certified, unit, seeded = certify_all.main(exe)
-need(certified == 214 and len(unit) == 128, 'certified tuple counts')
+need(certified == 868 and len(unit) == 217, 'certified tuple counts')
 need(all(f['alpha'] * 3 ** (j + 1) - f['sig2'] == 3 * (f['alpha'] * 3 ** j - f['sig2']) + 2 * f['sig2'] for f in unit for j in range(1, 6)),
      'seed multipliers follow c -> 3c + 2 sig2')
 need(any(f['alpha'] == 30 and f['sig2'] == 1 for f in unit), 'the C2-line multiplier family 30*3^j - 1')
-out.append('8. all 214 two-clock tuples certified by complete tables (rigorous caps) + literal counts; 128 unit-offset '
+out.append('8. all 868 two-clock tuples certified by complete tables (rigorous caps) + literal counts; 217 unit-offset '
            'families give seeds; multipliers follow c -> 3c + 2 sig2: OK')
 
 print('\n'.join(out))
