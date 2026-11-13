@@ -1,0 +1,5 @@
+witness 0: sectors [0, 513, 0, 0, 0, 0, 0, 0, 0]; H=513
+witness 32: sectors [0, 488, 659, 0, 0, 0, 0, 0, 0]; H=1147
+witness 255: sectors [0, 513, 0, 0, 0, 0, 0, 0, 0]; H=513
+literal enumeration checked 150 reproducibly generated cases
+sharp 6-run sector: 14400; v3=2

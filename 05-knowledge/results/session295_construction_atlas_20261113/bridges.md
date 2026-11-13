@@ -78,11 +78,25 @@ not an unlabelled counterexample; it pinpoints precisely the lost marked
 port. This is the smallest illustration of why taking the first pair of
 matching states from different atlases is not a lawful composition.
 
+A stronger example uses distinct *unlabelled* cores. On the names
+$0,1,2,3$ keep the triangle $0\to1\to2\to0$, and put the singleton $3$
+after it in $C$ and before it in $C'$. These are nonisomorphic (one has
+a sink, one a source). They have the same polynomial
+$t(t^3+2t)$, hence the same ordered cover profile and the same counts
+in all uniform contexts. Add the same new vertex $z$ beating only
+$0$ in both graphs. The new polynomials are $t^5+4t^3+4t$ and
+$t^5+4t^3$ respectively (two cyclic triangles in either graph;
+two directed spanning 5-cycles in the former and none in the latter).
+Thus their immediate counts are 9 and 5. Even full uniform
+contextual equivalence of structurally different cores loses data
+needed for one selective port.
+
 ## A complete selective observer for a single added vertex
 
 The missing state can be made explicit. Let $A$ be the old vertices
 dominating a new vertex $z$, and let $B=V(C)\setminus A$, so $z$
 dominates $B$. Write $f_C(t)$ for the odd-cycle-packing polynomial,
+as in [THM-002](../../../01-canon/theorems/THM-002-ocf.md),
 where a packing with $j$ surviving atoms and $r$ odd cycles contributes
 $2^r t^j$. For each even-cardinality nonempty $S\subseteq V(C)$, let
 $h_{b,a}(C[S])$ count paths on $S$ from $b\in B\cap S$ to
@@ -146,3 +160,8 @@ additions is asserted.
 arithmetically different uniform constructions, plus a precise boundary
 where selective repair needs a richer layer. It does not make a
 congruence certificate a positive prescribed-target construction.
+
+Reproduce the small controls with `python3 -B verify_bridges.py` and
+`python3 -O -B verify_bridges.py` from this packet; both runs give the
+recorded `bridges.out`. The proof of the modular quotient is all-order
+and is not inferred from these finite controls.
