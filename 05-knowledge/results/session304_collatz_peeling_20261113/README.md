@@ -2,6 +2,10 @@
 
 [Arithmetic proof and conditional digit tree](ARITHMETIC.md). Mixed signed odd-part Collatz has a sharp three-step decreasing macro avoiding 7 and 21. This is an exact arithmetic tree, not a Chan–Pak construction or a result for either single-sign Collatz map. Triangle peeling cannot simulate the tree: it never changes the 3-free part. A different conditional ternary compiler needs exact 3H−2, 3H, 3H+2 operations with compatible renewable marks.
 
+## All three digits on the same source
+
+[Physical ternary fork and proof](PHYSICAL_FORK.md). For every k≥2 the strong source with spine word 101(0^k)10 has H=15·2^k+1. It has induced strong children at 3H−2, 3H, and 3H+2, preserving the named apex and every old arc, by adding two, one, and one vertices respectively. These are the three ternary digits in (H−1)/2. The first is a two-spine insertion; the second is triangle completion inside a two-visit module; the third is one selective newborn. The destinations are not proved renewable. The same proof also gives a one-newborn negative digit on the companion H=15·2^k+3 chart, including the original 63→187 alongside 63→189. That newborn is outside the fixed one-apex-spine model, so it does not contradict the spine-only obstruction below.
+
 ## Physical negative digit, in two infinite families
 
 A word describes a transitive spine with a single apex that beats precisely its 1 positions. In both lines below insert two letters without moving any old vertex; all old arcs are preserved and the same apex is retained. For k≥1:
@@ -23,4 +27,4 @@ A different impossibility concerns cross-port edits. Keeping the internal arcs o
 
 ## Reproduction and status
 
-The companion check independently enumerates literal directed paths on small physical charts, checks the exact arithmetic macro over a bounded interval and verifies its sharp example by direct search. None of these finite checks supplies the all-order proof; the arguments above do. Chan–Pak, the one-sign Collatz problems, and a common renewable ternary-ready state remain open.
+Run `python check.py` and `python verify_fork.py` from this directory; both also pass with `python -O`. The companion check independently enumerates literal directed paths on small physical charts, checks the exact arithmetic macro over a bounded interval and verifies its sharp example by direct search. None of these finite checks supplies the all-order proof; the arguments above do. Chan–Pak, the one-sign Collatz problems, and a common renewable ternary-ready state remain open.
