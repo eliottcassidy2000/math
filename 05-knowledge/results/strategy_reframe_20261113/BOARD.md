@@ -34,3 +34,20 @@ Five live concepts:
 Do not claim that every expanding grammar is sparse, that parabolic moves
 are necessary for a complete scalar projection, or that an all-order
 barrier for one repair direction obstructs Chan--Pak itself.
+
+End-of-session board revision:
+
+- The repair direction enforces a factor-five cost at all orders; finite
+  words are themselves contexts, so slope detours do not create a slow
+  return. This resolves the anchor question within its declared class.
+- The sparse nine-rule language passes all104 tested modular projection
+  tests. Local admissibility and sufficient global branching must be
+  assessed separately; the niche produced an exact hostile control.
+- The rank-one cycle-packing lane was already closed negatively at29.
+  Stop rediscovering that restricted route.
+- The prime-lane sufficient induction is weaker than persistent paired
+  readiness. Factorization shows53,084,231 is not itself an atom.
+- Incoming Session302 supplies an actual strong exact-times-three move
+  in a different operation, with a separately proved finite renewal
+  budget. It changes the next question from finding an identity to
+  replenishing its interface, or avoiding interface renewal entirely.

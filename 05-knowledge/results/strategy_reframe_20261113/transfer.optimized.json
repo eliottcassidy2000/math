@@ -1,0 +1,13 @@
+{
+  "status": "FINITE-EXACT controls; composition and network laws proved in notes",
+  "composition_controls": 6400,
+  "network_controls": 255,
+  "network_depth": 7,
+  "composite_obstruction": {
+    "N": 53084231,
+    "prime_factors": [
+      43,
+      1234517
+    ]
+  }
+}

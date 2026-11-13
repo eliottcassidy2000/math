@@ -1,0 +1,24 @@
+{
+  "status": "sealed executable dependencies and input catalog",
+  "pins": {
+    "05-knowledge/results/endpoint_context_recursion_20261113/context_head.py": "54983758cf8dfcca6c35ba60ca07fdcf584045300a551f0089a98a817407490e",
+    "05-knowledge/results/endpoint_context_recursion_20261113/feedback_probe.py": "95ab6cb125554b74d3ee5356e92d2ab904af8fc24fe74c12fb5cf92e9e3a0f5d",
+    "05-knowledge/results/endpoint_context_recursion_20261113/port_compiler.py": "7e87015c426f067929fa9b741ee4c5a19bb4cd2a847763a723223e7a6c39a767",
+    "05-knowledge/results/endpoint_context_recursion_20261113/renewal_catalog.json.gz": "8a74fbc2de11bf01ad8c00ca0875f85184e5d130197c2ff70b78665d102cb01c",
+    "05-knowledge/results/endpoint_context_recursion_20261113/typed_glue.py": "0703cdcaf60d5ce05bf4d09e39ac7869fc8c7d347a83e8a4bac3f2177f29cd9d",
+    "05-knowledge/results/modular_centers_collatz_pell_20261111/content_checks.py": "bf894b45e3d3f29a5e953b72bc12fec6ba3a07db7868a768758624917eacc63d",
+    "05-knowledge/results/modular_centers_collatz_pell_20261111/tournament_checks.py": "25a193fe1d66a6c6780451f5de6c393398c1b7788e743744317c258f41aa6a7a",
+    "05-knowledge/results/strategy_reframe_20261113/growth_probe.py": "7cc32b03d35b74a9b9956dc542d5414d3f28d8c1b82c682fc6efdf7c479bd484",
+    "05-knowledge/results/strategy_reframe_20261113/local_probe.py": "196f22eb54b1680bbd795f3207578fced6a5baa8c7cb28649a1152ef657b157d",
+    "05-knowledge/results/strategy_reframe_20261113/replay.py": "0cdf73f9430140cb03cd571bfd66cbf0ab2121d5a08be31be53d4ec4ca22078b",
+    "05-knowledge/results/strategy_reframe_20261113/transfer_probe.py": "0a34228dc45b638044c6df7d870c06c0f3093566baff81e0bf689ca6a1ae9d7d",
+    "05-knowledge/results/surplus_selector_20261113/context_sequences.py": "7ab6b8bb2204aaa0b279ada807d2bf4150fe6f33ae0e1059732c486bfd59f05a",
+    "05-knowledge/results/surplus_selector_20261113/context_transport.py": "f4524a0dfb55adf2205f2a9317adb23bd90feef8d5889a6e37e6931c28df3e92",
+    "05-knowledge/results/surplus_selector_20261113/fibre_probe.py": "f7dc21f9ff27be417daeeddf41443e59c0e910cc993ecccf019b899aaed93c74",
+    "05-knowledge/results/surplus_selector_20261113/inflation_probe.py": "02abbf8e22ea7f64abe64d0f05491ace5659e8f78ab5f517f4d67486f5999665",
+    "05-knowledge/results/surplus_selector_20261113/repair23.py": "8fea714774104b69536d73455203e6252e061282d642720332d080b0e67821e3",
+    "05-knowledge/results/ternary_core_grammar_20261113/atomic_ears.py": "2174a9b9c3f2c3d67c91662c40dc55718a59240c72f50d0130e229c91857968a",
+    "05-knowledge/results/ternary_core_grammar_20261113/peeling.py": "11db65786e0904e6b0d73414cc15185f944d7d71474a6fdb84b10f489828b230",
+    "05-knowledge/results/ternary_core_grammar_20261113/triangle_probe.py": "1177fe052b72efd908b82a9e41cee14ea6cb394a7ca6babc7f50eb6edc55e4aa"
+  }
+}

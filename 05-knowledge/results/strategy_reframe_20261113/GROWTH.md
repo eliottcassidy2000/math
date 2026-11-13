@@ -58,10 +58,12 @@ Hamiltonian paths. With the oddness theorem this implies:
 - H=1 precisely for a transitive tournament;
 - H=3 precisely for TT_a -> C3 -> TT_b, with a,b>=0.
 
-Here we use the standard Camion theorem and Hamilton-path oddness already
-routed by `05-knowledge/reference/CORE-PAPERS.md`; no new classification of
-general small counts is asserted. The following covers every entry and
-output, including arbitrary transitive padding.
+Here we use Camion's theorem as cited in
+[THM-343, H7-impossible, assumption A10](../../../01-canon/theorems/THM-343-H7-impossible.md),
+oddness from [THM-001, Redei](../../../01-canon/theorems/THM-001-redei.md),
+and [THM-1862, order-join reduction](../../../01-canon/theorems/THM-1862-order-join-reduction-principle.md).
+No new classification of general small counts is asserted. The following
+covers every entry and output, including arbitrary transitive padding.
 
 **Transitive A.** If t vertices follow r, G_A=2^t and e_A is 1 for t=0
 and 0 otherwise. Condition (1) permits only t=0 or t=1.
@@ -116,12 +118,16 @@ word of these operations whose net matrix returns d nontrivially is
 itself covered by the theorem. The factor five applies to the net
 return, not to each intermediate step. Cycling through other slopes
 therefore cannot produce a slow net half-return within this operation.
+`transfer_probe.py` verifies the literal edge identity, including vertex
+labels, for all 6,400 ordered pairs of labelled port contexts of orders2--3
+and a fixed four-vertex attachment.
 
 ## Consequence and boundary
 
 The factor five is an all-order obstruction to embedding a slow
 Calkin--Wilf generator as a repeatable return in this state space. In
-particular a unipotent target matrix cannot be such a return: its powers
+particular a unipotent target matrix cannot be a repeatable P-preserving
+return: its powers
 grow polynomially, contradicting the exponential lower bound on any
 actual nonzero input. Other slopes can enlarge the branching language,
 but the composition lemma excludes a slow return obtained solely by
