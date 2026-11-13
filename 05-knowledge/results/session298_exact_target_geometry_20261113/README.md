@@ -20,8 +20,14 @@ For reference, applying R once replaces s by q, F by 2F−q and leaves q fixed. 
 
 The return is primitive precisely when gcd(t,2δ)=1. The unprepared phase has b=3t with t>1 for every k≥1, so no primitive return. In the prepared phase t is odd. If k is a positive multiple of the multiplicative order of 2 modulo the odd part of δ (period 1 if that odd part is 1), then t≡d+q=4+6z≡−8 modulo that odd part. Thus there are infinitely many primitive branches at each exact initial target. For odd m, r is odd and z≡−1 mod3, so taking k even gives t≡0 mod3 and b≠0 mod3. These outputs meet the [native balanced controller](../source_selection_closure_20261103/NATIVE_SELECTION.md) entry guard. This proves an infinite family of physical same-target preparations with renewable exits, not universal same-target normalization. The original H17 preparation moves two positions and gets a stronger all-k branch theorem.
 
+## Nondyadic targets
+
+The [two-width chart](TWO_WIDTH.md) gives an explicit state at every root position of TT_m→singleton→TT_b→TT_m, with initial target (2^m−1)(2^b−1)+2. At H47, a neutral change opens infinitely many entries into the balanced controller; the initial root position opens none under the same return word.
+
 ## Design interpretation and proof targets
 
 A real relaxation of the repair equation b−3t=2δ is nearly vacuous; integer feasibility adds parity and coprimality, and a physical lift still requires (h,s,q,F) to come from an actual tournament with a marked root. The distinction mirrors [the baby Hodge wall](../../../01-canon/theorems/THM-509-the-two-layer-baby-hodge-dichotomy.md): a coarser observer and an integral realizability question should not be conflated. This is not a statement about algebraic cycles in the Hodge conjecture. The rational affine formula is exact, but its extension to real points is not constructive. Parity plus the odd-part period supplies actual integer parameters without an appeal to an ambient continuous approximation.
 
 See [finite legal repair geometry](LATTICE.md) for a precise conductor theorem and connections. Chan–Pak remains open: missing is an exact-source supply for targets outside the constructed family, or a target-decreasing legal repair that returns with its required interface.
+
+Run `python -B check.py` (or `python -O -B check.py`) from this directory.

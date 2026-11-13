@@ -44,4 +44,18 @@ def check():
                 b=3*t+2*(2+2**r)
                 if state(z,rt)!=(b,t,t,b): raise ValueError((m,k))
     print(c, "literal rooted states; 18 explicit birth words passed")
-if __name__=="__main__": check()
+def two_width():
+    count=0
+    for m in range(2,7):
+        for b in range(1,5):
+            u,v=2**b,3**b
+            a=[set(range(i+1,m+1)) for i in range(m)]+[set(range(m+1,m+1+b))]+[set(range(m))|set(range(i+1,m+1+b)) for i in range(m+1,m+1+b)]
+            for l in range(m):
+                r=m-1-l
+                want=((2**m-1)*(u-1)+2,2**r,(2**(m-1)-1)*(u-1)+2,2*(2**r*3**l-2**l)*(v-u)+3*2**l*u-2*2**l-int(r==0)*(u-1))
+                if state(a,l)!=want: raise ValueError((m,b,l))
+                count+=1
+    print(count, "two-width states passed")
+if __name__=="__main__":
+    check()
+    two_width()
