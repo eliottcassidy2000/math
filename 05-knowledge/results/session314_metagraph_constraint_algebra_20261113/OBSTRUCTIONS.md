@@ -17,36 +17,38 @@ The support can have an edge present in both colors, so the last two columns nee
 
 - The first actual (K_5) and (K_{3,3}) are at order 5. The (K_5) uses nodes `[2,4,5,6,13]`; the (K_{3,3}) uses `(2,5,22)|(6,12,13)`. The latter is not induced. The (K_5) is in the combined support, not wholly in either color at this order.
 - The first actual Petersen **subgraph** is at order 6, with witness `[2,4,6,5,69,40,90,8,25,9]` in the lexicographic two-subset order on `{0,1,2,3,4}`: disjoint subsets require adjacency. The first **induced** Petersen is at order 7 in combined and black support: `[8193,83,876,297,146,55,80,17,48,18]` in that same order.
-- A blue (K_{3,3}) first occurs at order 6: `(8,32,40)|(45,57,90)`. A blue (K_4) at the same order uses `[40,108,90,76]). No blue Petersen subgraph or blue (K_5) occurs through order 7; see the odd-order theorem below.
+- A blue (K_{3,3}) first occurs at order 6: `(8,32,40)|(45,57,90)`. A blue (K_4) at the same order uses `[40,108,90,76]. No blue Petersen subgraph or blue (K_5) occurs through order 7; see the odd-order theorem below.
 
 [Replay](replay_obstructions.py): for each unseen tiling, depth-first enumerate all Hamiltonian paths using its outgoing masks, relabel along each path, and include the mirrors. This produces the exact whole merged fibre, since every tiling in that fibre is one of the two types of path labelling. Then traverse one endpoint from each bit-complement pair. Clique search intersects common neighborhoods; (K_{3,3}) tests the common neighborhood of each triple; Petersen tests all injective assignments of vertices, also removing forbidden edges for the induced variant. All tests are finite-exact, not persistence claims at larger orders.
 
 ## Odd blue edges move one score particle
 
-The earlier [THM-060](../../../01-canon/theorems/THM-060-bipartite-skeleton.md) proves odd-blue bipartiteness by triangle parity. A stronger score lift is available. Put (m=lfloor n/2floor). For a blue tiling, the mirror maps outdegree (s_i) to (n-1-s_i), so retain one score from each paired position, say the first (m) scores. The unpaired middle score when (n) is odd is (m). Center these by ((n-1)/2). Their sorted absolute values are an isomorphism invariant, with no dependence on the representative orientation within a pair.
+[THM-060](../../../01-canon/theorems/THM-060-bipartite-skeleton.md) already proves odd-blue bipartiteness by triangle parity. The following score lift gives more information. For a blue tiling, the mirror pairs scores $s_i$ and $n-1-s_i$. Retain one score from each of the $m=\lfloor n/2\rfloor$ pairs, using the first $m$ positions. Center by $(n-1)/2$, take absolute values and sort. The unpaired middle score at odd order is $m$. The profile can be read from the full score multiset, so it is invariant under isomorphism and converse.
 
-On merged nodes, a complement line can be computed instead by reversing the backbone and taking no other changes: this is converse of the complement tiling. Reversing the path changes (s_0) to (s_0-1), and (s_{n-1}) to (s_{n-1}+1). Only the first pair is changed. At odd order its centered magnitude (|s_0-m|) changes by one, with all other magnitudes fixed. Thus the sorted magnitude partition changes by one Young-lattice box inside the (m)-by-(m) rectangle. The parity of its size bipartitions the odd blue graph, excluding all odd cycles, (K_5), and Petersen as blue subgraphs at all odd orders. A profile distance in the containing Young lattice is a lower bound on graph distance. At even order magnitudes are half-integers; the only way an edge stays in one score profile is a move from (+1/2) to (-1/2) at the initial endpoint, leaving magnitudes unchanged. Otherwise the same one-box rule applies after subtracting (1/2) from all magnitudes. In particular any odd blue cycle at even order needs a same-profile edge.
+Reverse the backbone, which gives the same line in the merged graph. Only its endpoint scores change, by $-1,+1$. At odd order the sorted magnitudes change by one Young-lattice box in the $m$ by $m$ rectangle. Their total parity recovers bipartiteness; their profile distance in the rectangle is a lower bound on blue distance. At even order subtract $1/2$ from the centered magnitudes; the rule is the same except that a move from centered score $+1/2$ to $-1/2$ at the initial endpoint leaves the profile unchanged. Any odd blue cycle at even order requires a same-profile edge.
 
-The possible odd score profiles alone are exactly the partitions dominated by ((m,m-1,ldots,1)): if the descending magnitudes are (a_1,ldots,a_m), Landau's inequalities for the (k) smallest scores say (sum_{ile k}a_ile km-k(k-1)/2) for (1le kle m), and the remaining ones follow by score symmetry. [Eplett's self-converse score theorem](https://doi.org/10.4153/CMB-1979-004-6) gives sufficiency. This is a vertex characterization for the **score** quotient only; individual nodes at one score can differ.
+At odd order the feasible profiles are exactly the partitions dominated by $(m,m-1,\ldots,1)$. For descending magnitudes $a_i$, Landau's inequalities on the lowest $k\le m$ scores become $\sum_{i\le k}a_i\le km-k(k-1)/2$; the rest follow by symmetry. [Eplett's self-converse score theorem](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/ED7BC2A1F6FF2D7F31547D771CE69B80/S000843950005743Xa.pdf/selfconverse_tournaments.pdf) gives sufficiency, and the inherited anti-Rédei law supplies a blue presentation of each self-converse type. This classifies the **score profiles**, not the classes at each profile.
 
 ## Exact blue score-edge generating polynomial
 
-Count blue tilings by their first-half *labelled* scores (s=(s_0,ldots,s_{m-1})), using one variable per paired index. The result is a Laurent-product expression with nonnegative integer coefficients:
-[
+Keep the first-half labelled scores as exponents $s=(s_0,\ldots,s_{m-1})$. The polynomial is
+$$
 P_n(z)=
- prod_{i=0}^{m-1} z_i^{n-1-i}(1+z_i^{-1})^{u_i}
- prod_{substack{0le i<j<m\j-ige2}}(1+z_j/z_i)
- prod_{0le i<j<m}(1+(z_i z_j)^{-1}).
-]
-For odd (n), (u_i=2) except (u_{m-1}=1). For even (n), (u_i=1) except (u_{m-1}=0). Start at the transitive score. A same-half mirror orbit moves one score from (i) to (j), except when it is a backbone edge; a cross-half orbit decreases both representatives by one. The fixed pair arc decreases its representative by one, unless that pair is the middle backbone edge at even (n). At odd (n) the orbit to the middle vertex gives a second such term, except at the innermost pair where it is backbone. This exhausts all free orbit bits. Equivalently insert a new outer pair variable (y) at (n+2): for (nge2), multiply (P_n(z)) by
-[
- y^{n+1}left(prod_i z_iight)(1+y^{-1})^{u}
- prod_{ige1}(1+z_i/y)prod_{ige0}(1+(yz_i)^{-1}),
- qquad u=2	ext{ at odd }n,quad u=1	ext{ at even }n.
-]
-The old coordinates are reindexed one place inward.
+ \prod_{i=0}^{m-1} z_i^{n-1-i}(1+z_i^{-1})^{u_i}
+ \prod_{\substack{0\le i<j<m\\j-i\ge2}}(1+z_j/z_i)
+ \prod_{0\le i<j<m}(1+(z_i z_j)^{-1}).
+$$
+For odd $n$, $u_i=2$ except $u_{m-1}=1$; for even $n$, $u_i=1$ except $u_{m-1}=0$. Start at the transitive score. A same-half free mirror orbit moves one win from $i$ to $j$. A cross-half orbit decreases both representatives by one. A fixed pair arc decreases its representative by one except at the middle even backbone edge; the odd middle vertex gives a second such factor except at the innermost pair. These are all free mirror orbits.
 
-For each monomial of coefficient (c) and exponent (s), deposit (c) on the unordered score-profile pair given by (s) and (s-e_0) (center, take magnitudes, sort). Divide every final bucket by two: each complement line is counted by its two tilings. This recovers exact blue score-quotient edge multiplicities, including pairs with equal profiles, not individual class adjacency. The [direct score replay](replay_score_quotient.py) found that the one-box rule after excluding nonstrong–nonstrong pairs is sufficient in the quotient through odd order 9 (profile/edge counts (2/1,5/4,15/17,48/71) at orders (3,5,7,9)). Sufficiency at all orders is not proved. Exact coefficients bypass that conjecture.
+Inserting a new outer pair with variable $y$ gives, for $n\ge2$, the update
+$$
+P_{n+2}(y,z)=
+y^{n+1}\left(\prod_i z_i\right)P_n(z)(1+y^{-1})^u
+\prod_{i\ge1}(1+z_i/y)\prod_{i\ge0}(1+(yz_i)^{-1}),
+$$
+with $u=2$ for odd $n$, $u=1$ for even $n$. Each product on the right ranges over the old indices meeting its condition. Each monomial deposits its coefficient on the unordered profile pair obtained from $s$ and $s-e_0$ by centering, taking magnitudes and sorting. Divide by two at the end to count lines rather than their two tilings. This recovers exact quotient multiplicities, including pairs with equal profiles, not the edges of the unquotiented graph.
+
+The [direct score replay](replay_score_quotient.py) finds through odd order 9 that every feasible one-box pair occurs except when both profiles are nonstrong. The profile/edge counts are $2/1,5/4,15/17,48/71$ for $n=3,5,7,9$. That candidate sufficiency is not proved in general; the exact coefficient rule does not depend on it.
 
 ## (A_5) and Petersen live differently in the shadow
 
