@@ -1,0 +1,14 @@
+{
+"status":"FINITE-EXACT",
+"universe":"All 131072 labelled induced two-vertex extensions per supplied order-eight module; all ordered response pairs via exact modular inverse",
+"left_profiles":56614,
+"right_profiles":58244,
+"hit_count":6,
+"hits":[
+{"M":[4553,101144],"N":[4231,94696],"left_attachment":[132,137,1],"right_attachment":[130,144,0],"e":-1},
+{"M":[4577,103880],"N":[3665,83792],"left_attachment":[142,202,0],"right_attachment":[33,253,0],"e":1},
+{"M":[4811,104600],"N":[4525,99136],"left_attachment":[161,186,1],"right_attachment":[40,81,0],"e":-1},
+{"M":[5305,112888],"N":[4583,98288],"left_attachment":[99,215,1],"right_attachment":[43,237,1],"e":-1},
+{"M":[5815,117688],"N":[7687,156856],"left_attachment":[1,83,1],"right_attachment":[12,87,0],"e":1},
+{"M":[6491,129368],"N":[6637,133384],"left_attachment":[33,110,0],"right_attachment":[39,42,0],"e":-1}
+]}

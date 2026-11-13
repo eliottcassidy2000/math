@@ -1,0 +1,148 @@
+{
+  "status": "FINITE-EXACT",
+  "universe": "onto-map basis for n,r1..6; literal single-module tournament contexts n1..4; one signed2x3 tensor; literal nine-site Pi frame on3x2 transitive grid",
+  "basis_controls": 36,
+  "diagonal": [
+    1,
+    2,
+    6,
+    24,
+    120,
+    720
+  ],
+  "literal_contexts": [
+    {
+      "n": 1,
+      "counts": [
+        3,
+        3,
+        5
+      ],
+      "differences": [
+        0,
+        -2
+      ]
+    },
+    {
+      "n": 2,
+      "counts": [
+        5,
+        3,
+        5
+      ],
+      "differences": [
+        2,
+        0
+      ]
+    },
+    {
+      "n": 3,
+      "counts": [
+        9,
+        3,
+        5
+      ],
+      "differences": [
+        6,
+        4
+      ]
+    },
+    {
+      "n": 4,
+      "counts": [
+        17,
+        3,
+        5
+      ],
+      "differences": [
+        14,
+        12
+      ]
+    }
+  ],
+  "product_bases": [
+    1,
+    2,
+    4
+  ],
+  "first_common_separator": 3,
+  "tensor_source": [
+    [
+      2,
+      -1,
+      3
+    ],
+    [
+      0,
+      4,
+      -2
+    ]
+  ],
+  "tensor_samples": [
+    [
+      2,
+      0,
+      14
+    ],
+    [
+      2,
+      16,
+      38
+    ]
+  ],
+  "tensor_recovered": [
+    [
+      2,
+      -1,
+      3
+    ],
+    [
+      0,
+      4,
+      -2
+    ]
+  ],
+  "pi_frame": {
+    "rows": [
+      462,
+      508,
+      120,
+      496,
+      481,
+      449,
+      384,
+      260,
+      4
+    ],
+    "M_site": 3,
+    "N_site": 1,
+    "transitive_samples": [
+      [
+        361,
+        721
+      ],
+      [
+        1081,
+        2161
+      ],
+      [
+        3241,
+        6481
+      ]
+    ],
+    "run_coefficients": [
+      [
+        361,
+        180
+      ],
+      [
+        360,
+        180
+      ],
+      [
+        120,
+        60
+      ]
+    ]
+  }
+}

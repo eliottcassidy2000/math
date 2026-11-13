@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "n": 1,
+      "H": 1371,
+      "P2": 22332,
+      "gcd_H_P2": 3,
+      "gcd_H_P2_P3": 3,
+      "P3_mod457": 323
+    },
+    {
+      "n": 2,
+      "H": 1637201,
+      "P2": 158188016,
+      "gcd_H_P2": 1,
+      "gcd_H_P2_P3": 1,
+      "P3_mod457": 345
+    },
+    {
+      "n": 191,
+      "H": "95^191+1276^191",
+      "P2": "2*8709^191+4*1276^191-2*95^191",
+      "gcd_H_P2": 1371,
+      "gcd_H_P2_P3": 3,
+      "P3_mod457": 312
+    }
+  ],
+  "outer_endpoints": [
+    4021131,
+    85423165841
+  ],
+  "outer_gcd": 1,
+  "all_determinant_extension_masks_nonconstant": true
+}

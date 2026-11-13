@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "normal_mode": "All nine scripts completed earlier in this session; hashes captured immediately before optimized replay.",
+  "optimized_mode": "All nine rerun with -B -O; exact receipt agreement required.",
+  "checks": [
+    {
+      "source": "pair_growth.py",
+      "receipt": "pair_growth.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/symmetry_port_return_20261113/pair_growth.py"
+      ],
+      "exit_code": 0,
+      "normal_receipt_sha256": "e790a34d96db220561403724a98cfd0d689d447fb59e4eb956edf02c8878273a",
+      "optimized_receipt_sha256": "e790a34d96db220561403724a98cfd0d689d447fb59e4eb956edf02c8878273a",
+      "receipt_agreement": true,
+      "assert_nodes": 0,
+      "stdout_tail": "profiles 242 239 hits 0\n",
+      "stderr": ""
+    },
+    {
+      "source": "pair_check.py",
+      "receipt": "pair_check.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/symmetry_port_return_20261113/pair_check.py"
+      ],
+      "exit_code": 0,
+      "normal_receipt_sha256": "0a1b08d02ddbbdd0e18439f86596ef185e3ec386c7902698bd85b6e4f04614ef",
+      "optimized_receipt_sha256": "0a1b08d02ddbbdd0e18439f86596ef185e3ec386c7902698bd85b6e4f04614ef",
+      "receipt_agreement": true,
+      "assert_nodes": 0,
+      "stdout_tail": "PASS six physical compensated pairs, four prime exits, induced marked embeddings; 285 NR group controls\n",
+      "stderr": ""
+    },
+    {
+      "source": "boundary_check.py",
+      "receipt": "boundary_receipt.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/symmetry_port_return_20261113/boundary_check.py"
+      ],
+      "exit_code": 0,
+      "normal_receipt_sha256": "07660e0758936df5a78a78f2c2a2f347690d83ac5a48a34d2d6a0e67c95155a3",
+      "optimized_receipt_sha256": "07660e0758936df5a78a78f2c2a2f347690d83ac5a48a34d2d6a0e67c95155a3",
+      "receipt_agreement": true,
+      "assert_nodes": 0,
+      "stdout_tail": "PASS rigid context3\u2192content1 release; higher-coordinate hostile; actual mixed incidences\n",
+      "stderr": ""
+    },
+    {
+      "source": "ports/port_return.py",
+      "receipt": "ports/receipt.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/symmetry_port_return_20261113/ports/port_return.py"
+      ],
+      "exit_code": 0,
+      "normal_receipt_sha256": "c34af3550e5149a2db82bfd4ac3ba95f0e693438e3c4c8d3de7f807c994462a2",
+      "optimized_receipt_sha256": "c34af3550e5149a2db82bfd4ac3ba95f0e693438e3c4c8d3de7f807c994462a2",
+      "receipt_agreement": true,
+      "assert_nodes": 0,
+      "stdout_tail": "PASS: protected primitive family, exact character certificate and literal host growth\n",
+      "stderr": ""
+    },
+    {
+      "source": "clock/refill.py",
+      "receipt": "clock/receipt.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/symmetry_port_return_20261113/clock/refill.py"
+      ],
+      "exit_code": 0,
+      "normal_receipt_sha256": "2f2bff456731ade0d0968d833bda190a8e18521f461878ec9d9ffb6f9cffd85f",
+      "optimized_receipt_sha256": "2f2bff456731ade0d0968d833bda190a8e18521f461878ec9d9ffb6f9cffd85f",
+      "receipt_agreement": true,
+      "assert_nodes": 0,
+      "stdout_tail": "{\n  \"status\": \"PASS\",\n  \"literal_words\": 4,\n  \"direct_controls\": 6,\n  \"signature\": {\n    \"1\": [\n      2163,\n      1801,\n      360\n    ],\n    \"2\": [\n      6483,\n      5401,\n      1080\n    ]\n  },\n  \"rigid_quotient\": 1\n}\n",
+      "stderr": ""
+    },
+    {
+      "source": "clock/entry_probe.py",
+      "receipt": "clock/determinant_entry.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/symmetry_port_return_20261113/clock/entry_probe.py"
+      ],
+      "exit_code": 0,
+      "normal_receipt_sha256": "77c6d7cd2b406792839081087739ea69035d0542a3c9fd6381cc9072322fae9a",
+      "optimized_receipt_sha256": "77c6d7cd2b406792839081087739ea69035d0542a3c9fd6381cc9072322fae9a",
+      "receipt_agreement": true,
+      "assert_nodes": 0,
+      "stdout_tail": "{\"targets\": 6, \"word_states\": 380, \"hits\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "source": "clock/phase_certificate.py",
+      "receipt": "clock/phase_receipt.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/symmetry_port_return_20261113/clock/phase_certificate.py"
+      ],
+      "exit_code": 0,
+      "normal_receipt_sha256": "983e566b43a098f6bef3202c75a4d7764de6aa0bcc1c94b23fa541ad34647155",
+      "optimized_receipt_sha256": "983e566b43a098f6bef3202c75a4d7764de6aa0bcc1c94b23fa541ad34647155",
+      "receipt_agreement": true,
+      "assert_nodes": 0,
+      "stdout_tail": "{\n  \"j0\": 1,\n  \"word\": \"(0,4+336t,0), t>=0\",\n  \"order\": \"49+672t\",\n  \"first_H\": 1482747909335627020487025233,\n  \"first_cofactor\": 211821129905089574355289319,\n  \"scope\": \"exact v7=1; cofactors coprime105; no primality claim\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "source": "history/hypergraph_probe.py",
+      "receipt": "history/hypergraph_receipt.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/symmetry_port_return_20261113/history/hypergraph_probe.py"
+      ],
+      "exit_code": 0,
+      "normal_receipt_sha256": "329a10d0bbbaaee1f4bc58cd382394d5bd045c8c97ed31256d1ee22ee934bbc6",
+      "optimized_receipt_sha256": "329a10d0bbbaaee1f4bc58cd382394d5bd045c8c97ed31256d1ee22ee934bbc6",
+      "receipt_agreement": true,
+      "assert_nodes": 0,
+      "stdout_tail": "   [\n        0,\n        1,\n        3\n      ],\n      [\n        0,\n        3,\n        4\n      ],\n      [\n        1,\n        2,\n        3\n      ]\n    ],\n    \"right_triangles\": [\n      [\n        0,\n        1,\n        3\n      ],\n      [\n        1,\n        2,\n        3\n      ],\n      [\n        1,\n        3,\n        4\n      ]\n    ],\n    \"NR\": [\n      27,\n      29\n    ]\n  },\n  \"disjoint_neutral_trade\": {\n    \"rows\": [\n      6,\n      16,\n      50,\n      7,\n      41,\n      11\n    ],\n    \"edges\": [\n      [\n        0,\n        1\n      ],\n      [\n        2,\n        4\n      ]\n    ],\n    \"four_graphs\": [\n      [\n        6,\n        16,\n        50,\n        7,\n        41,\n        11\n      ],\n      [\n        4,\n        17,\n        50,\n        7,\n        41,\n        11\n      ],\n      [\n        6,\n        16,\n        34,\n        7,\n        45,\n        11\n      ],\n      [\n        4,\n        17,\n        34,\n        7,\n        45,\n        11\n      ]\n    ],\n    \"H\": [\n      37,\n      37,\n      37,\n      31\n    ],\n    \"independent_permutation_H\": [\n      37,\n      37,\n      37,\n      31\n    ],\n    \"all_four_strong\": true,\n    \"mixed_difference\": -6,\n    \"minimum_order_in_complete_labelled_universe\": 6\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "source": "history/transitive_probes.py",
+      "receipt": "history/transitive_receipt.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/symmetry_port_return_20261113/history/transitive_probes.py"
+      ],
+      "exit_code": 0,
+      "normal_receipt_sha256": "4ad7f4d0f3d9fb8290a7ccc8cf2e737b14b280791c901b36090dce0c7617199d",
+      "optimized_receipt_sha256": "4ad7f4d0f3d9fb8290a7ccc8cf2e737b14b280791c901b36090dce0c7617199d",
+      "receipt_agreement": true,
+      "assert_nodes": 0,
+      "stdout_tail": ",\n        0\n      ]\n    },\n    {\n      \"n\": 3,\n      \"counts\": [\n        9,\n        3,\n        5\n      ],\n      \"differences\": [\n        6,\n        4\n      ]\n    },\n    {\n      \"n\": 4,\n      \"counts\": [\n        17,\n        3,\n        5\n      ],\n      \"differences\": [\n        14,\n        12\n      ]\n    }\n  ],\n  \"product_bases\": [\n    1,\n    2,\n    4\n  ],\n  \"first_common_separator\": 3,\n  \"tensor_source\": [\n    [\n      2,\n      -1,\n      3\n    ],\n    [\n      0,\n      4,\n      -2\n    ]\n  ],\n  \"tensor_samples\": [\n    [\n      2,\n      0,\n      14\n    ],\n    [\n      2,\n      16,\n      38\n    ]\n  ],\n  \"tensor_recovered\": [\n    [\n      2,\n      -1,\n      3\n    ],\n    [\n      0,\n      4,\n      -2\n    ]\n  ],\n  \"pi_frame\": {\n    \"rows\": [\n      462,\n      508,\n      120,\n      496,\n      481,\n      449,\n      384,\n      260,\n      4\n    ],\n    \"M_site\": 3,\n    \"N_site\": 1,\n    \"transitive_samples\": [\n      [\n        361,\n        721\n      ],\n      [\n        1081,\n        2161\n      ],\n      [\n        3241,\n        6481\n      ]\n    ],\n    \"run_coefficients\": [\n      [\n        361,\n        180\n      ],\n      [\n        360,\n        180\n      ],\n      [\n        120,\n        60\n      ]\n    ]\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "census": "pair_growth2.cpp exhaustive O3 run performed once; independent Python input/witness checks and mathematical completeness review retained.",
+  "repository_checks": {
+    "status": "PENDING"
+  },
+  "relative_links": {
+    "count": 75,
+    "status": "PASS",
+    "missing": []
+  },
+  "history_manifest": {
+    "status": "PASS",
+    "files": 8
+  }
+}

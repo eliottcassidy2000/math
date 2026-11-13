@@ -1,0 +1,111 @@
+{
+  "status": "FINITE-EXACT",
+  "scope": "Complete fixed A-seed wrapped-refill entry test with all j0>=1; not all clock modules",
+  "source": "../pair_growth2.json",
+  "source_sha256": "8c96a62dd71ded9f2f30cefcf922db14d88a214c95048f5158f555fd8ef0f859",
+  "entries": [
+    {
+      "M": [
+        4553,
+        101144
+      ],
+      "N": [
+        4231,
+        94696
+      ],
+      "target": 355076126401,
+      "clock_addresses": [],
+      "initial_j_tested": [
+        1,
+        14
+      ],
+      "word_states_examined": 60
+    },
+    {
+      "M": [
+        4577,
+        103880
+      ],
+      "N": [
+        3665,
+        83792
+      ],
+      "target": 322492551359,
+      "clock_addresses": [],
+      "initial_j_tested": [
+        1,
+        14
+      ],
+      "word_states_examined": 59
+    },
+    {
+      "M": [
+        4811,
+        104600
+      ],
+      "N": [
+        4525,
+        99136
+      ],
+      "target": 384666081601,
+      "clock_addresses": [],
+      "initial_j_tested": [
+        1,
+        14
+      ],
+      "word_states_examined": 61
+    },
+    {
+      "M": [
+        5305,
+        112888
+      ],
+      "N": [
+        4583,
+        98288
+      ],
+      "target": 411856063681,
+      "clock_addresses": [],
+      "initial_j_tested": [
+        1,
+        14
+      ],
+      "word_states_examined": 61
+    },
+    {
+      "M": [
+        5815,
+        117688
+      ],
+      "N": [
+        7687,
+        156856
+      ],
+      "target": 686274505151,
+      "clock_addresses": [],
+      "initial_j_tested": [
+        1,
+        15
+      ],
+      "word_states_examined": 71
+    },
+    {
+      "M": [
+        6491,
+        129368
+      ],
+      "N": [
+        6637,
+        133384
+      ],
+      "target": 641809137217,
+      "clock_addresses": [],
+      "initial_j_tested": [
+        1,
+        15
+      ],
+      "word_states_examined": 68
+    }
+  ],
+  "reproduce": "python3 -B 05-knowledge/results/symmetry_port_return_20261113/clock/entry_probe.py"
+}

@@ -1,0 +1,376 @@
+{
+  "status": "FINITE-EXACT; arbitrary-word theorem is proved separately",
+  "small_direct_controls": [
+    {
+      "inner_rows": [
+        0
+      ],
+      "j": 1,
+      "H": 2163
+    },
+    {
+      "inner_rows": [
+        0
+      ],
+      "j": 2,
+      "H": 6483
+    },
+    {
+      "inner_rows": [
+        2,
+        0
+      ],
+      "j": 1,
+      "H": 5765
+    },
+    {
+      "inner_rows": [
+        2,
+        0
+      ],
+      "j": 2,
+      "H": 17285
+    },
+    {
+      "inner_rows": [
+        2,
+        4,
+        1
+      ],
+      "j": 1,
+      "H": 19455
+    },
+    {
+      "inner_rows": [
+        2,
+        4,
+        1
+      ],
+      "j": 2,
+      "H": 58335
+    }
+  ],
+  "run_signatures": {
+    "1": [
+      2163,
+      1801,
+      360
+    ],
+    "2": [
+      6483,
+      5401,
+      1080
+    ]
+  },
+  "prime_quotient": {
+    "rows": [
+      110,
+      124,
+      56,
+      112,
+      97,
+      64,
+      4
+    ],
+    "proper_modules": [],
+    "automorphism_count": 1,
+    "permutations_tested": 5040
+  },
+  "literal_cycles": [
+    {
+      "word": [
+        0,
+        0
+      ],
+      "steps": [
+        {
+          "d": 0,
+          "old_order": 17,
+          "new_order": 25,
+          "prepared_count": 84259005297,
+          "neutral_count": 84259005297,
+          "final_count": 85423165841,
+          "two_flips": [
+            [
+              "b0_7",
+              "c"
+            ],
+            [
+              "b0_7",
+              "x"
+            ]
+          ],
+          "old_vertices_retained": 17,
+          "inner_order": 14,
+          "mark": "seed0",
+          "mark_retained": true
+        },
+        {
+          "d": 0,
+          "old_order": 25,
+          "new_order": 33,
+          "prepared_count": 2149156190371807,
+          "neutral_count": 2149156190371807,
+          "final_count": 2153639774453391,
+          "two_flips": [
+            [
+              "b1_7",
+              "c"
+            ],
+            [
+              "b1_7",
+              "x"
+            ]
+          ],
+          "old_vertices_retained": 25,
+          "inner_order": 21,
+          "mark": "seed0",
+          "mark_retained": true
+        }
+      ],
+      "Hmod3": 0,
+      "Hmod7": 0,
+      "Hmod49": 42
+    },
+    {
+      "word": [
+        0,
+        1,
+        0
+      ],
+      "steps": [
+        {
+          "d": 0,
+          "old_order": 17,
+          "new_order": 25,
+          "prepared_count": 84259005297,
+          "neutral_count": 84259005297,
+          "final_count": 85423165841,
+          "two_flips": [
+            [
+              "b0_7",
+              "c"
+            ],
+            [
+              "b0_7",
+              "x"
+            ]
+          ],
+          "old_vertices_retained": 17,
+          "inner_order": 14,
+          "mark": "seed0",
+          "mark_retained": true
+        },
+        {
+          "d": 1,
+          "old_order": 25,
+          "new_order": 35,
+          "prepared_count": 160634065408846607,
+          "neutral_count": 160634065408846607,
+          "final_count": 161069519089471551,
+          "two_flips": [
+            [
+              "b1_7",
+              "c"
+            ],
+            [
+              "b1_7",
+              "x"
+            ]
+          ],
+          "old_vertices_retained": 25,
+          "inner_order": 23,
+          "mark": "seed0",
+          "mark_retained": true
+        },
+        {
+          "d": 0,
+          "old_order": 35,
+          "new_order": 43,
+          "prepared_count": 4177436183378177858337,
+          "neutral_count": 4177436183378177858337,
+          "final_count": 4179104805467237365201,
+          "two_flips": [
+            [
+              "b2_7",
+              "c"
+            ],
+            [
+              "b2_7",
+              "x"
+            ]
+          ],
+          "old_vertices_retained": 35,
+          "inner_order": 30,
+          "mark": "seed0",
+          "mark_retained": true
+        }
+      ],
+      "Hmod3": 1,
+      "Hmod7": 6,
+      "Hmod49": 6
+    },
+    {
+      "word": [
+        0,
+        2,
+        0
+      ],
+      "steps": [
+        {
+          "d": 0,
+          "old_order": 17,
+          "new_order": 25,
+          "prepared_count": 84259005297,
+          "neutral_count": 84259005297,
+          "final_count": 85423165841,
+          "two_flips": [
+            [
+              "b0_7",
+              "c"
+            ],
+            [
+              "b0_7",
+              "x"
+            ]
+          ],
+          "old_vertices_retained": 17,
+          "inner_order": 14,
+          "mark": "seed0",
+          "mark_retained": true
+        },
+        {
+          "d": 2,
+          "old_order": 25,
+          "new_order": 37,
+          "prepared_count": 11151278142865751263,
+          "neutral_count": 11151278142865751263,
+          "final_count": 11184175066006665039,
+          "two_flips": [
+            [
+              "b1_7",
+              "c"
+            ],
+            [
+              "b1_7",
+              "x"
+            ]
+          ],
+          "old_vertices_retained": 25,
+          "inner_order": 25,
+          "mark": "seed0",
+          "mark_retained": true
+        },
+        {
+          "d": 0,
+          "old_order": 37,
+          "new_order": 45,
+          "prepared_count": 289879829489961233054673,
+          "neutral_count": 289879829489961233054673,
+          "final_count": 290005914032323111385729,
+          "two_flips": [
+            [
+              "b2_7",
+              "c"
+            ],
+            [
+              "b2_7",
+              "x"
+            ]
+          ],
+          "old_vertices_retained": 37,
+          "inner_order": 32,
+          "mark": "seed0",
+          "mark_retained": true
+        }
+      ],
+      "Hmod3": 2,
+      "Hmod7": 1,
+      "Hmod49": 43
+    },
+    {
+      "word": [
+        1,
+        0
+      ],
+      "steps": [
+        {
+          "d": 1,
+          "old_order": 17,
+          "new_order": 27,
+          "prepared_count": 1892400028149,
+          "neutral_count": 1892400028149,
+          "final_count": 1912794611157,
+          "two_flips": [
+            [
+              "b0_7",
+              "c"
+            ],
+            [
+              "b0_7",
+              "x"
+            ]
+          ],
+          "old_vertices_retained": 17,
+          "inner_order": 16,
+          "mark": "seed0",
+          "mark_retained": true
+        },
+        {
+          "d": 0,
+          "old_order": 27,
+          "new_order": 35,
+          "prepared_count": 48527516838799899,
+          "neutral_count": 48527516838799899,
+          "final_count": 48605992273192587,
+          "two_flips": [
+            [
+              "b1_7",
+              "c"
+            ],
+            [
+              "b1_7",
+              "x"
+            ]
+          ],
+          "old_vertices_retained": 27,
+          "inner_order": 23,
+          "mark": "seed0",
+          "mark_retained": true
+        }
+      ],
+      "Hmod3": 0,
+      "Hmod7": 2,
+      "Hmod49": 9
+    }
+  ],
+  "exact_inverse_controls": [
+    {
+      "target": 4021131,
+      "addresses": [
+        []
+      ],
+      "bounded_states_examined": 1
+    },
+    {
+      "target": 4021133,
+      "addresses": [],
+      "bounded_states_examined": 1
+    },
+    {
+      "target": 85423165841,
+      "addresses": [
+        [
+          0
+        ]
+      ],
+      "bounded_states_examined": 10
+    }
+  ],
+  "consecutive_coprime_counts": [
+    4021131,
+    85423165841
+  ],
+  "scope": "No census, scalar injectivity, primality, or all-target claim.",
+  "reproduce": "python3 -B 05-knowledge/results/symmetry_port_return_20261113/clock/refill.py"
+}

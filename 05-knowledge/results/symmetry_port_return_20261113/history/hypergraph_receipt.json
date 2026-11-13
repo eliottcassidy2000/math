@@ -1,0 +1,217 @@
+{
+  "status": "FINITE-EXACT",
+  "universe": "all labelled tournaments orders2..5, root0, full cyclic-triangle vertex-set hypergraph and root outgoing star; all allowed programs length<=3 for nontrivial fibres through order4; every vertex-disjoint neutral edge pair through order5",
+  "report": [
+    {
+      "n": 2,
+      "graphs": 2,
+      "fibres": 2,
+      "ambiguous": 0,
+      "indegree_one_triangle_only_fibres": 1,
+      "disjoint_neutral_pair_controls": 0
+    },
+    {
+      "n": 3,
+      "graphs": 8,
+      "fibres": 6,
+      "ambiguous": 0,
+      "indegree_one_triangle_only_fibres": 2,
+      "disjoint_neutral_pair_controls": 0
+    },
+    {
+      "n": 4,
+      "graphs": 64,
+      "fibres": 40,
+      "ambiguous": 0,
+      "indegree_one_triangle_only_fibres": 10,
+      "disjoint_neutral_pair_controls": 48
+    },
+    {
+      "n": 5,
+      "graphs": 1024,
+      "fibres": 642,
+      "ambiguous": 0,
+      "indegree_one_triangle_only_fibres": 133,
+      "disjoint_neutral_pair_controls": 720
+    }
+  ],
+  "first_witness": null,
+  "birth_formula_controls": 1098,
+  "program_node_controls": 260,
+  "symmetry_change": {
+    "left": [
+      250,
+      252,
+      249,
+      240,
+      4000,
+      4032,
+      3984,
+      3840,
+      2575,
+      3087,
+      2319,
+      15
+    ],
+    "right": [
+      242,
+      244,
+      241,
+      247,
+      4000,
+      4032,
+      3984,
+      3840,
+      2575,
+      3087,
+      2319,
+      15
+    ],
+    "root": 7,
+    "state": [
+      462915,
+      31185,
+      70335,
+      963549
+    ],
+    "aut_orders_inherited": [
+      81,
+      27
+    ]
+  },
+  "escape_hostile": {
+    "left": [
+      22,
+      8,
+      2,
+      5,
+      14
+    ],
+    "right": [
+      22,
+      8,
+      2,
+      21,
+      6
+    ],
+    "left_state": [
+      9,
+      3,
+      3,
+      9
+    ],
+    "right_state": [
+      9,
+      4,
+      5,
+      10
+    ],
+    "left_triangles": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "right_triangles": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        3,
+        4
+      ]
+    ],
+    "NR": [
+      27,
+      29
+    ]
+  },
+  "disjoint_neutral_trade": {
+    "rows": [
+      6,
+      16,
+      50,
+      7,
+      41,
+      11
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "four_graphs": [
+      [
+        6,
+        16,
+        50,
+        7,
+        41,
+        11
+      ],
+      [
+        4,
+        17,
+        50,
+        7,
+        41,
+        11
+      ],
+      [
+        6,
+        16,
+        34,
+        7,
+        45,
+        11
+      ],
+      [
+        4,
+        17,
+        34,
+        7,
+        45,
+        11
+      ]
+    ],
+    "H": [
+      37,
+      37,
+      37,
+      31
+    ],
+    "independent_permutation_H": [
+      37,
+      37,
+      37,
+      31
+    ],
+    "all_four_strong": true,
+    "mixed_difference": -6,
+    "minimum_order_in_complete_labelled_universe": 6
+  }
+}

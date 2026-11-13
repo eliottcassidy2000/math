@@ -1,0 +1,29 @@
+{
+  "status": "FINITE-EXACT",
+  "universe": "Every single-vertex extension on each supplied labelled order-eight module; all ordered pairs of resulting response profiles",
+  "base_left": [
+    4,
+    9,
+    82,
+    21,
+    35,
+    143,
+    187,
+    31
+  ],
+  "base_right": [
+    6,
+    12,
+    48,
+    21,
+    131,
+    219,
+    159,
+    15
+  ],
+  "result": {
+    "left_profiles": 242,
+    "right_profiles": 239,
+    "hits": []
+  }
+}
