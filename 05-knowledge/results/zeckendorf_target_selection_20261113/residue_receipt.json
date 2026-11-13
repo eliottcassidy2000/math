@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "scope": "Exact residues in a proved physical family; not absolute count coverage",
+  "tables": [
+    {
+      "n": 1,
+      "k": 1,
+      "unit_targets": 10
+    },
+    {
+      "n": 1,
+      "k": 2,
+      "unit_targets": 110
+    },
+    {
+      "n": 1,
+      "k": 3,
+      "unit_targets": 1210
+    },
+    {
+      "n": 2,
+      "k": 1,
+      "unit_targets": 10
+    },
+    {
+      "n": 2,
+      "k": 2,
+      "unit_targets": 110
+    },
+    {
+      "n": 2,
+      "k": 3,
+      "unit_targets": 1210
+    },
+    {
+      "n": 3,
+      "k": 1,
+      "unit_targets": 10
+    },
+    {
+      "n": 3,
+      "k": 2,
+      "unit_targets": 110
+    },
+    {
+      "n": 3,
+      "k": 3,
+      "unit_targets": 1210
+    }
+  ],
+  "unit_targets": 3990,
+  "valuation_controls": 726,
+  "leading_units": [
+    {
+      "precision": 1,
+      "leading_unit": 5
+    },
+    {
+      "precision": 2,
+      "leading_unit": 5
+    },
+    {
+      "precision": 3,
+      "leading_unit": 5
+    },
+    {
+      "precision": 4,
+      "leading_unit": 5
+    },
+    {
+      "precision": 5,
+      "leading_unit": 5
+    },
+    {
+      "precision": 6,
+      "leading_unit": 5
+    }
+  ],
+  "fixtures": [
+    {
+      "n": 1,
+      "k": 2,
+      "target": 1,
+      "exponent": 108,
+      "exact_seven_exponent": 328
+    },
+    {
+      "n": 1,
+      "k": 3,
+      "target": 7,
+      "exponent": 85,
+      "exact_seven_exponent": 3715
+    },
+    {
+      "n": 2,
+      "k": 2,
+      "target": 63,
+      "exponent": 51,
+      "exact_seven_exponent": 161
+    },
+    {
+      "n": 3,
+      "k": 3,
+      "target": 881,
+      "exponent": 318,
+      "exact_seven_exponent": 318
+    }
+  ]
+}

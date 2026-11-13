@@ -1,0 +1,148 @@
+{
+  "status": "PASS",
+  "base_ref": "ed79a99437c3bf19509b2f9b7b696ab9349032d3",
+  "scope": "Ten declared packet checkers, normal and optimized; no historical census replay",
+  "normal_optimized_receipts_identical": true,
+  "checks": [
+    {
+      "script": "charts/joint_selector.py",
+      "status": "PASS",
+      "commands": [
+        "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/charts/joint_selector.py",
+        "python3 -B -O 05-knowledge/results/zeckendorf_target_selection_20261113/charts/joint_selector.py"
+      ],
+      "script_sha256": "1f6b4639f34b7db8c02d6608870bf1841fbdcf6db32baa091406706d04877676",
+      "receipt": "charts/joint_receipt.json",
+      "normal_sha256": "e92cde9939049885616b2ab5ac89e81a160eea2f612f8dc286b9567b246ace78",
+      "optimized_sha256": "e92cde9939049885616b2ab5ac89e81a160eea2f612f8dc286b9567b246ace78",
+      "assert_nodes": 0,
+      "stdout": "[\n  {\n    \"grammar\": \"R\",\n    \"visible_free_owners\": [\n      3,\n      4,\n      5,\n      6\n    ],\n    \"dictionary_assignments\": 16,\n    \"dictionary_marking_pairs\": 52,\n    \"distinct_physical_markings\": 10\n  },\n  {\n    \"grammar\": \"D\",\n    \"visible_free_owners\": [\n      4,\n      6\n    ],\n    \"dictionary_assignments\": 4,\n    \"dictionary_marking_pairs\": 10,\n    \"distinct_physical_markings\": 5\n  }\n]"
+    },
+    {
+      "script": "charts/selector.py",
+      "status": "PASS",
+      "commands": [
+        "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/charts/selector.py",
+        "python3 -B -O 05-knowledge/results/zeckendorf_target_selection_20261113/charts/selector.py"
+      ],
+      "script_sha256": "921c38a5ed1f4c04f342405fb155dc891f4b84411180eb949795042751f041a5",
+      "receipt": "charts/receipt.json",
+      "normal_sha256": "09713a6ca1d51415cecfee3ffbe4f634d466bb40cd89dc904a94ae5866ed6188",
+      "optimized_sha256": "09713a6ca1d51415cecfee3ffbe4f634d466bb40cd89dc904a94ae5866ed6188",
+      "assert_nodes": 0,
+      "stdout": "g_masks\": 512\n  },\n  \"DP_tables_against_full_mask_enumeration\": 9,\n  \"raw_distance_hostile\": {\n    \"colors\": [\n      0,\n      0,\n      0,\n      1,\n      1,\n      1,\n      0,\n      0,\n      1\n    ],\n    \"first\": 0,\n    \"bad_second\": 6,\n    \"good_second\": 3,\n    \"remaining_group_orders\": [\n      3,\n      1\n    ]\n  },\n  \"three_color_row\": {\n    \"row\": \"CBACACBAC\",\n    \"quota\": [\n      1,\n      1,\n      1\n    ],\n    \"marks\": 3,\n    \"target_group_order\": 1,\n    \"valid_markings\": 4,\n    \"rank0\": [\n      1,\n      3,\n      7\n    ]\n  },\n  \"forced_zero_gap\": {\n    \"eligible\": [\n      0,\n      2\n    ],\n    \"selected\": [\n      0,\n      2\n    ]\n  },\n  \"exact_exponent_gap\": {\n    \"initial_exponent\": 4,\n    \"eligible\": [\n      0,\n      9\n    ],\n    \"budget\": 1,\n    \"attainable_residual_exponents\": [\n      2,\n      4\n    ]\n  },\n  \"literal_birth_controls\": [\n    {\n      \"selected\": [\n        0\n      ],\n      \"old_order\": 72,\n      \"new_order\": 73,\n      \"residual_group_order\": 3,\n      \"old_arcs_preserved\": true\n    },\n    {\n      \"selected\": [\n        0,\n        6\n      ],\n      \"old_order\": 72,\n      \"new_order\": 74,\n      \"residual_group_order\": 3,\n      \"old_arcs_preserved\": true\n    },\n    {\n      \"selected\": [\n        0,\n        3\n      ],\n      \"old_order\": 72,\n      \"new_order\": 74,\n      \"residual_group_order\": 1,\n      \"old_arcs_preserved\": true\n    },\n    {\n      \"selected\": [\n        1,\n        3,\n        7\n      ],\n      \"old_order\": 72,\n      \"new_order\": 75,\n      \"residual_group_order\": 1,\n      \"old_arcs_preserved\": true\n    }\n  ],\n  \"scope\": \"Selections control point stabilizers; root-child births provide the stated physical lift. No fixed Hamilton target claim.\",\n  \"reproduce\": \"python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/charts/selector.py\"\n}"
+    },
+    {
+      "script": "chirality.py",
+      "status": "PASS",
+      "commands": [
+        "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/chirality.py",
+        "python3 -B -O 05-knowledge/results/zeckendorf_target_selection_20261113/chirality.py"
+      ],
+      "script_sha256": "78cd302f4e0716e440f3fd36ed070a3ea26403bfb88c605ec229c70ca4d768ac",
+      "receipt": "chirality.json",
+      "normal_sha256": "deb1f88d8cd359d465571a3cb45a04c0ce7c0ed648cb2224b66cf8888650598e",
+      "optimized_sha256": "deb1f88d8cd359d465571a3cb45a04c0ce7c0ed648cb2224b66cf8888650598e",
+      "assert_nodes": 0,
+      "stdout": "PASS 484 rooted determinant controls; complete run tensors and hierarchy boundary"
+    },
+    {
+      "script": "handoff.py",
+      "status": "PASS",
+      "commands": [
+        "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/handoff.py",
+        "python3 -B -O 05-knowledge/results/zeckendorf_target_selection_20261113/handoff.py"
+      ],
+      "script_sha256": "3c38971a955983fe5037c72c4ce60327984d67d9deeef9d0a132c45675ccb1f1",
+      "receipt": "handoff.json",
+      "normal_sha256": "8bbb73b9f9dddcee504ab8a20ba7a9ddbc61a639f3b2b7aff22951b3cdf1c91f",
+      "optimized_sha256": "8bbb73b9f9dddcee504ab8a20ba7a9ddbc61a639f3b2b7aff22951b3cdf1c91f",
+      "assert_nodes": 0,
+      "stdout": "PASS exact module relocation and composed chirality/neutral-return handoff: 13 literal modules"
+    },
+    {
+      "script": "history/check_shared_dictionary.py",
+      "status": "PASS",
+      "commands": [
+        "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/history/check_shared_dictionary.py",
+        "python3 -B -O 05-knowledge/results/zeckendorf_target_selection_20261113/history/check_shared_dictionary.py"
+      ],
+      "script_sha256": "1f347cdd66b417a9a84db98b93815a0b67bb77c6e82149e130e92ec82b8c1d24",
+      "receipt": "history/receipt.json",
+      "normal_sha256": "d5e4df23e54625c1cee60b1c91289fc5ba6c9c3c3887009ae22ddea6ca3615e5",
+      "optimized_sha256": "d5e4df23e54625c1cee60b1c91289fc5ba6c9c3c3887009ae22ddea6ca3615e5",
+      "assert_nodes": 0,
+      "stdout": "{\n  \"dictionary_controls\": [\n    {\n      \"dictionaries\": 512,\n      \"grammar\": \"R\",\n      \"horizon\": 89,\n      \"legal_supports\": 289,\n      \"prefix_count_checks\": 89,\n      \"row_checks\": 45568,\n      \"top_index\": 11\n    },\n    {\n      \"dictionaries\": 32,\n      \"grammar\": \"D\",\n      \"horizon\": 144,\n      \"legal_supports\": 378,\n      \"prefix_count_checks\": 144,\n      \"row_checks\": 4608,\n      \"top_index\": 12\n    }\n  ],\n  \"pair_controls\": {\n    \"content_one_target18_values\": [\n      1,\n      2,\n      4,\n      5\n    ],\n    \"first_noninterval_target\": 16,\n    \"historical35_owner\": 3,\n    \"independent_values\": [\n      0,\n      1,\n      2\n    ],\n    \"owner_assignments_checked\": 1503,\n    \"shared_values\": [\n      0,\n      2\n    ],\n    \"targets_checked\": 126\n  },\n  \"scope\": \"Exact finite controls for the proved shared-dictionary classification; no HP spectrum claim.\",\n  \"status\": \"PASS\"\n}"
+    },
+    {
+      "script": "residue_selector.py",
+      "status": "PASS",
+      "commands": [
+        "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/residue_selector.py",
+        "python3 -B -O 05-knowledge/results/zeckendorf_target_selection_20261113/residue_selector.py"
+      ],
+      "script_sha256": "e020706659f79385566b4b7c16455cda88eef3c6347e1861d951286de283109a",
+      "receipt": "residue_receipt.json",
+      "normal_sha256": "3506d0e12a8a65736b275402c39434442ef21cf6cc49a5a2d46f5cb64735dad5",
+      "optimized_sha256": "3506d0e12a8a65736b275402c39434442ef21cf6cc49a5a2d46f5cb64735dad5",
+      "assert_nodes": 0,
+      "stdout": "PASS digit-lift residue selector, simultaneous exact factor 7, actual-count valuations"
+    },
+    {
+      "script": "selection/lift_check.py",
+      "status": "PASS",
+      "commands": [
+        "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/selection/lift_check.py",
+        "python3 -B -O 05-knowledge/results/zeckendorf_target_selection_20261113/selection/lift_check.py"
+      ],
+      "script_sha256": "d8c5e66536901c4cab586a159f8fc4260e45fb8fd857ce097d5f2ad991c4c451",
+      "receipt": "selection/lift_receipt.json",
+      "normal_sha256": "4a0da55dda8adab840a2cc0292f05f89ca728a8c0ccb84367da3e169a2ed89d9",
+      "optimized_sha256": "4a0da55dda8adab840a2cc0292f05f89ca728a8c0ccb84367da3e169a2ed89d9",
+      "assert_nodes": 0,
+      "stdout": "PASS universal one-arc module repair, exact target phases, strong short/long controls"
+    },
+    {
+      "script": "selection/module_probe.py",
+      "status": "PASS",
+      "commands": [
+        "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/selection/module_probe.py",
+        "python3 -B -O 05-knowledge/results/zeckendorf_target_selection_20261113/selection/module_probe.py"
+      ],
+      "script_sha256": "4b3ad9812ce37bebf48368dfbbab573d591a0220143973ad8089c23fd113a6fd",
+      "receipt": "selection/module_probe.json",
+      "normal_sha256": "ab371e33b525b116d06434dfe5235ebb83dd9d2212083be6933f1528ebc2ff9e",
+      "optimized_sha256": "ab371e33b525b116d06434dfe5235ebb83dd9d2212083be6933f1528ebc2ff9e",
+      "assert_nodes": 0,
+      "stdout": "normalizedtarget (110, 8, 122, 112, 99, 66, 2)\n0 3 [(1, True), (2, True), (3, True)]\n1 4 [(1, True), (2, False), (3, False), (4, False)]\n2 4 [(1, True), (2, False), (3, False), (4, False)]\n3 5 [(1, True), (2, False), (3, False), (4, False), (5, False)]\n5 4 [(1, True), (2, False), (3, False), (4, False)]"
+    },
+    {
+      "script": "selection/polar_probe.py",
+      "status": "PASS",
+      "commands": [
+        "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/selection/polar_probe.py",
+        "python3 -B -O 05-knowledge/results/zeckendorf_target_selection_20261113/selection/polar_probe.py"
+      ],
+      "script_sha256": "56600f3ac6cf4c246eea4eb4b6feaa3494d9a9d963da2e4333fdbed2c78f814d",
+      "receipt": "selection/polar_probe.json",
+      "normal_sha256": "0620901bfe66bdb26ca18645b812b6454c73f53c8022e5d01536241315d3b66b",
+      "optimized_sha256": "0620901bfe66bdb26ca18645b812b6454c73f53c8022e5d01536241315d3b66b",
+      "assert_nodes": 0,
+      "stdout": "{'order': 3, 'named_states': 2, 'attained': 1, 'max': 3}\n{'order': 4, 'named_states': 8, 'attained': 2, 'max': 5}\n{'order': 5, 'named_states': 32, 'attained': 3, 'max': 9}\n{'order': 6, 'named_states': 128, 'attained': 5, 'max': 17}\n{'order': 7, 'named_states': 512, 'attained': 10, 'max': 33}\n{'order': 8, 'named_states': 2048, 'attained': 16, 'max': 65}\n{'order': 9, 'named_states': 8192, 'attained': 28, 'max': 129}"
+    },
+    {
+      "script": "selection/response_collision.py",
+      "status": "PASS",
+      "commands": [
+        "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/selection/response_collision.py",
+        "python3 -B -O 05-knowledge/results/zeckendorf_target_selection_20261113/selection/response_collision.py"
+      ],
+      "script_sha256": "8d16d8f2f6044246d7e8a7dde02317481d38aa417aa6c9182e806ecbad28eeea",
+      "receipt": "selection/response_collision.json",
+      "normal_sha256": "16984ecac5754afc55ae49463207d77f491e762f3d5e1470d25b8fe4539307a2",
+      "optimized_sha256": "16984ecac5754afc55ae49463207d77f491e762f3d5e1470d25b8fe4539307a2",
+      "assert_nodes": 0,
+      "stdout": "tested 2718 cross-order primitive hits 2\n[{'state': (29, 5, 5, 35), 'left': [(46, 12, 56, 48, 35, 2), 4], 'right': [(16, 1, 3, 71, 14, 31, 55), 3], 'star_preserving_minimum_embedding': (1, 1, (6, 0, 5, 4, 3, 2), [(1, 2)])}, {'state': (31, 3, 15, 89), 'left': [(36, 17, 2, 7, 13, 30), 2], 'right': [(42, 124, 121, 112, 97, 64, 1), 4], 'star_preserving_minimum_embedding': None}]"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "status": "FINITE-EXACT controls; the all-tree proofs are separate",
+  "complete_colored_depth2_greedy": {
+    "colorings": 512,
+    "all_tie_prefix_states": 239344
+  },
+  "weighted_eligibility_controls": {
+    "weight_vectors": 81,
+    "maximum_tree_checks": 2511
+  },
+  "independent_group_control": {
+    "ambient_group": 81,
+    "color_stabilizer": 9,
+    "marking_masks": 512
+  },
+  "DP_tables_against_full_mask_enumeration": 9,
+  "raw_distance_hostile": {
+    "colors": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    "first": 0,
+    "bad_second": 6,
+    "good_second": 3,
+    "remaining_group_orders": [
+      3,
+      1
+    ]
+  },
+  "three_color_row": {
+    "row": "CBACACBAC",
+    "quota": [
+      1,
+      1,
+      1
+    ],
+    "marks": 3,
+    "target_group_order": 1,
+    "valid_markings": 4,
+    "rank0": [
+      1,
+      3,
+      7
+    ]
+  },
+  "forced_zero_gap": {
+    "eligible": [
+      0,
+      2
+    ],
+    "selected": [
+      0,
+      2
+    ]
+  },
+  "exact_exponent_gap": {
+    "initial_exponent": 4,
+    "eligible": [
+      0,
+      9
+    ],
+    "budget": 1,
+    "attainable_residual_exponents": [
+      2,
+      4
+    ]
+  },
+  "literal_birth_controls": [
+    {
+      "selected": [
+        0
+      ],
+      "old_order": 72,
+      "new_order": 73,
+      "residual_group_order": 3,
+      "old_arcs_preserved": true
+    },
+    {
+      "selected": [
+        0,
+        6
+      ],
+      "old_order": 72,
+      "new_order": 74,
+      "residual_group_order": 3,
+      "old_arcs_preserved": true
+    },
+    {
+      "selected": [
+        0,
+        3
+      ],
+      "old_order": 72,
+      "new_order": 74,
+      "residual_group_order": 1,
+      "old_arcs_preserved": true
+    },
+    {
+      "selected": [
+        1,
+        3,
+        7
+      ],
+      "old_order": 72,
+      "new_order": 75,
+      "residual_group_order": 1,
+      "old_arcs_preserved": true
+    }
+  ],
+  "scope": "Selections control point stabilizers; root-child births provide the stated physical lift. No fixed Hamilton target claim.",
+  "reproduce": "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/charts/selector.py"
+}

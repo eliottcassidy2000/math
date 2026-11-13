@@ -1,0 +1,353 @@
+{
+  "status": "FINITE-EXACT control of the joint finite selector theorem",
+  "row_length": 9,
+  "canonical_tags": [
+    [
+      "C",
+      3
+    ],
+    [
+      "A",
+      0
+    ],
+    [
+      "B",
+      4
+    ],
+    [
+      "C",
+      5
+    ],
+    [
+      "A",
+      0
+    ],
+    [
+      "C",
+      3
+    ],
+    [
+      "A",
+      0
+    ],
+    [
+      "B",
+      6
+    ],
+    [
+      "C",
+      3
+    ]
+  ],
+  "physical_palette": "BBB,DDD,BBD",
+  "target": {
+    "marks": 3,
+    "nonadjacent": true,
+    "role_quota_CAB": [
+      1,
+      1,
+      1
+    ],
+    "residual_group_order": 1
+  },
+  "owner_source": "../history/check_shared_dictionary.py",
+  "owner_source_sha256": "1f347cdd66b417a9a84db98b93815a0b67bb77c6e82149e130e92ec82b8c1d24",
+  "entries": [
+    {
+      "grammar": "R",
+      "visible_free_owners": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "dictionary_assignments": 16,
+      "dictionary_marking_pairs": 52,
+      "distinct_physical_markings": 10,
+      "assignments": [
+        {
+          "owner_bits": {
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0
+          },
+          "row": "CBACACBAC",
+          "solutions": 4,
+          "rank0": [
+            1,
+            3,
+            7
+          ]
+        },
+        {
+          "owner_bits": {
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 1
+          },
+          "row": "CAACACBAC",
+          "solutions": 2,
+          "rank0": [
+            1,
+            3,
+            6
+          ]
+        },
+        {
+          "owner_bits": {
+            "3": 0,
+            "4": 0,
+            "5": 1,
+            "6": 0
+          },
+          "row": "CBACABBAC",
+          "solutions": 6,
+          "rank0": [
+            1,
+            3,
+            7
+          ]
+        },
+        {
+          "owner_bits": {
+            "3": 0,
+            "4": 0,
+            "5": 1,
+            "6": 1
+          },
+          "row": "CAACABBAC",
+          "solutions": 7,
+          "rank0": [
+            1,
+            3,
+            6
+          ]
+        },
+        {
+          "owner_bits": {
+            "3": 0,
+            "4": 1,
+            "5": 0,
+            "6": 0
+          },
+          "row": "CBACACAAC",
+          "solutions": 4,
+          "rank0": [
+            1,
+            3,
+            7
+          ]
+        },
+        {
+          "owner_bits": {
+            "3": 0,
+            "4": 1,
+            "5": 0,
+            "6": 1
+          },
+          "row": "CAACACAAC",
+          "solutions": 0,
+          "rank0": null
+        },
+        {
+          "owner_bits": {
+            "3": 0,
+            "4": 1,
+            "5": 1,
+            "6": 0
+          },
+          "row": "CBACABAAC",
+          "solutions": 6,
+          "rank0": [
+            1,
+            3,
+            7
+          ]
+        },
+        {
+          "owner_bits": {
+            "3": 0,
+            "4": 1,
+            "5": 1,
+            "6": 1
+          },
+          "row": "CAACABAAC",
+          "solutions": 5,
+          "rank0": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "owner_bits": {
+            "3": 1,
+            "4": 0,
+            "5": 0,
+            "6": 0
+          },
+          "row": "BBABACBAB",
+          "solutions": 4,
+          "rank0": [
+            1,
+            5,
+            7
+          ]
+        },
+        {
+          "owner_bits": {
+            "3": 1,
+            "4": 0,
+            "5": 0,
+            "6": 1
+          },
+          "row": "BAABACBAB",
+          "solutions": 5,
+          "rank0": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "owner_bits": {
+            "3": 1,
+            "4": 0,
+            "5": 1,
+            "6": 0
+          },
+          "row": "BBABABBAB",
+          "solutions": 0,
+          "rank0": null
+        },
+        {
+          "owner_bits": {
+            "3": 1,
+            "4": 0,
+            "5": 1,
+            "6": 1
+          },
+          "row": "BAABABBAB",
+          "solutions": 0,
+          "rank0": null
+        },
+        {
+          "owner_bits": {
+            "3": 1,
+            "4": 1,
+            "5": 0,
+            "6": 0
+          },
+          "row": "BBABACAAB",
+          "solutions": 4,
+          "rank0": [
+            1,
+            5,
+            7
+          ]
+        },
+        {
+          "owner_bits": {
+            "3": 1,
+            "4": 1,
+            "5": 0,
+            "6": 1
+          },
+          "row": "BAABACAAB",
+          "solutions": 5,
+          "rank0": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "owner_bits": {
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 0
+          },
+          "row": "BBABABAAB",
+          "solutions": 0,
+          "rank0": null
+        },
+        {
+          "owner_bits": {
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1
+          },
+          "row": "BAABABAAB",
+          "solutions": 0,
+          "rank0": null
+        }
+      ]
+    },
+    {
+      "grammar": "D",
+      "visible_free_owners": [
+        4,
+        6
+      ],
+      "dictionary_assignments": 4,
+      "dictionary_marking_pairs": 10,
+      "distinct_physical_markings": 5,
+      "assignments": [
+        {
+          "owner_bits": {
+            "4": 0,
+            "6": 0
+          },
+          "row": "CBACACBAC",
+          "solutions": 4,
+          "rank0": [
+            1,
+            3,
+            7
+          ]
+        },
+        {
+          "owner_bits": {
+            "4": 0,
+            "6": 1
+          },
+          "row": "CAACACBAC",
+          "solutions": 2,
+          "rank0": [
+            1,
+            3,
+            6
+          ]
+        },
+        {
+          "owner_bits": {
+            "4": 1,
+            "6": 0
+          },
+          "row": "CBACACAAC",
+          "solutions": 4,
+          "rank0": [
+            1,
+            3,
+            7
+          ]
+        },
+        {
+          "owner_bits": {
+            "4": 1,
+            "6": 1
+          },
+          "row": "CAACACAAC",
+          "solutions": 0,
+          "rank0": null
+        }
+      ]
+    }
+  ],
+  "scope": "Pairs of consistent dictionaries and actual marking sets; not independent role choices or Hamiltonian-path targets.",
+  "reproduce": "python3 -B 05-knowledge/results/zeckendorf_target_selection_20261113/charts/joint_selector.py"
+}

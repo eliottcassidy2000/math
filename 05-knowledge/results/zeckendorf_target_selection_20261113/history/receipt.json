@@ -1,0 +1,45 @@
+{
+  "dictionary_controls": [
+    {
+      "dictionaries": 512,
+      "grammar": "R",
+      "horizon": 89,
+      "legal_supports": 289,
+      "prefix_count_checks": 89,
+      "row_checks": 45568,
+      "top_index": 11
+    },
+    {
+      "dictionaries": 32,
+      "grammar": "D",
+      "horizon": 144,
+      "legal_supports": 378,
+      "prefix_count_checks": 144,
+      "row_checks": 4608,
+      "top_index": 12
+    }
+  ],
+  "pair_controls": {
+    "content_one_target18_values": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "first_noninterval_target": 16,
+    "historical35_owner": 3,
+    "independent_values": [
+      0,
+      1,
+      2
+    ],
+    "owner_assignments_checked": 1503,
+    "shared_values": [
+      0,
+      2
+    ],
+    "targets_checked": 126
+  },
+  "scope": "Exact finite controls for the proved shared-dictionary classification; no HP spectrum claim.",
+  "status": "PASS"
+}
