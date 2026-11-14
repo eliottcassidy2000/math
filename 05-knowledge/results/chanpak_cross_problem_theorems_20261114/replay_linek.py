@@ -72,3 +72,60 @@ for m in range(3,10):
     assert set(cycles) == expected and len(cycles)==len(expected)
 
 print(f"weighted residue controls and {checked} small strong hosts passed")
+
+def F(a,b,mod):
+    return b%mod,(b+2*a)%mod
+
+def period(m):
+    # Return an even period of the full F action modulo m.
+    a,b,c,d = 1%m,0,0,1%m
+    initial = a,b,c,d
+    L = 0
+    while True:
+        a,b=F(a,b,m)
+        c,d=F(c,d,m)
+        L+=1
+        if (a,b,c,d)==initial and L%2==0:
+            return L
+
+def test_gluing(m,e):
+    mod=m*2**e
+    L=period(m)
+    def extension_power(a,b,k):
+        for _ in range(k):
+            a,b=F(a,b,mod)
+        return a,b
+    cols=[extension_power(1,0,L),extension_power(0,1,L)]
+    reps={}
+    points=[]
+    def add(a,b,n):
+        label=(a%m,b%m,n%2)
+        if label not in reps:
+            reps[label]=(a%mod,b%mod,n%2)
+            points.append(reps[label])
+    def product(a,b,c,d):
+        return tuple((u*a*c+v*b*d)%mod for u,v in zip(*cols))
+    add(1,3,1)
+    for a,b,n in points:
+        add(*F(a,b,mod),n+1)
+        for c,d,s in points:
+            add(*product(a,b,c,d),n+s)
+
+    A,B,_=reps[1%m,1%m,1]
+    a,b=extension_power(1,1,L*((e+2+L-1)//L))
+    assert (a%m,b%m)==(1%m,1%m)
+    assert (a%(2**e),b%(2**e))==(pow(3,-1,2**e),-pow(3,-1,2**e)%(2**e))
+    got=set()
+    for x,y,n in points:
+        for X,Y in [(x,y),(B*x,B*x+A*(y-x))]:
+            for _ in range(2**(e-3)):
+                got.add(Y%mod)
+                X,Y=b*b*X,b*b*X+a*a*(Y-X)
+                X%=mod
+                Y%=mod
+    assert got=={r for r in range(mod) if r%8 in (3,5)}
+
+for m in (1,3,5,9,15):
+    for e in (3,4,5):
+        test_gluing(m,e)
+print("mixed-modulus physical tree compiler controls passed")
