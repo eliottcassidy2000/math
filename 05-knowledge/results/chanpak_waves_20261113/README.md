@@ -462,6 +462,12 @@ two-hub word of minimal length, then lexicographically least (x, y, e), with the
   (wave 9), but normal forms are a much smaller, canonical set.
 - *Test (P30):* compute the normal forms for N ≤ 10^5 and check whether removing the last spine vertex of a normal
   form yields a normal form, or a bounded edit of one.
+- **P30 REFUTED for shortlex** (`scripts/normalform.c`). Among the 14,722 normal forms with N ≤ 29,523, deleting the
+  last spine vertex leaves a normal form in only **32.6%** of cases (first failures 11, 13, 15, 19, 23, 25). Deleting
+  the first vertex does so in only **25.5%** (first failures 5, 9, 13, 15, 17). Shortlex minimality is not
+  hereditary in either direction. The canonical selection should instead come from the construction: for example
+  the word produced by a greedy balanced-ternary or Erdős frame rule. That choice is hereditary by design, and the
+  remaining task is to prove that it never gets stuck except at r = 4 and r = 11.
 
 **Frame-level decoder status.** Designed, not built as a provably complete algorithm. Each Erdős step
 n = 2m + 3^k would place one nested frame, contributing 2^α·3^β by the nested-frame lemma. Wave 8 showed that
