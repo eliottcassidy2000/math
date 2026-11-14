@@ -141,6 +141,22 @@ r(i) = [i < a] + [b < i < c] + [i > d] ∈ {0, 1, 2, 3}. Hence
 where α and β count the vertices covered by exactly two or exactly three ranges (frames with a zero factor drop out).
 The ternary digits are the triply covered vertices.
 
+**Nested-frame lemma (PROVED, elementary).** Take the hub order (u1, u2) and an admissible frame with positions
+d < b < c < a. Then x_a = 0, x_b = 1, y_c = 0 and y_d = 1. The coverage multiplicity is:
+- 1 on [0, d) and on (a, m);
+- 2 on (d, b) and on (c, a);
+- 3 on (b, c).
+
+Every vertex is covered, so the frame contributes exactly
+
+    2^((b − d − 1) + (a − c − 1)) · 3^(c − b − 1).
+
+Example: if u1 beats only b0 and u2 is beaten only by c0, then b and c are forced. Summing the free positions a and d
+gives geometric series, so the counts contain 3^(c0 − b0 − 1)·(2^k − 1)(2^l − 1) plus the contributions of the other
+frame orders. THM-4876's one-centre family (2^i − 1)(2^l − 1) + 2 is the β = 0 shadow of this. The ternary register
+β is set by the gap between u1's chosen out-neighbour and u2's chosen in-neighbour. Many admissible frames together
+give the dense numeration.
+
 **P18 in its local form (append one vertex, get H ↦ 3H + d): REFUTED.** Over all 43,690 configurations with words of
 length ≤ 7, appending one spine vertex gives all three branches 3H, 3H+2, 3H+4 for only 38 of them, and none for
 39,276. Prepending gives identical statistics, as the converse symmetry predicts. So the ternary horizon is a global
