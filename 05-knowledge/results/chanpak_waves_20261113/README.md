@@ -293,6 +293,11 @@ are already committed, and the remaining multiplicities are 1–3 per vertex. Th
   - With about (4/3)^L realizers per target, this is plausible. Proved, it gives the Two-Hub Conjecture by
     induction on n.
   - *Test:* for n ≤ 10^4, keep all realizers of each m and check the extensions.
+  - **REFUTED in the one-vertex form** (`scripts/decclose.c`). With every realizer of length ≤ 10 (these cover
+    all m ≤ 10^4), **5,777** of the odd n in [23, 20,000] are not reached. The first are 43, 151, 153, 175 and 251.
+    Local availability, about half of all configurations, does not give per-target closure. The surviving form to
+    test is closure under bounded multi-vertex extensions, for example two or three vertices, or two Erdős steps
+    composed.
 
 ## Next waves (queued predictions)
 
