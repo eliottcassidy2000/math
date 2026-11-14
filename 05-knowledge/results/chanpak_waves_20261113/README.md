@@ -384,10 +384,15 @@ probabilistically, through some realizer of N − 2 with J = 2.
 | Collatz/ghost r-tree lens | reframing; exceptions are r = 4 (Collatz image of 1) and r = 11 (ghost image of 4) |
 | pairwise-meeting structure | formulas exact for orders 5–10 |
 
+**Rank of the prefix states (FINITE-EXACT).** The prefix state vectors v_p span exactly **27 = 3³ of the 36**
+coordinates, at prefix lengths 4, 6 and 7. Singular values decay quickly: s2/s1 ≈ 0.46, s5/s1 ≈ 0.08 and
+s10/s1 ≈ 0.04 at length 7. So H = c·v is far from rank 1, but approximately rank ≈ 5.
+
 **Most promising open route.** Meet-in-the-middle on the bilinear form H = c(suffix)·v(prefix). Compute the rank of
-the prefix state vectors {v_p}. If an effective rank of 1–2 dominates (for example, the S2-started coordinates), the
-problem reduces to divisor matching, which would give an exact absolute-target solver for N ~ 10^15 and
-large-scale evidence for the Two-Hub Conjecture.
+the prefix state vectors {v_p}. Exact divisor matching is ruled out (rank 27). The design that remains is coarse-to-fine
+meet-in-the-middle: bucket prefixes by their projections on the top ~5 singular directions; for each suffix,
+compute the target cell and check candidates exactly. That would give an exact absolute-target solver for N ~ 10^15
+and large-scale evidence for the Two-Hub Conjecture.
 
 ## Next waves (queued predictions)
 
