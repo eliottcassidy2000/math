@@ -800,8 +800,8 @@ by residues; and the run ends in one exact equality.
    triple (H, E, λ) by integer matrices, so the target reads N = A·g(U) + C·E(U) + B·(1 + U). Here U is the
    one-apex source word read as a binary number (O = 1).
 2. *Put the factors into the source.* The equation A·g(U) + B·U = T is solved from the lowest bit of U upward by
-   g's recursion. A last letter O sends (B, T) to (2B, T − B). A last letter Z sends it to (2B + A, T − A·[the next
-   letter is O]). The reader's factor B is carried inside the source problem, and the parity of the next letter is
+   g's recursion. A last letter O sends (B, T) to (2B, T − B). A last letter Z sends it to (2B + A, T − A·[the
+   preceding letter is O]). The reader's factor B is carried inside the source problem, and the parity of the next letter is
    the residue requirement passed down.
 3. *Final absolute equality.* The recursion closes only at U = 0 with T = A exactly. Once the window
    [(T − A)/(A + B), (T − A)/B] holds at most 8 integers, these are checked directly (g(U) ≤ U + 1). Every output
@@ -886,6 +886,97 @@ The decoder settles each instance of the final equality cheaply; it does not pro
 
 **P37 (pre-registered).** The sub-language "one-apex source, then readers J O^i Z^j with i, j ≤ 3" attains every
 odd N in [2649, 10^7].
+
+## Wave 20: the two-root-change conjecture, HYP-9677 to 2^24, and a run-cap trichotomy
+
+**The two-root-change family F_≤2 (HYP-9494 (D)).**
+- *Census.* [`scripts/f2miss.c`](scripts/f2miss.c) and the bitset version [`scripts/f2census.c`](scripts/f2census.c)
+  enumerate root-change words with at most two root changes. They reproduce HYP-9494 (D) exactly: 140 misses below
+  10^8, the largest 3,780,967, none in (5·10^7, 10^8].
+  The extension to 4·10^9 (P38) was still running at this commit.
+- *Decoder.* [`scripts/f2dec.c`](scripts/f2dec.c) allows arbitrary reader blocks J w and at most two root changes. It
+  enumerates the readers by total length and solves the source with the readers' factors carried inside.
+
+  | random odd targets | decoded with at most two root changes | time per target |
+  |---|---|---|
+  | 10 near 10^9 | 10 | 0.04 s |
+  | 50 near 10^12 | 50 | 1.4 s |
+  | 20 near 10^15 | 20 | 30 s |
+
+  About half of random targets are already one-apex values (no root change), so random samples mainly test the
+  decoder. They support HYP-9494's conjecture only where they land.
+
+**Bounded runs (HYP-9677).** An exact pruning makes the census cheap. A word J Z… reaches the same root state as
+O J… (JZ = OJ, Session 205), and the second form leaves more run budget. So a Z directly after J may be skipped
+whenever the run before that J was below the cap. With this, [`scripts/runcap2.c`](scripts/runcap2.c) runs about 45×
+faster at 2^19 with an identical result.
+
+*HYP-9677 extended (FINITE-EXACT).* With every run of spine letters of length at most 5 (the 63 matrices), every odd
+N in (10,391, 2^24 = 16,777,216] is attained. The misses are exactly the 49 known ones; the earlier record was 2^19.
+
+*A trichotomy in the run cap* ([`scripts/runtail.c`](scripts/runtail.c)). Misses per dyadic window:
+
+| max run | blocks | misses | behaviour of the per-window misses |
+|---|---:|---:|---|
+| 1 | 3 | 1,940,377 below 2^22 | the missed share rises to 93.5% of the odd numbers of [2^21, 2^22): density tends to 0 |
+| 2 | 7 | 350,882 below 2^22 | the missed share falls slowly (27.5%, 23.8%, 20.9%, 19.7%, 19.4%, 17.5%, 14.4% for 2^15 to 2^21) while the count grows 1.65–2× per doubling |
+| 3 | 15 | 1,867 below 2^26, largest 26,538,691 | peak 285 in [2^15, 2^16), then 277, 188, 136, 82, 56, 36, 12, 1, 1, 0 (2^16 to 2^25) |
+| 4 | 31 | 127 below 2^25, largest 130,247 | none in (130,247, 2^25] (P39, CONFIRMED) |
+| 5 | 63 | 49 below 2^24, largest 10,391 | none in (10,391, 2^24] |
+
+So the run cap shows the same trichotomy that HYP-9480 (D) found for the number of root changes:
+- runs ≤ 1: the density tends to 0;
+- runs ≤ 2: the density apparently tends to 1, with infinitely many misses expected;
+- runs ≥ 3: apparently finitely many misses.
+
+The middle regime is not visible in word counts. Words per odd number (trailing O's excluded) grow at every cap: from
+2^14 to 2^22 they rise from 38 to 212 for runs ≤ 2, from 104 to 1091 for runs ≤ 3, and from 169 to 2391 for runs ≤ 4
+([`scripts/rundim.c`](scripts/rundim.c)). Yet runs ≤ 2 still leaves about 14% of the odd numbers of [2^21, 2^22)
+unhit. Collisions dominate, so word counts, and the Poisson heuristics built on them, are a poor proxy for coverage
+in these structured families.
+
+**Fewer matrices ([`scripts/runcap_noZJ.c`](scripts/runcap_noZJ.c), [`scripts/runwhite.c`](scripts/runwhite.c)).**
+Forbid Z directly after J; by JZ = OJ, such a word can be rewritten only if the run before the J has room.
+- *Cap 4.* This leaves 16 blocks: w empty or beginning with O, |w| ≤ 4, after a first run of any word of length ≤ 4.
+  Through 2^24 they have 147 misses, with the same largest miss, 130,247, as all 31 cap-4 blocks.
+- *Greedy removal (checked to 2^21).* OZOO and OOZO can be removed together, leaving 14 blocks that still have the
+  largest miss 130,247 (the 14-block check to 2^24 was still running at this commit). Removing OOZZ as well moves the largest miss to 145,147.
+- *Cap 3.* The 8 Z-free blocks sit near the critical line: per-window misses 579, 566, 517, 477, 452, 378 for 2^16
+  to 2^21.
+
+So the repository's 63-matrix conjecture (HYP-9677) appears to hold with 14 matrices after the first factor, beyond
+130,247.
+
+*Heuristic for the threshold.* A block J w with |w| = n multiplies a typical state's count by about c·2^n. The
+pressure sum Σ_w (c·2^|w|)^(−s) at s = 1 is (L + 1)/c, so it crosses 1 near L + 1 ≈ c. With c ≈ 3–4 this puts the
+critical cap at L ≈ 2–3. This is the Hausdorff-dimension condition of Zaremba-type problems; it is a heuristic, not
+a theorem. Two facts block a direct transfer of Bourgain–Kontorovich: most block matrices are singular (J w is invertible only when w
+is empty, with det 1, or begins with O and ends with Z, with det 2^|w|; checked for |w| ≤ 7), so the semigroup is not
+inside a group, and density one would still fall short of
+cofiniteness.
+
+**Corridors force primes along tribonacci periods (FINITE-EXACT, [`scripts/corridor_primes.py`](scripts/corridor_primes.py)).**
+After an O (E = 0), a run of k root changes gives H = A_k·H₀ + B_k·λ₀. Here (A_k, B_k) are the H- and λ-entries of
+the first row of J^k. So a prime p divides every such count exactly when that row is a multiple of (0, 1, 0) mod p.
+Scanning one full period of the row for each prime p < 400:
+- the forcing lengths, when they exist, are a single residue class modulo the period, which is the tribonacci period
+  of p. Examples: 3 at k ≡ 3 (mod 13); 5 at k ≡ 9 (mod 31); 11 at k ≡ 72 (mod 110); 47 at k ≡ 14 (mod 46); 53 at
+  k ≡ 16 (mod 52);
+- 31 primes below 400 can be forced (3, 5, 11, 23, 31, 43, 47, 53, 59, 71, 89, 101, ...), and 47 never are (2, 7,
+  13, 17, 19, 29, 37, 41, ...).
+
+The modulus 13 for p = 3 is wave 16's Singer cycle of PG(2, 3). If J mod p has projective order p² + p + 1 (below
+60: p = 3, 5, 23, 59), it permutes all points of PG(2, p) in one cycle, so the orbit of [e₁] meets [e₂] and p is
+forced. Irreducibility of x³ − x² − x − 1 alone is not enough: at p = 31 and p = 37 the projective order is a third
+of p² + p + 1, and 31 is forced while 37 is not.
+
+**Pre-registered.**
+- **P38.** F_≤2 misses no odd N in (3,780,967, 4·10^9].
+- **P39 (CONFIRMED).** Runs ≤ 4 (31 matrices) miss no odd N in (130,247, 2^25]: 127 misses below 2^25, the largest
+  130,247. This is HYP-9677 with 31 matrices in place of 63.
+- **P40 (REFUTED, by one value).** Runs ≤ 3 were predicted to miss no odd N in (13,009,019, 2^26]. The census finds
+  exactly one such miss, 26,538,691, and none in (26,538,691, 2^26].
+- **P40′.** Runs ≤ 3 miss no odd N in (26,538,691, 2^27].
 
 ## Next waves (queued predictions)
 
