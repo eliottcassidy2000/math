@@ -46,6 +46,11 @@ count 3 rather than 5. A single old arc gives the literal pair
 40,241 and 40,243, and finite probes characterize the precise
 boundary data seen by right-only and two-sided readers.
 
+[Positional five-way carry](POSITIONAL_FIVE.md) gives a physical digit
+word at each residue modulo 5^k, with minimum eleven-vertex blocks
+in this model. Both wings may move; a final quotient test decides
+absolute attainment for the selected wings.
+
 ## Reproduction
 
 Run **python3 replay_support.py**, **python3 replay_f1.py**,
