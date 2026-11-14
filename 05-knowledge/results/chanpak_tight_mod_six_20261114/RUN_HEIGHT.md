@@ -151,6 +151,29 @@ exact positive two-sided family. The constraint that q and
 g(W) come from the *same* middle is essential; the reflection
 does not choose a middle for every target.
 
+For example L=5 and W=101 give q=9, M=32 and middle count
+3. The two graphs have exactly 7909 and 8483 paths, with
+remainders 5 and 3, both strictly below 32.
+
+## The prescribed coarse coefficient identifies the asymmetric pairs
+
+At fixed width ℓ, q fixes P_W−rev(P_W). In fact it determines
+all the differences between bits in mirror positions, though
+it leaves equal pairs 00 or 11 free. Suppose two choices of
+mirror differences gave the same q. Subtract the corresponding
+anti-palindromic polynomials in the address base, obtaining a
+nonzero integer polynomial F with coefficients of magnitude at
+most two and F(2)=F(1/2)=0. Then F=(2X²−5X+2)G with G an
+integer polynomial by Gauss's lemma. Take the first coefficient
+g_j of G of largest absolute value m>0. In F the coefficient
+of X^(j+1) has magnitude at least
+5m−2(m−1)−2m=m+2≥3, a contradiction.
+
+Consequently once q is chosen, at most 2^ceil(ℓ/2) words
+remain to test for the small remainder. This does not make
+that remainder free: all those choices still use the exact
+path-count evaluation.
+
 ## What the middle parity does to the carry
 
 With a middle of declared width ℓ, reversal sends P to
