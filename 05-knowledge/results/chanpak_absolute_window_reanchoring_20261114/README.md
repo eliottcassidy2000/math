@@ -55,3 +55,12 @@ with the hidden quotient alternatives in the last result, or a changing
 reader that supplies those alternatives without requiring complete local
 banks. Neither a denser address family nor another congruence check by
 itself resolves that obligation.
+
+## Exact follow-up: which four-windows are genuinely different?
+
+The [complete h9 slope inventory](SLOPE_908.md) uses the physical bound
+f>=2^n and the exact H9 SCC alphabet to exhaust every free-left-address
+chart of this kind with slope through 4095. There are seven apparent
+four-windows and no five-window. Six of the seven are literal binary
+subsequences of slope 908, not new absolute coverage. The exact slope-908
+response list has eight offsets and no parity term. [Replay](nine_slope.py).
