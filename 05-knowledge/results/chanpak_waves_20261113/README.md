@@ -703,6 +703,65 @@ Open:
 - port-wedge induction (busch_staircase §6.3);
 - the Shallow-Cut Conjecture.
 
+## Wave 18: the interval-hub family and the bi-quadratic law
+
+**Bi-quadratic frame law (PROVED, elementary).** For two-hub words, H(x, y, e) is a multilinear polynomial of
+degree ≤ 2 in the x-bits and degree ≤ 2 in the y-bits, so total degree ≤ 4.
+
+*Proof.* In the frame identity each admissible frame has a weight ∏ r(i) that does not depend on the labels, times
+an admissibility indicator. For the order (u1, u2) the indicator is (1 − x_a)·x_b·(1 − y_c)·y_d; for (u2, u1) it is
+(1 − y_a)·y_b·(1 − x_c)·x_d. Empty runs drop literals. ∎
+
+All 1024 words with m = 5 attain exactly the degrees (2, 2, 4) (`scripts/ihub_anf.py`). Example, with one hub, an
+empty interval and e = 0, where X(x) is the binary value with x_0 most significant:
+
+H = 1 + 2X(x) − Σ_(i<j) 2^max(1, j−i−1) x_i x_j.
+
+For instance x = 11 gives 1 + 6 − 2 = 5, checked by listing the 5 paths.
+
+**Interval-Hub Conjecture (NEW; FINITE-EXACT to 8,070,555).** Every odd N other than 7 and 21 is the count of
+TT_m + u1 + u2, where u1's out-set on the spine is arbitrary and u2's out-set is a single interval [p, p+q)
+(`scripts/intervalhub.c`).
+
+| m ≤ | 12 | 14 | 16 | 18 | 19 | 20 | 21 |
+|---|---|---|---|---|---|---|---|
+| first odd miss above 21 | 17,789 | 84,271 | 345,143 | 1,467,007 | 2,064,419 | 4,007,635 | 8,070,555 |
+| that miss ÷ 2^m | 4.34 | 5.14 | 5.27 | 5.60 | 3.94 | 3.82 | 3.85 |
+
+The horizon grows like 4·2^m: **binary** scale, against the ternary 3^L/2 of unrestricted two-hub words. So m ≈
+log2 N − 2 spine vertices suffice. The family is far smaller (2^m·m² words, not 4^m) and still complete through
+8·10^6.
+
+Which part of the family matters (`scripts/intervalhub_qcap.c`):
+- *Intervals of length ≤ 1* (u2 a near-sink): the coverage **stops at 7,477** for every m ≤ 20.
+- *Lengths ≤ 2 and ≤ 3*: the horizons reach 1,174,699 and 2,028,565 at m ≤ 20.
+- *An interval touching an end of the spine*: misses 25%.
+- *No interval* (one hub): misses 45.6%.
+
+The interior interval is what completes the spectrum.
+
+**Structure for a proof (PROVED / FINITE-EXACT).**
+- For fixed (I, e), H is a quadratic pseudo-Boolean function of x (`scripts/ihub_coef.py`).
+- Before the interval the prefix vectors span only **6** dimensions (`scripts/ihub_phase_rank.py`), so that part of
+  x acts through six one-hub statistics.
+- Example, m = 8 and I = [3, 5):
+  - the quadratic coefficients among the first three bits are 23 times the one-hub ones (−46 = 23·(−2));
+  - their linear coefficients are 37·2^(5−i).
+
+  The interval and the suffix set the scales, and the prefix supplies a scaled one-hub numeral.
+
+**No local binary recursion (FALSE).** Single-vertex insertions inside the family realize only 4,917 of the 42,113
+odd N′ ≤ 84,271 from a realizer of their odd parent n with N′ = 2n ± 1 (`scripts/intervalhub_inherit.c`). The
+doubling is global, as everywhere else. HYP-9469's increment law (one added vertex either keeps h or raises it to at
+least (3h+1)/2) explains why local steps are coarse.
+
+**P35.** The Interval-Hub Conjecture holds with m ≤ ⌈log2 N⌉ − 1.
+
+**P36 (proof route).** Write each H(·; I, e) as A + B·(one-hub numeral of the prefix) plus quadratic carries, with
+explicit scale factors (B, C) from the 6-dimensional prefix phase. Then prove that the union over intervals of the
+images of these scaled numerals covers every odd N ≥ 23, by a digit decoder with carries. This is a binary-scale,
+low-dimensional numeration problem: the smallest complete family found so far.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.

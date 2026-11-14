@@ -88,6 +88,17 @@ register with a connection integer of fewer than n/2 − 10.5 bits generates the
 2-adic division machines x ↦ (x − b·q)/2, the same carry dynamics as the repository's Collatz parity numbers
 (THM-4634 dictionary).
 
+### 3.1 The 3x+1 conjugate observer
+
+Every 0/1 sequence is the parity sequence of exactly one 2-adic integer under the Collatz map
+T(x) = x/2 or (3x+1)/2 (Terras, Lagarias). An eventually periodic parity sequence comes from a rational x, since a
+periodic word w of length k with j odd steps gives x = r/(2^k − 3^j). So **Prize 1 would follow from the
+irrationality of the 2-adic integer x_30 whose Collatz parity sequence is the Rule 30 center column**
+([`collatz_conj.py`](scripts/collatz_conj.py), which checks that the reconstructed x_30 reproduces all 8,192 parities).
+On 8,192 bits, x_30 is balanced (4,083 ones) and has 2-adic complexity exactly n/2 (4,096), with maximal deviation
+15. So the Rule 30 center column is not the 3x+1 parity record of any rational of small height either. This links
+Prize 1 to the repository's Collatz parity-number dictionary (THM-4634).
+
 ## 4. Where the repository's Rule 30 program stands (survey of 36 theorems, THM-3456 … THM-4210)
 
 - **Reductions.**

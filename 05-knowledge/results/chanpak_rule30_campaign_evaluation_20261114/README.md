@@ -28,6 +28,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 |---|---|
 | one-apex joins (THM-4875 (D)) | **every odd N < 2^32** except 7 and 21 |
 | two-hub words, length ≤ 18 | every odd N < **226,079,703** except 7 and 21 (new today; ratio X(L)/3^L = 0.584) |
+| interval-hub words (u2's out-set an interval), m ≤ 21 | every odd N < **8,070,555** except 7 and 21 (new today; binary-scale horizon ≈ 4·2^m) |
 | Fermat-block cuts of order-≤9 sources | every odd N in [69, 398,129] |
 | span-2 ribbons | every odd N ≤ 100,000 except 7, 21 and 47 |
 
@@ -43,6 +44,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | two-hub horizon law X(L) ≥ c·3^L | **alive** | 0.487, 0.515, 0.569, 0.584 for L = 14, 16, 17, 18 |
 | Shallow-Cut Conjecture and port-wedge induction | **alive** | order-9 sources reach 398,129; the §4 transfer closes linearly on (H, D, h, E, S) |
 | rational base 3/2 frame digits (P34) | **new, untested** | nested frames weigh 2^(A−g)·3^(g−1) |
+| **interval-hub numeration (P35/P36)** | **new, most promising** | complete through 8,070,555; for fixed (I, e) the count is quadratic in x; a 6-dimensional prefix phase |
 | dichotomy: a third exception must belong to an arithmetic family | **alive (heuristic)** | every candidate family checked so far is complete |
 
 ### Assessment
@@ -55,9 +57,12 @@ missing ingredient is a **self-similar covering lemma**: a family whose state sp
 base. The one-hub family is such a system, with state (H, Y = 1 + X) and block moves (H, Y) ↦ (H + 2^j Y, 2^(j+1)Y − 1) for j ≥ 1, but
 it reaches only density 1/2 (HYP-9469). Two hubs reach density 1 but have no low-dimensional invariant.
 
-The best next target is the hub-cut family with a second cut or a second hub restricted to a few blocks. That is
-the smallest system where density 1 and a three- or four-dimensional affine state might coexist. The decisive test
-is whether its attained set obeys an interval law I_(L+1) ⊇ ∪ φ_i(I_L) for explicit affine maps φ_i.
+**Update (wave 18).** The smallest complete system has now been found. In the interval-hub family the second hub
+beats exactly one interval of the spine. It covers every odd N < 8,070,555 except 7 and 21, at binary scale (m ≈
+log2 N − 2). For each interval its count is a quadratic pseudo-Boolean function of the first hub's bits. That
+follows from the bi-quadratic frame law, which is proved for all two-hub words. The part of the word before the
+interval acts through a 6-dimensional state. So the next target is concrete: closed forms for the scaled one-hub
+numerals that each interval produces, then a carry decoder proving that their union is complete (P36).
 
 ## Rule 30: the three prize problems
 
@@ -93,7 +98,7 @@ quantified in the LFSR and FCSR models; the quadratic-register model is next.
 
 ## Ranked next moves
 
-1. Build the hub-cut-plus-one family's affine state recursion and test the interval law (Chan–Pak).
+1. Derive closed forms for the interval-hub quadratic coefficients and build the carry decoder (P36, Chan–Pak).
 2. Test P34: realize rational base-3/2 digit vectors with nested two-hub frames (Chan–Pak).
 3. Look for a provably infinite 2-kernel of the Rule 30 center through THM-4210's tree (Rule 30, Prize 1).
 4. Measure the quadratic span of the Rule 30 center (Rule 30, Prize 3).

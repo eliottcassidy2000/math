@@ -17,6 +17,7 @@ def raa_profile(bits):
         dev=abs(2*lg-(k+1))
         if dev>maxdev: maxdev,arg=dev,k+1
     return g, lg, maxdev, arg, jumps
-T=int(sys.argv[1]); raw=open(sys.argv[2],'rb').read()[:T]; bits=list(raw)
-t0=time.time(); g,lg,md,arg,j=raa_profile(bits)
-print(f"T={T}: final 2-adic complexity log2 phi = {lg} (T/2={T//2}); max |2 log2phi(n) - n| = {md} at n={arg}; jump histogram {dict(sorted(j.items()))}; {time.time()-t0:.1f}s")
+if __name__ == "__main__":
+    T=int(sys.argv[1]); raw=open(sys.argv[2],'rb').read()[:T]; bits=list(raw)
+    t0=time.time(); g,lg,md,arg,j=raa_profile(bits)
+    print(f"T={T}: final 2-adic complexity log2 phi = {lg} (T/2={T//2}); max |2 log2phi(n) - n| = {md} at n={arg}; jump histogram {dict(sorted(j.items()))}; {time.time()-t0:.1f}s")
