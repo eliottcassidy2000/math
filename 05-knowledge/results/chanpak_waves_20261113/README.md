@@ -118,6 +118,55 @@ gives a digit argument for every large odd N.
 - **P19.** No odd N other than 7 and 21 needs more than two hubs. *Test:* the two-hub counter at word length 16
   combined with the 2^32 verification of THM-4875 (D).
 
+## Wave 6: the digit structure of two-hub counts
+
+**Horizon law (FINITE-EXACT).** X(L) is the first odd miss above 21 using words of length ≤ L. The ratio X(L)/3^L
+rises toward balanced-ternary scale:
+
+| L | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 16 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| X(L)/3^L | 0.41 | 0.33 | 0.40 | 0.38 | 0.41 | 0.44 | 0.43 | 0.49 | 0.487 | 0.515 |
+
+L-digit balanced ternary covers (3^L − 1)/2. At L = 14 the first miss is 2,327,675 = 5²·7·47·283, against
+3^14/2 = 2,391,484; the last covered value 2,327,673 = 3·601·1291. The length cap binds exactly where an L-digit
+ternary register runs out.
+
+**Mechanism (PROVED, elementary): two-hub counts are sums of 3-smooth frames.** In a path S0 h1 S1 h2 S2, fix the
+extreme elements: a = max S0, b = min S1, c = max S1 and d = min S2. Each of these must carry the right hub label.
+Every other spine vertex i may then join any segment whose range contains it, so it contributes a factor
+r(i) = [i < a] + [b < i < c] + [i > d] ∈ {0, 1, 2, 3}. Hence
+
+    H = Σ over hub orders and admissible frames (a, b, c, d) of 2^α·3^β,
+
+where α and β count the vertices covered by exactly two or exactly three ranges (frames with a zero factor drop out).
+The ternary digits are the triply covered vertices.
+
+**P18 in its local form (append one vertex, get H ↦ 3H + d): REFUTED.** Over all 43,690 configurations with words of
+length ≤ 7, appending one spine vertex gives all three branches 3H, 3H+2, 3H+4 for only 38 of them, and none for
+39,276. Prepending gives identical statistics, as the converse symmetry predicts. So the ternary horizon is a global
+frame effect, not a vertex-by-vertex digit recursion.
+
+**Revised proof route.** Show that frame sums realize every odd N in [69, c·3^L] for some c > 0. Since each frame is a
+3-smooth term 2^α·3^β, a natural lemma would realize sums of 3-smooth numbers with a divisibility-antichain pattern.
+That compares with the classical d-completeness of {2^a·3^b}: Erdős's question whether every positive integer is a
+sum of 3-smooth numbers none dividing another (attribution and exact statement still to be checked against the
+literature). Two hub orders and the four frame positions supply the signed or overlapping choices.
+
+**FRACTRAN / PRIMEGAME reading.** Conway's PRIMEGAME is 14 fractions over the 10 primes 2–29. Four of them are
+registers (2, 3, 5, 7), and six are state primes (11, 13, 17, 19, 23, 29). Minsky's two-counter universality encodes
+a configuration as 2^a·3^b, exactly the shape of one two-hub frame. Read this way, the two-hub tournament is a
+two-register machine: the 36 transfer states play the role of the state primes, and each frame is one register
+configuration 2^α·3^β. That PRIMEGAME's program length 14 equals the word length 14 whose horizon first exceeds 2×10^6
+is a coincidence. The structural match is "few registers × finite control".
+
+**Next predictions.**
+- **P20.** Single-frame-dominated words realize every number 2^α·3^β·(small cofactor) + 1. *Test:* enumerate words
+  whose admissible frames are at most 3, and list their counts.
+- **P21.** X(L)/3^L converges to a constant c ∈ (0.5, 0.6). *Test:* L = 17, 18 with a C run on a 64-bit coverage
+  bitmap.
+- **P22.** Every odd N ≤ X(L) has a realizer of length ≤ L that uses both hub orders. *Test:* count realizers by
+  order.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
