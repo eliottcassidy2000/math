@@ -475,6 +475,48 @@ admissible frames come in interacting groups, since low-block words realize only
 correct frame decoder must track the cross-frames each placement creates. The exact branch-and-bound decoder remains
 the constructive tool to about 10^7.
 
+## Wave 15: the greedy canonical decoder, the corridor-13 rank-one coincidence, MRB and Leech
+
+**Greedy canonical decoder (`scripts/greedy2hub.c`).** This is the exact branch-and-bound with a fixed rule: at each
+spine position, try the child whose upper bound is the smallest value still ≥ N. The first word found, at the
+minimal length that has a solution, is the **greedy canonical representative** of N. The rule is deterministic,
+and it is hereditary in the sense that the canonical word's prefixes are exactly the greedy choices along its path.
+- It solved 20/20 random targets near 10^3 (mean 623 nodes, against 1,727 for the plain decoder) and 20/20 near
+  10^6 (mean 3.6×10^5 nodes, against 1.05×10^6). That is about 3× faster, though still super-polynomial in log N.
+- What remains for a proof: show that the greedy search never needs to backtrack past a bounded depth, except along
+  the dead r-branch 1 → 4 → 11.
+
+**Why only corridors of length 0 or 13 force the terrace count to factor (FINITE-EXACT, q < 30).** In the terrace
+interval packing (Session 337), a zero-corridor of length q contributes the 2×2 kernel [[A_q, B_q], [B_q, D_q]]. Its
+series over 1 − z − z² − z³ are (1+z²), (1+z) and (1+z+z²). The count factors across the corridor exactly when the
+kernel has rank one, i.e. det_q = A_q·D_q − B_q² = 0.
+
+det_q = 0, −2, 3, −1, −4, 8, −5, −7, 20, −18, −9, **47, −56, 0**, 103, −159, …
+
+The zeros are exactly **q = 0 and q = 13**. At q = 13 the kernel is a perfect square:
+- A_13 = 2209 = 47², B_13 = 2632 = 47·56, D_13 = 3136 = 56²;
+- the two determinants just before it are 47 and −56, and det_14 = 103 = 47 + 56.
+
+det_q is a linear recurrence: a quadratic form in tribonacci sequences, of order ≤ 6. So "zeros only at 0 and 13"
+is a Skolem–Mahler–Lech instance, provable by a p-adic argument. **P31:** det_q ≠ 0 for every q ≠ 0, 13.
+Connections:
+- 13 is in the owner's set {4, 2, 5, 3, 7, 13} (THM-4838).
+- 47 is the extra miss of the span-2 ribbons (THM-4880). It is also a prime where 2 has odd order (23), with
+  Paley tournament P_47.
+- 56 = C(8, 3) = 7·8.
+
+**MRB (prior work, merged).** The repository's MRB product hierarchy (mrb_seven_cutoffs; Session 144 and 162 MRB
+notes) shows that the signed product with weights (−1)^n·λ·(n^(1/n) − 1)^α survives iff α > 1/2. That is a sharp
+convergence threshold of the same type as the terrace's Dirichlet abscissa s\* = 0.9636 (wave 14). In both, a
+sparse-versus-dense dichotomy is decided by where a weighted series crosses 1. A natural test is the MRB-weighted
+terrace series Σ (−1)^q·E_q^(−s) and its abscissa.
+
+**Leech (pointer).** The repository's Leech threads are THM-4760 (Fricke twinings of the Leech VOA), THM-484
+(involution modulus 24) and THM-4752 (tournament scores in II_{25,1} and the A24 deep hole). A testable link: the
+terrace kernels at rank one (q = 13) give a 2-dimensional rank-one quadratic form (47, 56). Its norm
+47² + 56² = 5345 = 5·1069 can be compared with the norms of II_{25,1} vectors attached to tournament scores
+(THM-4752). This is ANALOGY until such a map is exhibited.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
