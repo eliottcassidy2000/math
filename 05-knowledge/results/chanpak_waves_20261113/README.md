@@ -1069,6 +1069,30 @@ multiplicity grows slowly (6 near 2^8, 18 near 2^24), and the Cauchy–Schwarz d
 target is therefore within O(log N) of a one-apex count. Exact placement from there is blocked by (b)–(c). A
 positive-density theorem from there is the repository's open linear-energy statement (THM-4886, THM-4887).
 
+**No local fine corrections (PROVED for added vertices, FINITE-EXACT for flips).** Approximate placement would become
+exact if some local move could shift a one-apex count by small exact amounts. None of the tested moves can:
+- *adding vertices:* one new vertex either keeps h or raises it to at least (3h+1)/2 (HYP-9469 (1), proved);
+- *attaching readers:* obstructions (a)–(d) above;
+- *flipping one spine arc of a one-apex tournament* ([`scripts/flipstat.c`](scripts/flipstat.c),
+  [`scripts/flips.c`](scripts/flips.c)): the smallest nonzero change averages 20% of H at spine length 10 and 18% at
+  12. Flips changing H by at most 20 are 5.8% of all flips at length 10 and 1.4% at length 12. Over 40 random words,
+  no word realizes every even change in [−20, 20].
+
+So universal placement cannot be local: it has to come from the global variety of a dense family.
+
+**A singular-series check for the 11-matrix orbit ([`scripts/singser.c`](scripts/singser.c)).** On [2^21, 2^22], take
+for each small prime p the ratio between the mean multiplicity over N not divisible by p and the overall mean:
+
+| p | 3 | 5 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 31 | 37 | 41 | 43 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| ratio | 0.405 | 0.672 | 0.930 | 0.958 | 0.973 | 0.898 | 0.958 | 0.995 | 0.940 | 0.945 | 0.988 | 0.993 | 0.991 |
+
+Their product over p ≤ 43 is 0.175, and the observed ratio for primes is 0.164, so the prime deficit is consistent with
+an Euler product of local factors. The factors are not monotone in p: there are strong class-0 boosts at 17, 29 and
+31 and almost none at 23, 41 and 43. Numbers coprime to every p ≤ 43 have ratio 0.219, above the product, so the
+local factors are positively correlated. Any local limit theorem for this orbit would carry this irregular singular
+series.
+
 **What the combinations say about cofiniteness.** All routes end at the same place: a local limit theorem for a
 supercritical family on its weakest residue classes, which are the primes. The 11-matrix orbit is supercritical even
 there (prime multiplicity growing like X^0.25), which is why it looks cofinite. Two facts keep thin-orbit methods
