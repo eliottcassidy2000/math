@@ -51,3 +51,8 @@ whose square-class sign and positive height can be chosen together.
 
 Run `python probe.py` and `python replay_five_ratio.py` for independent
 finite controls on the formulas.
+
+**Follow-up:** [Linek's tree inverse problem at activity two](LINEK_BRIDGE.md).
+Scalar residues at every odd modulus survive, but the rooted pair theorem
+fails at 3. Bounded full-conflict clique number gives a finite-prime
+spectrum; the sharp triangle-free slice is exactly 3^a·5^b.
