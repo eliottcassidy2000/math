@@ -44,7 +44,7 @@ sign factor, which is complex conjugation.
 **The exceptions in each coordinate.**
 - m-gaps {3, 10} = {T_2, T_4} (triangular numbers). Here m = 3 is the universal gap: it is a gap of I(Ω(T), b) in
   every base checked (THM-5070), because no tournament has exactly three pairwise-meeting odd cycles. And m = 10 is a
-  gap in bases 2, 5, 6, 7 but not in 3, 4, 8.
+  gap in every base except 4 and 8 (base 3 misses N = 31); see the chanpak_waves note for the proof at b ≥ 9.
 - r-gaps {4, 11}. In balanced ternary these are "11" and "11T": 4 = 3·1 + 1 is the +1 branch that a single vertex
   cannot take, and 11 = 3·4 − 1 is the −1 branch from the dead node 4. In both coordinates the two gaps are 7 apart,
   since 21 − 7 = 2·7.
