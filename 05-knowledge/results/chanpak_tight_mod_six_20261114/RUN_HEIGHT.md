@@ -169,6 +169,22 @@ g_j of G of largest absolute value m>0. In F the coefficient
 of X^(j+1) has magnitude at least
 5m−2(m−1)−2m=m+2≥3, a contradiction.
 
+There is also a direct greedy inverse. Put m=floor(ℓ/2),
+k=ℓ−m, and write d=P−rev(P)=2^k A−B, where for outer-to-inner
+mirror differences ε_i,
+
+    A=Σ ε_i 2^(m−1−i),      B=Σ ε_i 2^i.
+
+The congruence B≡−d modulo 2^k leaves at most two candidates
+in [−(2^m−1),2^m−1]. For each, compute A. The outer difference
+ε₀ is zero when B is even. When B is odd it must be the sign of A:
+that highest digit dominates all lower digits combined. If A=0
+in this odd case reject. Replace A by A−ε₀·2^(m−1), replace
+B by (B−ε₀)/2, and shorten the list. A valid end must have
+A=B=0. This uses O(ℓ) integer steps for each of the two
+initial possibilities; no search among the signed profiles
+is needed.
+
 Consequently once q is chosen, at most 2^ceil(ℓ/2) words
 remain to test for the small remainder. This does not make
 that remainder free: all those choices still use the exact
