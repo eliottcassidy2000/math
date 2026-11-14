@@ -9,6 +9,8 @@
 3. [Three strands and Zeckendorf guards](strands/THREE_STRANDS.md). Every triply eligible site in a locked frame gives exact balance across three phases; Fibonacci-address charges give a higher-rank balance criterion. For fixed block patterns, phase differences repeat mod 6 in the lengths even as ordinary counts grow. The same surjection polynomial counts three-way canonical atom splits, but a literal positional compiler for all Zeckendorf words needs exponentially long spines. This distinction separates knowing local acceptance from encoding the exact target.
 4. [Smooth sum fan](strands/SMOOTH_SUM_FAN.md) and [aliquot boundary](ALIQUOT_BOUNDARY.md). There are exactly four pair geometries preserving smoothness. No nontrivial subset of a primitive smooth antichain can be regrouped back into a smooth term. The aliquot successor likewise leaves the smooth chart unless a valuation cancels at one of two boundaries. The summand graph and its transitive closure differ by the doubling exclusions, illustrating why dropping the chosen parents destroys exact information.
 
+![Summand and Hamiltonian phase coordinates side by side](three_strand_atlas.svg)
+
 ## Reproduce
 
 - Run **python replay_compass.py** to verify the 18 all-scale phase charts, labelled switch enumeration, several independent literal tournament counts, and the inverse formula.
