@@ -177,3 +177,40 @@ a nonlocal coding, or a changing core; it rules out literal local
 realization of the full neighbouring-exclusion language by
 polynomial padding. To make an arithmetic inverse pay, the
 adjacency guard must come from outside this Cartesian architecture.
+
+### Arbitrary words and a genuinely growing discrepancy
+
+Since every frame contributes either zero or a unit to a phase
+difference, any two phase counts differ by at most 2(s+1)^4 for a
+spine of length s. Thus even beyond fixed skeletons the phase channels
+track H/3 to polynomial error. The error need not be bounded. For
+the word (012)^j, let the two phase differences from phase2 be (D0,D1).
+The exact law is
+
+    j=2m,   m>=1: (2m-m^2, -m(m+1))
+    j=2m+1, m>=0: (-m^2+2m+2, -m^2+m+3).
+
+Reproduction/proof: for each hub order keep the three run states
+(untouched/current end disallowed/current end allowed) and phase mod3,
+so an upper bound of 2*3^3*3=162 states suffices. Repeat the fixed
+6-letter block 012012. Each phase difference is a linear form of
+powers of its single 162-dimensional transfer matrix, starting at
+the appropriate initial prefix. Subtract the stated degree-two
+polynomial by adjoining a 3-dimensional unitriangular shift.
+The residual has a recurrence of order at most 165 by Cayley-Hamilton;
+the explicit zero checks for 165 consecutive starting terms in
+three_strands.py prove identity for all m in those intervals. This is
+an all-order, finite-dimensional recurrence certificate, not extrapolation
+from a short tabulation. The calculation uses integer arithmetic only.
+
+### Cost of adding more hubs to the literal compiler
+
+For k hubs there are at most k!*(s+1)^(2k) frames: fix the hub order and
+each incident run endpoint (two per hub; outside end positions require
+no extra anchor). A legal consecutive-hub adjacency is just a check
+in that frame. Every projected frame is still a rectangle for
+coordinatewise per-site labels. Therefore the same lower bound now is
+k!*(s+1)^(2k) >= f_m. If s is polynomial in m then k=Omega(m/log m):
+for k>m the claim is immediate, otherwise log(k!)<=k*log m.
+Increasing the hub budget by a fixed constant does not repair this
+particular intended positional inverse.
