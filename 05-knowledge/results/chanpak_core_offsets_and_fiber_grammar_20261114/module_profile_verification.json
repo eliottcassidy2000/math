@@ -1,0 +1,163 @@
+{
+  "status": "PASS",
+  "base_commit": "8f3e642bd29de5bfbb7b0bc1fa558fbfe18b6b90",
+  "exact_rows": [
+    {
+      "n": 1,
+      "classes": 1,
+      "strong_classes": 1,
+      "prime_classes": 0,
+      "profiles": 1,
+      "H_fibers": {
+        "1": 1
+      }
+    },
+    {
+      "n": 2,
+      "classes": 1,
+      "strong_classes": 0,
+      "prime_classes": 0,
+      "profiles": 1,
+      "H_fibers": {
+        "1": 1
+      }
+    },
+    {
+      "n": 3,
+      "classes": 2,
+      "strong_classes": 1,
+      "prime_classes": 1,
+      "profiles": 2,
+      "H_fibers": {
+        "1": 1,
+        "3": 1
+      }
+    },
+    {
+      "n": 4,
+      "classes": 4,
+      "strong_classes": 1,
+      "prime_classes": 0,
+      "profiles": 3,
+      "H_fibers": {
+        "1": 1,
+        "3": 2,
+        "5": 1
+      }
+    },
+    {
+      "n": 5,
+      "classes": 12,
+      "strong_classes": 6,
+      "prime_classes": 3,
+      "profiles": 8,
+      "H_fibers": {
+        "1": 1,
+        "3": 3,
+        "5": 2,
+        "9": 2,
+        "11": 1,
+        "13": 1,
+        "15": 2
+      }
+    },
+    {
+      "n": 6,
+      "classes": 56,
+      "strong_classes": 35,
+      "prime_classes": 15,
+      "profiles": 24,
+      "H_fibers": {
+        "1": 1,
+        "3": 4,
+        "5": 3,
+        "9": 5,
+        "11": 2,
+        "13": 2,
+        "15": 6,
+        "17": 2,
+        "19": 2,
+        "23": 4,
+        "25": 2,
+        "27": 2,
+        "29": 4,
+        "31": 2,
+        "33": 5,
+        "37": 5,
+        "41": 1,
+        "43": 2,
+        "45": 2
+      }
+    }
+  ],
+  "independent_composition_controls": 94,
+  "same_H_counterexample": [
+    {
+      "mask": 69,
+      "P": [
+        0,
+        6,
+        0,
+        8,
+        0,
+        1
+      ],
+      "pc": [
+        0,
+        15,
+        39,
+        33,
+        10,
+        1
+      ],
+      "H": 15,
+      "H_gate": 123
+    },
+    {
+      "mask": 76,
+      "P": [
+        0,
+        4,
+        0,
+        10,
+        0,
+        1
+      ],
+      "pc": [
+        0,
+        15,
+        45,
+        35,
+        10,
+        1
+      ],
+      "H": 15,
+      "H_gate": 135
+    }
+  ],
+  "C3_only_counts_n0_to_n9": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    9,
+    24,
+    65,
+    182,
+    528
+  ],
+  "C3_only_profile_counts_n0_to_n9": [
+    1,
+    1,
+    1,
+    2,
+    3,
+    6,
+    13,
+    28,
+    63,
+    148
+  ],
+  "elapsed_seconds": 3.964
+}
