@@ -112,8 +112,9 @@ quantified in the LFSR and FCSR models; the quadratic-register model is next.
 
 ## Ranked next moves
 
-1. Prove cofiniteness, or density one, for a sub-semigroup of the O/Z/J grammar whose chains grow like log N
-   (HYP-9677); the wave-19 decoder supplies exact instances (Chan–Pak).
+1. Prove cofiniteness, or density one, for a sub-semigroup of the O/Z/J grammar whose chains grow like log N.
+   The smallest explicit target found so far: 11 block matrices after a first run of length at most 4 reach every
+   odd N in (418,429, 2^24] (wave 20; HYP-9677 has 63). The wave-19 decoder supplies exact instances (Chan–Pak).
 2. Test P34: realize rational base-3/2 digit vectors with nested two-hub frames (Chan–Pak).
 3. Look for a provably infinite 2-kernel of the Rule 30 center through THM-4210's tree (Rule 30, Prize 1).
 4. Measure the quadratic span of the Rule 30 center (Rule 30, Prize 3).

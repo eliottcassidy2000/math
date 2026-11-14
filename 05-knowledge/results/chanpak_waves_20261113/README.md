@@ -943,11 +943,17 @@ Forbid Z directly after J; by JZ = OJ, such a word can be rewritten only if the 
   largest miss 130,247 (checked to 2^24: 170 misses, the largest 130,247). Removing OOZZ as well moves the largest miss to 145,147. More generally, removing any one
   of the six remaining length-4 blocks (13 blocks) keeps the census apparently cofinite through 2^22, with the
   largest miss between 145,147 (OOZZ removed) and 418,429 (OZZO or OOOZ removed).
+- *Greedy to 11 blocks ([`scripts/greedy_blocks.py`](scripts/greedy_blocks.py)).* Continuing the greedy removal,
+  OOZZ, OOOO and OZZO go, leaving 11 blocks: J followed by ε, O, OO, OZ, OOO, OOZ, OZO, OZZ, OOOZ, OZOZ or OZZZ,
+  after a first run of length at most 4. Through 2^24 they have 408 misses, the largest 418,429, and none in
+  [2^19, 2^24]. Every further single removal leaves misses in [2^19, 2^21].
 - *Cap 3.* The 8 Z-free blocks sit near the critical line: per-window misses 579, 566, 517, 477, 452, 378 for 2^16
   to 2^21.
 
-So the repository's 63-matrix conjecture (HYP-9677) appears to hold with 14 matrices after the first factor, beyond
-130,247.
+So the repository's 63-matrix conjecture (HYP-9677) appears to hold with 14 matrices after the first factor beyond
+130,247, and with 11 beyond 418,429. In the owner's language this is the reader's factor put into the source: the
+Z-free normal form moves every leading Z of a reader into the preceding run as an O (JZ = OJ), and at cap 4 this
+costs nothing in coverage.
 
 *Heuristic for the threshold.* A block J w with |w| = n multiplies a typical state's count by about c·2^n. The
 pressure sum Σ_w (c·2^|w|)^(−s) at s = 1 is (L + 1)/c, so it crosses 1 near L + 1 ≈ c. With c ≈ 3–4 this puts the
