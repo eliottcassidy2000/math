@@ -61,7 +61,7 @@ For a homogeneous nonempty block, fix exactly which runs it occupies. Its comple
 - If \(\alpha>\beta+3\), then \(\beta=v-3\). The quotient \((N-1-2^v)/F(\beta)\) must be an integer power of two with exponent greater than \(v\).
 - If \(\alpha=\beta+3\), then \(N-1=2^{\beta+4}(2^{\beta+2}+9\cdot3^\beta)\) with odd bracket, so \(\beta=v-4\), \(\alpha=v-1\), and direct substitution decides the branch.
 
-Only positive exponents are legal, and every output gives both the absolute count and the actual overlap anchors. For example 805 gives \((\alpha,\beta)=(2,2)\), although \(805-1\) itself is not 2,3-smooth. This does not cover arbitrary \(N\), but it is a target-to-overlap compiler on an explicit two-parameter family.
+Only positive exponents are legal, and every output gives both the absolute count and the actual overlap anchors. For example 805 gives \((\alpha,\beta)=(2,2)\), although \(805-1\) itself is not 2,3-smooth. It can also return multiple patterns: the total 8849 has both $(\alpha,\beta)=(4,3)$ and $(7,1)$ in this single family. The inverse supplies alternatives rather than a unique prescription. This does not cover arbitrary \(N\), but it is a target-to-overlap compiler on an explicit two-parameter family.
 
 ## 5. The numerical echoes, with their roles kept separate
 
