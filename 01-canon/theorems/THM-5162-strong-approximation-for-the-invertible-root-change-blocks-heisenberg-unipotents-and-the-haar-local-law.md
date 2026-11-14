@@ -11,15 +11,16 @@ status: >
   of (A) for all 2047 blocks with |w| <= 12; the invertibility criterion for
   all 2047 blocks J w with |w| <= 10; the unipotent shape of (B) for all 155 same-length pairs with |w| <= 6; the
   witness determinant 3/4 and the commutator in (C).
-  NUMERICAL (by-value census, not part of the proof): the law (D) and the source law (E) on [2^12, 2^24); see
-  HYP-9682.
+  NUMERICAL (by-value census, not part of the proof): the law (D), the source law (E) and the prime-power law of
+  (C') on [2^12, 2^26); a uniform spectral gap of the block walk mod p (second eigenvalue <= 0.565 for every odd
+  p <= 43, about 0.28 at large p); see HYP-9682.
   NOT CLAIMED: uniformity of the mixing rate in the modulus (expansion; would follow from Salehi Golsefidy-Varju
   applied to the commutator subgroup, not written out here); by-value (count-ordered) versions of (D); density one;
   Chan-Pak (OPEN).
   KNOWN and used: the O/Z/J grammar and its block matrices (THM-4904, THM-5148); JZ = OJ (THM-4888 (D) 1); the rank-one
   resets need a singular block (THM-5120); Zariski density of the seven blocks in GL_3 and the exhaustive images mod 3
   and mod 5 (wave 23 of chanpak_waves_20261113). The Heisenberg-unipotent argument, the shape formula with the
-  reversal R and the surjection at every odd prime are NEW here (no strong-approximation statement in canon before
+  reversal R, the Hammersley digits, the surjection at every odd prime and its p-adic lift are NEW here (no strong-approximation statement in canon before
   this file).
 session: mac-mini-2026-11-14-density
 source: 05-knowledge/results/chanpak_waves_20261113/README.md#wave-24-the-invertible-root-change-orbit--reset-free-haar-distributed-and-complete-beyond-6223

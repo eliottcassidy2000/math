@@ -3,7 +3,7 @@ id: HYP-9682
 title: "Invertible root-change conjecture: (A) a one-apex source followed by invertible blocks only (J and J O v Z, any length; no singular block, so no reset) attains every odd N > 6223; (B) without a source, the orbit of the root state (1,1,1,1) under the invertible blocks attains every odd N > 179,367; (C) its multiplicities obey an L^2 local limit law with the Haar singular series of THM-5162, so density one holds; (D) a finite block set (|w| <= 5) already suffices beyond 12,811"
 status: >
   OPEN (CONJECTURE), mac-mini-2026-11-14-density, wave 24 of chanpak_waves_20261113.
-  FINITE-EXACT: (A) exactly 43 odd numbers below 2^24 are missed, the largest 6223 (scripts/invorb.c, mode 1; the run to 2^28 is recorded in the README when complete);
+  FINITE-EXACT: (A) exactly 43 odd numbers below 2^26 are missed, the largest 6223 (scripts/invorb.c, mode 1);
   (B) exactly 288 below 2^26, the largest 179,367 (mode 2);
   (D) |w| <= 6 gives the same 43 misses below 2^20; |w| <= 5 gives exactly 48 below 2^26 (the largest 12,811);
   |w| <= 4 gives 71 below 2^20 (the largest 968,947).
@@ -40,7 +40,7 @@ No singular block ever occurs. So by THM-5120 no rank-one reset can occur, and b
 p-divisible after the source.
 
 **(A) Free source.** Every odd N > 6223 is a count of the invertible language.
-- FINITE-EXACT to 2^24: the misses are exactly 7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251,
+- FINITE-EXACT to 2^26: the misses are exactly 7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251,
   277, 281, 299, 313, 335, 421, 449, 503, 533, 551, 569, 583, 637, 667, 821, 1067, 1339, 1387, 1661, 1811, 1861,
   1877, 1957, 2647, 3523, 3551, 5231, 6223.
 - The full grammar's 29 misses are among them.
@@ -58,8 +58,8 @@ largest 179,367.
 
 Conjecture: (1/#) sum (r(N)/(mean(X) S(N)) - 1)^2 -> 0. By Chebyshev's inequality this gives density one.
 
-Data on [2^23, 2^24):
-- *Free source:* mean multiplicity 369, which grows like X^0.2777, and primes at X^0.2771. V = 0.023 = 8.4/mean;
+Data on [2^23, 2^24) (and [2^25, 2^26) where stated):
+- *Free source:* mean multiplicity 369, which grows like X^0.2777, and primes at X^0.2771. V = 0.023 = 8.4/mean (0.0166 = 8.96/mean on [2^25, 2^26), minimum multiplicity 196);
   the share of N with r < model/2 is 1.1·10^-4.
 - *No source:* the class factors at p = 3, 5, 7, 11 are 1.040, 1.008, 1.003, 1.001, against the Haar values
   p^3/(p^3 - 1) = 1.0385, 1.0081, 1.0029, 1.0008. The prime mean is 1.0526 times the mean, against

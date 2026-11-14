@@ -6,7 +6,8 @@ for f in sys.argv[1:]:
     r=np.fromfile(f,dtype=np.uint16).astype(np.float64)   # r[N>>1]
     print(f)
     print(" window   mean     V        V*mean   share(r<model/2)  max|r/model-1|")
-    for k in range(14,24):
+    K=int(round(np.log2(len(r))))+1     # r has 2^(K-1) entries (odd N < 2^K)
+    for k in range(14,K):
         a,b=(1<<k)+1,(1<<(k+1))-1
         N=np.arange(a,b+1,2); x=r[N>>1]
         model=np.full_like(x,x.mean())

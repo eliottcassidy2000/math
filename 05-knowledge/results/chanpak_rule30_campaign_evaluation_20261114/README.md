@@ -32,7 +32,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | two-hub words, length ≤ 18 | every odd N < **226,079,703** except 7 and 21 (new today; ratio X(L)/3^L = 0.584) |
 | interval-hub words (u2's out-set an interval), m ≤ 23 | every odd N < **26,610,535** except 7 and 21 (new today; binary-scale horizon 3–5·2^m) |
 | O/Z/J root-change words (KNOWN: THM-4904, HYP-9494 (D)) | every odd N in (2647, 10^9]; the wave-19 decoder adds random samples near 10^12 and 10^15 |
-| invertible root-change language: a one-apex source, then invertible blocks only, no resets (HYP-9682) | every odd N in (6223, 2^24]; the 16 blocks with \|w\| ≤ 5 alone: (12,811, 2^26]; the orbit of (1,1,1,1) alone: (179,367, 2^26] (wave 24) |
+| invertible root-change language: a one-apex source, then invertible blocks only, no resets (HYP-9682) | every odd N in (6223, 2^26]; the 16 blocks with \|w\| ≤ 5 alone: (12,811, 2^26]; the orbit of (1,1,1,1) alone: (179,367, 2^26] (wave 24) |
 | bounded runs ≤ 5, the 63 matrices of HYP-9677 | every odd N in (10,391, 2^24] (wave 20; the record was 2^19); runs ≤ 4 (31 matrices): every odd N in (130,247, 2^25] |
 | Fermat-block cuts of order-≤9 sources | every odd N in [69, 398,129] |
 | span-2 ribbons | every odd N ≤ 100,000 except 7, 21 and 47 |
@@ -104,7 +104,7 @@ The rank ladder of the transfer algebras also corrects a guess. The two-hub tran
 like the one-hub transfer. What separates them is the rank of the weight group: ⟨2⟩ for the half-dense families,
 ⟨2, 3⟩ for two hubs, as in Furstenberg's ×2 versus ×2×3.
 
-**Update (wave 24).** The invertible sub-language is the clean form of the conjecture. It is a one-apex source followed by invertible blocks only, so it has no singular block, no reset and no confinement. Wave 20's "invertible blocks miss 34%" came from capping the source at four letters. With a free source the language misses exactly 43 odd numbers below 2^24, the largest 6223 (HYP-9682). Its local half is now proved (THM-5162): the blocks generate {g : det g in <2>} modulo every odd prime, and long random words have the Haar law. The census matches that law to three decimals, and primes get the singular series (7/8)ζ(3) ≈ 1.052 instead of a deficit. Density one, and with it the proof by contradiction of wave 23, now needs only the archimedean / minor-arc half of an L² local limit law. The data give V(X) ≈ 8/mean(X) → 0, and the walk mod p has a uniform spectral gap (λ₂ ≤ 0.565 for all odd p ≤ 43).
+**Update (wave 24).** The invertible sub-language is the clean form of the conjecture. It is a one-apex source followed by invertible blocks only, so it has no singular block, no reset and no confinement. Wave 20's "invertible blocks miss 34%" came from capping the source at four letters. With a free source the language misses exactly 43 odd numbers below 2^26, the largest 6223 (HYP-9682). Its local half is now proved (THM-5162): the blocks generate {g : det g in <2>} modulo every odd prime, and long random words have the Haar law. The census matches that law to three decimals, and primes get the singular series (7/8)ζ(3) ≈ 1.052 instead of a deficit. Density one, and with it the proof by contradiction of wave 23, now needs only the archimedean / minor-arc half of an L² local limit law. The data give V(X) ≈ 8/mean(X) → 0, and the walk mod p has a uniform spectral gap (λ₂ ≤ 0.565 for all odd p ≤ 43).
 
 ## Rule 30: the three prize problems
 

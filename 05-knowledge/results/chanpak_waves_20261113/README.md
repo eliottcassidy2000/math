@@ -1527,7 +1527,7 @@ what remains is the archimedean / minor-arc half of an L² local limit law.**
 
 The short answer of this wave:
 - **The object.** The right object is the *invertible* sub-language: the one-apex source followed by invertible
-  blocks only. It has no singular block, so no reset, and it attains every odd N > 6223 through 2^24.
+  blocks only. It has no singular block, so no reset, and it attains every odd N > 6223 through 2^26.
 - **The local half (proved).** Its local behaviour is settled: the blocks generate {g : det g ∈ ⟨2⟩} modulo every
   odd prime ([THM-5162](../../../01-canon/theorems/THM-5162-strong-approximation-for-the-invertible-root-change-blocks-heisenberg-unipotents-and-the-haar-local-law.md)),
   and the counts follow the Haar law exactly. The census matches this law to three decimals.
@@ -1558,7 +1558,7 @@ So every block J w has w empty or w = O v Z, and these are exactly the invertibl
 
 | language (mode) | misses below 2^20 | largest | misses checked to | per-window misses from |
 |---|---:|---:|---|---|
-| one-apex source + invertible blocks, any length (1) | 43 | 6223 | **2^24: still 43** (2^28 run in progress at this commit) | 0 from [2^13, 2^14) on |
+| one-apex source + invertible blocks, any length (1) | 43 | 6223 | **2^26: still 43** | 0 from [2^13, 2^14) on |
 | no source: orbit of (1,1,1,1) (2) | 288 | 179,367 | **2^26: still 288** | 0 from [2^18, 2^19) on |
 | mode 1, blocks with \|w\| ≤ 6 | 43 | 6223 | 2^20 | — |
 | mode 1, \|w\| ≤ 5 (16 blocks) | 48 | 12,811 | **2^26: still 48** (P62) | — |
@@ -1579,6 +1579,7 @@ Multiplicities:
 | [2^17, 2^18) | 116.5 | 107.7 | 18 (135,049) | 59.2 | 62.6 | 0 (169,935) |
 | [2^20, 2^21) | 207.8 | 191.6 | 29 (1,142,249) | 105.1 | 110.8 | 6 (1,142,249) |
 | [2^23, 2^24) | 369.1 | 339.8 | 99 (9,193,369) | 186.0 | 195.8 | 30 (8,560,341) |
+| [2^25, 2^26) | 540.9 | 498.1 | 196 (33,727,757) | 272.1 | 286.4 | 68 (35,979,543) |
 
 Fitted growth exponents of the mean multiplicity over [2^16, 2^24):
 
@@ -1589,6 +1590,22 @@ Fitted growth exponents of the mean multiplicity over [2^16, 2^24):
 
 The 11-block orbit of wave 21, which has resets, gives 0.38 for all N and 0.25 for primes. So the language is
 supercritical with critical exponent δ ≈ 1.28 (#words with count ≤ X ≈ X^δ), and primes keep the full exponent.
+
+**Finitely many generators, no source: a critical-exponent ladder.** Take the orbit of the single vector
+(1, 1, 1, 1) under the blocks with |w| ≤ c (mode 2 with a cap,
+[`scripts/m2cap4_24.out`](scripts/m2cap4_24.out) and its neighbours). This is exactly the Bourgain–Kontorovich
+setting: a finitely generated semigroup, Zariski dense in GL₃, acting on one vector. Share of odd numbers missed
+per window, with the mean multiplicity in brackets:
+
+| cap | generators | [2^18, 2^19) | [2^20, 2^21) | [2^23, 2^24) | regime |
+|---|---:|---|---|---|---|
+| \|w\| ≤ 4 | 8 | 48.1% (3.57) | 49.4% (3.40) | 49.5% (3.30) | critical, about half missed |
+| \|w\| ≤ 5 | 16 | 15.8% (9.56) | 12.8% (10.64) | 9.0% (12.23) | slowly supercritical, multiplicity ∝ X^0.07 |
+| \|w\| ≤ 6 | 32 | 3.6% (17.71) | 1.8% (21.45) | 0.51% (28.04) | supercritical, multiplicity ∝ X^0.13 |
+| unbounded | ∞ | 0 | 0 | 0 | multiplicity ∝ X^0.275 |
+
+It mirrors Zaremba's ladder in the bound A of the partial quotients. With the free one-apex source, which is a
+critical family on its own, already |w| ≤ 5 is complete beyond 12,811 (P62).
 
 Mixing scales matters. A single block length leaves hundreds of misses up to the top of the range
 ([`scripts/invlen.c`](scripts/invlen.c)), while lengths up to 5 together already look cofinite.
@@ -1698,13 +1715,13 @@ r(N) = 0 is at most V(X). So density one follows from V(X) → 0, an L² local l
 
 *Data (P55, CONFIRMED; [`scripts/l2test.py`](scripts/l2test.py); model mod 9, 5, 7):*
 
-| window | 2^15 | 2^17 | 2^19 | 2^21 | 2^23 |
-|---|---:|---:|---:|---:|---:|
-| mode 1: V | 0.0985 | 0.0662 | 0.0459 | 0.0323 | 0.0228 |
-| mode 1: V·mean | 7.77 | 7.71 | 7.86 | 8.12 | 8.43 |
-| mode 1: share with r < model/2 | 0.043 | 0.016 | 0.0052 | 0.0010 | 0.00011 |
-| mode 2: V | 0.171 | 0.116 | 0.0805 | 0.0560 | 0.0390 |
-| mode 2: V·mean | 6.89 | 6.90 | 6.99 | 7.13 | 7.26 |
+| window | 2^15 | 2^17 | 2^19 | 2^21 | 2^23 | 2^25 |
+|---|---:|---:|---:|---:|---:|---:|
+| mode 1: V | 0.0985 | 0.0662 | 0.0459 | 0.0323 | 0.0228 | 0.0166 |
+| mode 1: V·mean | 7.77 | 7.71 | 7.86 | 8.12 | 8.43 | 8.96 |
+| mode 1: share with r < model/2 | 0.043 | 0.016 | 0.0052 | 0.0010 | 0.00011 | 0.000006 |
+| mode 2: V | 0.171 | 0.116 | 0.0805 | 0.0560 | 0.0390 | — |
+| mode 2: V·mean | 6.89 | 6.90 | 6.99 | 7.13 | 7.26 | — |
 
 The multiplicities behave like overdispersed Poisson counts around the Haar model, with variance about 8 times the
 mean. So V ≈ 8/mean ∝ X^(−0.28). The slow drift of V·mean (+0.15 per doubling in mode 1) is what a residual
@@ -1793,9 +1810,10 @@ statistics were printed).
   enough; the Hammersley digits are.
 
 Open predictions (third addendum of the pre-registration file, registered before these runs):
-- **P59.** Mode 1 misses no odd N in (6223, 2^30].
+- **P59.** Mode 1 misses no odd N in (6223, 2^30]. So far it holds to 2^26.
 - **P60.** Mode 2 misses no odd N in (179,367, 2^28].
-- **P61.** In mode 1, V(X)·mean(X) stays in [7, 11] on every window up to [2^27, 2^28).
+- **P61.** In mode 1, V(X)·mean(X) stays in [7, 11] on every window up to [2^27, 2^28). So far it holds to
+  [2^25, 2^26), with 8.96. The run to 2^28 was stopped on an overloaded machine (load 12).
 
 ## Next waves (queued predictions)
 
