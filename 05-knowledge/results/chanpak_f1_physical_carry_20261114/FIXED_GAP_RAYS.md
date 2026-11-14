@@ -102,6 +102,27 @@ A finite menu of fixed gaps cannot cover the scalar odd targets
 using this interface, even allowing arbitrarily large tournaments
 and every contact set of size at least two.
 
+## A growing gap budget still leaves almost all targets out
+
+Up to a gap budget D≥2, the same proof gives a quantitative bound
+2^O(D²)·log(2X) on the number of H≤X obtainable with two or more
+contacts. The core has at most 2D vertices. The retained wings
+together have at most D+1: if their path counts are m and h_B,
+then m h_B≤D and m+h_B≤m h_B+1. With an empty suffix the same
+bound holds using just m. So a complete finite template has at
+most 3D+1 vertices, plus the one free dyadic exponent. There
+are at most (3D+2)·6^(3D+1)·2^binom(3D+1,2) labelled templates
+(by marking vertices and choosing one of three blocks), and
+each contributes at most 1+log₂(X+D) outputs through X.
+When D≤X this proves the stated bound, and D>X is trivial.
+
+For example, at D=floor(sqrt(log₂ X)/4) the exponential factor
+from orientations is X^(9/32+o(1)), and the other factors are
+X^o(1). Thus for almost every positive odd H up to X, any
+witness with two or more contacts has gap larger than that D.
+This excludes even slowly growing menus of gaps; it does not
+exclude a target-dependent one-contact construction.
+
 ## Gap four beyond the original five rays
 
 For d=4 there can only be two contacts. Both wings must be
