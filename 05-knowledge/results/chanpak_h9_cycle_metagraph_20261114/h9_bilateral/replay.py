@@ -90,3 +90,11 @@ for x in range(1,2048):
    check(isqrt(N//84)==x)
 check(prime(73961) and prime(517729) and 7*73961==517727)
 print("Diagonal unit flip, three-arm profiles, square-root inverses and extra prime pair verified.")
+from itertools import permutations
+T=cores[1]
+anti=[r for r in permutations(range(5)) if all(
+ ((T[i]>>j)&1)!=((T[r[i]]>>r[j])&1) for i in range(5) for j in range(i+1,5))]
+check(anti==[(0,4,3,2,1)])
+U=(12,13,15,23,14)
+check([sum(1<<anti[0][i] for i in range(5) if not ((u>>i)&1)) for u in U]==[19,18,2,4,3])
+print("Rigid-core anti-isomorphism and converse-disjoint masks verified.")
