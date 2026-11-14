@@ -4,8 +4,14 @@ finish_session.py — End-of-session closer for Claude agents.
 
 Performs all three mandatory end-of-session steps in one command:
   1. Sends a summary message to another agent (or broadcast)
-  2. git add -A && git commit
+  2. git add -- <your paths> (+ the letter files it just wrote) && git commit
   3. git push to the current branch's upstream (with rebase-retry on conflict)
+
+Owner directive 2026-11-13: sessions work directly on `main` in the checkout
+they are given, never in a new worktree. That checkout is SHARED with other
+live sessions, so pass --paths with exactly the files this session wrote;
+without --paths the script refuses to stage anything in the main checkout
+(it falls back to `git add -A` only inside a linked worktree).
 
 Usage (interactive):
     python3 agents/finish_session.py
@@ -15,7 +21,8 @@ Usage (non-interactive, for Claude):
         --to all \\
         --subject "Session summary: <one-line>" \\
         --body-file /tmp/letter.md \\
-        --commit-msg "kind-pasteur-2026-03-05-S2: <one-line summary>"
+        --commit-msg "kind-pasteur-2026-03-05-S2: <one-line summary>" \\
+        --paths 05-knowledge/results/my_note.md 01-canon/theorems/THM-XXXX-slug.md
 
 If --body-file is omitted you can use --body for short inline messages.
 
@@ -79,6 +86,33 @@ def send_message(to, subject, body_source, machine_id):
     return True
 
 
+def in_linked_worktree():
+    """True inside a linked worktree, False in the main checkout."""
+    a = run(["git", "rev-parse", "--git-dir"], capture=True)
+    b = run(["git", "rev-parse", "--git-common-dir"], capture=True)
+    if a.returncode != 0 or b.returncode != 0:
+        return False
+    gd = (REPO_ROOT / a.stdout.strip()).resolve()
+    cd = (REPO_ROOT / b.stdout.strip()).resolve()
+    return gd != cd
+
+
+def dirty_paths():
+    """Set of untracked (not ignored) and modified tracked paths right now."""
+    out = set()
+    r = run(["git", "ls-files", "--others", "--exclude-standard"], capture=True)
+    out.update(x for x in (r.stdout or "").splitlines() if x)
+    r = run(["git", "diff", "--name-only"], capture=True)
+    out.update(x for x in (r.stdout or "").splitlines() if x)
+    return out
+
+
+def sparse_flag():
+    """`git add --sparse` lets a sparse checkout stage paths outside its cone."""
+    r = run(["git", "config", "--get", "core.sparseCheckout"], capture=True)
+    return ["--sparse"] if (r.stdout or "").strip() == "true" else []
+
+
 def current_branch():
     """Return the checked-out branch name, or None for detached HEAD."""
     r = run(["git", "branch", "--show-current"], capture=True)
@@ -129,7 +163,9 @@ def push_current_branch(max_attempts=6):
             print(f"ERROR: git fetch failed.\n{rf.stdout}\n{rf.stderr}", file=sys.stderr)
             return False
 
-        rr = run(["git", "rebase", f"{remote}/{remote_branch}"], capture=True)
+        # --autostash: the shared main checkout normally holds other live
+        # sessions' uncommitted edits; they are set aside and restored.
+        rr = run(["git", "rebase", "--autostash", f"{remote}/{remote_branch}"], capture=True)
         if rr.returncode != 0:
             print("  Rebase conflict the union driver could not auto-resolve —"
                   " aborting rebase to keep a clean tree.")
@@ -179,16 +215,40 @@ def verify_not_ahead():
     return True
 
 
-def git_commit_push(commit_msg):
-    """Stage all, commit, push with rebase-retry."""
-    print("\n-- git add -A ------------------------------------")
-    r = run_shell("git add -A")
-    if r.returncode != 0:
-        print("ERROR: git add failed.", file=sys.stderr)
-        return False
+def git_commit_push(commit_msg, paths=None):
+    """Stage this session's paths, commit only them, push with rebase-retry.
+
+    paths=None keeps the old `git add -A` behaviour, but only inside a linked
+    worktree; in the shared main checkout it refuses rather than sweep other
+    sessions' files into this commit."""
+    if paths is None:
+        if not in_linked_worktree():
+            print("ERROR: this is the shared main checkout; pass --paths with only "
+                  "the files this session wrote (no `git add -A` here).", file=sys.stderr)
+            return False
+        print("\n-- git add -A (linked worktree) -------------------")
+        r = run_shell("git add -A")
+        if r.returncode != 0:
+            print("ERROR: git add failed.", file=sys.stderr)
+            return False
+        commit_cmd = ["git", "commit", "-m", commit_msg]
+    else:
+        paths = sorted(set(paths))
+        if not paths:
+            print("  (No paths given — nothing to commit.)")
+            return push_current_branch() and verify_not_ahead()
+        print("\n-- git add -- <paths> -----------------------------")
+        for x in paths:
+            print(f"  {x}")
+        r = run(["git", "add", *sparse_flag(), "--", *paths], capture=True)
+        if r.returncode != 0:
+            print(f"ERROR: git add failed.\n{r.stdout}\n{r.stderr}", file=sys.stderr)
+            return False
+        # Pathspec commit: other sessions' staged entries are never swept in.
+        commit_cmd = ["git", "commit", "-m", commit_msg, "--", *paths]
 
     print("\n-- git commit ------------------------------------")
-    r = run(["git", "commit", "-m", commit_msg], capture=True)
+    r = run(commit_cmd, capture=True)
     if r.returncode != 0:
         combined = (r.stdout or "") + (r.stderr or "")
         if "nothing to commit" in combined:
@@ -247,6 +307,9 @@ def main():
     parser.add_argument("--body",       help="Letter body (inline string)")
     parser.add_argument("--body-file",  help="Path to a file containing the letter body")
     parser.add_argument("--commit-msg", help="Git commit message")
+    parser.add_argument("--paths", nargs="*", default=None,
+                        help="Exactly the files this session wrote (required in the "
+                             "shared main checkout). The letter files are added automatically.")
     args = parser.parse_args()
 
     non_interactive = args.to and args.subject and (args.body or args.body_file) and args.commit_msg
@@ -263,13 +326,21 @@ def main():
         to, subject, body, commit_msg = interactive_mode(machine_id)
         body_source = body
 
-    # Step 1: send message
+    if args.paths is None and not in_linked_worktree():
+        print("ERROR: shared main checkout: pass --paths <files this session wrote>.",
+              file=sys.stderr)
+        sys.exit(1)
+
+    # Step 1: send message (remember which files the letter creates)
+    before = dirty_paths()
     print(f"\n-- Sending letter to '{to}' ----------------------")
     if not send_message(to, subject, body_source, machine_id):
         sys.exit(2)
+    letter_files = sorted(dirty_paths() - before)
 
     # Step 2+3: commit and push
-    if not git_commit_push(commit_msg):
+    paths = None if args.paths is None else list(args.paths) + letter_files
+    if not git_commit_push(commit_msg, paths):
         sys.exit(3)
 
     print(f"\n{'='*60}")

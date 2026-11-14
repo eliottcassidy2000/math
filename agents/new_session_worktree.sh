@@ -27,6 +27,13 @@
 #     python3 agents/worktree_hygiene.py --remove --path <worktree>
 # (it refuses dirty or unmerged worktrees; the plain call reports them all).
 set -euo pipefail
+# RETIRED by owner directive 2026-11-13: sessions work directly on `main` in the
+# checkout they were given; no new worktrees. Prints nothing on stdout, so
+# `cd "$(bash agents/new_session_worktree.sh tag)"` leaves you where you are.
+if [ "${MATH_ALLOW_WORKTREE:-0}" != "1" ]; then
+  echo "new_session_worktree.sh is retired (owner directive 2026-11-13): work on main in the checkout you were given; see AGENTS.md." >&2
+  exit 1
+fi
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd -P)"
 REPO="$(git -C "$SCRIPT_DIR/.." rev-parse --show-toplevel)"
 RAW_TAG="${1:-$$-$(date +%s)}"

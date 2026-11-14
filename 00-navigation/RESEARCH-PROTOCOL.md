@@ -9,6 +9,9 @@ the repository. Direct progress, a decisive refutation, a reusable instrument,
 an exact reformulation, a recovered niche thread, and a genuine bridge between
 subjects are all valid session outcomes.
 
+**Owner directive (2026-11-13):** no worktrees; new ideas over audits or
+re-verification (`AGENTS.md`).
+
 ## 1. Truth and freshness
 
 Fetch before relying on the frontier and again before filing a result. If the

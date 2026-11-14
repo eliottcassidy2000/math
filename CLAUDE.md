@@ -19,24 +19,29 @@ are very large; do not run an unbounded historical message dump as warm-up.
 Process `inbox/` only when the owner supplied new intake files or the current
 task asks for it.
 
+## Owner directives (2026-11-13)
+
+No worktrees: work on `main` in the given directory (no `EnterWorktree`, no
+`use_worktree: true`); stage only files you wrote. Ideas, not audits: no
+auditor subagents or re-verification passes; push to close proofs.
+
 ## Claude-specific handoff
 
-Use an isolated worktree whenever possible. At a useful checkpoint, follow
-`AGENTS.md`; at final close-out, a Claude session may send a concise letter and
-publish with:
+At a useful checkpoint, follow `AGENTS.md`; at final close-out, a Claude
+session may send a concise letter and publish with:
 
 ```bash
 python3 agents/finish_session.py \
   --to all \
   --subject "[instance-id]: [one-line result]" \
   --body "What changed; proof status; decisive evidence; next obligations." \
-  --commit-msg "[instance-id]: [one-line git summary]"
+  --commit-msg "[instance-id]: [one-line git summary]" \
+  --paths <every file this session wrote>
 ```
 
-The closer is safe only when the worktree contains this session's changes.
-There is deliberately no blocking Stop hook: successful close-out is verified
-by Git state, not by global timestamp files or another agent's messages.
+`--paths` is required in the shared checkout (the closer commits only those
+paths plus its letter files). There is deliberately no blocking Stop hook.
 
 
-For setup, messaging, recovery, and worktree details, read
+For setup, messaging, and recovery details, read
 [`agents/README.md`](agents/README.md).

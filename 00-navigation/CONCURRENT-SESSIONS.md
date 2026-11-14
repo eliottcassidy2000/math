@@ -4,38 +4,35 @@
 research surface. Publish small coherent states often, but never absorb another
 session's uncommitted files merely to checkpoint yours.
 
-## Default: one worktree per session
+## Default: work on main in the checkout you were given
 
-From a clean main checkout:
+Owner directive 2026-11-13: no worktrees and no extra clones. Every session
+works on `main` in the directory it was started in:
 
 ```bash
-cd "$(bash agents/new_session_worktree.sh short-topic)"
-git status --short --branch
+git pull --rebase --autostash origin main
 python3 agents/start_session.py --topic "<target statement or object>"
 ```
 
-The helper fetches `origin/main`, creates a unique `codex/session-*` branch, and
-sets `origin/main` as its upstream. The private working directory prevents one
-session's stage/commit from sweeping another session's files. Platforms that
-already supply an isolated clone/worktree need not create another.
-
-If you must use a shared checkout, inspect every changed path before staging.
-Use explicit `git add <paths>`; `git add -A` is allowed only after verifying
-that every change belongs to the same session.
+The checkout is shared with other live sessions. Stage only the paths you
+wrote (`git add <paths>`, then `git commit -m ... -- <paths>`); never
+`git add -A`, `git stash`, `git reset --hard`, or `git checkout -- <path>` on
+another session's files. Commit and push small pieces often so the shared tree
+stays nearly clean.
 
 ## Startup and sync
 
-Sync only from a clean tree:
+Sync with autostash (other sessions' uncommitted edits are set aside and
+restored):
 
 ```bash
-git fetch origin
-git rebase origin/main
+git pull --rebase --autostash origin main
 ```
 
 Then read the bounded startup packet and the exact canon it routes to. Do not
 resolve a rebase by discarding unknown changes. If the tree is dirty, determine
-ownership first; use a separate worktree rather than stashing another agent's
-state.
+ownership first and leave other agents' files alone; commit your own paths
+and let `--autostash` carry the rest.
 
 When a fetch/rebase lands new work, ask:
 
@@ -73,11 +70,10 @@ During long computations, checkpoint the harness/input specification first;
 fetch and inspect new work at natural yields without changing the inputs of an
 already-running reproducibility job.
 
-In an isolated session worktree:
-
 ```bash
 python3 agents/checkpoint_session.py \
-  --message "[instance-id]: checkpoint - [brief mathematical state]"
+  --message "[instance-id]: checkpoint - [brief mathematical state]" \
+  --paths <files this session wrote>
 ```
 
 A coherent checkpoint may be negative: a counterexample, failed implication,
@@ -114,14 +110,15 @@ standalone file is not yet a project-level formalization claim.
 
 ## Close-out
 
-In an isolated worktree, Claude-style sessions may use:
+Claude-style sessions may use:
 
 ```bash
 python3 agents/finish_session.py \
   --to all \
   --subject "[instance-id]: [one-line result]" \
   --body "Status, mechanism, evidence, corrections, and exact next obligations." \
-  --commit-msg "[instance-id]: [one-line git summary]"
+  --commit-msg "[instance-id]: [one-line git summary]" \
+  --paths <files this session wrote>
 ```
 
 Otherwise: inspect status, stage explicit paths, commit, rebase/fetch, push the

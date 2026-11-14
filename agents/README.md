@@ -4,29 +4,20 @@ This directory contains the repository's explicit session lifecycle tools.
 There is deliberately no automatic Stop hook: close-out is an agent action,
 not a background mutation of the checkout.
 
-## Start in an isolated worktree
+## Work on main in the checkout you were given (no worktrees)
 
-Concurrent sessions should not share uncommitted files. From the main checkout,
-create a session worktree and enter it:
+Owner directive 2026-11-13: every session works directly on `main` in the
+directory it was started in. Do not create worktrees or clones;
+`agents/new_session_worktree.sh` now refuses. (Thirty full worktree checkouts
+filled the volume on 2026-11-04; the 2026-11-13 cleanup removed ten more.)
 
-```bash
-cd "$(bash agents/new_session_worktree.sh short-topic)"
-git status --short --branch
-```
+The checkout is shared with other live sessions, so:
 
-The script fetches `origin`, creates a unique local branch named
-`codex/session-short-topic` (adding a suffix on collision), and makes
-`origin/main` its upstream. It also copies the untracked `.machine-id` when one
-is present. A failed fetch or a non-worktree path collision stops with an error
-instead of silently starting from stale or unrelated state.
-
-It is a sibling of the repository, never under `/tmp` (thirty 3 GB `/tmp`
-worktrees filled the volume on 2026-11-04). **Remove it at close-out**, after
-the push: `python3 agents/worktree_hygiene.py --remove --path <worktree>`.
-
-If a platform already gives the session an isolated clone or worktree, use that
-checkout directly. In a shared checkout, inspect `git status` before staging:
-uncommitted files may belong to another live session.
+- stage and commit only the paths you wrote (`--paths` on the helpers below);
+- never `git add -A`, `git stash`, `git reset --hard`, or `git checkout -- <path>`
+  on files you did not write;
+- sync with `git pull --rebase --autostash origin main` (autostash sets other
+  sessions' uncommitted edits aside and restores them).
 
 ## Read current work
 
@@ -71,12 +62,14 @@ computation, proving or refuting a claim, and before risky integration:
 
 ```bash
 python3 agents/checkpoint_session.py \
-  --message "[instance-id]: checkpoint - [brief state]"
+  --message "[instance-id]: checkpoint - [brief state]" \
+  --paths <files this session wrote>
 ```
 
-The checkpoint helper stages the whole current worktree. This is safe in the
-isolated session worktree; in a shared checkout, first verify every changed file
-is intentional.
+The helper stages exactly `--paths`, commits only those paths (a pathspec
+commit, so nobody else's staged entries are swept in), rebases with
+`--autostash`, pushes to `origin/main`, and verifies. Without `--paths` it
+refuses in the main checkout.
 
 ## Finish and push
 
@@ -88,12 +81,12 @@ python3 agents/finish_session.py \
   --to all \
   --subject "[instance-id]: [one-line summary]" \
   --body "Findings, evidence, remaining gaps, and next actions." \
-  --commit-msg "[instance-id]: [one-line git summary]"
+  --commit-msg "[instance-id]: [one-line git summary]" \
+  --paths <files this session wrote>
 ```
 
-Because branches made by `new_session_worktree.sh` track `origin/main`, the
-closer pushes `HEAD` to main and can verify that the session is no longer ahead
-of the shared upstream. If a push or rebase fails, keep the local commit and
+The closer adds the letter files it writes to `--paths`, pushes `HEAD` to
+`origin/main`, and verifies that the session is no longer ahead of it. If a push or rebase fails, keep the local commit and
 report the exact blocker; do not use destructive reset commands.
 
 For a session that made no repository changes, still run and report:
@@ -104,8 +97,8 @@ git fetch origin
 git rev-list --left-right --count origin/main...HEAD
 ```
 
-Worktrees: `python3 agents/worktree_hygiene.py` reports; `--remove` deletes
-the clean merged ones.
+Leftover worktrees from before 2026-11-13: `python3 agents/worktree_hygiene.py`
+reports them; `--remove` deletes the clean merged ones.
 
 ## Why Stop hooks are absent
 

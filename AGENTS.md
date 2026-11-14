@@ -6,10 +6,10 @@ routes to. Never use a chronological log as the current truth source.
 
 ## Bounded startup
 
-1. Start from a clean, current worktree. Prefer an isolated worktree made by
-   `bash agents/new_session_worktree.sh <tag>` (never under `/tmp`; remove it
-   at close-out, rule below). If a shared checkout is dirty, identify and
-   preserve every unrelated change before syncing.
+1. Work on `main` in the checkout you were given; never create a worktree or
+   clone (owner directive 2026-11-13). The checkout is shared: never stage,
+   stash, reset, or delete files you did not write. Sync with
+   `git pull --rebase --autostash origin main`.
 2. Run `python3 agents/start_session.py --topic "<your topic>"`. Then read:
    - `00-navigation/START-HERE.md`;
    - the relevant section of `00-navigation/CURRENT-FRONTIER.md`;
@@ -47,6 +47,12 @@ Repair demonstrated errors promptly, preserve the correction lineage, and log
 the mechanism in `01-canon/MISTAKES.md`. Use court cases for genuine unresolved
 disputes, not as a reason to leave a known false statement live.
 
+## Owner directive (2026-11-13): ideas, not audits
+
+Spend reasoning on the strongest new mathematics that pushes toward closed
+proofs. Do not audit, re-verify, or replay results already on file, and do not
+re-derive canon; label status honestly and move on. Others fix minor mistakes.
+
 ## Mathematical-session directive
 
 The main near-term prize is **LRC(14)**, which is open. It is an anchor, not a
@@ -82,12 +88,9 @@ missing coordinate, and new question.
 
 ## Validity gate
 
-Before canonizing work, audit types; necessary/sufficient/iff directions;
-symmetries and orbit representatives; quotient losses; canonical adversarial
-examples; and the actual consequence rather than an intermediate statistic.
-Computations need an explicit universe, inherited filters, positive and hostile
-controls, a reproduction command, and preferably an independent path. Lean
-claims need a build, axiom audit, satisfiable hypotheses, and root-import reach.
+State a claim's types, quantifiers, direction, and actual consequence once, as
+you write it (not as a separate audit). Computations record their universe and
+reproduction command; Lean claims need a build and an axiom check.
 
 Tournament Analysis is encouraged only when an intrinsic binary relation exists.
 Declare vertices, pairwise observable, orientation gauge, ties, preserved target,
@@ -111,23 +114,22 @@ historical suffix; `agents/check_docs.py` treats byte-zero displacement as a
 truth-surface failure.
 
 Push small coherent checkpoints after reservations, meaningful computations,
-proof/refutation milestones, and before risky rebases. In an isolated worktree:
+proof/refutation milestones, and before risky rebases. Commit only the paths
+you wrote, straight to `main`:
 
 ```bash
-python3 agents/checkpoint_session.py --message "[instance-id]: checkpoint - [state]"
+python3 agents/checkpoint_session.py --message "[instance-id]: checkpoint - [state]" \
+  --paths <files this session wrote>
 ```
 
-In a shared dirty checkout, stage only your explicit paths; never sweep another
-session's work with `git add -A`. See `00-navigation/CONCURRENT-SESSIONS.md` and
-`agents/README.md`.
+Never `git add -A`, stash, hard-reset, or check out others' files. See
+`00-navigation/CONCURRENT-SESSIONS.md` and `agents/README.md`.
 
 ## Mandatory close-out
 
 Before the final response, inspect `git status --short --branch`. If the session
-made intentional changes, stage only those paths, commit, and push to the
-upstream (or `origin/main` for a session worktree). In every session, fetch and
-verify `HEAD` is not ahead of its push target; a no-change session needs no
-empty commit. Use `agents/finish_session.py` only in an isolated worktree. If a
-required push fails, the session is not complete: leave a local commit and
-report the exact blocker. Then remove the worktree from outside it:
-`python3 agents/worktree_hygiene.py --remove --path <worktree>`.
+made intentional changes, stage only those paths, commit, and push to
+`origin/main` (`agents/finish_session.py --paths <your files>` does all three).
+In every session, fetch and verify `HEAD` is not ahead of `origin/main`; a
+no-change session needs no empty commit. If a required push fails, the session
+is not complete: leave a local commit and report the exact blocker.

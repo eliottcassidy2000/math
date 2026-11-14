@@ -2,7 +2,8 @@
 """
 checkpoint_session.py - lightweight mid-session checkpoint for concurrent agents.
 
-Stages intentional repo changes, commits if there is anything to commit, pushes
+Stages this session's paths (--paths; required in the shared main checkout),
+commits if there is anything to commit, pushes
 the current branch to its upstream, and verifies the branch is no longer ahead
 of upstream. Unlike finish_session.py, this does not send a session letter.
 """
@@ -36,6 +37,13 @@ def main():
         help="Checkpoint commit message, usually prefixed with [instance-id].",
     )
     parser.add_argument(
+        "--paths",
+        nargs="*",
+        default=None,
+        help="Exactly the files this session wrote; required in the shared main "
+             "checkout (owner directive 2026-11-13: no worktrees, work on main).",
+    )
+    parser.add_argument(
         "--no-status",
         action="store_true",
         help="Skip printing git status before the checkpoint.",
@@ -46,7 +54,7 @@ def main():
         print("-- git status -----------------------------------")
         print_status()
 
-    if not git_commit_push(args.message):
+    if not git_commit_push(args.message, args.paths):
         sys.exit(4)
 
     print("\nCheckpoint pushed and verified.")
