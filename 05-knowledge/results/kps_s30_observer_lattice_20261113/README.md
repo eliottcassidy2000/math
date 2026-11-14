@@ -1,6 +1,6 @@
 # Constraining the merged metagraph from several observers at once
 
-kind-pasteur-2026-11-13-S30 · audit of THM-5155: PASS WITH CORRECTIONS ([audit](audit/AUDIT.md), MISTAKE-772) · [THM-5156](../../../01-canon/theorems/THM-5156-the-monsky-nullity-zero-sector-attains-every-odd-count-below-125-except-3-7-13-19-21.md) · [THM-5155](../../../01-canon/theorems/THM-5155-scores-and-arc-usage-multiset-pin-merged-classes-to-order-nine.md) · [HYP-9681](../../hypotheses/HYP-9681-score-and-arc-usage-coincidences-are-symmetric-score-module-flips.md) · **Chan–Pak remains open.**
+kind-pasteur-2026-11-13-S30 · audit of THM-5155: PASS WITH CORRECTIONS ([audit](audit/AUDIT.md), MISTAKE-772) · THM-5156 audit: PASS WITH CORRECTIONS ([report](audit/AUDIT_THM5156.md), MISTAKE-773) · [THM-5156](../../../01-canon/theorems/THM-5156-the-monsky-nullity-zero-sector-attains-every-odd-count-below-125-except-3-7-13-19-21.md) · [THM-5155](../../../01-canon/theorems/THM-5155-scores-and-arc-usage-multiset-pin-merged-classes-to-order-nine.md) · [HYP-9681](../../hypotheses/HYP-9681-score-and-arc-usage-coincidences-are-symmetric-score-module-flips.md) · **Chan–Pak remains open.**
 
 The owner asked for complete understanding of the merged metagraph by constraining it from all angles. Sessions
 314, 315, 319 and 321 hold its recurrences, the Fano wiring, BSD parity and selective returns, and Session 322 holds
@@ -52,9 +52,10 @@ which preserves both observers.
 
 ## Selmer-refined spectrum (THM-5156)
 
-The Monsky nullity nu(T) = dim ker(M^2 + M + I) over F_2 is taken with the diagonal of M chosen so rows sum to 0. It
-is the BSD bridge of the integer-32 census (integer32_twoedge_20261113, bridges B2): for a tournament on distinct
-primes ≡ 3 mod 8, nu is the pure 2-Selmer dimension of y^2 = x^3 − N^2 x.
+The Monsky nullity nu(T) = dim ker(M^2 + M + I) over F_2 is taken with the diagonal of M chosen so rows sum to 0. Read
+through Monsky's formula on the Legendre tournament, it is the BSD bridge already in the repository
+(bsd_selmer_growth_20261013a.md §§2-3; integer32_twoedge_20261113 bridges B1): for a tournament on distinct primes ≡
+3 mod 8, nu is the pure 2-Selmer dimension of y^2 = x^3 − N^2 x.
 
 - nu is additive over ordinal joins. This is proved in bsd_component_recursion_20261013c and re-verified here on
   1,007 non-strong classes.
@@ -66,15 +67,28 @@ primes ≡ 3 mod 8, nu is the pure 2-Selmer dimension of y^2 = x^3 − N^2 x.
 |---|---|---|---|---|---|---|---|
 | nu distribution | 0:1, 2:1 | 0:2, 2:2 | 0:6, 2:5, 4:1 | 0:30, 2:22, 4:4 | 0:246, 2:176, 4:32, 6:2 | 0:3864, 2:2608, 4:392, 6:16 | 0:108184, 2:72720, 4:10238, 6:388, 8:6 |
 
+The table counts isomorphism classes, not merged classes.
+
 **Result.** The odd numbers below 125 that no nu = 0 tournament realizes, at any order, are exactly
-**3, 7, 13, 19, 21**. In Monsky's dictionary, path counts 3, 13 and 19 force nontrivial pure 2-Selmer, while 7 and
-21 are impossible outright. The next undecided value is 127.
+**3, 7, 13, 19, 21**.
+
+The audit extends this. Every odd value from 125 to 2,655 is attained by an ordinal sum of strong nu = 0 classes of
+order <= 9, so the same five are the only gaps below 2,657. 2,657 is a prime whose 14 strong order-9 classes all
+have nu = 2, and it is the first undecided value.
+
+Through Monsky's formula:
+- H in {3, 13, 19} forces nu = 2 exactly. This is Selmer, not rank: N = 627 = 3·11·19 has H = 3 and nu = 2, yet
+  rank 0.
+- H in {1, 5, 11, 23, 35, 43, 47, 63} forces nu = 0.
+
+opus-S90 (HYP-9657 (C)2) had already seen positive nullity for the H = 13 class.
 
 ## Replay
 
 In a directory with classgen's cls_n.txt, fprof's prof_n.txt and kps_s29's arcms_n.txt:
 
 - run `python scripts/observers.py`, `python scripts/score_arcs.py` and `python scripts/residual_structure.py`;
-- run `python scripts/monsky.py` for THM-5156.
+- run `python scripts/monsky.py` and `python scripts/nu_additivity.py` for THM-5156. The class lists come from
+  `first_creators_genealogy_20261107/classgen.c`.
 
 The inputs are pinned by their line counts, which equal A000568(n) for n = 1..9.

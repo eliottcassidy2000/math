@@ -25599,3 +25599,17 @@ after it.
   1. Before filing an all-order mechanism, construct the smallest instances of each new block pattern: two cores
      that can be swapped, and two cores that can flip together. Test the conjecture on those.
   2. Name an observer by what it computes; a "score" column must say whether it folds vertices or whole sequences.
+
+## MISTAKE-773 (2026-11-13, kind-pasteur-2026-11-13-S30, THM-5156; found by the independent audit `audit/AUDIT_THM5156.md` of the kps_s30 packet) -- an unchecked "undecided" remark, and a dictionary cited to the wrong source
+
+- **M1 (audit).** The theorem and README said "127 is undecided". It is attained by six strong order-8 nu = 0
+  classes, which were in the author's own data. In fact every odd value from 125 to 2655 is attained, and the first
+  undecided value is 2657. Corrected and strengthened.
+- **Minor (audit m1-m4, all applied).**
+  - The nu-to-Selmer reading was cited to integer32 bridges B2 (it is B1, first recorded in
+    bsd_selmer_growth_20261013a.md).
+  - "Forces nontrivial Selmer" needed "(Selmer, not rank)": N = 627 has nu = 2 but rank 0.
+  - Credits were missing: opus-S90 HYP-9657 (C)2 and THM-3166.
+  - The additivity check was not shipped as a script.
+  - The nu table counts isomorphism classes, not merged classes.
+- **Lesson.** Before calling a value "undecided", query the existing data for it.
