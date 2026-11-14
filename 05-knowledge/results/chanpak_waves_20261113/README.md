@@ -940,7 +940,9 @@ Forbid Z directly after J; by JZ = OJ, such a word can be rewritten only if the 
 - *Cap 4.* This leaves 16 blocks: w empty or beginning with O, |w| ≤ 4, after a first run of any word of length ≤ 4.
   Through 2^24 they have 147 misses, with the same largest miss, 130,247, as all 31 cap-4 blocks.
 - *Greedy removal (searched at 2^21).* OZOO and OOZO can be removed together, leaving 14 blocks that still have the
-  largest miss 130,247 (checked to 2^24: 170 misses, the largest 130,247). Removing OOZZ as well moves the largest miss to 145,147.
+  largest miss 130,247 (checked to 2^24: 170 misses, the largest 130,247). Removing OOZZ as well moves the largest miss to 145,147. More generally, removing any one
+  of the six remaining length-4 blocks (13 blocks) keeps the census apparently cofinite through 2^22, with the
+  largest miss between 145,147 (OOZZ removed) and 418,429 (OZZO or OOOZ removed).
 - *Cap 3.* The 8 Z-free blocks sit near the critical line: per-window misses 579, 566, 517, 477, 452, 378 for 2^16
   to 2^21.
 
