@@ -1082,7 +1082,9 @@ strategies combined here supplies one.
   - mean prime multiplicity at least 200: yes, 216;
   - minimum multiplicity at least 7: yes, 18;
   - minimum attained at a prime: no. It is attained at 11 × 766,471, a rough composite; the weakest prime has 23.
-- **P42.** The maximal gap between one-apex values on [2^26, 2^27) lies between 48 and 58.
+- **P42 (REFUTED).** The maximal gap between one-apex values on [2^26, 2^27) was predicted to lie between 48 and 58.
+  It is 44. The maximal gaps on the windows starting at 2^23, 2^24, 2^25, 2^26 are 46, 52, 50, 44: they fluctuate
+  and show no clear growth, so "about 2 log₂ N" overstates the trend. Bounded gaps are not excluded by the data.
 
 ## Next waves (queued predictions)
 
