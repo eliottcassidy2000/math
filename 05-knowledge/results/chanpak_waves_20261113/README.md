@@ -418,6 +418,57 @@ per-state upper bound and checks exactly at the last layer, trying lengths L* to
 correction letters, solves every odd N ≥ 23 other than 21 with word length O(log N) in polynomial time. This is
 the constructive form of the Two-Hub Conjecture, and it would settle Chan–Pak.
 
+## Wave 14: where X^0.98 comes from, the Dirichlet-abscissa lens, and canonical representatives
+
+**Source.** Session 337, [TERRACE_DENSITY](../chanpak_target_first_terrace_density_20261114/TERRACE_DENSITY.md).
+Strong tournaments with the fewest directed triangles (Moon's n − 2) form the "first triangle terrace". Their count
+is an interval-packing sum over a gap word, and the spectrum is exactly the multiplicative closure of the connected
+values. The note proves that Σ H^−s converges at s = 49/50 via R(s)·Q(s) < 1, where
+- R(s) = Σ_r (1 + 2^r)^−s runs over Fermat-block counts, and
+- Q(s) = Σ_q E_q^−s runs over a kernel with series (9 + 8z + 5z²)/(9(1 − z − z² − z³)).
+
+So the number of distinct counts up to X is O(X^0.98), even though every odd residue mod 2^k is hit.
+
+**Where 0.98 comes from (computed here).** The true critical exponent is the root of R(s)·Q(s) = 1:
+**s\* = 0.963577…** At 0.98, R·Q = 0.949 < 1; 0.98 = 49/50 is a convenient rational above s\*, verified there with
+integer arithmetic. So the sharp form of the method gives O(X^(0.9636 + ε)).
+
+**Connections inside it.**
+- 9E_q = 17, 31, 57, 105, 193, 355, 653, 1201 is a **tribonacci** sequence: each term is the sum of the previous
+  three. Its growth rate is the tribonacci constant τ = 1.839286…, the root of the denominator 1 − z − z² − z³.
+- 17 = F2 is a Fermat prime. 31 = 2^5 − 1 is a Mersenne prime. **193 = 1 + 3·2^6** is exactly the hub-free
+  pairwise-meeting count at order 9 (wave 4).
+- R(s) is a **Fermat zeta function** over the counts 1 + 2^r of the Fermat blocks R_r.
+- The ratio E_q ≥ (9/5)·E_(q−1) used in the proof is Busch's largest step ratio, b(n+1)/b(n) = 9/5.
+- The bit probability 2/3 is w/(1 + w) at w = 2, the C3 block.
+- The bound has the shape of a renewal equation: words in the family factor as alternating Fermat blocks and
+  tribonacci corridors, Σ_k R^k·Q^(k−1).
+
+**Dirichlet-abscissa lens.** For a construction family F, let σ(F) = inf{s : Σ_(T∈F) H(T)^−s < ∞}. Any family with
+σ(F) < 1 realizes O(X^(σ+ε)) counts, so it can never prove Chan–Pak, however well it covers residues.
+- The minimum-triangle terrace has σ = 0.9636.
+- Two-hub words have σ = log 4 / log 3 = **1.2619**, from 4^L words against counts of size about 3^L. That excess
+  (4/3)^L is exactly why their coverage is complete up to 2.2×10^7.
+
+So residue completeness mod 2^k is not a valid local-to-global principle for Chan–Pak. The deciding invariant is σ
+together with the distribution of counts.
+
+**Canonical representative (proposal).** For each odd N ∉ {7, 21}, select the **two-hub shortlex normal form**: the
+two-hub word of minimal length, then lexicographically least (x, y, e), with the tournament class it determines.
+- It exists for every N ≤ 22,156,805, with length ≤ ⌈log₃ 2N⌉ + 1 (wave 9).
+- The selection is natural because it lives in the σ > 1 family with an exact 36-state counter.
+- The proof route this suggests is **heredity**: show that the normal form of N is obtained from the normal form of
+  a smaller count by a bounded frame move (a frame-level decoder). This failed locally for arbitrary realizers
+  (wave 9), but normal forms are a much smaller, canonical set.
+- *Test (P30):* compute the normal forms for N ≤ 10^5 and check whether removing the last spine vertex of a normal
+  form yields a normal form, or a bounded edit of one.
+
+**Frame-level decoder status.** Designed, not built as a provably complete algorithm. Each Erdős step
+n = 2m + 3^k would place one nested frame, contributing 2^α·3^β by the nested-frame lemma. Wave 8 showed that
+admissible frames come in interacting groups, since low-block words realize only 94 of 419 microcosm targets. So a
+correct frame decoder must track the cross-frames each placement creates. The exact branch-and-bound decoder remains
+the constructive tool to about 10^7.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
