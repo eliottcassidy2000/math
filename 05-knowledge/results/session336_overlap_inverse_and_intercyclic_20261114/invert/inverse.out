@@ -1,0 +1,16 @@
+target 385 intercyclic 0 cap 11 visited 465413 pruned 289232
+spine length 6 strong labelled words 2 best proper overlap 2
+spine length 7 strong labelled words 14 best proper overlap 2
+spine length 8 strong labelled words 54 best proper overlap 1
+spine length 9 strong labelled words 16 best proper overlap 0
+best beta 2 alpha 1 word 1030221 anchors 0 2 5 6
+target 385 intercyclic 1 cap 11 visited 465413 pruned 289232
+spine length 8 strong labelled words 20 best proper overlap -1
+target 573 intercyclic 0 cap 12 visited 1048757 pruned 666806
+spine length 7 strong labelled words 12 best proper overlap 3
+spine length 8 strong labelled words 58 best proper overlap 3
+spine length 9 strong labelled words 51 best proper overlap 1
+spine length 10 strong labelled words 8 best proper overlap 0
+best beta 3 alpha 1 word 20302212 anchors 0 2 6 7
+target 573 intercyclic 1 cap 12 visited 1048757 pruned 666806
+spine length 8 strong labelled words 2 best proper overlap -1
