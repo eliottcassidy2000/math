@@ -120,5 +120,6 @@ for a,b in product((1,2,3),repeat=2):
 for a,b in product(range(1,41),repeat=2):
  N=formula(a,b);sol=decode(N)
  assert (a,b) in sol and all(formula(*p)==N for p in sol)
+assert set(decode(8849))=={(4,3),(7,1)}
 print('Independent interpolation grid and 1600 three-branch inverse checks passed.')
 print('36-vertex fixed cubic lift has seven frame multiplicities:',cubic(6))
