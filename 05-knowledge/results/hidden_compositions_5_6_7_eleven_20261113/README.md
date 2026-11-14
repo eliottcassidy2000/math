@@ -34,7 +34,7 @@ Sp(5)·Sp(6) take 67 and 48 values, and they share exactly **19**:
 15, 25, 45 ∈ Sp(6). So the collisions are exactly 5m with m ∈ Sp(7) ∩ (3Sp(6) ∪ 3Sp(5) ∪ 5Sp(5) ∪ 9Sp(5)). For
 example, 495 = 5·99 = 11·45 = 15·33.
 
-Each collision moves a Busch brick, 3 = F0 or 5 = F1, from one strong component to the other. This is the
+**Correction (next session, [brick_moves](../brick_moves_odd_coordinates_20261113/README.md)):** the sentence that followed here was too strong. 5 of the 19 collisions also move an 11 or a 13; for example 165 = 5·33 = 11·15 trades a 5 for an 11. The exact law, checked at 11 and 12 vertices, is re-association by the primes {3, 5, 11, 13} of the order-5 strong spectrum. Many collisions do move a Busch brick, 3 = F0 or 5 = F1, from one strong component to the other. This is the
 tournament form of a hidden composition: the vertex composition 4+7 = 5+6 is matched on H by re-associating
 Fermat bricks between components. It is the same re-association that underlies Busch's floor and the rooted
 core grammar of [ternary_core_grammar](../ternary_core_grammar_20261113/README.md).
