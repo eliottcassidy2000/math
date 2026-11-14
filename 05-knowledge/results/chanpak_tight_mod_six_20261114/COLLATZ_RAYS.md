@@ -95,7 +95,7 @@ attained in other tournaments. The two given rays pass through
 so neither contains 63. The listed terms never match 63
 modulo 2^b for b≥6. When t≥5, |6t+C−567|<4^t and the
 difference is nonzero, excluding a shallow match. Thus the
-first matching t in the first ray, for b≥6, is
+first matching t in the first ray, for b≥10 (so 2^(b−1)>281), is
 
     t = (278+j·2^(b−1))/3,
     j=1 when b is odd, and j=2 when b is even.
