@@ -1,0 +1,13 @@
+# Why the seven-times-dyadic companion needs a phase shift
+
+The constructive rail in this packet realizes 7(2^s+1) strongly for all s≥2, using a fixed module only for the infinite tail and separate small seeds. A fixed chart inflating one marked vertex by TT_m cannot simply start the rail at the beginning. In fact there is no such chart realizing 7(2^(m+t)+1) for every m≥1 at t=0,1,2, even if the chart allows more than two visits.
+
+* t=0 would give H=21 at m=1.
+* t=1 would make the m=2 tournament count 63 and its TT2 contraction count 35. A 63 tournament has a single nontrivial SCC: the only proper nonunit factors are 3 and 21, or 7 and 9, and both splittings use an excluded value. By the inherited classification its nontrivial SCC is the order-eight 63 seed or its converse. A uniform TT2 pair must lie entirely within that core or entirely within singleton padding: a pair meeting the core in just one vertex would require that vertex to be a source or sink of the strong core. Padding contraction leaves H unchanged. The seed's only uniform TT2 pairs are {0,5},{1,2},{6,7}; their contractions give 25,33,37, not 35.
+* t=2 would make the m=1 tournament count 63 and its m=2 enlargement count 119. Cloning a singleton padding vertex leaves H unchanged. Cloning a vertex of the literal strong 63 seed gives, in vertex order, 139,123,123,165,539,139,115,115, none 119. Converse preserves all these counts.
+
+The obstruction uses only the actual birth fiber at 63 and the arc-identity constraint between successive modules. It does not rule out phase shifts 3 through 8, or shifting charts. This illustrates a constructive use of a forbidden value: it excludes a canonical chart, then the realized value 63 rules out two further ways to normalize it. The later viable rail must enter from a different core.
+
+## Symmetry of seven-times-Fermat targets
+
+Let s=2^r. For r≥2 any tournament realizing 7(2^s+1) has automorphism group of order either 1 or 7. Each prime factor p of 2^s+1 has ord_p(2)=2s and hence p≥2s+1. For s≥8, 7(2^s+1)<5^(2s/3), true at 8 and preserved by incrementing s since the right side grows by a factor greater than two. Busch therefore bounds every nontrivial SCC to fewer than 2s+1 vertices, excluding such p from the group order by the free Hamiltonian-path action and the vertex permutation action. At s=4 the only Fermat factor is 17, which likewise exceeds the Busch budget for 119. Finally 7 does not divide 2^s+1 (2 has order three modulo 7); any group order thus has at most one factor 7. This is a restriction on **all** exact-target witnesses, not a claim that the order-seven symmetry occurs at every target.
