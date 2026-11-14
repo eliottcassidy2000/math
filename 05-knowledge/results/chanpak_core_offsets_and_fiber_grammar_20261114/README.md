@@ -15,3 +15,13 @@ A different mechanism gives an exact two-count return at every pair of independe
 The exact ordinary class series is the inherited ordered-component series V=1/(1−S), with multiplicative count labels. Its new pointed lift is E=(Delta V)^2 D; its fixed part under converse is Ec=(Sigma V) Dc, with Sigma doubling the order and squaring the exterior count. Ordinary isoclass multiplicities, pointed edge multiplicities, and the simple metagraph are distinct quotients. The positive inventory correction stratifies the class series by number of unavailable large components; all odd fibers through 73 at all orders can be counted from the strong order-eight catalog. Forgetting count labels gives A000568, but the recurrence does not remove the need for new strong atoms at higher counts.
 
 **Open:** the universal absolute selector, a complete simpler description of the unrestricted strong alphabet, and Chan–Pak. The exact windows are not a cutoff argument.
+
+## Proofs and replay
+
+- [Changed-core windows and exact inverse](WINDOWS.md), [literal decoder](window.py): forty tournament recounts over the two heights.
+- [Three-bank cancellation and the 3-adic obstruction](ORDINAL_SELECTOR.md), [independent endpoint transfer](ordinal_controls.py).
+- [Pointed SCC rewrite and converse recurrence](METAGRAPH.md), [complete small-layer comparison](replay.py).
+- [Positive catalog corrections](POSITIVE_CORRECTIONS.md).
+- [Bounded-gap rigidity for arbitrary induced inclusion](INDUCED_GAPS.md). At unbounded absolute height even many vertex deletions cannot connect consecutive odd counts.
+
+The strong affine witnesses have at most t+14 vertices; the strong quadratic ones have at most 2t+10. Adding neutral singleton SCCs gives a witness at every larger desired order without altering its count (but not preserving strength).
