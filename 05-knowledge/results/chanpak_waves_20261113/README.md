@@ -939,8 +939,8 @@ in these structured families.
 Forbid Z directly after J; by JZ = OJ, such a word can be rewritten only if the run before the J has room.
 - *Cap 4.* This leaves 16 blocks: w empty or beginning with O, |w| ≤ 4, after a first run of any word of length ≤ 4.
   Through 2^24 they have 147 misses, with the same largest miss, 130,247, as all 31 cap-4 blocks.
-- *Greedy removal (checked to 2^21).* OZOO and OOZO can be removed together, leaving 14 blocks that still have the
-  largest miss 130,247 (the 14-block check to 2^24 was still running at this commit). Removing OOZZ as well moves the largest miss to 145,147.
+- *Greedy removal (searched at 2^21).* OZOO and OOZO can be removed together, leaving 14 blocks that still have the
+  largest miss 130,247 (checked to 2^24: 170 misses, the largest 130,247). Removing OOZZ as well moves the largest miss to 145,147.
 - *Cap 3.* The 8 Z-free blocks sit near the critical line: per-window misses 579, 566, 517, 477, 452, 378 for 2^16
   to 2^21.
 
