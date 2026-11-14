@@ -24,7 +24,7 @@ why joint local solvability at 2 and 3 can still be far from sufficient.
    Nevertheless for the single prescribed attainable target 63,
    even the least scalar match on those rays grows exponentially
    in the dyadic modulus. We compute the exact first matching
-   parameter at all b≥6, not an averaged obstruction.
+   parameter at all b≥10, not an averaged obstruction.
 3. **[Ternary runs and two narrow height decoders](RUN_HEIGHT.md).**
    H mod 3 is an exact function of the number of adjacent drops
    and the root's phase. This yields a sharp fixed-run height
