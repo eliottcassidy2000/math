@@ -1,0 +1,19 @@
+# Acyclic fixed charts hit only finitely many values on any smooth odd ray
+
+**Theorem.** Fix a quotient tournament and a finite set of its vertices inducing a transitive subtournament. Inflate those marked vertices by nonempty transitive tournaments of arbitrary, independent lengths. Fix all other factors once and for all. For any finite set P of odd primes, only finitely many distinct counts from this chart have all prime divisors in P. In particular no such chart, or finite menu of them, produces infinitely many 7·3^j. No bound on the rates or relative sizes of the transitive lengths is assumed.
+
+First expand the fixed factors into their individual labelled vertices; the marked vertices still induce a transitive tournament. Compress maximal marked runs in a Hamilton path to a directed itinerary. If a marked label occurs j≥2 times, each excursion between consecutive occurrences must contain some fixed label: otherwise it would give a closed directed walk in the induced transitive tournament. The fixed labels appear once in the entire itinerary. Thus the j−1 excursions are distinct words, and can be permuted freely, preserving legality and all marked run counts. In particular for every visit vector having j≥3 at some marked vertex, the number of its itineraries is even (indeed divisible by (j−1)! for that vertex). Also each j is bounded by one plus the number of fixed labels.
+
+For transitive length L the ordered nonempty j-cover count is the number of onto assignments to j labelled slots, namely
+
+    F_j(TT_L)=Σ_{r=1}^j (−1)^(j−r) binom(j,r) r^L.
+
+The entire count therefore has a finite expansion
+
+    H(L_1,…,L_d)=Σ_r c_r ∏_i r_i^L_i
+
+with integer coefficients and positive integer bases r_i drawn from a fixed finite set. If some r_i has any odd prime divisor, then r_i≥3, hence every contributing itinerary has at least three visits to its mark. The coefficient c_r is consequently even. This remains true after all equal monomials are collected. The identity holds even at short lengths: the onto formula automatically returns zero when there are too many runs.
+
+Suppose infinitely many distinct odd P-smooth values N occur. Some p∈P has unbounded valuation along a subsequence. For each solution of H=N, choose an inclusion-minimal vanishing subsum of H−N that contains the −N term, and pass to a subsequence with a fixed set of other terms. No proper nonempty subsum of the retained terms vanishes. After dividing the equality by N, the variables (∏ r_i^L_i)/N belong to a fixed finitely generated multiplicative group of rational S-units (use the primes of P and of the finitely many bases). By the nondegenerate [Evertse–Schlickewei–Schmidt S-unit theorem](https://annals.math.princeton.edu/2002/155-3/p04), there are finitely many possible tuples of these ratios. Fix a tuple along a further subsequence of unbounded p-valuation. Then each retained monomial has unbounded p-valuation, so some base r_i in that monomial is divisible by the odd prime p. Its coefficient is even by the itinerary argument. But the retained terms sum to odd N, contradiction.
+
+This is a structural all-order obstruction, not a failed range check. It strengthens the elementary synchronous-ray obstruction: if all lengths are affine in one parameter, finite exponential uniqueness already prevents a pure odd geometric ray because its coefficient would have to be even. The S-unit argument also forbids arbitrary asynchronous choices. It does not prohibit a finite chart from producing infinitely many primes of varying prime support. Nor does it apply to cyclically coupled growing marks: an excursion can then consist entirely of growing labels, identical excursions can repeat, and there need not be a finite set of exponential bases at all. Changing the quotient, as in the finite tripling chains of [Gap structure](GAP_STRUCTURE.md), also escapes the theorem.
