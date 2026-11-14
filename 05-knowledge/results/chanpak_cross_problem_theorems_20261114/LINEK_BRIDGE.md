@@ -71,15 +71,60 @@ every class 3 or 5 mod 8. Indeed the order of 3 is 2^(e-2),
 since successive squaring gives v₂(3^(2^k)-1)=k+2 for k≥1.
 Its powers lie in the two classes 1 and 3 mod 8, which together
 have the same size. The assertion for e<3 is the projection of
-the e=3 result. No simultaneous claim for mixtures of odd and
-even moduli is needed.
+the e=3 result. A separate construction below glues the odd
+and binary requirements.
 
 In particular 7 is forbidden for connected activity-two trees
 by a simple congruence, but 21 is attained by the four-vertex path
 (1+8+12). A weighted variant of Linek's question is eventual
 coverage of every integer in the admissible 3 or 5 mod 8 classes.
-The separate odd and even tests do not prove simultaneous saturation
-or exact coverage.
+In fact there is no additional congruence obstruction; the following
+gluing proves this without supplying exact coverage.
+
+## Simultaneous all-modulus theorem
+
+Let the required modulus divide 2^e M with M odd and e≥3, and let
+the prescribed residue be 3 or 5 modulo 8. First construct a tree
+that realizes its residue modulo M by the shear argument above.
+
+We can preserve this residue while setting the tree's order parity.
+There is an odd-order rooted tree with pair (1,1) modulo M. To see
+it, take a tree of odd order with pair (0,1), obtained from the
+singleton by two inverse F steps. In every inverse or positive
+step, adding an even multiple of the period of F permits us to
+keep the parity of the indicated formal number of root extensions.
+Multiply two copies of (0,1) coordinatewise using the new binary
+root followed by F inverse: the resulting (0,1) tree is even.
+Apply F once to get the odd (1,1) tree. Attach its root as a child
+of the original root. For a child with pair (A,B), the existing
+root's two contributions (a,b-a) become (Ba,A(b-a)).
+Thus this attachment preserves both residues modulo M and toggles
+order parity, letting us choose the right class modulo 8.
+
+To set the remaining binary digits, take an even path of length n
+measured in vertices, with n≥e+2 divisible by the period of F
+modulo M. Its rooted endpoint pair is (1,1) modulo M, by
+iterating F from the formal empty-path vector (1,1).
+For the scalar path profile the exact recurrence gives
+$$
+ b(P_n)=\frac{2^{n+2}-(-1)^n}{3},\qquad a(P_n)=b(P_{n-1}).
+$$
+So the path pair is (1/3,-1/3) modulo 2^e.
+Attach two copies of this path as children of the same root.
+They leave the two contributions unchanged modulo M, while
+multiplying both by 1/9 modulo 2^e. The powers of 9 are exactly
+the units congruent to 1 modulo 8, since
+v₂(9^(2^k)-1)=k+3 for k≥0, by successive squaring.
+As b is odd, repeating the paired attachment can set b to any
+residue in its already chosen class modulo 8. The parity and
+path attachments also work modulo M=1, trivially.
+
+Consequently, modulo *every* positive integer, the scalar weighted
+tree image is exactly the projection of 3 or 5 modulo 8. The
+rooted image still fails joint saturation at 3. This makes the
+weighted inverse problem a particularly close local-versus-exact
+analogue, but does not decide whether the admissible positive
+integers are eventually all attained.
 
 ## A quadratic clique bound prevents the literal tournament transfer
 
