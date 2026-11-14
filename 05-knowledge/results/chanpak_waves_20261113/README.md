@@ -991,6 +991,99 @@ of p² + p + 1, and 31 is forced while 37 is not.
   exactly one such miss, 26,538,691, and none in (26,538,691, 2^26].
 - **P40′.** Runs ≤ 3 miss no odd N in (26,538,691, 2^27].
 
+## Wave 21: combining strategies — what covers what, and where the 11-matrix orbit is weakest
+
+Owner prompt: work toward universal placement, combine strategies so that each covers the others' gaps, and think about
+the cofiniteness of the 11-matrix orbit. **Chan–Pak OPEN.** The short answer of this wave: the strategies in hand fail
+on the same targets (primes and numbers coprime to 3 and 5), so combining them improves thresholds and constants but
+not the regime. Unit-step windows cannot be stacked or widened by single back arcs.
+
+**One formula behind both placement programs (KNOWN, THM-4866 (B)).** Join a rooted source (A, a) to a rooted reader
+(B, b) by one back arc b → a, with A beating B otherwise. Then
+
+N = H_A·H_B − E_A(a)·S_B(b) + λ_A(a)·ρ_B(b),
+
+where E is the number of Hamiltonian paths ending at the root, S the number starting at it, and λ, ρ the left and right
+ports (pairs of paths covering the tournament, split at the root).
+- The root-change decoder of waves 19–20 is this formula iterated, with one-apex blocks as readers.
+- The other session's free-address windows are this formula with a one-apex wing as source. For example,
+  908u + 9g(u) + {752, …, 758} uses four readers with core count 9 whose slopes coincide at 908 after reindexing the
+  source address.
+- "Universal placement" asks that this pairing, over realizable source and reader profiles, reach every large odd N.
+
+**Three obstructions to building exact windows by single back arcs (PROVED, elementary).**
+- *(a) Ports dominate counts.* For every rooted tournament, ρ_B(b) ≥ H_B and λ_A(a) ≥ H_A. Split each Hamiltonian
+  path at the root: this gives distinct pairs.
+- *(b) Width of a fixed-profile window.* Fix the source and vary the reader over tournaments with the same
+  (H_B, ρ_B). Then N moves only through −E_A·S_B. Consecutive odd counts need E_A = 1. Since S_B lies in [0, H_B] and
+  Rédei fixes its parity, the window has at most ⌊H_B/2⌋ + 1 values. The other session's windows use a different,
+  tilted mechanism: readers with different profiles whose coefficients coincide after a reindexing, or cancel on a
+  special line of sources. Bound (b) does not cover those.
+- *(c) No stacking.* In a chain P_1 ⇒ … ⇒ P_k with one back arc into each part from the next, vary the start
+  statistic of one part with everything else fixed. The count changes by E of the part before it times the product of
+  the counts of all parts outside that junction. So a unit step at a junction forces every other part to be
+  transitive, and two independent unit-step windows cannot coexist.
+- *(d) Counting corollary.* One-apex sources with E_A = 1 (the word ends in Z) and one fixed-(H_B, ρ_B) bank cover at
+  most a fraction 1/2 + 1/H_B of the odd numbers. By (a), the base H_B·g(U) + ρ_B·(1 + U) exceeds ρ_B·U ≥ H_B·U, so
+  at most X/(2H_B) sources fall below X, and each carries at most ⌊H_B/2⌋ + 1 values.
+
+So windows can only add a bounded number of counts on top of a base that is already dense. They cannot turn a
+one-parameter base into a covering. The two ways around (b)–(c) are the other session's tilted readers and interfaces
+with several back arcs (seam ranks 13, 62, … in THM-4878).
+
+**Products do not cover the gaps of the root-change families (FINITE-EXACT).** Multiplicativity realizes every
+composite that has a factorization into realized counts, so Chan–Pak reduces to primes and numbers like 7p. Those are
+exactly where the root-change families are weakest: local factors favour the residue class 0 modulo small primes
+(THM-5128 (A)), so composites are over-covered and primes under-covered.
+
+| family | primes among misses | primes among odd numbers | window |
+|---|---:|---:|---|
+| one root change (F_≤1) | 18.8% | 11.3% | [2^25, 2^26) |
+| runs ≤ 2 | 29.0% | 12.8% | [2^22, 2^23) |
+| runs ≤ 3, Z-free blocks | 49.8% | 12.8% | [2^22, 2^23) |
+| invertible blocks only (8) | 17.0% | 13.4% | [2^21, 2^22) |
+
+([`scripts/missclass.c`](scripts/missclass.c), [`scripts/classwhite.c`](scripts/classwhite.c),
+[`scripts/classterm.c`](scripts/classterm.c).) The closer a family is to complete, the more its last misses are primes.
+
+**Where the 11-matrix orbit is weakest ([`scripts/rep11.c`](scripts/rep11.c), [`scripts/primemiss.c`](scripts/primemiss.c)).**
+Count representations of each odd N in [X/2, X] (strict block words of the 11-block set):
+
+| X | mean | primes: mean | multiples of 3: mean | class 1 or 2 mod 3: mean | minimum (where) |
+|---|---:|---:|---:|---:|---|
+| 2^18 | 321 | 76 | 660 | 150 | 0 (misses remain below 418,429) |
+| 2^20 | 545 | 109 | 1,159 | 238 | 2 (at a prime) |
+| 2^22 | 925 | 152 | 2,026 | 375 | 5 (at the prime 2,115,427) |
+| 2^24 | 1,571 | 216 | 3,529 | 592 | 18 (at 8,431,181 = 11 × 766,471; the weakest prime has 23) |
+
+The class-0 boost is about 6.0 modulo 3, 3.7 modulo 5 and 1.6 modulo 7 at 2^24. The mean grows like X^0.38 and the
+prime mean like X^0.25. The minimum sits at a rough number coprime to 3, 5 and 7: a prime up to 2^22, and 11 × 766,471
+at 2^24. With products added, the orbit's misses are its 208 prime misses (the
+largest 386,641) and 36 numbers whose only factorizations use 7 or 21. Its 164 other misses are products of two
+counts. So products lower the orbit's threshold only from 418,429 to 386,641.
+
+**Approximate placement (FINITE-EXACT, [`scripts/gaps.c`](scripts/gaps.c), [`scripts/gmult.c`](scripts/gmult.c)).**
+The one-apex values alone hit 0.498 of the odd numbers, with maximal gaps 30, 42, 46, 52, 50 on the windows starting
+at 2^16, 2^19, 2^23, 2^24, 2^25 (about 2 log₂ N). There are 2 ln 2 = 1.386 words per odd number, the largest
+multiplicity grows slowly (6 near 2^8, 18 near 2^24), and the Cauchy–Schwarz density bound settles at 0.406. Every odd
+target is therefore within O(log N) of a one-apex count. Exact placement from there is blocked by (b)–(c). A
+positive-density theorem from there is the repository's open linear-energy statement (THM-4886, THM-4887).
+
+**What the combinations say about cofiniteness.** All routes end at the same place: a local limit theorem for a
+supercritical family on its weakest residue classes, which are the primes. The 11-matrix orbit is supercritical even
+there (prime multiplicity growing like X^0.25), which is why it looks cofinite. Two facts keep thin-orbit methods
+away: the singular blocks are load-bearing (wave 20), and even with expansion those methods prove density one, not
+cofiniteness. A proof needs a new ingredient, either an exact numeration or a prime-specific mechanism. None of the
+strategies combined here supplies one.
+
+**Pre-registered.**
+- **P41 (registered in the session draft before the 2^24 run finished; two of three parts CONFIRMED).** For the
+  11-block orbit on [2^23, 2^24]:
+  - mean prime multiplicity at least 200: yes, 216;
+  - minimum multiplicity at least 7: yes, 18;
+  - minimum attained at a prime: no. It is attained at 11 × 766,471, a rough composite; the weakest prime has 23.
+- **P42.** The maximal gap between one-apex values on [2^26, 2^27) lies between 48 and 58.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
