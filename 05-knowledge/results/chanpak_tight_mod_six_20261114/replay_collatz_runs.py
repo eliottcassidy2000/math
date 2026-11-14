@@ -112,7 +112,7 @@ def Hr(t,A,C,M):
     assert r%9==0
     return r//9
 
-for b in range(6,15):
+for b in range(10,15):
     M=2**b
     j=1 if b%2 else 2
     t=(278+j*(M//2))//3
@@ -137,3 +137,11 @@ for L,l in product(range(1,6),range(6)):
         assert g(top)==B-q*M+g(w)+2
         assert g(bot)==B+q*M+g(w)
 print("PASS: exact reflected height charts and ternary carry")
+
+for l in range(1,13):
+    groups={}
+    for w in range(2**l):
+        delta=w-bitrev(w,l)
+        eps=tuple(((w>>i)&1)-((w>>(l-1-i))&1) for i in range(l//2))
+        assert groups.setdefault(delta,eps)==eps
+print("PASS: coarse coefficient uniquely identifies asymmetric mirror bits")
