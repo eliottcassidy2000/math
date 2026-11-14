@@ -1,0 +1,14 @@
+# Independent review of S325 absolute overlap
+
+**PASS.** No mathematical correction required. This review is bound to:
+
+- \`ABSOLUTE_OVERLAP.md\`: SHA-256 \`34254700de5a136cc64ae94cbf6b9c335dc0d349fc7899d889ab38aa2c64d23f\`.
+- \`replay_overlap.py\`: SHA-256 \`1c1b4d577a44ea798707f95e799c5ce4fc796e84d2fc0686d769d232adee8652\`.
+
+I reviewed the frozen proof and replay, independently ran the ordinary replay from a local copy, and checked that the producer's normal and optimized full receipts are byte-identical and both report the two direct order-19 counts 25,379,333.
+
+1. **Universal overlap.** The quotient-word bound is justified because two occurrences of one growing symbol cannot be separated exclusively by the other; that would require both arc directions. The DP enumerates the full admissible visit rectangle. Expanding the two certified itinerary tables gives exactly the stated \(A_\gamma Q_V(2)-H(U)H(V)\), not a polynomial fit. The direct source profiles therefore certify the all-reservoir equality. Quotient strongness with nonempty modules is enough even when the reservoir is not strong. I independently decoded R13 exterior outdegrees as \(10,10+|V|,1,3\); source vertices have internal outdegree plus 2, and reservoir vertices have internal outdegree plus 12. R15 vertex 3 has exactly two fixed singleton out-neighbors. This distinguishes the two literal tournaments at every reservoir size; no converse claim is needed.
+2. **Fixed padded rails.** The odd-slope normalization is unique. Away from equal normalized exponents, the lesser exponent is \(v_2(|d-f|)\). Opposite off-diagonal orderings require incompatible signs relative to \(a-b\), so at most one off-diagonal solution, with at most one diagonal solution. The inequalities and power-of-two tests retain all solutions, including negative differences and unequal lower bounds. Equal intercept gives precisely a common tail or no solution. The sharpness example is valid and properly labeled arithmetic only.
+3. **Growth obstruction.** The equality condition is tested by \(2A-h,4A-h\). On common ordinal growth, \(-3H\) cancels and the other two differences multiplicatively pick up \(Q_Z(2),Q_Z(3)\); the displayed defect follows since the original \(A\)'s agree. Strictness uses nonempty \(Z\), giving \(Q_Z(3)-Q_Z(2)>0\). Both new \(A\)'s are odd (odd \(H\), even other coefficients), so multiplication by the *same* reservoir-core \(Q(2)\) leaves distinct odd slope parts. Equal intercepts then forbid asynchronous repairs with that common fixed core. This does not rule out different reservoir cores or source operations.
+
+Additional scope checks: the dyadic shell bound follows from \(Q_V(2)\ge2H(V)\) and \(A>h/2\); finite prime certificates do not claim infinite prime supply. The replay's finite scan checks the decoder only against bounded exponents; the proof, not extrapolation, gives the unbounded classification.
