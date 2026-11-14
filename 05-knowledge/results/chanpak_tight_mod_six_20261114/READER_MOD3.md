@@ -35,6 +35,17 @@ No larger prime has this universal property: at q=2 the directed
 triangle gives the difference (2³+2·2)−2³·3=−12. Thus the collapse
 of *all* weighted color powers to just parity is special.
 
+For any three uniform cyclic modules A,B,C, apply the test
+to each module in turn. If e among their orders are even, the
+result is their product of path counts times the cyclic readout
+on e copies of TT₂ and 3−e copies of TT₁. At e=0,1,2,3
+those actual small counts are 3,5,11,45. Therefore a uniform
+cyclic join is automatically divisible by three when the
+module orders all have the same parity, and otherwise its
+count is congruent to −H(A)H(B)H(C). In particular the factor
+of three can be forced by parity alone, without equal modules
+or a three-fold automorphism.
+
 ## A physical branch test, not division by three
 
 The singleton triangular wrap W(A)=C₃[A,TT₁,TT₁] reads h+F₂,
