@@ -394,6 +394,30 @@ meet-in-the-middle: bucket prefixes by their projections on the top ~5 singular 
 compute the target cell and check candidates exactly. That would give an exact absolute-target solver for N ~ 10^15
 and large-scale evidence for the Two-Hub Conjecture.
 
+## Wave 13: the coarse-to-fine solver, built and measured (negative, with the obstruction identified)
+
+`scripts/beam2hub.c` is a beam search over two-hub words. At each spine position it keeps the B prefixes whose
+sampled random completions best straddle N (fraction above versus below, plus log distance). It prunes with the exact
+per-state upper bound and checks exactly at the last layer, trying lengths L* to L* + 3.
+- With B = 400 and 8 samples it solved **1 of 10** random targets near 10^6, worse than the exact branch-and-bound
+  (10 of 10, about 1.4×10^6 nodes).
+
+**Why exact large-N decoding resists generic search.**
+- An exact hit must land on N among the completions of a prefix. For the last R letters there are about 2·4^R
+  completion values spread over a range of order N, so the hit density per prefix is about 4^R/N. A beam of width B
+  then succeeds with probability about B·4^R/N. With 3^L ≈ 2N, the total work is about N/(4/3)^L ≈ N^0.74 at best.
+  That is the "many witnesses" regime and still super-polylogarithmic.
+- Meet-in-the-middle would give about N^0.63, from 2^L prefixes against 2^L suffixes, but only with a fast exact
+  hyperplane query "find p with c·v_p = N". Since v_p spans 27 dimensions (wave 12), no such query is available.
+- **Conclusion.** Exact absolute targets at 10^12 and beyond need a *structural* decoder that chooses frames, not
+  letters: for example, realize the Erdős 3-smooth antichain of N (census note) frame by frame, with a correction
+  term handled by bounded search. The B&B decoder remains the exact tool up to about 10^7, and coverage tables reach
+  2.2×10^7.
+
+**Prediction P29.** A frame-level decoder that places one nested frame 2^α·3^β per Erdős-decoder step, plus O(1)
+correction letters, solves every odd N ≥ 23 other than 21 with word length O(log N) in polynomial time. This is
+the constructive form of the Two-Hub Conjecture, and it would settle Chan–Pak.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
