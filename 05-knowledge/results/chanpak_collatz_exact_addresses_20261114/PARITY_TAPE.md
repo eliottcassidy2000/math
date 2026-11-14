@@ -100,3 +100,8 @@ coverage in this physical grammar gives only a subpolynomial
 number of exact positive integers. An inductive Chan–Pak solver
 cannot merely complete this 2-adic address; it needs other appends
 or changing sources supplying an independent magnitude control.
+
+Run `python3 -I -B replay_parity_tape.py` for the finite controls:
+modular bijections through a=11, exact recovery of each of those
+outputs, and independent physical Hamilton subset-DP checks for
+the tapes of spine width at most 11.
