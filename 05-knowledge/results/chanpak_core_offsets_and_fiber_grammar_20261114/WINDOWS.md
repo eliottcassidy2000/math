@@ -76,3 +76,25 @@ recounting H and checking strong connectivity. Run python3 window.py 28475
 to select an exact target. Outgoing rows use bits from vertex 0 upwards.
 The all-height result depends on the certificates and identities, not
 on completeness of the bounded small-core search that found them.
+
+## Why filling between the dyadic heights needs another bank
+
+The exact bit invariant rho(x)=g(x)-x+p(x) obeys rho(2x)=rho(x).
+For odd v, g(v)=g((v-1)/2) and g(w)<=w+1 by induction, so
+rho(v)<=(3-v)/2. For the even-height attempt x=a u with arbitrary
+even u (right address still b), a row's actual value is
+
+    13790 u + delta + h (rho(a u)-rho(a)).
+
+The rows delta=885 and delta=889 have h=67 and 17 respectively, and
+their a=10 and a=5 have the same odd part 5, with rho(5)=-1. If v is
+the odd part of u, the first row minus the second is exactly
+
+    -4 + 50 (rho(5v)+1).
+
+For v>=3 this is at most -254, greater in absolute value than the
+diameter 20 of the eleven-point window. Thus using the same eleven
+rows with an arbitrary even height does not retain the window,
+even if its absolute center is allowed to shift. This only rejects
+that direct interpolation; varying the core bank or the right
+address is still available.
