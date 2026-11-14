@@ -269,6 +269,31 @@ are already committed, and the remaining multiplicities are 1–3 per vertex. Th
 3. Recompute the owner's wheel rotation 1297 → 357 inside the switching class. The trijection chart predicts that
    rotation preserves the size of the switching-class fibre while moving the frame multiset.
 
+## Wave 9 (overnight): horizons, Berggren, logarithmic length, and the Erdős decoder step
+
+- **P21, horizon ratio (FINITE-EXACT).** At L = 17 the first miss is 73,505,585, so X(17)/3^17 = **0.569**. The
+  ratios at L = 14, 16, 17 are 0.487, 0.515, 0.569, still inside the predicted band (0.5, 0.6). L = 18 is running.
+- **P23, Berggren depth.** For the 395 primitive hypotenuses c ≤ 2500, minimal two-hub length minus Berggren depth
+  ranges over [−25, 4]: deep outer-branch triples are cheap, and middle-branch ones cost at most 4 extra. So the
+  prediction holds with constant 4, but the depth is not the right scale.
+- **P24, logarithmic length (FINITE-EXACT to 2.2×10^7).** Every odd N ∉ {7, 21} is a two-hub count with word length
+  ≤ ⌈log₃(2N)⌉ + 1.
+  - Max excess is exactly 1 on the hypotenuse sample.
+  - In general it follows from the horizons: X(L − 1) ≥ 0.33·3^(L−1) > 3^L/9 for L ≥ 7. So N > X(L − 1) forces
+    log₃(2N) > L − 2.
+- **Erdős decoder step.** The 3-smooth decoder lemma (census note) writes an odd n as 2m + 3^k, choosing the parity
+  of k so that m is odd.
+  - Over all 10,922 configurations with words of length ≤ 6, a one-vertex extension (append or prepend, any labels,
+    either hub arc) realizes **2H + 3^k for some k in 47.8%** of configurations.
+  - It realizes 2H + 1 in 16.2% and 2H − 1 in 16.2%.
+  - For comparison, all three ternary branches occur in only 0.09%.
+  So the doubling step of the decoder is locally available about half the time, unlike the ternary step.
+- **Prediction P25 (decoder closure, the next proof target).** For every odd n ≥ 23 other than 21, there are k and an
+  odd m = (n − 3^k)/2 such that some two-hub realizer of m has a one-vertex extension with count n.
+  - With about (4/3)^L realizers per target, this is plausible. Proved, it gives the Two-Hub Conjecture by
+    induction on n.
+  - *Test:* for n ≤ 10^4, keep all realizers of each m and check the extensions.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
