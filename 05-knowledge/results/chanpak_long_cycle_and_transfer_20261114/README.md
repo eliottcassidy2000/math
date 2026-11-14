@@ -59,3 +59,10 @@ absorb the signed excess channels from the cycle encoder, or
 supply a target-selectable ordinary return that changes its current
 source or terminal reader. The fixed families whose limitations
 are proved here cannot supply that return by themselves.
+
+**Sharper follow-up.** [Two induced deletions of the same binary cycle
+encoder](POSITIVE_CYCLE_GAP.md) already give an ordinary path gap
+exactly (2K), with strong graphs of orders (lfloorlog_2 Kfloor+3)
+and (+4), upper count at most (4K+1). No signed combination is
+needed for the gap. The lower count is not freely selectable:
+that distinction is still what blocks the Chan–Pak inference.
