@@ -145,3 +145,28 @@ for l in range(1,13):
         eps=tuple(((w>>i)&1)-((w>>(l-1-i))&1) for i in range(l//2))
         assert groups.setdefault(delta,eps)==eps
 print("PASS: coarse coefficient uniquely identifies asymmetric mirror bits")
+
+def recover(d,l):
+    m,k=l//2,l-l//2
+    cap=(1<<m)-1
+    base=(-d)%(1<<k)
+    outs=[]
+    for B in (base,base-(1<<k)):
+        if abs(B)>cap:continue
+        A=(d+B)//(1<<k)
+        seq=[]
+        for j in reversed(range(m)):
+            if B%2 and A==0: break
+            e=((A>0)-(A<0)) if B%2 else 0
+            seq.append(e)
+            A-=e*(1<<j)
+            B=(B-e)//2
+        else:
+            if A==B==0:outs.append(tuple(seq))
+    return outs
+for l in range(1,13):
+    for w in range(2**l):
+        d=w-bitrev(w,l)
+        eps=tuple(((w>>(l-1-i))&1)-((w>>i)&1) for i in range(l//2))
+        assert recover(d,l)==[eps]
+print("PASS: greedy inverse recovers every tested coarse profile")
