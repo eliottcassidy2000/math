@@ -16,7 +16,14 @@ No claim of Chan–Pak completeness, nor a wider finite coverage census.
    One-return sources at dyadic widths supply independent square
    classes, regardless of whether there are infinitely many Fermat
    primes. The resulting outer-wrap bank sees density one of primes
-   as divisors, not as exact outputs.
+   as divisors, not as exact outputs. Two refinements: [almost every
+   fixed-length prime tuple has a simultaneous witness](SIMULTANEOUS.md),
+   yet [the exact count set has a sharp subpolynomial size](BINARY_BUDGET.md).
+   With arbitrary rather than Fermat-indexed widths a [five-ratio
+   identity](FIVE_RATIO_IDENTITY.md) gives simultaneous unit coverage
+   at any odd modulus coprime to 3·5·7·11·17 and at all individual
+   odd prime powers. A genuine obstruction survives at 255 even though
+   each of its two-prime factors admits a witness.
 3. [A modular compiler at fixed Hamiltonian cycle count](FIXED_CYCLE_CONGRUENCES.md).
    The complete scalar residue obstruction for a fixed painted source
    is gcd(h,S). The planted cycle count remains h even when the
@@ -42,4 +49,5 @@ obstruction, but the absolute target is a separate inverse problem.**
 The next target is a selective or multiple-visit physical construction
 whose square-class sign and positive height can be chosen together.
 
-Run `python probe.py` for independent finite controls on the formulas.
+Run `python probe.py` and `python replay_five_ratio.py` for independent
+finite controls on the formulas.
