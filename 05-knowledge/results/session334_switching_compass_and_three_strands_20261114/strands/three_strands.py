@@ -43,4 +43,25 @@ def main():
     print('three-phase exact transfer equals literal enumeration on all 1365 words of length <=5')
     for k in range(1,8):
         print(k,[tuple(v-q[2] for v in q) for l in range(1,8) if (q:=transfer((1,1)+(0,)*k+(2,)*l+(3,1,1)))])
-if __name__=='__main__':main()
+
+def patterned_law():
+    # The score vector lives in two 3^3 x 3 formal state spaces; allow
+    # 162 states as an upper bound. An output of a fixed linear operator
+    # minus a degree-two polynomial has recurrence order at most 165.
+    # Checking indices 1 through 165 therefore certifies the full law.
+    for m in range(1,166):
+        q=transfer((0,1,2)*(2*m))
+        want=(2*m-m*m,-m*(m+1))
+        if (q[0]-q[2],q[1]-q[2])!=want:
+            raise ValueError((m,q,want))
+    for m in range(165):
+        q=transfer((0,1,2)*(2*m+1))
+        want=(-m*m+2*m+2,-m*m+m+3)
+        if (q[0]-q[2],q[1]-q[2])!=want:
+            raise ValueError((m,q,want))
+    print('pattern (012)^j exact even and odd quadratic phase laws: two 165-point linear-recurrence certificates passed')
+
+if __name__=='__main__':
+    main()
+    patterned_law()
+
