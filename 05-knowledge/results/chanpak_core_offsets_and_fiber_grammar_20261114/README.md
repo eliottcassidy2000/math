@@ -25,3 +25,7 @@ The exact ordinary class series is the inherited ordered-component series V=1/(1
 - [Bounded-gap rigidity for arbitrary induced inclusion](INDUCED_GAPS.md). At unbounded absolute height even many vertex deletions cannot connect consecutive odd counts.
 
 The strong affine witnesses have at most t+14 vertices; the strong quadratic ones have at most 2t+10. Adding neutral singleton SCCs gives a witness at every larger desired order without altering its count (but not preserving strength).
+
+## How the spectrum recurses inside strong classes
+
+The [profile-refined modular census](MODULE_PROFILE_THEOREM.md) lifts the canonical prime-quotient Burnside recurrence to actual H fibers and independently reproduces the complete profiles through order six ([replay](module_profile_verify.py), [receipt](module_profile_verification.json), [audit](MODULE_PROFILE_AUDIT.md)). One isotype is chosen per automorphism cycle, not one per vertex of the cycle. Full path-cover polynomials are exactly the observational states for whole-module substitution; H alone already fails at order five. At fixed H=h their support has the sharp bound 5^(2j)<=h^3 on coefficient j. This groups the 56 order-six classes into 24 profiles but does not remove the prime-quotient input. A different marked sidecar, the [triangle dimer formula](TRIANGLE_DIMERS.md), gives exact weights in one infinite profile family and shows why many physical profiles there still give no usable offset.
