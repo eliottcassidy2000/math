@@ -628,6 +628,81 @@ invariants of the attainable set, such as its residues modulo 3^j from each stat
 **P33:** steering by the attainable residues mod 9 from each state (a finite automaton) raises first-descent success
 above 50% at 10^4.
 
+## Wave 17: the residue-steered decoder, horizon 2.26×10^8, and four local proof routes tested
+
+**Horizon at word length 18 (FINITE-EXACT, `twohub_bits`).** Every odd N < **226,079,703** other than 7 and 21 is a
+two-hub count with a word of length ≤ 18. This is ten times wave 5's bound. The ratio X(L)/3^L keeps rising, which
+fits P21: 0.487 (L = 14), 0.515 (16), 0.569 (17), 0.584 (18).
+
+**The residue-steered decoder (`scripts/resdec2hub.c`; P33 REFUTED, but the residues pay as a filter).**
+- *Oracle study* (`scripts/oracle_steering.c`). All words of length 9 are enumerated and grouped by their first 2 or
+  3 letters. For every odd N in the horizon we ask whether the group a statistic ranks first contains a solution:
+
+  | statistic of the subtree | first 2 letters | first 3 letters |
+  |---|---:|---:|
+  | random feasible prefix | 91.5% | 73.9% |
+  | exact residue density mod 9 | 83.5% | 58.2% |
+  | exact residue density mod 27 | 79.3% | 62.7% |
+  | log-centre of [min, max] | 98.9% | 84.1% |
+  | normal density at N (exact mean and variance) | **99.1%** | **88.3%** |
+
+  Residues are worse than random as a steering signal. A subtree whose values sit in few residue classes is a rigid
+  subtree, and rigid subtrees rarely contain N. The magnitude statistics carry the signal.
+- *Built decoder.* Children are ordered by the normal density of N. The exact mean is v·μ_r and the exact second
+  moment is vᵀQ_r v, with Q_r = ¼ Σ_ℓ M_ℓ Q_(r−1) M_ℓᵀ. In the last 6 letters, every prefix is checked against the
+  deduplicated table of suffix responses modulo 216 = 8·27, an exact filter with no false pruning.
+
+  | targets | interval bounds only | + residue filter | residue-steered (moment + filter) |
+  |---|---|---|---|
+  | 100 near 10^6 | 757,891 nodes, 26.7 s | 288,527, 21.4 s | **99,376, 10.9 s** |
+  | 30 near 10^7 | 8,433,406, 89.0 s | 3,234,428, 74.4 s | **898,797, 35.5 s** |
+  | 10 near 10^8 | – | 47,389,003, 419.6 s | **14,689,904, 226.3 s** |
+
+  The decoder is 1.9–2.5× faster, with 3–8× fewer nodes. First-descent success is still **0%** from 10^4 upward
+  (10.7% below 623), so P33 is refuted: the decoder is still a search.
+- *Why residues cannot steer from the top.* The two-hub series has minimal linear dimension **17**: Hankel rank 17
+  over Q, mod 3 and mod 5, with prefix span 28 and suffix span 20 (`scripts/minimal_rank.py`). The prefix automaton
+  has 129 states mod 2 and 458,754 mod 4, but more than 2·10^7 mod 3, 5, 7, 8, 9, 16 or 27
+  (`scripts/residue_automaton.c`). Exact residue densities are therefore only available near the leaves.
+
+**Four local proof routes, tested.**
+1. *Per-value ternary fertility.* Call n fertile if some realizer w has single-letter insertions, at any position,
+   realizing all three of 3n, 3n+2 and 3n+4. If every n ≥ 23 were fertile, induction would prove the conjecture
+   (balanced ternary in r = (n+1)/2). **FALSE:** only 323 of 1231 values are fertile with realizers of length ≤ 9
+   (`scripts/fertility.c`). For example, no realizer of 35 has an insertion child 107 or 109. Binary fertility
+   (2n ± 1) fails too: 256 of 1231. This strengthens P18's refutation from configurations to values.
+2. *Affine numeration by a common eigenvector.* Each letter matrix has spectrum 0⁸ 1¹⁶ 2¹⁰ 3². A left vector
+   tripled by every letter would make H affine in one register, x ↦ 3x + digit. **None exists:** the common left
+   eigenspaces have dimension 0 for λ = 2 and 3, and 4 for λ = 1, spanned by the goodness symmetries
+   (`scripts/common_eigen.py`).
+3. *Smaller families.* Measured misses among odd numbers:
+   - one hub: 45.6% of odd N ≤ 2000;
+   - x arbitrary, y with a single switch: 24.9% of odd N ≤ 10^5 (m ≤ 16);
+   - three-letter alphabets: {00, 01, 10} covers every odd N in [23, 102,083) at L ≤ 13, but its relative horizon
+     X/3^L drifts down (0.153, 0.086, 0.052, 0.064, 0.070, 0.064, 0.065, 0.037 for L = 8..15). By converse symmetry
+     {01, 10, 11} behaves identically, while {00, 01, 11} and {00, 10, 11} already miss 175.
+
+   The fourth letter is what keeps the horizon at a fixed fraction of 3^L.
+4. *Sparse digits.* Decoded realizers of N ≈ 10^5–10^6 have about 1,000–2,000 frames
+   (`scripts/frames.py`, checked against brute force on 150 random words). Their weights lie on the staircase
+   α + β = m − 4, and the multiplicities grow with α. So a realizer is a dense frame sum, not a digit expansion.
+
+   One lens remains: frames nested inside a fixed outer pair (a, d) weigh 2^(A−g)·3^(g−1) by their gap g = c − b, a
+   rational base-3/2 digit system in the sense of Akiyama–Frougny–Sakarovitch, with digit = number of (b, c) pairs at
+   gap g. Whether two-hub words realize enough digit vectors is open (**P34**).
+
+**Route ledger after wave 17.** Closed:
+- single-vertex ternary and binary recursions (P18; per-value);
+- decoder closure (P25), shortlex heredity (P30), bounded backtracking (wave 16), residue steering (P33);
+- annealing, beam search, the hub-arc ±2 adjuster;
+- uniform affine numeration in one register.
+
+Open:
+- the horizon law X(L) ≥ c·3^L (P21; data 0.58 at L = 18);
+- the rational-base frame lens (P34);
+- port-wedge induction (busch_staircase §6.3);
+- the Shallow-Cut Conjecture.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
