@@ -7,11 +7,11 @@ status: >
   (B) exactly 288 below 2^26, the largest 179,367 (mode 2);
   (D) |w| <= 6 gives the same 43 misses below 2^20; |w| <= 5 gives exactly 48 below 2^26 (the largest 12,811);
   |w| <= 4 gives 71 below 2^20 (the largest 968,947).
-  NUMERICAL, pre-registered (P51-P58 of wave 24, all CONFIRMED): the local law of THM-5162 (D)-(E) in the census;
+  NUMERICAL, pre-registered (P51-P58, P62-P65 of wave 24, all CONFIRMED): the local law of THM-5162 (D)-(E) in the census;
   multiplicity exponent 0.2777 for all N and 0.2771 for primes; the L^2 discrepancy V(X) of (C) falls like
   8/mean(X).
-  PROVED inputs: THM-5162 (strong approximation at every odd prime and squarefree modulus; Haar law of long random
-  words). NOT PROVED: (C) in any form, uniformity of mixing in the modulus, the archimedean local limit, minor arcs.
+  PROVED inputs: THM-5162 (strong approximation at every odd modulus, S = {2}; Haar law of long random words;
+  singular series (7/8) zeta(3) prod_{p | N} (1 - p^-2)). NOT PROVED: (C) in any form, uniformity of mixing in the modulus, the archimedean local limit, minor arcs.
   Relation to earlier conjectures: (A) is stronger than HYP-9494 (D) (the full O/Z/J grammar misses exactly 29 odd
   numbers) because the language is a sub-language; it is independent of HYP-9677 (bounded runs, singular blocks
   allowed). (A) together with the census below 6223 implies Chan-Pak.
@@ -64,6 +64,8 @@ Data on [2^23, 2^24):
 - *No source:* the class factors at p = 3, 5, 7, 11 are 1.040, 1.008, 1.003, 1.001, against the Haar values
   p^3/(p^3 - 1) = 1.0385, 1.0081, 1.0029, 1.0008. The prime mean is 1.0526 times the mean, against
   (7/8) zeta(3) = 1.0518.
+- *Prime powers (P65):* the density depends only on which primes divide N. N ≡ 0 vs 3, 6 (mod 9) gives 0.998;
+  N ≡ 0 vs the other multiples of 5 (mod 25) gives 1.000; the ratio (3 | N)/(3 ∤ N) is 0.8845, against 8/9.
 
 **(D) Finitely many blocks.** Blocks with |w| <= 5 (J and 15 others) attain every odd N > 12,811. FINITE-EXACT to
 2^20. With |w| <= 6 the census below 2^20 already coincides with the unbounded one.

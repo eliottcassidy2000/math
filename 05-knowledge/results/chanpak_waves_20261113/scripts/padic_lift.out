@@ -1,0 +1,5 @@
+p=3: N' mod p = [[0, 0, 0], [0, 0, 1], [2, 0, 0]], trace 0; dim of the adjoint submodule it generates: 8 (sl_3 has 8)
+p=5: N' mod p = [[0, 0, 0], [1, 0, 3], [1, 0, 0]], trace 0; dim of the adjoint submodule it generates: 8 (sl_3 has 8)
+p=7: N' mod p = [[0, 0, 0], [2, 0, 5], [5, 0, 0]], trace 0; dim of the adjoint submodule it generates: 8 (sl_3 has 8)
+p=11: N' mod p = [[0, 0, 0], [4, 0, 9], [8, 0, 0]], trace 0; dim of the adjoint submodule it generates: 8 (sl_3 has 8)
+p=13: N' mod p = [[0, 0, 0], [5, 0, 11], [3, 0, 0]], trace 0; dim of the adjoint submodule it generates: 8 (sl_3 has 8)

@@ -1633,6 +1633,21 @@ modulo every odd squarefree q. Proof in four lines:
 The Heisenberg route genuinely fails at p = 3: over all 155 same-length pairs with |w| ≤ 6, the odd part of the gcd
 of the 2 × 2 determinants is exactly 3. P52 is thus PROVED, beyond the exact search at p = 7 that it named.
 
+**Every odd modulus (PROVED, THM-5162 (C′)).** The result lifts to all prime powers. Write u₁ = I + N. For odd p,
+u₁^p = I + pN′ lies in the first congruence subgroup K₁, with N′ ≡ N + ((p−1)/2)N² ≠ 0 mod p. The adjoint
+submodule of sl₃(F_p) that N′ generates is everything:
+- for p ≥ 5 because the adjoint module is irreducible;
+- at p = 3, and as a check at 5, 7, 11 and 13, by direct computation ([`scripts/padic_lift.py`](scripts/padic_lift.py)).
+
+K₁ is uniform with Frattini subgroup K₂ (p odd), so the closure of Γ ∩ SL₃ is all of SL₃(Z_p). Goursat across
+primes then gives Γ mod q = {g ∈ GL₃(Z/q) : det g ∈ ⟨2⟩} for every odd q. This is strong approximation with
+exceptional set exactly {2}. The resulting singular series is the classical one for the first coordinate of a
+primitive vector of Z³:
+
+    S(N) = (7/8)ζ(3) ∏_{p | N, p odd} (1 − p^(−2)),
+
+which depends on which primes divide N but not on their exponents.
+
 **Corollary (Haar local law, PROVED for random words).**
 - *From a primitive state:* from any state ≢ 0 mod p, long random invertible words give counts distributed mod p
   as the first coordinate of a uniform nonzero vector of F_p³. So ν_p(0) = (p² − 1)/(p³ − 1), slightly below 1/p.
@@ -1649,7 +1664,13 @@ Ratio of the mean multiplicity over odd N prime to p to the overall mean, on [2^
 | measured | 1.040 | 1.008 | 1.003 | 1.001 | 1.000 | 1.000 |
 | Haar p³/(p³−1) | 1.0385 | 1.0081 | 1.0029 | 1.0008 | 1.0005 | 1.0002 |
 
-In mode 2 the prime mean is 1.0526 times the overall mean, against (7/8)ζ(3) = 1.0518. With a free source (mode 1,
+In mode 2 the prime mean is 1.0526 times the overall mean, against (7/8)ζ(3) = 1.0518.
+
+Prime powers (P65, registered after the lift was proved and before any class mean was computed): in mode 2 on
+[2^23, 2^24),
+- the mean over N ≡ 0 mod 9 is 0.998 times the mean over N ≡ 3, 6 mod 9;
+- the mean over N ≡ 0 mod 25 is 1.000 times the mean over the other multiples of 5;
+- the ratios (p | N)/(p ∤ N) are 0.8845, 0.9603, 0.9791 at p = 3, 5, 7, against 1 − p⁻² = 0.8889, 0.9600, 0.9796. With a free source (mode 1,
 [2^21, 2^22), [`scripts/srcdiv.c`](scripts/srcdiv.c)), π_p is measured directly. The predicted ratio
 (1 − π_p)p³/(p³ − 1) and the measured ratio are:
 
@@ -1760,6 +1781,8 @@ statistics were printed).
   68 on [2^25, 2^26), prime mean 1.0525 times the mean).
 - **P58 CONFIRMED.** At p = 3 the ratio lies in [0.955, 0.960] on every window from 2^16 to 2^23. The law
   (1 − π_p)p³/(p³ − 1) holds within 0.0015 at the five primes measured.
+- **P65 CONFIRMED** (fourth addendum). The ratios are 0.998 (mod 9; registered [0.99, 1.01]) and 1.000 (mod 25;
+  registered [0.98, 1.02]). The ratio (3 | N)/(3 ∤ N) is 0.8845, within 0.0044 of 8/9.
 - **P64 CONFIRMED** (second addendum, registered before the program was written). λ₂ ≤ 0.565 for every odd prime
   p ≤ 43; the bound registered was 0.60.
 - **P62 CONFIRMED** (registered in the third addendum before the run). Blocks with |w| ≤ 5 and a free source miss

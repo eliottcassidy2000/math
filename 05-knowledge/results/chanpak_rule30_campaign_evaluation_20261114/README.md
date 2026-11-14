@@ -22,7 +22,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | Terrace corridors: det K_q = −T(−q−3), rank one exactly at q = 0 and 13 | wave 16 |
 | Conditional: the Staircase-Run Conjecture implies the exceptions are exactly {7, 21} | busch §5 |
 | The invertible root-change blocks generate a group Zariski-dense in GL_3; the transfers of one apex and one hub are triangularizable with weights {1, 2}, of two hubs with weights {1, 2, 3} | wave 23 |
-| The invertible root-change blocks generate {g in GL_3(F_p) : det g in <2>} modulo every odd prime, and the analogous group modulo every odd squarefree q (strong approximation through Heisenberg unipotents and an opposite flag); every invertible block is [[b−Q, −1, b], [1, 0, 0], [2^n−R, 0, 2^n]] with Hammersley-net digits; long random invertible words have the Haar local law, with prime singular series (7/8)ζ(3) | wave 24, THM-5162 |
+| The invertible root-change blocks generate {g in GL_3(F_p) : det g in <2>} modulo every odd prime, and the analogous group modulo every odd modulus q (strong approximation with S = {2}, through Heisenberg unipotents, an opposite flag and the p-adic lift); every invertible block is [[b−Q, −1, b], [1, 0, 0], [2^n−R, 0, 2^n]] with Hammersley-net digits; long random invertible words have the Haar local law, with prime singular series (7/8)ζ(3) | wave 24, THM-5162 |
 
 ### What is only verified
 

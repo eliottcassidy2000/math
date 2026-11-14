@@ -58,3 +58,13 @@ of a uniform nonzero vector of F_p^3, so the class 0 is DEPLETED: P(H = 0 mod p)
 - **P62.** Blocks with |w| <= 5 and a free source miss no odd N in (12,811, 2^26].
 - **P63.** The pure-block family (free source, J and J O^k Z only) has infinitely many misses: its per-window miss
   count stays above 10 on every window up to [2^25, 2^26).
+
+## Addendum 4 (registered 2026-11-14T23:47:41Z, after proving the p-adic lift, before computing any mod-9 or mod-25 class means)
+
+With strong approximation at every odd prime power, the local density of an orbit without p-divisible states at
+N is the classical one for the first coordinate of a primitive vector of Z^3:
+S(N) = (7/8) zeta(3) prod_{p | N} (1 - p^-2), which depends on WHICH primes divide N, not on their exponents.
+
+- **P65.** In mode 2 (no source) on [2^23, 2^24), the mean multiplicity over N = 0 (mod 9) divided by the mean over
+  N = 3 or 6 (mod 9) lies in [0.99, 1.01]; and over N = 0 (mod 25) divided by over N = 5, 10, 15, 20 (mod 25) lies
+  in [0.98, 1.02]. The ratio (mean over 3 | N)/(mean over 3 ∤ N) lies within 0.01 of (1 - 1/9) = 0.8889.
