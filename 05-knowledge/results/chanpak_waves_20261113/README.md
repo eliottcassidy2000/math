@@ -319,6 +319,46 @@ the wheel is an exact frame-shuffling symmetry of the word space, and a natural 
 at fixed size. **P26:** the cyclic group's orbits on words of length L hit each count class in a pattern governed by
 the frame multiset; for example, rotation orbits of microcosm counts 1 + 2^a·3^b contain non-smooth counts.
 
+## Wave 11: the six lens and the Collatz ghosts
+
+**The r-tree is the Collatz/ghost tree (PROVED, elementary).** In r = (H + 1)/2 coordinates, the three ternary
+children of an attained count H are:
+
+| H-branch | r-branch | map | N mod 6 | realized by |
+|---|---|---|---|---|
+| 3H | r ↦ 3r − 1 | the ghost: Collatz on the negatives, since −n ↦ 3(−n) + 1 = −(3n − 1) | 3 | C3 product (always available) |
+| 3H + 2 | r ↦ 3r | tripling | 5 | one-vertex branch |
+| 3H + 4 | r ↦ 3r + 1 | Collatz | 1 | one-vertex branch |
+
+Every r ≥ 2 has the unique balanced-ternary parent round(r/3). So Chan–Pak says this tree, pruned to the branches
+that tournaments realize, reaches every r ∉ {4, 11}. The two exceptions are exactly:
+- **r = 4 = 3·1 + 1**, the Collatz step from 1 that closes the trivial cycle 1 → 4 → 2 → 1. A single vertex cannot
+  take the +1 branch, since 7 is impossible.
+- **r = 11 = 3·4 − 1**, the ghost step from the dead node 4.
+
+So "3n + 1 on the positives and 3n − 1 on the negatives, glued at 0" is exactly the r-tree. The ghosts are the
+branches each side does not use.
+
+**The prime lens (6k ± 1).** Primes p ≥ 5 are ≡ ±1 mod 6, which are exactly the classes of the two one-vertex
+branches. The prime lane of Chan–Pak (THM-4094: Chan–Pak ⟺ every prime p ≠ 7 and every 7p is attained) therefore
+lives entirely in the non-ghost branches r ↦ 3r and r ↦ 3r + 1. The ghost branch (the C3 product) only produces
+multiples of 3, which are never prime targets. The 36 = 6² states of the two-hub counter are 2 hub orders × 3 × 3 × 2
+segment states. The two hub orders are the two sides glued at the hub arc e, which matters only when the hubs are
+adjacent in the path (S1 empty): that is the "0" of the gluing.
+
+**Decoder at scale (negative).** Starting at the length law L* = ⌈log₃ 2N⌉ + 1 with randomized child order
+(`scripts/decode2hub_fast.c`) still costs about N nodes: 1.4×10^6 at N ≈ 10^6, and no hit at 10^9 within 1.5×10^8
+nodes. Bound pruning is intrinsically linear in N. The next idea is meet-in-the-middle on H = c(suffix)·v(prefix),
+bucketing prefixes by their dominant coordinates.
+
+**Better lenses: summary and predictions.**
+- **P27, prime-branch rule.** For every attained h ≥ 23 other than the dead nodes, the one-vertex branch whose class
+  is ≡ ±1 mod 6 is available. This is the threshold-95 rule restricted to the prime classes; it suffices for the
+  prime lane. *Test:* from the decomposition16 data.
+- **P28, ghost bound.** Of the three r-branches, only the ghost branch (C3 product) is unconditionally available. A
+  proof needs the Collatz branch 3r + 1 and the tripling branch 3r at every r ≥ 12. *Test:* realizer bank counts of
+  3r and 3r + 1 from two-hub words, which are FINITE-EXACT to 2.2×10^7.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
