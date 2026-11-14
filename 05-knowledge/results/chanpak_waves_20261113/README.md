@@ -305,6 +305,20 @@ are already committed, and the remaining multiplicities are 1–3 per vertex. Th
     admissibility is non-local, so a proof must choose whole words, as the branch-and-bound decoder does, rather
     than extend realizers of smaller counts.
 
+## Wave 10: the owner's wheel rotation, reproduced
+
+The owner reported that rotating one two-hub switching class takes the count from 1,297 to 357 without changing its
+size. In the word model, a rotation is a cyclic shift of both hub words along the spine: the first spine vertex moves
+to the end. `scripts/wheel.c` checks this.
+- Among the 724 two-hub words with H = 1297 = 1 + 6^4 = 1 + 36·2²·3² at lengths 8–10, **24** have a cyclic rotation
+  with H = 357 = 3·7·17 at the same length.
+- Example: L = 8, e = 1, x = 10000110, y = 10100000.
+
+The rotation moves frames, not counts: it changes which (a, b, c, d) are admissible while preserving the size. So
+the wheel is an exact frame-shuffling symmetry of the word space, and a natural generator for moving between counts
+at fixed size. **P26:** the cyclic group's orbits on words of length L hit each count class in a pattern governed by
+the frame multiset; for example, rotation orbits of microcosm counts 1 + 2^a·3^b contain non-smooth counts.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
