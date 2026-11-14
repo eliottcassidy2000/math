@@ -1,0 +1,7 @@
+F1, odd N in [2^22,2^27) with no prime factor <= 97: primes vs rough composites
+  #small p | N+1 = 0: primes n=  1162631 miss 0.01275 | rough composites n=  1326509 miss 0.01238 | prime misses observed 14827 vs composite-rate expectation (matched mod 16) 14393.9
+  #small p | N+1 = 1: primes n=  2591043 miss 0.00700 | rough composites n=  2954315 miss 0.00683 | prime misses observed 18149 vs composite-rate expectation (matched mod 16) 17695.0
+  #small p | N+1 = 2: primes n=  2183403 miss 0.00423 | rough composites n=  2490795 miss 0.00409 | prime misses observed 9225 vs composite-rate expectation (matched mod 16) 8933.2
+  #small p | N+1 = 3: primes n=  1016198 miss 0.00278 | rough composites n=  1157682 miss 0.00265 | prime misses observed 2830 vs composite-rate expectation (matched mod 16) 2689.6
+  #small p | N+1 = 4+: primes n=   354331 miss 0.00166 | rough composites n=   404210 miss 0.00158 | prime misses observed 587 vs composite-rate expectation (matched mod 16) 560.1
+  total: primes 7307606 misses 45618 (rate 0.00624); rough composites 8333511 misses 50493 (rate 0.00606); matched ratio primes/composites = 1.030

@@ -21,6 +21,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | Base-b gaps: m = 3 is a gap in every base, and m = 10 in every base except 4 and 8 | waves 2, 3 |
 | Terrace corridors: det K_q = −T(−q−3), rank one exactly at q = 0 and 13 | wave 16 |
 | Conditional: the Staircase-Run Conjecture implies the exceptions are exactly {7, 21} | busch §5 |
+| The invertible root-change blocks generate a group Zariski-dense in GL_3; the transfers of one apex and one hub are triangularizable with weights {1, 2}, of two hubs with weights {1, 2, 3} | wave 23 |
 
 ### What is only verified
 
@@ -47,7 +48,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | Shallow-Cut Conjecture and port-wedge induction | **alive** | order-9 sources reach 398,129; the §4 transfer closes linearly on (H, D, h, E, S) |
 | rational base 3/2 frame digits (P34) | **new, untested** | nested frames weigh 2^(A−g)·3^(g−1) |
 | interval-hub numeration (P35/P36) | alive, superseded | complete through 26,610,535; but the O/Z/J root-change grammar (KNOWN) is smaller: 4-dimensional state, 3 letters |
-| **cofiniteness of the O/Z/J semigroup orbit (HYP-9640, HYP-9677)** | **the repository's main formulation** | one-chain equations are near-products (wave 19); a proof must use chains of length ~log N; 14–16 matrices already appear to suffice beyond 130,247, and the run cap has a trichotomy with critical cap 2–3 (wave 20) |
+| **cofiniteness of the O/Z/J semigroup orbit (HYP-9640, HYP-9677)** | **the repository's main formulation** | one-chain equations are near-products (wave 19); a proof must use chains of length ~log N; 14–16 matrices already appear to suffice beyond 130,247, and the run cap has a trichotomy with critical cap 2–3 (wave 20); the invertible blocks are Zariski-dense in GL_3 (real rank two) and carry no Jacobi-symbol invariant, so the rank-one reciprocity failures of the Apollonian and Rickards–Stange orbits have no analogue (wave 23) |
 | dichotomy: a third exception must belong to an arithmetic family | **alive (heuristic)** | every candidate family checked so far is complete |
 | positive density through the free-address window 908u + 9g(u) + {752, …, 758} | **alive** | F(u) = 908u + 9g(u) collides like a Poisson process (0.11% of arguments to 2^30, no value hit four times); a proof needs the wide-window case of THM-5141 (wave 22) |
 
@@ -82,6 +83,24 @@ The other session's proved free-address window 908u + 9g(u) + {752, …, 758} gi
 value of F(u) = 908u + 9g(u), and F collides like a Poisson process: 0.11% of arguments up to 2^30, no value hit four
 times. O(U) colliding pairs would give positive lower density, and O(U^(5/4 − ε)) would beat THM-5141's exponent 3/4.
 Both need the wide-window case of THM-5141's lattice-line count (wave 22).
+
+**Update (wave 23).** A proof by contradiction has been mapped. A further exception would have to be sporadic, not of
+congruence or reciprocity type:
+- every residue class has positive local density (THM-5128);
+- square classes are automatically products, so every odd square below 2^64 is a count;
+- the root-change transfer is higher rank: its invertible blocks are Zariski-dense in GL_3 (tribonacci polynomial,
+  Galois group S3) and generate GL_3(F_3) and GL_3(F_5);
+- no Jacobi-symbol invariant appears on the root-change orbit (P47), and F1's squares behave like their local models
+  (P48; the one flagged class failed out of sample, P49).
+
+The exceptions 7 and 21 are of the sporadic type: the strong spectra of orders 3–6 are {3}, {5}, {9, 11, 13, 15} and
+an order-6 list that skips 21. Excluding sporadic exceptions beyond 2^32 needs one theorem: a pointwise local–global
+principle for a supercritical thin orbit that is Zariski-dense in a group of real rank at least two. Neither a
+counterexample nor a proof is known in higher rank.
+
+The rank ladder of the transfer algebras also corrects a guess. The two-hub transfer is solvable (triangularizable)
+like the one-hub transfer. What separates them is the rank of the weight group: ⟨2⟩ for the half-dense families,
+⟨2, 3⟩ for two hubs, as in Furstenberg's ×2 versus ×2×3.
 
 ## Rule 30: the three prize problems
 
@@ -122,7 +141,9 @@ quantified in the LFSR and FCSR models; the quadratic-register model is next.
 
 1. Prove cofiniteness, or density one, for a sub-semigroup of the O/Z/J grammar whose chains grow like log N.
    The smallest explicit target found so far: 11 block matrices after a first run of length at most 4 reach every
-   odd N in (418,429, 2^26] (wave 20; HYP-9677 has 63). The wave-19 decoder supplies exact instances (Chan–Pak).
+   odd N in (418,429, 2^26] (wave 20; HYP-9677 has 63). The wave-19 decoder supplies exact instances. Wave 23 shows
+   this is exactly the step a proof by contradiction lacks: the orbit is Zariski-dense in GL_3, so the needed
+   statement is a local–global principle in higher rank (Chan–Pak).
 2. Bound the wide-window collisions of F(u) = 908u + 9g(u) by O(U), or by O(U^(5/4 − ε)). With the proved
    free-address window this gives positive lower density of the spectrum, or beats THM-5141 (wave 22; Chan–Pak).
 3. Test P34: realize rational base-3/2 digit vectors with nested two-hub frames (Chan–Pak).

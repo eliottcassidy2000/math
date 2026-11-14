@@ -1,0 +1,11 @@
+F1 odd N in [2^22,2^27): expected misses from 50400 empirical strata (w0,w1 over primes 11..97, N mod 16, N mod 105)
+  t=  1: n=  4769 observed   22 expected    22.5 ratio 0.98  z=-0.10
+  t=  3: n=  1835 observed   10 expected     3.8 ratio 2.60  z=+3.14
+  t=  5: n=  1707 observed    4 expected     2.0 ratio 2.04  z=+1.45
+  t=  7: n=  1544 observed   17 expected     5.6 ratio 3.04  z=+4.82
+  t= 11: n=  1307 observed    3 expected     2.2 ratio 1.36  z=+0.54
+  t= 13: n=  1221 observed    5 expected     6.5 ratio 0.77  z=-0.59
+  t= 15: n=   657 observed    1 expected     0.7 ratio 1.46  z=+0.38
+  t= 19: n=  1036 observed    4 expected     4.3 ratio 0.92  z=-0.16
+  t= 21: n=   594 observed    0 expected     0.4 ratio 0.00  z=-0.63
+  t= 35: n=   553 observed    0 expected     0.3 ratio 0.00  z=-0.56

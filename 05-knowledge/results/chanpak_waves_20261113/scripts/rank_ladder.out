@@ -1,0 +1,15 @@
+two-hub transfer (port of scripts/twohub.c) matches subset-DP brute force on 300 random words
+one-hub transfer matches brute force on all 64 words of length 6
+P46 rank ladder (exact algebra, two primes):
+one-apex O/Z (H,E,L,h)       state dim   4  dim A =     8  dim A/rad A =    3  triangularizable: True
+root-change O/Z/J (H,E,L,h)  state dim   4  dim A =    16  dim A/rad A =   16  triangularizable: False
+one-hub (6 states)           state dim   6  dim A =     8  dim A/rad A =    3  triangularizable: True
+two-hub (36 states)          state dim  36  dim A =    48  dim A/rad A =    4  triangularizable: True
+P46 prediction (a) and (b) both hold: False
+char poly of J on (H,E,lam): x**3 - x**2 - x - 1  discriminant: -44  irreducible over Q: True
+  block JOZ    det   4   B^6 J == J B^6 ? False
+  block JOOZ   det   8   B^6 J == J B^6 ? False
+  block JOZZ   det   8   B^6 J == J B^6 ? False
+  block JOOOZ  det  16   B^6 J == J B^6 ? False
+  block JOZOZ  det  16   B^6 J == J B^6 ? False
+  block JOZZZ  det  16   B^6 J == J B^6 ? False

@@ -1,0 +1,12 @@
+F1 census: K=27, triples=934039332; odd N in [2^22,2^27): n=65011712 misses=245511 rate=0.00378
+t=  1: class t*m^2: n=   4769 misses=    22 rate=0.00461 mean r=13.710 | controls: n=   186709 misses=   1001 rate=0.00536 mean r=13.150 | miss ratio 0.860  mean ratio 1.043
+t=  3: class t*m^2: n=   1835 misses=    10 rate=0.00545 mean r=14.101 | controls: n=    71855 misses=    208 rate=0.00289 mean r=14.798 | miss ratio 1.883  mean ratio 0.953
+t=  5: class t*m^2: n=   1707 misses=     4 rate=0.00234 mean r=16.587 | controls: n=    66745 misses=     74 rate=0.00111 mean r=16.154 | miss ratio 2.114  mean ratio 1.027
+t=  7: class t*m^2: n=   1544 misses=    17 rate=0.01101 mean r=13.930 | controls: n=    60384 misses=    265 rate=0.00439 mean r=13.847 | miss ratio 2.509  mean ratio 1.006
+t= 11: class t*m^2: n=   1307 misses=     3 rate=0.00230 mean r=16.469 | controls: n=    51050 misses=     80 rate=0.00157 mean r=16.044 | miss ratio 1.465  mean ratio 1.027
+t= 15: class t*m^2: n=    657 misses=     1 rate=0.00152 mean r=15.869 | controls: n=    25689 misses=     31 rate=0.00121 mean r=16.546 | miss ratio 1.261  mean ratio 0.959
+t= 21: class t*m^2: n=    594 misses=     0 rate=0.00000 mean r=16.539 | controls: n=    23238 misses=     21 rate=0.00090 mean r=17.364 | miss ratio 0.000  mean ratio 0.952
+t= 35: class t*m^2: n=    553 misses=     0 rate=0.00000 mean r=18.000 | controls: n=    21579 misses=     14 rate=0.00065 mean r=17.786 | miss ratio 0.000  mean ratio 1.012
+t=105: class t*m^2: n=    212 misses=     0 rate=0.00000 mean r=16.849 | controls: n=     8308 misses=      6 rate=0.00072 mean r=18.671 | miss ratio 0.000  mean ratio 0.902
+odd squares below 2^14 missed by F1: 441 841 2025 6561
+rc=0

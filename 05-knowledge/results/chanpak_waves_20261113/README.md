@@ -1271,6 +1271,254 @@ O(U^(5/4 − ε)) would already beat THM-5141.
   - at least one value is hit four times (model: 1.9 expected);
   - no value is hit five times.
 
+## Wave 23: thresholds, rank and reciprocity — a proof by contradiction, mapped
+
+The owner asked for an attempt at a proof, possibly by contradiction, using analogies, in particular the Jacobian
+conjecture: counterexamples exist from dimension three on, but none is known in the plane. Why do such thresholds
+occur, and how do they relate to the symmetry structure of numbers? **Chan–Pak OPEN.** The result of the wave is that
+Chan–Pak sits on the flexible side of every threshold that can be measured:
+- its complete families have rank-two weights (2 and 3) or a transfer group that is Zariski-dense in GL_3;
+- no reciprocity invariant appears in any test;
+- square classes are automatically products.
+
+A proof by contradiction therefore comes down to excluding sporadic exceptions above 2^32, and that needs one missing
+theorem: a pointwise local–global principle for a thin orbit of higher rank.
+
+**Prior art first.** The following are already in the repository:
+- the atlas of dimension thresholds (HYP-9343, THM-4727);
+- the thin-orbit analogy and the Apollonian counter-indication (HYP-9661 (D), the S82 note);
+- the Heegner and roughness profile of F1 (HYP-9657);
+- from session 142 ([minimal gap](../session142_tournament_odd_spectrum_20261102/minimal_gap/PROOF.md),
+  [Jacobian bridge](../session142_tournament_odd_spectrum_20261102/jacobian_bridge/PROOFS.md)): the atoms of a
+  minimal counterexample, the asymmetry of prime-count tournaments, and the Jacobian bridge;
+- the tribonacci polynomial of the corridors (wave 16);
+- the frame identity H = Σ 2^α 3^β (waves 6, 8);
+- the density 1/2 of the one-hub value set (HYP-9469 (3)).
+
+Sections 2–5 are new.
+
+### 1. Why thresholds happen (ANALOGY; every example is a cited theorem)
+
+Three mechanisms recur.
+- **Room.** Below the threshold, the relevant boundary or symmetry is one-dimensional: a tree, an abelian group, a
+  single invariant. A counterexample needs a second independent direction to hide in.
+  - *Jacobian.* Every known Keller collision is driven by a C*-orbit over a two-dimensional quotient. In the plane,
+    every C*-quotient is a line, where integrality kills the twisted equation (THM-4727, THM-1345).
+  - *Automorphisms.* Aut(A²) acts on a tree (Jung–van der Kulk). Tame(A³) acts on a 2-complex, and Nagata's map is
+    wild (Shestakov–Umirbaev).
+  - *Banach–Tarski.* The isometries of the plane form an amenable group; SO(3) contains free subgroups.
+  - *Poincaré–Bendixson.* Orbits of a planar flow separate the plane.
+  - *Dehn.* Area is the only scissors invariant in the plane. In space a second one appears: length ⊗ angle in
+    R ⊗ R/πQ.
+- **Rank (the reverse direction).** When the symmetry group itself gains a second independent direction, objects
+  become rigid.
+  - *Furstenberg (1967).* ×2 alone has many closed invariant subsets of the circle, for example the binary
+    expansions avoiding 11. Under ×2 and ×3 together, the only ones are finite sets and the whole circle. The
+    integer form is Cobham (1969): a set recognizable in base 2 and in base 3 is ultimately periodic.
+  - *Moduli.* Hyperbolic surfaces have moduli; hyperbolic 3-manifolds do not (Mostow).
+  - *Conformal maps.* The Riemann mapping theorem holds in the plane; in space only Möbius maps are conformal
+    (Liouville).
+  - *Congruence subgroups.* SL_2(Z) has non-congruence subgroups; SL_n(Z) for n ≥ 3 has none
+    (Bass–Milnor–Serre).
+- **Reciprocity.** Where a local–global principle for representing integers fails along an infinite family that no
+  congruence detects, the cause in every case below is a quadratic-character invariant: every prime separately
+  allows the value, but the product formula forbids it.
+  - *Ternary quadratic forms.* Infinitely many exceptions can occur, inside finitely many square classes t·m²
+    (spinor exceptions; Duke–Schulze-Pillot). Colliot-Thélène and Xu identify them as a Brauer–Manin obstruction
+    for integral points. With five or more variables, every large locally represented integer is represented
+    (Tartakowsky).
+  - *Apollonian packings.* Squares are missing (Haag–Kertzer–Rickards–Stange).
+  - *Thin semigroups of SL_2(Z).* Squares are missing (Rickards–Stange).
+  - The common feature: all three settings have real rank one (SO(3), SO(3,1), SL_2). There the congruence subgroup
+    property fails, and the spinor or Kubota symbol is not a congruence character.
+- **Sporadic exceptions.** These occur where there is not yet room:
+  - the critical numbers of the 15 and 290 theorems;
+  - Ramanujan's form x² + y² + 10z², which misses 3, 7, 21, 31, … (the list is complete under GRH,
+    Ono–Soundararajan);
+  - exceptional isomorphisms in small rank.
+
+**Hypothesis (where thresholds come from).** The threshold is the dimension at which the governing symmetry stops
+being commutative or one-dimensional. Such a symmetry carries one extra invariant: an invariant mean, a length function
+on a tree, a winding number, or a character such as the spinor norm or the Kubota symbol. On one side that invariant
+protects: no Keller fold, no paradoxical decomposition, no planar chaos. On the other side it obstructs: spinor
+classes, missing squares, half-dense numerations. The invariant is usually a symbol from number theory:
+- Frobenius in characteristic p, where the Jacobian conjecture already fails in dimension one (x + x^p has derivative
+  1 but is not injective);
+- whether angles are rational multiples of π (Dehn);
+- quadratic reciprocity and the Hilbert product formula (spinor norm, Kubota symbol);
+- the multiplicative independence of 2 and 3 (Furstenberg, Cobham, Baker).
+
+**Sub-hypothesis (rank-one reciprocity).** Infinite reciprocity families occur only when the governing group has real
+rank one. In higher rank, the congruence subgroup property makes every such symbol a congruence character, so only
+congruence and sporadic exceptions remain.
+
+### 2. Chan–Pak on the room and rank side: the rank ladder (PROVED algebra; KNOWN coverage)
+
+For each family computed by a finite linear transfer (one matrix per letter), take:
+- the associative algebra spanned by the letter words;
+- its semisimple quotient, via the rank of the trace form tr(ab), computed exactly modulo two 61-bit primes;
+- the letters' eigenvalues.
+
+The scripts are [`scripts/rank_ladder.py`](scripts/rank_ladder.py) and
+[`scripts/eigen_groups.py`](scripts/eigen_groups.py). Each transfer is checked against brute force first, and the
+two-hub port of [`scripts/twohub.c`](scripts/twohub.c) against a subset DP on 300 random words.
+
+| family | transfer | algebra | semisimple part | nonzero eigenvalues of letters | coverage (KNOWN) |
+|---|---|---|---|---|---|
+| one apex (O, Z) | 4-dim (H,E,L,h) | dim 8 | commutative, dim 3 | 1, 2 | 0.498 of the odd numbers (wave 21) |
+| one hub | 6 states | dim 8 | commutative, dim 3 | 1, 2 | 1/2, numerically (HYP-9469 (3)) |
+| two hubs | 36 states | dim 48 | commutative, dim 4 | 1, 2, 3 | every odd N ≤ 2.26·10^8 except 7, 21 (wave 17) |
+| root changes (O, Z, J) | 4-dim | all of M_4(Q) | simple | O, Z: 1, 2; J: roots of x³ − x² − x − 1 | every odd N in (2647, 10^9] (HYP-9494 (D)) |
+
+The two complete families are complete for different reasons:
+- The two-hub transfer is triangularizable. Its counts are sums of products of the weights 1, 2, 3, which is the frame
+  identity H = Σ 2^α 3^β of waves 6 and 8.
+- The root-change transfer is not triangularizable at all.
+
+The two half-dense families have weights generating only ⟨2⟩.
+
+**P46 (registered before the computation): PARTLY REFUTED.**
+- (a) One apex and one hub are triangularizable: confirmed.
+- (b) Root changes and two hubs are not triangularizable: confirmed for root changes, **refuted for two hubs**.
+
+So solvability does not separate complete families from incomplete ones; the rank of the weight group does. Rank one
+(⟨2⟩) leaves room for a proper invariant set, like a ×2-invariant Cantor set. Rank two (⟨2, 3⟩, as in Furstenberg's
+×2×3) leaves none, and neither does a non-commutative transfer (GL_3). The growth exponents agree:
+- rank-one families have δ = 1 (2^m words, values up to about 2^m);
+- two hubs have δ = log 4 / log 3 = 1.26.
+
+**Theorem (PROVED; new).** Let Γ be the group generated by the invertible root-change blocks J, JOZ, JOOZ, JOZZ,
+JOOOZ, JOZOZ, JOZZZ acting on (H, E, λ) (determinants 1, 4, 8, 8, 16, 16, 16;
+[`scripts/blocks11.py`](scripts/blocks11.py)). The Zariski closure of Γ is GL_3.
+
+*Proof.*
+1. Let G be the Zariski closure; it is defined over Q.
+2. The characteristic polynomial of J is x³ − x² − x − 1, the tribonacci polynomial that wave 16 met in the
+   corridors. It is irreducible with discriminant −44, so its Galois group is S_3. J is regular semisimple, with
+   eigenvalues τ_1 ≈ 1.839 and a complex pair of modulus τ_1^(−1/2).
+3. The only multiplicative relation among the eigenvalues is τ_1τ_2τ_3 = 1. Suppose a relation had unequal exponents.
+   Dividing it by its image under a transposition in the Galois group gives (τ_i/τ_j)^k = 1 for some i ≠ j and k ≠ 0.
+   Applying a further Galois element turns this into a ratio of modulus different from 1, which is impossible.
+4. So the Zariski closure of ⟨J⟩ is the norm-one torus T_1, a maximal torus of SL_3, and G° ⊇ T_1.
+5. The Lie algebra of G° is its Cartan part plus the root spaces of T_1 for some set Φ′ of roots. Φ′ is stable under
+   the Galois group, because G is defined over Q and the Galois group permutes the eigenlines of J. S_3 acts
+   transitively on the six roots, so Φ′ is either empty or all of them.
+6. If Φ′ is all of them, then G° ⊇ SL_3, and det(JOZ) = 4 makes G = GL_3.
+7. If Φ′ is empty, G° is a torus between T_1 and the centralizer T of J. Then G normalizes T. Since the Weyl group has
+   order 6, g^6 ∈ T for every g ∈ G, so g^6 commutes with J. But B^6 J ≠ J B^6 for each of the six other blocks B
+   (exact check in [`scripts/rank_ladder.py`](scripts/rank_ladder.py)). ∎
+
+**FINITE-EXACT: strong approximation, visible.** The seven blocks generate all of GL_3(F_3) (11,232 elements) and
+all of GL_3(F_5) (1,488,000 elements) ([`scripts/modp_image.py`](scripts/modp_image.py)). The commutator subgroup
+lies in SL_3(Z[1/2]) and is Zariski-dense in SL_3. By strong approximation (Matthews–Vaserstein–Weisfeiler, CITED),
+it surjects onto SL_3(F_p) for all but finitely many odd primes p.
+
+So the root-change orbit is a thin orbit of higher rank (real rank two), not of rank one like the Zaremba and
+Apollonian orbits. By the sub-hypothesis of section 1 it can carry congruence and sporadic exceptions, but no
+reciprocity families.
+
+### 3. Chan–Pak on the reciprocity side: three tests
+
+**P47 (registered before the run): CONFIRMED.** The root-change orbit has no Jacobi-symbol invariant.
+- Data: the 262,240 states reached by O/Z/J words of length at most 14, and every pair of primitive linear forms
+  a·v, b·v with coefficients in {−1, 0, 1}.
+- There are 827 pairs with at least 2,000 samples once the degenerate values |a·v| ≤ 2 and b·v = 1 are excluded. For
+  each of them, (a·v / b·v) = +1 with frequency between 0.459 and 0.591.
+- Including those values, 25 of 830 pairs reach 0.60–0.705, all because of them
+  ([`scripts/jacobi_inv.py`](scripts/jacobi_inv.py)).
+- On the triangular one-apex orbit, the only exact "invariants" are constant coordinates (h = 1, E ∈ {0, 1}), which
+  are congruences.
+- The one-apex pair (g(h), 2h + 1) carries none: (g(h)/(2h+1)) = +1 for 50.08% of h < 2^20, and within 0.7
+  percentage points of 1/2 in every class of h mod 8.
+
+**P48 (registered): CONFIRMED for squares, with one class flagged.** This is an Apollonian-type test on F1, the
+one-arc joins of two one-apex tournaments, in the coordinates of HYP-9657. The census of r(N) runs to 2^27
+([`scripts/f1sq.c`](scripts/f1sq.c)).
+- Odd squares m² in [2^22, 2^27): 22 misses among 4,769.
+  - That is 0.86 times the rate of controls matched modulo 8·3·5·7·11·13.
+  - It is 0.98 times the expectation of an empirical model whose strata are N mod 105, N mod 16, and the numbers of
+    primes 11 ≤ p ≤ 97 dividing N and dividing N + 1 ([`scripts/f1strata105.c`](scripts/f1strata105.c)).
+- Square classes t·m² for t = 5, 11, 13, 15, 19, 21, 35: within noise.
+- But 3m² and 7m² (with t ∤ m) had 10 and 17 misses against 3.8 and 5.6 expected (z = +3.1 and +4.8).
+
+**P49 (registered after that run, before any run on the disjoint window): REFUTED.** On [2^27, 2^29):
+- 3m²: 2 misses against 2.1 expected;
+- 7m²: 4 against 3.4;
+- squares: 12 against 14.5.
+
+So the in-sample excess was noise or a small-N effect. No square-class obstruction appears in F1, although F1 is the
+critical rank-one family. A tempting mechanism existed: 7m² with 7 ∤ m is never of the form x² + 2^s y², which is
+exactly the form of F1's self-joins g(h)² + 2^s(2h + 1)². But self-joins number about √X among the X log X
+representations, too few to matter.
+
+**F1's weakness on primes is roughness, not primality (FINITE-EXACT, [`scripts/f1prime.c`](scripts/f1prime.c)).**
+- Take the odd N in [2^22, 2^27) with no prime factor up to 97. Primes and composites among them miss at the same rate:
+  matched by N mod 16 and by the number of primes up to 97 dividing N + 1, observed/expected is 1.03.
+- The miss rate falls with that number. For 0, 1, 2, 3 and at least 4 such primes it is 1.27%, 0.70%, 0.42%, 0.28%
+  and 0.17%, so each small prime dividing N + 1 roughly halves it.
+- This makes the Rabinowitsch stratum of HYP-9657 (B) quantitative.
+- A model of independent class factors over the primes up to 97 underpredicts the misses of primes by a factor 1.83
+  ([`scripts/f1local.c`](scripts/f1local.c)), so the local factors interact strongly.
+
+For the whole spectrum, the Apollonian mechanism is unavailable for a structural reason (PROVED, elementary). H is
+multiplicative over strong components, so t·m² is a count whenever t and m are. Every odd m < 2^32 is a count or one
+of 7, 21, and 49 and 441 = 9·49 are counts. So every odd square below 2^64 is a Hamiltonian-path count, and a
+square-class obstruction would need the roots m to be exceptions themselves.
+
+### 4. The proof by contradiction, mapped
+
+Suppose the exceptional set E is larger than {7, 21}, and let N* be its least element above 21. KNOWN: N* > 2^32,
+and N* is a prime or 7p (THM-4094; minimal gap). Known mechanisms for exceptions come in three types.
+1. **Congruence**: a residue class where the local density vanishes. No such class exists. F1 alone has positive
+   local density in every class modulo each odd prime and each squarefree odd modulus, and in every odd class modulo
+   every power of 2 (THM-5128).
+2. **Reciprocity**: a square class, or a set of primes cut out by a splitting condition, through a quadratic-character
+   invariant. Square classes are products (above). The tests of section 3 find no invariant. By the sub-hypothesis of
+   section 1, the higher-rank transfer of section 2 cannot carry one.
+3. **Sporadic**: values the families miss by accident. This is the type of 7 and 21.
+   - Busch's floor (f(3k+1) = 5^k, f(3k+2) = 9·5^(k−1)) bounds the order of the strong core: at most 4 for 7
+     (f(5) = 9 > 7) and at most 6 for 21 (f(7) = 25 > 21).
+   - The strong spectra of orders 3 to 6 are {3}, {5}, {9, 11, 13, 15} and {15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45}, which skips 21
+     ([`scripts/strong_small.py`](scripts/strong_small.py)).
+   - Beyond 2^32 the least possible order is at least 42 (busch §5). There, about 2^(n²/2)/n! strong tournaments
+     face about 0.36·b(n) targets. This is a heuristic, not a proof.
+
+So a counterexample would have to be sporadic: a value missed by every family at a size where the families average
+astronomically many representations. Turning that into a contradiction needs exactly one theorem:
+
+> **The missing theorem.** Every sufficiently large odd N with positive local density is a value of the root-change
+> orbit, or of some family that is supercritical and Zariski-dense in a group of real rank at least two.
+
+The known theory gives at best density one, and only in rank-one settings (Bourgain–Kontorovich). The Apollonian and
+Rickards–Stange counterexamples show that in rank one, density one cannot be upgraded. In higher rank there is
+neither a counterexample nor a theorem. That is the precise gap.
+
+**Jacobian parallel (ANALOGY).** In both problems the hard instances are exactly the symmetry-free ones, while
+symmetric constructions (torus quotients; products and padding) handle everything else.
+- A planar Keller counterexample would have to be torus-rigid: it admits no C*-equivariance (THM-1345,
+  THM-4727 (D)).
+- A tournament whose count is a prime p > 3 must be asymmetric (minimal gap, KNOWN).
+
+### 5. Numerology of 7 and 21, checked
+
+- 7 = 1 + 2 + 4 and 21 = 1 + 4 + 16 are 1 + q + q² for q = 2, 4: the point counts of the projective planes over F_2
+  and F_4.
+- 7 = |Z/7| and 21 = |Aut(QR_7)| = |Z/7 ⋊ Gal(F_8/F_2)|, the normalizer of a Singer cycle in GL_3(F_2).
+- 7 is a Heegner number, and Ramanujan's form x² + y² + 10z² misses both 7 and 21.
+
+Only the first reading has a mechanism, and it is the KNOWN reading of busch §2:
+- 1 + q + q² = (1 + q) + q² is a Fermat cut only through a power-of-two port at count 1 + q.
+- The two smallest Fermat blocks have none: Λ(3) = {3·2^t} and Λ(5) ∩ [5, 16] = {5, 6, 7, 9, 10, 12, 14}.
+- The next member, 73 = 9 + 64, is attained.
+
+The automorphism and Heegner coincidences constrain no count: a realizer of 7 would have to be asymmetric, and one of
+21 would have an automorphism group of order dividing 21. Verdict: numerology.
+
+### Pre-registered
+
+- **P50.** For k hubs over a transitive spine, the transfer is triangularizable with letter eigenvalues
+  {0, 1, …, k + 1}. So the weight group has rank π(k + 1): rank 2 for k = 2, 3 and rank 3 for k = 4, 5.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.

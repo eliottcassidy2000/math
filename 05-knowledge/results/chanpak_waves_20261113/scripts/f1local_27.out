@@ -1,0 +1,13 @@
+F1 window odd N in [2^22,2^27): n=65011712 misses rate 0.00000; local model over 24 primes 3..97, 100 bins
+  overall miss rate 0.00378; bin miss rates: lowest-mass bin 0.01425, median bin 0.00230, highest-mass bin 0.00035
+  t*m^2, t=  1: n=  4769 observed misses   22, expected under local model 22.9, ratio 0.96
+  t*m^2, t=  3: n=  1835 observed misses   10, expected under local model 3.7, ratio 2.69
+  t*m^2, t=  5: n=  1707 observed misses    4, expected under local model 2.0, ratio 2.04
+  t*m^2, t=  7: n=  1544 observed misses   17, expected under local model 5.7, ratio 2.96
+  t*m^2, t= 11: n=  1307 observed misses    3, expected under local model 1.6, ratio 1.87
+  t*m^2, t= 13: n=  1221 observed misses    5, expected under local model 6.4, ratio 0.78
+  t*m^2, t= 15: n=   657 observed misses    1, expected under local model 0.6, ratio 1.74
+  t*m^2, t= 21: n=   594 observed misses    0, expected under local model 0.5, ratio 0.00
+  t*m^2, t= 35: n=   553 observed misses    0, expected under local model 0.3, ratio 0.00
+  primes (first 400000 of the window): observed 4589, expected 2511.9, ratio 1.83
+  Rabinowitsch-rough primes among them: n=9195 observed 228 expected 115.8 ratio 1.97
