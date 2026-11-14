@@ -298,6 +298,12 @@ are already committed, and the remaining multiplicities are 1–3 per vertex. Th
     Local availability, about half of all configurations, does not give per-target closure. The surviving form to
     test is closure under bounded multi-vertex extensions, for example two or three vertices, or two Erdős steps
     composed.
+  - **Also REFUTED with two-vertex extensions** (`scripts/decclose2.c`: append two, prepend two, or one at each end;
+    realizers of length ≤ 9). **3,912** of the odd n in [23, 14,000] are still unreached, with the same first cases.
+    For example 43 = 2·17 + 9 is the only odd-m decomposition (2·21 + 1 would need 21), and no realizer of 17
+    extends to 43. Conclusion: the 3-smooth antichain decoder does not lift to a local tournament move. Frame
+    admissibility is non-local, so a proof must choose whole words, as the branch-and-bound decoder does, rather
+    than extend realizers of smaller counts.
 
 ## Next waves (queued predictions)
 
