@@ -1093,6 +1093,24 @@ an Euler product of local factors. The factors are not monotone in p: there are 
 local factors are positively correlated. Any local limit theorem for this orbit would carry this irregular singular
 series.
 
+**The two-dimensional shadow ([`scripts/pairs2d.c`](scripts/pairs2d.c), [`scripts/shadowcap.c`](scripts/shadowcap.c)).**
+Could the full root-change grammar (unbounded runs) admit a Euclid-like descent, as continued fractions with unbounded
+partial quotients do? That would need its reachable (count, port) pairs to fill a positive share of a cone. They do
+not. In the cone X/2 ≤ H ≤ X, H ≤ λ ≤ 4H, the reached share is 3.3%, 1.6%, 0.77%, 0.37% at X = 2^8, 2^10, 2^12,
+2^14, so the number of reached pairs grows like X^1.47. For bounded runs, the same pair exponent (fit over 2^10 to
+2^16) and the share of odd counts in [2^15, 2^16) that are hit are:
+
+| run cap | 1 | 2 | 3 | 4 | 5 | unbounded |
+|---|---|---|---|---|---|---|
+| pair exponent | about 0.9 | about 1.15 | about 1.26 | about 1.34 | about 1.39 | 1.47 |
+| odd counts hit in [2^15, 2^16) | 13% | 72% | 98.3% | 99.98% | 100% | 100% |
+
+The regimes of wave 20 line up with this "shadow dimension" as in Zaremba-type problems, but the threshold is not
+1. Cap 2 already has exponent above 1 and still misses infinitely often, and local factors move the effective
+cofiniteness threshold to roughly 1.25. Since the reachable set is a thin, about 1.5-dimensional subset of the plane,
+cofiniteness is a fixed-direction projection statement for a thin set. Marstrand-type theorems speak only of almost
+every direction, so a proof would need non-concentration along vertical lines.
+
 **What the combinations say about cofiniteness.** All routes end at the same place: a local limit theorem for a
 supercritical family on its weakest residue classes, which are the primes. The 11-matrix orbit is supercritical even
 there (prime multiplicity growing like X^0.25), which is why it looks cofinite. Two facts keep thin-orbit methods
