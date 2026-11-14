@@ -141,9 +141,21 @@ changes both wings while preserving \((H,R_+,R_-)\) exactly.
 The \(d+1\) rooted outputs are pairwise nonisomorphic: deleting the
 apex leaves a unique nonsingleton strongly connected component
 (the regular 5-vertex core), whose position in the ordered component
-list moves four places at each step. At \(d=1,X=1,Y=2,K=41\)
-the two 13-vertex graphs have profile \((7163,11253,-15)\);
-their different outdegree multisets also distinguish them unrooted.
+list moves four places at each step. In fact they are pairwise
+nonisomorphic even up to converse. In the forward direction only
+four transferred vertices and five core vertices change their degree
+scores; the apex beats three of the transferred vertices before and
+after. Subtract \(m=\operatorname{bitlen}(Y)\) from these nine scores.
+The local multisets before and after a step are
+\[
+ (9,7,6,5,2,2,3,3,3),\qquad (6,6,7,7,7,3,2,1,1).
+\]
+The means agree and the squared sums are 226 and 234, so every step
+raises the entire squared outdegree sum by 8. Converse preserves
+the squared sum since it replaces each outdegree \(a\) by \(n-1-a\)
+and the total outdegree is \(n(n-1)/2\).
+At \(d=1,X=1,Y=2,K=41\) the two 13-vertex graphs have profile
+\((7163,11253,-15)\).
 The \(K=43\) center gives 7165 with the same other channels.
 At \(X=1,Y=20\), the four-way construction yields \(57839\)
 and \(57841=7\cdot8263\), with 57839 and 8263 prime.
