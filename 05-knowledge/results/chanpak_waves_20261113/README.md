@@ -183,6 +183,52 @@ is a coincidence. The structural match is "few registers × finite control".
 - **P22.** Every odd N ≤ X(L) has a realizer of length ≤ L that uses both hub orders. *Test:* count realizers by
   order.
 
+## Wave 7: the absolute-target problem, trijections, and 69/34/45
+
+**Absolute-target decoder (`scripts/decode2hub.c`).** Given N, it builds a two-hub word letter by letter. For every
+remaining length r it precomputes upper and lower bounds on what each of the 36 automaton states can still
+contribute, and it prunes any prefix whose range misses N. The search is exact: no false pruning, and witnesses are
+verified at the leaf.
+- It solved 20/20 random odd targets near 10^3 and 20/20 near 10^6, with explicit words. Example: N = 1,359,795 is
+  the word 10213223200100, with letters 2x + y and e = 0.
+- The search cost grows roughly like N (about 10^6 nodes at 10^6), because the per-state bounds are loose. A run at
+  10^9 was stopped.
+- Simulated annealing on |H − N| solved **0/20** even at 10^6: a single bit flip moves H by a large factor, so the
+  landscape is rugged.
+
+Status: the absolute-target problem is constructive at these scales. The next step is tight per-prefix ranges, using
+the frame structure or a low-rank split of the 36-dim bilinear form H = c(suffix)·v(prefix) for meet-in-the-middle.
+This is the step that goes beyond coverage tables and witness counts.
+
+**Trijection link (CITED: [tournament_graph_trijections](../tournament_graph_trijections_20261020/README.md)).**
+A constraint graph with m edges and c components charts a 2^−(m−n+c) fraction of switching classes. It is one-to-one
+exactly for spanning trees, that is n − 1 edges and connected.
+- A two-hub Hamiltonian path is such a tree.
+- Deleting the hubs leaves a 3-component linear forest on the spine, the three runs, with cyclomatic deficiency
+  c − 1 = 2.
+- The triply covered spine vertices, the ternary digits, are exactly those free to join any of the three
+  components.
+So the frame count is a count of 3-component linear forests with prescribed endpoint labels.
+
+**69, 34, 45 (connections found).**
+- 69 is where the order-8 strong run [69, 609] begins. It is also the first value from which every odd N is a single
+  Fermat-block cut of a ≤ 9-vertex source.
+- 34 = m(69) is the cycle-content coordinate of 69, and it equals A059735(6), the converse-merged tournament classes
+  on 6 vertices (trees5_tournaments4 note).
+- 45 = H_max(6) = b(8) = 9·5, a Busch floor and a product of the bricks.
+- 69 = 45 + 24 = 34 + 35 (m + r). 69 = 3·23, and 23 is the next Fermat-blind prime after 7, with P_23 = Cay(Z_23, ⟨2⟩).
+- Two-hub small horizons: words of length 3, 4, 5 first miss 17, 35 = 5·7, and 61 / 63 = 7·9. The 7-lane is the
+  last thing small two-hub words reach.
+
+**The 3-smooth sum lemma: status.**
+- **Needed (Frame Completeness).** Every odd N ≥ 23, other than 21, is an admissible frame sum
+  Σ 2^α·3^β of some two-hub word. By the frame identity this is equivalent to the Two-Hub Conjecture.
+- **Proved here.** The frame identity and the nested-frame closed form (wave 6).
+- **Not proved.** The completeness itself; an Erdős-type sum-of-3-smooth-numbers representation would also need the
+  frames to be simultaneously admissible.
+- **The decoder shows the gap concretely.** Every tested target has a witness, but the witness is found by search,
+  not by a digit rule.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
