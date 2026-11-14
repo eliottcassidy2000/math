@@ -76,7 +76,10 @@ sequence is THM-5126's line 1 + 3·2^s for s ≥ 2; the line's only missing poin
   spectrum W together with {1 + 3·2^s} and {9·2^s − 3}. By Theorem A, for large b the base-b gaps below b are the
   m with 2m + 1 outside that set: about half of all m < b, if HYP-9469's one-centre density 1/2 holds. Base 2 has
   only two gaps; large bases have about b/2 below b.
-  - *Test:* order 10, where the prediction is 8 hub-free classes with counts 385 and 573.
+  - *Test:* order 10, where the prediction is 8 hub-free classes with counts 385 and 573. **CONFIRMED EXACTLY**
+    (`scripts/omega10.c` over all 9,733,056 order-10 tournaments): 135 = 2^7 + 7 strong tournaments with no two
+    disjoint triangles, 127 = 2^7 − 1 with a hub, and 8 hub-free. All 8 have τ = 2, and their counts are 385 and 573.
+    So the counts for orders 5–10 are FINITE-EXACT and match the formulas.
   - The τ ≤ 2 part should be a directed-triangle packing/covering (Erdős–Pósa type) fact; this has not been checked
     against the literature.
 
