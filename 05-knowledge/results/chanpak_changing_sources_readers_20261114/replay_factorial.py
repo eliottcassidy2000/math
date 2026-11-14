@@ -79,4 +79,11 @@ for r in range(1,22):
             v*=t-j
         check(v%factorial(2*r+1)==0)
         check((t*v)%(factorial(2*r+1)*(r+1))==0)
-print('Literal sharp r=2 pairs (both parities), 144 arbitrary-module checks, and factorial arithmetic controls pass.')
+for (a,b,*_), (s,t,x,y) in zip(controls,[(288,66,8931,8933),(320,5,37689,37691)]):
+    check(s.bit_count()==t.bit_count()==2)
+    for B,M,H in ((a,s,x),(b,t,y)):
+        n=len(B)
+        glued=tuple(row|((1<<n) if not (M>>v)&1 else 0)
+                    for v,row in enumerate(B))+(M,)
+        check(profile(glued)(1)==H)
+print('Literal sharp r=2 pairs (both parities), 144 arbitrary-module checks, and factorial arithmetic controls and selective reader bypass pass.')
