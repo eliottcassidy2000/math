@@ -56,6 +56,68 @@ cycles (THM-5070). Gap_b is the set of unattained m.
     31, 69, 44, 28, 18, 17. Powers of two occur only as q(R_2) = 32 (a left-padding root) and the port 16 of R_3. 273
     is attained by other means.
 
+## Wave 4: structure of pairwise-meeting tournaments (FINITE-EXACT, orders 5–9)
+
+Strong tournaments with no two vertex-disjoint triangles (Ω complete):
+
+| order n | total | with a hub (one vertex on every triangle) | hub-free | path counts of hub-free ones |
+|---|---:|---:|---:|---|
+| 5 | 6 | 3 | 3 | 13, 15 |
+| 6 | 11 | 7 | 4 | 25, 33 |
+| 7 | 20 | 15 | 5 | 49, 69 |
+| 8 | 37 | 31 | 6 | 97, 141 |
+| 9 | 70 | 63 | 7 | 193, 285 |
+
+**Exact fits.** The total is 2^(n−3) + n − 3, of which 2^(n−3) − 1 have a hub and **n − 2 are hub-free**. Every
+hub-free one has a triangle transversal of size 2, and its count is **1 + 3·2^(n−3)** or **9·2^(n−4) − 3**. The first
+sequence is THM-5126's line 1 + 3·2^s for s ≥ 2; the line's only missing point is 7.
+
+- **Prediction P16.** The pattern holds for every n ≥ 5. Then the pairwise-meeting spectrum is the hub (one-centre)
+  spectrum W together with {1 + 3·2^s} and {9·2^s − 3}. By Theorem A, for large b the base-b gaps below b are the
+  m with 2m + 1 outside that set: about half of all m < b, if HYP-9469's one-centre density 1/2 holds. Base 2 has
+  only two gaps; large bases have about b/2 below b.
+  - *Test:* order 10, where the prediction is 8 hub-free classes with counts 385 and 573.
+  - The τ ≤ 2 part should be a directed-triangle packing/covering (Erdős–Pósa type) fact; this has not been checked
+    against the literature.
+
+## Wave 5: the Two-Hub Conjecture (headline)
+
+- **Prediction.** Two hubs suffice for Chan–Pak, while one hub misses about half.
+- **Verdict: CONFIRMED far beyond expectation.** Order ≤ 9 tournaments with a triangle transversal of size ≤ 2
+  attain every odd N < 700 except 7 and 21. The exact counter `scripts/twohub.c` (below) then shows that every odd
+  N ≤ **22,156,805** except 7 and 21 is the path count of a two-hub tournament on at most 18 vertices (2,327,673 at
+  16 vertices). The first miss
+  at word length ≤ 14 is 2,327,675, a length-cap effect. Length ≤ 12 already covers every odd N ≤ 200,000 except 7
+  and 21.
+
+**The counter.** The spine is TT_m. Hubs u1 and u2 have words x, y ∈ {0,1}^m (x_i = [u1 → i]) and ε = [u1 → u2]. A
+Hamiltonian path has the form S0 h1 S1 h2 S2, with increasing spine segments S0, S1, S2 and junction arcs at the
+hubs. So H is a **rational series in the four-letter alphabet (x_i, y_i)**: a 36-state transfer (2 hub orders × 3 × 3
+× 2 segment states), with H = u_ε·M_w·v0. It agrees with brute force on 300 random configurations (0 mismatches).
+
+**Two-Hub Conjecture (TWO-HUB CHAN–PAK).** Every odd N ∉ {7, 21} is H(T) for a tournament T with two vertices
+whose deletion leaves a transitive tournament. This is a strengthening of Chan–Pak and a reduction of it to one
+explicit 4-letter numeration.
+
+**Proof route.** By OCF, H = 1 + 2(c1 + c2 + c12) + 4b. Here c1, c2 count odd cycles through u1 only or u2 only,
+c12 those through both, and b the disjoint pairs. When every u1-cycle is disjoint from every u2-cycle, b = c1·c2 and
+
+    H = (1 + 2c1)(1 + 2c2) + 2·c12,
+
+a product of two one-hub counts (each from the half-dense W) plus an even cross-cycle correction. The aim is a
+sub-automaton in which c12 moves in steps of 1 over an interval while c1 and c2 stay fixed; combined with W·W this
+gives a digit argument for every large odd N.
+
+**Predictions.**
+- **P17. CONFIRMED.** The horizon grows about tenfold per two extra spine vertices. At word length ≤ 16 (18
+  vertices), every odd N ≤ **22,156,805** except 7 and 21 is a two-hub count; the first miss is 22,156,807. The run
+  took 4 minutes.
+- **P18.** A sub-automaton exists with H′ = 3H + d for d ∈ {0, 2, 4}, closed under itself: the clone-clock ternary
+  digits realized inside two hubs. *Test:* search 1–2 letter suffixes with affine action on H for a fixed prefix
+  class.
+- **P19.** No odd N other than 7 and 21 needs more than two hubs. *Test:* the two-hub counter at word length 16
+  combined with the 2^32 verification of THM-4875 (D).
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
