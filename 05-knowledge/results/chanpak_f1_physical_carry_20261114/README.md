@@ -39,6 +39,13 @@ window contains a given N. The compiler is complete within its bank;
 completeness of the bank, or a replacement construction covering the
 rejected admissible values, is not proved here. Chan–Pak remains open.
 
+## Follow-up
+
+[Right-only switches](RIGHT_ONLY_SWITCH.md) have minimum puncture
+count 3 rather than 5. A single old arc gives the literal pair
+40,241 and 40,243, and finite probes characterize the precise
+boundary data seen by right-only and two-sided readers.
+
 ## Reproduction
 
 Run **python3 replay_support.py**, **python3 replay_f1.py**,
