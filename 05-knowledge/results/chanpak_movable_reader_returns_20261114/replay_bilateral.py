@@ -187,12 +187,14 @@ def main():
                 assert rooted(C,*A)==rooted(C,*B)
                 assert value(C,*A)-value(C,*B)==6*((X&1)+(Y&1)-1)
         for d in range(8):
-            seen=set()
+            seen,scores=set(),[]
             for i in range(d+1):
                 x=(16**(d-i))*3+7*(16**(d-i)-1)//15
                 y=(16**i)*10+8*(16**i-1)//15
                 seen.add((value(C,x,y),rooted(C,x,y),-C.h))
+                scores.append(sum(a.bit_count()**2 for a in graph(C,x,y)))
             assert len(seen)==1
+            assert all(b-a==8 for a,b in zip(scores,scores[1:]))
         for x,y in ((23,2),(1,40),(23,20),(1,328)):
             literal(C,x,y)
         assert value(C,23,2)==C.K+7122 and rooted(C,23,2)==11253
