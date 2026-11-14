@@ -197,3 +197,15 @@ bilateral reader work. The two-input exact divisor test and
 sharp upper window follow by allowing both color fibers to move.
 Run **node replay_absolute_reflection.js** for literal color counts,
 the core palette and the prime/7p reflection example.
+
+## A second physical route: change the response without changing H
+
+The [complementary-reader construction](COMPLEMENTARY_READER.md)
+solves a different exact equality. For an explicit unbounded
+family it produces two strong tournaments of different orders
+with exactly the same H, one with R₊ asymptotic to H and the
+other with R₊ asymptotic to 2H. At H=831 the responses are 881
+and 1567. This is a concrete way to retune the reader without
+an ordinary-count error, not a realization of H=881 by that move.
+The construction comes with an exact inverse for its own family
+and a separate literal replay.
