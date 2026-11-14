@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 510" role="img" aria-labelledby="title desc">
+<title id="title">Two-hub switching compass, k=l=2</title><desc id="desc">18 window cuts along a word followed by its complement. The ordinary count starts at 1297, reaches 357 at three consecutive cuts, and reaches 1077 at two complemented cuts.</desc>
+<defs><style>text{font-family:system-ui,sans-serif;fill:#17243b}.small{font-size:12px}.light{fill:#576683}.cap{font-size:16px;font-weight:700}.tick{font-size:10px;fill:#576683}</style></defs>
+<rect width="960" height="510" fill="#f7f9fe"/><text x="34" y="45" font-size="26" font-weight="700">Same switching class, different absolute counts</text>
+<text x="35" y="74" class="light">Original word 110022311, followed clockwise by its digitwise complement.</text>
+<circle cx="208" cy="267" r="119" stroke="#acb8cf" stroke-width="2" fill="white"/>
+<circle cx="208.0" cy="148.0" r="13" fill="#bf6a35"/><text x="208.0" y="152.0" style="fill:white;font-weight:700" text-anchor="middle" class="small">1</text>
+<text x="208.0" y="126.0" class="tick" text-anchor="middle">0</text>
+<circle cx="248.7" cy="155.2" r="13" fill="#bf6a35"/><text x="248.7" y="159.2" style="fill:white;font-weight:700" text-anchor="middle" class="small">1</text>
+<text x="257.6" y="134.7" class="tick" text-anchor="middle">1</text>
+<circle cx="284.5" cy="175.8" r="13" fill="#5479c5"/><text x="284.5" y="179.8" style="fill:white;font-weight:700" text-anchor="middle" class="small">0</text>
+<text x="301.2" y="159.9" class="tick" text-anchor="middle">2</text>
+<circle cx="311.1" cy="207.5" r="13" fill="#5479c5"/><text x="311.1" y="211.5" style="fill:white;font-weight:700" text-anchor="middle" class="small">0</text>
+<text x="333.6" y="198.5" class="tick" text-anchor="middle">3</text>
+<circle cx="325.2" cy="246.3" r="13" fill="#258468"/><text x="325.2" y="250.3" style="fill:white;font-weight:700" text-anchor="middle" class="small">2</text>
+<text x="350.8" y="245.8" class="tick" text-anchor="middle">4</text>
+<circle cx="325.2" cy="287.7" r="13" fill="#258468"/><text x="325.2" y="291.7" style="fill:white;font-weight:700" text-anchor="middle" class="small">2</text>
+<text x="350.8" y="296.2" class="tick" text-anchor="middle">5</text>
+<circle cx="311.1" cy="326.5" r="13" fill="#8d59b3"/><text x="311.1" y="330.5" style="fill:white;font-weight:700" text-anchor="middle" class="small">3</text>
+<text x="333.6" y="343.5" class="tick" text-anchor="middle">6</text>
+<circle cx="284.5" cy="358.2" r="13" fill="#bf6a35"/><text x="284.5" y="362.2" style="fill:white;font-weight:700" text-anchor="middle" class="small">1</text>
+<text x="301.2" y="382.1" class="tick" text-anchor="middle">7</text>
+<circle cx="248.7" cy="378.8" r="13" fill="#bf6a35"/><text x="248.7" y="382.8" style="fill:white;font-weight:700" text-anchor="middle" class="small">1</text>
+<text x="257.6" y="407.3" class="tick" text-anchor="middle">8</text>
+<circle cx="208.0" cy="386.0" r="13" fill="#258468"/><text x="208.0" y="390.0" style="fill:white;font-weight:700" text-anchor="middle" class="small">2</text>
+<text x="208.0" y="416.0" class="tick" text-anchor="middle">9</text>
+<circle cx="167.3" cy="378.8" r="13" fill="#258468"/><text x="167.3" y="382.8" style="fill:white;font-weight:700" text-anchor="middle" class="small">2</text>
+<text x="158.4" y="407.3" class="tick" text-anchor="middle">10</text>
+<circle cx="131.5" cy="358.2" r="13" fill="#8d59b3"/><text x="131.5" y="362.2" style="fill:white;font-weight:700" text-anchor="middle" class="small">3</text>
+<text x="114.8" y="382.1" class="tick" text-anchor="middle">11</text>
+<circle cx="104.9" cy="326.5" r="13" fill="#8d59b3"/><text x="104.9" y="330.5" style="fill:white;font-weight:700" text-anchor="middle" class="small">3</text>
+<text x="82.4" y="343.5" class="tick" text-anchor="middle">12</text>
+<circle cx="90.8" cy="287.7" r="13" fill="#bf6a35"/><text x="90.8" y="291.7" style="fill:white;font-weight:700" text-anchor="middle" class="small">1</text>
+<text x="65.2" y="296.2" class="tick" text-anchor="middle">13</text>
+<circle cx="90.8" cy="246.3" r="13" fill="#bf6a35"/><text x="90.8" y="250.3" style="fill:white;font-weight:700" text-anchor="middle" class="small">1</text>
+<text x="65.2" y="245.8" class="tick" text-anchor="middle">14</text>
+<circle cx="104.9" cy="207.5" r="13" fill="#5479c5"/><text x="104.9" y="211.5" style="fill:white;font-weight:700" text-anchor="middle" class="small">0</text>
+<text x="82.4" y="198.5" class="tick" text-anchor="middle">15</text>
+<circle cx="131.5" cy="175.8" r="13" fill="#258468"/><text x="131.5" y="179.8" style="fill:white;font-weight:700" text-anchor="middle" class="small">2</text>
+<text x="114.8" y="159.9" class="tick" text-anchor="middle">16</text>
+<circle cx="167.3" cy="155.2" r="13" fill="#258468"/><text x="167.3" y="159.2" style="fill:white;font-weight:700" text-anchor="middle" class="small">2</text>
+<text x="158.4" y="134.7" class="tick" text-anchor="middle">17</text>
+<text x="208" y="255" text-anchor="middle" class="cap">Read 9 letters</text><text x="208" y="279" text-anchor="middle" class="small light">clockwise from cut j</text>
+<text x="428" y="115" class="cap">Hamiltonian path count H at each cut</text>
+<path d="M433 392.0H920" stroke="#d5dfed"/><text x="426" y="396.0" text-anchor="end" class="tick">0</text>
+<path d="M433 360.0H920" stroke="#d5dfed"/><text x="426" y="364.0" text-anchor="end" class="tick">1000</text>
+<path d="M433 328.0H920" stroke="#d5dfed"/><text x="426" y="332.0" text-anchor="end" class="tick">2000</text>
+<path d="M433 296.0H920" stroke="#d5dfed"/><text x="426" y="300.0" text-anchor="end" class="tick">3000</text>
+<path d="M433 264.0H920" stroke="#d5dfed"/><text x="426" y="268.0" text-anchor="end" class="tick">4000</text>
+<path d="M433 232.0H920" stroke="#d5dfed"/><text x="426" y="236.0" text-anchor="end" class="tick">5000</text>
+<path d="M433 200.0H920" stroke="#d5dfed"/><text x="426" y="204.0" text-anchor="end" class="tick">6000</text>
+<path d="M433 168.0H920" stroke="#d5dfed"/><text x="426" y="172.0" text-anchor="end" class="tick">7000</text>
+<path d="M669 145V397" stroke="#8b9cb8" stroke-dasharray="5 5"/>
+<polyline points="447,350.5 473,335.1 499,380.6 525,380.6 551,380.6 577,323.3 603,315.6 629,256.4 655,202.5 681,267.7 707,175.6 733,181.6 759,174.7 785,258.4 811,276.4 837,357.5 863,357.5 889,308.2" fill="none" stroke="#576b8f" stroke-width="2"/>
+<circle cx="447" cy="350.5" r="4.5" fill="#23456d"/><text x="447" y="413" text-anchor="middle" class="tick">0</text>
+<circle cx="473" cy="335.1" r="4.5" fill="#23456d"/><text x="473" y="413" text-anchor="middle" class="tick">1</text>
+<circle cx="499" cy="380.6" r="4.5" fill="#20735e"/><text x="499" y="413" text-anchor="middle" class="tick">2</text>
+<circle cx="525" cy="380.6" r="4.5" fill="#20735e"/><text x="525" y="413" text-anchor="middle" class="tick">3</text>
+<circle cx="551" cy="380.6" r="4.5" fill="#20735e"/><text x="551" y="413" text-anchor="middle" class="tick">4</text>
+<circle cx="577" cy="323.3" r="4.5" fill="#23456d"/><text x="577" y="413" text-anchor="middle" class="tick">5</text>
+<circle cx="603" cy="315.6" r="4.5" fill="#23456d"/><text x="603" y="413" text-anchor="middle" class="tick">6</text>
+<circle cx="629" cy="256.4" r="4.5" fill="#23456d"/><text x="629" y="413" text-anchor="middle" class="tick">7</text>
+<circle cx="655" cy="202.5" r="4.5" fill="#23456d"/><text x="655" y="413" text-anchor="middle" class="tick">8</text>
+<circle cx="681" cy="267.7" r="4.5" fill="#23456d"/><text x="681" y="413" text-anchor="middle" class="tick">9</text>
+<circle cx="707" cy="175.6" r="4.5" fill="#23456d"/><text x="707" y="413" text-anchor="middle" class="tick">10</text>
+<circle cx="733" cy="181.6" r="4.5" fill="#23456d"/><text x="733" y="413" text-anchor="middle" class="tick">11</text>
+<circle cx="759" cy="174.7" r="4.5" fill="#23456d"/><text x="759" y="413" text-anchor="middle" class="tick">12</text>
+<circle cx="785" cy="258.4" r="4.5" fill="#23456d"/><text x="785" y="413" text-anchor="middle" class="tick">13</text>
+<circle cx="811" cy="276.4" r="4.5" fill="#23456d"/><text x="811" y="413" text-anchor="middle" class="tick">14</text>
+<circle cx="837" cy="357.5" r="4.5" fill="#8c54b6"/><text x="837" y="413" text-anchor="middle" class="tick">15</text>
+<circle cx="863" cy="357.5" r="4.5" fill="#8c54b6"/><text x="863" y="413" text-anchor="middle" class="tick">16</text>
+<circle cx="889" cy="308.2" r="4.5" fill="#23456d"/><text x="889" y="413" text-anchor="middle" class="tick">17</text>
+<text x="447" y="338.5" text-anchor="middle" class="small">1,297</text>
+<text x="525" y="368.6" text-anchor="middle" class="small">357</text>
+<text x="863" y="347.5" text-anchor="middle" class="small">1,077</text>
+<text x="34" y="468" class="small light">Turning a prefix moves it to the back and complements it. The middle three cuts share one strong core.</text></svg>
