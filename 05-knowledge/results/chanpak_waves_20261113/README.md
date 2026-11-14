@@ -760,6 +760,11 @@ least (3h+1)/2) explains why local steps are coarse.
 
 **P35.** The Interval-Hub Conjecture holds with m ≤ ⌈log2 N⌉ − 1.
 
+**One interval alone gives only short runs (FINITE-EXACT, `scripts/intervalhub_runs.c`).** For each single
+(p, q, e), the values over all x ∈ {0,1}^m contain at most 15, 15, 21, 21 and 23 consecutive odd numbers at
+m = 8, 10, 12, 14 and 16. Example: [14103, 14147] at m = 16, p = 13, q = 2. Completeness is a property of the
+*union* over intervals, so a proof must move the interval as a digit, not fix it.
+
 **P36 (proof route).** Write each H(·; I, e) as A + B·(one-hub numeral of the prefix) plus quadratic carries, with
 explicit scale factors (B, C) from the 6-dimensional prefix phase. Then prove that the union over intervals of the
 images of these scaled numerals covers every odd N ≥ 23, by a digit decoder with carries. This is a binary-scale,
