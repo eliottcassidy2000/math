@@ -945,8 +945,13 @@ Forbid Z directly after J; by JZ = OJ, such a word can be rewritten only if the 
   largest miss between 145,147 (OOZZ removed) and 418,429 (OZZO or OOOZ removed).
 - *Greedy to 11 blocks ([`scripts/greedy_blocks.py`](scripts/greedy_blocks.py)).* Continuing the greedy removal,
   OOZZ, OOOO and OZZO go, leaving 11 blocks: J followed by ε, O, OO, OZ, OOO, OOZ, OZO, OZZ, OOOZ, OZOZ or OZZZ,
-  after a first run of length at most 4. Through 2^24 they have 408 misses, the largest 418,429, and none in
-  [2^19, 2^24]. Every further single removal leaves misses in [2^19, 2^21].
+  after a first run of length at most 4. Through 2^26 = 67,108,864 they have 408 misses, the largest 418,429, and
+  none in [2^19, 2^26]. Every further single removal leaves misses in [2^19, 2^21].
+- *The singular blocks are load-bearing ([`scripts/runterm.c`](scripts/runterm.c)).* Allow J only after a complete
+  block. With all 11 blocks as complete blocks the census is unchanged (408 misses, largest 418,429, below 2^21).
+  Keeping only the invertible ones (J alone, det 1, or J w with w beginning with O and ending with Z, det 2^|w|)
+  misses 34% of the odd numbers below 2^21 (7 blocks), or 24% with OOZZ added. So the target cannot be moved into a
+  semigroup of invertible matrices this way. This is one more reason thin-group methods do not transfer directly.
 - *Cap 3.* The 8 Z-free blocks sit near the critical line: per-window misses 579, 566, 517, 477, 452, 378 for 2^16
   to 2^21.
 
