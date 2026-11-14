@@ -21,6 +21,7 @@ prove that at least one chart accepts every target.
 | [All single apex pivots](PIVOT_RETURN.md) | Exact four-branch inverse for prescribed count and signed gap, and infinite nonconverse moves with gap zero. Fixed-gap baselines only grow as Θ(√X), even over all pivots and orders in this class. |
 | [Independent switch blocks](INDEPENDENT_RETURNS.md) | Modular selection and the remaining exact carry separate cleanly. Repeated matched components give a connected constant-count family of distinct strong tournaments, but their coarse gain lattice obstructs arbitrary baseline choice. |
 | [Small endpoint bank](SMALL_ENDPOINT_BANK.md) | Exact all-order low endpoint supply. Endpoints 1 and 3 coexist at source H only at 9; endpoints 3 and 5 only at H=15. For any larger unit endpoint shift, at least one strong ready source has a singleton terminal component. |
+| [Triangle core complement](TRIANGLE_COMPLEMENT.md) | Two actual counts, 683 and 1043, rejected at all orders by the older transitive-spine chart. |
 
 ## Replay
 
