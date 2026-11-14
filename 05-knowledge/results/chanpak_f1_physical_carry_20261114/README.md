@@ -51,6 +51,12 @@ word at each residue modulo 5^k, with minimum eleven-vertex blocks
 in this model. Both wings may move; a final quotient test decides
 absolute attainment for the selected wings.
 
+[Joint positional five-way carry](JOINT_FIVE.md) selects *both*
+ordinary and rooted responses modulo 5^k, including nonunit reader
+residues. Separate first and later alphabets reduce the order, and
+actual valuations come from a physical appended reader. Absolute
+coverage remains open.
+
 ## Reproduction
 
 Run **python3 replay_support.py**, **python3 replay_f1.py**,
