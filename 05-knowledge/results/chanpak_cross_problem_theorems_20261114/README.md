@@ -56,3 +56,8 @@ finite controls on the formulas.
 Scalar congruences have exactly the mod-8 classes 3 and 5, simultaneously
 with every odd modulus, but the rooted pair theorem fails at 3. Bounded full-conflict clique number gives a finite-prime
 spectrum; the sharp triangle-free slice is exactly 3^a·5^b.
+
+**Follow-up:** [Logarithmic height and repeat modes with k apices](APEX_RECURRENCES.md).
+Keeping a cycle’s ports bounds the order of an absolute witness. A monotone
+gap basis also caps the multiplicity of each characteristic root and bounds
+the number of isolated meetings of two repeat sequences.
