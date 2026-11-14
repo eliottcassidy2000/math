@@ -56,3 +56,12 @@ for its remaining targets.
 Run the companion JavaScript or Python replays in this folder.
 For example **node replay_prime_quotient.js 63** returns the
 transitive widths of the first prime quotient chart at 63.
+
+**Portfolio executable:** run `node select_family.js TARGET` for an
+exact inverse on the included prime-quotient, three-slot transitive
+and single-reversed-seam charts. It returns a named construction and
+literal outgoing masks (decimal strings for arbitrary precision), or
+reports that the tested charts missed. Direct path DP checks thirteen
+accepted examples: 1, 5, 11, 13, 45, 59, 63, 83, 97, 119, 137, 159,
+and 881. The executable is a partial selector, not a universal search
+or a certificate of impossibility for a rejected scalar target.
