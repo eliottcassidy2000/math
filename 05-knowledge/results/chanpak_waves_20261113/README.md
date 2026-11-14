@@ -1158,6 +1158,119 @@ best proved lower bound is X^(3/4) up to logarithms (THM-5141).
   It is 44. The maximal gaps on the windows starting at 2^23, 2^24, 2^25, 2^26 are 46, 52, 50, 44: they fluctuate
   and show no clear growth, so "about 2 log₂ N" overstates the trend. Bounded gaps are not excluded by the data.
 
+## Wave 22: collisions of 908u + 9g(u) — Poisson statistics, a spacer factorization, and the 3/4 barrier
+
+This wave continues wave 21's route to positive density. **Chan–Pak OPEN; positive density OPEN.** The values of
+F(u) = 908u + 9g(u) collide as a Poisson process would, at every scale tested: up to 2^30, 0.11% of the arguments
+share a value and no value is hit four times. A proof is blocked by the wide-window case that also stops THM-5141 at
+exponent 3/4.
+
+**Verdicts.**
+- **P37 CONFIRMED.** The sub-language "one-apex source, then readers J O^i Z^j with i, j ≤ 3" attains every odd N in
+  [2649, 10^7]. Its 30 misses are all at most 2,647 ([`scripts/readeralpha.c`](scripts/readeralpha.c), 2 h 22 min).
+- **P38 CONFIRMED.** F_≤2 misses no odd N in (3,780,967, 4·10^9]. It has 140 misses below 4·10^9
+  ([`scripts/f2census.c`](scripts/f2census.c), 1 h 49 min of CPU).
+- **P43 and P44 CONFIRMED** (below).
+
+**F is always odd, and its collisions look Poisson (FINITE-EXACT).**
+- g(2v) = g(v) + v + v₀, and v + v₀ is even. Also g(2v+1) = g(v). So g is always odd, and so is F(u).
+- Take φ(u), the binary radical inverse, to be uniform. Then the values of F near X have density
+  ρ = ln(917/908)/9 = 1/912.5 per integer, or 2ρ per odd integer. In that model the number of pairs u < u′ ≤ U with
+  |F(u) − F(u′)| ≤ L (L even) is U(L + 1)/912.5.
+- Measured pairs divided by U(L + 1) ([`scripts/fnear.c`](scripts/fnear.c)); the model value is 0.001096:
+
+  | L | U = 2^18 | 2^20 | 2^22 | 2^24 |
+  |---:|---:|---:|---:|---:|
+  | 0 | 0.00123 | 0.00110 | 0.00112 | 0.00115 |
+  | 2 | 0.00114 | 0.00108 | 0.00113 | 0.00112 |
+  | 8 | 0.00106 | 0.00104 | 0.00107 | 0.00109 |
+  | 98 | 0.00109 | 0.00108 | 0.00109 | 0.00109 |
+  | 9,998 | 0.00108 | 0.00109 | 0.00109 | 0.00109 |
+
+- Exact collisions at larger U ([`scripts/fmult9.c`](scripts/fmult9.c)). A collision forces 9 | u′ − u, so each
+  residue class of u modulo 9 is sorted separately.
+
+  | U | colliding pairs / U | values hit twice | values hit three times | Poisson model for triples |
+  |---|---:|---:|---:|---:|
+  | 2^26 | 0.001122 | 75,150 | 45 | 54 |
+  | 2^28 | 0.001120 | 299,925 | 225 | 215 |
+  | 2^30 | 0.001104 | 1,182,425 | 910 | 860 |
+
+  No value is hit four times up to 2^30 (model: 0.47 expected), and 99.78% of the arguments u ≤ 2^30 have a value
+  of their own. The largest departure from the model in the first table is 12% (L = 0 at U = 2^18); for L ≥ 8
+  every entry is within about 5%.
+
+**Exact structure of a colliding pair (PROVED, elementary).**
+- *The collision equation is THM-5141 (C) transported to F.* Split a colliding pair u < u′ into:
+  - the common top V, above the highest differing bit;
+  - the common bottom L, the j bits below the lowest differing bit;
+  - the windows M, M′ of n₁ bits between them.
+
+  Put A = M′ − M, B = rev(M′) − rev(M) and ρ = rev_j(L). Then 9 | A and
+
+  Aρ + BV = 917·2^j·(A/9) − (Ψ(M′) − Ψ(M)) − v₀ − σε,
+
+  where σ = m′₀ − m₀, ε = l_(j−1) for j ≥ 1 and ε = 1 for j = 0. This is a lattice line in the outer data (ρ, V).
+  The weight 917·2^j − 9ρ plays the role of THM-5141's suffix weight c, and V that of its prefix P. Checked on all
+  19,275 colliding pairs below 2^24 ([`scripts/fcoll_windows.py`](scripts/fcoll_windows.py), with the pairs listed by
+  [`scripts/fcollide.c`](scripts/fcollide.c)).
+- *Monotone residue classes.* For u = 2^k a + r with r < 2^k and a′ > a,
+
+  F(2^k a′ + r) − F(2^k a + r) = (a′ − a)(917·2^k − 9 rev_k r) − 9(Ψ(a′) − Ψ(a)) − 9(a′₀ − a₀)r_(k−1) ≥ 908·2^k − 9a′,
+
+  because Ψ(a′) ≤ a′. So F is strictly increasing on every residue class modulo 2^k inside [0, 100·4^k]. A
+  colliding pair therefore satisfies 100·4^j < u′, where j is its lowest differing bit: j is below half the length
+  of u′. Data below 2^24: j ≤ 6 (the bound allows 8). The counts for j = 0, 1, 2, 3 are 9,593, 4,885, 2,380 and
+  1,325, halving each time, and most pairs have V/2^j between 2^4 and 2^8.
+- *The spacer factorization.* Let q be the number of bits just below the highest differing bit where u has 1 and u′
+  has 0. Then u = 2^m V + (2^q − 1)2^p + c and u′ = 2^m V + 2^(q+p) + c′, with m = q + p + 1 and p-bit words c, c′
+  whose top bits are not (1, 0). With D = rev_p(c′) − rev_p(c) − 1 and 9t = u′ − u = 2^p + c′ − c,
+
+  (2V + 1)·(2^(q+1)·D + 3) = 1834t + 2(Ψ(c) − Ψ(c′)) − 2 rev_p(c) + 2(c₀ − c′₀) − 2v₀ + κ,
+
+  where κ = 2c_(p−1) − 1 if q ≥ 1 and κ = 1 − 2c′_(p−1) if q = 0. Checked on all 19,275 pairs
+  ([`scripts/spacer_identity.py`](scripts/spacer_identity.py)).
+  - *D ≠ 0.* If D = 0, then c = 0X and c′ = 1X, so u′ − u = 3·2^(p−1). That is not a multiple of 9, a contradiction.
+    Without the factor 9, an inner pair with D = 0 and one admissible V would collide for every spacer length q.
+    The core count h = 9 rules out these infinite families.
+  - For q ≥ 1 the right side does not depend on q. So, for a fixed inner pair, each spacer length that occurs makes
+    2^(q+1)D + 3 a divisor of one of two fixed numbers.
+  - Data: q = 0, 1, 2, 3 for 9,934, 4,754, 2,240 and 1,163 pairs, halving like j.
+
+**Why the proof stops where THM-5141 does.**
+- Collisions whose highest differing bit lies below about n/2 are few. There are at most about 2^n pairs of low
+  parts there, and each allows at most two tops V (wave 21).
+- The collision equation forces balance. When the windows have no runs longer than R, V/2^j lies within a factor
+  2^(R + O(1)) of 102, as THM-5141 (C) balances its prefix against its suffix. So pairs that share their first n/4
+  bits have windows of at most n/2 + R + O(1) bits. That is how THM-5141 gets 2^(3n/4) distinct values from one
+  prefix family, and the same mechanism should give the same exponent for F (not written out here).
+- Positive density needs the wide windows: collisions between different prefix families. There the window pairs
+  outnumber the arguments, so almost every pair must be shown to have no lattice point in its box. In the data, all
+  but a Poisson fraction have none.
+- The missing input is equidistribution: the reversal-graph points (M, rev M) must meet these lattice lines at the
+  random rate for all but a sparse set of outer data. That input has to use the particular slopes. The bit-reversal
+  net puts 2^(k/2) points, the binary palindromes, on the slope-one diagonal, so no bound uniform over all lines can
+  hold.
+
+**Conjecture (stated here; no HYP number).** #{u < u′ ≤ U : F(u) = F(u′)} ≤ 0.0012·U for every U ≥ 2^18. With the
+proved window this gives at least (1 − 0.0012)·X/917 − O(1) Hamiltonian-path counts up to X. That is positive lower
+density, at least 2/917 of the odd numbers (0.87% when all four window values are counted, as observed). A bound
+O(U^(5/4 − ε)) would already beat THM-5141.
+
+**Pre-registered.**
+- **P43 (registered in the session draft at 12:18 MST before the run; CONFIRMED).** At U = 2^28:
+  - colliding pairs / U in [0.00105, 0.00120]: 0.001120;
+  - between 140 and 260 values hit three times: 225;
+  - no value hit four times: none.
+- **P44 (registered at 12:20 MST before the program was written; CONFIRMED).** At U = 2^30:
+  - colliding pairs / U in [0.00108, 0.00117]: 0.001104;
+  - between 700 and 1,050 values hit three times: 910;
+  - at most two values hit four times: none.
+- **P45.** At U = 2^32 (one residue class modulo 9 at a time, split further by value range):
+  - colliding pairs / U lies in [0.00107, 0.00113];
+  - at least one value is hit four times (model: 1.9 expected);
+  - no value is hit five times.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.

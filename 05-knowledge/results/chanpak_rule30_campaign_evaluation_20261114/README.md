@@ -49,6 +49,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | interval-hub numeration (P35/P36) | alive, superseded | complete through 26,610,535; but the O/Z/J root-change grammar (KNOWN) is smaller: 4-dimensional state, 3 letters |
 | **cofiniteness of the O/Z/J semigroup orbit (HYP-9640, HYP-9677)** | **the repository's main formulation** | one-chain equations are near-products (wave 19); a proof must use chains of length ~log N; 14–16 matrices already appear to suffice beyond 130,247, and the run cap has a trichotomy with critical cap 2–3 (wave 20) |
 | dichotomy: a third exception must belong to an arithmetic family | **alive (heuristic)** | every candidate family checked so far is complete |
+| positive density through the free-address window 908u + 9g(u) + {752, …, 758} | **alive** | F(u) = 908u + 9g(u) collides like a Poisson process (0.11% of arguments to 2^30, no value hit four times); a proof needs the wide-window case of THM-5141 (wave 22) |
 
 ### Assessment
 
@@ -74,6 +75,13 @@ wave-19 decoder carries the reader's factors into the source equation and ends i
 near 10^12 and 10^15 all decode. One chain's equation is a near-product of the source's high bits with its reversed
 low bits, so each chain covers density about 1/(A + B). The open step is the union over chains whose length grows
 with log N, as in HYP-9677.
+
+**Update (waves 21–22).** Combining the placement programs changes constants, not the regime, because they all fail
+on the same targets, the primes (wave 21). One combination would change the regime if a pair-correlation bound held.
+The other session's proved free-address window 908u + 9g(u) + {752, …, 758} gives a distinct count for every distinct
+value of F(u) = 908u + 9g(u), and F collides like a Poisson process: 0.11% of arguments up to 2^30, no value hit four
+times. O(U) colliding pairs would give positive lower density, and O(U^(5/4 − ε)) would beat THM-5141's exponent 3/4.
+Both need the wide-window case of THM-5141's lattice-line count (wave 22).
 
 ## Rule 30: the three prize problems
 
@@ -115,7 +123,9 @@ quantified in the LFSR and FCSR models; the quadratic-register model is next.
 1. Prove cofiniteness, or density one, for a sub-semigroup of the O/Z/J grammar whose chains grow like log N.
    The smallest explicit target found so far: 11 block matrices after a first run of length at most 4 reach every
    odd N in (418,429, 2^26] (wave 20; HYP-9677 has 63). The wave-19 decoder supplies exact instances (Chan–Pak).
-2. Test P34: realize rational base-3/2 digit vectors with nested two-hub frames (Chan–Pak).
-3. Look for a provably infinite 2-kernel of the Rule 30 center through THM-4210's tree (Rule 30, Prize 1).
-4. Measure the quadratic span of the Rule 30 center (Rule 30, Prize 3).
-5. Extend the two-hub horizon to L = 19 or 20 with a sharded bitmap (P21).
+2. Bound the wide-window collisions of F(u) = 908u + 9g(u) by O(U), or by O(U^(5/4 − ε)). With the proved
+   free-address window this gives positive lower density of the spectrum, or beats THM-5141 (wave 22; Chan–Pak).
+3. Test P34: realize rational base-3/2 digit vectors with nested two-hub frames (Chan–Pak).
+4. Look for a provably infinite 2-kernel of the Rule 30 center through THM-4210's tree (Rule 30, Prize 1).
+5. Measure the quadratic span of the Rule 30 center (Rule 30, Prize 3).
+6. Extend the two-hub horizon to L = 19 or 20 with a sharded bitmap (P21).
