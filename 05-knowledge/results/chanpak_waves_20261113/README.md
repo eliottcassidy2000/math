@@ -719,18 +719,21 @@ H = 1 + 2X(x) − Σ_(i<j) 2^max(1, j−i−1) x_i x_j.
 
 For instance x = 11 gives 1 + 6 − 2 = 5, checked by listing the 5 paths.
 
-**Interval-Hub Conjecture (NEW; FINITE-EXACT to 8,070,555).** Every odd N other than 7 and 21 is the count of
+**Interval-Hub Conjecture (NEW; FINITE-EXACT to 26,610,535).** Every odd N other than 7 and 21 is the count of
 TT_m + u1 + u2, where u1's out-set on the spine is arbitrary and u2's out-set is a single interval [p, p+q)
 (`scripts/intervalhub.c`).
 
-| m ≤ | 12 | 14 | 16 | 18 | 19 | 20 | 21 |
-|---|---|---|---|---|---|---|---|
-| first odd miss above 21 | 17,789 | 84,271 | 345,143 | 1,467,007 | 2,064,419 | 4,007,635 | 8,070,555 |
-| that miss ÷ 2^m | 4.34 | 5.14 | 5.27 | 5.60 | 3.94 | 3.82 | 3.85 |
+| m ≤ | 12 | 14 | 16 | 18 | 19 | 20 | 21 | 22 | 23 |
+|---|---|---|---|---|---|---|---|---|---|
+| first odd miss above 21 | 17,789 | 84,271 | 345,143 | 1,467,007 | 2,064,419 | 4,007,635 | 8,070,555 | 15,785,407 | 26,610,535 |
+| that miss ÷ 2^m | 4.34 | 5.14 | 5.27 | 5.60 | 3.94 | 3.82 | 3.85 | 3.76 | 3.17 |
 
-The horizon grows like 4·2^m: **binary** scale, against the ternary 3^L/2 of unrestricted two-hub words. So m ≈
+The horizon grows like 3–5·2^m: **binary** scale, against the ternary 3^L/2 of unrestricted two-hub words. So m ≈
 log2 N − 2 spine vertices suffice. The family is far smaller (2^m·m² words, not 4^m) and still complete through
-8·10^6.
+2.66·10^7. The last ratio (3.17 at m = 23) may signal a slow decline; P35 needs it only to stay above 2.
+
+Robustness (`scripts/intervalhub_mult.c`): with m ≤ 18 and four or more spare spine vertices, every odd N has at least about
+50 realizers in each dyadic window up to 2^15. The minimum falls to 1 only at the horizon edge.
 
 Which part of the family matters (`scripts/intervalhub_qcap.c`):
 - *Intervals of length ≤ 1* (u2 a near-sink): the coverage **stops at 7,477** for every m ≤ 20.

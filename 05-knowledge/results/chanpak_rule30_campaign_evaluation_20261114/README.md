@@ -28,7 +28,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 |---|---|
 | one-apex joins (THM-4875 (D)) | **every odd N < 2^32** except 7 and 21 |
 | two-hub words, length ≤ 18 | every odd N < **226,079,703** except 7 and 21 (new today; ratio X(L)/3^L = 0.584) |
-| interval-hub words (u2's out-set an interval), m ≤ 21 | every odd N < **8,070,555** except 7 and 21 (new today; binary-scale horizon ≈ 4·2^m) |
+| interval-hub words (u2's out-set an interval), m ≤ 23 | every odd N < **26,610,535** except 7 and 21 (new today; binary-scale horizon 3–5·2^m) |
 | Fermat-block cuts of order-≤9 sources | every odd N in [69, 398,129] |
 | span-2 ribbons | every odd N ≤ 100,000 except 7, 21 and 47 |
 
@@ -44,7 +44,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | two-hub horizon law X(L) ≥ c·3^L | **alive** | 0.487, 0.515, 0.569, 0.584 for L = 14, 16, 17, 18 |
 | Shallow-Cut Conjecture and port-wedge induction | **alive** | order-9 sources reach 398,129; the §4 transfer closes linearly on (H, D, h, E, S) |
 | rational base 3/2 frame digits (P34) | **new, untested** | nested frames weigh 2^(A−g)·3^(g−1) |
-| **interval-hub numeration (P35/P36)** | **new, most promising** | complete through 8,070,555; for fixed (I, e) the count is quadratic in x; a 6-dimensional prefix phase |
+| **interval-hub numeration (P35/P36)** | **new, most promising** | complete through 26,610,535; for fixed (I, e) the count is quadratic in x; a 6-dimensional prefix phase |
 | dichotomy: a third exception must belong to an arithmetic family | **alive (heuristic)** | every candidate family checked so far is complete |
 
 ### Assessment
@@ -58,7 +58,7 @@ base. The one-hub family is such a system, with state (H, Y = 1 + X) and block m
 it reaches only density 1/2 (HYP-9469). Two hubs reach density 1 but have no low-dimensional invariant.
 
 **Update (wave 18).** The smallest complete system has now been found. In the interval-hub family the second hub
-beats exactly one interval of the spine. It covers every odd N < 8,070,555 except 7 and 21, at binary scale (m ≈
+beats exactly one interval of the spine. It covers every odd N < 26,610,535 except 7 and 21, at binary scale (m ≈
 log2 N − 2). For each interval its count is a quadratic pseudo-Boolean function of the first hub's bits. That
 follows from the bi-quadratic frame law, which is proved for all two-hub words. The part of the word before the
 interval acts through a 6-dimensional state. So the next target is concrete: closed forms for the scaled one-hub
@@ -85,7 +85,10 @@ numerals that each interval produces, then a carry decoder proving that their un
 - Through 2^22 bits the linear complexity is exactly n/2 with |2L − n| ≤ 25, and the partial quotients are
   geometric. So any eventual period has onset + period ≥ 2,097,152, and no LFSR shorter than n/2 − 12.5 produces
   any prefix.
-- Through 2^16 bits the 2-adic complexity is n/2 ± 10.5.
+- Through 2^16 bits the 2-adic complexity is n/2 ± 10.5. The same holds for the 3x+1 conjugate x_30, whose Collatz
+  parity record is the center column; it would be rational if the column were eventually periodic.
+- The shortest register with any nonlinear feedback (maximum-order complexity) has length 44 = 2 log2 N at 2^22. No
+  44-bit window repeats, so onset + period ≥ 4,194,261.
 - All 32,767 kernel elements with k ≤ 14 are distinct.
 - Controls: Python's Mersenne Twister is caught at linear complexity 19,938, and a periodic control stops at 10.
 

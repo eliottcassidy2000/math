@@ -74,6 +74,18 @@ outputs c_t on this range therefore needs at least 32,767 states. This extends t
 131,072 cells reported in arXiv:2609.25077. It is evidence, not proof: a finite check cannot exclude a larger finite
 kernel.
 
+### 2.3 Repeats and maximum-order complexity (nonlinear registers)
+
+The longest window that occurs twice among the first 2^22 bits has **43 bits**, and so does the longest window
+occurring twice with different successors. So the maximum-order complexity (the shortest feedback shift register
+with *any* Boolean feedback function) is **44 = 2 log2 N**. At 2^20 the corresponding figures are 36 and 37. A
+Mersenne Twister control of the same length gives 42 and 43 ([`moc.py`](scripts/moc.py)).
+
+Eventual periodicity from onset t_0 with period p would make the 44-bit window at t_0 recur at t_0 + p. Hence
+**t_0 + p ≥ 2^22 − 43 = 4,194,261**, the strongest bound a prefix of this length can give. Wolfram's team has
+examined much longer prefixes; this note does not compete on length. The new content is the uniform statement across
+the three register models (linear, carry, nonlinear) at the same scale.
+
 ## 3. The 2-adic complexity profile (FINITE-EXACT)
 
 | n | log2 Φ(n) | max over m ≤ n of abs(2 log2 Φ(m) − m) |
