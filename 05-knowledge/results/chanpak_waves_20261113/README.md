@@ -359,6 +359,36 @@ bucketing prefixes by their dominant coordinates.
   proof needs the Collatz branch 3r + 1 and the tripling branch 3r at every r ≥ 12. *Test:* realizer bank counts of
   3r and 3r + 1 from two-hub words, which are FINITE-EXACT to 2.2×10^7.
 
+## Wave 12: the glue at 0 as an adjuster (negative), and the route ledger
+
+**Hub-arc flip** (`scripts/jstat.c`, all 1,398,100 word pairs of length ≤ 10). J = H(e=1) − H(e=0) counts the paths
+with adjacent hubs, signed by direction; this is the "0" where the two orders are glued.
+- |J| = 2 in only **1.0%** of word pairs, |J| = 0 in 0.7%, and |J| ≤ 16 in 8.3%.
+- The histogram over small even values is flat.
+
+So the glue is not a fine ±2 adjuster: it scales with the count. A covering induction cannot rely on it except
+probabilistically, through some realizer of N − 2 with J = 2.
+
+**Route ledger for full Chan–Pak coverage (status after this session).**
+
+| route | status |
+|---|---|
+| Busch staircase runs (ternary rule on runs) | open; reduces to the threshold-95 rule |
+| Fermat-block cuts from ≤ 9-vertex sources | complete to 398,129, then counting-limited |
+| two-hub numeration (Two-Hub Conjecture) | complete to 22,156,805; length law ≤ ⌈log₃ 2N⌉ + 1 |
+| frame identity (2^α·3^β sums) | proved |
+| Erdős 3-smooth antichain decoder | lemma proved; lift to one- or two-vertex extensions refuted |
+| local ternary digits (append one vertex) | refuted (38 of 43,690) |
+| exact absolute-target decoder | works; cost about N (no hit at 10^9) |
+| hub-arc glue as ±2 adjuster | refuted (1%) |
+| Collatz/ghost r-tree lens | reframing; exceptions are r = 4 (Collatz image of 1) and r = 11 (ghost image of 4) |
+| pairwise-meeting structure | formulas exact for orders 5–10 |
+
+**Most promising open route.** Meet-in-the-middle on the bilinear form H = c(suffix)·v(prefix). Compute the rank of
+the prefix state vectors {v_p}. If an effective rank of 1–2 dominates (for example, the S2-started coordinates), the
+problem reduces to divisor matching, which would give an exact absolute-target solver for N ~ 10^15 and
+large-scale evidence for the Two-Hub Conjecture.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
