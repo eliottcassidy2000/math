@@ -483,8 +483,8 @@ minimal length that has a solution, is the **greedy canonical representative** o
 and it is hereditary in the sense that the canonical word's prefixes are exactly the greedy choices along its path.
 - It solved 20/20 random targets near 10^3 (mean 623 nodes, against 1,727 for the plain decoder) and 20/20 near
   10^6 (mean 3.6×10^5 nodes, against 1.05×10^6). That is about 3× faster, though still super-polynomial in log N.
-- What remains for a proof: show that the greedy search never needs to backtrack past a bounded depth, except along
-  the dead r-branch 1 → 4 → 11.
+- ~~What remains for a proof: show that the greedy search never needs to backtrack past a bounded depth.~~
+  **Refuted in wave 16:** the final word leaves the first greedy descent within its first 1–3 letters.
 
 **Why only corridors of length 0 or 13 force the terrace count to factor (FINITE-EXACT, q < 30).** In the terrace
 interval packing (Session 337), a zero-corridor of length q contributes the 2×2 kernel [[A_q, B_q], [B_q, D_q]]. Its
@@ -497,8 +497,8 @@ The zeros are exactly **q = 0 and q = 13**. At q = 13 the kernel is a perfect sq
 - A_13 = 2209 = 47², B_13 = 2632 = 47·56, D_13 = 3136 = 56²;
 - the two determinants just before it are 47 and −56, and det_14 = 103 = 47 + 56.
 
-det_q is a linear recurrence: a quadratic form in tribonacci sequences, of order ≤ 6. So "zeros only at 0 and 13"
-is a Skolem–Mahler–Lech instance, provable by a p-adic argument. **P31:** det_q ≠ 0 for every q ≠ 0, 13.
+**P31:** det_q ≠ 0 for every q ≠ 0, 13. **PROVED in wave 16:** det_q = −T_(−q−3), so the corridor determinant is
+the tribonacci sequence run backward.
 Connections:
 - 13 is in the owner's set {4, 2, 5, 3, 7, 13} (THM-4838).
 - 47 is the extra miss of the span-2 ribbons (THM-4880). It is also a prime where 2 has odd order (23), with
@@ -515,7 +515,118 @@ terrace series Σ (−1)^q·E_q^(−s) and its abscissa.
 (involution modulus 24) and THM-4752 (tournament scores in II_{25,1} and the A24 deep hole). A testable link: the
 terrace kernels at rank one (q = 13) give a 2-dimensional rank-one quadratic form (47, 56). Its norm
 47² + 56² = 5345 = 5·1069 can be compared with the norms of II_{25,1} vectors attached to tournament scores
-(THM-4752). This is ANALOGY until such a map is exhibited.
+(THM-4752). This is ANALOGY until such a map is exhibited. (Wave 16: 5345 = T_(−30), forced by the doubling identity.)
+
+## Wave 16: the corridor theorem, the backward tribonacci zero, Singer 13, and the decoder's limits
+
+Script: [`scripts/corridor_tribonacci.py`](scripts/corridor_tribonacci.py) (output in `corridor_tribonacci.out`).
+T denotes the tribonacci numbers T_0 = T_1 = 0, T_2 = 1, extended to all of Z by T_(n−3) = T_n − T_(n−1) − T_(n−2).
+Put S_n = T_(−n), the backward sequence: 0, 1, −1, 0, 2, −3, 1, 4, −8, 5, 7, −20, 18, 9, −47, 56, **0**, −103, …
+
+**Theorem C (corridor factorization, PROVED).** The corridor kernel has entries A_q = T_(q+3) − T_(q+1),
+B_q = T_(q+3) − T_q and D_q = T_(q+3), and
+
+det K_q = T_(q+3)·T_(q−3) − T_q² = **−T_(−q−3)**.
+
+For q ≥ 0 the kernel is therefore rank one exactly when q ∈ {0, 13}.
+
+*Proof.*
+1. The entries follow from the generating functions: D − B = z²/(1 − z − z² − z³) and D − A = z/(1 − z − z² − z³).
+2. The recurrence gives 2T_q − T_(q+1) = T_(q−3). This turns A·D − B² into T_(q+3)T_(q−3) − T_q².
+3. Write T_n = Σ c_k α_k^n. In T_(q−3)T_(q+3) − T_q² the diagonal terms (i = j) cancel. The product of the three roots
+   is 1, so α_iα_j = 1/α_k, and what remains is a combination of α_k^(−q), i.e. a backward tribonacci sequence. Two
+   such sequences agree once they agree at q = 0, 1, 2.
+4. The two-sided sequence vanishes exactly at n ∈ {−16, −3, 0, 1}. This is CITED: García–Gómez–Luca,
+   [arXiv:2211.00248](https://arxiv.org/abs/2211.00248), give the exact zero-multiplicity, and Mane,
+   [arXiv:2507.11596](https://arxiv.org/abs/2507.11596), names T_(−16) = 0 as the zero not explained by
+   identically vanishing polynomials. An independent certificate (Skolem's method at p = 83):
+   - the tribonacci matrix has order 287 = 7·41 modulo 83;
+   - T ≢ 0 mod 83 outside the four zero classes;
+   - in each zero class, v_83(T_(z+287) − T_z) = 1.
+
+   So, by Strassmann (p ≥ 5), the 83-adic interpolation k ↦ T_(z+287k) has exactly one zero in each class. ∎
+
+So "the terrace decoder works backward" is literal: the corridor determinant *is* the backward tribonacci sequence.
+Corridor 13 is its sporadic zero T_(−16) = 0, and corridor 0 is the zero T_(−3) = 0.
+
+**The backward zero forces every known tribonacci square (PROVED identities, checked |q| < 400).**
+
+| identity | at a zero of S gives |
+|---|---|
+| T_(q−1)T_(q+1) − T_q² = −T_(1−q) | the progressions (1, 2, 4) and (3136, 5768, 10609) |
+| T_(q−3)T_(q+3) − T_q² = −T_(−q−3) | the corridor progression (81, 504, 3136) |
+| T_(q−4)T_(q+4) − T_q² = −4T_(−q−2) | the progression (81, 927, 10609) |
+| S_(q−1)S_(q+1) − S_q² = −T_(q+1) | T_16 = S_15² = 56², T_18 = S_17² = 103², T_3 = 1, T_5 = 4 |
+| S_(q−3)S_(q+3) − S_q² = −T_(q−3) | T_10 = S_13² = 9² |
+| S_(2n) = S_(n−1)² + S_n² + 2S_nS_(n+1) | S_30 = 47² + 56² = 5345 |
+
+The square tribonacci numbers in [OEIS A128911](https://oeis.org/A128911) are 0, 1, 4, 81, 3136 and 10609. None other
+exists below index 47,000, but completeness is open. Every one of them is forced this way, either by S_3 = 0 or by
+S_16 = 0. The only three-term geometric progressions T_a, T_b, T_c with 3 ≤ a < b < c < 300 are (3,4,5),
+(10,13,16), (10,14,18) and (16,17,18), each an identity above evaluated at a zero. The corridor progression
+(3^4, 2^3·3^2·7, 2^6·7^2) is {2,3,7}-smooth, and the {2,3,7}-smooth T_n below index 3000 are only 1, 2, 4, 7, 24,
+81, 504 and 3136.
+
+**P32:** every square in the two-sided tribonacci sequence is forced by a zero through such an identity. This would
+make A128911 complete.
+
+**One sporadic zero in the whole k-bonacci family (FINITE-EXACT, k = 3..15, indices ≥ −4000).** Since
+(x − 1)(x^k − x^(k−1) − … − 1) = x^(k+1) − 2x^k + 1, each two-sided k-bonacci sequence has a structured family of
+negative zeros: −3 − j(k+1) − i, for 0 ≤ j ≤ k−3 and 0 ≤ i ≤ k−3−j. These number (k−1)(k−2)/2. Every negative zero
+found is structured except one, tribonacci's T_(−16). So the corridor-13 factorization is the single sporadic event
+of the family.
+
+**Why 13: a Singer cycle of PG(2,3) (ELEMENTARY).**
+- x³ − x² − x − 1 is irreducible over F_3, and its roots have norm αβγ = 1. They therefore lie in the norm-one
+  subgroup of F_27^×, which has prime order (27 − 1)/2 = 13.
+- So the tribonacci period mod 3 is 13 = 1 + 3 + 9 = |PG(2,3)| = Φ3(3), and the matrix acts on the projective plane
+  of order 3 as a Singer cycle.
+- The zeros −3 and −16 lie in one class mod 13: corridor 13 is exactly one 3-adic period.
+- Mod 5 the period is 31 = Φ3(5) = |PG(2,5)|, the base-3 miss of wave 2.
+- ANALOGY: the Chan–Pak exceptions are 7 = Φ3(2) = |PG(2,2)| (Fano, P_7) and 21 = Φ3(4) = |PG(2,4)|. So the
+  corridor's 13 = Φ3(3) is the middle term of 7, 13, 21.
+- In the ghost language of wave 11, the backward ("ghost") side of the recurrence has a sporadic zero that controls
+  the forward side: the corridor factorization and all three large squares.
+
+**{4,2,5,3,7,13} and the Leech lattice.** Already in the repository: {4,2,5,3,7,13} = {d + 1 : d | 12}, with primes
+vSC(12) (THM-4838). Today's joint_metagraph_dyadic note shows these are the levels whose Hauptmodul eta exponent
+24/(N − 1) is even. New exact facts (ELEMENTARY; checked for 2k ≤ 60):
+- θ_Leech = E_12 − (65520/691)Δ with 65520 = 24·2730 = 2^4·(2^12 − 1) = 2^4·3^2·5·7·13. The kissing number is
+  196560 = 2^4·3^3·5·7·13, so the owner's set is read straight off it: 2^4, then 3, 5, 7, 13.
+- The numerator of the Eisenstein constant 4k/|B_2k| equals 2^a(2^(2k) − 1) exactly for 2k ∈ {2, 4, 6, 12}, giving
+  24, 240, 504 and 65520.
+- These are the weights where every prime of 2^(2k) − 1 has (p − 1) | 2k. Their primes 2k + 1 = 3, 5, 7, 13 are
+  Φ2(2) = F0, Φ4(2) = F1, Φ3(2) and Φ12(2): the two Busch bricks, the first Chan–Pak exception, and the corridor.
+- NUMEROLOGY: the middle of the corridor progression, T_13 = 504 = 2^3(2^6 − 1), is also the E_6 constant.
+
+**MRB (papers given to earlier sessions, merged).** The PDFs are not in this checkout. Their summaries are in
+[fermat_self_duality §8](../fermat_self_duality_fewcycle_coincidences_20261104.md) and session31's contour audit.
+- *Greedy residue expansions with an inverse-state map* (MRBaid2, MRBgreedy3, Burns' "A Convergent Greedy Residue
+  with Geometry"). There the initialisation question stays open. The two-hub analogue is measured below. Greedy
+  order is not an autonomous map, and everything rests on initialisation, as in MRBaid2. Unlike MRB, the state space
+  is finite (36 states), so the search is exact.
+- *Mirror pair* (NUMEROLOGY): the only rational solution of x^(1/x) = y^(1/y) with x ≠ y is (2, 4), with
+  2^4 = 4^2 = 16, which gives r_2 = 4 in the mirror-base constant B. The sporadic zero sits at index −16.
+- *Threshold 1/2* (ANALOGY): the MRB product survives iff α > 1/2 (mrb_seven_cutoffs). |det K_q| = |T_(−q−3)| grows
+  like τ^(q/2), because the complex roots have modulus τ^(−1/2). In both, 1/2 is a square-root cancellation
+  exponent.
+
+**The greedy decoder is a search order, not a decoder (FINITE-EXACT; `scripts/greedy_tail.c`,
+`scripts/greedy_logcenter.c`, 1000 consecutive odd targets per window).**
+
+| child order | window | first-descent success | mean nodes at final length | correct greedy head |
+|---|---|---:|---:|---|
+| tightest upper bound ≥ N | [23, 2023) | 0.2% | 287 | usually 0–2 letters |
+| tightest upper bound ≥ N | [10^4, 10^4 + 2000) | 0% | 3,886 | 0–2 of 9–10 |
+| tightest upper bound ≥ N | [10^6, 10^6 + 2000) | 0% | 260,860 | 0–2 of 13–14 |
+| N nearest the log-centre of [lo, hi] | [23, 2023) | 2.1% | 335 | 1–4 |
+| N nearest the log-centre of [lo, hi] | [10^4, 10^4 + 2000) | 0% | 2,887 | 2–3 |
+
+The max and min bounds over the 36 states are too coarse to steer the search. A real decoder needs finer
+invariants of the attainable set, such as its residues modulo 3^j from each state.
+
+**P33:** steering by the attainable residues mod 9 from each state (a finite automaton) raises first-descent success
+above 50% at 10^4.
 
 ## Next waves (queued predictions)
 
