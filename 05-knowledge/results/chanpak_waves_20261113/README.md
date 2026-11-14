@@ -1118,6 +1118,36 @@ away: the singular blocks are load-bearing (wave 20), and even with expansion th
 cofiniteness. A proof needs a new ingredient, either an exact numeration or a prime-specific mechanism. None of the
 strategies combined here supplies one.
 
+**A combination that does change something: a route to positive density.** The other session's free-address
+window is proved for every u ≥ 1: 908u + 9g(u) + {752, 754, 756, 758} are Hamiltonian-path counts
+(LINEAR_WINDOWS.md). So every distinct value of F(u) = 908u + 9g(u) gives a distinct count. If F is boundedly
+many-to-one, the Hamiltonian-path spectrum has positive lower density. Positive density is open: the repository's
+best proved lower bound is X^(3/4) up to logarithms (THM-5141).
+- *Data (FINITE-EXACT, [`scripts/fwin.c`](scripts/fwin.c), [`scripts/finj.c`](scripts/finj.c),
+  [`scripts/fcoll.py`](scripts/fcoll.py)).* This one family realizes 0.873% of the odd numbers up to 10^8, 10^9 and
+  10^10, which is 8/917 to three digits. For u ≤ 2·10^7, F takes 19,977,121 distinct values: 0.23% of arguments sit
+  in repeated values, and the largest multiplicity is 3. Colliding pairs share a long high prefix and differ only in
+  their low bits, for example u = 3232 = 110010100000 and u′ = 3259 = 110010111011.
+- *Structure (PROVED, elementary; checked on 5,000 random cases, [`scripts/phirec.py`](scripts/phirec.py)).* Write
+  Ψ for the binary pair energy, so g(u) = 1 + u − u₀ − Ψ(u). Then F(u) = 917u − 9Ψ(u) − 9u₀ + 9. Splitting
+  u = 2^m V + W gives F(u) = 917·2^m V − 9Ψ(V) + 9 + Φ_V(W), where
+  Φ_V(W) = 917W − 9Ψ(W) − 9V·rev_m(W) − 9·v₀·w_(m−1) − 9·w₀.
+  Peeling the top bit b of W gives Φ_V(b·2^(m−1) + W) = Φ_(2V+b)(W) + b·(917·2^(m−1) − 9V − 9v₀). Hence a
+  collision F(u) = F(u′) whose highest differing bit is m − 1 is a "cross" coincidence
+  Φ_(2V)(W) = Φ_(2V+1)(W′) + (917·2^(m−1) − 9V − 9v₀) between (m−1)-bit words.
+- *Two partial lemmas (PROVED).*
+  - For fixed (W, W′), the cross equation is linear in V with coefficient 2(rev W − rev W′) − 1, which is odd and
+    nonzero. So at most two values of V (one per parity) give a cross collision.
+  - Collisions also need 9 | (u′ − u). So at a level with 4^m ≤ U there are at most 2·4^(m−1)/9 + 2^m colliding
+    pairs, and all such levels together contribute at most about U/13.
+- *The gap.* At the high levels (4^m > U, high part V smaller than 2^m) only crude bounds hold. Injectivity of Φ_V'
+  on the bottom half of the bits gives multiplicity at most about 2^(m/2)·(103/V)^(1/2), hence about U^(3/2) pairs.
+  The data (Φ_V at most 2-to-one for all sampled V ≤ 103·2^m and m ≤ 14, [`scripts/phimult.c`](scripts/phimult.c))
+  point to O(U log U).
+- *What would follow.* Collision pairs O(U^(5/4 − ε)) would already beat X^(3/4). O(U log U) gives at least c·X/log X
+  counts below X. O(U) gives positive lower density. This is the one place in this wave where two strategies combine
+  into something neither has alone: the other session's exactness and this wave's distinctness analysis.
+
 **Pre-registered.**
 - **P41 (registered in the session draft before the 2^24 run finished; two of three parts CONFIRMED).** For the
   11-block orbit on [2^23, 2^24]:
