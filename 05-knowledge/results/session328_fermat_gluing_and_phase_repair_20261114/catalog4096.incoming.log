@@ -1,0 +1,80 @@
+catalog 1 4096 1
+FINAL 1 1
+catalog 1 2048 1
+catalog 2 4096 1
+FINAL 2 1
+catalog 1 1024 1
+catalog 2 2048 1
+catalog 3 4096 2
+FINAL 3 2
+catalog 1 512 1
+catalog 2 1024 1
+catalog 3 2048 2
+catalog 4 4096 4
+FINAL 4 4
+catalog 1 256 1
+catalog 2 512 1
+catalog 3 1024 2
+catalog 4 2048 4
+catalog 5 4096 12
+FINAL 5 12
+catalog 1 128 1
+catalog 2 256 1
+catalog 3 512 2
+catalog 4 1024 4
+catalog 5 2048 12
+catalog 6 4096 56
+FINAL 6 56
+catalog 1 64 1
+catalog 2 128 1
+catalog 3 256 2
+catalog 4 512 4
+catalog 5 1024 12
+catalog 6 2048 56
+catalog 7 4096 456
+FINAL 7 456
+catalog 1 32 1
+catalog 2 64 1
+catalog 3 128 2
+catalog 4 256 4
+catalog 5 512 12
+catalog 6 1024 56
+catalog 7 2048 456
+catalog 8 4096 2160
+FINAL 8 2160
+catalog 1 16 1
+catalog 2 32 1
+catalog 3 64 2
+catalog 4 128 4
+catalog 5 256 12
+catalog 6 512 56
+catalog 7 1024 191
+catalog 8 2048 405
+catalog 9 4096 716
+FINAL 9 716
+catalog 1 8 1
+catalog 2 16 1
+catalog 3 32 2
+catalog 4 64 4
+catalog 5 128 12
+catalog 6 256 27
+catalog 7 512 45
+catalog 8 1024 71
+catalog 9 2048 106
+catalog 10 4096 151
+FINAL 10 151
+catalog 1 4 1
+catalog 2 8 1
+catalog 3 16 2
+catalog 4 32 4
+catalog 5 64 6
+catalog 6 128 8
+catalog 7 256 10
+catalog 8 512 12
+catalog 9 1024 14
+catalog 10 2048 16
+catalog 11 4096 18
+FINAL 11 18
+FINAL 12 1
+PHASE 4096 19 217
+PHASE 4096 25 223
