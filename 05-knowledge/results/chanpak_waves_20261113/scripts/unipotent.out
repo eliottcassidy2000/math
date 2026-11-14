@@ -1,0 +1,10 @@
+checked: A^-1 B is unipotent of the stated shape for all 155 same-length pairs, |w| = 2..6
+odd part of gcd of all 2x2 determinants det[(gamma,beta),(gamma',beta')]: 3 {3: 1}
+p=3 witness: None
+p=5 witness: ('OOZ', 'OZZ', 'OOOZ', 'OOZZ', 3/4)
+p=7 witness: ('OOZ', 'OZZ', 'OOOZ', 'OOZZ', 3/4)
+p=11 witness: ('OOZ', 'OZZ', 'OOOZ', 'OOZZ', 3/4)
+p=13 witness: ('OOZ', 'OZZ', 'OOOZ', 'OOZZ', 3/4)
+u1 = [[1, 0, 0], [-5/4, 1, -2], [-1/4, 0, 1]]  u2 = [[1, 0, 0], [-27/8, 1, -6], [-3/8, 0, 1]]
+det of abelianized images = 3/4   commutator [u1,u2] = [[1, 0, 0], [-3/4, 1, 0], [0, 0, 1]]
+J_{H,E} = -1  (J^-1)_{H,E} = 1  det J = 1

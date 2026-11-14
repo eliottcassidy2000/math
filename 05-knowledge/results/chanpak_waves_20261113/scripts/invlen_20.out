@@ -1,0 +1,10 @@
+mode=1 K=20 cap=1000 nodes=8152027
+total misses 2324, largest 1047443
+mode=1 K=20 cap=1000 nodes=9294118
+total misses 967, largest 1046797
+mode=1 K=20 cap=1000 nodes=10326947
+total misses 494, largest 1043627
+mode=1 K=20 cap=1000 nodes=11297608
+total misses 310, largest 1043365
+mode=1 K=20 cap=1000 nodes=12211361
+total misses 257, largest 1043627

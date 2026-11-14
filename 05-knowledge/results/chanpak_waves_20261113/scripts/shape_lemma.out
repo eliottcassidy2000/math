@@ -1,0 +1,2 @@
+shape lemma verified for 2047 blocks J O v Z with |w| <= 12; b runs over the odd numbers of (2^(n-1), 2^n) once each
+invertibility characterization verified for all 2047 blocks J w with |w| <= 10: 512 invertible, 1535 singular

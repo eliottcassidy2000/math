@@ -1519,6 +1519,261 @@ The automorphism and Heegner coincidences constrain no count: a realizer of 7 wo
 - **P50.** For k hubs over a transitive spine, the transfer is triangularizable with letter eigenvalues
   {0, 1, …, k + 1}. So the weight group has rank π(k + 1): rank 2 for k = 2, 3 and rank 3 for k = 4, 5.
 
+## Wave 24: the invertible root-change orbit — reset-free, Haar-distributed, and complete beyond 6223
+
+Owner prompt (2026-11-14): attempt a density-one theorem for the root-change orbit using its GL₃ structure, and
+keep looking for creative routes to Chan–Pak. **Chan–Pak OPEN. Density one OPEN; its local half is now PROVED, and
+what remains is the archimedean / minor-arc half of an L² local limit law.**
+
+The short answer of this wave:
+- **The object.** The right object is the *invertible* sub-language: the one-apex source followed by invertible
+  blocks only. It has no singular block, so no reset, and it attains every odd N > 6223 through 2^24.
+- **The local half (proved).** Its local behaviour is settled: the blocks generate {g : det g ∈ ⟨2⟩} modulo every
+  odd prime ([THM-5162](../../../01-canon/theorems/THM-5162-strong-approximation-for-the-invertible-root-change-blocks-heisenberg-unipotents-and-the-haar-local-law.md)),
+  and the counts follow the Haar law exactly. The census matches this law to three decimals.
+- **Primes.** Primes are not disadvantaged: their singular series is (7/8)ζ(3) > 1.
+- **What remains.** Density one, and with it a proof by contradiction of Chan–Pak, now needs only the archimedean
+  half of an L² local limit law. The data give that half with V(X) ≈ 8/mean(X) → 0.
+
+**Prior art first (KNOWN, credited).**
+- THM-5120 (Session 246) proves that rank-one resets force a factorization and that prime-count words avoid them.
+- The local densities of the one- and two-root-change families come from p-divisible ("confined") states:
+  THM-5128, THM-5134, THM-4916, HYP-9506, HYP-9660. Their uniform-gap conjecture HYP-9660 (B) concerns the rank-one
+  digit operators.
+- Wave 20 found that invertible blocks alone miss 34% of the odd numbers below 2^21. That census capped the source
+  at four letters (`runterm.c`), and that cap turns out to be the whole effect.
+- Wave 23 proved Zariski density in GL₃ and computed the images mod 3 and mod 5.
+
+The shape formula, the Heisenberg unipotents, the surjection at every odd prime, the Haar law and the
+free-source census are new here. No strong-approximation statement was in canon before THM-5162.
+
+### 1. The invertible language attains every odd N > 6223 (FINITE-EXACT)
+
+Letters act on (H, E, L, h) as usual, starting from (1, 1, 1, 1). Once the first J has occurred, two rules apply:
+- no Z directly after a J;
+- no J directly after an O.
+
+So every block J w has w empty or w = O v Z, and these are exactly the invertible blocks (§2). The census
+[`scripts/invorb.c`](scripts/invorb.c) counts the words ending in J or Z for each count.
+
+| language (mode) | misses below 2^20 | largest | misses checked to | per-window misses from |
+|---|---:|---:|---|---|
+| one-apex source + invertible blocks, any length (1) | 43 | 6223 | **2^24: still 43** (2^28 run in progress at this commit) | 0 from [2^13, 2^14) on |
+| no source: orbit of (1,1,1,1) (2) | 288 | 179,367 | **2^26: still 288** | 0 from [2^18, 2^19) on |
+| mode 1, blocks with \|w\| ≤ 6 | 43 | 6223 | 2^20 | — |
+| mode 1, \|w\| ≤ 5 (16 blocks) | 48 | 12,811 | **2^26: still 48** (P62) | — |
+| mode 1, \|w\| ≤ 4 (8 blocks) | 71 | 968,947 | 2^20 | — |
+| mode 1, \|w\| ≤ 3 | 721 | 1,048,507 | 2^20 | — |
+| free source, J and J O^k Z only (one Z per block) | 350 | 1,041,965 | 2^26: 3823, the largest 67,076,437 (P63) | 0.01% of [2^25, 2^26) |
+| free source, J and blocks with exactly two Z's | 355 | 1,028,217 | 2^20 | 0.03% of [2^19, 2^20) |
+| free source, J and the 2^(n−2) blocks of one length n = 4, 5, 6, 7, 8 | 2324, 967, 494, 310, 257 | above 10^6 | 2^20 | positive in every window |
+
+The 43 misses of mode 1 are 7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 281, 299, 313,
+335, 421, 449, 503, 533, 551, 569, 583, 637, 667, 821, 1067, 1339, 1387, 1661, 1811, 1861, 1877, 1957, 2647, 3523,
+3551, 5231 and 6223. The full grammar's 29 are among them.
+
+Multiplicities:
+
+| window | mode 1 mean | primes | minimum (at) | mode 2 mean | primes | minimum (at) |
+|---|---:|---:|---|---:|---:|---|
+| [2^17, 2^18) | 116.5 | 107.7 | 18 (135,049) | 59.2 | 62.6 | 0 (169,935) |
+| [2^20, 2^21) | 207.8 | 191.6 | 29 (1,142,249) | 105.1 | 110.8 | 6 (1,142,249) |
+| [2^23, 2^24) | 369.1 | 339.8 | 99 (9,193,369) | 186.0 | 195.8 | 30 (8,560,341) |
+
+Fitted growth exponents of the mean multiplicity over [2^16, 2^24):
+
+| | all N | primes |
+|---|---:|---:|
+| mode 1 | 0.2777 | 0.2771 |
+| mode 2 | 0.2753 | 0.2748 |
+
+The 11-block orbit of wave 21, which has resets, gives 0.38 for all N and 0.25 for primes. So the language is
+supercritical with critical exponent δ ≈ 1.28 (#words with count ≤ X ≈ X^δ), and primes keep the full exponent.
+
+Mixing scales matters. A single block length leaves hundreds of misses up to the top of the range
+([`scripts/invlen.c`](scripts/invlen.c)), while lengths up to 5 together already look cofinite.
+
+**Correction to wave 20.** "The singular blocks are load-bearing" holds only with a capped source. With a free
+one-apex source, the invertible blocks alone are complete beyond 6223, and blocks with |w| ≤ 5 are complete beyond
+12,811 (to 2^20).
+
+### 2. The shape of a block, and its Heisenberg skeleton (PROVED, THM-5162 (A), (B))
+
+- **Shape.** Let w = O v Z, n = |w|, and let S be its set of Z-positions. Put P = Σ_{s∈S} 2^(s−1),
+  R = Σ_{s∈S} 2^(n−s) (the n-bit reversal of P), and let Q be the pair energy of S. Then J w acts on (H, E, λ) by
+
+      M_w = [[b − Q, −1, b], [1, 0, 0], [2^n − R, 0, 2^n]],   b = 1 + P,   det = 2^n.
+
+  As v varies, b runs over the odd numbers of (2^(n−1), 2^n), once each.
+- **Invertibility.** J w is invertible iff w is empty or w = O v Z. A final O kills the E-row, and J Z ignores E.
+  Checked exactly for all 2047 blocks with |w| ≤ 12 ([`scripts/shape_lemma.py`](scripts/shape_lemma.py)).
+- **Reading.** The last block reads N = b(H + λ) − E − QH, and E′ = H. Counts move through a shift register
+  (H, E) = (current, previous), as in a negative continued fraction q_(k+1) = a q_k − q_(k−1), with λ as a carry.
+- **Unipotents.** For blocks A, B of equal length, A⁻¹B = [[1, 0, 0], [α, 1, β], [γ, 0, 1]] with β = b_A − b_B and
+  γ = (c_B − c_A)/2^n. In the basis (e_H, e_λ, e_E) this is lower unitriangular, so every such quotient lies in one
+  Heisenberg group U, the unipotent radical of the flag ⟨e_E⟩ ⊂ ⟨e_λ, e_E⟩
+  ([`scripts/unipotent.py`](scripts/unipotent.py), all 155 pairs with |w| ≤ 6).
+- **Hammersley digits.** Relative to the anchor J O^(n−1) Z, the abelianized digits (γ, β) of the 2^(n−2) blocks of
+  length n are, up to scaling, exactly the Hammersley set {(k, rev_(n−2)(k))}, a (0, n−2, 2)-net in base 2. So the
+  invertible orbit is a walk whose step at scale 2^n is an anchor times a perfectly equidistributed Heisenberg digit.
+  This is THM-5141's reversal graph, now seen as the digit set of a group walk.
+
+### 3. Strong approximation at every odd prime (PROVED, THM-5162 (C))
+
+The invertible blocks generate G_p = {g ∈ GL₃(F_p) : det g ∈ ⟨2⟩} for every odd prime p, and the analogous group
+modulo every odd squarefree q. Proof in four lines:
+1. u₁ = JOOZ⁻¹·JOZZ and u₂ = JOOOZ⁻¹·JOZZZ have abelianized coordinates (−1/4, −2) and (−3/8, −6), with determinant
+   3/4. For p ≥ 5 they therefore generate the Heisenberg group U(F_p) (Burnside basis theorem); their commutator is
+   the transvection I − (3/4)E_(E,H).
+2. J_(H,E) = −1 and (J⁻¹)_(H,E) = 1, so J moves the flag of U to an opposite flag in every characteristic. U and an
+   opposite unipotent radical generate SL₃(F_p).
+3. The determinants 4 and 8 generate ⟨2⟩.
+4. p = 3 is wave 23's exhaustive search. Squarefree q follows by Goursat.
+
+The Heisenberg route genuinely fails at p = 3: over all 155 same-length pairs with |w| ≤ 6, the odd part of the gcd
+of the 2 × 2 determinants is exactly 3. P52 is thus PROVED, beyond the exact search at p = 7 that it named.
+
+**Corollary (Haar local law, PROVED for random words).**
+- *From a primitive state:* from any state ≢ 0 mod p, long random invertible words give counts distributed mod p
+  as the first coordinate of a uniform nonzero vector of F_p³. So ν_p(0) = (p² − 1)/(p³ − 1), slightly below 1/p.
+- *With a source:* with a one-apex source, the only change is the source's p-divisible share π_p: the law is
+  π_p δ₀ + (1 − π_p) ν_p.
+- *Primes:* without p-divisible states, the prime singular series is ∏_{p odd} p³/(p³ − 1) = (7/8)ζ(3) = 1.0518.
+
+### 4. The local law in the census (pre-registered P53, P56, P58; all CONFIRMED)
+
+Ratio of the mean multiplicity over odd N prime to p to the overall mean, on [2^23, 2^24) (mode 2, no source):
+
+| p | 3 | 5 | 7 | 11 | 13 | 17 |
+|---|---:|---:|---:|---:|---:|---:|
+| measured | 1.040 | 1.008 | 1.003 | 1.001 | 1.000 | 1.000 |
+| Haar p³/(p³−1) | 1.0385 | 1.0081 | 1.0029 | 1.0008 | 1.0005 | 1.0002 |
+
+In mode 2 the prime mean is 1.0526 times the overall mean, against (7/8)ζ(3) = 1.0518. With a free source (mode 1,
+[2^21, 2^22), [`scripts/srcdiv.c`](scripts/srcdiv.c)), π_p is measured directly. The predicted ratio
+(1 − π_p)p³/(p³ − 1) and the measured ratio are:
+
+| p | π_p | predicted | measured (words) | census (values) |
+|---|---:|---:|---:|---:|
+| 3 | 0.0805 | 0.9548 | 0.9562 | 0.957 |
+| 5 | 0.0308 | 0.9770 | 0.9771 | 0.977 |
+| 7 | 0.0039 | 0.9990 | 0.9992 | 0.999 |
+| 11 | 0.0050 | 0.9957 | 0.9958 | 0.996 |
+| 13 | 0.0012 | 0.9993 | 0.9994 | 0.999 |
+
+The relatively large π_11 and the visible effect at 17 match THM-5128 (F): 3, 5, 11 and 17 are the primes with a
+balanced divisible one-apex state at small h. Compare the 11-block orbit with resets: 0.405, 0.672, 0.930, 0.958,
+0.973 at p = 3, …, 13, and 0.164 for primes (wave 21).
+
+So the higher-rank blocks wash out every local bias except the one carried in by the rank-one source. This is the
+GL₃ structure at work, and it bypasses HYP-9660 (B) (the uniform gap of the rank-one digit operators) for every
+primitive source.
+
+### 5. Density one: what is proved, and what remains
+
+*Reduction (elementary).* Let model(N) be the window mean times the class factors. Put
+V(X) = mean over odd N in [X, 2X) of (r(N)/model(N) − 1)². By Chebyshev, the share of odd N in [X, 2X) with
+r(N) = 0 is at most V(X). So density one follows from V(X) → 0, an L² local limit law.
+
+*Data (P55, CONFIRMED; [`scripts/l2test.py`](scripts/l2test.py); model mod 9, 5, 7):*
+
+| window | 2^15 | 2^17 | 2^19 | 2^21 | 2^23 |
+|---|---:|---:|---:|---:|---:|
+| mode 1: V | 0.0985 | 0.0662 | 0.0459 | 0.0323 | 0.0228 |
+| mode 1: V·mean | 7.77 | 7.71 | 7.86 | 8.12 | 8.43 |
+| mode 1: share with r < model/2 | 0.043 | 0.016 | 0.0052 | 0.0010 | 0.00011 |
+| mode 2: V | 0.171 | 0.116 | 0.0805 | 0.0560 | 0.0390 |
+| mode 2: V·mean | 6.89 | 6.90 | 6.99 | 7.13 | 7.26 |
+
+The multiplicities behave like overdispersed Poisson counts around the Haar model, with variance about 8 times the
+mean. So V ≈ 8/mean ∝ X^(−0.28). The slow drift of V·mean (+0.15 per doubling in mode 1) is what a residual
+structured variance of about 0.003 would give (unmodelled local factors, such as powers of 3, and the smooth
+archimedean slope within a window).
+
+*Where a proof stands, in the Bourgain–Kontorovich template.*
+- **Local / major arcs.** PROVED at each fixed squarefree q (THM-5162 with the Markov chain on G_q).
+  - *Uniformity in q:* would follow from expansion. Salehi Golsefidy–Varjú (2012) applies to the commutator
+    subgroup, whose Zariski closure SL₃ is perfect; the transfer to the semigroup walk is the usual
+    μ̌ * μ argument. CITED, not written out.
+  - *Determinant part:* it mixes slowly (a walk on ⟨2⟩ mod q), but it does not bias the count, because G_q acts on
+    nonzero vectors through SL₃ orbits.
+  - *Numerically the gap is uniform (P64, CONFIRMED;
+    [`scripts/gapwalk.py`](scripts/gapwalk.py)).* The walk applies one of the 16 invertible blocks with |w| ≤ 5,
+    uniformly at random, to a nonzero vector of F_p³. Its second-largest eigenvalue modulus is:
+
+    | p | 3 | 5 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 31 | 37 | 41 | 43 |
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+    | λ₂ | 0.565 | 0.409 | 0.437 | 0.327 | 0.335 | 0.331 | 0.317 | 0.296 | 0.288 | 0.289 | 0.288 | 0.285 | 0.282 |
+
+    It falls toward about 0.28 as p grows. A block of this walk averages 5 letters, so per letter the rate is about
+    0.28^(1/5) ≈ 0.78 at large p and at most 0.565^(1/5) ≈ 0.89 at p = 3. The rank-one digit operators of
+    HYP-9660 (B) run at 0.932 per digit, attained at modulus 7. More important than the size is the trend: λ₂ does
+    not creep toward 1 as p grows. This is the numerical face of expansion: the higher-rank walk supplies the
+    uniformity in the modulus that the rank-one theory lacks.
+- **Archimedean.** Not done. It needs a renewal theorem for the norm cocycle of an infinitely generated semigroup,
+  with congruence twists.
+- **Minor arcs.** OPEN. The natural bilinear form is the one above: N = b(H + λ) − E − QH, a reader digit b
+  (Hammersley-distributed) against a source state. The B–K minor-arc estimates lose too much at δ ≈ 1.28. Their
+  Zaremba method needs δ near 2 in these units; Huang's improvement needs about 5/3.
+- **The closest proved case is the Apollonian packing.** Its critical exponent is 1.3056 against our 1.28, and
+  density one was proved there by Bourgain–Kontorovich (2014). That proof uses arithmetic subgroups inside the
+  symmetry group: the stabilizer of a circle, whose orbits are binary quadratic forms. Here the analogue is the
+  Heisenberg group U of §2. Its orbits are 2-parameter polynomial families, but U lives in the group and not in the
+  semigroup: B = A·u means that replacing a block by another of the same length applies u, while u itself needs A⁻¹.
+  Whether some semigroup family realises a full U-orbit is the concrete open question this wave leaves.
+
+### 6. Chan–Pak by contradiction, re-mapped on the invertible orbit
+
+Suppose N > 6223 is the least odd number that is not a count. By THM-4094 it is a prime or 7p. In the invertible
+orbit:
+- no congruence class is obstructed (THM-5162);
+- no reset or confinement can force a factor (THM-5120, THM-5162 (E));
+- primes even get a favourable singular series ((7/8)ζ(3) times the source factor).
+
+So N would be a purely archimedean, sporadic hole in a supercritical, Haar-distributed orbit whose multiplicity
+there is about 0.92·mean(N). In the overdispersed-Poisson model of §5, a hole at multiplicity m has probability
+about 8^(−m/7). That is e^(−110) at m = 369, which is the scale of 2^23, so the expected number of holes above 2^13
+is far below 1. This is the heuristic, not a proof. The single missing theorem of wave 23 now takes its cleanest
+form:
+
+> **Missing theorem (invertible form).** For the invertible root-change semigroup, V(X) → 0. That is, the counts of
+> a Zariski-dense, reset-free, supercritical semigroup orbit in GL₃(Z[1/2]) obey an L² local limit law with the
+> Haar singular series.
+
+That gives density one. Pointwise, with an explicit rate for the minimum multiplicity, it would give HYP-9682 and
+hence Chan–Pak.
+
+### Verdicts and new predictions
+
+[Pre-registration file](scripts/wave24_prereg.md) (2026-11-14T23:10:34Z; addendum before any mode-2 window
+statistics were printed).
+- **P51 CONFIRMED.** Mode 1 per-window misses fall to 0 from [2^13, 2^14) on; [2^21, 2^22) misses none.
+- **P52 PROVED** (THM-5162 (C)), for every odd prime, not only the registered p = 7.
+- **P53 CONFIRMED.** The ratio at p = 3 is 0.957 (registered interval [0.80, 1.00]). At 5, 7, 11, 13 the ratios are
+  0.977, 0.999, 0.996, 0.999 (registered [0.93, 1.02]). The prime mean is 0.92 of the mean (registered ≥ 0.5).
+- **P54 CONFIRMED.** The fitted exponents are 0.2777 for all N and 0.2771 for primes (registered: a difference of at
+  most 0.03).
+- **P55 CONFIRMED.** V falls from 0.0662 to 0.0323 between 2^17 and 2^21.
+- **P56 CONFIRMED.** On [2^21, 2^22) the ratios are 1.042, 1.008, 1.003, 1.001, 1.000, against 1.0385, 1.0081,
+  1.0029 (each within 0.01) and 1 (within 0.005).
+- **P57 CONFIRMED.** Mode 2 misses nothing in [2^21, 2^24), and nothing in (179,367, 2^26] (minimum multiplicity
+  68 on [2^25, 2^26), prime mean 1.0525 times the mean).
+- **P58 CONFIRMED.** At p = 3 the ratio lies in [0.955, 0.960] on every window from 2^16 to 2^23. The law
+  (1 − π_p)p³/(p³ − 1) holds within 0.0015 at the five primes measured.
+- **P64 CONFIRMED** (second addendum, registered before the program was written). λ₂ ≤ 0.565 for every odd prime
+  p ≤ 43; the bound registered was 0.60.
+- **P62 CONFIRMED** (registered in the third addendum before the run). Blocks with |w| ≤ 5 and a free source miss
+  exactly 48 odd numbers below 2^26, the largest 12,811. So 16 invertible matrices look cofinite: compare the 63
+  matrices, singular ones included, of HYP-9677.
+- **P63 CONFIRMED** (same addendum). The pure-block family (J and J O^k Z) misses 3823 odd numbers below 2^26, the
+  largest 67,076,437, and every window from 2^12 to 2^25 holds more than 10 misses. One block per scale is not
+  enough; the Hammersley digits are.
+
+Open predictions (third addendum of the pre-registration file, registered before these runs):
+- **P59.** Mode 1 misses no odd N in (6223, 2^30].
+- **P60.** Mode 2 misses no odd N in (179,367, 2^28].
+- **P61.** In mode 1, V(X)·mean(X) stays in [7, 11] on every window up to [2^27, 2^28).
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.

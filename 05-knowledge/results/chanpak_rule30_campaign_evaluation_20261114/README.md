@@ -22,6 +22,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | Terrace corridors: det K_q = −T(−q−3), rank one exactly at q = 0 and 13 | wave 16 |
 | Conditional: the Staircase-Run Conjecture implies the exceptions are exactly {7, 21} | busch §5 |
 | The invertible root-change blocks generate a group Zariski-dense in GL_3; the transfers of one apex and one hub are triangularizable with weights {1, 2}, of two hubs with weights {1, 2, 3} | wave 23 |
+| The invertible root-change blocks generate {g in GL_3(F_p) : det g in <2>} modulo every odd prime, and the analogous group modulo every odd squarefree q (strong approximation through Heisenberg unipotents and an opposite flag); every invertible block is [[b−Q, −1, b], [1, 0, 0], [2^n−R, 0, 2^n]] with Hammersley-net digits; long random invertible words have the Haar local law, with prime singular series (7/8)ζ(3) | wave 24, THM-5162 |
 
 ### What is only verified
 
@@ -31,6 +32,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | two-hub words, length ≤ 18 | every odd N < **226,079,703** except 7 and 21 (new today; ratio X(L)/3^L = 0.584) |
 | interval-hub words (u2's out-set an interval), m ≤ 23 | every odd N < **26,610,535** except 7 and 21 (new today; binary-scale horizon 3–5·2^m) |
 | O/Z/J root-change words (KNOWN: THM-4904, HYP-9494 (D)) | every odd N in (2647, 10^9]; the wave-19 decoder adds random samples near 10^12 and 10^15 |
+| invertible root-change language: a one-apex source, then invertible blocks only, no resets (HYP-9682) | every odd N in (6223, 2^24]; the 16 blocks with \|w\| ≤ 5 alone: (12,811, 2^26]; the orbit of (1,1,1,1) alone: (179,367, 2^26] (wave 24) |
 | bounded runs ≤ 5, the 63 matrices of HYP-9677 | every odd N in (10,391, 2^24] (wave 20; the record was 2^19); runs ≤ 4 (31 matrices): every odd N in (130,247, 2^25] |
 | Fermat-block cuts of order-≤9 sources | every odd N in [69, 398,129] |
 | span-2 ribbons | every odd N ≤ 100,000 except 7, 21 and 47 |
@@ -48,7 +50,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | Shallow-Cut Conjecture and port-wedge induction | **alive** | order-9 sources reach 398,129; the §4 transfer closes linearly on (H, D, h, E, S) |
 | rational base 3/2 frame digits (P34) | **new, untested** | nested frames weigh 2^(A−g)·3^(g−1) |
 | interval-hub numeration (P35/P36) | alive, superseded | complete through 26,610,535; but the O/Z/J root-change grammar (KNOWN) is smaller: 4-dimensional state, 3 letters |
-| **cofiniteness of the O/Z/J semigroup orbit (HYP-9640, HYP-9677)** | **the repository's main formulation** | one-chain equations are near-products (wave 19); a proof must use chains of length ~log N; 14–16 matrices already appear to suffice beyond 130,247, and the run cap has a trichotomy with critical cap 2–3 (wave 20); the invertible blocks are Zariski-dense in GL_3 (real rank two) and carry no Jacobi-symbol invariant, so the rank-one reciprocity failures of the Apollonian and Rickards–Stange orbits have no analogue (wave 23) |
+| **cofiniteness of the O/Z/J semigroup orbit (HYP-9640, HYP-9677)** | **the repository's main formulation** | one-chain equations are near-products (wave 19); a proof must use chains of length ~log N; 14–16 matrices already appear to suffice beyond 130,247, and the run cap has a trichotomy with critical cap 2–3 (wave 20); the invertible blocks are Zariski-dense in GL_3 (real rank two) and carry no Jacobi-symbol invariant, so the rank-one reciprocity failures of the Apollonian and Rickards–Stange orbits have no analogue (wave 23); the reset-free invertible sub-language is already complete beyond 6223 with an exact Haar local law (THM-5162), so what remains is only the archimedean half of an L² local limit law (wave 24, HYP-9682) |
 | dichotomy: a third exception must belong to an arithmetic family | **alive (heuristic)** | every candidate family checked so far is complete |
 | positive density through the free-address window 908u + 9g(u) + {752, …, 758} | **alive** | F(u) = 908u + 9g(u) collides like a Poisson process (0.11% of arguments to 2^30, no value hit four times); a proof needs the wide-window case of THM-5141 (wave 22) |
 
@@ -102,6 +104,8 @@ The rank ladder of the transfer algebras also corrects a guess. The two-hub tran
 like the one-hub transfer. What separates them is the rank of the weight group: ⟨2⟩ for the half-dense families,
 ⟨2, 3⟩ for two hubs, as in Furstenberg's ×2 versus ×2×3.
 
+**Update (wave 24).** The invertible sub-language is the clean form of the conjecture. It is a one-apex source followed by invertible blocks only, so it has no singular block, no reset and no confinement. Wave 20's "invertible blocks miss 34%" came from capping the source at four letters. With a free source the language misses exactly 43 odd numbers below 2^24, the largest 6223 (HYP-9682). Its local half is now proved (THM-5162): the blocks generate {g : det g in <2>} modulo every odd prime, and long random words have the Haar law. The census matches that law to three decimals, and primes get the singular series (7/8)ζ(3) ≈ 1.052 instead of a deficit. Density one, and with it the proof by contradiction of wave 23, now needs only the archimedean / minor-arc half of an L² local limit law. The data give V(X) ≈ 8/mean(X) → 0, and the walk mod p has a uniform spectral gap (λ₂ ≤ 0.565 for all odd p ≤ 43).
+
 ## Rule 30: the three prize problems
 
 ### Repository program (36 theorems, THM-3456 … THM-4210)
@@ -139,7 +143,11 @@ quantified in the LFSR and FCSR models; the quadratic-register model is next.
 
 ## Ranked next moves
 
-1. Prove cofiniteness, or density one, for a sub-semigroup of the O/Z/J grammar whose chains grow like log N.
+1. Prove density one (V(X) → 0) for the invertible root-change orbit, HYP-9682. Its local half is THM-5162; what is
+   missing is the archimedean / minor-arc half, in the Apollonian regime (critical exponent 1.28 against 1.3056). The
+   concrete open question is whether some semigroup family realizes a full orbit of the Heisenberg group of
+   THM-5162 (B), the analogue of the circle stabilizers that Bourgain–Kontorovich used (wave 24; Chan–Pak).
+   Earlier formulation: prove cofiniteness, or density one, for a sub-semigroup of the O/Z/J grammar whose chains grow like log N.
    The smallest explicit target found so far: 11 block matrices after a first run of length at most 4 reach every
    odd N in (418,429, 2^26] (wave 20; HYP-9677 has 63). The wave-19 decoder supplies exact instances. Wave 23 shows
    this is exactly the step a proof by contradiction lacks: the orbit is Zariski-dense in GL_3, so the needed
