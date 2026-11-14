@@ -54,3 +54,11 @@ line meets one of the source classes, or that every ordinary prime is
 covered. The source search now handles whole target lines and arbitrary
 rooted cores, but choosing a universally successful physical pair is
 still the absolute-target problem.
+
+**Follow-up: two contacts.** [The new endpoint correction](TWO_CONTACT_REPAIR.md)
+gives actual two-width ordinary unit repairs, including adjacent
+prime 2053 and 2051 = 7 times 293. It also constructs a third
+exact target-line source: \((1349,2718)\) for prime cofactor 1,229,903,
+a nonterrace state with small even defect rather than a forbidden
+dyadic slope. Run `python two_contact.py` for the direct replay and
+the target-line inverse for this expanded bank.
