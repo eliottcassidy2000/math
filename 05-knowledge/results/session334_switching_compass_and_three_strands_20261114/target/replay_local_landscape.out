@@ -1,0 +1,4 @@
+params 288 [('0', 5, 24), ('2', 5, 24)]
+{'hub flip': 6, 'shell delete': 4, 'shell replace': 49, 'shell boundary insert': 61, 'swap': 6, 'run split edit 0': 98, 'run split edit 2': 45}
+joint obstruction: 3 is forbidden in 125 possible residues mod 288
+individual moduli fail: -349116574 40536336062
