@@ -770,6 +770,123 @@ explicit scale factors (B, C) from the 6-dimensional prefix phase. Then prove th
 images of these scaled numerals covers every odd N ≥ 23, by a digit decoder with carries. This is a binary-scale,
 low-dimensional numeration problem: the smallest complete family found so far.
 
+## Wave 19: a residue-steered source decoder for root-change words, and what the final equality needs
+
+**Prior art first (KNOWN; re-derived this wave before the repository search caught up).** The family built here as
+"caterpillar tournaments" is the repository's **O/Z/J root-change grammar** (THM-4904; Sessions 197–205; THM-4888,
+THM-5148, HYP-9494, HYP-9677). Its letters are:
+- O or Z: add a spine vertex that the current apex beats (O), or that beats the apex (Z);
+- J: add a new apex that beats the old one.
+
+These are this wave's moves a, b, c. The following are all KNOWN:
+- the root triple evolves linearly (join law THM-4866 (B); block matrices THM-5148 (A));
+- the one-apex count is g(0) = 1, g(2v+1) = g(v), g(2v) = g(v) + v + (v mod 2), with the binary pair energy of
+  THM-5093;
+- JZ = OJ (Session 205, THM-4888 (D) 1) is the identity called "factor migration" in this session's scratch work;
+- the slope (port) set of a fixed count is a finite union of geometric progressions (THM-5129 (A));
+- the grammar misses exactly 29 odd numbers, the largest 2647, verified through 10^9 (HYP-9494 (D)). The depth-first
+  search [`scripts/caterpillar.c`](scripts/caterpillar.c) reproduces this through 2·10^5.
+
+**Corrections to earlier waves.**
+- Wave 18's one-hub closed form is THM-4876 (6).
+- Wave 17's Hankel rank 17 of the two-hub series reproduces THM-4878 (G(2,0), Session 191).
+- Wave 18's phrase "the smallest complete family found so far" is withdrawn. The root-change grammar is smaller: a
+  4-dimensional state and three letters.
+
+**NEW: the residue-steered source decoder ([`scripts/catdec.c`](scripts/catdec.c)).** This is the owner's request
+made literal. The reader handles its factors only by handing them to the source; the source then chooses its digits
+by residues; and the run ends in one exact equality.
+1. *Peel the readers.* Reader blocks J O^i Z^j are removed from the end of the word. They act on the source's root
+   triple (H, E, λ) by integer matrices, so the target reads N = A·g(U) + C·E(U) + B·(1 + U). Here U is the
+   one-apex source word read as a binary number (O = 1).
+2. *Put the factors into the source.* The equation A·g(U) + B·U = T is solved from the lowest bit of U upward by
+   g's recursion. A last letter O sends (B, T) to (2B, T − B). A last letter Z sends it to (2B + A, T − A·[the next
+   letter is O]). The reader's factor B is carried inside the source problem, and the parity of the next letter is
+   the residue requirement passed down.
+3. *Final absolute equality.* The recursion closes only at U = 0 with T = A exactly. Once the window
+   [(T − A)/(A + B), (T − A)/B] holds at most 8 integers, these are checked directly (g(U) ≤ U + 1). Every output
+   word is re-run through the root-state recurrence.
+
+| targets | decoded | time per target | solver nodes per target |
+|---|---|---|---|
+| every odd N ≤ 3001 | all but the grammar's 29 misses, 1877 and 1897 (depth 7: decoded once 7 readers are allowed), and 2377 (needs a reader outside J O^i Z^j) | – | – |
+| 100 random, near 10^6 | 100 | 1 ms | 1.6·10^4 |
+| 100 random, near 10^9 | 100 | 31 ms | 3.5·10^5 |
+| 50 random, near 10^12 | 50 | 1.6 s | 1.4·10^7 |
+| 12 random, near 10^15 | 12 | 13 s | 9.8·10^7 |
+
+The cost grows like √N. A reader chain with factors (A, B) covers values at density about 1/(A + B), and its
+source search costs about √(NA)/B. The random samples at 10^12 and 10^15 lie beyond the 10^9 census, so they are
+new (sampled, not exhaustive) evidence for HYP-9494 (D).
+
+**NEW (FINITE-EXACT): monotone readers suffice.** Take a one-apex source of any length followed by readers
+J O^i Z^j with i, j ≤ 3 (16 block types). This family attains every odd N in [2649, 10^6]
+([`scripts/readeralpha.c`](scripts/readeralpha.c)). It has 30 misses below 2649: the grammar's 29 and 2377.
+Smaller block sets cover less:
+- i, j ≤ 2: 4969 is also missed;
+- i, j ≤ 1: 71 misses below 20,000, the largest 19,781;
+- a single block type: thousands of misses.
+
+The extension to 10^7 was still running at this commit (P37 below).
+
+**NEW: the multiplicity regime ([`scripts/repcount.c`](scripts/repcount.c)).** Allow at most 4 readers with
+i, j ≤ 3 and count representations (chain, source word) of each target over 40 consecutive odd targets per scale:
+
+| scale | 3·10^3 | 10^4 | 3·10^4 | 10^5 |
+|---|---:|---:|---:|---:|
+| mean | 157 | 186 | 174 | 197 |
+| minimum | 13 | 12 | 3 | 41 |
+
+The mean is flat. A fixed finite set of readers is a critical regime: each chain contributes a fixed density
+1/(A + B), so the mean cannot grow. Growth must come from chains whose length grows with log N. HYP-9494 (D)'s depth
+table points the same way: 1877 and 1897 need 7 root changes.
+
+**NEW: inside the grammar, runs of root changes are the wave-16 corridors
+([`scripts/corridor_factor.py`](scripts/corridor_factor.py)).** A run of k root changes acts on (H, E, λ) by J^k,
+where J = [[1, −1, 1], [1, −1, 0], [1, 0, 1]] has characteristic polynomial x³ − x² − x − 1.
+- *Determinant (PROVED).* The (H, λ)-block of J^k has determinant −T(−k−2), where T is the two-sided tribonacci
+  sequence with T(0) = T(1) = 0, T(2) = 1. This is checked for k ≤ 300; both sides satisfy linear recurrences of
+  order at most 12, which makes the check a proof. It is wave 16's corridor determinant −T(−q−3) at q = k − 1.
+- *Rank one.* So the block is rank one exactly at k = 1 and k = 14, by the cited zero set {−16, −3, 0, 1}. At
+  k = 14 the block is (47, 56)ᵀ(47, 56), built from the tribonacci squares 2209 = 47² and 3136 = 56².
+- *Consequence.* After an O, where E = 0, a run of exactly 14 root changes gives H = 47·(47H₀ + 56λ₀) and
+  λ = 56·(47H₀ + 56λ₀). This was checked on 1000 random words. The corridor reads the whole source through a single
+  linear form.
+- *Forced factors.* Runs of other lengths entered after an O force smaller common factors of H (k ≤ 60):
+  - 3 at k = 3, 29, 42, 55;
+  - 5 at k = 9, 40;
+  - 47 at k = 14, 60;
+  - 159 at k = 16;
+  - 499 at k = 54.
+
+  A decoder aiming at a prime target must avoid these run lengths after an O.
+
+**The final absolute equality: what remains (ANALYSIS).** With the pair energy Ψ (THM-5093's Q), the one-apex
+count is g(U) = 1 + U − u₀ − Ψ(U). So one chain's equation is
+
+N = (A + B)(1 + U) − A·Ψ(U) + C − (A + C)·u₀.
+
+Split U = 2^m V + W by Session 193's concatenation law. This gives
+
+N = V·[(A + B)·2^m − A·rev_m(W)] − A·Ψ(V) + c(W).
+
+Every target is therefore a *near-product* of the high source bits V with a quantity read from the reversed low
+bits W. The source chooses its digits from both ends at once, and the absolute equality becomes a fixed-point
+condition for V inside a window of O(A) integers. Consequences:
+- the event "chain R represents N" has probability about 1/(A_R + B_R), so no single chain is complete;
+- a proof must control the union over chains, and the critical-regime data above say it must use chains whose length
+  grows like log N;
+- by THM-5129 (A), no proof can fix a source count and free its port: the (count, port) pairs of sources are always
+  graph-like.
+
+This matches the repository's reading of Chan–Pak as cofiniteness of an explicit matrix-semigroup orbit (HYP-9640,
+HYP-9677). There thin-orbit methods (Bourgain–Kontorovich) give density one at best
+([tilted ensemble §7](../tilted_ensemble_local_limit_20261110/README.md#7-typed-connections-and-named-principles)).
+The decoder settles each instance of the final equality cheaply; it does not prove the equality in general.
+
+**P37 (pre-registered).** The sub-language "one-apex source, then readers J O^i Z^j with i, j ≤ 3" attains every
+odd N in [2649, 10^7].
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.

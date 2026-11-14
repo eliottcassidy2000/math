@@ -29,6 +29,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | one-apex joins (THM-4875 (D)) | **every odd N < 2^32** except 7 and 21 |
 | two-hub words, length ≤ 18 | every odd N < **226,079,703** except 7 and 21 (new today; ratio X(L)/3^L = 0.584) |
 | interval-hub words (u2's out-set an interval), m ≤ 23 | every odd N < **26,610,535** except 7 and 21 (new today; binary-scale horizon 3–5·2^m) |
+| O/Z/J root-change words (KNOWN: THM-4904, HYP-9494 (D)) | every odd N in (2647, 10^9]; the wave-19 decoder adds random samples near 10^12 and 10^15 |
 | Fermat-block cuts of order-≤9 sources | every odd N in [69, 398,129] |
 | span-2 ribbons | every odd N ≤ 100,000 except 7, 21 and 47 |
 
@@ -44,7 +45,8 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | two-hub horizon law X(L) ≥ c·3^L | **alive** | 0.487, 0.515, 0.569, 0.584 for L = 14, 16, 17, 18 |
 | Shallow-Cut Conjecture and port-wedge induction | **alive** | order-9 sources reach 398,129; the §4 transfer closes linearly on (H, D, h, E, S) |
 | rational base 3/2 frame digits (P34) | **new, untested** | nested frames weigh 2^(A−g)·3^(g−1) |
-| **interval-hub numeration (P35/P36)** | **new, most promising** | complete through 26,610,535; for fixed (I, e) the count is quadratic in x; a 6-dimensional prefix phase |
+| interval-hub numeration (P35/P36) | alive, superseded | complete through 26,610,535; but the O/Z/J root-change grammar (KNOWN) is smaller: 4-dimensional state, 3 letters |
+| **cofiniteness of the O/Z/J semigroup orbit (HYP-9640, HYP-9677)** | **the repository's main formulation** | one-chain equations are near-products (wave 19); a proof must use chains of length ~log N |
 | dichotomy: a third exception must belong to an arithmetic family | **alive (heuristic)** | every candidate family checked so far is complete |
 
 ### Assessment
@@ -63,6 +65,14 @@ log2 N − 2). For each interval its count is a quadratic pseudo-Boolean functio
 follows from the bi-quadratic frame law, which is proved for all two-hub words. The part of the word before the
 interval acts through a 6-dimensional state. So the next target is concrete: closed forms for the scaled one-hub
 numerals that each interval produces, then a carry decoder proving that their union is complete (P36).
+
+**Update (wave 19).** The repository search caught up with the construction. The "caterpillar" family behind the
+new decoder is the O/Z/J root-change grammar (THM-4904, THM-5148, HYP-9494): 3 letters and a 4-dimensional root
+state. It is smaller than the interval-hub family, and complete through 10^9 apart from 29 values up to 2647. The
+wave-19 decoder carries the reader's factors into the source equation and ends in one exact check. Random targets
+near 10^12 and 10^15 all decode. One chain's equation is a near-product of the source's high bits with its reversed
+low bits, so each chain covers density about 1/(A + B). The open step is the union over chains whose length grows
+with log N, as in HYP-9677.
 
 ## Rule 30: the three prize problems
 
@@ -101,7 +111,8 @@ quantified in the LFSR and FCSR models; the quadratic-register model is next.
 
 ## Ranked next moves
 
-1. Derive closed forms for the interval-hub quadratic coefficients and build the carry decoder (P36, Chan–Pak).
+1. Prove cofiniteness, or density one, for a sub-semigroup of the O/Z/J grammar whose chains grow like log N
+   (HYP-9677); the wave-19 decoder supplies exact instances (Chan–Pak).
 2. Test P34: realize rational base-3/2 digit vectors with nested two-hub frames (Chan–Pak).
 3. Look for a provably infinite 2-kernel of the Rule 30 center through THM-4210's tree (Rule 30, Prize 1).
 4. Measure the quadratic span of the Rule 30 center (Rule 30, Prize 3).
