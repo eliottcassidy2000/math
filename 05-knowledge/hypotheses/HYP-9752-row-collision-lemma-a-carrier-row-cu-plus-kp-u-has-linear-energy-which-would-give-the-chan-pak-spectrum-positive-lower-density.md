@@ -74,3 +74,5 @@ about κw·2^l.
   ρ ↦ −κwρ. That is the domain of the dyadic mixing and voltage-graph methods of the concurrent packets.
 
 The lemma remains OPEN.
+
+**Partial follow-up, 2026-11-15.** The [reverse-prefix theorem](../results/chanpak_local_rows_span3_20261115/ROWS.md) proves that low split levels and small reversed displacements contribute sublinear collision energy in the stated ranges. The [mesoscopic row limit](../results/chanpak_local_rows_span3_20261115/ROW_LIMIT.md) gives the continuous mass but does not control the distant exact collisions. The full hypothesis remains open.
