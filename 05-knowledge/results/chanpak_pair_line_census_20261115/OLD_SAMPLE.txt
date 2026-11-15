@@ -1,0 +1,121 @@
+ref 1b91742ce55a202b73c80d56561ba56d00b503a6, seed 31415926, population 6804
+
+07-reflections/the-perfect-bisector-is-off-the-ladder-rational-cosine-not-rational-angle.md
+---
+source: monad-explorer-2026-06-13 (deep-research; OPEN-Q-057 frontier; HYP-2461 handoff)
+status: REFLECTION grounded in PROVED arithmetic (THM-494) + exact-integer search
+  (densest-patch, n=21..30, every count exact-recounted; engine calibrated to the
+  exact triangular maximum and copied verbatim from the bridge-lattice engine).
+tags: [unit-distance, N-star, 3N-crossover, moser-lattice, bridge-lattice, THM-434,
+  THM-493, THM-494, eisenstein, cyclotomic, zeta12, bisector, niven, kronecker,
+  rational-cosine, resonance, OPEN-Q-057, HYP-2461]
+
+07-reflections/FC2-no-pole-homogeneous-is-the-lebesgue-moment-problem-and-the-cauchy-transform-bridge-opus-S4.md
+---
+source: opus-2026-07-31-S4 (FC(2) via the no-pole / exponential-period approach; tournament analogy)
+status: >
+  RESULT + reduction + verified-through-degree-4 + methodological guard. FC(2) is the HOLOMORPHIC moment
+  problem for the complex random variable Z=f(X,Y), X,Y~Exp(1); the no-pole reformulation is exactly the
+  Cauchy-transform condition C_mu(w)=1/w for mu=f_*(Exp^2). For HOMOGENEOUS f the radial substitution
+  collapses it EXACTLY: L(f^m)=(dm+1)! int_0^1 phi^m da with phi(a)=f(a,1-a) ranging over ALL polynomials
+  (Bernstein basis). So FC(2)-homogeneous <=> the LEBESGUE polynomial moment problem
+
+05-knowledge/results/square_sum_cubic_contact_chains_20261019.md
+# Cubic same-sign contacts: one infinite rational chain and nested finite-prefix scalings
+
+**Status: PROVED, pending independent audit.** Companion controls are **FINITE-EXACT**. This improves the earlier degree-11 growing-chain construction: initialization depends only on the prescribed seed, and each subsequent petal costs one fixed cubic map. It gives exponential-in-length bit bounds, not polynomial-in-length bit bounds.
+
+## 1. Main theorem and conventions
+
+An admissible primitive petal is an unordered primitive Pythagorean triple `T=(a,b,C)` with `C²>4ab`. Its spread is `f_T=2ab/C²`. At common scale `C|H`, its two outer labels and the common center are
+
+
+05-knowledge/results/sierpinski_audit_20261022.md
+# Independent audit of mac-mini-2026-10-22-sierp: THM-4754, THM-4755, THM-4756, HYP-9364 and the Sierpinski note (2026-10-22)
+
+* **Auditor:** independent refutation-first audit (subagent, Claude Opus 5.5), 2026-10-22. No edits to existing files; no git operations.
+* **Scope.** The committed texts of `26967fe4cb` (THM-4754, THM-4755, HYP-9364, note) and `a7d2e23c06` (THM-4756), plus what was added while the audit ran: commit `a6c47712da` and the uncommitted edits seen at about 02:10 (THM-4756 second level, THM-4755 addendum on Conjecture 1, HYP-9364 addendum (f), note section 10).
+* **Method.** Only the auditor's own code. The session's scripts were read for file formats but not run or reused. Scripts and outputs: `04-computation/experiments/sierpinski_ocf_20261022/audit/`.
+* **Severity.** HIGH = wrong mathematics in a PROVED statement. MEDIUM = wrong priority or credit, or evidence overstated in canon or a hypothesis. LOW = wording, digits, citations.
+
+**Bottom line.**
+
+05-knowledge/results/overnight4_20260906_no3line_cycle_defect.md
+# Cycle defects, signed squares, and the failure of component-additive cumulants
+
+**Status: PROVED ANALYTICALLY + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+The [independent referee](overnight4_20260906_no3line_cycle_defect_audit.md)
+uses graph BFS and an Euler-log recurrence, checks the formal all-length
+proof, and reproduces all retained geometric profiles and both obstructions.
+Its 278,884 optimization-live checks pass normally and with optimization. The previous third-moment coefficients are inherited, not new.
+The new mechanism explains their place in a connected-cluster expansion
+
+07-reflections/computational-irreducibility.md
+# Lossy Types and Computational Irreducibility
+
+## The full hierarchy
+
+| Type | Map property | Example | Residue | Computability |
+|------|-------------|---------|---------|---------------|
+| Lossless | Bijective homomorphism | Q, ln, f | None | O(1) shortcut |
+| Non-injective | Many-to-one | T → H(T) | Kernel (orbits) | Enumerable |
+
+05-knowledge/results/c4_analytic_reductions_20261019/README.md
+# Frozen analytic c=4 coverage, 2026-10-19
+
+This packet proves sufficient reductions for seven-thin mixed-(1,2), c=4 cores. It does not prove the complete c=4 exclusion.
+
+## Exact scopes
+
+1. The one-defect exchange lemma bounds p(u<v) by 2/3 when the directed predecessor/successor defect is at most one, and by 1/2 for zero defects. The two-sided defect/slack criterion gives an actual ambient balanced pair on 49,592 of 79,121 degree-valid cores.
+2. Under the separate maximum-index-span strict-majority hypothesis, every common vertex lies between the roots. A one-sided defect/slack contradiction covers 54,235 cores. The union is 56,630 cores, with 22,491 residual cores.
+
+05-knowledge/results/nextforest_20260926_boundary.md
+# A carry defect with an all-height selected-descent certificate
+
+**PROVED elementary bounds and lifting theorem / FINITE-EXACT certificate
+for defect <=4096 / OPEN global Collatz.** No novelty or convergence claim.
+
+The principal result is an actual selected-return inequality:
+
+> For every positive odd integer n>1 whose ordered binary carry defect
+
+05-knowledge/results/tournament_magic_measure_Hspread_kps.md
+# The tournament "magic measure": H-spread within a fixed score class (kps-S22, HYP-2707)
+
+Operationalizing the Clifford/magic lens (HYP-2707) on the central invariant H = OCF.
+
+DEFINITION. For a score sequence s, let spread(s) = max H − min H over all labeled tournaments with score s.
+A score class with **spread 0** is a STABILIZER class: H is score-determined there, hence computable from the
+degree-<=2 (Clifford / c3-level, THM-555) data. A class with **spread > 0** is MAGIC: H carries cycle-space
+(degree>=3) content the scores cannot see.
+
+05-knowledge/results/collatz_three_bit_sibling_flow_20261005.md
+# Three bits, three colours, and a finite kernel for sibling flows
+
+2026-10-05. **PROVED, scoped:** source disintegration, entropy and sibling
+scaling, inverse-fibre summation, the equivalent base-flow criterion, and
+the finite-kernel compiler. **FINITE-EXACT:** the supplied kernel and checks.
+**OPEN:** a positive summable base weight on every base, the uniform refuel
+bound, and universal Collatz. No claim of literature priority or canon
+promotion is made.
+
+07-reflections/lrc-tournament-clock-overlay-s502.md
+---
+source: codex-2026-06-01-S502b
+status: synthesis plus finite exact audit
+tags:
+  - lonely-runner
+  - tournament-clock
+  - tournament-analysis
+  - n14
+
+07-reflections/territory-and-map.md
+# Territory and Map: Inert vs Split
+
+## The territory is whole. The map is split.
+
+The tournament triple {2, 3, 5} is the TERRITORY — the reality of binary pairwise comparison, 3-cycles, and pentagonal structure. Product = 30 = icosahedral edges.
+
+The measurement triple {3, 7, 19} is the MAP — what you see when you observe the tournament through its H-value factorization. These primes appear in H(T₁₁)/|Aut| = 1729 = 7·13·19.
+
