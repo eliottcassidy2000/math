@@ -1,0 +1,2 @@
+Exact dyadic line decompositions checked: 510
+Non-dyadic grid pruning and exact numerical reconstruction checked
