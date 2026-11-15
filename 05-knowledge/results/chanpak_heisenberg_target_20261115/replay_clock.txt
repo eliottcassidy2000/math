@@ -1,0 +1,9 @@
+long-tape centers 7 7
+long-tape centers 13 13
+long-tape centers 19 19
+long-tape centers 37 37
+long-tape centers 49 43
+long-tape centers 91 73
+5-primary profile plane 5 25
+5-primary profile plane 25 625
+5-primary profile plane 125 15625
