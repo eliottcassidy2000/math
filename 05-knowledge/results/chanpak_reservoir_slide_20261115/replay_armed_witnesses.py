@@ -73,3 +73,34 @@ for a in range(3):
 require(menus(forward(B,4))==(117,True,((1,4,-1),(0,0,-1))))
 require(menus(reverse(B,0))==(119,True,((0,0,1),)))
 print("H59: exact two-ended grid, root readiness, and first child menus verified.")
+
+def join(a,b):
+    n=len(a); mask=((1<<len(b))-1)<<n
+    return tuple(x|mask for x in a)+tuple(x<<n for x in b)
+
+def check_raw_components(parts):
+    T=()
+    factor=1
+    offsets=[]
+    for P in parts:
+        offsets.append(len(T))
+        factor*=profile(P)[0]
+        T=join(T,P)
+    H,D,_,_=profile(T)
+    require(H==factor and H>1)
+    last=parts[-1]; d=profile(last)[1]
+    require(all(x>=H for x in D[:offsets[-1]]))
+    require(D[offsets[-1]:]==tuple((H//profile(last)[0])*q for q in d))
+    R=converse(T)
+    _,E,_,_=profile(R)
+    first=parts[0]; e=profile(converse(first))[1]
+    require(all(x>=H for x in E[len(first):]))
+    require(E[:len(first)]==tuple((H//profile(first)[0])*q for q in e))
+    require(not any(abs(x)==1 for x in D) or not any(abs(x)==1 for x in E))
+
+from itertools import product
+for k in (2,3):
+    for parts in product(((0,),(2,4,1),A),repeat=k):
+        if any(len(P)>1 for P in parts):
+            check_raw_components(parts)
+print("32 reducible ordinal sums verify the raw-unit confinement and component factor laws.")
