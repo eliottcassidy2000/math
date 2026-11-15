@@ -38,3 +38,13 @@ This explains why separating the resonant main term from the
 checksum error is valuable (we obtain the right scale for this
 lane), but not sufficient. An analogy with a spectral or averaged
 number-theoretic bound does not supply the missing extra states.
+
+More generally at scale X allow K distinct sum residues modulo g and
+imbalance at most D, with near-diagonal addresses. The same argument
+gives O(K sqrt(X)(D+1)/g) outputs (when g≤sqrt(X)), so radius-R
+neighborhoods can cover a positive fraction only if
+`R+1 = Ω(g sqrt(X)/(K(D+1)))`. Keeping g≈X^(1/6) but demanding
+a uniform X^(1/4) radius requires the product K(D+1) to increase by
+at least a factor of order X^(1/12) relative to the one-residue lane
+above. The adaptive quarter-power pockets are much shorter than a
+positive fraction of the whole dyadic band and do not violate this.
