@@ -1,0 +1,19 @@
+record bits 0 length 1 signature (3, 12, 0, 9, 0, 3)
+3 ((3, 1, 0), 1, 0, 1, 0, 1)
+record bits 0 length 2 signature (15, 120, 42, 63, 6, 9)
+41 ((5, 5, 3), 1, 0, 1, 0, 1)
+43 ((5, 5, 5), 1, 0, 1, 0, 1)
+level 0 distinct signatures 85 record 2
+level 1 distinct signatures 325 record 2
+level 2 distinct signatures 972 record 2
+level 3 distinct signatures 2559 record 2
+record bits 4 length 3 signature (9, 1344, 245, 427, 9, 9)
+89 ((5, 4, 4), 4, 1, 4, 0, 0)
+91 ((5, 4, 10), 8, 1, 2, 0, 1)
+93 ((5, 4, 17), 2, 0, 8, 2, 1)
+level 4 distinct signatures 6364 record 3
+level 5 distinct signatures 15149 record 3
+level 6 distinct signatures 35168 record 3
+level 7 distinct signatures 80005 record 3
+level 8 distinct signatures 179404 record 3
+level 9 distinct signatures 397457 record 3
