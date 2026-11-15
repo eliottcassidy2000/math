@@ -1,5 +1,7 @@
 # Quantitative Ferrers rigidity of small-excess Busch seams
 
+**Stronger follow-up:** [exact Ferrers rigidity and the Douglas sorting theorem](../chanpak_exact_seams_douglas_20261115/README.md) show the cross matrix is already Ferrers at surplus below n−2, and rule out the first positive even excess for strong tournaments at orders n≥8.
+
 **All-order result.** Split a tournament into induced strong factors A and B meeting at v, and put L = H(T) − H(A)H(B). Choose *any* directed Hamiltonian cycle of each factor and start both at v. In the resulting cycle order the cross-arc matrix is within
 `L + floor(L²/4)` entry flips of a Ferrers matrix (ones increasing along rows and decreasing down columns). Thus for excess 2 the distance is at most 3, and for excess 4 it is at most 8. No uniqueness of the factor cycles is required. This applies to every split in the two stable cases of the [Busch stability theorem](../chanpak_busch_stability_20261115/README.md).
 
