@@ -1,0 +1,4 @@
+fork: (5, 76, 3) (5, 76, 5) (10, 8) (15, 120, 42, 42, 6, 6)
+literal marked-join checks: 900
+literal closure: 1 2 [89, 91]
+literal closure: 3 12 [519, 525]
