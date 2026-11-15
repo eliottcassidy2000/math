@@ -36,12 +36,14 @@ interval exponential and give the canonical finite Zeckendorf
 decoder. The contract is exact additivity on legal matchings, not on
 all subsets. Disjoint one-apex interval controls fail even this
 weaker contract: their mixed difference is a nonzero integer, and
-the touching exception cannot supply four consecutive odds.
+even dropping additivity does not let two contiguous controls
+supply four consecutive odds: the sharp span is 8.
 At the polynomial clock's error scale, the strong-tournament vertex
 bound also rules out implementing each switch with three private
 vertices if one array must fill the whole error interval.
 [Graceful decoder and obstruction](GRACEFUL.md) ·
-[Fibonacci repair contract](FIBONACCI_REPAIR.md).
+[Fibonacci repair contract](FIBONACCI_REPAIR.md) ·
+[Sharp four-count obstruction](RECTANGLE.md).
 
 **Berggren's hypothesis is a physical inverse domain.** The primitive
 triple tree has a unique smaller parent because its three positive
@@ -77,4 +79,4 @@ sum to be a square.
 Run `python verify_square.py`, `python verify_discriminant.py`,
 `python verify_mixed.py`, `python verify_scaled.py`,
 `python verify_graceful.py`, `python verify_fibonacci.py`,
-and `python verify_berggren.py` in this directory.
+`python verify_berggren.py`, and `python verify_rectangle.py` in this directory.
