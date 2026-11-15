@@ -1,0 +1,2 @@
+3-cycle, one marked vertex: (a,q,s,e,t,f,n)=(3,12,3,1,6,2,5), kappa=5
+closed form checked on 1058400 (core,X,Y) triples over 216 marked cores: 0 inconsistencies; kappa range [3,45]

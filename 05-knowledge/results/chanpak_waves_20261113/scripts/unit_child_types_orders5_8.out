@@ -1,0 +1,4 @@
+order 5 armed seeds 4; distinct +child types histogram: 1:4 2:0 3:0 4:0 5:0 6:0 7:0; -child types: 1:2 2:2 3:0 4:0 5:0 6:0 7:0
+order 6 armed seeds 17; distinct +child types histogram: 1:11 2:6 3:0 4:0 5:0 6:0 7:0; -child types: 1:14 2:3 3:0 4:0 5:0 6:0 7:0
+order 7 armed seeds 49; distinct +child types histogram: 1:39 2:10 3:0 4:0 5:0 6:0 7:0; -child types: 1:43 2:6 3:0 4:0 5:0 6:0 7:0
+order 8 armed seeds 133; distinct +child types histogram: 1:113 2:20 3:0 4:0 5:0 6:0 7:0; -child types: 1:120 2:13 3:0 4:0 5:0 6:0 7:0

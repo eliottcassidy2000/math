@@ -2216,6 +2216,225 @@ Open predictions:
   their sum stays at most 1.
 - **P88.** No marked core of order 8 has a matched slide with |Δ| = 2 at tile width ≤ 24.
 
+## Wave 27: carriers, crossings and crowding — a finite list of digit-quadratic forms covers 333 to 10^8
+
+Owner prompt (2026-11-15), in short:
+- attack a fullness proof for the marked profiles, and try to prove sign freezing;
+- work toward universal placement, raising the level of abstraction of the constructions until they become
+  infinite;
+- when something fails, ask why and what larger change gets around it, and pursue that by experiment, many times;
+- find what the constructions have in common, an elegant form that also explains why 7 and 21 are impossible;
+- place the other problems of the Hamiltonian-spectrum sessions around ours;
+- take as context the other session's two-tape steering (two-sided O(N^(3/8)) brackets, O(N^(1/4)) on dyadic
+  bands by fixing the carry), and think of the quasi-Riemann hypothesis.
+
+Prior art read first:
+- [chanpak_absolute_steering_20261115](../chanpak_absolute_steering_20261115/README.md): the two-tape carrier and
+  its brackets;
+- [chanpak_target_carry_20261115](../chanpak_target_carry_20261115/README.md): carry selectors and quartic shells;
+- [chanpak_reservoir_slide_20261115](../chanpak_reservoir_slide_20261115/README.md): the count-45 unit slide,
+  raw-unit components and slide entropy;
+- [chanpak_viability_shape_20261115](../chanpak_viability_shape_20261115/LOCAL_DENSITY.md): the first moment of
+  the fixed carrier;
+- my waves 6–10 here (the two-hub frame identity H = Σ 2^α 3^β).
+
+**Chan–Pak OPEN.** The short answer of this wave:
+1. **Every one-apex carrier has an exact two-variable form (PROVED).** Guard, X-tape, block C, Y-tape, guard and
+   one apex give a strong tournament with exactly
+
+       F_C(X, Y) = qXY + tX + sY + a(p(X) + p(Y)) + n + f(X mod 2) + e(Y mod 2)
+
+   Hamiltonian paths, for all X, Y ≥ 1. Here (a, q, s, e, t, f, n) are C's transfer data and p is the binary
+   inversion surcharge (p(2u + 1) = p(u), p(2u) = p(u) + u + (u mod 2))
+   ([THM-5192](../../../01-canon/theorems/THM-5192-carrier-forms-the-insertion-identity-monotone-unit-cuts-and-odd-cycle-crowding-at-7-and-21.md) (A)).
+   This generalizes the other session's single count-45 carrier to every block.
+2. **A finite list of forms covers everything tested (FINITE-EXACT; HYP-9722).** The 168 distinct forms of the
+   strong marked cores of orders 3–5 attain every odd N in **[333, 10^9]**, and so does a 48-form basis chosen
+   on [333, 10^7]. The order-6 forms alone cover [615, 10^8]. With the census below 333, the
+   [Finite Carrier Conjecture](../../hypotheses/HYP-9722-finite-carrier-conjecture-every-odd-n-from-333-is-a-value-of-one-of-168-digit-quadratic-carrier-forms.md)
+   implies Chan–Pak.
+3. **Sign freezing has a mechanism (PROVED identity, FINITE-EXACT lemma).** Adding a vertex that beats X changes
+   the count by H(T+x) − 2H(T) = E + R − Z. Through order 8 every cut with a double X→X^c crossing has defect ≥ 3.
+   So unit cuts are monotone, and unit children have at most two types per sign
+   ([HYP-9732](../../hypotheses/HYP-9732-crossing-lemma-a-double-crossing-cut-has-defect-at-least-three-so-unit-cuts-are-monotone.md)).
+4. **Why 7 and 21 (FINITE-EXACT with classical inputs).** Multiplicativity, Busch's bound and odd-cycle crowding
+   (Moon) leave exactly these two values unrealizable at the only orders allowed to them.
+5. **Quasi-Riemann.** Each form is a binary problem: a hyperbola perturbed by a 2-regular digital term. Power-saving
+   Fourier bounds would give density one form by form; every N needs the finite union plus a lower-tail bound on
+   the clumping of representations.
+
+### 1. Sign freezing: why unit moves cannot branch twice (THM-5192 (B), (C); HYP-9732)
+
+**Insertion identity (PROVED).** Let x beat exactly X. A Hamiltonian path P of T has exactly 1 + #XX^c(P)
+insertion slots: front, end, and every X^c→X junction. For binary words, [first ∈ X] + [last ∉ X] + #X^cX =
+1 + #XX^c. All other Hamiltonian paths of T + x place x between u ∉ X and w ∈ X with w → u; call their number R.
+Therefore
+
+    δ(X) = H(T + x) − 2H(T) = E + R − Z,
+
+where Z counts the paths of shape [X^c][X] and E the excess crossings.
+
+**Crossing minimum (FINITE-EXACT, [`scripts/zer_all.c`](scripts/zer_all.c)).** Over every cut of every tournament
+of orders 4–8, a double crossing (E ≥ 1) forces δ ≥ 3. At order 8 that is 1,620,135 of 1,747,520 cuts, and the
+minimum 3 is attained. On 1,000 random order-9 classes the minimum is 15. So every cut with δ ≤ 1 is monotone:
+each Hamiltonian path meets X in at most two blocks, the second at the end. On all 2,783 unit cuts of order 8,
+E = 0 and R = Z ± 1 ([`scripts/zer.c`](scripts/zer.c)).
+
+**Rigidity of unit children** ([`scripts/childtypes.c`](scripts/childtypes.c), [`scripts/sigpat.c`](scripts/sigpat.c)):
+- at most two child types per sign through order 9 (307 armed order-9 classes: 281 have one +type and 26 two;
+  289 have one −type and 18 two);
+- all same-sign children of a seed share one continuation signature;
+- the pair (armed, armed) never occurs.
+
+**Armed does not imply strong** ([`scripts/strongarm.c`](scripts/strongarm.c)). 81 of the 133 armed order-8
+classes are reducible. So the leaf-model raw-unit law of the other session does not survive arbitrary cuts, and
+the rigidity has to come from monotonicity, not from strong components.
+
+**Why it fails, and what larger change works.** A unit move needs a monotone cut whose reverse-junction covers
+balance the [X^c][X] paths to within one. Such cuts are nearly unique. After the first move the newborn x takes
+part in every later cut's [X^c][X] count, and the balance survives on one side only.
+- *One vertex per step:* dead (wave 26).
+- *Two vertices per step:* dead.
+- *Affine trees of any small step:* blocked by this rigidity.
+
+The larger change is to stop asking the count to move by exact affine steps, and instead let the core vary over a
+finite list while two free tapes supply the scale. That is §2.
+
+### 2. Carrier forms and the Finite Carrier Conjecture (THM-5192 (A), (D); HYP-9722)
+
+**The form (PROVED).** The construction 𝒯_C(X, Y) is:
+- a marked guard g₁;
+- the X-tape: the binary digits of X below its leading 1, most significant first, mark = digit;
+- the block C;
+- the Y-tape: vertex j unmarked iff bit j−1 of Y is 1;
+- an unmarked guard g₂;
+- one apex.
+
+Then H(𝒯_C(X, Y)) = F_C(X, Y). The proof has three steps:
+1. *Prefix:* after g₁ and the X-tape the cut state is (1, p(X) + 1, X, X mod 2).
+2. *Core:* C maps it to (a, a·p(X) + n + tX + f(X mod 2), qX + s, e).
+3. *Suffix:* the Y-tape and g₂ send (h, N, S, d) to N + SY + h·p(Y) + d(Y mod 2).
+
+Steps 1 and 3 are inductions on the bits, using p's two recursions.
+
+Checks:
+- the closed form against the transfer on 1,058,400 (core, X, Y) triples ([`scripts/closedform.c`](scripts/closedform.c));
+- 48 random carrier tournaments of up to 18 vertices, re-counted by direct DP ([`scripts/verify_union.c`](scripts/verify_union.c)).
+
+For the 3-cycle with one marked vertex the form is
+
+    12XY + 6X + 3Y + 3(p(X) + p(Y)) + 5 + 2(X mod 2) + (Y mod 2).
+
+**Coverage (FINITE-EXACT, [`scripts/unioncar.c`](scripts/unioncar.c)).**
+
+| core set | distinct forms | Σ 2/q | outcome |
+|---|---:|---:|---|
+| order 3 | 4 | 0.667 | about 11% of odd N missed (to 2·10^7) |
+| orders 3–4 | 20 | 1.667 | 10,853 misses to 10^8, density about N^(−0.58), unbounded |
+| **orders 3–5** | **168** | **4.780** | **every odd N in [333, 10^9]** (the 32 misses above 21 are all ≤ 331) |
+| order 6 alone | 1,950 | 12.597 | every odd N in [615, 10^8] |
+| greedy basis (48 forms) | 48 | — | every odd N in [333, 10^9] |
+
+The greedy basis was chosen on [333, 10^7] only ([`scripts/greedy_cores.c`](scripts/greedy_cores.c)):
+- the 3-cycle form covers 84% alone;
+- ten count-5 forms bring it to 99.9%;
+- 36 order-5 forms (counts 9, 11, 13, 15) take sporadic leftovers.
+
+**Multiplicity.** The representation count averages 5.03, 4.43, 4.48, 4.70 and 4.89 times ln N at 10^4 … 10^8.
+That is the first-moment value Σ_C (2/q_C)·ln N = 4.78·ln N, since each form has about (N/q)·ln N pairs with
+qXY ≤ N. The window minimum rises 4, 4, 8, 14, 18.
+
+**Local structure.** Only 3 matters: near 10^7 the classes N ≡ 0, 1, 2 (mod 3) average 87.9, 63.0 and 76.2
+representations. Primes average 69.1, the mean of their two classes; there is no primality effect.
+
+**Failure, why, change (the threshold).** The orders-3–4 forms have Σ 2/q = 1.667, and every class mod 15 has mean
+1.3–2.4·ln N. A Poisson/Borel–Cantelli model would then give finitely many misses. Yet zeros fall only like
+N^(−0.58): 3.1·10^(−2), 8.0·10^(−3), 2.1·10^(−3), 5.7·10^(−4) and 1.5·10^(−4) per odd number in the decades
+from 10^3 to 10^8. The misses cluster mod 3, mod 5 and mod 9. So the representations clump, and the threshold
+is not the naive one.
+
+Adding the order-5 forms brings counts 9, 11, 13, 15 and moduli q = 84–108 with new prime factors. That breaks the
+clumping, and the misses stop at 331.
+
+**Why this is the elegant form.** Every construction of the campaign is a word in the cut-transfer semigroup. One
+apex over an ordinal spine gives the pair expansion of THM-5182. With two tapes around one block it collapses to
+F_C: a hyperbola (the seam term s_X t_Y q_C), a 2-regular digital surcharge (the in-tape pairs) and two parity
+bits (the signed channels at the guards). In this form:
+- the slides of the window-descent notes, the unit pump and the reservoirs are special moves on (C, X, Y);
+- the O(N^(3/8)) and O(N^(1/4)) brackets are tangent moves along the hyperbola;
+- the reservoir's "ordinary count scales the radius" is the role of a and q;
+- "fix the carry" is a statement about p.
+
+### 3. Why 7 and 21 (THM-5192 (E))
+
+1. **Multiplicativity.** H is multiplicative over strong components. 7 is prime and 21 = 3·7, so both need strong
+   witnesses.
+2. **Busch.** A strong n-tournament has H ≥ b(n) = 3, 5, 9, 15, 25, …. So a witness has order ≤ 4 for 7 and
+   ≤ 6 for 21.
+3. **Odd-cycle crowding.** H = 1 + 2c + 4d + … with c odd cycles and d disjoint pairs. Strong tournaments are
+   pancyclic with at least n − 2 triangles (Moon).
+   - *Census of orders 4–6* ([`scripts/cycles.py`](scripts/cycles.py)). Order 4 has c ≤ 2. Strong order 5 already
+     has c ≥ 4 (at least 3 triangles and a 5-cycle). So c = 3, that is H = 7, never occurs.
+   - *Order 6:* the strong classes have c + 2d ∈ {7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 20, 21, 22}. That skips
+     exactly 10, which is H = 21. Its neighbours H = 19 and H = 23 occur.
+
+So 7 and 21 are the two values that crowding skips below the point where the Busch staircase starts producing
+long runs. Above 333 the carrier forms take over. In this light the Fermat remark of the Busch note (7 = Φ₃(2)
+divides no 2^j + 1) explains why Fermat-block constructions avoid 7. Crowding explains why nothing else reaches it.
+
+### 4. The neighbouring problems, placed
+
+| problem | where it sits | status here |
+|---|---|---|
+| Rédei, Grinberg–Stanley odd-cycle expansion | the positivity behind every transfer; H = 1 + 2c + 4d + … | used throughout |
+| Moon pancyclicity, Busch's bound, Fermat primes | the small-order regime; why 7 and 21 fail | §3 |
+| divisor problems, the hyperbola method | the multiplicative skeleton qXY + tX + sY of each form | §2 |
+| Mauduit–Rivat digital functions (carry and Fourier properties) | the surcharge a·p(X); "fix the carry" | proposed tool |
+| circle method, quasi-Riemann power savings | density one per form; every N needs more | HYP-9722 |
+| Borel–Cantelli, Erdős–Rényi coverage | the log-density Σ 2/q and its clumping correction | §2 |
+| Zaremba, Bourgain–Kontorovich, Apollonian orbits | thin-orbit local-global; density one versus every N | waves 24–25 |
+| strong approximation (Heisenberg unipotents) | the local half for the invertible orbit | THM-5162 |
+| Frobenius conductors, CRT | coprime slide steps 145/39 and the amplifier | window-descent notes |
+| Erdős 3-smooth antichain sums | two-hub frames 2^α 3^β | waves 6–10 |
+| Collatz functional graph and carries | binary addresses, carry decoders with terminating rank | target-carry notes |
+| β-expansions, redundant digits | fat families (4 marks per vertex against growth 3) | waves 26–27 |
+| Hart–Iosevich dot-product sets | the bilinear profile pairing of HYP-9702 | wave 26 |
+| Rule 30, XOR gates | guarded bit forcing in carry selectors | other session |
+| Jacobian conjecture / planar non-properness | whether locally compatible branches escape absolute bounds | other session |
+
+The common thread is that a count is a bilinear reading of interface data, plus a carry-type digital correction.
+Placement problems are the hyperbola part. Repair problems are the digital part. The impossible values live where
+neither part has room yet.
+
+### Reproduction
+
+[`scripts/carrier_forms_orders3_5.txt`](scripts/carrier_forms_orders3_5.txt) lists the 168 forms as tuples
+(a, q, s, e, t, f, n), with the 48 basis forms tagged. [`scripts/check_carrier_forms.py`](scripts/check_carrier_forms.py)
+checks any range from that list and p alone, independently of the tournament code; it finds no miss in [333, 10^6]
+for both lists.
+
+The C enumerator [`scripts/unioncar.c`](scripts/unioncar.c) produced the 10^9 run, which is memory-bound and took
+about 18 minutes. Its receipts are `unioncar_orders3_5_1e9.out`, `greedy_basis_1e9.out` and
+`unioncar_order6_1e8.out`.
+
+### Verdicts and new predictions
+
+[Pre-registration file](scripts/wave27_prereg.md) (registered 2026-11-14 22:18 MST, with the exploratory runs listed).
+- **P89 CONFIRMED.** Every odd N in [333, 10^9] is a value of the 168 forms (4.9·10^10 configurations).
+- **P90 CONFIRMED.** On 1,000 random order-9 classes every double-crossing cut has δ ≥ 3 (minimum 15).
+- **P91 CONFIRMED.** At most two unit-child types per sign: on the sample, and on all 307 armed order-9 classes.
+- **P92 CONFIRMED.** The order-6 forms alone cover [615, 10^8] (registered X0 < 10^4).
+- **P93 CONFIRMED.** Mean multiplicity near 10^8 is 4.89·ln N (registered [4.4, 5.2]).
+- **P94 REFUTED.** The window minimum near 10^8 is 18 (registered ≥ 20).
+- **P96 CONFIRMED** (registered in HYP-9722 before its run). The 48-form basis covers [333, 10^8] with no miss,
+  and in fact [333, 10^9].
+
+Open predictions:
+- **P95.** The 168 forms cover [333, 10^10].
+- **P97.** The minimum multiplicity on [10^9, 10^9 + 2·10^5] is at least 20.
+- **P98.** The crossing lemma holds for every order-9 class.
+- **P99.** Some list of at most 20 forms covers every odd N in [10^4, 10^9].
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.

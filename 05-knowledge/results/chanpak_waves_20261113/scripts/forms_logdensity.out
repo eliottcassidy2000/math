@@ -1,0 +1,7 @@
+order 3: strong marked cores 8, distinct forms 4, sum 2/q = 0.667
+order 4: strong marked cores 16, distinct forms 16, sum 2/q = 1.000
+order 5: strong marked cores 192, distinct forms 148, sum 2/q = 3.114
+order 6: strong marked cores 2240, distinct forms 1950, sum 2/q = 12.597
+core set {3,4}: distinct forms 20, sum 2/q = 1.667
+core set {3,4,5}: distinct forms 168, sum 2/q = 4.780
+core set {6}: distinct forms 1950, sum 2/q = 12.597

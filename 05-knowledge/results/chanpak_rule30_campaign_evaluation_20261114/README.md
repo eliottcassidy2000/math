@@ -25,6 +25,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | The invertible root-change blocks generate {g in GL_3(F_p) : det g in <2>} modulo every odd prime, and the analogous group modulo every odd modulus q (strong approximation with S = {2}, through Heisenberg unipotents, an opposite flag and the p-adic lift); every invertible block is [[b−Q, −1, b], [1, 0, 0], [2^n−R, 0, 2^n]] with Hammersley-net digits; long random invertible words have the Haar local law, with prime singular series (7/8)ζ(3) | wave 24, THM-5162 |
 | No Heisenberg (unipotent) orbit lies inside the invertible root-change semigroup; F_2 = (-1)^n H (mod 3), F_2 = 0 (mod 4); the cyclic join is 3N = Re(alpha_A conj alpha_B) in Z[sqrt(-2)] | wave 25, THM-5172 |
 | Pair expansion of the marked one-apex spine count; passive channels (n flat, t positional); mod-3 law T_v = (-1)^(m+1) S_v for every vertex of every tournament; seam lemma S_v, T_v >= H | wave 26, THM-5182 |
+| Carrier form: guard, X-tape, block, Y-tape, guard and one apex have exactly qXY + tX + sY + a(p(X)+p(Y)) + n + f(X mod 2) + e(Y mod 2) Hamiltonian paths; insertion identity H(T+x) - 2H(T) = E + R - Z | wave 27, THM-5192 |
 
 ### What is only verified
 
@@ -37,6 +38,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | invertible root-change language: a one-apex source, then invertible blocks only, no resets (HYP-9682) | every odd N in (6223, 2^26]; the 16 blocks with \|w\| ≤ 5 alone: (12,811, 2^26]; the orbit of (1,1,1,1) alone: (179,367, 2^26] (wave 24) |
 | cyclic joins A -> B -> c -> A of two cores of order <= 10 (the two-core host) | every odd N in (36,833, 2,398,737] (wave 25) |
 | marked two-block one-apex tournaments (L => B plus an apex, blocks of order 8 and 7) | every odd N < **8,667,349** except 7 and 21 (wave 26; orders <= 7: < 1,542,343) |
+| the 168 carrier forms of strong marked cores of orders 3-5 (two free tapes around one core) | every odd N in **[333, 10^9]** (wave 27; so does a 48-form basis; order-6 forms alone [615, 10^8]) |
 | bounded runs ≤ 5, the 63 matrices of HYP-9677 | every odd N in (10,391, 2^24] (wave 20; the record was 2^19); runs ≤ 4 (31 matrices): every odd N in (130,247, 2^25] |
 | Fermat-block cuts of order-≤9 sources | every odd N in [69, 398,129] |
 | span-2 ribbons | every odd N ≤ 100,000 except 7, 21 and 47 |
@@ -114,6 +116,8 @@ like the one-hub transfer. What separates them is the rank of the weight group: 
 
 **Update (wave 26).** The owner's stable plus/minus fan pair does not exist even in the widest one-vertex model. With arbitrary out-sets, re-chosen at every node, no tournament of order <= 9 has both an armed +1 child and an armed -1 child: the children freeze their sign (THM-5182 (D), HYP-9712). Sliding cores are rare (counts 13, 29 and 115 only, through order 7) and give no unit pump. A slide that matches the right-facing data moves the passive t geometrically. The seam lemma shows that a reservoir can place a growing window only if it is itself exponentially rich. The owner's reservoir-and-repair architecture does work once the repair is the whole marked left-profile rather than a window: marked two-block one-apex tournaments attain every odd N < 8,667,349 except 7 and 21. Their fixed-interface palettes are trivial (mean size 1.05), so this is a fullness phenomenon like HYP-9692, in a much denser 4D cloud (HYP-9702). A new mod-3 law, T_v = (-1)^(m+1) S_v, fixes every passive t mod 3. Primes carry exactly the multiplicity of their residue class; the only local bias is at 3.
 
+**Update (wave 27).** Two free binary tapes around one small core give an exact two-variable count, F_C(X,Y) = qXY + tX + sY + a(p(X)+p(Y)) + n + f(X mod 2) + e(Y mod 2), with p the binary inversion surcharge (THM-5192). The 168 forms of the strong marked cores of orders 3-5 attain every odd N from 333 to 10^9. With the census below 333 this makes Chan–Pak a finite, explicit, two-variable statement (the Finite Carrier Conjecture, HYP-9722). Each form is a hyperbola perturbed by a 2-regular digital term. The multiplicity is sum(2/q)·ln N; the orders-3-4 sublist (sum 1.667) still misses a set of density N^(-0.58), because representations clump. Sign freezing has a mechanism: the insertion identity H(T+x) - 2H = E + R - Z and the finite-exact crossing minimum (defect >= 3 once a path crosses twice) make every unit cut monotone (HYP-9732). 7 and 21 are the two values that odd-cycle crowding (Moon) skips at the orders to which Busch's bound confines a strong witness.
+
 ## Rule 30: the three prize problems
 
 ### Repository program (36 theorems, THM-3456 … THM-4210)
@@ -151,7 +155,10 @@ quantified in the LFSR and FCSR models; the quadratic-register model is next.
 
 ## Ranked next moves
 
-1. Prove a fullness theorem for one of the two profile pairings: the (H, F_2) ridge band from order 12 on
+1. Prove the Finite Carrier Conjecture (HYP-9722): every odd N >= 333 is a value of one of 168 explicit forms
+   qXY + tX + sY + a(p(X)+p(Y)) + n + f(X mod 2) + e(Y mod 2). Tools: Mauduit–Rivat digital functions (carry and Fourier properties)
+   with the hyperbola method; density one form by form should be within reach; every N needs a lower-tail bound for the union.
+   Alternatively prove a fullness theorem for one of the two profile pairings: the (H, F_2) ridge band from order 12 on
    (HYP-9692, cyclic joins), or the denser marked left-profile cloud (a, n, t, f) of the two-block family
    (HYP-9702, already complete below 8,667,349, where marks enter t and f linearly). Either closes Chan–Pak above the 2^32 census. Parallel target: density one (V(X) → 0)
    for the invertible root-change orbit, HYP-9682. Its local half is THM-5162; what is

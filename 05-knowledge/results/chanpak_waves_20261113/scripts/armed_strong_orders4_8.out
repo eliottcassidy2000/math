@@ -1,0 +1,5 @@
+order 4: classes 4 (H>1 considered); armed 1, armed but not strong 0; one-sided 2 (non-strong: plus-only 0, minus-only 2); unit children 21, strong 9
+order 5: classes 12 (H>1 considered); armed 4, armed but not strong 2; one-sided 6 (non-strong: plus-only 0, minus-only 3); unit children 64, strong 28
+order 6: classes 56 (H>1 considered); armed 17, armed but not strong 7; one-sided 27 (non-strong: plus-only 4, minus-only 6); unit children 196, strong 89
+order 7: classes 456 (H>1 considered); armed 49, armed but not strong 30; one-sided 182 (non-strong: plus-only 24, minus-only 24); unit children 662, strong 334
+order 8: classes 6880 (H>1 considered); armed 133, armed but not strong 81; one-sided 1478 (non-strong: plus-only 169, minus-only 168); unit children 2769, strong 1641

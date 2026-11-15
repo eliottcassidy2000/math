@@ -1,0 +1,40 @@
+order 5 armed seeds (H>1): rows = set of +child signatures, cols = set of -child signatures
+  +children {P}  -children {B}: 2
+  +children {B}  -children {P}: 1
+  +children {B}  -children {M}: 1
+order 6 armed seeds (H>1): rows = set of +child signatures, cols = set of -child signatures
+  +children {N}  -children {N}: 2
+  +children {N}  -children {B}: 2
+  +children {P}  -children {N}: 2
+  +children {P}  -children {M}: 2
+  +children {P}  -children {B}: 3
+  +children {M}  -children {P}: 2
+  +children {B}  -children {P}: 2
+  +children {B}  -children {M}: 2
+order 7 armed seeds (H>1): rows = set of +child signatures, cols = set of -child signatures
+  +children {N}  -children {N}: 12
+  +children {N}  -children {P}: 2
+  +children {N}  -children {M}: 2
+  +children {N}  -children {B}: 4
+  +children {P}  -children {N}: 4
+  +children {P}  -children {M}: 8
+  +children {P}  -children {B}: 4
+  +children {M}  -children {N}: 1
+  +children {M}  -children {P}: 4
+  +children {M}  -children {NB}: 2
+  +children {B}  -children {P}: 3
+  +children {B}  -children {M}: 3
+order 8 armed seeds (H>1): rows = set of +child signatures, cols = set of -child signatures
+  +children {N}  -children {N}: 54
+  +children {N}  -children {P}: 6
+  +children {N}  -children {M}: 8
+  +children {N}  -children {B}: 8
+  +children {P}  -children {N}: 14
+  +children {P}  -children {M}: 16
+  +children {P}  -children {B}: 5
+  +children {M}  -children {N}: 2
+  +children {M}  -children {P}: 6
+  +children {M}  -children {M}: 2
+  +children {M}  -children {NB}: 4
+  +children {B}  -children {P}: 4
+  +children {B}  -children {M}: 4

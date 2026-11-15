@@ -1,0 +1,15 @@
+order 4: unit cuts 27, identity failures 0
+ sign +1: Z hist 3 4 0 0 0 0 0 0 | E hist 7 0 0 0 0 0 0 0 | R hist 0 3 4 0 0 0 0 0
+ sign -1: Z hist 0 18 2 0 0 0 0 0 | E hist 20 0 0 0 0 0 0 0 | R hist 18 2 0 0 0 0 0 0
+order 5: unit cuts 72, identity failures 0
+ sign +1: Z hist 4 18 2 6 0 0 0 0 | E hist 30 0 0 0 0 0 0 0 | R hist 0 4 18 2 6 0 0 0
+ sign -1: Z hist 0 32 4 6 0 0 0 0 | E hist 42 0 0 0 0 0 0 0 | R hist 32 4 6 0 0 0 0 0
+order 6: unit cuts 206, identity failures 0
+ sign +1: Z hist 5 46 6 20 0 4 8 14 | E hist 103 0 0 0 0 0 0 0 | R hist 0 5 46 6 20 0 4 22
+ sign -1: Z hist 0 51 6 22 4 14 0 6 | E hist 103 0 0 0 0 0 0 0 | R hist 51 6 22 4 14 0 4 2
+order 7: unit cuts 674, identity failures 0
+ sign +1: Z hist 6 92 10 46 0 30 18 132 | E hist 334 0 0 0 0 0 0 0 | R hist 0 6 92 10 46 0 30 150
+ sign -1: Z hist 0 76 8 56 12 46 0 142 | E hist 340 0 0 0 0 0 0 0 | R hist 76 8 56 12 46 0 8 134
+order 8: unit cuts 2783, identity failures 0
+ sign +1: Z hist 7 160 14 92 4 104 28 982 | E hist 1391 0 0 0 0 0 0 0 | R hist 0 7 160 14 92 4 104 1010
+ sign -1: Z hist 0 108 10 114 20 102 0 1038 | E hist 1392 0 0 0 0 0 0 0 | R hist 108 10 114 20 102 0 12 1026

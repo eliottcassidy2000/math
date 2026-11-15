@@ -1,0 +1,3 @@
+order 9: all cuts 510000; cuts with E>=1: 490602; min delta over them 15; min (delta-E) -65; min (delta-2E+1) -1842; min (R-Z) -65
+ sign +1: Z hist 48124 20527 17355 29284 16788 26648 20926 328300 | E hist 17350 0 0 0 0 0 0 490602 | R hist 2 0 1 0 6 3 1 507939
+ sign -1: Z hist 0 0 0 0 0 3 0 2045 | E hist 2048 0 0 0 0 0 0 0 | R hist 167 3 12 8 9 9 12 1828

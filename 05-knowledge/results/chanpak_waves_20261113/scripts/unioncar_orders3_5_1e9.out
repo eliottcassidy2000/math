@@ -1,0 +1,2 @@
+misses above 21: 23 25 31 33 35 37 39 41 43 47 53 55 57 61 63 67 73 87 89 91 97 101 103 113 121 123 131 151 241 277 287 331
+cores 216 (orders 3..5), configurations 49085945302, X=1000000000: odd misses 43 (all), first miss above 21: 23, largest miss: 331

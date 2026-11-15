@@ -1,0 +1,47 @@
+order 4: (strong, c3, c5, d) -> H
+    (False, 0, 0, 0) H = 1 classes 1
+    (False, 1, 0, 0) H = 3 classes 2
+    (True, 2, 0, 0) H = 5 classes 1
+   H values: [1, 3, 5]
+order 5: (strong, c3, c5, d) -> H
+    (False, 0, 0, 0) H = 1 classes 1
+    (False, 1, 0, 0) H = 3 classes 3
+    (False, 2, 0, 0) H = 5 classes 2
+    (True, 3, 1, 0) H = 9 classes 2
+    (True, 4, 1, 0) H = 11 classes 1
+    (True, 4, 2, 0) H = 13 classes 1
+    (True, 4, 3, 0) H = 15 classes 1
+    (True, 5, 2, 0) H = 15 classes 1
+   H values: [1, 3, 5, 9, 11, 13, 15]
+order 6: (strong, c3, c5, d) -> H
+    (False, 0, 0, 0) H = 1 classes 1
+    (False, 1, 0, 0) H = 3 classes 4
+    (False, 2, 0, 0) H = 5 classes 3
+    (False, 2, 0, 1) H = 9 classes 1
+    (False, 3, 1, 0) H = 9 classes 4
+    (False, 4, 1, 0) H = 11 classes 2
+    (False, 4, 2, 0) H = 13 classes 2
+    (False, 4, 3, 0) H = 15 classes 2
+    (False, 5, 2, 0) H = 15 classes 2
+    (True, 4, 2, 1) H = 17 classes 1
+    (True, 4, 3, 0) H = 15 classes 2
+    (True, 4, 4, 0) H = 17 classes 1
+    (True, 5, 4, 0) H = 19 classes 2
+    (True, 5, 4, 1) H = 23 classes 2
+    (True, 5, 6, 1) H = 27 classes 2
+    (True, 6, 4, 2) H = 29 classes 1
+    (True, 6, 5, 0) H = 23 classes 2
+    (True, 6, 6, 0) H = 25 classes 2
+    (True, 6, 6, 1) H = 29 classes 3
+    (True, 6, 6, 2) H = 33 classes 1
+    (True, 6, 7, 1) H = 31 classes 2
+    (True, 6, 8, 2) H = 37 classes 1
+    (True, 7, 7, 1) H = 33 classes 2
+    (True, 7, 7, 2) H = 37 classes 2
+    (True, 7, 9, 0) H = 33 classes 2
+    (True, 7, 9, 1) H = 37 classes 2
+    (True, 8, 6, 4) H = 45 classes 1
+    (True, 8, 8, 2) H = 41 classes 1
+    (True, 8, 11, 1) H = 43 classes 2
+    (True, 8, 12, 1) H = 45 classes 1
+   H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]

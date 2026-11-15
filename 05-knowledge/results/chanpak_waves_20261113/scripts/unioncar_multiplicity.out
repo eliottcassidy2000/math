@@ -1,0 +1,13 @@
+Union of carrier forms over strong marked cores of orders 3-5 (216 marked cores, 168 distinct forms).
+Representation counts r(N) on odd N in windows [W, W + 2*10^5] (unioncar W1 W W1; window minima and class means):
+N~    10001: mean r   46.29  mean/ln N  5.03  min 4  zeros 0  by N mod 3: 53.5/38.8/46.5  primes 42.1  var/mean 6.09
+N~   100001: mean r   50.99  mean/ln N  4.43  min 4  zeros 0  by N mod 3: 59.1/42.8/51.0  primes 46.5  var/mean 5.93
+N~  1000001: mean r   61.90  mean/ln N  4.48  min 8  zeros 0  by N mod 3: 72.0/51.6/62.0  primes 56.6  var/mean 6.39
+N~ 10000001: mean r   75.73  mean/ln N  4.70  min 14  zeros 0  by N mod 3: 87.9/63.0/76.2  primes 69.1  var/mean 6.87
+N~1e8 (window [10^8+1, 10^8+2*10^5+1]): mean 90.06, mean/ln N 4.89, min 18, zeros 0
+First-moment prediction: sum over distinct forms of 2/q = 4.780 (forms_logdensity.py).
+
+Orders 3-4 union (24 marked cores, 20 forms, sum 2/q = 1.667), misses above 1000 to 10^8: 10,764
+ mod 3: {0: 3200, 1: 6391, 2: 1173};  mod 5: {0: 2005, 1: 1855, 2: 2552, 3: 3502, 4: 850};  mod 9 classes = 2 mod 3 rare
+ miss density per odd number by decade: [1e3,1e4) 3.09e-02, [1e4,1e5) 7.98e-03, [1e5,1e6) 2.06e-03, [1e6,1e7) 5.68e-04, [1e7,1e8) 1.51e-04
+ class means near 10^6 and 10^7 (mean r / ln N per odd class mod 15) lie in 1.28-2.38; zero fractions per class 1e-4..3e-3
