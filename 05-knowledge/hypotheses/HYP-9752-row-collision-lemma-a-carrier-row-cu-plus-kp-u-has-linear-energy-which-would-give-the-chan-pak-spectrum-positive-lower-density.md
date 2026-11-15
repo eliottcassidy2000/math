@@ -76,3 +76,6 @@ about κw·2^l.
 The lemma remains OPEN.
 
 **Partial follow-up, 2026-11-15.** The [reverse-prefix theorem](../results/chanpak_local_rows_span3_20261115/ROWS.md) proves that low split levels and small reversed displacements contribute sublinear collision energy in the stated ranges. The [mesoscopic row limit](../results/chanpak_local_rows_span3_20261115/ROW_LIMIT.md) gives the continuous mass but does not control the distant exact collisions. The full hypothesis remains open.
+
+
+**Further partial follow-up, 2026-11-15.** The [two-ended lattice reduction](../results/chanpak_cone_collision_placement_20261115/TWISTED_LATTICES.md) excludes every negative reversed displacement for the physical rows and proves that spans below $(1/(\log_2 6-1/3)-\epsilon)L$ contribute $o(2^L)$ by a slope-adapted digit split. Infinite positive-slope collision rays persist; the same-direction long-span estimate and linear energy remain open.
