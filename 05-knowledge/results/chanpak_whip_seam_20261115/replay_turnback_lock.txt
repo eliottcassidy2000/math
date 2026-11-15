@@ -1,0 +1,5 @@
+literal old kernel 4 [(389, 406, -128, 0), (6032, 3196, -1508, 0)]
+literal old kernel 8 [(389, 406, -122, 0), (6032, 3196, -1484, 0)]
+literal returned and wrapped 2 (1201, 40288, 41489) (1201, 40336, 41537)
+literal returned and wrapped 3 (2013, 102768, 104781) (2013, 102816, 104829)
+literal returned and wrapped 4 (3637, 266080, 269717) (3637, 266128, 269765)
