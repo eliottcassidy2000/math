@@ -17,6 +17,19 @@ def setup(m,L):
 def read(u,m):
     return (1+u[-1]+u[0][-1])%m,(2*u[0][1]+pow(2,-1,m)*u[0][1]*(u[1][-1]+u[2][-1]))%m
 def main():
+    for m in (5,7,25,35,65,175):
+        k=sum(gcd(i,m)==1 for i in range(m)); L=k+1
+        half=pow(2,-1,m); ts=(2,3*half%m,half)
+        X,Y=block('AA'+'B'*(L-2),ts,m),block('A'+'B'*(L-1),ts,m)
+        F=block('A'*k+'B'*k,ts,m)
+        V=mm(X,inv(Y,m),m); C=[V]
+        for _ in range(3): C.append(mm(mm(X,C[-1],m),inv(X,m),m))
+        la=[pow(t,e,m) for t in ts[:2] for e in (-1,1)]
+        Z=comm(filt(C,la,0,m),filt(C,la,1,m),m)
+        u=read(X,m); f=read(mm(X,F,m),m); z=read(mm(X,Z,m),m)
+        if f!=((u[0]+1)%m,u[1]) or gcd(z[1]-u[1],m)!=1:raise AssertionError(m)
+        print('adjacency/center actuators',m,k)
+
     for m in (7,13,19,37,49,91):
         L=1+sum(gcd(i,m)==1 for i in range(m))
         x,z,t=setup(m,L)
