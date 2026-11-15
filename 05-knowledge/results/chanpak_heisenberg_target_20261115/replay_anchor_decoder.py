@@ -26,7 +26,7 @@ def literal(rows):
                 table[s|b][b.bit_length()-1]+=m
                 v^=b
     return sum(table[-1])
-def glue(w,m,s):
+def glue(w,m,s,wr=None):
     n=len(w)
     W=range(n+1,n+1+s)
     U=range(n+1+s,n+1+s+m)
@@ -40,7 +40,7 @@ def glue(w,m,s):
         for j in W:r[i]|=1<<j
     for i in W:
         for j in list(W)+list(U):
-            if i<j:r[i]|=1<<j
+            if (j in U or (i<j if wr is None else wr[i-(n+1)]>>(j-(n+1))&1)):r[i]|=1<<j
     for i in U:
         r[i]|=1
         for j in U:
@@ -74,4 +74,19 @@ def check():
         x=(1<<m)-1
         need(literal(glue(w,m,s))==target(w,x,x<<s))
     print('120 literal Hamilton path computations')
+    for k,a,b1,b5,c1,c5 in ((3,1,6,7,229,261),(5,5,28,27,951,921)):
+        L=32*(1<<k)+5*a
+        for b,t,s,wr,offset in ((b1,1,5,None,c1),(b5,5,4,(8,1,3,6),c5)):
+            g=1
+            seq=(1,)+(0,)*g+word(b,k)
+            H=literal(glue(seq,1,s,wr))
+            need(H==L*(1<<g)+offset)
+    for k in range(5,16):
+        g=k+6
+        for a,b1,b5,c1,c5 in (((1<<(k-3)),6,7,229,261),(5*(1<<(k-5)),28,27,951,921)):
+            L=32*(1<<k)+5*a
+            for b,t,offset in ((b1,1,c1),(b5,5,c5)):
+                A,u=count((1,)+(0,)*g+word(b,k))
+                need((t*A+32*(u+1))==(L<<g)+offset)
+    print('Four literal profile-switch controls and 44 symbolic high-window controls')
 if __name__=='__main__':check()
