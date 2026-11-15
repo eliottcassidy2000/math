@@ -1,0 +1,2 @@
+profile (13, 104, 18, 18) memory (0, 1) live vertices 80 gcd 10 verified shifts [10, -10]
+profile (45, 1440, 517, 818) memory (1, 1) live vertices 84 gcd 2 verified shifts [2, -16]
