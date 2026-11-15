@@ -2797,6 +2797,106 @@ So no affine counter exists among span-3 blocks of length ≤ 4 (HYP-9762 update
 | 13-unit certificate | done elsewhere (credited) |
 | Arbitrary span-3 growth bound | OPEN |
 
+## Wave 33: a survey of tangential prior work, and what it points to
+
+Session mac-mini-2026-11-15-survey. Owner prompt: "spend this session surveying past work that may relate
+tangentially to chan-pak for inspiration then continuing creatively toward its proof."
+
+Three read-only surveys were run, each over 01-canon, 05-knowledge and 00-navigation:
+- proved "every value" analogues;
+- averaging and local-limit proofs on any problem;
+- exact composition laws and obstructions.
+
+Their findings, condensed, follow with paths, then one new test and the program they suggest.
+
+### §1. Proved "every value" analogues and why they do not transfer
+
+- **The solved analogues.**
+  - BCS threshold graphs: every odd k is a dominating-set count. The proof is binary numeration with the cone move
+    d(K1 ∨ G) = 2^|G| + d(G), which adds a power of two whatever G is.
+  - Even graphs (THM-5040, THM-5055) and odd graphs (THM-5056, THM-5042): every odd value except {3, 7, 13}, resp.
+    {1, 5, 37}. Three ingredients: padded cones write a leading "10"; offset moves +3·2^(n−1) (order +2) and
+    +7·2^(n−1) (order +3) carry an offset across all larger powers of two; and a seed lemma, proved by strong
+    induction on the offset.
+  - Spanning trees (THM-4986): τ(C_N) = N.
+- **The tournament analogues that exist.**
+  - Rays c₀ + M·2^t with power-of-two response M (THM-5126, THM-5130, THM-5145) cover every odd N within about
+    [−791, 647] of a power of two.
+  - Endpoint counts are universal (THM-5001, THM-5113), because they are linear in the in-set.
+- **What is missing.**
+  - The tournament "cone" (near-join h + 2^k·B with B ≥ h) only reaches (2^K, 3·2^(K−1)] and does not chain
+    (THM-5109).
+  - So the precise missing pieces are a move writing a leading "11" and an inductive seed lemma. The type conjecture
+    HYP-9675 is the closest statement.
+
+### §2. Exact laws never used as generators (from the composition survey)
+
+1. **Hyperbolic two-port kernels** (THM-5133): N₂₂H = LL′ − |det G|·hh′, an indefinite form. It lets a count be a
+   small difference of two large, correlated core counts. The cyclic join used so far is definite, which is why that
+   route needed band fullness (HYP-9692).
+2. **Prime quotients of order ≥ 5 with three or more free modules** (THM-3121).
+3. **Recursive binary cyclic joins**, with both inputs of C3[X, B, TT₁] built recursively. Analysed only mod 15.
+4. **Iterated vertex substitution** with the negative k(E − O) term (symmetry interfaces, PORTS2).
+5. **Exact switchboards.** The one-visit swaps TT₃ ↔ C₃ change H by exactly 2× the slot weight but were never
+   combined across slots. THM-5124 forbids only independent parallel switches.
+6. **The coalescence Extra term** (THM-5202 (A)), never parametrised.
+
+### §3. Averaging routes and the one that could be pointwise (from the local-limit survey)
+
+- **What the levels give.** L¹ energy gives positive density (HYP-9752), and L² gives density one (Chebyshev).
+  Pointwise needs the minor-arc integral below one main-term coefficient. Sup bounds per member cannot do this
+  (session205 and session193 cautionary notes).
+- **The tilted all-tournament ensemble** has a proved reduction from a tilted local limit law to every large odd h
+  (THM-5127, Proposition 5.1). The missing piece is an integral bound uniform in the tilt.
+- **Twisted transfer operators for ribbon words** (HYP-9474). The multiplicity is about X^1.6 > X, so a sup-norm
+  minor-arc bound would already be pointwise. The needed per-letter contraction is < e^(−λ) ≈ 0.59 away from the
+  arcs a/(2·3^i·5^j); measured values are 0.7–0.8.
+
+### §4. A test this wave: collective sign freedom fails
+
+**Idea.** A single tournament cannot keep both unit moves H ↦ 2H ± 1 (sign freezing). But many recursive-tree
+tournaments share each count. If for every large M some tree with count M admitted a +1 leaf and some admitted a −1
+leaf, binary descent would give every odd N.
+
+**Test** (`scripts/w33_recursive_tree_unit_offsets.c`, all trees):
+
+| order | counts M | both ±1 | only +1 | only −1 | neither |
+|---:|---:|---:|---:|---:|---:|
+| 6 | 16 | 6 | 4 | 4 | 2 |
+| 7 | 55 | 9 | 9 | 11 | 26 |
+| 8 | 192 | 13 | 30 | 27 | 122 |
+
+Unit offsets are rare even collectively at a fixed order. Binary descent inside recursive trees is dead.
+
+### §5. The creative link: the major arcs are the floor bottlenecks
+
+The twisted-operator route fails exactly at the arcs a/(2·3^i·5^j). By THM-5202 those denominators come from floor
+runs: every bulk floor run forces an exact factor 3^j or 5^j and a factorization H = L·R. This gives a new program:
+
+- **(P1) Bottleneck-free twisted operators.**
+  - *Restriction.* Restrict the ribbon family to bottleneck-free words (THM-5212, and the 13-unit suffix cones of
+    chanpak_cone_collision_placement_20261115). This removes the source of the 3^i·5^j arcs.
+  - *Trade-off.* The minimum growth rises to ρ* = 1.7700, so the multiplicity exponent drops, and the contraction
+    target changes accordingly.
+  - *Test.* Measure the twisted contraction on the bottleneck-free automaton at θ = 1/3, 1/5, 1/8. If it beats the new
+    target uniformly, a pointwise theorem follows.
+- **(P2) A leading-"11" move from a hyperbolic kernel.** In N₂₂H = LL′ − |det G|hh′, fix one core. The count becomes
+  a linear form αL − βh in the other core's ports, with a negative coefficient. Values in the "11" band then come
+  from cores whose port ratio L/h lies near β/α. Test: a census of (L, h) for cores up to order 9, and the band of
+  αL − βh values each fixed core reaches.
+- **(P3) A seed lemma by strong induction on offsets**, modelled on THM-5055. Tournament rays already carry offsets
+  across powers of two (THM-5126). What is needed is an operation turning a realized count c into an offset with
+  power-of-two response. P2 or the switchboard (§2.5) are the candidates.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| Survey map (§1–§3) | collected with paths; claims are the cited files' own |
+| Collective sign freedom (both unit leaves for every count) | REFUTED at orders 6–8 (FINITE-EXACT) |
+| Major arcs at 3^i·5^j = floor bottlenecks | ARGUMENT (THM-5202 mechanism); P1 untested |
+| P1–P3 | proposed program |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
