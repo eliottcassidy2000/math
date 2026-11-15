@@ -1,0 +1,5 @@
+checked 4037914 histories; 87 independent literal final-layer DPs
+holes below 366 7 21
+23 first 6 parents 0 0 0 1 1
+33 first 6 parents 0 0 0 1 2
+35 first 7 parents 0 0 1 0 4 0
