@@ -1,0 +1,6 @@
+height=0 order=11 odd interval=[2855,2855] S=3914 T=4034
+height=1 order=23 odd interval=[11273423,11273425] S=16057034 T=16564034
+height=2 order=35 odd interval=[46175263991,46175263995] S=65769636554 T=67846324034
+height=3 order=47 odd interval=[189133880374559,189133880374565] S=269392431350474 T=277898543284034
+8-core and all four compatible width-12 tiles verified; symbolic profile checked for 561 slide positions through height 32.
+1536 exact two-sided placements tested.
