@@ -1,5 +1,7 @@
 # Chan–Pak: cross-cut counterexample, exact ribbon floor, and physical carrier incidence
 
+**The unrestricted near-floor conjecture is proved, with the optimal coefficient.** Every strong tournament on \(n\) vertices satisfies \(H(T)\ge f(n)+3(hc(T)-1)\), where \(f\) is the Busch floor. This strengthens the conjectured coefficient 2 and proves its equality clause. In Busch's one-vertex decomposition, both bad cycle projections and repeated good shuffles contribute enough extra Hamilton paths to pay for the cycle term. An order-five strong tournament with \(H=15\), \(hc=3\), and \(f(5)=9\) attains the coefficient 3. [Proof, sharp example, and independent literal replay](GLOBAL.md).
+
 **Crossing lemma refuted, including the monotonicity of unit cuts.** A strong order-11 tournament has \(H=815\) and 156 paths crossing the cut twice, yet \(H(T+x)=1629=2H-1\). The two-shelf construction quantifies the exact missing insertion mass and makes the defect arbitrarily negative. This invalidates the proposed route from crossings to sign freezing, not sign freezing itself. [Witness and proof](CROSSING.md) · [independent one-growing-shelf law and min-cut reformulation](SHELF.md).
 
 **Near-floor conjecture proved for every strong span-two ribbon.** The width-two transfer and a symbolic Pareto induction give both \(\min H=m(n)\) and \(\min(H-2\,hc)=m(n)-2\), with \(m(16+2k)=3375\cdot3^k\), \(m(17+2k)=5625\cdot3^k\), and \(m(n)\) equal to the Busch floor through order 15. The equality clause of HYP-9457(a) holds in this class. The certificate proves the affine template evolution for every depth, rather than extrapolating minima. [Proof and replay](NEAR_FLOOR.md).
@@ -8,4 +10,4 @@
 
 **Density one still needs an exact collision estimate.** For the mask-zero carrier the required normalized off-diagonal second-moment benchmark is \(131/121\) in the normalization in the note. A density-zero thinning of actual count fibers retains the scaled full-circle Fourier profile and local factors, so a relative Fourier law and diverging average multiplicity cannot by themselves prove density one. [Proof and benchmark](DENSITY.md).
 
-**Chan–Pak remains open.** These are all-order results with separate scopes: bounded-width structural rigidity, an unrestricted counterexample to a proposed cut inequality, and an unconditional support exponent for a single carrier. None implies realization of every admissible prescribed odd target.
+**Chan–Pak remains open.** The near-floor theorem constrains the counts at each order; it does not put a tournament at an arbitrarily prescribed admissible count. None implies realization of every admissible prescribed odd target.
