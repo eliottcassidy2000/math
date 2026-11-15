@@ -1,0 +1,3 @@
+Literal opposite-mark return at j= 3 : 897 899 shared h=77 S= 1294
+Literal opposite-mark return at j= 4 : 1621 1623 shared h=77 S= 2742
+Literal opposite-mark return at j= 5 : 3069 3071 shared h=77 S= 5638
