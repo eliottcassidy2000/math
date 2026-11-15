@@ -36,6 +36,14 @@ $$
 
 Every entry of odd multiplicity guarantees a strong self-converse realization in that residue, not just an ordinary one. An even multiplicity makes no claim about support. These are infinite existence statements in fixed residue classes, not absolute-count coverage.
 
+## Retaining the score statistic jointly
+
+The same proof retains the directed triangle count $c_3$ modulo $2^t$, $t\ge1$, jointly with $H\bmod 2^s$. Triangle count has Boolean degree at most two by converse cancellation on each triple. Multiplying the two Lucas tests adds their degrees, so joint class multiplicities are even whenever
+$
+ B>(2^{s-1}-1)d+2(2^t-1).
+$
+Across an ordered SCC sum, $H$ multiplies while $c_3$ adds. Replace $G$ above by $G\times(\mathbf Z/2^t,+)$, whose exponent is $\max(K,2^t)$, to get the same eventual strong-class parity recurrence with that exponent. This brings the score statistic driving the first term of the [reversal law](DYNAMICS.md) into the exact isomorphism-class algebra. The two outputs are retained jointly, not treated as independent.
+
 ## Higher valuation for the path-marked cube
 
 For $a\ge1$, let $f(z)$ be the indicator of the required residue of $z\bmod q$. In the Newton expansion $f(Q)=\sum_j\Delta^jf(0)\binom Qj$ for $Q\ge0$, coefficients with $j\ge(a+1)q/2$ vanish modulo $2^a$. Indeed the difference operator $D$ on $q$-periodic sequences satisfies
