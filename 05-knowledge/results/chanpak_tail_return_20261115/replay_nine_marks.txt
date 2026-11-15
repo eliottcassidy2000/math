@@ -1,0 +1,29 @@
+Surgery kernel checked against direct path DP on proportional controls
+Target marked extensions (nonquotiented): 1255:1936 1257:1802 1259:1773 1261:1906 1263:1938 1265:2013 1267:1919 1269:1802 1271:1606
+Common right-state profiles 16279 maximum distinct lane values 3 longest adjacent run 2
+Run state 81 1717 23: 1267 1269
+  1267 rows 2 12 49 21 67 27 47 127 mark 232
+  1269 rows 2 36 25 67 11 29 55 127 mark 228
+Longest first-rung run after neutral-one alignment 3 normalized h,oddpart(S+h) 239 1395 contiguous from 1261
+  1261 rows 4 5 56 195 75 27 167 55 mark 40
+  1263 rows 12 33 50 22 35 201 31 95 mark 167
+  1265 rows 2 12 33 85 135 155 55 79 mark 136
+Maximum exact global right-state run at order 9 4 state 9 245 9 contiguous from 89
+  89 rows 0 1 35 7 15 91 31 127 mark 109
+  91 rows 0 17 3 7 45 15 63 127 mark 99
+  93 rows 0 1 3 71 15 31 183 63 mark 85
+  95 rows 0 1 3 71 15 31 183 63 mark 45
+Maximum global neutral-one alignable run at order 9 6 h,oddpart(S+h) 45 87 contiguous from 129
+  129 rows 10 20 33 38 13 19 63 127 mark 9 S+h 174
+  131 rows 10 20 33 22 37 11 63 127 mark 9 S+h 174
+  133 rows 16 1 3 7 78 31 175 63 mark 18 S+h 174
+  135 rows 10 20 33 38 13 19 63 127 mark 10 S+h 174
+  137 rows 10 20 33 22 37 11 63 127 mark 10 S+h 174
+  139 rows 10 20 33 22 37 11 63 127 mark 12 S+h 174
+Maximum strong-completable neutral-one alignable run at order 9 6 h,oddpart(S+h) 45 87 contiguous from 129
+  129 rows 0 1 43 83 135 155 55 79 mark 39 S+h 696
+  131 rows 0 1 43 83 135 91 151 47 mark 39 S+h 696
+  133 rows 16 1 3 7 78 31 175 63 mark 18 S+h 174
+  135 rows 0 1 43 83 135 155 55 79 mark 43 S+h 696
+  137 rows 0 1 43 83 135 91 151 47 mark 43 S+h 696
+  139 rows 0 1 43 83 135 91 151 47 mark 51 S+h 696
