@@ -3,3 +3,4 @@ H59 row 0 : 59 119 239
 H59 row 1 : 117 233 465
 H59 row 2 : 233 461 917
 H59: exact two-ended grid, root readiness, and first child menus verified.
+32 reducible ordinal sums verify the raw-unit confinement and component factor laws.
