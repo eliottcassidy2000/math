@@ -1,0 +1,26 @@
+record span 0 length 1 signature (3, 12, 9, 0) parity 0
+3 ((3, 1, 0), 0, 0, 0, 0)
+record span 0 length 2 signature (15, 120, 63, 42) parity 0
+41 ((5, 5, 3), 0, 0, 0, 0)
+43 ((5, 5, 5), 0, 0, 0, 0)
+span 0 matched extremal suffix pairs 166 record 2
+span 1 matched extremal suffix pairs 18 record 2
+record span 2 length 3 signature (9, 336, 118, 209) parity 0
+89 ((5, 4, 4), 0, 1, 1, 0)
+91 ((5, 4, 10), 1, 0, 0, 1)
+93 ((5, 4, 17), 1, 2, 2, 0)
+span 2 matched extremal suffix pairs 22 record 3
+span 3 matched extremal suffix pairs 36 record 3
+span 4 matched extremal suffix pairs 52 record 3
+span 5 matched extremal suffix pairs 72 record 3
+span 6 matched extremal suffix pairs 158 record 3
+span 7 matched extremal suffix pairs 266 record 3
+span 8 matched extremal suffix pairs 542 record 3
+span 9 matched extremal suffix pairs 1042 record 3
+span 10 matched extremal suffix pairs 2092 record 3
+span 11 matched extremal suffix pairs 4106 record 3
+span 12 matched extremal suffix pairs 8346 record 3
+span 13 matched extremal suffix pairs 16394 record 3
+span 14 matched extremal suffix pairs 32906 record 3
+span 15 matched extremal suffix pairs 65568 record 3
+span 16 matched extremal suffix pairs 131342 record 3
