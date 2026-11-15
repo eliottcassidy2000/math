@@ -20,12 +20,18 @@ interchanging the two ordered cover slots is a fixed-point-free
 involution on a nonempty vertex set. In the slide graph's update,
 integrality of \(r'\) forces \(w_i\equiv r\pmod2\), independent of
 \(z_i\). So there is at most one outgoing edge per input bit \(z_i\),
-and its output \(w_i\) is determined by the preceding state. In reverse,
-integrality of \(s=(s'-hz_i+Qw_i)/2\) forces \(z_i\equiv s'\pmod2\);
-there is at most one predecessor per reverse input bit \(w_i\).
+and its output \(w_i\) is determined by the preceding state.
 
 Assume the component has both forward edges internally everywhere.
-Every one-sided infinite binary input \(z\) therefore has a literal
+Project it onto the unsigned vertices \((s,r)\) and retain its distinct
+labeled edges. The projection still has both outgoing edges internally
+at every vertex, because the unsigned updates do not use the old bits.
+In this **unsigned** graph, reverse integrality of
+\(s=(s'-hz_i+Qw_i)/2\) forces \(z_i\equiv s'\pmod2\);
+given the reverse input bit \(w_i\) the predecessor is unique.
+(The augmented graph remembers old bits and need not have this
+reverse degree bound.) Every one-sided infinite binary input \(z\)
+therefore has a literal
 output \(w\) staying in the bounded graph. Regard the words as real
 binary fractions \(x,y\). The bounded start recurrence gives
 \[
@@ -41,8 +47,8 @@ the choice of binary expansion at the boundary itself.
 For large \(k\) choose two consecutive such \(j\). Subtracting the
 dyadic preimages and recalling that \(h\) is odd shows \(h\mid Q\).
 Substituting one preimage then shows \(h\mid s\). By the degree bound
-in reverse and the edge count \(2|V|\), the component also has both
-reverse edges internally everywhere. The same argument in reverse,
+in reverse and the edge count \(2|V|\) in the unsigned projection,
+the projected component also has both reverse edges internally everywhere. The same argument in reverse,
 interchanging the channels, gives \(h\mid r\).
 
 Let \(m=Q/h\) now be an even integer. Take two infinite input words
