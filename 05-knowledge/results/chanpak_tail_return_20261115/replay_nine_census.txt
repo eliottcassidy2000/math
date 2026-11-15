@@ -1,0 +1,27 @@
+order 1 classes 1 maxH 1
+order 2 classes 1 maxH 1
+order 3 classes 2 maxH 3
+order 4 classes 4 maxH 5
+order 5 classes 12 maxH 15
+order 6 classes 56 maxH 45
+order 7 classes 456 maxH 189
+order 8 classes 6880 maxH 661
+order 9 classes 191536 maxH 3357
+  1255 classes 212 witness 2 28 41 209 197 283 295 103 159
+  1257 classes 198 witness 2 28 169 113 101 195 263 347 63
+  1259 classes 193 witness 2 28 41 225 269 211 279 87 175
+  1261 classes 206 witness 2 28 41 209 293 203 279 87 175
+  1263 classes 210 witness 2 28 265 113 293 199 151 31 235
+  1265 classes 221 witness 2 28 97 197 45 395 179 279 95
+  1267 classes 211 witness 2 28 289 325 45 203 151 31 243
+  1269 classes 198 witness 2 28 97 165 141 211 283 327 63
+  1271 classes 178 witness 2 28 97 165 269 339 155 55 207
+  2275 classes 129 witness 6 56 90 353 201 149 419 271 55
+  2277 classes 135 witness 6 56 90 225 393 85 403 295 47
+  2279 classes 149 witness 6 56 90 225 201 277 419 295 31
+  2281 classes 131 witness 6 56 106 209 325 153 419 279 47
+  2283 classes 124 witness 6 56 90 225 393 277 307 103 143
+  2285 classes 145 witness 6 56 90 225 393 277 179 295 79
+  2287 classes 115 witness 6 76 120 177 387 275 313 103 143
+  2289 classes 119 witness 6 56 202 209 293 269 307 115 143
+  2291 classes 147 witness 6 56 90 449 169 269 307 103 151
