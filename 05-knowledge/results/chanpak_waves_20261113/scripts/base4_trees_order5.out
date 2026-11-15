@@ -1,0 +1,11 @@
+class 2 H=3 base4depth=2 code=1111111101
+class 3 H=5 base4depth=1 code=1101111111
+class 4 H=11 base4depth=1 code=1100111111
+class 5 H=13 base4depth=1 code=1101110111
+class 6 H=9 base4depth=1 code=1101111101
+class 7 H=9 base4depth=1 code=1101111110
+class 8 H=15 base4depth=0 code=1100110111
+class 9 H=3 base4depth=2 code=1111101111
+class 10 H=15 base4depth=0 code=1110101111
+class 11 H=5 base4depth=1 code=1111100111
+class 12 H=3 base4depth=2 code=1011111111

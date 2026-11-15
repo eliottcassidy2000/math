@@ -24,6 +24,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | The invertible root-change blocks generate a group Zariski-dense in GL_3; the transfers of one apex and one hub are triangularizable with weights {1, 2}, of two hubs with weights {1, 2, 3} | wave 23 |
 | The invertible root-change blocks generate {g in GL_3(F_p) : det g in <2>} modulo every odd prime, and the analogous group modulo every odd modulus q (strong approximation with S = {2}, through Heisenberg unipotents, an opposite flag and the p-adic lift); every invertible block is [[b−Q, −1, b], [1, 0, 0], [2^n−R, 0, 2^n]] with Hammersley-net digits; long random invertible words have the Haar local law, with prime singular series (7/8)ζ(3) | wave 24, THM-5162 |
 | No Heisenberg (unipotent) orbit lies inside the invertible root-change semigroup; F_2 = (-1)^n H (mod 3), F_2 = 0 (mod 4); the cyclic join is 3N = Re(alpha_A conj alpha_B) in Z[sqrt(-2)] | wave 25, THM-5172 |
+| Pair expansion of the marked one-apex spine count; passive channels (n flat, t positional); mod-3 law T_v = (-1)^(m+1) S_v for every vertex of every tournament; seam lemma S_v, T_v >= H | wave 26, THM-5182 |
 
 ### What is only verified
 
@@ -35,6 +36,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | O/Z/J root-change words (KNOWN: THM-4904, HYP-9494 (D)) | every odd N in (2647, 10^9]; the wave-19 decoder adds random samples near 10^12 and 10^15 |
 | invertible root-change language: a one-apex source, then invertible blocks only, no resets (HYP-9682) | every odd N in (6223, 2^26]; the 16 blocks with \|w\| ≤ 5 alone: (12,811, 2^26]; the orbit of (1,1,1,1) alone: (179,367, 2^26] (wave 24) |
 | cyclic joins A -> B -> c -> A of two cores of order <= 10 (the two-core host) | every odd N in (36,833, 2,398,737] (wave 25) |
+| marked two-block one-apex tournaments (L => B plus an apex, blocks of order 8 and 7) | every odd N < **8,667,349** except 7 and 21 (wave 26; orders <= 7: < 1,542,343) |
 | bounded runs ≤ 5, the 63 matrices of HYP-9677 | every odd N in (10,391, 2^24] (wave 20; the record was 2^19); runs ≤ 4 (31 matrices): every odd N in (130,247, 2^25] |
 | Fermat-block cuts of order-≤9 sources | every odd N in [69, 398,129] |
 | span-2 ribbons | every odd N ≤ 100,000 except 7, 21 and 47 |
@@ -43,7 +45,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 
 | route | status | decisive evidence |
 |---|---|---|
-| local ternary or binary recursion (one vertex added gives 3n+{0,2,4} or 2n±1) | **closed** | P18 per configuration; wave 17 per value (323/1231) |
+| local ternary or binary recursion (one vertex added gives 3n+{0,2,4} or 2n±1) | **closed** | P18 per configuration; wave 17 per value (323/1231); wave 26: no tournament of order ≤ 9 has armed +1 and −1 children, even with arbitrary re-chosen out-sets (HYP-9712) |
 | affine numeration in one register (a common eigenvector) | **closed** | no common left eigenvector for λ = 2, 3 (wave 17) |
 | decoder heredity (closure, shortlex, bounded backtracking, residue steering) | **closed** | P25, P30, wave 16, P33 |
 | multiplicative closure alone | **closed** | Session 324 countermodels: closed sets with extra holes |
@@ -110,6 +112,8 @@ like the one-hub transfer. What separates them is the rank of the weight group: 
 
 **Update (wave 25).** The owner's two-core program is now quantified. Fixing the target N and the first core A puts the second core on a lattice line; in Z[sqrt(-2)] this line is perpendicular to alpha_A = (f_A - 3h_A) + f_A sqrt(-2). It contains an actual profile as soon as the (H, F_2) cloud of the second core's order fills its ridge band. The exact census to order 10 shows the band filling: 30% at order 9, 71% at order 10, and a calibrated model predicts fullness at order 12. With cores of order <= 10 the host already attains every odd N in (36,833, 2,398,737]. Band fullness from order 12 on, together with the census below 2^32, would close Chan–Pak (HYP-9692). Readers of every scale bridge the gaps between orders, which a one-dimensional local limit law could not do. The Heisenberg route inside the semigroup is closed: no unipotent orbit fits (THM-5172).
 
+**Update (wave 26).** The owner's stable plus/minus fan pair does not exist even in the widest one-vertex model. With arbitrary out-sets, re-chosen at every node, no tournament of order <= 9 has both an armed +1 child and an armed -1 child: the children freeze their sign (THM-5182 (D), HYP-9712). Sliding cores are rare (counts 13, 29 and 115 only, through order 7) and give no unit pump. A slide that matches the right-facing data moves the passive t geometrically. The seam lemma shows that a reservoir can place a growing window only if it is itself exponentially rich. The owner's reservoir-and-repair architecture does work once the repair is the whole marked left-profile rather than a window: marked two-block one-apex tournaments attain every odd N < 8,667,349 except 7 and 21. Their fixed-interface palettes are trivial (mean size 1.05), so this is a fullness phenomenon like HYP-9692, in a much denser 4D cloud (HYP-9702). A new mod-3 law, T_v = (-1)^(m+1) S_v, fixes every passive t mod 3. Primes carry exactly the multiplicity of their residue class; the only local bias is at 3.
+
 ## Rule 30: the three prize problems
 
 ### Repository program (36 theorems, THM-3456 … THM-4210)
@@ -147,8 +151,9 @@ quantified in the LFSR and FCSR models; the quadratic-register model is next.
 
 ## Ranked next moves
 
-1. Prove band fullness, a two-dimensional local limit theorem for (H, F_2) of random tournaments in the ridge band,
-   from order 12 on (HYP-9692): with the cyclic-join host it closes Chan–Pak. Parallel target: density one (V(X) → 0)
+1. Prove a fullness theorem for one of the two profile pairings: the (H, F_2) ridge band from order 12 on
+   (HYP-9692, cyclic joins), or the denser marked left-profile cloud (a, n, t, f) of the two-block family
+   (HYP-9702, already complete below 8,667,349, where marks enter t and f linearly). Either closes Chan–Pak above the 2^32 census. Parallel target: density one (V(X) → 0)
    for the invertible root-change orbit, HYP-9682. Its local half is THM-5162; what is
    missing is the archimedean / minor-arc half, in the Apollonian regime (critical exponent 1.28 against 1.3056). The
    concrete open question is whether some semigroup family realizes a full orbit of the Heisenberg group of

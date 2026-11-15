@@ -1979,6 +1979,243 @@ Open predictions:
 - **P75.** Adding the order-11 cores pushes the complete stretch of cyclic-join counts beyond 5·10^7.
 - **P76.** Every prime in (36,833, 2,398,737] has a representation whose first core has order ≤ 4.
 
+## Wave 26: fans, slides and reservoirs — unit extensions never branch twice, a mod-3 law for passive channels, and marked two-block completeness
+
+Owner prompt (2026-11-15), in short:
+- caterpillars collapse into products, so the useful lead is fan invariance itself;
+- ask whether two armed fan vertices, one at +1 and one at −1, stay stable under attachment, since they would
+  generate the full binary tree, and search for such pairs;
+- use the growing window (the 13/29 sliding cores of
+  [chanpak_window_descent_20261115](../chanpak_window_descent_20261115/README.md), half-steps 145 and 39) as a
+  repair, with a different left reservoir whose ordinary count scales the repair radius and whose marked endpoints
+  set the residue class and the interval;
+- find other constructions that slide along the number line without changing what the surrounding tournament
+  reads, using number theory, primality and invariants.
+
+Prior art read first:
+- [chanpak_leaf_fans_20261115](../chanpak_leaf_fans_20261115/README.md): fan law, cross-port law, movable-port
+  census and parallel fans, all in the leaf model where a newborn beats exactly one old vertex;
+- the window-descent notes: matched slides, the CRT amplifier, the exposure theorem and primitive lanes;
+- [CUT_STATE](../chanpak_selective_target_20261114/CUT_STATE.md): the exact transfer used throughout.
+
+**Chan–Pak OPEN.** The short answer of this wave:
+1. **No stable plus/minus fan pair, even in the widest one-vertex model (FINITE-EXACT, NEGATIVE).** Allow
+   arbitrary out-sets, re-chosen at every node. Still no tournament of order ≤ 8 has both an armed +1 child and an
+   armed −1 child. The children freeze their sign
+   ([THM-5182](../../../01-canon/theorems/THM-5182-passive-channels-of-a-marked-one-apex-spine-mod-three-law-seam-lemma-and-the-fate-of-plus-minus-fans.md) (D),
+   [HYP-9712](../../hypotheses/HYP-9712-unit-extensions-never-branch-twice-no-tournament-has-armed-plus-and-minus-children.md)).
+   Two-vertex base-4 steps die just as early.
+2. **Which channels can slide (PROVED).** In a marked spine a block's neighbour reads only (a, q, s, e).
+   - The n-channel slides at flat weights (the CRT amplifier).
+   - The t-channel slides at positional weights.
+   - The count is an explicit pair expansion (THM-5182 (A)).
+3. **A mod-3 law (PROVED).** T_v ≡ (−1)^(m+1) S_v (mod 3) for every vertex of every tournament. Hence the passive
+   t of any mark set is fixed mod 3 by (a, s) (THM-5182 (B)).
+4. **Slides are rare, and a reservoir cannot place them (census + seam lemma).**
+   - Only cores of count 13 (order 5), 29 and 115 (order 7) have nonzero matched slides; there is no unit pump.
+   - A slide that matches the right-facing data moves t geometrically.
+   - The seam term s_L t_B ≥ 2^ℓ g a_B forces any reservoir to carry an exponentially wide palette.
+5. **The reservoir works as an interface, not as a window (FINITE-EXACT; conjecture HYP-9702).** Marked reservoir
+   L ⇒ marked repair B, one apex, no slides. With blocks of order ≤ 7 this attains every odd N in
+   [23, 1,542,343); with orders (8,7), every odd N in [23, 8,667,349)
+   ([HYP-9702](../../hypotheses/HYP-9702-marked-two-block-completeness-every-odd-count-except-7-and-21-is-a-reservoir-repair-pairing.md)).
+   Fixed-interface palettes are trivial (mean fiber 1.05). The coverage comes from the variety of interfaces.
+6. **Primality is invisible; only 3 is special.** Primes have exactly the multiplicity of their residue class.
+   N ≡ 0 (mod 3) is favoured by 26%. Moduli 5 and 7 differ by under 2%.
+
+### 1. Stable plus/minus fans with arbitrary out-sets (THM-5182 (D), HYP-9712)
+
+Adding a vertex x that beats exactly X gives, by the odd-cycle expansion,
+
+    H(T + x) = H + 2W(X),   W(X) = Σ_{u∈X, v∉X} Π(u,v),
+
+where Π(u,v) sums H(T − P) over the even-order paths u → v. [`scripts/armed.c`](scripts/armed.c) builds Π by
+subset DP and enumerates all 2^n cuts by Gray code. The formula is checked against direct DP on 1,000 random
+(T, X).
+- A unit extension is a cut of value (H ± 1)/2.
+- T is armed when it has unit cuts of both values.
+- The leaf model is |X| = 1. Here about half the unit out-sets are leaves or reverse leaves (750 of 1,391 +1 units
+  at order 8), and the rest have intermediate sizes ([`scripts/xsize.c`](scripts/xsize.c)).
+
+| order | eligible classes (H ≠ 3, 11) | armed | fraction |
+|---:|---:|---:|---:|
+| 5 | 8 | 5 | 0.625 |
+| 6 | 50 | 18 | 0.360 |
+| 7 | 448 | 50 | 0.112 |
+
+H = 13 is never armed at orders 5–7, and neither are 17, 25, 27, 29 or 31 at order 7.
+
+**Adaptive trees** ([`scripts/tree2.c`](scripts/tree2.c)). The out-set is re-chosen freely at every node, and a
+branch whose target is 7 or 21 is not required. All classes of orders 3–8 were used as seeds (6,879 at order 8).
+- Every seed with H ∉ {3, 5, 11} has depth ≤ 1.
+- Depth 2 occurs only at H ∈ {5, 11}, where one branch is excused by 21.
+- Depth 3 occurs only at H = 3: 3 → 5 → {9, 11} → {17, 19, 23}.
+- Equivalently, no tournament of order ≤ 8 has an armed +1 child and an armed −1 child. Order 9 confirms it
+  ([`scripts/childpair.c`](scripts/childpair.c)): 308 of the 191,536 classes are armed, 10 have an armed +1 child,
+  27 an armed −1 child, and none has both. Arming collapses with the order: 11%, 1.9% and 0.16% of all classes at
+  orders 7, 8 and 9.
+
+[`scripts/childpair.c`](scripts/childpair.c) shows the mechanism, **sign freezing**. Typical order-6 seeds:
+
+| seed H | +1 children | −1 children |
+|---:|---|---|
+| 19 | 39, only +1 extensions | 37, only −1 extensions |
+| 9 | 19, armed | 17, never armed |
+| 33 | 67, no unit extensions | 65, armed |
+| 65 (order 7) | 131, one sign only | 129, armed |
+
+The owner's binary tree fails at its second level. Branching survives on one side only.
+
+**Two vertices per step** ([`scripts/base4.c`](scripts/base4.c)). Steps H → 4H + ε with ε ∈ {±1, ±3}, from all
+seeds of orders 3–6: depth ≤ 1, except H = 3, which reaches depth 2 (every odd number from 33 to 63).
+
+This extends the leaf-model obstructions of chanpak_leaf_fans_20261115 (the cross-port law and the repeat-stable
+classification) to arbitrary out-sets and adaptive choices. Digit trees of exact affine moves need multi-vertex
+steps whose intermediate defects are not units.
+
+### 2. Passive channels: what a block can change without changing what its neighbour reads (THM-5182 (A))
+
+The exact cut transfer is (h, N, S, d) → (ah, aN + (n−a)h + tS + fd, qS + hs, he). Unrolled, the apex count of a
+marked spine B_1 ⇒ ... ⇒ B_r is
+
+    N = A + Σ_i (n_i − a_i)A/a_i + Σ_{i<j} s_i t_j A_{<i} Q_{ij} A_{>j} + Σ_i e_i f_{i+1} A_{<i} A_{>i+1},
+
+with Q_{ij} = Π_{i<k<j} q_k. Each term is a class of odd apex cycles.
+
+- *Right-facing data* (a, q, s, e) compose as (a_Y a_Z, q_Y q_Z, q_Z s_Y + a_Y s_Z, a_Y e_Z).
+- *Left-facing data* compose by the mirror rule (a_Y a_Z, q_Y q_Z, q_Y t_Z + a_Z t_Y, a_Z f_Y). This follows from
+  converse duality and is checked on 400 random spines ([`scripts/compcheck.c`](scripts/compcheck.c)).
+
+A neighbour reads only the right-facing data, so any block family with equal (a, q, s, e) is interchangeable.
+Switching block i changes N by (Δn·h + Δt·S + Δf·d)·A_{>i}:
+
+| channel | weight | what it gives |
+|---|---|---|
+| n | A/a_i, flat | the CRT amplifier: 13·29 makes 5 → 145 and 3 → 39 |
+| t | S_{<i}A_{>i}, grows ≈ q/a per block | positional digits |
+| f | ≈ h, flat | a small correction |
+
+### 3. Slides: census, geometric t-slides and the seam lemma
+
+**Census** ([`scripts/slides.c`](scripts/slides.c), [`scripts/slides2.c`](scripts/slides2.c)). Search every
+strong marked core for transitive tiles z, w with Cz ≡ wC in (a, q, s, t), using the guards of
+chanpak_window_descent_20261115:
+- **Orders 3–4:** nothing.
+- **Order 5, width ≤ 14:** only the count-13 core, at width 12, with Δ ∈ {±10, ±20, ±30}. All 48 solutions are
+  confirmed by direct DP on the 20-vertex spines.
+- **Order 6, width ≤ 30:** nothing (7.7 min exhaustive).
+- **Order 7, width ≤ 28:** 16 slides:
+  - two count-29 classes at width 28, with Δ ∈ {±6, ±32}; the Δ = 6 one agrees with the literal replay of the
+    window-descent notes;
+  - a count-115 core at width 24, with Δ = ±46. Its half-step 23 divides 115, so it alone meets only 5 residues.
+
+So there is no unit pump (|Δ| = 2), and matched slides are rare objects.
+
+**t-slides are geometric.** If Cz ≡ wC only in the right-facing data, the mirror rule gives
+t(w^j C z^(k−j)) − t(w^(j+1) C z^(k−j−1)) = 2^(dj)(t(Cz) − t(wC)). A sliding core therefore produces a geometric
+t-palette, never an arithmetic one.
+
+**Seam lemma.** S_v ≥ H and T_v ≥ H: cut each Hamiltonian path at v. Put a reservoir L before a bank B whose last
+unmarked vertex follows a transitive run of length ℓ. Then the seam term s_L t_B is at least 2^ℓ g a_B, while the
+bank's window is O(ℓ). For fixed s_L, the attainable counts a_B n_L + f_B d_L + g(n_B − a_B) must bridge a gap of
+t_B ≥ 2^ℓ a_B. So the reservoir needs an n-palette at least about 2^(ℓ−1) wide at fixed (g, s_L, d_L).
+
+This is the precise reason the growing window cannot be placed by a reservoir of bounded size. It matches the
+density bound of GROWING_WINDOWS. A reservoir works only if it is itself exponentially rich.
+
+### 4. The reservoir as an interface: marked two-block completeness (THM-5182 (E), HYP-9702)
+
+Drop the slides and let both blocks vary over all marked tournaments. For L ⇒ B with one apex,
+
+    N = a_B(n_L − g) + g n_B + s_L t_B + d_L f_B,
+
+a bilinear pairing of the reservoir's right-profile (g, n_L, s_L, d_L) with the repair's left-profile
+(a_B, n_B, t_B, f_B). Wave 25's cyclic join is the case L all marked, B all unmarked.
+
+[`scripts/palette.c`](scripts/palette.c) computes all profiles. It is checked against direct DP on 300 random
+spines. Then [`scripts/twoblock.c`](scripts/twoblock.c) takes all pairs:
+
+| block orders | profiles | pairs evaluated | every odd N in |
+|---|---:|---:|---|
+| (≤ 6, ≤ 6) | 2,831 | 8.0·10^6 | [23, 67,967) |
+| (≤ 7, ≤ 7) | 52,313 | 2.7·10^9 | [23, 1,542,343) |
+| (≤ 8, ≤ 7) | 1,693,156 × 52,313 | 8.9·10^10 | [23, 8,667,349) |
+
+So every odd N < 8,667,349 except 7 and 21 is the count of a tournament of order ≤ 16 that has a vertex whose
+removal leaves a two-block ordinal sum. 160 sampled witnesses, including the primes 999,983, 1,000,003 and
+1,500,007, were rebuilt and re-counted by direct DP ([`scripts/twowit.c`](scripts/twowit.c),
+[`scripts/verify_two.py`](scripts/verify_two.py)). Compare wave 25's unmarked cyclic join: (36,833, 2,398,737] with
+cores of order ≤ 10.
+
+**The repair radius is about 1.** A last block's palette is its fiber over (a, t, f). These fibers have mean size
+1.05–1.09 at orders 5–8, and their longest run of consecutive odd apex counts is 4. So the owner's picture works,
+but in a different form:
+- the reservoir's count g does scale the repair, and its marked endpoints do set the residue class and the
+  interval;
+- the repair is the whole 4D left-profile cloud, not a window inside one interface.
+
+Proving HYP-9702 is again a fullness problem, as HYP-9692 was. But the cloud is far denser. The marks enter (t, f)
+linearly and n through a quadratic cut function, which points to Fourier analysis over the mark cube.
+
+### 5. Number theory: the mod-3 law and the multiplicity pattern (THM-5182 (B))
+
+**Mod-3 law.** For every tournament of order m and every vertex v, T_v ≡ (−1)^(m+1) S_v (mod 3).
+
+*Proof.* In the squarefree algebra, H(X)² ≡ H(−X) (mod 3) coefficientwise. Indeed
+[x^U]H(X)² = P_{T[U]}(2) ≡ P_{T[U]}(−1) = (−1)^|U| H(U), by the odd-cycle form (THM-5172 (B)) applied to every
+induced subtournament. Combine this with the path identity H(X)P_v(−X) = −E_v(X) of the leaf-fan notes. ∎
+
+Summing over the unmarked vertices gives t ≡ (−1)^m s + [m odd]·a (mod 3). This matches all 54 residue classes
+in the census of orders 3–8, and explains why the t-values of every fiber differ by multiples of 3. The apex count
+n itself is not fixed mod 3, 4 or 8 by the exterior.
+
+**Multiplicities** ([`scripts/twomult.c`](scripts/twomult.c)). Odd N in [10^6, 1.4·10^6], family (7,7):
+
+| class | mean representations |
+|---|---:|
+| N ≡ 0 (mod 3) | 215.9 |
+| N ≡ ±1 (mod 3) | 171.0 |
+| primes | 171.1 |
+| composites | 188.5 |
+| N mod 5 or mod 7 | 185.2–188.5 |
+
+The minimum is 16. Primes are not harder than their residue class. The only local bias is the factor about 1.26
+at 0 mod 3, the same prime that is special in THM-5162 (D) and THM-5172 (B).
+
+### Reproduction
+
+Profiles are regenerated with `gentourng m | ./palette run m > pal_m.txt` for m = 1..8. Order 8 has 1,761,280
+lines and is not committed. [`scripts/twoblock.c`](scripts/twoblock.c) reads them from the working directory.
+The unit-extension programs include [`scripts/armed_lib.h`](scripts/armed_lib.h). Outputs:
+- `unit_census_order*.out`, `unit_trees_order*.out` (the order-8 trees as a summary) and
+  `unit_children_order{8,9}.out`;
+- `base4_trees_order*.out`;
+- `slides_order5_w14.out`, `slides_order7_w28.out` and `slides_orders3_4_6.out`;
+- `twoblock_{6x6,7x7,8x7}.out`, `twoblock_witnesses_7x7.out` and `twomult_7x7_summary.out`.
+
+### Verdicts and new predictions
+
+[Pre-registration file](scripts/wave26_prereg.md) (registered 2026-11-14 20:51 MST, addendum 21:25 MST, before
+the runs they govern; the exploratory runs are listed there).
+- **P77 REFUTED.** 36% of eligible order-6 classes are armed (registered ≥ 50%).
+- **P78 REFUTED.** No seed of order ≤ 6 with H ∉ {1, 3, 5, 11} has adaptive depth ≥ 2 (registered: depth 5).
+- **P79 CONFIRMED.** No depth 9, indeed no depth 2 beyond the 7/21-excused seeds.
+- **P80 CONFIRMED.** Fixed port rules are a special case of the adaptive search, so depth ≤ 3.
+- **P81 REFUTED.** (8,7) covers [23, 8,667,349) (registered ≥ 3·10^7).
+- **P82 CONFIRMED.** No unit pump at order 7, width ≤ 28.
+- **P86 CONFIRMED** (registered in HYP-9712 before its run). No order-9 tournament has armed children of both
+  signs.
+- **P83 VOID.** Its first half is automatic. The second half (no order-6 slide at any width) is confirmed only to
+  width 30.
+
+Open predictions:
+- **P84.** Block orders (8, 8) cover every odd N in [23, X) with X ≥ 5·10^7 (HYP-9702). This needs about 3·10^12
+  profile pairs, several hours here, and was not run.
+- **P85.** The mod-3 multiplicity ratio tends to a limit in [1.2, 1.35]; other moduli are asymptotically unbiased.
+- **P87.** The fractions of armed tournaments whose +1, respectively −1, children are armed both tend to 0, and
+  their sum stays at most 1.
+- **P88.** No marked core of order 8 has a matched slide with |Δ| = 2 at tile width ≤ 24.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.

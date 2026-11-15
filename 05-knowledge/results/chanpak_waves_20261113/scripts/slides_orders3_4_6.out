@@ -1,0 +1,2 @@
+order 6, tile width <= 30: no matched slide with nonzero step (slides2 6 30; 293,596,800 candidate words at width <= 16 by slides.c, 7.7 min at width <= 30)
+orders 3, 4, width <= 14: none
