@@ -1,0 +1,1 @@
+all induced-root checks of reflection, odd modulus, and first mod-9 defect: 5136
