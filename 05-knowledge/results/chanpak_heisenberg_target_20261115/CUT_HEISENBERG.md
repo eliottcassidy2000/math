@@ -88,7 +88,7 @@ normalized horizontal condition above. In particular for (m=3) the
 group has order 18 and not even a subgroup of order 27, despite being
 transitive on nine states. For (m\) coprime to 6, the unit-slope subgroup
 is the full Heisenberg group over (Z/m). The distinction is
-akin to [the repository's physical odometer / Heisenberg-shadow comparison](../../01-canon/theorems/THM-2788-physical-modular-odometer-versus-heisenberg-bockstein-extension.md),
+akin to [the repository's physical odometer / Heisenberg-shadow comparison](../../../01-canon/theorems/THM-2788-physical-modular-odometer-versus-heisenberg-bockstein-extension.md),
 but here both the exact reduced group and its obstruction follow from
 the tournament path transfer.
 
