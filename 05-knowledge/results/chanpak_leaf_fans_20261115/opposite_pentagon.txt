@@ -1,0 +1,4 @@
+15 33 65
+33 67 131
+65 131 259
+Size-eight source recovered as point (3,0).
