@@ -1,0 +1,5 @@
+profiles [0, 1, 1, 5, 16, 131]; certified mass bound 0.492659475
+116 independent literal enlarged tournament counts
+same-graph adjacent bands checked
+44 literal mixed-radix controls, continuation pair (1623,1711) checked
+physical continuation-locked unit pair, independent exhaustive apex splits: [(3461351, 3255089), (3461353, 3255089)]
