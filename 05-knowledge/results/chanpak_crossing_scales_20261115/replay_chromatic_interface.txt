@@ -1,0 +1,4 @@
+8 literal whole-glue checks on the two persistent +2 pairs
+Core order 1–6 profile counts: [1, 1, 2, 3, 8, 24]
+Checksum lists and incidences through 99: (34, 95)
+Exact adjacent intersections: {37: [59], 97: [117]}
