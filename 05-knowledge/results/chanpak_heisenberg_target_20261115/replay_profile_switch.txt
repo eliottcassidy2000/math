@@ -1,0 +1,7 @@
+ABBBABB (61, 1744)
+ABABBAB (61, 1864)
+fixed-h coset 5 1
+fixed-h coset 25 5
+fixed-h coset 125 25
+fixed-h coset 625 125
+fixed-h coset 3125 625
