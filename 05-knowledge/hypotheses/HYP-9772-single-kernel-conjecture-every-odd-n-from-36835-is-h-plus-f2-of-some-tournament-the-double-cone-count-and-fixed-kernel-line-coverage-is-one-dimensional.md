@@ -53,3 +53,12 @@ H(A) + 2^k F₂(A), because (H, F₂) is multiplicative under ordinal sums.
 - *Residues.* All residues mod 3, 5, 7, 9, 16 and 25 occur.
 
 The analogous statement for the two-vertex reader (N = 5H + 3P₂) holds on [188,269, 1,597,157].
+
+**Local limit law, 2026-11-15 (klein-2026-11-15-llt, [LLT.md](../results/chanpak_generic_lines_llt_20261115/LLT.md)).**
+The exact per-line class counts of 3H + P₂ fluctuate like √(D/μ) around a smooth density, with D ≈ 2–4.
+- The relative fluctuation is 1.54, 0.23 and 0.17 at orders 8, 9 and 10, and the worst bulk line carries 0.25–0.37
+  of the smooth density.
+- The singular series is flat: residue classes modulo 8–32, 3–27, 5, 7 and 24 are equal within 1%.
+- Unit changes of S are vanishingly rare among local moves, so no single-move switching proof exists.
+
+The analytic input this conjecture needs is a ratio local limit law, of L² or bilinear type.
