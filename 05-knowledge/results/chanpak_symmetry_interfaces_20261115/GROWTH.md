@@ -52,3 +52,11 @@ Second, one need only count unordered pairs of sleeve sizes at each application.
 sum_(s≥2) floor(s/2) x^s = x²/[(1−x)²(1+x)] = 1,  0<x<1.
 ```
 The number of recipes of total vertex cost j is O(ρ^j) for ρ=1/x, by the positive-step recurrence and induction. The equation gives ρ³−ρ²−2ρ+1=0, whose root here is 2cos(π/7): put z=exp(iπ/7) and expand z^3−z²+z−1+z^(−1)−z^(−2)+z^(−3)=0 in z+z^(−1). The size bound gives n≤log₂ X+O(1), completing the estimate. The 7 here comes from the three-term recurrence for unoriented sleeve choices; it is not an explanation of the forbidden Hamiltonian count 7.
+
+The appearance of 7 has a precise walk interpretation. Let M be the adjacency matrix of a three-vertex path with a loop at its last vertex, i.e. rows (0,1,0), (1,0,1), (0,1,1). This is the reflection-folded path on six vertices. The exact recipe generating function is
+```
+1/(1 − x²/[(1−x)(1−x²)])
+   = 1 + x²/(1−x−2x²+x³)
+   = 1 + sum_(j≥0) (M^j)_(1,3) x^j.
+```
+The last identity is the (1,3) entry of (I−xM)^(-1) by cofactors. Thus the exponential recipe growth is the Perron growth of walks on the folded path, not an assumption about random tournaments. On the tournament side, for a fixed child T and size increment a+b, the first non-leading coefficient of the slot polynomial already distinguishes the unordered sleeve sizes: the number of directed triangles increases by |T|ab (exactly the triples using all three modules), and the coefficient of k^(n−2) is twice the triangle count by odd-cycle packing. This does not identify the child of an arbitrary output or establish distinctness across different recipes.
