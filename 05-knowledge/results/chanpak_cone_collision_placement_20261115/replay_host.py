@@ -89,25 +89,27 @@ def choose(q):
     b=[1]*(m//2)+[0]*(m-m//2)
     return a,b,quotient_value(a,b)
 
-def choose_residue(q):
-    """Place the macroscopic target and match its residue mod 3 exactly."""
-    m=8
+def choose_residue(q, modulus=9):
+    """Place the macroscopic target and match its residue mod 9 (or 3) exactly."""
+    assert modulus in (3,9)
+    width=4 if modulus==3 else 8
+    m=2*width
     while q>=1024*4**m: m+=4
     left=Fraction(q,1554*4**m)*4
     assert 0<=left<=4
     x=Fraction(1)
     prefix=[]
-    for _ in range(m//2-4):
+    for _ in range(m//2-width):
         if left>x*3:
             left-=x;prefix.append(1)
         else:prefix.append(0)
         x*=Fraction(3,4)
     b=[1]*(m//2)+[0]*(m//2)
     candidates=[]
-    for repair in product((0,1),repeat=4):
+    for repair in product((0,1),repeat=width):
         a=prefix+list(repair)+[0]*(m//2)
         value=quotient_value(a,b)
-        if value%3==q%3:
+        if value%modulus==q%modulus:
             candidates.append((abs(value-q),a,b,value))
     _,a,b,value=min(candidates)
     return a,b,value
