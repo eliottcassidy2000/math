@@ -1,0 +1,3 @@
+3000 exact quotient, seam, and checksum controls
+120 literal Hamilton path computations
+Four literal profile-switch controls and 44 symbolic high-window controls
