@@ -1,0 +1,4 @@
+full carry and parity checks 87380
+central minimum exact ranges 5 16
+adaptive star differential checks 1200
+canonical local selectors 600
