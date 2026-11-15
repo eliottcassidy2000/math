@@ -1,0 +1,5 @@
+core and nested gate readouts: [345, 5640, 45225] 5985 118305
+core and nested gate readouts: [345, 5640, 44505] 5985 116865
+selective width-one readouts: (1939, 1941)
+160 literal all-slot one-outlet checks with independently enumerated exterior cycles
+72 literal skeleton-transfer and top-coefficient controls
