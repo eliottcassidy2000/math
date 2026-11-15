@@ -1,0 +1,11 @@
+T=8192: rows=7, mass=10, support=10, off-diagonal=0, off-diagonal/(T ell^2)=0.0000
+T=32768: rows=51, mass=218, support=165, off-diagonal=114, off-diagonal/(T ell^2)=0.8940
+T=131072: rows=176, mass=1359, support=890, off-diagonal=1208, off-diagonal/(T ell^2)=1.8438
+T=524288: rows=621, mass=7809, support=4715, off-diagonal=9342, off-diagonal/(T ell^2)=2.8537
+carry-separated V=8: 256 distinct counts, maximum 104037025
+carry-separated V=16: 4096 distinct counts, maximum 6697775189
+carry-separated V=32: 65536 distinct counts, maximum 429287000825
+averaged V=16: 256 presentations, 256 distinct, 0 ordered collisions
+averaged V=32: 2048 presentations, 2048 distinct, 0 ordered collisions
+averaged V=64: 16384 presentations, 16384 distinct, 0 ordered collisions
+averaged V=128: 131072 presentations, 131065 distinct, 14 ordered collisions
