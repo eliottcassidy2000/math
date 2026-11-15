@@ -1,0 +1,4 @@
+765 independent tournament DP cases (including zero-gap boundaries)
+7140 distinct exact chamber counts and both target decoders
+first strict-chamber example: gaps (1,3,2), H = 529
+90 rooted SCC split checks; 160 joint inflation checks
