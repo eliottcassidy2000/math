@@ -1,0 +1,11 @@
+# Chan–Pak: cross-cut counterexample, exact ribbon floor, and physical carrier incidence
+
+**Crossing lemma refuted, including the monotonicity of unit cuts.** A strong order-11 tournament has \(H=815\) and 156 paths crossing the cut twice, yet \(H(T+x)=1629=2H-1\). The two-shelf construction quantifies the exact missing insertion mass and makes the defect arbitrarily negative. This invalidates the proposed route from crossings to sign freezing, not sign freezing itself. [Witness and proof](CROSSING.md) · [independent one-growing-shelf law and min-cut reformulation](SHELF.md).
+
+**Near-floor conjecture proved for every strong span-two ribbon.** The width-two transfer and a symbolic Pareto induction give both \(\min H=m(n)\) and \(\min(H-2\,hc)=m(n)-2\), with \(m(16+2k)=3375\cdot3^k\), \(m(17+2k)=5625\cdot3^k\), and \(m(n)\) equal to the Busch floor through order 15. The equality clause of HYP-9457(a) holds in this class. The certificate proves the affine template evolution for every depth, rather than extrapolating minima. [Proof and replay](NEAR_FLOOR.md).
+
+**One physical carrier provably realizes \(\Omega(T^{3/4})\) distinct counts up to \(T\).** The sum lines in the nearly diagonal region give disjoint count bands. On each line two different carry words can collide on no more than one even and one odd baseline. This rigorous incidence bound concerns different counts, not merely presentations. [Proof and replay](INCIDENCE.md). A separate fully injective selector exhibits the exact growth constant \(1+\sqrt5\) for optimal single-carry-path selection. [Carry recurrence](CARRY.md).
+
+**Density one still needs an exact collision estimate.** For the mask-zero carrier the required normalized off-diagonal second-moment benchmark is \(131/121\) in the normalization in the note. A density-zero thinning of actual count fibers retains the scaled full-circle Fourier profile and local factors, so a relative Fourier law and diverging average multiplicity cannot by themselves prove density one. [Proof and benchmark](DENSITY.md).
+
+**Chan–Pak remains open.** These are all-order results with separate scopes: bounded-width structural rigidity, an unrestricted counterexample to a proposed cut inequality, and an unconditional support exponent for a single carrier. None implies realization of every admissible prescribed odd target.
