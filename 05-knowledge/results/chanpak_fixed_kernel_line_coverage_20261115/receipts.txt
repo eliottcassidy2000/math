@@ -1,0 +1,41 @@
+Receipts, klein-2026-11-15-lines (2026-11-15). Run from this directory; data files are regenerated, not committed.
+
+Exact census (paircensus.c on gentourng, all classes; order 10 split 8 ways, about 2 min):
+  distinct (H, P2) pairs, orders 2..10: 1, 2, 3, 8, 24, 156, 1727, 50173, 1550357   (matches wave 25 counts)
+
+linecov.py (exact, per order) -- longest run with every admissible N covered:
+  K1 (3,1):  order 9 [10198, 41588] N=3 mod 6, ratio 4.08;  order 10 [36834, 241522] all odd, ratio 6.56
+  TT2 (5,3): order 10 [188268, 623232], ratio 3.31
+  C3 (15,9): order 10 [564802, 1869698] N=3 mod 6, ratio 3.31
+  (9,7): order 10 [840710, 891008] ratio 1.06; (17,15) and (27,21): ratio <= 1.06
+
+multiplicity.py (lines carrying the central 80% of pairs):
+  K1 order 9: mean 9.52 pairs/line, min 2, 1% 4, uncovered 0;  order 10: mean 17.85, min 4, 1% 9, uncovered 0
+  TT2 order 10: mean 6.46, min 1, 1% 3, uncovered 0;  K1 order 8: 1490 of 2588 lines uncovered
+
+Tilted samples (tiltsample.c; deterministic in n, q, seed, index):
+  order 11: 8 runs x 1,000,000, q = 0.5, 0.7, 0.8, 0.85, 0.88, 0.9, 0.6, 0.75, seeds 2001..2008 -> 5,344,956 distinct pairs
+  order 12: 8 runs x 600,000, q = 0.85, 0.88, 0.9, 0.92 (twice), seeds 1001..1008 -> 2,579,405 distinct pairs
+  order 12 targeted (run_junction12.sh): q = 0.91..0.945, seeds 3001..3008, H filtered to [1500, 6500];
+     stopped after 4,778,101 in-window samples
+
+junction11.py:
+  K1@10 + K1@11, N = 0 mod 3: every admissible N in [36835, 1294993]; order-11 window [47385, 1294989]
+  TT2@10 + TT2@11: [188269, 674517]; K1@10 + TT2@11: [36835, 242205]   (sampling-limited)
+
+Saturation (order 12, K1, N odd and not 0 mod 3, lines in [241521, 400000], 52,826 lines):
+  empty lines after 0 / 1.19M / 2.39M / 3.58M / 4.78M targeted samples: 505 / 126 / 47 / 15 / 7
+
+reducible.py (exact reducible pairs): orders 11..14: 1551955, 1602636, 3158344, 4913912 pairs
+union_ext.py:
+  K1 exact:            every odd N in [36835, 243197]; misses up to 4e6 by class mod 3: 18113, 60261, 59672
+  K1 exact+witnessed:  every odd N in [36835, 1238097]; misses up to 4e6: 0, 2616, 2583
+  TT2 exact:           every odd N in [188269, 818949]; misses up to 4e6: 3279, 46682, 46684
+  TT2 exact+witnessed: every odd N in [188269, 1597157]; misses up to 4e6: 0, 104, 88
+union_k1.py: K1 exact only has no odd multiple of 3 missing up to 1.4e6
+
+verify_witnesses.py (independent Python replay + DP) agreed on:
+  order 12, s12_1 indices 0, 1, 2; order 11 random witnesses N = 1123329, 537345, 675561, 1196001, 940779, 271689
+
+equidist.py (order 12): all residues mod 3, 5, 7, 9, 16 (odd classes), 25 occur for 3H+P2 and 5H+3P2;
+  max/min class frequency at q = 0.85: mod 5 1.008, mod 7 1.022, mod 3 1.140; at q = 0.92: mod 3 1.649, mod 9 2.275
