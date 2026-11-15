@@ -1,7 +1,7 @@
 ---
 id: HYP-9457
 title: "The single-cycle floor and the crevasses: (a) the cycle ceiling H(T) >= f(n) + 2(hc(T) - 1) for every strong tournament (equality exactly at the Busch floor); (b) every uniquely Hamiltonian tournament is a one-arc join (CLOSED: KNOWN, Shelor 1977); (c) Lorentzian joins H = x_h y_h + x_R y_R - x_e y_e cover every odd number except 7 and 21, with a 3-adic singular series; pre-registered tests at order 10 and for joins of orders <= 7"
-status: OPEN for (a), (c) (opus-2026-11-04-S73); (b) CLOSED - KNOWN (Shelor 1977: a vertex of in-degree 1, a single-vertex one-arc cut). Pre-registered P2, P4, P5 CONFIRMED; P6 REFUTED (ratio 1.37); P1 and P3 were sanity checks (audit, MISTAKE-705)
+status: PROVED for (a) with sharp coefficient 3 (2026-11-15); OPEN for (c) (opus-2026-11-04-S73); (b) CLOSED - KNOWN (Shelor 1977: a vertex of in-degree 1, a single-vertex one-arc cut). Pre-registered P2, P4, P5 CONFIRMED; P6 REFUTED (ratio 1.37); P1 and P3 were sanity checks (audit, MISTAKE-705)
 session: opus-2026-11-04-S73
 date: 2026-11-04
 related: [THM-4866, THM-4744, THM-4745, THM-4655, THM-1370, THM-4863, THM-4865, THM-4862, THM-4846, HYP-9453, HYP-9454, session29 ADDENDUM, polarized_path_calculus_20261103]
@@ -97,10 +97,9 @@ Runs: `census 10` (4.5 min) and `joins 7 7 200000`. Outputs:
 
   The 3-adic local factor is real but weaker than at orders <= 5 and <= 6, where the ratio was about 2.0-2.1.
 
-## Open statements after the tests
+## Statements and current status
 
-- **(a) The cycle ceiling.** H(T) >= f(n) + 2(hc(T) - 1) for every strong tournament, with equality exactly at the
-  floor. At odd order this is G >= f(n) - 2 for the deck reading of THM-4863. It holds through order 10.
+- **(a) PROVED at every order.** In fact H(T) >= f(n) + 3(hc(T) - 1) for every strong tournament. The coefficient 3 is sharp at order five, and this implies the original equality clause. See the [merge-surplus proof](../results/chanpak_near_floor_crossing_20261115/GLOBAL.md) and the separate [exact span-two minima](../results/chanpak_near_floor_crossing_20261115/NEAR_FLOOR.md).
 - **(b) CLOSED, KNOWN.** Every uniquely Hamiltonian tournament has a one-arc cut, which can always be taken to be a single
   vertex of in-degree 1 (Shelor 1977's complete insertion construction; session103; operation_closed_synthesis section
   II; klein THM-4862 (b), (f)).
