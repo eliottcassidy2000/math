@@ -79,3 +79,10 @@ Composite N then follow by multiplicativity (ordinal sums), except for the multi
   evidence beyond period 6.
 - *What remains.* A certificate for the literal words needs reachable cones with memory adaptive along the
   syllables; uniform memory can only certify the floor. The conjecture remains OPEN.
+
+**Correction, 2026-11-15 (klein-2026-11-15-ocf, [LITERAL_CONES.md](../results/chanpak_apex_ocf_literal_cones_20261115/LITERAL_CONES.md)).**
+Reachable cones with memory adaptive along the 13 syllables cannot certify literal span 3.
+- About 99% of the cheap cycles that need long memory are not syllable concatenations.
+- Uniform memory of up to 6 code units leaves cycles of growth 1.17–1.38 uncut.
+
+A certificate must track the rank of the prefix product as a monotone potential.

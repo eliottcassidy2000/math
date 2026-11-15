@@ -71,3 +71,11 @@ They carry over to the literal code verbatim, because the code letters are produ
   - The census of §2 says the target rate 1.77 is consistent: no cheap periodic word escapes.
   - The 21-word code makes the parse state finite.
   - This construction and its LP are the precise next step. They are not executed here.
+
+**Correction (2026-11-15, klein-2026-11-15-ocf).** The "what would work" paragraph of §3 is wrong.
+- Memory adaptive along the 13 syllables does not cut the cheap cycles: about 99% of those needing long memory are not
+  syllable concatenations.
+- Uniform memory of up to 6 code units still leaves cycles of growth 1.17–1.38.
+
+See [LITERAL_CONES.md](../chanpak_apex_ocf_literal_cones_20261115/LITERAL_CONES.md). A certificate must track the rank of
+the prefix product.
