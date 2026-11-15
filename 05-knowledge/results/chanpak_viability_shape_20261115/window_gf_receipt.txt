@@ -1,0 +1,9 @@
+fixed-sum polynomial recurrence: 1024 complete coefficient sets
+large-height CRT failures: 6 heights, 6 missing classes per window
+local digit indegree balance: moduli M=1,...,100
+independent absolute pair counts: 5 full brute-force cutoffs
+height 262144 pairs 241 main terms 240.933
+height 4194304 pairs 5874 main terms 5873.862
+height 67108864 pairs 126282 main terms 126284.793
+height 1073741824 pairs 2537429 main terms 2537404.683
+height 17179869184 pairs 48867985 main terms 48868042.903
