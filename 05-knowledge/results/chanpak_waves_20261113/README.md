@@ -3032,6 +3032,77 @@ So for some fixed small kernel, Chan–Pak for primes follows from **pair-spectr
 | Pell supply from hyperbolic kernels | REFUTED |
 | Prime targets ⇐ pair-spectrum fullness for a fixed kernel | PROVED reduction; fullness OPEN (σ > 2 regime) |
 
+## Wave 36: the pair spectrum is sparse in two dimensions but its lines are full
+
+Session mac-mini-2026-11-15-pairs. Owner prompt: "test whether the pair set (H, P₂) covers every line at the largest
+orders and other strategies to prove chan-pak."
+
+Exact (H, P₂) for every tournament class of orders 8, 9 and 10 (`scripts/w36_pair_spectrum.c`; order 10, all
+9,733,056 classes, in about 3 minutes).
+
+### §1. Two-dimensional fullness: no
+
+| order | classes | distinct pairs | distinct H | mean fill of the P₂-fibres of fixed H |
+|---:|---:|---:|---:|---:|
+| 8 | 6,880 | 1,727 | 320 | 0.038 |
+| 9 | 191,536 | 50,173 | 1,520 | 0.038 |
+| 10 | 9,733,056 | 1,550,357 | 7,663 | 0.032 |
+
+The fill is the fraction of even P₂ values between a fibre's minimum and maximum that occur, over fibres with at least
+20 slots. It does not grow with the order, so wave 35's pair-spectrum fullness is out of reach of computation. That
+matches its σ > 2 threshold near order 12.
+
+### §2. Line fullness: essentially yes
+
+Fraction of the odd numbers in the central 10–90% window of each line α·H + β·P₂ that are attained:
+
+| line | order 8 | order 9 | order 10 |
+|---|---:|---:|---:|
+| 3H + P₂ | 0.417 | 0.332 | 0.9993 |
+| 5H + 3P₂ | 0.199 | 0.785 | 0.9992 |
+| 7H + 2P₂ | 0.252 | 0.876 | 0.9998 |
+| H + P₂ | 0.309 | 0.968 | 0.3333 |
+
+**The one third is exact.** THM-4756 gives Π₂ ≡ (−1)ⁿH (mod 3), with Π₂ = P₂ + 2H.
+- At even order P₂ ≡ −H, so H + P₂ ≡ 0 (mod 3).
+- At odd order P₂ ≡ 0, so 3H + P₂ ≡ 0 (mod 3).
+
+These are the only failures seen. On lines free of that congruence, the order-10 projection fills its central window
+to within 0.1%.
+
+### §3. What this changes
+
+Prime targets need much less than wave 35 asked for. With one core fixed, a two-port kernel makes the count a line
+α·H(A) + β·P₂(A). What is needed is **line fullness**: the projection of the all-tournament pair set onto the kernel's
+line covers the odd numbers in the classes the mod-3 law allows.
+- *Status.* Numerically it holds at order 10. It is a one-dimensional covering statement of the same kind as Chan–Pak
+  itself, so it is not easier in principle.
+- *Why it is a better target.* Its statistic is linear in two path-cover counts of a random tournament, and its only
+  local obstruction is the explicit mod-3 law. That makes it the natural input for the tilted local-limit reduction
+  (THM-5127), applied to αH + βP₂ instead of H.
+
+### §4. Other strategies, ranked by what the last nine waves left standing
+
+1. **A local limit theorem for linear statistics αH + βP₂ of random tournaments.** Its local factors are explicit (mod
+   3 from THM-4756; the 2-adic laws). Line fullness at order 10 is the numerical evidence, and the THM-5127 reduction
+   transfers.
+2. **Seed lemma plus offset moves** (dominating-set analogy, wave 33). It needs a move writing a leading "11"; none is
+   known.
+3. **Collision energy for carrier rows** (HYP-9752): long prefixes are settled, the balanced range is open. Proving it
+   would give positive density, not every N.
+
+Ruled out by exact results: unit-offset descent (wave 26, wave 33), linear tapes and counters (HYP-9762), kernel
+cancellation and Pell supply (wave 35), and near-floor coverage at large primes (HYP-9742).
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| Pair spectrum not two-dimensionally full at orders 8–10 (fibre fill 3–4%) | FINITE-EXACT |
+| Lines αH + βP₂ fill their central windows at order 10, except exact one-third lines | FINITE-EXACT |
+| The one-third lines are explained by Π₂ ≡ (−1)ⁿH (mod 3) | PROVED (from THM-4756) |
+| Prime targets ⇐ line fullness for one kernel | PROVED reduction; line fullness OPEN for all orders |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
