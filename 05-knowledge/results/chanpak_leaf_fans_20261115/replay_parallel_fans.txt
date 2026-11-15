@@ -1,0 +1,2 @@
+Slope 1, odd offsets 1..25, all heights j >= 10
+Slope 17, odd offsets 23..43, all heights j >= 6
