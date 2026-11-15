@@ -93,3 +93,20 @@ The periodic evidence of THM-5202 (D) covers the full span-3 alphabet up to peri
 
 The concurrent packet chanpak_symmetry_interfaces_20261115 studies substitution interfaces. The two views are
 complementary.
+
+## (D) Addendum (wave 30): all 13 span-3 floor units
+
+- **Representation (PROVED, exact).** The language of all 13 span-3 floor units has an exact 8-dimensional Hankel
+  representation. It is built from integer counts H(prefix·suffix) and inverted exactly, and it reproduces 300 of 300
+  random unit words.
+- **Spectra.** Every unit has characteristic polynomial x^7(x − λ), λ ∈ {3, 5}, and is rank one by its fourth power.
+- **Pairs.** Of the 169 products, 23 have rank one, 73 are compatible (one nonzero eigenvalue) and 96 are
+  incompatible.
+- **The certificate does not extend.** Image subspaces of rank 3 persist, and the plane automaton has more than 3,000
+  states, still growing.
+- **Evidence (NUMERICAL).** Over all periodic unit words of at most five units, the cheapest bottleneck-free growth is
+  still exactly ρ* = 1.7700005. It is attained by 0.2·1.2 and by the 12-letter cycle 0.1.3·0.1.123·0.1.23·0.3.1, with
+  eigenvalue 9.815^3.
+
+The 13-unit bound therefore remains HYP-9742 (CONJECTURE). A proof needs a certificate that does not enumerate image
+planes, for example a cone family on the 8-dimensional reachable cone together with a rank-two invariant.

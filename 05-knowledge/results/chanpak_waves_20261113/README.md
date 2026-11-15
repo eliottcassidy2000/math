@@ -2613,6 +2613,75 @@ cd 05-knowledge/results/chanpak_waves_20261113/scripts && python3 w29_row_collis
 | Top-split reduction of row collisions | PROVED |
 | Row collision lemma, and with it positive density of the spectrum | CONJECTURE (HYP-9752); implication PROVED |
 
+## Wave 30: thirteen floor units, the twisted collision, and the local-limit program
+
+Session mac-mini-2026-11-15-units13. Owner prompt: "Work toward a local limit theorem for chan-pak and try to prove
+the row collision lemma, or extend the growth bound to all span-3 letters."
+
+Exploratory throughout. Receipts are in `scripts/w30_receipts.txt`.
+
+### §1. All 13 span-3 floor units (THM-5212 (D))
+
+- **Exact representation (PROVED).** Hankel matrices of exact integer counts H(prefix·suffix) give an exact
+  8-dimensional representation of the full 13-unit floor language. It reproduces 300 of 300 random words, and the
+  same method recovers the five-unit rank 4.
+- **Spectra.** Every unit has characteristic polynomial x^7(x − λ) with λ ∈ {3, 5}. Of the 169 pairs, 23 are rank one,
+  73 compatible and 96 incompatible.
+- **What failed.** Rank-3 images persist, so the wave-29 plane automaton grows past 3,000 states. The exact
+  certificate does not extend this way.
+- **Why, and what to change.** The five-unit language closed up because every recurrent product had rank exactly 2.
+  With 13 units, rank-3 products persist and their planes rotate continuously. A proof needs a certificate that does
+  not enumerate image planes: a cone family on the 8-dimensional reachable cone, together with a separate rank-two
+  invariant.
+- **Evidence (NUMERICAL).** Over all periodic words of at most five units, the cheapest bottleneck-free growth is still
+  exactly ρ* = 1.7700005. It is attained by 0.2·1.2 and by the 12-letter cycle 0.1.3·0.1.123·0.1.23·0.3.1, with
+  eigenvalue 9.815^3. The full-span-3 bound stays HYP-9742.
+
+### §2. The row collision lemma as a twisted collision (HYP-9752 update)
+
+Peeling the top suffix bit turns a collision at split level l and prefix w into
+
+    A_w(x) − B_w(y) = (bounded),
+    A_w(x) = cx + κp(x) − κ(2w+1) rev(x),   B_w(y) = cy + κp(y) − 2κw rev(y),
+
+for (l − 1)-bit x and y. The lemma N(l, w) ≤ C 2^l/(1 + w) is therefore a statement about how often two twisted
+digital value sets meet: about 2^l/w times, as for random sets of their size spread over a range of length κw·2^l.
+The trivial window bound is weaker by a factor 2^l. A proof needs equidistribution of c·rev(ρ) + κp(rev(ρ)) under the
+twist ρ ↦ −κwρ. **Not proved.**
+
+### §3. The local-limit program
+
+**Target.** A family 𝔉 of tournaments with representation counts r_𝔉(N) = #{T ∈ 𝔉 : H(T) = N} and an explicit
+main term μ(N)κ(N) (a smooth density times local factors) such that
+
+    r_𝔉(N) = μ(N)κ(N)(1 + o(1))   uniformly in the bulk.
+
+A pointwise version with min_N μκ → ∞ gives every large N. What the waves establish:
+
+| level | statement | status |
+|---|---|---|
+| local factors | κ(N) for carrier forms, explicit and positive | proved elsewhere (dyadic mixing, voltage profile) |
+| L¹ (positive density) | E = O(Σ μ) for one carrier row | ⟸ HYP-9752 (Cauchy–Schwarz, proved) |
+| L² (density one) | Σ (r − μκ)² = O(Σ μκ) for one form | ⟸ Poisson collision count (Chebyshev, proved); numerical variance/mean 1.03 |
+| pointwise | min r ≥ 1 | needs μ → ∞ faster than log N |
+
+**Where a local limit theorem cannot hold.** Near the Moon–Busch floor it fails, because counts factor through floor
+runs (THM-5202) and are p-adically biased. The bottleneck-free growth (THM-5212) measures how far above the floor the
+additive regime starts.
+
+**Where it should hold.** In families with the "incompatible" composition of §1 everywhere and multiplicity growing
+like a power of N: the union of carrier forms over growing cores, recursive trees, and many-hub words. The carrier
+family is binary (μ ~ log N), so for one form only the Poisson L² version is available.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| Exact 8-dimensional representation of the 13 floor units | PROVED |
+| Growth bound for 13 units | CONJECTURE; numerically ρ* (periods ≤ 5 units); certificate does not extend |
+| Row collision lemma | OPEN; twisted reformulation |
+| Local limit theorem | program stated; L¹ and L² reductions proved; pointwise needs super-logarithmic multiplicity |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.

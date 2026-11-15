@@ -56,3 +56,21 @@ count·(1 + w)/2^l stays bounded.
 
 **Prediction P102.** For the 3-cycle row, max over (l, w) of N(l, w)(1 + w)/2^l stays ≤ 16 at L = 26, and
 E(L)/2^L stays in [0.27, 0.29].
+
+## Update (wave 30): the lemma as a twisted collision
+
+Peel the top suffix bit: β = 2^(l−1) + x and β' = y, with x, y < 2^(l−1). The identities
+rev_l(β) = 1 + 2 rev_(l−1)(x) and p(2^(l−1) + x) = p(x) + 2^(l−1) − 1 − rev_(l−1)(x) + [x < 2^(l−2)] turn a collision at
+(l, w) into an equation between two twisted digital functions:
+
+    A_w(x) − B_w(y) = κw + κ w₀ + κ − (c + κ)2^(l−1) − κ[x < 2^(l−2)] − φ(x₀ − y₀),
+    A_w(x) = c x + κ p(x) − κ(2w + 1) rev(x),    B_w(y) = c y + κ p(y) − 2κw rev(y).
+
+So N(l, w) ≤ C 2^l/(1 + w) says that the value sets of A_w and B_w, each of size 2^(l−1), meet a bounded shift in about
+2^l/w places. That is the density a random pair of sets would have, since both are spread over a range of length
+about κw·2^l.
+- *Trivial bound.* Bounding rev(y) by the window forced by B_w gives 2^l/w solutions *per x*: a factor 2^l too weak.
+- *What a proof needs.* Some equidistribution of the digital function c·rev(ρ) + κp(rev(ρ)) under the twist
+  ρ ↦ −κwρ. That is the domain of the dyadic mixing and voltage-graph methods of the concurrent packets.
+
+The lemma remains OPEN.
