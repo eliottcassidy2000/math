@@ -1,0 +1,4 @@
+Canonical carried profile/target controls: 55296
+12 independent literal shifted-ray counts
+Literal nonzero carry: (21, 19, 9, 61)
+Literal carry 639: (1281, 1279, 639, 3841)
