@@ -1,0 +1,7 @@
+all fixed-sum blocks 2 5 512
+all fixed-sum blocks 3 8 9216
+all fixed-sum blocks 4 6 4096
+all fixed-sum blocks 5 10 102400
+all fixed-sum blocks 6 9 73728
+all fixed-sum blocks 8 8 65536
+30 target-directed brackets, no high-sum residue alignment
