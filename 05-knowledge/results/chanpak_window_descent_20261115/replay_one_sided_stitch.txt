@@ -1,0 +1,3 @@
+Ten literal one-sided palette members verified
+25 outputs, 15 odd residues mod 30; offsets 910,912,914,916,918 present; 920 absent
+Full literal order-17 tournament: H=73799 at height one
