@@ -70,3 +70,12 @@ Composite N then follow by multiplicativity (ordinal sums), except for the multi
   at order 20 it exceeds 1.75·f(20).
 - *P101.* No bulk-strong span-3 periodic block of period 7 or 8 is bottleneck-free with growth below 1.7700. The test
   needs a C port of `w28_bottleneck_free_premium.py` to cover all 8^7 + 8^8 blocks.
+
+**Literal span 3, 2026-11-15 (klein-2026-11-15-synthesis, [SPAN3_LITERAL.md](../results/chanpak_mod8_synthesis_span3_20261115/SPAN3_LITERAL.md)).**
+- *Reduction.* In the minimal 62-dimensional transfer only the empty letter is a bottleneck (its cube has rank 1
+  over ℚ). So bottleneck-free literal words are words over the 21-word prefix code 0^i a.
+- *Periodic evidence.* Every one of the 31,875 cyclic code words of up to 4 code units (periods up to 12 letters)
+  that grows more slowly than 1.77 per vertex is a bottleneck, verified modulo two primes. This extends the periodic
+  evidence beyond period 6.
+- *What remains.* A certificate for the literal words needs reachable cones with memory adaptive along the
+  syllables; uniform memory can only certify the floor. The conjecture remains OPEN.
