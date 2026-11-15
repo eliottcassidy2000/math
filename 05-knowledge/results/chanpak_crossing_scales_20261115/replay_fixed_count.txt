@@ -1,0 +1,3 @@
+strong labelled tournaments through order 5: 570
+fixed H=9, strong profiles: [(5, 84)] ; two triangles give 144
+fixed H=9, exact reduced odd part bank: [9, 21]
