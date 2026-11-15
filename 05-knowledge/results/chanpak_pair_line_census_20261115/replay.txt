@@ -1,0 +1,9 @@
+profile tests 1498
+sharp witness 3 2 3 12 1
+sharp witness 5 8 9 84 1
+sharp witness 6 272 23 296 5
+sharp witness 7 32 33 612 1
+sharp witness 8 4160 95 2552 7
+sharp witness 9 128 129 4884 1
+sharp witness 10 65792 383 22376 9
+same-order H with distinct Q mod 8: {15: {4: (40, 108), 0: (76, 120)}}
