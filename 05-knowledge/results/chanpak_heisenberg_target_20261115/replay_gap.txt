@@ -1,0 +1,8 @@
+254 independently counted literal one-apex profiles
+Joint profile plane modulo 11 size 121
+Joint profile plane modulo 17 size 289
+Joint profile plane modulo 23 size 529
+Joint profile plane modulo 121 size 14641
+Joint profile plane modulo 187 size 34969
+Joint profile plane modulo 289 size 83521
+15 amplified exact Heisenberg-coordinate collisions
