@@ -1,0 +1,12 @@
+length 2 exact drift extrema 2/3 2/3
+length 3 exact drift extrema 4/7 4/7
+length 4 exact drift extrema 2/5 4/3
+length 5 exact drift extrema 10/31 38/31
+length 6 exact drift extrema 2/9 2
+length 7 exact drift extrema 22/127 240/127
+length 8 exact drift extrema 2/17 8/3
+length 9 exact drift extrema 46/511 1306/511
+length 10 exact drift extrema 2/33 10/3
+length 11 exact drift extrema 94/2047 6596/2047
+length 12 exact drift extrema 2/65 4
+Literal repeated-block transfer arithmetic checks: 32760
