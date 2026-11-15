@@ -152,3 +152,47 @@ same lock. Thus it would be invalid to concatenate these as if
 they independently supplied a unit interval; a family matching
 at varying incoming C/D, or with equal products of slot counts,
 is still needed.
+
+## Length and reciprocal length are separate continuation moments
+
+Let T be the product of the normalized block ratios, and put
+t_0=1, t_i=r_1···r_i. Let M denote the union of intervals
+[t_(i−1),t_i] having mark 1, disregarding boundaries of measure zero.
+Write |M| for its ordinary length. The two potentially different
+affine continuation coefficients have simple integral readings:
+```
+A = T ∫_M dx/x²,
+coefficient of incoming C in outgoing N
+  = D [2(T−1)−|M|],
+L = ∫_(1≤x<y≤T) 1_M(x) (1−1_M(y)) dx/x² dy + #{1→0 transitions}.
+```
+The A formula follows by integrating on one marked block.
+For the C coefficient, incoming C is multiplied by the product
+of the P's before each block. The subsequent propagation into N
+uses the product of the h's after that block. Divide their
+weighted sum by D to obtain
+Σ_i (2−w_i)(r_i−1)t_(i−1) = 2(T−1)−|M|.
+For the L formula, a marked interval i contributes reciprocal
+length (r_i−1)/t_i and an unmarked later j contributes length
+(r_j−1)t_(j−1), giving exactly the pair interaction. Therefore,
+at fixed D,T and common initial/final marks, a repeatable unit
+patch asks for two physically admissible arrangements with equal
+length and reciprocal length, but a difference 2/D in the ordered
+interaction L. The initial mark is needed to match the dependence
+on the incoming previous-mark bit.
+
+This distinguishes ordered interaction from its two marginal
+moments. It also rules out a tempting solution by plain reversal:
+under reversing the block order, normalized times transform by
+x ↦ T/x and exchange the two weighted measures in the pair term.
+The difference of the pair terms is
+∫_(x<y) [1_M(x)−1_M(y)] dx/x² dy = A−|M|.
+The difference in transition counts is w_1−w_s. Thus if reversal
+matches both moments and preserves the boundary marks, it cannot
+supply a unit difference: A=|M| implies L is unchanged. Reversing
+and complementing jointly preserves L unconditionally by pairing
+each marked→unmarked term with its reversed complemented term.
+If that operation matches the continuation moments and final mark
+it also cannot change the count. A repeatable unit needs genuinely
+different ordered correlations rather than just one of these
+symmetries; the initialized unit above does not claim to supply it.
