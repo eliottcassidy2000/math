@@ -2,7 +2,7 @@
 """Exact suffix-cone replay. Needs NumPy for object arrays and SymPy for one rational inverse."""
 from collections import Counter
 from pathlib import Path
-import hashlib
+from fractions import Fraction
 import json
 import sys
 
@@ -81,6 +81,8 @@ def transfer():
     assert sum(init)==1 and init[1]==1
     P=np.column_stack([init]+[U[i]@init for i in PREF])
     Q=np.vstack([h]+[h@U[i] for i in SUFF])
+    bound=max(int(np.max(A.sum(axis=0))) for A in U)
+    assert bound**3 <= np.iinfo(np.int64).max
     X=Matrix(Q@P)
     assert X.det() != 0
     Xi=X.inv()
@@ -92,7 +94,6 @@ def transfer():
         assert not np.any(A[0])
         assert (B@Q[:,1:] == 2*(Q@A)[:,1:]).all()
         R.append(B)
-    bound=max(int(np.max(A.sum(axis=0))) for A in M)
     return Q,U,R,init,bound
 
 
@@ -104,16 +105,29 @@ def replay(path):
     assert p>q>0 and den>0
     I={tuple(w):np.array(vals,dtype=object) for w,vals in G['phi']}
     assert all(len(v)==8 for v in I.values())
-    k=len(next(iter(I)))
-    assert all(len(w)==k for w in I)
-    # All raw products have at most 3(k+2) letter factors, nonnegative columns
-    # of l1 norm at most bound at every individual step. Rule out int64 overflow.
-    assert bound**(3*(k+2)) <= np.iinfo(np.int64).max
+    # In the fixed-memory certificate every tag has length three. The
+    # adaptive certificate remembers one extra predecessor precisely when
+    # the final triple is listed in the promotion table.
+    k=3
+    promote={tuple(w) for w in G.get('promote', [])}
+    assert all(len(w)==k for w in promote)
+    max_k=k+bool(promote)
+    assert all(len(w)==(k+1 if w[-k:] in promote else k) for w in I)
+    # All raw products have at most max_k+2 unit factors. Their columns
+    # have l1 norm at most bound at each step. Rule out int64 overflow.
+    assert bound**(max_k+2) <= np.iinfo(np.int64).max
     alpha=tuple(sorted({a for w in I for a in w}))
     assert alpha and all(0<=a<len(U) for a in alpha)
     prefixes={():np.eye(8,dtype=object)}
     for _ in range(k):
         prefixes={w+(j,):B for w,A in prefixes.items() for j in alpha if rank_gte_two(B:=R[j]@A)}
+    assert promote<=set(prefixes)
+    for w in promote:
+        A=prefixes.pop(w)
+        for j in alpha:
+            B=A@R[j]
+            if rank_gte_two(B):
+                prefixes[(j,)+w]=B
     assert set(prefixes)==set(I)
     edges=total=0
     for w,A in prefixes.items():
@@ -123,7 +137,8 @@ def replay(path):
         assert (2000*V>=den*J[0]).all() and (V<=2*den*J[0]).all(), ('compare',w)
         for j in alpha:
             if not rank_gte_two(R[j]@A): continue
-            t=w[1:]+(j,)
+            tail=w+(j,)
+            t=tail[-k-1:] if tail[-k:] in promote else tail[-k:]
             assert t in I
             Y=I[t]@(Q@U[j]@starting)
             cost=len(NAMES[j].split('.'))
@@ -133,5 +148,48 @@ def replay(path):
           'rate=',p/q, 'states=',len(I),'edges=',edges,'coordinate inequalities=',total)
 
 
+def obstruction(path):
+    # Exact Farkas witness: a positive sum of actual depth-three inequalities
+    # cancels every coefficient of every functional, but has negative RHS.
+    Z,U,R,_,bound=transfer()
+    n=Z.shape[1]
+    assert bound**5 <= np.iinfo(np.int64).max
+    data=json.loads(Path(path).read_text())
+    total={}
+    rhs=Fraction(0)
+    rate=Fraction(17699,10000)
+    for row in data:
+        w=tuple(row['w'])
+        assert len(w)==3
+        P=multiply((U[j] for j in w),n)
+        V=Z@P
+        assert rank_gte_two(multiply((R[j] for j in w),8))
+        a=row['a']
+        weight=Fraction(row['weight'])
+        assert weight>0
+        if 't' not in row:
+            assert any(tuple(-v)==tuple(a) for v in V.T)
+            assert a[0]<0
+            rhs+=weight*Fraction(a[0],2000)
+            pairs=[(w,a)]
+        else:
+            t=tuple(row['t']); j=t[-1]
+            assert t==w[1:]+(j,)
+            assert rank_gte_two(multiply((R[i] for i in w+(j,)),8))
+            Y=Z@U[j]@P
+            b=row['b']
+            assert any(tuple(v)==tuple(a) and tuple(-y)==tuple(b) for v,y in zip(V.T,Y.T))
+            f=rate**len(NAMES[j].split('.'))
+            pairs=[(w,[f*x for x in a]),(t,b)]
+        for tag,vals in pairs:
+            for i,x in enumerate(vals):
+                total[tag,i]=total.get((tag,i),Fraction(0))+weight*x
+    assert rhs<0 and all(x==0 for x in total.values())
+    print('exact depth-three Farkas obstruction passed:',len(data),'rows')
+
+
 if __name__=='__main__':
-    replay(sys.argv[1])
+    if len(sys.argv)==3 and sys.argv[1]=='--obstruction':
+        obstruction(sys.argv[2])
+    else:
+        replay(sys.argv[1])
