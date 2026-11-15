@@ -1,0 +1,3 @@
+primitive +2 multiplicities at widths 12k: [1, 0, 178, 0, 76140, 0, 40625112, 0]
+code density, 8-width truncation: 0.0002441432153069537
+tail ceiling: 4.688821654303153e-21
