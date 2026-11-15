@@ -1,0 +1,29 @@
+n7 isomorphism representatives: 456
+opposite ready H=59 rows 114 16 3 7 12 30 62 stable unit ports R0:1 F4:-1
+n=7 considered=456 strong=353
+57 both=2 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+59 both=2 opposite-ready=2 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+65 both=2 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=2 depth-two=0
+89 both=2 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+109 both=2 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+123 both=2 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+129 both=2 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+141 both=1 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+n=8 considered=58368 strong=50668
+129 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=16 depth-two=0
+187 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+255 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+293 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+299 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+305 both=20 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+353 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+359 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+371 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+383 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+429 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+443 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+471 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+473 both=48 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+483 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+523 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
+547 both=16 opposite-ready=0 same-site=0 stable-survivor=0 raw-survivor=0 depth-two=0
