@@ -1,0 +1,7 @@
+initial and aligned (48, 29, 25, 1, 8, 30) 25 1 (15, 27, 53, 11) (15, 27, 121, 15)
+initial and aligned (48, 29, 25, 1, 8, 30) 16 11 (15, 29, 19, 5) (15, 29, 121, 15)
+initial and aligned (18, 20, 17, 7, 8) 1 11 (15, 31, 19, 3) (15, 31, 121, 15)
+initial and aligned (48, 29, 25, 1, 8, 30) 1 11 (15, 33, 19, 1) (15, 33, 121, 15)
+initial and aligned (6, 8, 10, 1) 8 11 (5, 9, 5, 1) (5, 9, 35, 5)
+initial and aligned (6, 8, 10, 1) 6 1 (5, 11, 15, 3) (5, 11, 35, 5)
+72 literal matched-window whole-glue computations
