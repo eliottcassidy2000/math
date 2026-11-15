@@ -1,0 +1,10 @@
+seam: (29, 320, 43, 5, 4, 50) output 333
+seam: (29, 320, 43, 5, 4, 56) output 327
+triangle / genuine core: 4 5 32 0 [1, 0, 0, 2] [2, 0, 0, 1]
+triangle / genuine core: 7 15 384 1 [0, 0, 0, 0, 0, 0, 0] [0, 0, 0, 0, 0, 0, 0]
+triangle / genuine core: 10 45 4608 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+triangle / genuine core: 5 15 120 1 [0, 0, 0, 0, 0] [0, 0, 0, 0, 0]
+triangle / genuine core: 6 45 432 0 [1, 2, 1, 2, 1, 2] [2, 1, 2, 1, 2, 1]
+triangle / genuine core: 8 45 1440 0 [0, 1, 1, 1, 0, 0, 0, 0] [0, 2, 2, 2, 0, 0, 0, 0]
+triangle / genuine core: 8 63 1872 0 [2, 1, 1, 0, 1, 1, 2, 1] [1, 2, 2, 0, 2, 2, 1, 2]
+exact reflected endpoint identities on induced subsets: 38394
