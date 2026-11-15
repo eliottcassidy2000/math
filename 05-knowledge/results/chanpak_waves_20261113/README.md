@@ -2982,9 +2982,55 @@ ones are the promising ones, because of their Pell supply.
 | claim | status |
 |---|---|
 | Cyclic join = Re(β_A·conj(β_B)) in Z[√−2]; diagonal joins ≡ 3 mod 8 and only reach primes ≡ 3 mod 8 | PROVED |
-| Diagonal hyperbolic kernel = −Norm from Z[√3], with Pell orbits of targets for p ≡ 11 mod 12 | ARGUMENT (relies on THM-5133's kernel) |
+| Diagonal hyperbolic kernel = −Norm from Z[√3], with Pell orbits of targets for p ≡ 11 mod 12 | the norm identity holds; the Pell supply is REFUTED in wave 35 (positivity confinement) |
 | 3-adic arc layers: non-strong, exact bottleneck, mod-p bottleneck, residual local factor | NUMERICAL |
 | Bottleneck-free twisting removes the 3-adic arc | REFUTED as stated (residual bias persists) |
+
+## Wave 35: positivity confinement — no kernel gives cancellation, so prime targets have finitely many port pairs
+
+Session mac-mini-2026-11-15-positivity. Owner prompt: "spend another similar long session toward proving chan-pak."
+
+### §1. The correction (PROVED)
+
+THM-5133's visit-matrix form is
+
+    H(K[A, B]) = Σ N_ij·P_i(A)·P_j(B),
+
+where N_ij counts walks of the kernel visiting the ports i and j times, and P_i counts covers by i nonempty paths.
+Every coefficient and every variable is nonnegative.
+- *Where the sign comes from.* The elliptic / parabolic / hyperbolic trichotomy refers to the same form written in
+  (H, Π₂), with Π₂ = P₂ + 2H. The shift makes det G negative; it cannot create cancellation.
+- *The realizable cone.* Π₂ ≥ 2H always, because (path, ∅) and (∅, path) are among the covers. Checked: the minimum of
+  Π₂/H over all 7,412 classes of order ≤ 8 is exactly 2. For a symmetric kernel the isotropic direction of the
+  diagonal form has Π₂/H < 2, because N₁₁N₂₂ ≥ 0 gives |det G| < N₁₂². So every isotropic direction lies outside the
+  realizable cone.
+- *Consequence.* Each term of the sum is at most H, so a prime target p has only finitely many realizable port
+  representations, all with ports ≤ p. Wave 34's "Pell supply" from the order-5 kernel 3Π₂Π₂′ − HH′ does not exist on
+  tournaments: on Π₂ ≥ 2H that form is ≥ 11HH′.
+
+This is the kernel-level version of HYP-9762: path counts never cancel.
+
+### §2. What remains true: prime targets are linear equations on the pair spectrum
+
+The pair (H, Π₂) is multiplicative under ordered joins (THM-5133). Every two-port kernel is a positive bilinear form
+in the port vectors. With one core fixed, a prime target becomes a linear equation αH(A) + βP₂(A) = p on the pair
+spectrum V = {(H(A), P₂(A))}. THM-5222's cyclic join is the case α = 3, β = 1 with a one-vertex B.
+
+So for some fixed small kernel, Chan–Pak for primes follows from **pair-spectrum fullness**: V meets every line
+αx + βy = p in its realizable cone.
+- *How strong.* This is a two-dimensional covering statement. It needs more tournaments than the square of the value
+  range (σ > 2 in the 7-21 notes' terms). Counting classes (~2^(n²/2)/n!) against range² (~(n!/2^n)²), that first
+  happens near order 12.
+- *Where it should hold.* Not near the floor, where counts factor (THM-5202). It should hold in the bulk of the
+  all-tournament ensemble, which is exactly where the tilted local-limit reduction of THM-5127 lives.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| Two-port kernels are positive bilinear forms; isotropic directions lie outside Π₂ ≥ 2H; finitely many representations per prime | PROVED |
+| Pell supply from hyperbolic kernels | REFUTED |
+| Prime targets ⇐ pair-spectrum fullness for a fixed kernel | PROVED reduction; fullness OPEN (σ > 2 regime) |
 
 ## Next waves (queued predictions)
 
