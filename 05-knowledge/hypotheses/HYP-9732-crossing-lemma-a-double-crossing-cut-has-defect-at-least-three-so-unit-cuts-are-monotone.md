@@ -2,7 +2,9 @@
 id: HYP-9732
 title: "Crossing lemma: if some Hamiltonian path of a tournament T crosses from X to its complement at least twice, then the vertex beating exactly X gives H(T+x) >= 2H(T) + 3; hence every unit cut (defect +-1) is monotone, each Hamiltonian path meeting X in at most two blocks, the second at its end"
 status: >
-  OPEN (CONJECTURE), mac-mini-2026-11-15-carriers, wave 27 of chanpak_waves_20261113.
+  REFUTED by a strong order-11 unit cut: H=815, H(T+x)=1629, E=156, R=37, Z=194.
+  The proposed unit-cut monotonicity consequence is also REFUTED. The order-8 census remains valid.
+  Original conjecture: mac-mini-2026-11-15-carriers, wave 27 of chanpak_waves_20261113.
   FINITE-EXACT (THM-5192 (C)): true for every cut of every tournament of orders 4-8. At order 8 there are 1,620,135
   double-crossing cuts, with minimum defect exactly 3. On 1,000 random order-9 classes the minimum is 15. Every cut
   with negative defect is monotone through order 8.
@@ -26,9 +28,11 @@ w → u; there are R of them. With Z the paths of shape [X^c][X] and E the exces
 
     δ(X) := H(T + x) − 2H(T) = E + R − Z.
 
-**Conjecture.** If E ≥ 1, then δ(X) ≥ 3.
+**Original conjecture (refuted).** If E ≥ 1, then δ(X) ≥ 3.
 
-**Consequences.**
+The [literal strong order-11 witness and direct replay](../results/chanpak_near_floor_crossing_20261115/CROSSING.md) give defect −1 with 156 twice-crossing paths. Its two-shelf family makes crossing defect arbitrarily negative at strong orders. An [independent one-growing-shelf formula and min-cut reformulation](../results/chanpak_near_floor_crossing_20261115/SHELF.md) give a second unbounded family. These results do not refute HYP-9712 itself.
+
+**Proposed consequences (the monotonicity claim is refuted).**
 - Unit cuts are monotone (E = 0, R = Z ± 1). Every unit extension's out-set is met by each Hamiltonian path in at
   most two blocks, the second of which is final.
 - This is the structural core of sign freezing (HYP-9712). Unit cuts are rare and rigid: at most two child types
