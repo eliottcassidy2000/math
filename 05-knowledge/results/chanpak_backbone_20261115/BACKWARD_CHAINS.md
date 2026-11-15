@@ -20,7 +20,7 @@ where $b_r=(\alpha_r,\beta_r,\gamma_r)$. Indeed
 $$
 \alpha_r=\alpha_{r-1}+2\sum_{j\ge1:\,2j\le r}\alpha_{r-2j-1}\qquad(r\ge1),
 $$
-with $\alpha_{-1}=\alpha_0=1$; sum classification by the length of a final selected run, and the last unused gap if present. Subtract the same recurrence two indices earlier to get tribonacci at $r\ge3$ (directly at $r=3$). Classify by the first unselected gap to obtain
+with $\alpha_{-1}=\alpha_0=1$; sum classification by the length of a final selected run, and the last unused gap if present. Subtract the same recurrence two indices earlier to get tribonacci at $r\ge3$ $directly at $r=3$$. Classify by the first unselected gap to obtain
 $$
 \beta_r=1+\sum_{j<r}\alpha_j,\qquad \gamma_r=1+\sum_{j<r}\beta_j.
 $$
@@ -40,7 +40,7 @@ $$
 $$
 In particular $|\mathcal H\cap[1,X]|=O(X^{49/50})$, simultaneously for unbounded order and unbounded reversal span. To prove it, call a word a piece if it has no adjacent positive gaps, so all its internal separators have $r\ge1$. Every chain count is a product of piece counts by the reset, so we can majorize by the Euler product over distinct piece counts $p>1$.
 
-After any positive block $y\ge2x>0$, since $\beta_r\ge\alpha_r$ and $\gamma_r\ge\beta_r$. The change factor for (x+y) is a weighted mean of $A=\alpha_r+2^m\beta_r$ and $D=\beta_r+2^m\gamma_r\ge A$, with weight at least (2/3) on $D$. Thus it is at least
+After any positive block $y\ge2x>0$, since $\beta_r\ge\alpha_r$ and $\gamma_r\ge\beta_r$. The change factor for $x+y$ is a weighted mean of $A=\alpha_r+2^m\beta_r$ and $D=\beta_r+2^m\gamma_r\ge A$, with weight at least (2/3) on $D$. Thus it is at least
 $$
 \lambda_{r,m}=\frac{\alpha_r+2\beta_r+2^m(\beta_r+2\gamma_r)}3.
 $$
@@ -48,7 +48,7 @@ The contraction $\sum_{r,m\ge1}\lambda_{r,m}^{-49/50}<24/25$ has an exact ration
 $$
 \frac{2z^{12}}{1-z}\frac{z}{1-z}+\frac2{1-z}\frac{z^{20}}{1-z}.
 $$
-The first-positive factor $x+y\ge 2^m\beta_r$ and final tail factor $H\ge\alpha_t(x+y)$ contribute finite sums, again by exponential growth. All-zero words alone also contribute a finite sum. Hence the sum of $H^{-s}$ over all piece words is finite, so the Euler product $\prod_{p>1}(1-p^{-s})^{-1}$ converges. This also bounds the distinct support of arbitrary products, if additional ordinal sums of these tournaments are allowed. It does not bound counts after arbitrary new outlet arcs or mixed contact cuts, which break the single reverse arc hypothesis.
+The first-positive factor $x+y\ge 2^m\beta_r$ and final tail factor $H\ge\alpha_t(x+y)$ contribute finite sums, again by exponential growth. All-zero words alone also contribute a finite sum. Hence the sum of $H^{-s}$ over all piece words is finite, so the Euler product $\prod_{p>1}$1-p^{-s}$^{-1}$ converges. This also bounds the distinct support of arbitrary products, if additional ordinal sums of these tournaments are allowed. It does not bound counts after arbitrary new outlet arcs or mixed contact cuts, which break the single reverse arc hypothesis.
 
 ## Constructive lesson
 
