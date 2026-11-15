@@ -1,0 +1,7 @@
+16 exact width-16 slope matches, 4 self matches
+900 full-width unit identities and 325 repeated-transport controls
+complete width-12 list and primitive width-36 certificate
+all-width displacement controls 9628
+mod-16 Apery minima [0, 161, 34, 195, 68, 229, 102, 263, 136, 25, 170, 59, 204, 93, 238, 127]
+width k=9 central support certified 248 721
+primitive factor and both suffix-marker controls 6300
