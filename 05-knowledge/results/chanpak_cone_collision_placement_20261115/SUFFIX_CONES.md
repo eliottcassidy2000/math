@@ -6,7 +6,7 @@ Let the units be numbered in the pinned order of [THM-5212(D)](https://github.co
 - **All thirteen:** for every bottleneck-free word, $H\ge C\cdot 1.7349^n$.
 - **Any mixture of the twelve other than 0.1.123:** the rate improves to $1.7699$.
 
-Here $n$ counts vertices, not units. These theorems also hold in the larger accepted language where every four-unit window has reduced rank at least two (and shorter words are harmless). They do not cover unrestricted span-three ribbons, nor identify primes merely by checking rank. The all-thirteen rate $1.7699$ remains open in this packet.
+Here $n$ counts vertices, not units. These theorems also hold in the larger accepted language where every four-unit window has reduced rank at least two (and shorter words are harmless). They do not cover unrestricted span-three ribbons, nor identify primes merely by checking rank. The adaptive extension below reaches $1.7699$ across all thirteen.
 
 ## Replace the moving image plane by a fixed finite cone for each suffix
 
@@ -50,3 +50,20 @@ $$
 H\ge \frac{\rho^{n-1}}{4000\rho^9}\left(4000\rho^{12}\right)^{-b}.
 $$
 In particular $b=o(n)$ preserves the full asymptotic lower rate. This does not control words with frequent exceptional letters at the same rate; a stronger cone needs to handle their transition costs, rather than assuming they are infrequent.
+
+## Full-rate certificate: twelve suffixes need one more unit of memory
+
+**All thirteen floor units achieve the proved rate 1.7699 under the same bottleneck-free hypothesis.** The medium-rate argument above fixed the tag length at three. At rate 1.7699 this particular all-column, three-unit cone method is infeasible for the thirteen-unit alphabet: a positive rational combination of 20 of its inequalities cancels the functional variables while leaving a strictly negative upper bound on zero. This [Farkas witness](CONE_DEPTH3_OBSTRUCTION.json) is checked against regenerated transfer columns. It refutes the fixed-memory scheme at that rate, not the growth bound.
+
+In the [successful hybrid certificate](CONE13_HYBRID.json), use a three-unit tag except when its last triple is one of twelve designated triples. There retain a fourth unit, the immediate predecessor of the triple. These choices are printed as the promotion table in the certificate. Updating a tag only requires its currently retained suffix and the newly appended unit: if the next tag needs four units, the last three old ones plus the new one are available. Forgetting any additional oldest factors still preserves nonnegativity. Define each cone exactly as above but take its product over the entire retained tag. Keep a transition when the product of the retained tag and new unit has rank at least two. This overapproximates every bottleneck-free word as before: each tested word is an actual contiguous factor.
+
+The replay rebuilds 1,570 tags and 15,853 edges, then verifies **1,886,507** integer expansion inequalities (119 per edge), as well as the comparison with $H$ and the representation identities. After four units every valid word has a tag; those units and the first vertex cost at most 13. Thus for all thirteen-unit bottleneck-free words,
+$$
+ H\ge \frac{1}{4000}\,(1.7699)^{\,n-13}.
+$$
+This is an all-length theorem, not a check of many periodic words. The alternating two-unit word from THM-5212(A) has limiting rate about 1.7700005, so the remaining gap between this proved lower rate and that explicit upper example is about 0.0001005. Non-unit letters in a general span-three ribbon remain outside the result.
+
+```
+python verify_suffix_cone.py CONE13_HYBRID.json
+python verify_suffix_cone.py --obstruction CONE_DEPTH3_OBSTRUCTION.json
+```
