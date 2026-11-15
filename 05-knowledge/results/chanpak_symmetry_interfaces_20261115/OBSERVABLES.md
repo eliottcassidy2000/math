@@ -1,5 +1,7 @@
 # What an unmarked tournament module can tell any surrounding tournament
 
+**Follow-up:** [Sharper factorial restrictions and the next dyadic states](../chanpak_next_interface_bits_20261115/README.md) derive the exact interface through modulus 128. For equal-order modules agreeing in the first two slot readings, every unmarked output difference is a multiple of 480 (odd order) or 1,440 (even order), with a sharp even-order pair.
+
 Let c_r(U) be the number of ordered covers of a nonempty tournament U by r **nonempty** directed paths, with c_r=0 above its order. Write H=c_1 and P_U(k)=Σ_r binom(k,r)c_r(U) for the number of k ordered slots, now allowing empties. Put
 ```
 d_r(U) = (r−1)! c_r(U).
