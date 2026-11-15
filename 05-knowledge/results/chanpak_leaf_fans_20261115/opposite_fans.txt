@@ -1,0 +1,4 @@
+Verified source, all nine grid values, and both boundary signs.
+129 259 515
+257 515 1027
+513 1027 2051
