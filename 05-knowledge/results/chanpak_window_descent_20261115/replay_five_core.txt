@@ -1,0 +1,1 @@
+All live states: 34 closure visits: 48 full-context count differences: [-2, 0, 2]
