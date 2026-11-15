@@ -1,0 +1,16 @@
+Wave 32 receipts (mac-mini-2026-11-15-counters). Exploratory. Exact arithmetic modulo 33554393 (and 33554383 for confirmations).
+Note: these scripts read the ribbon representation through an absolute path to 04-computation/experiments/ribbon_spectrum_20261104.
+
+Triple and target:
+  p(1)=0, p(1001_2=9)=4, p(1000001_2=65)=32, p(1000000001_2=513)=256: p(2^k+1) = 2^(k-1) = (X-1)/2.
+  padding law p(2^k u + 1) = p(u) + (2^(k-1)-1) u + (u mod 2) holds for all u < 600, 2 <= k <= 11 (it fails only at k = 1).
+  1001 = 7*11*13; 1000001 = 101*9901; 1000000001 = 7*11*13*19*52579 = 1001 * 999001.
+  3-cycle carrier F(804, 103594) = 1000000001 (the addresses returned by chanpak_cone_collision_placement_20261115/bank_absolute_host.py).
+
+w32_unipotent.py 3: 584 span-3 blocks, 31 with eigenvalue 1, 0 with a Jordan block at 1.
+w32_unipotent.py 4: 4680 blocks of length <= 4, 233 with eigenvalue 1, 0 with a Jordan block at 1.
+w32_fixedvec.py: 158 distinct fixed vectors, 38 shared by >= 2 blocks (powers of one block, or blocks ending in the cut patterns 0.0, 0.1).
+w32_ev1strong.py: of the 233 eigenvalue-1 blocks, 141 are bulk-strong (e.g. masks (1,6), (5,5)).
+w32_sharedstrong.py: 124 strong fixed vectors; 8 shared by two distinct primitive strong blocks (all of length 4).
+w32_countertest.py: for all 8 pairs, digit strings of length 5 in context 0.0.2 + digits + suffix: H is additive in the digits
+  with every weight 0. The two blocks are H-twins (one arc that never changes the count), so neither pair is a counter.

@@ -2739,6 +2739,64 @@ have single nonzero eigenvalues, and span-2 blocks have eigenvalue 1 at most sim
 | Row collision lemma in the balanced range | OPEN |
 | 13-unit growth certificate | not built; plan stated |
 
+## Wave 32: the decimal triple, sparse linear tapes, and no counter in span 3
+
+Session mac-mini-2026-11-15-counters. Owner prompt: "Merge in prior work on the triple {1, 1001, 1000001} and how they
+relate to 1000000001 and search multi-port algebras for a unipotent counter and build the 13-unit syllable
+certificate, think prior work on 62 and arbitrary span-3 words."
+
+Exploratory throughout. Receipts are in `scripts/w32_receipts.txt`.
+
+### §1. The triple and 1000000001
+
+**Decimal reading.**
+- *Prior work.* Session 82 ([DECIMAL_TRIPLE](../session82_decimal_aliquot_square_sum_20261028/DECIMAL_TRIPLE.md))
+  characterized the triple A = t² + 1, B = t + 1, C = t(t + 1) by A + B = C + 2 and B + C = B², at t = 1000.
+- *Continuation.* The requested list continues the same pattern, with t = 10³:
+
+      1, 1001 = t + 1, 1000001 = t² + 1, 1000000001 = t³ + 1 = (t + 1)(t² − t + 1) = 1001 · 999001.
+
+- *For Chan–Pak.* Counts are multiplicative over ordinal sums, so 10^9 + 1 is realized by stacking witnesses for
+  1001 and 999001.
+- *The factor 7.* 1001 = 7·11·13 has a factor of 7, so it must use the seven lane: 1001 = 11 · 91, with 91 = 7·13
+  realized directly.
+- *A direct host.* The concurrent placement packet
+  ([chanpak_cone_collision_placement_20261115](../chanpak_cone_collision_placement_20261115/README.md)) builds a
+  31-vertex host. It is the 3-cycle carrier at addresses (804, 103594), and F(804, 103594) = 1,000,000,001
+  (rechecked here).
+
+**Binary reading.** Read as tape addresses, 1, 1001, 1000001, 1000000001 are 2^{3k} + 1. They are exactly where the
+surcharge is linear: p(2^k + 1) = 2^(k−1) = (X − 1)/2. More generally, the padding law
+p(2^k u + 1) = p(u) + (2^(k−1) − 1)u + (u mod 2) (k ≥ 2) confines the surcharge to the short payload u. So the linear
+tapes that wave 31 ruled out exist only on geometrically sparse address families.
+
+### §2. Multi-port counters in the full span-3 representation
+
+In the 62-dimensional representation, checked exactly modulo primes:
+- of the 4,680 blocks of length ≤ 4, 233 have eigenvalue 1, and none has a unipotent (Jordan) part;
+- 141 of them are strong blocks, where eigenvalue 1 is a semisimple constant offset;
+- only 8 fixed vectors are shared by distinct strong blocks, and every such pair is an H-twin with zero digit weight.
+
+So no affine counter exists among span-3 blocks of length ≤ 4 (HYP-9762 update).
+
+### §3. The 13-unit certificate and arbitrary span-3 words
+
+- **Already done.** The 13-unit growth certificate was built by the concurrent packet: cones indexed by three-unit
+  suffixes, with 12 promoted triples, give growth ≥ 1.7699 across all thirteen units. It is credited here and not
+  rebuilt.
+- **Still open.** Arbitrary span-3 letters (the full 62-dimensional language). Periodic blocks up to period 6 are
+  covered (THM-5202 (D)). A suffix-cone certificate there would index cones by letter suffixes in 62 dimensions.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| Triple ↔ 10^9 + 1 relations; host F(804, 103594) = 10^9 + 1 | PROVED arithmetic; host credited to the concurrent packet |
+| Padding law; linear surcharge exactly on 2^k + 1 addresses | PROVED |
+| No unipotent block, and no affine counter, among span-3 blocks of length ≤ 4 | FINITE-EXACT |
+| 13-unit certificate | done elsewhere (credited) |
+| Arbitrary span-3 growth bound | OPEN |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
