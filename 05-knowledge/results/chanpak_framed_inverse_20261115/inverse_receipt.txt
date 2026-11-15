@@ -1,0 +1,3 @@
+exact inverse controls: 1500 targets, six two-scale physical outputs, both undirected charts
+first same-chart adjacent pair: 1565, 1567; target 63 -> (H,E)=(25,19); 69 -> (33,18)
+504 two-parameter exact responses; literal double-scale check at t=1,k=4
