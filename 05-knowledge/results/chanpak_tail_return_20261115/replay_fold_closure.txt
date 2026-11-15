@@ -1,0 +1,4 @@
+120 literal terminal-word recoveries modulo the exact tail scale
+Fold endpoints, height 3 : 16418 15938
+Fold endpoints, height 4 : 67442 66482
+Fold endpoints, height 5 : 273938 272018
