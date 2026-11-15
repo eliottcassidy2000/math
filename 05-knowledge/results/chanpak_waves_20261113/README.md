@@ -2530,6 +2530,89 @@ cd 05-knowledge/results/chanpak_waves_20261113/scripts && gcc -O3 -o nfdfs w28_n
 | Density one ⇐ Poisson collision count | PROVED reduction; Poisson behaviour NUMERICAL |
 | Crossing lemma | REFUTED (another session); small-order structure recorded |
 
+## Wave 29: the growth bound — floor units compose by exact Hankel laws, and bottleneck-free words pay 1.7699 per vertex
+
+Session mac-mini-2026-11-15-growthbound. Owner prompt: "Work toward proving chan-pak by finding more constructions and
+analogies that apply to all sizes, come to understand the recursive patterns of tournament symmetry composition. try
+many possible approaches to the proof. prove the bottleneck-free growth bound and attack the carrier collision count."
+
+Exploratory throughout. Receipts are in `scripts/w29_receipts.txt`; prediction P102 is filed in HYP-9752.
+
+### §1. The composition law of the floor units (THM-5212 (A))
+
+The span-2 units A = 0.2 and B = 1.2 generate a language with an exact 3-dimensional representation in the Hankel
+coordinates z = (H(W), H(WA), H(WB)):
+
+    H(WAA) = 3 H(WA),                       H(WAB) = 4 H(WA) − 3 H(W),
+    H(WBA) = (7 H(WB) + 4 H(WA) − 4 H(W))/3,  H(WBB) = (5/3)(H(WA) + H(WB) − H(W)).
+
+- Compatible repetitions AA and BB have rank one, so they are exact products.
+- The incompatible junctions AB and BA have characteristic polynomial x(x² − 9x − 8).
+- So the bottleneck-free words are exactly the alternating ones, with growth ρ* = ((9 + √113)/2)^(1/4).
+
+This is the recursive pattern behind THM-5202: compatible composition multiplies, and incompatible composition is
+affine. The affine room is all a prime count can use.
+
+### §2. The growth bound, proved in the span-3 five-unit language (THM-5212 (B))
+
+The units 0.2, 1.2, 0.1.3, 0.3.1 and 1.2.3 generate a language with an exact 4-dimensional representation.
+- Bottleneck-free words are exactly the paths of a 9-state automaton on image planes.
+- Simple cycles have minimum growth ρ* at (0.2, 1.2).
+- An exact rational certificate gives H ≥ C·1.7699^n for every bottleneck-free word: invariant sectors (with snapped
+  exact boundary rays) and edge-expanding functionals.
+- So inside this language the premium over the floor 5^(1/3) is a theorem.
+
+Open: the other eight floor units, non-unit letters, and non-ribbon tournaments.
+
+### §3. The carrier collision count (HYP-9752)
+
+- **Rows are counts.** Setting Y = 1 in a carrier gives a row G(U) = cU + k p(U) + φ[U odd] of tournament counts.
+- **Top-split reduction (proved).** A collision U ≠ U' splits at its highest differing bit into prefix w and suffixes
+  b, b'. Then k d w + k (w mod 2) = c(b − b') + k(p(b) − p(b')) + φ(b₀ − b'₀), with d = rev b − rev b' odd. So the
+  suffix pair determines the prefix.
+- **Measured energy.** Ordered collisions per 2^L converge (exact to L = 24):
+  - 0.2825 for 18U + 3p + 2[odd];
+  - 0.0053 for 189U + 11p;
+  - 1.267 for 2U + p.
+- **The lemma.** The collisions with split level l and prefix w number at most C·2^l/(1 + w); the measured C is 14 for
+  the 3-cycle row. This lemma gives linear energy, and Cauchy–Schwarz then gives positive lower density for the whole
+  Hamiltonian-path spectrum.
+- **Concurrent work, credited.** The 7-21 session measured one-hub energy ≈ 10.08·2^m and noted the same density
+  consequence. chanpak_dyadic_collision_ports_20261115 proved the split identity and short-displacement bounds.
+
+### §4. Constructions for all sizes
+
+- **Concurrent.** chanpak_symmetry_interfaces_20261115 studies which data substitution interfaces pass and how
+  symmetry composes recursively.
+- **This wave.** It adds the floor-unit composition algebra of §1 and §2: exact Hankel laws whose compatible products
+  are rank one and whose incompatible products carry a second eigenvalue.
+- **Reading.** Constructions that work at every size must live on the incompatible side: carriers, recursive trees, and
+  alternating unit chains.
+
+### Reproduction
+
+```bash
+cd 05-knowledge/results/chanpak_waves_20261113/scripts && python3 w29_unit_language_rep.py 2 0.2,1.2
+```
+
+```bash
+cd 05-knowledge/results/chanpak_waves_20261113/scripts && python3 w29_exact_growth_certificate.py w29_unitrep_w3_5units.pkl
+```
+
+```bash
+cd 05-knowledge/results/chanpak_waves_20261113/scripts && python3 w29_row_collisions.py 22
+```
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| Floor-unit Hankel laws; alternating words are the only bottleneck-free span-2 unit words | PROVED |
+| Five-unit span-3 growth bound H ≥ C·1.7699^n | PROVED (exact rational certificate) |
+| Full span-3 and general growth bound | OPEN (HYP-9742) |
+| Top-split reduction of row collisions | PROVED |
+| Row collision lemma, and with it positive density of the spectrum | CONJECTURE (HYP-9752); implication PROVED |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.

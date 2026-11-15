@@ -1,0 +1,21 @@
+Wave 29 console receipts (mac-mini-2026-11-15-growthbound). Exploratory; P102 is filed for later.
+
+w29_unit_language_rep.py 2 0.2,1.2
+  minimal dim 3; 0.2 and 1.2: charpoly x^2(x-3), power ranks [2,1,1,1]
+  0.2.0.2 rank 1 x^2(x-9); 0.2.1.2 rank 2 x(x^2-9x-8); 1.2.0.2 rank 2 x(x^2-9x-8); 1.2.1.2 rank 1 x^2(x-9)
+  A = [[0,1,0],[0,3,0],[-3,4,0]], B = [[0,0,1],[-4/3,4/3,7/3],[-5/3,5/3,5/3]], z0 = (1,3,1), fin = (1,0,0)
+w29_unit_language_rep.py 3 0.2,1.2,0.1.3,0.3.1,1.2.3
+  reach 16, obs 6, minimal dim 4; units x^3(x-3) or x^3(x-5); pair charpolys as in THM-5212 (B)
+w29_plane_automaton.py (span 3): 9 plane states, ranks [3,3,2,2,2,2,2,2,2]; recurrent {2..8}
+w29_plane_cycles.py: 31 simple cycles; minimum 1.7700004732 at 0.2|1.2; next 1.78043 (0.2|1.2|0.1.3|0.2|0.3.1), 1.78050 (0.1.3|1.2)
+w29_lp_positive_cone.py: positive-orthant cones infeasible even at rho = 1.5 (cones too large)
+w29_lp_reachable_sectors.py: sectors from all depth-8 paths, numerically invariant (0 violations); LP max rho = 1.7700004788
+w29_exact_growth_certificate.py: exact invariance failures 0 (boundary rays snapped to exact fixed directions such as (-2,1));
+  exact certificate at rho0 = 17699/10000: True (min slack ratio 1.0000000000062); H positive on every sector ray
+
+w29_row_collisions.py 24 (ordered off-diagonal collision pairs per 2^L)
+  18U+3p+2[odd]: L=12..24: 0.2251 0.2561 0.2698 0.2766 0.2819 0.2827 0.2825
+  189U+11p:      L=12..24: 0.0010 0.0035 0.0050 0.0053 0.0053 0.0054 0.0053
+  2U+p:          L=12..24: 1.0933 1.1948 1.2161 1.2489 1.2638 1.2669 1.2674
+w29_row_collision_lemma_test.py 20: max over (l,w) of count*(1+w)/2^l = 13.99 (3-cycle row), 5.99 (2U+p);
+  per-level totals per 2^l grow linearly in the prefix length L - l (3-cycle row: 0.94 at L-l=4, 4.29 at 7, 7.05 at 10)

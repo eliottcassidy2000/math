@@ -8,6 +8,8 @@ status: >
   span 2, ≤ 6 in span 3, plus 1,926 floor-plus-spoiler words).
   NUMERICAL: the smallest prime count over f(k) rises 1.336 → 1.713 from k = 10 to k = 18, i.e. 3.2% per vertex,
   against the predicted 3.51%.
+  PROVED in the floor-unit languages (THM-5212): bottleneck-free unit words have H >= C*1.7699^n (span 3, five units)
+  and grow exactly like rho*^n (span 2).
   Concurrent and independent: the 7-21 session (notes/06 E2–E3) conjectures the same failure from p-adic statistics.
 session: mac-mini-2026-11-15-bottlenecks
 date: 2026-11-15
