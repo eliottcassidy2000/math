@@ -1,0 +1,3 @@
+16 exact width-16 slope matches, 4 self matches
+900 full-width unit identities and 325 repeated-transport controls
+complete width-12 list and primitive width-36 certificate
