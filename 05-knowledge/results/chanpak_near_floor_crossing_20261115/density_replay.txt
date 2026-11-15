@@ -1,0 +1,4 @@
+T=8192: rows=7, mass=10, support=10, off-diagonal=0, off-diagonal/(T ell^2)=0.0000
+T=32768: rows=51, mass=218, support=165, off-diagonal=114, off-diagonal/(T ell^2)=0.8940
+T=131072: rows=176, mass=1359, support=890, off-diagonal=1208, off-diagonal/(T ell^2)=1.8438
+T=524288: rows=621, mass=7809, support=4715, off-diagonal=9342, off-diagonal/(T ell^2)=2.8537
