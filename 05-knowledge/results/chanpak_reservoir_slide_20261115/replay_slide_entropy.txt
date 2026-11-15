@@ -1,0 +1,4 @@
+profile (13, 104, 18, 18) memory (0, 1) live vertices 80 gcd 10 verified shifts [10, -10]
+profile (45, 1440, 517, 818) memory (1, 1) live vertices 84 gcd 2 verified shifts [2, -16]
+h 13 internal branch histogram [0, 32, 48] max length-12 words 256 out of 4096 power exponent bound 8/12
+h 45 internal branch histogram [0, 52, 32] max length-12 words 32 out of 4096 power exponent bound 5/12
