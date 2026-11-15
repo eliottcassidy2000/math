@@ -1,0 +1,3 @@
+common prefix response 252 9 signed gap 36 literal test pairs [(459, 495), (729, 765), (963, 999)]
+common prefix response 9660 31 signed gap -758 literal test pairs [(18917, 18159), (28639, 27881), (38237, 37479)]
+width reconstruction and deficit checks 8188
