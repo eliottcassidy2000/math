@@ -4,7 +4,8 @@ title: "The bottleneck-free growth bound in the floor-unit languages: the span-2
 status: >
   (A) PROVED (exact linear algebra). (B) PROVED, computer-assisted: exact rational verification of invariant sectors and
   edge inequalities. (C) PROVED from (A) and (B).
-  OPEN: the full span-3 alphabet (13 floor units and non-unit letters) and arbitrary tournaments. For those the premium
+  (E) PROVED: rate 1.7699 for all thirteen floor units, with adaptive suffix cones.
+  OPEN: non-unit span-3 letters and arbitrary tournaments. For those the premium
   remains HYP-9742 with the periodic evidence of THM-5202 (D).
 session: mac-mini-2026-11-15-growthbound (wave 29 of chanpak_waves_20261113)
 date: 2026-11-15
@@ -108,5 +109,10 @@ complementary.
   still exactly ρ* = 1.7700005. It is attained by 0.2·1.2 and by the 12-letter cycle 0.1.3·0.1.123·0.1.23·0.3.1, with
   eigenvalue 9.815^3.
 
-The 13-unit bound therefore remains HYP-9742 (CONJECTURE). A proof needs a certificate that does not enumerate image
+At the end of wave 30 the 13-unit bound still remained conjectural (see the subsequent resolution in (E)). A proof needs a certificate that does not enumerate image
 planes, for example a cone family on the 8-dimensional reachable cone together with a rank-two invariant.
+
+
+## (E) Resolution for all thirteen units
+
+The [adaptive suffix-cone certificate](../../05-knowledge/results/chanpak_cone_collision_placement_20261115/SUFFIX_CONES.md#full-rate-certificate-twelve-suffixes-need-one-more-unit-of-memory) proves $H\ge (1.7699)^{n-13}/4000$ whenever a whole thirteen-unit word has reduced rank at least two. Twelve three-unit suffix tags retain one additional predecessor. The exact replay verifies 1,886,507 inequalities, and a separate 20-row Farkas witness excludes the uniform depth-three scheme at the same rate. This is an all-length floor-unit result, not a bound for words with non-unit letters or for the full near-floor conjecture.
