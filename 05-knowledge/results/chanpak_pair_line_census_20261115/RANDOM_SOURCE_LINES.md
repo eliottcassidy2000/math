@@ -228,3 +228,60 @@ padding or changing SCC shape. The accompanying band replay uses
 the explicit $J_d$ formula and cross-checks against the independent
 subset path DP for all 63 normalized words through order 8; it
 enumerates every normalized word through order 21.
+
+### Wider source theorem: bounded feedback and a high-visit reader
+
+There is a more general obstruction when the reader's visit rank is
+large relative to the source's allowed feedback. Fix $k\ge1$ and let
+every strong component of the ordinal source have a transitive
+deletion set of size at most $k$ (meaning at most $k$ vertices need
+be deleted to leave a transitive tournament). For a fixed rank-$r$
+cyclic reader, with $r\ge 2^k$, the number of outputs at most $X$
+is $O_{K,k,\varepsilon}(X^{k\log_{r+1}2+\varepsilon})$ for
+every $\varepsilon>0$. In particular rank 4 already suppresses
+the entire two-apex-per-component class in density.
+
+**Long return via a short exceptional set.** Let $B$ be one strong
+component with an increasing spine of size $m$ and $a\le k$
+exceptional vertices. Take a shortest path from the last spine vertex
+to the first. A run of three spine vertices in this path has a
+shortcut, so the path uses at most $2(a+1)$ spine vertices. Let it
+use $b$ spine vertices and $c$ exceptional ones. Join its two endpoints
+back along the increasing spine through any subset of the other
+$m-b$ vertices. Each choice gives a different cycle; choose the
+parity of the subset size so that the cycle is odd. These cycles
+alone contribute
+$$
+r^{a-c+1}\left[(r+1)^{m-b}
+                 +(-1)^e(r-1)^{m-b}\right]
+$$
+to $\Pi_r(B)$, for some $e\in\{0,1\}$. If $m-b\ge1$, this
+is bounded below by a positive constant depending only on $r,k$
+times $(r+1)^m$, since $b\le 2(k+1)$. All other orders are bounded
+in terms of $k$, and the empty packing supplies the same bound
+after decreasing the constant. The case where the return has
+just one edge is included: if an empty subset would give a
+2-cycle, that subset is even and already excluded by odd parity.
+
+**No fix is needed for empty slots.** More generally, for any
+tournament of order $n$, a nonempty ordered $j$-cover can be split
+at any of its $n-j$ path arcs, placing the suffix in a new
+$(j+1)$st slot. A resulting cover has at most $j$ preimages,
+each obtained by appending its last path to one of its first $j$
+paths. Thus $j P_{j+1}\ge(n-j)P_j$. For fixed $r$, summing the
+lower slots with their binomial placement multiplicities gives
+$\Pi_r\le(1+O_r(1/n))P_r$ as $n\to\infty$, for all tournaments.
+In particular the comparison used above extends beyond one-apex
+sources.
+
+There are at most $2^{am+\binom a2}$ spine presentations with
+$a$ exceptional vertices; this is at most a constant times
+$2^{km}$. Hence the component weight series
+$\sum_B\Pi_r(B)^{-\sigma}$ converges at each
+$\sigma>k\log_{r+1}2$, by the long-return lower bound, and the
+same ordinal multiset product argument applies. Rank $r\ge 2^k$
+ensures the exponent can be chosen below 1. This proof identifies
+a quantitative reason to try **two** apexes with a **two**-visit
+reader: their $4^m$ presentation budget is no longer defeated
+by the $3^m$ long-return weight alone. It does not claim such a
+reader gives full coverage.
