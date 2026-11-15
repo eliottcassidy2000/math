@@ -1,0 +1,8 @@
+normal-form reciprocal block bounds [0.769861997, 0.872635879, 0.710646866, 0.745024932]
+C 13 order 5 strong True
+EC 23 order 6 strong True
+EAC 69 order 8 strong True
+count palettes through 1000 141 267
+fixed-baseline literal checks 324
+exact two-coordinate macro inverse controls 364
+two-contact split of equal exposed states [41, 43] [33, 43]
