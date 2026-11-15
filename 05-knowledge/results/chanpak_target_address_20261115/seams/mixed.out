@@ -1,0 +1,7 @@
+5405 rooted endpoint identities; exact E=1,2 controls {1: {1, 3}, 2: {1, 5}}
+120 literal seam controls
+sharpness controls through order 11
+120 strong two-arm literal controls
+27 factoring-decoder seeds, with every returned witness counted
+two compressed visit tables and 32 direct inflated switch controls
+two-module coefficient table, 50 literal checks, 128 exact memberships
