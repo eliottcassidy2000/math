@@ -76,6 +76,21 @@ N(1 0^g v)=2^g [(D_W+t)2^k−t r]+N(v),
 ```
 For sufficiently large g, its quotient is an arithmetic progression of step t=h(W). If that step divides the target's difference from the top endpoint and the index lies in range, the high clock selects the literal host; exact equality is then the checksum test. Changing W changes both the step and the baseline. The open problem is to arrange translated high-quotient bands and their physical low checksum sets to satisfy every prescribed N, not just to solve a congruence within a fixed band.
 
+## 4. Actual variable-core switches at one locked high quotient
+
+The step in §3 can change without losing an already chosen leading position. Let U=TT_1, and use either W_1=TT_5 or the four-vertex W_5 with outgoing bit rows (8,1,3,6). The two profiles (h,Q) are (1,32) and (5,32). The two targets at these profiles need not use the same q-mask. For any k and any allowed dyadic gap parameter a, choose
+```
+r_1=2^k−5a,      r_5=2^k−a.
+```
+As long as 1≤5a≤2^k, both reversed suffixes exist. Both cores then give the very same high quotient L=32·2^k+5a when g≥k+6: this gap size separates the low checksum for either profile. The different physical sources are aligned by changing the host word as well. Two explicit all-order families are:
+
+| k and a | Suffix values for W_1,W_5 | High quotient L | Low checksums W_1,W_5 |
+|---|---|---|---|
+| k≥3, a=2^(k−3) | 6,7 | 32·2^k+5·2^(k−3) | 229,261 |
+| k≥5, a=5·2^(k−5) | 28,27 | 32·2^k+25·2^(k−5) | 951,921 |
+
+In the first row, reversing the two r values gives literal suffix integers 6 and 7, with A-values 5 and 1; in the second row they give 28 and 27, with A-values 23 and 5. Leading zero padding does not change A. The low clock, from N(v)=h(W)A(v)+32(val(v)+1), now permits an exact **positive 32** or **negative 30** switch according to the locked quotient, without any increase in the gap parameter. The two switches act on **different** leading windows; their gcd of 2 is not permission to chain them, and the construction does not yet realize consecutive low offsets at a common high quotient.
+
 ## Replay
 
-Run `python replay_anchor_decoder.py`; it checks 3,000 seeded seam/quotient instances and independently enumerates actual Hamiltonian paths in 120 literal glued tournaments.
+Run `python replay_anchor_decoder.py`; it checks 3,000 seeded seam/quotient instances and independently enumerates actual Hamiltonian paths in 124 literal glued tournaments (including four tests of the matched-profile switch before high/low separation).
