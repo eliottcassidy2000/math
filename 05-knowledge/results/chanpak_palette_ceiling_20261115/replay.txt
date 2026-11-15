@@ -1,0 +1,2 @@
+24 spacer profiles; exact upper bound below 0.9971
+approximate rational bound: 0.997017168758
