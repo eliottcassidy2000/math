@@ -1,0 +1,3 @@
+168 coefficient and parity rows; both shorter-coordinate cuts
+14322 split controls
+single-carrier multiplication law checked at eight moduli
