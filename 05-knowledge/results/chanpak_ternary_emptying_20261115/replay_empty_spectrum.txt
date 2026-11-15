@@ -1,0 +1,18 @@
+anchor (14, 12, 8, 0) 1 [4, 2, 1, 0] [4, 2, 1, 1]
+anchor (14, 4, 8, 2) 3 [6, 1, 1, 1] [6, 2, 2, 2]
+anchor (10, 12, 9, 0) 3 [3, 3, 3, 0] [3, 3, 3, 3]
+anchor (6, 12, 8, 1) 5 [3, 4, 2, 2] [4, 5, 4, 3]
+anchor (6, 12, 24, 17, 3) 15 [9, 9, 9, 9, 9] [12, 12, 12, 12, 12]
+rooted attachment (14, 28, 24, 16, 1) 9 E [7, 12, 7, 3, 4] E converse [4, 3, 7, 12, 7]
+rooted attachment (14, 20, 24, 18, 1) 15 E [9, 8, 8, 8, 6] E converse [6, 8, 8, 8, 9]
+rooted attachment (10, 28, 25, 16, 1) 9 E [5, 10, 11, 4, 3] E converse [5, 3, 4, 11, 10]
+rooted attachment (6, 28, 24, 17, 1) 11 E [6, 13, 9, 7, 4] E converse [6, 4, 7, 9, 13]
+rooted attachment (22, 12, 24, 17, 2) 13 E [12, 6, 8, 8, 5] E converse [5, 8, 8, 6, 12]
+rooted attachment (22, 28, 8, 17, 4) 9 E [10, 11, 3, 5, 4] E converse [3, 4, 10, 5, 11]
+rooted attachment (22, 28, 24, 1, 8) 9 E [7, 12, 7, 4, 3] E converse [4, 3, 7, 7, 12]
+rooted attachment (6, 12, 24, 17, 3) 15 E [9, 9, 9, 9, 9] E converse [9, 9, 9, 9, 9]
+W5 strong h -> E support [(9, [3, 4, 5, 7, 10, 11, 12]), (11, [4, 6, 7, 9, 13]), (13, [5, 6, 8, 12]), (15, [6, 8, 9])]
+minimum weighted S over rooted strong five: 9
+R8 delete vertex 0 (2, 76, 1, 5, 15, 31, 61) 25 [10, 19, 10, 22, 49, 79, 60] [15, 20, 20, 27, 51, 80, 61] at root 1
+R8 full h 63
+two-wing emptying family through orders 14: 25
