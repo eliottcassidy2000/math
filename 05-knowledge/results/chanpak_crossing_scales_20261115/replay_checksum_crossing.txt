@@ -1,0 +1,5 @@
+literal pair: 1281 1279 1281
+literal pair: 6241 6093 6095
+literal pair: 16393 15369 15371
+transitive high coefficients checked: 11511
+arbitrary-prefix exact gap checked through: 10000
