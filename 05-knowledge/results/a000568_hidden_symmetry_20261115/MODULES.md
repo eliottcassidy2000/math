@@ -1,0 +1,82 @@
+# Two symmetries of a tournament: actual and read by a port
+
+## Exact A000568 refinement by freely rotating modules
+
+Let $M_p(T)$ be the number of modules inducing prime-order $p$-circulants, $p$ odd, and $c_p$ the number of their ordinary isomorphism types. A module is a subset seen uniformly by each outside vertex. A prime-order circulant is strong: any permitted nonzero increment generates a cycle through the whole orbit. Two overlapping incomparable modules cannot both be strong: the arcs between the intersection and either difference are uniform in that module. Nor can a strong proper submodule sit inside a prime-order circulant. Its translates have equal size and cannot overlap unless identical, and transitivity would partition a prime number of vertices into nontrivial equal blocks. Thus all the selected modules of any tournament are disjoint.
+
+Let $Z_k(w_1,w_2,\ldots)=\sum_{\lambda\vdash k,\text{ odd parts}}2^{e(\lambda)}\prod_{d\in\lambda}w_d/z_\lambda$ be the inherited tournament cycle index, with $z_\lambda=\prod_d d^{m_d}m_d!$ and $e(\lambda)=\sum_i(a_i-1)/2+\sum_{i<j}\gcd(a_i,a_j)$ for parts $a_i$. Then the true, **unweighted class-count** series is
+$$
+\sum_{[T]}x^{|T|}\prod_p t_p^{M_p(T)}
+=\sum_{k\ge0} Z_k(w_1,w_2,\ldots),\quad
+w_d=x^d+\sum_{p\ \mathrm{odd\ prime}} c_p x^{pd}(t_p^d-1).
+$$
+There is a version with a separate variable for each circulant type; the same argument works for any roster of strong substitution-prime types.
+
+**Proof.** Decorate a subset of the modules, each with a positive or a negative mark, or leave any module unmarked. Contract the decorated modules; conversely expand the marked quotient vertices by the indicated types. This is a bijection on decorated isomorphism classes. Burnside on a fixed underlying tournament counts the decoration orbits. Its group is odd because an involution would swap the endpoints of an arc. On an orbit of length $d$ of modules under any automorphism, the signed fixed-decoration factor is $1+t_p^d+(-1)^d=t_p^d$. Thus the signed quotient count of decorations is exactly the monomial for the original tournament, not a count of its subsets. The quotient cycle-index factor is the displayed $w_d$. Taking $t_p=1$ recovers A000568; $t_p=0$ removes precisely the marked type, not merely its leading asymptotic weight. The derivation also applies to strong tournaments by restricting the quotient cycle index to strong quotients (including a singleton).
+
+A $p$-rotation acts independently in each such module, so $\prod_p p^{M_p(T)}\mid H(T)$, since the action on spanning ordered paths is free. This is an exact target sieve on the marked series. For example, if $H=p\ge5$ is prime then the tournament is rigid: a $p$-orbit would itself have at least $p(p-1)/2$ Hamilton paths by using constant unit steps, and deterministic tournament path insertion extends them injectively. For $H=7q$ with $q\ge11$ prime, the Busch bound on a $q$-orbit, $5^{(q-1)/3}>7q$, excludes $q$-symmetry. Hence the only nontrivial group is $C_7$. The unique nontrivial SCC follows by the exclusion of seven paths and multiplicativity over SCCs. A Paley-7 module is inadmissible because its order-21 group divides the path count; the interval-7 module can occur (see the inherited [seven-symmetry analysis](https://github.com/eliottcassidy2000/math/blob/main/session196/symmetry/PROOF.md)).
+
+## The first class-count correction that cannot be seen by those modules
+
+Let $b_n$ count nonrigid tournaments with **no** selected prime circulant module. Then
+$$
+b_n=\frac{2^{\binom n2-4n+14}}{16(n-6)!}\big(1+O(e^{-cn})\big).
+$$
+Here $c>0$ is an absolute constant. The leading family has group $C_3$ acting diagonally on two 3-cycles. Each of the two triples is cyclic; the three-bit incidence mask between them is nonconstant. No one of the two rotations alone is an automorphism.
+
+**Proof.** A permutation $g$ of type $(3,3,1^{n-6})$ has $e=\binom n2-4n+14$ pair orbits. Condition on a uniformly oriented $g$-fixed table with a mixed mask (fraction $3/4$). If $h$ preserves every $g$-vertex orbit separately, it must rotate the two triples by the same shift (the proper mask has no nontrivial cyclic stabilizer), so $h\in\langle g\rangle$. Otherwise $\langle g,h\rangle$ merges at least one $g$-vertex orbit. If $h$ is odd of moved support $t$, its vertex orbits already decrease the total by at least $\lceil 2t/3\rceil$, so compared with the $g$-partition at least $D=\max(1,\lceil2t/3\rceil-4)$ mergers occur. Each of the at least $n-t-6$ jointly fixed vertices loses at least $D$ independent orientation bits to those orbit mergers. For $t\le n/2$ the conditional fraction for a given $h$ is therefore at most $(4/3)2^{-(n-t-6)D}$. Summing at most $n^t$ choices per support yields exponential decay (use $D\ge t/3$ for $t\ge12$, and the fixed finite supports below that). For $t>n/2$, even the $h$-fixed condition alone costs at least $(t(2n-t-1))/3=\Omega(n^2)$ independent bits versus an unrestricted orientation; the $g$-fixed condition recovered only $O(n)$. Thus atypical groups have exponential relative weight.
+
+There are $n!/[18(n-6)!]$ choices of $g$, and the typical object is counted twice by its two generators and has $n!/3$ labelings. The resulting leading coefficient is $(3/4)\cdot3/(18\cdot2)=1/16$. For dominance in the entire module-free class census, a surviving nonidentity automorphism other than the double 3-cycle has support at least nine: smaller odd cycle types are single prime cycles or $(3,5)$, which exposes a single prime cycle upon taking a power. The $t\ge9$ bound $t(2n-t-1)/3$ and the count $n^t$ make their normalized fixed-table mass exponentially smaller than the leading term (split $t=9,\dots,12$, $13\le t\le n/2$, and $t>n/2$). Every nonrigid class contributes $(|\operatorname{Aut}|-1)/|\operatorname{Aut}|\ge2/3$ to this nonidentity Burnside accounting when all its nonidentity symmetries are included. The leftover double-3 tables have the just-proved small atypical mass. This proves the stated correction.
+
+**Actual relevance to $7q$.** A diagonal $C_7$ is physically possible even for the exact $7q$ targets. Take two copies of Paley 7 (increments $1,2,4$), with $(0,x)\to(1,y)$ iff $y-x\in\{0,1\}$ modulo 7. This strong order-14 tournament has $15{,}144{,}269=7\cdot2{,}163{,}467$ paths; trial division certifies the cofactor prime. Hence the group is exactly the simultaneous $C_7$, and there is no independently rotating module.
+
+In general, prescribe an order-seven symmetry with $r\ge1$ moving cycles and $f=n-7r$ fixed vertices. A fixed table is any fixed-vertex tournament, three bits for the internal skew steps of each moving cycle, one sign for each fixed-vertex/moving-cycle incidence, and a seven-bit difference mask per pair of moving cycles. Strong connectivity is equivalent to that of the quotient where mixed masks give both arcs, because each moving orbit is internally strong. For exact $H=7q$, retain those tables with the target count, then multiply their number by $7/(6\cdot7^r r!f!)$ for ordinary isomorphism classes in that stratum. The group is forced to equal the prescribed $C_7$; the quotienting relabelings therefore lie in its normalizer. The normalizer uses one common multiplier in $\mathbf F_7^*$, independent shifts, block permutations, and fixed-label permutations. This parameterizes the remaining nonrigid cases without assuming the quotient module sieve detects them.
+
+## Arithmetic symmetry even when every tournament class is rigid
+
+For a tournament $U$ let $c_r(U)$ count ordered covers by $r$ nonempty directed paths. In a substitution $Q[U_1,\dots,U_m]$, project a path to a word of quotient vertices and compress maximal consecutive equal letters. A word with $r_i$ visits to $i$ contributes $\prod_i c_{r_i}(U_i)$. For $c_k$ use an ordered tuple of $k$ such words; every quotient letter occurs somewhere in the tuple. Thus a group of quotient automorphisms acts freely on the templates. If it preserves all child vectors modulo $M$, the sum on each orbit is a multiple of $\gcd(M,|G|)$. More generally take a common factor $p^{a_i}$ out of child vector $i$, and apply the same test to the divided profiles. If they are preserved modulo $p^e$,
+$$
+ \min_k v_p(c_k(Q[U_i]))\ \ge\ \sum_i a_i+\min(e,v_p(|G|)).
+$$
+The symmetry test concerns the colors read by the count, not isomorphic modules. It recursively prunes candidates for targets with restricted $p$-valuation.
+
+For an explicit family fix odd $M\ge3$; let $e$ be the largest exponent in its prime factorization and $\lambda$ the Carmichael exponent of $M$. The ordered-cover coordinates of $TT_e$ and $TT_{e+\lambda}$ agree modulo $M$. Indeed they are $\sum_j(-1)^{r-j}\binom rj j^m$ at $TT_m$; units use $\lambda$ modulo each prime power, and nonunits vanish by exponent $e$. Let $R_M$ be the consecutive-arc circulant on $\mathbf Z/M$ (forward increments $1,\dots,(M-1)/2$). Its in- and out-neighborhoods are transitive. A nontrivial proper module would be internally regular, since $R_M$ is regular, yet would be inside a transitive neighborhood of any outsider. This also proves primality for composite $M$. Its point stabilizers are trivial, since they fix each ordered neighborhood pointwise.
+
+At level one, fill one position of $R_M$ with $TT_{e+\lambda}$, the others with $TT_e$. At the next levels put a previous strong tournament beside each transitive child, in an ordinal sum. Keep one larger child, and allow either side for the transitive padding independently. Ordinal sum multiplies optional slot polynomials (assign colors, then concatenate within each color); taking finite differences recovers all ordered-cover counts. Thus the two sides have exactly the same interface. A projected spanning template preserves the factor from each previous child, and after dividing them out the quotient sees congruent colors modulo $M$ on all its rotations. At level $j$ this proves
+$$
+n_j=(Me+\lambda)\frac{M^j-1}{M-1},\qquad
+M^{(M^j-1)/(M-1)}\mid c_r(T_j)\quad\text{for all }r.
+$$
+The filled blocks are the maximal proper modules: a module meeting several blocks projects to a quotient module; if it meets all, it cannot omit a vertex because that vertex's block both beats and loses to other blocks. The unique larger block pins a quotient position, so rigidity holds inductively. Strong connectivity holds by the strong quotient. For level $j\ge2$, the unique large SCC in each padded child distinguishes sides and identifies the old class. Hence there are exactly $K_j=2^{n_j/(Me+\lambda)-1}$ distinct classes in the palette built this way ($K_1=1,\ K_{j+1}=(2K_j)^M$), all with the **same full exact path-cover vector**, but no self-converse class for $j\ge2$: the uniquely oversized block would have to be self-converse, which its one-sided nonempty transitive padding prevents. Negation is an anti-map of the quotient, so the palette splits into $K_j/2$ converse pairs. Real and arithmetic symmetry are genuinely different.
+
+## Breaking the arithmetic symmetry on a physical quotient
+
+With $R_5$ and four singleton blocks, the count with fifth block $TT_t$ is $15+13c_2(TT_t)+2c_3(TT_t)=2\cdot3^t+7\cdot2^t-5$. These coefficients count allowed quotient words. This family misses two residues modulo five even though the class with $t=5$ is rigid (and has $H=705$). Allow two blocks to change: adjacent variable sites cover every residue; distance-two sites still miss residue 2. The corresponding matrices multiplying the two ordered-cover vectors (coordinates $1,2,3$) are
+$$
+\begin{pmatrix}15&13&2\\13&14&4\\2&4&2\end{pmatrix},\qquad
+\begin{pmatrix}15&13&2\\13&21&8\\2&8&6\end{pmatrix}.
+$$
+For reference, the following length recipes give one seed for each residue, columns $0,1,2,3,4\bmod5$, rows for order $0,1,2,3\bmod4$.
+```
+11222 11424 11123 12122 11114
+11111 12123 13333 11232 11133
+22222 11112 11134 11224 11242
+11113 11212 11333 11122 11324
+```
+Adding four to any length preserves the module profile mod 5. These give fixed-order coverage at every $n\ge13$; first adding $0,4,8,12,16$ to the five respective lengths makes the blocks distinct and gives rigid fixed-order coverage at every $n\ge53$, by increasing the largest further as needed. But each chosen site gives a contribution $13c_2(TT_{m_i})=13(2^{m_i}-2)$ even if other blocks are large: simply use the other blocks in one run each. Thus below $X$ the entire five-length family has only $O((\log X)^5)$ outputs. A fixed modular selector with all residues still does not supply an absolute selector.
+
+## A finite modular color on decomposition trees
+
+Since permuting the $r$ nonempty paths in an ordered cover acts freely, $r!\mid c_r(U)$. Fix any modulus $M$ and set $R=\min\{r:M\mid r!\}$. Then the universally sufficient profile is the finite color $(c_1,\dots,c_{R-1})\bmod M$, independent of child size. The same projected-template formula computes the new color on any given quotient: discard any template with a total of at least $R$ runs of some label. This is an exact arithmetic composition law, not truncation at a conjectured mixing depth.
+
+For a fixed canonical quotient $Q$, its automorphism group's cycle index can be refined by these colors: for each $g$, assign a child color to each orbit $C$ on quotient vertices. A fixed decoration uses the same child **isomorphism class** on all vertices of $C$, and contributes $\sum_{m\ge1}B_{m,\eta(C)} x^{|C|m}$, where $B$ is the available child inventory. Take the product over cycles, then select the output color computed from the full assignment and average over $g$. This retains the residue readout in the A000568 counting recurrence. In a decomposition, one must restrict to the appropriate canonical children, or else the same tournament can have multiple presentations; for a fixed substitution-prime quotient the maximal modules give that canonical domain directly. This does not remove the need to enumerate the primitive quotient types. For any *fixed finite* palette of quotient operations of arity at least two and fixed leaves, a minimum-size expression giving a reachable color never repeats a color along one ancestor chain, since the lower subtree would replace the upper one without changing the output color. This yields a finite least-witness method for residue feasibility within the grammar, not for absolute integer counts.
+
+## A probabilistic quotient that controls actual paths
+
+Partition $T$ into vertex orbits $U_i$ of any subgroup $G\le\operatorname{Aut}(T)$. Let $p_{ij}$ be the fraction of cross arcs $i\to j$. Then the number of Hamiltonian paths traversing **each orbit as one contiguous block** is exactly
+$
+\left(\prod_i H(U_i)\right)\mathbf E H(Q),
+$
+where $Q$ is the independently oriented random quotient with edge probabilities $p_{ij}$. For a proposed orbit order choose independently uniform internal paths. The first endpoint is uniform in its orbit; for every possible next start the fraction of incoming arcs from the first orbit is $p_{ij}$, by transitivity on the second orbit. Integrating over the first internal path therefore gives $p_{ij}$ without conditioning the remaining paths. Iterate, then sum over orbit orders. Rédei makes $\mathbf E H(Q)\ge1$. In particular any diagonal $C_7$ with $r$ moved orbits costs $H\ge175^r$ using the inherited seven-circulant minima. Thus symmetry at $7q<30{,}625$, $q\ge11$ prime, can only come from a single interval-7 module. For the asymptotic double-triangle family the same leading class correction counts strong classes: the semicomplete quotient has one fixed digon and otherwise independent fair arcs. A given nontrivial directed cut of sizes $k,m-k$ has probability at most $2^{-k(m-k)}$; a union bound makes non-strong tables exponentially rare.
+
+The [replay](verify.py) checks diagonal-seven and five-block controls. None of these results asserts unrestricted Chan–Pak.
