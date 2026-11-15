@@ -1,0 +1,5 @@
+fixed-sum certificate 7 12 PASS
+fixed-sum certificate 9 12 PASS
+fixed-sum certificate 10 11 PASS
+fixed-sum certificate 12 12 PASS
+fixed-sum certificate 16 10 PASS
