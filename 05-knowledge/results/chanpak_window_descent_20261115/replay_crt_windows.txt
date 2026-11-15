@@ -1,0 +1,5 @@
+Exact target carries, both boundaries and repeated-catalogue gcd passed.
+Count-three literal triangle-padding checks: 392
+Count-five control: checks 784 max (h,Q,S,T) widths by total padding 0..3 [1, 1, 1, 2]
+Literal count-five unit palette: matched response, c=31 or 32.
+Separable worst-lift formula passed on unequal carry ranges.
