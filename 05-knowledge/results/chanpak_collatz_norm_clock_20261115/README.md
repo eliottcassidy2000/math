@@ -39,7 +39,10 @@ zero residual or a proof of Chan–Pak.
   and can independently set higher bits. The [mixed CRT proof](FIXED_CRT.md)
   keeps the fixed odd residue simultaneously. The [five-bit bypass](TABLES.md)
   independently handles mod 24 by keeping both the address sum and the
-  reversed coefficient sum unchanged.
+  reversed coefficient sum unchanged. The [isolated-column proof](WALSH.md)
+  extends this second route to every fixed dyadic precision. It also
+  proves that ordinary and reversed sums jointly determine the entire
+  profile of column sums.
 
 The relevant local-global distinction is the same in all three examples:
 a projected label reveals a lane but forgets how to continue inside it.
