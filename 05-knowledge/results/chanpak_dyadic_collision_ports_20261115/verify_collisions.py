@@ -94,8 +94,50 @@ def test_orbit():
             assert f(2*x,y)==f(x,2*y+1)
             assert f(8*x,y)==f(x,8*y+7)
 
+def test_opposite_scaling():
+    rg=Random(11526)
+    for _ in range(12000):
+        a0,c0=1<<rg.randrange(5),1<<rg.randrange(5)
+        x_,y=rg.randrange(1,200),rg.randrange(1,200)
+        x1=x_+rg.randint(-min(a0,x_-1),a0)
+        Y=y+rg.randint(-min(c0,y-1),c0)
+        z=1<<rg.randrange(7)
+        U,V=rg.randrange(z),rg.randrange(z)
+        A,u,B,B1=split(x_,x1,a0)
+        C,v,D,D1=split(y,Y,c0)
+        revz=lambda n: rev(n,z.bit_length()-1)
+        dx=rev(B1,A.bit_length()-1)-rev(B,A.bit_length()-1)
+        dy=rev(D1,C.bit_length()-1)-rev(D,C.bit_length()-1)
+        aa=A*(-100*z*(D1-D)+100*(z-V-1)-11*revz(U))+11*dx
+        bb=C*(-100*z*(B1-B)+100*U-11*(z-1-revz(V)))+11*dy
+        tmp=lambda j,l:f(z*(A*j+B)+U,C*l+D)-f(A*j+B1,z*(C*l+D1)+V)
+        assert tmp(u+2,v)-tmp(u,v)==2*aa
+        assert tmp(u,v+2)-tmp(u,v)==2*bb
+        if not aa or not bb:
+            assert x_==x1 and y==Y
+        if not aa and not bb:
+            assert U==0 and V==z-1
+        aa=A*(-100*z*(D1-D)+100*(z-V)-11*(1+revz(U)))+11*dx
+        bb=C*(-100*z*(B1-B)+100*(U-z)+11*(1+revz(V)))+11*dy
+        tmp=lambda j,l:f(z*(A*j+B)+U,C*l+D)-f(z*(C*l+D1)+V,A*j+B1)
+        assert tmp(u+2,v)-tmp(u,v)==2*aa
+        assert tmp(u,v+2)-tmp(u,v)==2*bb
+        assert aa or bb
+        if not aa or not bb:
+            assert x_==x1 and y==Y
+        rr=lambda b: z-1-revz(b)
+        aa=A*(-100*z*(D1-D)+100*U+89-11*rr(V))+11*dx
+        bb=C*(-100*z*(B1-B)-100*V-89+11*rr(U))+11*dy
+        tmp=lambda j,l:f(A*j+B,z*(C*l+D)+U)-f(C*l+D1,z*(A*j+B1)+V)
+        assert tmp(u+2,v)-tmp(u,v)==2*aa
+        assert tmp(u,v+2)-tmp(u,v)==2*bb
+        assert aa or bb
+        if not aa or not bb:
+            assert x_==x1 and y==Y
+
 if __name__ == "__main__":
     test_signed()
     test_affine()
     test_orbit()
+    test_opposite_scaling()
     print("PASS: binary derivative weights, affine coefficients and fundamental transport")
