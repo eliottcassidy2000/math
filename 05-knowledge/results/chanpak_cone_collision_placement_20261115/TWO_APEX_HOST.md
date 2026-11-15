@@ -234,3 +234,31 @@ to generate the two rows for a prescribed cofactor N. Every count
 returned for these rows is an exact integer, computed with a number
 of DP operations linear in their length. The error to N itself is
 asymptotic and generally nonzero.
+
+### Modulo-nine strengthening
+
+The same fixed-arc physical template can hit every residue modulo nine
+with eight repair bits instead of four. This time use both weights z=1
+and z=2 in the run machine and reduce their direct sum modulo 9,
+giving 120 coordinates. The final observation has the 259 and -209
+weights built in; the empty packing omitted from this linear part is
+the same for all repair words of the given length. The complete left
+01/11 reachable closure has 209,955 states. Its coordinate for the
+unstarted a-loop at z=2 is exactly 2^l modulo 9 at left length l,
+detecting the parity of l. There are 104,977 even-prefix states.
+The fixed-arc accepting row pulled back through zero symbols has
+preperiod 2 and period 6, so all positive even suffixes use one
+of the observations at lengths 2,4,6. For each observation initialize
+each prefix state with the singleton set of its observed residues.
+An eight-step backwards union along the two left-symbol transitions
+gives the entire nine-residue set at each even-prefix state. These are
+exact finite graph assertions in `verify_host_residue9.cpp`, compilable
+using C++17 with assertions enabled.
+
+Take m divisible by 4 with m>=16, so both the right suffix and the
+left prefix before the eight repair bits are even. Reserve those eight
+bits and choose the nearest of the completions in the target residue.
+The splice keeps the same big-O absolute error, only changing its
+constant. The command `python3 replay_host.py N` uses this stronger
+mod-nine selector by default. This is still not a lattice-scale
+approximation: the width grows unboundedly with the target.
