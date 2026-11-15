@@ -2897,6 +2897,95 @@ runs: every bulk floor run forces an exact factor 3^j or 5^j and a factorization
 | Major arcs at 3^i·5^j = floor bottlenecks | ARGUMENT (THM-5202 mechanism); P1 untested |
 | P1–P3 | proposed program |
 
+## Wave 34: norm forms for prime targets, and what bottleneck-free twisting does
+
+Session mac-mini-2026-11-15-norms. Owner prompt: "work both the bottleneck-free twisting and the hyperbolic kernel
+move, think about turning some prime targets into quadratic norm equations, and the number theoretic implications of
+tournaments."
+
+Exploratory throughout. Scripts are `scripts/w34_*`.
+
+### §1. Cyclic joins are Z[√−2] arithmetic (THM-5222, PROVED)
+
+For A ⇒ B ⇒ c ⇒ A,
+
+    H = (h_A + P_A)(h_B + P_B) + 2 h_A h_B = Re(β_A·conj(β_B)),   β = (h + P₂) + h√−2,
+
+where P₂ counts ordered covers by two disjoint nonempty paths. The formula matches on 200 of 200 random core pairs.
+
+**Diagonal joins.** These are norms x² + 2y², always ≡ 3 (mod 8).
+- A prime target p ≡ 3 (mod 8) becomes the two-port equation H(A) = y, P₂(A) = x − y for the unique representation
+  p = x² + 2y².
+- Primes ≡ 1, 5, 7 (mod 8) are unreachable by diagonal joins.
+- Inert primes (≡ 5, 7 mod 8) divide diagonal counts to even powers.
+
+**General joins.** With B fixed, a prime target is a point of the pair spectrum {(H(A), P₂(A))} on a line. So
+Chan–Pak for primes reduces to a two-dimensional covering statement for the pair spectrum.
+
+### §2. The hyperbolic kernel: an indefinite norm with a Pell supply (ARGUMENT)
+
+THM-5133's first hyperbolic kernel at order 5 reads H = 3Π₂(A)Π₂(B) − H(A)H(B). Take B a copy of A. Then
+
+    H = 3Π₂² − H(A)² = −Norm(H(A) + Π₂√3),
+
+a norm from the real quadratic order Z[√3].
+- *Which primes.* Its fundamental unit 2 + √3 has norm +1, and the class number is 1. So x² − 3y² = −p is solvable
+  exactly for primes p ≡ 11 (mod 12).
+- *Infinitely many representations.* Each solution generates an infinite orbit under multiplication by (2 + √3)^k.
+- *What that buys.* Compared with the definite join of §1, a prime target ≡ 11 (mod 12) has infinitely many admissible
+  port pairs (H(A), Π₂(A)), one at each geometric scale.
+- *What is needed.* Some tournament A must land exactly on one of these pairs: a two-dimensional local statement along
+  a Pell orbit instead of at one point.
+
+The exact definition of Π₂ and of the kernel are THM-5133's. The diagonal substitution has to be rechecked against
+that kernel before this becomes a theorem.
+
+### §3. Bottleneck-free twisting: what causes the 3-adic arc (NUMERICAL)
+
+Random span-2 words of length n, 40,000 samples per length; P(3 | H) (uniform 1/3):
+
+| class | n = 16 | n = 28 |
+|---|---:|---:|
+| all words | 0.606 | 0.769 |
+| strong words | 0.463 | 0.522 |
+| strong, with an exact rank-one factor (≤ 10 letters) | 0.702 | 0.711 |
+| strong, bottleneck-free (≤ 10 letters) | 0.439 | 0.470 |
+| strong, with a factor of rank ≤ 1 mod 3 | 0.657 | 0.619 |
+| strong, no rank-≤1-mod-3 factor | 0.418 | 0.452 |
+
+P(5 | H) behaves the same way: 0.422 / 0.574 for all words, 0.231 / 0.281 for bottleneck-free strong words.
+
+**Reading.** The 3- and 5-adic major arcs have three layers:
+- non-strongness (products of small components);
+- exact bottlenecks (THM-5202);
+- *p-adic bottlenecks*: factors whose transfer collapses to rank ≤ 1 modulo p.
+
+Removing all three still leaves a bias that grows with n. That remainder is a genuine local factor, and every class
+keeps positive mass. So it belongs to the main term of a local limit theorem with explicit local densities, as in
+THM-5162's singular series, not to an obstruction. Restricting to bottleneck-free words does not remove the arc; the
+open problem is still the minor-arc contraction.
+
+### §4. Number-theoretic reading
+
+Tournaments carry quadratic arithmetic: cyclic joins pair port vectors as elements of Z[√−2] (definite; finitely many
+representations). The hyperbolic kernel pairs them in Z[√3] (indefinite; Pell orbits). Prime targets become norm
+equations whose solvability is governed by splitting:
+- p ≡ 3 (mod 8) for the diagonal join;
+- p ≡ 11 (mod 12) for the diagonal hyperbolic kernel.
+
+Different kernels (different discriminants) cover different classes of primes. A natural program is a finite set of
+kernels whose norm forms jointly represent every prime class, each with a two-port targeting problem. The indefinite
+ones are the promising ones, because of their Pell supply.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| Cyclic join = Re(β_A·conj(β_B)) in Z[√−2]; diagonal joins ≡ 3 mod 8 and only reach primes ≡ 3 mod 8 | PROVED |
+| Diagonal hyperbolic kernel = −Norm from Z[√3], with Pell orbits of targets for p ≡ 11 mod 12 | ARGUMENT (relies on THM-5133's kernel) |
+| 3-adic arc layers: non-strong, exact bottleneck, mod-p bottleneck, residual local factor | NUMERICAL |
+| Bottleneck-free twisting removes the 3-adic arc | REFUTED as stated (residual bias persists) |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
