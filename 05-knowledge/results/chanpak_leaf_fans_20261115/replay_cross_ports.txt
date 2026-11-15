@@ -1,0 +1,2 @@
+Exact cross-response, third-visit test, four-height reconstruction: 1300 ordered pairs.
+Direct stable-menu replay: 284 moves; 30 labelled stable-unit switches.
