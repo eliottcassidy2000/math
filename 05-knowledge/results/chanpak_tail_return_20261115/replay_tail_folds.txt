@@ -1,0 +1,5 @@
+4096 exact adjacent-address fold checks
+16 preparation heights; all periodic address/correction identities exact
+16 preparation heights with exact fold step 4 and first window baseline 36151
+16 preparation heights with exact fold step 8 and first window baseline 150401
+Eight literal glues cover [8387, 8389, 8391, 8393, 8395]
