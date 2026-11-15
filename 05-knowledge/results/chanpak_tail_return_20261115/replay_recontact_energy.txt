@@ -1,0 +1,4 @@
+160 literal mask/profile energy controls
+Same-spine exact offsets and mixed second difference: [175, 177, 169, 179] 8
+Bézout matched literal, then strong guard: (435, 13643, 20658, 174) (435, 34475, 41316, 0)
+Bézout matched literal, then strong guard: (435, 13645, 20658, 174) (435, 34477, 41316, 0)
