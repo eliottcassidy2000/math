@@ -1,0 +1,5 @@
+600 literal anchor glue checks: 600
+Anchor: (60, 57, 58, 48, 32, 0) 0 profile: (3, 1, 24, 145) literal counts: (51, 289, 1341)
+Anchor: (56, 49, 51, 54, 32, 0) 2 profile: (5, 3, 36, -63) literal counts: (77, 431, 2003)
+Anchor: (112, 97, 99, 103, 110, 64, 0) 1 profile: (9, 5, 40, -1015) literal counts: (89, 479, 2219)
+Odd square-class relation: [145, -7, -1015]
