@@ -1,0 +1,12 @@
+# Chan–Pak: local row limits, exact collision sectors, and all-letter resets
+
+This packet advances the row approach to Chan–Pak and gives a new all-length structural result for span-three ribbons. It does **not** prove the full row collision lemma, density one, nor the 1.7699 growth rate in the full eight-letter alphabet.
+
+- **[Local limit of a physical row](ROW_LIMIT.md).** The input and its reversed bits form an exact dyadic grid. This yields an explicit logarithmic density for a row, with uniform O(√N) error in interval counts for N=2^L addresses. Keeping free middle bits gives power-saving residue counts in mesoscopic absolute windows, and an explicit approximate-target decoder with exact prescribed lower bits.
+- **[Two-tape dyadic refinement](DYADIC_LOCAL.md).** The product term is invisible to the upper paired digits modulo the character conductor. On the true central shell this gives relative sup accuracy for dyadic moduli up to T^(1/6−ε), and relative RMS accuracy up to T^(1/4−ε), in sufficiently long mesoscopic windows. A distinct pair of odd cores, (3,15) and (5,9), gives an exact collision family surviving the earlier transport quotient.
+- **[The row collision sectors](ROWS.md).** A reversed carry chart makes equality strictly affine in the shared low bits. In an input annulus, low split levels up through (2/3−ε) log₂N and reverse displacements at most N^(1/3−ε) each contribute o(N) collisions. Small ordinary displacements are also negligible. For the main linear-energy question, genuinely distant collisions in the top split levels remain.
+- **[All eight ribbon letters](SPAN3.md).** Any induced contiguous Busch-floor band of at least 20 vertices makes the ambient transfer rank one, independently of both surrounding words. It also forces a quantitative power of 5. The full short-period trace-3 and trace-5 resets are verified phase by phase. A bounded strong-window cover gives an exponential premium under its explicit hypothesis, but a concrete strong ribbon shows that this cover is not automatic.
+
+## Replay
+
+`python verify_row_limit.py`, `python verify_dyadic_local.py`, and `python verify_rows.py` check the literal digit and collision identities. For the matrix reset table, run `python verify_span3.py PATH_TO_SPAN3_INTREP` with the existing rank-62 representation identified in [SPAN3.md](SPAN3.md). The proofs, not a count trend, give the unbounded results.
