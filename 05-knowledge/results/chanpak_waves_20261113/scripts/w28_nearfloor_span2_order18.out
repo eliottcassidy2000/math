@@ -1,0 +1,61 @@
+# span 2, M 18, Cp 4.00, Cf 3.00, nodes 276332781
+k 3 f 3 words 2 | [f,3.0f) odd attained 1/3 | window [5f/3,3f) 0/2 | min coprime15 0 (0.000 f) | min prime 3 (1.000 f)
+   min 3 (1.000) min not-div-3 0 (0.000) min not-div-5 3 (1.000)
+   wit15 0.0.0   witpr 0.0.2
+k 4 f 5 words 12 | [f,3.0f) odd attained 1/5 | window [5f/3,3f) 0/3 | min coprime15 0 (0.000 f) | min prime 5 (1.000 f)
+   min 5 (1.000) min not-div-3 5 (1.000) min not-div-5 0 (0.000)
+   wit15 0.0.0.0   witpr 0.0.2.1
+k 5 f 9 words 48 | [f,3.0f) odd attained 4/9 | window [5f/3,3f) 1/6 | min coprime15 11 (1.222 f) | min prime 11 (1.222 f)
+   min 9 (1.000) min not-div-3 11 (1.222) min not-div-5 9 (1.000)
+   wit15 0.0.2.2.2   witpr 0.0.2.2.2
+k 6 f 15 words 167 | [f,3.0f) odd attained 11/15 | window [5f/3,3f) 7/10 | min coprime15 17 (1.133 f) | min prime 17 (1.133 f)
+   min 15 (1.000) min not-div-3 17 (1.133) min not-div-5 17 (1.133)
+   wit15 0.0.2.0.2.2   witpr 0.0.2.0.2.2
+k 7 f 25 words 551 | [f,3.0f) odd attained 23/25 | window [5f/3,3f) 14/16 | min coprime15 29 (1.160 f) | min prime 29 (1.160 f)
+   min 25 (1.000) min not-div-3 25 (1.000) min not-div-5 27 (1.080)
+   wit15 0.0.2.0.3.0.2   witpr 0.0.2.0.3.0.2
+k 8 f 45 words 1792 | [f,3.0f) odd attained 42/45 | window [5f/3,3f) 30/30 | min coprime15 49 (1.089 f) | min prime 53 (1.178 f)
+   min 45 (1.000) min not-div-3 49 (1.089) min not-div-5 49 (1.089)
+   wit15 0.0.2.1.2.0.2.1   witpr 0.0.2.0.2.2.1.2
+k 9 f 75 words 5599 | [f,3.0f) odd attained 70/75 | window [5f/3,3f) 48/50 | min coprime15 89 (1.187 f) | min prime 89 (1.187 f)
+   min 75 (1.000) min not-div-3 85 (1.133) min not-div-5 81 (1.080)
+   wit15 0.0.2.1.2.0.2.1.2   witpr 0.0.2.1.2.0.2.1.2
+k 10 f 125 words 16475 | [f,3.0f) odd attained 109/125 | window [5f/3,3f) 82/83 | min coprime15 161 (1.288 f) | min prime 167 (1.336 f)
+   min 125 (1.000) min not-div-3 125 (1.000) min not-div-5 147 (1.176)
+   wit15 0.0.3.0.2.0.3.0.2.1   witpr 0.0.2.1.2.0.3.0.2.1
+k 11 f 225 words 51213 | [f,3.0f) odd attained 198/225 | window [5f/3,3f) 150/150 | min coprime15 281 (1.249 f) | min prime 281 (1.249 f)
+   min 225 (1.000) min not-div-3 245 (1.089) min not-div-5 243 (1.080)
+   wit15 0.0.2.1.2.0.2.0.3.0.2   witpr 0.0.2.1.2.0.2.0.3.0.2
+k 12 f 375 words 142748 | [f,3.0f) odd attained 305/375 | window [5f/3,3f) 245/250 | min coprime15 481 (1.283 f) | min prime 521 (1.389 f)
+   min 375 (1.000) min not-div-3 425 (1.133) min not-div-5 441 (1.176)
+   wit15 0.0.2.1.2.0.2.1.2.0.2.1   witpr 0.0.2.0.3.3.0.2.0.3.0.2
+k 13 f 625 words 376104 | [f,3.0f) odd attained 482/625 | window [5f/3,3f) 404/416 | min coprime15 833 (1.333 f) | min prime 881 (1.410 f)
+   min 625 (1.000) min not-div-3 625 (1.000) min not-div-5 729 (1.166)
+   wit15 0.0.2.0.3.0.3.0.2.0.3.0.2   witpr 0.0.3.0.3.3.0.2.1.2.0.2.1
+k 14 f 1125 words 1132897 | [f,3.0f) odd attained 857/1125 | window [5f/3,3f) 721/750 | min coprime15 1421 (1.263 f) | min prime 1601 (1.423 f)
+   min 1125 (1.000) min not-div-3 1225 (1.089) min not-div-5 1323 (1.176)
+   wit15 0.0.2.0.3.0.2.0.2.1.2.0.2.1   witpr 0.0.2.1.2.0.2.0.3.0.2.2.1.2
+k 15 f 1875 words 2867008 | [f,3.0f) odd attained 1325/1875 | window [5f/3,3f) 1179/1250 | min coprime15 2401 (1.281 f) | min prime 2797 (1.492 f)
+   min 1875 (1.000) min not-div-3 2125 (1.133) min not-div-5 2187 (1.166)
+   wit15 0.0.3.0.3.3.0.2.0.2.1.2.0.2.1   witpr 0.0.2.0.3.0.2.0.3.0.2.0.3.0.2
+k 16 f 3125 words 6955253 | [f,3.0f) odd attained 2000/3125 | window [5f/3,3f) 1855/2083 | min coprime15 4361 (1.396 f) | min prime 4721 (1.511 f)
+   min 3375 (1.080) min not-div-3 3625 (1.160) min not-div-5 3969 (1.270)
+   wit15 0.0.3.0.2.0.3.0.2.0.2.1.2.0.2.1   witpr 0.0.2.1.2.0.2.1.2.0.2.1.2.0.2.1
+k 17 f 5625 words 20483661 | [f,3.0f) odd attained 3602/5625 | window [5f/3,3f) 3333/3750 | min coprime15 7921 (1.408 f) | min prime 8641 (1.536 f)
+   min 5625 (1.000) min not-div-3 6125 (1.089) min not-div-5 6561 (1.166)
+   wit15 0.0.3.0.2.0.3.0.2.0.2.1.2.0.2.1.2   witpr 0.0.3.0.3.3.0.2.0.3.0.2.1.2.0.2.1
+k 18 f 9375 words 47513772 | [f,3.0f) odd attained 5318/9375 | window [5f/3,3f) 5087/6250 | min coprime15 13769 (1.469 f) | min prime 16063 (1.713 f)
+   min 10125 (1.080) min not-div-3 10625 (1.133) min not-div-5 11907 (1.270)
+   wit15 0.0.2.1.2.0.2.0.3.0.2.0.2.1.2.0.2.1   witpr 0.0.2.1.2.0.3.0.2.0.3.0.2.1.2.0.2.1
+misses k=7 in [5f/3,3f): 47 63 (total 2)
+misses k=8 in [5f/3,3f): (total 0)
+misses k=9 in [5f/3,3f): 127 179 (total 2)
+misses k=10 in [5f/3,3f): 209 (total 1)
+misses k=11 in [5f/3,3f): (total 0)
+misses k=12 in [5f/3,3f): 637 671 683 787 949 (total 5)
+misses k=13 in [5f/3,3f): 1047 1067 1099 1103 1109 1117 1139 1217 1223 1283 1339 1379 (total 12)
+misses k=14 in [5f/3,3f): 1879 1901 1903 1909 1943 1949 1957 1967 1993 2013 2017 2051 2053 2063 2089 2099 2113 2153 2171 2177 2219 2243 2309 2327 2443 2479 2609 2693 2753 (total 29)
+misses k=15 in [5f/3,3f): 3141 3143 3149 3167 3175 3181 3187 3197 3199 3209 3217 3223 3227 3229 3237 3243 3257 3263 3287 3299 3301 3329 3359 3361 3371 3373 3391 3397 3409 3419 3433 3449 3457 3461 3463 3469 3473 3493 3497 3511 (total 71)
+misses k=16 in [5f/3,3f): 5209 5213 5217 5221 5227 5231 5233 5235 5237 5241 5243 5249 5257 5261 5263 5267 5269 5273 5279 5281 5287 5291 5293 5297 5299 5303 5309 5311 5317 5323 5327 5333 5335 5343 5347 5351 5357 5359 5377 5381 (total 228)
+misses k=17 in [5f/3,3f): 9377 9379 9383 9389 9395 9397 9403 9407 9413 9419 9423 9427 9429 9431 9433 9439 9447 9449 9451 9461 9463 9467 9473 9479 9481 9491 9493 9497 9501 9503 9509 9515 9521 9523 9527 9529 9533 9539 9543 9545 (total 417)
+misses k=18 in [5f/3,3f): 15627 15629 15637 15639 15641 15643 15647 15649 15651 15653 15659 15661 15663 15667 15671 15673 15677 15679 15681 15683 15691 15693 15697 15699 15701 15703 15705 15707 15709 15711 15713 15715 15719 15721 15723 15727 15731 15733 15737 15739 (total 1163)

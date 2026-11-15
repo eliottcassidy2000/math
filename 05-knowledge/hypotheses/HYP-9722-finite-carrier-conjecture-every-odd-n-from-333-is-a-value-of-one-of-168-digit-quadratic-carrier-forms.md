@@ -69,3 +69,33 @@ term a·p.
 - *P96 (CONFIRMED).* The 48-form greedy basis computed on [333, 10^7] still covers [333, 10^8] (no miss); it in
   fact covers [333, 10^9].
 - *P97.* The minimum multiplicity on [10^9, 10^9 + 2·10^5] is at least 20.
+
+## Update (wave 28): density one via the second moment
+
+**Reduction (PROVED, Chebyshev).** Suppose that on a dyadic block Σ_N (r(N) − m(N))² = O(Σ_N m(N)), where m(N) is the
+local mean. Then the proportion of odd N with r(N) = 0 is O(1/min m) = O(1/ln N). So a single form represents a set
+of density one. The open input is a collision count: #{F(X,Y) = F(X',Y')} must match the local model up to
+O(N ln N). A sup-norm Fourier profile cannot supply this.
+
+**The surcharge is what makes the counts Poisson (NUMERICAL, `w28_carrier_variance.py`).** Odd N, with the local mean
+by N mod 9 removed:
+
+| form | block | mean | variance/mean | misses |
+|---|---|---:|---:|---:|
+| 3-cycle form (a = 3) | [10^5, 2·10^5) | 1.56 | 1.03 | 0.24 |
+| | [10^6, 2·10^6) | 1.94 | 1.03 | 0.18 |
+| | [10^7, 2·10^7) | 2.33 | 1.03 | 0.13 |
+| same form with a = 0 (pure hyperbola) | [10^5, 2·10^5) | 1.60 | 1.67 | 0.34 |
+| | [10^6, 2·10^6) | 1.99 | 2.17 | 0.30 |
+| | [10^7, 2·10^7) | 2.37 | 2.76 | 0.27 |
+
+Without the digital surcharge the variance grows like a divisor-function second moment (Σ τ² ≍ N log³ N) and the misses
+barely fall. With it, the variance stays Poisson.
+
+**Concurrent work (credited).** Two other packets found the same picture independently:
+- the 7-21 session (notes/06 E5, in progress): per-form Poisson law at 10^8, with exact mod-3 local factors, and the
+  same Chebyshev criterion;
+- chanpak_near_floor_crossing_20261115/DENSITY.md: the exact second-moment constant 131/121 for the order-5 mask-zero
+  carrier, and a proof that profile-type analytic results alone cannot give density one.
+
+The new point here is the a = 0 control.

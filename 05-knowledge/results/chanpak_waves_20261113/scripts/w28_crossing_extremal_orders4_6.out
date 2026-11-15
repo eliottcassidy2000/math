@@ -1,0 +1,9 @@
+n 4 delta distribution over double-crossing cuts: [(3, 1), (5, 2), (7, 7)]
+extremal (H,E,R,Z) counts: Counter({(5, 2, 2, 1): 1})
+min delta by E: [(1, 5), (2, 3)]
+n 5 delta distribution over double-crossing cuts: [(3, 2), (5, 8), (7, 34), (9, 2), (11, 34), (13, 22), (15, 10), (17, 12), (19, 20), (21, 6)]
+extremal (H,E,R,Z) counts: Counter({(5, 2, 2, 1): 2})
+min delta by E: [(1, 5), (2, 3), (3, 7), (4, 5), (5, 11), (6, 7)]
+n 6 delta distribution over double-crossing cuts: [(3, 3), (5, 14), (7, 68), (9, 9), (11, 93), (13, 80), (15, 65), (17, 61), (19, 84), (21, 34)]
+extremal (H,E,R,Z) counts: Counter({(5, 2, 2, 1): 3})
+min delta by E: [(1, 5), (2, 3), (3, 7), (4, 5), (5, 11), (6, 7), (7, 9), (8, 7)]

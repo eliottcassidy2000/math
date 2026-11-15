@@ -2435,6 +2435,101 @@ Open predictions:
 - **P98.** The crossing lemma holds for every order-9 class.
 - **P99.** Some list of at most 20 forms covers every odd N in [10^4, 10^9].
 
+## Wave 28: bottlenecks — floor powers have rank one, so near-floor primes pay 3.5% per vertex
+
+Session mac-mini-2026-11-15-bottlenecks. Owner prompt: "Attack the near-floor conjecture next through ribbon transfer
+matrices and attack density one for the carrier forms, or try to prove the crossing lemma. Work to close chan-pak."
+
+Every run was exploratory; none was pre-registered. New predictions P100 and P101 are filed in HYP-9742.
+
+**Naming.** Here "near-floor conjecture" means the 7-21 repository's coverage statement:
+- NF2(c): every odd N ≥ 25 is the count of a strong n-tournament with H < c·f(n), where f is the Moon–Busch floor.
+
+The lower bound H ≥ f(n) + 3(hc − 1) is a different statement. It is proved in
+[chanpak_near_floor_crossing_20261115](../chanpak_near_floor_crossing_20261115/README.md).
+
+### §1. The ribbon mechanism (THM-5202)
+
+- **Coalescence inequality (PROVED).** Glue A and B at a vertex v with A − v ⇒ B − v. Every Hamiltonian path
+  decomposes uniquely as α β v γ ζ. Hence H = H(A)H(B) + Extra, with Extra ≥ 0 counted by two explicit bad junctions.
+- **Floor powers have rank one (PROVED, exact).** In the minimal ribbon representations of THM-4880:
+  - the span-2 unit 1.2 has characteristic polynomial x^13 (x − 3), and its fourth power is c·r^T;
+  - the span-3 5-units 0.1.3 and 0.3.1 have rank-one cubes.
+
+  Hence H(p u s) = L(p)·R(s) with integer L and R whenever a floor run u sits in the word. This was checked on 300
+  of 300 random words, e.g. 2,130,237 = 753 × 2,829.
+- **Prime avoidance.** A prime count must break every floor run in its bulk. Bulk runs also force factors 3^j or 5^j.
+  This is the exact reason behind the linear growth of 3- and 5-adic valuations that the 7-21 session measured
+  (notes/06 E3).
+- **The premium (FINITE-EXACT on periodic words).** Every bulk-strong periodic block cheaper than 1.7700 per vertex is
+  a bottleneck. The checks cover span 2 with period ≤ 10 (591 classes), span 3 with period ≤ 6 (408), and 1,926
+  floor-plus-spoiler words. The cheapest bottleneck-free block, 0.2.1.2, has characteristic polynomial
+  x^12 (x² − 9x − 8). So
+
+      ρ* = ((9 + √113)/2)^(1/4) = 1.7700005 = 1.035104 · 5^(1/3).
+
+### §2. What it does to NF2 (HYP-9742)
+
+- **Census.** The span-3 DFS to order 14 reproduces the 7-21 window misses exactly: 637; then 1067, 1109, 1339. It adds
+  seven misses at order 14: 1879, 1903, 1943, 1949, 1993, 2051, 2089. Every miss is prime or has a prime factor ≥ 13.
+- **Smallest prime ratio.** The smallest prime count over f(k) rises 1.336 → 1.713 from k = 10 to k = 18. That is
+  3.2% per vertex, against the predicted 3.51%.
+- **Conjecture.** NF2(c) fails for every fixed c at all large primes. Extrapolation puts the failure near 1.5·10^8 for
+  c = 3 and near 1.5·10^10 for c = 4.
+- **Corrected form.** Primes live near the bottleneck-free floor: H < C·ρ*^n.
+- **What survives.** Composites near the floor are products, and Chan–Pak is untouched. Primes are realized above the
+  floor by additive families: recursive trees and carrier forms.
+
+### §3. Density one for carrier forms (HYP-9722 update)
+
+- **Reduction (PROVED).** Chebyshev's inequality reduces density one to a collision count.
+- **Data.** The surcharge makes the counts Poisson: variance/mean is 1.03 at 10^5, 10^6 and 10^7 for the 3-cycle form.
+  The same form with a = 0 (the pure hyperbola) has variance/mean 1.67 → 2.76, divisor clumping, and its misses
+  barely fall.
+- **Concurrent work, credited.** The 7-21 session (notes/06 E5) found the same Poisson law, and
+  chanpak_near_floor_crossing_20261115/DENSITY.md computed the exact collision constant 131/121.
+
+### §4. Crossing lemma (HYP-9732 update)
+
+**REFUTED** by another session: an order-11 cut with H = 815, δ = −1 and E = 156; a two-shelf family makes δ
+arbitrarily negative.
+
+This session adds:
+- a second form of the identity, δ(X) = Π(X) − s_{X^c} − e_X;
+- the small-order picture: through order 8, δ = 3 occurs only at H = 5 (the alternating strong-4 core), and the
+  minimum δ rises with H there. That rise does not persist.
+
+### Reproduction
+
+All scripts are in `scripts/` and share the `w28_` prefix. `w28_receipts.txt` has the console outputs.
+
+```bash
+cd 05-knowledge/results/chanpak_waves_20261113/scripts && python3 w28_bottleneck_factorization_check.py
+```
+
+```bash
+cd 05-knowledge/results/chanpak_waves_20261113/scripts && python3 w28_bottleneck_free_charpoly.py
+```
+
+```bash
+cd 05-knowledge/results/chanpak_waves_20261113/scripts && python3 w28_bottleneck_free_premium.py 3 6
+```
+
+```bash
+cd 05-knowledge/results/chanpak_waves_20261113/scripts && gcc -O3 -o nfdfs w28_nearfloor_ribbon_dfs.c && R=../../../../04-computation/experiments/ribbon_spectrum_20261104 && ./nfdfs $R/span2_matrices.txt $R/span2_condensation.txt 2 18 4 3 nf_s2_18
+```
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| Coalescence inequality | PROVED |
+| Rank-one floor powers; H = L·R through floor runs | PROVED (exact linear algebra) |
+| Bottleneck-free premium ρ* = ((9 + √113)/2)^(1/4) | FINITE-EXACT on periodic words |
+| NF2(c) fails at large primes | CONJECTURE (HYP-9742) |
+| Density one ⇐ Poisson collision count | PROVED reduction; Poisson behaviour NUMERICAL |
+| Crossing lemma | REFUTED (another session); small-order structure recorded |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.

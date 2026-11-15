@@ -1,0 +1,35 @@
+Wave 28 console receipts (mac-mini-2026-11-15-bottlenecks). Runs were exploratory; none was pre-registered.
+
+w28_bottleneck_free_premium.py 2 10      (span 2, all bulk-strong periodic blocks of period <= 10)
+  candidates below 1.7700 (bulk-strong): 591
+  non-bottleneck among them (rank of M^dim mod two primes != 1): 0
+w28_bottleneck_free_premium.py 3 6       (span 3, period <= 6)
+  candidates below 1.7700 (bulk-strong): 408
+  non-bottleneck among them (rank of M^dim mod two primes != 1): 0
+w28_bottleneck_free_premium.py 3 4 spoil (span 3, B^j s: B a floor 5-block, j <= 2, |s| <= 4)
+  candidates below 1.7700 (bulk-strong): 1926
+  non-bottleneck among them (rank of M^dim mod two primes != 1): 0
+  (primes 33554393 and 33554383; an earlier run with primes near 2^31 overflowed int64 and is void)
+
+w28_bottleneck_free_charpoly.py (span 2, exact sympy)
+  0.2.1.2   charpoly x^12 (x^2 - 9x - 8); real roots 9.81507290636732, -0.815072906367325; growth 1.7700004732156032
+  0.12.2.2  charpoly x^12 (x^2 - 9x - 8)
+  1.2       charpoly x^13 (x - 3)
+  0.2       charpoly x^13 (x - 3)
+
+w28_floor_block_powers_exact.py 3 ... (span 3, exact ranks of M^j, j = 1..8)
+  0.1.3   trace 5  ranks [3, 2, 1, 1, 1, 1, 1, 1]
+  0.3.1   trace 5  ranks [3, 2, 1, 1, 1, 1, 1, 1]
+  1.2.3   trace 5  ranks [4, 3, 2, 1, 1, 1, 1, 1]
+  1.12.3  trace 5  ranks [4, 3, 2, 1, 1, 1, 1, 1]
+  0.12.3  trace 5  ranks [4, 2, 1, 1, 1, 1, 1, 1]
+  0.1.123 trace 5  ranks [3, 2, 1, 1, 1, 1, 1, 1]
+w28_floor_block_powers_span2.py (span 2): 1.2 charpoly x^13(x-3), ranks of powers [4, 3, 2, 1, ...]; 2.1 [3, 2, 1, ...]
+
+w28_bottleneck_factorization_check.py
+  M_(1.2)^4 = c r^T, c = [15, 15, 12, 14, 18, 32, 20, 12, -24, 24, 12, 0, 0, 0], r = [1, 2, 3, 0, 0, 0, 0, 0, 2, 2, 0, 2, 1, 0]
+  H(p u s) = L(p) R(s) on 300 of 300 random words; e.g. 2130237 = 753 * 2829
+
+w28_carrier_variance.py 3e7 (odd N, local means by N mod 9 removed)
+  3-cycle form (a = 3):     [1e5,2e5) mean 1.560 var/mean 1.028 misses 0.2445 | [1e6,2e6) 1.944, 1.028, 0.1773 | [1e7,2e7) 2.327, 1.032, 0.1304
+  pure hyperbola (a = 0):   [1e5,2e5) mean 1.601 var/mean 1.668 misses 0.3418 | [1e6,2e6) 1.985, 2.168, 0.3009 | [1e7,2e7) 2.368, 2.760, 0.2699

@@ -1,0 +1,33 @@
+# span 3, M 14, Cp 4.00, Cf 4.00, nodes 2751851204
+k 3 f 3 words 2 | [f,4.0f) odd attained 1/5 | window [5f/3,3f) 0/2 | min coprime15 0 (0.000 f) | min prime 3 (1.000 f)
+   wit15 0.0.0   witpr 0.0.2
+k 4 f 5 words 24 | [f,4.0f) odd attained 1/8 | window [5f/3,3f) 0/3 | min coprime15 0 (0.000 f) | min prime 5 (1.000 f)
+   wit15 0.0.0.0   witpr 0.0.0.4
+k 5 f 9 words 272 | [f,4.0f) odd attained 4/14 | window [5f/3,3f) 1/6 | min coprime15 11 (1.222 f) | min prime 11 (1.222 f)
+   wit15 0.0.0.4.6   witpr 0.0.0.4.6
+k 6 f 15 words 2402 | [f,4.0f) odd attained 13/23 | window [5f/3,3f) 8/10 | min coprime15 17 (1.133 f) | min prime 17 (1.133 f)
+   wit15 0.0.0.4.0.4   witpr 0.0.0.4.0.4
+k 7 f 25 words 15948 | [f,4.0f) odd attained 37/38 | window [5f/3,3f) 15/16 | min coprime15 29 (1.160 f) | min prime 29 (1.160 f)
+   wit15 0.0.0.4.0.0.6   witpr 0.0.0.4.0.0.6
+k 8 f 45 words 87018 | [f,4.0f) odd attained 65/68 | window [5f/3,3f) 30/30 | min coprime15 49 (1.089 f) | min prime 53 (1.178 f)
+   wit15 0.0.0.4.0.0.6.2   witpr 0.0.0.4.0.0.5.4
+k 9 f 75 words 438709 | [f,4.0f) odd attained 110/113 | window [5f/3,3f) 50/50 | min coprime15 89 (1.187 f) | min prime 89 (1.187 f)
+   wit15 0.0.0.4.0.0.6.2.4   witpr 0.0.0.4.0.0.6.2.4
+k 10 f 125 words 2192821 | [f,4.0f) odd attained 175/188 | window [5f/3,3f) 83/83 | min coprime15 161 (1.288 f) | min prime 167 (1.336 f)
+   wit15 0.0.0.4.0.3.6.0.0.4   witpr 0.0.0.4.0.0.5.4.1.2
+k 11 f 225 words 11532844 | [f,4.0f) odd attained 312/338 | window [5f/3,3f) 150/150 | min coprime15 281 (1.249 f) | min prime 281 (1.249 f)
+   wit15 0.0.0.4.0.0.6.0.4.2.4   witpr 0.0.0.4.0.0.6.0.4.2.4
+k 12 f 375 words 51755303 | [f,4.0f) odd attained 500/563 | window [5f/3,3f) 249/250 | min coprime15 481 (1.283 f) | min prime 521 (1.389 f)
+   wit15 0.0.0.4.0.0.6.2.4.0.0.4   witpr 0.0.0.4.0.0.6.2.4.0.0.6
+k 13 f 625 words 222334137 | [f,4.0f) odd attained 805/938 | window [5f/3,3f) 413/416 | min coprime15 833 (1.333 f) | min prime 881 (1.410 f)
+   wit15 0.0.0.4.0.0.6.2.4.0.2.7.4   witpr 0.0.0.4.0.0.7.0.0.4.0.4.1
+k 14 f 1125 words 1093261471 | [f,4.0f) odd attained 1449/1688 | window [5f/3,3f) 743/750 | min coprime15 1421 (1.263 f) | min prime 1601 (1.423 f)
+   wit15 0.0.0.4.0.0.6.0.4.0.3.6.0.2   witpr 0.0.0.4.0.0.6.0.4.2.4.0.0.4
+misses k=7 in [5f/3,3f): 63 (total 1)
+misses k=8 in [5f/3,3f): (total 0)
+misses k=9 in [5f/3,3f): (total 0)
+misses k=10 in [5f/3,3f): (total 0)
+misses k=11 in [5f/3,3f): (total 0)
+misses k=12 in [5f/3,3f): 637 (total 1)
+misses k=13 in [5f/3,3f): 1067 1109 1339 (total 3)
+misses k=14 in [5f/3,3f): 1879 1903 1943 1949 1993 2051 2089 (total 7)
