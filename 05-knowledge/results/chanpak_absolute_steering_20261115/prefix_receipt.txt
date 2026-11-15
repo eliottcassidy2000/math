@@ -1,0 +1,5 @@
+PASS: independent full-integer recurrence, fixed prefix and two-sided absolute brackets; 1010 controls
+dyadic modulus exponent 8 bounded suffix length 231
+dyadic modulus exponent 12 bounded suffix length 465
+dyadic modulus exponent 16 bounded suffix length 779
+dyadic modulus exponent 20 bounded suffix length 1173
