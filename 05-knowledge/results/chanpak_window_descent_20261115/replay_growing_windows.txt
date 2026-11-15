@@ -1,0 +1,8 @@
+All live states: 34 closure visits: 48 full-context count differences: [-2, 0, 2]
+Strong 13-core; literal tile checks; profiles and integer counts match at all 45 test positions.
+additional literal slide h,Q,s,r 13 104 18 18 guard marks 1 1 one-tile counts [395585, 395575] delta 10
+additional literal slide h,Q,s,r 29 580 334 133 guard marks 1 0 one-tile counts [425498252879, 425498252873] delta 6
+heights 38 144 order 4505 baseline decimal digits 1357 number of consecutive odds 183
+heights 39 144 order 4517 baseline decimal digits 1361 number of consecutive odds 328
+heights 41 150 order 4709 baseline decimal digits 1419 number of consecutive odds 852
+heights 60 190 order 6057 baseline decimal digits 1824 number of consecutive odds 5167
