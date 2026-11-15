@@ -1,0 +1,2 @@
+Matched pair, aligned triple and aligned six all checked by direct path DP (50 literal extensions)
+Independent literal strength and count check for six strong arms (12 more extensions)
