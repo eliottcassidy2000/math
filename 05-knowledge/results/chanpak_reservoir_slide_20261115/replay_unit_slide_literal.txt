@@ -1,0 +1,2 @@
+j=0: 11273425 Hamilton paths at order 23
+j=1: 11273423 Hamilton paths at order 23
