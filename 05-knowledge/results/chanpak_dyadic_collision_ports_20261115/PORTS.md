@@ -12,6 +12,8 @@ We also use the [Grinberg–Stanley odd-cycle formula](https://arxiv.org/abs/230
 
 ## 1. A sharp linear lower bound on positive outlet increments
 
+[THM-4876(7)](../../../01-canon/theorems/THM-4876-deletion-and-flip-increments-of-the-hamiltonian-path-count-an-increment-of-two-forces-at-most-three-paths-the-increment-ladder-thm-013-for-all-orders-and-what-extension-spectra-forbid-for-chan-pak.md) already proves the sole-exit lower bound of $(H+1)/2$ on the positive increment and observed the sharper $(H+3)/2$ through order nine. The result here gives that sharper bound at all orders for $H\ge5$, with an exact degree- and endpoint-dependent inequality. The general asymptotically sharp multiexit bound $(H+1)/2$ was since proved in the [Session214 forced shuffle](../session214_chan_pak_combined_proof_20261107/forced-shuffle/PROOF.md). This sharper additive statement is specifically for a single exit of the appended vertex.
+
 Let $d=|N^+(u)|>0$, $R=T-u$, $W=N^+(u)$, and $D=\sum_{x\in W}t_x(R)$. Then
 $$
 H(T)\le (2+2/d)E_u(T)-(2+1/d)D.
@@ -93,7 +95,19 @@ $$
 $$
 Indeed the failed splits counted by $s_u(T)-H(T)$ have a prefix ending at $x$. Their second slot must be just $u$, since any longer $u$-started path uses $x$ again. Their number is $t_x(T-u)$. Also $t_u(T)=H(T-u)-t_x(T-u)$, since any full path ending at old $u$ has last predecessor other than $x$. Subtract these using signed reciprocity.
 
-If $x$ is not a sink of $T-u$, then $t_x(T-u)\le(H(T-u)-1)/2$. Inject paths ending at $x$ into those not ending there by moving $x$ just before its first out-neighbor in the old linear order. The preceding vertex, if it exists, beats $x$; the inverse deletes $x$ and appends it. Parity gives the strict half-bound. Thus an outlet at $u$ reaches at most $2H(T)-1$. If $x$ is a sink of $T-u$, then every other vertex beats both $u$ and $x$, and $H(T)=H(T-u)=E_u(T)$. The outlet instead gives $3H(T)$. In particular no degree-one old root realizes the exact plus gate $2H(T)+1$ for $H(T)>1$.
+If $x$ is not a sink of $T-u$, then $t_x(T-u)\le(H(T-u)-1)/2$. This bound is inherited from THM-4876(7): inject paths ending at $x$ into those not ending there by moving $x$ just before its first out-neighbor in the old linear order. The preceding vertex, if it exists, beats $x$; the inverse deletes $x$ and appends it. Parity gives the strict half-bound. Thus an outlet at $u$ reaches at most $2H(T)-1$. If $x$ is a sink of $T-u$, then every other vertex beats both $u$ and $x$, and $H(T)=H(T-u)=E_u(T)$. The outlet instead gives $3H(T)$. In particular no degree-one old root realizes the exact plus gate $2H(T)+1$ for $H(T)>1$.
+
+### Exact classification of the degree-one minus lane
+
+The same signed response gives an exact inverse: a degree-one old root $u$ can give $2H(T)-1$ if and only if $R=T-u$ and its marked vertex $x$ satisfy $H(R)=2t_x(R)+1$. The known [all-order endpoint equality classifier](../../../session213/cycle-arithmetic/EQUALITY.md) gives two possibilities. In the zero case $t_x(R)=0$, $R$ is transitive and $x$ is not its sink. If $r$ vertices follow $x$ in that order, $T$ has $H(T)=1+2^r$: all nontrivial odd cycles use $u,x$ and an odd subset of those $r$ later vertices. In the positive case $R=TT_j\to S_d$ and $x$ is the penultimate vertex of $S_d$. The prefix, of count 1, has no effect on the root weight. At $d=1$, $S_d$ is the directed triangle and $H(T)=5$, already in the first type. At $d\ge2$, the palette and the endpoint equality give
+$$
+s_x(R)=2+2^d,\qquad t_x(R)=2^{d-1},\qquad H(T)=3+3\cdot2^{d-1}.
+$$
+Conversely each stated source is physical and the endpoint identity gives the minus gate. Thus the complete set of *predecessor counts* supporting this gate with a degree-one old root is
+$$
+\{1+2^r:r\ge1\}\ \cup\ \{3+3\cdot2^r:r\ge1\}.
+$$
+A sink old root is excluded by the degree-one hypothesis. This is an exact thin obstruction for arbitrary target selection in that lane, not a restriction on the full spectrum or on higher-degree gates.
 
 ### Two different source identities
 
