@@ -1,6 +1,6 @@
 # Matchings determine slot demand; triangle wraps test retention
 
-**Proved.** In a one-port tournament substitution, the maximum number of nonempty pieces into which the surroundings can split the module in an ordered $r$-cover is exactly $r+\nu$, where $\nu$ is a bipartite matching size. Separately, reading the two-slot count through a bounded number of triangle wraps detects every unequal same-order slot polynomial. An equal-response pair with Hamiltonian count gap 6 cannot preserve its response through even one common triangle wrap.
+**Proved.** In a one-port tournament substitution, the maximum number of nonempty module pieces permitted by the surroundings in an ordered $r$-cover is exactly $r+\nu$, where $\nu$ is a bipartite matching size. For a specific module $A$ the exact maximum is $\min(|A|,r+\nu)$. Separately, reading the two-slot count through a bounded number of triangle wraps detects every unequal same-order slot polynomial. An equal-response pair with Hamiltonian count gap 6 cannot preserve its response through even one common triangle wrap.
 
 ## Random branch and the transfer that survived
 
@@ -27,7 +27,7 @@ Let $K$ be a tournament with marked vertex $x$, $O=N^+_K(x)$, $I=N^-_K(x)$. Let 
 
 $$\Pi_r(K[A])=\sum_{j=1}^{r+\nu} c_{r,j}(K,x)P_j(A),\qquad c_{r,j}>0\quad(1\le j\le r+\nu).$$
 
-Compress each maximal visit to $A$ to $x$. Outside vertices appear once; no slot has adjacent copies of $x$. A template with $j$ appearances of $x$ has exactly $P_j(A)$ lifts by assigning the paths in order. This is the inherited visit-matrix argument; the exact demand and its sharpness are new here.
+Compress each maximal visit to $A$ to $x$. Outside vertices appear once; no slot has adjacent copies of $x$. A template with $j$ appearances of $x$ has exactly $P_j(A)$ lifts by assigning the paths in order. This is the inherited visit-matrix argument; the exact demand and its sharpness are new here. Every $P_j(A)$ with $1\le j\le |A|$ is positive by cutting a Hamiltonian path; thus restricting the template bound by $|A|$ is sufficient.
 
 * **Upper bound.** Each gap between consecutive appearances of $x$ in one slot is an outside path from $O$ to $I$. It contains an arc $O\to I$. Gaps consume disjoint outside vertices, so choosing one crossing per gap gives a matching. At most $r$ appearances are not paired with a previous appearance in their slot.
 * **Lower bound, $j\ge r$.** Choose $j-r$ matched edges, concatenate the excursions $x,o,i,x$ in the first slot, and put one more copy of $x$ in each of the other slots. Treat copies of $x$ as distinct vertices with identical arcs to outside vertices and arbitrary arcs among themselves. Insert each remaining outside vertex into the first path by the elementary tournament insertion lemma. Insertion cannot make two copies adjacent. Compress the copies back to $x$.
