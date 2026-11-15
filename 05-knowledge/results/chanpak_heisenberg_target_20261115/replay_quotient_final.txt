@@ -1,0 +1,10 @@
+ABB (5, 32)
+ABABB (19, 256)
+common-quotient checksum count 5 66
+common-quotient checksum count 6 91
+common-quotient checksum count 7 120
+common-quotient checksum count 8 153
+common-quotient checksum count 9 190
+common-quotient checksum count 10 231
+common-quotient checksum count 11 276
+common-quotient checksum count 12 325
