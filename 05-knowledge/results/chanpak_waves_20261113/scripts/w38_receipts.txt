@@ -1,0 +1,161 @@
+# Wave 38 receipts (mac-mini-2026-11-15-synthesis). Raw outputs of the w38_* scripts.
+
+## fibre_widths.out
+order 4: classes 4, distinct H 3, step g = 0
+  P2 mod 24 by H mod 24: 1:[14] 3:[18] 5:[22]
+  widest fibre: H = 1, 1 values, width 0 = 0 steps, fill 1.000, width/H = 0.000
+  central H in [3, 5]: 0 fibres with >= 2 values; median width/H = 0.000, median steps = 0, median fill = 0.000; mean P2/H over classes = 6.00 (2(n-1) = 6)
+order 5: classes 12, distinct H 7, step g = 12
+  P2 mod 24 by H mod 24: 1:[6] 3:[18] 5:[6] 9:[18] 11:[6] 13:[6] 15:[6, 18]
+  widest fibre: H = 15, 2 values, width 12 = 1 steps, fill 1.000, width/H = 0.800
+  central H in [3, 13]: 0 fibres with >= 2 values; median width/H = 0.000, median steps = 0, median fill = 0.000; mean P2/H over classes = 7.17 (2(n-1) = 8)
+order 6: classes 56, distinct H 19, step g = 24
+  P2 mod 24 by H mod 24: 1:[14] 3:[18] 5:[22] 7:[2] 9:[6] 11:[10] 13:[14] 15:[18] 17:[22] 19:[2] 21:[6] 23:[10]
+  widest fibre: H = 9, 2 values, width 24 = 1 steps, fill 1.000, width/H = 2.667
+  central H in [11, 33]: 3 fibres with >= 2 values; median width/H = 1.043, median steps = 1, median fill = 1.000; mean P2/H over classes = 9.85 (2(n-1) = 10)
+order 7: classes 456, distinct H 77, step g = 12
+  P2 mod 24 by H mod 24: 1:[6, 18] 3:[6, 18] 5:[6, 18] 7:[6, 18] 9:[6, 18] 11:[6, 18] 13:[6, 18] 15:[6, 18] 17:[6, 18] 19:[6, 18] 21:[6, 18] 23:[6, 18]
+  widest fibre: H = 123, 4 values, width 204 = 17 steps, fill 0.222, width/H = 1.659
+  central H in [41, 109]: 27 fibres with >= 2 values; median width/H = 0.923, median steps = 5, median fill = 0.333; mean P2/H over classes = 11.67 (2(n-1) = 12)
+order 8: classes 6880, distinct H 320, step g = 24
+  P2 mod 24 by H mod 24: 1:[14] 3:[18] 5:[22] 7:[2] 9:[6] 11:[10] 13:[14] 15:[18] 17:[22] 19:[2] 21:[6] 23:[10]
+  widest fibre: H = 153, 10 values, width 888 = 37 steps, fill 0.263, width/H = 5.804
+  central H in [191, 427]: 119 fibres with >= 2 values; median width/H = 1.588, median steps = 19, median fill = 0.350; mean P2/H over classes = 14.07 (2(n-1) = 14)
+order 9: classes 191536, distinct H 1520, step g = 12
+  P2 mod 24 by H mod 24: 1:[6, 18] 3:[6, 18] 5:[6, 18] 7:[6, 18] 9:[6, 18] 11:[6, 18] 13:[6, 18] 15:[6, 18] 17:[6, 18] 19:[6, 18] 21:[6, 18] 23:[6, 18]
+  widest fibre: H = 1479, 55 values, width 5436 = 453 steps, fill 0.121, width/H = 3.675
+  central H in [923, 1905]: 492 fibres with >= 2 values; median width/H = 2.336, median steps = 256, median fill = 0.201; mean P2/H over classes = 16.05 (2(n-1) = 16)
+order 10: classes 9733056, distinct H 7663, step g = 24
+  P2 mod 24 by H mod 24: 1:[14] 3:[18] 5:[22] 7:[2] 9:[6] 11:[10] 13:[14] 15:[18] 17:[22] 19:[2] 21:[6] 23:[10]
+  widest fibre: H = 3297, 334 values, width 32208 = 1342 steps, fill 0.249, width/H = 9.769
+  central H in [4767, 9389]: 2312 fibres with >= 2 values; median width/H = 3.025, median steps = 829, median fill = 0.390; mean P2/H over classes = 18.48 (2(n-1) = 18)
+
+## sampled_fibres.out
+order 10 exact classes: median H = 7069, window +-1%: 157255 tournaments; R = P2/H mean 18.207, sd 0.432; q05-q95 1.390; q01-q99 2.101; full range 3.997; sd/(2(n-1)) = 0.0240
+order 10 sampled (1000000): median H = 7077, window +-1%: 16361 tournaments; R = P2/H mean 18.195, sd 0.435; q05-q95 1.395; q01-q99 2.076; full range 3.893; sd/(2(n-1)) = 0.0242
+order 11 sampled (1000000): median H = 38855, window +-1%: 17088 tournaments; R = P2/H mean 20.196, sd 0.379; q05-q95 1.160; q01-q99 1.875; full range 3.926; sd/(2(n-1)) = 0.0189
+order 12 sampled (500000): median H = 232801, window +-1%: 8958 tournaments; R = P2/H mean 22.206, sd 0.333; q05-q95 1.020; q01-q99 1.557; full range 3.100; sd/(2(n-1)) = 0.0151
+order 13 sampled (200000): median H = 1510685, window +-1%: 3718 tournaments; R = P2/H mean 24.220, sd 0.303; q05-q95 1.031; q01-q99 1.424; full range 2.263; sd/(2(n-1)) = 0.0126
+order 14 sampled (100000): median H = 10551169, window +-1%: 1944 tournaments; R = P2/H mean 26.215, sd 0.282; q05-q95 0.910; q01-q99 1.272; full range 2.068; sd/(2(n-1)) = 0.0108
+order 15 sampled (50000): median H = 79239983, window +-1%: 1006 tournaments; R = P2/H mean 28.207, sd 0.249; q05-q95 0.820; q01-q99 1.185; full range 1.629; sd/(2(n-1)) = 0.0089
+order 16 sampled (20000): median H = 630698211, window +-1%: 418 tournaments; R = P2/H mean 30.216, sd 0.229; q05-q95 0.751; q01-q99 1.026; full range 1.487; sd/(2(n-1)) = 0.0076
+
+## two_apex_add.out
+module fibre pairs (orders 5, 6, equal H, different P2): 25
+  order 5, H = 15: ports [15, 78, 198, 240, 120] vs [15, 90, 210, 240, 120]
+  order 6, H = 9: ports [9, 126, 684, 1656, 1800, 720] vs [9, 150, 756, 1704, 1800, 720]
+  order 6, H = 9: ports [9, 126, 684, 1656, 1800, 720] vs [9, 150, 756, 1704, 1800, 720]
+  order 6, H = 9: ports [9, 126, 684, 1656, 1800, 720] vs [9, 150, 756, 1704, 1800, 720]
+  order 6, H = 9: ports [9, 126, 684, 1656, 1800, 720] vs [9, 150, 756, 1704, 1800, 720]
+  order 6, H = 15: ports [15, 186, 828, 1752, 1800, 720] vs [15, 210, 900, 1800, 1800, 720]
+
+(1) random inflated two-apex sources: 240 tests; mixed difference D = 0 in 0
+    |D| / min(|dF1|, |dF2|): median 0.087, 10% 0.071, 90% 0.113
+    m=7 p=(5,6) apex-bits aB|ab: dF1=7736644224 dF2=7458246168 D=473073408
+    m=6 p=(3,5) apex-bits AB|ab: dF1=1058256144 dF2=1204059312 D=74923776
+    m=8 p=(0,1) apex-bits AB|ab: dF1=13406179920 dF2=14161372032 D=855429120
+    m=6 p=(3,4) apex-bits ab|Ab: dF1=410335368 dF2=388370376 D=31777344
+    m=8 p=(2,7) apex-bits Ab|ab: dF1=4330351800 dF2=3643406784 D=318556800
+    m=8 p=(0,4) apex-bits Ab|Ab: dF1=728047512 dF2=680507976 D=59522688
+    m=7 p=(2,6) apex-bits Ab|aB: dF1=1123456176 dF2=1745887824 D=112472064
+    m=7 p=(1,5) apex-bits Ab|ab: dF1=1348188192 dF2=1634680992 D=123724800
+
+(2) exact coefficients c_kl (pieces of module 1, module 2) of F = H + Q, from transitive probes
+  m=6 a=001011 b=001011 p=(1,4) bits AB|ab:
+         6481    10348     6726     1488
+        10348    19544    15084     4080
+         6726    15084    13560     4272
+         1488     4080     4272     1536
+     multilinear check on order-5 fibre pairs: D observed 9111168, predicted 9111168
+  m=6 a=010101 b=000001 p=(3,4) bits ab|Ab:
+         3659     3935     1694      234
+         4229     4573     1984      270
+         1886     2080      926      126
+          234      270      126       18
+     multilinear check on order-5 fibre pairs: D observed 1377072, predicted 1377072
+  m=7 a=0011101 b=0111110 p=(0,5) bits Ab|aB:
+        13467    21572    13698     2868
+        13794    23870    16320     3738
+         4512     8496     6228     1536
+            0        0        0        0
+     multilinear check on order-5 fibre pairs: D observed 7907616, predicted 7907616
+  m=7 a=0100111 b=1000011 p=(4,5) bits ab|Ab:
+        20841    24807    12248     2058
+        27998    32960    16168     2682
+        15852    18678     9192     1518
+         3120     3744     1872      312
+     multilinear check on order-5 fibre pairs: D observed 11087712, predicted 11087712
+  m=6 a=011101 b=101100 p=(0,5) bits Ab|aB:
+         2487     3465     1382        0
+         2571     3990     1744        0
+          830     1468      702        0
+            0        0        0        0
+     multilinear check on order-5 fibre pairs: D observed 1138176, predicted 1138176
+  m=6 a=001101 b=001011 p=(0,3) bits AB|AB:
+         6313     7717     3696      540
+         9943    11883     5780      912
+         6510     7808     3940      684
+         1446     1806      978      192
+     multilinear check on order-5 fibre pairs: D observed 4235184, predicted 4235184
+
+## two_apex_fill.out
+order-7 module fibres: H = 69 (12 classes), H = 91 (15 classes)
+m=6 a=010101 b=011100 p=(0,5): exact set: step 12, 25 values over 3116413590 steps, fill 0.000; additive model: step 12, 25 over 2988421638, fill 0.000; max |mixed| / max |single| = 0.055
+m=6 a=001001 b=011000 p=(3,5): exact set: step 36, 25 values over 1978115512 steps, fill 0.000; additive model: step 36, 25 over 1901244168, fill 0.000; max |mixed| / max |single| = 0.053
+m=6 a=001111 b=000011 p=(1,4): exact set: step 48, 25 values over 6165086906 steps, fill 0.000; additive model: step 48, 25 over 5923612874, fill 0.000; max |mixed| / max |single| = 0.054
+
+## triangle_form.out
+(1) trilinear law H(cyc(A,B,C)) = T(v_A, v_B, v_C): 400 random triples (blocks of order 1-4), 0 failures
+(3) H(cyc(A,B,C)) = H(cyc(B,A,C)) on all 400 triples: 0 failures
+(2) Gram matrices G_C[a][b] = T(e_a, e_b, v_C), a, b = 1..|C|+1:
+  C = point, ports [1]: det G_C = 2; G_C = [[3, 1], [1, 1]]
+  C = order2#0, ports [1, 2]: det G_C = 32; G_C = [[5, 3, 0], [3, 7, 2], [0, 2, 2]]
+  C = order3#0, ports [1, 6, 6]: det G_C = 11232; G_C = [[9, 7, 0, 0], [7, 25, 12, 0], [0, 12, 24, 6], [0, 0, 6, 6]]
+  C = order3#1, ports [3, 6, 6]: det G_C = 22032; G_C = [[15, 9, 0, 0], [9, 27, 12, 0], [0, 12, 24, 6], [0, 0, 6, 6]]
+  C = order4#0, ports [1, 14, 36, 24]: det G_C = 146792448; G_C = [[17, 15, 0, 0, 0], [15, 79, 50, 0, 0], [0, 50, 146, 60, 0], [0, 0, 60, 108, 24], [0, 0, 0, 24, 24]]
+  C = order4#1, ports [3, 18, 36, 24]: det G_C = 288396288; G_C = [[27, 21, 0, 0, 0], [21, 93, 54, 0, 0], [0, 54, 150, 60, 0], [0, 0, 60, 108, 24], [0, 0, 0, 24, 24]]
+  C = order4#2, ports [3, 18, 36, 24]: det G_C = 288396288; G_C = [[27, 21, 0, 0, 0], [21, 93, 54, 0, 0], [0, 54, 150, 60, 0], [0, 0, 60, 108, 24], [0, 0, 0, 24, 24]]
+  C = order4#3, ports [5, 22, 36, 24]: det G_C = 472799232; G_C = [[37, 27, 0, 0, 0], [27, 107, 58, 0, 0], [0, 58, 154, 60, 0], [0, 0, 60, 108, 24], [0, 0, 0, 24, 24]]
+(4) cubic T(v,v,v) for v = (P1, P2): 3 (P1 + P2)(P1^2 + P2^2)? True
+
+## norm_bridges.out
+(1) diagonal-join law N = 3h^2 + 8 HC (mod 16) [odd n], 3h^2 + 16 c_(n-1) (mod 32) [even n]: 300 random tournaments of orders 3-10, 0 failures
+(2) Paley primes 7 <= p < 10^7 (332397 primes): p = 3 mod 8 <=> (2/p) = -1 <=> -1 in <2> <=> p = x^2 + 2y^2 (the last tested below 10^6): 0 exceptions
+(3) odd primes < 10^7 with ord_p(2) even: 470633 of 664578 = 0.70817 (Hasse: 17/24 = 0.70833)
+(4) <3> mod 2^j = unit norms x^2 + 2y^2 mod 2^j = {u = 1, 3 mod 8} for 3 <= j <= 16 (norms for j <= 10): True
+(5) Paley tournaments (|Aut| = p(p-1)/2 acts freely on paths and on path pairs):
+  P_3: H = 3, Q = 12, H/|Aut| = 1, Q/|Aut| = 4, beta = 9 + 3 sqrt(-2), N(beta)/|Aut|^2 = 11, H mod 8 = 3, Q mod 8 = 4
+  P_7: H = 189, Q = 2016, H/|Aut| = 9, Q/|Aut| = 96, beta = 1827 + 189 sqrt(-2), N(beta)/|Aut|^2 = 7731, H mod 8 = 5, Q mod 8 = 0
+  P_11: H = 95095, Q = 1776500, H/|Aut| = 1729, Q/|Aut| = 32300, beta = 1681405 + 95095 sqrt(-2), N(beta)/|Aut|^2 = 9.40565e+08, H mod 8 = 7, Q mod 8 = 4
+  P_19: H = 1172695746915, Q = 40498536819492, H/|Aut| = 6857869865, Q/|Aut| = 2.36834e+11, beta = 39325841072577 + 1172695746915 sqrt(-2), N(beta)/|Aut|^2 = 5.29829e+22, H mod 8 = 3, Q mod 8 = 4
+(6) diagonal-join values over blocks of order <= 10: 1601693 distinct, all = 3 mod 8; 178825 prime
+    complete range p < 4190211: 26 of the 73940 primes = 3 mod 8 are diagonal joins (0.0004); the first realised: [3, 11, 227, 35963, 43427, 56891, 63059, 65027, 101963, 117659, 148859, 257099]
+    first primes = 3 mod 8 that are NOT diagonal joins: [19, 43, 59, 67, 83, 107, 131, 139, 163, 179, 211, 251, 283, 307, 331]
+    [0, 10000): 3 / 311 = 0.0096
+    [10000, 100000): 5 / 2098 = 0.0024
+    [100000, 1000000): 4 / 17244 = 0.0002
+    [1000000, 4190211): 14 / 54287 = 0.0003
+
+## two_apex_equi.out
+m=4 (order 6): 60 sources; l=5: empty 10/25, TV 0.450, max/min inf; l=7: empty 34/49, TV 0.698, max/min inf; l=11: empty 105/121, TV 0.868, max/min inf; l=13: empty 153/169, TV 0.905, max/min inf
+m=5 (order 7): 248 sources; l=5: empty 0/25, TV 0.250, max/min 26.00; l=7: empty 3/49, TV 0.277, max/min inf; l=11: empty 48/121, TV 0.473, max/min inf; l=13: empty 100/169, TV 0.620, max/min inf
+m=6 (order 8): 1008 sources; l=5: empty 0/25, TV 0.111, max/min 3.00; l=7: empty 0/49, TV 0.139, max/min 6.67; l=11: empty 0/121, TV 0.249, max/min 32.00; l=13: empty 4/169, TV 0.243, max/min inf
+m=7 (order 9): 4064 sources; l=5: empty 0/25, TV 0.044, max/min 1.54; l=7: empty 0/49, TV 0.062, max/min 1.98; l=11: empty 0/121, TV 0.114, max/min 4.00; l=13: empty 0/169, TV 0.112, max/min 6.11
+m=8 (order 10): 16320 sources; l=5: empty 0/25, TV 0.030, max/min 1.33; l=7: empty 0/49, TV 0.029, max/min 1.40; l=11: empty 0/121, TV 0.041, max/min 1.78; l=13: empty 0/169, TV 0.060, max/min 2.15
+m=9 (order 11): 65408 sources; l=5: empty 0/25, TV 0.018, max/min 1.14; l=7: empty 0/49, TV 0.014, max/min 1.24; l=11: empty 0/121, TV 0.022, max/min 1.39; l=13: empty 0/169, TV 0.025, max/min 1.39
+m=10 (order 12): 261888 sources; l=5: empty 0/25, TV 0.005, max/min 1.05; l=7: empty 0/49, TV 0.007, max/min 1.10; l=11: empty 0/121, TV 0.011, max/min 1.14; l=13: empty 0/169, TV 0.013, max/min 1.18
+
+## bilinear_cover.out
+blocks of order <= 8: 1922 distinct (x, y) = (H + P2, H)
+odd N <= 2000000 missed by cyc(A, B, *) with |A|, |B| <= 8: 891413
+  first misses: [1, 7, 13, 19, 21, 25, 29, 31, 35, 39, 41, 43, 45, 49, 53, 55, 57, 59, 61, 63, 67, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 97, 101, 103, 105, 109, 113, 115, 119, 121]
+  largest misses: [1999979, 1999981, 1999985, 1999987, 1999989, 1999991, 1999993, 1999995, 1999997, 1999999]
+  [1, 1000): missed 351 of 500 odd numbers
+  [1000, 10000): missed 2395 of 4500 odd numbers
+  [10000, 100000): missed 35645 of 45000 odd numbers
+  [100000, 2000000): missed 853022 of 950000 odd numbers
+odd numbers <= 20000 not of the form x^2 + y^2 + 10 z^2 (Ramanujan; Ono-Soundararajan under GRH): [3, 7, 21, 31, 33, 43, 67, 79, 87, 133, 217, 219, 223, 253, 307, 391, 679, 2719]
+
+## exact minimum of (H+P2)/H per order (inline check)
+4: 27/5 = 5.40; 5: 31/5 = 6.20; 6: 315/37 = 8.51; 7: 29/3 = 9.67 (Paley P7, H=189, P2=1638); 8: 635/53 = 11.98; 9: 473/35 = 13.51; 10: 149787/9509 = 15.75
+sampled min x/y: n=11 17.76, 12 19.55, 13 21.91, 14 24.07, 15 26.03, 16 28.05

@@ -3166,7 +3166,117 @@ Neither is verified here.
 | H-preserving source swap changes a reader output by M·ΔP₂ | PROVED |
 | P₂ ≡ 2H + 12 (mod 24) at even order, so swap steps are multiples of 24 | PROVED from THM-4756 and THM-5172 (B); FINITE-EXACT at order 10 |
 | Three independent fibre swaps give a gap-free repair set in units of 24 (order 10) | NUMERICAL |
-| Use inside the two-apex placement | proposed; scaling and additivity unverified |
+| Use inside the two-apex placement | proposed; scaling and additivity unverified. **Wave 38: modules inside a two-apex source are read multilinearly, not additively, and a module swap is a coarse move** |
+
+## Wave 38: fibre widths, two-apex coupling, and a synthesis with Collatz and the arithmetic of 2 and 3
+
+Session mac-mini-2026-11-15-synthesis. The owner's prompt asked for four things:
+- measure fibre widths at higher orders;
+- test additivity in two-apex hosts;
+- merge the earlier work on multiplication tables mod odd numbers (the back and forth between 3x+1 and 3x−1 edges);
+- reach a grand synthesis with other open problems, including how the metagraph and the norm equations of ordered
+  pairs of disjoint paths (x² + 2y², diagonal joins) fit with mod 8 in Collatz.
+
+The synthesis is in [GRAND_SYNTHESIS.md](GRAND_SYNTHESIS.md). It is a companion to the concurrent
+[mod-8 dictionary](../chanpak_mod8_synthesis_span3_20261115/SYNTHESIS.md) of klein-2026-11-15-synthesis, which
+answers the same prompt and is credited throughout.
+
+**Credit correction to wave 37.** The fibre step law (P₂ ≡ 2H + 12 mod 24 at even order, steps of 12 at odd order)
+was already proved in [PAIR_LINE_STRUCTURE.md](../chanpak_pair_line_census_20261115/PAIR_LINE_STRUCTURE.md) §4 via
+the Grinberg–Stanley odd-cycle expansion. That section also gives Q ≡ 4·HC (mod 8) at odd order and
+Q ≡ 8·c_(n−1) (mod 16) at even order. Wave 37 re-derived the law from THM-4756 and THM-5172 (B) without citing it.
+
+### §1. Fibre widths at higher orders
+
+**Exact, orders 4–10** (`w38_fibre_widths.py` over the complete class lists):
+- At odd order P₂ ≡ 6 (mod 12) for every class, while at even order P₂ ≡ 2H + 12 (mod 24).
+- The mean of P₂/H over classes is 2(n − 1) to within 0.5.
+- In the table, "central" means H in the middle half of the class distribution.
+
+| order | step | central fibres with ≥ 2 values | median width / H | median steps | median fill | widest fibre (H, values, steps, width/H) |
+|---:|---:|---:|---:|---:|---:|---|
+| 7 | 12 | 27 | 0.92 | 5 | 0.33 | 123, 4, 17, 1.66 |
+| 8 | 24 | 119 | 1.59 | 19 | 0.35 | 153, 10, 37, 5.80 |
+| 9 | 12 | 492 | 2.34 | 256 | 0.20 | 1479, 55, 453, 3.68 |
+| 10 | 24 | 2312 | 3.03 | 829 | 0.39 | 3297, 334, 1342, 9.77 |
+
+**Sampled, orders 10–16** (`w38_sample_pairs.c`, `w38_sampled_fibres.py`): 10⁶, 10⁶, 5·10⁵, 2·10⁵, 10⁵, 5·10⁴ and
+2·10⁴ uniform labelled tournaments, restricted to H within ±1% of the median H. The order-10 sample matches the exact
+classes (sd 0.435 vs 0.432).
+
+| order | median H | sd of P₂/H | q01–q99 | sampled range |
+|---:|---:|---:|---:|---:|
+| 10 | 7,077 | 0.435 | 2.08 | 3.89 |
+| 11 | 38,855 | 0.379 | 1.88 | 3.93 |
+| 12 | 232,801 | 0.333 | 1.56 | 3.10 |
+| 13 | 1,510,685 | 0.303 | 1.42 | 2.26 |
+| 14 | 10,551,169 | 0.282 | 1.27 | 2.07 |
+| 15 | 79,239,983 | 0.249 | 1.19 | 1.63 |
+| 16 | 630,698,211 | 0.229 | 1.03 | 1.49 |
+
+**Reading (NUMERICAL, with a heuristic extrapolation).**
+- *Relative widths shrink.* The relative spread of P₂/H shrinks like about n^(−1.4) between orders 10 and 16.
+- *Absolute widths grow.* A fibre at H spans at least about 1.5·H in absolute terms at order 16, a lower bound from
+  the sampled range of P₂/H; it is 3.0·H exactly at order 10. That is at least H/16 steps of 24, so absolute widths
+  grow superexponentially along with H.
+- *Fill should reach 1.* Classes per fibre grow faster still: from about 1.5 per step at order 10 to an estimated tens
+  per step at order 12 (2^(n(n−1)/2)/n! classes over about H_max/2 fibres). So central fibres should become gap-free
+  from about order 12. Fill above order 10 is not measured.
+
+### §2. Additivity in two-apex hosts: exact, multilinear, coupled and coarse
+
+Inflate two spine positions of a two-apex source (TWO_APEX_COARSE_PLACEMENT.md) by modules X₁, X₂. Every count is then
+multilinear in the modules' port vectors (P₁, P₂, P₃, …), and fibre swaps (equal H) are additive iff the mixed
+difference D = F(X₁′, X₂′) − F(X₁′, X₂) − F(X₁, X₂′) + F(X₁, X₂) vanishes, with F = H + Q
+(`w38_two_apex_additivity.py`).
+- **Never additive.** D ≠ 0 in 240 of 240 random sources (m = 6–8, order-5 and order-6 fibre pairs). The median
+  |D|/min|ΔF| is 0.087, and 80% of cases lie in 0.071–0.113.
+- **Exactly multilinear.** Six coefficient tensors c_kl were extracted with transitive probe modules, using
+  P_k(TT_s) = k!·S(s, k). The predicted D equals the observed D in 6 of 6 cases. The double-split coefficients c₂₂
+  are of the same size as c₁₁ (for example 19,544 against 6,481).
+- **Coarse.** Let both modules range over whole order-7 fibres (12 and 15 classes). The 180 module pairs give only 25
+  distinct counts, spread over 2·10⁹ to 6·10⁹ steps (`w38_two_apex_coupled_fill.py`). The mixed term is about 5% of
+  the largest single swap. A module swap moves F by a constant fraction of F.
+
+**Verdict.** The wave-37 plan "three sources read additively inside the two-apex placement" fails as stated.
+- Module swaps in a two-apex host are exact but coupled.
+- Their granularity is set by the host's splitting multiplier, which is a product of the rest's counts.
+- Fine repair needs a **thin reader**: covers that split the repair block must complete essentially uniquely, so the
+  multiplier is O(1), as in the triangle reader F = 3H + P₂ (M = 1). See GRAND_SYNTHESIS.md §6.
+
+### §3. The synthesis: new statements
+
+**[THM-5242](../../01-canon/theorems/THM-5242-the-triangle-law-cyclic-joins-of-three-blocks-are-a-symmetric-trilinear-jacobi-form-diagonal-joins-read-the-metagraph-closure-mod-16-and-the-collatz-group-is-the-2-adic-norm-group-of-q-sqrt-minus-two.md) (PROVED; finite checks):**
+- **(A) Triangle law.** H(cyc(A, B, C)) = Σ admissible mult·P_a(A)P_b(B)P_c(C). The admissible triples are (k,k,k)
+  with weight 3 and the rotations of (k+1,k,k) and (k+1,k+1,k) with weight 1. This is a symmetric trilinear form with
+  tridiagonal Gram matrix J(v_C): J_aa = p_(a−1) + 3p_a + p_(a+1), J_(a,a+1) = p_a + p_(a+1). With C a point it is the
+  ℤ[√−2] form. Checked on 400 of 400 random triples.
+- **(B) The metagraph in the norm.** A diagonal join has N(β_A) ≡ 3H² + 8·HC(A) (mod 16) at odd order and
+  3H² + 16·c_(n−1)(A) (mod 32) at even order. At odd order HC has the parity of the closure number of A's metagraph
+  node. Checked on 300 of 300.
+- **(C) Paley primes.** For p ≡ 3 (mod 4): the 3x±1 tables alternate mod p (THM-4792) ⟺ halving reverses P_p ⟺
+  p = x² + 2y² ⟺ p ≡ 3 (mod 8). Checked on 332,397 primes below 10^7. By Hasse, alternating primes have density 17/24;
+  the count below 10^7 gives 0.70817.
+- **(D) 2-adics.** The closure of ⟨2, 3⟩ in ℚ₂^× is the norm group of ℚ₂(√−2), and negation is the non-norm class.
+  Every Collatz-type cycle denominator 2^K − 3^k with K ≥ 3 is a non-norm.
+
+**[HYP-9792](../../05-knowledge/hypotheses/HYP-9792-norms-are-thin-but-the-bilinear-family-is-locally-free-diagonal-join-primes-have-density-zero-while-two-apex-sources-equidistribute-modulo-every-prime-at-least-five.md) (CONJECTURE):**
+- Diagonal-join primes have density zero. They are complete below 4,190,211: 26 of 73,940 primes ≡ 3 (mod 8). The
+  angle obstruction is x/y ≥ 2n − 5.
+- The two-apex family equidistributes modulo every ℓ ≥ 5: at order 12 the total-variation distance is 0.005–0.013.
+- P103 and P104 are filed.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| P₂ ≡ 6 (mod 12) at odd order; widths and fills in §1 | FINITE-EXACT (orders 4–10) |
+| relative spread of P₂/H shrinks like about n^(−1.4); absolute fibres widen with H; fill → 1 from about order 12 | NUMERICAL (orders 10–16) / heuristic |
+| fibre swaps in two modules of a two-apex source are additive | REFUTED (240/240 nonzero mixed terms) |
+| two-apex counts are exactly multilinear in module port vectors | PROVED (module decomposition); 6/6 tensor checks |
+| THM-5242 (A)–(D) | PROVED |
+| HYP-9792 (i), (ii) | CONJECTURE, with exact and finite evidence |
+| the grand synthesis (GRAND_SYNTHESIS.md) | proved bridges, cited KNOWN results and labelled analogies; no open problem solved |
 
 ## Next waves (queued predictions)
 
