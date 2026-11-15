@@ -1,0 +1,4 @@
+N=10007 core(order 3; n,V,out)=[3 1 2 4 1] X=16 Y=50 vertices=15
+N=20011 core(order 3; n,V,out)=[3 1 2 4 1] X=29 Y=56 vertices=15
+N=65537 core(order 3; n,V,out)=[3 1 2 4 1] X=65 Y=83 vertices=18
+N=100003 core(order 3; n,V,out)=[3 1 2 4 1] X=13 Y=622 vertices=18

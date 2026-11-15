@@ -98,3 +98,14 @@ bits, so the row is injective on every block [2^l w, 2^l(w+1)) with w ≥ W₀(l
 Exact check (3-cycle row, L = 20): no collision has w ≥ 8·2^l. The lemma's remaining content is the balanced regime
 w < W₀(l), where the measured collisions live (prefix lengths 4–7 bits at L = 20). There the claim is still
 N(l, w) ≤ C 2^l/(1 + w).
+
+**Sharpness, 2026-11-15 (klein-2026-11-15-rc, [THM-5232](../../01-canon/theorems/THM-5232-reverse-complement-collisions-every-odd-core-with-its-reverse-complement-collides-on-an-anti-diagonal-so-the-row-collision-bound-is-sharp-and-one-explicit-family-carries-linear-energy.md)).**
+The bound shape is attained, so the lemma cannot be strengthened:
+- p(rc x) = p(x) for the reverse-complement rc_a x = 2^a − 1 − rev_a x;
+- every odd core collides with its reverse-complement along an anti-diagonal when k | c 2^(j−1);
+- this gives N(l, w) ≥ (c/2k)·2^l/w on a positive-log-proportion set of prefixes in every dyadic block, so C ≥ 3
+  for the 3-cycle row.
+
+The same explicit family has linear size: 44% of the 3-cycle row's collisions at L = 18. A proof of the upper
+bound should subtract such lattice-ray families and bound only the generic single-point lines. The lemma itself
+remains OPEN.
