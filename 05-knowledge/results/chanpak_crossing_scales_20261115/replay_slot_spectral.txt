@@ -1,0 +1,4 @@
+profile and literal cyclic wrap (345, 5640, 45225) 205305
+profile and literal cyclic wrap (345, 5640, 44505) 202425
+bounded-digit cones checked through five coordinates and sum 100
+strong profile passing elementary floor parity and congruence, rejected by digit mass 5 11 112 1 7
