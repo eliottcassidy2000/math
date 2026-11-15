@@ -1,0 +1,4 @@
+literal core kernel 9 (25, 4, 122, -34, 20)
+literal core kernel 20 (25, 4, 111, -31, 20)
+literal same-H separation verified for j=2..7
+literal returned-slot checks (all Q1,Q2,Q3): 648
