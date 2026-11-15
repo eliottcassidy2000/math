@@ -1,0 +1,9 @@
+Exact central translations: 3/4 7/2 1/2
+Reduced group / origin orbit: 3 18 9
+Reduced group / origin orbit: 5 500 25
+Reduced group / origin orbit: 7 1029 49
+Reduced group / origin orbit: 9 1458 81
+Reduced group / origin orbit: 11 13310 121
+Reduced group / origin orbit: 15 4500 225
+All labeled terminal-block mod-3 sidecars through order 5: 1099
+Literal append controls for A and B: 800
