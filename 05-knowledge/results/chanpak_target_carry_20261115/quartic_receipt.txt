@@ -1,0 +1,1 @@
+PASS: target-chosen common phase, literal tape formulas, quartic modulus brackets: 180
