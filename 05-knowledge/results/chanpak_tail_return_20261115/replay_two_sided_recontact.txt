@@ -1,0 +1,4 @@
+exact common signature and apex counts (15, 120, 42, 6, 63, 9) [41, 43]
+exact common signature and apex counts (45, 432, 129, 15, 258, 30) [135, 137, 139]
+literal two-tail path counts 245
+literal order-nine triple [999, 1001, 1003]
