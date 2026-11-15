@@ -1,0 +1,11 @@
+literal alignment base 0 (15, 979, 1188, 0)
+literal alignment base 1 (15, 981, 9609, 15)
+literal alignment base 2 (15, 983, 1188, 0)
+literal alignment base 3 (15, 985, 1188, 2)
+literal alignment base 4 (15, 987, 1188, 0)
+literal alignment base 5 (15, 989, 1188, 0)
+fold height 4 addresses 5128 5129 window 197345965 197345981 9
+fold height 5 addresses 10260 10261 window 789799435 789799457 12
+fold height 6 addresses 20528 20529 window 3160739137 3160739153 9
+fold height 7 addresses 41060 41061 window 12644613691 12644613713 12
+13 exact fold-clock controls; literal base counts obtained independently
