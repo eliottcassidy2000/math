@@ -1,5 +1,7 @@
 # The second Busch gap and a growing forbidden band at fixed order
 
+**Stronger follow-up:** [A fixed-order gap of n minus a logarithm](../chanpak_dyadic_collision_ports_20261115/NEAR_N.md) improves the positive-excess bound below and narrows near-critical Ferrers seams to a logarithmic-size supporting factor.
+
 Write H(T) for the number of directed Hamiltonian paths, C(T) for the number of directed Hamiltonian cycles counted up to rotation, and f(n) for the minimum of H(T) over strong n-vertex tournaments.
 
 **Results.**
