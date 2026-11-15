@@ -1,0 +1,5 @@
+Independent labeled graph checks H, hc, SCC: 680
+Base, H, (templates, checked transitions): 16 3375 (77, 980)
+Base, H, (templates, checked transitions): 17 5625 (83, 1058)
+Exact-minimum equality ribbon word multiplicities: [(3, 16), (4, 96), (5, 208), (6, 288), (7, 232), (8, 1120), (9, 864), (10, 320), (11, 2624), (12, 1184), (13, 160), (14, 3008), (15, 576), (17, 1408)]
+PASS
