@@ -3103,6 +3103,71 @@ cancellation and Pell supply (wave 35), and near-floor coverage at large primes 
 | The one-third lines are explained by Π₂ ≡ (−1)ⁿH (mod 3) | PROVED (from THM-4756) |
 | Prime targets ⇐ line fullness for one kernel | PROVED reduction; line fullness OPEN for all orders |
 
+## Wave 37: fibre swaps — exact, H-preserving repairs in steps of 24
+
+Session mac-mini-2026-11-15-repairs. Owner prompt: exact repairs that help place the baseline from the target, after
+two independent apexes place a count within O(N^0.8963) of the target. The six-vertex intercept hosts' repair steps
+are too coarse, and padding fails: one singleton forces a factor 3, and two leave holes.
+
+### §1. The repair move
+
+A reader outputs r·H(A) + M·Q(A) from a source A, with Q = P₂ + 2H (chanpak_pair_line_census_20261115). Replace A by
+any A′ with the same order and **the same H**. The output changes by exactly M·(P₂(A′) − P₂(A)). Everything that reads
+only H(A) is unchanged.
+
+### §2. The step is exactly 24 at even order (PROVED from known laws; FINITE-EXACT at order 10)
+
+At even order, Π₂ = Q satisfies:
+- Π₂ ≡ H (mod 3), by THM-4756;
+- Π₂ ≡ 0 (mod 8), by THM-5172 (B).
+
+So Π₂ mod 24 is fixed by H mod 3, and
+
+    P₂ ≡ 2H + 12 (mod 24).
+
+The order-10 census confirms it on all 9,733,056 classes: P₂ mod 24 is 14, 18, 22, 2, 6, 10 for H ≡ 1, 3, 5, 7, 9, 11
+(mod 12). The smallest gap inside every H-fibre is 24 (1,079,310 occurrences); every gap is a multiple of 24. At odd
+order the same argument gives steps of 12.
+
+This is the exact form of the rule that two modules with equal H give host counts differing by a multiple of 4: within
+one order, the difference is a multiple of 24M.
+
+### §3. Fibre swaps fill windows when combined (NUMERICAL, order 10)
+
+Measured on the largest H-fibres, with H ≈ 5,000–6,000, about 400 P₂ values each, and a range of about 1,000 units of
+24:
+
+| sources swapped | fill of the central half of the repair range, in units of 24 |
+|---|---:|
+| one fibre | 0.39–0.46 |
+| two independent fibres | 0.9960–1.0000 |
+| three independent fibres | 1.0000 (all three triples tested) |
+
+So three sources, each read once (additively, as the two-apex placement combines its parts), give an **exact repair
+set**: every multiple of 24M across a window of about 3,000·24M around the baseline. No source's H changes.
+
+### §4. How this would be used
+
+1. **Place.** Put the baseline within the window of the target. At order-10 sources the window is about 7·10⁴·M. It
+   grows with the source order, since fibres widen; that growth is unverified.
+2. **Steer.** Fix the residue modulo 24M with the existing residue tools (dyadic laws, mod-3 law).
+3. **Repair.** Swap each of three sources within its H-fibre to remove the remaining multiple of 24M exactly.
+
+**What is not shown.**
+- Fibre widths at the source orders needed for N^0.8963 windows (orders well above 10).
+- That the physical construction reads three sources additively with fixed slopes M.
+
+Neither is verified here.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| H-preserving source swap changes a reader output by M·ΔP₂ | PROVED |
+| P₂ ≡ 2H + 12 (mod 24) at even order, so swap steps are multiples of 24 | PROVED from THM-4756 and THM-5172 (B); FINITE-EXACT at order 10 |
+| Three independent fibre swaps give a gap-free repair set in units of 24 (order 10) | NUMERICAL |
+| Use inside the two-apex placement | proposed; scaling and additivity unverified |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
