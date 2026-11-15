@@ -116,3 +116,8 @@ planes, for example a cone family on the 8-dimensional reachable cone together w
 ## (E) Resolution for all thirteen units
 
 The [adaptive suffix-cone certificate](../../05-knowledge/results/chanpak_cone_collision_placement_20261115/SUFFIX_CONES.md#full-rate-certificate-twelve-suffixes-need-one-more-unit-of-memory) proves $H\ge (1.7699)^{n-13}/4000$ whenever a whole thirteen-unit word has reduced rank at least two. Twelve three-unit suffix tags retain one additional predecessor. The exact replay verifies 1,886,507 inequalities, and a separate 20-row Farkas witness excludes the uniform depth-three scheme at the same rate. This is an all-length floor-unit result, not a bound for words with non-unit letters or for the full near-floor conjecture.
+
+
+## (F) Ambient rank-62 continuation
+
+The [syllable bridge](../../05-knowledge/results/chanpak_decimal_ports_rank62_20261115/SYLLABLE_BRIDGE.md) embeds (E) in arbitrary span-three literal contexts. The images of the 13 syllables span a 46-dimensional subspace, with the eight cone coordinates and a 38-dimensional invisible kernel. One literal no-distance-three right cap transfers rank at least two from the full model to the reduced syllable run; no left padding is needed. For $r$ disjoint ambient syllable runs leaving $s$ vertices uncovered in an order-$n$ word, the bound is $H\ge(1.7699)^{n-s-15r}/4000^r$ if the runs are full-rank at least two. Strong prime-count words satisfy this factor-rank condition in their seven-vertex-trimmed bulk. These results do not prove that arbitrary words are densely parseable into syllables. An independent replay also shows that one fixed syllable motif with fixed literal ends cannot realize $1000^k+1$ at all large heights.
