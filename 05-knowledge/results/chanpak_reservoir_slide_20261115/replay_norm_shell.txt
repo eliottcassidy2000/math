@@ -1,0 +1,2 @@
+Exact deck inversions and adjacent controls: 816
+Height one target 1158409232732739 slide positions (0, 1) next odd None
