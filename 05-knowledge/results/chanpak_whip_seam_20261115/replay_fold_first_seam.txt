@@ -1,0 +1,12 @@
+j 3 run 4 q 1 profile 15 242 163:0,255,0|;165:1,511,0|;167:2,255,0|;169:3,511,0|;
+j 3 run 1 q 3 profile 45 726 495:1,320,1|1,475,0|;
+j 3 run 2 q 3 profile 77 1294 897:2,209,1|;899:3,467,0|;
+complete j=3 candidates=3072 states=2959 max=4 mixed=2
+j 4 run 4 q 1 profile 15 514 299:0,511,0|;301:1,1023,0|;303:2,511,0|;305:3,1023,0|;
+j 4 run 1 q 3 profile 45 1542 897:0,320,1|0,475,0|;
+j 4 run 2 q 3 profile 77 2742 1621:2,465,1|;1623:3,979,0|;
+complete j=4 candidates=6144 states=5986 max=4 mixed=2
+j 5 run 4 q 1 profile 15 1058 571:0,1023,0|;573:1,2047,0|;575:2,1023,0|;577:3,2047,0|;
+j 5 run 1 q 3 profile 45 3174 1713:0,640,1|0,832,1|0,987,0|;
+j 5 run 2 q 3 profile 77 5638 3069:2,977,1|;3071:3,2003,0|;
+complete j=5 candidates=12288 states=12039 max=4 mixed=2
