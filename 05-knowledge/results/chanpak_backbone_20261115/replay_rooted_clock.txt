@@ -1,0 +1,4 @@
+literal rooted path DP and backward state decoding: 1051 words
+arbitrary-core two-port literal controls: 360
+ordinal-tail clock literal controls: 160
+rooted word block mass (24/25): finite upward sum 981722/1000000, tail bound 13947137604/19073486328125, total <99/100
