@@ -9,10 +9,10 @@ choices that survive continuation, not to raise the finite coverage limit.
 - **[Repeatable physical digits](REPEATABLE_CLOCK.md).** Two patches
   with the same continuation state have different responses to the
   accumulated address. They can be switched independently at every
-  depth, yielding exactly (2^k) distinct counts at depth (k), with a
+  depth, yielding exactly $2^k$ distinct counts at depth $k$, with a
   greedy exact inverse. Insisting on matching their count response as
   well would erase position: the same repeated switch would yield at
-  most (k+1) counts. The current digits are superincreasing, not a
+  most $k+1$ counts. The current digits are superincreasing, not a
   filled window.
 - **[An adjacent continuation-locked pair](../chanpak_outlet_blocks_20261115/MIXED_RADIX.md).**
   Actual counts 9,971,529 and 9,971,531 have a common continuation
@@ -21,8 +21,8 @@ choices that survive continuation, not to raise the finite coverage limit.
   multipliers preclude independent repetition as a unit switch.
 - **[Two exponential clocks with genuine small windows](../chanpak_backbone_20261115/MULTICONTACT_ADDENDUM.md).**
   Exact rooted transfers and an arbitrary-core readout allow a
-  (2^m/3^m) clock. With fixed triangle or transitive ports one gets
-  (9\cdot2^m+4\cdot3^m+\{-3,-1,1\}) for every (m\ge1), with
+  $2^m/3^m$ clock. With fixed triangle or transitive ports one gets
+  $9\cdot2^m+4\cdot3^m+\{-3,-1,1\}$ for every $m\ge1$, with
   an additional independent reservoir that moves both exponential
   coefficients. Preserving its first two nontrivial slot readings
   at fixed order restricts ordinary count changes to multiples of 48.
@@ -41,18 +41,18 @@ choices that survive continuation, not to raise the finite coverage limit.
 
 - **[Guard clock](GUARD_DEPTH.md).** A scaled 2-adic isometry reads
   depth from the count after its transient. Six towers jointly hit
-  every odd multiple of 3 modulo (9\cdot2^r), at every precision
-  (r), yet their absolute support has size only (O(\log X)).
+  every odd multiple of 3 modulo $9\cdot2^r$, at every precision
+  $r$, yet their absolute support has size only $O(\log X)$.
   Even [changing small strong components between arbitrary guard
   wraps](GUARD_GRAMMAR.md) leaves a sublinear support bound.
 - **[Arbitrary outlet modules with root changes](../chanpak_root_switch_20261115/OUTLET_MODULE.md).**
   A closed four-coordinate physical transfer separates retaining
   a root from switching into a new block. With bounded strong
-  component types, (o(\log X)) root switches cannot produce
-  positive density; in fact the resulting support is (X^{o(1)}).
+  component types, $o(\log X)$ root switches cannot produce
+  positive density; in fact the resulting support is $X^{o(1)}$.
 - **[A sharp bounded-edit obstruction](../chanpak_finite_edit_20261115/FINITE_EDIT.md).**
-  From bounded-count sources, almost every target up to (X) needs
-  roughly (log X/\log\log X) arc reversals even when the
+  From bounded-count sources, almost every target up to $X$ needs
+  roughly $log X/\log\log X$ arc reversals even when the
   source size is not bounded. At exactly two edits, only the crossing
   shape achieves cubic polylogarithmic support; its ternary
   interaction gives a literal factor-pair inverse.
@@ -60,11 +60,11 @@ choices that survive continuation, not to raise the finite coverage limit.
   can be locally complete modulo every power of two while
   remaining sparse. The
   [isolated-zero subclass](../chanpak_finite_edit_20261115/ISOLATED_CROSSING_CORRIDORS.md)
-  has the stronger bound (o(X^{13/20})).
+  has the stronger bound $o(X^{13/20})$.
 - **[Order-eight palette stress test](../chanpak_outlet_blocks_20261115/ORDER_EIGHT_SIEVE.md).**
   Arbitrarily many outlet SCCs of order at most eight still
   miss more than 0.5% of the targets in the fixed progression
-  (1\pmod{390}) in the specified transitive-spine chart.
+  $1\pmod{390}$ in the specified transitive-spine chart.
 
 These results separate three properties: preserving the state
 needed for continuation, making the effect of a choice depend on
