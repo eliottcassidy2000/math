@@ -33,7 +33,7 @@ Decompose \(U=kU_0+u\), \(Z=kZ_0+z\), \(0\le u,z<k\). The reversal identities \(
 $$
  100u=11R_k(z),\qquad 11r_k(u)=100r_k(R_k(z)).
 $$
-If \(u>0\), the first implies \(R_k(z)=(100/11)u>8u\), so their most significant bit indices differ by at least three. The second implies the opposite: since \(v_2(100)=2\), and the valuation of a nonzero reversed word equals its number of leading zeros, those indices differ by precisely two. Hence \(u=0\), \(R_k(z)=0\), and \(z=k-1\). Now \(Ax+U=k(Cx+W)\), \(Dy+Z=k(By+V+1)-1\), so iteration of the fundamental identity proves the claim, constants and parities included. The proof does not classify identities that exchange the two formal outer variables.
+If \(u>0\), the first implies \(R_k(z)=(100/11)u>8u\), so their most significant bit indices differ by at least three. The second implies the opposite: since \(v_2(100)=2\), and the valuation of a nonzero reversed word equals its number of leading zeros, those indices differ by precisely two. Hence \(u=0\), \(R_k(z)=0\), and \(z=k-1\). Now \(Ax+U=k(Cx+W)\), \(Dy+Z=k(By+V+1)-1\), so iteration of the fundamental identity proves the claim, constants and parities included. Transposed comparisons are excluded separately below.
 
 ## Exactly how much mass this orbit quotient removes
 
@@ -49,4 +49,19 @@ by the hyperbola sum: \(F(2^r u,y)=100\cdot2^r u y(1+O(D_0^{-1}))\), and the lea
 The width-\(r\) count is also bounded uniformly by \(O(T\log T\,2^{-r})\), by summing \(T/(100\cdot2^r u)\) over \(u\). The pair has unique width (ratio of its \(x\) addresses), so summing over all widths and both orderings gives total ordered within-orbit off-diagonal energy \(T\ell_T(1+o(1))\). This lower-order contribution cannot supply the order \(T\log^2 T\) second-moment target. Counting each residue modulo 11 separately gives the same asymptotic ratios: the relation \(F(x,y)\equiv x(y+1)\pmod{11}\) uses fixed residue classes of \((u,y)\), and multiplying \(u\) by \(2^r\) just permutes these classes. Every odd residue class modulo 22 is identified by its residue modulo 11.
 
 The quotient keeps one presentation per dyadic transfer orbit, not one per integer output. Any collision between distinct triples \((a,b,j)\) remains.
+
+
+### Transposed rectangular cylinders never match
+
+For a comparison with the other coordinate order,
+\(F(Ax+U,By+V)-F(Dy+Z,Cx+W)\), coefficients again require \(AB=CD\).
+If \(A=kC,D=kB\), the same reversals and reductions modulo \(C,B\) give \(U=kW+u,Z=kV+z\) with the two equations
+$$
+100(k-z)=11(1+r_k(u)),\qquad 100(k-u)=11(1+r_k(z)).
+$$
+If \(C=kA,B=kD\), use \(W=kU+w,V=kZ+v\) instead; modular reductions give
+$$
+100(w+1)=11(1+R_k(v)),\qquad100(v+1)=11(1+R_k(w)).
+$$
+Replacing \(u=k-1-v,z=k-1-w\) makes the equations identical to the first case (using \(R_k(s)=r_k(k-1-s)\)). In either case the equations are impossible. Set \(a=k-u,b=k-z\). If \(2^j\mid a,b\), then \(2^j\mid u,z\) as long as \(2^j\le k\), so \(1+r_k(u),1+r_k(z)\le k/2^j\). It follows that \(a,b\le (11/100)k/2^j<k/2^{j+3}\). If the latter bound is below 1 we have a contradiction; otherwise the top \(j+3\) bits of \(u,z\) are ones, so \(1+r_k(u),1+r_k(z)\) are divisible by \(2^{j+3}\). The equations and \(v_2(100)=2\) imply \(2^{j+1}\mid a,b\). Start at \(j=0\) and iterate to contradiction. This proves that no transposed rectangular comparison can be constant on a full cylinder, even before checking its parity and constant term.
 
