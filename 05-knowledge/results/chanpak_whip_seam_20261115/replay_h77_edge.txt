@@ -1,0 +1,10 @@
+local signatures h=1: 2
+local signatures h=7: 0
+local signatures h=11: 32
+local signatures h=77: 2770
+direct literal checks for 2802 nonsingleton signatures
+bounded signature visits 352 Dbound 77
+N 171 normalized signatures 2 joins 181 0
+N 173 normalized signatures 10 joins 181 1
+N 175 normalized signatures 13 joins 181 1
+N 177 normalized signatures 7 joins 181 0
