@@ -2682,6 +2682,63 @@ family is binary (μ ~ log N), so for one form only the Poisson L² version is a
 | Row collision lemma | OPEN; twisted reformulation |
 | Local limit theorem | program stated; L¹ and L² reductions proved; pointwise needs super-logarithmic multiplicity |
 
+## Wave 31: hosts for a prescribed count — no linear tape, and long prefixes never collide
+
+Session mac-mini-2026-11-15-hosts. Owner prompt: "Work to choose a host that hits the prescribed absolute count. build
+a cone certificate for the 13 units and attack the twisted-collision lemma. Aim for generating creative new methods to
+prove chan-pak, not just extend the range for which we have verified it."
+
+Exploratory throughout. Receipts are in `scripts/w31_receipts.txt`.
+
+### §1. A host for a prescribed count: the linear-tape idea, tested (HYP-9762)
+
+**The method proposed.** The only thing between a carrier form and an exact arithmetic progression is the quadratic
+surcharge a·p(X) of its tape. Suppose some pair of digit gadgets made the host count exactly affine,
+H = D·X + E. Then choosing the host for a prescribed N would be division with remainder, and finitely many
+progressions covering the odd residues would prove Chan–Pak.
+
+**What was tested.** A direct search over one-apex hosts: gadgets of up to 3 vertices, all marks, a 3-cycle core.
+- 442,598 hosts with no affine one.
+- 563,500 hosts with no affine-plus-digit-sum one.
+
+**Why it fails.**
+- By the cut formula H(T + x) = H(T) + 2W(X), the tape dependence is a cut function of the nonnegative path-weight
+  matrix Π.
+- Its quadratic part, −Σ_{X×X} Π, cannot cancel by positivity.
+- Intermediate gadgets multiply long-range weights, so every pair of digits interacts.
+
+**What a circumvention would need.** A counter v ↦ 2v + b, i.e. a unipotent element in some port algebra. Floor units
+have single nonzero eigenvalues, and span-2 blocks have eigenvalue 1 at most simple. But the Hankel laws do subtract
+(H(WAB) = 4H(WA) − 3H(W)). So the place to look is multi-port algebras with negative coefficients, not single tapes.
+
+### §2. The twisted collision: long prefixes never collide (HYP-9752 update, PROVED)
+
+- **Statement.** For prefixes w ≥ ((2c + 3κ)/(2κ))·2^l + O(1), the reversed difference is forced to vanish, and the
+  remaining equation has no solution. So N(l, w) = 0 there.
+- **Meaning.** Every collision of a carrier row is balanced: the two inputs share at most about half their leading
+  bits, and the row is injective on blocks of length about √U.
+- **Check.** No collision has w ≥ 8·2^l at L = 20.
+- **What is left.** The lemma is now reduced to the balanced range w < W₀(l). There the bound N(l, w) ≤ C 2^l/(1 + w)
+  is still open.
+
+### §3. The 13-unit cone certificate: not built
+
+- **Why the wave-29 certificate does not extend.** It tracked image planes, and with 13 units these rotate
+  continuously.
+- **The planned replacement, not carried out.** A syllable certificate: cut words into k-unit syllables that are not
+  rank one, and find a piecewise-linear antinorm on the 8-dimensional reachable cone expanded by every such syllable.
+- **The difficulty.** Compatible runs that are not yet rank one have floor-like growth for up to 3 units. So
+  syllables must be long enough to exclude them, which makes the LP large.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| No affine or affine-plus-digit-sum one-apex tape (gadgets ≤ 3 vertices) | FINITE-EXACT; general form CONJECTURE (HYP-9762) |
+| Long-prefix collisions vanish (N(l, w) = 0 for w ≥ W₀(l)) | PROVED |
+| Row collision lemma in the balanced range | OPEN |
+| 13-unit growth certificate | not built; plan stated |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.

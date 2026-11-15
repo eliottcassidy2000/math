@@ -79,3 +79,22 @@ The lemma remains OPEN.
 
 
 **Further partial follow-up, 2026-11-15.** The [two-ended lattice reduction](../results/chanpak_cone_collision_placement_20261115/TWISTED_LATTICES.md) excludes every negative reversed displacement for the physical rows and proves that spans below $(1/(\log_2 6-1/3)-\epsilon)L$ contribute $o(2^L)$ by a slope-adapted digit split. Infinite positive-slope collision rays persist; the same-direction long-span estimate and linear energy remain open.
+
+## Update (wave 31): long prefixes never collide (PROVED)
+
+In the twisted form, write δ = rev(y) − rev(x). Then
+
+    2κwδ = R₀ + κ rev(x) − [c(x − y) + κ(p(x) − p(y))],
+
+with |R₀| ≤ κw + (c + κ)2^(l−1) + O(κ + φ) and the bracket bounded by (c + κ)2^(l−1) + O(1).
+- *δ vanishes.* For w ≥ W₀(l) = ((2c + 3κ)/(2κ))·2^l + O(1) the right side is less than 2κw in absolute value, so
+  δ = 0 and y = x.
+- *No solution.* The equation then reduces to −κ rev(x) = κw + κw₀ + κ − (c + κ)2^(l−1) − κ[x < 2^(l−2)]. Its right
+  side is positive once w > (c + κ)2^(l−1)/κ + O(1), so there is no solution.
+
+Hence **N(l, w) = 0 for w ≥ W₀(l)**. Every collision is "balanced": U and U' share at most about half their leading
+bits, so the row is injective on every block [2^l w, 2^l(w+1)) with w ≥ W₀(l), roughly on intervals of length √U.
+
+Exact check (3-cycle row, L = 20): no collision has w ≥ 8·2^l. The lemma's remaining content is the balanced regime
+w < W₀(l), where the measured collisions live (prefix lengths 4–7 bits at L = 20). There the claim is still
+N(l, w) ≤ C 2^l/(1 + w).

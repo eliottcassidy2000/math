@@ -1,0 +1,11 @@
+Wave 31 receipts (mac-mini-2026-11-15-hosts). Exploratory.
+
+w31_linear_tape_search.c L kmax: one-apex hosts [guard][tape of digit gadgets for the bits of X][3-cycle core][guard] + apex,
+  gadgets of 1..kmax spine vertices with internal back arcs and apex marks, all core masks and guard marks.
+  L=3 kmax=2: 10 gadgets, 6,850 hosts tested, hosts with H exactly affine in X: 0
+  L=3 kmax=3: 74 gadgets, 442,598 hosts tested, affine: 0
+w31_affine_digitsum_tape_search.c (H = A + B X + C s2(X)):
+  L=4 kmax=2: 10,504 tested, hits 0;  L=3 kmax=3: 563,500 tested, hits 0
+
+Large-prefix check (row 18U + 3p(U) + 2[U odd], L = 20, exact): collisions with prefix w >= 8*2^l: 0
+  (the proof gives N(l,w) = 0 for w > (2c+3k)/(2k) * 2^l + O(1) = 7.5 * 2^l + O(1) here).
