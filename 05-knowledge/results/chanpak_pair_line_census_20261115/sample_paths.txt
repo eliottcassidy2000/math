@@ -1,0 +1,14 @@
+05-knowledge/results/session33_continuation_states_20261023/metagraph-memory/NOTE.md
+05-knowledge/results/square_sum_book_height_20261019/README.md
+05-knowledge/results/collatz_procgen_20260923_cube_theta.md
+05-knowledge/results/saturated_barrier_gold_20261019/SATURATED_BARRIER_GOLD.md
+05-knowledge/results/finite_dilation_and_power_equivariance_repair_20261020/README.md
+05-knowledge/results/reset_two_debt_families_20261004.md
+05-knowledge/results/session26_random_bridges_20261022/session26-fixed-apex/proof.md
+05-knowledge/results/continuation_width_symmetry_20261020/incoming.md
+05-knowledge/results/square_sum_ppt_exact_positivity_threshold_20261019.md
+05-knowledge/results/boundary_support_20261020_metagraph.md
+05-knowledge/results/lrc14_bounded_ten_body_parity_free_thm4442_independent_audit.md
+05-knowledge/results/collatz_five_mirrors_20260929_audit.md
+05-knowledge/results/planar_jc48_sep08_five_two_one_audit.md
+05-knowledge/results/squarefree_cycle_inventory_20261019/SQUAREFREE_CYCLE_BRIDGES.md
