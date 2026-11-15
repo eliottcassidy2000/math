@@ -1,0 +1,3 @@
+guarded labelled hosts 1099 through 63: [3, 5, 9, 15, 17, 27, 33, 37, 51]
+single contacts at n=6: [95, 79, 69, 61, 51, 33] double witness (2,3): 63
+240 mod-9 monomial iteration controls
