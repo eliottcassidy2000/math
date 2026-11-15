@@ -1,0 +1,3 @@
+one reversed edge profile and guard: (9, 84, 25, 41, 7) 73
+one reversed edge profile and guard: (9, 84, 23, 41, 7) 71
+Exact inverse over both tails: all targets through 2300 and five larger controls
