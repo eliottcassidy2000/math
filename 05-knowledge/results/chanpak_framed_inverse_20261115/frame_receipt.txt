@@ -1,0 +1,1 @@
+Passed through staircase order 7 and all fence graphs through order 4.
