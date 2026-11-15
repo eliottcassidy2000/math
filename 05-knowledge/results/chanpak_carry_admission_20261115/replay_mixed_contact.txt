@@ -1,0 +1,21 @@
+marked h,Q,S,N ; literal checks at s=1..4: 11 100 64 41 two triangles? False
+marked h,Q,S,N ; literal checks at s=1..4: 13 104 62 43 two triangles? False
+marked h,Q,S,N ; literal checks at s=1..4: 23 272 52 45 two triangles? True
+marked h,Q,S,N ; literal checks at s=1..4: 9 84 59 23 two triangles? False
+marked h,Q,S,N ; literal checks at s=1..4: 9 84 25 25 two triangles? False
+marked h,Q,S,N ; literal checks at s=1..4: 9 84 25 27 two triangles? False
+marked h,Q,S,N ; literal checks at s=1..4: 17 224 17 29 two triangles? True
+marked h,Q,S,N ; literal checks at s=1..4: 15 108 19 31 two triangles? False
+marked h,Q,S,N ; literal checks at s=1..4: 9 84 25 33 two triangles? False
+marked h,Q,S,N ; literal checks at s=1..4: 17 224 119 35 two triangles? True
+marked h,Q,S,N ; literal checks at s=1..4: 15 108 53 37 two triangles? False
+marked h,Q,S,N ; literal checks at s=1..4: 49 872 461 235 two triangles? False
+marked h,Q,S,N ; literal checks at s=1..4: 41 712 469 237 two triangles? True
+marked h,Q,S,N ; literal checks at s=1..4: 103 1316 152 239 two triangles? True
+marked h,Q,S,N ; literal checks at s=1..4: 29 580 226 241 two triangles? True
+marked h,Q,S,N ; literal checks at s=1..4: 99 1236 156 243 two triangles? True
+marked h,Q,S,N ; literal checks at s=1..4: 101 1312 154 245 two triangles? True
+marked h,Q,S,N ; literal checks at s=1..4: 77 1048 433 247 two triangles? True
+marked h,Q,S,N ; literal checks at s=1..4: 81 1140 174 249 two triangles? True
+marked h,Q,S,N ; literal checks at s=1..4: 59 880 196 251 two triangles? True
+No old ordinal one-apex profile (23,272); bounded factor bank exhausted.
