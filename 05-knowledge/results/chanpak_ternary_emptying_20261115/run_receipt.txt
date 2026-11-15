@@ -1,0 +1,3 @@
+canonical apex-run controls: 4095 63 words: ['1001100', '1100110']
+ternary precision through 3^7; checked physical triangle inflation and automorphism control
+{'100': 5, '10010': 15, '1000110': 45, '1100110': 63, '1001100': 63}
