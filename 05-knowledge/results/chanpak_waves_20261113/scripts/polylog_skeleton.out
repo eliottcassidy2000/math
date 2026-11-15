@@ -1,0 +1,5 @@
+X = 10^3: words J^a0 JOZ J^a1 with count <= X: 45
+X = 10^6: words J^a0 JOZ J^a1 with count <= X: 211
+X = 10^9: words J^a0 JOZ J^a1 with count <= X: 528
+X = 10^12: words J^a0 JOZ J^a1 with count <= X: 946
+X = 10^15: words J^a0 JOZ J^a1 with count <= X: 1486

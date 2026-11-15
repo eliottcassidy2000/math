@@ -1,0 +1,4 @@
+order 10 exact: band points 230105, classes in band 1326648, lambda 5.77, occupancy 0.714 -> collision factor k = 4.60
+order 10 (samples 100000): ridge f = 30651 + 15.68 h, residual sd 3521; P(band) 0.1347; band points 228100; lambda 5.7; predicted occupancy 0.7134
+order 11 (samples 100000): ridge f = 167515 + 17.70 h, residual sd 18087; P(band) 0.1401; band points 12353531; lambda 10.2; predicted occupancy 0.8923
+order 12 (samples 60000): ridge f = 1000198 + 19.72 h, residual sd 101486; P(band) 0.1454; band points 199944946; lambda 112.1; predicted occupancy 1.0000

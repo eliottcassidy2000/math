@@ -1,0 +1,4 @@
+n=7: 156 profiles (0 violate the congruences); center (77,1084), sd (42,406); occupancy +-0.1sd: 7/35 = 0.200; +-0.25sd: 23/187 = 0.123; +-0.5sd: 43/707 = 0.061
+n=8: 1727 profiles (0 violate the congruences); center (312,4996), sd (154,1810); occupancy +-0.1sd: 70/230 = 0.304; +-0.25sd: 257/1469 = 0.175; +-0.5sd: 554/5801 = 0.096
+n=9: 50173 profiles (0 violate the congruences); center (1412,25434), sd (655,8988); occupancy +-0.1sd: 2354/9900 = 0.238; +-0.25sd: 7887/61445 = 0.128; +-0.5sd: 16705/245672 = 0.068
+n=10: 1550357 profiles (0 violate the congruences); center (7078,141594), sd (3115,48986); occupancy +-0.1sd: 69662/127400 = 0.547; +-0.25sd: 228681/795099 = 0.288; +-0.5sd: 487292/3179878 = 0.153

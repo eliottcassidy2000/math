@@ -23,6 +23,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | Conditional: the Staircase-Run Conjecture implies the exceptions are exactly {7, 21} | busch §5 |
 | The invertible root-change blocks generate a group Zariski-dense in GL_3; the transfers of one apex and one hub are triangularizable with weights {1, 2}, of two hubs with weights {1, 2, 3} | wave 23 |
 | The invertible root-change blocks generate {g in GL_3(F_p) : det g in <2>} modulo every odd prime, and the analogous group modulo every odd modulus q (strong approximation with S = {2}, through Heisenberg unipotents, an opposite flag and the p-adic lift); every invertible block is [[b−Q, −1, b], [1, 0, 0], [2^n−R, 0, 2^n]] with Hammersley-net digits; long random invertible words have the Haar local law, with prime singular series (7/8)ζ(3) | wave 24, THM-5162 |
+| No Heisenberg (unipotent) orbit lies inside the invertible root-change semigroup; F_2 = (-1)^n H (mod 3), F_2 = 0 (mod 4); the cyclic join is 3N = Re(alpha_A conj alpha_B) in Z[sqrt(-2)] | wave 25, THM-5172 |
 
 ### What is only verified
 
@@ -33,6 +34,7 @@ proof architectures are alive, and which are closed, with the evidence for each 
 | interval-hub words (u2's out-set an interval), m ≤ 23 | every odd N < **26,610,535** except 7 and 21 (new today; binary-scale horizon 3–5·2^m) |
 | O/Z/J root-change words (KNOWN: THM-4904, HYP-9494 (D)) | every odd N in (2647, 10^9]; the wave-19 decoder adds random samples near 10^12 and 10^15 |
 | invertible root-change language: a one-apex source, then invertible blocks only, no resets (HYP-9682) | every odd N in (6223, 2^26]; the 16 blocks with \|w\| ≤ 5 alone: (12,811, 2^26]; the orbit of (1,1,1,1) alone: (179,367, 2^26] (wave 24) |
+| cyclic joins A -> B -> c -> A of two cores of order <= 10 (the two-core host) | every odd N in (36,833, 2,398,737] (wave 25) |
 | bounded runs ≤ 5, the 63 matrices of HYP-9677 | every odd N in (10,391, 2^24] (wave 20; the record was 2^19); runs ≤ 4 (31 matrices): every odd N in (130,247, 2^25] |
 | Fermat-block cuts of order-≤9 sources | every odd N in [69, 398,129] |
 | span-2 ribbons | every odd N ≤ 100,000 except 7, 21 and 47 |
@@ -106,6 +108,8 @@ like the one-hub transfer. What separates them is the rank of the weight group: 
 
 **Update (wave 24).** The invertible sub-language is the clean form of the conjecture. It is a one-apex source followed by invertible blocks only, so it has no singular block, no reset and no confinement. Wave 20's "invertible blocks miss 34%" came from capping the source at four letters. With a free source the language misses exactly 43 odd numbers below 2^26, the largest 6223 (HYP-9682). Its local half is now proved (THM-5162): the blocks generate {g : det g in <2>} modulo every odd prime, and long random words have the Haar law. The census matches that law to three decimals, and primes get the singular series (7/8)ζ(3) ≈ 1.052 instead of a deficit. Density one, and with it the proof by contradiction of wave 23, now needs only the archimedean / minor-arc half of an L² local limit law. The data give V(X) ≈ 8/mean(X) → 0, and the walk mod p has a uniform spectral gap (λ₂ ≤ 0.565 for all odd p ≤ 43).
 
+**Update (wave 25).** The owner's two-core program is now quantified. Fixing the target N and the first core A puts the second core on a lattice line; in Z[sqrt(-2)] this line is perpendicular to alpha_A = (f_A - 3h_A) + f_A sqrt(-2). It contains an actual profile as soon as the (H, F_2) cloud of the second core's order fills its ridge band. The exact census to order 10 shows the band filling: 30% at order 9, 71% at order 10, and a calibrated model predicts fullness at order 12. With cores of order <= 10 the host already attains every odd N in (36,833, 2,398,737]. Band fullness from order 12 on, together with the census below 2^32, would close Chan–Pak (HYP-9692). Readers of every scale bridge the gaps between orders, which a one-dimensional local limit law could not do. The Heisenberg route inside the semigroup is closed: no unipotent orbit fits (THM-5172).
+
 ## Rule 30: the three prize problems
 
 ### Repository program (36 theorems, THM-3456 … THM-4210)
@@ -143,7 +147,9 @@ quantified in the LFSR and FCSR models; the quadratic-register model is next.
 
 ## Ranked next moves
 
-1. Prove density one (V(X) → 0) for the invertible root-change orbit, HYP-9682. Its local half is THM-5162; what is
+1. Prove band fullness, a two-dimensional local limit theorem for (H, F_2) of random tournaments in the ridge band,
+   from order 12 on (HYP-9692): with the cyclic-join host it closes Chan–Pak. Parallel target: density one (V(X) → 0)
+   for the invertible root-change orbit, HYP-9682. Its local half is THM-5162; what is
    missing is the archimedean / minor-arc half, in the Apollonian regime (critical exponent 1.28 against 1.3056). The
    concrete open question is whether some semigroup family realizes a full orbit of the Heisenberg group of
    THM-5162 (B), the analogue of the circle stabilizers that Bourgain–Kontorovich used (wave 24; Chan–Pak).

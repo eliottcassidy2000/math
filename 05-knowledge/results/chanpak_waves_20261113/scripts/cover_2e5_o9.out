@@ -1,0 +1,13 @@
+profile values used: 182869  of which bulk: 49529
+X=200000: missed odd N: 10330; the first 40: [1, 7, 13, 19, 21, 25, 29, 31, 35, 39, 41, 43, 45, 49, 53, 55, 57, 59, 61, 63, 67, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 97, 101, 103, 105, 109, 113, 115, 119, 121]; largest 199997
+  misses above 1000: [1001, 1003, 1007, 1009, 1011, 1013, 1015, 1021, 1023, 1027, 1031, 1033, 1037, 1039, 1045, 1051, 1053, 1055, 1057, 1061, 1063, 1067, 1069, 1071, 1073, 1075, 1079, 1081, 1085, 1087] (count 9981)
+  bulk-B only: misses above 1000: 36774; largest 199999
+  primes in [1e5,200000]: min r = 0 (at 100291), mean r = 3.4; all odd N in that window: mean r = 6.9
+  [2^10,2^11): missed 322 of 512; mean r 1.03; min r 0; missed by N mod 3: 52 136 134
+  [2^11,2^12): missed 486 of 1024; mean r 1.49; min r 0; missed by N mod 3: 103 203 180
+  [2^12,2^13): missed 731 of 2048; mean r 2.60; min r 0; missed by N mod 3: 46 347 338
+  [2^13,2^14): missed 1507 of 4096; mean r 4.94; min r 0; missed by N mod 3: 1 747 759
+  [2^14,2^15): missed 1269 of 8192; mean r 10.53; min r 0; missed by N mod 3: 0 627 642
+  [2^15,2^16): missed 206 of 16384; mean r 9.58; min r 0; missed by N mod 3: 1 97 108
+  [2^16,2^17): missed 1775 of 32768; mean r 7.91; min r 0; missed by N mod 3: 1 885 889
+  [2^17,2^18): missed 3676 of 34464; mean r 6.67; min r 0; missed by N mod 3: 1 1812 1863
