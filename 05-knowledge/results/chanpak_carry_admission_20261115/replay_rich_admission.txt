@@ -1,0 +1,11 @@
+Old alphabet distinct profiles through Q2=5640 (incl empty): 173
+Literal new-slot profile switch: (345,5640,45225) vs (345,5640,44505)
+Portal skeleton 1 [3, 1]
+Portal skeleton 2 [13, 10, 2]
+Portal skeleton 3 [91, 101, 44, 6]
+Portal skeleton 4 [877, 1250, 822, 240, 24]
+Matched-portal literal HP counts: 112665 111225
+Exact borrow pair literal at j=5,6,7; stronger core has two disjoint triangles.
+Guarded k=1: 8 literal configurations, 4 distinct (H,Q2) profiles
+Guarded k=2: 64 literal configurations, 35 distinct (H,Q2) profiles
+Guarded k=3: 512 literal configurations, 249 distinct (H,Q2) profiles
