@@ -1,0 +1,2 @@
+Effective-word position and offset checks: 28688
+Two independent literal marked-tournament multiplier-three checks
