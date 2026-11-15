@@ -1,5 +1,7 @@
 # Exact seam rigidity and a near-floor gap for uniquely Hamiltonian tournaments
 
+**Stronger follow-up:** [the second Busch gap and a growing forbidden band](../chanpak_second_gap_20261115/README.md) eliminates the two-cycle case at excess 4 and proves a lower bound of order n for any positive excess.
+
 Let H count directed Hamiltonian paths, C count directed Hamiltonian cycles up to cyclic rotation, and f(n) be the Busch minimum for strong tournaments.
 
 **Proved.**
