@@ -1,0 +1,3 @@
+literal paths and covers 254
+exact-rational seam and boundary instances 280
+false cross-scale pairs eliminated 16
