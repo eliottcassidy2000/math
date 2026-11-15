@@ -1,0 +1,2 @@
+exact lower-bound witnesses for each suffix width 1..12
+literal profile-sheet floor controls: 3048
