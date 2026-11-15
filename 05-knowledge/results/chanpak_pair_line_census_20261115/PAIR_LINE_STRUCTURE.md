@@ -213,7 +213,7 @@ prime corridor to independent sets, then use exact exponents to handle
 the 7p cases. This cannot prove coverage, but changes which source
 combinations are worth attempting.
 
-## 7. Repairing a concrete band construction: joint dyadic and ternary units
+## 7. Repairing a concrete band construction: joint dyadic, ternary and quinary units
 
 The simpler inherited bank (5,32) and (11,100) gives
 N=6·32^e·100^j·2^t−5^e·11^j through the fixed physical reader 6q−h.
@@ -223,20 +223,21 @@ prime-compatible branch. This does not refute its geometric-band theorem:
 the issue is forced divisibility in the part meant to seed hard targets.
 
 Replace the toggle by order-eight strong profiles (223,4096) and (599,8192),
-codes 10760449 and 18975246. The three literal primitive components
-(including order-five code 548 with (11,100)) have no cross-atom conflict.
+codes 10760449 and 18975246. Adjoin the order-eight toggle (217,4096), code 27280129. The four
+literal primitive components (including order-five code 548 with (11,100))
+have no cross-atom conflict.
 Their ordinal products and padding, sent through the same physical reader
 6q−h, realize
 
-    N(e,f,j,t) = 6·2^(12e+13f+t)·100^j − 223^e·599^f·11^j,
+    N(d,e,f,j,t) = 6·2^(12d+12e+13f+t)·100^j − 217^d·223^e·599^f·11^j,
 
-with e,f∈{0,1}, j≥1, t≥0. Every value is coprime to 2·3·5·11 and to the selected toggle primes:
+with d∈{0,1,2,3}, e,f∈{0,1}, j≥1, t≥0. Every value is coprime to 2·3·5·11 and to the prime factors of selected toggles:
 for prime factors of the centre use the nonzero offset, and conversely
 for factors of the offset use the nonzero centre. This is not a primality
 claim.
 
-**Joint band theorem.** Fix dyadic exponent r≥3 and ternary exponent s≥1.
-For every unit residue a modulo 2^r·3^s and every open I⊂(1,2), the above
+**Joint band theorem.** Fix exponents r≥3 and s,v≥1.
+For every unit residue a modulo 2^r·3^s·5^v and every open I⊂(1,2), the above
 family has Ω(K) distinct counts in 2^K I congruent to a, for all sufficiently
 large K (constants may depend on the fixed parameters).
 
@@ -254,10 +255,17 @@ the centre difference between u and v has valuation ≥3+v₃(u−v) since
 v₃(100²−1)=2; the offset difference has valuation 1+v₃(u−v) since
 v₃(11²−1)=1. Thus the full difference has valuation exactly
 1+v₃(u−v). The map on u modulo 3^(s−1) is a bijection onto the residue
-class already prescribed modulo 3. Combine its solution with the dyadic
-condition by CRT to obtain one progression for j.
+class already prescribed modulo 3. The new toggle satisfies 217≡1 modulo 8 and modulo 3, so the choices
+of e,f did not depend on d. Take j≥ceil(v/2), making the centre
+vanish modulo 5^v. Because 217≡2 modulo 5 is a primitive root there
+and 11≡1, there is a unique d∈{0,1,2,3} solving the residue modulo 5.
+Before lifting the ternary residue, fix this d; its presence does not
+change either valuation estimate above. Modulo 5^v the remaining
+condition for j is exactly one residue modulo 5^(v−1), since
+v₅(11−1)=1 gives the full subgroup congruent to 1 modulo 5.
+Now combine the dyadic, ternary and quinary j conditions by CRT.
 
-**Geometric choice.** Put B_j=log₂(6·2^(12e+13f)·100^j) and set
+**Geometric choice.** Put B_j=log₂(6·2^(12d+12e+13f)·100^j) and set
 t=K−floor(B_j), so the scaled centre is 2^{frac(B_j)}.
 On the permitted progression for j, B_j modulo M is an irrational
 rotation because log₂100 is irrational. Restrict B_j modulo M to
@@ -274,7 +282,7 @@ If two such j give the same count, the power 2^min(t,t') divides
 11^{|j−j'|}−1, impossible for large K: its valuation is 1 for odd
 difference and 2+v₂(|j−j'|) otherwise. This proves distinctness.
 
-The repair matters because it lifts geometry and two local arithmetic
+The repair matters because it lifts geometry and three local arithmetic
 coordinates without ever reintroducing the forced factor 5. Nevertheless,
 the entire family still has O((log X)^2) distinct counts up to X:
 for N≤X, its centre is at most 6X/5 by h≤q/2, bounding j,t by O(log X).
