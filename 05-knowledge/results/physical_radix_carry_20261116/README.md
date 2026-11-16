@@ -36,6 +36,10 @@ some such squares, and leaves readers or cuts free to change.
   against a 3^t baseline. This selects a residual, not a target
   baseline; the address itself changes both ports' absolute counts.
 
+[Low-digit budget](BUDGET.md) proves why merely increasing the
+spacer, even allowing all its marks on the three exhibited outer
+states, cannot fill the larger low bank.
+
 Independent subset DP and direct grouped sums run with
 `python3 check_carry.py`; the exact transfer-span certificate runs
 with `python3 check_two_apex.py`. The new carry is physical,
