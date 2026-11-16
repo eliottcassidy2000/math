@@ -70,3 +70,34 @@ addition to the union of packs inside the two witnesses,
 which weighs p+q−1. This proves the claimed lower bound.
 Of the proposed offsets only c=−3 meets the lower bound;
 the c=−1 and c=+1 rows require more overlap or modification.
+
+### A two-vertex overlap at the low offsets forces a Fermat summand
+
+Assume the two induced witnesses intersect in at most two
+vertices and the joined count is at most p+q+1. By the previous
+bound, their overlap must be a pair {r,s}. The packs internal to
+either witness weigh p+q−1 in total, since their only common
+pack is empty. If a triangle in one witness avoids {r,s}, it is
+disjoint from any triangle of the other, giving another weight
+4. Thus every triangle in both witnesses meets {r,s}. If each
+witness has a triangle meeting the pair in just one vertex,
+choose these two triangles. If they use different vertices,
+the disjoint pack again contributes 4; if they use the same
+one, the two-triangle strong wedge contributes mixed weight
+at least 4 by the preceding proof. Both are impossible.
+Consequently in at least one witness **all triangles use both
+r and s**.
+
+Deleting either r or s from that witness leaves a transitive
+tournament. They therefore have two insertion positions in
+the same transitive spine. To have any triangle, the arc
+between them must run backward across a nonempty interval of
+m spine vertices. All directed cycles are the backward arc
+closed by an increasing subset of those m vertices; the odd
+cycles use odd subsets, and none can be packed together.
+The witness count is 1+2^m. Primality implies m is a power of
+two (an odd divisor of m would give an elementary factorization).
+Thus at least one summand must be a Fermat prime.
+This restriction is for the low offsets and for **induced**
+witnesses with at most two common vertices, not for arbitrary
+physical preparation of the gluing inputs.
