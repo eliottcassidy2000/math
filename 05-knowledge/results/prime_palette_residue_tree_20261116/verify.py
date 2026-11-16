@@ -55,9 +55,14 @@ def main():
     print('Small bank:',B,signature((3,5),B))
     print('Wide bank:',W,signature(P,W))
     data=json.loads(Path(__file__).with_name('witnesses.json').read_text())
-    req=set(B)|set(W)|({x for x in range(1,64,2)}-{7,21})|{343}|{7*p for p in P if p not in (3,7)}
+    req=set(B)|set(W)|({x for x in range(1,64,2)}-{7,21})|{343,469}|{7*p for p in P if p not in (3,7)}
     assert set(map(int,data))==req
     for k,v in data.items(): assert H(v)==int(k),(k,v)
+    for k in range(4,14):
+        blocked=[t for t in range(1<<k) if bin(t)[2:].startswith(('11','1010'))]
+        assert len(blocked)==5*(1<<(k-3))-2
+    for p in (67,83):
+        assert len({pow(2,j,p*p) for j in range(p*(p-1))})==p*(p-1)
     print(len(data),'literal witnesses independently verified by permutations')
 if __name__=='__main__':
     main()
