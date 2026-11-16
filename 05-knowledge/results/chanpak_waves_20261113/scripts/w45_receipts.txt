@@ -1,0 +1,43 @@
+# wave 45 receipts (mac-mini-2026-11-16-charge)
+## w45_seam_start_check.py
+seam identity H = 3H(T+) + 2*H_start(A): 200 of 200 hold
+one-apex closed form c(u) = sum over (0 before 1) of w(dist), w=1,1,2,4,..: failures 0
+## w45_charge.py
+charge identities (append and top shield): 120 random rooted tournaments, failures 0
+## w45_sandwich.py
+sandwich register machine: W' = C W failures 0 ; H readout failures 0 (120 random)
+## w45_kmid.py
+k-apex matrix transfer vs brute force: failures 0 of 60
+## w45_gadgets.py
+gadget matrix formula: failures 0 of 150
+|G|<=3: 18 continuation classes; 0 carry 2+ deposit columns; with g=1: 0
+|G|<=4: 62 continuation classes; 2 carry 2+ deposit columns; with g=1: 0
+   continuation (g,s2,aall,geo) = (3, 9, 24, 3) deposits (s2p,aA,gst): [(3, 3, 0), (5, 6, 1)]
+   continuation (g,s2,aall,geo) = (3, 12, 24, 0) deposits (s2p,aA,gst): [(10, 15, 2), (12, 18, 3)]
+|G|<=5: 314 continuation classes; 28 carry 2+ deposit columns; with g=1: 0
+   continuation (g,s2,aall,geo) = (3, 6, 48, 0) deposits (s2p,aA,gst): [(6, 33, 0), (6, 39, 0)]
+   continuation (g,s2,aall,geo) = (3, 9, 24, 3) deposits (s2p,aA,gst): [(3, 3, 0), (5, 6, 1)]
+   continuation (g,s2,aall,geo) = (3, 9, 48, 3) deposits (s2p,aA,gst): [(3, 9, 0), (5, 15, 0)]
+   continuation (g,s2,aall,geo) = (3, 12, 24, 0) deposits (s2p,aA,gst): [(10, 15, 2), (12, 18, 3)]
+## w45_rays.py
+physical span dimension: 7
+modules: 2552
+rays by lambda: {'2': 20, 'None': 87, '4': 16, '8': 24, '267/23': 4, '3': 62, '16': 48, '737/31': 16, '7961/253': 24, '5': 72, '11/2': 2}
+lambda=2: 20 exact rays H -> lam H + charge, 20 with nonzero charge; digit pairs (joint Hankel rank 2): 0
+lambda=3: 40 exact rays H -> lam H + charge, 0 with nonzero charge; digit pairs (joint Hankel rank 2): 0
+## w45_readers_alltops.py 1 2 8 / 2 2 6 / 2 3 6
+k=1: 4 states, reachable dim 4
+  lam=2: readers checked 511; Horner readers with a nonzero digit: 0
+k=2: 24 states, reachable dim 20
+  lam=2: readers checked 10922; Horner readers with a nonzero digit: 0
+k=2: 24 states, reachable dim 20
+  lam=3: readers checked 10922; Horner readers with a nonzero digit: 0
+## w45_readers.py 1 2 6 6 / 2 2 4 4 / 2 3 4 4
+k=1 lam=2: readers 127, tops 127; (pair,reader) with some good top: 0; with a nonzero digit: 0
+k=2 lam=2: readers 682, tops 341; (pair,reader) with some good top: 0; with a nonzero digit: 0
+k=2 lam=3: readers 682, tops 341; (pair,reader) with some good top: 0; with a nonzero digit: 0
+## w45_tworoot.py (orders 3-5)
+n=3 done, odometer seeds so far 0 (tests 192)
+n=4 done, odometer seeds so far 0 (tests 3264)
+n=5 done, odometer seeds so far 0 (tests 85184)
+## done rc=0

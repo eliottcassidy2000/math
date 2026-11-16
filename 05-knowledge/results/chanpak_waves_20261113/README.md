@@ -3929,6 +3929,184 @@ relations, 2^10 − 10^3 = 24 (128 − 125 = 3 on the norm-three orbit of 1 + �
 | H(P_7) = 21·9 with Aut(P_7) acting freely, so {7, 21} = {V, Aut} | PROVED (free action); FINITE-EXACT counts |
 | cyclotomic and Jacobian readings | ANALOGY |
 
+## Wave 45: conserved charges (why digits stay single-use at a fixed root), the charge coordinate (append ×2, shield ×3) and the rows of chains
+
+Session mac-mini-2026-11-16-charge. Owner prompt:
+- run the second-apex seam search (P106), or better ideas;
+- merge how 3q + 2 and 3q + 4 relate to Collatz and 3x − 1;
+- change the continuation so that it can accept another fresh digit;
+- investigate prior sessions on +2 and ×2 recursions;
+- "odd numbers in rows of chains, each chain growing by doubling, starting from each odd".
+
+Prior work this wave builds on (survey of the +2 / ×2 lane):
+- THM-5126: Chan–Pak ⇔ every line {1 + c·2^s} (c odd) lies in the spectrum except 7, 21; proved for c ≤ 129.
+- THM-5272: T(h) = 3h and D(h) = 2h − 1 satisfy D(T(h)) − T(D(h)) = 2.
+- [inverse_fences_landing_20261116/INVERSE.md](../inverse_fences_landing_20261116/INVERSE.md): the rooted append
+  (h, g, r, s) ↦ (h + 2r, g, r + s − g, r + s); ready seeds 13, 23, 41, 59, 75, 95; no ready root at 27.
+- [session261 wildcard PROOF.md](../session261_creative_chanpak_20261111/wildcard/PROOF.md): Chan–Pak would follow from
+  seeds in [B, 2B − 1] with certified binary cylinders; none supplied.
+- W:324 here: 3H, 3H + 2, 3H + 4 are m ↦ 3m − 1, 3m, 3m + 1 with m = (H + 1)/2.
+
+Scripts are `scripts/w45_*`, with outputs in `scripts/w45_receipts.txt`.
+
+### §1. The seam digit counts the paths that start at the hub (PROVED; 200 random checks)
+
+In the hub seam theorem, Ψ = H_start(A), the number of Hamiltonian paths of T that start at A:
+
+    H(C3 ⇒_A T) = 3·H(T_+) + 2·H_start(A).
+
+*Proof.* Only A → x leads from T back into the triangle. So a Hamiltonian path uses T in one run, or in two runs
+split as T_1 (ending at A), x…, T_2. Counting the triangle orderings in each case gives
+H(C3 ⇒_A T) = 3H(T) − H_start(A) + 3E, with E = Σ_{P ends at A} H(T − V(P)) (P = (A) included, H(∅) = 1).
+The same split in T_+ gives H(T_+) = H(T) − H_start(A) + E. Subtract three times the second. ∎
+
+The source corollary becomes immediate: a source of T − A opens every Hamiltonian path of T − A.
+
+### §2. The charge principle
+
+A digit family is reusable exactly when its counts form a Horner series. Write the construction as modules M_j acting on
+a register vector, with the count read by a linear functional h. Then the family is reusable iff
+
+    h·M_j = λ·h + d_j·φ   and   φ·M_j = φ   for every digit j, on the reachable states.
+
+φ is a **conserved charge**: a left eigenvector with eigenvalue 1, shared by all digit modules. Then
+H(w j) = λ·H(w) + d_j·φ(start). Equivalently, the Hankel matrix of the series has rank 2.
+
+The three constructions of wave 44 have no eigenvalue 1:
+
+| construction | eigenvalues of the linear part | conserved charge |
+|---|---|---|
+| hub seam S, plain triangle P | 3, 12, 0, 3 | none |
+| radix_three_shields V0, V1 | 3, 48, 0, 3 | none |
+| fresh_unit_prime_gluing readers | 109, 2848, 0, 109 | none: the digit reads D = −1, and every reader resets D to 0 |
+
+That is the common reason each is single-use.
+
+### §3. Fixed-root modules: P106 resolved (PROVED; formula checked on 150 random cases)
+
+A **module** is a tournament G placed above T − A, with any arcs between G and A; the hub stays A. S, P, E and a
+source site are modules. On (H, U, σ, K) with σ = H_start(A), U + K = E and K = H(T − A):
+
+    H′ = g·H + s2·U − geo·σ + s2p·K,   U′ = aall·U + aA·K,   σ′ = gst·K,   K′ = g·K.
+
+Here g = H(G); aall = Σ_α H(G − α) over all paths α of G, α = ∅ included; s2 counts splits of G into paths
+(α, γ) with γ starting at an out-neighbour of A, and s2p those with α empty or ending at an in-neighbour of A;
+geo and gst count Hamiltonian paths of G ending or starting at out-neighbours of A; and aA = Σ H(G − α) over
+nonempty α ending at in-neighbours of A (`w45_gadgets.py`).
+
+**Theorem (fixed-root rigidity).** No family of fixed-root modules is a Horner odometer of base λ ≥ 2.
+- (a) A module has a nonzero conserved charge only when g = 1, that is, G is transitive. This also holds on the
+  reachable states, where σ is a multiple of K.
+- (b) Comparing H-coefficients in h·M_j = λh + d_j·φ gives g_j = λ + d_j·φ_H. Two digits d_0 ≠ d_1 sharing φ have
+  g_0 = g_1 = 1 by (a), hence φ_H = 0 and λ = 1. So the count grows at most linearly along words.
+- (c) Transitive modules are also rigid. Number G from the top as v_1, …, v_k. Exactly 2^(k−i) splits start γ at v_i,
+  so s2 is the binary value of the set of vertices that A beats, and the continuation determines the module.
+- (d) If g ≥ 3, every new constant enters through the K-column, and K is multiplied by g at each step.
+
+*Proof of (a).* The matrix is upper triangular (substitute σ = κK on the reachable states if needed). For φ = (a, b, c, d): the H-entry gives a(g − 1) = 0, the U-entry
+gives b(aall − 1) = −a·s2 with aall ≥ 2, and the σ-entry gives c = −a·geo. If g ≠ 1 these force a = b = c = 0, and
+then d(g − 1) = 0. ∎
+
+*Search.* For |G| ≤ 3, no continuation class (g, s2, aall, geo) carries two different deposit columns. For |G| ≤ 4
+there are 2 such classes, and for |G| ≤ 5 there are 28. All have g = 3 and s2, aall, geo divisible by 3. So each transport step
+multiplies a digit difference by a multiple of 3, and all words of length L give counts in one residue class
+mod 3^(L−1).
+
+Consequences:
+- **P106.** A seam at the second apex B is a module at root B, where K_B = H(T − B) carries the free head. A converse
+  seam is the mirror image. Both fall under the theorem, so neither gives a reusable digit. The g = 3 classes above
+  share a continuation but carry no charge, so their digits are not a Horner series either.
+- **No "+2 append".** The rooted append is the mirror image of E, with g = 1. By (b), no fixed-root module can run
+  2h + 1 beside the append's 2h − 1 on a shared charge.
+
+### §4. Modules on both sides of one root (FINITE-EXACT; 9-register machine checked on 120 random cases)
+
+Put G_u above T − x and G_d below it, with G_u ⇒ G_d and any arcs to x.
+- A Hamiltonian path is R_1·x·R_2. Each R_i is a G_u-run, then a (T − x)-run, then a G_d-run, in that order.
+- So the state is W[r1][r2] over ordered pairs (R_1, R_2) of paths covering T − x, typed by how the outer ends meet x.
+  That is 9 registers, with physical span of dimension 7.
+- H = W[ee] + W[eo] + W[ie] + W[io] (`w45_sandwich.py`).
+
+All 2,552 modules with |G_u| + |G_d| ≤ 4 (`w45_rays.py`):
+- 40 are exact ×3 rays (H ↦ 3H + charge along every orbit), and every one has charge 0.
+- 20 are exact ×2 rays, all with a nonzero charge, but no two share it: every pair has joint Hankel rank above 2.
+- So there is no reusable digit, binary or ternary.
+
+### §5. A reader below the digits (PROVED for one apex; FINITE-EXACT for two)
+
+Insert the digit sites in the middle of a k-apex spine, between a past above and a fixed reader below. With the
+transfer matrices M_u (`w45_kmid.py`), the count is ρ·M_w·σ₀. A reusable digit means
+
+    ρ (M_u − λ)(M_v − 1) r = 0   for all letters u, v and reachable states r,
+
+a set of linear conditions on the reader ρ alone.
+- **One apex (PROVED).** For λ = 2 the conditions force ρ(L,n) = ρ(I,n): the reader cannot tell whether the last
+  site of the first run beats the apex. Any other λ forces ρ(·,n) = 0. But the completion that sends every lower site to the last run gives
+  ρ(L,n) − ρ(I,n) = H(lower part) ≥ 1. So no reader exists.
+- **Two apexes, single-site letters (FINITE-EXACT).** No physical reader has a nonzero digit, for λ = 2 or 3. Checked
+  for bottoms up to length 6 against every past, and for bottoms and pasts up to length 4 past by past
+  (`w45_readers_alltops.py`, `w45_readers.py`). This agrees with session261's binary-cylinder probe.
+
+### §6. The charge coordinate: appends double, shields triple (PROVED; 120 random checks)
+
+For a root x, let r and s be the sums of H(T − V(P)) over paths P from x of even and odd order (the singleton in s),
+and g = H(T − x). Define the **charge** a = 2r + 1 − H and the defect b = s − r − g (`w45_charge.py`).
+- **Rooted append** (a new vertex that beats only x): H′ = 2H − 1 + a, r′ = 2r + b, b′ = 0, a′ = a + 2b. After one
+  append the charge is frozen, and the root doubles forever as H ↦ 2H − 1 + a.
+- **Triangle on top:** H′ = 3H, r′ = 3r, b′ = 3b, a′ = 3a − 2 (so a − 1 triples).
+- On ready roots (b = 0) the coordinate r is multiplicative: the append is r ↦ 2r and the shield is r ↦ 3r. They
+  commute, and H = 2r + 1 − a.
+
+Readings:
+- **THM-5272's commutator is a charge.** D(T(h)) − T(D(h)) = 2 because after a shield the root has charge −2, so the
+  physical append gives 6h − 3, not 6h − 1.
+- **Rows of chains.** Every rooted tournament starts the ray H_s = 2^s(H − 1 + a) + 1 − a.
+  - Charge 0 gives the c-rows {1 + c·2^s} of THM-5126.
+  - Charge 2 gives the rows H ↦ 2H + 1 (m ↦ 2m), such as 15·2^m − 1.
+  - In r the rows are literally the doubling chains r = odd·2^s, one starting from each odd number. The shield maps
+    the row start o to the row start 3o.
+- **Collatz and 3x − 1.** In c = (H − 1)/2 the plain shield is c ↦ 3c + 1, and in m = (H + 1)/2 it is m ↦ 3m − 1
+  (W:324). In the conserved coordinate r it is just r ↦ 3r. So Collatz's "+1", and the "−1" of 3x − 1, is the
+  shield's charge shift a ↦ 3a − 2, seen from charge 0 or from charge 2.
+  - A Horner step H ↦ 3H + 2j whose charge moves like a shield's is r ↦ 3r + j.
+  - So 3q + 2 and 3q + 4 are r ↦ 3r + 1 and r ↦ 3r + 2. In the conserved coordinate, Collatz's map 3x + 1 is the
+    digit j = 1.
+- **Conflict graph.** H = I(Ω, 2). A new cycle disjoint from all others multiplies H by 3 (c ↦ 3c + 1). A new cycle
+  meeting every other cycle adds 2 (c ↦ c + 1).
+  - Exact Horner counts for every digit word need nested conflict graphs: triangles Δ_1, …, Δ_L, with the level-k
+    digit cycles meeting Δ_1, …, Δ_k and all earlier digit cycles.
+  - If the past may be an arbitrary tournament, the only history-blind extensions are ordinal sums. New vertices must
+    split as N_up ⇒ old ⇒ N_down with N_up ⇒ N_down, and then no new cycle passes through the hub.
+
+### §7. What a fresh digit needs: a port move
+
+On ready roots, fixed-root operations act only as r ↦ 2r and r ↦ 3r (§3, §6). So the r values reachable from one seed
+form a ⟨2, 3⟩-orbit, which has density 0. A fresh digit therefore needs an **additive port move**: an operation,
+allowed to move the root, that sends a ready (r, a) to a ready (3r + j, 3a − 2) (ternary) or (2r + 1, a) (binary).
+Binary port moves from ready seeds in [B, 2B − 1] would finish Chan–Pak through session261's conditional
+completeness theorem.
+
+First test, `w45_tworoot.py`: two roots, with letters "append at x_1" and "append at x_2" (also their mirror images).
+No seed of order ≤ 5 gives a binary odometer.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| Ψ = H_start(A): seam digit = 2 × (Hamiltonian paths starting at the hub) | PROVED; 200 random checks |
+| charge principle: reusable digit ⇔ shared conserved charge (Hankel rank 2) | PROVED (linear algebra) |
+| fixed-root module matrix; no fixed-root Horner odometer of base ≥ 2 (charge only for g = 1, which forces λ = 1) | PROVED; 150 random checks |
+| shared continuations with g = 3 (2 classes at \|G\| ≤ 4, 28 at \|G\| ≤ 5), all in one residue class mod 3^(L−1) | FINITE-EXACT |
+| P106 (second-hub and converse seams) | RESOLVED: no reusable bounded digit at a fixed root |
+| two-sided modules ≤ 4 vertices: ×3 rays charge-free, ×2 rays pairwise incompatible | FINITE-EXACT (2,552 modules) |
+| one-apex reader below the digits | PROVED impossible |
+| two-apex readers, single-site letters | FINITE-EXACT negative (bottoms ≤ 6; bottoms and pasts ≤ 4) |
+| charge coordinate: append H ↦ 2H − 1 + a (a frozen), shield r ↦ 3r with a ↦ 3a − 2 | PROVED; 120 random checks |
+| THM-5272 commutator = charge shift; Collatz "+1" = shield charge shift; 3q + 2, 3q + 4 = r ↦ 3r + 1, 3r + 2 | PROVED (from the identities) |
+| two-root append odometers | FINITE-EXACT negative, orders ≤ 5 |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
@@ -3937,3 +4115,6 @@ relations, 2^10 − 10^3 = 24 (128 − 125 = 3 on the norm-three orbit of 1 + �
   of them survive for m ≥ b, extending THM-5070's 30,000 bound to b = 9–12.
 - **P106.** In the hub-seam monoid {S, P, E} enlarged by seams at a second hub and the converse seam, some pair of words of
   length <= 8 has equal state maps except the (H, K) entry (a reusable bounded digit). Test with the exact state model of wave 44 §3.
+- **P107.** A ready root (b = 0) admits a binary port move: an operation that may move the root to a new vertex, keeps
+  it ready, and sends r to 2r + 1 at the same charge. Together with the rooted append this would be a two-letter family
+  of Hankel rank 2. Test on the ready seeds 13, 23, 41, 59, 75, 95 (wave 45 §7).
