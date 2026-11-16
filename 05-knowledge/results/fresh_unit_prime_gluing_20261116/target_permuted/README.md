@@ -52,3 +52,7 @@ c++ -std=c++20 -O3 selector.cpp -o /tmp/target_selector
 The first positive strong triple at this target has E=19437 and O=19452. The complete all-host-orders scope at $g=15$ for the first eight heights uses the separate [row replay](ROW_SCAN.md), including prefixes and suffixes. Neither search assumes that the source is retained or claims universality across $g$.
 
 The complementary [1729 factor decoder](TAXICAB.md) works on the two-core side instead of the terminal tail. It provides another exact way for a target to prescribe candidate continuation data, and a proof that symmetric cores alone cannot solve the task.
+
+## Follow-up: the fourth height works by changing the deletion count
+
+At $g=45$, the fourth old-row height reopens: 4021 goes to 12063,12065,12067 with continuation (8943,8988,45). The [follow-up](NEW_READERS.md) also gives an all-height alignment on the old +2 branch for the restricted singleton reader, and exact +2 moves using equal-weight contact swaps in one deletion graph.
