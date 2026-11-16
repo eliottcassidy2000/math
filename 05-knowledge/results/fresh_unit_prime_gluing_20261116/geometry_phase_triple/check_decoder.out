@@ -1,0 +1,6 @@
+strong H237 bank counts [(8, 36), (9, 34), (10, 14)]
+suffix P2 possibilities at odd phase 8051: {}
+phase addresses before even-cut restriction: 68
+minimum even cut/row: (1232, 10, 1, 0, 752, 16102, 0, (766, 1020, 248, 496, 736, 192, 128, 512, 757, 108))
+directly replayed least-cut rooted tournament: [2046, 3580, 4088, 2544, 3040, 1472, 384, 256, 1024, 3562, 216, 1505]
+no reduced signature
