@@ -150,7 +150,10 @@ a root in C ends no spanning path of the total). In particular:
   and a decomposable H=15 has a triangle factor. Hence the alternative
   to a single core is exactly the reduced key H=1203, g=237,
   oddpart X=8051, with root SCC order ≤14. The small suffix table is
-  implemented by suffix_spectrum.cpp.
+  implemented by suffix_spectrum.cpp. **The reduced key is impossible
+  at all orders:** [complete finite certificate and reduction](REDUCED_237.md).
+  This eliminates the nontrivial suffix route at (1185,8051), but does
+  not eliminate a single strong 6015 core or a different key.
 - There is an additional congruence gate in the **deletion**, not an
   ordinal suffix of the full rooted host. Appending one deletion component
   of path count h and two-slot count R sends the previous (g,X) to
