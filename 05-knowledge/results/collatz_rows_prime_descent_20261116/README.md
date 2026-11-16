@@ -104,7 +104,7 @@ small absolute corrections by themselves. This is a different
 restriction from the induced-growth floor. A next constructive
 test is to look for a second physical seam whose large response
 cancels the first, or for a larger feedback core that permits a
-genuinely independent carry.
+genuinely independent carry. The [mirror follow-up](MIRROR.md) finds two such edits with exact net +2, including the twin-prime counts 10007 and 10009.
 
 ## Replay
 
