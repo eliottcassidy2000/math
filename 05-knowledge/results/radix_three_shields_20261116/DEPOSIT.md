@@ -69,3 +69,36 @@ involution), while H(V) is odd. Thus P_V(2) cannot equal 3H(V).
 A proportional scale copy alone cannot supply an odd ratio
 three; any successful correction would have to use another
 coordinate or a non-proportional return.
+
+### All count-three right profiles: why this deposit cannot be tuned small
+
+For fixed P_V(2), a right count-three module is a triangle
+plus a fixed number of singleton SCCs. A root lies in the
+triangle, before it, or after it. Let u,v be the singleton
+counts before and after the root's component, excluding
+the root itself if it is a singleton. The exact total start
+and end readouts, and their signed even-minus-odd differences,
+are as follows:
+
+| Root location | Start total | Start sign difference | End total | End sign difference |
+|--|--:|--:|--:|--:|
+| triangle | 3·2^v | −1 if v=0, else 0 | 3·2^u | −1 if u=0, else 0 |
+| before triangle | 12·2^v | 0 | 3·2^u | −3 if u=0, else 0 |
+| after triangle | 3·2^v | −3 if v=0, else 0 | 12·2^u | 0 |
+
+These follow from factoring along the ordered components;
+a subsequent or preceding nonempty optional component cancels
+a signed parity sum. At fixed h_V=3, two-slot count and
+start profile, each root type has at most one end profile.
+If the singleton-before and singleton-after types match,
+their end profiles coincide (their u values differ by two,
+and both end parity differences are zero). If a triangle
+root also matches, its end total is exactly half of the
+singleton-root end total; the latter has equal parities.
+Thus there are at most **two** distinct end profiles for
+any synchronized right count-three palette, and any
+nonzero change increases both end coordinates in one direction.
+The left deposit 2(E ΔO_V+O ΔE_V) cannot be a cancellation
+against the fast mode. This rules out a four-state bounded
+deposit in this fixed-root H=3 language, not a different
+root or a shield read by different coordinates.
