@@ -4,6 +4,10 @@
   15,400,960 oriented tapes, 1,138,644 distinct Hamilton counts.
   The previous first hole at 256,521 fills; the next is 729,421.
   This census is complete under the stated restriction only.
+- [Every prescribed even gap](apex/PROGRAM.md): a single mutual-apex
+  reversal realizes any signed even d with O(log(2+|d|)) core sites,
+  while an arbitrarily wide compensated exterior remains programmable.
+  Both endpoints are strong. The absolute anchor remains uncontrolled.
 - [Composable one-arc shield](apex/SHIELD.md): a balanced
   pair of twelve-site two-apex blocks has gaps ±2; arbitrary
   concatenation adds these gaps exactly. Mirrored exteriors also
@@ -13,7 +17,10 @@
 - [A different physical seam](bridge/SHIELD.md) uses a primitive
   linear projector equal to one against an entire growing module.
   It has exactly two strong right rays for its first projector
-  and [three more distinct projectors](bridge/ADDENDUM.md).
+  and [three more distinct projectors](bridge/ADDENDUM.md). The
+  [one-arc odd projector](bridge/ODD_PROJECTOR.md) accepts arbitrary
+  binary heads with a target-selected tail; its baseline spectrum has
+  exactly (2/3) ln X + O(sqrt(ln X)) lower counts at most X.
   [Two-contact cancellation in the binary reader](READER.md)
   gives Θ(√H) distinct +2 anchors on selected scales without swapping
   seeds; it does not retain the next-read slope.
@@ -29,10 +36,11 @@
   seam, Golden/Fibonacci comparisons, fences, and the role of
   Catalan's 8 and 9 in the missing primitive clock.
 
-The strongest new reusable construction here is an exact
-single-arc signed gap after an arbitrary word of balanced
-atoms. The gap is programmable but grows at most linearly in
-the number of these atoms; the count scale grows exponentially.
+The strongest new gap decoder programs the exact signed gap using a
+short core, with one physical arc reversal and live compensated arms.
+The separate balanced-atom construction admits two independent exterior
+banks, with a gap linear in its atom count. Neither controls the
+absolute count scale at the resolution of the chosen gap.
 Finding compatible arms at an arbitrary prescribed absolute
 target, and Chan–Pak, remain open. These results do not turn
 the earlier O(N^(2/5)) bracket into an exact target theorem.
