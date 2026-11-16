@@ -19,7 +19,8 @@
   This exactly explains why common nontransitive blocks do not
   preserve the unit low step.
 
-The width is still bounded, and neither positive density nor a
+[A capacity bound](LIMITS.md) rules out coverage by merely running
+these two alphabets longer. The width is still bounded, and neither positive density nor a
 witness at an arbitrary exact target follows. The next concrete
 problem is to match the selector's remaining signed error to
 a compatible reader, or to prove stronger collision and local
