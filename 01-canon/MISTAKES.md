@@ -25613,3 +25613,12 @@ after it.
   - The additivity check was not shipped as a script.
   - The nu table counts isomorphism classes, not merged classes.
 - **Lesson.** Before calling a value "undecided", query the existing data for it.
+
+## MISTAKE-774 (2026-11-15, mac-mini-2026-11-15-frame; `05-knowledge/results/chanpak_waves_20261113/UNIFYING_FRAME.md` sections 2 and 5 and the wave-39 table of the waves README; found by another session's audit `05-knowledge/results/chanpak_target_ribbon_audit_20261116/DENSITY_AUDIT.md`) -- a lower bound for a joint spectral radius used where an upper bound is needed
+
+- **The error.** The frame note stated the word-counting exponent of span-3 ribbons as `alpha >= log 8 / log 3.3226 = 1.732` and compared it with Huang's threshold 5/3 for Zaremba. The number 3.3226 is the spectral radius of one letter, a LOWER bound for the joint spectral radius; `log 8 / log r` decreases in `r`, so a lower bound for `alpha` needs an UPPER bound for `r`. The certified bound is `H <= 5 (39/10)^n` (POSITIVE_ENVELOPE.md of the auditing packet), which gives `alpha >= 1.528`, below 5/3.
+- **Also.** The same paragraph let a word count stand next to a density statement; a word count bounds neither the number of distinct operators nor the number of distinct values (DENSITY_GATE.md).
+- **Corrected** in UNIFYING_FRAME.md, in the wave-39 table and in the wave-40 pointer of the waves README (2026-11-15).
+- **Not affected.** The other rows of the frame table; HYP-9802.
+
+Lesson: for an extremal quantity write down, next to the number, which side of the bound the computation gives (a maximum over sampled words is a lower bound for a supremum), and check that the inequality being claimed needs that side.

@@ -1,0 +1,10 @@
+Lemma 1: 300 random (tournament, targets): 0 violations
+Theorem A: 300 random (tournament, partition): 0 violations; largest H(T)/(H(A)H(B)) seen 133.0
+vertices 2:       2 words; largest raw coordinate / H = 1.0 ; words with H = 0: 0
+vertices 3:       8 words; largest raw coordinate / H = 1.0 ; words with H = 0: 0
+vertices 4:      64 words; largest raw coordinate / H = 1.0 ; words with H = 0: 0
+vertices 5:     512 words; largest raw coordinate / H = 4.0 ; words with H = 0: 0
+vertices 6:    4096 words; largest raw coordinate / H = 10.0 ; words with H = 0: 0
+vertices 7:   32768 words; largest raw coordinate / H = 14.0 ; words with H = 0: 0
+vertices 8:  262144 words; largest raw coordinate / H = 14.0 ; words with H = 0: 0
+Corollary B: largest ratio 14.0 (bound K_3 = 26425)

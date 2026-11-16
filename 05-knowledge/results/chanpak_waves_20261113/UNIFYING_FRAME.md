@@ -60,7 +60,7 @@ The seven suggested connections are the classical models of those components.
 | a growth gap for escaping the torus | bottleneck-free words grow at least 1.7699 per vertex over the 13 floor units (THM-5212 (E)), against the floor 5^(1/3) = 1.7100; literal span 3 open (wave 39 §3 of the README) | PROVED for units; OPEN for letters |
 | bilinear (Type II) structure | concatenation is a Hankel pairing, H(W₁W₂) = ⟨h A_(W₂), A_(W₁) v₀⟩; cyclic joins Re(β_A β̄_B) in ℤ[√−2]; the triangle law (THM-5242) | PROVED |
 | equidistribution (spectral gap) | H mod ℓ over all span-3 words of length n: TV 0.114 → 0.020 (ℓ = 5) from n = 6 to 9, roughly halving per letter; the two-apex family at TV 0.005–0.013 (HYP-9792 (ii)); minor-arc decay for span 2 (HYP-9474 (2)) | NUMERICAL / CONJECTURE |
-| counting exponent (more words than values) | span 3: 8^n words, joint spectral radius 3.32260 (the all-back-arcs letter), so α ≥ log 8 / log 3.3226 = 1.732. The typical growth is 2.2449 per letter (log 8 / log 2.2449 = 2.57) | NUMERICAL (exact JSR lower bound) |
+| counting exponent (more words than values) | **CORRECTED 2026-11-15** (audit: chanpak_target_ribbon_audit_20261116/DENSITY_AUDIT.md): 3.32260 is only a lower bound for the joint spectral radius, and a lower bound for α needs an upper bound. The certified bound there is H ≤ 5·(39/10)^n, so α ≥ log 8 / log 3.9 = 1.528; the value 1.732 is what one gets IF the joint spectral radius equals 3.3226 (not proved). A word count is also not a count of distinct values. Original text: span 3: 8^n words, joint spectral radius 3.32260 (the all-back-arcs letter), so α ≥ log 8 / log 3.3226 = 1.732. The typical growth is 2.2449 per letter (log 8 / log 2.2449 = 2.57) | NUMERICAL (exact JSR lower bound) |
 | archimedean placement | two-apex Bernoulli rule; placement within O(N^(3/8)) (target-address packet) | PROVED |
 | the exact last step | thin readers and fibre swaps (waves 37–38); exact repairs of residuals; seams and switches (concurrent packets) | partial |
 | the exceptional set | 7 and 21, explained by odd-cycle crowding below Busch's threshold (THM-5192) | PROVED that they are skipped |
@@ -151,7 +151,8 @@ The seven suggested connections are the classical models of those components.
   definite growth premium. A Zaremba-type proof works in the bulk and treats the torus by its local densities.
 - **The numbers fit.** Bourgain–Kontorovich-type density-one theorems need the counting exponent to exceed 1 with room.
   For Zaremba, Huang's threshold is a dimension δ > 5/6, i.e. counting exponent 2δ > 5/3 = 1.667. Span-3 ribbons have
-  α ≥ 1.732 using only the joint spectral radius.
+  α ≥ 1.528 rigorously (CORRECTED 2026-11-15, see the table above; the earlier figure 1.732 assumed that the joint
+  spectral radius is 3.3226). So the comparison with Huang's threshold is not established.
 
 ## 6. Receipts (wave 39)
 

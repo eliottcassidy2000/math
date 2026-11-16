@@ -3349,7 +3349,7 @@ The seven connections are the classical models:
 |---|---|
 | joint spectral radius | ≥ 3.32260 (the letter {1,2,3}) |
 | typical growth | 2.2449 per letter |
-| counting exponent α | ≥ 1.732, above the 5/3 that Zaremba density one needs (Huang) |
+| counting exponent α | ≥ 1.528 (CORRECTED 2026-11-15, see wave 40: the figure 1.732 used a lower bound for the joint spectral radius where an upper bound is needed) |
 | H mod ℓ over all words of length 9 | TV 0.020–0.034 for ℓ = 5–13, roughly halving per letter; no residue missed |
 | eigenvalues of minimal rank-one words (length ≤ 6) | 19 distinct values, including the primes 11–43 (cuts), so the "torus" is ⟨3, 5⟩ only in its cheap part |
 
@@ -3365,6 +3365,27 @@ missed odd N ≤ X is O(X^(1−η)). Four of its five ingredients are listed wit
 | bounded one-vertex growth H(W ℓ) ≤ 39·H(W) for span-3 ribbons | CONJECTURE (exact maximum 39 at lengths 6 and 7) |
 | literal span-3 growth certificate | NOT built; the obstructions and the fix are specified (HYP-9802) |
 | Chan–Pak = local–global principle for a positive thin semigroup (UNIFYING_FRAME.md) | frame: component statuses as labelled; the density-one form is a CONJECTURE |
+
+## Wave 40: the junction inequality (pointer)
+
+Session mac-mini-2026-11-15-junction; note: [chanpak_junction_inequality_20261115](../chanpak_junction_inequality_20261115/README.md);
+canon THM-5252. The owner's prompt quoted wave 39 and two other sessions and asked for the bounded-growth lemma, the
+rank-potential certificate, factor pairs chosen from the target, the second apex, and the Collatz parallel.
+
+- The bounded-growth lemma was proved first, with the sharp constant 39, by another session
+  ([SHARP_GROWTH.md](../chanpak_target_ribbon_audit_20261116/SHARP_GROWTH.md)). P105 is settled.
+- **Added (PROVED):** the two-block form `H(u) H(v) <= H(uv) <= K_3^2 H(u) H(v)` for words of any lengths
+  (largest ratio found 3,965), so every raw transfer coordinate is at most `K_3 H`; the floor
+  `H >= 5^((n-13)/3)` for every bottleneck-free literal word (an interior cut forces rank one; Busch); the growth
+  rate `rho_min = sup_m g_m^(1/m)` exists and lies in `[5^(1/3), rho*]`; HYP-9742 for literal span 3 is equivalent
+  to `g_m > 5^(m/3)` for one `m`.
+- **FINITE-EXACT:** periodic words of every primitive period up to 8 at the critical rate: the only bottleneck-free
+  cheap cycles are 30 necklaces of period 4 and 185 of period 8, all at `rho*` exactly. `g_m = 1` for `m <= 8`, 3 for `m = 9, 10, 11`, 5 for `m = 12`.
+- **Correction to wave 39** (found by the audit in chanpak_target_ribbon_audit_20261116/DENSITY_AUDIT.md): the
+  counting exponent 1.732 of UNIFYING_FRAME.md used a lower bound for the joint spectral radius where an upper
+  bound is needed; the rigorous value there is 1.528.
+- The literal certificate is still not built. Linear cone potentials cannot see the rank; the slow-factor tree
+  with dominance pruning is the proposed replacement (note, section 3).
 
 ## Next waves (queued predictions)
 

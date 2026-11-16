@@ -16,6 +16,13 @@ status: >
   (iii) is the concurrent finding of klein-2026-11-15-ocf (LITERAL_CONES.md: cheap cyclic code words needing up to 12
   code units of memory; rank as a potential), restated at the letter level.
   The literal certificate itself is NOT built. HYP-9742's literal span-3 case remains open.
+  UPDATE (2026-11-15, later the same day). (ii): the lemma is PROVED with the sharp constant 39 by another
+  session (chanpak_target_ribbon_audit_20261116/SHARP_GROWTH.md, tail deletion), which settles P105; its
+  two-block form H(u)H(v) <= H(uv) <= K H(u)H(v) is THM-5252 (A). (i): the exhaustive range is now every
+  primitive period up to 8 at the critical rate 1.7705 (THM-5252 (E)): the only bottleneck-free cheap cycles
+  are 30 necklaces of period 4 and 185 of period 8, all at rho* exactly. The literal certificate is still NOT built; THM-5252 (C)-(D) prove
+  the non-strict bound H >= 5^((n-13)/3) for bottleneck-free literal words and give a cone-free equivalent of
+  the strict one (the finiteness of a tree of slow factors).
 session: mac-mini-2026-11-15-frame
 date: 2026-11-15
 source: 05-knowledge/results/chanpak_waves_20261113/README.md (wave 39)

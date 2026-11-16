@@ -1,0 +1,2 @@
+period 7, growth < 1.7705: 105191 necklaces survive the prefix pruning, 16306 cheap cycles (45 s)
+bottleneck-free among them (stable rank >= 2): 0

@@ -1,0 +1,2 @@
+words with an interior cut: 416 ; of these with operator rank <= 1: 416
+words of operator rank >= 2: 665 ; smallest (largest strong component size) - n over them: -6

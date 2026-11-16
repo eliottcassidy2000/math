@@ -1,0 +1,27 @@
+engine ignores back arcs that point before the first vertex: True
+|u| = 1 (1 words), |v| = 1: min ratio 1.0000, max ratio 1.0000
+|u| = 1 (1 words), |v| = 2: min ratio 1.0000, max ratio 3.0000
+|u| = 1 (1 words), |v| = 3: min ratio 1.0000, max ratio 5.0000
+|u| = 1 (1 words), |v| = 4: min ratio 1.0000, max ratio 11.0000
+|u| = 2 (2 words), |v| = 1: min ratio 1.0000, max ratio 3.0000
+|u| = 2 (2 words), |v| = 2: min ratio 1.0000, max ratio 5.0000
+|u| = 2 (2 words), |v| = 3: min ratio 1.0000, max ratio 15.0000
+|u| = 2 (2 words), |v| = 4: min ratio 1.0000, max ratio 45.0000
+|u| = 3 (8 words), |v| = 1: min ratio 1.0000, max ratio 5.0000
+|u| = 3 (8 words), |v| = 2: min ratio 1.0000, max ratio 15.0000
+|u| = 3 (8 words), |v| = 3: min ratio 1.0000, max ratio 45.0000
+|u| = 3 (8 words), |v| = 4: min ratio 1.0000, max ratio 175.0000
+|u| = 4 (64 words), |v| = 1: min ratio 1.0000, max ratio 11.0000
+|u| = 4 (64 words), |v| = 2: min ratio 1.0000, max ratio 45.0000
+|u| = 4 (64 words), |v| = 3: min ratio 1.0000, max ratio 175.0000
+|u| = 4 (64 words), |v| = 4: min ratio 1.0000, max ratio 629.0000
+|u| = 5 (512 words), |v| = 1: min ratio 1.0000, max ratio 23.0000
+|u| = 5 (512 words), |v| = 2: min ratio 1.0000, max ratio 109.0000
+|u| = 5 (512 words), |v| = 3: min ratio 1.0000, max ratio 351.0000
+|u| = 5 (512 words), |v| = 4: min ratio 1.0000, max ratio 1211.0000
+|u| = 6 (4096 words), |v| = 1: min ratio 1.0000, max ratio 39.0000
+|u| = 6 (4096 words), |v| = 2: min ratio 1.0000, max ratio 179.0000
+|u| = 6 (4096 words), |v| = 3: min ratio 1.0000, max ratio 603.0000
+|u| = 6 (4096 words), |v| = 4: min ratio 1.0000, max ratio 2071.0000
+overall max H(uv)/(H(u)H(T[v])) = (2071.0, (0, 0, 7, 6, 4), (6, 7, 7, 7), np.float64(1.0), 1.0, np.float64(2071.0))
+overall min = (1.0, (), (0,), np.float64(1.0), 1.0, np.float64(1.0))

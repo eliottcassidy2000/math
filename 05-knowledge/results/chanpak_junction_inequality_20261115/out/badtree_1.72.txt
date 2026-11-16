@@ -1,0 +1,8 @@
+rate 1.72000; level cap 60000
+depth   1:       8 candidates,       0 bottlenecks (rank <= 1 mod p),       0 good prefixes,       8 bad  [0 s]
+depth   2:      64 candidates,       0 bottlenecks (rank <= 1 mod p),       0 good prefixes,      64 bad  [0 s]
+depth   3:     512 candidates,       8 bottlenecks (rank <= 1 mod p),       0 good prefixes,     504 bad  [0 s]
+depth   4:    4032 candidates,      56 bottlenecks (rank <= 1 mod p),       0 good prefixes,    3976 bad  [1 s]
+depth   5:   31808 candidates,     516 bottlenecks (rank <= 1 mod p),       0 good prefixes,   31292 bad  [7 s]
+depth   6:  250336 candidates,    4348 bottlenecks (rank <= 1 mod p),   83286 good prefixes,  162702 bad  [44 s]
+level cap exceeded; stopping (tree not exhausted)

@@ -1,0 +1,9 @@
+m =  1:       8 factors of rank >= 2 with H <= 1 ; least H among them: 1
+m =  2:      64 factors of rank >= 2 with H <= 1 ; least H among them: 1
+m =  3:     378 factors of rank >= 2 with H <= 1 ; least H among them: 1
+m =  4:    1470 factors of rank >= 2 with H <= 1 ; least H among them: 1
+m =  5:    3260 factors of rank >= 2 with H <= 1 ; least H among them: 1
+m =  6:    5661 factors of rank >= 2 with H <= 1 ; least H among them: 1
+m =  7:    5992 factors of rank >= 2 with H <= 1 ; least H among them: 1
+m =  8:    4384 factors of rank >= 2 with H <= 1 ; least H among them: 1
+m =  9:       0 factors of rank >= 2 with H <= 1 ; least H among them: -
