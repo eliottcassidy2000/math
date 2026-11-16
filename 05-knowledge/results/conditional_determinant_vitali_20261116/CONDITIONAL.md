@@ -101,3 +101,22 @@ Thus at least one summand must be a Fermat prime.
 This restriction is for the low offsets and for **induced**
 witnesses with at most two common vertices, not for arbitrary
 physical preparation of the gluing inputs.
+
+
+### Quantitative lower bound for any overlap
+
+Write W for the shared vertices, r=H(W), a=H(A−W),
+and b=H(B−W), with empty count one. Keeping both inputs
+induced forces
+
+    H(output) ≥ p+q−r+(a−1)(q−r)+(b−1)(p−r)−(a−1)(b−1).
+
+The internal packs contribute p+q−r by inclusion-exclusion.
+Pair each nonempty pack of A−W with each pack of B using at
+least one vertex of B−W in a cycle, and likewise exchange A
+and B. The two new classes intersect exactly in the product
+of nonempty exterior packs. This proves the bound by positive
+pack weights. In particular H(output)≤p+q+1 and a≥3 force
+r≥(2q−1)/3 already using only the first new class. Thus an
+overlap either hits all directed triangles on that side or
+must itself carry a substantial fraction of the opposite count.
