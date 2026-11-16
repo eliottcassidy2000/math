@@ -3588,6 +3588,117 @@ be something else, e.g. structures with a built-in anti-automorphism (self-conve
 | hypotenuse/leg/count table; tree analogy; poset cousin (Kravitz–Sah, Chan–Pak 2024) | ANALOGY with exact parallels |
 | class-count parity at least order | no law (679 / 1,520 odd; 192 / 433 primes) |
 
+## Wave 43: the carry odometer tested, an exact triangle shield, two-apex gluing rigidity, and {7, 21}
+
+Session mac-mini-2026-11-16-odometer. Owner prompt:
+- build and test the shared-seam carry odometer;
+- 21 is h(10);
+- search for the gluing (J), p + q − 1 for primes ≥ 11;
+- a 24-vertex construction gives four +2 and four +6 settings independently;
+- a literal triangle shield scales a four-count window by exactly 3 once;
+- relate this to {7, 21}.
+
+**Tool.** Everything uses the exact two-apex formula of 7-21 (code/twoapex/apexlib.h), the odd-cycle formula for a
+transitive spine with apexes A and B:
+
+    H = 1 + 2(c_A + c_B + c_AB) + 4 d_AB.
+
+Here c_A and c_B count the odd cycles through one apex only, c_AB those through both, and d_AB the disjoint
+(A-only, B-only) pairs. Scripts: `scripts/w43_*.c`.
+
+### §1. The 24-vertex two-level construction exists, but sporadically (FINITE-EXACT)
+
+The width-4 window of notes/22 on the last 7 spine vertices is uniform over all 2^15 heads of A (0 violations;
+smallest base count 89, as in notes/22). Over all 2^15 heads (15 + 7 + 2 = 24 vertices) there is exactly **one**
+quadruple of heads with base counts in steps of 6:
+- heads 10532, 18020, 9764, 8228, with counts 6,962,193, +6, +12, +18;
+- with the window, every odd count from 6,962,193 to 6,962,217 (13 in a row).
+
+There is none with heads of length 12. The four heads are unrelated words, so this level does not repeat.
+
+### §2. The structural odometer fails at the head (FINITE-EXACT)
+
+Split the head into a free prefix and a region next to the window. For region lengths 4–8, **only the trivial region
+word** has offsets independent of the prefix: A-only cycles running from the prefix into the region weigh 2^distance.
+- So every odometer level needs its own local shield apex.
+- Disjoint shield apexes multiply each other's steps (notes/26).
+- So levels must share vertices: the carry has to run through cycles that use several apexes.
+
+### §3. The literal triangle shield is exact: H = 3·H_A (PROVED; FINITE-EXACT; DP-checked)
+
+Let B beat only the penultimate spine vertex, let A beat the last two spine vertices, and orient A → B. Then
+
+    H = 3·H_A,     H_A = 1 + 2c_A the one-apex count of A,
+
+for every word of A on the rest of the spine.
+
+*Proof from the formula.*
+- *c_AB = 0.* A path from B must start at its only out-neighbour and can then reach only the last vertex, which A
+  beats. So no cycle uses both apexes.
+- *c_B = 1.* B's only private cycle is the triangle B → (penultimate) → (last) → B.
+- *d_AB = c_A.* A's private cycles end at vertices before the last two, so they avoid the triangle.
+
+So H = 1 + 2(c_A + 1) + 4c_A = 3(1 + 2c_A). ∎
+
+*Checks.* All 65,536 words at spine 18; direct subset DP on one case gives 45 = 3·15.
+
+*Two consequences.*
+- With B → A instead, H = 3H_A + 2c_AB with c_AB ≥ 1. The shield's own arc is a +2c_AB move.
+- One apex gives the factor 3 exactly once. All of B's private cycles meet at B, so a second private triangle gives
+  1 + 2·2 = 5, not 9. A second ×3 needs a second apex.
+
+### §4. The gluing (J) inside two-apex tapes: only triangle + triangle (FINITE-EXACT through spine 10)
+
+By the formula, H = H_A + H_B − 1 exactly when c_AB = d_AB = 0, where H_A and H_B are the two apexes' one-apex counts.
+
+| spine | tapes with c_A, c_B ≥ 1 | exactly glued | glued part counts |
+|---:|---:|---:|---|
+| 8 | 122,018 | 14 | (3, 3) only |
+| 10 | 2,052,338 | 18 | (3, 3) only |
+
+- *Only 5 = 3 + 3 − 1.* Exact gluing happens only for two triangles.
+- *Prime pairs ≥ 11 always overshoot.* With both parts at least 11 (about 2.4·10⁶ tapes over spines 6–10), no tape
+  glues, and the overshoot 2c_AB + 4d_AB is at least 14.
+- *Where the minimum sits.* It is the Fermat tape 0001 on both apexes: 17 + 17 − 1 + 14 = 47 (the 17 of wave 42).
+- *Verdict.* (J) for primes ≥ 11 cannot be realised inside two-apex tapes. This complements the overlap obstructions
+  of [CONDITIONAL.md](../conditional_determinant_vitali_20261116/CONDITIONAL.md).
+
+### §5. {7, 21}: a hole and its single triangle image
+
+Write H = h(c) = 1 + 2c. Then:
+- ordinal sum is c ∘ c′ = c + c′ + 2cc′;
+- the (J) gluing would be c + c′;
+- the triangle shield is c ↦ c ∘ 1 = 3c + 1.
+
+| h(c) | how it arises |
+|---|---|
+| 3 = h(1) | one triangle |
+| 5 = h(2) | two glued triangles, the only two-apex gluing (§4) |
+| **7 = h(3)** | would be three pairwise-meeting triangles and nothing else: the first failure of iterated gluing (odd-cycle crowding, THM-5192) |
+| **21 = h(10)** | 10 = 3 ∘ 1: the triangle-shield image of the hole at 3 |
+| 63 = h(31) | 31 = 10 ∘ 1: the next image, which is a count (order 8) |
+
+So the exceptional set is a hole together with **exactly one** triangle image, the same "×3 exactly once" as the
+shield. The hole propagates through one shield and is filled at the next, because 63 has other constructions.
+*Status.* The table identities are PROVED arithmetic; the reading of the exceptional set is ANALOGY.
+
+### §6. What the odometer still needs
+
+A k-level carry odometer needs k shield apexes. Each level's +2 move must survive the other shields' factors, so its
+odd cycles must meet theirs. By §4 that cannot happen through private cycles alone beyond triangles, so the carries
+must run through cycles that use two or more apexes (the c_AB terms). The next test is a three-apex tape with a
+shared triangle seam. It needs a three-apex transfer; the formula above covers only two apexes.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| a 24-vertex two-level window (four +2, four +6 settings) | FINITE-EXACT: one sporadic quadruple of heads at length 15 |
+| prefix-uniform head digits next to the window | none beyond the trivial word (region lengths 4–8) |
+| literal triangle shield: H = 3·H_A exactly; once per apex | PROVED (from the two-apex formula); FINITE-EXACT; DP check |
+| exact two-apex gluing H_A + H_B − 1 | only (3, 3) through spine 10; overshoot ≥ 14 for parts ≥ 11 (CONJECTURE: always) |
+| {7, 21} = {h(3), h(3 ∘ 1)}: a hole and one triangle image | identities PROVED; reading = ANALOGY |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
