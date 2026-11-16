@@ -4915,6 +4915,108 @@ transitive rest. So B(T′, z) = h₀ + 2^k·B(T₀, t₀) = H(T′), by the nea
 
 Chan–Pak remains OPEN.
 
+## Wave 53: the converse — every digit-0 tournament is a near-join with a strong tail
+
+Session mac-mini-2026-11-16-converse. Owner prompt:
+- try to prove the converse: digit 0 implies a near-join count;
+- the 15 moves on 5 labels, the 15 supersingular (Ogg) primes, the Monster and Baby Monster, Fermat primes, the first
+  25 primes and 25 square-sum nodes in chunks of 5;
+- arrange constructions so that what each one loses escapes back to the base case, as a Collatz-like graph with one
+  outward edge per node does;
+- "let the target choose the core, or admit a composite right source".
+
+Notation as in wave 52:
+- B(T, t) is the sum, over paths P starting at t, of H(T − V(P)).
+- A vertex t has digit 0 when B(T, t) = H(T).
+- A near-join is A → M_k → z, with k ≥ 1 and only the arc z → t₀ reversed.
+
+Scripts `scripts/w53_*`; outputs `scripts/w53_receipts.txt`.
+
+### §1. Exact characterization of digit 0 (PROVED)
+
+Ham paths of T split at t, so
+B(T, t) − H(T) = Σ_{P from t} (number of Ham paths of T − V(P) ending at an out-neighbour of t).
+
+**Lemma 1.** t has digit 0 iff, for every path P from t, every Hamiltonian path of T − V(P) ends at an in-neighbour of
+t. (This also re-proves HYP-9453's B ≥ H.)
+
+**Lemma 2.** In a strong tournament, a digit-0 vertex has out-degree exactly 1.
+
+*Proof.* Suppose t beats o₁ and o₂.
+1. If t lies in the first strong component of T − o, then T − o has a Ham path from t. Its remainder is {o}, which ends
+   at an out-neighbour of t, against Lemma 1.
+2. So each o_i is a gate. The first component X_i of T − o_i dominates everything except o_i, and only o_i enters
+   X_i. Moreover o_j ∉ X_i, because t → o_j while X_i ⇒ t.
+3. Arcs from X₁ ∖ X₂ to X₂ ∖ X₁ would enter X₂ from outside, so one of X₁, X₂ contains the other. Say X₂ ⊆ X₁.
+4. Then X₁ ⇒ o₂ and so X₂ ⇒ o₂. Now nothing enters X₂ at all, which contradicts strongness. ∎
+
+**Lemma 3.** If t beats only t₀, then t has digit 0 iff t₀ is not in the last strong component of T − t.
+
+*Proof.* Every path from t other than (t) contains t₀, so its remainder consists of in-neighbours of t and is
+automatically fine. Only P = (t) matters. Every vertex of a nontrivial strong component ends some Ham path. ∎
+
+**So a strong digit-0 tournament is exactly a near-join with a strong tail:** T − t = A ⇒ C, where C is the last strong
+component, t₀ ∈ A, and t beats only t₀. Its count (formula checked on 40 random cases) is
+
+    H(T) = H(A)·H(C) + 2 (r_A·F_e(C) + s_A·F_o(C)),
+
+where:
+- r_A and s_A are the even- and odd-order path sums from t₀ in A (the singleton path is counted in s_A);
+- F_e(C) and F_o(C) sum H(C − Q) over the paths Q of C, by parity of |Q| (the empty path is counted in F_e).
+
+A transitive tail M_k gives F_e = F_o = 2^(k−1), which recovers HYP-9453's H(A) + 2^k·B(A, t₀).
+
+### §2. The converse (PROVED up to 22,227; reduced to HYP-9453 beyond)
+
+- **C a single vertex.** Then T is an ordinary near-join, so its count is a near-join count.
+- **C strong of order ≥ 3.** Then H(T) ≥ H(C) + 2F_o(C) ≥ 15, so the counts 11 and 13 never arise.
+  - Tails of order 7 or more give counts above 67. Order 7: H(C) ≥ 25 and F_o(C) ≥ 7 + H(C). Order 8: H(C) ≥ 45 and
+    F_o(C) ≥ 16. Order ≥ 9: H(C) ≥ 75.
+  - The exhaustive scan over |A| ≤ 6 and |C| = 3–6 finds the strong-tailed counts up to 70 to be exactly 15, 27, 37, 45,
+    51 and 69 (`w53_ctail.py`). Neither 47 nor 67 occurs.
+  - The scan is complete for counts ≤ 67. A strong tournament with count ≤ 67 has order ≤ 8, since the strong minimum
+    at order 9 is 75 (THM-1370, HYP-9457). With |C| ≥ 3 and the tip, that leaves |A| ≤ 4.
+- **Theorem.** For counts up to 22,227: every count with a strong digit-0 realizer is a near-join count. Equivalently, the
+  realizable near-join exceptions 11, 13, 47 and 67 are exactly the counts with no digit-0 vertex.
+  - This uses HYP-9453's FINITE-EXACT list and the scan above.
+  - Beyond 22,227 the converse is implied by HYP-9453's completeness conjecture.
+- **What the converse is not.** Strong-tailed near-joins are not ordinary near-joins vertex by vertex. Their 12
+  digit-0 vertices up to order 7 have last blocks of size 3, 4 or 5 (`w53_digit0_classify.py`). Their counts 15, 27, 37,
+  45, 51, 69, 93, … just happen to be near-join counts as well.
+
+### §3. "Let the target choose the core": the strong-tail family
+
+The owner's phrase is exactly the generalization found in §1. A target count may choose its strong core C at the right
+end, a composite right source, and the base A is read only through (H(A), r_A, s_A).
+- What each construction loses is everything about A and C except three numbers each.
+- In the one-outward-edge picture, t's single out-arc to t₀ is the "Collatz edge", the only information that escapes
+  from the tip.
+- The induction would recurse on A, itself a strong-tailed near-join, until it reaches a star (wave 47's base case).
+- Whether this grammar alone reaches every count is OPEN. It contains HYP-9453's near-joins, so it misses at most
+  1, 7, 11, 13, 21, 47 and 67 within HYP-9453's range.
+
+### §4. Ogg primes, 15 moves, square-sum chunks (NUMEROLOGY)
+
+- The realizable near-join exceptions 11, 13 and 47, and the hole 7, are supersingular (Ogg) primes:
+  2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71 divide the Monster's order. 67 is not, and 21 is not prime.
+  There is no mechanism.
+- The 15 "moves on 5 labels" are the 15 double transpositions of S_5, matching the 15 Ogg primes in number only.
+- The square-sum graph on 1, …, 25 in chunks of 5 was not pursued this wave.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| Lemma 1 (digit 0 ⇔ every remainder's Ham paths end at in-neighbours) | PROVED |
+| Lemma 2 (strong digit-0 vertices have out-degree 1) | PROVED |
+| Lemma 3 and the strong-tail formula; transitive tail = HYP-9453 | PROVED; formula checked on 40 cases |
+| no strong digit-0 tournament has count 11, 13, 47 or 67 (strong-tailed counts ≤ 70: 15, 27, 37, 45, 51, 69) | PROVED (strong-minimum bounds plus a complete finite scan) |
+| converse up to 22,227: digit 0 ⇒ near-join count | PROVED from the above and HYP-9453's FINITE-EXACT list |
+| converse in general | follows from HYP-9453 completeness (OPEN) |
+| Ogg / Monster readings | NUMEROLOGY |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
