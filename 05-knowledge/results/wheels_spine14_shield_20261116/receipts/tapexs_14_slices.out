@@ -1,0 +1,20 @@
+# spine-14 census slices (two_apex_slice 14 3 8388608 8 k, k = 0..7), merged by merge_slices.py into tapexs_14.txt (data/tapexs_14.txt.gz)
+# written 2026-11-16 01:22-01:23 MST; the slices themselves (70 MB) are not stored; header, line count and SHA-256 of each:
+slice 0: lines=  298039 sha256=9997caaf8e5fbcbad75be0c00b948f68089932ff88209c661eaf379d056d8963
+  header: # two-apex tapes with popcount(b) <= 3, spine 14: 1925120 tapes, max H = 2010649, distinct values below 8388608: 298038
+slice 1: lines=  568932 sha256=32bf9bac5e46e1f4977fd3f196739a2f7a581864e07189459a775631558beb7b
+  header: # two-apex tapes with popcount(b) <= 3, spine 14: 1925120 tapes, max H = 3637055, distinct values below 8388608: 568931
+slice 2: lines=  499583 sha256=1e8e2af4e1011279cd032260dac2382cae59e1f4055e005ab4f624521da5d2f5
+  header: # two-apex tapes with popcount(b) <= 3, spine 14: 1925120 tapes, max H = 3303785, distinct values below 8388608: 499582
+slice 3: lines=  716382 sha256=b36db4ca5aafcca9002b707fa90958fb4186e0d8898ca6627ebac671892dc692
+  header: # two-apex tapes with popcount(b) <= 3, spine 14: 1925120 tapes, max H = 4920337, distinct values below 8388608: 716381
+slice 4: lines=  450519 sha256=2270fb2bac8863a00a91a79bcaf420d7e7575bb41e7ca22a8df60999f7c2d7ce
+  header: # two-apex tapes with popcount(b) <= 3, spine 14: 1925120 tapes, max H = 2970545, distinct values below 8388608: 450518
+slice 5: lines=  672830 sha256=b551b33c8aabfbdb9a3e575e48bb757680eba312ef5f49f806ce431192e8ba4d
+  header: # two-apex tapes with popcount(b) <= 3, spine 14: 1925120 tapes, max H = 4584665, distinct values below 8388608: 672829
+slice 6: lines=  594961 sha256=0eff2b43daecb2657e0d56656929146f48851fffea87e3d189f83911e953213c
+  header: # two-apex tapes with popcount(b) <= 3, spine 14: 1925120 tapes, max H = 4251395, distinct values below 8388608: 594960
+slice 7: lines=  792020 sha256=d1d3043cd149b6ab0be599ad1a4aeb74da53a3e9018139608798015ed5dbc1a7
+  header: # two-apex tapes with popcount(b) <= 3, spine 14: 1925120 tapes, max H = 5889173, distinct values below 8388608: 792019
+merge: merged 8 slices: 15400960 tapes, max H 5889173, 1138644 distinct values below 8388608
+merged tapexs_14.txt: lines= 1138645 sha256=4a04f3849196be1487e33f0500e5e7dde95f9e45a91bd77892a2adb1b5ce5f08

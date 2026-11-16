@@ -1,0 +1,9 @@
+pre-registered 2026-11-15 23:43:23 MST, before any spine-14 slice printed and before address_moves n = 20, 22 were read:
+P-S1: spine 14 with the second apex beating <= 3 spine vertices attains every odd N < 2^18 except 7 and 21 (spine 13 missed 256,521 below 2^18).
+P-S2: the first miss above 21 lies in [500,000, 560,000] if the doubling 77,533 -> 117,345 -> 256,521 continues.
+P-S3: below 2^18 fewer than 0.1 % of the attained values need overlap exactly 3, and orientation A -> B suffices for all of them.
+P-A1: at n = 20 and n = 22 the fraction of addresses with an exact +2 partner stays between 2.0 % and 2.6 %, and single-bit +2 partners exist (even width: critical bit i = (n+2)/2).
+P-A2: the fraction of addresses with an interior +2 edit (avoiding the top and bottom n//5 bits) stays below 0.5 %.
+P-F1: nu(608) < 8 and nu(736) < 12, so a(19) = a(23) = 6.
+pre-registered 2026-11-16 00:12:04 MST, before collatz_tree.py was run:
+P-C1: in count coordinates h = 2x+1 (Collatz map h -> 3h for h = 3 mod 4, h -> (h+1)/2 for h = 1 mod 4) the odd h <= 2^20 whose forward orbit passes through 7 or 21 form a union of 2-adic rays c*2^k + 1, and every such h other than 7 and 21 is a one-apex count 1 + p(u) (so the exceptional set of the Collatz-conditional reduction is covered by the proved one-apex family).

@@ -1,0 +1,10 @@
+# two-apex tapes with popcount(b) <= 3, spine 14: 15400960 tapes, max H = 5889173, distinct values below 8388608: 1138644
+distinct values 1138644, max 5889173
+odd N < 2^16 = 65536: misses 2, first [7, 21]
+odd N < 2^17 = 131072: misses 2, first [7, 21]
+odd N < 2^18 = 262144: misses 2, first [7, 21]
+odd N < 2^19 = 524288: misses 2, first [7, 21]
+odd N < 2^20 = 1048576: misses 139, first [7, 21, 729421, 798023, 816547, 831415, 841509, 843641]
+odd N < 2^21 = 2097152: misses 75495, first [7, 21, 729421, 798023, 816547, 831415, 841509, 843641]
+below 2^18: overlap distribution [(0, 6245), (1, 83818), (2, 40937), (3, 70)]; orientation sets [(3, 131070)]; values attained only with B -> A: 0
+below 2^19: overlap distribution [(0, 6245), (1, 115454), (2, 136209), (3, 4234)]; orientation sets [(1, 18), (2, 18), (3, 262106)]; values attained only with B -> A: 18

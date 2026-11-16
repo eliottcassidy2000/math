@@ -1,0 +1,6 @@
+q=13 i=0 d=13 Phi_d(2)=8191 (4 digits) factors=[(8191, 1)] nu=1 cumulative c(0,13)=1  (0s)
+q=13 i=1 d=26 Phi_d(2)=2731 (4 digits) factors=[(2731, 1)] nu=1 cumulative c(1,13)=2  (0s)
+q=13 i=2 d=52 Phi_d(2)=13421773 (8 digits) factors=[(53, 1), (157, 1), (1613, 1)] nu=3 cumulative c(2,13)=5  (0s)
+q=13 i=3 d=104 Phi_d(2)=264917625139441 (15 digits) factors=[(858001, 1), (308761441, 1)] nu=2 cumulative c(3,13)=7  (0s)
+q=13 i=4 d=208 Phi_d(2)=78919881726271091143763623681 (29 digits) factors=[(78919881726271091143763623681, 1)] nu=1 cumulative c(4,13)=8  (0s)
+q=13 i=5 d=416 Phi_d(2)=627700595587... (58 digits) factors=[(928513, 1), (18558466369, 1), (23877647873, 1), (21316654212673, 1), (715668470267111297, 1)] nu=5 cumulative c(5,13)=13 >= q: covers at a=5 (8s)

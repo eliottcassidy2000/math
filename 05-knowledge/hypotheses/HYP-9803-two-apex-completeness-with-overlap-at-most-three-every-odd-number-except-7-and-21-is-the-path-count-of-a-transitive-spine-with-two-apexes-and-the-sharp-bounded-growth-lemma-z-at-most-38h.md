@@ -2,7 +2,10 @@
 id: HYP-9803
 title: "(a) Two-apex completeness: every odd N other than 7 and 21 is the Hamiltonian-path count of a transitive spine with two apexes, the second beating at most three spine vertices (so every realizable conflict graph needed for Chan-Pak is a clique with a second apex at overlap at most three); (b) the sharp bounded-growth lemma for literal span-3 words: the number Z_l(W) of two-path covers bridged by the next vertex is at most 38 H(W), equivalently H(W l) <= 39 H(W), with equality at every H that some word attains (W' 0 0 0 7 6 0 followed by {2,3})"
 status: >
-  (a) OPEN (CONJECTURE); (b) PROVED (2026-11-15/16: chanpak_target_ribbon_audit_20261116/SHARP_GROWTH.md by tail deletion,
+  (a) OPEN (CONJECTURE), FINITE-EXACT below 2^19 (UPDATE 2026-11-16, klein-2026-11-16-wheels2, wheels_spine14_shield_20261116/SPINE14.md:
+  all 15,400,960 two-apex tapes with spine 14 and |S_B| <= 3 attain every odd N < 2^19 but 7, 21; first miss above 21 is 729,421,
+  the first misses 77,533 / 117,345 / 256,521 / 729,421 grow by ratios 1.51, 2.19, 2.84; below 2^18 only 70 values need overlap 3
+  and A -> B suffices, below 2^19 18 values need B -> A; next test spine 15); (b) PROVED (2026-11-15/16: chanpak_target_ribbon_audit_20261116/SHARP_GROWTH.md by tail deletion,
   per-letter constants in chanpak_eight_braid_20261116/SHARP_EIGHT.md; AUDITED SOUND and corroborated exhaustively to length 9
   by THM-5253 (A), klein-2026-11-15-age; the age-structured potential proposed below is withdrawn as a proof device, see THM-5253 (B)-(D)).
   Original record, klein-2026-11-15-ribbon. (a) FINITE-EXACT: all 2^23 two-apex tapes with spine 11 attain every odd
@@ -35,7 +38,7 @@ with `A → B`, `A` beating the spine vertices in a set `S_A`, `B` those in `S_B
 Grinberg–Stanley) the count is `1 + 2(a + b + c) + 4d`, so the statement is that cliques with one further apex at
 overlap at most three realise every value the independence polynomial at 2 must take. Evidence: packet §3 (every odd
 `N < 2^17` except 7, 21 with spine ≤ 13 and overlap ≤ 3, every odd `N < 2^16` with spine ≤ 12, and with spine ≤ 11 over all tapes); the overlap needed is 0 for
-1,605 values, 1 for 19,467, 2 for 11,615, 3 for 79 below `2^16` (3,185 / 40,638 / 21,635 / 76 below `2^17`). Spines 12 and 13 were the pre-registered Q4–Q6 (confirmed). Tests: spine 14 (about 15 M tapes), and an explicit digital formula for the count when
+1,605 values, 1 for 19,467, 2 for 11,615, 3 for 79 below `2^16` (3,185 / 40,638 / 21,635 / 76 below `2^17`). Spines 12 and 13 were the pre-registered Q4–Q6 (confirmed). Tests: spine 14 (about 15 M tapes; DONE 2026-11-16, every odd N < 2^19 but 7, 21, first miss 729,421 — wheels_spine14_shield_20261116/SPINE14.md), and an explicit digital formula for the count when
 `|S_B| ≤ 3` (the one-apex count is `1 + p(u)` with `p` the inversion-pair statistic of the apex packet), which would
 turn (a) into a statement about three digital functions.
 

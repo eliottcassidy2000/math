@@ -1,0 +1,4 @@
+validation of two_apex_slice.c + merge_slices.py: spine 11, popcount(b) <= 3, four slices merged versus the earlier full census chanpak_span3_growth_two_apex_seam_20261115/data/tapexs_11.txt.gz
+# two-apex tapes with popcount(b) <= 3, spine 11: 950272 tapes, max H = 194529, distinct values below 4194304: 48963
+# two-apex tapes with popcount(b) <= 3, spine 11: 950272 tapes, max H = 194529, distinct values below 4194304: 48963
+all V lines identical

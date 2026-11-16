@@ -2,7 +2,13 @@
 id: HYP-9823
 title: "Zsigmondy-wheel conjectures: (W1) for every N the wheel W(N) covers Z/N iff the odd parts of the orders cover Z/m (m the odd part of N), i.e. the nested-dyadic criterion of THM-5254 (B) is also necessary; (W2) the least a with 2^a q a covering period satisfies a(q) << sqrt(q), with a(3) = 3, a(5) = 4, a(7) = 4 proved; (W3) no single wheel is self-dual (serves both signs of one coefficient); (W4) in base b the least covering period is governed by the base-b analogue of THM-5254 (C), the missing moduli being Zsigmondy's exceptions (2 for b + 1 a power of two, 6 for b = 2)"
 status: >
-  OPEN (CONJECTURE), klein-2026-11-16-two3. Evidence: (W1) exact agreement at every decided period N <= 150 (base 2);
+  UPDATE (klein-2026-11-16-wheels2, THM-5255): (W1) PROVED in its corrected form -- W(N) covers Z/N iff a >= 6 or the odd
+  wheel covers Z/m (the fibre argument on Z/2^a x Z/m); (W2) was badly stated: a(q) <= 6 for EVERY odd prime q because W(64)
+  covers, and the exact values are a(3) = 3, a(5) = a(7) = 4, a(11) = a(13) = 5, a(17) = a(19) = 6, conjecturally a(q) = 6 for
+  all q >= 17; (W3) reduced for N = 2m to 'the flipper wheel covers Z/m' and settled for all N <= 150 by the parity-sheet
+  bound (no self-dual wheel below 150, including 120); (W4) unchanged. Remaining OPEN: existence of any self-dual wheel
+  (some odd m whose flipper wheel covers Z/m), a(q) = 6 for all q >= 17, the base-b analogue.
+  Original record (klein-2026-11-16-two3): OPEN (CONJECTURE). Evidence: (W1) exact agreement at every decided period N <= 150 (base 2);
   (W2) the counts c(a, q) for q = 3, 5, 7 and the heuristic nu(2^i q) ~ log(2^i q); (W3) no self-dual cover at any decided
   period below 150 (24, 40, 48, 56, 60, 64, 72, 80, 84, 96, 112, 128, 140 fail; 120 undecided after 2e8 nodes); (W4) base 3 covers exactly at
   48, 72, 90, 96, 108, 120 below 120, with the modulus 2 missing. Packet two_three_wheels_synthesis_20261116 (WHEELS.md

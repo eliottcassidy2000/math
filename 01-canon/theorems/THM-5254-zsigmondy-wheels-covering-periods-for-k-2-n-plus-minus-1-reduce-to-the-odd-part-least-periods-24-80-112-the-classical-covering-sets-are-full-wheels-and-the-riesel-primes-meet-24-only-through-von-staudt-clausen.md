@@ -7,7 +7,9 @@ status: >
   on bitmasks (wheels2.py, wheels3.py, brier_sheets.py, exact_one.py; sympy factorisations of 2^d - 1, d <= 150), with the
   five periods the bounded search left undecided settled by the a = 1 identity (90, 126, 150), the density bound (100) and a
   larger search (132). Pre-registered P-W1 confirmed, P-W3 refuted by the base-3 period 108 (packet PREREGISTERED.md).
-  CITED: Zsigmondy/Bang (primitive prime divisors; the exception 2^6 - 1), the classical covering sets (Sierpinski 1960,
+  UPDATE (klein-2026-11-16-wheels2, THM-5255): the nested-dyadic criterion of (B) is also necessary whenever a <= 5, and for
+  a >= 6 the dyadic classes cover alone, so (B) becomes an exact criterion; a(q) <= 6 for every odd prime, a(11) = a(13) = 5,
+  a(17) = a(19) = 6; Erdos's 1950 covering system is the first pattern of W(24). CITED: Zsigmondy/Bang (primitive prime divisors; the exception 2^6 - 1), the classical covering sets (Sierpinski 1960,
   Selfridge, Riesel), CLOCKS.md of logarithmic_repairs_covers_20261116 (the two patterns at period 24, the Brier remark),
   THM-484 (involution modulus 24), THM-4838 (von Staudt-Clausen, the "twelve" reading typed NUMEROLOGY), THM-5253 (E).
 session: klein-2026-11-16-two3

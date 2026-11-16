@@ -1,0 +1,6 @@
+q=11 i=0 d=11 Phi_d(2)=2047 (4 digits) factors=[(23, 1), (89, 1)] nu=2 cumulative c(0,11)=2  (0s)
+q=11 i=1 d=22 Phi_d(2)=683 (3 digits) factors=[(683, 1)] nu=1 cumulative c(1,11)=3  (0s)
+q=11 i=2 d=44 Phi_d(2)=838861 (6 digits) factors=[(397, 1), (2113, 1)] nu=2 cumulative c(2,11)=5  (0s)
+q=11 i=3 d=88 Phi_d(2)=1034834473201 (13 digits) factors=[(353, 1), (2931542417, 1)] nu=2 cumulative c(3,11)=7  (0s)
+q=11 i=4 d=176 Phi_d(2)=1204221828098618944454401 (25 digits) factors=[(229153, 1), (119782433, 1), (43872038849, 1)] nu=3 cumulative c(4,11)=10  (0s)
+q=11 i=5 d=352 Phi_d(2)=146147933692... (49 digits) factors=[(5304641, 1), (275509565477848842604777623828011666349761, 1)] nu=2 cumulative c(5,11)=12 >= q: covers at a=5 (0s)

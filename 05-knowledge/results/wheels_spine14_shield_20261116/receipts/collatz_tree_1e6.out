@@ -1,0 +1,7 @@
+odd h <= 1000000 whose orbit meets {7, 21}: 373393; first 30: [7, 21, 23, 27, 31, 35, 39, 41, 45, 47, 51, 53, 55, 59, 61, 63, 67, 69, 71, 77, 79, 81, 83, 89, 91, 93, 95, 101, 103, 105]
+rays c*2^k + 1 (c = odd part of h - 1), first members: {3: [7], 5: [21, 41, 81, 161, 321], 11: [23, 45, 89, 177, 353], 13: [27, 53, 105, 209, 417], 15: [31, 61, 121, 241, 481], 17: [35, 69, 137, 273, 545], 19: [39, 77, 153, 305, 609], 23: [47, 93, 185, 369, 737], 25: [51, 101, 201, 401, 801], 27: [55, 109, 217, 433, 865], 29: [59, 117, 233, 465, 929], 31: [63, 125, 249, 497, 993]} ... number of distinct c: 186858
+members not one-apex counts (excluding 7, 21): 187200 [35, 41, 55, 59, 67, 71, 77, 83, 89, 93, 101, 105, 109, 111, 119, 125, 133, 135, 137, 147]
+one-apex membership of the rays 3*2^k+1, 5*2^k+1, 13*2^k+1 for k = 2..18:
+  c = 3: [(2, False), (3, True), (4, False), (5, True), (6, False), (7, False), (8, True), (9, False), (10, False), (11, False), (12, True), (13, False), (14, False), (15, True), (16, False), (17, False), (18, True)]
+  c = 5: [(2, False), (3, False), (4, True), (5, False), (6, True), (7, False), (8, False), (9, True), (10, False), (11, False), (12, False), (13, False), (14, False), (15, True), (16, False), (17, False), (18, False)]
+  c = 13: [(2, True), (3, False), (4, False), (5, False), (6, True), (7, False), (8, False), (9, False), (10, True), (11, True), (12, False), (13, False), (14, False), (15, True), (16, False), (17, False), (18, True)]

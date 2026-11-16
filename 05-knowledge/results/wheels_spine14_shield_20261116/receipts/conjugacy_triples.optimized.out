@@ -1,0 +1,8 @@
+Collatz orbit of 3: [3, 10, 5, 16, 8, 4, 2, 1]
+count coordinates h = 2x + 1: [7, 21, 11, 33, 17, 9, 5, 3] (7 and 21 are the first two; all later ones are realized counts)
+conjugated map on h from 7: [7, 21, 11, 33, 17, 9, 5, 3]
+triple (3, 4, 5): s=9 m=16 d=1 L=16: pieces [('path', 15)]; predicted path(L-1)=15, 0 cycles of 32; degree-1 vertices [8, 9]
+triple (5, 12, 13): s=25 m=144 d=1 L=144: pieces [('path', 143)]; predicted path(L-1)=143, 0 cycles of 288; degree-1 vertices [25, 72]
+triple (7, 24, 25): s=49 m=576 d=1 L=576: pieces [('path', 575)]; predicted path(L-1)=575, 0 cycles of 1152; degree-1 vertices [49, 288]
+triple (10, 24, 26): s=100 m=576 d=4 L=144: pieces [('cycle', 288), ('path', 143), ('path', 144)]; predicted path(L-1)=143, path(L)=144, 1 cycles of 288; degree-1 vertices [50, 100, 288, 338]
+triple (24, 45, 51): s=576 m=2025 d=9 L=225: pieces [('cycle', 450), ('cycle', 450), ('cycle', 450), ('cycle', 450), ('path', 224)]; predicted path(L-1)=224, 4 cycles of 450; degree-1 vertices [288, 576]

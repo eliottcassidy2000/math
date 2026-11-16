@@ -1,0 +1,6 @@
+Erdos 1950 system covers Z/24: True ; primes of the moduli: {2: 3, 3: 7, 4: 5, 8: 17, 12: 13, 24: 241}
+CLOCKS.md pattern (0,1,0,7,3,23) in order (2,4,3,12,8,24) equals Erdos's system: True
+W(24): Brier parity bound = 0.667 (needs >= 1; 3 in set: True) -> no Brier number can have a covering set inside it
+W(36): Brier parity bound = 0.722 (needs >= 1; 3 in set: True) -> no Brier number can have a covering set inside it
+W(64): Brier parity bound = 0.500 (needs >= 1; 3 in set: True) -> no Brier number can have a covering set inside it
+FFK Brier set (period 720): Brier parity bound = 1.476 (needs >= 1; 3 in set: True) -> possible
