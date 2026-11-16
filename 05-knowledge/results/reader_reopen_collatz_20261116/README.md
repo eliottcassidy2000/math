@@ -5,7 +5,8 @@ m=11·2^v branch. In [the main construction](BANK.md) the same
 boundary rewrite gives 4m²+1→4m²+3 at every v≥2. It reverses three
 old arcs, adds two vertices, and retains every old spacer arc.
 [Five more specific reversals](LOCAL_MOVES.md) then give 4m²+5
-without adding a vertex.
+without adding a vertex. A [second square rail](SECOND_RAIL.md),
+m=19·2^v, also reopens to offsets +3 and +5.
 
 [The same construction](BANK.md) gives a verified bank of
 **38 consecutive odds, 4m²−5 through 4m²+69**, at every height
