@@ -1,0 +1,12 @@
+records (n, count 2n+1, rising steps above it): [(2, 5, 1), (4, 9, 3), (10, 21, 9), (244, 489, 15), (2660, 5321, 17), (4648, 9297, 18), (5212, 10425, 24), (34628, 69257, 27), (58130, 116261, 28), (502750, 1005501, 30), (737596, 1475193, 40)]
+n=10 (count 21): chain n = [10, 13, 17, 23, 31, 41, 55, 73, 97, 129] ; counts [21, 27, 35, 47, 63, 83, 111, 147, 195, 259]
+n=13 (count 27): chain n = [13, 17, 23, 31, 41, 55, 73, 97, 129] ; counts [27, 35, 47, 63, 83, 111, 147, 195, 259]
+n=20 (count 41): chain n = [20, 27] ; counts [41, 55]
+n=27 (count 55): chain n = [27] ; counts [55]
+j=1: classes mod 3^j with >= j rising steps: 2 (2^j = 2)
+j=2: classes mod 3^j with >= j rising steps: 4 (2^j = 4)
+j=3: classes mod 3^j with >= j rising steps: 8 (2^j = 8)
+j=4: classes mod 3^j with >= j rising steps: 16 (2^j = 16)
+j=5: classes mod 3^j with >= j rising steps: 32 (2^j = 32)
+j=6: classes mod 3^j with >= j rising steps: 64 (2^j = 64)
+j=7: classes mod 3^j with >= j rising steps: 128 (2^j = 128)

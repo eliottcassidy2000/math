@@ -1,0 +1,10 @@
+rate 1.72000 mode global
+depth  1:       8 candidates ->      4 undominated; ranks {48: 2, 57: 2}; least H 1 (rho^m = 1.7)  [0 s]
+depth  2:      32 candidates ->     20 undominated; ranks {13: 2, 17: 2, 38: 2, 45: 6, 47: 4, 54: 2, 56: 2}; least H 1 (rho^m = 3.0)  [0 s]
+depth  3:     160 candidates ->     24 undominated; ranks {13: 4, 17: 4, 38: 2, 45: 6, 47: 4, 54: 2, 56: 2}; least H 1 (rho^m = 5.1)  [1 s]
+depth  4:     192 candidates ->     84 undominated; ranks {4: 4, 10: 8, 12: 8, 13: 16, 17: 10, 38: 8, 44: 2, 45: 12, 47: 8, 54: 6, 56: 2}; least H 1 (rho^m = 8.8)  [1 s]
+depth  5:     672 candidates ->    344 undominated; ranks {3: 12, 4: 26, 9: 4, 10: 42, 11: 2, 12: 44, 13: 64, 16: 10, 17: 18, 36: 4, 38: 34, 42: 2, 43: 4, 44: 12, 45: 36, 47: 18, 54: 10, 56: 2}; least H 1 (rho^m = 15.1)  [1 s]
+depth  6:    1850 candidates ->    837 undominated; ranks {3: 52, 4: 108, 8: 12, 9: 26, 10: 156, 11: 20, 12: 161, 13: 110, 16: 12, 17: 26, 35: 4, 36: 8, 38: 58, 41: 10, 42: 6, 43: 9, 44: 6, 45: 45, 47: 8}; least H 1 (rho^m = 25.9)  [3 s]
+depth  7:    4692 candidates ->   2616 undominated; ranks {3: 286, 4: 456, 8: 136, 9: 175, 10: 726, 11: 138, 12: 581, 13: 68, 17: 7, 34: 12, 35: 4, 36: 7, 38: 12, 41: 3, 42: 3, 43: 2}; least H 1 (rho^m = 44.5)  [7 s]
+depth  8:   10352 candidates ->   4971 undominated; ranks {3: 1494, 4: 948, 7: 4, 8: 476, 9: 533, 10: 975, 11: 146, 12: 392, 13: 3}; least H 1 (rho^m = 76.6)  [17 s]
+depth  9:   23061 candidates ->  11647 undominated; ranks {2: 8, 3: 6689, 4: 2307, 7: 12, 8: 920, 9: 643, 10: 775, 11: 105, 12: 188}; least H 3 (rho^m = 131.8)  [67 s]

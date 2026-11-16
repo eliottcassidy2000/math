@@ -1,0 +1,7 @@
+odd h in [225, 4409]: 2093 numbers, every one has a tournament of order 10 with H = h and a vertex x with |h - 2 H(T-x)| <= 15
+least |h - 2d| found (order-10 realisers only; upper bounds): {1: 1722, 3: 309, 5: 43, 7: 13, 9: 4, 11: 1, 13: 1}
+  defect 7: [399, 1285, 2005, 2569, 3681, 3815, 4127, 4163, 4167, 4175, 4233, 4331, 4361]
+  defect 9: [4053, 4153, 4169, 4391]
+  defect 11: [4319]
+  defect 13: [4321]
+first odd h > 21 with no order-10 realiser having such a parent: 4411

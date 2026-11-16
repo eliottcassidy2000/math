@@ -1,0 +1,11 @@
+rate 1.72000
+depth   1:       8 nodes in      8 classes (longest class word  1); least H 1 ; rho^depth 1.72 ; cached words 9  [0 s]
+depth   2:      36 nodes in     36 classes (longest class word  2); least H 1 ; rho^depth 2.9584 ; cached words 73  [0 s]
+depth   3:      40 nodes in     36 classes (longest class word  2); least H 1 ; rho^depth 5.08845 ; cached words 329  [0 s]
+depth   4:     142 nodes in     92 classes (longest class word  3); least H 1 ; rho^depth 8.75213 ; cached words 329  [1 s]
+depth   5:     528 nodes in    368 classes (longest class word  4); least H 1 ; rho^depth 15.0537 ; cached words 777  [1 s]
+depth   6:    1590 nodes in   1361 classes (longest class word  5); least H 1 ; rho^depth 25.8923 ; cached words 3095  [2 s]
+depth   7:    6110 nodes in   5800 classes (longest class word  6); least H 1 ; rho^depth 44.5348 ; cached words 12757  [7 s]
+depth   8:   16088 nodes in  15283 classes (longest class word  7); least H 1 ; rho^depth 76.5998 ; cached words 58277  [18 s]
+depth   9:   43825 nodes in  42577 classes (longest class word  8); least H 3 ; rho^depth 131.752 ; cached words 181963  [47 s]
+depth  10:  157910 nodes in 155278 classes (longest class word  9); least H 3 ; rho^depth 226.613 ; cached words 591803  [139 s]
