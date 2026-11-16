@@ -1,0 +1,24 @@
+depth 5: states with H <= 40: 2379, frontier 1928
+depth 10: states with H <= 40: 16460, frontier 1132
+depth 13: states with H <= 40: 16794, frontier 0
+closed: True; states with H <= 40: 16794
+max ratio over all words with H(W) <= M: (39.0, 1, 39)
+exact envelope env[H] (max H(Wl) over ALL words with H(W) = H), and the two-fragment part Z, for H <= M:
+  H=1 env=39 ratio=39.000 maxZ=38 Z/H=38.000
+  H=3 env=117 ratio=39.000 maxZ=114 Z/H=38.000
+  H=5 env=195 ratio=39.000 maxZ=190 Z/H=38.000
+  H=9 env=351 ratio=39.000 maxZ=342 Z/H=38.000
+  H=11 env=429 ratio=39.000 maxZ=418 Z/H=38.000
+  H=13 env=507 ratio=39.000 maxZ=494 Z/H=38.000
+  H=15 env=585 ratio=39.000 maxZ=570 Z/H=38.000
+  H=17 env=663 ratio=39.000 maxZ=646 Z/H=38.000
+  H=19 env=741 ratio=39.000 maxZ=722 Z/H=38.000
+  H=23 env=897 ratio=39.000 maxZ=874 Z/H=38.000
+  H=25 env=975 ratio=39.000 maxZ=950 Z/H=38.000
+  H=27 env=1053 ratio=39.000 maxZ=1026 Z/H=38.000
+  H=29 env=1131 ratio=39.000 maxZ=1102 Z/H=38.000
+  H=31 env=1209 ratio=39.000 maxZ=1178 Z/H=38.000
+  H=33 env=1287 ratio=39.000 maxZ=1254 Z/H=38.000
+  H=35 env=1365 ratio=39.000 maxZ=1330 Z/H=38.000
+  H=37 env=1443 ratio=39.000 maxZ=1406 Z/H=38.000
+  H=39 env=1521 ratio=39.000 maxZ=1482 Z/H=38.000

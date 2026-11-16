@@ -1,0 +1,145 @@
+length 0: words 1, max H(Wl)/H(W) = 1.000000 = 1/1, letter 0, word
+length 1: words 8, max H(Wl)/H(W) = 3.000000 = 3/1, letter 2, word 0
+length 2: words 64, max H(Wl)/H(W) = 5.000000 = 5/1, letter 4, word 0 0
+length 3: words 512, max H(Wl)/H(W) = 11.000000 = 11/1, letter 3, word 0 3 6
+length 4: words 4096, max H(Wl)/H(W) = 23.000000 = 23/1, letter 6, word 0 3 6 0
+length 5: words 32768, max H(Wl)/H(W) = 39.000000 = 39/1, letter 6, word 0 0 7 6 0
+length 6: words 262144, max H(Wl)/H(W) = 39.000000 = 39/1, letter 6, word 0 0 0 7 6 0
+length 7: words 2097152, max H(Wl)/H(W) = 39.000000 = 39/1, letter 6, word 0 0 0 0 7 6 0
+overall max ratio over lengths 0..7: 39.000000
+length 0: max two-fragment part / H(W) = 0.0000 = 0/0
+length 1: max two-fragment part / H(W) = 1.0000 = 1/1
+length 2: max two-fragment part / H(W) = 3.0000 = 3/1
+length 3: max two-fragment part / H(W) = 9.0000 = 9/1
+length 4: max two-fragment part / H(W) = 21.0000 = 21/1
+length 5: max two-fragment part / H(W) = 37.0000 = 37/1
+length 6: max two-fragment part / H(W) = 38.0000 = 38/1
+length 7: max two-fragment part / H(W) = 38.0000 = 38/1
+envelope env[H] = max H(Wl) over words with H(W) = H (all lengths <= L), with env[H]/H and env[H] - 5H:
+  H=1 env=39 ratio=39.000 env-5H=34
+  H=3 env=71 ratio=23.667 env-5H=56
+  H=5 env=133 ratio=26.600 env-5H=108
+  H=9 env=161 ratio=17.889 env-5H=116
+  H=11 env=193 ratio=17.545 env-5H=138
+  H=13 env=189 ratio=14.538 env-5H=124
+  H=15 env=233 ratio=15.533 env-5H=158
+  H=17 env=247 ratio=14.529 env-5H=162
+  H=19 env=299 ratio=15.737 env-5H=204
+  H=23 env=309 ratio=13.435 env-5H=194
+  H=25 env=353 ratio=14.120 env-5H=228
+  H=27 env=335 ratio=12.407 env-5H=200
+  H=29 env=353 ratio=12.172 env-5H=208
+  H=31 env=379 ratio=12.226 env-5H=224
+  H=33 env=421 ratio=12.758 env-5H=256
+  H=35 env=349 ratio=9.971 env-5H=174
+  H=37 env=445 ratio=12.027 env-5H=260
+  H=39 env=395 ratio=10.128 env-5H=200
+  H=41 env=447 ratio=10.902 env-5H=242
+  H=43 env=463 ratio=10.767 env-5H=248
+  H=45 env=521 ratio=11.578 env-5H=296
+  H=47 env=521 ratio=11.085 env-5H=286
+  H=49 env=507 ratio=10.347 env-5H=262
+  H=51 env=495 ratio=9.706 env-5H=240
+  H=53 env=527 ratio=9.943 env-5H=262
+  H=55 env=545 ratio=9.909 env-5H=270
+  H=57 env=501 ratio=8.789 env-5H=216
+  H=59 env=565 ratio=9.576 env-5H=270
+  H=61 env=521 ratio=8.541 env-5H=216
+  H=63 env=477 ratio=7.571 env-5H=162
+  H=65 env=637 ratio=9.800 env-5H=312
+  H=67 env=575 ratio=8.582 env-5H=240
+  H=69 env=667 ratio=9.667 env-5H=322
+  H=71 env=613 ratio=8.634 env-5H=258
+  H=73 env=649 ratio=8.890 env-5H=284
+  H=75 env=581 ratio=7.747 env-5H=206
+  H=77 env=633 ratio=8.221 env-5H=248
+  H=79 env=719 ratio=9.101 env-5H=324
+  H=81 env=733 ratio=9.049 env-5H=328
+  H=83 env=687 ratio=8.277 env-5H=272
+  H=85 env=671 ratio=7.894 env-5H=246
+  H=87 env=603 ratio=6.931 env-5H=168
+  H=89 env=769 ratio=8.640 env-5H=324
+  H=91 env=747 ratio=8.209 env-5H=292
+  H=93 env=771 ratio=8.290 env-5H=306
+  H=95 env=787 ratio=8.284 env-5H=312
+  H=97 env=803 ratio=8.278 env-5H=318
+  H=99 env=685 ratio=6.919 env-5H=190
+  H=101 env=831 ratio=8.228 env-5H=326
+  H=103 env=805 ratio=7.816 env-5H=290
+  H=105 env=863 ratio=8.219 env-5H=338
+  H=107 env=755 ratio=7.056 env-5H=220
+  H=109 env=881 ratio=8.083 env-5H=336
+  H=111 env=835 ratio=7.523 env-5H=280
+  H=113 env=823 ratio=7.283 env-5H=258
+  H=115 env=891 ratio=7.748 env-5H=316
+  H=117 env=907 ratio=7.752 env-5H=322
+  H=119 env=771 ratio=6.479 env-5H=176
+  H=121 env=887 ratio=7.331 env-5H=282
+  H=123 env=943 ratio=7.667 env-5H=328
+  H=125 env=963 ratio=7.704 env-5H=338
+  H=127 env=927 ratio=7.299 env-5H=292
+  H=129 env=983 ratio=7.620 env-5H=338
+  H=131 env=1003 ratio=7.656 env-5H=348
+  H=133 env=981 ratio=7.376 env-5H=316
+  H=135 env=1005 ratio=7.444 env-5H=330
+  H=137 env=979 ratio=7.146 env-5H=294
+  H=139 env=1013 ratio=7.288 env-5H=318
+  H=141 env=995 ratio=7.057 env-5H=290
+  H=143 env=971 ratio=6.790 env-5H=256
+  H=145 env=1001 ratio=6.903 env-5H=276
+  H=147 env=1021 ratio=6.946 env-5H=286
+  H=149 env=867 ratio=5.819 env-5H=122
+  H=151 env=1057 ratio=7.000 env-5H=302
+  H=153 env=1043 ratio=6.817 env-5H=278
+  H=155 env=1061 ratio=6.845 env-5H=286
+  H=157 env=1079 ratio=6.873 env-5H=294
+  H=159 env=1059 ratio=6.660 env-5H=264
+  H=161 env=1011 ratio=6.280 env-5H=206
+  H=163 env=1039 ratio=6.374 env-5H=224
+  H=165 env=987 ratio=5.982 env-5H=162
+  H=169 env=967 ratio=5.722 env-5H=122
+  H=171 env=999 ratio=5.842 env-5H=144
+  H=173 env=1057 ratio=6.110 env-5H=192
+  H=175 env=1129 ratio=6.451 env-5H=254
+  H=177 env=1073 ratio=6.062 env-5H=188
+  H=179 env=1091 ratio=6.095 env-5H=196
+  H=181 env=1003 ratio=5.541 env-5H=98
+  H=183 env=991 ratio=5.415 env-5H=76
+  H=185 env=1029 ratio=5.562 env-5H=104
+  H=187 env=1083 ratio=5.791 env-5H=148
+  H=189 env=1085 ratio=5.741 env-5H=140
+  H=191 env=1085 ratio=5.681 env-5H=130
+  H=193 env=1067 ratio=5.528 env-5H=102
+  H=195 env=1065 ratio=5.462 env-5H=90
+  H=197 env=1153 ratio=5.853 env-5H=168
+  H=199 env=1091 ratio=5.482 env-5H=96
+  H=201 env=1095 ratio=5.448 env-5H=90
+  H=203 env=1105 ratio=5.443 env-5H=90
+  H=205 env=1099 ratio=5.361 env-5H=74
+  H=207 env=1191 ratio=5.754 env-5H=156
+  H=209 env=1215 ratio=5.813 env-5H=170
+  H=211 env=1091 ratio=5.171 env-5H=36
+  H=213 env=1239 ratio=5.817 env-5H=174
+  H=215 env=1217 ratio=5.660 env-5H=142
+  H=217 env=1205 ratio=5.553 env-5H=120
+  H=219 env=1231 ratio=5.621 env-5H=136
+  H=221 env=1141 ratio=5.163 env-5H=36
+  H=223 env=1241 ratio=5.565 env-5H=126
+  H=227 env=1239 ratio=5.458 env-5H=104
+  H=231 env=1271 ratio=5.502 env-5H=116
+  H=235 env=1277 ratio=5.434 env-5H=102
+  H=237 env=1301 ratio=5.489 env-5H=116
+  H=239 env=1299 ratio=5.435 env-5H=104
+  H=241 env=1279 ratio=5.307 env-5H=74
+  H=243 env=1337 ratio=5.502 env-5H=122
+  H=245 env=1315 ratio=5.367 env-5H=90
+  H=249 env=1355 ratio=5.442 env-5H=110
+  H=253 env=1323 ratio=5.229 env-5H=58
+  H=257 env=1367 ratio=5.319 env-5H=82
+  H=259 env=1407 ratio=5.432 env-5H=112
+  H=261 env=1423 ratio=5.452 env-5H=118
+  H=269 env=1405 ratio=5.223 env-5H=60
+  H=271 env=1407 ratio=5.192 env-5H=52
+  H=273 env=1411 ratio=5.168 env-5H=46
+  H=277 env=1443 ratio=5.209 env-5H=58
+  H=303 env=1553 ratio=5.125 env-5H=38

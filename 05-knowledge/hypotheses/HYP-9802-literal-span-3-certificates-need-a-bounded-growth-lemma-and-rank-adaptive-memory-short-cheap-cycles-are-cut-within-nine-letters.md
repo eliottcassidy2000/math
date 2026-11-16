@@ -2,7 +2,11 @@
 id: HYP-9802
 title: "Literal span-3 growth certificates: (i) every cheap primitive cycle of period at most 6 letters (growth below 1.72 per letter) contains a rank-one factor of at most 9 letters, so a targeted suffix dictionary of 2,527 strings cuts them; (ii) letter-level cone certificates cannot cap the potential by H on raw generators at any rate, because one letter can split a path fragment, so they need the bounded-growth lemma H(W l) <= K H(W) (observed K = 39); (iii) the remaining slow bottlenecks have periods of 7-12 letters and need rank-adaptive memory"
 status: >
-  OPEN (CONJECTURE), mac-mini-2026-11-15-frame, wave 39 of chanpak_waves_20261113.
+  OPEN (CONJECTURE), mac-mini-2026-11-15-frame, wave 39 of chanpak_waves_20261113. UPDATE (klein-2026-11-15-ribbon, THM-5243 /
+  HYP-9803): the lemma of (ii) is exactly Z_l(W) <= (K - 2) H(W) for the bridged two-covers (PROVED decomposition); it holds with
+  K = 39 for every word with H(W) <= 100 (closed set of 100,203 states) and at all lengths <= 8 (P105 confirmed at length 8); the constant is sharp at
+  unboundedly large H (sealing by three empty letters); the annihilator LP and the coordinate-cap cone both fail to certify it
+  (PROVED obstructions), so a proof must use fragment ages.
   (i) FINITE-EXACT: 3,343 cheap cycles of period <= 6, and 1,303 cycles of period <= 7 with growth below 1.3 (each
   has a rank-one factor of <= 6 letters). Ranks are exact (nonnegative integer columns, primitive-direction test);
   growth is floating-point.

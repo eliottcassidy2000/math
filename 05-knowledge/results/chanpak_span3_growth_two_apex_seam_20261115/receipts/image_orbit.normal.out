@@ -1,0 +1,8 @@
+depth 1: distinct image subspaces 9 (new 8)
+depth 2: distinct image subspaces 61 (new 52)
+depth 3: distinct image subspaces 381 (new 320)
+depth 4: distinct image subspaces 2213 (new 1832)
+depth 5: distinct image subspaces 10337 (new 8124)
+depth 6: distinct image subspaces 50329 (new 39992)
+cap 30000 exceeded: the orbit has more than 30000 subspaces (not finite within the cap)
+rank distribution of the subspaces found: [(1, 384), (2, 2128), (3, 832), (4, 2960), (5, 4672), (6, 4840), (7, 6984), (9, 40), (10, 128), (11, 344), (12, 856), (13, 4064), (14, 1592), (15, 1088), (16, 3048), (17, 2432), (18, 1672), (19, 2080), (20, 2192), (21, 2240), (22, 288), (23, 296), (24, 160), (25, 292), (26, 996), (27, 1372), (50, 48), (51, 96), (53, 192), (57, 144), (58, 384), (60, 8), (61, 32), (62, 168), (63, 200), (64, 112), (65, 64), (67, 152), (68, 152), (69, 336), (71, 96), (72, 72), (74, 8), (82, 24), (83, 32), (85, 8), (86, 8), (88, 8), (94, 4), (119, 1)]
