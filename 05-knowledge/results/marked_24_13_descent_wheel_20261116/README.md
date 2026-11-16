@@ -14,6 +14,10 @@
   marked phases mod120 are possible. The exact program entropy,
   combined with H=Θ(3^n), bounds distinct absolute counts by
   O(X^0.071771).
+- [An all-ratio ceiling](ALL_RAYS.md). Even if a different marked
+  ratio is chosen for each target, any zero-determinant construction
+  with a bounded two-port boundary gives O(X^((3/2) log_3 2))
+  absolute counts up to X. This is a density-zero bound.
 - [All 60 odd **count** residues mod120](COUNT_WHEEL.md).
   Every residue contains arbitrarily large physical +2 pairs
   on the same sparse marked ray. This is exact modular coverage,
@@ -32,5 +36,6 @@
 
 Chan–Pak remains open. Next target: a physical descending row for
 some of the prime and 7p lanes, with explicit state preserved under
-induction. Merely covering their residues has now been shown too weak
+induction. The all-ratio ceiling favors a seam that controls a
+nonzero determinant instead of eliminating it. Merely covering their residues has now been shown too weak
 even with exact local +2 repairs.
