@@ -47,7 +47,7 @@ def inv_word(x, y, I):
     return word
 
 
-def marked_source(M, r, end=None):
+def marked_source(M, r, end=None, *, start=0, suffix=None):
     """Return last spine position n and ordered positions beating apex 0."""
     if M < 1 or (M % 2 == 0 and r % 2 == 0):
         raise ValueError("target not an odd class or modulus not positive")
@@ -58,19 +58,24 @@ def marked_source(M, r, end=None):
     g = gcd(3, m)
     x = isqrt((m//g)-1)+1 if m > 1 else 0
     phases = 2 if g == 3 else 0
-    delta = (1-2*phases-r) % s
     marks = 2*max(0,a-1)+3*phases+2*x
     # Fixed last losing mark, common to every target at this modulus.
-    bound = (marks+1)*(D+L)
-    if end is None:
-        end = bound
-    if end < bound:
-        raise ValueError("requested order is below the uniform bound")
+    bound = start+(marks+1)*(D+L)
+    if suffix is None:
+        if end is None:
+            end = bound
+        suffix = [end]
+    elif end is not None:
+        raise ValueError("supply an end or a suffix, not both")
+    if not suffix or suffix[0] < bound or list(suffix) != sorted(set(suffix)):
+        raise ValueError("fixed suffix does not leave room for the controls")
+    end = suffix[-1]
+    delta = (linear_fan_count(suffix,s)-2*phases-r) % s
 
     def compile(which, word):
         ps = []
         def long(j):
-            lo = (ps[-1] if ps else 0)+D
+            lo = (ps[-1] if ps else start)+D
             ps.append(lo+(j-lo) % L)
         def short(d):
             ps.append(ps[-1]+d)
@@ -90,8 +95,8 @@ def marked_source(M, r, end=None):
                 long(1)
         for bit in word:
             long(bit)
-        assert end-(ps[-1] if ps else 0) >= D
-        return ps+[end]
+        assert suffix[0]-(ps[-1] if ps else start) >= D
+        return ps+list(suffix)
 
     word = [0]*x+[1]*x
     which = ((linear_fan_count(compile(0,word),m)-r) % 3) if phases else 0
@@ -103,6 +108,17 @@ def marked_source(M, r, end=None):
     ps = compile(which, inv_word(x,x,I))
     assert linear_fan_count(ps,M) == r % M
     return end, ps
+
+
+def approximate_with_residue(N, M, r):
+    n=N.bit_length()
+    start=n//2
+    C,_=marked_source(M,r)
+    u=start+C
+    if u>=n:
+        raise ValueError("target too small for leading-bit reservation")
+    suffix=[i+1 for i in range(u,n) if N>>i&1]
+    return marked_source(M,r,start=start,suffix=suffix)
 
 
 def rows(n, pos):
@@ -155,6 +171,15 @@ def main():
             assert sig == signature
     assert marked_source(2**7*3**3*5**2*11**2*13, 7)
     assert marked_source(2**7*3**3*5**2*11**2*13, 21)
+    for M in (1,2,7,16,33,72):
+        r=7
+        C,_=marked_source(M,r)
+        for j in (3,9,17):
+            N=(1<<(2*C+j))+314159265358979323846
+            _,ps=approximate_with_residue(N,M,r)
+            H=fan_count(ps)
+            assert H%M==r%M
+            assert abs(H-N)<(2**(C+5))*isqrt(N)
     # Literal child, and 63's induced spectra using the THM-344 two-class census.
     parent, child, fan63 = rows(6,[2,4,6]), rows(7,[2,5,7]), rows(7,[3,4,7])
     assert [count(r) for r in (parent,child,fan63)] == [31,61,63]
@@ -164,6 +189,21 @@ def main():
         vals = sorted({count(subgraph(fan63,vs)) for vs in combinations(range(8),k)})
         assert 31 not in vals
         print("63-fan induced",k,vals)
+    assert count(subgraph(fan63,[0,1,2,4,5,6,7])) == 33
+    prior = subgraph(fan63,[0,1,3,2,4,6,7])
+    prior[2] ^= 1<<3
+    prior[3] ^= 1<<2
+    assert prior == parent
+    mixed = {
+        497:[224,213,9,179,69,22,172,52],
+        511:[166,244,88,35,169,68,25,108],
+        553:[40,197,41,50,71,210,141,29],
+        581:[204,49,138,178,101,5,46,114],
+    }
+    for h, r in mixed.items():
+        assert all((r[i]>>j&1)+(r[j]>>i&1)==1 for i,j in combinations(range(8),2))
+        assert all(not (v>>i&1) and v < 256 for i,v in enumerate(r))
+        assert count(r)==h
     for k in range(4,100):
         a,b = k//2, k+1-k//2
         h = fan_count([a,b,a+b])
