@@ -1,0 +1,62 @@
+# Wave 44 receipts (mac-mini-2026-11-16-seam). Commands run from this scripts/ folder; C binaries built with cc -O3.
+
+## w44_verify (k-apex transfer vs subset DP)
+k = 1 apexes: 1 permutations of the visiting order
+k = 2 apexes: 2 permutations of the visiting order
+k = 3 apexes: 6 permutations of the visiting order
+k = 4 apexes: 24 permutations of the visiting order
+k-apex transfer vs subset DP: 240 tests, 0 mismatches
+
+## w44_deposit_all h for h = 4..7 (every one-vertex extension of the window tape)
+  trivial: C beats spine set 0, C->A 0, C->B 0
+  trivial: C beats spine set 0x7ff, C->A 1, C->B 1
+h=4 (spine 11): 8192 one-vertex extensions; window intact for every head: 12; head-uniform deposit: 2; nonzero uniform deposits: 0
+  trivial: C beats spine set 0, C->A 0, C->B 0
+  trivial: C beats spine set 0xfff, C->A 1, C->B 1
+h=5 (spine 12): 16384 one-vertex extensions; window intact for every head: 14; head-uniform deposit: 2; nonzero uniform deposits: 0
+  trivial: C beats spine set 0, C->A 0, C->B 0
+  trivial: C beats spine set 0x1fff, C->A 1, C->B 1
+h=6 (spine 13): 32768 one-vertex extensions; window intact for every head: 16; head-uniform deposit: 2; nonzero uniform deposits: 0
+  trivial: C beats spine set 0, C->A 0, C->B 0
+  trivial: C beats spine set 0x3fff, C->A 1, C->B 1
+h=7 (spine 14): 65536 one-vertex extensions; window intact for every head: 18; head-uniform deposit: 2; nonzero uniform deposits: 0
+
+## w44_seam 4 Sa Sb (triangle over the window tape; A beats Sa, B beats Sb; masks x=1,y=2,z=4)
+h=4 Sa=0 Sb=0: seamed window steps exactly 6 for 16 of 16 heads; seamed - 3 H(0u) in [-12192, -11760]; equals 2[u_0=0] in 0 of 64 cases
+h=4 Sa=0 Sb=1: seamed window steps exactly 6 for 0 of 16 heads; seamed - 3 H(0u) in [768, 363300]; equals 2[u_0=0] in 0 of 64 cases
+h=4 Sa=0 Sb=4: seamed window steps exactly 6 for 0 of 16 heads; seamed - 3 H(0u) in [768, 363300]; equals 2[u_0=0] in 0 of 64 cases
+h=4 Sa=1 Sb=0: seamed window steps exactly 6 for 16 of 16 heads; seamed - 3 H(0u) in [0, 18]; equals 2[u_0=0] in 32 of 64 cases
+h=4 Sa=1 Sb=1: seamed window steps exactly 6 for 0 of 16 heads; seamed - 3 H(0u) in [12940, 373240]; equals 2[u_0=0] in 0 of 64 cases
+h=4 Sa=1 Sb=4: seamed window steps exactly 6 for 0 of 16 heads; seamed - 3 H(0u) in [128580, 654046]; equals 2[u_0=0] in 0 of 64 cases
+h=4 Sa=3 Sb=0: seamed window steps exactly 6 for 16 of 16 heads; seamed - 3 H(0u) in [11778, 12174]; equals 2[u_0=0] in 0 of 64 cases
+h=4 Sa=3 Sb=1: seamed window steps exactly 6 for 0 of 16 heads; seamed - 3 H(0u) in [139774, 660128]; equals 2[u_0=0] in 0 of 64 cases
+h=4 Sa=3 Sb=4: seamed window steps exactly 6 for 0 of 16 heads; seamed - 3 H(0u) in [254948, 936164]; equals 2[u_0=0] in 0 of 64 cases
+h=4 Sa=7 Sb=0: seamed window steps exactly 6 for 16 of 16 heads; seamed - 3 H(0u) in [23520, 24330]; equals 2[u_0=0] in 0 of 64 cases
+h=4 Sa=7 Sb=1: seamed window steps exactly 6 for 0 of 16 heads; seamed - 3 H(0u) in [265644, 940644]; equals 2[u_0=0] in 0 of 64 cases
+h=4 Sa=7 Sb=4: seamed window steps exactly 6 for 0 of 16 heads; seamed - 3 H(0u) in [265644, 940644]; equals 2[u_0=0] in 0 of 64 cases
+
+## w44_seam h 1 0 for h = 5, 6
+h=5 Sa=1 Sb=0: seamed window steps exactly 6 for 32 of 32 heads; seamed - 3 H(0u) in [0, 18]; equals 2[u_0=0] in 64 of 128 cases
+h=6 Sa=1 Sb=0: seamed window steps exactly 6 for 64 of 64 heads; seamed - 3 H(0u) in [0, 18]; equals 2[u_0=0] in 128 of 256 cases
+
+## w44_hubseam_check.py
+hub-seam identity: 300 random tournaments (orders 2..7 plus the triangle), 0 failures; source corollary failures: 0
+
+## w44_hubmonoid.py 7
+words up to length 7: 0 classes with two or more distinct bounded deposits
+
+## w44_horner_width.py
+digits [0, 1, 2]: unreachable odd N <= 200000: 29524; first [7, 21, 23, 25, 63, 65, 67, 69, 71, 73, 75, 77]
+digits [0, 1, 2, 3]: unreachable odd N <= 200000: 24608; first [7, 21, 23, 25, 65, 67, 69, 71, 73, 75, 77, 79]
+digits [0, 1, 2, 3, 4]: unreachable odd N <= 200000: 19; first [7, 21, 25, 67, 79, 205, 241, 619, 727, 1861, 2185, 5587]
+digits [0, 1, 2, 3, 4, 5]: unreachable odd N <= 200000: 2; first [7, 21]
+7*3^k: [7, 21, 63, 189, 567]  Phi_3(q) = q^2+q+1 for q=2..9: [7, 13, 21, 31, 43, 57, 73, 91]  Phi_3(16) = 273 = 2730/10
+
+## w44_facts.py
+window setting 0: H(T'-A) = H_B = 9
+window setting 1: H(T'-A) = H_B = 9
+window setting 2: H(T'-A) = H_B = 9
+window setting 3: H(T'-A) = H_B = 9
+P_7: H = 189, |Aut| = 21, orbits of Hamiltonian paths = 9, paths from vertex 0 = 27
+
+## earlier localized sweeps (scratch deposit.c / deposit2.c, superseded by w44_deposit_all): third vertex confined to a block of 3, 5 or 7 sites at the spine start, before the window or inside it, outside rule all-beat-C / C-beats-all / positional, h = 6: every intact head-uniform configuration has deposit 0

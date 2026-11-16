@@ -3699,9 +3699,241 @@ shared triangle seam. It needs a three-apex transfer; the formula above covers o
 | exact two-apex gluing H_A + H_B − 1 | only (3, 3) through spine 10; overshoot ≥ 14 for parts ≥ 11 (CONJECTURE: always) |
 | {7, 21} = {h(3), h(3 ∘ 1)}: a hole and one triangle image | identities PROVED; reading = ANALOGY |
 
+## Wave 44: a three-apex transfer, no one-vertex deposit, and the hub seam (a bounded digit on top of the factor 3, usable once)
+
+Session mac-mini-2026-11-16-seam. Owner prompt:
+- build a three-apex transfer for the next odometer test;
+- test whether a seam can deposit a bounded new digit without disturbing the old one;
+- the 24-vertex construction, the triangle shield and {7, 21}, as in wave 43;
+- merge prior Hadwiger–Nelson and Jacobian work, {2, 5, 10} with 2^10 = 10^3 + 3·2^3, the facts about 13, and the
+  Fibonacci boxes;
+- "path of least resistance, natural recursion".
+
+Concurrent packets on the same directive (read them first):
+- [fresh_unit_prime_gluing_20261116](../fresh_unit_prime_gluing_20261116/README.md): literal bounded +2 readers with
+  the same continuation. Its ARCHIVE.md already gives scoped readings of the Jacobian, HN, 1024, Fibonacci-box, 24 and
+  13 analogies.
+- [radix_three_shields_20261116](../radix_three_shields_20261116/README.md), in particular DEPOSIT.md.
+- 7-21 notes/25–27.
+
+This wave does not repeat them. Scripts are `scripts/w44_*`, with outputs in `scripts/w44_receipts.txt`.
+
+**Tool: the k-apex transfer (k ≤ 4).** `scripts/w44_kapex.h`.
+- A Hamiltonian path visits the apexes in some order π. This cuts the transitive spine into k + 1 increasing runs.
+- Scan the spine with one state per run:
+  - the first run is legal or illegal;
+  - each middle run is empty, legal or illegal, and an empty middle run needs the arc π_j → π_(j+1);
+  - the last run is empty or nonempty.
+- That is 4·3^(k−1) states for each of the k! orders.
+- Checked against subset DP on 240 random tapes, k = 1–4: 0 mismatches (`w44_verify.c`).
+
+### §1. No single added vertex deposits a digit (FINITE-EXACT, exhaustive)
+
+Start from the width-4 window tape of wave 43 (7-21 notes/22): the window is on the last 7 spine sites, the head of
+length h is free for A, and head vertices beat B. Add one vertex C with **any** relation to the spine (all 2^(h+7)
+out-sets) and either arc to each of A and B. C's deposit is D = H(with C) − H(C a sink).
+
+| h | extensions | window intact for every head | head-uniform deposit | nonzero |
+|---|---|---|---|---|
+| 4 | 8,192 | 12 | 2 | 0 |
+| 5 | 16,384 | 14 | 2 | 0 |
+| 6 | 32,768 | 16 | 2 | 0 |
+| 7 | 65,536 | 18 | 2 | 0 |
+
+The two uniform cases are C a sink and C a source, both with D = 0 (`w44_deposit_all.c`). Earlier scratch sweeps agree.
+They confined C to a block of 3, 5 or 7 sites (at the spine start, before the window or inside it) under three outside
+rules.
+
+*Why.* By the vertex recursion (the route of THM-070),
+
+    H(T) − H(T − C) = 2 Σ_{odd cycles γ through C} H(T − V(γ)).
+
+A cycle through C that misses A leaves A and the rest of the free head in its remainder, so its term moves with the
+head. The table shows that no cancellation rescues this. So a bounded deposit needs its new cycles to run through the
+hub A and still avoid the head. One new vertex cannot arrange both; a triangle seamed to the hub can (§2).
+
+### §2. The hub seam theorem (PROVED; 300 random checks; window checks)
+
+Setup: T is any tournament and A one of its vertices.
+- **Seam** C3 ⇒_A T: a triangle x → y → z → x on top of T (each triangle vertex beats every vertex of T), except that
+  A → x.
+- **Extension** T_+: T plus a vertex b with A → b and b beating every other vertex of T.
+- **Paths** 𝒬: the directed paths Q of T − A that are empty or end at an in-neighbour of A.
+
+**Theorem.** H(C3 ⇒_A T) = 3·H(T_+) + 2Ψ, where Ψ = Σ_{Q ∈ 𝒬} (−1)^|Q| H(T − A − Q).
+
+**Corollary.** If T − A has a source s, then Ψ = [A → s]·H(T − A).
+
+*Proof.* Delete x and use the vertex recursion.
+- *Cycles through x.* The in-neighbours of x are z and A. The only in-neighbour of z is y, and the only in-neighbour of
+  y is x. So the odd cycles through x are:
+  - the triangle, whose remainder is T;
+  - the cycles x·α·Q·A with α ∈ {∅, y, yz} and Q ∈ 𝒬. Q may be empty only after y, because xyzA has even length.
+- *Remainders.* The leftover triangle vertices beat everything left, so the remainder of x·α·Q·A has count
+  H(T − A − Q). Also H(C3 ⇒_A T − x) = H(T), because y → z beats all of T.
+- *Parities.* For |Q| = k ≥ 1 there are 2 odd prefixes α if k is odd and 1 if k is even. Q = ∅ gives the single cycle
+  xyA. Hence
+
+      H(C3 ⇒_A T) = 3H(T) + 2H(T − A) + 2 Σ_{Q ≠ ∅} (1 + [|Q| odd]) H(T − A − Q).
+
+- *The extension.* In T_+ the only in-neighbour of b is A, so H(T_+) = H(T) + 2 Σ_{|Q| odd} H(T − A − Q). Subtract three
+  times this.
+- *Corollary.* Q ↦ Q △ {s}, inserting s first, is a sign-reversing involution on 𝒬. It preserves H(T − A − Q) because s
+  is a source of T − A − Q. The only unpaired path is Q = ∅, and only when A → s, since then (s) ∉ 𝒬. ∎
+
+*Checks.* 300 random tournaments of orders 2–7: 0 failures for the theorem and 0 for the corollary
+(`w44_hubseam_check.py`).
+
+*Instances.*
+- **One-apex tapes.** Here T − A is transitive, so H(T − A) = 1. The seam gives H = 3H(0u) + 2[u_0 = 0], where 0u
+  prepends a site that A beats. Without the extension, H = 3H(T) + 2 + 3R(u) + u_0 with R(u) = Σ u_j 2^j: the seam
+  reads the hub word in binary.
+- **The window tape.** T − A is the B-tape, whose head vertices are sources. H(T − A) = H_B = 9 for all four window
+  settings (`w44_facts.py`).
+  - So the seamed count is 3H(0u) + 18[u_0 = 0].
+  - The seamed window steps by exactly 6 for every head (h = 4, 5, 6; `w44_seam.c`).
+  - Seams at B, or at A and B together, give unbounded differences (receipts).
+
+*The free digit.* "Plain triangle over T_+" and "hub seam over T" have the same base 3H(T_+). They differ by exactly
+2[A → s]·H(T − A).
+- A one-apex tape gets the bounded digit {0, 2} on top of ×3.
+- The window tape gets {0, 18}. This turns the ×3-scaled window {0, 6, 12, 18} into {0, 6, …, 36}: seven consecutive
+  values in steps of 6, the same for every head.
+
+The deposit is bounded because deleting the hub kills the free head. **This is the path of least resistance: a bounded
+deposit has to flow through the hub.**
+
+### §3. Why the seam digit works only once: the seam monoid (PROVED maps; FINITE-EXACT search)
+
+For T with hub A, track four numbers:
+- H = H(T);
+- K = H(T − A);
+- U = Σ_{Q ∈ 𝒬, Q ≠ ∅} H(T − A − Q);
+- Ψ as in §2.
+
+Three operations act exactly on (H, U, Ψ, K):
+
+| operation | H′ | U′ | Ψ′ | K′ |
+|---|---|---|---|---|
+| S: hub seam | 3H + 3U − Ψ + 3K | 12U + 6K | K | 3K |
+| P: plain triangle on top (it also beats A) | 3H | 12U + 9K | 0 | 3K |
+| E: extension T ↦ T_+ | H + U − Ψ + K | 2U | K | K |
+
+*Proof.* Every remainder factors through the ordinal sum, so only sums of H(C3 − α) over paths α of the triangle are
+needed:
+- over all paths, including ∅: G_all = 12;
+- over ∅ and the paths ending at y or z: G_end = 9;
+- the signed versions: F_all = 3 − 3 + 3 − 3 = 0 and F_end = 1.
+
+In particular Ψ(C3 ⇒_A T) = H(T − A) for every T.
+
+*The failure.* The digit pair S(T), P(E(T)) agrees in H up to 2Ψ, but not in what comes next:
+- U ↦ 12U + 6K versus 24U + 9K;
+- Ψ ↦ K versus 0.
+
+A reusable digit would be two words whose 4 × 4 matrices agree except in the (H, K) entry. There is **none** among
+words of length ≤ 7 (`w44_hubmonoid.py`). In the terms of ARCHIVE.md (fresh_unit_prime_gluing), U is a row the next
+seam reads, so the switch is not killed by the stable row space.
+
+**Each pair of the three properties is realized; no construction has all three.**
+
+| construction | exact ×3 of old differences | bounded fresh deposit | common continuation |
+|---|---|---|---|
+| radix_three_shields DEPOSIT.md (V0/V1) | yes | no (base-16 growth) | yes |
+| fresh_unit_prime_gluing UNIT_READER.md (+2 readers) | no | yes | yes |
+| hub seam (§2) | yes | yes: 2H(T − A) | no: U diverges |
+
+A ternary odometer needs all three at once. That is the open problem, now located.
+
+### §4. The outer digit needs width six (PROVED)
+
+Take the digit graph N → 3N + 2j on odd N, start from N = 1 alone, and delete only the arrows into 7 and 21. Unreachable
+odd N ≤ 200,000 (`w44_horner_width.py`):
+
+| digits j | unreachable |
+|---|---|
+| {0, 1, 2} | 29,524, beginning 7, 21, 23, 25, 63, 65, … |
+| {0, …, 3} | 24,608 |
+| {0, …, 4} | 19: 7, 21, and the 3x + 4 chains 25, 79, 241, … and 67, 205, 619, … |
+| {0, …, 5} | exactly 7 and 21 |
+
+*Proof for j ∈ {0, …, 5}.*
+1. Let N ≥ 3 be odd with N ∉ {7, 21}, and pick j ∈ {0, 1, 2} with 2j ≡ N mod 3.
+2. N has the parents M = (N − 2j)/3 (digit j) and M − 2 (digit j + 3).
+3. These differ by 2, so they cannot both lie in {7, 21}.
+4. M ≥ 1 always, and if M ∈ {7, 21} then M − 2 ∈ {5, 19}. Induction on N finishes. ∎
+
+*Width five fails.* With j ∈ {0, …, 4}, the class N ≡ 1 mod 3 has the single parent (N − 4)/3. So the holes cast the
+infinite shadows 9·3^k − 2 and 23·3^k − 2.
+
+*Comparison.* This sharpens the cutoff algebra in ARCHIVE.md. With j ∈ {0, 1, 2}, ready seeds 23, 25, 63, 65 and 67 are
+needed; with width six, none are. So a ternary odometer needs six fresh outer values per level.
+- The 24-vertex two-level window of wave 43 (four +2 and four +6 settings) is wide enough but sporadic.
+- The hub seam gives seven values at the inner level, not at the outer one.
+
+### §5. Merges (exact facts; the readings are ANALOGY)
+
+ARCHIVE.md of fresh_unit_prime_gluing_20261116 already covers the planar Jacobian observers, the HN boundary
+relations, 2^10 − 10^3 = 24 (128 − 125 = 3 on the norm-three orbit of 1 + ∛2), the Fibonacci-box pairings, and 24 and
+13 in B₂₄ and A₁₂². Additions:
+
+- **Hadwiger–Nelson and P_7.**
+  - Isbell's hexagonal 7-colouring has the torus quotient K_7: 7 colours and 21 adjacent colour pairs.
+  - Orienting it by the 120° rotation gives the Paley tournament P_7 (hn_seven_interiors_six_seven_20261113:
+    Z[ω]/(2 − ω), ω ↦ 2).
+  - Aut(P_7) = {x ↦ ax + b : a ∈ {1, 2, 4}} has order 21. It acts freely on Hamiltonian paths, because an automorphism
+    that fixes a path fixes every vertex.
+  - So H(P_7) = 189 = 21·9: nine regular orbits, and 27 = 3³ paths from each vertex (`w44_facts.py`).
+  - Hence {7, 21} = {|V(P_7)|, |Aut(P_7)|}. And 189 = 7·3³ ends the triangle-shield orbit of the hole: 7 (hole),
+    21 (hole), 63 (count, order 8), 189 (P_7 itself, order 7).
+- **Cyclotomic reading of 7, 13, 21 and 2730.**
+  - 7 = Φ_3(2), 13 = Φ_3(3) and 21 = Φ_3(4) are the point counts of PG(2, q) for q = 2, 3, 4. The two holes are the
+    two smallest even q.
+  - The primes p with p − 1 | 24 are 2 together with exactly the primes dividing 2^12 − 1 = 4095 = 3²·5·7·13. So
+    2730 = 2(2^12 − 1)/3, and 2730/10 = 273 = Φ_3(16) = 3·7·13.
+  - On the tournament side this is numerology only.
+- **Jacobian.** Analogy only; the repo state is THM-1300 and the 2026-11-15 anatomy packet.
+  - S, P and E are affine maps whose linear parts are triangular with fixed diagonals: (3, 12, 0, 3), (3, 12, 0, 3)
+    and (1, 2, 0, 1).
+  - A reusable digit would be a pure H-translation hidden in this monoid: two words with the same linear part whose
+    constant terms differ only in H.
+  - There is none up to length 7.
+- **Fibonacci boxes and {2, 5, 10}.**
+  - The one-apex seam reads R(u) = Σ u_j 2^j. This is the binary coordinate b of the seed monoid's letter action
+    (b, c) ↦ (2b, c + b), (2b + 1, c), which is Price's first Fibonacci-box generator (THM-5302 packet).
+  - The count is the quadratic accumulator c.
+  - So a seam step multiplies c by 3 and reads b in base 2: the same 2-against-3 tension that 128 = 125 + 3 records.
+- **Least resistance.** The natural recursion is vertex deletion. A deposit's route of least resistance is through the
+  vertex whose deletion kills the free variables (§1–§2).
+
+### §6. Next
+
+- **Two-hub seams.** Seam the next triangle at the window's second apex, or alternate hubs, so that U stays fixed. The
+  three-apex transfer is ready for this.
+  - Enlarge the monoid with seams at a second hub and with the converse seam (triangle below, x → A).
+  - Search it with the exact state model (P106).
+- **Width six.** Find a literal construction with six outer values per level, or prove a width-five barrier for a named
+  gadget family.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| k-apex transfer, k ≤ 4 | FINITE-EXACT: 240 DP checks |
+| no one-vertex deposit on the window tape | FINITE-EXACT: exhaustive, h = 4–7 |
+| hub seam theorem and its source corollary | PROVED; 300 random checks |
+| window tape: seamed count 3H(0u) + 18[u_0 = 0], free digit {0, 18}, seven-value ×3 window | PROVED from the theorem; FINITE-EXACT, h = 4–6 |
+| seam monoid maps S, P, E | PROVED |
+| no reusable bounded digit in the {S, P, E} monoid | FINITE-EXACT for words of length ≤ 7 |
+| width-six outer digits suffice; {0, …, 4} does not | PROVED; FINITE-EXACT counts to 200,000 |
+| H(P_7) = 21·9 with Aut(P_7) acting freely, so {7, 21} = {V, Aut} | PROVED (free action); FINITE-EXACT counts |
+| cyclotomic and Jacobian readings | ANALOGY |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
 - **P14.** P1 at n = 14 with the full prime set: (5,9)/(6,8), (5,9)/(7,7), (6,8)/(7,7).
 - **P15.** The exponent pattern of Gap_b. For b ≥ 60, every m < b with 2m + 1 in the 22-list is a gap. Predict which
   of them survive for m ≥ b, extending THM-5070's 30,000 bound to b = 9–12.
+- **P106.** In the hub-seam monoid {S, P, E} enlarged by seams at a second hub and the converse seam, some pair of words of
+  length <= 8 has equal state maps except the (H, K) entry (a reusable bounded digit). Test with the exact state model of wave 44 §3.
