@@ -1,0 +1,14 @@
+# wave 52 receipts (mac-mini-2026-11-16-digits)
+## w52_both.c 9 125 127 41 69
+  BOTH: base H=45 n=7 parents 0 0 0 1 3 3 | x beats mask 1 -> 125 ; mask 16 -> 127
+  BOTH: base H=45 n=7 parents 0 0 1 1 3 5 | x beats mask 111 -> 125 ; mask 113 -> 127
+  BOTH: base H=59 n=7 parents 0 0 1 1 4 3 | x beats mask 16 -> 125 ; mask 8 -> 127
+  BOTH: base H=45 n=7 parents 0 0 1 3 0 0 | x beats mask 16 -> 125 ; mask 8 -> 127
+bases with 41 <= H <= 69 (one-parent, n <= 9): 1097; give 125: 231; give 127: 227; give both: 48
+  per base count H: (bases, ->125, ->127): 41:(69,0,0) 43:(24,0,0) 45:(90,49,27) 47:(30,0,0) 49:(100,51,12) 51:(113,24,30) 53:(104,20,18) 55:(45,24,21) 57:(27,0,0) 59:(142,21,21) 61:(48,0,36) 63:(18,0,18) 65:(116,24,12) 67:(36,0,12) 69:(135,18,20)
+## w52_digit0.py
+n=3: digit-0 vertices 3 (near-join tips among them 3); near-join tips 3 (digit-0 among them 3); strong counts without a digit-0 vertex at this order: []
+n=4: digit-0 vertices 1 (near-join tips among them 1); near-join tips 1 (digit-0 among them 1); strong counts without a digit-0 vertex at this order: []
+n=5: digit-0 vertices 3 (near-join tips among them 2); near-join tips 2 (digit-0 among them 2); strong counts without a digit-0 vertex at this order: [11, 13]
+n=6: digit-0 vertices 9 (near-join tips among them 7); near-join tips 7 (digit-0 among them 7); strong counts without a digit-0 vertex at this order: [25, 29, 31, 33, 41, 43, 45]
+n=7: digit-0 vertices 42 (near-join tips among them 33); near-join tips 33 (digit-0 among them 33); strong counts without a digit-0 vertex at this order: [47, 61, 67, 71, 73, 75, 77, 79, 81, 83, 85, 87]

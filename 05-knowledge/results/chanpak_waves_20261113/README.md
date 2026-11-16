@@ -4826,6 +4826,95 @@ Along the Mersenne row 15 → 31 → 63 → 127, the step to 2h + 1 works at 15 
 
 Chan–Pak remains OPEN.
 
+## Wave 52: one base for both 125 and 127, why the digit-0 gaps are the near-join exceptions, and Catalan's additive shadow
+
+Session mac-mini-2026-11-16-digits. Owner prompt:
+- search for a single base giving both 125 and 127;
+- chase why the counts with no digit-0 vertex are exactly the near-join exceptions;
+- Catalan's 8, 9 with 8 = 5 + 3 and 9 = 7 + 2 as the additive counterpart; spare bits from the first four primes;
+- Bott periodicity, octonions, and the lanes p ≠ 7 versus 7p;
+- Goldbach and twin primes; can the reader break the unwanted divisor without overshooting; the field with one element.
+
+Credit: HYP-9453 (the near-join family T′ = T → M_k → z with z → t₀ reversed, H(T′) = h + 2^k·B(T, t₀); exceptions
+1, 7, 11, 13, 21, 47, 67) and the concurrent forcing_digits_analogy_additive_20261116 (digits; "no B_t = h" exactly at
+11, 13, 47, 67). Scripts `scripts/w52_*`; outputs `scripts/w52_receipts.txt`.
+
+### §1. One base gives both 125 and 127 (FINITE-EXACT; checked independently)
+
+Take the 7-vertex one-parent tree with parents (0, 0, 0, 1, 3, 3), which has 45 Hamiltonian paths. A new vertex that
+beats only vertex 0 gives 125, and one that beats only vertex 4 gives 127. These are leaf attachments at vertices of
+charge 36 and 38, so the window is centered at 2·45 − 1 + 37 = 126.
+
+Among one-parent bases with up to 9 vertices and 41–69 paths, 48 give both members (`w52_both.c`):
+- both members: base counts 45, 49, 51, 53, 55, 59, 65, 69 (for example 59, with leaves at charges 8 and 10);
+- only 127: base counts 61, 63, 67;
+- neither: base counts 41, 43, 47, 57.
+
+So the matched window does exist. Wave 51's two blocks belong to particular interfaces, the ternary lift at 41 and the
+binary port at 63. Choosing the center means choosing the base count, here 45 = 3²·5. The repair is a choice between
+two adjacent-charge vertices of that base.
+
+### §2. Why the counts with no digit-0 vertex are the near-join exceptions
+
+Write B(T, t) as the sum over all paths P starting at t of H(T − V(P)) (HYP-9453's B, which is ≥ h). A digit-0 vertex
+is one with B(T, t) = h; with k = 1 its near-join is the triangle-shield value 3h.
+
+**Tip lemma (PROVED).** In a near-join T′ = T₀ → M_k → z with z → t₀, the tip z is a digit-0 vertex: B(T′, z) = H(T′).
+
+*Proof.* The path (z) alone leaves T₀ ⇒ M_k, contributing h₀. Every longer path from z runs z → t₀, then a path Q
+from t₀ inside T₀, then any of the 2^k ordered subsets of the transitive tail M_k; it leaves (T₀ − Q) above a
+transitive rest. So B(T′, z) = h₀ + 2^k·B(T₀, t₀) = H(T′), by the near-join formula. ∎
+
+**Consequence.**
+- Every near-join count has a realizer with a digit-0 vertex, so the counts without one lie among the near-join
+  exceptions.
+- By HYP-9453's FINITE-EXACT list (to 22,227), those are 11, 13, 47 and 67.
+- The concurrent forcing data shows that each of the four really has none.
+- So the coincidence is the tip lemma: digit 0 at the tip is the near-join formula read at its last vertex.
+
+**The other direction is not structural.**
+- Among strong classes up to order 7 there are 58 digit-0 vertices, and 46 of them are tips. The remaining 12 have
+  digit 0 without being tips (`w52_digit0.py`).
+- Every tip has digit 0.
+- So "digit 0 ⇒ near-join count" holds only through HYP-9453's completeness, not vertex by vertex.
+
+### §3. Catalan's additive shadow and the other angles (ANALOGY; NUMEROLOGY flagged)
+
+- **The first four primes.** Catalan's consecutive powers are 8 = 2³ and 9 = 3². Their additive shadows pair the
+  first four primes: 8 = 3 + 5 and 9 = 2 + 7. So 9 − 8 = 1 reads (2 + 7) − (3 + 5) = 1.
+  - On the count side: 3 and 5 are the first two counts, and 3·5 = 15 is the strong minimum at order 6
+    (THM-1370).
+  - 7 is the hole, and 2 is the parity that every count avoids.
+  - This is the additive form of wave 49's 7·{1, 3} defect.
+- **Two lanes as a plane.**
+  - THM-4094's lanes, primes ≠ 7 and the products 7p, are the two coordinates (7-adic valuation, 7-free part) of
+    wave 48 §2. The defects sit only at (valuation 1, rest 1 or 3).
+  - With the octonions (dimension 8 = 1 + 7, with 7 imaginary units on the Fano plane) and Bott period 8, this reads as
+    a real axis plus a 7-unit axis. That is NUMEROLOGY: THM-4000 already records "not Bott periodicity".
+- **Twin primes and Goldbach.**
+  - A matched window (2h − 1, 2h + 1) from one base is a "+2 pair" machine. Twin primes are the windows in which both
+    members are prime, such as the concurrent 10007/10009.
+  - Goldbach's 2N = p + q is the additive analogue of the base-plus-leaf decomposition 2h − 1 + a.
+  - One-parent growth is a finite-state transfer, so Chan–Pak is a reachability question for a counter machine. No
+    encoding of Goldbach or of the twin-prime conjecture is claimed.
+- **Reader, unwanted divisor, overshoot.** The base 45 = 3²·5 carries the divisors 3 and 5. Its two leaves land exactly
+  on 125 = 5³ and on the prime 127, with no overshoot: a smaller base with large charges reaches the window directly.
+  Wave 51's 63-port instead keeps the factor 7·9 in its center.
+- **F_1.** Stars are the H = 1 tournaments. They feed only the row 1 + 2^k (wave 47's star rule), the "points over
+  F_1" of the count tree.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| a single one-parent base (45 paths) gives both 125 and 127; 48 such bases | FINITE-EXACT; checked independently |
+| tip lemma: a near-join tip is a digit-0 vertex | PROVED |
+| the counts without digit 0 lie among the near-join exceptions {11, 13, 47, 67} | PROVED from the tip lemma and HYP-9453's FINITE-EXACT list |
+| digit 0 does not force a tip (12 of 58 digit-0 vertices at orders ≤ 7) | FINITE-EXACT |
+| Catalan additive pairing, Bott/octonion plane, Goldbach/twin readings | ANALOGY / NUMEROLOGY |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
