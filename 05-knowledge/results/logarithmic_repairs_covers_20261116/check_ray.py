@@ -32,9 +32,14 @@ for h,p,m in [(209,(2,3),208),(417,(3,8),656),(833,(4,7),692)]:
     old=step(old,p,m)
     assert H(old)==h
 assert old==(3772,4093,1776,3828,160,1728,3473,0,3773,208,2704,692)
+old=list(old)
+old[0]^=1<<6; old[6]^=1
+old=step(old,(2,5),4084)
+assert H(old)==1665
+assert old==(7932,8189,1744,7924,160,1732,3472,0,3773,208,2704,692,4084)
 late=(6,12,24,49,99,71,15,383,127)
 assert H(late)==105
 for h,p,m in [(209,(0,1),31),(417,(1,3),2),(833,(1,10),1088),(1665,(3,5),3087)]:
     late=step(late,p,m)
     assert H(late)==h
-print('Original linked moves through 833; separate 105 core through 1665.')
+print('Original linked and separate 105-core moves both verified through 1665.')
