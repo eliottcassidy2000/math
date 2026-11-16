@@ -1,0 +1,33 @@
+# wave 48 receipts (mac-mini-2026-11-16-residues)
+## w48_res1800.py
+|units mod 1800| = 480
+smallest generating set of counts coprime to 30: (11, 13, 17, 19)
+## w48_frattini.py 61 67 2000
+P=61: counts = primes in [67,2000] (285 of them); Frattini quotient blocks (l, columns, rank): 18 primes l; full rank for all: True; deficient: []
+   largest blocks: [(2, 19, 19), (3, 8, 8), (5, 5, 5), (7, 3, 3)]
+## w48_frattini.py 1000 1009 20405
+P=1000: counts = primes in [1009,20405] (2137 of them); Frattini quotient blocks (l, columns, rank): 168 primes l; full rank for all: True; deficient: []
+   largest blocks: [(2, 169, 169), (3, 81, 81), (5, 41, 41), (7, 29, 29)]
+## w48_singleprime.py 100000
+odd primes p <= 100000: failures [] (count 0); largest generator needed: q = 37 (at p = 66491, l = 2)
+## w48_atoms_and_order6.py
+atoms of the count monoid up to 20405 match {primes != 7} U {7p : p >= 5} U {63, 343}: True
+   atoms divisible by 7 (smallest): [35, 49, 63, 77, 91, 119, 133, 161]
+order 6, H = 25: 2 classes = 0 self-converse + 1 converse pairs
+order 6, H = 33: 5 classes = 1 self-converse + 2 converse pairs
+order 6, H = 37: 5 classes = 1 self-converse + 2 converse pairs
+order 6, H = 41: 1 classes = 1 self-converse + 0 converse pairs
+order 6, H = 45: 2 classes = 2 self-converse + 0 converse pairs
+## w48_converse_types.py
+n=5: 12 classes
+   counts with 1 self-converse class + 2 converse pairs (Platonic type): []
+   counts with 1 self-converse class + 1 converse pair (tiling type): [3]
+   full table H: (self-converse, pairs): {1: (1, 0), 3: (1, 1), 5: (0, 1), 9: (2, 0), 11: (1, 0), 13: (1, 0), 15: (2, 0)}
+n=6: 56 classes
+   counts with 1 self-converse class + 2 converse pairs (Platonic type): [9, 33, 37]
+   counts with 1 self-converse class + 1 converse pair (tiling type): [5]
+   full table H: (self-converse, pairs): {1: (1, 0), 3: (0, 2), 5: (1, 1), 9: (1, 2), 11: (0, 1), 13: (0, 1), 15: (0, 3), 17: (2, 0), 19: (0, 1), 23: (0, 2), 25: (0, 1), 27: (0, 1), 29: (2, 1), 31: (0, 1), 33: (1, 2), 37: (1, 2), 41: (1, 0), 43: (0, 1), 45: (2, 0)}
+n=7: 456 classes
+   counts with 1 self-converse class + 2 converse pairs (Platonic type): [3, 25, 79, 95]
+   counts with 1 self-converse class + 1 converse pair (tiling type): [11, 13, 143, 153]
+   full table H: (self-converse, pairs): {1: (1, 0), 3: (1, 2), 5: (0, 2), 9: (3, 3), 11: (1, 1), 13: (1, 1), 15: (2, 5), 17: (0, 2), 19: (0, 2), 23: (0, 4), 25: (1, 2), 27: (1, 3), 29: (0, 5), 31: (2, 2), 33: (1, 6), 35: (0, 1), 37: (0, 6), 39: (0, 1), 41: (1, 3), 43: (0, 3), 45: (1, 4), 47: (0, 1), 49: (1, 3), 51: (2, 3), 53: (0, 2), 55: (0, 2), 57: (0, 2), 59: (0, 4), 61: (1, 0), 65: (3, 4), 67: (2, 2), 69: (2, 5), 71: (1, 3), 73: (0, 4), 75: (1, 3), 77: (2, 4), 79: (1, 2), 81: (1, 5), 83: (1, 3), 85: (1, 0), 87: (1, 0), 89: (0, 7), 91: (1, 7), 93: (3, 2), 95: (1, 2), 97: (0, 3), 99: (2, 1), 101: (0, 5), 103: (0, 5), 105: (2, 1), 109: (0, 7), 111: (2, 4), 113: (0, 2), 115: (1, 3), 117: (3, 2), 121: (0, 2), 123: (2, 4), 125: (1, 0), 127: (1, 0), 129: (3, 2), 131: (0, 4), 133: (2, 2), 135: (4, 2), 137: (2, 2), 139: (2, 2), 141: (3, 0), 143: (1, 1), 145: (2, 0), 147: (1, 0), 151: (3, 1), 153: (1, 1), 155: (1, 0), 157: (1, 0), 159: (4, 0), 171: (1, 0), 175: (1, 0), 189: (1, 0)}

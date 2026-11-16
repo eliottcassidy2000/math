@@ -4218,8 +4218,9 @@ earlier spine vertices, so the state is not finite with one port.
   honeycomb's degree. Its growth outruns any flat ball: 704 integers reach 5 within 21 steps, but a honeycomb ball has
   694 vertices (collatz_hexagonal_growth). §4 adds the tournament reading: the numeric order reverses the horizontal
   rays, and the reverse numeric order reverses the hooks.
-- **3 into 5.** The three flat tilings {3,6}, {4,4}, {6,3} curve into the five solids (HYP-3772): {3,6} into {3,3},
-  {3,4}, {3,5}; {4,4} into {4,3}; {6,3} into {5,3}. *Analogy:* in the one-parent language the charge plays the role of
+- **3 into 5 (corrected in wave 48 §3).** Under duality the three flat tilings are one self-dual tiling plus one dual
+  pair, and the five solids are one self-dual solid plus two dual pairs (klein HEX_PLATONIC). The earlier
+  tiling-by-tiling mapping was wrong. *Analogy:* in the one-parent language the charge plays the role of
   curvature.
   - Attaching at charge a gives 2H − 1 + a: a = 0 is exact doubling (flat), a < 0 contracts, a > 0 expands.
   - Flat ports are rare (the 9 trees of §1), as the 3 flat tilings are among all {p, q}.
@@ -4413,6 +4414,115 @@ THM-5262 (A) (the floor law) says that adding one vertex gives H′ = H or H′ 
 | 2g(X(N)) + 1 ∈ {7, 21} only at N = 7, 9; genera 3, 10, 5 form a Collatz path | FINITE-EXACT; reading NUMEROLOGY |
 | 7 is the first odd modulus whose doubling rows orient into a tournament; 21 fails at the factor 3 | PROVED |
 | F_8 gives P_7; F_9 gives only a graph; characteristic 2 merges 3x ± 1 | PROVED; link to {7, 21} ANALOGY |
+
+Chan–Pak remains OPEN.
+
+## Wave 48: odd residues by multiplication alone, the atoms of the count monoid ({35, 49}), and "3 into 5" as converse classes
+
+Session mac-mini-2026-11-16-residues. Owner prompt:
+- the tilings → solids pattern read as one self-dual object plus dual pairs; H = 33 at order six;
+- odd numbers made by multiplication, or by 2h ± 1 steps that reach the primes;
+- prove that every odd residue mod every 2^a·3^b·5^c is a count, and continue for primes up to 63 and past it,
+  skipping 7;
+- the microcosm/macrocosm and field-with-one-element sessions; the first 32 odd numbers as 3 + 28; {35, 49} as
+  precursors.
+
+**Credit first.**
+- **Every odd residue mod every M is already a count (PROVED twice).**
+  - session157_gaps_20261103/prime_power/NOTE.md uses the one-apex family F_n with h(n) = (10·4^n + 6n − 1)/9.
+  - session137 width_phase2/PROOF.md, independently reviewed, shows the closure of the counts is 1 + 2Ẑ.
+- **Lanes and atoms.**
+  - THM-4094: Chan–Pak ⇔ the lanes P_odd ∖ {7} and 7(P_odd ∖ {3}), given the carry atoms 49, 63 and 343.
+  - HYP-+2880: 35 and 49 are atoms. HYP-2179: they first appear at order 7.
+- **The count 33.** S224 / session224: H = 33 first appears at order 6 as one self-converse class plus two converse
+  pairs.
+- **Tilings and solids.** klein's HEX_PLATONIC.md reads "3 into 5" as a fixed object plus dual pairs, and leaves the
+  same reading of the counts open.
+
+New here: a second proof by multiplication alone, the certificates, the converse-class tables, and the exact
+"3 into 5" for H = 3. Scripts are `scripts/w48_*`, with outputs in `scripts/w48_receipts.txt`.
+
+### §1. Residues by multiplication alone (PROVED; certificates FINITE-EXACT)
+
+**Theorem.** Every odd residue mod every 2^a·3^b·5^c is the count of an ordinal sum of tournaments with counts
+3, 5, 11, 13, 17 and 19.
+
+*Proof.*
+1. Counts multiply over ordinal sums (THM-1862).
+2. The kernel of (Z/2^a·3^b·5^c)^× → (Z/1800)^× lies in the Frattini subgroup:
+   - the classes 1 mod 8 are the squares of the 2-part;
+   - the classes 1 mod 9 and 1 mod 25 lie inside the Frattini subgroups (indices 6 and 10) of the cyclic 3- and 5-parts.
+3. So a set of units generates every such unit group iff it generates (Z/1800)^×. The counts 11, 13, 17 and 19 do
+   (`w48_res1800.py`; 4 generators are needed, since the 2-rank is 4).
+4. A non-unit residue 3^i·5^j·u is 3^i·5^j times a count in the unit class of u. ∎
+
+*Further (FINITE-EXACT certificates over a PROVED reduction).*
+- **Every M whose prime factors are below 1000.** The Frattini reduction to M′ = 8·∏ p² turns generation into a rank
+  check for each prime l. The 2,137 primes in [1009, 20405], all counts by the wave-46 census, give full rank in all
+  168 blocks (`w48_frattini.py`).
+- **Valuations.** p^e comes from the prime p itself (p ≠ 7). For p = 7 it comes from 7·1009, 49 and 343.
+- **Single prime powers p^k with p < 10^5.** The odd primes up to 37, with 7 = 35/5, already generate the units mod p²
+  (`w48_singleprime.py`).
+
+*Reading.* The multiplicative half of "multiply, or step by 2h ± 1" already reaches every residue. Residues cannot see
+7 or 21 (exclusion_7_21), so the holes live entirely in the additive half, where the primes and the 7-lane atoms must
+be reached by 2H − 1 + a steps.
+
+### §2. The atoms of the count monoid and {35, 49} (FINITE-EXACT; agrees with THM-4094)
+
+- Up to 20,405 the atoms (counts that are not products of two smaller counts) are exactly: the primes other than 7, the
+  products 7p for primes p ≥ 5, and the carries 63 and 343 (`w48_atoms_and_order6.py`).
+- The atoms divisible by 7 begin 35, 49, 63, 77, 91, 119, …. Because 7·{1, 3} = {7, 21} are missing, the 7-adic layer
+  is entered through 7·{5, 7} = {35, 49}. That opens a countably infinite family {7p}, closed off by 63 = 7·9 and
+  343 = 7·49.
+- *NUMEROLOGY:* 35 = 100011₂ and 49 = 110001₂ are bit reversals of each other, with both outer bits set.
+
+### §3. "3 into 5" as converse classes (PROVED; tables FINITE-EXACT)
+
+The owner's reading:
+- the three flat tilings are one self-dual tiling {4,4} plus one dual pair {3,6}/{6,3};
+- the five solids are one self-dual solid (the tetrahedron) plus two dual pairs, cube/octahedron and
+  icosahedron/dodecahedron;
+- each dual pair keeps its edge count and swaps vertices with faces.
+
+Converse plays the role of duality: it keeps the number of arcs and swaps out-degrees with in-degrees.
+
+**Exact instance (PROVED).** A tournament with H = 3 is a single 3-cycle sitting at position k = 0, …, n − 3 inside a
+transitive order. So there are n − 2 classes, and converse reflects the position: k ↦ n − 3 − k.
+- At order 5 there are 3 classes: 1 self-converse plus 1 pair, like the tilings.
+- At order 7 there are 5 classes: 1 self-converse plus 2 pairs, like the solids.
+- So the count 3 itself splits 3 into 5.
+
+Classes per count at orders 5–7 (`w48_converse_types.py`; 12, 56 and 456 classes):
+
+| type | order 5 | order 6 | order 7 |
+|---|---|---|---|
+| 1 self-converse + 2 pairs (solids) | — | 9, 33, 37 | 3, 25, 79, 95 |
+| 1 self-converse + 1 pair (tilings) | 3 | 5 | 11, 13, 143, 153 |
+
+### §4. Merges: microcosm, F_1, and 3 + 28
+
+- **Microcosm (THM-4900).** The half-count q = (H − 1)/2 sends 7 and 21 to 3 and 10. Tournaments with exactly 7 or 21
+  Hamiltonian *cycles* are gate-free. x + 2 and 2x mod 7 generate F_21, but no mechanism links this to the gaps.
+- **F_1 (chanpak_f1_physical_carry_20261114).** It reads F_1 as finite sets. A 5/11 carry bank hits every residue mod
+  5^a·11^b. Every proper factorization of 63 uses 7 or 21, which is why 63 is an atom (§2).
+- **3 + 28 (NUMEROLOGY; not on file as a Chan–Pak split).** Remove the fourth odd number, 7, from the first 32 odd
+  numbers 1, …, 63. That leaves {1, 3, 5} and the 28 numbers 9, …, 63.
+  - Those 28 hold the second hole 21 and the three hidden 7-lane atoms 35, 49 and 63.
+  - At scale 2^k the 7-lane atoms are 7 times the primes plus {63, 343}, so the pattern scales with the primes.
+  - Nearest on file: the 21 + 7 + 28 orbit split (free_bits ATLAS) and the {3, 28} flips of the Paley P_31.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| odd residues mod every 2^a·3^b·5^c from ordinal sums of counts 3, 5, 11, 13, 17, 19 | PROVED (second proof; all-M theorem is session157 / session137) |
+| every odd residue mod every M with prime factors < 1000, via primes in [1009, 20405] | PROVED reduction + FINITE-EXACT certificate |
+| units mod p^k for every odd prime p < 10^5 from odd primes ≤ 37 | FINITE-EXACT |
+| atoms = primes ≠ 7, 7p (p ≥ 5), 63, 343; the 7-atoms begin 35, 49 | FINITE-EXACT to 20,405 (agrees with THM-4094) |
+| H = 3 splits 3 classes (order 5) into 5 (order 7) as 1 + pairs | PROVED |
+| converse-type tables at orders 5–7 | FINITE-EXACT |
+| 3 + 28 and the binary 35/49 reading | NUMEROLOGY |
 
 Chan–Pak remains OPEN.
 
