@@ -10,6 +10,8 @@
    prime-mantissa ray 1+q·2^e. A factored 27 cannot embed into
    any 63, even with arbitrary extra vertices. Explicit changed
    cores extend the physical experiments beyond 105.
+   [The two Collatz cylinders from 27 and 63](COALESCENCE.md)
+   actually coalesce on the same affine progression.
 3. [The 24-clock and 36-clock](CLOCKS.md). The six primes are
    exactly the support of the 24th Mersenne number. There are
    two exact cover shapes up to translation, with 48 coefficient
