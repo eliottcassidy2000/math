@@ -1,5 +1,7 @@
 # A positive readout for literal span 3, and the exact missing cap
 
+**Update:** the physical comparison is no longer missing. [Sharp one-vertex growth](SHARP_GROWTH.md) proves the factor 39 on all span-3 prefixes and gives an explicit cap on the delayed sum. The discussion below records the original reduction.
+
 Use the [THM-4880 frontier transfer](https://github.com/eliottcassidy2000/math/blob/main/05-knowledge/results/ribbon_tournaments_bounded_span_transfer_20261104.md): 119 reachable fragment profiles, nonnegative integer maps M_a for the eight letters, initial empty profile, and a row f that reads the 14 one-fragment terminal profiles. The coordinates of v(w) count actual partial configurations, and H(w)=f v(w) on every nonempty word.
 
 ## Two unconditional upper growth certificates on the frontier
