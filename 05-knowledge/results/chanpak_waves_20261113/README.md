@@ -4526,6 +4526,124 @@ Classes per count at orders 5–7 (`w48_converse_types.py`; 12, 56 and 456 class
 
 Chan–Pak remains OPEN.
 
+## Wave 49: converse types from strong components (which counts are "1 + 2 + 2", and when), the polytope ladder, and smooth counts
+
+Session mac-mini-2026-11-16-types. Owner prompt:
+- prove which counts carry the 1 + 2 + 2 type, and find more constructions like it;
+- every odd number whose prime factors are at most 61 occurs except 7 and 21, read as micro/macrocosm;
+- legal children from smaller counts; extend past 2^a·3^b·5^c with 11^d and so on; why 7 is orthogonal; sporadic
+  versus infinite families of simple groups;
+- 7 and 3 (sum 10) through the p²qr balance F = U + S.
+
+Scripts `scripts/w49_types.py`; output `scripts/w49_receipts.txt`.
+
+### §1. The word model of converse types (PROVED)
+
+A tournament is an ordinal sum of strong components, and H multiplies over them (THM-1862). Taking the converse
+reverses the order of the components and takes the converse of each. So:
+- the classes with count h at order n are the **words** of strong letters (the single vertex is the letter "1") whose
+  counts multiply to h and whose sizes add to n;
+- the self-converse classes are exactly the words fixed by the operation "reverse, then take the converse of each
+  letter".
+
+Every count's converse type (s self-converse classes, t converse pairs) at every order is therefore determined by the
+**strong spectrum** of its divisors. The strong minima 3, 5, 9, 15, 25, 45 at orders 3–8 (THM-1370) mean that the
+strong tournaments of order at most 7 already give the complete strong spectrum for h ≤ 44. The word count matches
+brute force on all 12 + 56 + 456 classes at orders 5–7.
+
+Single-letter rule:
+- If h has exactly one strong realization C, of order c, and it is self-converse, then the classes at order n are the
+  n − c + 1 positions of C in a transitive frame, and converse reflects the position.
+- So the type at order c + 2k is (1, k): one fixed object plus k pairs.
+- If C is not self-converse, the type is always (0, n − c + 1), and the 1 + 2 + 2 type never occurs.
+
+### §2. Which counts are 1 + 2 + 2, and at which orders (PROVED for h ≤ 44)
+
+| count | 3 | 5 | 9 | 11 | 13 | 25 | 33 | 37 |
+|---|---|---|---|---|---|---|---|---|
+| order with type 1 + 2 + 2 | 7 | 8 | 6 | 9 | 9 | 7 | 6 | 6 |
+
+The other counts up to 44 (1, 15, 17, 19, 23, 27, 29, 31, 35, 39, 41 and 43) never carry the type at any order.
+- Above order 11 each count h ≤ 44 has more than 5 classes, so the table is complete.
+- 3, 5, 11 and 13 follow the single-letter rule: each has a unique self-converse strong realization, of order 3, 4, 5
+  and 5, and the type appears at order c + 4.
+- 9, 25, 33 and 37 get the type from mixtures of letters. For example, 33 at order 6 is one self-converse strong class
+  plus two strong converse pairs (S224).
+
+### §3. The polytope ladder (PROVED for h ≤ 44)
+
+Polytope and honeycomb duality gives a whole family of types, each matched by tournament counts:
+
+| type (s, t) | geometric family | counts h ≤ 44 @ order |
+|---|---|---|
+| (1, 0) | cubic honeycombs (3D, 5D and up) | 1 @ every order; 3 @ 3, 5 @ 4, 11 @ 5, 13 @ 5, 41 @ 6 |
+| (1, 1) | plane tilings, 4D honeycombs, polytopes in 5D and up | 3 @ 5, 5 @ 6, 11 @ 7, 13 @ 7 |
+| (1, 2) | the five Platonic solids | §2 |
+| (2, 2) | the six regular 4-polytopes (5-cell and 24-cell self-dual; tesseract/16-cell; 120-cell/600-cell) | 17 @ 8, 31 @ 7 |
+
+- **The single-letter rule is a dimension ladder.** At orders c, c + 2, c + 4 the types are (1, 0), (1, 1), (1, 2): a
+  cube-like single object, then the three flat tilings, then the five solids.
+- Its first rung (1, 0) is the honeycomb type of the table. Adding two padding vertices plays the role of "curving".
+- H = 3 alone realizes every (1, k) at odd orders and every (0, k) at even orders.
+- The 4D type needs two self-converse letters of one size: 31 has two self-converse strong classes of order 7, and 17
+  has two of order 6.
+
+### §4. Smooth counts: the microcosm builds the macrocosm (PROVED from the census)
+
+Assuming Chan–Pak, the atoms of the count monoid are the primes other than 7, the products 7p for primes p ≥ 5, and the
+carries 63 and 343 (wave 48; THM-4094). Conversely:
+
+**Theorem.** Every odd 2909-smooth number except 7 and 21 is a tournament count. In particular this holds for every
+odd 61-smooth number.
+
+*Proof.* The atoms with all prime factors at most 2909 are at most 7·2909 = 20,363. Each is a count by the one-parent
+census (complete to 20,405, wave 46). Now take an odd N other than 7, 21:
+- if 7 does not divide N, it is a product of primes other than 7;
+- if N = 7m with 7 ∤ m, write it as (7p)·(m/p) for a prime p ≥ 5 dividing m, or as 63·3^(j−2) when m = 3^j with j ≥ 2;
+- if 49 | N, the 7-part is a product of 49s and 343s.
+
+Each factor is a count, and ordinal sums multiply counts. ∎ The session244 census (to 91,079) pushes the bound to
+about 13,000.
+
+*Micro/macrocosm.* For the 61-smooth case the entire infinite macrocosm is generated by 34 atoms, all below 2^9 = 512:
+- the 16 primes 3–61 other than 7;
+- the 16 products 7p for primes 5 ≤ p ≤ 61 (35 up to 427);
+- the carries 63 and 343.
+
+*Legal children.* Every count N ≥ 3 in one-parent growth is first reached as a child 2h − 1 + a of a strictly
+smaller count. By the floor law
+the child exceeds the parent whenever h ≥ 3. So the additive work of Chan–Pak is exactly to reach the atoms, and
+multiplication does the rest.
+
+### §5. 7 and 3, F = U + S, and sporadic versus infinite families
+
+- **The only defects are 7·{1, 3}.** Write odd numbers as (m, k) with 7^k ∥ N. Then the counts are every (m, k)
+  except (1, 1) and (3, 1).
+  - 21 = 3·7 fails twice: as a product, because 7 is not a count, and as a strong count, because no strong order-6
+    tournament reaches 21 between the minima 15 and 25 (THM-1370).
+  - 35 and 49, the 7-multiples 7·5 and 7·7 just past 7·3, are strong counts at order 7.
+- **F = U + S.** The archived divisor balance (arithmetic_braids_20260917) is F = S + r: 10 = 7 + 3 for p²qr, where
+  F = 10 proper divisors, S = 7 squarefree divisors other than 1, and r = U = 3 primes.
+  - In half-counts c = (H − 1)/2 this is c(21) = c(7) + 7, the shield identity c(3h) = c(h) + h at h = 7.
+  - The match is because 2^(r−1) − 1 = r only at r = 3. NUMEROLOGY.
+- **Sporadic versus infinite.** The atom set has two infinite families (primes ≠ 7; 7p) and two sporadic atoms
+  (63 = 7·3², 343 = 7³). The sporadic atoms exist only because 7 and 21 are missing.
+  - The classification of finite simple groups likewise has infinite families and 26 sporadics.
+  - The small exceptional isomorphisms sit at q = 7, 8, 9: PSL(2,7) ≅ PSL(3,2), PSL(2,8) ≅ ²G₂(3)′, and
+    PSL(2,9) ≅ A_6. These are the levels where the holes and 11 appeared in wave 47. ANALOGY / NUMEROLOGY.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| word model: types from strong components; single-letter rule (1, k) at order c + 2k | PROVED |
+| 1 + 2 + 2 occurs exactly at (3,7), (5,8), (9,6), (11,9), (13,9), (25,7), (33,6), (37,6) among h ≤ 44 | PROVED (strong spectrum to order 7, FINITE-EXACT) |
+| polytope ladder: (1,0), (1,1), (1,2), (2,2) matched as in §3 | PROVED for h ≤ 44 |
+| every odd 2909-smooth number except 7, 21 is a count (61-smooth: 34 atoms below 512) | PROVED (multiplicativity + census) |
+| F = U + S as c(21) = c(7) + 7; sporadic atoms and exceptional isomorphisms | NUMEROLOGY / ANALOGY |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.

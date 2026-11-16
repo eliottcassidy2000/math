@@ -1,0 +1,32 @@
+# wave 49 receipts (mac-mini-2026-11-16-types)
+## w49_types.py
+strong spectrum (h <= 45): h: [(order, self-converse?)]
+   1 [(1, True)]
+   3 [(3, True)]
+   5 [(4, True)]
+   9 [(5, True), (5, True)]
+   11 [(5, True)]
+   13 [(5, True)]
+   15 [(5, True), (5, True), (6, False), (6, False)]
+   17 [(6, True), (6, True)]
+   19 [(6, False), (6, False)]
+   23 [(6, False), (6, False), (6, False), (6, False)]
+   25 [(6, False), (6, False), (7, True)]
+   27 [(6, False), (6, False), (7, False), (7, False), (7, True)]
+   29 [(6, True), (6, True), (6, False), (6, False), (7, False), (7, False)]
+   31 [(6, False), (6, False), (7, True), (7, True)]
+   33 [(6, False), (6, True), (6, False), (6, False), (6, False), (7, True), (7, False), (7, False)]
+   35 [(7, False), (7, False)]
+   37 [(6, True), (6, False), (6, False), (6, False), (6, False), (7, False), (7, False)]
+   39 [(7, False), (7, False)]
+   41 [(6, True), (7, False), (7, True), (7, False), (7, False), (7, False)]
+   43 [(6, False), (6, False), (7, False), (7, False)]
+   45 [(6, True), (6, True), (7, True), (7, False), (7, False), (7, False), (7, False)]
+word formula vs brute force at n = 5, 6, 7: mismatches 0
+h <= 44 with type 1 + 2 + 2, and the orders where it occurs: {3: [7], 5: [8], 9: [6], 11: [9], 13: [9], 25: [7], 33: [6], 37: [6]}
+never 1+2+2 (h <= 44, h realized): [1, 15, 17, 19, 23, 27, 29, 31, 35, 39, 41, 43]
+(2,2) four-dimensional polytopes -> {17: [8], 31: [7]}
+(1,1) plane tilings / >=5D polytopes / 4D honeycombs -> {3: [5], 5: [6], 11: [7], 13: [7]}
+(1,0) 3D and >=5D honeycombs -> {1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 3: [3], 5: [4], 11: [5], 13: [5], 41: [6]}
+H=3 types n=3..12: [(1, 0), (0, 1), (1, 1), (0, 2), (1, 2), (0, 3), (1, 3), (0, 4), (1, 4), (0, 5)]
+largest prime p with 7p <= 20405: 2909 -> every odd 2909 -smooth number except 7, 21 is a count
