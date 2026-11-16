@@ -50,3 +50,23 @@ non-induced or decomposable operations; Zaremba's conjecture alone
 does not supply one. See the
 [original density-one approach of Bourgain and Kontorovich](https://arxiv.org/abs/1107.3776)
 for the arithmetic, and [Busch's bound](https://www.combinatorics.org/ojs/index.php/eljc/article/view/v13i1n3).
+
+### Even a one-vertex overlap cannot implement the three offsets
+
+If prime-count induced witnesses for p,q≥3 intersect in at most
+one vertex, their union lies in no tournament of count below
+p+q+3. Indeed each witness has just one nontrivial strong component
+by multiplicativity and primality. If these cores are disjoint,
+H≥pq≥p+q+3. Otherwise their common vertex v belongs to a directed
+triangle in each core. Such a triangle exists through any vertex
+of a nontrivial strong tournament: otherwise the entire in-neighbor
+set beats the out-neighbor set, contradicting strongness. The two
+triangles make a strong five-vertex induced tournament (they share
+v), whose count is at least 9 by Busch's bound and odd parity.
+Among its odd-cycle packs, only the empty pack and the two
+individual triangles are wholly contained in one witness,
+with total weight 5. Thus there is mixed weight at least 4 in
+addition to the union of packs inside the two witnesses,
+which weighs p+q−1. This proves the claimed lower bound.
+Of the proposed offsets only c=−3 meets the lower bound;
+the c=−1 and c=+1 rows require more overlap or modification.
