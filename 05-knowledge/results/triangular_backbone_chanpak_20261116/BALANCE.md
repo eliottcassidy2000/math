@@ -86,3 +86,46 @@ $$
 Every remaining marked radius r>t interacts with changed radius d through `K(r+d)−K(r−d)=2^(r−1)λ_d−[r=d+1]`. The sign is the same across the changed set apart from the carry signs already in Δ. Thus the absolute change of all mixed interactions is at most `Σ_{r=t+1}^{R+1}2^(r−1)Δ+1 < 2^(R+1)Δ+1`. This is smaller than the signed gain by order `2^R`. Inserting the same pivot in every graph does not change the comparison because its own step is always +2.
 
 The absolute size bound is `2^(N−2) < H < 2^(N+1)` for tapes of width N≥4: the negative linear terms have total magnitude at most `2^(N−1)−2`, all pair terms are bounded by the full internal interval's `2^(N−2)−2`, and the direct positive run sum is at most `1+Σ_{i=1}^N2^i`. These bounds give `Θ(sqrt X)` distinct anchors below X over the constructed bank (lower bound from a single adequately sized width; upper bound by summing the geometric number of choices across surviving widths). Neither the exact mask multiplicity nor the square-root supply proves a single anchored interval. In fact the anchored pairs in this selected branch remain far apart at any fixed large width. Achieving another order of freedom, enough to refill those separations, is the next physical target.
+
+## Why a fixed pivot cannot give a universal constant-scale refill by signature matching
+
+Let V be an inner mask around the pivot (excluding the pivot), with
+signed positions v. Write E(V) = Σ K(|v|) and
+D(V) = Σ (2^v−2^(−v)). Outside marks at larger absolute radii
+contribute to the readout difference via two scalars L and M, so
+the placement-sensitive part of an inner difference is
+L·ΔΣ2^v − M·ΔΣ2^(−v), apart from the internal J difference.
+Specifically L = 2^i − (1/2)Σ_(left outside)2^(−v) and
+M = 2^(N−1−i) + (1/2)Σ_(right outside)2^v. The only interaction
+not accounted for in those scalars is the adjacency bonus, when
+an outside mark and an inner mark are adjacent. For a pivot +2
+unit, L−M = E(V)+2 (all outside distances are ≥2, and radius 2
+has no adjacency bonus against the pivot). Thus a tempting refill
+scheme is to match E and D between two inner masks, killing the
+dependence on the common exterior scalar M.
+
+**Rigidity.** When both sides of the pivot are at least two from
+the tape's two ends (so its bare linear term is divisible by 4),
+the pair (E,D) distinguishes every two different inner masks
+compatible with a unit pivot on the same exterior, provided the
+outer marks are all at radii ≥3. Proof: write
+D = Σ ε_r(2^r−2^(−r)), with ε_r in {−1,0,1}.
+These signed digits are unique. In a nonzero difference take the
+highest occupied radius t. If its coefficient is ±1, multiplying
+by 2^t gives an odd integer, impossible for a zero difference.
+If it is ±2, its real magnitude exceeds twice the sum of all
+lower basis elements, so it cannot cancel either. Therefore D
+pins which radii are singly occupied and on which side. E then
+determines the other pair occupancies by binary uniqueness,
+except for the duplicate weights at radii 1 and 2. The only
+potential ambiguity swaps two marks at ±1 for two at ±2, with
+the other radius entirely empty. Both configurations have total
+contact divisible by four (the combined inner contact is 4 and
+every farther mark contributes a multiple of four). They cannot
+give pivot change ±2, since the bare linear term is divisible by
+four too. This rules out that particular matched-signature
+route to two different anchors at all widths.
+
+Next experiments should let the pivot itself change, allow
+mismatched signatures with a target-selected exterior scalar,
+or use a second head. The lemma does not rule out any such move.
