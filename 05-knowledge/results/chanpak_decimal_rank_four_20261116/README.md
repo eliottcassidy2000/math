@@ -1,0 +1,20 @@
+# Binary and decimal steering on one rank-four ribbon image
+
+Session 2026-11-16. These are literal span-3 return constructions. **Chan–Pak remains open.** The main gain is that decimal control is now repeatable at arbitrary precision, not just an extra residue reachable from the seed.
+
+## What is proved
+
+- **Any sequence of binary/five-adic requests.** For arbitrary s,d, steer every odd class modulo **2^s·5^d**, even if the precision changes between requests. The controller keeps rank four at every letter and restores the same rational image at each eight-letter boundary. One operation compresses the dyadic state onto a line, but keeps the five-adic vector primitive. Two unit multipliers set the binary choice; then powers that are neutral on that line correct the five-adic digits. The calibration certifies all **624** nonzero mod-5 states and a **16-dimensional** first-order matrix span. [Vector-lifting proof and executable selector](MIXED_POWERS.md).
+- **Shorter fixed precision.** An independently checked alternative uses **40 literal letters per request modulo 800**, after a one-time 24-letter reset. For arbitrary precision it has a separate scalar-lifting proof using four first-order readout rows. Exact contracted reachability also shows every eight-letter return preserves strongness at its boundary when begun on the strong seed. Intermediate zero letters can be nonstrong. [Short controller and strong-boundary certificate](DECIMAL_CONTROLLER.md).
+- **A real golden clock on one physical block.** The return beginning (0,6,5) contains the same nontrivial mod-5 Jordan block as Fibonacci recursion. Its actual count readout has exact period **60·5^(d−1)** modulo 5^d. Just waiting on that single block supplies every five-adic suffix in four specified mod-32 phases. It cannot supply the other phases. [Golden clock](GOLDEN_DECIMAL.md); [exact least-wait lifting](LOW_COST_DIGITS.md) obtains the next time without simulating a whole period.
+- **Binary/decimal crossing.** The March 20 archive explicitly recorded **1024=1000+24** at five vertices. The least common modulus for a 10-bit ending and a 3-digit decimal ending is **128,000**, not either scale alone. The demonstrated sequence produces 1023, 1001 and 1707 as residues modulo that common modulus. Their absolute counts are much larger. The [tower-carry sieve](LOW_COST_DIGITS.md) separately prunes exact powers using the old order-of-2 lifting mechanism.
+
+## The absolute obstruction
+
+The same bank is excellent at returning an image and poor at generating *dense absolute counts*. Every isolated triple of returns has H at least 13,460,883, larger than 168³. Product lower bounds on disjoint odd-cycle supports then give only **O(X^0.93644)** distinct counts through X from the entire fixed-seed bank. Even allowing up to 1% arbitrary substitutions on the same eight-letter grid is still power-saving sparse. The decimal controller's 111-matrix alphabet alone obeys the tighter exponent 0.86070. At the same triple-growth floor a fixed eight-letter grammar would need at least **238 effective choices per block** just to evade this counting obstruction; that threshold is not a guarantee of coverage.
+
+This is the scope of the “path of least resistance” finding: the least-wait move in the projected decimal clock is not an absolute-digit step. To pursue Chan–Pak, build a less expensive exact-return language (more distinct choices per growth in H), or couple these residue choices to a separate, rigorously small signed remainder. Adding decimal digits without paying that remainder cannot work inside this bank.
+
+## Replay
+
+Generate `return_automaton.json` by running `lattice.py` in the sibling eight/braid packet. Then run `mixed_controller.py`, `check_decimal_controller.py`, `check_golden_decimal.py path/to/return_automaton.json`, and `low_cost_digits.py`. The finite checks certify the constants and calibration; the lifting proofs, not samples at a few hundred residues, give unbounded precision.
