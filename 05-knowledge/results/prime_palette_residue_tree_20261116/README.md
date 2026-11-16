@@ -1,0 +1,190 @@
+# Prime palettes, the two missing binary addresses, and exact repairs
+
+**Proved:** all odd residue classes modulo $2^a3^b5^c$, with arbitrary
+nonnegative exponents. More generally, all odd residues modulo any modulus
+with prime factors at most 61, with an independently replayable certificate.
+Every positive odd 61-smooth integer is also an **exact** Hamiltonian-path
+count, except 7 and 21. Neither statement proves exact realization of
+arbitrary primes.
+
+## 1. Six witnesses suffice for the $2,3,5$ theorem
+
+Write (H(T)) for the number of directed Hamiltonian paths. The ordinal
+join $A\to B$ has $H(A\to B)=H(A)H(B)$: every spanning path must
+visit the entirety of $A$, then the entirety of $B$. The physical
+witness bank is $3,5,11,13,17,19$ ([outgoing rows](witnesses.json)).
+
+First handle units. It suffices to prove the assertion for $a\ge3,b,c\ge2$,
+since lower moduli are quotients. The four generators $11,13,17,19$
+generate the whole unit group. Here is the hand proof. For a finite
+abelian group $G$, a subgroup mapping onto $G/G^\ell$ for every
+prime $\ell\mid |G|$ is $G$; a proper quotient would have a
+quotient of prime order. The only primes here are $2,3,5$.
+For the 2-quotient read the two square characters modulo 8, the sign
+modulo 3, and the square character modulo 5. The four columns are
+$(1,1,1,0),(0,1,0,1),(0,0,1,1),(1,1,0,0)$;
+they are independent over $\mathbf F_2$. For the 3- and 5-quotients
+it suffices that $13^2=7\pmod9$ and $11^4=16\pmod{25}$.
+These characters still detect the respective cyclic principal factors
+at **every** height by the prime-power unit group structure.
+Negative powers are unnecessary: replace them modulo each finite
+generator order.
+
+For a target $r$, choose
+$i=\min(v_3(r),b)$, $j=\min(v_5(r),c)$,
+with $v_p(0)=\infty$. Then $r\equiv3^i5^j u\pmod{2^a3^b5^c}$
+for a unit $u$. To choose it, divide each local congruence by its
+own $p$-power, invert the other unit factors, and extend the result
+to a unit at full height. When a valuation is saturated, impose no
+unit condition at that prime. CRT assembles $u$. This proves the
+all-height claim without a search over heights.
+
+## 2. Wide palette: 17 odd prime axes, simultaneously
+
+Let $P$ be the odd primes at most 61. The code certifies unit generation
+by these 19 counts:
+
+    67 71 73 79 83 89 97 101 103 107 109 113 127 131 137 139 149 157 167
+
+At the base level $8\prod_{p\in P}p^2$, write discrete logarithms in
+each cyclic odd-prime unit group and two sign bits modulo 8. For each
+prime $\ell$, keep rows whose cyclic order is divisible by $\ell$;
+the rank mod $\ell$ is exactly the number of retained rows.
+This is a compact linear algebra certificate: there is no iteration
+over the enormous full product modulus. The ranks are unchanged at
+higher prime powers, since reduction induces the same prime-order
+quotients; smaller moduli follow by projection. At large heights the
+2-quotient has dimension $2+17=19$, so no smaller unit bank works by
+multiplication alone. For nonunits take the literal counts
+$H=p$ for $p\ne7$ and $H=469=7\cdot67$ for the 7-axis.
+Each has valuation one at its marked prime and zero at the other
+prime axes. Now the same local division argument as in section 1 works.
+The smaller counts 35 and 63 cannot play the role of 469 here:
+they carry an extra factor from the palette (5 and 9 respectively).
+This is the distinction between a factor available over one local
+coordinate and one available jointly.
+
+## 3. Exact spectrum on the palette, not merely modular
+
+The witnesses include all odd primes through 61 except 7, all $7p$
+for $5\le p\le61$ prime with $p\ne7$, and $49,63,343$.
+If $v_7(N)=0$, use the prime factors directly. If $v_7(N)\ge2$, write
+the exponent as $2i+3j$ and use $49^i343^j$. If $v_7(N)=1$ and
+the cofactor has a prime other than 3, absorb one such prime using $7p$.
+If the cofactor is a power of 3, use 63 when its exponent is at least 2;
+exponents 0 and 1 give the two forbidden integers
+([prior all-order exclusion](../../../01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md)).
+The argument works for any finite prime palette with the same witnesses.
+Thus it constructs **unbounded** exact representatives, not just a
+finite cutoff. It does not manufacture primes outside the palette.
+In particular, a prime count requires one strong component with that
+count, not a product of smaller nontrivial counts.
+
+Here is a concrete version of the repo's
+[F₁ ground-state analogy](../../../07-reflections/the-fundamental-truths-in-every-language.md):
+the singleton is a multiplicative identity, and prime-exponent
+coordinates give a free commutative monoid before imposing realizability.
+In this restricted monoid only the monomials $x_7,x_3x_7$ are absent.
+Its multigraded series is
+$\prod_{p\in P}(1-x_p)^{-1}-x_7(1+x_3)$.
+The monomials whose every smooth multiple is attained form an ideal
+in the ambient monoid, minimally generated by $9,49$, and the primes
+in $P\setminus\{3,7\}$; the complement is the set of divisors of 21.
+Over any coefficient field, the ambient polynomial ring is the
+normalization of this count-monoid algebra: $x_7$ is in the
+fraction field as $x_7^3/x_7^2$, and is integral since its square
+is already present. The other axes are already in the subalgebra.
+Integral closedness of the polynomial ring gives the reverse inclusion.
+The monomial ideal just described is also the conductor of this
+normalization, since multiplication by a fixed monomial cannot
+make two distinct exponents cancel.
+The isolated 7-axis is the numerical semigroup $\langle2,3\rangle$
+of valuations: 49 and 343 are its generators and 35 opens the first
+mixed $v_7=1,v_5=1$ ray. This is a monoid statement, not a claim
+that tournaments are defined over a literal field of one element.
+
+## 4. The 3/28 split and the two deleted subtrees
+
+Put $t=(H-1)/2$. Then $H\mapsto2H-1,2H+1$ becomes binary digit
+appending, $t\mapsto2t,2t+1$; multiplication becomes
+$t\star s=2ts+t+s$. The first 32 odds use $0\le t<32$.
+Taking out the fourth takes out $t=3=11_2$, leaving 3 addresses
+on the left and 28 on the right, of which 27 are realized. The right includes the second hole
+$t=10=1010_2$. This split alone is not a count of exact omissions.
+
+If one tries to descend only by removing the last binary digit,
+the two holes block **disjoint prefix subtrees**, 11 and 1010.
+Among the first 32 addresses, prefix 11 contributes $1+2+4+8=15$
+addresses and prefix 1010 contributes $1+2=3$, so the total is
+**18** blocked addresses, holes included.
+In general the total for $k\ge4$ is
+$(2^{k-1}-1)+(2^{k-3}-1)=5\cdot2^{k-3}-2$.
+On the shell of addresses with exactly $k$ binary digits the
+fraction is $1/2+1/8=5/8$. Both formulas take account of the
+leading 1; treating these as fixed-width prefixes would be wrong.
+
+The arithmetic restart seeds needed by the two child rules plus
+products are exactly $13,41,43$: the actual children of the holes
+are $13,15,41,43$, and 15 already factors as $3\cdot5$.
+The others are prime and have no alternate legal parent in those
+two rules. This is a minimal **formal** recursion: if the two
+dyadic moves can be lifted to physical tournaments whenever both
+endpoints are allowed, then the three seeds close the induction.
+No such universal lift is claimed. A weaker sufficient route permits
+$2h\pm1,2h\pm3$: each odd target above 5 has two candidate odd
+parents a distance 2 apart, at least one not a hole. The remaining
+quantifier is to produce a compatible physical source for one of them.
+
+The marked multiples $7,21,35,49,63$ have ranks
+$4,11,18,25,32$, i.e. one arithmetic strand with step 7 rather
+than the binary strand. 35 has no product decomposition into
+admissible proper factors but its binary address 10001 is unblocked.
+49 likewise cannot factor inside the spectrum and its address
+11000 lies **inside** the 7 shadow. 63, at 11111, reaches the same
+shadow by the other child of 7 $15$ and starts the realized part
+of the $7\cdot3^j$ ray. Thus the two structures resolve different
+obstructions; the coincidence at rank 32 is not itself a proof.
+The same change of coordinates is the one used in the repo's
+[Syracuse microcosm](../../../01-canon/theorems/THM-4527-syracuse-in-owner-labels-microcosm-and-difference-spectrum.md),
+with its label $t+1$. The digit-appending conjugacy here is not
+an identification of the dynamics with Collatz.
+
+## 5. Beyond the palette, and the limit of residue evidence
+
+The [Fibonacci fan theorem](../../../01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md)
+supplies $H=2^j-1$ at all sufficiently large $j$; one reversed
+arc supplies $2^j+1$. For any odd prime $p$ for which 2 generates
+$(\mathbf Z/p^2)^\times$, these families imply full odd residues
+modulo $2^ap^e$ for all $a,e$. Choose either sign so that the
+required $2^j$ is a unit modulo $p^e$, then add multiples of the
+order of 2 to make $j\ge a$. The dyadic value is then that sign.
+An additional $2^k-1$ with $2^k\equiv2\pmod{p^e}$
+and $k\ge a$ changes the dyadic sign alone. Obtain any other
+dyadic coordinate first by multiplying 11 and 13 (or 3 and 5
+if (p=11) or 13), then divide out their odd-coordinate unit
+effects before using the fans. For example 67 and 83 pass the
+primitive-root test. This is separate from exact prime realization
+and from simultaneous multi-prime generation.
+
+In fact every odd prime divides some fan count. If
+$d=\operatorname{ord}_p(2)$, then for sufficiently large multiples
+$j=dm$, the possible valuations are $v_p(2^d-1)+v_p(m)$
+by LTE; one must not silently drop the base valuation at a
+Wieferich prime. For arbitrary odd $M$, taking large
+$j\equiv3\pmod{\operatorname{ord}_M(2)}$ gives a realized
+shadow of 7 mod $M$, and multiplying the witness by 3 gives a
+shadow of 21. This also matches any dyadic modulus at most 8,
+but not automatically higher ones. The full palette theorem does
+match arbitrary dyadic precision in its stated range.
+
+For any fixed palette of $s$ factors above 1, its multiplicative
+outputs below $X$ are only $O((1+\log X)^s)$, since the exponents
+are bounded by $\log_2 X$. Even residue coverage at all heights
+therefore cannot give representatives within one modulus of every
+canonical target: there are too few outputs below $2M$.
+To prove Chan–Pak by the digit tree, find a physical child or
+fresh repair selected from the absolute target; modular generation
+alone cannot supply that step.
+
+Run `python verify.py` to replay the rank checks and verify the
+literal witness bank by direct permutations.
