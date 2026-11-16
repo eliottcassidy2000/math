@@ -1,0 +1,15 @@
+# wave 51 receipts (mac-mini-2026-11-16-windows)
+## w51_p111.c 10 1600 (run in this session, 205 s)
+targets h (2h-1 prime <= 1600, h != 7, 21): 117
+not found (h, p): (55,109) (75,149) (87,173) (141,281) (157,313) (255,509) (261,521) (327,653) (489,977) (547,1093) (555,1109) (577,1153) (607,1213) (619,1237) (639,1277) (747,1493) (775,1549)
+found via a one-parent child: 22; only via a general extension: 78; not found with bases <= 10 vertices: 17
+## w51_window.c 10 63 / 9 31 / 9 15 / 9 13
+  127-type witness: base n=8 parents 0 0 0 1 0 0 4 | new vertex beats mask 209 -> 127
+  127-type witness: base n=8 parents 0 0 1 1 1 5 5 | new vertex beats mask 240 -> 127
+base count 63 (window 125/127, centre 126): one-parent bases n<=10: 27; both repairs: 0; only 125: 0; only 127: 27
+base count 31 (window 61/63, centre 62): one-parent bases n<=9: 52; both repairs: 0; only 61: 12; only 63: 0
+  127-type witness: base n=5 parents 0 0 2 1 | new vertex beats mask 1 -> 31
+  base n=6 parents 0 0 0 1 0 | new vertex beats mask 32 -> 29, mask 41 -> 31
+  base n=6 parents 0 0 1 0 0 | new vertex beats mask 59 -> 29, mask 41 -> 31
+base count 15 (window 29/31, centre 30): one-parent bases n<=9: 41; both repairs: 36; only 29: 0; only 31: 5
+base count 13 (window 25/27, centre 26): one-parent bases n<=9: 20; both repairs: 0; only 25: 20; only 27: 0

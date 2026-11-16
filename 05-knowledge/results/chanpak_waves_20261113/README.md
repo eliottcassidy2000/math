@@ -4734,6 +4734,98 @@ Neighbouring facts line up:
 
 Chan–Pak remains OPEN.
 
+## Wave 51: the 125/127 window from two sides, P111 refuted, and the numbers that keep returning
+
+Session mac-mini-2026-11-16-windows. Owner prompt:
+- 5³ against 10² + 3³ as a new interface for the blocked matched profile: 125 has it, no 127-path tournament does;
+- select the center as well as the repair;
+- look back through past work for natural numbers that recur across equations; 127 = 2^7 − 1;
+- test P111.
+
+**Credit.**
+- The blocked profile is the concurrent packet
+  [ready_restarts_rounding_20261116](../ready_restarts_rounding_20261116/README.md), "The next matched window is blocked
+  at every order". Its ternary update (g, r, s) ↦ (3g, 3r + 2, 3s + 2) lifts 41 to 125 with profile (27, 62, 89), and it
+  proves that no 127-path tournament has that profile.
+- session194: 125 = 3·41 + 2 and 127 = 3·41 + 4, with the chain 13 → 41 → {125, 127}.
+- THM-5272's port spectra (chanpak_carry_banks_ports README, complete for counts ≤ 104).
+- Two of wave 50's facts were already on file: the restarts 13 and 41 (THM-5262), and "21 is the first count whose
+  two parents T(7) and D(11) are both blocked" (THM-5272 README). Wave 50's sterile-fork statement is that fact in Collatz
+  form.
+
+Scripts `scripts/w51_*`; outputs `scripts/w51_receipts.txt`.
+
+### §1. P111 is false (PROVED from the complete port spectra)
+
+P111 asked whether every prime p ≡ 1 (mod 4), other than 13 and 41, is a doubling child 2h − 1 of h = (p + 1)/2. A port
+−1 at h means some tournament with h paths has a one-vertex extension with 2h − 1. THM-5272 lists the h ≤ 104 with no
+−1 port: 11, 29, 35, 39, 43, 47, 53, 55, 63, 67, 71, 77, 85, 87, 101.
+- **Counterexamples:** 109 = 2·55 − 1 and 173 = 2·87 − 1 are primes ≡ 1 (mod 4) that are doubling children of no
+  tournament.
+- These are the only failures among primes p ≤ 207. All the others with p ≡ 1 (mod 4) are doubling children.
+- My own search agrees. With one-parent bases up to 10 vertices and every out-set for the new vertex, it realizes 100 of
+  the 117 targets with p ≤ 1600, and 55 and 87 are among its 17 misses. Some of the other misses are realized by
+  general bases, which this search does not try (`w51_p111.c`).
+- 109 and 173 are still counts, built by other means. Doubling alone does not carry the primes ≡ 1 (mod 4).
+
+### §2. The window 125/127: one center, two one-sided interfaces
+
+**The center.** Both descriptions give 126:
+- binary: 125 = 2·63 − 1 and 127 = 2·63 + 1, center 2·63;
+- ternary: 125 = 3·41 + 2 and 127 = 3·41 + 4, center 3·42.
+
+So 126 = 2·63 = 3·42 = 6·21. The earlier windows sit on the holes as well: 13/15 has center 14 = 2·7, and 41/43 has
+center 42 = 2·21.
+
+**The two interfaces each realize exactly one member.**
+
+| interface | 125 = 5³ | 127 = 10² + 3³ = 2^7 − 1 |
+|---|---|---|
+| ternary lift from 41, profile (g, r, s) = (27, 62, 89) (concurrent) | realized | blocked at every order |
+| binary port at 63 (one new vertex over a 63-base) | blocked: −1 ∉ Π(63) (THM-5272) | realized |
+
+The binary interface realizes 127 over every one of the 27 one-parent bases with 63 paths and up to 10 vertices, and 125
+over none of them (`w51_window.c`). One witness:
+- the base is the one-parent tree with parents 0 0 0 1 0 0 4;
+- the new vertex beats {0, 4, 6, 7};
+- its profile at the new vertex is (g, r, s) = (63, 200, 209).
+
+So the **repair** that completes the window is a change of interface, not a change of profile. 125 comes from the lift
+at 41, and 127 from the port at 63.
+
+**5³ against 10² + 3³.** On the blocked side, g = 27 = 3³ and H − g = 100 = 10². On the open side, g = 63 and
+H − g = 64 = 2^6. So 127 = 10² + 3³ is the blocked reading and 127 = 2^6 + 63 is the open one.
+
+**Other centers (one-parent bases up to 9 vertices):**
+- 29/31 (center 30 = 2·15) is matched on a single base: 36 of the 41 bases with 15 paths give both members.
+- 25/27 (center 26): every base gives only 25.
+- 61/63 (center 62): only 61.
+
+Along the Mersenne row 15 → 31 → 63 → 127, the step to 2h + 1 works at 15 and at 63, but not at 31.
+
+### §3. Numbers that keep returning (merged from past work; readings are NUMEROLOGY unless stated)
+
+| numbers | where they recur |
+|---|---|
+| 7, 21, 63, 189 | 7 → 21 → 63 → 189 is the shield orbit of 7. H(P_7) = 189 = 21·9. 3^a(2^b − 1) = 2^(2b) − 1 only at (1,1) and (2,3), so 7 → 21 → 63 is unique (six_roots BOUNDARIES). 63 = 7·9 is Zsigmondy's exception (Catalan's 2³ + 1 = 3²). |
+| 3, 7, 127 | the Catalan–Mersenne chain 2 → 3 → 7 → 127 → 2^127 − 1 (two_three_wheels LIST). 127 is the open member of the window. |
+| 125, 127, 128 | 128 = 125 + 3 and 1024 = 1000 + 24: 2^u = 10^v + 3·2^w only at (4,1,1) and (10,3,3) (THREADS, COINCIDENCE). 641 = 5·2^7 + 1 = 5^4 + 2^4 divides 2^32 + 1 (decimal_1024). (128^n − 125^n)/3 reduces mod 7 (six_tutte). |
+| 125 | the Busch floor 3, 5, 9, 15, 25, 45, 75, 125 has f(10) = 125 (HYP-9457). 41 and 125 are the only counts needing defect 5 (THM-5262). At order 7 the counts with exactly one class include 125, 127 and 189. |
+| 11, 13, 41 | 21's two parents T(7) and D(11) are both blocked (THM-5272). The restarts 13 and 41 are the doubles of the holes (THM-5262). 1025 = 25·41. |
+| 9, 1729 | 9 = D²(3) = T(3) is the only meeting of the 2^a + 1 and 3^b rays. 1729 = 12³ + 1 = 10³ + 9³, and 1729 − 1473 = 2^8 (THM-5272 README). |
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| P111 fails at 109 and 173, and only there among primes ≤ 207 | PROVED (from THM-5272's complete port spectra) |
+| the 125/127 window has center 126 = 2·63 = 3·42 = 6·21 | PROVED (arithmetic) |
+| binary port at 63 realizes 127, never 125; the ternary lift realizes 125, never 127 | PROVED (THM-5272 and the concurrent obstruction); 27 bases FINITE-EXACT |
+| 29/31 matched on one base; 25/27 and 61/63 one-sided | FINITE-EXACT, one-parent bases up to 9 vertices |
+| the recurring-number table | merged; NUMEROLOGY except the cited theorems |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
