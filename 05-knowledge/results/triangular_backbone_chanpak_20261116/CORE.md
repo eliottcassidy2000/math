@@ -5,19 +5,19 @@ triangles. Use the Grinberg–Stanley expansion of H as the sum of 2 to
 the number of cycles in a vertex-disjoint packing of directed odd cycles
 (empty packing included). In particular H is induced-monotone, H≥1+2τ,
 and adding x gives the exact difference
-[
+$$
 r=(H(T+x)-H(T))/2
   =\sum_{C\text{ directed odd cycle through }x}H(T-V(C)).
-]
+$$
 As usual cycles are oriented cyclic orderings, not counted with a marked
 starting point. Write O=N⁺(x), I=N⁻(x) in T. If r>0 there is a triangle
 through x: any return to x must contain some O-to-I arc. Let there be
 t such crossing arcs aᵢ→bᵢ. Fix any one, a→b, and put q=H(T−{a,b}).
 
 **Triangle-budget theorem.** If r>0, then
-[
+$$
                          r\ge\tau(T)+(q-1)/2.
-]
+$$
 This is true for every rooted triangle, so one may maximize q.
 
 For each aᵢ→bᵢ let dᵢ count the predecessors of aᵢ in O and eᵢ the
@@ -36,7 +36,11 @@ and from one another. The remaining old triangles avoid a,b, so
 number at most (q−1)/2. In the exact rooted sum, all the rooted
 triangles and charged 5-cycles have weight at least one, and the
 chosen root triangle has extra weight q−1. Subtracting the charged
-categories proves the inequality.
+categories proves the inequality. Keeping the triangle count of
+the remainder exact gives the stronger clause
+`r ≥ τ(T)+q−1−τ(T−{a,b})`. Thus forbid the conjunction
+`x→a and b→x` whenever this threshold or q exceeds the target
+budget r. These are two-literal constraints for a single port.
 
 ## Consequences for an absolute window
 
@@ -74,7 +78,13 @@ three-term descending chain and both routes reach its ascending
 ordering. Hence it is confluent (or induct on remaining inversion
 count using this local diamond). A Hamiltonian path is already
 irreducible: every adjacent pair follows its tournament arc.
-Thus no two paths have the same triangle code. The 6^τ bound follows.
+Thus no two paths have the same triangle code. The 6^τ bound follows. If b is the number of components in
+the graph of directed triangles joined when they share an arc,
+the sharper bound is 6^b·3^(τ−b): introduce the triangles of
+each component in spanning-tree order, and each subsequent
+triangle has one pair already ordered, leaving at most three
+options. Equivalently the code determines an acyclic orientation
+of the graph of all triangle-supported pairs.
 
 In particular any literal induced extension which increases H
 must add at least 2⌈log₆ H⌉. The forbidden band below a prescribed
@@ -165,3 +175,18 @@ grammar.
 
 Sources: [Chan and Pak, §6.5](https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf);
 [Moon, vertex-pancyclicity](https://doi.org/10.4153/CMB-1966-038-7).
+
+The optional [weighted cycle-pack splitter](packing_certificate.py)
+reproduces both known exclusions without an isomorphism atlas.
+Fix a spanning directed cycle in the strong factor (Camion);
+unassigned arcs remain free. Sum weights of forced packs for a
+lower bound and all still-compatible packs for an upper bound.
+Split on one free arc until each branch excludes the target.
+For H7 one need only check strong orders 3–4 by Busch, as above.
+For H21 excluding factor 7 leaves only one nontrivial strong
+factor of count 21, of order at most 6 by the same bound.
+The script recalculates every interval and verifies the branch
+volumes add to the whole directed-cycle cube. At order 6 it
+uses 216 leaves instead of 512 full orientations in that cube.
+These counts certify finite kernels; unlike the vanishing
+reflection cross-term, the splitter is not a universal inverse.
