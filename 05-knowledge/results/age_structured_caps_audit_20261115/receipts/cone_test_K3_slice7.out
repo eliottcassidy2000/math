@@ -1,0 +1,2 @@
+K = 3: 512 history keys with data (64 tested in this run); features 138
+round 1: LPs 58176, violations 43344, largest excess 197.965, largest Z cap 38, largest coordinate cap 14

@@ -1,0 +1,6 @@
+pre-registered 2026-11-15 21:43:33 MST, before cone_test.py or the length-9 caps were read:
+P1: with history length K = 0 the coordinate-cap cone reproduces the earlier failure (several hundred violating (letter, feature) pairs, excess of order tens).
+P2: the number of violations decreases as K grows from 0 to 3 but stays positive at every K <= 3 (no finite-history box cone is letter-invariant).
+P3: value iteration on the caps does not converge within 10 rounds for K <= 2: some caps keep growing.
+P4: the exact per-state maxima x_s/H over words of length <= 9 (hratio5, k = 0) equal the maxima over length <= 7 for every state (no coordinate cap grows between lengths 7 and 9), and the largest is 14.
+P5: the deletion bound kappa(s) equals the observed maximum for most two-fragment states but exceeds it for some three- and four-fragment states (information lost by ignoring fragment membership).

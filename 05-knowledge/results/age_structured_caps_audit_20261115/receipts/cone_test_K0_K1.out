@@ -1,0 +1,25 @@
+=== K=0 ===
+K = 0: 1 history keys with data; features 138
+round 1: LPs 1080, violations 598, largest excess 255.771, largest Z cap 38, largest coordinate cap 14
+round 2: LPs 1080, violations 573, largest excess 374.272, largest Z cap 43, largest coordinate cap 26.4706
+round 3: LPs 1080, violations 550, largest excess 450.272, largest Z cap 44, largest coordinate cap 37.4706
+round 4: LPs 1080, violations 550, largest excess 450.272, largest Z cap 44, largest coordinate cap 37.4706
+round 5: LPs 1080, violations 550, largest excess 450.272, largest Z cap 44, largest coordinate cap 37.4706
+round 6: LPs 1080, violations 550, largest excess 450.272, largest Z cap 44, largest coordinate cap 37.4706
+round 7: LPs 1080, violations 550, largest excess 450.272, largest Z cap 44, largest coordinate cap 37.4706
+round 8: LPs 1080, violations 550, largest excess 450.272, largest Z cap 44, largest coordinate cap 37.4706
+round 9: LPs 1080, violations 550, largest excess 450.272, largest Z cap 44, largest coordinate cap 37.4706
+round 10: LPs 1080, violations 550, largest excess 450.272, largest Z cap 44, largest coordinate cap 37.4706
+=== K=1 ===
+K = 1: 8 history keys with data; features 138
+round 1: LPs 7272, violations 5328, largest excess 225.493, largest Z cap 38, largest coordinate cap 14
+round 2: LPs 7272, violations 4097, largest excess 4779.24, largest Z cap 937.152, largest coordinate cap 413.017
+round 3: LPs 7272, violations 3902, largest excess 5053.91, largest Z cap 1874.8, largest coordinate cap 894.987
+round 4: LPs 7272, violations 3885, largest excess 13464.9, largest Z cap 4221.39, largest coordinate cap 1191.1
+round 5: LPs 7272, violations 3894, largest excess 13624.4, largest Z cap 4572.36, largest coordinate cap 2181.55
+round 6: LPs 7272, violations 3913, largest excess 33240.2, largest Z cap 10783.9, largest coordinate cap 2967.8
+round 7: LPs 7272, violations 3887, largest excess 34298, largest Z cap 11267.2, largest coordinate cap 5485.54
+round 8: LPs 7272, violations 3910, largest excess 70672.2, largest Z cap 23272.1, largest coordinate cap 6189.11
+round 9: LPs 7272, violations 3914, largest excess 74309.9, largest Z cap 24506.2, largest coordinate cap 11879.9
+round 10: LPs 7272, violations 3894, largest excess 149009, largest Z cap 49324.9, largest coordinate cap 12718.4
+=== K=2 ===

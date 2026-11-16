@@ -1,0 +1,27 @@
+2^24-1 = 16777215 {3: 2, 5: 1, 7: 1, 13: 1, 17: 1, 241: 1}
+2^36-1 = 68719476735 {3: 3, 5: 1, 7: 1, 13: 1, 19: 1, 37: 1, 73: 1, 109: 1}
+orders of 2 mod primes of 2^24-1: {3: 2, 5: 4, 7: 3, 13: 12, 17: 8, 241: 24}
+  d =  1: 2^d-1 =         1 primitive prime divisors []
+  d =  2: 2^d-1 =         3 primitive prime divisors [3]
+  d =  3: 2^d-1 =         7 primitive prime divisors [7]
+  d =  4: 2^d-1 =        15 primitive prime divisors [5]
+  d =  6: 2^d-1 =        63 primitive prime divisors []
+  d =  8: 2^d-1 =       255 primitive prime divisors [17]
+  d = 12: 2^d-1 =      4095 primitive prime divisors [13]
+  d = 24: 2^d-1 =  16777215 primitive prime divisors [241]
+509203*2^n-1 covered by {3,5,7,13,17,241} over n mod 24: uncovered []
+78557*2^n+1 covered by {3,5,7,13,19,37,73} over n mod 36: uncovered []
+lcm of orders, Riesel set: 24 ; Sierpinski set: 36
+ord_7(2) = 3 (odd: -1 not a power of 2 mod 7, the Brier obstruction of CLOCKS.md)
+13*2^e+1, e=1..12: [27, 53, 105, 209, 417, 833, 1665, 3329, 6657, 13313, 26625, 53249]
+  divisible by 3 at e: [1, 3, 5, 7, 9, 11, 13, 15] (odd e)
+  divisible by 7 at e: [3, 6, 9, 12, 15, 18, 21, 24] (3 | e)
+  divisible by 9 at e: [1, 7, 13, 19, 25, 31, 37, 43] (e = 1 mod 6)
+  divisible by 63 at e <= 1000: []
+  uncovered phases mod 24 by the Riesel set: [2, 4, 8, 10, 16, 20]
+  primality of A_e, e=1..12: [False, True, False, False, False, False, False, True, False, True, False, False]
+27 = (4*21-3)/3 -> 27 ; 63 = 3*21; D-images: (3*27+3)/4 = 21 ; (13+1)/2 = 7 ; (41+1)/2 = 21
+2^u = 10^v + 3*2^w, u<200, v<60: [(4, 1, 1), (10, 3, 3)]
+n <= 10^6 with C(n,3)+1 a perfect square: [7, 10, 24, 26, 65, 13777] (C(24,3)+1 = 2025 = 45^2; 2024 = 2^10 + 10^3; 1024 = 10^3 + 24)
+components of the (576, 2025, 2601)-sum graph on 1..2024: [224, 450, 450, 450, 450] [('cycle', 450, 1, 2024), ('cycle', 450, 2, 2023), ('cycle', 450, 3, 2022), ('cycle', 450, 4, 2021), ('path', 224, 0, 2016)]
+largest power of two below 2024: 1024 ; 44*46 = 2024 = C(24,3) = 2024

@@ -2,7 +2,10 @@
 id: HYP-9803
 title: "(a) Two-apex completeness: every odd N other than 7 and 21 is the Hamiltonian-path count of a transitive spine with two apexes, the second beating at most three spine vertices (so every realizable conflict graph needed for Chan-Pak is a clique with a second apex at overlap at most three); (b) the sharp bounded-growth lemma for literal span-3 words: the number Z_l(W) of two-path covers bridged by the next vertex is at most 38 H(W), equivalently H(W l) <= 39 H(W), with equality at every H that some word attains (W' 0 0 0 7 6 0 followed by {2,3})"
 status: >
-  OPEN (CONJECTURE), klein-2026-11-15-ribbon. (a) FINITE-EXACT: all 2^23 two-apex tapes with spine 11 attain every odd
+  (a) OPEN (CONJECTURE); (b) PROVED (2026-11-15/16: chanpak_target_ribbon_audit_20261116/SHARP_GROWTH.md by tail deletion,
+  per-letter constants in chanpak_eight_braid_20261116/SHARP_EIGHT.md; AUDITED SOUND and corroborated exhaustively to length 9
+  by THM-5253 (A), klein-2026-11-15-age; the age-structured potential proposed below is withdrawn as a proof device, see THM-5253 (B)-(D)).
+  Original record, klein-2026-11-15-ribbon. (a) FINITE-EXACT: all 2^23 two-apex tapes with spine 11 attain every odd
   N < 2^16 but 7, 21 (first miss 77,533; the one-apex family alone misses half); with the second apex beating <= 3 spine
   vertices, spine 12 attains every odd N < 2^16 but 7, 21 (first miss 117,345); overlap 1 gives 56 %, overlap 2 gives
   98 % below 2^14, and only 0.24 % of the values below 2^16 need overlap 3; orientation A -> B suffices below 2^16;
@@ -38,8 +41,8 @@ turn (a) into a statement about three digital functions.
 
 **(b) The sharp bounded-growth lemma.** For a literal span-3 word `W` and letter `ℓ`, `H(Wℓ) = e_ℓ + s_ℓ + Z_ℓ` where
 `e_ℓ, s_ℓ ≤ H(W)` count the paths to which the new vertex is appended or prepended and `Z_ℓ(W)` the two-path covers it
-bridges (packet §1.1, PROVED). Conjecture: `Z_ℓ(W) ≤ 38·H(W)` for all `W, ℓ`; hence `H(Wℓ) ≤ 39·H(W)` (HYP-9802 (ii)'s lemma with its conjectured
-constant). Equality holds for `W = W' 0 0 0 7 6 0` and `ℓ = {2, 3}` for every word `W'` (three empty letters seal `W'`, so
+bridges (packet §1.1, PROVED). **PROVED** (SHARP_GROWTH.md, audited in THM-5253 (A)): `Z_ℓ(W) ≤ 38·H(W)` for all `W, ℓ`; hence `H(Wℓ) ≤ 39·H(W)` (HYP-9802 (ii)'s lemma with its
+constant; per letter the sharp constants are 1, 9, 17, 19, 33, 33, 39, 31, with `Z` one less). Equality holds for `W = W' 0 0 0 7 6 0` and `ℓ = {2, 3}` for every word `W'` (three empty letters seal `W'`, so
 the ratio 39 of the gadget `7 6 0` is reproduced at `H = H(W')`): the constant is sharp at unboundedly large `H`.
 Evidence: all words of length ≤ 9 (Q1–Q2 confirmed; the maximisers are exactly the sealed gadgets `T_(W′) ⇒ B`, THM-5243 (2)–(2′)), and the closed set of 16,794 states with `H ≤ 40` (every word
 with `H(W) ≤ 40`, of any length), where the maximum ratio is exactly 39 at every attained `H`. What a proof

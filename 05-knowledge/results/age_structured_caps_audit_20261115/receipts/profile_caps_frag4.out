@@ -1,0 +1,8 @@
+state 16 frags [(-1, -1), (0, 0), (1, 1), (2, 2)]: kappa = 8 (8.0000) at orientation 000000111000
+state 65 frags [(-1, -1), (0, -1), (1, 1), (2, 2)]: kappa = 203/15 (13.5333) at orientation 101011111011
+state 78 frags [(-1, -1), (0, 0), (1, -1), (2, 2)]: kappa = 18 (18.0000) at orientation 001111111000
+state 97 frags [(-1, -1), (0, 0), (1, 1), (2, -1)]: kappa = 18 (18.0000) at orientation 001011111000
+state 108 frags [(-1, -1), (0, -1), (1, -1), (2, 2)]: kappa = 24 (24.0000) at orientation 011111111000
+state 112 frags [(-1, -1), (0, 0), (1, -1), (2, -1)]: kappa = 24 (24.0000) at orientation 001011111000
+state 115 frags [(-1, -1), (0, -1), (1, 1), (2, -1)]: kappa = 328/15 (21.8667) at orientation 101011111011
+state 118 frags [(-1, -1), (0, -1), (1, -1), (2, -1)]: kappa = 30 (30.0000) at orientation 011011111000

@@ -1,0 +1,4 @@
+K = 2: 64 history keys with data; features 138
+round 1: LPs 58176, violations 42806, largest excess 200.692, largest Z cap 38, largest coordinate cap 14
+round 2: LPs 58176, violations 34285, largest excess 29769, largest Z cap 8374.93, largest coordinate cap 2565.88
+round 3: LPs 58176, violations 28931, largest excess 30715.2, largest Z cap 8374.93, largest coordinate cap 4095.32
