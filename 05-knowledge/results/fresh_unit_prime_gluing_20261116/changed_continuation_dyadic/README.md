@@ -42,3 +42,5 @@ $$
 The right side has valuation one and the second term on the left is divisible by eight. Hence $s=1$, which forces $t=1$. Thus the new band is infinite **and** the 493 handoff is exact, but the handoff is not infinite along the old row. Neither the first +4 choice nor a second dyadic inflation can be silently treated as a scalar-only move.
 
 See [DYADIC.md](DYADIC.md) for the relation to signed Collatz, shifted doubling rows, and the archive's fixed-root response obstructions. See [SMALL_PROFILES.md](SMALL_PROFILES.md) for the all-order boundary in six low deletion layers of the two literal nine-count windows.
+
+**Next-height follow-up.** The original source of count 331 has a 997-path +4 child. An independent changed continuation reopens it at 2991,2993,2995, with common (2897,2912,15). See [HEIGHT_TWO.md](HEIGHT_TWO.md) for the exact graphs and a third infinite replacement band. The two old-row matches do not prove alignment at all heights.
