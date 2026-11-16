@@ -54,3 +54,73 @@ In the aligned stencil with fixed W and rights 1^m0 and 1^m'0, the count anchor 
 ## Why concatenation is not automatic
 
 A fixed dyadic stencil has count functions a·2^s+b. In any affine identity of two such functions after shifting s by a fixed integer, both signed inverse lifts (slopes 4/3) decrease the valuation v₃(a) by exactly one. The even lift (slope 2) leaves it unchanged. Consequently no finite bank of these aligned identities can support arbitrarily long words with more than max v₃(a)−min v₃(a) sign inverses, no matter how many even steps are interspersed. This concerns infinitely valid pencil identities, not individual isolated coincidences. The minus anchors are −1 and the plus anchors differ; matching absolute leading profiles, not just scalar congruence, is necessary. A true ternary refill, a nonaligned state-dependent reader, or unboundedly many templates are necessary in this mode.
+
+## Arbitrary right cores: the exact ports and their obstruction
+
+The same single backward bridge R(U,V) works for any nonempty tournaments U,V, with roots x,y. For a root r, define a weighted end port
+
+    P_end(T,r)=Σ_{S∋r} end_r(T[S]) H(T\S),
+
+and P_start by reversing paths. Here end and start count Hamilton paths with the given endpoint, and H(empty)=1. The signed version of P_end inserts (−1)^|S| into the sum and is exactly −start_r(T); the signed P_start is −end_r(T). The bridge count therefore reads
+
+    H(R(U,V)) = H(U)H(V) + P_start(U,x)P_end(V,y) − end_x(U)start_y(V).
+
+Indeed a mixed odd cycle decomposes uniquely into a rooted outgoing fragment in U and an incoming one in V, whose total vertex count is odd. The choice of either odd/even type yields the product-minus-signed-product formula, and the remaining cycle packs on the two sides factor by H on their complements. The only disallowed rooted pair (both roots alone) has even total size, so contributes zero. Old packs still give H(U)H(V).
+
+Proof of the signed port identity: work in the commutative ring with x_v²=0, put X=diag(x_v) and u=1ᵀX. The row G_A(x)=u(I−AX)^−1 enumerates all nonempty simple paths by their last vertex (a repeat vanishes in the ring); F_A=1+G_A1 enumerates them without an endpoint. Reversal identifies F_{Aᵀ}=F_A. The tournament identity Aᵀ=J−I−A gives I−AᵀX=(I+AX−JX)(I+X). Premultiplying its inverse by u, the factor (I+X)^−1 disappears because uX=0. The remaining matrix has rank-one modification JX=1u, so
+
+    G_{Aᵀ}(x)=u(I+AX)^−1/[1−u(I+AX)^−1 1]=−G_A(−x)/F_A(−x).
+
+Summing and adding 1 gives F_{Aᵀ}=1/F_A(−x). The full squarefree coefficient in G_{Aᵀ}(x)=−G_A(−x)F_A(x) is exactly the asserted signed identity.
+
+The legacy negative-anchor condition P_end(V,y)=H(V) and start_y(V)=1 is rigid. Indeed P_end enumerates all ordered pairs of complementary directed covering paths where the first ends at y and the second may be empty, while H(V) counts just those whose seam is valid. If P_end=H, every Hamilton path of V−y must start at an out-neighbor of y; otherwise the singleton first part y gives an invalid seam. Thus start_y(V)=H(V−y), which has value 1 only for a transitive deletion. For a strong V the one-apex equality classification then gives just the right fan 1^m0. In particular one cannot freely replace this same two-port handoff by an arbitrary ternary reservoir.
+
+The exact wider guard is **compensation**, not equality of each constituent: with W=11 or 101 on the left as above, negative anchor −1 holds precisely when
+
+    P_end(V,y)−H(V) = start_y(V)−1,
+
+and then
+
+    H(R(W 0^s,V)) = A(W)(H(V)+P_end(V,y)) 2^s −1.
+
+This is a strict extension of the fan lane. For example, outgoing masks (6,8,2,5) with root y=0 give (H,P_end,start)=(5,6,2), hence the odd coefficient 11 in H+P_end. The remaining physical question is to grow H+P_end by exact factors of 3 repeatedly while maintaining this compensated port.
+
+## Three consecutive plus lifts with strong witnesses
+
+There is a larger positive lane; in particular the triangle-ordinal input of the first construction is not necessary. Fix W=11 and define four strong right cores V_i whose root is vertex 0. Row masks below use bit j for the edge i→j.
+
+| i | Rows of V_i | (H, P_end, start_0) | Left tail | R count |
+|---:|---|---|---|---|
+| 0 | (56,37,1,6,14,28) | (37,44,4) | s | 243·2^s+3 |
+| 1 | (44,41,2,4,15,28) | (23,31,5) | s+1 | 324·2^s+3 |
+| 2 | (16,9,3,5,14) | (15,21,3) | s+2 | 432·2^s+3 |
+| 3 | (50,40,3,5,14,28) | (43,53,7) | s+1 | 576·2^s+3 |
+
+In each row the anchor is −H+P_end−start=3, and the coefficient from the arbitrary-core bridge is 3(H+P_end) before shifting the tail. Thus for every s≥1 the four displayed counts give three successive applications of d↦(4d−3)/3, each with legal parent 3 mod6. At s=1 the chain is 489→651→867→1155. The same tabulated right cores and shifts work for W=101, scaling all leading coefficients by 5/3. These are actual common templates for successive physical moves; no separate witness search is needed at each s. Both sides of each bridge are strong, and a backwards arc plus the remaining forwards cross arcs make the full bridge strong. One changes the right core and at most one zero in the left tail at each step. The checker independently verifies all port profiles and strongness. This still consumes one factor of 3 from the odd scale at every step; the examples do not supply ternary refill.
+
+## Four consecutive minus lifts with strong witnesses
+
+Here the same compensated anchor persists through four negative steps. Again the right root is vertex 0 and all masks are ordinary outgoing rows.
+
+| i | Rows of V_i | (H, P_end, start_0) | W | Left tail | R count |
+|---:|---|---|---|---|---|
+| 0 | (92,81,34,6,12,27,60) | (109,134,26) | 101 | s | 1215·2^s−1 |
+| 1 | (52,49,2,7,12,28) | (37,44,8) | 101 | s+2 | 1620·2^s−1 |
+| 2 | (44,17,2,6,13,30) | (25,29,5) | 101 | s+3 | 2160·2^s−1 |
+| 3 | (116,97,34,7,14,24,60) | (131,157,27) | 101 | s+1 | 2880·2^s−1 |
+| 4 | (22,16,2,7,12) | (9,11,3) | 11 | s+6 | 3840·2^s−1 |
+
+Every anchor is −1. Each parent is 5 mod 6 for s≥1. Each step d↦(4d+1)/3 trades one factor of 3 from the odd coefficient for a factor of 4 from the tail. In particular s=1 gives 2429→3239→4319→5759→7679. The right cores are all strong; the watcher can retain the first s existing zero-tail vertices at every step, since only 0 to 6 additional zeros are specified in the finite recipes. The checker independently computes all profiles, directed reachability, and one full literal chain.
+
+### A three-step ternary reservoir, not yet an unbounded refill
+
+The opposite-port even/odd sums r,s in [the near-sink proof](INVERSE.md) give P=r+s and E=s−r for the converse of the chosen right module. Thus the compensated condition P−H=E−1 is exactly **2r=H−1**, the one-hit (not necessarily repeatable) near-sink condition. It is a physical bridge between the two inverse architectures. The right-core coefficient K=H+r+s has the following distinct witnessed values. Use the converse of each listed rooted tournament as the right module; masks are outgoing.
+
+| K | H | (r,s) | Root | Rows before taking converse |
+|---|---:|---|---:|---|
+| 2 | 1 | (0,1) | 0 | (0) |
+| 6 | 3 | (1,2) | 0 | (2,4,1) |
+| 18 | 9 | (4,5) | 1 | (2,4,25,19,3) |
+| 54 | 25 | (12,17) | 2 | (4,33,34,7,15,25) |
+
+With left word 101 0^s, the general bridge formula gives d=5·2^s K−1 for s≥1. Moving 54→18→6→2 and adding two zeros to the left at each step gives **three consecutive exact minus inverse moves**, since (4d+1)/3 replaces K by K/3 and s by s+2. At s=1 the path is 539→719→959→1279. This uses genuinely different right profiles and permits the final singleton right core (the bridge proof remains valid with empty complements and paths). It is not an unbounded generator; a physical construction for higher successive powers of 3 in K would be a direct way to continue.
