@@ -1,0 +1,7 @@
+order 4: 4 classes, 2 self-converse
+H: classes, self-converse, converse pairs
+  1: 1 1 0
+  3: 2 0 1
+  5: 1 1 0
+counts attained only by converse pairs: [3]
+counts attained only by self-converse classes: [1, 5]

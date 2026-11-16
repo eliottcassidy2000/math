@@ -1,0 +1,3 @@
+words up to length 8: 511 checked, automaton mismatches 0
+ready seed h=75: word SLLSLLSL order 9 root 7 masks [508, 481, 506, 498, 258, 464, 400, 16, 128] (h,g,r,s)=(75, 25, 25, 50)
+ready counts found among targets: [75] ; missing: [13, 23, 41, 59, 95]

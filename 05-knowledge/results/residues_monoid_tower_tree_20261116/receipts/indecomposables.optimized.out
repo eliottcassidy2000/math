@@ -1,0 +1,12 @@
+N=100000: indecomposables = prediction: True; count 11266; extra: []; missing: []
+hidden generators (indecomposables that are not prime) below N: [35, 49, 63, 77, 91, 119, 133, 161, 203, 217, 259, 287, 301, 329, 343, 371, 413, 427, 469, 497, 511, 553, 581, 623, 679] ... (1676 of them; primes p >= 5 below N/7: 1674)
+first 32 odd numbers: 7 is the 4 th, 21 the 11 th; before 7: [1, 3, 5] ; after 7: 28 numbers
+indecomposables among 1..63: [3, 5, 11, 13, 17, 19, 23, 29, 31, 35, 37, 41, 43, 47, 49, 53, 59, 61, 63] ; of these hidden: [35, 49, 63]
+  first 2^5 odd numbers (< 64): indecomposables 19 (primes 16, hidden 3)
+  first 2^6 odd numbers (< 128): indecomposables 35 (primes 29, hidden 6)
+  first 2^7 odd numbers (< 256): indecomposables 62 (primes 52, hidden 10)
+  first 2^8 odd numbers (< 512): indecomposables 116 (primes 95, hidden 21)
+  first 2^9 odd numbers (< 1024): indecomposables 204 (primes 170, hidden 34)
+  first 2^10 odd numbers (< 2048): indecomposables 368 (primes 307, hidden 61)
+  first 2^11 odd numbers (< 4096): indecomposables 668 (primes 562, hidden 106)
+  first 2^12 odd numbers (< 8192): indecomposables 1218 (primes 1026, hidden 192)

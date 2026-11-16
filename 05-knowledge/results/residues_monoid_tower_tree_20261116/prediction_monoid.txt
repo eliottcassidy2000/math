@@ -1,0 +1,30 @@
+Pre-registered predictions, klein-2026-11-16-monoid, written 2026-11-16 (before any run of this session).
+
+P-1 (33 at order 6)  The count 33 first appears at order 6, attained by exactly five isomorphism classes: one self-converse
+     class and two converse pairs; it is not attained at order 5.
+P-2 (fixed + 2 pairs)  At orders 5, 6, 7 every count value is attained by a number of classes congruent modulo 2 to its
+     number of self-converse classes (trivially true since H is converse-invariant); nontrivially: at order 6 at least
+     one count value is attained ONLY by converse pairs (no self-converse class), and at least one only by self-converse
+     classes.
+P-3 (residues mod 2^a 3^b 5^c)  The products of the explicit counts 3, 5, 11, 13, 17, 257 hit every odd residue class
+     modulo 2^a 3^b 5^c for all a <= 8, b <= 5, c <= 4 (replay of the Sylow argument).
+P-4 (primes to 63)  The images of the realised numbers 3, 5, 9, 11, ..., 199 (all odd except 7, 21) generate the
+     2-part group Q' = C_2 x prod_{p <= 63, p != 7} C_{2^{v_2(p-1)}}, and every odd prime p <= 63 has a realised primitive
+     root modulo p^2 below 100 other than 7.
+P-5 (indecomposables)  In the monoid of odd numbers other than 7 and 21 under multiplication, the indecomposables below
+     10^5 are exactly the primes other than 7, the numbers 7p for primes p >= 5, and 49, 63, 343.
+P-6 (P107)  A root-moving port move r -> 2r + 1 at the same charge, keeping the root ready, exists for none of the six
+     ready seeds 13, 23, 41, 59, 75, 95 with at most two added vertices (prediction: none found).
+
+Added 2026-11-16 (second directive of the session, before the tower/tree/seed runs):
+P-7 (pruned accelerated tree)  In the inverse tree of T(n) = n/2 (even), (3n+1)/2 (odd), with the multiples of 3 pruned
+     and the unary nodes contracted, every remaining node has exactly two children, every edge length (number of
+     original edges) lies in {1, 2, 3, 4}, ray edges have length 2 or 4 and branch edges 1, 2, 3 or 4, no two consecutive
+     forks on a ray are sterile, and the lengths with the left/right structure determine the labels (verified to depth 18).
+P-8 (tower)  In the mod-3 tower (short rows = multiples of 3; long rows = (3j+1 | 3j+2)) the halving arrows 2m -> m have
+     row lengths 2(floor((2m-1)/3) - floor((m-1)/3)) for m not divisible by 3, growing by 2 when m grows by 3; the odd
+     arrows n -> (3n+1)/2 fall into three families by n mod 6 (1: left, 3: short, 5: right), each starting 4 rows higher
+     and 2 rows longer than the previous member; the first members are 1 -> 2 (row 1 to 1), 3 -> 5 (2 to 3), 5 -> 8 (3 to 5).
+P-9 (P107 on the ready seeds)  Reconstructing wave 45's caterpillar seeds (words in S, L from (1,1,0,1)) with counts
+     13, 23, 41, 59, 75, 95 and defect 0, none admits a root-moving move r -> 2r + 1 at the same charge (H' = 2H + 1 + a,
+     a' = a, b' = 0) with one or two added vertices.

@@ -1,0 +1,166 @@
+seed n=5 root=2 (H,E,O,g)=(13,6,9,3) charge a=0 defect b=0; target H'=2H+1+a=27
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=6 root=3 (H,E,O,g)=(13,6,9,3) charge a=0 defect b=0; target H'=2H+1+a=27
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=6 root=4 (H,E,O,g)=(23,9,14,5) charge a=-4 defect b=0; target H'=2H+1+a=43
+seed done: extensions with H'=2H+1+a: 5; root-moving ready same-charge hits: 0
+seed n=6 root=3 (H,E,O,g)=(23,11,16,5) charge a=0 defect b=0; target H'=2H+1+a=47
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=6 root=1 (H,E,O,g)=(23,12,13,1) charge a=2 defect b=0; target H'=2H+1+a=49
+seed done: extensions with H'=2H+1+a: 5; root-moving ready same-charge hits: 0
+seed n=6 root=1 (H,E,O,g)=(23,14,15,1) charge a=6 defect b=0; target H'=2H+1+a=53
+seed done: extensions with H'=2H+1+a: 5; root-moving ready same-charge hits: 0
+seed n=6 root=2 (H,E,O,g)=(23,15,18,3) charge a=8 defect b=0; target H'=2H+1+a=55
+seed done: extensions with H'=2H+1+a: 5; root-moving ready same-charge hits: 0
+seed n=7 root=4 (H,E,O,g)=(13,6,9,3) charge a=0 defect b=0; target H'=2H+1+a=27
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=5 (H,E,O,g)=(23,9,14,5) charge a=-4 defect b=0; target H'=2H+1+a=43
+seed done: extensions with H'=2H+1+a: 7; root-moving ready same-charge hits: 0
+seed n=7 root=4 (H,E,O,g)=(23,11,16,5) charge a=0 defect b=0; target H'=2H+1+a=47
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=2 (H,E,O,g)=(23,12,13,1) charge a=2 defect b=0; target H'=2H+1+a=49
+seed done: extensions with H'=2H+1+a: 7; root-moving ready same-charge hits: 0
+seed n=7 root=2 (H,E,O,g)=(23,14,15,1) charge a=6 defect b=0; target H'=2H+1+a=53
+seed done: extensions with H'=2H+1+a: 7; root-moving ready same-charge hits: 0
+seed n=7 root=3 (H,E,O,g)=(23,15,18,3) charge a=8 defect b=0; target H'=2H+1+a=55
+seed done: extensions with H'=2H+1+a: 7; root-moving ready same-charge hits: 0
+seed n=7 root=5 (H,E,O,g)=(41,14,27,13) charge a=-12 defect b=0; target H'=2H+1+a=71
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=5 (H,E,O,g)=(41,16,25,9) charge a=-8 defect b=0; target H'=2H+1+a=75
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=4 (H,E,O,g)=(41,18,23,5) charge a=-4 defect b=0; target H'=2H+1+a=79
+seed done: extensions with H'=2H+1+a: 10; root-moving ready same-charge hits: 0
+seed n=7 root=4 (H,E,O,g)=(41,19,28,9) charge a=-2 defect b=0; target H'=2H+1+a=81
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=4 (H,E,O,g)=(41,20,29,9) charge a=0 defect b=0; target H'=2H+1+a=83
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=4 (H,E,O,g)=(41,23,28,5) charge a=6 defect b=0; target H'=2H+1+a=89
+seed done: extensions with H'=2H+1+a: 5; root-moving ready same-charge hits: 0
+seed n=7 root=3 (H,E,O,g)=(41,27,32,5) charge a=14 defect b=0; target H'=2H+1+a=97
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=2 (H,E,O,g)=(41,33,36,3) charge a=26 defect b=0; target H'=2H+1+a=109
+seed done: extensions with H'=2H+1+a: 10; root-moving ready same-charge hits: 0
+seed n=7 root=5 (H,E,O,g)=(59,25,34,9) charge a=-8 defect b=0; target H'=2H+1+a=111
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=0 (H,E,O,g)=(59,28,33,5) charge a=-2 defect b=0; target H'=2H+1+a=117
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=0 (H,E,O,g)=(59,29,40,11) charge a=0 defect b=0; target H'=2H+1+a=119
+seed done: extensions with H'=2H+1+a: 15; root-moving ready same-charge hits: 0
+seed n=7 root=0 (H,E,O,g)=(59,30,35,5) charge a=2 defect b=0; target H'=2H+1+a=121
+seed done: extensions with H'=2H+1+a: 5; root-moving ready same-charge hits: 0
+seed n=7 root=3 (H,E,O,g)=(59,34,43,9) charge a=10 defect b=0; target H'=2H+1+a=129
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=3 (H,E,O,g)=(59,35,44,9) charge a=12 defect b=0; target H'=2H+1+a=131
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=1 (H,E,O,g)=(59,42,45,3) charge a=26 defect b=0; target H'=2H+1+a=145
+seed done: extensions with H'=2H+1+a: 10; root-moving ready same-charge hits: 0
+seed n=7 root=2 (H,E,O,g)=(59,45,50,5) charge a=32 defect b=0; target H'=2H+1+a=151
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=4 (H,E,O,g)=(75,36,51,15) charge a=-2 defect b=0; target H'=2H+1+a=149
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=2 (H,E,O,g)=(75,41,50,9) charge a=8 defect b=0; target H'=2H+1+a=159
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=1 (H,E,O,g)=(75,44,49,5) charge a=14 defect b=0; target H'=2H+1+a=165
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=7 root=3 (H,E,O,g)=(75,47,52,5) charge a=20 defect b=0; target H'=2H+1+a=171
+seed done: extensions with H'=2H+1+a: 5; root-moving ready same-charge hits: 0
+seed n=7 root=2 (H,E,O,g)=(95,53,62,9) charge a=12 defect b=0; target H'=2H+1+a=203
+seed done: extensions with H'=2H+1+a: 5; root-moving ready same-charge hits: 0
+seed n=8 root=5 (H,E,O,g)=(13,6,9,3) charge a=0 defect b=0; target H'=2H+1+a=27
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=6 (H,E,O,g)=(23,9,14,5) charge a=-4 defect b=0; target H'=2H+1+a=43
+seed done: extensions with H'=2H+1+a: 9; root-moving ready same-charge hits: 0
+seed n=8 root=5 (H,E,O,g)=(23,11,16,5) charge a=0 defect b=0; target H'=2H+1+a=47
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=3 (H,E,O,g)=(23,12,13,1) charge a=2 defect b=0; target H'=2H+1+a=49
+seed done: extensions with H'=2H+1+a: 9; root-moving ready same-charge hits: 0
+seed n=8 root=3 (H,E,O,g)=(23,14,15,1) charge a=6 defect b=0; target H'=2H+1+a=53
+seed done: extensions with H'=2H+1+a: 9; root-moving ready same-charge hits: 0
+seed n=8 root=4 (H,E,O,g)=(23,15,18,3) charge a=8 defect b=0; target H'=2H+1+a=55
+seed done: extensions with H'=2H+1+a: 9; root-moving ready same-charge hits: 0
+seed n=8 root=6 (H,E,O,g)=(41,14,27,13) charge a=-12 defect b=0; target H'=2H+1+a=71
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=6 (H,E,O,g)=(41,16,25,9) charge a=-8 defect b=0; target H'=2H+1+a=75
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=5 (H,E,O,g)=(41,18,23,5) charge a=-4 defect b=0; target H'=2H+1+a=79
+seed done: extensions with H'=2H+1+a: 14; root-moving ready same-charge hits: 0
+seed n=8 root=5 (H,E,O,g)=(41,19,28,9) charge a=-2 defect b=0; target H'=2H+1+a=81
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=5 (H,E,O,g)=(41,20,29,9) charge a=0 defect b=0; target H'=2H+1+a=83
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=5 (H,E,O,g)=(41,23,28,5) charge a=6 defect b=0; target H'=2H+1+a=89
+seed done: extensions with H'=2H+1+a: 7; root-moving ready same-charge hits: 0
+seed n=8 root=4 (H,E,O,g)=(41,27,32,5) charge a=14 defect b=0; target H'=2H+1+a=97
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=3 (H,E,O,g)=(41,33,36,3) charge a=26 defect b=0; target H'=2H+1+a=109
+seed done: extensions with H'=2H+1+a: 14; root-moving ready same-charge hits: 0
+seed n=8 root=6 (H,E,O,g)=(59,20,39,19) charge a=-18 defect b=0; target H'=2H+1+a=101
+seed done: extensions with H'=2H+1+a: 10; root-moving ready same-charge hits: 0
+seed n=8 root=6 (H,E,O,g)=(59,21,38,17) charge a=-16 defect b=0; target H'=2H+1+a=103
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=5 (H,E,O,g)=(59,24,35,11) charge a=-10 defect b=0; target H'=2H+1+a=109
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=6 (H,E,O,g)=(59,25,34,9) charge a=-8 defect b=0; target H'=2H+1+a=111
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=0 (H,E,O,g)=(59,28,33,5) charge a=-2 defect b=0; target H'=2H+1+a=117
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=0 (H,E,O,g)=(59,29,40,11) charge a=0 defect b=0; target H'=2H+1+a=119
+seed done: extensions with H'=2H+1+a: 21; root-moving ready same-charge hits: 0
+seed n=8 root=0 (H,E,O,g)=(59,30,35,5) charge a=2 defect b=0; target H'=2H+1+a=121
+seed done: extensions with H'=2H+1+a: 5; root-moving ready same-charge hits: 0
+seed n=8 root=5 (H,E,O,g)=(59,31,40,9) charge a=4 defect b=0; target H'=2H+1+a=123
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=4 (H,E,O,g)=(59,34,43,9) charge a=10 defect b=0; target H'=2H+1+a=129
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=4 (H,E,O,g)=(59,35,44,9) charge a=12 defect b=0; target H'=2H+1+a=131
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=0 (H,E,O,g)=(59,39,42,3) charge a=20 defect b=0; target H'=2H+1+a=139
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=2 (H,E,O,g)=(59,42,45,3) charge a=26 defect b=0; target H'=2H+1+a=145
+seed done: extensions with H'=2H+1+a: 14; root-moving ready same-charge hits: 0
+seed n=8 root=4 (H,E,O,g)=(59,43,48,5) charge a=28 defect b=0; target H'=2H+1+a=147
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=3 (H,E,O,g)=(59,45,50,5) charge a=32 defect b=0; target H'=2H+1+a=151
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=5 (H,E,O,g)=(75,30,45,15) charge a=-14 defect b=0; target H'=2H+1+a=137
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=5 (H,E,O,g)=(75,36,51,15) charge a=-2 defect b=0; target H'=2H+1+a=149
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=3 (H,E,O,g)=(75,41,50,9) charge a=8 defect b=0; target H'=2H+1+a=159
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=2 (H,E,O,g)=(75,44,49,5) charge a=14 defect b=0; target H'=2H+1+a=165
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=4 (H,E,O,g)=(75,47,52,5) charge a=20 defect b=0; target H'=2H+1+a=171
+seed done: extensions with H'=2H+1+a: 7; root-moving ready same-charge hits: 0
+seed n=8 root=4 (H,E,O,g)=(75,57,60,3) charge a=40 defect b=0; target H'=2H+1+a=191
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=6 (H,E,O,g)=(95,32,63,31) charge a=-30 defect b=0; target H'=2H+1+a=161
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=6 (H,E,O,g)=(95,33,62,29) charge a=-28 defect b=0; target H'=2H+1+a=163
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=6 (H,E,O,g)=(95,34,61,27) charge a=-26 defect b=0; target H'=2H+1+a=165
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=6 (H,E,O,g)=(95,36,59,23) charge a=-22 defect b=0; target H'=2H+1+a=169
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=6 (H,E,O,g)=(95,40,55,15) charge a=-14 defect b=0; target H'=2H+1+a=177
+seed done: extensions with H'=2H+1+a: 5; root-moving ready same-charge hits: 0
+seed n=8 root=1 (H,E,O,g)=(95,48,49,1) charge a=2 defect b=0; target H'=2H+1+a=193
+seed done: extensions with H'=2H+1+a: 5; root-moving ready same-charge hits: 0
+seed n=8 root=3 (H,E,O,g)=(95,53,62,9) charge a=12 defect b=0; target H'=2H+1+a=203
+seed done: extensions with H'=2H+1+a: 7; root-moving ready same-charge hits: 0
+seed n=8 root=3 (H,E,O,g)=(95,54,59,5) charge a=14 defect b=0; target H'=2H+1+a=205
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=5 (H,E,O,g)=(95,55,64,9) charge a=16 defect b=0; target H'=2H+1+a=207
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=0 (H,E,O,g)=(95,59,68,9) charge a=24 defect b=0; target H'=2H+1+a=215
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=4 (H,E,O,g)=(95,61,72,11) charge a=28 defect b=0; target H'=2H+1+a=219
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=1 (H,E,O,g)=(95,62,63,1) charge a=30 defect b=0; target H'=2H+1+a=221
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=3 (H,E,O,g)=(95,63,66,3) charge a=32 defect b=0; target H'=2H+1+a=223
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=3 (H,E,O,g)=(95,66,69,3) charge a=38 defect b=0; target H'=2H+1+a=229
+seed done: extensions with H'=2H+1+a: 10; root-moving ready same-charge hits: 0
+seed n=8 root=3 (H,E,O,g)=(95,71,80,9) charge a=48 defect b=0; target H'=2H+1+a=239
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0

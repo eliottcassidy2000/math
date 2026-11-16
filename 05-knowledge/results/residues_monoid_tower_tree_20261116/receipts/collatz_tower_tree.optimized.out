@@ -1,0 +1,15 @@
+(1) rows: n -> row(n) for n = 1..14: [(1, 1), (2, 1), (3, 2), (4, 3), (5, 3), (6, 4), (7, 5), (8, 5), (9, 6), (10, 7), (11, 7), (12, 8), (13, 9), (14, 9)]
+    period 12 classes: multiples of 3 {0,3,6,9} (odd 3,9; even 0,6); even non-multiples {2,4,8,10} (4,8 = 0 mod 4; 2,10 = 2*odd); 6k+-1 {1,5,7,11}
+    halving arrows 2m -> m, m not divisible by 3, (m, row(2m) - row(m)): [(1, 0), (2, 2), (4, 2), (5, 4), (7, 4), (8, 6), (10, 6), (11, 8), (13, 8), (14, 10), (16, 10), (17, 12), (19, 12), (20, 14), (22, 14), (23, 16), (25, 16), (26, 18), (28, 18), (29, 20)]
+    law check: row(2m)-row(m) = 2*((2m-1)//3 - (m-1)//3) for m <= 10^5 not divisible by 3: True
+    growth: m -> m+3 adds 2 to the length (m <= 10^5): True
+    short-row chain of 3: rows of 3, 6, 12, 24, 48, 96: [2, 4, 8, 16, 32, 64] differences [2, 4, 8, 16, 32]
+    odd-arrow family left (n = 1 mod 6): (n, row(n), row(T(n))) = [(1, 1, 1), (7, 5, 7), (13, 9, 13), (19, 13, 19), (25, 17, 25), (31, 21, 31)] ; start rows step 4, lengths step 2: True
+    odd-arrow family short (n = 3 mod 6): (n, row(n), row(T(n))) = [(3, 2, 3), (9, 6, 9), (15, 10, 15), (21, 14, 21), (27, 18, 27), (33, 22, 33)] ; start rows step 4, lengths step 2: True
+    odd-arrow family right (n = 5 mod 6): (n, row(n), row(T(n))) = [(5, 3, 5), (11, 7, 11), (17, 11, 17), (23, 15, 23), (29, 19, 29), (35, 23, 35)] ; start rows step 4, lengths step 2: True
+(2) pruned contracted tree from fork 8, depth 18 : nodes 524287 ; full binary: True
+    edge (kind, length) counts: {('branch', 1): 77955, ('branch', 2): 96974, ('branch', 3): 38842, ('branch', 4): 48372, ('ray', 2): 145346, ('ray', 4): 116797}
+    all lengths in {1,2,3,4}: True ; ray lengths: [2, 4] ; branch lengths: [1, 2, 3, 4]
+    labels distinct (reconstruction from lengths + left/right): True
+    no two consecutive sterile forks on a ray (n = 5 mod 9 -> 4n = 2 mod 9), checked n <= 10^6: True
+    fork n mod 9 -> (ray length, branch length): {2: ((2, 'ray'), (2, 'branch')), 5: ((2, 'ray'),), 8: ((4, 'ray'), (1, 'branch'))}

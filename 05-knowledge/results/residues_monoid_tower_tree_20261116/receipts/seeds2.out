@@ -1,0 +1,2 @@
+shortest ready words by count: {75: 'SLLSLLSL'} ; missing: [13, 23, 41, 59, 95]
+seed h=75: word SLLSLLSL order 9 root 7 profile (H,E,O,g)=(75,25,50,25) charge a=-24 defect b=0 masks [508, 481, 506, 498, 258, 464, 400, 16, 128]

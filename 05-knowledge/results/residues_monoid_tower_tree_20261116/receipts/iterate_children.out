@@ -1,0 +1,6 @@
+seed n=8 root=4 (H,E,O,g)=(35,43,43,5) charge a=52 defect b=-5; target H'=2H+1+a=123
+seed done: extensions with H'=2H+1+a: 11; root-moving ready same-charge hits: 0
+seed n=8 root=4 (H,E,O,g)=(35,19,24,5) charge a=4 defect b=0; target H'=2H+1+a=75
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+seed n=8 root=4 (H,E,O,g)=(35,19,24,5) charge a=4 defect b=0; target H'=2H+1+a=75
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0

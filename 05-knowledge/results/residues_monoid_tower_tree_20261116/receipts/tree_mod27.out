@@ -1,0 +1,10 @@
+fork n (n = 2 mod 3) -> contracted edges, by n mod 27 (unique per class?): True
+   n =  2 mod 27: (('ray', 2), ('branch', 2))
+   n =  5 mod 27: (('ray', 2),)
+   n =  8 mod 27: (('ray', 4), ('branch', 3))
+   n = 11 mod 27: (('ray', 2), ('branch', 4))
+   n = 14 mod 27: (('ray', 2),)
+   n = 17 mod 27: (('ray', 4), ('branch', 1))
+   n = 20 mod 27: (('ray', 2), ('branch', 2))
+   n = 23 mod 27: (('ray', 2),)
+   n = 26 mod 27: (('ray', 4), ('branch', 1))
