@@ -69,3 +69,27 @@ the two distinct cycles or may grow with the target. A more
 promising descent wheel should program a changing signed
 determinant, or use a different notion of compatibility altogether,
 rather than just add more zero-determinant rays.
+
+## A finite list of nonzero determinants is not enough either
+
+The same exponent holds for each specified signed determinant D,
+uniformly in D and n. For a fixed a with r(a)≤a and a>0, the
+equation is
+
+    r(a)b + a rev_n(b) = aC − D.
+
+For fixed high half of b the reversed term again dominates
+the linear low-half term, so there is at most one choice of its
+low half. The case a=0 fixes b directly if n≥1. If r(a)>a,
+apply reversed complement simultaneously to both addresses.
+This interchanges a and r(a) and negates D, giving the same
+bound on that part by injection. Thus at most O(2^(3n/2))
+tapes can realize any prescribed D.
+
+For a menu of K determinant values, the upper bound at count
+scale X, under the same two-port boundary, becomes
+O_k(K X^((3/2) log_3 2)). In particular a fixed or polylogarithmic
+menu is still sparse. To cover Ω(X) distinct values through X
+requires a menu of size Ω(X^(1−(3/2)log_3 2)) in this model,
+even if selecting a determinant and an address costs nothing.
+This is a necessary capacity, not a sufficient construction.
