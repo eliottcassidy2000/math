@@ -30,3 +30,15 @@ tape words?
 
 **(c)** Is there a family of pointed tournaments, closed under adding tape vertices, on which one of the maps
 `(b, c) -> (c - b, 2c)`, `(c + b, 2c)` is realised by a tournament operation?
+
+## Update (2026-11-16, mac-mini-2026-11-16-dials, wave 41 of chanpak_waves_20261113): order 8 is clean
+
+FINITE-EXACT. `arc_bank 8 3` was run on all 6,880 classes of order 8: 22,538,880 arc cubes, 14,772,792 of them with
+eight distinct counts.
+- **No complete 3-arc bank.** The least half-spread is 9, attained by 256 cubes; a bank needs 7.
+- **The nearest cubes repeat at larger counts.** Besides the order-7 cube 9, 11, 13, 15, 17, 19, 23, 27 they include
+  123, 127, 131, 133, 135, 137, 139, 141 and 127, 129, 133, 135, 137, 139, 141, 145.
+- **Still no congruence obstruction.** 55,284 cubes permute the odd residues mod 16 (949,144 are balanced mod 8).
+
+So (a) holds through order 8. The first open case is now order 9. A structural reason is proposed in HYP-9852:
+additive cubes with three moving arcs avoid small gaps.

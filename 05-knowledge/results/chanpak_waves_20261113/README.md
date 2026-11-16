@@ -3387,6 +3387,112 @@ rank-potential certificate, factor pairs chosen from the target, the second apex
 - The literal certificate is still not built. Linear cone potentials cannot see the rank; the slow-factor tree
   with dominance pruning is the proposed replacement (note, section 3).
 
+## Wave 41: the dominance tree, order-8 arc banks, and why exact placement needs a non-local dial
+
+Session mac-mini-2026-11-16-dials. The owner's prompt listed many threads; most were answered the same day by the
+concurrent packet [unit_shields_wheel_followup_20261116](../unit_shields_wheel_followup_20261116/README.md):
+- the restricted spine-14 census;
+- least wheel periods 32q and 64q, the corrected nesting criterion, and W(120) not self-dual;
+- factor-1 shields with +2 moves at every height, and a new seam;
+- the synthesis of 8 and 9, Fibonacci, fences, Catalan and Zsigmondy.
+
+The bounded-growth lemma was already proved (THM-5252, THM-5253, sharp factor 39). This wave adds four things.
+
+### §1. The rank-potential certificate: the dominance-pruned slow-factor tree (built; does not close)
+
+The tree of Corollary D of wave 40 (`scripts/w41_slowtree.py`), at rate 1.72:
+- *Exact image keys.* The image Im M_u is tracked in the 61-dimensional minimal representation mod p by its reduced
+  echelon basis, so each child costs one small product. Ranks are exact.
+- *Dominance.* Within a level, a node is discarded when another node has the same image and a coordinatewise smaller
+  standalone raw state. Its continuations then have smaller counts and the same future ranks.
+
+| level | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| slow nodes kept | 8 | 52 | 280 | 1,698 | 7,974 | 17,389 | 41,631 | 80,930 |
+| distinct images among them | 8 | 52 | 274 | 1,544 | 7,422 | 16,995 | 41,031 | 79,896 |
+
+Exact ranks and dominance cut level 6 from 162,702 (wave 40, no dominance) to 17,389. After that the tree still
+roughly doubles per level, and the needed depth is 150–200 letters.
+
+The reason is visible in the second row: almost every surviving node has its own image, so same-image dominance is
+used up by level 7. By level 8 the ranks concentrate at 2–4.
+
+A closing design needs a coarser sound dominance. Two candidates:
+- image inclusion (Im M_u ⊇ Im M_(u′) suffices);
+- difference in the cone of real observable states, instead of raw coordinatewise comparison.
+
+Neither is built. The literal certificate remains open.
+
+### §2. Three-arc banks at order 8 (HYP-9842 (a) holds through order 8)
+
+`arc_bank 8 3` over all 6,880 classes: 22,538,880 arc cubes, no complete bank.
+- The least half-spread is 9, attained by 256 cubes (a bank needs 7).
+- There are new near misses at counts 123–141 and 127–145.
+- 55,284 cubes permute the odd residues mod 16, so there is still no congruence obstruction.
+
+### §3. Additive cubes: at most one small gap among three independent moving arcs (HYP-9852)
+
+Write H(σ) = c₀ + Σ c_i s_i + Σ c_ij s_i s_j + c₁₂₃ s₁ s₂ s₃ for the orientations of three arcs
+(`scripts/w41_arc_affine.c`). An *additive* cube has every interaction coefficient zero.
+- An additive cube with half-gaps {1, 2, 4} would be a complete bank, a 3-bit dial.
+- Additive 2-cubes are plentiful: half-gaps (1, 2) give the complete 2-banks.
+
+Additive 3-cubes are rare, and almost all contain an inert arc:
+- order 6: 52 of 25,480, all with a gap 0;
+- order 7: 688 of 606,480. Only three types have three moving arcs: half-gaps (3, 3, 24) (16 cubes), (3, 8, 24)
+  (16) and (15, 15, 15) (12). The last is the Paley tournament P₇: the reflection matchings {v − d, v + d} each remove
+  30 paths independently, giving counts 189, 159, 129, 99;
+- order 8: 11,340 of 22,538,880. 192 have three moving arcs, of types (1, 11, 34), (3, 3, 24), (3, 8, 24), (5, 5, 39),
+  (6, 23, 23), (6, 37, 37) and (15, 15, 15).
+
+The type (1, 11, 34) shows a ±2 arc can combine additively with two large moving arcs. The first draft's "never" is
+refuted. What holds through order 8 is that the second-smallest half-gap is at least 3. So no additive 3-bit dial
+exists, since one needs half-gaps 1, 2, 4.
+
+### §4. Why exact placement needs a non-local dial, and where 24, 36, 64 and 24, 80, 112 enter
+
+**Placement and dials.** Placement already reaches O(N^(2/5)), with Ω(N^(1/5)) address choices on each side and the
+count mod 9 prescribable (live-exterior packet). What is missing is a **dial**: a set of edits whose joint settings
+move the placed count through a window of consecutive odd values while nothing else moves.
+- A local dial on k arcs is exactly a complete k-arc bank.
+- §2 and §3 say local dials stop at 2 bits through order 8, and additive structure never carries two small gaps at
+  once.
+- So a dial must be non-local, as the two-apex gap patch is: one arc, with every even gap d programmable by a core of
+  O(log d) sites (PROGRAM.md).
+
+**Covering-system placement (proposed mechanism, tested, fails for this patch).** Suppose the count were affine in
+the patch address T, with an exterior-dependent slope: H(u, T) = α(u) + m(u)·T. Then hitting N exactly means N lies
+in the class α(u) mod m(u) for some exterior u. A finite set of exteriors whose classes form a covering system would
+then hit every large N. That is the mechanism of Riesel's W(24), Selfridge's W(36) and Sierpiński's W(64): covering
+congruences built from multiplicative orders.
+- *Measured.* The gap is exactly affine in T. The count is not: for u of 4 letters and patches of 4 address bits, the
+  first differences in T run up to 7·10⁷, with both signs (`scripts/w41_tape.py`).
+- *Consequence.* Affine structure lives only in gaps (differences between arc orientations), never in absolute
+  counts. This is consistent with HYP-9762 (no linear tape or counter in short spans). A covering-system placement
+  needs exactly the affine counter that HYP-9762 says short spans lack.
+
+**The analogy, stated precisely.** The least order carrying a k-bit local dial is 5 for k = 2 and above 8 for k = 3.
+It plays the role of the least covering period:
+- 24, 80, 112 for q = 3, 5, 7, which needs enough primitive Zsigmondy primes;
+- the classical 24, 36, 64, three different covering mechanisms (THM-5254, concurrent SYNTHESIS.md).
+
+In both settings coverage is limited by how many independent "clocks" fit at small size. In both, the exceptional
+small case is a divisibility accident:
+- for wheels, 2^6 − 1 = 63 has no primitive prime;
+- for tournaments, 7 and 21 are skipped by odd-cycle crowding.
+
+No implication between the two is claimed.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| bounded growth H(Wℓ) ≤ 39 H(W) | PROVED earlier (THM-5252/5253); cited |
+| dominance-pruned slow-factor tree at 1.72 | built through level 8; does not close (needs a coarser dominance) |
+| no complete 3-arc bank at order 8 | FINITE-EXACT (22,538,880 cubes) |
+| additive 3-cubes with three moving arcs have at most one half-gap below 3 | FINITE-EXACT through order 8; CONJECTURE in general (HYP-9852); the stronger "no ±2 arc" REFUTED at order 8 |
+| the count of the gap patch is affine in its address | REFUTED (first differences up to 7·10⁷); covering-system placement needs an affine counter |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
