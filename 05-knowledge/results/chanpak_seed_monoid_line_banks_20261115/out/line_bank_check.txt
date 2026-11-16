@@ -1,0 +1,11 @@
+seed [0, 5, 17, 7, 107, 79, 143, 63] 187 : h = 41 G = 1424 (a, b) = (169, 1045) cut = 69  q a + p b = 1383
+seed [0, 5, 17, 7, 107, 79, 143, 63] 219 : h = 41 G = 1424 (a, b) = (175, 1033) cut = 70  q a + p b = 1383
+seed [0, 5, 17, 7, 107, 79, 143, 63] 69 : h = 41 G = 1424 (a, b) = (502, 379) cut = 71  q a + p b = 1383
+seed [0, 5, 17, 7, 107, 79, 143, 63] 37 : h = 41 G = 1424 (a, b) = (496, 391) cut = 72  q a + p b = 1383
+seed [2, 4, 25, 19, 35, 79, 31, 127] 159 : h = 41 G = 1424 (a, b) = (178, 1027) cut = 73  q a + p b = 1383
+alpha = 0, beta = 0 (tapes 0 + 0, order 9): counts [179, 181, 183, 185, 187] consecutive
+alpha = 2, beta = 1 (tapes 3 + 2, order 14): counts [14583, 14585, 14587, 14589, 14591] consecutive
+alpha = 4, beta = 2 (tapes 4 + 3, order 16): counts [51771, 51773, 51775, 51777, 51779] consecutive
+alpha = 6, beta = 3 (tapes 4 + 3, order 16): counts [111579, 111581, 111583, 111585, 111587] consecutive
+off the line (alpha, beta) = (1, 1): [8467, 8457, 7805, 7819, 8457]
+ALL OK

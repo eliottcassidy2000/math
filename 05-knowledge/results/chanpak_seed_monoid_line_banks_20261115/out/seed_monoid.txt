@@ -1,0 +1,7 @@
+M(C1 -> C2) = M(C1) M(C2): 40 random pairs, failures 0
+H = h + 2 * even part of the corner of the matrix product: 30 random chains against brute force, failures 0
+word 10: (b+, c+) = (2, 1), (b-, c-) = (0, 1), H = 1 + c+ + c- = 3
+word 100: (b+, c+) = (4, 3), (b-, c-) = (0, 1), H = 1 + c+ + c- = 5
+word 1010: (b+, c+) = (10, 6), (b-, c-) = (0, 2), H = 1 + c+ + c- = 9
+word 1001100: (b+, c+) = (76, 60), (b-, c-) = (0, 2), H = 1 + c+ + c- = 63
+word 11101001000: (b+, c+) = (1864, 1725), (b-, c-) = (0, 3), H = 1 + c+ + c- = 1729

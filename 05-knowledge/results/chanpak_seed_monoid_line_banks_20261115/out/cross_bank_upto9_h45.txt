@@ -1,0 +1,35 @@
+# seeds (block, pattern): 259280 from 786 blocks (block count at most 45; 198160 blocks skipped)
+   best bank by block count h (h:length@first cut): 3:2@0 5:3@114 9:4@40 11:3@30 13:2@12 15:5@122 17:4@58 19:2@46 23:3@156 25:2@9 27:4@33 29:4@51 31:3@158 33:5@427 35:2@125 37:4@204 39:2@77 41:3@169 43:3@188 45:6@42
+W1 upper tape, u1=0: key (h, a)
+   longest bank 6: cut values 42..47 ; key 45 129
+   maximal runs by length: 2:3354 3:330 4:20 5:3 6:2
+   seed cut=42 order 9 block: 470 492 472 497 482 453 384 256 0 X=499
+   seed cut=43 order 6 block: 38 28 24 49 33 6 X=51
+   seed cut=44 order 9 block: 494 508 504 496 353 448 384 272 0 X=493
+   seed cut=45 order 6 block: 22 44 24 49 34 5 X=29
+   seed cut=46 order 7 block: 102 92 88 113 97 70 0 X=103
+   seed cut=47 order 6 block: 38 28 24 49 33 6 X=58
+   best bank by block count h (h:length@first cut): 3:2@0 5:3@114 9:4@40 11:3@30 13:2@9 15:5@122 17:2@62 19:2@46 23:2@7 25:2@24 27:3@119 29:3@73 31:3@158 33:5@427 35:2@125 37:3@36 39:2@152 41:3@196 43:3@245 45:6@42
+W2 upper tape: key (h, a_o, a_e)
+   longest bank 6: cut values 42..47 ; key 45 174 129
+   maximal runs by length: 2:2815 3:291 4:10 5:2 6:1
+   seed cut=42 order 7 block: 126 44 88 48 98 68 10 X=102
+   seed cut=43 order 7 block: 126 76 56 48 98 66 12 X=102
+   seed cut=44 order 9 block: 510 476 504 496 480 322 384 32 128 X=474
+   seed cut=45 order 9 block: 510 428 472 432 482 452 394 256 0 X=500
+   seed cut=46 order 7 block: 126 76 56 48 98 66 12 X=60
+   seed cut=47 order 8 block: 0 21 41 67 45 75 23 127 X=59
+   best bank by block count h (h:length@first cut): 5:2@31 9:3@40 11:2@106 15:2@13 17:2@59 19:2@136 23:2@157 27:2@75 29:2@41 39:2@337 41:2@87 45:3@45
+W3 two tapes, u1=z1=0: key (h, G, a, b)
+   longest bank 3: cut values 40..42 ; key 9 336 118 209
+   maximal runs by length: 2:718 3:116
+   seed cut=40 order 7 block: 126 92 120 112 96 66 0 X=73
+   seed cut=41 order 7 block: 110 124 120 112 97 64 0 X=86
+   seed cut=42 order 7 block: 126 124 88 112 96 4 32 X=85
+   best bank by block count h (h:length@first cut): 5:2@31 9:3@40 15:2@13 17:2@59 27:2@75 29:2@41 45:3@45
+W4 two tapes: key (h, G_e, G_o, a_o, a_e, b_o, b_e)
+   longest bank 3: cut values 40..42 ; key 9 672 672 127 118 218 209
+   maximal runs by length: 2:524 3:102
+   seed cut=40 order 9 block: 510 508 440 496 480 448 388 256 0 X=402
+   seed cut=41 order 9 block: 510 476 504 496 480 450 384 256 0 X=428
+   seed cut=42 order 9 block: 510 508 504 368 480 448 384 264 0 X=362

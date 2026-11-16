@@ -1,0 +1,47 @@
+# cubes with 2^k distinct counts: 0 ; least spread (max-min)/2 = 1152921504606846976 (a complete bank needs 7) ; values: 0 0 0 0 0 0 0 0 ; base: 0 0 0 0 ; arcs: (0,0) (0,0) (0,0)
+# spread histogram (spread: cubes):
+# residues on 3-cubes: H mod 4 balanced (4+4): 0 ; and H mod 8 each odd residue twice: 0 ; and H mod 16 a permutation of the odd residues: 0
+# sum of the 8 counts mod 16: 0:24 4:16 8:24 12:16
+# order 4, k = 3: 4 classes, 80 arc cubes examined; complete banks: 0 (affine: 0; all arcs at one vertex: 0); first counts from -1 to -1
+# cubes with 2^k distinct counts: 0 ; least spread (max-min)/2 = 1152921504606846976 (a complete bank needs 7) ; values: 0 0 0 0 0 0 0 0 ; base: 0 0 0 0 0 ; arcs: (0,0) (0,0) (0,0)
+# spread histogram (spread: cubes):
+# residues on 3-cubes: H mod 4 balanced (4+4): 178 ; and H mod 8 each odd residue twice: 0 ; and H mod 16 a permutation of the odd residues: 0
+# sum of the 8 counts mod 16: 0:250 2:106 4:258 6:108 8:246 10:178 12:142 14:152
+# order 5, k = 3: 12 classes, 1440 arc cubes examined; complete banks: 0 (affine: 0; all arcs at one vertex: 0); first counts from -1 to -1
+# cubes with 2^k distinct counts: 1312 ; least spread (max-min)/2 = 9 (a complete bank needs 7) ; values: 9 11 13 15 17 19 23 27 ; base: 46 60 56 48 33 0 ; arcs: (0,3) (1,3) (4,5)
+# spread histogram (spread: cubes): 9:64 10:64 11:72 12:196 13:36 14:300 15:116 16:196 17:132 18:40 19:64 20:32
+# residues on 3-cubes: H mod 4 balanced (4+4): 7074 ; and H mod 8 each odd residue twice: 914 ; and H mod 16 a permutation of the odd residues: 48
+# sum of the 8 counts mod 16: 0:3738 2:2412 4:4066 6:2664 8:3526 10:2636 12:4038 14:2400
+# order 6, k = 3: 56 classes, 25480 arc cubes examined; complete banks: 0 (affine: 0; all arcs at one vertex: 0); first counts from -1 to -1
+# cubes with 2^k distinct counts: 178784 ; least spread (max-min)/2 = 9 (a complete bank needs 7) ; values: 9 11 13 15 17 19 23 27 ; base: 94 124 120 112 96 65 0 ; arcs: (0,1) (2,4) (2,5)
+# spread histogram (spread: cubes): 9:160 10:176 11:176 12:536 13:440 14:1252 15:996 16:1312 17:1404 18:1836 19:2484 20:2304 21:3392 22:3500 23:4040
+# residues on 3-cubes: H mod 4 balanced (4+4): 185412 ; and H mod 8 each odd residue twice: 23016 ; and H mod 16 a permutation of the odd residues: 1012
+# sum of the 8 counts mod 16: 0:90256 2:60440 4:92356 6:60858 8:86344 10:61512 12:93308 14:61406
+# order 7, k = 3: 456 classes, 606480 arc cubes examined; complete banks: 0 (affine: 0; all arcs at one vertex: 0); first counts from -1 to -1
+# cubes with 2^k distinct counts: 0 ; least spread (max-min)/2 = 1152921504606846976 (a complete bank needs 3) ; values: 0 0 0 0 ; base: 0 0 0 0 ; arcs: (0,0) (0,0)
+# spread histogram (spread: cubes):
+# order 4, k = 2: 4 classes, 60 arc cubes examined; complete banks: 0 (affine: 0; all arcs at one vertex: 0); first counts from -1 to -1
+BANK counts 9..15 (arcs at one vertex) ; base: 6 28 24 17 1 ; arcs: (0,2) (2,4) ; values: 11 9 13 15
+BANK counts 9..15 (arcs at one vertex) ; base: 6 28 24 17 1 ; arcs: (0,3) (1,3) ; values: 11 9 13 15
+BANK counts 9..15 (affine) ; base: 6 28 24 17 1 ; arcs: (1,4) (2,3) ; values: 11 15 9 13
+BANK counts 9..15 (arcs at one vertex) ; base: 22 12 24 17 2 ; arcs: (0,1) (0,2) ; values: 13 15 11 9
+BANK counts 9..15 (affine) ; base: 22 12 24 17 2 ; arcs: (0,4) (1,3) ; values: 13 15 9 11
+BANK counts 9..15 (arcs at one vertex) ; base: 22 12 24 17 2 ; arcs: (2,4) (3,4) ; values: 13 11 15 9
+# cubes with 2^k distinct counts: 132 ; least spread (max-min)/2 = 3 (a complete bank needs 3) ; values: 9 11 13 15 ; base: 6 28 24 17 1 ; arcs: (0,2) (2,4)
+# spread histogram (spread: cubes): 3:20 4:40 5:48 6:16 7:8
+# order 5, k = 2: 12 classes, 540 arc cubes examined; complete banks: 20 (affine: 8; all arcs at one vertex: 12); first counts from 9 to 9
+BANK counts 9..15 (arcs at one vertex) ; base: 46 60 56 48 33 0 ; arcs: (0,3) (1,3) ; values: 9 11 15 13
+BANK counts 9..15 (arcs at one vertex) ; base: 46 60 56 48 33 0 ; arcs: (1,3) (1,4) ; values: 9 15 11 13
+BANK counts 9..15 (arcs at one vertex) ; base: 62 12 56 48 34 2 ; arcs: (1,3) (3,5) ; values: 11 9 13 15
+BANK counts 9..15 (arcs at one vertex) ; base: 62 12 56 48 34 2 ; arcs: (1,4) (2,4) ; values: 11 9 13 15
+BANK counts 9..15 (affine) ; base: 62 12 56 48 34 2 ; arcs: (2,5) (3,4) ; values: 11 15 9 13
+BANK counts 9..15 (arcs at one vertex) ; base: 62 44 24 48 34 4 ; arcs: (1,2) (1,3) ; values: 13 15 11 9
+# cubes with 2^k distinct counts: 2822 ; least spread (max-min)/2 = 3 (a complete bank needs 3) ; values: 9 11 13 15 ; base: 46 60 56 48 33 0 ; arcs: (0,3) (1,3)
+# spread histogram (spread: cubes): 3:40 4:168 5:244 6:204 7:456 8:278 9:312 10:272 11:256 12:200 13:112 14:148 15:32 16:60 17:36 18:4
+# order 6, k = 2: 56 classes, 5880 arc cubes examined; complete banks: 40 (affine: 16; all arcs at one vertex: 24); first counts from 9 to 9
+# cubes with 2^k distinct counts: 0 ; least spread (max-min)/2 = 1152921504606846976 (a complete bank needs 15) ; values: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ; base: 0 0 0 0 0 ; arcs: (0,0) (0,0) (0,0) (0,0)
+# spread histogram (spread: cubes):
+# order 5, k = 4: 12 classes, 2520 arc cubes examined; complete banks: 0 (affine: 0; all arcs at one vertex: 0); first counts from -1 to -1
+# cubes with 2^k distinct counts: 0 ; least spread (max-min)/2 = 1152921504606846976 (a complete bank needs 15) ; values: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ; base: 0 0 0 0 0 0 ; arcs: (0,0) (0,0) (0,0) (0,0)
+# spread histogram (spread: cubes):
+# order 6, k = 4: 56 classes, 76440 arc cubes examined; complete banks: 0 (affine: 0; all arcs at one vertex: 0); first counts from -1 to -1

@@ -1,0 +1,81 @@
+seeds: 259280
+direction (p, q) = (0, 0): longest line bank 3  [h = 45, G = 432, exterior line 0*alpha - 0*beta = 0]
+      a = 258 b = 129 cut = 45  block 22 44 24 49 34 5 pattern 5
+      a = 258 b = 129 cut = 46  block 38 28 24 49 33 6 pattern 6
+      a = 258 b = 129 cut = 47  block 38 28 24 49 33 6 pattern 5
+direction (p, q) = (1, 0): longest line bank 5  [h = 15, G = 1728, exterior line 1*alpha - 0*beta = 0]
+      a = 1229 b = 334 cut = 122  block 510 508 472 496 480 324 384 288 0 pattern 92
+      a = 1217 b = 334 cut = 123  block 474 508 505 496 480 449 384 256 0 pattern 161
+      a = 1205 b = 334 cut = 124  block 510 476 488 496 484 450 384 256 0 pattern 140
+      a = 1229 b = 334 cut = 125  block 510 508 504 368 416 448 400 264 0 pattern 60
+      a = 1199 b = 334 cut = 126  block 502 508 504 465 480 456 384 256 0 pattern 152
+direction (p, q) = (0, 1): longest line bank 5  [h = 15, G = 1728, exterior line 0*alpha - 1*beta = 0]
+      a = 334 b = 1229 cut = 122  block 510 436 504 498 480 448 386 256 0 pattern 391
+      a = 334 b = 1217 cut = 123  block 510 508 504 368 480 448 128 264 64 pattern 373
+      a = 334 b = 1205 cut = 124  block 510 508 504 368 416 448 400 264 0 pattern 413
+      a = 334 b = 1229 cut = 125  block 510 476 488 496 484 450 384 256 0 pattern 391
+      a = 334 b = 1199 cut = 126  block 510 508 504 336 480 456 384 8 128 pattern 469
+direction (p, q) = (1, 1): longest line bank 5  [h = 41, G = 2848, exterior line 1*alpha - 1*beta = -1]
+      a = 180 b = 2627 cut = 89  block 478 508 504 432 480 449 392 256 0 pattern 447
+      a = 180 b = 2627 cut = 90  block 510 508 472 368 480 452 384 8 128 pattern 507
+      a = 176 b = 2631 cut = 87  block 474 508 505 432 480 449 392 256 0 pattern 447
+      a = 176 b = 2631 cut = 88  block 510 508 472 368 480 452 128 264 64 pattern 507
+      a = 174 b = 2633 cut = 87  block 510 476 504 368 480 450 384 264 0 pattern 495
+direction (p, q) = (1, 2): longest line bank 5  [h = 41, G = 1424, exterior line 1*alpha - 2*beta = 0]
+      a = 169 b = 1045 cut = 69  block 0 5 17 7 107 79 143 63 pattern 187
+      a = 175 b = 1033 cut = 70  block 0 5 17 7 107 79 143 63 pattern 219
+      a = 502 b = 379 cut = 71  block 0 5 17 7 107 79 143 63 pattern 69
+      a = 496 b = 391 cut = 72  block 0 5 17 7 107 79 143 63 pattern 37
+      a = 178 b = 1027 cut = 73  block 2 4 25 19 35 79 31 127 pattern 159
+direction (p, q) = (2, 1): longest line bank 5  [h = 41, G = 1424, exterior line 2*alpha - 1*beta = 0]
+      a = 379 b = 502 cut = 69  block 2 8 3 53 39 71 31 127 pattern 93
+      a = 391 b = 496 cut = 70  block 2 8 3 53 39 71 31 127 pattern 109
+      a = 1045 b = 169 cut = 71  block 2 8 3 53 39 71 31 127 pattern 34
+      a = 1033 b = 175 cut = 72  block 2 8 3 53 39 71 31 127 pattern 18
+      a = 1027 b = 178 cut = 73  block 0 5 9 51 39 71 159 63 pattern 6
+direction (p, q) = (1, 3): longest line bank 5  [h = 9, G = 1344, exterior line 1*alpha - 3*beta = 1]
+      a = 1031 b = 40 cut = 16  block 510 508 504 496 352 448 384 16 128 pattern 48
+      a = 881 b = 490 cut = 167  block 510 476 504 496 480 450 384 256 0 pattern 182
+      a = 881 b = 490 cut = 168  block 510 508 440 496 480 448 388 256 0 pattern 202
+      a = 881 b = 490 cut = 169  block 494 508 504 496 481 448 384 256 0 pattern 169
+      a = 893 b = 454 cut = 158  block 510 508 504 496 352 448 128 272 64 pattern 170
+direction (p, q) = (3, 1): longest line bank 5  [h = 9, G = 1344, exterior line 3*alpha - 1*beta = -1]
+      a = 728 b = 1198 cut = 330  block 510 508 504 496 352 448 128 272 64 pattern 391
+      a = 980 b = 1114 cut = 415  block 510 508 504 336 480 456 384 264 0 pattern 179
+      a = 908 b = 1138 cut = 392  block 510 508 504 368 480 448 384 264 0 pattern 187
+      a = 836 b = 1162 cut = 369  block 510 508 424 496 484 448 388 256 0 pattern 179
+      a = 872 b = 1150 cut = 382  block 510 508 440 496 480 448 388 256 0 pattern 151
+direction (p, q) = (2, 3): longest line bank 4  [h = 9, G = 168, exterior line 2*alpha - 3*beta = 0]
+      a = 106 b = 82 cut = 31  block 42 60 57 48 33 0 pattern 26
+      a = 94 b = 100 cut = 32  block 46 60 56 48 33 0 pattern 29
+      a = 82 b = 118 cut = 33  block 62 44 56 16 34 8 pattern 37
+      a = 88 b = 109 cut = 34  block 62 44 56 48 2 16 pattern 25
+direction (p, q) = (3, 2): longest line bank 4  [h = 9, G = 168, exterior line 3*alpha - 2*beta = 0]
+      a = 82 b = 106 cut = 31  block 62 44 56 16 34 8 pattern 49
+      a = 100 b = 94 cut = 32  block 62 44 56 48 2 16 pattern 33
+      a = 118 b = 82 cut = 33  block 42 60 57 48 33 0 pattern 19
+      a = 109 b = 88 cut = 34  block 46 60 56 48 33 0 pattern 26
+direction (p, q) = (1, 4): longest line bank 5  [h = 41, G = 2848, exterior line 1*alpha - 4*beta = 0]
+      a = 502 b = 799 cut = 69  block 478 508 504 432 480 449 392 256 0 pattern 393
+      a = 496 b = 823 cut = 70  block 478 508 504 432 480 449 392 256 0 pattern 401
+      a = 169 b = 2131 cut = 71  block 478 508 504 432 480 449 392 256 0 pattern 502
+      a = 175 b = 2107 cut = 72  block 478 508 504 432 480 449 392 256 0 pattern 494
+      a = 178 b = 2095 cut = 73  block 510 476 504 368 480 450 384 264 0 pattern 505
+direction (p, q) = (4, 1): longest line bank 5  [h = 41, G = 2848, exterior line 4*alpha - 1*beta = 0]
+      a = 2131 b = 169 cut = 69  block 510 508 376 496 480 192 384 260 32 pattern 36
+      a = 2107 b = 175 cut = 70  block 510 508 376 496 480 192 384 260 32 pattern 68
+      a = 799 b = 502 cut = 71  block 510 508 376 496 480 192 384 260 32 pattern 472
+      a = 823 b = 496 cut = 72  block 510 508 376 496 480 192 384 260 32 pattern 440
+      a = 2095 b = 178 cut = 73  block 510 476 504 368 480 450 384 264 0 pattern 192
+direction (p, q) = (3, 4): longest line bank 5  [h = 9, G = 1344, exterior line 3*alpha - 4*beta = 1]
+      a = 917 b = 346 cut = 121  block 510 508 504 496 352 448 384 16 128 pattern 258
+      a = 845 b = 442 cut = 146  block 510 508 424 496 484 448 388 256 0 pattern 166
+      a = 881 b = 394 cut = 135  block 510 508 440 496 480 448 388 256 0 pattern 162
+      a = 917 b = 346 cut = 124  block 510 468 504 498 480 450 384 256 0 pattern 166
+      a = 899 b = 370 cut = 131  block 510 476 504 496 480 450 384 256 0 pattern 180
+direction (p, q) = (4, 3): longest line bank 5  [h = 9, G = 1344, exterior line 4*alpha - 3*beta = -1]
+      a = 346 b = 917 cut = 121  block 494 508 504 496 481 448 384 256 0 pattern 381
+      a = 442 b = 845 cut = 146  block 510 508 424 496 484 448 388 256 0 pattern 361
+      a = 394 b = 881 cut = 135  block 510 508 440 496 480 448 388 256 0 pattern 373
+      a = 346 b = 917 cut = 124  block 510 508 504 336 480 456 384 264 0 pattern 357
+      a = 370 b = 899 cut = 131  block 510 508 504 368 480 448 384 264 0 pattern 421
