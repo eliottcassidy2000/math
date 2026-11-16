@@ -52,6 +52,29 @@ Pythagorean subfamily A=a², B=b²=4k², the second-attachment test
 is the simultaneous Pell condition a²−2k²=c²−6k²=1. This is an
 exact arithmetic translation, separate from the tournament construction.
 
+### The 5–6–7 geometry actually appears in the square-sum graph
+
+At Q19 the cycle core is a planar theta graph. Its branches between 1
+and 6 are 1–3–6, 1–15–10–6 and 1–8–17–19–6, of lengths 2, 3 and 4.
+The face lengths in the planar embedding are exactly 5, 6 and 7.
+Glue three regular Euclidean polygons of these lengths on matching edges.
+At each degree-three junction the normalized angle defect is
+1/5+1/6+1/7−1/2 = 1/105 = 1/30+0−1/42, the sum of the three
+triangle-group Euler expressions. The resulting metric is a sphere
+with cone singularities, not a single constant-curvature tessellation.
+See the earlier [November 13 geometry synthesis](https://github.com/eliottcassidy2000/math/blob/becdb05318d6840af6c0610ed27c5312410bf396/05-knowledge/results/hidden_compositions_5_6_7_eleven_20261113/README.md).
+
+The old endpoint 8 is already on the long theta branch. At Q20 the
+other endpoint 9 enters a separate octagonal block
+5–11–14–2–7–9–16–20–5. Edge 4–5 still separates them through Q21.
+The ear 3–22–14 puts 8 and 9 on a common simple cycle for the first
+time. A witness is 8–1–15–21–4–5–20–16–9–7–2–14–22–3–6–19–17–8.
+The first simple cycles of lengths 5, 6, 7, 8, 9 enter at orders
+15, 19, 19, 20, 22, respectively; check_square_geometry.py exhausts the
+small cycle search and verifies the theta core directly. This is a
+literal geometric connection, separate from the analogy with contact
+rotations in the tournament model.
+
 ## Geometry of a fixed tournament deletion
 
 Let G be the root-deletion tournament, g=H(G), and let x_i in {0,1}
@@ -150,8 +173,7 @@ a root in C ends no spanning path of the total). In particular:
   and a decomposable H=15 has a triangle factor. Hence the alternative
   to a single core is exactly the reduced key H=1203, g=237,
   oddpart X=8051, with root SCC order ≤14. The small suffix table is
-  implemented by suffix_spectrum.cpp. **The reduced key is impossible
-  at all orders:** [complete finite certificate and reduction](REDUCED_237.md).
+  implemented by suffix_spectrum.cpp. **The reduced key cannot hit 1203; its exact minimum is 2701:** [complete finite certificate and reduction](REDUCED_237.md).
   This eliminates the nontrivial suffix route at (1185,8051), but does
   not eliminate a single strong 6015 core or a different key.
 - There is an additional congruence gate in the **deletion**, not an
