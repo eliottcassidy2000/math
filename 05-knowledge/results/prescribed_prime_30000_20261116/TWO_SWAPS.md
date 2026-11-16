@@ -1,0 +1,21 @@
+# Full one-apex inverse for two disjoint adjacent spine swaps
+
+There is also a complete classification in the narrower family of two **disjoint adjacent spine-arc flips** on a strong one-apex word, when the apex remains fixed and both endpoints remain strong. Same-direction swaps each give positive change at least two (or both negative if reversed), so a +2 must be opposite swaps. Write them as \(U01W10V\to U10W01V\), with \(x=X(U), z=Z(V)\) and boundary bits \(p={\rm last}(U),q={\rm first}(V)\). The binary reverse-complement determines \(V\) from \(z\) uniquely (since \(V\) ends 0), and \(U\) is the ordinary binary representation of \(x\).
+
+If \(W\) is empty, the signed change is \(3(z-x)+(z\bmod2)-(x\bmod2)\). For +2 this gives \(z=x+1\) with \(x\) odd. This new unequal-exterior family includes a twin-prime pair: \(U=11011\), \(V=11000\), counts 12539 and 12541.
+
+If \(m=|W|\ge1\) and \(a,b\) are the first and last bits of \(W\), cancellation in the concatenation formula gives
+\[
+\Delta H=(2^{m+2}-1)(z-x)+Z(W)-X(W)+a+b-p-q.
+\]
+The local term has magnitude at most \(2^m+1\), so +2 forces \(z=x\). Then \(p+q=1\), and the middle word must solve \(X(W)+{\rm rev}(W)=2^m-4+a+b\), where \({\rm rev}\) means the numerical value of the word read backwards. Let \(s=a+b\). If \(s=2\), the end contributions alone exceed the right side. If \(s=0\), the remaining \(m-2\) inner bits must all equal 1 by attainment of their maximum. If \(s=1\), stripping the end contributions and dividing by 2 leaves an inner word of length \(n=m-2\) with binary value plus reversal \(2^n-2\). For \(n\ge2\), parity forces matching ends, both must be 0 (both 1 already exceed the limit), then the target after dividing by 2 exceeds the remaining maximum. For \(n=1\) the inner bit is 0, giving the words 001 and 100. The \(m=1,2\) edge cases are checked directly. Thus the complete list for +2 is \(0\,1^{m-2}\,0\) for \(m\ge2\), plus 001 and 100 at \(m=3\). The −2 case follows by reverse-complementing.
+
+For the main palindrome family, write \(m=k+2\) and \(f(x)=H(\operatorname{bin}x)\). The lower endpoint simplifies to
+\[
+2^k\big((8x+4)^2-1\big)+2f(x)-x+(x\bmod2)-1-[k=0].
+\]
+Indeed the lower central block \(01\,0\,1^k0\,10\) has path count \(15\cdot2^k+1-[k=0]\), and the sum of its two binary values is \(64\cdot2^k-1\). The leading coefficient factors as \((8x+3)(8x+5)\). At \(k=0,x=12\), \(8x+4=100\), \(f(12)=11\), and the correction to \(100^2-1\) is 8: this is the precise source of \(10007,10009\) near \(10^4\). The integer \(100\) is the only positive power of 10 congruent to 4 modulo 8, so it is the only pure decimal square center at the unscaled level \(k=0\). Allowing the scale yields an infinite exact decimal anchor: for any \(j\ge2\), take \(k=2j-4\) and \(x=(5^j-1)/2\). Then \(2^k(8x+4)^2=10^{2j}\), and the lower count is \(10^{2j}+2f(x)-x-1-[j=2]-2^k\). Its absolute offset is \(O(5^j)\), from \(f(x)\le x+1\); this is \(o(10^j)\), the square-root scale. At \(j=3\) the two counts are \(999999,1000001\), both composite. The new target has coarse anchor \(30000=3\cdot100^2=24\cdot1250\), but \(3(10007,10009)=(30021,30027)\) is composite. Its actual new center is \(30012=3\cdot10008-12\); modulo 24 the old two endpoints were \(23,1\) and the new ones are \(11,13\). This is an arithmetic comparison, not a Leech-lattice construction.
+
+This gives an exhaustive inverse for this type of two-edit patch: for a target count \(P\), consider middle lengths \(m\) at most \(\log_2 P-4\) and their listed cores, and compare exact \(H\) to \(P,P-2\). In each core the baseline is strictly increasing in the admissible scalar \(x\), so binary search suffices. Indeed its leading term \(2^{m+4}xz\) increases by more than the largest possible drop in the two exterior path counts (whose sum is at most \(x+z+2\)) and at most two boundary contributions. Only \(O(\sqrt P)\) different windows occur with lower endpoint at most \(P\), since at fixed \(m\) the scalar is at most \(\sqrt{P/2^{m+4}}\), and the geometric length sum converges. Thus exact local edits don't make this restricted family an absolute selector for general targets.
+
+For a scan of these restricted windows and a replay of the middle-word classification, run python3 two_swaps.py. The broader search is described in the [main note](README.md).
