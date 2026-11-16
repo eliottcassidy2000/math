@@ -1,0 +1,11 @@
+n=15: start  8 (degree 1), Hamiltonian paths 1, far endpoints: 9 x1
+n=16: start  8 (degree 1), Hamiltonian paths 1, far endpoints: 16 x1
+n=17: start 16 (degree 1), Hamiltonian paths 1, far endpoints: 17 x1
+n=18: start 16 (degree 1), Hamiltonian paths 0, far endpoints:
+n=19: start 16 (degree 1), Hamiltonian paths 0, far endpoints:
+n=20: start 18 (degree 1), Hamiltonian paths 0, far endpoints:
+n=21: start 18 (degree 1), Hamiltonian paths 0, far endpoints:
+n=22: start 18 (degree 1), Hamiltonian paths 0, far endpoints:
+n=23: start 18 (degree 1), Hamiltonian paths 3, far endpoints: 2 x1 9 x1 22 x1
+n=24: start 18 (degree 1), Hamiltonian paths 0, far endpoints:
+n=25: start 18 (degree 1), Hamiltonian paths 10, far endpoints: 2 x1 3 x1 4 x1 8 x1 9 x1 10 x1 11 x1 13 x1 22 x1 23 x1

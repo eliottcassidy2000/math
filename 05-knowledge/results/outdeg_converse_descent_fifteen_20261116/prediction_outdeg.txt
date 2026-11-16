@@ -1,0 +1,45 @@
+Pre-registered predictions, klein-2026-11-16-outdeg, written 2026-11-16 after the two-path lemma test (L2: 0 failures on all
+352,462 ordered pairs in strong tournaments of orders 3-8) and its proof, before the remaining runs.
+
+P-1 (digit-0 characterisation, all tournaments)  For every tournament of order <= 8 and every vertex u: B_u = H iff u is a sink
+     or u has out-degree 1 with out-neighbour t_0 such that no Hamiltonian path of S - u ends at t_0 (the proof below covers
+     all orders; this is the exhaustive replay).
+P-2 (right source ratio)  P_D(2)/h(D) is NOT always a power of two for strong D: a strong tournament of order 5 already fails.
+P-3 (near-join proper)  Among strong tournaments of orders 4-8 with a digit-0 vertex z, in more than half the base S - z has a
+     single-vertex terminal component (so S is literally a near-join with k = 1).
+P-4 (descent)  Deleting digit-0 vertices repeatedly (any choice) from a strong tournament of order <= 8 reaches a tournament
+     with no digit-0 vertex in at most 4 steps; the sterile strong tournaments include the regular tournaments.
+P-5 (square-sum rows)  In the square-sum graph on 1..25 (edges i + j a square), the rows {1..5}, {6..10}, ..., {21..25} contain
+     an edge only in the first row (1 + 3 = 4); every pair of distinct rows is joined by at least one edge.
+
+Second pre-registration (same session, written 2026-11-16 after converse_descent.py and squaresum25.py ran: P-1, P-2, P-3
+confirmed, P-4 refuted (descents of up to 7 steps), P-5 refuted (every row has an internal edge); before the runs below).
+
+P-6 (composite right sources are near-join counts)  All 62 strong digit-0 pairs of orders 4-8 whose base has no sink
+     (terminal component strong) have counts that are near-join values h + 2^k B with k >= 1 from bases of order <= 8; at
+     least one of them is NOT a near-join value from bases of order <= 7.
+P-7 (fifteen)  The 15 Hamiltonian paths of the regular tournament RT_5 form three orbits of five under Aut(RT_5) (cyclic of
+     order 5), given by the step patterns (1,1,1,1), (2,2,2,2), (2,1,1,2) in the circulant {1,2}; the 15 double
+     transpositions of S_5 also form three orbits of five under the same cyclic group; this is an ANALOGY only.
+P-8 (first 25 primes)  The prime square-sum graph on the 25 primes below 100 has no Hamiltonian path and has at least one
+     isolated vertex.
+P-9 (square-sum Hamiltonian paths)  The square-sum graph on 1..n has 0 Hamiltonian paths for n = 18, 19, 20, 21, 22, 24 and
+     exactly 10 for n = 25.
+P-10 (the target chooses the core)  With cores A of order <= 6 (every root) and right sources D in {M_1..M_8} and the strong
+     tournaments of order <= 5, the reader v = h(A)h(D) + B_t(A)P_D(2) represents every odd v in [23, 125]; below 125 exactly
+     1, 7, 11, 13, 21, 47, 67 have no representation; at least one odd v below 125 has only composite (strong D) representations
+     within these bounds.
+
+Third pre-registration (same session, written 2026-11-16 after converse_census.py, fifteen.py and hampath_count ran: P-6
+half-confirmed (all 62 are near-join values; none needs a base of order 8, so the second clause is refuted), P-7 confirmed,
+P-8 confirmed, P-9 confirmed, P-10 (a) confirmed (exactly the seven), P-10 (b) refuted (no odd v below 125 needs a strong D);
+before the runs below).
+
+P-11 (closure)  For R, T of orders <= 4, every root t_0 of T and k = 1, 2: H(R -> (T -> M_k -> z)) = h(R) * H(T -> M_k -> z),
+      0 failures (the near-join family is closed under left ordinal multiplication by counts).
+P-12 (uniqueness)  No strong tournament of orders 4-8 has two digit-0 vertices (C_3 has three); at order 9 the maximum
+      number of digit-0 vertices of a strong tournament is also 1.
+P-13 (sterile spectrum at order 9)  Neither 17 nor 27 is the count of any strong tournament of order 9 (the order-9 strong
+      floor exceeds 27); the odd numbers in [11, 75] carried by sterile strong tournaments of orders <= 9 are all except
+      17, 21, 27.
+P-14 (the one non-supersingular edge)  The single square-sum edge among the ten non-supersingular primes below 100 is 61 + 83 = 144.

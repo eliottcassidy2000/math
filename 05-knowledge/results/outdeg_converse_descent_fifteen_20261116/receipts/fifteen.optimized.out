@@ -1,0 +1,14 @@
+(1) RT_5 = circulant {1,2}: Hamiltonian paths 15, |Aut| = 5, orbit sizes [5, 5, 5], step patterns {(1, 1, 1, 1): 5, (2, 1, 1, 2): 5, (2, 2, 2, 2): 5}
+    double transpositions of S_5: 15, orbits under the rotation group Z_5: sizes [5, 5, 5]; involutions of A_5: 15
+(2) square-sum graph on 1..25 as antidiagonal matchings i + j = s: {4: [(1, 3)], 9: [(1, 8), (2, 7), (3, 6), (4, 5)], 16: [(1, 15), (2, 14), (3, 13), (4, 12), (5, 11), (6, 10), (7, 9)], 25: [(1, 24), (2, 23), (3, 22), (4, 21), (5, 20), (6, 19), (7, 18), (8, 17), (9, 16), (10, 15), (11, 14), (12, 13)], 36: [(11, 25), (12, 24), (13, 23), (14, 22), (15, 21), (16, 20), (17, 19)], 49: [(24, 25)]}
+    matching sizes: {4: 1, 9: 4, 16: 7, 25: 12, 36: 7, 49: 1} total edges 32
+    residue classes mod 5: internal edges {0: [(5, 20), (10, 15)], 1: [], 2: [(2, 7)], 3: [(3, 13), (13, 23)], 4: []} ; class-pair edge matrix [[4, 6, 0, 0, 2], [6, 0, 0, 3, 5], [0, 0, 2, 5, 6], [0, 3, 5, 4, 0], [2, 5, 6, 0, 0]]
+    the unique Hamiltonian path of 1..15: [8, 1, 15, 10, 6, 3, 13, 12, 4, 5, 11, 14, 2, 7, 9] ; chunks of five: [[8, 1, 15, 10, 6], [3, 13, 12, 4, 5], [11, 14, 2, 7, 9]] chunk sums [40, 37, 43]
+(3) the 25 primes below 100: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    prime square-sum degrees: [4, 3, 3, 2, 3, 2, 3, 1, 3, 2, 1, 0, 2, 0, 4, 2, 2, 2, 0, 2, 1, 1, 2, 1, 2] ; isolated: [37, 43, 67]
+    components: [[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 53, 59, 61, 71, 73, 79, 83, 89, 97], [37], [43], [67]]
+    rows of five consecutive primes with an internal edge: [1, 2] ; row-pair edge matrix: [[4, 3, 2, 3, 3], [3, 4, 2, 1, 1], [2, 2, 0, 2, 1], [3, 1, 2, 0, 2], [3, 1, 1, 2, 0]]
+    supersingular (Ogg) primes among them: 15; non-supersingular: [37, 43, 53, 61, 67, 73, 79, 83, 89, 97]; edges inside the supersingular 15: 14, inside the other 10: 1, between: 9
+    mod-4 bipartition (odd primes): edges with p ≡ q mod 4: 0
+    Hamiltonian paths of the prime square-sum graph on the 25 primes (directed count): 0
+    Fermat primes 3, 5, 17, 257, 65537: supersingular? {3: True, 5: True, 17: True, 257: False, 65537: False}

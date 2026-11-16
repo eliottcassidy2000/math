@@ -2,6 +2,11 @@
 id: HYP-9453
 title: "Toward the completeness of the Hamiltonian-path spectrum (Chan-Pak): (1) the near-join family T' = T -> M_k -> z with the arc z -> t0 reversed, H(T') = h(T) + 2^k B(T, t0), realises every odd number except 1, 7, 11, 13, 21, 47, 67 once the base tournaments are large enough (with bases of order <= 8 it realises every odd number up to 22,227 except those seven); (2) for every attained odd h the set {B(T, t) : H(T) = h} is dense enough that h + 2B sweeps (3h, ...), which would make completeness an induction on windows; (3) every attained odd h >= 15 below the top band of its order is the count of at least two strong tournaments (the strong singletons are 3, 5, 11, 13 only)"
 status: >
+  UPDATE 2026-11-16 (klein-2026-11-16-outdeg, THM-5264): the CONVERSE — digit 0 implies a near-join count (k >= 1) — is
+  PROVED for every strong tournament with H <= 22,227 (out-degree-1 law at every order + this census + THM-5263 (B)); at
+  all orders it is exactly {strong digit-0 counts} = {near-join values}, PROVED when the base S - z has a sink and OPEN
+  when its terminal component D is strong (H = h(A)h(D) + B_t(A)P_D(2); all 62 such cases of orders <= 8 are near-join
+  values from bases <= 7). The family is closed under left multiplication by counts and under v -> (2^k + 1)v.
   UPDATE 2026-11-16 (klein-2026-11-16-nearjoin, THM-5263): the seven exceptions are PERMANENT — 11, 13, 47, 67 are never
   near-join values from any base of any order (every strong realiser of these primes lacks a digit-0 vertex, and the
   near-join's new vertex z always is one), 7, 21 are holes, 1 is the F_1-point; the conjecture is exactly that nothing
@@ -18,6 +23,7 @@ status: >
 session: klein-2026-11-02 (codex/session-ramsey-20261030)
 source: 05-knowledge/results/spectrum_analogies_nearjoin_20261102/README.md
 related:
+  - 01-canon/theorems/THM-5264-the-out-degree-1-law-for-digit-0-vertices-is-proved-at-every-order-two-path-lemma-unique-digit-0-vertex-in-a-strong-tournament-and-the-converse-digit-0-implies-a-near-join-count-below-22228.md
   - 01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md
   - 01-canon/theorems/THM-4861-the-five-fermat-primes-are-hamiltonian-path-counts-of-tournaments-with-least-orders-3-4-6-8-11-a-vertex-transitive-tournament-has-a-prime-count-only-for-c3-and-fermat-primes-are-free-vertices-of-the-prime-square-sum-graph.md
   - 07-reflections/partners-windows-and-bands-analogies-for-the-completeness-of-the-hamiltonian-path-spectrum-klein-20261102.md
@@ -57,3 +63,13 @@ Every attained odd `h ∈ [15, 2881]` is the count of at least two non-isomorphi
 - **Bounded odd parts.** Closures that keep the odd part of B bounded appear to have finitely many values
   (HYP-9656 (A), conjectural, OPEN). So the response intervals sought here should be expected to need B with unbounded
   odd part.
+
+## klein-2026-11-16-outdeg note (THM-5264): the converse and the composite right source
+
+- Digit 0 ⟹ near-join count holds for every strong tournament with `H ≤ 22,227` (THM-5264 (C)); the two families of
+  values coincide at all orders iff every dead-end append over a strong right source `D`,
+  `H = h(A)h(D) + B_{t_0}(A)P_D(2)`, is a near-join value with `k ≥ 1`. OPEN in that form; no structural rewriting found.
+- `{counts}·{near-join values} ⊆ {near-join values}` and `(2^k + 1)v` for every count `v` (THM-5264 (E)): with THM-4094 the
+  conjecture reduces, modulo Chan–Pak for cofactors, to primes `≥ 23` other than 47, 67 and the lanes `7p, 11p, 13p, 21p, 47p, 67p`.
+- Composite right sources are coprime linear readers `(h(D), P_D(2))` (e.g. `(5, 32)`, `(11, 100)`, `(17, 224)`), but below
+  125 no odd value needs one (packet `outdeg_converse_descent_fifteen_20261116`, CONVERSE.md §3–4).

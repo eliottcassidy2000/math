@@ -1,0 +1,3 @@
+(P-11) closure H(R -> near-join) = h(R) H(near-join): 400 cases, 0 failures
+(P-12) strong tournaments of orders 4-8: 6403; with two or more digit-0 vertices: 0
+(P-14) square-sum edges among the non-supersingular primes below 100: [(61, 83)]

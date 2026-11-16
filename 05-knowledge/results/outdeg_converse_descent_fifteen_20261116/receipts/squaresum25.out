@@ -1,0 +1,8 @@
+degrees 1..25: [4, 3, 4, 3, 3, 3, 3, 2, 2, 2, 3, 3, 3, 3, 3, 2, 2, 1, 2, 2, 2, 2, 2, 3, 2]
+rows of five with an internal edge: [1, 2, 3, 4, 5]
+edges between rows (matrix): [[4, 3, 5, 1, 4], [3, 4, 1, 4, 0], [5, 1, 4, 0, 5], [1, 4, 0, 4, 0], [4, 0, 5, 0, 2]]
+row pairs with no edge: [(2, 5), (3, 4), (4, 5)]
+square-sum graph on 1..15: Hamiltonian paths 1, endpoints [8, 9]
+square-sum graph on 1..16: Hamiltonian paths 1, endpoints [8, 16]
+square-sum graph on 1..17: Hamiltonian paths 1, endpoints [16, 17]
+square-sum graph on 1..23: Hamiltonian paths 3, endpoints [2, 9, 18, 22]
