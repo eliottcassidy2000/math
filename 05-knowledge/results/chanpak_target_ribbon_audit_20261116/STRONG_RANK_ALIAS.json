@@ -1,0 +1,84 @@
+{
+  "alphabet": "bit mask of backward gaps 1,2,3",
+  "u": [
+    0,
+    2,
+    7,
+    0,
+    2
+  ],
+  "v": [
+    0,
+    1,
+    7,
+    0,
+    2
+  ],
+  "common_suffix": [
+    7,
+    0,
+    2
+  ],
+  "appended_letter": 1,
+  "minimal_dimension": 61,
+  "ranks": {
+    "u": 3,
+    "v": 3,
+    "u1": 3,
+    "v1": 2
+  },
+  "u_H": 27,
+  "u_minor": {
+    "rows": [
+      0,
+      2,
+      3
+    ],
+    "cols": [
+      0,
+      2,
+      5
+    ],
+    "det": "36"
+  },
+  "v_H": 17,
+  "v_minor": {
+    "rows": [
+      0,
+      2,
+      5
+    ],
+    "cols": [
+      0,
+      2,
+      5
+    ],
+    "det": "32"
+  },
+  "u1_H": 51,
+  "u1_minor": {
+    "rows": [
+      0,
+      2,
+      5
+    ],
+    "cols": [
+      0,
+      2,
+      5
+    ],
+    "det": "-108"
+  },
+  "v1_H": 33,
+  "v1_minor": {
+    "rows": [
+      0,
+      2
+    ],
+    "cols": [
+      0,
+      2
+    ],
+    "det": "72"
+  }
+}
