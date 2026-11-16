@@ -117,6 +117,17 @@ traverses eighteen uncompressed shortcut edges, exactly the order of
 (1,4), (2,4), (1,4). It is a hexagon of live phases after the sterile
 sites are skipped, not a flat embedding of the binary tree.
 
+The other branch shows exactly what the hexagon forgets. In the same
+source order its possible destination sets at the next live fork are
+A,A,B,B,A,A, where A={2,11,20}, B={8,17,26} modulo 27. Indeed replacing
+x by x+27t changes the odd child by 18t, and the required number of
+following doubles is fixed by the source phase. The three lifts mod 81
+therefore give the three destinations. Arbitrarily large powers of two
+realize all those unit lifts. The double branch closes inside a
+six-phase quotient; the odd branch reads one more ternary digit.
+That is an exact reason to expect local hexagons without a global
+finite-state description.
+
 Taking the dual of the flag triangulation gives cubic figures
 (4,2p,2q). If all three face sizes at each cubic vertex are distinct,
 the two neighbor face sizes must alternate around every face, so every
