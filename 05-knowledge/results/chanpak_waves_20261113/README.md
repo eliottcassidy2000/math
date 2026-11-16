@@ -4125,6 +4125,12 @@ Session mac-mini-2026-11-16-collatz-tree. Owner prompt:
 - The honeycomb chart Φ(2^a q) = (a, q − 1) of session178 makes the halving chains horizontal rays.
 - HYP-3771 and HYP-3772 hold the tilings ↔ solids classification. "Splitting 3 into 5" has no earlier hit in the repo.
 
+**Concurrent packet on the same directive:** [collatz_tree_tournament_sink_hex_20261116](../collatz_tree_tournament_sink_hex_20261116/COLLATZ_TOURNAMENT.md)
+(THM-5257) builds a different tree tournament: every ancestor beats the node and the node beats the other earlier
+nodes. That tournament is transitive exactly for depth-first orders, while here a single row gives Tribonacci. Its
+PORT_MOVES.md finds no generalised binary odometer at orders 3–6, matching §1. HEX_PLATONIC.md reads the three tilings
+and five solids as one fixed solid plus two dual pairs.
+
 New here: P107's resolution, the Collatz-ordered tournaments, the chain-decomposition lemma, the subfamily and d-parent
 spectra, and the explicit caterpillar automaton. Scripts are `scripts/w46_*` (C sources compile with
 `cc -O2 -o w46_X w46_X.c`), with outputs in `scripts/w46_receipts.txt`.
