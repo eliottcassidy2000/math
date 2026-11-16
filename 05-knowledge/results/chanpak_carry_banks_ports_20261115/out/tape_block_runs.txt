@@ -1,0 +1,23 @@
+n=8 block=0 placement i=0: H(base)=1 ; distinct counts 58 of 256 ; max count 227 ; longest run 4: 139..145
+n=9 block=0 placement i=0: H(base)=1 ; distinct counts 110 of 512 ; max count 467 ; longest run 5: 283..291
+n=10 block=0 placement i=0: H(base)=1 ; distinct counts 216 of 1024 ; max count 963 ; longest run 6: 481..491
+n=11 block=0 placement i=0: H(base)=1 ; distinct counts 414 of 2048 ; max count 1955 ; longest run 6: 481..491
+n=12 block=0 placement i=0: H(base)=1 ; distinct counts 825 of 4096 ; max count 3971 ; longest run 7: 1667..1679
+n=13 block=0 placement i=0: H(base)=1 ; distinct counts 1605 of 8192 ; max count 8003 ; longest run 9: 4203..4219
+n=14 block=0 placement i=0: H(base)=1 ; distinct counts 3185 of 16384 ; max count 16131 ; longest run 9: 4203..4219
+UNION n=9 block=4: 347 odd counts below 4096 ; longest fully covered interval: 38 odd numbers 369..443
+UNION n=10 block=4: 737 odd counts below 8192 ; longest fully covered interval: 54 odd numbers 337..443
+UNION n=11 block=4: 1528 odd counts below 16384 ; longest fully covered interval: 72 odd numbers 1239..1381
+UNION n=12 block=4: 3170 odd counts below 32768 ; longest fully covered interval: 173 odd numbers 1903..2247
+UNION n=13 block=4: 6485 odd counts below 65536 ; longest fully covered interval: 175 odd numbers 5057..5405
+UNION n=12 block=3: 1725 odd counts below 32768 ; longest fully covered interval: 17 odd numbers 741..773
+UNION n=12 block=5: 3671 odd counts below 32768 ; longest fully covered interval: 63 odd numbers 2467..2591
+n=12 block=4 placement i=0: H(base)=5 ; distinct counts 2003 of 4096 ; max count 7791 ; longest run 34: 1113..1179
+n=12 block=4 placement i=1: H(base)=5 ; distinct counts 2036 of 4096 ; max count 7791 ; longest run 54: 337..443
+n=12 block=4 placement i=2: H(base)=5 ; distinct counts 2016 of 4096 ; max count 7791 ; longest run 54: 337..443
+n=12 block=4 placement i=3: H(base)=5 ; distinct counts 1996 of 4096 ; max count 7791 ; longest run 38: 369..443
+n=12 block=4 placement i=4: H(base)=5 ; distinct counts 1347 of 4096 ; max count 7699 ; longest run 29: 107..163
+n=12 block=4 placement i=5: H(base)=5 ; distinct counts 1996 of 4096 ; max count 7791 ; longest run 38: 369..443
+n=12 block=4 placement i=6: H(base)=5 ; distinct counts 2016 of 4096 ; max count 7791 ; longest run 54: 337..443
+n=12 block=4 placement i=7: H(base)=5 ; distinct counts 2036 of 4096 ; max count 7791 ; longest run 54: 337..443
+n=12 block=4 placement i=8: H(base)=5 ; distinct counts 2003 of 4096 ; max count 7791 ; longest run 34: 1113..1179

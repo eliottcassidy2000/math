@@ -1,0 +1,14 @@
+count 27, half-count 13, signed descent: [27, 21, 11, 9, 5, 3]
+count 63, half-count 31, signed descent: [63, 47, 35, 27, 21, 11, 9, 5, 3]
+count 47, half-count 23, signed descent: [47, 35, 27, 21, 11, 9, 5, 3]
+count 55, half-count 27, signed descent: [55, 41, 21, 11, 9, 5, 3]
+count 1473, half-count 736, signed descent: [1473, 737, 369, 185, 93, 47, 35, 27, 21, 11, 9, 5, 3]
+count 1729, half-count 864, signed descent: [1729, 865, 433, 217, 109, 55, 41, 21, 11, 9, 5, 3]
+count 2945, half-count 1472, signed descent: [2945, 1473, 737, 369, 185, 93, 47, 35, 27, 21, 11, 9, 5, 3]
+shortcut orbits: [27, 41, 62, 31, 47, 71, 107, 161, 242, 121, 182] [63, 95, 143, 215, 323, 485, 728, 364, 182] [62, 31, 47, 71, 107, 161, 242, 121, 182]
+27 + 1024 j and 63 + 2304 j both reach 182 + 6561 j: checked for j < 200
+one-apex word 100010: H = 27
+one-apex word 1001100: H = 63
+one-apex word 11101001000: H = 1729
+one-apex half-counts a - J(a) equal to 736 (count 1473) for a < 2^13: []
+2^a + 1 = 3^b for a, b <= 400: [(1, 1), (3, 2)]

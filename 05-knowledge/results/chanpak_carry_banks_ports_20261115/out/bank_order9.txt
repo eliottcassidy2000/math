@@ -1,0 +1,5 @@
+BANK k=2 counts 9..15 ; H(base) = 5 ; S=48 X0=384 ; base: 510 508 504 496 352 448 384 272 0
+BANK k=2 counts 89..95 ; H(base) = 9 ; S=48 X0=136 ; base: 510 508 504 496 352 448 128 272 64
+BANK k=2 counts 9..15 ; H(base) = 5 ; S=192 X0=32 ; base: 510 508 504 496 480 64 384 288 32
+BANK k=2 counts 209..215 ; H(base) = 39 ; S=36 X0=208 ; base: 510 508 312 496 480 448 388 4 128
+# bases of order 9: 191536 ; largest complete bank k: number of bases: 0:191515 2:21

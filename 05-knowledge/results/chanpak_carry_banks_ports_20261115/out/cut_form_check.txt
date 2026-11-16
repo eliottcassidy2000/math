@@ -1,0 +1,1 @@
+cut form verified on 3108 (base, out-set) pairs; failures: 0; pair interaction >= H(B - e - f) on every pair

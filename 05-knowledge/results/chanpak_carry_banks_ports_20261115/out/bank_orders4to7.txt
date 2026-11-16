@@ -1,0 +1,4 @@
+# bases of order 4: 4 ; largest complete bank k: number of bases: 0:3 2:1
+# bases of order 5: 12 ; largest complete bank k: number of bases: 0:10 2:2
+# bases of order 6: 56 ; largest complete bank k: number of bases: 0:51 2:5
+# bases of order 7: 456 ; largest complete bank k: number of bases: 0:447 2:9

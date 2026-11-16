@@ -1,0 +1,11 @@
+k = 2: quadratic bijections onto 2^k consecutive integers with all pair interactions nonzero: 16
+   D = [-3, -2]  s = {(0, 1): 4}  values [0, -3, -2, -1]
+   D = [-3, -1]  s = {(0, 1): 2}  values [0, -3, -1, -2]
+   D = [-2, -3]  s = {(0, 1): 4}  values [0, -2, -3, -1]
+   D = [-1, -3]  s = {(0, 1): 2}  values [0, -1, -3, -2]
+k = 3: quadratic bijections onto 2^k consecutive integers with all pair interactions nonzero: 2688
+   D = [-7, -4, -2]  s = {(0, 1): 5, (0, 2): 4, (1, 2): 3}  values [0, -7, -4, -6, -2, -5, -3, -1]
+   D = [-7, -4, -2]  s = {(0, 1): 5, (0, 2): 6, (1, 2): 1}  values [0, -7, -4, -6, -2, -3, -5, -1]
+   D = [-7, -4, -2]  s = {(0, 1): 6, (0, 2): 3, (1, 2): 3}  values [0, -7, -4, -5, -2, -6, -3, -1]
+   D = [-7, -4, -2]  s = {(0, 1): 8, (0, 2): 3, (1, 2): 1}  values [0, -7, -4, -3, -2, -6, -5, -1]
+k = 3 without the nonzero condition: 4608
