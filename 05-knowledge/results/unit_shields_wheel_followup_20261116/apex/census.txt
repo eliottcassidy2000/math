@@ -1,0 +1,80 @@
+Verified every tape, both apex arcs, through spine length 5 by literal subset DP.
+Tapes per orientation=3096576, max H by arc 1903297 1904361
+spine 13, A to B
+  |S_B|<=0 distinct=1605, first miss other than 7,21=13
+  |S_B|<=1 distinct=45170, first miss other than 7,21=67
+  |S_B|<=2 distinct=184637, first miss other than 7,21=34123
+  |S_B|<=3 distinct=344178, first miss other than 7,21=183433
+  below 2^16 visits by minimum support 1605 21504 9618 39 misses=2
+  below 2^17 visits by minimum support 1605 30581 31971 1377 misses=2
+  below 2^18 visits by minimum support 1605 38191 75350 15863 misses=63
+  below 2^19 visits by minimum support 1605 42892 123848 84352 misses=9447
+  below 2^20 visits by minimum support 1605 43565 139146 155325 misses=184647
+  first 16 holes above 21: 183433 184091 188729 189361 191245 191295 193693 194515 196069 197937 206541 207981 208775 209541 210363 211411
+spine 13, B to A
+  |S_B|<=0 distinct=3185, first miss other than 7,21=13
+  |S_B|<=1 distinct=47600, first miss other than 7,21=175
+  |S_B|<=2 distinct=187254, first miss other than 7,21=38165
+  |S_B|<=3 distinct=345321, first miss other than 7,21=167117
+  below 2^16 visits by minimum support 3185 21215 8335 31 misses=2
+  below 2^17 visits by minimum support 3185 30816 30427 1106 misses=2
+  below 2^18 visits by minimum support 3185 38845 74260 14734 misses=48
+  below 2^19 visits by minimum support 3185 43723 123707 82482 misses=9047
+  below 2^20 visits by minimum support 3185 44415 139333 153819 misses=183536
+  first 16 holes above 21: 167117 180319 184481 194209 212461 213319 213421 214877 217017 217351 225811 229369 230437 232445 233301 234559
+spine 13, union
+  |S_B|<=0 distinct=3185, first miss other than 7,21=13
+  |S_B|<=1 distinct=66057, first miss other than 7,21=7477
+  |S_B|<=2 distinct=239902, first miss other than 7,21=83053
+  |S_B|<=3 distinct=401873, first miss other than 7,21=256521
+  below 2^16 visits by minimum support 3185 25514 4067 0 misses=2
+  below 2^17 visits by minimum support 3185 40638 21635 76 misses=2
+  below 2^18 visits by minimum support 3185 53912 70191 3781 misses=3
+  below 2^19 visits by minimum support 3185 61896 144094 51719 misses=1250
+  below 2^20 visits by minimum support 3185 62872 173205 153664 misses=131362
+  first 16 holes above 21: 256521 266353 295201 330323 343769 345081 349603 355559 356689 357589 358343 358837 361637 361719 362577 363383
+literal witness 6425 masks A,B 8114 8 arc 1
+literal witness 260909 masks A,B 5897 6 arc 1
+literal witness 521307 masks A,B 363 100 arc 1
+literal witness 524287 masks A,B 1426 37 arc 0
+literal witness 524289 masks A,B 5662 7 arc 1
+Tapes per orientation=7700480, max H by arc 5887149 5889173
+spine 14, A to B
+  |S_B|<=0 distinct=3185, first miss other than 7,21=13
+  |S_B|<=1 distinct=103317, first miss other than 7,21=67
+  |S_B|<=2 distinct=477120, first miss other than 7,21=79633
+  |S_B|<=3 distinct=962740, first miss other than 7,21=388061
+  below 2^16 visits by minimum support 3185 26088 3493 0 misses=2
+  below 2^17 visits by minimum support 3185 43754 18518 77 misses=2
+  below 2^18 visits by minimum support 3185 62984 62787 2114 misses=2
+  below 2^19 visits by minimum support 3185 81006 153883 24050 misses=20
+  below 2^20 visits by minimum support 3185 94293 279394 143054 misses=4362
+  first 16 holes above 21: 388061 391235 416101 439645 486505 490401 503015 504951 505045 505341 505569 509189 509461 509857 510029 519443
+spine 14, B to A
+  |S_B|<=0 distinct=6245, first miss other than 7,21=13
+  |S_B|<=1 distinct=108180, first miss other than 7,21=175
+  |S_B|<=2 distinct=482529, first miss other than 7,21=83955
+  |S_B|<=3 distinct=965900, first miss other than 7,21=400199
+  below 2^16 visits by minimum support 6245 24075 2446 0 misses=2
+  below 2^17 visits by minimum support 6245 43043 16218 28 misses=2
+  below 2^18 visits by minimum support 6245 63444 59682 1699 misses=2
+  below 2^19 visits by minimum support 6245 82191 151199 22489 misses=20
+  below 2^20 visits by minimum support 6245 95987 278224 139704 misses=4128
+  first 16 holes above 21: 400199 402939 431191 445759 449633 449735 463285 468583 473949 481333 484347 494597 496339 497309 504957 509553
+spine 14, union
+  |S_B|<=0 distinct=6245, first miss other than 7,21=13
+  |S_B|<=1 distinct=154410, first miss other than 7,21=7477
+  |S_B|<=2 distinct=636892, first miss other than 7,21=164333
+  |S_B|<=3 distinct=1138644, first miss other than 7,21=729421
+  below 2^16 visits by minimum support 6245 25995 526 0 misses=2
+  below 2^17 visits by minimum support 6245 51745 7544 0 misses=2
+  below 2^18 visits by minimum support 6245 83818 40937 70 misses=2
+  below 2^19 visits by minimum support 6245 115454 136209 4234 misses=2
+  below 2^20 visits by minimum support 6245 138811 312985 66108 misses=139
+  first 16 holes above 21: 729421 798023 816547 831415 841509 843641 853645 856659 856767 856965 857305 859195 863147 874165 885557 897859
+literal witness 6425 masks A,B 16228 16 arc 1
+literal witness 256521 masks A,B 16147 19 arc 1
+literal witness 260909 masks A,B 11794 12 arc 1
+literal witness 521307 masks A,B 6788 145 arc 0
+literal witness 524287 masks A,B 9049 4 arc 0
+literal witness 524289 masks A,B 11324 14 arc 1
