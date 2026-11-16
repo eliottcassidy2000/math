@@ -1,0 +1,9 @@
+sieved dimensions (62, 119) (119, 117)
+exact observable dimension: 62 reachable-after-first: 117 minimal: 61
+u (0, 4, 1, 7, 0, 2) rank 3
+v (0, 7, 0, 2) rank 3
+u0 (0, 4, 1, 7, 0, 2, 0) rank 3
+v0 (0, 7, 0, 2, 0) rank 2
+PASS: same last three letters and same rank do not determine next rank.
+all 168 37 43 985140783540 1000000000000
+invertible 111 18 23 986083961573 1000000000000
