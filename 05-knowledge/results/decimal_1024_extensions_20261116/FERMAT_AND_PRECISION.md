@@ -51,3 +51,11 @@ The base-six sibling has the same local/global split. For odd n sufficiently lar
 There is also a positive counting interpretation of the ternary clock's U_n. Use an alphabet of 128 symbols, with 125 ordinary and three marked. Cyclic rotation of the three marked symbols is free on words containing at least one marked symbol. Counting orbits by the first marked position gives U_n=Σ_(j=0)^(n−1)125^j128^(n−1−j), with no cancellation. In particular the recurrence with a negative term describes a family with a positive, first-marked-position decomposition.
 
 The totient side is separate from the additive identity but exact: φ(1024)=512, and its totient fiber has eleven inputs. An odd prime dividing a preimage has exponent one and p−1 a power of two; primality forces a Fermat exponent and the candidates ≤513 are 3,5,17,257. Their p−1 exponents are 1,2,4,8. For each s=0,…,9 take the unique subset with exponent sum s, multiply its primes by 2^(10−s), and additionally take the odd preimage 3·257=771. The same two inputs at s=9 differ by a factor of two without changing the totient. This is a particular explicit fiber, not a claim about Carmichael’s conjecture in general.
+
+## Why 3 and 5 are the only nontrivial pair for the cubic carry
+
+In positive integers the simultaneous conditions 2^m=b³+c and 2^ℓ=bc+1 have only the family b=1, c=2^m−1, ℓ=m, and the two isolated solutions (b,c,m,ℓ)=(3,5,5,4),(5,3,7,4).
+
+For b>1, both b,c are odd (parity in the second equation), and c=1 is impossible since b³+1=(b+1)(b²−b+1) has an odd factor >1. Thus b,c≥3. The identity b⁴−1=b·2^m−2^ℓ rules out m<ℓ: it would give m=v₂(b⁴−1), hence 2^m=4·max(2^v₂(b−1),2^v₂(b+1))≤4(b+1)<b³. If m=ℓ, the equations force c=b²+b+1 and 2^m=(b+1)(b²+1), also impossible since b²+1≡2 mod 8 and >2. Therefore m>ℓ. In particular b⁴≡1 mod 2^ℓ, so b≡±1 mod Q for Q=2^(ℓ−2), by factoring b⁴−1 and keeping the same valuations. As bc+1≥10 we have Q≥4, and 3≤b≤(4Q−1)/3<2Q−1. This leaves b=Q−1 or Q+1. In the first case b divides 3, in the second b divides 5, since b divides 4Q−1. These are exactly the listed solutions.
+
+So 641 and 97 are the only two outputs of this positive, nontrivial coupled cubic mechanism. The neighboring infinite sum/product mechanism lives at degree one, not degree three.
