@@ -193,6 +193,17 @@ a root in C ends no spanning path of the total). In particular:
   implemented by suffix_spectrum.cpp. **The reduced key cannot hit 1203; its exact minimum is 2701:** [complete finite certificate and reduction](REDUCED_237.md).
   This eliminates the nontrivial suffix route at (1185,8051), but does
   not eliminate a single strong 6015 core or a different key.
+  At this original g=1185, the deletion is also forced to have just
+  one nonsingleton SCC. Triangle content excludes factors with H=3;
+  1185=3·5·79 leaves split lists (5,237),(237,5),(15,79),(79,15).
+  The same argument applied to cut 2415 bounds the retained singleton
+  SCCs by fourteen. The exact banks have respectively 1,84,4,11 strong
+  types for H=5,237,15,79. The [split certificate](split_1185.out) tests
+  174,080 layouts and finds no cut at most 2415 at any X=8051·2^k.
+  Run `c++ -O3 -std=c++20 phase_compiler.cpp -o /tmp/phase &&
+  /tmp/phase split1185`. Thus both old sink keys have a precise next
+  case: one strong deletion SCC of count 729 or 1185, with active
+  singleton padding. This does not exclude other keys for the triple.
 - There is an additional congruence gate in the **deletion**, not an
   ordinal suffix of the full rooted host. Appending one deletion component
   of path count h and two-slot count R sends the previous (g,X) to
