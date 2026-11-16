@@ -1,0 +1,11 @@
+  H=15 charge=4 kind=one expected child H= child (H,a,b)=(35,4,0) -> next-step (one added vertex) extensions reaching 2H+1+a: 0, ready same-charge hits: 0
+  H=81 charge=-2 kind=one expected child H child (H,a,b)=(161,-2,0) -> next-step (one added vertex) extensions reaching 2H+1+a: 0, ready same-charge hits: 0
+  H=71 charge=6 kind=one expected child H= child (H,a,b)=(149,6,0) -> next-step (one added vertex) extensions reaching 2H+1+a: 0, ready same-charge hits: 0
+  H=27 charge=4 kind=one expected child H= child (H,a,b)=(59,4,0) -> next-step (one added vertex) extensions reaching 2H+1+a: 0, ready same-charge hits: 0
+  H=15 charge=4 kind=one expected child H= child (H,a,b)=(35,4,0) -> next-step (one added vertex) extensions reaching 2H+1+a: 0, ready same-charge hits: 0
+  H=81 charge=-2 kind=one expected child H child (H,a,b)=(161,-2,0) -> next-step (one added vertex) extensions reaching 2H+1+a: 0, ready same-charge hits: 0
+  H=71 charge=6 kind=one expected child H= child (H,a,b)=(149,6,0) -> next-step (one added vertex) extensions reaching 2H+1+a: 0, ready same-charge hits: 0
+  H=51 charge=8 kind=one expected child H= child (H,a,b)=(111,8,0) -> next-step (one added vertex) extensions reaching 2H+1+a: 0, ready same-charge hits: 0
+  H=115 charge=16 kind=one expected child  child (H,a,b)=(247,16,0) -> next-step (one added vertex) extensions reaching 2H+1+a: 0, ready same-charge hits: 0
+  H=255 charge=0 kind=one expected child H child (H,a,b)=(511,0,0) -> next-step (one added vertex) extensions reaching 2H+1+a: 0, ready same-charge hits: 0
+  H=27 charge=4 kind=one expected child H= child (H,a,b)=(59,4,0) -> next-step (one added vertex) extensions reaching 2H+1+a: 0, ready same-charge hits: 0

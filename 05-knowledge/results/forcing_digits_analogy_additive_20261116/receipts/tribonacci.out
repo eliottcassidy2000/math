@@ -1,0 +1,5 @@
+C(m), m = 0..20: [1, 1, 1, 3, 5, 9, 17, 31, 57, 105, 193, 355, 653, 1201, 2209, 4063, 7473, 13745, 25281, 46499, 85525]
+tribonacci recurrence C(m) = C(m-1)+C(m-2)+C(m-3) for 3 <= m <= 40: True
+tau = 1.83928675521416113255185 ; c = C(40)/tau^40 = 0.43561638935109705675999
+C(m) = round(c tau^m) for 3 <= m <= 40: True ; smallest m where it holds from 0: 1
+wave 46 DFS sequence matches C(m) shifted: True ; C[0:14] = [1, 1, 1, 3, 5, 9, 17, 31, 57, 105, 193, 355, 653, 1201]

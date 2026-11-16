@@ -1,0 +1,5 @@
+order 4: 4 classes; mismatches of B - e = 2E: 0
+h: digit0 digit1 digit2 charge0 ready readyCharge0 | small digits (-8..8) | small charges
+  1: 1 1 0 1 1 1 | 0 1 3 7 | 0 2 4 8
+  3: 1 0 0 1 1 1 | 0 3 | -2 0 4
+  5: 1 1 1 1 1 1 | 0 1 2 4 | 0 2 4

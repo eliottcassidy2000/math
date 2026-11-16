@@ -1,0 +1,2 @@
+  24 diff=-1 H(U)=5 (3,3) bound 5 att=1 strongU=0 u: out1/in2 in A, out1/in3 in B; v: out1/in2 in A, out1/in3 in B | cross
+   1 == glue_45.out                     

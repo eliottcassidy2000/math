@@ -1,0 +1,66 @@
+## parent H=15 charge=4 kind=one expected child H=35
+seed n=8 root=5 (H,E,O,g)=(35,19,24,5) charge a=4 defect b=0; target H'=2H+1+a=75
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=15 charge=4 kind=two expected child H=35
+seed n=9 root=5 (H,E,O,g)=(35,43,43,5) charge a=52 defect b=-5; target H'=2H+1+a=123
+seed done: extensions with H'=2H+1+a: 1; root-moving ready same-charge hits: 0
+## parent H=81 charge=-2 kind=one expected child H=161
+seed n=8 root=4 (H,E,O,g)=(161,79,98,19) charge a=-2 defect b=0; target H'=2H+1+a=321
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=81 charge=-2 kind=two expected child H=161
+seed n=9 root=4 (H,E,O,g)=(161,177,177,19) charge a=194 defect b=-19; target H'=2H+1+a=517
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=71 charge=6 kind=one expected child H=149
+seed n=8 root=4 (H,E,O,g)=(149,77,92,15) charge a=6 defect b=0; target H'=2H+1+a=305
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=71 charge=6 kind=two expected child H=149
+seed n=9 root=4 (H,E,O,g)=(149,169,169,15) charge a=190 defect b=-15; target H'=2H+1+a=489
+seed done: extensions with H'=2H+1+a: 1; root-moving ready same-charge hits: 0
+## parent H=27 charge=4 kind=one expected child H=59
+seed n=8 root=5 (H,E,O,g)=(59,31,40,9) charge a=4 defect b=0; target H'=2H+1+a=123
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=27 charge=4 kind=two expected child H=59
+seed n=9 root=5 (H,E,O,g)=(59,71,71,9) charge a=84 defect b=-9; target H'=2H+1+a=203
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=15 charge=4 kind=one expected child H=35
+seed n=9 root=6 (H,E,O,g)=(35,19,24,5) charge a=4 defect b=0; target H'=2H+1+a=75
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=15 charge=4 kind=two expected child H=35
+seed n=10 root=6 (H,E,O,g)=(35,43,43,5) charge a=52 defect b=-5; target H'=2H+1+a=123
+seed done: extensions with H'=2H+1+a: 1; root-moving ready same-charge hits: 0
+## parent H=81 charge=-2 kind=one expected child H=161
+seed n=9 root=5 (H,E,O,g)=(161,79,98,19) charge a=-2 defect b=0; target H'=2H+1+a=321
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=81 charge=-2 kind=two expected child H=161
+seed n=10 root=5 (H,E,O,g)=(161,177,177,19) charge a=194 defect b=-19; target H'=2H+1+a=517
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=71 charge=6 kind=one expected child H=149
+seed n=9 root=5 (H,E,O,g)=(149,77,92,15) charge a=6 defect b=0; target H'=2H+1+a=305
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=71 charge=6 kind=two expected child H=149
+seed n=10 root=5 (H,E,O,g)=(149,169,169,15) charge a=190 defect b=-15; target H'=2H+1+a=489
+seed done: extensions with H'=2H+1+a: 1; root-moving ready same-charge hits: 0
+## parent H=51 charge=8 kind=one expected child H=111
+seed n=9 root=6 (H,E,O,g)=(111,59,76,17) charge a=8 defect b=0; target H'=2H+1+a=231
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=51 charge=8 kind=two expected child H=111
+seed n=10 root=6 (H,E,O,g)=(111,135,135,17) charge a=160 defect b=-17; target H'=2H+1+a=383
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=115 charge=16 kind=one expected child H=247
+seed n=9 root=6 (H,E,O,g)=(247,131,168,37) charge a=16 defect b=0; target H'=2H+1+a=511
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=115 charge=16 kind=two expected child H=247
+seed n=10 root=6 (H,E,O,g)=(247,299,299,37) charge a=352 defect b=-37; target H'=2H+1+a=847
+seed done: extensions with H'=2H+1+a: 3; root-moving ready same-charge hits: 0
+## parent H=255 charge=0 kind=one expected child H=511
+seed n=9 root=4 (H,E,O,g)=(511,255,292,37) charge a=0 defect b=0; target H'=2H+1+a=1023
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=255 charge=0 kind=two expected child H=511
+seed n=10 root=4 (H,E,O,g)=(511,547,547,37) charge a=584 defect b=-37; target H'=2H+1+a=1607
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=27 charge=4 kind=one expected child H=59
+seed n=9 root=6 (H,E,O,g)=(59,31,40,9) charge a=4 defect b=0; target H'=2H+1+a=123
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0
+## parent H=27 charge=4 kind=two expected child H=59
+seed n=10 root=6 (H,E,O,g)=(59,71,71,9) charge a=84 defect b=-9; target H'=2H+1+a=203
+seed done: extensions with H'=2H+1+a: 0; root-moving ready same-charge hits: 0

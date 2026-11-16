@@ -1,0 +1,2 @@
+ordinal-sum laws: 286 checks, 0 failures
+transitive-suffix law B_t -> 2^k B_t, e_t -> 0: holds

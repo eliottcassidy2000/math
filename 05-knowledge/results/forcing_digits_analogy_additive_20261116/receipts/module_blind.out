@@ -1,0 +1,2 @@
+equal-H test groups: [(1, 4), (3, 6), (5, 3), (9, 2), (15, 2)]
+gadgets (order 2-4, every tau): 110; 'count depends only on H' <=> 'tau on no cycle of Q': holds for 110, fails for 0

@@ -1,0 +1,25 @@
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(1,2) B=111101 arc=(1,2) cross=2 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(1,2) B=111101 arc=(1,2) cross=3 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(1,2) B=111101 arc=(1,2) cross=10 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(1,2) B=111101 arc=(1,2) cross=11 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(1,2) B=111101 arc=(2,3) cross=2 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(1,2) B=111101 arc=(2,3) cross=3 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(1,2) B=111101 arc=(2,3) cross=10 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(1,2) B=111101 arc=(2,3) cross=11 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(1,2) B=111101 arc=(3,1) cross=2 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(1,2) B=111101 arc=(3,1) cross=3 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(1,2) B=111101 arc=(3,1) cross=10 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(1,2) B=111101 arc=(3,1) cross=11 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(2,3) B=111101 arc=(1,2) cross=2 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(2,3) B=111101 arc=(1,2) cross=3 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(2,3) B=111101 arc=(1,2) cross=10 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(2,3) B=111101 arc=(1,2) cross=11 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(2,3) B=111101 arc=(2,3) cross=2 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(2,3) B=111101 arc=(2,3) cross=3 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(2,3) B=111101 arc=(2,3) cross=10 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(2,3) B=111101 arc=(2,3) cross=11 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(2,3) B=111101 arc=(3,1) cross=2 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(2,3) B=111101 arc=(3,1) cross=3 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(2,3) B=111101 arc=(3,1) cross=10 hA(uv)=2 hB(uv)=2 strongU=0
+diff=-1 H(U)=5 H(A)=3 H(B)=3 bound=5 attained=1 A=111101 arc=(2,3) B=111101 arc=(3,1) cross=11 hA(uv)=2 hB(uv)=2 strongU=0
+orders (4,4): instances 9216; by diff: -3: 0+0 (bound attained / not), -1: 270+108, +1: 36+456, +3: 54+442

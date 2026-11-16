@@ -1,0 +1,25 @@
+Pre-registered predictions, klein-2026-11-16-force, written 2026-11-16 before any run of this session (the owner's
+numbers had been factored: 30011, 30013 twin primes = 3*10003 + 2, + 4 with 10003 = 7*1429; 30021 = 3*10007; 30027 = 3*10009).
+
+P-A (digit availability)  Over all tournaments of order <= 8 and all vertices, with digit sigma_t = B_t - h and the height-two
+     tower giving 3h + 2 sigma_t: fewer than 10 attained counts h <= 200 have NO realiser of order <= 8 with a digit-1
+     vertex, and all of them are below 70; the same for digit 2.
+P-B (doubling failures = sterile forks)  With charge a_t = B_t - e_t - h + 1 (so the rooted append gives 2h - 1 + a_t):
+     the counts h <= 100 attained at order <= 8 with no charge-0 root among their realisers of order <= 8 include 11, 29, 35
+     and also 47 and 65 (the next sterile forks h = 11 mod 18, i.e. x = (h-1)/2 = 5 mod 9); 13 and 41 do have charge-0 roots.
+P-C (port moves, orders 7 and 8)  Ready same-charge moves r -> 2r + 1 (H' = 2H + 1 + a, a' = a, b' = 0): at order 7 with up to
+     two added vertices they occur only at charges 0 (from H = 1) and 4, from fewer than 10 bases; at order 8 with one added
+     vertex only from H = 1; none iterates.
+P-D (identity)  For every rooted tournament of order <= 8, B_t - e_t = 2 E_t (the two charge formulas agree).
+P-E (one row)  The Tribonacci row counts C(m) (compositions with no two adjacent 1s) equal round(c tau^m) for an explicit
+     constant c and all 3 <= m <= 40.
+
+Added before the strong-realiser census, the additive-gluing search and the rounding check (2026-11-16, after the
+order <= 8 digit census: digit-1 vertices absent at 41, 43, 53, 83, 89, 101, 103, 113 among primes < 125):
+P-F (padding rescues)  With the padding rule sigma_t(S -> TT_k) = 2^k B_t(S) - h, the primes p < 125 whose strong realisers
+     (orders <= 9) have NO vertex with B_t in {p + 1, (p+1)/2, (p+1)/4, ...} number at most 6, and 41 is among them.
+P-G (rooted doubling)  The counts h < 125 with no rooted doubling child at any order (no strong realiser vertex with
+     a_t = 0, nor B_t = (h - 1)/2^k for k >= 1) are exactly 11, 19, 29, 31, 35 plus at most four further counts.
+P-H (additive gluing)  Among pairs of tournaments of order <= 4 sharing an arc u -> v with all cross orientations, the exact
+     equality H(U) = H(A) + H(B) - 1 occurs for at least one pair other than two triangles, and every such pair attains
+     equality in the path-splice bound (every Hamiltonian path of U restricts to Hamiltonian paths of A and B).

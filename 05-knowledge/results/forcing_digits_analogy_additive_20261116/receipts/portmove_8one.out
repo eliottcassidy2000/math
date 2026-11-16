@@ -1,0 +1,11 @@
+P107-HIT charge=0 base=1111111111111111111111111111 root=7 (H,E,O,g)=(1,0,1,1) a=0 -> masks cx=64 cy=0 o=0 newroot=6 (H',E',O',g')=(3,1,2,1)
+P107-HIT charge=0 base=1111111111111111111111111111 root=7 (H,E,O,g)=(1,0,1,1) a=0 -> masks cx=64 cy=0 o=0 newroot=7 (H',E',O',g')=(3,1,2,1)
+P107-HIT charge=0 base=1111111111111111111111111111 root=7 (H,E,O,g)=(1,0,1,1) a=0 -> masks cx=64 cy=0 o=0 newroot=8 (H',E',O',g')=(3,1,2,1)
+P107-HIT charge=4 base=1111111111111111011111111101 root=6 (H,E,O,g)=(15,9,10,1) a=4 -> masks cx=228 cy=0 o=0 newroot=6 (H',E',O',g')=(35,19,24,5)
+P107-HIT charge=-2 base=1111111110101110111111111101 root=5 (H,E,O,g)=(81,39,50,11) a=-2 -> masks cx=250 cy=0 o=0 newroot=5 (H',E',O',g')=(161,79,98,19)
+P107-HIT charge=6 base=1111111111011101011111111101 root=5 (H,E,O,g)=(71,38,43,5) a=6 -> masks cx=246 cy=0 o=0 newroot=5 (H',E',O',g')=(149,77,92,15)
+P107-HIT charge=8 base=1101111111111111011111111101 root=6 (H,E,O,g)=(51,29,34,5) a=8 -> masks cx=228 cy=0 o=0 newroot=6 (H',E',O',g')=(111,59,76,17)
+P107-HIT charge=16 base=1101101110111111111111111101 root=6 (H,E,O,g)=(115,65,78,13) a=16 -> masks cx=225 cy=0 o=0 newroot=6 (H',E',O',g')=(247,131,168,37)
+P107-HIT charge=0 base=1101101110111111111011100111 root=4 (H,E,O,g)=(255,127,150,23) a=0 -> masks cx=253 cy=0 o=0 newroot=4 (H',E',O',g')=(511,255,292,37)
+P107-HIT charge=4 base=1111111101101111111111111101 root=6 (H,E,O,g)=(27,15,18,3) a=4 -> masks cx=226 cy=0 o=0 newroot=6 (H',E',O',g')=(59,31,40,9)
+order 8: 6880 classes, 3571 ready roots; extensions (<= 2 vertices) with H' = 2H + 1 + a: 522 (root-independent count); of the (extension, new root) pairs: ready 724, same charge 35, both (P107) 10
