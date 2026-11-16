@@ -1,0 +1,4 @@
+composition law  cut(C1 -> C2) = h2 cut1 + h1 cut2 + b_e a_e + b_o a_o,  h = h1 h2,  G = G1 (x) G2 by parity: failures 0
+X = 100000: two-tape bank reaches 5787 distinct odd numbers (11.57% of the odd numbers; 6117 presentations); with the upper tape only: 1983 (3.97%)
+X = 1000000: two-tape bank reaches 71340 distinct odd numbers (14.27% of the odd numbers; 77160 presentations); with the upper tape only: 19569 (3.91%)
+X = 10000000: two-tape bank reaches 843577 distinct odd numbers (16.87% of the odd numbers; 931405 presentations); with the upper tape only: 195708 (3.91%)

@@ -1,0 +1,45 @@
+# blocks of order 4: 4
+V1 upper tape, u1=0: longest synchronised bank 1 (cut values 0..0; H(C) = 1; key 0 0 0 0); block: 14 12 8 0 ; patterns: 15
+   histogram (bank length: blocks): 1:4
+V2 upper tape, any word: longest synchronised bank 1 (cut values 0..0; H(C) = 1; key 0 0 0 0); block: 14 12 8 0 ; patterns: 15
+   histogram (bank length: blocks): 1:4
+V3 two tapes, u1=z1=0: longest synchronised bank 1 (cut values 0..0; H(C) = 1; key 0 15 0 0); block: 14 12 8 0 ; patterns: 15
+   histogram (bank length: blocks): 1:4
+V4 two tapes, any words: longest synchronised bank 1 (cut values 0..0; H(C) = 1; key 0 0 8 7); block: 14 12 8 0 ; patterns: 15
+   histogram (bank length: blocks): 1:4
+# blocks of order 5: 12
+V1 upper tape, u1=0: longest synchronised bank 2 (cut values 9..10; H(C) = 13; key 32 0 0 0); block: 22 12 24 17 2 ; patterns: 26 28
+   histogram (bank length: blocks): 1:8 2:4
+V2 upper tape, any word: longest synchronised bank 2 (cut values 9..10; H(C) = 13; key 19 13 0 0); block: 22 12 24 17 2 ; patterns: 26 28
+   histogram (bank length: blocks): 1:10 2:2
+V3 two tapes, u1=z1=0: longest synchronised bank 2 (cut values 13..14; H(C) = 15; key 42 63 0 0); block: 6 12 24 17 3 ; patterns: 14 13
+   histogram (bank length: blocks): 1:11 2:1
+V4 two tapes, any words: longest synchronised bank 2 (cut values 13..14; H(C) = 15; key 24 18 36 27); block: 6 12 24 17 3 ; patterns: 14 13
+   histogram (bank length: blocks): 1:11 2:1
+# blocks of order 6: 56
+V1 upper tape, u1=0: longest synchronised bank 2 (cut values 8..9; H(C) = 9; key 25 0 0 0); block: 46 60 56 48 33 0 ; patterns: 45 58
+   histogram (bank length: blocks): 1:41 2:15
+V2 upper tape, any word: longest synchronised bank 2 (cut values 28..29; H(C) = 13; key 32 32 0 0); block: 62 44 24 48 34 4 ; patterns: 53 57
+   histogram (bank length: blocks): 1:49 2:7
+V3 two tapes, u1=z1=0: longest synchronised bank 2 (cut values 37..38; H(C) = 15; key 84 183 0 0); block: 62 12 24 48 34 6 ; patterns: 15 45
+   histogram (bank length: blocks): 1:53 2:3
+V4 two tapes, any words: longest synchronised bank 2 (cut values 37..38; H(C) = 15; key 42 42 96 87); block: 62 12 24 48 34 6 ; patterns: 15 45
+   histogram (bank length: blocks): 1:53 2:3
+# blocks of order 7: 456
+V1 upper tape, u1=0: longest synchronised bank 3 (cut values 177..179; H(C) = 137; key 604 0 0 0); block: 78 92 56 112 97 3 36 ; patterns: 105 78 114
+   histogram (bank length: blocks): 1:388 2:66 3:2
+V2 upper tape, any word: longest synchronised bank 3 (cut values 73..75; H(C) = 29; key 81 81 0 0); block: 126 108 88 48 98 68 8 ; patterns: 117 103 79
+   histogram (bank length: blocks): 1:429 2:26 3:1
+V3 two tapes, u1=z1=0: longest synchronised bank 2 (cut values 79..80; H(C) = 15; key 168 423 0 0); block: 126 124 24 48 96 68 12 ; patterns: 79 91
+   histogram (bank length: blocks): 1:449 2:7
+V4 two tapes, any words: longest synchronised bank 2 (cut values 79..80; H(C) = 15; key 84 84 216 207); block: 126 124 24 48 96 68 12 ; patterns: 79 91
+   histogram (bank length: blocks): 1:449 2:7
+# blocks of order 8: 6880
+V1 upper tape, u1=0: longest synchronised bank 3 (cut values 917..919; H(C) = 407; key 4136 0 0 0); block: 2 56 51 85 225 201 135 15 ; patterns: 84 140 200
+   histogram (bank length: blocks): 1:6427 2:448 3:5
+V2 upper tape, any word: longest synchronised bank 3 (cut values 177..179; H(C) = 137; key 741 604 0 0); block: 6 96 26 19 35 77 29 127 ; patterns: 43 77 83
+   histogram (bank length: blocks): 1:6742 2:135 3:3
+V3 two tapes, u1=z1=0: longest synchronised bank 2 (cut values 192..193; H(C) = 175; key 518 2765 0 0); block: 0 29 57 113 225 195 135 15 ; patterns: 235 125
+   histogram (bank length: blocks): 1:6852 2:28
+V4 two tapes, any words: longest synchronised bank 2 (cut values 192..193; H(C) = 175; key 284 234 1470 1295); block: 0 29 57 113 225 195 135 15 ; patterns: 235 125
+   histogram (bank length: blocks): 1:6862 2:18

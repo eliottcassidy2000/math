@@ -1,0 +1,5 @@
+seed [22, 44, 24, 49, 34, 5] 23 : h = 45 G = [216, 216] a = (72, 57) b = (144, 114) cut = 45 ; H(C + x) = 135
+seed [38, 28, 24, 49, 33, 6] 39 : h = 45 G = [216, 216] a = (72, 57) b = (144, 114) cut = 46 ; H(C + x) = 137
+seed [38, 28, 24, 49, 33, 6] 23 : h = 45 G = [216, 216] a = (72, 57) b = (144, 114) cut = 47 ; H(C + x) = 139
+two-tape bank: 40 random tape pairs checked by brute force (orders up to 15), mismatches: 0
+example: A = 5, B = 6 -> 15573 and the next two odd numbers

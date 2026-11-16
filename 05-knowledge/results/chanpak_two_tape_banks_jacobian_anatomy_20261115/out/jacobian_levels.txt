@@ -1,0 +1,9 @@
+det JF = -2 ; F3 = x*l: True
+F = Psi o tau: True
+det J Psi = 2*w ; det J tau = -x
+inverse of tau: x = 1/w, y = s - w, z = -c*w**3 - 3*s*w + 5*w**2
+c s^3 - 2 s^2 + b s - 2a on the image: 0
+Legendre family Jacobian: 2*w
+on x = 0: [4*y**2 + z, y, 0]
+on l = 0: [(v + 1)*(v + 2)/x**2, 2*(2*v + 3)/x, 0]
+planar ansatz, quadratic r: second component polynomial: True ; first component = -gamma**2*rho*x**6*y**2/2 - gamma*p0*rho*x**3*y - p0**2*rho/2 + rho1 + 1/(2*rho*x**2)
