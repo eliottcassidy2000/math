@@ -1,0 +1,9 @@
+# wave 54 receipts (mac-mini-2026-11-16-grammar)
+## w54_grammar.c 10 3000
+after level 8: frontier 1; first odd miss (besides 7, 21): 11; misses <= 3000: 26
+after level 9: frontier 0; first odd miss (besides 7, 21): 11; misses <= 3000: 26
+odd misses <= 3000: 7 11 13 21 35 43 47 63 67 71 113 151 189 271 331 533 739 953 967 1139 1801 2059 2167 2231 2603 2695 2809 2903
+## w54_grammar.c 12 3000
+after level 10: frontier 1; first odd miss (besides 7, 21): 11; misses <= 3000: 16
+after level 11: frontier 0; first odd miss (besides 7, 21): 11; misses <= 3000: 16
+odd misses <= 3000: 7 11 13 21 35 43 47 63 67 71 113 151 189 271 331 533 739 967

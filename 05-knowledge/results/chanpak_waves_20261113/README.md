@@ -5017,6 +5017,79 @@ end, a composite right source, and the base A is read only through (H(A), r_A, s
 
 Chan–Pak remains OPEN.
 
+## Wave 54: the strong-tailed grammar alone falls short at atoms; 6, 63 and 756·2^s − 33
+
+Session mac-mini-2026-11-16-grammar. Owner prompt:
+- test whether strong-tailed near-joins alone reach every count;
+- 2x + 1 and its sixth value 63, the first that adds no new prime; the parameters {−7/4, 1/4, −5/4}; rational
+  6-cycles of x² + c;
+- 6, 63 and the components of 756·2^s − 33;
+- a physical two-count profile for an arbitrary target;
+- the 15 Petersen moves and the 15 Ogg primes.
+
+**Credit.** The Petersen-triple, Ogg 6 + 5 + 4 (levels 1, 2, 6), quintile and target-band statements are from the
+concurrent [first25_spread_target_returns_20261116](../first25_spread_target_returns_20261116/README.md):
+- the 15 Petersen moves are the five isotropic triples (the five lines of a 2-dimensional space over F_4);
+- three 9-vertex seeds compile every odd target in 756·2^s − 33 + {0, 2, 4}, s ≥ 2, with a shared near-sink response.
+
+Also: nonzero_preparation_20261103 (PREPARED_FOUR: (H, F) = (756·2^k − 83, 756·2^k + 51)) and HYP-9453.
+Script `scripts/w54_grammar.c`; output `scripts/w54_receipts.txt`.
+
+### §1. Do strong-tailed near-joins alone reach every count? No (FINITE-EXACT within the caps)
+
+Generate recursively from a single vertex with two moves:
+- **pad:** add a sink below everything;
+- **tip(t₀, C):** form (T ⇒ C) + t, where t beats only t₀ and C is one of the 9 strong cores: a single vertex, C3, the
+  strong 4-tournament, or one of the six strong 5-tournaments.
+
+Counts come from the exact formula of wave 53, with every child checked against a direct count. Bases are expanded up
+to order 12 and deduplicated by their register multiset. The odd counts ≤ 3000 never reached are:
+
+7, 11, 13, 21, 35, 43, 47, 63, 67, 71, 113, 151, 189, 271, 331, 533, 739, 967.
+
+The misses at or below 300 are identical with caps 10 and 12; the total up to 3000 drops from 26 misses to 18.
+- Apart from the holes 7 and 21, every miss except 189 and 533 is an atom of the count monoid: the primes 11, 13, 43,
+  47, 67, 71, 113, 151, 271, 331, 739 and 967, and the 7-lane atoms 35 and 63.
+- 189 = 3·63 and 533 = 13·41 are composites built from atoms the grammar loses.
+- HYP-9453's near-joins with arbitrary bases do reach 35, 43, 63, 71, …. So what the recursion loses is base
+  diversity: a grammar whose bases are themselves grammar-made becomes too thin at the atoms.
+- This answers the owner's "what escapes must recur to the base" literally. Here the escaped information does not
+  recur, because the bases that would carry it are never generated.
+
+### §2. 6, 63 and 756·2^s − 33 (arithmetic; readings ANALOGY)
+
+- **2x + 1 and Zsigmondy.** Iterating 2x + 1 from 0 gives the Mersenne numbers 2^n − 1. The sixth, 63 = 7·9, is
+  Zsigmondy's exception: it has no prime that did not already divide an earlier term. In the count monoid 63 is a
+  sporadic atom (wave 48), and here it is one of the grammar's misses.
+- **The progression.** 756 = 4·189 = 4·H(P_7) = 12·63 = 2²·3³·7, and 33 = 2^5 + 1. So 756·2^s − 33 = 189·2^(s+2) − 33.
+  The concurrent bands are the dyadic multiples of the Paley count, shifted by the Fermat-type number 33.
+- **x² + c.** The three parameters are rational parabolic points on the real axis:
+  - 1/4 is the cusp, where the fixed point has multiplier 1;
+  - −5/4 is where the 2-cycle has multiplier −1 and doubles to period 4;
+  - −7/4 is where the real 3-cycle is born; there the 2-cycle {1/2, −3/2} is rational.
+- **Rational cycles.** x² + c has rational cycles of lengths 1, 2 and 3 (for example the 3-cycle at c = −29/16). It has
+  none of length 4 (Morton) or 5 (Flynn–Poonen–Schaefer), and none of length 6 assuming BSD (Stoll). So 6 is again the
+  first open length, as for 2^6 − 1. ANALOGY only.
+- **Two-count profile for an arbitrary target.** The physical device on file is the concurrent three-way selector on
+  the bands above. A single-base two-count profile for every target is not found here; wave 52's one-base window 125/127
+  is the only new instance.
+
+### §3. The 15 Ogg primes (NUMEROLOGY)
+
+The grammar's misses at or below 71 that are Ogg primes are 11, 13, 47 and 71; 43 and 67 are not Ogg primes. The
+concurrent packet already records that "the shared 15 with Ogg is not an identification". No mechanism is claimed.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| the recursive strong-tailed grammar misses 7, 11, 13, 21, 35, 43, 47, 63, 67, 71, 113, 151, 189, 271, 331, 533, 739, 967 below 3000 | FINITE-EXACT (bases to order 12; register-multiset deduplication) |
+| apart from 7 and 21, all misses except 189 = 3·63 and 533 = 13·41 are atoms | arithmetic |
+| 756 = 4·H(P_7) = 12·63; 33 = 2^5 + 1; 63 is Zsigmondy's exception | arithmetic |
+| x² + c parabolic parameters and rational-cycle lengths | known results (Morton; Flynn–Poonen–Schaefer; Stoll under BSD); link ANALOGY |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
