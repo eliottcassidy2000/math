@@ -12,9 +12,10 @@ Start at H27 with rows (62,124,120,112,32,64,17), where bit j
 of row i indicates i→j. When adding one vertex, give its outgoing
 mask in the old vertex labels and complement its contacts in
 the other rows. Apply the following steps to a *single* evolving
-witness, retaining all vertices and flipping at most one old arc
-per step. Induced extension alone is known to be impossible only
-at the 53→105 step among these claims.
+witness, retaining all vertices. A single reversal suffices at
+each step after the first, through 833; the displayed move to
+1665 uses two. Only for 53→105 is a reversal proved necessary
+over all choices of tournament witness.
 
 | New H | Old arc to reverse | New outgoing mask |
 |--:|:--|--:|
@@ -23,6 +24,7 @@ at the 53→105 step among these claims.
 | 209 | 2–3 | 208 |
 | 417 | 3–8 | 656 |
 | 833 | 4–7 | 692 |
+| 1665 | 0–6 and 2–5 | 4084 |
 
 A different H105 seed, rows (6,12,24,49,99,71,15,383,127),
 continues to 209,417,833,1665 by successive arcs
