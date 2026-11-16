@@ -43,14 +43,15 @@ component — the strong floor `f(10) = 125`):
 
 - **digit 1 (the tower gives `3h + 2`) is available at some order iff some strong realiser has a vertex with
   `B_t ∈ {h + 1, (h + 1)/2, (h + 1)/4, …}`;**
-- digit 0 and digit 2 are available iff some strong realiser has `B_t = h` resp. `B_t = h + 2` (odd numbers are not
-  halved);
+- digit 2 is available iff some strong realiser has `B_t = h + 2` (odd numbers are not halved); **digit 0 is always
+  available at some order** — the sink `s` of `S → s` has `B_s = h` (MISTAKE-776; the column "digit 0" of §3 refers to the
+  vertices of strong realisers only);
 - a rooted doubling child `2h − 1` (charge 0) exists at some order iff some strong realiser has `a_t = 0` or
   `B_t = (h − 1)/2^k` for some `k ≥ 1`.
 
 ## 3. The exact table for `h < 125` (FINITE-EXACT, strong realisers of orders ≤ 9)
 
-The table below (receipt `forcing_table.out`; strong realisers of orders 3–9 cover every count below the strong floor `f(10) = 125`) gives, for each count `h`, whether a strong realiser has a vertex with `B_t = h` (digit 0), with `2^k B_t = h + 1` for some `k ≥ 0` (digit 1 at some order, i.e. `3h + 2` tower-forced), with `B_t = h + 2` (digit 2), and whether a rooted doubling child `2h − 1` exists at some order (`a_t = 0` or `2^k B_t = h − 1`), with the first `B`-values.
+The table below (receipt `forcing_table.out`; strong realisers of orders 3–9 cover every count below the strong floor `f(10) = 125`) gives, for each count `h`, whether a strong realiser has a vertex with `B_t = h` (digit 0 among strong vertices; every count has a digit-0 vertex once a sink is padded, MISTAKE-776), with `2^k B_t = h + 1` for some `k ≥ 0` (digit 1 at some order, i.e. `3h + 2` tower-forced), with `B_t = h + 2` (digit 2), and whether a rooted doubling child `2h − 1` exists at some order (`a_t = 0` or `2^k B_t = h − 1`), with the first `B`-values.
 
 | `h` | digit 0 | digit 1 (any order) | digit 2 | rooted doubling | smallest `B_t` of strong realisers |
 |---|---|---|---|---|---|
@@ -118,8 +119,10 @@ The table below (receipt `forcing_table.out`; strong realisers of orders 3–9 c
   twenty-eight; pre-registered P-F refuted on the count, confirmed on 41); the other eighteen primes have a strong realiser
   vertex with `2^k B_t = p + 1`, so `3p + 2` is forced by the tower over the padded realiser. Padding rescued no prime:
   the ten are the primes without a direct digit-1 vertex at order ≤ 9 as well.
-- **Counts with no digit-0 vertex at any order: 11, 13, 47, 67** — exactly the near-join exceptions of HYP-9453 other
-  than the holes and 1 (OBSERVATION, FINITE-EXACT; not explained here).
+- **Counts below 125 none of whose strong realisers has a digit-0 vertex: 11, 13, 47, 67** — exactly the near-join
+  exceptions of HYP-9453 other than the holes and 1. (Corrected per MISTAKE-776: a padded sink is always a digit-0 vertex, so
+  the statement is about strong realisers; the coincidence is explained in klein-2026-11-16-nearjoin: the near-join's new
+  vertex `z` is a digit-0 vertex, so these four primes are never near-join values.)
 - Counts without digit 2: 3, 15, 17, 27, 33, 35, 41, 43, 45, 57, 61, 63, 67, 83, 85, 87, 91, 101, 105, 111, 117, 121.
 - **Counts with no rooted doubling child at any order: 11, 19, 29, 31, 35, 39, 43, 47, 53, 55, 61, 63, 67, 71, 73, 77,
   85, 87, 101, 113** (twenty; P-G refuted on the count). It contains THM-5272's containment failures 11, 29, 35 and the

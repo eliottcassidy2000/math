@@ -2,6 +2,10 @@
 id: HYP-9453
 title: "Toward the completeness of the Hamiltonian-path spectrum (Chan-Pak): (1) the near-join family T' = T -> M_k -> z with the arc z -> t0 reversed, H(T') = h(T) + 2^k B(T, t0), realises every odd number except 1, 7, 11, 13, 21, 47, 67 once the base tournaments are large enough (with bases of order <= 8 it realises every odd number up to 22,227 except those seven); (2) for every attained odd h the set {B(T, t) : H(T) = h} is dense enough that h + 2B sweeps (3h, ...), which would make completeness an induction on windows; (3) every attained odd h >= 15 below the top band of its order is the count of at least two strong tournaments (the strong singletons are 3, 5, 11, 13 only)"
 status: >
+  UPDATE 2026-11-16 (klein-2026-11-16-nearjoin, THM-5263): the seven exceptions are PERMANENT — 11, 13, 47, 67 are never
+  near-join values from any base of any order (every strong realiser of these primes lacks a digit-0 vertex, and the
+  near-join's new vertex z always is one), 7, 21 are holes, 1 is the F_1-point; the conjecture is exactly that nothing
+  else is missed. The dead-end-append family h(B') + B_t(B') with e_t(B') = 0 (k = 0) misses the same seven below 125.
   OPEN (klein-2026-11-02). (1) and (3) are FINITE-EXACT through base order 8 and order 9 respectively; (2) is the
   missing lemma named in the reflection: B(T, t0) counts ordered partitions of T - t0 into a path and a path from t0,
   B >= h(T), and no structural control of the B-sets is known; the pair (h, B) is not a closed state under iteration at

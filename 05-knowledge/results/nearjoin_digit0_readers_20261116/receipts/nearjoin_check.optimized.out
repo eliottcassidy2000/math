@@ -1,0 +1,3 @@
+(1) near-joins checked 1260: formula failures 0, B_z = H failures 0; z's component carries the full count in 1191, not in 69 (of which base T non-strong: 69)
+(2) sigma_u = backward-junction covers: 3610 checks, 0 failures; sole-exit identity sigma_z = e_t0(S - z): 380 checks, 0 failures
+(3) strong (S, u) with a digit-0 vertex u (orders 4-7): 55; H(S) = h(S-u) + 2^k B_t(S-u) for some t, k: 23

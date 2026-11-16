@@ -1,0 +1,8 @@
+formula R_l = H + 2 sum_m C(l-1,m-1) Pi_parity(m) checked directly: 1231 cases, 0 failures
+probes landing exactly on 3H + 2 (n, H, l): [] count 0
+probes landing exactly on 3H + 4: [] count 0
+  l=2: min overshoot R - 3H = 6, median 1038, share with R < 3H + 2: 0.000
+  l=3: min overshoot R - 3H = 24, median 3276, share with R < 3H + 2: 0.000
+  l=4: min overshoot R - 3H = 60, median 7752, share with R < 3H + 2: 0.000
+  l=5: min overshoot R - 3H = 132, median 16704, share with R < 3H + 2: 0.000
+readout gcd of {H, R_2..R_5} equal to H (divisor never broken by these probes): 9 of 396 ; gcd > 1: 166

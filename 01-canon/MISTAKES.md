@@ -25632,3 +25632,12 @@ Lesson: for an extremal quantity write down, next to the number, which side of t
 - **Not affected.** The corollary r ≥ (2q−1)/3, which uses one class only; the one- and two-vertex sections (the former is sharpened to p+q+7 by THM-5312 (A)).
 
 Lesson: when two product classes are intersected, list every coordinate left free in both (here the packs inside the shared set). Test the inequality on the smallest configuration where every coordinate is nontrivial. Here that configuration is order 9, one more than the order that had been checked.
+
+## MISTAKE-776 (2026-11-16, klein-2026-11-16-force; `05-knowledge/results/forcing_digits_analogy_additive_20261116/FORCING.md` §2–3, THM-5260 (C), the close-out letter and the results INDEX row; found by the same agent in the next session, klein-2026-11-16-nearjoin) -- a padding vertex was left out of an "at any order" statement
+
+- **The error.** The packet derived the all-order digit spectrum of a count `h` from the vertices of its strong realisers `S` under padding (`σ_t(S → TT_k) = 2^k B_t(S) − h`) and concluded "digit 0 at some order iff a strong realiser has a vertex with `B_t = h`", listing 11, 13, 47, 67 as "counts with no digit-0 vertex at any order". The padding vertices themselves were forgotten: the sink `s` of `S → s` has `B_s(S → s) = h(S)` (the only path starting at a sink is the singleton), so **every count has a digit-0 vertex at some order**, and the height-two tower at the padded sink gives `3h` for every `h`. The other padding vertices have digits `h(2^j − 1)` (suffix chain) or at least `h` (a source), so the digit-1, digit-2 and rooted-doubling columns of the table are unaffected.
+- **Corrected statement.** 11, 13, 47, 67 are the counts below 125 none of whose *strong* realisers has a digit-0 vertex (exhaustive, strong realisers of orders ≤ 9). This is the version that matters: the near-join `T → M_k → z` (`z → t_0`) has `B_z = H`, so every prime near-join value has a strong realiser with a digit-0 vertex (klein-2026-11-16-nearjoin), and the four primes are therefore never near-join values from any base.
+- **Corrected** in FORCING.md §2–3 and THM-5260 (C) (2026-11-16); the letter of klein-2026-11-16-force stands with this erratum.
+- **Not affected.** THM-5260 (A), (B); the tower criterion for digits 1 and 2; the rooted-doubling column; THM-5261.
+
+Lesson: when a statement is made "at any order" through padding, enumerate the padding vertices as well as the inherited ones; the simplest new vertex (a sink) is exactly the one that satisfies the extremal identity.

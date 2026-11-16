@@ -1,0 +1,16 @@
+Pre-registered predictions, klein-2026-11-16-nearjoin, written 2026-11-16 before any run of this session.
+Context: the near-join T' = T -> M_k -> z with z -> t_0 reversed has H(T') = h + 2^k B_{t_0}(T) and (cited) B_z(T') = H(T').
+The previous packet's claim "no digit-0 vertex at any order for 11, 13, 47, 67" is being corrected: a padded sink always has
+B = h; the true statement is about strong realisers.
+
+P-1 (digit-0 vertex of the near-join)  For every base (T, t_0) of order <= 6 and k <= 3, B_z(T') = H(T') (re-verification), and
+     z lies in the strong component of T' that carries the whole count whenever the sub-tournament of T reachable from t_0
+     is all of T (in particular whenever T is strong); so every PRIME near-join value has a strong realiser with a digit-0 vertex.
+P-2 (two identities)  For every tournament of order <= 7 and vertex u: sigma_u = B_u - H = the number of ordered two-path
+     covers (P_1, P_2) with P_2 starting at u and u beating the last vertex of P_1; and for a vertex z of out-degree 1 with
+     out-neighbour t_0, sigma_z = e_{t_0}(S - z).
+P-3 (converse fails structurally)  Among strong tournaments of order <= 7 with a digit-0 vertex u, fewer than half have
+     H(S) = h(S - u) + 2^k B_t(S - u) for some vertex t of S - u and some k >= 1 (the base S - u does not in general
+     reproduce S's count as a near-join), although every count below 125 other than 11, 13, 47, 67 is a near-join value.
+P-4 (permanence)  Consequently 11, 13, 47, 67 are never near-join values from ANY base (all orders), because every strong
+     realiser of these primes (orders <= 9, exhaustive by the strong floor) lacks a digit-0 vertex.
