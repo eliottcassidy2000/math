@@ -1,4 +1,4 @@
-from itertools import combinations
+from itertools import combinations,product
 def dp(r,root=None):
  n=len(r);N=1<<n
  D=[[0]*n for _ in range(N)]
@@ -39,6 +39,8 @@ def spacer(a,b,m):
  x,y=one(a),op(one(b))
  r=join(join(x,m),y)
  return flip(r,[(0,len(x)+len(m))])
+def restrict(t,vs):
+ return tuple(sum(((t[u]>>v)&1)<<i for i,v in enumerate(vs)) for u in vs)
 def use(r,i,j):
  A=dp_end(r);B=dp_end(op(r));N=(1<<len(r))-1
  return sum(a[i]*B[N^s][j] for s,a in enumerate(A) if s>>i&1 and not(s>>j&1))
@@ -55,6 +57,8 @@ def dp_end(r):
 def main():
  a=(4,5,72,35,15,87,155,63);b=(4,5,72,99,47,71,147,63)
  assert diff(a,b)==((3,6),(4,5))
+ assert [prof(t,2) for t in (a,flip(a,((3,6),)),flip(a,((4,5),)),b)]==[
+  (125,9,60,69),(141,13,66,79),(105,9,50,59),(127,11,60,71)]
  for k in range(5):
   assert prof(a,2)==(5+120*2**k,9,60*2**k,9+60*2**k)
   assert prof(b,2)==(7+120*2**k,11,60*2**k,11+60*2**k)
@@ -89,5 +93,30 @@ def main():
   assert dp(spacer('100010','',tt(k)))[-1]==27+35*2**k
  for t,m in (((4,9,66,21,39,15,187,63),(4,1)),((16,9,11,49,70,23,175,63),(2,0))):
   assert dp(t)[-1]==127 and use(t,*m)==27
+ assert prof((256,1,267,51,359,199,399,287,42),8)==(377,33,235,268)
+ assert prof((2,4,25,307,99,199,143,31,247),2)==(379,33,235,268)
+ aa=(4,5,72,51,39,455,155,31,223);bb=(4,5,72,179,103,455,139,23,223)
+ assert diff(aa,bb)==((3,7),(4,6))
+ assert prof(aa,2)==(377,23,186,209) and prof(bb,2)==(379,29,186,215)
+ T=(2,64,11,19,39,79,157,63)
+ assert dp(T)[-1]==127 and dp(restrict(T,(0,1,2,3,5,6,7)))[-1]==27 and use(T,5,3)==27
+ for T,rows in (((4,5,72,35,15,87,155,63),[(31,9,17,22),(65,9,30,39)]),
+                ((4,5,72,99,47,71,147,63),[(33,11,17,24),(67,11,30,41)]),
+                (aa,[(89,23,51,65),(191,23,93,116)]),
+                (bb,[(91,29,51,71),(193,29,93,122)])):
+  for j,profile in ((2,rows[0]),(1,rows[1])):
+   assert T[j-1]==(4 if j==1 else 5)
+   u=restrict(T,range(j,len(T)))
+   assert prof(u,2-j)==profile
+   assert adjoin(u,1<<(2-j))==restrict(T,tuple(range(j,len(T)))+(j-1,))
+ Q=(62,124,120,112,32,64,17)
+ assert dp(Q)[-1]==27
+ u,v=adjoin(Q,54),adjoin(Q,100)
+ assert (dp(u)[-1],dp(v)[-1])==(125,127)
+ assert diff(u,v)==((1,7),(4,7),(6,7))
+ for u,v,w in product((0,1),repeat=3):
+  cut=46+46*u-18*v+4*w-25*u*v-6*u*w-5*v*w
+  m=(1<<2)|(1<<5)|(u<<1)|(v<<4)|(w<<6)
+  assert dp(adjoin(Q,m))[-1]==27+2*cut
  print('Physical 125/127 +2 windows, both centered trims, slope-100 lower host, spacer family, and literal 100+27 path pools verified.')
 if __name__=='__main__':main()
