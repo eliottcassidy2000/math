@@ -27,6 +27,8 @@ def run():
             cycles=[(1<<a)|(1<<b)|(1<<c) for a,b,c in tri
                     if (rows[a]>>b&1)==(rows[b]>>c&1)!=(rows[a]>>c&1)]
             H=counts(tuple(rows)); hp=H(f)
+            assert hp<=3**len(cycles)
+            assert (hp==3**len(cycles)) == all(not a&b for a,b in combinations(cycles,2))
             for x in range(n):
                 base=f^(1<<x); h=H(base)
                 r,odd=divmod(hp-h,2)
@@ -35,6 +37,11 @@ def run():
                     tau=sum(c&base==c for c in cycles)
                     qmax=max(H(f^c) for c in cycles if c>>x&1)
                     assert tau+(qmax-1)//2<=r
+                    for c in cycles:
+                        if c>>x&1:
+                            q=H(f^c)
+                            qtri=sum(e&(f^c)==e for e in cycles)
+                            assert tau+q-1-qtri<=r
                     if r<=5:hist.setdefault(r,set()).add((h,hp))
     print('Order at most 6, gap pairs:',{k:sorted(v) for k,v in sorted(hist.items())})
     active={}
