@@ -1,0 +1,4 @@
+source  (H,E,O,g) = (163,84,89,5) expected (163,84,89,5) strong=1
+child 0 (H,E,O,g) = (489,252,267,15) expected (489,252,267,15) strong=1
+child 2 (H,E,O,g) = (491,252,267,15) expected (491,252,267,15) strong=1
+child 4 (H,E,O,g) = (493,252,267,15) expected (493,252,267,15) strong=1

@@ -1,0 +1,114 @@
+source n=6 root=5 (H,E,O,g)=(15,11,12,1) X=23 D=-1 strong=1
+d=0 strong=1 masks=0, (H,E,O,g)=(45,70,71,3) X=141 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=16 orient=0
+d=0 strong=0 masks=0, (H,E,O,g)=(45,69,69,3) X=138 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=20 orient=1
+d=0 strong=0 masks=0, (H,E,O,g)=(45,84,84,5) X=168 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=44 orient=1
+d=4 strong=0 masks=0, (H,E,O,g)=(49,63,63,3) X=126 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=52 orient=1
+d=4 strong=0 masks=0, (H,E,O,g)=(49,67,67,5) X=134 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=57 orient=1
+d=4 strong=0 masks=0, (H,E,O,g)=(49,69,69,3) X=138 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=58 orient=1
+d=0 strong=1 masks=8, (H,E,O,g)=(45,92,93,5) X=185 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=8 orient=0
+d=0 strong=1 masks=8, (H,E,O,g)=(45,92,93,5) X=185 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=8 orient=1
+d=0 strong=1 masks=8, (H,E,O,g)=(45,70,71,3) X=141 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=24 orient=1
+d=0 strong=1 masks=8, (H,E,O,g)=(45,70,71,3) X=141 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=28 orient=1
+d=0 strong=1 masks=8, (H,E,O,g)=(45,58,59,3) X=117 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=60 orient=1
+d=0 strong=1 masks=8, (H,E,O,g)=(45,58,59,3) X=117 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=62 orient=1
+d=0 strong=1 masks=16, (H,E,O,g)=(45,70,71,3) X=141 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=1
+d=0 strong=1 masks=16, (H,E,O,g)=(45,39,40,1) X=79 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=60 orient=1
+d=0 strong=1 masks=16, (H,E,O,g)=(45,39,40,1) X=79 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=62 orient=1
+d=0 strong=0 masks=20, (H,E,O,g)=(45,69,69,3) X=138 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=0
+d=0 strong=0 masks=20, (H,E,O,g)=(45,33,36,3) X=69 D=-3 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=63 orient=1
+d=0 strong=1 masks=24, (H,E,O,g)=(45,70,71,3) X=141 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=8 orient=0
+d=0 strong=1 masks=24, (H,E,O,g)=(45,39,40,1) X=79 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=60 orient=1
+d=0 strong=1 masks=24, (H,E,O,g)=(45,39,40,1) X=79 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=62 orient=1
+d=0 strong=1 masks=28, (H,E,O,g)=(45,70,71,3) X=141 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=8 orient=0
+d=0 strong=1 masks=28, (H,E,O,g)=(45,39,40,1) X=79 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=60 orient=1
+d=0 strong=1 masks=28, (H,E,O,g)=(45,39,40,1) X=79 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=62 orient=1
+d=0 strong=0 masks=44, (H,E,O,g)=(45,84,84,5) X=168 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=0
+d=0 strong=0 masks=44, (H,E,O,g)=(45,41,43,5) X=84 D=-2 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=63 orient=1
+d=4 strong=0 masks=52, (H,E,O,g)=(49,63,63,3) X=126 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=0
+d=4 strong=0 masks=52, (H,E,O,g)=(49,30,33,3) X=63 D=-3 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=63 orient=1
+d=4 strong=0 masks=57, (H,E,O,g)=(49,67,67,5) X=134 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=0
+d=4 strong=0 masks=57, (H,E,O,g)=(49,31,36,5) X=67 D=-5 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=63 orient=1
+d=4 strong=0 masks=58, (H,E,O,g)=(49,69,69,3) X=138 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=0
+d=4 strong=0 masks=58, (H,E,O,g)=(49,33,36,3) X=69 D=-3 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=63 orient=1
+d=0 strong=1 masks=60, (H,E,O,g)=(45,58,59,3) X=117 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=8 orient=0
+d=0 strong=1 masks=60, (H,E,O,g)=(45,39,40,1) X=79 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=16 orient=0
+d=0 strong=1 masks=60, (H,E,O,g)=(45,39,40,1) X=79 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=24 orient=0
+d=0 strong=1 masks=60, (H,E,O,g)=(45,39,40,1) X=79 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=28 orient=0
+d=0 strong=1 masks=60, (H,E,O,g)=(45,35,36,1) X=71 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=60 orient=0
+d=0 strong=1 masks=60, (H,E,O,g)=(45,35,36,1) X=71 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=60 orient=1
+d=0 strong=1 masks=60, (H,E,O,g)=(45,33,36,3) X=69 D=-3 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=61 orient=1
+d=0 strong=1 masks=60, (H,E,O,g)=(45,35,36,1) X=71 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=62 orient=1
+d=0 strong=1 masks=61, (H,E,O,g)=(45,33,36,3) X=69 D=-3 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=60 orient=0
+d=4 strong=1 masks=61, (H,E,O,g)=(49,35,40,5) X=75 D=-5 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=61 orient=0
+d=4 strong=1 masks=61, (H,E,O,g)=(49,35,40,5) X=75 D=-5 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=61 orient=1
+d=0 strong=1 masks=62, (H,E,O,g)=(45,58,59,3) X=117 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=8 orient=0
+d=0 strong=1 masks=62, (H,E,O,g)=(45,39,40,1) X=79 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=16 orient=0
+d=0 strong=1 masks=62, (H,E,O,g)=(45,39,40,1) X=79 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=24 orient=0
+d=0 strong=1 masks=62, (H,E,O,g)=(45,39,40,1) X=79 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=28 orient=0
+d=0 strong=1 masks=62, (H,E,O,g)=(45,35,36,1) X=71 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=60 orient=0
+d=0 strong=1 masks=62, (H,E,O,g)=(45,35,36,1) X=71 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=62 orient=0
+d=0 strong=1 masks=62, (H,E,O,g)=(45,35,36,1) X=71 D=-1 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=62 orient=1
+d=0 strong=1 masks=62, (H,E,O,g)=(45,33,36,3) X=69 D=-3 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=63 orient=0
+d=0 strong=0 masks=63, (H,E,O,g)=(45,33,36,3) X=69 D=-3 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=20 orient=0
+d=0 strong=0 masks=63, (H,E,O,g)=(45,41,43,5) X=84 D=-2 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=44 orient=0
+d=4 strong=0 masks=63, (H,E,O,g)=(49,30,33,3) X=63 D=-3 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=52 orient=0
+d=4 strong=0 masks=63, (H,E,O,g)=(49,31,36,5) X=67 D=-5 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=57 orient=0
+d=4 strong=0 masks=63, (H,E,O,g)=(49,33,36,3) X=69 D=-3 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=58 orient=0
+d=0 strong=1 masks=63, (H,E,O,g)=(45,33,36,3) X=69 D=-3 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=62 orient=1
+counts: d=0: 42 (34 strong), d=2: 0 (0 strong), d=4: 14 (2 strong)

@@ -2,6 +2,10 @@
 id: HYP-9862
 title: "One-vertex supermultiplicativity: for induced subtournaments A, B of a tournament with |A n B| <= 1, H(A u B) >= H(A) H(B)"
 status: >
+  PROVED (2026-11-16, klein-2026-11-16-splice, THM-5256: the path splice — merge the two Hamiltonian paths on each side
+  of the shared vertex (insertion argument) and decode by restriction; the general form is H(U) >= sum over orders sigma
+  of A n B of h_A(sigma) h_B(sigma), tight at two triangles on an arc; see
+  05-knowledge/results/path_splice_rows_continuation_20261116/SPLICE.md). Original record follows.
   OPEN (CONJECTURE), klein-2026-11-16-join.
   FINITE-EXACT: every tournament of orders 4-9 and every cover with exactly one shared vertex, no violation
   (218,925,648 instances at order 9; 139,658 equalities). |A n B| = 0 is the classical product bound.
@@ -17,6 +21,8 @@ related:
 ---
 
 # HYP-9862 - the first shared vertex buys nothing
+
+**PROVED by THM-5256 (klein-2026-11-16-splice): splice the Hamiltonian paths, not the odd cycles — the restriction map decodes the image. The second shared vertex buys exactly the order statistics (SPLICE.md §3).**
 
 **Conjecture.** For induced subtournaments A and B with |A ∩ B| ≤ 1, H(A ∪ B) ≥ H(A)·H(B).
 

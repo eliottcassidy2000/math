@@ -1,0 +1,186 @@
+source n=8 root=3 (H,E,O,g)=(15,40,40,9) X=80 D=0 strong=0
+d=0 strong=0 masks=0, (H,E,O,g)=(45,240,240,27) X=480 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=64 orient=0
+d=4 strong=0 masks=0, (H,E,O,g)=(49,176,176,17) X=352 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=104 orient=1
+d=0 strong=0 masks=0, (H,E,O,g)=(45,264,264,27) X=528 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=128 orient=1
+d=4 strong=0 masks=0, (H,E,O,g)=(49,164,164,15) X=328 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=200 orient=1
+d=0 strong=0 masks=0, (H,E,O,g)=(45,312,312,23) X=624 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=226 orient=1
+d=4 strong=0 masks=0, (H,E,O,g)=(49,280,280,19) X=560 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=228 orient=1
+d=0 strong=0 masks=0, (H,E,O,g)=(45,262,262,15) X=524 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=244 orient=1
+d=0 strong=0 masks=0, (H,E,O,g)=(45,240,240,27) X=480 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=253 orient=1
+d=0 strong=0 masks=64, (H,E,O,g)=(45,240,240,27) X=480 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=1
+d=4 strong=0 masks=64, (H,E,O,g)=(49,176,176,17) X=352 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=104 orient=1
+d=0 strong=0 masks=64, (H,E,O,g)=(45,264,264,27) X=528 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=192 orient=0
+d=4 strong=0 masks=64, (H,E,O,g)=(49,164,164,15) X=328 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=200 orient=1
+d=0 strong=0 masks=64, (H,E,O,g)=(45,312,312,23) X=624 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=226 orient=1
+d=4 strong=0 masks=64, (H,E,O,g)=(49,280,280,19) X=560 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=228 orient=1
+d=0 strong=0 masks=64, (H,E,O,g)=(45,262,262,15) X=524 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=244 orient=1
+d=0 strong=0 masks=64, (H,E,O,g)=(45,240,240,27) X=480 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=253 orient=1
+d=4 strong=0 masks=96, (H,E,O,g)=(49,280,280,29) X=560 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=96 orient=0
+d=4 strong=0 masks=96, (H,E,O,g)=(49,280,280,29) X=560 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=96 orient=1
+d=0 strong=0 masks=96, (H,E,O,g)=(45,264,264,27) X=528 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=224 orient=1
+d=4 strong=0 masks=104, (H,E,O,g)=(49,176,176,17) X=352 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=0
+d=4 strong=0 masks=104, (H,E,O,g)=(49,176,176,17) X=352 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=64 orient=0
+d=4 strong=0 masks=104, (H,E,O,g)=(49,88,88,17) X=176 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=254 orient=1
+d=4 strong=0 masks=104, (H,E,O,g)=(49,88,88,17) X=176 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=255 orient=1
+d=0 strong=0 masks=128, (H,E,O,g)=(45,264,264,27) X=528 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=0
+d=0 strong=0 masks=128, (H,E,O,g)=(45,131,133,27) X=264 D=-2 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=254 orient=1
+d=0 strong=0 masks=128, (H,E,O,g)=(45,131,133,27) X=264 D=-2 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=255 orient=1
+d=0 strong=0 masks=192, (H,E,O,g)=(45,264,264,27) X=528 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=64 orient=1
+d=0 strong=0 masks=192, (H,E,O,g)=(45,256,256,27) X=512 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=192 orient=0
+d=0 strong=0 masks=192, (H,E,O,g)=(45,256,256,27) X=512 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=192 orient=1
+d=0 strong=0 masks=192, (H,E,O,g)=(45,256,256,27) X=512 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=224 orient=1
+d=0 strong=0 masks=192, (H,E,O,g)=(45,268,268,25) X=536 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=240 orient=1
+d=0 strong=0 masks=192, (H,E,O,g)=(45,168,168,25) X=336 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=248 orient=1
+d=0 strong=0 masks=192, (H,E,O,g)=(45,191,191,29) X=382 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=250 orient=1
+d=0 strong=0 masks=192, (H,E,O,g)=(45,168,168,25) X=336 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=252 orient=1
+d=4 strong=0 masks=200, (H,E,O,g)=(49,164,164,15) X=328 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=0
+d=4 strong=0 masks=200, (H,E,O,g)=(49,164,164,15) X=328 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=64 orient=0
+d=4 strong=0 masks=200, (H,E,O,g)=(49,82,82,15) X=164 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=254 orient=1
+d=4 strong=0 masks=200, (H,E,O,g)=(49,82,82,15) X=164 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=255 orient=1
+d=0 strong=0 masks=224, (H,E,O,g)=(45,264,264,27) X=528 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=96 orient=0
+d=0 strong=0 masks=224, (H,E,O,g)=(45,256,256,27) X=512 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=192 orient=0
+d=0 strong=0 masks=224, (H,E,O,g)=(45,256,256,27) X=512 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=224 orient=0
+d=0 strong=0 masks=224, (H,E,O,g)=(45,256,256,27) X=512 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=224 orient=1
+d=0 strong=0 masks=224, (H,E,O,g)=(45,268,268,25) X=536 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=240 orient=1
+d=0 strong=0 masks=224, (H,E,O,g)=(45,168,168,25) X=336 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=248 orient=1
+d=0 strong=0 masks=224, (H,E,O,g)=(45,191,191,29) X=382 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=250 orient=1
+d=0 strong=0 masks=224, (H,E,O,g)=(45,168,168,25) X=336 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=252 orient=1
+d=0 strong=0 masks=226, (H,E,O,g)=(45,312,312,23) X=624 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=0
+d=0 strong=0 masks=226, (H,E,O,g)=(45,312,312,23) X=624 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=64 orient=0
+d=0 strong=0 masks=226, (H,E,O,g)=(45,156,156,23) X=312 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=254 orient=1
+d=0 strong=0 masks=226, (H,E,O,g)=(45,156,156,23) X=312 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=255 orient=1
+d=4 strong=0 masks=228, (H,E,O,g)=(49,280,280,19) X=560 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=0
+d=4 strong=0 masks=228, (H,E,O,g)=(49,280,280,19) X=560 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=64 orient=0
+d=4 strong=0 masks=228, (H,E,O,g)=(49,140,140,19) X=280 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=254 orient=1
+d=4 strong=0 masks=228, (H,E,O,g)=(49,140,140,19) X=280 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=255 orient=1
+d=0 strong=0 masks=240, (H,E,O,g)=(45,268,268,25) X=536 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=192 orient=0
+d=0 strong=0 masks=240, (H,E,O,g)=(45,268,268,25) X=536 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=224 orient=0
+d=0 strong=0 masks=240, (H,E,O,g)=(45,195,195,27) X=390 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=250 orient=1
+d=0 strong=0 masks=244, (H,E,O,g)=(45,262,262,15) X=524 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=0
+d=0 strong=0 masks=244, (H,E,O,g)=(45,262,262,15) X=524 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=64 orient=0
+d=0 strong=0 masks=244, (H,E,O,g)=(45,131,131,15) X=262 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=254 orient=1
+d=0 strong=0 masks=244, (H,E,O,g)=(45,131,131,15) X=262 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=255 orient=1
+d=0 strong=0 masks=248, (H,E,O,g)=(45,168,168,25) X=336 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=192 orient=0
+d=0 strong=0 masks=248, (H,E,O,g)=(45,168,168,25) X=336 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=224 orient=0
+d=0 strong=0 masks=248, (H,E,O,g)=(45,120,120,27) X=240 D=0 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=250 orient=1
+d=0 strong=0 masks=250, (H,E,O,g)=(45,191,191,29) X=382 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=192 orient=0
+d=0 strong=0 masks=250, (H,E,O,g)=(45,191,191,29) X=382 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=224 orient=0
+d=0 strong=0 masks=250, (H,E,O,g)=(45,195,195,27) X=390 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=240 orient=0
+d=0 strong=0 masks=250, (H,E,O,g)=(45,120,120,27) X=240 D=0 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=248 orient=0
+d=0 strong=0 masks=250, (H,E,O,g)=(45,127,127,29) X=254 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=250 orient=0
+d=0 strong=0 masks=250, (H,E,O,g)=(45,127,127,29) X=254 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=250 orient=1
+d=0 strong=0 masks=252, (H,E,O,g)=(45,168,168,25) X=336 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=192 orient=0
+d=0 strong=0 masks=252, (H,E,O,g)=(45,168,168,25) X=336 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=224 orient=0
+d=0 strong=0 masks=252, (H,E,O,g)=(45,120,120,27) X=240 D=0 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=254 orient=0
+d=0 strong=0 masks=253, (H,E,O,g)=(45,240,240,27) X=480 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=0 orient=0
+d=0 strong=0 masks=253, (H,E,O,g)=(45,240,240,27) X=480 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=64 orient=0
+d=0 strong=0 masks=253, (H,E,O,g)=(45,120,120,27) X=240 D=0 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=255 orient=1
+d=4 strong=0 masks=254, (H,E,O,g)=(49,88,88,17) X=176 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=104 orient=0
+d=0 strong=0 masks=254, (H,E,O,g)=(45,131,133,27) X=264 D=-2 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=128 orient=0
+d=4 strong=0 masks=254, (H,E,O,g)=(49,82,82,15) X=164 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=200 orient=0
+d=0 strong=0 masks=254, (H,E,O,g)=(45,156,156,23) X=312 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=226 orient=0
+d=4 strong=0 masks=254, (H,E,O,g)=(49,140,140,19) X=280 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=228 orient=0
+d=0 strong=0 masks=254, (H,E,O,g)=(45,131,131,15) X=262 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=244 orient=0
+d=0 strong=0 masks=254, (H,E,O,g)=(45,120,120,27) X=240 D=0 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=252 orient=1
+d=0 strong=0 masks=254, (H,E,O,g)=(45,120,120,27) X=240 D=0 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=255 orient=0
+d=4 strong=0 masks=255, (H,E,O,g)=(49,88,88,17) X=176 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=104 orient=0
+d=0 strong=0 masks=255, (H,E,O,g)=(45,131,133,27) X=264 D=-2 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=128 orient=0
+d=4 strong=0 masks=255, (H,E,O,g)=(49,82,82,15) X=164 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=200 orient=0
+d=0 strong=0 masks=255, (H,E,O,g)=(45,156,156,23) X=312 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=226 orient=0
+d=4 strong=0 masks=255, (H,E,O,g)=(49,140,140,19) X=280 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=228 orient=0
+d=0 strong=0 masks=255, (H,E,O,g)=(45,131,131,15) X=262 D=0 tripled(E,O,g)=0 tripled(X,g)=0
+   cy=244 orient=0
+d=0 strong=0 masks=255, (H,E,O,g)=(45,120,120,27) X=240 D=0 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=253 orient=0
+d=0 strong=0 masks=255, (H,E,O,g)=(45,120,120,27) X=240 D=0 tripled(E,O,g)=1 tripled(X,g)=1
+   cy=254 orient=1
+counts: d=0: 66 (0 strong), d=2: 0 (0 strong), d=4: 26 (0 strong)

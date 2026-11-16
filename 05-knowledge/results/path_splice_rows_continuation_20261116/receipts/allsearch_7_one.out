@@ -1,0 +1,4 @@
+ANY-COMMON 111111111111101111111 root=4 strong=0 (H,E,O,g)=(5,6,6,3)
+ANY-COMMON 111111110111111111111 root=3 strong=0 (H,E,O,g)=(5,12,12,3)
+order 7: 456 tournaments; law D+g: [strong][terminal root] -> (neg, zero, pos): s0t0=(0,0,405) s0t1=(0,116,200) s1t0=(0,0,0) s1t1=(0,251,2220)
+sources with the three digits 3H,3H+2,3H+4 under common tripled (X,g): 0 (0 strong); under tripled (E,O,g): 0; pairs {+2,+4} weak: 0 strict: 0

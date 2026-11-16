@@ -1,0 +1,8 @@
+source n=8 root=7 (H,E,O,g)=(163,84,89,5) X=173 D=-5 strong=1
+d=4 strong=1 masks=124 (H,E,O,g)=(493,260,269,9) X=529 D=-9 tripled(E,O,g)=0 tripled(X,g)=0
+d=4 strong=1 masks=126 (H,E,O,g)=(493,260,269,9) X=529 D=-9 tripled(E,O,g)=0 tripled(X,g)=0
+d=0 strong=1 masks=160 (H,E,O,g)=(489,252,267,15) X=519 D=-15 tripled(E,O,g)=1 tripled(X,g)=1
+d=0 strong=1 masks=208 (H,E,O,g)=(489,252,267,15) X=519 D=-15 tripled(E,O,g)=1 tripled(X,g)=1
+d=4 strong=1 masks=232 (H,E,O,g)=(493,254,269,15) X=523 D=-15 tripled(E,O,g)=0 tripled(X,g)=0
+d=4 strong=1 masks=243 (H,E,O,g)=(493,252,267,15) X=519 D=-15 tripled(E,O,g)=1 tripled(X,g)=1
+counts: d=0: 2 (2 strong), d=2: 0 (0 strong), d=4: 4 (4 strong)

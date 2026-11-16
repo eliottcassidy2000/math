@@ -1,0 +1,59 @@
+masks: [62, 44, 56, 48, 34, 0]
+source n=6 root=3 (H,E,O,g)=(5,6,6,3) X=12 D=0 strong=0
+continuations (X,g) shared by all three digits: [(40, 9), (80, 9)]
+   d=0: 4 extensions, e.g. masks cx=16 cy=62 orient=1 (E,O,g)=(19,21,9) strong=0
+   d=2: 4 extensions, e.g. masks cx=58 cy=62 orient=0 (E,O,g)=(20,20,9) strong=0
+   d=4: 8 extensions, e.g. masks cx=40 cy=56 orient=0 (E,O,g)=(20,20,9) strong=0
+   d=0: 4 extensions, e.g. masks cx=0 cy=16 orient=1 (E,O,g)=(40,40,9) strong=0
+   d=2: 4 extensions, e.g. masks cx=0 cy=59 orient=1 (E,O,g)=(40,40,9) strong=0
+   d=4: 4 extensions, e.g. masks cx=0 cy=47 orient=1 (E,O,g)=(40,40,9) strong=0
+continuations (E,O,g) shared by all three digits: [(40, 40, 9)]
+   d=0: 4 extensions, e.g. masks cx=0 cy=16 orient=1 (E,O,g)=(40,40,9) strong=0
+   d=2: 4 extensions, e.g. masks cx=0 cy=59 orient=1 (E,O,g)=(40,40,9) strong=0
+   d=4: 4 extensions, e.g. masks cx=0 cy=47 orient=1 (E,O,g)=(40,40,9) strong=0
+masks: [62, 60, 8, 48, 36, 4]
+source n=6 root=5 (H,E,O,g)=(5,2,4,3) X=6 D=-2 strong=0
+continuations (X,g) shared by all three digits: [(40, 9)]
+   d=0: 2 extensions, e.g. masks cx=0 cy=4 orient=0 (E,O,g)=(19,21,9) strong=0
+   d=2: 2 extensions, e.g. masks cx=0 cy=46 orient=1 (E,O,g)=(20,20,9) strong=0
+   d=4: 2 extensions, e.g. masks cx=0 cy=58 orient=1 (E,O,g)=(20,20,9) strong=0
+continuations (E,O,g) shared by all three digits: []
+masks: [54, 60, 56, 49, 32, 0]
+source n=6 root=2 (H,E,O,g)=(5,12,12,3) X=24 D=0 strong=0
+continuations (X,g) shared by all three digits: [(80, 9)]
+   d=0: 2 extensions, e.g. masks cx=40 cy=63 orient=1 (E,O,g)=(40,40,9) strong=0
+   d=2: 2 extensions, e.g. masks cx=61 cy=63 orient=0 (E,O,g)=(40,40,9) strong=0
+   d=4: 6 extensions, e.g. masks cx=52 cy=60 orient=0 (E,O,g)=(40,40,9) strong=0
+continuations (E,O,g) shared by all three digits: [(40, 40, 9)]
+   d=0: 2 extensions, e.g. masks cx=40 cy=63 orient=1 (E,O,g)=(40,40,9) strong=0
+   d=2: 2 extensions, e.g. masks cx=61 cy=63 orient=0 (E,O,g)=(40,40,9) strong=0
+   d=4: 6 extensions, e.g. masks cx=52 cy=60 orient=0 (E,O,g)=(40,40,9) strong=0
+masks: [126, 124, 88, 112, 96, 68, 0]
+source n=7 root=4 (H,E,O,g)=(5,6,6,3) X=12 D=0 strong=0
+continuations (X,g) shared by all three digits: [(40, 9), (80, 9)]
+   d=0: 6 extensions, e.g. masks cx=32 cy=124 orient=1 (E,O,g)=(19,21,9) strong=0
+   d=2: 6 extensions, e.g. masks cx=116 cy=124 orient=0 (E,O,g)=(20,20,9) strong=0
+   d=4: 10 extensions, e.g. masks cx=80 cy=112 orient=0 (E,O,g)=(20,20,9) strong=0
+   d=0: 4 extensions, e.g. masks cx=0 cy=32 orient=1 (E,O,g)=(40,40,9) strong=0
+   d=2: 4 extensions, e.g. masks cx=0 cy=118 orient=1 (E,O,g)=(40,40,9) strong=0
+   d=4: 4 extensions, e.g. masks cx=0 cy=94 orient=1 (E,O,g)=(40,40,9) strong=0
+continuations (E,O,g) shared by all three digits: [(40, 40, 9)]
+   d=0: 4 extensions, e.g. masks cx=0 cy=32 orient=1 (E,O,g)=(40,40,9) strong=0
+   d=2: 4 extensions, e.g. masks cx=0 cy=118 orient=1 (E,O,g)=(40,40,9) strong=0
+   d=4: 4 extensions, e.g. masks cx=0 cy=94 orient=1 (E,O,g)=(40,40,9) strong=0
+masks: [126, 108, 120, 112, 98, 64, 0]
+source n=7 root=3 (H,E,O,g)=(5,12,12,3) X=24 D=0 strong=0
+continuations (X,g) shared by all three digits: [(80, 9), (160, 9)]
+   d=0: 4 extensions, e.g. masks cx=80 cy=126 orient=1 (E,O,g)=(40,40,9) strong=0
+   d=2: 4 extensions, e.g. masks cx=122 cy=126 orient=0 (E,O,g)=(40,40,9) strong=0
+   d=4: 8 extensions, e.g. masks cx=104 cy=120 orient=0 (E,O,g)=(40,40,9) strong=0
+   d=0: 6 extensions, e.g. masks cx=0 cy=80 orient=1 (E,O,g)=(80,80,9) strong=0
+   d=2: 6 extensions, e.g. masks cx=0 cy=123 orient=1 (E,O,g)=(80,80,9) strong=0
+   d=4: 6 extensions, e.g. masks cx=0 cy=111 orient=1 (E,O,g)=(80,80,9) strong=0
+continuations (E,O,g) shared by all three digits: [(40, 40, 9), (80, 80, 9)]
+   d=0: 4 extensions, e.g. masks cx=80 cy=126 orient=1 (E,O,g)=(40,40,9) strong=0
+   d=2: 4 extensions, e.g. masks cx=122 cy=126 orient=0 (E,O,g)=(40,40,9) strong=0
+   d=4: 8 extensions, e.g. masks cx=104 cy=120 orient=0 (E,O,g)=(40,40,9) strong=0
+   d=0: 6 extensions, e.g. masks cx=0 cy=80 orient=1 (E,O,g)=(80,80,9) strong=0
+   d=2: 6 extensions, e.g. masks cx=0 cy=123 orient=1 (E,O,g)=(80,80,9) strong=0
+   d=4: 6 extensions, e.g. masks cx=0 cy=111 orient=1 (E,O,g)=(80,80,9) strong=0
