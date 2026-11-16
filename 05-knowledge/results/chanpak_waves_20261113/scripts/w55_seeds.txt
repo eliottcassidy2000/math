@@ -1,0 +1,16 @@
+11: n=5 parents 0 0 1 1
+13: n=5 parents 0 0 1 2
+35: n=7 parents 0 0 1 0 4 0
+43: n=7 parents 0 0 1 0 3 0
+47: n=7 parents 0 0 0 0 1 1
+63: n=8 parents 0 0 0 1 0 0 4
+67: n=7 parents 0 0 1 0 1 4
+71: n=7 parents 0 0 0 1 2 0
+113: n=7 parents 0 0 1 2 0 1
+151: n=8 parents 0 0 0 3 1 0 3
+189: n=8 parents 0 0 0 1 0 2 4
+271: n=8 parents 0 0 1 1 2 2 1
+331: n=8 parents 0 0 1 2 3 1 2
+533: n=9 parents 0 0 0 1 2 4 0 5
+739: n=9 parents 0 0 0 0 0 2 1 2
+967: n=9 parents 0 0 0 2 1 5 2 3

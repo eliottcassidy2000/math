@@ -5090,6 +5090,78 @@ concurrent packet already records that "the shared 15 with Ogg is not an identif
 
 Chan–Pak remains OPEN.
 
+## Wave 55: fresh bases at the atoms complete the grammar (to 43,343); 41/42/43, 63 = 3·21, and the Jacobian dimension profile
+
+Session mac-mini-2026-11-16-seeds. Owner prompt:
+- add fresh bases at the atoms and retest the grammar;
+- merge prior work on 41, 42, 43;
+- 63 = 21·3 and the 7p plane;
+- the planar versus 3D Jacobian conjectures;
+- work toward arbitrary target placement.
+
+Scripts `scripts/w55_*`; output `scripts/w55_receipts.txt`.
+
+### §1. Sixteen fresh bases complete the strong-tailed grammar (FINITE-EXACT within the caps)
+
+Seed wave 54's grammar (pad a sink; tip (T ⇒ C) + t with t beating only t₀) with one-parent witnesses. There is one
+witness for each count the unseeded grammar missed below 3000: 11, 13, 35, 43, 47, 63, 67, 71, 113, 151, 189, 271,
+331, 533, 739 and 967, each on 5–9 vertices (`w55_seeds.txt`).
+- With bases up to order 12, the seeded grammar reaches **every odd number up to 43,343 except 7 and 21**
+  (`w55_seeded_grammar.c`). The first miss, 43,345, and the 474 misses below 100,000 are consistent with the order cap.
+- No atom above 3000 needed a new seed. The 16 bases below 1000 (14 atoms, plus 189 and 533) fed everything else up to
+  43,343.
+- That range is twice the one-parent census at n ≤ 11 (20,405) and half the forest census at order 12 (91,079).
+- **P112 (finite seed bank).** Finitely many fresh bases, all below 1000, plus the two grammar moves realize every odd
+  count except 7 and 21. If true, arbitrary target placement becomes a breadth-first search in this grammar.
+
+### §2. 41, 42, 43 and 63 = 3·21 (merged; arithmetic unless stated)
+
+- **41 and 43** are the two binary children of the hole 21, on either side of the center 42 = 2·21 = 6·7.
+  - 41 is a ready seed and the restart of the row L_5 (THM-5262, inverse_fences).
+  - 41 and 125 are the only counts needing defect 5 (THM-5262).
+  - 125 = 3·41 + 2 and 127 = 3·41 + 4 (session194); 1025 = 25·41.
+  - 43 has neither doubling digit: it is on both of THM-5272's missing −1 and +1 lists. It was also a miss of the
+    unseeded grammar, so it needs a fresh base.
+  - The concurrent ready_restarts packet builds the matched window 41/43.
+- **63 = 3·21 = 7·9.** Both factorizations pass through a hole, so 63 is an atom (F_1 packet: every proper
+  factorization uses 7 or 21).
+  - In the 7p plane (7-adic valuation, 7-free part), the valuation-1 row is missing 7·1 and 7·3. Its atoms are 7p for
+    primes p ≥ 5, together with 63 = 7·3², the square of the hole's cofactor.
+  - So 63 is the hole 21 tripled. Wave 54's grammar missed it and needed a seed.
+
+### §3. Planar versus 3D Jacobian (ANALOGY)
+
+In the repo, the Jacobian conjecture is false in dimension 3 (THM-1300: an explicit counterexample with det −2, plus an
+explicit Dixmier counterexample A₃ → A₃). THM-4727's dimension profile leaves the planar case open.
+
+The analogy with this program's results:
+- **Single-port ("planar") constructions are rigid.** Fixed-root modules have no reusable digit (wave 45), and one-port
+  machines miss most counts (wave 46).
+- **A third direction breaks the rigidity.** Strong tails, moving ports and fresh bases reach full coverage, much as the
+  extra dimension breaks the Jacobian conjecture in dimension 3.
+
+No mathematical link is claimed.
+
+### §4. Toward arbitrary target placement
+
+- **Composites.** A target N factors into atoms: the primes other than 7, the products 7p, 63 and 343. Ordinal sums
+  multiply, so composites are placed by placing their atoms (waves 48–49).
+- **Atoms.** Each atom is placed additively, as a child 2h − 1 + a of a smaller base (one-parent growth), or by the
+  strong-tailed formula H(A)·H(C) + 2(r_A·F_e(C) + s_A·F_o(C)).
+- **Status.** The seeded grammar places every odd target up to 43,343 except 7 and 21 (FINITE-EXACT). Placement for
+  every N would follow from P112 together with growth of the order cap. OPEN.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| 16 fresh bases plus the strong-tailed grammar reach every odd number ≤ 43,343 except 7 and 21 | FINITE-EXACT (bases to order 12) |
+| P112: a finite seed bank suffices for all counts | OPEN |
+| 41/43 = children of 21; 43 lacks both doubling ports; 63 = 3·21 is an atom through the holes | arithmetic plus cited results |
+| planar versus 3D Jacobian | ANALOGY |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
@@ -5108,3 +5180,6 @@ Chan–Pak remains OPEN.
 - **P110 (charge covering).** For every odd N >= 23 there is a one-parent tournament T with H(T) <= (2N - 1)/3 (the floor law) and a vertex v
   of charge a_v = N + 1 - 2H(T). With wave 47 §1 this is equivalent to one-parent completeness; aim for an explicit
   covering family of charges at each count.
+- **P112 (finite seed bank).** Finitely many fresh one-parent bases (all below 1000) plus the two strong-tailed grammar moves
+  (pad a sink; tip (T => C) + t with t beating only t0) realize every odd count except 7 and 21 (wave 55: complete to 43,343
+  with 16 seeds and bases up to order 12).
