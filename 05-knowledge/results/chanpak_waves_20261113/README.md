@@ -4248,6 +4248,128 @@ earlier spine vertices, so the state is not finite with one port.
 
 Chan–Pak remains OPEN.
 
+## Wave 47: the two holes from many angles at once — floor-law certificates, X(7), X(8), X(9), F_8 versus F_9, and a proof-constraint ledger
+
+Session mac-mini-2026-11-16-holes. Owner prompt:
+- merge prior work on 7 and 9, octonions and Bott periodicity, and ±1;
+- Carmichael's and Catalan's conjectures;
+- Collatz on the positive and negative integers versus multiplication modulo odd numbers, and what multiplication mod an
+  even number would be;
+- the modular curves X(N): 2g + 1 = 1, 3, 7, 11, 21 for N = 5, …, 9; PSL(2, Z/6) of order 72 = 8·9;
+- "constrain the proof from many angles simultaneously".
+
+Scripts are `scripts/w47_*`, with outputs in `scripts/w47_receipts.txt`.
+
+**Prior and concurrent work (credited, not repeated).**
+- [perpendicular_refinement_20261116](../perpendicular_refinement_20261116/README.md), concurrent: "one fixed point, two
+  converse pairs". It holds the order-six blue-centered 1+2+2 star on the hub C3[TT2, TT2, TT2] (THM-643 frame),
+  which persists at every order 6m, and recovers integer tree distance from upper-half-plane distance on the weighted
+  binary skeleton of collatz_order_geometry_20261116.
+- klein-2026-11-16-hex (THM-5257 packet): tree tournaments, honeycomb rows, three tilings into five solids.
+- THM-5262 (A), the floor law; THM-5272, D(h) = 2h − 1 fails at 11; COLLATZ_ROWS (rows L_c; 7 ∈ L_3, 21 ∈ L_5);
+  THM-5126 (rows full for c ≤ 129).
+
+### §1. The holes are local: floor-law certificates (PROVED reduction; FINITE-EXACT table)
+
+THM-5262 (A) (the floor law) says that adding one vertex gives H′ = H or H′ ≥ (3H + 1)/2.
+- So a count of 21 that comes from adding a vertex starts from H ≤ 13, and a count of 7 from H ≤ 3.
+- In one-parent growth, attaching at a vertex of charge a gives 2H − 1 + a. So 7 needs (H, a) = (1, 6) or (3, 2).
+  21 needs (1, 20), (3, 16), (5, 12), (9, 4), (11, 0) or (13, −4).
+- None of these pairs occurs among one-parent trees with up to 10 vertices (`w47_charges_by_count.c`; the charges
+  in [−200, 200] at counts ≤ 13 are the same at 9 and 10 vertices). For example:
+
+| H | charges seen (n ≤ 10, \|a\| ≤ 200) | needed for 7 | needed for 21 |
+|---|---|---|---|
+| 1 | 0, 2, 4, 8, 16, 32, 64, 128 | 6 | 20 |
+| 3 | 0, 10, 22, 46, 94, 190 | 2 | 16 |
+| 5 | 0, 2, 4, 28, 60, 124 | — | 12 |
+| 9 | −2, 0, 2, 6, 12, 14, 16, 76, 160 | — | 4 |
+| 11 | −2, 2, 4, 8, 16, 90, 190 | — | 0 |
+| 13 | −2, 0, 4, 12, 92, 196 | — | −4 |
+
+- **Star rule (PROVED, from the single-back-arc formula H = 1 + 2^k).** The one-parent trees with H = 1 are exactly
+  the stars. Attaching to leaf i of a star with m leaves gives 1 + 2^(m−i+1), and attaching to the root gives 1. So
+  from count 1 one-parent growth reaches only the row {1} ∪ {1 + 2^k}, which is L_1 of COLLATZ_ROWS, the trivial
+  Collatz cycle (44 checks, `w47_star_rule.py`).
+- The charge at count 11 never being 0 is THM-5272's failure of D(h) = 2h − 1 at 11, seen through the charge.
+
+### §2. Where the holes sit
+
+- **Half-counts and Collatz.** In c = (H − 1)/2 the holes are c = 3 and c = 10. These are the Collatz edge
+  3 → 10 = 3·3 + 1, and 10 → 5 is the half-count of 11, whose doubling 2·11 − 1 = 21 fails. COLLATZ_ROWS already notes
+  that 7 ∈ L_3 and 21 ∈ L_5 are linked by the Syracuse step 3 → 5.
+- **Modular curves (FINITE-EXACT; reading is NUMEROLOGY).**
+
+  | N | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+  |---|---|---|---|---|---|---|---|---|
+  | g(X(N)) | 0 | 1 | 3 | 5 | 10 | 13 | 26 | 25 |
+  | 2g + 1 | 1 | 3 | 7 | 11 | 21 | 27 | 53 | 51 |
+
+  - 2g + 1 lands on {7, 21} only at N = 7 and 9 (checked to N = 2000; `w47_genus.py`).
+  - Both relations hold: g(X(9)) = 2g(X(8)) mirrors 21 = 2·11 − 1, and g(X(9)) = 3g(X(7)) + 1 mirrors 21 = 3·7.
+  - The genera of X(7), X(9), X(8) are 3, 10, 5: the Collatz trajectory 3 → 10 → 5.
+  - *Control:* X_0(N) gives 2g + 1 = 7 at 12 levels and 21 at 3 levels, and X_1(N) hits them at 20, 26 and 28. So the
+    pattern is special to X(N), whose genus increases strictly from N = 6.
+- **Groups.**
+  - |Aut P_7| = 21 = |PSL(2,7)|/8, where 8 is the number of Sylow 7-subgroups.
+  - PSL(2,7) of order 168 is the automorphism group of the Fano plane (the seven imaginary octonion units) and of the
+    Klein quartic X(7).
+  - |PSL(2, Z/6)| = 72 = 8·9 (the flat level), and |PSL(2, F_8)| = 504 = 7·8·9.
+
+### §3. Multiplication mod odd versus mod even, and ±1 (PROVED, elementary)
+
+- **Mod odd q.** Doubling is invertible, and Collatz on the negatives (3x − 1) is conjugate to Collatz on the positives
+  by x ↦ −x. The two coincide mod q exactly when −1 lies in the doubling orbit of 1, that is, when q divides some
+  2^k + 1.
+  - Otherwise the doubling rows (orbits of x ↦ 2x) split into pairs {O, −O}, and choosing one row from each pair is a
+    circulant tournament.
+  - The odd q ≤ 400 for which this works are 7, 23, 31, 47, 49, 71, 73, 79, 89, 103, 127, … (`w47_rows_mod_q.py`).
+  - **7 is the first.** Its rows {1, 2, 4} and {3, 5, 6} are the Paley tournament P_7 and its converse.
+  - **21 = 3·7 fails.** The factor 3 divides 2 + 1, so the row {7, 14} is its own negative.
+- **Mod even.** Doubling is not invertible on Z/2^k. The right analogue is multiplication in the field F_(2^k), whose
+  Frobenius x ↦ x² acts on exponents as doubling mod 2^k − 1 (the cyclotomic cosets).
+  - In F_8 that is doubling mod 7, which returns P_7: the octonion/Fano structure.
+  - In characteristic 2, 3x + 1 = 3x − 1 = x + 1, so the positive and negative Collatz maps collapse into the +1 move.
+  - **Catalan's partner F_9.** Its Frobenius (×3 on exponents mod 8) has the self-negating orbit {2, 6}, so F_9 gives
+    only the undirected Paley graph.
+  - So 8 and 9, the consecutive powers of Catalan's 3² − 2³ = 1, carry exactly "tournament" and "not a tournament".
+    Their neighbours 7 = 8 − 1 and 9 = 8 + 1 are the levels of the holes.
+
+### §4. A proof-constraint ledger (each row is an independent angle on {7, 21})
+
+| angle | constraint on any proof | status |
+|---|---|---|
+| floor law (THM-5262 A) | the holes reduce to finitely many (H, a) checks with H ≤ 13 | PROVED reduction |
+| one-parent charges | the 8 needed (H, a) pairs never occur | FINITE-EXACT, n ≤ 10 |
+| star rule | count 1 feeds only the row 1 + 2^k | PROVED |
+| width-six Horner (wave 44) | N → 3N + 2j, j ≤ 5, misses exactly 7 and 21 | PROVED |
+| fixed-root rigidity, charge principle (wave 45) | no single-port odometer, binary or ternary | PROVED |
+| P107 (wave 46) and the klein PORT_MOVES packet | no single module gives 2h ± 1; no generalised binary odometer at orders 3–6 | PROVED / FINITE-EXACT |
+| one-parent binary cylinder | no {0, 2} cylinder | FINITE-EXACT, n ≤ 8 |
+| one-parent completeness | complete except 7, 21 to 20,405 (n ≤ 11); forest census to 91,079 (order 12) | FINITE-EXACT |
+| rows (THM-5126) | every row 1 + c·2^s with c ≤ 129 is full | PROVED |
+| modular, field and group readings (§2, §3) | the holes sit at the first odd hyperbolic levels and at the first orientable modulus 7 | NUMEROLOGY / ANALOGY |
+
+**What the intersection says about a proof.**
+1. The hole half is local and finite: floor law plus the small (H, a) table.
+2. The existence half cannot be a single-port odometer or a clean binary cylinder (rows 5–7). It must use moving ports
+   and the multiplicity of witnesses: there are (n − 1)! one-parent trees against about 4.4^n counts.
+3. The natural target is a charge-covering lemma (P110 below): every odd N ≥ N_0 equals 2H(T) − 1 + a_v for some
+   one-parent T and vertex v.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| floor-law reduction of the holes to H ≤ 13 | PROVED (from THM-5262 A) |
+| the needed one-parent (H, a) pairs never occur | FINITE-EXACT, n ≤ 10 |
+| star rule: from H = 1 only 1 + 2^k | PROVED; 44 checks |
+| 2g(X(N)) + 1 ∈ {7, 21} only at N = 7, 9; genera 3, 10, 5 form a Collatz path | FINITE-EXACT; reading NUMEROLOGY |
+| 7 is the first odd modulus whose doubling rows orient into a tournament; 21 fails at the factor 3 | PROVED |
+| F_8 gives P_7; F_9 gives only a graph; characteristic 2 merges 3x ± 1 | PROVED; link to {7, 21} ANALOGY |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
@@ -4263,3 +4385,6 @@ Chan–Pak remains OPEN.
   vertices; the complete range grows about 4.4-fold per vertex (wave 46 §5).
 - **P109.** For every d >= 1, the d-parent language (each newborn beats exactly d earlier vertices) misses exactly 7 and
   21. Test d = 2, 3 at n = 10 and d = 4 at n <= 10.
+- **P110 (charge covering).** For every odd N >= 23 there is a one-parent tournament T with H(T) <= (2N - 1)/3 (the floor law) and a vertex v
+  of charge a_v = N + 1 - 2H(T). With wave 47 §1 this is equivalent to one-parent completeness; aim for an explicit
+  covering family of charges at each count.
