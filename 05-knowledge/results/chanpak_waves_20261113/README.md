@@ -5162,6 +5162,81 @@ No mathematical link is claimed.
 
 Chan–Pak remains OPEN.
 
+## Wave 56: the open half of the converse as a midpoint question, and placing large primes
+
+Session mac-mini-2026-11-16-place. Owner prompt:
+- understand the open half of the converse (a near-join rewriting of h(A)h(D) + B·P_D(2));
+- place an arbitrary absolute prime;
+- 8 and 24 across subjects; sphere packing and π^(n/2)/(n/2)!;
+- the Mandelbrot counts 15 and 63; 63 = 2^6 − 1 = 3·21 = 9·7 contains both holes.
+
+Scripts `scripts/w56_*`; output `scripts/w56_receipts.txt`.
+
+### §1. The tail formula and the open half (PROVED; checked on 120 random cases each)
+
+- **Alternating identity.** For every nonempty tournament D, Σ_S (−1)^|S| H(D[S])·H(D[V ∖ S]) = 0. So the even and odd
+  path sums of wave 53 agree (F_e = F_o).
+- **Tail formula.** For a near-join with any tail D, T = (A ⇒ D) + t with t beating only t₀,
+
+      H(T) = h(A)·h(D) + B(A, t₀)·P_D(2),   where P_D(2) = Σ_S H(D[S])·H(D[V ∖ S]).
+
+  A transitive tail of k vertices has h = 1 and P = 2^k, which is HYP-9453's formula. A tail C ⇒ M_j has P = P_C(2)·2^j.
+- **The open half as a midpoint question.** Absorb D into the base, A′ = A ⇒ D, and take its ordinary near-join with
+  k = 1:
+  - by multiplicativity, B(A′, t₀) = B(A, t₀)·P_D(2);
+  - so NJ₁ = h(A)h(D) + 2·B·P_D(2);
+  - hence the strong-tail count is exactly the midpoint (h(A′) + NJ₁)/2.
+
+  For a transitive tail of length k ≥ 2 the midpoint is again a near-join, with tail k − 1. The open half of the
+  converse is therefore: **are near-join counts closed under this midpoint when the tail is strong?** It is the formal
+  "k = 0 near-join over the composite base A ⇒ D". Through 22,227 the answer is yes, since every such count is a
+  near-join count (wave 53). In general it is still implied only by HYP-9453's completeness.
+
+### §2. Placing arbitrary large primes (FINITE-EXACT; each placement checked by a direct count)
+
+The **target equation** is p = h(A) + 2^k·B(A, t₀), with the pair (h, B) looked up in a pool of rooted bases. Strong
+cores C ⇒ M_j are also allowed, giving p = h·h_C + B·P_C·2^j (`w56_place.c`). The pool holds 800,069 distinct pairs from
+one-parent trees on up to 10 vertices.
+
+Every placement found was an ordinary near-join, on 15–19 vertices, and the direct dynamic program agrees in each case:
+
+| prime | h | B | k | order |
+|---|---|---|---|---|
+| 173,429 (random) | 1685 | 10,734 | 4 | 15 |
+| 524,287 = 2^19 − 1 | 1407 | 8170 | 6 | 17 |
+| 999,983 | 2607 | 7792 | 7 | 18 |
+| 1,000,003 | 2243 | 7795 | 7 | 18 |
+| 1,012,079 (random) | 1519 | 7895 | 7 | 18 |
+| 1,496,707 (random) | 2691 | 5836 | 8 | 19 |
+
+The random primes near 10^7 (15,052,309 and 18,779,183) are not placed with this pool. They need larger B or a second
+level, using a near-join output as the next base.
+
+**P113 (iterated placement).** Every prime is h + 2^k·B for a rooted base of size O(log p) reached by at most two levels
+of near-joins. OPEN.
+
+### §3. 8, 24, 15, 63 (known facts; links NUMEROLOGY)
+
+- **Mandelbrot.** For a prime period p, the number of hyperbolic components is 2^(p−1) − 1: 1, 3, 15, 63, 1023 for
+  p = 2, 3, 5, 7, 11. So the 63 period-7 components are counted by the Zsigmondy exception 2^6 − 1 = 3·21 = 9·7, which
+  is divisible by both holes.
+- **Sphere packing.** E8 and the Leech lattice are optimal in dimensions 8 and 24 (Viazovska; Cohn, Kumar, Miller,
+  Radchenko and Viazovska). The unit-ball volume π^(n/2)/(n/2)! at n = 8 is π⁴/24, where 8 and 24 meet.
+- **Earlier repo 24s:** 2^10 − 10^3 = 24, the denominator 2730 of B₂₄, and the Niemeier lattice A₁₂² with 24·13 roots
+  (wave 44).
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| alternating identity; tail formula h(A)h(D) + B·P_D(2); P = 2^k for chains | PROVED (checked on 120 random cases each) |
+| the strong-tail count is the midpoint of h(A ⇒ D) and its k = 1 near-join; the open half is closure under this midpoint | PROVED reformulation; closure OPEN beyond 22,227 |
+| six large primes up to 1.5·10^6, including 2^19 − 1, placed as near-joins and checked by direct counts | FINITE-EXACT |
+| primes near 10^7 need a second level | observed |
+| Mandelbrot 2^(p−1) − 1; sphere-packing dimensions 8 and 24 | known; links NUMEROLOGY |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
@@ -5183,3 +5258,5 @@ Chan–Pak remains OPEN.
 - **P112 (finite seed bank).** Finitely many fresh one-parent bases (all below 1000) plus the two strong-tailed grammar moves
   (pad a sink; tip (T => C) + t with t beating only t0) realize every odd count except 7 and 21 (wave 55: complete to 43,343
   with 16 seeds and bases up to order 12).
+- **P113 (iterated placement).** Every prime p is h + 2^k B for a rooted base of size O(log p) reached by at most two levels
+  of near-joins (wave 56 places primes up to 1.5e6 with one level).
