@@ -1,5 +1,7 @@
 # Target inversion, literal span-3 growth, and conflict graphs
 
+**Update: [the sharp factor 39 is now proved for every span-3 prefix](SHARP_GROWTH.md)**, not only transitive ones. The lower-growth rank certificate and density power saving remain open.
+
 Session 2026-11-16. This packet distinguishes exact construction from residue coverage and a literal lower-growth certificate from the verified thirteen-unit certificate. Chan–Pak remains open.
 
 ## Choose the factors from the actual target
@@ -8,8 +10,8 @@ Session 2026-11-16. This packet distinguishes exact construction from residue co
 
 ## Bounded growth and rank potential
 
-- **Transitive prefixes:** a final vertex can affect only the last six old labels, as all earlier labels are excluded from every odd directed cycle. Exact finite replay proves the uniform **sharp factor 39** on this entire subfamily. The all-prefix factor-39 bound is a separate question on arbitrary nontransitive ribbons.
-- **All literal prefixes, different observable:** an explicit strictly positive row on the 119 raw fragment states has one-step upper growth **39/10**, and dominates H, giving H≤5·3.9^n. The sum of all H readings over extensions of length at most three is another positive row. Uniform one-step growth for H is equivalent to this smoothed readout being uniformly comparable to the actual H on reachable prefixes. The smoothing removes the raw zero but does not establish comparison. [Verified envelopes](POSITIVE_ENVELOPE.md).
+- **Transitive prefixes:** a final vertex can affect only the last six old labels, as all earlier labels are excluded from every odd directed cycle. Exact finite replay proves the uniform **sharp factor 39** on this entire subfamily. [The new tail-deletion proof](SHARP_GROWTH.md) establishes the same sharp bound on arbitrary nontransitive prefixes.
+- **All literal prefixes, different observable:** an explicit strictly positive row on the 119 raw fragment states has one-step upper growth **39/10**, and dominates H, giving H≤5·3.9^n. The sum of all H readings over extensions of length at most three is another positive row. Uniform one-step growth for H is equivalent to this smoothed readout being uniformly comparable to the actual H on reachable prefixes. The new bounded-growth proof supplies that comparison on the actual orbit. [Verified envelopes](POSITIVE_ENVELOPE.md).
 - **Rank state:** exact rational rank witnesses have the same suffix (7,0,2) and rank 3 but take different ranks (3 and 2) when appended with the identical letter 0. A literal cone certificate cannot use only those tags. The smaller thirteen-unit cone does replay exactly. [Status and certificate](RANK_CERTIFICATE_STATUS.md). An equal-length strong alias and a counterexample to transitive cone generation are in [Rank budget and exact tests](RANK_BUDGET.md).
 - **Density:** the cited wave used a spectral-radius lower bound as an upper bound for a word-count inference. Even the repaired, rigorous word-count lower bound does not imply a lower bound on distinct integers without control of collisions. [Exact power-saving criterion](DENSITY_GATE.md). Literal span-3 power-saving density is not established here.
 
