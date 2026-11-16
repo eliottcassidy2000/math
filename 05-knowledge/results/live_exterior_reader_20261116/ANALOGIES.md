@@ -27,7 +27,7 @@ The four fixed edges are a C4; the two free edges are the complementary
 perfect matching of K4. The other complementary matching choices give
 three coordinate charts, not three automatically composable tournament
 moves. This is the precise shared combinatorial object with the
-[old Fibonacci-box note](../../07-reflections/fibonacci-boxes-farey-and-the-k4-matching-triple-opus-20260728.md).
+[old Fibonacci-box note](../../../07-reflections/fibonacci-boxes-farey-and-the-k4-matching-triple-opus-20260728.md).
 
 [Price's very different ternary tree](https://arxiv.org/pdf/0809.4324)
 uses four entries (p−q,q,p,p+q), constrained by two linear identities.
@@ -77,7 +77,7 @@ marked observations recovers an exact target without losing those choices.
 
 ### How much compression can be exact?
 
-The archive's [consumer-complete quotient](../../07-reflections/consumer-complete-quotients-and-natural-addresses-codex-20260902.md)
+The archive's [consumer-complete quotient](../../../07-reflections/consumer-complete-quotients-and-natural-addresses-codex-20260902.md)
 criterion says a summary can discard two states only when the named
 consumer cannot distinguish them. Here a single extra physical read
 makes the criterion sharp. At fixed synchronized seed and address width n,
@@ -93,12 +93,12 @@ sufficient for both observations needs at least n bits on the full
 n-bit family. The associative profile compresses the pairwise
 calculation, not the information content of the distinguishing address.
 
-This follows the [delayed-consumer discussion](../../07-reflections/specialization-before-quotient-and-delayed-consumer-synthesis-codex-20260902.md):
+This follows the [delayed-consumer discussion](../../../07-reflections/specialization-before-quotient-and-delayed-consumer-synthesis-codex-20260902.md):
 choose the contact or hold all relevant phases *before* identifying
-states. The [Rule 30 decorated clock](../../07-reflections/rule30-three-prize-decorated-clocks-and-observer-mass-root-20260824.md)
+states. The [Rule 30 decorated clock](../../../07-reflections/rule30-three-prize-decorated-clocks-and-observer-mass-root-20260824.md)
 makes the same distinction through the discarded inverse-boundary ray,
 which selects a particular seed. In contrast, the
-[A000568 one-tail](../../07-reflections/a000568-the-second-quotient-is-the-one-tail.md)
+[A000568 one-tail](../../../07-reflections/a000568-the-second-quotient-is-the-one-tail.md)
 is universally aggregable for its stated Burnside consumer: the count
 of one-cycles interacts with the rest only through its number of parts.
 Here the two exterior words are not such a freely aggregable tail.
