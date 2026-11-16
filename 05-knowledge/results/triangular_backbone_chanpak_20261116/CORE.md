@@ -61,33 +61,39 @@ induced subtournament. The rough numerical bound for the old count
 is (3r)! by counting only the support of old triangles. This is an
 all-orders result, not a restriction to the known ribbon recipes.
 
-**A growing forbidden band.** In fact H(T)≤6^τ(T). Encode a
-Hamilton path by the relative ordering of each of its directed
-triangles. Call uRv when u→v is in no directed triangle. In
-outneighborhood notation this is exactly N⁺(v)⊂N⁺(u), with
-strict inclusion, so R is a strict partial order. Two permutations
-with the same code agree on all incomparable pairs of R.
-They are therefore related by swaps of adjacent R-comparable
-vertices: bring the desired first vertex leftward, crossing
-only comparable vertices, then induct.
+**A growing forbidden band.** In fact H(T)≤3^τ(T), sharp on
+ordinal sums of directed triangles. Record only the **first**
+vertex on a Hamilton path of each directed triangle. If two paths
+have the same record, strip their common prefix and let their
+distinct next vertices be a,b, with a→b after swapping names.
+In the residual path starting at b, follow the segment towards a.
+It starts in N⁺(a) and ends just before a in N⁻(a), so some
+consecutive edge y→z goes from N⁺(a) to N⁻(a). The triangle
+a→y→z→a records a on the first path and y on the second.
+Contradiction. Thus the record injects the paths into 3^τ choices.
+Equality holds precisely when the triangles are vertex-disjoint.
+Two triangles sharing an arc allow incompatible choices of first
+vertex on the shared pair. Two intersecting at just v, written
+v→a→b→v and v→c→d→v, either give a shared-arc triangle immediately
+if a→d or c→b, or force d→a and b→c. Then whichever way a–c
+points gives d→a→c→d or a→b→c→a, again sharing an original arc.
+Vertex-disjoint triangles are separate SCCs by the triangle
+component characterization below, and factor as claimed.
 
-Rewrite such adjacent swaps only toward the order prescribed
-by R. This terminates by inversion count in any linear extension
-of R. Disjoint rewrites commute; overlapping rewrites are a
-three-term descending chain and both routes reach its ascending
-ordering. Hence it is confluent (or induct on remaining inversion
-count using this local diamond). A Hamiltonian path is already
-irreducible: every adjacent pair follows its tournament arc.
-Thus no two paths have the same triangle code. The 6^τ bound follows. If b is the number of components in
-the graph of directed triangles joined when they share an arc,
-the sharper bound is 6^b·3^(τ−b): introduce the triangles of
-each component in spanning-tree order, and each subsequent
-triangle has one pair already ordered, leaving at most three
-options. Equivalently the code determines an acyclic orientation
-of the graph of all triangle-supported pairs.
+The record has a literal inverse. For each prescribed first
+vertex of a triangle draw precedence arrows from it to the other
+two. Among vertices with no incoming precedence arrow from the
+remaining set, the next vertex of any compatible Hamilton path
+must beat all other such vertices in the tournament. Otherwise
+a different source a beating the actual next b would, by the
+same cut-crossing argument, have an incoming arrow in a residual
+triangle. Peel the unique winner when it exists, checking each
+consecutive tournament arc; reject if the peeling cannot finish.
+This is a ternary certificate with a direct decoder, not merely
+the cardinality bound.
 
 In particular any literal induced extension which increases H
-must add at least 2⌈log₆ H⌉. The forbidden band below a prescribed
+must add at least 2⌈log₃ H⌉. The forbidden band below a prescribed
 large target grows, even if we are free to add arbitrarily many
 vertices. This is a quantitative reason to look for cancellation
 between two reader choices, not a small positive debit from one.
