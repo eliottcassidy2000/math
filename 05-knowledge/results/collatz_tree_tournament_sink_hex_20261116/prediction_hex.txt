@@ -1,0 +1,14 @@
+Pre-registered predictions, klein-2026-11-16-hex, written 2026-11-16 (before any of the runs below).
+
+P-A (larger prefix, sink trick)  Among all rooted tournaments of order <= 6 with two added vertices, and of order 7 with
+     one added vertex, every base whose three digits 3H, 3H+2, 3H+4 share a common complete continuation after a trailing
+     sink (i.e. common (X', g')) has H = 5; no base with H >= 7 occurs.
+P-B (the parity split is the digit's resource)  Among rooted bases of order 6, the fraction having some two-vertex
+     extension of count exactly 3H + 2 is at least twice as large for bases with D = E - O != 0 as for bases with D = 0.
+P-C (three added vertices)  With three added vertices on all rooted bases of order <= 5, the bases whose three digits
+     share a common (X', g') still all have H <= 5.
+P-D (Collatz tree tournament, incomparable pairs oriented later-built -> earlier-built)  For the BFS even-first order,
+     H(T_N) = 1 for N <= 8 and H(T_9) >= 3 (the first cycle 5 -> 32 -> 64 -> 5); at N = 20 the even-first and odd-first
+     orders give different counts, both odd, and both exceed 100.
+P-E (relabeling)  Inflating every node of the first 10 nodes into a transitive block of size 2 multiplies H by a factor
+     that is not a power of two (the tree tournament is not a pure cone).

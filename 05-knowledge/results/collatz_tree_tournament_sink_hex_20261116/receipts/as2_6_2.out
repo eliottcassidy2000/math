@@ -1,0 +1,31 @@
+ANY-COMMON 111111101111111 root=3 (H,E,O,g)=(5,6,6,3) D=0 strictcommon=1
+ANY-COMMON 111111111100111 root=5 (H,E,O,g)=(5,2,4,3) D=-2 strictcommon=0
+ANY-COMMON 110111111111111 root=2 (H,E,O,g)=(5,12,12,3) D=0 strictcommon=1
+order 6, 2 added vertices, 56 tournaments. Table [D==0?][H]: bases, with a 3H+2 extension, with a 3H+4 extension, with a common (X',g') triple
+  D!=0 H=1: 1 1 0 0
+  D!=0 H=3: 6 6 6 0
+  D!=0 H=5: 6 6 6 1
+  D!=0 H=9: 15 12 15 0
+  D!=0 H=11: 6 6 6 0
+  D!=0 H=13: 6 6 6 0
+  D!=0 H=15: 24 0 12 0
+  D!=0 H=17: 12 12 0 0
+  D!=0 H=19: 12 12 12 0
+  D!=0 H=23: 24 24 24 0
+  D!=0 H=25: 12 12 12 0
+  D!=0 H=27: 12 0 0 0
+  D!=0 H=29: 24 24 24 0
+  D!=0 H=31: 12 12 12 0
+  D!=0 H=33: 30 30 6 0
+  D!=0 H=37: 30 30 30 0
+  D!=0 H=41: 6 6 0 0
+  D!=0 H=43: 12 12 12 0
+  D!=0 H=45: 12 6 6 0
+  D=0  H=1: 5 5 0 0
+  D=0  H=3: 18 18 18 0
+  D=0  H=5: 12 12 12 2
+  D=0  H=9: 15 12 15 0
+  D=0  H=11: 6 6 6 0
+  D=0  H=13: 6 6 6 0
+  D=0  H=15: 12 0 0 0
+  totals D!=0: 262 bases, has2 217, has4 189, common 1; D=0: 74 bases, has2 59, has4 57, common 2

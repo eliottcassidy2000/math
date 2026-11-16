@@ -1,0 +1,15 @@
+# Collatz tree tournament: order=2 rule=0 inflate=1; nodes in build order: 1 2 3 4 5 8 10 16 20 21 32 40 42 64
+N=1 (node 1) H=1
+N=2 (node 2) H=1
+N=3 (node 3) H=1
+N=4 (node 4) H=1
+N=5 (node 5) H=1
+N=6 (node 8) H=1
+N=7 (node 10) H=1
+N=8 (node 16) H=1
+N=9 (node 20) H=1
+N=10 (node 21) H=1
+N=11 (node 32) H=1
+N=12 (node 40) H=23
+N=13 (node 42) H=47
+N=14 (node 64) H=79
