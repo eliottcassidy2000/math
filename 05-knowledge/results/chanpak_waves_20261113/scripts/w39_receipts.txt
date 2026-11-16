@@ -1,0 +1,46 @@
+# Wave 39 receipts (mac-mini-2026-11-15-frame)
+
+## literal transfer (w39_lit_setup.py)
+reachable span dim 117; observable rank on reachable span 61 (62 with the empty-prefix state)
+floor-unit power ranks (powers 1..5): 0.2 [4,2,1,1,1]; 1.2 [4,3,2,1,1]; 0.123 [12,4,3,2,1]; 2.13 [13,4,3,2,1]; 0.1.3 [3,2,1,1,1]; 0.3.1 [3,2,1,1,1]; 0.13.2 [3,2,1,1,1]; 0.1.123 [3,2,1,1,1]; 0.3.12 [3,2,1,1,1]; 0.12.3 [4,2,1,1,1]; 1.2.3 [4,3,2,1,1]; 1.12.3 [4,3,2,1,1]; 0.1.23 [3,1,1,1,1]; empty letter [13,3,1,1]
+
+## automata (w39_automaton.py, w39_automaton_extra.py)
+5-units, L0=2, LMAX=11: PI 7444, states 3883, edges 27750, bottleneck edges removed 3314 (identical with the object-arithmetic and int64 gcd rank tests)
+5-units + cheap-cycle dictionary (P<=6, growth<1.72): PI 9837, states 6276, edges 45162, removed 5046
+
+## cheap cycles (w39_cheap_cycles.py)
+period<=4, growth<1.72: 104 cycles, shortest rank<=1 factor <= 9 letters, dictionary 411
+period<=5, growth<1.72: 690 cycles, <= 9 letters, dictionary 1463
+period<=6, growth<1.72: 3343 cycles, <= 9 letters, dictionary 2527 (max length 8)
+period<=7, growth<1.30: 1303 cycles, <= 6 letters, dictionary 164
+3-letter-window automaton: cheapest uncut cycles (0,5) growth 1.000 (rank<=1 at 6), (0,1,7,4) 1.316 (8), (0,3,2) 1.442 (6), (0,3,7,4) 1.495 (8)
+
+## cone LPs (w39_cone_lp.py, HiGHS IPM)
+3-letter-window automaton (73 states): infeasible at rho = 1.5
+combined automaton (6262 live states, 371,240 rows, 6.7M nonzeros): infeasible at rho = 1.2, 1.4, 1.55, 1.65, 1.705 (2 s each) WITH the readout cap phi <= H on raw generators -- the readout obstruction
+growth-only LP (w39_cone_lp_growth_only.py) at rho = 1.2: IPM did not terminate in 25 min; inconclusive
+
+## one-vertex growth ratio max H(Wl)/H(W) over all span-3 words (lengths 1..7)
+1.0, 3.0, 5.0, 11.0, 23.0, 39.0, 39.0 (maximisers (7,7,7,0,6) at length 5, (6,5,7,6,0,6) at 6, (6,4,1,7,6,0,6) at 7)
+
+## frame parameters (w39_frame_params.py)
+words <= 1 letters: max rho(M_W)^(1/|W|) = 3.32260 at (7,)
+words <= 2 letters: max rho(M_W)^(1/|W|) = 3.32260 at (7,)
+words <= 3 letters: max rho(M_W)^(1/|W|) = 3.32260 at (7,)
+words <= 4 letters: max rho(M_W)^(1/|W|) = 3.32260 at (7,)
+words <= 5 letters: max rho(M_W)^(1/|W|) = 3.32260 at (7,)
+words <= 6 letters: max rho(M_W)^(1/|W|) = 3.32260 at (7,)
+Lyapunov growth of H (uniform random words, n = 400): 2.2449 per letter (sd of (log H)/n 0.0198)
+counting exponent lower bound alpha >= log 8 / log JSR = 1.732; with typical growth log 8 / log lyap = 2.571
+all 262144 words of length 6: H mod l: l=5 TV 0.1144; l=7 TV 0.2643; l=11 TV 0.2032; l=13 TV 0.2084
+all 2097152 words of length 7: H mod l: l=5 TV 0.0469; l=7 TV 0.0845; l=11 TV 0.1281; l=13 TV 0.0824
+all 16777216 words of length 8: H mod l: l=5 TV 0.0335; l=7 TV 0.0425; l=11 TV 0.0684; l=13 TV 0.0386
+all 134217728 words of length 9: H mod l: l=5 TV 0.0198; l=7 TV 0.0226; l=11 TV 0.0335; l=13 TV 0.0281
+
+## torus census (w39_torus_census.py, length <= 6)
+{'words': 286760, 'minimal_rank_le1': 4928}
+distinct nonzero eigenvalues 19
+primes dividing eigenvalues (number of minimal rank-one words): [(3, 1629), (5, 1096), (11, 505), (13, 222), (17, 290), (19, 232), (23, 416), (29, 410), (31, 210), (37, 370), (41, 72), (43, 108)]
+eigenvalues not of the form +-3^a 5^b: [11, 13, 17, 19, 23, 29, 31, 33, 37, 41, 43] ... total 11
+eigenvalue multiset (value: count): [(1, 124), (3, 189), (5, 426), (9, 576), (11, 221), (13, 222), (15, 432), (17, 290), (19, 232), (23, 416), (25, 198), (27, 108), (29, 410), (31, 210), (33, 284), (37, 370), (41, 72), (43, 108), (45, 40)]
+examples: {1: (0, 0, 0), 3: (0, 0, 2), 5: (0, 0, 4, 0, 0, 0), 9: (0, 0, 4, 0, 0, 1), 11: (0, 0, 7, 2, 4, 3), 13: (0, 0, 7, 0, 4, 3), 15: (0, 0, 4, 0, 0, 2), 17: (0, 0, 4, 0, 0, 3), 19: (0, 0, 5, 2, 4, 3), 23: (0, 0, 5, 0, 4, 3), 25: (0, 0, 7, 6, 1, 3), 27: (0, 0, 5, 0, 3, 1), 29: (0, 0, 5, 0, 2, 1), 31: (0, 0, 5, 0, 2, 2), 33: (0, 1, 7, 6, 5, 3), 37: (0, 4, 4, 0, 1, 3), 41: (0, 0, 5, 0, 2, 3), 43: (1, 4, 6, 0, 1, 3), 45: (2, 6, 6, 0, 1, 3)}

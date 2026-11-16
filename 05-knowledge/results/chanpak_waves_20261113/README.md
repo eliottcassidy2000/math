@@ -3278,6 +3278,94 @@ difference D = F(X₁′, X₂′) − F(X₁′, X₂) − F(X₁, X₂′) + F
 | HYP-9792 (i), (ii) | CONJECTURE, with exact and finite evidence |
 | the grand synthesis (GRAND_SYNTHESIS.md) | proved bridges, cited KNOWN results and labelled analogies; no open problem solved |
 
+## Wave 39: the literal span-3 certificate (two obstructions) and the frame behind our tools
+
+Session mac-mini-2026-11-15-frame. The owner's prompt had three parts:
+- build the syllable-adaptive cone certificate for literal span 3;
+- seek Chan–Pak by more creative routes than more branches;
+- ask what the new mathematics represents as a deeper unifying theorem, given seven named connections.
+
+The answer to the third part is [UNIFYING_FRAME.md](UNIFYING_FRAME.md). Concurrent and credited:
+klein-2026-11-15-ocf attempted the same certificate
+([LITERAL_CONES.md](../chanpak_apex_ocf_literal_cones_20261115/LITERAL_CONES.md)).
+
+### §1. The certificate: built pipeline, two obstructions, no certificate yet
+
+**Pipeline (all exact where it matters; `scripts/w39_*`).**
+- The 119-state literal transfer. Its minimal representation after the first vertex has dimension 61.
+- A deterministic suffix automaton whose memory dictionary is closed under deleting the last letter (floor-unit
+  syllables and/or factors of cheap cycles).
+- Bottleneck edges removed by an exact rank ≤ 1 test: all entries are nonnegative integers, so rank ≤ 1 means one
+  primitive column direction.
+- A sound cone LP on raw generators. An earlier draft deduplicated generators by their 61-dimensional image, which is
+  unsound because raw generators need not lie in the reachable span. The bug was found before any result.
+- An exact integer verifier that re-checks every rank decision, transition and inequality.
+
+**Obstruction A: slow bottlenecks** (HYP-9802 (i), (iii)).
+- A three-letter window leaves cycles such as (∅, {1,3})^∞ (growth 1.000), (0,1,7,4) (1.316) and (0,3,2) (1.442) uncut.
+- Every cheap cycle of period ≤ 6 letters (3,343 with growth below 1.72) has a rank-one factor of ≤ 9 letters, so a
+  2,527-string factor dictionary cuts them all.
+- Periods 7–12 need longer memory. klein's census finds up to 12 code units. Syllable-adaptive memory alone cannot
+  work: about 99% of the slow cheap patterns are not syllable concatenations, which was klein's correction to the plan.
+
+**Obstruction B: the readout cap (new)** (HYP-9802 (ii)).
+- At the letter level, "potential ≤ H on raw generators" is infeasible at every rate, because one letter can split a
+  path fragment. The LP on the 6,262-state automaton is infeasible at ρ = 1.2–1.705.
+- The fix is a bounded-growth lemma H(W ℓ) ≤ K·H(W). The observed maximum ratio is 39 at word lengths 6 and 7. The
+  potential's Hankel coordinates are H(W w_i), so the lemma gives |Φ| ≤ C·H without a cap.
+- The growth-only LP did not terminate in 25 minutes at ρ = 1.2 (inconclusive).
+
+**Status.** The literal certificate is not built. The scheme that should work combines klein's rank potential (bounded
+loss per rank drop) with the bounded-growth lemma.
+
+### §2. The frame: Chan–Pak as a local–global principle for a positive thin semigroup
+
+Every count we build is a matrix coefficient h·A_W·v₀ of a semigroup of nonnegative integer matrices. Chan–Pak is the
+local–global principle for its value set, with exceptions {7, 21}. That is Zaremba's shape, where Bourgain–Kontorovich
+proved density one.
+
+Our results are the components:
+- local laws at 2 and 3;
+- the bottleneck torus with multipliers 3 and 5;
+- the growth gap 1.7699 versus 1.7100;
+- Hankel and cyclic-join bilinearity;
+- equidistribution;
+- placement;
+- exact repair.
+
+The seven connections are the classical models:
+- **Hasse/Artin:** torus images mod p, and the major arcs at 3^i 5^j;
+- **Furstenberg ×2×3:** non-lacunary ⟨3, 5⟩ plus bulk expansion;
+- **Friedlander–Iwaniec:** Type II structure from concatenation;
+- **Ramanujan's form:** a finite exceptional set, with major arcs playing the role of exceptional characters;
+- **Tunnell/BSD:** main term versus cuspidal error in r_n(N);
+- **class numbers:** the exact mass identity Σ_(H = N) 1/|Aut T| = labelled count / n!, which makes the HYP-9474 local
+  limit law a Siegel–Weil formula;
+- **Hadamard:** the spectrum's top and optimal flatness.
+
+**Parameters measured for span 3** (`w39_frame_params.py`, `w39_torus_census.py`):
+
+| parameter | value |
+|---|---|
+| joint spectral radius | ≥ 3.32260 (the letter {1,2,3}) |
+| typical growth | 2.2449 per letter |
+| counting exponent α | ≥ 1.732, above the 5/3 that Zaremba density one needs (Huang) |
+| H mod ℓ over all words of length 9 | TV 0.020–0.034 for ℓ = 5–13, roughly halving per letter; no residue missed |
+| eigenvalues of minimal rank-one words (length ≤ 6) | 19 distinct values, including the primes 11–43 (cuts), so the "torus" is ⟨3, 5⟩ only in its cheap part |
+
+**New conjecture (UNIFYING_FRAME.md §1).** Density-one Chan–Pak for span-3 ribbons with a power saving: the number of
+missed odd N ≤ X is O(X^(1−η)). Four of its five ingredients are listed with their status in §4 there.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| every cheap cycle of period ≤ 6 letters (growth < 1.72) has a rank-one factor of ≤ 9 letters | FINITE-EXACT (3,343 cycles) |
+| a letter-level cone certificate with a readout cap is infeasible at every rate | PROVED in outline; FINITE-EXACT (LP) |
+| bounded one-vertex growth H(W ℓ) ≤ 39·H(W) for span-3 ribbons | CONJECTURE (exact maximum 39 at lengths 6 and 7) |
+| literal span-3 growth certificate | NOT built; the obstructions and the fix are specified (HYP-9802) |
+| Chan–Pak = local–global principle for a positive thin semigroup (UNIFYING_FRAME.md) | frame: component statuses as labelled; the density-one form is a CONJECTURE |
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
