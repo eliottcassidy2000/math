@@ -211,3 +211,5 @@ The mathematically useful next question is whether a target-dependent
 family can force the mixed interaction to differ from the two
 first-order responses by exactly 2, without relying on a finite
 trial of source graphs.
+
+Follow-up: [literal Leech octad baselines and a second prescribed prime pair](OCTADS.md).
