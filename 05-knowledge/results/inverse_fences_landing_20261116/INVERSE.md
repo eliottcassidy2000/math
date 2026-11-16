@@ -75,3 +75,7 @@ g++ -O3 h27_chain.cpp -o /tmp/h27_chain
 ```
 
 There is a cost-sharp repair of the first impossible retaining step. From the specific H53 extension of the displayed H27 witness, reverse the old arc 0→1 and append a new vertex whose outgoing mask is 181. The final rows are (188,509,248,496,32,192,401,16,181), and have H105. Thus **exactly one old arc reversal is needed and sufficient** if the source vertices are kept and new vertices may be added. The lower bound applies to every choice of H53 source, and this example attains it with just one extra vertex.
+
+### One step further needs another choice of host
+
+There is a first-hit H105→209 port on a different tournament, with rows (6,12,24,49,99,71,15,383,127) and root 1. Its state is (105,33,52,77). But no H105 host is persistent for the same near-sink operation. As above, trimming any leading singleton components and taking a first hit gives a strong H209 output, of order at most 10 since 209³<5^10. Hence the trimmed input is of order ≤9. The [order-nine replay](ready105.cpp) extends every order-eight atlas class with H≤105 (790 classes; no other parent can produce H105 by monotonicity). It checks every root on all 381 labeled H105 outputs, including repeats, and finds no persistent root. Leading singleton padding includes all smaller inputs without changing the profile. So a first landing again differs from a reusable port even after the first necessary rewiring.
