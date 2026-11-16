@@ -4107,6 +4107,141 @@ No seed of order ≤ 5 gives a binary odometer.
 
 Chan–Pak remains OPEN.
 
+## Wave 46: the Collatz tree built one node at a time — P107 resolved, the two halves of Collatz, and chain decompositions
+
+Session mac-mini-2026-11-16-collatz-tree. Owner prompt:
+- merge Collatz as a hexagonal tiling of edges, and the lattice / Platonic-solid / "3 into 5" sessions;
+- Collatz as a global order (distance from 1, parity tie-breaks) or as a local comparison of two nodes;
+- the infinite tournament, its Collatz-tree subset, building it one node at a time, other build orders, groups of
+  nodes at once, relabelings;
+- run the binary port-move search (P107), or something better.
+
+**Credit first.** The tournament "each newborn beats only its parent" is not new in this repo:
+- [chanpak_leaf_fans_20261115](../chanpak_leaf_fans_20261115/README.md) states it as the one-parent language. Its fan
+  law δ′ = δ + 2(d − K) is the charge identity of wave 45 §6, with δ = a − 1.
+- The session244 forest census (sinks allowed, the outdegree-1-degenerate class of THM-5116) reaches order 12, where
+  the first missing count is 91,081.
+- A single row (path tree) counts Tribonacci numbers: THM-4731 (6), THM-4878.
+- The honeycomb chart Φ(2^a q) = (a, q − 1) of session178 makes the halving chains horizontal rays.
+- HYP-3771 and HYP-3772 hold the tilings ↔ solids classification. "Splitting 3 into 5" has no earlier hit in the repo.
+
+New here: P107's resolution, the Collatz-ordered tournaments, the chain-decomposition lemma, the subfamily and d-parent
+spectra, and the explicit caterpillar automaton. Scripts are `scripts/w46_*` (C sources compile with
+`cc -O2 -o w46_X w46_X.c`), with outputs in `scripts/w46_receipts.txt`.
+
+### §1. P107 resolved
+
+- **Inside the module framework (PROVED).** The new count does not depend on which vertex is called the root.
+  - On ready inputs, every module at x gives H′ = γh + 2·s2·r + (s2p − geo)·g, with γ = H(module) (wave 45 §3).
+  - A binary step 2h ± 1 at charge 0 or 2 forces γ = s2 = 1, g = 1 and s2p − geo = ±2.
+  - But s2 = 1 means A beats only the bottom module vertex, and then s2p = geo = 1. So no single module, with the
+    root moving or not, is a binary port move.
+- **Inside the one-parent language (FINITE-EXACT).** Here the port moves for free: attaching at v gives
+  2H − 1 + a_v. The trees having both charges 0 and 2 are the same 9 trees at every order n = 5–8. None of their
+  charge-0 or charge-2 children keeps both charges (`w46_charges.c`). So no {0, 2} binary cylinder exists. The
+  spectrum fills by the spread of charges instead: most charges exceed 30.
+
+### §2. The Collatz tournament (new objects)
+
+- Order the Collatz tree by distance from 1 (BFS), with ties broken even-first or odd-first.
+- Let each node beat only its Collatz parent, its forward image n ↦ n/2 or 3n + 1, and lose to everything else.
+- The back arcs are then exactly the Collatz tree, and each prefix is a one-parent tournament (`w46_collatz_trees.py`).
+
+| build order | H of the first N nodes, N = 1, 2, … |
+|---|---|
+| BFS, even first | 1, 1, 3, 5, 9, 17, 29, 51, 183, 411, 935, 2375, 6093, 13881, 63609, 156893, 715217, … |
+| BFS, odd first | 1, 1, 3, 5, 9, 17, 29, 77, 169, 393, 921, 2393, 6145, 21221, 54157, 210949, … |
+| DFS (smaller child first) | 1, 1, 3, 5, 9, 17, 31, 57, 105, 193, 355, 653, 1201, 2209, … (Tribonacci) |
+
+The DFS prefix 1, 2, 4, 8, 16, 5, 10, 3, 6, 12, … is a single root path, so it counts like one row.
+
+**One row = Tribonacci (PROVED; identification THM-4731 (6)).** Hamiltonian paths of the path tree are permutations
+whose descents are unit steps j → j − 1 and whose ascents have size at least 2. Their maximal descending runs are value
+intervals listed in increasing order, and the only forbidden junction is two singleton runs. So H counts the
+compositions of m with no two adjacent parts equal to 1, which satisfy C(m) = C(m−1) + C(m−2) + C(m−3).
+
+### §3. Chain decompositions (PROVED)
+
+**Lemma.** In a one-parent tournament, a step either ascends to a later-built vertex that is not a child, or descends
+to the parent. So H counts the ordered partitions of the tree into **upward chains** (segments of root paths) such that
+the bottom of each next chain is built after the top of the previous chain and is not its child.
+
+For the Collatz tree, upward chains are segments of forward Collatz trajectories. So a Hamiltonian path of the Collatz
+tournament is an ordered cover of the first N nodes by trajectory segments, chained by the build-order ascent rule.
+This is "global order + local comparison" made exact: the order decides the junctions, and the tree decides the chains.
+
+### §4. Relabeling splits Collatz into its two halves
+
+Keep the Collatz edges and orient every other pair by an order of the labels (`w46_halves.py`):
+- **Numeric order.** A child 2m is built after its parent m, so only the halving edges 2m → m are back arcs. The back-arc
+  forest is exactly the rows of chains odd·2^k: the horizontal rays of the session178 honeycomb chart. On [1..N],
+  H = 1, 1, 1, 5, 5, 17, 17, 83, 83, 463, 463, 4029, 4029, 32165, 32165, 337823. It changes only at even N, since an
+  odd newborn is a sink.
+- **Reverse numeric order.** Only the hooks c → 3c + 1 are back arcs: the edges between rows. H stays 1 until N = 10
+  (the hook 3 → 10, H = 65 = 2^6 + 1) and is 11457 at N = 16.
+- **BFS order** is a linear extension of the tree, so both halves are back arcs.
+
+So a build order is a choice of which honeycomb direction becomes reversed. The two halves of Collatz, ×2 rows and
+3x + 1 hooks, are the two lattice directions.
+
+### §5. Spectra (FINITE-EXACT)
+
+| family | complete except 7, 21, up to |
+|---|---|
+| one parent, all recursive trees, n ≤ 10 / n ≤ 11 | 4,583 / 20,405 |
+| at most 2 children per node (the Collatz branching), n ≤ 10 | 3,633 |
+| caterpillars (one row plus single-vertex hooks), n ≤ 10 | 4,583, the same as all trees |
+| each newborn beats exactly 2 earlier vertices, n ≤ 8 / n ≤ 9 | 609 (maximum 613) / 2,485 |
+| each newborn beats exactly 3 earlier vertices, n ≤ 9 | 2,881 |
+| one-port in-order caterpillar automaton (below) | far from complete: 36,737 of the 50,000 odd numbers below 100,000 are missed |
+
+The complete range grows about 4.4-fold per added vertex. 31 witnesses (5–63 and 4579, 4581, 4583) were rechecked by an
+independent dynamic program. The n ≤ 11 bound agrees with the leaf-fans range and with the session244 order-12 census.
+
+**One-port caterpillar automaton (PROVED maps).** Build a caterpillar in order: S extends the spine from its end, and
+L hangs a leaf on the end. Both are rooted appends at the end x. On (h, g, r, s) at x:
+
+    L: (h + 2r, g, r + s − g, r + s),   S: (h + 2r, h, s, h + r)  (the port moves to the new vertex),
+
+starting from (1, 1, 0, 1). All-S gives Tribonacci. One port is far too few. The full caterpillar family needs leaves on
+earlier spine vertices, so the state is not finite with one port.
+
+### §6. Synthesis
+
+- **Hexagonal tiling of edges.** The Collatz graph has degree at most 3 (one parent, at most two children), which is the
+  honeycomb's degree. Its growth outruns any flat ball: 704 integers reach 5 within 21 steps, but a honeycomb ball has
+  694 vertices (collatz_hexagonal_growth). §4 adds the tournament reading: the numeric order reverses the horizontal
+  rays, and the reverse numeric order reverses the hooks.
+- **3 into 5.** The three flat tilings {3,6}, {4,4}, {6,3} curve into the five solids (HYP-3772): {3,6} into {3,3},
+  {3,4}, {3,5}; {4,4} into {4,3}; {6,3} into {5,3}. *Analogy:* in the one-parent language the charge plays the role of
+  curvature.
+  - Attaching at charge a gives 2H − 1 + a: a = 0 is exact doubling (flat), a < 0 contracts, a > 0 expands.
+  - Flat ports are rare (the 9 trees of §1), as the 3 flat tilings are among all {p, q}.
+  - The rows of chains are the geodesics, since the charge freezes along them.
+- **How the pattern was found, as a reusable method.**
+  1. Write the object as a global order plus local exceptions (back arcs).
+  2. Count Hamiltonian paths as decompositions of the exceptions into monotone pieces with junction rules (§3).
+  3. Vary the order, which filters the exceptions (§4).
+  4. Compute the spectrum of the whole local-move language before engineering gadgets (§5).
+  5. Track the quantity each move updates (the charge).
+
+  Applied once more, the method gave the d-parent languages: every d tested misses exactly 7 and 21.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| no single module, root moving or not, is a binary port move | PROVED |
+| no {0, 2} binary cylinder in one-parent growth | FINITE-EXACT, n ≤ 8 |
+| one row = Tribonacci (compositions with no two adjacent 1s) | PROVED; identification THM-4731 (6) |
+| chain-decomposition lemma for one-parent tournaments | PROVED |
+| Collatz BFS / DFS / numeric / reverse-numeric sequences | FINITE-EXACT |
+| spectra of §5 | FINITE-EXACT |
+| one-port caterpillar maps L, S | PROVED (from the rooted-append identity) |
+| charge = curvature; 3 into 5 | ANALOGY |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
@@ -4118,3 +4253,7 @@ Chan–Pak remains OPEN.
 - **P107.** A ready root (b = 0) admits a binary port move: an operation that may move the root to a new vertex, keeps
   it ready, and sends r to 2r + 1 at the same charge. Together with the rooted append this would be a two-letter family
   of Hankel rank 2. Test on the ready seeds 13, 23, 41, 59, 75, 95 (wave 45 §7).
+- **P108.** Every odd N other than 7 and 21 is the count of a one-parent tournament on at most about 0.47·log2(N) + 4.5
+  vertices; the complete range grows about 4.4-fold per vertex (wave 46 §5).
+- **P109.** For every d >= 1, the d-parent language (each newborn beats exactly d earlier vertices) misses exactly 7 and
+  21. Test d = 2, 3 at n = 10 and d = 4 at n <= 10.
