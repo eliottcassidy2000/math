@@ -1,0 +1,8 @@
+63-fan induced 1 [1]
+63-fan induced 2 [1]
+63-fan induced 3 [1, 3]
+63-fan induced 4 [1, 3, 5]
+63-fan induced 5 [1, 3, 5, 9, 11]
+63-fan induced 6 [1, 5, 11, 15, 17, 19, 23]
+63-fan induced 7 [1, 11, 25, 33, 37]
+All modular families, induced counts and sevenfold symmetry checks passed.
