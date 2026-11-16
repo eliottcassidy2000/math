@@ -1,0 +1,1 @@
+# Wave 42 receipts: distinct H values (orders 3-9) 1520; odd class count at least order 679; primes 433, odd 192; least orders 3:3 5:4 17:6 49:7 63:8 67:7 69:7 343:8 7:None 21:None
