@@ -52,3 +52,9 @@ for q in (3,5,7,9,11,15):
     verify_colouring(q,60000)
 require([pow(12,6,49),pow(3,6,49)]==[22,43])
 print("Witnesses, anti-automorphism, six clocks and six multiplier colourings pass.")
+
+a=(148,125,120,241,96,193,1,86)
+require(starts(a)==(7,68,29,33,13,13,7,19))
+require(all((a[i]>>j&1)==(a[7-j]>>(7-i)&1) for i in range(8) for j in range(8)))
+require(any(all(a[i]>>j&1 for i,j in zip(p,p[1:]+p[:1])) for p in permutations(range(8))))
+print("The even-order H189 witness passes.")
