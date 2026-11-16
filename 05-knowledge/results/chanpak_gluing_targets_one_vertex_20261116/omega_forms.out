@@ -1,0 +1,9 @@
+I(G,2) = 7: 1 graphs
+  |V|=3 alpha=[3, 0, 0] complement edges=[] -> join; join splits [(3, 5)]
+I(G,2) = 21: 6 graphs
+  |V|=4 alpha=[4, 3, 0] complement edges=[(0, 1), (0, 2), (0, 3)] -> disjoint union; join splits []
+  |V|=4 alpha=[4, 3, 0] complement edges=[(0, 1), (0, 2), (1, 3)] -> prime (neither); join splits []
+  |V|=6 alpha=[6, 2, 0] complement edges=[(0, 1), (0, 2)] -> join; join splits [(3, 19), (5, 17), (7, 15)]
+  |V|=6 alpha=[6, 2, 0] complement edges=[(0, 1), (2, 3)] -> join; join splits [(3, 19), (5, 17), (9, 13), (11, 11)]
+  |V|=8 alpha=[8, 1, 0] complement edges=[(0, 1)] -> join; join splits [(3, 19), (5, 17), (7, 15), (9, 13), (11, 11)]
+  |V|=10 alpha=[10, 0, 0] complement edges=[] -> join; join splits [(3, 19), (5, 17), (7, 15), (9, 13), (11, 11)]

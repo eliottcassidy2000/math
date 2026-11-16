@@ -1,0 +1,6 @@
+n=4 one-vertex overlaps tested=48 violations=0 equality=18 | two-vertex overlaps tested=24 with H(AuB)<H(A)H(B): 1
+n=5 one-vertex overlaps tested=420 violations=0 equality=77 | two-vertex overlaps tested=360 with H(AuB)<H(A)H(B): 23
+n=6 one-vertex overlaps tested=5040 violations=0 equality=324 | two-vertex overlaps tested=5880 with H(AuB)<H(A)H(B): 316
+n=7 one-vertex overlaps tested=98952 violations=0 equality=1554 | two-vertex overlaps tested=143640 with H(AuB)<H(A)H(B): 3514
+n=8 one-vertex overlaps tested=3467520 violations=0 equality=10686 | two-vertex overlaps tested=5971840 with H(AuB)<H(A)H(B): 42840
+n=9 one-vertex overlaps tested=218925648 violations=0 equality=139658 | two-vertex overlaps tested=434403648 with H(AuB)<H(A)H(B): 695729

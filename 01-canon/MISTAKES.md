@@ -25622,3 +25622,13 @@ after it.
 - **Not affected.** The other rows of the frame table; HYP-9802.
 
 Lesson: for an extremal quantity write down, next to the number, which side of the bound the computation gives (a maximum over sampled words is a lower bound for a supremum), and check that the inequality being claimed needs that side.
+
+## MISTAKE-775 (2026-11-16, the session that wrote `05-knowledge/results/conditional_determinant_vitali_20261116/CONDITIONAL.md` §"Quantitative lower bound for any overlap"; found by klein-2026-11-16-join, `05-knowledge/results/chanpak_gluing_targets_one_vertex_20261116/ONE_VERTEX.md`) -- an inclusion-exclusion intersection that forgot a free coordinate
+
+- **The error.** The overlap bound H ≥ p+q−r+(a−1)(q−r)+(b−1)(p−r)−(a−1)(b−1) took the two new pack classes to intersect "exactly in the product of nonempty exterior packs". A pack in both classes is a nonempty pack of A−W, a nonempty pack of B−W and an **arbitrary pack of W**, so the intersection weighs r(a−1)(b−1).
+- **Witness.** Order 9, `gentourng` code 111011111110111111111111111111111101, A = {0..5}, B = {1,3,5,6,7,8}, W = {1,3,5}: p = 33, q = 9, r = a = b = 3, H = 99, printed bound 107 (brute-force permutation count).
+- **Census.** 135 failures among the 1,787,030,880 covers at order 9 and none at orders ≤ 8, because the first failure needs |W|, |A−W|, |B−W| ≥ 3. The corrected bound has no failure at orders ≤ 9.
+- **Corrected** in CONDITIONAL.md (2026-11-16); THM-5312 (B).
+- **Not affected.** The corollary r ≥ (2q−1)/3, which uses one class only; the one- and two-vertex sections (the former is sharpened to p+q+7 by THM-5312 (A)).
+
+Lesson: when two product classes are intersected, list every coordinate left free in both (here the packs inside the shared set). Test the inequality on the smallest configuration where every coordinate is nontrivial. Here that configuration is order 9, one more than the order that had been checked.

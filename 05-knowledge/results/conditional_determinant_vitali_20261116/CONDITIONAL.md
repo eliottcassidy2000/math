@@ -70,6 +70,9 @@ addition to the union of packs inside the two witnesses,
 which weighs p+q−1. This proves the claimed lower bound.
 Of the proposed offsets only c=−3 meets the lower bound;
 the c=−1 and c=+1 rows require more overlap or modification.
+(Sharpened 2026-11-16: for primes not both 3 the bound is
+p+q+7 at every order, so no row works with one shared vertex;
+THM-5312 (A).)
 
 ### A two-vertex overlap at the low offsets forces a Fermat summand
 
@@ -109,14 +112,20 @@ Write W for the shared vertices, r=H(W), a=H(A−W),
 and b=H(B−W), with empty count one. Keeping both inputs
 induced forces
 
-    H(output) ≥ p+q−r+(a−1)(q−r)+(b−1)(p−r)−(a−1)(b−1).
+    H(output) ≥ p+q−r+(a−1)(q−r)+(b−1)(p−r)−r(a−1)(b−1).
+
+**Corrected 2026-11-16 (MISTAKE-775).** The first version
+had −(a−1)(b−1) in the last term. That is false: at order 9
+there is H=99<107 with p=33, q=9, r=a=b=3. See
+[ONE_VERTEX.md](../chanpak_gluing_targets_one_vertex_20261116/ONE_VERTEX.md).
 
 The internal packs contribute p+q−r by inclusion-exclusion.
 Pair each nonempty pack of A−W with each pack of B using at
 least one vertex of B−W in a cycle, and likewise exchange A
-and B. The two new classes intersect exactly in the product
-of nonempty exterior packs. This proves the bound by positive
-pack weights. In particular H(output)≤p+q+1 and a≥3 force
+and B. A pack lies in both new classes iff it is a nonempty
+pack of A−W, a nonempty pack of B−W and an arbitrary pack of
+W; so the intersection weighs r(a−1)(b−1). This proves the
+bound by positive pack weights. In particular H(output)≤p+q+1 and a≥3 force
 r≥(2q−1)/3 already using only the first new class. Thus an
 overlap either hits all directed triangles on that side or
 must itself carry a substantial fraction of the opposite count.
