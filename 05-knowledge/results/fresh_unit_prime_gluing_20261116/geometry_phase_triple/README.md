@@ -166,6 +166,23 @@ selected parity in aggregate when B is nonempty (by the endpoint identity
 a root in C ends no spanning path of the total). In particular:
 - To close the existing key (729,12217), the missing 6019 necessarily
   has one nontrivial component: gcd(6019,729)=1.
+  Also, its **root deletion** cannot have two nontrivial components.
+  A triangle deletion component is excluded by the content theorem
+  below. Since 729=3^6, the remaining split factor lists are (9,81),
+  (81,9), (27,27) and (9,9,9). Their strong factors have order at most
+  nine by Busch. The prescribed cut is 2645, so at most fourteen
+  singleton deletion components remain: j interior singletons give
+  at least 2^(j−1) paths between fixed opposite contacts in the first
+  and last deletion SCCs. There are at most two endpoint singletons.
+  Enumerate every layout of these strong factors with at most fourteen
+  singleton components and then the contacts by the same exact cut
+  and X pruning described in REDUCED_237.md, here using X=12217·2^k.
+  The canonical strong banks for counts 9,27,81 have sizes 2,5,26.
+  The [checked split census](split_729.out) covers 112,200 layouts and
+  finds no cut at most 2645 at the required X. Reproduce with
+  `c++ -O3 -std=c++20 split_729.cpp -o /tmp/split729 && /tmp/split729 9 14`.
+  The unresolved case is a single strong H=729 deletion SCC,
+  with possible active singleton padding.
 - At (1185,8051), a 6015 witness cannot have a nontrivial prefix
   (gcd of all three numbers is 1). The only possible nontrivial suffix
   has H=5, P₂=32. Suffix H=3 and H=15 are ruled out by their odd P₂
