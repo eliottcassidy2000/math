@@ -4269,6 +4269,49 @@ Scripts are `scripts/w47_*`, with outputs in `scripts/w47_receipts.txt`.
 - THM-5262 (A), the floor law; THM-5272, D(h) = 2h − 1 fails at 11; COLLATZ_ROWS (rows L_c; 7 ∈ L_3, 21 ∈ L_5);
   THM-5126 (rows full for c ≤ 129).
 
+**Prior work merged (repo survey, after the first push).**
+- **The holes are already proved** for every n by THM-1370. H multiplies over strong components, and 7 and 21 fall
+  between consecutive strong minima (5 and 9, then 15 and 25, on the floor 3, 5, 9, 15, 25, 45). §1 below is a second,
+  local certificate for the one-vertex-extension route, not the first proof.
+- **Congruences cannot see the holes.** [exclusion_7_21_20261103](../exclusion_7_21_20261103/INCOMING.md) shows that
+  every residue is hit: h(1075) ≡ 21 and h(2634) ≡ 7 (mod 4900).
+- **mod 72.** The repo does have this.
+  - THREADS2 (wheels_spine14_shield_20261116): prescribing H mod 72 fixes a packing count mod 8 and a run-length clock
+    mod 9. Both laws are structural, and the tie to Catalan is numerology.
+  - session137 width_phase2: the 24 units mod 72 control every C2/C3 character.
+  - session173 modular clocks: L(x) = 527x + 44 on Z/72 splits by CRT, with L⁶ = id.
+  - PSL(2, Z/6) appears only in THM-2632.
+- **8 and 9.**
+  - eight_nine_twentyseven: two arc flips give every odd residue mod 8, and ×9 lifts this to every 2^s; an all-k proof
+    works modulo 73 = 8·9 + 1.
+  - seven_twentyone_mersenne: 63 = 7·9 is the Zsigmondy exception, "underneath all of it is Catalan's 2³ + 1 = 3²".
+  - THM-4094: Chan–Pak is equivalent to realizing the two lanes p ≠ 7 and 7p.
+  - THM-4812: metagraph presentation counts are never 7 or 21.
+- **Octonions and Bott.**
+  - THM-868: the n = 8 score deviations lie in E8 ("Bott's 8, the octonions' 8 and the metagraph's 8 are one 8").
+  - THM-872: a period-8 signature clock.
+  - THM-4553: Aut(P_7) is the Borel subgroup of order 21, and the octonionic J on S⁶ is the Fano matching QR_7 → NQR_7.
+  - THM-5133: octonion and sedenion sign tournaments.
+  - Verdicts already on file: the octonion-design note REFUTES "21 matches the forbidden H", and THM-4000 says "not
+    Bott periodicity".
+- **Carmichael and Catalan.**
+  - The tournament analogue of Carmichael's conjecture is false: THM-4884 (2) finds exactly the singleton classes
+    {3, 5, 11, 13} below 625.
+  - Related: session200 carmichael-fibers, THM-4904 / HYP-9494 (the Carmichael chamber), and THM-4505, THM-4516 and
+    HYP-9339 for Catalan.
+  - HYP-9338 concerns Carmichael *numbers*, not the totient conjecture.
+- **Collatz ± mod q.**
+  - THM-4792 already has the criterion of §3: the tables alternate iff −1 ∈ ⟨2⟩ mod m, and primes p ≡ 7 (mod 8) never
+    alternate. §3 adds only the tournament orientation and the factor-3 failure at 21.
+  - See also THM-4474 (E), HYP-2117 and THM-4849.
+- **Modular curves.** THM-4838 (genera 0, 3, 26 of X(5), X(7), X(11)) and HYP-3771 (the (2, 3, n) series, tied to
+  lonely runners). The 2g + 1 coincidence with the holes is not on file.
+- **Hub and distance.**
+  - S224: H = 33 is first born at order 6 as one self-converse class plus two converse pairs.
+  - Blue lines are the σ-fixed lines and black lines come in converse twins (tiling_line_metagraph).
+  - Earlier hyperbolic layouts recover tree distance only up to an additive error (curvature_control, GAP_GEOMETRY).
+    The exact recovery is the concurrent packet's claim.
+
 ### §1. The holes are local: floor-law certificates (PROVED reduction; FINITE-EXACT table)
 
 THM-5262 (A) (the floor law) says that adding one vertex gives H′ = H or H′ ≥ (3H + 1)/2.
@@ -4349,6 +4392,9 @@ THM-5262 (A) (the floor law) says that adding one vertex gives H′ = H or H′ 
 | one-parent completeness | complete except 7, 21 to 20,405 (n ≤ 11); forest census to 91,079 (order 12) | FINITE-EXACT |
 | rows (THM-5126) | every row 1 + c·2^s with c ≤ 129 is full | PROVED |
 | modular, field and group readings (§2, §3) | the holes sit at the first odd hyperbolic levels and at the first orientable modulus 7 | NUMEROLOGY / ANALOGY |
+| strong-component minima (THM-1370) | the holes are already proved for all n; a proof of existence must avoid them | PROVED (prior) |
+| congruences (exclusion_7_21) | no residue test can exclude 7 or 21 | PROVED (prior, by witnesses) |
+| group readings (Aut P_7 = 21, PSL(2,7)) | typed COINCIDENCE on file (free_bits README; octonion-design note) | COINCIDENCE |
 
 **What the intersection says about a proof.**
 1. The hole half is local and finite: floor law plus the small (H, a) table.
