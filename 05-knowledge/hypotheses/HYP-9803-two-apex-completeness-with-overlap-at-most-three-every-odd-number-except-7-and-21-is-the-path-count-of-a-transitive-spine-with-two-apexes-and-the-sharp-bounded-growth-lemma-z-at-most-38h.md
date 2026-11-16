@@ -6,9 +6,11 @@ status: >
   N < 2^16 but 7, 21 (first miss 77,533; the one-apex family alone misses half); with the second apex beating <= 3 spine
   vertices, spine 12 attains every odd N < 2^16 but 7, 21 (first miss 117,345); overlap 1 gives 56 %, overlap 2 gives
   98 % below 2^14, and only 0.24 % of the values below 2^16 need overlap 3; orientation A -> B suffices below 2^16;
-  spine 13 was pre-registered (packet section 5).
-  (b) FINITE-EXACT: the maxima 1, 3, 5, 11, 23, 39, 39, 39 at lengths 0-7 (maximisers 0^(n-3) 7 6 0, l = {2,3}, with
-  H(W) = 1 and Z = 38; sealing by three empty letters reproduces the ratio at every H), the lemma exact (max ratio 39, equality at every attained H) for every word with H(W) <= 40 via the closed set
+  spine 13 (pre-registered, confirmed) attains every odd N < 2^17 but 7, 21 — the only misses below 2^18 are 7, 21, 256,521
+  (6,193,152 tapes); below 2^17 only 76 values need overlap 3 and A -> B suffices for all.
+  (b) FINITE-EXACT: the maxima 1, 3, 5, 11, 23, 39, 39, 39, 39, 39 at lengths 0-9 (maximisers 0^(n-3) 7 6 0, l = {2,3}, with
+  H(W) = 1 and Z = 38; to length 9 the maximisers are exactly the sealed gadgets T_(W') => B, B = TT_6 plus a vertex beating
+  ranks 1 and 3 with H(B) = 39 = 5 * 2^3 - 1 PROVED in THM-5243 (2'), 1, 1, 1, 2, 4 isomorphism classes at lengths 5-9; sealing by three empty letters reproduces the ratio at every H), the lemma exact (max ratio 39, equality at every attained H) for every word with H(W) <= 40 via the closed set
   of 16,794 states, and PROVED the decomposition
   H(Wl) = e + s + Z_l with e, s <= H(W). Two certificate routes are PROVED to fail (annihilator LP infeasible; coordinate-cap
   cone not invariant), so a proof must use the ages of fragment heads and tails. (b) is the lemma HYP-9802 (ii) needs; (a) is
@@ -29,8 +31,8 @@ with `A → B`, `A` beating the spine vertices in a set `S_A`, `B` those in `S_B
 `N ∉ {7, 21}` some such tournament has exactly `N` Hamiltonian paths. In the odd-cycle conflict-graph frame (THM-002,
 Grinberg–Stanley) the count is `1 + 2(a + b + c) + 4d`, so the statement is that cliques with one further apex at
 overlap at most three realise every value the independence polynomial at 2 must take. Evidence: packet §3 (every odd
-`N < 2^16` except 7, 21 with spine ≤ 12 and overlap ≤ 3, and with spine ≤ 11 over all tapes); the overlap needed is 0 for
-1,605 values, 1 for 19,467, 2 for 11,615, 3 for 79 below `2^16`. Tests: spines 12 and 13 (pre-registered Q4–Q6), and an explicit digital formula for the count when
+`N < 2^17` except 7, 21 with spine ≤ 13 and overlap ≤ 3, every odd `N < 2^16` with spine ≤ 12, and with spine ≤ 11 over all tapes); the overlap needed is 0 for
+1,605 values, 1 for 19,467, 2 for 11,615, 3 for 79 below `2^16` (3,185 / 40,638 / 21,635 / 76 below `2^17`). Spines 12 and 13 were the pre-registered Q4–Q6 (confirmed). Tests: spine 14 (about 15 M tapes), and an explicit digital formula for the count when
 `|S_B| ≤ 3` (the one-apex count is `1 + p(u)` with `p` the inversion-pair statistic of the apex packet), which would
 turn (a) into a statement about three digital functions.
 
@@ -39,7 +41,7 @@ turn (a) into a statement about three digital functions.
 bridges (packet §1.1, PROVED). Conjecture: `Z_ℓ(W) ≤ 38·H(W)` for all `W, ℓ`; hence `H(Wℓ) ≤ 39·H(W)` (HYP-9802 (ii)'s lemma with its conjectured
 constant). Equality holds for `W = W' 0 0 0 7 6 0` and `ℓ = {2, 3}` for every word `W'` (three empty letters seal `W'`, so
 the ratio 39 of the gadget `7 6 0` is reproduced at `H = H(W')`): the constant is sharp at unboundedly large `H`.
-Evidence: all words of length ≤ 7 (and ≤ 9 if Q1–Q2 pass), and the closed set of 16,794 states with `H ≤ 40` (every word
+Evidence: all words of length ≤ 9 (Q1–Q2 confirmed; the maximisers are exactly the sealed gadgets `T_(W′) ⇒ B`, THM-5243 (2)–(2′)), and the closed set of 16,794 states with `H ≤ 40` (every word
 with `H(W) ≤ 40`, of any length), where the maximum ratio is exactly 39 at every attained `H`. What a proof
 needs: a bound on two-fragment weights by complete weights that uses the ages of the fragments' heads and tails (a young
 head must be fed within three letters or the state dies unless it is prepended; a blocked tail frees itself within three

@@ -1,0 +1,15 @@
+m = 5: max over |S| <= 3: H = 23 at S = (1, 2); max over all S: H = 23 at S = (1, 2); H for S = {r, r+2}: {1: 19, 2: 9, 3: 3}
+m = 6: max over |S| <= 3: H = 51 at S = (1, 2, 3); max over all S: H = 51 at S = (1, 2, 3); H for S = {r, r+2}: {1: 39, 2: 19, 3: 9, 4: 3}
+m = 7: max over |S| <= 3: H = 107 at S = (1, 2, 3); max over all S: H = 107 at S = (1, 2, 3); H for S = {r, r+2}: {1: 79, 2: 39, 3: 19, 4: 9, 5: 3}
+m = 8: max over |S| <= 3: H = 219 at S = (1, 2, 3); max over all S: H = 227 at S = (1, 2, 3, 4); H for S = {r, r+2}: {1: 159, 2: 79, 3: 39, 4: 19, 5: 9, 6: 3}
+m = 9: max over |S| <= 3: H = 443 at S = (1, 2, 3); max over all S: H = 467 at S = (1, 2, 3, 4); H for S = {r, r+2}: {1: 319, 2: 159, 3: 79, 4: 39, 5: 19, 6: 9, 7: 3}
+m = 10: max over |S| <= 3: H = 891 at S = (1, 2, 3); H for S = {r, r+2}: {1: 639, 2: 319, 3: 159, 4: 79, 5: 39, 6: 19, 7: 9, 8: 3}
+m = 11: max over |S| <= 3: H = 1787 at S = (1, 2, 3); H for S = {r, r+2}: {1: 1279, 2: 639, 3: 319, 4: 159, 5: 79, 6: 39, 7: 19, 8: 9, 9: 3}
+maximum of H(TT_m + u) over S within the last six ranks {m-5..m}, |S| <= 3 (ribbon-admissible S are among these):
+  m = 6: max H = 51 at S = [(1, 2, 3)] (as ranks counted from the sink: [(6, 5, 4)])
+  m = 7: max H = 51 at S = [(2, 3, 4)] (as ranks counted from the sink: [(6, 5, 4)])
+  m = 8: max H = 51 at S = [(3, 4, 5)] (as ranks counted from the sink: [(6, 5, 4)])
+  m = 9: max H = 51 at S = [(4, 5, 6)] (as ranks counted from the sink: [(6, 5, 4)])
+  m = 10: max H = 51 at S = [(5, 6, 7)] (as ranks counted from the sink: [(6, 5, 4)])
+  m = 11: max H = 51 at S = [(6, 7, 8)] (as ranks counted from the sink: [(6, 5, 4)])
+closed form H = 5*2^(m-r-2) - 1 for S = {r, r+2}, r + 2 < m, checked for m <= 11: True

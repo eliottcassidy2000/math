@@ -1,0 +1,16 @@
+maxH length 0: 8 pairs at the maximum ['1/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(), (1,)]
+maxH length 1: 16 pairs at the maximum ['3/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(1,)]
+maxH length 2: 96 pairs at the maximum ['5/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(1,), (1, 2)]
+maxH length 3: 96 pairs at the maximum ['11/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(1, 2)]
+maxH length 4: 48 pairs at the maximum ['23/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(1, 2)]
+maxH length 5: 24 pairs at the maximum ['39/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(1, 3)]; block structure T_(W') => B over all W' of length -1: 1 classes, equal to the maximiser classes: True
+maxH length 6: 24 pairs at the maximum ['39/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(2, 4)]; block structure T_(W') => B over all W' of length 0: 1 classes, equal to the maximiser classes: True
+maxH length 7: 48 pairs at the maximum ['39/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(3, 5)]; block structure T_(W') => B over all W' of length 1: 1 classes, equal to the maximiser classes: True
+maxZ length 0: 8 pairs at the maximum ['0/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(), (1,)]
+maxZ length 1: 32 pairs at the maximum ['1/1'], distinct T_(W l) up to isomorphism: 2, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(1,), (2,)]
+maxZ length 2: 96 pairs at the maximum ['3/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(1,), (1, 2)]
+maxZ length 3: 96 pairs at the maximum ['9/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(1, 2)]
+maxZ length 4: 48 pairs at the maximum ['21/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(1, 2)]
+maxZ length 5: 24 pairs at the maximum ['37/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(1, 3)]
+maxZ length 6: 24 pairs at the maximum ['38/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(2, 4)]
+maxZ length 7: 48 pairs at the maximum ['38/1'], distinct T_(W l) up to isomorphism: 1, distinct T_W: 1, T_W transitive for all: True, ranks beaten by the new vertex: [(3, 5)]

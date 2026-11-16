@@ -4,7 +4,7 @@ title: "Literal span-3 growth certificates: (i) every cheap primitive cycle of p
 status: >
   OPEN (CONJECTURE), mac-mini-2026-11-15-frame, wave 39 of chanpak_waves_20261113. UPDATE (klein-2026-11-15-ribbon, THM-5243 /
   HYP-9803): the lemma of (ii) is exactly Z_l(W) <= (K - 2) H(W) for the bridged two-covers (PROVED decomposition); it holds with
-  K = 39 for every word with H(W) <= 100 (closed set of 100,203 states) and at all lengths <= 8 (P105 confirmed at length 8); the constant is sharp at
+  K = 39 for every word with H(W) <= 100 (closed set of 100,203 states) and at all lengths <= 9 (P105 confirmed at lengths 8 and 9; to length 9 the maximisers are exactly the sealed gadgets); the constant is sharp at
   unboundedly large H (sealing by three empty letters); the annihilator LP and the coordinate-cap cone both fail to certify it
   (PROVED obstructions), so a proof must use fragment ages.
   (i) FINITE-EXACT: 3,343 cheap cycles of period <= 6, and 1,303 cycles of period <= 7 with growth below 1.3 (each
