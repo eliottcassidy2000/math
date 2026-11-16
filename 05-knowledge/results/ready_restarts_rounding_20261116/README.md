@@ -305,3 +305,38 @@ row checks use direct subset path DP; the dyadic lane and square
 root checks use exact integers.
 
 Further exact construction: [a two-head template reaches 13, 41, 125 and several of the prescribed primes](TWO_HEAD.md), with a proved limitation on matching its tail slopes.
+
+### The next matched window is blocked at every order
+
+The affine continuation update shared by the first two windows
+would require both H125 and H127 with (g,r,s)=(27,62,89).
+The lower H125 witness exists above. **No H127 witness has that
+profile.** In a putative H127 witness the product of the
+Hamilton counts of all strong components preceding the root
+divides H and r, so divides gcd(127,62)=1. Those components
+are singleton padding and can be removed with the profile
+unchanged. The near-sink append then yields a strong tournament:
+the root reaches every remaining component, and each other
+vertex has a path back via the new vertex. Its count is 251.
+Since 251 cubed is less than 5 to the power 11, Busch's bound
+makes the output order at most 11 and the trimmed input
+order at most 10.
+
+Pad the trimmed input to order ten with leading singletons.
+Deleting the mark must then leave an order-nine H27 base.
+Every such base is an augmentation of an order-eight class
+with H at most 27 by induced monotonicity. The exhaustive
+[order-eight archive](../actual_hamilton_multiplicities_20261021/session24-multiplicities/n8_classes.csv)
+has 103 such classes, and the attached verifier evaluates
+all extensions to order nine and all contacts to the mark
+at order ten. It finds 272 base presentations, 470 scalar
+125/127 candidates, 11 H125 profile hits and zero H127 profile
+hits (raw presentations, not isomorphism classes). Thus the
+fixed profile update stops on the upper side; this is not
+nonexistence of H127, nor does it exclude other ways to grow
+a +2 window at that height.
+
+Replay:
+
+    c++ -O3 -std=c++17 order10.cpp -o /tmp/rr10
+    /tmp/rr10 ../actual_hamilton_multiplicities_20261021/session24-multiplicities/n8_classes.csv
