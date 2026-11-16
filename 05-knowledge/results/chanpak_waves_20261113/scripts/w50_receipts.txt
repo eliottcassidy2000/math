@@ -1,0 +1,6 @@
+odd images land right of row n: True | family starts/spans: True | 3-chains: True | doubling spans: True
+states by H mod 18: {1: 'sterile', 3: 'live unary', 5: 'fork, odd child live unary', 7: 'sterile', 9: 'live unary', 11: 'fork, odd child sterile', 13: 'sterile', 15: 'live unary', 17: 'fork, odd child fork'}
+first sterile fork: 11 children: 21 7
+even children of the holes: 13 41
+## one-parent charge-0 check at forks (w47_charges_by_count.c with counts < 200, n <= 10)
+forks H <= 45 without a charge-0 vertex: [11, 29, 35]

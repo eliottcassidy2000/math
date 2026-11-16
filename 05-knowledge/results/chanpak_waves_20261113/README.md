@@ -4644,6 +4644,96 @@ multiplication does the rest.
 
 Chan–Pak remains OPEN.
 
+## Wave 50: the mod-3 Collatz tower, and 7 and 21 as the two children of the first sterile fork
+
+Session mac-mini-2026-11-16-tower. The owner's prompt describes:
+- the integers in a mod-3 tower (short rows for multiples of 3; long rows with 3k + 1 on the left and 3k + 2 on the
+  right), with period-12 classes;
+- the shortcut Collatz arrows drawn as families of chains, and doubling links as a "shoelace";
+- the inverse tree with five states, which after pruning the sterile rays is a full binary tree whose edge lengths in
+  {1, 2, 3, 4} rebuild every label;
+- the request to use multiplication mod odd numbers and Collatz to prove arbitrary prime counts.
+
+**Credit.** The pruned tree is already written up in the concurrent packet
+[collatz_order_geometry_20261116](../collatz_order_geometry_20261116/README.md), lines 82–106:
+- the sterile-unary, live-unary and binary types of the shortcut inverse;
+- the full binary skeleton;
+- the four edge lengths that rebuild the rigid basin;
+- the symmetric tree that remains when the lengths are dropped.
+
+Also used: THM-5262 (the floor law is the shortcut step in half-counts), THM-5272 (doubling fails at 11, 29, 35),
+COLLATZ_ROWS and THM-5126 (rows), and inverse_fences (ready seeds 13, 23, 41, …). Script `scripts/w50_tower.py`;
+output `scripts/w50_receipts.txt`.
+
+### §1. The tower, checked (PROVED, elementary; checked to 3000)
+
+Put n in row 2⌊n/3⌋ + [3 ∤ n].
+- For odd n, the shortcut image (3n + 1)/2 is 2 mod 3 and lies on the right side of row n.
+- The three odd families n = 6j + 1, 6j + 3 and 6j + 5 start at rows 4j + 1, 4j + 2 and 4j + 3, and span 2j, 2j + 1 and
+  2j + 2 rows.
+  - So a new arrow appears every 4 rows, and each family's span grows by 2.
+  - The first arrows are 1 → 2 (inside row 1), 3 → 5 (row 2 to row 3) and 5 → 8 (row 3 to row 5).
+- The doubling chain of an odd multiple of 3, 3o, climbs 2o, 4o, 8o, … rows; for 3 this is 2, 4, 8, 16.
+- A doubling link n ← 2n spans 2k rows when n = 3k + 1 and 2k + 2 rows when n = 3k + 2: 3, 5, 5, 7, 7, 9, 9, …
+  counting both end rows.
+
+### §2. Where the holes sit (PROVED)
+
+Run the shortcut map on half-counts c = (H − 1)/2. In counts it reads:
+- H ≡ 3 (mod 4): H ↦ (3H + 1)/2, the THM-5262 floor;
+- H ≡ 1 (mod 4): H ↦ (H + 1)/2.
+
+So every count H has the even child 2H − 1, and the forks H ≡ 5 (mod 6) also have the odd child (2H − 1)/3. Your five
+states, read mod 18:
+
+| H mod 18 | 1, 7, 13 | 3, 9, 15 | 5 | 11 | 17 |
+|---|---|---|---|---|---|
+| state | sterile (c ≡ 0 mod 3) | live unary | fork, odd child live unary | **fork, odd child sterile** | fork, odd child a fork |
+
+**Theorem.** The holes are exactly the two children of the first sterile fork H = 11: 21 = 2·11 − 1 and 7 = 21/3.
+- In the tower these are the short-row family's first arrow 3 → 5 and the shoelace link "5 from 10". Both arrows that
+  reach the right side of row 3 come from holes.
+- No other count has a hole as either child.
+- The next sterile forks are 29, 47, 65, …. Their children (57, 19), (93, 31), (129, 43), … are all counts.
+
+Neighbouring facts line up:
+- **Doubling ports.** Among forks up to 45, the ones with no charge-0 vertex in one-parent growth (n ≤ 10) are exactly
+  11, 29 and 35. That is THM-5272's list of counts where doubling fails, and 11 and 29 are the first two sterile forks.
+- **Restarts.** The even children of the holes are 13 = 2·7 − 1 and 41 = 2·21 − 1. These are the inverse_fences ready
+  seeds 13 and 41, where the rows L_3 and L_5 restart after their holes.
+
+### §3. What these structures give toward prime counts
+
+- **Multiplication does everything except the atoms.** Multiplication mod odd numbers already gives every residue
+  (wave 48; session157 and session137). Multiplicativity gives every smooth number (wave 49). So the only additive work
+  is the atoms: the primes other than 7, the products 7p, 63 and 343.
+- **The Collatz tree points the wrong way for odd children.** A fork's odd child (2H − 1)/3 is smaller than H, but
+  adding vertices never goes down (floor law). Only the even child 2H − 1 is an extension, the charge-0 append.
+- **Primes split by residue mod 4.**
+  - A prime p ≡ 1 (mod 4) is the even child of (p + 1)/2, so it can come from doubling whenever that count has a
+    charge-0 port.
+  - A prime p ≡ 3 (mod 4) is an odd child, of (3p + 1)/2, and must be built directly.
+  - The holes split the same way: 21 ≡ 1 is the even child, 7 ≡ 3 the odd child.
+- **P111 (route to the prime lane).** For every prime p ≡ 1 (mod 4) other than 13 and 41, the count (p + 1)/2 has a
+  realization where THM-5272's doubling D is physical, so p is a doubling child.
+  - This is consistent with THM-5272's port spectra to 104: the failures 11, 29 and 35 are the parents of 21, 57 and
+    69, none of them prime.
+  - The primes p ≡ 3 (mod 4) still need a direct construction.
+  - OPEN.
+
+### Verdicts
+
+| claim | status |
+|---|---|
+| tower formulas (image row n; family starts and spans; doubling spans) | PROVED; checked to 3000 |
+| five states read in counts mod 18; the first sterile fork is 11 | PROVED |
+| 7 and 21 are the two children of the sterile fork 11, and no other count has a hole child | PROVED |
+| forks ≤ 45 lacking a one-parent doubling port are 11, 29, 35 (= THM-5272) | FINITE-EXACT, n ≤ 10 |
+| the even children of the holes are the ready seeds 13, 41 | PROVED (arithmetic) |
+| pruned tree, edge lengths {1, 2, 3, 4}, symmetric skeleton | credited to collatz_order_geometry_20261116 |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
