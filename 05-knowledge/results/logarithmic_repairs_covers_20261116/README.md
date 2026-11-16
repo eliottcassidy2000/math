@@ -5,7 +5,7 @@
    proved positive induced-growth tariff. More generally even a
    perfectly filled logarithmic neighborhood around each previous
    pressure-bank anchor cannot be dense, let alone cover all targets.
-2. [27→53→105→209→417→833 and the 27/63 contrast](RAY.md). A fixed
+2. [27→53→105→209→417→833→1665 and the 27/63 contrast](RAY.md). A fixed
    one-apex run library cannot cover an infinite subset of any
    prime-mantissa ray 1+q·2^e. A factored 27 cannot embed into
    any 63, even with arbitrary extra vertices. Explicit changed
