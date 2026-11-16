@@ -1,0 +1,12 @@
+Riesel wheel primes: [3, 5, 7, 13, 17, 241] orders: [2, 4, 3, 12, 8, 24] covering phases of 509203*2^e-1: [[0], [1], [2], [7], [7], [3]]
+phase multiset (as in CLOCKS.md): [0, 1, 2, 7, 7, 3] sum 20 ; order sum 53 ; prime sum 286 ; product/(2^24-1): 5592405 5592405
+owner sets: old {4,2,5,3,7,13} sum 34 product 10920 ; new {4,2,5,7,7,13} sum 38 product 25480
+pure-A Niemeier (n, k, h): [(1, 24, 2), (2, 12, 3), (3, 8, 4), (4, 6, 5), (6, 4, 7), (8, 3, 9), (12, 2, 13), (24, 1, 25)] ; Coxeter numbers [2, 3, 4, 5, 7, 9, 13, 25]
+h with h-1 | 12: [2, 3, 4, 5, 7, 13]
+Riesel orders that are Niemeier Coxeter numbers: [2, 4, 3]
+Riesel primes that are Niemeier Coxeter numbers: [3, 5, 7, 13]
+196560 = {2: 4, 3: 3, 5: 1, 7: 1, 13: 1} ; |Co_0| = {2: 22, 3: 9, 5: 4, 7: 2, 11: 1, 13: 1, 23: 1} ; |M24| = {2: 10, 3: 3, 5: 1, 7: 1, 11: 1, 23: 1}
+Riesel primes dividing 196560: [3, 5, 7, 13] ; dividing |Co_0|: [3, 5, 7, 13] ; dividing |M24|: [3, 5, 7]
+primes with ord_p(2) in {2,4,5,7,13}: {2: [3], 4: [5], 5: [31], 7: [127], 13: [8191]}
+2^d - 1 for d in {2,4,5,7,13}: {2: 3, 4: 15, 5: 31, 7: 127, 13: 8191} (Mersenne primes at 2,5,7,13: 3, 31, 127, 8191)
+sum 1/ord Riesel: 1.3333333333333333 ; divisors of 24: [1, 2, 3, 4, 6, 8, 12, 24] ; sum 1/d over d|24, d>1: 1.5

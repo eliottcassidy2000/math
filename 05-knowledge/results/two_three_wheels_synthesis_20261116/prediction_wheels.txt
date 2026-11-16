@@ -1,0 +1,4 @@
+pre-registered 2026-11-15 22:57:41 MST, before brier_sheets.py was run and before the wheels2/wheels3 tables were complete:
+P-W1: for every N <= 150 where the exact search decides, the exact answer equals the nested-dyadic criterion (cover of Z/m by the odd parts of the orders, m the odd part of N).
+P-W2: no period N <= 150 admits a self-dual (two-sheet) cover: an assignment of one class per even-order prime p such that both {r_p mod ord_p} and {r_p + ord_p/2} cover Z/N.
+P-W3: in base 3 the coverable periods N <= 120 are exactly the multiples of 24 that are >= 48, plus 90.
