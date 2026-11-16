@@ -54,3 +54,36 @@ there are only O(log X) values across both arms through X.
 
 Replay: `python check_artin.py` checks the order classification
 through M=257, the two specific moduli, and the lifting witness.
+
+## Twin-prime contrast: a different 67/69 arm has a permanent wheel
+
+Instead inflate only the first module. The
+[other inherited two-scale chart](../chanpak_pair_67_69_20261114/TWO_SCALE_AND_PORTS.md)
+gives the consecutive physical pair
+
+    (32·2^n+3, 32·2^n+5),   n≥1.
+
+No pair on this ray consists of two primes. This is an exact
+period-12 obstruction, using the composite member indicated:
+
+| n condition | member | proper prime divisor |
+|--|--|--:|
+| odd | upper | 3 |
+| 0 mod 4 | lower | 5 |
+| 2 mod 12 | upper | 7 |
+| 6 mod 12 | lower | 7 |
+| 10 mod 12 | upper | 13 |
+
+These conditions exhaust n. The divisibilities follow from the
+orders of 2 modulo 3,5,7,13 (2,4,3,12); each entry is larger
+than its prime divisor. This wheel preserves a physical +2
+edit at all heights while forbidding a twin-prime pair. The
+Twin Prime Conjecture, even if true, cannot supply its pairs
+from this particular family. This is not a claim about other
+physical +2 seams or general infinitude of prime gaps.
+
+Two independent axes can escape that wheel. In the same inherited
+table their transitive sizes (8,3) give counts 1,734,041 and
+1,734,043. Both are prime by trial division (checked below), so
+this is a literal twin-prime count pair outside the one-axis
+obstruction. No infinitude assertion is made.
