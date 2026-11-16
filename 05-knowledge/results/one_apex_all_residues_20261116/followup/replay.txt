@@ -1,0 +1,2 @@
+Full residue replays: 7385 ; modulus 8191: 1185 spine positions with 79 marks.
+Large fork presentations, next-single, next-none: 8 14 2
