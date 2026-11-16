@@ -1,0 +1,16 @@
+Checked direct contraction gap against three-run transfer on all 5,460 words through spine 6.
+Confirmed single-arc factor-one seam and baseline formula through height 18, five literal DP controls.
+Mirror width, individual anchors, distinct larger endpoints, min, max
+2 1 1 4129 4129
+3 2 2 13921 54873
+4 4 4 49177 642745
+5 8 8 184057 6877161
+6 16 16 711289 69288889
+7 32 32 2795641 671356233
+8 64 64 11083897 6342183385
+9 128 128 44138617 58932483561
+10 256 256 176160889 541717974649
+11 512 512 703856761 4944238464393
+12 1024 1024 2813853817 44914059974425
+13 2048 2048 11252269177 406734915377961
+The balanced P/Q atoms were checked by literal subset DP; every P/Q block sequence through 8 atoms obeys the signed gap law.
