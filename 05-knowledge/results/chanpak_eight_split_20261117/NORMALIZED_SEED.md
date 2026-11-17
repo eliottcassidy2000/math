@@ -28,10 +28,10 @@ Set D=M−y and let A=N⁺(y) in D; use the cover quantities W,U,E on D with thi
 
     U+E=g,    h=W.
 
-In particular A is nonempty and lies in **one** strong component F of D. To prove this, suppose F and L are first and last tagged components and are distinct. Split full paths of F just before a tag, and full paths of L just after a tag, placing the F tag at the start of Z and the L tag at the end of X. In every intervening SCC independently split a full path into two slots; merge in ordinal order and attach outer full paths. These choices give U≥g times 2 to the power of the number of intervening components. If there is an intervening component this contradicts U≤g. If F,L are adjacent, there is an additional class of covers where X ends at a tag in F and Z starts at a tag in L. Such full paths in F and L exist: any vertex of a strong tournament with at least three vertices can be a start or end by cutting a directed Hamilton cycle (Camion's theorem); singleton cases are immediate. The additional class is disjoint and again makes U>g.
+The cover coordinate U is always even: the one-return-vertex construction gives two odd Hamiltonian counts g and g+2W−U. Thus E is odd and positive, so the terminal SCC of D has a tag. If A straddled two SCCs, split D=A₁→A₂ so both blocks have a tag. Cut every full path in A₁ just before a specified tag along that path, and every full path in A₂ just after a specified tag. Concatenating the pieces slotwise produces distinct U-covers with X ending at an A₂-tag and Z starting at an A₁-tag. Thus U≥H(A₁)H(A₂)=g, contradicting E>0.
 
-Write D=P→F→S in its unique SCC order (empty blocks allowed). With A inside F the test on (F,A) is U_F+E_F=H(F) if S is empty, and U_F=H(F) otherwise. Indeed U on D scales by H(P)H(S), while E is zero unless S is empty. The read for normalized seeds becomes
+Consequently **all tags lie in the terminal strong component F of D**. Let P be the untagged ordinal prefix. The exact test and read reduce to
 
-    J=H(P)[3W_F P₂(S)+2H(F)H(S)].
+    U_F+E_F=H(F),     J=H(P)[3W_F+2H(F)].
 
-The outer prefix factor must be 1 for J prime, since the bracket is greater than 1. This is an exact single-component selection law, with a possible two-coordinate suffix, not a proof of the universal profile supply.
+For prime J the prefix must have H(P)=1, since the bracket is at least 5. The untagged ordinal prefix supplies no new prime values. The inverse is now a selection problem entirely within one strong tournament F, with its actual tag data, rather than a search over unbounded strings of ordinal components.
