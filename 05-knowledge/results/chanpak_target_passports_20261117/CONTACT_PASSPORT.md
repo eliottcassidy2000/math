@@ -2,6 +2,8 @@
 
 A prescribed prime cannot in general be placed by choosing contacts on a deletion of bounded Hamiltonian count. This is an all-order restriction on the one-exit geometry, even allowing arbitrary growth in the number of vertices. It also yields the first feasible deletion counts for an exact normalized ±1 offset. It does not restrict alternative geometries or arbitrary intercepts.
 
+**Follow-up:** [the sharper growth theorem](SHARP_CORE_GROWTH.md) uses the same contact ledger to raise the exponent from about 0.257 to 0.436. The basic trimming proof and sharp small-count table below are unchanged.
+
 ## Two tests on the actual contacts
 
 Let R be a deletion tournament, g=H(R), and pick Q⊆V(R). Add a vertex q beating precisely Q. Now attach a nonempty module B by R→B→q. Write (P,h)=(P₂(B),H(B)). The [two-run law](../chanpak_changed_contacts_20261117/PLUS_RAY.md#an-arbitrary-module-plus-reader) gives H(output)=WP+Kh, where W is the weighted starting cover count excluding the singleton q, and K is the normalized constant coordinate.
