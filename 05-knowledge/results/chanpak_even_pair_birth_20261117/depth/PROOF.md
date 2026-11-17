@@ -1,0 +1,83 @@
+# Prescribed-target cut cells for two-flank tournament readers
+
+This is a literal inverse for a restricted family, not a proof of Chan–Pak or a census at the orders of the constructed graphs. It uses the existing [marked interval law](../../alternate_apex_select/PROOF.md): take an ordinal deletion `TT_m → D → TT_n`, add the common apex, and let its two spine contact words be the binary word of u and the reverse complement of that of w. With D nonempty and q recording apex wins to D, let the seven integer coefficients be ((h,P,L,R,L^-,R^-,κ)). Then
+
+    H(u,w) = κ + h(F(u)+F(w)−2) + Ru + Lw + Puw − R⁻(u mod 2) − L⁻(w mod 2).
+
+Here `F(0)=1, F(2t+1)=F(t), F(2t)=F(t)+t+(t mod 2)` for 2t>0. Equivalently for least-significant-first bits b,
+
+    F(b)−1 = Σ_{i<j} (2^(j−i−1)+[j=i+1]) b_j(1−b_i).
+
+Indeed each even step of the recurrence adds the upper prefix plus its lowest bit. This identity works for any fixed leading-zero padding of the words used for computing F, but the actual graph takes the canonical word, or no spine when the address is zero. The proof code freezes each nonempty spine's leading bit to 1 for exact order.
+
+## Exact lower and congruence filters for arbitrary frozen bits
+
+Use bits x of u and complemented bits y of w. The polynomial now has form
+
+    c + Σ a_i z_i + Σ d_ij z_i(1−z_j), with d_ij ≥ 0.
+
+The u internal term has arc from higher to lower index; the w internal term has arc from lower to higher; the cross term (Puw=PΣ 2^{i+j}x_i(1−y_j)) has arc u-bit to w-bit. The parity terms are unary. Positive unary a_i is an arc i→sink; negative a_i contributes constant a_i and an arc source→i of weight -a_i. Assign z_i=1 to the source side of the cut. Thus one directed min-cut computes the **exact smallest count over any frozen-bit cell**, regardless of depth or which bits are fixed. Freezing a bit also deterministically converts touched arcs to unary/constant terms. The upper bound used here is the independent sum of the positive unaries and every remaining directed capacity. This is only a bound, not an exact maximum.
+
+The exact possible difference *subgroup* of a frozen cell is (gmathbb Z). To compute g, expand each arc as (d_{ij}z_i-d_{ij}z_i z_j), take the gcd of resulting unary and quadratic coefficients (summing coefficients if a term is repeated). Every evaluation is c modulo g. Conversely each unary coefficient is the difference of values at the zero and one-bit assignments, and every quadratic coefficient is a second difference using the zero, two one-bit, and corresponding two-bit assignments. Thus no stronger single congruence holds throughout that cell. This does not say that every number in its residue class or interval occurs.
+
+For height search, `1 ≤ F(u) ≤ 1+u`: induct on u with the stronger (F(u)≤u) when u is odd. At fixed physical lengths m,n, the smallest and largest addresses are bounded by leading bit and all-ones respectively. This gives cheap safe outer bounds before any branching. For each fixed core profile with (L,R>0), the target bounds both absolute widths, since
+(Ru+Lw+Puw≤N-κ+max(L^-,0)+max(R^-,0)). So the decoder can also certify exact **absence from that profile at all widths** by exhausting just those finite addresses with the proof filters. In the supplied run only the size caps explicitly searched are asserted. Lower/upper interval and congruence filters can be applied at any intermediate bit cell, and reaching a leaf certifies equality for the constructed host.
+
+## Target study
+
+The source bank enumerates only **strong deletion cores** through order 7 and nonempty proper apex win masks, collapsing equal profiles to their shortest representative. Isomorphism classes of centers are generated inductively by adjoining the last vertex with arbitrary mask, and canonicalizing by degree-ordered blocks and permutations within blocks. No host tournaments are enumerated by isomorphism class at the potentially much larger output orders. For each target, search proceeds in increasing physical order by exploring only word cells whose constraints do not yet exclude the exact value. Ordinary independent subset DP verifies all ten fully materialized hosts.
+
+| target | order in this bank |
+|---:|---:|
+| 97309 = 31·43·73 | 15 |
+| 681163 = 7·97309 | 17 |
+| 8191 | 11 |
+| 57337 = 7·8191 | 14 |
+| 65537 | 14 |
+| 458759 = 7·65537 | 17 |
+| 30011 | 13 |
+| 210077 = 7·30011 | 16 |
+| 30013 | 13 |
+| 210091 = 7·30013 | 15 |
+
+8191, 65537, 30011 and 30013 are prime by trial division. This includes independently selected primes 30011 and 30013 rather than requiring the second quotient to be the first. The order on each line is **minimal in the specified bank**, not claimed globally minimal. These are decoder controls, not new records: in particular, [Session244](../../../../05-knowledge/results/session244_even_gap_anchoring_20261110/README.md) already gives an order-12 witness for 97309, and the earlier full order-11 spectrum covers every admissible odd through 80555 (the even endpoint 80556 is not a target). All ten targets exceed the exact order-nine maximum 3357 in the separate first-birth atlas, so their global birth orders are at least 10. For any prime p, and any 7p with p prime, every singleton-free witness must be strong: ordinal SCC counts multiply, and the only possible nontrivial factorization of 7p needs a count-7 component, which is forbidden (the same holds for p=7, where the product is 49). Thus the general prime/7p birth question lies entirely in the strong family, but this specific upper bound searches only one geometric part of it. Busch's lower floor for strong counts gives an order ceiling for any such witness after deleting singleton SCCs. Neither the cut law nor the global order ceiling certifies universal placement.
+
+The file `targets7.jsonl` is machine-readable literal rows, source/address data and search statistics. In the current target set, congruence excludes many cells (e.g. 3684 for 97309), whereas the min-cut never excludes a cell not already excluded by cheap bounds plus congruence. Its proved contribution is exact minimization for arbitrary frozen cells, not observed acceleration here.
+
+Reproduce from this directory:
+
+    python solve.py
+    python replay.py
+    python find.py 7 21 97309 681163 8191 57337 65537 458759 30011 210077 30013 210091
+
+The first command exhausts frozen cells through 3+3 bits, checking exact cut minima against literal arithmetic and the DFS against every value in the corresponding finite intervals; it separately checks the law by literal DP. The second verifies the recorded full tournaments, profiles, primality claims and unlabeled deletion counts. The third regenerates the search records.
+
+## Separate exact last-contact inverse: order 13 for 681163
+
+The two-spine bank need not settle the absolute order; drop its structural commitment but keep a small final-position search. The odd-cycle packing identity gives, for any fixed deletion (D) and apex out-neighborhood (Q),
+ 
+    H(D+v) = H(D) + 2 Σ_{i∈Q,j∉Q} W_ij,
+    W_ij = Σ_{S⊂V(D), |S| positive even} (# i-to-j spanning paths in D[S]) H(D−S).
+
+A directed odd cycle containing the apex is precisely such an even old path plus the two apex arcs. The remaining odd packs have total weight (H(D-S)). Compute W once using one subset DP from each initial vertex. Then probe all cuts in (O(n2^n)) operations via
+
+    cut(Q∪{i}) = cut(Q) + Σ_j W_ij − Σ_{j∈Q}(W_ij+W_ji).
+
+This is exact last-contact inversion, not a tournament census. With arbitrary seeded biased orientations of D as a proposal, attempt 418 (zero-based) at order 12 succeeds for (681163=7·97309). The full row masks are
+
+    (990,1020,3832,8112,4128,4993,3000,3600,3732,4112,627,5683,1479).
+
+Ordinary path subset DP independently returns 681163. This unconditionally gives global birth order **12 or 13** using the [exact order-11 maximum 95095](https://mathoverflow.net/questions/415359/maximum-number-of-hamilton-paths-in-a-tournament-on-n-vertices) reported by its enumerator Gordon Royle. No sampled miss is an order-12 exclusion.
+
+    g++ -O3 random_apex.cpp -o /tmp/random_apex
+    /tmp/random_apex 12 419 681163
+
+The ten two-spine controls and their minimal bank orders are distinct from this sharper literal upper bound.
+
+The cut model also gives a strict no-go for independent additive digit proposals on a **single apex** over fixed D. For distinct (i,j
+otin Q),
+
+    H(Q+i+j) − H(Q+i) − H(Q+j) + H(Q)
+        = −2(W_ij+W_ji) ≤ −2 H(D−{i,j}) < 0.
+
+Indeed the size-two subset contributes once in whichever direction the actual tournament pair is oriented. So even arbitrary simultaneous unrelated prefix and tail edits cannot be modeled as independent additive toggles if both just add individual ports to the same mask. The corresponding mixed difference for disjoint blocks (I,J) of newly added wins is the sum over their cross pairs. Balanced exchanges (adding and removing contacts simultaneously) or replacing D can evade this particular obstruction. The same min-cut and finite-difference residue filters extend directly to frozen cells of the apex mask with weights (2W), without constructing any two-spine contact words.
