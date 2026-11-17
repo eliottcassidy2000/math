@@ -1,0 +1,18 @@
+n 3 classes 2 vertices 2 edges 1 blue-support 1 loops 0 reachable 2
+shell vertices 1 1
+shell distinct H 1 1
+n 4 classes 4 vertices 3 edges 2 blue-support 1 loops 1 reachable 3
+shell vertices 1 1 1
+shell distinct H 1 1 1
+n 5 classes 12 vertices 10 edges 18 blue-support 8 loops 2 reachable 10
+shell vertices 1 1 5 3
+shell distinct H 1 1 5 2
+n 6 classes 56 vertices 34 edges 173 blue-support 26 loops 10 reachable 34
+shell vertices 1 1 7 22 3
+shell distinct H 1 1 7 14 2
+n 7 classes 456 vertices 272 edges 6032 blue-support 246 loops 44 reachable 272
+shell vertices 1 1 15 149 89 14 3
+shell distinct H 1 1 11 54 44 7 3
+n 8 classes 6880 vertices 3528 edges 437981 blue-support 1790 loops 235 reachable 3528
+shell vertices 1 1 29 813 1529 921 231 3
+shell distinct H 1 1 23 175 231 162 78 3
