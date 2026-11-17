@@ -1,0 +1,26 @@
+Pre-registered predictions, klein-2026-11-16-tooth, written 2026-11-16 before the runs below.
+
+R-1 (quadratic extension lemma)  For every tournament T of order <= 7 and every out-neighbourhood X of a new vertex v,
+     H(T + v_X) = h + sum_{x in X} (B_x - e_x) - sum_{y != x in X} M(y, x), with M(y, x) the number of ordered pairs of
+     nonempty paths covering T, the first ending at y, the second starting at x: 0 mismatches (this is a derivation; the
+     run is its check).  The largest number of distinct child counts produced by one class of order 7 is at most 60.
+R-2 (the holes in the near-join sub-grammar)  Over rooted tournaments of orders <= 8 with h < 21, the B-sets have odd
+     parts {1} for h = 1, {3} for h = 3, {5, 7, 9, 3} for h = 5 (3 from 6 = 3*2 and 32 = 2^5), and neither 7 nor 21 is
+     h + 2^k B (k >= 1) or a dead-end append h + B (e = 0).
+R-3 (extension graph, orders 3-9)  Contacts (distinct parent classes per class): the mean number of distinct parents of an
+     order-n class is at least 0.8 n for n = 8, 9; the class with the most children among order n-1 classes is not the
+     transitive tournament for n-1 >= 5, and the transitive tournament M_{n-1} has fewer children than classes of order n
+     for every n >= 5.
+R-4 (canonical-parent tree)  With each class attached to its least canonical deletion class, the branching at order 8 -> 9
+     has maximum above 100 and between 10 % and 50 % of the order-8 classes are childless.
+
+Second pre-registration (written after reading THM-4922, before creators.py and toothpick.py run; extgraph.py, quadform.py,
+holes_grammar.py, spectrum9 are running or done but unread).
+
+R-5 (grammar of first creators)  Among the genealogy edges (F, v) with F a first creator of order n in 4..9 and F - v a
+     first creator of order n - 1 (THM-4922's genealogy), the out-degree of v has its mode at 1 or at n - 2 (sole exit or
+     sole entry), and at least 60 % of first creators of orders 6-9 have such an edge with d+(v) in {1, n - 2}.
+R-6 (digit-0 vertices in first creators)  Fewer than 15 % of the first creators of orders 6-9 have a digit-0 vertex
+     (B_z = H); the converse pair creating 63 has none.
+R-7 (toothpick tree and first creators)  In the canonical-parent tree (least canonical deletion), at least 50 % of the
+     first creators of orders 5-9 have a first creator as their tree parent.

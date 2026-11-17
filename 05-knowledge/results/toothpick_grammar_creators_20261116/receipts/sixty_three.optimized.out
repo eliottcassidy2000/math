@@ -1,0 +1,2 @@
+class 2519: H = 63, out-degrees [1, 2, 2, 3, 3, 5, 6, 6], root responses [64, 77, 89, 116, 179, 344, 387, 553], digit-0 vertices 0, strong True, deletion counts [1, 11, 25, 25, 33, 33, 37, 37]
+class 3285: H = 63, out-degrees [1, 1, 2, 4, 4, 5, 5, 6], root responses [63, 74, 103, 121, 220, 331, 388, 509], digit-0 vertices 1, strong True, deletion counts [1, 11, 25, 25, 33, 33, 37, 37]

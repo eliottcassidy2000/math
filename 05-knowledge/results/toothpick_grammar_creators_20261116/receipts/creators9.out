@@ -1,0 +1,9 @@
+order: new counts, first creators, with a genealogy edge, with a sole-exit/sole-entry genealogy edge, with a digit-0 vertex | out-degree distribution of genealogy vertices | orphans (count)
+  3: 1, 1, 0, 0, 1 | | orphans: 3
+  4: 1, 1, 1, 1, 1 | 1:1 2:1 | orphans:
+  5: 4, 6, 6, 4, 3 | 1:4 2:12 3:4 | orphans:
+  6: 12, 33, 33, 27, 7 | 1:22 2:53 3:53 4:22 | orphans:
+  7: 58, 328, 328, 235, 24 | 1:165 2:449 3:621 4:449 5:165 | orphans:
+  8: 243, 5457, 5455, 3017, 92 | 1:1846 2:6331 3:10814 4:10814 5:6331 6:1846 | orphans: 63 63
+  9: 1200, 163676, 163676, 63060, 610 | 1:35176 2:144462 3:296548 4:372259 5:296548 6:144462 7:35176 | orphans:
+./creators9  5.88s user 0.04s system 97% cpu 6.099 total
