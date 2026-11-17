@@ -1,0 +1,27 @@
+LEVEL 2 classes 1 new_values 0 birth_classes 0 strong_birth 0 parentless_birth 0 cross_edges 0 same_count_deletions 1 simple_flips 0 birth_birth_flips 0 birth_old_flips 0 neutral_isom_flips_labeled 1
+SHAPE 2 old_max 1 high_birth 0 unit_birth_flips 0 weak_local_maxima 0 components  relay_dist 
+UNITS 2 adjacent_values 0 physically_joined 0 missing_first 
+LEVEL 3 classes 2 new_values 1 birth_classes 1 strong_birth 1 parentless_birth 1 cross_edges 0 same_count_deletions 1 simple_flips 1 birth_birth_flips 0 birth_old_flips 1 neutral_isom_flips_labeled 2
+SHAPE 3 old_max 1 high_birth 1 unit_birth_flips 0 weak_local_maxima 1 components 1, relay_dist inf,
+UNITS 3 adjacent_values 0 physically_joined 0 missing_first 
+ORPH 3 2 H 3 old counts 1, anchored birth neighbors 0 counts  rows 4,1,2,
+LEVEL 4 classes 4 new_values 1 birth_classes 1 strong_birth 1 parentless_birth 0 cross_edges 1 same_count_deletions 3 simple_flips 5 birth_birth_flips 0 birth_old_flips 3 neutral_isom_flips_labeled 6
+SHAPE 4 old_max 3 high_birth 1 unit_birth_flips 0 weak_local_maxima 1 components 1, relay_dist 
+UNITS 4 adjacent_values 0 physically_joined 0 missing_first 
+LEVEL 5 classes 12 new_values 4 birth_classes 6 strong_birth 6 parentless_birth 0 cross_edges 6 same_count_deletions 7 simple_flips 30 birth_birth_flips 9 birth_old_flips 12 neutral_isom_flips_labeled 16
+SHAPE 5 old_max 5 high_birth 6 unit_birth_flips 5 weak_local_maxima 2 components 6, relay_dist 
+UNITS 5 adjacent_values 3 physically_joined 3 missing_first 
+LEVEL 6 classes 56 new_values 12 birth_classes 33 strong_birth 33 parentless_birth 0 cross_edges 93 same_count_deletions 23 simple_flips 290 birth_birth_flips 153 birth_old_flips 71 neutral_isom_flips_labeled 60
+SHAPE 6 old_max 15 high_birth 33 unit_birth_flips 18 weak_local_maxima 3 components 33, relay_dist 
+UNITS 6 adjacent_values 8 physically_joined 7 missing_first 25,
+LEVEL 7 classes 456 new_values 58 birth_classes 328 strong_birth 328 parentless_birth 0 cross_edges 1525 same_count_deletions 112 simple_flips 4086 birth_birth_flips 2754 birth_old_flips 616 neutral_isom_flips_labeled 328
+SHAPE 7 old_max 45 high_birth 324 unit_birth_flips 147 weak_local_maxima 8 components 328, relay_dist 
+UNITS 7 adjacent_values 48 physically_joined 31 missing_first 51,53,55,57,59,81,83,85,87,93,
+LEVEL 8 classes 6880 new_values 243 birth_classes 5457 strong_birth 5457 parentless_birth 2 cross_edges 35201 same_count_deletions 916 simple_flips 91161 birth_birth_flips 68454 birth_old_flips 10112 neutral_isom_flips_labeled 3160
+SHAPE 8 old_max 189 high_birth 5178 unit_birth_flips 1274 weak_local_maxima 12 components 5457, relay_dist 1,1,
+UNITS 8 adjacent_values 229 physically_joined 186 missing_first 165,193,195,203,221,225,241,253,261,295,
+ORPH 8 2359556 H 63 old counts 1,11,25,33,37, anchored birth neighbors 2 counts 163,211, rows 8,9,3,148,7,31,63,119,
+ORPH 8 3145732 H 63 old counts 1,11,25,33,37, anchored birth neighbors 2 counts 163,211, rows 8,1,3,198,15,31,55,119,
+LEVEL 9 classes 191536 new_values 1200 birth_classes 163676 strong_birth 163676 parentless_birth 0 cross_edges 1279209 same_count_deletions 13784 simple_flips 3380751 birth_birth_flips 2777815 birth_old_flips 249823 neutral_isom_flips_labeled 54928
+SHAPE 9 old_max 661 high_birth 162673 unit_birth_flips 17819 weak_local_maxima 46 components 163676, relay_dist 
+UNITS 9 adjacent_values 1167 physically_joined 1104 missing_first 2229,2319,2449,2651,2659,2667,2669,2671,2673,2679,
