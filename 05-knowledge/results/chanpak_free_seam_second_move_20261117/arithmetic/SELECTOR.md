@@ -146,6 +146,6 @@ odd/even reflected sidecar.
 
 `selector.py` uses only integer comparisons and integer square roots. `check.py`
 checks the suffix law, every carry-boundary case in a finite box, exact physical
-formula agreement with the inherited implementation, bracketing across many
+formula agreement using an independent direct prefix-sum read, bracketing across many
 scales, and quarter-exponent target bands. These tests support the proof;
 they are not its universal premise.
