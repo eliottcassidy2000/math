@@ -1,0 +1,6 @@
+phase support [5, 7, 11, 13, 17]
+prime residue / p / g / ready / companion: 5 113 9 791 789
+prime residue / p / g / ready / companion: 7 547 11 3829 3831
+prime residue / p / g / ready / companion: 11 173 5 1211 1213
+prime residue / p / g / ready / companion: 13 13 9 91 89
+prime residue / p / g / ready / companion: 17 197 37 1379 1377
