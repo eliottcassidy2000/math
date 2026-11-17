@@ -110,3 +110,26 @@ p=seam(5149,100,1)
 if p!=11136264317 or any(a%d==0 for a in (p,p+2) for d in range(3,isqrt(a)+1,2)):
     raise ArithmeticError('twin prime fixture')
 print('PASS neutral slot read, tagged polynomial differences, and actual Farey twin-prime fixture.')
+def T(n):
+    return tuple((1<<n)-(1<<(i+1)) for i in range(n))
+def block(u):
+    word=bin(u)[2:]
+    return T(len(word)),sum(int(v)<<i for i,v in enumerate(word))
+def concat(X,Y):
+    a,l=X;b,r=Y;m=len(a)
+    return tuple(x|(((1<<len(b))-1)<<m) for x in a)+tuple(x<<m for x in b), l|(r<<m)
+def dual(X):
+    a,t=X
+    return tuple(sum((row>>i&1)<<j for j,row in enumerate(a)) for i in range(len(a))),((1<<len(a))-1)^t
+def glue(X,Y):
+    D=((54,32,2,119,6,20,55),26)
+    A,q=concat(concat(X,D),dual(Y))
+    return tuple(row|((1-(q>>i&1))<<len(A)) for i,row in enumerate(A))+(q,)
+for u in (1,2,5):
+    for w in (2,4):
+        for j,(A,r) in enumerate(X):
+            left,right=concat(block(u),(A,1<<r)),block(w)
+            for side,(S,U) in enumerate(((left,right),(right,left))):
+                if sum(table(glue(S,U))[-1])!=seam(u,w,j)+2*side:
+                    raise ArithmeticError('literal Farey fusion')
+print('24 literal Farey fusion DP checks pass.')
