@@ -35,3 +35,14 @@ Consequently **all tags lie in the terminal strong component F of D**. Let P be 
     U_F+E_F=H(F),     J=H(P)[3W_F+2H(F)].
 
 For prime J the prefix must have H(P)=1, since the bracket is at least 5. The untagged ordinal prefix supplies no new prime values. The inverse is now a selection problem entirely within one strong tournament F, with its actual tag data, rather than a search over unbounded strings of ordinal components.
+
+## Two new arbitrary-module families
+
+In each row replace the final vertex of the marked seed by any nonempty B, writing h_B and P_B for its counts. The table gives the two literal anchor profiles (h,g,w) and the resulting normalized read J.
+
+| Marked seed (outgoing masks) and marked vertex | TT₁ / TT₂ profiles | J |
+|---|---|---|
+| (24,117,33,54,4,17,61), y=5 | (41,17,58) / (69,29,98) | 54P_B+49h_B |
+| (72,9,123,80,99,139,34,95), y=6 | (143,29,172) / (329,59,388) | 309P_B−131h_B |
+
+Each slot has a unique exterior entrant. In the W cover for M the second path starts at y, not in B, so at most one B-run can start a slot and at most one can use the sole exterior entrant. The same at-most-two argument holds for full paths in M and M−y. Thus all three reads are linear in (P_B,h_B), and the two literal anchors certify normalization w=h+g for every B. A directed triangle substitution independently gives the profiles (207,87,294) and (987,177,1164). Singleton substitution already supplies the primes 157 and 487, with the full recontact menus. These are two more genuine seed families, not a proof that the exact read reaches every prime.
