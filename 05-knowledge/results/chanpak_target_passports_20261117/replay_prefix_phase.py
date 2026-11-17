@@ -51,8 +51,11 @@ def rooted_word(M,c,k):
     if a:
         want=(Ak-(c-C0)//2)*iinv(25,D2)%D2
         shifts=(want-g)*iinv(m,D2)%D2
-        loop="T"+"A"*j+"T"
-        word+=loop*(m*shifts)
+        for i in range(a):
+            if shifts>>i&1:
+                d=a+(-a-i-4)%o
+                loop="A"*i+"T"+"A"*d+"T"
+                word+=loop*m
     u,g=move(word,M)
     need((C0+2*Ak*u-50*g-c)%M==0)
     return word
