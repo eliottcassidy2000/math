@@ -36,7 +36,10 @@ recursive enlargements still do not prove coverage.
 - [Recursive rooted enlargement](coupling/PROOF.md): unrestricted depth
   and a rigorously bounded frequency of weak stages preserve the +2, but
   the repair endpoint library is still O(X^(.99) log X). This deliberately
-  leaves unrestricted weak stages outside the proof.
+  leaves unrestricted weak stages outside the proof. The
+  [weak-tail normal form](migration/WEAK.md) supplies an exact
+  divisibility filter and lets a target choose a dyadic tail when
+  the preceding root state is known.
 - [Positive recursive fusion](closure/PROOF.md): even the original growing
   bank plus a high-count rooted tail, mixed at arbitrary depth by ordinal
   joins, cyclic substitutions and unbounded prescribed transitive clock
