@@ -1,0 +1,48 @@
+== A. Toothpick caps C3[TT_k, X, 1]:  H = M_k (F2(X) - H(X)) + 2 H(X),  M_k = 2^k - 1  (k = 1: H + F2) ==
+  checked 60 (class, k) cases with X of order <= 5, k <= 3: mismatches 0
+  cap X -> C3[1, X, 1] is injective on classes (orders 1-4): {1: (1, 1), 2: (1, 1), 3: (2, 2), 4: (4, 4)}
+
+== B. The orphan 63: the Fibonacci fan F_6 is a simultaneous TT2-doubling of a 9-path quotient ==
+  Q = TT4 + u with contact word 1010: H = 9, self-converse: True, nontrivial modules: []
+  Q[TT2, TT2, TT2, 1, u] has H = 63; equal to the one-centre word 11.00.11.0: True
+  converse = doubling the last three chain vertices = word 1.00.11.00: True, H = 63
+  modules of F_6: [[0, 1], [2, 3], [4, 5]]
+  deletion values of F_6: [1, 11, 25, 33, 37] (all first created by order 6; THM-4922 orphan)
+  doubling subsets of Q's chain (one TT2 per chosen chain vertex):
+    double []: order 5, H = 9
+    double [0]: order 6, H = 19
+    double [1]: order 6, H = 15
+    double [0, 1]: order 7, H = 37
+    double [2]: order 6, H = 15
+    double [0, 2]: order 7, H = 33
+    double [1, 2]: order 7, H = 25
+    double [0, 1, 2]: order 8, H = 63
+    double [3]: order 6, H = 19
+    double [0, 3]: order 7, H = 45
+    double [1, 3]: order 7, H = 33
+    double [0, 1, 3]: order 8, H = 87
+    double [2, 3]: order 7, H = 37
+    double [0, 2, 3]: order 8, H = 87
+    double [1, 2, 3]: order 8, H = 63
+    double [0, 1, 2, 3]: order 9, H = 165
+  Fibonacci fans (THM-4748: apex loses to a, b, k+1): (k, H, 2^k - 1): [(4, 15, 15), (5, 31, 31), (6, 63, 63), (7, 127, 127), (8, 255, 255), (9, 511, 511), (10, 1023, 1023), (11, 2047, 2047), (12, 4095, 4095)]
+
+== C. How sparse the toothpick caps are (cores of order <= 8; exact below 513) ==
+  caps H + F2: misses 204 of 256 odd N < 513 (exact); 8399 of 10000 odd N <= 20000; first [1, 7, 11, 13, 19, 21, 23, 25, 29, 31, 35, 39]
+  caps with doubling rays H + 2^s F2: misses 204 of 256 odd N < 513 (exact); 6429 of 10000 odd N <= 20000; first [1, 7, 11, 13, 19, 21, 23, 25, 29, 31, 35, 39]
+  toothpick caps M_k(2^s F2 - H) + 2H: misses 181 of 256 odd N < 513 (exact); 4838 of 10000 odd N <= 20000; first [1, 7, 13, 19, 21, 25, 29, 31, 35, 39, 41, 43]
+
+== D. First creators, reproduced (THM-4889, THM-4922) ==
+  max H(n): [1, 1, 3, 5, 15, 45, 189, 661, 3357] | strong floor f(n), n >= 3: [3, 5, 9, 15, 25, 45, 75]
+  new values per order: [1, 0, 1, 1, 4, 12, 58, 243, 1200]
+  order 6: odd values below max H(6) not attained: 2 [35, 39]; all attained at order 7: True
+  order 7: odd values below max H(7) not attained: 16 [63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]; all attained at order 8: True
+  order 8: odd values below max H(8) not attained: 9 [611, 615, 617, 619, 623, 625, 635, 647, 655]; all attained at order 9: True
+  order 9: odd values below max H(9) not attained: 157 in [2883, 3355]; all attained at order 10: n/a
+  order 8: new values with no deletion parent new at order 7: [(63, [1, 11, 25, 33, 37])]
+  order 9: new values with no deletion parent new at order 8: []
+  windows {n : f(n) <= h <= max H(n)}: {3: [3], 5: [4], 7: [], 9: [5], 11: [5], 13: [5], 15: [5, 6], 17: [6], 19: [6], 21: [6], 23: [6], 25: [6, 7], 27: [6, 7], 29: [6, 7]}
+
+== E. One centre (THM-4876 (6)) and two centres (Two-Hub, wave 5), recomputed ==
+L<=24: odd N <= 100000 missed 24884: 7 13 21 29 35 41 43 49 55 57 59 67 71 75 77 83 89 93 101 105 109 111 113 119 125 131 133 135 137 147 149 155 161 163 173 175 177 183 189 193
+n<=10 (order n+2): odd N <= 30000 missed 51: 7 21 24107 25465 27141 27155 27247 27263 27639 27729 27877 27937 28047 28059 28309 28367 28511 28523 28667 28725 28731 28751 28851 28917 29003 29071 29107 29121 29189 29225

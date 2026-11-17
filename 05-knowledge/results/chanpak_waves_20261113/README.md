@@ -5237,6 +5237,141 @@ of near-joins. OPEN.
 
 Chan–Pak remains OPEN.
 
+## Wave 57: first creators and toothpick growth; the orphan 63 is three doublings at once
+
+Session mac-mini-2026-11-16-toothpick. Owner prompt:
+- unequal growth or nonuniform contacts;
+- a matching toothpick diagram for each term of A000568, showing how the isomorphism classes relate;
+- for every odd count other than 7 and 21, the classes that first create it, and how these constructions relate to each
+  other;
+- a full recursive grammar on the infinite family that encodes the {7, 21} impossibility;
+- constructions as curried compositions.
+
+Scripts `scripts/w57_*`:
+- classes to order 7 by orbit marking;
+- canonical forms at order 8;
+- all one-vertex extensions to order 9;
+- caps, doublings, and the one- and two-centre recomputations.
+
+Output: `scripts/w57_receipts.txt`.
+
+### §0. Most of the prompt is already answered in the canon (credit)
+
+| owner's idea | where it is settled |
+| --- | --- |
+| the classes that first create each count; its least order | THM-4922 (kind-pasteur S16, 2026-11-07) and Session224. Least order n(h) = m(h) or m(h) + 1 through order 11, with m(h) = min{n : max H(n) ≥ h} (THM-4889, klein). |
+| how the first creators relate to each other | THM-4922 genealogy: through order 10, every first creator of a value ≥ 5 has a vertex whose deletion is a first creator one order down. The exceptions are the Fibonacci fan F_6 and its converse (63, order 8). Proved above n·max H(n − 2); open in general (HYP-9512 (A)). |
+| a recursive grammar over an infinite alphabet | Modular decomposition over prime seeds. THM-1960 counts 1, 1, 1, 0, 3, 15 primes at orders 1–6; THM-4803 builds A000568 from the prime cycle index. |
+| curried composition of the count | THM-3121 (walk-content kernel); THM-3166 and THM-3181 (join character); wave 25 and THM-5172 (cyclic join). |
+| {7, 21} | THM-1370 (strong floor plus the order-6 census); strong windows in THM-4889 (3). |
+| nonuniform contacts on a toothpick (a transitive chain) | One centre: THM-4876 (6); density about 1/2; omits 7, 13, 21, 29, …. Two centres: the Two-Hub Conjecture (wave 5); every odd N ≤ 22,156,805 except 7 and 21. |
+| 63 = 2^6 − 1 | THM-4748 (4): the Fibonacci fan F_k has H = 2^k − 1. See also THM-344. |
+
+I recomputed both centre families before finding them on file, and they agree (receipts §E):
+- one centre misses 24,884 of the 50,000 odd numbers below 10^5;
+- two centres on a chain of at most 10 vertices miss only 7 and 21 below 24,107.
+
+### §1. The grammar as curried maps (a synthesis of the cited laws)
+
+Write χ_T(t) = Σ_d pc_T(d)·t(t − 1)⋯(t − d + 1), where pc_T(d) counts covers of T by d disjoint paths. Then H = χ(1),
+and F_2 := χ(2) counts the ordered pairs of paths that cover T.
+
+| construction | curried map | what the count does | source |
+| --- | --- | --- | --- |
+| join | A ↦ (B ↦ A ⇒ B) | χ_{A⇒B} = χ_A·χ_B, so H and F_2 both multiply | THM-3166, THM-3181 |
+| substitution into a quotient Q | (S_1, …, S_q) ↦ Q[S_1, …, S_q] | H = Σ_c [x^c]W_Q · Π c_i!·pc_{S_i}(c_i), with W_Q = 1ᵀX(I − A_Q X)^(−1)1 | THM-3121 |
+| cyclic join | A ↦ (B ↦ C3[A, B, •]) | 3N = (F_2(A) − 3H(A))·(F_2(B) − 3H(B)) + 2F_2(A)F_2(B) | wave 25, THM-5172 |
+| one centre with contact word w | w ↦ (TT_m ↦ TT_m + u) | H = 1 + #10(w) + Σ_{b<a, w_b=1, w_a=0} 2^(a−b−1) | THM-4876 (6), in word form |
+| deletion | v ↦ (T ↦ T − v) | the genealogy of first creators | THM-4922 |
+
+So the grammar is
+
+    T ::= •  |  T ⇒ T  |  Q[T, …, T]     (Q prime, |Q| >= 3; one prime of order 3, none of order 4)
+
+Every count is ev_1 of a character carried up the decomposition tree by these maps. The holes come out of the strong
+floor f(n), the least count of a strong n-tournament. Call A(h) = {n : f(n) ≤ h ≤ max H(n)} the admissible orders of h.
+- **7 is the only odd number with no admissible order**, since max H(4) = 5 < 7 < 9 = f(5).
+- **Exactly one admissible order:** 3, 5, 9, 11, 13, 17, 19, 21 and 23. Of these, only 21 is missed, at order 6.
+- **Every odd h ≥ 25 has at least two.** For n ≥ 7 the Busch constructions give f(n + 1) ≤ max H(n − 1), so a value in
+  (max H(n − 1), max H(n)] is admissible at both n and n + 1.
+
+### §2. Toothpick caps: a matching diagram for each term of A000568 (new reading; checked)
+
+- **The cap is injective.** κ(X) = C3[•, X, •] closes a triangle through X with a single arc. Modular decomposition is
+  unique, so X ↦ κ(X) is injective on classes. The A000568(n) classes of order n therefore sit inside the strong classes
+  of order n + 2 (checked at orders 1–4).
+- **Count of a cap.** H(κ(X)) = H(X) + F_2(X) = χ_X(1) + χ_X(2).
+- **Toothpick caps.** Replace one singleton by a toothpick of k vertices. Then
+
+      H(C3[TT_k, X, •]) = M_k·(F_2 − H) + 2H,   with M_k = 2^k − 1.
+
+  This is the case B = TT_k of the cyclic join; 60 cases are checked. By THM-5172 (C), caps of odd-order cores are
+  multiples of 3.
+- **Caps are sparse.** These counts are exact below 513, using all cores:
+  - plain caps miss 204 of the 256 odd numbers;
+  - doubling rays X ⇒ TT_s (which double F_2) add nothing there;
+  - all toothpick lengths together still miss 181.
+
+  So the cap is a faithful picture of every A000568 term, not a completeness route.
+
+### §3. The orphan 63 is three doublings at once (a new reading of THM-4922's orphan; checked)
+
+- **The quotient Q.** Take Q = TT_4 + u with contact word 1010. Then H(Q) = 9, Q is self-converse, and Q is prime (it has
+  no nontrivial module). It is one of the two self-converse first creators of 9 at order 5.
+- **The doubling cube.** To double a chain vertex, substitute TT_2 for it. Doubling a set S of the chain vertices
+  c0..c3 gives order 5 + |S| and these counts:
+
+  | doubled | H | doubled | H |
+  | --- | --- | --- | --- |
+  | none | 9 | {0, 3} | 45 |
+  | {0} or {3} | 19 | {1, 2} | 25 |
+  | {1} or {2} | 15 | {0, 1, 2} or {1, 2, 3} | 63 |
+  | {0, 1} or {2, 3} | 37 | {0, 1, 3} or {0, 2, 3} | 87 |
+  | {0, 2} or {1, 3} | 33 | all four | 165 |
+
+- **F_6 is a corner of the cube.** Q[TT_2, TT_2, TT_2, •, u] is the one-centre word 11·00·11·0, the Fibonacci fan F_6.
+  Doubling the last three vertices instead gives its converse, 1·00·11·00. The modules of F_6 are exactly the three
+  doubled pairs.
+- **Every deletion lands on an old value.** A deletion either undoes one doubling (37, 33 or 25), drops the undoubled
+  end (11) or drops the centre (1). All of these values are already created by order 6.
+- **What makes it an orphan.** Through order 10, the only orphan is the first creator that needs three vertices added at
+  once. That is uniform growth, the toothpick automaton's rule, rather than one-vertex growth. Elsewhere in the cube,
+  only Q (9) and the single end-doublings (19, order 6) are first creators. Every other corner carries a value attained
+  earlier.
+- **The Mersenne line.** The fans F_k give 2^k − 1 for k = 4..12 (checked with the one-centre formula). By THM-4889's
+  lists of unattained values, the line 2^k − 1 has only two anomalies through order 11:
+  - k = 3, which is 7, the hole;
+  - k = 6, which is 63: missing at order 7 and an orphan at order 8.
+
+  That 63 = 3·21 = 9·7 contains both holes, and that the orphan grows a 9-quotient into 7·9, is NUMEROLOGY.
+
+### §4. Reproduction (independent code; consistent with THM-4889 and THM-4922)
+
+- There are 6,880 classes at order 8. Max H is 661 at order 8 and 3,357 at order 9.
+- Orders 1–9 have 1, 0, 1, 1, 4, 12, 58, 243 and 1,200 new values. Every one is created only by strong tournaments.
+- Unattained values below max H(n):
+  - order 6: 35 and 39;
+  - order 7: 16 values;
+  - order 8: 9 values;
+  - order 9: 157 values.
+
+  The bands at orders 6–8 are each attained one order later.
+- Through orders 4–9, 63 is the only new value without a one-vertex parent new one order down.
+
+### Ledger
+
+| claim | status |
+| --- | --- |
+| first creators, genealogy, the orphan 63, least orders, windows | KNOWN (THM-4922, THM-4889, THM-1370); reproduced to order 9 |
+| the curried grammar: join character, substitution kernel, cyclic join, one centre | KNOWN (THM-3121, THM-3166/3181, THM-5172, THM-4876); assembled here |
+| X ↦ C3[•, X, •] injects the A000568(n) classes into the strong classes of order n + 2, with H = χ_X(1) + χ_X(2) | PROVED (unique decomposition and the cyclic join); checked to order 5 |
+| toothpick caps miss 181 of the 256 odd numbers below 513 | FINITE-EXACT (all cores) |
+| the orphan F_6 is the 9-quotient 1010 with three chain vertices doubled; each deletion undoes one doubling or drops the undoubled end or the centre | PROVED (direct) |
+| 7 and 63 are the only Mersenne anomalies through order 11 | FINITE-EXACT (from THM-4889's lists) |
+| the two holes and the orphan as 3·21 = 9·7 | NUMEROLOGY |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
@@ -5260,3 +5395,6 @@ Chan–Pak remains OPEN.
   with 16 seeds and bases up to order 12).
 - **P113 (iterated placement).** Every prime p is h + 2^k B for a rooted base of size O(log p) reached by at most two levels
   of near-joins (wave 56 places primes up to 1.5e6 with one level).
+- **P114 (orphans are doublings).** If a first creator of a value >= 5 with no one-vertex parent among first creators
+  exists at order >= 11, it has at least two two-vertex modules: it is a simultaneous doubling. Through order 10 the only
+  orphan is F_6 and its converse, which carry three (THM-4922; wave 57 §3).
