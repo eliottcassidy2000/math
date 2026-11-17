@@ -1,0 +1,22 @@
+11 []
+13 []
+179 []
+181 []
+1049 [0]
+1051 []
+3889007 [2063]
+5417681 [2870]
+30011 []
+30013 []
+1000000007 []
+1000000009 []
+aliquot 11 19 0
+aliquot 13 21 0
+aliquot 1049 1057 0
+aliquot 1051 1059 0
+aliquot 25 73 5
+aliquot 121 217 11
+aliquot 127 135 0
+aliquot 129 505 46
+literal reverse aliquot lift 1059 → 7357
+literal reverse aliquot lift 1057 → 7343
