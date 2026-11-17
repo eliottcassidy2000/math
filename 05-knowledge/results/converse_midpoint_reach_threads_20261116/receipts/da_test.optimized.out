@@ -1,0 +1,18 @@
+distinct rooted pairs (h, B) from orders <= 7: 2378
+classes of orders <= 8: 7412; strong: 6405
+distinct midpoint values <= 2^23: 944539; smallest 12: [3, 5, 9, 15, 17, 19, 23, 25, 27, 29, 31, 33]
+first odd miss of the bases-<= 9 near-join family above 67: 398131
+window j: [midpoint values, misses, miss rate] vs [odd numbers gap density]  (ratio observed/expected)
+  j=14: 7145 values, 0 missed (0.0000) vs gap density 0.0000; expected 0.0; ratio nan
+  j=15: 15150 values, 0 missed (0.0000) vs gap density 0.0000; expected 0.0; ratio nan
+  j=16: 31531 values, 0 missed (0.0000) vs gap density 0.0000; expected 0.0; ratio nan
+  j=17: 64344 values, 0 missed (0.0000) vs gap density 0.0000; expected 0.0; ratio nan
+  j=18: 129428 values, 8 missed (0.0001) vs gap density 0.0001; expected 7.9; ratio 1.01
+  j=19: 255900 values, 1069 missed (0.0042) vs gap density 0.0042; expected 1084.5; ratio 0.99
+  j=20: 372623 values, 21072 missed (0.0566) vs gap density 0.0649; expected 24193.0; ratio 0.87
+  j=21: 61771 values, 9640 missed (0.1561) vs gap density 0.2573; expected 15894.8; ratio 0.61
+  j=22: 0 values, 0 missed (0.0000) vs gap density 0.5121; expected 0.0; ratio nan
+midpoint values above the reach 398131: 752551, of which missed by the bases-<= 9 family: 31788
+(Q-3) strong D of orders 3-7: 397; phi(D) = h + P of the form h'' + 2^k P'' (D'' any class of order <= 8, k >= 1): 70; cases: [(6, 15, 216, 231), (6, 15, 216, 231), (7, 41, 712, 753), (7, 73, 1088, 1161), (7, 97, 1280, 1377), (7, 49, 824, 873), (7, 51, 828, 879), (7, 41, 712, 753), (7, 101, 1372, 1473), (7, 111, 1428, 1539), (7, 151, 1784, 1935), (7, 151, 1796, 1947)]
+      C_3 (3, 12) -> 15 of that form? False ; strong order 4 (5, 32) -> 37? False
+(Q-9) one-vertex-core values phi(D) over strong D <= 8: 1448 distinct; 241 in: True; 493: False; 997: False; 2005: False; smallest 20: [3, 15, 37, 93, 111, 117, 123, 135, 231, 241, 275, 295, 315, 319, 329, 349, 359, 369, 389, 393]

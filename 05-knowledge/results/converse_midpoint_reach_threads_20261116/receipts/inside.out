@@ -1,0 +1,2 @@
+strong-D cases (orders 4-8): 62; with a near-join base induced inside S: 38; with one avoiding z: 28; with a one-vertex deletion S - u as base: 32
+cases with no inside base (H, order): [(37, 6), (93, 7), (295, 8), (457, 8), (393, 8), (413, 8), (413, 8), (315, 8), (393, 8), (275, 8), (231, 8), (413, 8), (349, 8), (477, 8), (349, 8), (349, 8), (477, 8), (393, 8), (315, 8), (393, 8), (359, 8), (231, 8), (275, 8), (349, 8)]

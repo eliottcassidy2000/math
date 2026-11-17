@@ -1,0 +1,28 @@
+classes of orders 1-9: 198948; L = 8388608
+near-join (k >= 1): every odd <= 398129 except the seven is realised (first miss above 67: 398131); odd misses in (67, 8388608]: 1378932; first misses: 398131 467961 491465 498645 517885 523591 523887 524059 538667 539493 597847 606647 609907 612121 617197 619287 621591 627385 630017 630955 631555 632761 634811 635995 639253 639723 642297 643863 645971 646219 648527 649011 651431 652535 652923 654189 657011 658747 661279 662447
+  gap density of odd numbers by dyadic window [2^j, 2^(j+1)): j=14: 0/8192 j=15: 0/16384 j=16: 0/32768 j=17: 0/65536 j=18: 8/131072 j=19: 1111/262144 j=20: 34040/524288 j=21: 269818/1048576 j=22: 1073955/2097152
+near-join + dead-end appends (k >= 0): every odd <= 398129 except the seven is realised (first miss above 67: 398131); odd misses in (67, 8388608]: 1378932; first misses: 398131 467961 491465 498645 517885 523591 523887 524059 538667 539493 597847 606647 609907 612121 617197 619287 621591 627385 630017 630955 631555 632761 634811 635995 639253 639723 642297 643863 645971 646219 648527 649011 651431 652535 652923 654189 657011 658747 661279 662447
+  gap density of odd numbers by dyadic window [2^j, 2^(j+1)): j=14: 0/8192 j=15: 0/16384 j=16: 0/32768 j=17: 0/65536 j=18: 8/131072 j=19: 1111/262144 j=20: 34040/524288 j=21: 269818/1048576 j=22: 1073955/2097152
+target 241: order 6 h 17 B 28 k 3
+target 493: order 5 h 13 B 15 k 5
+target 997: order 7 h 101 B 112 k 3
+target 2005: order 7 h 69 B 121 k 4
+target 4021: order 7 h 117 B 244 k 4
+target 8053: order 8 h 117 B 496 k 4
+target 16117: order 8 h 373 B 492 k 5
+target 32245: order 8 h 373 B 498 k 6
+target 64501: order 8 h 245 B 251 k 8
+target 129013: order 8 h 245 B 503 k 8
+target 6015: order 7 h 111 B 369 k 4
+target 6017: order 7 h 65 B 186 k 5
+target 6019: order 8 h 163 B 366 k 4
+target 37: order 5 h 11 B 13 k 1
+target 69: order 5 h 13 B 14 k 2
+target 93: order 5 h 9 B 21 k 2
+target 111: order 6 h 37 B 37 k 1
+target 117: order 4 h 5 B 7 k 4
+target 123: order 6 h 33 B 45 k 1
+target 135: order 5 h 15 B 15 k 3
+target 231: order 6 h 15 B 108 k 1
+target 275: order 7 h 39 B 59 k 2
+./nj9 8388608 targets.txt  4.66s user 0.03s system 95% cpu 4.922 total

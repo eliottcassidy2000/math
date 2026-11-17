@@ -2,6 +2,12 @@
 id: HYP-9453
 title: "Toward the completeness of the Hamiltonian-path spectrum (Chan-Pak): (1) the near-join family T' = T -> M_k -> z with the arc z -> t0 reversed, H(T') = h(T) + 2^k B(T, t0), realises every odd number except 1, 7, 11, 13, 21, 47, 67 once the base tournaments are large enough (with bases of order <= 8 it realises every odd number up to 22,227 except those seven); (2) for every attained odd h the set {B(T, t) : H(T) = h} is dense enough that h + 2B sweeps (3h, ...), which would make completeness an induction on windows; (3) every attained odd h >= 15 below the top band of its order is the count of at least two strong tournaments (the strong singletons are 3, 5, 11, 13 only)"
 status: >
+  UPDATE 2026-11-16 (klein-2026-11-16-conv2, THM-5265): REACH from bases <= 9 is 398,129 (first miss 398,131; every odd
+  below except the seven; nj9.c, 198,948 classes). The open half of the converse is exactly NJ_ext = NJ (NJ_ext = counts
+  with a non-sink digit-0 vertex); it is a DENSITY statement: 15 and 37 have no same-core rewriting at any order, the
+  natural one-step families fail on 7/43, 30/43, 24/62, 344/397 cases, and midpoint values above the reach are missed by
+  bases <= 9 at the random-odd rate (1.01, 0.99). Equivalent form: HYP-9453 <=> (every odd >= 23 other than 47, 67 has a
+  strong realiser with a sole exit at a dead-end port) and (every midpoint value is a near-join value).
   UPDATE 2026-11-16 (klein-2026-11-16-outdeg, THM-5264): the CONVERSE — digit 0 implies a near-join count (k >= 1) — is
   PROVED for every strong tournament with H <= 22,227 (out-degree-1 law at every order + this census + THM-5263 (B)); at
   all orders it is exactly {strong digit-0 counts} = {near-join values}, PROVED when the base S - z has a sink and OPEN
@@ -23,6 +29,7 @@ status: >
 session: klein-2026-11-02 (codex/session-ramsey-20261030)
 source: 05-knowledge/results/spectrum_analogies_nearjoin_20261102/README.md
 related:
+  - 01-canon/theorems/THM-5265-the-open-half-of-the-converse-is-a-density-statement-extended-near-join-family-same-core-obstruction-15-37-reach-398129-and-63-divides-mersenne-iff-p-1-mod-6.md
   - 01-canon/theorems/THM-5264-the-out-degree-1-law-for-digit-0-vertices-is-proved-at-every-order-two-path-lemma-unique-digit-0-vertex-in-a-strong-tournament-and-the-converse-digit-0-implies-a-near-join-count-below-22228.md
   - 01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md
   - 01-canon/theorems/THM-4861-the-five-fermat-primes-are-hamiltonian-path-counts-of-tournaments-with-least-orders-3-4-6-8-11-a-vertex-transitive-tournament-has-a-prime-count-only-for-c3-and-fermat-primes-are-free-vertices-of-the-prime-square-sum-graph.md
@@ -73,3 +80,12 @@ Every attained odd `h ∈ [15, 2881]` is the count of at least two non-isomorphi
   conjecture reduces, modulo Chan–Pak for cofactors, to primes `≥ 23` other than 47, 67 and the lanes `7p, 11p, 13p, 21p, 47p, 67p`.
 - Composite right sources are coprime linear readers `(h(D), P_D(2))` (e.g. `(5, 32)`, `(11, 100)`, `(17, 224)`), but below
   125 no odd value needs one (packet `outdeg_converse_descent_fifteen_20261116`, CONVERSE.md §3–4).
+
+## klein-2026-11-16-conv2 note (THM-5265): reach 398,129 and the open half as density
+
+- Bases of order ≤ 9 (every class, every root) realise every odd number ≤ 398,129 except the seven; first miss 398,131;
+  1,378,932 odd misses below 2^23 (gap density 0 through 2^18, then 6·10^-5, 0.004, 0.065, 0.257, 0.512 per dyadic window).
+- The open half of THM-5264's converse is `NJ_ext = NJ`. Midpoint values `h(A)h(D) + B_t(A)P_D(2)` above the reach are
+  missed by bases ≤ 9 exactly at the random-odd rate; 15 and 37 have no same-core rewriting at any order (THM-5265 (B)).
+  So the open half is implied by this hypothesis and by nothing weaker that is structural.
+- The sterile-only counts are the exceptions of `NJ_ext`; packet `converse_midpoint_reach_threads_20261116`.

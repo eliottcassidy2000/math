@@ -1,0 +1,43 @@
+Pre-registered predictions, klein-2026-11-16-conv2, written 2026-11-16 before any of the runs below (after reading the
+concurrent waves 54-56 of chanpak_waves_20261113, which already state the tail formula and the midpoint reformulation).
+
+Q-1 (reach of the near-join family from bases <= 9)  The values h + 2^k B (k >= 1) over all rooted tournaments of order
+     <= 9 realise every odd number <= X_9 except 1, 7, 11, 13, 21, 47, 67, with 100,000 <= X_9 <= 500,000.  Adding the k = 0
+     dead-end appends (e_t = 0) keeps the same seven exceptions and gives a reach X_9^ext with X_9 <= X_9^ext < 2 X_9.
+Q-2 (midpoint values above the reach are not structurally protected)  Among the midpoint values h(A)h(D) + B_t(A)P_D(2)
+     (cores A of order <= 7 with every root, strong right sources D of order <= 8) that lie above X_9 and below 2^23, the
+     fraction missed by the bases-<= 9 near-join family is at least half the gap density of odd numbers in the same dyadic
+     window: closure under the midpoint is a density statement, not a structural one.
+Q-3 (same-shape obstruction)  For strong D of order <= 7, the one-vertex-core value phi(D) = h(D) + P_D(2) equals
+     h(D'') + 2^k P_{D''}(2) (k >= 1, D'' any tournament of order <= 8) for fewer than 10 % of the 396 D, and never for C_3
+     or the strong order-4 tournament.
+Q-4 (rewriting inside S)  Among the 62 strong digit-0 pairs of orders <= 8 whose base has no sink, at least half but not all
+     admit an induced subtournament T of S, a port t and k >= 1 with H(S) = h(T) + 2^k B_t(T).
+Q-5 (self-converse ratio)  Self-converse classes SC(n) = 1, 1, 2, 2, 6, 8, 44, 72, 736 for n = 1..9; the ratio SC/(converse
+     pairs) over all classes is finite and maximal at n = 4 and n = 5 (both 2); over strong classes it is uniquely maximal
+     at n = 5.
+Q-6 (primes near 10^k)  For k = 1..15, the least twin-prime pair above 10^k lies within 10^k + 100 for at most 5 values of
+     k, and the pair sits at offsets (7, 9) only for k = 4 and k = 9.
+Q-7 (the holes in the Mandelbrot counts)  For primes p <= 100, 21 divides 2^(p-1) - 1 exactly when p ≡ 1 (mod 6); the
+     list is 7, 13, 19, 31, 37, 43, 61, 67, 73, 79, 97 (this is a theorem; the run is its check).
+Q-8 (the family 63·2^(s+2) - 11 and the window at s = 3)  241, 493, 997, 2005, 4021, 8053, 16117, 32245, 64501 are all
+     near-join values from bases <= 9; 6015, 6017, 6019 are all near-join values from bases <= 8; the family admits no
+     representation with one fixed pair (h, B) across s (it is not a near-join line; arithmetic).
+Q-9 (one-vertex cores)  Among phi(D) = h(D) + P_D(2) over strong D of order <= 8, 241 occurs and none of 493, 997, 2005.
+
+Second pre-registration (after nj9, sc_ratio, primes_near, da_test, inside ran; Q-1, Q-2, Q-4, Q-7, Q-8, Q-9 confirmed,
+Q-3 refuted in its percentage (70 of 397) but confirmed for C_3 and the strong order-4 tournament, Q-5 refuted in its SC
+values and in the location of the maximum (the ratio peaks at n = 5 alone, 4.0), Q-6 refuted in its count (9 of 15) but
+confirmed for the (7, 9) offsets).  Written before hyp_w.py runs.
+
+Q-10 (one more natural rewriting family)  For strong D of order <= 6 (43 classes), the one-vertex-core value
+      phi(D) = h(D) + P_D(2) is a near-join value h(T) + 2^k B_t(T), k >= 1, over some T = D + w (w a new vertex with an
+      arbitrary out-neighbourhood X in D) for at least 80 % but not all of the 43.
+Q-11 With w restricted to a sole exit (|X| = 1), fewer than half of the 43 are rewritten.
+
+Third pre-registration (after hyp_w.py: Q-10 confirmed (36 of 43), Q-11 confirmed (13 of 43)); written before halved.py.
+
+Q-12 (halved partners)  A strong D has a "halved partner" if some rooted tournament (T, t) of order <= 8 has h(T) = h(D) and
+      B_t(T) = P_D(2)/2 (then h(D) + P_D(2) = h(T) + 2 B_t(T) and the one-vertex-core midpoint is a k = 1 near-join over T).
+      Fewer than half of the 397 strong D of orders 1-7 have one; C_3 and the strong order-4 tournament have none; the
+      order-6 source with (h, P) = (15, 216) has the partner strong4 -> C_3 with the root of response 9.
