@@ -2,6 +2,7 @@
 
 Fix independent odd primes p and q, with p≠7 and q≠3. The request is to force either H=p or H=7q. A theorem only for q=p does not suffice. This session gives exact, target-selected inverse tests and paired witnesses for distinct primes; neither method supplies the pair condition universally.
 
+- [Joint phase compiler](JOINT_PHASE.md): both residues can be programmed independently away from 2 and 3 while retaining even order and the compatible prime phase at 3.
 - [Signed defect selection](SIGNED_PAIR.md): allowing the old normalization error to move gives a new inverse. On the upward prime branch, the gap alone determines the source count, and an ordinary prime and an unrelated sevenfold target occur together.
 - [Unimodular induced pairing](UNIMODULAR.md): two independently chosen counts recover the only possible two-coordinate source, with no lattice-index loss. A strong 163-path tournament sits induced inside a strong 1841-path tournament, where 1841=7·263.
 - [Fixed-count SCC rigidity](FIXED_COUNT.md): a single arc change at exactly 7pq cannot transfer the seven from one prime component to the other. This holds even through an arbitrary sequence of count-preserving flips.
