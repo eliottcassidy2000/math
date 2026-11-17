@@ -101,6 +101,24 @@ It is also not the number of bits needed to recover the
 isomorphism class; distinct classes can share all of G.
 Strong-only counts are in [summary.out](summary.out).
 
+**Minimum additive message at order eight.** The four-bit
+answer allows a different index in each bucket. If the
+message must be one fixed additive function of the hidden
+lattice, the exact smallest finite alphabet has size 29.
+In a common P bucket write the difference as
+x z (a y²+b), where a and b are the differences in
+the two-triangle and triangle-plus-5-cycle pack counts.
+The vertex-deletion sum at q=2 changes by −8(4a+b),
+so its residue mod 29 separates every same-P pair.
+[additive.py](additive.py) checks the 71 oriented nonzero
+difference vectors and enumerates all 660 sublattices
+of index below 29 in two-dimensional Hermite form.
+Each smaller kernel meets one of those differences.
+Thus no smaller additive quotient works, cyclic or not:
+a fixed checksum takes five bits at this order, though
+the bucket-specific answer takes four. The finite
+statement does not extrapolate to higher orders.
+
 The finite counts use the complete [n≤8 catalogue](../actual_hamilton_multiplicities_20261021/session24-multiplicities/README.md)
 and independently audited [order-nine class ordering](../blue_quotient_20261020b/README.md).
 [census.cpp](census.cpp) enumerates directed simple odd cycles
@@ -132,7 +150,8 @@ give m+1 distinct G's all with the same P. Distinct i's
 are separated already by the first transverse read, whose
 coefficient depends linearly on i. Thus the worst-case extra
 bit budget is unbounded even when only the first transverse
-read is needed.
+read is needed. Replacing A,B by C,D gives the same
+unbounded bit budget after the first deletion layer is already known.
 
 ## 3. Actual hidden depth grows by a physical determinant
 
@@ -264,6 +283,7 @@ bound.
 Reproduce: `python replay.py` (normal and optimized agree).
 For the finite tables, from the result folder run
 `g++ -std=c++17 -O3 census.cpp -o census` and
-`python summary.py /path/to/checkout ./census`. Option
+`python summary.py /path/to/checkout ./census`. The additive
+constraint is replayed with `python additive.py /path/to/checkout ./census`. Option
 `--ref 1b91742ce55a202b73c80d56561ba56d00b503a6`
 pins the catalogue used here.
