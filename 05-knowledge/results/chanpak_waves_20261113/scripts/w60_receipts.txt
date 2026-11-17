@@ -1,0 +1,46 @@
+== A. Z7 single-orbit census: Q (orders <= 8) with one vertex blown up into I7 or P7 (w60_z7orbit 200000) ==
+c_r(I7): 175 1638 6678 15120 20160 15120 5040
+c_r(P7): 189 1638 6678 15120 20160 15120 5040
+c_r/7 (I7): 25 234 954 2160 2880 2160 720  all divisible by 7: 1
+configurations 117304 (strong quotient 101564); distinct prime orbit counts <= 200000: 1415 of 17984 primes; with no third run at X: 463
+smallest prime orbit count 593: |Q|=4 X=1 block I7
+first prime orbit counts: 593 827 2113 2297 2531 3433 3517 3533 3767 3851 3967 4051 4937 4987 5087 5237 5437 5471 5639 5689 5839 6073 6373 6389 6473 6791 6841 6907 7243 7393
+
+== B. One-centre quotient with the centre blown up (w60_z7centre 12 100000) ==
+one-centre words to length 12 (8190 words); a_1 = one-centre count check failures: 0
+orbit counts <= 100000: odd values hit 42 of 50000; primes hit: I7 3, P7 0, either 3 of 9591
+smallest prime orbit counts: 827 8069 36809
+
+== C. The two Z7 circulants (w60_circulants.py) ==
+interval I7 {1,2,3}: triangles 14, 5-cycles 28, Hamiltonian 7-cycles 17, disjoint triangle pairs 14; readings P_q = G(2q, q) for q = 1, 2, 3, 4: [175, 1988, 12117, 52360]
+Fano/Paley P7 {1,2,4}: triangles 14, 5-cycles 42, Hamiltonian 7-cycles 24, disjoint triangle pairs 7; readings P_q = G(2q, q) for q = 1, 2, 3, 4: [189, 2016, 12159, 52416]
+
+== D. Z7 gluings that are skew-Hadamard (doubly regular, order 15) (w60_glue15) ==
+doubly regular: S0=104 S1=22 C=88  H=198335025 = 7*28333575  (H/105 = 1888905, H mod 105 = 0)
+doubly regular: S0=104 S1=22 C=98  H=198335025 = 7*28333575  (H/105 = 1888905, H mod 105 = 0)
+doubly regular: S0=104 S1=22 C=104  H=198335025 = 7*28333575  (H/105 = 1888905, H mod 105 = 0)
+doubly regular Z7 gluings found: 28
+
+== E. Profile twins through order 8 (w60_twins) ==
+order 7 twins: H values 129 131  (c_2 = 1350)  UNIT
+order 7 twins: H values 133 135 137  (c_2 = 1362)  UNIT
+order 7 twins: H values 135 137 141 143  (c_2 = 1374)  UNIT
+order 7 twins: H values 151 153 159  (c_2 = 1494)  UNIT
+order 7 twins: H values 153 155 157  (c_2 = 1506)  UNIT
+profile-twin groups (orders <= 8): 46; groups containing an H-difference of exactly 2: 37
+
+== F. Minimal smoothness through order 9 and exact smoothness of atoms (w60_sigma9 3400 > w60_minsig9.txt; w60_sigma_analysis.py) ==
+exact smoothness of the atoms below 125: {3: 3, 5: 3, 11: 3, 13: 5, 17: 3, 19: 5, 23: 3, 29: 5, 31: 6, 35: 6, 37: 3, 41: 5, 43: 6, 47: 3, 49: 5, 53: 6, 59: 5, 61: 5, 63: 5, 67: 6, 71: 6, 73: 5, 77: 6, 79: 5, 83: 6, 89: 6, 91: 3, 97: 5, 101: 6, 103: 6, 107: 3, 109: 5, 113: 6, 119: 5}
+  smoothness 3: [3, 5, 11, 17, 23, 37, 47, 91, 107]
+  smoothness 5: [13, 19, 29, 41, 49, 59, 61, 63, 73, 79, 97, 109, 119]
+  smoothness 6: [31, 35, 43, 53, 67, 71, 77, 83, 89, 101, 103, 113]
+  smoothness 7: []
+atoms in [125, 661] whose realizers through order 9 all need a prime quotient of order >= 7: [167, 287, 343, 487, 491, 511, 563, 569, 587, 601, 607, 619, 623, 631, 641, 643, 659]
+  167: strong realizers have order <= 10 (Busch)
+  287: strong realizers have order <= 11 (Busch)
+  343: strong realizers have order <= 11 (Busch)
+
+== G. All 6-smooth tournaments to order 10 (python3 w59_smooth_classes.py 10 700 C3,Q9,Q13,Q15,ALL6; 12 min) ==
+order 10: profiles 5440 (strong 3785)
+letters ['C3', 'Q9', 'Q13', 'Q15', 'ALL6']: odd h <= 700 missed at orders <= 10: 16; first: [7, 21, 167, 335, 341, 515, 529, 533, 563, 587, 619, 625, 631, 651, 665, 671]
+atoms < 700 realized: [3, 5, 11, 13, 17, 19, 23, 29, 31, 35, 37, 41, 43, 47, 49, 53, 59, 61, 63, 67, 71, 73, 77, 79, 83, 89, 91, 97, 101, 103, 107, 109, 113, 119, 127, 131, 133, 137, 139, 149, 151, 157, 161, 163, 173, 179, 181, 191, 193, 197, 199, 203, 211, 217, 223, 227, 229, 233, 239, 241, 251, 257, 259, 263, 269, 271, 277, 281, 283, 287, 293, 301, 307, 311, 313, 317, 329, 331, 337, 343, 347, 349, 353, 359, 367, 371, 373, 379, 383, 389, 397, 401, 409, 413, 419, 421, 427, 431, 433, 439, 443, 449, 457, 461, 463, 467, 469, 479, 487, 491, 497, 499, 503, 509, 511, 521, 523, 541, 547, 553, 557, 569, 571, 577, 581, 593, 599, 601, 607, 613, 617, 623, 641, 643, 647, 653, 659, 661, 673, 677, 679, 683, 691]

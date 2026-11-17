@@ -5734,6 +5734,126 @@ every 7p is the count of a strong tournament that is rigid or Z7-symmetric.** Th
 
 Chan–Pak remains OPEN.
 
+## Wave 60: Z7 orbit primes, the smoothness ladder 3, 13, 31, 167, and the Fano/interval twins
+
+Session mac-mini-2026-11-16-fano. Owner prompt:
+- Hadamard matrices as binary matrices, a superset of reflexive tournaments: two tiling models glued, a metagraph node
+  to another (possibly itself), reading as a blue or black line or a non-edge;
+- the reflexive chain and the Hamiltonian path every class is forced to have;
+- the triples studied before: the next repair has to match the third reading too;
+- the ×7 scaling: the Fano plane, p²qr and F = U + S, and opposite meanings from deeper structure;
+- think Z7 orbit primes (P119) and the smoothness bound (P118).
+
+Scripts `scripts/w60_*` (with `w57_classes.py`, `w59_dump8.c`, `w59_smooth_classes.py`); output
+`scripts/w60_receipts.txt`.
+
+### §0. Prior and concurrent work (credit)
+
+| idea | where |
+| --- | --- |
+| smallest Z7-symmetric 7p atom 4151 = 7·593; c_r(I7) = c_r(P7) for r ≥ 2; the readings (H, P(2), P(3)) decide 7-divisibility | `atomic_symmetry_descent_20261117` |
+| P_q = G(2q, q); the Hadamard defect; ΔC5 = −ΔE/32, ΔD2 = ΔE/64 between regular tournaments, cancelling as x(x − 2y) | `packing_hadamard_flatness_20261117`, THM-5269 |
+| tiling count tc = H/\|Aut\|; the tiling cube with κ, σ and the p²qr Klein picture | THM-4741, THM-4731, THM-4733 |
+| skew-Hadamard matrices of order n + 1 ↔ doubly regular tournaments of order n | Reid–Brown (classical) |
+| circulants of prime order: G ≡ y^p + ((p − 1)/2)·x (mod p), counts 175 and 189 at order 7; the diagonal forgets most of G | THM-5270 (klein, concurrent) |
+
+### §1. Z7 orbit primes (formula PROVED; census FINITE-EXACT)
+
+A Z7-symmetric tournament with one moved orbit is Q[B at X], where B is a Z7-circulant on 7 vertices: the interval
+I7 = {1, 2, 3} or the Fano/Paley P7 = {1, 2, 4}. By THM-3121, H = Σ_r a_r(Q, X)·c_r(B), where a_r counts the walks
+through Q that visit X exactly r times and every other vertex once.
+
+The cover counts are c(I7) = 175, 1638, 6678, 15120, 20160, 15120, 5040 and c(P7) = 189, 1638, …, the same from r = 2
+on. Z7 acts freely, so the orbit count is the linear reading
+
+    o = 25a₁ + 234a₂ + 954a₃ + 2160a₄ + 2880a₅ + 2160a₆ + 720a₇    (plus 2a₁ for P7).
+
+When |Aut| = 7, this orbit count is also the number of tilings of the class (THM-4741): presentations along a forced
+Hamiltonian path. So a Z7-symmetric 7p atom is a metagraph node with exactly p tilings.
+
+- **Census.** Quotients of order ≤ 8 give 117,304 configurations and 1,415 distinct primes p ≤ 200,000 as orbit counts,
+  each a Z7-symmetric realizer of 7p.
+  - The smallest is 593 (Q = T4s), matching the concurrent 4151 = 7·593.
+  - 463 of them use at most two visits to X, so o = 25a₁ + 234a₂.
+- **The one-centre quotient is too sparse.** Blowing up the centre of TT_m + u gives only 3 primes below 10^5. The rich
+  source is general quotients.
+- **Two-reading numeration.** gcd(25, 234) = 1. If (a₁, a₂) ranged freely with no third visit, every large odd number
+  would be an orbit count. The third reading a₃, with weight 954, has to match too. P119 stays a conjecture, now
+  strongly supported.
+
+### §2. The Fano/interval twins: opposite meanings (PROVED by direct count)
+
+| circulant | triangles | 5-cycles | Hamiltonian cycles | disjoint triangle pairs | H |
+| --- | --- | --- | --- | --- | --- |
+| interval I7 = {1, 2, 3} | 14 | 28 | 17 | 14 | 175 = 5²·7 |
+| Fano/Paley P7 = {1, 2, 4} | 14 | 42 | 24 | 7 | 189 = 3³·7 |
+
+- **The readings differ by exactly 14q.** P_q = G(2q, q) gives (175, 1988, 12117, 52360) against
+  (189, 2016, 12159, 52416).
+  - The Fano tournament's 14 extra 5-cycles and its 7 missing triangle pairs cancel at x = 2y (the concurrent x(x − 2y)
+    law).
+  - What remains is one Z7-orbit: 7 extra Hamiltonian cycles, each worth 2 per reading slot.
+- **A module switch scaled by 7.** For every Q and vertex X, H(Q[P7]) − H(Q[I7]) = 14·H(Q). This is the triangle
+  switch's law 2·H(Q), multiplied by 7.
+- **Profile twins in general (FINITE-EXACT).** Through order 8 there are 46 groups of same-order classes with equal
+  c_r for every r ≥ 2 but different H; 37 contain a difference of exactly 2. One order-7 group is a ladder
+  91, 93, 95, 97, 99 with a single profile. Substituted at a vertex of any Q, a ladder gives an arithmetic progression
+  of counts with step 2·H(Q), and no ports are needed.
+
+### §3. The third reading and the Fano plane (PROVED)
+
+The readings are P_q = χ_T(q) = G_T(2q, q). Modulo a prime ℓ, the readings at 1, …, (ℓ − 1)/2 decide divisibility (the
+concurrent Z_ℓ test), because χ(−q) = (−1)^n·χ(q).
+- −1 is a non-residue mod 7, so the quadratic residues {1, 2, 4}, the Fano difference set, are also a transversal of
+  ±. The three readings can be taken at the Fano points, with P(4) ≡ (−1)^n·P(3) (mod 7).
+- More generally, for ℓ ≡ 3 (mod 4) the Paley set QR_ℓ is such a transversal.
+- So "the third reading" for 7 is the reading at the third Fano point. A repair that keeps P(1) and P(2) but moves P(3)
+  changes what the block forces mod 7. In a Z7 orbit count, the third reading is a₃, with weight 954 = 2·3²·53.
+
+### §4. Two tiling models glued: Z7 skew-Hadamard tournaments (FINITE-EXACT)
+
+The owner's binary model [[A + I, C], [J − Cᵀ, A′ + I]] is two tournaments glued by a block.
+- With Z7-circulants A, A′ and C plus one border vertex, 28 configurations are doubly regular. These are skew-Hadamard
+  matrices of order 16: the Fano tournament {1, 2, 4} glued to its converse {3, 5, 6} by a three-element circulant
+  block. All 28 have H = 198,335,025 = 105·1,888,905.
+- **The reflexive chain.** Each tiling of a class is a labelling along a Hamiltonian path, the chain i → i + 1, so a
+  class has H/|Aut| tilings (THM-4741). Rédei's forced path is exactly why every metagraph node has at least one tiling.
+
+### §5. The smoothness ladder 3, 13, 31, 167 (PROVED with Busch's bound H ≥ 5^((n−1)/3))
+
+An atom's realizers are strong cores (up to padding), of order n with 5^((n−1)/3) ≤ a. So for atoms below 125 the
+minimum over orders ≤ 9 is exact (`w60_sigma9.c`):
+
+| exact smoothness | atoms below 125 |
+| --- | --- |
+| 3 | 3, 5, 11, 17, 23, 37, 47, 91, 107 |
+| 5 | 13, 19, 29, 41, 49, 59, 61, 63, 73, 79, 97, 109, 119 |
+| 6 | 31, 35, 43, 53, 67, 71, 77, 83, 89, 101, 103, 113 |
+
+- **167 is not 6-smooth at any order.** Its strong realizers have order ≤ 10. Generating every 6-smooth tournament
+  through order 10 (all 19 prime quotients of order ≤ 6, 5,440 profiles at order 10) never gives 167, and its order-8
+  realizers use a prime 7-quotient. Every smaller atom is 6-smooth.
+- **The ladder.** The first atoms needing prime quotients of order 3, 5, 6 and 7 are 3, 13, 31 and 167. So P118 holds
+  for k = 3, 5 and 6; k = 4 is the same as 3.
+- **Undecided.** 563, 587, 619 and 631 have no 6-smooth realizer through order 10, but their realizers can reach order
+  12 or 13.
+- 167 = 168 − 1, and 168 is the order of the Fano plane's symmetry group GL(3, 2): NUMEROLOGY.
+
+### Ledger
+
+| claim | status |
+| --- | --- |
+| Z7 orbit count = 25a₁ + 234a₂ + 954a₃ + … (+2a₁ for the Fano block); = number of tilings when \|Aut\| = 7 | PROVED (THM-3121, THM-4741) |
+| 1,415 Z7 orbit primes ≤ 200,000 from quotients of order ≤ 8; smallest 593 | FINITE-EXACT |
+| I7 vs P7: cycle counts as tabulated; readings differ by 14q; H(Q[P7]) − H(Q[I7]) = 14·H(Q) | PROVED |
+| 46 profile-twin groups through order 8, 37 with a unit difference; the ladder 91–99 | FINITE-EXACT |
+| the three mod-7 readings can be taken at the Fano points {1, 2, 4} | PROVED |
+| 28 Z7 gluings are skew-Hadamard of order 16, H = 198,335,025 | FINITE-EXACT |
+| exact smoothness of atoms below 125; 167 needs a 7-quotient; ladder 3, 13, 31, 167; P118 for k = 3, 5, 6 | PROVED (Busch's bound and finite generation) |
+| P119 for all primes; P118 for k ≥ 7 | OPEN |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
@@ -5775,3 +5895,10 @@ Chan–Pak remains OPEN.
   (wave 59 §1); test three orbits by sampling.
 - **P120 (highly realized counts).** At every order n the record holders for the number of realizing classes begin with
   the odd highly composite numbers 1, 3, 9, 15, 45. Test at orders 9 and 10 with THM-4889's and THM-4922's fibres.
+- **P121 (two-reading numeration).** There is an infinite family of marked quotients (Q, X) with no third visit to X
+  whose pairs (H(Q), a₂(Q, X)) fill a translated cone. Then every large odd number, hence every large prime, is a Z7
+  orbit count, giving all large 7p atoms with Z7 symmetry (wave 60 §1).
+- **P122 (the next rung).** At least one of 563, 587, 619 and 631 has no 6-smooth realizer at any order. Test 6-smooth
+  generation at orders 11 and 12 (wave 60 §5).
+- **P123 (module ladders).** Profile-twin ladders, with one cover profile and H in steps of 2, grow without bound in
+  length as the order grows. Each gives arithmetic progressions of counts with step 2·H(Q) (wave 60 §2).
