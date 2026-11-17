@@ -1,0 +1,19 @@
+# First appearances of tournament Hamiltonian counts
+
+For a positive integer h, b(h) is the least size of a tournament with exactly h directed Hamiltonian paths; use infinity if no tournament realizes it. A *first-birth class* is a tournament isomorphism class at size b(h). Several classes may share the same b(h) and h.
+
+## Find and construct a first witness
+
+* [Exact witness table](metagraph/witnesses.tsv): one literal tournament, encoded by outgoing-arc masks, for **each of the 1,520 counts** with first appearance through order nine. The [exhaustive induction](metagraph/PROOF.md) certifies absence at earlier orders; a separate subset DP checks the literal witnesses. There are 1,200 new counts at order nine.
+* [All-target exact decision and constructor](factor/solve.py): with no search budget, runs a finite search for any prescribed h. It uses [Busch's exact strong-order bound](https://www.combinatorics.org/ojs/index.php/eljc/article/view/v13i1n3) on strong cores and searches over divisors of h, then takes the shortest permitted ordinal product. For large h it may be impractically slow; a capped run reports incomplete, never impossible. The [factor classification](factor/PROOF.md) also describes all minimizing isomorphism classes, their converse pairs, and the special constraints for squarefree counts.
+* Example: 33 first occurs at order six, with outgoing masks (2,12,25,49,35,7). The easy construction at order seven is not minimal. Count 63 first occurs at order eight in two converse strong classes. Neither class has a first-birth parent by deletion, but each reaches one at order seven after one arc flip and a deletion. The intermediate count changes; this is a structural relay, not a path that preserves 63.
+
+## Which structure makes an infinite family?
+
+* **Small edit radius.** The entire one-flip neighborhood of transitive consists of a single extreme-back-arc strong block with two arbitrary transitive pads. Its [deletion and symmetry formulas](root/PROOF.md) are exact, but do not by themselves give minimality. In the actual merged tiling metagraph its increasing frame has a blue line to the full backward-chord tournament with the extreme chord restored forward. A rational generating function gives that partner's counts: 1,5,11,29,69,169,411,… at orders 3,4,…. At order seven this blue line goes from the old value 33 to the new value 69; at order eight it goes from old 65 to new 169.
+* **Large-count geometry.** [Explicit circular first births](families/PROOF.md), using [Divoux–Wang](https://arxiv.org/html/2610.23755v1), give a literal family at every sufficiently large order and linearly many distinct new counts per order via an arc-flip walk. More broadly, almost every tournament class is already a minimum witness for its own count, with exceptional fraction at most exp(−Ω(√n)). That is not a statement about the fraction of odd integers realized.
+* **Symmetry at scale.** In the [merged tiling metagraph](root/CIRCULAR.md), the circular family is self-converse, with explicit blue incidences counted by half-paths. The closed fraction tends to one half while the blue fraction tends to zero. The one-back-arc family has a single Hamiltonian cycle and its closed fraction tends to zero. Self-converseness does not imply that most of a class's marked frames are symmetric.
+
+Keep the two metagraphs distinct: the edit graph flips a single arc, while a blue or black tiling line complements all chords of one Hamiltonian frame. Node symmetries, numerical birth, and adjacency are three different properties.
+
+This supplies a finite exact answer procedure and structural infinite families, but not a short classification of b(h) for every odd integer or a proof that the only absent odd counts are 7 and 21. The [Chan–Pak conjecture](https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf) remains open.
