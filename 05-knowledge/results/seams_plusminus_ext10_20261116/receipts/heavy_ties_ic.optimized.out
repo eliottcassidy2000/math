@@ -1,0 +1,7 @@
+order 4: first creators 1, with a tie for the heaviest deletion 0, with some heaviest deletion not a first creator 0 
+order 5: first creators 6, with a tie for the heaviest deletion 0, with some heaviest deletion not a first creator 0 
+order 6: first creators 33, with a tie for the heaviest deletion 2, with some heaviest deletion not a first creator 0 
+order 7: first creators 328, with a tie for the heaviest deletion 76, with some heaviest deletion not a first creator 0 
+order 8: first creators 5457, with a tie for the heaviest deletion 413, with some heaviest deletion not a first creator 2 [63]
+order 9: first creators 163676, with a tie for the heaviest deletion 5064, with some heaviest deletion not a first creator 0 
+Moon's interval chains: 33 compositions of N <= 8 into parts >= 2; H(IC(p)) = prod (2^(p_i-1) + 1) fails 0 times

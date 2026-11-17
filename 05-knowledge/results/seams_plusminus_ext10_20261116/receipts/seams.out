@@ -1,0 +1,15 @@
+(1) arc-flip lemma: 10566 flips on orders 3-7, 0 mismatches; sum_(a->b) M(a,b) = (n-1)h fails 0 times
+    order 1: classes 1, contact values up to 1, centres so far 0
+    order 2: classes 1, contact values up to 3, centres so far 1
+    order 3: classes 2, contact values up to 5, centres so far 2
+    order 4: classes 4, contact values up to 15, centres so far 5
+    order 5: classes 12, contact values up to 45, centres so far 13
+    order 6: classes 56, contact values up to 189, centres so far 48
+    order 7: classes 456, contact values up to 661, centres so far 251
+    order 8: classes 6880, contact values up to 3357, centres so far 980
+(2) contact seams from bases of orders <= 8: 53690 seam pairs; even centres in [4, 2000] covered: 979 of 999; missing: [6, 8, 20, 22, 36, 40, 54, 56, 60, 64, 84, 94, 108, 148, 160, 166, 188, 196, 262, 312]
+    first-witness seams whose two tournaments have different numbers of strong components: 2 of 980
+    contact-flip digits |Delta|/2 occurring (orders <= 8): every value in [0, 399] occurs; largest 1008; share of flips with digit 1: 0.0074, digit 0: 0.0128
+(2w) the +2 window around 3(H+1): of the 148 odd counts H <= 300 realised here, 141 have (3H+2, 3H+4) as a contact seam from a base of order <= 8; failures: [1, 11, 17, 19, 27, 35, 103]
+(3) arc-flip seams from orders <= 8: even centres in [4, 2000] covered: 250; missing: [6, 8, 20, 22, 36, 40, 54, 56, 60, 64, 84, 86, 88, 94, 98, 106, 108, 148, 150, 160, 166, 188, 194, 196, 204, 222, 226, 242, 254, 262, 296, 312, 330, 342, 362, 366, 372, 378, 380, 392, 394, 430, 436, 438, 440, 444, 494, 500, 526, 554, 556, 558, 564, 566, 578, 600, 602, 604, 606, 608] ...
+    flip digits Delta/2: all values in [-153, 153] occur; share of count-preserving flips: 0.0334; share with |digit| = 1: 0.0240

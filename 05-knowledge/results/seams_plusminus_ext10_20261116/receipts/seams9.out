@@ -1,0 +1,7 @@
+contact seams from bases of orders 3-9: 824248 seam pairs; even centres in [4, 10000] missed: 6 8 20 22 36 40 54 56 60 64 84 94 108 148 188 196 262
+  covered 4982 of 4999; missed below 10000: 17 (printed those <= 2000); residues mod 8 of the misses: 0:4 2:0 4:8 6:5
+  contact digits |Delta|/2: every value in [0, 3638] occurs; share digit 0: 0.0051, digit 1: 0.0018, digit 2: 0.0018
+arc-flip seams from orders 3-9: 7098502 flips, 52202 seams; even centres in [4, 2900] missed: 6 8 20 22 36 40 54 56 60 64 84 94 108 148 160 166 188 196 262 312 2230 2320 2450 2652 2660 2668 2670 2672 2674 2680 2682 2684 2686 2690 2692 2694 2698 2702 2708 2714 2716 2718 2722 2732 2868 2874 2876 2878 2880 2882 2884 2886 2888 2890 2892 2894 2896 2898 2900
+  covered 1390 of 1449
+the +2 window: odd counts H <= 1000 realised as contact values whose centre 3(H+1) is NOT a contact seam centre: 1 11 17 19 27 35
+  windows realised: 492 of 498

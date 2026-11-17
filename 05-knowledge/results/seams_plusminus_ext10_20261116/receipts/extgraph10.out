@@ -1,0 +1,4 @@
+order 10: 9733056 classes; contacts 95441218; mean distinct parents 9.8059
+distinct-parent histogram: 1:3 2:36 3:123 4:684 5:1623 6:7062 7:33640 8:207155 9:1332469 10:8150261
+children per order-9 class: min 23, mean 498.294, max 503; transitive M_9 has 475 (not max); childless 0
+canonical-parent tree: max branching 475 (transitive 475), childless order-9 classes 78498 of 191536 (41.0 %), mean 50.816

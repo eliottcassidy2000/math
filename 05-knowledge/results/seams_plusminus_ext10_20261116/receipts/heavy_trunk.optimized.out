@@ -1,0 +1,4 @@
+heaviest-parent tree, largest branch at 8 -> 9: order-8 class 1477 with 247 children; H = 661, out-degrees [3, 3, 3, 3, 4, 4, 4, 4], strong True
+   top five branches (class, children, H): [(1477, 247, 661), (2217, 245, 661), (2317, 235, 661), (2309, 235, 661), (1538, 233, 659)]
+least-string tree, largest branch at 8 -> 9: order-8 class 0 with 227 children; H = 1, out-degrees [0, 1, 2, 3, 4, 5, 6, 7], strong False
+   top five branches (class, children, H): [(0, 227, 1), (2489, 218, 5), (3276, 209, 11), (1631, 206, 5), (4195, 206, 13)]

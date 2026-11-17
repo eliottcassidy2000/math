@@ -1,0 +1,34 @@
+Pre-registered predictions, klein-2026-11-16-seam, written 2026-11-16 before the runs below.  A seam is a pair of
+tournaments differing by one port contact (T + v_X vs T + v_{X u x}) or by one arc flip, whose counts are c - 1 and c + 1;
+c is the seam's centre.
+
+S-1 (contact seams)  From bases of orders <= 8 and all contact sets, the even centres of one-contact seams cover every
+     even number in [4, 2000] except 6, 8, 20, 22 (whose neighbours include the holes 7, 21) and at most 10 others.
+S-2 (arc-flip lemma and seams)  H(T with the arc a->b reversed) = H(T) + M(b, a) - M(a, b) (0 mismatches on orders <= 7) and
+     sum over arcs a->b of M(a, b) = (n - 1) h; one-flip seams from orders <= 8 cover every even centre in [4, 1000]
+     except 6, 8, 20, 22 and at most 20 others; the flip digits Delta/2 take every value in [-30, 30] at orders <= 8.
+S-3 (the +2 window by contacts)  For at least 80 % of the odd counts H <= 300 realised by extensions of bases of order <= 8,
+     the window (3H + 2, 3H + 4) around 3(H + 1) is a one-contact seam from a base of order <= 8.
+S-4 (changing the quotient)  Among the first-witness contact seams at centres <= 2000, at least 20 % join two
+     tournaments with different numbers of strong components.
+S-5 (contact digits)  The contact-flip digits |Delta|/2 over orders <= 8 take every value in [0, 100]; more than 5 % of all
+     contact flips have digit 1.
+S-6 (order-10 extension graph)  Contacts at order 10 lie between 9.4e7 and 9.7e7 (mean distinct parents >= 9.7 of 10); the
+     most fertile order-9 class has at least 490 of 512 possible children; the transitive M_9 has fewer children than the
+     maximum but is the largest branch of the canonical-parent tree; between 45 % and 65 % of the order-9 classes are
+     childless in that tree.
+
+Second pre-registration (after seams.py: S-1 hole clause confirmed, "at most 10 others" refuted (16: 36, 40, 54, 56, 60, 64,
+84, 94, 108, 148, 160, 166, 188, 196, 262, 312); S-2 lemma and identity confirmed, seam coverage refuted (arc flips at
+order <= 8 only reach centres <= 660 and miss many), digit range confirmed; S-3 confirmed (141 of 148); S-4 refuted (2 of
+980); S-5 digit range confirmed, "> 5 % digit 1" refuted (0.74 %)).  Written before seams9.c and heavy_tree.py run.
+
+S-7 (bases of order 9)  One-contact seams from bases of orders <= 9 cover every even centre in [4, 2000] except 6, 8, 20,
+     22; below 10,000 at most 40 even centres other than those four are missed.
+S-8 (residues of the misses)  Every even centre below 10,000 missed by the bases-<= 9 contact seams is congruent to 0, 4 or 6
+     modulo 8 (none is 2 mod 8).
+S-9 (the +2 window failures)  Of the seven odd H <= 300 whose window (3H+2, 3H+4) is not a contact seam from bases <= 8
+     (1, 11, 17, 19, 27, 35, 103), all but H = 1 become contact seams from bases of order 9.
+S-10 (a re-arranged tree)  In the heaviest-parent tree (each class attached to its deletion class of largest count, ties
+     by least canonical string), the share of first creators of orders 6-9 whose tree parent is a first creator exceeds
+     80 % at every order, and the maximum branching at 8 -> 9 is below 150.
