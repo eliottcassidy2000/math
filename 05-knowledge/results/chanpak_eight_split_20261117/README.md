@@ -10,6 +10,7 @@ Assume that all ordinary odd primes other than 7 are in S. Then for odd n coprim
 
 In particular if the conjecture fails on the 7-coprime quotient lane, under the ordinary prime assumption its **least** unexpected missing quotient is prime. Finding more composite examples doesn't change that obligation. For prime p≠3,7 any witness for 7p has one strong component of count 7p and only singleton SCCs outside it: separating the two prime factors would require a component of count 7. A p-witness has the analogous unique count-p component.
 
+- [Exact recontact menu realizing both n+7n and 3n+5n](CONTACT_MENU.md)
 - [Literal sevenfold lift and exact contact constraints](LITERAL_LIFT.md)
 - [Why all ordinal combinations of one-apex sources in the old readers still miss almost all primes](THIN_READERS.md)
 - [A paired Lonely Runner sheet theorem with sharp 3/16 margin](RUNNER_SHEETS.md)
