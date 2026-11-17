@@ -21,3 +21,17 @@ Also W_C(x)=h+2w=J: if the rooted slot is singleton x, the other slot ends at th
 When the trailing sink s is untagged, W doubles and U is unchanged on passing from C to R. When it is tagged and the old tag set in C has data (W_C,U_C,E_C), one has W_R=2W_C+J and U_R=U_C+E_C+W_C. Substitute the above spellings into H(new)=J+2W_R−U_R. For singleton old tag y, U_C=0, yielding the fourth row. For both tags x,y, use W_C=J+4w−g and E_C=h+g, giving the fifth row. The other rows use the empty tag, the marked sink alone, or W_C(x)=J.
 
 The second literal scaffold is a substitution into the marked five-vertex seed M=(8,5,17,6,11), y=1, retaining the x,z,s construction under that substitution. In contrast, choosing M with y the penultimate singleton in an ordinal decomposition gives h=g and w=2h, which supplies only J=5h. The first nontrivial inverse is not arithmetic representability as 3h+2g: the two counts must be realized by the *same* deletion pair with the required weighted start. Nothing here asserts such a normalized seed for every prime.
+
+## Order-independent compression of the normalization
+
+Set D=M−y and let A=N⁺(y) in D; use the cover quantities W,U,E on D with this mark set (E counts full paths ending in A). Then w=g+W, since the marked slot is either singleton y or continues into A. Likewise h=g−E+W−U, by separating paths ending y from paths with a tagged successor. Thus normalization means precisely
+
+    U+E=g,    h=W.
+
+In particular A is nonempty and lies in **one** strong component F of D. To prove this, suppose F and L are first and last tagged components and are distinct. Split full paths of F just before a tag, and full paths of L just after a tag, placing the F tag at the start of Z and the L tag at the end of X. In every intervening SCC independently split a full path into two slots; merge in ordinal order and attach outer full paths. These choices give U≥g times 2 to the power of the number of intervening components. If there is an intervening component this contradicts U≤g. If F,L are adjacent, there is an additional class of covers where X ends at a tag in F and Z starts at a tag in L. Such full paths in F and L exist: any vertex of a strong tournament with at least three vertices can be a start or end by cutting a directed Hamilton cycle (Camion's theorem); singleton cases are immediate. The additional class is disjoint and again makes U>g.
+
+Write D=P→F→S in its unique SCC order (empty blocks allowed). With A inside F the test on (F,A) is U_F+E_F=H(F) if S is empty, and U_F=H(F) otherwise. Indeed U on D scales by H(P)H(S), while E is zero unless S is empty. The read for normalized seeds becomes
+
+    J=H(P)[3W_F P₂(S)+2H(F)H(S)].
+
+The outer prefix factor must be 1 for J prime, since the bracket is greater than 1. This is an exact single-component selection law, with a possible two-coordinate suffix, not a proof of the universal profile supply.
