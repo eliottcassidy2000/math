@@ -57,7 +57,10 @@ There are two 5-vertex descendants:
 | (1,1) | (18,4,1,7,14) | 4 | (9,9,3) | 84 |
 | (0,0), (0,0) | (10,4,1,22,7) | 4 | (9,11,3) | 84 |
 
-Call them X0,X1. Each has one full path end at its root. In fact
+Call them X0,X1. Each has one full path end at its root. The
+permutation swapping vertices 3 and 4 identifies their unmarked
+tournaments and sends the two roots to different vertices. Thus
+this is a literal choice of port on a single unmarked graph. In fact
 they have identical *entire* ordered-slot polynomial, not merely
 the displayed two values:
 
