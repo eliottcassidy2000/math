@@ -1,0 +1,71 @@
+order 3: classes 2; balanced arcs total 2; classes with a balanced arc 1; with a nontrivial neutral move 0; richest strong classes (balanced arcs, index, h, scores): [(0, 1, 3, [1, 1, 1])]
+order 4: classes 4; balanced arcs total 6; classes with a balanced arc 2; with a nontrivial neutral move 0; richest strong classes (balanced arcs, index, h, scores): [(3, 3, 5, [1, 1, 2, 2])]
+order 5: classes 12; balanced arcs total 20; classes with a balanced arc 8; with a nontrivial neutral move 2; richest strong classes (balanced arcs, index, h, scores): [(4, 6, 9, [1, 1, 2, 3, 3]), (2, 5, 9, [1, 1, 2, 3, 3]), (2, 3, 11, [1, 2, 2, 2, 3])]
+order 6: classes 56; balanced arcs total 106; classes with a balanced arc 38; with a nontrivial neutral move 20; richest strong classes (balanced arcs, index, h, scores): [(7, 9, 37, [1, 2, 2, 3, 3, 4]), (4, 42, 43, [2, 2, 2, 3, 3, 3]), (4, 29, 43, [2, 2, 2, 3, 3, 3])]
+order 7: classes 456; balanced arcs total 652; classes with a balanced arc 315; with a nontrivial neutral move 204; richest strong classes (balanced arcs, index, h, scores): [(6, 196, 51, [1, 1, 3, 3, 3, 5, 5]), (6, 8, 33, [1, 1, 2, 3, 4, 5, 5]), (4, 281, 137, [2, 2, 3, 3, 3, 4, 4])]
+order 8: classes 6880; balanced arcs total 6004; classes with a balanced arc 3717; with a nontrivial neutral move 2066; richest strong classes (balanced arcs, index, h, scores): [(7, 5059, 657, [3, 3, 3, 3, 4, 4, 4, 4]), (7, 5058, 657, [3, 3, 3, 3, 4, 4, 4, 4]), (7, 4143, 657, [3, 3, 3, 3, 4, 4, 4, 4])]
+fibre h: classes | strong | balanced arcs | nontrivial neutral edges | neutral-graph components among classes with a move | |B(h)| (orders <= 8)
+  1: 6 | 0 | 27 | 0 | 0 | 8
+  3: 21 | 1 | 40 | 0 | 0 | 7
+  5: 15 | 1 | 65 | 0 | 0 | 24
+  9: 30 | 2 | 79 | 10 | 10 | 35
+  11: 10 | 1 | 28 | 0 | 0 | 26
+  13: 10 | 1 | 8 | 0 | 0 | 18
+  15: 40 | 4 | 68 | 6 | 6 | 47
+  17: 12 | 2 | 22 | 0 | 0 | 35
+  19: 12 | 2 | 16 | 0 | 0 | 35
+  23: 24 | 4 | 56 | 6 | 6 | 52
+  25: 16 | 3 | 40 | 6 | 6 | 48
+  27: 25 | 5 | 40 | 8 | 5 | 52
+  29: 30 | 6 | 68 | 18 | 6 | 68
+  31: 18 | 4 | 4 | 0 | 0 | 58
+  33: 41 | 8 | 68 | 6 | 3 | 90
+  35: 6 | 2 | 6 | 0 | 0 | 29
+  37: 36 | 7 | 148 | 36 | 6 | 76
+  39: 8 | 2 | 12 | 0 | 0 | 35
+  41: 21 | 6 | 38 | 6 | 6 | 76
+  43: 18 | 4 | 52 | 6 | 6 | 51
+  45: 36 | 12 | 53 | 5 | 1 | 94
+  47: 6 | 2 | 24 | 0 | 0 | 28
+  49: 22 | 8 | 32 | 6 | 3 | 86
+  51: 28 | 12 | 56 | 7 | 4 | 94
+  53: 18 | 10 | 14 | 0 | 0 | 85
+  55: 12 | 4 | 6 | 0 | 0 | 51
+  57: 15 | 7 | 2 | 0 | 0 | 53
+  59: 28 | 12 | 58 | 12 | 6 | 107
+  61: 7 | 5 | 10 | 1 | 1 | 42
+  63: 2 | 2 | 6 | 0 | 0 | 16
+  65: 36 | 14 | 37 | 6 | 6 | 123
+  67: 18 | 6 | 6 | 0 | 0 | 68
+  69: 42 | 18 | 78 | 14 | 11 | 139
+  71: 25 | 11 | 30 | 8 | 8 | 109
+  73: 35 | 19 | 70 | 16 | 10 | 143
+  75: 23 | 9 | 8 | 0 | 0 | 87
+  77: 36 | 16 | 48 | 19 | 13 | 127
+  79: 21 | 11 | 30 | 6 | 3 | 100
+  81: 43 | 21 | 60 | 14 | 5 | 163
+  83: 25 | 11 | 30 | 7 | 7 | 98
+  85: 8 | 6 | 10 | 0 | 0 | 48
+  87: 9 | 7 | 10 | 1 | 1 | 57
+  89: 49 | 21 | 71 | 24 | 12 | 172
+  91: 57 | 27 | 70 | 16 | 8 | 194
+  93: 25 | 11 | 22 | 3 | 3 | 108
+  95: 25 | 15 | 24 | 0 | 0 | 123
+  97: 28 | 16 | 48 | 5 | 1 | 129
+  99: 26 | 18 | 22 | 4 | 2 | 100
+  101: 34 | 14 | 58 | 24 | 6 | 138
+  103: 34 | 14 | 38 | 6 | 6 | 131
+  105: 23 | 15 | 25 | 3 | 3 | 110
+  107: 10 | 10 | 20 | 1 | 1 | 69
+  109: 50 | 22 | 84 | 24 | 18 | 169
+  111: 42 | 22 | 48 | 12 | 12 | 164
+  113: 20 | 12 | 6 | 0 | 0 | 102
+  115: 35 | 21 | 14 | 0 | 0 | 164
+  117: 36 | 22 | 29 | 11 | 6 | 153
+  119: 12 | 12 | 22 | 2 | 2 | 85
+  121: 16 | 8 | 16 | 0 | 0 | 80
+  123: 44 | 24 | 56 | 14 | 5 | 176
+  125: 13 | 11 | 8 | 0 | 0 | 83
+fibres (odd h <= 125) with NO nontrivial neutral move: [1, 3, 5, 11, 13, 17, 19, 31, 35, 39, 47, 53, 55, 57, 63, 67, 75, 85, 95, 113, 115, 121, 125]
+fibres with h >= 23: 52, with a nontrivial move: 36; fibre with the most nontrivial edges: h = 37 (36 edges)
+Spearman(nontrivial neutral edges, |B(h)|) over 61 fibres: 0.613
