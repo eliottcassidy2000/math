@@ -1,0 +1,44 @@
+== A. Species counts of the ordinal/C3 class (w59_species.py) ==
+ordinal/C3 classes by order 1..18: [1, 1, 2, 4, 9, 24, 65, 182, 528, 1558, 4674, 14225, 43769, 135960, 425817, 1343039, 4262222, 13600417]
+strong (C3-rooted) ones:           [1, 0, 1, 1, 3, 9, 23, 66, 194, 572, 1726, 5273, 16262, 50637, 158903, 502000, 1595437, 5097329]
+
+== B. Classes of orders <= 8: smoothness, symmetry, records (w59_dump8, w59_classinfo, w59_analysis.py) ==
+classes by order n and smoothness sigma (1 = transitive; sigma = n means prime):
+  n=1: {1: 1}
+  n=2: {1: 1}
+  n=3: {1: 1, 3: 1}
+  n=4: {1: 1, 3: 3}
+  n=5: {1: 1, 3: 8, 5: 3}
+  n=6: {1: 1, 3: 23, 5: 17, 6: 15}
+  n=7: {1: 1, 3: 64, 5: 78, 6: 116, 7: 197}
+  n=8: {1: 1, 3: 181, 5: 322, 6: 619, 7: 1749, 8: 4008}
+counts <= 661 by minimal smoothness over their realizers of order <= 8: {1: 1, 3: 49, 5: 78, 6: 95, 7: 75, 8: 22}
+  first counts needing sigma = 5: [13, 19, 29, 39, 41, 49, 57, 59, 61, 63, 73, 75, 79, 81, 85, 87]
+  first counts needing sigma = 6: [31, 35, 43, 53, 55, 67, 71, 77, 83, 89, 101, 103, 113, 115, 121, 127]
+  first counts needing sigma = 7: [125, 167, 171, 193, 203, 227, 235, 247, 257, 263, 265, 267, 287, 297, 303, 305]
+  first counts needing sigma = 8: [495, 519, 525, 531, 539, 551, 559, 567, 579, 581, 587, 601, 603, 605, 607, 609]
+atoms <= 661 realized at orders <= 8: 139; by minimal sigma: {3: 16, 5: 33, 6: 52, 7: 32, 8: 6}
+classes with |Aut| not dividing H: 0
+symmetry-floor violations (prime q | |Aut| but H < 1 + q(q^2-1)/12): 0
+prime counts >= 5 with a nonrigid realizer: []
+atoms with a nonrigid realizer: [3]
+counts with the most distinct automorphism-group orders: [(3, 45, [1, 3, 9, 15]), (2, 621, [3, 9]), (2, 255, [1, 3, 5]), (2, 153, [1, 3, 9]), (2, 135, [1, 3, 5]), (2, 99, [1, 3, 9])]
+records of the number of realizing classes (all orders <= 8): [(1, 8), (3, 21), (9, 30), (15, 40), (33, 41), (69, 42), (81, 43), (89, 49), (91, 57)]
+records of the number of realizing classes (order 8 only): [(1, 1), (3, 6), (9, 14), (15, 20), (33, 23), (45, 25), (69, 30), (81, 32), (89, 35), (91, 42), (267, 44), (281, 48), (345, 49)]
+
+== C. Smooth classes: ordinal/C3 (3-smooth) and with the prime 5-quotients (w59_smooth_classes.py) ==
+$ python3 w59_smooth_classes.py 14 3000 C3
+letters ['C3']: odd h <= 3000 missed at orders <= 14: 1086; first: [7, 13, 19, 21, 29, 31, 35, 39, 41, 43, 49, 53, 57, 59, 61, 63, 67, 71, 73, 77, 79, 83, 87, 89, 97, 101, 103, 105, 109, 113, 117, 119, 127, 131, 139, 143, 145, 147, 149, 151, 155, 157, 161, 163, 167, 169, 171, 173, 175, 179]
+atoms < 700 realized: [3, 5, 11, 17, 23, 37, 47, 91, 107, 133, 137, 191, 199, 211, 227, 241, 257, 379, 383, 389, 443, 467, 509]
+$ python3 w59_smooth_classes.py 10 3000 C3,Q9,Q13,Q15
+letters ['C3', 'Q9', 'Q13', 'Q15']: odd h <= 3000 missed at orders <= 10: 840; first: [7, 21, 31, 35, 43, 53, 67, 71, 77, 83, 89, 101, 103, 113, 127, 131, 149, 161, 163, 167, 173, 175, 179, 181, 203, 209, 215, 217, 235, 245, 247, 251, 259, 263, 267, 271, 277, 283, 287, 295, 303, 305, 307, 311, 323, 335, 341, 343, 353, 355]
+atoms < 700 realized: [3, 5, 11, 13, 17, 19, 23, 29, 37, 41, 47, 49, 59, 61, 63, 73, 79, 91, 97, 107, 109, 119, 133, 137, 139, 151, 157, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 257, 269, 281, 293, 301, 313, 317, 329, 331, 337, 347, 349, 367, 379, 383, 389, 401, 409, 413, 433, 443, 457, 461, 467, 469, 479, 509, 577, 581, 613, 641, 653, 661, 673]
+
+== D. Z7-symmetric tournaments on two free orbits (w59_z7) ==
+circulant halves: 8
+7p atom 24855901 = 7*3550843 (orbit count prime), S0=14 S1=14 C=7
+7p atom 24640063 = 7*3520009 (orbit count prime), S0=14 S1=22 C=19
+7p atom 15110851 = 7*2158693 (orbit count prime), S0=14 S1=42 C=3
+7p atom 24593947 = 7*3513421 (orbit count prime), S0=14 S1=104 C=7
+7p atom 15144269 = 7*2163467 (orbit count prime), S0=22 S1=22 C=3
+configurations 8192; H range [30625, 24855901]; all divisible by 7; distinct prime orbit counts: 5

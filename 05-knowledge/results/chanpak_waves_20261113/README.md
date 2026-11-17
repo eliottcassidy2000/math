@@ -5583,6 +5583,157 @@ joins give the forms of wave 57; klein's extension graph (THM-5266) is the delet
 
 Chan–Pak remains OPEN.
 
+## Wave 59: what must exist for Chan–Pak: rigid atoms, smooth tournaments, and where symmetry can live
+
+Session mac-mini-2026-11-16-smooth. Owner prompt:
+- think highly composite numbers; instead of growing the seed bank, categorize symmetry structure and its composition;
+- the minimum about isomorphism classes needed to prove Chan–Pak: what must exist, and can each type be proved to exist;
+- is there a quick way to generate this family?
+
+Scripts `scripts/w59_*` (with `w57_classes.py`); output `scripts/w59_receipts.txt`.
+
+### §0. Prior art (credit)
+
+| idea | where |
+| --- | --- |
+| the ordinal/C3 class (joins and C3[A, B, C]): unique form, species equation, first tower depth | `session284_structural_births_20261112` |
+| rigid self-converse classes are its towers; exceptional symmetry and C3 towers | THM-2450, THM-4743 |
+| Aut acts freely on Hamiltonian paths (LEM-003+); tc = H/\|Aut\| | THM-2477, THM-4741 |
+| prime tournaments 1, 1, 1, 0, 3, 15, 197, 4008 at orders 1–8 | THM-1960, THM-4803 (A280772) |
+| substitution and join laws used for profile recursion | THM-3121, THM-3166 |
+| reduction to atoms | waves 48 and 55; `chanpak_selection_retrospective_20261117` |
+| **concurrent, same prompt:** one strong class per atom, prime-count rigidity and 7p ∈ {rigid, C7} via Busch's bound, the smallest Z7-symmetric 7p atom 4151 = 7·593, exact block divisors D(B), factorization lengths | `atomic_symmetry_descent_20261117` |
+
+### §1. The minimum that must exist (PROVED; concurrently also in `atomic_symmetry_descent_20261117`)
+
+The reduction and the rigidity conclusions below match the concurrent packet. What differs here is the route: the
+symmetry floor is elementary and needs no Busch bound.
+
+**Atoms.** Chan–Pak holds iff every atom
+
+    a ∈ A = {primes other than 7} ∪ {7p : p prime ≥ 5} ∪ {63, 343}
+
+is the count of a strong tournament. An atom's realizer has exactly one nontrivial strong component, whose count is the
+atom; conversely, joins multiply. Up to transitive padding these strong witnesses are the only realizers, so no atom
+can be dropped. One strong witness per atom is exactly the minimum.
+
+**Symmetry floor (lemma).** If a prime q divides |Aut(T)|, then q divides H(T) and
+
+    H(T) ≥ 1 + q(q² − 1)/12.
+
+- q divides H because Aut acts freely on Hamiltonian paths (LEM-003+).
+- An automorphism of order q has an orbit of size q, which spans a circulant on Z_q. That regular tournament has
+  q(q² − 1)/24 directed triangles, so H ≥ 1 + 2·#triangles by H = I(Ω, 2).
+- The bound is tight at C3. It holds on all 7,412 classes of order ≤ 8.
+
+**Prime counts are rigid.** If H(T) = p is a prime ≥ 5, then Aut(T) is trivial. Indeed |Aut| divides p, and q = p
+would give H ≥ 1 + p(p² − 1)/12 > p.
+
+**Where symmetry can live among the atoms.**
+
+| atom | possible \|Aut\| | reason |
+| --- | --- | --- |
+| 3 | 3 (C3) | |
+| primes p ≥ 5 | 1 | the lemma |
+| 35, 49, 63 | 1 | realizers have order ≤ 8 (the strong floor is 75 from order 9 on: THM-1370's monotonicity with wave 57's order-9 census), and the census finds only rigid ones |
+| 7p, p ≥ 11 | 1 or 7 | q = p would force H ≥ 1 + p(p² − 1)/12 > 7p |
+| 343 | a power of 7 | not checked |
+
+So the minimal witness set is:
+- a **rigid** strong tournament for every prime p ≥ 5;
+- for every 7p, a strong tournament that is rigid or has exactly a Z7 symmetry;
+- finite witnesses for 49, 63 and 343.
+
+Symmetric constructions (towers, circulants, equal-block blow-ups) can never produce a prime count.
+
+**Z7 really occurs.** The concurrent packet proves that the smallest Z7-symmetric 7p atom is 4151 = 7·593: T4s with one
+vertex blown up into the interval circulant on 7 vertices. Here, take instead the Z7-symmetric tournaments on two free 7-orbits: circulants inside each orbit, any cross
+set C ⊆ Z7. All 8,192 counts are divisible by 7. Their counts are at least 175² = 30,625, as the concurrent packet also shows. Five have a prime number of path orbits, e.g.
+
+    24,855,901 = 7·3,550,843,    15,110,851 = 7·2,158,693     (`w59_z7.c`).
+
+So 7 is never a count but is a symmetry order. A Z7-symmetric realizer of 7p is exactly a tournament with p orbits of
+Hamiltonian paths.
+
+### §2. Smoothness: the tournament analogue of highly composite numbers (FINITE-EXACT)
+
+Let σ(T) be the largest prime-quotient order in T's modular decomposition, with σ = 1 when T is transitive. A
+k-smooth tournament is built from prime quotients of order ≤ k by joins and substitution, as k-smooth numbers are built
+from primes ≤ k. C3 is the only prime of order 3 and there is none of order 4, so 3-smooth means the ordinal/C3 class.
+
+| n | σ = 1 | σ = 3 | σ = 5 | σ = 6 | σ = 7 | σ = 8 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 5 | 1 | 8 | 3 | | | |
+| 6 | 1 | 23 | 17 | 15 | | |
+| 7 | 1 | 64 | 78 | 116 | 197 | |
+| 8 | 1 | 181 | 322 | 619 | 1,749 | 4,008 |
+
+- **3-smooth counts are thin.** The class has 1, 1, 2, 4, 9, 24, 65, 182, 528, … members (about 3.2^n).
+  - Through order 14 it misses 1,086 of the 1,500 odd numbers below 3,000.
+  - Only 23 atoms below 700 are 3-smooth: 3, 5, 11, 17, 23, 37, 47, 91, 107, 133, 137, 191, 199, 211, 227, 241, 257,
+    379, 383, 389, 443, 467, 509. Two of them, 91 = 7·13 and 133 = 7·19, are 7p atoms.
+  - 13 is never 3-smooth, at any order. A strong 3-smooth tournament is C3[A, B, C] with H ≥ 3·H(A)H(B)H(C), so for 13
+    the blocks are transitive (2^k + 1, (2^k − 1)(2^m − 1) + 2, or ≥ 45) or one block has count 3, which gives ≥ 15.
+- **Adding the three prime 5-quotients (counts 9, 13, 15)** still leaves 840 of the 1,500 odd numbers below 3,000
+  missing through order 10, and reaches 72 atoms below 700.
+- **Through order 8 the atoms need large primes.** Of the 139 atoms below 662, the smallest available σ is 3 for 16,
+  5 for 33, 6 for 52, 7 for 32 and 8 for 6. The first counts needing σ = 6, 7, 8 are 31, 125 and 495. This is
+  order-limited: 125 = 5³ becomes 3-smooth at order 12 as T4s ⇒ T4s ⇒ T4s, but atoms cannot factor.
+
+So the "highly composite" tournaments, built deep from small primes, do not carry Chan–Pak in the tested range. The
+complete families on file are the opposite: shallow composition over an unbounded prime alphabet. A two-hub tournament
+is transitive toothpick blocks substituted into a prime two-apex word (wave 5: every odd N ≤ 22,156,805 except 7, 21).
+
+### §3. Highly composite counts carry the symmetry (FINITE-EXACT with the §1 proofs)
+
+- |Aut| divides H in all 7,412 classes. Symmetric realizers occur only at composite counts (§1).
+- **Most realized small counts.** The record holders for the number of realizing classes start 1, 3, 9, 15 over orders
+  ≤ 8, and 1, 3, 9, 15, 33, 45 at order 8 alone. The odd highly composite numbers start 1, 3, 9, 15, 45.
+  - Composite counts gain realizations from ordered factorizations into strong components.
+  - Past 45 the bulk of each order's distribution takes over (89, 91, 267, 281, 345), so the match is NUMEROLOGY beyond
+    the first terms.
+- **45 has the richest symmetry.** 45 = 3²·5 is an odd highly composite number and the maximum count at order 6. Its
+  realizers have |Aut| ∈ {1, 3, 9, 15}. Next come 15, 99, 135, 153 and 255, with two nontrivial orders each.
+
+### §4. Can each type be proved to exist, and is there a quick generator?
+
+| atom type | proved family | examples |
+| --- | --- | --- |
+| 2^k + 1 | cap C3[•, •, TT_k] (THM-4876 (6), wave 57) | 5, 17, 257, 65537 |
+| 2^k − 1, k ≥ 4 | Fibonacci fan (THM-4748 (4)) | 31, 127, 8191; also 63 and 511 = 7·73 |
+| (2^i − 1)(2^l − 1) + 2, incl. Thabit 3·2^j − 1 | one centre (THM-4876 (6)) | 11, 23, 47, 191, 383 |
+| 3·2^j ± 1, 9·2^j − 3 and 9·2^j − 1 | blown-up skeleton unit switches (wave 58) | 97, 193, 769; 71, 1151 |
+| Tribonacci counts | path tournaments (THM-4731, THM-4878) | |
+| 7p with Z7 symmetry | two-orbit circulants (§1) | 7·3,550,843 |
+| general prime, general 7p | none | |
+
+Every proved family is exponentially thin.
+
+**Quick generation.** Generating and checking is quick:
+- profiles compose in polynomial time on k-smooth tournaments (THM-3121, THM-3166; `w59_smooth_classes.py`);
+- two-hub counts take O(m) by the transfer;
+- the Z7 circulants take one Held–Karp run on 14 vertices.
+
+The inverse is the hard part. Two-hub decoders cost about N (waves 7–16), near-join lookup placed primes to
+1.5·10^6 (wave 56), and the seed grammar is complete to 400,000 (wave 58). No quick, provable inverse is known.
+
+The minimum statement left to prove is therefore: **every prime p ≥ 5 is the count of a rigid strong tournament, and
+every 7p is the count of a strong tournament that is rigid or Z7-symmetric.** There is no symmetry shortcut for primes.
+
+### Ledger
+
+| claim | status |
+| --- | --- |
+| Chan–Pak ⟺ every atom has a strong realizer; one per atom is the minimum | PROVED (also concurrent) |
+| symmetry floor H ≥ 1 + q(q² − 1)/12 for q dividing \|Aut\|; prime counts ≥ 5 are rigid | PROVED (LEM-003+, H = I(Ω, 2)); rigidity also concurrent via Busch |
+| 35, 49, 63 rigid; 7p (p ≥ 11) rigid or Z7 | PROVED (with THM-1370's monotone floor, f(9) = 75, and the order-≤ 8 census) |
+| Z7-symmetric realizers of 7p atoms: smallest 4151 = 7·593 (concurrent); five more on two free orbits | FINITE-EXACT |
+| smoothness census through order 8; 3-smooth and 5-smooth coverage; 13 never 3-smooth | FINITE-EXACT; 13: PROVED |
+| small realization records follow the odd highly composite numbers 1, 3, 9, 15, 45 | FINITE-EXACT; NUMEROLOGY beyond |
+| a quick provable inverse; existence for general primes and general 7p | OPEN |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
@@ -5617,3 +5768,10 @@ Chan–Pak remains OPEN.
 - **P117 (state-dependent digits).** For every block length L, no two two-hub spine blocks share a conserved charge
   (λ, Φ). A proof of the frame lemma must choose digits depending on the state. Checked for appended blocks up to
   length 5 and middle blocks up to length 4 with readers up to length 3 (wave 58 §1).
+- **P118 (smoothness is unbounded).** For every k there are atoms with no k-smooth realizer at any order. 13 is the
+  case k = 3 (wave 59 §2). Test k = 5 at 31 and 43.
+- **P119 (Z7 orbit primes).** The orbit counts H/7 of Z7-symmetric tournaments on 7m vertices take infinitely many prime
+  values, giving infinitely many Z7-symmetric 7p atoms. Two orbits give five such primes among 8,192 tournaments
+  (wave 59 §1); test three orbits by sampling.
+- **P120 (highly realized counts).** At every order n the record holders for the number of realizing classes begin with
+  the odd highly composite numbers 1, 3, 9, 15, 45. Test at orders 9 and 10 with THM-4889's and THM-4922's fibres.
