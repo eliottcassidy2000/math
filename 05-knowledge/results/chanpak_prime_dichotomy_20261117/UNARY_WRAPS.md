@@ -1,0 +1,26 @@
+# A simultaneous entropy bound for a direct prime rail and a sevenfold rail
+
+Let initial sources be arbitrary ordinal sums of one-apex tournaments (a single vertex over a transitive spine). From each source construct arbitrarily deep chains of literal cyclic substitution
+
+    X -> C3[X, TT_a, TT_b],      a,b >= 1.
+
+The transitive block sizes may change at every step. Let P_k(X) count ordered k-path covers with empty slots allowed, so P_1=H.
+
+**Theorem.** For every s>max(log_3 2,s_*), where s_* is the unique positive solution
+`2^(-2s)/[(1-2^(-2s))(1-2^(-s))]=1`, there are O_s(Y^s) distinct profiles (the entire sequences (P_k)) of such sources with P_2<=Y. The direct outputs H at **positive wrapper depth** number O_s(Y^s) up to Y as well. Hence for some s<1 the union of the direct branch p and any prior fixed positive-P₂-dominating normalized 7p readers, including the growing opposite-sign hierarchy, still excludes a density-one fraction of the prime targets p. This does not include H from the unwrapped seed bank, or unrestricted branching source construction.
+
+1. **Seed and removal of spurious order.** Under ordinal sum every P_k multiplies: for each of the k labels the component portions concatenate in their forced order. An active one-apex word of width m, after trimming the left zeros and right ones, has P₂>=2(3^(m−2)+1) from its extreme inversion (see the earlier apex profile proof), and there are at most 2^(m−2) such words. All trimmed vertices give singleton factors P_k=k. Hence seed profiles are indexed surjectively by multisets of active words and total singleton padding. The sum of individual active weights P₂^(-s) converges for s>log_3 2; so does the Euler product over multisets, and the singleton geometric factor. It follows that at most O_s(Y^s) distinct seeds are possible with P₂<=Y. This weights generator labels rather than distinct P₂ values, so it bounds entire profiles, not just two coordinates.
+
+2. **Each wrapper needs only an unordered pair.** Every path cover of a uniform substitution may be classified by its quotient word in each slot, replacing each maximal block run by its block label. A block used r times contributes precisely its ordered nonempty r-path-cover count; this is computable from its full P_k sequence by binomial inversion. Thus full profile equality can be substituted recursively. Also reversal of every path gives P_k(T)=P_k(T*) for each k. The converse of C3[X,TT_a,TT_b], after swapping the two transitive labels, gives C3[X*,TT_b,TT_a] up to isomorphism. The two reader sizes can therefore be ordered a<=b without losing any profile.
+
+3. **Cost at every layer.** Deleting the two external transitive blocks leaves X. Adding a new vertex into either of the two labelled paths can always be done (including into an empty slot): one of the boundaries works, or there is an adjacent forward transition for insertion. Each step thus gives at least two choices, injectively recovered by deletion and the new vertex's slot. It follows that the new P₂>=2^(a+b) P₂(X). The weighted alphabet sum for a<=b is
+
+       Q(z)=sum_{1<=a<=b} z^(a+b)=z²/[(1−z²)(1−z)],    z=2^(−s).
+
+   It is 2/3 at s=1. Summing all depths therefore multiplies the seed weighted bound by no more than 1/(1-Q(z)) for s>s_*. This proves the full profile bound.
+
+4. **The outermost wrapper gives an actual direct output bound.** In the directed triangle, every subset of its three labels is an interval in some cyclic order: the cases of size zero, one, two and three are immediate. There is consequently a spanning quotient word in which each chosen label occurs twice and all other labels once, by extending a cycle traversal by the chosen interval. Each label can use one or two consecutive runs, contributing H or R=P₂−2H, respectively. This gives at least the product of P₂−H over the three blocks. Since P₂>=2H, the first factor is at least P₂(X)/2 and the transitive factors are respectively 2^a−1>=2^(a−1) and 2^b−1>=2^(b−1). Therefore the direct count H>=2^(a+b)P₂(X)/8, and the preceding same weighted syntax count bounds all direct target values.
+
+5. **Disjunction.** A fixed normalized external read q=a₀P₂+b₀H with a₀>0 and a₀+min(b₀,0)>0 satisfies q>=cP₂, c>0. The two branch families from the earlier opposite-sign bank both have q>=4u_j P₂, where u_j=(8^j−1)/7>=8^(j−1), so summing over every external level j preserves O_s(Y^s). For N in the union of p direct and such normalized 7p reads, prime or not, this is a bound on absolute actual attained values rather than residues. The prime number theorem implies the missed proportion tends to one. The argument does not assert that any of those missed primes lies outside the actual tournament spectrum.
+
+**Catalan analogy and limit.** The archived `catalan_elliptic_20260921_catalan.md` keeps the ordered carry B against the raw exponential gap Delta; in particular an integral output need not have unit raw gap. Here the sequence of quotient wrappers is retained, and the counting argument bounds even the union of all actual output profiles rather than rejecting on a scalar exponential clock. The exact local reduction is only the swap {a,b} justified by the full slot profile; general reordering of wrapper layers would need a new proof.
