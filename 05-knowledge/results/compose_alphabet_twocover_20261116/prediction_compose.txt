@@ -1,0 +1,39 @@
+Pre-registered predictions, klein-2026-11-16-compose, written 2026-11-16 before compose.py runs.  The one-port alphabet
+(one_port_neutral_continuations_20261117): at a root r with g = H(T - r), e = e_r (paths ending at r), B = B_r (the root
+response = E + O, the two-slot covers (path from r, Hamiltonian path of the rest)), E = (B - e)/2; S = append a sink,
+N = append a vertex beating only r; S keeps (H, g) and sets (E, O) to (B, B); N sends H to H + 2E = H + B - e and keeps
+g, B.  Profile levels: L1 = (H, g), L2 = (H, g, B), L3 = (H, g, B, e).  A nontrivial balanced flip (THM-5268) keeps H.
+
+C-1 (flip-generated stored choices)  Over the 4,378 nontrivial balanced flips of orders <= 8 and the roots r not on the
+     flipped arc, among the roots with Delta g = 0 and Delta B = 0 at least 30 % have Delta e != 0 (same L2, different L3:
+     a choice the alphabet reads only through N); at the two endpoints of the flipped arc Delta B is never 0.
+C-2 (permanent pairs)  Kind K1: two rooted tournaments of orders <= 8 with the same (g, e, B) and counts H, H + 2 (a
+     permanent +2 pair under every S/N word, the concurrent packet's rooted pairs).  Kind K2: the same (H, g, B) and
+     end-counts e, e + 2 (a permanent +2 pair after one N).  K1 covers at least 30 % of the even centres in [4, 1000],
+     K2 at least 30 %, and their union at least 60 %.
+C-5 (flexible cores feed the alphabet)  The number of distinct L3 root profiles (g, e, B) of the fibre F_h (orders <= 8)
+     has Spearman correlation > 0.5 with the number of nontrivial neutral edges of F_h over odd h <= 125.
+C-6 (self-application)  Iterating N at a fixed root, the counts obey h_k = h_{k-1} + h_{k-2} + h_{k-3} from the third
+     step (THM-4865) for every rooted class of orders <= 6: 0 failures (a check).
+
+Second batch (written after reading two_cover_feedback_20261117, which freezes R = P_B(2) over a bank of dyadic tiles;
+before twocover.py runs).
+
+C-3 (two-cover fibres over all classes <= 8)  Over the 7,412 classes of orders 1-8, the number of distinct two-cover
+     counts P_D(2) is less than half the number of classes; at least 30 % of the P values are shared by classes of
+     different Hamiltonian count (frozen cover, varying count); among the (h, P) collisions (same h and P, different
+     classes), the three-cover count P_D(3) separates at least 50 % of the collision classes.
+C-4 (basic structures)  P(2) of the 3-cycle, the strong order-4 tournament and RT_5 are 12, 32, 120, and the Paley
+     tournament P_7 has P(2) between 1500 and 2500.
+
+Third batch (written after compose.py and twocover.py: C-1 "30 %" refuted (6 of 1046, all with Delta e = ±2), endpoint
+clause confirmed; C-2 K1 confirmed (201 of 499), K2 and union refuted (95, 250); C-3 first two clauses confirmed, P(3)
+separation refuted (1 of 1816: the concurrent pair (345, 5640)); C-4 confirmed (P_7: 2016); C-5 confirmed (0.673);
+C-6 confirmed (0 failures)).  Written before packing.py, covers9.c and collisions9.py run.
+
+C-7 (the packing polynomial)  With G_T(x, y) = sum over spanning packings of T by directed odd cycles (length >= 3) and
+     singletons of x^(#cycles) y^(#singletons) (THM-002 gives h = G(2, 1)), the q-slot cover count is P_q(T) = G_T(2q, q)
+     for q = 1, 2, 3 on every class of orders 3-7 (0 failures), and the signed two-cover sum over W of (-1)^|W| h(W) h(W^c)
+     is 0 for every class (0 failures).  Hence at order 8 the (h, P(2)) collisions can differ in P(3) only by multiples
+     of 360: the concurrent pair differs by 720.
+C-8 (order 9)  Among the (h, P(2)) collision groups of the 191,536 classes of order 9, between 1 and 100 are split by P(3).

@@ -1,0 +1,4 @@
+(C-3) classes 7412; distinct P(2) values 978 (0.132 of the classes); P values shared by classes of different h: 602 (0.616); (h, P(2)) collisions: 1816 classes-of-pairs, separated by P(3): 1 (0.001)
+    examples of frozen-cover fibres (P(2): counts h): {}
+    dyadic P(2) values and their h-fibres: {2: [1], 4: [1], 8: [1], 16: [1], 32: [1, 5], 64: [1, 5], 128: [1, 5], 256: [1, 5, 19], 512: [5, 19], 1024: [19, 25], 4096: [217, 223], 8192: [599]}
+(C-4) basic structures (h, P(2), P(3)): {'C_3': (3, 12, 33), 'strong4': (5, 32, 117), 'RT_5': (15, 120, 525), 'P_7': (189, 2016, 12159), 'M_4': (1, 16, 81), 'M_5': (1, 32, 243)}

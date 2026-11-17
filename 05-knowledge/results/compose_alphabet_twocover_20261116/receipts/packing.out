@@ -1,0 +1,4 @@
+(C-7) classes of orders 3-7: 530; P_q = G(2q, q) failures: 0; signed two-cover sum nonzero: 0
+      C_3: packing polynomial {(0, 3): 1, (1, 0): 1}
+      strong4: packing polynomial {(0, 4): 1, (1, 1): 2}
+      RT_5: packing polynomial {(0, 5): 1, (1, 2): 5, (1, 0): 2}
