@@ -5854,6 +5854,160 @@ minimum over orders ≤ 9 is exact (`w60_sigma9.c`):
 
 Chan–Pak remains OPEN.
 
+## Wave 61: the near-sink two-reading cone, the blue path from the transitive class, and the internal factor 3
+
+Session mac-mini-2026-11-16-cone. Owner prompt:
+- the path from the transitive class along its single blue merged line to another self-converse node, and how it spreads
+  at each size; planar embeddings as shadows;
+- Catalan numbers and the 3, 4, 5 triple;
+- a set of infinite families and sporadic witnesses filling the spectrum except {7, 21};
+- the P₁/P₂/P₃ ×7 pair against p²qr in F = U + S (10 = 7 + 2 + 1), and p, p³ (odd powers);
+- the two-reading cone, the smoothness rung, and a unit mechanism whose factor 3 is internal: the charged order-7 and
+  order-8 tiles with counts prime to 3 (3,088 and 13,032 mask pairs).
+
+Scripts `scripts/w61_*` (with `w59_dump8.c` → `w59_reps8.txt`, `w57_classes.py` → `w57_reps.txt`); output `scripts/w61_receipts.txt`.
+
+### §1. The two-reading cone (formula PROVED; coverage FINITE-EXACT)
+
+Mark a vertex X that beats exactly one vertex y of the rest Q′ (a near-sink: the one-parent newborn of wave 46). Every
+non-final visit to X must be followed by y, which can be used once. So a walk visits X at most twice, and the third
+reading vanishes.
+
+Write the rooted register of (Q′, y):
+- β = Σ over paths P from y of H(Q′ − V(P)) (HYP-9453's B);
+- H = H(Q′);
+- e_y = the number of Hamiltonian paths of Q′ ending at y;
+- g = H(Q′ − y).
+
+Then (`w61_nearsink_check.py`, 0 failures in 300 random cases)
+
+    a₁ = β + H − e_y,     a₂ = β − g,     a_r = 0 for r ≥ 3.
+
+So blowing X up into the interval or Fano circulant gives a Z7-symmetric tournament with
+
+    o_I = 25a₁ + 234a₂ = 259β + 25H − 25e_y − 234g,     o_P = o_I + 2a₁
+
+path orbits. This is a linear image of the near-join register. Every prime value is a Z7-symmetric realizer of 7p.
+
+**Coverage (FINITE-EXACT, `w61_cone.c`, one-parent bases Q′).** The cone fills a band that moves up and thickens as
+the bases grow:
+
+| bases up to | best dyadic window | odd numbers hit there |
+| --- | --- | --- |
+| 8 vertices | [32,768, 65,536) | 19.7% |
+| 9 vertices | [65,536, 131,072) | 38.5% |
+| 10 vertices | [262,144, 524,288) | 70.8% |
+| 11 vertices | [524,288, 1,048,576) | 96.7% |
+
+- With 11-vertex bases, 1,837,970 of the 2,000,000 odd numbers below 4·10^6 are orbit counts, including 254,891 of the
+  283,145 primes (90%). For those p, the atom 7p has an explicit Z7-symmetric realizer of order |Q′| + 7.
+- The low end stays thin (2–12% below 16,384), because small orbit counts need small bases.
+- P121, every large odd number in the cone, is not proved, but the band's coverage is clearly heading to 100%.
+
+### §2. The smoothness rung (FINITE-EXACT, with Busch's bound)
+
+Wave 60 left four atoms undecided: 563, 587, 619 and 631. They have no 6-smooth realizer through order 10, but by
+Busch's bound their strong realizers can reach order 12 (13 for 631).
+- **The generator.** `w61_rung.c` ports the profile recursion to C: joins multiply χ, and substitution into each prime
+  quotient of order ≤ 6 uses THM-3121's walk kernel. Blocks only need H ≤ 210, because H(Q[S]) ≥ 3·ΠH(S_i) and
+  631/3 < 211; strong counts ≤ 700 are recorded. It reproduces the order-10 Python result exactly in 3 seconds and
+  reaches order 13 in 2 minutes.
+- **Result.** Through order 13, 6-smooth tournaments realize every odd number up to 700 except **7, 21, 167, 563, 587,
+  619 and 631**.
+- **Consequence.** 563, 587, 619 and 631 need a prime quotient of order 7 at every order, and have one at order ≤ 9
+  (wave 60). So their exact smoothness is 7, like 167, and P122 holds for all four.
+
+So the exact smoothness of every atom up to 631 is known. Only 167, 563, 587, 619 and 631 need a 7-quotient; every
+other atom is 6-smooth. The ladder of first atoms is 3, 13, 31, 167. Whether some atom needs a quotient of order 8 (P118
+for k = 7) is open.
+
+### §3. The internal factor 3 (FINITE-EXACT; fusion PROVED by the product rule)
+
+Recomputing the signed-tile census from the definitions of `signed_ordinal_unit_centers_20261117` (four endpoint vectors,
+2s = I_xᵀ(M − Mᵀ)I_a) reproduces the owner's numbers exactly (`w61_tiles.c`):
+
+| order | matched charged mask pairs, 3 ∤ H | classes | with 3 \| H | unit charges (3 \| H / 3 ∤ H) | largest \|s\| |
+| --- | --- | --- | --- | --- | --- |
+| 7 | **3,088** | 8 | 20,244 (69 classes) | 1,944 / 12 | 66 |
+| 8 | **13,032** | 26 | 194,560 (356 classes) | 4,992 / 56 | 138 |
+
+- **Unit tiles with 3 ∤ H exist,** e.g. an order-7 tile with H = 89 and s = ±1. None of them contains a C3 module, so the
+  3 is never literally inside them.
+- **The 3 comes in through Bézout.** A charged tile D with 3s − h = ±1 pairs with the triangle tile (3, −1) to give a
+  unit. Through order 8 the only such class is the H = 161, s = ±54 tile (8 mask pairs), the concurrent 3·54 − 161 = 1.
+- **Fusion makes the factor internal.** By the product rule, C3 ⇒ D is a single endpoint-matched tile with charge
+  3s − h = ±1 and count 3h. So C3 ⇒ D₁₆₁ (count 483) is one unit tile with the factor 3 inside it, and through order 8
+  it is the only way to get one from these candidates.
+
+### §4. The blue path from the transitive class (FINITE-EXACT, `w61_blue.c`)
+
+On the tiling cube (THM-4731, THM-4733), a line {t, κt} is blue iff the mirror σ fixes it; for n ≥ 4 that means σt = t.
+- **One line, then Tribonacci.** The transitive class has exactly one tiling, so exactly one line. Its partner T*_n (all
+  tiles reversed) has H = 3, 5, 9, 17, 31, 57, 105 for n = 3–9, the Tribonacci numbers (THM-4731 (6)).
+- **Spreading out.** From there the blue graph reaches every self-converse class: 2, 2, 8, 12, 88, 176 and 2,752 for
+  n = 3–9 (A002785). It does so in layers:
+
+  | n | layers by blue distance from the transitive class | depth |
+  | --- | --- | --- |
+  | 5 | 1, 1, 2, 3, 1 | 4 |
+  | 6 | 1, 1, 2, 5, 2, 1 | 5 |
+  | 7 | 1, 1, 3, 8, 9, 11, 15, 13, 9, 9, 7, 2 | 11 |
+  | 8 | 1, 1, 4, 9, 6, 10, 23, 27, 26, 23, 14, 12, 4, 8, 6, 2 | 15 |
+  | 9 | 1, 1, 3, 16, 32, 57, 92, 124, 171, 202, 216, 261, 274, 267, 261, 213, 172, 132, 115, 88, 37, 15, 2 | 22 |
+
+  The second layer holds 11 and 13 at n = 5; 17 and 33 at n = 6; 31, 85, 45 at n = 7; 105, 225, 65, 173 at n = 8; and
+  613, 295, 91 at n = 9.
+- Concurrent: `metagraph_tail_tomography_20261117` and `metagraph_two_core_20261117` study metalines with framed
+  cores, H = ad + be − cf, including asymmetric sevenfold families.
+- **Shadows (ANALOGY).** A tiling is a graph on the ordered set [n − 1], the shadow a tournament casts along one
+  Hamiltonian path. A class casts H/|Aut| shadows (THM-4741). The transitive class casts only the empty shadow; its blue
+  partner casts the complete one, and the blue lines join mirror-symmetric shadows to their complements.
+
+### §5. One infinite family and five sporadic witnesses fill the spectrum to 2,000,000 (FINITE-EXACT)
+
+The near-join T′ = T₀ → TT_k → z, with z beating only t₀, has H = h + 2^k·B(T₀, t₀) (HYP-9453). Run it over every rooted
+one-parent base T₀ (`w61_nearjoin.c`):
+- with bases of at most 10 vertices it misses only 1, 7, 11, 13, 21, 47 and 67 below 246,351;
+- with bases of at most 11 vertices it misses **exactly 1, 7, 11, 13, 21, 47, 67 below 2,000,000** (the whole run).
+
+So **one explicit infinite family (one-parent base, root, chain length) plus the five sporadic witnesses 1 (TT1),
+11 (C3[•, TT2, TT2]), 13 (a prime 5-tournament), 47 ((2² − 1)(2⁴ − 1) + 2, one centre) and 67 (the one-parent tournament with parents 0 0 1 0 1 4, a wave-55 seed) fills every odd number
+up to 2,000,000 except 7 and 21.** That is 90 times HYP-9453's previous range of 22,227.
+
+The other complete descriptions on file:
+
+| family | sporadic witnesses | complete except 7, 21 up to |
+| --- | --- | --- |
+| near-joins over one-parent bases (this wave) | 1, 11, 13, 47, 67 | 2,000,000 |
+| two-hub tournaments (transitive + 2 vertices) | none | 22,156,805 (wave 5) |
+| strong-tailed grammar from 16 one-parent seeds | the 16 seeds | 400,000 (wave 58) |
+
+For the 7p atoms there is also the Z7 near-sink cone of §1. None of these is proved complete.
+
+### §6. Numerology (flagged)
+
+- **F = U + S.** The balanced set is {p, p³, p²qr}; for p²qr, F = 10 = 7 + 3.
+  - Alone, the Fano block has 27 = 3³ path orbits: an odd prime power, balanced.
+  - The interval block has 25 = 5²: an even power, one below balance (F = U + S − 1).
+  - The twins thus split into a balanced odd power and an unbalanced even power over the same 7. Their counts are
+    189 = 3³·7 and 175 = 5²·7.
+- **Catalan and 3, 4, 5.** The blue graph is a single edge at n = 3 and 4 and first branches at n = 5. 3² + 4² = 5² and
+  9 = 3² is the n = 5 partner count. No mechanism is claimed.
+
+### Ledger
+
+| claim | status |
+| --- | --- |
+| near-sink marker: a₁ = β + H − e_y, a₂ = β − g, no third reading; Z7 orbit counts 25a₁ + 234a₂ (+2a₁) | PROVED (checked) |
+| near-sink cone: 96.7% of odd numbers in [2^19, 2^20) and 90% of primes below 4·10^6 are Z7 orbit counts (bases ≤ 11 vertices) | FINITE-EXACT |
+| 563, 587, 619, 631 have exact smoothness 7 (no 6-smooth realizer at any order); every other atom ≤ 631 except 167 is 6-smooth | FINITE-EXACT (Busch's bound and complete 6-smooth generation to order 13) |
+| near-joins over one-parent bases ≤ 11 vertices + sporadic 1, 11, 13, 47, 67 fill every odd number ≤ 2,000,000 except 7, 21 | FINITE-EXACT |
+| tile census 3,088 / 13,032 reproduced; Bézout-3 companions: only the 161-tile; fused unit tile C3 ⇒ D₁₆₁ | FINITE-EXACT; fusion PROVED |
+| blue graph from the transitive class: Tribonacci partner, reaches all self-converse classes, layer profiles n ≤ 9 | FINITE-EXACT |
+| F = U + S reading of the twins; Catalan, 3-4-5 | NUMEROLOGY |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
@@ -5902,3 +6056,10 @@ Chan–Pak remains OPEN.
   generation at orders 11 and 12 (wave 60 §5).
 - **P123 (module ladders).** Profile-twin ladders, with one cover profile and H in steps of 2, grow without bound in
   length as the order grows. Each gives arithmetic progressions of counts with step 2·H(Q) (wave 60 §2).
+- **P124 (cone saturation).** With one-parent bases of up to 12 vertices, the near-sink Z7 cone covers at least 99% of
+  the odd numbers in its best dyadic window. Eventually it covers every large odd number, which is P121 for this one
+  explicit family (wave 61 §1).
+- **P125 (near-joins at the next cap).** Near-joins over one-parent bases of up to 12 vertices reach every odd number up
+  to 8·10^6 except 1, 7, 11, 13, 21, 47 and 67 (wave 61 §5).
+- **P126 (eighth rung).** Some atom has exact smoothness 8. Search the atoms whose realizers through order 10 all need a
+  prime quotient of order ≥ 8, then decide them with the C generator extended to the prime 7-quotients (wave 61 §2).

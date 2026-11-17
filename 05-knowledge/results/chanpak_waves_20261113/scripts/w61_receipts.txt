@@ -1,0 +1,108 @@
+== A. Near-sink marker: two-reading formula check (w61_nearsink_check.py) ==
+near-sink formula checks: 300 random rooted tournaments (order <= 6), failures: 0
+
+== B. Two-reading cone over one-parent bases (w61_cone NMAX LIMIT) ==
+$ w61_cone 10 4000000
+one-parent bases to 10 vertices: odd orbit counts <= 4000000 hit 729391 of 2000000; primes hit 88973 of 283145; largest odd miss 3999999
+all odd numbers in (1000000, 1000000] are orbit counts
+  window [16,32): odd hit 2 of 8 (25.0%)
+  window [32,64): odd hit 0 of 16 (0.0%)
+  window [64,128): odd hit 0 of 32 (0.0%)
+  window [128,256): odd hit 0 of 64 (0.0%)
+  window [256,512): odd hit 2 of 128 (1.6%)
+  window [512,1024): odd hit 6 of 256 (2.3%)
+  window [1024,2048): odd hit 13 of 512 (2.5%)
+  window [2048,4096): odd hit 38 of 1024 (3.7%)
+  window [4096,8192): odd hit 130 of 2048 (6.3%)
+  window [8192,16384): odd hit 510 of 4096 (12.5%)
+  window [16384,32768): odd hit 1761 of 8192 (21.5%)
+  window [32768,65536): odd hit 6010 of 16384 (36.7%)
+  window [65536,131072): odd hit 17401 of 32768 (53.1%)
+  window [131072,262144): odd hit 43919 of 65536 (67.0%)
+  window [262144,524288): odd hit 92847 of 131072 (70.8%)
+  window [524288,1048576): odd hit 166868 of 262144 (63.7%)
+  window [1048576,2097152): odd hit 229786 of 524288 (43.8%)
+  window [2097152,4000000): odd hit 170098 of 951424 (17.9%)
+first misses above 10000: 10001 10003 10005 10007 10009 10011 10013 10015 10017 10019 10021 10023 10025 10027 10029
+
+== C. Endpoint-matched charged tiles at orders 7 and 8 (w61_tiles) ==
+  Bezout-3 companion n=8 H=161 s=54 (3s-H=1) rows 52 17 2 135 12 158 63 87 Ix=52 Ia=134
+  Bezout-3 companion n=8 H=161 s=54 (3s-H=1) rows 52 17 2 135 12 158 63 87 Ix=61 Ia=143
+  Bezout-3 companion n=8 H=161 s=-54 (3s-H=-323) rows 52 17 2 135 12 158 63 87 Ix=112 Ia=194
+  Bezout-3 companion n=8 H=161 s=-54 (3s-H=-323) rows 52 17 2 135 12 158 63 87 Ix=121 Ia=203
+  Bezout-3 companion n=8 H=161 s=-54 (3s-H=-323) rows 52 17 2 135 12 158 63 87 Ix=134 Ia=52
+  Bezout-3 companion n=8 H=161 s=-54 (3s-H=-323) rows 52 17 2 135 12 158 63 87 Ix=143 Ia=61
+  Bezout-3 companion n=8 H=161 s=54 (3s-H=1) rows 52 17 2 135 12 158 63 87 Ix=194 Ia=112
+  Bezout-3 companion n=8 H=161 s=54 (3s-H=1) rows 52 17 2 135 12 158 63 87 Ix=203 Ia=121
+order 7: matched charged mask pairs with 3 | H: 20244 (classes 69), with 3 not dividing H: 3088 (classes 8); unit charges: 1944 / 12; max |s| 66
+order 8: matched charged mask pairs with 3 | H: 194560 (classes 356), with 3 not dividing H: 13032 (classes 26); unit charges: 4992 / 56; max |s| 138
+order 7, 3 not dividing H: Bezout-3 pairs (3s - h = +-1 up to sign) 0; unit pairs with an internal C3 module 0, without 12
+order 8, 3 not dividing H: Bezout-3 pairs (3s - h = +-1 up to sign) 8; unit pairs with an internal C3 module 0, without 56
+
+== D. Blue lines from the transitive class (w61_blue 9) ==
+n=3: sigma-fixed tilings 2; self-converse classes on blue lines 2, reached from the transitive class 2; layers: 1 1
+   H at distance 1: 3   | distance 2:
+   blue lines at the transitive class (tiling pairs): 2
+n=4: sigma-fixed tilings 4; self-converse classes on blue lines 2, reached from the transitive class 2; layers: 1 1
+   H at distance 1: 5   | distance 2:
+   blue lines at the transitive class (tiling pairs): 2
+n=5: sigma-fixed tilings 16; self-converse classes on blue lines 8, reached from the transitive class 8; layers: 1 1 2 3 1
+   H at distance 1: 9   | distance 2: 11 13
+   blue lines at the transitive class (tiling pairs): 2
+n=6: sigma-fixed tilings 64; self-converse classes on blue lines 12, reached from the transitive class 12; layers: 1 1 2 5 2 1
+   H at distance 1: 17   | distance 2: 17 33
+   blue lines at the transitive class (tiling pairs): 2
+n=7: sigma-fixed tilings 512; self-converse classes on blue lines 88, reached from the transitive class 88; layers: 1 1 3 8 9 11 15 13 9 9 7 2
+   H at distance 1: 31   | distance 2: 31 85 45
+   blue lines at the transitive class (tiling pairs): 2
+n=8: sigma-fixed tilings 4096; self-converse classes on blue lines 176, reached from the transitive class 176; layers: 1 1 4 9 6 10 23 27 26 23 14 12 4 8 6 2
+   H at distance 1: 57   | distance 2: 105 225 65 173
+   blue lines at the transitive class (tiling pairs): 2
+n=9: sigma-fixed tilings 65536; self-converse classes on blue lines 2752, reached from the transitive class 2752; layers: 1 1 3 16 32 57 92 124 171 202 216 261 274 267 261 213 172 132 115 88 37 15 2
+   H at distance 1: 105   | distance 2: 613 295 91
+   blue lines at the transitive class (tiling pairs): 2
+
+$ w61_cone 11 4000000   (background run)
+one-parent bases to 11 vertices: odd orbit counts <= 4000000 hit 1837970 of 2000000; primes hit 254891 of 283145; largest odd miss 3999991
+all odd numbers in (1000000, 1000000] are orbit counts
+  window [16,32): odd hit 2 of 8 (25.0%)
+  window [32,64): odd hit 0 of 16 (0.0%)
+  window [64,128): odd hit 0 of 32 (0.0%)
+  window [128,256): odd hit 0 of 64 (0.0%)
+  window [256,512): odd hit 2 of 128 (1.6%)
+  window [512,1024): odd hit 6 of 256 (2.3%)
+  window [1024,2048): odd hit 13 of 512 (2.5%)
+  window [2048,4096): odd hit 38 of 1024 (3.7%)
+  window [4096,8192): odd hit 130 of 2048 (6.3%)
+  window [8192,16384): odd hit 510 of 4096 (12.5%)
+  window [16384,32768): odd hit 1761 of 8192 (21.5%)
+  window [32768,65536): odd hit 6045 of 16384 (36.9%)
+  window [65536,131072): odd hit 18714 of 32768 (57.1%)
+  window [131072,262144): odd hit 52542 of 65536 (80.2%)
+  window [262144,524288): odd hit 121333 of 131072 (92.6%)
+  window [524288,1048576): odd hit 253492 of 262144 (96.7%)
+  window [1048576,2097152): odd hit 506643 of 524288 (96.6%)
+  window [2097152,4000000): odd hit 876739 of 951424 (92.2%)
+first misses above 10000: 10001 10003 10005 10007 10009 10011 10013 10015 10017 10019 10021 10023 10025 10027 10029
+
+== E. Near-joins h + 2^k B over one-parent bases (w61_nearjoin NMAX LIMIT) ==
+$ w61_nearjoin 10 1000000
+near-joins over one-parent bases to 10 vertices: odd N <= 1000000 not reached: 1 7 11 13 21 47 67 246351 274067 292327 303811 310067 315335 323125 328171 329135 329237 330811 331683 337519 338311 338449 338615 339719 340799 341861 342291 342375 344147 347569 352179 353215 354653 357469 361675 362891 365531 368091 369371 369627  (total 11100)
+$ w61_nearjoin 11 2000000   (background run)
+near-joins over one-parent bases to 11 vertices: odd N <= 2000000 not reached: 1 7 11 13 21 47 67  (total 7)
+
+== F. The smoothness rung: all 6-smooth tournaments to order 13 (w61_rung 13 700 210 6) ==
+prime quotients loaded: 19
+order 2: stored 1 (strong 0); recorded odd counts <= 700: 1
+order 3: stored 2 (strong 1); recorded odd counts <= 700: 2
+order 4: stored 3 (strong 1); recorded odd counts <= 700: 3
+order 5: stored 8 (strong 5); recorded odd counts <= 700: 7
+order 6: stored 24 (strong 16); recorded odd counts <= 700: 19
+order 7: stored 102 (strong 77); recorded odd counts <= 700: 62
+order 8: stored 223 (strong 116); recorded odd counts <= 700: 223
+order 9: stored 305 (strong 61); recorded odd counts <= 700: 308
+order 10: stored 366 (strong 7); recorded odd counts <= 700: 334
+order 11: stored 396 (strong 0); recorded odd counts <= 700: 340
+order 12: stored 405 (strong 0); recorded odd counts <= 700: 342
+order 13: stored 406 (strong 0); recorded odd counts <= 700: 343
+odd counts <= 700 NOT realized: 7 21 167 563 587 619 631
