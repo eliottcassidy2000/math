@@ -4,7 +4,7 @@ A prescribed prime cannot in general be placed by choosing contacts on a deletio
 
 ## Two tests on the actual contacts
 
-Let R be a deletion tournament, g=H(R), and pick Q⊆V(R). Add a vertex q beating precisely Q. Now attach a nonempty module B by R→B→q. Write (P,h)=(P₂(B),H(B)). The [two-run law](PLUS_RAY.md#an-arbitrary-module-plus-reader) gives H(output)=WP+Kh, where W is the weighted starting cover count excluding the singleton q, and K is the normalized constant coordinate.
+Let R be a deletion tournament, g=H(R), and pick Q⊆V(R). Add a vertex q beating precisely Q. Now attach a nonempty module B by R→B→q. Write (P,h)=(P₂(B),H(B)). The [two-run law](../chanpak_changed_contacts_20261117/PLUS_RAY.md#an-arbitrary-module-plus-reader) gives H(output)=WP+Kh, where W is the weighted starting cover count excluding the singleton q, and K is the normalized constant coordinate.
 
 They can be read directly from R without assembling the output. For every ordered two-slot cover (X,Z) of R, allow X empty but require Z nonempty. Put
 
