@@ -1,0 +1,10 @@
+window [524288, 2097152): odd numbers 786432, miss rate 0.0447
+   mod 64: relative miss rate by class, top [(29, np.float64(1.1224716224289495)), (19, np.float64(1.079684788483969)), (5, np.float64(1.0623879832721685)), (11, np.float64(1.0478222525674945)), (45, np.float64(1.0469118943984523)), (55, np.float64(1.0414497453841995))]; class 7: 1.01, class 21: 0.99; rank of 7: 14, rank of 21: 16 of 32
+   mod 8: relative miss rate by class, top [(5, np.float64(1.0119768996614606)), (3, np.float64(1.0051492133936446)), (7, np.float64(0.999800859150522)), (1, np.float64(0.9830730277943728))]; 7 mod 8: 1.00 vs 1 mod 8: 0.98
+   mod 3: relative miss rate by class, top [(1, np.float64(1.0382350430997696)), (2, np.float64(1.011351028420244)), (0, np.float64(0.9504139284799863))]
+   mod 7: relative miss rate by class, top [(3, np.float64(1.0096389715639247)), (2, np.float64(1.0070591174357382)), (4, np.float64(1.0066608342174523)), (0, np.float64(1.001474238263309)), (1, np.float64(1.0008857275523075)), (6, np.float64(0.997500320196878))]
+window [2097152, 8388608): odd numbers 3145728, miss rate 0.4272
+   mod 64: relative miss rate by class, top [(43, np.float64(1.0284117927655936)), (29, np.float64(1.0248635744281214)), (11, np.float64(1.0235300158583334)), (35, np.float64(1.0140522245944814)), (19, np.float64(1.0102658707981185)), (41, np.float64(1.0102420572522295))]; class 7: 1.01, class 21: 1.00; rank of 7: 10, rank of 21: 22 of 32
+   mod 8: relative miss rate by class, top [(3, np.float64(1.0063366357264212)), (7, np.float64(1.003520683925038)), (5, np.float64(1.0004874335174172)), (1, np.float64(0.989655246831124))]; 7 mod 8: 1.00 vs 1 mod 8: 0.99
+   mod 3: relative miss rate by class, top [(1, np.float64(1.0084136234319339)), (2, np.float64(1.0048460565884267)), (0, np.float64(0.9867403199796395))]
+   mod 7: relative miss rate by class, top [(3, np.float64(1.0022467661819483)), (1, np.float64(1.001579987320981)), (4, np.float64(1.0012778531496052)), (2, np.float64(1.0001422454020197)), (0, np.float64(0.9991286727807603)), (5, np.float64(0.998659842850884))]

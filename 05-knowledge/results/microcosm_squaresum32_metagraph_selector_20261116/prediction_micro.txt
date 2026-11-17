@@ -1,0 +1,16 @@
+Pre-registered predictions, klein-2026-11-16-micro, written 2026-11-16 before the runs below.
+
+M-1 (microcosm)  The 32 odd numbers below 64 split as [1, 3, 5] | 7 | [9..19] | 21 | [23..63] with block sizes 3, 1, 6, 1, 21,
+     all triangular; their least orders n(h) are 1, 3, 4 for the first block, 5, 5, 5, 5, 6, 6 for the six, and between 6
+     and 8 for the twenty-one, with 63 last born at 8; the tripling chain 7·3^k is a count for every k >= 2 (63, 189, 567,
+     1701 all realised at orders <= 9).
+M-2 (periodic macrocosm)  In the window [2^19, 2^21) the near-join family from bases <= 9 misses odd numbers in the residue
+     classes 7 and 21 (mod 64) at least 1.5 times as often as the average odd class, and the classes 7 (mod 8) more often
+     than the classes 1 (mod 8).
+M-3 (order-10 reach)  Near-join values from all rooted classes of orders <= 10 realise every odd number <= X_10 except the
+     seven, with 3,000,000 <= X_10 < 2^25.
+M-4 (square-sum 32)  The square-sum graph on 1..n has Hamiltonian paths for every n in 25..34; it has no Hamiltonian cycle
+     for n <= 31 and between 1 and 3 Hamiltonian cycles at n = 32, and cycles at n = 33 and 34.
+M-5 (metagraph cover)  The 1,200 new counts of order 9 are covered by the quadratic-form images of fewer than 60 classes of
+     order 8 (greedy); the best single class covers at least 25 % of them; a class of count 661 is among the top five.
+M-6 (first creators suffice)  Every new count of order 9 is the value of the quadratic form of some first creator of order 8.

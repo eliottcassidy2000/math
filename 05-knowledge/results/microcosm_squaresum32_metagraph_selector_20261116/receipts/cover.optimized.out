@@ -1,0 +1,5 @@
+new counts at order 9: 1200
+best single class: index 1094, H = 393, covers 226 of 1200 new counts (0.188); top five (H, covered): [(393, 226), (393, 226), (465, 221), (321, 221), (465, 221)]
+(M-6) first creators of order 8: 5457; their images cover 1200 of 1200 new counts; missing: []
+(M-5) greedy cover of the 1200 new counts by order-8 images: 31 classes; first ten (index, H, newly covered): [(1094, 393, 226), (1625, 597, 180), (3205, 285, 164), (1735, 261, 119), (1441, 627, 102), (3667, 539, 78), (2261, 197, 72), (4388, 257, 47), (830, 589, 39), (542, 255, 31)]; uncovered: 0
+classes of maximal count 661: 6; their image sizes among new counts: [106, 114, 170, 170, 172, 172]; rank of the best of them: 4843

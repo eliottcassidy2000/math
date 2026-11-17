@@ -1,0 +1,21 @@
+n = 15: Hamiltonian paths 1
+n = 16: Hamiltonian paths 1
+n = 17: Hamiltonian paths 1
+n = 18: Hamiltonian paths 0
+n = 19: Hamiltonian paths 0
+n = 20: Hamiltonian paths 0
+n = 21: Hamiltonian paths 0
+n = 22: Hamiltonian paths 0
+n = 23: Hamiltonian paths 3
+n = 24: Hamiltonian paths 0
+n = 25: Hamiltonian paths 10
+n = 26: Hamiltonian paths 12
+n = 27: Hamiltonian paths 35
+n = 28: Hamiltonian paths 52, Hamiltonian cycles 0
+n = 29: Hamiltonian paths 19, Hamiltonian cycles 0
+n = 30: Hamiltonian paths 20, Hamiltonian cycles 0
+n = 31: Hamiltonian paths 349, Hamiltonian cycles 0
+n = 32: Hamiltonian paths 392, Hamiltonian cycles 1
+n = 33: Hamiltonian paths 669, Hamiltonian cycles 1
+n = 34: Hamiltonian paths 4041, Hamiltonian cycles 11
+./hamcyc  0.51s user 0.00s system 80% cpu 0.641 total
