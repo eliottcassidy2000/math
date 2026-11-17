@@ -1,0 +1,9 @@
+near square 2 29 31
+near square 3 89 91
+near square 6 4289 4291
+common coefficient 51 -13 -11 axis 1 quotients 1619 1621
+common coefficient 161 -35 -21 axis 7 quotients 179 181
+Farey point (8, 1, 3, 6) (1, 8) (5, 32) 1253 1255
+literal 20-vertex cyclic witness 1000000007 (1991, 67712) (707, 15880)
+literal 20-vertex cyclic witness 1000000009 (1889, 62576) (787, 17216)
+decimal module 11 100
