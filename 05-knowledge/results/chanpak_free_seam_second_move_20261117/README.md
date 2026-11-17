@@ -30,7 +30,9 @@ the realizable second moves.
    generic fine dial.** [Paired-digit moves](paired/PROOF.md) shift both
    counts by +512 or +522 at all common prefix heights. The entire
    same-width common-prefix mechanism has sharp minimum nonzero shift
-   512, so it cannot simply be iterated as an unrestricted Bezout dial.
+   512. More strongly, [two digit trades have a nonzero mixed
+   difference](paired/CURVATURE.md), so coprime steps do not make
+   an independent Bezout dial.
    The [middle-collar grammar](collars/PROOF.md) grows a different
    center without losing the signed switch. Its four-state radix-8
    recursion has an exact count of legal words, but a growing spacing
@@ -60,6 +62,7 @@ free-seam packet at its checked-in relative path:
     python3 arithmetic/check.py
     python3 phase/verify_phase.py
     python3 paired/verify.py
+    python3 paired/curvature_check.py
     python3 collars/collar.py
     python3 bank/replay.py
     python3 bank/steer.py
