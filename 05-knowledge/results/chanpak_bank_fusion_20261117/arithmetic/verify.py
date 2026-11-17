@@ -2,7 +2,8 @@
 from pathlib import Path
 import json,math,sys
 ROOT=Path(__file__).resolve().parents[2]
-sys.path.insert(0,str(ROOT/'joint_placement/arithmetic'))
+for name in ('joint_placement','chanpak_joint_placement_20261117'):
+ if (ROOT/name).is_dir():sys.path.insert(0,str(ROOT/name/'arithmetic'))
 from collisions import family,H
 CERT=json.loads(Path(__file__).with_name('PRIME_CERTIFICATE.json').read_text())
 def prime(p):
