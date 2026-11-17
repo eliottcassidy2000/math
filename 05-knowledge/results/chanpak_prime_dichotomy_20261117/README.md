@@ -13,6 +13,8 @@ It is not enough to prove that for every prime p, at least one of p and 7p is a 
 - [Apex and one spine tag classified at every order](APEX_PAIR.md): the only internal seed family is the known 11·2^k+5 ray.
 - [Physical Bézout repair](BEZOUT.md): changes of +776 and −778 preserve the surrounding interface and give an exact −2, with literal twin-prime outputs.
 
+- [A third-slot reader](THIRD_SLOT.md) and [literal replay](replay_third_slot.py): two marked spine vertices give a physical prime/sevenfold family that genuinely reads three cover coordinates.
+
 ## Why cross-axis obstruction is a strong-component question
 
 Ordinal composition multiplies counts. A prime count p, if realized, is carried by one strong component; the remaining components are singletons. The same holds for 7q with q≠3,7, since the component product cannot split off a factor 7. For q=7 the same argument applies to 49.
