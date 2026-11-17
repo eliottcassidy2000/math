@@ -6,6 +6,8 @@
 
 The ordered SCC word and its converse reversal are classical. The repository already explicitly proves their all-order converse-palindrome use in `05-knowledge/results/tournament_converse_context_20261011d.md`, §§2–3. Its ordered/Lyndon distinction is important: do not replace a sequence of SCC types by an unordered multiset. `metagraph_classification_20261021a/README.md` supplies another exact SCC enumeration, but for the distinct statistic H/|Aut|; its numerical classification is not imported for H. The current finite-core bound is `pubsub/publisher/PROOF.md`.
 
+**Additional recovered priority:** `birth-atlas-now/PROOF.md` and `birth_program/README.md` already state the minimum-over-strong-factorizations theorem and a stronger logarithmic finite-core bound using Busch. The recursions below make the multiplicity/converse bookkeeping explicit; `solve.py` implements the exact decision procedure with the Busch cap rather than the weaker elementary cap. No novelty is claimed for the earlier first-birth factorization or decidability statement.
+
 We count ordinary tournament isomorphism classes, not labelled tournaments, Hamilton-word orbits, or converse-merged classes. For h>1 a first creator has no singleton SCC: deleting such a singleton preserves H and lowers its order. Every nontrivial strong component has order at most its own H, by cutting a Hamilton cycle. The whole singleton-free core has order at most h. Hence any attained h>1 first appears by order h, and existence/nonexistence is decidable by finite enumeration through h.
 
 Use an *empty-core* convention at h=1: b(1)=0 and a(1)=1. For actual nonempty tournaments, the first appearance of H=1 is the singleton at order1; the convention is only an algebraic identity for factorizations.
