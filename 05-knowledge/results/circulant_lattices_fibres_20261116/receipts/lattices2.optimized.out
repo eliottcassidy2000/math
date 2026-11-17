@@ -1,0 +1,33 @@
+k = 2: band vector [4, -5, 1], constant prod((k+1)^2 - c^2) = 40
+   n = 5: fewer than 3 free coefficients, no delayed choice at level 3
+   n = 6: fewer than 3 free coefficients, no delayed choice at level 3
+   n = 7: M = [1, 3, 5]; band-basis lattice 120 Z; formula 120; brute force (|entries| <= 4): 0
+   n = 8: M = [2, 4, 6]; band-basis lattice 360 Z; formula 360; brute force (|entries| <= 4): 0
+   n = 9: M = [1, 3, 5, 7]; band-basis lattice 120 Z; formula 120; brute force (|entries| <= 4): 1200
+   n = 10: M = [2, 4, 6, 8]; band-basis lattice 360 Z; formula 360; brute force (|entries| <= 4): 3600
+   n = 11: M = [1, 3, 5, 7, 9]; band-basis lattice 120 Z; formula 120; brute force (|entries| <= 4): 120
+   n = 12: M = [2, 4, 6, 8, 10]; band-basis lattice 360 Z; formula 360; brute force (|entries| <= 4): 360
+   n = 13: M = [1, 3, 5, 7, 9, 11]; band-basis lattice 120 Z; formula 120; brute force (|entries| <= 4): 120
+   n = 14: M = [2, 4, 6, 8, 10, 12]; band-basis lattice 360 Z; formula 360; brute force (|entries| <= 4): 360
+k = 3: band vector [-36, 49, -14, 1], constant prod((k+1)^2 - c^2) = 1260
+   n = 5: fewer than 4 free coefficients, no delayed choice at level 4
+   n = 6: fewer than 4 free coefficients, no delayed choice at level 4
+   n = 7: fewer than 4 free coefficients, no delayed choice at level 4
+   n = 8: fewer than 4 free coefficients, no delayed choice at level 4
+   n = 9: M = [1, 3, 5, 7]; band-basis lattice 5040 Z; formula 5040; brute force (|entries| <= 4): 0
+   n = 10: M = [2, 4, 6, 8]; band-basis lattice 20160 Z; formula 20160; brute force (|entries| <= 4): 0
+   n = 11: M = [1, 3, 5, 7, 9]; band-basis lattice 5040 Z; formula 5040; brute force (|entries| <= 4): 0
+   n = 12: M = [2, 4, 6, 8, 10]; band-basis lattice 20160 Z; formula 20160; brute force (|entries| <= 4): 0
+   n = 13: M = [1, 3, 5, 7, 9, 11]; band-basis lattice 5040 Z; formula 5040; brute force (|entries| <= 4): 0
+   n = 14: M = [2, 4, 6, 8, 10, 12]; band-basis lattice 20160 Z; formula 20160; brute force (|entries| <= 4): 0
+k = 4: band vector [576, -820, 273, -30, 1], constant prod((k+1)^2 - c^2) = 72576
+   n = 5: fewer than 5 free coefficients, no delayed choice at level 5
+   n = 6: fewer than 5 free coefficients, no delayed choice at level 5
+   n = 7: fewer than 5 free coefficients, no delayed choice at level 5
+   n = 8: fewer than 5 free coefficients, no delayed choice at level 5
+   n = 9: fewer than 5 free coefficients, no delayed choice at level 5
+   n = 10: fewer than 5 free coefficients, no delayed choice at level 5
+   n = 11: M = [1, 3, 5, 7, 9]; band-basis lattice 362880 Z; formula 362880; brute force (|entries| <= 4): 0
+   n = 12: M = [2, 4, 6, 8, 10]; band-basis lattice 1814400 Z; formula 1814400; brute force (|entries| <= 4): 0
+   n = 13: M = [1, 3, 5, 7, 9, 11]; band-basis lattice 362880 Z; formula 362880; brute force (|entries| <= 4): 0
+   n = 14: M = [2, 4, 6, 8, 10, 12]; band-basis lattice 1814400 Z; formula 1814400; brute force (|entries| <= 4): 0

@@ -1,0 +1,10 @@
+n = 5: unknown coefficients m in [3, 1]; kernel dimension 0; Delta P_3 lattice = 0 Z
+n = 6: unknown coefficients m in [4, 2]; kernel dimension 0; Delta P_3 lattice = 0 Z
+n = 7: unknown coefficients m in [5, 3, 1]; kernel dimension 1; Delta P_3 lattice = 120 Z
+n = 8: unknown coefficients m in [6, 4, 2]; kernel dimension 1; Delta P_3 lattice = 360 Z
+n = 9: unknown coefficients m in [7, 5, 3, 1]; kernel dimension 2; Delta P_3 lattice = 120 Z
+n = 10: unknown coefficients m in [8, 6, 4, 2]; kernel dimension 2; Delta P_3 lattice = 360 Z
+n = 11: unknown coefficients m in [9, 7, 5, 3, 1]; kernel dimension 3; Delta P_3 lattice = 120 Z
+n = 12: unknown coefficients m in [10, 8, 6, 4, 2]; kernel dimension 3; Delta P_3 lattice = 360 Z
+n = 13: unknown coefficients m in [11, 9, 7, 5, 3, 1]; kernel dimension 4; Delta P_3 lattice = 120 Z
+n = 14: unknown coefficients m in [12, 10, 8, 6, 4, 2]; kernel dimension 4; Delta P_3 lattice = 360 Z

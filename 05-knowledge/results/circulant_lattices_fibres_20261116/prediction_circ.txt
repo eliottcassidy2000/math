@@ -1,0 +1,26 @@
+Pre-registered predictions, klein-2026-11-16-circ, written 2026-11-16 before circulant.py, lattices.py, fibres.py run.
+Notation: G_T(x, y) the odd-cycle packing polynomial, P_q = G_T(2q, q) (THM-5269), a_m the coefficient of q^m in P_q.
+
+H-1 (circulant congruence; a proof, the run is its check)  For every circulant tournament of prime order p in {3, 5, 7,
+     11, 13} (every connection set), p divides P_q for q = 1, 2, 3, and the coefficients satisfy a_m ≡ 0 (mod p) for
+     1 < m < p and a_1 ≡ -1 (mod p): G_T ≡ y^p + ((p-1)/2) x coefficientwise mod p (Burnside on the rotation).
+H-2 (delayed-choice lattices)  The lattice {Delta P_3 : equal (h, P_2) at order n} is g_n Z with g_n = 120 for odd n
+     and 360 for even n, for 7 <= n <= 14.
+H-3 (packing fibres)  The number of distinct packing polynomials among the 6,880 classes of order 8 (= distinct
+     (h, P_2, P_3) there, since three evaluations determine the three unknown coefficients) lies in [3000, 5000].
+H-4 (single orbit)  Among the circulant tournaments of orders 3-13, the number of rotation orbits of Hamiltonian paths
+     H/n is 1 only for C_3; the least count of a circulant tournament of order 11 is at least 5,000, and the Paley
+     tournament P_11 has count divisible by 11 and between 10^4 and 10^5.
+
+Second batch (written after reading packing_hadamard_flatness_20261117 §3-4, whose six-vertex pair shows that the
+diagonal P(q) = G(2q, q) does not determine the bivariate G; before lattices2.py and fibres2.py run).  Correction to
+H-3's parenthetical: three evaluations determine the diagonal polynomial P(q), not G; H-3 is read as "distinct diagonal
+polynomials at order 8 in [3000, 5000]".
+
+H-5 (diagonal collisions)  At order 8, the number of classes whose diagonal polynomial P(q) is shared with a class of
+     different bivariate G lies between 100 and 688 (10 % of the classes); at orders 5 and 6 there are such classes
+     (the concurrent pair is at order 6).
+H-6 (general delayed-choice lattices)  With m_0 = 1 for odd n and 2 for even n, the lattice of Delta P_{k+1} over pairs of
+     order n with equal P_1, ..., P_k is (k+1)^{m_0} · prod_{c=1}^{k} ((k+1)^2 - c^2) · Z whenever n - 2 - m_0 >= 2k:
+     120 / 360 for k = 2, 5040 / 20160 for k = 3, 362880 / 1814400 for k = 4 (odd / even n); a brute-force enumeration of
+     small kernel vectors for n <= 14 finds no smaller generator.

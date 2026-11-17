@@ -1,0 +1,16 @@
+p = 3: 2 connection sets, distinct counts [3]; orbit numbers H/p [1]; Paley (quadratic residues) count 3
+      h = 3: S = [1], (P_2, P_3) = (12, 33), coefficients a_m for m = [1]: [2]
+p = 5: 4 connection sets, distinct counts [15]; orbit numbers H/p [3]; Paley (quadratic residues) count None
+      h = 15: S = [1, 2], (P_2, P_3) = (120, 525), coefficients a_m for m = [3, 1]: [10, 4]
+p = 7: 8 connection sets, distinct counts [175, 189]; orbit numbers H/p [25, 27]; Paley (quadratic residues) count 189
+      h = 175: S = [1, 2, 3], (P_2, P_3) = (1988, 12117), coefficients a_m for m = [5, 3, 1]: [28, 112, 34]
+      h = 189: S = [1, 2, 4], (P_2, P_3) = (2016, 12159), coefficients a_m for m = [5, 3, 1]: [28, 112, 48]
+p = 11: 32 connection sets, distinct counts [92411, 93027, 93467, 95095]; orbit numbers H/p [8401, 8457, 8497, 8645]; Paley (quadratic residues) count 95095
+      h = 92411: S = [1, 2, 3, 5, 7], (P_2, P_3) = (1756348, 17191977), coefficients a_m for m = [9, 7, 5, 3, 1]: [110, 3168, 26642, 52492, 9998]
+      h = 93027: S = [1, 2, 3, 4, 5], (P_2, P_3) = (1761012, 17212833), coefficients a_m for m = [9, 7, 5, 3, 1]: [110, 3168, 26686, 52844, 10218]
+      h = 93467: S = [1, 2, 3, 4, 6], (P_2, P_3) = (1764532, 17227353), coefficients a_m for m = [9, 7, 5, 3, 1]: [110, 3168, 26708, 53174, 10306]
+p = 13: 64 connection sets, distinct counts [3669497, 3683797, 3703011, 3704857, 3707483, 3711175]; orbit numbers H/p [282269, 283369, 284847, 284989, 285191, 285475]; Paley (quadratic residues) count None
+      h = 3669497: S = [1, 2, 3, 5, 7, 9], (P_2, P_3) = (83984680, 982399275), coefficients a_m for m = [11, 9, 7, 5, 3, 1]: [182, 9828, 187798, 1196910, 1947166, 327612]
+      h = 3683797: S = [1, 2, 6, 8, 9, 10], (P_2, P_3) = (84190184, 983858031), coefficients a_m for m = [11, 9, 7, 5, 3, 1]: [182, 9828, 187980, 1200264, 1956058, 329484]
+      h = 3703011: S = [1, 2, 3, 5, 6, 9], (P_2, P_3) = (84428760, 985458825), coefficients a_m for m = [11, 9, 7, 5, 3, 1]: [182, 9828, 188162, 1203904, 1967394, 333540]
+(H-1) congruence checks: 908, failures: 0

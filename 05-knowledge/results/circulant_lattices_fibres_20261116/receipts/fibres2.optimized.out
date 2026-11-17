@@ -1,0 +1,9 @@
+order 3: classes 2, distinct diagonals P(q) 2, distinct bivariate G 2, classes whose diagonal is shared with a different G: 0; example: None
+order 4: classes 4, distinct diagonals P(q) 3, distinct bivariate G 3, classes whose diagonal is shared with a different G: 0; example: None
+order 5: classes 12, distinct diagonals P(q) 8, distinct bivariate G 8, classes whose diagonal is shared with a different G: 0; example: None
+   realised packing vectors: 8; first: [((((0, 5), 1),), 1), ((((0, 5), 1), ((1, 2), 1)), 3), ((((0, 5), 1), ((1, 2), 2)), 2)]
+order 6: classes 56, distinct diagonals P(q) 24, distinct bivariate G 29, classes whose diagonal is shared with a different G: 16; example: ((17, 224, 1449), [(((0, 6), 1), ((1, 1), 2), ((1, 3), 4), ((2, 0), 1)), (((0, 6), 1), ((1, 1), 4), ((1, 3), 4))])
+   realised packing vectors: 29; first: [((((0, 6), 1),), 1), ((((0, 6), 1), ((1, 3), 1)), 4), ((((0, 6), 1), ((1, 1), 1), ((1, 3), 3)), 4)]
+order 7: classes 456, distinct diagonals P(q) 156, distinct bivariate G 203, classes whose diagonal is shared with a different G: 196; example: ((17, 448, 4347), [(((0, 7), 1), ((1, 2), 2), ((1, 4), 4), ((2, 1), 1)), (((0, 7), 1), ((1, 2), 4), ((1, 4), 4))])
+   realised packing vectors: 203; first: [((((0, 7), 1),), 1), ((((0, 7), 1), ((1, 4), 1)), 5), ((((0, 7), 1), ((1, 2), 4), ((1, 4), 4)), 2)]
+order 8: classes 6880, distinct diagonals P(q) 1728, distinct bivariate G 3007, classes whose diagonal is shared with a different G: 4503; example: ((95, 2552, 26127), [(((0, 8), 1), ((1, 1), 7), ((1, 3), 14), ((1, 5), 10), ((2, 2), 8)), (((0, 8), 1), ((1, 1), 7), ((1, 3), 18), ((1, 5), 10), ((2, 2), 6)), (((0, 8), 1), ((1, 1), 7), ((1, 3), 20), ((1, 5), 10), ((2, 2), 5)), (((0, 8), 1), ((1, 1), 7), ((1, 3), 30), ((1, 5), 10))])
