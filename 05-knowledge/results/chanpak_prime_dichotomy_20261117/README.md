@@ -10,6 +10,9 @@ It is not enough to prove that for every prime p, at least one of p and 7p is a 
 - [Complementary unary wrapping barrier](UNARY_WRAPS.md): the narrower, changing-width nested reader with one arbitrary ordinal one-apex base has a better exponent.
 - [Exact terminal-core obstruction at 257](TARGET257.md) and [replay](target257.cpp): the normalized reader from the previous session misses a prescribed prime and its sevenfold companion, even though both exist.
 
+- [Apex and one spine tag classified at every order](APEX_PAIR.md): the only internal seed family is the known 11·2^k+5 ray.
+- [Physical Bézout repair](BEZOUT.md): changes of +776 and −778 preserve the surrounding interface and give an exact −2, with literal twin-prime outputs.
+
 ## Why cross-axis obstruction is a strong-component question
 
 Ordinal composition multiplies counts. A prime count p, if realized, is carried by one strong component; the remaining components are singletons. The same holds for 7q with q≠3,7, since the component product cannot split off a factor 7. For q=7 the same argument applies to 49.
