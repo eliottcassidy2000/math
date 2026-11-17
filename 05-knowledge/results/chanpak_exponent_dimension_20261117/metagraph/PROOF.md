@@ -1,0 +1,47 @@
+# A signed orbit dimension for blue frames and extra symmetries
+
+Let r reverse [n], k=floor(n/2), and E=binom(n,2). The blue frames are tournaments containing the directed path 1,...,n and admitting r as an anti-automorphism. Under the fixed-path tiling dictionary they are the blue tilings of THM-643. We count additional symmetries of those **frames**, not of uniformly sampled isomorphism classes.
+
+## Two prescribed anti-involutions
+
+An anti-automorphism fixes at most one vertex (two fixed vertices force their edge to reverse). Suppose s is another involution with k transpositions, and put h=rs. Its order must be odd: an automorphism group of a tournament contains no involution, because an involution exchanges the endpoints of some edge. If h has odd order, write m_i for its cycle lengths. The number e of h-orbits on unordered edges is
+
+    e = sum_i (m_i-1)/2 + sum_{i<j} gcd(m_i,m_j).
+
+The first sum uses cyclic distances within an odd circle; the second counts simultaneous rotation orbits between distinct circles. Since r inverts h, it either pairs circles of equal length or reflects a circle in itself. An invariant circle has one r-fixed vertex (odd length), so at most one exists. There may be many 1-cycles, including paired 1-cycles. An h-edge-orbit fixed by r is either a distance inside that one invariant circle or one of the m orbits between two r-paired m-circles. On each such orbit r acts as endpoint reversal modulo h: index paired circles by a_i,b_i with r a_i=b_{-i}, r b_i=a_{-i}; applying r to (a_i,b_j) and then h^(i+j) exchanges the endpoints. Inside an invariant circle the same computation uses r a_i=a_{-i}. Accordingly all of these orbit variables are free, not inconsistent. Their number is exactly f=k (each pair of m-circles contributes m; the invariant circle contributes (m-1)/2).
+
+The remaining h-edge-orbits occur in r-pairs, each contributing one bit. Thus the number of orientations admitting r and s is exactly 2^((e+k)/2). Prescribing directed edges sets values for their respective dihedral orbit variables, after transporting orientations by h and transporting with a sign reversal by r. A conflict gives zero; otherwise, if the imposed edges meet d different such variables, exactly 2^((e+k)/2-d) orientations survive. This is an exact formula for the fixed frame as well as arbitrary prescribed directed edges.
+
+For completeness, the weighted second-reflection count can be computed without frames by partitions. Overlay the transposition matchings of r and s. At even order this gives doubled edges and alternating cycles of size 2l, each yielding two h-circles of length l, so l must be odd. On a given set of l r-pairs, 2^(l-1)(l-1)! choices of s form that component (for l>=3, arrange pairs cyclically up to reversal and orient each pair; a doubled edge has exactly one choice). A multiset with a_l components has multiplicity
+
+    k! prod_l ( (2^(l-1)/l)^a_l / a_l! ),   sum_l l a_l=k.
+
+At odd order add the alternating path from the r-fixed vertex to the s-fixed vertex, using j r-pairs, possibly j=0. Pick and order its pairs and choose the entry endpoint in each; this multiplies the displayed expression by 2^j and changes the sum to k-j. This path yields the sole invariant h-circle, of length 2j+1. Multiply each multiplicity by the orientation count above and sum to count pairs (orientation,s), including s=r. For the fixed path, use the exact per-s conflict test and d; type alone need not specify d.
+
+## Sharp dimension cost and typical rigidity of blue frames
+
+Put t=|supp(h)|>0. Every edge touching the support is in an h-edge-orbit of length at least three: a fixed unordered pair would mean two fixed endpoints or an exchange by the odd-order h. Thus
+
+    (E-e)/2 >= D_n(t) := [t(n-t)+binom(t,2)]/3.
+
+The left side is exactly the unframed codimension within r-symmetric orientations. At odd order the smallest possible t is 3 and D_n(3)=n-2; it is attained by changing the fixed vertex via one r-pair. At even order the smallest possible t is 6 and D_n(6)=2n-7; it is attained with one alternating 6-cycle. D_n(t) increases with t through n, and both examples have all touched edge-orbits of length three, proving sharpness (orders n>=3 odd and n>=6 even).
+
+For the directed standard frame, the codimension is at least D_n(t)-2t, or the intersection is empty. Indeed the support is r-stable and every unaffected path edge keeps its original variable distinct from all touched variables. At most 2t path edges touch the support, so at most 2t of the original frame's distinct constraints can be lost. The number of possible h with support t is bounded by binom(n,t)t! <= n^t. Consequently the proportion failing uniqueness of the anti-involution among blue frames is at most sum_{t>=t0} n^t 2^(-D_n(t)+2t), where t0=3 (odd) or 6 (even).
+
+The same upper bound, with t0=6 for both parities, applies to existence of a nonidentity automorphism g commuting with r. Such an odd-order g fixes the r-fixed vertex if present and permutes the r-pairs: if it preserves any pair setwise, it fixes both endpoints. Thus its support is a union of at least three moved pairs. On the g-edge-orbits, r acts in pairs or fixes an orbit; on any fixed orbit r acts trivially on the underlying edges, since it commutes with the cyclic action of odd order. The only r-fixed edges swap their endpoints, and there are k of them, so the number of fixed g-edge-orbits of r is at most k. Therefore the unframed dimension is at most (e+k)/2, and precisely the same touched-support estimate applies. Finally if an automorphism does not commute with r, conjugating r gives another anti-involution. These two estimates together bound nonrigidity among blue frames.
+
+Explicit asymptotics of both sums: for fixed t, D_n(t)=tn/3-O_t(1); in the range 3t0<=t<=n/2 one has D_n(t)>=t(n/4-1/6), so the tail in this range is 2^(-3t0 n/4+O(log n)); for t>n/2, D_n(t)>=t(n-1)/6, giving 2^(-Omega(n^2)). The finitely many t<3t0 therefore dominate, and the upper bounds for nonrigidity are 2^(-n+O(log n)) at odd orders and 2^(-2n+O(log n)) at even orders. In particular almost every blue tiling has trivial automorphism group, and its prescribed reversal is the only anti-automorphism (any second anti-automorphism composed with r would be a nonidentity automorphism).
+
+This concerns the blue frame measure, which weights classes by their number of blue tilings, and does not by itself prove typical asymmetry under uniform sampling of self-converse classes. The signed orbit perspective extends the known one-reflection binary affine dimension (THM-643, THM-4724), rather than claiming new ordinary Burnside or Paley symmetry formulas. The alternating overlay reads the cyclic exponent profile as an exact number of compatible orientation bits.
+
+## Strong blue frames
+
+If a tournament containing the standard directed Hamilton path is not strong, its first strong component is an initial segment of that path: strong components are ordinally ordered, and the path can enter any component only once and only in this order. Thus all edges across at least one proper prefix cut point forward. For a cut at i, its i(n-i) edges occupy at least i(n-i)/2 reversal variables; exactly one path edge crosses that cut, and its reversal partner crosses this same cut only if the partner is that same edge. More generally, variables of constrained frame edges whose reversal lies in the cut come from reversal of the crossing edge at n-i, which is again the variable of the crossing edge at i. Thus only one of the cut's variables has already been fixed. This cut event has probability at most 2^(1-i(n-i)/2) under the uniform blue frame. Union gives O(n 2^(-n/2+1)), or O(2^(-n/2)) by separating i=1,n-1 from i=2,...,n-2. The paired endpoint tiling on a blue line is also uniform blue, by the bitwise-complement involution of THM-643; a union bound gives the same rates for the event that either endpoint fails strength or rigidity. Exceptional endpoints counted with multiplicity refer to the uniform blue-line incidence measure.
+
+## Uniform self-converse classes, separately
+
+The same estimates also imply typical rigidity in the **uniform class measure**, but via an additional unframed argument, not by equating the two measures. For n>=2 an SC tournament's automorphisms and anti-automorphisms together form a group of twice its odd automorphism order. Its anti-involutions are conjugate by Sylow's theorem, and the conjugating element can be taken ordinary by multiplying it by the source anti-involution if needed. Thus the orbits of C=C_{S_n}(r) on the unframed r-anti orientations U correspond bijectively to SC isomorphism classes (surjectivity uses existence of an anti-involution and its forced fixed-point count). If c(T)=|C intersection Aut(T)|, orbit-stabilizer gives
+
+    number of SC classes = |U| E_U[c(T)] / |C|.
+
+The same formula restricted to nonrigid T counts nonrigid SC classes; E_U[c 1_nonrigid] <= Pr_U(nonrigid)+E_U[c-1]. The second term is bounded by sum over nonidentity commuting g of Pr_U(g is ordinary), already estimated by support-size summation without frame losses. The first term is bounded by the same two support-size sums as above. Thus uniform SC classes are also rigid with exceptions at most 2^(-n+O(log n)) at odd orders and 2^(-2n+O(log n)) at even orders. This argument pertains to SC classes, not the entire merged graph sampled by nodes or lines of both colors.
