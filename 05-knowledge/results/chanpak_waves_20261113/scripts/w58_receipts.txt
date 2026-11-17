@@ -1,0 +1,179 @@
+== A. Triangle switch (transitive quotient, free shared tapes) ==
+$ w58_triangle_switch check
+triangle-switch counter vs Held-Karp: 800 cases, mismatches 0; gap != 2 in 0 of 400
+$ w58_triangle_switch scan 14
+exterior <= 14: 458753 configurations; minus or plus equal to (2^p+1)^2: 0
+$ w58_triangle_switch values 16 3000
+minus values <= 200: 11 29 43 67 71 91 131 133 155 179
+exterior <= 16: distinct odd minus values <= 3000: 110 of 1500
+
+== B. Blown-up skeleton switches (orders 4-7, two tape slots): summary of w58_skeleton_switch 4 7 ==
+configs 202368, unit switches (gap exactly 2 for all tape lengths) 1064, diagonal hits 0
+unit switches by largest base:
+ 744 maxbase=1
+ 168 maxbase=2
+ 144 maxbase=3
+   8 maxbase=4
+no-third-run arrays (maxbase 2) and multiplicities:
+  32 c22=0 c12=6 c21=0 c11=-1 c33=0 c13=0 c31=0 c23=0 c32=0
+  32 c22=0 c12=0 c21=6 c11=-1 c33=0 c13=0 c31=0 c23=0 c32=0
+  24 c22=6 c12=0 c21=0 c11=-1 c33=0 c13=0 c31=0 c23=0 c32=0
+  24 c22=12 c12=0 c21=0 c11=-1 c33=0 c13=0 c31=0 c23=0 c32=0
+  16 c22=0 c12=12 c21=0 c11=-1 c33=0 c13=0 c31=0 c23=0 c32=0
+  16 c22=0 c12=0 c21=12 c11=-1 c33=0 c13=0 c31=0 c23=0 c32=0
+   8 c22=9 c12=0 c21=0 c11=-3 c33=0 c13=0 c31=0 c23=0 c32=0
+   8 c22=0 c12=9 c21=0 c11=-3 c33=0 c13=0 c31=0 c23=0 c32=0
+   8 c22=0 c12=0 c21=9 c11=-3 c33=0 c13=0 c31=0 c23=0 c32=0
+
+== C. Two ports on two triangles in series (tapes in each triangle) ==
+$ w58_port_search 0
+mid=0 configs 36864 unit 0 hits 0
+
+== D2. Hub-arc unit pairs: density and residues ==
+$ w58_hub_switch density 11 20000
+spine<=10: odd N<=20000 that are lower members of a hub-arc unit pair: 805 of 10000; first miss 5
+spine<=11: odd N<=20000 that are lower members of a hub-arc unit pair: 1047 of 10000; first miss 5
+misses below 400: 5 7 11 19 21 23 31 33 35 39 41 43 47 53 55 57 59 63 65 67 71 73 77 83 85 87 89 93 99 103 105 107 111 113 119 121 123 129 133 135 137 143 145 147 149 151 153 155 159 161 163 167 173 175 179 181 183 187 191 195 199
+$ w58_hub_switch residues 11
+unit pairs (spine<=11): 28230; lower value mod 9: 0:3108 1:3628 2:2708 3:3068 4:3718 5:2684 6:3344 7:3552 8:2420
+lower mod 27 (multiples of 9 only): 0:1224 9:1124 18:760
+lower values divisible by 9 above 100: 2588; largest lower value divisible by 9: 173871
+all two-hub counts mod 9: 0:642308 1:614099 2:616680 3:625352 4:612129 5:621415 6:631484 7:609968 8:618969
+
+== E. Frame decomposition of the unit-switch witnesses (w58_frames.py) ==
+x=101000 y=011010 e=0: frame sum 291, H 291, frames with a triply covered vertex: 12
+x=101000 y=011010 e=1: frame sum 289, H 289, frames with a triply covered vertex: 12
+x=1011101100 y=0001111011 e=0: frame sum 4227, H 4227, frames with a triply covered vertex: 44
+x=1011101100 y=0001111011 e=1: frame sum 4225, H 4225, frames with a triply covered vertex: 44
+x=1100100010 y=0010000111 e=0: frame sum 4225, H 4225, frames with a triply covered vertex: 44
+x=1100100010 y=0010000111 e=1: frame sum 4227, H 4227, frames with a triply covered vertex: 44
+x=100010 y=001011 e=0: frame sum 81, H 81, frames with a triply covered vertex: 0
+x=100010 y=001011 e=1: frame sum 83, H 83, frames with a triply covered vertex: 0
+
+== G. Rooted ratio B/H at small counts; ratio-3 roots (w58_ratio.py, w58_ratio8) ==
+B values available at small counts (orders <= 7):
+  h=1: B in [1, 2, 4, 8, 16, 32, 64]
+  h=3: B in [3, 6, 12, 24, 48, 96]
+  h=5: B in [5, 6, 7, 9, 10, 12, 14, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72, 128]
+  h=9: B in [9, 10, 11, 15, 16, 18, 20, 21, 22, 23, 25, 30, 32, 36, 40, 42, 44, 46, 50, 60, 64, 72, 84, 92, 100, 144, 168]
+  h=11: B in [11, 12, 13, 17, 20, 22, 24, 26, 27, 34, 40, 48, 52, 54, 68, 80, 100, 108, 200]
+  h=13: B in [13, 14, 15, 18, 26, 28, 30, 36, 52, 56, 60, 72, 104, 208]
+  h=15: B in [15, 18, 19, 21, 23, 27, 29, 30, 36, 38, 40, 42, 45, 46, 57, 58, 59, 60, 63, 72, 76, 80, 84, 90, 96, 108, 114, 118, 120, 126] ...
+counts h with a ratio-3 root (B = 3h) at orders <= 7: [15, 33, 45, 69]
+odd h <= 45 realized at orders <= 7 WITHOUT a ratio-3 root: [1, 3, 5, 9, 11, 13, 17, 19, 23, 25, 27, 29, 31, 35, 37, 39, 41, 43]
+counts h with a ratio-3 root (B = 3h), orders <= 8: 15 33 45 69 73 77 121 129 155 179 191 209 233 307 315 345 381 387 389
+19 counts, 9 divisible by 3
+
+== H. Matching pictures X -> Q[..X..] for prime quotients Q (w58_pictures.py) ==
+prime quotients of order 3 and 5: 4
+Q order 3, H(Q)=3, slot 0: walk counts W_v=[3, 1]  ->  H(Q[X]) = 1*chi(1) + 1*chi(2)   (checked: True)
+Q order 5, H(Q)=9, slot 0: walk counts W_v=[9, 10, 2]  ->  H(Q[X]) = -5*chi(1) + 4*chi(2) + 2*chi(3)   (checked: True)
+Q order 5, H(Q)=9, slot 1: walk counts W_v=[9, 5]  ->  H(Q[X]) = -1*chi(1) + 5*chi(2)   (checked: True)
+Q order 5, H(Q)=9, slot 2: walk counts W_v=[9, 3]  ->  H(Q[X]) = 3*chi(1) + 3*chi(2)   (checked: True)
+Q order 5, H(Q)=13, slot 0: walk counts W_v=[13, 12, 2]  ->  H(Q[X]) = -5*chi(1) + 6*chi(2) + 2*chi(3)   (checked: True)
+Q order 5, H(Q)=13, slot 1: walk counts W_v=[13, 6]  ->  H(Q[X]) = 1*chi(1) + 6*chi(2)   (checked: True)
+Q order 5, H(Q)=13, slot 2: walk counts W_v=[13, 10, 2]  ->  H(Q[X]) = -1*chi(1) + 4*chi(2) + 2*chi(3)   (checked: True)
+Q order 5, H(Q)=15, slot 0: walk counts W_v=[15, 13, 2]  ->  H(Q[X]) = -5*chi(1) + 7*chi(2) + 2*chi(3)   (checked: True)
+
+$ python3 w58_pictures6.py
+prime quotients of order 6: 15
+slot types: 73 | distinct count forms: 40 | all checked on random cores: True
+forms with no chi(3) term (no third free run): ['H(Q[X]) = -1*chi(1) + 15*chi(2)', 'H(Q[X]) = -1*chi(1) + 9*chi(2)', 'H(Q[X]) = -5*chi(1) + 18*chi(2)', 'H(Q[X]) = -5*chi(1) + 21*chi(2)', 'H(Q[X]) = -7*chi(1) + 15*chi(2)', 'H(Q[X]) = -7*chi(1) + 18*chi(2)', 'H(Q[X]) = 1*chi(1) + 11*chi(2)', 'H(Q[X]) = 1*chi(1) + 16*chi(2)', 'H(Q[X]) = 3*chi(1) + 13*chi(2)', 'H(Q[X]) = 3*chi(1) + 14*chi(2)', 'H(Q[X]) = 5*chi(1) + 6*chi(2)', 'H(Q[X]) = 5*chi(1) + 9*chi(2)']
+largest chi(3) coefficient: 16
+
+== D1. Hub-arc unit pairs at ((2^p+1)^2, +2) ==
+$ w58_hub_switch pairs 13 10
+p=1 pair (T, T+2) = (9, 11): m=3 x=100 y=011 (lower has e=0)
+p=1 pair (T, T+2) = (9, 11): m=3 x=110 y=001 (lower has e=1)
+p=2 pair (T, T+2) = (25, 27): m=5 x=10010 y=00011 (lower has e=1)
+p=2 pair (T, T+2) = (25, 27): m=5 x=10110 y=00111 (lower has e=0)
+p=4 pair (T, T+2) = (289, 291): m=6 x=101000 y=011010 (lower has e=1)
+p=3 pair (T-2, T) = (79, 81): m=6 x=101000 y=000111 (lower has e=0)
+p=3 pair (T, T+2) = (81, 83): m=6 x=100010 y=001011 (lower has e=0)
+p=4 pair (T, T+2) = (289, 291): m=6 x=011010 y=101000 (lower has e=0)
+p=3 pair (T-2, T) = (79, 81): m=6 x=111010 y=000111 (lower has e=1)
+p=3 pair (T, T+2) = (81, 83): m=6 x=101110 y=001011 (lower has e=1)
+p=6 pair (T, T+2) = (4225, 4227): m=10 x=1011101100 y=0001111011 (lower has e=1)
+p=6 pair (T, T+2) = (4225, 4227): m=10 x=1100100010 y=0010000111 (lower has e=0)
+p=8 pair (T, T+2) = (66049, 66051): m=12 x=101100101100 y=010000101101 (lower has e=0)
+p=8 pair (T, T+2) = (66049, 66051): m=12 x=110010110010 y=010010111101 (lower has e=1)
+p=1 T=9: (T,T+2) 2, (T-2,T) 0
+p=2 T=25: (T,T+2) 2, (T-2,T) 0
+p=3 T=81: (T,T+2) 2, (T-2,T) 2
+p=4 T=289: (T,T+2) 2, (T-2,T) 0
+p=5 T=1089: (T,T+2) 0, (T-2,T) 0
+p=6 T=4225: (T,T+2) 2, (T-2,T) 0
+p=7 T=16641: (T,T+2) 0, (T-2,T) 0
+p=8 T=66049: (T,T+2) 2, (T-2,T) 0
+p=9 T=263169: (T,T+2) 0, (T-2,T) 0
+p=10 T=1050625: (T,T+2) 0, (T-2,T) 0
+
+== F. Conserved-charge digit test for two-hub spine blocks ==
+$ python3 w58_charge.py
+reachable row space dimension: 28
+checking blocks...
+blocks (length <= 5) with a conserved-charge digit structure: 0
+[]
+reader/charge structures (suffix, e, lambda, Phi-direction) with >= 2 digit blocks:
+total keys: 200  with >=2 blocks: 0
+lambda values seen: [(Fraction(2, 1), 50), (Fraction(4, 1), 50), (Fraction(8, 1), 50), (Fraction(16, 1), 50)]
+
+== I. Hub-arc gap formula and the neutrality criterion ==
+$ python3 w58_hubarc_check.py
+(1) gap formula on 87380 word pairs (spine <= 8): mismatches 0
+(2) shared-bit flips: 334962 cases; criterion 'free iff A_i = B_i' violated 0 times
+    free positions per maximal shared run (live set nonempty): {0: 171312, 1: 17264, 2: 240}; max 2, e.g. ((0, 1, 0, 0, 1, 0), (1, 0, 0, 0, 0, 1), [2, 3])
+
+== J. Ratio-3 roots (7-multiplier) ==
+$ w58_ratio9   (all order-9 tournaments)
+order-8 classes: 6880
+counts with a ratio-3 root at order 9: 176 counts, 51 of them prime
+prime counts with a ratio-3 root at order 9: 73 179 191 227 233 239 257 281 293 307 331 373 379 389 397 461 479 521 523 563 571 643 653 661 673 677 719 733 769 787 823 857 907 937 947 997 1013 1201 1249 1361 1373 1409 1453 1471 1483 1553 1579 1613 1667 1997 2243
+rc=0
+$ w58_ratio_oneparent 9
+one-parent tournaments to 9 vertices: 28 counts with a ratio-3 root, 8 of them prime
+primes with a ratio-3 root: 73 179 191 239 257 293 331 643
+$ w58_ratio_oneparent 10
+one-parent tournaments to 10 vertices: 113 counts with a ratio-3 root, 33 of them prime
+primes with a ratio-3 root: 73 179 191 239 257 293 331 359 389 503 601 613 643 647 659 677 863 881 929 991 997 1031 1171 1291 1399 1723 1787 1907 2239 2377 2437 2801 4651
+$ w58_ratio_oneparent 11
+one-parent tournaments to 11 vertices: 420 counts with a ratio-3 root, 97 of them prime
+primes with a ratio-3 root: 73 179 191 239 257 293 331 347 359 389 503 601 613 643 647 659 677 811 863 881 929 941 967 991 997 1031 1171 1229 1279 1291 1399 1493 1567 1613 1627 1669 1723 1787 1879 1889 1901 1907 1951 1973 1993 2069 2129 2203 2239 2267 2377 2437 2521 2711 2801 3019 3221 3253 3307 3407 3511 3583 3593 3631 3931 4093 4127 4337 4493 4517 4651 4691 4733 4937 5741 5813 5821 5861 6067 6197
+
+== K. Seed bank P112: 16 seeds + strong-tailed grammar (w58_seeded_grammar.c) ==
+$ w58_seeded_grammar 13 160000 w55_seeds.txt
+cores: 9 (H, Fe, Fo): (1,1,1) (3,6,6) (5,16,16) (9,42,42) (9,42,42) (11,50,50) (15,54,54) (13,52,52) (15,60,60)
+seeds loaded: 16
+after level 0: frontier 668; first odd miss (besides 7, 21): 5; misses <= 160000: 79138
+after level 1: frontier 4454; first odd miss (besides 7, 21): 17; misses <= 160000: 68145
+after level 2: frontier 14217; first odd miss (besides 7, 21): 25; misses <= 160000: 40169
+after level 3: frontier 27352; first odd miss (besides 7, 21): 97; misses <= 160000: 14452
+after level 4: frontier 39254; first odd miss (besides 7, 21): 161; misses <= 160000: 2975
+after level 5: frontier 39856; first odd miss (besides 7, 21): 161; misses <= 160000: 575
+after level 6: frontier 57304; first odd miss (besides 7, 21): 65329; misses <= 160000: 166
+after level 7: frontier 43434; first odd miss (besides 7, 21): 97469; misses <= 160000: 19
+after level 8: frontier 12517; first odd miss (besides 7, 21): 119699; misses <= 160000: 8
+after level 9: frontier 1451; first odd miss (besides 7, 21): 119699; misses <= 160000: 6
+after level 10: frontier 67; first odd miss (besides 7, 21): 119699; misses <= 160000: 6
+after level 11: frontier 1; first odd miss (besides 7, 21): 119699; misses <= 160000: 6
+after level 12: frontier 0; first odd miss (besides 7, 21): 119699; misses <= 160000: 6
+odd misses <= 160000: 7 21 119699 138859 142091 151523 152369 153247
+$ w58_seeded_grammar 14 400000 w55_seeds.txt
+cores: 9 (H, Fe, Fo): (1,1,1) (3,6,6) (5,16,16) (9,42,42) (9,42,42) (11,50,50) (15,54,54) (13,52,52) (15,60,60)
+seeds loaded: 16
+after level 0: frontier 935; first odd miss (besides 7, 21): 5; misses <= 400000: 199074
+after level 1: frontier 6988; first odd miss (besides 7, 21): 17; misses <= 400000: 179924
+after level 2: frontier 31799; first odd miss (besides 7, 21): 25; misses <= 400000: 116646
+after level 3: frontier 71013; first odd miss (besides 7, 21): 97; misses <= 400000: 43168
+after level 4: frontier 145337; first odd miss (besides 7, 21): 161; misses <= 400000: 8751
+after level 5: frontier 158090; first odd miss (besides 7, 21): 161; misses <= 400000: 565
+after level 6: frontier 190829; first odd miss (besides 7, 21): 138823; misses <= 400000: 63
+after level 7: frontier 225814; first odd miss (besides 7, 21): 331087; misses <= 400000: 7
+after level 8: frontier 113907; first odd miss (besides 7, 21): 347507; misses <= 400000: 1
+after level 9: frontier 23526; first odd miss (besides 7, 21): 0; misses <= 400000: 0
+after level 10: frontier 2102; first odd miss (besides 7, 21): 0; misses <= 400000: 0
+after level 11: frontier 79; first odd miss (besides 7, 21): 0; misses <= 400000: 0
+after level 12: frontier 1; first odd miss (besides 7, 21): 0; misses <= 400000: 0
+after level 13: frontier 0; first odd miss (besides 7, 21): 0; misses <= 400000: 0
+odd misses <= 400000: 7 21
+(cap 13: 145 s; cap 14: 1,416 s, 263 MB)

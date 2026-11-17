@@ -5372,6 +5372,217 @@ floor f(n), the least count of a strong n-tournament. Call A(h) = {n : f(n) ≤ 
 
 Chan–Pak remains OPEN.
 
+## Wave 58: the hub-arc switch, the seed bank to 400,000, and the 2-adic spectra behind 7 and 21
+
+Session mac-mini-2026-11-16-hubarc. Owner prompt:
+- work the Two-Hub frame lemma and the seed bank;
+- more ways to make matching pictures for the A000568 terms, and the family of variations;
+- with the infinite problem reduced to primes p and 7p, study 1 and 3, 7 and 21, the even prime 2 between them, and 18;
+- change the core to give more neutral choices without another free path run;
+- put the triangle switch's centre at (2^p + 1)² for every p.
+
+Scripts `scripts/w58_*`; output `scripts/w58_receipts.txt`. Earlier helpers used: `w45_hk.py`, `w57_classes.py`
+(writes `w57_reps.txt`), `w55_seeds.txt`.
+
+### §0. Concurrent work (credit)
+
+| idea | where |
+| --- | --- |
+| the triangle switch: one flip adds exactly 2 when the quotient is transitive; its centre is the inverse problem | `three_visit_triangle_switch_20261117` |
+| signed tiles, the product rule for the gap, and the pair (1089, 1091) = ((2^5+1)², +2) from an h = 15, s = 1 tile | `signed_ordinal_unit_centers_20261117` |
+| neutral cores with two runs; no third neutral letter on a transitive block | `one_port_neutral_continuations_20261117`, `neutral_contact_flag_interactions_20261117`, `two_address_gap_selector_20261117` |
+| ready cores and mod 18 (in progress) | `ready_core_growth_and_mod18_20261117` |
+| the reduction to primes other than 7 and to 7p (with 49, 63, 343 witnessed) | waves 48 and 55; `chanpak_selection_retrospective_20261117` |
+| curried extension grammar and toothpick diagrams; seams at a prescribed centre | klein THM-5266, THM-5267 |
+
+### §1. The Two-Hub frame lemma
+
+**The hub-arc switch (PROVED).** Take a two-hub tournament: transitive spine 1 < … < m, hubs u₁, u₂ with words x, y
+(x_i = 1 iff u₁ beats i), and the hub arc.
+- Flip any arc. By H = I(Ω, 2), the count changes by 2·(Σ over new odd cycles C − Σ over lost odd cycles C) of
+  H(T − V(C)). The cycles through the flipped arc pairwise intersect.
+- Through the hub arc, every cycle leaves a complement inside the spine, which is transitive, so each term is 1. A
+  cycle u₂ → u₁ → P → u₂ is an increasing spine set P with x = 1 at min P and y = 0 at max P; it is odd iff |P| is odd.
+- Hence
+
+      H(u₂ → u₁) − H(u₁ → u₂) = 2·(K(x, y) − K(y, x)),
+      K(x, y) = #{i : x_i = 1, y_i = 0} + Σ_{j ≥ i+2, x_i = 1, y_j = 0} 2^(j−i−2).
+
+- The flip is a unit switch iff K(x, y) − K(y, x) = ±1. Twin hubs (x = y) give 0.
+
+**Neutral choices need a non-transitive core (PROVED from the formula; checked).** Call position i shared if
+x_i = y_i = g, and live otherwise. A shared position contributes g·A_i + (1 − g)·B_i to K(x, y) − K(y, x), where
+
+    A_i = Σ_{live j ≥ i+2} (x_j − y_j)·2^(j−i−2),     B_i = Σ_{live j ≤ i−2} (x_j − y_j)·2^(i−j−2).
+
+So i is a free neutral choice iff A_i = B_i (`w58_hubarc_check.py`: 0 exceptions in 334,962 shared-bit flips).
+- A signed sum of distinct powers of 2 never vanishes. So before all live positions only bit 0 is neutral, after them
+  only bit 1, and neither is free.
+- Inside a run of shared positions away from its ends, A_i = B_i reads α_R = β_L·4^i, which holds for at most one i.
+  Through spine 8, each maximal shared run holds at most two free positions.
+- So on a transitive spine, free neutral choices number O(#live positions). There is never a free tape.
+- The triangle switch carries free shared tapes of any length on both sides only because its core is a non-transitive
+  module. This is the precise sense in which "changing the core" buys neutral choices.
+- A third neutral letter needs another mechanism, as the concurrent packets also find.
+
+**No fixed-block numeration (FINITE-EXACT).** The hub orders and the hub arc give a transfer on 2 × 27 states; the
+reachable state space has dimension 28. A reusable digit would be a set of spine blocks β with N_β F = λF + d_β Φ and
+N_β Φ = Φ (wave 45's charge principle: a conserved charge Φ, giving H ↦ λH + d_β·Φ).
+- Appended blocks of length ≤ 5: no block has the structure.
+- Middle blocks of length ≤ 4 with every reader suffix of length ≤ 3: 200 single-block structures, all doubling rays
+  with λ ∈ {2, 4, 8, 16}. No two blocks ever share (λ, Φ), so there is no digit pair (`w58_charge.py`).
+
+Two-hub completeness therefore cannot come from a fixed digit recursion. A proof has to choose its blocks depending on
+the state, matching wave 16's finding that frame admissibility is non-local.
+
+**Unit pairs are sparse (FINITE-EXACT).** The lower members of hub-arc unit pairs cover 1,047 of the 10,000 odd numbers
+below 20,000 at spine length ≤ 11. The count roughly doubles per spine vertex, while counts grow like 3^m: the
+X^(log₃ 2) law the concurrent packet proved for the triangle switch. The frame lemma remains OPEN.
+
+### §2. The seed bank P112 to 400,000 (FINITE-EXACT)
+
+Wave 55's grammar has two moves: pad a sink, and (T ⇒ C) + t with t beating only t₀. Rerun it with the same 16
+one-parent seeds and a higher order cap (`w58_seeded_grammar.c`, a copy of wave 55's with larger buffers):
+
+| order cap | complete up to (every odd number except 7 and 21) | misses below the limit |
+| --- | --- | --- |
+| 12 (wave 55) | 43,343 | 474 below 100,000 |
+| 13 | 119,697 | 6 below 160,000 |
+| 14 | 400,000 (the limit of the run) | none |
+
+- No new seed was needed at any cap. Every miss at one cap closed at the next.
+- The six cap-13 misses below 160,000 all close at cap 14:
+  - the primes 119,699, 151,523 and 153,247;
+  - the 7p atom 152,369 = 7·21,767;
+  - 138,859 = 7·83·239 and 142,091 = 151·941.
+- The complete range grows about threefold per extra vertex, close to the two-hub horizon's 3^L.
+- The cap-14 run took 24 minutes and 263 MB, with a largest frontier of 225,814.
+
+So P112 now stands FINITE-EXACT to 400,000: 16 bases below 1000 plus two moves place every odd count there.
+
+### §3. 1 and 3, 7 and 21, the prime 2 between them, and 18 (PROVED)
+
+**Lemma 1 (B ≥ H).** For every vertex t, B(T, t) = Σ over paths P from t of H(T − V(P)) is at least H(T). Splitting
+a Hamiltonian path at t into prefix and suffix is an injection. Equality is wave 53's digit 0.
+
+**Lemma 2 (rooted spectrum of a one-component count).** Let T = TT_i ⇒ C ⇒ TT_j with C strong or a single vertex. Then
+B(T, t) is:
+- H(C)·2^s for t after C;
+- B(C, t)·2^s for t in C;
+- F₂(C)·2^s for t before C.
+
+Here s counts the later transitive vertices of the appropriate parts, and F₂(C) = H(C) + Σ_v B(C, v) is the ordered
+two-path cover count of waves 25 and 57.
+
+So the spectra at the first counts are:
+
+| h | core | B over the core | F₂ | rooted spectrum |
+| --- | --- | --- | --- | --- |
+| 1 | single vertex | 1 | 2 | 2^ℕ |
+| 3 | C3 | 3, 3, 3 | 12 | 3·2^ℕ |
+| 5 | T4s | 5, 6, 9, 7 | 32 | {5, 6, 7, 9, 32}·2^ℕ |
+
+The tournaments with H ∈ {1, 3, 5} are exactly these one-component ones. This follows from multiplicativity and the
+strong spectra {3}, {5}, ≥ 9 (THM-1370).
+
+**Theorem (the holes are 2-adic in the near-join grammar).** A near-join count is h + 2^k·B with k ≥ 1, so h ≤ N/3 by
+Lemma 1.
+- **7.** Only h = 1 is possible, and 1 + 2^k·2^s is never 7.
+- **21.** h = 1 needs 20 to be a power of 2. h = 3 needs 3·2^(k+s) = 18. h = 5 needs 2^k·b·2^s = 16 with
+  b ∈ {5, 6, 7, 9, 32}. All fail.
+
+So 7 and 21 are not near-join counts at any order. This complements THM-1370, which excludes them everywhere. The same
+lines exclude 11 and 13, matching HYP-9453's exception list.
+
+In the owner's terms:
+- 7 = 1 + 2·3 and 21 = 3 + 2·9 = 3 + 18 would need B = 3 at h = 1 and B = 9 at h = 3.
+- At 1 and 3 the rooted spectrum is h times powers of the even prime 2.
+- Each missing value first appears one count later: B(C3, ·) = 3 gives 9 = 3 + 2·3, and B(T4s, ·) = 9 gives
+  23 = 5 + 2·9 = 5 + 18.
+- So 6 = 2·3 and 18 = 2·9 are the increments that fail over 1 and over 3, then succeed over 3 and over 5.
+
+**The 7-multiplier.** 7h = h + 2^k·B forces k = 1 and B = 3h, so 7h is a near-join over a realizer of h exactly when
+some vertex has ratio B/H = 3.
+- Through order 7, only 15, 33, 45 and 69 have such a vertex (all multiples of 3).
+- Through order 8 there are 19 such counts, including the primes 73, 179, 191, 233, 307 and 389. So 511 = 7·73 = 2⁹ − 1
+  comes straight from a prime base.
+- Over all order-9 tournaments there are 176 such counts, 51 of them prime (73 up to 2,243).
+- Over one-parent tournaments, ratio-3 roots grow fast with order: 28, then 113, then 420 counts at 9, 10 and 11
+  vertices, with 8, 33 and 97 primes, reaching 6,197 (`w58_ratio9.c`, `w58_ratio_oneparent.c`).
+- Small primes never get one: by Lemma 2, the spectrum of 5 has no 15. P115 asks whether every large prime does.
+
+### §4. The triangle switch's centre at (2^p + 1)²
+
+The centre of a unit pair (H, H + 2) is even and (2^p + 1)² is odd. The target is therefore the pair
+((2^p + 1)², (2^p + 1)² + 2), with centre (2^p + 1)² + 1, as in the concurrent 1089/1091 placement.
+
+- **The original triangle switch never gets there (FINITE-EXACT).** Transitive quotient, every shared-contact word,
+  exterior ≤ 14 (458,753 configurations): no minus or plus count equals (2^p + 1)². Its counts are very sparse: 110 of
+  the 1,500 odd numbers below 3,000 (11, 29, 43, 67, 71, 91, 131, 133, 155, 179, …).
+- **Blown-up skeletons put the tapes in series (FINITE-EXACT).** Blow two vertices of every tournament of order 4–7 up
+  into transitive tapes and flip one other arc (THM-3121's walk counts).
+  - This gives 1,064 exact unit switches (gap 2 for all tape lengths).
+  - Those without a third run read A·2^(r₁+r₂) − B with (A, B) ∈ {(6, 1), (12, 1), (9, 3)}, or one tape alone. Their
+    centres lie on the lines 3·2^j and 9·2^j − 2.
+  - None has the product form (2^r + 1)(2^s + 1) that (2^p + 1)² = 4^p + 2^(p+1) + 1 needs.
+  - Two ports attached in every way to two triangles in series, each carrying a tape, give no unit switch at all
+    (36,864 attachments).
+- **The hub arc reaches it sporadically (FINITE-EXACT).** With spines ≤ 13, the following unit pairs exist.
+
+  | p | pair | spine | words x / y | lower member's hub arc |
+  | --- | --- | --- | --- | --- |
+  | 1 | (9, 11) | 3 | 100 / 011 | u₂ → u₁ |
+  | 2 | (25, 27) | 5 | 10010 / 00011 | u₁ → u₂ |
+  | 3 | (81, 83) | 6 | 100010 / 001011 | u₂ → u₁ |
+  | 4 | (289, 291) | 6 | 101000 / 011010 | u₁ → u₂ |
+  | 6 | (4225, 4227) | 10 | 1011101100 / 0001111011 | u₁ → u₂ |
+  | 8 | (66049, 66051) | 12 | 101100101100 / 010000101101 | u₂ → u₁ |
+
+  - Each listed pair also has a second solution, by swapping the hubs or taking the converse.
+  - There is none for p = 5 or p = 7. p = 5 is the concurrent tile.
+  - This is sparsity, not a congruence: 2,588 unit-pair counts above 100 are multiples of 9, like (2^p + 1)² for odd p.
+- **Verdict.** No uniform (2^p + 1)² family is found. Exact unit switches put the tapes in series, giving one exponent,
+  while (2^p + 1)² needs two independent exponents. OPEN.
+
+### §5. Matching pictures for A000568: the prime-slot family (PROVED; checked on random cores)
+
+For a prime quotient Q and a slot s, the picture X ↦ Q[X at s] is injective on classes, because modular decomposition
+is unique. It sends the A000568(n) classes into strong classes of order n + |Q| − 1. Its count is a fixed linear form in
+the path-colour values χ_X(j) (THM-3121, THM-3166): the slot's walk counts W_v, transformed binomially.
+
+| Q (prime) | H(Q) | slot | walk counts W₁, W₂, W₃ | H(Q[X]) |
+| --- | --- | --- | --- | --- |
+| C3 | 3 | any | 3, 1 | χ(1) + χ(2) (wave 57's cap) |
+| TT4 + u, word 1010 | 9 | 0 | 9, 10, 2 | −5χ(1) + 4χ(2) + 2χ(3) |
+| " | 9 | 1 | 9, 5 | −χ(1) + 5χ(2) |
+| " | 9 | 2 | 9, 3 | 3χ(1) + 3χ(2) = 3·cap |
+| 5-prime | 13 | 0 / 1 / 2 | 13, 12, 2 / 13, 6 / 13, 10, 2 | −5χ(1)+6χ(2)+2χ(3) / χ(1)+6χ(2) / −χ(1)+4χ(2)+2χ(3) |
+| regular RT5 | 15 | any | 15, 13, 2 | −5χ(1) + 7χ(2) + 2χ(3) |
+
+Each form gives H(Q) at a single vertex (χ_•(t) = t). A χ(3) term appears exactly when the slot can be entered three
+times: a third free run. One slot of the 9-path prime triples the cap with no join.
+
+At order 6 the 15 primes give 73 slot types and 40 distinct forms; 12 of them have no χ(3) term (`w58_pictures6.py`). The family of variations is these linear forms. Join with a fixed letter gives H(L)·χ(1); toothpick caps and cyclic
+joins give the forms of wave 57; klein's extension graph (THM-5266) is the deletion picture.
+
+### Ledger
+
+| claim | status |
+| --- | --- |
+| hub-arc flip changes H by 2(K(x,y) − K(y,x)) | PROVED |
+| a shared spine position is a free neutral choice iff A_i = B_i; at most two per shared run (spine ≤ 8); no free tapes on a transitive spine | PROVED / FINITE-EXACT |
+| no conserved-charge digit pair among spine blocks (appended ≤ 5; middle ≤ 4 with readers ≤ 3) | FINITE-EXACT |
+| hub-arc unit pairs grow like 2^m (X^(log₃ 2)) | FINITE-EXACT (spine ≤ 11) |
+| seed bank P112: the same 16 seeds complete the grammar to 119,697 (cap 13) and to 400,000 (cap 14) | FINITE-EXACT |
+| B ≥ H; one-component rooted spectra; 7 and 21 (and 11, 13) are not near-join counts | PROVED (with THM-1370's small strong spectra) |
+| ratio-3 roots (giving 7p = p + 2·3p directly): 51 primes at order 9; 97 primes up to 6,197 in one-parent trees to 11 vertices | FINITE-EXACT |
+| (2^p+1)² unit pairs for p = 1, 2, 3, 4, 6, 8 (hub arc); none for the triangle switch (exterior ≤ 14) | FINITE-EXACT |
+| exact two-tape unit switches put the tapes in series; no product form (orders ≤ 7) | FINITE-EXACT |
+| prime-slot matching pictures: injective, count a linear form in χ_X | PROVED (checked) |
+| the two-hub frame lemma; P112; a uniform (2^p+1)² switch | OPEN |
+
+Chan–Pak remains OPEN.
+
 ## Next waves (queued predictions)
 
 - **P13.** Classify tournaments with no two disjoint triangles; prove the Ω-complete spectrum has density < 1.
@@ -5398,3 +5609,11 @@ Chan–Pak remains OPEN.
 - **P114 (orphans are doublings).** If a first creator of a value >= 5 with no one-vertex parent among first creators
   exists at order >= 11, it has at least two two-vertex modules: it is a simultaneous doubling. Through order 10 the only
   orphan is F_6 and its converse, which carry three (THM-4922; wave 57 §3).
+- **P115 (7-multiplier).** Every prime p from some point on has a realizer T with a vertex t of ratio B(T, t) = 3p. Then
+  7p = p + 2·3p is a k = 1 near-join over a realizer of p. Ratio-3 primes number 51 over all order-9 tournaments and
+  97 (up to 6,197) over one-parent trees to 11 vertices (wave 58 §3). Test the gaps with larger rooted pools.
+- **P116 (seed bank horizon).** At order cap 15 the same 16 seeds complete the grammar beyond 10^6. The complete range
+  was 43,343, then 119,697, then more than 400,000 at caps 12, 13 and 14 (wave 58 §2).
+- **P117 (state-dependent digits).** For every block length L, no two two-hub spine blocks share a conserved charge
+  (λ, Φ). A proof of the frame lemma must choose digits depending on the state. Checked for appended blocks up to
+  length 5 and middle blocks up to length 4 with readers up to length 3 (wave 58 §1).
