@@ -1,8 +1,8 @@
 # An exact hard birth with two certified odd midpoints
 
-The [order-eleven class audit](https://github.com/eliottcassidy2000/math/blob/eea6f39cc271ab196ca99b422ad86fb320d8b903/05-knowledge/results/first_creator_generation_20261108/audit/AUDIT.md) certifies the maximum H=95,095 at order 11 and H=15,745 at order 10. Adding a transitive singleton does not change H, so each of these is also the maximum up to its order. The first-birth [order-nine atlas](../chanpak_birth_atlas_metagraph_20261117/metagraph/witnesses.tsv) gives maximum H=3,357 at order nine.
+The [order-eleven class audit](https://github.com/eliottcassidy2000/math/blob/eea6f39cc271ab196ca99b422ad86fb320d8b903/05-knowledge/results/first_creator_generation_20261108/audit/AUDIT.md) certifies the maximum H=95,095 at order 11 and H=15,745 at order 10. Adding a transitive singleton does not change H, so each of these is also the maximum up to its order. The first-birth [order-nine atlas](../../chanpak_birth_atlas_metagraph_20261117/metagraph/witnesses.tsv) gives maximum H=3,357 at order nine.
 
-[Session 244's certified depth-three witness](../session244_even_gap_anchoring_20261110/logic/forest_census/release/DEPTH_EXCEPTION_CHECK.json) is
+[Session 244's certified depth-three witness](../../session244_even_gap_anchoring_20261110/logic/forest_census/release/DEPTH_EXCEPTION_CHECK.json) is
 
     (3910,2044,3576,3057,4001,4033,3728,3841,3648,3076,2056,2).
 
