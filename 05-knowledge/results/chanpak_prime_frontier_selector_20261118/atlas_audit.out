@@ -1,0 +1,16 @@
+birth-class unused and inert histogram through six (all classes)
+1 [((0, 0), 1)]
+3 [((0, 0), 1)]
+4 [((0, 0), 1)]
+5 [((0, 0), 5), ((1, 0), 1)]
+6 [((0, 0), 33)]
+input birth atlas (all classes if first_classes.cpp; one per value if inherited witnesses.tsv)
+1 [((0, 0), 1)]
+3 [((0, 0), 1)]
+4 [((0, 0), 1)]
+5 [((0, 0), 5), ((1, 0), 1)]
+6 [((0, 0), 33)]
+7 [((0, 0), 328)]
+8 [((0, 0), 5457)]
+first representative with an inert arc None
+H9 birth example (10, 28, 25, 16, 1) zero arc and reverse load [[1, 4, 4]]
