@@ -79,3 +79,26 @@ prescribed absolute height.
 
 Run `python3 coordinated_recontact_replay.py` to reproduce the
 complete search, signed differences, and disjoint-composition check.
+
+## A tractable certificate for many correlated apex edits
+
+Fix one apex and partition some of its spokes into disjoint bundles.
+A bit reverses every spoke in its bundle. Apply the same chosen
+bundles to both members A and B of a witness pair. No Hamiltonian path
+uses more than two spokes, so each count is a *quadratic multilinear*
+function of the bundle bits, even if the bundles contain many edges.
+Indeed each path's indicator depends on at most two bundle bits; sum
+those indicators. It follows that testing the empty setting, each
+singleton bundle, and each unordered bundle pair is sufficient to
+certify the *entire* bundle subcube.
+
+Specifically, the +2 gap holds everywhere iff its values in those
+tests are all 2. The baseline is additive iff its pair mixed
+differences vanish in those tests. In that case, after dividing even
+baseline steps by 2 and orienting each nonzero step positively (choose
+its smaller baseline setting as zero), sort the weights a_j. If a_1=1
+and a_j<=1+sum_(i<j) a_i, the baseline fills an exact step-two interval:
+the previous interval and its translate overlap or abut. These are
+sufficient, checkable conditions on a *physical* construction. The
+nine-vertex bank above uses more than one apex and does not supply
+arbitrarily large bundles satisfying this certificate.
