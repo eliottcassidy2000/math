@@ -1,0 +1,12 @@
+1 mod30: 17 224 3 small literal H 3601
+7 mod30: 23 296 1 small literal H 1207
+11 mod30: 37 376 1 small literal H 1541
+13 mod30: 17 224 1 small literal H 913
+17 mod30: 43 424 3 small literal H 6827
+19 mod30: 23 296 3 small literal H 4759
+23 mod30: 37 376 3 small literal H 6053
+29 mod30: 43 424 1 small literal H 1739
+all units independently addressed mod 30
+all units independently addressed mod 450
+all units independently addressed mod 1350
+all units independently addressed mod 20250
