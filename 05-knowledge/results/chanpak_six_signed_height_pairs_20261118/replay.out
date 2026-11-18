@@ -1,0 +1,23 @@
+dyadic+1 h,G,Q 5 128 124 height shift 7
+dyadic+7 h,G,Q 127 896 776 height shift 7
+dyadic-1 h,G,Q 217 1024 806 height shift 10
+dyadic-7 h,G,Q 53 224 164 height shift 5
+3+1 h,G,Q 3 6 4 height shift 1
+3+7 h,G,Q 15 42 34 height shift 1
+5+1 h,G,Q 9 20 12 height shift 2
+5+7 h,G,Q 17 35 25 height shift 0
+7+1 h,G,Q 33 112 80 height shift 4
+7+7 h,G,Q 91 392 308 height shift 3
+13+1 h,G,Q 61 208 148 height shift 4
+13+7 h,G,Q 23 91 75 height shift 0
+checked tail-start exceptions and seeds: [1, 3, 11, 15, 27, 29, 31, 35, 49, 53, 57, 63, 105, 113, 119, 127, 203, 209, 217, 231, 255, 399, 455, 511, 903, 1023]
+certified prime pair 206158430209 1443109011463 orders 39 41
+certified prime pair 2748779069441 19241453486087 orders 43 46
+arbitrary core pair dyadic+ 128 1
+arbitrary core pair dyadic- 1024 -1
+arbitrary core pair 3 6 1
+arbitrary core pair 5 20 1
+arbitrary core pair 7 112 1
+arbitrary core pair 13 208 1
+nonunit-offset prime pair 824633720837 5772436045859 orders 40 42
+Lucas-Lehmer prime pair 2305843009213693951 16140901064495857657 orders 60 65
