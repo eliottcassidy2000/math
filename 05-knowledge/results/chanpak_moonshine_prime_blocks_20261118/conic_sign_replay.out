@@ -1,0 +1,3 @@
+PASS conic polarization at5,7,11,19,23; explicit Petersen isomorphism;5K3;6 K5 contractions;10 K33 subdivisions;A5 involution
+Petersen projective points [(0, 1, 2), (0, 1, 3), (1, 0, 2), (1, 0, 3), (1, 1, 0), (1, 1, 2), (1, 1, 3), (1, 4, 0), (1, 4, 2), (1, 4, 3)]
+Petersen to 2-subsets mapping {0: 0, 1: 7, 5: 3, 3: 4, 8: 9, 2: 2, 6: 8, 7: 5, 4: 1, 9: 6}
