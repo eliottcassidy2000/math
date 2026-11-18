@@ -1,0 +1,9 @@
+Ogg chamber: literal seeds and largest order: 29 8
+relative odd density of cores: 297271296000/1050750592307
+compiled controls checked by literal DP: 135
+one common host: (54, 60, 56, 49, 32, 0) end/two-cover reads: (1, 1, 2, 1) (7, 9, 6, 5)
+interior mirror pair: 13 15 one branch each: (54, 44, 56, 49, 34, 0) (54, 60, 56, 17, 32, 8)
+interior mirror pair: 11 17 one branch each: (38, 60, 56, 49, 33, 0) (54, 60, 24, 49, 32, 4)
+interior mirror pair: 9 19 one branch each: (54, 60, 40, 49, 36, 0) (22, 60, 56, 49, 32, 1)
+middle-out least orders: [(13, 5), (15, 5), (11, 5), (17, 6), (9, 5), (19, 6)]
+after the interior: 7 and 21 absent through order 6; proof gives the necessary global cutoff
