@@ -49,6 +49,8 @@ The target-based inverse loops over $j$ with $6B_0 32^j<p$, subtracts each candi
 
 ## 4. Why the simplest way of growing a single lattice switch fails
 
+**Follow-up (proved):** the double-zero seed proposed below cannot have a nonzero response. The [adjacent-read identity and padding obstruction](PADDING_OBSTRUCTION.md) close that route, including unequal transitive widths and common nontransitive padding. The growing-width compiler in §3 remains valid.
+
 A different growth idea *does* preserve the switching class within each larger pair: put an equal transitive block of order $a$ on each side of $U$ in its ordinal order, make $v$ lose to both external blocks, then switch $v$. But the old $q=2$ zero need not persist. Define $E_q$ to be the weighted even-internal-support response $\sum b_x W_x(q)$ before adding the padding. Define $O_q$ by the same endpoint difference but summed over **odd** internal supports. Allowing one exterior end in a cycle gives the exact formula
 $$
  \Delta f(q)=q^{a+1}\big( ((q+1)^a+(q-1)^a)E_q
