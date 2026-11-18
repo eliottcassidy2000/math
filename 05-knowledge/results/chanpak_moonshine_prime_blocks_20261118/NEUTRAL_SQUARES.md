@@ -17,7 +17,7 @@ Now use the transitive-spine apex count: if the root beats just the first two sp
 H=3^j 2^w+1,     j=k+2, w=t+m−1,
 order=j+w+3.
 ```
-For fixed j≥4,w≥3 this gives w−2 different classes (t=1,…,w−2). The spine degrees occupy every value from N−2 down to N−m, and N−m−1 is absent because all core degrees are at most N−m−2. So the first gap from the top recovers m. This is nonisomorphism before converse identification (at worst a factor two loss after merging).
+For fixed j≥4,w≥3 this gives w−2 different classes (t=1,…,w−2). The spine degrees occupy every value from N−2 down to N−m, and N−m−1 is absent because all core degrees are at most N−m−2. So the first gap from the top recovers m. Converse gives exactly the reflection t↔m−2. In the converse graph put the two old V vertices in reverse order at the beginning of the new spine, followed by the old successor clones in reverse order. Its clone list is the old predecessor clones reversed, the old z as its new marked vertex, then the old spine with its first two vertices removed in reverse order. Its new V consists of the first two old spine vertices reversed, and its new z is the old marked vertex. Checking the three core directions and two exceptional spine arcs gives G(k,t,m)^op≅G(k,m−2,t+2) literally. Thus the merged family contains exactly ceil((w−2)/2) classes, with precisely one self-converse class in the family when w is odd and none when w is even.
 
 ## A literal square and exact edit distance
 
