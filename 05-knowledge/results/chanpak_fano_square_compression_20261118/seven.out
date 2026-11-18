@@ -1,0 +1,24 @@
+core profile: (27, 234)
+core profile: (189, 1638)
+wrap: [315, 837, 1881]
+wrap: [2205, 5859, 13167]
+normalized object count 1 27
+normalized object count 2 234
+CAb → Cb False
+CAb → CAb True
+AbC → bC True
+AbC → AbC True
+bCA → bC True
+bCA → bCA True
+CAbC → CbC False
+CAbC → CAbC True
+AbCA → bC True
+AbCA → AbC True
+AbCA → bCA True
+AbCA → AbCA True
+CAbCA → CbC False
+CAbCA → CAbC True
+CAbCA → CbCA False
+CAbCA → CAbCA True
+bC → bC True
+colored cycle packs: 7 fixed, 26 free orbits
