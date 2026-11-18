@@ -43,6 +43,11 @@ def run():
             T,(S,C,V,z)=build(k,t,m)
             h=3**j*2**w+1
             assert reads(T,None)==h and degree_marker(T)==m
+            oldr=C[k]
+            S2=V[::-1]+C[k+1:][::-1]
+            C2=C[:k][::-1]+(z,)+S[2:][::-1]
+            X,_=build(k,m-2,t+2,(S2,C2,(S[1],S[0]),oldr))
+            assert X==tuple(((1<<len(T))-1)^row^(1<<a) for a,row in enumerate(T))
             if t>1:
                 x=C[k+1];Q,_=build(k,t-1,m+1,(S+(x,),C[:k+1]+C[k+2:],V,z))
                 arcs={(i,l) for i,l in combinations(range(len(T)),2) if (T[i]>>l&1)!=(Q[i]>>l&1)}
