@@ -1,0 +1,6 @@
+direct-DP rising spoke tests: 1793
+literal count: 4 4 5
+literal count: 7 179 35
+literal count: 7 185 49
+Pell check: only adjacent 3,4 among powers of two tested
+two-switch lift: 64 literal DP checks
