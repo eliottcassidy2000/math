@@ -1,0 +1,13 @@
+order 5 H 15 q2 90 raw/context (15, 15) unused 0 rows (6, 12, 24, 17, 3)
+order 5 H 15 q2 78 raw/context (3, 3) unused 0 rows (16, 5, 9, 3, 14)
+order 8 H 513 q2 6102 raw/context (9, 27) unused 0 rows (56, 117, 129, 22, 100, 76, 141, 59)
+slots [1..6]: [513, 7128, 52353, 268128, 1073025, 3575448]
+order 8 H 513 q2 6294 raw/context (3, 3) unused 0 rows (212, 137, 186, 97, 170, 195, 22, 72)
+slots [1..6]: [513, 7320, 54225, 277728, 1107825, 3676248]
+order 10 H 4151 q2 79954 raw/context (7, 7) unused 0 rows [142, 156, 184, 240, 225, 195, 135, 512, 255, 383]
+order 10 H 4151 q2 84802 raw/context (1, 1) unused 0 rows (954, 1004, 305, 1012, 322, 912, 37, 852, 576, 84)
+order 11 H 16079 q2 404118 raw/context (1, 1) unused 0 rows (2008, 89, 1019, 1760, 1128, 131, 1696, 530, 1786, 50, 678)
+Eisenstein rotation spectrum: [(9, 24), (45, 48), (99, 8), (129, 12), (135, 12), (171, 12), (189, 12)]
+3 formal parity threshold 7 f(p+1) mod p^3 18
+5 formal parity threshold 11 f(p+1) mod p^3 50
+7 formal parity threshold 15 f(p+1) mod p^3 98
