@@ -60,6 +60,15 @@ for n in range(2,6):
    cuts[min(code(relabel(B,p)) for p in perms)]+=1
   for r in rec:assert cuts[r['canonical']]*r['Aut']==gs
   assert len(inds)*gs==math.factorial(n)
+  if n%2:
+   signs=[(n-1-A[i].bit_count())%2 for i in range(n)]
+   C=switch(A,signs)
+   assert len({(n-1-C[i].bit_count())%2 for i in range(n)})==1
+   assert sum(relabel(C,p)==C for p in perms)==gs
+   for b in range(1<<(n-1)):
+    B=switch(A,[(b>>i)&1 for i in range(n)])
+    bs=[(n-1-B[i].bit_count())%2 for i in range(n)]
+    assert switch(B,bs)==C
   rows.append({'canonical_switch':sk,'G_switch':gs,'sheet_size':len(inds),'classes':rec})
  assert all(sum(flow[i])==len(sheets[k]) for i,k in enumerate(sheetkeys))
  assert all(flow[i][j]==flow[j][i] for i in range(len(sheets)) for j in range(len(sheets)))
