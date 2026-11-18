@@ -1,0 +1,9 @@
+G31 endpoint incidence 4,17: [((False, False), 291), ((False, True), 23), ((True, False), 34), ((True, True), 1)]
+oriented physical deletion at 31,32: (644, 134, 6)
+G32 directions up to reversal: Counter({'interior': 333, 'end 4': 35, 'end 17': 24})
+spanning cycle first opened at 32: (1, 8, 28, 21, 4, 32, 17, 19, 30, 6, 3, 13, 12, 24, 25, 11, 5, 31, 18, 7, 29, 20, 16, 9, 27, 22, 14, 2, 23, 26, 10, 15)
+newborn endpoint paths among 32 cuts: 2
+support: [1, 15, 16, 17, 23, 25, 26, 27, 28, 29, 30, 31, 32]
+cycles: [(32, 1)]
+counts from 25: [(25, 10, 0), (26, 12, 0), (27, 35, 0), (28, 52, 0), (29, 19, 0), (30, 20, 0), (31, 349, 0), (32, 392, 1)]
+orders 2–32 with 32 oriented one-face paths: []
