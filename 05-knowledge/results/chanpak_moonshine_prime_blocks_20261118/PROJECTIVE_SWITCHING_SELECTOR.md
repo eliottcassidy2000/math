@@ -33,7 +33,7 @@ For every fixed n-vertex tournament T,
 
     sum_{cuts s modulo global negation} H(T^s) = n!.
 
-For each ordered permutation pi, orienting its n-1 consecutive edges forwards imposes equations s_pi(j) s_pi(j+1)=b_pi(j),pi(j+1). Because these edges form a spanning tree, the signs are determined uniquely up to simultaneous negation. Thus exactly one cut makes that permutation a Hamiltonian path. Sum over permutations. This is the repository's spanning-tree switching-chart mechanism, not a new assertion of independence. It gives a mean n!/2^(n-1) but no surjectivity of the integer-valued reading.
+For each ordered permutation pi, orienting its n-1 consecutive edges forwards imposes equations s_pi(j) s_pi(j+1)=b_pi(j),pi(j+1). Because these edges form a spanning tree, the signs are determined uniquely up to simultaneous negation. Thus exactly one cut makes that permutation a Hamiltonian path. Sum over permutations. This is the repository's THM-1467 (`oriented-spanning-tree-switching-sum`), coupled to THM-474 (`tilings-are-switching-classes`), not a new conservation law or assertion of independence. It gives a mean n!/2^(n-1) but no surjectivity of the integer-valued reading.
 
 The finite failure is already sharp at n=5. All 1,024 labelled tournaments give one of two switching histograms (count: multiplicity among 16 cuts):
 
