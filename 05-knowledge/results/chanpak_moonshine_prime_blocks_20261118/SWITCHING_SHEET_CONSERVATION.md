@@ -1,6 +1,6 @@
 # Switching sheets: factorial conservation inside the tournament metagraph
 
-**All-order:** an exact action, orbit-weight identities, and balanced complement flow. **Finite-exact:** n<=5 sheets and color-resolved flows. **Not proved:** any new universal spectrum or A000568 recurrence. Elementary tiling fibre and blue/black laws are inherited from THM-643 and THM-796; the point here is their coupling to switching-isomorphism sheets.
+**All-order:** an exact action, orbit-weight identities, and balanced complement flow. **Finite-exact:** n<=5 sheets and color-resolved flows. **Not proved:** any new universal spectrum or A000568 recurrence. The transversal, action, and factorial law are recovered prior results (THM-474, THM-479, THM-1467), not new theorems. Elementary tiling fibre and blue/black laws are inherited from THM-643 and THM-796; the point here is their coupling to switching-isomorphism sheets and the exact finite transfer table.
 
 ## 1. The transversal and induced action
 
@@ -84,3 +84,11 @@ The Leech lattice, Monster, and supersingular-prime collection {4,2,5,3,7,13} ca
 ## 6. Replay
 
 `python switching_sheet_replay.py` independently enumerates all fixed-path tilings for 2<=n<=5, all label permutations, the normalized action orbits, ordinary automorphisms, switching stabilizers, Hamiltonian counts by subset DP, the two weighted identities, and full/blue complement flows. It also checks the multiplicity |G_S|/a_D directly in every sheet. Normal and optimized runs agree. JSON retains all ordinary class data and canonical encodings. This is not a census at larger orders and supplies no new universal spectrum result.
+
+## 7. Additional recovered structure: odd-order canonical sources and Walsh restrictions
+
+A second provenance pass recovered THM-474 (`tilings-are-switching-classes`), THM-479 (`level-holonomy-and-branch-split`), and THM-1467 (`oriented-spanning-tree-switching-sum`). Sections 1--2 rederive these mechanisms and combine their weights; they must not be promoted as new foundations. THM-4524 and THM-4531 already build extensively on this structure.
+
+For odd n there is a canonical actual tournament in every labelled cut class. This is THM-1470 / THM-4531 P1, here in a short sign formula. Set r_i=product_(j!=i) b_ij and define c_ij=r_i r_j b_ij. Under a cut with signs s_i, one has r'_i=(product s_j)s_i r_i, so c is cut-invariant. Its row products all equal R=product r_i=(-1)^(n(n-1)/2). Conversely any representative with all row products equal is this one. Thus its in-degrees have the same parity as n(n-1)/2, equivalently in-degree=out-degree modulo4. The construction is equivariant, so its ordinary automorphism group is precisely G_S. In particular G_S has odd order at odd n: an involution in a tournament automorphism group would interchange some pair of vertices, reversing their arc, which is impossible. Cauchy's theorem excludes even group order. This explains why the two five-vertex stabilizers are odd; it does not force them specifically to be3 and5 at all orders.
+
+THM-4524 A3 supplies a stronger inherited constraint on the same source: H after switching, as a polynomial in loop/cut spins, has Walsh degree at most 2 floor(n/3), with only even monomials. This is valuable input for target-selection experiments, but low degree and the first moment do not make the range a full interval, as the n=5 histograms demonstrate. The exact transfer table therefore belongs beside, not in place of, the existing Fourier and canonical-source machinery.
