@@ -1,5 +1,5 @@
 """Universal cyclic lift replay for count-changing one-arc edits."""
-from physical_edges import SPOKES,add,frames,frame_reverse,restrict,TT,H
+from physical_edges import SPOKES,add,frames,frame_reverse,restrict,TT,H,line,blue,canon
 from clone_replay import inflate
 from replay import profile
 def universal_lift():
@@ -23,4 +23,11 @@ def universal_lift():
             y=2*hy[0]+(2**w-1)*(hy[1]-hy[0])
             assert H(A)==x and H(B)==y
             print('universal padded route for',N,h,'width',w,x,H(C),y)
-if __name__=='__main__':universal_lift()
+def boundary():
+    T=(4,17,34,7,109,203,143,31);P=(0,2,5,3,1,4,6,7)
+    assert P in frames(T)
+    assert H(T)==187 and H(line(T,P))==35 and not blue(T,P)
+    print('positive width-one boundary',H(T),H(line(T,P)))
+if __name__=='__main__':
+    boundary()
+    universal_lift()
