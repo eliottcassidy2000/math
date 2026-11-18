@@ -24,4 +24,8 @@ This cannot equal ±1 at the **same strip v**. To see it, a_w≥3 would have to 
 
 A target-first use of this geometry must therefore prescribe the **lifted** count and find a core pair that meets the two height equations. For each proposed core h and width w, the required B is fixed by L_w=2h+a_w(B−h); a merely congruent answer cannot replace it. The structural part (two actual lines) is solved once a physical pair is supplied. General supply of the needed core profiles remains open.
 
+## The short-width boundary of the exact beta=59 lane
+
+The core-built beta=59 family in the inverse atlas used a pair of twins and hence width w≥2. At width one the count request is 187→35. The separate order-eight source (4,17,34,7,109,203,143,31), with frame (0,2,5,3,1,4,6,7), has a literal black line with those exact endpoint counts. Thus the beta=59 shortcut has a genuine metagraph route at **every positive width**: one different scaffold for w=1, the two-line rim exchange for w≥2. The w≥32 exact distance statement remains specific to that latter pair of graph classes.
+
 Replay: `python3 rim_replay.py`.
