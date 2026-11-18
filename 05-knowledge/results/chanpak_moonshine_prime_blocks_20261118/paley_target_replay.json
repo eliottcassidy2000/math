@@ -1,0 +1,53 @@
+{
+  "field_q": 2187,
+  "irreducible_coefficients_low_to_high": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    1
+  ],
+  "literal_embeddings_and_integer_character_equations": 75,
+  "certificates": {
+    "1": {
+      "matrix": [
+        0
+      ],
+      "field_vertices": [
+        0
+      ]
+    },
+    "3": {
+      "matrix": [
+        4,
+        1,
+        2
+      ],
+      "field_vertices": [
+        0,
+        2,
+        1
+      ]
+    },
+    "5": {
+      "matrix": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "field_vertices": [
+        0,
+        2,
+        3,
+        1
+      ]
+    }
+  },
+  "F27_two_anchor_patterns": 1404,
+  "minimum_pattern_population": 6,
+  "note": "Finite checks support identities, not universal target coverage."
+}
