@@ -1,0 +1,8 @@
+mod 30 cutoff 3 reachable 40 return component 36 largest SCC 36 largest SCC projected units 8 reachable projected units 8 max shortest from seed 11
+entrance: (empty)
+mod 90 cutoff 6 reachable 312 return component 300 largest SCC 300 largest SCC projected units 24 reachable projected units 24 max shortest from seed 17
+entrance: (empty)
+mod 270 cutoff 9 reachable 3096 return component 2988 largest SCC 2988 largest SCC projected units 72 reachable projected units 72 max shortest from seed 25
+entrance: (empty)
+mod 810 cutoff 9 reachable 100765 return component 1 largest SCC 97524 largest SCC projected units 216 reachable projected units 216 max shortest from seed 37
+entrance: R
