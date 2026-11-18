@@ -1,0 +1,2 @@
+profile [0, 17, 190, 828, 1752, 1800, 720] triangles 4 five-cycles 4 disjoint triangle pairs 0 marked [31, 18, 17, 28, 44, 69] ends [1, 8, 1, 4, 2, 1] probes [(1249, 2211), (549, 937), (577, 867), (1057, 1857), (2221, 4161), (5049, 9811)]
+profile [0, 17, 190, 828, 1752, 1800, 720] triangles 4 five-cycles 2 disjoint triangle pairs 1 marked [33, 17, 20, 21, 61, 55] ends [1, 5, 6, 3, 1, 1] probes [(1377, 2467), (553, 867), (653, 1089), (721, 1171), (4009, 7731), (3313, 6339)]
