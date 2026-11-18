@@ -1,0 +1,11 @@
+literal five-read checks 225
+live, traps, diameter: 36 4 11
+residue 1 word (empty) H 1
+residue 7 word RQPR H 445117
+residue 13 word RQPQ H 303043
+residue 19 word RR H 289
+residue 11 word R H 11
+residue 17 word RRPQR H 59376167
+residue 23 word RRP H 5273
+residue 29 word RQP H 3779
+cyclic five-tournament path permutation signs: [(-1, 10), (1, 5)]
