@@ -1,0 +1,5 @@
+four vertex charts of six, six edge charts of four
+80 balanced rooted charts, orbit sizes: [8, 24, 24, 24]
+sorted outdegrees, H, labeled multiplicity: [((0, 1, 2, 3), 1, 24), ((0, 2, 2, 2), 3, 8), ((1, 1, 1, 3), 3, 8), ((1, 1, 2, 2), 5, 24)]
+H distributions by four face-parity bits: [('0000', [(1, 4), (5, 4)]), ('0011', [(1, 4), (5, 4)]), ('0101', [(3, 8)]), ('0110', [(1, 4), (5, 4)]), ('1001', [(1, 4), (5, 4)]), ('1010', [(3, 8)]), ('1100', [(1, 4), (5, 4)]), ('1111', [(1, 4), (5, 4)])]
+normal basis: [2, 4, 7] fixed point in flag coordinates: 7
