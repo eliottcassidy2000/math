@@ -59,3 +59,20 @@ targets are known. Changing old contacts, rerouting the
 marked coordinate, and using a larger reader remain open.
 
 Run python3 physical_short_rail_replay.py.
+
+## Stronger: no induced extension reads the first marked value
+
+The initial state T_0 is strongly connected: it retains the directed
+cycle on labels 0,1,...,7 in that order. Suppose any tournament,
+of any order, retained T_0 induced and had exactly 101 paths.
+All of T_0 must sit inside one strong component. Since component
+counts multiply and 101 is prime, that component has count 101.
+Busch's strong minimum gives its order at most
+1+3 log_5(101)<10, so it has order 8 or 9. Order 8 is exactly T_0
+with count 87; order 9 was excluded by the full one-vertex scan.
+The rest of the tournament, if any, consists of transitive padding.
+Thus the startup state cannot be read by any attachment-only
+construction, even one with arbitrarily many new vertices. A
+reader for the entire sequence has to change old arcs, choose
+a different source, or treat the first height separately.
+Busch: https://doi.org/10.37236/1141 .
