@@ -40,3 +40,39 @@ The positive high windows show that changing the deletion source can produce exa
 ## Reproduction and scope
 
 Run `python3 high_repair_window_replay.py` for the literal witnesses, and `python3 dyadic_recontact_replay.py` for the complete recontact scan on the listed dyadic sources. Seeded random search was used to discover, not certify, the high windows. No maximality claim is made.
+
+## All-order ceiling for one robust fixed-occupancy sector
+
+Session247 (cf. `../session247_metagraph_weave_20261110/transfer/PROOF.md`)
+already gives the safe-token-graph method. Its extrema test adapts
+directly to the +2 pair and bound 4 used here. Fix occupancies in
+blocks of equal affine repair coefficient. For an exchange p to q
+inside one block, the baseline increment is
+
+    l_q-l_p - sum_{j occupied, j != p,q} (w_qj-w_pj).
+
+In each block the number of terms is fixed (one fewer in the
+p,q block). Its exact minimum and maximum are the corresponding
+sums of the smallest and largest available entries in each block,
+independently. Retain edges whose increment always lies in [-4,4].
+Even if the retained graphs disconnect, further fixing occupancies
+in their components gives sectors with connected exchange graphs.
+
+There is a quantitative limit not addressed by connectivity alone.
+For a connected retained graph on b vertices, route between any
+two equal-size token sets along a spanning tree. Fix one leaf at
+a time: if its occupancy is wrong, move the nearest required
+token or vacancy to it along a path of at most b-1 edges; remove
+that leaf and continue. At most b(b-1)/2 swaps suffice. Thus, for
+blocks or retained components of sizes b_i, the largest and
+smallest counts in a single fixed-occupancy sector differ by at
+most 2 sum_i b_i(b_i-1) + 2, including the extra upper endpoint
+from the +2 repair.
+
+With O(m) spokes, a robust sector therefore covers at most O(m²)
+span, not the order-2^m span needed by the dyadic criterion.
+This does not bound a state-dependent exchange graph, a union of
+sectors, or transport via different sources. A promising next
+design is to use robust sectors as small verified cells and
+construct physical bridges between them; proving one sector
+connected will not by itself suffice.
