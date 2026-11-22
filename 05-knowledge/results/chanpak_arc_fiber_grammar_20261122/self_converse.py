@@ -3,7 +3,7 @@
 import argparse
 from collections import Counter
 from functools import cache
-from itertools import combinations
+from itertools import combinations, permutations
 from math import comb, factorial
 
 from fibers import paths, strong
@@ -85,6 +85,11 @@ def quotient_path_parities(partial):
     total = 0
     for mask in endpoints:
         total ^= mask
+    starts = 0
+    for order in permutations(range(m)):
+        if all(quotient[a] & (1 << b) for a, b in zip(order, order[1:])):
+            starts ^= 1 << order[0]
+    assert starts == total
     assert total.bit_count() % 2 == 1
     return total
 
