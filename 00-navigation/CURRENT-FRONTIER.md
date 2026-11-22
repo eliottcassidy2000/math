@@ -193,6 +193,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
+- **FINITE-EXACT:** [Farey complementary placement at E61](../05-knowledge/results/chanpak_farey_complementary_exact_20261122/README.md): the whole adaptive cube-root window is empty on spines 4 and 8; wider terminal sectors, shorter all-modulus control, and exact 13-adic lower-contact clocks. Unrestricted crossing remains open.
 [Backchain pressure 23/24 and terminal inverses](../05-knowledge/results/chanpak_terminal_profiles_20261122/README.md) · [Directed-edge descent and dyadic flips](../05-knowledge/results/chanpak_absolute_descent_20261122/README.md) · [Profinite automata and the E61 miss](../05-knowledge/results/chanpak_profinite_automata_20261122/README.md).
 
 [Contact folds, Moser spindle and dyadic seams](../05-knowledge/results/chanpak_hadwiger_planar_folds_20261122/README.md).
