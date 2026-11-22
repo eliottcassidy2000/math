@@ -193,6 +193,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
+- **PROVED / FINITE-EXACT:** [Arc-flip geometry at 7 and 21](../05-knowledge/results/chanpak_gap_cubical_geometry_20261122/README.md): an all-order permutohedral model, six-core relative collapse giving homotopy equivalences for all cutoffs 15–23, and four/six marked cores for the nearest literal crossings. It does not close Chan–Pak.
 - **PROVED / FINITE-EXACT:** [2–3–11 brackets and Collatz clocks](../05-knowledge/results/prime_brackets_collatz_2311_20261122/README.md): long-cycle lift modulo 121, exact odd/even return cost, independent rational-cycle residues, and any-depth E61 exclusion for signed traces with at most two odd steps.
 - **FINITE-EXACT / PROVED:** [E61 two-clock Farey inverse](../05-knowledge/results/chanpak_farey_two_three_clocks_20261122/README.md): new arbitrary-flank bands (1.1 trillion normalized minima on spine 8); two-suffix carry factorizations and incompatible binary/ternary lifts at the first exceptional axis. Both full spines remain open.
 - **FINITE-EXACT:** [Farey complementary placement at E61](../05-knowledge/results/chanpak_farey_complementary_exact_20261122/README.md): the whole adaptive cube-root window is empty on spines 4 and 8; wider terminal sectors, shorter all-modulus control, and exact 13-adic lower-contact clocks. Unrestricted crossing remains open.
