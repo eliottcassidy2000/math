@@ -180,6 +180,36 @@ every exponent. What is needed is an order-growing construction
 inside the strong primitive carrier, not more exterior padding
 or another independent scalar attainment.
 
+## One missing pair: a recurrence target outside tournaments
+
+There is an equivalent path-cover state on an oriented graph \(D_0\)
+with exactly one missing unordered pair \(\{a,b\}\). Write \(C=H(D_0)\).
+Let \(X\) count ordered pairs of disjoint directed paths covering the
+vertices, with the first ending at \(a\) and the second beginning at
+\(b\). Define \(Y\) with \(a,b\) interchanged. Both paths are nonempty.
+These are marked two-slot reads of the *incomplete* digraph; for example
+\[
+ X=\sum_{\substack{W\subseteq V\\a\in W,\ b\notin W}}
+      H_{\mathrm{end}=a}(D_0[W])\,
+      H_{\mathrm{start}=b}(D_0[V\setminus W]).
+\]
+Cutting a full path precisely at the missing arc shows that the two
+possible completions have counts \(C+X,C+Y\). Thus for a strong unit
+seam, after relabeling the marked endpoints, \(X>0\) and \(Y=X+2\);
+the exact center is \(C+X+1\), not \(C\) alone.
+
+This suggests an explicit induction contract on incomplete oriented
+graphs: carry the exact center \(M=C+X+1\), half-gap
+\(g=(Y-X)/2\), and the current power \(B=2^p\). A valid lifting
+operation taking \((M,g,B)\) to \((4M+B,g,2B)\), and keeping the
+two completions strong, would advance a perfect-center seam by one
+exponent since \(E_{p+1}=4E_p+2^p\). This is a **sufficient open
+construction target**, not an existing operation. Neutral singleton
+padding keeps all three path reads unchanged, while an ordinal block
+of count larger than one multiplies the gap, so neither can be the
+lifting operation. The exact path-cover state indicates what an
+active internal substitution still has to control.
+
 The finite replay checks the parsing identity and the two
 weak exceptions over all pairs through order six. The statements
 above follow from the arguments, not by extrapolating that census.
