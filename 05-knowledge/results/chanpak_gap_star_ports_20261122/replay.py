@@ -2,6 +2,11 @@
 
 import argparse
 from math import gcd, isqrt
+from pathlib import Path
+import sys
+
+sys.path.append(str(Path(__file__).resolve().parent.parent / "chanpak_e31_physical_20261122"))
+from e31_certificates import stored_pairs
 
 from check_perfect_band import CERTIFICATES, remove_common_extremes
 
@@ -210,6 +215,10 @@ def exact_pair(target):
     def witness(lower, core, twin, tag, x, y):
         pair = remove_common_extremes(star_rows(core, tag, x, y), star_rows(twin, tag, x, y))
         return lower, (x, y), *pair
+
+    for lower, core, edge, tag, x, y in stored_pairs():
+        if target in (lower, lower + 2):
+            return witness(lower, core, flipped(core, *edge), tag, x, y)
 
     for lower, core, edge, tag, x, y in known:
         if target in (lower, lower + 2):

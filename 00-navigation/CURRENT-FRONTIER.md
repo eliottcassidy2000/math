@@ -201,7 +201,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 [8/9/27](EIGHT-NINE.md); [descent](../05-knowledge/results/core_descent_endpoints_20261112/README.md): Chan–Pak OPEN.
 - [Clocks](../05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md); [more](S111-plus.md).
 - [Exact U5-free capacity](../05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md).
-- [THM-5313 and earlier routes](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md) · [Unit flips at cube-root distance and perfect centers](../05-knowledge/results/chanpak_gap_star_ports_20261122/README.md).
+- [THM-5313 and earlier routes](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md) · [Cube-root bound and exact exponent-31 flip](../05-knowledge/results/chanpak_e31_physical_20261122/README.md).
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [Ordinal metrics, substitution, and walk resolvents](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md#ordinal-metrics-and-walk-resolvents) retain the THM-2183/2195 and 3121–3248 routes. Q4 radius/non-P remain OPEN.
 - THM-1880/1885: Pell; THM-3335/3339/3357/3364/3379: Fibonacci

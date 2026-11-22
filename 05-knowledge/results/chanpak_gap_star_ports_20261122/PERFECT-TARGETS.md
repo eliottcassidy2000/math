@@ -54,6 +54,6 @@ for exponent, offset, chart, w in cases:
 
 ## The tested boundary at exponent 31
 
-Neither \(E_{31}-1=2,305,843,008,139,952,127\) nor \(E_{31}+1=2,305,843,008,139,952,129\) was a lower endpoint in the tested bank of 104 distinct one-sided scalar charts. A straddling flip for this perfect number remains **OPEN** here.
+Neither \(E_{31}-1=2,305,843,008,139,952,127\) nor \(E_{31}+1=2,305,843,008,139,952,129\) was a lower endpoint in the tested bank of 104 distinct one-sided scalar charts. Inserting a marked tournament before the growing flank subsequently gave three straddling flips at this perfect number, including a pair on 60 vertices. [Exact exponent-31 construction](../chanpak_e31_physical_20261122/README.md)
 
 The finite bank was generated from every stored tournament class in the [order-5, 6 and 7 row files](../../../session212/cycle-levels), each reversal of a single arc, and every nonempty proper tag mask. Retain pairs having equal \(h,c\) and base apex counts differing by two. For each parity \(b\in\{0,1\}\) retain it if the two intercepts \(k-b(e-o)\) also differ by two; deduplicate the triples (lower intercept, \(h,c\)) with their parity. For each chart apply the [split inverse](README.md#one-arm-target-inversion-and-two-exact-landings) with the prescribed parity of the low word. This tests all address lengths for that chart. It leaves other cores, tag choices outside this rule, two-sided settings, and the general flip graph available.

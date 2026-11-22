@@ -64,7 +64,7 @@ The finite readings and literal glued controls can be reproduced with `python3 c
 
 ## The upper neighbor at the next perfect exponent
 
-The full upper neighbor at exponent 31 has a short scalar certificate even without a unit seam at that center. Put \(E=2^{30}(2^{31}-1)\). Direct multiplication gives
+The upper neighbor at exponent 31 also has a short scalar certificate. It predates the [60-vertex single-arc construction](../chanpak_e31_physical_20261122/README.md). Put \(E=2^{30}(2^{31}-1)\). Direct multiplication gives
 \[
  E+1=457256543\cdot5042777503=2305843008139952129.
 \]
