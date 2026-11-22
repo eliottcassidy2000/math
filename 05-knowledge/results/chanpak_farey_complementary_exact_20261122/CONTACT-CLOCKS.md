@@ -18,7 +18,7 @@ Here \(k\) is the Hamilton count of the suffix including its initial boundary an
 
 For the exact width argument use the three fixed boundary vertices as special positions in a spanning path and order them. The intervening ordinary vertices are transitive and distribute into at most four ascending slots. The growing block is entirely beyond the fixed contacted vertex and lies between two neighboring boundary positions; its vertices have equal external incidence to each fixed vertex. Once all fixed assignments are chosen, permitting or forbidding each slot to receive some of this growing block is a count of onto assignments into a fixed subset of the four slots. Inclusion–exclusion expresses each read as a linear combination of \(1^w,2^w,3^w,4^w\) for \(w>0\), where the \(0^w\) term is zero. The endpoint restriction on \(t\) changes only which slots may be occupied, since all vertices of the growing block have the same tag. The companion independent four-width check, which allocates ordinary vertices by endpoint masks, verifies the displayed coefficients; the distinct four bases give an invertible Vandermonde system. In particular no asymptotic assumption about discarded higher bases is used.
 
-Set \(A=2^{60},N=2^j\), and \(P_j=(A^N-1)/(A-1)\). Along the Euclid transport, the prefix registers are multiplied by \(P_j\) and the growing width is \(60N-s\), where \(s=36,55\), respectively. The upper-minus-lower change \(\Delta_j\) from the same physical flip therefore satisfies the single formula
+Set \(A=2^{60},N=2^j\), and \(P_j=(A^N-1)/(A-1)\). Along the Euclid transport, the prefix registers are multiplied by \(P_j\) and the growing width is \(60N-s\), where \(s=36,55\), respectively. The neighbor-minus-witness change \(\Delta_j\) from the same physical flip therefore satisfies the single formula
 \[
  \Delta_j=P_j\bigl(C+D\,2^{-s}A^N\bigr).
 \]
@@ -30,6 +30,8 @@ The integer coefficients, obtained as \(F\Delta t+G(\Delta k-\Delta t)\), are:
 | 56 | 55 | 41538374868278620992215173614796800 | -344221346644057575 |
 
 The formula uses rational notation with dyadic denominator only; at odd primes it is simply multiplication by a unit. Each \(\Delta_j\) is an integer keeping the same literal reversal and the same exact lower.
+
+**Absolute signs.** Contact 53 has positive change strictly larger than two at every exponent in the branch, since both affine coefficients are positive. For contact 56 the change is larger than two at \(j=0\), but negative for every \(j\ge1\): its bracket is \(C-|D|2^{60\cdot2^j-55}\), positive and greater than two at power 5 and negative already at power 65. Thus neither contact yields an exact upper neighbor anywhere on these exponent families. In particular agreement with the *upper target residue* at deeper precision need not mean the edited graph has larger absolute count.
 
 ## 2. Exact simultaneous phases and every 13-adic depth
 
