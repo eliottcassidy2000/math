@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Exact ordinary counts and Z-polynomials for two strong self-converse probes."""
 
+from functools import lru_cache
 from itertools import combinations, permutations, product
 
 U = (58, 4, 1, 6, 14, 30)
@@ -140,5 +141,48 @@ def main():
             raise ArithmeticError("marked probes")
         print(f"inflated cover evaluations {nums}; marked count {marked}")
 
+def quotient_pair_count(a):
+    """Count by quotient words and run multiplicity, not labelled subset DP."""
+    n = len(a)
+    full = (1 << n) - 1
+
+    @lru_cache(None)
+    def walk(seen, twice, last):
+        total = int(seen == full)
+        for nxt in range(n):
+            bit = 1 << nxt
+            if twice & bit or not a[last][nxt]:
+                continue
+            repeated = seen & bit
+            total += (2 if repeated else 1) * walk(seen | bit, twice | repeated, nxt)
+        return total
+
+    return sum(walk(1 << i, 0, i) for i in range(n))
+
+
+def check_full_function_twins():
+    for rows, inflated, marked in (
+        ((42,64,3,70,15,94,21), 2536873, 1641),
+        ((18,8,67,37,14,87,27), 2451241, 1609),
+    ):
+        sigma = list(reversed(range(7)))
+        a = matrix(rows)
+        check_strong_anti(a, sigma)
+        tri = cycle_sets(a, 3)
+        inv = (len(tri), len(cycle_sets(a, 5)), len(cycle_sets(a, 7)),
+               sum(not (x & y) for x,y in combinations(tri,2)))
+        if inv != (9,16,5,4) or sorted(map(sum,a)) != [1,2,3,3,3,4,5]:
+            raise ArithmeticError(("full inventory", inv))
+        b,sigma_b = inflate_pair(a,sigma)
+        c,sigma_c = mark(a,sigma)
+        check_strong_anti(b,sigma_b)
+        check_strong_anti(c,sigma_c)
+        ans = (all_h(a)[-1], all_h(b)[-1], quotient_pair_count(a), all_h(c)[-1])
+        if ans != (77, inflated, inflated, marked):
+            raise ArithmeticError(("full-function collision", ans))
+        print(f"full inventory {inv}; inflated {inflated}; marked {marked}")
+
+
 if __name__ == "__main__":
     main()
+    check_full_function_twins()

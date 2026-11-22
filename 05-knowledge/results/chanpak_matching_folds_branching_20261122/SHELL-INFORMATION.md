@@ -199,5 +199,40 @@ arithmetic question is whether changing marked contact can select
 inverse branches with disjoint **absolute** images, not merely separate
 two hosts or recover a grading by linear combinations.
 
+## 5. Even the full function cannot model quotient inflation
+
+The scope is stronger than the six-vertex specialization collision.
+Two seven-vertex strong self-converse hosts, with anti-involution
+\(i\mapsto 6-i\), have masks
+\[
+ A=(42,64,3,70,15,94,21),\qquad
+ D=(18,8,67,37,14,87,27).
+\]
+Both have score multiset \(1,2,3,3,3,4,5\). In each, the inventories of
+3-cycles, 5-cycles, 7-cycles and disjoint pairs of triangles are
+\(9,16,5,4\), respectively. There are no other nonempty odd-cycle
+collection types at order seven. Hence
+\[
+ F_A=F_D=p_1^7+18p_3p_1^4+32p_5p_1^2+16p_3^2p_1+10p_7,
+ \qquad H(A)=H(D)=77.
+\]
+Yet both symmetry-preserving tests from §4 split them: replacing every
+vertex by a transitive pair gives \(2{,}536{,}873\) versus
+\(2{,}451{,}241\), and the canonical degree-two marked shell gives
+\(1{,}641\) versus \(1{,}609\). In particular **no operator on the
+full \(F_T\) alone** can model uniform quotient inflation for all
+strong self-converse hosts, in contrast to the universal differential
+operator for the ordinary shell.
+
+The finite check lists cycles canonically by their least vertex and
+uses subset-and-last-vertex DP for ordinary counts. The inflated count
+is independently cross-checked on the quotient walks: keep one-visit
+and two-visit bitsets, and multiply by two when a block is visited for
+the second time, since its two vertices then occupy separate runs.
+A one-visit block has just its increasing order. Add the weights of
+all walks that visit every block. This supplies a finite certificate
+for the full-function collision; it is not a census or a minimality
+claim.
+
 Finite checks on the displayed new instances: run the accompanying
 `check_shell_information.py` from this directory.

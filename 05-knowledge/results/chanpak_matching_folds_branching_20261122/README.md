@@ -50,7 +50,7 @@ unmarked tournament.
 
 ## Follow-up: what the shell can actually observe
 
-[Reverse shells](SHELL-INFORMATION.md) recover exactly the principal specialization; vertex-deletion traces upgrade it to a two-variable quotient. Two explicit strong self-converse hosts are indistinguishable under every ordinary shell and as module inputs, but separate after a fixed-center probe or as uniformly inflated quotients. The [center law](CENTER-PROBE.md) identifies the missing graded endpoint response. Both are proved, with exact checks for the displayed hosts.
+[Reverse shells](SHELL-INFORMATION.md) recover exactly the principal specialization; vertex-deletion traces upgrade it to a two-variable quotient. Two explicit strong self-converse hosts are indistinguishable under every ordinary shell and as module inputs, but separate after a fixed-center probe or as uniformly inflated quotients. The [center law](CENTER-PROBE.md) identifies the missing graded endpoint response. A second witness has equal **full** Rédei–Berge functions and still separates under both uniform inflation and a marked shell. Both are proved, with exact checks for the displayed hosts.
 
 ## Next proof obligation
 
