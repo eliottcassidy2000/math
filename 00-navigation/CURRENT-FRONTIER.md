@@ -193,9 +193,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
-- **PROVED + FINITE-EXACT:** [Terminal compatibility and smaller parts](../05-knowledge/results/chanpak_terminal_profiles_20261122/README.md): the old backchain is sparse (exponent 23/24); exact inverse with a thirteen-zero reset, arbitrary-gap continuants and explicit second/third-read distinctions. Cofinite coverage with unrestricted tournaments remains open.
-- **PROVED + FINITE-EXACT.** [Backchain inverse, dyadic flips, carry, gluing and Paley bounds](../05-knowledge/results/chanpak_absolute_descent_20261122/README.md). Cofiniteness OPEN.
-- **PROVED.** [Profinite automata](../05-knowledge/results/chanpak_profinite_automata_20261122/README.md). At E61 a periodic word passes every modulus and skips the target.
+[Backchain pressure 23/24 and terminal inverses](../05-knowledge/results/chanpak_terminal_profiles_20261122/README.md) · [Directed-edge descent and dyadic flips](../05-knowledge/results/chanpak_absolute_descent_20261122/README.md) · [Profinite automata and the E61 miss](../05-knowledge/results/chanpak_profinite_automata_20261122/README.md).
 
 [Contact folds, Moser spindle and dyadic seams](../05-knowledge/results/chanpak_hadwiger_planar_folds_20261122/README.md).
 
@@ -207,7 +205,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 - [Exact U5-free capacity](../05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md).
 - [THM-5313](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md) · [Exponent-31 flip](../05-knowledge/results/chanpak_e31_physical_20261122/README.md) · [E61 inverse and exponents 3–23](../05-knowledge/results/chanpak_e61_fibonacci_target_20261122/README.md).
 - THM-1805: triangle Vandermonde. THM-1862/1936: join products for `H`, signed Rédei; additive `c3`.
-- [Ordinal metrics and resolvents](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md#ordinal-metrics-and-walk-resolvents) (THM-2183/2195, 3121–3248). Q4 radius/non-P OPEN.
+- THM-2183/2195, 3121–3248: ordinal metrics and resolvents via THM-5313 above. Q4 radius/non-P OPEN.
 - THM-1880/1885: Pell; THM-3335/3339/3357/3364/3379: Fibonacci
   tournaments. [THM-3509](../01-canon/theorems/THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray.md):
   `4/6/3` K4 carriers; matching loses Cassini sign. THM-3497: ancestry
