@@ -1,0 +1,15 @@
+All 36 seam tables recovered on 256 cuts, with 141 samples modulo 24 and 189 integer samples.
+Orbit count residues modulo 24: [(1, 22), (3, 13), (5, 26), (7, 37), (9, 17), (11, 20), (13, 16), (15, 25), (17, 11), (19, 23), (21, 20), (23, 26)]
+Even moduli with full odd support: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 50, 52, 54, 56, 58, 62, 64, 66, 68, 70]
+Absolute-gap-two contacts: 66 distinct centers: 29
+Center support modulo 24: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]
+Center fiber multiplicity gcd: 2
+Centers: [122, 236, 370, 534, 536, 852, 866, 1094, 1144, 1266, 1408, 1424, 1574, 1586, 1600, 1618, 1726, 1918, 1934, 2008, 2018, 2236, 2238, 2374, 2376, 2522, 2528, 2688, 2770]
+Missing odd residues modulo 48: [41]
+Minimum number of marked arcs covering all 12 center phases: 4
+  edge (1, 2) center phases [4, 10, 14, 16, 18, 22]
+  edge (1, 7) center phases [0, 2, 6, 20]
+  edge (2, 3) center phases [2, 8]
+  edge (2, 4) center phases [12]
+Quartic terms of the marked H-6C potential for edge (1,2): 18 all incident at exactly one endpoint
+Exact linear seam observation dimension: 182
