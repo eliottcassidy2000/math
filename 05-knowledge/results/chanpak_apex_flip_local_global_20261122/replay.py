@@ -142,6 +142,19 @@ def finite_checks():
             boundary_checks += 1
     print(f"odd-order full adjacent-width scans: {boundary_checks}; k=3..7")
 
+    for j in range(1, 8):
+        modulus = 3 ** j
+        period = 2 * 3 ** (j - 1)
+        for numerator, denominator in ((-15, 4), (-3, 2), (3, 2), (15, 4)):
+            coefficient = numerator * pow(denominator, -1, modulus)
+            solutions = []
+            for k in range(period):
+                t = pow(2, k, modulus)
+                if (2 * t * t + coefficient * t + 1) % modulus == 0:
+                    solutions.append(k)
+            assert len(solutions) == 2 and solutions[0] % 2 != solutions[1] % 2
+    print("3-adic divisibility: two width classes per branch through 3^7")
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)

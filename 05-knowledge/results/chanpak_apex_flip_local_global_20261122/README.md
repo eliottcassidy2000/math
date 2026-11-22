@@ -67,6 +67,14 @@ For \(d=1\) and \(k\ge3\), the full list of four *centers* \(L+1\) is
 \]
 In the same order the offsets \((u-T,w-T)\) are \((-3,0),(-2,0),(-1,1),(-1,2)\). Substitute \(F(T-3)=T/4+1\), \(F(T-2)=T/2+1\), \(F(T-1)=1\), \(F(T)=T+1\), \(F(T+1)=T/2+1\), and \(F(T+2)=3T/4+3\) from the recurrence. At order nine the centers are 98, 116, 140 and 158. All four lower counts are \(-1\bmod 2^{k-2}\) at order \(2k+3\). Thus a constraint on physical width selects a single 2-adic limit from a family which, without that constraint, realizes every odd phase.
 
+## The forced factor at an odd-order unit seam
+
+For every one of the four odd-order branches with \(d=1\), the center is \(2T^2\equiv2\pmod3\). Hence the lower endpoint is \(1\pmod3\), and the upper endpoint is divisible by 3. More precisely, on each individual branch the natural density of width indices \(k\) for which the upper has exact 3-adic valuation \(j\) equals \(2/3^j\), for every \(j\ge1\).
+
+To see this, write the upper as \(G(T)=2T^2+cT+1\), where \(c\) is one of \(\pm3/2,\pm15/4\). All denominators are units modulo every power of 3. Modulo 3 both nonzero arguments solve \(G(T)=0\), and \(G'(T)=4T+c\) is nonzero there. Moreover \(2^{2\cdot3^{j-1}}=1+3^j b_j\) with \(3\nmid b_j\), by cubing from \(4=1+3\). Above any solution in \(k\bmod 2\cdot3^{j-1}\), its three lifts to the period \(2\cdot3^j\) change \(T\bmod 3^{j+1}\) by the three multiples of \(3^j b_j T\). The derivative gives precisely one lift solving the next congruence. Starting at \(j=1\) yields two solution classes in every period \(2\cdot3^{j-1}\). Subtracting the density for divisibility by \(3^{j+1}\) from that for \(3^j\) proves the claim.
+
+At even orders the phase theorem gives a different prediction. For any fixed finite set of primes \(S\) and any half-gap \(d\), both endpoint counts can simultaneously be chosen coprime to \(\prod_{p\in S}p\) with the stated square-root spacing. At odd \(p\) choose any lower residue outside \(\{0,-2d\}\); at 2 choose 1. The Chinese remainder theorem supplies a single allowed phase. This removes any prescribed finite list of prime divisors in this construction. Primality of both endpoints remains open.
+
 The map to \((d,L\bmod M)\) forgets both absolute height and the edge's location in the flip graph. The prefix interval restores height to square-root precision. The side of the binary width boundary restores the order distinction. The native single-arc edges here need no identification with the path-reversal or tiling-line metagraph. The applicable [research pattern](../../../00-navigation/META-PATTERNS.md#separate-local-support-from-bounded-height-coverage) is separation of local support from bounded-height coverage.
 
 ## Reproduction
