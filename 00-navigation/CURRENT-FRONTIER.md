@@ -193,6 +193,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
+- **PROVED + FINITE-EXACT:** [Absolute directed-edge descent](../05-knowledge/results/chanpak_absolute_descent_20261122/README.md): exact backchain inverse, sparse dyadic bands and literal unit flips, a finite carry criterion, sharp summand gluing and Paley repair barriers. Cofinite coverage remains open.
 - **PROVED:** [Profinite automata and literal seams](../05-knowledge/results/chanpak_profinite_automata_20261122/README.md): a fixed repeated block passes every simultaneous prime-power test at exponent 61 but jumps over the exact target; sparse tape compilation, a Hasse CA and modular/absolute automata barriers.
 
 [Planar contact folds, quotient Moser spindle and crossed dyadic seams](../05-knowledge/results/chanpak_hadwiger_planar_folds_20261122/README.md).
