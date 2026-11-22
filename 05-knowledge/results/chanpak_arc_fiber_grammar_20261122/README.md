@@ -10,6 +10,8 @@ An exact flip at exponent 61 must contain a common directed four-cycle on which 
 
 Every odd count through 3,423,417 other than the two exceptions already occurs at order 14. All smallest representatives of these nontrivial heights are strong, by a component-replacement theorem that applies at every height. [More than a million consecutive odd heights first attained at order 13](ORDER-13-BIRTH-INTERVAL.md) · [Exact interval at order 14](ORDER-14-INTERVAL.md) · [Small-component exclusion](BIRTH-CUT-COVER.md)
 
+At even orders every tournament isomorphic to its own converse has height 1 modulo 4. All even-order exponent-61 lower witnesses therefore come in distinct converse pairs. Both minimum-order classes at height 17 are self-converse, while all 30 at 257 come in 15 pairs. [Converse involutions, marked classes and the half-size quotient](SELF-CONVERSE.md)
+
 ## The original single-count series and its missing edge information
 
 Let \(F_h(z)\) count ordinary isomorphism classes at all orders with exactly \(h\) directed Hamiltonian paths. Use the empty tournament only as the neutral object at \(h=1\). Write \(A_d(z)\) for the order polynomial of nontrivial strong classes of count \(d\). The inherited formula for **each** positive odd target, including an absent one, is

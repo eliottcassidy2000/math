@@ -72,6 +72,8 @@ Use the inherited fixed-order bound \(n\le4(N+10)/(28\cdot2^{m-7})\) for a nonsi
 
 ## Exact Boolean formulation of the unrestricted remaining words
 
+The [unrestricted top-order census](TOP-ORDER-CENSUS.md) closes these two charts for every odd exponent from 11 through 37. It also gives exact strong edges at neighboring centers, including an edge centered at \(E_{13}+2\).
+
 Writing \(b_i\) for the bit at position \(i\), introduce an integer \(A_d=\sum_j b_{j+d}(1-b_j)\) for every distance \(d\ge1\). The counting recurrence gives \(f(y)=\sum_{d\ge1}(2^{d-1}+[d=1])A_d\). Introduce a Boolean for each conjunction and sum the integer equation \(K_0+(K_1-K_0)b_0+cy+hf(y)=N\) in base 128 using seven-bit limbs and explicit nonnegative carries. The [OR-Tools CP-SAT model](suffix_cp.py) also imposes the proven terminal congruence and high/low prefix interval. It leaves every admissible suffix available. Any returned address is checked against the original recurrence. The planted 18-bit control returned 131,615 for each chart.
 
 With 70 seconds per unrestricted chart, CP-SAT returned **UNKNOWN** for both. An independent Boolean carry-save encoding in CaDiCaL likewise returned unknown with a 20,000-conflict budget per chart. These runs settle neither existence nor nonexistence. To reproduce the CP-SAT attempt use `python3 -B suffix_cp.py four --seconds 70` and substitute `singleton` for the other chart. The `--export` option writes a solver model. With the time option omitted the solve has no set time limit.

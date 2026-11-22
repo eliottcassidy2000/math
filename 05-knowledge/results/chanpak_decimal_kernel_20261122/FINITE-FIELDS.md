@@ -8,6 +8,8 @@ Writing \(B_r(A)\) for ordered covers by \(r\) nonempty paths, the count of any 
 
 Grouping positive powers of \(j\) by their exponent modulo \(p-1\) expresses every host count as a linear combination modulo \(p\) of the same host with transitive modules of orders \(1,\ldots,p-1\). At \(p=3\) a single term suffices: replace \(A\) by a singleton in odd order or a transitive pair in even order, and multiply the resulting scalar by \(H(A)\). Hence **every module of height divisible by three forces every containing tournament to have height divisible by three**. At \(p=5\), universal divisibility is equivalent to both \(H(A)\) and \(Q_A(2)\) being divisible by five. In particular an arc leading from \(E_{61}-1\) to \(E_{61}+1\) must meet each such module in its lower host. The two endpoints can meet at most two pairwise disjoint modules of this kind. [Strong lower families and their boundary arcs](../chanpak_e61_fibonacci_target_20261122/NEW-LOWER.md)
 
+On any tree describing recursive substitutions, the zeros of the local quotient weights modulo three must lie on the tree path joining the two endpoints of a successful flip. The strict ancestor condition can exclude an edit even when it repairs the only three-divisible proper module. [Tree-path criterion and exponent-61 example](MODULE-PATH.md)
+
 ## Joint realization by a finite alphabet
 
 First choose even parity. At each prime take representatives \(1,\dots,(p-1)/2\) of the sign pairs in the nonzero field. Values at these coordinates determine any even function vanishing at zero. An ordinal sum multiplies the coordinate vectors entrywise. Use all catalogued tournaments through order eight as seeds, padding each odd-order seed by one singleton to make it even.

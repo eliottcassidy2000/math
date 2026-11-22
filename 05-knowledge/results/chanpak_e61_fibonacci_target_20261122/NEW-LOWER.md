@@ -39,6 +39,23 @@ These six arms give \(6!=720\) classes on \(1+6+61+7+4\cdot8=107\) vertices. To 
 \]
 Inserting the long arm has six positions. It and the initial singleton add 63 vertices. Unique decoding proves the announced counts. The extra types and orders here give no upper bound on the full count fiber. [Ordinary class catalogue and recursion](../chanpak_arc_fiber_grammar_20261122/README.md)
 
+## Sampling the class fiber and counting its singleton extensions
+
+The word recurrence also gives an exact uniform choice of an **isomorphism class** in either displayed order. At the small-word state \((X,b,j)\), choose a particular next arm \(A\) with probability
+\[
+ \frac{[z^{b-|A|-1}t^{j-1}]D(X/R(A),z,t)}
+      {[z^bt^j]D(X,z,t)}
+\]
+when its factor divides \(X\), assigning zero to impossible choices. Start at \((2^{60}-1,44,5)\) or \((2^{60}-1,45,5)\), then choose the large arm's position uniformly among six positions. The recurrence normalizes the probabilities; their product telescopes to the reciprocal of the certified class count. Equivalently partition an interval of that many integer ranks in proportion to the continuation counts. The reverse decoding of the unmarked roots makes each completed word one class. This illustrates the role of a normalized reverse history in the [pinned Latin-square sampling writeup](https://github.com/Mira-Cult/math/blob/30ddaaad27b48df2002225c3e3f40cffd02c5253/notes/combinatorics/exact-latin-square-sampling/README.md). For these tournament words the reverse history is unique.
+
+Prepending and appending an arbitrary run of singleton components gives a contribution to the all-size generating function for \(E_{61}-1\). Combine the two orders above with the disjoint [90-vertex](../chanpak_e61_compact_volchkov_20261122/STRONG-90.md) and [enlarged 91- and 93-vertex](PROFILE-FIBERS.md) families. The following is a coefficientwise lower bound, and is the exact generating function of this particular subfamily:
+\[
+ \frac{2{,}349{,}088{,}560z^{90}+414{,}387{,}118{,}080z^{91}
+ +30{,}453{,}618{,}843{,}648{,}000z^{93}
+ +645{,}120z^{107}+737{,}280z^{108}}{(1-z)^2}.
+\]
+In our two six-arm orders, taking the converse reverses the order of the arms and takes each arm to its converse. The unique 61-arm can never remain in the same position of an even-length word. Unique decoding and closure of the small bank under converse therefore give exactly 322,560 and 368,640 pairs of distinct converse classes in these two families. The single strong component in a padded word recovers its order and class, and the two singleton runs are recoverable independently. The inherited strong-middle theorem implies no member of this padded family can reach the upper endpoint with a single edit: any such pair strips to the strong lower class with a corresponding upper exit. [SCC and marked-pair series](../chanpak_arc_fiber_grammar_20261122/README.md)
+
 ## Every arc of the 720 explicit permutations
 
 The quotient has one symbol per arm and one singleton per root. In the order outer root, outer arm, next root, next arm, and so on until the innermost singleton, all intersymbol arcs point forward except those between consecutive roots. To return to a given arm after leaving it, a skeleton path must cross back over that arm by the unique backward arc spanning its position. Thus each arm occurs in at most two visits on a single path and at most three across two disjoint paths; a fourth visit would require using this same root arc twice.
