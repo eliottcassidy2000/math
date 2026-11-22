@@ -1,8 +1,9 @@
 ---
 id: HYP-9669
-title: "The 2-adic derivative law of the Hamiltonian path count on a switching class. For a tournament T, a vertex set U and c_U(F) = sum_{S in U} (-1)^(|U|-|S|) F(T^S): v_2(c_U(H)) >= ceil(|U|/2) and v_2(c_U(hc)) >= ceil(|U|/2) - 1 for every non-empty U (hc = number of Hamiltonian cycles). Consequence: the binary digit k of H has F_2-degree at most 2^k on every switching class"
+title: "The 2-adic derivative law of the Hamiltonian path count on a switching class. For a tournament T, a vertex set U and c_U(F) = sum_{S subseteq U} (-1)^(|U|-|S|) F(T^S): v_2(c_U(H)) >= ceil(|U|/2) and v_2(c_U(hc)) >= ceil(|U|/2) - 1 for every non-empty U (hc = number of Hamiltonian cycles). Consequence: the binary digit k of H has F_2-degree at most 2^k on every switching class"
 status: >
-  OPEN (CONJECTURE). PROVED for |U| <= 4 (THM-5139: |U| = 1, 2 is Redei; |U| = 3, 4 is the quadratic law).
+  PROVED in full on 2026-11-22 by THM-5313, switching derivatives of Hamiltonian paths and cycles.
+  Original 2026-11-11 record: proved for |U| <= 4 (THM-5139: |U| = 1, 2 is Redei; |U| = 3, 4 is the quadratic law).
   PROVED reductions (source note, section 2.3): the statement for hc on all odd subtournaments implies the
   statement for H, and for odd order the two are equivalent; the digit lemma (the valuations imply degree at
   most 2^k for digit k); equivalent form: for every k the residue 2^(-k) c_U(H) mod 2, |U| = 2k, is the same at
@@ -28,6 +29,7 @@ status: >
 session: mac-mini-2026-11-11-gauge
 source: 05-knowledge/results/switching_quadratic_census_gauge_20261111/README.md
 related:
+  - THM-5313
   - THM-5139
   - THM-4524
   - THM-5127
@@ -36,13 +38,15 @@ related:
 
 # HYP-9669 - the 2-adic derivative law on a switching class
 
-Source: [the note](../../05-knowledge/results/switching_quadratic_census_gauge_20261111/README.md), section 2.3;
+**PROVED.** Both valuation inequalities hold at every order, with stronger factorial divisibility in higher degrees. [THM-5313, switching derivatives of Hamiltonian paths and cycles](../../01-canon/theorems/THM-5313-switching-derivatives-of-hamiltonian-paths-and-cycles.md)
+
+Original formulation and finite evidence follow. Source: [the note](../../05-knowledge/results/switching_quadratic_census_gauge_20261111/README.md), section 2.3;
 registration and outcome in `PREREGISTRATION.md` of the packet (R1).
 
 **Conjecture.** For every tournament `T` and every non-empty vertex set `U`, with
-`c_U(F) = sum_{S in U} (-1)^(|U|-|S|) F(T^S)`: `v_2(c_U(H)) >= ceil(|U|/2)` and `v_2(c_U(hc)) >= ceil(|U|/2) - 1`.
+`c_U(F) = sum_{S subseteq U} (-1)^(|U|-|S|) F(T^S)`: `v_2(c_U(H)) >= ceil(|U|/2)` and `v_2(c_U(hc)) >= ceil(|U|/2) - 1`.
 
-**Next step.** The case `|U| = 5, 6` for Hamiltonian cycles: `c_U(hc) = 0 (mod 4)`; equivalently
+**Original next step (now covered).** The case `|U| = 5, 6` for Hamiltonian cycles: `c_U(hc) = 0 (mod 4)`; equivalently
 `(1/2) c_{abcd}(hc) mod 2` is a class invariant (a 4-uniform "second endpoint hypergraph"). The proof of THM-5139
 is a recursion modulo 2 on the pair (endpoint vector, endpoint graph); a recursion modulo 4 would start from
 the exact system, for `e = s + t`, `d = s - t` (integers):
