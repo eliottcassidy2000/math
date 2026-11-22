@@ -1,0 +1,8 @@
+branch 0,0,0 rows 20000000001 slabs 488282 lines 10714444 reads 124068 hits 0
+branch 0,0,1 rows 20000000001 slabs 488282 lines 18947781 reads 219741 hits 0
+branch 0,1,0 rows 20000000001 slabs 488282 lines 10714692 reads 124656 hits 0
+branch 1,0,1 rows 20000000001 slabs 488282 lines 18948418 reads 220561 hits 0
+branch 1,0,0 rows 20000000001 slabs 488282 lines 10714862 reads 124347 hits 0
+branch 0,1,1 rows 20000000001 slabs 488282 lines 18947649 reads 220669 hits 0
+branch 1,1,0 rows 20000000001 slabs 488282 lines 10714591 reads 124389 hits 0
+branch 1,1,1 rows 20000000001 slabs 488282 lines 18948311 reads 220800 hits 0

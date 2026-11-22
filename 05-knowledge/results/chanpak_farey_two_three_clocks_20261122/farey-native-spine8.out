@@ -1,0 +1,8 @@
+branch 0,0,0 rows 100000000001 slabs 6510417 lines 24719346 reads 22718 hits 0
+branch 0,0,1 rows 100000000001 slabs 6510417 lines 43983017 reads 40790 hits 0
+branch 0,1,0 rows 100000000001 slabs 6510417 lines 24718188 reads 22628 hits 0
+branch 1,0,1 rows 100000000001 slabs 6510417 lines 43981024 reads 41076 hits 0
+branch 1,0,0 rows 100000000001 slabs 6510417 lines 24718296 reads 22934 hits 0
+branch 0,1,1 rows 100000000001 slabs 6510417 lines 43979969 reads 40916 hits 0
+branch 1,1,0 rows 100000000001 slabs 6510417 lines 24716546 reads 22726 hits 0
+branch 1,1,1 rows 100000000001 slabs 6510417 lines 43981457 reads 41221 hits 0

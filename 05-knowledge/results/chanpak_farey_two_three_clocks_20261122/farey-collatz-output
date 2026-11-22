@@ -1,0 +1,8 @@
+spine=4 sign=-1 swapped=0 depth=24 pieces=33554430 band=3 phase=0 hits=0
+spine=4 sign=-1 swapped=1 depth=24 pieces=33554430 band=0 phase=0 hits=0
+spine=4 sign=1 swapped=0 depth=24 pieces=33554430 band=1 phase=0 hits=0
+spine=4 sign=1 swapped=1 depth=24 pieces=33554430 band=3 phase=0 hits=0
+spine=8 sign=-1 swapped=0 depth=24 pieces=33554430 band=0 phase=0 hits=0
+spine=8 sign=-1 swapped=1 depth=24 pieces=33554430 band=0 phase=0 hits=0
+spine=8 sign=1 swapped=0 depth=24 pieces=33554430 band=0 phase=0 hits=0
+spine=8 sign=1 swapped=1 depth=24 pieces=33554430 band=1 phase=0 hits=0
