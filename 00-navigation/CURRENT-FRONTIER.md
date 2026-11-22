@@ -194,7 +194,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
-- **Nov22:** [Mirrored Collatz branches and literal unit lifts](../05-knowledge/results/chanpak_mirimanoff_unit_lifts_20261122/README.md): exact base-3 carry, one physical arc in all congruence phases, six new exact exponent certificates (3–10 now contiguous), and the homogeneous-lift barrier.
+- **Nov22:** [Mirrored Collatz branches and literal unit lifts](../05-knowledge/results/chanpak_mirimanoff_unit_lifts_20261122/README.md): exact base-3 carry, one physical arc in all congruence phases, seven new exact exponent certificates (3–10 now contiguous), and the homogeneous-lift barrier.
 
 [Seven-term gluing, nested contacts and even perfect seams](../05-knowledge/results/chanpak_cech_perfect_seams_20261122/README.md).
 [Hamilton support and birth grammar](../05-knowledge/results/chanpak_support_birth_grammar_20261122/README.md) · [Perfect offsets and Liouville signs](../05-knowledge/results/chanpak_absolute_liouville_leech_20261122/README.md).

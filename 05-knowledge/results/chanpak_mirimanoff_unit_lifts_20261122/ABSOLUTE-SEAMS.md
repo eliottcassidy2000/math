@@ -20,6 +20,7 @@ standard binary word of \(y\). An address zero is an empty flank.
 | 12 | 4,17,10,19,37,207,31,95 | 4 | 5,6 | 0 | 44964 | 25 |
 | 14 | 68,81,74,115,101,71,0 | 65 | 3,5 | 0 | 1191170 | 29 |
 | 16 | 4,17,34,7,13,27,63,127 | 86 | 2,3 | 294 | 5699 | 31 |
+| 20 | 34,36,49,39,43,0 | 19 | 0,2 | 0 | 6510943581 | 40 |
 
 The two counts in every row are exactly \(E_p-1,E_p+1\). In particular
 the rows for \(p=8,9,10\) are independently counted by
@@ -152,6 +153,16 @@ The unsigned and signed untagged-end reads are
 computed with linearly many integer arithmetic operations in \(n\).
 In particular any fixed balanced core with \(\Delta k=\Delta z=2\)
 gives a literal unit seam for every \(U_n\) and every common suffix.
+
+For the fixed published six-vertex core with lower
+\((h_D,c_D,z_D,k_D)=(25,28,-10,43)\), the transfer even simplifies to
+\[
+ L_n(y)=28[Q_n(y+1)-d_n]+25[k_n+c_n y+h_nP(y)-z_n(y\bmod2)]-10
+\]
+and the single-arc companion is \(L_n(y)+2\). The standalone \(h_n\)
+term cancels by \(43=25+28-10\), the singleton-tag identity in
+the initial core. Thus both the receiver length and the binary
+suffix are freely and independently selectable.
 
 This receiver family by itself has an exact scale obstruction.
 Let \(\lambda>2\) be the positive root of \(x^3-2x^2-x-2\);

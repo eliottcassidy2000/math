@@ -94,6 +94,7 @@ CASES = {
     # Append the tagged singleton to the deletion before attaching the suffix.
     14: ((68,81,74,115,101,71,0),65,(3,5),0,1191170),
     16: ((4,17,34,7,13,27,63,127),86,(2,3),294,5699),
+    20: ((34,36,49,39,43,0),19,(0,2),0,6510943581),
 }
 def strong(rows):
     target=(1<<len(rows))-1
@@ -139,6 +140,16 @@ def receiver_replay(N=11):
         assert subpaths(a,tag)[-1]==1
         assert q==Q[n] and te+to==q-h-D[n] and te-to==1-h
         assert n<3 or strong(a)
+        if 3<=n<=5:
+            D0=(4,5,24,19,35,15)
+            bits=((1<<n)-1)<<6
+            D0=tuple(r|bits for r in D0)+tuple(r<<6 for r in a)
+            tags=1|(tag<<6)
+            for y in (0,1,5):
+                value=28*(q*(y+1)-D[n])+25*(k+c*y+h*p(y)-z*(y&1))-10
+                pair=(star_rows(D0,tags,0,y),star_rows(flipped(D0,1,3),tags,0,y))
+                assert all(strong(T) for T in pair)
+                assert tuple(subpaths(T)[-1] for T in pair)==(value,value+2)
         h,c,z,k=k,h+c,-h-z,k+c-z
     print("receiver recurrence PASS")
 
