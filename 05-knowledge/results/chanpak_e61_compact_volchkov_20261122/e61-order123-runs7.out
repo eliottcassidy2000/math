@@ -1,0 +1,16 @@
+chart 81 width 115 at most 7 runs hits 0
+1: 2 nodes, 1 leaves
+2: 112 nodes, 2 leaves
+3: 6216 nodes, 112 leaves
+4: 215941 nodes, 6216 leaves
+5: 6198444 nodes, 215941 leaves
+6: 122662113 nodes, 6198444 leaves
+7: 0 nodes, 122662113 leaves
+chart 1021 width 112 at most 7 runs hits 0
+1: 1 nodes, 1 leaves
+2: 105 nodes, 1 leaves
+3: 5143 nodes, 105 leaves
+4: 147711 nodes, 5143 leaves
+5: 4211632 nodes, 147711 leaves
+6: 64781663 nodes, 4211632 leaves
+7: 0 nodes, 64781663 leaves
