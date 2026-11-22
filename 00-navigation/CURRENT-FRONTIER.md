@@ -194,6 +194,8 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
+- **Nov22:** [Unit-distance seams and planar contact folds](../05-knowledge/results/chanpak_hadwiger_planar_folds_20261122/README.md): literal paired-cut folds, the strong quotient Moser spindle, and an exact crossed-contact dyadic family.
+
 [Exponent-61 compact classes, orders 90–93 and Volchkov](../05-knowledge/results/chanpak_e61_compact_volchkov_20261122/README.md) · [Square-sum 8–9, paired cuts and exact exponents 11/21](../05-knowledge/results/chanpak_middle_out_square_sum_20261122/README.md) · [Mirrored Collatz lifts, all phases and exact exponents 3–10](../05-knowledge/results/chanpak_mirimanoff_unit_lifts_20261122/README.md).
 [Seven-term gluing and nested contacts](../05-knowledge/results/chanpak_cech_perfect_seams_20261122/README.md) · [Hamilton support and birth](../05-knowledge/results/chanpak_support_birth_grammar_20261122/README.md) · [Perfect offsets and Liouville signs](../05-knowledge/results/chanpak_absolute_liouville_leech_20261122/README.md).
 [Liouville, roughness, mod-2^19 and fruit inverse](../05-knowledge/results/chanpak_prime_parity_inverse_20261122/README.md) · [Affine +2 ports, Monsky and Hodge selectors](../05-knowledge/results/chanpak_affine_sieve_metagraph_20261122/README.md).
