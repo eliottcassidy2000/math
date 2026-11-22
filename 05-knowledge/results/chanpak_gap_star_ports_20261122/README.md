@@ -6,7 +6,7 @@ L_-<N<L_+,\qquad \max(N-L_-,L_+-N)=O(N^{1/3}).
 \]
 In each pair **the same specified internal arc of a six-vertex core is reversed**. One can construct both pairs using logarithmically many evaluations of binary-address formulas. In particular the number of distinct single-arc unit seams with lower endpoint at most \(X\) is \(\Omega(X^{2/3})\).
 
-The unequal-flank construction now gives a strong 60-vertex pair across the perfect number at exponent 31 and fourteen consecutive odd counts near it. [Exact witnesses and the general transmission identity](../chanpak_e31_physical_20261122/README.md)
+The unequal-flank construction now gives a strong 60-vertex pair across the perfect number at exponent 31 and 26 consecutive odd counts around it. [Exact witnesses and the general transmission identity](../chanpak_e31_physical_20261122/README.md)
 
 **Two independently selected targets are exact.** The first twin primes above \(2^{32}\), namely **4,294,967,387 and 4,294,967,389**, are joined by one arc reversal on 34 vertices. The first prime above \(10^{12}\), **1,000,000,000,039**, is joined to **1,000,000,000,041** on 38 vertices. Explicit constructions for both appear below. Chan–Pak and the [full seam ladder, THM-5271](../../../01-canon/theorems/THM-5271-the-count-is-a-potential-on-the-flip-metagraph-the-seam-ladder-implies-chan-pak-the-microcosm-3-1-6-1-21-the-square-sum-cycle-at-32-and-the-order-10-near-join-reach.md) remain **OPEN**. Chan and Pak record the spectrum conjecture and credit its formulation to bof and Gordon Royle. [Conjecture 6.2](https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf)
 

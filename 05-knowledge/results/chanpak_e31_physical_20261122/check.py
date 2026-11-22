@@ -55,12 +55,27 @@ def right_addresses(center, v):
     return sorted(found)
 
 
+def joined_right_count(left, right, y):
+    """Evaluate the ordinal gluing law without expanding the combined deletion."""
+    h, _, starts, _, k = left
+    hr, qr, starts_r, ends_r, kr = right
+    c, z = sum(starts), starts[0] - starts[1]
+    terminal, signed_terminal = sum(ends_r), ends_r[0] - ends_r[1]
+    base = hr * k + h * (kr - hr) + c * terminal + z * signed_terminal
+    mass = qr * c + h * sum(starts_r)
+    signed_start = h * (starts_r[0] - starts_r[1])
+    return base + mass * y + h * hr * p(y) - signed_start * (y & 1)
+
+
 def check_pair(d, tags, edge, vrows, vtags, y, expected, order):
     deletion = ordinal(d, vrows)
     tag = tags | (vtags << len(d))
     twin = flipped(deletion, *edge)
     reads = [profile(g, tag) for g in (deletion, twin)]
     counts = [count_from_profile(data, 0, y) for data in reads]
+    reader = profile(vrows, vtags)
+    assert counts == [joined_right_count(profile(core, tags), reader, y)
+                      for core in (d, flipped(d, *edge))]
     assert counts == [expected - 1, expected + 1]
     lower, upper = [star_rows(g, tag, 0, y) for g in (deletion, twin)]
     assert len(lower) == len(upper) == order and strong(lower) and strong(upper)
@@ -96,10 +111,19 @@ def main():
         check_pair(d, tags, edge, vrows, vtags, y, perfect_shape(31), order)
     for offset, d, tags, edge, vrows, vtags, y, order in NEARBY:
         deletion = ordinal(d, vrows)
+        core_tags = tags
         tags |= vtags << len(d)
         graphs = (deletion, flipped(deletion, *edge))
         center = perfect_shape(31) + offset
-        assert [count_from_profile(profile(g, tags), 0, y) for g in graphs] == [center - 1, center + 1]
+        if vrows:
+            reader = profile(vrows, vtags)
+            if offset == -8:
+                assert reader[0] == 159 and subpaths(vrows, vtags)[-1] == 1
+            counts = [joined_right_count(profile(core, core_tags), reader, y)
+                      for core in (d, flipped(d, *edge))]
+        else:
+            counts = [count_from_profile(profile(g, tags), 0, y) for g in graphs]
+        assert counts == [center - 1, center + 1]
         pair = [star_rows(g, tags, 0, y) for g in graphs]
         assert flipped(pair[0], *edge) == pair[1]
         a, b = remove_common_extremes(*pair)
@@ -108,7 +132,8 @@ def main():
         print('Strong unit edge at E31 offset', offset, 'on', len(a), 'vertices')
     offsets = {0, *(entry[0] for entry in NEARBY)}
     endpoints = {offset + delta for offset in offsets for delta in (-1, 1)}
-    assert set(range(-5, 22, 2)) <= endpoints
+    assert set(range(-24, 25, 4)) <= offsets
+    assert set(range(-25, 26, 2)) <= endpoints
     for exponent, v, y in ((23, 250, 184567259), (31, 6, 1973896132951836)):
         target = perfect_shape(exponent)
         assert word_count(v, y) == target - 1
