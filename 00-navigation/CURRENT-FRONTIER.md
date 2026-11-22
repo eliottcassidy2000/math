@@ -194,6 +194,8 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
+- **Nov22:** [Mirrored Collatz branches and literal unit lifts](../05-knowledge/results/chanpak_mirimanoff_unit_lifts_20261122/README.md): exact base-3 carry, one physical arc in all congruence phases, six new exact exponent certificates (3–10 now contiguous), and the homogeneous-lift barrier.
+
 [Seven-term gluing, nested contacts and even perfect seams](../05-knowledge/results/chanpak_cech_perfect_seams_20261122/README.md).
 [Hamilton support and birth grammar](../05-knowledge/results/chanpak_support_birth_grammar_20261122/README.md) · [Perfect offsets and Liouville signs](../05-knowledge/results/chanpak_absolute_liouville_leech_20261122/README.md).
 [Nov 22: prime parity and absolute inverses](../05-knowledge/results/chanpak_prime_parity_inverse_20261122/README.md): truncated Liouville and simultaneous roughness on physical +2 pairs, cofinal mod-2^19 atlas repair, and the fruit quotient inverse. Chan–Pak OPEN.
