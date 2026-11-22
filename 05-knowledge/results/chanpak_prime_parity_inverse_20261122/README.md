@@ -13,12 +13,25 @@ a physical history, and an exact ordinary count.
   have joint sign asymptotics. A separate sieve makes both actual
   outputs and the scaled gap bounded-almost-prime simultaneously.
   The gap in this full-state construction is not fixed.
+- [Sieve both members of a literal +2 pair](FIXED-GAP-SIEVE.md).
+  Reordering two existing port moves gives independent digits at the
+  same scale. At each sufficiently large depth, on the order of
+  $2^n/n$ distinct actual pairs survive with no prime factor below
+  $\exp(c\sqrt{\log N})$ in either member. Their truncated Liouville
+  signs balance; repunit moduli obstruct a naive uniform
+  power-scale mixing upgrade.
+- [Determinant parity and the output barrier](OUTPUT-TWIST.md).
+  The spectral gap survives a genuine determinant-Liouville twist,
+  but explicit prime and semiprime outputs have identical letter
+  counts and determinant. A signed identity isolates exactly what
+  full-parity correlations a rough +2 sieve would need.
 - [Repair the missing 411/413 phases](DYADIC-ATLAS.md).
   One new legal letter preserves the affine invariant and the exact
   backward history decoder. It fills infinitely many **absolute counts
   outside the earlier atlas**, in its two omitted classes modulo 512.
   The expanded middle bank gives infinitely many in every odd class
-  modulo $2^{18}$ but has two empty classes modulo $2^{19}$. Separate
+  modulo $2^{18}$. The extra physical letter F-star then repairs the
+  last two phases modulo $2^{19}$ by a fixed suffix. Separate
   literal one-arc witnesses attain the small **absolute** pair 411/413.
 - [The three-fraction equation and word-height bounds](FRUIT-INVERSE.md).
   On the prior orientation quotient, a dyadic guard plus Hensel lifting,
@@ -26,6 +39,12 @@ a physical history, and an exact ordinary count.
   inverse without a Mordell–Weil discrete logarithm. The same
   local-versus-height discipline keeps the physical tournament
   selectors honest; the equation's coordinates are not Hamilton counts.
+
+- [Limits of a literal sibling triple and of fixed linear reads](PAIR-INTERFACE.md).
+  The original sibling triple cannot satisfy the three-fraction equation,
+  and exponentially few words can give a bounded difference between
+  two distinct fixed linear reads. This is why the variable-height
+  branches and preserved affine lines must not be interchanged silently.
 
 ## Outside sources and limits
 

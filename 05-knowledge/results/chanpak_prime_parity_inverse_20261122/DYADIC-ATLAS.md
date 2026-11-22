@@ -1,6 +1,6 @@
 # Repairing the 411/413 phase by a new physical move
 
-**PROVED.** One new legal migration letter repairs both missing $411,413\bmod512$ phases of the previous +2 atlas. It also turns its $479,481\bmod512$ phases into infinite families, without loss of the exact history inverse. Adding two literal middle charts gives infinitely many counts in **every odd class modulo $2^{18}$**; at modulus $2^{19}$ this enlarged atlas has exactly two omitted odd phases. In every odd class modulo $2^{13}$, both flanks can grow independently and branch freely. None of these modular results implies full absolute coverage. There is also a literal one-arc switch with the **absolute values 411 and 413**.
+**PROVED.** One new legal migration letter repairs both missing $411,413\bmod512$ phases of the previous +2 atlas. It also turns its $479,481\bmod512$ phases into infinite families, without loss of the exact history inverse. Adding two literal middle charts gives infinitely many counts in **every odd class modulo $2^{18}$**; before the optional F-star letter, exactly two phases at modulus $2^{19}$ are omitted, and the new letter repairs them both. In every odd class modulo $2^{13}$, both flanks can grow independently and branch freely. None of these modular results implies full absolute coverage. There is also a literal one-arc switch with the **absolute values 411 and 413**.
 
 ## 1. An extra letter that preserves the unit line but changes the phase
 
@@ -104,3 +104,13 @@ For each chart evaluate both outputs on its product of $S$'s. A residue has infi
 The finite calculations use that multiplying the congruence modulus is not the same as increasing the size of a tournament. They establish sharp frontiers for these specific finite banks and leave open whether further lines or middle choices can give all dyadic levels. In particular arbitrarily long histories in every class through $2^{18}$ do not solve the absolute inverse for any specified integer.
 
 Exact finite checks: `python3 check_dyadic_atlas.py`.
+
+## 5. An optional third $5/2$-letter repairs both $2^{19}$ holes
+
+There is another physical addition, independent of the two new middle pairs. On the $5h-2R=1$ line use $F_\star$, the chronological addresses $(9,169),(6,20),(3,2)$, with product
+$
+M_{F_\star}=\begin{pmatrix}70557&167790\\176390&419476\end{pmatrix}.
+$
+The preserved row is $(5,-2)$ and the exact $h$-map is $490032h-83895$. Thus in the increment variable $u=(h-1)/2$ it is $490032u+203068$. All inputs and outputs still have $h\equiv1\bmod8$. Last letters are disjoint without backtracking: $P$ outputs $1\bmod16$; $Q$ outputs $25\bmod64$; $F_\star$ outputs $57\bmod64$. These classes follow by substitution of $h\equiv1\bmod8$; after the seed test, exact affine division again recovers the unique word.
+
+In the $7507/7509$ chart, fix the left word $F_\star F_\star P Q$, giving $u=76140\bmod2^{19}$. Allow an arbitrary right prefix, then the suffix $Q Q F_\star P F_\star Q$. Its multiplier has valuation $3+3+4+2+4+3=19$, and it gives $v=167500\bmod2^{19}$. Substitution shows the two ordinary outputs are $141915,141917\bmod2^{19}$ for every such prefix. Together with Section 4 this proves **all odd classes modulo $2^{19}$** have infinitely many exact count realizations after admitting $F_\star$. The shorter alphabet restriction isolates what that new physical move buys; it is not an obstruction for the enlarged alphabet.

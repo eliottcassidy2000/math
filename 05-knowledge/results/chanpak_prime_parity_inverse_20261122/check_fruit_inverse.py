@@ -75,6 +75,9 @@ def invert(q):
         return tuple(sorted((t,(-c+root)/2,(-c-root)/2)))
     return None
 
+def v2(n):
+    return (abs(n)&-abs(n)).bit_length()-1
+
 def fruit():
     H=(Q(-196),Q(196))
     P=None
@@ -93,6 +96,11 @@ def fruit():
             if result:
                 need(sum(result)==1 and all(F(q,t)==0 for t in result),"cubic replay")
                 need(sum(t/(1-t) for t in result)==4,"fruit equation")
+                if dd%2 and aa+dd:
+                    hh=v2(aa+dd)
+                    need(hh>=5 and hh%2==1,"integral fruit valuation parity")
+                    vals=sorted(v2((1-t).numerator)-v2((1-t).denominator) for t in result)
+                    need(vals==[1,(hh-1)//2,(hh-1)//2],"pair-sum valuations")
                 if n==27 and not e:
                     need(min(result)>0,"positive height control")
     print("fruit: 72 exact quotient points and both label translates")
@@ -108,6 +116,32 @@ def p(n):
 
 def G(n,c,k,phi,b):
     return c*n+k*p(n)+phi*(n%2)+b
+
+def edge(Y,L,e,c,k,phi,b):
+    N=1<<L
+    A=Q(c)+k*(1-Q(e,2))
+    T=A*N-Y+k*(L+1)+abs(phi)+abs(b)
+    if T<0: return []
+    if T>A*N/2:
+        return None
+    dd=T//A
+    if not dd: return []
+    j=(dd-1).bit_length()
+    i=(2*T//k).bit_length()
+    fixed={r:1 for r in range(j,L)}
+    for r in range(max(1,L-i)):
+        dr=e if r==0 else 0
+        if r in fixed and fixed[r]!=dr:
+            return []
+        fixed[r]=dr
+    out=[]
+    S=sum(v<<r for r,v in fixed.items())
+    free=[r for r in range(L) if r not in fixed]
+    for bits in range(1<<len(free)):
+        n=S+sum(1<<r for t,r in enumerate(free) if bits>>t&1)
+        if G(n,c,k,phi,b)==Y:
+            out.append(n)
+    return sorted(out)
 
 def words():
     random=Random(559)
@@ -125,7 +159,27 @@ def words():
             want1=(389*N)//2-(741 if L%2==0 else 1093)*M//8+233
             need(max(G(n,189,11,11,11) for n in range(0,N,2))==want0,"physical even formula")
             need(max(G(n,189,11,11,11) for n in range(1,N,2))==want1,"physical odd formula")
-    print("row: exact parity maxima across 60 varied physical-style arithmetic controls and the inherited mask-zero row")
+            for e in (0,1):
+                outputs={}
+                for n in range(e,N,2):
+                    outputs.setdefault(G(n,189,11,11,11),[]).append(n)
+                for Y in sorted(outputs,reverse=True)[:8]:
+                    answer=edge(Y,L,e,189,11,11,11)
+                    if answer is not None:
+                        need(answer==outputs[Y],"near-edge preimage list")
+    for L in (10,11,18,19,50,51):
+        m,lam=divmod(L,2)
+        for w in range(1,4):
+            Qq,B=1<<(m-w),1<<(2*w)
+            P=(1<<lam)*Qq-1
+            for bmid in range(B):
+                V=int(f"{bmid:0{2*w}b}"[::-1],2)
+                for e in (0,1):
+                    numerator=400-11*e
+                    formula=(numerator*(1<<L)-Qq*(numerator*(B-bmid)+22*(1<<lam)*(V+1)))//2
+                    formula+=11*(V+1-bmid+p(bmid)+(bmid<B//2)+(bmid%2))+200*e+11
+                    need(formula==G((P*B+bmid)*Qq+e,189,11,11,11),"edge affine line")
+    print("row: exact parity maxima, near-edge preimages, and affine edge lines")
 if __name__=="__main__":
     fruit()
     words()

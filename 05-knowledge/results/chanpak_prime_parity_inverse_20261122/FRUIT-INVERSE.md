@@ -99,3 +99,62 @@ These choices can be certified without logarithms: the cost difference between $
 The transferable point from the fruit inverse is the separation of a local parity label, a height bound, and a final exact witness. Here a terminal bit really selects a different maximal height, but no modular fact can manufacture the word beyond its sharply bounded height. The fruit equation is used as arithmetic structure and not as a numerical analogy about exceptional tournament counts.
 
 Exact finite checks: `python3 check_fruit_inverse.py`.
+
+### The actual pair-sum valuations in the integral fruit phase
+
+Let $e=q+1\ne0$, $h=v_2(e)\ge4$ in a splitting integral branch. In the normalized $u$ equation, exactly one root is odd, because its reduction is the unique simple residue 1. Each of the two even roots satisfies $2v_2(u)=h-3$: the constant term has valuation $h-3$, the term $(e/4)u$ has strictly greater valuation, and $u^2(1+u)$ has valuation $2v_2(u)$. Thus $h$ is odd and at least 5. In terms of the three normalized roots $t_i=1+2u_i$,
+$
+ \{v_2(1-t_i):i=1,2,3\}=\{1,(h-1)/2,(h-1)/2\}.
+$
+For a primitive integer lift these are exactly the pair-sum valuations: all individual coordinates and the sum are odd, since the three normalized roots are 2-adic units and are reduced with odd denominators. This is a more precise local compatibility condition than calling such a triple merely “all odd.”
+
+### Exact scalar decoder and presentation count at the tournament edge
+
+Fix input parity $\epsilon\in\{0,1\}$. Write $A_\epsilon=c+k(1-\epsilon/2)$, $R(n)=\operatorname{rev}_L(n)$, and $R_0=R(n)-\epsilon N/2$. Directly summing the zero-bit recurrence gives
+$
+ \big|p(n)-n(1-R(n)/N)\big|\le L+1.
+$
+Indeed replacing each floor by its argument in the zero-bit sum changes it by at most one per bit, including its adjacent-bit correction; the unfloored coefficient is $1-1/N-R(n)/N$. Thus, with $E=k(L+1)+|\phi|+|b_0|$,
+$
+ \left| A_\epsilon N-G(n)-
+   \left(A_\epsilon(N-n)+k(n/N)R_0\right)\right|\le E.
+\tag{4}
+$
+
+Given an exact target $Y$ with $|Y-A_\epsilon N|\le K\sqrt N$, put $T=A_\epsilon N-Y+E$. Reject if $T<0$. Any preimage has $N-n\le T/A_\epsilon$. When $T\le A_\epsilon N/2$, we also have $n\ge N/2$ and hence $R_0\le2T/k$. These integer bounds determine both ends of the word:
+
+1. Choose $j$ minimally with $2^j\ge\lfloor T/A_\epsilon\rfloor$; a zero deficit bound rejects because $n<N$. Then the top $L-j$ bits of $n$ are ones.
+2. Choose $i$ minimally with $2^i>\lfloor2T/k\rfloor$. Then bits 1 through $L-i-1$ of $n$, counted from the least significant end, are zero; bit 0 is fixed to $\epsilon$.
+
+Inconsistent forced bits reject. Otherwise the number of free bits is at most $\max(0,i+j-L)$, so the exact target can be tested by at most $O_{c,k,\phi,b_0}((1+K)^2)$ words for large $L$ and $K\le \eta\sqrt N$, where $\eta>0$ depends only on the row. Enumerating those middle bits and checking the original recurrence returns **all** actual preimages at the specified width and parity. In particular it is a bit-polynomial inverse for a fixed $K$; there is no factoring or modular-residue promise.
+
+This count is of the right order as a presentation bound. For a sufficiently large row-dependent constant $K_0$, and $K_0\le K\le\eta\sqrt N$, choose powers of two $P,Q$ within a factor two below $K\sqrt N/(8A_\epsilon)$ and $K\sqrt N/(8k)$, respectively. For large $L$, $P,Q\le N/2$ and $PQ\ge N$. The two simultaneous conditions $N-P\le n<N$ and $0\le R_0<Q$ fix respectively a high all-one cylinder and a low zero cylinder with terminal bit $\epsilon$. Their bit sets do not overlap and they contain exactly $PQ/N=\Omega(K^2)$ words. By (4) these lie within $K\sqrt N$ of the leading edge; the exact max theorem places all counts below it for large $L$. The number of presentations in this edge window is therefore $\Theta(K^2)$, even on the $\sqrt N$ scale on which a macroscopic local limit has no such accuracy. Distinct values need not equal the number of presentations; the decoder reports any collisions in the word list rather than suppressing them.
+
+### The edge collision problem stabilizes to finitely many affine lines
+
+For fixed $K$, the forced-end proof allows a fixed width $w\ge1$, depending on $K$ and the row only, such that all edge candidate words have the form
+$
+ L=2m+\lambda,\quad \lambda\in\{0,1\},\quad
+ Q=2^{m-w},\quad B=2^{2w},\quad P=2^\lambda Q-1,\qquad
+ n=(PB+b)Q+\epsilon,\quad 0\le b<B.
+$
+Here $P$ is the high all-one prefix and $b$ is the entire padded middle; all bits below it except the terminal one are zero. Take $m$ large enough that the high prefix is nonempty and that $m-w\ge2$. For $V=\operatorname{rev}_{2w}(b)$, the exact two suffix recurrences give
+$
+\begin{aligned}
+G(n)={}&A_\epsilon N-
+ Q\bigl(A_\epsilon(B-b)+k\,2^\lambda(V+1)\bigr)\\
+ &+k\bigl(V+1-b+p(b)+[b<B/2]+[b\text{ odd}]\bigr)
+ +(c+\phi)\epsilon+b_0. \tag{5}
+\end{aligned}
+$
+Indeed $p(P)=0$, so $p(PB+b)=p(b)+(B-1-V)P+[b<B/2]$. Appending the low zero run, and stripping the final one first if $\epsilon=1$, adds $(Q2^{-\epsilon}-1)(PB+b)+[b\text{ odd}]$. Inserting $P=2^\lambda Q-1$ and $Q(PB+b)=N-Q(B-b)$ yields (5).
+
+For fixed parities and $K$, the entire edge is thus contained in an explicit finite family of affine deficit lines of slope and intercept independent of $m$. Two different slopes eventually separate; two equal slopes are compared by their exact constant offsets. This proves eventual stabilization of all collision classes and edge membership, including ties at the edge-window boundary: when the slope times $Q$ equals $K\sqrt N$ identically for the fixed $\lambda$, the constant offset decides membership. The result is a finite exact description at the parity-specific $\sqrt N$ edge, not an estimate in the full integer range.
+
+### Uniform local law for every even right-hand side
+
+The dyadic analysis does not depend on the constant $4$. For any even integer $n$, replace the right-hand side of the three-fraction equation by $n$. If $s=a+b+c$, $q_0=ab+ac+bc$, $r_0=abc$, the numerator and denominator after summing the fractions are $s^3-2s q_0+3r_0$ and $s q_0-r_0$. In sum-one normalization this gives the inverse cubic
+$
+f_{n,q}(t)=t^3-t^2+qt-\frac{(n+2)q-1}{n+3}.
+$
+Since $n+3$ is odd and $n+2$ even, $f_{n,q}/q$ again reduces to $t$ when $q$ is nonintegral, and the integral reduction and all valuation cases in (1) are identical: the translated constant is now $(q+1)/(n+3)$ instead of $(q+1)/7$. Thus the dyadic root criterion, and the pair-sum valuation profile in the integral split case, hold for all these even right-hand sides. This does not transport the global $\mathbb Q_2$-to-$\mathbb Q$ isogeny-image theorem beyond the stated $n=4$ curve.

@@ -208,4 +208,35 @@ def check():
         print('modulus',m,'charts',len(bank),'two freely growing flanks',both,
               'covered',len(rep),'excluded',sorted(excluded),flush=True)
 
+    Fstar=((1,0),(0,1))
+    for k,j in ((9,169),(6,20),(3,2)):
+        assert j<1<<(k-1)
+        Fstar=mat_product(affine(k,j),Fstar)
+    assert Fstar==((70557,167790),(176390,419476))
+    assert tuple(5*Fstar[0][i]-2*Fstar[1][i] for i in (0,1))==(5,-2)
+    assert {(292*h-51)%16 for h in range(1,64,8)}=={1}
+    assert {(5976*h-1023)%64 for h in range(1,64,8)}=={25}
+    assert {(490032*h-83895)%64 for h in range(1,64,8)}=={57}
+    def inverse_pqf(h):
+        digits=[]
+        while h!=1:
+            if h<1 or h%8!=1:return None
+            last='P' if h%16==1 else {25:'Q',57:'F'}.get(h%64)
+            if not last:return None
+            a,b={'P':(292,51),'Q':(5976,1023),'F':(490032,83895)}[last]
+            h,r=divmod(h+b,a)
+            if r:return None
+            digits.append(last)
+        return ''.join(digits[::-1])
+    moves[2]['F']=(490032,203068)
+    for d in range(6):
+        for w in map(''.join,product('PQF',repeat=d)):
+            assert inverse_pqf(1+2*run(2,w))==w
+    m=2**19
+    u,v=run(2,'FFPQ'),run(2,'QQFPFQ')
+    n=Hplane(43209,17882,18144,7507,u,v)
+    assert (u%m,v%m,n%m)==(76140,167500,141915)
+    assert multiplier(2,'QQFPFQ')%m==0
+    print('F* repairs final mod-2^19 pair:',n,n+2,flush=True)
+
 if __name__=='__main__':check()
