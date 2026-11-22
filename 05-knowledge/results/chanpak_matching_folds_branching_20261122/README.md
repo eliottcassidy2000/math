@@ -48,6 +48,10 @@ exponentially large family of odd cycles. The relevant symmetry is the
 symmetry of the **endpoint constraints**, not just the symmetry of the
 unmarked tournament.
 
+## Follow-up: what the shell can actually observe
+
+[Reverse shells](SHELL-INFORMATION.md) recover exactly the principal specialization; vertex-deletion traces upgrade it to a two-variable quotient. Two explicit strong self-converse hosts are indistinguishable under every ordinary shell and as module inputs, but separate after a fixed-center probe or as uniformly inflated quotients. The [center law](CENTER-PROBE.md) identifies the missing graded endpoint response. Both are proved, with exact checks for the displayed hosts.
+
 ## Next proof obligation
 
 Use the two-port/seam route to build a genuinely branching family in which
