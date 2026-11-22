@@ -1,6 +1,6 @@
 # A target-selected lattice search for two Farey flanks
 
-**FINITE-EXACT.** In the canonical tagged tower with left tag mask 12, no pair of binary flank addresses at spine lengths **20, 24, 28 or 32** realizes the lower count \(N=2^{60}(2^{61}-1)-1\). The other orientation always adds two. Each exclusion covers independent arbitrary words on both sides, including either or both empty. All lengths divisible by four from 36 onward were already excluded. [Inherited tower definition and large-length bound](FERMAT-RECEIVER-SEARCH.md)
+**FINITE-EXACT.** In the canonical tagged tower with left tag mask 12, no pair of binary flank addresses at spine lengths **16, 20, 24, 28 or 32** realizes the lower count \(N=2^{60}(2^{61}-1)-1\). The other orientation always adds two. Each exclusion covers independent arbitrary words on both sides, including either or both empty. All lengths divisible by four from 36 onward were already excluded. [Inherited tower definition and large-length bound](FERMAT-RECEIVER-SEARCH.md)
 
 ## Removing a congruence before choosing either flank
 
@@ -49,7 +49,66 @@ From this directory:
 python3 -B hyperbola_controls.py > /tmp/farey-e61-charts
 c++ -O3 -std=c++17 farey_hyperbola.cpp -o /tmp/farey-e61-hyperbola
 python3 -B hyperbola_controls.py --check /tmp/farey-e61-hyperbola
-for n in 20 24 28 32; do /tmp/farey-e61-hyperbola "$n" < /tmp/farey-e61-charts; done
+for n in 16 20 24 28 32; do /tmp/farey-e61-hyperbola "$n" < /tmp/farey-e61-charts; done
 ~~~
 
 The controls compare the complete inverse with direct pair enumeration on small planted targets and test long nonconstant flanks in both orientations, including a pair in the tangent regime. For another lower height pass its decimal integer after the spine length. Extra arguments select direction (0 or 1), inclusive normalized small-coordinate range, and the allowed physical left residue. Each returned pair is checked against the integer chart. [Exact inverse](farey_hyperbola.cpp) · [Generator and controls](hyperbola_controls.py)
+
+## A target inverse along every increasing pair of words
+
+**PROVED.** Put \(P(x,y)=k+qxy+tx+cy\) on the physical, unnormalized coordinates. Every lower count belongs to the envelope
+\[
+ [P(x,y),\,P(x,y)+h(x+y)+r+e].
+\]
+In each of the eight charts \(q>h\) and \(q+t+c>r+e\). Increasing both coordinates by at least one increases the lower envelope bound by at least \(q(x+y+1)+t+c\). This exceeds the entire previous interval's width. Thus a prescribed absolute height has **at most one candidate state on any chain with both coordinates strictly increasing**. The last state with \(P\le N\) is the only one to test. A synchronized bit-output controller starting from two positive words has this property on every emitted bit pair. The statement concerns the words emitted by one controller and places no bound on its computation time between emissions.
+
+For example, choose a positive rational direction in lowest terms \((a,b)\) and grow both words by a common integer scale \(j\). Its unique possible positive scale is
+\[
+ \left\lfloor
+ \frac{\sqrt{(ta+cb)^2+4qab(N-k)}-(ta+cb)}{2qab}
+ \right\rfloor .
+\]
+At each of the lengths 4, 8, 12 and 16 the search over all **9,185,685** primitive directions of product \(ab\le10^6\) is empty. At the unique scale none passes both the residual interval and divisibility by \(2h\). In particular any positive pair at lengths 4 and 8 must respectively have \(\gcd(x,y)\le1{,}076{,}565{,}685{,}641\) and \(\gcd(x,y)\le135{,}481{,}007{,}739\), since otherwise \(qxy\le N-k\) would force the primitive product back into the cleared range. Run the following from this directory. [Exact ray inverse](farey_directions.py)
+
+~~~sh
+python3 -B farey_directions.py 1000000 4 8 12 16
+~~~
+
+### A least set of supersingular primes after fixing absolute scale
+
+Before reducing modulo \(2h\), require only the real envelope at the chosen scale and the actual parity terms:
+\[
+ 0\le N-P(x,y)-r[x\ {\rm odd}]-e[y\ {\rm odd}]\le h(x+y).
+\]
+Among the same \(9{,}185{,}685\) primitive directions per chart this leaves exactly **1,493, 356, 80 and 7** pairs at the four successive spine lengths. Each of the 15 absolute supersingular primes has a separate witness in the resulting pool of **1,936** chart-address pairs. Yet simultaneous reduction at **17 and 47** rejects every one of them. The least possible number of primes for this finite pool is two, and nine distinct two-prime choices suffice. The marked upper count is the lower plus two, so a lower match also matches the upper coordinate over the same field. For the separate pools at lengths 12 and 16 one prime suffices, respectively 71 and 7. The test enumerates subsets of primes in increasing cardinality, reducing the actual chart differences on the same absolute candidates. This is a restriction on this bounded set of directions after the real inverse, compatible with the all-modulus local lifting theorem on unrestricted words. [Full set of local word inverses](LOCAL-WORDS.md)
+
+## Every elementary cellular rule on small periodic tapes
+
+**FINITE-EXACT.** For each of the four small charts, run every radius-one binary cellular automaton with one fixed local rule on a periodic ring of width \(1\le w\le14\). Begin with any labelled initial state, select two sites, and on each tick append the observed bits to two addresses initially equal to 1. Every retained pair consequently has equal binary lengths. Rotation lets the left site be site zero when all initial states are allowed. The right site can have any displacement, including zero. At **every possible time** these controllers miss exponent 61 in the four charts. The conclusion is specific to this family of synchronized observations.
+
+Indeed at length \(\ell\) both coordinates are in \([u,2u-1]\), \(u=2^{\ell-1}\). Their lower count lies between \(P(u,u)\) and \(P(2u-1,2u-1)+2h(2u-1)+r+e\). Comparing these endpoints to \(N\) permits precisely lengths **50, 47, 44 and 41** at the successive spine lengths \(4,8,12,16\). Iterate the rule only to the permitted times. For each chart there are \(256\sum_{w=1}^{14}w2^w=109{,}052{,}416\) rule/state/displacement presentations. None even reaches the parity-corrected real envelope at the required time. Rules, observations and initial states can give the same word pair, so this count is of presentations. An independent planted control with rule 110, width 5, state mask 19, displacement 2 and nine emitted pairs gives words 832 and 576 and lower height 1,100,614,525,773 at spine length 4. The census at this target recovers ten presentations through width 5.
+
+~~~sh
+c++ -std=c++17 -O3 farey_elementary.cpp -o /tmp/farey-cellular
+/tmp/farey-cellular 5 1100614525773 < /tmp/farey-e61-charts
+/tmp/farey-cellular 14 < /tmp/farey-e61-charts
+~~~
+
+[Spacetime census](farey_elementary.cpp) · [Finite word controllers and all-prime local inverses](LOCAL-WORDS.md)
+
+## Two different balanced sectors at lengths 4 and 8
+
+**FINITE-EXACT.** At length 8 there is no hit with \(\min(x,y)\ge0.99\max(x,y)\). At length 4 there is no hit with \(\min(x,y)\ge0.999\max(x,y)\). Both physical addresses may be arbitrary words. To reproduce these regions put \(S=(N-k)/q\). The chart satisfies \(qxy\le N-k\le q(x+1)(y+1)\) at any solution. Thus \(\min(x,y)\ge\alpha\max(x,y)\) forces
+\[
+ \sqrt{\alpha S}-1\le x\le\sqrt{S/\alpha}.
+\]
+Since \(x=10X+i,\ i=0,1\), the large addresses in this range have \(X\le y\); the forward chart covers the whole sector. The first two commands use outward-rounded endpoints for \(X\). They check 1,322,175,745 and 8,000,827 final physical address pairs, respectively.
+
+The normalized balanced end of the search has different physical slopes. With \(U=\min(X,y)\), the final 34,359,738,368 possible values of \(U\) at length 4 and final 68,719,476,736 at length 8 are excluded. Here both address orientations are run. The lower part of the full hyperbola at these two spines remains open. The [height census by physical residue](FAREY-PHASE-CENSUS.md) bounds the total number of targets across all such sectors.
+
+~~~sh
+/tmp/farey-e61-hyperbola 4 E61 0 107602780617411 107710491108520 < /tmp/farey-e61-charts
+/tmp/farey-e61-hyperbola 8 E61 0 13480196806844 13616360410954 < /tmp/farey-e61-charts
+/tmp/farey-e61-hyperbola 4 E61 -1 340405772222361 340440131960728 < /tmp/farey-e61-charts
+/tmp/farey-e61-hyperbola 8 E61 -1 42774158359912 42842877836647 < /tmp/farey-e61-charts
+~~~

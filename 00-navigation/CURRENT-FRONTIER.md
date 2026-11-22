@@ -193,20 +193,20 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
-- **PROVED + FINITE-EXACT:** [Absolute directed-edge descent](../05-knowledge/results/chanpak_absolute_descent_20261122/README.md): exact backchain inverse, sparse dyadic bands and literal unit flips, a finite carry criterion, sharp summand gluing and Paley repair barriers. Cofinite coverage remains open.
-- **PROVED:** [Profinite automata and literal seams](../05-knowledge/results/chanpak_profinite_automata_20261122/README.md): a fixed repeated block passes every simultaneous prime-power test at exponent 61 but jumps over the exact target; sparse tape compilation, a Hasse CA and modular/absolute automata barriers.
+- **PROVED + FINITE-EXACT.** [Backchain inverse, dyadic flips, carry, gluing and Paley bounds](../05-knowledge/results/chanpak_absolute_descent_20261122/README.md). Cofiniteness OPEN.
+- **PROVED.** [Profinite automata](../05-knowledge/results/chanpak_profinite_automata_20261122/README.md). At E61 a periodic word passes every modulus and skips the target.
 
-[Planar contact folds, quotient Moser spindle and crossed dyadic seams](../05-knowledge/results/chanpak_hadwiger_planar_folds_20261122/README.md).
+[Contact folds, Moser spindle and dyadic seams](../05-knowledge/results/chanpak_hadwiger_planar_folds_20261122/README.md).
 
 [Orders 90–93 and Volchkov](../05-knowledge/results/chanpak_e61_compact_volchkov_20261122/README.md) · [Square-sum cuts and exponents 11/21](../05-knowledge/results/chanpak_middle_out_square_sum_20261122/README.md) · [Collatz phases and exponents 3–10](../05-knowledge/results/chanpak_mirimanoff_unit_lifts_20261122/README.md).
 [Seven-term gluing](../05-knowledge/results/chanpak_cech_perfect_seams_20261122/README.md) · [Hamilton support and birth](../05-knowledge/results/chanpak_support_birth_grammar_20261122/README.md) · [Perfect offsets and Liouville signs](../05-knowledge/results/chanpak_absolute_liouville_leech_20261122/README.md).
-[Liouville, roughness, mod-2^19 and fruit inverse](../05-knowledge/results/chanpak_prime_parity_inverse_20261122/README.md) · [Affine +2, Monsky and Hodge](../05-knowledge/results/chanpak_affine_sieve_metagraph_20261122/README.md).
-[Two ports, +6 switch and odd-modulus steering](../05-knowledge/results/chanpak_branching_inverse_20261122/README.md) · [Hardness, Walsh and one apex](../05-knowledge/results/chanpak_matching_folds_branching_20261122/README.md) · [8/9/27](EIGHT-NINE.md) · [Descent](../05-knowledge/results/core_descent_endpoints_20261112/README.md). Chan–Pak OPEN.
+[Liouville, roughness and dyadic inversion](../05-knowledge/results/chanpak_prime_parity_inverse_20261122/README.md) · [Affine +2, Monsky and Hodge](../05-knowledge/results/chanpak_affine_sieve_metagraph_20261122/README.md).
+[Two ports and odd-modulus steering](../05-knowledge/results/chanpak_branching_inverse_20261122/README.md) · [Walsh and one-apex hardness](../05-knowledge/results/chanpak_matching_folds_branching_20261122/README.md) · [8/9/27](EIGHT-NINE.md) · [Descent](../05-knowledge/results/core_descent_endpoints_20261112/README.md). Chan–Pak OPEN.
 - [Clocks](../05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md); [more](S111-plus.md).
 - [Exact U5-free capacity](../05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md).
-- [THM-5313 and earlier routes](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md) · [Exponent-31 flip](../05-knowledge/results/chanpak_e31_physical_20261122/README.md) · [E61 receivers, class fibers and exact exponents 3–21](../05-knowledge/results/chanpak_e61_fibonacci_target_20261122/README.md).
-- THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
-- [Ordinal metrics, substitution, and walk resolvents](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md#ordinal-metrics-and-walk-resolvents) retain the THM-2183/2195 and 3121–3248 routes. Q4 radius/non-P remain OPEN.
+- [THM-5313](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md) · [Exponent-31 flip](../05-knowledge/results/chanpak_e31_physical_20261122/README.md) · [E61 inverse and exponents 3–23](../05-knowledge/results/chanpak_e61_fibonacci_target_20261122/README.md).
+- THM-1805: triangle Vandermonde. THM-1862/1936: join products for `H`, signed Rédei; additive `c3`.
+- [Ordinal metrics and resolvents](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md#ordinal-metrics-and-walk-resolvents) (THM-2183/2195, 3121–3248). Q4 radius/non-P OPEN.
 - THM-1880/1885: Pell; THM-3335/3339/3357/3364/3379: Fibonacci
   tournaments. [THM-3509](../01-canon/theorems/THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray.md):
   `4/6/3` K4 carriers; matching loses Cassini sign. THM-3497: ancestry
@@ -216,9 +216,9 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
   proves `|K_(p^a)(h,k)|<=2sqrt(p^a gcd(h,k,p^a))` and all-odd
   `|S(q)|,|B(q)|<=q^(1/2+o(1))`; THM-4076 adds exact mod-eight residues.
 - THM-3457/3462: `25/477`.
-- THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
-- THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
-- THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
+- THM-1926: strong-core zeta factors. THM-1940: `var(lambda^2)`.
+- THM-1965: `n<=6`. THM-1966: signed Rédei at `n=7`.
+- THM-2013/2016: cyclic temperature/reducibility bounds. `H` empirical.
 - THM-2290 makes the endpoint-colour-selected matching kernel hafnian-complete and restricts universal Pfaffian tournament gauges to orders `2,4`.
   THM-2294: antisymmetric signs orient; symmetric character data are colours.
   THM-2501 identifies signed-`C4`/Gram energy as symmetric switching's first nonconstant even moment; skew quadratic forms vanish.
@@ -232,8 +232,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
   root covariance; fixed-T arbitrary roots need separate treatment.
 - [S139](S139.md): sharp n=3..10,n>=42; n=11..41 OPEN (concurrent proofs).
 - [THM-4051](../01-canon/theorems/THM-4051-tournament-order-seven-strong-base-exact-frontier.md)
-  has exact order-seven minimum ratio `27/8` (Paley), not sampled `4.22`.
-  The global inequality is now closed; no all-order ratio claim follows.
+  gives the exact order-seven minimum ratio `27/8` (Paley). The global inequality is closed; the ratio is order-specific.
 - THM-3315--3380 compile switched-walk, response, and deletion tools; losses remain.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.

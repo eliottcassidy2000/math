@@ -224,7 +224,7 @@ struct Scan {
                     V y = yb + (line - int64_t(aa * d)) / int64_t(b);
                     if (y < x + swapped)
                         continue;
-                    // Cheap exact prime-divisor test before the full address reading.
+                    // A divisor of h gives an exact test before the full address reading.
                     if ((aq * (x % P) * (y % P) + at * (x % P) + ac * (y % P) + ar * (x & 1) +
                          ae * (y & 1) + ak) %
                             P !=
@@ -253,16 +253,22 @@ struct Scan {
             V high = std::min(upper, low * 2 - 1);
             double idealW = double(low) / std::cbrt(D);
             double spread = double(a.h) / double(a.q) * (sx + sy * D / double(low) / double(low));
+            // On the two smallest spines the strip thickness can dominate the
+            // curvature. A shorter Farey block retains the thin-line advantage.
+            if (a.h <= 37265 && spread * idealW >= 4)
+                idealW = std::min(idealW, 1.0 / spread);
             if (idealW >= 80 && spread * idealW < 4 && D / double(low) < 3e15) {
                 if (high < start)
                     continue;
                 V W = std::max(V(1), V(idealW));
-                if (!(a.h % 241))
-                    tangent<241>(std::max(low, start), high, W);
-                else if (!(a.h % 65537))
+                if (!(a.h % 65537))
                     tangent<65537>(std::max(low, start), high, W);
-                else if (!(a.h % 257))
-                    tangent<257>(std::max(low, start), high, W);
+                else if (!(a.h % 7453))
+                    tangent<7453>(std::max(low, start), high, W);
+                else if (!(a.h % 4097))
+                    tangent<4097>(std::max(low, start), high, W);
+                else if (!(a.h % 493))
+                    tangent<493>(std::max(low, start), high, W);
                 else
                     tangent<29>(std::max(low, start), high, W);
                 line_low = std::min(line_low, low);
@@ -272,25 +278,28 @@ struct Scan {
         upper = line_low - 1;
         // A divisor of h eliminates both nonlinear readings. Keep y in one slope
         // progression (per pair of parities) before using the geometric test.
-        V M = 1;
-        for (V d = 2; d <= 100000; ++d)
-            if (a.h % d == 0)
+        V content = a.h;
+        for (U coefficient : {a.q, a.c, a.t, a.e, a.r, N - a.k})
+            content = std::gcd(content, V(coefficient % content));
+        V primitive_h = a.h / content, M = 1;
+        for (V d = 2; d <= std::min(V(100000), primitive_h); ++d)
+            if (primitive_h % d == 0)
                 M = d;
+        const V qm = (a.q / content) % M, cm = (a.c / content) % M, tm = (a.t / content) % M,
+                em = (a.e / content) % M, rm = (a.r / content) % M, level = ((N - a.k) / content) % M;
         V jumps = 2 * M;
         for (V xi = 0; xi < jumps; ++xi) {
 
-            V sm = (a.c % M + (a.q % M) * xi) % M, g = std::gcd(sm, M), mod = M / g;
+            V sm = (cm + qm * xi) % M, g = std::gcd(sm, M), mod = M / g;
             V inv = inverse((sm / g) % mod, mod);
             for (V j = 0; j < 2; ++j) {
-                if (j && a.e % M == 0)
+                if (j && em == 0)
                     continue;
-                V right = (N % M + 4 * M - (a.k % M) - (a.t % M) * U(xi % M) % M -
-                           (a.r % M) * (xi % 2) - (a.e % M) * j) %
-                          M;
+                V right = (level + 3 * M - tm * (xi % M) % M - rm * (xi % 2) - em * j) % M;
                 if (right % g)
                     continue;
                 V yres = U(right / g) * inv % mod;
-                const int selected = a.e % M == 0 ? -1 : int(j);
+                const int selected = em == 0 ? -1 : int(j);
                 const double scale = D / double(mod), off = (t + double(yres)) / double(mod);
                 for (V low = 1; low <= upper;) {
                     V high = std::min(upper, low * 2 - 1);
