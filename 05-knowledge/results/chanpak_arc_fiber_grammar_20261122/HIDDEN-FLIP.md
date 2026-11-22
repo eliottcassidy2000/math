@@ -1,5 +1,7 @@
 # A single arc invisible through the first return
 
+The first possible order at which a single marked arc stays invisible through one return and separates after two is **ten**. Below is the general module construction that first exhibited this behavior. [Minimum-order witness and complete smaller-order exclusion](../chanpak_decimal_kernel_20261122/PHYSICAL-READING.md#the-smallest-physical-flip-that-stays-hidden-through-one-full-return)
+
 **PROVED.** Given any two nonempty tournaments \(A,B\), put two singletons \(u,v\) around them in the order
 \[
  u\longrightarrow A\longrightarrow v\longrightarrow B\longrightarrow u,

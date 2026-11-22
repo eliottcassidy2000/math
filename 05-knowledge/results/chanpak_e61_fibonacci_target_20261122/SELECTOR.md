@@ -2,6 +2,8 @@
 
 **PROVED, within the full Fibonacci construction.** For the six-vertex core with one marked arc used at \(E_{31}\), a prescribed positive odd lower count \(N\) gives a finite search returning **all** normalized rooted receivers and all their right addresses. It takes neither a receiver nor a suffix length as input. A positive output constructs a literal unit flip. An empty list excludes this construction at that target. The large search for \(E_{61}-1\) has not been exhausted. [Underlying arc and normalization](README.md) · [Previous inverse restricted to a binary spine](../chanpak_e31_physical_20261122/ALL-WORDS.md)
 
+At order 123 the congruence modulo three now removes the triangle at every width. The two remaining receiver types require at least 22 bit changes and 22 equal adjacent pairs. The unrestricted suffix equations in these two charts are open. [Two-ended suffix inverse](SUFFIX-INVERSE.md) · [Reflected-address inverse](REFLECTED-SUFFIX.md)
+
 Normalize by absorbing the singleton tail into the suffix and deleting forced sinks. For the remaining rooted strong receiver \(V\) (including the singleton), use the notation \(g,Q,s,m,e\) from the main proof. Here \((a,b,d)=(25,28,10)\). A completion at address \(y\ge0\), with \(j=y\bmod2\), has lower count
 \[
  L_j=b\bigl((y+1)Q-m\bigr)

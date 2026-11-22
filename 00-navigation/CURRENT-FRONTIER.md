@@ -194,22 +194,13 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
-- **Nov22:** [Exponent 61 compact classes and Volchkov/F1](../05-knowledge/results/chanpak_e61_compact_volchkov_20261122/README.md): exact strong 90-, 91-, and 93-vertex lower families, class-wide one-flip exclusions, and sharper absolute suffix tests.
-
-- **Nov22:** [Square-sum 8–9 mirror and the paired middle-out selector](../05-knowledge/results/chanpak_middle_out_square_sum_20261122/README.md): exact shared cuts, new literal exponent 11 and 21 seams, and global exclusion of common induced growth from exponent 3 to 4.
-
-- **Nov22:** [Mirrored Collatz branches and literal unit lifts](../05-knowledge/results/chanpak_mirimanoff_unit_lifts_20261122/README.md): exact base-3 carry, one physical arc in all congruence phases, seven new exact exponent certificates (3–10 now contiguous), and the homogeneous-lift barrier.
-
-[Seven-term gluing, nested contacts and even perfect seams](../05-knowledge/results/chanpak_cech_perfect_seams_20261122/README.md).
-[Hamilton support and birth grammar](../05-knowledge/results/chanpak_support_birth_grammar_20261122/README.md) · [Perfect offsets and Liouville signs](../05-knowledge/results/chanpak_absolute_liouville_leech_20261122/README.md).
-[Nov 22: prime parity and absolute inverses](../05-knowledge/results/chanpak_prime_parity_inverse_20261122/README.md): truncated Liouville and simultaneous roughness on physical +2 pairs, cofinal mod-2^19 atlas repair, and the fruit quotient inverse. Chan–Pak OPEN.
-[Nov 22: affine sieve and exact selectors](../05-knowledge/results/chanpak_affine_sieve_metagraph_20261122/README.md): positive-word affine sieve, exact +2 independent-port switches, complementary digit inverse, a Monsky character and native Hodge selector. Chan–Pak OPEN.
-[Nov 22: inverse on actual two-port counts](../05-knowledge/results/chanpak_branching_inverse_20261122/README.md): self-delimiting count with linear vertex cost, independent flanks with a +6 switch, and all-odd-modulus steering. Sparse exact images; Chan–Pak OPEN.
-[Nov 22: matching coefficients, signed folds, and branching selectors](../05-knowledge/results/chanpak_matching_folds_branching_20261122/README.md): exact counting hardness, Walsh mod-four response, and one-apex / periodic language limits. Chan–Pak OPEN.
-[8/9/27](EIGHT-NINE.md); [descent](../05-knowledge/results/core_descent_endpoints_20261112/README.md): Chan–Pak OPEN.
+[Exponent-61 compact classes, orders 90–93 and Volchkov](../05-knowledge/results/chanpak_e61_compact_volchkov_20261122/README.md) · [Square-sum 8–9, paired cuts and exact exponents 11/21](../05-knowledge/results/chanpak_middle_out_square_sum_20261122/README.md) · [Mirrored Collatz lifts, all phases and exact exponents 3–10](../05-knowledge/results/chanpak_mirimanoff_unit_lifts_20261122/README.md).
+[Seven-term gluing and nested contacts](../05-knowledge/results/chanpak_cech_perfect_seams_20261122/README.md) · [Hamilton support and birth](../05-knowledge/results/chanpak_support_birth_grammar_20261122/README.md) · [Perfect offsets and Liouville signs](../05-knowledge/results/chanpak_absolute_liouville_leech_20261122/README.md).
+[Liouville, roughness, mod-2^19 and fruit inverse](../05-knowledge/results/chanpak_prime_parity_inverse_20261122/README.md) · [Affine +2 ports, Monsky and Hodge selectors](../05-knowledge/results/chanpak_affine_sieve_metagraph_20261122/README.md).
+[Two ports, +6 switch and odd-modulus steering](../05-knowledge/results/chanpak_branching_inverse_20261122/README.md) · [Counting hardness, Walsh and one-apex limits](../05-knowledge/results/chanpak_matching_folds_branching_20261122/README.md) · [8/9/27](EIGHT-NINE.md) · [Descent](../05-knowledge/results/core_descent_endpoints_20261112/README.md). Chan–Pak OPEN.
 - [Clocks](../05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md); [more](S111-plus.md).
 - [Exact U5-free capacity](../05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md).
-- [THM-5313 and earlier routes](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md) · [Exponent-31 flip](../05-knowledge/results/chanpak_e31_physical_20261122/README.md) · [Exponent-61 receivers and class fibers](../05-knowledge/results/chanpak_e61_fibonacci_target_20261122/README.md).
+- [THM-5313 and earlier routes](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md) · [Exponent-31 flip](../05-knowledge/results/chanpak_e31_physical_20261122/README.md) · [Exponent 61: two receivers, 1,382,400 lower classes and the modular profile](../05-knowledge/results/chanpak_e61_fibonacci_target_20261122/README.md).
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [Ordinal metrics, substitution, and walk resolvents](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md#ordinal-metrics-and-walk-resolvents) retain the THM-2183/2195 and 3121–3248 routes. Q4 radius/non-P remain OPEN.
 - THM-1880/1885: Pell; THM-3335/3339/3357/3364/3379: Fibonacci
