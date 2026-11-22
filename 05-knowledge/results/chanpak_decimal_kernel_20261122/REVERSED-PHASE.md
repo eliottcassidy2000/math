@@ -64,6 +64,8 @@ At spine 8 the entire strips with either address fixed to any integer from 1 thr
 
 **FINITE-EXACT.** On spine 8, even *one* flank having only a single run of ones excludes the target, with arbitrary trailing zeros and no restriction on the opposite word. For each side the preceding strips cover all words of bit length at most seven, as well as zero. For longer words up to the absolute cutoff, write the fixed address as \((2^w-1)2^{j-w}\) and run the exact one-variable inverse for the other address. This adds 4,533 fixed left words and 4,439 fixed right words. In each orientation only 83 and 337, respectively, require the reversed-bucket inverse; direct congruence progressions suffice for the others. Run `python3 -B fixed_run_inverse.py /tmp/farey_axis 8 left 8 123 --bits 15` and repeat with `right`. [One-run and unrestricted-flank search](fixed_run_inverse.py)
 
+At spine 4, every fixed one-run flank of bit length at least seven likewise misses, regardless of its opposite word. This covers 5,131 left words (129 bucket searches) and 5,031 right words (496 bucket searches). Use the same commands with spine 4 and minimum length 7. Continuing the left search through lengths 2–6 and the right search through lengths 5–6 found no hit in 20 and 11 further words, respectively (use `--bits 17`). Thus a nonempty left word with a single one-run would have to be the integer 1, while a right word with a single one-run would have to be below 16. The opposite word is unrestricted throughout.
+
 ### How sparse can a locally universal inverse be?
 
 **PROVED.** For fixed positive real numbers \(s,h\), and any bounded parity correction \(k_j\), the number of nonnegative addresses of height at most \(X\) on one face is

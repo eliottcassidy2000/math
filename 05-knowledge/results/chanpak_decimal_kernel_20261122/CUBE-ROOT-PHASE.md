@@ -17,17 +17,17 @@ every pair of high words with \(U+V=(S+1)/W-1\) has complementary \(\ell\)-bit c
 
 ### The absolute scale on the controlled line
 
-Set \(z=\lfloor\sqrt{T/q}\rfloor\). Choose a power of two \(B\asymp z^{1/3}\); for large enough \(T\) it is a multiple of any prescribed fixed dyadic factor. Take \(S=Bv'-1\) with the displayed congruence, choosing the least such \(S\ge 2z+2B\). As \(tB\) is a unit modulo \(g\), \(2z+2B\le S<2z+(g+2)B\). Put \(w=S/2\), a half-integer. Set \(x=w+d, y=w-d\). For any half-integer \(d=O_m(\sqrt{zB})\), write \(x=BU'+j,y=BV'+(B-1-j)\). Then \(U'+V'=v'-1\). The concatenation identity gives
+Set \(z=\lfloor\sqrt{T/q}\rfloor\). Choose a power of two \(B\asymp z^{1/3}\). For large enough \(T\) it is a multiple of any prescribed fixed dyadic factor. Take \(S=Bv'-1\) with the displayed congruence, choosing the least such \(S\ge 2z+2B\). As \(tB\) is a unit modulo \(g\), \(2z+2B\le S<2z+(g+2)B\). Put \(w=S/2\), a half-integer. Set \(x=w+d, y=w-d\). For any half-integer \(d=O_m(\sqrt{zB})\), write \(x=BU'+j,y=BV'+(B-1-j)\). Then \(U'+V'=v'-1\). The concatenation identity gives
 \[
  f(x)+f(y)=\tfrac12(v'-1)(B-1)+O(z/B+B+|d|+1).
 \]
-Indeed the two suffix reversals sum to \(B-1\); their weighted high-word contribution differs from the stated mean by at most \(B|U'-V'|/2=O(|d|+B)\). The remaining terms are at most \(U'+V'+2B+2\).
+Indeed the two suffix reversals sum to \(B-1\), so their weighted high-word contribution differs from the stated mean by at most \(B|U'-V'|/2=O(|d|+B)\). The remaining terms are at most \(U'+V'+2B+2\).
 
 Consequently the actual height is within \(O_m(z^{2/3})\) of
 \[
  G(d)=q(w^2-d^2)+(t+c)w+(t-c)d+k+\tfrac h2(v'-1)(B-1).
 \]
-Choose one controlled point per \(W\)-block, starting with the first full block at \(x\ge w\). Its \(d=O(W)\), giving \(G(d)-T\ge 2qzB-O_m(z)>0\) for large \(z\). End with the first full block at \(x\ge w+C\sqrt{zB}\), where \(C^2>2(g+3)\). Because \(w^2-z^2\le(g+2)zB+O_m(B^2)\), the last actual height is below \(T\) by order \(zB\). All addresses are positive. Consecutive selected points have \(|\Delta d|<2W\), so \(|\Delta G|=O_m(\sqrt{zB})\). The approximation then gives \(|\Delta L|=O_m(z^{2/3})\) for consecutive controlled points. Use the crossings at \(T\) (or at \(T\pm1/2\) for an integer target) to obtain strict brackets. Equivalently take the first height at most \(T\) and the first strictly below \(T\); if an exact equality intervenes, each nearest strict endpoint is within one step of that equality. Since \(z^{2/3}=O(T^{1/3})\), this gives the result.
+Choose one controlled point per \(W\)-block, starting with the first full block at \(x\ge w\). Its \(d=O(W)\), giving \(G(d)-T\ge 2qzB-O_m(z)>0\) for large \(z\). End with the first full block at \(x\ge w+C\sqrt{zB}\), where \(C^2>2(g+3)\). Because \(w^2-z^2\le(g+2)zB+O_m(B^2)\), the last actual height is below \(T\) by order \(zB\). All addresses are positive. Consecutive selected points have \(|\Delta d|<2W\), so \(|\Delta G|=O_m(\sqrt{zB})\). The approximation then gives \(|\Delta L|=O_m(z^{2/3})\) for consecutive controlled points. Use the crossings at \(T\) (or at \(T\pm1/2\) for an integer target) to obtain strict brackets. Equivalently take the first height at most \(T\) and the first strictly below \(T\). If an exact equality intervenes, each nearest strict endpoint is within one step of that equality. Since \(z^{2/3}=O(T^{1/3})\), this gives the result.
 
 An exact prescribed hit would follow at an individual target if a phase-matched witness were certified at distance *strictly smaller* than its modulus. The theorem supplies no such uniform inequality as the modulus grows. In particular it does not yield an exact edge at exponent 61. [Absolute exponent-61 search](FAREY-HYPERBOLA.md)
 
@@ -37,4 +37,23 @@ An exact prescribed hit would follow at an individual target if a phase-matched 
 
 **PROVED.** Fix one canonical chart. For any sequence of targets tending to infinity and moduli \(m=o(\sqrt{\log T})\), both brackets can be taken in any prescribed odd phase modulo \(m\) and within \(T^{1/3+o(1)}\) of \(T\). In particular one may require powers of all 15 supersingular primes with the minimum exponent tending to infinity sufficiently slowly.
 
-Indeed, the complementary controller has \(\ell=O(m^2)\): its odd block length can be chosen even and at most \(2\varphi(M)+4\) by Euler's theorem, and its terminal controller has length \(O(\log^2(2m))\). Thus \(2^{a+1}W=T^{o(1)}\), eventually less than \(B\asymp T^{1/6}\), where \(2^a\) is the dyadic part of \(m\). The progression step \(gB\) is at most \(hB\) for this fixed chart. The constant in the two-address approximation and the choice of the terminal displacement can therefore be independent of \(m\). For a step of at most \(2W\), the smooth height varies by \(O_{\rm chart}(W\sqrt{zB}+W^2)\); the nonsmooth error remains \(O_{\rm chart}(z^{2/3})\). Combining the bounds proves the growing-precision claim.
+Indeed, the complementary controller has \(\ell=O(m^2)\): its odd block length can be chosen even and at most \(2\varphi(M)+4\) by Euler's theorem, and its terminal controller has length \(O(\log^2(2m))\). Thus \(2^{a+1}W=T^{o(1)}\), eventually less than \(B\asymp T^{1/6}\), where \(2^a\) is the dyadic part of \(m\). The progression step \(gB\) is at most \(hB\) for this fixed chart. The constant in the two-address approximation and the choice of the terminal displacement can therefore be independent of \(m\). For a step of at most \(2W\), the smooth height varies by \(O_{\rm chart}(W\sqrt{zB}+W^2)\), while the nonsmooth error remains \(O_{\rm chart}(z^{2/3})\). Combining the bounds proves the growing-precision claim.
+
+### Inverting an entire antidiagonal at exponent 61
+
+**FINITE-EXACT.** On spines 4 and 8 any exact exponent-61 solution requires at least three runs of ones in the binary expansion of the **sum** \(S=x+y\), even if both individual words are arbitrarily complicated. Moreover, if each address is at most twice the other, \(S\) cannot end in 24 or more ones. Thus the fixed-sum modular controller also encounters absolute exclusions at the target itself.
+
+For \(A=qS+t-c\) put \(D=A^2-4q(T-k-cS)\), with \(T=E_{61}-1\). Every possible left coordinate lies in the exact quadratic envelope
+\[
+                D\le(2qx-A)^2\le D+4q(hS+r+e).
+\]
+Indeed the omitted part is \(h(f(x)+f(y))\) plus endpoint parities and lies between zero and \(hS+r+e\). Take integer square roots on both sides, intersect with \(0\le x\le S\), then impose divisibility of the digital residual by \(2h\) and evaluate the original chart. The feasible sums satisfy \(S\le (T-k)/\min(c,t)\) and \(T\le k+q\lfloor S^2/4\rfloor+(\max(c,t)+h)S+r+e\). In the balanced sector the stronger inequality \(2S^2/9\le xy\) bounds the sum. The four searches give:
+
+| Spine | Sum restriction | Sums in the envelope | Candidates after divisibility | Exact hits |
+| ---: | --- | ---: | ---: | ---: |
+| 4 | At most two runs of ones | 4,003,937 | 1 | 0 |
+| 8 | At most two runs of ones | 3,131,077 | 0 | 0 |
+| 4 | Ends in 24 ones, addresses within a factor of two | 7,784,926 | 36 | 0 |
+| 8 | Ends in 24 ones, addresses within a factor of two | 979,699 | 0 | 0 |
+
+The unique sparse-sum candidate at spine 4 is (4229546107234571, 274023454316277). Its digital reading places the lower count 6,063,905,530,361,546,700 below target. Run `python3 -B farey_antidiagonal.py` for literal small controls. Pass `4` or `8` to search sparse sums, and add `--terminal 24` for the balanced sector. [Integer inverse](farey_antidiagonal.py) · [Independent sparse-difference restrictions](FAREY-HYPERBOLA.md)

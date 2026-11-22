@@ -20,7 +20,7 @@ The strongly connected components of \(A\) form an ordered sum. If \(P\) is the 
 
 For \(a>1\), enumerate strong cores of order at most \(1+3\log_5 a\) with height \(a\), using Busch's bound. Select nontag subsets of their terminal-path vectors summing to \(u\). Perform the dual construction with starting-path vectors and \(r\) for \(b\). A tag-preserving automorphism group acts freely on full paths because fixing an ordered spanning path fixes every vertex. It also acts freely on the subset counted by \(u\) or \(r\). Its order therefore divides two coprime integers and is one on each side. Ordinary automorphisms may still identify *different* taggings. [Busch, The number of Hamiltonian paths in strong tournaments](https://www.combinatorics.org/ojs/index.php/eljc/article/view/v13i1n3)
 
-For each pair of retained tagged cores compute the joined lower chart \((h,q,c,t,e,r',k)\) in the orientation selected by the sign. All coefficients are nonnegative. The middle has positive two-slot readings \(c_D,t_D\) in both orientations; the join formula and positive heights therefore give \(c,t>0\). Discard \(k>N\); otherwise enumerate the finite rectangle
+For each pair of retained tagged cores compute the joined lower chart \((h,q,c,t,e,r',k)\) in the orientation selected by the sign. All coefficients are nonnegative. The middle has positive two-slot readings \(c_D,t_D\) in both orientations, so the join formula and positive heights therefore give \(c,t>0\). For \(k\le N\), enumerate the finite rectangle
 \[
  0\le x\le (N-k)/t,\qquad 0\le y\le (N-k)/c.
 \]

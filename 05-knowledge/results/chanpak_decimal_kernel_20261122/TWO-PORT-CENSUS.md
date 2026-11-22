@@ -27,3 +27,5 @@ for n in 3 4 5 6 7 8; do /tmp/two-variable-ports session212/cycle-levels/classes
 ~~~
 
 [Exact inverse](two_variable_ports.cpp) · [Quotient catalogue](../../../session212/cycle-levels)
+
+A concurrent positive control shows what one growing port can do at a different target shape. A specific strong quotient gives physical flips at \(2^m+3,2^m+5\) for every \(m\ge6\), with the same marked arc. Its two-visit skeleton count is 32. The Euclid-center test here asks for a second moving binary scale, \(2^{p-1}\), in addition to the main power \(2^{2p-1}\). [Exact dyadic flip family](../chanpak_absolute_descent_20261122/DYADIC-BANDS.md) · [Two-scale obstruction for uniform inflations](TRANSITIVE-PORT-FILTER.md)
