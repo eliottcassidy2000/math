@@ -82,7 +82,7 @@ $
 \left|\sqrt{(C-N)/64}-|d|\right|
 \le \frac{5((|c|+1)G+1)}{64(|c|-2)G}<1/8.
 $
-For $c=0$, $d=2r+1\ge3$ and the correction has absolute value at most $5r+5=(5/2)(d+1)$. After division by $64d$ the error is at most $5/96<1/16$. Thus in every case exact nearest-integer square-root rounding determines $|d|$, and the sign determines $d$. Now $r=(d-cG-1)/2$ is the only possible suffix. Reject a failed integer, range, parity, count, or required displacement test. This final replay is crucial: rounding locates a possible witness, not a promise of existence.
+For $c=0$, $d=2r+1\ge3$ and the correction has absolute value at most $5r+5=(5/2)(d+1)$. After division by $64d$ the error is at most $5/96<1/16$. In fact $J(2v+1)=J(v)-v-[v\text{ odd}]\le0$, so $C-N\ge64d^2$ in this central case and floor square-root recovery already suffices. Thus in every case exact nearest-integer square-root rounding determines $|d|$, and the sign determines $d$. Now $r=(d-cG-1)/2$ is the only possible suffix. Reject a failed integer, range, parity, count, or required displacement test. This final replay is crucial: rounding locates a possible witness, not a promise of existence.
 
 The digit evaluation of $F$ and reverse bits uses time polynomial in the bit lengths. The physical addresses on both sides have $u,w\ge G$, so $N\ge256G^2$ bounds the number of scales. This covers the entire $z=0$ chamber without a shift bound; the other signed slices are global as well.
 
@@ -145,3 +145,5 @@ $
  \le \prod_{b\in\mathcal B}(1-b^{-s})^{-1}<\infty.
 $
 The inequality overcounts multiplicative factorizations and therefore makes no factorization uniqueness assumption. The abscissa for $\mathcal M$ is again $1/2$ since $\mathcal B\subseteq\mathcal M$; in particular the monoid has $O_\epsilon(X^{1/2+\epsilon})$ distinct counts through $X$. An exact inverse at fixed rank can support arbitrarily many CRT local tests and still fail to produce the absolute height growth necessary for a dense bank.
+
+Exact finite replay: `python3 check_digit_inverse.py`.

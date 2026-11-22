@@ -6,6 +6,13 @@ It targets the prime and factor-seven lanes, not just a larger finite census.
 
 ## Main absolute and arithmetic results
 
+- [Exact +2 switches on independent ports](UNIT-SWITCHES.md). A new
+  invariant line allows both physical flanks to branch independently
+  while a middle change adds exactly two to the ordinary count. Three
+  charts hit every odd class mod 256 infinitely often, but still have
+  mod-512 gaps. A single certified twin-prime pair is a finite witness,
+  not a prime infinitude or an assertion that the two graphs are joined
+  by a single arc flip.
 - [A positive-alphabet affine sieve](AFFINE-SIEVE.md). Three fixed legal
   port moves give a uniform congruence spectral gap after comparison with
   two integral shears. A sieve of the actual output words gives infinitely
@@ -23,6 +30,14 @@ It targets the prime and factor-seven lanes, not just a larger finite census.
   gives an actual pure 2-Selmer interpretation, not an elliptic rank
   calculation. Two strong hosts of the same order and the same count 9
   have different nullities.
+
+- [Native seam geometry and a determinant selector](NATIVE-HODGE.md).
+  The common-spine flip complex is simply connected from order 9.
+  A finite period/regulator/torsion identity records what a selected
+  height window fails to fill. The order of the effective-conductance
+  determinant ratio measures the smallest possible maximum count gap
+  along a physical path; a unit bottleneck certifies every intervening
+  odd count.
 
 ## How the number-theoretic ideas were used
 
