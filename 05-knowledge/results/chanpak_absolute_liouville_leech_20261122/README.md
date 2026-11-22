@@ -1,0 +1,11 @@
+# Absolute perfect-number targets, full word signs, and the Leech labels
+
+**Anchor.** The exact tournament problem is an integer target, not a congruence or a nearby value. The earlier [cube-root bracket](../chanpak_gap_star_ports_20261122/README.md) and [exact perfect-number band](../chanpak_gap_star_ports_20261122/PERFECT-BAND.md) are different achievements. The former can leave an unbounded residual, and the latter used markedly unequal addresses in different cores. [Dyadic perfect-number obstruction and exact symbolic reader](DYADIC-PERFECT.md): if both flanks grow on fixed dyadic polynomial templates, the two-slot mass must be a power of two; the original six-vertex mass is 320. If only one flank grows, the next coefficient gives a bit-reversal obstruction for *every* fixed marked core with odd deletion count in this read.
+
+**Niche.** [Full signs under quadratic twists](FULL-SIGNS.md): Pell spacing makes the product squareclass injective at a fixed depth of the actual +2 words. Prime powers occur on only O(2^(n/2)) of the depth-n words, removing the ambient prime-power error from the untwisted signed reduction. The full Liouville signs balance after averaging over a growing family of genuine quadratic twists. [Digital Fourier and matching obstructions](DIGITAL-FOURIER.md) show why neither a global Fourier-supremum bound nor a fixed-factor bit pairing proves untwisted cancellation. The fixed Liouville correlations are **OPEN**.
+
+**Wildcard.** [The two missing pure-A Coxeter labels](LEECH-LABELS.md) complete the earlier six-label paired rails: both a·2^k+1 and 7(a·2^k+1) for a=9,25 have strong witnesses at every k≥1. Together the eight pure-A labels are covered apart from the inherited lower holes 7 and 21. The same note computes the exact perfect-core aliquot defect of a rough but composite flank, quantifying why relative near-neutrality is not primality. The Coxeter labels organize the catalogue; no lattice-to-tournament isomorphism is claimed.
+
+Inverse format matters: a congruence phase, a near hit, and a physical equality are kept separate. Chan–Pak and full untwisted Liouville cancellation remain **OPEN**.
+
+Replay the new finite data with `python3 check_dyadic_read.py`, `python3 check_leech_labels.py`, and `python3 check_squareclasses.py` in this directory. They do not stand in for the unbounded proofs.
