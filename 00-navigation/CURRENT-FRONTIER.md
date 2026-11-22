@@ -193,18 +193,13 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
+
+[Order-118 E61 bracket, optimal 7:10 direction and prior constructions](../05-knowledge/results/chanpak_odd_square_spines_20261122/README.md). Exact E61 crossing and Chan–Pak OPEN.
+
 - **PROVED / FINITE-EXACT:** [Arc-flip geometry at 7 and 21](../05-knowledge/results/chanpak_gap_cubical_geometry_20261122/README.md): an all-order permutohedral model, six-core relative collapse giving homotopy equivalences for all cutoffs 15–23, and four/six marked cores for the nearest literal crossings. It does not close Chan–Pak.
 - **PROVED / FINITE-EXACT:** [2–3–11 brackets and Collatz clocks](../05-knowledge/results/prime_brackets_collatz_2311_20261122/README.md): long-cycle lift modulo 121, exact odd/even return cost, independent rational-cycle residues, and any-depth E61 exclusion for signed traces with at most two odd steps.
 - **FINITE-EXACT / PROVED:** [E61 two-clock Farey inverse](../05-knowledge/results/chanpak_farey_two_three_clocks_20261122/README.md): new arbitrary-flank bands (1.1 trillion normalized minima on spine 8); two-suffix carry factorizations and incompatible binary/ternary lifts at the first exceptional axis. Both full spines remain open.
 - **FINITE-EXACT:** [Farey complementary placement at E61](../05-knowledge/results/chanpak_farey_complementary_exact_20261122/README.md): the whole adaptive cube-root window is empty on spines 4 and 8; wider terminal sectors, shorter all-modulus control, and exact 13-adic lower-contact clocks. Unrestricted crossing remains open.
-[Backchain pressure 23/24 and terminal inverses](../05-knowledge/results/chanpak_terminal_profiles_20261122/README.md) · [Directed-edge descent and dyadic flips](../05-knowledge/results/chanpak_absolute_descent_20261122/README.md) · [Profinite automata and the E61 miss](../05-knowledge/results/chanpak_profinite_automata_20261122/README.md).
-
-[Contact folds, Moser spindle and dyadic seams](../05-knowledge/results/chanpak_hadwiger_planar_folds_20261122/README.md).
-
-[Orders 90–93 and Volchkov](../05-knowledge/results/chanpak_e61_compact_volchkov_20261122/README.md) · [Square-sum cuts and exponents 11/21](../05-knowledge/results/chanpak_middle_out_square_sum_20261122/README.md) · [Collatz phases and exponents 3–10](../05-knowledge/results/chanpak_mirimanoff_unit_lifts_20261122/README.md).
-[Seven-term gluing](../05-knowledge/results/chanpak_cech_perfect_seams_20261122/README.md) · [Hamilton support and birth](../05-knowledge/results/chanpak_support_birth_grammar_20261122/README.md) · [Perfect offsets and Liouville signs](../05-knowledge/results/chanpak_absolute_liouville_leech_20261122/README.md).
-[Liouville, roughness and dyadic inversion](../05-knowledge/results/chanpak_prime_parity_inverse_20261122/README.md) · [Affine +2, Monsky and Hodge](../05-knowledge/results/chanpak_affine_sieve_metagraph_20261122/README.md).
-[Two ports and odd-modulus steering](../05-knowledge/results/chanpak_branching_inverse_20261122/README.md) · [Walsh and one-apex hardness](../05-knowledge/results/chanpak_matching_folds_branching_20261122/README.md) · [8/9/27](EIGHT-NINE.md) · [Descent](../05-knowledge/results/core_descent_endpoints_20261112/README.md). Chan–Pak OPEN.
 - [Clocks](../05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md); [more](S111-plus.md).
 - [Exact U5-free capacity](../05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md).
 - [THM-5313](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md) · [Exponent-31 flip](../05-knowledge/results/chanpak_e31_physical_20261122/README.md) · [E61 inverse and exponents 3–23](../05-knowledge/results/chanpak_e61_fibonacci_target_20261122/README.md).
