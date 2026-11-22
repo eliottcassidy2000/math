@@ -193,6 +193,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
+[Nov 22: absolute perfect targets and full signs](../05-knowledge/results/chanpak_absolute_liouville_leech_20261122/README.md): exact triangular offsets, an unequal-flank divisor inverse, Leech-label completion, and full Liouville cancellation averaged over quadratic twists. [Concurrent literal exponent-31 straddle](../05-knowledge/results/chanpak_e31_physical_20261122/README.md). Untwisted signs, all-exponent straddling, and Chan–Pak OPEN.
 [Nov 22: prime parity and absolute inverses](../05-knowledge/results/chanpak_prime_parity_inverse_20261122/README.md): truncated Liouville and simultaneous roughness on physical +2 pairs, cofinal mod-2^19 atlas repair, and the fruit quotient inverse. Chan–Pak OPEN.
 [Nov 22: affine sieve and exact selectors](../05-knowledge/results/chanpak_affine_sieve_metagraph_20261122/README.md): positive-word affine sieve, exact +2 independent-port switches, complementary digit inverse, a Monsky character and native Hodge selector. Chan–Pak OPEN.
 [Nov 22: inverse on actual two-port counts](../05-knowledge/results/chanpak_branching_inverse_20261122/README.md): self-delimiting count with linear vertex cost, independent flanks with a +6 switch, and all-odd-modulus steering. Sparse exact images; Chan–Pak OPEN.
