@@ -71,6 +71,30 @@ Put \(W=z^{2/3}\). In this half-slice \(u\le2W+2\), \(q\le W\), \(d\le4W+1\) and
 
 For the previously fixed scale \(N=10^{24}\), the decoder gives lower counts \(N-32,746,460,615\) and \(N+2,951,942,547\). Their respective \((a,b)\) are \((27964641611,27937064628)\) and \((27964641610,27937064629)\). Each has its literal \(+2\) mate. This bound leaves an unbounded residual at a prescribed absolute integer.
 
+### The cube-root exponent is sharp for the chosen configurations
+
+**Theorem.** Let \(\mathcal L\) contain every \(L(t+d,t-d)\) on the full grids in the two-sided proof: for every integer \(z\ge64\) take its specified \(q,t\) and all half-integers \(1/2\le d\le D\). Then
+\[
+            |\mathcal L\cap[X,2X]|=\Theta(X^{2/3}).
+\]
+The longest subinterval of \([X,2X]\) containing no member of \(\mathcal L\) has length \(\Theta(X^{1/3})\). Both statements also hold after adjoining every upper endpoint \(L+2\). The full independent two-flank family (2) permits other choices of \(a,b\).
+
+**Proof.** Uniformly on a grid, \(q\asymp z^{1/3}\), \(t=z+O(z^{1/3})\), \(d=O(z^{2/3})\). Since \(0\le p(v)\le v\), equation (2) gives
+\[
+                L=1280(t^2-d^2)+O(t)=1280z^2+O(z^{4/3}).
+\]
+Thus any grid contributing a point in \([X,2X]\) has \(z\asymp\sqrt X\). There are only boundedly many possible dyadic \(q\asymp X^{1/6}\) in this range. For fixed \(q\), the allowed centers \(t\) lie in one progression of spacing \(q\) over a range of length \(O(\sqrt X)\). This gives \(O(X^{1/3})\) centers. Each permits \(O(X^{1/3})\) values of \(d\). The product bounds the number of address pairs before any coincidences of counts. Adjoining each upper endpoint at most doubles this bound, applying the same estimate in \([X-2,2X]\).
+
+Conversely, sample targets separated by more than twice the bracketing error throughout \([5X/4,7X/4]\). Their lower witnesses are distinct and lie in \([X,2X]\), giving the matching lower bound. Splitting \([X,2X]\) at all observed endpoints leaves at least one empty interval of length \(\Omega(X^{1/3})\) by the upper bound on their number. A longer interval than a sufficiently large constant times \(X^{1/3}\) would contain a witness by bracketing its midpoint. This proves the claimed scale in both directions.
+
+The choice of suffix width explains the exponent. For variable dyadic \(q\) the dominant terms in the step estimate have orders \(z/q\) from the unresolved high bits and \(\sqrt{zq}\) from the quadratic change in height between successive displacements. Equating them gives \(q\asymp z^{1/3}\). The counting argument shows that even perfect selection among *all* configurations on these grids cannot uniformly beat the resulting error. Supplying further addresses at the same height is mathematically necessary for that improvement. A separate complementary-digit chart also bounds its near-balanced image by counting admissible centers and suffixes before projecting to counts. [Complementary-digit inverse](../chanpak_affine_sieve_metagraph_20261122/DIGIT-INVERSE.md) · [Independent branching switches](../chanpak_affine_sieve_metagraph_20261122/UNIT-SWITCHES.md)
+
+**A necessary imbalance even off the grids.** For the whole chart (2), let \(Z\ge1\) be an integer. The number of its lower counts in \([X,2X]\) obtainable with \(|a-b|\le Z\) is at most
+\[
+              2\lfloor\sqrt{2X/1280}\rfloor\lceil Z/2\rceil.
+\]
+Indeed \(L\ge1280ab\), so the smaller address has at most the indicated square-root number of possibilities. The positive difference is odd, leaving at most \(\lceil Z/2\rceil\) choices and two orders. The same bound applies to upper endpoints separately, since \(L+2\le2X\) still implies \(1280ab\le2X\). Thus even with *every* binary prefix and displacement, addresses with \(Z=o(\sqrt X)\) supply density zero in a dyadic target interval. At \(Z=\lfloor\sqrt X\rfloor\), the proportion of odd integers in that interval obtainable from either endpoint is at most \(4/\sqrt{640}+o(1)<0.159\). To cover all prescribed counts in this chart one would have to use substantially unequal flanks. The successful two-ended address \((17,79709)\) at the perfect-number band illustrates this choice in a different marked core. [Exact band certificate](PERFECT-BAND.md)
+
 ## One-arm target inversion and two exact landings
 
 Set \(x=0\) and take even \(w=y>0\). The complete read (1) reduces to \(k+c w+h p(w)\), where \(c=e+o\). Two cores with the same \(h,c\) and apex counts \(k,k+2\) therefore carry a physical unit flip on every even suffix, if their rows differ on one arc. This asymmetric profile condition finds paired witnesses beyond the two-sided six-vertex chart.
