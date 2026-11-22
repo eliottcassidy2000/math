@@ -36,3 +36,12 @@ For each large integer \(N\) in the certificate, the replay factors \(N-1\) comp
 **FINITE-EXACT.** At the larger prime, no representation with transitive deletion of one apex has at most eight incident wins or at most eight losses on that apex, without an order bound. After stripping redundant leading zeros and trailing ones, let the top mark be at \(x\). Its contribution to the last zero alone gives \(H\ge1+2^{x-1}\) for \(x\ge2\). All marks together give \(H<2^{x+1}\) by summing their individual powers of two. Thus \(2^{89}<q<2^{90}\) leaves just \(x=89,90\). For each top and budget the previously derived [monotone sparse inverse](README.md#sparse-asymmetric-contacts-at-the-absolute-exponent-61-target) exhausts every possible descending selection and tests the exact smallest mark. All these searches are empty. Reversal and complementation treat a small number of losses as well.
 
 From this directory run `python3 -B check_prime_factors.py` for the factorization, certificates, order bounds and explicit small core. Run `c++ -O3 -std=c++17 sparse_upper.cpp -o /tmp/chanpak_sparse_prime && /tmp/chanpak_sparse_prime --large-factor` for the large prime's sparse test.
+
+## The class series at the exact upper endpoint
+
+Writing \(A_d(z)\) for the strong-isotype polynomial and \(F_d(z)\) for the ordinary size series, the two distinct certified primes give the particularly short specialization
+\[
+ F_{E_{61}+1}(z)=\frac{A_{sq}(z)}{(1-z)^2}
+                 +\frac{2 A_s(z) A_q(z)}{(1-z)^3}.
+\]
+These are the one-component and two-component alternatives in the canonical component word. In the second term the factor two records which prime component comes first. Its first possible degree is at least \(16+32=48\). If a decomposable class ever attains the overall minimum, there are at least two equally small, rigid isomorphism classes. A unique minimum at this height would have to be strong. Any positive unit flip at the perfect center needs a strong representative at the upper endpoint after exterior singletons are stripped. Thus the relevant strong coefficient is the first numerator; realizing the remaining prime would already fill the second. [Scalar and marked size series](../chanpak_arc_fiber_grammar_20261122/README.md)

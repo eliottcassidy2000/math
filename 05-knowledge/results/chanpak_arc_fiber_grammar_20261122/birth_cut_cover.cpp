@@ -30,6 +30,25 @@ Rows parent(int n, int percent, Generator &rng) {
     return rows;
 }
 
+Rows order_twelve_parent(int trial, Generator &rng) {
+    if (trial % 3 != 0) return parent(12, 7 + 2 * (trial % 23), rng);
+    Rows rows{};
+    for (int i = 0; i < 13; ++i)
+        for (int d = 1; d <= 6; ++d) rows[i] |= 1 << ((i + d) % 13);
+    for (int step = 0; step < 170; ++step) {
+        int i = rng.next() % 13;
+        int j = rng.next() % 13;
+        int k = rng.next() % 13;
+        if ((rows[i] >> j & 1) && (rows[j] >> k & 1) && (rows[k] >> i & 1)) {
+            rows[i] ^= (1 << j) | (1 << k);
+            rows[j] ^= (1 << k) | (1 << i);
+            rows[k] ^= (1 << i) | (1 << j);
+        }
+    }
+    for (int i = 0; i < 12; ++i) rows[i] &= (1 << 12) - 1;
+    return rows;
+}
+
 std::vector<Counts> endpoint_counts(int n, const Rows &incoming) {
     std::vector<Counts> dp(1 << n);
     for (int mask = 1; mask < (1 << n); ++mask)
@@ -97,7 +116,7 @@ void check_child(int n, const Rows &out, int mask, std::int64_t expected) {
 int main(int argc, char **argv) {
     if (argc != 3) return 2;
     int shell = std::stoi(argv[1]), witness = std::stoi(argv[2]);
-    if (shell != 14 && shell != 15) return 2;
+    if (shell != 13 && shell != 14 && shell != 15) return 2;
     std::vector<bool> needed;
     int target = 0, left = 0;
     while (std::cin >> target) {
@@ -105,16 +124,18 @@ int main(int argc, char **argv) {
         if (int(needed.size()) <= target) needed.resize(target + 1);
         if (!needed[target]) { needed[target] = true; ++left; }
     }
-    for (int stage = 0; stage < (shell == 14 ? 1 : 2) && left; ++stage) {
+    for (int stage = 0; stage < (shell == 15 ? 2 : 1) && left; ++stage) {
         Generator rng;
         int budget = shell == 14 ? 950 : (stage == 0 ? 20000 : 1057);
+        if (shell == 13) budget = 55000;
         int trial = 0;
         for (; trial < budget && left; ++trial) {
             int n = shell == 14 ? 11 : (stage == 1 ? 13 : 12 + (trial % 3 == 0));
+            if (shell == 13) n = 12;
             int percent = 15 + 5 * (trial % 8);
             if (shell == 15) percent = stage == 1 ? 18 + trial % 10 :
                                       (n == 12 ? 10 + 5 * (trial % 8) : 8 + 2 * (trial % 11));
-            auto out = parent(n, percent, rng);
+            auto out = shell == 13 ? order_twelve_parent(trial, rng) : parent(n, percent, rng);
             auto values = all_children(n, out);
             if (trial == 0)
                 for (int mask : {0, 1, (1 << n) / 3, (1 << n) - 1})
@@ -136,6 +157,12 @@ int main(int argc, char **argv) {
         }
         std::cout << "shell " << shell << ", stage " << stage + 1 << ", parents " << trial
                   << ", targets remaining " << left << '\n';
+    }
+    if (shell == 13 && witness == 0) {
+        auto first = std::find(needed.begin(), needed.end(), true) - needed.begin();
+        auto last = needed.rend() - std::find(needed.rbegin(), needed.rend(), true) - 1;
+        std::cout << "Order-13 schedule: first residual " << first << ", last residual " << last << '\n';
+        return (left == 22362 && first == 3161045 && last == 3354713) ? 0 : 1;
     }
     return left ? 1 : 0;
 }

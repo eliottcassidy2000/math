@@ -8,6 +8,8 @@ The [concurrent common-cut proof](../chanpak_support_birth_grammar_20261122/PRIM
 
 An exact flip at exponent 61 must contain a common directed four-cycle on which the two counts are equal. The marked core grows from this cycle by one- and two-vertex steps. The two-vertex steps preserve the parity of the half-gap, so every successful growth history must contain a one-vertex parity change. [Square, extension grammar and finite slot test](SQUARE-EARS.md)
 
+Every odd count through 3,423,417 other than the two exceptions already occurs at order 14. All smallest representatives of these nontrivial heights are strong, by a component-replacement theorem that applies at every height. [More than a million consecutive odd heights first attained at order 13](ORDER-13-BIRTH-INTERVAL.md) · [Exact interval at order 14](ORDER-14-INTERVAL.md) · [Small-component exclusion](BIRTH-CUT-COVER.md)
+
 ## The original single-count series and its missing edge information
 
 Let \(F_h(z)\) count ordinary isomorphism classes at all orders with exactly \(h\) directed Hamiltonian paths. Use the empty tournament only as the neutral object at \(h=1\). Write \(A_d(z)\) for the order polynomial of nontrivial strong classes of count \(d\). The inherited formula for **each** positive odd target, including an absent one, is

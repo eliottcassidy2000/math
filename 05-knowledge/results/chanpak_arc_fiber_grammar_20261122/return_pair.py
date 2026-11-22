@@ -1,6 +1,8 @@
 """Ordered-slot transfer and least equal-height arcs seen by a triangle return."""
+from collections import Counter
 from functools import cache
 from itertools import combinations
+from math import comb
 from pathlib import Path
 import sys
 
@@ -44,6 +46,89 @@ def small_catalog(order):
         yield tuple(map(int, line.split()))
 
 
+def four_blocks(a, b, reverse=False):
+    """Label the singletons first, followed by A and B."""
+    m, n = len(a), len(b)
+    left = ((1 << m) - 1) << 2
+    right = ((1 << n) - 1) << (m + 2)
+    return ((left | (0 if reverse else 2), right | int(reverse)) +
+            tuple((row << 2) | right | 2 for row in a) +
+            tuple((row << (m + 2)) | 1 for row in b))
+
+
+def determinant_change(a, b, j):
+    return j * (a(j + 1) * b(j) - a(j) * b(j + 1)
+                + a(j) * b(j - 1) - a(j - 1) * b(j))
+
+
+def host_reader(a, b, reverse):
+    """Count absolute covers in the square using compressed module visits."""
+    base = four_blocks((0,), (0,), reverse)
+    singles = (0, 1)
+    slots = Counter()
+
+    def extend(last, mask, left, right):
+        slots[mask, left, right] += 1
+        for vertex in range(4):
+            if last >= 0 and not (base[last] >> vertex & 1):
+                continue
+            if vertex in singles and mask >> vertex & 1:
+                continue
+            extend(vertex, mask | ((1 << vertex) if vertex in singles else 0),
+                   left + (vertex == 2), right + (vertex == 3))
+
+    extend(-1, 0, 0, 0)
+
+    @cache
+    def nonempty(module, k):
+        return sum((-1)**(k-i) * comb(k, i) * module(i) for i in range(k+1))
+
+    def read(j):
+        current = Counter({(0, 0, 0): 1})
+        for _ in range(j):
+            following = Counter()
+            for (mask, x, y), count in current.items():
+                for (added, u, v), ways in slots.items():
+                    if not mask & added:
+                        following[mask | added, x + u, y + v] += count * ways
+            current = following
+        return sum(count * nonempty(a, x) * nonempty(b, y)
+                   for (mask, x, y), count in current.items() if mask == 3)
+
+    return read
+
+
+def delayed_flip():
+    for left, right in [((2, 4, 1), (2, 0)), ((2, 0), (0,))]:
+        a, b = slot_reader(left), slot_reader(right)
+        graphs = [four_blocks(left, right, reverse) for reverse in (False, True)]
+        assert flipped(graphs[0], 0, 1) == graphs[1]
+        actual = [slot_reader(graph) for graph in graphs]
+        compressed = [host_reader(a, b, reverse) for reverse in (False, True)]
+        for j in range(1, 4):
+            assert [f(j) for f in actual] == [f(j) for f in compressed]
+            assert actual[1](j) - actual[0](j) == determinant_change(a, b, j)
+
+    # The two order-15 modules are ordinal sums of the archived order-7 and -8 factors.
+    factors = (((8,9,3,100,15,23,55), (144,5,161,7,78,27,47,122)),
+               ((32,97,19,7,11,28,61), (112,97,67,7,14,28,56,127)))
+    def ordinal_reader(rows):
+        x, y = map(slot_reader, rows)
+        return cache(lambda j: x(j) * y(j))
+    a, b = map(ordinal_reader, factors)
+    assert [a(j) for j in range(1, 4)] == [b(j) for j in range(1, 4)] == [17325,5105184,317017071]
+    assert (a(4), b(4)) == (8535609600,8540125440)
+    old, new = [host_reader(a, b, reverse) for reverse in (False, True)]
+    for j in range(1, 4):
+        assert new(j) - old(j) == determinant_change(a, b, j)
+    q = [[f(j) for j in range(1, 4)] for f in (old, new)]
+    # H(R^2)=2Q3+5Q2-Q1.
+    print("32-vertex square (H,Q2,Q3)", *q)
+    second = tuple(2*z + 5*y - x for x, y, z in q)
+    assert second == (1644123578453985193299, 1644114988863765765459)
+    print("second-wrap counts", *second)
+
+
 def main():
     # The two independent counts use labelled path DP before and after the return.
     checks = 0
@@ -77,3 +162,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    delayed_flip()

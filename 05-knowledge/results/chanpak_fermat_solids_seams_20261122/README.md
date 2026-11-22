@@ -2,6 +2,8 @@
 
 **PROVED.** For every exponent \(p\ge2\), the upper neighbor \(E_p+1\) of \(E_p=2^{p-1}(2^p-1)\) excludes every Fermat prime from its automorphism support. At \(p=61\) **every** tournament with this upper count has trivial automorphism group, regardless of its order. At \(p=31\) the group can only be trivial or cyclic of order 29, with a single 29-cycle in the latter case. The first composite Fermat number sharing a factor with any upper target is \(F_{18}\), detected by the Lucas–Lehmer doubling map started at \(-3/2\). A sharp \(2\sum q_i\)-vertex construction gives independent rotations of prescribed prime orders in modularly prime tournaments. The results select the necessary geometry of possible corrections. Absolute one-arc placement at exponent 61 is open here. [The actual exponent-31 edges](../chanpak_e31_physical_20261122/README.md)
 
+The upper neighbor at exponent 61 has two certified prime factors. One has an explicit 34-vertex realization. Their order bounds give an exact two-term form for the entire isomorphism-class series of the upper target. [Upper prime profiles](UPPER-PRIME-PROFILES.md)
+
 ## A guard on every prime order, independent of vertex count
 
 Write \(H(T)\) for the number of directed Hamiltonian paths. Every subgroup of \(\operatorname{Aut}(T)\) acts freely on the ordered vertex lists of these paths, so its order divides \(H(T)\). Let \(q\) be a prime dividing the group order. It is odd, since an involution exchanges some two vertices and reverses their arc. By Cauchy's theorem an automorphism of order \(q\) exists. Every nontrivial orbit of this element induces a vertex-transitive regular tournament on \(q\) points. [LEM-003, free action on paths](../../../01-canon/theorems/LEM-003-aut-acts-freely-on-ham-paths.md)

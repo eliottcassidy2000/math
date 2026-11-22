@@ -1,4 +1,4 @@
-"""Reproduce two-component birth exclusions or the order-14 complete interval."""
+"""Reproduce two-component birth exclusions and order-13/14 interval certificates."""
 import argparse
 from collections import defaultdict
 from itertools import product
@@ -6,7 +6,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 
-from fibers import census_rows
+from fibers import census_rows, paths, strong
 
 
 def targets(shell):
@@ -19,6 +19,12 @@ def targets(shell):
     if shell == 'interval14':
         out = {h for h in range(3, 3423418, 2) if h not in (7, 21) and h not in birth}
         assert (len(out), min(out), max(out)) == (1667796, 80453, 3423417)
+        controls = {
+            2327675: (2372, 6221, 5744, 1877, 7203, 1867, 912, 3391, 1558, 5267, 6211, 4972, 489),
+            3423417: (4554, 5932, 3161, 5808, 6755, 6341, 3466, 3606, 700, 1125, 6449, 779, 3012),
+        }
+        for h, rows in controls.items():
+            assert len(rows) == 13 and strong(rows) and paths(rows) == h > 12 * max(birth)
         return out
     out = set()
     if shell == 15:
@@ -37,11 +43,15 @@ def targets(shell):
 
 def main():
     cli = argparse.ArgumentParser(description=__doc__)
-    cli.add_argument('mode', choices=('14', '15', 'interval14'))
+    cli.add_argument('mode', choices=('14', '15', 'interval13', 'interval14'))
     cli.add_argument('--witness', type=int, help='emit and independently recount one literal target')
     args = cli.parse_args()
-    shell = 15 if args.mode == 'interval14' else int(args.mode)
-    missing = targets(args.mode if args.mode == 'interval14' else shell)
+    if args.mode.startswith('interval'):
+        shell = 13 if args.mode == 'interval13' else 15
+        missing = targets('interval14')
+    else:
+        shell = int(args.mode)
+        missing = targets(shell)
     if args.witness is not None and args.witness not in missing:
         cli.error('the requested count is outside the residual target set')
     print(f'{len(missing)} residual target heights', flush=True)
