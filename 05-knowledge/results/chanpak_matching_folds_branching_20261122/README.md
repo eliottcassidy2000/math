@@ -8,7 +8,7 @@ See [Chan–Pak, Conjecture 6.2](https://www.math.ucla.edu/~pak/papers/DominoPer
 | Lane | Result | Proof |
 | --- | --- | --- |
 | Anchor: constructive interfaces | A single transitive twin block has an exact Stirling expansion. The largest exponential base is one plus a bipartite matching number; a permanent is a leading coefficient. Unit dyadic slope forces the single offset \(+1\). | [Euler gluing and twin blocks](EULER-GLUING.md) |
-| Niche: reversal symmetry | The signed fold has explicit Walsh coefficients indexed by alternating linear forests. They identify the first mod-four response. The inherited result that every odd number, **including 7 and 21**, occurs as a fixed-path count is an essential guard. | [Signed fold](SIGNED-FOLD.md) |
+| Niche: reversal symmetry | The signed fold has explicit Walsh coefficients indexed by alternating linear forests. They identify the first mod-four response and yield a Gaussian fluctuation theorem, even conditional on any sequence of owner tournaments. The inherited result that every odd number, **including 7 and 21**, occurs as a fixed-path count is an essential guard. | [Signed fold](SIGNED-FOLD.md); [exact moments and uniform CLT](FOLD-LIMIT.md) |
 | Anchor: feedback-one exact scope | Short-range congruences do not rescue the one-apex binary compiler: the image has upper relative density at most \(\log 2\) in every fixed progression. Its self-converse subfamily is locally uniform among compatible residues but has only order \(\sqrt X\) distinct total counts below \(X\). | [One-apex boundary](ONE-APEX.md) |
 | Wildcard: formal languages | On a fixed core with transitive spine, each long repeat is either erasable or exponentially expensive. Consequently a polynomial-growth regular attachment language has a polylogarithmic count image; a complete regular compiler would need recurrent branching. | [Periodic erasure](ERASABLE-CLOCKS.md) |
 
@@ -62,3 +62,4 @@ compatible with a target descent.
 Exact finite checks of the new results (not needed for the
 proofs): `python3 check_matching_shell.py` from this directory.
 For the folded Walsh and total-profile formulas, run `python3 check_signed_fold.py`.
+For the exact second moment, run `python3 check_fold_moments.py`.
