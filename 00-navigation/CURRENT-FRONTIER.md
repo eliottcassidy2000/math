@@ -193,7 +193,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
-[Nov 22: inverse on actual two-port counts](../05-knowledge/results/chanpak_branching_inverse_20261122/README.md): every binary word has a self-delimiting count with linear vertex cost; sparse exact image. Chan–Pak OPEN.
+[Nov 22: inverse on actual two-port counts](../05-knowledge/results/chanpak_branching_inverse_20261122/README.md): self-delimiting count with linear vertex cost, independent flanks with a +6 switch, and all-odd-modulus steering. Sparse exact images; Chan–Pak OPEN.
 [Nov 22: matching coefficients, signed folds, and branching selectors](../05-knowledge/results/chanpak_matching_folds_branching_20261122/README.md): exact counting hardness, Walsh mod-four response, and one-apex / periodic language limits. Chan–Pak OPEN.
 [8/9/27](EIGHT-NINE.md); [descent](../05-knowledge/results/core_descent_endpoints_20261112/README.md): Chan–Pak OPEN.
 - [Clocks](../05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md); [more](S111-plus.md).
