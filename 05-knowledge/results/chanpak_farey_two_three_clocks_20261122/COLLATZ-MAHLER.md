@@ -137,3 +137,6 @@ otherwise on lower reads. Those are recoverable from the lower-rank
 cubes. The resulting padded \(j\)-slot registers need not be
 freely selectable, so the clock is a diagnostic, not a proof of
 Chan–Pak or a scalar filling rule.
+
+The [literal subset-path replay](farey-clock-square-check.py) checks all
+four physical heights on 75 independently assembled padded cores.

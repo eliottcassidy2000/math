@@ -68,7 +68,8 @@ contribution is
 Advance by \((W,L)\mapsto(2W+1-u_j,1-u_j)\), reducing \(W\)
 and the partial read modulo the desired modulus. This gives an
 LSB-first weighted automaton; modulo four it is also immediate that
-\(f/2\) mod 2 counts the overlapping binary triples 010 and 100.
+\(f/2\) mod 2 counts the overlapping triples 010 and 100, written in
+ordinary most-significant-bit-first notation with one leading zero.
 
 For an affine line \((x,y)=(A+Bj,D+Ej)\), read the bits \(b\) of
 \(j\) in the same order and use signed carries. Initialize the
@@ -177,3 +178,10 @@ fact \(\gcd(h,t,c,2q)=1\), so the [complete local image theorem](../chanpak_deci
 classes modulo any modulus even in the even-even two-coordinate
 branch. This is a concrete instance of a second port repairing a
 local obstruction without promising an exact absolute target.
+
+From this result directory, run:
+
+~~~sh
+PYTHONPATH=../chanpak_decimal_kernel_20261122 python3 farey-axis-unit-check.py
+python3 farey-carry-pruning.py
+~~~
