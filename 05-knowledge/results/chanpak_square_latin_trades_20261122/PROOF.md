@@ -1,6 +1,6 @@
 # Five square sums and a binomial family of Hamilton paths
 
-**PROVED.** At infinitely many orders $N$, five specified square sums support at least $\exp(cN^{2/5})$ distinct undirected Hamilton paths on $1,\ldots,N$, for an absolute $c>0$. Here the five sums depend on $N$. The proof also counts exactly the paths with prescribed endpoints and a prescribed matching on these orders. The count is a binomial sum with a single coprimality test.
+**PROVED.** At infinitely many orders $N$, five specified square sums support at least $\exp(cN^{5/8})$ distinct undirected Hamilton paths on $1,\ldots,N$, for an absolute $c>0$. Here the five sums depend on $N$. The proof also counts exactly the paths with prescribed endpoints and a prescribed matching on these orders. The count is a binomial sum with a single coprimality test.
 
 ## Starting point
 
@@ -36,28 +36,37 @@ Both $(41,840,841)$ and $(559,840,1009)$ are primitive. Put $B=705600$, $A=1681$
 
 ## Theorem 2. Infinitely many five-square palettes
 
-For all sufficiently large odd positive integers $k$, put
+Take a primitive Pythagorean triple $u^2+v^2=s^2$ with $u$ odd and $v$ even. Put $r=u+v$, $b=2uvrs$, and $B=b^2$. Define the two other legs by Euclid's parameter pairs $(us,vr)$ and $(vs,ur)$. Whenever both other legs are positive and smaller than $b$, the five corresponding squares support at least
+$\binom{2uvrs^2}{uvrs^2}$ distinct Hamilton paths on each of $[B]$ and $[B-1]$. On $[B]$ they have common endpoints $B,B/2$ and contain every edge of sum $B$.
 
-    u = 2k+1,    v = 3k+1,    s = v⁴−u⁴,    r = s+u²v²,
-    b = 2uvrs,   B = b².
+In particular the original **3–4–5 triangle itself** gives the order-705600 example above. An infinite sequence of primitive triples approaching the shape 3–4–5 gives at least $\exp(cN^{5/8})$ paths at each of the two successive orders $N=B-1,B$.
 
-On each of $[B]$ and $[B-1]$ there are at least $\exp(cB^{2/5})$ distinct Hamilton paths using only five square sums. On $[B]$ they all have the same two endpoints and contain every edge of sum $B$.
+**Proof.** The four integers $u,v,r,s$ are pairwise coprime. Only $v$ is even. The only new coprimality to check is that of $r,s$. An odd prime dividing both would give $v=-u$ and $0=s^2=2u^2$ modulo that prime, which is impossible. Thus both parameter pairs give primitive triples with common even leg $b$. Write $A,C$ for their squared other legs in increasing order. In the asserted chamber $0<A<C<B$, and $B+A,B+C$ are squared hypotenuses. Using $r>s$, the difference of squares factors as
 
-**Proof.** The four integers $u,v,r,s$ are pairwise coprime. Indeed $\gcd(u,v)=1$ by their definitions, $s=v^4-u^4$ is coprime to $uv$, and $r=s+u^2v^2$ is coprime both to $uv$ and to $s$. Only $v$ is even. The two Euclid parameter pairs $(us,vr)$ and $(vs,ur)$ give primitive triples with common leg $b$. Their other legs are the absolute differences of the respective parameter squares. To see these positive legs are strictly smaller than $b$, note $v/u\to3/2$ and $r/s\to101/65$. The ratios of the larger to smaller parameter in the first and second pairs therefore approach $303/130$ and $202/195$, respectively. Both limits lie strictly between 1 and $1+\sqrt2$, the condition for the difference of squares to be smaller than twice the product.
+    C−A = |v⁴−u⁴|(r⁴−s⁴)
+        = |v−u|·r·s²·4uv(u²+uv+v²).
 
-Call their squared legs $A,C$ in increasing order. Both are odd units modulo $B$, and $B+A,B+C$ are the squared hypotenuses. The difference of squared legs is
+Here $u$ and $v$ are distinct by parity. We claim that the switch parameters are exactly
 
-    C−A = (v⁴−u⁴)(r⁴−s⁴).
+    g = 4uvrs²,       M = uvr,       D = |v−u|(u²+uv+v²).
 
-It is positive. Since $r\equiv s\pmod{u^2v^2}$, this gives $g\ge s u^2v^2$, as $s u^2v^2$ divides both $B$ and the difference. Also $8\mid g$ because both odd legs have square 1 modulo 8, and $b$ is divisible by 4. Thus the central choice $\ell=K/2=g/4$ is integral and its translation parameter is $(A+C)/2$.
+Indeed $B=gM$ and $C-A=gD$. Each prime of $uv$ divides neither factor of $D$. At a prime $p\mid r$ we have $v=-u\pmod p$, so the two factors reduce up to sign to $2u$ and $u^2$. Since $r$ is odd, these are also units. Hence $\gcd(M,D)=1$.
 
-We show that $(A+C)/2$ is coprime even to $B$. It is odd. Expanding gives
+Now $K=g/2=2Ms^2$, so the central binomial layer has $\ell=Ms^2$. Its translation parameter $A+2\ell D$ reduces to $A$ modulo $M$, which is a unit by primitivity. All the central choices give the claimed distinct paths by Theorem 1. More generally every layer with $\ell\equiv0\pmod M$ is connected.
 
-    A+C = (u⁴+v⁴)(r⁴+s⁴)−4u²v²r²s².
+For $u=3,v=4,s=5,r=7$ the pairs are $(15,28)$ and $(20,21)$, so the two other legs are 559 and 41. To obtain distinct unbounded examples, for even positive $k$ use the Euclid pair $m=2k+1,n=k$ and set $u=m^2-n^2,v=2mn,s=m^2+n^2$. Then $v/u\to4/3$ and $r/s\to7/5$. The ratios of larger to smaller parameter for $(us,vr)$ and $(vs,ur)$ approach $28/15$ and $21/20$, respectively. Both limits are strictly between 1 and $1+\sqrt2$, the condition making the difference of squares positive and smaller than twice the product. Thus the chamber holds eventually. Here $u,v,r,s\asymp k^2$, so $B\asymp k^{16}$ and $K\asymp k^{10}\asymp B^{5/8}$. Finally $\binom K{K/2}\ge 2^K/(K+1)$. ∎
 
-For an odd prime $p\mid uv$ we have $r\equiv s\pmod p$, so the right hand side is a unit modulo $p$. For $p\mid s$ it is a unit since $v^4\equiv u^4\pmod p$. For $p\mid r$, vanishing would require $v^4=-u^4\pmod p$. Substituting in $r=v^4-u^4+u^2v^2\equiv0$ gives $(v/u)^2=2\pmod p$, hence $4=-1\pmod p$. But 2 is a nonsquare modulo 5. This exhausts the primes of $B$.
+## Theorem 3. Connected components of the graph of trades
 
-By Theorem 1 all central choices yield distinct paths. Their number is $\binom K{K/2}\ge 2^K/(K+1)$. Finally $u,v\asymp k$, $r,s\asymp k^4$, $B\asymp k^{20}$ and $K\gg k^8\gg B^{2/5}$. These estimates prove the bound on an unbounded sequence of distinct orders. ∎
+Use the $K$ alternating cycles of Theorem 1 as named coordinates. The vertices of a cube are choices of matchings, and a single edge changes the chosen matching on one cycle. Keep only vertices whose chosen graph is Hamiltonian.
+
+For each maximal consecutive run $[i,j]$ of layers satisfying the coprimality condition, the resulting graph has the following components. If $i=j$, each of the $\binom K i$ choices is isolated. If $i<j$, it has a single component of size $\sum_{\ell=i}^j\binom K\ell$. Indeed all vertices of layer $i$ are connected by exchanging one element at a time through layer $i+1$. Every vertex in the run can descend to layer $i$ by deletions. A missing whole layer separates consecutive runs because one move changes weight by one.
+
+At $b=840$ the forbidden layers are precisely $\ell\equiv1\pmod3$ or $\ell\equiv5\pmod7$. For example every one of the $\binom{4200}{2106}$ paths at layer 2106 is isolated. Its lower neighbors fail at 7 and its upper neighbors fail at 3.
+
+There are also infinitely many orders with $\exp(cN^{5/8})$ **isolated Hamiltonian states** under these moves. In the construction of Theorem 2 take $n=42j+22$, $m=2n+21$ for positive $j$. They are coprime of opposite parity and $m/n\to2$, so the same limiting shape and growth estimates hold. Modulo 21 the new Euclid parameters $(m,n)$ equal $(2,1)$, giving $(u,v,s,r)=(3,4,5,7)\pmod{21}$. In particular $21\mid M$. Both possible squared legs are $1\bmod21$. Eventually $v>u$, giving $D\equiv37\pmod{21}$ by Theorem 2. Therefore the obstructions 3 and 7 at the indicated neighboring layers persist.
+
+To ensure success of the layer itself at all the other primes, choose by CRT an integer $0\le q<M$ with $q\equiv6\pmod{21}$ and $q\equiv0\pmod p$ for every prime $p\mid M$ other than 3 and 7. Put $\ell=K/2+q=Ms^2+q$. Then $A+2\ell D$ is a unit at 3 and 7 by the original residue check, and at every other prime dividing $M$ it equals the unit $A$ modulo that prime. Layer $\ell$ is good and both neighbors are forbidden. Since $\ell$ is between $K/2$ and $2K/3$ for sufficiently large $j$, it contains at least $2^{\lfloor K/3\rfloor}$ distinct choices: with $h=\min(\ell,K-\ell)$ one has $\binom K\ell=\binom Kh\ge(K/h)^h\ge2^h$. This proves the claim. Isolation here is relative to these single alternating-cycle exchanges with the common matching and endpoints fixed. More general path transformations can introduce other edges.
 
 ## Exponent, dimension and the tournament boundary
 
@@ -65,4 +74,4 @@ The permutation theorem only uses two units and a cyclic group. Squares enter in
 
 For tournaments, two existing facts delimit the application. A rooted tournament construction already uses disjoint inverse chambers to decode ternary branch words. And the direct proposal $H(T)=2p(Q_n)+1$, for $p$ the unrestricted square-sum path count, fails at $Q_{23},Q_{25}$. Here the actual shared operation is exchange in a fixed interface. The count of a *successful* exchange requires the first-return permutation. Its reduction to a single integer is proved above because the quotient is a cyclic translation. This argument gives a large family of paths **inside a graph**, with no implication that these cardinalities occur as Hamilton counts **of tournaments**. [Rooted tournament tree](../chanpak_berggren_square_bridge_20261117/root/PROOF.md) · [Session 211, scalar obstruction and path-cover ports](../../../session211/square-sum-port-bridge/PROOF.md)
 
-The accompanying check compares the component formula with direct graph traversal on every even modulus through 32 for every pair of admissible units and every switch choice. It also traverses three specified choices of the five-square example and checks the parameter identities for all odd $3\le k\le 101$. Run `python3 05-knowledge/results/chanpak_square_latin_trades_20261122/check.py` from the repository root.
+The accompanying check compares the component formula with direct graph traversal on every even modulus through 32 for every pair of admissible units and every switch choice. It also traverses four specified choices of the five-square example and checks the parameter identities for all even $4\le k\le 102$. Run `python3 05-knowledge/results/chanpak_square_latin_trades_20261122/check.py` from the repository root. The same check verifies the isolated-layer congruences at the first 30 parameter pairs with $j=10,\ldots,39$.
