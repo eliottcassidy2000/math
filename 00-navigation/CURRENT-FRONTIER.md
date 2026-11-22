@@ -194,6 +194,8 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
+- **Nov22:** [Square-sum 8–9 mirror and the paired middle-out selector](../05-knowledge/results/chanpak_middle_out_square_sum_20261122/README.md): exact shared cuts, new literal exponent 11 and 21 seams, and global exclusion of common induced growth from exponent 3 to 4.
+
 - **Nov22:** [Mirrored Collatz branches and literal unit lifts](../05-knowledge/results/chanpak_mirimanoff_unit_lifts_20261122/README.md): exact base-3 carry, one physical arc in all congruence phases, seven new exact exponent certificates (3–10 now contiguous), and the homogeneous-lift barrier.
 
 [Seven-term gluing, nested contacts and even perfect seams](../05-knowledge/results/chanpak_cech_perfect_seams_20261122/README.md).
