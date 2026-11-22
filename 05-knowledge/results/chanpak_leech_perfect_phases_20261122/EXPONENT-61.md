@@ -2,6 +2,8 @@
 
 **PROVED.** One insertion of six bits into the 60-vertex exponent-31 edge yields a strong single-arc seam whose center matches \(E_{61}=2^{60}(2^{61}-1)\) simultaneously modulo \(4,81,5,7,13\). The same insertion with length \(m=6+12t\) realizes arbitrarily high joint precision at \(3,5,7,13\) for every \(E_r\) with \(r\equiv1\pmod{12}\). Its centers have binary valuation exactly two for \(m>0\). This is a small witness for the original six-label residue test. Absolute exponent-61 placement and finer binary precision require more information. [Exact exponent-31 witnesses](../chanpak_e31_physical_20261122/README.md) · [Independent unequal-flank decoder](README.md)
 
+The absolute search now has two explicit bracketing edges and a finite inverse for both the receiver and its address. The exact lower construction has a two-class neutral component with no upper exit at exponent 61. [Receiver and component results](../chanpak_e61_fibonacci_target_20261122/README.md)
+
 Use the third of the three explicit witnesses. Its deletion data read \(h=1749,c=53334\), so at fixed odd address parity its center has form \(K+cy+hp(y)\). The original right address is \(y_0=42773862359093=16u+5\) with \(u=2673366397443\) odd. Append \(m\) ones to this higher prefix and retain the four-bit suffix 0101:
 \[
                   y_m=16((u+1)2^m-1)+5.
