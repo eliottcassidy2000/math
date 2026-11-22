@@ -193,6 +193,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
+- **PROVED + FINITE-EXACT:** [Terminal compatibility and smaller parts](../05-knowledge/results/chanpak_terminal_profiles_20261122/README.md): the old backchain is sparse (exponent 23/24); exact inverse with a thirteen-zero reset, arbitrary-gap continuants and explicit second/third-read distinctions. Cofinite coverage with unrestricted tournaments remains open.
 - **PROVED + FINITE-EXACT.** [Backchain inverse, dyadic flips, carry, gluing and Paley bounds](../05-knowledge/results/chanpak_absolute_descent_20261122/README.md). Cofiniteness OPEN.
 - **PROVED.** [Profinite automata](../05-knowledge/results/chanpak_profinite_automata_20261122/README.md). At E61 a periodic word passes every modulus and skips the target.
 
