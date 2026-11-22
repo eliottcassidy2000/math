@@ -1,5 +1,7 @@
 # How far can the canonical Farey receiver reach at exponent 61?
 
+The [later full two-address search](FAREY-HYPERBOLA.md) continues below the original cutoff, and the [phase-bucket inverse](REVERSED-PHASE.md) covers additional unrestricted individual flanks. The table and eight residual lengths below describe the starting search.
+
 Let \(n\) be a positive multiple of four and let \(V_n=C_3[\mathrm{TT}_n,1,1]\) with spine \(\to a\to b\to\) spine. Tag \(a,b\). In spine order the binary expansion, with \(n\) digits, of
 \[
  r_n=\frac{3(2^n+1)-1}{5}
