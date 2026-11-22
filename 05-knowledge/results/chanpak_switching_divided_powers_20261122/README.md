@@ -36,3 +36,14 @@ The Fermat and Jacobian comparisons distinguish three different meanings of dime
 The six/seven sessions retain the Gale twists, conic norms, prime-three inertia and the correction of THM-4773 to zero, eight or infinitely many solutions. The integer-square question remains open. [S67](../../../00-navigation/S67.md) · [S68](../../../00-navigation/S68.md) · [S69](../../../00-navigation/S69.md) · [S70](../../../00-navigation/S70.md) · [S71](../../../00-navigation/S71.md) · [S72](../../../00-navigation/S72.md) · [S73](../../../00-navigation/S73.md) · [S74](../../../00-navigation/S74.md) · [HN](../../../00-navigation/HN.md) · [Twists](../twist_conductor_reverse_20261025/README.md) · [Dissection](../unnamed_carrier_dissection_20261026/README.md) · [Divisor/F1](../reflection_bridge_20261025/README.md) · [Arithmetic/F1](../normseven_arithmetic_f1_20261026/README.md)
 
 The moving selector separates a nine-pair, with exact order fibers and a fold from 64 to 16. Joint run order obstructs composition. It retains the singleton, \(4p\) and count routes. [Classification and closure](../moving_selector_atoms_20261028/README.md)
+
+### Ordinal metrics and walk resolvents
+
+- [THM-2183](../../../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md): `d_iso=l1` on fixed order-join patches by uncrossing; ambient triangles persist.
+- [THM-2195](../../../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md): scalar iff-transitive; THM-2242/2249/2256: response, envelope, scale limit.
+  THM-3121/3134: `C3` profile/jet; THM-3166: order-join diagonalization. THM-3181: `Q(-t)=(-1)^nQ(t)`, half-grid recovery, exact fixed-tail polynomial--exponential recurrences of minimal triangular order. THM-3202: exact quadratic-time moving-jet `C3` evaluator;
+  factorial-cube C-finite obstruction. THM-3213 closes balanced fixed-depth
+  non-P-recursiveness; THM-3226 gives every fixed strong quotient on `q>=3`
+  one saddle. THM-3235 gives blowup scaling/decimation; THM-3248 factors Q4's walk resolvent and gives all-depth finite differences plus a fixed-depth Stirling compiler. Observer twins block generic scalar compression; Q4 radius/non-P stay OPEN.
+  THM-3173 separates `C2*C3` and regular `S3,C6`; joint quotient order is 18,
+  while pointed oriented quartic frames form `Q3`. These are not currents.

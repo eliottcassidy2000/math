@@ -201,14 +201,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 - [Exact U5-free capacity](../05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md).
 - [THM-5313 and earlier routes](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md) · [Unit flips at cube-root distance and perfect centers](../05-knowledge/results/chanpak_gap_star_ports_20261122/README.md).
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
-- [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md): `d_iso=l1` on fixed order-join patches by uncrossing; ambient triangles persist.
-- [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md): scalar iff-transitive; THM-2242/2249/2256: response, envelope, scale limit.
-  THM-3121/3134: `C3` profile/jet; THM-3166: order-join diagonalization. THM-3181: `Q(-t)=(-1)^nQ(t)`, half-grid recovery, exact fixed-tail polynomial--exponential recurrences of minimal triangular order. THM-3202: exact quadratic-time moving-jet `C3` evaluator;
-  factorial-cube C-finite obstruction. THM-3213 closes balanced fixed-depth
-  non-P-recursiveness; THM-3226 gives every fixed strong quotient on `q>=3`
-  one saddle. THM-3235 gives blowup scaling/decimation; THM-3248 factors Q4's walk resolvent and gives all-depth finite differences plus a fixed-depth Stirling compiler. Observer twins block generic scalar compression; Q4 radius/non-P stay OPEN.
-  THM-3173 separates `C2*C3` and regular `S3,C6`; joint quotient order is 18,
-  while pointed oriented quartic frames form `Q3`. These are not currents.
+- [Ordinal metrics, substitution, and walk resolvents](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md#ordinal-metrics-and-walk-resolvents) retain the THM-2183/2195 and 3121–3248 routes. Q4 radius/non-P remain OPEN.
 - THM-1880/1885: Pell; THM-3335/3339/3357/3364/3379: Fibonacci
   tournaments. [THM-3509](../01-canon/theorems/THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray.md):
   `4/6/3` K4 carriers; matching loses Cassini sign. THM-3497: ancestry
