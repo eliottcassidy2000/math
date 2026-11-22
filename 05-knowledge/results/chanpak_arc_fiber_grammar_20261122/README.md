@@ -6,6 +6,8 @@
 
 The [concurrent common-cut proof](../chanpak_support_birth_grammar_20261122/PRIMITIVE-SEAMS.md) independently establishes the strong middle and the two low-count exceptions, alongside [reversible stripping by Hamilton-path support](../chanpak_support_birth_grammar_20261122/SUPPORT-RIGIDITY.md). Here the double-arc formulation, a lower bound on the cost of crossing a component cut, and the orbit counts give computable polynomials and the order window above. [Exact lower component at exponent 61](../chanpak_e61_fibonacci_target_20261122/PLATEAU.md)
 
+An exact flip at exponent 61 must contain a common directed four-cycle on which the two counts are equal. The marked core grows from this cycle by one- and two-vertex steps. The two-vertex steps preserve the parity of the half-gap, so every successful growth history must contain a one-vertex parity change. [Square, extension grammar and finite slot test](SQUARE-EARS.md)
+
 ## The original single-count series and its missing edge information
 
 Let \(F_h(z)\) count ordinary isomorphism classes at all orders with exactly \(h\) directed Hamiltonian paths. Use the empty tournament only as the neutral object at \(h=1\). Write \(A_d(z)\) for the order polynomial of nontrivial strong classes of count \(d\). The inherited formula for **each** positive odd target, including an absent one, is
@@ -103,7 +105,7 @@ Indeed put \(M=\binom n2\), and write \(t_n\) for the number of all order-\(n\) 
 
 ## Two small components can never coexist in a smallest witness
 
-**PROVED using finite-exact input.** At **every** attained height greater than one, the orders of any two distinct strong components of a minimum-order representative sum to at least 14. Consequently all smallest representatives of orders at most 13 are strong, and a smallest representative on \(n\) vertices has at most \(\lfloor n/7\rfloor\) strong components if it has two or more.
+**PROVED using finite-exact input.** At **every** attained height greater than one, the orders of any two distinct strong components of a minimum-order representative sum to at least **16**. Consequently all smallest representatives of orders at most 15 are strong, and a smallest representative on \(n\) vertices has at most \(\lfloor n/8\rfloor\) strong components if it has two or more. The census argument below reaches sum 13 and explicit smaller witnesses settle sums 14 and 15. [Proof and witness cover for the last two sums](BIRTH-CUT-COVER.md)
 
 Write \(b(h)\) for the least order at height \(h\). Each component of a smallest witness must itself have order \(b(a)\) at its height \(a\), by substitution. For any two components of heights \(a,d\), even when separated in the ordered word, the original count can also be obtained by placing one tournament of height \(ad\) at the earlier position and omitting the later component. All other component heights are unchanged. Thus a necessary condition on **every pair** in a smallest word is
 \[
@@ -125,7 +127,7 @@ Read the first orders of all heights in the ordinary census through order 11. Fo
 | 13 | 9,011 | 9,011 | 2 |
 | 14 | 51,818 | 22,565 | 3 |
 
-The strict savings through sum 13 prove the claim. Summing the pairwise order bound over the pairs of a word of length \(k\ge2\) gives \((k-1)n\ge14\binom{k}{2}\). At sum 14 the first unclassified product in the stored ordering is \(3\cdot26{,}839=80{,}517\). Orders 12 and 13 could still give strict savings there. Thus 14 is the demonstrated exclusion boundary of this census argument. Run `python3 -B birth_cuts.py` to reconstruct the table. [Order-resolved census](../path_spectrum_two_angles_metagraph_20261106/data)
+The strict savings through sum 13 exclude those pairs everywhere. Adding the two witness covers and summing over the pairs of a word of length \(k\ge2\) gives \((k-1)n\ge16\binom{k}{2}\). At sum 14 the first unclassified product in the stored ordering is \(3\cdot26{,}839=80{,}517\). The separate witness cover realizes this product on at most 12 vertices. Thus 14 is the demonstrated exclusion boundary of this census argument. Run `python3 -B birth_cuts.py` to reconstruct the table. [Order-resolved census](../path_spectrum_two_angles_metagraph_20261106/data)
 
 ## When does the first coefficient equal one?
 

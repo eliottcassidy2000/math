@@ -2,6 +2,7 @@
 #include <cassert>
 #include <cstdio>
 #include <cstdint>
+#include <cstring>
 
 using Integer = __int128_t;
 
@@ -46,7 +47,21 @@ bool find_top_mark(int exponent, int mark_count) {
     return find(mark_count - 1, top, power(top), power(top) + 1, target);
 }
 
-int main() {
+int main(int argc, char** argv) {
+    if (argc == 2 && std::strcmp(argv[1], "--large-factor") == 0) {
+        const Integer target = Integer(1092853292) * 1000000000000000000LL + 237112554142488617LL;
+        for (int marks = 1; marks <= 8; ++marks) {
+            for (int top = 89; top <= 90; ++top) {
+                bool found = marks == 1 ? power(top) + 1 == target
+                                        : find(marks - 1, top, power(top), power(top) + 1, target);
+                if (found) return 1;
+            }
+            std::printf("large prime factor, %d marks: no hit\n", marks);
+            std::fflush(stdout);
+        }
+        return 0;
+    }
+    if (argc != 1) return 2;
     // A positive even-exponent control has marks 15,11,3.
     assert(find_top_mark(8, 3));
     for (int marks = 1; marks <= 8; ++marks) {
