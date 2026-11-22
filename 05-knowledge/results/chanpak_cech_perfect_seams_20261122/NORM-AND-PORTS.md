@@ -1,0 +1,23 @@
+# The upper rail is irreducible on every affine dyadic progression
+
+**PROVED.** Put $T=2^{p-1}$. Then
+$$
+  E_p-1=(T-1)(2T+1),\qquad
+  E_p+1=2T^2-T+1=N_{\mathbb Q(\sqrt{-7})/\mathbb Q}(T\omega-1),
+  \qquad \omega=(1+\sqrt{-7})/2.
+$$
+The lower scalar factors furnish a useful search cue. The upper is a norm, not a product of two rational scalar rails.
+
+More precisely, $2(2^s X^d)^2-2^s X^d+1$ is irreducible in $\mathbb Q[X]$ for every integer $s$ and every positive integer $d$. Over $K=\mathbb Q(\sqrt{-7})$, a root (	heta) satisfies $\theta^d=\omega/2^{s+1}$ or its conjugate. The polynomial for $\omega$ is $z^2-z+2$. Its two simple mod-2 roots lift in $mathbb Q_2$, one odd, the other of valuation 1 because their product is 2. Thus the two valuations of $\omega/2^{s+1}$ on $K$ are $-s$ and $-s-1$. The constant of a monic degree-$k$ factor of $X^d-\omega/2^{s+1}$, evaluated with either extension of the valuation to a splitting field, has valuation $k(-s)/d$ or $k(-s-1)/d$: every root has the prescribed valuation divided by $d$. Since the constant is in $K$, the two values are integers. Subtracting gives $d\mid k$, proving irreducibility over $K$. Also $K\subseteq\mathbb Q(\theta)$ since $2^{s+1}\theta^d=\omega$ or $\bar\omega$. The degree over the rationals is therefore $2d$.
+
+It follows that **no product of two nonconstant rational polynomials in a common $2^m$ register** yields the upper endpoint on an infinite subset of $p=s+1+dm$. This rules out ordinal products of independent polynomial charts with positive growth, and rank-one separated run-count tables with two genuinely growing factors on such a progression. It does not rule out ordinal factorization at isolated values, charts that are not polynomials in a common register, or genuinely coupled sources.
+
+There is a second, numerical contact with the two holes. Since $8(E_p+1)=(4T-1)^2+7$, the upper endpoint is divisible by 7 exactly when $p\equiv2\pmod3$, and its 7-adic valuation then equals 1. Indeed the condition is $T\equiv2\pmod7$, and when true the square is divisible by 49. Already $p=2$ gives the excluded 7, but $p=5$ gives $497=7\cdot71$ and the [literal minimum-order straddle](../chanpak_support_birth_grammar_20261122/PERFECT-BIRTH-SEAMS.md) exists. An ordinal component with path count 7 is forbidden; divisibility by 7 of the height is not forbidden. That difference is also what breaks the attempted Collatz transport.
+
+## Upper obstructions and strong lower rails
+
+The [odd-exponent source](../chanpak_support_birth_grammar_20261122/ODD-PERFECT-PORT.md) factors as $(X+1)(4YZ+3Z-3Y-1)$, so holding $X=2^p$ and changing both shorter widths never hits $E_p+1\equiv2\pmod{2^p+1}$. An independent fixed **even-exponent** source and a parity restriction on homogeneous modules are given [here](PORT-MODES.md). Taken together, strong $E_p-1$ has an order-$2p+2$ construction also for even $p\ge6$; the total covers all $p\ge5$.
+
+For the narrow two-port scan, the widths are $p+a,p+b$, with $a\in[-16,16], b\in[-20,20]$, keeping positivity eventually. The simple cap certificate at each port requires every possible pair of return arcs (an arc from a port outneighbor to a port inneighbor) to share a non-port vertex. All labelled source orientations on 4 to 8 vertices, up to fixing the arc between the two distinguished ports, were screened. The test retained 30, 360, 6120, 147392, 5432016 orientations respectively. None has even the lower polynomial on these width offsets. Program: `c++ -std=c++17 -O3 two_wide_ports.cpp -o /tmp/two_wide_ports; /tmp/two_wide_ports 8`. This is limited to that cap certificate and those widths. In particular, it does not claim that all cap-two supports fail.
+
+For three widths $(2t+3,t,t)$, a useful more general finite search screen is to mark three vertices in a finite source. A cyclic marked triple lets a compressed path insert arbitrarily many repetitions of the marked cycle, yielding exponential growth faster than the prescribed $16^t$ for some fixed choice of multiplicities. With transitive marks, each appears at most one more time than the number of unmarked vertices. For every valid multiplicity vector $r$ a necessary bound is $r_1^2r_2r_3\le16$ by positivity of its surjection count. For surviving sources expand the finite products of surjection counts into exponentials: the coefficient at base $j_1^2j_2j_3$ sums the multiplicity count times $j_1^3\prod_i(-1)^{r_i-j_i}\binom{r_i}{j_i}$. Compare with the three prescribed coefficients $\{1:\pm1,4:-4,16:32\}$. A flip incident to a growing port changes more than one arc after inflation, so only unmarked arcs are candidates for a literal fixed-source seam.

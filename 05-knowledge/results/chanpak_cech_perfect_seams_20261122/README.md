@@ -1,0 +1,18 @@
+# Seven overlap terms, the 7/21 boundaries, and the perfect unit arc
+
+**2026-11-22, euler.** The scalar $A+B+C-D-E-F+G$ cover comes from three one-size-smaller tiling faces, their three two-size-smaller intersections, and their common three-size-smaller intersection. The marked data glue exactly. The same seven scalar Hamilton-path counts, even read before and after the same corner flip, do not determine a unit move. This packet gives the needed interaction law and new necessary conditions on a uniform move.
+
+| Result | Scope |
+| --- | --- |
+| [Three-face path curvature and cycle deconvolution](OVERLAP.md) | **PROVED.** The actual Hamilton-path statistic has a genuine, exponentially large cubic boundary term with a two-slot formula. Correct Möbius gluing keeps disjoint odd-cycle supports and mixed cycles. |
+| [Nested-contact classification](NESTED-CONTACTS.md) | **PROVED.** Nested out-neighborhoods of the two flipped endpoints allow $+2$ only from $1,3,9,13$. Primitive cores of any bounded positive nested jump have logarithmically bounded order. |
+| [The two gaps and their bridges](GAP-BOUNDARIES.md) | **PROVED + FINITE-EXACT.** A marked four-vertex calculation gives an alternative exclusion at 21. The all-order one-arc crossing series for $5\to9$ and $19\to23$ distinguish how many actual paths survive. The arithmetic $\{3,10\}/\{4,11\}$ relation does not transfer realizability. |
+| [Ports and boundary specialization](PORT-MODES.md) | **PROVED.** New strong even-exponent upper and lower rails; the two lower sources realize $E_p-1$ on $2p+2$ vertices for all $p\ge5$. A universal one-port width-$p-1$ architecture runs directly into the missing boundary values 7 and 21, and homogeneous modules cannot activate a dormant +2 seam. |
+| [Minimum literal seams at 4 and 6](SMALL-EXPONENTS.md) | **FINITE-EXACT.** The strong endpoints of the displayed pairs differ by one arc, on 8 and 9 vertices respectively. Combined with earlier work, this covers every exponent from 3 through 7. |
+| [The quadratic norm at the upper sign](NORM-AND-PORTS.md) | **PROVED + FINITE-EXACT.** $E_p+1$ is irreducible as a polynomial on every affine dyadic progression, blocking two independent growing polynomial factors. Its exact 7-valuation gives physical evidence distinguishing scalar divisibility from a forbidden ordinal factor. |
+
+**OPEN:** a literal uniform upper move for all $p\ge3$. The obstruction at $p=2$ is absolute. Existing exact pairs at exponents $3,5,7,13,17,19,23,31$ are not superseded. See the [primitive-seam packet](../chanpak_support_birth_grammar_20261122/PERFECT-BIRTH-SEAMS.md), the [new independent count-fiber grammar](../chanpak_minimal_core_grammar_20261122/README.md), and the [physical exponent-31 packet](../chanpak_e31_physical_20261122/README.md).
+
+The next constructive target is a marked move taking center $M$ and register $B=2^p$ to $4M+B$, doubling the register but preserving the signed gap. This is the identity $E_{p+1}=4E_p+2^p$. It should retain both signs of the normalized odd-cycle port transfer, with constrained deletion responses at the interface. A genuinely coupled upper chart is necessary within polynomial dyadic templates; a one-sided endpoint-contact domination construction cannot work at any perfect center. The common sparse exterior factor is not the place to hide a near miss, since the endpoints are coprime.
+
+**Reproduce.** `python3 check_faces.py`, `python3 check_even.py`, `python3 check_core_table.py`, `python3 check_bridges.py`, `python3 check_nested.py`, `python3 check_small_exponents.py`. The narrow two-wide-port scan is optional; see its exact architecture limits and command in [NORM-AND-PORTS.md](NORM-AND-PORTS.md).
