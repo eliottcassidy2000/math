@@ -199,8 +199,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 [8/9/27](EIGHT-NINE.md); [descent](../05-knowledge/results/core_descent_endpoints_20261112/README.md): Chan–Pak OPEN.
 - [Clocks](../05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md); [more](S111-plus.md).
 - [Exact U5-free capacity](../05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md).
-- [Switching, arc flips and square-sum trades](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md). THM-5313 proves HYP-9669. Four-vertex switch data determine H mod 24. Fixed-gap arc flips cover every admissible phase at large even orders. Chan–Pak remains OPEN.
-- [Earlier six/seven and moving-selector routes](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md#earlier-tournament-routes).
+- [THM-5313 and earlier routes](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md) · [Unit flips at cube-root distance and perfect centers](../05-knowledge/results/chanpak_gap_star_ports_20261122/README.md).
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md): `d_iso=l1` on fixed order-join patches by uncrossing; ambient triangles persist.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md): scalar iff-transitive; THM-2242/2249/2256: response, envelope, scale limit.

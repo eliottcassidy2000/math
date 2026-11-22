@@ -1,7 +1,9 @@
 """Construct the marked tournaments, reproduce local certificates, and steer gaps."""
 
 import argparse
-from math import isqrt
+from math import gcd, isqrt
+
+from check_perfect_band import CERTIFICATES, remove_common_extremes
 
 
 def p(address):
@@ -136,26 +138,33 @@ def steer(target):
     return below, above
 
 
-def inverse_one_sided(target, k, h, start_mass):
-    """All even positive addresses giving this target, via two digit halves."""
-    if target <= k:
+def inverse_one_sided(target, k, h, start_mass, parity=0):
+    """Find every positive address of the specified parity, with its adjusted intercept k."""
+    delta = target - k
+    common = gcd(start_mass, h)
+    if delta <= 0 or delta % common:
         return []
-    b = max(1, isqrt((target - k) // start_mass).bit_length())
-    size = 1 << b
+    bits = max(1, (isqrt(delta * common) // start_mass).bit_length())
+    size = 1 << bits
+    modulus = h // common
+    step_inverse = pow((start_mass // common) * size, -1, modulus) if modulus > 1 else 0
+
     result = []
-    for r in range(0, size, 2):
-        reverse = int(format(r, f'0{b}b')[::-1], 2)
+    for r in range(parity, size, 2):
+        reverse = int(format(r, f'0{bits}b')[::-1], 2)
         den = size * start_mass + h * (size - 1 - reverse)
-        rem = target - k - start_mass * r - h * p(r)
+        rem = delta - start_mass * r - h * p(r)
         if rem < 0:
             continue
-        first = max(0, (rem - h) // (den + h))
-        for z in range(first, rem // den + 1):
+        first = max(0, -((h - rem) // (den + h)))
+        residue = ((delta // common - (start_mass // common) * r) * step_inverse) % modulus
+        first += (residue - first) % modulus
+        for z in range(first, rem // den + 1, modulus):
             if den * z + h * (p(z) + (r < size // 2) * (z & 1)) == rem:
-                w = size * z + r
-                if w:
-                    assert k + start_mass * w + h * p(w) == target
-                    result.append(w)
+                address = size * z + r
+                if address:
+                    assert k + start_mass * address + h * p(address) == target
+                    result.append(address)
     return sorted(result)
 
 
@@ -184,10 +193,57 @@ def strong(rows):
 TARGETS = (
     (4294967387, (4, 5, 48, 7, 11, 27), (2, 3), 1, 113404326),
     (1000000000039, (18, 24, 67, 69, 44, 15, 51), (3, 5), 126, 712585682),
+    (8589869055, (4, 5, 48, 7, 11, 27), (2, 3), 1, 233563022),
+    (137438691327, (34, 80, 75, 19, 69, 30, 41), (2, 6), 1, 553528478),
+    (137438691329, (34, 80, 75, 19, 69, 30, 41), (2, 6), 1, 474437876),
 )
 
 
+def exact_pair(target):
+    """Search the stored physical witnesses, then invert their fixed-left charts."""
+    templates = {}
+    known = [(t, core, edge, tag, 0, y) for t, core, edge, tag, y in TARGETS]
+    for exponent, offset, core, edge, tag, x, y in CERTIFICATES:
+        lower = (1 << (exponent - 1)) * ((1 << exponent) - 1) + offset - 1
+        known.append((lower, core, edge, tag, x, y))
+
+    def witness(lower, core, twin, tag, x, y):
+        pair = remove_common_extremes(star_rows(core, tag, x, y), star_rows(twin, tag, x, y))
+        return lower, (x, y), *pair
+
+    for lower, core, edge, tag, x, y in known:
+        if target in (lower, lower + 2):
+            return witness(lower, core, flipped(core, *edge), tag, x, y)
+        templates[core, edge, tag, x] = None
+
+    for core, endpoints, tag, x in templates:
+        twin = flipped(core, *endpoints)
+        low, high = profile(core, tag), profile(twin, tag)
+        h = low[0]
+        mass = sum(low[2]) + low[1] * x
+        if h != high[0] or mass != sum(high[2]) + high[1] * x:
+            continue
+        for parity in (0, 1):
+            intercepts = [count_from_profile(data, x, parity) - parity * mass
+                          for data in (low, high)]
+            if abs(intercepts[1] - intercepts[0]) != 2:
+                continue
+            first, second = (core, twin) if intercepts[0] < intercepts[1] else (twin, core)
+            for lower_target in (target, target - 2):
+                addresses = inverse_one_sided(lower_target, min(intercepts), h, mass, parity)
+                if addresses:
+                    return witness(lower_target, first, second, tag, x, addresses[0])
+    return None
+
+
 def checks():
+    # Compare complete inverse fibers, including both parities and a nontrivial gcd.
+    for k, h, mass in ((37, 23, 24), (3, 9, 6), (5, 3, 9)):
+        for parity in (0, 1):
+            for target in range(1, 500, 2):
+                expected = [w for w in range(1, max(0, (target - k) // mass) + 1)
+                            if w % 2 == parity and k + mass * w + h * p(w) == target]
+                assert inverse_one_sided(target, k, h, mass, parity) == expected
     assert profile(BASE, 22) == LEFT and profile(OTHER, 22) == RIGHT
     controls = 0
     for core, data in ((BASE, LEFT), (OTHER, RIGHT)):
@@ -235,9 +291,21 @@ if __name__ == '__main__':
     group.add_argument('--target', type=int, help='find two strict bracketing unit seams')
     group.add_argument('--witness', type=int, choices=[t[0] for t in TARGETS],
                        help='print literal outgoing masks for the requested exact pair')
+    group.add_argument('--exact', type=int, help='seek an exact odd target at either endpoint using the marked-core charts')
     args = parser.parse_args()
     if args.target is not None:
         print(steer(args.target))
+    elif args.exact is not None:
+        if args.exact <= 0 or args.exact % 2 == 0:
+            parser.error('--exact takes a positive odd Hamiltonian-path count')
+        result = exact_pair(args.exact)
+        if result is None:
+            print('No exact unit edge containing this target in the stored witnesses or persistent fixed-left charts.')
+        else:
+            lower, address, first, second = result
+            print(f'Path counts {lower} and {lower + 2} on {len(first)} vertices, left/right addresses {address}')
+            print(first)
+            print(second)
     elif args.witness:
         _, core, endpoints, tag, w = next(t for t in TARGETS if t[0] == args.witness)
         print(star_rows(core, tag, 0, w))
