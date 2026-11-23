@@ -9,6 +9,8 @@
 
 [Transfer to tournament filler axes](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/FILLER-CIRCLES.md): finite clocks and max-gap estimates in the target chart, not a new bound on LRC(14).
 
+[Joint filler selector](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/FILLER-JOINT.md): same-phase relative straddling and a sharp obstruction to absolute coverage by the fixed bank.
+
 ### Headline
 **Repository proof OPEN.** THM-2923 closes `3,432` seven-window roots; <=6 speeds remain.
 THM-2051/2052: sparse code rank `>=11`; failed gates are not danger.

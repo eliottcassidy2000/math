@@ -4,6 +4,8 @@
 
 ## Two-edit follow-up
 
+- [Joint filler selector and sharp capacity](FILLER-JOINT.md): physical same-phase straddling under 0.164 ppm, plus sharp dyadic sparsity for the full fixed bank.
+
 - [Unrestricted flip squares and planar Jacobians](UNRESTRICTED-JACOBIAN.md): incident-port nondegeneracy, real-square fold classification, and certified integral and disjoint-port examples.
 - [Scalable sevenfold module families](TWO-APEX-SCALABLE.md): two literal exact-ratio squares for arbitrary tournament module, with joint residue selection of the cofactor and its curvature.
 
