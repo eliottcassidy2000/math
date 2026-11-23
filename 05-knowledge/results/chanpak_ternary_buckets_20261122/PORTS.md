@@ -62,3 +62,22 @@ To extend the command above through order ten and summarize the strong cores, sa
 for n in 2 3 4 5 6 7 8 9 10; do gentourng -q "$n" | /tmp/cp-port-forks "$n" --bases; done > /tmp/cp-centers
 python3 -B center_classes.py < /tmp/cp-centers
 ~~~
+
+## Two independently growing vertices still give one effective width
+
+**FINITE-EXACT classification, PROVED for unbounded widths.** Take *any* tournament through ten vertices and choose two distinct vertices to replace by transitive blocks of sizes \(s,t\). Keep the three candidate flips fixed outside both blocks. Require a growing center of height \(3h\) with reversals to \(h,3h-2,3h+2\) for every \(s,t\ge1\). Up to exchanging variables, the only possible source functions are
+\[
+         h(s,t)=21\cdot2^s-13,\qquad
+         h(s,t)=21\cdot2^{s+t}-13 .
+\]
+The second option first occurs at order ten. Its two variables enter only through their sum. Even allowing any fixed positive integer rates \(a,b\) and requiring the equalities only at \((s,t)=(1+ak,1+bk)\) for every \(k\ge0\) produces exactly the restrictions of these same two functions. Starting a synchronized progression away from \((1,1)\) is a different problem.
+
+For the proof, remove both blocks from a Hamilton path. In each gap of the exterior permutation the occupied portion can be empty, from the first block, from the second, or one visit to each block in the direction of their mutual arc. Each surviving exterior pattern therefore gives an ordered pair of visit counts \(i,j\). Its contribution at arbitrary nonempty input tournaments \(A,B\) is \(P_i(A)P_j(B)\). Counting all patterns by a subset recurrence gives the coefficient table \(b_{ij}\). The product of the triangular matrices for the two inputs makes this table unique. Fixed exterior edits can be tested by comparing the tables. On fully independent widths the additive shift of two changes only the coefficient \(b_{11}\).
+
+For synchronized widths, expand \(i!{s\brace i}=\sum_{x=1}^i(-1)^{i-x}\binom ix x^s\). Each term of the resulting height has exponential base \(x^a y^b\) as a function of \(k\), with coefficient including the initial factor \(xy\). Group equal bases and compare coefficients. Distinct bases are linearly independent by Vandermonde. A common divisor of \(a,b\) does not change which bases coincide. Suppose the rates are coprime and \(x^a y^b=X^a Y^b\) with different ordered pairs. At a prime where \(x\) differs in valuation from \(X\), the relation \(a(v(x)-v(X))=b(v(Y)-v(y))\) forces both rates to be at most three. Indeed the gap count bounds \(1\le x,y,X,Y\le9\), so each valuation difference is at most three in absolute value. At larger reduced rates every base is distinct and the independent-width test suffices. The only remaining coprime rate pairs are \((1,1),(1,2),(2,1),(1,3),(3,1),(2,3),(3,2)\).
+
+All 55 candidate ordinary centers through order ten at width \((1,1)\) were included, even the centers of height three. There are 983 possible port pairs surviving the ordinary three-neighbor filter, of which 668 have growing central height. For each rate test the same six rooted presentations succeed, all at order ten. Four have source coefficient table \((b_{11},b_{21})=(29,21)\) up to swapping the ports. Two have \((b_{11},b_{21},b_{12},b_{22})=(71,42,42,21)\). The second table gives \(21Q_2(A)Q_2(B)-13H(A)H(B)\) on arbitrary inputs. The [two-port replay](two_ports.py) checks a planted positive case and prints every successful pair.
+
+~~~sh
+python3 -B two_ports.py < /tmp/cp-centers
+~~~
