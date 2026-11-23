@@ -194,14 +194,14 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 - **PROVED / FINITE-EXACT:** [Guarded ternary switches and the packing tape](../05-knowledge/results/chanpak_guarded_ternary_packing_20261123/README.md): a pure height-only arc reversal on the five-read interface, both signed exits at an attained common height in distinct contexts, a mod-four graft obstruction and a finite resource bound for homothetic tripling; exact four-phase packing controller at 5 and 11.
-- **PROVED / FINITE-EXACT:** [Six/five ternary boundary atlas](../05-knowledge/results/chanpak_six_five_boundary_atlas_20261123/README.md): rooted hexagon and pentagon filling quotient, explicit genus-two Paley–Frobenius transport and Petersen incidence, and exact apex context ranks 7/6/5 with fixed guards.
+- **PROVED / FINITE-EXACT:** [Six/five ternary boundary atlas](../05-knowledge/results/chanpak_six_five_boundary_atlas_20261123/README.md): hexagon and pentagon quotients, genus-two Paley–Frobenius transport, Petersen incidence and guarded apex ranks 7/6/5.
 
-[Ternary forks, divisor grades, Berggren rays and Collatz buckets](../05-knowledge/results/chanpak_ternary_buckets_20261122/README.md) gives the all-order fork classification through source 71 and routes to the 61/63/65 fork, window endgame, chirality, continuation and divisor twins.
+[Ternary forks, divisor grades, Berggren rays and Collatz buckets](../05-knowledge/results/chanpak_ternary_buckets_20261122/README.md) classifies forks through 501 and routes to the window endgame, chirality and 61/63/65.
 
 [Order-118 E61 bracket, optimal 7:10 direction and prior constructions](../05-knowledge/results/chanpak_odd_square_spines_20261122/README.md). Exact E61 crossing and Chan–Pak OPEN.
 
 - [Arc-flip geometry at 7 and 21](../05-knowledge/results/chanpak_gap_cubical_geometry_20261122/README.md) proves the core collapse for cutoffs 15–23.
-- [2–3–11 brackets and Collatz clocks](../05-knowledge/results/prime_brackets_collatz_2311_20261122/README.md) gives an any-depth E61 exclusion for traces with at most two odd steps.
+- [2–3–11 brackets and Collatz clocks](../05-knowledge/results/prime_brackets_collatz_2311_20261122/README.md) excludes E61 traces with at most two odd steps at all depths.
 - [Two-clock Farey inverse](../05-knowledge/results/chanpak_farey_two_three_clocks_20261122/README.md) covers arbitrary-flank bands and incompatible binary and ternary lifts.
 - [Complementary placement](../05-knowledge/results/chanpak_farey_complementary_exact_20261122/README.md) excludes the full adaptive cube-root window on spines 4 and 8.
 - [Clocks](../05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md); [more](S111-plus.md).
