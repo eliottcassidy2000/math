@@ -27,7 +27,7 @@ function run(log){
  let L=1n;
  for(const b of [10n,12n,14n,16n]){const x=b*b-1n;L=L*x/gcd(L,x);}
  assertion(L===109395n);
- for(const [y,product] of [[1n,139n*787n],[3n,307n*1069n],[5n,546973n],[9n,809n*1217n],[15n,31n*43n*1231n],[27n,577n*5119n]]){
+ for(const [y,product] of [[1n,139n*787n],[3n,307n*1069n],[5n,546973n],[7n,765763n],[9n,809n*1217n],[15n,31n*43n*1231n],[27n,577n*5119n]]){
   const M=L*y,B=M-1n,h=M-2n;
   assertion(product===h);
   const occupied=new Set();
