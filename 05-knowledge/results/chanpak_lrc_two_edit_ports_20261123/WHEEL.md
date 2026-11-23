@@ -44,3 +44,7 @@ Use the previously constructive simultaneous controller, with guard $g=2$ becaus
 To bound $M$ elementarily, $\prod_{m<p\le2m}p\le\binom{2m}{m}\le4^m$; sum over dyadic intervals up to the next power of two above $y$. This gives $\prod_{p\le y}p\le e^{4y\log2}$. Therefore $B=O((\log X)^{3/8}(\log\log X)^4)=o(\log X)$. In the base-$3/2$ native height construction, choose even tournament order with chain length $n\asymp\log_3 X$ (the two real normalized bands tile at either fixed parity), and divide the variable prefix and suffix widths into halves after budgeting $B$. Both widths are at least $n/2-o(n)$. The explicit geometric error of that construction, $O((2/3)^{\min(a,k)}+n(2/3)^n)$ after scaling by $3^n$, is therefore $X^{-\frac12\log_3(3/2)+o(1)}$. This proves the stated absolute error without interchanging a fixed-modulus limit with a growing modulus.
 
 No wheel depth here certifies that a normalized value is prime: $y=O(\log\log X)$ is far below $\sqrt X$, and the selector gives a sublinear height window, not exact equality with $7p$. The useful transfer is the physically simultaneous modular avoidance and its scale control, not a universal prime-to-own-sevenfold flip.
+
+## Third-slot follow-up
+
+The [filler-circle continuation](FILLER-CIRCLES.md) applies same-clock avoidance to a varying third slot while the gain Jacobian stays fixed; the [CRT companion](FILLER-CRT.md) certifies jointly reachable unit phases instead of independent local choices.

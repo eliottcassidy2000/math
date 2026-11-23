@@ -7,6 +7,8 @@
 **Nov2:** [S140](S140.md), [S141](S141.md); OPEN.
 ## LRC(14)
 
+[Transfer to tournament filler axes](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/FILLER-CIRCLES.md): finite clocks and max-gap estimates in the target chart, not a new bound on LRC(14).
+
 ### Headline
 **Repository proof OPEN.** THM-2923 closes `3,432` seven-window roots; <=6 speeds remain.
 THM-2051/2052: sparse code rank `>=11`; failed gates are not danger.
@@ -193,6 +195,8 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
+
+- **PROVED + FINITE-EXACT:** [Lonely Runner filler circles](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/FILLER-CIRCLES.md): a literal 61-tick model has exact distance 5/61, and a primitive seven-axis subbank gives a certified 4.338 ppm relative window at fixed Jacobian. [Joint CRT and prime grid](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/FILLER-CRT.md): small mod-77 wheel and six exact prime starts on a 37-vertex layout. The full 14-axis bank forces common profile content and cannot itself give prime starts.
 
 - **PROVED + FINITE-EXACT:** [Third-slot Jacobian fibers](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/THIRD-SLOT-JACOBIAN.md): first `Q3` height read at eight fixed sites; two literal prime sevenfold squares share the same Jacobian, and a verified 14-pair filler bank gives `(t+1)^14` distinct exact starts at fixed curvature. No third-slot contribution to mixed gain survives the census through eleven fixed sites; the primitive frames have a structural same-boundary explanation.
 

@@ -56,3 +56,7 @@ Width two and three in the eight-site frame give prime starts 359 and 887, respe
 There is also a uniform scale separation: every \(j\)-slot cover on \(n\) vertices has \(n+j\) ways to split one slot in two, and each resulting cover has at most \(j\) preimages (one per proposed adjacent merge). Hence \(Q_{j+1}\ge (n+j)Q_j/j\). In both primitive third-slot frames \(|d|/h=O(1/n)\) since \(R\ge(n+2)Q/2\). This explains why the height can gain a new scale while the Jacobian does not.
 
 Replay using `g++ -O3 -std=c++17 template-scan-wide.cpp -o scan && ./scan 7 11 > scan.out`, then `g++ -O3 -std=c++17 third-slot-check.cpp -o check && ./check scan.out` and `node third-slot-profile-check.js` and `python3 third-slot-bank.py`.
+
+## Lonely Runner control on the hidden directions
+
+The [filler circles](FILLER-CIRCLES.md) turn the independent factors into a real max-gap selector and an exact finite common-clock read. They also identify the full-grid common divisor and certify optimal seven-direction primitive subbanks within this bank. See [joint wheels and prime certificates](FILLER-CRT.md) for the practical residue selector and six prime starts at one Jacobian.
