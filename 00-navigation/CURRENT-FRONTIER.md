@@ -194,7 +194,8 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
-- [Sharp Kaprekar arc walks](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/KAPREKAR-METAGRAPH.md): seven reversals up to relabelling, eight with labels fixed; two distinct all-order detour obstructions. Base 16 also has no one-arc 15→225.
+- Sharp Kaprekar arc walks: [decimal](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/KAPREKAR-METAGRAPH.md) 7 edits up to relabelling, 8 labelled; [base 12](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/BASE12-CYCLE.md) 10 edits, minimum orders 9 up to relabelling and 10 labelled; base 16 [first](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/BASE16-CYCLE.md) and [second](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/BASE16-SECOND-CYCLE.md) orbits 6 edits under either convention, on minimum orders 10 and 8 respectively.
+- [Exact edit-radius bounds](../05-knowledge/results/chanpak_edit_radius_20261123/EDIT-RADIUS.md): both E61 endpoints lie outside the all-order transitive two-edit family; fixed seed banks need a growing budget for positive-density coverage.
 
 **PROVED / FINITE-EXACT.** [Five Heegner midpoint flips, two-width inverse and fork routes](../05-knowledge/results/chanpak_heegner_selector_20261122/README.md). [Balanced Heegner windows](../05-knowledge/results/chanpak_heegner_absolute_targets_20261123/README.md) and [Kaprekar decimal selectors, 6173↔6175](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/README.md).
 
