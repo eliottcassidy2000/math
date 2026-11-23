@@ -74,3 +74,5 @@ See also [the exact obstruction to uniform multiplication by seven](UNIFORM-AMPL
 See [fixed-order, one-arc control](PHYSICAL-TOGGLES.md) for marked generators up to 100, and [prime-power ordinal control](ORDINAL-REAGENTS.md) for a larger certified range. Replay the arithmetic and targeted inverse with `python3 fork-phase.py`.
 
 **Renewal boundary.** [Matching depth and the exact observation lattice](REENTRY-DEPTH.md) predict when two readings cease to determine the next fork. [Restricted renewal](RESTRICTED-RENEWAL.md) restores an exact two-read decoder on two wrapper towers.
+
+**All-prime synthesis.** [Three guarded apex tiles](ALL-PRIME-WORDS.md) realize every prescribed low slot vector on a strong filler of chosen parity, simultaneously modulo arbitrary odd prime powers. [Sharp base-prime memory and short modular orbits](CONTINUATION-ORBITS.md) separate this constructive theorem from the two-move orbit, which fails at 23 without a parity detour. Prime-power prediction may need additional derivatives.

@@ -194,6 +194,8 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
+- [All-prime guarded apex words](../05-knowledge/results/chanpak_fork_curvature_20261123/ALL-PRIME-WORDS.md): strong prescribed-parity slot synthesis jointly at arbitrary odd prime powers for the first (p−1)/2 reads, sharp memory at each base prime, not absolute height coverage.
+
 - [Two-read fork curvature and controllers](../05-knowledge/results/chanpak_fork_curvature_20261123/README.md): exact center/width separation with same-order single-arc generators for primes 5–97 at all powers, a scoped absolute inverse, and a uniform multiplier-7 obstruction. The (2,3,m) modular chart is not physical renewal.
 - **PROVED / FINITE-EXACT:** [Cofactor-tolerant contradiction tests and the factor-seven fork](../05-knowledge/results/chanpak_cofactor_contradiction_20261123/README.md): an exact square-root missing-prime ceiling, a many-carrier seven test, arbitrary module extension giving 283 off-ray prime cofactors through order eight, rigid original unit exits and an inverse-window obstruction.
 - **PROVED / FINITE-EXACT:** [Tiling machines and halting scopes](../05-knowledge/results/chanpak_tiling_machines_20261123/README.md): faithful Hamilton languages and exact exponential streaming size; two-counter computation in each nontrivial fixed-height fiber with marked growth; complement-line width and parity barriers; exact modular macro automata and a replay of the RH machine prefix.
