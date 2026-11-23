@@ -75,6 +75,40 @@ def lifts():
     return counts
 
 
+def sheet_action_on_edits():
+    physical = set()
+    for line in (HERE / "physical_edges.rows").read_text().splitlines():
+        if line and not line.startswith("#"):
+            lo, hi, *_ = map(int, line.split())
+            physical.add((lo, hi))
+
+    def lift_edge(v, w, sign):
+        return tuple(sorted((100*v+sign, 100*w-sign)))
+
+    full_edges = set()
+    asymmetric = set()
+    for v, w in graph_edges(36):
+        pair = {lift_edge(v, w, 1), lift_edge(v, w, -1)}
+        certified = physical & pair
+        if certified == pair:
+            full_edges.add((v, w))
+        elif certified:
+            asymmetric.update(certified)
+    assert len(full_edges) == 47
+    assert asymmetric == {(299, 3301), (399, 2101), (501, 3099)}
+    neighbors = [0]*36
+    for a, b in full_edges:
+        neighbors[a-1] |= 1 << (b-1)
+        neighbors[b-1] |= 1 << (a-1)
+    surviving = [path for a, b in combinations((2, 8, 18, 32), 2)
+                 for path in paths_between(neighbors, a, b)]
+    assert surviving == [(2, 7, 18, 31, 33, 16, 9, 27, 22, 14, 35, 29,
+                          20, 5, 11, 25, 24, 12, 4, 32, 17, 19, 30, 34,
+                          15, 21, 28, 36, 13, 23, 26, 10, 6, 3, 1, 8)]
+    print("Base edges with two certified lifts", len(full_edges),
+          "with one", len(asymmetric), "surviving symmetric cycles", len(surviving))
+
+
 def signed_examples():
     edges = []
     for x in range(1, 37, 2):
@@ -84,6 +118,14 @@ def signed_examples():
             if y <= 36 and square(x+y):
                 edges.append((x, sign, y))
     assert edges == [(3, -1, 1), (9, 1, 7)]
+    assert 3*1685+1 == 64*79 and 1685+79 == 42**2
+    for k in range(1, 7):
+        period = 3**k
+        values = {((79*pow(2, 6+2*t, 3*period)+236)//3) % period
+                  for t in range(period)}
+        assert len(values) == period
+        residue_count = len({m*m % period for m in range(period)})
+        assert residue_count == 1+sum(3**(k-2*i-1) for i in range((k+1)//2))
     for x, j in ((2277, 4), (36437, 8)):
         assert 3*x + 1 == (1 << j)*427 and square(x+427)
 
@@ -93,3 +135,4 @@ if __name__ == "__main__":
     counts = lifts()
     print("Hamilton paths per pair of vertical edges", counts, "total", sum(counts))
     signed_examples()
+    sheet_action_on_edits()

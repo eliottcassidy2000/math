@@ -194,13 +194,9 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
-- [Signed Collatz and square sums at order 36](../05-knowledge/results/chanpak_signed_square36_20261123/README.md): exact mod-four graph chart, no consecutive signed square contacts, one 19th-position sign bit repairs all three birth-color ambiguities, and a strong order-seven seam 57↔43.
-- Sharp Kaprekar arc walks: [decimal](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/KAPREKAR-METAGRAPH.md) 7 edits up to relabelling, 8 labelled; [base 12](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/BASE12-CYCLE.md) 10 edits, minimum orders 9 up to relabelling and 10 labelled; [base 14](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/BASE14-CYCLES.md) all three orbits sharp (8, 2, and 0 edits); base 16 [first](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/BASE16-CYCLE.md) and [second](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/BASE16-SECOND-CYCLE.md) orbits 6 edits under either convention, on minimum orders 10 and 8 respectively.
-- [All even Kaprekar radices through 16](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/EVEN-BASES-THROUGH-16.md): minimum uniform gap-dilation base 765764 realizes nine imported cycles on a shared 36-vertex layout; includes sharp base-6 and normalized denominator-nine optima.
-- [Common-base Kaprekar selector](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/COMMON-BASE.md): seven solved walks share the minimum exact scaling base 109394, with a 35-vertex layout and a five-flip nine-vertex multiplier selector.
-- [Exact edit-radius bounds](../05-knowledge/results/chanpak_edit_radius_20261123/EDIT-RADIUS.md): both E61 endpoints lie outside the all-order transitive two-edit family; fixed seed banks need a growing budget for positive-density coverage.
-
-**PROVED / FINITE-EXACT.** [Five Heegner midpoint flips, two-width inverse and fork routes](../05-knowledge/results/chanpak_heegner_selector_20261122/README.md). [Balanced Heegner windows](../05-knowledge/results/chanpak_heegner_absolute_targets_20261123/README.md) and [Kaprekar decimal selectors, 6173↔6175](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/README.md).
+- [Square-sum lifts, signed Collatz and tournament arcs](../05-knowledge/results/square36_signed_collatz_20261123/README.md). Of 118 square-sum pairs among 72 heights, 101 admit one flip. Five labels of an exponent-61 six-cycle are attained.
+- [Signed chart and 19th-vertex decoder](../05-knowledge/results/chanpak_signed_square36_20261123/README.md) · [Kaprekar host at base 765764](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/EVEN-BASES-THROUGH-16.md) · [Edit-radius bounds](../05-knowledge/results/chanpak_edit_radius_20261123/EDIT-RADIUS.md).
+- [Five Heegner midpoint flips](../05-knowledge/results/chanpak_heegner_selector_20261122/README.md) · [Balanced windows](../05-knowledge/results/chanpak_heegner_absolute_targets_20261123/README.md).
 
 [Order-118 E61 bracket, optimal 7:10 direction and prior constructions](../05-knowledge/results/chanpak_odd_square_spines_20261122/README.md). Exact E61 crossing and Chan–Pak OPEN.
 

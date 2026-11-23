@@ -14,6 +14,8 @@ When \(n\ge2\) is even, the sheet-invariant Hamilton cycles on the \(2n\) labels
 
 Conversely, on an invariant cycle the sheet swap is a fixed-point-free involution of the cycle, reversing the bipartition. The half-turn would move by \(n\) positions and preserve the bipartition since \(n\) is even. The involution must therefore be a reflection through two opposite edges. Those edges are the two crossings at equal base labels. One half of the cycle contains one representative of every vertex orbit; projecting it recovers the unique base path. Exchanging the sheets gives the same unoriented cycle. All other Hamilton cycles pair off under the swap, proving the parity assertion whenever the base path count is odd. On a nonbipartite base, a single sign per vertex at this same scale cannot preserve every square edge. For example, the triangle on 6, 19, 30 already requires both signs at a vertex.
 
+The parallel signed chart gives a second exact representation. Its map on odds is \(\rho(x)=(3x+\chi_4(x))/4\). At scale \(c=10\) it sends \(100v\pm1\) to \(75v\pm1\). Here the types move from the two odd classes modulo four to the two unit classes modulo three. Edges become pairs summing to three times a square, since opposite types cancel their signs. Same-type sums are units modulo three. Thus all 389 symmetric cycles below also have a second realization as integer-label cycles in that chart. [Parallel four-down chart and the 19th-vertex decoder](../chanpak_signed_square36_20261123/README.md)
+
 ## The 36-vertex instance
 
 Here \(c=10\). There are 57 base edges and four crossings, at 2, 8, 18 and 32. Enumerating simple paths from the smaller endpoint to the larger endpoint, with the terminal used only after all others, gives the full count in each case.
@@ -35,6 +37,25 @@ One base path, in order, is
 ```
 
 Its two terminal crossings add to \(20^2\) and \(40^2\). The vertical edges at these midpoints are actual one-arc tournament edits. All 72 labels in this and every other lifted cycle are actual counts. The horizontal square-sum condition compares the numerical counts. A single coherent arc walk through specified tournament representatives requires further data.
+
+## Which square symmetries survive an arc reversal?
+
+The [all-orders arc census](PHYSICAL.md) keeps 101 of the 118 numerical edges. All four same-label crossings survive. Among the 57 base edges, 47 have both lifts realized by arc reversals, seven have neither, and three have exactly one. The three asymmetric pairs of lifts expose the data that the arithmetic sheet swap loses.
+
+| Realized by one reversal | Its sheet image, excluded at all orders |
+|---|---|
+| 299 and 3301 | 301 and 3299 |
+| 399 and 2101 | 401 and 2099 |
+| 501 and 3099 | 499 and 3101 |
+
+Despite this loss of symmetry in the whole graph, its **unique** Hamilton cycle is invariant. It is one of the 389 arithmetic cycles, and the only one that survives the one-arc test edge by edge. Its fixed edges are the crossings at 2 and 8. Projecting one half gives this path through the 47 base edges with two realized lifts:
+
+```text
+2 7 18 31 33 16 9 27 22 14 35 29 20 5 11 25 24 12
+4 32 17 19 30 34 15 21 28 36 13 23 26 10 6 3 1 8
+```
+
+In a realization of each edge separately, all 72 edits fit on 13 vertices, and 13 is necessary. At height 199 the two incident edges force different strong-component orders, so one cannot follow through that vertex by keeping a common representative. This obstruction survives relabeling and a sequence of edits that stay at count 199. [Component grammar and finite certificates](PHYSICAL.md)
 
 Each [certificate row](midpoints.rows) gives the midpoint, the tail and head of the flipped arc (zero based), then all outgoing-neighbor bitmasks of the lower tournament. Midpoints 300 through 1500 in steps of 100 come from the [previous target table](../chanpak_ternary_buckets_20261122/target_flips.rows). The two smaller cases came from order-eight-or-smaller tournaments. For the remaining centers we varied every apex mask on sampled nine-vertex deletions. Enumeration completeness of the search is unnecessary for these positive witnesses. The replay checks the tournament axioms and counts full paths directly at both endpoints of all 36 rows. A new source has to be first on every full path, so sources pad every certificate to order ten. Count 3601 exceeds the order-nine maximum 3357, which also bounds all smaller orders by the same padding argument. [THM-329, maximum path-count table](../../../01-canon/theorems/THM-329-a038375-new-terms.md)
 
