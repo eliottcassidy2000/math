@@ -32,6 +32,13 @@ Insert the twelve-vertex receiver with rows \(1126,4092,4088,4081,4065,4032,3968
 \]
 This illustrates what is gained by selecting a receiver with one tagged start. The remaining 1,186 paths contribute to the slope that sets the absolute count. It also explains how the witness was found. Generate strong rooted Fibonacci receivers, keep small arc pairs with this signed change, and invert the slope equation at the requested integer. The script stores the selected receiver explicitly. [Receiver theorem and grammar](../chanpak_e31_physical_20261122/README.md) · [Recursive receiver generator](../chanpak_e61_fibonacci_target_20261122/check.py)
 
+**Choosing the receiver from the target itself.** In fact the twelve-vertex receiver here has a transitive root deletion. Let \(v\) be the binary apex contacts on that ordered chain, leading one first, and set \(H=1+f(v),\ U=v+1,\ E=[v\text{ even}]\), \(m=2^{|v|}-\operatorname{rev}_{|v|}(v)\). The two-slot read \(Q\) is computed by four states which track whether a before-apex last contact is valid and an after-apex part has started. If the original core has reads \(h,c,e,k\), the joined lower chart becomes
+\[
+ K_v+(cQ+hU)y+hHf(y)+hE[y\text{ odd}],\qquad
+ K_v=Hk+h(U-E)+c(Q-H-m)+e(H-1).
+\]
+This is the ordinal join applied to the [word receiver's explicit profile](../chanpak_e31_physical_20261122/README.md). The other orientation adds two for every \(v,y\), since the leading one forces exactly one tagged full start. For midpoint \(M\), only words \(1\le v\le(M-1)/h\) can work: the other summands of \(K_v\) are nonnegative and \(U-E\ge v\). For each word and suffix parity the linear residue modulo \(2\gcd(cQ+hU,hH)\) eliminates incompatible targets, and the [exact suffix inverse](../chanpak_gap_star_ports_20261122/replay.py) decides the survivors. This tests the whole one-root-over-a-chain subclass on this fixed core, stopping at its first solution. On input **147197952744 alone** it returns the first receiver \(v=1634\) and suffix \(y=650\), with no supplied receiver, suffix, or width bound. [Runnable target-to-receiver search](receiver_from_target.py)
+
 ## Two freely variable widths through four CM integers
 
 Read the binary address as a fixed prefix of value \(w\), followed by \(a\) ones, \(b\) zeros and \(\ell\) final ones, where \(a,b\ge1\). Write
@@ -79,6 +86,7 @@ The number of odd endpoints through height \(X\) on this grammar is \(4(\log_2 X
 From this directory, run the following for the finite certificate, literal midpoint counts, minimum separating divisor, and a target-only reconstruction.
 
 ~~~sh
+python3 -B receiver_from_target.py 147197952744
 python3 -B cm_crossings.py --minimal
 python3 -B cm_crossings.py 262537412640768743
 ~~~
