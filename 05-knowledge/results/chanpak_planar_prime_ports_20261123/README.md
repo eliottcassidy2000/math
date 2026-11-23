@@ -57,3 +57,7 @@ There is also a different negative, **valid at every tournament order**: no \(p\
 - Run `python3 dyadic-ports-check.py` for the two inverse charts, all 27 modular exponent phases, and the same-host prime fork.
 
 What survives from both neighboring problems is a stricter specification: build a small exact port relation, and specify which integer targets lie in its physical image. Proper coloring and an invertible chart cannot manufacture the factor-seven endpoints. Conversely the finite exact witnesses supply real marked transitions without claiming either a renewable rule or the Chan–Pak conjecture.
+
+## Later literal flip-square development
+
+The [unrestricted two-edit continuation](../chanpak_lrc_two_edit_ports_20261123/UNRESTRICTED-JACOBIAN.md) uses actual arc variables instead of free finite interpolation. See also its [two-apex families](../chanpak_lrc_two_edit_ports_20261123/TWO-APEX-SCALABLE.md) for simultaneous exact-ratio and modular Jacobian control.

@@ -4,6 +4,9 @@
 
 ## Two-edit follow-up
 
+- [Unrestricted flip squares and planar Jacobians](UNRESTRICTED-JACOBIAN.md): incident-port nondegeneracy, real-square fold classification, and certified integral and disjoint-port examples.
+- [Scalable sevenfold module families](TWO-APEX-SCALABLE.md): two literal exact-ratio squares for arbitrary tournament module, with joint residue selection of the cofactor and its curvature.
+
 - [Complete one-apex two-contact inverse](ONE-APEX-INVERSE.md): exact admission in all mark patterns, only \(O(\log p)\) candidate words, a global sparsity bound for the chart, and three all-order nonmonotonic targets within it.
 
 - [Two-adic support compression](TWO-ADIC-SUPPORT.md): use the short-gain arm to cut the leading finite-search order bound in half; explicit nonnested square at 43.
