@@ -194,19 +194,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
-- [Kaprekar and decimal controllers](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/README.md): full binary image except 7,21, balanced ordinary heights with prescribed last decimal digits, a one-step decimal shelf, and an order-ten one-arc seam 6173↔6175.
-
-- [Heegner exact targets and balanced windows](../05-knowledge/results/chanpak_heegner_absolute_targets_20261123/README.md): fixed-modulus square-root approximation to an absolute Hamilton target, literal strong 2^q−7 for all q≥4, exact nearest odd Ramanujan count, and nine-vertex CRT uniqueness without existence.
-
-- [All-prime guarded apex words](../05-knowledge/results/chanpak_fork_curvature_20261123/ALL-PRIME-WORDS.md): strong prescribed-parity slot synthesis jointly at arbitrary odd prime powers for the first (p−1)/2 reads, sharp memory at each base prime, not absolute height coverage.
-
-- [Two-read fork curvature and controllers](../05-knowledge/results/chanpak_fork_curvature_20261123/README.md): exact center/width separation with same-order single-arc generators for primes 5–97 at all powers, a scoped absolute inverse, and a uniform multiplier-7 obstruction. The (2,3,m) modular chart is not physical renewal.
-- **PROVED / FINITE-EXACT:** [Cofactor-tolerant contradiction tests and the factor-seven fork](../05-knowledge/results/chanpak_cofactor_contradiction_20261123/README.md): an exact square-root missing-prime ceiling, a many-carrier seven test, arbitrary module extension giving 283 off-ray prime cofactors through order eight, rigid original unit exits and an inverse-window obstruction.
-- **PROVED / FINITE-EXACT:** [Tiling machines and halting scopes](../05-knowledge/results/chanpak_tiling_machines_20261123/README.md): faithful Hamilton languages and exact exponential streaming size; two-counter computation in each nontrivial fixed-height fiber with marked growth; complement-line width and parity barriers; exact modular macro automata and a replay of the RH machine prefix.
-- **PROVED / FINITE-EXACT:** [Guarded ternary switches and the packing tape](../05-knowledge/results/chanpak_guarded_ternary_packing_20261123/README.md): a pure height-only arc reversal on the five-read interface, both signed exits at an attained common height in distinct contexts, a mod-four graft obstruction and a finite resource bound for homothetic tripling; exact four-phase packing controller at 5 and 11.
-- **PROVED / FINITE-EXACT:** [Six/five ternary boundary atlas](../05-knowledge/results/chanpak_six_five_boundary_atlas_20261123/README.md): hexagon and pentagon quotients, genus-two Paley–Frobenius transport, Petersen incidence and guarded apex ranks 7/6/5.
-
-[Ternary forks, divisor grades, Berggren rays and Collatz buckets](../05-knowledge/results/chanpak_ternary_buckets_20261122/README.md) classifies forks through 501 and routes to the window endgame, chirality and 61/63/65.
+**PROVED / FINITE-EXACT.** [Five Heegner midpoint flips, two-width inverse and fork routes](../05-knowledge/results/chanpak_heegner_selector_20261122/README.md). [Balanced Heegner windows](../05-knowledge/results/chanpak_heegner_absolute_targets_20261123/README.md) and [Kaprekar decimal selectors, 6173↔6175](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/README.md).
 
 [Order-118 E61 bracket, optimal 7:10 direction and prior constructions](../05-knowledge/results/chanpak_odd_square_spines_20261122/README.md). Exact E61 crossing and Chan–Pak OPEN.
 
