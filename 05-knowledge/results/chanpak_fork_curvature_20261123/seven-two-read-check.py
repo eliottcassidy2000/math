@@ -70,3 +70,51 @@ if __name__=='__main__':
   assert prime(p) and list(inverse(p,True))
   print('exact prime',p,list(inverse(p,True)))
  print('fiber profile, all odd prime clocks under 100, and exact inverse PASS')
+
+
+from math import gcd
+CRT_BANK={'d': [((166, 92, 56, 81, 225, 202, 133, 14), (1, 3), (651, 8808, 657, 8808)), ((90, 20, 249, 18, 160, 75, 154, 43), (1, 4), (369, 5424, 393, 5424)), ((146, 148, 25, 83, 224, 207, 135, 12), (0, 3), (387, 6024, 393, 6024)), ((42, 76, 57, 240, 227, 66, 133, 39), (0, 7), (497, 7232, 503, 7232)), ((106, 92, 105, 112, 229, 66, 128, 47), (3, 7), (383, 5528, 359, 5528)), ((294, 212, 296, 179, 37, 322, 157, 309, 90), (7, 8), (2543, 40432, 2531, 40432))], 'q': [((254, 12, 232, 80, 38, 202, 146, 26), (1, 4), (137, 3272, 137, 3296)), ((70, 44, 136, 17, 39, 77, 158, 59), (2, 4), (469, 6616, 469, 6832)), ((14, 140, 104, 48, 103, 195, 139, 29), (2, 7), (547, 7624, 547, 7648)), ((226, 148, 73, 51, 37, 70, 154, 60), (0, 1), (657, 8808, 657, 8784)), ((2, 76, 41, 17, 231, 75, 141, 47), (4, 6), (281, 4424, 281, 4592))]}
+PRIMES=(5,11,13,29,37)
+L=[p*(p-1) for p in PRIMES]
+Z=[p for p in range(2,max(L)+1) if prime(p) and any(n%p==0 for n in L)]
+def full_log(p):
+ m=p*p;s=p*(p-1)
+ for g in range(2,m):
+  if gcd(g,m)==1 and all(pow(g,s//d,m)!=1 for d in Z if s%d==0):break
+ else:raise AssertionError
+ A={pow(g,e,m):e for e in range(s)}
+ assert len(A)==s
+ return A
+LOG=[full_log(p) for p in PRIMES]
+def log_ratio(a,b):
+ return [D[b*pow(a,-1,p*p)%(p*p)] for p,D in zip(PRIMES,LOG)]
+def ranks(v):
+ out=[]
+ for q in Z:
+  idx=[i for i,m in enumerate(L) if m%q==0]
+  r=len(idx); piv={}
+  for row in v:
+   w=[row[i]%q for i in idx]
+   for i in range(r):
+    if not w[i]:continue
+    if i in piv:
+     w=[(a-w[i]*b)%q for a,b in zip(w,piv[i])]
+    else:
+     v0=pow(w[i],-1,q)
+     piv[i]=[(a*v0)%q for a in w];break
+  out.append(len(piv))
+ return out
+GOAL=[sum(m%q==0 for m in L) for q in Z]
+
+if __name__=='__main__':
+ for a,Ws in CRT_BANK.items():
+  v=[]
+  for A,e,d in Ws:
+   assert (*profile(A),*profile(flip(A,e)))==d
+   assert all(gcd(x,m)==1 for x in d for m in PRIMES)
+   d,q,D,Q=d
+   assert (q==Q and d!=D) if a=='d' else (d==D and q!=Q)
+   v.append(log_ratio(d,D) if a=='d' else log_ratio(q,Q))
+  z=ranks(v)
+  assert z==GOAL
+  print('simultaneous CRT mode',a,'primes',PRIMES,'ranks',dict(zip(Z,z)))

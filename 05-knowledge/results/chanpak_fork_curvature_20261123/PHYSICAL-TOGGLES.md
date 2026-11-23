@@ -25,3 +25,15 @@ The included checked masks give the two generators for **every prime \(5\le p<10
 This does not provide an all-prime same-order bank, and does not identify the exact integer count with a modular target. All toggles have been certified on their actual small modules; the exterior conclusion uses the existing exact two-read formula rather than subset enumeration at the much larger composed orders.
 
 Replay: `python3 seven-two-read-check.py`.
+
+## Simultaneous physical control at five odd primes
+
+The local statement also has a simultaneous version. The same receipt gives six pure-$D$ toggle types and five pure-$Q$ toggle types with all endpoint reads units at every prime in
+$$S=\{5,11,13,29,37\}.$$
+Five of the $D$ types and all $Q$ types use eight vertices; one $D$ type uses nine. Their literal endpoint masks and arcs are in `CRT_BANK`. For either axis the ratio vectors generate the entire unit group modulo $\prod_{p\in S}p^2$; they in fact generate at every simultaneous tuple of depths.
+
+To verify this, identify each $(\mathbb Z/p^2)^\times$ with the cyclic exponent group of order $p(p-1)$ using an explicitly verified primitive root; enumerate the logarithms of the handful of toggle ratios exactly. For each prime $\ell$ dividing any of these orders, reduce the exponent matrix modulo $\ell$ and retain the columns whose order is divisible by $\ell$. The exact ranks for $\ell=2,3,5,7,11,13,29,37$ are $5,2,2,1,1,1,1,1$, the number of columns in each case, for both axes. This is sufficient for generation: if a subgroup of a finite abelian group $G$ is proper, its quotient has a nonzero quotient of prime order and the subgroup fails to span $G/\ell G$ for that prime. Conversely these full ranks rule out every proper quotient.
+
+A primitive root at $p^2$ stays primitive at every higher $p$-power by the same binomial lift. Its logarithm at depth $r\ge2$ reduces to the tested logarithm at depth two modulo $p(p-1)$. The list of prime divisors of its local group order never changes, so every Frattini rank test remains full at any higher tuple of depths. Depth one is a quotient and imposes no extra requirement. Thus this is a theorem at all depths from the finite square-level computations, rather than a finite CRT phase test.
+
+For actual integer realization, let $E$ be the exponent of the chosen product unit group. Take $E-1$ ordinal copies of every toggle type, inside the same uniform exterior. Solve each finite-group target relative to the all-zero baseline, taking all exponents in $0,\ldots,E-1$, and toggle that many sites of each type. If an even-order filler is desired, add a fixed singleton when necessary before solving; it only changes the baseline. All filler flips are internal to their individually chosen subblocks, and each pair of exterior fork arcs remains valid at all states. The construction independently sets both unit coordinates simultaneously at all five primes. It supplies no claim of an efficient absolute selector for arbitrary $p$.
