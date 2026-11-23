@@ -72,3 +72,5 @@ An example at \(D=223,e=12\) gives the cofactor \(164063\), exact parent height 
 See also [the exact obstruction to uniform multiplication by seven](UNIFORM-AMPLIFIER.md).
 
 See [fixed-order, one-arc control](PHYSICAL-TOGGLES.md) for marked generators up to 100, and [prime-power ordinal control](ORDINAL-REAGENTS.md) for a larger certified range. Replay the arithmetic and targeted inverse with `python3 fork-phase.py`.
+
+**Renewal boundary.** [Matching depth and the exact observation lattice](REENTRY-DEPTH.md) predict when two readings cease to determine the next fork. [Restricted renewal](RESTRICTED-RENEWAL.md) restores an exact two-read decoder on two wrapper towers.
