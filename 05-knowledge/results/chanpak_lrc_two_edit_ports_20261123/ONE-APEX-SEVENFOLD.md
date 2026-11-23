@@ -1,0 +1,21 @@
+# A one-apex obstruction and the first exact two-contact sevenfold jump
+
+**PROVED** for the span and single-contact obstructions and the same-side classification; **FINITE-EXACT** for the smallest host in this chart. The chart consists of one apex over an otherwise transitive spine. Read the spine in ordinal order, with O when the apex beats the contact and I otherwise. For a pair O at \(i\), I at \(j>i\), define \(k_{j-i}\), where \(k_1=2\) and \(k_d=2^{d-1}\) for \(d\ge2\). Then \(H=1+\sum_{\mathrm{O}_i,\mathrm{I}_j}k_{j-i}\), the singleton-apex contact formula from the [prior planar charts](../chanpak_planar_prime_ports_20261123/README.md).
+
+The active span is from the first O to the last I, inclusive; exterior contacts are ordinal singleton pads. If the active span has \(m\ge2\) contacts, its endpoints contribute \(k_{m-1}\), so \(H>2^{m-2}\). Swapping adjacent IO to OI increases the sum: the pair is now counted and the contributions to third contacts are nondecreasing by monotonicity of \(k_d\). Thus for \(a\) O and \(b\) I in the active span the maximum is \((2^a-1)(2^b-1)+2\) at \(\mathrm O^a\mathrm I^b\). It is \(<2^m\) for \(m\ge2\). If \(H>1\) and a second word on the same spine has height \(7H\), its span must grow by one to four contacts. A contact outside the old span must therefore change.
+
+**No single contact can multiply an odd \(H>1\) by seven.** Normalize the first active O to index zero. The left-extension case flips I at index \(-s\) to O; a right extension is its converse. Put \(L=\sum_{j:\mathrm{I}_j,\ j>0}2^j\). Counting contributions by I gives \(1+L/2\le H\le1+L\); the upper bound uses \(\sum_{d=1}^j k_d=2^j\) for \(j\ge1\). The gain is \(G_1=L\) if \(s=1\), and \(G_s=2^{s-1}(1+L)\) if \(s\ge2\). The second formula counts new pairs with the \(s-1\) intervening I pads in addition to the old I's. The first is too small; in the second, valuation one of \(6H\) forces \(s=2\), and even then \(G_2=2(1+L)<4H\).
+
+**Two exterior contacts on the same side.** Up to converse both are left extensions, at indices \(-s,-t\), \(s>t\ge1\). Their joint gain is \(G_s+G_t-k_{s-t}\) (the right-hand new O removes a pair counted in the individual gain of the left-hand new O). Span bounds give \(s\le4\). For \(s=2,t=1\) the gain is \(3L<6H\); for \(s=4\) it exceeds \(6(1+L)\); for \(s=3,t=2\) it is \(6L+4\), not divisible by six. This leaves exactly \(s=3,t=1\) with the exact test
+\[
+ 6H=5L+2 .
+\]
+This gives an absolute inverse in the same-side subchart: require \(H\equiv2\bmod5\), set \(L=(6H-2)/5\), and decode the binary digits of \(L\) as the I contacts, from index 1 to the highest set bit, with O at index 0. Compute the height of that unique candidate word. If it is \(H\), append the forced pads and use flips at \(-3,-1\); if not, no same-side exterior pair works. This is not a classification of all two-contact moves.
+
+This same-side inverse has sparse image. Put \(S=\sum_{\mathrm O_i}2^{-i}\). The contribution of an I at \(j\) is \((S/2)2^j+e_j\), where \(e_j\) subtracts the contribution of future O's (less than \(1/2\)) and adds the adjacency bonus (at most 1). Thus \(H=1+SL/2+E\) with \(|E|\le m\), and the exact seam equation forces
+\[
+ |S-5/3|\le (2m+4/3)/L=O(m\,2^{-m}).
+\]
+The last contact is I, so \(S\) encodes the word on a dyadic grid of spacing \(2^{-(m-2)}\). Only \(O(m)\) words at length \(m\) can qualify. Since \(H>2^{m-2}\), the same-side chart provides at most \(O((\log X)^2)\) distinct starting heights up to \(X\), even without requiring primality.
+
+**First eligible prime in this chart by order.** The spine mask 152 (O at bits 3,4,7, zero-based) on nine contacts has height 37. Flips at 0 and 2 give mask 157 at 259, with alternative middle heights 217 and 81. Its active span grows from six to nine; \(L=44\). The [checker](refinements-check.js) enumerates all spine masks through nine contacts: none through eight contacts; at nine there are exactly two labelled moves, the displayed one and its converse. Hence the minimum host order in this chart is ten, not a lower bound on arbitrary tournaments. This distinguishes impossibility under a single-contact rule from a small exact two-contact witness in the same chart.

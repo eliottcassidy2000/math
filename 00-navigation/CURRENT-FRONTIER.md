@@ -194,6 +194,8 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
+- **PROVED + FINITE-EXACT:** [Two-edit follow-up](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/README.md#two-edit-follow-up): prime-to-own-sevenfold compression now has cap `B(7p)+2` (at most `+1` on the split multicore branch); a literal 43→13→301 square realizes the two-pad support surplus. The physical wheel accepts any unit cofactor phase and, after one common gcd, its eight distinct form readings are pairwise coprime at sufficient cutoff. Transitive-spine one-apex contact flips have no one-edit sevenfold move and first have a two-edit eligible move 37→259 at host order ten; the same-side exterior chart has an exact but sparse inverse.
+
 - [Lonely Runner wheel and exact two-edit prime ports](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/README.md): distance exactly two to own (7p) for every eligible prime through 71, a labelled unit square with nonisomorphic equal-height middles, and simultaneous small-prime avoidance on the literal fork.
 - [Planar prime ports and factor-seven seams](../05-knowledge/results/chanpak_planar_prime_ports_20261123/README.md): an exact inverse chart can miss every multiple of seven; smallest literal prime-to-own-sevenfold arc has order nine, and the first eleven eligible primes admit no such edge at any order.
 - [Square-sum lifts, signed Collatz and tournament arcs](../05-knowledge/results/square36_signed_collatz_20261123/README.md). Of 118 square-sum pairs among 72 heights, 101 admit one flip. Five labels of an exponent-61 six-cycle are attained.

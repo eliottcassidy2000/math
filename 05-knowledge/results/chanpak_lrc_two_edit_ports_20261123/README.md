@@ -2,6 +2,12 @@
 
 **PROVED** for the reduction lemmas and wheel; **FINITE-EXACT** for the indicated censuses. The prime/\(7p\) [reduction of the spectrum conjecture](../chanpak_two_holes_atoms_20261123/README.md) is unchanged. Nothing here asserts a uniform two-edit rule for every prime or resolves Lonely Runner or planar unit-distance coloring.
 
+## Two-edit follow-up
+
+- [Two-adic support compression](TWO-ADIC-SUPPORT.md): use the short-gain arm to cut the leading finite-search order bound in half; explicit nonnested square at 43.
+- [Prescribed cofactor phase and common content](PRESCRIBED-PHASE.md): straddle a chosen prime target in the same phase with a simultaneous physical wheel, and isolate the exact shared gcd across all readings.
+- [Transitive-spine one-apex seam](ONE-APEX-SEVENFOLD.md): all-order single-contact obstruction, a sparse exact inverse in the same-side chart, and a finite first two-contact realization.
+
 ## What actually transfers
 
 The repository's [Lonely Runner anchor-floor work](../../../07-reflections/the-anchor-floor-turns-the-maxgap-crux-into-finite-order-statistics-klein-S153.md) replaces a gap question by exact finite anchored reads, with a quantified sampling loss. The corrected note expressly does not claim AP configurations minimize the mean gap. We use the discrete version of that principle: move from a continuous picture to an exact finite certificate, keeping the same choice of clock for every constraint. The [unit-distance two-port construction](../two_port_unit_distance_20261103/geometry/PROOF.md) is a second model: a private ear and its boundary extension tensor are controlled jointly, not by independent port tallies. Here the bridge is an explicit Hamming square of flips and an exact joint-cut correction, not an identification of graph coloring with Hamilton paths.
