@@ -194,6 +194,8 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
+- [Sharp Kaprekar arc walks](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/KAPREKAR-METAGRAPH.md): seven reversals up to relabelling, eight with labels fixed; two distinct all-order detour obstructions. Base 16 also has no one-arc 15→225.
+
 **PROVED / FINITE-EXACT.** [Five Heegner midpoint flips, two-width inverse and fork routes](../05-knowledge/results/chanpak_heegner_selector_20261122/README.md). [Balanced Heegner windows](../05-knowledge/results/chanpak_heegner_absolute_targets_20261123/README.md) and [Kaprekar decimal selectors, 6173↔6175](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/README.md).
 
 [Order-118 E61 bracket, optimal 7:10 direction and prior constructions](../05-knowledge/results/chanpak_odd_square_spines_20261122/README.md). Exact E61 crossing and Chan–Pak OPEN.
