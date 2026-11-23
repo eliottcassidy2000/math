@@ -1,0 +1,4 @@
+six inherited literal seeds and restricted-bank finite differences PASS
+core 3 height counts {3: 2, 5: 6} collision energy 40
+core 5 height counts {5: 2, 9: 5, 11: 4, 13: 3, 15: 2} collision energy 58
+core 9 height counts {9: 2, 15: 2, 17: 4, 19: 2, 23: 6, 25: 2, 27: 2, 29: 2, 33: 4, 37: 4, 41: 2} collision energy 112

@@ -193,6 +193,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
+- **PROVED reduction:** [Window endgame](../05-knowledge/results/chanpak_window_endgame_20261123/README.md): a missing prime or single-seven atom forces an SCC-grade deficit along every power-ray window; exact finite differences detect the grade, and a sharp collision estimate can certify a finite window. Uniform lower witnesses remain open.
 - **PROVED / FINITE-EXACT:** [One-apex chirality and two-apex recovery](../05-knowledge/results/chanpak_one_apex_chirality_20261123/README.md): exact all-slot converse criterion, chiral 21-core and exponential strong collision families, while two individualized vertices suffice to recover every labelled old arc with uniform probes.
 - **PROVED / FINITE-EXACT:** [Continuation observability](../05-knowledge/results/chanpak_continuation_observability_20261123/README.md): the height-9 twins coincide under every homogeneous shell; a two-endpoint literal flip decodes all 64 rooted states. General one-apex linear rank is sharp; unrestricted labelled gaps recover the entire marked core.
 - **PROVED / FINITE-EXACT:** [Berggren and divisor twins](../05-knowledge/results/chanpak_berggren_divisor_twins_20261123/README.md): signed factors 7 and 21, a canonical divisor-to-leg selector, a literal 5/9 and 19/23 shared-arc square, and a six-vertex cube distinguishing the two equal-height Berggren twins.
