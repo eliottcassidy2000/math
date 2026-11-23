@@ -56,6 +56,10 @@ It permits a growing signal by accumulating many separated
 component of count \(7p\), with no numerical division of
 Hamilton counts.
 
+## A limit on modular persistence
+
+[Uniform-context guards](UNIFORM-GUARDS.md) gives an exact integer observation lattice, sharp order thresholds for prime and prime-square persistence, and a square-root obstruction to protecting a prime in every uniform exterior. Even the fork's two-read guard has sharp strong height floor 49 at the prime 7; at 13, 29 and 37 the two-read guard can already hold at the prime height itself.
+
 ## What actually transfers from the analytic endgame
 
 In [Slijepčević's outline, Props. 2.2–2.5](https://hexagonmath.org/pdf/2611.00812v1)
