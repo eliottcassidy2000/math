@@ -33,3 +33,7 @@ Indeed those equations are \((a/d^2)'=0\), then \((b/d)'=2k_0e'\). Hence
 The remaining determinant is \(-ds'\). Therefore \(d\) is constant and \(s\) is affine with nonzero slope. To invert, recover \(y\) from \(F_1-k_0F_2^2-r_0F_2\), then \(x=(F_2-e(y))/d\). In particular the original vector of \(x^2\) coefficients must have been **constant in \(y\)**: the output change was linear and \(a=k_0d^2\) is constant. This is a direct obstruction when the genuine pairwise interaction of a star varies with the other control.
 
 The Jacobian restrictions constrain the polynomial interpolation; they neither prove existence of an unrestricted prime-to-sevenfold square nor replace checking that an inverse output has literal Boolean controls.
+
+## Leading-term vetoes
+
+The [reduced-word consequences](LEADING-TERM-VETO.md) detect impossible constant-Jacobian controls using each top coefficient, degree ratios, or a shared Newton edge, before forming the determinant.

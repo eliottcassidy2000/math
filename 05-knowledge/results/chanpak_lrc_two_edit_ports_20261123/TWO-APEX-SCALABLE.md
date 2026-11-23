@@ -43,3 +43,7 @@ is unimodular. Thus the [physical joint slot controller](../chanpak_fork_curvatu
 ## Subsequent absolute capacity barrier
 
 The [glued one-apex profile theorem](MODULE-CAPACITY.md) bounds the integer image even after arbitrary ordinal joins and a fixed additional bank. It also gives explicit six-vertex modules outside the glued profile set and proves the first scalar and prime escapes of the unaugmented class.
+
+## Complete minimal-template continuation
+
+See the [template census and pure-curvature frames](TEMPLATE-CENSUS.md) for exact exhaustion through seven fixed sites and examples outside both A/B integer images.

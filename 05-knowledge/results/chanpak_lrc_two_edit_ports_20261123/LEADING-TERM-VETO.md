@@ -1,0 +1,23 @@
+# Cheap leading-term vetoes before expanding a planar determinant
+
+**PROVED** as consequences of the reduced Jung–van der Kulk form. In the [bundled charts of partial degree at most eight](BUNDLED-JACOBIAN.md), a nonzero constant Jacobian already implies a polynomial inverse. Necessary leading terms of an automorphism therefore become vetoes for that determinant condition. They do not on their own imply that a determinant is constant.
+
+For any polynomial plane automorphism in affine input coordinates:
+
+1. Each output that depends on \(x\) has a **constant** leading \(x\)-coefficient in \(y\). When both \(x\)-degrees are positive, one divides the other.
+2. If all four partial degrees are positive, the two rows \((\deg_x F_i,\deg_y F_i)\) are proportional. Thus a nonzero two-by-two determinant of the **degree matrix** rules out a nonzero constant Jacobian in the scoped charts, without computing any polynomial determinant.
+3. If \(x\) is the exceptional direction and \(y\) the generic one, with all four degrees positive, write \(d=\deg_y F_i/\deg_x F_i>1\). This is a common integer. With weights \(\operatorname{wt}(x)=d,\operatorname{wt}(y)=1\), both leading forms must be
+   \[
+   \operatorname{in}_{(d,1)} F_i=c_i(Ax+B y^d)^{\deg_x F_i},\qquad ABc_1c_2\ne0,
+   \]
+   with the **same** \(A:B\). If that sloped Newton edge lacks a required mixed term, the map cannot be an automorphism in characteristic zero.
+
+## Proof and physical read
+
+Use the reduced affine/elementary word in [Friedland and Milnor, §2](https://www.math.stonybrook.edu/~ebedford/PapersForM655/FriedlandMilnor.pdf), equivalently an affine input and output around reduced alternating triangular steps and swaps. An elementary step of degree \(d_j\ge2\) replaces the first coordinate \(X\) by a nonzero multiple of \(X\) plus a polynomial of degree \(d_j\) in the retained coordinate \(Y\), up to affine rescaling. Once \(Y\) has positive degree in the chosen input direction and \(\deg X\le\deg Y\) in that direction, the new degree is strictly larger, \(d_j\deg Y\), and the top coefficient is the power of the old top coefficient times a field constant. Between steps the swap places the higher degree back in the retained coordinate. A final affine output change either retains the two unequal degrees up to swap or assigns the higher one to both coordinates. If no nonlinear step is present, all positive partial degrees are one and the assertions are immediate.
+
+At the affine input there is only one projective direction along which the first retained \(Y\) has degree zero. In a generic direction the first step changes \((1,\le1)\) in decreasing degree order to \((d_1,1)\); in the exceptional direction the degree remains \((1,0)\) until the next nonlinear step, giving \((d_2,1)\) rather than \((d_2d_1,d_1)\). Thereafter both generic degrees are exactly \(d_1\) times the respective exceptional degrees, whenever the exceptional degrees are positive. If there is just one nonlinear step, the exceptional degree-zero output is excluded by the all-positive hypothesis unless the final affine mixes the larger degree into both coordinates, in which case both ratios are again \(d_1\). This proves proportionality, with at most one projective direction of degree drop. Leading coefficients along any one direction remain constants by the same induction, and the strict-order degree growth proves divisibility.
+
+When \(x\) is exceptional and \(y\) generic, the affine start has \(Y=uy+v,\ X=ax+by+c\), where \(au\ne0\). With weights \((d_1,1)\), the first updated coordinate has top \(Ax+B y^{d_1}\) with \(AB\ne0\) and strictly higher weight than the retained coordinate. Later steps take powers of that same top; final affine mixing behaves exactly as in the degree induction. This proves the shared Newton-edge formula. The binomial coefficients at characteristic zero are nonzero. Over a general characteristic-zero field one can extend scalars to its algebraic closure for the necessary conditions.
+
+For a tournament interpolation, the coefficient in question can be computed from the literal path products by retaining the relevant powers of the controlled arc weights. For example \(F_i(x,y)\)'s actual leading \(x\)-coefficient must not take two different values at two \(y\)'s. At the maximum allowed path degree only paths using that many controlled arcs can contribute, so this test can be much smaller than expanding \(J(F)\). The two degree and binomial tests strengthen the one-star quadratic veto; they do not decide whether a noninvertible chart has Boolean reaches or whether an invertible chart reaches a given target.
