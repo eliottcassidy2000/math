@@ -27,8 +27,8 @@ function run(log){
  let L=1n;
  for(const b of [10n,12n,14n,16n]){const x=b*b-1n;L=L*x/gcd(L,x);}
  assertion(L===109395n);
- for(const y of [1n,3n]){
-  const M=L*y,B=M-1n,h=M-2n,product=y===1n?139n*787n:307n*1069n;
+ for(const [y,product] of [[1n,139n*787n],[3n,307n*1069n],[5n,546973n],[9n,809n*1217n],[15n,31n*43n*1231n],[27n,577n*5119n]]){
+  const M=L*y,B=M-1n,h=M-2n;
   assertion(product===h);
   const occupied=new Set();
   for(const [base,phases,A,edits] of p){
@@ -84,3 +84,28 @@ for(const [y,F] of [[9,[809,1217]],[15,[31,43,1231]],[27,[577,5119]]]){
   if(F.reduce((a,b)=>a*b,1)!==109395*y-2)throw Error(y);
   console.log(y,109395*y-1,[y,...F].reduce((t,h)=>t+Extra[h].length,0));
 }
+
+const idx=b=>31-Math.clz32(b),height=H;
+function signedStats(r,mask){
+ const n=r.length,F=(1<<n)-1;
+ function en(a){
+  const d=Array.from({length:F+1},()=>Array(n).fill(0));
+  for(let i=0;i<n;i++)d[1<<i][i]=1;
+  for(let s=1;s<=F;s++)for(let i=0;i<n;i++)if(d[s][i])
+    for(let m=a[i]&(F^s);m;m&=m-1){const t=m&-m;d[s|t][idx(t)]+=d[s][i];}
+  return d;
+ }
+ const e=en(r),st=en(r.map((x,i)=>F^x^(1<<i)));
+ const pick=a=>a.reduce((z,x,i)=>z+(mask>>i&1)*x,0);
+ let G=0,L=0;
+ for(let s=1;s<=F;s++){
+  const t=F^s,u=pick(e[s]);G+=u*(t?st[t].reduce((a,b)=>a+b,0):1);L+=u*pick(st[t]);
+ }
+ return [height(r),G,L];
+}
+
+const y5shell=[36,5,224,183,167,194,27,67];
+const [D5,G5,L5]=signedStats(y5shell,65);
+assertion([D5,G5,L5].join()==="239,1068,82"&&G5*2**9+D5-L5===546973);
+const h5=[6,12,8,1];
+assertion(H(h5)===5&&h5.length+y5shell.length+9+1===22);
