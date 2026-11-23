@@ -194,6 +194,8 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
+- [Kaprekar and decimal controllers](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/README.md): full binary image except 7,21, balanced ordinary heights with prescribed last decimal digits, a one-step decimal shelf, and an order-ten one-arc seam 6173↔6175.
+
 - [Heegner exact targets and balanced windows](../05-knowledge/results/chanpak_heegner_absolute_targets_20261123/README.md): fixed-modulus square-root approximation to an absolute Hamilton target, literal strong 2^q−7 for all q≥4, exact nearest odd Ramanujan count, and nine-vertex CRT uniqueness without existence.
 
 - [All-prime guarded apex words](../05-knowledge/results/chanpak_fork_curvature_20261123/ALL-PRIME-WORDS.md): strong prescribed-parity slot synthesis jointly at arbitrary odd prime powers for the first (p−1)/2 reads, sharp memory at each base prime, not absolute height coverage.
