@@ -193,6 +193,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
+- **PROVED / FINITE-EXACT:** [Six/five ternary boundary atlas](../05-knowledge/results/chanpak_six_five_boundary_atlas_20261123/README.md): rooted hexagon and pentagon filling quotient, explicit genus-two Paley–Frobenius transport and Petersen incidence, and exact apex context ranks 7/6/5 with fixed guards.
 - **PROVED / FINITE-EXACT:** [Collatz guard buckets and the 61/63/65 fork](../05-knowledge/results/chanpak_collatz_edge_buckets_20261123/README.md): exact trajectory-count transfer; a literal unit seam above count 3 must stay inside one fixed strong core; 61 has flips to both 63 and 65, but 63 and 65 are never adjacent. Two infinite strong ternary upper rails evade the ordinal-product obstruction.
 - **PROVED reduction:** [Window endgame](../05-knowledge/results/chanpak_window_endgame_20261123/README.md): a missing prime or single-seven atom forces an SCC-grade deficit along every power-ray window; exact finite differences detect the grade, and a sharp collision estimate can certify a finite window. Uniform lower witnesses remain open.
 - **PROVED / FINITE-EXACT:** [One-apex chirality and two-apex recovery](../05-knowledge/results/chanpak_one_apex_chirality_20261123/README.md): exact all-slot converse criterion, chiral 21-core and exponential strong collision families, while two individualized vertices suffice to recover every labelled old arc with uniform probes.
