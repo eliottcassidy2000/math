@@ -36,3 +36,7 @@ For the same frame, a simpler wheel works at any prescribed unit cofactor phase 
 These three examples separate curvature scales too. On \(n\) filler vertices, \(Q\ge(n+1)D\) by all cuts of each Hamilton order; different orders and cuts give distinct ordered covers. The first two frames therefore have \(d/h\to0\) uniformly as \(n\to\infty\), while the third has \(d/h\to4/3\), with errors \(O(1/n)\). More generally in A, \(k_A=Q+D\) obeys \(0<k_A-h/6\le h/[6(6n+11)]\); in B, \(0<4h/5-d\le34h/[5(15n+16)]\). In A the actual half-mixed derivative is \(-3k_A\). These are bounds at the same physical height and same marks, not limits across independent endpoint witnesses.
 
 Run `g++ -O3 -std=c++17 template-scan.cpp -o template-scan && ./template-scan 7` to reproduce all counts and representative corner tables. A search for \(Q_3\) dependence must now allow more fixed sites or change the mark/filler layout.
+
+## Beyond seven fixed sites
+
+The [third-slot continuation](THIRD-SLOT-JACOBIAN.md) finds the first `Q3` contribution at eight fixed sites and replays the full template census through eleven.

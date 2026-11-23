@@ -55,3 +55,7 @@ The same planar rigidity extends beyond quadratic total degree if **one input en
 ## Subsequent bundled-port theorem
 
 The [partial-degree-eight reduction](BUNDLED-JACOBIAN.md) allows one control on arbitrarily many arcs covered by four vertices, or more generally on a graph of matching number at most four. It gives a direct inverse for one controlled star.
+
+## Equal Jacobians with distinct exact targets
+
+The [third-slot fibers](THIRD-SLOT-JACOBIAN.md) give two prime-to-sevenfold squares with identical normalized gain Jacobian matrices, and a 14-direction bank invisible to that differential.
