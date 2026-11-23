@@ -93,3 +93,13 @@ python3 -B square-directions.py --exponents
 python3 -B square-shells.py --check
 python3 -B square-shells.py --distance 512
 ```
+
+## Exact cost of using a single direction on both spines
+
+**FINITE-EXACT across the full exponent period.** Let \(m_4,m_8\) denote the minimum projected support sizes attained separately on spines four and eight at \(N_e\). In 40 of the 56 odd classes modulo 112 one direction attains \((m_4,m_8)\). In the other 16 classes, exactly those with \(e\equiv7,11,13,23\pmod{28}\), the complete Pareto frontier consists of
+\[
+ (m_4,15m_8/14),\qquad (15m_4/14,m_8).
+\]
+Thus optimizing either sieve forces at least \(1/14\) more residues at the other. Both tradeoffs are attained. At exponent 61 there is no such conflict. The underlying opposition between the two preferred quadratic characters modulo 29 is identified in the [all-exponent Pell classification](PELL-EXPONENTS.md). For a nondegenerate hyperbola the two quadratic-character projections at 29 have 14 and 15 values, respectively.
+
+To calculate the Pareto frontier, fix the normal projectively at the shared primes 2, 5 and 29. This gives 540 assignments. With them fixed, minimize each support independently over the remaining direction at 17 or 257. The two chosen private directions give a joint primitive positive normal. Indeed, use CRT to prescribe a nonzero residue pair representing each local projective point. Choose a positive lift \(b\) of the second coordinate. For each prime of \(b\) outside the modulus, additionally prescribe \(a=1\) there. The primes of \(b\) inside the modulus already force a nonzero first coordinate. CRT now gives a positive \(a\) coprime to \(b\). Every other pair with this shared assignment is weakly worse in each coordinate, so removing dominated pairs across the 540 assignments is exact. Run `python3 -B projection_tradeoff.py` for all exponent classes and the five distinct two-point frontiers.
