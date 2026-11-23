@@ -32,7 +32,7 @@ for n in 2 3 4 5 6 7 8 9; do gentourng -q "$n" | /tmp/cp-port-forks "$n"; done
 
 ## A classification at every tournament order
 
-**PROVED with finite-exact strong cores.** For odd \(1<h\le71\), an individual tournament of height \(3h\) has reversals to all three heights \(h,3h-2,3h+2\) at some order if and only if \(h\in\{29,71\}\). The ordinary generating functions for the numbers of possible *center isomorphism classes*, by order, are respectively
+**PROVED with finite-exact strong cores.** For odd \(1<h\le75\), an individual tournament of height \(3h\) has reversals to all three heights \(h,3h-2,3h+2\) at some order if and only if \(h\in\{29,71\}\). The ordinary generating functions for the numbers of possible *center isomorphism classes*, by order, are respectively
 \[
                   \frac{2z^9}{(1-z)^2},\qquad
                   \frac{2z^{10}}{(1-z)^2}.
@@ -41,7 +41,7 @@ The counted object is the center, with the three moves required to exist. Additi
 
 By [core locality for a difference of two](../chanpak_collatz_edge_buckets_20261123/README.md#3-a-general-no-go-for-the-cheapest-ternary-lift), both side reversals take place inside a unique nonsingleton strong component. The remaining reversal **lowers** the height from \(3h\) to \(h\), so it too is internal. Indeed a cross-component reversal can never lower the height. Every old path that uses the old cross arc \(u\to v\) visits these two vertices consecutively. Swapping them gives a new path using \(v\to u\). The predecessor of \(u\), if present, belongs to its own component or an earlier one and beats \(v\). The successor of \(v\), if present, similarly loses to \(u\). This injects all lost paths into gained paths, while paths avoiding the arc survive. The three moves therefore descend simultaneously to the strong core, and any singleton padding before and after that core preserves all three.
 
-[Busch's strong-tournament bound](https://doi.org/10.37236/1141) gives \(H(S)\ge5^{(|S|-1)/3}\). When \(|S|\ge11\) this exceeds 213, since \(5^{10}=9,765,625>213^3=9,663,597\). Thus a complete census through order ten decides every source through 71 at *all* orders. The order-ten census examined all 9,733,056 ordinary classes. The table gives all of its nontrivial source heights (the other eight centers have source 1).
+The lower neighbor has height \(3h-2\) on the very same strong vertex set. [Busch, Theorem 1 and Corollary 1](https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf) gives a minimum of \(9\cdot5^2=225\) for eleven vertices. At twelve or more vertices the bound \(5^{(n-1)/3}\) already exceeds 225. For odd \(h\le75\) the lower height is at most 223. Thus a complete census through ten decides this range at *all* orders. The order-ten census examined all 9,733,056 ordinary classes. The table gives all of its nontrivial source heights (the other eight centers have source 1).
 
 | Source | Ordinary centers at order ten | Strong among them | Self-converse strong centers |
 |---:|---:|---:|---:|

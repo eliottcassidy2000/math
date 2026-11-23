@@ -1,4 +1,4 @@
-"""Recover the four-core tripling equations, the two exact exits and all core edits."""
+"""Recover the four-core rays and classify all individual lower exits."""
 from itertools import combinations
 
 from direct_fork import address_height, direct, flipped, read, star_rows, tagged_data
@@ -59,5 +59,81 @@ def run():
     print("two four-core rays; core and flank-tag tests passed")
 
 
+
+def arc_changes(rows):
+    """Find every one-arc change by cutting paths into two ordered pieces."""
+    n = len(rows)
+    full = (1 << n) - 1
+    def first_paths(t):
+        dp = [[0]*n for _ in range(full+1)]
+        for i in range(n):
+            dp[1 << i][i] = 1
+        for mask in range(1, full+1):
+            bits = mask
+            while bits:
+                bit = bits & -bits
+                i = bit.bit_length()-1
+                prev = dp[mask ^ bit]
+                choices = t[i] & mask
+                while choices:
+                    first = choices & -choices
+                    dp[mask][i] += prev[first.bit_length()-1]
+                    choices ^= first
+                bits ^= bit
+        return [[(j, c) for j, c in enumerate(row) if c] for row in dp]
+    start = first_paths(rows)
+    end = first_paths([full ^ r ^ (1 << i) for i, r in enumerate(rows)])
+    cuts = [[0]*n for _ in rows]
+    for left in range(1, full):
+        for i, count in end[left]:
+            row = cuts[i]
+            for j, other in start[full ^ left]:
+                row[j] += count*other
+    return {(i,j): (cuts[j][i]-cuts[i][j]) * (1 if (rows[i] >> j) & 1 else -1)
+            for i,j in combinations(range(n), 2)}
+
+
+def twice_coefficients(values):
+    """Twice the coefficients in 1, 2^m-1, 3^m-2*2^m+1 from m=0,1,2."""
+    a, b, c = values
+    return [2*a, 2*(b-a), c-3*b+2*a]
+
+
+def strict_sign(grid):
+    coeff = [v for row in grid for v in row]
+    return coeff[0] != 0 and all(v*coeff[0] >= 0 for v in coeff)
+
+
+def all_ordinary_edits():
+    for w, expected in ((3, 49), (5, 60)):
+        changes = {}
+        for s in range(1, 8):
+            changes[s] = arc_changes(star_rows(CENTER, TAGS, 0, (w << (s+1))+1))
+        outside = range(5 + w.bit_length())  # four core, low digit, high digits
+        def index(i, s): return i if i < 5 else i+s
+        def at_mark(i, a, b):
+            s = a+1+b
+            edge = tuple(sorted((index(i,s), 5+a)))
+            return changes[s][edge]+2
+        total = 0
+        for i, j in combinations(outside, 2):
+            values = [changes[s][index(i,s),index(j,s)]+2 for s in (1,2,3)]
+            assert strict_sign([twice_coefficients(values)])
+            total += 1
+        for i in outside:
+            for a_range in ((0,), (1,2,3)):
+                for b_range in ((0,), (1,2,3)):
+                    grid = [[at_mark(i,a,b) for b in b_range] for a in a_range]
+                    if len(b_range) == 3:
+                        grid = [twice_coefficients(row) for row in grid]
+                    if len(a_range) == 3:
+                        grid = list(zip(*[twice_coefficients(col) for col in zip(*grid)]))
+                    assert strict_sign(grid)
+                    total += 1
+        assert total == expected
+        print("odd prefix", w, "strict-sign charts", total)
+
+
 if __name__ == "__main__":
     run()
+    all_ordinary_edits()
