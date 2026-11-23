@@ -198,3 +198,7 @@ not determined by a count, a bracket, or a prime factor.
 
 Run python3 replay.py for the factor reads, explicit triangles,
 morphic formulas, both 9-cores and all eight cube heights.
+
+## A stricter physical lift
+
+The [sevenfold square-gap test](SQUARE-GAP-LIFT.md) asks when the divisor-transversal geometry can actually supply the two arms of the existing (7p) construction. Keeping both arms nonsingletons, the parity and carrier restrictions and two exact small-order scans leave only the necessary operand pattern (3\cdot7^2\ell), with fixed right gap (21609). This is a reduction, not existence or sevenfold coverage.
