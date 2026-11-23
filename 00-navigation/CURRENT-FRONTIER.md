@@ -194,6 +194,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
+- [Planar prime ports and factor-seven seams](../05-knowledge/results/chanpak_planar_prime_ports_20261123/README.md): an exact inverse chart can miss every multiple of seven; smallest literal prime-to-own-sevenfold arc has order nine, and the first eleven eligible primes admit no such edge at any order.
 - [Square-sum lifts, signed Collatz and tournament arcs](../05-knowledge/results/square36_signed_collatz_20261123/README.md). Of 118 square-sum pairs among 72 heights, 101 admit one flip. Five labels of an exponent-61 six-cycle are attained.
 - [Signed chart and 19th-vertex decoder](../05-knowledge/results/chanpak_signed_square36_20261123/README.md) · [Kaprekar host at base 765764](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/EVEN-BASES-THROUGH-16.md) · [Edit-radius bounds](../05-knowledge/results/chanpak_edit_radius_20261123/EDIT-RADIUS.md).
 - [Five Heegner midpoint flips](../05-knowledge/results/chanpak_heegner_selector_20261122/README.md) · [Balanced windows](../05-knowledge/results/chanpak_heegner_absolute_targets_20261123/README.md).
