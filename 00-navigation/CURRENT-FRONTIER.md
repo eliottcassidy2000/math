@@ -194,6 +194,8 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
+- [Heegner exact targets and balanced windows](../05-knowledge/results/chanpak_heegner_absolute_targets_20261123/README.md): fixed-modulus square-root approximation to an absolute Hamilton target, literal strong 2^q−7 for all q≥4, exact nearest odd Ramanujan count, and nine-vertex CRT uniqueness without existence.
+
 - [All-prime guarded apex words](../05-knowledge/results/chanpak_fork_curvature_20261123/ALL-PRIME-WORDS.md): strong prescribed-parity slot synthesis jointly at arbitrary odd prime powers for the first (p−1)/2 reads, sharp memory at each base prime, not absolute height coverage.
 
 - [Two-read fork curvature and controllers](../05-knowledge/results/chanpak_fork_curvature_20261123/README.md): exact center/width separation with same-order single-arc generators for primes 5–97 at all powers, a scoped absolute inverse, and a uniform multiplier-7 obstruction. The (2,3,m) modular chart is not physical renewal.
