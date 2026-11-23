@@ -193,6 +193,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
+- **PROVED / FINITE-EXACT:** [Guarded ternary switches and the packing tape](../05-knowledge/results/chanpak_guarded_ternary_packing_20261123/README.md): a pure height-only arc reversal on the five-read interface, both signed exits at an attained common height in distinct contexts, a mod-four graft obstruction and a finite resource bound for homothetic tripling; exact four-phase packing controller at 5 and 11.
 - **PROVED / FINITE-EXACT:** [Six/five ternary boundary atlas](../05-knowledge/results/chanpak_six_five_boundary_atlas_20261123/README.md): rooted hexagon and pentagon filling quotient, explicit genus-two Paley–Frobenius transport and Petersen incidence, and exact apex context ranks 7/6/5 with fixed guards.
 
 [Ternary forks, divisor grades, Berggren rays and Collatz buckets](../05-knowledge/results/chanpak_ternary_buckets_20261122/README.md) gives the all-order fork classification through source 71 and routes to the 61/63/65 fork, window endgame, chirality, continuation and divisor twins.
