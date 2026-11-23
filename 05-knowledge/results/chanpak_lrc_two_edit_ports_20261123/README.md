@@ -4,6 +4,8 @@
 
 ## Two-edit follow-up
 
+- [Complete one-apex two-contact inverse](ONE-APEX-INVERSE.md): exact admission in all mark patterns, only \(O(\log p)\) candidate words, a global sparsity bound for the chart, and three all-order nonmonotonic targets within it.
+
 - [Two-adic support compression](TWO-ADIC-SUPPORT.md): use the short-gain arm to cut the leading finite-search order bound in half; explicit nonnested square at 43.
 - [Prescribed cofactor phase and common content](PRESCRIBED-PHASE.md): straddle a chosen prime target in the same phase with a simultaneous physical wheel, and isolate the exact shared gcd across all readings.
 - [Transitive-spine one-apex seam](ONE-APEX-SEVENFOLD.md): all-order single-contact obstruction, a sparse exact inverse in the same-side chart, and a finite first two-contact realization.
