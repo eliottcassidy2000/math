@@ -77,4 +77,14 @@ The next admissible \(y\) is 3. At base \(328184\), \(Ly-2=328183=307\cdot1069\)
 | 307 | \((222,124,40,240,36,65,148,54)\) |
 | 1069 | \((478,316,408,48,352,325,142,314,72)\) |
 
+Three more exact common bases follow from the same condition. The row masks for all their factors, including the \(y\)-blocks, are in the replay.
+
+| \(y\) | \(B\) | Factorization of \(B-1\) | Vertices for fixed factor \(y(B-1)\) |
+|---:|---:|---|---:|
+| 9 | 984554 | \(809\cdot1217\) | 23 |
+| 15 | 1640924 | \(31\cdot43\cdot1231\) | 26 |
+| 27 | 2953664 | \(577\cdot5119\) | 25 |
+
+Thus all **five verified bases** fit in one 45-vertex layout: reserve 26 vertices for a programmable common-factor block, nine for the selector, and ten for the moving packet. Ordinal padding preserves the count of any common-factor program. Programming flips only internal arcs of that block and carries no stated cost bound. These are examples, not the first five feasible bases: \(y=5\) and \(y=7\), for instance, are not settled here.
+
 Run [`node kaprekar-common-base.js`](kaprekar-common-base.js) to verify the fixed factors, selector, all literal source walks and exact BigInt heights in both common bases.
