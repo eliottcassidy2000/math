@@ -107,3 +107,33 @@ at \(q=3\) is 1, attainable only by transitive tournaments.
 Replay the signed shell with `python3 heegner-shell-check.py`;
 it uses only the standard library and checks both the coefficient
 derivation's inputs and literal counts for six filler lengths.
+
+## One arc switches the Heegner offset from seven to eleven
+
+The two rails independently have a literal gap-four edge to
+\(2^q-11\). On the symmetric apex word with \(b=3\), change the
+middle I of the three-I run to O. The deleted incoming
+O-before-I weight is \(2^{a+2}+2\). The gained outgoing weight
+is \(2+4(2^a-1)=2^{a+2}-2\), so the height drops by four.
+The endpoints of the word are unchanged and both tournaments
+are strong. This holds for every odd \(q\ge7\).
+
+On the signed shell, reverse the single core arc \((1,2)\)
+(indices from zero). The readings become
+\((H(A),G,L)=(103,512,114)\), so the slope is unchanged and the
+intercept becomes \(-11\). Strength again follows from the
+strong core and cycle of parts. This is a one-arc edge for
+every \(q\ge10\), even or odd. The branch
+\(2^q-11\equiv5\pmod8\) has no square heights, in exact contrast
+with the two square collisions on the offset-seven odd rail.
+
+A scoped exhaustive test covers all 21 core-arc flips and all
+seven tag toggles (flips of a core-to-\(b\) arc) at the
+offset-seven signed shell. The only edits keeping slope 512
+are \((1,2)\) above and a neutral \((2,6)\) edit, with intercepts
+\(-11\) and \(-7\), respectively. In fact no one of the 28 edits
+gives gap two at **any** transitive filler length: an altered
+slope forces at most one candidate \(u=2^s\ge2\) per sign in
+\((G'-512)u+(H(A')-L'+7)=\pm2\), and none of these candidates
+is an eligible power of two. This does not test edits touching
+the filler, nor changes of the shell.

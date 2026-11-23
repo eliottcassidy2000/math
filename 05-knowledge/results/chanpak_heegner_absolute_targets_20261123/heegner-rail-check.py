@@ -55,3 +55,11 @@ if __name__=="__main__":
         H=literal(w)
         assert H==weighted(w)==(1<<q)-7 and isqrt(H)**2==H
         print(q,len(w)+1,H,w)
+
+    for a in range(1,12):
+        w=contact(a,3,a)
+        i=a+3
+        assert w[i]=="I"
+        other=w[:i]+"O"+w[i+1:]
+        assert weighted(other)==weighted(w)-4
+        if a in (1,5):assert literal(other)==(1<<(2*a+5))-11
