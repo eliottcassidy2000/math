@@ -83,6 +83,16 @@ In the four rows the total order is \(n=n_0+a+b\) with \(n_0=11,27,29,55\), resp
 \]
 The number of odd endpoints through height \(X\) on this grammar is \(4(\log_2 X)^2+O(\log X)\): the absolute height window bounds \(a+b\) by \(\log_2 X+O(1)\) in each row, and there are \(L-1\) positive ordered pairs of sum \(L\). Thus the exact decoder's domain has density zero. For any one of its endpoints at order \(n\), the full isomorphism-class series at that height dominates \(z^n/(1-z)^2\) coefficientwise by independently adjoining source and sink strings to the strong core. The distinct converse witnesses at the two order-11 edges double this latter lower bound there. [General isomorphism-fiber formula](../chanpak_arc_fiber_grammar_20261122/README.md)
 
+### The complete class series in each of the 10,368 residues
+
+For an occupied endpoint residue \(r\) modulo 26,896,077, let \(a_0,b_0\in\{1,\ldots,36\}\) be its two positive phase representatives and let \(n_0\) be the order offset of its selected core. Inside this grammar, the entire size series at residue \(r\) is
+\[
+                   G_r(z)=\frac{z^{n_0+a_0+b_0}}{(1-z^{36})^2}.
+\]
+Indeed \(a=a_0+36i, b=b_0+36j\) with independent nonnegative \(i,j\), and distinct choices give distinct heights and classes. Consequently at order \(n=n_0+a_0+b_0+36k\) there are exactly \(k+1\) such classes. At every other order the coefficient is zero. Each of the four isolated residues instead has the single term \(z^{11}\).
+
+This yields an exact uniform sampler of the **marked** constructions with a specified endpoint residue and order. Draw \(i\) uniformly from \(0,\ldots,k\) and put \(j=k-i\). If labels are wanted, apply a uniform permutation of the vertices. Every marked pair has trivial automorphism group: its automorphisms act freely on the Hamilton paths of each completion, so their order divides \(\gcd(H,H+2)=1\). Thus each chosen pair has exactly \(n!\) labelings. To sample on a union of compatible residues, first choose a residue with weight its computed coefficient at order \(n\). This addresses the same source of bias as sampling Latin squares by construction histories: different partial choices have different numbers of completions. Here the exact coefficient gives the correction explicitly. [Marked-edge rigidity](../chanpak_arc_fiber_grammar_20261122/README.md) · [Mira Cult's exact Latin-square sampling proposal](https://github.com/Mira-Cult/math/tree/30ddaaad27b48df2002225c3e3f40cffd02c5253/notes/combinatorics/exact-latin-square-sampling)
+
 From this directory, run the following for the finite certificate, literal midpoint counts, minimum separating divisor, and a target-only reconstruction.
 
 ~~~sh
