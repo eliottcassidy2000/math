@@ -1,0 +1,4 @@
+exact guards, count-preserving period, one-flip overlap and Paley window obstruction pass
+same-length two-step macros: 15 paths; strong literal fork: 61,63,65,69
+numerical links: 21 -> 1, 61 -> 23, 63 -> 61 in 34, 65 -> 7 in 3
+all strong binary-width rail templates: exact gap counts and upper seams

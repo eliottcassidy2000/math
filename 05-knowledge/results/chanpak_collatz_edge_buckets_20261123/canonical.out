@@ -1,0 +1,4 @@
+canonical order8 H63 cores [2359556, 3145732]
+canonical marked 63 toward 61 [969, 1004] all strong
+canonical marked 61 toward 65 [449, 2044] all strong
+literal strong four corners: 61,63,65,69
