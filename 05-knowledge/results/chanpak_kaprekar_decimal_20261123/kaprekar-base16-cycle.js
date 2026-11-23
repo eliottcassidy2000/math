@@ -113,3 +113,18 @@ for(let w=1;w<=4;w++){
   if(H(r)!==40*2**w+3)throw Error("base-4 lifted shell");
 }
 console.log("base-4 lifted shell verified");
+
+for(const [r,tag,expected] of [
+  [[50,44,9,17,38,76,31],70,[113,576,220]],
+  [[6,4,8,19,39,79,31],54,[29,352,160]]
+]){
+  const {D,G,L}=shellStats(r,tag);
+  if([D,G,L].join()!==expected.join())throw Error("decimal lift coefficient");
+  for(let w=1;w<=4;w++){
+    const tr=Array.from({length:w},(_,i)=>((1<<w)-1)^((1<<(i+1))-1));
+    const s=join([[0],tr,r]);
+    for(let i=0;i<r.length;i++)if(tag>>i&1)flip(s,0,1+w+i);
+    if(H(s)!==G*2**w+D-L)throw Error("decimal lift shell");
+  }
+}
+console.log("decimal lifted shells verified");

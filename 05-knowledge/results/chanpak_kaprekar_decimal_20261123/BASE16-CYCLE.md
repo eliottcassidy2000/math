@@ -53,3 +53,18 @@ Indeed, two nonempty filler runs sit on opposite sides of \(b_0\) and give \(G(Q
 - **From base 4:** the normalized first orbit is \(1,3,1\), physically realized on three vertices by making and unmaking a directed triangle. Take rows \((14,28,24,16,1)\) with tag mask 24. Here \((D,G,L)=(9,40,6)\); \(w=k-3\ge1\) gives \(B-1=5\cdot2^k+3\). For each \(k\ge4\) this yields literal labelled closure in two edits on \(2k+8\) vertices in base \(B=5(2^k+1)-1\). Two is optimal because the two marked heights differ.
   
 The shell coefficient and walk checks are in [the runnable replay](kaprekar-base16-cycle.js). All counts are absolute, and no change to an ordinal multiplier is needed during a lifted walk.
+
+### An infinite lift of the decimal five-phase orbit
+
+The denominator in the transport rule can also be handled exactly. Set \(k\ge7\), \(x=2^k-12\), \(d=9x+1\), and \(B=11d-1=99x+10\). Then \(B-1=9(11x+1)\); the required ordinal factor for the *absolute* decimal walk is
+\[
+\frac{d(B-1)}9=d(11x+1).
+\]
+Both factors have signed-shell witnesses with nonempty transitive filler:
+
+| Factor | Core outgoing rows | Tag mask | \((D,G,L)\) | Filler order |
+|---|---|---:|---|---:|
+| \(d=9\cdot2^k-107\) | \((50,44,9,17,38,76,31)\) | 70 | \((113,576,220)\) | \(k-6\) |
+| \(11x+1=11\cdot2^k-131\) | \((6,4,8,19,39,79,31)\) | 54 | \((29,352,160)\) | \(k-5\) |
+
+Ordinally join the [eight-vertex labelled decimal walk](KAPREKAR-METAGRAPH.md) with both shells. The result has \(2k+13\) vertices and realizes the five prescribed phases at eight edits, with every height in the decimal walk multiplied by \(d(11x+1)\). The first such base is 11494. The eight-edit bound is optimal when edits are required to stay within the decimal moving block, by the original labelled lower bound; unrestricted optimality in the larger bases is not claimed.
