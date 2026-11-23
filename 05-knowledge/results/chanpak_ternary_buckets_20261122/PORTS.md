@@ -29,3 +29,36 @@ The numbers of ordinary tournaments checked at orders 2 through 9 are \(1,2,4,12
 c++ -std=c++17 -O3 -Wall -Wextra -Werror port_forks.cpp -o /tmp/cp-port-forks
 for n in 2 3 4 5 6 7 8 9; do gentourng -q "$n" | /tmp/cp-port-forks "$n"; done
 ~~~
+
+## A classification at every tournament order
+
+**PROVED with finite-exact strong cores.** For odd \(1<h\le71\), an individual tournament of height \(3h\) has reversals to all three heights \(h,3h-2,3h+2\) at some order if and only if \(h\in\{29,71\}\). The ordinary generating functions for the numbers of possible *center isomorphism classes*, by order, are respectively
+\[
+                  \frac{2z^9}{(1-z)^2},\qquad
+                  \frac{2z^{10}}{(1-z)^2}.
+\]
+The counted object is the center, with the three moves required to exist. Additional exits or a choice of labels do not weight it.
+
+By [core locality for a difference of two](../chanpak_collatz_edge_buckets_20261123/README.md#3-a-general-no-go-for-the-cheapest-ternary-lift), both side reversals take place inside a unique nonsingleton strong component. The remaining reversal **lowers** the height from \(3h\) to \(h\), so it too is internal. Indeed a cross-component reversal can never lower the height. Every old path that uses the old cross arc \(u\to v\) visits these two vertices consecutively. Swapping them gives a new path using \(v\to u\). The predecessor of \(u\), if present, belongs to its own component or an earlier one and beats \(v\). The successor of \(v\), if present, similarly loses to \(u\). This injects all lost paths into gained paths, while paths avoiding the arc survive. The three moves therefore descend simultaneously to the strong core, and any singleton padding before and after that core preserves all three.
+
+[Busch's strong-tournament bound](https://doi.org/10.37236/1141) gives \(H(S)\ge5^{(|S|-1)/3}\). When \(|S|\ge11\) this exceeds 213, since \(5^{10}=9,765,625>213^3=9,663,597\). Thus a complete census through order ten decides every source through 71 at *all* orders. The order-ten census examined all 9,733,056 ordinary classes. The table gives all of its nontrivial source heights (the other eight centers have source 1).
+
+| Source | Ordinary centers at order ten | Strong among them | Self-converse strong centers |
+|---:|---:|---:|---:|
+|29|4|0|0|
+|71|2|2|0|
+|117|2|2|0|
+|139|2|2|0|
+|279|4|0|0|
+|431|2|2|0|
+
+At each of 29 and 71 there is precisely one pair of strong centers exchanged by reversing every arc. This operation preserves path counts by reading a path backward. The two centers in each pair are nonisomorphic, and ordered singleton padding before and after a given center has series \((1-z)^{-2}\). This proves both generating functions. Among growing one-port functions the order-ten sweep yields only the order-nine function and its shift \(h=42\cdot2^s-13\).
+
+The same converse action illustrates the difference between asking for a count and asking for a fork. For heights 5, 11 and 13 there is a unique smallest ordinary class, necessarily self-converse. The smallest order at height 29 is six, with four classes, two self-converse and one pair. At height 71 the smallest order is seven, with seven classes, one self-converse and three pairs. The two center generating functions above impose the three arc reversals. The [canonical replay](center_classes.py) computes the counts for both questions.
+
+To extend the command above through order ten and summarize the strong cores, save the actual center rows using the optional flag. The 10-vertex stream can also be processed by the disjoint residue/modulus shards of gentourng.
+
+~~~sh
+for n in 2 3 4 5 6 7 8 9 10; do gentourng -q "$n" | /tmp/cp-port-forks "$n" --bases; done > /tmp/cp-centers
+python3 -B center_classes.py < /tmp/cp-centers
+~~~
