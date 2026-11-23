@@ -1,0 +1,12 @@
+1 successful sets 0 first []
+2 successful sets 74 first [(2, 34), (3, 33), (5, 31)]
+max distinct single-probe outputs 37
+successful physical pairs [(2, 34), (10, 42), (23, 55)]
+unoriented 2 34 64 collisions []
+unoriented 10 42 62 collisions [((101, 123), [(8, 16, 123, 101), (10, 26, 101, 123)]), ((101, 111), [(10, 9, 111, 101), (10, 13, 101, 111)])]
+unoriented 23 55 64 collisions []
+masks (2, 34) readout range 15 121 distinct signed deltas 28 gap overlap [0, 6, 12, 14, 18, 20, 24, 26, 30, 32, 38, 44]
+masks (3, 33) readout range 17 133 distinct signed deltas 32 gap overlap [-24, -18, -12, -6, 0, 6, 8, 12, 18, 26, 32, 34, 36, 42, 44, 58, 60]
+masks (5, 31) readout range 9 131 distinct signed deltas 30 gap overlap [-36, -28, -26, -24, -18, -16, -12, -10, -2, 2, 8, 24]
+chosen masks (2, 34) example A8,0 29 15
+two-apex decoder and all 64 individual probes PASS
