@@ -1,0 +1,6 @@
+L=8: 5 anchors, coverage=0.525834476%, largest gap fraction=33.950617284%
+L=16: 18 anchors, coverage=0.545860392%, largest gap fraction=10.122384235%
+L=32: 43 anchors, coverage=0.545862581%, largest gap fraction=6.841563116%
+L=64: 94 anchors, coverage=0.545862581%, largest gap fraction=2.012581076%
+L=128: 195 anchors, coverage=0.545862581%, largest gap fraction=1.700674242%
+L=256: 398 anchors, coverage=0.545862581%, largest gap fraction=0.946036167%
