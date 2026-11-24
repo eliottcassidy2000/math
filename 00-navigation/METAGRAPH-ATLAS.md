@@ -102,3 +102,37 @@ tie-splits from transitive; x = (n³−n)/3 − 8k.)*
   submission-ready. Wild-pair counts by n: 0 (n<=8), 8 (n=9).
 - **Open:** n=10 wild hunt (is every wild pair chiral? 98M extensions, overnight-feasible or
   chirality-targeted); per-level spectral-tie distribution vs the H-gradient.
+
+## Chan–Pak constructions and exact inverses
+
+- **PROVED + FINITE-EXACT:** [Lonely Runner filler circles](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/FILLER-CIRCLES.md): a literal 61-tick model has exact distance 5/61, and a primitive seven-axis subbank gives a certified 4.338 ppm relative window at fixed Jacobian. [Joint CRT and prime grid](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/FILLER-CRT.md): small mod-77 wheel and six exact prime starts on a 37-vertex layout. The full 14-axis bank forces common profile content and cannot itself give prime starts.
+
+- **PROVED + FINITE-EXACT:** [Third-slot Jacobian fibers](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/THIRD-SLOT-JACOBIAN.md): first `Q3` height read at eight fixed sites; two literal prime sevenfold squares share the same Jacobian, and a verified 14-pair filler bank gives `(t+1)^14` distinct exact starts at fixed curvature. No third-slot contribution to mixed gain survives the census through eleven fixed sites; the primitive frames have a structural same-boundary explanation.
+
+- **PROVED + FINITE-EXACT:** [Minimal scalable frame census](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/TEMPLATE-CENSUS.md): at six fixed sites only A/B are variable-width prime-capable; the complete seven-site scan adds reads `11Q+9D`, `29Q+15D`, `48Q-D`, with pure interaction `4D`, `3D`, `64Q` and examples outside both earlier frames. [Jacobian leading-term vetoes](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/LEADING-TERM-VETO.md): bundled charts impose a rank-one partial degree matrix and common binomial leading edge in the exceptional direction.
+
+- **PROVED + FINITE-EXACT:** [Glued filler capacity](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/MODULE-CAPACITY.md): arbitrary ordinal joins of one-apex fillers plus any fixed bank cannot cover primes in the scalable frames; without extra bank their first scalar and prime escapes are 689 and 1747. [Four bundled Jacobian ports](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/BUNDLED-JACOBIAN.md): constant determinant suffices whenever the controlled edge graphs have matching number at most four, via partial degree eight and a shear for the residual 6/8 pair.
+
+- **PROVED + FINITE-EXACT:** [Unrestricted Jacobian squares](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/UNRESTRICTED-JACOBIAN.md) and [scalable two-apex modules](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/TWO-APEX-SCALABLE.md): every incident pair has mixed height at least twice the outside height in the coherent gauge, the disjoint 31→217 square gives an integral Keller map, and 103→721 has a monotone strong disjoint square. Two arbitrary-module constructions have lower heights `6Q+5D`, `15Q+D` and upper exactly sevenfold; the first jointly controls height and curvature residues and reaches every fixed-modulus scale window of width `O(X^theta)`.
+
+- **PROVED + FINITE-EXACT:** [Complete exact one-apex inverse](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/ONE-APEX-INVERSE.md): all two-contact sevenfold patterns decided with `O(log p)` Boolean candidates; this chart reaches only `O(sqrt(X) log X)` counts up to X. Opposite-side 97→679 and mixed 103→721 first occur at orders 11 and 12; at 103, 227 and 1399 no monotone marked route exists within this chart, at any order.
+
+- **PROVED + FINITE-EXACT:** [Two-edit follow-up](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/README.md#two-edit-follow-up): prime-to-own-sevenfold compression now has cap `B(7p)+2` (at most `+1` on the split multicore branch); a literal 43→13→301 square realizes the two-pad support surplus. The physical wheel accepts any unit cofactor phase and, after one common gcd, its eight distinct form readings are pairwise coprime at sufficient cutoff. Transitive-spine one-apex contact flips have no one-edit sevenfold move and first have a two-edit eligible move 37→259 at host order ten; the same-side exterior chart has an exact but sparse inverse.
+
+- [Lonely Runner wheel and exact two-edit prime ports](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/README.md): distance exactly two to own (7p) for every eligible prime through 71, a labelled unit square with nonisomorphic equal-height middles, and simultaneous small-prime avoidance on the literal fork.
+- [Planar prime ports and factor-seven seams](../05-knowledge/results/chanpak_planar_prime_ports_20261123/README.md): an exact inverse chart can miss every multiple of seven; smallest literal prime-to-own-sevenfold arc has order nine, and the first eleven eligible primes admit no such edge at any order.
+- [Square-sum lifts, signed Collatz and tournament arcs](../05-knowledge/results/square36_signed_collatz_20261123/README.md). Of 118 square-sum pairs among 72 heights, 101 admit one flip. Five labels of an exponent-61 six-cycle are attained.
+- [Signed chart and 19th-vertex decoder](../05-knowledge/results/chanpak_signed_square36_20261123/README.md) · [Kaprekar host at base 765764](../05-knowledge/results/chanpak_kaprekar_decimal_20261123/EVEN-BASES-THROUGH-16.md) · [Edit-radius bounds](../05-knowledge/results/chanpak_edit_radius_20261123/EDIT-RADIUS.md).
+- [Five Heegner midpoint flips](../05-knowledge/results/chanpak_heegner_selector_20261122/README.md) · [Balanced windows](../05-knowledge/results/chanpak_heegner_absolute_targets_20261123/README.md).
+
+[Order-118 E61 bracket, optimal 7:10 direction and prior constructions](../05-knowledge/results/chanpak_odd_square_spines_20261122/README.md). Exact E61 crossing and Chan–Pak OPEN.
+
+- [Arc-flip geometry at 7 and 21](../05-knowledge/results/chanpak_gap_cubical_geometry_20261122/README.md) proves the core collapse for cutoffs 15–23.
+- [2–3–11 brackets and Collatz clocks](../05-knowledge/results/prime_brackets_collatz_2311_20261122/README.md) excludes E61 traces with at most two odd steps at all depths.
+- [Two-clock Farey inverse](../05-knowledge/results/chanpak_farey_two_three_clocks_20261122/README.md) covers arbitrary-flank bands and incompatible binary and ternary lifts.
+- [Complementary placement](../05-knowledge/results/chanpak_farey_complementary_exact_20261122/README.md) excludes the full adaptive cube-root window on spines 4 and 8.
+- [Clocks](../05-knowledge/results/odd_tables_signed_carries_20261111/SYNTHESIS.md); [more](S111-plus.md).
+- [Exact U5-free capacity](../05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md).
+- [THM-5313](../05-knowledge/results/chanpak_switching_divided_powers_20261122/README.md) · [Exponent-31 flip](../05-knowledge/results/chanpak_e31_physical_20261122/README.md) · [E61 inverse and exponents 3–23](../05-knowledge/results/chanpak_e61_fibonacci_target_20261122/README.md).
+- THM-1805: triangle Vandermonde. THM-1862/1936: join products for `H`, signed Rédei; additive `c3`.
+- THM-2183/2195, 3121–3248: ordinal metrics and resolvents via THM-5313 above. Q4 radius/non-P OPEN.
