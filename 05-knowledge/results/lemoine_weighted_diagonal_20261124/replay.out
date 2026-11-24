@@ -1,0 +1,92 @@
+no odd off-diagonal 7
+no odd-prime bridge 7
+q-record 7 2 witness 3
+p-record 7 3 witness 2
+both-record 7 2
+pair 7 3 2
+no odd off-diagonal 9
+p-record 11 5 witness 3
+q-record 13 3 witness 7
+both-record 13 3
+no odd off-diagonal 15
+p-record 21 7 witness 7
+pair 21 17 2
+pair 21 11 5
+pair 21 7 7
+p-record 23 13 witness 5
+q-record 31 7 witness 17
+both-record 31 5
+p-record 55 17 witness 19
+both-record 55 7
+p-record 83 37 witness 23
+q-record 91 19 witness 53
+p-record 167 61 witness 53
+both-record 175 13
+both-record 417 17
+both-record 421 19
+q-record 451 31 witness 389
+both-record 511 29
+q-record 539 41 witness 457
+p-record 611 73 witness 269
+p-record 887 109 witness 389
+both-record 1081 31
+q-record 1397 47 witness 1303
+q-record 1417 67 witness 1283
+both-record 1417 67
+p-record 1487 181 witness 653
+p-record 1571 277 witness 647
+q-record 1777 79 witness 1619
+q-record 3139 139 witness 2861
+both-record 4441 79
+both-record 9421 97
+p-record 10771 317 witness 5227
+both-record 11567 107
+p-record 12227 349 witness 5939
+p-record 13523 397 witness 6563
+q-record 14419 181 witness 14057
+p-record 16321 419 witness 7951
+both-record 28279 113
+q-record 39751 229 witness 39293
+p-record 44881 503 witness 22189
+p-record 54863 577 witness 27143
+both-record 54949 131
+p-record 57887 601 witness 28643
+q-record 77507 233 witness 77041
+p-record 93167 709 witness 46229
+q-record 96157 277 witness 95603
+both-record 97939 163
+both-record 134987 197
+q-record 158173 307 witness 157559
+p-record 189947 829 witness 94559
+q-record 214979 383 witness 214213
+q-record 263113 421 witness 262271
+both-record 263113 239
+p-record 404939 877 witness 202031
+p-record 442307 1129 witness 220589
+q-record 496723 463 witness 495797
+both-record 783191 251
+both-record 843877 263
+q-record 1046179 619 witness 1044941
+both-record 1414913 271
+both-record 1637927 353
+p-record 1746551 1237 witness 872657
+both-record 1990231 409
+p-record 3383593 1367 witness 1691113
+q-record 3415297 643 witness 3414011
+p-record 3544391 1429 witness 1771481
+q-record 3546371 659 witness 3545053
+both-record 3705839 433
+q-record 4306549 691 witness 4305167
+p-record 5056787 1669 witness 2527559
+p-record 6811307 1993 witness 3404657
+both-record 8778271 449
+q-record 9456677 743 witness 9455191
+both-record 13452301 479
+q-record 18338311 967 witness 18336377
+both-record 23361913 547
+p-record 25619213 2467 witness 12808373
+both-record 28760059 613
+q-record 45521269 1231 witness 45518807
+both-record 74475571 829
+p-record 87170987 2833 witness 43584077
+through 100000000; missing=0; no odd bridge=1; no odd off-diagonal=3
