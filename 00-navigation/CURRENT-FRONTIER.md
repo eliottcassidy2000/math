@@ -17,6 +17,8 @@
 
 [Rooted tournament tiling transfer](../05-knowledge/results/chanpak_rooted_tiling_transfer_20261124/README.md): local isoclass classifier with transport, blue/black outer shells, and the [closed-root obstruction](../05-knowledge/results/chanpak_rooted_tiling_transfer_20261124/CLOSED-ROOT-OBSTRUCTION.md).
 
+[Cycle-spectrum follow-up](../session212/cycle-spectrum/PORTS-AND-GOLAY.md): unit cycle edits with exact path leakage, a sharp two-apex extremum, and a 24-contact Golay restriction.
+
 ### Headline
 **Repository proof OPEN.** THM-2923 closes `3,432` seven-window roots; <=6 speeds remain.
 THM-2051/2052: sparse code rank `>=11`; failed gates are not danger.

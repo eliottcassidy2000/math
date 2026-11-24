@@ -202,8 +202,7 @@ preserves any marked flips of old arcs. Conversely cycles already
 attain 7 and 21, with outgoing masks respectively
 \((18,36,9,19,38,77,31)\) and \((114,68,9,19,38,78,156,63)\),
 checked by the replay. Thus those path holes do not persist under
-changing the rooted observable. Conditional on Chan–Pak, all
-positive odd cycle counts occur by the wrapper and those two seeds.
+changing the rooted observable. The wrapper explains how path counts lift, but the [independent binary construction](../../../session212/cycle-spectrum/PROOF.md) already gives every nonnegative cycle count unconditionally.
 
 ## The visible 2 and 4 at 11
 

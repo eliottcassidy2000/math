@@ -3,6 +3,8 @@
 **Status: PROVED elementary constructions; FINITE-EXACT through order nine;
 INHERITED FINITE-EXACT at order ten. No literature-priority claim.**
 
+Companions: [exact cycle/path seams and the 24-contact Golay family](PORTS-AND-GOLAY.md), and [the sharp feedback-two maximum](FEEDBACK-TWO-MAXIMUM.md).
+
 ## 1. The question and its boundaries
 
 Write H(T) for the number of directed Hamiltonian paths. Write C(T) for the
