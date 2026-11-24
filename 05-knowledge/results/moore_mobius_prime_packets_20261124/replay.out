@@ -1,0 +1,5 @@
+degree 2 triple Counter() pentagon Counter({(): 1}) root-branch overlap checked
+degree 3 triple Counter({(2,): 10}) pentagon Counter({(1,): 12}) root-branch overlap checked
+degree 7 triple Counter({(2, 2, 2): 1750}) pentagon Counter({(1, 1, 1, 1, 1): 1260}) root-branch overlap checked
+primitive packets 55 55
+partition deck size 75547 minimum 28351092476867700887730107366063041 next 96029010768889763987933384221179537 top 17 bands Counter({(28, ()): 1, (25, (3, 3)): 1, (26, (4,)): 1, (25, (6,)): 1})
