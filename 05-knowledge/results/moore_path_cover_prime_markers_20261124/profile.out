@@ -1,0 +1,49 @@
+9 cell A profile (0, 2, 0, 6, 0, 1) minpower 1 fixed divisors raw/residual 3 1
+1 9  residual 9 3 3
+2 84  residual 42 2 3 7
+3 411  residual 137 137
+4 1416  residual 354 2 3 59
+5 3885  residual 777 3 7 37
+6 9084  residual 1514 2 757
+9 cell B profile (0, 2, 0, 6, 0, 1) minpower 1 fixed divisors raw/residual 3 1
+1 9  residual 9 3 3
+2 84  residual 42 2 3 7
+3 411  residual 137 137
+4 1416  residual 354 2 3 59
+5 3885  residual 777 3 7 37
+6 9084  residual 1514 2 757
+C5 cyclic profile (0, 4, 0, 10, 0, 1) minpower 1 fixed divisors raw/residual 15 1
+1 15  residual 15 3 5
+2 120  residual 60 2 2 3 5
+3 525  residual 175 5 5 7
+4 1680  residual 420 2 2 3 5 7
+5 4395  residual 879 3 293
+6 9960  residual 1660 2 2 5 83
+C5 paired profile (0, 0, 2200, 0, 3320, 0, 880, 0, 60, 0, 1) minpower 2 fixed divisors raw/residual 1 1
+1 6461  residual 6461 7 13 71
+2 134624  residual 33656 2 2 2 7 601
+3 1382949  residual 153661 37 4153
+4 9470336  residual 591896 2 2 2 241 307
+5 49083125  residual 1963325 5 5 7 13 863
+6 206682336  residual 5741176 2 2 2 7 157 653
+Petersen sparse profile (0, 0, 1918, 0, 2590, 0, 656, 0, 48, 0, 1) minpower 2 fixed divisors raw/residual 1 1
+1 5213  residual 5213 13 401
+2 104408  residual 26102 2 31 421
+3 1079253  residual 119917 7 37 463
+4 7575008  residual 473438 2 7 7 4831
+5 40432325  residual 1617293 61 26513
+6 175119768  residual 4864438 2 2432219
+Petersen compact profile (0, 0, 3176, 0, 4080, 0, 948, 0, 60, 0, 1) minpower 2 fixed divisors raw/residual 15 1
+1 8265  residual 8265 3 5 19 29
+2 155040  residual 38760 2 2 2 3 5 17 19
+3 1502865  residual 166985 5 7 13 367
+4 9959040  residual 622440 2 2 2 3 3 5 7 13 19
+5 50645025  residual 2025801 3 3 225089
+6 210875040  residual 5857640 2 2 2 5 23 6367
+Petersen hidden profile (0, 0, 219048652, 0, 422624580, 0, 168676672, 0, 22553312, 0, 1224624, 0, 29016, 0, 292, 0, 1) minpower 2 fixed divisors raw/residual 3 1
+1 834157149  residual 834157149 3 7 4003 9923
+2 25584856944  residual 6396214236 2 2 3 533017853
+3 396314391069  residual 44034932341 115811 380231
+4 4134247329984  residual 258390458124 2 2 3 19 1133291483
+5 32693094656925  residual 1307723786277 3 31 61 1009 228461
+6 209219582106864  residual 5811655058524 2 2 7 7 29651301319
