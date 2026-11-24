@@ -1,5 +1,7 @@
 # Moore graphs: exact heights, marked merged lines, and a degree-57 fork
 
+> **Correction:** [The involution search is closed](INVOLUTION-CORRECTION.md). Ishida's theorem rules out both provisional branches below. The correction gives odd-order filters; the count and metagraph results are unchanged.
+
 2026-11-24. Extends the [native spine ledger](../moore57_graph_spine_tiles_20261124/),
 [earlier exact counts](../moore_chanpak_counts_20261124/),
 [compact chart](../moore57_compact_blue_routes_20261124/), and
@@ -185,7 +187,7 @@ odd targets. The actual degree-7 quotient produces a 323-site
 pair with huge exact totals in word_code.out; degree 57 would
 give order 765887, conditional on a valid payload.
 
-## 4. A degree-57 encoding constraint before doing the tournament count
+## 4. Superseded involution search: the provisional constraints
 
 Let g be a nontrivial involution of a hypothetical (3250,57,0,1)
 Moore graph. Write f for the number of fixed vertices, s for the
@@ -258,9 +260,8 @@ the direct image π_ij(x) and the through-k images
 These conditions ensure the Moore property on top of the
 root and branch stars. The replay recovers the five matching
 rows on six sites in the known Hoffman–Singleton star model.
-The next constructive test is to fit the simultaneous row
-conditions to a noncommuting K56 factorization, or treat the
-alternative fixed Hoffman–Singleton directly. No degree-57
+Neither of these involution-based searches can succeed. See the
+[correction and odd-order alternatives](INVOLUTION-CORRECTION.md). No degree-57
 graph or native full Hamilton count is being asserted.
 
 ## Reproduce
