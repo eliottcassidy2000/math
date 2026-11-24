@@ -105,6 +105,8 @@ tie-splits from transitive; x = (n³−n)/3 − 8k.)*
 
 ## Chan–Pak constructions and exact inverses
 
+- **PROVED + FINITE-EXACT:** [H=23 two-chain Golay charts](../05-knowledge/results/chanpak_h23_golay_chains_20261124/README.md): exact unequal-width inverse, a rank drop at 7, a dodecad chart with 13 exact heights and a two-apex chart giving 4096 distinct heights at each positive tail. The exact square-preserving one-apex gate has four words. The sporadic coordinate action is distinct from an individual tournament automorphism.
+
 - **PROVED + FINITE-EXACT:** [Sharp six-block reduction and strong rigid CRT](../05-knowledge/results/chanpak_tiling_viewpoint_20261123/STRONG-CRT.md); [25-seed binary contact chart](../05-knowledge/results/chanpak_tiling_viewpoint_20261123/precedence-binary-chart.md); [24/25 square-sum decoder](../05-knowledge/results/chanpak_tiling_viewpoint_20261123/SQUARE-WINDOW-CRT.md). The same three primes decode the square-sum graph through order 48 but cannot avoid a false edge at order 49. The strong tournament charts are residue selectors, not complete exact-height inverses.
 
 - **PROVED + FINITE-EXACT:** [Lonely Runner filler circles](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/FILLER-CIRCLES.md): a literal 61-tick model has exact distance 5/61, and a primitive seven-axis subbank gives a certified 4.338 ppm relative window at fixed Jacobian. [Joint CRT and prime grid](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/FILLER-CRT.md): small mod-77 wheel and six exact prime starts on a 37-vertex layout. The full 14-axis bank forces common profile content and cannot itself give prime starts.

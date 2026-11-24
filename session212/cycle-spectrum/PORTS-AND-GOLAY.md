@@ -131,6 +131,8 @@ a tournament exclusion theorem, creates these holes. The Mathieu
 coordinate symmetry preserves the code but does not preserve the
 unequal weights or act by tournament isomorphisms on all selectors.
 
+The [two-chain Golay construction](../../05-knowledge/results/chanpak_h23_golay_chains_20261124/DODECAD-CHAIN.md) uses the same verified generator on a different physical contact layer. The dodecad split gives exactly 13 path heights with a Mathieu stabilizer; the [apex split](../../05-knowledge/results/chanpak_h23_golay_chains_20261124/APEX-CONTACTS.md) gives 4096 distinct path heights.
+
 ## Where the six labels and the Monster comparison fit
 
 The inherited [Leech/MRB source audit](../../05-knowledge/results/chanpak_mrb_leech_clock_20261114/MRB_LEECH_SOURCES.md)
