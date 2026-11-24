@@ -1,0 +1,13 @@
+# Moore graphs and tournaments: graph symmetry versus seam palettes
+
+The full graph-symmetry criterion and the two-marker faithful construction are given in [NATIVE-GRAM.md](NATIVE-GRAM.md).
+
+No seam-compatible tournament palettes exist on the 56 leaves per fiber of a rooted degree-57 Moore graph. For every source/target fiber, the direct matching and 55 two-step matchings form a sharply transitive family of 56 bijections. Thus the holonomy of the seams is transitive on the 56 leaf roles. If each seam lifts to a tournament isomorphism that induces the matching on the roles, the holonomy on the roles is a quotient of a subgroup of a tournament automorphism group, hence odd. This contradicts transitivity on even order. Padding tournament palettes, or using invariant blocks for the roles, does not avoid this.
+
+For quantitative versions let e_ij count disagreeing arcs across the i,j seam. Each palette has a signed score sum zero, with all 56 entries odd. Along a sharp family between i,j, the sum of the target's transported score vectors is zero. Therefore the score L1 discrepancies across those 56 paths total at least 56*56. One disagreeing arc can contribute at most 4, and the triangle inequality along each two-step seam gives
+  e_ij + sum_{k!=i,j}(e_ik+e_kj) >= 784.
+In particular if a single palette is used in anchor gauge, e_0i=0 and summing this for pairs (0,i) gives total disagreements at least 21952.
+
+For arbitrary palettes, the child graph of N=57*56=3192 vertices is regular of degree 56. On fiber constants its spectrum is 56,-1; on fiberwise augmentation its spectrum is contained in 7,-8 (the sharp-family block identity). Thus every cut of size a has boundary at least 49*a(1-a/N). By coarea the sum of signed score L1 differences along child edges is at least (49/N) times the same sum along all unordered vertex pairs. Because the signed-score vector is mean zero and all entries are odd, Jensen gives an all-pairs sum at least N^2/2. Dividing by four as above, the number of seam arc disagreements is at least 49N/8=19551.
+
+A distinct obstruction applies to linear algebra constructions. Let A be the Moore(57,2) adjacency. Its eigenspace E_7 has odd dimension 1729. A skew integer matrix S congruent to A mod 2 (in particular, an orientation of the Moore edges) cannot commute with A: its restriction to E_7 would be singular, giving a primitive integer joint-kernel vector v with Sv=0 and Av=7v, impossible modulo 2. A complete tournament skew matrix at even order is nonsingular because it reduces to J-I mod 2; commuting with A is likewise impossible because the principal eigenspace is a line.
