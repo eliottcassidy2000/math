@@ -1,0 +1,15 @@
+order 5, degree 2
+ker A dim=1 weights: 5:1
+ker (A+I) dim=0 weights:
+im A dim=4 weights: 2:10 4:5
+order 10, degree 3
+weight-4 transvections: min outside 0, degree sum increase 0, squared degree excess 0, neutral count 20
+ker A dim=4 weights: 4:5 6:10
+ker (A+I) dim=5 weights: 4:15 6:15 10:1
+im A dim=6 weights: 3:10 4:15 5:12 6:15 7:10 10:1
+order 50, degree 7
+weight-4 transvections: min outside 16, degree sum increase 64, squared degree excess 1216, neutral count 0
+ker A dim=28 weights: 8:750 10:7770 12:52675 14:449550 16:2311575 18:8624700 20:22661835 22:42102850 24:57811425 26:58254700 28:42267025 30:22408050 32:8633100 34:2316300 36:470625 38:61950 40:525 42:50
+ker (A+I) dim=21 weights: 12:1050 14:925 16:21875 18:68250 20:169925 22:333300 24:453250 26:453250 28:333300 30:169925 32:68250 34:21875 36:925 38:1050 50:1
+im A dim=22 weights: 7:50 12:1050 14:925 15:12700 16:21875 17:34300 18:68250 19:107800 20:169925 21:258000 22:333300 23:404250 24:453250 25:462952 26:453250 27:404250 28:333300 29:258000 30:169925 31:107800 32:68250 33:34300 34:21875 35:12700 36:925 38:1050 43:50 50:1
+star also has squared-degree sum 90, but nullity 8 instead of 4
