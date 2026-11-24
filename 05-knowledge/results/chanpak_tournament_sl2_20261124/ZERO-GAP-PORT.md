@@ -36,3 +36,5 @@ At a positive gap, of weight \(b=2^g\), it is
 Start with \((1,0,0,0)\) and finish with \(A+2E+P\). The zero update on the first three coordinates has determinant one; a positive gap resets to rank two. The replay compares the formulas with ordinary Hamilton-path subset DP over gap words of lengths up to six, spacings in \(\{0,1,2\}\), and tournament order at most ten.
 
 Replay: run zero-gap-port-check.py with Python 3.
+
+[Modular composition restores both shears and every admissible ordinary height residue](STRIP-CRT.md), despite the even determinant barrier over the integers.
