@@ -4,6 +4,8 @@
 
 ## Two-edit follow-up
 
+- [Collatz-27 itinerary and dyadic/ternary separation](FILLER-COLLATZ-27.md): full parity lifts, a compact literal sevenfold witness, and a dimension drop from 27 to 19 for prime candidates.
+
 - [Joint filler selector and sharp capacity](FILLER-JOINT.md): physical same-phase straddling under 0.164 ppm, plus sharp dyadic sparsity for the full fixed bank.
 
 - [Unrestricted flip squares and planar Jacobians](UNRESTRICTED-JACOBIAN.md): incident-port nondegeneracy, real-square fold classification, and certified integral and disjoint-port examples.
