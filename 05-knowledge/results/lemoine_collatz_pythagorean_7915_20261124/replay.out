@@ -1,0 +1,21 @@
+primitive Euclid pairs: 26323 | intercept fibers independently checked: 1..10000
+root children: [(5, 12, 13), (21, 20, 29), (15, 8, 17)]
+1 [1] period 1 basin 1
+5 [5, 7] period 2 basin 5
+17 [17, 25, 37, 55, 41, 61, 91] period 7 basin 17
+7 [7, 5] period 2 basin 5
+9 [9, 13, 19, 7, 5] period 2 basin 5
+15 [15, 11, 1] period 1 basin 1
+13 [13, 19, 7, 5] period 2 basin 5
+29 [29, 43, 1] period 1 basin 1
+61 [61, 91, 17, 25, 37, 55, 41] period 7 basin 17
+63 [63, 47, 35, 13, 19, 7, 5] period 2 basin 5
+65 [65, 97, 145, 217, 325, 487, 365, 547, 205, 307, 115, 43, 1] period 1 basin 1
+cycle clock 1 [1] (1, 1, 2)
+cycle clock 5 [1, 2] (2, 3, 5)
+cycle clock 17 [1, 1, 1, 2, 1, 1, 4] (7, 11, 18)
+prefix laws checked: 1..250
+Lemoine 7 [(3, 2)]
+Lemoine 9 [(5, 2), (3, 3)]
+Lemoine 15 [(11, 2), (5, 5)]
+Lemoine 21 [(17, 2), (11, 5), (7, 7)]
