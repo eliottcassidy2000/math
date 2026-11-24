@@ -1,0 +1,14 @@
+5 graph-spine marks/blue 1 1 source/mate/intersection 1 1 0 sc 1 1 edges/loops/+2 1 0 1
+source counts 1 [9,9] mate 1 [11,11]
+line 507:9 -- 814:11
+5 complement-spine marks/blue 1 1 source/mate/intersection 1 1 0 sc 1 1 edges/loops/+2 1 0 1
+source counts 1 [11,11] mate 1 [9,9]
+line 507:9 -- 814:11
+10 graph-spine marks/blue 2 0 source/mate/intersection 1 1 0 sc 0 0 edges/loops/+2 1 0 0
+source counts 1 [5213,5213] mate 1 [6961,6961]
+line 12558450393053:5213 -- 16346502780398:6961
+10 complement-spine marks/blue 796 0 source/mate/intersection 366 398 0 sc 1 1 edges/loops/+2 398 0 1
+source counts 333 [4927,13837] mate 362 [5571,15571]
+seam 21328621272061:5625 -- 33629440175567:5627 native H 5625 native mask 1600414573702 order 0 2 4 1 9 8 7 3 5 6 physical one-arc realizations 0
+self-converse node 9500361992478 H 15549 tiles 15549 blue 181
+self-converse node 34836419739501 H 11793 tiles 11793 blue 165
