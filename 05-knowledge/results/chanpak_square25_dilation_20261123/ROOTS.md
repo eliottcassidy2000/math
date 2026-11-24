@@ -21,11 +21,28 @@ Here are all possible residues in the indicated ranges. Every entry in the last 
 
 The two exceptions to the width ranges are \(7783+2\) and \(9327+2\), strictly between \(88^2,89^2\) and \(96^2,97^2\), respectively. For a reproducible finite proof of each infinite row, iterate the joint state \((2^w,3^w)\bmod m\) from its first listed width until it repeats; the form above depends only on this state. [Exact obstruction and inverse replay](roots.py)
 
+There is also a sharp **single modulus** for this entire family. The least positive integer \(m\ge2\) for which every one of the twelve infinite sequences avoids squares modulo \(m\) is
+\[
+             m=1368=8\cdot9\cdot19 .
+\]
+For each \(2\le m\le1368\), iterate the same joint power state from width one. At each state test the twelve linear forms against the set of square residues. Every smaller modulus accepts a square at some width, while 1368 rejects all twelve at every state through the first repetition. This minimum is a finite calculation with a proof of exhaustiveness over widths. [Modulus replay](roots.py)
+
 The width-one residue 11 gives the especially simple family
 \[
  H_w=1026\cdot2^w-193.
 \]
 At every \(w\equiv3\pmod{10}\), its shifted label is 1 modulo 8, 1 modulo 3, and 9 modulo 11. Thus it is a square modulo *every* power of 2, 3 and 11 simultaneously, by unit square lifting and CRT. But \(19\mid1026\) gives \(H_w+2\equiv-1\pmod{19}\), a nonsquare. The first case is the actual height 8015, with shifted label 8017. Compare the [first false local square at sum 97](../chanpak_tiling_viewpoint_20261123/SQUARE-WINDOW-CRT.md). Here the obstruction persists on an entire sequence of strongly connected, rigid tournaments inside the sharp residue selector. The missing prime 19 also occupies one of the five prime positions in the interval \((9,25)\); the specific reason it detects this family is its divisibility of the slope 1026.
+
+## Both translated hole positions and the square itself
+
+**PROVED.** Across all twelve templates and all positive widths, there are no heights \(s^2-4\) either. There is exactly one square height, \(5625=75^2\), at width one on the template of residue 9. In particular the twelve-template rule meets the three square positions \(s^2-4,s^2-2,s^2\) precisely once. The two-port construction meets all three at every dyadic root \(s=2^m+1\) from \(m=3\) onward.
+
+The following moduli certify the two further assertions. In the indicated order of the templates, iterate \((2^w,3^w)\) from width five until repetition, and check that \(H_w+d\) never meets a square residue modulo the corresponding entry. Direct evaluation at widths one through four supplies just the single collision above.
+
+| Shift \(d\) | Moduli for width-one residues \(1,3,5,\ldots,23\), in order |
+|---|---|
+| 0 | 65, 4, 3, 4, 8, 3, 7, 4, 3, 4, 315, 4 |
+| 4 | 8, 4, 8, 4, 1353, 4, 255, 4, 41, 3, 8, 4 |
 
 ## Exact inverse and its effective stopping point
 

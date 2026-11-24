@@ -159,6 +159,11 @@ def main():
     for n in range(11, 25):
         for r in range(1, 24, 2):
             assert choose(n, r)[-1] % 24 == r
+    even = {c[0] % 24: height(c, 2) % 24 for *_, c in RAILS}
+    odd = {c[0] % 24: height(c, 3) % 24 for *_, c in RAILS}
+    assert all(odd[odd[r]] == r and odd[even[odd[even[r]]]] == r for r in even)
+    for orbit in ((1, 9, 13, 21), (3, 11, 23, 15, 19, 7), (5, 17)):
+        assert all(even[r] == orbit[(i+1) % len(orbit)] for i,r in enumerate(orbit))
     print("Twelve fixed marked tournaments cover every odd residue at each order ≥ 11.")
 
 

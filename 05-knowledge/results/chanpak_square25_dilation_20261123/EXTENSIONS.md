@@ -70,3 +70,18 @@ Adjoin vertex 10 with the outgoing mask shown, then mark the indicated old verte
 **Why the graph properties persist.** For the eleven-vertex parent, let \(D(T)\) order a pair by which direction of precedence occurs in an odd number of Hamilton paths. The replay checks that this is a total order, the parent is strong, and all exterior in-neighbors of its mark precede all exterior out-neighbors in that order. The substitution law keeps the exterior order and makes each block vertex see the exterior exactly as the original mark did. A two-vertex block has one precedence arc in one of the two directions. A larger transitive block keeps its internal order. Thus the module inserts at the indicated cut for every width. Its precedence is transitive, so every automorphism fixes each vertex. Strong connectivity lifts by following paths in the original quotient; within a block one can return via an exterior directed cycle through the mark. [Substitution law](STRONG-SELECTOR.md#what-survives-substitution)
 
 **FINITE-EXACT certificates.** The replay verifies the twelve parents and every run coefficient through \(k=11\). It computes precedence from parities of path prefixes and suffixes, and counts run words by their last vertex, exterior subset and number of visits. Each of the three selector columns is a permutation of the odd residues. Hence the finite table, visit formula, and order-cut argument prove the all-order assertion. Run `python3 05-knowledge/results/chanpak_square25_dilation_20261123/extensions.py`. [Replay and integer selector](extensions.py)
+
+## A dihedral group of order 24 on the twelve residue addresses
+
+**PROVED for the displayed bank.** Name each marked template by its width-one residue. The two other width choices give permutations of these names: let \(E\) give the residue at an even width and \(O\) the residue at an odd width at least three. The actual contact table gives
+\[
+\begin{aligned}
+E&=(1\ 9\ 13\ 21)(3\ 11\ 23\ 15\ 19\ 7)(5\ 17),\\
+O&=(3\ 15)(5\ 17)(7\ 19)(9\ 21)(11\ 23).
+\end{aligned}
+\]
+Thus \(E\) has order 12, \(O^2=1\), and \(O E O=E^{-1}\). Since \(E\ne E^{-1}\), the involution lies outside its rotation subgroup. The generated group is dihedral of **order 24**, acting faithfully with orbit sizes 4, 6 and 2. In the split/inert terminology for odd integers, the 6-cycle is the entire inert residue class \(3\bmod4\); the split class \(1\bmod4\) divides into the 4-cycle and the 2-cycle.
+
+The reflection has two fixed vertices on the split four-cycle and no fixed vertex on the inert six-cycle. With the displayed cyclic labellings it acts by \(j\mapsto-j\bmod4\) and \(j\mapsto3-j\bmod6\), respectively. Changing either starting vertex changes the reflection constant by an even number. Thus the difference between a vertex-axis and an edge-axis reflection survives any cyclic choice of viewpoint.
+
+There is an arithmetic reason for some of this symmetry. At width two the difference from width one is \(2c_2\), a multiple of four on these marks. At width three it is \(6(c_2+c_3)\), a multiple of twelve. Hence the odd phase must permute each antipodal pair \(\{r,r+12\}\) internally and so is automatically an involution in any complete bank with even \(c_2,c_3\). The stronger reflection identity and the three particular rotation lengths come from these chosen contacts. Composing the permutations means using a resulting residue to choose the next template by its width-one name. It does not posit an order-24 automorphism group of any of the underlying rigid tournaments.
