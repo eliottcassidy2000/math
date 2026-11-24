@@ -42,3 +42,12 @@ An exact finite extension checks all the alternating whole-cohort spines, not al
 Indeed y'−x'−i'j'=s(y−x−ij), and the intra-cohort steps are preserved. Start in U (reversal handles the other start). Normalize the first two U cohort indices to 0,1, the first W index to 0, and the second W index to either 1 or 2 by the sign freedom; normalize the entry residue to zero. Then just 72 cohort-order pairs and 1024 direction choices remain.
 
 In all 73,728 representatives, the sparse tournament has no anti-isomorphism. The short [exact checker](hs-block-full.cpp) uses singleton score classes: an anti-isomorphism must send a unique score z to the unique score 49−z, yet some edge on forced vertices does not reverse. Thus there is no incident blue line even at a tournament reroot of one of these classes. The exact reflection Hamming defects within this family range from **124 to 204** (bounds attained). Neither claim exhausts all Hoffman–Singleton Hamilton spines.
+
+
+## Stronger: arbitrary matchings do not rescue the two-half architecture
+
+The affine formula is not needed. Suppose there are a cohorts on one side and b on the other, with edges within cohorts allowed, no edges between different cohorts of the same side, and one perfect matching across every pair of opposite cohorts. Suppose the graph is a nontrivial diameter-two Moore graph.
+
+The perfect matchings force a common width q. From a fixed vertex in one U cohort, the two-step routes into a different U cohort must reach all q target vertices exactly once. Each of the b opposite cohorts supplies one route, so b=q if a>1. Symmetrically a=q if b>1. If exactly one side had just one cohort this would force q=1 and give a nonregular star. Thus either a=b=1 or a=b=q.
+
+Each cohort has the same internal degree r, by regularity and the equal number of cross matches. Two vertices inside one cohort cannot share a cross neighbor, so their internal direct or two-step routes already give the Moore relation; counting its radius-two ball gives q=r²+1. For any fixed source and one opposite cohort, the direct matching reaches one of its q vertices. Internal-then-cross and cross-then-internal routes reach r vertices each, all distinct and exhausting the others. Thus q=1+2r. The two equalities force r=2 and q=5 in the nontrivial case. Degrees 3 and 7 are the only possibilities within this architecture, even for non-Cayley cohorts and arbitrary perfect matchings. In particular, replacing y=x+ij by different matchings while keeping this architecture cannot give degree 57.
