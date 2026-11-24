@@ -46,6 +46,8 @@ tie-splits from transitive; x = (n³−n)/3 − 8k.)*
 - Mod-16 selection on the d = m flip layer: THM-790 (a FLIP-layer rule, not a level rule).
 - Spine/ribs/sea (SC-SC / SC-NS / NS-NS): THM-A/B/C; sea dominates (96% at n=8).
 
+- [Hamilton path viewpoints, two-edit squares and exact line partners](../05-knowledge/results/chanpak_tiling_viewpoint_20261123/README.md). On a strong tournament the generated viewpoint group is symmetric except for the triangle and the five-vertex cyclic triangle substitution. Every composable pair of unit count flips at heights at least five shares a fixed-path board. Physical placements in one rigid class can reach exponentially many heights on blue lines and on black lines.
+
 ## 5. H (Hamiltonian paths) and the 2-adic tower
 - H = 1 + 2^d hypotenuse formula; tilings·|Aut| = H (LEM-003); H-spectrum per class: kps atlas.
 - **H by level, exact to n = 11** (THM-4889, [packet](../05-knowledge/results/path_spectrum_two_angles_metagraph_20261106/README.md)): level floors φ_n(k) nondecreasing in k; the global floor φ(k) = 1, 3, 5, 9, 11, 15, 23, 33, 41, 51 (k ≤ 9 exact);
