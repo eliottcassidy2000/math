@@ -4,6 +4,8 @@
 
 ## Two-edit follow-up
 
+- [Keith, Ulam, and Kaprekar](FILLER-KEITH-ULAM.md): the 19/33 decimal fork, a literal host for four lifts of the 47 mixed loop, and the sharp dimension-12 prime-candidate sieve.
+
 - [Collatz-27 itinerary and dyadic/ternary separation](FILLER-COLLATZ-27.md): full parity lifts, a compact literal sevenfold witness, and a dimension drop from 27 to 19 for prime candidates.
 
 - [Joint filler selector and sharp capacity](FILLER-JOINT.md): physical same-phase straddling under 0.164 ppm, plus sharp dyadic sparsity for the full fixed bank.

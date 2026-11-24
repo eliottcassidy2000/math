@@ -13,6 +13,8 @@
 
 [Collatz-27 filler cylinders](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/FILLER-COLLATZ-27.md): exact dyadic itinerary distribution, literal sevenfold lift, and a ternary capacity obstruction.
 
+[Keith/Ulam and Kaprekar filler sieve](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/FILLER-KEITH-ULAM.md): finite itinerary lifts, balanced split recognition, and two dimension-12 maximal support families after small-prime sieving.
+
 ### Headline
 **Repository proof OPEN.** THM-2923 closes `3,432` seven-window roots; <=6 speeds remain.
 THM-2051/2052: sparse code rank `>=11`; failed gates are not danger.
