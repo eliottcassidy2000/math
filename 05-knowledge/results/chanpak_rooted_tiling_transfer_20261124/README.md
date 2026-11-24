@@ -6,6 +6,8 @@ This extends [the exact complement-line wiring](../session25_spectrum_wiring_202
 and [eternal colours, THM-4930](../../../01-canon/theorems/THM-4930-eternal-colours-which-odd-path-counts-are-ever-self-converse.md).
 It does not prove that every target multiplicity appears.
 
+[Closed-root obstruction](CLOSED-ROOT-OBSTRUCTION.md): retaining only cycle-closing viewpoints disconnects fibres. Sharp erasure thresholds, blue and black isolated families, and the smallest rigid bridge.
+
 ## Class membership by one-vertex moves
 
 Normalize a directed Hamilton path to \(0\to1\to\cdots\to n-1\).

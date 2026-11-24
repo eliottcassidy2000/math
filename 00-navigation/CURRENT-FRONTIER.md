@@ -15,7 +15,7 @@
 
 [Keith/Ulam and Kaprekar filler sieve](../05-knowledge/results/chanpak_lrc_two_edit_ports_20261123/FILLER-KEITH-ULAM.md): finite itinerary lifts, balanced split recognition, and two dimension-12 maximal support families after small-prime sieving.
 
-[Rooted tournament tiling transfer](../05-knowledge/results/chanpak_rooted_tiling_transfer_20261124/README.md): local isoclass classifier with transport, blue/black outer shells, and the path/cycle split.
+[Rooted tournament tiling transfer](../05-knowledge/results/chanpak_rooted_tiling_transfer_20261124/README.md): local isoclass classifier with transport, blue/black outer shells, and the [closed-root obstruction](../05-knowledge/results/chanpak_rooted_tiling_transfer_20261124/CLOSED-ROOT-OBSTRUCTION.md).
 
 ### Headline
 **Repository proof OPEN.** THM-2923 closes `3,432` seven-window roots; <=6 speeds remain.
