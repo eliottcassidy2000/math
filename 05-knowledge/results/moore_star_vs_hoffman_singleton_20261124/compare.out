@@ -1,0 +1,10 @@
+star source and both mates checked by subset DP for 2..8 leaves
+56-vertex star plus helper: source 36028797018963969 black mate 288053426793161 blue mate 76560404850031802201707
+merged mask counts: 36028797018963969 576106853586322 76560404850031802201707
+order-5 graph fixed HS: a = 25 circulant pentagons 10 alternating ring vertices 130 E_7 nontrivial multiplicity 341
+order-5 graph fixed HS: a = 100 circulant pentagons 40 alternating ring vertices 100 E_7 nontrivial multiplicity 340
+order-5 graph fixed HS: a = 175 circulant pentagons 70 alternating ring vertices 70 E_7 nontrivial multiplicity 339
+order-5 graph fixed HS: a = 250 circulant pentagons 100 alternating ring vertices 40 E_7 nontrivial multiplicity 338
+order-5 graph fixed HS: a = 325 circulant pentagons 130 alternating ring vertices 10 E_7 nontrivial multiplicity 337
+group-ring certificate passed on real 50-site HS lift: 5 fixed, 9 free orbits
+all five center fluxes: rings 4 rejected, rings 6,8,10 locally pass girth
