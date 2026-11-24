@@ -4,6 +4,8 @@
 
 ## Two-edit follow-up
 
+- [Rooted tiling transfers](../chanpak_rooted_tiling_transfer_20261124/README.md): local re-rooting classifier, blue/black shell geometry, and exact path/cycle distinction.
+
 - [Keith, Ulam, and Kaprekar](FILLER-KEITH-ULAM.md): the 19/33 decimal fork, a literal host for four lifts of the 47 mixed loop, and the sharp dimension-12 prime-candidate sieve.
 
 - [Collatz-27 itinerary and dyadic/ternary separation](FILLER-COLLATZ-27.md): full parity lifts, a compact literal sevenfold witness, and a dimension drop from 27 to 19 for prime candidates.
