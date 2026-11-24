@@ -1,0 +1,7 @@
+814 projected degree completions, 2 projected Moore matrices related by rotation
+first simple neighbors 4,5,6 color parity 0 linear rank 16 candidates 1 exact [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+first simple neighbors 4,5,6 color parity 1 linear rank 16 candidates 1 exact [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+first simple neighbors 2,5,8 color parity 0 linear rank 16 candidates 1 exact [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+first simple neighbors 2,5,8 color parity 1 linear rank 16 candidates 1 exact [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+cyclic block: 6 normalized matrices, all row reorderings of ij
+3200-site moments: 3200, 0, 179900, 0, 20048700, 541731400, 32163036500
