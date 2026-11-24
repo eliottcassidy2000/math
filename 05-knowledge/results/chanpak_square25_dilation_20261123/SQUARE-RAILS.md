@@ -33,6 +33,8 @@ For transitive chains of lengths \(a,b\ge1\), put \(X=2^a,Y=2^b\). The respectiv
 \]
 For a prescribed integer \(H\), its factor pairs give **every** pair of chain lengths in this family: test whether \((u-3)/4\) and \((v-1)/4\) are powers of two at least two for \(uv=4H+7\). In particular at \(a=b=m-1\) the factors are the consecutive odd integers \(2r+1,2r-1\), giving \(H=r^2-2\). The formal substitution \(a=b=0\) would give 7. Actually deleting both marked vertices leaves the four-vertex tournament of height 5: nonempty-run factors cease to count placements at width zero. This explains the boundary of the formula. Global absence of 7 and 21 follows from [THM-1370, spectrum omissions](../../../01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md).
 
+The [parallel unequal-chain construction](../chanpak_h23_golay_chains_20261124/UNEQUAL-CHAINS.md) obtains the same formula with the two ports exchanged, proves injectivity and gives a three-test integer inverse. Its [Golay contact theorem](../chanpak_h23_golay_chains_20261124/SQUARE-FIBRE.md) determines which of 4096 choices of 24 marked contacts retain the square at a fixed width.
+
 There is a rigidity range in the inverse. If \(c=\min(a,b)\ge |a-b|+6\) then \(H+2\) is a square **only if \(a=b\)**. To see this, put \(K=2^{|a-b|}\). A square root \(s\) satisfies
 \[
  s^2=4\cdot 2^{2c} K+2^c L+1,\qquad L=K+3\text{ or }3K+1 .

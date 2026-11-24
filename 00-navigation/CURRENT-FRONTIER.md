@@ -207,7 +207,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 ## Tournaments
 
 - [Strong rigid CRT and the square-sum microcosm](../05-knowledge/results/chanpak_tiling_viewpoint_20261123/SQUARE-WINDOW-CRT.md). Six ordinal generators are optimal; capped joins realize all these residues in one strong component, and the same three primes hit an unavoidable false square at 97.
-- [Hamilton viewpoints and blue/black placement](../05-knowledge/results/chanpak_tiling_viewpoint_20261123/README.md). Cycle supports determine pair precedence. Six rigid cores realize every odd residue modulo arbitrary powers of 2, 3 and 11.
+- [Hamilton viewpoints and blue/black placement](../05-knowledge/results/chanpak_tiling_viewpoint_20261123/README.md). [Sharp eleven-vertex selector and the first 25 square-sum labels](../05-knowledge/results/chanpak_square25_dilation_20261123/README.md). Twelve fixed marked tournaments cover every odd residue modulo 24 at every order from eleven; two expanding chains realize infinitely many exact shifted squares.
 - [Prime ports, sevenfold squares, Jacobian and Farey inverses, signed square-sum routes](METAGRAPH-ATLAS.md#chanpak-constructions-and-exact-inverses). [Exponent-61 bracket and exact search boundaries](../05-knowledge/results/chanpak_odd_square_spines_20261122/README.md). Chan–Pak and the exact crossing remain OPEN.
 - THM-1880/1885: Pell; THM-3335/3339/3357/3364/3379: Fibonacci
   tournaments. [THM-3509](../01-canon/theorems/THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray.md):
