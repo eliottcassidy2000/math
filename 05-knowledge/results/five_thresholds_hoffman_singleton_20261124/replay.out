@@ -1,0 +1,9 @@
+converse 4 4 2 1
+converse 5 12 8 2
+converse 6 56 12 22
+converse 7 456 88 184
+MRB root comparisons verified
+F5 elliptic points 6 | F25 elliptic points 36 | Hermitian points 126 | fibers Counter({4: 27, 2: 9})
+HS fixed star: [0, 25, 30, 35, 40, 45]
+56 site spine: [47, 46, 42, 41, 37, 36, 32, 31, 27, 26, 45, 40, 35, 30, 25, 14, 11, 9, 6, 13, 8, 12, 10, 7, 1, 5, 2, 0, 50, 3, 20, 4, 23, 15, 18, 22, 17, 24, 21, 19, 16, 51, 52, 53, 54, 55, 29, 28, 34, 33, 39, 38, 44, 43, 49, 48]
+edges in blown-up graph: 222
