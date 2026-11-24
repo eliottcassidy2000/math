@@ -105,6 +105,8 @@ tie-splits from transitive; x = (n³−n)/3 − 8k.)*
 
 ## Chan–Pak constructions and exact inverses
 
+- **PROVED + FINITE-EXACT:** [SL₂ in tournament transfers, switching, and congruence graphs](../05-knowledge/results/chanpak_tournament_sl2_20261124/README.md): physical framed shears, a finite determinant-seven Farey transducer and a native iteration obstruction, the two-element fixed-spine height stabilizer, and a weighted Hamilton-cycle projection.
+
 - **PROVED + FINITE-EXACT:** [H=23 two-chain Golay charts](../05-knowledge/results/chanpak_h23_golay_chains_20261124/README.md): exact unequal-width inverse, a rank drop at 7, a dodecad chart with 13 exact heights and a two-apex chart giving 4096 distinct heights at each positive tail. The exact square-preserving one-apex gate has four words. The sporadic coordinate action is distinct from an individual tournament automorphism.
 
 - **PROVED + FINITE-EXACT:** [Sharp six-block reduction and strong rigid CRT](../05-knowledge/results/chanpak_tiling_viewpoint_20261123/STRONG-CRT.md); [25-seed binary contact chart](../05-knowledge/results/chanpak_tiling_viewpoint_20261123/precedence-binary-chart.md); [24/25 square-sum decoder](../05-knowledge/results/chanpak_tiling_viewpoint_20261123/SQUARE-WINDOW-CRT.md). The same three primes decode the square-sum graph through order 48 but cannot avoid a false edge at order 49. The strong tournament charts are residue selectors, not complete exact-height inverses.

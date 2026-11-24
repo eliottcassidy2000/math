@@ -7,3 +7,5 @@
 - [Square-preserving placements](SQUARE-FIBRE.md): all words retain the original height exactly for disjoint adjacent swaps; an ordered octad trio gives a sharp four-word gate on a single apex.
 
 These are physical contact models, not exact surjectivity for tournament counts. The original unmarked chain with k=1 gives the shifted label 25; its all-width law survives exactly at the zero word in both physical charts.
+
+[Follow-up: SL₂ and the fixed-spine symmetry boundary](../chanpak_tournament_sl2_20261124/README.md).
