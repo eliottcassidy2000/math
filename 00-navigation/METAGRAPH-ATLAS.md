@@ -105,6 +105,8 @@ tie-splits from transitive; x = (n³−n)/3 − 8k.)*
 
 ## Chan–Pak constructions and exact inverses
 
+- **CITED + PROVED + FINITE-EXACT:** [Verified RH and absolute geometry](../05-knowledge/results/chanpak_rh_absolute_geometry_20261124/README.md): an exact prime-power smoothing/monodromy bridge, an affine strip lift with noncanonical absolute specialization, and explicit success at 7 and failure at 433 of square-root Farey trace bounds.
+
 - **PROVED + FINITE-EXACT:** [SL₂ in tournament transfers, switching, and congruence graphs](../05-knowledge/results/chanpak_tournament_sl2_20261124/README.md): physical framed shears, a finite determinant-seven Farey transducer and a native iteration obstruction, the two-element fixed-spine height stabilizer, and a weighted Hamilton-cycle projection.
 
 - **PROVED + FINITE-EXACT:** [H=23 two-chain Golay charts](../05-knowledge/results/chanpak_h23_golay_chains_20261124/README.md): exact unequal-width inverse, a rank drop at 7, a dodecad chart with 13 exact heights and a two-apex chart giving 4096 distinct heights at each positive tail. The exact square-preserving one-apex gate has four words. The sporadic coordinate action is distinct from an individual tournament automorphism.

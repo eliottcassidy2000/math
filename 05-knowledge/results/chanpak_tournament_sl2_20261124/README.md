@@ -9,3 +9,5 @@ The [H=23 Golay charts](../chanpak_h23_golay_chains_20261124/README.md) put a sp
 - [Projective switching](PROJECTIVE-SWITCHING.md): an actual faithful real action on signed projective points, a projective action on switching classes, and an endpoint covariance for signed paths. A one-vertex switch realizes a second, structurally different 23-path core.
 - [The height-preserving envelope](SPINE-STABILIZER.md): identity and reflected converse are the only isometries of the full fixed-spine exact-height cube. Radius two around the transitive board already determines them.
 - [Weighted cycle-to-path projection](WEIGHTED-COMPLEXITY.md): exact formal reduction to one fixed strong tournament, and an unconditional rank obstruction for cross-cut two-state reads. The circuit lower bound in the supplied paper is used only conditionally.
+
+[Follow-up: the RH proof, absolute strip point counts and Farey spectra](../chanpak_rh_absolute_geometry_20261124/README.md).
