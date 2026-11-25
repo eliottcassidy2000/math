@@ -1,6 +1,8 @@
-"""Exact local contact decks on an induced cycle of length 13. Requires OR-Tools."""
+"""Exact local contact decks on an induced cycle of length 13."""
+from collections import Counter
 from itertools import combinations
 from ortools.sat.python import cp_model
+from moore_chart import hoffman_edge
 
 
 def admissible(s):
@@ -14,6 +16,13 @@ def crossing(e, f):
 
 
 def main():
+    cycle = (0, 1, 2, 3, 28, 8, 7, 6, 44, 15, 16, 17, 30)
+    assert all(hoffman_edge(u, v) == (j-i in (1, 12))
+               for (i, u), (j, v) in combinations(enumerate(cycle), 2))
+    contacts = Counter(sum(hoffman_edge(x, y) for y in cycle)
+                       for x in range(50) if x not in cycle)
+    assert [contacts[j] for j in range(5)] == [7, 9, 10, 8, 3]
+    print("Hoffman–Singleton exterior contact counts", dict(sorted(contacts.items())))
     blocks = {k: [s for s in combinations(range(13), k) if admissible(s)]
               for k in (2, 3, 4, 5)}
     assert list(map(len, blocks.values())) == [52, 65, 13, 0]

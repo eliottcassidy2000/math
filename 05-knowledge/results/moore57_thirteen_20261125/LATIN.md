@@ -1,0 +1,26 @@
+# Building the degree-57 chart from 56 Latin squares with reciprocal rows
+
+**PROVED.** Label the neighbors of a proposed Moore root by an anchor \(0\) and \(q=56\) further branches. Give the 56 slots in branch 0 distinct coordinates. Propagate these coordinates through its matchings to all other branches, so that every matching from branch 0 is the identity. The remaining freely specifiable data before imposing the Moore equations are \(\binom{q}{2}=1540\) permutations, one per unordered pair of nonanchor branches. Orient them as maps \(\pi_{ij}\) from branch \(i\) to \(j\), with \(\pi_{ji}=\pi_{ij}^{-1}\).
+
+At each nonanchor destination \(j\), form a \(q\)-row board with identity first row and rows \(\pi_{ij}\) for \(i\ne0,j\), in fixed label order. This board must be a Latin square. Indeed the direct route from slot \(x\) in 0 reaches slot \(x\) in \(j\); its 55 two-edge routes through the other branches reach \(\pi_{ij}(x)\). Exactly one of the direct or two-edge routes must end at each target slot \(y\). The row order gives the intermediate branch and the column gives the source slot. This is the exact datum lost if only the set of matchings is retained. [Moore branch model](BRANCH-ROUTES.md) · [Earlier sharply transitive permutation cells](../moore57_gewirtz_exact_cover_20261124/SYMMETRY.md)
+
+Conversely start with \(q\) labelled Latin squares with first row the identity, one at each nonanchor branch. Require that opposite rows are inverse permutations. For each distinct nonanchor pair \(i,j\) perform one further Latin test with the following \(q\) rows:
+\[
+                \pi_{ij},\qquad I,\qquad
+                \pi_{kj}\circ\pi_{ik}\quad(k\ne0,i,j).
+\]
+Here \(I\) is the route through the anchor. **All these tests passing is equivalent to a degree-57 Moore completion in this chart.** The rows enumerate the direct and every two-step route between slots in different nonanchor branches. The first collection of boards accounts for the pairs using the anchor. Within one branch the head already supplies the unique midpoint, and an extra such midpoint is impossible since each matching is injective. Pairs involving the root or a branch head have their prescribed routes by construction. This proves the equivalence. In particular a construction can take Latin rows as its primary variables, glue reciprocal rows, then test their compositions. Uniform independent Latin squares conditional on both tests are uniform on the resulting *labelled normalized charts*, if any exist. Uniformity follows from the unique row encoding of each such chart.
+
+## How sparse are the constraints in the independent matching model?
+
+**PROVED bound for this specific probability law.** Choose all 1,540 undecided matching permutations uniformly and independently. Write \(L_q\) for the number of labelled Latin squares. The probability \(p\) that the board at any one branch passes is exactly \(L_q/(q!)^q\). Of all Latin squares \(1/q!\) have the first row fixed, and the \(q-1\) other rows are independent uniform permutations. The probability the resulting graph is Moore is at most
+\[
+                 p^{q/2}\ \le\
+ \left(\frac{\prod_{r=1}^q(r!)^{q/r}}{(q!)^q}\right)^{q/2}
+                       <10^{-32412}\qquad(q=56).
+\]
+To obtain the first inequality on the Moore probability, multiply the \(q\) indicators that the boards are Latin. Each independent edge permutation enters only two indicators. Integrating one variable and applying Cauchy–Schwarz to these two factors replaces each by its conditional square mean to the power \(1/2\). Repeating over every edge gives the product of the \(q\) individual \(L^2\) norms. The unused pair-composition conditions can only decrease the probability. For the second bound, build a Latin square row by row. When \(r\) slots per column remain, the allowed column–symbol graph is \(r\)-regular, so the Brégman bound gives at most \((r!)^{q/r}\) possible next rows. Multiply over the residual degrees. [Radhakrishnan's proof of Brégman's bound](https://doi.org/10.1006/JCTA.1996.2727)
+
+The [reference chart decoder](latin_chart.py) verifies every rooted chart in Petersen and Hoffman–Singleton, rejects corrupted matching controls, and certifies the numerical inequality by rounding each scaled integer root upward. Run `python3 -B latin_chart.py` in this directory. It suffices to run the composition test in one direction per pair, since the reverse rows are the inverses of the forward rows.
+
+The source on exact Latin-square sampling supplied for this project treats rows as successive perfect matchings and explains why independent uniform *available* row choices can bias complete squares. In the normalized Moore problem a uniform single-board sampler would satisfy each individual board constraint automatically. Its additional compatibility obligations are now explicit permutation inverse and composition equalities. The tiny probability above concerns independent **matchings** before conditioning, and supplies no nonexistence bound on the number of abstract Moore graphs. [Pinned Latin-square sampling write-up](https://github.com/Mira-Cult/math/blob/30ddaaad27b48df2002225c3e3f40cffd02c5253/notes/combinatorics/exact-latin-square-sampling/README.md)

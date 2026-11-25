@@ -1,6 +1,6 @@
 """Exact small certificates for induced square-sum prefixes and mod-13 excision."""
 from itertools import combinations
-from math import isqrt, prod
+from math import comb, isqrt, prod
 import sympy as sp
 
 from sympy.polys.domains import GF
@@ -49,6 +49,33 @@ SCHEDULE = (
     (13,(12,23)), (14,(2,11,22)), (18,(7,)), (25,(24,)), (3,(1,)),
     (8,()), (29,()),
 )
+
+
+def triple_port_certificate():
+    vertices = list(combinations(range(5),2))
+    rows = [{j for j,v in enumerate(vertices) if set(u).isdisjoint(v)} for u in vertices]
+    all_sites = set(range(10))
+    hexagons = [set(c) for c in combinations(range(10),6)
+                if all(len(rows[u] & set(c)) == 2 for u in c)]
+    assert len(hexagons) == 10
+    for a,b in combinations(all_sites,2):
+        if b not in rows[a]:
+            continue
+        broken = [set(neighbors) for neighbors in rows]
+        broken[a].remove(b)
+        broken[b].remove(a)
+        recovered = []
+        for z,other in ((a,b),(b,a)):
+            y1,y2 = broken[z]
+            ring = all_sites - {z,other,y1,y2}
+            assert ring in hexagons
+            assert all(len(broken[v]&ring) == 2 for v in (other,y1,y2))
+            assert len((broken[y1]&broken[y2])) == 1
+            recovered.append(ring)
+        assert recovered[0] != recovered[1]
+    n,d = 3250,57
+    nonstar = comb(n,3) - n*d//2*(n-2) + n*comb(d,2) - n*comb(d,3)
+    assert nonstar == 20*266266000
 
 
 def embedding_certificate():
@@ -137,6 +164,7 @@ def exterior_certificate(n, cycle):
 
 if __name__ == '__main__':
     small_thresholds()
+    triple_port_certificate()
     embedding_certificate()
     for size in (13,25,32):
         exterior_certificate(size,True)
