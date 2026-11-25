@@ -208,7 +208,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 - [Strong rigid CRT and the square-sum microcosm](../05-knowledge/results/chanpak_tiling_viewpoint_20261123/SQUARE-WINDOW-CRT.md). Six ordinal generators are optimal; capped joins realize all these residues in one strong component, and the same three primes hit an unavoidable false square at 97.
 - [Hamilton viewpoints and blue/black tilings](../05-knowledge/results/chanpak_tiling_viewpoint_20261123/README.md). [Twelve marked selectors](../05-knowledge/results/chanpak_square25_dilation_20261123/README.md) cover all odd residues mod 24 at every order ≥11. Two chains hit infinitely many shifted squares. [Moore charts at 13, 25 and 32](../05-knowledge/results/moore57_thirteen_20261125/README.md) force the induced prefix through 29.
-- [Prime ports, sevenfold squares, Jacobian and Farey inverses, signed square-sum routes](METAGRAPH-ATLAS.md#chanpak-constructions-and-exact-inverses). [Exponent-61 bracket and exact search boundaries](../05-knowledge/results/chanpak_odd_square_spines_20261122/README.md). Chan–Pak and the exact crossing remain OPEN.
+- [Seam/Farey inverses](METAGRAPH-ATLAS.md#chanpak-constructions-and-exact-inverses). [Earlier bracket](../05-knowledge/results/chanpak_odd_square_spines_20261122/README.md). [Exact midpoint, unit-gap exclusions and Moore packings](../05-knowledge/results/chanpak_midpoint61_latin_20261125/README.md). Unit crossing and Chan–Pak OPEN.
 - THM-1880/1885: Pell; THM-3335/3339/3357/3364/3379: Fibonacci
   tournaments. [THM-3509](../01-canon/theorems/THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray.md):
   `4/6/3` K4 carriers; matching loses Cassini sign. THM-3497: ancestry
