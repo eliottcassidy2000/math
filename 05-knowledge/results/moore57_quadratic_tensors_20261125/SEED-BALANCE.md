@@ -37,3 +37,21 @@ c++ -O3 -std=c++17 seed_transversals.cpp -o /tmp/moore57-transversals
 ```
 
 [Stored seed](seed18.txt) · [Exhaustive legal-word enumerator](seed_transversals.cpp)
+
+## The cyclic ceiling of the same seed is exactly 20
+
+If the new branches also use translation matchings, each new branch is the full orbit of one normalized word, labeling its sites so that its old branch-0 contact is its own slot. Two words \(u,v\) can coexist only if the 18 differences \(u_i-v_i\) are all distinct: repeated differences give a quadrangle between the two new branches and the two implicated old branches. There are 43,592 unordered word pairs passing this test.
+
+For such a pair the shift \(z\) from the first new branch to the second must avoid every \(u_i+s_{ij}-v_j\), where \(s_{ij}\) is the old matching shift and \(s_{ii}=0\). At \(i=j\) this forbids a triangle. At distinct \(i,j\) it forbids a square using the new edge. These are all remaining short cycles involving both new branches, since each word is individually legal. Exactly 642 word pairs remain, with 648 choices of shift in total; each is an actual 20-branch chart. Their compatibility graph has no triangle, so three cyclic branches cannot be added simultaneously. This is an exact ceiling for this seed under the translation condition. Append `--cyclic` to the verifier command to reproduce it.
+
+## Changing two branches yields 21
+
+**FINITE-EXACT positive construction.** The distinct stored [20-branch seed](seed20.txt) can grow in order when two branches are released and replaced by three. Delete old indices 11 and 15 (zero-based), retaining the other 18 branches in order. Enumerate their normalized words; take a triangle of the compatible-pair graph just described and select its three interbranch shifts. All direct and two-step routes for the assembled chart must be tested again, including routes involving all three new branches. The resulting full upper-triangular array is [seed21.txt](seed21.txt). Its first 18 branches are literally the retained subarray of seed20. For every one of its 210 unordered branch pairs the direct route and 19 intermediate routes have 20 distinct translations. Thus the 1,176 sites form a 20-regular matching cover of girth at least five. Adjoining their 21 heads and a root realizes this as a partial degree-57 Moore chart on 1,198 vertices.
+
+This 21-branch seed has **zero** possible normalized words for any further exterior site, including one with unrestricted new matchings. Its positive size and its nonextendibility are both certified by `/tmp/moore57-transversals < seed21.txt`. The 18-branch core retained from seed20 here is different from the original [seed18.txt](seed18.txt), whose exact cyclic ceiling is 20.
+
+The 21-branch chart also has a short spectral obstruction, unlike the strictly bounded spectra of the three earlier stored seeds. Set \(B_{ij}=(-1)^{s_{ij}}\) for \(i\ne j\) and \(B_{ii}=0\). For the integer vector
+\[
+ v=(2,1,1,0,1,-1,1,2,1,0,0,1,-2,1,2,2,3,0,2,1,-1)
+\]
+the array gives \(v^tBv=302>7v^tv=301\). The site vector taking value \((-1)^x v_i\) at slot \(x\) of branch \(i\), zero on other branches, is centered on every fiber; its Rayleigh quotient is \(302/43\). An actual completion would impose the upper bound 7 on this subspace. Thus the 21st branch increases the girth-five subsystem size while already failing a necessary Moore test.
