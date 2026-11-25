@@ -1,0 +1,5 @@
+balanced matching >=  1571
+lower log2 bound 12734.456398459473 for 1513 !/ 177 !
+sparse log2 upper bound 28859.53425038018 and gap > 1125.0937728993374
+mate log2 upper bound 28862.546706096546 and gap > 1122.0813171829732
+Petersen native modulo-4 control: (paths,triangles) (5625, 28) (5627, 30)
