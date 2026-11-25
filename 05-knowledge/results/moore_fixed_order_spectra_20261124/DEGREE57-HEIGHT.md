@@ -1,5 +1,7 @@
 # A uniform Hamilton-count window for native degree-57 Moore charts
 
+**Improved lower bounds:** [The many-matching refinement](DEGREE57-FACTORS.md) raises the uniform lower exponent to 14437 and proves that a common spine can be chosen with both endpoints above $2^{18706}$. The upper bounds below are unchanged.
+
 **Conditional on the existence of a degree-57 Moore graph.** This concerns the native \(3250\)-site chart and its marked tile complement, not arbitrary tournaments at that order or larger arithmetic payload encodings. It substantially narrows the [earlier fixed-order bounds](README.md) in both directions.
 
 ## Main result
