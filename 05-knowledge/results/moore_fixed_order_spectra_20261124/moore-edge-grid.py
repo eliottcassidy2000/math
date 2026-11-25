@@ -13,7 +13,7 @@ assert e0<partial and partial+F(1,13*factorial(13))<e1
 
 # The exact layer bounds also used in the native affine-threshold note.
 f=1
-for d in range(1,3138):
+for d in range(1,3252):
     f*=d
     assert f*e1.numerator**d<((d+5)*e1.denominator)**d
     if d<=59:
@@ -32,18 +32,32 @@ lower(3,18,53)
 def ceil(x):
     return -((-x.numerator)//x.denominator)
 
-def upper_grid(mate):
+def upper_grid(mate, prefix=0):
     m=len(w)
-    n=m*m
+    n=m*m+prefix
     assert w==tuple(sorted(w)) and all(x>=1 for x in (*w,wa))
     scale=10**6
-    apex=m*sum(wa/t for t in w)+5*wa
+    apex=m*sum(wa/t for t in w)+(5+prefix)*wa
     f=ceil(apex/e0*scale)
+    if prefix:
+        # A head has at most one backward arc within the prefix; the
+        # two roots can have 56 additional ones. All prefix-to-body
+        # arc weights are at most 1. Ignore losses to the body.
+        outgoing=m*sum(1/t for t in w)+1/wa
+        for a in range(prefix):
+            f*=ceil((outgoing+(prefix-1-a)+1+1+5)/e0*scale)
+        mult=1+56/(outgoing+7)
+        f*=ceil(mult*scale)**2
     for i,x in enumerate(w):
         edge_backward=[x/y for y in w[:i]]
         edge_forward=[x/y for y in w[i+1:]]
         r=sum(edge_backward)+(m-1)*sum(edge_forward)+x/wa
         penalty_at_high=sum(max(y-1,0) for y in edge_backward+[x/wa])
+        if prefix:
+            # A satellite has exactly two head contacts, both backward
+            # to prefix sites of weight 1.
+            r+=2*x
+            penalty_at_high+=2*(x-1)
         for a in range(m):
             total=r+(m-1-a)
             high=penalty_at_high
@@ -52,15 +66,18 @@ def upper_grid(mate):
                     total-=1 # lost next, within row
                     if i>0: # gained previous, across row boundary
                         v=x/w[i-1];total+=v;high+=v-1
+                    elif prefix:
+                        total+=1
                 if a==m-1:
                     total+=1 # gained previous, within row
                     if i<m-1:total-=x/w[i+1] # lost next
             factor=total+F(1413,500)+F(1087,500)*x+F(1,50)*high
             f*=ceil(factor/e0*scale)
-    assert f<(scale**(n+1)<<25627)
+    assert f<(scale**(n+1+(2 if prefix else 0))<<(26725 if prefix else 25627))
 
 for mate in (False,True):
     upper_grid(mate)
+    upper_grid(mate,114)
 
 def count(A):
     n=len(A)
@@ -141,5 +158,7 @@ def control(m):
 assert control(1)==[1,1]
 assert control(2)==[5,5]
 print("grid counts: C5 1,1; Petersen 5,5; HS upper exponents",control(6))
-print("degree 57: both greater than 2^19663 and less than 2^25627")
+print("degree 57: both greater than 2^19663, upper exponent 25627 grid / 26725 selected native")
+from math import comb
+assert 3136*comb(55,22)*56**55 < 14**22*55**55
 
