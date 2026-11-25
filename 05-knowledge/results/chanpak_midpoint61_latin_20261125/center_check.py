@@ -1,5 +1,6 @@
 """Replay the exact midpoint, packing window, and target-directed ternary word."""
 from fractions import Fraction
+from math import prod
 from pathlib import Path
 import sys
 
@@ -41,6 +42,10 @@ def check():
     variance = Fraction(64*s*(total-s),total*total)
     assert total*variance//(variance+(20-mean)**2) == 1087
     perfect = 2**60*(2**61-1)
+    factors = (3,3,175,11,13,31,41,61,151,331,1321,2**61+1)
+    assert prod(factors) == perfect-1
+    assert 2*prod(sorted(factors)[:-2]) == 1_745_528_394_559_950
+    assert 2*((63*9)//2)*prod(sorted(factors)[:-2]) == 493_984_535_660_465_850
     n = perfect-1
     digits = []
     while n > 1:
