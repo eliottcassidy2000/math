@@ -2,7 +2,7 @@ function census(n){
 const N=1<<n, k=N-1; const tiles=[];
 for(let i=0;i<n;i++)for(let j=i+2;j<n;j++)tiles.push([i,j]);
 const work=new Int32Array(N*n*2), p=new Int32Array(N), end=new Int32Array(N), start=new Int32Array(N), outs=new Int32Array(n), inns=new Int32Array(n);
-const data=new Int32Array((1<<tiles.length)*N*5);
+const data=new Int32Array((1<<tiles.length)*N*7);
 for(let m=0;m<(1<<tiles.length);m++){
  outs.fill(0);inns.fill(0);work.fill(0);p.fill(0);p[0]=1;
  for(let i=0;i<n-1;i++)outs[i]|=1<<(i+1);
@@ -26,24 +26,25 @@ for(let m=0;m<(1<<tiles.length);m++){
   }
   let H=0,R=0,J=0;
   for(let a=0;a<N;a++){let b=k^a;H+=end[a]*start[b];R+=p[a]*start[b];if(a)J+=end[a]*p[b];}
-  let z=(m*N+o)*5;data[z]=p[k];data[z+1]=Q;data[z+2]=R;data[z+3]=J;data[z+4]=H;
+  let z=(m*N+o)*7;data[z]=p[k];data[z+1]=Q;data[z+2]=R;data[z+3]=J;data[z+4]=H;data[z+5]=end[k];data[z+6]=start[k];
  }
 }
 let edges=0;const best=[];
 for(let o=0;o<N;o++){
  const up=new Map(), length=new Map(),prev=new Map();
  for(let m=0;m<(1<<tiles.length);m++){
-  let z=(m*N+o)*5;
+  let z=(m*N+o)*7;
   let H=data[z+4];
   for(let b=0;b<tiles.length;b++){
-   let t=m^(1<<b), w=(t*N+o)*5;
+   let t=m^(1<<b), w=(t*N+o)*7;
    if(data[w+4]!=H+2)continue;
    if([0,1,2,3].some(x=>data[z+x]!=data[w+x]))continue;
+   if(n==6) {if(data[w+5]-data[z+5]!==2||data[w+6]-data[z+6]!==2)throw Error('endpoint delta');}
    if(!up.has(m))up.set(m,[]);
    up.get(m).push(t);edges++;
   }
  }
- const entries=[...up.keys()].sort((a,b)=>data[(a*N+o)*5+4]-data[(b*N+o)*5+4]);
+ const entries=[...up.keys()].sort((a,b)=>data[(a*N+o)*7+4]-data[(b*N+o)*7+4]);
  for(let m of entries){
   let x=length.get(m)??1;
   for(let t of up.get(m)){
@@ -51,8 +52,8 @@ for(let o=0;o<N;o++){
    if(x+1>=(best[0]?.len??2)){
     if(x+1>(best[0]?.len??2))best.length=0;
     const path=[t];let w=t;while(prev.has(w)){w=prev.get(w);path.push(w);}path.reverse();
-    const z=(t*N+o)*5;
-    best.push({len:x+1,o,path,vals:path.map(q=>data[(q*N+o)*5+4]),signature:[...data.slice(z,z+4)]})
+    const z=(t*N+o)*7;
+    best.push({len:x+1,o,path,vals:path.map(q=>data[(q*N+o)*7+4]),signature:[...data.slice(z,z+4)]})
    }
   }
  }
