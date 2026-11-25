@@ -36,6 +36,23 @@ def test(k,q):
     assert all(len(R)==k for R in N)
     assert all(len(N[i]&N[j])+(j in N[i])==1 for i in range(n) for j in range(i))
     full=(1<<n)-1
+    def spine(path, unseen):
+        if not unseen:
+            return path
+        for j in sorted(unseen-N[path[-1]]):
+            out=spine(path+[j], unseen-{j})
+            if out is not None:
+                return out
+        return None
+    order=spine([0],set(range(1,n)))
+    assert sorted(order)==list(range(n))
+    for i,j in combinations(range(n),2):
+        edge=order[j] in N[order[i]]
+        K=-1 if edge else 1  # E is +1 above diagonal in this order.
+        assert (1-K)//2 == edge
+        if j==i+1:
+            assert K==1
+    assert sum(order[j] in N[order[i]] for i,j in combinations(range(n),2))==n*k//2
     def test_parity(G):
         rows=[mask(r) for r in G]
         return all(((rows[i]&rows[j]).bit_count()+(j in G[i]))%2==1
