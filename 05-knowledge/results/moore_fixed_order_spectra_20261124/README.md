@@ -1,6 +1,8 @@
 # Moore representations versus their full fixed-order Hamilton spectra
 
-[Latest: a uniform factorial floor and spectral ceiling for both native degree-57 endpoints](DEGREE57-HEIGHT.md).
+[Latest: tighter native bounds and two edge-rooted satellite encodings](EDGE-ROOTED-GRID-AND-NATIVE-WINDOW.md).
+
+[Original uniform factorial floor and spectral ceiling](DEGREE57-HEIGHT.md).
 
 [Follow-up: exact 14- and 50-site Hoffman–Singleton phase codes and longer fixed-order prefixes](EXACT-PHASE-CHARTS.md).
 
