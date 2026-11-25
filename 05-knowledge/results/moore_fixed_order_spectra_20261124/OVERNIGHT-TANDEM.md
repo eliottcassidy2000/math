@@ -37,3 +37,5 @@ Going back to Moore, an edit in a real normalized graph deck has the opposite ch
 - [No order 19 or larger-prime sign symmetry](NO-LARGE-PRIME-SIGN-SYMMETRY.md) and [no order 13](NO-ORDER13-SIGN-SYMMETRY.md). These constrain the type matrix before fitting actual transport permutations.
 
 The proof notes point to their executable replays. None of the numerical or modular tests substitutes for the asserted scope of its accompanying theorem.
+
+A last tandem check gives [dyadic exponent-61 exclusions and the first order-three phase constraints](DYADIC-AND-ORDER-THREE.md). It rules out highly divisible positive flanks (with stronger balanced cutoffs), and sign symmetries moving fewer than six 3-cycles.
