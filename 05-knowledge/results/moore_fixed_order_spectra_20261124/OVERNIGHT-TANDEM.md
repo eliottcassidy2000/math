@@ -13,6 +13,8 @@ Research span: 2026-11-24 evening to 2026-11-25 morning (UTC−7). The session a
 | Moore | Two distinct valid normalized decks differ in at least 1410 literal arc positions in a common displayed order | Conditional on both valid decks; frozen-cell spectral tests can certify uniqueness from partial data |
 | Moore | Point-preserving Gewirtz transports excluded; full action has no sharp set with 7/49 swaps or containing a complete order-seven coset; no branch-sign gauge symmetry of prime order at least 13 | Full Gewirtz transport model is not excluded at remaining parameters; this says nothing about arbitrary automorphisms of a Moore graph |
 
+A final pass [sharpens the distinct-pair denominator](ROUGH-DIVISORS-AND-CONSTANT-SEEDS.md) to \((\log X)^{0.086071\ldots}(\log\log X)^{3/2}\) without a prescribed residue, constructs a 45-site literal seam \(E_{23}+1\to E_{23}+3\), and reduces the five-cycle order-11 sign case to eight orbit-constant seeds. The improved bound and the independently counted example are not an absolute selector.
+
 ## The transfer between the two problems
 
 The starting model was a native tournament written across a balanced cut. Its **common** paths survive the same-side arc edit; the exact signed difference is instead a contraction count read by endpoint type. That distinction suggested building a guarded transfer whose four large count channels stay fixed while one exact reading changes by 2.
