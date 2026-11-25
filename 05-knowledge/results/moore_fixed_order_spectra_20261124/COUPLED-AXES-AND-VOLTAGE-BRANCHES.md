@@ -1,5 +1,7 @@
 # Coupled row/column actions, exact small heights, and voltage tests for degree 57
 
+[Follow-up: 1120-site order-11 chart and two exact symmetry-based Hoffman–Singleton counts](DIFFERENCE-BASIS-CHARTS.md).
+
 This follows the [edge-rooted grid](EDGE-ROOTED-GRID-AND-NATIVE-WINDOW.md), [current height windows](GRID-INSERTIONS-AND-UNMARKED-ROWS.md), and [route machine](MOORE-ROUTE-MACHINE.md). No degree-57 graph is assumed to exist. The new constraints below concern explicit symmetry branches, not all candidates.
 
 ## What the smaller graphs actually do
