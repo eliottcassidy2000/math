@@ -1,5 +1,7 @@
 # Edge-rooted satellite tournaments and a narrower native window
 
+[Follow-up: partial matchings improve all lower windows and give an unmarked third chart](GRID-INSERTIONS-AND-UNMARKED-ROWS.md).
+
 All degree-57 results below are conditional on a degree-57 Moore graph. The bounds concern the named representations and the specified marked path, not arbitrary tournaments of either order.
 
 | Representation | Sites | Uniform window for source and marked mate |
