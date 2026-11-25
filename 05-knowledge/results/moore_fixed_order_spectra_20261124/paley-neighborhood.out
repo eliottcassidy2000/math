@@ -1,0 +1,7 @@
+shell 0 distinct 1
+shell 1 distinct 1
+shell 2 distinct 14
+shell 3 distinct 239
+shell 4 distinct 2555
+shell 5 distinct 11875
+verified heights above 80555: 1308
