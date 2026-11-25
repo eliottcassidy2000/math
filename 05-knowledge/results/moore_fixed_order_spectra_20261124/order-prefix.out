@@ -1,0 +1,28 @@
+root bank 1 1
+root bank 2 2
+root bank 3 4
+root bank 4 12
+root bank 5 42
+root bank 6 254
+root bank 7 2732
+root bank 8 51268
+root bank 9 71921
+root bank 10 40940
+F1+F2 12 first hole 23931
+F1+F2 13 first hole 46245
+F1+F2 14 first hole 81545
+F1+F2 15 first hole 146971
+F1+F2 16 first hole 305383
+F1+F2 17 first hole 581159
+F1+F2 18 first hole 1074919
+F1+F2 19 first hole 2342363
+F1+F2 20 first hole 4528463
+union 12 first hole 23931 ; targets 20479 and 458141 minimum among this bank 11,15
+union 13 first hole 51859 ; targets 20479 and 458141 minimum among this bank 11,15
+union 14 first hole 137585 ; targets 20479 and 458141 minimum among this bank 11,15
+union 15 first hole 471343 ; targets 20479 and 458141 minimum among this bank 11,15
+union 16 first hole 2035709 ; targets 20479 and 458141 minimum among this bank 11,15
+union 17 first hole 5394341 ; targets 20479 and 458141 minimum among this bank 11,15
+union 18 first hole 5394341 ; targets 20479 and 458141 minimum among this bank 11,15
+union 19 first hole 5644243 ; targets 20479 and 458141 minimum among this bank 11,15
+union 20 first hole 6164959 ; targets 20479 and 458141 minimum among this bank 11,15

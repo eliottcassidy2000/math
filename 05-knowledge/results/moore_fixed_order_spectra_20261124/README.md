@@ -1,5 +1,7 @@
 # Moore representations versus their full fixed-order Hamilton spectra
 
+[Follow-up: exact 14- and 50-site Hoffman–Singleton phase codes and longer fixed-order prefixes](EXACT-PHASE-CHARTS.md).
+
 \(H(T)\) means the number of directed Hamiltonian paths in a tournament, not the number of undirected paths in the graph being encoded. Write \(S_n=\{H(T):|V(T)|=n\}\). Counts of classes below are **ordinary isomorphism classes**, not labelled tournaments, not classes identified with converse, and not marked paths. Adopt the nontrivial diameter-two convention for the main comparison, and include \(K_2\) as the diameter-one boundary check.
 
 ## Representation and placement
