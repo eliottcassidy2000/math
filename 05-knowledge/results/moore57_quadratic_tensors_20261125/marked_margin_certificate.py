@@ -34,6 +34,9 @@ err=max(abs(sum(w[j] for j in row)-S) for row in L)
 assert err==15 and min(w)>4*10**82
 assert min(w)>205*err*(1<<204)
 print("Positive fractional cover: rounded error",err,"; min rounded weight",min(w))
+assert 10**6*max(w) < 39217*S
+assert 25*(max(w)+205*err*(1<<204)) < S
+print("Uniform upper bound for all exact rational contact weights: 1/25")
 
 # The equal-total lattice projects bijectively onto 205 free integer coordinates
 # by deleting one row of each of the three central margin sets.
@@ -73,3 +76,4 @@ while any(U):
     if pivots==205:break
 assert not any(U)
 print("Signed integer span: unit pivots",pivots,"; Euclidean column reductions",gcd_turns)
+
