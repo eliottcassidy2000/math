@@ -110,6 +110,7 @@ assert.equal(first.reduce((n,r)=>n+r.witness[2],0),126);
 assert.equal(first.reduce((n,r)=>n+r.witness[3],0),0);
 console.log(JSON.stringify({K4,first},null,2));
 
+const arithmetic={8:{},10:{}};
 function localAssignments(L,c,p){
  const n=L.length, selected=[], k=p/2, every=(1<<28)-1;
  let anyLocal=false, anyProp=false, anyExact=false, packets=0;
@@ -178,6 +179,8 @@ function localAssignments(L,c,p){
    dp=next;
   }
   if(dp.has(target))anyExact=true;
+   const footprint=[...comp.values()].map(x=>x.join("")).sort().join("/");
+   arithmetic[p][footprint]=(arithmetic[p][footprint]||0)+1;
  }
  function go(i,old){
   if(i===n){test(old);return;}
@@ -216,5 +219,6 @@ if(process.argv.includes("--eight")){
  assert.deepEqual([ng,pass,labelsPassed],[257570,19755,8673]);
  assert.deepEqual(detail[8].slice(0,2),[48,45]);assert.equal(detail[10][1],45);
  assert.deepEqual([detail[8][2],detail[10][2]],[0,0]);
- console.log(JSON.stringify({ng,pass,labelsPassed,detail,survivors}));
+ assert.deepEqual(arithmetic,{8:{77777:45},10:{77777:45}});
+ console.log(JSON.stringify({ng,pass,labelsPassed,detail,survivors,arithmetic}));
 }
