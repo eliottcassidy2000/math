@@ -1,0 +1,19 @@
+First relaxed admissible denominator 114208327604 72057431991 137 (103768467013, 65470613321) (10439860591, 6586818670)
+Least-counterexample first coefficient drop excluded through shortcut step 114208327603
+B, beta, excluded r, upper bound at barrier 11 1 37 57440074143
+B, beta, excluded r, upper bound at barrier 11 2/3 290 68684892022
+B, beta, excluded r, upper bound at barrier 11 7/11 1668 71455216806
+B, beta, excluded r, upper bound at barrier 22 1 37 60344343642
+B, beta, excluded r, upper bound at barrier 22 2/3 289 68288061674
+B, beta, excluded r, upper bound at barrier 22 7/11 1663 71908859186
+B, beta, excluded r, upper bound at barrier 32 1 37 63041165319
+B, beta, excluded r, upper bound at barrier 32 2/3 289 71339892422
+B, beta, excluded r, upper bound at barrier 32 7/11 1658 71960959365
+B, beta, excluded r, upper bound at barrier 44 1 37 66256606550
+B, beta, excluded r, upper bound at barrier 44 2/3 288 70957678129
+B, beta, excluded r, upper bound at barrier 44 7/11 1652 71828063481
+negative -5 beta 2/3 excluded r 292 max bound 69894519332 reciprocal price 18
+negative -17 beta 7/11 excluded r 1676 max bound 71558537241 reciprocal price 15309/139
+both signed anchors beta 2/3 excluded r 292 max bound 71417848690 reciprocal price 15309/139
+-17 and 22-step expanding reset beta 7/11 excluded r 1670 max bound 71635627162 reciprocal price 9565938/84095
+32 expanding-cylinder controls OK
