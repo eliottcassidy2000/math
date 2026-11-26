@@ -1,0 +1,10 @@
+dimension 2 factorial norms through level 6 [1, 2, 12, 144, 2880, 86400, 3628800]
+dimension 3 factorial norms through level 5 [1, 6, 144, 8640, 1036800, 217728000]
+prime 5 d=1,2,3,5 residue 2 last-size allocations {'off-face': 1, 'carry': 44, 'face': 2}
+prime 7 d=1,2,3,5 residue 1 last-size allocations {'off-face': 1, 'carry': 101, 'face': 2}
+prime 13 d=1,2,3,5 residue 9 last-size allocations {'off-face': 1, 'carry': 508, 'face': 2}
+dimension 2 checked fixed-u classical lift and quantum constant-shift rejection
+dimension 3 checked fixed-u classical lift and quantum constant-shift rejection
+dimension 4 checked fixed-u classical lift and quantum constant-shift rejection
+dimension 5 checked fixed-u classical lift and quantum constant-shift rejection
+d=3 Borel transform verified to order seven: (1 - 2*z)/(z + 1)**4
