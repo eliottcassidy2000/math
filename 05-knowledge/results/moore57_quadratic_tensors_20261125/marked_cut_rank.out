@@ -1,0 +1,26 @@
+complete selections 52; options 1741; 289 mixed coefficients I_17; generic rank 131072
+coefficient minor (9, 24, 20) squares 47 edits 17 rank floor 900
+coefficient degree at most 2 best None
+coefficient degree at most 3 best None
+coefficient degree at most 4 best None
+coefficient degree at most 6 best None
+coefficient degree at most 8 best None
+coefficient degree at most 10 best None
+coefficient degree at most 12 best None
+coefficient degree at most 16 best None
+coefficient degree at most 24 best None
+coefficient degree at most 32 best None
+binary box cut by square cap: cap, configurations, GF(2) rank
+0 0 0
+1 0 0
+2 0 0
+3 1 1
+4 1 1
+5 7 2
+6 33 2
+7 57 4
+8 224 6
+9 594 20
+10 1296 18
+11 3441 41
+12 7667 52
