@@ -1,0 +1,13 @@
+# Completed split-cap depth-12 runs of the original anchored_centers.cpp.
+# Commands (run in bash after generating board.txt and compiling as in the README):
+# for c in 011 101 110; do ./anchored ${c:0:1} ${c:1:1} ${c:2:1} 12 12 3000000000 < board.txt; done
+011 edits 12 nodes 1669416917 excluded
+101 edits 12 nodes 1652006346 excluded
+110 edits 12 nodes 1711263412 excluded
+
+# Reconstructed input and solver hashes, with short replay controls:
+6b1bd33811d6ce6c4ff257406f83e7156a8ca3acf478dabcdf30b536aa249525  board.txt
+bb8afbfed7ca0ba3086e200e39202062140cbf002887bafe15c0063a64ac3255  anchored_centers.cpp
+011 edits 8 nodes 2902493 excluded
+101 edits 8 nodes 2845187 excluded
+110 edits 8 nodes 2994189 excluded
