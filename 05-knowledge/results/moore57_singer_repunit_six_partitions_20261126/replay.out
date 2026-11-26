@@ -1,0 +1,13 @@
+PBD block inventory [(5, 1), (7, 21), (8, 35)]
+OA rows 2916 verified ordered pair coverage 43740
+0 [(13, 56), (14, 5), (15, 1)] remaining pairs 2430 minimum deleted OA rows 197 maximum retained 2719
+1 [(13, 59), (14, 6)] remaining pairs 2415 minimum deleted OA rows 196 maximum retained 2720
+2 [(13, 33), (14, 1)] remaining pairs 2430 minimum deleted OA rows 200 maximum retained 2716
+3 [(13, 41), (14, 7)] remaining pairs 2415 minimum deleted OA rows 197 maximum retained 2719
+0 2312 verified six-way tuples uncovered pairs per board 442 direct addable rows 0
+1 2308 verified six-way tuples uncovered pairs per board 447 direct addable rows 0
+2 2314 verified six-way tuples uncovered pairs per board 440 direct addable rows 0
+3 2304 verified six-way tuples uncovered pairs per board 451 direct addable rows 0
+4 exact boundary boards
+fiber-preserving sheet actions: identity only
+fiber-preserving sheet actions: identity only
