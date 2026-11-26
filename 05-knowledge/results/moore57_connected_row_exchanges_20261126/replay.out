@@ -1,0 +1,16 @@
+0 2318 2481
+1 2312 2474
+2 2324 2487
+3 2313 2475
+input 0
+cap 4 rows 2318 candidates 0 93 3666 50981 459964 indexed supports 0 91 3409 48202 442204
+tested supports 0 91 3409 60700 1074359 gain 0
+input 1
+cap 4 rows 2312 candidates 0 98 4335 58128 514380 indexed supports 0 89 4002 54654 493357
+tested supports 0 89 4002 72776 1378292 gain 0
+input 2
+cap 4 rows 2324 candidates 0 84 3443 46554 415809 indexed supports 0 80 3209 44097 400223
+tested supports 0 80 3209 55390 949725 gain 0
+input 3
+cap 4 rows 2313 candidates 0 105 3791 52524 469874 indexed supports 0 97 3526 49686 452006
+tested supports 0 97 3526 63045 1130251 gain 0
