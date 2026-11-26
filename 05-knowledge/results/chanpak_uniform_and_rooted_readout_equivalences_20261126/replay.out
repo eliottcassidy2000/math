@@ -1,0 +1,7 @@
+{"n":5,"m":0,"r":[9,93,1965,64389],"tri":95,"radix":[35,57]}
+{"n":5,"m":1,"r":[9,93,1965,64389],"tri":281,"radix":[35,57]}
+{"n":6,"m":0,"r":[17,241,6729,286297],"tri":191,"radix":[51,90]}
+{"n":6,"m":11,"r":[17,241,6729,286297],"tri":859,"radix":[51,90]}
+{"n":3,"hypergraphs":2,"minCyclic":45,"maxTransitive":1}
+{"n":4,"hypergraphs":11,"minCyclic":45,"maxTransitive":47}
+{"n":5,"hypergraphs":208,"minCyclic":45,"maxTransitive":465}
