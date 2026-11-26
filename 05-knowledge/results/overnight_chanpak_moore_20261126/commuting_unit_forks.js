@@ -131,8 +131,11 @@ function coverTest(){
  return tested;
 }
 
+if(require.main!==module){module.exports={cores,flip,dp,F,reverse,seam,expect};}else{
 const result={seams:run(),residues:samples(),grammarChecks:coverTest()};
 expect(result.grammarChecks===192);
 expect(result.residues[1][1]===4096);
 expect(result.residues[1][2].every(([m,n])=>m===n));
 console.log(JSON.stringify(result,null,2));
+
+}
