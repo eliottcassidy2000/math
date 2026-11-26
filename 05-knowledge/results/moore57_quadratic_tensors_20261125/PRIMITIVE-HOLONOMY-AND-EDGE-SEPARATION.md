@@ -29,6 +29,12 @@ minimal normal subgroup; it must act transitively, hence regularly
 as a faithful abelian transitive group. Its degree would be a prime
 power, so H here is nonsolvable.
 
+For a separate proof of the regular case by abelianization of Cayley
+transversals, see [Smith and Montemanni, Theorem 3](https://www.mdpi.com/2227-7390/14/23/4318).
+The centered-module argument above also excludes nonregular imprimitive
+transport actions. Both concern transport groups, not the graph's
+automorphism group.
+
 ### A more specific filter using the degree-56 database
 
 The [GAP PrimGrp library](https://gap-packages.github.io/primgrp/doc/chap1.html)

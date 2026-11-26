@@ -48,7 +48,7 @@ function boards(file){
  return {full,marked};
 }
 
-function catalogue(rows){
+function catalogue(rows,visit=null){
  const n=rows.length, stride=56*56;
  const ids=new Int32Array(16*stride).fill(-1);
  const idx=(i,j,x,y)=>(4*i+j)*stride+56*x+y;
@@ -103,6 +103,7 @@ function catalogue(rows){
     }
     total++;for(let q of [...old,...nw])coverage.add(q);
     const branches=old.map(i=>rows[i][0]).sort((a,b)=>a-b);
+    if(visit)visit(branches,old.map(i=>rows[i]),nw.map(i=>rows[i]));
     const k=branches.join(",");qs.set(k,(qs.get(k)||0)+1);
     examples.push(branches);
    }
