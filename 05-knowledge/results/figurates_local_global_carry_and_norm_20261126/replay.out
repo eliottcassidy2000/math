@@ -1,0 +1,16 @@
+polygonal layer identity checked on 840 cases
+4096 mixed carries preserve the two lower moments
+translation-stable odd-gap obstruction checked exhaustively mod 4
+dyadic block 2 norms 2 targets 4
+dyadic block 4 norms 7 targets 28
+dyadic block 8 norms 24 targets 192
+dyadic block 16 norms 87 targets 1392
+dyadic block 32 norms 318 targets 10176
+dyadic block 64 norms 1162 targets 74368
+dyadic block 128 norms 4292 targets 549376
+dyadic block 256 norms 15978 targets 4090368
+locally soluble unequal-pair obstruction 0 3 109497
+locally soluble unequal-pair obstruction 1 11 5399273
+locally soluble unequal-pair obstruction 2 51 538127673
+locally soluble unequal-pair obstruction 3 251 64150309673
+first obstruction target, unrestricted four-term witness 1 18 43 83
