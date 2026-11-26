@@ -1,0 +1,5 @@
+Petersen controls {1: 30, 2: 30}
+Hoffman-Singleton controls {1: 350, 2: 1050}
+false local completion: old pairs disjoint; last-star cocycle fails (1, 2, 0) (2, 0, 1) (2, 0, 1)
+Collatz run blocks checked 10000
+Pollock collision: ((335, -105, 143554), 178158400) constant terms 57120 -53760
