@@ -1,0 +1,3 @@
+full {"n":3024,"candidates":8916508,"total":1057,"coverage":2478,"quartets":152,"max":14,"extremal":["1,2,36,37","1,31,44,54","2,23,38,54"],"fiveMax":2}
+marked {"n":1741,"candidates":515656,"total":83,"coverage":484,"quartets":33,"max":5,"extremal":["22,24,53,54","7,17,18,51"],"fiveMax":2}
+[[21,7,[2,4]],[22,6,[2,4,6,8]],[22,7,[2,4]]]
