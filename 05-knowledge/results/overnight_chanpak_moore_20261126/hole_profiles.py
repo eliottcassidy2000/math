@@ -2,9 +2,10 @@
 from collections import Counter
 from pathlib import Path
 from subprocess import check_output
-from sys import executable
+from sys import executable, path
+base=Path(__file__).resolve().parent.parent/'moore57_quadratic_tensors_20261125'
+path.insert(0,str(base))
 from three_stars import SLOTS
-base=Path(__file__).resolve().parent
 it=iter(map(int,check_output([executable,str(base/'nested_core_check.py'),'--board'],text=True).split()))
 B=[h for h in SLOTS if h!=1]
 assert next(it)==len(B) and B[0]==2

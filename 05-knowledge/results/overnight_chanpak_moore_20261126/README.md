@@ -72,3 +72,20 @@ A separate deterministic-seed annealing search ran 500 restarts of up to 400,000
 ## Next linked tests
 
 On the Moore side, use the three exact-center branches separately only where total score ≤2, keeping the exposed two-chain endpoints. On the Chan–Pak side, extending the inverse to unbounded odd part needs a second independent contact reading, and the same-arm obstruction now tells us that a scalable two-exit design must look outside that binary arm. In both directions the distinction is the same: an arithmetic match after projecting away the contact addresses is not a physical lift.
+
+## Replay commands
+
+From this directory (C++17 and Python 3):
+
+```sh
+bank=../../../session203/coverage-recertification/session203-independent-audit/aud_bank7_inherited.txt
+python3 fixed_bank_inverse.py "$bank" 31 61 89 107 127
+python3 exact_bit_inverse.py 61 134217728
+python3 same_arm.py "$bank"
+python3 hole_profiles.py
+python3 ../moore57_quadratic_tensors_20261125/nested_core_check.py --board > /tmp/overnight-moore-board.txt
+g++ -O3 -std=c++17 anchored_centers.cpp -o /tmp/overnight-anchored-centers
+for spec in '2 0 0' '0 2 0' '0 0 2' '1 1 0' '1 0 1' '0 1 1'; do
+  /tmp/overnight-anchored-centers $spec 10 10 1000000000 < /tmp/overnight-moore-board.txt
+done
+```
