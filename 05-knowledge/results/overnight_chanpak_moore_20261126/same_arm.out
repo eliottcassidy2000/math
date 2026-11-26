@@ -1,0 +1,6 @@
+((1, 0, 1), 15, 1, 2, 17, (2, -2), False)
+((1, 1, 1), 1, 0, 1, 3, (-2, 2), True)
+((1, 1, 1), 8, 0, 1, 17, (-2, 2), True)
+((1, 1, 1), 15, 1, 2, 17, (2, -2), True)
+((1, 0, 2), 7, 0, 1, 17, (2, -2), True)
+literal path DP and single-spoke edits checked for all four genuine controls

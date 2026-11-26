@@ -1,0 +1,11 @@
+original: cap 2 (total)
+edits 10 cap 2 nodes 278332648 result excluded
+immutable: cap 2 (total)
+edits 10 cap 2 nodes 274724938 result excluded
+fixed center allocations, all at budget 10
+002 edits 10 nodes 24765286 excluded
+011 edits 10 nodes 68444916 excluded
+020 edits 10 nodes 26760554 excluded
+101 edits 10 nodes 67615666 excluded
+110 edits 10 nodes 70466911 excluded
+200 edits 10 nodes 26298561 excluded
