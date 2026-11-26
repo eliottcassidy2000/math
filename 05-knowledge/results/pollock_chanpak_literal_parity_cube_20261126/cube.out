@@ -1,0 +1,4 @@
+n 6 pure 0 strong_pure 0 parity 0 strong_parity 0 unit 0 min 10001
+least 4256 1 69,55,33,27,93,77,51,45,
+parity 42232 1 143,141,141,143,141,143,143,141,
+n 7 pure 0 strong_pure 0 parity 24 strong_parity 24 unit 107424 min 2

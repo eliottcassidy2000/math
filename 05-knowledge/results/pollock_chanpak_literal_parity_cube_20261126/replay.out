@@ -1,0 +1,5 @@
+Klein group: two regular four-point orbits; exact run vectors match
+five transitive modules verified independently by subset path DP
+common Pollock endpoints 2532 2548 strong tournament endpoints 5065 5097 indices (11, 15, 17, 17, 9) (13, 13, 15, 19, 9)
+common Pollock endpoints 10123 10177 strong tournament endpoints 20247 20355 indices (1, 8, 11, 16, 38) (2, 7, 10, 17, 38)
+ordered-join control: 15862 16087
