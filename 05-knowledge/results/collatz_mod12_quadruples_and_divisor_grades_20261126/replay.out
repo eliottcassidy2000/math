@@ -1,0 +1,11 @@
+four-bit 0011 20 12 [2, 5, 8, 11]
+four-bit 0101 14 2 [2, 5, 8, 11]
+four-bit 0110 10 6 [1, 4, 7, 10]
+four-bit 1001 11 13 [2, 5, 8, 11]
+four-bit 1010 7 1 [1, 4, 7, 10]
+four-bit 1100 5 3 [2, 5, 8, 11]
+independent matrix, cycle, subset path controls 1396
+height 33 12 (33, 360, 9)
+height 33 22 (33, 360, 7)
+height 33 25 (33, 336, 6)
+top-grade signatures verified in 48 arithmetic models; uses no assumed prime classes beyond 3 and 5 for those grades
