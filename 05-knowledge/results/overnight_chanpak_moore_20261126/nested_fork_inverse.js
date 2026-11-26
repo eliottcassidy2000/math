@@ -196,7 +196,7 @@ function explicit(){
  expect(counts.join()==="4618983,4618981,4618985,4618983");
  return {core:C,profile:[h,e,R,V,Q].map(String),counts};
 }
-if(require.main!==module){module.exports={inside,inverseDouble,inversePrefix};}else{
+if(require.main!==module){module.exports={roots,inside,inverseDouble,inversePrefix};}else{
 const n=Number(process.argv[2]||10);
 expect(n>=1&&n<=13);
 const out={literal:literalNested(),example:explicit(),inverseControls:nestedControls(),search:nested(n,[19,31,61,89,107,127])};
