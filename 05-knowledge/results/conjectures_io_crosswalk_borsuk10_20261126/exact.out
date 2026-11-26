@@ -1,0 +1,17 @@
+n,k 7 4 candidates 4868 connected and no near clique 108 exact chromatic 0 vertex-critical 0
+n,k 8 4 candidates 491597 connected and no near clique 5674 exact chromatic 0 vertex-critical 0
+832050828 360
+833318992 1440
+1894573216 36
+1894573488 90
+1902830752 72
+2976568484 216
+3325593758 72
+n,k 9 5 candidates 17170871 connected and no near clique 4906380 exact chromatic 2286 vertex-critical 2286
+832050828 sign-nonsingular 6 by 6 minor ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 6, 8))
+833318992 sign-nonsingular 6 by 6 minor ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 6, 7))
+1894573216 triangle with double-edge common neighbors ((0, 1, 9), (2, 3), (4, 5))
+1894573488 triangle with double-edge common neighbors ((0, 1, 9), (2, 3), (4, 5))
+1902830752 sign-nonsingular 6 by 6 minor ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 6, 8))
+2976568484 triangle with double-edge common neighbors ((0, 1, 9), (2, 3), (4, 6))
+3325593758 triangle with double-edge common neighbors ((1, 2, 9), (0, 7), (5, 6))
