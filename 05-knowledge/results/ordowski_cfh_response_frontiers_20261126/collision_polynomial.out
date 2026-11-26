@@ -1,0 +1,55 @@
+{
+  "polynomials": [
+    [
+      "62*z**4 + 811*z**3 + 117*z**2 + 63*z + 3",
+      2,
+      -386162726057424
+    ],
+    [
+      "808*z**3 + 114*z**2 + 60*z + 3",
+      1,
+      -529308000
+    ]
+  ],
+  "released_tests": [
+    {
+      "releases": 0,
+      "nonlogconcave": 1,
+      "defect_centers": {
+        "5": 1
+      },
+      "min_raw_defect": -37404,
+      "relaxed_floors": {
+        "3": 1
+      }
+    },
+    {
+      "releases": 1,
+      "nonlogconcave": 39,
+      "defect_centers": {
+        "5": 37,
+        "4": 2
+      },
+      "min_raw_defect": -92099,
+      "relaxed_floors": {
+        "3": 42,
+        "2": 8
+      }
+    },
+    {
+      "releases": 2,
+      "nonlogconcave": 434,
+      "defect_centers": {
+        "5": 313,
+        "4": 91,
+        "3": 30
+      },
+      "min_raw_defect": -101505,
+      "relaxed_floors": {
+        "3": 796,
+        "2": 414,
+        "1": 15
+      }
+    }
+  ]
+}
