@@ -1,0 +1,21 @@
+5 absent 4 singular-only False
+7 absent 8 singular-only True
+11 absent 10 singular-only False
+13 absent 4 singular-only False
+17 absent 0 singular-only False
+19 absent 0 singular-only True
+23 absent 0 singular-only True
+29 absent 0 singular-only False
+31 absent 0 singular-only False
+37 absent 0 singular-only False
+41 absent 0 singular-only False
+43 absent 0 singular-only False
+47 absent 0 singular-only True
+53 absent 0 singular-only False
+59 absent 0 singular-only False
+61 absent 0 singular-only False
+Bring point counts independently matched conductor-50 trace for all 15 tested primes > 5
+390625 mod-25 tuples; designated golden tuple lifts to all 25 moment pairs with 25 lifts each
+scalar Hensel seeds checked at 2 and 3
+selector checked on every realized pair for centers 1..13: 22498
+sharp real cusp and positive-window constraints checked through center 13
