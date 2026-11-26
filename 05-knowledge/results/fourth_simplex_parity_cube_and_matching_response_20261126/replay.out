@@ -1,0 +1,12 @@
+literal 16-state cube: 2917 2919 simplex: 1458,1459
+literal 16-state cube: 56223 56235 simplex: 28111,28117
+literal 16-state cube: 209329 209345 simplex: 104664,104672
+top-layer link formula 4 2 nonzero controls 0 of 12
+top-layer link formula 5 2 nonzero controls 7 of 12
+top-layer link formula 6 2 nonzero controls 8 of 12
+top-layer link formula 7 2 nonzero controls 12 of 12
+top-layer link formula 8 2 nonzero controls 10 of 12
+top-layer link formula 7 3 nonzero controls 10 of 12
+top-layer link formula 8 3 nonzero controls 11 of 12
+top-layer link formula 9 3 nonzero controls 12 of 12
+top-layer link formula 10 3 nonzero controls 11 of 12
