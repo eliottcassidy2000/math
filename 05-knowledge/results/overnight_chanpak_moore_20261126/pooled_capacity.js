@@ -67,4 +67,6 @@ for(const m of [48,56]){
  assert(Q(m,27)>Q(m,28));assert(Q(m,14)>Q(m,28));
  assert.equal(Q(m,56),m);
 }
-console.log(JSON.stringify({state,gaps128,eq129,summary,tuples129:C},null,2));
+const H=C.filter(x=>x[2]!==1&&!(x[0]===42&&x[1]===3&&x[2]===3&&x[3]===2));
+assert.equal(H.length,97);assert.equal(rowCount(H),11);
+console.log(JSON.stringify({state,gaps128,eq129,summary,tuples129:H},null,2));

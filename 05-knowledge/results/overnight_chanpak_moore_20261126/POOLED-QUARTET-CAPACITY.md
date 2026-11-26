@@ -33,3 +33,9 @@ The arithmetic leaves 114 tuples, of which four fail by the same saturation and 
 There are **110 necessary tuples across 11 rows**, all with $(h,s)$ of the form $(40,5)$, $(41,3\ldots6)$ or $(42,2\ldots7)$. None has been shown to lift to actual matchings. The replay lists the exact remaining tuples and their variance gaps.
 
 Replay: `node pooled_capacity.js ../moore57_quadratic_tensors_20261125/period_fourteen_site.txt`.
+
+## 4. Two cheap structural cuts reduce the 129 layer further
+
+There cannot be exactly one closed low in any lane: every closed low has a changed closed-low neighbor. This removes twelve of the 110 arithmetic survivors.
+
+The $(42,3,3,2)$ lane also fails. Its three closed branches are low and its high-incidence slack is six. Their internal changed graph must be a triangle: the maximum internal degree is two, so realizing deficit at most six requires all three internal links. The induced old matchings on the two active sheets per closed branch form a two-lift of that triangle. The new matchings still preserve these two-sheet sets, because all inactive sheets retain their old edges. A changed matching on two sheets must swap them, so the change toggles all three link signs in the lift. A triangle has no lifted triangle exactly when an odd number of its three link signs are negative, which cannot hold both before and after three toggles. Thus at most **97 necessary tuples** across the same eleven $(h,s)$ rows remain. This uses actual girth in both charts, not an additional assumption on the catalogue.
