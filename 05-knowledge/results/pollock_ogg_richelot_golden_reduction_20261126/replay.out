@@ -1,0 +1,22 @@
+15 chart labels on six Petersen matchings; 105 intersection checks
+absolute determinant multiset: [0, 0, 0, 0, 8, 8, 8, 10, 10, 10, 10, 10, 10, 18, 18]
+Richelot decompositions at good primes 4, except 10 at 5; remaining five = marked golden matching
+2 Ogg geometric lines over Fp: 15 surface points: 15
+3 Ogg geometric lines over Fp: 15 surface points: 25
+5 Ogg geometric lines over Fp: 21 surface points: 56
+7 Ogg geometric lines over Fp: 15 surface points: 85
+11 Ogg geometric lines over Fp: 27 surface points: 199
+13 Ogg geometric lines over Fp: 15 surface points: 235
+17 Ogg geometric lines over Fp: 15 surface points: 375
+19 Ogg geometric lines over Fp: 27 surface points: 495
+23 Ogg geometric lines over Fp: 15 surface points: 645
+29 Ogg geometric lines over Fp: 27 surface points: 1045
+31 Ogg geometric lines over Fp: 27 surface points: 1179
+37 non-Ogg geometric lines over Fp: 15 surface points: 1555
+41 Ogg geometric lines over Fp: 27 surface points: 1969
+47 Ogg geometric lines over Fp: 15 surface points: 2445
+59 Ogg geometric lines over Fp: 27 surface points: 3895
+61 non-Ogg geometric lines over Fp: 27 surface points: 4149
+71 Ogg geometric lines over Fp: 27 surface points: 5539
+73 non-Ogg geometric lines over Fp: 15 surface points: 5695
+101 non-Ogg geometric lines over Fp: 27 surface points: 10909
