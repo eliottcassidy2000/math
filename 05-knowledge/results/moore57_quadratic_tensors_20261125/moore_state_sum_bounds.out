@@ -1,0 +1,17 @@
+Petersen 10 3 plain/corrected balanced 5 (5, 5) half 5 price exponents 2.236068 2.236068
+Hoffman-Singleton 50 7 plain/corrected balanced 57 (59, 17) half 65 price exponents 7.681146 8.062258
+conditional full 3250 57 plain/corrected balanced 36123 (36170, 1084) half 40625 price exponents 190.184121 201.556444
+conditional leaf 3192 56 plain/corrected balanced 34758 (34806, 2128) half 39156 price exponents 186.563662 197.878751
+conditional exterior 3024 53 plain/corrected balanced 30912 (30958, 2016) half 34776 price exponents 175.948856 186.483243
+Petersen exact profile [0, 3, 4, 5, 6, 5, 6, 5, 4, 3, 0]
+Hoffman-Singleton identity: 490 exact controls
+branch unions 3 balanced 4 half 4
+branch unions 7 balanced 72 half 72
+branch unions 57 balanced 40432 half 45472
+branch-aware 7 6 (40, 28) 42
+branch-aware 57 56 (34806, 2128) 39156
+branch-aware 54 56 (30958, 2016) 34776
+separator 3250 anticomplete constant 225/4 bag size 1571 treewidth 1570
+separator 3192 anticomplete constant 12825/224 bag size 1541 treewidth 1540
+separator 3024 anticomplete constant 85050/1403 bag size 1454 treewidth 1453
+Hoffman-Singleton branch profiles: 250 full + 250 frozen exact controls
