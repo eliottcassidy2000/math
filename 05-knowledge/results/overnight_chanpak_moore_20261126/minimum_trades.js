@@ -117,6 +117,7 @@ function catalogue(rows){
  return {n,candidates,total,coverage:coverage.size,quartets:qs.size,max,extremal,fiveMax:Math.max(...five.values()),table:qs};
 }
 
+if(require.main!==module){module.exports={boards,catalogue};}else {
 const seed=require("node:fs").readFileSync(process.argv[2],"utf8");
 const B=boards(seed);
 for(const [key,want] of [["full",[8916508,1057,2478,152,14,2]],["marked",[515656,83,484,33,5,2]]]){
@@ -133,3 +134,5 @@ for(let h=0;h<=22;h++)for(let s=6;s<=8;s++)if(97-4*h<=2*s){
 }
 need(JSON.stringify(lanes)==="[[21,7,[2,4]],[22,6,[2,4,6,8]],[22,7,[2,4]]]","unexpected lanes");
 console.log(JSON.stringify(lanes));
+
+}
