@@ -48,9 +48,26 @@ For each hole pair store its old-owner hit counts $h_j$ and mutual collision. Re
 | 1 | 50 | 39 | 42 / 8 / 0 |
 | 2 | 1,225 | 434 | 796 / 414 / 15 |
 
+The failure of matroid exchange is literal on the marker-filtered contact set (before fixing the 50 references). Contact $(33,19)$ with center slots $(19,42,45)$ clashes separately with $(12,19)$ at center 56 and $(38,24)$ at center 0. The latter contacts have triples $(19,7,55)$ and $(24,42,31)$ and are mutually compatible. The singleton cannot augment toward the compatible pair. This is an intersection of partition constraints, not a matroid, so matroid exchange and matroid root theorems cannot be used directly. The quartic's derivative discriminant is also strictly negative, $-3{,}164{,}395{,}667{,}256$; together with $P(-1)=-692$, $P(0)>0$ and its positive leading term, this gives a second exact check on the count of real roots.
+
 For a bounded solver these relaxed minimums give a safe first filter: a specified edit support with relaxed minimum at least three cannot yield a two-square board. The existing exact marked search is stronger at its completed edit limits. These polynomial tests neither fill branches 13 and 33 nor resolve the pending split caps at depth 12.
+
+## 3. Three disjoint physical edits, with two opposite units
+
+There is a concrete prime-square application of Section 1. Take the existing outer $(H,E,R)=(23,8,24)$ core and take inner masks $(14,28,24,16,33,15)$ with root 5. Reverse the inner arc $1\to4$. The exact inner rooted profiles $(h,e_-,e_+,r,v,Q)$ are $(23,1,8,24,75,296)$ and $(23,1,10,24,87,296)$. So the inner edit leaves $A=529$ and $B=7656$ unchanged, and increases the offset by $23\cdot2+24\cdot12=334$. The outer edit increases the offset by two since the terminal multiplier remains one; the inner edit does not alter that multiplier. Both hold for every odd binary address $c$. With edit indicators $a,b$ for the outer and inner arcs, the count is
+
+    529 F(c−1)+7656c−1992−2a−334b.
+
+For the third arc choose $i=191+253k$, $\ell=2^i$ and $\beta=(8185\ell+2)/529$; set $c=2\ell\beta+1$. The congruence $7656\cdot2^{191}\equiv-2\pmod{529}$ gives an even $\beta$. The right spoke at bit $i$ then lowers the count by two from address $c$ to $c+\ell$. Start at $c+\ell$ and reverse it for an increase. Across all eight orientations the count is **$N-2a-334b+2d$**. This proves independence including the third mixed difference. The three arcs lie in separate vertex blocks. All orientations are strong by the marked bridges, the inner unique terminal path, and the highest spine bit. The smallest unit instance of this explicit index progression has 400 vertices; the replay independently counts all eight orientations of a smaller 16-vertex control.
+
+Moreover $v_{23}(2^{11}-1)=1$ and $\operatorname{ord}_{23^2}(2)=253$, an odd index-two subgroup. Consequently $\pm\langle2\rangle$ covers all 506 units modulo 529. Since $7656$ is a unit, the same three physical channels realize magnitudes **$(2,334,2m)$ for every $23\nmid m$**, at unbounded heights. One may set the signs independently by choosing the starting corner.
+
+An ordered incoming singleton on the inner core kills both root-start counts but preserves the two starting-second cover counts 75 and 87. It doubles the other two cover counts and leaves the ordinary and terminal counts unchanged. This gives $B=15312$ and middle amplitude **288** instead of 334, with forward unit spoke bit $i\equiv190\pmod{253}$. The same signed orbit realizes $(2,288,2m)$ for every $23\nmid m$.
+
+The separate complete inner-core census through order nine checks this specific pure-offset architecture. It preserves $h,e_-=1,r,Q$ in both orientations and divides the changes into $(\Delta e_+,\Delta v)$. The numbers of nonzero candidates at orders five through nine are 2, 6, 8, 32 and 32. None has terms of opposite sign. With the seven outer cores considered, the smallest nonzero middle amplitude is 144 without imposing a unit spoke; the smallest that also admits the third unit is 288. The order-nine calculation does not exclude three units in another architecture or at higher order.
 
 ## Replay
 
+- `node three_arcs.js` verifies both the literal and large-index nested cases; compile `pure_offset_census.cpp` with `g++ -O3 -std=c++17` and pass it order `9`.
 - `node ordowski_clocks.js` computes the phase table, obstruction and common-amplitude examples, using exact integers.
 - `python collision_polynomial.py board.txt` enumerates the two-hole polynomial, release counts, and Sturm certificates. Generate the same board with `python nested_core_check.py --board > board.txt` from the [pinned Moore chart](../moore57_quadratic_tensors_20261125/).

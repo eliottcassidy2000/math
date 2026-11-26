@@ -15,7 +15,17 @@ def read(path):
 
 def main(path):
     owners=[{} for _ in range(3)]; holes=[]; refs=[]
-    for k,(y,q) in enumerate(read(path)):
+    rows=read(path)
+    labels=[h for h in range(56) if h not in (0,1,2,28)]
+    by_label=dict(zip(labels,rows))
+    ex=[]
+    for h,y in [(33,19),(12,19),(38,24)]:
+        item=next(r[1:] for r in by_label[h][1] if r[0]==y)
+        ex.append(item)
+    assert ex==[(19,42,45),(19,7,55),(24,42,31)]
+    conflicts=[sum(a==b for a,b in zip(ex[i],ex[j])) for i,j in [(0,1),(0,2),(1,2)]]
+    assert conflicts==[1,1,0]
+    for k,(y,q) in enumerate(rows):
         if y<0: holes.append(q);continue
         refs.append(k)
         for i,s in enumerate(next(r[1:] for r in q if r[0]==y)):
@@ -32,6 +42,9 @@ def main(path):
         f=sum(v*Z**(k-min(p)) for k,v in p.items())
         return [str(f),int(Poly(f,Z).count_roots(-oo,oo)),int(discriminant(f,Z))]
     U=[polys(None),polys(0)]
+    f=3+63*Z+117*Z**2+811*Z**3+62*Z**4
+    derivative=int(discriminant(f.diff(Z),Z))
+    assert derivative==-3164395667256;assert f.subs(Z,-1)==-692
     def result(n):
         lc=0; mini=100; defects=Counter(); floors=Counter()
         for D in combinations(refs,n):
@@ -41,6 +54,6 @@ def main(path):
             if delta[0]<0:
                 mini=min(mini,delta[0]);defects[delta[1]]+=1;lc+=1
         return {"releases":n,"nonlogconcave":lc,"defect_centers":dict(defects),"min_raw_defect":mini,"relaxed_floors":dict(floors)}
-    return {"polynomials":U,"released_tests":[result(k) for k in range(3)]}
+    return {"polynomials":U,"derivative_discriminant":derivative,"exchange":{"triples":ex,"conflicts":conflicts},"released_tests":[result(k) for k in range(3)]}
 if __name__=="__main__":
     print(json.dumps(main(sys.argv[1]),indent=2))

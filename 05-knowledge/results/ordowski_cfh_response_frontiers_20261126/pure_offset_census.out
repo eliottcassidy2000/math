@@ -1,0 +1,24 @@
+n 2 classes 1 unique ending roots 1 pure offset arcs 0 opposing terms 0 best 100000000 unit-ready best 100000000 unit 0
+n 3 classes 2 unique ending roots 4 pure offset arcs 0 opposing terms 0 best 100000000 unit-ready best 100000000 unit 0
+n 4 classes 4 unique ending roots 7 pure offset arcs 0 opposing terms 0 best 100000000 unit-ready best 100000000 unit 0
+witness 5 mask 477 root 3 arc 1,2 inner 9,9,84 dE,dV -2,-6 outer 23,24 shift 190
+n 5 classes 12 unique ending roots 15 pure offset arcs 2 opposing terms 0 best 190 unit-ready best 100000000 unit 0
+witness 6 mask 15863 root 4 arc 2,3 inner 15,15,216 dE,dV -2,-12 outer 23,24 shift 334
+unit-ready 6 mask 24039 root 5 arc 2,3 inner 23,24,296 dE,dV -2,-12 outer 23,24 offset 334 spoke 191,-2
+witness 6 mask 32221 root 3 arc 1,2 inner 9,18,168 dE,dV 0,-6 outer 23,24 shift 144
+n 6 classes 56 unique ending roots 36 pure offset arcs 6 opposing terms 0 best 144 unit-ready best 334 unit 0
+witness 7 mask 1031933 root 5 arc 1,2 inner 27,27,564 dE,dV 0,6 outer 23,24 shift 144
+unit-ready 7 mask 2088423 root 5 arc 2,3 inner 23,48,592 dE,dV 0,-12 outer 23,24 offset 288 spoke 190,-2
+n 7 classes 456 unique ending roots 91 pure offset arcs 8 opposing terms 0 best 144 unit-ready best 288 unit 0
+witness 8 mask 133152509 root 5 arc 3,4 inner 51,63,1512 dE,dV -4,-48 outer 23,24 shift 1244
+witness 8 mask 133152509 root 6 arc 3,4 inner 51,51,1512 dE,dV 2,24 outer 23,24 shift 622
+witness 8 mask 133160423 root 6 arc 2,3 inner 71,71,1976 dE,dV 0,12 outer 23,24 shift 288
+unit-ready 8 mask 133160423 root 6 arc 2,3 inner 71,71,1976 dE,dV 0,12 outer 23,24 offset 288 spoke 209,-2
+witness 8 mask 267370237 root 5 arc 1,2 inner 27,54,1128 dE,dV 0,6 outer 23,24 shift 144
+n 8 classes 6880 unique ending roots 235 pure offset arcs 32 opposing terms 0 best 144 unit-ready best 288 unit 0
+witness 9 mask 68584193789 root 5 arc 3,4 inner 51,126,3024 dE,dV 0,-48 outer 23,24 shift 1152
+witness 9 mask 68584193789 root 6 arc 3,4 inner 51,102,3024 dE,dV 0,24 outer 23,24 shift 576
+witness 9 mask 68584201703 root 6 arc 2,3 inner 71,142,3952 dE,dV 0,12 outer 23,24 shift 288
+unit-ready 9 mask 68584201703 root 6 arc 2,3 inner 71,142,3952 dE,dV 0,12 outer 23,24 offset 288 spoke 208,-2
+witness 9 mask 68718411517 root 5 arc 1,2 inner 27,108,2256 dE,dV 0,6 outer 23,24 shift 144
+n 9 classes 191536 unique ending roots 612 pure offset arcs 32 opposing terms 0 best 144 unit-ready best 288 unit 0

@@ -11,6 +11,31 @@
       -529308000
     ]
   ],
+  "derivative_discriminant": -3164395667256,
+  "exchange": {
+    "triples": [
+      [
+        19,
+        42,
+        45
+      ],
+      [
+        19,
+        7,
+        55
+      ],
+      [
+        24,
+        42,
+        31
+      ]
+    ],
+    "conflicts": [
+      1,
+      1,
+      0
+    ]
+  },
   "released_tests": [
     {
       "releases": 0,
@@ -53,3 +78,4 @@
     }
   ]
 }
+
