@@ -1,0 +1,15 @@
+primes (3, 97) length 24 edges 20 isolates [37, 43, 67, 79] square permutation defects 4 optimal derangements 9 spanning path defects 6 optimal square forests 3
+  paths [[19, 17, 83, 61, 3, 97, 47, 53, 11, 89], [13, 23, 41, 59, 5, 31], [7, 29, 71, 73], [37], [43], [67], [79]]
+primes (2, 97) length 25 edges 24 isolates [37, 43, 67] square permutation defects 3 optimal derangements 2 spanning path defects 5 optimal square forests 3
+  paths [[73, 71, 29, 7, 2, 79], [19, 17, 83, 61, 3, 97, 47, 53, 11, 89], [13, 23, 41, 59, 5, 31], [37], [43], [67]]
+primes (3, 101) length 25 edges 21 isolates [37, 67, 79] square permutation defects 3 optimal derangements 2 spanning path defects 6 optimal square forests 3
+  paths [[19, 17, 83, 61, 3, 97, 47, 53, 11, 89], [13, 23, 41, 59, 5, 31], [7, 29, 71, 73], [37], [43, 101], [67], [79]]
+primes (2, 101) length 26 edges 25 isolates [37, 67] square permutation defects 2 optimal derangements 1 spanning path defects 5 optimal square forests 3
+  paths [[73, 71, 29, 7, 2, 79], [19, 17, 83, 61, 3, 97, 47, 53, 11, 89], [13, 23, 41, 59, 5, 31], [37], [43, 101], [67]]
+first square-sum C4 labels by largest prime {'through 2': [167, 29, 7, 2], 'odd only': [193, 131, 13, 3]}
+Hoffman–Singleton prism loop cycle types {((4,), (4,), (2, 2), (2, 2), (2, 2)): 5250}
+Hoffman–Singleton hexagon antineighborhoods {((1, 1, 1, 1, 4), (2, 2, 2, 2, 2, 2), (2, 2, 2, 2, 2, 2)): 5250}
+A non-induced 26-prime embedding in Hoffman–Singleton, added edges 24
+root hexagons {'concurrent': 1770, 'separated': 27168, 'unknown': 262598} on rows 0,28,56 {'concurrent': 168} distinct rooted Petersen subgraphs 295
+forced induced 11-prime pattern {3: 0, 61: 2, 83: 115, 17: 58, 47: 1654, 97: 29, 5: 60, 31: 1542, 59: 2019, 11: 3196, 89: 1124}
+forced nonconcurrent Petersen test (0, 2, 115, 58, 1654, 29) (1, 118, 1651) (61, 111)
