@@ -1,0 +1,3 @@
+band 34359738369 34379738367 size 10000000 miss after F1 57902 final miss 0 last b 2048 F2 profiles 377 candidate q reads 275898993
+verified 34359738369 .. 34379738367 F1 9942098 F2 57902 graph profiles 377 largest order F1 38 F2 39
+witnesses: OK
