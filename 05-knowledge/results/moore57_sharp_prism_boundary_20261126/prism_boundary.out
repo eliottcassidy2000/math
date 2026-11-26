@@ -1,0 +1,10 @@
+Equal triangles 1:4^25 8^1 x 2; 2:4^1 8^13 x 6; 3:2^54 x 3; 1:4^27 x 4
+  Concurrent 163 validated U-tuples 18,26,31
+  Separated 162 validated U-tuples 12,7,47
+All squares swap 1:4^27 x 6; 2:4^1 8^13 x 3; 3:2^54 x 3; 2:8^12 12^1 x 3
+  Concurrent 163 validated U-tuples 19,22,9
+  Separated 162 validated U-tuples 25,17,48
+Prime window 3..97 max square edges 17 forests 3 orders up to reversal 60480 fixed 5-31,5-59,7-29,11-53,11-89,13-23,17-19,17-83,23-41,29-71,41-59,47-53,47-97,61-83,71-73
+Prime window 2..97 max square edges 19 forests 3 orders up to reversal 8640 fixed 2-7,2-79,5-31,5-59,7-29,11-53,11-89,13-23,17-19,17-83,23-41,29-71,41-59,47-53,47-97,61-83,71-73
+Prime window 3..101 max square edges 18 forests 3 orders up to reversal 120960 fixed 5-31,5-59,7-29,11-53,11-89,13-23,17-19,17-83,23-41,29-71,41-59,43-101,47-53,47-97,61-83,71-73
+Prime window 2..101 max square edges 20 forests 3 orders up to reversal 17280 fixed 2-7,2-79,5-31,5-59,7-29,11-53,11-89,13-23,17-19,17-83,23-41,29-71,41-59,43-101,47-53,47-97,61-83,71-73
