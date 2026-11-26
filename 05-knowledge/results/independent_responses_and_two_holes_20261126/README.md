@@ -45,3 +45,26 @@ For a single binary right arm, take one of seven isolated left cores. For each $
 This yields independent **$(2,2m)$** whenever $m$ is coprime to at least one of these seven moduli. Write $D=5\cdot23\cdot29\cdot59\cdot71\cdot103=1,438,942,445$. The only integers not reached by this specific criterion satisfy $D\mid m$ and $11\mid m$ or $13\mid m$. In particular every $1\le m<11D$ is reached, and the fraction not certified is $23/(143D)$. This is a theorem about prescribed **responses**, not about the set of their absolute central path counts.
 
 Replays: `node independent_responses.js`; compile `double_arc_census.cpp` with `g++ -O3 -std=c++17` and pass it order `9`.
+
+## 4. The two unfilled Moore branches: independent repairs stop at three
+
+The marked partial board, with branches 13 and 33 unfilled, is separate from the 129-matching theorem for distinct complete charts. Keep the 50 reference contacts fixed and write $u(a)$ and $v(b)$ for the three collision counts as each of the two holes independently selects a contact. For two choices $a,b$, the actual vector is
+
+    score(a,b) = u(a) + v(b) + W(a,b),
+    W_j(a,b) = [the two chosen contacts coincide at frozen center j].
+
+This gives an exact interaction: the vector mixed difference of a four-corner move is entirely that of $W$. Equivalently its sum is the dot product of the two signed changes of occupied center-slot indicator vectors. A zero total interaction is weaker than zero interaction at each of the three centers.
+
+On all $32\times33=1,056$ pairs of physical choices, 985 have $W=0$ and 71 meet in one center; none meets in two. There are 261,888 four-corner choices. Of these, 196,849 commute at **each** center, as opposed to 199,715 with zero interaction in the total. For 1,563 of the former, both changes have absolute size one in the total; 56 such squares reach the floor. One example changes sheets $3\to16$ at branch 13 and $4\to19$ at branch 33, giving
+
+    (1,2,2), (1,2,1), (1,2,1), (1,2,0).
+
+Thus the two changes really are independent there, but the minimum is still three: the separate best old-owner collision counts are one and two, and the two holes can achieve both simultaneously without hitting each other at all. Dropping below three therefore requires changing a reference contact, not simply making the two hole choices more independent.
+
+At each of the three minimum pairs $(16,19),(16,20),(29,16)$, the collision-owner table records what happens if a single owner moves away from both hole contacts. Every such repair hits at least two *other* original owners, and branch 38 needs at least three at $(16,19)$. For instance, in the $(16,20)$ pair, the unique least-disruptive repair for owner branch 27 selects sheet 3 there and hits owners 7 and 22. This gives concrete next branches to consider; it does not prove a global exclusion for longer simultaneous repairs.
+
+In the original complete centerwise search, allowing up to 12 reference edits still excludes all three **concentrated** two-square caps $(2,0,0),(0,2,0),(0,0,2)$, with no node-limit truncation. The three **split** caps $(1,1,0),(1,0,1),(0,1,1)$ have verified exclusions through 11 edits; do not infer that their twelfth layer is excluded. The [depth-12 receipt](concentrated_cap12.out) records the completed cases.
+
+The alternative MILP (squared loads at most two represented by binary overload flags) hit its 130-second limit with no feasible incumbent; that is not an exclusion. The exploratory center-preserving cycle walk likewise does not certify infeasibility. The exact result above uses actual contact rows and the complete centerwise search only.
+
+To recreate the input, run `python nested_core_check.py --board > board.txt` in the [pinned Moore chart folder](../moore57_quadratic_tensors_20261125/). Then replay with `python two_hole_interaction.py board.txt`. See [the interaction receipt](two_hole_interaction.out).

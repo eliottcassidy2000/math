@@ -11,7 +11,7 @@
 ## Degree-57 Moore graph
 
 - [Pooled capacity and the mod-four exclusion](POOLED-QUARTET-CAPACITY.md) force **at least 129 changed whole branch matchings** between any two distinct hypothetical full completions of the actual three frozen stars. The pairing argument at 129 and [the parity replay](BINARY-COVERS-AND-MOORE-PARITY.md) leave **82 necessary tuples**, none known to lift to actual matchings.
-- [Two unfilled branches](TIGHT-SHEET-SYNCHRONIZATION.md) are a separate partial-board problem. With the 50 reference contacts fixed, all 1,056 pairs put at least three squares on the board. The completed centerwise replay excludes at most two squares through 11 reference edits.
+- [Two unfilled branches](TIGHT-SHEET-SYNCHRONIZATION.md) are a separate partial-board problem. With the 50 reference contacts fixed, all 1,056 pairs put at least three squares on the board. All six two-square allocations are excluded through 11 reference edits, and the three concentrated allocations are excluded through 12. [Follow-up](../independent_responses_and_two_holes_20261126/README.md#4-the-two-unfilled-moore-branches-independent-repairs-stop-at-three) shows exactly why independent motions of both holes can reach three squares but cannot go below it while the other 50 contacts stay fixed.
 - One reason coarse feasibility does not suffice: in an eliminated Moore case every one of 45 local fixed points has a [single seven-pair transport orbit](HALL-AND-PAIR-ORBITS.md). One cannot select the four or five pairs required by the exact count. The analogous need on the Chan–Pak side is to choose a particular absolute height, not simply obtain the right modular response.
 
 For the older detailed chronology and initial algorithms see [the first checkpoint](README.md).
