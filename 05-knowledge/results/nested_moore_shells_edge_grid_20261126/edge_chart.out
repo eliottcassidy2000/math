@@ -1,0 +1,75 @@
+{
+  "row_cyclic_profiles": {
+    "0": {
+      "projection_defects": {
+        "2": 18,
+        "4": 30,
+        "7": 44,
+        "8": 41,
+        "14": 44,
+        "28": 44
+      },
+      "literal_translations": 9,
+      "translation_disagreements": 1404,
+      "best_shift_agreement_hist": {
+        "14": 16,
+        "26": 2,
+        "28": 20,
+        "42": 8,
+        "56": 9
+      },
+      "forms_group": false
+    },
+    "28": {
+      "projection_defects": {
+        "2": 16,
+        "4": 26,
+        "7": 45,
+        "8": 37,
+        "14": 45,
+        "28": 45
+      },
+      "literal_translations": 9,
+      "translation_disagreements": 1404,
+      "best_shift_agreement_hist": {
+        "14": 16,
+        "26": 2,
+        "28": 20,
+        "42": 8,
+        "56": 9
+      },
+      "forms_group": false
+    }
+  },
+  "residual_vertices": 3136,
+  "residual_edges": 6897,
+  "degree_hist": {
+    "2": 2216,
+    "3": 793,
+    "53": 1,
+    "55": 126
+  },
+  "rows_all_56_sheets_full": [
+    0,
+    28
+  ],
+  "column_full_sheets_hist": {
+    "2": 42,
+    "3": 14
+  },
+  "full_row_matchings": 109,
+  "full_column_matchings": 0,
+  "row_pair_occupancy": {
+    "0": 1378,
+    "14": 2,
+    "15": 51,
+    "56": 109
+  },
+  "column_pair_occupancy": {
+    "2": 20,
+    "3": 1,
+    "4": 823,
+    "5": 614,
+    "6": 82
+  }
+}

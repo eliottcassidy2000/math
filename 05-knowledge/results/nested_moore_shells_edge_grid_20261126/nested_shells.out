@@ -1,0 +1,25 @@
+{
+  "pentagons_in_P": 12,
+  "pentagon_shell_types_in_HS": {
+    "5,5,5,5": 1260
+  },
+  "P_in_HS": {
+    "fibers": 10,
+    "width": 4,
+    "residual": 0,
+    "components": []
+  },
+  "best_cyclic_rows_P": {
+    "1": 30
+  },
+  "best_cyclic_rows_HS": {
+    "1": 1050
+  },
+  "P_edge_grids": {
+    "2,2": 15
+  },
+  "HS_edge_grids": {
+    "36": 175
+  }
+}
+
