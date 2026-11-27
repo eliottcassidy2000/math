@@ -1,0 +1,14 @@
+Paley 3 deleted Gram energy 0 mod-p rank 2
+Paley 7 deleted Gram energy 48 mod-p rank 4
+Paley 11 deleted Gram energy 160 mod-p rank 6
+Paley 19 deleted Gram energy 576 mod-p rank 10
+Paley 23 deleted Gram energy 880 mod-p rank 12
+Paley 59 deleted Gram energy 6496 mod-p rank 30
+Same degree polynomial, tournament order 5 counts 3 9
+Same degree polynomial, tournament order 7 counts 3 33
+Same degree polynomial, tournament order 9 counts 3 129
+Same degree polynomial, tournament order 11 counts 3 513
+Same degree polynomial, tournament order 13 counts 3 2049
+Same degree polynomial, tournament order 15 counts 3 8193
+Checked the parity bound in all 32,768 labelled 6 by 6 examples.
+Strong pointed pair: both spectral polynomials match, Hamiltonian counts 31 and 41.
