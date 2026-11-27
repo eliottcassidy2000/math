@@ -1,5 +1,7 @@
 # Guarded machines for Moore, Pollock, Collatz and Cullen
 
+**Terminology update:** The requested comparison was Woodall versus Cullen, not Wilson versus Cullen. See the [signed Cullen–Woodall continuation](../cullen_woodall_signed_collatz_clocks_20261127/README.md). The Wilson calculation below is retained as a separate observation.
+
 A common operation across the four problems is not merely "run a machine." It is to write one more datum while preserving a previously checked constraint. The possibilities differ: Moore routing disallows a common abelian clock, Pollock needs a bound on actual indices, and Cullen divisibility admits a uniquely writable digit at every precision even when the corresponding Collatz power clock stalls.
 
 ## 1. Moore: a terminating branch machine, not a halting conjecture
