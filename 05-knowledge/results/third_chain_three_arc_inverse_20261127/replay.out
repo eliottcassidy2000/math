@@ -1,0 +1,7 @@
+189 exclusion: [21, 2227, 13902, 19885] total 36035 nearby [(181, 16), (183, 20), (185, 30), (187, 15), (191, 6), (193, 25), (195, 12), (197, 18)]
+Strong witness: 63 8 [(0, 3), (0, 4), (0, 7)]
+Strong witness: 189 8 [(0, 4), (0, 7), (1, 4), (1, 7)]
+Strong witness: 567 9 [(0, 4), (1, 7), (2, 8)]
+Strong witness: 1701 11 [(0, 6), (1, 7), (1, 10)]
+Strong witness: 15309 13 [(0, 12), (1, 4), (2, 8)]
+Seven-term compiler checked on 243 tuples; exact box inversions: 1300
