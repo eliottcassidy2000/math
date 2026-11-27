@@ -1,0 +1,4 @@
+degree 3 7-cycles 0 distinct canonical 21-cycles 0 (triple witnesses, special edges; residual component sizes): []
+degree 7 7-cycles 18000 distinct canonical 21-cycles 36000 (triple witnesses, special edges; residual component sizes): [["0,0; 1+7+7",18000]]
+conditional degree 57: 123243120000 induced 7-cycles; at least 246486240000 ordinary 21-cycles.
+Degree-57 cut arithmetic: 50, 98, 146, 193, 239; the induced-path count clears the three bad-pair bounds.
