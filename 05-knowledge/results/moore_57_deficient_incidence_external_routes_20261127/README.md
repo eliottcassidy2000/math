@@ -5,6 +5,9 @@ The 14-branch missing-partner design has a clean completion criterion,
 but a stronger obstruction comes from counting routes through the other
 43 branches. In fact **at most eight branches can be pairwise
 score-sign reversing**, with no need to assume exact converse arcs.
+A [spectral follow-up](../moore_57_mixed_alignment_spectral_20261127/README.md)
+now rules out the entire equal-or-converse template, even with mixed
+signs, so the conditional template bound below is superseded.
 
 ## Rooted transport and the deficient design
 

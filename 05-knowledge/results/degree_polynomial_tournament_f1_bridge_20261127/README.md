@@ -105,9 +105,12 @@ det(xI-C) is exactly
 Indeed sum t_j=N(N-1)/2 and sum(t_j-(N-1))^2=D/2.
 The same coefficient in the monic square root gives an observable
 of the degree polynomial. Equivalently e_2 is the sum of principal
-4-by-4 Pfaffian squares. The relationship to diamonds and related
-extremal Gram arguments is studied by
-[Belkouche–Boussaïri–Lakhlifi–Zaidi](https://arxiv.org/abs/1906.04672).
+4-by-4 Pfaffian squares: each is 1 except for the diamonds, where
+it is 9. Thus the coefficient is choose(N,4) plus eight times
+the number of diamonds. The bound and equality condition below
+are exactly Theorem 11 of [Belkouche–Boussaïri–Lakhlifi–Zaidi](https://arxiv.org/pdf/1906.04672)
+in degree-polynomial coordinates. Their second example following
+that theorem also gives the two-scale deletion polynomial.
 
 **Parity certificate.** For N congruent to 2 mod 4, the sharp
 general lower bound when a two-row deletion from a skew conference

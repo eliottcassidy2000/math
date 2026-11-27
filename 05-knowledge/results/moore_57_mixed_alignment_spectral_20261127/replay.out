@@ -1,0 +1,4 @@
+arbitrary cliques 22 28 split 30 36 total 94
+scores <= 3 cliques 23 29 split 31 37 total 98
+scores <= 3 and positive holonomy cliques 32 40 split 38 46 total 136
+Hoffman–Singleton: all 35 branch triangles have coherent two-slot orbits and attain eigenvalue 2.
