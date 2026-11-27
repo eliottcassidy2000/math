@@ -1,0 +1,9 @@
+square census 3 {"2":2}
+square census 4 {"2":6,"16":2}
+square census 5 {"2":24,"4":40}
+square census 6 {"2":480,"4":384,"8":40,"24":120}
+square census 7 {"2":17520,"4":14448,"8":560,"240":240}
+same-square witness 6 path counts (A,B) [[28,28],[39,39],[34,34],[17,13]] h [1,15,63,49]
+same-square witness 7 path counts (A,B) [[57,57],[123,123],[199,199],[211,211],[111,109]] h [1,21,115,119]
+15-vertex example: 16 same-square orientations; reduced polynomial [1,105,2757,25565,87683,116571,54775,7455]
+irreducible nontransitive-switching example verified
