@@ -1,0 +1,3 @@
+3-adic shadow exponents at k=1,...,12: 1, 3, 3, 39, 93, 93, 1065, 2523, 11271, 24393, 103125, 339321
+Hamiltonian path DP independently checked the first eight sparse shadow words, the 63 core, and its ordinal 189 child.
+All odd targets below 4000 satisfy the ternary trailing-ones and root rules.
