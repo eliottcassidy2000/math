@@ -1,0 +1,14 @@
+Cullen certificate, n=141
+Cullen certificate, n=4713
+Woodall certificate, n=2, smallest seed t=1, golden seed=true
+Woodall certificate, n=3, smallest seed t=1, golden seed=true
+Woodall certificate, n=6, smallest seed t=1, golden seed=true
+Woodall certificate, n=30, smallest seed t=3, golden seed=false
+Woodall certificate, n=75, smallest seed t=13, golden seed=false
+Woodall certificate, n=81, smallest seed t=12, golden seed=false
+Woodall certificate, n=115, smallest seed t=13, golden seed=false
+Woodall certificate, n=123, smallest seed t=1, golden seed=true
+Woodall certificate, n=249, smallest seed t=1, golden seed=true
+Woodall certificate, n=362, smallest seed t=1, golden seed=true
+Woodall certificate, n=384, smallest seed t=1, golden seed=true
+All checks passed, including the Cullen false positive at 9.
