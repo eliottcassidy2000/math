@@ -1,0 +1,6 @@
+(3,5,7) bank: sixteen direct quartic tests, coefficients -15.5 and -19.5
+7 vertices: all 2640 labelled regular tournaments have 14 detecting triples
+Doubly regular sum-of-squares verified in orders 7, 11, 19, 23, 31
+9 vertices: 15/15 detected, detecting-triple range 26..66, minimizers 1 (first line 9), no nontrivial proper module
+11 vertices: 1223/1223 detected, detecting-triple range 80..136, minimizers 1 (first line 801), no nontrivial proper module
+13 vertices: 1495297/1495297 detected, detecting-triple range 130..260, minimizers 1 (first line 1196640), no nontrivial proper module
