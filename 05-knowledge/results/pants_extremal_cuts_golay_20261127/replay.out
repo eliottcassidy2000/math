@@ -1,0 +1,5 @@
+order 8 shell sizes 16,112,0 full histogram {"1176":16,"1272":112}
+order 12 shell sizes 24,264,1320 full histogram {"14731200":24,"14904000":264,"14973120":1320,"15007680":440}
+translation Golay action, affine shift 0
+inversion Golay action, affine shift facca0
+Golay weight distribution {"0":1,"8":759,"12":2576,"16":759,"24":1}
