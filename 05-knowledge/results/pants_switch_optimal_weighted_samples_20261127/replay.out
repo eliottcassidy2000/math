@@ -1,0 +1,3 @@
+order 8 nonlinear sample 64 Fourier weights 6,6,6,6
+order 11 nonlinear sample 512 Fourier weights 8,10,10,10
+Sylvester design: verified every order 3 through 64
