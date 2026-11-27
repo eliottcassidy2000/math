@@ -1,0 +1,4 @@
+{"n":5,"d":2,"cycle":5,"closure":[5],"orthogonalPairs":null,"genus":0,"floor":0}
+{"n":10,"d":3,"cycle":5,"closure":[5],"orthogonalPairs":[[0,5],[1,4]],"genus":2,"floor":1}
+{"n":50,"d":7,"cycle":42,"closure":[42,50],"orthogonalPairs":[[0,30],[34,8]],"genus":61,"floor":33}
+Degree-57 conditional arithmetic checked.
