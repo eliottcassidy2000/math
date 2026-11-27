@@ -1,0 +1,5 @@
+Hoffman–Singleton: edge-grid bijection and exact deletion count checked at all 175 edges.
+Hoffman–Singleton 7-to-21-to-42 control: 0,30,9,29,4,34,8,7,39,10,41,43,3,33,31,14,38,36,1,46,48,16,26,11,35,22,23,24,37,13,28,18,19,15,25,27,2,42,20,21,47,45
+degree-57 path-choice lower bound per canonical 21-cycle: 38135988495389352625188383125284201956265546875
+degree-57 simple 63-cycle lower bound after 18-fold multiplicity: 522222022939543270256489658235041770644474393931250000000
+Mixed-detour lengths from each canonical seed: 21, 24, 25, and every length from 27 through 86.
