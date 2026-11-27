@@ -1,0 +1,7 @@
+14 x 13: missing and forced outside pairs 1183, 9030
+8 branches, half-size and slack: [[7,196],[9,-28],[11,-28],[13,196],[15,252],[17,140],[19,252],[21,588]]
+Sign-preserving direct edge minima, k=9/14/15: 26, 427, 541
+Deleted PG(2,3): both leaves are 2 copies of K3.
+Deleted PG(2,5): both leaves are 4 copies of K5.
+Deleted PG(2,7): both leaves are 6 copies of K7.
+An abstract connected matching leave passes automatic Gram PSD but is not an incidence certificate.
