@@ -1,0 +1,10 @@
+Small chart: 31 heights, matches at 273689 (twice) and 279295.
+First fully active unrestricted Pollock carry: 124 -> 125.
+Height 546598033: payloads 329528,333037; figurate endpoint fibres 59326,27104, with one equal-moment match.
+Cubic shell identities: all t=11..10000.
+Independent Hamiltonian path counts:
+167 273689 273691
+168 279295 279297
+329528 546598033 546598035
+333037 546598033 546598035
+At each large endpoint the degree sequences distinguish the two payloads up to converse.
