@@ -1,0 +1,9 @@
+Pollock prime-power targets: 112468
+Pollock shell [64,128): eligible shells=9; pairs=9
+Pollock shell [256,512): eligible shells=14; pairs=15
+Pollock shell [1024,2048): eligible shells=41; pairs=42
+Pollock shell [4096,8192): eligible shells=78; pairs=79
+Pollock shell [16384,32768): eligible shells=171; pairs=172
+Exact +2 odd-cycle profiles: 16384
+Congruence and cycle-profile combinations: 35532
+Independent Hamilton-path DP and odd-cycle enumerations: 64
