@@ -1,0 +1,2 @@
+{"rank":4,"tested":214,"maxN":22,"maxH":31,"zeros":[[3,4,4]],"connectedSharp":[[3,10,5,"28"]],"ceilMinPositive":"9"}
+{"rank":5,"tested":6738,"maxN":49,"maxH":311,"zeros":[[4,5,5]],"connectedSharp":[[4,15,6,"60"]],"ceilMinPositive":"28"}
