@@ -1,0 +1,11 @@
+phase 17 1 length 8 additive sum 1.56155281
+phase 17 10 length 8 additive sum -2.56155281
+phase 257 1 length 128 additive sum 7.51560977
+phase 257 130 length 128 additive sum -8.51560977
+phase 65537 1 length 32768 additive sum 127.50097656
+phase 65537 32770 length 32768 additive sum -128.50097656
+eight odd-prime local counts checked
+predicted P(D=2) 0.21446880 mean log D 2.96229075
+primitive triangles 100 2040 P(D=2) 0.21029412 avg log D 2.57619385
+primitive triangles 400 32495 P(D=2) 0.21329435 avg log D 2.79204420
+primitive triangles 1000 202861 P(D=2) 0.21453113 avg log D 2.84182166
