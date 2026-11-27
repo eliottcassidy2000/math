@@ -1,0 +1,5 @@
+Exact labelled binary matrix counts at n=1,2,3,4: 1,0,2,0
+Off-diagonal exact counts at n=1,2,3,4: 1,1,5,4
+Irregular counts at n=1,2,3,4: 0,0,3,4
+Induced exact subsets in 20-vertex Kautz, by size: 1:20, 2:10, 3:20, 6:10, 12:5, 20:1
+Verified all ordered pairs of the 3306-vertex Kautz control.
