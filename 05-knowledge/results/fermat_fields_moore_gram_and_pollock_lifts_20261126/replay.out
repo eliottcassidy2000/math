@@ -1,0 +1,9 @@
+Fermat 3 orders (2,O,OO) (2, None, None) two-color witness 0 Pollock ranks (3, 3) Gram determinant 1
+Fermat 5 orders (2,O,OO) (4, 2, 1) two-color witness 2 Pollock ranks (4, 4) Gram determinant 0
+Fermat 17 orders (2,O,OO) (8, 16, 8) two-color witness 3 Pollock ranks (4, 4) Gram determinant 15
+Fermat 257 orders (2,O,OO) (16, 256, 128) two-color witness 9 Pollock ranks (4, 4) Gram determinant 89
+Fermat 65537 orders (2,O,OO) (32, 65536, 32768) two-color witness 43355 Pollock ranks (4, 4) Gram determinant 28834
+Petersen exact spectral controls 6
+Hoffman-Singleton exact spectral controls 28
+width-three locally valid false star rejected
+four-moment collision: two distinct branches lifted at every Fermat prime >=5 in the list
