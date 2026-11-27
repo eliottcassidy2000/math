@@ -1,0 +1,8 @@
+first odd prime-power with negative test at rank 6: 37 n = 1875572
+first odd prime-power with negative test at rank 6: 223 n = 2473023398
+gap sign, q=100003, s=500: -
+gap sign, q=100003, s=550: -
+gap sign, q=100003, s=570: -
+gap sign, q=100003, s=580: -
+gap sign, q=100003, s=632: -
+gap sign, q=100003, s=664: +
