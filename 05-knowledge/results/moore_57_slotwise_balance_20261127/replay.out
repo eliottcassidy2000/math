@@ -1,0 +1,5 @@
+degree 3 root/reference choices 30 transport group order 2
+degree 7 root/reference choices 350 transport group order 720
+Hoffman–Singleton exact expanded cross-block entries 756
+Paley-59 deletion pattern classes {"1,-1":15,"-1,1":14,"-1,-1":14,"1,1":14} min outgoing/incoming defect degrees 5 5 walk [16,8,6,11,0,4]
+score-sensitive bounds checked: R>=5 -> 162; two transitive interiors -> 258.
