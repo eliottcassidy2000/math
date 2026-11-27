@@ -1,0 +1,8 @@
+order 8 all projected weights and both rooted reconstructions passed
+order 16 all projected weights and both rooted reconstructions passed
+order 24 all projected weights and both rooted reconstructions passed
+order 32 all projected weights and both rooted reconstructions passed
+order 48 all projected weights and both rooted reconstructions passed
+opposite octads intersection vector 13,96,228,256,130,32,4,0,0
+generated ordered group 6072 unordered 12144 orbit 40320
+common shortest vectors, absolute-inner-product-two degrees {"92":48,"176":552,"180":552}
