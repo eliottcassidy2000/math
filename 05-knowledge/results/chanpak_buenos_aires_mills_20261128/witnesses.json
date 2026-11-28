@@ -1,0 +1,390 @@
+{
+ "3": [
+  "PK",
+  []
+ ],
+ "5": [
+  "PPK",
+  []
+ ],
+ "9": [
+  "PPPK",
+  []
+ ],
+ "11": [
+  "PPKK",
+  []
+ ],
+ "13": [
+  "PPKP",
+  [
+   1,
+   4
+  ]
+ ],
+ "17": [
+  "PPPPK",
+  []
+ ],
+ "19": [
+  "PPKPK",
+  []
+ ],
+ "23": [
+  "PPPKK",
+  []
+ ],
+ "29": [
+  "PPMMPK",
+  []
+ ],
+ "31": [
+  "PKPKPK",
+  []
+ ],
+ "35": [
+  "PPKMPK",
+  []
+ ],
+ "37": [
+  "PPKKPK",
+  []
+ ],
+ "41": [
+  "PPPKK",
+  [
+   1,
+   5
+  ]
+ ],
+ "43": [
+  "PPKKPK",
+  [
+   1,
+   3
+  ]
+ ],
+ "47": [
+  "PPPPKK",
+  []
+ ],
+ "49": [
+  "PPMMPPK",
+  []
+ ],
+ "53": [
+  "PPPMMPK",
+  []
+ ],
+ "59": [
+  "PPKMPPK",
+  []
+ ],
+ "61": [
+  "PPPMPKK",
+  []
+ ],
+ "63": [
+  "PPKKPPK",
+  []
+ ],
+ "67": [
+  "PPPKPK",
+  [
+   2,
+   6
+  ]
+ ],
+ "71": [
+  "PPPKMPK",
+  []
+ ],
+ "73": [
+  "PPKPKPK",
+  []
+ ],
+ "77": [
+  "PPPPKK",
+  [
+   2,
+   5
+  ]
+ ],
+ "79": [
+  "PPPPKPK",
+  []
+ ],
+ "83": [
+  "PPPPKK",
+  [
+   2,
+   6
+  ]
+ ],
+ "89": [
+  "PPPMMPPK",
+  []
+ ],
+ "91": [
+  "PPMPKPPK",
+  []
+ ],
+ "97": [
+  "PPPKPKK",
+  []
+ ],
+ "101": [
+  "PPPPMMPK",
+  []
+ ],
+ "103": [
+  "PPMPPKPK",
+  []
+ ],
+ "107": [
+  "PPPPKKK",
+  []
+ ],
+ "109": [
+  "PPKPMMPK",
+  []
+ ],
+ "113": [
+  "PKPPKMPK",
+  []
+ ],
+ "119": [
+  "PPPKMPPK",
+  []
+ ],
+ "127": [
+  "PPKPKPPK",
+  []
+ ],
+ "131": [
+  "PPKKMMPK",
+  []
+ ],
+ "133": [
+  "PPPKMMPK",
+  []
+ ],
+ "137": [
+  "PPKPKMPK",
+  []
+ ],
+ "139": [
+  "PPPKKPPK",
+  []
+ ],
+ "149": [
+  "PPPKMPKK",
+  []
+ ],
+ "151": [
+  "PPKPKKPK",
+  []
+ ],
+ "157": [
+  "PPPKPKPK",
+  []
+ ],
+ "161": [
+  "PPPMMPPPK",
+  []
+ ],
+ "163": [
+  "PPPPPKK",
+  [
+   3,
+   7
+  ]
+ ],
+ "167": [
+  "PPPMPKPPK",
+  []
+ ],
+ "173": [
+  "PPPPKPK",
+  [
+   1,
+   5
+  ]
+ ],
+ "179": [
+  "PPKPKPKK",
+  []
+ ],
+ "181": [
+  "PPMPPKPPK",
+  []
+ ],
+ "191": [
+  "PPPPPPKK",
+  []
+ ],
+ "193": [
+  "PPKPPMMPK",
+  []
+ ],
+ "197": [
+  "PPPPPMMPK",
+  []
+ ],
+ "199": [
+  "PPPMPKKPK",
+  []
+ ],
+ "203": [
+  "PPPPMMPKK",
+  []
+ ],
+ "217": [
+  "PPMPPKKPK",
+  []
+ ],
+ "259": [
+  "PPPKKMPPK",
+  []
+ ],
+ "287": [
+  "PPPPPKMPK",
+  []
+ ],
+ "301": [
+  "PPPPKMPKK",
+  []
+ ],
+ "329": [
+  "PPPPPMMPPK",
+  []
+ ],
+ "343": [
+  "PPPMPKMMPK",
+  []
+ ],
+ "371": [
+  "PPPMMMMPKK",
+  []
+ ],
+ "413": [
+  "PPPMMPKPKK",
+  []
+ ],
+ "427": [
+  "PPPPPMPPKK",
+  []
+ ],
+ "469": [
+  "PPPMPPKPKK",
+  []
+ ],
+ "497": [
+  "PPKKPPKMPK",
+  []
+ ],
+ "511": [
+  "PPPKPKPPPK",
+  []
+ ],
+ "553": [
+  "PPMPKPMPKPK",
+  []
+ ],
+ "581": [
+  "PPPKMPPPKK",
+  []
+ ],
+ "623": [
+  "PPPPPMPKPPK",
+  []
+ ],
+ "679": [
+  "PPPKPKKKPK",
+  []
+ ],
+ "707": [
+  "PPPPMMMMPKK",
+  []
+ ],
+ "721": [
+  "PPPMPPKMPKK",
+  []
+ ],
+ "749": [
+  "PPPPMPKKMPK",
+  []
+ ],
+ "763": [
+  "PPKPMMMMPKK",
+  []
+ ],
+ "791": [
+  "PPPPPMMPPKK",
+  []
+ ],
+ "889": [
+  "PPPKMMPKKPK",
+  []
+ ],
+ "917": [
+  "PPKMMPPPKPK",
+  []
+ ],
+ "959": [
+  "PPPPPPKMPPK",
+  []
+ ],
+ "973": [
+  "PPPPKMPPKPK",
+  []
+ ],
+ "1043": [
+  "PPPMPPKMPPPK",
+  []
+ ],
+ "1057": [
+  "PPPKPPKMMPK",
+  []
+ ],
+ "1099": [
+  "PPPPPKKMPPK",
+  []
+ ],
+ "1141": [
+  "PPPPKKPKPPK",
+  []
+ ],
+ "1169": [
+  "PPKPPPKPKPK",
+  []
+ ],
+ "1211": [
+  "PPPKKKKMMPK",
+  []
+ ],
+ "1253": [
+  "PPPKKMPPPKK",
+  []
+ ],
+ "1267": [
+  "PPPKMPPPMMPK",
+  []
+ ],
+ "1337": [
+  "PPPPKPKKMPK",
+  []
+ ],
+ "1351": [
+  "PPKPPKPPPKK",
+  []
+ ],
+ "1379": [
+  "PPPPPMMMMPKK",
+  []
+ ],
+ "1393": [
+  "PPKPPKKPPKK",
+  []
+ ]
+}
