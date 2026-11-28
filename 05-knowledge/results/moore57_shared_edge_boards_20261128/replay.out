@@ -1,0 +1,39 @@
+Shared branch-pair matchings in certificate 190
+Pentagons 302112 vs completion 58094400
+Initial optional edges 1105141
+Pass 1 boards 28467 fixed incidences 346042 optional incidences 19671355 least on unfinished 277 pentagon wedge deficit 1248110 failures 0 deleted 1227 forced 16 (local incidences 288)
+Pass 2 boards 28467 fixed incidences 346042 optional incidences 19661263 least on unfinished 270 pentagon wedge deficit 1248110 failures 0 deleted 108 forced 16 (local incidences 341)
+Pass 3 boards 28467 fixed incidences 346042 optional incidences 19660963 least on unfinished 270 pentagon wedge deficit 1248110 failures 0 deleted 0 forced 16 (local incidences 341)
+force 712 2523
+force 749 921
+force 764 933
+force 777 914
+force 792 942
+force 829 2765
+force 868 2797
+force 922 2655
+force 951 2539
+force 1579 2777
+force 1792 2559
+force 1958 2763
+force 2217 2791
+force 2422 2775
+force 2766 3071
+force 2770 2838
+Install 16 shared edges
+Pentagons 302838 vs completion 58094400
+Initial optional edges 1103048
+Pass 1 boards 28467 fixed incidences 346383 optional incidences 19645999 least on unfinished 269 pentagon wedge deficit 1247769 failures 0 deleted 87 forced 1 (local incidences 15)
+Pass 2 boards 28467 fixed incidences 346383 optional incidences 19644693 least on unfinished 269 pentagon wedge deficit 1247769 failures 0 deleted 16 forced 1 (local incidences 25)
+Pass 3 boards 28467 fixed incidences 346383 optional incidences 19644670 least on unfinished 269 pentagon wedge deficit 1247769 failures 0 deleted 0 forced 1 (local incidences 25)
+force 942 2081
+Install 1 shared edges
+Pentagons 302883 vs completion 58094400
+Initial optional edges 1102903
+Pass 1 boards 28467 fixed incidences 346408 optional incidences 19643808 least on unfinished 269 pentagon wedge deficit 1247744 failures 0 deleted 0 forced 0 (local incidences 0)
+Uncovered pairs from saturated endpoints 676068 585840
+New edges 10582 total edges 23866 maximum degree 57
+Boards improved 26506 gained multiple hits 26430
+Boards completed 729 -> 919
+Fixed incidences 154070 -> 346408
+Physical-edge multiplicity in boards [(16, 5748), (20, 4096), (25, 738)]
