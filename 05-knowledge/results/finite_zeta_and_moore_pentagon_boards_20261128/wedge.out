@@ -1,0 +1,12 @@
+Pentagons 1 vs completion 1
+Initial optional edges 0
+Pass 1 boards 5 fixed incidences 5 optional incidences 0 least on unfinished -1 pentagon wedge deficit 0 failures 0 deleted 0 forced 0 (local incidences 0)
+Pentagons 12 vs completion 12
+Initial optional edges 0
+Pass 1 boards 30 fixed incidences 60 optional incidences 0 least on unfinished -1 pentagon wedge deficit 0 failures 0 deleted 0 forced 0 (local incidences 0)
+Pentagons 1260 vs completion 1260
+Initial optional edges 0
+Pass 1 boards 1050 fixed incidences 6300 optional incidences 0 least on unfinished -1 pentagon wedge deficit 0 failures 0 deleted 0 forced 0 (local incidences 0)
+Pentagons 60756 vs completion 58094400
+Initial optional edges 3595449
+Pass 1 boards 28467 fixed incidences 154070 optional incidences 64868705 least on unfinished 1286 pentagon wedge deficit 1440082 failures 0 deleted 0 forced 0 (local incidences 0)
