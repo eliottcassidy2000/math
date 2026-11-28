@@ -1,0 +1,19 @@
+CRT 3 27 largest expanded witness 21
+CRT 5 125 largest expanded witness 402
+CRT 9 729 largest expanded witness 410
+CRT 15 100 largest expanded witness 3285
+CRT 21 100 largest expanded witness 10346
+CRT 27 100 largest expanded witness 11810
+CRT 45 100 largest expanded witness 86834
+CRT 63 100 largest expanded witness 98828
+CRT 75 100 largest expanded witness 439762
+CRT 81 100 largest expanded witness 310448
+CRT 105 100 largest expanded witness 614213
+CRT 135 100 largest expanded witness 2672714
+CRT 225 100 largest expanded witness 12590642
+CRT 315 100 largest expanded witness 5171930
+CRT 675 100 largest expanded witness 354887462
+CRT 945 100 largest expanded witness 142723373
+CRT 3465 100 largest expanded witness 3867383645
+CRT 10395 100 largest expanded witness 78672290045
+Dyadic fold and negative-predecessor controls pass
