@@ -65,6 +65,8 @@ This leaves room for \(L+3\) strictly below \((h+1)^2\). The constructed hosts h
 \]
 The rounding error is at most \(91Y^{3/2}N^{1/4}+240Y^2\le93.4N^{2/5}\). Here \(\sqrt{r+1/4}\le\sqrt r+1/2\), and \(240 N^{1/5}\le2.4N^{2/5}\). The nonlinear correction is \(<29(2r+1)\le9.28N^{2/5}+29\). Thus \(|L-T|<105N^{2/5}\), which proves \(N<L<L+2<N+512N^{2/5}\). The balance comes from making the two errors \(Y^{3/2}N^{1/4}\) and \(\sqrt N/Y\) have the same power of \(N\); it retains the literal arc, unlike the original [free reflected seam](../chanpak_wheel_square_selector_20261117/FREE_SEAM.md) that exchanges addresses.
 
+**Subquadratic floor chains.** The absolute window places a literal sibling pair in every sufficiently large strict power shell of any fixed real exponent \(c>5/3\). Indeed, set \(N=\lfloor h^c\rfloor+1\). The width \((h+1)^c-h^c\ge c h^{c-1}\) eventually dominates \(512 N^{2/5}+3\), since \(c-1>2c/5\). Both closed floor intervals therefore sit strictly inside the parent's interval. Seed the tree above the threshold with any sufficiently large height \(1+2^k\), realized by the two active contact runs of lengths \(1,k\). The same strict nesting yields uncountably many \(A\) with strong realized floors \(\lfloor A^{c^j}\rfloor\), and physical +2 pairs at every branch. This reaches below 2 but does not settle the endpoint \(c=5/3\).
+
 ## 3. Finite coverage and the square tree
 
 The deterministic replay processes every odd \(5\le h<2^{21}\). It accepts a lower count only on the exact integral test \(h^2<L,\ L+3<(h+1)^2\). The counts by first witness are:
