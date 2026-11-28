@@ -1,0 +1,19 @@
+States 56438310
+Distinct 149972
+Independent full register checks 1093
+First equal count with unequal triangle substitution: 5 15 masks, colored moments, outputs (69, 108, 123) (76, 120, 135)
+Mod 3 (57, 57, 3, 0)
+Mod 5 (305, 305, 5, 0)
+Mod 7 (889, 889, 7, 0)
+Mod 9 (1953, 1953, 9, 0)
+Mod 11 (3641, 3641, 11, 0)
+Mod 13 (6097, 6097, 13, 0)
+Mod 17 (13889, 13889, 17, 0)
+Mod 19 (19513, 19513, 19, 0)
+Mod 23 (34937, 34937, 23, 0)
+Mod 25 (45025, 45025, 25, 0)
+Independently checked fallback seed masks 27
+Bank max 300001 distinct 149972 missing [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861, 2647]
+Bridge states 49473 residual: 13 41 43 55 67 77 83 163 173 231 233 247 251 277 299 421 449 503 533 569 583 637 821 1067 1339 1861 2647
+706222c74a50b75986a6abafafac08fb2d3378e77c9963d02e70a0aea50cb147  found
+Longest shortest witness length: 20 at 217333 MKKKKKMMPKKPKMMPKKMK
