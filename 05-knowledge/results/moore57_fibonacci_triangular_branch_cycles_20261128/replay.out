@@ -1,0 +1,10 @@
+Direct transfer and schedule controls pass
+Complete branch pairs 355
+20 branches [(0, 3765), (1, 3581), (2, 1848), (3, 609), (4, 163), (5, 30), (6, 4)]
+21 branches [(0, 3689), (1, 3625), (2, 1878), (3, 605), (4, 167), (5, 34), (6, 2)]
+Best sampled 20-branch insertion bank ((48, 37, 20), (0, 25, 6, 14, 53, 5, 44, 7, 9, 3, 35, 28, 21, 32, 11, 8, 38, 42, 13, 56), 2, [(1, 0), (2, 0), (4, 0), (10, 0), (12, 2), (15, 1), (16, 3), (17, 3), (18, 2), (19, 3), (20, 0), (22, 2), (23, 1), (24, 1), (26, 0), (27, 3), (29, 0), (30, 4), (31, 1), (33, 5), (34, 0), (36, 1), (37, 1), (39, 1), (40, 0), (41, 1), (43, 0), (45, 1), (46, 0), (47, 4), (48, 1), (49, 2), (50, 1), (51, 1), (52, 0), (54, 0), (55, 1)])
+Complete 56-sheet insertion ledger [('fresh branch', 46), ('repeated branch, simple', 7), ('repeated vertex', 1), ('shortcut', 2)]
+21/63 complement 3528714153412895250897884368896484376
+Distinct 63-cycles from sampled orders alone 35287141534128952508978843688964843749954
+Moore conditional global 63-cycle lower bound 9916027897357761163189591495364815811750106147672580874911835750400000000
+Triangular-Fibonacci fixed counts witnessed at order 21 [1, 3]
