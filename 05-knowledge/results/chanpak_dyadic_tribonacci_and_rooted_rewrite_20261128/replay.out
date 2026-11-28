@@ -1,0 +1,16 @@
+2-power 2 2 4
+2-power 4 24 15
+2-power 8 224 39
+2-power 16 1920 74
+2-power 32 15872 142
+independent dyadic BFS 2 2
+independent dyadic BFS 4 24
+independent dyadic BFS 8 224
+independent dyadic BFS 16 1920
+independent dyadic BFS 32 15872
+independent dyadic BFS 64 129024
+rooted swaps 121
+mixed even 6 90
+mixed even 10 450
+mixed even 18 2754
+mixed even 30 13050
