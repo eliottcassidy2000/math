@@ -50,7 +50,7 @@ f(\text{shortcut ring})+
 $$
 The sum is an exact equality if one also includes the two-edge returns through all internal branches of the path, counted as closed walks. A repeated branch can either use a second leaf, giving a simple cycle, or revisit the identical leaf, giving a nonsimple walk. On a partial chart the inequality still holds for every known return, because two distinct returns give a triangle or square. It is a simultaneous constraint, not an independent cap on each ring.
 
-For m=21, each fixed 20-branch path has 37 fresh-branch candidates in a Moore graph. In particular a candidate with f=55 leaves at most one sheet for all the other candidates and the shortcut together, and at most two candidates can have f≥21. Summing the inequality over ordered paths gives an average f≤56/37 over ordered 21-branch rings (write the inserted branch last). Every unoriented cyclic order is counted exactly 42 times in that average, so the bound transfers without any sampling hypothesis.
+For m=21, each fixed 20-branch path has 37 fresh-branch candidates in a Moore graph. In particular a candidate with f=54 leaves at most two sheets for all the other candidates and the shortcut together (and f=55 is impossible for a permutation of 56 sheets), and at most two candidates can have f≥21. Summing the inequality over ordered paths gives an average f≤56/37 over ordered 21-branch rings (write the inserted branch last). Every unoriented cyclic order is counted exactly 42 times in that average, so the bound transfers without any sampling hypothesis.
 
 ## A larger conditional 63-cycle bound without symmetry assumptions
 
