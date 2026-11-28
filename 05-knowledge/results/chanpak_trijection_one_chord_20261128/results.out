@@ -1,0 +1,25 @@
+3 : 8 raw chord tests; 27 remaining
+4 : 63 raw chord tests; 27 remaining
+5 : 330 raw chord tests; 26 remaining
+6 : 1440 raw chord tests; 25 remaining
+7 : 5655 raw chord tests; 20 remaining
+8 : 20727 raw chord tests; 15 remaining
+9 : 72352 raw chord tests; 6 remaining
+10 : 243540 raw chord tests; 0 remaining
+3 : 8 raw chord tests; 27 remaining
+4 : 57 raw chord tests; 27 remaining
+5 : 274 raw chord tests; 26 remaining
+6 : 1105 raw chord tests; 25 remaining
+7 : 4030 raw chord tests; 20 remaining
+8 : 13772 raw chord tests; 15 remaining
+9 : 44978 raw chord tests; 6 remaining
+10 : 142091 raw chord tests; 1 remaining
+11 : 12991 raw chord tests; 0 remaining
+transitive compressed controls 1093
+Independently verified repaired heights 27
+Orders [(5, 1), (6, 1), (7, 5), (8, 5), (9, 9), (10, 6)] cycle lengths [(3, 24), (4, 3)] one compressed flip [('nonadjacent', 27)]
+Every witness gives unicyclic component plus isolate, with no padding.
+transitive compressed controls 1093
+Independently verified repaired heights 27
+Orders [(5, 1), (6, 1), (7, 5), (8, 5), (9, 9), (10, 5), (11, 1)] cycle lengths [(3, 27)] one compressed flip [('nonadjacent', 27)]
+Every witness gives unicyclic component plus isolate, with no padding.
